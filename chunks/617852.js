@@ -78,7 +78,7 @@ let s = {
         showParticipants: { label: "Show Participants", type: "boolean", defaultValue: !0 },
     },
 };
-var d = a(372684),
+var d = a(617498),
     u = a(831544),
     p = a(231723),
     c = a(717421),
@@ -405,7 +405,6 @@ function z(e) {
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
-            application: { id: "123", name: "Video Quest Playground" },
             messages: { questName: "Video Quest Playground", gameTitle: "Test Game", gamePublisher: "Discord" },
             colors: { primary: "#5865F2", secondary: "#3BA55C" },
             rewardsConfig: {

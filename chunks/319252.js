@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { tp: () => f, Yn: () => h, _g: () => E, rO: () => p, Rd: () => A, Dv: () => T, s2: () => _, S: () => g }),
+n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
     n(801541);
 var i = n(889137),
     r = n(440703),
-    s = n(24001);
-function a(e) {
+    a = n(24001);
+function s(e) {
     let t = {};
     for (let n of Object.keys(e)) {
         let i = parseInt(n);
-        s.tb.has(i) && (t[i] = e[n]);
+        a.tb.has(i) && (t[i] = e[n]);
     }
     return t;
 }
-function o(e) {
+function l(e) {
     switch (e.type) {
         case r.l.REWARD_CODE:
             return {
@@ -21,7 +21,7 @@ function o(e) {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -35,7 +35,7 @@ function o(e) {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -48,7 +48,7 @@ function o(e) {
                 type: r.l.VIRTUAL_CURRENCY,
                 skuId: e.sku_id,
                 messages: {
-                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -63,7 +63,7 @@ function o(e) {
                 assetVideo: e.asset_video,
                 quantity: e.quantity,
                 messages: {
-                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -75,15 +75,15 @@ function o(e) {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
             };
     }
 }
-var l = n(412703),
-    u = n(668824);
+var o = n(412703),
+    d = n(668824);
 function c(e) {
     return {
         url: e.url,
@@ -94,7 +94,7 @@ function c(e) {
         transcript: e.transcript,
     };
 }
-function d(e) {
+function u(e) {
     if (null != e)
         return {
             name: e.name,
@@ -113,7 +113,7 @@ function _(e) {
         return console.error(`Unknown config version '${e?.config?.config_version}'`, t), !1;
     }
 }
-function h(e) {
+function E(e) {
     return (0, i.YW)(e)
         .with({ config_version: 2 }, (e) => {
             var t, n;
@@ -123,7 +123,6 @@ function h(e) {
                 startsAt: e.starts_at,
                 expiresAt: e.expires_at,
                 features: e.features,
-                application: { id: e.application.id, name: e.application.name },
                 assets: {
                     hero: e.assets.hero,
                     heroVideo: e.assets.hero_video,
@@ -153,10 +152,10 @@ function h(e) {
                                     (function (e) {
                                         var t, n;
                                         switch (e.type) {
-                                            case l.n.WATCH_VIDEO:
+                                            case o.n.WATCH_VIDEO:
                                                 let i;
                                                 return {
-                                                    type: l.n.WATCH_VIDEO,
+                                                    type: o.n.WATCH_VIDEO,
                                                     target: e.target,
                                                     assets:
                                                         ((i = { video: c((t = e.assets).video) }),
@@ -165,10 +164,10 @@ function h(e) {
                                                         i),
                                                     messages: { videoTitle: e.messages.video_title },
                                                 };
-                                            case l.n.WATCH_VIDEO_ON_MOBILE:
+                                            case o.n.WATCH_VIDEO_ON_MOBILE:
                                                 let r;
                                                 return {
-                                                    type: l.n.WATCH_VIDEO_ON_MOBILE,
+                                                    type: o.n.WATCH_VIDEO_ON_MOBILE,
                                                     target: e.target,
                                                     assets:
                                                         ((r = { video: c((n = e.assets).video) }),
@@ -177,41 +176,41 @@ function h(e) {
                                                         r),
                                                     messages: { videoTitle: e.messages.video_title },
                                                 };
-                                            case l.n.PLAY_ON_DESKTOP:
+                                            case o.n.PLAY_ON_DESKTOP:
                                                 return {
-                                                    type: l.n.PLAY_ON_DESKTOP,
+                                                    type: o.n.PLAY_ON_DESKTOP,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case l.n.STREAM_ON_DESKTOP:
+                                            case o.n.STREAM_ON_DESKTOP:
                                                 return {
-                                                    type: l.n.STREAM_ON_DESKTOP,
+                                                    type: o.n.STREAM_ON_DESKTOP,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case l.n.PLAY_ACTIVITY:
+                                            case o.n.PLAY_ACTIVITY:
                                                 return {
-                                                    type: l.n.PLAY_ACTIVITY,
+                                                    type: o.n.PLAY_ACTIVITY,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case l.n.PLAY_ON_XBOX:
+                                            case o.n.PLAY_ON_XBOX:
                                                 return {
-                                                    type: l.n.PLAY_ON_XBOX,
-                                                    target: e.target,
-                                                    externalIds: e.external_ids,
-                                                    applications: e.applications,
-                                                };
-                                            case l.n.PLAY_ON_PLAYSTATION:
-                                                return {
-                                                    type: l.n.PLAY_ON_PLAYSTATION,
+                                                    type: o.n.PLAY_ON_XBOX,
                                                     target: e.target,
                                                     externalIds: e.external_ids,
                                                     applications: e.applications,
                                                 };
-                                            case l.n.ACHIEVEMENT_IN_GAME:
+                                            case o.n.PLAY_ON_PLAYSTATION:
                                                 return {
-                                                    type: l.n.ACHIEVEMENT_IN_GAME,
+                                                    type: o.n.PLAY_ON_PLAYSTATION,
+                                                    target: e.target,
+                                                    externalIds: e.external_ids,
+                                                    applications: e.applications,
+                                                };
+                                            case o.n.ACHIEVEMENT_IN_GAME:
+                                                return {
+                                                    type: o.n.ACHIEVEMENT_IN_GAME,
                                                     target: e.target,
                                                     eventName: e.event_name,
                                                     messages: {
@@ -221,9 +220,9 @@ function h(e) {
                                                     applications: e.applications,
                                                     accountLinkInstructions: e.account_link_instructions,
                                                 };
-                                            case l.n.ACHIEVEMENT_IN_ACTIVITY:
+                                            case o.n.ACHIEVEMENT_IN_ACTIVITY:
                                                 return {
-                                                    type: l.n.ACHIEVEMENT_IN_ACTIVITY,
+                                                    type: o.n.ACHIEVEMENT_IN_ACTIVITY,
                                                     target: e.target,
                                                     eventName: e.event_name,
                                                     messages: {
@@ -244,16 +243,16 @@ function h(e) {
                             });
                         return { tasks: Object.fromEntries(t), joinOperator: e.join_operator };
                     } catch (e) {
-                        return { tasks: {}, joinOperator: u.K.OR };
+                        return { tasks: {}, joinOperator: d.K.OR };
                     }
                 })(e.task_config_v2),
                 rewardsConfig: {
                     assignmentMethod: (t = e.rewards_config).assignment_method,
-                    rewards: t.rewards.map(o),
+                    rewards: t.rewards.map(l),
                     rewardsExpireAt: t.rewards_expire_at,
                     platforms: t.platforms,
                 },
-                cosponsorMetadata: d(e.cosponsor_metadata),
+                cosponsorMetadata: u(e.cosponsor_metadata),
                 sharePolicy: e.share_policy,
                 ctaConfig: {
                     android: null != (n = e.cta_config).android ? { androidAppId: n.android.android_app_id } : void 0,
@@ -266,7 +265,7 @@ function h(e) {
         })
         .exhaustive();
 }
-function f(e) {
+function A(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -295,20 +294,20 @@ function f(e) {
         })(e.progress),
     };
 }
-function p(e) {
+function h(e) {
     return {
         id: e.id,
         preview: e.preview,
-        config: h(e.config),
-        userStatus: null == e.user_status ? null : f(e.user_status),
+        config: E(e.config),
+        userStatus: null == e.user_status ? null : A(e.user_status),
         targetedContent: e.targeted_content,
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
-function E(e) {
+function I(e) {
     return { id: e.id, replacementId: e.replacement_id };
 }
-function m(e) {
+function f(e) {
     return e.type === r.l.VIRTUAL_CURRENCY
         ? {
               skuId: e.sku_id,
@@ -328,7 +327,7 @@ function m(e) {
               collectibleProduct: e.collectible_product,
           };
 }
-function g(e) {
+function p(e) {
     var t;
     return {
         id: e.id,
@@ -355,13 +354,13 @@ function g(e) {
                 gameTileDark: t.assets.game_tile_dark,
             },
             colors: { primary: t.colors.primary, secondary: t.colors.secondary },
-            rewards: t.rewards.map(m),
-            cosponsorMetadata: d(t.cosponsor_metadata),
+            rewards: t.rewards.map(f),
+            cosponsorMetadata: u(t.cosponsor_metadata),
         },
-        userStatus: null == e.user_status ? null : f(e.user_status),
+        userStatus: null == e.user_status ? null : A(e.user_status),
     };
 }
-function A(e) {
+function T(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -371,7 +370,7 @@ function A(e) {
         tier: e.tier ?? null,
     };
 }
-function I(e) {
+function m(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -381,12 +380,12 @@ function I(e) {
                 case r.l.IN_GAME:
                     return { questRewards: { reward: { tag: t.reward.tag } } };
                 case r.l.REWARD_CODE:
-                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: A(t.reward.reward_code) } } };
+                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: T(t.reward.reward_code) } } };
             }
         })(e.tenant_metadata),
         consumed: e.consumed,
     };
 }
-function T(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(I), errors: e.errors };
+function g(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(m), errors: e.errors };
 }

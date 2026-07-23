@@ -3012,7 +3012,7 @@ function aI() {
     });
 }
 var aT = a(976860),
-    aR = a(340124),
+    aR = a(352774),
     aO = a(490811);
 let aw = function () {
     return (0, r.jsxs)("div", {
@@ -8203,7 +8203,7 @@ let rP = {
             let { default: e } = await Promise.all([
                     a.e("35285"),
                     a.e("40351"),
-                    a.e("80352"),
+                    a.e("48180"),
                     a.e("67792"),
                     a.e("9445"),
                     a.e("15214"),
@@ -18008,7 +18008,6 @@ let xv = "1193992107035983872",
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
-            application: { id: "123", name: "Sky Runners" },
             messages: { questName: "Sky Runners", gameTitle: "Sky Runners", gamePublisher: "Discord" },
             colors: { primary: "#B377F3", secondary: "#5865F2" },
             rewardsConfig: {
@@ -18046,7 +18045,9 @@ let xv = "1193992107035983872",
             },
             taskConfigV2: {
                 joinOperator: h$.K.AND,
-                tasks: { [hG.n.PLAY_ON_DESKTOP]: { type: hG.n.PLAY_ON_DESKTOP, target: 300 } },
+                tasks: {
+                    [hG.n.PLAY_ON_DESKTOP]: { type: hG.n.PLAY_ON_DESKTOP, target: 300, applications: [{ id: "123" }] },
+                },
             },
             features: [],
             sharePolicy: hB.i.SHAREABLE_EVERYWHERE,
@@ -19618,7 +19619,7 @@ function pd() {
     });
 }
 var pc = a(963935),
-    pu = a(834438),
+    pu = a(267651),
     pm = a(604261);
 function ph(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,
