@@ -487,6 +487,7 @@
   "ORDER_PATCH_LINE_ITEM": "/billing/orders/:param/line-items/:param",
   "ORDER_UPDATE": "/billing/orders/:param",
   "ORDER_SIGN": "/billing/orders/:param/sign",
+  "ORDER_CANCEL_SIGNING": "/billing/orders/:param/cancel-signing",
   "ORDER_DISCARD": "/billing/orders/:param/discard",
   "ORDER_ENTITLEMENTS": "/billing/orders/:param/entitlements",
   "APPLICATION_SKUS": "/applications/:param/skus",
