@@ -110,6 +110,8 @@
 :where(.outer_c0bea0).user-profile-modal {
     border-radius: var(--radius-sm);
     height: 780px;
+    max-height: calc(100vh - 32px);
+    min-height: 0;
     width: 600px
 }
 
