@@ -1,41 +1,42 @@
-r.d(e, { K: () => A });
-var n = r(64700),
-    s = r(17928),
-    u = r(228366),
-    i = r(287809),
-    a = r(429707),
-    c = r(274303);
-function A() {
-    let t = (0, s.cf)([c.A, i.default], () => {
-        let t = c.A.getUsers(),
-            e = i.default.getCurrentUser();
-        return null == e ||
-            t.some((t) => {
-                let { id: r } = t;
-                return r === e.id;
+"use strict";
+n.d(t, { K: () => d });
+var i = n(64700),
+    r = n(17928),
+    a = n(228366),
+    s = n(287809),
+    l = n(429707),
+    o = n(274303);
+function d() {
+    let e = (0, r.cf)([o.A, s.default], () => {
+        let e = o.A.getUsers(),
+            t = s.default.getCurrentUser();
+        return null == t ||
+            e.some((e) => {
+                let { id: n } = e;
+                return n === t.id;
             })
-            ? { isLoading: c.A.getIsValidatingUsers(), multiAccountUsers: t }
+            ? { isLoading: o.A.getIsValidatingUsers(), multiAccountUsers: e }
             : {
-                  isLoading: c.A.getIsValidatingUsers(),
+                  isLoading: o.A.getIsValidatingUsers(),
                   multiAccountUsers: [
                       {
-                          id: e.id,
-                          avatar: e.avatar,
-                          username: e.username,
-                          discriminator: e.discriminator,
-                          tokenStatus: c.U.VALID,
+                          id: t.id,
+                          avatar: t.avatar,
+                          username: t.username,
+                          discriminator: t.discriminator,
+                          tokenStatus: o.U.VALID,
                           pushSyncToken: null,
                       },
-                      ...t,
+                      ...e,
                   ],
               };
     });
     return (
-        n.useEffect(() => {
-            u.h.wait(() => {
-                a.F6();
+        i.useEffect(() => {
+            a.h.wait(() => {
+                l.F6();
             });
         }, []),
-        t
+        e
     );
 }
