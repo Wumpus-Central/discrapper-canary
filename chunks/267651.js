@@ -8367,7 +8367,7 @@ let gr = (0, a.zZ)(u.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [go],
     });
 var gd = i(659758),
-    gc = i(828208),
+    gc = i(71547),
     gg = i(815846);
 let gm = (0, a.E2)(u.X.NITRO_SETTING, {
         Component: function () {
