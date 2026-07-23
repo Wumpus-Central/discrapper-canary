@@ -1,8 +1,8 @@
-i.d(s, { A: () => w });
+i.d(s, { A: () => F });
 var n = i(627968),
     a = i(64700),
-    l = i(503698),
-    t = i.n(l),
+    t = i(503698),
+    l = i.n(t),
     r = i(17928),
     o = i(778712),
     u = i(97808),
@@ -15,8 +15,8 @@ var n = i(627968),
     v = i(178418),
     x = i(87664),
     g = i(449582),
-    M = i(88686),
-    C = i(174755),
+    C = i(88686),
+    M = i(174755),
     b = i(290863),
     j = i(19575),
     p = i(956705),
@@ -24,43 +24,42 @@ var n = i(627968),
     I = i(939496),
     N = i(652215),
     _ = i(996988),
-    k = i(921519);
+    k = i(959831);
 let S = o._3.SIZE_40,
-    F = j.Ay.getEnableHardwareAcceleration();
-function w(e) {
-    let { user: s, status: l, guildId: o, channelId: j, onSelect: w } = e,
-        { theme: y, themeType: L } = (0, I.E)(),
+    y = j.Ay.getEnableHardwareAcceleration();
+function F(e) {
+    let { user: s, status: t, guildId: o, channelId: j, onSelect: F } = e,
+        { theme: L, themeType: w } = (0, I.E)(),
         U = a.useMemo(() => s.isNonUserBot() || (0, v.c)(s, j), [s, j]),
         { activities: D, isMobileOnline: R } = (0, r.cf)([b.A], () => ({
             activities: b.A.getActivities(s.id),
             isMobileOnline: b.A.isMobileOnline(s.id),
         })),
-        P = (0, x.A)(s.id),
-        { voiceChannel: T } = (0, h.Ay)({ userId: s.id, guildId: o }),
+        T = (0, x.A)(s.id),
+        { voiceChannel: P } = (0, h.Ay)({ userId: s.id, guildId: o }),
         z = (0, p.r)("UserProfileMutualFriendRow"),
-        H = (0, p.G)("UserProfileMutualFriendRow"),
-        [O, K] = a.useState(!1),
+        [H, O] = a.useState(!1),
         {
-            avatarSrc: W,
-            avatarDecorationSrc: B,
-            eventHandlers: G,
-        } = (0, E.A)({ userId: s.id, guildId: o, size: S, animateOnHover: !O }),
-        V = F && z ? u.Js : u.eu,
+            avatarSrc: K,
+            avatarDecorationSrc: W,
+            eventHandlers: B,
+        } = (0, E.A)({ userId: s.id, guildId: o, size: S, animateOnHover: !H }),
+        V = y && z ? u.Js : u.eu,
         Y = a.useRef(null),
         Z = (0, g.r)({ user: s, guildId: o }),
-        Q = H ? Z : null,
-        q = a.useCallback(() => K(!0), []),
-        J = a.useCallback(() => K(!1), []);
+        G = z ? Z : null,
+        Q = a.useCallback(() => O(!0), []),
+        q = a.useCallback(() => O(!1), []);
     return (0, n.jsxs)(d.D, {
-        ...(z ? { onMouseEnter: q, onMouseLeave: J } : {}),
-        focusProps: L === _.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-        className: t()(k.nM, { [k.EY]: null != Q }),
-        onClick: w,
+        ...(z ? { onMouseEnter: Q, onMouseLeave: q } : {}),
+        focusProps: w === _.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        className: l()(k.nM, { [k.EY]: null != G }),
+        onClick: F,
         onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("71406"),
-                    i.e("94881"),
+                    i.e("97422"),
+                    i.e("97705"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),
@@ -87,19 +86,19 @@ function w(e) {
             });
         },
         children: [
-            (0, n.jsx)(C.A, { nameplate: O ? Q : null, hovered: O, content: Y, placement: M.u.MUTUAL_FRIENDS_LIST }),
+            (0, n.jsx)(M.A, { nameplate: H ? G : null, hovered: H, content: Y, placement: C.u.MUTUAL_FRIENDS_LIST }),
             (0, n.jsxs)("div", {
                 ref: Y,
                 className: k.Qs,
                 children: [
                     (0, n.jsx)(V, {
-                        ...(z ? G : {}),
-                        src: W,
-                        avatarDecoration: z ? B : void 0,
+                        ...(z ? B : {}),
+                        src: K,
+                        avatarDecoration: z ? W : void 0,
                         "aria-label": s.username,
                         size: S,
-                        status: U ? N.clD.UNKNOWN : l,
-                        statusBackdropColor: U ? void 0 : (0, c.C$)(y),
+                        status: U ? N.clD.UNKNOWN : t,
+                        statusBackdropColor: U ? void 0 : (0, c.C$)(L),
                         isMobile: R,
                         className: k.my,
                     }),
@@ -113,7 +112,7 @@ function w(e) {
                                 discriminatorClass: k.D2,
                                 showGuildTag: z,
                             }),
-                            (0, n.jsx)(m.A, { user: s, activities: D, applicationStream: P, voiceChannel: T }),
+                            (0, n.jsx)(m.A, { user: s, activities: D, applicationStream: T, voiceChannel: P }),
                         ],
                     }),
                 ],

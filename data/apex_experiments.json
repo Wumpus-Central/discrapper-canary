@@ -2728,8 +2728,7 @@
     "name": "2026-04-consistent-profiles",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "showMutualFriendsNameplate": false
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -2737,12 +2736,7 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "showMutualFriendsNameplate": false
-      },
-      "2": {
-        "enabled": true,
-        "showMutualFriendsNameplate": true
+        "enabled": true
       }
     }
   },
