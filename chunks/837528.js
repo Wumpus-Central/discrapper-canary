@@ -206,7 +206,7 @@ function U(e, t, s, o) {
                             n.e("12663"),
                             n.e("47285"),
                             n.e("81754"),
-                            n.e("3581"),
+                            n.e("80023"),
                         ]).then(n.bind(n, 720882));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });
