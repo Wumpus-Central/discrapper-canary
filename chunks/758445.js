@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { J_: () => N, N4: () => g, tx: () => p, l9: () => m });
-var i = n(636537),
+var i = n(562465),
     r = n(228366),
     a = n(615405),
     s = n(927813),
@@ -19,8 +19,9 @@ class _ extends u.A {
     appliesToAllSkus;
     startsAt;
     endsAt;
+    tenantMetadata;
     static createFromServer(e) {
-        var t;
+        var t, n, i;
         return new _({
             id: e.id,
             applicationId: e.application_id,
@@ -52,6 +53,39 @@ class _ extends u.A {
             appliesToAllSkus: e.applies_to_all_skus,
             startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
             endsAt: null != e.ends_at ? new Date(e.ends_at) : null,
+            tenantMetadata:
+                null != e.tenant_metadata
+                    ? {
+                          collectibles:
+                              null != (n = e.tenant_metadata).collectibles
+                                  ? ((i = n.collectibles),
+                                    {
+                                        reward:
+                                            i.reward?.storefront?.nagbar != null
+                                                ? {
+                                                      storefront: {
+                                                          nagbar: {
+                                                              headerText:
+                                                                  i.reward.storefront.nagbar.header_text ?? void 0,
+                                                              bodyText: i.reward.storefront.nagbar.body_text ?? void 0,
+                                                              cta:
+                                                                  null != i.reward.storefront.nagbar.cta
+                                                                      ? {
+                                                                            text:
+                                                                                i.reward.storefront.nagbar.cta.text ??
+                                                                                void 0,
+                                                                        }
+                                                                      : void 0,
+                                                              helpCenterId:
+                                                                  i.reward.storefront.nagbar.help_center_id ?? void 0,
+                                                          },
+                                                      },
+                                                  }
+                                                : void 0,
+                                    })
+                                  : void 0,
+                      }
+                    : null,
         });
     }
     constructor(e) {
@@ -64,7 +98,8 @@ class _ extends u.A {
             (this.skuIds = e.skuIds),
             (this.appliesToAllSkus = e.appliesToAllSkus),
             (this.startsAt = e.startsAt),
-            (this.endsAt = e.endsAt);
+            (this.endsAt = e.endsAt),
+            (this.tenantMetadata = e.tenantMetadata);
     }
 }
 var E = n(652215);
