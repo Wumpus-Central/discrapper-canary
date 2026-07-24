@@ -94,29 +94,30 @@ var Q = n(354328),
     es = n(297264),
     el = n(375708);
 function ei() {
-    let { itemTypeFilters: e, searchQuery: t } = (0, R.v)((e) => e),
-        { totalCount: n, isFetchingResults: s } = (0, U.S)(),
-        l = (0, R.v)((e) => e.hasFilters()),
-        i = c.useCallback(() => {
-            if (!l) return "";
-            if (s) return el.intl.string(el.t["/FaMSE"]);
+    let { itemTypeFilters: e, searchQuery: t, thirdPartyOnly: n, offerEligible: s } = (0, R.v)((e) => e),
+        { totalCount: l, isFetchingResults: i } = (0, U.S)(),
+        a = (0, R.v)((e) => e.hasFilters()),
+        r = c.useCallback(() => {
+            if (!a) return "";
+            if (i) return el.intl.string(el.t["/FaMSE"]);
             if ("" !== t) {
                 let e = t.length > 40 ? `${t.slice(0, 40)}...` : t;
-                return el.intl.format(el.t.KJMJOz, { count: n, search: e });
+                return el.intl.format(el.t.KJMJOz, { count: l, search: e });
             }
-            return 1 === e.size && e.has(en.q.AVATAR_DECORATION)
-                ? el.intl.format(el.t.s1UzGQ, { count: n })
-                : 1 === e.size && e.has(en.q.NAMEPLATE)
-                  ? el.intl.format(el.t.ZWGN9T, { count: n })
-                  : 1 === e.size && e.has(en.q.PROFILE_EFFECT)
-                    ? el.intl.format(el.t["v/7apu"], { count: n })
-                    : 1 === e.size && e.has(en.q.PROFILE_FRAME)
-                      ? el.intl.format(el.t.eu4eRy, { count: n })
-                      : 1 === e.size && e.has(en.q.BUNDLE)
-                        ? el.intl.format(el.t.fZ1rdk, { count: n })
-                        : el.intl.format(el.t["/rPvmQ"], { count: n });
-        }, [e, n, l, t, s]);
-    return (0, o.jsx)(es.D, { variant: "heading-lg/semibold", children: i() });
+            if (!n && !s && 1 === e.size) {
+                if (e.has(en.q.AVATAR_DECORATION)) return el.intl.format(el.t.s1UzGQ, { count: l });
+                if (e.has(en.q.NAMEPLATE)) return el.intl.format(el.t.ZWGN9T, { count: l });
+                if (e.has(en.q.PROFILE_EFFECT)) return el.intl.format(el.t["v/7apu"], { count: l });
+                if (e.has(en.q.PROFILE_FRAME)) return el.intl.format(el.t.eu4eRy, { count: l });
+                if (e.has(en.q.BUNDLE)) return el.intl.format(el.t.fZ1rdk, { count: l });
+            }
+            return 0 === e.size && n && !s
+                ? el.intl.format(el.t.TxoTTj, { count: l })
+                : 0 === e.size && s && !n
+                  ? el.intl.format(el.t.TLso50, { count: l })
+                  : el.intl.format(el.t["/rPvmQ"], { count: l });
+        }, [e, l, a, t, i, n, s]);
+    return (0, o.jsx)(es.D, { variant: "heading-lg/semibold", children: r() });
 }
 var ea = n(172218),
     er = n(932793),

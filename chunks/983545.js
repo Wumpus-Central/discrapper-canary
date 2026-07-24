@@ -14,43 +14,54 @@ let u = {
         [i.G2.BUNDLES]: s.q.BUNDLE,
     },
     d = (e) => {
-        let { setItemTypeFilter: t, setThirdPartyOnlyFilter: l, reset: s, setCurrentTab: d } = (0, r.v)(),
-            b = n.useMemo(() => ((0, i.dF)(e) || e === i.G2.COLLABS ? i.G2.CATALOG : e), [e]),
-            [m, p] = n.useState(b),
-            [C, E] = n.useState(i.Pf.VISIBLE);
+        let {
+                setItemTypeFilter: t,
+                setThirdPartyOnlyFilter: l,
+                setOfferEligibleFilter: s,
+                reset: d,
+                setCurrentTab: b,
+            } = (0, r.v)(),
+            m = n.useMemo(() => {
+                var t;
+                return (0, i.dF)(e) || (t = e) === i.G2.COLLABS || t === i.G2.OFFER_ELIGIBLE ? i.G2.CATALOG : e;
+            }, [e]),
+            [E, p] = n.useState(m),
+            [C, A] = n.useState(i.Pf.VISIBLE);
         n.useEffect(() => {
-            d(m);
-        }, [m, d]),
+            b(E);
+        }, [E, b]),
             n.useEffect(() => {
-                if ((p(b), e === i.G2.CATALOG)) s();
+                if ((p(m), e === i.G2.CATALOG)) d();
                 else if (e === i.G2.COLLABS) l();
+                else if (e === i.G2.OFFER_ELIGIBLE) s();
                 else if ((0, i.dF)(e)) {
                     let l = u[e];
-                    null != l ? t(l) : s();
+                    null != l ? t(l) : d();
                 }
-            }, [b, e, t, l, s]);
-        let { clearError: A } = (0, o.S)(),
+            }, [m, e, t, l, s, d]);
+        let { clearError: f } = (0, o.S)(),
             S = (0, a.W6)(),
-            f = n.useCallback(
+            h = n.useCallback(
                 async (e, n) => {
-                    if ((A(), e === i.G2.CATALOG)) s();
+                    if ((f(), e === i.G2.CATALOG)) d();
                     else if (e === i.G2.COLLABS) l();
-                    else if ((0, i.dF)(e) && e !== m) {
+                    else if (e === i.G2.OFFER_ELIGIBLE) s();
+                    else if ((0, i.dF)(e) && e !== E) {
                         let l = u[e];
-                        null != l ? t(l) : s();
+                        null != l ? t(l) : d();
                     }
-                    if (m !== e) {
+                    if (E !== e) {
                         if (n) {
                             var a;
-                            E(i.Pf.OUT), await ((a = 1.1 * i.H1), new Promise((e) => setTimeout(e, a)));
+                            A(i.Pf.OUT), await ((a = 1.1 * i.H1), new Promise((e) => setTimeout(e, a)));
                         }
                         p(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
-                            n && E(i.Pf.IN),
+                            n && A(i.Pf.IN),
                             S.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            E(i.Pf.VISIBLE);
+                            A(i.Pf.VISIBLE);
                     }
                 },
-                [S, t, l, s, m, A],
+                [S, t, l, s, d, E, f],
             );
-        return { selectedTab: m, transitionState: C, transitionToTab: f };
+        return { selectedTab: E, transitionState: C, transitionToTab: h };
     };

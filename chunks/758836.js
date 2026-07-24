@@ -61,6 +61,7 @@ var m =
     (a.PROFILE_FRAMES = "profile-frames"),
     (a.BUNDLES = "bundles"),
     (a.COLLABS = "collabs"),
+    (a.OFFER_ELIGIBLE = "offer-eligible"),
     (a.LAYOUT = "layout"),
     (a.COLLECTION_INDEX = "collection-index"),
     (a.GAME_SHOPS = "game-shops"),

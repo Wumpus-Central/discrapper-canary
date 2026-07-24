@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("583366", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("583966", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -330,8 +330,8 @@ b &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let Y = {},
-    F = (
+let F = {},
+    Y = (
         b
             ? function (e) {
                   return BigInt(e);
@@ -339,18 +339,18 @@ let Y = {},
             : function (e) {
                   return e instanceof y
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != Y[e] || (Y[e] = y.fromString(e)), Y[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != F[e] || (F[e] = y.fromString(e)), F[e]);
               }
     )(0),
     V = b
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
               return e.or(t);
           },
     W = b
@@ -715,6 +715,7 @@ var er =
         (c.PROFILE_FRAMES = "profile-frames"),
         (c.BUNDLES = "bundles"),
         (c.COLLABS = "collabs"),
+        (c.OFFER_ELIGIBLE = "offer-eligible"),
         (c.LAYOUT = "layout"),
         (c.COLLECTION_INDEX = "collection-index"),
         (c.GAME_SHOPS = "game-shops"),
