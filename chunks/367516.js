@@ -1,78 +1,100 @@
-i.d(a, { default: () => p });
-var n = i(627968),
-    e = i(64700),
-    s = i(189213),
-    l = i(260598),
-    o = i(493336),
-    c = i(622142),
-    r = i(309010),
-    d = i(174459),
-    u = i(652215),
-    g = i(381941),
-    h = i(375708),
-    C = i(487837);
-function p(t) {
+a.d(i, { default: () => C });
+var e = a(627968),
+    n = a(64700),
+    s = a(224640),
+    l = a(20742),
+    c = a(707554),
+    o = a(696208),
+    r = a(260598),
+    d = a(493336),
+    u = a(622142),
+    h = a(309010),
+    g = a(174459),
+    j = a(652215),
+    x = a(381941),
+    m = a(375708),
+    v = a(129973);
+function C(t) {
     let {
-            transitionState: a,
-            onClose: i,
-            onGIFSelected: p,
-            hideFavorites: E = !1,
-            modalTitle: N = h.intl.string(h.t["0VinIJ"]),
-            defaultText: S = h.intl.string(h.t.OrwKgi),
-            giftIntentType: j,
-            analyticsLocationHistory: k,
+            transitionState: i,
+            onClose: a,
+            onGIFSelected: C,
+            hideFavorites: N = !1,
+            modalTitle: S = m.intl.string(m.t["0VinIJ"]),
+            defaultText: k = m.intl.string(m.t.OrwKgi),
+            giftIntentType: p,
+            analyticsLocationHistory: E,
         } = t,
-        [m, I] = e.useState(null),
-        [_, v] = e.useState(""),
-        T = e.useCallback(
+        [I, _] = n.useState(null),
+        [F, G] = n.useState(""),
+        T = n.useCallback(
             (t) => {
-                I(t), p?.(t);
+                _(t), C?.(t);
             },
-            [p],
+            [C],
         ),
-        G = e.useCallback(async () => {
-            if (null != m) {
-                let t = r.Ay.getChannelId();
+        f = n.useCallback(async () => {
+            if (null != I) {
+                let t = h.Ay.getChannelId();
                 null != t &&
-                    ("" !== _ &&
-                        (await o.A.sendMessage(
+                    ("" !== F &&
+                        (await d.A.sendMessage(
                             t,
-                            { content: _, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
+                            { content: F, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                             !0,
-                            { location: g.Hx.GIFTING },
+                            { location: x.Hx.GIFTING },
                         )),
-                    await o.A.sendMessage(
+                    await d.A.sendMessage(
                         t,
-                        { content: m.url, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
+                        { content: I.url, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                         !0,
-                        { location: g.Hx.GIFTING },
+                        { location: x.Hx.GIFTING },
                     ),
-                    null != j &&
-                        d.default.track(u.HAw.GIFT_INTENT_MESSAGE_SENT, {
-                            gift_intent_type: j,
-                            is_custom_message: "" !== _,
-                            location_stack: k,
+                    null != p &&
+                        g.default.track(j.HAw.GIFT_INTENT_MESSAGE_SENT, {
+                            gift_intent_type: p,
+                            is_custom_message: "" !== F,
+                            location_stack: E,
                         }),
-                    await i());
+                    await a());
             }
-        }, [m, _, i, j, k]);
-    return (0, n.jsx)(s.Modal, {
-        transitionState: a,
-        onClose: i,
-        title: N,
-        input: (0, n.jsx)(l.f, { value: _, onChange: (t) => v(t), placeholder: S }),
-        actions: [
-            { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: i },
-            { variant: "primary", text: h.intl.string(h.t.TXNS7S), onClick: G, loading: !1, disabled: null == m },
+        }, [I, F, a, p, E]);
+    return (0, e.jsxs)(s.d, {
+        transitionState: i,
+        onClose: a,
+        "aria-label": S,
+        size: "md",
+        children: [
+            (0, e.jsx)(l.rQ, { title: S }),
+            (0, e.jsx)("div", {
+                className: v.ne,
+                children: (0, e.jsx)(r.f, { value: F, onChange: (t) => G(t), placeholder: k }),
+            }),
+            (0, e.jsx)("div", {
+                className: v.rf,
+                children: (0, e.jsx)(c.F, {
+                    children: (0, e.jsx)(u.A, {
+                        hideFavorites: N,
+                        onSelectGIF: T,
+                        selectedGIF: I,
+                        initialQuery: m.intl.string(m.t.jrtJi4),
+                        headerClassName: v.Hc,
+                    }),
+                }),
+            }),
+            (0, e.jsx)(o.H, {
+                actionsFullWidth: !0,
+                actions: [
+                    { variant: "secondary", text: m.intl.string(m.t["ETE/oC"]), onClick: a },
+                    {
+                        variant: "primary",
+                        text: m.intl.string(m.t.TXNS7S),
+                        onClick: f,
+                        loading: !1,
+                        disabled: null == I,
+                    },
+                ],
+            }),
         ],
-        children: (0, n.jsx)(c.A, {
-            hideFavorites: E,
-            onSelectGIF: T,
-            selectedGIF: m,
-            initialQuery: h.intl.string(h.t.jrtJi4),
-            className: C.jT,
-            headerClassName: C.Hc,
-            contentClassName: C.jE,
-        }),
     });
 }
