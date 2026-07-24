@@ -20,7 +20,7 @@ var n,
     y = a(77729),
     E = a(952818),
     _ = a(905552),
-    C = a(954035),
+    C = a(283540),
     S = a(157257),
     N = a(915725),
     A = a(372684),
@@ -224,10 +224,7 @@ function F() {
                                 text: "Shouting",
                                 onClick: () => k.Ts({ type: A.Gy.SHOUTING, userId: "123", confidence: 1 }),
                             }),
-                            (0, r.jsx)(x.$, {
-                                text: "Laughter",
-                                onClick: () => k.Ts({ type: A.Gy.LAUGHTER, userId: "123", confidence: 1 }),
-                            }),
+                            (0, r.jsx)(x.$, { text: "Laughter", onClick: () => D.A.debugCreateRankableLaughterClip() }),
                         ],
                     }),
                 }),
@@ -17802,7 +17799,7 @@ let xe = function (e) {
             })
         );
     };
-var xa = a(573526);
+var xa = a(201274);
 let xn = function (e) {
     let { onSelect: t, quest: a } = e,
         { quests: n } = (0, xa.mL)({ fetchPolicy: "cache-and-network", callerSource: "prefill_selector" }),

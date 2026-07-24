@@ -50,7 +50,7 @@ class f {
         for (; this.timeline.length > 0 && this.timeline[0].timestamp < e; ) this.timeline.shift();
     }
 }
-var p = n(150303),
+var p = n(372684),
     T = n(439818),
     m = n(572164);
 function g() {
@@ -814,7 +814,7 @@ function W(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
 var Y = n(430795),
-    K = n(186295);
+    K = n(283540);
 function $() {
     return K.Ay.getMediaEngine().getSystemSteadyClockNowMs() ?? Date.now();
 }
@@ -1160,6 +1160,20 @@ class q extends l.A {
             i.selected.forEach((e, t) => {
                 z.nx.info(`Clip ${t + 1} score ${e.score}, ${o.A.fileManager.basename(e.clip.filepath)}`);
             });
+    }
+    debugCreateRankableLaughterClip() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.default.getId(),
+            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e4,
+            n = $(),
+            i = this.decisionSignals.audioModelDataPerUser[e];
+        if (null != i) {
+            for (let e of i.laughterData) e.timestamp_ms >= n - t && (e.value = 1);
+            for (let e of i.rmsData) e.timestamp_ms >= n - t && (e.value = 0.9);
+        } else
+            z.nx.warn(
+                "debugCreateRankableLaughterClip: no ML audio samples for the local user yet \u2014 join a VC and wait a moment before invoking",
+            );
+        this.process({ type: p.Gy.LAUGHTER, userId: e, confidence: 1 });
     }
     async processClipCandidates() {
         let e = I.Ay.getCurrentClipsSession(),
