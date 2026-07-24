@@ -1,144 +1,147 @@
 "use strict";
 let i;
-n.d(t, { A: () => C, _: () => h });
+n.d(t, { A: () => C, _: () => E });
 var r = n(17928),
-    s = n(228366),
-    a = n(652215),
-    o = n(349828),
-    l = n(849077),
-    u = n(901123);
+    a = n(228366),
+    s = n(652215),
+    l = n(349828),
+    o = n(849077),
+    d = n(901123);
 let c = {},
-    d = {},
+    u = {},
     _ = {},
-    h = new Set([...u.Cr, o.Vc, l.Hy]),
-    f = {},
-    p = d,
-    E = a.XlH.CLOSED,
-    m = {};
-function g() {
-    (E = a.XlH.OPEN), (m = {});
-}
-function A() {
-    (E = a.XlH.CLOSED), (m = {});
-}
-function I() {
-    p = d;
+    E = new Set([...d.Cr, l.Vc, o.Hy]),
+    A = {},
+    h = u,
+    I = s.XlH.CLOSED,
+    f = {};
+function p() {
+    (I = s.XlH.OPEN), (f = {});
 }
 function T() {
-    (f = {}), (m = {});
+    (I = s.XlH.CLOSED), (f = {});
+}
+function m() {
+    h = u;
+}
+function g() {
+    (A = {}), (f = {});
 }
 function S() {
-    T(), I(), A();
+    g(), m(), T();
 }
-class y extends r.Ay.Store {
+class N extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
     get selectedGuildId() {
         return i;
     }
     getFormState() {
-        return E;
+        return I;
     }
     getErrors(e) {
-        return m[e ?? a.ME] ?? _;
+        return f[e ?? s.ME] ?? _;
     }
     getPendingChanges(e) {
-        return f[e ?? a.ME] ?? c;
+        return A[e ?? s.ME] ?? c;
     }
     getTryItOutChanges() {
-        return p;
+        return h;
+    }
+    hasTryItOutChanges() {
+        return Object.values(h).some((e) => void 0 !== e);
     }
     hasUnsavedChanges() {
-        return Object.values(f).some((e) => Object.values(e).some((e) => void 0 !== e));
+        return Object.values(A).some((e) => Object.values(e).some((e) => void 0 !== e));
     }
     showNotice() {
         return !!(
-            Object.values(this.getPendingChanges(a.ME)).some((e) => void 0 !== e) ||
+            Object.values(this.getPendingChanges(s.ME)).some((e) => void 0 !== e) ||
             Object.values(this.getPendingChanges(i)).some((e) => void 0 !== e)
         );
     }
     canSubmit() {
-        for (let e of [a.ME, i]) {
+        for (let e of [s.ME, i]) {
             let t = this.getPendingChanges(e);
-            if (void 0 !== t.pendingBio && t.pendingBio.length > a.NA2) return !1;
+            if (void 0 !== t.pendingBio && t.pendingBio.length > s.NA2) return !1;
         }
         return !0;
     }
 }
-let C = new y(s.h, {
-    USER_SETTINGS_MODAL_INIT: g,
-    USER_SETTINGS_MODAL_OPEN: g,
+let C = new N(a.h, {
+    USER_SETTINGS_MODAL_INIT: p,
+    USER_SETTINGS_MODAL_OPEN: p,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
-        if (t !== a.nc_.ACCOUNT) return !1;
-        (E = a.XlH.OPEN), (m = {});
+        if (t !== s.nc_.ACCOUNT) return !1;
+        (I = s.XlH.OPEN), (f = {});
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        (i = null == t || h.has(t) ? void 0 : t), (E = a.XlH.OPEN), (m = {});
+        (i = null == t || E.has(t) ? void 0 : t), (I = s.XlH.OPEN), (f = {});
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        (i = null == t || h.has(t) ? void 0 : t), (m = {});
+        (i = null == t || E.has(t) ? void 0 : t), (f = {});
     },
-    USER_PROFILE_SETTINGS_CLOSE: A,
+    USER_PROFILE_SETTINGS_CLOSE: T,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        (E = a.XlH.SUBMITTING), (m = {});
+        (I = s.XlH.SUBMITTING), (f = {});
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
-        if (E !== a.XlH.SUBMITTING) return !1;
-        (E = a.XlH.OPEN), (m[t ?? a.ME] = _);
+        if (I !== s.XlH.SUBMITTING) return !1;
+        (I = s.XlH.OPEN), (f[t ?? s.ME] = _);
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        if (E !== a.XlH.SUBMITTING) return !1;
-        (E = a.XlH.OPEN), (m[t ?? a.ME] = n ?? _);
+        if (I !== s.XlH.SUBMITTING) return !1;
+        (I = s.XlH.OPEN), (f[t ?? s.ME] = n ?? _);
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
         let { type: t, guildId: n, ...i } = e;
-        f[n ?? a.ME] = { ...f[n ?? a.ME], ...i };
+        A[n ?? s.ME] = { ...A[n ?? s.ME], ...i };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
-        p = { ...p, tryItOutAvatar: t };
+        h = { ...h, tryItOutAvatar: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
         let { avatarDecoration: t } = e;
-        p = { ...p, tryItOutAvatarDecoration: t };
+        h = { ...h, tryItOutAvatarDecoration: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function (e) {
         let { profileEffect: t } = e;
-        p = { ...p, tryItOutProfileEffect: t };
+        h = { ...h, tryItOutProfileEffect: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function (e) {
         let { banner: t } = e;
-        p = { ...p, tryItOutBanner: t };
+        h = { ...h, tryItOutBanner: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
         let { themeColors: t } = e;
-        p = { ...p, tryItOutThemeColors: t };
+        h = { ...h, tryItOutThemeColors: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function (e) {
         let { displayNameStyles: t } = e;
-        p = { ...p, tryItOutDisplayNameStyles: t };
+        h = { ...h, tryItOutDisplayNameStyles: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
         let { banner: t, themeColors: n, avatarDecoration: i, displayNameStyles: r } = e;
-        p = {
-            ...p,
+        h = {
+            ...h,
             tryItOutBanner: t,
             tryItOutThemeColors: n,
-            tryItOutAvatarDecoration: i,
+            tryItOutAvatarDecoration: void 0 !== i ? i : h.tryItOutAvatarDecoration,
             tryItOutDisplayNameStyles: r,
         };
     },
     USER_PROFILE_SETTINGS_CLEAR_ERRORS: function () {
-        m = {};
+        f = {};
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function () {
-        f = Object.fromEntries(
-            Object.entries(f).map((e) => {
+        A = Object.fromEntries(
+            Object.entries(A).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -156,8 +159,8 @@ let C = new y(s.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function () {
-        f = Object.fromEntries(
-            Object.entries(f).map((e) => {
+        A = Object.fromEntries(
+            Object.entries(A).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -176,19 +179,19 @@ let C = new y(s.h, {
             }),
         );
     },
-    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: I,
+    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: g,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: m,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
-        if ((f[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
-        f[a.ME] = { ...f[a.ME], pendingLegacyUsernameDisabled: void 0 };
+        if ((A[s.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
+        A[s.ME] = { ...A[s.ME], pendingLegacyUsernameDisabled: void 0 };
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function () {
-        if ((f[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
-        f[a.ME] = { ...f[a.ME], pendingPrimaryGuildId: void 0 };
+        if ((A[s.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
+        A[s.ME] = { ...A[s.ME], pendingPrimaryGuildId: void 0 };
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        (E = a.XlH.OPEN), (m[t ?? a.ME] = n ?? _);
+        (I = s.XlH.OPEN), (f[t ?? s.ME] = n ?? _);
     },
     LOGOUT: S,
 });
