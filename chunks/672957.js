@@ -2521,63 +2521,65 @@ function iA(e) {
     let e6 = (0, d.bG)([eq.A], () => eq.A.getChannelId()),
         e4 = (0, d.bG)([eZ.A], () => eZ.A.desyncedVoiceStatesCount),
         e8 = (0, eH.A)(f),
-        e5 = (function (e) {
-            let t = (0, eH.A)(e),
-                n = (0, ej.DD)(e, "useShouldShowGuildThemeMemberCoachmark"),
-                i = (0, eB.OS)("useShouldShowGuildThemeMemberCoachmark"),
-                s = (0, ek.A)(e),
-                { available: l, isLoading: r } = (0, ew.A)(e);
-            if (r) return !1;
-            let a = l < eX.fe;
-            return n && i && a && !s && !1 === t;
-        })(f);
+        e5 = (0, es.ai)(f) ? null : e8,
+        e9 =
+            (function (e) {
+                let t = (0, eH.A)(e),
+                    n = (0, ej.DD)(e, "useShouldShowGuildThemeMemberCoachmark"),
+                    i = (0, eB.OS)("useShouldShowGuildThemeMemberCoachmark"),
+                    s = (0, ek.A)(e),
+                    { available: l, isLoading: r } = (0, ew.A)(e);
+                if (r) return !1;
+                let a = l < eX.fe;
+                return n && i && a && !s && !1 === t;
+            })(f) && !(0, es.ai)(f);
     ir.A.useConfig({ guildId: f, location: "guild_sidebar" });
-    let e9 = (0, ex.C$)(f, "GuildSidebar"),
-        e7 = (0, d.bG)([X.A], () => X.A.getGuild(f)?.features.has(P.GuildFeatures.GAME_SERVERS) ?? !1, [f]),
-        te = e9 && !e7 && !1 === e8,
-        tt = (0, eD.J)("GuildSidebar"),
-        tn = (0, eG.S)(f, "GuildSidebar"),
-        ti = e9 && !e7 && tn && !1 === e8,
-        ts = (0, ev.A)(),
-        tl = (0, ey.A)(f),
-        tr = !1 === e8 && ts && null != tl,
-        ta = (0, eP.A)(f),
-        to = !1 === e8 && ts && null != ta,
-        td = [];
-    ep && td.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        eT && td.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        eL && td.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === e8 && td.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e5 && td.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
-        te && td.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        ti && td.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
-        e2 && td.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
-    let [tu, tc] = (0, en.kn)(td, eA.m.GUILD_HEADER_TOOLTIPS),
-        [tA, tE] = (0, eb.vB)(tt && e9 && !1 === e8 && !(0, es.ai)(f), eA.m.GUILD_HEADER_TOOLTIPS),
-        [th, tg] = (0, en.D8)(
-            tr ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
+    let e7 = (0, ex.C$)(f, "GuildSidebar"),
+        te = (0, d.bG)([X.A], () => X.A.getGuild(f)?.features.has(P.GuildFeatures.GAME_SERVERS) ?? !1, [f]),
+        tt = e7 && !te && !1 === e5,
+        tn = (0, eD.J)("GuildSidebar"),
+        ti = (0, eG.S)(f, "GuildSidebar"),
+        ts = e7 && !te && ti && !1 === e5,
+        tl = (0, ev.A)(),
+        tr = (0, ey.A)(f),
+        ta = !1 === e5 && tl && null != tr,
+        to = (0, eP.A)(f),
+        td = !1 === e5 && tl && null != to,
+        tu = [];
+    ep && tu.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        eT && tu.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        eL && tu.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === e5 && tu.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
+        e9 && tu.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
+        tt && tu.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        ts && tu.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
+        e2 && tu.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+    let [tc, tA] = (0, en.kn)(tu, eA.m.GUILD_HEADER_TOOLTIPS),
+        [tE, th] = (0, eb.vB)(tn && e7 && !1 === e5 && !(0, es.ai)(f), eA.m.GUILD_HEADER_TOOLTIPS),
+        [tg, t_] = (0, en.D8)(
+            ta ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             f,
             { cooldownDurationMs: eU.bW, numTimesToRecur: 5 },
             eA.m.GUILD_HEADER_TOOLTIPS,
         ),
-        [t_, tI] = (0, en.D8)(
-            to ? u.M.EXPIRING_POWERUP_COACHMARK : null,
+        [tI, tN] = (0, en.D8)(
+            td ? u.M.EXPIRING_POWERUP_COACHMARK : null,
             f,
             { cooldownDurationMs: eU.mD },
             eA.m.GUILD_HEADER_TOOLTIPS,
         ),
-        tN = r.useMemo(
+        tm = r.useMemo(
             () =>
-                null != tu
-                    ? { contentType: tu, data: null, markAsDismissed: tc }
-                    : tA === u.M.GAME_SERVER_NEW_GAMES_COACHMARK
-                      ? { contentType: tA, data: null, markAsDismissed: tE }
-                      : th === u.M.BOOST_TO_UNLOCK_COACHMARK && null != tl
-                        ? { contentType: th, data: { featuredPowerup: tl }, markAsDismissed: tg }
-                        : t_ === u.M.EXPIRING_POWERUP_COACHMARK && null != ta
-                          ? { contentType: t_, data: { featuredExpiringPowerup: ta }, markAsDismissed: tI }
+                null != tc
+                    ? { contentType: tc, data: null, markAsDismissed: tA }
+                    : tE === u.M.GAME_SERVER_NEW_GAMES_COACHMARK
+                      ? { contentType: tE, data: null, markAsDismissed: th }
+                      : tg === u.M.BOOST_TO_UNLOCK_COACHMARK && null != tr
+                        ? { contentType: tg, data: { featuredPowerup: tr }, markAsDismissed: t_ }
+                        : tI === u.M.EXPIRING_POWERUP_COACHMARK && null != to
+                          ? { contentType: tI, data: { featuredExpiringPowerup: to }, markAsDismissed: tN }
                           : null,
-            [tu, tA, th, t_, tl, ta, tc, tE, tg, tI],
+            [tc, tE, tg, tI, tr, to, tA, th, t_, tN],
         );
     return (0, l.jsx)(ic, {
         guildId: f,
@@ -2604,7 +2606,7 @@ function iA(e) {
         headerAnalyticsLocations: Q,
         isTutorialHighlightDismissed: e3,
         shouldRenderBurstCoachmark: e1,
-        guildHeaderContentDescriptor: tN,
+        guildHeaderContentDescriptor: tm,
         onFavoriteGuildContextMenu: G,
         hasFavoritesAccess: D,
     });
