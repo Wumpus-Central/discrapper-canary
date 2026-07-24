@@ -32,7 +32,7 @@ var s = r(435558),
     k = r(761508),
     B = r(684339),
     w = r(51092),
-    T = r(186295);
+    T = r(283540);
 r(134528), r(947204);
 var G = r(796873),
     L = r.n(G),
@@ -41,7 +41,7 @@ var G = r(796873),
     $ = r(707554),
     q = r(404778),
     O = r(603349),
-    W = r(178116);
+    W = r(149884);
 let V = ["firCount", "nackCount"];
 class H extends i.PureComponent {
     renderValueIcon() {
@@ -376,7 +376,7 @@ function el(e) {
     return (0, n.jsx)(H, { label: t, valueRendered: a(o), section: i, renderGraph: l, children: z[t] ?? t });
 }
 var eo = r(731854),
-    ed = r(373378);
+    ed = r(522826);
 let eu = { [eo.r8.NO_OVERRIDE]: "None", [eo.r8.LOW]: "Low Quality Stream", [eo.r8.HIGH]: "High Quality Stream" };
 function ec(e) {
     let t = [],
@@ -959,7 +959,7 @@ function eB() {
         i.useEffect(() => {
             f.some((e) => e.section === u) || u === C.EM || m.c4(C.EM);
         }, [f, u]),
-        (0, n.jsx)(p.Ay, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
+        (0, n.jsx)(p.A, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
     );
 }
 function ew(e) {

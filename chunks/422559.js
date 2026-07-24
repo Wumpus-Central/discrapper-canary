@@ -24,8 +24,8 @@ var i = t(627968),
     B = t(576705),
     w = t(468689),
     T = t(555337),
-    I = t(287479),
-    L = t(330015),
+    I = t(509860),
+    L = t(682455),
     x = t(595818),
     D = t(652215),
     _ = t(375708);
@@ -140,7 +140,7 @@ class N extends l.PureComponent {
             D = (0, x.x)();
         return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(c.Ay, {
+                (0, i.jsx)(c.A, {
                     theme: e,
                     sidebarTheme: n,
                     section: I && null != t ? t : D,

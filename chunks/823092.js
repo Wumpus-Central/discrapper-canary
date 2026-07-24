@@ -1,35 +1,35 @@
-i.d(t, { L_: () => c, ms: () => d });
+i.d(t, { L_: () => d, ms: () => u });
 var n = i(627968),
     s = i(64700),
-    l = i(83257),
-    r = i(625494),
-    a = i(115063),
-    o = i(652215);
-let u = s.createContext(void 0);
-function d(e) {
+    l = i(625494),
+    r = i(115063);
+i(46121);
+var a = i(652215);
+let o = s.createContext(void 0);
+function u(e) {
     let { children: t } = e,
-        i = s.useRef(l.n3),
-        [d, c] = s.useState(!1),
-        g = s.useCallback((e) => {
-            c(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (i.current = l.n3);
+        i = s.useRef(1.4),
+        [u, d] = s.useState(!1),
+        c = s.useCallback((e) => {
+            d(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (i.current = 1.4);
         }, []),
-        m = s.useCallback(
+        g = s.useCallback(
             (e) => {
-                if (d) {
-                    (0, a.fO)({ duration: 300, intensity: i.current }),
-                        (i.current = Math.min(i.current + l.pe, l.OZ)),
-                        r._.dispatch(o.jej.EMPHASIZE_NOTICE);
+                if (u) {
+                    (0, r.fO)({ duration: 300, intensity: i.current }),
+                        (i.current = Math.min(i.current + 2, 15)),
+                        l._.dispatch(a.jej.EMPHASIZE_NOTICE);
                     return;
                 }
                 e();
             },
-            [d],
+            [u],
         ),
-        A = s.useMemo(() => ({ navigateWithValidation: m, showNotice: d, handleStoreUpdate: g }), [m, d, g]);
-    return (0, n.jsx)(u.Provider, { value: A, children: t });
+        m = s.useMemo(() => ({ navigateWithValidation: g, showNotice: u, handleStoreUpdate: c }), [g, u, c]);
+    return (0, n.jsx)(o.Provider, { value: m, children: t });
 }
-function c() {
-    let e = s.useContext(u);
+function d() {
+    let e = s.useContext(o);
     if (null == e) throw Error("useNoticeContext must be used within a NoticeProvider");
     return e;
 }

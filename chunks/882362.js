@@ -692,26 +692,26 @@ function e5() {
     });
 }
 var e1 = n(243721),
-    e3 = n(235986),
-    e7 = n(884559);
+    e7 = n(235986),
+    e3 = n(884559);
 function e4(e) {
     let { description: t, icon: n, id: i, label: s, onChange: r, value: o } = e;
     return (0, l.jsxs)("div", {
-        className: e7.U,
+        className: e3.U,
         children: [
-            (0, l.jsxs)(e3.A, {
-                justify: e3.A.Justify.BETWEEN,
-                align: e3.A.Align.CENTER,
+            (0, l.jsxs)(e7.A, {
+                justify: e7.A.Justify.BETWEEN,
+                align: e7.A.Align.CENTER,
                 children: [
                     n,
-                    (0, l.jsx)(e3.A.Child, {
+                    (0, l.jsx)(e7.A.Child, {
                         grow: 1,
                         children: (0, l.jsx)(a.E, { variant: "text-md/semibold", children: s }),
                     }),
                     null != r && null != o && (0, l.jsx)(e1.d, { id: i, checked: o, onChange: r }),
                 ],
             }),
-            (0, l.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e7.L, children: t }),
+            (0, l.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e3.L, children: t }),
         ],
     });
 }
@@ -722,9 +722,9 @@ let te = function (e) {
     let { className: t, icon: n, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
     return (0, l.jsx)(e9.Z, {
         className: A()(t, e8.N),
-        children: (0, l.jsxs)(e3.A, {
-            justify: e3.A.Justify.BETWEEN,
-            align: e3.A.Align.CENTER,
+        children: (0, l.jsxs)(e7.A, {
+            justify: e7.A.Justify.BETWEEN,
+            align: e7.A.Align.CENTER,
             children: [
                 (0, l.jsx)(n, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, l.jsx)("div", {
@@ -1248,7 +1248,7 @@ var tS = n(371444),
     tW = n(408018),
     tY = n(138617),
     tJ = n(375499),
-    tX = n(334295),
+    tX = n(267889),
     tQ = n(770335),
     tq = n(7584),
     t$ = n(422844),
@@ -1258,8 +1258,8 @@ var tS = n(371444),
     t5 = n(807632),
     t1 = n(376310);
 n(253913);
-var t3 = n(184887);
-function t7(e) {
+var t7 = n(184887);
+function t3(e) {
     let { channel: t } = e,
         a = (0, s.bG)([Q.A], () => Q.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
@@ -1293,7 +1293,7 @@ function t7(e) {
             (0, d.fy)({ availableTags: e });
         });
     return (0, l.jsxs)("div", {
-        className: t3._A,
+        className: t7._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
@@ -1316,7 +1316,7 @@ function t7(e) {
             o
                 ? (0, l.jsx)(N.D, {
                       onClick: c,
-                      className: A()(t3.JE, { [t3.r9]: !a || r }),
+                      className: A()(t7.JE, { [t7.r9]: !a || r }),
                       children: (0, l.jsx)(tK.j, {
                           size: "custom",
                           "aria-label": eH.intl.string(eH.t["/jubeD"]),
@@ -1360,7 +1360,7 @@ function t4(e) {
             onDragReset: o,
         });
     return (0, l.jsx)("div", {
-        className: A()(t3.kL, { [t3.A]: null != h && c < h, [t3.Ze]: null != h && c > h }),
+        className: A()(t7.kL, { [t7.A]: null != h && c < h, [t7.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1938,7 +1938,7 @@ class nN extends i.PureComponent {
                               label: eH.intl.string(eH.t["P/y+sj"]),
                               description: eH.intl.string(eH.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              children: (0, l.jsx)(t7, { channel: e }),
+                              children: (0, l.jsx)(t3, { channel: e }),
                           }),
                           (0, l.jsx)(tw.S, {
                               disabled: !s || x,
@@ -2376,8 +2376,8 @@ class nN extends i.PureComponent {
                     : (0, eu.M)(i)
                       ? n(241306)
                       : n(16474)),
-            (0, l.jsx)(e3.A, {
-                justify: e3.A.Justify.CENTER,
+            (0, l.jsx)(e7.A, {
+                justify: e7.A.Justify.CENTER,
                 className: no.o9,
                 children: (0, l.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })
@@ -2650,7 +2650,7 @@ class nS extends i.PureComponent {
         } = this.props;
         return null == i
             ? null
-            : (0, l.jsx)(u.Ay, {
+            : (0, l.jsx)(u.A, {
                   theme: e,
                   sidebarTheme: t,
                   section: n ?? eB.p_A.OVERVIEW,

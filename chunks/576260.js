@@ -8,15 +8,15 @@ var n = i(627968),
     d = i(447453),
     c = i(280450),
     u = i(591179),
-    g = i(617498),
+    g = i(183812),
     m = i(866323),
-    f = i(765178),
-    x = i(834730),
+    x = i(765178),
+    f = i(834730),
     h = i(821609),
     I = i(631670),
     p = i(775602),
-    A = i(159001),
-    j = i(933725),
+    j = i(159001),
+    A = i(933725),
     E = i(625494),
     S = i(56348),
     T = i(207803),
@@ -26,18 +26,18 @@ var n = i(627968),
     C = i(958805),
     w = i(61881),
     R = i(624826),
-    O = i(384377),
-    k = i(518477),
+    k = i(384377),
+    O = i(518477),
     y = i(652215),
     _ = i(375708),
     G = i(552024);
 let L = "user-profile-save-reset-toolbar-label";
-function D(e) {
+function P(e) {
     let { className: t, guildId: i } = e,
         { trackUserProfileEditSaved: l } = (0, v.NJ)(),
         o = (0, a.bG)([p.Ay], () => p.Ay.useReducedMotion),
         [d, c] = s.useState(!1),
-        [D, P] = s.useState(!1),
+        [P, D] = s.useState(!1),
         M = s.useRef(!1),
         U = s.useRef(null),
         {
@@ -73,7 +73,7 @@ function D(e) {
                     e.finished &&
                     (null != U.current && clearTimeout(U.current),
                     (U.current = setTimeout(() => {
-                        (U.current = null), M.current && f.O.announce(_.intl.string(_.t["0Y/qkL"]));
+                        (U.current = null), M.current && x.O.announce(_.intl.string(_.t["0Y/qkL"]));
                     }, 300)));
             },
         }),
@@ -82,7 +82,7 @@ function D(e) {
         }, [X]),
         $ = s.useCallback(async () => {
             if (X && !b.A.canSubmit()) return;
-            P(!0);
+            D(!0);
             let e = !0;
             if (K)
                 try {
@@ -112,7 +112,7 @@ function D(e) {
                             n = (0, S.C5)(t),
                             s = (0, S.yX)(t, i);
                         if (Object.keys(n).length > 0) {
-                            let s = await (0, A.GL)(i, n);
+                            let s = await (0, j.GL)(i, n);
                             (e = s?.ok ?? !1),
                                 s?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -134,7 +134,7 @@ function D(e) {
                     if (Object.keys(t).length > 0) {
                         let { primaryGuildId: i } = t;
                         if (void 0 !== i) {
-                            let t = await (0, j.m)(i, null !== i);
+                            let t = await (0, A.m)(i, null !== i);
                             (e = e && (t?.ok ?? !1)), t?.ok && (0, I.fw)();
                         }
                     }
@@ -155,7 +155,7 @@ function D(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, I.x8)() : (0, O.XA)(k.jM.PROFILE_SAVE_GENERIC_FAILURE), P(!1);
+            e ? (0, I.x8)() : (0, k.XA)(O.jM.PROFILE_SAVE_GENERIC_FAILURE), D(!1);
         }, [X, K, B, F, W, H, l, i]);
     return (
         s.useEffect(() => {
@@ -170,12 +170,16 @@ function D(e) {
         s.useEffect(() => {
             let e = null;
             function t() {
-                c(!0), (e = setTimeout(() => c(!1), 500));
+                null != e && clearTimeout(e),
+                    c(!0),
+                    (e = setTimeout(() => {
+                        c(!1);
+                    }, 2500));
             }
             return (
                 E._.subscribe(y.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    E._.unsubscribe(y.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                    E._.unsubscribe(y.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
                 }
             );
         }, []),
@@ -188,7 +192,7 @@ function D(e) {
                           className: r()(G.Qs, { [G.hO]: d }),
                           "aria-labelledby": L,
                           children: [
-                              (0, n.jsx)(x.E, {
+                              (0, n.jsx)(f.E, {
                                   id: L,
                                   variant: "text-md/medium",
                                   color: "text-strong",
@@ -203,14 +207,14 @@ function D(e) {
                                           variant: "secondary",
                                           text: _.intl.string(_.t.yBZMsQ),
                                           onClick: Z,
-                                          disabled: !q || D,
+                                          disabled: !q || P,
                                       }),
                                       (0, n.jsx)(h.$, {
                                           size: "sm",
                                           variant: "primary",
                                           text: _.intl.string(_.t["R3BPH+"]),
                                           onClick: $,
-                                          loading: D,
+                                          loading: P,
                                           disabled: !Q || !q,
                                       }),
                                   ],
@@ -222,13 +226,13 @@ function D(e) {
         )
     );
 }
-var P = i(485745),
+var D = i(485745),
     M = i(983486);
 function U(e) {
     let t = (0, a.bG)([c.default], () => c.default.getId() === e),
         i = !(0, u.X)("useIsModalV2EditingToolbarVisible"),
         n = (0, o.VU)(),
-        s = (0, P.A)(i);
+        s = (0, D.A)(i);
     return t && (n || s);
 }
 function F(e) {
@@ -238,7 +242,7 @@ function F(e) {
     return l
         ? (0, n.jsx)("div", {
               className: r()(M.k, s),
-              children: u ? (0, n.jsx)(d.S, { className: M.W }) : (0, n.jsx)(D, { guildId: i }),
+              children: u ? (0, n.jsx)(d.S, { className: M.W }) : (0, n.jsx)(P, { guildId: i }),
           })
         : null;
 }
