@@ -151,7 +151,14 @@
     position: absolute;
     top: var(--space-12);
     inset-inline: var(--space-16);
+    pointer-events: none;
     z-index: 9999
+}
+
+.containerHeader__0ea1a [role=button],
+.containerHeader__0ea1a a,
+.containerHeader__0ea1a button {
+    pointer-events: auto
 }
 
 .headerTitle__0ea1a {

@@ -22,62 +22,62 @@ var m = n(633075),
     v = n(834730),
     N = n(866665),
     b = n(192308),
-    D = n(922016),
-    A = n(980707),
+    A = n(922016),
+    D = n(980707),
     P = n(477782),
     _ = n(241326),
     T = n(442433),
     R = n(775602),
     w = n(280450),
-    S = n(384377),
-    W = n(518477),
-    k = n(375708),
-    y = n(222670);
-function O(e) {
+    W = n(384377),
+    y = n(518477),
+    S = n(375708),
+    k = n(222670);
+function M(e) {
     let { widget: t, className: n, buttonRef: l, additionalMenuItems: s } = e,
         r = (0, c.L)(t),
         d = (0, o.GV)();
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(G, {
         targetRef: l,
         widget: t,
         additionalMenuItems: s,
         children: (e) =>
-            (0, i.jsx)(G, {
+            (0, i.jsx)(O, {
                 children: (0, i.jsxs)(I.D, {
                     innerRef: l,
-                    className: a()(y.x6, n),
+                    className: a()(k.x6, n),
                     "data-dnd-name": r,
-                    "aria-label": k.intl.formatToPlainString(k.t.HWNJJN, { widgetTitle: r }),
+                    "aria-label": S.intl.formatToPlainString(S.t.HWNJJN, { widgetTitle: r }),
                     "aria-describedby": d,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
                         (0, i.jsx)(E.W, { size: "sm" }),
-                        (0, i.jsx)(C.A, { id: d, children: k.intl.string(k.t.bsuqFn) }),
+                        (0, i.jsx)(C.A, { id: d, children: S.intl.string(S.t.bsuqFn) }),
                     ],
                 }),
             }),
     });
 }
-function G(e) {
+function O(e) {
     let { children: t } = e,
         n = (0, p.bG)([R.Ay], () => R.Ay.keyboardModeEnabled),
         { isDragging: l } = (0, j.V)((e) => ({ isDragging: e.isDragging() }));
     return (0, i.jsx)(N.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-            className: y.HE,
+            className: k.HE,
             children: [
                 (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
-                    children: k.intl.format(n ? k.t["zvln/l"] : k.t["7cdwhg"], {
+                    children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
                 (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
-                    children: k.intl.format(k.t["4e0rM4"], {
+                    children: S.intl.format(S.t["4e0rM4"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
@@ -89,14 +89,14 @@ function G(e) {
         children: t,
     });
 }
-function M(e) {
+function G(e) {
     let { children: t, widget: l, targetRef: s, additionalMenuItems: a } = e,
         { trackUserProfileEditAction: r } = (0, d.NJ)();
     function o(e) {
         if (e.shiftKey) {
             (0, c.qA)(l),
                 r({ action: "WIDGET_REMOVED", ...l.getProfileEditAnalyticsOptions() }),
-                (0, S.XA)(W.jM.WIDGET_REMOVED);
+                (0, W.XA)(y.jM.WIDGET_REMOVED);
             return;
         }
         (0, b.openModalLazy)(
@@ -162,28 +162,28 @@ function M(e) {
             { stackingBehavior: "stack" },
         );
     }
-    return (0, i.jsx)(D.Y, {
+    return (0, i.jsx)(A.Y, {
         targetElementRef: s,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(A.W, {
+            return (0, i.jsx)(D.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, T.Z_)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": k.intl.string(k.t.xpSHSk),
-                className: y.MK,
+                "aria-label": S.intl.string(S.t.xpSHSk),
+                className: k.MK,
                 children: (0, i.jsxs)(P.rX, {
                     children: [
                         a,
                         (0, i.jsx)(P.Dr, {
                             id: "remove-widget",
-                            label: k.intl.string(k.t.Mm07Yc),
+                            label: S.intl.string(S.t.Mm07Yc),
                             action: o,
                             color: "danger",
                             icon: _.u,
@@ -207,21 +207,21 @@ function B(e) {
     function d() {
         (0, F.GJ)(n, t);
     }
-    return (0, i.jsx)(D.Y, {
+    return (0, i.jsx)(A.Y, {
         targetElementRef: o,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(A.W, {
+            return (0, i.jsx)(D.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, T.Z_)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": k.intl.string(k.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 children: (0, i.jsxs)(P.rX, {
                     children: [
                         r,
@@ -229,7 +229,7 @@ function B(e) {
                             P.Dr,
                             {
                                 id: "flag-widget",
-                                label: k.intl.string(k.t.D4GvHE),
+                                label: S.intl.string(S.t.D4GvHE),
                                 action: d,
                                 color: "danger",
                                 icon: U.i,
@@ -245,7 +245,7 @@ function B(e) {
             (0, i.jsx)(I.D, {
                 ...e,
                 innerRef: o,
-                "aria-label": k.intl.string(k.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 className: a()(H.x, s),
                 children: (0, i.jsx)(z.j, { size: "sm", color: "currentColor" }),
             }),
@@ -262,6 +262,7 @@ function Y(e) {
         subtitle: o,
         actionButtons: d = [],
         className: c,
+        additionalMenuItems: u,
     } = e;
     return (0, i.jsxs)("div", {
         className: a()(K.U1, c),
@@ -273,19 +274,27 @@ function Y(e) {
                     null != o && (0, i.jsx)(v.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
-            (0, i.jsx)(q, { widget: l, actionButtons: d, disabledInteraction: s, userId: t }),
+            (0, i.jsx)(q, { widget: l, actionButtons: d, disabledInteraction: s, userId: t, additionalMenuItems: u }),
         ],
     });
 }
 function q(e) {
-    let { widget: t, actionButtons: n, disabledInteraction: l, userId: s } = e,
-        a = (0, p.bG)([w.default], () => w.default.getId());
+    let { widget: t, actionButtons: n, disabledInteraction: l, userId: s, additionalMenuItems: a } = e,
+        r = (0, p.bG)([w.default], () => w.default.getId());
     return l
         ? null
         : null != n && n.length > 0
           ? (0, i.jsx)("div", { className: K.o1, children: n })
-          : a !== s
-            ? (0, i.jsx)("div", { className: K.o1, children: (0, i.jsx)(B, { widget: t, userId: s, className: K.AQ }) })
+          : r !== s
+            ? (0, i.jsx)("div", {
+                  className: K.o1,
+                  children: (0, i.jsx)(B, {
+                      widget: t,
+                      userId: s,
+                      className: K.AQ,
+                      menuItems: null != a ? [a] : void 0,
+                  }),
+              })
             : null;
 }
 var J = n(192),
@@ -317,8 +326,8 @@ function Z(e) {
     return (0, i.jsxs)("div", {
         ref: g,
         className: a()(V.wX, { [V.A]: E, [V.Ze]: C, [V.Id]: j }),
-        "aria-label": k.intl.formatToPlainString(k.t.YLczh4, { positionNumber: t + 1 }),
-        children: [(0, i.jsx)(O, { buttonRef: u, widget: n, className: V.vn, additionalMenuItems: s }), r],
+        "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
+        children: [(0, i.jsx)(M, { buttonRef: u, widget: n, className: V.vn, additionalMenuItems: s }), r],
     });
 }
 function X(e) {
@@ -337,8 +346,8 @@ function X(e) {
             headerClassName: N,
             additionalManageWidgetMenuItems: b,
         } = e,
-        D = (0, o.GV)(),
-        A = l.useRef(null),
+        A = (0, o.GV)(),
+        D = l.useRef(null),
         P = (0, f.g)(),
         { trackUserProfileAction: _ } = (0, d.NJ)(),
         T = (function (e) {
@@ -357,20 +366,21 @@ function X(e) {
         R = P === n.type;
     (0, u.A)(T, R);
     let w = c && null != p && !h;
-    function S() {
+    function W() {
         return (0, i.jsxs)("div", {
-            ref: A,
+            ref: D,
             className: a()(V.kL, j),
             children: [
                 (0, i.jsx)(Y, {
                     userId: t,
-                    headingId: D,
+                    headingId: A,
                     title: E,
                     subtitle: C,
                     actionButtons: v,
                     widget: n,
                     disableInteraction: h,
                     className: N,
+                    additionalMenuItems: b,
                 }),
                 (0, i.jsxs)(r.F, { children: [s, I] }),
             ],
@@ -378,15 +388,15 @@ function X(e) {
     }
     return (0, i.jsx)("section", {
         ref: T,
-        "aria-labelledby": D,
+        "aria-labelledby": A,
         children: w
             ? (0, i.jsx)(Z, {
                   index: p ?? 0,
                   widget: n,
-                  getWidth: () => A.current?.offsetWidth,
+                  getWidth: () => D.current?.offsetWidth,
                   additionalManageWidgetMenuItems: b,
-                  children: S(),
+                  children: W(),
               })
-            : S(),
+            : W(),
     });
 }
