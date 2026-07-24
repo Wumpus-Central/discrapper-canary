@@ -89,20 +89,21 @@ function b(e) {
         { trackUserProfileAction: o } = (0, p.NJ)(),
         { avatarProps: d, eventHandlers: u } = v(a),
         A = s()(y.my, r),
-        h = a.displayProfile?.guildId ?? a.guildId;
-    return null == t && null == n
+        h = a.displayProfile?.guildId ?? a.guildId,
+        I = null != a.user.avatar || a.user.hasAvatarForGuild(h) ? n : void 0;
+    return null == t && null == I
         ? (0, i.jsx)("div", { ...u, className: A, children: (0, i.jsx)(D, { ...d }) })
         : (0, i.jsx)(c.s, {
-              "aria-label": L.intl.string(null != n ? L.t.xB7MI3 : L.t["+Xp3hq"]),
+              "aria-label": L.intl.string(null != I ? L.t.xB7MI3 : L.t["+Xp3hq"]),
               ...u,
-              onMouseEnter: function () {
-                  u.onMouseEnter(), null != n && (0, S.V)({ user: a.user, guildId: h });
+              onMouseEnter: () => {
+                  u.onMouseEnter(), null != I && (0, S.V)({ user: a.user, guildId: h });
               },
               className: s()(A, y.vk),
               focusProps: { ringClassName: y.Rg },
               onClick: () => {
-                  if (null != n) {
-                      o({ action: N.pt.VIEW_AVATAR, analyticsLocations: l }), n();
+                  if (null != I) {
+                      o({ action: N.pt.VIEW_AVATAR, analyticsLocations: l }), I();
                       return;
                   }
                   o({ action: N.pt.PRESS_VIEW_PROFILE, analyticsLocations: l }), t?.();
