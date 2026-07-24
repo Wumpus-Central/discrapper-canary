@@ -20,6 +20,7 @@ a.r(
         underline: "underline_ada32f",
         strikethrough: "strikethrough_ada32f",
         fakeLink: "fakeLink_ada32f",
+        silentPrefix: "silentPrefix_ada32f",
         inlineCode: "inlineCode_ada32f",
         spoiler: "spoiler_ada32f",
         codeBlockText: "codeBlockText_ada32f",

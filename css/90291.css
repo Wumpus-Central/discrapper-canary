@@ -4717,9 +4717,13 @@
 }
 
 .fakeLink_ada32f {
-    color: var(--text-link);
     -webkit-text-decoration: var(--link-decoration);
     text-decoration: var(--link-decoration)
+}
+
+.fakeLink_ada32f,
+.silentPrefix_ada32f {
+    color: var(--text-link)
 }
 
 .after_inlineCode_ada32f,

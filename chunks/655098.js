@@ -181,7 +181,7 @@ let ec = {
     link: el.fakeLink,
     url: el.fakeLink,
     autolink: el.fakeLink,
-    silentPrefix: el.fakeLink,
+    silentPrefix: el.silentPrefix,
     spoiler: s()(ed.ur, ed.F0, ed.kx, el.spoiler),
     staticRouteLink: el.fakeLink,
     syntaxBefore: el.syntaxBefore,
