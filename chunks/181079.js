@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(735438),
+n.d(t, { A: () => f });
+var i = n(435558),
     r = n(17928),
-    s = n(873298),
-    a = n(228366),
-    o = n(617617),
-    l = n(95701),
-    u = n(349828),
+    a = n(873298),
+    s = n(228366),
+    l = n(617617),
+    o = n(95701),
+    d = n(349828),
     c = n(652215);
-let d = {},
+let u = {},
     _ = !1,
-    h = !1;
-function f() {
-    let e = o.A.settings.favorites,
+    E = !1,
+    A = !1;
+function h() {
+    let e = l.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
         r = e?.favoriteChannels;
@@ -25,38 +26,43 @@ function f() {
                 type: t.type,
                 channelType: t.channelType?.value,
                 order: t.position,
-                parentId: t.parentId !== u.O8 ? t.parentId : null,
+                parentId: t.parentId !== d.O8 ? t.parentId : null,
             };
         }
-    let s = e?.guildVisible?.value ?? !(0, i.isEmpty)(n);
-    return !(_ === t && h === s && (0, i.isEqual)(d, n)) && ((_ = t), (h = s), (d = n), !0);
+    let a = e?.guildVisible?.value,
+        s = a ?? !(0, i.isEmpty)(n),
+        o = !1 === a;
+    return !(_ === t && E === s && A === o && (0, i.isEqual)(u, n)) && ((_ = t), (E = s), (A = o), (u = n), !0);
 }
-class p extends r.Ay.Store {
+class I extends r.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(o.A), f(), this.syncWith([o.A], f);
+        this.waitFor(l.A), h(), this.syncWith([l.A], h);
     }
     getFavoriteChannels() {
-        return d;
+        return u;
     }
     get favoriteGuildMuted() {
         return _;
     }
     get favoriteGuildEnabled() {
-        return h;
+        return E;
+    }
+    get favoriteGuildExplicitlyHidden() {
+        return A;
     }
     isFavorite(e) {
-        return null != e && null != d[e];
+        return null != e && null != u[e];
     }
     getFavorite(e) {
-        if (null != e) return d[e];
+        if (null != e) return u[e];
     }
     getCategoryRecord(e) {
-        if (e in d && d[e].type === s.Ip.CATEGORY) {
+        if (e in u && u[e].type === a.Ip.CATEGORY) {
             var t;
             return (
-                (t = d[e]),
-                (0, l.createChannelRecord)({
+                (t = u[e]),
+                (0, o.createChannelRecord)({
                     id: t.id,
                     name: t.nickname ?? "",
                     type: c.rbe.GUILD_CATEGORY,
@@ -78,4 +84,4 @@ class p extends r.Ay.Store {
         return !(0, i.isEmpty)(this.getFavoriteChannels());
     }
 }
-let E = new p(a.h, {});
+let f = new I(s.h, {});

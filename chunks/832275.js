@@ -1,28 +1,44 @@
 "use strict";
-n.d(t, { A: () => h, J: () => A });
+n.d(t, { A: () => A, J: () => E });
 var i = n(17928),
     r = n(554146),
     a = n(558845),
     s = n(826673),
     l = n(967198),
-    o = n(287809),
-    d = n(474090),
-    c = n(181079),
-    u = n(379587),
-    _ = n(5180),
-    E = n(202541);
-function A(e, t, n, i) {
-    let { favoritesGuildXPEnabled: r, isMenuItemDCSelected: a, isIntroDCDismissed: s } = i;
-    if (!r) return !1;
-    if ((a && !s) || (0, _.ai)(n.getGuildId())) return !0;
-    let l = t.getCurrentUser();
-    return null != l && !!d.Ay.isPremiumExactly(l, E.PremiumTypes.TIER_2) && e.favoriteGuildEnabled;
+    o = n(181079),
+    d = n(281980),
+    c = n(5180),
+    u = n(551289);
+function _(e, t, n) {
+    let { isExperimentEnabled: i, isFreemium: r, hasAccess: a, isMenuItemDCSelected: s, isIntroDCDismissed: l } = n;
+    return !!i && (!!((s && !l) || (0, c.ai)(t.getGuildId())) || (!!a && (0, u.n_)(r, e)));
 }
-function h(e) {
-    let t = (0, u.mN)({ location: e }).enabled,
-        n = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
-        d = (0, s.HX)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
-    return (0, i.bG)([c.A, o.default, l.A], () =>
-        A(c.A, o.default, l.A, { favoritesGuildXPEnabled: t, isMenuItemDCSelected: n, isIntroDCDismissed: d }),
+function E() {
+    let { isExperimentEnabled: e, isFreemium: t, hasAccess: n } = (0, d.ad)(),
+        i = (0, a.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+        c = (0, s.k8)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
+    return _(o.A, l.A, {
+        isExperimentEnabled: e,
+        isFreemium: t,
+        hasAccess: n,
+        isMenuItemDCSelected: i,
+        isIntroDCDismissed: c,
+    });
+}
+function A(e) {
+    let { isExperimentEnabled: t, isFreemium: n, hasAccess: c } = (0, d.TW)(e),
+        u = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+        E = (0, s.HX)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
+    return (0, i.bG)(
+        [o.A, l.A],
+        () =>
+            _(o.A, l.A, {
+                isExperimentEnabled: t,
+                isFreemium: n,
+                hasAccess: c,
+                isMenuItemDCSelected: u,
+                isIntroDCDismissed: E,
+            }),
+        [t, n, c, u, E],
     );
 }
