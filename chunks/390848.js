@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { I: () => a });
-var i = n(64700),
-    r = n(411986);
-function a(e) {
+a.d(l, { I: () => c });
+var s = a(64700),
+    t = a(411986);
+function c(e) {
     let {
-            userId: t,
-            applicationId: n,
-            isGameRelationship: a,
-            location: s,
-            onConfirm: l,
-            onCancel: o,
-            onFinally: d,
+            userId: l,
+            applicationId: a,
+            isGameRelationship: c,
+            location: i,
+            onConfirm: n,
+            onCancel: d,
+            onFinally: p,
         } = e,
-        c = i.useCallback(() => {
-            r.A.cancelFriendRequest({ userId: t, applicationId: a ? n : null, location: s });
-        }, [n, a, s, t]);
+        r = s.useCallback(() => {
+            t.A.cancelFriendRequest({ userId: l, applicationId: c ? a : null, location: i });
+        }, [a, c, i, l]);
     return {
-        acceptFriendRequest: i.useCallback(() => {
-            r.A.maybeConfirmFriendRequestAccept({
-                userId: t,
-                applicationId: a ? n : null,
-                location: s,
-                onConfirm: l,
-                onCancel: o,
-                onFinally: d,
+        acceptFriendRequest: s.useCallback(() => {
+            t.A.maybeConfirmFriendRequestAccept({
+                userId: l,
+                applicationId: c ? a : null,
+                location: i,
+                onConfirm: n,
+                onCancel: d,
+                onFinally: p,
             });
-        }, [n, a, s, o, l, d, t]),
-        cancelFriendRequest: c,
+        }, [a, c, i, d, n, p, l]),
+        cancelFriendRequest: r,
     };
 }

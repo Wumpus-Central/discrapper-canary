@@ -1,246 +1,256 @@
-"use strict";
-n.d(t, { $: () => z, D: () => $ });
+n.d(t, { $: () => W, D: () => Y });
 var i = n(627968),
-    r = n(64700),
-    a = n(989349),
-    s = n.n(a),
-    l = n(554146),
-    o = n(573648),
-    d = n(503698),
-    c = n.n(d),
-    u = n(17928),
-    _ = n(192308),
-    E = n(417098),
-    A = n(318254),
-    h = n(661531),
-    I = n(736653),
-    f = n(793574),
-    p = n(688810),
-    T = n(429913),
-    m = n(30370),
-    g = n(772680),
-    S = n(281020),
-    N = n(206828),
-    C = n(49999),
-    O = n(452832),
-    R = n(375708),
-    L = n(789167);
-let y = function (e) {
-    let {
-            markAsDismissed: t,
-            recurringDismiss: a,
-            applicationName: s,
-            platformTypes: l,
-            platformIconOverride: d,
-            noticeType: y,
-        } = e,
-        D = (0, u.bG)([m.A], () => m.A.getAccounts().find((e) => l.includes(e.type))?.type),
-        v = (0, I.Ay)(),
-        b = null != D ? o.A.get(D) : null,
-        M = b?.migrationData?.replacedBy,
-        P = (0, T.h)(M);
-    s = s ?? P?.name;
-    let { startAuthorization: U, canStartAuthorization: w, hasAlreadyLinked: G, fetched: x } = (0, N.RD)(P),
-        { analyticsLocations: k } = (0, p.Ay)(f.A.NOTICE),
-        F = null == d ? b : d;
-    if (
-        (r.useEffect(() => {
-            G && x && (null != M && (0, S.M8)(M), t(C.i.INDIRECT_ACTION));
-        }, [G, x, t, M]),
-        null == P || !w || !x || G)
-    )
-        return null;
-    function V() {
-        null != P &&
-            (0, g.RI)({
-                applicationId: P.id,
-                onSuccess: () => {
-                    (0, _.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
-                        return (t) => (0, i.jsx)(e, { ...t });
+    l = n(64700),
+    r = n(989349),
+    s = n.n(r),
+    a = n(554146),
+    E = n(573648),
+    o = n(503698),
+    c = n.n(o),
+    _ = n(17928);
+if (21552 == n.j) var u = n(192308);
+if (21552 == n.j) var A = n(417098);
+if (21552 == n.j) var T = n(318254);
+if (21552 == n.j) var d = n(661531);
+var I = n(736653),
+    N = n(793574),
+    R = n(688810),
+    S = n(429913),
+    O = n(30370),
+    C = n(772680),
+    D = n(281020),
+    P = n(206828),
+    M = n(49999),
+    m = n(452832),
+    p = n(375708),
+    f = n(789167);
+let g =
+    21552 == n.j
+        ? function (e) {
+              let {
+                      markAsDismissed: t,
+                      recurringDismiss: r,
+                      applicationName: s,
+                      platformTypes: a,
+                      platformIconOverride: o,
+                      noticeType: g,
+                  } = e,
+                  U = (0, _.bG)([O.A], () => O.A.getAccounts().find((e) => a.includes(e.type))?.type),
+                  h = (0, I.Ay)(),
+                  k = null != U ? E.A.get(U) : null,
+                  y = k?.migrationData?.replacedBy,
+                  L = (0, S.h)(y);
+              s = s ?? L?.name;
+              let { startAuthorization: x, canStartAuthorization: G, hasAlreadyLinked: j, fetched: q } = (0, P.RD)(L),
+                  { analyticsLocations: v } = (0, R.Ay)(N.A.NOTICE),
+                  X = null == o ? k : o;
+              if (
+                  (l.useEffect(() => {
+                      j && q && (null != y && (0, D.M8)(y), t(M.i.INDIRECT_ACTION));
+                  }, [j, q, t, y]),
+                  null == L || !G || !q || j)
+              )
+                  return null;
+              function b() {
+                  null != L &&
+                      (0, C.RI)({
+                          applicationId: L.id,
+                          onSuccess: () => {
+                              (0, u.openModalLazy)(async () => {
+                                  let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(
+                                      n.bind(n, 494886),
+                                  );
+                                  return (t) => (0, i.jsx)(e, { ...t });
+                              });
+                          },
+                      });
+              }
+              return (0, i.jsxs)(A.$T, {
+                  color: A.Hv.WARNING,
+                  children: [
+                      (0, i.jsx)(A.PM, {
+                          noticeType: g,
+                          onClick: () => {
+                              t(M.i.USER_DISMISS);
+                          },
+                      }),
+                      (0, i.jsx)("img", {
+                          src: "light" === h ? X?.icon.blackSVG : X?.icon.whiteSVG,
+                          alt: s,
+                          className: c()(f.tV, f.Y5),
+                      }),
+                      p.intl.format(m.default.DfSSdL, {
+                          connectionName: k?.name,
+                          applicationName: s,
+                          orbsIconHook: () =>
+                              (0, i.jsx)(T.C, {
+                                  size: "xs",
+                                  style: { verticalAlign: "-0.22em" },
+                                  color: d.A.colors.NOTICE_TEXT_WARNING,
+                              }),
+                          orbCount: 200,
+                      }),
+                      (0, i.jsx)(A.Z_, {
+                          onClick: function () {
+                              x({ analyticsLocations: v, onSuccess: b });
+                          },
+                          className: f.NS,
+                          noticeType: g,
+                          children: p.intl.string(m.default.ZeOhh9),
+                      }),
+                      (0, i.jsx)(A.zr, {
+                          onClick: () => r(M.i.USER_DISMISS),
+                          className: f.go,
+                          children: p.intl.string(m.default["8qJAeT"]),
+                      }),
+                  ],
+              });
+          }
+        : null;
+var U = n(521790),
+    h = n(632678),
+    k = n(496431),
+    y = n(532794),
+    L = n(174459),
+    x = n(422936),
+    G = n(410516),
+    j = n(635995),
+    q = n(99462),
+    v = n(202541),
+    X = n(652215);
+let b =
+    21552 == n.j
+        ? function (e) {
+              let { dismissCurrentNotice: t, subscriptionTier: n } = e,
+                  { analyticsLocations: l } = (0, R.Ay)(N.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+                  r = (0, x.O)(),
+                  s = (0, k.A)(null != r && null != r.expiresAt ? r.expiresAt.getTime() : 0);
+              return null == r ||
+                  r.discount?.planIds.some((e) => v.hd[e].skuId !== n) ||
+                  !r.hasAcknowledged() ||
+                  Object.values(s).every((e) => 0 === e)
+                  ? null
+                  : (0, i.jsxs)(j.T0, {
+                        onClick: () => {
+                            t(),
+                                L.default.track(X.HAw.APP_NOTICE_CLOSED, {
+                                    notice_type: X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                                });
+                        },
+                        children: [
+                            (0, i.jsx)(j.In, { children: (0, q.rn)(s, Number(r.discount.amount), (0, G.hm)(r)) }),
+                            (0, i.jsx)(j.fY, {
+                                onClick: function () {
+                                    (0, y.A)({
+                                        subscriptionTier: n,
+                                        analyticsLocations: l,
+                                        analyticsObject: {
+                                            page: X.liQ.IN_APP,
+                                            section: X.JJy.NOTIFICATION_BAR,
+                                            object: X.ZSU.BUTTON_CTA,
+                                        },
+                                    });
+                                },
+                                text: p.intl.string(p.t.zLXssK),
+                            }),
+                        ],
                     });
-                },
-            });
-    }
-    return (0, i.jsxs)(E.$T, {
-        color: E.Hv.WARNING,
-        children: [
-            (0, i.jsx)(E.PM, {
-                noticeType: y,
-                onClick: () => {
-                    t(C.i.USER_DISMISS);
-                },
-            }),
-            (0, i.jsx)("img", {
-                src: "light" === v ? F?.icon.blackSVG : F?.icon.whiteSVG,
-                alt: s,
-                className: c()(L.tV, L.Y5),
-            }),
-            R.intl.format(O.default.DfSSdL, {
-                connectionName: b?.name,
-                applicationName: s,
-                orbsIconHook: () =>
-                    (0, i.jsx)(A.C, {
-                        size: "xs",
-                        style: { verticalAlign: "-0.22em" },
-                        color: h.A.colors.NOTICE_TEXT_WARNING,
-                    }),
-                orbCount: 200,
-            }),
-            (0, i.jsx)(E.Z_, {
-                onClick: function () {
-                    U({ analyticsLocations: k, onSuccess: V });
-                },
-                className: L.NS,
-                noticeType: y,
-                children: R.intl.string(O.default.ZeOhh9),
-            }),
-            (0, i.jsx)(E.zr, {
-                onClick: () => a(C.i.USER_DISMISS),
-                className: L.go,
-                children: R.intl.string(O.default["8qJAeT"]),
-            }),
-        ],
-    });
-};
-var D = n(521790),
-    v = n(632678),
-    b = n(496431),
-    M = n(532794),
-    P = n(174459),
-    U = n(422936),
-    w = n(410516),
-    G = n(635995),
-    x = n(99462),
-    k = n(202541),
-    F = n(652215);
-let V = function (e) {
-    let { dismissCurrentNotice: t, subscriptionTier: n } = e,
-        { analyticsLocations: r } = (0, p.Ay)(f.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        a = (0, U.O)(),
-        s = (0, b.A)(null != a && null != a.expiresAt ? a.expiresAt.getTime() : 0);
-    return null == a ||
-        a.discount?.planIds.some((e) => k.hd[e].skuId !== n) ||
-        !a.hasAcknowledged() ||
-        Object.values(s).every((e) => 0 === e)
-        ? null
-        : (0, i.jsxs)(G.T0, {
-              onClick: () => {
-                  t(), P.default.track(F.HAw.APP_NOTICE_CLOSED, { notice_type: F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING });
-              },
-              children: [
-                  (0, i.jsx)(G.In, { children: (0, x.rn)(s, Number(a.discount.amount), (0, w.hm)(a)) }),
-                  (0, i.jsx)(G.fY, {
-                      onClick: function () {
-                          (0, M.A)({
-                              subscriptionTier: n,
-                              analyticsLocations: r,
-                              analyticsObject: {
-                                  page: F.liQ.IN_APP,
-                                  section: F.JJy.NOTIFICATION_BAR,
-                                  object: F.ZSU.BUTTON_CTA,
-                              },
-                          });
-                      },
-                      text: R.intl.string(R.t.zLXssK),
-                  }),
-              ],
-          });
-};
+          }
+        : null;
 var B = n(745299),
-    H = n(354670),
-    j = n(428262),
-    W = n(826673),
-    Y = n(595529),
+    F = n(354670),
+    V = n(428262),
+    w = n(826673),
+    H = n(595529),
     K = n(942370);
-function $(e) {
+function Y(e) {
     switch (e) {
-        case F.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-            let t = H.A.getAlmostExpiringTrialOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, j.e1)(t[0]) };
-        case F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-            let n = H.A.getAlmostExpiringDiscountOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, j.e1)(n[0]) };
-        case F.kqX.RIOT_MIGRATION:
-        case F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
-        case F.kqX.BATTLENET_MIGRATION:
-        case F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
+        case X.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+            let t = F.A.getAlmostExpiringTrialOffersForReminder([v.pe.TIER_2]);
+            return { cooldownDurationMs: (0, V.e1)(t[0]) };
+        case X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+            let n = F.A.getAlmostExpiringDiscountOffersForReminder([v.pe.TIER_2]);
+            return { cooldownDurationMs: (0, V.e1)(n[0]) };
+        case X.kqX.RIOT_MIGRATION:
+        case X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case X.kqX.BATTLENET_MIGRATION:
+        case X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-function z(e) {
+function W(e) {
     let { dismissibleContent: t, noticeType: n } = e,
-        a = r.useMemo(() => $(n), [n]),
-        d = s()().add(5, "days").toDate(),
-        [c, u] = (0, Y.Bo)(t, a, C.m.NOTICE_BAR);
+        r = l.useMemo(() => Y(n), [n]),
+        o = s()().add(5, "days").toDate(),
+        [c, _] = (0, H.Bo)(t, r, M.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
-        case l.M.NAGBAR_NOTICE_OFFER_EXPIRING:
-            if (n === F.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+        case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
+            if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        u(C.i.USER_DISMISS), (0, v.w)(d);
+                        _(M.i.USER_DISMISS), (0, h.w)(o);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: v.pe.TIER_2,
                 });
-            if (n === F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(V, {
+            if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+                return (0, i.jsx)(b, {
                     dismissCurrentNotice: () => {
-                        u(C.i.USER_DISMISS), (0, v.w)(d);
+                        _(M.i.USER_DISMISS), (0, h.w)(o);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: v.pe.TIER_2,
                 });
             break;
-        case l.M.RIOT_CONNECTION_DEPRECATION:
-            return (0, i.jsx)(y, {
-                noticeType: F.kqX.RIOT_MIGRATION,
+        case a.M.RIOT_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(g, {
+                noticeType: X.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    (0, w.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), _(e);
                 },
                 recurringDismiss: (e) => {
-                    u(e);
+                    _(e);
                 },
-                applicationName: R.intl.string(O.default["1S6oAo"]),
-                platformTypes: [F.fg2.LEAGUE_OF_LEGENDS, F.fg2.RIOT_GAMES],
-                platformIconOverride: o.A.get(F.fg2.RIOT_GAMES),
+                applicationName: p.intl.string(m.default["1S6oAo"]),
+                platformTypes: [X.fg2.LEAGUE_OF_LEGENDS, X.fg2.RIOT_GAMES],
+                platformIconOverride: E.A.get(X.fg2.RIOT_GAMES),
             });
-        case l.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
-            return (0, i.jsx)(D.Ay, {
-                noticeType: F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+        case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
+            return (0, i.jsx)(U.Ay, {
+                noticeType: X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
+                    (0, w.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), _(e);
                 },
                 recurringDismiss: (e) => {
-                    u(e);
+                    _(e);
                 },
                 deprecationDate: K.af,
-                platformType: F.fg2.RIOT_GAMES,
+                platformType: X.fg2.RIOT_GAMES,
             });
-        case l.M.BATTLENET_CONNECTION_DEPRECATION:
-            return (0, i.jsx)(y, {
-                noticeType: F.kqX.BATTLENET_MIGRATION,
+        case a.M.BATTLENET_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(g, {
+                noticeType: X.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    (0, w.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), _(e);
                 },
                 recurringDismiss: (e) => {
-                    u(e);
+                    _(e);
                 },
-                platformTypes: [F.fg2.BATTLENET],
-                platformIconOverride: o.A.get(F.fg2.BATTLENET),
+                platformTypes: [X.fg2.BATTLENET],
+                platformIconOverride: E.A.get(X.fg2.BATTLENET),
             });
-        case l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
-            return (0, i.jsx)(D.Ay, {
-                noticeType: F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
+        case a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
+            return (0, i.jsx)(U.Ay, {
+                noticeType: X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
+                    (0, w.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), _(e);
                 },
                 recurringDismiss: (e) => {
-                    u(e);
+                    _(e);
                 },
                 deprecationDate: K.NX,
-                platformType: F.fg2.BATTLENET,
+                platformType: X.fg2.BATTLENET,
             });
     }
 }

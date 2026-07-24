@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(573648);
-function r(e) {
-    if (null == e || !e.startsWith("h:")) return null;
-    let [t] = e.slice(2).split(",");
-    if (null == t || 0 === t.length) return null;
-    let n = i.A.get(t);
-    return null != n && n.enabled ? n : null;
+e.d(l, { A: () => r });
+var n = e(573648);
+function r(t) {
+    if (null == t || !t.startsWith("h:")) return null;
+    let [l] = t.slice(2).split(",");
+    if (null == l || 0 === l.length) return null;
+    let e = n.A.get(l);
+    return null != e && e.enabled ? e : null;
 }

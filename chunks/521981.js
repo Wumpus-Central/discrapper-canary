@@ -1,80 +1,79 @@
-"use strict";
-n.d(t, { ko: () => E, Ay: () => h, Le: () => A, Tz: () => f, jp: () => I });
-var i = n(46054);
-n(380610);
-var r = n(833291);
-n(100392);
-var a = n(659674),
-    s = n(38405),
-    l = n(652215);
-let o = new Set([l.Auw.IMAGE, l.Auw.GIFV]),
-    d = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function c(e) {
+t.d(e, { ko: () => p, Ay: () => y, Le: () => w, Tz: () => A, jp: () => h });
+var o = t(46054);
+t(380610);
+var a = t(833291);
+t(100392);
+var i = t(659674),
+    l = t(38405),
+    r = t(652215);
+let s = new Set([r.Auw.IMAGE, r.Auw.GIFV]),
+    u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+function d(n) {
     if (
-        e.some(
-            (e) =>
-                "emoji" !== e.type &&
-                "customEmoji" !== e.type &&
-                "soundboard" !== e.type &&
-                ("string" != typeof e.content || "" !== e.content.trim()),
+        n.some(
+            (n) =>
+                "emoji" !== n.type &&
+                "customEmoji" !== n.type &&
+                "soundboard" !== n.type &&
+                ("string" != typeof n.content || "" !== n.content.trim()),
         )
     )
-        return e;
-    let t = 0;
+        return n;
+    let e = 0;
     return (
-        e.forEach((e) => {
-            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > 30))
+        n.forEach((n) => {
+            if ((("emoji" === n.type || "customEmoji" === n.type || "soundboard" === n.type) && (e += 1), e > 30))
                 return !1;
         }),
-        t > 30 ||
-            e.forEach((e) => {
-                e.jumboable = !0;
+        e > 30 ||
+            n.forEach((n) => {
+                n.jumboable = !0;
             }),
-        e
+        n
     );
 }
-function u(e, t) {
-    if (e instanceof Array) return e.some((e) => u(e, t));
-    let n = t(e);
-    return null != n
-        ? n
-        : e.content instanceof Array
-          ? u(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => u(e, t));
+function c(n, e) {
+    if (n instanceof Array) return n.some((n) => c(n, e));
+    let t = e(n);
+    return null != t
+        ? t
+        : n.content instanceof Array
+          ? c(n.content, e)
+          : n.items instanceof Array && n.items.some((n) => c(n, e));
 }
-function _(e) {
-    return u(e, (e) =>
-        "spoiler" === e.type ? u(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function m(n) {
+    return c(n, (n) =>
+        "spoiler" === n.type ? c(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
     );
 }
-function E(e, t) {
-    let n = A({ channelId: e.channel_id, messageId: e.id, authorId: e.author?.id, renderOptions: t }),
-        i = null != e.webhookId;
+function p(n, e) {
+    let t = w({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
+        o = null != n.webhookId;
     return {
-        ...n,
-        allowLinks: i || n.allowLinks,
-        allowEmojiLinks: i,
-        mentionChannels: e.mentionChannels,
-        mentionGames: e.mentionGames ?? new Map(),
-        soundboardSounds: e.soundboardSounds ?? [],
+        ...t,
+        allowLinks: o || t.allowLinks,
+        allowEmojiLinks: o,
+        mentionChannels: n.mentionChannels,
+        mentionGames: n.mentionGames ?? new Map(),
+        soundboardSounds: n.soundboardSounds ?? [],
     };
 }
-function A(e) {
-    let { channelId: t, messageId: n, authorId: i, renderOptions: r } = e;
+function w(n) {
+    let { channelId: e, messageId: t, authorId: o, renderOptions: a } = n;
     return {
-        channelId: t,
-        messageId: n,
-        authorId: i,
-        allowLinks: !!r.allowLinks,
-        allowDevLinks: !!r.allowDevLinks,
-        allowGameMentions: !!r.allowGameMentions,
-        allowTimeMentionInput: !!r.allowTimeMentionInput,
-        formatInline: !!r.formatInline,
-        noStyleAndInteraction: !!r.noStyleAndInteraction,
-        allowHeading: !!r.allowHeading,
-        allowList: !!r.allowList,
-        previewLinkTarget: !!r.previewLinkTarget,
-        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
+        channelId: e,
+        messageId: t,
+        authorId: o,
+        allowLinks: !!a.allowLinks,
+        allowDevLinks: !!a.allowDevLinks,
+        allowGameMentions: !!a.allowGameMentions,
+        allowTimeMentionInput: !!a.allowTimeMentionInput,
+        formatInline: !!a.formatInline,
+        noStyleAndInteraction: !!a.noStyleAndInteraction,
+        allowHeading: !!a.allowHeading,
+        allowList: !!a.allowList,
+        previewLinkTarget: !!a.previewLinkTarget,
+        disableAnimatedEmoji: !!a.disableAnimatedEmoji,
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
@@ -82,119 +81,119 @@ function A(e) {
         soundboardSounds: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
-        viewingChannelId: r.viewingChannelId,
-        forceWhite: !!r.forceWhite,
-        textColor: r.textColor,
-        disablePressableChannelMention: !!r.disablePressableChannelMention,
+        viewingChannelId: a.viewingChannelId,
+        forceWhite: !!a.forceWhite,
+        textColor: a.textColor,
+        disablePressableChannelMention: !!a.disablePressableChannelMention,
     };
 }
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (function (e, t, n) {
+function y(n) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return (function (n, e, t) {
         let {
-                toAST: i = !1,
-                hideSimpleEmbedContent: u = !0,
-                formatInline: A = !1,
-                postProcessor: h,
-                contentMessage: I,
-            } = n,
+                toAST: o = !1,
+                hideSimpleEmbedContent: c = !0,
+                formatInline: w = !1,
+                postProcessor: y,
+                contentMessage: h,
+            } = t,
+            A = !1,
             f = !1,
-            p = !1,
-            T = (I ?? t).content,
-            m = e(T, !0, E(t, n), (e, n, E) => {
-                let { ast: m, hasSpoilerEmbeds: g } = (function (e) {
-                    var t, n, i;
-                    let u,
+            k = (h ?? e).content,
+            b = n(k, !0, p(e, t), (n, t, p) => {
+                let { ast: b, hasSpoilerEmbeds: g } = (function (n) {
+                    var e, t, o;
+                    let c,
                         {
-                            ast: E,
-                            inline: A,
-                            hasBailedAst: h,
-                            message: I,
-                            contentMessage: f,
-                            messageContent: p,
-                            hideSimpleEmbedContent: T,
-                            formatInline: m,
+                            ast: p,
+                            inline: w,
+                            hasBailedAst: y,
+                            message: h,
+                            contentMessage: A,
+                            messageContent: f,
+                            hideSimpleEmbedContent: k,
+                            formatInline: b,
                             toAST: g,
-                        } = e,
-                        S = Array.isArray(E) ? E : [E],
-                        N = !1;
+                        } = n,
+                        L = Array.isArray(p) ? p : [p],
+                        I = !1;
                     return (
-                        h && (S = [{ type: "text", content: p, originalMatch: { index: 0, 0: p } }]),
-                        T &&
-                            (S = (function (e, t) {
-                                if (1 !== e.length || 1 !== t.length) return e;
-                                let n = e[0],
-                                    i = t[0];
-                                return ("link" === n.type || "attachmentLink" === n.type) &&
-                                    o.has(i.type) &&
-                                    (0, a.NV)(i)
+                        y && (L = [{ type: "text", content: f, originalMatch: { index: 0, 0: f } }]),
+                        k &&
+                            (L = (function (n, e) {
+                                if (1 !== n.length || 1 !== e.length) return n;
+                                let t = n[0],
+                                    o = e[0];
+                                return ("link" === t.type || "attachmentLink" === t.type) &&
+                                    s.has(o.type) &&
+                                    (0, i.NV)(o)
                                     ? []
-                                    : e;
-                            })(S, (f ?? I).embeds)),
-                        m ||
-                            I.type === l.lAJ.MEDIA_MENTION_MESSAGE ||
-                            ((t = S),
-                            (S = A
-                                ? c(t)
-                                : ("paragraph" === t[0].type &&
-                                      t[0].content instanceof Array &&
-                                      (t[0].content = c(t[0].content)),
-                                  t))),
-                        (u = (n = S).some((e) => "link" !== e.type)),
-                        (S = n.filter((e) => {
-                            let t = "link" === e.type,
-                                n = null != e.target ? (0, r.ts)(e.target) : null;
-                            return !(t && null != n && !u);
+                                    : n;
+                            })(L, (A ?? h).embeds)),
+                        b ||
+                            h.type === r.lAJ.MEDIA_MENTION_MESSAGE ||
+                            ((e = L),
+                            (L = w
+                                ? d(e)
+                                : ("paragraph" === e[0].type &&
+                                      e[0].content instanceof Array &&
+                                      (e[0].content = d(e[0].content)),
+                                  e))),
+                        (c = (t = L).some((n) => "link" !== n.type)),
+                        (L = t.filter((n) => {
+                            let e = "link" === n.type,
+                                t = null != n.target ? (0, a.ts)(n.target) : null;
+                            return !(e && null != t && !c);
                         })),
-                        (f ?? I).embeds.length > 0 &&
-                            ((i = S),
-                            (N = A
-                                ? _(i)
-                                : "paragraph" === i[0].type && i[0].content instanceof Array && _(i[0].content))),
-                        m &&
-                            (S = (function e(t) {
+                        (A ?? h).embeds.length > 0 &&
+                            ((o = L),
+                            (I = w
+                                ? m(o)
+                                : "paragraph" === o[0].type && o[0].content instanceof Array && m(o[0].content))),
+                        b &&
+                            (L = (function n(e) {
                                 return (
-                                    t.forEach((t) => {
-                                        d.has(t.type) &&
-                                            null != t.content &&
-                                            (Array.isArray(t.content)
-                                                ? e(t.content)
-                                                : "string" == typeof t.content
-                                                  ? (t.content = t.content.replace(/\n/g, " "))
-                                                  : s.A.captureMessage(
-                                                        `AST node type:${t.type} with content typeof ${typeof t.content}. Keys ${Object.keys(t)}`,
+                                    e.forEach((e) => {
+                                        u.has(e.type) &&
+                                            null != e.content &&
+                                            (Array.isArray(e.content)
+                                                ? n(e.content)
+                                                : "string" == typeof e.content
+                                                  ? (e.content = e.content.replace(/\n/g, " "))
+                                                  : l.A.captureMessage(
+                                                        `AST node type:${e.type} with content typeof ${typeof e.content}. Keys ${Object.keys(e)}`,
                                                     ));
                                     }),
-                                    t
+                                    e
                                 );
-                            })(S)),
-                        { ast: S, hasSpoilerEmbeds: N }
+                            })(L)),
+                        { ast: L, hasSpoilerEmbeds: I }
                     );
                 })({
-                    ast: e,
-                    inline: n,
-                    hasBailedAst: (p = E ?? !1),
-                    message: t,
-                    contentMessage: I,
-                    messageContent: T,
-                    hideSimpleEmbedContent: u,
-                    formatInline: A,
-                    toAST: i,
+                    ast: n,
+                    inline: t,
+                    hasBailedAst: (f = p ?? !1),
+                    message: e,
+                    contentMessage: h,
+                    messageContent: k,
+                    hideSimpleEmbedContent: c,
+                    formatInline: w,
+                    toAST: o,
                 });
-                f = g;
-                let S = m;
-                return null != h && (S = h(S, n)), S;
+                A = g;
+                let L = b;
+                return null != y && (L = y(L, t)), L;
             });
-        return { hasSpoilerEmbeds: f, hasBailedAst: p, content: m };
-    })(t.formatInline ? i.A.parseInlineReply : i.A.parse, e, t);
+        return { hasSpoilerEmbeds: A, hasBailedAst: f, content: b };
+    })(e.formatInline ? o.A.parseInlineReply : o.A.parse, n, e);
 }
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return (function (e, t) {
+function h(n, e) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    return (function (n, e) {
         arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        let { content: n, guildId: i, channelId: r, messageId: a, authorId: s } = t;
-        return e(
-            n,
+        let { content: t, guildId: o, channelId: a, messageId: i, authorId: l } = e;
+        return n(
+            t,
             !0,
             {
                 allowLinks: !1,
@@ -211,23 +210,23 @@ function I(e, t) {
                 disableAutoBlockNewlines: !0,
                 previewLinkTarget: !1,
                 disableAnimatedEmoji: !0,
-                guildId: i,
-                channelId: r,
-                messageId: a,
-                authorId: s,
+                guildId: o,
+                channelId: a,
+                messageId: i,
+                authorId: l,
                 muted: !1,
                 disablePressableChannelMention: !0,
             },
-            (e) => (Array.isArray(e) || (e = [e]), e),
+            (n) => (Array.isArray(n) || (n = [n]), n),
         );
-    })(e, t, n);
+    })(n, e, t);
 }
-function f(e, t, n) {
-    var r;
+function A(n, e, t) {
+    var a;
     return (
-        (r = i.A.parseAutoModerationSystemMessage),
-        r(
-            e,
+        (a = o.A.parseAutoModerationSystemMessage),
+        a(
+            n,
             !0,
             {
                 allowLinks: !1,
@@ -242,12 +241,12 @@ function f(e, t, n) {
                 allowHeading: !1,
                 allowList: !1,
                 disableAutoBlockNewlines: !0,
-                highlightWord: t,
+                highlightWord: e,
                 disableAnimatedEmoji: !1,
-                channelId: n,
+                channelId: t,
                 muted: !1,
             },
-            (e) => (Array.isArray(e) || (e = [e]), e),
+            (n) => (Array.isArray(n) || (n = [n]), n),
         )
     );
 }

@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { i: () => r });
-var i,
-    r =
-        (((i = {}).AGE_GATE = "age-gate"),
-        (i.CHOOSE_TEMPLATE = "choose-template"),
-        (i.CUSTOMIZE_GUILD = "customize-server"),
-        (i.CHANNEL_PROMPT = "channel-prompt"),
-        (i.JOIN_GUILD = "join-server"),
-        (i.CREATION_INTENT = "creation-intent"),
-        (i.COMPLETE = "complete"),
-        i);
+p.d(t, { i: () => E });
+var s,
+    E =
+        (((s = {}).AGE_GATE = "age-gate"),
+        (s.CHOOSE_TEMPLATE = "choose-template"),
+        (s.CUSTOMIZE_GUILD = "customize-server"),
+        (s.CHANNEL_PROMPT = "channel-prompt"),
+        (s.JOIN_GUILD = "join-server"),
+        (s.CREATION_INTENT = "creation-intent"),
+        (s.COMPLETE = "complete"),
+        s);
