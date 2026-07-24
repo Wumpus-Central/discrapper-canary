@@ -3961,6 +3961,7 @@
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: #757880;
     --scrollbar-thin-track: transparent;
+    --share-chat-input-background: #1f1f21;
     --slider-track-background: #595963;
     --spine-default: #595963;
     --spoiler-hidden-background: #7d7d87;
@@ -4623,6 +4624,7 @@
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: #8c8c94;
     --scrollbar-thin-track: transparent;
+    --share-chat-input-background: rgba(0, 0, 0, .08);
     --slider-track-background: #c4c7c9;
     --spine-default: #c4c7c9;
     --spoiler-hidden-background: #8f8f96;
@@ -5285,6 +5287,7 @@
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: #595963;
     --scrollbar-thin-track: transparent;
+    --share-chat-input-background: rgba(0, 0, 0, .12);
     --slider-track-background: #3b3d42;
     --spine-default: #3b3d42;
     --spoiler-hidden-background: #5c5c66;
@@ -5947,6 +5950,7 @@
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: #5e616b;
     --scrollbar-thin-track: transparent;
+    --share-chat-input-background: hsla(223, 8%, 46%, .12);
     --slider-track-background: #474752;
     --spine-default: #474752;
     --spoiler-hidden-background: #666670;
