@@ -5533,6 +5533,22 @@
     }
   },
   {
+    "name": "2026-07-desktop-tti-update-backoff-algo",
+    "kind": "user",
+    "defaultConfig": {
+      "algo": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "algo": 1
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-07-expressive-modal-v2",
     "defaultConfig": {

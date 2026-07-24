@@ -89,6 +89,11 @@ let r = {
         inlineRequire: () => n(516562).A,
         hasStoreChangeListeners: !0,
     },
+    DesktopTTIUpdateBackoffAlgoExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(323617).A,
+        hasStoreChangeListeners: !0,
+    },
     DiceRollLifecycleManager: {
         actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
         inlineRequire: () => n(545185).A,
