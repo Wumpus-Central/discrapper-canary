@@ -3880,6 +3880,7 @@
     --mobile-toast-background-default: #404047;
     --mobile-typing-indicator-background-default: #333338;
     --mobile-unreadbar-text-default: #94a8ff;
+    --mobile-voice-panel-background: #2b2e33;
     --mobile-voice-panel-badge-background: #383b40;
     --modal-background: #383b40;
     --modal-footer-background: #383b40;
@@ -4541,6 +4542,7 @@
     --mobile-toast-background-default: #fff;
     --mobile-typing-indicator-background-default: #fafafa;
     --mobile-unreadbar-text-default: #525ee0;
+    --mobile-voice-panel-background: #f2f2f5;
     --mobile-voice-panel-badge-background: #fff;
     --modal-background: #fff;
     --modal-footer-background: #fff;
@@ -5202,6 +5204,7 @@
     --mobile-toast-background-default: #1f1f21;
     --mobile-typing-indicator-background-default: #070709;
     --mobile-unreadbar-text-default: #6b7df5;
+    --mobile-voice-panel-background: #000;
     --mobile-voice-panel-badge-background: #131416;
     --modal-background: #131416;
     --modal-footer-background: #131416;
@@ -5863,6 +5866,7 @@
     --mobile-toast-background-default: #2b2e33;
     --mobile-typing-indicator-background-default: #1a1a1f;
     --mobile-unreadbar-text-default: #788cfa;
+    --mobile-voice-panel-background: #121214;
     --mobile-voice-panel-badge-background: #242429;
     --modal-background: #242429;
     --modal-footer-background: #242429;
