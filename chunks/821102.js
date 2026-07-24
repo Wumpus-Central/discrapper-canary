@@ -1,11 +1,13 @@
 "use strict";
-n.d(t, { A: () => I }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => S }), n(323874), n(14289), n(35956);
 var i = n(17928),
     r = n(803805),
-    s = n(228366),
-    a = n(652215),
+    a = n(228366),
+    s = n(723702),
+    l = n(652215),
     o = n(375708);
-let l = "webm",
+let d = "webm",
+    c = (0, s.isLinux)() ? "tinywebp" : d,
     u = !(function (e) {
         switch (e) {
             case "fixed_height.mp4":
@@ -17,102 +19,102 @@ let l = "webm",
             case "mp4":
             case "tinymp4":
             case "nanomp4":
-            case l:
+            case d:
             case "tinywebm":
             case "nanowebm":
                 return !0;
             default:
                 return !1;
         }
-    })(l)
+    })(c)
         ? r.TL.IMAGE
         : r.TL.VIDEO,
-    c = null,
-    d = "",
-    _ = "",
+    _ = null,
+    E = "",
+    A = "",
     h = [],
+    I = [],
     f = [],
-    p = [],
-    E = [];
-function m(e) {
+    p = [];
+function T(e) {
     return e.replace(/^https?:/, "");
 }
-function g(e) {
+function m(e) {
     try {
         let t = new URL(e).pathname.toLowerCase();
         if (t.endsWith(".mp4") || t.endsWith(".webm")) return r.TL.VIDEO;
     } catch {}
     return r.TL.IMAGE;
 }
-class A extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "GIFPickerViewStore";
     getAnalyticsID() {
-        return c;
+        return _;
     }
     getQuery() {
-        return d;
+        return E;
     }
     getResultQuery() {
-        return _;
+        return A;
     }
     getResultItems() {
         return h;
     }
     getTrendingCategories() {
-        return f;
+        return I;
     }
     getSelectedFormat() {
-        return l;
+        return c;
     }
     getSuggestions() {
-        return p;
+        return f;
     }
     getTrendingSearchTerms() {
-        return E;
+        return p;
     }
 }
-let I = new A(s.h, {
+let S = new g(a.h, {
     GIF_PICKER_INITIALIZE: function (e) {
-        c = e.analyticsID;
+        _ = e.analyticsID;
     },
     GIF_PICKER_QUERY: function (e) {
-        "" === (d = e.query) && ((_ = ""), (h = []), (p = []));
+        "" === (E = e.query) && ((A = ""), (h = []), (f = []));
     },
     GIF_PICKER_QUERY_SUCCESS: function (e) {
-        if (null != e.query && d === _) return !1;
-        null != e.query && (_ = e.query),
+        if (null != e.query && E === A) return !1;
+        null != e.query && (A = e.query),
             (h = e.items.map((e) => {
-                let { width: t, height: n, src: i, gif_src: r, url: s, id: a } = e;
-                return { width: t, height: n, src: m(i), gifSrc: m(r), url: s, id: a, format: u };
+                let { width: t, height: n, src: i, gif_src: r, url: a, id: s } = e;
+                return { width: t, height: n, src: T(i), gifSrc: T(r), url: a, id: s, format: u };
             }));
     },
     GIF_PICKER_QUERY_FAILURE: function (e) {
         let { query: t } = e;
         if (null == t) return !1;
-        (_ = t), (h = []);
+        (A = t), (h = []);
     },
     GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
         let t = e.trendingCategories;
-        f = [
+        I = [
             ...(null != e.trendingGIFPreview
                 ? [
                       {
-                          type: a.dD.TRENDING_GIFS,
+                          type: l.dD.TRENDING_GIFS,
                           name: o.intl.string(o.t.H6zNFz),
-                          src: m(e.trendingGIFPreview.src),
-                          format: g(e.trendingGIFPreview.src),
+                          src: T(e.trendingGIFPreview.src),
+                          format: m(e.trendingGIFPreview.src),
                       },
                   ]
                 : []),
-            ...t.map((e) => ({ ...e, src: m(e.src), type: a.dD.TRENDING_CATEGORY, format: g(e.src) })),
+            ...t.map((e) => ({ ...e, src: T(e.src), type: l.dD.TRENDING_CATEGORY, format: m(e.src) })),
         ];
     },
     GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
         let { items: t } = e;
-        p = t;
+        f = t;
     },
     GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
         let { items: t } = e;
-        E = t;
+        p = t;
     },
 });
