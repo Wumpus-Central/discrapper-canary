@@ -8742,14 +8742,6 @@ let { Themes: c } = d.zv,
                         return 16;
                     },
                 },
-                VOICE_PANEL_DISCONNECT_BUTTON_MIN_WIDTH: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 64;
-                        return 0;
-                    },
-                },
                 VOICE_PANEL_GUTTER: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
