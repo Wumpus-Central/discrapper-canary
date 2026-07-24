@@ -162,6 +162,19 @@
     background-image: linear-gradient(270deg, #e82427, #c81031)
 }
 
+.pastDueCheckoutGreyBanner__84995.banner__84995 {
+    background: var(--background-mod-muted);
+    color: var(--text-default)
+}
+
+.theme-light .pastDueCheckoutGreyBanner__84995 .basicWordmark__84995 {
+    background-image: url(/assets/87427a504a033dd9.svg)
+}
+
+.theme-light .pastDueCheckoutGreyBanner__84995 .classicWordmark__84995 {
+    background-image: url(/assets/0d232c35c1b684ca.svg)
+}
+
 .paused__84995.banner__84995 {
     border-radius: 4px
 }

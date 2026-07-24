@@ -46,27 +46,29 @@ function S(e) {
             subscription: H,
             skipConfirm: j,
             shouldDisallowPlanSelection: W,
+            initialPaymentSourceId: Y,
+            startingStepOverride: K,
         } = e,
-        Y = r()("payment-modal"),
-        K = (0, f.mH)(U),
-        $ = v || K !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
-        z = $?.rewardSkuIds[0] ?? null,
-        q = !1;
-    function Z() {
-        q ||
-            ((q = !0),
+        $ = r()("payment-modal"),
+        z = (0, f.mH)(U),
+        q = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
+        Z = q?.rewardSkuIds[0] ?? null,
+        X = !1;
+    function Q() {
+        X ||
+            ((X = !0),
             I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                 ? setTimeout(() => {
-                      (0, a.closeModal)(Y);
+                      (0, a.closeModal)($);
                   }, p.K)
-                : (0, a.closeModal)(Y));
+                : (0, a.closeModal)($));
     }
-    function X(e) {
+    function J(e) {
         (0, o.ET)(), (0, l.ET)(), (0, d.z)(), e && null != C && C();
     }
-    function Q() {
-        return (0, a.closeModal)(Y);
+    function ee() {
+        return (0, a.closeModal)($);
     }
     return Promise.all([
         n.e("63229"),
@@ -110,8 +112,8 @@ function S(e) {
         n.e("10543"),
         n.e("40981"),
         n.e("75030"),
-        n.e("58235"),
-        n.e("51869"),
+        n.e("63576"),
+        n.e("18330"),
         n.e("50693"),
         n.e("9140"),
         n.e("23804"),
@@ -127,7 +129,7 @@ function S(e) {
         n.e("20661"),
         n.e("75131"),
         n.e("23105"),
-        n.e("69190"),
+        n.e("46809"),
         n.e("18315"),
         n.e("17776"),
         n.e("78969"),
@@ -228,7 +230,7 @@ function S(e) {
         n.e("54282"),
         n.e("77473"),
         n.e("63618"),
-        n.e("38755"),
+        n.e("74439"),
         n.e("65689"),
         n.e("80239"),
         n.e("60177"),
@@ -250,7 +252,7 @@ function S(e) {
         n.e("48720"),
         n.e("88003"),
         n.e("10575"),
-        n.e("19666"),
+        n.e("50469"),
         n.e("54630"),
         n.e("42489"),
         n.e("21574"),
@@ -261,17 +263,18 @@ function S(e) {
         n.e("74016"),
         n.e("60658"),
         n.e("21856"),
-        n.e("55726"),
+        n.e("49845"),
         n.e("74907"),
     ])
         .then(n.bind(n, 529427))
         .then((e) => {
             let { UnifiedCheckoutFlowManagerSingletons: n } = e;
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
-                checkoutConfiguration: { applicationId: k, skuId: K ?? null },
+                checkoutConfiguration: { applicationId: k, skuId: z ?? null, initialPaymentSourceId: Y },
                 forwardedPaymentModalProps: {
                     analyticsObject: R,
                     initialPlanId: t,
+                    startingStepOverride: K,
                     analyticsLocation: L,
                     followupSKUInfo: i,
                     onSubscriptionConfirmation: C,
@@ -284,8 +287,8 @@ function S(e) {
                     skipConfirm: !!j,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            q ||
-                                ((q = !0),
+                            X ||
+                                ((X = !0),
                                 I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                                     ? setTimeout(() => {
@@ -296,10 +299,10 @@ function S(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != z && $.endDate >= new Date())
+                                    e && null != Z && q.endDate >= new Date())
                                 ) {
-                                    await (0, u.RE)(z);
-                                    let e = _.A.getProduct(z);
+                                    await (0, u.RE)(Z);
+                                    let e = _.A.getProduct(Z);
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
@@ -309,7 +312,7 @@ function S(e) {
                                         });
                                 }
                             }
-                        })(e, Q),
+                        })(e, ee),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
@@ -322,12 +325,13 @@ function S(e) {
                     subscriptionTier: U,
                     subscription: H,
                     shouldDisallowPlanSelection: W,
+                    initialPaymentSourceId: Y,
                 },
                 modalAPIOptions: {
-                    modalKey: Y,
+                    modalKey: $,
                     skipCloseModalOnCloseRequest: !0,
-                    onCloseRequest: Z,
-                    onCloseCallback: X,
+                    onCloseRequest: Q,
+                    onCloseCallback: J,
                 },
             });
         });

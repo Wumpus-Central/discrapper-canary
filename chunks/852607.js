@@ -14,8 +14,8 @@ function c() {
 var d = n(830382),
     p = n(696208),
     m = n(297264),
-    h = n(834730),
-    C = n(349288),
+    C = n(834730),
+    h = n(349288),
     E = n(375708),
     f = n(811252);
 function A(e) {
@@ -28,18 +28,18 @@ function A(e) {
                 (0, l.jsx)(m.D, { variant: "heading-xl/bold", children: E.intl.string(E.t.Q03WWV) }),
                 (0, l.jsxs)("p", {
                     children: [
-                        (0, l.jsx)(h.E, { variant: "text-md/normal", children: E.intl.string(E.t.BxPxhI) }),
+                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: E.intl.string(E.t.BxPxhI) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsx)(h.E, { variant: "text-md/normal", children: E.intl.string(E.t.Y3fdOp) }),
+                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: E.intl.string(E.t.Y3fdOp) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsxs)(h.E, {
+                        (0, l.jsxs)(C.E, {
                             variant: "text-md/normal",
                             children: [
                                 E.intl.string(E.t.Paa4v4),
                                 "\xa0",
                                 n
                                     ? E.intl.string(E.t.StGVvC)
-                                    : (0, l.jsx)(C.Anchor, { onClick: i, children: E.intl.string(E.t.Ex7sk9) }),
+                                    : (0, l.jsx)(h.Anchor, { onClick: i, children: E.intl.string(E.t.Ex7sk9) }),
                             ],
                         }),
                     ],
@@ -107,12 +107,12 @@ function K(e) {
         c = (0, B.gU)(),
         d = (0, B.Hu)(),
         { isGift: p } = (0, N.Pv)(),
-        [m, h] = i.useState(!0),
-        [C, E] = (0, I.yK)([v.A], () => [v.A.isFetchingCategories, v.A.error]);
+        [m, C] = i.useState(!0),
+        [h, E] = (0, I.yK)([v.A], () => [v.A.isFetchingCategories, v.A.error]);
     return (i.useEffect(() => {
         let e = null != o;
-        d && s && e && h(C);
-    }, [d, s, o, C]),
+        d && s && e && C(h);
+    }, [d, s, o, h]),
     i.useEffect(() => {
         if (m || u || null == n) return;
         let e = c[n];
@@ -134,13 +134,19 @@ function K(e) {
             : null;
 }
 function Z(e) {
-    let { subscriptionTier: t, initialPlanId: n, handleStepChange: a, continueSessionToInitialStep: s } = e,
-        { hasPaymentSources: o, hasFetchedPaymentSources: u } = (0, G.jm)({ shouldAllowFetchPaymentSources: !0 }),
+    let {
+            subscriptionTier: t,
+            initialPlanId: n,
+            handleStepChange: a,
+            continueSessionToInitialStep: s,
+            startingStepOverride: o,
+        } = e,
+        { hasPaymentSources: u, hasFetchedPaymentSources: c } = (0, G.jm)({ shouldAllowFetchPaymentSources: !0 }),
         {
-            selectedSkuId: c,
-            setSelectedPlanId: d,
-            activeSubscription: p,
-            defaultPlanId: m,
+            selectedSkuId: d,
+            setSelectedPlanId: p,
+            activeSubscription: m,
+            defaultPlanId: C,
         } = (0, Y.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
@@ -148,42 +154,44 @@ function Z(e) {
             defaultPlanId: e.defaultPlanId,
         })),
         h = (0, g.Hp)(),
-        C = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: E, subscriptionPriceOptionsLoading: f } = (0, H.Jn)(),
-        { isGift: A } = (0, N.Pv)(),
-        S = (0, D.A)({ isGift: A, skuId: c }),
-        y = !C || !E || f || !u,
-        P = (0, I.bG)([U.A], () => U.A.applicationIdsFetched.has(V.tv));
+        E = (0, k.A)(),
+        { hasFetchedRelatedSubscriptionPlans: f, subscriptionPriceOptionsLoading: A } = (0, H.Jn)(),
+        { isGift: S } = (0, N.Pv)(),
+        y = (0, D.A)({ isGift: S, skuId: d }),
+        P = !E || !f || A || !c,
+        v = (0, I.bG)([U.A], () => U.A.applicationIdsFetched.has(V.tv));
     (0, T.A)(
         "Payment Modal",
-        y,
+        P,
         5,
         {
-            hasFetchedSubscriptions: C,
-            hasFetchedSubscriptionPlans: E,
-            subscriptionPriceOptionsLoading: f,
-            hasFetchedPaymentSources: u,
+            hasFetchedSubscriptions: E,
+            hasFetchedSubscriptionPlans: f,
+            subscriptionPriceOptionsLoading: A,
+            hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
     );
-    let v = (0, Y.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: S }));
+    let R = (0, Y.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: y }));
     return (i.useEffect(() => {
-        P || (0, _.LM)(V.tv),
-            y ||
+        v || (0, _.LM)(V.tv),
+            P ||
                 h ||
                 (null != s
                     ? a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })
-                    : null != n
-                      ? n !== V.gD.PREMIUM_GROUP_MONTH || o
-                          ? a(r.pn.REVIEW)
-                          : a(r.pn.ADD_PAYMENT_STEPS)
-                      : v
-                        ? (d((0, w.x)(c, p, m)), a(r.pn.REVIEW))
-                        : null != t
-                          ? a(r.pn.PLAN_SELECT)
-                          : a(r.pn.SKU_SELECT));
-    }, [s, p, h, P, n, y, a, t, c, d, S, m, A, v, o]),
-    y)
+                    : null != o
+                      ? a(o)
+                      : null != n
+                        ? n !== V.gD.PREMIUM_GROUP_MONTH || u
+                            ? a(r.pn.REVIEW)
+                            : a(r.pn.ADD_PAYMENT_STEPS)
+                        : R
+                          ? (p((0, w.x)(d, m, C)), a(r.pn.REVIEW))
+                          : null != t
+                            ? a(r.pn.PLAN_SELECT)
+                            : a(r.pn.SKU_SELECT));
+    }, [s, o, m, h, v, n, P, a, t, d, p, y, C, S, R, u]),
+    P)
         ? (0, l.jsx)(L.A, {})
         : h
           ? (0, l.jsx)(x.oO, {})

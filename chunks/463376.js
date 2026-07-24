@@ -1,7 +1,7 @@
 n.d(t, { R: () => p, i: () => d });
 var l = n(64700),
     i = n(422936),
-    r = n(234419),
+    r = n(732280),
     a = n(120700),
     s = n(65258),
     o = n(316915),
@@ -28,25 +28,25 @@ function d() {
         d = !n && !s && null != e,
         p = !!(d && null != u && c.TP[u.trial_id].skus.includes(e)),
         m = (0, i.O)(),
-        h =
+        C =
             null != e &&
             null != m &&
             null != m.discount &&
             null != m.discount.planIds &&
             m.discount.planIds.some((t) => c.hd[t].skuId === e),
-        C = !!(d && null != m && h),
+        h = !!(d && null != m && C),
         E = (0, i.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
             isEligibleForTrial: p,
-            isEligibleForDiscount: C,
+            isEligibleForDiscount: h,
             userTrialOffer: u,
             discountOffer: m,
             premiumGroupDiscountOffer: n ? E : null,
         }),
-        [t, n, p, C, u, m, E],
+        [t, n, p, h, u, m, E],
     );
 }
 function p(e) {
@@ -60,21 +60,13 @@ function p(e) {
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             setStartingIsInPastDueCheckout: e.setStartingIsInPastDueCheckout,
         })),
-        c = null != n,
-        d = l.useMemo(
-            () =>
-                !!(0, s.u)() &&
-                i === a.C.PREMIUM_CHECKOUT &&
-                null != n &&
-                null != n &&
-                n.status === u.Dmq.PAST_DUE &&
-                t,
-            [n, i, t],
-        );
+        c = i === a.C.PREMIUM_CHECKOUT && null != n && n.status === u.Dmq.PAST_DUE && t,
+        d = (0, s.X)(c),
+        p = c && d;
     return (
         l.useEffect(() => {
-            c && r(d);
-        }, [d, r, c]),
-        d
+            p && r(!0);
+        }, [p, r]),
+        p
     );
 }

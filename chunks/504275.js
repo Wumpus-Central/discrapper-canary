@@ -7,6 +7,7 @@ let a = {
     isGift: !1,
     referralTrialOfferId: null,
     activeSubscription: null,
+    initialPaymentSourceId: null,
     excludeSubscriptionPlansBySKU: !1,
     purchaseType: i.VVm.SUBSCRIPTION,
     applicationId: r.tv,

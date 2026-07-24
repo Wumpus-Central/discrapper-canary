@@ -3923,48 +3923,50 @@ let iA = [
                             referralTrialOfferId: o,
                             subscriptionTier: d,
                             subscription: p,
+                            initialPaymentSourceId: m,
                         },
-                        stepConfigs: m,
-                        loadId: C,
-                        giftContextProps: h = { isGift: !1, giftRecipient: null },
-                        renderModalProps: E,
-                        children: f,
+                        stepConfigs: C,
+                        loadId: h,
+                        giftContextProps: E = { isGift: !1, giftRecipient: null },
+                        renderModalProps: f,
+                        children: A,
                     } = e,
-                    A = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
-                    y = (0, lP.Sq)() ? z.gD.PREMIUM_MONTH_TIER_2 : void 0,
-                    { isGift: P, giftRecipient: I } = h;
+                    y = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
+                    P = (0, lP.Sq)() ? z.gD.PREMIUM_MONTH_TIER_2 : void 0,
+                    { isGift: I, giftRecipient: _ } = E;
                 if (null != d && !Object.values(z.pe).includes(d))
                     throw Error("subscriptionTier must be a premium subscription");
-                let _ = (0, lg.tA)({ giftRecipient: I, isGift: P ?? !1 }),
-                    T = i.useMemo(
+                let T = (0, lg.tA)({ giftRecipient: _, isGift: I ?? !1 }),
+                    x = i.useMemo(
                         () =>
-                            _
-                                ? m.map((e) =>
+                            T
+                                ? C.map((e) =>
                                       e.key === S.pn.SKU_SELECT && null != e.options
                                           ? { ...e, options: { ...e.options, modalSizeGetter: () => "xl" } }
                                           : e,
                                   )
-                                : m,
-                        [m, _],
+                                : C,
+                        [C, T],
                     ),
-                    x = null != p ? p : A,
-                    v = !P && null != x && x.isPurchasedExternally && null != x.paymentGateway;
-                (0, lT.s)(x, () => E.onClose(), P ?? !1);
-                let N = i.useMemo(() => [...z.oz], []);
-                return v
+                    v = null != p ? p : y,
+                    N = !I && null != v && v.isPurchasedExternally && null != v.paymentGateway;
+                (0, lT.s)(v, () => f.onClose(), I ?? !1);
+                let R = i.useMemo(() => [...z.oz], []);
+                return N
                     ? null
                     : (0, l.jsx)(c.M, {
-                          loadId: C,
-                          activeSubscription: x,
-                          stepConfigs: T,
-                          skuIDs: N,
-                          isGift: P,
-                          defaultPlanId: y ?? a,
+                          loadId: h,
+                          activeSubscription: v,
+                          initialPaymentSourceId: m,
+                          stepConfigs: x,
+                          skuIDs: R,
+                          isGift: I,
+                          defaultPlanId: P ?? a,
                           referralCode: s,
                           referralTrialOfferId: o,
                           unifiedCheckoutFlow: u.C.PREMIUM_CHECKOUT,
                           tenantParamsMap: t,
-                          children: (0, l.jsx)(n6.Qt, { confirmationFooter: n, children: f }),
+                          children: (0, l.jsx)(n6.Qt, { confirmationFooter: n, children: A }),
                       });
             },
             TenantPaymentModalRenderer: (e) => {

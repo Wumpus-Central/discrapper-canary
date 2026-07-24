@@ -1,20 +1,20 @@
-n.d(t, { ut: () => i, ws: () => o });
-var l = n(64700),
-    r = n(652215);
+n.d(t, { ut: () => i, ws: () => u });
+var r = n(64700),
+    l = n(652215);
 function i(e) {
-    let { giftCardWallet: t, dropdownPaymentSources: n, subscriptionPaymentSourceId: l, defaultPaymentSourceId: r } = e;
-    if (null != t && (null == l || l === t.id)) return t.id;
-    if (null != l) {
-        let e = n.find((e) => e.id === l);
-        if (null != e && e.enabled) return l;
-    }
+    let { giftCardWallet: t, dropdownPaymentSources: n, subscriptionPaymentSourceId: r, defaultPaymentSourceId: l } = e;
+    if (null != t && (null == r || r === t.id)) return t.id;
     if (null != r) {
         let e = n.find((e) => e.id === r);
         if (null != e && e.enabled) return r;
     }
+    if (null != l) {
+        let e = n.find((e) => e.id === l);
+        if (null != e && e.enabled) return l;
+    }
     return n.find((e) => e.enabled)?.id ?? null;
 }
-class a {
+class o {
     checkoutPaymentSources;
     isReady;
     pendingPaymentSourceId;
@@ -23,24 +23,27 @@ class a {
     subscriptionPaymentSourceId;
     giftCardWallet;
     giftCardsEnabled;
+    hasInitialPaymentSourceSeed;
     constructor({
         checkoutPaymentSources: e,
         dropdownPaymentSources: t,
         subscriptionPaymentSourceId: n,
-        giftCardWallet: l,
-        isReady: r,
+        giftCardWallet: r,
+        isReady: l,
         pendingPaymentSourceId: i,
-        paymentSourceId: a,
-        giftCardsEnabled: o,
+        paymentSourceId: o,
+        giftCardsEnabled: u,
+        hasInitialPaymentSourceSeed: s,
     }) {
         (this.checkoutPaymentSources = e),
-            (this.isReady = r),
+            (this.isReady = l),
             (this.pendingPaymentSourceId = i),
-            (this.selectedPaymentSourceId = a),
+            (this.selectedPaymentSourceId = o),
             (this.dropdownPaymentSources = t),
             (this.subscriptionPaymentSourceId = n),
-            (this.giftCardWallet = l),
-            (this.giftCardsEnabled = o);
+            (this.giftCardWallet = r),
+            (this.giftCardsEnabled = u),
+            (this.hasInitialPaymentSourceSeed = s);
     }
     get hasPaymentSourcesFromCheckoutStore() {
         return this.isReady && this.checkoutPaymentSources.length > 0;
@@ -58,7 +61,12 @@ class a {
     }
     shouldSetInitialPaymentSourceId(e) {
         let { hasCheckedInitialPaymentSourceRef: t } = e;
-        return !t.current && !!this.hasPaymentSourcesFromCheckoutStore && !this.isPendingPaymentSourceEqualToCurrent;
+        return (
+            !t.current &&
+            !!this.hasPaymentSourcesFromCheckoutStore &&
+            !this.isPendingPaymentSourceEqualToCurrent &&
+            (!this.hasInitialPaymentSourceSeed || !this.isSelectedPaymentSourceValid)
+        );
     }
     checkAndResolveInitialPaymentSourceId(e) {
         let { hasCheckedInitialPaymentSourceRef: t } = e;
@@ -73,8 +81,8 @@ class a {
     get isSelectedPaymentSourceValid() {
         return this.checkoutPaymentSources.some((e) =>
             (function (e) {
-                let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: l } = e;
-                return (t.type !== r.hes.TDS_WALLET || !!l) && null != n && t.id === n && t.enabled;
+                let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: r } = e;
+                return (t.type !== l.hes.TDS_WALLET || !!r) && null != n && t.id === n && t.enabled;
             })({
                 paymentSource: e,
                 paymentSourceId: this.selectedPaymentSourceId,
@@ -99,19 +107,19 @@ class a {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-function o(e, t) {
-    let n = l.useRef(!1),
-        r = l.useMemo(() => new a(t), [t]);
-    l.useEffect(() => {
-        let { shouldSet: t, initialPaymentSourceId: l } = r.checkAndResolveInitialPaymentSourceId({
+function u(e, t) {
+    let n = r.useRef(!1),
+        l = r.useMemo(() => new o(t), [t]);
+    r.useEffect(() => {
+        let { shouldSet: t, initialPaymentSourceId: r } = l.checkAndResolveInitialPaymentSourceId({
             hasCheckedInitialPaymentSourceRef: n,
         });
-        t && e(l);
-    }, [r, e]),
-        l.useEffect(() => {
-            let { shouldSet: t, correctedPaymentSourceId: l } = r.resolveSelfCorrectPaymentSourceId({
+        t && e(r);
+    }, [l, e]),
+        r.useEffect(() => {
+            let { shouldSet: t, correctedPaymentSourceId: r } = l.resolveSelfCorrectPaymentSourceId({
                 hasCheckedInitialPaymentSourceRef: n,
             });
-            t && e(l);
-        }, [r, e]);
+            t && e(r);
+        }, [l, e]);
 }

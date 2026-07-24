@@ -1,4 +1,14 @@
-function l() {
-    return "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL;
+n.d(t, { X: () => o });
+var r = n(17928),
+    l = n(658040),
+    i = n(710195);
+function o(e) {
+    return (0, r.bG)(
+        [i.A],
+        function () {
+            return !!e && l.Ay.getConfig({ location: "past_due_checkout_gate" }).enabled;
+        },
+        [e],
+    );
 }
-n.d(t, { u: () => l }), n(427262);
+n(427262);

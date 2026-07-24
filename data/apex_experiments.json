@@ -5651,16 +5651,19 @@
   {
     "name": "2026-07-past-due-checkout",
     "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
+    "defaultConfig": null,
     "variations": {
       "0": {
         "enabled": false,
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "bannerVariant": "red_expressive"
+      },
+      "2": {
+        "enabled": true,
+        "bannerVariant": "grey_primary"
       }
     }
   },

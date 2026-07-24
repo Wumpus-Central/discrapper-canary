@@ -10,8 +10,8 @@ var l = n(64700),
     d = n(11939),
     p = n(237299),
     m = n(652215),
-    h = n(375708),
-    C = n(776409);
+    C = n(375708),
+    h = n(776409);
 function E(e) {
     let { giftCardsEnabled: t, checkoutPaymentSources: n } = e,
         r = l.useMemo(() => (0, d.N)(n)?.id, [n]),
@@ -22,11 +22,11 @@ function E(e) {
             return null != t && null == n && null == l;
         }),
         m = A(o),
-        h = A(u),
-        C = null != m && 0 === m && null != h,
+        C = A(u),
+        h = null != m && 0 === m && null != C,
         E = 0 === m && p,
-        f = C ? h : m,
-        S = C ? (u?.total ?? null) : o?.total,
+        f = h ? C : m,
+        S = h ? (u?.total ?? null) : o?.total,
         y = (0, i.bG)([c.A], () => (t && null != r ? c.A.getBalance(r) : null), [t, r]);
     return t && null != y
         ? {
@@ -68,90 +68,92 @@ function S(e) {
         } = e,
         { enabled: c } = (0, u.c)({ location: r }),
         f = (0, s.t4)((e) => e.pendingPaymentSourceId),
-        { dropdownPaymentSources: A, giftCardWallet: S } = l.useMemo(() => {
+        A = (0, s.t4)((e) => null != e.initialPaymentSourceId),
+        { dropdownPaymentSources: S, giftCardWallet: y } = l.useMemo(() => {
             let e = t.filter((e) => e.type !== m.hes.TDS_WALLET);
             return c
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, d.N)(t) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [t, c]),
-        [y, P] = l.useState(null),
-        I = null != S && n === S.id,
-        _ = l.useMemo(
+        [P, I] = l.useState(null),
+        _ = null != y && n === y.id,
+        T = l.useMemo(
             () =>
-                null != y
-                    ? y
-                    : (0, p.ut)({ giftCardWallet: null, dropdownPaymentSources: A, subscriptionPaymentSourceId: o }),
-            [A, o, y],
+                null != P
+                    ? P
+                    : (0, p.ut)({ giftCardWallet: null, dropdownPaymentSources: S, subscriptionPaymentSourceId: o }),
+            [S, o, P],
         ),
-        T = l.useMemo(() => (I ? _ : (n ?? null)), [_, I, n]),
-        g = l.useMemo(
+        g = l.useMemo(() => (_ ? T : (n ?? null)), [T, _, n]),
+        x = l.useMemo(
             () => ({
                 checkoutPaymentSources: t,
-                dropdownPaymentSources: A,
+                dropdownPaymentSources: S,
                 subscriptionPaymentSourceId: o,
-                giftCardWallet: S,
+                giftCardWallet: y,
                 isReady: a,
                 pendingPaymentSourceId: f,
                 paymentSourceId: n,
                 giftCardsEnabled: c,
+                hasInitialPaymentSourceSeed: A,
             }),
-            [t, A, o, S, a, f, n, c],
+            [t, S, o, y, a, f, n, c, A],
         );
-    (0, p.ws)(i, g);
-    let x = l.useCallback(
+    (0, p.ws)(i, x);
+    let v = l.useCallback(
             (e) => {
                 i(null != e ? e.id : null);
             },
             [i],
         ),
-        v = l.useCallback(
+        N = l.useCallback(
             (e) => {
-                if (e && null != S) {
-                    n !== S.id && P(n ?? null), i(S.id);
+                if (e && null != y) {
+                    n !== y.id && I(n ?? null), i(y.id);
                     return;
                 }
-                i(_);
+                i(T);
             },
-            [i, S, n, _],
+            [i, y, n, T],
         ),
         {
-            walletCoversSubtotal: N,
+            walletCoversSubtotal: R,
             walletCoversTotal: M,
-            isWalletBalanceLoaded: R,
-            isWalletCoverageLoading: b,
+            isWalletBalanceLoaded: b,
+            isWalletCoverageLoading: j,
         } = E({ giftCardsEnabled: c, checkoutPaymentSources: t }),
-        j = null != o && null != S && o === S.id;
+        O = null != o && null != y && o === y.id;
     l.useEffect(() => {
-        !j && R && !N && I && i(_);
-    }, [j, R, N, I, i, _]);
-    let O = l.useMemo(
+        !O && b && !R && _ && i(T);
+    }, [O, b, R, _, i, T]);
+    let L = l.useMemo(
         () =>
-            null == S
+            null == y
                 ? null
                 : {
-                      giftCardWallet: S,
-                      checked: I,
-                      onChange: v,
-                      loading: b,
-                      disabled: !b && !N,
-                      disabledTooltip: b || N ? void 0 : h.intl.string(C.default.ccWIdu),
+                      giftCardWallet: y,
+                      checked: _,
+                      onChange: N,
+                      loading: j,
+                      disabled: !j && !R,
+                      disabledTooltip: j || R ? void 0 : C.intl.string(h.default.ccWIdu),
                   },
-        [S, I, v, N, b],
+        [y, _, N, R, j],
     );
     return {
         giftCardsEnabled: c,
-        dropdownPaymentSources: A,
-        dropdownPaymentSourceId: T,
-        giftCardWallet: S,
-        isGiftCardCreditsChecked: I,
-        isSubscriptionPaidByWallet: j,
-        handleGiftCardCreditsToggle: v,
-        handleDropdownPaymentSourceChange: x,
-        giftCardCheckboxProps: O,
-        walletCoversSubtotal: N,
+        dropdownPaymentSources: S,
+        dropdownPaymentSourceId: g,
+        giftCardWallet: y,
+        isGiftCardCreditsChecked: _,
+        isSubscriptionPaidByWallet: O,
+        handleGiftCardCreditsToggle: N,
+        handleDropdownPaymentSourceChange: v,
+        giftCardCheckboxProps: L,
+        walletCoversSubtotal: R,
         walletCoversTotal: M,
-        isWalletBalanceLoaded: R,
-        isWalletCoverageLoading: b,
+        isWalletBalanceLoaded: b,
+        isWalletCoverageLoading: j,
     };
 }
 function y(e) {
@@ -164,8 +166,8 @@ function y(e) {
         { enabled: c } = (0, u.c)({ location: t }),
         p = l.useMemo(() => (c ? (0, d.N)(s) : null), [s, c]),
         m = null != a && null != p && a === p.id,
-        { walletCoversTotal: h, isWalletBalanceLoaded: C } = E({ giftCardsEnabled: c, checkoutPaymentSources: s });
+        { walletCoversTotal: C, isWalletBalanceLoaded: h } = E({ giftCardsEnabled: c, checkoutPaymentSources: s });
     return l.useMemo(() => {
-        if (m && C && !h) return { type: "warning", key: "wallet-insufficient-balance", message: n };
-    }, [m, C, h, n]);
+        if (m && h && !C) return { type: "warning", key: "wallet-insufficient-balance", message: n };
+    }, [m, h, C, n]);
 }
