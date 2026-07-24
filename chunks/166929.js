@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    ET: () => R,
+    ET: () => O,
     Wn: () => A,
     aV: () => S,
     dg: () => C,
@@ -28,6 +28,7 @@ let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         "packets",
         "packetsLost",
         "framesDropped",
+        "networkFramesDropped",
         "framesCodecError",
         "bytes",
         "nackCount",
@@ -181,6 +182,7 @@ class N {
     packets = 0;
     packetsLost = 0;
     framesDropped = 0;
+    networkFramesDropped = 0;
     nackCount = 0;
     pliCount = 0;
     encoder = null;
@@ -227,7 +229,8 @@ class N {
                 (n.framesNetwork = e.framesReceived),
                 (n.packets = e.packetsReceived),
                 (n.packetsLost = e.packetsLost),
-                (n.framesDropped = e.framesDropped),
+                (n.framesDropped = e.framesDropped ?? 0),
+                (n.networkFramesDropped = e.networkFramesDropped ?? 0),
                 (n.resolution = null != e.resolution ? e.resolution.height : 0),
                 (n.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0),
                 (n.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0),
@@ -267,6 +270,7 @@ class N {
                   packets: e.packetsSent,
                   packetsLost: e.packetsLost ?? 0,
                   framesDropped: 0,
+                  networkFramesDropped: 0,
                   resolution: null != e.resolution ? e.resolution.height : 0,
                   minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
                   majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
@@ -329,6 +333,7 @@ class C {
         packets: 0,
         packetsLost: 0,
         framesDropped: 0,
+        networkFramesDropped: 0,
         framesCodecError: 0,
         bytes: 0,
         nackCount: 0,
@@ -495,7 +500,7 @@ class C {
         return e;
     }
 }
-class R extends C {
+class O extends C {
     encoderBuckets = Object.fromEntries(Object.values(h).map((e) => [e, 0]));
     encoderCodec = "UNKNOWN";
     targetFrames = 0;

@@ -1,13 +1,14 @@
-r.d(e, { A: () => s });
-var n = r(64700);
-let s = function (t, e) {
-    let r = (0, n.useRef)(t);
-    (0, n.useEffect)(() => {
-        r.current = t;
-    }, [t]),
-        (0, n.useEffect)(() => {
-            if (null === e) return;
-            let t = setTimeout(() => r.current(), e);
-            return () => clearTimeout(t);
-        }, [e, r]);
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700);
+let r = function (e, t) {
+    let n = (0, i.useRef)(e);
+    (0, i.useEffect)(() => {
+        n.current = e;
+    }, [e]),
+        (0, i.useEffect)(() => {
+            if (null === t) return;
+            let e = setTimeout(() => n.current(), t);
+            return () => clearTimeout(e);
+        }, [t, n]);
 };

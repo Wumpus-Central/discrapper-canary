@@ -1,30 +1,31 @@
+"use strict";
 n.d(t, { A: () => d });
 var i = n(17928),
-    l = n(228366);
-let r = {},
+    r = n(228366);
+let a = {},
     s = null;
-function a() {
-    (r = {}), (s = null);
+function l() {
+    (a = {}), (s = null);
 }
 class o extends i.Ay.Store {
     static displayName = "EmailSettingsStore";
     getEmailSettings() {
-        return { categories: r, initialized: s };
+        return { categories: a, initialized: s };
     }
 }
-let d = new o(l.h, {
-    CONNECTION_OPEN: a,
-    LOGOUT: a,
+let d = new o(r.h, {
+    CONNECTION_OPEN: l,
+    LOGOUT: l,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (r = t.categories), (s = t.initialized);
+        (a = t.categories), (s = t.initialized);
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;
-        r = t.categories;
+        a = t.categories;
     },
     EMAIL_SETTINGS_UPDATE: function (e) {
         let { updates: t } = e;
-        r = { ...r, ...t };
+        a = { ...a, ...t };
     },
 });

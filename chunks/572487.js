@@ -1,22 +1,23 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(17928),
-    l = n(228366),
-    s = n(652215);
-let r = {};
-function a(e) {
-    let t = r[(e = e ?? "null")];
+    r = n(228366),
+    a = n(652215);
+let s = {};
+function l(e) {
+    let t = s[(e = e ?? "null")];
     return (
         null == t &&
-            (t = r[e] =
-                { state: s.S7L.DISCONNECTED, quality: s.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
+            (t = s[e] =
+                { state: a.S7L.DISCONNECTED, quality: a.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
         t
     );
 }
 function o(e, t, n) {
-    let i = r[(e = e ?? "null")];
+    let i = s[(e = e ?? "null")];
     return null != i ? t(i) : n;
 }
-class u extends i.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "OverlayRTCConnectionStore";
     getConnectionState(e) {
         return o(
@@ -25,7 +26,7 @@ class u extends i.Ay.Store {
                 let { state: t } = e;
                 return t;
             },
-            s.S7L.DISCONNECTED,
+            a.S7L.DISCONNECTED,
         );
     }
     getQuality(e) {
@@ -35,7 +36,7 @@ class u extends i.Ay.Store {
                 let { quality: t } = e;
                 return t;
             },
-            s.bFR.UNKNOWN,
+            a.bFR.UNKNOWN,
         );
     }
     getHostname(e) {
@@ -77,20 +78,20 @@ class u extends i.Ay.Store {
         );
     }
 }
-let d = new u(l.h, {
+let c = new d(r.h, {
     OVERLAY_INITIALIZE: function (e) {
-        r = e.rtcConnectionStates;
+        s = e.rtcConnectionStates;
     },
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;
-        let t = a(e.lobbyId);
+        let t = l(e.lobbyId);
         (t.state = e.state), (t.hostname = e.hostname);
     },
     RTC_CONNECTION_PING: function (e) {
-        let t = a(e.lobbyId);
+        let t = l(e.lobbyId);
         (t.pings = e.pings), (t.quality = e.quality);
     },
     RTC_CONNECTION_LOSS_RATE: function (e) {
-        a(e.lobbyId).lossRate = e.lossRate;
+        l(e.lobbyId).lossRate = e.lossRate;
     },
 });
