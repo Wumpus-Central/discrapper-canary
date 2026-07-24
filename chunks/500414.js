@@ -2441,7 +2441,7 @@ function lM(e) {
         [r, a] = s.useState(void 0);
     s.useEffect(() => {
         n?.moderatorReport?.reported_user_id != null &&
-            (0, lg.wz)(n.moderatorReport.reported_user_id)
+            (0, lg.getUser)(n.moderatorReport.reported_user_id)
                 .then((e) => {
                     a(e);
                 })
@@ -6115,7 +6115,7 @@ function oT(e) {
         ],
     });
 }
-var oy = n(617498),
+var oy = n(183812),
     oS = n(717421),
     ob = n(562153),
     ok = n(713517),

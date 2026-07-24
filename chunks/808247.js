@@ -89,7 +89,7 @@ let N = {
         let i = c.default.getCurrentUser();
         if (null != i && null == d.A.getFirstWishlistId(i.id))
             try {
-                await (0, s.eO)(i.id);
+                await (0, s.fetchProfile)(i.id);
             } catch {}
     },
     async removeSkuFromWishlist(e, t, n) {
@@ -132,7 +132,7 @@ let N = {
                 ).body;
                 m(i), a.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: e, visibility: t });
                 try {
-                    await (0, s.eO)(n.id);
+                    await (0, s.fetchProfile)(n.id);
                 } catch {}
             } catch (t) {
                 throw (

@@ -1,34 +1,33 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(627968),
-    r = n(64700),
-    a = n(130147),
-    s = n(344346),
-    l = n(507646);
-let o = r.memo(function (e) {
-    let { user: t, guildId: n, nameplate: r, isHighlighted: o, size: d = "default" } = e,
-        c = "small" === d ? 62 : 94,
-        u = "small" === d ? 72 : 110;
-    return (0, i.jsx)("div", {
-        className: l.Dz,
-        children: (0, i.jsxs)("div", {
-            className: l.ur,
+l.d(t, { A: () => o });
+var a = l(627968),
+    i = l(64700),
+    n = l(130147),
+    r = l(344346),
+    s = l(507646);
+let o = i.memo(function (e) {
+    let { user: t, guildId: l, nameplate: i, isHighlighted: o, size: c = "default" } = e,
+        d = "small" === c ? 62 : 94,
+        h = "small" === c ? 72 : 110;
+    return (0, a.jsx)("div", {
+        className: s.Dz,
+        children: (0, a.jsxs)("div", {
+            className: s.ur,
             children: [
-                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.7, size: d }),
-                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: d }),
-                (0, i.jsx)(s.A, {
+                (0, a.jsx)(n._, { showStatus: !0, width: d, opacity: 0.7, size: c }),
+                (0, a.jsx)(n._, { showStatus: !0, width: h, opacity: 0.85, size: c }),
+                (0, a.jsx)(r.A, {
                     user: t,
-                    guildId: n,
-                    nameplate: r,
-                    className: l.tZ,
+                    guildId: l,
+                    nameplate: i,
+                    className: s.tZ,
                     isHighlighted: o,
                     showPlaceholderUser: !o,
                     showStatus: !0,
-                    nameplatePreviewSize: "small" === d ? "small" : "default",
+                    nameplatePreviewSize: "small" === c ? "small" : "default",
                     hideDecorators: !0,
                 }),
-                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: d }),
-                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.7, size: d }),
+                (0, a.jsx)(n._, { showStatus: !0, width: h, opacity: 0.85, size: c }),
+                (0, a.jsx)(n._, { showStatus: !0, width: d, opacity: 0.7, size: c }),
             ],
         }),
     });

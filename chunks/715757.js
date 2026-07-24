@@ -1,13 +1,13 @@
-u.d(n, { Qo: () => p, V: () => h, W1: () => f, ml: () => g, vb: () => m });
-var t = u(64700),
-    l = u(17928),
-    s = u(720149),
-    r = u(803306),
-    i = u(71393),
-    a = u(232835),
-    c = u(892340),
-    d = u(272720),
-    o = u(56595);
+t.d(n, { Qo: () => p, V: () => h, W1: () => f, ml: () => g, vb: () => m });
+var u = t(64700),
+    l = t(17928),
+    s = t(493336),
+    r = t(803306),
+    i = t(71393),
+    a = t(232835),
+    c = t(892340),
+    d = t(272720),
+    o = t(56595);
 function p(e) {
     return (0, l.bG)([i.A], () => {
         if (null == e) return !1;
@@ -23,14 +23,14 @@ function f(e) {
 }
 function g(e) {
     let { messageReference: n } = e,
-        u = (0, l.bG)([a.A], () => (null != n ? a.A.getMessage(n.channel_id, n.message_id) : null));
-    (0, t.useEffect)(() => {
-        null == u &&
+        t = (0, l.bG)([a.A], () => (null != n ? a.A.getMessage(n.channel_id, n.message_id) : null));
+    (0, u.useEffect)(() => {
+        null == t &&
             null != n &&
             s.A.fetchMessages({ channelId: n.channel_id, jump: { messageId: n.message_id }, limit: 10 });
-    }, [u, n]);
+    }, [t, n]);
 }
 function m(e) {
     let n = e?.messageSnapshots[0]?.moderatorReport?.reported_user_id;
-    null != n && (0, r.wz)(n);
+    null != n && (0, r.getUser)(n);
 }

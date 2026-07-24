@@ -1,12 +1,12 @@
-i.d(s, { A: () => M });
+i.d(s, { A: () => C });
 var n = i(627968);
 i(64700);
 var a = i(661531),
     t = i(3026),
     l = i(462887),
     r = i(778712),
-    o = i(939249),
-    u = i(900002),
+    u = i(939249),
+    o = i(900002),
     d = i(97808),
     c = i(834730),
     f = i(442433),
@@ -16,12 +16,12 @@ var a = i(661531),
     v = i(518477),
     x = i(996988),
     g = i(624294);
-let C = (0, r.FT)(r._3.SIZE_16);
-function M(e) {
-    let { user: s, guild: M, nick: b, onSelect: j } = e,
+let M = (0, r.FT)(r._3.SIZE_16);
+function C(e) {
+    let { user: s, guild: C, nick: b, onSelect: j } = e,
         { theme: p, themeType: E } = (0, m.E)(),
-        I = s.hasAvatarForGuild(M.id);
-    return (0, n.jsxs)(o.D, {
+        I = s.hasAvatarForGuild(C.id);
+    return (0, n.jsxs)(u.D, {
         focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: g.nM,
         onClick: j,
@@ -298,8 +298,8 @@ function M(e) {
                     i.e("41678"),
                     i.e("72401"),
                     i.e("52617"),
-                    i.e("4744"),
                     i.e("2698"),
+                    i.e("4744"),
                     i.e("37021"),
                     i.e("18465"),
                     i.e("71430"),
@@ -390,6 +390,7 @@ function M(e) {
                     i.e("20382"),
                     i.e("65617"),
                     i.e("43116"),
+                    i.e("79888"),
                     i.e("32737"),
                     i.e("78046"),
                     i.e("83230"),
@@ -550,7 +551,7 @@ function M(e) {
                     i.e("18792"),
                     i.e("18489"),
                     i.e("17699"),
-                    i.e("32274"),
+                    i.e("13014"),
                     i.e("57032"),
                     i.e("72238"),
                     i.e("22941"),
@@ -573,17 +574,17 @@ function M(e) {
                     i.e("15046"),
                     i.e("65011"),
                 ]).then(i.bind(i, 860417));
-                return (s) => (0, n.jsx)(e, { ...s, guild: M });
+                return (s) => (0, n.jsx)(e, { ...s, guild: C });
             });
         },
         children: [
             (0, n.jsx)(A.Ay, {
                 tabIndex: -1,
-                guild: M,
+                guild: C,
                 showBadge: !0,
-                className: null != M.icon ? g.Kk : g.lN,
+                className: null != C.icon ? g.Kk : g.lN,
                 badgeStrokeColor: (0, l.M)(p) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
-                badgeTooltipColor: u.oM.PRIMARY,
+                badgeTooltipColor: o.oM.PRIMARY,
                 badgeTooltipDelay: v.In,
                 size: A.Ay.Sizes.MEDIUM,
                 active: !0,
@@ -591,13 +592,13 @@ function M(e) {
             (0, n.jsxs)("div", {
                 className: g.zH,
                 children: [
-                    (0, n.jsx)("div", { className: g.UU, children: M.name }),
+                    (0, n.jsx)("div", { className: g.UU, children: C.name }),
                     I &&
                         (0, n.jsxs)("div", {
                             className: g.C9,
                             children: [
                                 (0, n.jsx)(d.eu, {
-                                    src: s.getAvatarURL(M.id, C),
+                                    src: s.getAvatarURL(C.id, M),
                                     size: r._3.SIZE_16,
                                     className: g.my,
                                     "aria-hidden": !0,
@@ -606,7 +607,7 @@ function M(e) {
                                     variant: "text-xs/medium",
                                     children: (0, n.jsx)(t.A, {
                                         delay: v.In,
-                                        children: b ?? h.Ay.getName(M.id, void 0, s),
+                                        children: b ?? h.Ay.getName(C.id, void 0, s),
                                     }),
                                 }),
                             ],

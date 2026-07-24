@@ -33,7 +33,7 @@ var s,
     F = i(830543),
     L = i(652215),
     O = i(375708),
-    D = i(494025);
+    D = i(127137);
 function G(t) {
     let { recipient: e, status: i, onClose: s } = t,
         { avatarSrc: a, eventHandlers: r } = (0, k.A)({ userId: e?.id, size: y._3.SIZE_56 }),
@@ -109,7 +109,7 @@ function P(t) {
               }),
           });
 }
-var T = i(468049);
+var T = i(302089);
 function U(t) {
     let { transitionState: e, onClose: i, onShare: s } = t,
         r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),
@@ -241,7 +241,7 @@ function H(t) {
                 let t = new Map();
                 for (let [e, i] of d) {
                     if (h.A.isBlockedOrIgnored(e)) continue;
-                    let s = await (0, A.wz)(e);
+                    let s = await (0, A.getUser)(e);
                     (s.referralStatus = i), t.set(s.id, s);
                 }
                 g(t);

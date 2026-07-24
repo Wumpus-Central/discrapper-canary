@@ -9598,7 +9598,6 @@
     --mobile-voice-message-recording-container-padding-vertical: 10px;
     --mobile-voice-panel-controls-border-radius: 32px;
     --mobile-voice-panel-controls-padding: 16px;
-    --mobile-voice-panel-disconnect-button-min-width: 0px;
     --mobile-voice-panel-gutter: 12px;
     --mobile-voice-panel-padding: 12px;
     --mobile-voice-tile-border-radius: 24px;
@@ -9727,7 +9726,6 @@
     --mobile-voice-message-recording-container-padding-vertical: 6px;
     --mobile-voice-panel-controls-border-radius: 16px;
     --mobile-voice-panel-controls-padding: 4px;
-    --mobile-voice-panel-disconnect-button-min-width: 64px;
     --mobile-voice-panel-gutter: 16px;
     --mobile-voice-panel-padding: 16px;
     --mobile-voice-tile-border-radius: 12px;

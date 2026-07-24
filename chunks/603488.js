@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(554146),
-    l = n(406810),
-    o = n(834730),
-    d = n(826673),
-    c = n(375708),
-    u = n(665095);
-function _() {
-    return (0, d.k8)(s.M.BOGO_2025_NITRO_TAB_BADGE)
-        ? (0, i.jsxs)("div", {
-              className: a()(u.Fg, u.Hh, {}),
+i.d(e, { A: () => p });
+var r = i(627968);
+i(64700);
+var n = i(503698),
+    o = i.n(n),
+    l = i(554146),
+    s = i(406810),
+    a = i(834730),
+    c = i(826673),
+    u = i(375708),
+    d = i(665095);
+function p() {
+    return (0, c.k8)(l.M.BOGO_2025_NITRO_TAB_BADGE)
+        ? (0, r.jsxs)("div", {
+              className: o()(d.Fg, d.Hh, {}),
               children: [
-                  (0, i.jsx)(l.O, { size: "custom", width: 12, height: 12, color: "currentColor", className: u.iD }),
-                  (0, i.jsx)(o.E, { variant: "eyebrow", color: "text-subtle", children: c.intl.string(c.t.OS9KPu) }),
+                  (0, r.jsx)(s.O, { size: "custom", width: 12, height: 12, color: "currentColor", className: d.iD }),
+                  (0, r.jsx)(a.E, { variant: "eyebrow", color: "text-subtle", children: u.intl.string(u.t.OS9KPu) }),
               ],
           })
-        : (0, i.jsx)("div", {
-              className: a()(u.Fg, u.N4),
-              children: (0, i.jsx)(o.E, {
+        : (0, r.jsx)("div", {
+              className: o()(d.Fg, d.N4),
+              children: (0, r.jsx)(a.E, {
                   variant: "eyebrow",
                   color: "text-overlay-light",
-                  children: c.intl.string(c.t.OS9KPu),
+                  children: u.intl.string(u.t.OS9KPu),
               }),
           });
 }

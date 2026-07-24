@@ -1602,7 +1602,7 @@ function nT(e) {
                             t.participants
                                 .filter((e) => null == ee.default.getUser(e))
                                 .forEach((e) => {
-                                    null == n.guild_id ? (0, nm.wz)(e) : nh.A.requestMember(n.guild_id, e);
+                                    null == n.guild_id ? (0, nm.getUser)(e) : nh.A.requestMember(n.guild_id, e);
                                 }));
                     }, [t, n.guild_id]),
                     {}

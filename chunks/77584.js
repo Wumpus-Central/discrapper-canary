@@ -24,7 +24,7 @@ function A(e) {
     let { channelId: t } = e,
         n = d.default.getCurrentUser(),
         i = t === l.A.getDMFromUserId(c.K);
-    null != n && n.hasUrgentMessages() && i && ((_ = !1), a.lA(u.nhx.HAS_UNREAD_URGENT_MESSAGES, !1));
+    null != n && n.hasUrgentMessages() && i && ((_ = !1), a.setFlag(u.nhx.HAS_UNREAD_URGENT_MESSAGES, !1));
 }
 class h extends s.A {
     handleShowUrgentMessageAlert;

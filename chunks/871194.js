@@ -16,12 +16,12 @@ var r = s(627968),
     f = s(356343),
     E = s(713654),
     A = s(166005),
-    N = s(95701),
-    C = s(34457),
+    C = s(95701),
+    N = s(34457),
     I = s(287809),
     L = s(147925),
     j = s(9865),
-    v = s(636537),
+    v = s(562465),
     _ = s(228366),
     b = s(617710),
     S = s(345942),
@@ -57,7 +57,7 @@ var R = s(174459),
     D = s(401755),
     Z = s(799365),
     M = s(375708),
-    B = s(274341);
+    B = s(194477);
 function y(e) {
     let t,
         s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -70,7 +70,7 @@ function y(e) {
             let e = I.default.getCurrentUser();
             if (null == e)
                 try {
-                    e = await (0, p.rQ)();
+                    e = await (0, p.fetchCurrentUser)();
                 } catch (e) {
                     g.A.verifySSOToken("accept_guild_template", null);
                 }
@@ -90,7 +90,7 @@ function y(e) {
                     guild_template_guild_id: e.sourceGuildId,
                 }));
         });
-    let N = (0, r.jsxs)(r.Fragment, {
+    let C = (0, r.jsxs)(r.Fragment, {
             children: [
                 s ? (0, r.jsx)(Z.A, { guildTemplate: e }) : null,
                 (0, r.jsx)("div", { className: B.Kk, children: (0, r.jsx)(f.A, { icon: a, onChange: d }) }),
@@ -105,9 +105,9 @@ function y(e) {
                 }),
             ],
         }),
-        L = e.serializedSourceGuild.roles.map((t) => j.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, C.Oy)(e));
+        L = e.serializedSourceGuild.roles.map((t) => j.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, N.Oy)(e));
     return {
-        form: N,
+        form: C,
         preview: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.c, {}),
@@ -139,7 +139,7 @@ function F(e) {
             .sortBy((e) => (null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id))
             .map((e) => {
                 var t;
-                let s = (t = e).type === T.rbe.GUILD_CATEGORY ? L.A : (0, E.gU)((0, N.UE)(t));
+                let s = (t = e).type === T.rbe.GUILD_CATEGORY ? L.A : (0, E.gU)((0, C.UE)(t));
                 return (0, r.jsxs)(
                     "div",
                     {

@@ -1,32 +1,42 @@
-n.d(t, { A: () => S });
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    o = n.n(i),
-    a = n(17928),
-    s = n(783791),
-    u = n(957907),
-    c = n(818085),
-    E = n(375708),
-    T = n(554177);
-function S(e) {
-    let { channel: t } = e,
-        n = (0, u.A)(t),
-        i = n?.id ?? null,
-        S = (0, a.bG)([s.A], () => null != i && s.A.isThinking(i), [i]),
-        _ = (0, a.bG)([s.A], () => (null != i ? s.A.getFinishedAt(i) : null), [i]),
-        [p, d] = r.useState(() => (null != _ && Date.now() - _ >= 6e4 ? _ : null));
-    r.useEffect(() => {
-        if (S || null == _) return;
-        let e = setTimeout(() => d(_), Math.max(0, 6e4 - (Date.now() - _)));
-        return () => clearTimeout(e);
-    }, [S, _]);
-    let A = S ? "building" : null != _ && p !== _ ? "done" : "idle";
+n.d(e, { A: () => g, T: () => b });
+var t = n(627968),
+    i = n(64700),
+    u = n(503698),
+    a = n.n(u),
+    s = n(17928),
+    r = n(783791),
+    d = n(957907),
+    o = n(818085),
+    c = n(375708),
+    p = n(554177);
+function b(l) {
+    let { className: e } = l;
+    return (0, t.jsx)("span", {
+        role: "img",
+        "aria-label": c.intl.string(o.default.ui2IQ2),
+        className: a()(p.lU, p.jP, e),
+    });
+}
+function g(l) {
+    let { channel: e } = l,
+        n = (0, d.A)(e),
+        u = n?.id ?? null,
+        g = (0, s.bG)([r.A], () => null != u && r.A.isThinking(u), [u]),
+        h = (0, s.bG)([r.A], () => (null != u ? r.A.getFinishedAt(u) : null), [u]),
+        [f, m] = i.useState(() => (null != h && Date.now() - h >= 6e4 ? h : null));
+    i.useEffect(() => {
+        if (g || null == h) return;
+        let l = setTimeout(() => m(h), Math.max(0, 6e4 - (Date.now() - h)));
+        return () => clearTimeout(l);
+    }, [g, h]);
+    let A = g ? "building" : null != h && f !== h ? "done" : "idle";
     return "idle" === A
         ? null
-        : (0, l.jsx)("span", {
-              role: "img",
-              "aria-label": "building" === A ? E.intl.string(c.default.ui2IQ2) : E.intl.string(c.default.WxL0ot),
-              className: o()(T.lU, { [T.jP]: "building" === A, [T.vv]: "done" === A }),
-          });
+        : "building" === A
+          ? (0, t.jsx)(b, {})
+          : (0, t.jsx)("span", {
+                role: "img",
+                "aria-label": c.intl.string(o.default.WxL0ot),
+                className: a()(p.lU, p.vv),
+            });
 }

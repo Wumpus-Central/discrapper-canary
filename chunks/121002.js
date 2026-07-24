@@ -169,7 +169,7 @@ function z(e) {
                 let e = [];
                 for (let [s, i] of t)
                     if (!w.A.isBlockedOrIgnored(s) && i === d.aK.PENDING) {
-                        let t = await (0, v.wz)(s);
+                        let t = await (0, v.getUser)(s);
                         e.push(t);
                     }
                 r(e);

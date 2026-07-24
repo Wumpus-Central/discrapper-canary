@@ -915,7 +915,7 @@ function e7(e) {
         let e = $.default.getAnalyticsToken();
         null != e
             ? R.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
-            : (0, y.rQ)({ withAnalyticsToken: !0 }).catch(et.tEg);
+            : (0, y.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
             if (!e7.current && null == ed) {

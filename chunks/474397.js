@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(627968),
-    r = n(192308),
-    a = n(531685),
+n.d(e, { A: () => l });
+var o = n(627968),
+    d = n(192308),
+    i = n(531685),
     s = n(723702),
-    l = n(19575),
-    o = n(267102),
-    d = n(652215);
-function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.BRT.APP,
-        t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        c = e ?? (0, o.zd)();
-    if (c !== d.BRT.APP && null != c) {
-        if (a.A.isFocused()) return;
-        t
+    a = n(19575),
+    c = n(267102),
+    u = n(652215);
+function l() {
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.APP,
+        e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        l = t ?? (0, c.zd)();
+    if (l !== u.BRT.APP && null != l) {
+        if (i.A.isFocused()) return;
+        e
             ? s.isPlatformEmbedded
-                ? l.Ay.focus()
+                ? a.Ay.focus()
                 : window.focus()
             : (function () {
-                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.BRT.POPOUT;
-                  e !== d.BRT.APP &&
-                      (0, r.openModalLazy)(
+                  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.POPOUT;
+                  t !== u.BRT.APP &&
+                      (0, d.openModalLazy)(
                           async () => {
-                              let { default: t } = await n.e("20570").then(n.bind(n, 368033));
-                              return (n) => (0, i.jsx)(t, { ...n, contextKey: e });
+                              let { default: e } = await n.e("20570").then(n.bind(n, 368033));
+                              return (n) => (0, o.jsx)(e, { ...n, contextKey: t });
                           },
-                          { contextKey: (0, r.modalContextFromAppContext)(e) },
+                          { contextKey: (0, d.modalContextFromAppContext)(t) },
                       );
-              })(e);
+              })(t);
     }
 }

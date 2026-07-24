@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { Fi: () => l, Ig: () => d, Wr: () => o });
-var i = n(17928),
-    r = n(610136),
-    a = n(576705),
-    s = n(652215);
-function l(e) {
-    return (0, i.bG)([a.A], () => null != e && a.A.can(s.xBc.MANAGE_GUILD, e), [e]);
+i.d(t, { Fi: () => E, Ig: () => d, Wr: () => s });
+var n = i(17928),
+    l = i(610136),
+    a = i(576705),
+    r = i(652215);
+function E(e) {
+    return (0, n.bG)([a.A], () => null != e && a.A.can(r.xBc.MANAGE_GUILD, e), [e]);
 }
-function o(e) {
-    let t = (0, i.bG)([r.A], () => (null != e ? r.A.getGuildIncident(e.id) : null));
+function s(e) {
+    let t = (0, n.bG)([l.A], () => (null != e ? l.A.getGuildIncident(e.id) : null));
     return (
-        e?.features.has(s.GuildFeatures.INVITES_DISABLED) ||
+        e?.features.has(r.GuildFeatures.INVITES_DISABLED) ||
         (t?.invitesDisabledUntil != null && new Date(t.invitesDisabledUntil) > new Date())
     );
 }
 function d(e) {
-    let t = l(e),
-        n = o(e);
-    return t && n;
+    let t = E(e),
+        i = s(e);
+    return t && i;
 }

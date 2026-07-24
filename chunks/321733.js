@@ -1,20 +1,19 @@
-"use strict";
-function n(e, t) {
-    for (var r, n = arguments.length, i = Array(n > 2 ? n - 2 : 0), o = 2; o < n; o++) i[o - 2] = arguments[o];
-    if (!e) {
+e.d(t, { V: () => n });
+function n(r, t) {
+    for (var e, n = arguments.length, o = Array(n > 2 ? n - 2 : 0), a = 2; a < n; a++) o[a - 2] = arguments[a];
+    if (!r) {
         if (void 0 === t)
-            r = Error(
+            e = Error(
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var a = 0;
-            (r = Error(
+            var u = 0;
+            (e = Error(
                 t.replace(/%s/g, function () {
-                    return i[a++];
+                    return o[u++];
                 }),
             )).name = "Invariant Violation";
         }
-        throw ((r.framesToPop = 1), r);
+        throw ((e.framesToPop = 1), e);
     }
 }
-r.d(t, { V: () => n });

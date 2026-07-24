@@ -45,7 +45,7 @@ async function I(e) {
         N = u.default.getUser(t);
     h(t),
         null == N
-            ? await (0, a.eO)(t, {
+            ? await (0, a.fetchProfile)(t, {
                   type: "modal",
                   guildId: n ?? void 0,
                   withMutualFriendsCount: !0,

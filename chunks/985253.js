@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { T: () => a });
-var i = n(778712),
-    r = n(996988);
-let a = {
-    [r.d.POPOUT]: {
-        avatarSize: i._3.SIZE_80,
+n.d(t, { T: () => r });
+var a = n(778712),
+    l = n(996988);
+let r = {
+    [l.d.POPOUT]: {
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
         bannerWidth: 300,
         bannerHeight: 105,
         themePadding: 2,
     },
-    [r.d.MODAL]: {
-        avatarSize: i._3.SIZE_120,
+    [l.d.MODAL]: {
+        avatarSize: a._3.SIZE_120,
         avatarOffsetX: 16,
         avatarOffsetY: 5,
         bannerWidth: 600,
         bannerHeight: 210,
         themePadding: 0,
     },
-    [r.d.MODAL_V2]: {
-        avatarSize: i._3.SIZE_120,
+    [l.d.MODAL_V2]: {
+        avatarSize: a._3.SIZE_120,
         avatarOffsetX: 24,
         avatarOffsetY: 0,
         bannerWidth: 400,
         bannerHeight: 140,
         themePadding: 0,
     },
-    [r.d.SIDEBAR]: {
-        avatarSize: i._3.SIZE_80,
+    [l.d.SIDEBAR]: {
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 8,
         bannerWidth: 340,
         bannerHeight: 120,
         themePadding: 0,
     },
-    [r.d.VIDEO_TILE_BACKGROUND]: {
-        avatarSize: i._3.SIZE_80,
+    [l.d.VIDEO_TILE_BACKGROUND]: {
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
         bannerWidth: 300,

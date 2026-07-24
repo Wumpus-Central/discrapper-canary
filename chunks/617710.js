@@ -13,7 +13,7 @@ var i = n(435558),
     E = n(280450),
     A = n(470710),
     h = n(734057),
-    I = n(186295),
+    I = n(283540),
     f = n(763827),
     p = n(873985),
     T = n(309010),
@@ -1401,7 +1401,7 @@ eV(
         (0, es.f)() && (n(277984).$o(), Y.jv(eE.A.getFetchedSKUIDs()));
     }),
     eF(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        K.rQ(), (0, es.f)() && n(277984).hP();
+        K.fetchCurrentUser(), (0, es.f)() && n(277984).hP();
     }),
     eF(["WISHLIST_ITEM_PURCHASED"], (e) => {
         eH({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });

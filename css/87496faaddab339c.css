@@ -1,0 +1,18 @@
+.settings__191e1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.deleteRow__191e1 {
+    align-items: center;
+    display: flex
+}
+
+.deleteCopy__191e1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}

@@ -72,7 +72,7 @@ function A(e, t) {
         connectionsRoleId:
             null == f ? void 0 : (0, l._g)({ guildMember: d.Ay.getMember(f, e), channel: o.A.getChannel(p) })?.id,
     };
-    if (h) return i.h.wait(() => (0, r.eO)(e, w, E)), Promise.resolve();
-    let G = (0, r.eO)(e, w, E);
+    if (h) return i.h.wait(() => (0, r.fetchProfile)(e, w, E)), Promise.resolve();
+    let G = (0, r.fetchProfile)(e, w, E);
     return M && !I ? Promise.resolve() : G;
 }

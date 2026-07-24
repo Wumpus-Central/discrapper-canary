@@ -4,7 +4,7 @@ var n,
     s = i(64700),
     a = i(503698),
     o = i.n(a),
-    r = i(617498),
+    r = i(183812),
     d = i(17928),
     c = i(289873),
     u = i(789645),
@@ -260,9 +260,9 @@ var L = i(793574),
     T = i(573435),
     G = i(976860),
     P = i(329551),
-    V = i(413339),
-    S = i(952572),
-    U = i(151476),
+    U = i(413339),
+    V = i(952572),
+    S = i(151476),
     F = i(704877),
     X = i(222692),
     z = i(404355),
@@ -271,7 +271,7 @@ var L = i(793574),
     H = i(164891),
     W = i(260509),
     $ = i(71393),
-    K = i(186295),
+    K = i(283540),
     J = i(287809),
     Q = i(531685),
     Z = i(174459),
@@ -425,9 +425,9 @@ function eT(e) {
         ),
         [w, G] = (0, d.yK)([K.Ay], () => [K.Ay.supports(eC.O5.VIDEO), Object.keys(K.Ay.getVideoDevices()).length]),
         P = (0, d.bG)([ee.A], () => ee.A.getVideoParticipants(a.id).length > 0),
-        V = (0, d.bG)([J.default], () => J.default.getUser(c)),
-        S = (0, em.tx)(V),
-        U = P && w && G > 0,
+        U = (0, d.bG)([J.default], () => J.default.getUser(c)),
+        V = (0, em.tx)(U),
+        S = P && w && G > 0,
         F = s.useCallback((e) => {
             null != e.top && null != e.left && E.move(e.left, e.top);
         }, []),
@@ -457,8 +457,8 @@ function eT(e) {
             [z],
         ),
         s.useEffect(() => {
-            null == V && (0, ea.wz)(c);
-        }, [c, V]);
+            null == U && (0, ea.getUser)(c);
+        }, [c, U]);
     let B = (0, eo.gU)(a);
     return (0, l.jsx)(k.f5, {
         value: u,
@@ -479,19 +479,19 @@ function eT(e) {
                             (0, l.jsxs)("div", {
                                 className: ek.wx,
                                 children: [
-                                    null != V &&
+                                    null != U &&
                                         (0, l.jsx)(ei.eu, {
                                             className: ek.gX,
                                             "aria-label": "user",
-                                            src: V?.getAvatarURL(a.guild_id, 80, !1, !1),
+                                            src: U?.getAvatarURL(a.guild_id, 80, !1, !1),
                                             size: g._3.SIZE_80,
                                         }),
                                     (0, l.jsx)(en.D, {
                                         variant: "heading-lg/semibold",
                                         className: o()(ek.gX, ek.DD),
                                         children:
-                                            null != V
-                                                ? e_.intl.format(e_.t.M3F6cv, { username: S })
+                                            null != U
+                                                ? e_.intl.format(e_.t.M3F6cv, { username: V })
                                                 : e_.intl.string(e_.t["3rE1P8"]),
                                     }),
                                     (0, l.jsxs)("div", {
@@ -583,7 +583,7 @@ function eT(e) {
                                         variant: "secondary",
                                         onClick: X,
                                     }),
-                                    U
+                                    S
                                         ? (0, l.jsx)(h.Y, {
                                               targetElementRef: m,
                                               renderPopout: (e) => {
@@ -620,33 +620,33 @@ function eT(e) {
 }
 var eG = i(329072),
     eP = i(480890),
-    eV = i(806931),
-    eS = i(149941),
-    eU = i(124243);
+    eU = i(806931),
+    eV = i(149941),
+    eS = i(124243);
 let eF = { width: 232, height: 315 },
     eX = { width: 232, height: 267 };
 function ez(e) {
     let { header: t } = e,
         i = K.Ay.getCameraComponent(),
         n = (0, d.bG)([K.Ay], () => K.Ay.getVideoDeviceId()),
-        a = (0, S.A)();
+        a = (0, V.A)();
     return (
         s.useEffect(() => {
             let e = J.default.getCurrentUser();
             if (a && null != e) {
                 let t = (0, P.i)(e);
-                (0, V.S1)(t, n, { track: !1 }).catch(C.tEg);
+                (0, U.S1)(t, n, { track: !1 }).catch(C.tEg);
             }
         }, [a, n]),
         (0, l.jsxs)("div", {
-            className: eU.Tg,
+            className: eS.Tg,
             children: [
                 (0, l.jsx)(c.y, {}),
                 (0, l.jsx)("div", {
-                    className: eU.VH,
+                    className: eS.VH,
                     children: (0, l.jsx)(i, { disabled: !1, deviceId: n, width: 475, height: 267 }),
                 }),
-                (0, l.jsx)("div", { className: eU.dB, children: t }),
+                (0, l.jsx)("div", { className: eS.dB, children: t }),
             ],
         })
     );
@@ -654,17 +654,17 @@ function ez(e) {
 function eB(e) {
     let { canVideo: t, channel: i, numVideoDevices: n } = e,
         { parentAnalyticsLocation: a } = (0, k.Ay)(),
-        { cameraUnavailable: r, enabled: d } = (0, U.A)(),
+        { cameraUnavailable: r, enabled: d } = (0, S.A)(),
         c = (0, F.A)(i),
         m = s.useRef(null),
         g = n > 1;
     return (0, l.jsxs)("div", {
-        className: o()(eU.iE, eU.o1),
+        className: o()(eS.iE, eS.o1),
         children: [
             (0, l.jsx)(z.A, {
                 iconComponent: u.P,
                 label: e_.intl.string(e_.t.WAI6xu),
-                className: eU.hP,
+                className: eS.hP,
                 onClick: () => {
                     (0, eE.X)(a, eE.O.DISCONNECT),
                         Z.default.track(C.HAw.RING_CALL_DECLINED, {
@@ -682,7 +682,7 @@ function eB(e) {
                         let { closePopout: t } = e;
                         return (0, l.jsx)(eG.A, {
                             onClose: t,
-                            onInteraction: (0, eP.s)("VideoDeviceMenu", a, { entrypoint: eV.GK.CARET }),
+                            onInteraction: (0, eP.s)("VideoDeviceMenu", a, { entrypoint: eU.GK.CARET }),
                         });
                     },
                     position: "top",
@@ -695,7 +695,7 @@ function eB(e) {
                             buttonRef: m,
                             join: !0,
                             enabled: d,
-                            className: o()(eU.hP, { [eU.$j]: g }),
+                            className: o()(eS.hP, { [eS.$j]: g }),
                             color: "green",
                             centerButton: !0,
                             hasPermission: c,
@@ -723,7 +723,7 @@ function eB(e) {
                 centerButton: !0,
                 onCallJoined: () =>
                     Z.default.track(C.HAw.RING_CALL_ACCEPTED, { location: a, guild_id: i.guild_id, ...(0, O.dI)(i) }),
-                className: eU.hP,
+                className: eS.hP,
             }),
         ],
     });
@@ -750,61 +750,61 @@ function eY(e) {
         }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]);
-    let V = O === C._Of.VIDEO && b && y > 0,
-        { enabled: S } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
-        U =
-            O === C._Of.VOICE || (S && a.type === C.rbe.GUILD_VOICE)
+    let U = O === C._Of.VIDEO && b && y > 0,
+        { enabled: V } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
+        S =
+            O === C._Of.VOICE || (V && a.type === C.rbe.GUILD_VOICE)
                 ? e_.intl.string(e_.t.Js8cK3)
                 : e_.intl.string(e_.t.KcnWCO),
         F = (0, l.jsxs)(l.Fragment, {
             children: [
                 null != v && null == j
                     ? (0, l.jsx)("div", {
-                          className: o()(eU.Kk, eS.iE, eS.hs),
+                          className: o()(eS.Kk, eV.iE, eV.hs),
                           children: (0, l.jsx)(T.Ay, {
-                              className: eU.dK,
+                              className: eS.dK,
                               mask: T.hW.AVATAR_DEFAULT,
                               width: u ? 40 : 80,
                               height: u ? 40 : 80,
                               children: (0, l.jsx)("div", {
-                                  className: o()(eU.$f, eU.Gc),
-                                  children: (0, l.jsx)("div", { className: eU.Hj, children: (0, W.Rb)(v) }),
+                                  className: o()(eS.$f, eS.Gc),
+                                  children: (0, l.jsx)("div", { className: eS.Hj, children: (0, W.Rb)(v) }),
                               }),
                           }),
                       })
                     : (0, l.jsx)(et.A, {
-                          className: eU.Kk,
+                          className: eS.Kk,
                           ringing: w,
                           src: _ ?? "",
                           ringingType: et.A.RingingType.INCOMING,
                           size: u ? g._3.SIZE_40 : g._3.SIZE_80,
                       }),
                 (0, l.jsxs)("div", {
-                    className: eU.i8,
+                    className: eS.i8,
                     children: [
                         (0, l.jsx)(f.E, {
-                            className: eU.DD,
+                            className: eS.DD,
                             color: "text-strong",
                             variant: u ? "text-md/semibold" : "text-lg/semibold",
                             children: I,
                         }),
                         (0, l.jsx)(f.E, {
                             color: "text-default",
-                            className: eU.VA,
+                            className: eS.VA,
                             variant: u ? "text-sm/normal" : "text-md/normal",
-                            children: U,
+                            children: S,
                         }),
                     ],
                 }),
             ],
         }),
-        X = V ? eF : eX,
+        X = U ? eF : eX,
         z = (0, d.bG)([Q.A], () => Q.A.windowSize());
     return (0, l.jsx)(k.f5, {
         value: c,
         children: (0, l.jsx)(D, {
-            className: eU.iE,
-            selector: `.${eU.zr}`,
+            className: eS.iE,
+            selector: `.${eS.zr}`,
             initialPosition: { left: n, top: i },
             maxX: z.width,
             maxY: z.height,
@@ -814,7 +814,7 @@ function eY(e) {
                 theme: u ? C.NJ8.DARK : void 0,
                 children: (e) =>
                     (0, l.jsxs)(r.animated.div, {
-                        className: o()(eU.zr, eR.a8, { [eU.mY]: u }, e),
+                        className: o()(eS.zr, eR.a8, { [eS.mY]: u }, e),
                         style: {
                             ...t,
                             minWidth: P.value.interpolate([0, 1], [X.width, 475]),
@@ -822,12 +822,12 @@ function eY(e) {
                             translateX: P.value.interpolate([0, 1], [0, (-1 * Math.abs(475 - X.width)) / 2]),
                         },
                         children: [
-                            u ? (0, l.jsx)(ez, { header: F }) : (0, l.jsx)("div", { className: eU.Rh, children: F }),
-                            (0, l.jsx)(eB, { canVideo: V, channel: a, numVideoDevices: y }),
-                            V && !u
+                            u ? (0, l.jsx)(ez, { header: F }) : (0, l.jsx)("div", { className: eS.Rh, children: F }),
+                            (0, l.jsx)(eB, { canVideo: U, channel: a, numVideoDevices: y }),
+                            U && !u
                                 ? (0, l.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
-                                      className: eU.jc,
+                                      className: eS.jc,
                                       children: (0, l.jsx)(x.$, {
                                           variant: "secondary",
                                           size: "sm",
