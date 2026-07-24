@@ -1,22 +1,23 @@
-r.d(t, { o: () => a }), r(64700);
-var n = r(621466),
-    l = r(644447),
-    o = r(836781),
-    u = r(256905);
-function a(e, t, r) {
-    let a = {},
-        i = {};
+"use strict";
+n.d(t, { o: () => l }), n(64700);
+var i = n(621466),
+    r = n(644447),
+    a = n(836781),
+    s = n(256905);
+function l(e, t, n) {
+    let l = {},
+        o = {};
     for (let [d, c] of e.entries()) {
-        let p = (0, l.E)({ proxyURL: c.proxyUrl, url: c.url });
-        (a[p] = (l) =>
-            (function (e, t, r) {
-                let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    o = arguments.length > 4 ? arguments[4] : void 0;
+        let u = (0, r.E)({ proxyURL: c.proxyUrl, url: c.url });
+        (l[u] = (r) =>
+            (function (e, t, n) {
+                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    a = arguments.length > 4 ? arguments[4] : void 0;
                 e.preventDefault(),
-                    (0, n.vq)(e.currentTarget) && e.currentTarget.blur(),
-                    (0, u.R)({ ...l, items: t, startingIndex: r, location: o ?? "zoomedMediaModalHelper" });
-            })(l, e, d, t, r)),
-            (i[p] = () => (0, o.Z)(c, e.length > 1));
+                    (0, i.vq)(e.currentTarget) && e.currentTarget.blur(),
+                    (0, s.R)({ ...r, items: t, startingIndex: n, location: a ?? "zoomedMediaModalHelper" });
+            })(r, e, d, t, n)),
+            (o[u] = () => (0, a.Z)(c, e.length > 1));
     }
-    return { srcToOnClickOverride: a, srcToHandlePreloadImage: i };
+    return { srcToOnClickOverride: l, srcToHandlePreloadImage: o };
 }

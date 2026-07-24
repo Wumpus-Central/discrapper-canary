@@ -1,6 +1,7 @@
+"use strict";
 n.d(t, { H: () => s }), n(321073);
 var i = n(372684),
-    l = n(731854);
+    r = n(731854);
 let a = { speakingUserIds: [], activeSoundboards: [] };
 class s {
     timeline;
@@ -14,7 +15,7 @@ class s {
             (this.soundboardPlayCounts = new Map());
         const t = [...e].sort((e, t) => e.timestamp - t.timestamp),
             n = new Set(),
-            l = new Set();
+            r = new Set();
         for (const e of t) {
             const t = e.signal;
             if (t.type === i.Gy.SPEAKING)
@@ -22,8 +23,8 @@ class s {
                     (n.add(t.userId), 0 === t.speakingFlags && this.userSpeakingStates.set(t.userId, !0));
             else if (t.type === i.Gy.SOUNDBOARD) {
                 const e = this.getSoundboardKey(t.soundboardId, t.userId);
-                !l.has(e) &&
-                    (l.add(e),
+                !r.has(e) &&
+                    (r.add(e),
                     t.playing ||
                         (this.soundboardPlayCounts.set(e, 1),
                         this.activeSoundboards.set(e, this.soundboardFromSignal(t))));
@@ -68,7 +69,7 @@ class s {
         };
     }
     processSpeakingEvent(e) {
-        this.userSpeakingStates.set(e.userId, (e.speakingFlags & l.ME.VOICE) === l.ME.VOICE);
+        this.userSpeakingStates.set(e.userId, (e.speakingFlags & r.ME.VOICE) === r.ME.VOICE);
     }
     processSoundboardEvent(e) {
         let t = this.getSoundboardKey(e.soundboardId, e.userId),
@@ -99,8 +100,8 @@ class s {
             n = this.timeline.length - 1,
             i = -1;
         for (; t <= n; ) {
-            let l = Math.floor((t + n) / 2);
-            this.timeline[l].timestamp <= e ? ((i = l), (t = l + 1)) : (n = l - 1);
+            let r = Math.floor((t + n) / 2);
+            this.timeline[r].timestamp <= e ? ((i = r), (t = r + 1)) : (n = r - 1);
         }
         return -1 === i ? a : this.timeline[i].snapshot;
     }
