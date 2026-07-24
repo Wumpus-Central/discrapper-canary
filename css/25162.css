@@ -19,7 +19,7 @@
 .rowIcon__95bea {
     background-color: var(--background-mod-muted);
     border-radius: var(--radius-round);
-    color: var(--white);
+    color: var(--icon-default);
     justify-content: center;
     max-height: 40px;
     max-width: 40px;
