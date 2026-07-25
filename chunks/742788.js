@@ -1,4 +1,4 @@
-l.d(t, { A: () => Q, E: () => M }), l(321073);
+l.d(t, { A: () => Q, E: () => P }), l(321073);
 var r = l(627968),
     n = l(64700),
     a = l(503698),
@@ -13,8 +13,8 @@ var r = l(627968),
     d = l(955572),
     E = l(915089),
     L = l(734057),
-    p = l(309010),
-    R = l(625494),
+    R = l(309010),
+    p = l(625494),
     T = l(256796),
     A = l(822382),
     _ = l(408730),
@@ -30,8 +30,8 @@ var r = l(627968),
     m = l(375708),
     v = l(207958),
     O = l(858753);
-let M = 512,
-    P = (0, E.Ld)();
+let P = 512,
+    M = (0, E.Ld)();
 function D(e, t) {
     return { path: [0, 0], offset: Math.min(Math.max(t, 0), s.bP.string(e).length) };
 }
@@ -133,7 +133,7 @@ function Q(e) {
                     (e.insertText = (l) => {
                         let { selection: r } = e,
                             n = null != r ? s.KE.string(e, r).length : 0,
-                            a = M - (s.bP.string(e).length - n);
+                            a = P - (s.bP.string(e).length - n);
                         if (a <= 0) return;
                         let u = l.replace(/\n/g, "");
                         t(u.length > a ? u.slice(0, a) : u);
@@ -155,41 +155,45 @@ function Q(e) {
         J = n.useRef(null),
         V = n.useRef(!0);
     n.useEffect(() => () => void (V.current = !1), []);
-    let ee = n.useCallback(() => s.bP.string(Q), [Q]),
-        et = n.useCallback(() => {
-            Promise.resolve().then(() => i.rL.focus(Q));
-        }, [Q]),
+    let ee = n.useRef(!1),
+        et = n.useCallback(() => s.bP.string(Q), [Q]),
         el = n.useCallback(() => {
-            Promise.resolve().then(() => i.rL.blur(Q));
+            Promise.resolve().then(() => {
+                null == Q.selection && s.gB.select(Q, s.KE.end(Q, [])), i.rL.focus(Q);
+            });
         }, [Q]),
         er = n.useCallback(() => {
+            Promise.resolve().then(() => i.rL.blur(Q));
+        }, [Q]),
+        en = n.useCallback(() => {
             S.A.cleanUpSearchState(l);
         }, [l]),
-        en = n.useCallback(
+        ea = n.useCallback(
             (e) => {
                 if (!V.current) return;
                 let t = e?.relatedTarget,
-                    r = document.getElementById(P);
-                (null != t && null != r && r.contains(t)) || (_.A.setFocused(l, !1), K(!1), 0 === x($).length && er());
+                    r = document.getElementById(M);
+                (null != t && null != r && r.contains(t)) ||
+                    (_.A.setFocused(l, !1), K(!1), 0 === et().length && 0 === x($).length && en());
             },
-            [er, $, l],
+            [en, $, et, l],
         ),
-        ea = n.useCallback(
+        eu = n.useCallback(
             (e) => {
                 s.KE.withoutNormalizing(Q, () => {
                     s.gB.select(Q, { anchor: s.KE.start(Q, []), focus: s.KE.end(Q, []) }),
                         s.gB.delete(Q),
-                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, M));
+                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, P));
                 }),
                     s.gB.select(Q, s.KE.end(Q, []));
             },
             [Q],
         ),
-        eu = n.useCallback(
+        es = n.useCallback(
             (e) => {
                 if (a) return !1;
                 let { queryString: t, searchEverywhere: l, searchQuerySource: r } = e ?? {};
-                (null == t || "" === t) && (t = ee());
+                (null == t || "" === t) && (t = et());
                 let n = (0, A._o)(t),
                     u = (0, A.Zf)(n);
                 for (let e = 0; e < n.length; e++)
@@ -204,16 +208,16 @@ function Q(e) {
                         searchQuerySource: r ?? C.Q_.SEARCH_TEXT_INPUT,
                     }),
                     c.O.announce(m.intl.string(m.t.pKCxWP)),
-                    en(),
+                    ea(),
                     !0)
                 );
             },
-            [ee, en, a, U],
+            [et, ea, a, U],
         ),
-        es = n.useCallback(() => {
+        ei = n.useCallback(() => {
             if (!V.current) return;
-            i.rL.isFocused(Q) && K(!0);
-            let e = ee();
+            !ee.current && i.rL.isFocused(Q) && K(!0);
+            let e = et();
             Z(e.length > 0), I.A.updateSearchQueryText(l, e);
             let t = (0, A._o)(e),
                 { selection: r } = Q,
@@ -242,19 +246,19 @@ function Q(e) {
                             : a > t.scrollLeft + t.offsetWidth && (t.scrollLeft = a - t.offsetWidth + 3);
                     });
                 })(Q);
-        }, [Q, ee, l]),
-        ei = n.useCallback(() => {
+        }, [Q, et, l]),
+        eo = n.useCallback(() => {
             !0 !== J.current?.selectOption({ searchAutocompleteSelectAction: C.oi.KEY_PRESS }) &&
-                eu({ searchQuerySource: C.Q_.SEARCH_TEXT_INPUT });
-        }, [eu]),
-        eo = n.useCallback(
+                es({ searchQuerySource: C.Q_.SEARCH_TEXT_INPUT });
+        }, [es]),
+        ec = n.useCallback(
             (e) => {
                 switch (e.key) {
                     case "Enter":
-                        e.preventDefault(), ei();
+                        e.preventDefault(), eo();
                         return;
                     case "Escape":
-                        e.preventDefault(), e.stopPropagation(), 0 === ee().length ? el() : (ea(""), K(!0));
+                        e.preventDefault(), e.stopPropagation(), 0 === et().length ? er() : (eu(""), K(!0));
                         return;
                     case "ArrowUp":
                         e.preventDefault(), e.stopPropagation(), J.current?.focusPreviousOption();
@@ -268,114 +272,119 @@ function Q(e) {
                         return;
                 }
             },
-            [el, ee, ei, N, ea],
-        ),
-        ec = n.useCallback(
-            (e) => {
-                let { query: t, anchor: l, focus: r, performSearch: n, replace: a, searchQuerySource: u } = e,
-                    o = ee();
-                " " !== t.charAt(t.length - 1) && (t += " "),
-                    null != l && 0 !== l && " " !== o.charAt(l - 1) && " " !== t.charAt(0) && (t = " " + t),
-                    (t = t.replace(/\n/g, "")),
-                    i.rL.focus(Q),
-                    !0 === a
-                        ? ea(t)
-                        : null != l
-                          ? (s.gB.select(Q, { anchor: D(Q, l), focus: D(Q, r ?? l) }),
-                            s.gB.insertText(Q, t.slice(0, M)))
-                          : s.gB.insertText(Q, t),
-                    K(!0),
-                    !0 === n && eu({ queryString: ee(), searchQuerySource: u });
-            },
-            [Q, ee, ea, eu],
+            [er, et, eo, N, eu],
         ),
         ef = n.useCallback(
             (e) => {
+                let { query: t, anchor: l, focus: r, performSearch: n, replace: a, searchQuerySource: u } = e,
+                    o = et();
+                " " !== t.charAt(t.length - 1) && (t += " "),
+                    null != l && 0 !== l && " " !== o.charAt(l - 1) && " " !== t.charAt(0) && (t = " " + t),
+                    (t = t.replace(/\n/g, "")),
+                    (ee.current = !0);
+                try {
+                    !0 !== n && i.rL.focus(Q),
+                        !0 === a
+                            ? eu(t)
+                            : null != l
+                              ? (s.gB.select(Q, { anchor: D(Q, l), focus: D(Q, r ?? l) }),
+                                s.gB.insertText(Q, t.slice(0, P)))
+                              : s.gB.insertText(Q, t),
+                        !0 !== n && K(!0),
+                        !0 === n && es({ queryString: et(), searchQuerySource: u });
+                } finally {
+                    Promise.resolve().then(() => void (ee.current = !1));
+                }
+            },
+            [Q, et, eu, es],
+        ),
+        eg = n.useCallback(
+            (e) => {
                 let { prefillCurrentChannel: t } = e;
-                if (!0 !== t) return void et();
-                let r = L.A.getChannel(p.Ay.getChannelId()),
+                if (!0 !== t) return void el();
+                let r = L.A.getChannel(R.Ay.getChannelId()),
                     n = null != r ? (0, A.Rt)(r) : null;
                 null == r || (r.isPrivate() && l.type !== W.I4_.DMS) || r.isObfuscated() || null == n
-                    ? et()
+                    ? el()
                     : ((0, k.Tf)({ searchContext: l }),
                       Promise.resolve().then(() => {
                           i.rL.focus(Q),
-                              ec({
+                              ef({
                                   query: b.Ay[W.LWr.FILTER_IN].key + `${n} `,
                                   replace: !0,
                                   searchQuerySource: C.Q_.SEARCH_TEXT_INPUT,
                               });
                       }));
             },
-            [Q, et, ec, l],
+            [Q, el, ef, l],
         );
     n.useEffect(() => {
         (0, A.Pe)();
     }, [l]);
-    let eg = (0, o.bG)([y.A], () => y.A.getQueryText($) ?? "");
+    let eh = (0, o.bG)([y.A], () => y.A.getQueryText($) ?? "");
     n.useEffect(() => {
-        s.bP.string(Q) !== eg && ea(eg);
-    }, [eg, Q, ea]);
-    let eh = (0, o.bG)([y.A], () => y.A.getIsSearchTokensInitialized());
+        s.bP.string(Q) !== eh && eu(eh);
+    }, [eh, Q, eu]);
+    let ed = (0, o.bG)([y.A], () => y.A.getIsSearchTokensInitialized());
     n.useEffect(() => {
-        eh && Q.onChange();
-    }, [Q, eh]),
+        ed && Q.onChange();
+    }, [Q, ed]),
         n.useEffect(
             () => (
-                R._.subscribe(W.jej.PERFORM_SEARCH, eu),
-                R._.subscribe(W.jej.SET_SEARCH_QUERY, ec),
-                R._.subscribe(W.jej.FOCUS_SEARCH, ef),
+                p._.subscribe(W.jej.PERFORM_SEARCH, es),
+                p._.subscribe(W.jej.SET_SEARCH_QUERY, ef),
+                p._.subscribe(W.jej.FOCUS_SEARCH, eg),
                 () => {
-                    R._.unsubscribe(W.jej.PERFORM_SEARCH, eu),
-                        R._.unsubscribe(W.jej.SET_SEARCH_QUERY, ec),
-                        R._.unsubscribe(W.jej.FOCUS_SEARCH, ef);
+                    p._.unsubscribe(W.jej.PERFORM_SEARCH, es),
+                        p._.unsubscribe(W.jej.SET_SEARCH_QUERY, ef),
+                        p._.unsubscribe(W.jej.FOCUS_SEARCH, eg);
                 }
             ),
-            [ef, ec, eu],
+            [eg, ef, es],
         );
-    let ed = n.useCallback(
+    let eE = n.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), 0 === ee().length)
-                    ? et()
-                    : (ea(""), (0, k.iK)({ searchContext: l }), Y || el());
+                (e.preventDefault(), e.stopPropagation(), 0 === et().length)
+                    ? el()
+                    : (eu(""), (0, k.iK)({ searchContext: l }), Y || er());
             },
-            [el, Y, et, ee, ea, l],
+            [er, Y, el, et, eu, l],
         ),
-        eE = n.useCallback(
+        eL = n.useCallback(
             (e) => {
                 let t = i.rL.toDOMNode(Q, Q);
                 null != e
-                    ? t.setAttribute("aria-activedescendant", `${P}-${e}`)
+                    ? t.setAttribute("aria-activedescendant", `${M}-${e}`)
                     : t.removeAttribute("aria-activedescendant");
             },
             [Q],
         ),
-        eL = n.useCallback(
+        eR = n.useCallback(
             (e) => {
                 let t = e.relatedTarget;
                 if (null != t) {
-                    let e = document.getElementById(P);
+                    let e = document.getElementById(M);
                     if ((null != e && e.contains(t)) || (null != G.current && G.current.contains(t))) return;
                 }
-                en();
+                ea();
             },
-            [en],
+            [ea],
         ),
         ep = n.useCallback(
             () =>
                 (0, r.jsx)("div", {
-                    onBlur: eL,
-                    children: (0, r.jsx)(F.A, { ref: J, searchContext: l, navId: P, onSelectedIndexChanged: eE }),
+                    onBlur: eR,
+                    children: (0, r.jsx)(F.A, { ref: J, searchContext: l, navId: M, onSelectedIndexChanged: eL }),
                 }),
-            [eL, eE, l],
+            [eR, eL, l],
         ),
-        eR = n.useCallback(() => {
+        eT = n.useCallback(() => {
             i.rL.toDOMNode(Q, Q).removeAttribute("aria-activedescendant"),
                 K(!0),
                 _.A.setFocused(l, !0),
                 c.O.announce(m.intl.string(m.t["5h0QOP"]));
         }, [Q, l]),
-        eT = w ?? m.intl.string(m.t["5h0QOP"]);
+        eA = w ?? m.intl.string(m.t["5h0QOP"]);
     return (0, r.jsx)(f.Y, {
         targetElementRef: X,
         renderPopout: ep,
@@ -401,16 +410,16 @@ function Q(e) {
                                     (0, r.jsx)(B, {
                                         editor: Q,
                                         initialValue: q,
-                                        placeholder: eT,
-                                        navId: P,
+                                        placeholder: eA,
+                                        navId: M,
                                         isShown: a,
-                                        onChange: es,
-                                        onKeyDown: eo,
-                                        onFocus: eR,
-                                        onBlur: en,
+                                        onChange: ei,
+                                        onKeyDown: ec,
+                                        onFocus: eT,
+                                        onBlur: ea,
                                     }),
                                     (0, r.jsx)(h.B, {
-                                        onClear: ed,
+                                        onClear: eE,
                                         hasContent: z || E,
                                         className: v.Kk,
                                         isLoading: !1,
