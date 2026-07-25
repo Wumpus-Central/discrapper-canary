@@ -85,9 +85,11 @@ function M(e) {
         B = r.useCallback(async () => {
             y(!0);
             let e = (await Promise.all(F.map(C.pk))).filter(f.Vq);
-            (e.length < F.length && (0, i.P0)((0, s.o)(N.intl.string(N.t.R0RpRX), u.Ck.FAILURE)), 0 === e.length)
-                ? y(!1)
-                : (U(), (0, m.S_)(e, d ?? null, "modal"), l());
+            if (0 === e.length) {
+                (0, i.P0)((0, s.o)(N.intl.string(N.t.R0RpRX), u.Ck.FAILURE)), y(!1);
+                return;
+            }
+            U(), (0, m.S_)(e, d ?? null, "modal"), l();
         }, [U, l, d, F]),
         G = r.useMemo(() => T.filter((e) => e.type !== h.rD.HEADER), [T]),
         z = (0, g.s)({ rowData: G, selectedDestinations: F, handleToggleDestination: q, disableSelection: W }),
