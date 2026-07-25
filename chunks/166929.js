@@ -412,7 +412,14 @@ class C {
             0 === this.videoStoppedReason && (this.statsWindow.splice(0), this.videoStoppedWatch.stop());
     }
     appendAndIncrementStats(e) {
-        if (this.isVideoStopped || (this.statsWindow.push(e), this.statsWindow.length < 2)) return;
+        if (this.isVideoStopped) return;
+        if ((this.statsWindow.push(e), this.statsWindow.length < 2)) {
+            if (1 === this.statsWindow.length) {
+                let t = new N();
+                (t.timestamp = e.timestamp), this.collectAggregationStats(e, t);
+            }
+            return;
+        }
         let t = this.statsWindow[this.statsWindow.length - 1],
             n = this.statsWindow[this.statsWindow.length - 2];
         this.collectAggregationStats(t, n),
@@ -475,16 +482,16 @@ class C {
         });
         let g = (a - m) / 1e3,
             S = ((i - p) * 8) / g,
-            N = (r - T) / g;
+            C = (r - T) / g;
         c.forEach((e) => {
             S <= e && (this.bitrateBuckets[e] += f);
         }),
             u.forEach((e) => {
-                N <= e && (this.fpsBuckets[e] += f);
+                C <= e && (this.fpsBuckets[e] += f);
             }),
             this.resolutionHistogram.addSample(s),
             this.bitrateHistogram.addSample(S),
-            this.fpsHistogram.addSample(N),
+            this.fpsHistogram.addSample(C),
             this.localWantHistogram.addSample(h),
             this.statsWindow.shift();
     }
