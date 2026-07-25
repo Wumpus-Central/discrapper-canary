@@ -1,24 +1,23 @@
-a.d(t, { default: () => u });
+a.d(e, { default: () => p });
 var n = a(627968),
     i = a(980707),
-    r = a(477782),
     c = a(442433),
     d = a(847767),
-    s = a(649308),
-    l = a(652215),
-    p = a(375708);
-let u = (0, d.A)(
-    function (e) {
-        let { onSelect: t, navId: a } = e,
-            d = (0, s.A)();
+    r = a(928646),
+    s = a(652215),
+    l = a(375708);
+let p = (0, d.A)(
+    function (t) {
+        let { onSelect: e, navId: a } = t,
+            d = (0, r.A)();
         return (0, n.jsx)(i.W, {
             "data-menu-migrated": !0,
             navId: a,
             onClose: c.Z_,
-            "aria-label": p.intl.string(p.t.HpQykc),
-            onSelect: t,
-            children: (0, n.jsx)(r.rX, { children: d }),
+            "aria-label": l.intl.string(l.t.HpQykc),
+            onSelect: e,
+            children: d,
         });
     },
-    { object: l.ZSU.CONTEXT_MENU },
+    { object: s.ZSU.CONTEXT_MENU },
 );

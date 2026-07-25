@@ -22,7 +22,7 @@ var l = n(627968),
     G = n(686449),
     L = n(293260),
     v = n(5180),
-    m = n(649308),
+    m = n(928646),
     U = n(435558),
     E = n.n(U),
     C = n(534890),
@@ -218,7 +218,7 @@ let eu = t.memo(function (e) {
                 variant: "fixed",
                 onClose: ey,
                 "aria-label": _.intl.string(_.t.HpQykc),
-                children: (0, l.jsx)(y.rX, { children: eN }),
+                children: eN,
             })
           : eE
             ? (0, l.jsxs)(g.W, {
