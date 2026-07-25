@@ -9595,7 +9595,14 @@
     --mobile-voice-message-duration-line-height-android: 14px;
     --mobile-voice-message-duration-line-height-ios: 17px;
     --mobile-voice-message-duration-text-style: text-sm/semibold;
+    --mobile-voice-message-recording-chat-container-height: 40px;
+    --mobile-voice-message-recording-chat-container-margin-right: 8px;
+    --mobile-voice-message-recording-container-padding-bottom: 9px;
+    --mobile-voice-message-recording-container-padding-horizontal: 12px;
     --mobile-voice-message-recording-container-padding-vertical: 10px;
+    --mobile-voice-message-recording-pill-border-radius: 32px;
+    --mobile-voice-message-recording-pill-padding-horizontal: 12px;
+    --mobile-voice-message-recording-waveform-margin-left: 8px;
     --mobile-voice-panel-controls-border-radius: 32px;
     --mobile-voice-panel-controls-padding: 16px;
     --mobile-voice-panel-gutter: 12px;
@@ -9723,6 +9730,7 @@
     --mobile-voice-channel-user-limit-border-width: 1px;
     --mobile-voice-message-duration-line-height-android: 13px;
     --mobile-voice-message-duration-text-style: text-xs/semibold;
+    --mobile-voice-message-recording-chat-container-height: 32px;
     --mobile-voice-message-recording-container-padding-vertical: 6px;
     --mobile-voice-panel-controls-border-radius: 16px;
     --mobile-voice-panel-controls-padding: 4px;
@@ -9754,7 +9762,15 @@
     --mobile-chat-input-send-button-height: 36px;
     --mobile-chat-input-send-button-width: 36px;
     --mobile-mobile-keyboard-top-border-radius: 24px;
-    --mobile-mobile-media-keyboard-top-border-radius: 24px
+    --mobile-mobile-media-keyboard-top-border-radius: 24px;
+    --mobile-voice-message-recording-chat-container-height: 54px;
+    --mobile-voice-message-recording-chat-container-margin-right: 0px;
+    --mobile-voice-message-recording-container-padding-bottom: 0px;
+    --mobile-voice-message-recording-container-padding-horizontal: 16px;
+    --mobile-voice-message-recording-container-padding-vertical: 0px;
+    --mobile-voice-message-recording-pill-border-radius: 16px;
+    --mobile-voice-message-recording-pill-padding-horizontal: 10px;
+    --mobile-voice-message-recording-waveform-margin-left: 0px
 }
 
 .mobile-visual-refresh-legacy-send-button {
@@ -9762,7 +9778,8 @@
     --mobile-chat-input-floating-content-padding-horizontal: 12px;
     --mobile-chat-input-floating-content-padding-vertical: 12px;
     --mobile-chat-input-send-button-height: 32px;
-    --mobile-chat-input-send-button-width: 40px
+    --mobile-chat-input-send-button-width: 40px;
+    --mobile-voice-message-recording-pill-padding-horizontal: 12px
 }
 
 .refresh-fast-follow-avatars.density-compact {

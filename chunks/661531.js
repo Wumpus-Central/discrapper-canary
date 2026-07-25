@@ -8718,12 +8718,86 @@ let { Themes: c } = d.zv,
                         return "text-sm/semibold";
                     },
                 },
+                VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 40;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                    return 32;
+                                case "mobile-visual-refresh-floating":
+                                    return 54;
+                            }
+                        return 40;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 8;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 9;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 9;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 12;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 16;
+                        return 12;
+                    },
+                },
                 VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 10;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 6;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                    return 6;
+                                case "mobile-visual-refresh-floating":
+                                    return 0;
+                            }
                         return 10;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 32;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 16;
+                        return 32;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 12;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh-floating":
+                                    return 10;
+                                case "mobile-visual-refresh-legacy-send-button":
+                                    return 12;
+                            }
+                        return 12;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_WAVEFORM_MARGIN_LEFT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 8;
                     },
                 },
                 VOICE_PANEL_CONTROLS_BORDER_RADIUS: {
