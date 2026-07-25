@@ -1,13 +1,15 @@
 "use strict";
-n.d(t, { O8: () => a, Vc: () => r, _z: () => s, lj: () => o });
+n.d(t, { O8: () => s, Vc: () => r, _z: () => a, dh: () => o, lj: () => l, sv: () => d });
 var i = n(860689);
 let r = "373",
-    s = (0, i.tJ)({
+    a = (0, i.tJ)({
         id: r,
         name: "Favorites",
         description: "The place for all your favorite channels!",
         joinedAt: new Date(),
         maxMembers: 5e5,
     }),
-    a = "0",
-    o = 200;
+    s = "0",
+    l = 200,
+    o = 20,
+    d = 100;

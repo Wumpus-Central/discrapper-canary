@@ -37,8 +37,9 @@ function I(e) {
         { hasAccess: a, isExperimentEnabled: t, isFreemium: i, hasHigherPrivileges: n, favoriteLimit: s }
     );
 }
-function f(e) {
-    let {
+function f() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "useFavoritesAccess",
+        {
             enabled: t,
             hasHigherPrivileges: n,
             isFreemium: r = !1,
