@@ -315,15 +315,17 @@ function eB(e) {
                           e &&
                               (0, p.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      n.e("73216"),
                                       n.e("73883"),
+                                      n.e("73216"),
+                                      n.e("69977"),
                                       n.e("74390"),
                                       n.e("36946"),
                                       n.e("92639"),
+                                      n.e("90480"),
                                       n.e("40963"),
-                                      n.e("66031"),
-                                      n.e("59839"),
-                                  ]).then(n.bind(n, 889186));
+                                      n.e("56169"),
+                                      n.e("30521"),
+                                  ]).then(n.bind(n, 523200));
                                   return (t) =>
                                       (0, r.jsx)(e, { ...t, parentId: null, source: "favorites_button_onboarding" });
                               }))
@@ -3325,7 +3327,7 @@ let ri = (0, v.Fe)({
                 n.e("59373"),
                 n.e("85802"),
                 n.e("41348"),
-                n.e("53402"),
+                n.e("90103"),
                 n.e("46240"),
                 n.e("81505"),
                 n.e("85685"),

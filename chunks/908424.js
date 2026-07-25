@@ -14,15 +14,17 @@ function p(e) {
         f = n.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("43880"),
-                    t.e("94635"),
-                    t.e("94494"),
+                    t.e("73883"),
+                    t.e("73216"),
+                    t.e("69977"),
+                    t.e("74390"),
                     t.e("36946"),
                     t.e("92639"),
+                    t.e("90480"),
                     t.e("40963"),
-                    t.e("66031"),
-                    t.e("59839"),
-                ]).then(t.bind(t, 889186));
+                    t.e("56169"),
+                    t.e("30521"),
+                ]).then(t.bind(t, 523200));
                 return (a) => (0, i.jsx)(e, { ...a, source: "favorites_header_add_button_context_menu" });
             });
         }, []),

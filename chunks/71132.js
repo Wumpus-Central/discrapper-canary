@@ -43,15 +43,17 @@ function O(e) {
             (c = l.useCallback(() => {
                 (0, A.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("73216"),
                         t.e("73883"),
+                        t.e("73216"),
+                        t.e("69977"),
                         t.e("74390"),
                         t.e("36946"),
                         t.e("92639"),
+                        t.e("90480"),
                         t.e("40963"),
-                        t.e("66031"),
-                        t.e("59839"),
-                    ]).then(t.bind(t, 889186));
+                        t.e("56169"),
+                        t.e("30521"),
+                    ]).then(t.bind(t, 523200));
                     return (n) => (0, i.jsx)(e, { ...n, parentId: u.id, source: "favorites_add_to_category" });
                 });
             }, [u.id])),

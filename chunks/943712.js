@@ -5,7 +5,7 @@ var i = s(627968),
     a = s(17928),
     n = s(289873),
     d = s(396478),
-    c = s(313281),
+    c = s(281980),
     h = s(499373),
     o = s(192308),
     u = s(331322),
@@ -27,15 +27,17 @@ function k(e) {
         n = r.useCallback(() => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    s.e("73216"),
                     s.e("73883"),
+                    s.e("73216"),
+                    s.e("69977"),
                     s.e("74390"),
                     s.e("36946"),
                     s.e("92639"),
+                    s.e("90480"),
                     s.e("40963"),
-                    s.e("66031"),
-                    s.e("59839"),
-                ]).then(s.bind(s, 889186));
+                    s.e("56169"),
+                    s.e("30521"),
+                ]).then(s.bind(s, 523200));
                 return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_state" });
             });
         }, []);

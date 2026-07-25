@@ -1,46 +1,43 @@
-l.d(t, { default: () => R }), l(321073);
+l.d(t, { default: () => M });
 var n = l(627968),
     r = l(64700),
-    i = l(189213),
-    s = l(17928),
-    u = l(892547),
-    a = l(821609),
+    a = l(189213),
+    i = l(691540),
+    s = l(857250),
+    u = l(97483),
+    c = l(892547),
+    o = l(821609),
     d = l(834730),
-    c = l(778712),
-    o = l(966327),
     h = l(115718),
-    g = l(47167),
-    p = l(359378),
-    C = l(598104),
-    f = l(255266),
-    x = l(223863),
-    A = l(151054),
+    g = l(191248),
+    C = l(223863),
+    p = l(151054),
+    f = l(403362),
+    m = l(422258),
+    x = l(668267),
+    b = l(281980),
+    k = l(17928),
     E = l(734057),
-    _ = l(71393),
-    b = l(287809),
-    D = l(422258),
-    m = l(668267),
-    S = l(281980),
-    j = l(576705),
-    M = l(403362),
-    N = l(181079),
-    I = l(5180),
-    k = l(652215),
-    y = l(335993),
-    H = l(375708),
-    w = l(349828),
-    L = l(168277);
-function R(e) {
-    let { transitionState: t, onClose: l, parentId: d, source: c } = e;
+    D = l(576705),
+    R = l(181079),
+    A = l(5180),
+    I = l(652215),
+    S = l(335993),
+    N = l(375708),
+    j = l(349828),
+    w = l(168277);
+function M(e) {
+    let { transitionState: t, onClose: l, parentId: d, source: M } = e;
     r.useEffect(() => {
-        null != c && (0, m.tC)(c);
-    }, [c]);
-    let [o, g] = r.useState(""),
-        [p, C] = r.useState(() => new Set()),
-        { notifyFavoriteAdded: f } = (0, S.CJ)(),
-        x = (function () {
-            let { hasHigherPrivileges: e } = (0, S.TW)(),
-                t = (0, s.bG)([N.A], () => N.A.getFavoriteChannels());
+        null != M && (0, x.tC)(M);
+    }, [M]);
+    let [_, v] = r.useState(""),
+        [F, H] = r.useState([]),
+        [L, y] = r.useState(!1),
+        { notifyFavoriteAdded: U } = (0, b.CJ)(),
+        O = (function () {
+            let { hasHigherPrivileges: e } = (0, b.TW)(),
+                t = (0, k.bG)([R.A], () => R.A.getFavoriteChannels());
             return r.useCallback(
                 (l, n) => {
                     switch (l.type) {
@@ -54,133 +51,88 @@ function R(e) {
                         case h.rD.TEXT_CHANNEL:
                         case h.rD.VOICE_CHANNEL:
                             return (
-                                j.A.can(k.xBc.VIEW_CHANNEL, l.record) &&
-                                (0, I.IF)(l.record, e) &&
+                                D.A.can(I.xBc.VIEW_CHANNEL, l.record) &&
+                                (0, A.IF)(l.record, e) &&
                                 null == t[l.record.id]
                             );
                         default:
-                            return (0, M.xb)(l);
+                            return (0, f.xb)(l);
                     }
                 },
                 [t, e],
             );
         })(),
-        { results: _, updateSearchText: b } = (0, A.R)({ includeMissingDMs: !0, channelFilter: x }),
-        R = p.size,
-        T = R >= w.dh,
-        U = r.useCallback(
+        { results: T, updateSearchText: Q } = (0, p.R)({
+            includeMissingDMs: !0,
+            channelFilter: O,
+            selectedDestinations: F,
+        }),
+        V = F.length,
+        W = V >= j.dh,
+        X = r.useCallback(
             (e) => {
-                g(e), b(e);
+                v(e), Q(e);
             },
-            [b],
+            [Q],
         ),
-        v = r.useCallback((e) => {
-            C((t) => {
-                let l = new Set(t);
-                return l.delete(e) ? l : t.size >= w.dh ? t : l.add(e);
+        q = r.useCallback((e) => {
+            H((t) => {
+                let l = (0, C.I)(e),
+                    n = t.filter((e) => (0, C.I)(e) !== l);
+                return n.length < t.length ? n : t.length >= j.dh ? t : [...t, e];
             });
         }, []),
-        O = r.useCallback(() => {
-            p.size > 0 && (f(), (0, D.S_)([...p], d ?? null, "modal")), l();
-        }, [f, l, d, p]),
-        F = r.useMemo(() => {
-            let e = [];
-            for (let t of _) t.type !== h.rD.HEADER && null != G(t) && e.push(t);
-            return e;
-        }, [_]),
-        Q = r.useMemo(
-            () =>
-                0 === F.length
-                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(z, {}), rowHeight: 72 }
-                    : {
-                          sections: [F.length],
-                          sectionHeight: 0,
-                          rowHeight: 48,
-                          renderRow: (e) => {
-                              let { section: t, row: l } = e;
-                              if (t > 0) return null;
-                              let r = F[l];
-                              if (null == r) return null;
-                              let i = G(r);
-                              return null == i
-                                  ? null
-                                  : (0, n.jsx)(
-                                        P,
-                                        {
-                                            channel: i,
-                                            selected: p.has(i.id),
-                                            disabled: T && !p.has(i.id),
-                                            onToggleChannel: v,
-                                        },
-                                        i.id,
-                                    );
-                          },
-                      },
-            [F, v, p, T],
+        B = r.useCallback(async () => {
+            y(!0);
+            let e = (await Promise.all(F.map(C.pk))).filter(f.Vq);
+            (e.length < F.length && (0, i.P0)((0, s.o)(N.intl.string(N.t.R0RpRX), u.Ck.FAILURE)), 0 === e.length)
+                ? y(!1)
+                : (U(), (0, m.S_)(e, d ?? null, "modal"), l());
+        }, [U, l, d, F]),
+        G = r.useMemo(() => T.filter((e) => e.type !== h.rD.HEADER), [T]),
+        z = (0, g.s)({ rowData: G, selectedDestinations: F, handleToggleDestination: q, disableSelection: W }),
+        J = r.useMemo(
+            () => ({ sections: [1], sectionHeight: 0, rowHeight: 72, renderRow: () => (0, n.jsx)(P, {}) }),
+            [],
         );
-    return (0, n.jsx)(i.Modal, {
-        title: H.intl.string(y.default.Rp35U1),
+    return (0, n.jsx)(a.Modal, {
+        title: N.intl.string(S.default.Rp35U1),
         actions: [],
         transitionState: t,
         onClose: l,
-        input: (0, n.jsx)(u.I, {
-            query: o,
-            onChange: U,
-            onClear: () => U(""),
-            placeholder: H.intl.string(H.t["5h0QOP"]),
-            "aria-label": H.intl.string(H.t["5h0QOP"]),
+        input: (0, n.jsx)(c.I, {
+            query: _,
+            onChange: X,
+            onClear: () => X(""),
+            placeholder: N.intl.string(N.t["5h0QOP"]),
+            "aria-label": N.intl.string(N.t["5h0QOP"]),
             autoFocus: !0,
         }),
         actionBarInput: (0, n.jsx)("div", {
-            className: L.c,
-            children: (0, n.jsx)(a.$, {
+            className: w.c,
+            children: (0, n.jsx)(o.$, {
                 variant: "primary",
                 size: "md",
                 fullWidth: !0,
                 text:
-                    R >= 2
-                        ? H.intl.formatToPlainString(y.default.LbCa8x, { count: R })
-                        : H.intl.string(y.default.xKXcSu),
-                onClick: O,
-                disabled: 0 === R,
+                    V >= 2
+                        ? N.intl.formatToPlainString(S.default.LbCa8x, { count: V })
+                        : N.intl.string(S.default.xKXcSu),
+                onClick: B,
+                disabled: 0 === V,
+                loading: L,
             }),
         }),
-        listProps: Q,
+        listProps: 0 === G.length ? J : z,
     });
 }
-function z() {
+function P() {
     return (0, n.jsx)("div", {
-        className: L.p,
+        className: w.p,
         children: (0, n.jsx)(d.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: H.intl.string(y.default.kQL9be),
+            children: N.intl.string(S.default.kQL9be),
         }),
-    });
-}
-function G(e) {
-    if (e.type === h.rD.USER) {
-        let t = (0, x._g)({ type: "user", id: e.record.id });
-        return null != t ? (E.A.getChannel(t) ?? null) : null;
-    }
-    return e.type === h.rD.TEXT_CHANNEL || e.type === h.rD.VOICE_CHANNEL || e.type === h.rD.GROUP_DM ? e.record : null;
-}
-function P(e) {
-    let { channel: t, selected: l, disabled: r, onToggleChannel: i } = e,
-        u = (0, s.bG)([_.A], () => _.A.getGuild(t.guild_id), [t.guild_id]),
-        a = (0, g.Ay)(t),
-        d = (0, s.bG)([b.default], () => (t.isDM() ? b.default.getUser(t.recipients?.[0]) : null), [t]);
-    return (0, n.jsx)(p.A, {
-        listItemId: t.id,
-        icon:
-            t.isDM() && null != d
-                ? (0, n.jsx)(o.A, { "aria-hidden": !0, size: c._3.SIZE_32, user: d })
-                : t.isGroupDM()
-                  ? (0, n.jsx)(C.A, { "aria-hidden": !0, size: c._3.SIZE_32, channel: t })
-                  : (0, n.jsx)(f.A, { size: f.q.SMALL_32, guild: u, channel: t }),
-        label: a,
-        selected: l,
-        disabled: r,
-        onPress: () => i(t.id),
     });
 }
