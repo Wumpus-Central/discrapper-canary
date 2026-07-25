@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { dM: () => l, n_: () => s });
+n.d(t, { Yz: () => l, dM: () => o, n_: () => s });
 var i = n(17928),
     r = n(181079),
     a = n(281980);
@@ -7,6 +7,9 @@ function s(e, t) {
     return e ? !t.favoriteGuildExplicitlyHidden : t.favoriteGuildEnabled;
 }
 function l() {
-    let { isFreemium: e } = (0, a.TW)("useIsFavoriteGuildEnabled");
+    return s((0, a.ad)().isFreemium, r.A);
+}
+function o() {
+    let { isFreemium: e } = (0, a.TW)("useIsFavoritesGuildEnabled");
     return (0, i.bG)([r.A], () => s(e, r.A));
 }

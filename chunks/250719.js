@@ -3,10 +3,10 @@ var l = n(17928),
     i = n(734057),
     s = n(607567),
     r = n(181079),
-    a = n(652215);
+    a = n(5180);
 function o(e) {
     return (0, l.cf)([s.Ay, i.A, r.A], () => {
-        if (e !== a.YYv) return s.Ay.getVoiceStates(e);
+        if (!(0, a.ai)(e)) return s.Ay.getVoiceStates(e);
         let t = r.A.getFavoriteChannels(),
             n = {};
         for (let e in t) {

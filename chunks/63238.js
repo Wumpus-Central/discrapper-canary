@@ -6,16 +6,17 @@ var r = n(435558),
     s = n(17928),
     l = n(228366),
     o = n(451988),
-    d = n(36124),
-    c = n(626584),
-    u = n(927813),
-    _ = n(935208);
-let E = +u.A.Millis.MINUTE;
-class A {
+    d = n(5180),
+    c = n(36124),
+    u = n(626584),
+    _ = n(927813),
+    E = n(935208);
+let A = +_.A.Millis.MINUTE;
+class h {
     _subscriptions = {};
     _unsubscriptions = {};
     _onChange;
-    _unsubscribe = new o.J_(E, () => this.flushUnsubscriptions());
+    _unsubscribe = new o.J_(A, () => this.flushUnsubscriptions());
     constructor(e) {
         this._onChange = e;
     }
@@ -24,7 +25,7 @@ class A {
     }
     get(e) {
         let t = this._subscriptions[e] ?? {};
-        return _.default.keys(t);
+        return E.default.keys(t);
     }
     clear(e) {
         delete this._subscriptions[e], delete this._unsubscriptions[e];
@@ -50,7 +51,7 @@ class A {
     checkForLeaks(e, t) {
         let n = (this._subscriptions[e]?.[t] ?? 0) - (this._unsubscriptions[e]?.[t] ?? 0);
         n > 5 &&
-            new c.A("GuildMemberSubscriptions").warn(
+            new u.A("GuildMemberSubscriptions").warn(
                 `GuildMemberSubscriptions.subscribe(...): Potential reference leak! (${n} subscriptions)`,
             );
     }
@@ -67,9 +68,9 @@ class A {
             (this._unsubscriptions = {}));
     }
 }
-var h = n(635377),
-    I = n.n(h);
-class f {
+var I = n(635377),
+    f = n.n(I);
+class p {
     _subscriptions = {};
     _onChange;
     constructor(e) {
@@ -87,7 +88,7 @@ class f {
         return e;
     }
     _get(e) {
-        return this._subscriptions[e] ?? new (I())({ max: 3, updateAgeOnGet: !0 });
+        return this._subscriptions[e] ?? new (f())({ max: 3, updateAgeOnGet: !0 });
     }
     clear(e) {
         e in this._subscriptions && (delete this._subscriptions[e], this._onChange(e, []));
@@ -108,14 +109,14 @@ class f {
         return !!n.has(t) && (n.del(t), this._onChange(e, n.keys()), !0);
     }
 }
-var p = n(652215);
-function T(e) {
-    return null != e && "null" !== e && e !== p.ME && "undefined" !== e && e !== p.YYv;
+var T = n(652215);
+function m(e) {
+    return null != e && "null" !== e && e !== T.ME && "undefined" !== e && !(0, d.ai)(e);
 }
-class m {
-    _members = new A((e, t) => this._enqueue(e, { members: t }));
-    _channels = new d.Ay((e, t) => this._enqueue(e, { channels: t }));
-    _threadMemberLists = new f((e, t) => this._enqueue(e, { thread_member_lists: t }));
+class g {
+    _members = new h((e, t) => this._enqueue(e, { members: t }));
+    _channels = new c.Ay((e, t) => this._enqueue(e, { channels: t }));
+    _threadMemberLists = new p((e, t) => this._enqueue(e, { thread_member_lists: t }));
     _typing = new Set();
     _threads = new Set();
     _activities = new Set();
@@ -186,27 +187,27 @@ class m {
             (this._pending = {});
     }
     subscribeUser(e, t) {
-        T(e) && this._members.subscribe(e, t);
+        m(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        T(e) && this._members.unsubscribe(e, t);
+        m(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
-        return !!T(e) && this._channels.subscribe(e, t, n);
+        return !!m(e) && this._channels.subscribe(e, t, n);
     }
     subscribeToMemberUpdates(e) {
-        if (!T(e)) return !1;
+        if (!m(e)) return !1;
         this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!T(e)) return !1;
+        if (!m(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!T(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!m(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!T(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!m(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         this._subscribeToFeature(e, this._typing, { typing: !0 }),
@@ -214,11 +215,10 @@ class m {
             this._subscribeToFeature(e, this._threads, { threads: !0 });
     }
     _subscribeToFeature(e, t, n) {
-        !T(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
+        !m(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
     }
 }
-var g = n(736056),
-    S = n(5180),
+var S = n(736056),
     N = n(857071),
     C = n(655116),
     O = n(280450),
@@ -232,7 +232,7 @@ var g = n(736056),
     P = n(994500),
     U = n(309010),
     w = n(967198);
-let G = new m((e) => {
+let G = new g((e) => {
     for (let t in e) null != b.A.getGuild(t) || D.A.isUnavailable(t) || delete e[t];
     l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
 });
@@ -248,16 +248,16 @@ function x(e, t) {
         a().isEmpty(n) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
 }
 function k(e, t) {
-    let n = (0, S.ai)(e) && null != t ? (y.A.getChannel(t)?.getGuildId() ?? e) : e;
-    return G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === p.YvQ.MEMBERS && F(e, t, d.LD);
+    let n = (0, d.ai)(e) && null != t ? (y.A.getChannel(t)?.getGuildId() ?? e) : e;
+    return G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD);
 }
 function F(e, t, n) {
     if (t === R.sN) return G.subscribeChannel(e, t, n);
     let i = y.A.getChannel(t);
     if (null == i) return !1;
     let r = i.getGuildId();
-    return (r !== e && e === p.YYv && G.subscribeToGuild(r), i?.isThread())
-        ? i.type === p.rbe.ANNOUNCEMENT_THREAD
+    return (r !== e && (0, d.ai)(e) && G.subscribeToGuild(r), i?.isThread())
+        ? i.type === T.rbe.ANNOUNCEMENT_THREAD
             ? G.subscribeChannel(r, i.parent_id, n)
             : !!i.isActiveThread() && G.subscribeThreadMemberList(r, t, U.Ay.getChannelId())
         : G.subscribeChannel(r, t, n);
@@ -298,7 +298,7 @@ function j() {
 class W extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        this.waitFor(O.default, L.Ay, y.A, g.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
+        this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
             this.syncWith([C.A], j),
             this.syncWith([L.Ay], H);
     }

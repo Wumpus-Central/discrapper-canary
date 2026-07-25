@@ -1,44 +1,35 @@
-"use strict";
-n.d(t, { A: () => A, J: () => E });
-var i = n(17928),
-    r = n(554146),
-    a = n(558845),
-    s = n(826673),
-    l = n(967198),
-    o = n(181079),
-    d = n(281980),
-    c = n(5180),
-    u = n(551289);
-function _(e, t, n) {
-    let { isExperimentEnabled: i, isFreemium: r, hasAccess: a, isMenuItemDCSelected: s, isIntroDCDismissed: l } = n;
-    return !!i && (!!((s && !l) || (0, c.ai)(t.getGuildId())) || (!!a && (0, u.n_)(r, e)));
-}
-function E() {
-    let { isExperimentEnabled: e, isFreemium: t, hasAccess: n } = (0, d.ad)(),
-        i = (0, a.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
-        c = (0, s.k8)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
-    return _(o.A, l.A, {
-        isExperimentEnabled: e,
-        isFreemium: t,
-        hasAccess: n,
-        isMenuItemDCSelected: i,
-        isIntroDCDismissed: c,
-    });
-}
-function A(e) {
-    let { isExperimentEnabled: t, isFreemium: n, hasAccess: c } = (0, d.TW)(e),
-        u = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
-        E = (0, s.HX)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
-    return (0, i.bG)(
-        [o.A, l.A],
-        () =>
-            _(o.A, l.A, {
-                isExperimentEnabled: t,
-                isFreemium: n,
-                hasAccess: c,
-                isMenuItemDCSelected: u,
-                isIntroDCDismissed: E,
-            }),
-        [t, n, c, u, E],
+n.d(e, { W: () => i });
+var r = n(64700),
+    l = n(935399),
+    a = n(942370);
+function i(t) {
+    let { onSetIgnoreCloseRequest: e } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        [n, i] = r.useState(!1),
+        s = r.useRef(new Set()),
+        c = r.useCallback(() => {
+            s.current.forEach(clearTimeout), s.current.clear();
+        }, []),
+        o = r.useCallback(
+            function () {
+                for (var n = arguments.length, r = Array(n), l = 0; l < n; l++) r[l] = arguments[l];
+                let o = t(...r),
+                    d = o === a._M.RPC;
+                return (
+                    c(),
+                    i(d),
+                    e?.({ shouldIgnoreCloseRequest: d }),
+                    d &&
+                        (s.current.add(setTimeout(() => i(!1), 1e4)),
+                        s.current.add(setTimeout(() => e?.({ shouldIgnoreCloseRequest: !1 }), 2e3))),
+                    o
+                );
+            },
+            [c, e, t],
+        );
+    return (
+        (0, l.l0)(() => {
+            e?.({ shouldIgnoreCloseRequest: !1 }), c();
+        }),
+        { startAuthorization: o, shouldShowGoToGameHint: n }
     );
 }

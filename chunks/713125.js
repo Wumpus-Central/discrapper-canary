@@ -1,65 +1,66 @@
 "use strict";
-n.d(t, { $o: () => o, Ay: () => _, eg: () => l });
+n.d(t, { $o: () => o, Ay: () => E, eg: () => d });
 var i,
     r = n(17928),
-    s = n(228366),
-    a = n(652215),
+    a = n(228366),
+    s = n(5180),
+    l = n(652215),
     o =
         (((i = {}).STARTED = "started"),
         (i.READY = "ready"),
         (i.COMPLETED = "completed"),
         (i.NOT_APPLICABLE = "not_applicable"),
         i);
-function l(e) {
+function d(e) {
     return null != e && ["started", "ready"].includes(e);
 }
-let u = {},
-    c = {};
-class d extends r.Ay.Store {
+let c = {},
+    u = {};
+class _ extends r.Ay.Store {
     static displayName = "GuildOnboardingStore";
     shouldShowOnboarding(e) {
-        return e !== a.ME && e !== a.YYv && !!l(u[e]);
+        return !(e === l.ME || (0, s.ai)(e)) && !!d(c[e]);
     }
     getOnboardingStatus(e) {
-        return u[e];
+        return c[e];
     }
     resetOnboardingStatus(e) {
-        (u[e] = "started"), (c[e] = "cover");
+        (c[e] = "started"), (u[e] = "cover");
     }
     getCurrentOnboardingStep(e) {
-        return c[e] ?? "cover";
+        return u[e] ?? "cover";
     }
 }
-let _ = new d(s.h, {
+let E = new _(a.h, {
     LOGOUT: function () {
-        (u = {}), (c = {});
+        (c = {}), (u = {});
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete u[t.id], delete c[t.id];
+        delete c[t.id], delete u[t.id];
     },
     GUILD_ONBOARDING_START: function (e) {
         let { guildId: t } = e;
-        u[t] = "started";
+        c[t] = "started";
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, enabled: n } = e;
-        if ("started" !== u[t]) return !1;
-        n ? (u[t] = "ready") : (u[t] = "not_applicable");
+        if ("started" !== c[t]) return !1;
+        n ? (c[t] = "ready") : (c[t] = "not_applicable");
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        u[t] = "not_applicable";
+        c[t] = "not_applicable";
     },
     GUILD_ONBOARDING_COMPLETE: function (e) {
         let { guildId: t } = e;
-        u[t] = "completed";
+        c[t] = "completed";
     },
     GUILD_ONBOARDING_SET_STEP: function (e) {
         let { guildId: t, step: n } = e;
-        c[t] = n;
+        u[t] = n;
     },
     CONNECTION_OPEN: function () {
-        c = {};
+        u = {};
     },
 });

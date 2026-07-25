@@ -1383,7 +1383,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584008, Version Hash: c17ce8c9322cffa9e83b7aaa180b5e00c78c0ae5`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584032, Version Hash: 8b7a60cfee10debe6733bd47b31411fcce6820fd`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -18095,7 +18095,7 @@ let gb = "isHideDevBanner",
                     className: to()(gv.Wz, gv.mr),
                     children: [
                         (0, O.jsx)(gD, { className: gv.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584008" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584032" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -37959,7 +37959,7 @@ class UM extends eA.PureComponent {
             n = Uv(t);
         if (null == n) return null;
         let { guildId: i, channelId: r, threadId: a } = Uy(n),
-            s = (0, gT.nn)(i) && i !== k.ME && i !== k.YYv;
+            s = (0, gT.nn)(i) && i !== k.ME && !(0, rT.ai)(i);
         if (null != r && (0, gT.ts)(r) && !(0, aA.jq)(r) && s) {
             let n = rN.A.getChannel(r);
             if (null == n) bW.A.loadThread(r).then(() => Ub({ channelId: r, guildId: i, pathname: t }));

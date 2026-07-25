@@ -605,7 +605,7 @@ var eQ = n(952818),
     e6 = n(734057),
     e5 = n(71393),
     e2 = n(38502),
-    e8 = n(954035),
+    e8 = n(283540),
     e7 = n(309010),
     e9 = n(70142),
     e4 = n(157257),
@@ -1768,46 +1768,47 @@ class nh extends a.Component {
 }
 var np = n(689035),
     nA = n(967198),
-    ng = n(617498),
+    ng = n(183812),
     nm = n(922016),
     nf = n(625903),
     nE = n(685399),
-    ny = n(508654),
-    nS = n(885631),
-    nx = n(635565),
-    nv = n(83297),
-    nC = n(846930),
-    nI = n(25508),
-    n_ = n(366811),
-    nN = n(924985),
-    nT = n(945886),
-    nO = n(72314),
-    nj = n(769765),
-    nD = n(808728),
-    nR = n(458294),
-    nb = n(576705),
-    nL = n(584569),
-    nw = n(763827),
-    nM = n(543465),
-    nk = n(607567),
-    nP = n(297264),
-    nV = n(408278),
-    nG = n(761508),
-    nU = n(689175),
-    nz = n(683071),
-    nH = n(270003),
-    nW = n(452027),
-    nK = n(243721),
-    nB = n(331322),
-    nF = n(144228),
-    nY = n(691885),
-    nZ = n(305866),
-    nX = n(187322),
-    nJ = n(428678),
-    nQ = n(834730),
-    nq = n(77569);
-let n$ = 0;
-function n0(e) {
+    ny = n(5180),
+    nS = n(508654),
+    nx = n(885631),
+    nv = n(635565),
+    nC = n(83297),
+    nI = n(846930),
+    n_ = n(25508),
+    nN = n(366811),
+    nT = n(924985),
+    nO = n(945886),
+    nj = n(72314),
+    nD = n(769765),
+    nR = n(808728),
+    nb = n(458294),
+    nL = n(576705),
+    nw = n(584569),
+    nM = n(763827),
+    nk = n(543465),
+    nP = n(607567),
+    nV = n(297264),
+    nG = n(408278),
+    nU = n(761508),
+    nz = n(689175),
+    nH = n(683071),
+    nW = n(270003),
+    nK = n(452027),
+    nB = n(243721),
+    nF = n(331322),
+    nY = n(144228),
+    nZ = n(691885),
+    nX = n(305866),
+    nJ = n(187322),
+    nQ = n(428678),
+    nq = n(834730),
+    n$ = n(77569);
+let n0 = 0;
+function n1(e) {
     switch (e) {
         case ey.G6Q.TOP_LEFT:
             return z.intl.string(z.t.xlchpU);
@@ -1821,44 +1822,44 @@ function n0(e) {
             return z.intl.string(z.t.AlY4Za);
     }
 }
-let n1 = [ey.G6Q.DISABLED, ey.G6Q.TOP_LEFT, ey.G6Q.TOP_RIGHT, ey.G6Q.BOTTOM_LEFT, ey.G6Q.BOTTOM_RIGHT];
-function n3(e) {
+let n3 = [ey.G6Q.DISABLED, ey.G6Q.TOP_LEFT, ey.G6Q.TOP_RIGHT, ey.G6Q.BOTTOM_LEFT, ey.G6Q.BOTTOM_RIGHT];
+function n6(e) {
     let { position: t, onChange: n } = e,
-        [i] = a.useState(() => `notification-position-selector-${n$++}`),
+        [i] = a.useState(() => `notification-position-selector-${n0++}`),
         s =
             t === ey.G6Q.DISABLED
                 ? z.intl.string(z.t.R6LxVf)
-                : z.intl.formatToPlainString(z.t["XXHDM/"], { position: n0(t) });
+                : z.intl.formatToPlainString(z.t["XXHDM/"], { position: n1(t) });
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(nX.vN, {
+            (0, l.jsx)(nJ.vN, {
                 within: !0,
                 offset: -2,
                 children: (0, l.jsx)("div", {
-                    className: v()(nq.iE, { [nq.wX]: t === ey.G6Q.DISABLED }),
-                    children: n1.map((e) =>
+                    className: v()(n$.iE, { [n$.wX]: t === ey.G6Q.DISABLED }),
+                    children: n3.map((e) =>
                         (0, l.jsxs)(
                             "label",
                             {
                                 className: v()({
-                                    [nq.wH]: e === t,
-                                    [nq.r9]: e === ey.G6Q.DISABLED,
-                                    [nq.O3]: e === ey.G6Q.TOP_RIGHT,
-                                    [nq.lA]: e === ey.G6Q.TOP_LEFT,
-                                    [nq.oF]: e === ey.G6Q.BOTTOM_RIGHT,
-                                    [nq.RV]: e === ey.G6Q.BOTTOM_LEFT,
+                                    [n$.wH]: e === t,
+                                    [n$.r9]: e === ey.G6Q.DISABLED,
+                                    [n$.O3]: e === ey.G6Q.TOP_RIGHT,
+                                    [n$.lA]: e === ey.G6Q.TOP_LEFT,
+                                    [n$.oF]: e === ey.G6Q.BOTTOM_RIGHT,
+                                    [n$.RV]: e === ey.G6Q.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    n0(e),
+                                    n1(e),
                                     e === ey.G6Q.DISABLED
-                                        ? (0, l.jsx)(nJ.K, { size: "md", color: "currentColor", className: nq.WO })
+                                        ? (0, l.jsx)(nQ.K, { size: "md", color: "currentColor", className: n$.WO })
                                         : null,
                                     (0, l.jsx)("input", {
                                         type: "radio",
                                         name: i,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: nq.hH,
+                                        className: n$.hH,
                                     }),
                                 ],
                             },
@@ -1867,15 +1868,15 @@ function n3(e) {
                     ),
                 }),
             }),
-            (0, l.jsx)(nQ.E, { variant: "text-sm/normal", className: W.Ot, children: s }),
+            (0, l.jsx)(nq.E, { variant: "text-sm/normal", className: W.Ot, children: s }),
         ],
     });
 }
-n3.Positions = ey.G6Q;
-var n6 = n(540999),
-    n5 = n(93465),
-    n2 = n(189696);
-function n8() {
+n6.Positions = ey.G6Q;
+var n5 = n(540999),
+    n2 = n(93465),
+    n8 = n(189696);
+function n7() {
     let e = tn.default.getNotificationPositionMode(),
         t = e !== ey.G6Q.DISABLED,
         n = tt.Ay.getOverlayKeybind(),
@@ -1890,7 +1891,7 @@ function n8() {
         text_activation_hotkey: null != i ? (0, ta.dI)(i.shortcut) : null,
     });
 }
-class n7 extends a.PureComponent {
+class n9 extends a.PureComponent {
     state = { selectedSection: "GENERAL" };
     componentDidMount() {
         R.A.track(ey.HAw.SETTINGS_PANE_VIEWED, {
@@ -1903,14 +1904,14 @@ class n7 extends a.PureComponent {
         this.setState({ selectedSection: e });
     };
     handleToggleTextChatNotifications = () => {
-        R.A.setNotificationDisabledSetting(n5.M.TEXT_CHAT, !this.props.textChatDisabled), n8();
+        R.A.setNotificationDisabledSetting(n2.M.TEXT_CHAT, !this.props.textChatDisabled), n7();
     };
     handleToggleInviteNotification = () => {
         let e = this.props.shouldShowInviteNotification;
-        R.A.setNotificationDisabledSetting(n5.M.GAME_ACTIVITY, !e);
+        R.A.setNotificationDisabledSetting(n2.M.GAME_ACTIVITY, !e);
     };
     handleChangeNotificationPositionMode(e, t) {
-        R.A.setNotificationPositionMode(t), n8();
+        R.A.setNotificationPositionMode(t), n7();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -1929,18 +1930,18 @@ class n7 extends a.PureComponent {
             direction: eJ.A.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
-            className: n2.wx,
+            className: n8.wx,
             children: [
                 (0, l.jsxs)(eJ.A, {
                     children: [
-                        (0, l.jsx)(nP.D, {
+                        (0, l.jsx)(nV.D, {
                             variant: "heading-md/semibold",
-                            className: n2.qd,
+                            className: n8.qd,
                             children: z.intl.string(z.t["35G2Mq"]),
                         }),
                         (0, l.jsx)("div", {
-                            className: n2.Q7,
-                            children: (0, l.jsx)(nV.K, {
+                            className: n8.Q7,
+                            children: (0, l.jsx)(nG.K, {
                                 variant: "icon-only",
                                 size: "md",
                                 icon: w.P,
@@ -1956,17 +1957,17 @@ class n7 extends a.PureComponent {
     }
     renderTabBar() {
         let { selectedSection: e } = this.state,
-            t = n6.A.isDeveloper
-                ? (0, l.jsx)(nG.V.Item, { id: "DEVELOPER", className: n2.YU, children: "Developer" })
+            t = n5.A.isDeveloper
+                ? (0, l.jsx)(nU.V.Item, { id: "DEVELOPER", className: n8.YU, children: "Developer" })
                 : null;
-        return (0, l.jsxs)(nG.V, {
+        return (0, l.jsxs)(nU.V, {
             selectedItem: e,
             type: "top",
-            className: n2.__invalid_tabBar,
+            className: n8.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
-                (0, l.jsx)(nG.V.Item, { id: "GENERAL", className: n2.YU, children: z.intl.string(z.t["0FYxxw"]) }),
-                (0, l.jsx)(nG.V.Item, { id: "VOICE", className: n2.YU, children: z.intl.string(z.t["3WeSiE"]) }),
+                (0, l.jsx)(nU.V.Item, { id: "GENERAL", className: n8.YU, children: z.intl.string(z.t["0FYxxw"]) }),
+                (0, l.jsx)(nU.V.Item, { id: "VOICE", className: n8.YU, children: z.intl.string(z.t["3WeSiE"]) }),
                 t,
             ],
         });
@@ -1985,12 +1986,12 @@ class n7 extends a.PureComponent {
                 e = this.renderGeneralSettings();
         }
         return (0, l.jsxs)(
-            nU.Ch,
+            nz.Ch,
             {
-                className: n2.Qs,
+                className: n8.Qs,
                 children: [
                     this.props.streamerModeEnabled &&
-                        (0, l.jsx)(nz.w, { type: "warning", children: z.intl.string(z.t["1CC/lX"]) }),
+                        (0, l.jsx)(nH.w, { type: "warning", children: z.intl.string(z.t["1CC/lX"]) }),
                     e,
                 ],
             },
@@ -2001,19 +2002,19 @@ class n7 extends a.PureComponent {
         let { notificationPositionMode: e, shouldShowInviteNotification: t } = this.props,
             n = !tG.A.isNotificationDisabled(eO.KS.TextChat),
             i = e !== ey.G6Q.DISABLED;
-        return (0, l.jsxs)(nH.n, {
+        return (0, l.jsxs)(nW.n, {
             children: [
-                (0, l.jsx)(nW.D, {
+                (0, l.jsx)(nK.D, {
                     label: z.intl.string(z.t.IQv8Eo),
-                    children: (0, l.jsx)(n3, { position: e, onChange: this.handleChangeNotificationPositionMode }),
+                    children: (0, l.jsx)(n6, { position: e, onChange: this.handleChangeNotificationPositionMode }),
                 }),
-                (0, l.jsx)(nK.d, {
+                (0, l.jsx)(nB.d, {
                     label: z.intl.string(z.t.Fy5kPp),
                     checked: n && i,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !i,
                 }),
-                (0, l.jsx)(nK.d, {
+                (0, l.jsx)(nB.d, {
                     label: z.intl.string(z.t["f+c48/"]),
                     description: z.intl.string(z.t.W9DVVf),
                     checked: t,
@@ -2024,10 +2025,10 @@ class n7 extends a.PureComponent {
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, l.jsxs)(nB.B, {
+        return (0, l.jsxs)(nF.B, {
             gap: 20,
             children: [
-                (0, l.jsx)(nF.z, {
+                (0, l.jsx)(nY.z, {
                     label: z.intl.string(z.t.dnvZSg),
                     onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
@@ -2036,7 +2037,7 @@ class n7 extends a.PureComponent {
                     ],
                     value: e,
                 }),
-                (0, l.jsx)(nF.z, {
+                (0, l.jsx)(nY.z, {
                     label: z.intl.string(z.t.J0dpcB),
                     onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
@@ -2046,7 +2047,7 @@ class n7 extends a.PureComponent {
                     ],
                     value: t,
                 }),
-                (0, l.jsx)(nF.z, {
+                (0, l.jsx)(nY.z, {
                     label: z.intl.string(z.t.swsWWC),
                     onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
@@ -2061,7 +2062,7 @@ class n7 extends a.PureComponent {
     renderDeveloperSettings() {
         return (0, l.jsx)("div", {
             className: W.SX,
-            children: (0, l.jsx)(nY.l, {
+            children: (0, l.jsx)(nZ.l, {
                 label: "Crashes",
                 value: void 0,
                 options: [
@@ -2079,14 +2080,14 @@ class n7 extends a.PureComponent {
         });
     }
     render() {
-        return (0, l.jsxs)(nZ.l, {
+        return (0, l.jsxs)(nX.l, {
             "aria-label": z.intl.string(z.t["35G2Mq"]),
-            className: n2.kL,
+            className: n8.kL,
             children: [this.renderHeader(), this.renderBody()],
         });
     }
 }
-function n9(e) {
+function n4(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -2105,7 +2106,7 @@ function n9(e) {
         })),
         c = (0, to.Mn)("OverlaySettingsPopout"),
         u = (0, r.bG)([tF.A], () => tF.A.enabled);
-    return (0, l.jsx)(n7, {
+    return (0, l.jsx)(n9, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: i,
@@ -2116,8 +2117,8 @@ function n9(e) {
         streamerModeEnabled: c && u,
     });
 }
-var n4 = n(705784);
-let ie = function (e) {
+var ie = n(705784);
+let it = function (e) {
     let t,
         { title: n, header: i, children: s, renderSettings: o, onDragStart: r } = e,
         d = a.useRef(null);
@@ -2125,10 +2126,10 @@ let ie = function (e) {
         (t =
             null != n
                 ? (0, l.jsxs)(eN.Bar, {
-                      className: v()(n4.wx, n4.bl),
+                      className: v()(ie.wx, ie.bl),
                       onMouseDown: r,
                       children: [
-                          (0, l.jsx)(eN.Content, { className: v()(n4.qd, n4.bl), dynamicSize: !0, children: n }),
+                          (0, l.jsx)(eN.Content, { className: v()(ie.qd, ie.bl), dynamicSize: !0, children: n }),
                           (0, l.jsx)(eN.Content, {
                               children: (0, l.jsx)(nm.Y, {
                                   targetElementRef: d,
@@ -2147,11 +2148,10 @@ let ie = function (e) {
                       ],
                   })
                 : i),
-        (0, l.jsxs)("div", { className: n4.pz, children: [t, (0, l.jsx)("div", { className: n4.Y_, children: s })] })
+        (0, l.jsxs)("div", { className: ie.pz, children: [t, (0, l.jsx)("div", { className: ie.Y_, children: s })] })
     );
 };
-var it = n(349828),
-    ii = n(553551);
+var ii = n(553551);
 class is extends a.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
@@ -2166,19 +2166,19 @@ class is extends a.PureComponent {
     };
     componentDidMount() {
         let { guildId: e } = this.props,
-            { scrollTop: t } = nO.A.getGuildDimensions(e);
+            { scrollTop: t } = nj.A.getGuildDimensions(e);
         this.setAnimatedValue(t ?? 0);
     }
     componentDidUpdate(e) {
         let { guild: t, guildId: n } = this.props;
         if (e.guild !== t) {
-            let { scrollTop: e } = nO.A.getGuildDimensions(n);
+            let { scrollTop: e } = nj.A.getGuildDimensions(n);
             this.setAnimatedValue(e ?? 0);
         }
     }
     renderSettings(e) {
         let { closePopout: t } = e;
-        return (0, l.jsx)(n9, { onClose: t });
+        return (0, l.jsx)(n4, { onClose: t });
     }
     handleScroll = (e) => {
         let { scrollTop: t } = e;
@@ -2186,7 +2186,7 @@ class is extends a.PureComponent {
     };
     setAnimatedValue(e) {
         let { guild: t } = this.props,
-            n = null != t && (0, nS.A)(t);
+            n = null != t && (0, nx.A)(t);
         null != t &&
             (null != t.banner || n) &&
             (null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e));
@@ -2211,11 +2211,11 @@ class is extends a.PureComponent {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
             { controller: i, renderBanner: s, bannerVisible: a, communityInfoVisible: o } = this.state,
-            r = n?.id === it.Vc ? nx.T : nx.B;
-        return (0, l.jsxs)(ie, {
+            r = (0, ny.ai)(n?.id) ? nv.T : nv.B;
+        return (0, l.jsxs)(it, {
             header:
                 null != n
-                    ? (0, l.jsx)(nv.Ay, {
+                    ? (0, l.jsx)(nC.Ay, {
                           guild: n,
                           controller: i,
                           renderBanner: s,
@@ -2250,13 +2250,13 @@ class is extends a.PureComponent {
                                   disableManageChannels: !0,
                                   onScroll: null != n && null != n.banner ? this.handleScroll : null,
                               })
-                            : (0, l.jsx)(nC.A, { withBannerPadding: !1 }),
+                            : (0, l.jsx)(nI.A, { withBannerPadding: !1 }),
                 }),
                 null != n &&
                     (0, l.jsx)("section", {
                         className: ii.C3,
                         "aria-label": z.intl.string(z.t.StREWK),
-                        children: (0, l.jsx)(nI.A, { guildId: n.id }),
+                        children: (0, l.jsx)(n_.A, { guildId: n.id }),
                     }),
             ],
         });
@@ -2265,28 +2265,28 @@ class is extends a.PureComponent {
 function il(e) {
     let { guildId: t, onDragStart: n } = e,
         i = (0, r.bG)([e5.A], () => e5.A.getGuild(t)),
-        s = (0, r.bG)([nD.Ay], () => nD.Ay.getChannels(t)),
-        a = (0, r.bG)([nj.A], () => nj.A.getCategories(t)),
-        { mutedChannels: o, collapseMuted: d } = (0, r.cf)([nM.Ay], () => ({
-            mutedChannels: nM.Ay.getMutedChannels(t),
-            collapseMuted: nM.Ay.isGuildCollapsed(t),
+        s = (0, r.bG)([nR.Ay], () => nR.Ay.getChannels(t)),
+        a = (0, r.bG)([nD.A], () => nD.A.getCategories(t)),
+        { mutedChannels: o, collapseMuted: d } = (0, r.cf)([nk.Ay], () => ({
+            mutedChannels: nk.Ay.getMutedChannels(t),
+            collapseMuted: nk.Ay.isGuildCollapsed(t),
         })),
-        c = (0, r.bG)([nk.Ay], () => nk.Ay.getVoiceStates(t)),
-        u = (0, r.bG)([nT.A], () => nT.A.getCollapsed()),
-        { scrollTo: h } = (0, r.bG)([nO.A], () => nO.A.getGuildDimensions(t)),
-        p = (0, n_.A)((e) => {
+        c = (0, r.bG)([nP.Ay], () => nP.Ay.getVoiceStates(t)),
+        u = (0, r.bG)([nO.A], () => nO.A.getCollapsed()),
+        { scrollTo: h } = (0, r.bG)([nj.A], () => nj.A.getGuildDimensions(t)),
+        p = (0, nN.A)((e) => {
             let { channelId: t } = e;
             return t;
         }),
         A = (0, r.bG)([e7.Ay], () => e7.Ay.getVoiceChannelId()),
-        g = (0, r.bG)([nb.A], () => nb.A.getGuildVersion(t)),
-        m = (0, r.bG)([nN.A], () => nN.A.version),
-        f = (0, r.bG)([nR.default], () => nR.default.getGuildChangeSentinel(t)),
+        g = (0, r.bG)([nL.A], () => nL.A.getGuildVersion(t)),
+        m = (0, r.bG)([nT.A], () => nT.A.version),
+        f = (0, r.bG)([nb.default], () => nb.default.getGuildChangeSentinel(t)),
         E = (0, nE.a1)(i?.id),
-        y = (0, ny.vj)(i?.id),
+        y = (0, nS.vj)(i?.id),
         S = i?.features.has(ey.GuildFeatures.COMMUNITY) ?? !1,
-        x = (0, r.bG)([nw.A], () => nw.A.getChannelId()),
-        v = (0, r.bG)([nL.A], () => nL.A.desyncedVoiceStatesCount);
+        x = (0, r.bG)([nM.A], () => nM.A.getChannelId()),
+        v = (0, r.bG)([nw.A], () => nw.A.desyncedVoiceStatesCount);
     return (0, l.jsx)(is, {
         guildId: t,
         guild: i,
@@ -2319,7 +2319,7 @@ function id() {
 }
 let ic = a.memo(function () {
     let e = (0, r.bG)([tn.default], () => (tn.default.isLocked((0, q.getPID)()) ? "true" : "false")),
-        t = (0, n_.A)((e) => {
+        t = (0, nN.A)((e) => {
             let { channelId: t } = e;
             return t;
         });
@@ -2339,7 +2339,7 @@ let ic = a.memo(function () {
             (0, l.jsx)("section", {
                 className: ir.C3,
                 "aria-label": z.intl.string(z.t.StREWK),
-                children: (0, l.jsx)(nI.A, { guildId: null }),
+                children: (0, l.jsx)(n_.A, { guildId: null }),
             }),
         ],
     });
@@ -2347,7 +2347,7 @@ let ic = a.memo(function () {
 var iu = n(492636);
 function ih(e) {
     let { closePopout: t } = e;
-    return (0, l.jsx)(n9, { onClose: t });
+    return (0, l.jsx)(n4, { onClose: t });
 }
 class ip extends a.PureComponent {
     static defaultProps = { contained: !1 };
@@ -2360,7 +2360,7 @@ class ip extends a.PureComponent {
             s =
                 null != e
                     ? (0, l.jsx)(il, { guildId: e, onDragStart: this.onDragStart }, e)
-                    : (0, l.jsx)(ie, {
+                    : (0, l.jsx)(it, {
                           title: z.intl.string(z.t.YUU0RF),
                           renderSettings: ih,
                           onDragStart: this.onDragStart,
@@ -2379,7 +2379,7 @@ var ig = n(465532),
     iE = n(414798),
     iy = n(119031),
     iS = n(480870),
-    ix = n(681747),
+    ix = n(387704),
     iv = n(128783),
     iC = n(578434),
     iI = n(80683),
@@ -3338,7 +3338,7 @@ class sX extends a.PureComponent {
                             height: 20,
                             className: v()(sY.Kk, sY.zj, sY.Xk),
                         }),
-                        (0, l.jsx)(nQ.E, {
+                        (0, l.jsx)(nq.E, {
                             variant: "text-md/normal",
                             style: { color: sr.A.unsafe_rawColors.PRIMARY_200.css },
                             className: sY.DD,
@@ -3398,7 +3398,7 @@ class sX extends a.PureComponent {
                                 justify: eJ.A.Justify.BETWEEN,
                                 className: sY.gA,
                                 children: [
-                                    (0, l.jsx)(nQ.E, {
+                                    (0, l.jsx)(nq.E, {
                                         className: sY.$A,
                                         variant: "text-sm/normal",
                                         children: z.intl.string(z.t.XKYej5),
@@ -3491,14 +3491,14 @@ function sJ(e) {
         n = (0, tN.Ay)(t),
         i = (function () {
             let [e] = (0, r.bG)(
-                [nk.Ay, sx.A, e7.Ay, e6.A],
+                [nP.Ay, sx.A, e7.Ay, e6.A],
                 () => {
                     let e = e6.A.getChannel(e7.Ay.getVoiceChannelId());
                     return null == e
                         ? [[], -1]
                         : e.isGuildStageVoice()
                           ? [sx.A.getMutableParticipants(e.id, sv.ip.SPEAKER), sx.A.getParticipantsVersion(e.id)]
-                          : [nk.Ay.getVoiceStatesForChannel(e), nk.Ay.getVoiceStateVersion(e.getGuildId())];
+                          : [nP.Ay.getVoiceStatesForChannel(e), nP.Ay.getVoiceStateVersion(e.getGuildId())];
                 },
                 [],
                 sO.D,
