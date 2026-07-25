@@ -3500,8 +3500,8 @@
     --button-outline-primary-text: #fff;
     --card-background-default: #383b40;
     --card-border-default: hsla(240, 4%, 61%, .12);
-    --card-gradient-bg: rgba(0, 0, 0, .4);
-    --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
+    --card-muted-bg: hsla(240, 4%, 61%, .08);
+    --card-muted-pressed-bg: hsla(240, 4%, 61%, .12);
     --card-primary-pressed-bg: #29292e;
     --card-secondary-background-active: #29292e;
     --card-secondary-background-default: hsla(240, 4%, 61%, .12);
@@ -4165,8 +4165,8 @@
     --button-outline-primary-text: #000;
     --card-background-default: #fff;
     --card-border-default: hsla(240, 4%, 61%, .28);
-    --card-gradient-bg: hsla(0, 0%, 100%, .7);
-    --card-gradient-pressed-bg: hsla(0, 0%, 100%, .5);
+    --card-muted-bg: hsla(240, 4%, 61%, .08);
+    --card-muted-pressed-bg: hsla(240, 4%, 61%, .12);
     --card-primary-pressed-bg: #ebedf0;
     --card-secondary-background-active: #ebedf0;
     --card-secondary-background-default: hsla(240, 4%, 61%, .12);
@@ -4830,8 +4830,8 @@
     --button-outline-primary-text: #fff;
     --card-background-default: #131416;
     --card-border-default: hsla(240, 4%, 61%, .2);
-    --card-gradient-bg: rgba(0, 0, 0, .4);
-    --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
+    --card-muted-bg: hsla(240, 4%, 61%, .08);
+    --card-muted-pressed-bg: hsla(240, 4%, 61%, .12);
     --card-primary-pressed-bg: #0c0c10;
     --card-secondary-background-active: #08080b;
     --card-secondary-background-default: hsla(240, 4%, 61%, .12);
@@ -5495,8 +5495,8 @@
     --button-outline-primary-text: #fff;
     --card-background-default: #242429;
     --card-border-default: hsla(240, 4%, 61%, .12);
-    --card-gradient-bg: rgba(0, 0, 0, .4);
-    --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
+    --card-muted-bg: hsla(240, 4%, 61%, .08);
+    --card-muted-pressed-bg: hsla(240, 4%, 61%, .12);
     --card-primary-pressed-bg: #212129;
     --card-secondary-background-active: #18191f;
     --card-secondary-background-default: hsla(240, 4%, 61%, .12);
