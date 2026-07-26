@@ -57,3 +57,5 @@ function L(t) {
     return G[t];
 }
 let R = "badge-details";
+adge - details;
+"

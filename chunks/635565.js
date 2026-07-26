@@ -29,7 +29,7 @@ var l,
     y = n(66834),
     M = n(999903),
     L = n(544169),
-    T = n(422258),
+    T = n(659324),
     U = n(5180),
     D = n(770376),
     O = n(395504),
@@ -661,8 +661,8 @@ let e3 = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             ],
         });
     });
-var e7 = n(183812),
-    e6 = n(717421),
+var e6 = n(183812),
+    e7 = n(717421),
     e5 = n(442433),
     e4 = n(230135),
     e8 = n(228366);
@@ -712,7 +712,7 @@ let to = r.forwardRef((e, t) => {
         o = n >= l,
         d = Math.min((n / l) * 100, 100),
         c = `calc(${d}% - 4px)`,
-        [u, h] = (0, e6.z)(
+        [u, h] = (0, e7.z)(
             () => ({ width: n === i ? c : "calc(0% - 0px)", config: { tension: 250, damping: 5, mass: 1 } }),
             "respect-motion-settings",
             [n, i],
@@ -726,7 +726,7 @@ let to = r.forwardRef((e, t) => {
             className: ta.hQ,
             children: [
                 (0, s.jsx)("div", { className: ez()(ta.L$, a) }),
-                (0, s.jsx)(e7.animated.div, { className: ez()(ta.qB, { [ta.mu]: d <= 5 }), style: u }),
+                (0, s.jsx)(e6.animated.div, { className: ez()(ta.qB, { [ta.mu]: d <= 5 }), style: u }),
                 (0, s.jsxs)("div", {
                     className: ta.FS,
                     children: [
@@ -872,7 +872,7 @@ var tK = n(871123),
 function t9(e) {
     e.stopPropagation();
 }
-let t7 = el(
+let t6 = el(
         r.memo(function (e) {
             let t,
                 {
@@ -912,9 +912,9 @@ let t7 = el(
                                         n.e("79995"),
                                         n.e("91377"),
                                         n.e("35723"),
-                                        n.e("12520"),
-                                        n.e("18733"),
-                                    ]).then(n.bind(n, 71132));
+                                        n.e("66378"),
+                                        n.e("15675"),
+                                    ]).then(n.bind(n, 740438));
                                     return (n) => (0, s.jsx)(e, { ...n, channel: l, guild: t });
                                 });
                         }
@@ -1022,7 +1022,7 @@ let t7 = el(
             return null != a && null != i ? a(i(R)) : R;
         }),
     ),
-    t6 = r.memo(function (e) {
+    t7 = r.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, s.jsx)("li", {
             className: ez()(l, t3.fx),
@@ -1126,9 +1126,9 @@ let ni = r.memo(function (e) {
             if (n.features.has(Y.GuildFeatures.HUB)) return null;
             return (0, s.jsx)("div", { style: { height: u } });
         case tI.HP:
-            return (0, s.jsx)(t6, { name: eC.intl.string(eC.t.mlPMCy) });
+            return (0, s.jsx)(t7, { name: eC.intl.string(eC.t.mlPMCy) });
         case l.recentsSectionNumber:
-            return (0, s.jsx)(t6, { name: eC.intl.string(eC.t.gKcrqM), onDismiss: d });
+            return (0, s.jsx)(t7, { name: eC.intl.string(eC.t.gKcrqM), onDismiss: d });
         case l.voiceChannelsSectionNumber: {
             let e = l.getCategoryFromSection(l.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
@@ -1140,7 +1140,7 @@ let ni = r.memo(function (e) {
         case tI.TF: {
             let e = l.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, s.jsx)(t7, {
+            return (0, s.jsx)(t6, {
                 channel: e.record,
                 position: e.position,
                 disableManageChannels: o,
@@ -1155,7 +1155,7 @@ let ni = r.memo(function (e) {
         default: {
             let e = l.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, s.jsx)(t7, { channel: e.record, position: e.position, disableManageChannels: o });
+            return (0, s.jsx)(t6, { channel: e.record, position: e.position, disableManageChannels: o });
         }
     }
 });
@@ -1490,7 +1490,7 @@ let nH = Math.ceil(Math.sqrt(115200)),
                 i(e.contentRect.width);
             }, []),
             o = (0, nV.w)(a, [], { fireOnMount: !0 }),
-            [{ shineSpring: d }, c] = (0, e6.z)(() => ({
+            [{ shineSpring: d }, c] = (0, e7.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
@@ -1506,7 +1506,7 @@ let nH = Math.ceil(Math.sqrt(115200)),
             A = r.useMemo(
                 () =>
                     n(
-                        (0, s.jsx)(e7.animated.div, {
+                        (0, s.jsx)(e6.animated.div, {
                             className: nw.q,
                             style: {
                                 transform: d.to(
@@ -1737,8 +1737,8 @@ function n9(e) {
         },
     });
 }
-var n7 = n(5373),
-    n6 = n(65995),
+var n6 = n(5373),
+    n7 = n(65995),
     n5 = n(408619);
 function n4(e, t) {
     return (0, s.jsx)(N.E, { variant: "text-xs/bold", color: "text-default", children: e }, t);
@@ -1746,7 +1746,7 @@ function n4(e, t) {
 let n8 = r.memo(function (e) {
     let { guild: t } = e,
         n = (0, u.bG)([tL.h], () => tL.h.getNewMemberActions(t.id), [t.id]),
-        l = (0, u.bG)([n6.A], () => n6.A.getCompletedActions(t.id)),
+        l = (0, u.bG)([n7.A], () => n7.A.getCompletedActions(t.id)),
         i = r.useMemo(() => {
             if (null == n || null == l) return 0;
             let e = 0;
@@ -1797,7 +1797,7 @@ let n8 = r.memo(function (e) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(n7.i, {
+                    (0, s.jsx)(n6.i, {
                         className: n5.hr,
                         foregroundGradientColor: [
                             h.A.unsafe_rawColors.GREEN_300.css,
@@ -2143,7 +2143,7 @@ let lV = r.memo(function (e) {
                                 n.e("26132"),
                                 n.e("91763"),
                                 n.e("38730"),
-                                n.e("34971"),
+                                n.e("47502"),
                                 n.e("3998"),
                                 n.e("43266"),
                                 n.e("91671"),
@@ -2431,8 +2431,8 @@ let l9 = function (e) {
               ],
           });
 };
-var l7 = n(824865),
-    l6 = n(378570),
+var l6 = n(824865),
+    l7 = n(378570),
     l5 = n(790535),
     l4 = n(113783),
     l8 = n(96566),
@@ -2579,11 +2579,11 @@ class ix extends nR {
         null != s && (0, lz.V)(s) && (0, lK.Ze)(s),
             l && this.setState({ shouldShowGuildVerificationPopout: !0 }),
             t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, l5.av)(e),
-            __OVERLAY__ || (0, l6.iN)(e.id, i ? { source: l7.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
+            __OVERLAY__ || (0, l7.iN)(e.id, i ? { source: l6.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
     };
     handleClickChat = () => {
         let { channel: e, locked: t, isSuggestedSection: n } = this.props;
-        __OVERLAY__ || t || (0, l6.iN)(e.id, n ? { source: l7.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
+        __OVERLAY__ || t || (0, l7.iN)(e.id, n ? { source: l6.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
     };
     handleContextMenu = (e) => {
         let { channel: t } = this.props,
@@ -2599,7 +2599,7 @@ class ix extends nR {
                     n.e("38730"),
                     n.e("35321"),
                     n.e("50033"),
-                    n.e("34971"),
+                    n.e("47502"),
                     n.e("3998"),
                     n.e("43266"),
                     n.e("9004"),
@@ -2608,16 +2608,16 @@ class ix extends nR {
                     n.e("12255"),
                     n.e("40959"),
                     n.e("79995"),
-                    n.e("42339"),
+                    n.e("80740"),
                     n.e("44058"),
                     n.e("91377"),
                     n.e("35723"),
-                    n.e("12520"),
+                    n.e("66378"),
                     n.e("66540"),
                     n.e("29542"),
                     n.e("19690"),
                     n.e("26792"),
-                    n.e("12052"),
+                    n.e("48804"),
                     n.e("18663"),
                     n.e("99990"),
                     n.e("99854"),
@@ -2962,7 +2962,7 @@ function iB(e) {
                             className: iH.nM,
                             onClick: function () {
                                 t.isForumLikeChannel()
-                                    ? (0, l6.iN)(t.id)
+                                    ? (0, l7.iN)(t.id)
                                     : (0, j.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
                                               n.e("61178"),
@@ -3215,7 +3215,7 @@ function i9(e) {
               ],
           });
 }
-class i7 extends nR {
+class i6 extends nR {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = r.createRef();
     assignRef = (e, t) => {
@@ -3284,10 +3284,10 @@ class i7 extends nR {
                     n.e("93190"),
                     n.e("91763"),
                     n.e("38730"),
-                    n.e("34971"),
-                    n.e("42339"),
+                    n.e("47502"),
+                    n.e("80740"),
                     n.e("68530"),
-                    n.e("12520"),
+                    n.e("66378"),
                     n.e("17244"),
                     n.e("53416"),
                     n.e("60200"),
@@ -3327,7 +3327,7 @@ class i7 extends nR {
                         n.e("35313"),
                         n.e("76273"),
                         n.e("36564"),
-                        n.e("34971"),
+                        n.e("47502"),
                         n.e("45996"),
                         n.e("792"),
                         n.e("92822"),
@@ -3338,11 +3338,11 @@ class i7 extends nR {
                         n.e("9291"),
                         n.e("7059"),
                         n.e("8829"),
-                        n.e("42339"),
+                        n.e("80740"),
                         n.e("16054"),
                         n.e("98199"),
                         n.e("17244"),
-                        n.e("41175"),
+                        n.e("64464"),
                         n.e("39778"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, s.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
@@ -3358,7 +3358,7 @@ class i7 extends nR {
                     n.e("38730"),
                     n.e("35321"),
                     n.e("50033"),
-                    n.e("34971"),
+                    n.e("47502"),
                     n.e("43266"),
                     n.e("30997"),
                     n.e("79995"),
@@ -3377,7 +3377,7 @@ class i7 extends nR {
                     n.e("38730"),
                     n.e("35321"),
                     n.e("50033"),
-                    n.e("34971"),
+                    n.e("47502"),
                     n.e("3998"),
                     n.e("43266"),
                     n.e("9004"),
@@ -3385,15 +3385,15 @@ class i7 extends nR {
                     n.e("12255"),
                     n.e("40959"),
                     n.e("79995"),
-                    n.e("42339"),
+                    n.e("80740"),
                     n.e("44058"),
                     n.e("91377"),
                     n.e("65200"),
                     n.e("35723"),
-                    n.e("12520"),
+                    n.e("66378"),
                     n.e("66540"),
                     n.e("29542"),
-                    n.e("12052"),
+                    n.e("48804"),
                     n.e("25173"),
                 ]).then(n.bind(n, 468916));
                 return (n) => (0, s.jsx)(e, { ...n, channel: t, guild: l });
@@ -3465,7 +3465,7 @@ class i7 extends nR {
                                 isFavoriteSuggestion: g,
                                 channelTypeOverride: f ? Y.rbe.GUILD_TEXT : void 0,
                                 resolvedUnreadSetting: C,
-                                transitionExtras: S ? { source: l7.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
+                                transitionExtras: S ? { source: l6.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
                                 "aria-label": (0, lF.Ay)({
                                     channel: e,
                                     unread: i,
@@ -3498,7 +3498,7 @@ class i7 extends nR {
         return h ? d(c(v)) : v;
     }
 }
-let i6 = el(i7);
+let i7 = el(i6);
 function i5(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: i, muted: a, selected: o } = e,
         { hasActiveThreads: d, hasMoreActiveThreads: c } = (0, lC.NR)(t),
@@ -3550,7 +3550,7 @@ function i5(e) {
         });
     return (0, u.bG)([iT.A, iL.Ay], () => iT.A.getChannelId() !== t.id && iL.Ay.isCurrentUserGuest(t.getGuildId()))
         ? null
-        : (0, s.jsx)(i6, {
+        : (0, s.jsx)(i7, {
               ...h,
               ...g,
               ...e,
@@ -3822,7 +3822,7 @@ function s_(e) {
         c = (0, u.bG)([st.A], () => st.A.isFocused()),
         { mode: h, mentionCount: A, targetChannelId: g } = "bottom" === t ? o : d,
         m = h === sn.HIDDEN,
-        f = (0, e6.z)(
+        f = (0, e7.z)(
             {
                 to: { transform: m ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: sx,
@@ -3837,7 +3837,7 @@ function s_(e) {
         );
     return (0, s.jsx)("div", {
         className: ez()(sE.kL, { [sE.Mn]: "top" === t, [sE.sQ]: "bottom" === t }),
-        children: (0, s.jsx)(e7.animated.div, {
+        children: (0, s.jsx)(e6.animated.div, {
             className: sE.pK,
             style: f,
             "aria-hidden": m,
@@ -4117,8 +4117,8 @@ var s$ = n(290863),
     s2 = n(208971),
     s3 = n(46054),
     s9 = n(500216),
-    s7 = n(742715);
-function s6(e) {
+    s6 = n(742715);
+function s7(e) {
     let { channel: t, connected: n, hovered: l, subtitle: i, onClick: a } = e,
         o = (0, s2.G)((0, s1.l)(t)),
         { enableHangoutWindow: d } = (0, eI.Dm)({ guildId: t.guild_id, location: "VoiceChannelStatus" }),
@@ -4140,7 +4140,7 @@ function s6(e) {
               onClick: h ? a : void 0,
               children: (0, s.jsx)(N.E, {
                   variant: "text-xs/medium",
-                  className: ez()(s9.qS, s7.PT),
+                  className: ez()(s9.qS, s6.PT),
                   children: (0, s.jsx)(tY.A, { children: s3.A.parseVoiceChannelStatus(o, !0, { channelId: t.id }) }),
               }),
           })
@@ -4188,7 +4188,7 @@ class s5 extends nR {
                 needSubscriptionToAccess: i,
                 routeDirectlyToChannel: o || a,
                 locked: e,
-                transitionExtras: r ? { source: l7.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
+                transitionExtras: r ? { source: l6.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
             });
     };
     handleContextMenu = (e) => {
@@ -4205,7 +4205,7 @@ class s5 extends nR {
                     n.e("38730"),
                     n.e("35321"),
                     n.e("50033"),
-                    n.e("34971"),
+                    n.e("47502"),
                     n.e("3998"),
                     n.e("43266"),
                     n.e("9004"),
@@ -4214,16 +4214,16 @@ class s5 extends nR {
                     n.e("12255"),
                     n.e("40959"),
                     n.e("79995"),
-                    n.e("42339"),
+                    n.e("80740"),
                     n.e("44058"),
                     n.e("91377"),
                     n.e("35723"),
-                    n.e("12520"),
+                    n.e("66378"),
                     n.e("66540"),
                     n.e("29542"),
                     n.e("19690"),
                     n.e("26792"),
-                    n.e("12052"),
+                    n.e("48804"),
                     n.e("18663"),
                     n.e("99990"),
                     n.e("99854"),
@@ -4266,7 +4266,7 @@ class s5 extends nR {
         let { channel: e, connected: t } = this.props,
             n = ij(this.props.subtitle)?.subtitle,
             { hovered: l } = this.state;
-        return (0, s.jsx)(s6, {
+        return (0, s.jsx)(s7, {
             onClick: this.handleVoiceStatusClick,
             channel: e,
             connected: t,
@@ -4306,7 +4306,7 @@ class s5 extends nR {
                     className: ez()(eP.Xs, n ? eP.Tf : null),
                     onClick: () => {
                         lB.A.updateChatOpen(e.id, !0),
-                            (0, l6.iN)(e.id, l ? { source: l7.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
+                            (0, l7.iN)(e.id, l ? { source: l6.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
                     },
                     "aria-label": eC.intl.string(eC.t.ZXxLQg),
                     children: (0, s.jsx)(I.o, { size: "xs", color: "currentColor", className: eP.gE }),
