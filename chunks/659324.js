@@ -74,16 +74,13 @@ function C(e, t) {
     let i = null != n.parentId ? e[n.parentId] : null;
     (null == i || i.type !== a.Ip.CATEGORY) && (n.parentId = T.O8);
 }
-function O(e) {
-    N(e);
-    let { favoriteLimit: t } = (0, f.ad)();
-    return !(t <= 0) && r().size(e) >= t;
+function O(e, t) {
+    if ((N(e), r().size(e) >= T.lj)) return T.lj;
+    let { favoriteLimit: n } = (0, f.ad)();
+    return n <= 0 || t === a.Ip.CATEGORY ? null : r().filter(e, (e) => e.type !== a.Ip.CATEGORY).length >= n ? n : null;
 }
-function R() {
-    l.A.show({
-        title: g.intl.string(g.t["+XYXtZ"]),
-        body: g.intl.formatToPlainString(g.t.JaIyFi, { count: (0, f.ad)().favoriteLimit }),
-    });
+function R(e) {
+    l.A.show({ title: g.intl.string(g.t["+XYXtZ"]), body: g.intl.formatToPlainString(g.t.JaIyFi, { count: e }) });
 }
 function L() {
     l.A.show({
@@ -113,15 +110,16 @@ function b(e, t) {
             (e) => {
                 let r = !1;
                 for (let l of i) {
-                    if (O(e.favoriteChannels)) {
-                        if ((R(), !r)) return !1;
+                    let i = O(e.favoriteChannels, a.Ip.REFERENCE_ORIGINAL);
+                    if (null != i) {
+                        if ((R(i), !r)) return !1;
                         break;
                     }
-                    let i = c.A.getChannel(l);
+                    let o = c.A.getChannel(l);
                     (e.favoriteChannels[l] = a.wL.create({
                         nickname: "",
                         type: a.Ip.REFERENCE_ORIGINAL,
-                        channelType: null != i ? s.ZQ.create({ value: i.type }) : void 0,
+                        channelType: null != o ? s.ZQ.create({ value: o.type }) : void 0,
                         position: S(e.favoriteChannels),
                         parentId: t ?? T.O8,
                     })),
@@ -171,7 +169,8 @@ function U(e) {
     o.wc.updateAsync(
         "favorites",
         (e) => {
-            if (O(e.favoriteChannels)) return R(), !1;
+            let r = O(e.favoriteChannels, a.Ip.CATEGORY);
+            if (null != r) return R(r), !1;
             (e.favoriteChannels[i] = a.wL.create({
                 nickname: n,
                 type: a.Ip.CATEGORY,
