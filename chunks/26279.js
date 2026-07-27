@@ -1,4 +1,4 @@
-n.d(t, { BM: () => s, Re: () => a, uH: () => o });
+n.d(t, { BM: () => s, Re: () => u, uH: () => o });
 var r,
     l,
     i,
@@ -7,12 +7,13 @@ var r,
         (r.META_QUEST_WEB_REDIRECT_CHECKOUT = "meta_quest_web_redirect_checkout"),
         (r.DEV_STORYBOOK_CHECKOUT = "dev_storybook_checkout"),
         r),
-    a =
+    u =
         (((l = {})[(l.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (l[(l.DRAFT = 1)] = "DRAFT"),
         (l[(l.SIGNED = 2)] = "SIGNED"),
         (l[(l.DISCARDED = 3)] = "DISCARDED"),
         (l[(l.SIGNING_IN_PROGRESS = 4)] = "SIGNING_IN_PROGRESS"),
+        (l[(l.SIGNING_FAILED = 5)] = "SIGNING_FAILED"),
         l),
     s =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
