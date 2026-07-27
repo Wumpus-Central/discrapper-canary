@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { D: () => a, I: () => s });
+n.d(t, { D: () => s, I: () => a });
 var i,
     r,
-    s =
+    a =
         (((i = {}).ACCOUNT_REVERT_CHANGE_PASSWORD = "impression_account_revert_change_password"),
         (i.ACCOUNT_REVERT_EXPLAINER = "impression_account_revert_explainer"),
         (i.ACCOUNT_REVERT_SUCCESS = "impression_account_revert_success"),
@@ -270,7 +270,7 @@ var i,
         (i.VOICE_USER_ACTIVITY_POPOUT = "impression_voice_user_activity_popout"),
         (i.WISHLIST_ITEM = "impression_wishlist_item"),
         i),
-    a =
+    s =
         (((r = {}).ACCOUNT_REVERT = "network_action_account_revert"),
         (r.APPLE_JWT_TOKEN_CREATE = "network_action_apple_jwt_token_create"),
         (r.AUTH_SESSIONS_LOGGED_OUT = "network_action_auth_sessions_logged_out"),
@@ -289,6 +289,7 @@ var i,
         (r.EMBEDDED_ACTIVITIES_LAUNCH = "network_action_embedded_activities_launch"),
         (r.FORGOT_PASSWORD = "network_action_forgot_password"),
         (r.GUILD_CREATE = "network_action_guild_create"),
+        (r.GUILD_SPACE_FETCH = "network_action_guild_space_fetch"),
         (r.GUILD_TRANSFER_OWNERSHIP = "network_action_guild_transfer_ownership"),
         (r.GUILD_TRANSFER_OWNERSHIP_SEND_CODE = "network_action_guild_transfer_ownership_send_code"),
         (r.HUB_EMAIL_VERIFY = "network_action_hub_email_verify"),
