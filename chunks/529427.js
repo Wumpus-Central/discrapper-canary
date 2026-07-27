@@ -1,4 +1,4 @@
-n.d(t, { vd: () => r.v, Mw: () => C, UnifiedCheckoutFlowManagerSingletons: () => _, XZ: () => l.X, CL: () => l.C });
+n.d(t, { vd: () => r.v, Mw: () => C, UnifiedCheckoutFlowManagerSingletons: () => T, XZ: () => l.X, CL: () => l.C });
 var l = n(75304),
     i = n(675219),
     r = n(71804),
@@ -7,9 +7,9 @@ var l = n(75304),
     o = n(166532),
     u = n(482132),
     c = n(981036),
-    d = n(426398),
+    d = n(202475),
     p = n(375708),
-    m = n(367644);
+    m = n(855844);
 function C(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
@@ -22,8 +22,8 @@ function C(e) {
             onBackClick: f,
         } = e,
         { hasPaymentSources: A } = (0, d.jm)(),
-        y = A ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-        S = s.useCallback(() => t(y), [t, y]),
+        S = A ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
+        y = s.useCallback(() => t(S), [t, S]),
         P = s.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
@@ -33,7 +33,7 @@ function C(e) {
                       }),
             [n, i, r, C, h],
         ),
-        I = s.useMemo(() => ({ ...E, onClick: S, text: p.intl.string(p.t.XiOHRX) }), [E, S]);
+        I = s.useMemo(() => ({ ...E, onClick: y, text: p.intl.string(p.t.XiOHRX) }), [E, y]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.dZ, { children: P }),
@@ -45,11 +45,12 @@ let h = null,
     E = null,
     f = null,
     A = null,
-    y = null,
     S = null,
+    y = null,
     P = null,
     I = null,
-    _ = {
+    _ = null,
+    T = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
                 return null == h && (h = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), h;
@@ -72,12 +73,12 @@ let h = null,
         },
         [l.C.GUILD_PRODUCT_CHECKOUT]: {
             get: function () {
-                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), y;
+                return null == S && (S = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), S;
             },
         },
         [l.C.GUILD_ROLE_CHECKOUT]: {
             get: function () {
-                return null == S && (S = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), S;
+                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), y;
             },
         },
         [l.C.GUILD_BOOST_CHECKOUT]: {
@@ -88,6 +89,11 @@ let h = null,
         [l.C.PREMIUM_CHECKOUT]: {
             get: function () {
                 return null == I && (I = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), I;
+            },
+        },
+        [l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: {
+            get: function () {
+                return null == _ && (_ = new i.od({ checkoutFlow: l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT })), _;
             },
         },
     };

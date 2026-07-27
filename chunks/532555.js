@@ -12,6 +12,7 @@ function i(e) {
         serverIP: e.ip,
         port: e.port,
         entitlementId: e.entitlement_id,
+        subscriptionId: e.subscription_id,
         providerType: e.provider_type,
         gameServerPanelUrl: e.provider_url,
         status: e.status,

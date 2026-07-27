@@ -12,11 +12,11 @@ var r = n(627968),
     C = n(75304),
     h = n(145659),
     S = n(241440),
-    _ = n(157432),
+    _ = n(142680),
     I = n(982291),
-    f = n(852607),
-    p = n(331611),
-    A = n(480642),
+    p = n(852607),
+    A = n(331611),
+    f = n(480642),
     m = n(652215);
 n(322076);
 var g = n(202541),
@@ -32,6 +32,7 @@ let T = {
         [C.C.GUILD_BOOST_CHECKOUT]: { allowGiftCustomization: !1 },
         [C.C.GUILD_PRODUCT_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "one_time_payment" },
         [C.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
+        [C.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     P = (0, l.lazy)(() =>
         Promise.all([n.e("797"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("14648"), n.e("8430")])
@@ -82,12 +83,12 @@ class R {
         return null != e
             ? { key: null, renderStep: e.renderStep, options: e.options }
             : "one_time_payment" === t
-              ? f.kO
+              ? p.kO
               : "subscription" === t
-                ? f.r3
+                ? p.r3
                 : {
                       key: null,
-                      renderStep: (e) => (0, r.jsx)(p.e, { paymentModalStepProps: e, defaultStep: a.pn.REVIEW }),
+                      renderStep: (e) => (0, r.jsx)(A.e, { paymentModalStepProps: e, defaultStep: a.pn.REVIEW }),
                   };
     }
     getAddPaymentStepConfig(e) {
@@ -136,7 +137,7 @@ class R {
             o = this.getGiftCustomizationStepConfig({ isGift: t }),
             u = this.getAddPaymentStepConfig({ isGift: t }),
             s = this.getReviewStepConfig(),
-            c = this.createDefinedStepConfigsArray([i, ...(null != o ? [o] : []), ...r, u, ...(l ? [] : f.PL), s]);
+            c = this.createDefinedStepConfigsArray([i, ...(null != o ? [o] : []), ...r, u, ...(l ? [] : p.PL), s]);
         return null != n && c.push({ key: a.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
     }
     getApplicationId(e) {
@@ -196,7 +197,7 @@ class R {
                     activeSubscription: _,
                     initialPaymentSourceId: I,
                 },
-                unifiedCheckoutProviderProps: { analyticsLocations: f, analyticsSourceLocation: p },
+                unifiedCheckoutProviderProps: { analyticsLocations: p, analyticsSourceLocation: A },
                 forwardedPaymentModalProps: { analyticsObject: m, ...g } = {},
                 tenantParams: N,
             } = e,
@@ -209,15 +210,15 @@ class R {
             F = this.generateRenderHeader(),
             M = h ?? this.getApplicationId(d),
             v = !!(null != t && t.isGift),
-            D = !1,
-            b = {
+            G = !1,
+            D = {
                 ...g,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                 stepConfigs: this.generateCheckoutStepConfigs({ isGift: v }),
                 onComplete: (e) => {
-                    null != a && a(e), (D = !0);
+                    null != a && a(e), (G = !0);
                 },
                 onClose: c,
                 renderHeader: F,
@@ -231,9 +232,9 @@ class R {
                 activeSubscription: _ ?? null,
                 initialPaymentSourceId: I ?? null,
                 applicationId: M,
-                analyticsLocations: f,
+                analyticsLocations: p,
                 analyticsObject: m,
-                analyticsSourceLocation: p,
+                analyticsSourceLocation: A,
                 giftContextProps: t,
             };
         if ("modal" === T)
@@ -247,18 +248,18 @@ class R {
                         n.e("14648"),
                         n.e("8430"),
                     ]).then(n.bind(n, 427325));
-                    return (t) => (0, r.jsx)(e, { ...b, renderModalProps: t });
+                    return (t) => (0, r.jsx)(e, { ...D, renderModalProps: t });
                 },
                 {
                     ...P,
                     onCloseRequest: () => {
-                        null != P.onCloseRequest && P.onCloseRequest(D, O.current),
+                        null != P.onCloseRequest && P.onCloseRequest(G, O.current),
                             P.skipCloseModalOnCloseRequest || (0, o.closeModal)(U);
                     },
                     onCloseCallback: () => {
-                        s.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: D }),
-                            D ||
-                                ((0, S.S)({ checkoutSucceeded: D, order: L.current }),
+                        s.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: G }),
+                            G ||
+                                ((0, S.S)({ checkoutSucceeded: G, order: L.current }),
                                 this.trackPaymentFlowCanceled({
                                     loadId: O.current,
                                     skuId: d,
@@ -266,14 +267,14 @@ class R {
                                     applicationId: M,
                                     discoverySessionId: C,
                                     analyticsLocation: g.analyticsLocation,
-                                    analyticsLocations: f,
+                                    analyticsLocations: p,
                                     analyticsObject: m,
-                                    analyticsSourceLocation: p,
+                                    analyticsSourceLocation: A,
                                     isGift: v,
                                     eligibleForTrial: null != g.trialId,
                                 })),
-                            null != P.onCloseCallback && P.onCloseCallback(D),
-                            null != c && c(D, d);
+                            null != P.onCloseCallback && P.onCloseCallback(G),
+                            null != c && c(G, d);
                     },
                     modalKey: U,
                 },
@@ -282,8 +283,8 @@ class R {
             let e = g.paymentModalOnClose ?? c,
                 t = { transitionState: u.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
             return (0, r.jsx)(l.Suspense, {
-                fallback: (0, r.jsx)(A.KT, {}),
-                children: (0, r.jsx)(y, { ...b, paymentModalOnClose: e, renderModalProps: t }),
+                fallback: (0, r.jsx)(f.KT, {}),
+                children: (0, r.jsx)(y, { ...D, paymentModalOnClose: e, renderModalProps: t }),
             });
         }
     }

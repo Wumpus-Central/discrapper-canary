@@ -12,4 +12,5 @@ var i,
         (i.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT = "premium_apps_subscription_checkout"),
         (i.GUILD_PRODUCT_CHECKOUT = "guild_product_checkout"),
         (i.GUILD_ROLE_CHECKOUT = "guild_role_checkout"),
+        (i.GAME_SERVER_SUBSCRIPTION_CHECKOUT = "game_server_subscription_checkout"),
         i);
