@@ -44,6 +44,7 @@ function I() {
                             .map((e) => new d.R({ applicationId: e.application_id }));
                     }
                     case r.x.PERSONAL:
+                    case r.x.CLIPS_GALLERY:
                         return [];
                     default:
                         if ((0, A.hL)(a)) {

@@ -8,4 +8,5 @@ var i,
         (i.FAVORITE_GAMES = "favorite_games"),
         (i.APPLICATION = "application"),
         (i.PERSONAL = "personal"),
+        (i.CLIPS_GALLERY = "clips_gallery"),
         i);

@@ -5,6 +5,7 @@ var i = n(540185),
     a = n(375708);
 let s = [
         i.x.PERSONAL,
+        i.x.CLIPS_GALLERY,
         i.x.APPLICATION,
         i.x.FAVORITE_GAMES,
         i.x.PLAYED_GAMES,
@@ -18,6 +19,7 @@ let s = [
         [i.x.PLAYED_GAMES]: () => a.intl.string(a.t.scOKET),
         [i.x.APPLICATION]: (e) => r.A.getApplication(e.applicationId)?.name ?? "",
         [i.x.PERSONAL]: () => a.intl.string(a.t.AVkYMx),
+        [i.x.CLIPS_GALLERY]: () => a.intl.string(a.t.zY8Ghg),
     },
     o = [i.x.FAVORITE_GAMES],
-    d = [i.x.CURRENT_GAMES, i.x.FAVORITE_GAMES];
+    d = [i.x.CURRENT_GAMES, i.x.FAVORITE_GAMES, i.x.CLIPS_GALLERY];
