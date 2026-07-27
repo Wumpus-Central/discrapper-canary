@@ -338,6 +338,7 @@ function ep(e) {
                     t(n(e));
                 });
             },
+            filter: !1,
             placeholder: w ? x : void 0,
             onClose: () => g(!1),
             onOpen: () => g(!0),
