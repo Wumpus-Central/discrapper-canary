@@ -318,6 +318,7 @@ class C {
     decoderBuckets = Object.fromEntries(Object.values(I).map((e) => [e, 0]));
     codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
     statsWindow = [];
+    hasSeededAggregation = !1;
     fpsHistogram = new o.d();
     bitrateHistogram = new o.d();
     inboundBitrateEstimateHistogram = new o.d();
@@ -414,7 +415,8 @@ class C {
     appendAndIncrementStats(e) {
         if (this.isVideoStopped) return;
         if ((this.statsWindow.push(e), this.statsWindow.length < 2)) {
-            if (1 === this.statsWindow.length) {
+            if (!this.hasSeededAggregation) {
+                this.hasSeededAggregation = !0;
                 let t = new N();
                 (t.timestamp = e.timestamp), this.collectAggregationStats(e, t);
             }
