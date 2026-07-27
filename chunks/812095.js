@@ -1,4 +1,4 @@
-n.d(t, { U: () => h });
+n.d(t, { U: () => C });
 var l = n(64700),
     i = n(435558),
     r = n.n(i),
@@ -30,7 +30,7 @@ let u = ["heading", "list", "blockQuote"],
         ]),
     ),
     m = r().once(() => s.A.reactParserFor(p()));
-function h(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (t.enableNewlines ? m() : d())(e, !0);
 }
