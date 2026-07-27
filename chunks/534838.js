@@ -1390,7 +1390,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584411, Version Hash: 399b90c6360b8cca6ac0e1b33b3f6ba7e93ce1c0`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584434, Version Hash: 7ce0e726c72d7256a7817b536db2548a91516df8`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -2232,7 +2232,7 @@ let n8 = (0, n5.Fe)({
             n.e("13052"),
             n.e("46416"),
             n.e("15622"),
-            n.e("36819"),
+            n.e("58507"),
             n.e("10403"),
             n.e("6687"),
             n.e("3177"),
@@ -3105,10 +3105,13 @@ function rs(e) {
     let { onOpen: t, onClose: n, "data-jump-section": i } = e,
         r = eA.useRef(null),
         a = eA.useRef(null),
-        s = (0, rr.KC)();
+        s = (0, rr.KC)(),
+        l = eA.useCallback(() => {
+            (0, rr.Vc)(), t?.();
+        }, [t]);
     return (0, O.jsx)(ri.U, {
         targetElementRef: r,
-        onOpen: t,
+        onOpen: l,
         onClose: n,
         popoutPosition: "bottom",
         popoutAlign: "right",
@@ -4042,7 +4045,7 @@ let rx = (0, n5.Fe)({
                 n.e("25246"),
                 n.e("16799"),
                 n.e("77298"),
-                n.e("36819"),
+                n.e("58507"),
                 n.e("32482"),
                 n.e("62883"),
                 n.e("95099"),
@@ -18322,7 +18325,7 @@ let gF = "isHideDevBanner",
                     className: to()(gk.Wz, gk.mr),
                     children: [
                         (0, O.jsx)(gx, { className: gk.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584411" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584434" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -39443,7 +39446,7 @@ let wa = (0, tH.Fe)({
             n.e("25246"),
             n.e("16799"),
             n.e("77298"),
-            n.e("36819"),
+            n.e("58507"),
             n.e("32482"),
             n.e("62883"),
             n.e("95099"),

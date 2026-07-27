@@ -1,47 +1,61 @@
 "use strict";
-n.d(t, { $n: () => E, Dc: () => A, KC: () => h });
+n.d(t, { $n: () => p, Dc: () => T, KC: () => m, Vc: () => g });
 var i = n(627968),
     r = n(64700),
     a = n(353640),
     s = n(935399),
-    l = n(406810),
-    o = n(606096),
-    d = n(459192),
-    c = n(661531),
-    u = n(765178);
-let _ = (0, a.v)(() => ({ toast: null, isVisible: !1, isPulsing: !1 }));
-function E(e) {
+    l = n(17928),
+    o = n(506774),
+    d = n(406810),
+    c = n(606096),
+    u = n(459192),
+    _ = n(661531),
+    E = n(765178),
+    A = n(85109),
+    h = n(375708);
+let I = "InboxLastOpenedAt",
+    f = (0, a.v)(() => ({ toast: null, isVisible: !1, isPulsing: !1, inboxLastOpenedAt: o.w.get(I, 0) ?? 0 }));
+function p(e) {
     let { anchorRef: t } = e,
-        n = _((e) => e.toast),
-        a = _((e) => e.isVisible);
+        n = f((e) => e.toast),
+        a = f((e) => e.isVisible),
+        o = f((e) => e.inboxLastOpenedAt),
+        E = (0, l.bG)([A.A], () => A.A.getOverdueMessageReminderCount()),
+        I = (0, l.bG)([A.A], () => A.A.getMostRecentOverdueDueAt()),
+        p = E > 0 && I > o;
     r.useEffect(() => {
         if (null == n) return;
-        let e = setTimeout(() => _.setState({ isPulsing: !1 }), 600),
-            t = setTimeout(() => _.setState({ isVisible: !1 }), 3e3);
+        let e = setTimeout(() => f.setState({ isPulsing: !1 }), 600),
+            t = setTimeout(() => f.setState({ isVisible: !1 }), 3e3);
         return () => {
             clearTimeout(e), clearTimeout(t);
         };
     }, [n]),
-        (0, s.l0)(() => _.setState({ toast: null, isVisible: !1, isPulsing: !1 }));
-    let u = n?.icon === "clock" ? l.O : o.c;
-    return (0, i.jsx)(d.u, {
+        (0, s.l0)(() => f.setState({ toast: null, isVisible: !1, isPulsing: !1 }));
+    let T = null != n && (a || !p) ? n : null,
+        m = null != T ? T.message : h.intl.formatToPlainString(h.t.yBmFPA, { count: E }),
+        g = null != T ? ("clock" === T.icon ? d.O : c.c) : d.O;
+    return (0, i.jsx)(u.u, {
         anchorRef: t,
         asContainer: !0,
-        forceOpen: a,
+        forceOpen: (null != n && a) || p,
         hideOnClick: !1,
         position: "bottom",
         align: "right",
         caretConfig: { align: "end" },
-        asset: (0, i.jsx)(u, { size: "sm", color: c.A.colors.TEXT_STRONG }),
+        asset: (0, i.jsx)(g, { size: "sm", color: _.A.colors.TEXT_STRONG }),
         assetSize: 20,
-        body: n?.message ?? "",
+        body: m,
         ariaHidden: !0,
         children: null,
     });
 }
-function A(e) {
-    _.setState({ toast: { ...e }, isVisible: !0, isPulsing: !0 }), u.O.announce(e.message, "polite");
+function T(e) {
+    f.setState({ toast: { ...e }, isVisible: !0, isPulsing: !0 }), E.O.announce(e.message, "polite");
 }
-function h() {
-    return _((e) => e.isPulsing);
+function m() {
+    return f((e) => e.isPulsing);
+}
+function g() {
+    o.w.set(I, Date.now()), f.setState({ inboxLastOpenedAt: Date.now() });
 }
