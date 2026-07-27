@@ -81,7 +81,8 @@
 
 .uploads__94439 {
     display: flex;
-    gap: 8px
+    gap: 8px;
+    padding-inline-end: 8px
 }
 
 .image__94439 {
