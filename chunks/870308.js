@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(64700),
     r = n(379197),
-    s = n(488430),
-    a = n(17928),
-    o = n(554146),
-    l = n(192308),
-    u = n(131607),
+    a = n(488430),
+    s = n(17928),
+    l = n(554146),
+    o = n(192308),
+    d = n(131607),
     c = n(457421),
-    d = n(212407),
+    u = n(212407),
     _ = n(966971),
-    h = n(49999);
-let f = function () {
-    let e = (0, a.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        t = !(0, l.hasAnyModalOpen)(),
-        [n, f] = (0, u.RF)(t ? o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
-        p = (0, d.bv)(e),
-        E =
+    E = n(49999);
+let A = function () {
+    let e = (0, s.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+        t = !(0, o.hasAnyModalOpen)(),
+        [n, A] = (0, d.RF)(t ? l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
+        h = (0, u.bv)(e),
+        I =
             null != n
                 ? (function (e, t) {
-                      if (t?.type === s.G.BADGE)
+                      if (t?.type === a.G.BADGE)
                           return {
                               type: _.FF.BADGE,
                               badgeIcon: t.badgeIcon,
@@ -33,7 +33,7 @@ let f = function () {
                               },
                               showHoverGradient: t.showHoverGradient,
                           };
-                      if (t?.type === s.G.COACHMARK) {
+                      if (t?.type === a.G.COACHMARK) {
                           let e = t.refTargetBackground;
                           return {
                               type: _.FF.COACHMARK,
@@ -44,6 +44,7 @@ let f = function () {
                               buttonLabel: t.buttonLabel,
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
+                              version: t.version,
                               entrypointBackgroundStyle: e?.style,
                               entryPointBackgroundAssets: {
                                   srcDarkHovered: e?.asset?.hovered?.dark,
@@ -51,7 +52,7 @@ let f = function () {
                               },
                           };
                       }
-                      return t?.type === s.G.TAB_TOOLTIP
+                      return t?.type === a.G.TAB_TOOLTIP
                           ? {
                                 type: _.FF.TAB_TOOLTIP,
                                 title: () => t.title,
@@ -69,10 +70,10 @@ let f = function () {
                                 showHoverGradient: t.showHoverGradient,
                             }
                           : null;
-                  })(p, e)
+                  })(h, e)
                 : null,
-        m = i.useCallback(() => {
-            null != E && f(h.i.AUTO);
-        }, [E, f]);
-    return { shopButtonDisplayOptions: E, dismissShopButtonDC: m };
+        f = i.useCallback(() => {
+            null != I && A(E.i.AUTO);
+        }, [I, A]);
+    return { shopButtonDisplayOptions: I, dismissShopButtonDC: f };
 };
