@@ -324,7 +324,13 @@ function Q(e) {
     let eh = (0, o.bG)([y.A], () => y.A.getQueryText($) ?? "");
     n.useEffect(() => {
         s.bP.string(Q) !== eh && eu(eh);
-    }, [eh, Q, eu]);
+    }, [eh, Q, eu]),
+        n.useEffect(() => {
+            let { selection: e } = Q;
+            if (null == e) return;
+            let t = s.bP.string(Q).length;
+            (s.Q6.start(e).offset > t || s.Q6.end(e).offset > t) && s.gB.deselect(Q);
+        }, [$, Q]);
     let ed = (0, o.bG)([y.A], () => y.A.getIsSearchTokensInitialized());
     n.useEffect(() => {
         ed && Q.onChange();
