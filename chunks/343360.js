@@ -1,7 +1,6 @@
 e.exports = {
     uW: "hoverArea__6d3d8",
     kL: "container__6d3d8",
-    DM: "containerHovered__6d3d8",
     F1: "clickableTile__6d3d8",
     qy: "contentColumn__6d3d8",
     iR: "featuredSection__6d3d8",
