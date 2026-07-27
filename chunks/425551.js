@@ -1,8 +1,8 @@
-i.d(t, { aW: () => X, Ay: () => Q, rj: () => z }), i(321073);
+i.d(t, { aW: () => J, Ay: () => K, rj: () => Q }), i(321073);
 var n = i(627968),
-    l = i(64700),
-    s = i(503698),
-    a = i.n(s),
+    s = i(64700),
+    l = i(503698),
+    a = i.n(l),
     r = i(435558),
     d = i.n(r),
     o = i(17928),
@@ -24,20 +24,20 @@ let g = {
 };
 var I = i(770178),
     f = i(20015),
-    v = i(55730),
-    C = i(587895),
-    x = i(834730),
+    x = i(55730),
+    v = i(587895),
+    C = i(834730),
     E = i(291747),
     S = i(866665),
     b = i(101392),
-    y = i(625494),
-    T = i(960850),
-    _ = i(634266);
-function j(e) {
-    let { isEnabled: t, rateLimitPerUser: i, isBypassSlowmode: s, slowmodeCooldownGuess: a } = e,
-        [r, d] = l.useState(!1);
+    j = i(625494),
+    y = i(960850),
+    N = i(634266);
+function T(e) {
+    let { isEnabled: t, rateLimitPerUser: i, isBypassSlowmode: l, slowmodeCooldownGuess: a } = e,
+        [r, d] = s.useState(!1);
     if (
-        (l.useEffect(() => {
+        (s.useEffect(() => {
             function e() {
                 d(!0),
                     setTimeout(() => {
@@ -45,32 +45,32 @@ function j(e) {
                     }, 1e3);
             }
             return (
-                y._.subscribe(A.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+                j._.subscribe(A.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e),
                 () => {
-                    y._.unsubscribe(A.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e);
+                    j._.unsubscribe(A.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e);
                 }
             );
         }, []),
         !t)
     )
         return null;
-    let o = (0, T.VI)(i),
-        u = (0, T.pS)(a, s),
-        c = (0, n.jsxs)(x.E, {
-            className: _.rk,
+    let o = (0, y.VI)(i),
+        u = (0, y.pS)(a, l),
+        c = (0, n.jsxs)(C.E, {
+            className: N.rk,
             variant: "text-xs/medium",
             color: r ? "text-feedback-critical" : "text-muted",
             tabularNumbers: !0,
-            children: [(0, n.jsx)(E.x, { size: "xxs", color: "currentColor", className: _.Eq }), u],
+            children: [(0, n.jsx)(E.x, { size: "xxs", color: "currentColor", className: N.Eq }), u],
         });
-    return (0, n.jsx)(S.m, { text: o, children: (0, n.jsx)("div", { className: _.ns, children: c }) });
+    return (0, n.jsx)(S.m, { text: o, children: (0, n.jsx)("div", { className: N.ns, children: c }) });
 }
-function N(e) {
+function _(e) {
     let { channel: t, isThreadCreation: i = !1 } = e,
-        l = (0, o.bG)([b.A], () => b.A.getSlowmodeCooldownGuess(t.id, i ? b.R.CreateThread : b.R.SendMessage)),
-        s = (0, T._i)(t, i ? b.R.CreateThread : b.R.SendMessage),
+        s = (0, o.bG)([b.A], () => b.A.getSlowmodeCooldownGuess(t.id, i ? b.R.CreateThread : b.R.SendMessage)),
+        l = (0, y._i)(t, i ? b.R.CreateThread : b.R.SendMessage),
         { rateLimitPerUser: a } = t;
-    return (0, n.jsx)(j, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: l });
+    return (0, n.jsx)(T, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: l, slowmodeCooldownGuess: s });
 }
 var O = i(407278);
 let D = {};
@@ -99,11 +99,17 @@ var G = i(629016),
     M = i(287809),
     P = i(531685),
     B = i(403362),
-    V = i(562153),
-    F = i(375708),
-    W = i(379285);
-let H = [];
-class q extends l.PureComponent {
+    V = i(562153);
+let F = (0, i(945810).mj)({
+    name: "2026-07-typing-users-css-dots",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var W = i(375708),
+    H = i(379285);
+let q = [];
+class Z extends s.PureComponent {
     state = { fadeIn: !1 };
     timeout = null;
     componentDidMount() {
@@ -117,9 +123,9 @@ class q extends l.PureComponent {
     logShownEventIfNeeded() {
         let e = this.props.activity.application_id;
         null != e &&
-            -1 === H.indexOf(e) &&
+            -1 === q.indexOf(e) &&
             (p.default.track(A.HAw.SHOW_TUTORIAL, { tutorial: "activity-invite-nux-inline", application_id: e }),
-            H.push(e));
+            q.push(e));
     }
     componentWillUnmount() {
         null !== this.timeout && clearTimeout(this.timeout);
@@ -131,11 +137,11 @@ class q extends l.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, n.jsxs)("div", {
-            className: a()(W.F4, { [W.gV]: this.state.fadeIn }),
+            className: a()(H.F4, { [H.gV]: this.state.fadeIn }),
             children: [
-                (0, n.jsx)("div", { className: W.GZ }),
+                (0, n.jsx)("div", { className: H.GZ }),
                 (0, n.jsx)("span", {
-                    children: F.intl.format(F.t["i/MoCt"], {
+                    children: W.intl.format(W.t["i/MoCt"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -144,11 +150,22 @@ class q extends l.PureComponent {
         });
     }
 }
-function Z(e) {
+function z() {
+    return (0, n.jsxs)("div", {
+        className: H.r$,
+        "aria-hidden": !0,
+        children: [
+            (0, n.jsx)("span", { className: H.Om }),
+            (0, n.jsx)("span", { className: H.Om }),
+            (0, n.jsx)("span", { className: H.Om }),
+        ],
+    });
+}
+function X(e) {
     let {
             activityInviteEducationActivity: t,
             isFocused: i,
-            typingUsers: s,
+            typingUsers: l,
             className: r,
             channel: d,
             isThreadCreation: o,
@@ -157,66 +174,69 @@ function Z(e) {
             isInTextChannel: m = !1,
             shouldShowLegacyGameInviteCreationBanner: p = !1,
         } = e,
-        { rateLimitPerUser: A } = d,
-        g = l.useRef(null),
-        f = l.useRef(null),
-        [v, C] = l.useState(!1),
-        x = l.useCallback(() => {
-            if (null == g.current || null == f.current) return;
-            let e = g.current.getBoundingClientRect();
-            f.current.scrollWidth + 48 > e.width ? C(!0) : C(!1);
+        A = F.useConfig({ location: "TypingUsers" }).enabled,
+        { rateLimitPerUser: g } = d,
+        f = s.useRef(null),
+        x = s.useRef(null),
+        [v, C] = s.useState(!1),
+        E = s.useCallback(() => {
+            if (null == f.current || null == x.current) return;
+            let e = f.current.getBoundingClientRect();
+            x.current.scrollWidth + 48 > e.width ? C(!0) : C(!1);
         }, []);
-    (0, I.g)(g, x, [], { enabled: m }), (0, I.g)(f, x, [], { enabled: m });
-    let [E, S, b] = s,
+    (0, I.g)(f, E, [], { enabled: m }), (0, I.g)(x, E, [], { enabled: m });
+    let [S, b, j] = l,
         y = "";
-    1 === s.length
-        ? (y = F.intl.format(F.t.lJ9sZX, { a: E }))
-        : 2 === s.length
-          ? (y = F.intl.format(F.t.rB0CUa, { a: E, b: S }))
-          : 3 === s.length
-            ? (y = F.intl.format(F.t.StKThj, { a: E, b: S, c: b }))
-            : s.length > 3 && (y = F.intl.format(F.t.Q8lUnE, {}));
-    let T = v && s.length > 0 && s.length <= 3 ? F.intl.format(F.t["qD/0qZ"], {}) : y,
-        _ = s.length > 0 || A > 0 || p,
-        j = !_ && null != t,
-        D = null;
+    1 === l.length
+        ? (y = W.intl.format(W.t.lJ9sZX, { a: S }))
+        : 2 === l.length
+          ? (y = W.intl.format(W.t.rB0CUa, { a: S, b }))
+          : 3 === l.length
+            ? (y = W.intl.format(W.t.StKThj, { a: S, b, c: j }))
+            : l.length > 3 && (y = W.intl.format(W.t.Q8lUnE, {}));
+    let N = v && l.length > 0 && l.length <= 3 ? W.intl.format(W.t["qD/0qZ"], {}) : y,
+        T = l.length > 0 || g > 0 || p,
+        D = !T && null != t,
+        k = null;
     return (
-        _
-            ? (D = (0, n.jsxs)("div", {
-                  className: a()(W.IW, { "stop-animation": !i, [W.Il]: m }, r),
+        T
+            ? (k = (0, n.jsxs)("div", {
+                  className: a()(H.IW, { "stop-animation": !i, [H.Il]: m }, r),
                   children: [
-                      0 === s.length && p
+                      0 === l.length && p
                           ? (0, n.jsx)(O.A, {})
                           : (0, n.jsxs)("div", {
-                                className: W.y5,
-                                ref: g,
+                                className: H.y5,
+                                ref: f,
                                 children: [
-                                    s.length > 0 &&
+                                    l.length > 0 &&
                                         !1 !== u &&
-                                        (0, n.jsx)(c.n, { className: W.gO, dotRadius: 3.5, themed: !0 }),
-                                    (0, n.jsx)("span", { className: W.Qq, "aria-hidden": !0, children: T }),
+                                        (A
+                                            ? (0, n.jsx)(z, {})
+                                            : (0, n.jsx)(c.n, { className: H.gO, dotRadius: 3.5, themed: !0 })),
+                                    (0, n.jsx)("span", { className: H.Qq, "aria-hidden": !0, children: N }),
                                     (0, n.jsx)("span", {
-                                        className: W.Qq,
+                                        className: H.Qq,
                                         style: { position: "absolute", visibility: "hidden" },
                                         "aria-hidden": !0,
-                                        ref: f,
+                                        ref: x,
                                         children: y,
                                     }),
                                 ],
                             }),
-                      !1 !== h && (0, n.jsx)(N, { channel: d, isThreadCreation: o }),
+                      !1 !== h && (0, n.jsx)(_, { channel: d, isThreadCreation: o }),
                   ],
               }))
-            : j && null != t && (D = (0, n.jsx)(q, { activity: t, isFocused: i })),
+            : D && null != t && (k = (0, n.jsx)(Z, { activity: t, isFocused: i })),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                D,
-                (0, n.jsx)("span", { className: W.y4, "aria-live": "polite", "aria-atomic": !0, children: y }),
+                k,
+                (0, n.jsx)("span", { className: H.y4, "aria-live": "polite", "aria-atomic": !0, children: y }),
             ],
         })
     );
 }
-function z(e) {
+function Q(e) {
     let t = (0, o.bG)([L.A], () => L.A.getTypingUsers(e.id)),
         i = (0, o.bG)([M.default], () => M.default.getCurrentUser());
     return d()(t)
@@ -228,26 +248,26 @@ function z(e) {
         .map((t) => V.Ay.getName(e.guild_id, e.id, t))
         .value();
 }
-function X(e) {
+function J(e) {
     let t = (0, o.bG)([U.A], () => U.A.findActivity((e) => null != e.application_id));
-    return (0, o.bG)([w, C.A, R.A, G.A], () =>
+    return (0, o.bG)([w, v.A, R.A, G.A], () =>
         (function (e) {
             let {
                     channel: t,
                     activity: i,
                     ActivityInviteEducationStore: n,
-                    ApplicationStore: l,
-                    RelationshipStore: s,
+                    ApplicationStore: s,
+                    RelationshipStore: l,
                     GamePartyStore: a,
                 } = e,
                 r = i?.application_id;
-            if (null == t || null == i || !(0, v.A)(i, A.jUm.JOIN) || null == r) return !1;
-            let d = l.getApplication(r);
+            if (null == t || null == i || !(0, x.A)(i, A.jUm.JOIN) || null == r) return !1;
+            let d = s.getApplication(r);
             return (
                 !(
                     null == d ||
                     (0, f.n)(d, A.gfo.EMBEDDED) ||
-                    (t.isPrivate() && s.isBlockedOrIgnored(t.getRecipientId())) ||
+                    (t.isPrivate() && l.isBlockedOrIgnored(t.getRecipientId())) ||
                     (t.isDM() && a.getParty(i.party?.id)?.has(t.getRecipientId()) === !0)
                 ) && n.shouldShowEducation(r)
             );
@@ -255,7 +275,7 @@ function X(e) {
             channel: e,
             activity: t,
             ActivityInviteEducationStore: w,
-            ApplicationStore: C.A,
+            ApplicationStore: v.A,
             RelationshipStore: R.A,
             GamePartyStore: G.A,
         }),
@@ -263,20 +283,20 @@ function X(e) {
         ? t
         : null;
 }
-function Q(e) {
-    let { channel: t, isThreadCreation: i = !1, ...l } = e,
-        s = z(t),
+function K(e) {
+    let { channel: t, isThreadCreation: i = !1, ...s } = e,
+        l = Q(t),
         a = (0, O.L)(t.id),
         r = {
-            ...l,
+            ...s,
             baseTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
             activeTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-            activityInviteEducationActivity: X(t),
-            typingUsers: i ? [] : s,
+            activityInviteEducationActivity: J(t),
+            typingUsers: i ? [] : l,
             isFocused: (0, o.bG)([P.A], () => P.A.isFocused()),
             guildId: t.guild_id,
             channel: t,
             isThreadCreation: i,
         };
-    return (0, n.jsx)(Z, { ...r, shouldShowLegacyGameInviteCreationBanner: a });
+    return (0, n.jsx)(X, { ...r, shouldShowLegacyGameInviteCreationBanner: a });
 }

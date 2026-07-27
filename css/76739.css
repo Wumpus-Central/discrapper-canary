@@ -222,9 +222,21 @@
 }
 
 .base_b88801 .ellipsis_b88801 {
-    display: block;
+    display: block
+}
+
+.base_b88801 .dots_b88801,
+.base_b88801 .ellipsis_b88801 {
     flex: 0 0 auto;
     margin-inline-start: 0
+}
+
+.base_b88801 .dots_b88801 {
+    align-items: center;
+    color: var(--text-default);
+    contain: layout paint;
+    display: inline-flex;
+    gap: 2px
 }
 
 .base_b88801 .typingDots_b88801 {
@@ -233,6 +245,64 @@
     flex: 1 1 auto;
     overflow: hidden;
     text-overflow: ellipsis
+}
+
+.dot_b88801 {
+    animation: typing-dot-pulse_b88801 1.2s cubic-bezier(.45, 0, .55, 1) infinite;
+    background: currentColor;
+    border-radius: 50%;
+    height: 7px;
+    opacity: .32;
+    width: 7px
+}
+
+.dot_b88801:first-child {
+    animation-delay: -1.2s
+}
+
+.dot_b88801:nth-child(2) {
+    animation-delay: -1.05s
+}
+
+.dot_b88801:nth-child(3) {
+    animation-delay: -.9s
+}
+
+@keyframes typing-dot-pulse_b88801 {
+
+    0%,
+    50%,
+    to {
+        opacity: .32;
+        scale: .8
+    }
+
+    25% {
+        opacity: 1;
+        scale: 1
+    }
+}
+
+.reduce-motion .dot_b88801 {
+    animation-duration: 2.4s;
+    animation-timing-function: linear
+}
+
+.reduce-motion .dot_b88801:first-child {
+    animation-delay: -2.4s
+}
+
+.reduce-motion .dot_b88801:nth-child(2) {
+    animation-delay: -2.1s
+}
+
+.reduce-motion .dot_b88801:nth-child(3) {
+    animation-delay: -1.8s
+}
+
+.stop-animation .dot_b88801 {
+    animation: none;
+    opacity: 1
 }
 
 .inTextChannel_b88801.base_b88801 {
