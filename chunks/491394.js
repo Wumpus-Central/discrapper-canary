@@ -1,114 +1,83 @@
 "use strict";
-n.d(t, { B9: () => g, gh: () => R, pi: () => S, kg: () => y, QI: () => N, Bp: () => D });
-var i = n(485845),
-    r = n(136722),
-    a = n(17928),
-    s = n(803306),
-    l = n(627363),
-    o = n(587895),
-    d = n(321191),
-    c = n(71393),
-    u = n(576705),
-    _ = n(948230),
-    E = n(906786),
-    A = n(972786),
-    h = n(179771);
-let I = [h.F.BOT, h.F.APPLICATIONS_COMMANDS],
-    f = async function (e) {
-        let { applicationId: t, application: a, guildId: s, onClose: l } = e,
-            o = a?.integrationTypesConfig?.[i.b.GUILD_INSTALL]?.oauth2InstallParams ?? a?.installParams,
-            [{ openOAuth2Modal: d }, { fetchProfile: c }] = await Promise.all([
+n.d(t, { B9: () => p, gh: () => g, pi: () => T, kg: () => N, QI: () => m, Bp: () => C });
+var i = n(17928),
+    r = n(587895),
+    a = n(71393),
+    s = n(576705),
+    l = n(948230),
+    o = n(906786),
+    d = n(972786),
+    c = n(485845),
+    u = n(179771),
+    _ = n(136722);
+let E = [u.F.BOT, u.F.APPLICATIONS_COMMANDS],
+    A = async function (e) {
+        let { applicationId: t, application: i, guildId: r, onClose: a } = e,
+            s = i?.integrationTypesConfig?.[c.b.GUILD_INSTALL]?.oauth2InstallParams ?? i?.installParams,
+            [{ openOAuth2Modal: l }, { fetchProfile: o }] = await Promise.all([
                 Promise.resolve().then(n.bind(n, 887909)),
                 Promise.resolve().then(n.bind(n, 803306)),
             ]);
-        d(
+        l(
             {
                 clientId: t,
-                guildId: s,
+                guildId: r,
                 disableGuildSelect: !0,
-                integrationType: i.b.GUILD_INSTALL,
-                scopes: o?.scopes ?? I,
-                permissions: o?.permissions != null ? r.iu(o.permissions) : void 0,
+                integrationType: c.b.GUILD_INSTALL,
+                scopes: s?.scopes ?? E,
+                permissions: s?.permissions != null ? _.iu(s.permissions) : void 0,
             },
             () => {
-                l?.(), c(t, { withMutualGuilds: !0 });
+                a?.(), o(t, { withMutualGuilds: !0 });
             },
         );
     };
-var p = n(652215);
-let T = "vibegrations_application_id=",
-    m = /^\d{17,20}$/;
-function g(e) {
-    if (null == e || !e.startsWith(T)) return null;
-    let t = e.slice(T.length);
-    return m.test(t) ? t : null;
+var h = n(652215);
+let I = "vibegrations_application_id=",
+    f = /^\d{17,20}$/;
+function p(e) {
+    if (null == e || !e.startsWith(I)) return null;
+    let t = e.slice(I.length);
+    return f.test(t) ? t : null;
+}
+function T(e, t) {
+    return (
+        (0, o.i)({ guildId: e.id, location: t }) &&
+        s.A.can(h.xBc.MANAGE_CHANNELS, e) &&
+        s.A.can(h.xBc.MANAGE_GUILD, e) &&
+        !e.features.has(h.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
+    );
+}
+function m(e, t) {
+    let n = (0, i.bG)([s.A], () => s.A.can(h.xBc.MANAGE_CHANNELS, e) && s.A.can(h.xBc.MANAGE_GUILD, e), [e]),
+        r = (0, o.f)({ guildId: e.id, location: t }),
+        a = e.features.has(h.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    return r && n && !a;
+}
+async function g(e) {
+    let t = d.A.getProject(e),
+        n = t?.preview_guild_id,
+        i = await (0, l.ti)(e);
+    if (!i.ok) return;
+    let { application: a, bot_permissions_changed: s, integration_installed: o, project: c } = i.body,
+        u = c.preview_application_id;
+    if (null == n || null == u || (o && !s)) return;
+    let _ = r.A.getApplication(u);
+    null != _ && (await A({ applicationId: a.id, application: _, guildId: n }));
 }
 function S(e, t) {
     return (
-        (0, E.i)({ guildId: e.id, location: t }) &&
-        u.A.can(p.xBc.MANAGE_CHANNELS, e) &&
-        u.A.can(p.xBc.MANAGE_GUILD, e) &&
-        !e.features.has(p.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
+        null != e &&
+        e.type === h.rbe.GUILD_TEXT &&
+        null != p(e.topic) &&
+        !t?.features.has(h.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
 function N(e, t) {
-    let n = (0, a.bG)([u.A], () => u.A.can(p.xBc.MANAGE_CHANNELS, e) && u.A.can(p.xBc.MANAGE_GUILD, e), [e]),
-        i = (0, E.f)({ guildId: e.id, location: t }),
-        r = e.features.has(p.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
-    return i && n && !r;
+    return S(e, a.A.getGuild(e?.guild_id)) && (0, o.i)({ guildId: e?.guild_id, location: t });
 }
-function C(e) {
-    let t = e.integrationTypesConfig?.[i.b.GUILD_INSTALL]?.oauth2InstallParams ?? e.installParams;
-    return t?.permissions != null ? r.iu(t.permissions) : r.BY;
-}
-async function O(e, t) {
-    try {
-        await (0, s.fetchProfile)(e, { withMutualGuilds: !0 });
-    } catch {
-        return !1;
-    }
-    return (
-        d.A.getMutualGuilds(e)?.some((e) => {
-            let { guild: n } = e;
-            return n.id === t;
-        }) ?? !1
-    );
-}
-async function R(e) {
-    let t = A.A.getProject(e),
-        n = t?.preview_guild_id,
-        i = t?.preview_application_id ?? null,
-        a = null;
-    if (null != i) {
-        if (null == o.A.getApplication(i) || !o.A.isHydrated(i))
-            try {
-                await l.Ay.fetchApplication(i);
-            } catch {}
-        let e = o.A.getApplication(i);
-        null != e && (a = C(e));
-    }
-    let s = await (0, _.ti)(e);
-    if (!s.ok) return;
-    let d = s.body.preview_application_id;
-    if (null == n || null == d) return;
-    let c = o.A.getApplication(d);
-    if (null == c) return;
-    let u = r.aI(a ?? r.BY, C(c));
-    ((await O(d, n)) && u) || (await f({ applicationId: d, application: c, guildId: n }));
-}
-function L(e, t) {
-    return (
-        null != e &&
-        e.type === p.rbe.GUILD_TEXT &&
-        null != g(e.topic) &&
-        !t?.features.has(p.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
-    );
-}
-function y(e, t) {
-    return L(e, c.A.getGuild(e?.guild_id)) && (0, E.i)({ guildId: e?.guild_id, location: t });
-}
-function D(e, t) {
-    let n = (0, a.bG)([c.A], () => c.A.getGuild(e?.guild_id)),
-        i = (0, E.f)({ guildId: e?.guild_id, location: t });
-    return L(e, n) && i;
+function C(e, t) {
+    let n = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
+        r = (0, o.f)({ guildId: e?.guild_id, location: t });
+    return S(e, n) && r;
 }
