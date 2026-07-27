@@ -219,6 +219,10 @@ class A extends s.A {
                                     isFirstParty: e.is_first_party,
                                 };
                         })(e.collectibles),
+                        gameServerPlanFeatures: e.plan_features?.map((e) => ({
+                            title: e.title,
+                            description: e.description,
+                        })),
                     };
             })(e.tenant_metadata),
             selectedOptions:

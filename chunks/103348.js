@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(749394),
     r = n(32731);
-class s {
+class a {
     id;
     skuIds;
     name;
@@ -15,6 +15,7 @@ class s {
     primaryCollectionStyles;
     primaryCollectionPdpBgUrl;
     primaryCollectionWillUnpublishAt;
+    gameApplicationId;
     constructor(e) {
         (this.id = e.id),
             (this.skuIds = e.skuIds),
@@ -27,27 +28,29 @@ class s {
             (this.primaryCollectionId = e.primaryCollectionId),
             (this.primaryCollectionStyles = e.primaryCollectionStyles),
             (this.primaryCollectionPdpBgUrl = e.primaryCollectionPdpBgUrl),
-            (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt);
+            (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt),
+            (this.gameApplicationId = e.gameApplicationId);
     }
     static fromServer(e) {
-        let { sku_ids: t, options: n, created_at: a, updated_at: o, skus: l, tenant_metadata: u, ...c } = e;
-        return new s({
+        let { sku_ids: t, options: n, created_at: s, updated_at: l, skus: o, tenant_metadata: d, ...c } = e;
+        return new a({
             ...c,
             skuIds: t,
             options: n.map((e) => ({ name: e.name, optionValues: e.option_values })),
-            createdAt: new Date(a),
-            updatedAt: new Date(o),
-            skus: l.map((e) => r.A.createFromServer(e)),
-            primaryCollectionId: u.collectibles.primary_collection_id,
+            createdAt: new Date(s),
+            updatedAt: new Date(l),
+            skus: o.map((e) => r.A.createFromServer(e)),
+            primaryCollectionId: d.collectibles.primary_collection_id,
             primaryCollectionStyles:
-                null != u.collectibles.primary_collection_styles
-                    ? i.A.fromServer(u.collectibles.primary_collection_styles)
+                null != d.collectibles.primary_collection_styles
+                    ? i.A.fromServer(d.collectibles.primary_collection_styles)
                     : void 0,
-            primaryCollectionPdpBgUrl: u.collectibles.primary_collection_pdp_bg_url,
+            primaryCollectionPdpBgUrl: d.collectibles.primary_collection_pdp_bg_url,
             primaryCollectionWillUnpublishAt:
-                null != u.collectibles.primary_collection_will_unpublish_at
-                    ? new Date(u.collectibles.primary_collection_will_unpublish_at)
+                null != d.collectibles.primary_collection_will_unpublish_at
+                    ? new Date(d.collectibles.primary_collection_will_unpublish_at)
                     : void 0,
+            gameApplicationId: d.guild_monetization?.game_server?.game_application_id,
         });
     }
 }
