@@ -10,13 +10,13 @@ var n = i(627968),
     u = i(277984),
     g = i(840387),
     m = i(201718),
-    f = i(615405),
-    x = i(633075),
+    x = i(615405),
+    f = i(633075),
     h = i(289173),
     I = i(311043),
     p = i(569926),
-    A = i(958805),
-    j = i(61881),
+    j = i(958805),
+    A = i(61881),
     E = i(435558),
     S = i(353640),
     T = i(540185),
@@ -125,8 +125,8 @@ var w = i(600761),
     _ = i(821609),
     G = i(307301),
     L = i(183555),
-    D = i(375708),
-    P = i(964828);
+    P = i(375708),
+    D = i(964828);
 function M(e) {
     let { className: t } = e,
         { trackUserProfileEditAction: l } = (0, L.NJ)(),
@@ -141,12 +141,12 @@ function M(e) {
                 );
         }, [l]);
     return (0, n.jsxs)("div", {
-        className: r()(P.w, t),
+        className: r()(D.w, t),
         children: [
-            (0, n.jsx)(d.E, { variant: "text-xs/semibold", color: "text-subtle", children: D.intl.string(D.t.OYlggR) }),
+            (0, n.jsx)(d.E, { variant: "text-xs/semibold", color: "text-subtle", children: P.intl.string(P.t.OYlggR) }),
             (0, n.jsx)(_.$, {
                 icon: G.j,
-                text: D.intl.string(D.t["lBG2s/"]),
+                text: P.intl.string(P.t["lBG2s/"]),
                 size: "sm",
                 variant: "secondary",
                 onClick: a,
@@ -172,7 +172,7 @@ var U = i(192),
 function ee(e) {
     let { user: t, application: i, onDismiss: l } = e,
         { trackUserProfileEditAction: r } = (0, L.NJ)(),
-        a = s.useMemo(() => new x.R({ applicationId: i.id }), [i.id]),
+        a = s.useMemo(() => new f.R({ applicationId: i.id }), [i.id]),
         o = s.useCallback(() => {
             null != a &&
                 ((0, Q.Y5)(a),
@@ -186,31 +186,31 @@ function ee(e) {
         subtle: !0,
         cta: (0, n.jsx)(O.A.Cta, {
             showSuggestedForYou: !0,
-            heading: D.intl.format(D.t.OIzLCy, { applicationName: i.name }),
-            content: D.intl.format(D.t.BQySru, { applicationName: i.name }),
+            heading: P.intl.format(P.t.OIzLCy, { applicationName: i.name }),
+            content: P.intl.format(P.t.BQySru, { applicationName: i.name }),
             buttons: (0, n.jsxs)(n.Fragment, {
                 children: [
                     (0, n.jsx)(z.m, {
-                        text: D.intl.string(D.t.WAI6xu),
+                        text: P.intl.string(P.t.WAI6xu),
                         ariaHidden: !0,
                         children: (0, n.jsx)(Y.S, {
                             variant: "secondary",
                             size: "sm",
                             icon: K.P,
-                            "aria-label": D.intl.string(D.t.WAI6xu),
+                            "aria-label": P.intl.string(P.t.WAI6xu),
                             onClick: () => {
                                 l($.i.USER_DISMISS);
                             },
                         }),
                     }),
                     (0, n.jsx)(z.m, {
-                        text: D.intl.string(D.t["lBG2s/"]),
+                        text: P.intl.string(P.t["lBG2s/"]),
                         ariaHidden: !0,
                         children: (0, n.jsx)(Y.S, {
                             variant: "primary",
                             size: "sm",
                             icon: q.U,
-                            "aria-label": D.intl.formatToPlainString(D.t.KfGahB, { applicationName: i.name }),
+                            "aria-label": P.intl.formatToPlainString(P.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
                                 l($.i.TAKE_ACTION), o();
                             },
@@ -243,7 +243,7 @@ function et() {
                         ? []
                         : i.filter(
                               (e) =>
-                                  !(null == e || r.some((t) => t instanceof x.R && t.applicationId === e.id)) &&
+                                  !(null == e || r.some((t) => t instanceof f.R && t.applicationId === e.id)) &&
                                   null != n.find((t) => t.application.id === e.id),
                           ),
                 [o, i, n, r],
@@ -264,7 +264,7 @@ function et() {
 }
 var ei = i(128988),
     en = i(280450),
-    es = i(321191),
+    es = i(82191),
     el = i(896170),
     er = i(765178),
     ea = i(922016),
@@ -274,42 +274,42 @@ var ei = i(128988),
     eu = i(499373),
     eg = i(939249),
     em = i(663341),
-    ef = i(383329),
-    ex = i(250573);
+    ex = i(383329),
+    ef = i(250573);
 function eh(e) {
     let { widgetType: t, widget: i, onAddGame: l, children: r, ...a } = e,
         o = s.useMemo(() => new Set(i.games.map((e) => e.applicationId)), [i.games]),
         { trackUserProfileEditAction: d } = (0, L.NJ)(),
         [c, u] = s.useState(""),
         g = s.useRef(""),
-        { options: m, matchSorterOptions: f } = (0, ef.R)({ query: c }),
-        x = c.trim().length > 0,
+        { options: m, matchSorterOptions: x } = (0, ex.R)({ query: c }),
+        f = c.trim().length > 0,
         { applicationIds: h, onAddGame: I } = C(t),
         p = s.useCallback(
             (e) => {
                 (0, Q.ew)({ widgetType: t, game: { applicationId: e } }),
-                    er.O.announce(D.intl.string(D.t.q0U3DE)),
+                    er.O.announce(P.intl.string(P.t.q0U3DE)),
                     d({ action: "GAME_ADDED", gameId: e, widgetEdited: t }),
                     h.includes(e) && I(e),
                     l?.();
             },
             [t, d, l, h, I],
         ),
-        A = s.useMemo(() => {
+        j = s.useMemo(() => {
             let e = new Map(
                 m.map((e) => [
                     String(e.value),
                     { id: String(e.value), value: String(e.value), label: e.label, disabled: o.has(e.value) },
                 ]),
             );
-            if (x) return [...e.values()];
+            if (f) return [...e.values()];
             let t = h.map((t) => e.get(t)).filter((e) => null != e && !e.disabled),
                 i = [...e.values()].filter((e) => !t.includes(e));
             return [...t, ...i];
-        }, [m, o, h, x]),
-        j = s.useCallback((e) => e, []),
-        E = s.useMemo(() => ({ ...f, threshold: el.Ht.rankings.CONTAINS, keys: ["label"] }), [f]),
-        S = s.useCallback((e) => (x || "" === e.trim() ? A.length : (0, el.Ht)(A, e, E).length), [x, A, E]),
+        }, [m, o, h, f]),
+        A = s.useCallback((e) => e, []),
+        E = s.useMemo(() => ({ ...x, threshold: el.Ht.rankings.CONTAINS, keys: ["label"] }), [x]),
+        S = s.useCallback((e) => (f || "" === e.trim() ? j.length : (0, el.Ht)(j, e, E).length), [f, j, E]),
         T = s.useCallback(
             (e) => {
                 let i = e.target.value;
@@ -342,22 +342,22 @@ function eh(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, n.jsx)(eo.l, {
-                className: ex.C,
-                "aria-label": D.intl.string(D.t.uqw8wK),
+                className: ef.C,
+                "aria-label": P.intl.string(P.t.uqw8wK),
                 children: (0, n.jsxs)(ed.iS, {
                     selectionMode: "single",
                     value: null,
                     onSelectionChange: (e) => {
                         null != e && (p(e), t());
                     },
-                    options: A,
+                    options: j,
                     matchSorterOptions: E,
-                    customMatchSorter: x ? j : void 0,
+                    customMatchSorter: f ? A : void 0,
                     children: [
                         (0, n.jsx)(ed.a3, {
-                            label: D.intl.string(D.t["5h0QOP"]),
+                            label: P.intl.string(P.t["5h0QOP"]),
                             hideLabel: !0,
-                            placeholder: D.intl.string(D.t["5h0QOP"]),
+                            placeholder: P.intl.string(P.t["5h0QOP"]),
                             autoFocus: !0,
                             onQueryChange: T,
                         }),
@@ -379,7 +379,7 @@ function eI(e) {
         ...i,
         children: (e) =>
             (0, n.jsx)(z.m, {
-                text: D.intl.string(D.t.SgTOtX),
+                text: P.intl.string(P.t.SgTOtX),
                 asContainer: !0,
                 ariaHidden: !0,
                 children: (0, n.jsx)(ec.K, {
@@ -387,7 +387,7 @@ function eI(e) {
                     variant: "secondary",
                     size: "sm",
                     icon: eu.T,
-                    "aria-label": D.intl.string(D.t.SgTOtX),
+                    "aria-label": P.intl.string(P.t.SgTOtX),
                     disabled: t,
                     ...e,
                 }),
@@ -404,18 +404,18 @@ function ep(e) {
         children: (e) =>
             (0, n.jsx)(eg.D, {
                 innerRef: t,
-                className: ex.c,
-                "aria-label": D.intl.string(D.t.SgTOtX),
+                className: ef.c,
+                "aria-label": P.intl.string(P.t.SgTOtX),
                 ...e,
                 children: (0, n.jsx)(em.p, { color: "currentColor" }),
             }),
     });
 }
-let eA = s.createContext(null);
-function ej(e) {
+let ej = s.createContext(null);
+function eA(e) {
     let { widgetType: t, children: i } = e,
-        l = (0, a.bG)([j.A], () => {
-            let e = j.A.getPendingWidgets();
+        l = (0, a.bG)([A.A], () => {
+            let e = A.A.getPendingWidgets();
             if (null == e) return !1;
             let i = e.find((e) => e.type === t);
             if (null == i) return !1;
@@ -423,10 +423,10 @@ function ej(e) {
             return i.games.length > n;
         }),
         [r, o] = s.useState(l);
-    return (0, n.jsx)(eA.Provider, { value: { expanded: r, setExpanded: o }, children: i });
+    return (0, n.jsx)(ej.Provider, { value: { expanded: r, setExpanded: o }, children: i });
 }
 function eE() {
-    let e = s.useContext(eA);
+    let e = s.useContext(ej);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
@@ -436,7 +436,7 @@ function eT(e) {
     let { widget: t } = e,
         i = (0, Q.cv)(t.type),
         s = 1 === i,
-        l = s ? D.intl.string(D.t["3FdPBT"]) : D.intl.format(D.t.W8K2GH, { maxGames: i });
+        l = s ? P.intl.string(P.t["3FdPBT"]) : P.intl.format(P.t.W8K2GH, { maxGames: i });
     return (0, n.jsxs)("div", {
         className: s ? eS.O : eS.k,
         children: [
@@ -459,7 +459,7 @@ function ew(e) {
               className: eC.l,
               children: (0, n.jsx)(eb.w, {
                   type: "warning",
-                  children: D.intl.formatToPlainString(D.t.Rv3wYq, { maxGames: s }),
+                  children: P.intl.formatToPlainString(P.t.Rv3wYq, { maxGames: s }),
               }),
           });
 }
@@ -473,7 +473,7 @@ function ek(e) {
         children: (0, n.jsx)(d.E, {
             variant: "text-sm/medium",
             color: "none",
-            children: i ? D.intl.string(D.t["6MwJo/"]) : D.intl.string(D.t.lBeKY2),
+            children: i ? P.intl.string(P.t["6MwJo/"]) : P.intl.string(P.t.lBeKY2),
         }),
     });
 }
@@ -547,7 +547,7 @@ function eL(e) {
                 : (0, n.jsx)(eT, { widget: i }),
     });
 }
-function eD(e) {
+function eP(e) {
     let { user: t, widget: i, guildId: s, channelId: l, allowEditing: r, disableInteraction: a, ...o } = e,
         d = i.games[0];
     return (0, n.jsx)(ev.A, {
@@ -570,11 +570,11 @@ function eD(e) {
                 : (0, n.jsx)(eT, { widget: i }),
     });
 }
-var eP = i(768754);
+var eD = i(768754);
 function eM(e) {
     let { games: t, renderGame: i } = e;
     return (0, n.jsx)("ul", {
-        className: eP.V,
+        className: eD.V,
         children: t.map((e, t) => (0, n.jsx)("li", { children: i(e, t) }, e.applicationId)),
     });
 }
@@ -595,7 +595,7 @@ function ez(e) {
         listType: i,
         itemType: "GAME_COVER",
         itemPreviewProps: { imageSrc: r, gameName: a, getWidth: () => c.current?.offsetWidth },
-        "aria-label": D.intl.formatToPlainString(D.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": P.intl.formatToPlainString(P.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, Q.Un)(i, e, t),
         onEnd: () => d(l.applicationId),
         className: eX.kL,
@@ -618,8 +618,8 @@ function eY(e) {
         } = e,
         { coverImageUrl: c, gameName: u, isLoading: g } = (0, eF.A)(t.applicationId),
         { registerDragHandleRef: m } = (0, eN.r)(),
-        f = l && !r,
-        { isDragging: x } = (0, eU.V)((e) => ({ isDragging: e.isDragging() }));
+        x = l && !r,
+        { isDragging: f } = (0, eU.V)((e) => ({ isDragging: e.isDragging() }));
     function h() {
         return (0, n.jsxs)(n.Fragment, {
             children: [
@@ -630,11 +630,11 @@ function eY(e) {
                     userId: i,
                     disableInteraction: r,
                     className: null == c || r ? void 0 : eV.iL,
-                    hideTooltip: x,
+                    hideTooltip: f,
                     coverRef: d,
                 }),
-                f && (0, n.jsx)(eW.jV, { buttonRef: m(t.applicationId), className: eX.BU }),
-                f &&
+                x && (0, n.jsx)(eW.jV, { buttonRef: m(t.applicationId), className: eX.BU }),
+                x &&
                     (0, n.jsx)(eB.A, {
                         game: t,
                         widgetType: s,
@@ -646,7 +646,7 @@ function eY(e) {
     }
     return g
         ? (0, n.jsx)("div", { className: eV.mD })
-        : f
+        : x
           ? (0, n.jsx)(ez, { widgetType: s, index: a ?? 0, game: t, coverImageUrl: c, gameName: u, children: h() })
           : (0, n.jsx)("div", { className: eX.kL, children: h() });
 }
@@ -741,8 +741,8 @@ var eZ = i(661531),
 function e8(e) {
     let { applicationId: t, userId: i, onClick: s } = e,
         { coverImageUrl: l, gameName: r, isLoading: o } = (0, eF.A)(t),
-        d = (0, a.bG)([j.A], () => j.A.suggestedFetchIsLoading),
-        c = D.intl.formatToPlainString(D.t["3mb1s5"], { game: r });
+        d = (0, a.bG)([A.A], () => A.A.suggestedFetchIsLoading),
+        c = P.intl.formatToPlainString(P.t["3mb1s5"], { game: r });
     return o || d
         ? (0, n.jsx)("div", { className: eV.mD })
         : (0, n.jsx)(z.m, {
@@ -778,7 +778,7 @@ function e2(e) {
                 children: [
                     (0, n.jsx)(eg.D, {
                         className: e1.r,
-                        "aria-label": D.intl.string(D.t["pUR+3g"]),
+                        "aria-label": P.intl.string(P.t["pUR+3g"]),
                         onClick: s,
                         children: (0, n.jsx)(K.P, { size: "sm", color: "currentColor" }),
                     }),
@@ -786,7 +786,7 @@ function e2(e) {
                         id: o,
                         variant: "text-xs/medium",
                         color: "text-subtle",
-                        children: D.intl.string(D.t.zMUr6Z),
+                        children: P.intl.string(P.t.zMUr6Z),
                     }),
                 ],
             }),
@@ -825,7 +825,7 @@ function e5(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case T.x.FAVORITE_GAMES:
-            return (0, n.jsx)(eD, { widget: t, ...i });
+            return (0, n.jsx)(eP, { widget: t, ...i });
         case T.x.CURRENT_GAMES:
             return (0, n.jsx)(eL, { widget: t, ...i });
         case T.x.WANT_TO_PLAY_GAMES:
@@ -858,8 +858,8 @@ function e3(e) {
         })(t),
         g = l && !r,
         m = g && c,
-        f = (0, Q.L)(t),
-        x = (0, Q.FM)(t, { showEditingControls: g }),
+        x = (0, Q.L)(t),
+        f = (0, Q.FM)(t, { showEditingControls: g }),
         h = (0, Q.uA)(t),
         I = 1 === (0, Q.cv)(t.type);
     return (0, n.jsx)(e5, {
@@ -867,8 +867,8 @@ function e3(e) {
         user: i,
         allowEditing: l,
         disableInteraction: r,
-        headerTitle: f,
-        headerSubtitle: x,
+        headerTitle: x,
+        headerSubtitle: f,
         headerActionButtons:
             g && !I
                 ? [
@@ -885,7 +885,7 @@ function e3(e) {
 }
 function e9(e) {
     let { widget: t, ...i } = e;
-    return (0, n.jsx)(ej, { widgetType: t.type, children: (0, n.jsx)(e3, { widget: t, ...i }) });
+    return (0, n.jsx)(eA, { widgetType: t.type, children: (0, n.jsx)(e3, { widget: t, ...i }) });
 }
 var e4 = i(576260),
     te = i(841417),
@@ -911,19 +911,19 @@ function ts(e) {
                         (0, n.jsx)(e$.D, {
                             variant: "heading-md/medium",
                             color: "text-strong",
-                            children: D.intl.string(D.t["oqalC+"]),
+                            children: P.intl.string(P.t["oqalC+"]),
                         }),
                         (0, n.jsx)(d.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: o ? D.intl.string(D.t["+W59o5"]) : D.intl.string(D.t.O9SQ1c),
+                            children: o ? P.intl.string(P.t["+W59o5"]) : P.intl.string(P.t.O9SQ1c),
                         }),
                     ],
                 }),
                 !o &&
                     (0, n.jsx)("ul", {
                         className: tn.ZW,
-                        "aria-label": D.intl.string(D.t["+EIBSA"]),
+                        "aria-label": P.intl.string(P.t["+EIBSA"]),
                         children: c.map((e) =>
                             (0, n.jsx)(
                                 "li",
@@ -945,7 +945,7 @@ function ts(e) {
 var tl = i(456620);
 function tr(e) {
     let { widget: t, ...i } = e;
-    return t instanceof x.R
+    return t instanceof f.R
         ? (0, n.jsx)(O.A, { widget: t, ...i })
         : (0, h.fu)(t)
           ? (0, n.jsx)(e9, { widget: t, ...i })
@@ -957,10 +957,10 @@ function ta() {
         children: [
             (0, n.jsx)(o.m, { size: "xs" }),
             (0, n.jsx)(d.E, {
-                "aria-label": D.intl.string(D.t["7blcz6"]),
+                "aria-label": P.intl.string(P.t["7blcz6"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: D.intl.string(D.t["7blcz6"]),
+                children: P.intl.string(P.t["7blcz6"]),
             }),
         ],
     });
@@ -970,7 +970,7 @@ function to(e) {
         r = (0, R.A)(t.id),
         o = (0, k.A)(t.id),
         d = (function () {
-            let [e, t] = (0, a.yK)([f.A], () => [f.A.ipCountryCode, f.A.ipCountryCodeRequest]),
+            let [e, t] = (0, a.yK)([x.A], () => [x.A.ipCountryCode, x.A.ipCountryCodeRequest]),
                 i = (0, g.Z)();
             return (
                 s.useEffect(() => {
@@ -981,7 +981,7 @@ function to(e) {
         })(),
         I = 0 === r.length && o,
         p = s.useMemo(() => r.filter(h.fu), [r]),
-        E = s.useMemo(() => r.filter((e) => e instanceof x.R), [r]);
+        E = s.useMemo(() => r.filter((e) => e instanceof f.R), [r]);
     function S() {
         return (0, n.jsxs)(n.Fragment, {
             children: [
@@ -1000,15 +1000,15 @@ function to(e) {
         });
     }
     return (!(function (e, t) {
-        let [i, n, l, r] = (0, a.yK)([j.A], () => [
-                j.A.suggestedFetchAttempted,
-                j.A.suggestedFetchError,
-                j.A.suggestedGameIds,
-                j.A.suggestedFetchIsLoading,
+        let [i, n, l, r] = (0, a.yK)([A.A], () => [
+                A.A.suggestedFetchAttempted,
+                A.A.suggestedFetchError,
+                A.A.suggestedGameIds,
+                A.A.suggestedFetchIsLoading,
             ]),
             { onLoad: o } = b();
         s.useEffect(() => {
-            !i && e && A.A.fetchSuggestedGames();
+            !i && e && j.A.fetchSuggestedGames();
         }, [i, e]);
         let d = i && !r;
         s.useEffect(() => {

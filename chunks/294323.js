@@ -6,15 +6,15 @@ var l = n(64700),
     a = n(201718),
     o = n(339580),
     u = n(633075),
-    c = n(321191),
+    c = n(82191),
     d = n(903209),
     m = n(385113),
     p = n(352003);
 function g(e, t) {
     var n, g, h;
     let f,
-        x,
-        [A, E] =
+        A,
+        [x, E] =
             ((0, p.A)(null != t ? [t] : []),
             (0, i.yK)([m.A], () => {
                 if (null == t) return [!1, null];
@@ -30,10 +30,10 @@ function g(e, t) {
         [S, j] =
             ((g = I ? e : null),
             (h = I ? t : null),
-            (x = (0, i.bG)([o.A], () => null != g && o.A.getFetchState(g) === o.e.NOT_FETCHED, [g])),
+            (A = (0, i.bG)([o.A], () => null != g && o.A.getFetchState(g) === o.e.NOT_FETCHED, [g])),
             l.useEffect(() => {
-                x && null != g && a.A.fetchUserApplicationIdentitiesWithProfiles(g);
-            }, [x, g]),
+                A && null != g && a.A.fetchUserApplicationIdentitiesWithProfiles(g);
+            }, [A, g]),
             (0, i.yK)([o.A], () => {
                 if (null == g || null == h) return [!1, null];
                 let e = o.A.getUserIdentityByApplication(g, h) ?? null;
@@ -53,7 +53,7 @@ function g(e, t) {
                 [(t || s) && null == n, n]
             );
         })(I ? e : null),
-        b = A || v || S || _;
+        b = x || v || S || _;
     return l.useMemo(
         () => ({
             isLoading: b,

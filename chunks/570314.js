@@ -15,10 +15,10 @@ var n = t(627968),
     C = t(734057),
     _ = t(309010),
     x = t(174459),
-    h = t(957565),
-    b = t(998218),
-    f = t(692848),
-    j = t(321191),
+    f = t(957565),
+    h = t(998218),
+    b = t(692848),
+    j = t(82191),
     k = t(403777),
     D = t(993401),
     I = t(652215),
@@ -37,14 +37,14 @@ function v(e) {
                       (0, r.closeModal)((0, k.n)(F, m?.guild_id)),
                       t?.(),
                       x.default.track(I.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: S.id }))
-                    : (0, f.o)({ applicationId: S.id, ...S }));
+                    : (0, b.o)({ applicationId: S.id, ...S }));
         }, [S, y, F, m?.guild_id, t]),
         U = y ? R.intl.string(R.t["Cia+A8"]) : R.intl.string(R.t.NgXl3C);
     if (null == S || !(0, g.Ie)(S)) return null;
     let { customInstallUrl: w } = S,
-        G = null == w || b.A.isDiscordUrl(w) ? o.j : d.I,
+        G = null == w || h.A.isDiscordUrl(w) ? o.j : d.I,
         N = y ? void 0 : G;
-    return h.p5
+    return f.p5
         ? (0, n.jsx)(u.Y, {
               targetElementRef: E,
               renderPopout: (e) => {
@@ -59,7 +59,7 @@ function v(e) {
                           children: (0, n.jsx)(s.Dr, {
                               id: "copy",
                               label: R.intl.string(R.t.XWDihq),
-                              action: () => (0, h.C)((0, P.V)(S)),
+                              action: () => (0, f.C)((0, P.V)(S)),
                           }),
                       }),
                   });

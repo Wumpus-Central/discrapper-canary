@@ -6,7 +6,7 @@ var i = n(811315),
     s = n(685073),
     l = n(696451),
     o = n(287809),
-    d = n(321191);
+    d = n(82191);
 function c(e) {
     let { guildId: t, ...n } = e,
         i = o.default.getCurrentUser();

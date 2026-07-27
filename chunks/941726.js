@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(201718),
     _ = n(339580),
     E = n(633075),
-    A = n(321191),
+    A = n(82191),
     h = n(903209),
     I = n(885386),
     f = n(403362),
@@ -38,8 +38,8 @@ function g(e) {
                         O,
                         R,
                         L,
-                        D,
                         y,
+                        D,
                         v,
                         b,
                         M,
@@ -99,13 +99,13 @@ function g(e) {
                                 ),
                             [U, R],
                         )),
-                        (D = r.useMemo(
+                        (y = r.useMemo(
                             () => [...new Set(N.filter((e) => e.extra.application_id in L).map((e) => e.author_id))],
                             [N, L],
                         )),
-                        { widgetApps: L, userIdsWhoMightHaveWidgetData: D, isFetchingApplications: O }),
+                        { widgetApps: L, userIdsWhoMightHaveWidgetData: y, isFetchingApplications: O }),
                         { identitiesByUserId: F, isLoadingIdentities: V } =
-                            ((y = (0, l.cf)([_.A], () =>
+                            ((D = (0, l.cf)([_.A], () =>
                                 Object.fromEntries(x.map((e) => [e, _.A.getUserIdentities(e)]).filter(f.QE)),
                             )),
                             (v = (0, l.bG)([_.A], () =>
@@ -114,7 +114,7 @@ function g(e) {
                             r.useEffect(() => {
                                 x.length > 0 && u.P.fetchMany(...x.map((e) => [e]));
                             }, [x]),
-                            { identitiesByUserId: y, isLoadingIdentities: v }),
+                            { identitiesByUserId: D, isLoadingIdentities: v }),
                         { profilesByUserId: B, isLoadingProfiles: H } =
                             ((b = (0, l.cf)([A.A], () =>
                                 Object.fromEntries(x.map((e) => [e, A.A.getUserProfile(e) ?? null]).filter(f.QE)),

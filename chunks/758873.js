@@ -1,66 +1,66 @@
 "use strict";
-n.d(t, { A: () => O, G: () => R });
+n.d(t, { A: () => y, G: () => L });
 var i = n(64700),
     r = n(17928),
-    s = n(714114),
-    a = n(87664),
-    o = n(616356),
-    l = n(495544),
-    u = n(734057),
+    a = n(714114),
+    s = n(87664),
+    l = n(616356),
+    o = n(280450),
+    d = n(734057),
     c = n(576705),
-    d = n(290863),
+    u = n(290863),
     _ = n(994500),
-    h = n(461213),
-    f = n(977997),
-    p = n(841595),
-    E = n(343129),
-    m = n(489379),
-    g = n(818348);
-let A = Object.freeze([]),
-    I = {
-        ApplicationStreamingStore: o.A,
-        PresenceStore: d.A,
+    E = n(461213),
+    A = n(977997),
+    h = n(82191),
+    I = n(343129),
+    f = n(489379),
+    p = n(818348);
+let T = Object.freeze([]),
+    m = {
+        ApplicationStreamingStore: l.A,
+        PresenceStore: u.A,
         RelationshipStore: _.A,
-        SelfPresenceStore: h.A,
-        UserProfileStore: p.A,
+        SelfPresenceStore: E.A,
+        UserProfileStore: h.A,
     },
-    T = { ChannelStore: u.A, PermissionStore: c.A, PresenceStore: d.A, VoiceStateStore: f.A },
-    S = { ...I, ...T },
-    y = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
+    g = { ChannelStore: d.A, PermissionStore: c.A, PresenceStore: u.A, VoiceStateStore: A.A },
+    S = { ...m, ...g },
+    N = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function C(e) {
     let { userId: t, currentUserId: n, guildId: i } = e,
-        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I,
-        s = null != t ? r.PresenceStore.getActivities(t) : A,
-        o = (function (e) {
+        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m,
+        a = null != t ? r.PresenceStore.getActivities(t) : T,
+        l = (function (e) {
             let { userId: t, currentUserId: n, guildId: i } = e,
-                r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
+                r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
             return null == t
-                ? g.cl.OFFLINE
+                ? p.cl.OFFLINE
                 : t === n
                   ? r.SelfPresenceStore.getStatus()
                   : r.PresenceStore.getStatus(t, i);
         })({ userId: t, currentUserId: n, guildId: i }, r);
     return {
-        activities: s,
-        isOffline: o === g.cl.OFFLINE || o === g.cl.INVISIBLE,
+        activities: a,
+        isOffline: l === p.cl.OFFLINE || l === p.cl.INVISIBLE,
         isPrivate: null != t && r.UserProfileStore.getUserProfile(t)?.private === !0,
-        stream: (0, a.M)(t, [r.ApplicationStreamingStore, r.RelationshipStore]),
+        stream: (0, s.M)(t, [r.ApplicationStreamingStore, r.RelationshipStore]),
     };
 }
-function N(e) {
+function O(e) {
     let { userId: t, guildId: n } = e,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T,
-        r = (0, s.t$)({ userId: t, guildId: n }, i);
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g,
+        r = (0, a.t$)({ userId: t, guildId: n }, i);
     return null == r.voiceChannel
-        ? y
+        ? N
         : {
               ...r,
               voiceActivity: (function (e, t) {
-                  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T;
+                  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g;
                   if (null != e && null != t)
                       return (
                           n.PresenceStore.findActivity(e, (i) =>
-                              (0, m.c)({
+                              (0, f.c)({
                                   activity: i,
                                   voiceChannelId: t,
                                   voiceStateForSession: n.VoiceStateStore.getVoiceStateForSession(e, i.session_id),
@@ -70,52 +70,52 @@ function N(e) {
               })(t, r.voiceChannel.id, i),
           };
 }
-function v(e, t) {
-    let { activities: n, isOffline: i, isPrivate: r, stream: s } = e,
-        { voiceActivity: a, voiceChannel: o, voiceState: l } = t,
-        u = (0, E.U)(n);
+function R(e, t) {
+    let { activities: n, isOffline: i, isPrivate: r, stream: a } = e,
+        { voiceActivity: s, voiceChannel: l, voiceState: o } = t,
+        d = (0, I.U)(n);
     return {
-        cards: i ? [] : (0, E.I)({ stream: s, live: u, voiceChannel: o, voiceActivity: a, isPrivate: r }),
+        cards: i ? [] : (0, I.I)({ stream: a, live: d, voiceChannel: l, voiceActivity: s, isPrivate: r }),
         isOffline: i,
         isPrivate: r,
-        live: u,
-        stream: s,
-        voiceActivity: a,
-        voiceChannel: o,
-        voiceState: l,
+        live: d,
+        stream: a,
+        voiceActivity: s,
+        voiceChannel: l,
+        voiceState: o,
     };
 }
-function R(e) {
+function L(e) {
     let { userId: t, currentUserId: n, guildId: i } = e,
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    return v(C({ userId: t, currentUserId: n ?? l.default.getId(), guildId: i }, r), N({ userId: t, guildId: i }, r));
+    return R(C({ userId: t, currentUserId: n ?? o.default.getId(), guildId: i }, r), O({ userId: t, guildId: i }, r));
 }
-function O(e) {
-    let { userId: t, currentUserId: n, guildId: s } = e,
-        a = (0, r.bG)([l.default], () => n ?? l.default.getId()),
-        E = (0, r.cf)(
-            [o.A, d.A, _.A, h.A, p.A],
+function y(e) {
+    let { userId: t, currentUserId: n, guildId: a } = e,
+        s = (0, r.bG)([o.default], () => n ?? o.default.getId()),
+        I = (0, r.cf)(
+            [l.A, u.A, _.A, E.A, h.A],
             () =>
                 C(
-                    { userId: t, currentUserId: a, guildId: s },
+                    { userId: t, currentUserId: s, guildId: a },
                     {
-                        ApplicationStreamingStore: o.A,
-                        PresenceStore: d.A,
+                        ApplicationStreamingStore: l.A,
+                        PresenceStore: u.A,
                         RelationshipStore: _.A,
-                        SelfPresenceStore: h.A,
-                        UserProfileStore: p.A,
+                        SelfPresenceStore: E.A,
+                        UserProfileStore: h.A,
                     },
                 ),
-            [a, s, t],
+            [s, a, t],
         ),
-        m = (0, r.cf)(
-            [u.A, c.A, d.A, f.A],
+        f = (0, r.cf)(
+            [d.A, c.A, u.A, A.A],
             () =>
-                N(
-                    { userId: t, guildId: s },
-                    { ChannelStore: u.A, PermissionStore: c.A, PresenceStore: d.A, VoiceStateStore: f.A },
+                O(
+                    { userId: t, guildId: a },
+                    { ChannelStore: d.A, PermissionStore: c.A, PresenceStore: u.A, VoiceStateStore: A.A },
                 ),
-            [s, t],
+            [a, t],
         );
-    return i.useMemo(() => v(E, m), [E, m]);
+    return i.useMemo(() => R(I, f), [I, f]);
 }

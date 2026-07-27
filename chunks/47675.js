@@ -4,25 +4,25 @@ n.d(t, {
     Wn: () => C,
     vP: () => L,
     pT: () => v,
-    un: () => y,
-    wd: () => R,
-    Tu: () => O,
+    un: () => D,
+    wd: () => O,
+    Tu: () => R,
     UI: () => S,
-    am: () => D,
+    am: () => y,
 }),
     n(321073);
 var i = n(95561),
     r = n(982240),
-    a = n(427358),
-    s = n(616356),
-    l = n(546183),
+    a = n(733110),
+    s = n(427358),
+    l = n(616356),
     o = n(696451),
     d = n(290863),
     c = n(994500),
     u = n(287809),
     _ = n(174459),
     E = n(486020),
-    A = n(321191);
+    A = n(82191);
 let h = (0, n(945810).mj)({
     kind: "user",
     name: "2026-04-user-profile-performance-analytics",
@@ -97,7 +97,7 @@ function g(e) {
 function S(e) {
     let { userId: t } = e;
     if (null == t) return {};
-    let n = a.A.getUserAffinity(t);
+    let n = s.A.getUserAffinity(t);
     return {
         related_user_id: t,
         relationship_type: c.A.getRelationshipType(t),
@@ -112,8 +112,8 @@ function N(e) {
     return {
         application_id: e,
         application_linked:
-            null != e && l.default.getFetchStateForApplication(e) === l.FetchState.FETCHED
-                ? null != l.default.getNewestTokenForApplication(e)
+            null != e && a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED
+                ? null != a.default.getNewestTokenForApplication(e)
                 : null,
     };
 }
@@ -143,7 +143,7 @@ function C(e) {
         widget_type: s,
     });
 }
-function R(e) {
+function O(e) {
     if (
         !(function (e) {
             let { performanceAnalyticsEnabled: t } = h.getConfig({ location: e });
@@ -179,7 +179,7 @@ function R(e) {
             time_to_fetch_ms: c,
         });
 }
-function O(e) {
+function R(e) {
     var t;
     let {
         guildId: n,
@@ -239,14 +239,14 @@ function L(e) {
         position: o,
     });
 }
-function D(e) {
+function y(e) {
     let { displayProfile: t, isProfileOpen: n } = e,
         i = t?.userId,
         r =
             null != i
                 ? d.A.findActivity(i, (e) => {
                       let { type: t } = e;
-                      return null != s.A.getAnyStreamForUser(i) ? t === p.$pd.PLAYING : t !== p.$pd.CUSTOM_STATUS;
+                      return null != l.A.getAnyStreamForUser(i) ? t === p.$pd.PLAYING : t !== p.$pd.CUSTOM_STATUS;
                   })
                 : null;
     _.default.track(p.HAw.DM_PROFILE_TOGGLED, {
@@ -260,7 +260,7 @@ function D(e) {
         profile_has_theme_animation: t?.popoutAnimationParticleType != null,
     });
 }
-function y(e) {
+function D(e) {
     let {
         guildId: t,
         channelId: n,

@@ -1,95 +1,95 @@
 "use strict";
 n.d(t, {
-    Ac: () => I,
+    Ac: () => m,
     B0: () => c,
-    CP: () => f,
+    CP: () => A,
     N2: () => _,
-    Tu: () => E,
-    WU: () => T,
-    Xf: () => h,
-    a4: () => d,
-    lw: () => m,
-    nZ: () => p,
-    rv: () => u,
-    us: () => g,
-    z5: () => A,
+    Tu: () => I,
+    WU: () => g,
+    Xf: () => E,
+    a4: () => u,
+    lw: () => f,
+    nZ: () => h,
+    rv: () => d,
+    us: () => p,
+    z5: () => T,
 }),
     n(321073),
     n(64700);
 var i = n(17928),
     r = n(765178),
-    s = n(836602),
-    a = n(321191),
-    o = n(696451),
-    l = n(375708);
-function u(e, t) {
-    let n = (0, i.bG)([o.Ay], () => (void 0 === t ? null : o.Ay.getMember(t, e.id))),
-        { pendingNameplate: r, pendingErrors: a } = (0, i.cf)([s.A], () => ({
-            pendingNameplate: s.A.getPendingChanges(t).pendingNameplate,
-            pendingErrors: s.A.getErrors(t).nameplate,
+    a = n(836602),
+    s = n(82191),
+    l = n(696451),
+    o = n(375708);
+function d(e, t) {
+    let n = (0, i.bG)([l.Ay], () => (void 0 === t ? null : l.Ay.getMember(t, e.id))),
+        { pendingNameplate: r, pendingErrors: s } = (0, i.cf)([a.A], () => ({
+            pendingNameplate: a.A.getPendingChanges(t).pendingNameplate,
+            pendingErrors: a.A.getErrors(t).nameplate,
         }));
     return {
         userNameplate: e.nameplate,
         guildNameplate: n?.collectibles?.nameplate,
         pendingNameplate: r,
-        pendingErrors: a,
+        pendingErrors: s,
     };
 }
 function c(e, t) {
-    let n = (0, i.bG)([o.Ay], () => (void 0 === t || null == e ? null : o.Ay.getMember(t, e.id))),
+    let n = (0, i.bG)([l.Ay], () => (void 0 === t || null == e ? null : l.Ay.getMember(t, e.id))),
         {
             pendingDisplayNameStyles: r,
-            tryItOutDisplayNameStyles: a,
-            pendingErrors: l,
-        } = (0, i.cf)([s.A], () => ({
-            pendingDisplayNameStyles: s.A.getPendingChanges(t).pendingDisplayNameStyles,
-            tryItOutDisplayNameStyles: s.A.getTryItOutChanges().tryItOutDisplayNameStyles,
-            pendingErrors: s.A.getErrors(t).displayNameStyles,
+            tryItOutDisplayNameStyles: s,
+            pendingErrors: o,
+        } = (0, i.cf)([a.A], () => ({
+            pendingDisplayNameStyles: a.A.getPendingChanges(t).pendingDisplayNameStyles,
+            tryItOutDisplayNameStyles: a.A.getTryItOutChanges().tryItOutDisplayNameStyles,
+            pendingErrors: a.A.getErrors(t).displayNameStyles,
         }));
     return {
         userDisplayNameStyles: e?.displayNameStyles,
         guildDisplayNameStyles: n?.displayNameStyles,
         pendingDisplayNameStyles: r,
-        tryItOutDisplayNameStyles: a,
-        pendingErrors: l,
+        tryItOutDisplayNameStyles: s,
+        pendingErrors: o,
     };
 }
-function d(e) {
+function u(e) {
     let { user: t, guildId: n } = e,
-        r = (0, i.bG)([o.Ay], () => (null != n ? o.Ay.getMember(n, t.id) : null));
+        r = (0, i.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
     return null != n ? r?.avatarDecoration : t.avatarDecoration;
 }
 function _(e) {
     let { user: t, guildId: n } = e;
-    return (0, i.bG)([a.A], () =>
-        null == n ? a.A.getUserProfile(t.id)?.profileEffect : a.A.getGuildMemberProfile(t.id, n)?.profileEffect,
+    return (0, i.bG)([s.A], () =>
+        null == n ? s.A.getUserProfile(t.id)?.profileEffect : s.A.getGuildMemberProfile(t.id, n)?.profileEffect,
     );
-}
-function h(e) {
-    let { user: t, guildId: n } = e;
-    return (0, i.bG)([a.A], () =>
-        null == n ? a.A.getUserProfile(t.id)?.profileFrame : a.A.getGuildMemberProfile(t.id, n)?.profileFrame,
-    );
-}
-function f(e) {
-    return (0, i.cf)([s.A], () => ({
-        pendingAvatarDecoration: s.A.getPendingChanges(e).pendingAvatarDecoration,
-        errors: s.A.getErrors(e).avatarDecoration,
-    }));
-}
-function p(e) {
-    return (0, i.cf)([s.A], () => ({
-        pendingProfileEffect: s.A.getPendingChanges(e).pendingProfileEffect,
-        errors: s.A.getErrors(e).profileEffect,
-    }));
 }
 function E(e) {
-    return (0, i.cf)([s.A], () => ({
-        pendingProfileFrame: s.A.getPendingChanges(e).pendingProfileFrame,
-        errors: s.A.getErrors(e).profileFrame,
+    let { user: t, guildId: n } = e;
+    return (0, i.bG)([s.A], () =>
+        null == n ? s.A.getUserProfile(t.id)?.profileFrame : s.A.getGuildMemberProfile(t.id, n)?.profileFrame,
+    );
+}
+function A(e) {
+    return (0, i.cf)([a.A], () => ({
+        pendingAvatarDecoration: a.A.getPendingChanges(e).pendingAvatarDecoration,
+        errors: a.A.getErrors(e).avatarDecoration,
     }));
 }
-function m(e) {
+function h(e) {
+    return (0, i.cf)([a.A], () => ({
+        pendingProfileEffect: a.A.getPendingChanges(e).pendingProfileEffect,
+        errors: a.A.getErrors(e).profileEffect,
+    }));
+}
+function I(e) {
+    return (0, i.cf)([a.A], () => ({
+        pendingProfileFrame: a.A.getPendingChanges(e).pendingProfileFrame,
+        errors: a.A.getErrors(e).profileFrame,
+    }));
+}
+function f(e) {
     let { userValue: t, guildValue: n, pendingValue: i, guildId: r } = e;
     return "" === i || null === i
         ? null != r
@@ -101,20 +101,20 @@ function m(e) {
             ? n
             : t;
 }
-function g(e) {
+function p(e) {
     let { pendingValue: t, userValue: n, guildValue: i, guildId: r } = e;
-    if (void 0 !== t) return m({ userValue: n, guildValue: i, pendingValue: t, guildId: r }) ?? null;
+    if (void 0 !== t) return f({ userValue: n, guildValue: i, pendingValue: t, guildId: r }) ?? null;
 }
-function A(e, t) {
+function T(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function I(e, t) {
+function m(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function T(e) {
+function g(e) {
     "set" === e
-        ? r.O.announce(l.intl.string(l.t.dyU5c5))
+        ? r.O.announce(o.intl.string(o.t.dyU5c5))
         : "remove" === e
-          ? r.O.announce(l.intl.string(l.t["f1+oNk"]))
-          : r.O.announce(l.intl.string(l.t["/b5nqj"]));
+          ? r.O.announce(o.intl.string(o.t["f1+oNk"]))
+          : r.O.announce(o.intl.string(o.t["/b5nqj"]));
 }

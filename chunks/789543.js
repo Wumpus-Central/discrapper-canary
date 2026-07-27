@@ -1218,7 +1218,7 @@ function nx() {
     });
 }
 var nk = n(379848),
-    nF = n(321191);
+    nF = n(82191);
 let nV = (0, n(945810).mj)({
     name: "2025-12-social-layer-storefront-wishlist-user-account-popout",
     kind: "user",

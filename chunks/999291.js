@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { Ay: () => f, AP: () => E }), n(64700);
+n.d(t, { Ay: () => A, AP: () => I }), n(64700);
 var i = n(17928),
     r = n(287809),
-    s = n(583613),
-    a = n(919395),
-    o = n(486020),
-    l = n(428262),
-    u = n(289173),
-    c = n(788868);
-function d(e, t) {
+    a = n(583613),
+    s = n(919395),
+    l = n(486020),
+    o = n(428262),
+    d = n(289173),
+    c = n(202541);
+function u(e, t) {
     return null == t || "" === t ? e : t;
 }
 class _ {
@@ -30,8 +30,8 @@ class _ {
         (this.userId = e.userId),
             (this.guildId = t?.guildId),
             (this.banner = t?.banner ?? e.banner),
-            (this.bio = d(e.bio, t?.bio)),
-            (this.pronouns = d(e.pronouns, t?.pronouns)),
+            (this.bio = u(e.bio, t?.bio)),
+            (this.pronouns = u(e.pronouns, t?.pronouns)),
             (this.accentColor = e.accentColor),
             (this.themeColors = t?.themeColors ?? e.themeColors),
             (this.profileEffect = t?.profileEffect ?? e.profileEffect),
@@ -58,13 +58,13 @@ class _ {
         return this._userProfile.widgets;
     }
     get gameWidgets() {
-        return this._userProfile.widgets?.filter(u.fu);
+        return this._userProfile.widgets?.filter(d.fu);
     }
     get primaryColor() {
         return this.themeColors?.[0] ?? this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return l.Ay.isPremiumAtLeast(this.premiumType, c.PremiumTypes.TIER_2);
+        return o.Ay.isPremiumAtLeast(this.premiumType, c.PremiumTypes.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -99,8 +99,8 @@ class _ {
     getBannerURL(e) {
         let { canAnimate: t, size: n } = e;
         return null != this.guildId && this.isUsingGuildMemberBanner()
-            ? (0, o.ns)({ id: this.userId, guildId: this.guildId, banner: this.banner, canAnimate: t, size: n })
-            : (0, o.z)({ id: this.userId, banner: this.banner, canAnimate: t, size: n });
+            ? (0, l.ns)({ id: this.userId, guildId: this.guildId, banner: this.banner, canAnimate: t, size: n })
+            : (0, l.z)({ id: this.userId, banner: this.banner, canAnimate: t, size: n });
     }
     getPreviewBanner(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
@@ -108,12 +108,12 @@ class _ {
             ? e
             : null === e
               ? this.isUsingGuildMemberBanner()
-                  ? (0, o.z)({ id: this.userId, banner: this._userProfile.banner, canAnimate: t, size: n })
+                  ? (0, l.z)({ id: this.userId, banner: this._userProfile.banner, canAnimate: t, size: n })
                   : null
               : this.getBannerURL({ canAnimate: t, size: n });
     }
     getPreviewBio(e) {
-        return (0, a.lw)({
+        return (0, s.lw)({
             pendingValue: e,
             userValue: this._userProfile.bio,
             guildValue: this._guildMemberProfile?.bio,
@@ -121,7 +121,7 @@ class _ {
         });
     }
     getPreviewPronouns(e) {
-        return (0, a.lw)({
+        return (0, s.lw)({
             pendingValue: e,
             userValue: this._userProfile.pronouns,
             guildValue: this._guildMemberProfile?.pronouns,
@@ -138,17 +138,17 @@ class _ {
         return this._userProfile.legacyUsername;
     }
 }
-var h = n(841595);
-function f(e, t) {
-    return (0, i.bG)([r.default, h.A], () => (null == e ? null : E(e, t, [r.default, h.A])));
+var E = n(82191);
+function A(e, t) {
+    return (0, i.bG)([r.default, E.A], () => (null == e ? null : I(e, t, [r.default, E.A])));
 }
 n(903209);
-let p = (0, s.L_)((e, t) => new _(e, t));
-function E(e, t) {
-    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, h.A];
+let h = (0, a.L_)((e, t) => new _(e, t));
+function I(e, t) {
+    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, E.A];
     if (null === e) return null;
-    let s = n.getUser(e),
-        a = i.getUserProfile(e),
-        o = i.getGuildMemberProfile(e, t);
-    return null == s || null == a ? null : p(a, o);
+    let a = n.getUser(e),
+        s = i.getUserProfile(e),
+        l = i.getGuildMemberProfile(e, t);
+    return null == a || null == s ? null : h(s, l);
 }
