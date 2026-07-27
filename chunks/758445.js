@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { J_: () => N, N4: () => g, tx: () => p, l9: () => m });
+n.d(t, { J_: () => C, N4: () => S, rd: () => T, l9: () => g, tx: () => p });
 var i = n(562465),
     r = n(228366),
     a = n(615405),
@@ -115,34 +115,37 @@ function f(e) {
 }
 async function p(e) {
     let t = e.filter(f);
-    if (0 !== t.length)
+    0 !== t.length && (await T(t));
+}
+async function T(e) {
+    if (0 !== e.length)
         try {
-            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: t });
-            let e = o.A.getPromotionIdOverride(),
+            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: e });
+            let t = o.A.getPromotionIdOverride(),
                 n = (
                     await i.Bo.get({
                         url: E.Rsh.STOREFRONT_PROMOTIONS,
-                        query: { application_ids: t, ...(null != e ? { promotion_id_override: e } : {}) },
+                        query: { application_ids: e, ...(null != t ? { promotion_id_override: t } : {}) },
                         rejectWithError: !0,
                     })
                 ).body.promotions.map((e) => _.createFromServer(e));
-            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_SUCCESS", applicationIds: t, promotions: n });
+            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_SUCCESS", applicationIds: e, promotions: n });
         } catch {
-            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: t });
+            r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: e });
         }
 }
-function T(e) {
+function m(e) {
     return e?.type === "error" ? A : I;
 }
-async function m(e) {
-    let { applicationId: t } = e;
-    await S({ type: "application", applicationId: t });
-}
 async function g(e) {
-    let { skuIds: t } = e;
-    await S({ type: "skus", skuIds: t });
+    let { applicationId: t } = e;
+    await N({ type: "application", applicationId: t });
 }
 async function S(e) {
+    let { skuIds: t } = e;
+    await N({ type: "skus", skuIds: t });
+}
+async function N(e) {
     let {
         shouldFetch: t,
         filteredSkuIds: n,
@@ -150,7 +153,7 @@ async function S(e) {
     } = (function (e) {
         if ("application" === e.type) {
             let t = l.A.getFetchStateForApplicationId(e.applicationId),
-                n = T(t);
+                n = m(t);
             return null != t && ("loading" === t.type || t.fetchedAt > Date.now() - n)
                 ? { shouldFetch: !1, filteredSkuIds: [], applicationId: e.applicationId }
                 : { shouldFetch: !0, filteredSkuIds: [], applicationId: e.applicationId };
@@ -160,7 +163,7 @@ async function S(e) {
                 .filter((e) => {
                     let t = l.A.getFetchStateForSkuId(e);
                     if (null == t) return !0;
-                    let n = T(t);
+                    let n = m(t);
                     return "loading" !== t.type && t.fetchedAt < Date.now() - n;
                 })
                 .sort((e, t) => {
@@ -194,6 +197,6 @@ async function S(e) {
         r.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: d });
     }
 }
-function N(e) {
+function C(e) {
     r.h.dispatch({ type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride: e });
 }

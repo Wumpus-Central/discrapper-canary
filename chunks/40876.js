@@ -494,6 +494,7 @@ let r = {
         inlineRequire: () => n(30108).Ay,
     },
     StaffMemberPreloaderManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(714449).A },
+    StorefrontPromotionManager: { actions: ["SKU_PURCHASE_SUCCESS"], inlineRequire: () => n(117749).A },
     SubscriptionManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(344584).A },
     SystemServiceManager: { actions: ["POST_CONNECTION_OPEN", "LOGOUT"], inlineRequire: () => n(199944).A },
     ThreadManager: {
