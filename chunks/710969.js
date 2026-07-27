@@ -1,64 +1,64 @@
 "use strict";
 n.d(t, {
-    GR: () => A,
-    Gp: () => v,
-    HN: () => S,
-    Ic: () => p,
-    Kc: () => O,
-    L4: () => R,
-    Oh: () => d,
-    RF: () => L,
-    ZG: () => I,
-    gO: () => f,
-    if: () => m,
-    kd: () => E,
-    t6: () => T,
-    v1: () => g,
-    vZ: () => b,
+    GR: () => T,
+    Gp: () => D,
+    HN: () => N,
+    Ic: () => I,
+    Kc: () => L,
+    L4: () => y,
+    Oh: () => u,
+    RF: () => b,
+    ZG: () => m,
+    gO: () => A,
+    if: () => f,
+    kd: () => h,
+    t6: () => g,
+    v1: () => p,
+    vZ: () => v,
     vc: () => _,
-    vy: () => h,
-    xn: () => N,
+    vy: () => E,
+    xn: () => C,
 });
 var i = n(665260),
     r = n(773669),
-    s = n(38405),
-    a = n(265704),
-    o = n(859703),
-    l = n(24001),
-    u = n(302654),
+    a = n(38405),
+    s = n(265704),
+    l = n(859703),
+    o = n(24001),
+    d = n(302654),
     c = n(190107);
-function d(e) {
+function u(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
 function _(e, t, n) {
     let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
         r = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
-        s = i.get(e);
-    if (null != s) return s;
-    let a = r.get(e)?.replacementId;
-    if (null != a) return i.get(a);
-}
-function h(e) {
-    return Object.keys(c.TY).includes(l.uF[e]);
-}
-function f(e, t) {
-    if (!h(t)) return !1;
-    let n = l.uF[t];
-    return (0, i.Lt)(e.dismissedQuestContent, c.TY[n]);
+        a = i.get(e);
+    if (null != a) return a;
+    let s = r.get(e)?.replacementId;
+    if (null != s) return i.get(s);
 }
 function E(e) {
+    return Object.keys(c.TY).includes(o.uF[e]);
+}
+function A(e, t) {
+    if (!E(t)) return !1;
+    let n = o.uF[t];
+    return (0, i.Lt)(e.dismissedQuestContent, c.TY[n]);
+}
+function h(e) {
     return new Date(e.expiresAt).valueOf() <= Date.now();
 }
-function p(e) {
-    return E(e.config);
+function I(e) {
+    return h(e.config);
 }
-function m(e) {
-    if (!p(e)) return !1;
+function f(e) {
+    if (!I(e)) return !1;
     let t = Date.now() - 2592e6,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function g(e) {
+function p(e) {
     let t = null,
         n = Date.now();
     for (let i of e) {
@@ -67,35 +67,36 @@ function g(e) {
     }
     return t;
 }
-function A(e) {
+function T(e) {
     return null != e && null != e.completedAt && null == e.claimedAt;
 }
-function I(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(r.default.locale, t);
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let i = t.get(n);
     if (null == i) return;
     let r = e.get(i.quest.id);
-    if (null != r && !p(r)) return r;
+    if (null != r && !I(r)) return r;
 }
-function S(e) {
-    return {
-        [l.uF.QUEST_BAR]: l.p9.DESKTOP_ACCOUNT_PANEL_AREA,
-        [l.uF.QUEST_BAR_V2]: l.p9.DESKTOP_ACCOUNT_PANEL_AREA,
-        [l.uF.QUEST_BAR_MOBILE]: l.p9.MOBILE_HOME_DOCK_AREA,
-        [l.uF.QUEST_HOME_HERO]: l.p9.QUEST_HOME_BANNER_DESKTOP,
-        [l.uF.QUEST_HOME_HERO_SHELF]: l.p9.QUEST_HOME_BANNER_DESKTOP,
-        [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.p9.QUEST_HOME_MOBILE_CAROUSEL,
-        [l.uF.VIDEO_MODAL_MOBILE]: l.p9.VIDEO_MODAL_MOBILE,
-    }[e];
-}
+let S = {
+    [o.uF.QUEST_BAR]: o.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+    [o.uF.QUEST_BAR_V2]: o.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+    [o.uF.QUEST_BAR_MOBILE]: o.p9.MOBILE_HOME_DOCK_AREA,
+    [o.uF.QUEST_HOME_HERO]: o.p9.QUEST_HOME_BANNER_DESKTOP,
+    [o.uF.QUEST_HOME_HERO_SHELF]: o.p9.QUEST_HOME_BANNER_DESKTOP,
+    [o.uF.QUEST_HOME_MOBILE_CAROUSEL]: o.p9.QUEST_HOME_MOBILE_CAROUSEL,
+    [o.uF.VIDEO_MODAL_MOBILE]: o.p9.VIDEO_MODAL_MOBILE,
+};
 function N(e) {
-    let t = S(e);
-    return null != t && c.J6.has(t);
+    return S[e];
 }
 function C(e) {
+    let t = S[e];
+    return null != t && c.J6.has(t);
+}
+function O(e) {
     return {
         questId: e.questId,
         adCreativeId: e.adCreativeId,
@@ -105,19 +106,19 @@ function C(e) {
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
-function y(e, t) {
+function R(e, t) {
     let n = (function (e, t) {
-        if ((e !== l.p9.QUEST_HOME_MOBILE_CAROUSEL && e !== l.p9.VIDEO_MODAL_MOBILE) || null == t) return null;
-        let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? C(n) : null;
+        if ((e !== o.p9.QUEST_HOME_MOBILE_CAROUSEL && e !== o.p9.VIDEO_MODAL_MOBILE) || null == t) return null;
+        let n = s.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
+        return null != n ? O(n) : null;
     })(e, t);
     if (null != n) return n;
-    let { enableNewRequestBehavior: i } = u.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
-        r = o.A.questAdDecisionByPlacement.get(e);
-    if (e === l.p9.QUEST_HOME_BANNER_DESKTOP && null != r) return C(r);
-    if (i) return null == r ? null : C(r);
+    let { enableNewRequestBehavior: i } = d.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
+        r = l.A.questAdDecisionByPlacement.get(e);
+    if (e === o.p9.QUEST_HOME_BANNER_DESKTOP && null != r) return O(r);
+    if (i) return null == r ? null : O(r);
     {
-        let t = o.A.questToDeliverForPlacement.get(e);
+        let t = l.A.questToDeliverForPlacement.get(e);
         return null == t
             ? null
             : {
@@ -130,31 +131,31 @@ function y(e, t) {
               };
     }
 }
-function O(e, t) {
-    let n = S(t);
+function L(e, t) {
+    let n = S[t];
     if (null == n) return c.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: s } = y(n, e) ?? {};
-    return null == i ? c.K3 : r === e || s === e || i.ad_id === e ? i : c.K3;
+    let { adDecisionData: i, questId: r, adCreativeId: a } = R(n, e) ?? {};
+    return null == i ? c.K3 : r === e || a === e || i.ad_id === e ? i : c.K3;
 }
-function R(e, t) {
-    let n = S(e);
-    if (null != n) return y(n, t)?.metadataSealed;
+function y(e, t) {
+    let n = S[e];
+    if (null != n) return R(n, t)?.metadataSealed;
 }
-function v(e, t, n) {
-    let i = S(e);
+function D(e, t, n) {
+    let i = S[e];
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = y(i, n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = R(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
-        let e = o.A.getQuest(t);
+        let e = l.A.getQuest(t);
         return e?.trafficMetadataSealed;
     }
 }
-function b(e, t) {
-    let n = S(e);
-    if (null != n) return y(n, t)?.adContext;
+function v(e, t) {
+    let n = S[e];
+    if (null != n) return R(n, t)?.adContext;
 }
-function L(e, t) {
-    s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
+function b(e, t) {
+    a.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }

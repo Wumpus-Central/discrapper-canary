@@ -1,36 +1,43 @@
 "use strict";
-n.d(t, { R: () => d });
-var i = n(64700),
-    r = n(172218),
+n.d(t, { R: () => E, Z: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(172218),
     s = n(323889),
-    a = n(17928),
+    l = n(17928),
     o = n(475743),
-    l = n(531685),
-    u = n(954243),
-    c = n(971649);
+    d = n(531685),
+    c = n(266569),
+    u = n(971649);
 n(23766);
-let d = i.memo(function (e) {
+let _ = r.memo(function (e) {
     let t,
         n,
-        d,
-        { focused: _, focusedChanged: h } =
-            ((t = (0, a.bG)([l.A], () => l.A.isFocused())),
+        i,
+        { focused: _, focusedChanged: E } =
+            ((t = (0, l.bG)([d.A], () => d.A.isFocused())),
             (n = (0, o.A)(t)),
-            (d = t !== n),
-            { focused: t, focusedChanged: d }),
+            (i = t !== n),
+            { focused: t, focusedChanged: i }),
         {
-            visible: f,
-            visibleChanged: p,
-            reference: E,
+            visible: A,
+            visibleChanged: h,
+            reference: I,
         } = (function (e) {
-            let [t, n] = i.useState(!1),
-                s = e ?? t,
-                a = s !== (0, o.A)(s);
-            return { visible: s, visibleChanged: a, reference: (0, r.K)((e) => n(e), 0.5) };
+            let [t, n] = r.useState(!1),
+                i = e ?? t,
+                s = i !== (0, o.A)(i);
+            return { visible: i, visibleChanged: s, reference: (0, a.K)((e) => n(e), 0.5) };
         })(e.overrideVisibility),
-        { key: m, adContentIds: g } = (0, c.RC)(e),
-        A = { ...e, focused: _, focusedChanged: h, visible: f, visibleChanged: p, reference: E };
+        { key: f, adContentIds: p } = (0, u.RC)(e),
+        T = { ...e, focused: _, focusedChanged: E, visible: A, visibleChanged: h, reference: I };
     return "questOrQuests" in e
-        ? (0, i.createElement)(u.xs, { ...A, key: m, adContentIds: g, adCreativeType: s.p.QUEST })
-        : (0, i.createElement)(u.xs, { ...A, key: m, adContentIds: g, adCreativeType: e.adCreativeType });
+        ? (0, r.createElement)(c.xs, { ...T, key: f, adContentIds: p, adCreativeType: s.p.QUEST })
+        : (0, r.createElement)(c.xs, { ...T, key: f, adContentIds: p, adCreativeType: e.adCreativeType });
 });
+function E(e) {
+    return (0, i.jsx)(_, { ...e });
+}
+function A(e) {
+    return (0, i.jsx)(_, { ...e });
+}
