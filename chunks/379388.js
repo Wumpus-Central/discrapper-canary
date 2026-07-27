@@ -3068,8 +3068,16 @@ var n7 = n(956123),
     st = n(456670);
 let sn = { default: st.Hk, nitro: st.O5 };
 function ss(e) {
-    let { promotionTheme: t = "default", icon: n, headerText: s, helpCenterId: l, ctaText: i } = e,
-        a = c.useMemo(() => (null == l ? null : tZ.A.getArticleURL(l)), [l]);
+    let {
+            promotionTheme: t = "default",
+            icon: n,
+            headerText: s,
+            helpCenterId: l,
+            ctaText: i,
+            onCtaClick: a,
+            hideCta: r,
+        } = e,
+        d = c.useMemo(() => (null == l ? null : tZ.A.getArticleURL(l)), [l]);
     return (0, o.jsx)(t4.N, {
         theme: Z.NJ8.DARKER,
         children: (e) =>
@@ -3089,12 +3097,12 @@ function ss(e) {
                                         color: "text-overlay-light",
                                         children: [
                                             null != s ? (0, se.U)(s) : null,
-                                            null != a &&
+                                            null != d &&
                                                 (0, o.jsxs)(o.Fragment, {
                                                     children: [
                                                         " ",
                                                         (0, o.jsx)(nl.Anchor, {
-                                                            href: a,
+                                                            href: d,
                                                             target: "_blank",
                                                             className: st.nf,
                                                             children: el.intl.string(el.t.WQdkbb),
@@ -3105,7 +3113,7 @@ function ss(e) {
                                     }),
                                 ],
                             }),
-                            null != i && (0, o.jsx)(K.$, { variant: "overlay-primary", text: i, onClick: () => {} }),
+                            !r && null != i && (0, o.jsx)(K.$, { variant: "overlay-primary", text: i, onClick: a }),
                         ],
                     }),
                 ],
@@ -3124,18 +3132,24 @@ function sl(e) {
     }
 }
 let si = function (e) {
-    let { tab: t } = e,
-        n = (0, eQ.A)(Z.FYj),
-        s = n?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar;
-    return t === eb.G2.ORBS || null == s
-        ? null
-        : (0, o.jsx)(ss, {
-              promotionTheme: void 0,
-              icon: void 0,
-              headerText: s.headerText,
-              ctaText: s.cta?.text,
-              helpCenterId: s.helpCenterId,
-          });
+    let { tab: t, handleTransition: n } = e,
+        s = (0, eQ.A)(Z.FYj),
+        l = (0, R.v)((e) => e.offerEligible),
+        i = s?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
+        a = c.useCallback(() => {
+            n(eb.G2.OFFER_ELIGIBLE);
+        }, [n]);
+    if (t === eb.G2.ORBS || null == i) return null;
+    let r = t === eb.G2.CATALOG && l;
+    return (0, o.jsx)(ss, {
+        promotionTheme: void 0,
+        icon: void 0,
+        headerText: i.headerText,
+        ctaText: i.cta?.text,
+        hideCta: r,
+        helpCenterId: i.helpCenterId,
+        onCtaClick: a,
+    });
 };
 var sa = n(766075),
     sr = n(870308),
@@ -3227,7 +3241,7 @@ let sd = function (e) {
                         tabIndex: -1,
                         children: [
                             (0, o.jsx)(n7.G, { handleTransition: K, selectedTab: V }),
-                            (0, o.jsx)(si, { tab: V }),
+                            (0, o.jsx)(si, { tab: V, handleTransition: K }),
                             (0, o.jsx)("div", {
                                 className: u()(eh.td, {
                                     [eh.RK]: Y === eb.Pf.VISIBLE,
