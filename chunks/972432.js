@@ -1,37 +1,38 @@
-l.d(e, { A: () => m });
-var i = l(627968);
-l(64700);
-var n = l(17928),
-    a = l(477782),
-    r = l(964355),
-    s = l(827343),
-    d = l(941327),
-    o = l(287809),
-    u = l(824744),
-    c = l(723702),
-    g = l(731854),
-    h = l(375708);
-function m(t) {
+i.d(e, { A: () => h });
+var l = i(627968);
+i(64700);
+var n = i(17928),
+    a = i(477782),
+    r = i(964355),
+    s = i(827343),
+    d = i(283540),
+    o = i(287809),
+    u = i(824744),
+    c = i(723702),
+    g = i(731854),
+    v = i(375708);
+function h(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT,
-        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-        m = (0, n.bG)([d.Ay], () => d.Ay.getLocalVolume(t, e), [t, e]),
-        v = t === o.default.getCurrentUser()?.id,
+        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
+        h = (0, n.bG)([d.Ay], () => d.Ay.getLocalVolume(t, e), [t, e]),
+        m = t === o.default.getCurrentUser()?.id,
         p = e === g.x.STREAM;
-    return v
+    return m
         ? null
-        : (0, i.jsx)(a.aK, {
+        : (0, l.jsx)(a.aK, {
               id: "user-volume",
-              label: p ? h.intl.string(h.t.t4JBnI) : h.intl.string(h.t.m7TNdF),
+              label: p ? v.intl.string(v.t.t4JBnI) : v.intl.string(v.t.m7TNdF),
+              interactive: !1,
               control: (n, a) =>
-                  (0, i.jsx)(r.i, {
+                  (0, l.jsx)(r.i, {
                       ...n,
                       ref: a,
-                      value: (0, u.M)(m),
+                      value: (0, u.M)(h),
                       maxValue: c.isPlatformEmbedded ? g.Rv : g.HE,
-                      onChange: (i) => {
-                          s.A.setLocalVolume(t, (0, u.w)(i), e), l?.(i);
+                      onChange: (l) => {
+                          s.A.setLocalVolume(t, (0, u.w)(l), e), i?.(l);
                       },
-                      "aria-label": p ? h.intl.string(h.t.t4JBnI) : h.intl.string(h.t.m7TNdF),
+                      "aria-label": p ? v.intl.string(v.t.t4JBnI) : v.intl.string(v.t.m7TNdF),
                   }),
           });
 }

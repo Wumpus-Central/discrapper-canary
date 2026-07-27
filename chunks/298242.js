@@ -15,6 +15,7 @@ function _(e) {
     return (0, i.jsx)(a.aK, {
         id: "output",
         label: u.intl.string(u.t.eATD2B),
+        interactive: !1,
         control: (n, r) =>
             (0, i.jsx)(s.i, {
                 ...n,
