@@ -24,11 +24,11 @@ var T = s(775121),
     j = s(793574),
     L = s(688810),
     N = s(235986),
-    R = s(71547),
+    R = s(334591),
     S = s(287809),
-    f = s(107834),
-    g = s(202541),
-    m = s(792812);
+    g = s(107834),
+    m = s(202541),
+    f = s(792812);
 let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser() }))(
         (0, E.A)(function (t) {
             let { user: e } = t,
@@ -36,9 +36,9 @@ let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser(
                 { analyticsLocations: i } = (0, L.Ay)(j.A.HOME_PAGE_PREMIUM_TAB);
             return s
                 ? (0, n.jsxs)("div", {
-                      className: m.ql,
+                      className: f.ql,
                       children: [
-                          null == e && (0, n.jsx)(f.A, {}),
+                          null == e && (0, n.jsx)(g.A, {}),
                           (0, n.jsx)(L.f5, {
                               value: i,
                               children:
@@ -46,9 +46,9 @@ let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser(
                                       ? (0, n.jsx)(N.A, {
                                             align: N.A.Align.CENTER,
                                             justify: N.A.Justify.CENTER,
-                                            children: (0, n.jsx)(x.y, { className: m.u1 }),
+                                            children: (0, n.jsx)(x.y, { className: f.u1 }),
                                         })
-                                      : (0, n.jsx)(R.A, { entrypoint: g.Mf.ApplicationStoreHome }),
+                                      : (0, n.jsx)(R.A, { entrypoint: m.tU.ApplicationStoreHome }),
                           }),
                       ],
                   })

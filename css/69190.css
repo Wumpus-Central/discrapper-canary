@@ -849,6 +849,70 @@
     }
 }
 
+.reverseTrialContent__101ad {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-32);
+    max-width: var(--custom-premium-home-max-width);
+    overflow: visible;
+    position: relative;
+    width: 100%
+}
+
+.reverseTrialContentColumn__101ad {
+    flex: 1;
+    max-width: 636px;
+    position: relative;
+    text-align: start;
+    z-index: 1
+}
+
+.reverseTrialButtons__101ad {
+    flex-wrap: wrap
+}
+
+.reverseTrialSubheading__101ad {
+    max-width: 511px
+}
+
+.reverseTrialArtContainerV2__101ad {
+    align-self: stretch;
+    margin-inline-start: auto;
+    pointer-events: none;
+    position: relative;
+    width: 440px
+}
+
+@container premium-marketing-page-container (max-width: 1140px) {
+    .reverseTrialContentColumn__101ad {
+        max-width: 55cqi
+    }
+
+    .reverseTrialArtContainerV2__101ad {
+        inset-inline-end: 0;
+        position: absolute;
+        top: 0;
+        width: clamp(281px, 38.6cqi, 440px)
+    }
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    .reverseTrialContentColumn__101ad {
+        max-width: 72cqi
+    }
+
+    .reverseTrialArtContainerV2__101ad {
+        width: clamp(120px, 25cqi, 200px)
+    }
+}
+
+@container premium-marketing-page-container (max-width: 540px) {
+    .reverseTrialArtContainerV2__101ad {
+        display: none
+    }
+}
+
 .jumpingWumpusContainer__13b73 {
     bottom: -100px;
     inset-inline-start: calc(100% + 20px);
@@ -966,6 +1030,146 @@
 
 .rtBoltTrinket_b99bd6 {
     height: 60px
+}
+
+.flyingWumpusContainer_b99bd6 {
+    inset-inline-start: 70px;
+    pointer-events: none;
+    position: absolute;
+    top: 20px;
+    z-index: 1
+}
+
+.flyingWumpusAsset_b99bd6 {
+    height: 286px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 286px
+}
+
+.boltContainer_b99bd6,
+.hammerContainer_b99bd6,
+.keyContainer_b99bd6,
+.starContainer_b99bd6 {
+    pointer-events: none;
+    position: absolute
+}
+
+.starContainer_b99bd6 {
+    inset-inline-start: 10px;
+    top: -30px
+}
+
+.starTrinket_b99bd6 {
+    height: 72px
+}
+
+.keyContainer_b99bd6 {
+    inset-inline-start: -20px;
+    top: 200px
+}
+
+.keyTrinket_b99bd6 {
+    height: 70px
+}
+
+.hammerContainer_b99bd6 {
+    inset-inline-start: 160px;
+    top: -10px
+}
+
+.hammerTrinket_b99bd6 {
+    height: 36px
+}
+
+.boltContainer_b99bd6 {
+    inset-inline-end: 30px;
+    top: 100px
+}
+
+.boltTrinket_b99bd6 {
+    height: 75px
+}
+
+@container premium-marketing-page-container (max-width: 1140px) {
+    .flyingWumpusContainer_b99bd6 {
+        inset-inline-start: 50px;
+        top: 30px;
+        z-index: 0
+    }
+
+    .flyingWumpusAsset_b99bd6 {
+        height: clamp(150px, 25cqi, 286px);
+        width: clamp(150px, 25cqi, 286px)
+    }
+
+    .starContainer_b99bd6 {
+        inset-inline-start: 20px;
+        top: -30px
+    }
+
+    .starTrinket_b99bd6 {
+        height: clamp(38px, 6.3cqi, 72px)
+    }
+
+    .keyContainer_b99bd6 {
+        inset-inline-start: 10px;
+        top: 120px
+    }
+
+    .keyTrinket_b99bd6 {
+        height: clamp(38px, 6.1cqi, 70px)
+    }
+
+    .hammerContainer_b99bd6 {
+        inset-inline-end: auto;
+        inset-inline-start: 220px;
+        top: -20px
+    }
+
+    .hammerTrinket_b99bd6 {
+        height: clamp(22px, 3.5cqi, 40px)
+    }
+
+    .boltContainer_b99bd6 {
+        inset-inline-end: 20px;
+        inset-inline-start: auto;
+        top: 200px
+    }
+
+    .boltTrinket_b99bd6 {
+        height: clamp(42px, 6.6cqi, 75px)
+    }
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    .flyingWumpusContainer_b99bd6 {
+        display: none
+    }
+
+    .keyContainer_b99bd6 {
+        inset-inline-start: 60px;
+        top: -30px
+    }
+
+    .starContainer_b99bd6 {
+        inset-inline-start: 120px;
+        top: -50px
+    }
+
+    .hammerContainer_b99bd6 {
+        top: 0
+    }
+
+    .boltContainer_b99bd6,
+    .hammerContainer_b99bd6 {
+        inset-inline-end: auto;
+        inset-inline-start: 160px
+    }
+
+    .boltContainer_b99bd6 {
+        top: 50px
+    }
 }
 
 .navBar__131a1 {

@@ -17,4 +17,9 @@ e.exports = {
     ap: "reverseTrialContainer__101ad",
     rG: "reverseTrialTextContainer__101ad",
     Hk: "reverseTrialArtContainer__101ad",
+    Gs: "reverseTrialContent__101ad",
+    E2: "reverseTrialContentColumn__101ad",
+    oF: "reverseTrialButtons__101ad",
+    X8: "reverseTrialSubheading__101ad",
+    Tg: "reverseTrialArtContainerV2__101ad",
 };
