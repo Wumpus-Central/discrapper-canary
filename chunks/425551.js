@@ -8,13 +8,13 @@ var n = i(627968),
     o = i(17928),
     u = i(661531),
     c = i(863610),
-    h = i(602853),
-    m = i(228366),
+    m = i(602853),
+    h = i(228366),
     p = i(174459),
     A = i(652215);
 let g = {
     dismissForApplicationId(e) {
-        m.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
+        h.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
             p.default.track(A.HAw.CLOSE_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
@@ -68,7 +68,7 @@ function T(e) {
 function _(e) {
     let { channel: t, isThreadCreation: i = !1 } = e,
         s = (0, o.bG)([b.A], () => b.A.getSlowmodeCooldownGuess(t.id, i ? b.R.CreateThread : b.R.SendMessage)),
-        l = (0, y._i)(t, i ? b.R.CreateThread : b.R.SendMessage),
+        l = (0, y._i)(t),
         { rateLimitPerUser: a } = t;
     return (0, n.jsx)(T, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: l, slowmodeCooldownGuess: s });
 }
@@ -87,7 +87,7 @@ class k extends o.Ay.PersistedStore {
         return !0 !== D[e];
     }
 }
-let w = new k(m.h, {
+let w = new k(h.h, {
     ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
         return (D[e.key] = e.value), !0;
     },
@@ -170,8 +170,8 @@ function X(e) {
             channel: d,
             isThreadCreation: o,
             renderDots: u,
-            renderSlowmode: h,
-            isInTextChannel: m = !1,
+            renderSlowmode: m,
+            isInTextChannel: h = !1,
             shouldShowLegacyGameInviteCreationBanner: p = !1,
         } = e,
         A = F.useConfig({ location: "TypingUsers" }).enabled,
@@ -184,7 +184,7 @@ function X(e) {
             let e = f.current.getBoundingClientRect();
             x.current.scrollWidth + 48 > e.width ? C(!0) : C(!1);
         }, []);
-    (0, I.g)(f, E, [], { enabled: m }), (0, I.g)(x, E, [], { enabled: m });
+    (0, I.g)(f, E, [], { enabled: h }), (0, I.g)(x, E, [], { enabled: h });
     let [S, b, j] = l,
         y = "";
     1 === l.length
@@ -201,7 +201,7 @@ function X(e) {
     return (
         T
             ? (k = (0, n.jsxs)("div", {
-                  className: a()(H.IW, { "stop-animation": !i, [H.Il]: m }, r),
+                  className: a()(H.IW, { "stop-animation": !i, [H.Il]: h }, r),
                   children: [
                       0 === l.length && p
                           ? (0, n.jsx)(O.A, {})
@@ -224,7 +224,7 @@ function X(e) {
                                     }),
                                 ],
                             }),
-                      !1 !== h && (0, n.jsx)(_, { channel: d, isThreadCreation: o }),
+                      !1 !== m && (0, n.jsx)(_, { channel: d, isThreadCreation: o }),
                   ],
               }))
             : D && null != t && (k = (0, n.jsx)(Z, { activity: t, isFocused: i })),
@@ -289,8 +289,8 @@ function K(e) {
         a = (0, O.L)(t.id),
         r = {
             ...s,
-            baseTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-            activeTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+            baseTextColor: (0, m.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+            activeTextColor: (0, m.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
             activityInviteEducationActivity: J(t),
             typingUsers: i ? [] : l,
             isFocused: (0, o.bG)([P.A], () => P.A.isFocused()),
