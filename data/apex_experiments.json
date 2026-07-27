@@ -5485,22 +5485,6 @@
     }
   },
   {
-    "name": "2026-07-collectibles-pdp-collection-button",
-    "kind": "user",
-    "defaultConfig": {
-      "showCollectionButton": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showCollectionButton": true
-      }
-    }
-  },
-  {
     "name": "2026-07-collectibles-promotion-endpoint-reference",
     "kind": "user",
     "defaultConfig": {
