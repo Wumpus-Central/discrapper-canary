@@ -4620,28 +4620,6 @@
     }
   },
   {
-    "name": "2026-06-jellybean",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "largeGiftButton": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "largeGiftButton": false
-      },
-      "2": {
-        "enabled": true,
-        "largeGiftButton": true
-      }
-    }
-  },
-  {
     "name": "2026-06-livestream-entrypoint-v2",
     "kind": "user",
     "defaultConfig": {
