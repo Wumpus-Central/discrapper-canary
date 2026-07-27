@@ -5,8 +5,8 @@ n(64700);
 var r = n(661531),
     a = n(996682),
     s = n(27989);
-let l = (e) => {
-    let { size: t = "md", width: n, height: l, color: o = r.A.colors.ICON_OVERLAY_LIGHT, colorClass: d = "", ...c } = e,
+function l(e) {
+    let { size: t = "md", width: n, height: l, color: o = r.A.colors.ICON_STRONG, colorClass: d = "", ...c } = e,
         u = (0, s.J)(t),
         _ = u?.width ?? n,
         E = u?.height ?? l;
@@ -37,4 +37,4 @@ let l = (e) => {
             }),
         ],
     });
-};
+}

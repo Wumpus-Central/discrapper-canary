@@ -4,7 +4,7 @@ t(64700);
 var a = t(661531),
     i = t(996682),
     s = t(27989);
-let r = (e) => {
+function r(e) {
     let {
             size: l = "md",
             width: t,
@@ -33,4 +33,4 @@ let r = (e) => {
             className: o,
         }),
     });
-};
+}

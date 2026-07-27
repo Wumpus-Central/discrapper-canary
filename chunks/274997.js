@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(996682),
     a = n(27989);
-let s = (e) => {
+function s(e) {
     let { size: t = "md", width: n, height: s, color: l = "#4E5058", colorClass: o = "", ...d } = e,
         c = (0, a.J)(t),
         u = c?.width ?? n,
@@ -22,4 +22,4 @@ let s = (e) => {
             className: o,
         }),
     });
-};
+}

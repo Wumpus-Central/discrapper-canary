@@ -5,7 +5,7 @@ n(64700);
 var r = n(661531),
     a = n(996682),
     s = n(27989);
-let l = (e) => {
+function l(e) {
     let {
             size: t = "md",
             width: n,
@@ -37,4 +37,4 @@ let l = (e) => {
             }),
         ],
     });
-};
+}

@@ -67,7 +67,6 @@ class _ extends u.A {
                                                           nagbar: {
                                                               headerText:
                                                                   i.reward.storefront.nagbar.header_text ?? void 0,
-                                                              bodyText: i.reward.storefront.nagbar.body_text ?? void 0,
                                                               cta:
                                                                   null != i.reward.storefront.nagbar.cta
                                                                       ? {

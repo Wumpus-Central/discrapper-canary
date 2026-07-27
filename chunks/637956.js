@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(996682),
     a = n(27989);
-let s = (e) => {
+function s(e) {
     let { size: t = "md", width: n, height: s, ...l } = e,
         o = (0, a.J)(t),
         d = o?.width ?? n,
@@ -39,4 +39,4 @@ let s = (e) => {
             }),
         ],
     });
-};
+}
