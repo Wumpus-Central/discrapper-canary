@@ -35,10 +35,10 @@ var s,
     G = n(320448),
     F = n(778712),
     U = n(97808),
-    H = n(812993),
-    w = n(834730),
-    K = n(406810),
-    P = n(397244),
+    w = n(812993),
+    H = n(834730),
+    P = n(406810),
+    K = n(397244),
     B = n(714114),
     z = n(394871),
     X = n(571694),
@@ -120,7 +120,7 @@ function ed(e) {
                         null != s && s > 0
                             ? (0, i.jsx)("div", {
                                   className: ea.qS,
-                                  children: (0, i.jsx)(H.hV, {
+                                  children: (0, i.jsx)(w.hV, {
                                       count: s,
                                       color: r
                                           ? y.A.colors.BACKGROUND_MOD_STRONG.css
@@ -131,7 +131,7 @@ function ed(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(w.E, {
+            (0, i.jsx)(H.E, {
                 color: "text-default",
                 variant: "text-xs/normal",
                 children: t.isMultiUserDM()
@@ -164,7 +164,7 @@ function ec(e) {
             };
         }),
         { voiceChannel: r } = (0, B.Ay)({ userId: n?.id });
-    return (0, P.A)({ activities: a, status: s, applicationStream: l, voiceChannel: r })
+    return (0, K.A)({ activities: a, status: s, applicationStream: l, voiceChannel: r })
         ? (0, i.jsx)(z.A, { user: n, activities: a, applicationStream: l, voiceChannel: r, hideTooltip: !0 })
         : null;
 }
@@ -173,8 +173,8 @@ function eo(e) {
     return (0, i.jsxs)("div", {
         className: c()(ea.h5, { [ea.z3]: "error" === t, [ea.kX]: "success" === t, [ea.qb]: "normal" === t }),
         children: [
-            "error" === t ? (0, i.jsx)(S.E, { size: "xs" }) : (0, i.jsx)(K.O, { size: "xs" }),
-            (0, i.jsx)(w.E, {
+            "error" === t ? (0, i.jsx)(S.E, { size: "xs" }) : (0, i.jsx)(P.O, { size: "xs" }),
+            (0, i.jsx)(H.E, {
                 variant: "text-xs/medium",
                 color: "error" === t ? "text-feedback-critical" : "text-muted",
                 children: n,
@@ -232,7 +232,7 @@ function eT(e) {
                           color: "text-default",
                           children: es.intl.string(t === m.Yf.REMINDER ? es.t.AE4yja : es.t.erEf2g),
                       }),
-                      (0, i.jsx)(w.E, {
+                      (0, i.jsx)(H.E, {
                           variant: "text-md/medium",
                           color: "text-muted",
                           children: es.intl.string(t === m.Yf.REMINDER ? es.t.fRSRc0 : es.t.NaRCXT),
@@ -253,7 +253,7 @@ function eT(e) {
                               color: "text-default",
                               children: es.intl.string(es.t.w4DRbZ),
                           }),
-                          (0, i.jsx)(w.E, {
+                          (0, i.jsx)(H.E, {
                               variant: "text-md/medium",
                               color: "text-muted",
                               children: es.intl.string(es.t.F6u3E3),
@@ -279,7 +279,7 @@ function ek() {
         className: eO.Zj,
         children: [
             (0, i.jsx)(ey.t, { size: "md", color: eI.k0.PREMIUM_TIER_2 }),
-            (0, i.jsx)(w.E, { variant: "text-xs/medium", color: "text-strong", className: eO.tD, children: s }),
+            (0, i.jsx)(H.E, { variant: "text-xs/medium", color: "text-strong", className: eO.tD, children: s }),
             (0, i.jsx)(ev.A, {
                 className: eO.Oy,
                 size: eC.lO.TINY,
@@ -297,9 +297,9 @@ function eG(e) {
 }
 var eF = n(318061),
     eU = n(824385);
-let eH = "Bookmarks",
-    ew = "Reminders";
-function eK(e) {
+let ew = "Bookmarks",
+    eH = "Reminders";
+function eP(e) {
     let { closePopout: t, type: n } = e,
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yf.ALL,
@@ -348,7 +348,7 @@ function eK(e) {
     );
     let a = r.useRef(null),
         l = (0, O.A)("for-later", a);
-    (0, eu.xN)(a), (0, eu.yW)(n === m.Yf.BOOKMARK ? eH : ew);
+    (0, eu.xN)(a), (0, eu.yW)(n === m.Yf.BOOKMARK ? ew : eH);
     let [d, c] = r.useState(new Date());
     return (r.useEffect(() => {
         let e = setInterval(() => c(new Date()), eA.A.Millis.MINUTE);
@@ -371,7 +371,7 @@ function eK(e) {
                           ...l,
                           children: s.map((e) =>
                               (0, i.jsx)(
-                                  eP,
+                                  eK,
                                   { savedMessage: e, closePopout: t, throttledNow: d },
                                   e.saveData.messageId,
                               ),
@@ -381,14 +381,14 @@ function eK(e) {
               }),
           });
 }
-function eP(e) {
+function eK(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         a = (0, ex.vr)(t),
         l = r.useCallback(
             async (e) => {
                 await (0, ex.le)(t, a),
                     e.shiftKey || n(),
-                    L.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? ew : eH);
+                    L.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? eH : ew);
             },
             [n, t, a],
         ),
@@ -546,7 +546,7 @@ function e2(e) {
             },
             children: [
                 (0, i.jsx)(e$.$, { size: "xs", color: "currentColor" }),
-                (0, i.jsx)(H.hV, { count: n, color: y.A.colors.BACKGROUND_MOD_STRONG.css }),
+                (0, i.jsx)(w.hV, { count: n, color: y.A.colors.BACKGROUND_MOD_STRONG.css }),
             ],
         }),
     });
@@ -555,12 +555,12 @@ var e3 = n(980707),
     e6 = n(477782),
     e7 = n(922016),
     e8 = n(783977),
-    e4 = n(378939),
-    e5 = n(309010),
+    e5 = n(378939),
+    e4 = n(309010),
     e9 = n(409686);
 function te(e) {
     let { closePopout: t, onSelect: n } = e,
-        s = (0, E.bG)([q.A, e5.Ay], () => q.A.getChannel(e5.Ay.getChannelId())),
+        s = (0, E.bG)([q.A, e4.Ay], () => q.A.getChannel(e4.Ay.getChannelId())),
         {
             everyoneFilter: a,
             roleFilter: l,
@@ -580,7 +580,7 @@ function te(e) {
                 id: "Everyone",
                 label: es.intl.string(es.t.cdyUsV),
                 action: function () {
-                    e4.A.setGuildFilter({ everyoneFilter: !a });
+                    e5.A.setGuildFilter({ everyoneFilter: !a });
                 },
                 checked: a,
             }),
@@ -588,7 +588,7 @@ function te(e) {
                 id: "Roles",
                 label: es.intl.string(es.t.lZejCq),
                 action: function () {
-                    e4.A.setGuildFilter({ roleFilter: !l });
+                    e5.A.setGuildFilter({ roleFilter: !l });
                 },
                 checked: l,
             }),
@@ -598,7 +598,7 @@ function te(e) {
                       id: "All Servers",
                       label: es.intl.string(es.t.GWMA6s),
                       action: function () {
-                          e4.A.setGuildFilter({
+                          e5.A.setGuildFilter({
                               guildFilter: r === eD.KE7.THIS_SERVER ? eD.KE7.ALL_SERVERS : eD.KE7.THIS_SERVER,
                           });
                       },
@@ -659,13 +659,13 @@ function tm(e) {
                 ],
             }),
             (0, i.jsx)(C.D, { className: tg.wx, variant: "heading-xl/semibold", children: n }),
-            (0, i.jsxs)(w.E, {
+            (0, i.jsxs)(H.E, {
                 color: "text-default",
                 variant: "text-xs/normal",
                 children: [
                     a
                         ? null
-                        : (0, i.jsxs)(w.E, {
+                        : (0, i.jsxs)(H.E, {
                               tag: "span",
                               className: tg.PP,
                               variant: "text-xs/bold",
@@ -718,7 +718,7 @@ function tp(e) {
         confirmButtonColor: eC.$n.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, i.jsx)(w.E, {
+        children: (0, i.jsx)(H.E, {
             color: "text-default",
             variant: "text-sm/normal",
             children: es.intl.string(es.t["0MQ0Bf"]),
@@ -728,7 +728,7 @@ function tp(e) {
 var tE = n(435558),
     tj = n.n(tE),
     tN = n(749314),
-    tS = n(617498),
+    tS = n(183812),
     ty = n(311283),
     tC = n(717421),
     tR = n(933832),
@@ -792,7 +792,7 @@ function tk(e) {
 var tG = n(782603),
     tF = n(461678),
     tU = n(914703);
-function tH(e) {
+function tw(e) {
     let { channel: t } = e,
         n = r.useRef(null);
     return (0, i.jsx)(e7.Y, {
@@ -832,9 +832,9 @@ function tH(e) {
         },
     });
 }
-var tw = n(350527),
-    tK = n(218152),
-    tP = n(970278),
+var tH = n(350527),
+    tP = n(218152),
+    tK = n(970278),
     tB = n(747926),
     tz = n(935208),
     tX = n(37411),
@@ -842,9 +842,9 @@ var tw = n(350527),
 function tJ(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         a = (0, E.yK)(
-            [tP.A, q.A],
+            [tK.A, q.A],
             () =>
-                tj()(tP.A.getThreadsForParent(n.guild_id, n.id))
+                tj()(tK.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -886,8 +886,8 @@ function tJ(e) {
             className: tY.k,
             children: a.map((e) =>
                 (0, i.jsx)(
-                    tK.Cp,
-                    { channel: n, children: (0, i.jsx)(tw.Ay, { className: tY.u, threadId: e.id, goToThread: l }) },
+                    tP.Cp,
+                    { channel: n, children: (0, i.jsx)(tH.Ay, { className: tY.u, threadId: e.id, goToThread: l }) },
                     e.id,
                 ),
             ),
@@ -907,8 +907,8 @@ var tV = n(989349),
     t6 = n(5095),
     t7 = n(320095),
     t8 = n(143413),
-    t4 = n(763754),
-    t5 = n(467073),
+    t5 = n(763754),
+    t4 = n(467073),
     t9 = n(491182),
     ne = n(860227),
     nt = n(500414),
@@ -947,7 +947,7 @@ let nh = r.memo(function e(t) {
         j = eg.kt.useSetting(),
         N = (0, tQ.S)((a.editedTimestamp ?? a.timestamp).valueOf()),
         S = (0, t0.A)(s?.id),
-        { disableReactionCreates: y } = (0, t5.A)(s),
+        { disableReactionCreates: y } = (0, t4.A)(s),
         {
             content: C,
             hasSpoilerEmbeds: R,
@@ -959,7 +959,7 @@ let nh = r.memo(function e(t) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        v = (0, t4.Ay)(a),
+        v = (0, t5.Ay)(a),
         _ = (0, E.bG)(
             [q.A],
             () => a.hasFlag(eD.pr7.HAS_THREAD) && q.A.getChannel(tz.default.castMessageIdAsChannelId(a.id)),
@@ -1045,7 +1045,7 @@ function nf(e) {
         },
         children: s
             ? (0, i.jsx)(tl.y, { type: tl.y.Type.PULSING_ELLIPSIS })
-            : (0, i.jsx)(w.E, { variant: "text-xs/medium", className: nA.Q, children: es.intl.string(es.t.k5WiPf) }),
+            : (0, i.jsx)(H.E, { variant: "text-xs/medium", className: nA.Q, children: es.intl.string(es.t.k5WiPf) }),
     });
 }
 var nx = n(143236),
@@ -1117,7 +1117,7 @@ class nk extends nx.EventEmitter {
             case "nsfw":
                 return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
             case "forum": {
-                let t = tP.A.hasLoaded(e.guildId);
+                let t = tK.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
             default:
@@ -1224,7 +1224,7 @@ class nk extends nx.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = tP.A.hasLoaded(e.guildId);
+                let t = tK.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -1354,7 +1354,7 @@ function nU(e, t, n, s) {
     if (a.isPrivate()) {
         if (0 === ee.Ay.getMentionCount(s)) return;
     } else if (!(0, nS.Y)(a) && 0 === ee.Ay.getMentionCount(s)) return;
-    if ((!a.isPrivate() && !em.A.can(eD.xBc.READ_MESSAGE_HISTORY, a)) || (0, np.qR)(a)) return;
+    if (!a.isPrivate() && !em.A.can(eD.xBc.READ_MESSAGE_HISTORY, a)) return;
     let l = ee.Ay.ackMessageId(s);
     if (null == l) {
         let e = W.A.getGuild(a.guild_id);
@@ -1386,8 +1386,8 @@ function nU(e, t, n, s) {
             if (ee.Ay.getMentionCount(t) > 0) return ee.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = tz.default.extractTimestamp(n);
-                if (Date.now() - e > nw) return 8;
-                if (Date.now() - e > nH) return 6;
+                if (Date.now() - e > nH) return 8;
+                if (Date.now() - e > nw) return 6;
             }
             if (s.isThread()) {
                 let e = (0, nR.l)(s);
@@ -1407,10 +1407,10 @@ function nU(e, t, n, s) {
           ? t.push({ ...o, type: "forum" })
           : t.push({ ...o, type: "messages", messages: [] });
 }
-let nH = 2 * eA.A.Millis.DAY,
-    nw = 10 * eA.A.Millis.DAY;
-var nK = n(358402);
-let nP = { left: 4, right: -12 },
+let nw = 2 * eA.A.Millis.DAY,
+    nH = 10 * eA.A.Millis.DAY;
+var nP = n(358402);
+let nK = { left: 4, right: -12 },
     nB = [eD.lAJ.THREAD_CREATED];
 function nz(e) {
     let { channel: t, message: n, compact: s, isGroupStart: a, gotoChannel: l } = e,
@@ -1427,18 +1427,18 @@ function nz(e) {
         ),
         o = nB.includes(n.type);
     return (0, i.jsx)(T.vN, {
-        offset: nP,
+        offset: nK,
         children: (0, i.jsxs)("div", {
-            className: nK.zC,
+            className: nP.zC,
             onKeyDown: c,
             ...d,
             children: [
-                !o && (0, i.jsx)(nf, { className: nK.nn, onJump: (e) => l(e, n.id) }),
+                !o && (0, i.jsx)(nf, { className: nP.nn, onJump: (e) => l(e, n.id) }),
                 (0, i.jsx)(nh, {
                     id: n.id,
                     message: n,
                     channel: t,
-                    className: nK.iU,
+                    className: nP.iU,
                     compact: s,
                     animateAvatar: !1,
                     isGroupStart: a,
@@ -1458,7 +1458,7 @@ function nX(e) {
     o.forEach((e) => {
         if (!l && (null == d || !d.isSame(e.timestamp, "day"))) {
             let t = (0, nm.i$)(e.timestamp, "LL");
-            r.push((0, i.jsx)(tN.A, { className: nK.yF, children: t }, t)), (d = tZ()(e.timestamp));
+            r.push((0, i.jsx)(tN.A, { className: nP.yF, children: t }, t)), (d = tZ()(e.timestamp));
         }
         let t = null == c || (0, tq.A)(n, c, e);
         (c = e), r.push((0, i.jsx)(nz, { channel: n, message: e, compact: a, isGroupStart: t, gotoChannel: s }, e.id));
@@ -1471,7 +1471,7 @@ function nX(e) {
                 (0, i.jsx)(
                     "div",
                     {
-                        className: nK.Gr,
+                        className: nP.Gr,
                         children: (0, i.jsx)(t$.Q, {
                             variant: "primary",
                             text: `${es.intl.string(es.t["9OB9hq"])} \u203A`,
@@ -1482,7 +1482,7 @@ function nX(e) {
                 ),
             ),
         0 === r.length && (r = [(0, i.jsx)(tl.y, {}, "spinner")]),
-        (0, i.jsx)("div", { className: nK.DZ, children: r })
+        (0, i.jsx)("div", { className: nP.DZ, children: r })
     );
 }
 let nY = r.memo(function (e) {
@@ -1568,7 +1568,6 @@ let nY = r.memo(function (e) {
                     is_now_collapsed: !t.collapsed,
                 });
         }
-        let o = !l.isNSFW();
         return (0, i.jsx)("div", {
             className: eU.aP,
             children: (0, i.jsx)(g.F, {
@@ -1577,15 +1576,17 @@ let nY = r.memo(function (e) {
                     onClick: d,
                     collapsed: t.collapsed,
                     mentionCount: t.mentionCount,
-                    onToggleCollapse: o ? c : void 0,
+                    onToggleCollapse: "nsfw" !== t.type ? c : void 0,
                     itemId: `header-${l.id}`,
                     children: [
                         (0, i.jsxs)(R.e, {
                             size: "sm",
                             className: ea.GC,
-                            children: [(0, i.jsx)(tH, { channel: l }), (0, i.jsx)(nV, { ...e })],
+                            children: [(0, i.jsx)(tw, { channel: l }), (0, i.jsx)(nV, { ...e })],
                         }),
-                        o ? (0, i.jsx)(tL, { collapsed: t.collapsed, onClick: c }) : null,
+                        "nsfw" !== t.type
+                            ? (0, i.jsx)(tL, { collapsed: t.collapsed, onClick: c })
+                            : (0, i.jsx)("div", { className: ea.Pt }),
                     ],
                 }),
                 children: (0, i.jsx)(tk, {
@@ -1685,8 +1686,8 @@ function nW(e) {
                 ),
                 r.useEffect(
                     () => (
-                        tP.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                        () => tP.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                        tK.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                        () => tK.A.removeChangeListener(t.handleActiveThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -1860,7 +1861,7 @@ function nQ(e) {
                         variant: "heading-md/semibold",
                         children: es.intl.string(es.t.vZPktJ),
                     }),
-                    (0, i.jsx)(w.E, {
+                    (0, i.jsx)(H.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
                         children: es.intl.string(es.t.vWkIII),
@@ -1988,12 +1989,12 @@ function n6(e) {
 }
 var n7 = n(935063),
     n8 = n(475743),
-    n4 = n(517019),
-    n5 = n(919755);
+    n5 = n(517019),
+    n4 = n(919755);
 let n9 = { offset: { left: 4, right: -12 } },
     se = "Recent Mentions";
 function st(e, t) {
-    e4.A.fetchRecentMentions({
+    e5.A.fetchRecentMentions({
         before: t,
         limit: eD.Ue3,
         guildId: null != e && e9.Ay.guildFilter !== eD.KE7.ALL_SERVERS ? e.getGuildId() : null,
@@ -2006,7 +2007,7 @@ function sn(e) {
         n = r.useRef(null),
         s = (0, O.A)("recents", n);
     (0, eu.xN)(n), (0, eu.yW)(se);
-    let a = (0, E.bG)([q.A, e5.Ay], () => q.A.getChannel(e5.Ay.getChannelId())),
+    let a = (0, E.bG)([q.A, e4.Ay], () => q.A.getChannel(e4.Ay.getChannelId())),
         {
             messages: l,
             hasMore: d,
@@ -2031,10 +2032,10 @@ function sn(e) {
             : st(a);
     }, [g, o, m, u, A, h, a]),
         (0, td.Ay)(() => {
-            l?.some(nN.$r) && (e4.A.clearMentions(), st(a));
+            l?.some(nN.$r) && (e5.A.clearMentions(), st(a));
         }),
         (0, td.l0)(() => {
-            e4.A.truncateMentions(eD.Ue3);
+            e5.A.truncateMentions(eD.Ue3);
         });
     let f = r.useCallback(() => {
         let e = n.current?.getScrollerState();
@@ -2066,7 +2067,7 @@ function sn(e) {
                                     ? (0, i.jsx)("div", { className: eU.Lq, children: (0, i.jsx)(tl.y, {}) })
                                     : d
                                       ? (0, i.jsx)("div", {
-                                            className: n5.u,
+                                            className: n4.u,
                                             children: (0, i.jsx)(ti.$, {
                                                 variant: "secondary",
                                                 size: "sm",
@@ -2088,7 +2089,7 @@ function ss(e) {
     if (null == t) return null;
     let s = q.A.getChannel(t.channel_id);
     if (null == s || (0, np.Jm)(s) || (0, np.$v)(s)) return null;
-    let a = n4.A.didAgree(s.getGuildId()),
+    let a = n5.A.didAgree(s.getGuildId()),
         l = !!(0, np.Gc)(s) && !a;
     return (0, i.jsxs)("div", {
         className: eU.aP,
@@ -2121,7 +2122,7 @@ function ss(e) {
                                 "aria-label": es.intl.string(es.t.e6RscS),
                                 size: "sm",
                                 icon: tR.A,
-                                onClick: () => e4.A.deleteRecentMention(t.id),
+                                onClick: () => e5.A.deleteRecentMention(t.id),
                             }),
                         }),
                     ],
@@ -2177,7 +2178,7 @@ function su(e) {
     return ((0, eu.xN)(d), (0, eu.yW)(sc), s)
         ? (0, i.jsx)("div", { className: eU.Lq, children: (0, i.jsx)(tl.y, {}) })
         : 0 === l.length
-          ? (0, i.jsx)(tm, { Icon: K.O, header: es.intl.string(es.t.aJQZfZ), tip: es.intl.string(es.t.rCN4pN) })
+          ? (0, i.jsx)(tm, { Icon: P.O, header: es.intl.string(es.t.aJQZfZ), tip: es.intl.string(es.t.rCN4pN) })
           : (0, i.jsx)(p.hD, {
                 navigator: c,
                 children: (0, i.jsx)(p.PR, {
@@ -2261,7 +2262,7 @@ let sh = r.memo(function (e) {
                                       children: (0, i.jsx)(I.K, {
                                           variant: "secondary",
                                           size: "sm",
-                                          icon: K.O,
+                                          icon: P.O,
                                           "aria-label": es.intl.string(es.t.SBcdAN),
                                           onClick: u,
                                       }),
@@ -2333,9 +2334,9 @@ function sm(e) {
                         s === u.Y2.MENTIONS
                             ? (0, i.jsx)(sn, { onJump: r })
                             : f && s === u.Y2.BOOKMARKS
-                              ? (0, i.jsx)(eK, { closePopout: l, type: m.Yf.BOOKMARK }, "bookmarks")
+                              ? (0, i.jsx)(eP, { closePopout: l, type: m.Yf.BOOKMARK }, "bookmarks")
                               : f && s === u.Y2.REMINDERS
-                                ? (0, i.jsx)(eK, { closePopout: l, type: m.Yf.REMINDER }, "reminders")
+                                ? (0, i.jsx)(eP, { closePopout: l, type: m.Yf.REMINDER }, "reminders")
                                 : s === u.Y2.SCHEDULED
                                   ? (0, i.jsx)(su, { onJump: r })
                                   : (0, i.jsx)(nW, { onJump: r, showTutorial: d, setSeenTutorial: A, closePopout: l }),

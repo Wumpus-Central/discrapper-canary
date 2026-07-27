@@ -16,4 +16,5 @@ _.exports = {
     z3: "error__5d903",
     kX: "success__5d903",
     qb: "normal__5d903",
+    Pt: "noCollapseButton__5d903",
 };
