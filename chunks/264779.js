@@ -1,20 +1,20 @@
 "use strict";
 n.d(t, {
     Cp: () => S,
-    HB: () => D,
+    HB: () => y,
     Ng: () => T,
-    OP: () => R,
+    OP: () => O,
     So: () => N,
     WD: () => p,
     Wl: () => L,
-    dG: () => C,
-    eN: () => O,
+    eN: () => R,
+    g_: () => C,
     kc: () => g,
     kd: () => m,
 }),
     n(938796);
 var i = n(665260),
-    r = n(636537),
+    r = n(562465),
     a = n(554146),
     s = n(462887),
     l = n(367727),
@@ -83,12 +83,12 @@ function N() {
     return null != e && !(0, l.j6)(a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: 2592e5 });
 }
 function C(e) {
-    return e.partnerId === A.XY;
-}
-function R(e) {
-    return !(0, u.isIOS)() || !e.hasFlag(h.$3.IS_BLOCKED_IOS);
+    return null != e.partnerId && A.km.has(e.partnerId);
 }
 function O(e) {
+    return !(0, u.isIOS)() || !e.hasFlag(h.$3.IS_BLOCKED_IOS);
+}
+function R(e) {
     let t = {};
     for (let { code: n, promotion: i } of e) t[i.id] = n;
     return t;
@@ -102,10 +102,10 @@ function L(e, t) {
     );
     return e.filter((e) => {
         let { promotion: t } = e;
-        return !n.has(t.id) && !D(t) && !C(t) && R(t);
+        return !n.has(t.id) && !y(t) && !C(t) && O(t);
     });
 }
-function D(e) {
+function y(e) {
     let { promotionType: t } = e;
     return t === A.pt.THIRD_PARTY_OUTBOUND_RECURRING;
 }

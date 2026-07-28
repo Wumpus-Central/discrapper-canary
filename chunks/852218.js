@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { CD: () => o, Cs: () => u, KS: () => l, NC: () => d, XY: () => c, pt: () => a, qn: () => s });
+n.d(t, { CD: () => l, Cs: () => d, KS: () => o, NC: () => u, XY: () => c, km: () => _, pt: () => s, qn: () => a });
 var i,
     r,
-    s = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
-    a =
+    a = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
+    s =
         (((r = {})[(r.THIRD_PARTY = 0)] = "THIRD_PARTY"),
         (r[(r.BOGO = 1)] = "BOGO"),
         (r[(r.THIRD_PARTY_DIRECT_FULFILLMENT = 2)] = "THIRD_PARTY_DIRECT_FULFILLMENT"),
@@ -13,12 +13,13 @@ var i,
         (r[(r.GIFT_PROMOTION = 6)] = "GIFT_PROMOTION"),
         (r[(r.THIRD_PARTY_OUTBOUND_RECURRING = 7)] = "THIRD_PARTY_OUTBOUND_RECURRING"),
         r);
-let o = {
+let l = {
         steelseries: { id: "steelseries", label: "SteelSeries" },
         kontrolfreek: { id: "kontrolfreek", label: "KontrolFreek" },
         logitech: { id: "logitech", label: "Logitech" },
     },
-    l = "steelseries",
-    u = "kontrolfreek",
+    o = "steelseries",
+    d = "kontrolfreek",
     c = "logitech",
-    d = "youtube";
+    u = "youtube",
+    _ = new Set([c, "call_of_duty"]);
