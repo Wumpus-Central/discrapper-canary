@@ -28,7 +28,7 @@ var R = i(50268),
     j = i(239211),
     M = i(399476),
     S = i(183555),
-    U = i(82191),
+    U = i(321191),
     k = i(993401);
 function v(n) {
     let { user: t, guildId: i, viewProfileItem: v } = n,

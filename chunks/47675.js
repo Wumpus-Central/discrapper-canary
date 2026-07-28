@@ -22,7 +22,7 @@ var i = n(95561),
     u = n(287809),
     _ = n(174459),
     E = n(486020),
-    A = n(82191);
+    A = n(321191);
 let h = (0, n(945810).mj)({
     kind: "user",
     name: "2026-04-user-profile-performance-analytics",

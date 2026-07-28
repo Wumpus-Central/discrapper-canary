@@ -114,7 +114,7 @@ let u = new c(r.h, {
     },
     WISHLIST_ITEM_PURCHASED: function (e) {
         let { recipientId: t, skuId: i } = e,
-            r = n(82191).A.getFirstWishlistId(t);
+            r = n(321191).A.getFirstWishlistId(t);
         null != r && null != l[r] && null != l[r].data && (0, s.C3)(l[r].data, i) && (l[r].updatedAt = void 0);
     },
 });
