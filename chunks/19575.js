@@ -165,8 +165,8 @@ var i,
         (i.WINDOW_SET_FRAME_RATE = "DISCORD_WINDOW_SET_FRAME_RATE"),
         (i.GET_MOUSE_COORDINATES = "DISCORD_GET_MOUSE_COORDINATES"),
         i),
-    u = n(636537),
-    _ = n(941426),
+    u = n(562465),
+    _ = n(118356),
     E = n(506774),
     A = n(56562),
     h = n(223273),
@@ -536,7 +536,7 @@ let Y = {
             l()(f.isPlatformEmbedded, "Download ML model file method called outside native app");
             let i = p.A.toURLSafe(e);
             return (
-                l()(i, "Could not download ML model, fileSrc was not a valid path"),
+                l()(null != i, "Could not download ML model, fileSrc was not a valid path"),
                 await g.fileManager.maybeDownloadMLModelFile(e, t, n)
             );
         },
@@ -550,7 +550,7 @@ let Y = {
             l()(f.isPlatformEmbedded, "Download clips file method called outside native app");
             let i = p.A.toURLSafe(e);
             return (
-                l()(i, "Could not download clips file, fileSrc was not a valid path"),
+                l()(null != i, "Could not download clips file, fileSrc was not a valid path"),
                 await g.fileManager.maybeDownloadClipsFile(e, t, n)
             );
         },
@@ -565,7 +565,7 @@ let Y = {
             l()(f.isPlatformEmbedded, "Download OpenH264 file method called outside native app");
             let r = p.A.toURLSafe(e);
             return (
-                l()(r, "Could not download OpenH264, fileSrc was not a valid path"),
+                l()(null != r, "Could not download OpenH264, fileSrc was not a valid path"),
                 await g.fileManager.maybeDownloadOpenH264(e, t, n, i)
             );
         },

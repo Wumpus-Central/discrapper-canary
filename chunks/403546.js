@@ -11672,7 +11672,7 @@ function c9() {
                     partnerApplicationTimestamp: t.partnerApplicationTimestamp,
                     isPublished: t.isPublished,
                     reasonsToJoin: t.reasonsToJoin,
-                    socialLinks: t.socialLinks.filter((e) => e),
+                    socialLinks: t.socialLinks.filter((e) => "" !== e),
                     about: t.about,
                 }));
         },

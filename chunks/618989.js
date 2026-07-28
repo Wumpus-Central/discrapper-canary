@@ -271,7 +271,7 @@ class ep extends u.Ay.Store {
         let t = ed.w.get(ex);
         t?.history != null &&
             (Object.keys((e = t.history)).forEach((t) => {
-                Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
+                Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && "" !== e.trim())),
                     (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
             }),
             (eg = e)),

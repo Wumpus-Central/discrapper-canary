@@ -20,8 +20,8 @@ var n = i(627968),
     N = i(298990),
     S = i(308528),
     C = i(684013),
-    T = i(730134),
-    h = i(964486),
+    h = i(730134),
+    T = i(964486),
     v = i(55730),
     O = i(429913),
     b = i(20015),
@@ -83,7 +83,7 @@ var F = i(474397),
     tn = i(652215),
     tl = i(381941),
     ta = i(375708),
-    tr = i(575322);
+    tr = i(590130);
 function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
@@ -96,17 +96,17 @@ function ts(t) {
             return () => clearTimeout(t);
         }
     }, [m]);
-    let T = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
-        h = null != T;
+    let h = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
+        T = null != h;
     async function v(t) {
         if (null != u && "unsent" === m) {
             t.stopPropagation();
             try {
-                if ((I("sending"), h && null != T))
+                if ((I("sending"), T && null != h))
                     await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
-                        activity: T,
+                        activity: h,
                         location: tn.ThZ.UNLOCKED_OVERLAY,
                     });
                 else {
@@ -153,9 +153,9 @@ function ts(t) {
             (0, F.A)(tn.BRT.OVERLAY, !0),
             (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
     }
-    let b = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
+    let b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === m ? (E ? d.o : A.B) : h ? f.D : p.l),
+        (e = "sent" === m ? (E ? d.o : A.B) : T ? f.D : p.l),
         (0, n.jsx)(y.m, {
             text: b,
             "aria-label": b,
@@ -234,7 +234,7 @@ function tu(t) {
         : (0, n.jsxs)("div", {
               className: tr.nM,
               children: [
-                  (0, n.jsx)(T.A, { className: tr.my, user: r, isMobile: o, isVR: u, status: d }),
+                  (0, n.jsx)(h.A, { className: tr.my, user: r, isMobile: o, isVR: u, status: d }),
                   (0, n.jsxs)("div", {
                       className: tr.zH,
                       children: [
@@ -285,10 +285,11 @@ function td(t) {
                         });
                         return (
                             null != i &&
-                            i.traits.find((t) => {
-                                let { type: e } = t;
-                                return e === u.K.IS_LIVE;
-                            })
+                            null !=
+                                i.traits.find((t) => {
+                                    let { type: e } = t;
+                                    return e === u.K.IS_LIVE;
+                                })
                         );
                     }),
                 ),
@@ -325,7 +326,7 @@ function td(t) {
 function tA(t) {
     let { gamingId: e, maxUserShowCount: i, userAffinityThresholdV2: n = 0.0029 } = t,
         a = w(e);
-    (0, h.Ay)(() => {
+    (0, T.Ay)(() => {
         (0, J.u)();
     });
     let r = (0, ti.xl)(e),
@@ -368,7 +369,7 @@ function tA(t) {
                 });
         }, [e, n]);
     return (
-        (0, h.Ay)(() => (Y.O(), () => Y.v())),
+        (0, T.Ay)(() => (Y.O(), () => Y.v())),
         {
             entries: l.useMemo(() => {
                 let t = a.filter((t) => !d.some((e) => e.activityUser.id === t.author_id)),
@@ -447,7 +448,7 @@ function ty(t) {
         s = (0, c.bG)([q.default], () => q.default.getCurrentUser()),
         o = null != a ? a : l,
         u = (0, ti.xl)(o);
-    (0, h.Ay)(() => (Y.O(), () => Y.v()));
+    (0, T.Ay)(() => (Y.O(), () => Y.v()));
     let d = tA({ gamingId: o, userAffinityThresholdV2: 0.00145, maxUserShowCount: 12 });
     return e || (0 === r.length && null == u)
         ? null

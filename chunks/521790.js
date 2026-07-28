@@ -30,7 +30,7 @@ function L(e) {
         E = T.A.getGuildId(),
         A = (0, c.DP)(),
         f = (0, o.bG)([I.default], () => I.default.locale);
-    l()(E, "Guild Id must be defined");
+    l()(null != E, "Guild Id must be defined");
     let p = u.A.get(s),
         m = r.toLocaleDateString(f, { month: "long", day: "numeric", year: "numeric" });
     return (0, i.jsxs)(d.$T, {

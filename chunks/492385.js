@@ -4965,7 +4965,7 @@ function sP(e) {
                     let e = a.current;
                     if ("string" != typeof e) return;
                     null == eG.Ay.getSidebarState(r) && (a.current = null);
-                    let n = i.findIndex((t) => t.find((t) => t === e)),
+                    let n = i.findIndex((t) => null != t.find((t) => t === e)),
                         l = t.current.getCoordsMap(),
                         s = l[`__section__${n}`],
                         o = l[sL(n, e)];

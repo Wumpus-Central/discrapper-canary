@@ -41,7 +41,7 @@ let c = class {
         );
         if (null == n) return;
         let i = s(t),
-            r = e.map((e) => e.cred_id).filter((e) => e);
+            r = e.map((e) => e.cred_id).filter((e) => "" !== e);
         l.info("signalAllAcceptedCredentials", { rpId: o, encodedUserId: i, allAcceptedCredentialIds: r }),
             await n(o, i, r).catch(l.warn);
     }

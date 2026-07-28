@@ -134,7 +134,7 @@ class C {
             let l = e + 1e3 * t,
                 o = (function (e, t) {
                     let n = e.findLast((e) => e.timestamp_ms <= t);
-                    return r()(n, "bad timeline!"), n;
+                    return r()(null != n, "bad timeline!"), n;
                 })(n, l);
             (null != a ? S(this.gameEvents, a, l) : []).some((e) => e.name === N.Z8) && (s = l);
             let d = 1;
@@ -230,7 +230,7 @@ class v {
             let a = e + 1e3 * t,
                 s = (function (e, t) {
                     let n = e.findLast((e) => e.timestamp_ms <= t);
-                    return r()(n, "bad timeline!"), n;
+                    return r()(null != n, "bad timeline!"), n;
                 })(n, a),
                 l = 1;
             s.in_game ? s.is_dead && (l *= y.pw) : (l *= y.ym), i.push({ timestamp_ms: a, modifier: l });
@@ -814,7 +814,7 @@ function W(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
 var Y = n(430795),
-    K = n(283540);
+    K = n(293246);
 function $() {
     return K.Ay.getMediaEngine().getSystemSteadyClockNowMs() ?? Date.now();
 }

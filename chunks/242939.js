@@ -1039,7 +1039,7 @@ let td = function (e) {
             l = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
             i = (0, E.Du)(),
             a = r.useMemo(
-                () => (0, F.bg)(t).filter((e) => i.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+                () => (0, F.bg)(t).filter((e) => null != i.xboxAndPlaystationAccounts.find((t) => t.type === e)),
                 [i.xboxAndPlaystationAccounts, t],
             ),
             {

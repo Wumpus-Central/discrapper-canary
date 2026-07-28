@@ -108,7 +108,7 @@ async function A(e) {
 }
 async function h(e) {
     let { paymentSourceId: t, skuId: n, subscriptionPlanId: i, currency: r, loadId: s, quantity: l } = e;
-    a()(n, "SKU ID is missing for one time purchase gift invoice preview");
+    a()(null != n && "" !== n, "SKU ID is missing for one time purchase gift invoice preview");
     let c = { gift: !0, payment_source_id: t, sku_subscription_plan_id: i, currency: r, load_id: s };
     null != l && (c.quantity = l);
     try {

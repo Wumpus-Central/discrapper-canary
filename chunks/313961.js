@@ -64,7 +64,7 @@ function H(e) {
                       let i = O.jd.NONE,
                           a = n
                               .toArray(C.r4.STREAM)
-                              .find((e) => e.type === O.lp.STREAM && A.A.getActiveStreamForStreamKey(e.id));
+                              .find((e) => e.type === O.lp.STREAM && null != A.A.getActiveStreamForStreamKey(e.id));
                       if (null != a) r()(a.type === O.lp.STREAM, "Impossible condition"), (i = a.id);
                       else if (1 === n.size()) i = t;
                       else if (1 === n.size(C.r4.VIDEO)) {

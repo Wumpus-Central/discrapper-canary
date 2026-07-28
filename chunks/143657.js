@@ -45,7 +45,7 @@ async function D(e, t, n) {
 async function O(e) {
     S.A.clearAll(e, P.C.Poll);
 }
-var T = n(962514),
+var T = n(180662),
     _ = n(375708);
 function L(e, t) {
     return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
@@ -71,7 +71,7 @@ var U = n(95561),
     et = n(522602),
     en = n(307731),
     el = n(698279),
-    ea = n(231876);
+    ea = n(864332);
 function ei(e) {
     let {
         hasUpload: t,
@@ -331,7 +331,7 @@ function es(e) {
     });
 }
 var ec = n(412728),
-    eu = n(210540);
+    eu = n(456516);
 function em(e) {
     let { question: t, onChange: n, error: l, inputRef: i } = e;
     return (0, a.jsx)(s.f, {
@@ -624,7 +624,7 @@ function ef(e) {
             if (er) {
                 if (ea?.question != null) Y.current?.focus();
                 else {
-                    let e = W.findIndex((e) => ea[`answer-${e.localCreationAnswerId}`]);
+                    let e = W.findIndex((e) => !!ea[`answer-${e.localCreationAnswerId}`]);
                     -1 !== e && F.current[e]?.focusInput();
                 }
                 eo(!1);

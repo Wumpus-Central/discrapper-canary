@@ -24,7 +24,7 @@ function I(e, t) {
 }
 let f = function (e, t) {
         let n = t.getGuildId();
-        return c()(n, "isGuildChannel with null guildId"), I(e, t) > 30 && E.A.can(A.xBc.MENTION_EVERYONE, t);
+        return c()(null != n, "isGuildChannel with null guildId"), I(e, t) > 30 && E.A.can(A.xBc.MENTION_EVERYONE, t);
     },
     p = function (e, t) {
         for (let n of u.Ay.parsePreprocessor(t, e)) {
