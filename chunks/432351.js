@@ -154,6 +154,7 @@ class o extends i.A {
     }
     stopLocalAudioRecording(e) {}
     setHasFullbandPerformance(e) {}
+    setNcModels(e) {}
     getSupportedSecureFramesProtocolVersion() {
         return 0;
     }

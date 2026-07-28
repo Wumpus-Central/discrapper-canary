@@ -2970,6 +2970,54 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-04-krisp-v9-ios",
+    "defaultConfig": {
+      "models": [
+        {
+          "name": "small_NC_8k",
+          "maxSampleRate": 8000,
+          "filename": "krisp-nc-o-nb-v2.kef"
+        },
+        {
+          "name": "small_NC",
+          "maxSampleRate": 16000,
+          "filename": "krisp-nc-o-lite-v1.kef"
+        },
+        {
+          "name": "full_NC",
+          "maxSampleRate": 96000,
+          "filename": "krisp-nc-o-med-v7-fp16.kef"
+        }
+      ]
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "models": [
+          {
+            "name": "small_NC_8k",
+            "maxSampleRate": 8000,
+            "filename": "krisp-nc-o-nb-v2.kef"
+          },
+          {
+            "name": "small_NC_non_optimized",
+            "maxSampleRate": 16000,
+            "filename": "c6.f.s.laughter.da1785_non_optimized.kef"
+          },
+          {
+            "name": "full_NC_non_optimized",
+            "maxSampleRate": 96000,
+            "filename": "krisp-nc-o-med-v7.kef"
+          }
+        ]
+      }
+    }
+  },
+  {
     "name": "2026-04-mobile-boost-progress-bar",
     "kind": "user",
     "defaultConfig": {

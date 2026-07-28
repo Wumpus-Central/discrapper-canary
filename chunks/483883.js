@@ -247,7 +247,7 @@ let K = "2026-03-surface-direct-renderer",
 var z = n(53857),
     q = n(734057),
     Z = n(71393),
-    X = n(283540),
+    X = n(293246),
     Q = n(763827),
     J = n(412780),
     ee = n(873985),
@@ -3361,15 +3361,16 @@ class ts extends f.A {
                 X.Ay.getKrispEnableStats() ? X.Ay.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
             ]).then((e) => {
                 let [{ batteryUsageRounded: t }, n, i] = e;
-                en.default.track(eA.HAw.VOICE_DISCONNECT, {
-                    ...o,
-                    battery_usage: t,
-                    krisp_nc_model: n,
-                    duration_low_noise_detected_ms: i?.lowNoiseMs,
-                    duration_medium_noise_detected_ms: i?.mediumNoiseMs,
-                    duration_high_noise_detected_ms: i?.highNoiseMs,
-                    duration_noise_cancellation_voice_detected_ms: i?.talkTimeMs,
-                });
+                this.logger.log(`[VOICE_DISCONNECT] krisp_nc_model: ${n ?? "null"}`),
+                    en.default.track(eA.HAw.VOICE_DISCONNECT, {
+                        ...o,
+                        battery_usage: t,
+                        krisp_nc_model: n,
+                        duration_low_noise_detected_ms: i?.lowNoiseMs,
+                        duration_medium_noise_detected_ms: i?.mediumNoiseMs,
+                        duration_high_noise_detected_ms: i?.highNoiseMs,
+                        duration_noise_cancellation_voice_detected_ms: i?.talkTimeMs,
+                    });
             }),
                 this._trackRemainingSecureFrameTransitions();
         }

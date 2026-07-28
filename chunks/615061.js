@@ -3235,6 +3235,7 @@ class tr extends p.A {
     }
     stopLocalAudioRecording(e) {}
     setHasFullbandPerformance(e) {}
+    setNcModels(e) {}
     getSupportedSecureFramesProtocolVersion() {
         if (null == this.maxSupportedProtocolVersion)
             throw Error("getSupportedSecureFramesProtocolVersion called before DAVE was initialized");

@@ -2566,6 +2566,9 @@ class ea extends o.A {
     setHasFullbandPerformance(e) {
         (0, D.lE)().setHasFullbandPerformance?.(e);
     }
+    setNcModels(e) {
+        (0, D.lE)().setNcModels?.(e);
+    }
     getSupportedSecureFramesProtocolVersion() {
         return (0, D.lE)().SupportedSecureFramesProtocolVersion ?? 0;
     }
