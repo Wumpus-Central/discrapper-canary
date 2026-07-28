@@ -4,5 +4,4 @@ e.exports = {
     yu: "metadata__53b91",
     Hg: "party__53b91",
     $B: "playingSince__53b91",
-    w5: "expiredDescription__53b91",
 };
