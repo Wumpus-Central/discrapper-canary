@@ -1,34 +1,35 @@
-i.d(s, { Q: () => a });
-var t = i(627968);
-i(64700);
-var h = i(661531),
-    d = i(996682),
-    l = i(27989);
-function a(e) {
+"use strict";
+n.d(t, { Q: () => l });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    a = n(996682),
+    s = n(27989);
+function l(e) {
     let {
-            size: s = "md",
-            width: i,
-            height: a,
-            color: n = h.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...o
+            size: t = "md",
+            width: n,
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
+            ...c
         } = e,
-        p = (0, l.J)(s),
-        r = p?.width ?? i,
-        w = p?.height ?? a;
-    return (0, t.jsx)("svg", {
-        ...(0, d.A)(o),
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        E = u?.height ?? l;
+    return (0, i.jsx)("svg", {
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: r,
-        height: w,
+        width: _,
+        height: E,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, t.jsx)("path", {
-            fill: "string" == typeof n ? n : n.css,
+        children: (0, i.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
             fillRule: "evenodd",
             d: "M22 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h18a1 1 0 0 1 1 1Z",
             clipRule: "evenodd",
-            className: c,
+            className: d,
         }),
     });
 }
