@@ -5169,42 +5169,43 @@ function s1(e) {
 g.Ay.initialize(), n(426620), g.Ay.initialize();
 let s2 = nK(iq),
     s6 = nK(function (e) {
-        let t = c.useCallback(
-                (t) => {
+        let { transitionTo: t } = e,
+            n = c.useCallback(
+                (e) => {
                     let n;
-                    ((n = (0, s$.B)(t, { path: R.BVt.CHANNEL(na.pv.guildId(), na.pv.channelId()) })),
+                    ((n = (0, s$.B)(e, { path: R.BVt.CHANNEL(na.pv.guildId(), na.pv.channelId()) })),
                     +(n?.params?.channelId !== N.VV.ROLE_SUBSCRIPTIONS))
-                        ? (e.transitionTo ?? w.pX)(t)
-                        : w.bG(t);
+                        ? (t ?? w.pX)(e)
+                        : w.bG(e);
                 },
-                [e.transitionTo],
+                [t],
             ),
-            { isAuthenticated: n, loginStatus: i } = (0, g.cf)([eq.default], () => ({
+            { isAuthenticated: i, loginStatus: l } = (0, g.cf)([eq.default], () => ({
                 isAuthenticated: eq.default.isAuthenticated(),
                 loginStatus: eq.default.getLoginStatus(),
             })),
-            { location: l, redirectTo: s } = e,
-            [r, a] = c.useState(n);
-        function u(e) {
+            { location: s, redirectTo: r } = e,
+            [a, u] = c.useState(i);
+        function h(e) {
             let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
-            (0, _.Qh)({ handoffKey: t, handoffToken: n, handoffSource: i }), a(!1);
+            (0, _.Qh)({ handoffKey: t, handoffToken: n, handoffSource: i }), u(!1);
         }
         return ((0, l1.Ay)(() => {
-            if (null != l) {
-                let { handoff_key: e, handoff_token: t } = (0, d.parse)(l.search);
+            if (null != s) {
+                let { handoff_key: e, handoff_token: t } = (0, d.parse)(s.search);
                 if (null != e && null != t) {
-                    let n = null != s ? y(s) : void 0;
-                    r
+                    let n = null != r ? y(r) : void 0;
+                    a
                         ? f.A.logout("handoff", null).finally(() => {
-                              u({ handoffKey: e, handoffToken: t, handoffSource: n });
+                              h({ handoffKey: e, handoffToken: t, handoffSource: n });
                           })
-                        : u({ handoffKey: e, handoffToken: t, handoffSource: n });
+                        : h({ handoffKey: e, handoffToken: t, handoffSource: n });
                 }
             }
         }),
-        r || i === R.aUe.LOGGING_IN)
+        a || l === R.aUe.LOGGING_IN)
             ? (0, o.jsx)(G.Ay, { children: (0, o.jsx)(eG.y, {}) })
-            : (0, o.jsx)(iq, { ...e, transitionTo: t });
+            : (0, o.jsx)(iq, { ...e, transitionTo: n });
     }),
     s4 = nK(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,

@@ -23,7 +23,7 @@ var s = t(627968),
     I = t(688810),
     A = t(505527),
     S = t(649963),
-    _ = t(148411),
+    _ = t(454719),
     y = t(975732),
     M = t(734057),
     k = t(287809),
@@ -197,7 +197,7 @@ function K(e) {
             if (null == e) return;
             let l = e.getScrollerState();
             l.scrollTop + l.offsetHeight >= l.scrollHeight - 52 && d && !h && x();
-        }, [u, d, h, x]),
+        }, [d, h, x]),
         p = n.useCallback(
             (e, l) => (1 === e ? 52 * (0 === l) : 52 * (0 === e && ((0 === l && 0 === o.length) || null != o[l]))),
             [o],
