@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => H }), n(321073);
+n.d(t, { A: () => V }), n(321073);
 var i = n(627968),
     r = n(64700),
     a = n(176999),
@@ -70,33 +70,33 @@ function v(e) {
           });
 }
 var b = n(939249),
-    M = n(780907),
-    P = n(760751),
-    U = n(486020),
-    w = n(939496),
-    G = n(996988),
-    x = n(375708),
-    k = n(107562);
-function F(e) {
+    M = n(321108),
+    P = n(939496),
+    U = n(996988),
+    w = n(375708),
+    G = n(107562);
+function x(e) {
     var t;
     let n,
-        { widgets: a = [], onClick: s, className: o } = e,
-        { trackUserProfileAction: d } = (0, I.NJ)(),
-        c =
+        { widgets: a = [], onClick: s, className: l } = e,
+        { trackUserProfileAction: o } = (0, I.NJ)(),
+        d =
             ((t = a.filter((e) => e instanceof f.R)),
             (n = (0, _.A)(t.map((e) => e.applicationId))),
-            (0, l.cf)([P.A], () =>
-                Object.fromEntries(
-                    n
-                        .filter(h.Vq)
-                        .map((e) => [e.id, P.A.getGameByApplication(e)])
-                        .filter((e) => {
-                            let [t, n] = e;
-                            return null != n;
-                        }),
-                ),
+            (0, r.useMemo)(
+                () =>
+                    Object.fromEntries(
+                        n
+                            .filter(h.Vq)
+                            .map((e) => [e.id, e.getCanonicalGameId()])
+                            .filter((e) => {
+                                let [t, n] = e;
+                                return null != n;
+                            }),
+                    ),
+                [n],
             )),
-        u = (0, r.useMemo)(
+        c = (0, r.useMemo)(
             () => [
                 ...new Set(
                     a
@@ -104,62 +104,53 @@ function F(e) {
                             e instanceof p.Yy
                                 ? e.games.map((e) => e.applicationId)
                                 : e instanceof f.R
-                                  ? c[e.applicationId]?.id
+                                  ? d[e.applicationId]
                                   : void 0,
                         )
                         .filter(h.Vq)
                         .flat(),
                 ),
             ],
-            [a, c],
+            [a, d],
         ),
-        E = (0, l.bG)([P.A], () => P.A.canFetchDetectableGames()),
-        [A, T] = (0, r.useState)([]),
-        { themeType: m } = (0, w.E)(),
-        S = m === G.d.SIDEBAR,
-        N = (0, r.useRef)(!1);
+        { themeType: u } = (0, P.E)(),
+        E = u === U.d.SIDEBAR,
+        A = (0, r.useRef)(!1),
+        T = (0, M.A)(c),
+        m = (0, r.useMemo)(
+            () =>
+                T.map((e) => ({ image: e.getIconURL(48) ?? "", name: e.name }))
+                    .filter((e) => "" !== e.image)
+                    .slice(0, 4),
+            [T],
+        );
     return (
         (0, r.useEffect)(() => {
-            E
-                ? M.Ay.getDetectableGames()
-                : T(
-                      u
-                          .map((e) => P.A.getDetectableGame(e))
-                          .filter((e) => null != e)
-                          .map((e) => ({
-                              image: U.Ay.getApplicationIconURL({ id: e.id, icon: e.icon }) ?? "",
-                              name: e.name,
-                          }))
-                          .filter((e) => "" !== e.image)
-                          .slice(0, 4),
-                  );
-        }, [u, E]),
-        (0, r.useEffect)(() => {
-            0 === A.length || N.current || (d({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (N.current = !0));
-        }, [d, A.length]),
+            0 === m.length || A.current || (o({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (A.current = !0));
+        }, [o, m.length]),
         (0, i.jsx)(b.D, {
-            "aria-label": x.intl.string(x.t.JjiwFx),
+            "aria-label": w.intl.string(w.t.JjiwFx),
             onClick: () => {
-                d({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), s();
+                o({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), s();
             },
-            className: k.QF,
+            className: G.QF,
             children: (0, i.jsxs)(L.A.Overlay, {
-                className: g()(k.WH, o),
+                className: g()(G.WH, l),
                 children: [
                     (0, i.jsx)(C.E, {
-                        variant: S ? "text-sm/medium" : "text-xs/medium",
-                        children: x.intl.string(x.t.JjiwFx),
+                        variant: E ? "text-sm/medium" : "text-xs/medium",
+                        children: w.intl.string(w.t.JjiwFx),
                     }),
                     (0, i.jsx)("div", {
-                        className: k.Pt,
-                        children: A.map((e, t) =>
+                        className: G.Pt,
+                        children: m.map((e, t) =>
                             (0, i.jsx)(
-                                V,
+                                k,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === A.length - 1 && u.length > 4,
-                                    gameCount: u.length - A.length,
+                                    displayCount: t === m.length - 1 && c.length > 4,
+                                    gameCount: c.length - m.length,
                                 },
                                 t,
                             ),
@@ -170,29 +161,29 @@ function F(e) {
         })
     );
 }
-function V(e) {
+function k(e) {
     let { iconUrl: t, name: n, displayCount: r, gameCount: a } = e;
     return (0, i.jsxs)("div", {
-        className: k.Kk,
+        className: G.Kk,
         children: [
-            (0, i.jsx)("img", { className: g()({ [k.um]: r }), src: t, alt: n }),
+            (0, i.jsx)("img", { className: g()({ [G.um]: r }), src: t, alt: n }),
             r &&
                 (0, i.jsx)("div", {
-                    className: k.pp,
-                    children: (0, i.jsxs)(C.E, { variant: "text-xs/medium", className: k.gq, children: ["+", a] }),
+                    className: G.pp,
+                    children: (0, i.jsxs)(C.E, { variant: "text-xs/medium", className: G.gq, children: ["+", a] }),
                 }),
         ],
     });
 }
-var B = n(518477);
-function H(e) {
+var F = n(518477);
+function V(e) {
     let { user: t, widgets: n = [], ...m } = e,
         { openModal: g, onExpand: S } = (function (e) {
             let { onOpenUserProfileModal: t } = e,
                 { analyticsLocations: n } = (0, o.Ay)(),
                 { trackUserProfileAction: i } = (0, I.NJ)(),
                 a = r.useCallback(() => {
-                    t?.({ tabSection: B.RP.WIDGETS });
+                    t?.({ tabSection: F.RP.WIDGETS });
                 }, [t]),
                 s = r.useCallback(() => {
                     i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: n }), a();
@@ -228,7 +219,7 @@ function H(e) {
                       ),
             [N, R, y, b, P],
         ),
-        w = r.useCallback(
+        G = r.useCallback(
             (e) => {
                 let t = [],
                     r = !1;
@@ -263,11 +254,11 @@ function H(e) {
                     } else
                         a instanceof p.Yy &&
                             !r &&
-                            (t.push((0, i.jsx)(F, { widgets: n, onClick: g, ...e }, "collection-breadcrumb")),
+                            (t.push((0, i.jsx)(x, { widgets: n, onClick: g, ...e }, "collection-breadcrumb")),
                             (r = !0));
                 return t;
             },
             [n, g, U, M],
         );
-    return 0 === n.length ? null : (0, i.jsx)(T.A, { renderCards: w, heading: x.intl.string(x.t.Y55Tua), onExpand: S });
+    return 0 === n.length ? null : (0, i.jsx)(T.A, { renderCards: G, heading: w.intl.string(w.t.Y55Tua), onExpand: S });
 }

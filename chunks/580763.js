@@ -39,47 +39,50 @@ var i = n(627968),
     F = n(544441),
     V = n(737393),
     B = n(540185),
-    H = n(289173),
-    j = n(735321),
-    W = n(999291),
-    Y = n(993401),
-    K = n(280450),
-    $ = n(760751),
+    H = n(569926),
+    j = n(289173),
+    W = n(735321),
+    Y = n(999291),
+    K = n(993401),
+    $ = n(280450),
     z = n(518477),
     q = n(375708);
 function Z(e) {
-    let { applicationId: t, onAction: n, onClose: a } = e,
-        s = (0, P.bG)([K.default], () => K.default.getId()),
-        l = (0, W.Ay)(s, null),
-        o = (0, P.bG)([$.A], () => $.A.getDetectableGame(t)),
-        d = r.useMemo(
+    let { application: t, onAction: n, onClose: a } = e,
+        s = (0, P.bG)([$.default], () => $.default.getId()),
+        l = (0, Y.Ay)(s, null),
+        o = t.getCanonicalGameId(),
+        { data: d } = (0, H.I)(o),
+        c = r.useMemo(
             () =>
                 !(
+                    null == d ||
                     null == o ||
                     l?.widgets?.some(
                         (e) =>
-                            e instanceof H.Yy &&
+                            e instanceof j.Yy &&
                             e.type === B.x.CURRENT_GAMES &&
-                            e.games?.some((e) => e.applicationId === t),
+                            e.games?.some((e) => e.applicationId === o),
                     )
-                ) && (0, j.XX)(o),
-            [t, l?.widgets, o],
+                ) && (0, W.XX)(d),
+            [o, l?.widgets, d],
         ),
-        c = r.useCallback(
+        u = r.useCallback(
             (e) => {
-                e.stopPropagation(),
+                null != o &&
+                    (e.stopPropagation(),
                     n?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, j.ew)({ widgetType: B.x.CURRENT_GAMES, game: { applicationId: t }, ignoreMaxGames: !0 }),
+                    (0, W.ew)({ widgetType: B.x.CURRENT_GAMES, game: { applicationId: o }, ignoreMaxGames: !0 }),
                     (0, v.openUserProfileModal)({
                         userId: s,
                         tabSection: z.RP.WIDGETS,
                         scrollTarget: B.x.CURRENT_GAMES,
                     }),
-                    a?.();
+                    a?.());
             },
-            [t, s, n, a],
+            [o, s, n, a],
         );
-    return d ? (0, i.jsx)(Y.FD, { text: q.intl.string(q.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
+    return c ? (0, i.jsx)(K.FD, { text: q.intl.string(q.t.BjYzmC), onClick: u, fullWidth: !0 }) : null;
 }
 var X = n(601007),
     Q = n(206828),
@@ -113,7 +116,7 @@ function eo(e) {
               className: es.fO,
               children: n.buttons.map((e, a) =>
                   (0, i.jsx)(
-                      Y.FD,
+                      K.FD,
                       {
                           text: s ? q.intl.string(q.t.I6JG46) : e,
                           onClick: (e) => {
@@ -130,7 +133,7 @@ function eo(e) {
               className: es.fO,
               children: n.buttons.map((e, a) =>
                   (0, i.jsx)(
-                      Y.FD,
+                      K.FD,
                       {
                           text: s ? q.intl.string(q.t.I6JG46) : e,
                           fullWidth: !0,
@@ -160,7 +163,7 @@ function ef(e) {
         o = (0, eh.l)({ activity: n ?? void 0, embeddedActivity: void 0, user: t, onClose: a }),
         d = (0, eA.d)(n?.application_id);
     if (null == o && null != n && (0, _.A)(n))
-        return (0, i.jsx)(Y.FD, {
+        return (0, i.jsx)(K.FD, {
             icon: ed.k,
             text: q.intl.string(q.t.RscU7I),
             fullWidth: s !== ea.d.MODAL_V2,
@@ -177,7 +180,7 @@ function ef(e) {
         children: (0, i.jsx)(ec.m, {
             text: A,
             asContainer: !h,
-            children: (0, i.jsx)(Y.FD, {
+            children: (0, i.jsx)(K.FD, {
                 icon: I ? eu.I : e_._,
                 text: E,
                 disabled: !h,
@@ -196,7 +199,7 @@ function eT(e) {
         { newestAnalyticsLocation: r } = (0, I.Ay)(),
         { themeType: a } = (0, b.E)(),
         s = a === ea.d.MODAL_V2;
-    return (0, i.jsx)(Y.FD, {
+    return (0, i.jsx)(K.FD, {
         icon: () => (0, i.jsx)(ep.A, {}),
         text: q.intl.string(q.t.sbdnpw),
         fullWidth: !s,
@@ -212,7 +215,7 @@ function eS(e) {
         { themeType: a } = (0, b.E)(),
         s = a === ea.d.MODAL_V2;
     return (0, U.A)(n, eg.jUm.INSTANCE)
-        ? (0, i.jsx)(Y.FD, {
+        ? (0, i.jsx)(K.FD, {
               text: q.intl.string(q.t.vwl1PK),
               fullWidth: !s,
               onClick: (e) => {
@@ -233,7 +236,7 @@ function eR(e) {
         l = s === ea.d.MODAL_V2;
     return (0, P.bG)([eO.A], () => null != eO.A.getAccount(null, t))
         ? null
-        : (0, i.jsx)(Y.FD, {
+        : (0, i.jsx)(K.FD, {
               icon: n,
               text: q.intl.formatToPlainString(q.t.XWSHTb, { platform: eN.A.get(t).name }),
               fullWidth: !l,
@@ -260,7 +263,7 @@ function eP(e) {
         c = (0, P.bG)([ev.A], () => (null != l ? ev.A.getChannel(l) : null), [l]),
         u = (0, P.bG)([eb.A], () => null != c && eb.A.can(eD.Gk, c), [c]);
     return (0, O.Cy)(t) && u && null != o && null != l
-        ? (0, i.jsx)(Y.FD, {
+        ? (0, i.jsx)(K.FD, {
               text: q.intl.string(q.t.ZYO5OK),
               fullWidth: !s,
               disabled: d,
@@ -283,7 +286,7 @@ function ew(e) {
         a = r === ea.d.MODAL_V2,
         s = (0, eU.A)(t);
     return (0, A.A)(t) && null != s
-        ? (0, i.jsx)(Y.FD, {
+        ? (0, i.jsx)(K.FD, {
               text: q.intl.string(q.t.I6JG46),
               fullWidth: !a,
               onClick: (e) => (e.stopPropagation(), n?.({ action: "PRESS_WATCH_BUTTON" }), window.open(s)),
@@ -294,7 +297,7 @@ var eG = n(985629);
 function ex(e) {
     let { user: t, activity: n, onAction: r, onClose: a, application: s, containerClassName: l } = e,
         { themeType: o } = (0, b.E)(),
-        d = (0, P.bG)([K.default], () => K.default.getId() === t.id),
+        d = (0, P.bG)([$.default], () => $.default.getId() === t.id),
         c = (0, V.JC)(s),
         u = (0, J.o)(n?.application_id ?? s?.id) || (0, U.A)(n, eg.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: E } = (0, I.Ay)(h.A.USER_PROFILE_ACTIVITY_BUTTONS),
@@ -318,8 +321,8 @@ function ex(e) {
                 : null,
         L = (function () {
             if (d)
-                return N && n?.type === eg.$pd.PLAYING && s?.id != null
-                    ? (0, i.jsx)(Z, { applicationId: s.id, onAction: r, onClose: a })
+                return N && n?.type === eg.$pd.PLAYING && null != s
+                    ? (0, i.jsx)(Z, { application: s, onAction: r, onClose: a })
                     : null;
             if (n?.buttons != null && n?.buttons.length >= 1)
                 return null != R
