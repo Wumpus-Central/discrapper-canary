@@ -51,30 +51,30 @@ function x() {
     });
 }
 function g(e) {
-    let { channelId: t, x: n, y: g, roomWidth: C } = e,
-        y = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        j = (0, s.bG)([h.A], () =>
+    let { channelId: t, x: n, y: g, label: C, roomWidth: y } = e,
+        j = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        v = (0, s.bG)([h.A], () =>
             h.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.position?.x === n && e.position?.y === g),
         ),
-        v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        E = l.useCallback(() => {
-            null != v &&
-                (y
-                    ? (0, u.AQ)(v, t, { user_position: { x: n, y: g } })
+        E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        N = l.useCallback(() => {
+            null != E &&
+                (j
+                    ? (0, u.AQ)(E, t, { user_position: { x: n, y: g } })
                     : ((0, u.TJ)({ x: n, y: g }), (0, o.A)({ channelId: t })));
-        }, [y, v, t, n, g]);
-    if (j || null == v) return null;
-    let { numericAvatarSize: N } = (0, p.F)(C),
-        I = 1.2 * Math.max(N, 24);
+        }, [j, E, t, n, g]);
+    if (v || null == E) return null;
+    let { numericAvatarSize: I } = (0, p.F)(y),
+        b = 1.2 * Math.max(I, 24);
     return (0, i.jsx)(r.m, {
-        text: y ? null : A.intl.string(A.t["96ANUN"]),
+        text: j ? null : A.intl.string(A.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
-            "aria-label": A.intl.string(m.default.Vm2OFQ),
+            "aria-label": A.intl.formatToPlainString(m.default.X84itm, { seatLabel: C }),
             className: f.am,
-            style: { width: I, height: I, left: `calc(${n}% - ${I / 2}px)`, top: `calc(${g}% - ${I / 2}px)` },
-            onClick: E,
+            style: { width: b, height: b, left: `calc(${n}% - ${b / 2}px)`, top: `calc(${g}% - ${b / 2}px)` },
+            onClick: N,
             children: (0, i.jsx)(x, {}),
         }),
     });
