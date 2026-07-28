@@ -1,17 +1,17 @@
 l.d(t, { o: () => d }), l(321073);
-var n = l(582128),
-    a = l(806163),
+var r = l(582128),
+    n = l(806163),
     s = l(641150),
-    r = l(23161),
-    o = l(856686),
-    i = l(758836),
+    a = l(365491),
+    i = l(856686),
+    o = l(758836),
     c = l(652215);
 let u = {
-        [i.G2.AVATAR_DECORATIONS]: s.q.AVATAR_DECORATION,
-        [i.G2.PROFILE_EFFECTS]: s.q.PROFILE_EFFECT,
-        [i.G2.NAMEPLATES]: s.q.NAMEPLATE,
-        [i.G2.PROFILE_FRAMES]: s.q.PROFILE_FRAME,
-        [i.G2.BUNDLES]: s.q.BUNDLE,
+        [o.G2.AVATAR_DECORATIONS]: s.q.AVATAR_DECORATION,
+        [o.G2.PROFILE_EFFECTS]: s.q.PROFILE_EFFECT,
+        [o.G2.NAMEPLATES]: s.q.NAMEPLATE,
+        [o.G2.PROFILE_FRAMES]: s.q.PROFILE_FRAME,
+        [o.G2.BUNDLES]: s.q.BUNDLE,
     },
     d = (e) => {
         let {
@@ -20,48 +20,48 @@ let u = {
                 setOfferEligibleFilter: s,
                 reset: d,
                 setCurrentTab: b,
-            } = (0, r.v)(),
-            m = n.useMemo(() => {
+            } = (0, a.v)(),
+            f = r.useMemo(() => {
                 var t;
-                return (0, i.dF)(e) || (t = e) === i.G2.COLLABS || t === i.G2.OFFER_ELIGIBLE ? i.G2.CATALOG : e;
+                return (0, o.dF)(e) || (t = e) === o.G2.COLLABS || t === o.G2.OFFER_ELIGIBLE ? o.G2.CATALOG : e;
             }, [e]),
-            [E, p] = n.useState(m),
-            [C, A] = n.useState(i.Pf.VISIBLE);
-        n.useEffect(() => {
-            b(E);
-        }, [E, b]),
-            n.useEffect(() => {
-                if ((p(m), e === i.G2.CATALOG)) d();
-                else if (e === i.G2.COLLABS) l();
-                else if (e === i.G2.OFFER_ELIGIBLE) s();
-                else if ((0, i.dF)(e)) {
+            [m, S] = r.useState(f),
+            [E, p] = r.useState(o.Pf.VISIBLE);
+        r.useEffect(() => {
+            b(m);
+        }, [m, b]),
+            r.useEffect(() => {
+                if ((S(f), e === o.G2.CATALOG)) d();
+                else if (e === o.G2.COLLABS) l();
+                else if (e === o.G2.OFFER_ELIGIBLE) s();
+                else if ((0, o.dF)(e)) {
                     let l = u[e];
                     null != l ? t(l) : d();
                 }
-            }, [m, e, t, l, s, d]);
-        let { clearError: f } = (0, o.S)(),
-            S = (0, a.W6)(),
-            h = n.useCallback(
-                async (e, n) => {
-                    if ((f(), e === i.G2.CATALOG)) d();
-                    else if (e === i.G2.COLLABS) l();
-                    else if (e === i.G2.OFFER_ELIGIBLE) s();
-                    else if ((0, i.dF)(e) && e !== E) {
+            }, [f, e, t, l, s, d]);
+        let { clearError: g } = (0, i.S)(),
+            h = (0, n.W6)(),
+            C = r.useCallback(
+                async (e, r) => {
+                    if ((g(), e === o.G2.CATALOG)) d();
+                    else if (e === o.G2.COLLABS) l();
+                    else if (e === o.G2.OFFER_ELIGIBLE) s();
+                    else if ((0, o.dF)(e) && e !== m) {
                         let l = u[e];
                         null != l ? t(l) : d();
                     }
-                    if (E !== e) {
-                        if (n) {
-                            var a;
-                            A(i.Pf.OUT), await ((a = 1.1 * i.H1), new Promise((e) => setTimeout(e, a)));
+                    if (m !== e) {
+                        if (r) {
+                            var n;
+                            p(o.Pf.OUT), await ((n = 1.1 * o.H1), new Promise((e) => setTimeout(e, n)));
                         }
-                        p(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
-                            n && A(i.Pf.IN),
-                            S.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            A(i.Pf.VISIBLE);
+                        S(e === o.G2.HOME || e === o.G2.ORBS || e === o.G2.GAME_SERVERS ? e : o.G2.CATALOG),
+                            r && p(o.Pf.IN),
+                            h.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            p(o.Pf.VISIBLE);
                     }
                 },
-                [S, t, l, s, d, E, f],
+                [h, t, l, s, d, m, g],
             );
-        return { selectedTab: E, transitionState: C, transitionToTab: h };
+        return { selectedTab: m, transitionState: E, transitionToTab: C };
     };
