@@ -2013,6 +2013,7 @@ let nM = "",
         VIBEGRATIONS_PROJECT_WS_TICKET: (e) => `/vibegrations/projects/${e}/ws-ticket`,
         VIBEGRATIONS_PROJECT_PUBLISH: (e) => `/vibegrations/projects/${e}/publish`,
         VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW: (e) => `/vibegrations/projects/${e}/publish-preview`,
+        GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE: (e, t, n) => `/guild-space/${e}/image-text-widget/${t}.${n}`,
     }),
     nk = (0, tV.dN)(nx);
 var nF =
