@@ -95,6 +95,7 @@ function J(e) {
                                     lineItems: l,
                                     label: V.intl.string(Z.default.eoXh7B),
                                     currency: n.currency,
+                                    defaultExpanded: null != e,
                                 },
                                 priceText: (0, S.$g)(i, n.currency),
                                 discount: e,
