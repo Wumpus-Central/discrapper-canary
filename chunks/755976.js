@@ -8,4 +8,6 @@ e.exports = {
     OS: "more__354ec",
     nt: "tabWithIcon__354ec",
     Ad: "newBadge__354ec",
+    ju: "tabWithTrailingBadge__354ec",
+    qe: "trailingBadge__354ec",
 };

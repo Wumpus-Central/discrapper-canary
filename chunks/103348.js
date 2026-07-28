@@ -40,14 +40,14 @@ class a {
             createdAt: new Date(s),
             updatedAt: new Date(l),
             skus: o.map((e) => r.A.createFromServer(e)),
-            primaryCollectionId: d.collectibles.primary_collection_id,
+            primaryCollectionId: d.collectibles?.primary_collection_id,
             primaryCollectionStyles:
-                null != d.collectibles.primary_collection_styles
+                d.collectibles?.primary_collection_styles != null
                     ? i.A.fromServer(d.collectibles.primary_collection_styles)
                     : void 0,
-            primaryCollectionPdpBgUrl: d.collectibles.primary_collection_pdp_bg_url,
+            primaryCollectionPdpBgUrl: d.collectibles?.primary_collection_pdp_bg_url,
             primaryCollectionWillUnpublishAt:
-                null != d.collectibles.primary_collection_will_unpublish_at
+                d.collectibles?.primary_collection_will_unpublish_at != null
                     ? new Date(d.collectibles.primary_collection_will_unpublish_at)
                     : void 0,
             gameApplicationId: d.guild_monetization?.game_server?.game_application_id,

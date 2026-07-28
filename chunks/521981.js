@@ -141,10 +141,14 @@ function h(e) {
                                       (t[0].content = c(t[0].content)),
                                   t))),
                         (u = (n = S).some((e) => "link" !== e.type)),
-                        (S = n.filter((e) => {
+                        (S = (S = n.filter((e) => {
                             let t = "link" === e.type,
                                 n = null != e.target ? (0, r.ts)(e.target) : null;
                             return !(t && null != n && !u);
+                        })).filter((e) => {
+                            let t = "link" === e.type,
+                                n = null != e.target && null != (0, r.$9)(e.target);
+                            return !(t && n);
                         })),
                         (f ?? I).embeds.length > 0 &&
                             ((i = S),

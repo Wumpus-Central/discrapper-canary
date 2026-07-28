@@ -447,6 +447,7 @@ let en = [
     o.C.GUILD_ROLE_CHECKOUT,
     o.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
     o.C.GUILD_BOOST_CHECKOUT,
+    o.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT,
 ];
 function el(e) {
     var t, n;

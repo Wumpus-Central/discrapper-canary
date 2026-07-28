@@ -202,6 +202,17 @@
     margin-inline-start: 4px
 }
 
+.tabWithTrailingBadge__354ec {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    height: 100%
+}
+
+.trailingBadge__354ec {
+    background-color: var(--brand-500)
+}
+
 .headerBar__80679 {
     background-color: var(--background-base-lower);
     border-bottom: 1px solid var(--border-subtle);

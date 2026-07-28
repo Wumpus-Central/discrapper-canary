@@ -1,25 +1,25 @@
 s.d(t, { $L: () => S, NI: () => _, kd: () => T, TG: () => A, P5: () => p, Ft: () => k, Yq: () => b });
 var i = s(477900),
     r = s(582128),
-    n = s(503698),
-    a = s.n(n),
+    a = s(503698),
+    n = s.n(a),
     l = s(628284),
     o = s(661531),
     c = s(834730),
-    d = s(695366),
-    x = s(104510),
-    m = s(297264),
-    u = s(890856),
-    v = s(812993),
-    h = s(773669),
-    j = s(939981),
-    N = s(853513),
-    g = s(375708),
-    f = s(800785);
+    d = s(695366);
+if (21552 == s.j) var x = s(104510);
+if (21552 == s.j) var v = s(297264);
+if (21552 == s.j) var j = s(890856);
+if (21552 == s.j) var m = s(812993);
+var u = s(773669),
+    h = s(939981),
+    f = s(853513),
+    N = s(375708),
+    g = s(800785);
 function A(e) {
     let { text: t } = e;
     return (0, i.jsxs)("div", {
-        className: f.mG,
+        className: g.mG,
         children: [
             (0, i.jsx)(l.y, { size: "xs", color: o.A.colors.STATUS_POSITIVE }),
             (0, i.jsx)(c.E, { color: "text-feedback-positive", variant: "text-sm/bold", children: t }),
@@ -29,14 +29,14 @@ function A(e) {
 function p(e) {
     let { dateString: t } = e;
     return (0, i.jsxs)("div", {
-        className: f.mG,
+        className: g.mG,
         children: [
             (0, i.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
             (0, i.jsx)(c.E, {
                 color: "text-feedback-warning",
                 variant: "text-sm/bold",
-                children: g.intl.formatToMarkdownString(N.default["ol/ao/"], {
-                    dateString: new Date(t).toLocaleDateString(h.default.locale, { month: "2-digit", day: "2-digit" }),
+                children: N.intl.formatToMarkdownString(f.default["ol/ao/"], {
+                    dateString: new Date(t).toLocaleDateString(u.default.locale, { month: "2-digit", day: "2-digit" }),
                 }),
             }),
         ],
@@ -45,34 +45,34 @@ function p(e) {
 function b(e) {
     let { removingAt: t } = e;
     return (0, i.jsxs)("div", {
-        className: f.wL,
+        className: g.wL,
         children: [
             (0, i.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
             (0, i.jsx)(c.E, {
                 color: "text-feedback-warning",
                 variant: "text-sm/bold",
-                children: g.intl.formatToPlainString(N.default["6e2ry1"], { dateString: (0, j.A)(t) }),
+                children: N.intl.formatToPlainString(f.default["6e2ry1"], { dateString: (0, h.A)(t) }),
             }),
         ],
     });
 }
 function S(e) {
-    let { cost: t, costDecorator: s, status: r, className: n } = e,
-        l = void 0 !== t ? f._A : f.$3;
+    let { cost: t, costDecorator: s, status: r, className: a } = e,
+        l = void 0 !== t ? g._A : g.$3;
     return (0, i.jsxs)("div", {
-        className: a()(l, n),
+        className: n()(l, a),
         children: [
             void 0 !== t &&
                 (0, i.jsxs)("div", {
-                    className: a()(f.mG, f.pT),
+                    className: n()(g.mG, g.pT),
                     children: [
                         (0, i.jsx)(x._, { size: "sm", color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                         (0, i.jsx)(c.E, {
-                            className: f.q9,
+                            className: g.q9,
                             tag: "div",
                             variant: "heading-md/semibold",
                             color: "text-subtle",
-                            children: g.intl.formatToPlainString(g.t.t2Wbo1, { required: t, decorator: s ?? "" }),
+                            children: N.intl.formatToPlainString(N.t.t2Wbo1, { required: t, decorator: s ?? "" }),
                         }),
                     ],
                 }),
@@ -84,58 +84,61 @@ function S(e) {
 }
 function T(e) {
     let { children: t } = e;
-    return (0, i.jsx)("div", { className: f.UD, children: t });
+    return (0, i.jsx)("div", { className: g.UD, children: t });
 }
 function k(e) {
-    let { title: t, textColor: s, children: r, footer: n } = e;
+    let { title: t, textColor: s, children: r, footer: a } = e;
     return (0, i.jsxs)("div", {
-        className: f.hQ,
+        className: g.hQ,
         children: [
             (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)("div", {
-                        className: f.N1,
-                        children: (0, i.jsx)(m.D, { color: s, variant: "heading-md/bold", children: t }),
+                        className: g.N1,
+                        children: (0, i.jsx)(v.D, { color: s, variant: "heading-md/bold", children: t }),
                     }),
                     r,
                 ],
             }),
-            n,
+            a,
         ],
     });
 }
-let _ = r.forwardRef(function (e, t) {
-    let {
-        className: s,
-        label: r,
-        isActive: n,
-        isWarning: l,
-        badge: c,
-        canRollback: d,
-        onClick: x,
-        onMouseOver: m,
-        onMouseLeave: h,
-        children: j,
-    } = e;
-    return (0, i.jsx)("div", {
-        className: a()(f.gp, { [f.Wq]: d && !n }),
-        ref: t,
-        children: (0, i.jsxs)(u.s, {
-            "aria-label": r,
-            onClick: x,
-            onMouseOver: m,
-            onMouseLeave: h,
-            className: a()(f.kL, { [f.vu]: n, [f.$e]: l || (d && n) }, s),
-            children: [
-                j,
-                "new" === c && (0, i.jsx)(v.Lp, { className: f.Hl, text: g.intl.string(g.t.y2b7CA) }),
-                "beta" === c &&
-                    (0, i.jsx)(v.Lp, {
-                        className: f.Hl,
-                        text: g.intl.string(g.t.oW0eUd),
-                        color: o.A.colors.BACKGROUND_BRAND.css,
-                    }),
-            ],
-        }),
-    });
-});
+let _ =
+    21552 == s.j
+        ? r.forwardRef(function (e, t) {
+              let {
+                  className: s,
+                  label: r,
+                  isActive: a,
+                  isWarning: l,
+                  badge: c,
+                  canRollback: d,
+                  onClick: x,
+                  onMouseOver: v,
+                  onMouseLeave: u,
+                  children: h,
+              } = e;
+              return (0, i.jsx)("div", {
+                  className: n()(g.gp, { [g.Wq]: d && !a }),
+                  ref: t,
+                  children: (0, i.jsxs)(j.s, {
+                      "aria-label": r,
+                      onClick: x,
+                      onMouseOver: v,
+                      onMouseLeave: u,
+                      className: n()(g.kL, { [g.vu]: a, [g.$e]: l || (d && a) }, s),
+                      children: [
+                          h,
+                          "new" === c && (0, i.jsx)(m.Lp, { className: g.Hl, text: N.intl.string(N.t.y2b7CA) }),
+                          "beta" === c &&
+                              (0, i.jsx)(m.Lp, {
+                                  className: g.Hl,
+                                  text: N.intl.string(N.t.oW0eUd),
+                                  color: o.A.colors.BACKGROUND_BRAND.css,
+                              }),
+                      ],
+                  }),
+              });
+          })
+        : null;

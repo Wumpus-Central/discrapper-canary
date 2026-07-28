@@ -22,4 +22,5 @@ var i,
         (i.QUESTS_EMBED = "QUESTS_EMBED"),
         (i.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
         (i.GAME_PROFILE = "GAME_PROFILE"),
+        (i.GAME_SERVER_SHARE = "GAME_SERVER_SHARE"),
         i);
