@@ -26,15 +26,23 @@ var b = a(339984),
     I = a(375708),
     N = a(830262);
 function S(e) {
-    let { transitionState: t, onClose: l, onComplete: S, uploadType: T, showUpsellHeader: L, analyticsPage: C } = e,
-        [F, G] = i.useState(!1),
-        P = (0, p.k)(),
-        { analyticsLocations: k } = (0, d.Ay)(m.A.GIF_PICKER);
-    async function H(e) {
+    let {
+            transitionState: t,
+            onClose: l,
+            onComplete: S,
+            uploadType: T,
+            showUpsellHeader: L,
+            analyticsPage: C,
+            returnRef: F,
+        } = e,
+        [G, P] = i.useState(!1),
+        k = (0, p.k)(),
+        { analyticsLocations: H } = (0, d.Ay)(m.A.GIF_PICKER);
+    async function O(e) {
         let t,
             { gifSrc: i } = e;
-        if (null == i || F) return;
-        G(!0);
+        if (null == i || G) return;
+        P(!0);
         let o = (function (e) {
                 let t = new URL(`${window.location.protocol}${e}`),
                     { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
@@ -100,34 +108,35 @@ function S(e) {
                             onCrop: S,
                             uploadType: T,
                             showUpsellHeader: L,
+                            returnRef: F,
                             ...t,
                         });
                 },
-                { contextKey: P },
+                { contextKey: k },
             );
     }
     i.useEffect(() => {
         _.default.track($.HAw.OPEN_MODAL, {
             type: $.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: k,
+            location_stack: H,
             location: { page: C },
         });
-    }, [k, C]);
-    let O = T === b.HL.AVATAR || T === b.HL.BANNER,
-        U = (0, f.b)(!O),
-        v = I.intl.string(I.t["xsC+/y"]);
+    }, [H, C]);
+    let U = T === b.HL.AVATAR || T === b.HL.BANNER,
+        v = (0, f.b)(!U),
+        z = I.intl.string(I.t["xsC+/y"]);
     return (0, n.jsx)(d.f5, {
-        value: k,
+        value: H,
         children: (0, n.jsxs)(s.d, {
             onClose: l,
             transitionState: t,
-            "aria-label": v,
+            "aria-label": z,
             children: [
-                (0, n.jsx)(r.rQ, { title: v }),
+                (0, n.jsx)(r.rQ, { title: z }),
                 (0, n.jsxs)(h.F, {
                     children: [
                         L &&
-                            !U &&
+                            !v &&
                             (0, n.jsx)("div", {
                                 className: N.It,
                                 children: (0, n.jsx)(g.A, {
@@ -141,13 +150,13 @@ function S(e) {
                             className: N.SD,
                             children: [
                                 (0, n.jsx)(A.A, {
-                                    className: o()(N.XC, { [N.bX]: F }),
-                                    onSelectGIF: H,
+                                    className: o()(N.XC, { [N.bX]: G }),
+                                    onSelectGIF: O,
                                     headingColor: "text-subtle",
                                     hideFavorites: !0,
                                 }),
-                                F && (0, n.jsx)(u.y, { className: N.u1 }),
-                                L && U && (0, n.jsx)(w.A, { uploadType: T, showUpsell: !0, className: N.Kt }),
+                                G && (0, n.jsx)(u.y, { className: N.u1 }),
+                                L && v && (0, n.jsx)(w.A, { uploadType: T, showUpsell: !0, className: N.Kt }),
                             ],
                         }),
                     ],
