@@ -92,7 +92,10 @@ function G(e) {
     let { user: t, guildId: n, shouldShow: i, isMenuOpen: l, targetElementRef: r, onClick: o } = e,
         { isVisible: c, markAsDismissed: u } = D(t.id, n, i);
     return (a.useEffect(() => {
-        if (c) return () => u(k.i.AUTO_DISMISS);
+        if (c)
+            return () => {
+                C(b.COACHMARK_DISMISSED, y.d.POPOUT), u(k.i.AUTO_DISMISS);
+            };
     }, [c, u]),
     a.useEffect(() => {
         i && c && C(b.COACHMARK_VIEWED, y.d.POPOUT);
@@ -111,9 +114,7 @@ function G(e) {
               align: "top",
               caretConfig: { align: "start" },
               targetElementRef: r,
-              onRequestClose: () => {
-                  C(b.COACHMARK_DISMISSED, y.d.POPOUT), u(k.i.USER_DISMISS);
-              },
+              onRequestClose: () => u(k.i.USER_DISMISS),
               actions: [
                   {
                       text: U.intl.string(U.t["bqZVd/"]),
