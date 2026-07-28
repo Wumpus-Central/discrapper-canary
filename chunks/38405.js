@@ -42,10 +42,16 @@ let c = {
         window.DiscordSentry?.getCurrentScope().setExtras(e);
     },
     captureException(e, t) {
-        let n = s(t);
-        window.DiscordSentry?.withScope((t) => {
-            null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureException(e);
-        });
+        let n,
+            i = s(t);
+        return (
+            window.DiscordSentry?.withScope((t) => {
+                null != i.tags && t.setTags(i.tags),
+                    t.setExtras(i.extra),
+                    (n = window.DiscordSentry?.captureException(e));
+            }),
+            n
+        );
     },
     captureCrash(e, t) {
         let n,

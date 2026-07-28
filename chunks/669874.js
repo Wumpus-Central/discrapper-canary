@@ -33,19 +33,20 @@ class s extends l.z {
             ...(e instanceof r.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }
-    onErrorCaught(e) {
-        this.emitPaymentFlowErrorAnalytics(e);
+    onErrorCaught(e, t, n) {
+        this.emitPaymentFlowErrorAnalytics(e, n);
     }
-    emitPaymentFlowErrorAnalytics(e) {
-        let t = this.getCrashedFlag(e),
-            { loadId: n, locationStack: l, additionalAnalyticsData: r } = this.props,
-            s = "string" == typeof e ? e : e.message;
+    emitPaymentFlowErrorAnalytics(e, t) {
+        let n = this.getCrashedFlag(e),
+            { loadId: l, locationStack: r, additionalAnalyticsData: s } = this.props,
+            o = "string" == typeof e ? e : e.message;
         i.default.track(a.HAw.PAYMENT_FLOW_ERROR, {
-            load_id: n,
-            crashed: t,
-            error_message: s,
-            location_stack: l ?? [],
-            ...r,
+            load_id: l,
+            crashed: n,
+            error_message: o,
+            sentry_event_id: t,
+            location_stack: r ?? [],
+            ...s,
         });
     }
 }

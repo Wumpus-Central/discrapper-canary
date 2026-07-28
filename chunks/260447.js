@@ -15,7 +15,7 @@ class d extends r.PureComponent {
     getSentryExtras(e) {
         return e instanceof s.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
     }
-    onErrorCaught(e, t) {}
+    onErrorCaught(e, t, n) {}
     closeAndShowAlert() {
         (0, l.closeAllModals)(),
             (0, i.A)({
@@ -31,23 +31,24 @@ class d extends r.PureComponent {
         return "rethrow" === this.getErrorHandlingBehavior(e);
     }
     emitSentryException(e, t) {
-        let { additionalAnalyticsData: n } = this.props,
-            r = this.getCrashedFlag(e),
-            l = this.getSentryExtras(e),
-            i = {
-                tags: this.getSentryTags(e, r),
-                extra: { ...l, ...(n ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+        let n,
+            { additionalAnalyticsData: r } = this.props,
+            l = this.getCrashedFlag(e),
+            i = this.getSentryExtras(e),
+            o = {
+                tags: this.getSentryTags(e, l),
+                extra: { ...i, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            (e instanceof s.v && e.skipReportingToSentry) || u.A.captureException(e, i),
-            c.error("Revenue error occurred:", { error: e, additionalErrorContext: l }),
-            { sentryErrorOptions: i }
+            (e instanceof s.v && e.skipReportingToSentry) || (n = u.A.captureException(e, o)),
+            c.error("Revenue error occurred:", { error: e, additionalErrorContext: i }),
+            { sentryErrorOptions: o, sentryEventId: n }
         );
     }
     componentDidCatch(e, t) {
-        let { sentryErrorOptions: n } = this.emitSentryException(e, t);
+        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(e, t);
         if (
-            (this.onErrorCaught(e, t),
+            (this.onErrorCaught(e, t, r),
             this.setState({ error: e, info: t }),
             null != this.props.onErrorReported && this.props.onErrorReported(e, t, n),
             "rethrow" === this.getErrorHandlingBehavior(e))
