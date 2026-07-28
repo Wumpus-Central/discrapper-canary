@@ -2590,6 +2590,12 @@ class ea extends o.A {
             a = (n = N.d_) + ((N.nO - n) * i) / 100;
         (0, D.lE)().applySidechainCompressionSettings?.({ threshold: r, ratio: a });
     }
+    setVoiceSampleRateCap(e) {
+        (0, D.lE)().setVoiceSampleRateCap?.(e);
+    }
+    setVoiceChannelCountCap(e) {
+        (0, D.lE)().setVoiceChannelCountCap?.(e);
+    }
     setNativeDesktopVideoSourcePickerActive(e) {
         (0, D.lE)().setNativeDesktopVideoSourcePickerActive?.(e);
     }

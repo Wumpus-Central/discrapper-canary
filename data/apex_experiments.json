@@ -5908,5 +5908,60 @@
         "showGiftButton": false
       }
     }
+  },
+  {
+    "kind": "user",
+    "name": "2026-08-audio-fidelity",
+    "defaultConfig": {
+      "capSampleRate": false,
+      "capChannelCount": false,
+      "condition": "none"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "capSampleRate": true,
+        "capChannelCount": false,
+        "condition": "krisp"
+      },
+      "2": {
+        "capSampleRate": true,
+        "capChannelCount": false,
+        "condition": "noiseSuppression"
+      },
+      "3": {
+        "capSampleRate": true,
+        "capChannelCount": false,
+        "condition": "echoCancellation"
+      },
+      "4": {
+        "capSampleRate": true,
+        "capChannelCount": false,
+        "condition": "any"
+      },
+      "5": {
+        "capSampleRate": true,
+        "capChannelCount": true,
+        "condition": "krisp"
+      },
+      "6": {
+        "capSampleRate": true,
+        "capChannelCount": true,
+        "condition": "noiseSuppression"
+      },
+      "7": {
+        "capSampleRate": true,
+        "capChannelCount": true,
+        "condition": "echoCancellation"
+      },
+      "8": {
+        "capSampleRate": true,
+        "capChannelCount": true,
+        "condition": "any"
+      }
+    }
   }
 ]

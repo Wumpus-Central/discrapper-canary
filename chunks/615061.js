@@ -47,7 +47,7 @@ var h = n(64700),
     p = n(972347),
     T = n(738239),
     m = n.n(T),
-    g = n(941426),
+    g = n(118356),
     S = n(904986),
     N = n(459838),
     C = n(70909);
@@ -3248,6 +3248,8 @@ class tr extends p.A {
     }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}
+    setVoiceSampleRateCap(e) {}
+    setVoiceChannelCountCap(e) {}
     setNativeDesktopVideoSourcePickerActive(e) {}
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}

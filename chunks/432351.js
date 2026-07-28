@@ -165,6 +165,8 @@ class o extends i.A {
     }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}
+    setVoiceSampleRateCap(e) {}
+    setVoiceChannelCountCap(e) {}
     getSystemMicrophoneMode() {
         return Promise.resolve("");
     }
