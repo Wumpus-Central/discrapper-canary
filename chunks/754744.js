@@ -780,10 +780,10 @@ var e$ = n(452027),
     e6 = n(661531),
     e3 = n(807072),
     e2 = n(622629),
-    e7 = n(111159),
-    e5 = n(241541),
-    e9 = n(854378),
-    e4 = n(589935),
+    e5 = n(111159),
+    e7 = n(241541),
+    e4 = n(854378),
+    e9 = n(589935),
     e8 = n(309010);
 function te(e) {
     let t,
@@ -881,7 +881,7 @@ function te(e) {
                                         }),
                           }),
                       (0, a.jsx)(eM, {
-                          icon: (0, a.jsx)(e7.p, { size: "custom", color: "currentColor", width: 16, height: 16 }),
+                          icon: (0, a.jsx)(e5.p, { size: "custom", color: "currentColor", width: 16, height: 16 }),
                           name: (0, a.jsx)(eE.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
@@ -895,9 +895,9 @@ function te(e) {
                       }),
                       null != _ &&
                           (0, a.jsx)(eM, {
-                              icon: (0, a.jsx)(e9.$v, {
+                              icon: (0, a.jsx)(e4.$v, {
                                   guild: d,
-                                  size: e9.$v.Sizes.SMOL,
+                                  size: e4.$v.Sizes.SMOL,
                                   animate: !1,
                                   className: X.$f,
                               }),
@@ -914,7 +914,7 @@ function te(e) {
                           }),
                       null != _ &&
                           (0, a.jsx)(eM, {
-                              icon: (0, a.jsx)(e5.D, { size: "custom", width: 16, height: 16 }),
+                              icon: (0, a.jsx)(e7.D, { size: "custom", width: 16, height: 16 }),
                               name: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
@@ -923,7 +923,7 @@ function te(e) {
                               description: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
-                                  children: (0, a.jsx)(e4.Ay, {
+                                  children: (0, a.jsx)(e9.Ay, {
                                       userId: _.userId,
                                       guildId: _.guildId,
                                       showJoinMethodContextAsFooter: !0,
@@ -2067,10 +2067,10 @@ function t6(e) {
 }
 var t3 = n(97808),
     t2 = n(778712),
-    t7 = n(789645),
-    t5 = n(192308),
-    t9 = n(905499),
-    t4 = n(215026),
+    t5 = n(789645),
+    t7 = n(192308),
+    t4 = n(905499),
+    t9 = n(215026),
     t8 = n(473935),
     ne = n(308528),
     nt = n(398590),
@@ -2150,7 +2150,7 @@ function ng(e) {
                 children: (0, a.jsx)(f.D, {
                     className: nA.d4,
                     onClick: l,
-                    children: (0, a.jsx)(t7.P, { size: "md", color: "currentColor" }),
+                    children: (0, a.jsx)(t5.P, { size: "md", color: "currentColor" }),
                 }),
             }),
         ],
@@ -2206,14 +2206,14 @@ function nI(e) {
                     disabled: !u,
                     text: P.intl.string(P.t["3glT6Z"]),
                     onClick: () => {
-                        (0, t5.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("10788"), n.e("91671"), n.e("40243")]).then(
+                        (0, t7.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e("10788"), n.e("40243")]).then(
                                 n.bind(n, 547166),
                             );
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                         });
                     },
-                    children: (0, a.jsx)(t9.N, {
+                    children: (0, a.jsx)(t4.N, {
                         size: "custom",
                         width: 24,
                         height: 24,
@@ -2224,14 +2224,12 @@ function nI(e) {
                 disabled: !o,
                 text: P.intl.string(P.t["5MBJ5M"]),
                 onClick: () => {
-                    (0, t5.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("87407"), n.e("91671"), n.e("2504")]).then(
-                            n.bind(n, 333179),
-                        );
+                    (0, t7.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([n.e("87407"), n.e("2504")]).then(n.bind(n, 333179));
                         return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                     });
                 },
-                children: (0, a.jsx)(t4.w, {
+                children: (0, a.jsx)(t9.w, {
                     size: "custom",
                     width: 24,
                     height: 24,

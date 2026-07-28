@@ -2,56 +2,70 @@
 n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
-    s = n(857071),
-    a = n(649963),
+    a = n(857071),
+    s = n(505527),
+    l = n(649963),
     o = n(889227),
-    l = n(734057),
-    u = n(287809);
-let c = {};
-class d {
+    d = n(734057),
+    c = n(287809);
+let u = {},
+    _ = [s.v.NORMAL, s.v.BURST];
+function E(e, t, n) {
+    return `${e}:${t.name}:${t.id ?? ""}:${n}`;
+}
+class A {
     users;
     fetched;
     static ensure(e, t, n) {
-        let i = `${e}:${t.name}:${t.id ?? ""}:${n}`;
-        return (c[i] = c[i] ?? new d());
+        let i = E(e, t, n);
+        return (u[i] = u[i] ?? new A());
     }
     constructor() {
         (this.fetched = !1), (this.users = new Map());
     }
 }
-function _(e) {
-    let { type: t, messageId: n, userId: i, emoji: r, reactionType: s } = e,
-        a = d.ensure(n, r, s);
+function h(e) {
+    let { type: t, messageId: n, userId: i, emoji: r, reactionType: a } = e,
+        s = A.ensure(n, r, a);
     if ("MESSAGE_REACTION_ADD" === t) {
-        let e = u.default.getUser(i);
-        null != e && a.users.set(i, e);
-    } else a.users.delete(i);
+        let e = c.default.getUser(i);
+        null != e && s.users.set(i, e);
+    } else s.users.delete(i);
 }
-class h extends i.Ay.Store {
+class I extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.A, s.A, u.default);
+        this.waitFor(d.A, a.A, c.default);
     }
     static displayName = "MessageReactionsStore";
+    getKnownReactorIds(e, t) {
+        let n = new Set();
+        for (let i of t)
+            for (let t of _) {
+                let r = u[E(e, i, t)];
+                if (null != r) for (let e of r.users.keys()) n.add(e);
+            }
+        return n;
+    }
     getReactions(e, t, n, i, r) {
-        let o = d.ensure(t, n, r);
-        if (!o.fetched) {
-            let u = l.A.getChannel(e),
-                c = null != u ? u.getGuildId() : null;
-            if (null != c && s.A.isLurking(c)) return;
-            a.ao({ channelId: e, messageId: t, emoji: n, limit: i, type: r }), (o.fetched = !0);
+        let s = A.ensure(t, n, r);
+        if (!s.fetched) {
+            let o = d.A.getChannel(e),
+                c = null != o ? o.getGuildId() : null;
+            if (null != c && a.A.isLurking(c)) return;
+            l.ao({ channelId: e, messageId: t, emoji: n, limit: i, type: r }), (s.fetched = !0);
         }
-        return o.users;
+        return s.users;
     }
 }
-let f = new h(r.h, {
+let f = new I(r.h, {
     CONNECTION_OPEN: function () {
-        c = {};
+        u = {};
     },
-    MESSAGE_REACTION_ADD: _,
-    MESSAGE_REACTION_REMOVE: _,
+    MESSAGE_REACTION_ADD: h,
+    MESSAGE_REACTION_REMOVE: h,
     MESSAGE_REACTION_ADD_USERS: function (e) {
         let { messageId: t, users: n, emoji: i, reactionType: r } = e,
-            s = d.ensure(t, i, r);
-        n.forEach((e) => s.users.set(e.id, new o.A(e)));
+            a = A.ensure(t, i, r);
+        n.forEach((e) => a.users.set(e.id, new o.A(e)));
     },
 });

@@ -42,19 +42,53 @@
     opacity: 1
 }
 
+.reactionBtn_f8896c.bookmarkBtn_f8896c,
 .reactionBtn_f8896c.forceShow_f8896c {
     background-color: var(--background-base-lower);
     border: 1px solid transparent;
     border-radius: 8px;
     margin-inline-start: 0;
     margin-bottom: 4px;
-    opacity: 1;
     padding: 5px 7px
 }
 
+.reactionBtn_f8896c.bookmarkBtn_f8896c:hover,
 .reactionBtn_f8896c.forceShow_f8896c:hover {
     background-color: var(--background-base-low);
     border-color: var(--opacity-white-20)
+}
+
+.reactionBtn_f8896c.forceShow_f8896c {
+    opacity: 1
+}
+
+.bookmarkBtn_f8896c {
+    align-items: center;
+    display: inline-flex
+}
+
+.full-motion .bookmarkBtn_f8896c {
+    transition: opacity .25s ease
+}
+
+.nudgeLabel_f8896c {
+    align-items: center;
+    display: inline-flex;
+    margin-inline-start: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.full-motion .nudgeLabel_f8896c {
+    transition: max-width .25s ease, margin-inline-start .25s ease, opacity .25s ease
+}
+
+.nudgeLabel_f8896c.nudgeLabelExpanded_f8896c {
+    margin-inline-start: 4px;
+    max-width: 160px;
+    opacity: 1
 }
 
 .hideEmoji_f8896c {
@@ -293,21 +327,56 @@
     opacity: 1
 }
 
+.reactionBtn__23977.bookmarkBtn__23977,
 .reactionBtn__23977.forceShow__23977 {
     border: .0625rem solid transparent;
     border-radius: .5rem;
     margin-inline-start: 0;
     margin-bottom: .25rem;
-    opacity: 1;
     padding: .3125rem .4375rem
 }
 
+.high-contrast-mode .reactionBtn__23977.bookmarkBtn__23977,
 .high-contrast-mode .reactionBtn__23977.forceShow__23977 {
     border-color: var(--border-subtle)
 }
 
+.high-contrast-mode .reactionBtn__23977.bookmarkBtn__23977:hover,
 .high-contrast-mode .reactionBtn__23977.forceShow__23977:hover {
     border-color: var(--border-strong)
+}
+
+.reactionBtn__23977.forceShow__23977 {
+    opacity: 1
+}
+
+.bookmarkBtn__23977 {
+    align-items: center;
+    display: inline-flex
+}
+
+.full-motion .bookmarkBtn__23977 {
+    transition: opacity .25s ease
+}
+
+.nudgeLabel__23977 {
+    align-items: center;
+    display: inline-flex;
+    margin-inline-start: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.full-motion .nudgeLabel__23977 {
+    transition: max-width .25s ease, margin-inline-start .25s ease, opacity .25s ease
+}
+
+.nudgeLabel__23977.nudgeLabelExpanded__23977 {
+    margin-inline-start: .25rem;
+    max-width: 10rem;
+    opacity: 1
 }
 
 .hideEmoji__23977 {

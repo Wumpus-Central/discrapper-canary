@@ -14,14 +14,14 @@ var n = l(627968),
     x = l(871682),
     h = l(66834),
     g = l(95561),
-    f = l(495544),
+    f = l(280450),
     j = l(174459),
     p = l(504049),
     V = l(587426),
     v = l(134413),
     A = l(652215),
     M = l(375708),
-    L = l(983475);
+    L = l(835291);
 function b(e) {
     let { guildId: t } = e,
         b = (0, v.vA)(t),
@@ -78,11 +78,9 @@ function b(e) {
                                   location: "MemberSafetyPageActionNotice",
                               }),
                                   (0, d.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([
-                                          l.e("33847"),
-                                          l.e("91671"),
-                                          l.e("2504"),
-                                      ]).then(l.bind(l, 333179));
+                                      let { default: e } = await Promise.all([l.e("87407"), l.e("2504")]).then(
+                                          l.bind(l, 333179),
+                                      );
                                       return (l) =>
                                           (0, n.jsx)(e, {
                                               ...l,

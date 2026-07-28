@@ -1,11 +1,14 @@
-c.r(
+a.r(
     (e.exports = {
         reactions: "reactions__23977",
         icon: "icon__23977",
         reactionBtn: "reactionBtn__23977",
         active: "active__23977",
         visible: "visible__23977",
+        bookmarkBtn: "bookmarkBtn__23977",
         forceShow: "forceShow__23977",
+        nudgeLabel: "nudgeLabel__23977",
+        nudgeLabelExpanded: "nudgeLabelExpanded__23977",
         hideEmoji: "hideEmoji__23977",
         reaction: "reaction__23977",
         reactionCount: "reactionCount__23977",
