@@ -141,27 +141,27 @@ let m = {
                 });
             return;
         }
-        (0, h.Q9)() && (0, o.u0)()
+        I.getConfig({ location: r }).enabled
             ? (0, a.openModalLazy)(
                   async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("12211"),
-                          n.e("15574"),
-                          n.e("607"),
-                          n.e("84794"),
-                          n.e("34260"),
-                          n.e("18467"),
-                      ]).then(n.bind(n, 297102));
+                      let { default: e } = await Promise.all([n.e("63452"), n.e("51778"), n.e("22153")]).then(
+                          n.bind(n, 808400),
+                      );
                       return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                   },
                   { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
               )
-            : I.getConfig({ location: r }).enabled
+            : (0, h.Q9)() && (0, o.u0)()
               ? (0, a.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("63452"), n.e("51778"), n.e("22153")]).then(
-                            n.bind(n, 808400),
-                        );
+                        let { default: e } = await Promise.all([
+                            n.e("12211"),
+                            n.e("15574"),
+                            n.e("607"),
+                            n.e("84794"),
+                            n.e("34260"),
+                            n.e("18467"),
+                        ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
                     { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
