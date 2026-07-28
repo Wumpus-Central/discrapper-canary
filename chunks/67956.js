@@ -3043,7 +3043,6 @@ function lU(e) {
             step: m.pn.PAYMENT_ELEMENT,
             handleStepChange: N.tEg,
             onBillingAddressChange: N.tEg,
-            paymentElementsEnabled: !0,
             logger: lV,
             shouldLogOnChangeEvents: !0,
             continueSessionToInitialStep: void 0,
