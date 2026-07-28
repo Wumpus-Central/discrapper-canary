@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(688810),
     E = n(826673),
     A = n(38405),
-    h = n(232582),
+    h = n(308588),
     I = n(821609),
     f = n(349288),
     p = n(367727),
@@ -389,9 +389,9 @@ function J(e) {
                 E = a.button?.copy ?? C.intl.string(C.t.YScQSF),
                 R = a.button?.buttonAction,
                 L =
-                    R === h.dz.OPEN_MARKETING_PAGE
+                    R === h.d.OPEN_MARKETING_PAGE
                         ? "jump_to_mkt_button"
-                        : R === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT
+                        : R === h.d.OPEN_SOCIAL_LAYER_STOREFRONT
                           ? "jump_to_slayer_storefront_button"
                           : "get_nitro_button",
                 y = (0, g.h)({
@@ -480,7 +480,7 @@ function J(e) {
                                 target: u,
                             });
                             try {
-                                (R === h.dz.OPEN_MARKETING_PAGE || R === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT) &&
+                                (R === h.d.OPEN_MARKETING_PAGE || R === h.d.OPEN_SOCIAL_LAYER_STOREFRONT) &&
                                     (await (0, p.qr)(s.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
                                         dismissAction: N.i.TAKE_ACTION,
                                     }));

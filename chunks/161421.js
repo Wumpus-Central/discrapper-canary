@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { marketingCollection: () => e5, playgroundConfig: () => te });
+n.r(t), n.d(t, { marketingCollection: () => te, playgroundConfig: () => tt });
 var o,
     a,
     l,
@@ -9,116 +9,117 @@ var o,
     u = n(627968),
     p = n(877624),
     c = n(232582),
-    b = n(821609),
-    m = n(192308),
-    f = n(59318),
-    _ = n(935208),
-    A = n(331322),
-    T = n(691885),
-    g = n(839214),
-    I =
+    b = n(308588),
+    m = n(821609),
+    f = n(192308),
+    _ = n(59318),
+    A = n(935208),
+    T = n(331322),
+    g = n(691885),
+    I = n(839214),
+    N =
         (((o = {})[(o.NONE = 0)] = "NONE"),
         (o[(o.SUBSCRIPTION = 1)] = "SUBSCRIPTION"),
         (o[(o.FRACTIONAL_NITRO = 2)] = "FRACTIONAL_NITRO"),
         (o[(o.REVERSE_TRIAL = 3)] = "REVERSE_TRIAL"),
         (o[(o.SUBSCRIPTION_GROUP = 4)] = "SUBSCRIPTION_GROUP"),
         o),
-    N =
+    E =
         (((a = {})[(a.NONE = 0)] = "NONE"),
         (a[(a.BOOST_ONLY = 1)] = "BOOST_ONLY"),
         (a[(a.TIER_0 = 2)] = "TIER_0"),
         (a[(a.TIER_1 = 3)] = "TIER_1"),
         (a[(a.TIER_2 = 4)] = "TIER_2"),
         a),
-    E =
+    y =
         (((l = {})[(l.NONE = 0)] = "NONE"),
         (l[(l.TIER_1 = 1)] = "TIER_1"),
         (l[(l.TIER_2 = 2)] = "TIER_2"),
         (l[(l.TIER_0 = 3)] = "TIER_0"),
         l);
-let y = [
+let S = [
     { id: "EVERYONE", label: "Everyone", premiumType: null, premiumSource: null, premiumSubscriptionType: null },
-    { id: "NON_NITRO", label: "Non Nitro", premiumType: 0, premiumSource: I.NONE, premiumSubscriptionType: N.NONE },
+    { id: "NON_NITRO", label: "Non Nitro", premiumType: 0, premiumSource: N.NONE, premiumSubscriptionType: E.NONE },
     {
         id: "FRACTIONAL_WITHOUT_SUB",
         label: "Nitro Credit w/o sub",
         premiumType: 2,
-        premiumSource: I.FRACTIONAL_NITRO,
-        premiumSubscriptionType: N.NONE,
+        premiumSource: N.FRACTIONAL_NITRO,
+        premiumSubscriptionType: E.NONE,
     },
     {
         id: "FRACTIONAL_WITH_TIER_2_SUB",
         label: "Nitro Credit with Nitro Standard sub",
         premiumType: 2,
-        premiumSource: I.FRACTIONAL_NITRO,
-        premiumSubscriptionType: N.TIER_2,
+        premiumSource: N.FRACTIONAL_NITRO,
+        premiumSubscriptionType: E.TIER_2,
     },
     {
         id: "FRACTIONAL_WITH_TIER_1_SUB",
         label: "Nitro Credit with Nitro Classic sub",
         premiumType: 2,
-        premiumSource: I.FRACTIONAL_NITRO,
-        premiumSubscriptionType: N.TIER_1,
+        premiumSource: N.FRACTIONAL_NITRO,
+        premiumSubscriptionType: E.TIER_1,
     },
     {
         id: "FRACTIONAL_WITH_TIER_0_SUB",
         label: "Nitro Credit with Nitro Basic sub",
         premiumType: 2,
-        premiumSource: I.FRACTIONAL_NITRO,
-        premiumSubscriptionType: N.TIER_0,
+        premiumSource: N.FRACTIONAL_NITRO,
+        premiumSubscriptionType: E.TIER_0,
     },
     {
         id: "NITRO_BASIC",
         label: "Nitro Basic",
         premiumType: 3,
-        premiumSource: I.SUBSCRIPTION,
-        premiumSubscriptionType: N.TIER_0,
+        premiumSource: N.SUBSCRIPTION,
+        premiumSubscriptionType: E.TIER_0,
     },
     {
         id: "NITRO_CLASSIC",
         label: "Nitro Classic",
         premiumType: 1,
-        premiumSource: I.SUBSCRIPTION,
-        premiumSubscriptionType: N.TIER_1,
+        premiumSource: N.SUBSCRIPTION,
+        premiumSubscriptionType: E.TIER_1,
     },
     {
         id: "NITRO_STANDARD",
         label: "Nitro Standard",
         premiumType: 2,
-        premiumSource: I.SUBSCRIPTION,
-        premiumSubscriptionType: N.TIER_2,
+        premiumSource: N.SUBSCRIPTION,
+        premiumSubscriptionType: E.TIER_2,
     },
     {
         id: "NITRO_SQUAD",
         label: "Nitro Squad",
         premiumType: 2,
-        premiumSource: I.SUBSCRIPTION_GROUP,
-        premiumSubscriptionType: N.TIER_2,
+        premiumSource: N.SUBSCRIPTION_GROUP,
+        premiumSubscriptionType: E.TIER_2,
     },
 ];
-function S(e, t, n) {
-    let o = y.find((o) => o.premiumType === e && o.premiumSource === t && o.premiumSubscriptionType === n);
+function C(e, t, n) {
+    let o = S.find((o) => o.premiumType === e && o.premiumSource === t && o.premiumSubscriptionType === n);
     if (null != o) return { id: o.id, label: o.label };
-    let a = null == e ? "Any" : E[e],
-        l = null == t ? "Any" : I[t],
-        r = null == n ? "Any" : N[n];
+    let a = null == e ? "Any" : y[e],
+        l = null == t ? "Any" : N[t],
+        r = null == n ? "Any" : E[n];
     return { id: `CUSTOM:${e ?? "any"}:${t ?? "any"}:${n ?? "any"}`, label: `${a} / ${l} / ${r}` };
 }
-let C = "Localized";
-function O(e) {
+let O = "Localized";
+function R(e) {
     return "object" == typeof e && null != e && "string" == typeof e.default && "object" == typeof e.localizations;
 }
-let R = (0, g.D)(() => ({
+let v = (0, I.D)(() => ({
     selected: null,
     componentRowsByType: null,
     availableLocales: [],
     userStateByType: new Map(),
     localeOverride: null,
 }));
-function v(e) {
-    let t = R.useField("componentRowsByType"),
-        n = R.useField("userStateByType"),
-        o = R.useField("localeOverride");
+function h(e) {
+    let t = v.useField("componentRowsByType"),
+        n = v.useField("userStateByType"),
+        o = v.useField("localeOverride");
     return i.useMemo(
         () =>
             (function (e, t, n, o) {
@@ -133,7 +134,7 @@ function v(e) {
                         let e = n.find(
                             (e) =>
                                 !e.isDefaultBase &&
-                                S(e.premiumType, e.premiumSource, e.premiumSubscriptionType).id === t,
+                                C(e.premiumType, e.premiumSource, e.premiumSubscriptionType).id === t,
                         );
                         if (null != e) return e;
                     }
@@ -150,8 +151,8 @@ function v(e) {
                           }
                           if ("object" == typeof t && null != t)
                               for (let [o, a] of Object.entries(t)) {
-                                  if (o.endsWith(C) && O(a)) {
-                                      let e = o.slice(0, -C.length),
+                                  if (o.endsWith(O) && R(a)) {
+                                      let e = o.slice(0, -O.length),
                                           l = a.localizations[n] ?? ("" !== a.default ? a.default : null);
                                       null != l && e in t && (t[e] = l);
                                       continue;
@@ -175,39 +176,39 @@ function v(e) {
         [t, n, o, e],
     );
 }
-function h(e) {
+function P(e) {
     return null == e ? "" : "" !== e.darkUrl ? e.darkUrl : e.lightUrl;
 }
-let P = "__default__";
-var L = n(375708),
-    U = n(558986);
-function M(e) {
+let L = "__default__";
+var U = n(375708),
+    M = n(558986);
+function x(e) {
     let { label: t, value: n, disabled: o } = e;
     return { id: n, value: n, label: t, disabled: o };
 }
-function x(e) {
+function B(e) {
     let t,
         { componentType: n } = e,
-        o = R.useField("selected"),
-        a = R.useField("componentRowsByType"),
-        l = R.useField("userStateByType"),
-        r = R.useField("localeOverride"),
-        d = R.useField("availableLocales"),
+        o = v.useField("selected"),
+        a = v.useField("componentRowsByType"),
+        l = v.useField("userStateByType"),
+        r = v.useField("localeOverride"),
+        d = v.useField("availableLocales"),
         s =
-            ((t = R.useField("componentRowsByType")),
+            ((t = v.useField("componentRowsByType")),
             i.useMemo(() => {
                 let e = t?.get(n) ?? [],
                     o = new Map();
                 for (let t of e) {
                     if (t.isDefaultBase) continue;
-                    let e = S(t.premiumType, t.premiumSource, t.premiumSubscriptionType);
+                    let e = C(t.premiumType, t.premiumSource, t.premiumSubscriptionType);
                     o.has(e.id) || o.set(e.id, e);
                 }
                 return [...o.values()];
             }, [t, n])),
         p = i.useMemo(
             () =>
-                (0, L.getLanguages)()
+                (0, U.getLanguages)()
                     .filter((e) => e.enabled && "en-US" !== e.code)
                     .map((e) => ({ label: e.name, value: e.code }))
                     .sort((e, t) => e.label.localeCompare(t.label)),
@@ -218,7 +219,7 @@ function x(e) {
             return (
                 (e = new Set(d)),
                 [
-                    { label: "Default (en-US)", value: P },
+                    { label: "Default (en-US)", value: L },
                     ...p
                         .filter((e) => "en-US" !== e.value)
                         .map((t) => ({ label: t.label, value: t.value, disabled: !e.has(t.value) })),
@@ -228,39 +229,39 @@ function x(e) {
         b = (a?.get(n)?.length ?? 0) > 0;
     if (null == o || !b) return null;
     let m = s.length >= 1,
-        f = [{ label: "Default", value: P }, ...s.map((e) => ({ label: e.label, value: e.id }))];
+        f = [{ label: "Default", value: L }, ...s.map((e) => ({ label: e.label, value: e.id }))];
     return (0, u.jsx)("div", {
-        className: U.k,
-        children: (0, u.jsxs)(A.B, {
+        className: M.k,
+        children: (0, u.jsxs)(T.B, {
             gap: 16,
             children: [
                 m &&
-                    (0, u.jsx)(T.l, {
+                    (0, u.jsx)(g.l, {
                         label: "User State",
-                        value: l.get(n) ?? P,
+                        value: l.get(n) ?? L,
                         onSelectionChange: (e) => {
                             var t;
                             let o;
                             return (
-                                (t = e === P ? null : e),
-                                (o = new Map(R.getState().userStateByType)),
-                                void (null == t ? o.delete(n) : o.set(n, t), R.setState({ userStateByType: o }))
+                                (t = e === L ? null : e),
+                                (o = new Map(v.getState().userStateByType)),
+                                void (null == t ? o.delete(n) : o.set(n, t), v.setState({ userStateByType: o }))
                             );
                         },
                         options: f,
-                        formatOption: M,
+                        formatOption: x,
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
-                (0, u.jsx)(T.l, {
+                (0, u.jsx)(g.l, {
                     label: "Locale",
-                    value: r ?? P,
+                    value: r ?? L,
                     onSelectionChange: (e) => {
                         var t;
-                        return (t = e === P ? null : e), void R.setState({ localeOverride: t });
+                        return (t = e === L ? null : e), void v.setState({ localeOverride: t });
                     },
                     options: c,
-                    formatOption: M,
+                    formatOption: x,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -268,32 +269,32 @@ function x(e) {
         }),
     });
 }
-var B = n(65412),
-    G = n(25204);
-function D(e, t) {
-    return G.m.create({ contentIdentifier: e, properties: t });
+var G = n(65412),
+    D = n(25204);
+function k(e, t) {
+    return D.m.create({ contentIdentifier: e, properties: t });
 }
-function k(e, t, n, o) {
-    return { id: e, component_type: t, promotion_id: n, properties: (0, B.C)(G.m.toBinary(o)) };
+function F(e, t, n, o) {
+    return { id: e, component_type: t, promotion_id: n, properties: (0, G.C)(D.m.toBinary(o)) };
 }
-function F(e, t) {
-    return e === h(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
+function V(e, t) {
+    return e === P(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
 }
-var V = n(674242);
-let j = "playground-announcement-modal",
-    K = _.default.fromTimestamp(Date.now()),
-    w = {
+var j = n(674242);
+let K = "playground-announcement-modal",
+    w = A.default.fromTimestamp(Date.now()),
+    H = {
         name: "Announcement Modal",
         id: "announcement-modal",
         component: function (e) {
-            let t = v(p.C.ANNOUNCEMENT_MODAL),
+            let t = h(p.C.ANNOUNCEMENT_MODAL),
                 o =
                     t?.properties.oneofKind === "announcementModalVariant1"
                         ? t.properties.announcementModalVariant1
                         : null;
             return (0, u.jsx)("div", {
-                className: V.MT,
-                children: (0, u.jsx)(b.$, {
+                className: j.MT,
+                children: (0, u.jsx)(m.$, {
                     variant: "expressive",
                     size: "md",
                     text: "Open Announcement Modal",
@@ -303,7 +304,7 @@ let j = "playground-announcement-modal",
                             l,
                             r =
                                 ((t = e.heroAssetUrl),
-                                (a = (0, f.r1)(t)),
+                                (a = (0, _.r1)(t)),
                                 (l = {
                                     modalTopPill: e.modalTopPill,
                                     header: e.header,
@@ -316,9 +317,9 @@ let j = "playground-announcement-modal",
                                         ...o?.button,
                                         copy: e.buttonCopy,
                                         buttonAction:
-                                            e.buttonAction !== c.dz.UNSPECIFIED
+                                            e.buttonAction !== b.d.UNSPECIFIED
                                                 ? e.buttonAction
-                                                : (o?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
+                                                : (o?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
                                         deeplinkSection: o?.button?.deeplinkSection ?? "",
                                         navigableStorefrontApplicationId:
                                             o?.button?.navigableStorefrontApplicationId ??
@@ -327,11 +328,11 @@ let j = "playground-announcement-modal",
                                                 : void 0),
                                     },
                                 }),
-                                D(j, {
+                                k(K, {
                                     oneofKind: "announcementModalVariant1",
                                     announcementModalVariant1: null != o ? { ...o, ...l } : c.ih.create(l),
                                 }));
-                        (0, m.openModalLazy)(
+                        (0, f.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("39333"),
@@ -367,8 +368,8 @@ let j = "playground-announcement-modal",
                                 return (t) =>
                                     (0, u.jsx)(e, {
                                         renderModalProps: t,
-                                        componentId: j,
-                                        promotionId: K,
+                                        componentId: K,
+                                        promotionId: w,
                                         properties: r,
                                     });
                             },
@@ -378,9 +379,9 @@ let j = "playground-announcement-modal",
                 }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.ANNOUNCEMENT_MODAL }),
+        ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.ANNOUNCEMENT_MODAL }),
         useDefaultOverrides: () => {
-            let e = v(p.C.ANNOUNCEMENT_MODAL),
+            let e = h(p.C.ANNOUNCEMENT_MODAL),
                 t =
                     e?.properties.oneofKind === "announcementModalVariant1"
                         ? e.properties.announcementModalVariant1
@@ -398,7 +399,7 @@ let j = "playground-announcement-modal",
                                 ? t.heroArtImageLinkDarkTheme
                                 : t.heroArtImageLinkLightTheme,
                       buttonCopy: t.button?.copy ?? "",
-                      buttonAction: t.button?.buttonAction ?? c.dz.UNSPECIFIED,
+                      buttonAction: t.button?.buttonAction ?? b.d.UNSPECIFIED,
                       navigableStorefrontApplicationId: t.button?.navigableStorefrontApplicationId?.value ?? "",
                   };
         },
@@ -420,15 +421,15 @@ let j = "playground-announcement-modal",
             buttonAction: {
                 label: "Button Action",
                 type: "select",
-                defaultValue: c.dz.UNSPECIFIED,
+                defaultValue: b.d.UNSPECIFIED,
                 options: [
-                    { label: "Unspecified (use base)", value: c.dz.UNSPECIFIED },
-                    { label: "Open Marketing Page", value: c.dz.OPEN_MARKETING_PAGE },
-                    { label: "Open Tier 2 Payment Modal", value: c.dz.OPEN_TIER_2_PAYMENT_MODAL },
-                    { label: "Open Tier 1 Payment Modal", value: c.dz.OPEN_TIER_1_PAYMENT_MODAL },
-                    { label: "Open Plan Selection Modal", value: c.dz.OPEN_PLAN_SELECTION_MODAL },
-                    { label: "Open Premium Group Payment Modal", value: c.dz.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
-                    { label: "Open Social Layer Storefront", value: c.dz.OPEN_SOCIAL_LAYER_STOREFRONT },
+                    { label: "Unspecified (use base)", value: b.d.UNSPECIFIED },
+                    { label: "Open Marketing Page", value: b.d.OPEN_MARKETING_PAGE },
+                    { label: "Open Tier 2 Payment Modal", value: b.d.OPEN_TIER_2_PAYMENT_MODAL },
+                    { label: "Open Tier 1 Payment Modal", value: b.d.OPEN_TIER_1_PAYMENT_MODAL },
+                    { label: "Open Plan Selection Modal", value: b.d.OPEN_PLAN_SELECTION_MODAL },
+                    { label: "Open Premium Group Payment Modal", value: b.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
+                    { label: "Open Social Layer Storefront", value: b.d.OPEN_SOCIAL_LAYER_STOREFRONT },
                 ],
             },
             navigableStorefrontApplicationId: {
@@ -438,28 +439,28 @@ let j = "playground-announcement-modal",
             },
         },
     };
-var z = n(520361),
-    H = n(822571),
-    Y = n(662367);
-let W = "playground-billing-settings-banner",
-    $ = {
+var Y = n(520361),
+    W = n(822571),
+    z = n(662367);
+let $ = "playground-billing-settings-banner",
+    Z = {
         name: "Nitro Settings Banner",
         id: "billing-settings-banner",
         component: function (e) {
             let t,
                 n,
                 o,
-                a = v(p.C.BILLING_SETTINGS_BANNER),
+                a = h(p.C.BILLING_SETTINGS_BANNER),
                 l = a?.properties.oneofKind === "billingSettingsBanner" ? a.properties.billingSettingsBanner : null,
-                r = R.useField("selected"),
+                r = v.useField("selected"),
                 [d] = i.useState(() => new Date(Date.now() + 6048e5)),
                 s = r?.endDate ?? d,
-                b = H.A.createFromServer(
-                    k(
-                        W,
+                c = W.A.createFromServer(
+                    F(
+                        $,
                         p.C.BILLING_SETTINGS_BANNER,
                         r?.id ?? "",
-                        D(W, {
+                        k($, {
                             oneofKind: "billingSettingsBanner",
                             billingSettingsBanner:
                                 ((t = e.showButton
@@ -467,9 +468,9 @@ let W = "playground-billing-settings-banner",
                                           ...l?.button,
                                           copy: e.buttonCopy,
                                           buttonAction:
-                                              e.buttonAction !== c.dz.UNSPECIFIED
+                                              e.buttonAction !== b.d.UNSPECIFIED
                                                   ? e.buttonAction
-                                                  : (l?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
+                                                  : (l?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
                                           deeplinkSection: l?.button?.deeplinkSection ?? "",
                                           navigableStorefrontApplicationId:
                                               l?.button?.navigableStorefrontApplicationId ??
@@ -485,29 +486,29 @@ let W = "playground-billing-settings-banner",
                                 (o = {
                                     header: e.header,
                                     body: e.body,
-                                    asset: F(e.assetUrl, l?.asset),
+                                    asset: V(e.assetUrl, l?.asset),
                                     button: t,
                                     helpArticle: n,
                                 }),
-                                null != l ? { ...l, ...o } : z.h.create(o)),
+                                null != l ? { ...l, ...o } : Y.h.create(o)),
                         }),
                     ),
                 );
-            return (0, u.jsx)("div", { className: V.MT, children: (0, u.jsx)(Y.I, { component: b, endDate: s }) });
+            return (0, u.jsx)("div", { className: j.MT, children: (0, u.jsx)(z.I, { component: c, endDate: s }) });
         },
-        ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.BILLING_SETTINGS_BANNER }),
+        ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.BILLING_SETTINGS_BANNER }),
         useDefaultOverrides: () => {
-            let e = v(p.C.BILLING_SETTINGS_BANNER),
+            let e = h(p.C.BILLING_SETTINGS_BANNER),
                 t = e?.properties.oneofKind === "billingSettingsBanner" ? e.properties.billingSettingsBanner : null;
             return null == t
                 ? null
                 : {
                       header: t.header,
                       body: t.body,
-                      assetUrl: h(t.asset),
+                      assetUrl: P(t.asset),
                       showButton: null != t.button,
                       buttonCopy: t.button?.copy ?? "",
-                      buttonAction: t.button?.buttonAction ?? c.dz.UNSPECIFIED,
+                      buttonAction: t.button?.buttonAction ?? b.d.UNSPECIFIED,
                       navigableStorefrontApplicationId: t.button?.navigableStorefrontApplicationId?.value ?? "",
                       helpArticleId: t.helpArticle?.id ?? "",
                       helpArticleLinkText: t.helpArticle?.linkText ?? "",
@@ -531,15 +532,15 @@ let W = "playground-billing-settings-banner",
             buttonAction: {
                 label: "Button Action",
                 type: "select",
-                defaultValue: c.dz.UNSPECIFIED,
+                defaultValue: b.d.UNSPECIFIED,
                 options: [
-                    { label: "Unspecified (use base)", value: c.dz.UNSPECIFIED },
-                    { label: "Open Marketing Page", value: c.dz.OPEN_MARKETING_PAGE },
-                    { label: "Open Tier 2 Payment Modal", value: c.dz.OPEN_TIER_2_PAYMENT_MODAL },
-                    { label: "Open Tier 1 Payment Modal", value: c.dz.OPEN_TIER_1_PAYMENT_MODAL },
-                    { label: "Open Plan Selection Modal", value: c.dz.OPEN_PLAN_SELECTION_MODAL },
-                    { label: "Open Premium Group Payment Modal", value: c.dz.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
-                    { label: "Open Social Layer Storefront", value: c.dz.OPEN_SOCIAL_LAYER_STOREFRONT },
+                    { label: "Unspecified (use base)", value: b.d.UNSPECIFIED },
+                    { label: "Open Marketing Page", value: b.d.OPEN_MARKETING_PAGE },
+                    { label: "Open Tier 2 Payment Modal", value: b.d.OPEN_TIER_2_PAYMENT_MODAL },
+                    { label: "Open Tier 1 Payment Modal", value: b.d.OPEN_TIER_1_PAYMENT_MODAL },
+                    { label: "Open Plan Selection Modal", value: b.d.OPEN_PLAN_SELECTION_MODAL },
+                    { label: "Open Premium Group Payment Modal", value: b.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
+                    { label: "Open Social Layer Storefront", value: b.d.OPEN_SOCIAL_LAYER_STOREFRONT },
                 ],
             },
             navigableStorefrontApplicationId: {
@@ -551,9 +552,9 @@ let W = "playground-billing-settings-banner",
             helpArticleLinkText: { label: "Help Article Link Text", type: "text", defaultValue: "Terms apply." },
         },
     };
-var Z = n(959129),
-    q = n(815846),
-    J =
+var q = n(959129),
+    J = n(815846),
+    Q =
         (((r = {}).SEASONAL_GIFTING_2024_BALLOONS_REWARD_SKU_ID = "1301993378484850769"),
         (r.SEASONAL_GIFTING_2024_CAT_EARS_REWARD_SKU_ID = "1301993378484850771"),
         (r.SEASONAL_GIFTING_2024_SNOWFLAKES_REWARD_SKU_ID = "1301993378484850773"),
@@ -575,51 +576,51 @@ var Z = n(959129),
         (r.WORLD_CUP_GIFTING_2026_AROUND_THE_WORLD_SKU_ID = "1509955522797768794"),
         (r.WORLD_CUP_GIFTING_2026_GOAL_SKU_ID = "1509962431290675280"),
         r),
-    Q = n(67948),
-    X = n(228366),
-    ee = n(793574),
-    et = n(688810),
-    en = n(532794),
-    eo = n(852218),
-    ea = n(202541);
-let el = "playground-gift-customization-banner",
-    er = "playground-gift-customization-banner-promotion",
-    ei = J.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
-var ed = n(365990),
-    es = n(95701);
-function eu(e) {
+    X = n(67948),
+    ee = n(228366),
+    et = n(793574),
+    en = n(688810),
+    eo = n(532794),
+    ea = n(852218),
+    el = n(202541);
+let er = "playground-gift-customization-banner",
+    ei = "playground-gift-customization-banner-promotion",
+    ed = Q.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
+var es = n(365990),
+    eu = n(95701);
+function ep(e) {
     let { id: t, component_type: n, promotion_id: o, properties: a } = e;
     i.useEffect(() => {
         (0, s.Ak)(),
-            X.h.dispatch({
+            ee.h.dispatch({
                 type: "PREMIUM_MARKETING_PREVIEW",
                 data: { id: t, component_type: n, promotion_id: o, properties: a },
             });
     }, [t, n, o, a]);
 }
-var ep = n(652215);
-let ec = "playground-gift-icon",
-    eb = (0, es.createChannelRecord)({ id: "1", guild_id: "1", type: ep.rbe.GUILD_TEXT, name: "playground" });
-var em = n(720119),
-    ef = n(40493);
-function e_() {}
-let eA = (0, es.createChannelRecord)({ id: "1", guild_id: "1", type: ep.rbe.GUILD_TEXT, name: "playground" });
-var eT = n(978656);
-let eg = "playground-gift-plan-selection-card-banner",
-    eI = "playground-gift-plan-selection-card-banner-promotion",
-    eN = J.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
-var eE = n(823901);
-function ey() {}
-let eS = "playground-gift-reminder-nagbar";
-var eC = n(670474),
-    eO = n(371764);
-let eR = {
+var ec = n(652215);
+let eb = "playground-gift-icon",
+    em = (0, eu.createChannelRecord)({ id: "1", guild_id: "1", type: ec.rbe.GUILD_TEXT, name: "playground" });
+var ef = n(720119),
+    e_ = n(40493);
+function eA() {}
+let eT = (0, eu.createChannelRecord)({ id: "1", guild_id: "1", type: ec.rbe.GUILD_TEXT, name: "playground" });
+var eg = n(978656);
+let eI = "playground-gift-plan-selection-card-banner",
+    eN = "playground-gift-plan-selection-card-banner-promotion",
+    eE = Q.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
+var ey = n(823901);
+function eS() {}
+let eC = "playground-gift-reminder-nagbar";
+var eO = n(670474),
+    eR = n(371764);
+let ev = {
     name: "Marketing Page Banner",
     id: "marketing-page-banner",
     component: function (e) {
         let t,
             n,
-            o = v(p.C.MARKETING_PAGE_BANNER),
+            o = h(p.C.MARKETING_PAGE_BANNER),
             a = o?.properties.oneofKind === "marketingPageBanner" ? o.properties.marketingPageBanner : null,
             l =
                 ((t = e.showButton
@@ -627,9 +628,9 @@ let eR = {
                           ...a?.button,
                           copy: e.buttonCopy,
                           buttonAction:
-                              e.buttonAction !== c.dz.UNSPECIFIED
+                              e.buttonAction !== b.d.UNSPECIFIED
                                   ? e.buttonAction
-                                  : (a?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
+                                  : (a?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
                           deeplinkSection: a?.button?.deeplinkSection ?? "",
                           navigableStorefrontApplicationId:
                               a?.button?.navigableStorefrontApplicationId ??
@@ -639,18 +640,18 @@ let eR = {
                       }
                     : void 0),
                 (n = { assetUrl: e.assetUrl, header: e.header, body: e.body, button: t }),
-                null != a ? { ...a, ...n } : { helpArticleId: "", buttonVariant: eC.FF.UNSPECIFIED, ...n });
+                null != a ? { ...a, ...n } : { helpArticleId: "", buttonVariant: eO.F.UNSPECIFIED, ...n });
         return (0, u.jsx)("div", {
-            className: V.MT,
-            children: (0, u.jsx)(eO.x, {
+            className: j.MT,
+            children: (0, u.jsx)(eR.x, {
                 componentId: "playground-marketing-page-banner",
                 promotionBannerMarketingComponentFields: l,
             }),
         });
     },
-    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.MARKETING_PAGE_BANNER }),
+    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.MARKETING_PAGE_BANNER }),
     useDefaultOverrides: () => {
-        let e = v(p.C.MARKETING_PAGE_BANNER),
+        let e = h(p.C.MARKETING_PAGE_BANNER),
             t = e?.properties.oneofKind === "marketingPageBanner" ? e.properties.marketingPageBanner : null;
         return null == t
             ? null
@@ -660,7 +661,7 @@ let eR = {
                   assetUrl: t.assetUrl,
                   showButton: null != t.button,
                   buttonCopy: t.button?.copy ?? "",
-                  buttonAction: t.button?.buttonAction ?? c.dz.UNSPECIFIED,
+                  buttonAction: t.button?.buttonAction ?? b.d.UNSPECIFIED,
                   navigableStorefrontApplicationId: t.button?.navigableStorefrontApplicationId?.value ?? "",
               };
     },
@@ -682,15 +683,15 @@ let eR = {
         buttonAction: {
             label: "Button Action",
             type: "select",
-            defaultValue: c.dz.UNSPECIFIED,
+            defaultValue: b.d.UNSPECIFIED,
             options: [
-                { label: "Unspecified (use base)", value: c.dz.UNSPECIFIED },
-                { label: "Open Marketing Page", value: c.dz.OPEN_MARKETING_PAGE },
-                { label: "Open Tier 2 Payment Modal", value: c.dz.OPEN_TIER_2_PAYMENT_MODAL },
-                { label: "Open Tier 1 Payment Modal", value: c.dz.OPEN_TIER_1_PAYMENT_MODAL },
-                { label: "Open Plan Selection Modal", value: c.dz.OPEN_PLAN_SELECTION_MODAL },
-                { label: "Open Premium Group Payment Modal", value: c.dz.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
-                { label: "Open Social Layer Storefront", value: c.dz.OPEN_SOCIAL_LAYER_STOREFRONT },
+                { label: "Unspecified (use base)", value: b.d.UNSPECIFIED },
+                { label: "Open Marketing Page", value: b.d.OPEN_MARKETING_PAGE },
+                { label: "Open Tier 2 Payment Modal", value: b.d.OPEN_TIER_2_PAYMENT_MODAL },
+                { label: "Open Tier 1 Payment Modal", value: b.d.OPEN_TIER_1_PAYMENT_MODAL },
+                { label: "Open Plan Selection Modal", value: b.d.OPEN_PLAN_SELECTION_MODAL },
+                { label: "Open Premium Group Payment Modal", value: b.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
+                { label: "Open Social Layer Storefront", value: b.d.OPEN_SOCIAL_LAYER_STOREFRONT },
             ],
         },
         navigableStorefrontApplicationId: {
@@ -700,54 +701,54 @@ let eR = {
         },
     },
 };
-var ev = n(754804);
-let eh = "playground-nagbar";
-var eP = n(834730),
-    eL = n(709870);
-let eU =
+var eh = n(754804);
+let eP = "playground-nagbar";
+var eL = n(834730),
+    eU = n(709870);
+let eM =
         "https://cdn.discordapp.com/assets/content/ce3500be6abe18b64c923af6d520c74cc915387831c4cdd5e4240d175417a87a.svg",
-    eM = "playground-payment-modal-banner",
-    ex = "playground-plan-select-card-banner";
-var eB = n(964661),
-    eG = n(503698),
-    eD = n.n(eG),
-    ek = n(612324),
-    eF = n(403581),
-    eV = n(214947),
-    ej = n(34188),
-    eK = n(577473),
-    ew = n(715069),
-    ez = n(765671),
-    eH = n(818744);
-function eY() {}
-let eW = i.forwardRef(function (e, t) {
+    ex = "playground-payment-modal-banner",
+    eB = "playground-plan-select-card-banner";
+var eG = n(964661),
+    eD = n(503698),
+    ek = n.n(eD),
+    eF = n(612324),
+    eV = n(403581),
+    ej = n(214947),
+    eK = n(34188),
+    ew = n(577473),
+    eH = n(715069),
+    eY = n(765671),
+    eW = n(818744);
+function ez() {}
+let e$ = i.forwardRef(function (e, t) {
     let { icon: n, label: o, selected: a = !1, decoration: l, showHoverGradient: r = !1 } = e,
-        { width: i, ref: d } = (0, ez.Ay)(),
-        s = (0, ek.A)(t, d);
+        { width: i, ref: d } = (0, eY.Ay)(),
+        s = (0, eF.A)(t, d);
     return (0, u.jsxs)("button", {
         ref: s,
         type: "button",
-        className: eD()(eH.pc, { [eH.EV]: a }),
-        onClick: eY,
+        className: ek()(eW.pc, { [eW.EV]: a }),
+        onClick: ez,
         children: [
-            r && (0, u.jsx)(ew.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
+            r && (0, u.jsx)(eH.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
             (0, u.jsxs)("span", {
-                className: eH.Hq,
+                className: eW.Hq,
                 children: [
                     (0, u.jsx)(n, { size: "md", color: "currentColor" }),
-                    (0, u.jsx)(eP.E, {
+                    (0, u.jsx)(eL.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        className: eH.We,
+                        className: eW.We,
                         children: o,
                     }),
-                    null != l && (0, u.jsx)("div", { className: eH.UT, children: l }),
+                    null != l && (0, u.jsx)("div", { className: eW.UT, children: l }),
                 ],
             }),
         ],
     });
 });
-function e$(e) {
+function eZ(e) {
     let {
             tabLabel: t = "Nitro",
             selected: n = !1,
@@ -756,21 +757,21 @@ function e$(e) {
             nitroRowRef: l,
             wrapNitroRow: r,
         } = e,
-        i = (0, u.jsx)(eW, { ref: l, icon: eF.t, label: t, selected: n, decoration: o, showHoverGradient: a });
+        i = (0, u.jsx)(e$, { ref: l, icon: eV.t, label: t, selected: n, decoration: o, showHoverGradient: a });
     return (0, u.jsxs)("nav", {
-        className: eH.C$,
+        className: eW.C$,
         children: [
-            (0, u.jsx)(eW, { icon: eV.$, label: "Friends" }),
+            (0, u.jsx)(e$, { icon: ej.$, label: "Friends" }),
             null != r ? r(i) : i,
-            (0, u.jsx)(eW, { icon: ej.U, label: "Shop" }),
-            (0, u.jsx)(eW, { icon: eK.r, label: "Quests" }),
+            (0, u.jsx)(e$, { icon: eK.U, label: "Shop" }),
+            (0, u.jsx)(e$, { icon: ew.r, label: "Quests" }),
         ],
     });
 }
-var eZ = n(52416);
-function eq() {}
-let eJ = "playground-premium-tab-popover",
-    eQ = {
+var eq = n(52416);
+function eJ() {}
+let eQ = "playground-premium-tab-popover",
+    eX = {
         name: "Premium Tab Popover",
         id: "premium-tab-popover",
         component: function (e) {
@@ -783,11 +784,11 @@ let eJ = "playground-premium-tab-popover",
                     buttonCopy: r,
                     buttonAction: d,
                     navigableStorefrontApplicationId: s,
-                    assetUrl: b,
+                    assetUrl: c,
                 } = e,
-                m = v(p.C.PREMIUM_TAB_POPOVER),
+                m = h(p.C.PREMIUM_TAB_POPOVER),
                 f = m?.properties.oneofKind === "premiumTabPopover" ? m.properties.premiumTabPopover : null;
-            eu(
+            ep(
                 ((n = {
                     header: (t = {
                         header: a,
@@ -795,16 +796,16 @@ let eJ = "playground-premium-tab-popover",
                         buttonCopy: r,
                         buttonAction: d,
                         navigableStorefrontApplicationId: s,
-                        assetUrl: b,
+                        assetUrl: c,
                     }).header,
                     body: t.body,
                     button: {
                         ...f?.button,
                         copy: t.buttonCopy,
                         buttonAction:
-                            t.buttonAction !== c.dz.UNSPECIFIED
+                            t.buttonAction !== b.d.UNSPECIFIED
                                 ? t.buttonAction
-                                : (f?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
+                                : (f?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
                         deeplinkSection: f?.button?.deeplinkSection ?? "",
                         navigableStorefrontApplicationId:
                             f?.button?.navigableStorefrontApplicationId ??
@@ -812,24 +813,24 @@ let eJ = "playground-premium-tab-popover",
                                 ? { value: t.navigableStorefrontApplicationId }
                                 : void 0),
                     },
-                    asset: F(t.assetUrl, f?.asset),
+                    asset: V(t.assetUrl, f?.asset),
                 }),
-                (o = D(eJ, {
+                (o = k(eQ, {
                     oneofKind: "premiumTabPopover",
                     premiumTabPopover: null != f ? { ...f, ...n } : { helpArticleId: "", ...n },
                 })),
-                k(eJ, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
+                F(eQ, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
             );
             let _ = i.useRef(null);
-            return (0, u.jsx)(e$, {
+            return (0, u.jsx)(eZ, {
                 selected: !0,
                 nitroRowRef: _,
-                wrapNitroRow: (e) => (0, u.jsx)(eZ.A, { targetElementRef: _, dismissPopover: eq, children: e }),
+                wrapNitroRow: (e) => (0, u.jsx)(eq.A, { targetElementRef: _, dismissPopover: eJ, children: e }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.PREMIUM_TAB_POPOVER }),
+        ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB_POPOVER }),
         useDefaultOverrides: () => {
-            let e = v(p.C.PREMIUM_TAB_POPOVER),
+            let e = h(p.C.PREMIUM_TAB_POPOVER),
                 t = e?.properties.oneofKind === "premiumTabPopover" ? e.properties.premiumTabPopover : null;
             return null == t
                 ? null
@@ -837,9 +838,9 @@ let eJ = "playground-premium-tab-popover",
                       header: t.header,
                       body: t.body,
                       buttonCopy: t.button?.copy ?? "",
-                      buttonAction: t.button?.buttonAction ?? c.dz.UNSPECIFIED,
+                      buttonAction: t.button?.buttonAction ?? b.d.UNSPECIFIED,
                       navigableStorefrontApplicationId: t.button?.navigableStorefrontApplicationId?.value ?? "",
-                      assetUrl: h(t.asset),
+                      assetUrl: P(t.asset),
                   };
         },
         controls: {
@@ -853,15 +854,15 @@ let eJ = "playground-premium-tab-popover",
             buttonAction: {
                 label: "Button Action",
                 type: "select",
-                defaultValue: c.dz.UNSPECIFIED,
+                defaultValue: b.d.UNSPECIFIED,
                 options: [
-                    { label: "Unspecified (use base)", value: c.dz.UNSPECIFIED },
-                    { label: "Open Marketing Page", value: c.dz.OPEN_MARKETING_PAGE },
-                    { label: "Open Tier 2 Payment Modal", value: c.dz.OPEN_TIER_2_PAYMENT_MODAL },
-                    { label: "Open Tier 1 Payment Modal", value: c.dz.OPEN_TIER_1_PAYMENT_MODAL },
-                    { label: "Open Plan Selection Modal", value: c.dz.OPEN_PLAN_SELECTION_MODAL },
-                    { label: "Open Premium Group Payment Modal", value: c.dz.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
-                    { label: "Open Social Layer Storefront", value: c.dz.OPEN_SOCIAL_LAYER_STOREFRONT },
+                    { label: "Unspecified (use base)", value: b.d.UNSPECIFIED },
+                    { label: "Open Marketing Page", value: b.d.OPEN_MARKETING_PAGE },
+                    { label: "Open Tier 2 Payment Modal", value: b.d.OPEN_TIER_2_PAYMENT_MODAL },
+                    { label: "Open Tier 1 Payment Modal", value: b.d.OPEN_TIER_1_PAYMENT_MODAL },
+                    { label: "Open Plan Selection Modal", value: b.d.OPEN_PLAN_SELECTION_MODAL },
+                    { label: "Open Premium Group Payment Modal", value: b.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL },
+                    { label: "Open Social Layer Storefront", value: b.d.OPEN_SOCIAL_LAYER_STOREFRONT },
                 ],
             },
             navigableStorefrontApplicationId: {
@@ -877,23 +878,23 @@ let eJ = "playground-premium-tab-popover",
             },
         },
     };
-var eX = n(796878);
-let e0 = "playground-premium-tab-tooltip";
+var e0 = n(796878);
+let e2 = "playground-premium-tab-tooltip";
 n(321073);
-var e2 = n(896170),
-    e1 = n(783878),
-    e6 = n(562465);
-async function e3() {
-    return (await e6.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
+var e1 = n(896170),
+    e6 = n(783878),
+    e3 = n(562465);
+async function e7() {
+    return (await e3.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: a, end_date: l } = e;
         return { id: t, name: n, type: o, source: a, endDate: null != l ? new Date(l) : void 0 };
     });
 }
-async function e7(e) {
-    let t = await e6.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
+async function e8(e) {
+    let t = await e3.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
-        let t = G.m.fromBinary((0, B.A)(e.properties)),
+        let t = D.m.fromBinary((0, G.A)(e.properties)),
             o = n.get(e.component_type) ?? [];
         o.push({
             premiumType: e.premium_type,
@@ -907,13 +908,13 @@ async function e7(e) {
     }
     return n;
 }
-let e8 = [
+let e4 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
-function e4(e) {
+function e9(e) {
     let t = [];
-    for (let n of e8) {
+    for (let n of e4) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -922,17 +923,17 @@ function e4(e) {
     }
     return t;
 }
-function e9(e, t) {
+function e5(e, t) {
     return { title: e, stories: [...t].sort((e, t) => e.name.localeCompare(t.name)) };
 }
-let e5 = {
+let te = {
         id: "marketing",
         name: "Marketing",
         groups: [
-            e9("Premium Surfaces", [
-                w,
-                $,
-                eR,
+            e5("Premium Surfaces", [
+                H,
+                Z,
+                ev,
                 {
                     name: "Nagbar",
                     id: "nagbar",
@@ -941,10 +942,10 @@ let e5 = {
                         let n,
                             o,
                             { body: a, ctaLabel: l, helpArticleId: r } = e,
-                            i = v(p.C.NAGBAR),
+                            i = h(p.C.NAGBAR),
                             d = i?.properties.oneofKind === "nagbar" ? i.properties.nagbar : null;
                         return (
-                            eu(
+                            ep(
                                 ((n = {
                                     body: (t = { body: a, ctaLabel: l, helpArticleId: r }).body,
                                     ctaLabel: t.ctaLabel,
@@ -957,21 +958,21 @@ let e5 = {
                                               }
                                             : void 0,
                                 }),
-                                (o = D(eh, {
+                                (o = k(eP, {
                                     oneofKind: "nagbar",
                                     nagbar:
                                         null != d
                                             ? { ...d, ...n }
-                                            : { ctaAction: c.dz.OPEN_TIER_2_PAYMENT_MODAL, deeplinkSection: "", ...n },
+                                            : { ctaAction: b.d.OPEN_TIER_2_PAYMENT_MODAL, deeplinkSection: "", ...n },
                                 })),
-                                k(eh, p.C.NAGBAR, "playground-nagbar-promotion", o)),
+                                F(eP, p.C.NAGBAR, "playground-nagbar-promotion", o)),
                             ),
-                            (0, u.jsx)("div", { className: V.MT, children: (0, u.jsx)(ev.A, {}) })
+                            (0, u.jsx)("div", { className: j.MT, children: (0, u.jsx)(eh.A, {}) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.NAGBAR }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.NAGBAR }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.NAGBAR),
+                        let e = h(p.C.NAGBAR),
                             t = e?.properties.oneofKind === "nagbar" ? e.properties.nagbar : null;
                         return null == t
                             ? null
@@ -992,20 +993,20 @@ let e5 = {
                     id: "nitro-orbs-bonus-modal",
                     component: function (e) {
                         let { orbsAmount: t } = e;
-                        return (0, u.jsxs)(A.B, {
+                        return (0, u.jsxs)(T.B, {
                             direction: "vertical",
                             gap: 16,
                             align: "start",
                             children: [
-                                (0, u.jsx)(eP.E, {
+                                (0, u.jsx)(eL.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children:
                                         "The post-purchase \u201COrbs delivered\u201D confirmation modal for the Nitro orbs bonus. Set the orb amount in the controls, then open it.",
                                 }),
-                                (0, u.jsx)(b.$, {
+                                (0, u.jsx)(m.$, {
                                     text: "Open Orbs delivered modal",
-                                    onClick: () => (0, eL.$)({ orbsAmount: t }),
+                                    onClick: () => (0, eU.$)({ orbsAmount: t }),
                                 }),
                             ],
                         });
@@ -1016,21 +1017,21 @@ let e5 = {
                     name: "Shop Reward Modal",
                     id: "nitro-shop-reward-modal",
                     component: function () {
-                        return (0, u.jsxs)(A.B, {
+                        return (0, u.jsxs)(T.B, {
                             direction: "vertical",
                             gap: 16,
                             align: "start",
                             children: [
-                                (0, u.jsx)(eP.E, {
+                                (0, u.jsx)(eL.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children:
                                         "The \u201CYour free Shop item is ready for you\u201D reward modal. Open it to preview.",
                                 }),
-                                (0, u.jsx)(b.$, {
+                                (0, u.jsx)(m.$, {
                                     text: "Open Shop reward modal",
                                     onClick: () =>
-                                        void (0, m.openModalLazy)(async () => {
+                                        void (0, f.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([n.e("93137"), n.e("19443")]).then(
                                                 n.bind(n, 55934),
                                             );
@@ -1046,16 +1047,16 @@ let e5 = {
                     id: "payment-modal-banner",
                     component: function (e) {
                         let { body: t, assetUrl: n } = e,
-                            o = v(p.C.PAYMENT_MODAL_BANNER);
-                        eu(
+                            o = h(p.C.PAYMENT_MODAL_BANNER);
+                        ep(
                             (function (e, t) {
                                 let { body: n, assetUrl: o } = e,
                                     a = { assetUrl: o, body: n },
-                                    l = D(eM, {
+                                    l = k(ex, {
                                         oneofKind: "paymentModalBanner",
                                         paymentModalBanner: null != t ? { ...t, ...a } : { header: "", ...a },
                                     });
-                                return k(eM, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", l);
+                                return F(ex, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", l);
                             })(
                                 { body: t, assetUrl: n },
                                 o?.properties.oneofKind === "paymentModalBanner"
@@ -1063,20 +1064,20 @@ let e5 = {
                                     : null,
                             ),
                         );
-                        let { analyticsLocations: a } = (0, et.Ay)(ee.A.PAYMENT_FLOW_TEST_PAGE);
+                        let { analyticsLocations: a } = (0, en.Ay)(et.A.PAYMENT_FLOW_TEST_PAGE);
                         return (0, u.jsx)("div", {
-                            className: V.MT,
-                            children: (0, u.jsx)(b.$, {
+                            className: j.MT,
+                            children: (0, u.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Payment Modal",
-                                onClick: () => (0, en.A)({ subscriptionTier: ea.pe.TIER_2, analyticsLocations: a }),
+                                onClick: () => (0, eo.A)({ subscriptionTier: el.pe.TIER_2, analyticsLocations: a }),
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.PAYMENT_MODAL_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PAYMENT_MODAL_BANNER }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.PAYMENT_MODAL_BANNER),
+                        let e = h(p.C.PAYMENT_MODAL_BANNER),
                             t =
                                 e?.properties.oneofKind === "paymentModalBanner"
                                     ? e.properties.paymentModalBanner
@@ -1089,7 +1090,7 @@ let e5 = {
                             type: "text",
                             defaultValue: "Your Nitro offer is waiting - subscribe now to claim it.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eU },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eM },
                     },
                 },
                 {
@@ -1097,16 +1098,16 @@ let e5 = {
                     id: "plan-select-card-banner",
                     component: function (e) {
                         let { body: t, assetUrl: n } = e,
-                            o = v(p.C.PLAN_SELECT_CARD_BANNER);
-                        eu(
+                            o = h(p.C.PLAN_SELECT_CARD_BANNER);
+                        ep(
                             (function (e, t) {
                                 let { body: n, assetUrl: o } = e,
-                                    a = D(ex, {
+                                    a = k(eB, {
                                         oneofKind: "planSelectCardBanner",
-                                        planSelectCardBanner: { ...t, body: n, asset: F(o, t?.asset) },
+                                        planSelectCardBanner: { ...t, body: n, asset: V(o, t?.asset) },
                                     });
-                                return k(
-                                    ex,
+                                return F(
+                                    eB,
                                     p.C.PLAN_SELECT_CARD_BANNER,
                                     "playground-plan-select-card-banner-promotion",
                                     a,
@@ -1118,25 +1119,25 @@ let e5 = {
                                     : null,
                             ),
                         );
-                        let { analyticsLocations: a } = (0, et.Ay)(ee.A.PAYMENT_FLOW_TEST_PAGE);
+                        let { analyticsLocations: a } = (0, en.Ay)(et.A.PAYMENT_FLOW_TEST_PAGE);
                         return (0, u.jsx)("div", {
-                            className: V.MT,
-                            children: (0, u.jsx)(b.$, {
+                            className: j.MT,
+                            children: (0, u.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Select Plan",
-                                onClick: () => (0, en.A)({ analyticsLocations: a }),
+                                onClick: () => (0, eo.A)({ analyticsLocations: a }),
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.PLAN_SELECT_CARD_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PLAN_SELECT_CARD_BANNER }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.PLAN_SELECT_CARD_BANNER),
+                        let e = h(p.C.PLAN_SELECT_CARD_BANNER),
                             t =
                                 e?.properties.oneofKind === "planSelectCardBanner"
                                     ? e.properties.planSelectCardBanner
                                     : null;
-                        return null == t ? null : { body: t.body, assetUrl: h(t.asset) };
+                        return null == t ? null : { body: t.body, assetUrl: P(t.asset) };
                     },
                     controls: {
                         body: {
@@ -1144,29 +1145,29 @@ let e5 = {
                             type: "text",
                             defaultValue: "Join Nitro today and get your second month free! Limited time offer.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eU },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eM },
                     },
                 },
                 {
                     name: "Premium Tab Badge",
                     id: "premium-tab-badge",
                     component: function (e) {
-                        let t = (0, u.jsx)(eB.A, {
+                        let t = (0, u.jsx)(eG.A, {
                             componentId: "playground-premium-tab-badge",
                             badgeCopy: e.badgeCopy,
                             acknowledgedBadgeCopy: e.acknowledgedBadgeCopy,
                             isDismissed: e.isDismissed,
                         });
-                        return (0, u.jsx)(e$, {
+                        return (0, u.jsx)(eZ, {
                             tabLabel: e.tabLabel,
                             selected: e.selected,
                             decoration: t,
                             showHoverGradient: e.showHoverGradient,
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.PREMIUM_TAB }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.PREMIUM_TAB),
+                        let e = h(p.C.PREMIUM_TAB),
                             t = e?.properties.oneofKind === "premiumTab" ? e.properties.premiumTab : null;
                         return null == t
                             ? null
@@ -1185,7 +1186,7 @@ let e5 = {
                         showHoverGradient: { label: "Show hover gradient", type: "boolean", defaultValue: !1 },
                     },
                 },
-                eQ,
+                eX,
                 {
                     name: "Premium Tab Tooltip",
                     id: "premium-tab-tooltip",
@@ -1194,29 +1195,29 @@ let e5 = {
                         let n,
                             o,
                             { header: a, body: l, assetUrl: r } = e,
-                            i = v(p.C.PREMIUM_TAB_TOOLTIP),
+                            i = h(p.C.PREMIUM_TAB_TOOLTIP),
                             d = i?.properties.oneofKind === "premiumTabTooltip" ? i.properties.premiumTabTooltip : null;
                         return (
-                            eu(
+                            ep(
                                 ((n = {
                                     header: (t = { header: a, body: l, assetUrl: r }).header,
                                     body: t.body,
-                                    asset: F(t.assetUrl, d?.asset),
+                                    asset: V(t.assetUrl, d?.asset),
                                 }),
-                                (o = D(e0, {
+                                (o = k(e2, {
                                     oneofKind: "premiumTabTooltip",
                                     premiumTabTooltip: null != d ? { ...d, ...n } : n,
                                 })),
-                                k(e0, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
+                                F(e2, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                             ),
-                            (0, u.jsx)(e$, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(eX.A, { children: e }) })
+                            (0, u.jsx)(eZ, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(e0.A, { children: e }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.PREMIUM_TAB_TOOLTIP),
+                        let e = h(p.C.PREMIUM_TAB_TOOLTIP),
                             t = e?.properties.oneofKind === "premiumTabTooltip" ? e.properties.premiumTabTooltip : null;
-                        return null == t ? null : { header: t.header, body: t.body, assetUrl: h(t.asset) };
+                        return null == t ? null : { header: t.header, body: t.body, assetUrl: P(t.asset) };
                     },
                     controls: {
                         header: { label: "Header", type: "text", defaultValue: "Get Nitro" },
@@ -1234,40 +1235,40 @@ let e5 = {
                     },
                 },
             ]),
-            e9("Gifting Surfaces", [
+            e5("Gifting Surfaces", [
                 {
                     name: "Billing Settings Gift Banner",
                     id: "billing-settings-nitro-gift-banner",
                     component: function (e) {
                         let t,
-                            n = v(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
+                            n = h(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                             o =
                                 n?.properties.oneofKind === "billingSettingsNitroGiftBanner"
                                     ? n.properties.billingSettingsNitroGiftBanner
                                     : null;
                         return (0, u.jsx)("div", {
-                            className: V.MT,
-                            children: (0, u.jsx)(q.c, {
+                            className: j.MT,
+                            children: (0, u.jsx)(J.c, {
                                 config:
                                     ((t = {
                                         header: e.header,
                                         body: e.body,
                                         additionalTerms: e.additionalTerms,
                                         textColor: e.textColor,
-                                        asset: F(e.assetUrl, o?.asset),
-                                        backgroundAsset: F(e.backgroundAssetUrl, o?.backgroundAsset),
+                                        asset: V(e.assetUrl, o?.asset),
+                                        backgroundAsset: V(e.backgroundAssetUrl, o?.backgroundAsset),
                                         gradient: {
                                             colors: [e.gradientStartColor, e.gradientEndColor],
                                             angle: e.gradientAngle,
                                         },
                                     }),
-                                    null != o ? { ...o, ...t } : Z.v.create(t)),
+                                    null != o ? { ...o, ...t } : q.v.create(t)),
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
+                        let e = h(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                             t =
                                 e?.properties.oneofKind === "billingSettingsNitroGiftBanner"
                                     ? e.properties.billingSettingsNitroGiftBanner
@@ -1278,8 +1279,8 @@ let e5 = {
                             header: t.header,
                             body: t.body,
                             additionalTerms: t.additionalTerms,
-                            assetUrl: h(t.asset),
-                            backgroundAssetUrl: h(t.backgroundAsset),
+                            assetUrl: P(t.asset),
+                            backgroundAssetUrl: P(t.backgroundAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
@@ -1323,28 +1324,28 @@ let e5 = {
                     name: "Gift Customization Banner",
                     id: "gift-customization-banner",
                     component: function (e) {
-                        let { analyticsLocations: t } = (0, et.Ay)(ee.A.PAYMENT_FLOW_TEST_PAGE),
-                            n = v(p.C.GIFT_CUSTOMIZATION_BANNER),
+                        let { analyticsLocations: t } = (0, en.Ay)(et.A.PAYMENT_FLOW_TEST_PAGE),
+                            n = h(p.C.GIFT_CUSTOMIZATION_BANNER),
                             o =
                                 n?.properties.oneofKind === "giftCustomizationBanner"
                                     ? n.properties.giftCustomizationBanner
                                     : null;
                         return (0, u.jsx)("div", {
-                            className: V.MT,
-                            children: (0, u.jsx)(b.$, {
+                            className: j.MT,
+                            children: (0, u.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Gift Payment Modal",
                                 onClick: () => {
                                     let n, a, l, r, i;
                                     (r = {
-                                        id: el,
+                                        id: er,
                                         component_type: p.C.GIFT_CUSTOMIZATION_BANNER,
-                                        promotion_id: er,
+                                        promotion_id: ei,
                                         properties:
                                             ((n = {
-                                                asset: F(e.assetUrl, o?.asset),
-                                                backgroundAsset: F(e.backgroundAssetUrl, o?.backgroundAsset),
+                                                asset: V(e.assetUrl, o?.asset),
+                                                backgroundAsset: V(e.backgroundAssetUrl, o?.backgroundAsset),
                                                 gradient: {
                                                     colors: [e.gradientStartColor, e.gradientEndColor],
                                                     angle: e.gradientAngle,
@@ -1358,46 +1359,46 @@ let e5 = {
                                                           desktopBody: "",
                                                           mobileBody: "",
                                                           backgroundAssetUrl: "",
-                                                          assetVariant: Q.u.NORMAL,
+                                                          assetVariant: X.u.NORMAL,
                                                           ...n,
                                                       }),
-                                            (l = G.m.create({
-                                                contentIdentifier: el,
+                                            (l = D.m.create({
+                                                contentIdentifier: er,
                                                 properties: {
                                                     oneofKind: "giftCustomizationBanner",
                                                     giftCustomizationBanner: a,
                                                 },
                                             })),
-                                            (0, B.C)(G.m.toBinary(l))),
+                                            (0, G.C)(D.m.toBinary(l))),
                                     }),
                                         (i = {
-                                            id: er,
+                                            id: ei,
                                             start_date: new Date(0).toISOString(),
                                             end_date: new Date("2099-01-01").toISOString(),
-                                            promotion_type: eo.pt.GIFT_PROMOTION,
+                                            promotion_type: ea.pt.GIFT_PROMOTION,
                                             flags: 0,
                                             partner_id: null,
                                             marketing_components: [r],
-                                            metadata: { gift_promotion: { reward_sku_ids: [ei] } },
+                                            metadata: { gift_promotion: { reward_sku_ids: [ed] } },
                                         }),
-                                        X.h.dispatch({
+                                        ee.h.dispatch({
                                             type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS",
                                             promotions: [i],
                                             consumedInboundPromotionId: null,
                                         }),
-                                        X.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
-                                        (0, en.A)({
+                                        ee.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
+                                        (0, eo.A)({
                                             isGift: !0,
-                                            subscriptionTier: ea.pe.TIER_2,
+                                            subscriptionTier: el.pe.TIER_2,
                                             analyticsLocations: t,
                                         });
                                 },
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.GIFT_CUSTOMIZATION_BANNER),
+                        let e = h(p.C.GIFT_CUSTOMIZATION_BANNER),
                             t =
                                 e?.properties.oneofKind === "giftCustomizationBanner"
                                     ? e.properties.giftCustomizationBanner
@@ -1405,8 +1406,8 @@ let e5 = {
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
                         return {
-                            assetUrl: h(t.asset),
-                            backgroundAssetUrl: h(t.backgroundAsset),
+                            assetUrl: P(t.asset),
+                            backgroundAssetUrl: P(t.backgroundAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
@@ -1442,10 +1443,10 @@ let e5 = {
                     component: function (e) {
                         let t,
                             n,
-                            o = v(p.C.GIFT_ICON),
+                            o = h(p.C.GIFT_ICON),
                             a = o?.properties.oneofKind === "giftIcon" ? o.properties.giftIcon : null;
                         return (
-                            eu(
+                            ep(
                                 ((t = {
                                     boxAnimationUrl: e.boxAnimationUrl,
                                     trinketAnimationUrl: e.trinketAnimationUrl,
@@ -1455,15 +1456,15 @@ let e5 = {
                                         angle: e.gradientAngle,
                                     },
                                 }),
-                                (n = D(ec, { oneofKind: "giftIcon", giftIcon: null != a ? { ...a, ...t } : t })),
-                                k(ec, p.C.GIFT_ICON, "playground-gift-icon-promotion", n)),
+                                (n = k(eb, { oneofKind: "giftIcon", giftIcon: null != a ? { ...a, ...t } : t })),
+                                F(eb, p.C.GIFT_ICON, "playground-gift-icon-promotion", n)),
                             ),
-                            (0, u.jsx)("div", { className: V.WG, children: (0, u.jsx)(ed.A, { channel: eb }) })
+                            (0, u.jsx)("div", { className: j.WG, children: (0, u.jsx)(es.A, { channel: em }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.GIFT_ICON }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_ICON }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.GIFT_ICON),
+                        let e = h(p.C.GIFT_ICON),
                             t = e?.properties.oneofKind === "giftIcon" ? e.properties.giftIcon : null;
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
@@ -1505,26 +1506,26 @@ let e5 = {
                     name: "Gift Icon Coachmark",
                     id: "gift-icon-coachmark",
                     component: function (e) {
-                        let t = v(p.C.GIFT_ICON_COACHMARK),
+                        let t = h(p.C.GIFT_ICON_COACHMARK),
                             n = t?.properties.oneofKind === "giftIconCoachmark" ? t.properties.giftIconCoachmark : null,
-                            o = { header: e.header, body: e.body, asset: F(e.assetUrl, n?.asset) },
-                            a = null != n ? { ...n, ...o } : em.l.create(o);
+                            o = { header: e.header, body: e.body, asset: V(e.assetUrl, n?.asset) },
+                            a = null != n ? { ...n, ...o } : ef.l.create(o);
                         return (0, u.jsx)("div", {
-                            className: V.WG,
-                            children: (0, u.jsx)(ef.A, {
+                            className: j.WG,
+                            children: (0, u.jsx)(e_.A, {
                                 coachmarkConfig: a,
-                                onComplete: e_,
-                                onCheckItOutClick: e_,
-                                markAsDismissed: e_,
-                                children: (0, u.jsx)(ed.A, { channel: eA }),
+                                onComplete: eA,
+                                onCheckItOutClick: eA,
+                                markAsDismissed: eA,
+                                children: (0, u.jsx)(es.A, { channel: eT }),
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.GIFT_ICON_COACHMARK }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_ICON_COACHMARK }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.GIFT_ICON_COACHMARK),
+                        let e = h(p.C.GIFT_ICON_COACHMARK),
                             t = e?.properties.oneofKind === "giftIconCoachmark" ? e.properties.giftIconCoachmark : null;
-                        return null == t ? null : { header: t.header, body: t.body, assetUrl: h(t.asset) };
+                        return null == t ? null : { header: t.header, body: t.body, assetUrl: P(t.asset) };
                     },
                     controls: {
                         header: { label: "Header", type: "text", defaultValue: "Gift Nitro" },
@@ -1545,28 +1546,28 @@ let e5 = {
                     name: "Gift Plan Selection Card Banner",
                     id: "gift-plan-selection-card-banner",
                     component: function (e) {
-                        let { analyticsLocations: t } = (0, et.Ay)(ee.A.PAYMENT_FLOW_TEST_PAGE),
-                            n = v(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
+                        let { analyticsLocations: t } = (0, en.Ay)(et.A.PAYMENT_FLOW_TEST_PAGE),
+                            n = h(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                             o =
                                 n?.properties.oneofKind === "giftPlanSelectionCardBanner"
                                     ? n.properties.giftPlanSelectionCardBanner
                                     : null;
                         return (0, u.jsx)("div", {
-                            className: V.MT,
-                            children: (0, u.jsx)(b.$, {
+                            className: j.MT,
+                            children: (0, u.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Gift Payment Modal",
                                 onClick: () => {
                                     let n, a, l, r, i;
                                     (r = {
-                                        id: eg,
+                                        id: eI,
                                         component_type: p.C.GIFT_PLAN_SELECTION_CARD_BANNER,
-                                        promotion_id: eI,
+                                        promotion_id: eN,
                                         properties:
                                             ((n = {
-                                                avatarAsset: F(e.avatarUrl, o?.avatarAsset),
-                                                bannerAsset: F(e.bannerUrl, o?.bannerAsset),
+                                                avatarAsset: V(e.avatarUrl, o?.avatarAsset),
+                                                bannerAsset: V(e.bannerUrl, o?.bannerAsset),
                                                 gradient: {
                                                     colors: [e.gradientStartColor, e.gradientEndColor],
                                                     angle: e.gradientAngle,
@@ -1580,44 +1581,44 @@ let e5 = {
                                                           desktopBody: "",
                                                           mobileBody: "",
                                                           bannerAssetUrl: "",
-                                                          assetVariant: eT.Y.NORMAL,
+                                                          assetVariant: eg.Y.NORMAL,
                                                           backgroundAssetUrl: "",
                                                           cardAssetUrl: "",
                                                           ...n,
                                                       }),
-                                            (l = G.m.create({
-                                                contentIdentifier: eg,
+                                            (l = D.m.create({
+                                                contentIdentifier: eI,
                                                 properties: {
                                                     oneofKind: "giftPlanSelectionCardBanner",
                                                     giftPlanSelectionCardBanner: a,
                                                 },
                                             })),
-                                            (0, B.C)(G.m.toBinary(l))),
+                                            (0, G.C)(D.m.toBinary(l))),
                                     }),
                                         (i = {
-                                            id: eI,
+                                            id: eN,
                                             start_date: new Date(0).toISOString(),
                                             end_date: new Date("2099-01-01").toISOString(),
-                                            promotion_type: eo.pt.GIFT_PROMOTION,
+                                            promotion_type: ea.pt.GIFT_PROMOTION,
                                             flags: 0,
                                             partner_id: null,
                                             marketing_components: [r],
-                                            metadata: { gift_promotion: { reward_sku_ids: [eN] } },
+                                            metadata: { gift_promotion: { reward_sku_ids: [eE] } },
                                         }),
-                                        X.h.dispatch({
+                                        ee.h.dispatch({
                                             type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS",
                                             promotions: [i],
                                             consumedInboundPromotionId: null,
                                         }),
-                                        X.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
-                                        (0, en.A)({ isGift: !0, analyticsLocations: t });
+                                        ee.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
+                                        (0, eo.A)({ isGift: !0, analyticsLocations: t });
                                 },
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
+                        let e = h(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                             t =
                                 e?.properties.oneofKind === "giftPlanSelectionCardBanner"
                                     ? e.properties.giftPlanSelectionCardBanner
@@ -1625,8 +1626,8 @@ let e5 = {
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
                         return {
-                            avatarUrl: h(t.avatarAsset),
-                            bannerUrl: h(t.bannerAsset),
+                            avatarUrl: P(t.avatarAsset),
+                            bannerUrl: P(t.bannerAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
@@ -1663,29 +1664,29 @@ let e5 = {
                         let t,
                             n,
                             { body: o } = e,
-                            a = v(p.C.GIFT_REMINDER_NAGBAR),
+                            a = h(p.C.GIFT_REMINDER_NAGBAR),
                             l =
                                 a?.properties.oneofKind === "giftReminderNagbar"
                                     ? a.properties.giftReminderNagbar
                                     : null;
                         return (
-                            eu(
+                            ep(
                                 ((t = { body: { body: o }.body }),
-                                (n = D(eS, {
+                                (n = k(eC, {
                                     oneofKind: "giftReminderNagbar",
                                     giftReminderNagbar: null != l ? { ...l, ...t } : t,
                                 })),
-                                k(eS, p.C.GIFT_REMINDER_NAGBAR, "playground-gift-reminder-nagbar-promotion", n)),
+                                F(eC, p.C.GIFT_REMINDER_NAGBAR, "playground-gift-reminder-nagbar-promotion", n)),
                             ),
                             (0, u.jsx)("div", {
-                                className: V.MT,
-                                children: (0, u.jsx)(eE.y, { markAsDismissed: ey, className: V.gO }),
+                                className: j.MT,
+                                children: (0, u.jsx)(ey.y, { markAsDismissed: eS, className: j.gO }),
                             })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(x, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
+                    ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
                     useDefaultOverrides: () => {
-                        let e = v(p.C.GIFT_REMINDER_NAGBAR),
+                        let e = h(p.C.GIFT_REMINDER_NAGBAR),
                             t =
                                 e?.properties.oneofKind === "giftReminderNagbar"
                                     ? e.properties.giftReminderNagbar
@@ -1717,13 +1718,13 @@ let e5 = {
             );
         },
         HeaderControl: function () {
-            let e = R.useField("selected"),
+            let e = v.useField("selected"),
                 [t, n] = i.useState([]),
                 o = i.useRef(null);
             i.useEffect(() => {
                 let e = !0;
                 return (
-                    e3()
+                    e7()
                         .then((t) => {
                             e && n(t);
                         })
@@ -1733,13 +1734,13 @@ let e5 = {
                     }
                 );
             }, []);
-            let a = i.useMemo(() => e4(t), [t]),
-                l = i.useCallback((e, n) => e4((0, e2.Ht)(t, n, { keys: ["name"] })), [t]);
+            let a = i.useMemo(() => e9(t), [t]),
+                l = i.useCallback((e, n) => e9((0, e1.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, u.jsx)("div", {
-                      className: V.$K,
-                      children: (0, u.jsx)(e1.Z, {
+                      className: j.$K,
+                      children: (0, u.jsx)(e6.Z, {
                           clearable: !0,
                           selectionMode: "single",
                           placeholder: "Load Promo Data",
@@ -1748,7 +1749,7 @@ let e5 = {
                           customMatchSorter: l,
                           onSelectionChange: function (e) {
                               if (((o.current = e), null == e))
-                                  return void R.setState({
+                                  return void v.setState({
                                       selected: null,
                                       componentRowsByType: null,
                                       availableLocales: [],
@@ -1757,7 +1758,7 @@ let e5 = {
                                   });
                               let n = t.find((t) => t.id === e);
                               null != n &&
-                                  e7(n.id)
+                                  e8(n.id)
                                       .then((e) => {
                                           o.current === n.id &&
                                               (function (e, t) {
@@ -1771,7 +1772,7 @@ let e5 = {
                                                               }
                                                               if ("object" == typeof t && null != t)
                                                                   for (let [o, a] of Object.entries(t)) {
-                                                                      if (o.endsWith(C) && O(a)) {
+                                                                      if (o.endsWith(O) && R(a)) {
                                                                           for (let e of Object.keys(a.localizations))
                                                                               n.add(e);
                                                                           continue;
@@ -1779,7 +1780,7 @@ let e5 = {
                                                                       e(a, n);
                                                                   }
                                                           })(t.properties, n);
-                                                  R.setState({
+                                                  v.setState({
                                                       selected: e,
                                                       componentRowsByType: t,
                                                       availableLocales: [...n].sort(),
@@ -1794,4 +1795,4 @@ let e5 = {
                   });
         },
     },
-    te = { playgroundBaseUrl: "marketing", collections: [e5] };
+    tt = { playgroundBaseUrl: "marketing", collections: [te] };
