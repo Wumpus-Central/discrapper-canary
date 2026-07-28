@@ -538,8 +538,8 @@ function e3(e) {
               ],
           });
 }
-var e1 = i(186272),
-    e9 = i(996988),
+var e9 = i(186272),
+    e1 = i(996988),
     e5 = i(134492);
 function e2(e) {
     let {
@@ -581,7 +581,7 @@ function e2(e) {
                 i = s?.length;
             return [
                 { section: eu.RP.BOT_INFO, text: X.intl.string(X.t.ZzAR2Y) },
-                { section: eu.RP.MUTUAL_GUILDS, text: (0, e1.A)(i) },
+                { section: eu.RP.MUTUAL_GUILDS, text: (0, e9.A)(i) },
                 { section: eu.RP.BOT_DATA_ACCESS, text: X.intl.string(X.t.WstFb0) },
             ];
         })(s),
@@ -610,14 +610,14 @@ function e2(e) {
                         children: (0, l.jsxs)(S.A, {
                             user: s,
                             displayProfile: Y,
-                            themeType: e9.d.MODAL,
+                            themeType: e1.d.MODAL,
                             children: [
                                 (0, l.jsx)(b.A, {
                                     children: (0, l.jsx)(L.A, { user: s, guildId: w, viewProfileItem: $ }),
                                 }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(O.A, { user: s, displayProfile: Y, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(O.A, { user: s, displayProfile: Y, themeType: e1.d.MODAL }),
                                         (0, l.jsxs)("div", {
                                             className: e5.El,
                                             children: [
@@ -626,12 +626,12 @@ function e2(e) {
                                                     displayProfile: Y,
                                                     guildId: w,
                                                     channelId: r,
-                                                    themeType: e9.d.MODAL,
+                                                    themeType: e1.d.MODAL,
                                                     onOpenAvatar: K,
                                                 }),
                                                 (0, l.jsx)(U.A, {
                                                     user: s,
-                                                    themeType: e9.d.MODAL,
+                                                    themeType: e1.d.MODAL,
                                                     hasEntered: G === A.ip.ENTERED,
                                                     onCloseProfile: V,
                                                     disableToolbar: !0,
@@ -676,7 +676,7 @@ function e2(e) {
                                             pronouns: Y?.pronouns,
                                             trailing: (0, l.jsx)(y.A, {
                                                 displayProfile: Y,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e1.d.MODAL,
                                                 onClose: V,
                                             }),
                                         }),
@@ -758,13 +758,13 @@ function e4(e) {
                         children: (0, l.jsxs)(S.A, {
                             user: s,
                             displayProfile: T,
-                            themeType: e9.d.MODAL,
+                            themeType: e1.d.MODAL,
                             ref: T?.profileEffect != null ? G : void 0,
                             children: [
                                 (0, l.jsx)(b.A, { children: (0, l.jsx)(e8.A, { user: s }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(O.A, { user: s, displayProfile: T, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(O.A, { user: s, displayProfile: T, themeType: e1.d.MODAL }),
                                         (0, l.jsx)("div", {
                                             className: e5.El,
                                             children: (0, l.jsx)(E.A, {
@@ -772,7 +772,7 @@ function e4(e) {
                                                 displayProfile: T,
                                                 guildId: v,
                                                 channelId: t,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e1.d.MODAL,
                                                 onOpenAvatar: _,
                                             }),
                                         }),
@@ -790,7 +790,7 @@ function e4(e) {
                                             pronouns: T?.pronouns,
                                             trailing: (0, l.jsx)(y.A, {
                                                 displayProfile: T,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e1.d.MODAL,
                                                 onClose: h,
                                             }),
                                         }),
@@ -904,7 +904,7 @@ function sA(e) {
                     className: ss()(sx.A7, su.BK),
                     user: s,
                     displayProfile: E,
-                    themeType: e9.d.MODAL_V2,
+                    themeType: e1.d.MODAL_V2,
                     children: [
                         (0, l.jsx)("div", { className: sx.Oo, children: (0, l.jsx)(so.A, { onClose: c }) }),
                         (0, l.jsx)("div", { className: su.Tp }),
@@ -979,7 +979,7 @@ function sA(e) {
         }),
     });
 }
-var sh = i(231118);
+var sh = i(138916);
 function sj(e) {
     let { hideRestrictedProfile: s, ...i } = e,
         { user: o } = i,
@@ -987,7 +987,7 @@ function sj(e) {
     return (n.useEffect(
         () => () => {
             o.id === t.default.getCurrentUser()?.id &&
-                (r.A.clearPendingWidgets(), (0, a.E)("UserProfileModalV2Renderer") && (0, d.XQ)());
+                (r.A.clearPendingWidgets(), (0, a.E)("UserProfileModalV2Renderer") && ((0, d.XQ)(), (0, d.sd)()));
         },
         [o.id],
     ),
