@@ -22,7 +22,7 @@ function A(e) {
 }
 function h(e) {
     let { frame: t, transparentBackground: n = !1, ...r } = e,
-        { profileFrameStyle: s, profileFrameClassName: h } = (0, o.A)(t.skuId);
+        { profileFrameStyle: s, profileFrameClassName: h } = (0, o.A)(t);
     return (0, i.jsxs)("div", {
         className: a()(c.i1, h),
         style: s,
