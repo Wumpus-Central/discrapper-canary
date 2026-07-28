@@ -3027,28 +3027,6 @@
     }
   },
   {
-    "name": "2026-04-mobile-quest-orb-reward-modal-cta-priority",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "variant": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "variant": 1
-      },
-      "2": {
-        "enabled": true,
-        "variant": 2
-      }
-    }
-  },
-  {
     "name": "2026-04-new-games-coachmark",
     "kind": "user",
     "defaultConfig": {

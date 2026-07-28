@@ -26,7 +26,6 @@ var i,
     d = n(927813),
     c = n(646917),
     u = n(576761);
-n(190107);
 let _ = (0, o.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
@@ -89,17 +88,11 @@ let m = (0, o.mj)({
     variations: { 1: { enabled: !0 } },
 });
 (0, o.mj)({
-    name: "2026-04-mobile-quest-orb-reward-modal-cta-priority",
+    name: "2026-03-mobile-quest-home-red-dot-notification",
     kind: "user",
-    defaultConfig: { enabled: !1, variant: 0 },
-    variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
-}),
-    (0, o.mj)({
-        name: "2026-03-mobile-quest-home-red-dot-notification",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    });
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
 let g = (0, o.mj)({
     name: "2026-05-quest-home-tile-redesign",
     kind: "user",
@@ -131,7 +124,7 @@ let S = (0, o.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    N = new Date("2026-07-31T10:00:00-07:00"),
+    N = new Date("2026-08-01T10:00:00-07:00"),
     C = new Date("2026-08-07T10:00:00-07:00"),
     O = 5 * d.A.Millis.MINUTE;
 function R() {
