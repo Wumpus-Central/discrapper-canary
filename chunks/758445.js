@@ -17,6 +17,7 @@ class _ extends u.A {
     rewardConfig;
     skuIds;
     appliesToAllSkus;
+    includeBundles;
     startsAt;
     endsAt;
     tenantMetadata;
@@ -52,6 +53,7 @@ class _ extends u.A {
                 return t;
             })(e.sku_ids),
             appliesToAllSkus: e.applies_to_all_skus,
+            includeBundles: e.include_bundles,
             startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
             endsAt: null != e.ends_at ? new Date(e.ends_at) : null,
             tenantMetadata:
@@ -104,6 +106,7 @@ class _ extends u.A {
             (this.rewardConfig = e.rewardConfig),
             (this.skuIds = e.skuIds),
             (this.appliesToAllSkus = e.appliesToAllSkus),
+            (this.includeBundles = e.includeBundles),
             (this.startsAt = e.startsAt),
             (this.endsAt = e.endsAt),
             (this.tenantMetadata = e.tenantMetadata);

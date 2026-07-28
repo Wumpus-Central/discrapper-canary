@@ -7,7 +7,7 @@ var l = n(288106),
     o = n(375708);
 function u(e, t) {
     let n = t?.rewardConfig?.discount;
-    if (null == t || null == n || (0, r.G0)(e) || !e.isFirstParty) return null;
+    if (null == t || null == n || (0, r.G0)(e) || !e.isFirstParty || ((0, r.aw)(e) && !t.includeBundles)) return null;
     let l = n.fiatEnabled && (0, a.go)(e),
         i = n.orbsEnabled && (0, a.Vx)(e);
     return l || i ? t : null;
