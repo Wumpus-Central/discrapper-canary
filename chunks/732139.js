@@ -1,25 +1,23 @@
 "use strict";
 n.d(t, {
-    AA: () => f,
+    AA: () => A,
     Do: () => _,
-    Ec: () => I,
-    N6: () => p,
-    R2: () => u,
-    W3: () => m,
-    as: () => d,
-    g9: () => A,
-    k1: () => h,
-    lq: () => l,
-    ni: () => g,
-    pE: () => E,
-    s: () => o,
+    Ec: () => p,
+    N6: () => h,
+    R2: () => d,
+    as: () => u,
+    g9: () => f,
+    k1: () => E,
+    lq: () => o,
+    ni: () => I,
+    s: () => l,
     tm: () => c,
 });
 var i,
     r,
-    s,
     a,
-    o =
+    s,
+    l =
         (((i = {}).GUILD = "GUILD"),
         (i.UNICODE = "UNICODE"),
         (i.RECENT = "RECENT"),
@@ -29,10 +27,9 @@ var i,
         (i.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI"),
         (i.PREMIUM_UPSELL = "PREMIUM_UPSELL"),
         (i.SOUNDMOJI = "SOUNDMOJI"),
-        (i.KAOMOJI = "KAOMOJI"),
         i);
-let l = "emoji-picker-grid";
-var u =
+let o = "emoji-picker-grid";
+var d =
         (((r = {}).RECENT = "recent"),
         (r.FAVORITES = "favorites"),
         (r.TOP_GUILD_EMOJI = "top guild emoji"),
@@ -47,16 +44,13 @@ var u =
         (r.FLAGS = "flags"),
         (r.PREMIUM_UPSELL = "premium emoji"),
         (r.SOUNDMOJI = "soundmoji"),
-        (r.KAOMOJI = "kaomoji"),
         r),
-    c = (((s = {}).NONE = ""), (s.TOP_GUILD_EMOJI = "top_server"), (s.NEWLY_ADDED_EMOJI = "newly_added"), s),
-    d = (((a = {})[(a.MEDIUM = 40)] = "MEDIUM"), (a[(a.LARGE = 48)] = "LARGE"), a);
+    c = (((a = {}).NONE = ""), (a.TOP_GUILD_EMOJI = "top_server"), (a.NEWLY_ADDED_EMOJI = "newly_added"), a),
+    u = (((s = {})[(s.MEDIUM = 40)] = "MEDIUM"), (s[(s.LARGE = 48)] = "LARGE"), s);
 let _ = "emoji-picker-tab-panel",
-    h = "emoji-picker-tab",
-    f = "soundboard-picker-tab-panel",
-    p = "soundboard-picker-tab",
-    E = "kaomoji-picker-tab-panel",
-    m = "kaomoji-picker-tab",
-    g = "gif-picker-tab-panel",
-    A = "gif-picker-tab",
-    I = { reaction: 40, default: 44, jumbo: 96 };
+    E = "emoji-picker-tab",
+    A = "soundboard-picker-tab-panel",
+    h = "soundboard-picker-tab",
+    I = "gif-picker-tab-panel",
+    f = "gif-picker-tab",
+    p = { reaction: 40, default: 44, jumbo: 96 };

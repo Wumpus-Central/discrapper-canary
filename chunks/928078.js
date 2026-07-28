@@ -18,7 +18,7 @@ var l = n(627968),
     x = n(493336),
     E = n(414798),
     S = n(608299),
-    _ = n(119031),
+    _ = n(425551),
     I = n(820284),
     j = n(955572),
     y = n(775602),
@@ -72,7 +72,7 @@ function eo(e, t) {
 }
 var ec = n(598071),
     ed = n(101555),
-    eu = n(731231),
+    eu = n(442152),
     eh = n(703007),
     em = n(2553),
     eg = n(946274),
@@ -253,8 +253,7 @@ let eO = i.memo(
             { handleAutocompleteVisibilityChange: e9 } = (0, eN.uW)(f, A.id),
             te = (0, eN.NO)(el),
             tt = (0, eN.Vu)(eJ, f, el),
-            tn = (0, eN.HG)(el),
-            tl = (0, eN.C)({
+            tn = (0, eN.C)({
                 editorRef: el,
                 disabled: eI,
                 textValue: s,
@@ -263,34 +262,34 @@ let eO = i.memo(
                 submit: eq,
             });
         (0, ej.R)(eW, A.guild_id, A.id);
-        let [ti, ts] = i.useState(!1),
-            ta = i.useCallback(() => {
-                e6(), ts(!0);
+        let [tl, ti] = i.useState(!1),
+            ts = i.useCallback(() => {
+                e6(), ti(!0);
             }, [e6]),
-            tr = ti || s.length > 0 || null != Z || J.length > 0,
-            { editorHeaderHeight: to, paddingTop: tc } = (0, V.z)({
-                editorHeaderHeight: 122 * !!tr,
-                paddingTop: 16 * !!tr,
+            ta = tl || s.length > 0 || null != Z || J.length > 0,
+            { editorHeaderHeight: tr, paddingTop: to } = (0, V.z)({
+                editorHeaderHeight: 122 * !!ta,
+                paddingTop: 16 * !!ta,
                 config: { tension: 120, friction: 15, clamp: !0 },
             }),
-            td = i.useRef(null),
-            [tu, th] = i.useState(!1),
-            tm = i.useRef(!1),
-            tg = i.useCallback(() => {
-                tm.current = !0;
+            tc = i.useRef(null),
+            [td, tu] = i.useState(!1),
+            th = i.useRef(!1),
+            tm = i.useCallback(() => {
+                th.current = !0;
                 let e = setTimeout(() => {
-                    tm.current && th(!0);
+                    th.current && tu(!0);
+                }, 100);
+                return () => clearTimeout(e);
+            }, []),
+            tg = i.useCallback(() => {
+                th.current = !1;
+                let e = setTimeout(() => {
+                    th.current || tu(!1);
                 }, 100);
                 return () => clearTimeout(e);
             }, []),
             tp = i.useCallback(() => {
-                tm.current = !1;
-                let e = setTimeout(() => {
-                    tm.current || th(!1);
-                }, 100);
-                return () => clearTimeout(e);
-            }, []),
-            tA = i.useCallback(() => {
                 if (null == Z) return;
                 let e = eE.A.getUploads(A.id, f.drafts.type),
                     t = e.find((e) => e.filename === Z.name)?.id;
@@ -304,7 +303,7 @@ let eO = i.memo(
                     (0, l.jsxs)("div", {
                         ref: ee,
                         className: a()(c, ek.gM),
-                        onMouseDown: ta,
+                        onMouseDown: ts,
                         children: [
                             (0, l.jsx)("div", {
                                 ref: ed,
@@ -318,17 +317,17 @@ let eO = i.memo(
                                             children: [
                                                 (0, l.jsxs)(F.animated.div, {
                                                     className: eL.ov,
-                                                    style: { height: to, paddingTop: tc },
+                                                    style: { height: tr, paddingTop: to },
                                                     children: [
                                                         null != Z
-                                                            ? (0, l.jsx)(eU, { file: Z, onRemoveHeroImage: tA })
+                                                            ? (0, l.jsx)(eU, { file: Z, onRemoveHeroImage: tp })
                                                             : null,
                                                         null != Z
                                                             ? null
                                                             : (0, l.jsx)(eF, {
                                                                   channel: A,
                                                                   onImageUploaded: (e) => eo(A.id, { heroFile: e }),
-                                                                  onFocus: () => ts(!0),
+                                                                  onFocus: () => ti(!0),
                                                               }),
                                                         (0, l.jsx)("input", {
                                                             maxLength: 140,
@@ -420,15 +419,15 @@ let eO = i.memo(
                                     (0, l.jsx)("div", {
                                         className: eL.j4,
                                         children: (0, l.jsx)("div", {
-                                            ref: td,
+                                            ref: tc,
                                             className: eL.Qo,
-                                            onMouseEnter: tg,
-                                            onMouseLeave: tp,
+                                            onMouseEnter: tm,
+                                            onMouseLeave: tg,
                                             children: (0, l.jsx)(m.Y, {
-                                                targetElementRef: td,
+                                                targetElementRef: tc,
                                                 renderPopout: () =>
                                                     (0, l.jsx)(eG, { channelId: A.id, canCreateThread: ez }),
-                                                shouldShow: tu,
+                                                shouldShow: td,
                                                 autoInvert: !0,
                                                 nudgeAlignIntoViewport: !0,
                                                 position: "top",
@@ -502,8 +501,7 @@ let eO = i.memo(
                               type: f,
                               onSelectGIF: tt,
                               onSelectEmoji: te,
-                              onSelectKaomoji: tn,
-                              onSelectSticker: tl,
+                              onSelectSticker: tn,
                               channel: A,
                               closeOnModalOuterClick: w,
                               parentModalKey: H,

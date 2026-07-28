@@ -239,7 +239,7 @@ class x extends r.PureComponent {
             (0, v.L3)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e("30803"), n.e("42312")]).then(n.bind(n, 216603));
+                    let { default: e } = await Promise.all([n.e("30803"), n.e("42312")]).then(n.bind(n, 438984));
                     return (t) => (0, i.jsx)(e, { ...t, text: (0, P.u)() });
                 },
                 { align: "bottom", enableSpellCheck: !0 },
@@ -303,7 +303,7 @@ var eo = n(870748),
     ed = n(17928),
     ec = n(31717),
     eu = n(375708),
-    e_ = n(494715);
+    e_ = n(487411);
 let eE = (e) => {
     let t,
         { channelId: n, element: a, attributes: l, children: o } = e,
@@ -396,7 +396,7 @@ function eh(e) {
         ],
     });
 }
-var eI = n(471910);
+var eI = n(952446);
 let ef = r.forwardRef(function (e, t) {
     let n,
         a,
@@ -961,7 +961,7 @@ let ef = r.forwardRef(function (e, t) {
         ],
     });
 });
-var ep = n(266599);
+var ep = n(857983);
 new I.A("ChannelEditor.tsx");
 let eT = function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -1047,14 +1047,6 @@ class em extends r.Component {
             null != n &&
             (t.endsWith(" ") || n.insertText(" ", void 0, !1),
             n.insertText(`<sound:${e.guildId}:${e.soundId}>`, void 0, !0));
-    }
-    insertKaomoji(e) {
-        let { textValue: t } = this.props,
-            n = this.ref.current;
-        if (null != e && null != n) {
-            let i = t.length > 0 ? e.replace(/([_`\xb4*])/g, "\\$1") : e;
-            t.length > 0 && !t.endsWith(" ") && n.insertText(" ", void 0, !1), n.insertText(i, void 0, !0);
-        }
     }
     handleOuterClick() {
         this.focus();
