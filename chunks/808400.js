@@ -1,26 +1,26 @@
-r.d(t, { default: () => G });
+r.d(t, { default: () => N });
 var i = r(477900),
     l = r(582128),
     n = r(772707),
-    a = r(441574),
-    s = r(428103),
+    s = r(441574),
+    a = r(428103),
     d = r(26137),
     c = r(473935),
     o = r(331322),
     u = r(289873),
     h = r(834730),
     m = r(821609),
-    v = r(939249),
-    x = r(320448),
-    E = r(975571),
+    E = r(939249),
+    v = r(320448),
+    x = r(975571),
     p = r(31720),
     A = r(562465),
-    I = r(40449),
-    _ = r(652215);
-let f = { [a.mG.FACIAL_AGE_ESTIMATION]: I.VF.FACIAL_AGE_ESTIMATION, [a.mG.ID_SELFIE_MATCH]: I.VF.ID_VERIFICATION },
-    g = { [a.dd.K_ID]: I.XM.K_ID, [a.dd.INCODE]: I.XM.INCODE, [a.dd.GOOGLE_WALLET]: I.XM.GOOGLE_WALLET };
-async function j() {
-    return (await A.Bo.get({ url: _.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => ({
+    _ = r(40449),
+    I = r(652215);
+let f = { [s.mG.FACIAL_AGE_ESTIMATION]: _.VF.FACIAL_AGE_ESTIMATION, [s.mG.ID_SELFIE_MATCH]: _.VF.ID_VERIFICATION },
+    C = { [s.dd.K_ID]: _.XM.K_ID, [s.dd.INCODE]: _.XM.INCODE, [s.dd.GOOGLE_WALLET]: _.XM.GOOGLE_WALLET };
+async function g() {
+    return (await A.Bo.get({ url: I.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => ({
         method: e.method,
         vendor: e.vendor,
         title: e.title,
@@ -28,84 +28,92 @@ async function j() {
         providedBy: e.provided_by ?? null,
     }));
 }
-var C = r(36149),
-    T = r(516761),
-    L = r(375708),
-    b = r(658103);
-let y = { [a.mG.GOOGLE_WALLET]: s.l, [a.mG.FACIAL_AGE_ESTIMATION]: d.r, [a.mG.ID_SELFIE_MATCH]: c.L },
-    G = function (e) {
-        let { transitionState: t, entryPoint: r, onClose: a, dismissable: s } = e,
+var j = r(36149),
+    T = r(228366),
+    O = r(787301),
+    L = r(516761),
+    b = r(375708),
+    y = r(658103);
+let G = { [s.mG.GOOGLE_WALLET]: a.l, [s.mG.FACIAL_AGE_ESTIMATION]: d.r, [s.mG.ID_SELFIE_MATCH]: c.L },
+    N = function (e) {
+        let { transitionState: t, entryPoint: r, onClose: s, dismissable: a } = e,
             {
                 loading: d,
                 error: c,
                 methods: A,
-                refetch: I,
+                refetch: _,
             } = (function () {
-                let [e, t] = l.useState([]),
-                    [r, i] = l.useState(!0),
-                    [n, a] = l.useState(!1),
-                    s = l.useRef(!0),
-                    d = l.useCallback(async () => {
-                        i(!0), a(!1);
+                let [e, t] = l.useState(() => O.A.methodsV2 ?? []),
+                    [r, i] = l.useState(() => null == O.A.methodsV2),
+                    [n, s] = l.useState(!1),
+                    a = l.useRef(!0),
+                    d = l.useCallback(async (e) => {
+                        let r = O.A.methodsV2;
+                        if (!e && null != r) {
+                            t(r), i(!1), s(!1);
+                            return;
+                        }
+                        i(!0), s(!1);
                         try {
-                            let e = await j();
-                            s.current && t(e);
+                            let e = await g();
+                            T.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
+                                a.current && t(e);
                         } catch {
-                            s.current && a(!0);
+                            a.current && s(!0);
                         } finally {
-                            s.current && i(!1);
+                            a.current && i(!1);
                         }
                     }, []);
                 return (
                     l.useEffect(
                         () => (
-                            (s.current = !0),
-                            d(),
+                            (a.current = !0),
+                            d(!1),
                             () => {
-                                s.current = !1;
+                                a.current = !1;
                             }
                         ),
                         [d],
                     ),
-                    { loading: r, error: n, methods: e, refetch: d }
+                    { loading: r, error: n, methods: e, refetch: l.useCallback(() => void d(!0), [d]) }
                 );
             })(),
-            G = A.length > 0,
-            { initiateAgeVerification: O } = (0, C.nn)({ onComplete: a, entryPoint: r, shouldShowExpressiveModal: !0 }),
-            [N, R] = l.useState(!1),
-            k = l.useRef(!1),
-            w = l.useCallback(
+            N = A.length > 0,
+            { initiateAgeVerification: S } = (0, j.nn)({ onComplete: s, entryPoint: r, shouldShowExpressiveModal: !0 }),
+            [R, k] = l.useState(!1),
+            D = l.useRef(!1),
+            M = l.useCallback(
                 async (e) => {
-                    if (k.current) return;
+                    if (D.current) return;
                     let t = f[e.method],
-                        r = g[e.vendor];
-                    if (null == t || null == r) return void R(!0);
-                    k.current = !0;
+                        r = C[e.vendor];
+                    if (null == t || null == r) return void k(!0);
+                    D.current = !0;
                     try {
-                        await O(t, r);
+                        await S(t, r);
                     } finally {
-                        k.current = !1;
+                        D.current = !1;
                     }
                 },
-                [O],
+                [S],
             );
         return (0, i.jsxs)(n.k, {
             transitionState: t,
-            onClose: a,
+            onClose: s,
             gradientColor: "blue",
-            dismissable: s,
+            dismissable: a,
             graphic: {
                 type: "image",
                 src: "https://cdn.discordapp.com/assets/content/f76008165147c5af20b933379e590f857bab9a8c0d80e1222e16dcd34b4b75c2.svg",
                 aspectRatio: "21/9",
             },
-            title: (0, C.ST)(r),
-            subtitle: (0, C.mK)(r, () => {
-                p.A.openUrl(E.A.getArticleURL(_.MVz.TIGGER_PAWTECT_LEARN_MORE));
+            title: (0, j.ST)(r),
+            subtitle: (0, j.mK)(r, () => {
+                p.A.openUrl(x.A.getArticleURL(I.MVz.TIGGER_PAWTECT_LEARN_MORE));
             }),
             children: [
                 d && (0, i.jsx)(o.B, { direction: "vertical", align: "center", children: (0, i.jsx)(u.y, {}) }),
-                N &&
+                R &&
                     (0, i.jsxs)(o.B, {
                         direction: "vertical",
                         gap: 16,
@@ -114,19 +122,19 @@ let y = { [a.mG.GOOGLE_WALLET]: s.l, [a.mG.FACIAL_AGE_ESTIMATION]: d.r, [a.mG.ID
                             (0, i.jsx)(h.E, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: L.intl.string(T.default["1RD2jW"]),
+                                children: b.intl.string(L.default["1RD2jW"]),
                             }),
                             (0, i.jsx)(m.$, {
                                 variant: "primary",
                                 size: "sm",
-                                text: L.intl.string(T.default.b7Oqdu),
-                                onClick: () => R(!1),
+                                text: b.intl.string(L.default.b7Oqdu),
+                                onClick: () => k(!1),
                             }),
                         ],
                     }),
-                !N &&
+                !R &&
                     !d &&
-                    !G &&
+                    !N &&
                     (0, i.jsxs)(o.B, {
                         direction: "vertical",
                         gap: 16,
@@ -135,36 +143,36 @@ let y = { [a.mG.GOOGLE_WALLET]: s.l, [a.mG.FACIAL_AGE_ESTIMATION]: d.r, [a.mG.ID
                             (0, i.jsx)(h.E, {
                                 variant: "text-xs/medium",
                                 color: "text-subtle",
-                                children: L.intl.string(c ? T.default.Bkmk4Y : T.default.cR6336),
+                                children: b.intl.string(c ? L.default.Bkmk4Y : L.default.cR6336),
                             }),
                             (0, i.jsx)(m.$, {
                                 variant: "primary",
                                 size: "sm",
-                                text: L.intl.string(T.default.hDvmYP),
-                                onClick: I,
+                                text: b.intl.string(L.default.hDvmYP),
+                                onClick: _,
                             }),
                         ],
                     }),
-                !N &&
-                    G &&
+                !R &&
+                    N &&
                     (0, i.jsx)(o.B, {
                         direction: "vertical",
                         gap: 8,
                         children: A.map((e) => {
-                            let t = y[e.method];
+                            let t = G[e.method];
                             return (0, i.jsxs)(
-                                v.D,
+                                E.D,
                                 {
-                                    className: b.kZ,
-                                    onClick: () => void w(e),
+                                    className: y.kZ,
+                                    onClick: () => void M(e),
                                     children: [
                                         null != t &&
                                             (0, i.jsx)("div", {
-                                                className: b.zc,
+                                                className: y.zc,
                                                 children: (0, i.jsx)(t, { size: "md", color: "var(--text-strong)" }),
                                             }),
                                         (0, i.jsxs)("div", {
-                                            className: b.Qq,
+                                            className: y.Qq,
                                             children: [
                                                 (0, i.jsx)(h.E, {
                                                     variant: "text-md/normal",
@@ -178,7 +186,7 @@ let y = { [a.mG.GOOGLE_WALLET]: s.l, [a.mG.FACIAL_AGE_ESTIMATION]: d.r, [a.mG.ID
                                                 }),
                                                 null != e.providedBy &&
                                                     (0, i.jsx)("div", {
-                                                        className: b.Vp,
+                                                        className: y.Vp,
                                                         children: (0, i.jsx)(h.E, {
                                                             variant: "text-sm/normal",
                                                             color: "text-subtle",
@@ -187,7 +195,7 @@ let y = { [a.mG.GOOGLE_WALLET]: s.l, [a.mG.FACIAL_AGE_ESTIMATION]: d.r, [a.mG.ID
                                                     }),
                                             ],
                                         }),
-                                        (0, i.jsx)(x._, { className: b.ai }),
+                                        (0, i.jsx)(v._, { className: y.ai }),
                                     ],
                                 },
                                 `${e.method}-${e.vendor}`,

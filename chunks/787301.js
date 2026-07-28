@@ -1,78 +1,91 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var i = n(17928),
     r = n(506774),
-    s = n(228366),
-    a = n(287809);
-let o = null,
-    l = !1,
-    u = "unchecked",
-    c = null;
-function d() {
-    let e = a.default.getCurrentUser()?.id;
+    a = n(228366),
+    s = n(287809);
+let l = null,
+    o = null,
+    d = !1,
+    c = "unchecked",
+    u = null;
+function _() {
+    let e = s.default.getCurrentUser()?.id;
     return null == e ? null : `AgeVerificationStore_${e}`;
 }
-function _() {
-    (u = "unchecked"), (c = null);
+function E() {
+    (c = "unchecked"), (u = null);
+}
+function A() {
+    let e = _();
+    null != e && r.w.set(e, { reactiveCheckStatus: c, reactiveCheckMissAt: u });
 }
 function h() {
-    let e = d();
-    null != e && r.w.set(e, { reactiveCheckStatus: u, reactiveCheckMissAt: c });
+    o = null;
 }
-function f() {
-    return "miss" === u && null != c && Date.now() - c < 864e5;
+function I() {
+    return "miss" === c && null != u && Date.now() - u < 864e5;
 }
-class p extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default);
+        this.waitFor(s.default);
     }
     static displayName = "AgeVerificationStore";
     get loading() {
-        return l;
+        return d;
     }
     get methods() {
+        return l;
+    }
+    get methodsV2() {
         return o;
     }
     getReactiveCheckStatus() {
-        return u;
+        return c;
     }
     getReactiveCheckMiss() {
-        return f();
+        return I();
     }
     getReactiveCheckPassed() {
-        return "passed" === u;
+        return "passed" === c;
     }
     shouldCallReactiveCheck() {
-        return !("passed" === u || "suppress" === u || f());
+        return !("passed" === c || "suppress" === c || I());
     }
 }
-let E = new p(s.h, {
+let p = new f(a.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
-        l = !0;
+        d = !0;
     },
     AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
         let { methods: t } = e;
-        (o = t), (l = !1);
+        (l = t), (d = !1);
     },
     AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
-        l = !1;
+        d = !1;
     },
+    AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS: function (e) {
+        let { methods: t } = e;
+        o = t;
+    },
+    INITIATE_AGE_VERIFICATION: h,
     CONNECTION_OPEN: function () {
         !(function () {
-            let e = d();
-            if (null == e) return _();
+            let e = _();
+            if (null == e) return E();
             let t = r.w.get(e);
-            if (null == t || "object" != typeof t) return _();
+            if (null == t || "object" != typeof t) return E();
             let n = t.reactiveCheckStatus ?? "unchecked",
                 i = t.reactiveCheckMissAt ?? null;
-            "miss" === n && null != i && Date.now() - i >= 864e5 ? _() : ((u = n), (c = i));
-        })();
+            "miss" === n && null != i && Date.now() - i >= 864e5 ? E() : ((c = n), (u = i));
+        })(),
+            h();
     },
     AGE_VERIFICATION_CHECK_RESULT_SET: function (e) {
         let { status: t } = e;
-        (u = t), (c = "miss" === t ? Date.now() : null), h();
+        (c = t), (u = "miss" === t ? Date.now() : null), A();
     },
     AGE_VERIFICATION_RESET: function () {
-        (u = "suppress"), (c = null), h();
+        (c = "suppress"), (u = null), A(), h();
     },
 });
