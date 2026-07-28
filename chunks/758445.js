@@ -78,6 +78,7 @@ class _ extends u.A {
                                                                             ? { text: r.cta.text ?? void 0 }
                                                                             : void 0,
                                                                     helpCenterId: r.help_center_id ?? void 0,
+                                                                    icon: r.icon ?? void 0,
                                                                 },
                                                             }
                                                           : void 0,
