@@ -183,8 +183,9 @@ function ep(e) {
                     t.e("91377"),
                     t.e("35723"),
                     t.e("66378"),
-                    t.e("15675"),
-                ]).then(t.bind(t, 740438));
+                    t.e("30509"),
+                    t.e("73589"),
+                ]).then(t.bind(t, 617396));
                 return (t) => (0, l.jsx)(e, { ...t, channel: i, guild: n });
             });
         },
