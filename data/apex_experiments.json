@@ -409,31 +409,6 @@
     }
   },
   {
-    "name": "2025-10-gif-providers-multi-treatment",
-    "kind": "user",
-    "defaultConfig": {
-      "provider": "tenor",
-      "fallbackProvider": "tenor",
-      "enableMetrics": true
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "provider": "giphy",
-        "fallbackProvider": "tenor",
-        "enableMetrics": true
-      },
-      "2": {
-        "provider": "klipy",
-        "fallbackProvider": "tenor",
-        "enableMetrics": true
-      }
-    }
-  },
-  {
     "name": "2025-10-go-live-auto-quality",
     "kind": "user",
     "defaultConfig": null,
