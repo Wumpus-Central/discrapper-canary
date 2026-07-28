@@ -39,3 +39,5 @@ function d(a) {
         ],
     });
 }
+sName: d;
+})]})}
