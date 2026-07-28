@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { I: () => l });
-var i = n(627968);
-n(64700);
-var r = n(661531),
-    a = n(996682),
-    s = n(27989);
-function l(e) {
+h.d(t, { I: () => c });
+var i = h(627968);
+h(64700);
+var a = h(661531),
+    e = h(996682),
+    r = h(27989);
+function c(s) {
     let {
             size: t = "md",
-            width: n,
-            height: l,
-            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
-            ...c
-        } = e,
-        u = (0, s.J)(t),
-        _ = u?.width ?? n,
-        E = u?.height ?? l;
+            width: h,
+            height: c,
+            color: d = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: n = "",
+            ...p
+        } = s,
+        l = (0, r.J)(t),
+        o = l?.width ?? h,
+        w = l?.height ?? c;
     return (0, i.jsx)("svg", {
-        ...(0, a.A)(c),
+        ...(0, e.A)(p),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: E,
+        width: o,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+            fill: "string" == typeof d ? d : d.css,
             d: "M8 5a1 1 0 0 0 0 2h7.59L5.29 17.3a1 1 0 1 0 1.42 1.4L17 8.42V16a1 1 0 1 0 2 0V6a1 1 0 0 0-1-1H8Z",
-            className: d,
+            className: n,
         }),
     });
 }

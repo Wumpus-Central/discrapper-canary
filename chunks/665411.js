@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(754474),
-    l = n(744808),
-    o = n(875741),
-    d = n(375708),
-    c = n(177821),
-    u = n(423393);
-function _(e) {
-    let { responsive: t } = e;
-    return !0 !== t;
-}
-function E(e) {
-    return e.order === s.u.BACK && !0 !== e.responsive;
-}
-function A(e) {
-    return e.order === s.u.FRONT && !0 !== e.responsive;
-}
+a.d(r, { A: () => p });
+var s = a(627968);
+a(64700);
+var i = a(503698),
+    t = a.n(i),
+    n = a(754474),
+    l = a(744808),
+    c = a(875741),
+    d = a(375708),
+    u = a(177821),
+    o = a(423393);
 function h(e) {
-    let { frame: t, transparentBackground: n = !1, ...r } = e,
-        { profileFrameStyle: s, profileFrameClassName: h } = (0, o.A)(t);
-    return (0, i.jsxs)("div", {
-        className: a()(c.i1, h),
-        style: s,
+    let { responsive: r } = e;
+    return !0 !== r;
+}
+function m(e) {
+    return e.order === n.u.BACK && !0 !== e.responsive;
+}
+function f(e) {
+    return e.order === n.u.FRONT && !0 !== e.responsive;
+}
+function p(e) {
+    let { frame: r, transparentBackground: a = !1, ...i } = e,
+        { profileFrameStyle: n, profileFrameClassName: p } = (0, c.A)(r);
+    return (0, s.jsxs)("div", {
+        className: t()(u.i1, p),
+        style: n,
         role: "img",
-        "aria-label": d.intl.formatToPlainString(d.t["DT/PwH"], { a11y_text: t.label }),
+        "aria-label": d.intl.formatToPlainString(d.t["DT/PwH"], { a11y_text: r.label }),
         children: [
-            n &&
-                (0, i.jsx)("div", {
-                    className: c.tL,
-                    children: (0, i.jsx)("div", {
-                        className: c.HX,
-                        children: (0, i.jsx)(l.A, { frame: t, filterLayer: E, ...r }),
+            a &&
+                (0, s.jsx)("div", {
+                    className: u.tL,
+                    children: (0, s.jsx)("div", {
+                        className: u.HX,
+                        children: (0, s.jsx)(l.A, { frame: r, filterLayer: m, ...i }),
                     }),
                 }),
-            (0, i.jsxs)("div", {
-                className: c.HX,
+            (0, s.jsxs)("div", {
+                className: u.HX,
                 children: [
-                    (0, i.jsx)("img", {
-                        src: u.A,
+                    (0, s.jsx)("img", {
+                        src: o.A,
                         alt: "",
-                        className: a()(c.wt, c.EX, { [c.GA]: n }),
+                        className: t()(u.wt, u.EX, { [u.GA]: a }),
                         "aria-hidden": !0,
                         draggable: !1,
                     }),
-                    (0, i.jsx)(l.A, { frame: t, filterLayer: n ? A : _, ...r }),
+                    (0, s.jsx)(l.A, { frame: r, filterLayer: a ? f : h, ...i }),
                 ],
             }),
         ],

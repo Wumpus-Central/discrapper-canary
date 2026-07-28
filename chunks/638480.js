@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => a });
 var i = n(487329),
     r = n(562153),
-    a = n(652215),
+    l = n(652215),
     s = n(375708);
-function l(e, t, n, l) {
-    if (e.state === a.XYD.RECONNECTING) {
+function a(e, t, n, a) {
+    if (e.state === l.XYD.RECONNECTING) {
         let e = (0, i.B1)(i.iy.STREAM_RECONNECTING)?.errorCode;
         return {
             mainText: s.intl.string(s.t["pdFFK+"]),
@@ -13,7 +12,7 @@ function l(e, t, n, l) {
             errorCodeText: s.intl.formatToPlainString(s.t.ejOT95, { errorCode: e }),
         };
     }
-    return e.state === a.XYD.PAUSED
+    return e.state === l.XYD.PAUSED
         ? n
             ? { mainText: s.intl.string(s.t["5q17w5"]), supportingText: s.intl.string(s.t.LV1NSN) }
             : {
@@ -22,7 +21,7 @@ function l(e, t, n, l) {
                       username: r.Ay.getName(e.guildId, e.channelId, t),
                   }),
               }
-        : l
+        : a
           ? { mainText: s.intl.string(s.t.JmaKtK), supportingText: s.intl.string(s.t["hC3+BD"]) }
           : null;
 }

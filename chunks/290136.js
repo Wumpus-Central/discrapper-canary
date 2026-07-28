@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { c: () => l });
-var i = n(627968);
-n(64700);
-var r = n(661531),
-    a = n(996682),
-    s = n(27989);
-function l(e) {
+c.d(e, { c: () => r });
+var i = c(627968);
+c(64700);
+var l = c(661531),
+    t = c(996682),
+    a = c(27989);
+function r(s) {
     let {
-            size: t = "md",
-            width: n,
-            height: l,
-            secondaryColor: o = "transparent",
+            size: e = "md",
+            width: c,
+            height: r,
+            secondaryColor: n = "transparent",
             secondaryColorClass: d = "",
-            color: c = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ..._
-        } = e,
-        E = (0, s.J)(t),
-        A = E?.width ?? n,
-        h = E?.height ?? l;
+            color: h = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: p = "",
+            ...o
+        } = s,
+        w = (0, a.J)(e),
+        u = w?.width ?? c,
+        f = w?.height ?? r;
     return (0, i.jsxs)("svg", {
-        ...(0, a.A)(_),
+        ...(0, t.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: A,
-        height: h,
+        width: u,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof o ? o : o.css, className: d }),
+            (0, i.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof n ? n : n.css, className: d }),
             (0, i.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+                fill: "string" == typeof h ? h : h.css,
                 fillRule: "evenodd",
                 d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z",
                 clipRule: "evenodd",
-                className: u,
+                className: p,
             }),
         ],
     });

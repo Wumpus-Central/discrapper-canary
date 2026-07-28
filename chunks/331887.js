@@ -1,10 +1,9 @@
-"use strict";
 let i;
 n.d(t, { A: () => o });
-var r = n(17928),
-    a = n(228366);
+var l = n(17928),
+    r = n(228366);
 let s = !1;
-class l extends r.Ay.Store {
+class a extends l.Ay.Store {
     static displayName = "DataHarvestStore";
     get harvestType() {
         return i;
@@ -13,7 +12,7 @@ class l extends r.Ay.Store {
         return s;
     }
 }
-let o = new l(a.h, {
+let o = new a(r.h, {
     CONNECTION_OPEN: function () {
         i = void 0;
     },
