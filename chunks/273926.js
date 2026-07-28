@@ -1,6 +1,6 @@
 n.d(s, { LK: () => j, Ot: () => v });
-var r = n(627968);
-n(64700);
+var r = n(477900);
+n(582128);
 var t = n(503698),
     l = n.n(t),
     a = n(834730),
@@ -9,7 +9,7 @@ if (21552 == n.j) var o = n(622629);
 var i = n(46054),
     d = n(31457),
     u = n(375708),
-    m = n(397251);
+    m = n(833451);
 function x(e) {
     let { terms: s, channelId: n, className: t } = e;
     return (0, r.jsx)("div", {

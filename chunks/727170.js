@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { A: () => _ });
-var i = n(64700),
+var i = n(582128),
     r = n(575593),
-    s = n(702841),
-    a = n(174459),
-    o = n(590180),
-    l = n(993408),
-    u = n(652215),
-    c = n(788868);
-let d = {
+    a = n(702841),
+    s = n(174459),
+    l = n(590180),
+    o = n(993408),
+    d = n(652215),
+    c = n(202541);
+let u = {
         [r.R.AVATAR_DECORATION]: c.Ae.AVATAR_DECORATION,
         [r.R.PROFILE_EFFECT]: c.Ae.PROFILE_EFFECT,
         [r.R.PROFILE_FRAME]: void 0,
@@ -19,15 +19,15 @@ let d = {
         [r.R.EXTERNAL_SKU]: void 0,
     },
     _ = function (e) {
-        let t = (0, s.bG)([o.A], () => o.A.products);
+        let t = (0, a.bG)([l.A], () => l.A.products);
         return (0, i.useCallback)(
             (n) => {
                 let { type: i, skuId: r } = n,
-                    s = t.get(r);
-                a.default.track(u.HAw.PREMIUM_FEATURE_TRY_OUT, {
-                    feature_name: d[i],
-                    feature_tier: (0, l.G0)(s) ? c.tz.FREE : c.tz.PREMIUM_STANDARD,
-                    feature_selection: s?.name,
+                    a = t.get(r);
+                s.default.track(d.HAw.PREMIUM_FEATURE_TRY_OUT, {
+                    feature_name: u[i],
+                    feature_tier: (0, o.G0)(a) ? c.tz.FREE : c.tz.PREMIUM_STANDARD,
+                    feature_selection: a?.name,
                     location_stack: e,
                 });
             },

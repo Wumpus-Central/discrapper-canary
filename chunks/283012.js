@@ -1,6 +1,6 @@
 n.d(l, { A: () => D, v: () => U }), n(938796);
-var s = n(627968),
-    t = n(64700),
+var s = n(477900),
+    t = n(582128),
     a = n(503698),
     i = n.n(a),
     r = n(665260),
@@ -10,7 +10,7 @@ var s = n(627968),
     o = n(628284),
     m = n(939249);
 if (21552 == n.j) var x = n(276293);
-if (21552 == n.j) var h = n(534514);
+if (21552 == n.j) var h = n(297264);
 if (21552 == n.j) var g = n(622629);
 var j = n(47167),
     A = n(713654),
@@ -27,7 +27,7 @@ var j = n(47167),
     y = n(652215),
     L = n(340837),
     _ = n(375708),
-    k = n(664019);
+    k = n(322011);
 function U(e) {
     let { title: l, emojiId: n, emojiName: t, icon: a, completed: r, Icon: c, onClick: x, ...h } = e,
         g = "channel" === h.variant ? h.channelId : null,

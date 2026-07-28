@@ -1,26 +1,26 @@
 n.d(t, { Ay: () => j, BA: () => f });
-var s = n(627968);
-n(64700);
+var s = n(477900);
+n(582128);
 var l = n(503698),
     a = n.n(l),
     i = n(661531),
-    r = n(990078),
-    c = n(812993),
+    r = n(812993),
+    c = n(866665),
     o = n(366605),
     d = n(422844),
     u = n(691060),
-    m = n(376310),
-    h = n(746080),
-    x = n(375708),
-    g = n(330070),
-    A = n(280530);
+    h = n(376310),
+    m = n(746080),
+    g = n(375708),
+    x = n(712590),
+    A = n(115210);
 function f(e) {
     let { channel: t, isNew: n } = e,
         s = (0, u.kt)(t),
         l = s.slice(void 0, 3),
         a = s.slice(3),
         i = s.length > 3 ? s.length - 3 : 0,
-        r = t.hasFlag(h.lx.PINNED),
+        r = t.hasFlag(m.lx.PINNED),
         c = l.length > 0 || r || n;
     return {
         shownTags: l,
@@ -34,7 +34,7 @@ function f(e) {
 function j(e) {
     let { channel: t, isNew: n, tagsClassName: l, className: u } = e,
         {
-            shownTags: h,
+            shownTags: m,
             remainingTags: j,
             moreTagsCount: v,
             isPinned: N,
@@ -46,28 +46,28 @@ function j(e) {
               className: a()(A._A, u),
               children: [
                   n
-                      ? (0, s.jsx)(c.Lp, {
-                            className: a()(g.Ad, g.PP),
+                      ? (0, s.jsx)(r.Lp, {
+                            className: a()(x.Ad, x.PP),
                             color: i.A.unsafe_rawColors.BRAND_260.css,
-                            text: x.intl.string(x.t.y2b7CA),
+                            text: g.intl.string(g.t.y2b7CA),
                         })
                       : null,
                   N &&
                       (0, s.jsx)("div", {
                           className: A.Ne,
-                          children: (0, s.jsx)(r.m, {
-                              text: x.intl.string(x.t["1QLRYb"]),
+                          children: (0, s.jsx)(c.m, {
+                              text: g.intl.string(g.t["1QLRYb"]),
                               children: (0, s.jsx)(o.t, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
-                  h.map((e) =>
+                  m.map((e) =>
                       (0, s.jsx)(
-                          m.A,
-                          { tag: e, size: m.A.Sizes.SMALL, className: a()(l, { [A.At]: C.has(e.id) }) },
+                          h.A,
+                          { tag: e, size: h.A.Sizes.SMALL, className: a()(l, { [A.At]: C.has(e.id) }) },
                           e.id,
                       ),
                   ),
-                  v > 0 ? (0, s.jsx)(m.q, { tags: j, count: v, size: m.A.Sizes.SMALL }) : null,
+                  v > 0 ? (0, s.jsx)(h.q, { tags: j, count: v, size: h.A.Sizes.SMALL }) : null,
               ],
           })
         : null;

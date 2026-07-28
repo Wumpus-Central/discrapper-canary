@@ -1,11 +1,11 @@
 s.d(t, { default: () => D });
-var e = s(627968);
-s(64700);
+var e = s(477900);
+s(582128);
 var i = s(503698),
     n = s.n(i),
     l = s(834730),
-    r = s(862482),
-    d = s(935462),
+    r = s(935462),
+    d = s(862482),
     c = s(930861),
     m = s(793574),
     o = s(688810),
@@ -18,10 +18,10 @@ var i = s(503698),
     N = s(878784),
     j = s(627380),
     T = s(425713),
-    v = s(788868),
+    v = s(202541),
     A = s(652215),
     _ = s(375708),
-    I = s(651535);
+    I = s(152967);
 let D = function (a) {
     let { transitionState: t, onClose: s, displayProfile: i } = a,
         { analyticsLocations: D } = (0, o.Ay)(m.A.TIERED_TENURE_BADGES_MODAL),
@@ -80,15 +80,15 @@ let D = function (a) {
     function P() {
         (0, u.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }), s?.();
     }
-    return (0, e.jsxs)(d.EO, {
+    return (0, e.jsxs)(r.EO, {
         "data-migration-pending": !0,
         transitionState: t,
         "aria-labelledby": C,
         className: n()(I.kL, "theme-dark"),
         parentComponent: "EvolvingTenureBadgeModal",
         children: [
-            (0, e.jsx)(d.s_, { "data-migration-pending": !0, onClick: s, className: I.b }),
-            (0, e.jsx)(d.$m, {
+            (0, e.jsx)(r.s_, { "data-migration-pending": !0, onClick: s, className: I.b }),
+            (0, e.jsx)(r.$m, {
                 "data-migration-pending": !0,
                 className: I.Qs,
                 children: O
@@ -134,7 +134,7 @@ let D = function (a) {
                                   textOptions: { subscribeText: _.intl.string(_.t.JST6jl) },
                                   subscriptionTier: v.pe.TIER_2,
                                   showGradient: !0,
-                                  color: r.XD.BRAND,
+                                  color: d.XD.BRAND,
                               }),
                           ],
                       }),

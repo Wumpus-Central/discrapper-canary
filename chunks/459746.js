@@ -1,12 +1,12 @@
 a.d(t, { A: () => d, w: () => u });
 var l,
-    s = a(627968),
-    n = a(64700),
+    s = a(477900),
+    n = a(582128),
     r = a(503698),
     i = a.n(r),
     o = a(834730),
     c = a(375708),
-    m = a(840625),
+    m = a(487353),
     u = (((l = {})[(l.SMALL = 0)] = "SMALL"), (l[(l.LARGE = 1)] = "LARGE"), l);
 function d(e) {
     let { game: t, size: a, className: l, imageSize: r } = e,

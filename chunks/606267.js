@@ -1,5 +1,5 @@
 n.d(t, { A: () => y, Y0: () => S, iB: () => f });
-var l = n(64700),
+var l = n(582128),
     i = n(702841),
     r = n(364995),
     a = n(666646),
@@ -85,7 +85,7 @@ function S(e) {
             [S, o, P],
         ),
         g = l.useMemo(() => (_ ? T : (n ?? null)), [T, _, n]),
-        x = l.useMemo(
+        v = l.useMemo(
             () => ({
                 checkoutPaymentSources: t,
                 dropdownPaymentSources: S,
@@ -99,8 +99,8 @@ function S(e) {
             }),
             [t, S, o, y, a, f, n, c, A],
         );
-    (0, p.ws)(i, x);
-    let v = l.useCallback(
+    (0, p.ws)(i, v);
+    let x = l.useCallback(
             (e) => {
                 i(null != e ? e.id : null);
             },
@@ -118,14 +118,14 @@ function S(e) {
         ),
         {
             walletCoversSubtotal: R,
-            walletCoversTotal: M,
-            isWalletBalanceLoaded: b,
+            walletCoversTotal: b,
+            isWalletBalanceLoaded: M,
             isWalletCoverageLoading: j,
         } = E({ giftCardsEnabled: c, checkoutPaymentSources: t }),
         O = null != o && null != y && o === y.id;
     l.useEffect(() => {
-        !O && b && !R && _ && i(T);
-    }, [O, b, R, _, i, T]);
+        !O && M && !R && _ && i(T);
+    }, [O, M, R, _, i, T]);
     let L = l.useMemo(
         () =>
             null == y
@@ -148,11 +148,11 @@ function S(e) {
         isGiftCardCreditsChecked: _,
         isSubscriptionPaidByWallet: O,
         handleGiftCardCreditsToggle: N,
-        handleDropdownPaymentSourceChange: v,
+        handleDropdownPaymentSourceChange: x,
         giftCardCheckboxProps: L,
         walletCoversSubtotal: R,
-        walletCoversTotal: M,
-        isWalletBalanceLoaded: b,
+        walletCoversTotal: b,
+        isWalletBalanceLoaded: M,
         isWalletCoverageLoading: j,
     };
 }

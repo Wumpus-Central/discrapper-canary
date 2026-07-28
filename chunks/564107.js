@@ -1,13 +1,13 @@
-l.d(t, { N: () => s, X: () => i });
-var n = l(627968),
-    a = l(64700);
-let r = a.createContext(null);
+n.d(t, { N: () => s, X: () => i });
+var l = n(477900),
+    r = n(582128);
+let a = r.createContext(null);
 function i() {
-    let e = a.useContext(r);
+    let e = r.useContext(a);
     if (null == e) throw Error("Could not find context for useMessageAccessoriesComponentContext.");
     return e;
 }
 function s(e) {
-    let { children: t, ...l } = e;
-    return (0, n.jsx)(r.Provider, { value: l, children: t });
+    let { children: t, ...n } = e;
+    return (0, l.jsx)(a.Provider, { value: n, children: t });
 }

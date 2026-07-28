@@ -1,67 +1,67 @@
 "use strict";
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => E });
+var i = n(477900);
+n(582128);
 var r = n(403581),
-    s = n(772707),
-    a = n(428262),
-    o = n(422936),
-    l = n(234419),
-    u = n(783420),
+    a = n(772707),
+    s = n(428262),
+    l = n(422936),
+    o = n(732280),
+    d = n(783420),
     c = n(410516),
-    d = n(788868),
+    u = n(202541),
     _ = n(375708);
-let h = function (e) {
+let E = function (e) {
     let {
             transitionState: t,
             title: n,
-            subtitle: h,
-            graphic: f,
-            guildBoostProps: p,
-            onClose: E,
-            onSecondaryClick: m,
-            secondaryCTA: g,
-            badgeType: A = null,
-            subscriptionTier: I = d.pe.TIER_2,
-            hidePremiumOfferUpsell: T,
+            subtitle: E,
+            graphic: A,
+            guildBoostProps: h,
+            onClose: I,
+            onSecondaryClick: f,
+            secondaryCTA: p,
+            badgeType: T = null,
+            subscriptionTier: m = u.pe.TIER_2,
+            hidePremiumOfferUpsell: g,
             children: S,
         } = e,
-        y = (0, l.V)(),
-        C = (0, o.O)(),
-        N = !T && (y?.subscription_trial?.sku_id === I || (0, c.U9)(C, I)) && null == p,
-        v = _.intl.string(_.t.pj0XBN);
-    N &&
-        (null != y
-            ? (v = (0, a.FY)({
-                  intervalType: y?.subscription_trial?.interval,
-                  intervalCount: y?.subscription_trial?.interval_count,
+        N = (0, o.V)(),
+        C = (0, l.O)(),
+        O = !g && (N?.subscription_trial?.sku_id === m || (0, c.U9)(C, m)) && null == h,
+        R = _.intl.string(_.t.pj0XBN);
+    O &&
+        (null != N
+            ? (R = (0, s.FY)({
+                  intervalType: N?.subscription_trial?.interval,
+                  intervalCount: N?.subscription_trial?.interval_count,
               }))
-            : null != C && (v = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: C.discount.amount })));
-    let R = "beta" === A ? "beta" : null != y ? "free_trial" : A;
-    return (0, i.jsx)(u.A, {
-        subscriptionTier: I,
+            : null != C && (R = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: C.discount.amount })));
+    let L = "beta" === T ? "beta" : null != N ? "free_trial" : T;
+    return (0, i.jsx)(d.A, {
+        subscriptionTier: m,
         children: (e) => {
-            let { onClick: a } = e;
-            return (0, i.jsx)(s.k, {
+            let { onClick: s } = e;
+            return (0, i.jsx)(a.k, {
                 title: n,
-                subtitle: h,
-                graphic: f,
+                subtitle: E,
+                graphic: A,
                 gradientColor: "nitro-pink",
                 transitionState: t,
-                onClose: async () => await E(),
+                onClose: async () => await I(),
                 actions: [
-                    { text: g, variant: "secondary", size: "md", onClick: m },
+                    { text: p, variant: "secondary", size: "md", onClick: f },
                     {
-                        text: v,
+                        text: R,
                         variant: "expressive",
                         size: "md",
                         onClick: async (e) => {
-                            await E(), a(e);
+                            await I(), s(e);
                         },
                         icon: r.t,
                     },
                 ],
-                ...(null !== R && { badge: { type: R, variant: "expressive" } }),
+                ...(null !== L && { badge: { type: L, variant: "expressive" } }),
                 children: S,
             });
         },

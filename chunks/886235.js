@@ -1,6 +1,6 @@
 n.d(t, { A: () => eu }), n(938796);
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
     a = n.n(s),
     r = n(284009),
@@ -82,8 +82,8 @@ function F(e) {
 var Y = n(526132),
     q = n(95701),
     Q = n(734057),
-    Z = n(317525),
-    J = n(994500),
+    J = n(317525),
+    Z = n(994500),
     X = n(287809),
     $ = n(347951),
     ee = n(825484),
@@ -170,7 +170,7 @@ function eo(e) {
                                 (0, i.jsx)(A.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: (0, M.m1)(s, X.default, J.A, !0),
+                                    children: (0, M.m1)(s, X.default, Z.A, !0),
                                 }),
                         ],
                     }),
@@ -216,8 +216,8 @@ function ec(e) {
         o = t.uses;
     t.maxUses > 0 && (o = `${t.uses}/${t.maxUses}`);
     let c = (0, g.yK)(
-            [Z.A],
-            () => (null == r ? [] : t.roles.map((e) => Z.A.getRole(r, e.id)).filter((e) => null != e)),
+            [J.A],
+            () => (null == r ? [] : t.roles.map((e) => J.A.getRole(r, e.id)).filter((e) => null != e)),
             [r, t.roles],
         ),
         d = l.useMemo(() => (0, q.OY)(t.channel), [t]);

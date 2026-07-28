@@ -1,7 +1,7 @@
 n.d(t, { Ay: () => A, e9: () => g, qd: () => p });
-var l = n(627968),
-    i = n(64700),
-    s = n(735438),
+var l = n(477900),
+    i = n(582128),
+    s = n(435558),
     r = n(451988),
     a = n(964486),
     o = n(652896),
@@ -54,8 +54,8 @@ let p = { x: 0, y: 0 },
             [A, x] = i.useState(!1),
             [E, v] = i.useState(!1),
             [C, I] = i.useState(!1),
-            [_, j] = i.useState(16 / 9),
-            [S, N] = i.useState({ x: 0, y: 0 }),
+            [S, j] = i.useState(16 / 9),
+            [_, N] = i.useState({ x: 0, y: 0 }),
             b = i.useRef(null),
             y = i.useRef(null);
         (0, a.l0)(() => {
@@ -73,7 +73,7 @@ let p = { x: 0, y: 0 },
                 },
                 [c],
             ),
-            w = i.useCallback(
+            D = i.useCallback(
                 (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == l || a === c) return;
@@ -89,7 +89,7 @@ let p = { x: 0, y: 0 },
                 },
                 [T, o, n, t, c],
             ),
-            D = i.useMemo(
+            R = i.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -104,17 +104,17 @@ let p = { x: 0, y: 0 },
                     setIsWheeling: v,
                     isSlidering: C,
                     setIsSlidering: I,
-                    videoAspectRatio: _,
+                    videoAspectRatio: S,
                     setVideoAspectRatio: j,
-                    doZoom: w,
-                    panOffset: S,
+                    doZoom: D,
+                    panOffset: _,
                     setPanOffset: N,
                     wrapperRef: b,
                     clampPanOffset: T,
                 }),
-                [T, w, A, C, E, m, o, n, S, _, c],
+                [T, D, A, C, E, m, o, n, _, S, c],
             );
-        return (0, l.jsx)(g.Provider, { value: D, children: u });
+        return (0, l.jsx)(g.Provider, { value: R, children: u });
     });
 function A(e) {
     return e.enableZoom ? (0, l.jsx)(f, { ...e }) : e.children;

@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => l });
+var i = n(477900);
+n(582128);
 var r = n(503698),
-    s = n.n(r),
-    a = n(434610);
-function o(e) {
+    a = n.n(r),
+    s = n(810842);
+function l(e) {
     let { className: t, ...n } = e;
-    return (0, i.jsx)("div", { className: s()(a.p, t), ...n });
+    return (0, i.jsx)("div", { className: a()(s.p, t), ...n });
 }

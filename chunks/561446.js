@@ -1,6 +1,6 @@
 n.d(t, { A: () => x });
-var l = n(627968);
-n(64700);
+var l = n(477900);
+n(582128);
 var i = n(17928),
     s = n(866665),
     a = n(821609),
@@ -15,7 +15,7 @@ var i = n(17928),
     p = n(123393),
     A = n(652215),
     f = n(375708),
-    C = n(782329);
+    C = n(854049);
 function x(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
         E = h.default.cast(t),

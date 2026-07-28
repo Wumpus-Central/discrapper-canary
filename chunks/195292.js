@@ -1,18 +1,18 @@
 l.d(n, { A: () => i });
-var t = l(64700),
-    a = l(735438),
+var t = l(582128),
+    a = l(435558),
     r = l.n(a);
 function i(e) {
     let { enabled: n, isInteracting: l, items: a, preload: i } = e,
-        [s, o] = t.useState(null),
-        u = t.useRef(null),
+        [s, u] = t.useState(null),
+        o = t.useRef(null),
         d = t.useRef(i);
     return (
         t.useEffect(() => {
             d.current = i;
         }, [i]),
         t.useEffect(() => {
-            if (!n || 0 === a.length || null != u.current) return;
+            if (!n || 0 === a.length || null != o.current) return;
             let e = (function (e) {
                 let { shuffle: n = r().shuffle, maxSize: l = 25 } =
                         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -28,14 +28,14 @@ function i(e) {
                     },
                 };
             })(a);
-            u.current = e;
+            o.current = e;
             let l = e.current();
             null != l && d.current?.(l);
         }, [n, a]),
         t.useEffect(() => {
-            let e = u.current;
-            if (!n || !l || null == e) return void o(null);
-            o(e.current()), e.advance();
+            let e = o.current;
+            if (!n || !l || null == e) return void u(null);
+            u(e.current()), e.advance();
             let t = e.current();
             null != t && d.current?.(t);
         }, [l]),

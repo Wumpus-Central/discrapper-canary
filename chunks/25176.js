@@ -11,7 +11,7 @@ n.d(t, {
     GF: () => D,
     pd: () => U,
     Lv: () => W,
-    Jn: () => R,
+    Jn: () => O,
 }),
     n(321073),
     n(323874),
@@ -21,7 +21,7 @@ var i,
     r,
     a,
     s,
-    l = n(64700),
+    l = n(582128),
     o = n(691540),
     d = n(857250),
     c = n(97483),
@@ -94,12 +94,12 @@ let S = {
     },
     N = new Map(Object.values(g).flatMap((e) => S[e].map((t) => [`${e}.${t}`, e]))),
     C = new Set(N.keys());
-var R =
+var O =
     (((a = {}).PROFILE_EFFECT = "profile_effect"),
     (a.AVATAR_DECORATION = "avatar_decoration"),
     (a.PROFILE_FRAME = "profile_frame"),
     a);
-let O = ".DS_Store";
+let R = ".DS_Store";
 var L =
     (((s = {}).COLLECTION = "collection"),
     (s.AVATAR_DECORATIONS = "avatar_decorations"),
@@ -143,7 +143,7 @@ async function G(e) {
     let t = [];
     if (e.isFile) {
         let n = await new Promise((t) => e.file(t));
-        n.name !== O && t.push(n);
+        n.name !== R && t.push(n);
     } else if (e.isDirectory) {
         let n = await w(e),
             i = await Promise.all(n.map((e) => G(e)));
@@ -152,7 +152,7 @@ async function G(e) {
     return t;
 }
 function x(e, t, n, i) {
-    if (t.name === O) return;
+    if (t.name === R) return;
     let r = M(e, t.name);
     if ("profile_effects" === n)
         P(t) || t.name.endsWith(".txt")
@@ -186,7 +186,7 @@ async function F(e, t) {
         r = { previewFile: null, layerFiles: [], unrecognizedSubdirs: [] };
     for (let e of i) {
         if (e.isFile) {
-            if (e.name === O) continue;
+            if (e.name === R) continue;
             let i = e,
                 a = await new Promise((e) => i.file(e));
             (0, E.Y_)(a.name) ? (r.previewFile = a) : t.ignoredFilenames.push(`frames/${n}/${a.name}`);
@@ -196,7 +196,7 @@ async function F(e, t) {
             let i = e.name;
             if ("foreground" === i || "background" === i) {
                 for (let a of await w(e))
-                    if (a.isFile && a.name !== O) {
+                    if (a.isFile && a.name !== R) {
                         let e = a,
                             t = await new Promise((t) => e.file(t));
                         r.layerFiles.push({ file: t, folder: i });
@@ -215,13 +215,13 @@ async function F(e, t) {
 }
 async function V(e, t) {
     for (let n of await w(e))
-        n.isDirectory ? await F(n, t) : n.isFile && n.name !== O && t.ignoredFilenames.push(`frames/${n.name}`);
+        n.isDirectory ? await F(n, t) : n.isFile && n.name !== R && t.ignoredFilenames.push(`frames/${n.name}`);
 }
 async function B(e, t) {
     for (let n of await w(e))
         n.isDirectory
             ? await k(n, "profile_effects", t)
-            : n.isFile && n.name !== O && t.ignoredFilenames.push(M(e.name, n.name));
+            : n.isFile && n.name !== R && t.ignoredFilenames.push(M(e.name, n.name));
 }
 async function H(e, t) {
     for (let n of await w(e))

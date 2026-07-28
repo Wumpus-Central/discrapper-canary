@@ -1,5 +1,5 @@
 s.d(l, { A: () => c });
-var t = s(627968);
+var t = s(477900);
 function c(a) {
     return (0, t.jsxs)("svg", {
         ...a,
@@ -1346,4 +1346,4 @@ function c(a) {
         ],
     });
 }
-s(64700);
+s(582128);

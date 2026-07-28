@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { l: () => R, q: () => C });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(887129),
@@ -15,8 +15,8 @@ var i = n(627968),
     h = n(834730),
     I = n(992251),
     f = n(801461),
-    p = n(883632),
-    T = n(329296);
+    p = n(537624),
+    T = n(832344);
 let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
     g = m + 4,
     S = [];
@@ -34,8 +34,8 @@ function C(e) {
             items: p,
             groups: C = S,
             defaultSelectedItems: L,
-            selectedItems: D,
-            onSelectionChange: y,
+            selectedItems: y,
+            onSelectionChange: D,
             activeDescendantIndex: v,
             shouldFocusWrap: b = !1,
             renderListItem: M,
@@ -51,8 +51,8 @@ function C(e) {
         B = r.useRef(null),
         H = r.useMemo(() => p.map((e, t) => ({ ...e, index: t })), [p]),
         [j, W] = r.useState(L ?? []),
-        Y = null != D,
-        K = Y ? D : j,
+        Y = null != y,
+        K = Y ? y : j,
         $ = (0, l.Ay)({
             id: V,
             defaultFocused: null != v ? (0, f.ZN)(V, v) : void 0,
@@ -88,9 +88,9 @@ function C(e) {
             (e) => {
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
                 let t = (0, f.qH)(_, K, e);
-                Y || W(t), y?.(t);
+                Y || W(t), D?.(t);
             },
-            [c, K, y, Y, _],
+            [c, K, D, Y, _],
         ),
         J = r.useCallback((e, t) => {
             let { label: n, description: r } = e,

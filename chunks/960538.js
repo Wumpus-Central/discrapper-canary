@@ -1,12 +1,12 @@
-n.d(t, { t: () => j }), n(938796);
-var i = n(627968),
-    l = n(64700),
+n.d(t, { t: () => N }), n(938796);
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
-    r = n.n(s),
-    a = n(649852),
-    o = n.n(a),
-    d = n(665260),
-    c = n(305866),
+    a = n.n(s),
+    r = n(649852),
+    o = n.n(r),
+    c = n(665260),
+    d = n(305866),
     u = n(922016),
     m = n(866665),
     h = n(939249),
@@ -16,11 +16,11 @@ var i = n(627968),
     x = n(815807),
     f = n(429433),
     E = n(652215),
-    I = n(307731),
-    C = n(375708),
-    v = n(435153),
-    _ = n(129821);
-class j extends l.Component {
+    C = n(307731),
+    _ = n(375708),
+    I = n(435153),
+    v = n(129821);
+class N extends l.Component {
     state = { isReactionPickerActive: !1 };
     ref = l.createRef();
     onAddReaction = (e, t) => {
@@ -47,30 +47,30 @@ class j extends l.Component {
                 analyticsOverride: { openPopoutType: "message_reaction_emoji_picker" },
                 messageId: l.id,
             });
-        return (0, i.jsx)(c.M.Consumer, {
+        return (0, i.jsx)(d.M.Consumer, {
             children: (e) => {
                 let { inDialog: t } = e;
-                return t ? (0, i.jsx)(c.l, { "aria-label": C.intl.string(C.t["7Xqzdj"]), children: s }) : s;
+                return t ? (0, i.jsx)(d.l, { "aria-label": _.intl.string(_.t["7Xqzdj"]), children: s }) : s;
             },
         });
     };
     render() {
         let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: s = 0 } = this.props,
-            { isReactionPickerActive: a } = this.state;
-        if (e.state === E.cmJ.SENDING || (0, d.Lt)(e.flags, E.pr7.EPHEMERAL)) return null;
-        let o = l ? _ : v,
-            c = { size: "sm", color: "currentColor", className: o.icon };
+            { isReactionPickerActive: r } = this.state;
+        if (e.state === E.cmJ.SENDING || (0, c.Lt)(e.flags, E.pr7.EPHEMERAL)) return null;
+        let o = l ? v : I,
+            d = { size: "sm", color: "currentColor", className: o.icon };
         return (0, i.jsx)(u.Y, {
             targetElementRef: this.ref,
-            shouldShow: a,
+            shouldShow: r,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: "right",
             children: (e, l) => {
-                let { isShown: a } = l;
+                let { isShown: r } = l;
                 return (0, i.jsx)(m.m, {
                     asContainer: !0,
-                    text: C.intl.string(C.t.lfIHs4),
+                    text: _.intl.string(_.t.lfIHs4),
                     children: (0, i.jsxs)(h.D, {
                         ...e,
                         innerRef: this.ref,
@@ -78,10 +78,10 @@ class j extends l.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
-                        className: r()(o.reactionBtn, { [o.active]: a }, t),
-                        children: [(0, i.jsx)(g.n, { ...c }), n],
+                        onMouseEnter: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutFocused),
+                        className: a()(o.reactionBtn, { [o.active]: r }, t),
+                        children: [(0, i.jsx)(g.n, { ...d }), n],
                     }),
                 });
             },

@@ -1,6 +1,6 @@
 i.d(n, { A: () => C });
-var l = i(627968),
-    t = i(64700),
+var l = i(477900),
+    t = i(582128),
     o = i(284009),
     a = i.n(o),
     r = i(477782),
@@ -24,11 +24,11 @@ function C(e) {
             let n = (0, y.Iv)(e, A.XAf, !0);
             a()(null != n, "cannot copy null icon URL"), (0, g.C)(n);
         }, [e]),
-        x = t.useCallback(() => {
+        f = t.useCallback(() => {
             let n = v.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
             a()(null != n, "cannot copy null banner URL"), (0, g.C)(n);
         }, [e]),
-        L = t.useCallback(() => {
+        x = t.useCallback(() => {
             (0, g.C)(e.id);
         }, [e.id]);
     return !__OVERLAY__ && i && g.p5 && null != e.id
@@ -41,7 +41,7 @@ function C(e) {
                       (0, l.jsx)(r.Dr, {
                           id: "copy-server-id",
                           label: k.intl.string(k.t["94lLD7"]),
-                          action: L,
+                          action: x,
                           leadingAccessory: n ? { type: "icon", icon: s.L } : void 0,
                       }),
                       null != e.icon &&
@@ -55,7 +55,7 @@ function C(e) {
                           (0, l.jsx)(r.Dr, {
                               id: "copy-server-banner-link",
                               label: k.intl.string(k.t["2FoUnk"]),
-                              action: x,
+                              action: f,
                               leadingAccessory: n ? { type: "icon", icon: d.q } : void 0,
                           }),
                   ],

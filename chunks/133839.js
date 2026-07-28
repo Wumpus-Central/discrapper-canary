@@ -1,6 +1,6 @@
 i.d(t, { A: () => tc, u: () => ta });
-var n = i(627968),
-    s = i(64700),
+var n = i(477900),
+    s = i(582128),
     l = i(503698),
     r = i.n(l),
     a = i(17928),
@@ -18,7 +18,7 @@ var n = i(627968),
     A = i(958805),
     j = i(61881),
     E = i(435558),
-    S = i(353640),
+    S = i(196765),
     T = i(540185),
     v = i(282435);
 let N = (0, E.sampleSize)(v.sx, v.sx.length),
@@ -582,7 +582,7 @@ function eU(e) {
         children: t.map((e, t) => (0, n.jsx)("li", { children: i(e, t) }, e.applicationId)),
     });
 }
-var eF = i(688807),
+var eF = i(686246),
     eW = i(201438),
     eH = i(451395),
     eB = i(788593),
@@ -770,7 +770,7 @@ function e2(e) {
               }),
           });
 }
-function e6(e) {
+function e5(e) {
     let { userId: t, games: i, onDismiss: s, onClick: l, className: a } = e,
         o = (0, e1.GV)();
     return (0, n.jsxs)("aside", {
@@ -822,10 +822,10 @@ function e7(e) {
             },
             [r, t, o, a],
         );
-    return (0, n.jsx)(e6, { games: l, onClick: d, ...i });
+    return (0, n.jsx)(e5, { games: l, onClick: d, ...i });
 }
-var e5 = i(344287);
-function e3(e) {
+var e3 = i(344287);
+function e6(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case T.x.FAVORITE_GAMES:
@@ -866,7 +866,7 @@ function e9(e) {
         f = (0, Q.FM)(t, { showEditingControls: g }),
         h = (0, Q.uA)(t),
         I = 1 === (0, Q.cv)(t.type);
-    return (0, n.jsx)(e3, {
+    return (0, n.jsx)(e6, {
         widget: t,
         user: i,
         allowEditing: l,
@@ -883,7 +883,7 @@ function e9(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e5.r }),
+        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e3.r }),
         ...o,
     });
 }

@@ -1,34 +1,34 @@
-l.d(t, { F: () => m });
-var i = l(64700),
+l.d(t, { F: () => v });
+var i = l(582128),
     n = l(17928),
     a = l(318254),
     r = l(278416),
     s = l(561573),
     o = l(288106),
     c = l(240248),
-    u = l(429635),
-    d = l(430825),
-    h = l(375708);
-let p = "{value}",
-    f = { ORBS: a.C, TAG: r.g };
-function S(e) {
-    return null != e ? f[e] : void 0;
+    d = l(429635),
+    h = l(430825),
+    u = l(375708);
+let f = "{value}",
+    p = { ORBS: a.C, TAG: r.g };
+function _(e) {
+    return null != e ? p[e] : void 0;
 }
-function _(e, t) {
-    return null == e ? null : e.includes(p) ? (null == t ? null : e.replaceAll(p, String(t))) : e;
+function S(e, t) {
+    return null == e ? null : e.includes(f) ? (null == t ? null : e.replaceAll(f, String(t))) : e;
 }
-function m(e, t) {
+function v(e, t) {
     let { applicationId: l, skuId: a } = t,
-        r = (0, u.A)({ applicationId: l }),
-        p = i.useMemo(() => {
+        r = (0, d.A)({ applicationId: l }),
+        f = i.useMemo(() => {
             let e = r?.storefront?.promotions;
             return null == e ? null : (Object.values(e)[0] ?? null);
         }, [r]),
-        f =
+        p =
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? o.QK.GIFT
                 : o.QK.SELF_PURCHASE,
-        m = (0, n.bG)(
+        v = (0, n.bG)(
             [s.A],
             () =>
                 (function (e, t) {
@@ -38,80 +38,80 @@ function m(e, t) {
                         if (e?.amount != null && e.amount > 0) return e;
                     }
                     return null;
-                })(s.A.getRewardsForSkuId(a), f),
-            [a, f],
+                })(s.A.getRewardsForSkuId(a), p),
+            [a, p],
         );
     return i.useMemo(() => {
-        if (null == p) return null;
-        let t = null != p.endsAt ? new Date(p.endsAt) : null;
+        if (null == f) return null;
+        let t = null != f.endsAt ? new Date(f.endsAt) : null;
         switch (e) {
             case "storefront_banner": {
-                let e = p.storefront?.headerText;
+                let e = f.storefront?.headerText;
                 if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: S(p.pdp?.icon ?? null),
+                    Icon: _(f.pdp?.icon ?? null),
                     text: e,
                     tooltip: null,
                     endsAt: t,
-                    flavor: p.flavor,
+                    flavor: f.flavor,
                     reward: null,
                 };
             }
             case "storefront_badge": {
-                let e = p.storefront?.headerText;
+                let e = f.storefront?.headerText;
                 if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: S("TAG"),
-                    text: h.intl.string(d.default.hriMCc),
+                    Icon: _("TAG"),
+                    text: u.intl.string(h.default.hriMCc),
                     tooltip: e,
                     endsAt: t,
-                    flavor: p.flavor,
+                    flavor: f.flavor,
                     reward: null,
                 };
             }
             case "pdp":
             case "card":
             case "gift_customization": {
-                let l = "gift_customization" === e ? p.checkout : p.pdp,
-                    i = _(l?.label ?? null, m?.amount ?? null);
+                let l = "gift_customization" === e ? f.checkout : f.pdp,
+                    i = S(l?.label ?? null, v?.amount ?? null);
                 if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: S(l?.icon ?? null),
+                    Icon: _(l?.icon ?? null),
                     text: i,
-                    tooltip: _(l?.tooltip ?? null, m?.amount ?? null),
+                    tooltip: S(l?.tooltip ?? null, v?.amount ?? null),
                     endsAt: t,
-                    flavor: p.flavor,
-                    reward: m,
+                    flavor: f.flavor,
+                    reward: v,
                 };
             }
             case "vc_purchase_recommendations":
             case "vc_gift_recommendations": {
-                let e = p.vcStream?.label;
+                let e = f.vcStream?.label;
                 if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: S(p.vcStream?.icon ?? null),
+                    Icon: _(f.vcStream?.icon ?? null),
                     text: e,
-                    tooltip: p.vcStream?.tooltip ?? null,
+                    tooltip: f.vcStream?.tooltip ?? null,
                     endsAt: t,
-                    flavor: p.flavor,
+                    flavor: f.flavor,
                     reward: null,
                 };
             }
             case "sku_purchase_badge":
             case "sku_gift_badge": {
-                if (null == m) return null;
-                let l = "sku_gift_badge" === e ? p.checkout : p.pdp,
-                    i = _(l?.label ?? null, m.amount);
+                if (null == v) return null;
+                let l = "sku_gift_badge" === e ? f.checkout : f.pdp,
+                    i = S(l?.label ?? null, v.amount);
                 if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: S("TAG"),
-                    text: h.intl.string(d.default.hriMCc),
-                    tooltip: _(l?.tooltip ?? null, m.amount),
+                    Icon: _("TAG"),
+                    text: u.intl.string(h.default.hriMCc),
+                    tooltip: S(l?.tooltip ?? null, v.amount),
                     endsAt: t,
-                    flavor: p.flavor,
-                    reward: m,
+                    flavor: f.flavor,
+                    reward: v,
                 };
             }
         }
-    }, [e, p, m]);
+    }, [e, f, v]);
 }

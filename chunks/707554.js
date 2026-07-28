@@ -1,35 +1,35 @@
 "use strict";
-n.d(t, { $: () => u, F: () => o, H: () => l });
-var i = n(627968),
-    r = n(64700);
-function s(e, t) {
+n.d(t, { $: () => d, F: () => l, H: () => o });
+var i = n(477900),
+    r = n(582128);
+function a(e, t) {
     return { getLevelAndMarkUsed: () => ((t.current = !0), e), consumed: t, level: e };
 }
-let a = r.createContext(s(2, { current: !1 }));
-function o(e) {
-    let { component: t, children: n, forceLevel: o } = e,
-        l = r.useContext(a),
-        u = null != o ? o : l.level,
-        c = u;
-    (null != t || (null == o && l.consumed.current)) && c++;
-    let d = r.useRef(!1),
+let s = r.createContext(a(2, { current: !1 }));
+function l(e) {
+    let { component: t, children: n, forceLevel: l } = e,
+        o = r.useContext(s),
+        d = null != l ? l : o.level,
+        c = d;
+    (null != t || (null == l && o.consumed.current)) && c++;
+    let u = r.useRef(!1),
         _ = r.useRef(!1),
-        h = r.useMemo(() => s(u, d), [u]),
-        f = r.useMemo(() => s(c, _), [c]);
+        E = r.useMemo(() => a(d, u), [d]),
+        A = r.useMemo(() => a(c, _), [c]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != t ? (0, i.jsx)(a.Provider, { value: h, children: t }) : null,
-            (0, i.jsx)(a.Provider, { value: f, children: n }),
+            null != t ? (0, i.jsx)(s.Provider, { value: E, children: t }) : null,
+            (0, i.jsx)(s.Provider, { value: A, children: n }),
         ],
     });
 }
-function l(e) {
-    let t = u(),
+function o(e) {
+    let t = d(),
         n = `h${Math.min(t, 6)}`;
     return (0, i.jsx)(n, { ...(t > 6 ? { "data-excessive-heading-level": t } : {}), ...e });
 }
-function u() {
-    let { getLevelAndMarkUsed: e } = r.useContext(a);
+function d() {
+    let { getLevelAndMarkUsed: e } = r.useContext(s);
     return e();
 }
-a.displayName = "HeadingLevelContext";
+s.displayName = "HeadingLevelContext";

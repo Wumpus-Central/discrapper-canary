@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { A: () => rc });
 var i,
-    r = n(627968),
-    a = n(64700),
+    r = n(477900),
+    a = n(582128),
     s = n(503698),
     l = n.n(s),
     o = n(435558),
     d = n.n(o),
-    c = n(873263),
+    c = n(806163),
     u = n(837381),
     _ = n(621466),
     E = n(17928),
@@ -435,27 +435,27 @@ var eH = n(633965),
     e1 = n(383394),
     e2 = n(131677),
     e3 = n(228366);
-let e6 = {};
-class e4 extends E.Ay.PersistedStore {
+let e4 = {};
+class e6 extends E.Ay.PersistedStore {
     static displayName = "ViewHistoryStore";
     static persistKey = "ViewHistoryStore";
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                "number" == typeof e[t] && (e6[t] = e[t]);
+                "number" == typeof e[t] && (e4[t] = e[t]);
             });
     }
     getState() {
-        return e6;
+        return e4;
     }
     hasViewed(e) {
-        return null != e6[e];
+        return null != e4[e];
     }
 }
-let e5 = new e4(e3.h, {
+let e5 = new e6(e3.h, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
-        e6[t] = Date.now();
+        e4[t] = Date.now();
     },
 });
 var e7 = n(531685),
@@ -494,7 +494,7 @@ let ti = (0, e8.L_)((e, t, n) => ["null", ...t, ...e, te, eL.sFm.E3_SERVER_DISCO
 n(667532);
 var ta = n(868285),
     ts = n(763827),
-    tl = n(4798),
+    tl = n(461376),
     to = n(778712),
     td = n(812993),
     tc = n(442433),
@@ -1030,7 +1030,7 @@ var tF = n(245604),
     tW = n(260509),
     tY = n(284009),
     tK = n.n(tY),
-    t$ = n(295868),
+    t$ = n(651300),
     tz = n(66834),
     tq = n(174459),
     tZ = n(896970);
@@ -1154,8 +1154,8 @@ function t3(e) {
         children: t,
     });
 }
-var t6 = n(819638),
-    t4 = n(441174);
+var t4 = n(819638),
+    t6 = n(441174);
 let t5 = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function t7(e) {
     (0, tc.L3)(e, async () => {
@@ -1168,10 +1168,10 @@ function t8(e) {
         i = (0, E.yK)([ez.A], () => ez.A.getGuildsArray()),
         s = (0, E.bG)([eC.default], () => eC.default.getCurrentUser()),
         l = a.useMemo(() => i.some((e) => (0, tW.bM)(e, s)), [i, s]),
-        o = (0, p.useModalsStore)((e) => (0, p.hasModalOpenSelector)(e, t6.fc)),
+        o = (0, p.useModalsStore)((e) => (0, p.hasModalOpenSelector)(e, t4.fc)),
         { analyticsLocations: d } = (0, y.Ay)();
     return (0, r.jsx)("div", {
-        className: t4.Uq,
+        className: t6.Uq,
         children: (0, r.jsxs)(tj.A, {
             tutorialId: l ? "create-more-servers" : "create-first-server",
             inlineSpecs: t5,
@@ -1466,7 +1466,7 @@ function nK() {
               }),
           });
 }
-var n$ = n(312742),
+var n$ = n(930235),
     nz = n(317097),
     nq = n(319060),
     nZ = n(866323),
@@ -1474,23 +1474,23 @@ var n$ = n(312742),
     nQ = n(534409),
     nJ = n(240248),
     n0 = n(678708),
-    n1 = n(187322),
+    n1 = n(259678),
     n2 = n(140735),
     n3 = n(548118),
-    n6 = n(195451);
-function n4(e) {
+    n4 = n(195451);
+function n6(e) {
     let { guildId: t, animate: n } = e,
         i = (0, E.bG)([ez.A], () => ez.A.getGuild(t), [t]),
         a = (0, g.r)(f.A.modules.guildbar.AVATAR_SIZE);
     return null == i
-        ? (0, r.jsx)("div", { className: l()(n6.VL, n6.zU), children: (0, r.jsx)(nH.E, { color: "currentColor" }) })
+        ? (0, r.jsx)("div", { className: l()(n4.VL, n4.zU), children: (0, r.jsx)(nH.E, { color: "currentColor" }) })
         : (0, r.jsx)(n3.Ay, {
               guild: i,
               animate: n,
               size: n3.Ay.Sizes.MINI,
               iconSize: a,
               lossless: !0,
-              className: n6.VL,
+              className: n4.VL,
               tabIndex: -1,
           });
 }
@@ -1499,22 +1499,22 @@ function n5(e) {
         { children: a } = t,
         s = n && i,
         o = (0, r.jsx)("div", {
-            className: n6.hJ,
+            className: n4.hJ,
             children: (0, r.jsx)("div", {
-                className: n6.Eh,
+                className: n4.Eh,
                 children: (0, r.jsx)(n0.s, { size: "sm", color: "currentColor" }),
             }),
         }),
         d = (0, r.jsx)("div", {
-            className: n6.qJ,
+            className: n4.qJ,
             children: (0, r.jsx)("div", {
-                className: n6.jg,
-                children: a.slice(0, 4).map((e) => (0, r.jsx)(n4, { guildId: e.id, animate: n }, e.id)),
+                className: n4.jg,
+                children: a.slice(0, 4).map((e) => (0, r.jsx)(n6, { guildId: e.id, animate: n }, e.id)),
             }),
         });
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: l()({ [n6.NG]: s, [n6.yd]: !s }),
+        className: l()({ [n4.NG]: s, [n4.yd]: !s }),
         children: [!s && o, d],
     });
 }
@@ -1554,7 +1554,7 @@ function n7(e) {
                 : null;
     return (0, r.jsx)(n1.vN, {
         children: (0, r.jsxs)(tM.D, {
-            className: n6.H3,
+            className: n4.H3,
             onClick: _,
             onContextMenu: E,
             onMouseEnter: N,
@@ -1579,10 +1579,10 @@ function n7(e) {
                     lowerBadge: R,
                     lowerBadgeSize: { width: (0, td.o6)(l) },
                     children: (0, r.jsx)("div", {
-                        className: n6.vA,
+                        className: n4.vA,
                         children:
                             null != u
-                                ? (0, r.jsx)("div", { className: n6.hJ, children: u })
+                                ? (0, r.jsx)("div", { className: n4.hJ, children: u })
                                 : (0, r.jsx)(n5, { folderNode: t, hovered: g, sorting: i }),
                     }),
                 }),
@@ -1688,7 +1688,7 @@ let ir = (0, nJ.xI)(nq.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       B(e);
                                   }
                                 : void 0,
-                            className: l()(n6.MJ, { [n6.L0]: "icon" === L || F, [ii.oR]: !V && G && !_ }),
+                            className: l()(n4.MJ, { [n4.L0]: "icon" === L || F, [ii.oR]: !V && G && !_ }),
                             "data-dnd-name": W,
                             children: V
                                 ? (0, r.jsx)(ie, { isFolder: !0 })
@@ -1719,11 +1719,11 @@ let ir = (0, nJ.xI)(nq.A.FOLDER_ITEM_ANIMATION_DURATION),
             ee = J === it.DO ? void 0 : (0, nz.Hl)(J);
         return (0, r.jsxs)("div", {
             ref: X,
-            className: l()(n6.qc, { [n6.Av]: _, [n6.Lg]: k }),
+            className: l()(n4.qc, { [n4.Av]: _, [n4.Lg]: k }),
             style: { "--custom-folder-color": ee ?? "" },
             "data-drop-hovering": G,
             children: [
-                !V && _ && (0, r.jsx)("span", { className: n6.GO }),
+                !V && _ && (0, r.jsx)("span", { className: n4.GO }),
                 Q,
                 Z((e, t, n) => {
                     let { key: i } = n;
@@ -1736,7 +1736,7 @@ let ir = (0, nJ.xI)(nq.A.FOLDER_ITEM_ANIMATION_DURATION),
                                 role: "group",
                                 as: "ul",
                                 gap: "xs",
-                                className: n6.TN,
+                                className: n4.TN,
                                 style: { height: e.height.to((e) => e * q) },
                                 "aria-label": o.name,
                                 children: P.map((t, n) => R(t, n, P.length, e.height)),
@@ -2006,21 +2006,21 @@ function ib(e) {
                 (0, r.jsx)(
                     "div",
                     {
-                        className: n6.qc,
+                        className: n4.qc,
                         children: (0, r.jsx)("div", {
-                            className: l()(n6.MJ, n6.L0),
+                            className: l()(n4.MJ, n4.L0),
                             style: { margin: 0 },
                             children: (0, r.jsx)(tl.animated.div, {
-                                className: n6.NG,
+                                className: n4.NG,
                                 style: e,
                                 children: (0, r.jsx)("div", {
-                                    className: n6.qJ,
+                                    className: n4.qJ,
                                     children: (0, r.jsx)("div", {
-                                        className: n6.jg,
+                                        className: n4.jg,
                                         children: (0, r.jsx)(n3.Ay, {
                                             guild: t,
                                             size: n3.Ay.Sizes.SMOL,
-                                            className: n6.VL,
+                                            className: n4.VL,
                                         }),
                                     }),
                                 }),
@@ -2328,7 +2328,7 @@ function i$(e, t) {
             n.e("75030"),
             n.e("47899"),
             n.e("8248"),
-            n.e("58388"),
+            n.e("67304"),
             n.e("37175"),
             n.e("1248"),
             n.e("24092"),
@@ -2540,8 +2540,8 @@ function i$(e, t) {
             n.e("45850"),
             n.e("21398"),
             n.e("50482"),
-            n.e("42205"),
-            n.e("55675"),
+            n.e("62332"),
+            n.e("8607"),
             n.e("5581"),
             n.e("49681"),
             n.e("69047"),
@@ -2730,7 +2730,7 @@ function i$(e, t) {
             n.e("58273"),
             n.e("6949"),
             n.e("20930"),
-            n.e("79548"),
+            n.e("34786"),
             n.e("99976"),
             n.e("26001"),
             n.e("30997"),
@@ -3131,8 +3131,8 @@ var iX = n(922016),
     i1 = n(475743),
     i2 = n(624458),
     i3 = n(408213),
-    i6 = (((i = {})[(i.PENDING_JOIN_REQUESTS_FOLDER = 1)] = "PENDING_JOIN_REQUESTS_FOLDER"), i),
-    i4 = n(928568);
+    i4 = (((i = {})[(i.PENDING_JOIN_REQUESTS_FOLDER = 1)] = "PENDING_JOIN_REQUESTS_FOLDER"), i),
+    i6 = n(928568);
 function i5(e, t) {
     (0, tc.L3)(e, async () => {
         let { default: e } = await n.e("49056").then(n.bind(n, 97187));
@@ -3233,11 +3233,11 @@ function re(e) {
         [n, i] = a.useState(!1),
         s = (0, E.bG)([eJ.A], () => eJ.A.getGuildId()),
         l = (0, E.bG)([iu.A], () => iu.A.hasFetchedRequestToJoinGuilds),
-        o = (0, i4.A)(),
+        o = (0, i6.A)(),
         d = (0, i1.A)(s),
         c = a.useMemo(() => {
             let e = (0, eQ.xW)({
-                folderId: i6.PENDING_JOIN_REQUESTS_FOLDER,
+                folderId: i4.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: ey.intl.string(ey.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],

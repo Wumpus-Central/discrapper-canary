@@ -1,6 +1,6 @@
 r.d(t, { i: () => o, q: () => c });
-var n = r(64700),
-    u = r(688807),
+var n = r(582128),
+    u = r(686246),
     l = r(425763);
 function o(e) {
     let { containerRef: t, itemType: r = "WIDGET", edgeDistance: o = 130, maxSpeed: c = 1700, power: i = 2.2 } = e,

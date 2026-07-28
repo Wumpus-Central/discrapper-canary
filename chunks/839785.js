@@ -1,6 +1,6 @@
 e.d(i, { default: () => R });
-var n = e(627968),
-    s = e(64700),
+var n = e(477900),
+    s = e(582128),
     r = e(189213),
     l = e(17928),
     o = e(349288),
@@ -19,7 +19,7 @@ var n = e(627968),
     p = e(754495),
     y = e(939075),
     I = e(375708),
-    k = e(568802);
+    k = e(224202);
 function R(t) {
     let { user: i, entry: e, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
         [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),

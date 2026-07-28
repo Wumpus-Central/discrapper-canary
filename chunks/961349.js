@@ -6,8 +6,8 @@ var l = n(284009),
     u = n(408018),
     o = n(189551),
     a = n(597184),
-    m = n(627968),
-    c = n(64700),
+    m = n(477900),
+    c = n(582128),
     d = n(123292),
     p = n(192308),
     y = n(721768),
@@ -1163,8 +1163,8 @@ let e0 = {
     },
 };
 var e1 = n(59892),
-    e4 = n(186693),
-    e2 = n(262234),
+    e2 = n(186693),
+    e4 = n(262234),
     e8 = n(717470),
     e6 = n(977936),
     e7 = n(849455),
@@ -1388,8 +1388,8 @@ let tu = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                         let e = eT.default.locale;
                         if ("en-US" === e) return e1;
                         if ("en-GB" === e) return e1.GB;
-                        if ("de" === e) return e4;
-                        if ("fr" === e) return e2;
+                        if ("de" === e) return e2;
+                        if ("fr" === e) return e4;
                         if ("ja" === e) return e8;
                         else if ("nl" === e) return e6;
                         else if ("ru" === e) return e7;

@@ -1,27 +1,32 @@
-"use strict";
-n.d(t, { P: () => r });
-var i = n(64700);
-function r(e, t, n) {
-    let [r, s] = (0, i.useState)(e || t),
-        a = (0, i.useRef)(void 0 !== e),
-        o = void 0 !== e;
-    (0, i.useEffect)(() => {
-        a.current, (a.current = o);
-    }, [o]);
-    let l = o ? e : r,
-        u = (0, i.useCallback)(
-            (e, ...t) => {
-                let i = (e, ...t) => {
-                    n && !Object.is(l, e) && n(e, ...t), o || (l = e);
-                };
-                "function" == typeof e
-                    ? s((n, ...r) => {
-                          let s = e(o ? l : n, ...r);
-                          return (i(s, ...t), o) ? n : s;
-                      })
-                    : (o || s(e), i(e, ...t));
-            },
-            [o, l, n],
-        );
-    return [l, u];
+var i = {
+    "./icon-file-acrobat.svg": "393105",
+    "./icon-file-ae.svg": "209899",
+    "./icon-file-ai.svg": "862047",
+    "./icon-file-archive.svg": "262369",
+    "./icon-file-audio.svg": "439205",
+    "./icon-file-code.svg": "602462",
+    "./icon-file-document.svg": "655514",
+    "./icon-file-image.svg": "528736",
+    "./icon-file-ps.svg": "426658",
+    "./icon-file-sketch.svg": "101233",
+    "./icon-file-spreadsheet.svg": "368877",
+    "./icon-file-unknown.svg": "531449",
+    "./icon-file-video.svg": "347810",
+    "./icon-file-webcode.svg": "144374",
+};
+function r(e) {
+    return n(a(e));
 }
+function a(e) {
+    if (!n.o(i, e)) {
+        var t = Error("Cannot find module '" + e + "'");
+        throw ((t.code = "MODULE_NOT_FOUND"), t);
+    }
+    return i[e];
+}
+(r.keys = function () {
+    return Object.keys(i);
+}),
+    (r.resolve = a),
+    (e.exports = r),
+    (r.id = 492313);

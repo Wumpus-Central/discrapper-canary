@@ -1,6 +1,6 @@
 n.d(t, { A: () => b });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     a = n(17928),
     r = n(95561),
     o = n(688810),
@@ -14,7 +14,7 @@ var l = n(627968),
     g = n(628284),
     x = n(821609),
     f = n(375708),
-    A = n(221919);
+    A = n(942151);
 function C(e) {
     let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {

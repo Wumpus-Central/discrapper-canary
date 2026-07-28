@@ -1,13 +1,13 @@
 l.d(a, { default: () => b });
-var e = l(627968);
-l(64700);
+var e = l(477900);
+l(582128);
 var d = l(503698),
     n = l.n(d),
     s = l(17928),
-    t = l(990078),
-    r = l(935462),
-    c = l(534514),
-    g = l(834730),
+    t = l(935462),
+    r = l(297264),
+    c = l(834730),
+    g = l(866665),
     o = l(821609),
     u = l(319756),
     m = l(581781),
@@ -17,7 +17,7 @@ var d = l(503698),
     j = l(514661),
     f = l(375708),
     N = l(661023),
-    v = l(393125);
+    v = l(829725);
 function b(i) {
     let { guildId: a, ...l } = i,
         d = (0, s.bG)([p.A], () => p.A.getGuild(a)),
@@ -27,14 +27,14 @@ function b(i) {
         }, [a]),
         { isAdopting: C, onAdoptTag: k, onEditProfile: y } = (0, j.A)(a, l.onClose);
     if (null != d && (0, x.Rg)(d) && (0, x.q0)(d))
-        return (0, e.jsxs)(r.EO, {
+        return (0, e.jsxs)(t.EO, {
             "data-migration-pending": !0,
             className: v.yl,
-            size: r.rI.DYNAMIC,
+            size: t.rI.DYNAMIC,
             ...l,
             parentComponent: "GuildTagAdoptModal",
             children: [
-                (0, e.jsxs)(r.$m, {
+                (0, e.jsxs)(t.$m, {
                     "data-migration-pending": !0,
                     className: v.jE,
                     scrollbarType: "none",
@@ -47,11 +47,11 @@ function b(i) {
                                     (0, e.jsxs)("div", {
                                         className: v.N1,
                                         children: [
-                                            (0, e.jsx)(c.D, {
+                                            (0, e.jsx)(r.D, {
                                                 variant: "heading-lg/bold",
                                                 children: f.intl.string(N.default.OvKPi0),
                                             }),
-                                            (0, e.jsx)(g.E, {
+                                            (0, e.jsx)(c.E, {
                                                 variant: "text-md/normal",
                                                 children: f.intl.string(N.default.kHxfDw),
                                             }),
@@ -69,7 +69,7 @@ function b(i) {
                                     (0, e.jsxs)("div", {
                                         className: v.UD,
                                         children: [
-                                            (0, e.jsx)(t.m, {
+                                            (0, e.jsx)(g.m, {
                                                 text: f.intl.string(N.default.WlENZt),
                                                 shouldShow: b,
                                                 children: (0, e.jsx)(o.$, {
@@ -103,7 +103,7 @@ function b(i) {
                         }),
                     ],
                 }),
-                (0, e.jsx)(r.s_, { "data-migration-pending": !0, className: v.VN, onClick: l.onClose }),
+                (0, e.jsx)(t.s_, { "data-migration-pending": !0, className: v.VN, onClick: l.onClose }),
             ],
         });
 }

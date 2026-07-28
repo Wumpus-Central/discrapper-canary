@@ -1,5 +1,5 @@
 a.d(t, { A: () => i });
-var n = a(64700),
+var n = a(582128),
     l = a(621466);
 function i(e) {
     let { onPasteFiles: t, onPasteBackgroundText: a } = e;

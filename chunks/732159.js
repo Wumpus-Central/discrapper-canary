@@ -1,68 +1,68 @@
 "use strict";
-n.d(t, { ConfirmModal: () => l });
-var i = n(627968),
-    r = n(64700),
-    s = n(460890),
-    a = n(189213),
-    o = n(696208);
-function l(e) {
+n.d(t, { ConfirmModal: () => o });
+var i = n(477900),
+    r = n(582128),
+    a = n(460890),
+    s = n(189213),
+    l = n(696208);
+function o(e) {
     let {
             confirmText: t,
             cancelText: n,
-            checkboxProps: l,
-            onConfirm: u,
+            checkboxProps: o,
+            onConfirm: d,
             onCancel: c,
-            onCloseCallback: d,
+            onCloseCallback: u,
             variant: _ = "critical",
-            children: h,
-            ...f
+            children: E,
+            ...A
         } = e,
-        { i18n: p } = (0, s.G9)(),
-        E = p.CANCEL,
-        m = p.INLINE_NOTICE_GENERIC_ERROR,
-        [g, A] = r.useState(!1),
-        I = r.useRef(d);
+        { i18n: h } = (0, a.G9)(),
+        I = h.CANCEL,
+        f = h.INLINE_NOTICE_GENERIC_ERROR,
+        [p, T] = r.useState(!1),
+        m = r.useRef(u);
     r.useLayoutEffect(() => {
-        I.current = d;
+        m.current = u;
     }),
         r.useLayoutEffect(
             () => () => {
-                I.current?.();
+                m.current?.();
             },
             [],
         );
-    let [T, S] = r.useState(void 0),
-        y = (e) => {
+    let [g, S] = r.useState(void 0),
+        N = (e) => {
             S(e);
         };
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(s.Modal, {
         actions: [
             {
-                text: n ?? E,
+                text: n ?? I,
                 variant: "secondary",
                 onClick: () => {
-                    c?.(), f.onClose();
+                    c?.(), A.onClose();
                 },
             },
             {
                 text: t,
                 variant: "critical" === _ ? "critical-primary" : _,
                 onClick: async () => {
-                    S(void 0), A(!0);
+                    S(void 0), T(!0);
                     try {
-                        await u?.(y), f.onClose();
+                        await d?.(N), A.onClose();
                     } catch (e) {
-                        throw (A(!1), S((e) => e ?? m), e);
+                        throw (T(!1), S((e) => e ?? f), e);
                     }
                 },
-                disabled: g,
-                loading: g,
+                disabled: p,
+                loading: p,
             },
         ],
-        actionBarInput: null != l ? (0, i.jsx)(o.e, { ...l }) : void 0,
+        actionBarInput: null != o ? (0, i.jsx)(l.e, { ...o }) : void 0,
         role: "alertdialog",
-        notice: null != T ? { message: T, type: "critical" } : void 0,
-        ...f,
-        children: h,
+        notice: null != g ? { message: g, type: "critical" } : void 0,
+        ...A,
+        children: E,
     });
 }

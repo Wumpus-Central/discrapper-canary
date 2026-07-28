@@ -1,6 +1,6 @@
 n.d(i, { default: () => p });
-var e = n(627968),
-    l = n(64700),
+var e = n(477900),
+    l = n(582128),
     a = n(189213),
     o = n(825484),
     s = n(922016),
@@ -11,7 +11,7 @@ var e = n(627968),
     m = n(235640),
     j = n(307731),
     f = n(375708),
-    g = n(532067);
+    g = n(271739);
 let p = function (t) {
     let { channel: i, onClose: n, transitionState: p } = t,
         [x, E] = l.useState(i.defaultReactionEmoji ?? null),

@@ -1,6 +1,6 @@
 i.d(t, { A: () => x });
-var n = i(627968),
-    s = i(64700),
+var n = i(477900),
+    s = i(582128),
     l = i(189213),
     r = i(17928),
     a = i(683071),
@@ -12,8 +12,8 @@ var n = i(627968),
     m = i(235986),
     A = i(147964),
     h = i(375708),
-    E = i(815762),
-    S = i(818050);
+    E = i(708922),
+    S = i(522826);
 let T = /^\d+$|^$/;
 function x(e) {
     let { onClose: t, transitionState: i } = e,
@@ -28,8 +28,8 @@ function x(e) {
         })),
         [N, _] = s.useState(x ?? ""),
         [I, C] = s.useState("8080"),
-        [b, y] = s.useState("localhost"),
-        v = T.test(N);
+        [b, v] = s.useState("localhost"),
+        y = T.test(N);
     async function j() {
         c.SH();
         let e = (function (e, t, i) {
@@ -47,25 +47,25 @@ function x(e) {
     let O = null != x && x === N,
         R = O
             ? function () {
-                  c.cL(), _(""), y(null);
+                  c.cL(), _(""), v(null);
               }
             : j,
-        D = s.useMemo(
+        L = s.useMemo(
             () => [
                 {
                     loading: f,
-                    disabled: !v || 0 === N.length || ("localhost" === b && 0 === I.length),
+                    disabled: !y || 0 === N.length || ("localhost" === b && 0 === I.length),
                     variant: O ? "critical-primary" : "active",
                     text: O ? h.intl.string(h.t.d6TR3I) : h.intl.string(h.t.qwuK5I),
                     onClick: R,
                 },
             ],
-            [N.length, f, O, v, I.length, R, b],
+            [N.length, f, O, y, I.length, R, b],
         );
     return (0, n.jsxs)(l.Modal, {
         title: h.intl.string(h.t.f8fzky),
         subtitle: h.intl.string(h.t.a6Vill),
-        actions: D,
+        actions: L,
         onClose: t,
         transitionState: i,
         children: [
@@ -83,7 +83,7 @@ function x(e) {
                             required: !0,
                             value: N,
                             maxLength: 19,
-                            error: v ? null : h.intl.string(h.t.gPNgKO),
+                            error: y ? null : h.intl.string(h.t.gPNgKO),
                             onChange: function (e) {
                                 _(e);
                             },
@@ -95,14 +95,14 @@ function x(e) {
                         children: (0, n.jsx)(u.l, {
                             selectionMode: "single",
                             label: h.intl.string(h.t["/GTqXG"]),
-                            disabled: !v || "" === N,
+                            disabled: !y || "" === N,
                             value: b,
                             options: [
                                 { value: "localhost", label: h.intl.string(h.t["+Y9Y6r"]), id: "localhost" },
                                 { value: "proxy", label: h.intl.string(h.t.uaksyW), id: "proxy" },
                             ],
                             onSelectionChange: function (e) {
-                                y(e);
+                                v(e);
                             },
                             placeholder: "URL Origin Type",
                         }),

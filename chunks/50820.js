@@ -1,19 +1,19 @@
 l.d(t, { A: () => es, O: () => Z }), l(938796);
 var n,
-    i = l(627968),
-    a = l(64700),
+    i = l(477900),
+    a = l(582128),
     s = l(503698),
     r = l.n(s),
     c = l(284009),
     o = l.n(c),
     d = l(665260),
     u = l(3026),
-    m = l(990078),
-    A = l(462887),
-    p = l(534514),
-    h = l(349288),
-    x = l(707554),
-    g = l(834730),
+    m = l(462887),
+    A = l(297264),
+    p = l(349288),
+    h = l(707554),
+    x = l(834730),
+    g = l(866665),
     y = l(939249),
     f = l(320448),
     v = l(983851),
@@ -48,7 +48,7 @@ var n,
     J = l(375708),
     q = l(432166),
     K = l(360469),
-    Q = l(514146),
+    Q = l(642234),
     Z =
         (((n = {}).ACTIVITY_FEED = "ActivityFeed"),
         (n.STREAM_PREVIEW = "StreamPreview"),
@@ -78,7 +78,7 @@ function el(e) {
     let a = T.A.get(n);
     return (0, i.jsx)("img", {
         alt: "",
-        src: (0, A.q)(l) ? a.icon.lightSVG : a.icon.darkSVG,
+        src: (0, m.q)(l) ? a.icon.lightSVG : a.icon.darkSVG,
         className: Q.platformIcon,
     });
 }
@@ -87,7 +87,7 @@ function en(e) {
         l = (0, N.Ay)();
     return (0, i.jsx)("img", {
         alt: "",
-        src: (0, A.q)(l) ? t.icon.lightSVG : t.icon.darkSVG,
+        src: (0, m.q)(l) ? t.icon.lightSVG : t.icon.darkSVG,
         className: Q.headerPlatformIcon,
     });
 }
@@ -175,7 +175,7 @@ class ei extends a.PureComponent {
             (0, i.jsxs)("div", {
                 className: Q.headerContainer,
                 children: [
-                    (0, i.jsxs)(p.D, {
+                    (0, i.jsxs)(A.D, {
                         className: e ? Q.headerTextEmptyBody : Q.headerTextNormal,
                         variant: a ? "text-xs/semibold" : "eyebrow",
                         children: [
@@ -223,7 +223,7 @@ class ei extends a.PureComponent {
                           ),
                       })
                     : null;
-        if (c) o = (0, i.jsx)(h.Anchor, { onClick: this.handleOpenSpotifyAlbum, children: o });
+        if (c) o = (0, i.jsx)(p.Anchor, { onClick: this.handleOpenSpotifyAlbum, children: o });
         else if ((0, k.Cy)(e)) {
             let t = (0, k.UW)(e);
             if (null == t) return null;
@@ -247,8 +247,8 @@ class ei extends a.PureComponent {
                     (0, i.jsxs)("div", {
                         className: Q.twitchImageOverlay,
                         children: [
-                            (0, i.jsx)(x.H, { className: Q.streamName, children: e.name }),
-                            (0, i.jsx)(g.E, {
+                            (0, i.jsx)(h.H, { className: Q.streamName, children: e.name }),
+                            (0, i.jsx)(x.E, {
                                 variant: "text-xs/semibold",
                                 color: "none",
                                 className: Q.streamGame,
@@ -256,12 +256,12 @@ class ei extends a.PureComponent {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(h.Anchor, { className: Q.twitchBackgroundImage, href: e.url, children: o }),
+                    (0, i.jsx)(p.Anchor, { className: Q.twitchBackgroundImage, href: e.url, children: o }),
                 ],
             })),
         (0, k.Cy)(e) ||
             null == a.small_image ||
-            (l = (0, i.jsx)(m.m, {
+            (l = (0, i.jsx)(g.m, {
                 text: "" !== a.small_text ? a.small_text : null,
                 position: "top",
                 children: (0, i.jsx)("img", {
@@ -275,7 +275,7 @@ class ei extends a.PureComponent {
             : (0, i.jsxs)("div", {
                   className: Q.assets,
                   children: [
-                      (0, i.jsx)(m.m, {
+                      (0, i.jsx)(g.m, {
                           text: null != a.large_text ? a.large_text : null,
                           position: "top",
                           children: o,
@@ -306,7 +306,7 @@ class ei extends a.PureComponent {
               ((o = a),
               (d = a),
               (0, H.A)(e) && null != e.sync_id && null != a
-                  ? (d = (0, i.jsx)(h.Anchor, {
+                  ? (d = (0, i.jsx)(p.Anchor, {
                         className: Q.bodyLink,
                         onClick: this.handleOpenSpotifyTrack,
                         children: a,
@@ -314,7 +314,7 @@ class ei extends a.PureComponent {
                   : (0, k.Cy)(e) && (d = e.name)),
         null == d)
             ? null
-            : (0, i.jsx)(g.E, {
+            : (0, i.jsx)(x.E, {
                   title: o,
                   variant: "text-sm/semibold",
                   className: r()((0, U.t)(Q, "name", t.bot ? "wrap" : "normal")),
@@ -369,7 +369,7 @@ class ei extends a.PureComponent {
                               className: Q.voiceChannelInfo,
                               children: [
                                   (0, i.jsx)(v.H, { size: "xxs", color: "currentColor" }),
-                                  (0, i.jsx)(g.E, {
+                                  (0, i.jsx)(x.E, {
                                       variant: "text-xs/normal",
                                       children: (0, S.m1)(n, D.default, V.A),
                                   }),
@@ -417,7 +417,7 @@ class ei extends a.PureComponent {
             let t = (t, l) =>
                 null != e.sync_id && null != c
                     ? (0, i.jsx)(
-                          h.Anchor,
+                          p.Anchor,
                           { className: Q.bodyLink, onClick: this.handleOpenSpotifyAlbum, children: c },
                           l,
                       )

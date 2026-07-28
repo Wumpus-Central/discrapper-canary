@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { C: () => o, K: () => l });
-var i = n(64700),
+n.d(t, { C: () => l, K: () => o });
+var i = n(582128),
     r = n(506774),
-    s = n(935671);
-let a = "systemServiceAutoInstall";
-function o() {
-    r.w.set(a, !0);
-}
+    a = n(935671);
+let s = "systemServiceAutoInstall";
 function l() {
+    r.w.set(s, !0);
+}
+function o() {
     i.useEffect(() => {
-        null == r.w.get(a) && (o(), (0, s.sL)("first-start", !1));
+        null == r.w.get(s) && (l(), (0, a.sL)("first-start", !1));
     }, []);
 }

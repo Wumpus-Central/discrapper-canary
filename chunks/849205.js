@@ -1,6 +1,6 @@
 l.d(n, { A: () => _ });
-var t = l(627968),
-    i = l(64700),
+var t = l(477900),
+    i = l(582128),
     s = l(702841),
     r = l(312640),
     a = l(798618),
@@ -21,8 +21,8 @@ var t = l(627968),
     C = l(287809),
     T = l(427262),
     b = l(742589),
-    v = l(375708),
-    I = l(354919);
+    I = l(375708),
+    v = l(354919);
 function _(e) {
     let n = e.channel.getRecipientId(),
         l = e.channel.isSystemDM(),
@@ -75,11 +75,11 @@ function _(e) {
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(d.A, { children: v.intl.string(v.t.EJRzg7) }),
+            (0, t.jsx)(d.A, { children: I.intl.string(I.t.EJRzg7) }),
             null != _ &&
                 !l &&
                 (0, t.jsxs)("div", {
-                    className: I.my,
+                    className: v.my,
                     children: [
                         (0, t.jsx)("div", {
                             ref: y,
@@ -91,7 +91,7 @@ function _(e) {
                                           onContextMenu: e.handleContextMenu,
                                           onMouseEnter: w ? P : void 0,
                                           onMouseLeave: w ? V : void 0,
-                                          className: I.or,
+                                          className: v.or,
                                           "aria-hidden": !0,
                                           tabIndex: -1,
                                           children: Q,
@@ -107,44 +107,44 @@ function _(e) {
                                 caretConfig: { align: "start" },
                                 children: [
                                     (0, t.jsxs)("div", {
-                                        className: I.y$,
+                                        className: v.y$,
                                         onMouseEnter: P,
                                         onMouseLeave: V,
                                         children: [
                                             (0, t.jsxs)("div", {
-                                                className: I.qc,
+                                                className: v.qc,
                                                 children: [
                                                     (0, t.jsx)(h.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
-                                                        className: I.rX,
+                                                        className: v.rX,
                                                         children: S,
                                                     }),
                                                     (0, t.jsx)(h.E, {
                                                         variant: "text-xs/semibold",
                                                         color: "text-muted",
-                                                        className: I.FQ,
-                                                        children: v.intl.string(v.t.l1QVfj),
+                                                        className: v.FQ,
+                                                        children: I.intl.string(I.t.l1QVfj),
                                                     }),
                                                 ],
                                             }),
-                                            (0, t.jsx)("div", { className: I.sA }),
+                                            (0, t.jsx)("div", { className: v.sA }),
                                             (0, t.jsx)("div", {
-                                                className: I.cC,
+                                                className: v.cC,
                                                 children: B.map((e) => {
                                                     let { nickname: n, guildIds: l } = e;
                                                     return (0, t.jsxs)(
                                                         "div",
                                                         {
-                                                            className: I.BZ,
+                                                            className: v.BZ,
                                                             children: [
                                                                 (0, t.jsx)(h.E, {
                                                                     variant: "text-sm/medium",
-                                                                    className: I.Vk,
+                                                                    className: v.Vk,
                                                                     children: n,
                                                                 }),
                                                                 (0, t.jsx)("div", {
-                                                                    className: I.Js,
+                                                                    className: v.Js,
                                                                     children: (0, t.jsx)(g.l, { guildIds: l }),
                                                                 }),
                                                             ],
@@ -168,7 +168,7 @@ function _(e) {
                 onMouseLeave: w ? V : void 0,
                 onFocus: w ? P : void 0,
                 onBlur: w ? V : void 0,
-                className: null != e.handleClick ? I.or : null,
+                className: null != e.handleClick ? v.or : null,
                 children: (0, t.jsxs)(t.Fragment, {
                     children: [
                         H
@@ -180,12 +180,12 @@ function _(e) {
                               }),
                         G &&
                             (0, t.jsx)(x.m, {
-                                text: v.intl.string(v.t.QyZ4Td),
+                                text: I.intl.string(I.t.QyZ4Td),
                                 children: (0, t.jsx)(m.m, {
                                     size: "xs",
-                                    "aria-label": v.intl.string(v.t.VHXh8a),
+                                    "aria-label": I.intl.string(I.t.VHXh8a),
                                     color: A.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                    className: I.vW,
+                                    className: v.vW,
                                 }),
                             }),
                     ],

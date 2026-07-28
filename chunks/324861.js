@@ -1,9 +1,9 @@
 l.d(t, { A: () => u });
-var a = l(64700),
+var a = l(582128),
     n = l(554146),
     i = l(228366),
     r = l(20439),
-    o = l(347135),
+    o = l(201274),
     s = l(190107);
 let u = function () {
     let e = (0, r.A)(n.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),

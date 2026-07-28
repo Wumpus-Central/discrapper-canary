@@ -1,47 +1,47 @@
 "use strict";
-n.d(t, { M: () => c, l: () => d });
-var i = n(627968),
-    r = n(64700),
-    s = n(113325),
-    a = n(315710),
-    o = n(707554),
-    l = n(187322),
-    u = n(989395);
+n.d(t, { M: () => c, l: () => u });
+var i = n(477900),
+    r = n(582128),
+    a = n(113325),
+    s = n(315710),
+    l = n(707554),
+    o = n(259678),
+    d = n(989395);
 let c = r.createContext({ inDialog: void 0 }),
-    d = r.forwardRef(function (e, t) {
-        let { children: n, impressionType: d, impression: _, disableTrack: h, returnRef: f, ...p } = e,
-            E = r.useRef(null),
-            m = r.useRef(null),
-            [g, A] = r.useState(!1),
-            I = g ? m : E;
-        (0, a.tj)(I, { returnRef: f }),
-            r.useContext(u.A)(
-                { type: d, name: _?.impressionName, properties: _?.impressionProperties },
-                { disableTrack: h },
+    u = r.forwardRef(function (e, t) {
+        let { children: n, impressionType: u, impression: _, disableTrack: E, returnRef: A, ...h } = e,
+            I = r.useRef(null),
+            f = r.useRef(null),
+            [p, T] = r.useState(!1),
+            m = p ? f : I;
+        (0, s.tj)(m, { returnRef: A }),
+            r.useContext(d.A)(
+                { type: u, name: _?.impressionName, properties: _?.impressionProperties },
+                { disableTrack: E },
             );
-        let T = r.useCallback(
+        let g = r.useCallback(
                 (e) => {
-                    (E.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e);
+                    (I.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e);
                 },
                 [t],
             ),
             S = r.useCallback(
                 (e) => {
-                    g !== e && A(e);
+                    p !== e && T(e);
                 },
-                [g],
+                [p],
             );
         return (0, i.jsx)(c.Provider, {
             value: { inDialog: !0, setFocusLockDisabled: S },
             children: (0, i.jsxs)("div", {
-                ...p,
-                ref: T,
+                ...h,
+                ref: g,
                 role: "dialog",
                 tabIndex: -1,
                 "aria-modal": !0,
                 children: [
-                    (0, i.jsx)(s.zR, {}),
-                    (0, i.jsx)(o.F, { forceLevel: 1, children: (0, i.jsx)(l.xp, { containerRef: E, children: n }) }),
+                    (0, i.jsx)(a.zR, {}),
+                    (0, i.jsx)(l.F, { forceLevel: 1, children: (0, i.jsx)(o.xp, { containerRef: I, children: n }) }),
                 ],
             }),
         });

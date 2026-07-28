@@ -1,13 +1,13 @@
 t.r(a), t.d(a, { default: () => p });
-var i = t(627968),
-    n = t(64700),
+var i = t(477900),
+    n = t(582128),
     r = t(192308),
     l = t(980707),
     d = t(477782),
     o = t(499373),
     c = t(234020),
     s = t(442433),
-    u = t(335993),
+    u = t(449817),
     h = t(375708);
 function p(e) {
     let { navId: a, onClose: p = s.Z_, onSelect: b } = e,
@@ -23,8 +23,8 @@ function p(e) {
                     t.e("90480"),
                     t.e("40963"),
                     t.e("56169"),
-                    t.e("30521"),
-                ]).then(t.bind(t, 523200));
+                    t.e("64307"),
+                ]).then(t.bind(t, 420222));
                 return (a) => (0, i.jsx)(e, { ...a, source: "favorites_header_add_button_context_menu" });
             });
         }, []),

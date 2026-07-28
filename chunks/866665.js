@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { m: () => E });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(140735),
     s = n(475358),
     l = n(834730),
@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(710778),
     c = n(280336),
     u = n(194981),
-    _ = n(310700);
+    _ = n(850132);
 function E(e) {
     let {
             children: t,
@@ -26,24 +26,24 @@ function E(e) {
             caretConfig: S,
             positionKey: N,
             ariaHidden: C = !1,
-            ...R
+            ...O
         } = e,
-        [O, L] = r.useState(null);
+        [R, L] = r.useState(null);
     r.useLayoutEffect(() => {
         null != g && L(g.current);
     }, [g]);
-    let D = r.useCallback(
+    let y = r.useCallback(
             (e) => {
                 null == g && L(e), (0, d.cZ)(m, e);
             },
             [m, g],
         ),
         {
-            tooltipId: y,
+            tooltipId: D,
             isVisible: v,
             targetElementRef: b,
             trigger: M,
-        } = (0, u.D)({ children: t, targetElementRef: D, asContainer: h, containerTag: I, ariaHidden: C, ...R }),
+        } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: I, ariaHidden: C, ...O }),
         [P, U] = r.useState(!1),
         w = r.useMemo(
             () =>
@@ -80,9 +80,9 @@ function E(e) {
                       isVisible: v,
                       isRendered: x,
                       targetElementRef: b,
-                      targetElement: O,
+                      targetElement: R,
                       anchorRef: g,
-                      id: y,
+                      id: D,
                       content: w,
                       position: f,
                       align: p,
@@ -94,6 +94,6 @@ function E(e) {
                 : null,
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: y, children: w }), B],
+        children: [M, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: D, children: w }), B],
     });
 }

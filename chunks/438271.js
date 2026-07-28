@@ -1,9 +1,9 @@
 n.d(t, { A: () => w });
 var i,
-    l = n(627968),
-    s = n(64700),
+    l = n(477900),
+    s = n(582128),
     a = n(136722),
-    r = n(990078),
+    r = n(866665),
     o = n(428678),
     c = n(243721),
     d = n(404778),
@@ -14,12 +14,12 @@ var i,
     x = n(503698),
     A = n.n(x),
     p = n(785007),
-    b = n(789645),
-    f = n(933832),
+    f = n(789645),
+    b = n(933832),
     j = n(88187),
     N = n(939249),
     E = n(375708),
-    C = n(384808),
+    C = n(701328),
     v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
 let T = Object.keys(v);
 function I(e) {
@@ -53,10 +53,10 @@ function S(e) {
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            (i = E.intl.string(E.t["6639O5"])), (t = b.P), (n = C.Xg);
+            (i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg);
             break;
         case "ALLOW":
-            (i = E.intl.string(E.t.RzDfSk)), (t = f.A), (n = C.cw);
+            (i = E.intl.string(E.t.RzDfSk)), (t = b.A), (n = C.cw);
             break;
         default:
             (i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le);
@@ -90,7 +90,7 @@ function O(e) {
     });
 }
 I.Types, (O.Types = I.Types);
-var k = n(492289);
+var k = n(165049);
 class L extends s.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
@@ -119,7 +119,7 @@ class L extends s.PureComponent {
             x = g?.(s),
             A = !!(r || x),
             p = "string" == typeof x && "" !== x ? o.K : void 0,
-            b =
+            f =
                 null == a
                     ? (0, l.jsx)(
                           O,
@@ -152,7 +152,7 @@ class L extends s.PureComponent {
                 (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
-                        b,
+                        f,
                         "string" == typeof x &&
                             "" !== x &&
                             (0, l.jsx)(m.E, {

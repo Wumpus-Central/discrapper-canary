@@ -1,7 +1,7 @@
 a.r(t), a.d(t, { videoQuestCollection: () => ee, playgroundConfig: () => et });
 var l = a(782134),
-    o = a(627968),
-    i = a(64700),
+    o = a(477900),
+    i = a(582128),
     n = a(682176),
     r = a(784018);
 let s = {
@@ -78,7 +78,7 @@ let s = {
         showParticipants: { label: "Show Participants", type: "boolean", defaultValue: !0 },
     },
 };
-var d = a(4798),
+var d = a(461376),
     u = a(831544),
     p = a(231723),
     c = a(717421),

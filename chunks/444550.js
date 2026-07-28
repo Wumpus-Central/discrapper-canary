@@ -1,6 +1,6 @@
 n.d(l, { p: () => K });
-var t = n(627968),
-    r = n(64700),
+var t = n(477900),
+    r = n(582128),
     i = n(503698),
     a = n.n(i),
     s = n(896170),
@@ -12,7 +12,7 @@ var t = n(627968),
     p = n(172218),
     m = n(452027),
     h = n(862301),
-    g = n(187322),
+    g = n(259678),
     x = n(939249),
     b = n(289873),
     v = n(475825),
@@ -29,9 +29,9 @@ var t = n(627968),
     E = n(783878),
     O = n(628284),
     A = n(765671),
-    F = n(194498),
+    F = n(972117),
     q = n(375708),
-    R = n(384267);
+    R = n(888819);
 let T = { keys: ["label"] };
 function L(e) {
     return e.label;
@@ -288,7 +288,7 @@ let M = r.forwardRef(function (e, l) {
         }, [eF, eS, ek, ez]);
     let e0 = b ? z : H,
         e1 = r.useRef(null),
-        { focusPreviousItem: e4, focusNextItem: e8 } = _(e1, ew, eR);
+        { focusPreviousItem: e8, focusNextItem: e4 } = _(e1, ew, eR);
     return (0, t.jsxs)(c.hD, {
         navigator: ez,
         children: [
@@ -458,8 +458,8 @@ let M = r.forwardRef(function (e, l) {
                             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                             eY(e, l);
                         },
-                        focusNextItem: e8,
-                        focusPreviousItem: e4,
+                        focusNextItem: e4,
+                        focusPreviousItem: e8,
                         renderCustomPill: eu,
                         customPillContainerClassName: ec,
                     }),

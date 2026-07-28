@@ -1,6 +1,6 @@
 t.d(n, { ForwardFailedAlertModal: () => M });
-var i = t(627968),
-    l = t(64700),
+var i = t(477900),
+    l = t(582128),
     a = t(732159),
     s = t(17928),
     r = t(834730),
@@ -17,7 +17,7 @@ var i = t(627968),
     p = t(427262),
     b = t(294454),
     g = t(375708),
-    _ = t(151399);
+    _ = t(973743);
 function y(e) {
     let { icon: n, label: t } = e;
     return (0, i.jsxs)("div", {

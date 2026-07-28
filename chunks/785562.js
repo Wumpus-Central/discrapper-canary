@@ -1,33 +1,33 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(989349),
-    u = n.n(l),
-    c = n(27867),
-    d = n(927813),
+n.d(t, { A: () => I });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(866665),
+    o = n(989349),
+    d = n.n(o),
+    c = n(265431),
+    u = n(927813),
     _ = n(379418);
-let h = [
-        [2 * d.A.Seconds.MINUTE, d.A.Seconds.SECOND],
-        [5 * d.A.Seconds.MINUTE, d.A.Seconds.MINUTE],
-        [45 * d.A.Seconds.MINUTE, 2 * d.A.Seconds.MINUTE],
-        [21 * d.A.Seconds.HOUR, 5 * d.A.Seconds.MINUTE],
+let E = [
+        [2 * u.A.Seconds.MINUTE, u.A.Seconds.SECOND],
+        [5 * u.A.Seconds.MINUTE, u.A.Seconds.MINUTE],
+        [45 * u.A.Seconds.MINUTE, 2 * u.A.Seconds.MINUTE],
+        [21 * u.A.Seconds.HOUR, 5 * u.A.Seconds.MINUTE],
     ],
-    f = 2 * d.A.Seconds.HOUR;
-var p = n(992595);
-function E(e) {
+    A = 2 * u.A.Seconds.HOUR;
+var h = n(742715);
+function I(e) {
     let t,
-        { node: n, showTooltip: s = !0, className: l } = e,
-        d =
+        { node: n, showTooltip: a = !0, className: o } = e,
+        u =
             ((t = (0, c.A)()),
             (r.useEffect(() => {
                 if ("R" !== n.format) return;
-                let e = 1e3 * f,
-                    i = Math.abs(n.parsed.diff(u()()));
-                for (let [t, n] of h)
+                let e = 1e3 * A,
+                    i = Math.abs(n.parsed.diff(d()()));
+                for (let [t, n] of E)
                     if (i < 1e3 * t) {
                         e = 1e3 * n;
                         break;
@@ -40,6 +40,6 @@ function E(e) {
             "R" === n.format)
                 ? _.kx.R(n.parsed)
                 : n.formatted),
-        E = (0, i.jsx)("span", { className: a()(p.vE, l), children: d });
-    return !0 !== s ? E : (0, i.jsx)(o.m, { __unsupportedReactNodeAsText: n.full, ariaHidden: !0, children: E });
+        I = (0, i.jsx)("span", { className: s()(h.vE, o), children: u });
+    return !0 !== a ? I : (0, i.jsx)(l.m, { __unsupportedReactNodeAsText: n.full, ariaHidden: !0, children: I });
 }

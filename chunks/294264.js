@@ -1,11 +1,11 @@
 n.d(e, { default: () => f });
-var a = n(627968),
-    i = n(64700),
+var a = n(477900),
+    i = n(582128),
     r = n(17928),
-    s = n(289873),
-    d = n(935462),
+    s = n(935462),
+    d = n(289873),
     l = n(297264),
-    c = n(636537),
+    c = n(562465),
     o = n(228366),
     E = n(652215);
 async function u(t) {
@@ -28,7 +28,7 @@ let A = new m(o.h, {
     },
 });
 var S = n(375708),
-    C = n(191315);
+    C = n(142043);
 function f(t) {
     let { eulaId: e, transitionState: n, onClose: c } = t,
         o = (0, r.bG)([A], () => A.getEULA(e));
@@ -36,23 +36,23 @@ function f(t) {
         u(e);
     }, [e]);
     let E = o?.name ?? S.intl.string(S.t.ZTNur7),
-        g = null != o ? (0, a.jsx)(p.A, { children: o.content, className: C.w }) : (0, a.jsx)(s.y, { className: C.u });
-    return (0, a.jsxs)(d.EO, {
+        g = null != o ? (0, a.jsx)(p.A, { children: o.content, className: C.w }) : (0, a.jsx)(d.y, { className: C.u });
+    return (0, a.jsxs)(s.EO, {
         "data-migration-pending": !0,
         transitionState: n,
-        size: d.rI.SMALL,
+        size: s.rI.SMALL,
         "aria-label": E,
         parentComponent: "EULA",
         children: [
-            (0, a.jsxs)(d.rQ, {
+            (0, a.jsxs)(s.rQ, {
                 "data-migration-pending": !0,
                 justify: h.A.Justify.BETWEEN,
                 children: [
                     (0, a.jsx)(l.D, { variant: "heading-lg/semibold", children: E }),
-                    (0, a.jsx)(d.s_, { "data-migration-pending": !0, onClick: c }),
+                    (0, a.jsx)(s.s_, { "data-migration-pending": !0, onClick: c }),
                 ],
             }),
-            (0, a.jsx)(d.$m, { "data-migration-pending": !0, children: g }),
+            (0, a.jsx)(s.$m, { "data-migration-pending": !0, children: g }),
         ],
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, { A: () => v });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(732159),
     l = n(144228),
     s = n(192308),
@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(929267),
     u = n(988794),
     c = n(375708),
-    p = n(874327);
+    p = n(607119);
 function E(e) {
     let { event: t, recurrenceId: n, guildId: s, onRsvp: E, ...v } = e,
         [R, S] = r.useState(d.yS.SERIES),

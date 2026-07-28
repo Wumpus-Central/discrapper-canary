@@ -1,6 +1,6 @@
-l.d(n, { ix: () => e6, Ay: () => e2, tO: () => e1 }), l(321073), l(938796);
-var t = l(627968),
-    i = l(64700),
+l.d(n, { ix: () => e2, Ay: () => e8, tO: () => e1 }), l(321073), l(938796);
+var t = l(477900),
+    i = l(582128),
     a = l(503698),
     s = l.n(a),
     r = l(607399),
@@ -447,7 +447,7 @@ var eS = l(854627),
     ek = l(486020),
     eP = l(625494),
     eD = l(763754),
-    eL = l(635071),
+    eL = l(799162),
     eV = l(860227),
     eU = l(606049),
     eH = l(3026),
@@ -695,7 +695,7 @@ function e1(e, n, l) {
         ],
     });
 }
-function e6(e) {
+function e2(e) {
     let {
             message: n,
             avatar: l,
@@ -746,7 +746,7 @@ function e6(e) {
 function e3(e, n, l, t) {
     return (!e || n) && null != l && null != t ? 1 : (!e || n) && null != l ? 2 : 0;
 }
-let e2 = i.memo(function (e) {
+let e8 = i.memo(function (e) {
     let {
             message: n,
             repliedMessage: l,
@@ -918,7 +918,7 @@ let e2 = i.memo(function (e) {
         G = (0, eV.xl)(n),
         k = j ? `${O}` : `${O} ${G}`,
         P = l?.state === ey.a.LOADED ? (0, eV.nS)(n) : void 0;
-    return (0, t.jsx)(e6, {
+    return (0, t.jsx)(e2, {
         message: n,
         avatar: _,
         username: (0, t.jsxs)(t.Fragment, {

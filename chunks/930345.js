@@ -1,6 +1,6 @@
 n.d(t, { default: () => L });
-var l = n(627968),
-    s = n(64700),
+var l = n(477900),
+    s = n(582128),
     i = n(91871),
     a = n.n(i),
     r = n(189213),
@@ -8,7 +8,7 @@ var l = n(627968),
     u = n(97808),
     d = n(778712),
     c = n(123292),
-    g = n(534514),
+    g = n(297264),
     m = n(834730),
     h = n(783878),
     x = n(260598),
@@ -19,7 +19,7 @@ var l = n(627968),
     k = n(569944),
     j = n(721228),
     I = n(375708),
-    p = n(915858);
+    p = n(689466);
 function L(e) {
     let { transitionState: t, onClose: n, guildId: i, welcomeMessage: L, onSave: S } = e,
         [E, H] = s.useState({ ...L }),

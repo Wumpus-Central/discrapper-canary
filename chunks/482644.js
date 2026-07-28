@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, { baseRules: () => N, customRules: () => _ });
-var a = s(627968),
-    l = s(64700),
+var a = s(477900),
+    l = s(582128),
     n = s(503698),
     r = s.n(n),
-    u = s(791332),
+    u = s(478676),
     c = s.n(u),
     o = s(707554),
     i = s(192308),
@@ -17,7 +17,7 @@ var a = s(627968),
     k = s(174459),
     R = s(652215),
     b = s(559868),
-    y = s(198964);
+    y = s(343932);
 let C = c().defaultRules.link,
     x = { section: R.JJy.SETTINGS_CHANGELOG };
 function A(e) {

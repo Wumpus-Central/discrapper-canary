@@ -1,9 +1,9 @@
 n.d(t, { A: () => h });
-var r = n(627968),
-    l = n(64700),
+var r = n(477900),
+    l = n(582128),
     i = n(554830),
-    u = n(613373),
-    s = n(475815),
+    s = n(613373),
+    u = n(475815),
     a = n(24001),
     o = n(192444),
     c = n(291749),
@@ -13,7 +13,7 @@ var r = n(627968),
     _ = n(795068),
     m = n(503698),
     p = n.n(m),
-    S = n(834926);
+    S = n(668534);
 function C(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)("svg", {
@@ -36,8 +36,8 @@ function h(e) {
         R = l.useCallback(
             (e) => {
                 if (T) {
-                    let e = (0, s.qf)(t.current?.parentNode, t.current);
-                    null != e && (0, s.sP)(e);
+                    let e = (0, u.qf)(t.current?.parentNode, t.current);
+                    null != e && (0, u.sP)(e);
                 }
                 n(e, d.Cy.LEARN_MORE), D(e, d.Cy.OPEN_GAME_LINK);
             },
@@ -52,9 +52,9 @@ function h(e) {
     return O
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(u.nY, { url: P }),
-                  (0, r.jsx)(u.KP, {}),
-                  (0, r.jsxs)(u.zj, {
+                  (0, r.jsx)(s.nY, { url: P }),
+                  (0, r.jsx)(s.KP, {}),
+                  (0, r.jsxs)(s.zj, {
                       orientation: m,
                       children: [
                           null != P &&
@@ -63,7 +63,7 @@ function h(e) {
                                   questContent: a.uF.VIDEO_MODAL_END_CARD,
                                   sourceQuestContent: h,
                                   children: (e) =>
-                                      (0, r.jsx)(u.Kb, {
+                                      (0, r.jsx)(s.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
@@ -71,7 +71,7 @@ function h(e) {
                                           orientation: m,
                                       }),
                               }),
-                          (0, r.jsx)(u.lx, {
+                          (0, r.jsx)(s.lx, {
                               title: x,
                               subtitle: L,
                               ctaBtnLabel: I.config.ctaConfig.buttonLabel,
@@ -91,7 +91,7 @@ function h(e) {
                           questContent: a.uF.VIDEO_MODAL_END_CARD,
                           sourceQuestContent: h,
                           children: (e) =>
-                              (0, r.jsx)(u.pK, {
+                              (0, r.jsx)(s.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
@@ -99,7 +99,7 @@ function h(e) {
                               }),
                       }),
                   (0, r.jsx)("div", { className: S.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(u.OH, {
+                  (0, r.jsx)(s.OH, {
                       title: x,
                       subtitle: L,
                       icon: i.K,

@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { j: () => E }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(873263),
-    l = n(602853),
-    u = n(661531),
+n.d(t, { j: () => I }), n(321073);
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(806163),
+    o = n(602853),
+    d = n(661531),
     c = n(939249),
-    d = n(140735),
+    u = n(140735),
     _ = n(240248),
-    h = n(155570);
-let f = [18, 18, 16, 16, 14, 12, 10];
-function p(e, t) {
-    return a()({ [h.AN]: !0, [h.CW]: "always" === e, [h._W]: "on-hover" === e && t });
+    E = n(641018);
+let A = [18, 18, 16, 16, 14, 12, 10];
+function h(e, t) {
+    return s()({ [E.AN]: !0, [E.CW]: "always" === e, [E._W]: "on-hover" === e && t });
 }
-function E(e) {
+function I(e) {
     let t,
         n,
         {
-            backgroundStyle: s = "always",
-            children: E,
-            icon: m,
-            name: g,
-            ariaLabel: A,
-            className: I,
-            style: T,
+            backgroundStyle: a = "always",
+            children: I,
+            icon: f,
+            name: p,
+            ariaLabel: T,
+            className: m,
+            style: g,
             to: S,
-            onClick: y,
+            onClick: N,
             selected: C = !1,
-            ...N
+            ...O
         } = e,
-        v = (0, o.W6)();
-    null == m && null != g && (n = f[(t = (0, _.oN)(g)).length - 1] ?? f[f.length - 1]);
-    let R = r.useCallback(
+        R = (0, l.W6)();
+    null == f && null != p && (n = A[(t = (0, _.oN)(p)).length - 1] ?? A[A.length - 1]);
+    let L = r.useCallback(
             (e) => {
                 if (null == S);
-                else if ("string" == typeof S) v.push(S);
+                else if ("string" == typeof S) R.push(S);
                 else {
                     let { pathname: e = "", state: t } = S;
-                    v.push(e, t);
+                    R.push(e, t);
                 }
-                null != y && y(e);
+                null != N && N(e);
             },
-            [v, S, y],
+            [R, S, N],
         ),
-        O = (0, l.r)(u.A.modules.guildbar.AVATAR_SIZE);
+        y = (0, o.r)(d.A.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsxs)(c.D, {
-        ...N,
-        onClick: R,
-        className: a()(I, h.iE, { [h.wH]: C }),
-        style: { ...T, fontSize: n },
+        ...O,
+        onClick: L,
+        className: s()(m, E.iE, { [E.wH]: C }),
+        style: { ...g, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
-            (0, i.jsx)(d.A, { children: null != A && "" !== A ? A : (g ?? "") }),
-            null != t ? (0, i.jsx)("div", { className: a()(p(s, !1), h.q9), "aria-hidden": !0, children: t }) : null,
-            null != m
-                ? (0, i.jsx)("img", { className: h.Kk, src: m, alt: " ", width: O, height: O, "aria-hidden": !0 })
+            (0, i.jsx)(u.A, { children: null != T && "" !== T ? T : (p ?? "") }),
+            null != t ? (0, i.jsx)("div", { className: s()(h(a, !1), E.q9), "aria-hidden": !0, children: t }) : null,
+            null != f
+                ? (0, i.jsx)("img", { className: E.Kk, src: f, alt: " ", width: y, height: y, "aria-hidden": !0 })
                 : null,
-            null != E ? (0, i.jsx)("div", { className: p(s, !0), children: E }) : null,
+            null != I ? (0, i.jsx)("div", { className: h(a, !0), children: I }) : null,
         ],
     });
 }

@@ -1,6 +1,6 @@
 i.d(t, { u: () => T, w: () => I }), i(321073);
-var s = i(627968),
-    r = i(64700),
+var s = i(477900),
+    r = i(582128),
     n = i(939249),
     a = i(834730),
     l = i(289873),
@@ -23,7 +23,7 @@ var s = i(627968),
     E = i(202541),
     _ = i(652215),
     A = i(375708),
-    y = i(738894);
+    y = i(640886);
 let N = "recurring-3p-progress-label",
     w = (e) => {
         let { promotionRecurrences: t } = e,
@@ -177,7 +177,7 @@ function T(e) {
     p.default.track(_.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: r }),
         x.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
-            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("38437"), i.e("85347")]).then(
+            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("93004"), i.e("85347")]).then(
                 i.bind(i, 355150),
             );
             return (t) => (0, s.jsx)(e, { ...t, partnerIds: r, isLocked: n });

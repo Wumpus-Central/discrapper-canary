@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { Dx: () => l, PQ: () => o, aS: () => u, dI: () => s, wR: () => a });
-var i = n(627968),
-    r = n(64700);
-function s(e) {
+n.d(t, { Dx: () => o, PQ: () => l, aS: () => d, dI: () => a, wR: () => s });
+var i = n(477900),
+    r = n(582128);
+function a(e) {
     let t = JSON.stringify(e);
     return { ...e, key: t };
 }
-function a() {
-    let e = r.useContext(l);
+function s() {
+    let e = r.useContext(o);
     if (null == e) throw Error("useThemeContext must be used within a ThemeContext.Provider");
     return e;
 }
-let o = s({
+let l = a({
         theme: "light",
         primaryColor: null,
         secondaryColor: null,
@@ -23,9 +23,9 @@ let o = s({
         disableAdaptiveTheme: !1,
         reduceAdaptiveTheme: !1,
     }),
-    l = r.createContext(o);
-function u(e) {
+    o = r.createContext(l);
+function d(e) {
     let { children: t } = e,
-        n = a();
+        n = s();
     return (0, i.jsx)(i.Fragment, { children: t(n) });
 }

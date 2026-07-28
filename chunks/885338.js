@@ -1,9 +1,9 @@
 l.r(t), l.d(t, { default: () => O });
-var e = l(627968),
-    i = l(64700),
+var e = l(477900),
+    i = l(582128),
     r = l(503698),
     s = l.n(r),
-    a = l(873263),
+    a = l(806163),
     c = l(607399),
     u = l(862482),
     o = l(349288),
@@ -12,7 +12,7 @@ var e = l(627968),
     h = l(950198),
     N = l(652215),
     f = l(375708),
-    p = l(373821);
+    p = l(157397);
 let g = "https://dis.gd/Amazon-Music-Connection",
     C = null != window.opener;
 function O() {

@@ -1,11 +1,11 @@
 e.d(t, { default: () => d });
-var i = e(627968),
-    r = e(64700),
+var i = e(477900),
+    r = e(582128),
     s = e(732159),
     l = e(834730),
     a = e(150934),
     c = e(375708),
-    o = e(239863);
+    o = e(395231);
 function d(n) {
     let { title: t, body: e, onSubmit: d, ...u } = n,
         [h, p] = r.useState(!1);

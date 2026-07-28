@@ -1,6 +1,6 @@
 l.d(t, { A: () => p });
-var s = l(627968),
-    i = l(64700),
+var s = l(477900),
+    i = l(582128),
     a = l(503698),
     n = l.n(a),
     r = l(462887),
@@ -21,7 +21,7 @@ function m(e) {
 function p(e) {
     let { title: t, titleColor: l, description: a, button: o, className: u, children: p, betaTag: g = !1 } = e,
         x = (0, d.Ay)(),
-        A = (0, r.M)(x),
+        v = (0, r.M)(x),
         j = i.useMemo(
             () =>
                 Array.isArray(t)
@@ -42,7 +42,7 @@ function p(e) {
                             (0, s.jsx)(c.E, {
                                 className: h.h_,
                                 variant: "text-md/medium",
-                                color: A ? "text-muted" : "text-strong",
+                                color: v ? "text-muted" : "text-strong",
                                 children: a,
                             }),
                         null != o && (0, s.jsx)("div", { className: h.UD, children: o }),

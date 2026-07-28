@@ -1,8 +1,8 @@
 i.d(t, { A: () => ec });
 var n,
     s,
-    l = i(627968),
-    r = i(64700),
+    l = i(477900),
+    r = i(582128),
     a = i(503698),
     o = i.n(a);
 i(926675);
@@ -11,8 +11,8 @@ var d = i(297264),
     u = i(140735),
     g = i(834730),
     m = i(216964),
-    f = i(661531),
-    x = i(260598),
+    x = i(661531),
+    f = i(260598),
     h = i(22231),
     I = i(915089),
     p = i(409626),
@@ -25,17 +25,17 @@ var d = i(297264),
     N = i(823016),
     b = i(788593),
     C = i(492280),
-    w = i(990078),
+    w = i(866665),
     R = i(789645),
     k = i(147925);
 i(321073);
 var O = i(477782),
     y = i(980707),
     _ = i(922016),
-    G = i(761915),
-    L = i(877784),
-    D = i(53788),
-    P = i(148795),
+    L = i(761915),
+    G = i(877784),
+    P = i(53788),
+    D = i(148795),
     M = i(214947),
     U = i(375708),
     F =
@@ -45,20 +45,20 @@ var O = i(477782),
         (n.FRIENDS = "friends"),
         n);
 let W = {
-        [G.X.BETTER_THAN_YOU]: { getText: () => U.intl.string(U.t.jbIRBE), iconRole: "ribbon" },
-        [G.X.CASUAL]: { getText: () => U.intl.string(U.t.xcFFv6), iconRole: "ribbon" },
-        [G.X.INTERMEDIATE]: { getText: () => U.intl.string(U.t["A/mIs/"]), iconRole: "ribbon" },
-        [G.X.EXPERT]: { getText: () => U.intl.string(U.t.RIOFc2), iconRole: "ribbon" },
-        [G.X.OBSESSED]: { getText: () => U.intl.string(U.t.isPJDu), iconRole: "thumbsUp" },
-        [G.X.LOVE_IT]: { getText: () => U.intl.string(U.t["1rN7BF"]), iconRole: "thumbsUp" },
-        [G.X.KIND_OF_LOVE_IT]: { getText: () => U.intl.string(U.t.bCBpVg), iconRole: "thumbsUp" },
-        [G.X.KIND_OF_HATE_IT]: { getText: () => U.intl.string(U.t["/WcmcP"]), iconRole: "thumbsDown" },
-        [G.X.RAGE_QUITTING]: { getText: () => U.intl.string(U.t["NXZ/MZ"]), iconRole: "thumbsDown" },
-        [G.X.OPEN_TO_PLAY]: { getText: () => U.intl.string(U.t.q30PoH), iconRole: "friends" },
-        [G.X.LOOKING_FOR_GROUP]: { getText: () => U.intl.string(U.t.DWWAAQ), iconRole: "friends" },
-        [G.X.LOOKING_FOR_TIPS]: { getText: () => U.intl.string(U.t.KQDVvH), iconRole: "friends" },
-        [G.X.OPEN_TO_TEACH]: { getText: () => U.intl.string(U.t["5HhQo+"]), iconRole: "friends" },
-        [G.X.LOOKING_TO_DISCUSS]: { getText: () => U.intl.string(U.t.GipOCq), iconRole: "friends" },
+        [L.X.BETTER_THAN_YOU]: { getText: () => U.intl.string(U.t.jbIRBE), iconRole: "ribbon" },
+        [L.X.CASUAL]: { getText: () => U.intl.string(U.t.xcFFv6), iconRole: "ribbon" },
+        [L.X.INTERMEDIATE]: { getText: () => U.intl.string(U.t["A/mIs/"]), iconRole: "ribbon" },
+        [L.X.EXPERT]: { getText: () => U.intl.string(U.t.RIOFc2), iconRole: "ribbon" },
+        [L.X.OBSESSED]: { getText: () => U.intl.string(U.t.isPJDu), iconRole: "thumbsUp" },
+        [L.X.LOVE_IT]: { getText: () => U.intl.string(U.t["1rN7BF"]), iconRole: "thumbsUp" },
+        [L.X.KIND_OF_LOVE_IT]: { getText: () => U.intl.string(U.t.bCBpVg), iconRole: "thumbsUp" },
+        [L.X.KIND_OF_HATE_IT]: { getText: () => U.intl.string(U.t["/WcmcP"]), iconRole: "thumbsDown" },
+        [L.X.RAGE_QUITTING]: { getText: () => U.intl.string(U.t["NXZ/MZ"]), iconRole: "thumbsDown" },
+        [L.X.OPEN_TO_PLAY]: { getText: () => U.intl.string(U.t.q30PoH), iconRole: "friends" },
+        [L.X.LOOKING_FOR_GROUP]: { getText: () => U.intl.string(U.t.DWWAAQ), iconRole: "friends" },
+        [L.X.LOOKING_FOR_TIPS]: { getText: () => U.intl.string(U.t.KQDVvH), iconRole: "friends" },
+        [L.X.OPEN_TO_TEACH]: { getText: () => U.intl.string(U.t["5HhQo+"]), iconRole: "friends" },
+        [L.X.LOOKING_TO_DISCUSS]: { getText: () => U.intl.string(U.t.GipOCq), iconRole: "friends" },
     },
     H = (function (e) {
         let t = {};
@@ -67,7 +67,7 @@ let W = {
             null != n && (t[i] = { getText: n.getText, icon: e[n.iconRole] });
         }
         return t;
-    })({ [F.RIBBON]: L.q, [F.THUMBS_UP]: D.G, [F.THUMBS_DOWN]: P.d, [F.FRIENDS]: M.$ });
+    })({ [F.RIBBON]: G.q, [F.THUMBS_UP]: P.G, [F.THUMBS_DOWN]: D.d, [F.FRIENDS]: M.$ });
 function B(e) {
     let t = H[e];
     return null != t ? t : null;
@@ -77,26 +77,26 @@ let X = {
     skill_level: {
         getLabel: () => U.intl.string(U.t.MKqADM),
         type: "radio",
-        tags: [G.X.CASUAL, G.X.INTERMEDIATE, G.X.EXPERT, G.X.BETTER_THAN_YOU],
+        tags: [L.X.CASUAL, L.X.INTERMEDIATE, L.X.EXPERT, L.X.BETTER_THAN_YOU],
     },
     rating: {
         getLabel: () => U.intl.string(U.t["7/umul"]),
         type: "checkbox",
-        tags: [G.X.OBSESSED, G.X.LOVE_IT, G.X.KIND_OF_LOVE_IT, G.X.KIND_OF_HATE_IT, G.X.RAGE_QUITTING],
+        tags: [L.X.OBSESSED, L.X.LOVE_IT, L.X.KIND_OF_LOVE_IT, L.X.KIND_OF_HATE_IT, L.X.RAGE_QUITTING],
     },
     looking_for: {
         getLabel: () => U.intl.string(U.t["5Dez17"]),
         type: "checkbox",
         tags: [
-            G.X.LOOKING_FOR_GROUP,
-            G.X.OPEN_TO_PLAY,
-            G.X.LOOKING_FOR_TIPS,
-            G.X.OPEN_TO_TEACH,
-            G.X.LOOKING_TO_DISCUSS,
+            L.X.LOOKING_FOR_GROUP,
+            L.X.OPEN_TO_PLAY,
+            L.X.LOOKING_FOR_TIPS,
+            L.X.OPEN_TO_TEACH,
+            L.X.LOOKING_TO_DISCUSS,
         ],
     },
 };
-var z = i(767070);
+var z = i(766342);
 let Y = r.memo(function (e) {
     let { currentTags: t, onTagSelect: i, onNoneSelect: n, onClose: s } = e;
     return (0, l.jsx)(y.W, {
@@ -229,13 +229,13 @@ function q(e) {
         u = t?.filter((e) => null != B(e)) ?? [],
         g = u.length > 0,
         m = c && (0, T.mS)(n) && u.length < 20,
-        { trackUserProfileAction: f } = (0, S.NJ)(),
-        x = (0, r.useRef)(new Map()),
+        { trackUserProfileAction: x } = (0, S.NJ)(),
+        f = (0, r.useRef)(new Map()),
         h = (0, r.useRef)(null),
         I = (0, r.useRef)(null),
         [p, A] = (0, r.useState)(0),
         [j, E] = (0, r.useState)(!1),
-        v = ee(h, I, u, x, A);
+        v = ee(h, I, u, f, A);
     if (
         ((0, r.useEffect)(
             () => (
@@ -269,7 +269,7 @@ function q(e) {
                                         applicationId: s,
                                         widgetType: n,
                                         ref: (t) => {
-                                            null != t && x.current.set(e, t);
+                                            null != t && f.current.set(e, t);
                                         },
                                     },
                                     e,
@@ -282,10 +282,10 @@ function q(e) {
                                 isExpanded: j,
                                 numberOfOverflowingTags: p,
                                 onExpandTags: () => {
-                                    E(!0), f({ action: "EXPAND_GAME_TAGS" });
+                                    E(!0), x({ action: "EXPAND_GAME_TAGS" });
                                 },
                                 onCollapseTags: () => {
-                                    E(!1), f({ action: "COLLAPSE_GAME_TAGS" });
+                                    E(!1), x({ action: "COLLAPSE_GAME_TAGS" });
                                 },
                                 disableInteraction: d,
                             }),
@@ -386,8 +386,8 @@ let ee = (e, t, i, n, s) =>
         s(i.length - o);
     }, [e, t, i?.join(""), n, s]);
 var et = i(858808),
-    ei = i(442356),
-    en = i(529459);
+    ei = i(350956),
+    en = i(445995);
 function es(e) {
     let { index: t, widgetType: i, game: n, children: s, getWidth: r } = e,
         { manageFocusOnReorder: a } = (0, N.r)();
@@ -437,7 +437,7 @@ function eo(e) {
               role: "group",
               "aria-labelledby": r,
               children: [
-                  (0, l.jsx)(m.c, { size: "xxs", color: f.A.colors.ICON_MUTED, className: en.Ls }),
+                  (0, l.jsx)(m.c, { size: "xxs", color: x.A.colors.ICON_MUTED, className: en.Ls }),
                   (0, l.jsx)(er, { user: i, guildId: n, channelId: s, id: r }),
                   (0, l.jsx)(ea, { text: t }),
               ],
@@ -479,7 +479,7 @@ function ed(e) {
                   className: en.kS,
                   children: [
                       (0, l.jsx)(u.A, { tag: "label", htmlFor: g, children: U.intl.string(U.t.JxKXeT) }),
-                      (0, l.jsx)(x.f, {
+                      (0, l.jsx)(f.f, {
                           id: g,
                           value: E,
                           placeholder: C,
@@ -501,7 +501,7 @@ function ed(e) {
                   onClick: R,
                   className: en.Vg,
                   children: [
-                      (0, l.jsx)(h.R, { size: "xxs", color: f.A.colors.ICON_MUTED, className: en.Ls }),
+                      (0, l.jsx)(h.R, { size: "xxs", color: x.A.colors.ICON_MUTED, className: en.Ls }),
                       (0, l.jsx)(er, { user: i, guildId: n, channelId: s, id: m }),
                       (0, l.jsx)(ea, { text: t ?? C, className: o()(en.qC, !w && en.qf) }),
                       (0, l.jsx)(c.D, {
@@ -527,8 +527,8 @@ function ec(e) {
             disableInteraction: u = !1,
             index: g,
             onRemoveGame: m,
-            coverRef: f,
-            className: x,
+            coverRef: x,
+            className: f,
         } = e,
         h = r.useRef(null),
         { applicationId: I, comment: p, tags: A } = s,
@@ -538,11 +538,11 @@ function ec(e) {
         O = 1 === (0, T.cv)(a),
         y = k && (0, T.y9)(a),
         _ = k && !O,
-        { registerDragHandleRef: G } = (0, N.r)();
+        { registerDragHandleRef: L } = (0, N.r)();
     if (w) return (0, l.jsx)(C.E, {});
-    function L() {
+    function G() {
         return (0, l.jsx)(b.A, {
-            coverRef: f,
+            coverRef: x,
             className: null == E || u ? void 0 : ei.iL,
             imageSrc: E,
             gameName: S,
@@ -552,17 +552,17 @@ function ec(e) {
             hideTooltip: !0,
         });
     }
-    function D() {
+    function P() {
         return (0, l.jsxs)("div", {
             ref: h,
-            className: o()(en.Nr, x),
+            className: o()(en.Nr, f),
             children: [
                 _
                     ? (0, l.jsxs)("div", {
                           className: en.An,
-                          children: [L(), (0, l.jsx)(v.jV, { buttonRef: G(s.applicationId), className: en.BU })],
+                          children: [G(), (0, l.jsx)(v.jV, { buttonRef: L(s.applicationId), className: en.BU })],
                       })
-                    : L(),
+                    : G(),
                 (0, l.jsxs)("div", {
                     className: en.zH,
                     children: [
@@ -605,7 +605,7 @@ function ec(e) {
               widgetType: a,
               game: s,
               getWidth: () => h.current?.offsetWidth,
-              children: D(),
+              children: P(),
           })
-        : D();
+        : P();
 }

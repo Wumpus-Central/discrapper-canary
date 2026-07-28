@@ -1,6 +1,6 @@
 n.d(t, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(367513),
     r = n(401843),
@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(313961),
     d = n(643501),
     u = n(652896),
-    p = n(279250),
-    h = n(267102),
+    h = n(279250),
+    p = n(267102),
     m = n(175203),
     A = n(616356),
     f = n(734057),
@@ -25,11 +25,11 @@ let I = [],
     T = 16 / 9;
 function b(e) {
     let { channelId: t, participant: n, popoutType: l, maxHeight: u } = e,
-        A = (0, h.Us)(),
+        A = (0, p.Us)(),
         I = (0, a.bG)([C.Ay], () => C.Ay.getVoiceChannelId() === t),
         b = (0, a.bG)([f.A], () => f.A.getChannel(t)),
         _ = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
-        [R, S] = (0, a.yK)([y.A, x.A, g.A, d.default], () => (0, p.eo)(b, y.A, x.A, g.A, d.default));
+        [R, S] = (0, a.yK)([y.A, x.A, g.A, d.default], () => (0, h.eo)(b, y.A, x.A, g.A, d.default));
     if (null == b) return null;
     async function P() {
         if (null == b) return;
@@ -66,11 +66,11 @@ function _(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
         [o, d] = (0, l.useState)({ top: 0, maxHeight: 0 }),
-        p = (0, a.bG)([C.Ay], () => C.Ay.getVoiceChannelId()),
-        h = (0, a.yK)([A.A], () => A.A.getAllActiveStreams()),
+        h = (0, a.bG)([C.Ay], () => C.Ay.getVoiceChannelId()),
+        p = (0, a.yK)([A.A], () => A.A.getAllActiveStreams()),
         { streamParticipants: m, videoParticipants: f } = (0, a.cf)([c.A], () => ({
-            streamParticipants: h.map((e) => c.A.getParticipant(t, (0, u._z)(e))).filter((e) => null != e),
-            videoParticipants: p === t ? c.A.getVideoParticipants(t) : I,
+            streamParticipants: p.map((e) => c.A.getParticipant(t, (0, u._z)(e))).filter((e) => null != e),
+            videoParticipants: h === t ? c.A.getVideoParticipants(t) : I,
         }));
     return (
         (0, l.useEffect)(() => {

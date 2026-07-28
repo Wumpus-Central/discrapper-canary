@@ -1,6 +1,6 @@
 t.d(n, { A: () => _ });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(17928),
     a = t(554146),
     r = t(621956),
@@ -13,19 +13,19 @@ var l = t(627968),
     m = t(421773),
     C = t(813564),
     E = t(674168),
-    p = t(277192),
+    p = t(333216),
     g = t(173660),
-    x = t(941327),
-    I = t(246356),
-    f = t(204651),
+    x = t(293246),
+    f = t(246356),
+    I = t(204651),
     T = t(376086),
     v = t(375708);
 function _(e) {
     let { channel: n, themeable: _, whichPopoutIsOpen: j, setWhichPopoutIsOpen: N } = e,
-        { parentAnalyticsLocation: O } = (0, u.Ay)(),
+        { parentAnalyticsLocation: b } = (0, u.Ay)(),
         {
             Component: S,
-            play: b,
+            play: O,
             events: { onMouseEnter: y, onMouseLeave: R },
         } = (0, r.E)(),
         L = n.getGuildId(),
@@ -45,13 +45,13 @@ function _(e) {
                         guildId: L,
                         sourceAnalyticsLocations: B,
                         ...n,
-                        onInteraction: (0, A.s)("SoundboardContextMenu", O),
+                        onInteraction: (0, A.s)("SoundboardContextMenu", b),
                     });
             });
     }
     function X() {
-        (0, d.X)(O, d.O.SOUNDBOARD),
-            j === T.P.SOUNDBOARD ? (N?.(void 0), K()) : (null != j ? (b(), Y()) : b(), N?.(T.P.SOUNDBOARD));
+        (0, d.X)(b, d.O.SOUNDBOARD),
+            j === T.P.SOUNDBOARD ? (N?.(void 0), K()) : (null != j ? (O(), Y()) : O(), N?.(T.P.SOUNDBOARD));
     }
     let z = i.useCallback(() => {
             null == j && N?.(T.P.SOUNDBOARD);
@@ -72,7 +72,7 @@ function _(e) {
             let { closePopout: t } = e;
             return G
                 ? null
-                : (0, l.jsx)(I.A, {
+                : (0, l.jsx)(f.A, {
                       children: (0, l.jsx)("div", {
                           onMouseEnter: Y,
                           onMouseLeave: K,
@@ -90,7 +90,7 @@ function _(e) {
                   });
         },
         children: () =>
-            (0, l.jsx)(f.l, {
+            (0, l.jsx)(I.l, {
                 ref: W,
                 isTrayButton: !0,
                 themeable: _,

@@ -1,14 +1,14 @@
 t.d(e, { b: () => x });
-var n = t(627968);
-t(64700);
+var n = t(477900);
+t(582128);
 var r = t(935462),
-    i = t(534514),
+    i = t(297264),
     s = t(834730),
     l = t(821609),
     c = t(235986),
     d = t(936525),
     o = t(375708),
-    m = t(729727);
+    m = t(952052);
 function x(a) {
     let { onClose: e, img: t, title: x, body: u, content: N } = a;
     return (0, n.jsxs)(d.A, {

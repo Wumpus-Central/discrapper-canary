@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { V: () => d }), n(321073);
+n.d(t, { V: () => u }), n(321073);
 var i = n(607399),
     r = n(499979),
-    s = n(626584),
-    a = n(228366),
-    o = n(731854);
-function l(e, t) {
-    a.h.wait(() => {
-        a.h.dispatch({
+    a = n(626584),
+    s = n(228366),
+    l = n(731854);
+function o(e, t) {
+    s.h.wait(() => {
+        s.h.dispatch({
             type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
-            context: o.x.DEFAULT,
+            context: l.x.DEFAULT,
             userId: e,
             videoToggleState: t,
             persist: !1,
@@ -17,10 +17,10 @@ function l(e, t) {
         });
     });
 }
-var u = n(927813),
+var d = n(927813),
     c = n(652215);
-class d {
-    logger = new s.A("VideoHealthManager");
+class u {
+    logger = new a.A("VideoHealthManager");
     windowLength;
     fpsThreshold;
     fpsWindowBorderlineCount;
@@ -79,14 +79,14 @@ class d {
                             ? (this.logger.info(`${e}: detected poor network quality, turning off video`),
                               this.streamDisabledUsers.add(e),
                               (this.currentVideoAutoToggleState[e] = c.bb8.DISABLED),
-                              l(e, c.bb8.DISABLED),
+                              o(e, c.bb8.DISABLED),
                               this.startReenableBackoffTimer(e))
                             : this.currentVideoAutoToggleState[e] === c.bb8.AUTO_PROBING &&
                               ((this.currentVideoAutoToggleState[e] = c.bb8.AUTO_ENABLED),
                               this.logger.info(
                                   `acceptable conditions reached, will reset and send a AUTO_ENABLED for user ${e}`,
                               ),
-                              l(e, c.bb8.AUTO_ENABLED)),
+                              o(e, c.bb8.AUTO_ENABLED)),
                         this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue()));
         }
     }
@@ -96,7 +96,7 @@ class d {
         let { lastBackoffTime: t, expBackoffFactor: n } = this.retryBackoffCache[e];
         null === t || n > 16 || this.elapsedSeconds((0, r.tB)(), t) > 600 ? (n = 1) : (n *= 2),
             (this.retryBackoffCache[e] = { lastBackoffTime: (0, r.tB)(), expBackoffFactor: n });
-        let i = n * this.backoffTimeSec * u.A.Millis.SECOND;
+        let i = n * this.backoffTimeSec * d.A.Millis.SECOND;
         this.logger.info(`starting backoff timer with time = ${i} milliseconds`),
             (this.timeoutIdCache[e] = setTimeout(() => {
                 this.queueReenable(e);
@@ -107,7 +107,7 @@ class d {
     }
     tryReenableQueue() {
         if (!this.disabled && (null == this.probingUserId || !(this.probingUserId in this.perUserFpsWindow)))
-            for (let e = this.enableQueue.shift(); null != e && !this.reenableVideo(e); );
+            for (let e = this.enableQueue.shift(); null != e && !this.reenableVideo(e); e = this.enableQueue.shift());
     }
     reenableVideo(e) {
         return (
@@ -116,7 +116,7 @@ class d {
             this.stateCleanupBeforeEnable(e),
             (this.currentVideoAutoToggleState[e] = c.bb8.AUTO_PROBING),
             (this.probingUserId = e),
-            l(e, c.bb8.AUTO_PROBING),
+            o(e, c.bb8.AUTO_PROBING),
             !0)
         );
     }

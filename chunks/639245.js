@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { G7: () => en, iP: () => ei, sX: () => er, mG: () => ea, MV: () => et });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(562708),
@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(139286),
     N = n(235986),
     C = n(573435),
-    R = n(836039),
-    O = n(702841),
+    O = n(836039),
+    R = n(702841),
     L = n(71393),
     y = n(159273),
     D = n(770335),
@@ -51,7 +51,7 @@ var i = n(627968),
     X = n(34337),
     Q = n(746080),
     J = n(202541),
-    ee = n(979132);
+    ee = n(241860);
 function et(e) {
     var t, n;
     let r,
@@ -197,7 +197,7 @@ function ei(e) {
             isFetching: E,
         } = (function (e) {
             let { emojiId: t, refreshPositionKey: n } = e,
-                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, O.cf)([y.Ay, L.A], () => {
+                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, R.cf)([y.Ay, L.A], () => {
                     var e, n;
                     let i;
                     return (
@@ -275,7 +275,7 @@ function er(e) {
             expressionSourceApplication: A,
             expressionSourceGuild: f,
             joinedEmojiSourceGuildRecord: C,
-            closePopout: O,
+            closePopout: R,
             onToggleShowMoreEmojis: L,
             guildEmoji: y,
             demoMode: D = !1,
@@ -307,7 +307,7 @@ function er(e) {
                       },
             [y, V],
         ),
-        el = !!er && (0, R.tE)(y?.guildId),
+        el = !!er && (0, O.tE)(y?.guildId),
         { analyticsLocations: eo } = (0, g.Ay)(m.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, S.A)(
         {
@@ -330,7 +330,7 @@ function er(e) {
             isDiscoverable: q,
             shouldHideRoleSubscriptionCTA: el,
             onOpenPremiumSettings: () => {
-                O(),
+                R(),
                     W.default.track(b.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_page: et.page,
                         location_section: et.section,
@@ -358,7 +358,7 @@ function er(e) {
             (function () {
                 async function e() {
                     if (D || null == f || K) return;
-                    O();
+                    R();
                     let e = f.id;
                     try {
                         await p.A.joinGuild(e), p.A.transitionToGuildSync(e);
@@ -398,7 +398,7 @@ function er(e) {
                                   size: u.$n.Sizes.SMALL,
                                   fullWidth: !0,
                                   textOptions: { textOverride: ec.text },
-                                  onSubscribeModalClose: (t) => (t ? e() : O()),
+                                  onSubscribeModalClose: (t) => (t ? e() : R()),
                                   postSuccessGuild: t ? (f ?? void 0) : void 0,
                                   premiumModalAnalyticsLocation: et,
                               })
@@ -421,7 +421,7 @@ function er(e) {
                                 size: "sm",
                                 fullWidth: !0,
                                 onClick: function () {
-                                    O(),
+                                    R(),
                                         C?.id != null &&
                                             p.A.transitionToGuildSync(
                                                 C.id,
@@ -452,7 +452,7 @@ function er(e) {
                             expressionSourceGuild: f ?? v.GO.createFromGuildRecord(C),
                             hasJoinedExpressionSourceGuild: K,
                             isDisplayingJoinGuildButtonInPopout: eA,
-                            closePopout: O,
+                            closePopout: R,
                         }),
                         n &&
                             (0, i.jsxs)(i.Fragment, {
@@ -491,7 +491,7 @@ function er(e) {
                                             emojiId: a.emojiId,
                                             expressionSourceGuild: f,
                                             popoutData: ec,
-                                            onClose: O,
+                                            onClose: R,
                                             hasJoinedEmojiSourceGuild: K,
                                             isDisplayingButtonInTopSection: eA || eh,
                                         }),

@@ -1,6 +1,6 @@
-n.d(l, { e: () => g, l: () => m });
-var t = n(627968),
-    i = n(64700),
+n.d(l, { e: () => g, l: () => f });
+var t = n(477900),
+    i = n(582128),
     r = n(192308),
     a = n(534890),
     s = n(308528),
@@ -19,7 +19,7 @@ function g(e) {
         a = c({ userId: l, onClose: n });
     return (0, t.jsx)(o.FD, { variant: i, ...a, ...r });
 }
-function m(e) {
+function f(e) {
     let { userId: l, onClose: n, variant: i = "primary", ...r } = e,
         { text: a, ...s } = c({ userId: l, onClose: n });
     return (0, t.jsx)(o.q3, { tooltipText: a, "aria-label": a, variant: i, ...s, ...r });

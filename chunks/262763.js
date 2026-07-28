@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => T });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var r = n(192308),
     a = n(730852),
     s = n(643501),
@@ -27,8 +27,8 @@ let T = {
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
             bypassBlockedWarningModal: C,
-            bypassGuildIdCheck: R = !1,
-            transitionExtras: O,
+            bypassGuildIdCheck: O = !1,
+            transitionExtras: R,
         } = e;
         t.isThread() &&
             (await u.A.unarchiveThreadIfNecessary(t.id),
@@ -71,16 +71,16 @@ let T = {
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
                           (0, l.pX)(f.BVt.CHANNEL(i, e.id), n);
-                      })(t, R, O),
+                      })(t, O, R),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(
                       async () => {
                           let { default: r } = await Promise.all([
-                              n.e("16747"),
-                              n.e("42157"),
-                              n.e("66714"),
-                              n.e("72467"),
+                              n.e("14131"),
+                              n.e("94149"),
+                              n.e("82770"),
+                              n.e("96587"),
                               n.e("81647"),
                               n.e("24922"),
                               n.e("42234"),

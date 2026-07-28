@@ -22,18 +22,18 @@ n.d(t, {
     zi: () => ed,
 });
 var i,
-    r = n(627968),
-    a = n(64700),
+    r = n(477900),
+    a = n(582128),
     s = n(503698),
     l = n.n(s),
     o = n(989349),
     d = n.n(o),
-    c = n(284513),
+    c = n(794248),
     u = n(598748),
     _ = n(681154),
     E = n(974690),
     A = n(379834),
-    h = n(990078),
+    h = n(866665),
     I = n(834730),
     f = n(983851),
     p = n(661531),
@@ -46,8 +46,8 @@ var i,
     O = n(291747),
     R = n(417270),
     L = n(768622),
-    D = n(369606),
-    y = n(825860),
+    y = n(369606),
+    D = n(825860),
     v = n(605323),
     b = n(748562),
     M = n(306788),
@@ -63,7 +63,7 @@ var i,
     H = n(693879);
 n(424994);
 var j = n(375708),
-    W = n(164123);
+    W = n(403523);
 let Y = {
     [_.ContentInventoryEntryType.TOP_ARTIST]: [es],
     [_.ContentInventoryEntryType.PLAYED_GAME]: [Q, J, X, eo, et, er, el, ei, en],
@@ -209,7 +209,7 @@ function ea(e) {
     if (null == a) return null;
     let s = i ? j.t.C0AxoR : j.t.SDRHgr;
     return (0, r.jsx)(Z, {
-        Icon: D.O,
+        Icon: y.O,
         text: (0, r.jsxs)(r.Fragment, {
             children: [
                 j.intl.string(j.t["/50eHi"]),
@@ -227,7 +227,7 @@ function es(e) {
     let a = (0, G.S1)(n, [1, 2, 5])
         ? j.intl.formatToPlainString(j.t.HtifnG, { count: i })
         : j.intl.formatToPlainString(j.t["jq/Bmu"], { count: i });
-    return (0, r.jsx)(Z, { Icon: D.O, text: a });
+    return (0, r.jsx)(Z, { Icon: y.O, text: a });
 }
 function el(e) {
     let { entry: t } = e,
@@ -236,7 +236,7 @@ function el(e) {
     let i = (0, V.CZ)(t);
     return null == i || i === A.m.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, r.jsx)(Z, { Icon: y.Y, text: j.intl.string(j.t.kAlUsy) });
+        : (0, r.jsx)(Z, { Icon: D.Y, text: j.intl.string(j.t.kAlUsy) });
 }
 function eo(e) {
     let { entry: t } = e,

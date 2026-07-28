@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => l });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => o });
+var i = n(477900);
+n(582128);
 var r = n(289873),
-    s = n(935462),
-    a = n(375708),
-    o = n(889277);
-function l(e) {
-    return (0, i.jsx)(s.EO, {
+    a = n(935462),
+    s = n(375708),
+    l = n(156453);
+function o(e) {
+    return (0, i.jsx)(a.EO, {
         ...e,
-        "aria-label": a.intl.string(a.t.ZTNur7),
-        size: s.rI.SMALL,
+        "aria-label": s.intl.string(s.t.ZTNur7),
+        size: a.rI.SMALL,
         parentComponent: "renderModalSpinner",
-        children: (0, i.jsx)("div", { className: o.dc, children: (0, i.jsx)(r.y, {}) }),
+        children: (0, i.jsx)("div", { className: l.dc, children: (0, i.jsx)(r.y, {}) }),
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, { A: () => m });
-var i = n(64700),
-    s = n(17928),
-    l = n(71393),
+var i = n(582128),
+    l = n(17928),
+    s = n(71393),
     a = n(576705),
     r = n(935208),
     o = n(624458),
@@ -10,25 +10,25 @@ var i = n(64700),
     u = n(652215);
 function m(e) {
     let [t, n] = i.useState(!1),
-        [m, x] = i.useState(!1),
-        h = r.default.cast(e),
-        { joinRequest: g, guild: _ } = (0, s.cf)([c.A, d.A, l.A, a.A], () => {
-            let e = c.A.getRequest(h);
+        [m, h] = i.useState(!1),
+        g = r.default.cast(e),
+        { joinRequest: p, guild: A } = (0, l.cf)([c.A, d.A, s.A, a.A], () => {
+            let e = c.A.getRequest(g);
             if (null == e) return { joinRequest: null, isModmin: !1, guild: null };
-            let t = l.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
+            let t = s.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
             return { joinRequest: e, isModmin: null != t && a.A.can(u.xBc.KICK_MEMBERS, t), guild: t };
         });
     return (
         i.useEffect(() => {
-            null != _ || m || (x(!0), o.A.fetchRequestToJoinGuilds());
-        }, [_, m]),
+            null != A || m || (h(!0), o.A.fetchRequestToJoinGuilds());
+        }, [A, m]),
         i.useEffect(() => {
-            null == g &&
+            null == p &&
                 (n(!0),
-                o.A.fetchJoinRequestForInterview(h).finally(() => {
+                o.A.fetchJoinRequestForInterview(g).finally(() => {
                     n(!1);
                 }));
-        }, [g, h]),
-        { loading: t, joinRequest: g, joinRequestGuild: _ }
+        }, [p, g]),
+        { loading: t, joinRequest: p, joinRequestGuild: A }
     );
 }

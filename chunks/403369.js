@@ -1,28 +1,28 @@
-i.d(s, { A: () => c });
-var t = i(627968);
-i(64700);
-var n = i(17928),
-    l = i(696451),
-    a = i(317525),
-    o = i(183555),
-    r = i(1659),
-    d = i(166005);
+s.d(a, { A: () => c });
+var l = s(477900);
+s(582128);
+var i = s(17928),
+    o = s(696451),
+    d = s(317525),
+    n = s(183555),
+    t = s(1659),
+    r = s(166005);
 function c(e) {
-    let { userId: s, guild: i } = e,
-        c = (0, n.bG)([l.Ay], () => l.Ay.isMember(i.id, s)),
-        u = (0, n.bG)([l.Ay], () => l.Ay.getMember(i.id, s)),
-        p = u?.roles,
-        h = (0, n.yK)([a.A], () => a.A.getManyRoles(i.id, p ?? []).sort(r.m), [p, i.id]),
-        { trackUserProfileAction: A } = (0, o.NJ)();
+    let { userId: a, guild: s } = e,
+        c = (0, i.bG)([o.Ay], () => o.Ay.isMember(s.id, a)),
+        h = (0, i.bG)([o.Ay], () => o.Ay.getMember(s.id, a)),
+        u = h?.roles,
+        A = (0, i.yK)([d.A], () => d.A.getManyRoles(s.id, u ?? []).sort(t.m), [u, s.id]),
+        { trackUserProfileAction: v } = (0, n.NJ)();
     return c
-        ? (0, t.jsx)(d.Ql, {
-              userId: s,
-              guild: i,
-              roles: h,
-              onAddRole: () => A({ action: "ADD_ROLE" }),
-              onRemoveRole: () => A({ action: "REMOVE_ROLE" }),
-              onExpand: () => A({ action: "EXPAND_ROLES" }),
-              onCollapse: () => A({ action: "COLLAPSE_ROLES" }),
+        ? (0, l.jsx)(r.Ql, {
+              userId: a,
+              guild: s,
+              roles: A,
+              onAddRole: () => v({ action: "ADD_ROLE" }),
+              onRemoveRole: () => v({ action: "REMOVE_ROLE" }),
+              onExpand: () => v({ action: "EXPAND_ROLES" }),
+              onCollapse: () => v({ action: "COLLAPSE_ROLES" }),
               allowEditing: !0,
           })
         : null;

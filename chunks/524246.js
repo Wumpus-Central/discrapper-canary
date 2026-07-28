@@ -1,7 +1,7 @@
 i.d(e, { A: () => u });
-var a = i(627968),
-    l = i(64700),
-    r = i(106778),
+var a = i(477900),
+    l = i(582128),
+    r = i(776310),
     s = i(536283);
 let u = function (t) {
     let { confettiTarget: e, confettiCanvas: i, confettiVelocityMultiplier: u, sprites: n, colors: o } = t,

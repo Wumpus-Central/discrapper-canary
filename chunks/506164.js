@@ -1,11 +1,11 @@
 t.d(l, { A: () => d });
-var n = t(627968),
-    i = t(64700),
+var n = t(477900),
+    i = t(582128),
     s = t(331322),
     a = t(834730),
     r = t(821609),
     c = t(847599),
-    u = t(347273);
+    u = t(969361);
 let d = function (e) {
     let {
         title: l,
@@ -22,10 +22,10 @@ let d = function (e) {
     i.useEffect(() => {
         (0, c.Bf)(h, x, N);
     }, [h, x, N]);
-    let j = i.useCallback(() => {
+    let f = i.useCallback(() => {
             (0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, h, x, N), g?.();
         }, [g, h, x, N]),
-        E = i.useCallback(() => {
+        j = i.useCallback(() => {
             (0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, h, x, N), A?.();
         }, [A, h, x, N]);
     return (0, n.jsxs)(s.B, {
@@ -59,8 +59,8 @@ let d = function (e) {
                 align: "center",
                 gap: 16,
                 children: [
-                    null != m && null != g ? (0, n.jsx)(r.$, { variant: "secondary", text: m, onClick: j }) : null,
-                    null != o && null != A ? (0, n.jsx)(r.$, { onClick: E, text: o }) : null,
+                    null != m && null != g ? (0, n.jsx)(r.$, { variant: "secondary", text: m, onClick: f }) : null,
+                    null != o && null != A ? (0, n.jsx)(r.$, { onClick: j, text: o }) : null,
                 ],
             }),
         ],

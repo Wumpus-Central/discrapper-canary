@@ -1,6 +1,6 @@
-n.d(t, { t: () => h });
-var l = n(627968);
-n(64700);
+n.d(t, { t: () => C });
+var l = n(477900);
+n(582128);
 var i = n(503698),
     r = n.n(i),
     a = n(289873),
@@ -11,22 +11,22 @@ var i = n(503698),
     d = n(165191),
     p = n(238017),
     m = n(860262);
-function h(e) {
+function C(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: h,
-            soundEffect: C,
+            emojiConfetti: C,
+            soundEffect: h,
             setEmojiConfetti: E,
             setSoundEffect: f,
         } = (0, s.Pv)(),
         A = (0, u.lo)(n, t),
-        y = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        S = A !== u.tB.DEFAULT;
+        S = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        y = A !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            S &&
+            y &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -44,17 +44,17 @@ function h(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        y &&
+                        S &&
                             (0, l.jsxs)("div", {
                                 className: r()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: C,
+                                        sound: h,
                                         onSelect: function (e) {
                                             null != f && f(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == h ? void 0 : h }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == C ? void 0 : C }),
                                 ],
                             }),
                     ],

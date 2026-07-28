@@ -1,17 +1,17 @@
-n.d(t, { Ay: () => A, UX: () => S, dZ: () => y });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { Ay: () => A, UX: () => y, dZ: () => S });
+var l = n(477900),
+    i = n(582128),
     r = n(503698),
     a = n.n(r),
-    s = n(340287),
+    s = n(333007),
     o = n(430993),
     u = n(17928),
     c = n(430690),
     d = n(529427),
     p = n(883645),
     m = n(601194),
-    h = n(316915),
-    C = n(573359),
+    C = n(316915),
+    h = n(573359),
     E = n(166532),
     f = n(239945);
 function A(e) {
@@ -20,17 +20,17 @@ function A(e) {
             return { header: t, stepProps: n };
         })(e),
         { step: r, stepConfigs: s } = (0, p.Ay)(),
-        { setBodyNode: A, setFooterNode: y, setModalOverlayNode: S } = (0, m.Gm)(),
-        P = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, h.t4)((e) => ({
+        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, m.Gm)(),
+        P = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
         T = s.find((e) => e.key === r);
     if (
         (i.useEffect(() => {
-            S(null);
-        }, [r, S]),
+            y(null);
+        }, [r, y]),
         null == T)
     )
         throw new d.vd({
@@ -38,8 +38,8 @@ function A(e) {
             extraSentryInformation: { stepConfig: T, step: r, unifiedCheckoutFlow: _, stepConfigs: s },
         });
     let g = T?.options?.hideSlider ?? !1,
-        x = T?.options?.hideDefaultModalBody ?? !1,
-        v = T?.options?.sliderBodyClassName,
+        v = T?.options?.hideDefaultModalBody ?? !1,
+        x = T?.options?.sliderBodyClassName,
         N = r === E.pn.REVIEW,
         R = i.useCallback(
             (e, t) => {
@@ -55,7 +55,7 @@ function A(e) {
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          x
+                          v
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
@@ -74,7 +74,7 @@ function A(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, l.jsx)("form", {
-                                                            className: a()(f.OO, { [f.Wq]: N }, v),
+                                                            className: a()(f.OO, { [f.Wq]: N }, x),
                                                             ref: (t) => R(t, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),
@@ -84,10 +84,10 @@ function A(e) {
                                             ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => S(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  S(e);
+                                  y(e);
                               },
                           }),
                       ],
@@ -95,12 +95,12 @@ function A(e) {
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { footerNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);

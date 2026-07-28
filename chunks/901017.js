@@ -1,10 +1,10 @@
 s.d(e, { A: () => d });
-var i = s(627968);
-s(64700);
+var i = s(477900);
+s(582128);
 var r = s(503698),
     a = s.n(r),
     t = s(834730),
-    n = s(940072);
+    n = s(361408);
 function d(c) {
     let { icon: e, iconClassName: s, description: r, color: d } = c;
     return (0, i.jsxs)("div", {

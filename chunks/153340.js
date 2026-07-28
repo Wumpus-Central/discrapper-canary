@@ -1,7 +1,7 @@
 a.r(t), a.d(t, { playgroundConfig: () => z, guildSpaceCollection: () => P });
 var i,
-    l = a(627968),
-    n = a(64700),
+    l = a(477900),
+    n = a(582128),
     s = a(834730),
     r =
         (((i = {}).LEADERBOARD = "leaderboard"),

@@ -1,6 +1,6 @@
 n.d(t, { _A: () => C, Ay: () => O, sP: () => N }), n(938796);
-var s = n(627968),
-    i = n(64700),
+var s = n(477900),
+    i = n(582128),
     a = n(503698),
     r = n.n(a),
     l = n(877413),
@@ -11,7 +11,7 @@ var s = n(627968),
     u = n(613373),
     p = n(625494),
     E = n(652215),
-    g = n(429875);
+    g = n(103323);
 function A(e) {
     let { timestampMs: t, attachmentId: n } = e;
     return (0, s.jsx)(d.D, {
@@ -30,9 +30,9 @@ function A(e) {
 var h = n(860227),
     I = n(861986),
     T = n(375708),
-    f = n(334211),
-    _ = n(992595),
-    S = n(701628);
+    f = n(281867),
+    _ = n(742715),
+    S = n(364932);
 function C(e, t) {
     return e.type === E.lAJ.VOICE_HANGOUT_INVITE
         ? ""

@@ -1,8 +1,8 @@
 n.d(e, { RegisterWebAuthnCredentialModal: () => P }), n(321073);
 var s,
-    a = n(627968),
-    i = n(64700),
-    r = n(636537),
+    a = n(477900),
+    i = n(582128),
+    r = n(562465),
     l = n(347704),
     o = n(292666),
     c = n(331322),
@@ -27,7 +27,7 @@ var s,
         s),
     k = n(652215),
     A = n(375708),
-    b = n(88389);
+    b = n(23677);
 function I(t) {
     let { name: e, onNameChange: n } = t,
         { goToNextStep: s } = (0, l.n)();

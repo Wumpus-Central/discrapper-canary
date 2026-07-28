@@ -1,18 +1,18 @@
-A.d(e, { H: () => _, M: () => l });
-var r,
-    I = A(64700),
-    a = A(688810),
-    C = A(174459),
-    E = A(652215),
-    _ = (((r = {}).CLAIM = "claim"), (r.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (r.CANCEL = "cancel"), r);
-function l(t) {
-    let { analyticsLocations: e } = (0, a.Ay)();
-    return I.useCallback(
-        (A, r) => {
-            C.default.track(E.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+n.d(e, { H: () => a, M: () => E });
+var i,
+    A = n(582128),
+    d = n(688810),
+    r = n(174459),
+    C = n(652215),
+    a = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
+function E(t) {
+    let { analyticsLocations: e } = (0, d.Ay)();
+    return A.useCallback(
+        (n, i) => {
+            r.default.track(C.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                 partner: t,
-                cta_type: A,
-                url: r ?? null,
+                cta_type: n,
+                url: i ?? null,
                 location_stack: e,
             });
         },

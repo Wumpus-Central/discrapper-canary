@@ -1,11 +1,11 @@
 l.d(t, { A: () => A });
-var i = l(627968),
-    s = l(64700),
+var i = l(477900),
+    s = l(582128),
     n = l(503698),
     a = l.n(n),
     d = l(451988),
     r = l(235986),
-    c = l(929959);
+    c = l(818383);
 function o(e) {
     let { percentage: t, isSingleLine: l } = e;
     return (0, i.jsx)("div", {

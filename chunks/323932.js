@@ -1,6 +1,6 @@
 t.d(a, { A: () => h, C: () => b });
-var l = t(627968),
-    n = t(64700),
+var l = t(477900),
+    n = t(582128),
     i = t(17928),
     r = t(477782),
     d = t(499373),
@@ -26,8 +26,8 @@ function b(e) {
                         t.e("90480"),
                         t.e("40963"),
                         t.e("56169"),
-                        t.e("30521"),
-                    ]).then(t.bind(t, 523200));
+                        t.e("64307"),
+                    ]).then(t.bind(t, 420222));
                     return (t) => (0, l.jsx)(e, { ...t, parentId: a, source: "favorites_add_to_category" });
                 });
         }, [e.id]);

@@ -1,58 +1,58 @@
-l.d(t, { QA: () => N, Rq: () => E, cy: () => T });
-var n = l(627968);
-l(64700);
-var a = l(339350),
-    s = l(687966),
-    i = l(323384),
-    r = l(432017),
-    u = l(748562),
-    o = l(661531),
-    c = l(177953),
-    m = l(306788),
-    d = l(765379),
-    p = l(471107),
-    v = l(506326),
-    x = l(693879),
-    f = l(583846),
-    _ = l(53257),
-    h = l(652215);
-function N(e) {
-    let { activity: t } = e,
-        l = t.timestamps?.start ?? t.created_at,
-        { now: c } = (0, p.G)();
-    if (null == l || (0, _.A)(t)) return null;
-    let m = t.timestamps?.end,
-        f = t.timestamps?.isCountDown ?? !1,
-        N = (function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            return t
-                ? a.Q
-                : (0, d.A)(e)
-                  ? l
-                      ? s._
-                      : i.k
-                  : e.type === h.$pd.LISTENING
-                    ? r.T
-                    : e.type === h.$pd.WATCHING
+e.d(l, { QA: () => x, Rq: () => T, cy: () => I });
+var n = e(477900);
+e(582128);
+var r = e(339350),
+    a = e(687966),
+    s = e(323384),
+    i = e(432017),
+    u = e(748562),
+    c = e(661531),
+    o = e(177953),
+    p = e(306788),
+    d = e(765379),
+    f = e(471107),
+    A = e(506326),
+    h = e(693879),
+    v = e(583846),
+    g = e(53257),
+    m = e(652215);
+function x(t) {
+    let { activity: l } = t,
+        e = l.timestamps?.start ?? l.created_at,
+        { now: o } = (0, f.G)();
+    if (null == e || (0, g.A)(l)) return null;
+    let p = l.timestamps?.end,
+        v = l.timestamps?.isCountDown ?? !1,
+        x = (function (t) {
+            let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            return l
+                ? r.Q
+                : (0, d.A)(t)
+                  ? e
+                      ? a._
+                      : s.k
+                  : t.type === m.$pd.LISTENING
+                    ? i.T
+                    : t.type === m.$pd.WATCHING
                       ? u.U
-                      : s._;
-        })(t, f && null != m && m > c);
-    return (0, n.jsxs)(v.er, {
+                      : a._;
+        })(l, v && null != p && p > o);
+    return (0, n.jsxs)(A.er, {
         children: [
-            (0, n.jsx)(N, { size: "xxs", color: o.A.colors.TEXT_FEEDBACK_POSITIVE }),
-            (0, n.jsx)(x.z, { entry: { start: l, end: m, isCountDown: f }, textColor: "text-feedback-positive" }),
+            (0, n.jsx)(x, { size: "xxs", color: c.A.colors.TEXT_FEEDBACK_POSITIVE }),
+            (0, n.jsx)(h.z, { entry: { start: e, end: p, isCountDown: v }, textColor: "text-feedback-positive" }),
         ],
     });
 }
-function T(e) {
-    let { activity: t } = e;
-    if ((0, d.A)(t) || null == t.party) return null;
-    let l = (0, f.gF)(t.state, t.party);
-    return null == l ? null : (0, n.jsx)(v.fM, { Icon: c.n, text: l });
+function I(t) {
+    let { activity: l } = t;
+    if ((0, d.A)(l) || null == l.party) return null;
+    let e = (0, v.gF)(l.state, l.party);
+    return null == e ? null : (0, n.jsx)(A.fM, { Icon: o.n, text: e });
 }
-function E(e) {
-    let { activity: t } = e,
-        l = (0, f.kR)(t.assets?.large_text);
-    return null == l ? null : (0, n.jsx)(v.fM, { Icon: m.K, text: l });
+function T(t) {
+    let { activity: l } = t,
+        e = (0, v.kR)(l.assets?.large_text);
+    return null == e ? null : (0, n.jsx)(A.fM, { Icon: p.K, text: e });
 }

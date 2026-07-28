@@ -1,10 +1,10 @@
 s.d(n, { SyntaxHighlight: () => i });
-var t = s(627968),
-    c = s(64700),
+var t = s(477900),
+    c = s(582128),
     l = s(503698),
     a = s.n(l),
     r = s(768947),
-    u = s(618559);
+    u = s(947271);
 function i(e) {
     let { code: n, lang: s, preferNative: l = !1, ...a } = e,
         u = c.useMemo(() => (0, r.py)(s), [s]);

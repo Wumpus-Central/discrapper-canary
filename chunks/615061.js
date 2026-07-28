@@ -9,7 +9,7 @@ var r,
     d,
     c,
     u,
-    _ = n(627968),
+    _ = n(477900),
     E = n(214958),
     A = n.n(E);
 (window.AudioContext = window.AudioContext ?? window.webkitAudioContext),
@@ -41,7 +41,7 @@ var r,
                 return t.apply(this, n);
             };
         });
-var h = n(64700),
+var h = n(582128),
     I = n(284009),
     f = n.n(I),
     p = n(972347),
@@ -2655,8 +2655,8 @@ class e2 extends eI {
     setVideoEncoderParameters(e) {}
 }
 let e3 = n.p + "worklet.8d84a64a97f8451a.js",
-    e6 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e4 extends D.EventEmitter {
+    e4 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
+class e6 extends D.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2713,7 +2713,7 @@ class e4 extends D.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     handshake() {
-        this.pc1.createOffer(e6).then((e) => {
+        this.pc1.createOffer(e4).then((e) => {
             this.pc1
                 .setLocalDescription(
                     (function (e) {
@@ -3194,7 +3194,7 @@ class tr extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e4(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e6(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }

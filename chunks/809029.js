@@ -1,17 +1,17 @@
 n.d(t, { E: () => g });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     r = n(403581),
     a = n(160946),
     s = n(951305),
     o = n(166532),
-    u = n(424517),
+    u = n(696730),
     c = n(380619),
     d = n(427858),
     p = n(428262),
     m = n(615396),
-    h = n(465657),
-    C = n(71804),
+    C = n(465657),
+    h = n(71804),
     E = n(463376),
     f = n(558620),
     A = n(316915),
@@ -31,7 +31,7 @@ function _(e) {
         p = (0, f.A)(),
         {
             selectedPlanId: m,
-            selectedSkuId: h,
+            selectedSkuId: C,
             purchaseState: E,
             unifiedCheckoutFlow: S,
             activeSubscription: y,
@@ -48,12 +48,12 @@ function _(e) {
         })),
         _ = (0, a.Y)(I);
     if (null == p)
-        throw new C.v({
+        throw new h.v({
             message: "Expected plan to be selected",
             extraSentryInformation: {
                 unifiedCheckoutFlow: S,
                 selectedPlanId: m,
-                selectedSkuId: h,
+                selectedSkuId: C,
                 hasFetchedSubscriptionPlans: _,
             },
         });
@@ -142,7 +142,7 @@ function g(e) {
             activeSubscription: u,
             isPremium: d,
             isGift: m,
-            referralTrialOfferId: C,
+            referralTrialOfferId: h,
             checkoutPriceOptions: S,
             isInOneStepSubscriptionCheckout: P,
             shouldDisallowPlanSelection: I,
@@ -162,23 +162,23 @@ function g(e) {
                     let { trialId: t, referralTrialOfferId: n, isPremium: l, selectedSkuId: i } = e,
                         r = t ?? n ?? null;
                     return { verifiedTrialId: null != r && (!l || y.TP[r].skus.includes(i)) ? r : null };
-                })({ trialId: e.trialId, referralTrialOfferId: C, isPremium: d, selectedSkuId: a }),
-            [e.trialId, C, d, a],
+                })({ trialId: e.trialId, referralTrialOfferId: h, isPremium: d, selectedSkuId: a }),
+            [e.trialId, h, d, a],
         ),
-        x = (0, f.A)(),
-        v = i.useMemo(() => {
-            if (null != e.planGroup && (null == x || e.planGroup.includes(x.id))) return e.planGroup;
-            if (null != x) {
-                if ((0, p.xq)(x.id)) return y.LE;
-                if ((0, p.z4)(x.id)) return y.DA;
+        v = (0, f.A)(),
+        x = i.useMemo(() => {
+            if (null != e.planGroup && (null == v || e.planGroup.includes(v.id))) return e.planGroup;
+            if (null != v) {
+                if ((0, p.xq)(v.id)) return y.LE;
+                if ((0, p.z4)(v.id)) return y.DA;
             }
             return [];
-        }, [x, e.planGroup]),
+        }, [v, e.planGroup]),
         N = null != e.openInvoiceId,
-        M = null == e.initialPlanId && null == e.subscriptionTier,
-        R = i.useMemo(() => !I && (P ? M && d : d), [P, M, d, I]),
-        { claimableRewards: b } = (0, s.Pv)(),
-        j = (0, c.px)(x, m, b),
+        R = null == e.initialPlanId && null == e.subscriptionTier,
+        b = i.useMemo(() => !I && (P ? R && d : d), [P, R, d, I]),
+        { claimableRewards: M } = (0, s.Pv)(),
+        j = (0, c.px)(v, m, M),
         O = e.handleStepChange,
         L = i.useCallback(
             () =>
@@ -193,44 +193,44 @@ function g(e) {
         ),
         w = (0, p.J$)(S.paymentSourceId),
         k = (0, E.R)({ hasOpenInvoice: N ?? !1 }),
-        D = i.useMemo(
+        U = i.useMemo(
             () =>
                 new T({
                     isTrial: t,
                     isGift: m,
-                    selectedPlan: x,
+                    selectedPlan: v,
                     premiumSubscription: u,
-                    planGroup: v,
+                    planGroup: x,
                     isPrepaidPaymentSource: w,
                     isInPastDueCheckout: k,
                 }),
-            [m, x, u, v, w, t, k],
+            [m, v, u, x, w, t, k],
         ),
-        U = i.useCallback(
+        D = i.useCallback(
             (t) => {
                 let { handlePaymentSourceAdd: n } = t;
                 return (0, l.jsx)(_, {
                     handlePaymentSourceAdd: n,
-                    effectivePlanGroup: v,
+                    effectivePlanGroup: x,
                     verifiedTrialId: g,
                     hasOpenInvoice: N,
                     isInPastDueCheckout: k,
                     reviewWarningMessage: e.reviewWarningMessage,
                 });
             },
-            [v, g, e.reviewWarningMessage, N, k],
+            [x, g, e.reviewWarningMessage, N, k],
         ),
         G = null != r ? r.id : void 0,
         F = i.useMemo(() => ({ user_trial_offer_id: G }), [G]),
-        H = i.useMemo(() => ({ trialId: g, planGroup: v }), [g, v]);
-    return (0, l.jsx)(h.Y, {
+        H = i.useMemo(() => ({ trialId: g, planGroup: x }), [g, x]);
+    return (0, l.jsx)(C.Y, {
         ...e,
-        isBackButtonEligible: R,
+        isBackButtonEligible: b,
         onFooterBackClick: L,
         subscriptionMetadata: F,
         customFooterProps: H,
-        renderStepBody: U,
-        resolveInternalState: D.resolveInternalState,
-        resolveTenantReviewButtonProps: D.resolveTenantReviewButtonProps,
+        renderStepBody: D,
+        resolveInternalState: U.resolveInternalState,
+        resolveTenantReviewButtonProps: U.resolveTenantReviewButtonProps,
     });
 }

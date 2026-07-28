@@ -1,9 +1,9 @@
 t.d(s, { default: () => S });
-var i = t(627968),
+var i = t(477900),
     a = t(189213),
     n = t(834730),
     r = t(363487),
-    l = t(64700),
+    l = t(582128),
     o = t(503698),
     c = t.n(o),
     d = t(812993),
@@ -13,13 +13,13 @@ var i = t(627968),
     p = t(470934),
     h = t(998418),
     j = t(813847),
-    v = t(146793),
+    v = t(612400),
     g = t(490557),
     N = t(439156),
     A = t(249286),
     I = t(867060),
     b = t(375708),
-    k = t(416122);
+    k = t(645378);
 function f(e) {
     let { canUseBoosts: s, guildId: t, powerup: a, isNewPerk: r, forceStaticImages: o } = e,
         [f, w] = l.useState(!1),
@@ -106,7 +106,7 @@ function f(e) {
               children: T,
           });
 }
-var w = t(422699);
+var w = t(150387);
 function S(e) {
     let {
             guildId: s,

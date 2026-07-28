@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { Ay: () => o, i4: () => u, wR: () => l });
-var i = n(64700),
+n.d(t, { Ay: () => l, i4: () => d, wR: () => o });
+var i = n(582128),
     r = n(621466),
-    s = n(535185),
-    a = n(148839);
-function o() {
+    a = n(535185),
+    s = n(148839);
+function l() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [r, s] = i.useState(void 0),
-        [a, o] = i.useState(void 0),
-        l = i.useRef(null);
+    let [r, a] = i.useState(void 0),
+        [s, l] = i.useState(void 0),
+        o = i.useRef(null);
     return (
-        u(
-            l,
+        d(
+            o,
             (e) => {
                 let { width: t, height: n } = e;
-                o(n), s(t);
+                l(n), a(t);
             },
             t,
         ),
-        { ref: l, width: r, height: a }
+        { ref: o, width: r, height: s }
     );
 }
-function l() {
+function o() {
     let [e, t] = i.useState(void 0),
-        [n, o] = i.useState(void 0),
-        l = (0, a.A)((e) => {
+        [n, l] = i.useState(void 0),
+        o = (0, s.A)((e) => {
             if (!(0, r.vq)(e.target, HTMLElement)) return { scrollWidth: void 0, scrollHeight: void 0 };
             let n = e.target;
-            o(n.scrollHeight), t(n.scrollWidth);
+            l(n.scrollHeight), t(n.scrollWidth);
         });
-    return { ref: (0, s.w)(l, [], { fireOnMount: !0 }), scrollWidth: e, scrollHeight: n };
+    return { ref: (0, a.w)(o, [], { fireOnMount: !0 }), scrollWidth: e, scrollHeight: n };
 }
-function u(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         r = i.useCallback(
             (n) => {
@@ -48,5 +48,5 @@ function u(e, t) {
             },
             [e, t],
         );
-    (0, s.g)(e, r, n);
+    (0, a.g)(e, r, n);
 }

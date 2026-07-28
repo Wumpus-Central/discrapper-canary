@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { k: () => l });
-var i = n(627968);
-n(64700);
+n.d(t, { k: () => o });
+var i = n(477900);
+n(582128);
 var r = n(224640),
-    s = n(696208),
-    a = n(430993),
-    o = n(20742);
-function l(e) {
+    a = n(696208),
+    s = n(430993),
+    l = n(20742);
+function o(e) {
     let {
         size: t = "md",
         gradientColor: n = "purple",
-        graphic: l,
-        badge: u,
+        graphic: o,
+        badge: d,
         title: c,
-        subtitle: d,
+        subtitle: u,
         actionBarInput: _,
-        actions: h,
-        children: f,
-        "aria-label": p,
-        ...E
+        actions: E,
+        children: A,
+        "aria-label": h,
+        ...I
     } = e;
     return (0, i.jsxs)(r.d, {
-        ...E,
-        "aria-label": p ?? c,
+        ...I,
+        "aria-label": h ?? c,
         size: t,
         paddingSize: "lg",
         children: [
-            (0, i.jsx)(o.V6, { gradientColor: n, graphic: l, badge: u, title: c, subtitle: d }),
-            (0, i.jsx)(a.c, { children: f }),
-            (0, i.jsx)(s.H, { leading: _, actions: h, actionsFullWidth: null == _ }),
+            (0, i.jsx)(l.V6, { gradientColor: n, graphic: o, badge: d, title: c, subtitle: u }),
+            (0, i.jsx)(s.c, { children: A }),
+            (0, i.jsx)(a.H, { leading: _, actions: E, actionsFullWidth: null == _ }),
         ],
     });
 }

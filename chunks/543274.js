@@ -1,10 +1,10 @@
-t.d(n, { K: () => O }), t(321073);
-var l = t(627968),
-    i = t(64700),
+t.d(n, { K: () => b }), t(321073);
+var l = t(477900),
+    i = t(582128),
     s = t(17928),
     a = t(554146),
-    r = t(990078),
-    o = t(922016),
+    r = t(922016),
+    o = t(866665),
     c = t(155718),
     u = t(933958),
     d = t(404522),
@@ -16,20 +16,20 @@ var l = t(627968),
     p = t(975412),
     g = t(384059),
     x = t(379848),
-    I = t(267102),
-    f = t(421773),
+    f = t(267102),
+    I = t(421773),
     T = t(168754),
     v = t(376086),
     _ = t(652215),
     j = t(49999),
     N = t(375708);
-function O(e) {
-    let { channel: n, idle: t, whichPopoutIsOpen: O, setWhichPopoutIsOpen: S } = e,
-        b = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
+function b(e) {
+    let { channel: n, idle: t, whichPopoutIsOpen: b, setWhichPopoutIsOpen: S } = e,
+        O = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         R = (0, A.dL)(y),
-        L = y !== A.xy.CAN_LAUNCH || b,
-        { isHovered: M, setIsHovered: D, onMouseEnter: P, onMouseLeave: G } = (0, f.A)(200, 300),
+        L = y !== A.xy.CAN_LAUNCH || O,
+        { isHovered: M, setIsHovered: D, onMouseEnter: P, onMouseLeave: G } = (0, I.A)(200, 300),
         k = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
         U = (0, s.bG)(
             [u.Ay],
@@ -42,7 +42,7 @@ function O(e) {
             },
             [P],
         ),
-        H = (0, I.Us)() === _.BRT.POPOUT,
+        H = (0, f.Us)() === _.BRT.POPOUT,
         { parentAnalyticsLocation: w, newestAnalyticsLocation: Y } = (0, E.Ay)(),
         K = i.useCallback(() => {
             (0, g.X)(w, g.O.ACTIVITY),
@@ -66,11 +66,11 @@ function O(e) {
             return (
                 X.current && !c && s(j.i.AUTO_DISMISS),
                 X.current !== c && (X.current = c),
-                (0, l.jsx)(o.Y, {
+                (0, l.jsx)(r.Y, {
                     targetElementRef: z,
                     fixed: !0,
-                    shouldShow: M && (O === v.P.ACTIVITY || null == O),
-                    animation: o.Y.Animation.FADE,
+                    shouldShow: M && (b === v.P.ACTIVITY || null == b),
+                    animation: r.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
                     align: "center",
@@ -102,7 +102,7 @@ function O(e) {
                                 let { visibleContent: n, markAsDismissed: t } = e;
                                 return (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, l.jsx)(r.m, {
+                                        (0, l.jsx)(o.m, {
                                             text: N.intl.string(N.t.P8vmUv),
                                             forceOpen: !0,
                                             shouldShow: c,

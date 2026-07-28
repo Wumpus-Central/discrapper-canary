@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { h: () => W, m: () => j });
-var i = n(791332),
+var i = n(478676),
     r = n.n(i),
     a = n(157559),
     s = n(228366);
@@ -11,13 +11,13 @@ function o(e) {
     s.h.dispatch({ type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url: e });
 }
 var d = n(975807),
-    c = n(627968);
-n(64700);
+    c = n(477900);
+n(582128);
 var u = n(192308);
 let _ = {
     show(e) {
         (0, u.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e("80331"), n.e("20577"), n.e("35681"), n.e("20723")]).then(
+            let { default: t } = await Promise.all([n.e("89971"), n.e("20577"), n.e("58062"), n.e("20723")]).then(
                 n.bind(n, 667934),
             );
             return (n) => (0, c.jsx)(t, { ...n, url: e });
@@ -41,7 +41,7 @@ let m = {
             let { url: t, trustUrl: i, onConfirm: r, onCancel: a, isProtocol: s, contextKey: l } = e;
             (0, u.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("33495"), n.e("35681"), n.e("14782")]).then(
+                    let { default: e } = await Promise.all([n.e("52239"), n.e("58062"), n.e("14782")]).then(
                         n.bind(n, 885293),
                     );
                     return (n) =>

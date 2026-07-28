@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
-var r = n(791332);
-function s(e) {
+n.d(t, { A: () => a });
+var i = n(477900);
+n(582128);
+var r = n(478676);
+function a(e) {
     return (
         (e.heading = r.defaultRules.heading),
         (e.lheading = r.defaultRules.lheading),
@@ -17,14 +17,14 @@ function s(e) {
         (e.link = {
             ...e.link,
             react: function (e, t, n) {
-                let s = {};
+                let a = {};
                 if (null != e.context) {
                     let t = e.context[e.target];
-                    t && t.onClick ? ((s.onClick = t.onClick), (s.onContextMenu = t.onContextMenu)) : (s.onClick = t);
+                    t && t.onClick ? ((a.onClick = t.onClick), (a.onContextMenu = t.onContextMenu)) : (a.onClick = t);
                 }
                 return (
-                    null == s.onClick && ((s.href = (0, r.sanitizeUrl)(e.target) ?? void 0), (s.target = "_blank")),
-                    (0, i.jsx)("a", { title: e.title, ...s, rel: "noreferrer", children: t(e.content, n) }, n.key)
+                    null == a.onClick && ((a.href = (0, r.sanitizeUrl)(e.target) ?? void 0), (a.target = "_blank")),
+                    (0, i.jsx)("a", { title: e.title, ...a, rel: "noreferrer", children: t(e.content, n) }, n.key)
                 );
             },
         }),

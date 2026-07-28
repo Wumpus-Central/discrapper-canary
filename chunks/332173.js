@@ -1,61 +1,61 @@
 "use strict";
 n.d(t, { A: () => _ });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(317097),
-    l = n(36075),
-    u = n(939249),
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(317097),
+    o = n(36075),
+    d = n(939249),
     c = n(232042),
-    d = n(160694);
+    u = n(724286);
 let _ = function (e) {
     let {
             ref: t,
             children: n,
-            className: s,
+            className: a,
             color: _,
-            roleColors: h,
-            iconType: f,
-            onMouseEnter: p,
-            onMouseLeave: E,
-            ...m
+            roleColors: E,
+            iconType: A,
+            onMouseEnter: h,
+            onMouseLeave: I,
+            ...f
         } = e,
-        [g, A] = r.useState(!1),
-        { gradientStyle: I, gradientClassname: T } = (0, l.v5)({
-            colorStrings: h ?? null,
+        [p, T] = r.useState(!1),
+        { gradientStyle: m, gradientClassname: g } = (0, o.v5)({
+            colorStrings: E ?? null,
             roleStyle: "username",
-            animateGradient: g,
+            animateGradient: p,
         }),
         S = r.useCallback(
             (e) => {
-                A(!0), p?.(e);
+                T(!0), h?.(e);
             },
-            [A, p],
+            [T, h],
         ),
-        y = r.useCallback(
+        N = r.useCallback(
             (e) => {
-                A(!1), E?.(e);
+                T(!1), I?.(e);
             },
-            [A, E],
+            [T, I],
         ),
         C = {};
     return (
-        null != _ && (C = { color: (0, o.Hl)(_), backgroundColor: g ? (0, o.gq)(_, 0.3) : (0, o.gq)(_, 0.1) }),
-        (0, i.jsx)(u.D, {
-            ...m,
+        null != _ && (C = { color: (0, l.Hl)(_), backgroundColor: p ? (0, l.gq)(_, 0.3) : (0, l.gq)(_, 0.1) }),
+        (0, i.jsx)(d.D, {
+            ...f,
             innerRef: t,
             tag: "span",
-            className: a()(s, { [d.i]: !0, interactive: m.onClick }),
+            className: s()(a, { [u.i]: !0, interactive: f.onClick }),
             onMouseEnter: S,
-            onMouseLeave: y,
+            onMouseLeave: N,
             style: C,
-            tabIndex: null != m.onClick ? 0 : -1,
+            tabIndex: null != f.onClick ? 0 : -1,
             children:
-                null != f
-                    ? (0, i.jsx)(c.A, { iconType: f, children: n })
-                    : null != h
-                      ? (0, i.jsx)("span", { style: { ...I }, className: T, children: n })
+                null != A
+                    ? (0, i.jsx)(c.A, { iconType: A, children: n })
+                    : null != E
+                      ? (0, i.jsx)("span", { style: { ...m }, className: g, children: n })
                       : n,
         })
     );

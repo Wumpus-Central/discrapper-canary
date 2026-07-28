@@ -1,6 +1,6 @@
 n.d(e, { default: () => h });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     s = n(189213),
     r = n(17928),
     u = n(834730),
@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(725386),
     o = n(657855),
     g = n(375708),
-    f = n(500681);
+    f = n(550193);
 function h(t) {
     let { onClose: e, trackUserProfileEditAction: n, highlightedApplicationIds: h, ...p } = t,
         k = (0, r.bG)([a.default], () => a.default.getCurrentUser()),

@@ -1,6 +1,6 @@
 s.r(t), s.d(t, { VideoQuestModalContext: () => D.a, VideoQuestConfigContext: () => D.l, default: () => el });
-var n = s(627968),
-    a = s(64700),
+var n = s(477900),
+    a = s(582128),
     l = s(503698),
     i = s.n(l),
     o = s(284009),
@@ -17,7 +17,7 @@ var n = s(627968),
     j = s(859703),
     f = s(24001),
     A = s(192444),
-    S = s(347135),
+    S = s(201274),
     v = s(792620),
     N = s(753386),
     O = s(73473),
@@ -43,15 +43,15 @@ function I() {
     let { quest: e, sourceQuestContent: t, onClose: s } = a.useContext(D.a);
     return (0, n.jsx)(V.A, { quest: e, questContent: f.uF.QUEST_HOME_DESKTOP, sourceQuestContent: t, onClose: s });
 }
-var L = s(990078),
+var L = s(866665),
     k = s(939249),
-    q = s(534514),
+    q = s(297264),
     Q = s(628284),
     R = s(713517),
     F = s(240248),
     w = s(375708),
-    G = s(503820),
-    H = s(834926);
+    G = s(833860),
+    H = s(668534);
 function U() {
     let { quest: e, sourceQuestContent: t, isPortrait: s, onClose: l } = a.useContext(D.a),
         o = (0, S.LS)(e),
@@ -129,7 +129,7 @@ var K = s(604121),
     B = s(453384),
     J = s(646764),
     Z = s(630037),
-    ee = s(693086);
+    ee = s(634726);
 async function et() {
     return await s.e("40119").then(s.t.bind(s, 718698, 19));
 }

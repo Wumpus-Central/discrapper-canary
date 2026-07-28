@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
-var i = n(64700),
+n.d(t, { A: () => a });
+var i = n(582128),
     r = n(228366);
-function s(e) {
+function a(e) {
     let { connectedEmbeddedActivity: t } = e,
         n = t?.applicationId;
     i.useEffect(() => {

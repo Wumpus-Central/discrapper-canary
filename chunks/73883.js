@@ -1,6 +1,6 @@
 n.d(t, { A: () => w });
-var l = n(627968);
-n(64700);
+var l = n(477900);
+n(582128);
 var i = n(702841),
     a = n(192308),
     r = n(477782),
@@ -16,7 +16,7 @@ var i = n(702841),
     y = n.n(p),
     h = n(827343),
     T = n(730852),
-    I = n(451409),
+    I = n(293246),
     S = n(469802),
     b = n(350701),
     G = n(857253),
@@ -97,10 +97,10 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("37757"),
-                                          n.e("76962"),
+                                          n.e("97509"),
+                                          n.e("25146"),
                                           n.e("95429"),
-                                          n.e("45488"),
+                                          n.e("39713"),
                                           n.e("48370"),
                                           n.e("24227"),
                                       ]).then(n.bind(n, 832910));
@@ -109,8 +109,8 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("18078"),
-                                          n.e("25861"),
+                                          n.e("76279"),
+                                          n.e("47661"),
                                           n.e("71210"),
                                           n.e("38035"),
                                       ]).then(n.bind(n, 14860));

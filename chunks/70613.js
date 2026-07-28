@@ -1,7 +1,7 @@
 n.d(t, { A: () => s });
-var r = n(627968),
-    l = n(64700),
-    a = n(552140);
+var r = n(477900),
+    l = n(582128),
+    a = n(318660);
 let s = function (e) {
     let { colors: t, angle: n = 180, padding: s = 16, children: i } = e,
         c = l.useMemo(() => {

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => R, P: () => C });
-var i = n(627968),
-    r = n(64700),
+n.d(t, { A: () => O, P: () => C });
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(253018),
+    l = n(530795),
     o = n(621466),
     d = n(902001),
     c = n(899536),
@@ -13,14 +13,14 @@ var i = n(627968),
     E = n(216964),
     A = n(387758),
     h = n(39623),
-    I = n(187322),
+    I = n(259678),
     f = n(750506),
     p = n(267102),
     T = n(186306),
     m = n(339871),
     g = n(820066),
     S = n(375708),
-    N = n(128934);
+    N = n(849918);
 function C(e) {
     let { slateEditor: t, options: n, iconClassName: r, dividerClassName: a } = e;
     return null == t
@@ -28,22 +28,22 @@ function C(e) {
         : (0, i.jsxs)("div", {
               className: N.Uo,
               children: [
-                  (0, i.jsx)(O, {
+                  (0, i.jsx)(R, {
                       slateEditor: t,
                       markdownSyntax: "bold",
                       children: (0, i.jsx)(d.$, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
                   }),
-                  (0, i.jsx)(O, {
+                  (0, i.jsx)(R, {
                       slateEditor: t,
                       markdownSyntax: "italics",
                       children: (0, i.jsx)(c.y, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
                   }),
-                  (0, i.jsx)(O, {
+                  (0, i.jsx)(R, {
                       slateEditor: t,
                       markdownSyntax: "underline",
                       children: (0, i.jsx)(u.q, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
                   }),
-                  (0, i.jsx)(O, {
+                  (0, i.jsx)(R, {
                       slateEditor: t,
                       markdownSyntax: "strikethrough",
                       children: (0, i.jsx)(_.t, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
@@ -56,7 +56,7 @@ function C(e) {
                           children: (0, i.jsx)(E.c, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
                       }),
                   !n?.disableInlineCode &&
-                      (0, i.jsx)(O, {
+                      (0, i.jsx)(R, {
                           slateEditor: t,
                           markdownSyntax: "inlineCode",
                           children: (0, i.jsx)(A.G, {
@@ -67,7 +67,7 @@ function C(e) {
                               className: s()(N.Kk, r),
                           }),
                       }),
-                  (0, i.jsx)(O, {
+                  (0, i.jsx)(R, {
                       slateEditor: t,
                       markdownSyntax: "spoiler",
                       children: (0, i.jsx)(h.b, { size: "md", color: "currentColor", className: s()(N.Kk, r) }),
@@ -75,7 +75,7 @@ function C(e) {
               ],
           });
 }
-let R = r.forwardRef(function (e, t) {
+let O = r.forwardRef(function (e, t) {
     let { getSlateEditor: n, containerRef: a, options: s } = e,
         d = r.useRef(null),
         [c, u] = r.useState(!1),
@@ -150,13 +150,13 @@ let R = r.forwardRef(function (e, t) {
                 y: Math.max(a.current?.getBoundingClientRect()?.y ?? 0, Math.min(d.y, s.y)),
             };
         }, [a, c, n]),
-        [S, R] = r.useState(0),
-        [O, L] = r.useState(0);
+        [S, O] = r.useState(0),
+        [R, L] = r.useState(0);
     if (
         (r.useLayoutEffect(() => {
             if (null == T || null == m || null == d.current) return;
             let e = d.current.getBoundingClientRect();
-            L(e.width / 2), R(e.height + 12);
+            L(e.width / 2), O(e.height + 12);
         }, [T, m]),
         null == T || null == m)
     )
@@ -169,7 +169,7 @@ let R = r.forwardRef(function (e, t) {
                   id: "slate-toolbar",
                   ref: d,
                   className: N.KE,
-                  style: { top: m - S, left: T - O },
+                  style: { top: m - S, left: T - R },
                   onMouseDown: (e) => {
                       e.preventDefault(), e.stopPropagation();
                   },
@@ -180,7 +180,7 @@ let R = r.forwardRef(function (e, t) {
               }),
           });
 });
-function O(e) {
+function R(e) {
     let { slateEditor: t, markdownSyntax: n, children: r } = e,
         a = !1;
     if (t?.selection != null) {

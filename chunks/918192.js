@@ -1,6 +1,6 @@
 n.d(s, { Bw: () => E, ld: () => b });
-var e = n(627968);
-n(64700);
+var e = n(477900);
+n(582128);
 var r = n(17928),
     l = n(661531),
     i = n(428678),
@@ -17,7 +17,7 @@ var r = n(17928),
     g = n(312006),
     v = n(366098),
     k = n(375708),
-    p = n(195695);
+    p = n(935047);
 function E(t) {
     let { channelId: s } = t;
     return (0, e.jsx)(N, { channelId: s });

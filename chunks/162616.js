@@ -1,7 +1,7 @@
 l.r(t), l.d(t, { collectiblesCollection: () => f, playgroundConfig: () => C });
 var o = l(34188),
-    s = l(627968),
-    r = l(64700),
+    s = l(477900),
+    r = l(582128),
     a = l(331322),
     n = l(834730),
     i = l(440938),
@@ -11,7 +11,7 @@ var o = l(34188),
     u = l(828614),
     p = l(484469),
     m = l(758836),
-    x = l(724316);
+    x = l(309284);
 function g(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }

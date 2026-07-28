@@ -1,11 +1,11 @@
 t.a(e, async function (e, l) {
     try {
         t.d(n, { z: () => m });
-        var r = t(627968);
-        t(64700);
-        var a = t(785041),
-            s = t(17928),
-            i = t(159273),
+        var r = t(477900);
+        t(582128);
+        var a = t(924557),
+            i = t(17928),
+            s = t(159273),
             c = t(7584),
             d = t(930101),
             u = t(78377),
@@ -14,34 +14,34 @@ t.a(e, async function (e, l) {
         function m(e) {
             let { value: n, type: t } = e,
                 l = (0, a.ER)(),
-                s =
+                i =
                     1 === l.length &&
                     "paragraph" === l[0].type &&
                     1 === l[0].value.length &&
                     "emoji" === l[0].value[0].type;
             switch (t) {
                 case "unicode":
-                    return (0, r.jsx)(x, { value: n, jumboable: s });
+                    return (0, r.jsx)(x, { value: n, jumboable: i });
                 case "custom":
-                    return (0, r.jsx)(j, { value: n, jumboable: s });
+                    return (0, r.jsx)(j, { value: n, jumboable: i });
             }
         }
         function x(e) {
             let { value: n, jumboable: t } = e,
                 l = o.Ay.getURL(n),
                 a = c.Ay.convertSurrogateToName(n),
-                s = (0, u.p)();
+                i = (0, u.p)();
             return (0, r.jsx)(d.H, {
                 node: { name: a, src: l, jumboable: t },
-                channelId: s?.channelId,
-                messageId: s?.messageId,
+                channelId: i?.channelId,
+                messageId: i?.messageId,
             });
         }
         function j(e) {
             let { value: n, jumboable: t } = e,
                 l = (0, u.p)(),
                 a = l?.guildId,
-                c = (0, s.bG)([i.Ay], () => i.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
+                c = (0, i.bG)([s.Ay], () => s.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
                 o = c?.name ?? n.name;
             return (
                 null != c && c.require_colons && (o = `:${c.name}:`),

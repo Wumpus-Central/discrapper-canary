@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => T, X: () => p });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var r = n(503698),
     a = n.n(r),
     s = n(17928),
@@ -15,7 +15,7 @@ var r = n(503698),
     A = n(6155),
     h = n(919706),
     I = n(375708),
-    f = n(429904);
+    f = n(516184);
 function p(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: a } = e,
         l = (0, s.bG)([E.A], () => E.A.getChannelId()),

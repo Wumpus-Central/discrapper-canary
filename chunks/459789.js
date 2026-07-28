@@ -1,8 +1,8 @@
 r.r(t), r.d(t, { VerifyAccountLoading: () => h, VerifyAccountDeekLink: () => g, default: () => A });
 var n,
-    l = r(627968),
-    i = r(64700),
-    a = r(873263),
+    l = r(477900),
+    i = r(582128),
+    a = r(806163),
     c = r(607399),
     o =
         (((n = {})[(n.HANDOFF_AUTHORIZED = 0)] = "HANDOFF_AUTHORIZED"),
@@ -32,7 +32,7 @@ var p = r(458518),
     E = r(950198),
     R = r(652215),
     m = r(375708),
-    y = r(225299);
+    y = r(601803);
 let _ = null != window.opener;
 function A() {
     let e = (0, a.W6)(),

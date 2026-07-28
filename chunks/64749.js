@@ -1,6 +1,6 @@
 n.d(t, { Ay: () => H, eW: () => P, th: () => U });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(91871),
@@ -13,22 +13,22 @@ var i = n(627968),
     x = n(834730),
     h = n(939249),
     E = n(404778),
-    j = n(534514),
-    N = n(475825),
-    f = n(39255),
+    j = n(297264),
+    f = n(475825),
+    N = n(39255),
     p = n(47167),
     A = n(713654),
     I = n(915089),
     S = n(201275),
     C = n(967144),
-    v = n(657048),
-    _ = n(963307),
+    _ = n(657048),
+    v = n(963307),
     T = n(734057),
     b = n(317525),
     y = n(994500),
     R = n(287809),
     L = n(375708),
-    G = n(627452);
+    G = n(466820);
 let D = (0, I.Ld)(),
     O = "text-sm/medium";
 function M(e) {
@@ -38,27 +38,27 @@ function k(e) {
     return 0 === e.type;
 }
 function U(e) {
-    let t = `${!e.name.includes(_.QP) ? "@" : ""}${e.name}`;
-    return { tag: { type: f._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
+    let t = `${!e.name.includes(v.QP) ? "@" : ""}${e.name}`;
+    return { tag: { type: N._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function P(e) {
     let t = (0, p.m1)(e, R.default, y.A);
-    return { tag: { type: f._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
+    return { tag: { type: N._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
 }
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
         o = (0, S.$7)({ guildId: n, roleId: s, size: 16 }),
         d = (0, c.bG)([b.A], () => b.A.getRole(n, s)),
-        h = a.includes(_.QP) ? "" : "@",
+        h = a.includes(v.QP) ? "" : "@",
         E = (0, u.r)(m.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = d?.colorString ?? E,
-        N = (0, C.X_)(n, d, d?.colorStrings);
+        f = (0, C.X_)(n, d, d?.colorStrings);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.ex, l),
         children: [
-            (0, i.jsx)(g.W, { className: G.__invalid_roleDot, color: j, colors: N, background: !1, tooltip: !1 }),
-            null != o ? (0, i.jsx)(v.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
+            (0, i.jsx)(g.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
+            null != o ? (0, i.jsx)(_.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
             (0, i.jsx)(x.E, { variant: O, className: G.pP, children: a }),
         ],
     });
@@ -96,7 +96,7 @@ function H(e) {
         } = e,
         S = (0, I.GV)(),
         C = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
-        v = l.useMemo(
+        _ = l.useMemo(
             () =>
                 (function (e, t, n) {
                     if (null == e) return {};
@@ -114,7 +114,7 @@ function H(e) {
                 })(a, u, C),
             [a, u, C],
         ),
-        _ = l.useMemo(() => Object.keys(v), [v]),
+        v = l.useMemo(() => Object.keys(_), [_]),
         [y, R] = l.useState(""),
         [O, w] = l.useState(!1),
         [F, H] = l.useState(!1),
@@ -163,7 +163,7 @@ function H(e) {
     }, [O, F]);
     let $ = l.useCallback(
             (e) => {
-                let t = { ...v };
+                let t = { ..._ };
                 k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
                     J(t),
                     R(""),
@@ -174,7 +174,7 @@ function H(e) {
                         null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
                     }, 16);
             },
-            [J, v],
+            [J, _],
         ),
         ee = l.useCallback(
             (e) => {
@@ -196,11 +196,11 @@ function H(e) {
         ),
         et = l.useMemo(
             () =>
-                _.map((e) => {
+                v.map((e) => {
                     var n;
-                    return (n = v[e]), { ...n.tag, label: B(n.row, t, G.yS) };
+                    return (n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) };
                 }),
-            [v, _, t],
+            [_, v, t],
         );
     return (0, i.jsxs)("div", {
         className: r()(G.MT, A),
@@ -209,22 +209,22 @@ function H(e) {
                 className: G.M6,
                 ref: W.setReference,
                 children: [
-                    (0, i.jsx)(f.A, {
+                    (0, i.jsx)(N.A, {
                         tags: et,
                         maxHeight: 98,
-                        size: f.A.Sizes.MEDIUM,
+                        size: N.A.Sizes.MEDIUM,
                         query: y,
                         ref: Y,
                         onRemoveTag: (e) => {
-                            let t = _[e],
-                                { [t]: n, ...i } = v;
+                            let t = v[e],
+                                { [t]: n, ...i } = _;
                             J(i), R(""), Q();
                         },
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: g ?? L.intl.string(L.t.uqHLzW),
-                        sections: [_.length],
+                        sections: [v.length],
                         inputProps: {
                             "aria-controls": D,
                             "aria-describedby": null != p ? S : void 0,
@@ -241,7 +241,7 @@ function H(e) {
                             onFocus: (e) => Z(!0, 1, e),
                             onBlur: (e) => Z(!1, 1, e),
                             tabIndex: -1,
-                            children: (0, i.jsx)(N.Ei, {
+                            children: (0, i.jsx)(f.Ei, {
                                 className: G.ac,
                                 innerClassName: G.bB,
                                 sections: q,

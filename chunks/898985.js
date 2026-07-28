@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { J: () => u, _: () => d });
-var i = n(64700),
+n.d(t, { J: () => d, _: () => u });
+var i = n(582128),
     r = n(508425),
-    s = n(559949),
-    a = n(430571),
-    o = n(864386),
-    l = n(375708);
-let u = {
-        [r.z.SOLID]: o.default.OpWJ3f,
-        [r.z.GRADIENT]: o.default["i9e/u1"],
-        [r.z.NEON]: o.default.x68b1F,
-        [r.z.TOON]: o.default.otpeeM,
-        [r.z.POP]: o.default.cjQOKb,
-        [r.z.GUMMY]: o.default.x9Gtie,
-        [r.z.PRISM]: o.default["/M7psm"],
+    a = n(559949),
+    s = n(430571),
+    l = n(864386),
+    o = n(375708);
+let d = {
+        [r.z.SOLID]: l.default.OpWJ3f,
+        [r.z.GRADIENT]: l.default["i9e/u1"],
+        [r.z.NEON]: l.default.x68b1F,
+        [r.z.TOON]: l.default.otpeeM,
+        [r.z.POP]: l.default.cjQOKb,
+        [r.z.GUMMY]: l.default.x9Gtie,
+        [r.z.PRISM]: l.default["/M7psm"],
     },
     c = {
         [r.z.SOLID]: 3,
@@ -25,13 +25,13 @@ let u = {
         [r.z.POP]: 3,
         [r.z.GUMMY]: 3,
     };
-function d(e) {
-    let t = (0, a.A)()[e];
+function u(e) {
+    let t = (0, s.A)()[e];
     return i.useMemo(
         () => ({
-            name: l.intl.string(u[e] ?? o.default.OpWJ3f),
+            name: o.intl.string(d[e] ?? l.default.OpWJ3f),
             defaultColors: t,
-            previewStyles: { fontId: s.x.DEFAULT, effectId: e, colors: t },
+            previewStyles: { fontId: a.x.DEFAULT, effectId: e, colors: t },
             minContrastRatio: c[e] ?? 3,
         }),
         [e, t],

@@ -1,6 +1,6 @@
-t.d(e, { W: () => I, _: () => M });
-var l = t(627968),
-    n = t(64700),
+t.d(e, { W: () => M, _: () => I });
+var l = t(477900),
+    n = t(582128),
     i = t(284009),
     r = t.n(i),
     s = t(364840),
@@ -9,18 +9,18 @@ var l = t(627968),
     h = t(38021),
     d = t(834730),
     u = t(821609),
-    m = t(169797),
+    m = t(480642),
     p = t(166532),
     x = t(796012),
     E = t(659746),
     j = t(975571),
-    C = t(652215),
-    v = t(26279),
-    A = t(202541),
-    g = t(818348),
-    f = t(375708),
-    b = t(703345);
-function M(a) {
+    v = t(652215),
+    A = t(26279),
+    C = t(202541),
+    f = t(818348),
+    g = t(375708),
+    b = t(443593);
+function I(a) {
     let {
         currentStep: e,
         isRefreshEnabled: t,
@@ -44,7 +44,7 @@ function M(a) {
                     children: [
                         null != n
                             ? (0, l.jsx)(o.Q, {
-                                  text: f.intl.string(f.t["13/7kX"]),
+                                  text: g.intl.string(g.t["13/7kX"]),
                                   onClick: () => i(n),
                                   variant: "secondary",
                               })
@@ -61,7 +61,7 @@ function M(a) {
                 }),
             });
 }
-function I(a) {
+function M(a) {
     let e,
         {
             onClose: t,
@@ -72,22 +72,22 @@ function I(a) {
             paymentSourceType: o,
             didPurchaseOnFractionalPremium: m = !1,
             fallbackGuildName: p,
-            customCheckoutFlow: M,
+            customCheckoutFlow: I,
         } = a,
-        { theme: I } = (0, h.wR)(),
+        { theme: M } = (0, h.wR)(),
         [R, L] = n.useState(x.V1.Scenes.ENTRY),
         [T, y] = n.useState(!1),
         P = i?.name ?? p;
     return (
         (e = s
             ? null == P
-                ? f.intl.format(f.t.P52e1r, {})
-                : f.intl.format(f.t["4UnIk9"], { guildName: P })
+                ? g.intl.format(g.t.P52e1r, {})
+                : g.intl.format(g.t["4UnIk9"], { guildName: P })
             : m
-              ? f.intl.format(f.t.gFaKd1, { helpCenterLink: j.A.getArticleURL(C.MVz.FRACTIONAL_PREMIUM_ABOUT) })
+              ? g.intl.format(g.t.gFaKd1, { helpCenterLink: j.A.getArticleURL(v.MVz.FRACTIONAL_PREMIUM_ABOUT) })
               : null == P
-                ? f.intl.format(f.t.SZ5ohR, { guildSubscriptionQuantity: r })
-                : f.intl.format(f.t.GxK3Mv, { guildName: P, guildSubscriptionQuantity: r })),
+                ? g.intl.format(g.t.SZ5ohR, { guildSubscriptionQuantity: r })
+                : g.intl.format(g.t.GxK3Mv, { guildName: P, guildSubscriptionQuantity: r })),
         (0, l.jsxs)("div", {
             className: b.RP,
             children: [
@@ -111,9 +111,9 @@ function I(a) {
                     : null,
                 (0, l.jsx)(E.Ay, {
                     className: b.E,
-                    theme: I,
-                    premiumType: A.PremiumTypes.TIER_2,
-                    type: g.Nc.has(o ?? g.he.UNKNOWN)
+                    theme: M,
+                    premiumType: C.PremiumTypes.TIER_2,
+                    type: f.Nc.has(o ?? f.he.UNKNOWN)
                         ? E.Ay.Types.PREMIUM_PAYMENT_STARTED
                         : E.Ay.Types.GUILD_BOOST_APPLIED,
                 }),
@@ -123,21 +123,21 @@ function I(a) {
                     className: b.xR,
                     children: e,
                 }),
-                M === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
+                I === A.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
                     ? (0, l.jsx)(d.E, {
                           variant: "text-md/medium",
                           color: "interactive-text-default",
                           className: b.xR,
                           children: (0, l.jsxs)("p", {
-                              children: [f.intl.string(f.t.bIVRSQ), " ", f.intl.string(f.t["0UJqOy"])],
+                              children: [g.intl.string(g.t.bIVRSQ), " ", g.intl.string(g.t["0UJqOy"])],
                           }),
                       })
                     : (0, l.jsx)(u.$, {
                           variant: "primary",
                           text:
-                              M === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
-                                  ? f.intl.string(f.t.sRApon)
-                                  : f.intl.string(f.t["/iTxgz"]),
+                              I === A.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+                                  ? g.intl.string(g.t.sRApon)
+                                  : g.intl.string(g.t["/iTxgz"]),
                           onClick: t,
                       }),
             ],

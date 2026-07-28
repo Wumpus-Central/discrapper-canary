@@ -1,11 +1,11 @@
-l.d(t, { a: () => b, v: () => N }), l(321073);
-var n = l(627968),
-    r = l(64700),
+l.d(t, { a: () => N, v: () => b }), l(321073);
+var n = l(477900),
+    r = l(582128),
     s = l(355522),
     i = l(37766),
     a = l(637956),
-    u = l(352224),
-    c = l(885574),
+    c = l(352224),
+    u = l(885574),
     o = l(691885),
     d = l(834730),
     m = l(939249),
@@ -16,19 +16,19 @@ var n = l(627968),
     j = l(327105),
     f = l(375708),
     g = l(255900);
-let b = "new_payment_source_id";
-function N(e) {
+let N = "new_payment_source_id";
+function b(e) {
     let {
             value: t,
             options: l,
-            onChange: N,
+            onChange: b,
             onNew: E,
             noticeMessage: T,
             newPaymentMethodOptionLabel: S,
-            disabled: y = !1,
-            error: A,
+            disabled: A = !1,
+            error: y,
         } = e,
-        C = r.useMemo(() => {
+        D = r.useMemo(() => {
             let e = l.map((e) => {
                 let t =
                         null != e.icon
@@ -39,7 +39,7 @@ function N(e) {
                                   : e.icon === v.Be.PIX
                                     ? (0, n.jsx)(a.W, { className: g.s7 })
                                     : e.icon === v.Be.IDEAL
-                                      ? (0, n.jsx)(u.E, { className: g.s7 })
+                                      ? (0, n.jsx)(c.E, { className: g.s7 })
                                       : (0, n.jsx)("img", { src: (0, v.Nj)(e.icon), alt: "", className: g.s7 })
                             : void 0,
                     l =
@@ -47,7 +47,7 @@ function N(e) {
                             ? (0, n.jsx)(h.m, {
                                   text: e.tooltipText,
                                   asContainer: !0,
-                                  children: (0, n.jsx)(c.m, { size: "xs", color: x.A.colors.TEXT_MUTED }),
+                                  children: (0, n.jsx)(u.m, { size: "xs", color: x.A.colors.TEXT_MUTED }),
                               })
                             : void 0;
                 return {
@@ -62,8 +62,8 @@ function N(e) {
             });
             return (
                 e.push({
-                    id: b,
-                    value: b,
+                    id: N,
+                    value: N,
                     label: S ?? f.intl.string(j.default.rNF29q),
                     leading: void 0,
                     description: void 0,
@@ -71,11 +71,11 @@ function N(e) {
                 e
             );
         }, [l, S]),
-        D = r.useCallback(
+        C = r.useCallback(
             (e) => {
-                e === b ? E() : null != e && N(e);
+                e === N ? E() : null != e && b(e);
             },
-            [E, N],
+            [E, b],
         ),
         P = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -84,11 +84,11 @@ function N(e) {
                     hideLabel: !0,
                     placeholder: f.intl.string(j.default.rNF29q),
                     value: t,
-                    options: C,
-                    onSelectionChange: D,
+                    options: D,
+                    onSelectionChange: C,
                     selectionMode: "single",
-                    disabled: y || 0 === l.length,
-                    errorMessage: A,
+                    disabled: A || 0 === l.length,
+                    errorMessage: y,
                     fullWidth: !0,
                     variant: "unsupported_payment_modal_card",
                 }),
@@ -96,7 +96,7 @@ function N(e) {
                     ? (0, n.jsxs)("div", {
                           className: g.T4,
                           children: [
-                              (0, n.jsx)(c.m, { size: "xs", color: x.A.colors.TEXT_FEEDBACK_INFO }),
+                              (0, n.jsx)(u.m, { size: "xs", color: x.A.colors.TEXT_FEEDBACK_INFO }),
                               (0, n.jsx)(d.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-info",
@@ -107,7 +107,7 @@ function N(e) {
                     : null,
             ],
         });
-    return 0 !== l.length || y
+    return 0 !== l.length || A
         ? P
         : (0, n.jsx)(m.D, { onClick: E, "aria-label": f.intl.string(j.default.rNF29q), className: g.OV, children: P });
 }

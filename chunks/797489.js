@@ -1,7 +1,7 @@
 n.d(t, { default: () => lg });
 var l,
-    i = n(627968),
-    a = n(64700),
+    i = n(477900),
+    a = n(582128),
     r = n(503698),
     s = n.n(r),
     c = n(562708),
@@ -713,8 +713,8 @@ function e8(e) {
 }
 var e2 = n(998445),
     e4 = n(274997),
-    e6 = n(80500),
-    e3 = n(319745),
+    e3 = n(80500),
+    e6 = n(319745),
     e5 = n(488225),
     e7 = n(967492),
     e9 = n(72265),
@@ -746,12 +746,12 @@ function ti(e) {
                 case U.V.YOUTUBE:
                     return {
                         action: O.GameProfileTrackActionActions.YouTubeLink,
-                        icon: (0, i.jsx)(e6.C, { ...t }),
+                        icon: (0, i.jsx)(e3.C, { ...t }),
                         title: eh.intl.string(eh.t.lNmxbE),
                     };
                 case U.V.FACEBOOK:
                     return {
-                        icon: (0, i.jsx)(e3.Z, { ...t }),
+                        icon: (0, i.jsx)(e6.Z, { ...t }),
                         action: O.GameProfileTrackActionActions.FacebookLink,
                         title: eh.intl.string(eh.t.FjyREK),
                     };
@@ -1467,11 +1467,11 @@ function t4(e) {
         ],
     });
 }
-function t6(e) {
+function t3(e) {
     let { show: t } = e;
     return (0, i.jsx)("div", { className: s()(t2.nI, t2.Jn, t && t2.hD) });
 }
-let t3 = a.forwardRef(function (e, t) {
+let t6 = a.forwardRef(function (e, t) {
     let { game: n } = e,
         [l] = a.useState(() => Math.random()),
         r = a.useMemo(() => {
@@ -2438,8 +2438,8 @@ function n2(e) {
 }
 n(667532);
 var n4 = n(853022);
-let n6 = new Set(["1402418703554842694", "356877880938070016"]),
-    n3 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
+let n3 = new Set(["1402418703554842694", "356877880938070016"]),
+    n6 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
 var n5 = n(349361),
     n7 = n(924895),
     n9 = n(422688),
@@ -2531,9 +2531,9 @@ function la(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== U.V.EPICGAMES || !!n6.has(l)) &&
+                            (e.category !== U.V.EPICGAMES || !!n3.has(l)) &&
                             (e.category !== U.V.STEAM || r !== u.Y.RETIRED_ABANDONED) &&
-                            n3.includes(e.category),
+                            n6.includes(e.category),
                     ) ?? [];
                 null == t ||
                     r === u.Y.RETIRED_ABANDONED ||
@@ -2896,9 +2896,9 @@ let lg = function (e) {
                               obscured: Q,
                               onClose: em,
                               children: [
-                                  (0, i.jsx)(t3, { game: F, ref: ev }),
+                                  (0, i.jsx)(t6, { game: F, ref: ev }),
                                   (0, i.jsx)(t4, { game: F, show: ef, trackAction: ec }),
-                                  (0, i.jsx)(t6, { show: ef }),
+                                  (0, i.jsx)(t3, { show: ef }),
                                   (0, i.jsxs)(A.Ch, {
                                       ref: ex,
                                       onScroll: eE,

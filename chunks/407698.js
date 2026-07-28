@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { Q: () => h });
-var i = n(627968),
-    r = n(64700),
-    s = n(990078),
-    a = n(459192),
-    o = n(426983),
-    l = n(176128),
-    u = n(454938),
+n.d(t, { Q: () => E });
+var i = n(477900),
+    r = n(582128),
+    a = n(866665),
+    s = n(459192),
+    l = n(426983),
+    o = n(176128),
+    d = n(454938),
     c = n(714991),
-    d = n(107773),
+    u = n(107773),
     _ = n(652215);
-function h(e) {
+function E(e) {
     let { guild: t, children: n } = e,
-        h = (0, u.A)(t);
+        E = (0, d.A)(t);
     return r.useMemo(() => {
-        if (h) {
-            let e = (0, l.Jp)(t);
-            return (0, o.K)(e) !== o._.NONE;
+        if (E) {
+            let e = (0, o.Jp)(t);
+            return (0, l.K)(e) !== l._.NONE;
         }
         return (
             t.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ||
@@ -24,10 +24,10 @@ function h(e) {
             t.features.has(_.GuildFeatures.VERIFIED) ||
             t.features.has(_.GuildFeatures.PARTNERED)
         );
-    }, [t, h])
-        ? (0, i.jsx)(a.u, {
-              asset: h
-                  ? (0, i.jsx)(d.A, { disableBoostClick: !0, guild: t, size: 20 })
+    }, [t, E])
+        ? (0, i.jsx)(s.u, {
+              asset: E
+                  ? (0, i.jsx)(u.A, { disableBoostClick: !0, guild: t, size: 20 })
                   : (0, i.jsx)(c.A, { guild: t, size: 20 }),
               assetSize: 20,
               position: "right",
@@ -35,5 +35,5 @@ function h(e) {
               body: t.name,
               children: n,
           })
-        : (0, i.jsx)(s.m, { position: "right", align: "center", text: t.name, children: n });
+        : (0, i.jsx)(a.m, { position: "right", align: "center", text: t.name, children: n });
 }

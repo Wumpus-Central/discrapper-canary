@@ -1,51 +1,51 @@
 "use strict";
-n.d(t, { A: () => f });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(392245),
-    l = n(653307);
-let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
-    c = { START: l.LF, END: l.Ub, CENTER: l.wq, BETWEEN: l.LT, AROUND: l.aD },
-    d = { START: l.CT, END: l.ZT, CENTER: l.Hu, STRETCH: l.hx, BASELINE: l.Ju },
-    _ = { NO_WRAP: l.oA, WRAP: l.LV, WRAP_REVERSE: l.Tt };
-function h(e) {
+n.d(t, { A: () => A });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(582013),
+    o = n(582835);
+let d = { VERTICAL: o.Vd, HORIZONTAL: l.xM, HORIZONTAL_REVERSE: l.XB },
+    c = { START: o.LF, END: o.Ub, CENTER: o.wq, BETWEEN: o.LT, AROUND: o.aD },
+    u = { START: o.CT, END: o.ZT, CENTER: o.Hu, STRETCH: o.hx, BASELINE: o.Ju },
+    _ = { NO_WRAP: o.oA, WRAP: o.LV, WRAP_REVERSE: o.Tt };
+function E(e) {
     let {
         children: t,
         className: n,
-        direction: r = u.HORIZONTAL,
-        justify: s = c.START,
-        align: l = d.STRETCH,
-        wrap: h = _.NO_WRAP,
-        shrink: f = 1,
-        grow: p = 1,
-        basis: E = "auto",
-        style: m,
-        ...g
+        direction: r = d.HORIZONTAL,
+        justify: a = c.START,
+        align: o = u.STRETCH,
+        wrap: E = _.NO_WRAP,
+        shrink: A = 1,
+        grow: h = 1,
+        basis: I = "auto",
+        style: f,
+        ...p
     } = e;
     return (0, i.jsx)("div", {
-        style: { flexShrink: f, flexGrow: p, flexBasis: E, ...m },
-        className: a()(o.Uu, r, s, l, h, n),
-        ...g,
+        style: { flexShrink: A, flexGrow: h, flexBasis: I, ...f },
+        className: s()(l.Uu, r, a, o, E, n),
+        ...p,
         children: t,
     });
 }
-(h.Child = function (e) {
-    let { children: t, className: n, shrink: s = 1, grow: l = 1, basis: u = "auto", style: c, wrap: d = !1, ..._ } = e,
-        h = { className: (n = n ?? o.Gu), style: { flexGrow: l, flexShrink: s, flexBasis: u, ...c }, ..._ };
-    if (!d && "string" != typeof t && 1 === r.Children.count(t)) {
+(E.Child = function (e) {
+    let { children: t, className: n, shrink: a = 1, grow: o = 1, basis: d = "auto", style: c, wrap: u = !1, ..._ } = e,
+        E = { className: (n = n ?? l.Gu), style: { flexGrow: o, flexShrink: a, flexBasis: d, ...c }, ..._ };
+    if (!u && "string" != typeof t && 1 === r.Children.count(t)) {
         let e = r.Children.only(t);
         return (
-            (h.style = { ...h.style, ...e.props.style }),
-            (h.className = a()(e.props.className, n)),
-            r.cloneElement(e, h)
+            (E.style = { ...E.style, ...e.props.style }),
+            (E.className = s()(e.props.className, n)),
+            r.cloneElement(e, E)
         );
     }
-    return (0, i.jsx)("div", { ...h, children: t });
+    return (0, i.jsx)("div", { ...E, children: t });
 }),
-    (h.Direction = u),
-    (h.Align = d),
-    (h.Justify = c),
-    (h.Wrap = _);
-let f = h;
+    (E.Direction = d),
+    (E.Align = u),
+    (E.Justify = c),
+    (E.Wrap = _);
+let A = E;

@@ -1,24 +1,24 @@
-l.d(t, { e: () => a });
-var s = l(64700),
-    n = l(568065),
-    r = l(853513),
-    i = l(375708);
-function a(e, t, l) {
-    return s.useMemo(
+l.d(t, { e: () => o });
+var n = l(582128),
+    i = l(568065),
+    s = l(853513),
+    r = l(375708);
+function o(e, t, l) {
+    return n.useMemo(
         () =>
             t.sourceEntitlement?.ends_at != null
                 ? { type: "expiring", expiringAt: t.sourceEntitlement.ends_at }
                 : l && null != e.storeRemovalDate
                   ? { type: "removing", removingAt: e.storeRemovalDate }
-                  : t.type === n.b_.LEVEL_ACTIVATED
+                  : t.type === i.b_.LEVEL_ACTIVATED
                     ? {
                           type: "active",
-                          statusText: i.intl.formatToPlainString(r.default.WRRYUT, {
-                              perkName: t.sourcePowerup?.title ?? i.intl.string(i.t.BfF6ED),
+                          statusText: r.intl.formatToPlainString(s.default.WRRYUT, {
+                              perkName: t.sourcePowerup?.title ?? r.intl.string(r.t.BfF6ED),
                           }),
                       }
-                    : t.type !== n.b_.INACTIVE
-                      ? { type: "active", statusText: i.intl.string(r.default.FFLkmx) }
+                    : t.type !== i.b_.INACTIVE
+                      ? { type: "active", statusText: r.intl.string(s.default.FFLkmx) }
                       : void 0,
         [t, l, e],
     );

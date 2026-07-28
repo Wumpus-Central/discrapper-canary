@@ -1,11 +1,11 @@
 i.d(t, { default: () => z });
-var r = i(627968),
-    s = i(64700),
+var r = i(477900),
+    s = i(582128),
     n = i(43594),
     a = i(503698),
     l = i.n(a),
     o = i(935462),
-    c = i(534514),
+    c = i(297264),
     d = i(834730),
     p = i(821609),
     u = i(503852),
@@ -15,7 +15,7 @@ var r = i(627968),
     j = i(439156),
     h = i(568065),
     E = i(375708),
-    I = i(764872),
+    I = i(688656),
     g = i(107836);
 function A(e) {
     let { guildId: t, powerup: i, onClose: n, ...a } = e,
@@ -78,9 +78,9 @@ function A(e) {
         })
     );
 }
-var _ = i(990078),
-    T = i(104510),
-    f = i(661531),
+var _ = i(104510),
+    T = i(661531),
+    f = i(866665),
     k = i(772707),
     N = i(683071),
     b = i(470934),
@@ -89,7 +89,7 @@ var _ = i(990078),
     w = i(743569),
     D = i(309326),
     R = i(337322),
-    L = i(144580);
+    L = i(207180);
 function P(e) {
     let { powerup: t } = e,
         i = (0, R.A)(t);
@@ -102,7 +102,7 @@ function P(e) {
                 {
                     className: L.d_,
                     children: [
-                        (0, r.jsx)(t, { color: f.A.colors.TEXT_MUTED, className: L.Kk }),
+                        (0, r.jsx)(t, { color: T.A.colors.TEXT_MUTED, className: L.Kk }),
                         (0, r.jsx)(d.E, {
                             className: L.Qq,
                             color: "text-muted",
@@ -118,9 +118,9 @@ function P(e) {
 }
 var O = i(652215),
     V = i(853513),
-    S = i(554672);
+    S = i(131864);
 function q(e) {
-    return (0, r.jsx)(T._, { ...e, color: f.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
+    return (0, r.jsx)(_._, { ...e, color: T.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
 }
 function M(e) {
     var t;
@@ -130,7 +130,7 @@ function M(e) {
         [j, I] = s.useState(void 0),
         g = (0, m.Ay)(a, l),
         A = g.type !== h.b_.INACTIVE,
-        f = g.type === h.b_.TIER_OVERRIDE_ACTIVATED,
+        T = g.type === h.b_.TIER_OVERRIDE_ACTIVATED,
         D = (0, x.A)(a),
         { disabled: R, reason: L } = (0, b.A)(a, l, A),
         { onActivate: M, isLoading: z, error: G } = (0, C.A)(a, l),
@@ -140,13 +140,13 @@ function M(e) {
     }, [G]),
         (0, u.Z)(a, l, u.q.DETAIL);
     let $ = { type: "rive", rive: w.T[l.skuId], aspectRatio: "16/9" },
-        U = !f && D,
+        U = !T && D,
         B =
             U && !A
                 ? [
                       {
                           text: E.intl.string(V.default.AOQgki),
-                          icon: T._,
+                          icon: _._,
                           variant: o ? "expressive" : "primary",
                           size: "md",
                           disabled: R,
@@ -160,7 +160,7 @@ function M(e) {
         F = E.intl.formatToPlainString(V.default["5HQUzD"], { boostCount: l.cost }),
         H =
             U && A
-                ? (0, r.jsx)(_.m, {
+                ? (0, r.jsx)(f.m, {
                       text: F,
                       delay: 100,
                       children: (0, r.jsx)(p.$, {

@@ -1,6 +1,6 @@
-n.d(t, { A: () => x });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => f });
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(453903),
     r = n(922016),
@@ -8,21 +8,21 @@ var i = n(627968),
     c = n(151271),
     d = n(734057),
     u = n(446243),
-    p = n(781137),
-    h = n(495095),
+    h = n(781137),
+    p = n(495095),
     m = n(904043);
 function A(e, t) {
     return null != e.activeView && e.activeViewType === o.oU.GUILD_ROOM && e.activeChannelId === t;
 }
-function x(e) {
+function f(e) {
     let { channelId: t, position: n, roomWidth: o } = e,
-        x = (0, l.useRef)(null),
-        f = (0, a.bG)([d.A], () => d.A.getChannel(t)),
+        f = (0, l.useRef)(null),
+        x = (0, a.bG)([d.A], () => d.A.getChannel(t)),
         g = (0, c.RQ)((e) => A(e, t)),
         C = (0, l.useRef)(null),
         y = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
-        let e = x.current?.ownerDocument;
+        let e = f.current?.ownerDocument;
         if (null != e)
             return (
                 e.addEventListener("mousedown", n, !0),
@@ -34,10 +34,10 @@ function x(e) {
             y.current = A(c.RQ.getState(), t);
         }
     }, [t]),
-    null == f)
+    null == x)
         ? null
         : (0, i.jsx)(r.Y, {
-              targetElementRef: x,
+              targetElementRef: f,
               position: "top",
               align: "center",
               spacing: 16,
@@ -47,8 +47,8 @@ function x(e) {
                   (0, u.HW)(t);
               },
               renderPopout: () =>
-                  (0, i.jsx)(h.A, {
-                      channel: f,
+                  (0, i.jsx)(p.A, {
+                      channel: x,
                       position: n,
                       setEditorRef: (e) => {
                           C.current = e;
@@ -56,10 +56,10 @@ function x(e) {
                   }),
               children: () =>
                   (0, i.jsx)("div", {
-                      ref: x,
+                      ref: f,
                       className: m.kL,
                       style: { left: `${n.x}%`, top: `${n.y}%` },
-                      children: (0, i.jsx)(p.A, { roomWidth: o }),
+                      children: (0, i.jsx)(h.A, { roomWidth: o }),
                   }),
           });
 }

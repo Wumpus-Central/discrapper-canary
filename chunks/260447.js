@@ -1,11 +1,11 @@
 n.d(t, { z: () => d });
-var r = n(64700),
+var r = n(582128),
     l = n(192308),
     i = n(139033),
     o = n(626584),
-    a = n(38405),
+    u = n(38405),
     s = n(794400),
-    u = n(375708);
+    a = n(375708);
 let c = new o.A("RevenueErrorBoundary.tsx");
 class d extends r.PureComponent {
     state = { error: null, info: null };
@@ -19,9 +19,9 @@ class d extends r.PureComponent {
     closeAndShowAlert() {
         (0, l.closeAllModals)(),
             (0, i.A)({
-                title: u.intl.string(u.t.iufib1),
-                subtitle: u.intl.string(u.t.ZUEGFn),
-                confirmText: u.intl.string(u.t.TyCVIq),
+                title: a.intl.string(a.t.iufib1),
+                subtitle: a.intl.string(a.t.ZUEGFn),
+                confirmText: a.intl.string(a.t.TyCVIq),
             });
     }
     getErrorHandlingBehavior(e) {
@@ -39,7 +39,7 @@ class d extends r.PureComponent {
                 extra: { ...l, ...(n ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            (e instanceof s.v && e.skipReportingToSentry) || a.A.captureException(e, i),
+            (e instanceof s.v && e.skipReportingToSentry) || u.A.captureException(e, i),
             c.error("Revenue error occurred:", { error: e, additionalErrorContext: l }),
             { sentryErrorOptions: i }
         );

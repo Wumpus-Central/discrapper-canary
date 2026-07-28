@@ -1,16 +1,16 @@
-l.d(t, { A: () => a });
-var n = l(627968);
-l(64700);
-var r = l(503698),
-    s = l.n(r),
-    i = l(980040);
-function a(e) {
-    let { source: t, className: l } = e;
-    return null == t
+n.d(e, { A: () => a });
+var l = n(477900);
+n(582128);
+var r = n(503698),
+    i = n.n(r),
+    s = n(664016);
+function a(t) {
+    let { source: e, className: n } = t;
+    return null == e
         ? null
-        : (0, n.jsx)("div", {
-              className: s()(i.k, l),
-              style: { backgroundImage: `url(${t})` },
+        : (0, l.jsx)("div", {
+              className: i()(s.k, n),
+              style: { backgroundImage: `url(${e})` },
               "data-type": "event-image",
           });
 }

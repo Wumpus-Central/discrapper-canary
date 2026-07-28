@@ -1,56 +1,56 @@
 "use strict";
-n.d(t, { kz: () => f, gc: () => m, JW: () => _, Mq: () => p, K5: () => E, MD: () => A, px: () => h, x: () => g });
-var i = n(64700),
+n.d(t, { kz: () => A, gc: () => f, JW: () => _, Mq: () => h, K5: () => I, MD: () => T, px: () => E, x: () => p });
+var i = n(582128),
     r = n(877624),
-    s = n(17928),
-    a = n(554146),
-    o = n(841702),
-    l = n(826673),
-    u = n(374200);
+    a = n(17928),
+    s = n(554146),
+    l = n(841702),
+    o = n(826673),
+    d = n(412260);
 let c = (0, n(945810).mj)({
     name: "2026-04-gift-promotion-reminder",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = n(788868);
+var u = n(202541);
 function _() {
     let [e, t] = i.useState(),
-        n = (0, s.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
-        { purchases: r, hasPreviouslyFetched: a, fetchPurchasesError: l } = (0, o.Wg)(),
+        n = (0, a.yK)([d.A], () => d.A.getGiftPromotionRewardSkuIds()),
+        { purchases: r, hasPreviouslyFetched: s, fetchPurchasesError: o } = (0, l.Wg)(),
         c = i.useRef(!1);
     return (
         i.useEffect(() => {
-            a &&
+            s &&
                 !c.current &&
                 n.length > 0 &&
-                (t(null == l ? n.filter((e) => null == r.get(e)) : []), (c.current = !0));
-        }, [n, r, a, l]),
+                (t(null == o ? n.filter((e) => null == r.get(e)) : []), (c.current = !0));
+        }, [n, r, s, o]),
         e
     );
 }
-function h(e, t, n) {
-    let i = p(e),
+function E(e, t, n) {
+    let i = h(e),
         r = null != n && n.length >= 1;
     return t && i && r;
 }
-function f(e, t, n) {
-    let i = p(e);
+function A(e, t, n) {
+    let i = h(e);
     return null != n && 1 === n.length && i && t;
 }
-function p(e) {
-    return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
+function h(e) {
+    return [u.gD.PREMIUM_YEAR_TIER_2, u.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
 }
-function E(e, t) {
+function I(e, t) {
     if (null == e) return;
     let { reverse: n = !1, colorStops: i, defaultAngle: r = 78.98 } = t ?? {},
-        s = Array.isArray(e) ? e : e.gradient,
-        a = Array.isArray(e) || null == e.angle ? r : e.angle;
-    n && (a = (a + 180) % 360);
-    let o = null != i ? s.map((e, t) => `${e} ${i[t]}%`).join(", ") : s.join(", ");
-    return { background: `linear-gradient(${a}deg, ${o})` };
+        a = Array.isArray(e) ? e : e.gradient,
+        s = Array.isArray(e) || null == e.angle ? r : e.angle;
+    n && (s = (s + 180) % 360);
+    let l = null != i ? a.map((e, t) => `${e} ${i[t]}%`).join(", ") : a.join(", ");
+    return { background: `linear-gradient(${s}deg, ${l})` };
 }
-function m(e) {
+function f(e) {
     if (null != e)
         return {
             backgroundImage: `url(${e})`,
@@ -59,7 +59,7 @@ function m(e) {
             backgroundRepeat: "no-repeat",
         };
 }
-function g(e, t) {
+function p(e, t) {
     if (null != e && null != t) {
         let n = t.background,
             i = e.backgroundImage;
@@ -74,13 +74,13 @@ function g(e, t) {
     }
     return null != e ? e : null != t ? t : {};
 }
-function A() {
+function T() {
     let { enabled: e } = c.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
-    if (!e || null == u.A.getMarketingComponentByType(r.C.GIFT_REMINDER_NAGBAR)) return !1;
-    let t = u.A.getGiftPromotion()?.id;
+    if (!e || null == d.A.getMarketingComponentByType(r.C.GIFT_REMINDER_NAGBAR)) return !1;
+    let t = d.A.getGiftPromotion()?.id;
     return (
         null != t &&
-        !!(0, l.u$)(a.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, t).isDismissed &&
-        !(0, l.u$)(a.M.GIFTING_PROMOTION_REMINDER, t).isDismissed
+        !!(0, o.u$)(s.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, t).isDismissed &&
+        !(0, o.u$)(s.M.GIFTING_PROMOTION_REMINDER, t).isDismissed
     );
 }

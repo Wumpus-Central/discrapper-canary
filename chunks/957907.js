@@ -1,26 +1,26 @@
-n.d(t, { A: () => s });
-var l = n(64700),
-    r = n(17928),
-    i = n(948230),
-    o = n(373606),
-    a = n(972786);
-function s(e) {
-    let t = (0, o.B9)(e?.topic),
-        n = null != t;
+i.d(e, { A: () => u });
+var l = i(582128),
+    n = i(17928),
+    p = i(948230),
+    r = i(491394),
+    c = i(972786);
+function u(t) {
+    let e = (0, r.B9)(t?.topic),
+        i = null != e;
     return (
         l.useEffect(() => {
-            if (!n) return;
-            let e = a.A.getProjectsFetchState();
-            (null == e || "error" === e.type) && (0, i.hF)();
-        }, [n]),
-        (0, r.bG)(
-            [a.A],
+            if (!i) return;
+            let t = c.A.getProjectsFetchState();
+            (null == t || "error" === t.type) && (0, p.hF)();
+        }, [i]),
+        (0, n.bG)(
+            [c.A],
             () =>
-                null == t
+                null == e
                     ? null
-                    : (a.A.getAllProjects().find((e) => e.application_id === t || e.preview_application_id === t) ??
+                    : (c.A.getAllProjects().find((t) => t.application_id === e || t.preview_application_id === e) ??
                       null),
-            [t],
+            [e],
         )
     );
 }

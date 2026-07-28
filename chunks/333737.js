@@ -1,8 +1,8 @@
 s.d(e, { default: () => v });
-var i = s(627968),
-    a = s(64700),
+var i = s(477900),
+    a = s(582128),
     n = s(189213),
-    l = s(534514),
+    l = s(297264),
     r = s(834730),
     c = s(292666),
     h = s(821609),
@@ -12,7 +12,7 @@ var i = s(627968),
     m = s(287809),
     x = s(464477),
     u = s(375708),
-    p = s(876096);
+    p = s(147224);
 function j(t) {
     let { image: e, label: s, text: a, children: n } = t;
     return (0, i.jsxs)("div", {

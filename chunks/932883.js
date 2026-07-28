@@ -1,36 +1,36 @@
 "use strict";
-n.d(t, { GM: () => E, Hi: () => S, Ml: () => A, P3: () => T, Ut: () => I, X8: () => g, op: () => m });
+n.d(t, { GM: () => I, Hi: () => S, Ml: () => T, P3: () => g, Ut: () => m, X8: () => p, op: () => f });
 var i,
-    r = n(627968),
-    s = n(64700),
-    a = n(835245),
-    o = n(17928),
-    l = n(964486),
-    u = n(919796),
+    r = n(477900),
+    a = n(582128),
+    s = n(132500),
+    l = n(17928),
+    o = n(964486),
+    d = n(919796),
     c = n(174459),
-    d = n(310031),
+    u = n(310031),
     _ = n(394953),
-    h = n(849077),
-    f = n(652215);
-let p = s.createContext("");
-function E(e) {
+    E = n(849077),
+    A = n(652215);
+let h = a.createContext("");
+function I(e) {
     let { children: t } = e,
-        [n] = s.useState(() => (0, a.A)());
-    return (0, r.jsx)(p.Provider, { value: n, children: t });
+        [n] = a.useState(() => (0, s.A)());
+    return (0, r.jsx)(h.Provider, { value: n, children: t });
 }
-function m() {
-    return s.useContext(p);
+function f() {
+    return a.useContext(h);
 }
-var g =
+var p =
     (((i = {}).CLICK = "click"),
     (i.CONTEXT_MENU = "context_menu"),
     (i.BOOKMARK = "bookmark"),
     (i.ACK = "ack"),
     (i.SETTINGS = "settings"),
     i);
-function A(e) {
+function T(e) {
     let { message: t, interactionType: n, viewId: i } = e;
-    c.default.track(f.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+    c.default.track(A.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
         interaction_type: n,
         message_id: t.id,
         channel_id: t.channel_id,
@@ -39,28 +39,28 @@ function A(e) {
         view_id: i,
     });
 }
-function I(e) {
+function m(e) {
     let { section: t, enabled: n, viewId: i } = e;
-    c.default.track(f.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
+    c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
 }
-function T(e) {
+function g(e) {
     let {
         timeToLoad: t,
         messagesCount: n,
         unreadMessagesCount: i,
         channelsFetched: r,
-        mentionsFetched: s,
-        loadingTrigger: a,
-        viewId: o,
+        mentionsFetched: a,
+        loadingTrigger: s,
+        viewId: l,
     } = e;
-    c.default.track(f.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
+    c.default.track(A.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
         time_to_load: t,
         messages_count: n,
         unread_messages_count: i,
         channels_fetched: r,
-        mentions_fetched: s,
-        loading_trigger: a ?? h.VA.UNKNOWN,
-        view_id: o,
+        mentions_fetched: a,
+        loading_trigger: s ?? E.VA.UNKNOWN,
+        view_id: l,
     });
 }
 function S(e) {
@@ -69,91 +69,91 @@ function S(e) {
             entrypoint: n,
             messages: i,
             unreadMessages: r,
-            viewId: a,
-            messagesByCategory: p,
+            viewId: s,
+            messagesByCategory: h,
         } = e,
-        E = s.useRef(null),
-        m = s.useRef(!1),
-        g = (0, o.bG)([d.A], () => d.A.isLoading),
-        A = (0, u.A)(g),
-        I = (0, o.bG)([d.A], () => d.A.currentRequestAnalyticsPayload ?? null),
-        { unreadRecentMentionsCount: S, unreadChannelIds: y } = (0, _.U4)();
-    (0, l.Ay)(() => {
+        I = a.useRef(null),
+        f = a.useRef(!1),
+        p = (0, l.bG)([u.A], () => u.A.isLoading),
+        T = (0, d.A)(p),
+        m = (0, l.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+        { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
+    (0, o.Ay)(() => {
         !(function (e) {
             let { variant: t, viewId: n, entrypoint: i } = e;
-            c.default.track(f.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
-        })({ variant: t, viewId: a, entrypoint: n }),
-            (E.current = Date.now());
+            c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
+        })({ variant: t, viewId: s, entrypoint: n }),
+            (I.current = Date.now());
     }),
-        s.useEffect(() => {
-            if (null != E.current && (i?.length > 0 || r?.length > 0) && !m.current) {
-                let e = Date.now() - E.current;
-                (m.current = !0),
+        a.useEffect(() => {
+            if (null != I.current && (i?.length > 0 || r?.length > 0) && !f.current) {
+                let e = Date.now() - I.current;
+                (f.current = !0),
                     (function (e) {
                         let {
                             timeToLoad: t,
                             unreadsCount: n,
                             totalMessagesCount: i,
                             viewId: r,
-                            unreadsBadgeMentionCount: s,
-                            unreadsBadgeChannelCount: a,
-                            unreadMessageItemsCount: o,
-                            unreadMentionsCount: l,
+                            unreadsBadgeMentionCount: a,
+                            unreadsBadgeChannelCount: s,
+                            unreadMessageItemsCount: l,
+                            unreadMentionsCount: o,
                         } = e;
-                        c.default.track(f.HAw.NOTIFICATIONS_INBOX_READY, {
+                        c.default.track(A.HAw.NOTIFICATIONS_INBOX_READY, {
                             time_to_load: t,
                             unreads_count: n,
                             total_messages_count: i,
                             view_id: r,
-                            unreads_badge_mention_count: s,
-                            unreads_badge_channel_count: a,
-                            unread_message_items_count: o,
-                            unread_mentions_count: l,
+                            unreads_badge_mention_count: a,
+                            unreads_badge_channel_count: s,
+                            unread_message_items_count: l,
+                            unread_mentions_count: o,
                         });
                     })({
                         timeToLoad: e,
                         unreadsCount: r.length,
                         totalMessagesCount: i.length,
                         unreadsBadgeMentionCount: S,
-                        unreadsBadgeChannelCount: y.length,
-                        unreadMessageItemsCount: p.UNREAD.length,
-                        unreadMentionsCount: p.UNREAD.filter((e) => e.every((e) => e.kind === h.yL.MENTION)).length,
-                        viewId: a,
+                        unreadsBadgeChannelCount: N.length,
+                        unreadMessageItemsCount: h.UNREAD.length,
+                        unreadMentionsCount: h.UNREAD.filter((e) => e.every((e) => e.kind === E.yL.MENTION)).length,
+                        viewId: s,
                     });
             }
-        }, [i, r, a, y, S, p]),
-        s.useEffect(() => {
-            let e = I?.loadingTrigger === h.VA.AUTO_LOAD;
-            null == I ||
-                !0 !== A ||
-                !1 !== g ||
+        }, [i, r, s, N, S, h]),
+        a.useEffect(() => {
+            let e = m?.loadingTrigger === E.VA.AUTO_LOAD;
+            null == m ||
+                !0 !== T ||
+                !1 !== p ||
                 e ||
-                T({
-                    timeToLoad: I?.timeToLoad,
+                g({
+                    timeToLoad: m?.timeToLoad,
                     messagesCount: i.length,
                     unreadMessagesCount: r.length,
-                    loadingTrigger: I?.loadingTrigger ?? h.VA.UNKNOWN,
-                    viewId: I?.viewId,
-                    channelsFetched: I?.channelsFetched,
-                    mentionsFetched: I?.mentionsFetched,
+                    loadingTrigger: m?.loadingTrigger ?? E.VA.UNKNOWN,
+                    viewId: m?.viewId,
+                    channelsFetched: m?.channelsFetched,
+                    mentionsFetched: m?.mentionsFetched,
                 });
-        }, [g, i, r, a, A, I]),
-        (0, l.l0)(() => {
+        }, [p, i, r, s, T, m]),
+        (0, o.l0)(() => {
             !(function (e) {
-                let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: s } = e;
-                c.default.track(f.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
+                let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;
+                c.default.track(A.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
                     unreads_count: t,
                     total_messages_count: n,
                     unread_items_count: i,
                     total_items_count: r,
-                    view_id: s,
+                    view_id: a,
                 });
             })({
                 unreadsCount: r?.length ?? 0,
                 totalMessagesCount: i?.length ?? 0,
-                unreadItemsCount: p.UNREAD.length,
-                totalItemsCount: p.TODAY.length + p.YESTERDAY.length + p.OLDER.length,
-                viewId: a,
+                unreadItemsCount: h.UNREAD.length,
+                totalItemsCount: h.TODAY.length + h.YESTERDAY.length + h.OLDER.length,
+                viewId: s,
             });
         });
 }

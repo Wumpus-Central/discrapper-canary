@@ -1,6 +1,6 @@
 e.d(i, { default: () => c });
-var s = e(627968);
-e(64700);
+var s = e(477900);
+e(582128);
 var l = e(189213),
     n = e(71393);
 let a = "https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ";

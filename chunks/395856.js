@@ -1,5 +1,5 @@
 n.d(t, { $: () => a, k: () => l });
-var r = n(64700);
+var r = n(582128);
 let i = (0, n(945810).mj)({
         name: "2026-06-improved-shop-loading",
         kind: "user",

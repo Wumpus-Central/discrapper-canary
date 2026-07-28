@@ -1,10 +1,10 @@
 t.d(e, { R: () => n });
-var a = t(627968);
-t(64700);
+var a = t(477900);
+t(582128);
 var c = t(503698),
     d = t.n(c),
     r = t(834730),
-    i = t(911372);
+    i = t(204308);
 function n(s) {
     let { text: e, className: t, disableGradient: c = !1 } = s;
     return (0, a.jsx)("div", {

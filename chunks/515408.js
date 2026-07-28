@@ -1,6 +1,6 @@
 n.d(t, { default: () => z, d: () => F });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     s = n(189213),
     a = n(452027),
     r = n(243721),
@@ -26,9 +26,9 @@ var l = n(627968),
     T = n(359800),
     I = n(206828),
     _ = n(769015),
-    M = n(774418),
-    R = n(375708),
-    k = n(550405);
+    k = n(774418),
+    M = n(375708),
+    R = n(550405);
 function w(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = m.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
@@ -39,18 +39,18 @@ function w(e) {
     let h = !1;
     return (
         "sm" === i
-            ? (t = R.intl.format(M.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
-            : ((t = R.intl.string(M.default.UHF2Zn)), (h = !0)),
+            ? (t = M.intl.format(k.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
+            : ((t = M.intl.string(k.default.UHF2Zn)), (h = !0)),
         (0, l.jsxs)("div", {
-            className: k._,
+            className: R._,
             children: [
                 (0, l.jsx)(_.A, { game: n, size: _.M.MEDIUM }),
-                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: k.d, children: t }),
+                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: R.d, children: t }),
                 h
                     ? (0, l.jsx)(E.Q, {
                           variant: "primary",
                           size: "sm",
-                          text: R.intl.string(M.default.EBSaL4),
+                          text: M.intl.string(k.default.EBSaL4),
                           onClick: () => u({ analyticsLocations: a }),
                       })
                     : null,
@@ -80,7 +80,7 @@ function z(e) {
         { application: S } = (0, b._k)(n.guild_id),
         y = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, S?.id), [S]),
         [{ textValue: T, richValue: I }, _] = i.useState(() => (0, x.N3)()),
-        [k, F] = i.useState(!1),
+        [R, F] = i.useState(!1),
         [z, U] = i.useState(() => new Set()),
         [H, B] = i.useState(!1),
         V = i.useMemo(() => E.find((e) => e.name === b.Dg), [E]),
@@ -105,16 +105,16 @@ function z(e) {
             },
             [V],
         ),
-        Q = ((t = T.trim().split("\n")[0] ?? ""), (0, v.A)(t.slice(0, L.Ign), !0)),
-        X = i.useMemo(() => {
+        X = ((t = T.trim().split("\n")[0] ?? ""), (0, v.A)(t.slice(0, L.Ign), !0)),
+        Q = i.useMemo(() => {
             if (null != y && (0, b.Ij)(y)) return { type: L.xL.JOIN, activity: y };
         }, [y]),
         J = (0, j.w0)({
             parentChannel: n,
-            name: Q,
+            name: X,
             appliedTags: z,
             upload: A.Se,
-            activityAction: X,
+            activityAction: Q,
             applicationId: S?.id,
             voiceChatEnabled: W,
         }),
@@ -131,26 +131,26 @@ function z(e) {
             }
         }, [Z, J, h, T]);
     return (0, l.jsx)(s.Modal, {
-        title: R.intl.string(M.default.tOsHsu),
+        title: M.intl.string(k.default.tOsHsu),
         transitionState: c,
         onClose: h,
         actions: [
-            { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: h, disabled: H },
-            { variant: "primary", text: R.intl.string(R.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
+            { variant: "secondary", text: M.intl.string(M.t["ETE/oC"]), onClick: h, disabled: H },
+            { variant: "primary", text: M.intl.string(M.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
         ],
         children: (0, l.jsxs)("div", {
             className: D.rf,
             children: [
                 (0, l.jsx)(a.D, {
                     required: !0,
-                    label: R.intl.string(M.default["/mEbGf"]),
+                    label: M.intl.string(k.default["/mEbGf"]),
                     children: (0, l.jsx)(g.Ay, {
                         type: P,
                         channel: n,
-                        placeholder: R.intl.string(M.default["SU/IAE"]),
+                        placeholder: M.intl.string(k.default["SU/IAE"]),
                         textValue: T,
                         richValue: I,
-                        focused: k,
+                        focused: R,
                         onChange: q,
                         onFocus: () => F(!0),
                         onBlur: () => F(!1),
@@ -164,8 +164,8 @@ function z(e) {
                 }),
                 E.length > 0
                     ? (0, l.jsx)(a.D, {
-                          label: R.intl.string(R.t.KM6lRG),
-                          description: R.intl.formatToPlainString(M.default["yoIAe/"], { tagsMax: 5 }),
+                          label: M.intl.string(M.t.KM6lRG),
+                          description: M.intl.formatToPlainString(k.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
                               className: D.GA,
                               children: E.map((e) =>
@@ -186,10 +186,10 @@ function z(e) {
                     : null,
                 (0, l.jsx)(a.D, {
                     layout: "horizontal",
-                    label: R.intl.string(M.default.Xd2NFi),
-                    description: R.intl.string(M.default.G91SYQ),
+                    label: M.intl.string(k.default.Xd2NFi),
+                    description: M.intl.string(k.default.G91SYQ),
                     children: (0, l.jsx)(d.m, {
-                        text: R.intl.formatToPlainString(M.default["0s2ICk"], { noMicTagName: b.Dg }),
+                        text: M.intl.formatToPlainString(k.default["0s2ICk"], { noMicTagName: b.Dg }),
                         shouldShow: null == V,
                         asContainer: !0,
                         children: (0, l.jsx)(r.d, {

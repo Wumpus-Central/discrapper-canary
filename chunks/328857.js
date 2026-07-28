@@ -1,6 +1,6 @@
 n.d(t, { E: () => J, A: () => Z }), n(321073);
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     s = n(503698),
     a = n.n(s),
     r = n(615300),
@@ -205,7 +205,7 @@ function Z(e) {
                 action: W.AG.DOWNLOAD,
             }),
                 (0, m.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("36151"), n.e("44602"), n.e("25280")]).then(
+                    let { default: e } = await Promise.all([n.e("39981"), n.e("44602"), n.e("25280")]).then(
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });

@@ -1,45 +1,45 @@
 "use strict";
-n.d(t, { K: () => s });
-var i = n(64700),
+n.d(t, { K: () => a });
+var i = n(582128),
     r = n(715022);
-function s(e) {
-    let { active: t, options: n, renderOption: s } = e,
-        a = "function" == typeof n,
-        [o, l] = i.useState({ options: a ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
-        { options: u, loading: d, query: c, debouncedQuery: _ } = o,
-        h = i.useCallback((e) => l((t) => ({ ...t, loading: a, query: e, debouncedQuery: e })), [a]);
+function a(e) {
+    let { active: t, options: n, renderOption: a } = e,
+        s = "function" == typeof n,
+        [l, o] = i.useState({ options: s ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
+        { options: d, loading: c, query: u, debouncedQuery: _ } = l,
+        E = i.useCallback((e) => o((t) => ({ ...t, loading: s, query: e, debouncedQuery: e })), [s]);
     i.useEffect(() => {
-        t && h("");
-    }, [t, h]),
+        t && E("");
+    }, [t, E]),
         i.useEffect(() => {
             let e;
             return (
-                a
-                    ? (l((e) => ({ ...e, loading: !0, debouncedQuery: null })),
+                s
+                    ? (o((e) => ({ ...e, loading: !0, debouncedQuery: null })),
                       (e = setTimeout(() => {
-                          h(c);
+                          E(u);
                       }, 500)))
-                    : h(c),
+                    : E(u),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [a, c, h]),
+        }, [s, u, E]),
         i.useEffect(() => {
             let e = !1;
             return (
-                ((t && null !== _ && a) || !a) &&
+                ((t && null !== _ && s) || !s) &&
                     ("function" == typeof n ? n(_) : Promise.resolve(n)).then((t) => {
-                        e || (null != s && (t = t.map(s)), l((e) => ({ ...e, options: t, loading: !1 })));
+                        e || (null != a && (t = t.map(a)), o((e) => ({ ...e, options: t, loading: !1 })));
                     }),
                 () => {
                     e = !0;
                 }
             );
-        }, [t, n, _, s, a]);
-    let f = i.useCallback((e) => {
-            l((t) => ({ ...t, query: e }));
+        }, [t, n, _, a, s]);
+    let A = i.useCallback((e) => {
+            o((t) => ({ ...t, query: e }));
         }, []),
-        { flatOptions: E, groups: p } = i.useMemo(() => (0, r.yG)(u), [u]);
-    return { options: E, groups: p, loading: d, onQueryChange: f };
+        { flatOptions: h, groups: I } = i.useMemo(() => (0, r.yG)(d), [d]);
+    return { options: h, groups: I, loading: c, onQueryChange: A };
 }

@@ -1,6 +1,6 @@
 n.d(l, { A: () => rw });
-var t = n(627968),
-    i = n(64700),
+var t = n(477900),
+    i = n(582128),
     r = n(503698),
     a = n.n(r),
     s = n(17928),
@@ -292,7 +292,7 @@ function e9(e) {
         onContainerKeyDown: I,
     };
 }
-function e6(e) {
+function e8(e) {
     let { tooltip: l, ...n } = e,
         i = (0, t.jsx)("div", {
             className: e5.L7,
@@ -300,7 +300,7 @@ function e6(e) {
         });
     return null == l ? i : (0, t.jsx)(e7.m, { text: l, ariaHidden: !0, children: i });
 }
-function e8(e) {
+function e6(e) {
     let { id: l, message: n, type: i } = e,
         r = "error" === i,
         a = r ? g.E : p.i;
@@ -368,7 +368,7 @@ function e4(e) {
                         },
                         focusProps: { ringTarget: b },
                     }),
-                null != g && (0, t.jsx)("div", { className: e5.lD, children: (0, t.jsx)(e6, { ...g }) }),
+                null != g && (0, t.jsx)("div", { className: e5.lD, children: (0, t.jsx)(e8, { ...g }) }),
             ],
         });
     return (0, t.jsx)("div", {
@@ -385,7 +385,7 @@ function e4(e) {
                     : (0, t.jsxs)(t.Fragment, {
                           children: [
                               (0, t.jsx)("div", { className: e5.VH, children: T }),
-                              k && "compact" !== c && (0, t.jsx)(e8, { id: I, message: P, type: E }),
+                              k && "compact" !== c && (0, t.jsx)(e6, { id: I, message: P, type: E }),
                           ],
                       }),
             },
@@ -922,13 +922,13 @@ var lz = n(554146),
     l3 = n(252732),
     l5 = n(976860),
     l9 = n(945810);
-let l6 = (0, l9.mj)({
+let l8 = (0, l9.mj)({
         name: "2026-06-wysiwyg-show-dns-to-non-nitro",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    l8 = (0, l9.mj)({
+    l6 = (0, l9.mj)({
         name: "2026-06-wysiwyg-user-profile-premium-try-it-out",
         kind: "user",
         defaultConfig: { enabled: !1, showPresetName: !1 },
@@ -936,7 +936,7 @@ let l6 = (0, l9.mj)({
     });
 function l4(e) {
     let { location: l } = e;
-    return l8.useConfig({ location: l });
+    return l6.useConfig({ location: l });
 }
 var ne = n(975732),
     nl = n(487233),
@@ -1407,7 +1407,7 @@ function n9(e) {
         },
     });
 }
-function n6(e) {
+function n8(e) {
     let {
             primaryColor: l,
             secondaryColor: n,
@@ -1446,7 +1446,7 @@ function n6(e) {
         }),
     });
 }
-function n8(e) {
+function n6(e) {
     let { user: l, guildId: n, disabled: r = !1 } = e,
         a = (0, H.Ay)(l.id, n),
         {
@@ -1490,7 +1490,7 @@ function n8(e) {
                 : void 0;
     return null == f || null == m
         ? null
-        : (0, t.jsx)(n6, {
+        : (0, t.jsx)(n8, {
               primaryColor: f,
               secondaryColor: m,
               onSelectPrimaryColor: (e) => {
@@ -1509,7 +1509,7 @@ function te(e) {
     let { children: l, hasGradientBackground: n = !1 } = e;
     return (0, t.jsx)(m.F, { children: (0, t.jsx)("div", { className: a()(n4.k, { [n4.V]: n }), children: l }) });
 }
-var tl = n(4798),
+var tl = n(461376),
     tn = n(689175),
     tt = n(672905);
 function ti(e) {
@@ -1631,7 +1631,7 @@ var tx = n(847374),
     tI = n(44482),
     tC = n(844222),
     ty = n(561392),
-    tN = n(745113),
+    tN = n(499957),
     tE = n(15626),
     tP = n(37712);
 function tk(e) {
@@ -2198,7 +2198,7 @@ function t1(e) {
         disabled: i,
         showNitroIcon: !0,
         children: [
-            (0, t.jsx)(n8, { user: l, guildId: n, disabled: i || !r }),
+            (0, t.jsx)(n6, { user: l, guildId: n, disabled: i || !r }),
             (0, t.jsx)(nx, { userId: l.id, guildId: n, disabled: i || !r, errorMessageId: null != a ? tH : void 0 }),
             (0, t.jsx)(nR, { id: tH, message: (0, l3.d3)(a) }),
         ],
@@ -2285,7 +2285,7 @@ function t9(e) {
         E = C.avatar_decoration_sku_id?.[0],
         P = C.banner?.[0],
         k = C.display_name_font_id?.[0] ?? C.display_name_effect_id?.[0] ?? C.display_name_colors?.[0],
-        R = l6.useConfig({ location: "UserProfileModalV2EditingPanel" }).enabled,
+        R = l8.useConfig({ location: "UserProfileModalV2EditingPanel" }).enabled,
         S = h || x ? "inline" : b ? "hidden" : R ? "end" : "hidden",
         T = (0, t.jsx)(t0, { user: l, guildId: i, disabled: I || v, errorMessage: k });
     return (0, t.jsxs)(te, {
@@ -2351,8 +2351,8 @@ function t9(e) {
         ],
     });
 }
-var t6 = n(477155),
-    t8 = n(926321),
+var t8 = n(477155),
+    t6 = n(926321),
     t4 = n(663417),
     ie = n(597563);
 let il = "shuffle-options-a11y-description";
@@ -2403,7 +2403,7 @@ function it() {
         : (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsx)(lX.$, {
-                      icon: t8.j,
+                      icon: t6.j,
                       text: eK.intl.string(eK.t.VzqqFC),
                       onClick: l,
                       variant: "secondary",
@@ -2433,7 +2433,7 @@ function ir(e) {
                         "aria-label": eK.intl.string(eK.t["4IYwrw"]),
                         onClick: l,
                         className: ii.Gv,
-                        children: (0, t.jsx)(t6.r, { size: "md", color: "currentColor" }),
+                        children: (0, t.jsx)(t8.r, { size: "md", color: "currentColor" }),
                     }),
                     (0, t.jsx)(lq.D, {
                         variant: "text-lg/normal",
@@ -3127,8 +3127,8 @@ var i7 = n(145497),
     i3 = n(685073),
     i5 = n(318785),
     i9 = n(534400),
-    i6 = n(743981),
-    i8 = n(573109),
+    i8 = n(743981),
+    i6 = n(573109),
     i4 = n(832344);
 let re = "no-server-tag";
 function rl(e) {
@@ -3136,12 +3136,12 @@ function rl(e) {
         o = null == i || null == n;
     return (0, t.jsx)(eG.D, {
         innerRef: l,
-        className: a()(i8.L5, { [i8.wK]: o }),
+        className: a()(i6.L5, { [i6.wK]: o }),
         ...s,
         children: (0, t.jsxs)(ey.E, {
             variant: o ? "text-xs/normal" : "text-xs/semibold",
             color: o ? "input-placeholder-text-default" : "text-default",
-            className: i8.W3,
+            className: i6.W3,
             tag: "span",
             children: [
                 o
@@ -3151,17 +3151,17 @@ function rl(e) {
                               (0, t.jsx)(
                                   i9.Z9,
                                   {
-                                      src: (0, i3.gC)(n, r, i6.Sl.SIZE_14),
-                                      size: i6.Sl.SIZE_14,
-                                      className: i8.Ap,
+                                      src: (0, i3.gC)(n, r, i8.Sl.SIZE_14),
+                                      size: i8.Sl.SIZE_14,
+                                      className: i6.Ap,
                                       "aria-hidden": !0,
                                   },
-                                  (0, i3.gC)(n, r, i6.Sl.SIZE_14) ?? n,
+                                  (0, i3.gC)(n, r, i8.Sl.SIZE_14) ?? n,
                               ),
                               i,
                           ],
                       }),
-                (0, t.jsx)(tx.a, { size: "xs", color: "currentColor", className: i8.u4 }),
+                (0, t.jsx)(tx.a, { size: "xs", color: "currentColor", className: i6.u4 }),
             ],
         }),
     });
@@ -3186,7 +3186,7 @@ function rn() {
                           children: (0, t.jsx)(ey.E, {
                               variant: "text-md/normal",
                               color: "input-placeholder-text-default",
-                              className: i8.ve,
+                              className: i6.ve,
                               children: e.label,
                           }),
                       })
@@ -3229,7 +3229,7 @@ function rn() {
               value: a,
               onSelectionChange: f,
               label: eK.intl.string(eK.t.Pdd1nd),
-              listboxClassName: i8.yt,
+              listboxClassName: i6.yt,
               renderListItem: c,
               children: (e) => {
                   let { buttonRef: l, selectButtonProps: n } = e;
@@ -4274,10 +4274,10 @@ function rM(e) {
     (0, E.A)({ skuId: eQ?.profileFrame?.skuId, openedAt: D, context: e$, analyticsLocations: eY });
     let e5 = V.Ay.useName(eQ?.guildId, c, l),
         e9 = (0, R.GV)(),
-        e6 = (0, s.bG)([M.A], () => (null != Y ? M.A.getGuild(Y) : null)),
-        e8 = q
-            ? null != e6
-                ? eK.intl.formatToPlainString(eK.t.M7OhOF, { guildName: e6.name })
+        e8 = (0, s.bG)([M.A], () => (null != Y ? M.A.getGuild(Y) : null)),
+        e6 = q
+            ? null != e8
+                ? eK.intl.formatToPlainString(eK.t.M7OhOF, { guildName: e8.name })
                 : eK.intl.string(eK.t.egQPgM)
             : eK.intl.format(eK.t.KRe1Fk, { name: e5 });
     return (0, t.jsx)(I.f5, {
@@ -4320,7 +4320,7 @@ function rM(e) {
                                                     children: [
                                                         (0, t.jsx)(lv.A, { onClose: X }),
                                                         (0, t.jsx)(f.A, {
-                                                            children: (0, t.jsx)(m.H, { id: e9, children: e8 }),
+                                                            children: (0, t.jsx)(m.H, { id: e9, children: e6 }),
                                                         }),
                                                         eB &&
                                                             (0, t.jsx)(iu, {

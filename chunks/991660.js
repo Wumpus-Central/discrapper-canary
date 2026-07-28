@@ -1,10 +1,10 @@
 n.d(e, { A: () => i });
-var s = n(627968),
-    r = n(64700),
+var s = n(477900),
+    r = n(582128),
     a = n(503698),
     t = n.n(a),
     u = n(689175),
-    d = n(585003);
+    d = n(950131);
 function i(l) {
     let { children: e, gradientClassName: n, onScroll: a, ...i } = l,
         c = r.useRef(null),

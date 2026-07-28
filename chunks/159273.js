@@ -127,9 +127,9 @@ let f = new (n(626584).A)("GuildEmojis"),
 var S = n(736056),
     N = n(98318),
     C = n(492494),
-    R = n(384684);
-n(64700), n(702841);
-var O = n(71393),
+    O = n(384684);
+n(582128), n(702841);
+var R = n(71393),
     L = n(723702),
     y = n(652215);
 y.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE;
@@ -571,7 +571,7 @@ class eS extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
-        this.waitFor(S.A, b.Ay, M.A, P.A, O.A, D.default, j.A, U.Ay, R.A, Y.A, v.A, w.default),
+        this.waitFor(S.A, b.Ay, M.A, P.A, R.A, D.default, j.A, U.Ay, O.A, Y.A, v.A, w.default),
             null != e &&
                 (null != e.pendingUsages && (X.pendingUsages = e.pendingUsages),
                 null != e.emojiReactionPendingUsages && (X.emojiReactionPendingUsages = e.emojiReactionPendingUsages),

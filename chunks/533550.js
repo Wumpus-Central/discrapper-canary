@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { RX: () => l, q8: () => c });
-var i = n(64700),
-    r = n(942381),
-    s = n(265690),
-    a = n(121894);
-let o = (0, s.h)((e) => ({ upsellsByGuildId: {} }));
-function l(e) {
-    return o((t) => {
+n.d(t, { RX: () => o, q8: () => c });
+var i = n(582128),
+    r = n(462180),
+    a = n(882035),
+    s = n(121894);
+let l = (0, a.h)((e) => ({ upsellsByGuildId: {} }));
+function o(e) {
+    return l((t) => {
         let n = {};
         return null == e ? n : (t.upsellsByGuildId[e] ?? n);
     }, r.x);
 }
-function u(e) {
+function d(e) {
     if (null == e) return !1;
     try {
         return window.getComputedStyle(e).overflow.includes("scroll");
@@ -25,7 +25,7 @@ function c(e, t) {
     return (
         i.useLayoutEffect(() => {
             let i = r.current;
-            function s() {
+            function a() {
                 requestAnimationFrame(() => {
                     var i;
                     (i = {
@@ -34,8 +34,8 @@ function c(e, t) {
                         disabled: n,
                         boundingRect: r.current?.getBoundingClientRect() ?? null ?? null,
                     }),
-                        (0, a.r)(() => {
-                            o.setState((e) => ({
+                        (0, s.r)(() => {
+                            l.setState((e) => ({
                                 upsellsByGuildId: {
                                     ...(e.upsellsByGuildId ?? {}),
                                     [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
@@ -44,17 +44,17 @@ function c(e, t) {
                         });
                 });
             }
-            if (null == i) return s(), () => {};
-            let l = (function (e) {
+            if (null == i) return a(), () => {};
+            let o = (function (e) {
                 let t = e.parentNode;
-                for (; null != t && t !== document.body && !u(t); ) t = t.parentNode;
-                return u(t) ? t : null;
+                for (; null != t && t !== document.body && !d(t); ) t = t.parentNode;
+                return d(t) ? t : null;
             })(i);
             return (
-                s(),
-                l?.addEventListener("scroll", s, { passive: !0 }),
+                a(),
+                o?.addEventListener("scroll", a, { passive: !0 }),
                 () => {
-                    l?.removeEventListener("scroll", s);
+                    o?.removeEventListener("scroll", a);
                 }
             );
         }, [e, t, n]),

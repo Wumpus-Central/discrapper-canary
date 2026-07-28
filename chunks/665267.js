@@ -1,6 +1,6 @@
-i.d(t, { J3: () => v, sB: () => D });
-var n = i(627968),
-    s = i(64700),
+i.d(t, { J3: () => y, sB: () => D });
+var n = i(477900),
+    s = i(582128),
     l = i(17928),
     r = i(554146),
     a = i(821609),
@@ -12,7 +12,7 @@ var n = i(627968),
     m = i(793943),
     A = i(826673),
     h = i(422936),
-    E = i(234419),
+    E = i(732280),
     S = i(792656),
     T = i(410516),
     x = i(811611),
@@ -23,8 +23,8 @@ var n = i(627968),
     I = i(49999),
     C = i(202541),
     b = i(375708),
-    y = i(220982);
-function v() {
+    v = i(446350);
+function y() {
     (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: I.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
         (0, f.default)();
@@ -47,9 +47,9 @@ function O() {
     return !e || t
         ? null
         : (0, n.jsxs)("div", {
-              className: y.gY,
+              className: v.gY,
               children: [
-                  (0, n.jsx)(a.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: v }),
+                  (0, n.jsx)(a.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: y }),
                   (0, n.jsx)(j, {}),
               ],
           });
@@ -66,7 +66,7 @@ function R(e) {
             });
     }, [i, r]),
     i)
-        ? (0, n.jsx)("div", { className: y._$, children: t })
+        ? (0, n.jsx)("div", { className: v._$, children: t })
         : t;
 }
 function L() {
@@ -76,15 +76,15 @@ function L() {
         ? (0, n.jsxs)("div", {
               children: [
                   (0, n.jsx)("div", {
-                      className: y.c7,
+                      className: v.c7,
                       children: (0, n.jsx)(a.$, {
                           variant: "secondary",
                           fullWidth: !0,
                           text: b.intl.string(b.t["E+COuA"]),
-                          onClick: () => v(),
+                          onClick: () => y(),
                       }),
                   }),
-                  (0, n.jsx)("div", { className: y.BU }),
+                  (0, n.jsx)("div", { className: v.BU }),
                   (0, n.jsx)(x.Ay, { type: C.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: C.pe.TIER_2 }),
               ],
           })
@@ -98,10 +98,10 @@ function D() {
                 (0, n.jsx)(g.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, n.jsx)(O, {}),
-                    headingClassName: y.EK,
+                    headingClassName: v.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: y.cI,
-                    titleIconClassName: y.Hq,
+                    titleClassName: v.cI,
+                    titleIconClassName: v.Hq,
                 }),
                 (0, n.jsx)(o.B, {
                     direction: "horizontal",

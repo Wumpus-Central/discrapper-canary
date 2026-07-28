@@ -1,10 +1,10 @@
-n.d(t, { W: () => s });
-var l = n(627968),
-    r = n(64700),
-    a = n(486020),
-    i = n(51792);
-function s(e) {
-    let { application: t, iconSize: n = 20 } = e,
-        s = r.useMemo(() => a.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: n }), [t, n]);
-    return (0, l.jsx)("img", { className: i.I, src: s, alt: "", height: n, width: n });
+s.d(a, { W: () => d });
+var t = s(477900),
+    e = s(582128),
+    c = s(486020),
+    p = s(51792);
+function d(i) {
+    let { application: a, iconSize: s = 20 } = i,
+        d = e.useMemo(() => c.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: s }), [a, s]);
+    return (0, t.jsx)("img", { className: p.I, src: d, alt: "", height: s, width: s });
 }

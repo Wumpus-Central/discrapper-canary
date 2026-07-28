@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => l });
+var i = n(477900);
+n(582128);
 var r = n(189213),
-    s = n(192308),
-    a = n(375708);
-function o(e) {
-    let { title: t, subtitle: n, confirmText: o = a.intl.string(a.t.BddRzS) } = e;
-    return (0, s.openModal)((e) =>
-        (0, i.jsx)(r.Modal, { ...e, title: t, subtitle: n, actions: [{ text: o, onClick: e.onClose }] }),
+    a = n(192308),
+    s = n(375708);
+function l(e) {
+    let { title: t, subtitle: n, confirmText: l = s.intl.string(s.t.BddRzS) } = e;
+    return (0, a.openModal)((e) =>
+        (0, i.jsx)(r.Modal, { ...e, title: t, subtitle: n, actions: [{ text: l, onClick: e.onClose }] }),
     );
 }

@@ -1,7 +1,7 @@
 n.d(t, { x: () => f, A: () => E });
 var i,
-    l = n(627968),
-    a = n(64700),
+    l = n(477900),
+    a = n(582128),
     r = n(503698),
     o = n.n(r),
     s = n(228366),
@@ -33,12 +33,12 @@ let d = [
         return await i.load();
     };
 var h = n(60317),
-    g = n(652215),
-    p = n(272625),
+    p = n(652215),
+    g = n(258345),
     f = (((i = {})[(i.NORMAL = 20)] = "NORMAL"), (i[(i.LARGE = 32)] = "LARGE"), i);
 async function A(e) {
     let { effect: t } = e,
-        n = await m(t.channelId, t.messageId ?? g.dJq, t.emoji.name),
+        n = await m(t.channelId, t.messageId ?? p.dJq, t.emoji.name),
         i = await (0, h.fz)(`${t.channelId}:${t.messageId}:${t.emoji.name}`, t.url, n, t.color);
     return (i.assets[0].p = t.url), i;
 }
@@ -46,8 +46,8 @@ function E(e) {
     let { className: t, effect: i, onComplete: r, emojiSize: c = 20 } = e,
         d = a.useRef(null),
         m = c * h.YY,
-        g = (m + c) / 2,
-        f = `translateY(${g}px)`;
+        p = (m + c) / 2,
+        f = `translateY(${p}px)`;
     return (
         a.useEffect(() => {
             let e;
@@ -86,9 +86,9 @@ function E(e) {
                 );
         }, [r, i, c]),
         (0, l.jsx)("div", {
-            className: p.Y,
+            className: g.Y,
             children: (0, l.jsx)("div", {
-                className: o()(p.Q, t),
+                className: o()(g.Q, t),
                 style: { transform: f, height: m, width: m },
                 ref: d,
             }),

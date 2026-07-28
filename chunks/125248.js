@@ -1,15 +1,15 @@
-n.d(t, { A: () => x });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => f });
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(735438),
-    o = n(835245),
+    r = n(435558),
+    o = n(132500),
     c = n(17928),
     d = n(228366),
     u = n(565645),
     h = n(775602),
-    p = n(885131);
+    p = n(223587);
 let m = [p.u8, p.n$, p.uN, p.no],
     A = l.memo(function (e) {
         let { emoji: t, onAnimationEnd: n } = e,
@@ -23,7 +23,7 @@ let m = [p.u8, p.n$, p.uN, p.no],
             children: (0, i.jsx)(u.A, { emojiId: t.id, emojiName: t.name, animated: t.animated ?? !1 }),
         });
     });
-function x(e) {
+function f(e) {
     let { channelId: t, callHeight: n } = e,
         a = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [s, r] = l.useState([]);

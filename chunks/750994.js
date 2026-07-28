@@ -1,15 +1,15 @@
 i.d(n, { Ay: () => c });
-var e = i(627968);
-i(64700);
-var o = i(990078),
-    r = i(243721);
+var e = i(477900);
+i(582128);
+var o = i(243721),
+    r = i(866665);
 function s(t) {
-    let { value: n, onChange: i, note: o, title: s, disabled: a } = t;
-    return (0, e.jsx)(r.d, { checked: n, onChange: i, disabled: a, label: s, description: o });
+    let { value: n, onChange: i, note: r, title: s, disabled: a } = t;
+    return (0, e.jsx)(o.d, { checked: n, onChange: i, disabled: a, label: s, description: r });
 }
 function a(t) {
     let { tooltipText: n, ...i } = t;
-    return (0, e.jsx)(o.m, {
+    return (0, e.jsx)(r.m, {
         text: n,
         asContainer: !0,
         align: "right",

@@ -1,14 +1,14 @@
 n.d(l, { Ay: () => P, Wc: () => S, wQ: () => w }), n(321073);
-var a = n(627968);
-n(64700);
+var a = n(477900);
+n(582128);
 var t = n(503698),
     s = n.n(t),
     i = n(661531),
-    r = n(990078),
-    c = n(462887),
-    o = n(602853),
-    d = n(952270),
-    m = n(349288),
+    r = n(462887),
+    c = n(602853),
+    o = n(952270),
+    d = n(349288),
+    m = n(866665),
     u = n(834730),
     h = n(939249),
     x = n(778712),
@@ -29,7 +29,7 @@ var t = n(503698),
     D = n(783419),
     k = n(488995),
     O = n(375708),
-    R = n(469110);
+    R = n(408654);
 function w(e) {
     let l,
         n,
@@ -46,7 +46,7 @@ function w(e) {
     null == g && (g = !0);
     let k = h.metadata ?? {},
         w = g ? (0, v.An)(k[D.pK.CREATED_AT], p) : null,
-        S = (0, o.r)(i.A.unsafe_rawColors.PLATFORM_TWITTER).hex(),
+        S = (0, c.r)(i.A.unsafe_rawColors.PLATFORM_TWITTER).hex(),
         P = O.intl.string(O.t["6H6h1r"]);
     if (g)
         switch (h.type) {
@@ -73,13 +73,13 @@ function w(e) {
     let W = f.A.get((0, T.ML)(h.type)),
         G = W?.getPlatformUserUrl?.(h);
     null != b && b
-        ? (t = (0, a.jsx)(d.G, {
+        ? (t = (0, a.jsx)(o.G, {
               size: "md",
               color: "currentColor",
               className: s()(R.__invalid_connectedAccountOpenIconContainer, R.gE),
           }))
         : null != G &&
-          (t = (0, a.jsx)(m.Anchor, {
+          (t = (0, a.jsx)(d.Anchor, {
               href: G,
               "aria-label":
                   W?.name != null
@@ -93,8 +93,8 @@ function w(e) {
               },
               children: (0, a.jsx)(I.A, { className: R.yf, direction: I.A.Directions.RIGHT }),
           }));
-    let L = (0, o.r)(i.A.colors.ICON_MUTED).hex(),
-        U = (0, o.r)(i.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+    let L = (0, c.r)(i.A.colors.ICON_MUTED).hex(),
+        U = (0, c.r)(i.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
         V = h.verified
             ? (0, a.jsx)(E.A, { className: R.sU, color: n ?? L, forcedIconColor: U, size: 16, tooltipText: P })
             : null;
@@ -104,12 +104,12 @@ function w(e) {
             (0, a.jsxs)("div", {
                 className: R.dF,
                 children: [
-                    (0, a.jsx)(r.m, {
+                    (0, a.jsx)(m.m, {
                         __unsupportedReactNodeAsText: W?.name,
                         children: (0, a.jsx)("img", {
                             alt: O.intl.formatToPlainString(O.t.rtm15P, { name: W?.name }),
                             className: R.cS,
-                            src: (0, c.M)(x) ? W?.icon.darkSVG : W?.icon.lightSVG,
+                            src: (0, r.M)(x) ? W?.icon.darkSVG : W?.icon.lightSVG,
                         }),
                     }),
                     (0, a.jsxs)("div", {
@@ -121,7 +121,7 @@ function w(e) {
                                     (0, a.jsxs)("div", {
                                         className: R.O3,
                                         children: [
-                                            (0, a.jsx)(r.m, {
+                                            (0, a.jsx)(m.m, {
                                                 overflowOnly: !0,
                                                 text: h.name,
                                                 children: (0, a.jsx)(u.E, {

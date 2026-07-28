@@ -1,7 +1,7 @@
 i.d(e, { SelectFriendsModalScreens: () => K, default: () => Q });
 var s,
-    n = i(627968),
-    a = i(64700),
+    n = i(477900),
+    a = i(582128),
     r = i(503698),
     l = i.n(r),
     o = i(189213),

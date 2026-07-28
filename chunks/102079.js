@@ -1,10 +1,10 @@
 o.d(e, { Q: () => s });
-var t = o(627968);
-o(64700);
+var t = o(477900);
+o(582128);
 let i =
     "https://cdn.discordapp.com/assets/content/a9d4129fe10ee310d96f95d04fbf382b9c26914a30780ebb307e908a826248f2.riv";
-var a = o(594639),
-    n = o(105596);
+var a = o(502377),
+    n = o(799226);
 let l = {
     "box-wumpus": {},
     "+++1_BOX_nested_comp_0": {},

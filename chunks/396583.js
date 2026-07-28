@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
-var i = n(64700),
+n.d(t, { A: () => s });
+var i = n(582128),
     r = n(284009),
-    s = n.n(r);
-function a(e, t) {
+    a = n.n(r);
+function s(e, t) {
     let n = (0, i.useRef)(e),
         r = (0, i.useRef)(null);
     (0, i.useEffect)(() => {
@@ -16,7 +16,7 @@ function a(e, t) {
             }
             return (
                 (r.current = setInterval(function () {
-                    s()(null != n.current, "Missing callback"), n.current();
+                    a()(null != n.current, "Missing callback"), n.current();
                 }, t)),
                 () => clearInterval(r.current)
             );

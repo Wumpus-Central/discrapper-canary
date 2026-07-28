@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(572808),
     o = n(9045),
     d = n(944766),
-    c = n(615165);
+    c = n(659061);
 let u = function (e) {
     let { seats: t, participant: n, participants: a, channel: u, idle: _, enableAnimations: E = !0 } = e,
         A = t.find((e) => e.claimedBy === n.userId),

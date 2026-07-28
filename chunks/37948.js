@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { A: () => d }), n(323874), n(14289), n(35956);
-var l = n(64700),
-    i = n(975807),
-    r = n(853022),
+n.d(t, { A: () => u }), n(323874), n(14289), n(35956);
+var i = n(582128),
+    r = n(975807),
+    a = n(853022),
     s = n(738533);
-let a = "steam",
+let l = "steam",
     o = /^\/app\/(\d+)(?:\/)?/,
-    u = /^\/games\/store\/title\/([^/]+)/;
+    d = /^\/games\/store\/title\/([^/]+)/;
 async function c(e) {
-    if ("store.steampowered.com" === e.hostname && (await s.A.isProtocolRegistered(a))) {
+    if ("store.steampowered.com" === e.hostname && (await s.A.isProtocolRegistered(l))) {
         let t = e.pathname.match(o)?.[1];
-        if (null != t) return `${a}://store/${t}`;
+        if (null != t) return `${l}://store/${t}`;
     }
-    if (e.hostname === r.bH && (await s.A.isProtocolRegistered("msxbox"))) {
-        let t = e.pathname.match(u)?.[1];
-        if (null != t) return (0, r.b9)(decodeURIComponent(t));
+    if (e.hostname === a.bH && (await s.A.isProtocolRegistered("msxbox"))) {
+        let t = e.pathname.match(d)?.[1];
+        if (null != t) return (0, a.b9)(decodeURIComponent(t));
     }
     return null;
 }
-function d(e) {
-    let [t, n] = l.useState(!1);
-    return l.useCallback(
-        async (l) => {
-            let r;
-            if (null == l) return;
+function u(e) {
+    let [t, n] = i.useState(!1);
+    return i.useCallback(
+        async (i) => {
+            let a;
+            if (null == i) return;
             try {
-                r = new URL(l);
+                a = new URL(i);
             } catch {
                 return;
             }
-            let s = await c(r);
+            let s = await c(a);
             if (
                 (null != s && t && (s = null),
-                r.searchParams.set("utm_source", "discord"),
-                (l = r.toString()),
+                a.searchParams.set("utm_source", "discord"),
+                (i = a.toString()),
                 null != e)
             )
-                e(l);
+                e(i);
             else if (null != s) {
-                var a;
+                var l;
                 let e;
-                (a = s),
+                (l = s),
                     (e = setTimeout(() => n(!0), 5e3)),
                     window.addEventListener("blur", () => clearTimeout(e), { once: !0 }),
-                    (0, i.A)(a);
-            } else (0, i.A)(l);
+                    (0, r.A)(l);
+            } else (0, r.A)(i);
         },
         [e, t],
     );

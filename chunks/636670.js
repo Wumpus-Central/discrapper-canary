@@ -1,5 +1,5 @@
 l.d(t, { A: () => i });
-var n = l(627968);
+var n = l(477900);
 function i(e) {
     let { width: t = 188, height: l = 90 } = e;
     return (0, n.jsxs)("svg", {
@@ -253,4 +253,4 @@ function i(e) {
         ],
     });
 }
-l(64700);
+l(582128);

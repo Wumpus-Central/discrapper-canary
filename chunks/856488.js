@@ -1,57 +1,57 @@
 "use strict";
-n.d(t, { A: () => m }), n(321073);
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => f }), n(321073);
+var i = n(477900);
+n(582128);
 var r = n(17928),
-    s = n(477782),
-    a = n(964355),
-    o = n(955572),
-    l = n(775602),
-    u = n(406360),
+    a = n(477782),
+    s = n(964355),
+    l = n(955572),
+    o = n(775602),
+    d = n(406360),
     c = n(174459),
-    d = n(742023),
+    u = n(742023),
     _ = n(873298),
-    h = n(885386),
-    f = n(375708),
-    p = n(652215),
-    E = n(864386);
-function m() {
+    E = n(885386),
+    A = n(375708),
+    h = n(652215),
+    I = n(864386);
+function f() {
     let e,
         t,
         n =
-            ((e = h.hH.useSetting()),
-            (t = h.Xi.useSetting()),
+            ((e = E.hH.useSetting()),
+            (t = E.Xi.useSetting()),
             [
                 (0, i.jsxs)(
-                    s.rX,
+                    a.rX,
                     {
-                        label: f.intl.string(f.t["C/5V0A"]),
+                        label: A.intl.string(A.t["C/5V0A"]),
                         children: [
-                            (0, i.jsx)(s.iD, {
+                            (0, i.jsx)(a.iD, {
                                 id: "compact-ui",
                                 group: "list-density",
-                                label: f.intl.string(f.t["7iegX4"]),
+                                label: A.intl.string(A.t["7iegX4"]),
                                 checked: t === _.NS.COMPACT,
                                 action: () => {
-                                    h.Xi.updateSetting(_.NS.COMPACT);
+                                    E.Xi.updateSetting(_.NS.COMPACT);
                                 },
                             }),
-                            (0, i.jsx)(s.iD, {
+                            (0, i.jsx)(a.iD, {
                                 id: "default-ui",
                                 group: "list-density",
-                                label: f.intl.string(f.t.bBvAEH),
+                                label: A.intl.string(A.t.bBvAEH),
                                 checked: t === _.NS.DEFAULT,
                                 action: () => {
-                                    h.Xi.updateSetting(_.NS.DEFAULT);
+                                    E.Xi.updateSetting(_.NS.DEFAULT);
                                 },
                             }),
-                            (0, i.jsx)(s.iD, {
+                            (0, i.jsx)(a.iD, {
                                 id: "cozy-ui",
                                 group: "list-density",
-                                label: f.intl.string(f.t["4cuYHx"]),
+                                label: A.intl.string(A.t["4cuYHx"]),
                                 checked: t === _.NS.COZY,
                                 action: () => {
-                                    h.Xi.updateSetting(_.NS.COZY);
+                                    E.Xi.updateSetting(_.NS.COZY);
                                 },
                             }),
                         ],
@@ -59,26 +59,26 @@ function m() {
                     "list-density",
                 ),
                 (0, i.jsxs)(
-                    s.rX,
+                    a.rX,
                     {
-                        label: f.intl.string(f.t.nKRoPv),
+                        label: A.intl.string(A.t.nKRoPv),
                         children: [
-                            (0, i.jsx)(s.iD, {
+                            (0, i.jsx)(a.iD, {
                                 id: "cozy-chat",
                                 group: "chat-density",
-                                label: f.intl.string(f.t.Jqj4cZ),
+                                label: A.intl.string(A.t.Jqj4cZ),
                                 checked: !e,
                                 action: () => {
-                                    h.hH.updateSetting(!1), (0, o.AC)();
+                                    E.hH.updateSetting(!1), (0, l.AC)();
                                 },
                             }),
-                            (0, i.jsx)(s.iD, {
+                            (0, i.jsx)(a.iD, {
                                 id: "compact-chat",
                                 group: "chat-density",
-                                label: f.intl.string(f.t["1JNcPS"]),
+                                label: A.intl.string(A.t["1JNcPS"]),
                                 checked: e,
                                 action: () => {
-                                    h.hH.updateSetting(!0), (0, o.AC)();
+                                    E.hH.updateSetting(!0), (0, l.AC)();
                                 },
                             }),
                         ],
@@ -87,68 +87,68 @@ function m() {
                 ),
             ]),
         {
-            saturation: m,
-            useReducedMotion: g,
-            roleStyle: A,
-            highContrastMode: I,
-            switchIconsEnabled: T,
-        } = (0, r.cf)([l.Ay], () => ({
-            saturation: l.Ay.saturation,
-            useReducedMotion: l.Ay.useReducedMotion,
-            roleStyle: l.Ay.roleStyle,
-            highContrastMode: l.Ay.isHighContrastModeEnabled,
-            switchIconsEnabled: l.Ay.isSwitchIconsEnabled,
+            saturation: f,
+            useReducedMotion: p,
+            roleStyle: T,
+            highContrastMode: m,
+            switchIconsEnabled: g,
+        } = (0, r.cf)([o.Ay], () => ({
+            saturation: o.Ay.saturation,
+            useReducedMotion: o.Ay.useReducedMotion,
+            roleStyle: o.Ay.roleStyle,
+            highContrastMode: o.Ay.isHighContrastModeEnabled,
+            switchIconsEnabled: o.Ay.isSwitchIconsEnabled,
         })),
-        S = (0, r.bG)([l.Ay], () => l.Ay.displayNameStylesEnabled),
-        y = (0, r.bG)([d.Ay], () => d.Ay.hdrDynamicRange),
-        C = (0, u.i)("useAccessibilityItems"),
-        N = [
-            { name: f.intl.string(f.t.D5Fma9), value: "no-limit" },
-            { name: f.intl.string(f.t.ldcGIH), value: "standard" },
-        ],
-        v = [
-            { name: f.intl.string(f.t.YEOEi6), value: "username" },
-            { name: f.intl.string(f.t.mQaro3), value: "dot" },
-            { name: f.intl.string(f.t.Ji2EVJ), value: "hidden" },
+        S = (0, r.bG)([o.Ay], () => o.Ay.displayNameStylesEnabled),
+        N = (0, r.bG)([u.Ay], () => u.Ay.hdrDynamicRange),
+        C = (0, d.i)("useAccessibilityItems"),
+        O = [
+            { name: A.intl.string(A.t.D5Fma9), value: "no-limit" },
+            { name: A.intl.string(A.t.ldcGIH), value: "standard" },
         ],
         R = [
+            { name: A.intl.string(A.t.YEOEi6), value: "username" },
+            { name: A.intl.string(A.t.mQaro3), value: "dot" },
+            { name: A.intl.string(A.t.Ji2EVJ), value: "hidden" },
+        ],
+        L = [
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.sL, {
+                    children: (0, i.jsx)(a.sL, {
                         id: "reduced-motion",
-                        label: f.intl.string(f.t.b3XBzg),
-                        checked: g,
-                        action: () => (0, o.qz)(g ? "no-preference" : "reduce"),
+                        label: A.intl.string(A.t.b3XBzg),
+                        checked: p,
+                        action: () => (0, l.qz)(p ? "no-preference" : "reduce"),
                     }),
                 },
                 "reduced-motion",
             ),
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.sL, {
+                    children: (0, i.jsx)(a.sL, {
                         id: "high-contrast",
-                        label: f.intl.string(f.t.aZlePv),
-                        checked: I,
-                        action: () => (0, o.uh)(I ? l._1.DEFAULT : l._1.HIGH),
+                        label: A.intl.string(A.t.aZlePv),
+                        checked: m,
+                        action: () => (0, l.uh)(m ? o._1.DEFAULT : o._1.HIGH),
                     }),
                 },
                 "high-contrast",
             ),
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.aK, {
+                    children: (0, i.jsx)(a.aK, {
                         id: "input",
-                        label: f.intl.string(f.t["5PWWCY"]),
+                        label: A.intl.string(A.t["5PWWCY"]),
                         control: (e, t) =>
-                            (0, i.jsx)(a.i, {
+                            (0, i.jsx)(s.i, {
                                 ...e,
                                 ref: t,
-                                value: 100 * m,
-                                onChange: (e) => (0, o.HU)(e / 100),
-                                "aria-label": f.intl.string(f.t["5PWWCY"]),
+                                value: 100 * f,
+                                onChange: (e) => (0, l.HU)(e / 100),
+                                "aria-label": A.intl.string(A.t["5PWWCY"]),
                             }),
                     }),
                 },
@@ -156,25 +156,25 @@ function m() {
             ),
         ];
     return (
-        R.push(...n),
+        L.push(...n),
         C &&
-            R.push(
+            L.push(
                 (0, i.jsx)(
-                    s.rX,
+                    a.rX,
                     {
-                        children: (0, i.jsx)(s.Dr, {
+                        children: (0, i.jsx)(a.Dr, {
                             id: "hdr-dynamic-range",
-                            label: f.intl.string(f.t.nemtgW),
-                            children: N.map((e) => {
+                            label: A.intl.string(A.t.nemtgW),
+                            children: O.map((e) => {
                                 let { name: t, value: n } = e;
                                 return (0, i.jsx)(
-                                    s.iD,
+                                    a.iD,
                                     {
                                         id: n,
                                         group: "hdr-dynamic-range",
-                                        checked: n === y,
+                                        checked: n === N,
                                         label: t,
-                                        action: () => (0, o.FU)(n),
+                                        action: () => (0, l.FU)(n),
                                     },
                                     n,
                                 );
@@ -184,18 +184,18 @@ function m() {
                     "hdr-dynamic-range",
                 ),
             ),
-        R.push(
+        L.push(
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.Dr, {
+                    children: (0, i.jsx)(a.Dr, {
                         id: "role-colors",
-                        label: f.intl.string(f.t.uSOPWm),
-                        children: v.map((e) => {
+                        label: A.intl.string(A.t.uSOPWm),
+                        children: R.map((e) => {
                             let { name: t, value: n } = e;
                             return (0, i.jsx)(
-                                s.iD,
-                                { id: n, group: "role-colors", checked: n === A, label: t, action: () => (0, o.IX)(n) },
+                                a.iD,
+                                { id: n, group: "role-colors", checked: n === T, label: t, action: () => (0, l.IX)(n) },
                                 n,
                             );
                         }),
@@ -204,35 +204,35 @@ function m() {
                 "role-colors",
             ),
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.sL, {
+                    children: (0, i.jsx)(a.sL, {
                         id: "display-name-styles",
-                        label: f.intl.string(E.default["2gFUEw"]),
+                        label: A.intl.string(I.default["2gFUEw"]),
                         checked: S,
                         action: function () {
-                            c.default.track(p.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
-                                (0, o.Dm)(!S);
+                            c.default.track(h.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
+                                (0, l.Dm)(!S);
                         },
                     }),
                 },
                 "display-name-styles",
             ),
         ),
-        R.push(
+        L.push(
             (0, i.jsx)(
-                s.rX,
+                a.rX,
                 {
-                    children: (0, i.jsx)(s.sL, {
+                    children: (0, i.jsx)(a.sL, {
                         id: "switch-icons",
-                        label: f.intl.string(f.t["S3z+pV"]),
-                        checked: T,
-                        action: () => (0, o.Gm)(!T),
+                        label: A.intl.string(A.t["S3z+pV"]),
+                        checked: g,
+                        action: () => (0, l.Gm)(!g),
                     }),
                 },
                 "switch-icons",
             ),
         ),
-        R
+        L
     );
 }

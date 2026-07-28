@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => A });
+var i = n(477900);
+n(582128);
 var r = n(17928),
-    s = n(978940),
-    a = n(808107),
-    o = n(451394),
-    l = n(512474),
-    u = n(146151),
+    a = n(978940),
+    s = n(808107),
+    l = n(451394),
+    o = n(512474),
+    d = n(146151),
     c = n(983851),
-    d = n(148719),
+    u = n(148719),
     _ = n(576705),
-    h = n(818348);
-function f(e) {
+    E = n(818348);
+function A(e) {
     let { channel: t, ...n } = e,
-        f = (0, r.bG)([_.A], () => t.isPrivate() || _.A.can(h.xB.CONNECT, t));
-    if (t.isDM() || t.isGroupDM()) return (0, i.jsx)(s._, { ...n });
-    let p = t.isGuildStageVoice(),
-        E = !f || (0, d.A)(t);
-    return p && E
-        ? (0, i.jsx)(a.D, { ...n })
-        : p
-          ? (0, i.jsx)(o.q, { ...n })
+        A = (0, r.bG)([_.A], () => t.isPrivate() || _.A.can(E.xB.CONNECT, t));
+    if (t.isDM() || t.isGroupDM()) return (0, i.jsx)(a._, { ...n });
+    let h = t.isGuildStageVoice(),
+        I = !A || (0, u.A)(t);
+    return h && I
+        ? (0, i.jsx)(s.D, { ...n })
+        : h
+          ? (0, i.jsx)(l.q, { ...n })
           : t.isNSFW()
-            ? (0, i.jsx)(l.O, { ...n })
-            : E
-              ? (0, i.jsx)(u.t, { ...n })
+            ? (0, i.jsx)(o.O, { ...n })
+            : I
+              ? (0, i.jsx)(d.t, { ...n })
               : (0, i.jsx)(c.H, { ...n });
 }

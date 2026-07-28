@@ -1,6 +1,6 @@
 t.d(n, { A: () => A });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(523875),
     a = t(666654),
     r = t(688810),
@@ -21,20 +21,20 @@ function A(e) {
             ...g
         } = e,
         { parentAnalyticsLocation: x } = (0, r.Ay)(),
-        I = n || t || A,
-        f = h ? u.l : u.A,
+        f = n || t || A,
+        I = h ? u.l : u.A,
         T = (0, o.A)(n, t, A, m),
-        { events: v, play: _, Component: j } = (0, s.L)(I ? "unmute" : "mute"),
+        { events: v, play: _, Component: j } = (0, s.L)(f ? "unmute" : "mute"),
         N = t || A ? a.O : j;
     return (
-        i.useEffect(() => () => _(), [_, I]),
-        (0, l.jsx)(f, {
+        i.useEffect(() => () => _(), [_, f]),
+        (0, l.jsx)(I, {
             ...g,
             iconComponent: N,
             isTrayButton: !0,
-            caretColor: I ? "red" : "primaryDark",
+            caretColor: f ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
-            color: I ? "red" : void 0,
+            color: f ? "red" : void 0,
             label: T,
             onMouseEnter: (e) => {
                 C?.(e), v.onMouseEnter();

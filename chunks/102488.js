@@ -1,43 +1,43 @@
-A.d(e, { L: () => c });
-var r = A(64700),
-    I = A(17928),
-    a = A(469778),
-    C = A(183972),
-    E = A(919466),
-    _ = A(297966),
-    l = A(727811),
-    N = A(631368),
-    n = A(202541);
-let u = {
-    [_.gR.INITIAL]: l.P.CLAIM_IN_PROGRESS,
-    [_.gR.AWAITING_ACTIVATION]: l.P.CLAIM_IN_PROGRESS,
-    [_.gR.ACTIVATED]: l.P.CLAIMED,
-    [_.gR.FAILED]: l.P.NOT_CLAIMED,
-    [_.gR.EXPIRED]: l.P.NOT_CLAIMED,
-    [_.gR.CANCELLATION_PENDING]: l.P.CANCELLATION_IN_PROGRESS,
+n.d(e, { L: () => b });
+var i = n(582128),
+    A = n(17928),
+    d = n(469778),
+    r = n(183972),
+    C = n(919466),
+    a = n(297966),
+    E = n(727811),
+    l = n(631368),
+    N = n(202541);
+let I = {
+    [a.gR.INITIAL]: E.P.CLAIM_IN_PROGRESS,
+    [a.gR.AWAITING_ACTIVATION]: E.P.CLAIM_IN_PROGRESS,
+    [a.gR.ACTIVATED]: E.P.CLAIMED,
+    [a.gR.FAILED]: E.P.NOT_CLAIMED,
+    [a.gR.EXPIRED]: E.P.NOT_CLAIMED,
+    [a.gR.CANCELLATION_PENDING]: E.P.CANCELLATION_IN_PROGRESS,
 };
-function c() {
-    let t = (0, N.$)(),
-        e = (0, I.bG)([a.A], () => a.A.isFetchedForApplication(n.tv)),
-        { activationStatus: A, activationRequestState: c } = (0, I.cf)([E.A], () => ({
-            activationStatus: E.A.getActivationStatus(),
-            activationRequestState: E.A.getRequestState(),
+function b() {
+    let t = (0, l.$)(),
+        e = (0, A.bG)([d.A], () => d.A.isFetchedForApplication(N.tv)),
+        { activationStatus: n, activationRequestState: b } = (0, A.cf)([C.A], () => ({
+            activationStatus: C.A.getActivationStatus(),
+            activationRequestState: C.A.getRequestState(),
         })),
-        i = e && (null != A ? A.state === _.gR.CANCELLATION_PENDING : c === _.db.NOT_FETCHED);
+        h = e && (null != n ? n.state === a.gR.CANCELLATION_PENDING : b === a.db.NOT_FETCHED);
     return (
-        r.useEffect(() => {
-            t === N.C.HAS_ACCESS && i && (0, C.x6)(_.n9.XGPP);
-        }, [t, i]),
+        i.useEffect(() => {
+            t === l.C.HAS_ACCESS && h && (0, r.x6)(a.n9.XGPP);
+        }, [t, h]),
         (function (t) {
-            let { activationStatus: e, activationRequestState: A } = t,
-                r = A === _.db.FETCHING || A === _.db.CANCELLING;
-            return A === _.db.NOT_FETCHED || A === _.db.FETCHING
-                ? { status: l.P.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
+            let { activationStatus: e, activationRequestState: n } = t,
+                i = n === a.db.FETCHING || n === a.db.CANCELLING;
+            return n === a.db.NOT_FETCHED || n === a.db.FETCHING
+                ? { status: E.P.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
                 : {
-                      status: null != e ? u[e.state] : l.P.NOT_CLAIMED,
+                      status: null != e ? I[e.state] : E.P.NOT_CLAIMED,
                       redirect: e?.redirect ?? null,
-                      requestInProgress: r,
+                      requestInProgress: i,
                   };
-        })({ activationStatus: A, activationRequestState: c })
+        })({ activationStatus: n, activationRequestState: b })
     );
 }

@@ -1,51 +1,51 @@
-t.d(e, { A: () => O });
-var n = t(627968);
-t(64700);
-var s = t(534514),
-    r = t(17928),
-    l = t(554146),
-    c = t(331322),
-    u = t(778712),
-    o = t(834730),
-    a = t(821609),
-    d = t(403581),
-    _ = t(408278),
-    p = t(789645),
-    I = t(379848),
-    f = t(287809),
-    S = t(428262);
-let h = (0, t(945810).mj)({
+e.d(t, { A: () => O });
+var s = e(477900);
+e(582128);
+var n = e(297264),
+    l = e(17928),
+    r = e(554146),
+    c = e(331322),
+    a = e(778712),
+    o = e(834730),
+    u = e(821609),
+    d = e(403581),
+    p = e(408278),
+    _ = e(789645),
+    I = e(379848),
+    f = e(287809),
+    k = e(428262);
+let h = (0, e(945810).mj)({
     name: "2026-04-premium-group-gift-selection-upsell",
     kind: "user",
     defaultConfig: !1,
     variations: { 0: !1, 1: !0 },
 });
-var k = t(286320),
-    g = t(579245),
-    m = t(783420),
-    L = t(862990),
-    T = t(788868),
-    w = t(88001),
-    C = t(49999),
-    E = t(466919),
-    A = t(375708),
-    x = t(761479);
+var S = e(286320),
+    g = e(579245),
+    m = e(783420),
+    L = e(862990),
+    T = e(202541),
+    C = e(88001),
+    w = e(49999),
+    E = e(466919),
+    A = e(375708),
+    x = e(421151);
 function O() {
     let i = (function (i) {
-            let { location: e } = i;
-            return h.useConfig({ location: e });
+            let { location: t } = i;
+            return h.useConfig({ location: t });
         })({ location: "gift_selection_modal" }),
-        e = (0, L.O9)(),
-        t = (0, k.b)().slice(0, 3),
-        O = (0, r.bG)([f.default], () => f.default.getCurrentUser());
-    return i && e
-        ? (0, n.jsx)(I.Ay, {
-              contentTypes: [l.M.PREMIUM_GROUP_GIFT_SELECTION_UPSELL],
+        t = (0, L.O9)(),
+        e = (0, S.b)().slice(0, 3),
+        O = (0, l.bG)([f.default], () => f.default.getCurrentUser());
+    return i && t
+        ? (0, s.jsx)(I.Ay, {
+              contentTypes: [r.M.PREMIUM_GROUP_GIFT_SELECTION_UPSELL],
               children: (i) => {
-                  let { visibleContent: e, markAsDismissed: r } = i;
-                  return null == e
+                  let { visibleContent: t, markAsDismissed: l } = i;
+                  return null == t
                       ? null
-                      : (0, n.jsxs)(c.B, {
+                      : (0, s.jsxs)(c.B, {
                             direction: "horizontal",
                             align: "center",
                             gap: 24,
@@ -53,42 +53,42 @@ function O() {
                             padding: 16,
                             fullWidth: !1,
                             children: [
-                                (0, n.jsxs)(c.B, {
+                                (0, s.jsxs)(c.B, {
                                     direction: "horizontal",
                                     align: "center",
                                     gap: 16,
                                     className: x.rf,
                                     fullWidth: !1,
                                     children: [
-                                        t.length > 0 &&
-                                            (0, n.jsx)(c.B, {
+                                        e.length > 0 &&
+                                            (0, s.jsx)(c.B, {
                                                 direction: "horizontal",
                                                 className: x.Gc,
                                                 fullWidth: !1,
                                                 gap: 0,
-                                                children: t.map((i, e, t) =>
-                                                    (0, n.jsx)(
+                                                children: e.map((i, t, e) =>
+                                                    (0, s.jsx)(
                                                         g.n,
                                                         {
                                                             affinity: i,
-                                                            applyMask: e !== t.length - 1,
-                                                            size: u._3.SIZE_32,
+                                                            applyMask: t !== e.length - 1,
+                                                            size: a._3.SIZE_32,
                                                         },
                                                         i.id,
                                                     ),
                                                 ),
                                             }),
-                                        (0, n.jsxs)(c.B, {
+                                        (0, s.jsxs)(c.B, {
                                             direction: "vertical",
                                             gap: 4,
                                             fullWidth: !1,
                                             children: [
-                                                (0, n.jsx)(s.D, {
+                                                (0, s.jsx)(n.D, {
                                                     variant: "heading-md/semibold",
                                                     color: "text-strong",
                                                     children: A.intl.string(E.default["9nYcrx"]),
                                                 }),
-                                                (0, n.jsx)(o.E, {
+                                                (0, s.jsx)(o.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
                                                     children: A.intl.string(E.default["2MwL4Z"]),
@@ -97,37 +97,37 @@ function O() {
                                         }),
                                     ],
                                 }),
-                                (0, n.jsxs)(c.B, {
+                                (0, s.jsxs)(c.B, {
                                     direction: "horizontal",
                                     align: "center",
                                     gap: 12,
                                     className: x.o1,
                                     fullWidth: !1,
                                     children: [
-                                        (0, n.jsx)(m.A, {
+                                        (0, s.jsx)(m.A, {
                                             subscriptionTier: T.pe.TIER_2,
                                             initialPlanId: T.gD.PREMIUM_GROUP_MONTH,
                                             children: (i) => {
-                                                let { onClick: e } = i;
-                                                return (0, n.jsx)(a.$, {
+                                                let { onClick: t } = i;
+                                                return (0, s.jsx)(u.$, {
                                                     variant: "primary",
                                                     size: "sm",
                                                     icon: d.t,
-                                                    text: (0, S.TW)(O)
+                                                    text: (0, k.TW)(O)
                                                         ? A.intl.string(A.t.IJI7yk)
                                                         : A.intl.formatToPlainString(E.default.LwdrNi, {
-                                                              premiumGroupProductName: (0, w.DP)(),
+                                                              premiumGroupProductName: (0, C.DP)(),
                                                           }),
-                                                    onClick: e,
+                                                    onClick: t,
                                                 });
                                             },
                                         }),
-                                        (0, n.jsx)(_.K, {
-                                            icon: p.P,
+                                        (0, s.jsx)(p.K, {
+                                            icon: _.P,
                                             size: "sm",
                                             variant: "icon-only",
                                             "aria-label": A.intl.string(A.t.cpT0Cq),
-                                            onClick: () => r(C.i.USER_DISMISS),
+                                            onClick: () => l(w.i.USER_DISMISS),
                                         }),
                                     ],
                                 }),

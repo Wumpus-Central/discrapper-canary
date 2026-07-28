@@ -1,6 +1,6 @@
 n.d(e, { default: () => x });
-var a = n(627968),
-    i = n(64700),
+var a = n(477900),
+    i = n(582128),
     s = n(17928),
     l = n(189213),
     o = n(292666),
@@ -8,9 +8,9 @@ var a = n(627968),
     c = n(47167),
     u = n(734057),
     d = n(181079),
-    h = n(422258),
+    h = n(659324),
     p = n(375708),
-    m = n(832518);
+    m = n(384286);
 function x(t) {
     let { channelId: e, onClose: n, transitionState: x, heading: k, formTitle: v } = t,
         C = (0, s.bG)([u.A], () => u.A.getChannel(e)),

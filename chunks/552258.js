@@ -1,6 +1,6 @@
 e.d(i, { default: () => T });
-var t = e(627968),
-    s = e(64700),
+var t = e(477900),
+    s = e(582128),
     r = e(562708),
     _ = e(17928),
     a = e(738188),
@@ -16,7 +16,7 @@ var t = e(627968),
     O = e(64175),
     C = e(652215),
     f = e(375708),
-    p = e(897455);
+    p = e(834391);
 function T(n) {
     let { channelId: i, userId: e, transitionState: T, onClose: h } = n,
         I = s.useRef(!1),

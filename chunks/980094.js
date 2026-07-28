@@ -1,18 +1,18 @@
-n.d(t, { Q: () => i });
-var a = n(627968);
-n(64700);
+n.d(t, { Q: () => l });
+var s = n(477900);
+n(582128);
 var r = n(834730),
-    s = n(665711),
-    l = n(582275);
-function i(e) {
+    i = n(665711),
+    a = n(297163);
+function l(e) {
     let { application: t, iconSize: n = 20 } = e;
     return null == t
         ? null
-        : (0, a.jsxs)("div", {
-              className: l.k,
+        : (0, s.jsxs)("div", {
+              className: a.k,
               children: [
-                  (0, a.jsx)(s.W, { application: t, iconSize: n }),
-                  (0, a.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
+                  (0, s.jsx)(i.W, { application: t, iconSize: n }),
+                  (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
               ],
           });
 }

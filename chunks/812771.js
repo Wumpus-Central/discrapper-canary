@@ -1,17 +1,17 @@
-s.d(i, { A: () => x, X: () => R });
+s.d(i, { A: () => p, X: () => R });
 var t,
-    a = s(627968),
-    d = s(64700),
-    r = s(503698),
-    n = s.n(r),
-    l = s(735438),
-    h = s(661531),
-    o = s(602853),
-    c = s(817281),
+    a = s(477900),
+    d = s(582128),
+    n = s(503698),
+    r = s.n(n),
+    l = s(435558),
+    o = s(661531),
+    c = s(602853),
+    h = s(817281),
     u = s(761929),
     m = s(742023),
     b = s(743898),
-    S = s(318974),
+    S = s(870406),
     R =
         (((t = {})[(t.PostSidebar = 0)] = "PostSidebar"),
         (t[(t.ThreadSidebar = 1)] = "ThreadSidebar"),
@@ -19,10 +19,10 @@ var t,
         (t[(t.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
         (t[(t.HomeSidebar = 4)] = "HomeSidebar"),
         t);
-function p(e) {
-    let { resizableNode: i, onResize: s, onResizeEnd: t, maxWidth: d, minWidth: r } = e,
-        n = (0, u.A)({
-            minDimension: r,
+function f(e) {
+    let { resizableNode: i, onResize: s, onResizeEnd: t, maxWidth: d, minWidth: n } = e,
+        r = (0, u.A)({
+            minDimension: n,
             maxDimension: d,
             resizableDomNodeRef: i,
             onElementResize: s,
@@ -30,12 +30,12 @@ function p(e) {
             orientation: u.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, a.jsx)("div", { onMouseDown: n, className: S.Di });
+    return (0, a.jsx)("div", { onMouseDown: r, className: S.Di });
 }
-function x(e) {
-    let { sidebarType: i, maxWidth: s, onWidthChange: t, children: r, floatingLayer: u } = e,
+function p(e) {
+    let { sidebarType: i, maxWidth: s, onWidthChange: t, children: n, floatingLayer: u } = e,
         R = d.useRef(null),
-        x = (function (e) {
+        p = (function (e) {
             switch (e) {
                 case 0:
                     return "postSidebarWidth";
@@ -49,42 +49,42 @@ function x(e) {
                     return "homeSidebarWidth";
             }
         })(i),
-        [D, E] = d.useState(m.Ay[x]),
-        W = d.useCallback(
+        [x, D] = d.useState(m.Ay[p]),
+        E = d.useCallback(
             (e) => {
-                c.Ay.updatedUnsyncedSettings({ [x]: e });
+                h.Ay.updatedUnsyncedSettings({ [p]: e });
             },
-            [x],
+            [p],
         ),
-        f = (0, b.P)({ maxWidth: s, minWidth: 450 }),
-        j = (0, o.r)(h.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        A = (0, l.clamp)(D, 450, s),
-        C = f ? A : A + j;
+        W = (0, b.P)({ maxWidth: s, minWidth: 450 }),
+        j = (0, c.r)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        A = (0, l.clamp)(x, 450, s),
+        C = W ? A : A + j;
     d.useEffect(() => {
-        t?.(A, f);
-    }, [A, t, f]);
+        t?.(A, W);
+    }, [A, t, W]);
     let N = u ?? d.Fragment;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            !f && (0, a.jsx)("div", { style: { minWidth: C } }),
+            !W && (0, a.jsx)("div", { style: { minWidth: C } }),
             (0, a.jsx)(N, {
                 children: (0, a.jsxs)("div", {
                     className: S.PA,
                     children: [
-                        (0, a.jsx)("div", { className: n()(S.Uc, { [S.DU]: f, [S.iK]: !f }), style: { width: C } }),
-                        !f &&
-                            (0, a.jsx)(p, {
+                        (0, a.jsx)("div", { className: r()(S.Uc, { [S.DU]: W, [S.iK]: !W }), style: { width: C } }),
+                        !W &&
+                            (0, a.jsx)(f, {
                                 minWidth: 450,
                                 maxWidth: s,
                                 resizableNode: R,
-                                onResize: E,
-                                onResizeEnd: W,
+                                onResize: D,
+                                onResizeEnd: E,
                             }),
                         (0, a.jsx)("div", {
                             ref: R,
-                            className: n()(S.kL, { [S.DU]: f }),
+                            className: r()(S.kL, { [S.DU]: W }),
                             style: { width: A },
-                            children: r,
+                            children: n,
                         }),
                     ],
                 }),

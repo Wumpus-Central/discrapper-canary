@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, { hI: () => c });
-var i = n(64700),
+var i = n(582128),
     r = n(17928),
-    s = n(785401),
-    a = n(220478),
-    o = n(102609),
-    l = n(736056),
-    u = n(688151);
+    a = n(785401),
+    s = n(220478),
+    l = n(102609),
+    o = n(736056),
+    d = n(688151);
 function c() {
-    let e = (0, r.cf)([l.A], () => l.A.getRegisteredExperiments()),
-        t = (0, r.cf)([l.A], () => l.A.getAllExperimentOverrideDescriptors());
+    let e = (0, r.cf)([o.A], () => o.A.getRegisteredExperiments()),
+        t = (0, r.cf)([o.A], () => o.A.getAllExperimentOverrideDescriptors());
     return {
         experiments: (0, i.useMemo)(
             () =>
@@ -17,8 +17,8 @@ function c() {
                     let t = {};
                     for (let [n, i] of Object.entries(e))
                         t[n] = {
-                            system: o.l5.LEGACY,
-                            kind: i.type === u.Vh.USER ? "user" : "guild",
+                            system: l.l5.LEGACY,
+                            kind: i.type === d.Vh.USER ? "user" : "guild",
                             name: n,
                             title: i.title,
                             variants: i.buckets.map((e, t) => ({
@@ -26,14 +26,14 @@ function c() {
                                 label:
                                     "object" == typeof i.description
                                         ? i.description[t]
-                                        : a.A.getExperimentBucketName(e),
-                                shortLabel: a.A.getExperimentBucketName(e),
+                                        : s.A.getExperimentBucketName(e),
+                                shortLabel: s.A.getExperimentBucketName(e),
                                 type:
-                                    e === u.RE.CONTROL
-                                        ? s.FZ.CONTROL
-                                        : e === u.RE.NOT_ELIGIBLE
-                                          ? s.FZ.UNSPECIFIED
-                                          : s.FZ.TREATMENT,
+                                    e === d.RE.CONTROL
+                                        ? a.FZ.CONTROL
+                                        : e === d.RE.NOT_ELIGIBLE
+                                          ? a.FZ.UNSPECIFIED
+                                          : a.FZ.TREATMENT,
                             })),
                         };
                     return t;

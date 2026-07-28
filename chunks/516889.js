@@ -1,6 +1,6 @@
 i.d(e, { default: () => P });
-var s = i(627968),
-    n = i(64700),
+var s = i(477900),
+    n = i(582128),
     l = i(284009),
     a = i.n(l),
     r = i(562708),
@@ -8,7 +8,7 @@ var s = i(627968),
     c = i(17928),
     o = i(834730),
     m = i(696986),
-    x = i(534514),
+    x = i(297264),
     u = i(793574),
     h = i(139286),
     g = i(839656),
@@ -24,7 +24,7 @@ var s = i(627968),
     I = i(411342),
     L = i(652215),
     f = i(375708),
-    k = i(441231);
+    k = i(848023);
 let G = "expanded-area";
 function z(t) {
     let { attachments: e, role: i, roleLocked: l } = t,
@@ -91,7 +91,7 @@ function C(t) {
           : (0, s.jsx)(z, { attachments: i, role: n, roleLocked: l });
 }
 var y = i(703543),
-    F = i(511869);
+    F = i(941381);
 function P(t) {
     let { transitionState: e, guildProductListingId: i, analyticsLocation: n, guildId: l, onClose: N } = t,
         D = (0, c.bG)([p.A], () => p.A.getGuildProduct(i));

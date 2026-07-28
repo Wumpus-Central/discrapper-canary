@@ -1,10 +1,10 @@
 r.d(o, { D: () => c });
-var t = r(627968);
-r(64700);
+var t = r(477900);
+r(582128);
 let d =
     "https://cdn.discordapp.com/assets/content/4e02ee0451e556464805350795ce905d3f1fae8d476d249189c0d236fd312029.riv";
-var a = r(594639),
-    s = r(105596);
+var a = r(502377),
+    s = r(799226);
 let i = {
     "Boost Server": { reducedMotion: "boolean" },
     "Boost Crystal": { reducedMotion: "boolean" },

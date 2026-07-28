@@ -1,6 +1,6 @@
 a.d(n, { default: () => g });
-var i = a(627968);
-a(64700);
+var i = a(477900);
+a(582128);
 var e = a(284009),
     c = a.n(e),
     d = a(189213),
@@ -22,7 +22,7 @@ function m(t) {
     });
 }
 var p = a(375708),
-    j = a(389301);
+    j = a(288925);
 function x(t) {
     let { attachment: n, guildId: a, productId: e } = t;
     return (0, i.jsxs)("li", {

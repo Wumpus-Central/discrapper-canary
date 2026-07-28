@@ -1,65 +1,65 @@
-i.d(t, { B: () => o, r: () => u });
-var n = i(627968),
-    l = i(64700),
-    s = i(775602),
-    a = i(818348);
-let r = l.createContext(null),
-    c = {
-        registerItemRef: () => a.tE,
-        registerDragHandleRef: () => a.tE,
-        manageFocusOnReorder: a.tE,
-        manageFocusOnDelete: a.tE,
+i.d(t, { B: () => c, r: () => d });
+var n = i(477900),
+    s = i(582128),
+    l = i(775602),
+    r = i(818348);
+let a = s.createContext(null),
+    o = {
+        registerItemRef: () => r.tE,
+        registerDragHandleRef: () => r.tE,
+        manageFocusOnReorder: r.tE,
+        manageFocusOnDelete: r.tE,
     };
-function u() {
-    return l.useContext(r) ?? c;
+function d() {
+    return s.useContext(a) ?? o;
 }
-function o(e) {
+function c(e) {
     let { children: t, emptyListFallbackRef: i } = e,
-        a = l.useRef(new Map()),
-        c = l.useRef(new Map()),
-        u = l.useRef([]),
-        o = l.useCallback(() => {
-            u.current = Array.from(a.current.keys()).sort((e, t) => {
-                let i = a.current.get(e),
-                    n = a.current.get(t);
+        r = s.useRef(new Map()),
+        o = s.useRef(new Map()),
+        d = s.useRef([]),
+        c = s.useCallback(() => {
+            d.current = Array.from(r.current.keys()).sort((e, t) => {
+                let i = r.current.get(e),
+                    n = r.current.get(t);
                 if (null == i || null == n) return 0;
-                let l = i.compareDocumentPosition(n);
-                return (l & Node.DOCUMENT_POSITION_FOLLOWING) != 0
+                let s = i.compareDocumentPosition(n);
+                return (s & Node.DOCUMENT_POSITION_FOLLOWING) != 0
                     ? -1
-                    : +((l & Node.DOCUMENT_POSITION_PRECEDING) != 0);
+                    : +((s & Node.DOCUMENT_POSITION_PRECEDING) != 0);
             });
         }, []),
-        d = l.useCallback(
+        u = s.useCallback(
             (e) => (t) => {
-                null != t ? c.current.set(e, t) : c.current.delete(e);
+                null != t ? o.current.set(e, t) : o.current.delete(e);
             },
             [],
         ),
-        g = l.useCallback(
+        g = s.useCallback(
             (e) => (t) => {
-                null != t ? a.current.set(e, t) : a.current.delete(e);
+                null != t ? r.current.set(e, t) : r.current.delete(e);
             },
             [],
         ),
-        m = l.useCallback((e) => {
-            s.Ay.keyboardModeEnabled &&
+        m = s.useCallback((e) => {
+            l.Ay.keyboardModeEnabled &&
                 requestAnimationFrame(() => {
-                    let t = c.current.get(e);
+                    let t = o.current.get(e);
                     t?.focus();
                 });
         }, []),
-        f = l.useCallback(
+        x = s.useCallback(
             (e) => {
-                if (!s.Ay.keyboardModeEnabled) return;
-                o();
-                let t = u.current,
+                if (!l.Ay.keyboardModeEnabled) return;
+                c();
+                let t = d.current,
                     n = t.indexOf(e);
                 if (-1 === n) return;
-                let l = n + 1 < t.length ? n + 1 : n - 1;
-                if (l >= 0) {
-                    let e = t[l];
+                let s = n + 1 < t.length ? n + 1 : n - 1;
+                if (s >= 0) {
+                    let e = t[s];
                     requestAnimationFrame(() => {
-                        let t = a.current.get(e);
+                        let t = r.current.get(e);
                         t?.focus();
                     });
                 } else
@@ -67,11 +67,11 @@ function o(e) {
                         i?.focus();
                     });
             },
-            [i, o],
+            [i, c],
         ),
-        x = l.useMemo(
-            () => ({ registerDragHandleRef: d, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: f }),
-            [d, g, m, f],
+        f = s.useMemo(
+            () => ({ registerDragHandleRef: u, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: x }),
+            [u, g, m, x],
         );
-    return (0, n.jsx)(r.Provider, { value: x, children: t });
+    return (0, n.jsx)(a.Provider, { value: f, children: t });
 }

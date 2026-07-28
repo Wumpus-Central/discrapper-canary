@@ -1,7 +1,7 @@
 i.d(e, { A: () => d });
-var s = i(627968),
-    n = i(64700),
-    l = i(106778),
+var s = i(477900),
+    n = i(582128),
+    l = i(776310),
     a = i(21161),
     r = i(536283);
 let o = { xMin: -40, xMax: 40, yMin: -40, yMax: -70 };
@@ -14,9 +14,9 @@ let d = n.memo(function (t) {
             colors: i,
             emojiURL: d,
             numBursts: c,
-            particlesPerBurst: p,
-            offsetXPercentageMax: f,
-            offsetXPercentageMin: h,
+            particlesPerBurst: f,
+            offsetXPercentageMax: h,
+            offsetXPercentageMin: p,
             offsetYPercentageMax: m,
             offsetYPercentageMin: g,
             customConfettiCanvas: A,
@@ -47,26 +47,26 @@ let d = n.memo(function (t) {
                                     a = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
                                     d = u(t.width, 100, i),
                                     c = u(t.height, 75, n),
-                                    p = u(t.width, 350, e),
-                                    f = u(t.height, 75, s),
-                                    { xMin: h, xMax: m, yMin: g, yMax: A } = l;
+                                    f = u(t.width, 350, e),
+                                    h = u(t.height, 75, s),
+                                    { xMin: p, xMax: m, yMin: g, yMax: A } = l;
                                 return {
                                     ...r.Mw,
                                     position: {
                                         type: "static-random",
                                         minValue: { x: t.left + d, y: t.top + c },
-                                        maxValue: { x: t.left + p, y: t.top + f },
+                                        maxValue: { x: t.left + f, y: t.top + h },
                                     },
                                     velocity: {
                                         type: "static-random",
-                                        minValue: { x: h, y: g },
+                                        minValue: { x: p, y: g },
                                         maxValue: { x: m, y: A },
                                     },
                                     size: { type: "static-random", minValue: r.wn, maxValue: r.wn },
                                     dragCoefficient: { type: "static", value: a },
                                 };
-                            })(e.getBoundingClientRect(), f, h, m, g, x, y),
-                            p ?? 50,
+                            })(e.getBoundingClientRect(), h, p, m, g, x, y),
+                            f ?? 50,
                         ),
                             s === t.length - 1 && null != R && E(!0);
                     }, 60 * s),
@@ -75,7 +75,7 @@ let d = n.memo(function (t) {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [j, e, c, p, f, h, m, g, x, y, R]),
+        }, [j, e, c, f, h, p, m, g, x, y, R]),
         (0, s.jsx)(l.K_, { ref: C, sprites: N ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
     );
 });

@@ -1,94 +1,94 @@
 "use strict";
-n.d(t, { A: () => g, S: () => f });
-var i = n(627968),
-    r = n(64700),
-    s = n(17928),
-    a = n(778712),
-    o = n(922016),
-    l = n(335180),
-    u = n(287809),
+n.d(t, { A: () => p, S: () => A });
+var i = n(477900),
+    r = n(582128),
+    a = n(17928),
+    s = n(778712),
+    l = n(922016),
+    o = n(335180),
+    d = n(287809),
     c = n(454719),
-    d = n(589022),
+    u = n(589022),
     _ = n(518477),
-    h = n(818348);
-let f = (0, a.FT)(a._3.SIZE_80),
-    p = { onMouseDown: h.tE, onClick: h.tE, onKeyDown: h.tE, "aria-controls": void 0, "aria-expanded": !1 },
-    E = { isShown: !1, position: void 0 };
-function m(e) {
+    E = n(818348);
+let A = (0, s.FT)(s._3.SIZE_80),
+    h = { onMouseDown: E.tE, onClick: E.tE, onKeyDown: E.tE, "aria-controls": void 0, "aria-expanded": !1 },
+    I = { isShown: !1, position: void 0 };
+function f(e) {
     let {
             children: t,
             user: n,
-            currentUser: s,
-            guildId: a,
-            channelId: u,
-            messageId: h,
-            roleId: p,
-            disableUserProfileLink: E,
-            newAnalyticsLocations: m,
-            appContext: g,
-            avatarUrl: A,
-            preload: I,
-            renderPopout: T,
+            currentUser: a,
+            guildId: s,
+            channelId: d,
+            messageId: E,
+            roleId: h,
+            disableUserProfileLink: I,
+            newAnalyticsLocations: f,
+            appContext: p,
+            avatarUrl: T,
+            preload: m,
+            renderPopout: g,
             onRequestOpen: S,
-            onRequestClose: y,
+            onRequestClose: N,
             onClosePopout: C,
-            shouldShow: N,
-            shouldPreload: v = !0,
-            ignoreModalClicks: R = !0,
-            ...O
+            shouldShow: O,
+            shouldPreload: R = !0,
+            ignoreModalClicks: L = !0,
+            ...y
         } = e,
-        b = r.useRef(void 0),
-        D = r.useCallback(
+        D = r.useRef(void 0),
+        v = r.useCallback(
             () =>
-                null != I
-                    ? I()
-                    : (0, c.A)(n.id, A ?? n.getAvatarURL(a, f), {
+                null != m
+                    ? m()
+                    : (0, c.A)(n.id, T ?? n.getAvatarURL(s, A), {
                           type: "popout",
-                          withMutualGuilds: n.id !== s.id,
-                          withMutualFriends: !n.bot && n.id !== s.id,
-                          guildId: a,
-                          channelId: u,
+                          withMutualGuilds: n.id !== a.id,
+                          withMutualFriends: !n.bot && n.id !== a.id,
+                          guildId: s,
+                          channelId: d,
                       }),
-            [I, s, n, A, a, u],
+            [m, a, n, T, s, d],
         ),
-        L = r.useCallback(
+        b = r.useCallback(
             (e) =>
-                ((b.current = Date.now()), null != T)
-                    ? T(e, b.current)
-                    : (0, i.jsx)(d.A, {
+                ((D.current = Date.now()), null != g)
+                    ? g(e, D.current)
+                    : (0, i.jsx)(u.A, {
                           ...e,
                           user: n,
-                          currentUser: s,
-                          guildId: a,
-                          channelId: u,
-                          roleId: p,
-                          messageId: h,
-                          disableUserProfileLink: E,
-                          newAnalyticsLocations: m,
-                          appContext: g,
-                          openedAt: b.current,
+                          currentUser: a,
+                          guildId: s,
+                          channelId: d,
+                          roleId: h,
+                          messageId: E,
+                          disableUserProfileLink: I,
+                          newAnalyticsLocations: f,
+                          appContext: p,
+                          openedAt: D.current,
                           closePopout: () => {
                               e.closePopout(), C?.();
                           },
                       }),
-            [n, s, T, a, u, p, h, E, m, g, C],
+            [n, a, g, s, d, h, E, I, f, p, C],
         );
-    return (0, i.jsx)(o.Y, {
+    return (0, i.jsx)(l.Y, {
         popoutKey: _.KM,
-        shouldShow: N,
-        preload: v ? D : void 0,
-        loadingComponent: (0, l.Zm)(),
-        renderPopout: L,
+        shouldShow: O,
+        preload: R ? v : void 0,
+        loadingComponent: (0, o.Zm)(),
+        renderPopout: b,
         onRequestOpen: S,
-        onRequestClose: y,
-        ignoreModalClicks: R,
-        ...O,
+        onRequestClose: N,
+        ignoreModalClicks: L,
+        ...y,
         children: t,
     });
 }
-let g = r.memo(function (e) {
-    let { children: t, userId: n, user: r, ...a } = e,
-        o = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-        l = (0, s.bG)([u.default], () => r ?? u.default.getUser(n));
-    return null == l || null == o ? t(p, E) : (0, i.jsx)(m, { ...a, user: l, currentUser: o, children: t });
+let p = r.memo(function (e) {
+    let { children: t, userId: n, user: r, ...s } = e,
+        l = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        o = (0, a.bG)([d.default], () => r ?? d.default.getUser(n));
+    return null == o || null == l ? t(h, I) : (0, i.jsx)(f, { ...s, user: o, currentUser: l, children: t });
 });

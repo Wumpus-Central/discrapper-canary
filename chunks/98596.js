@@ -4,13 +4,13 @@ var n = i(419954),
     l = i(665267),
     r = i(375708);
 let a = (0, n.E2)(s.X.APPEARANCE_CLIENT_THEMES, { useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)], Component: l.sB });
-var o = i(627968);
-i(64700);
+var o = i(477900);
+i(582128);
 var u = i(503698),
     d = i.n(u),
     c = i(562708),
     g = i(821609),
-    m = i(534514),
+    m = i(297264),
     A = i(834730),
     h = i(688810),
     E = i(139286),
@@ -19,7 +19,7 @@ var u = i(503698),
     x = i(830543),
     p = i(738419),
     f = i(693227),
-    N = i(176409),
+    N = i(446673),
     _ = i(114149);
 function I(e) {
     let { className: t } = e,
@@ -63,8 +63,8 @@ let C = (0, n.E2)(s.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     },
 });
 var b = i(366010),
-    y = i(17928),
-    v = i(775602),
+    v = i(17928),
+    y = i(775602),
     j = i(147248),
     O = i(875317),
     R = i(97469),
@@ -76,50 +76,50 @@ let G = (0, n.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
     useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
     useValue: function () {
         let e = (0, R.qo)();
-        return (0, y.bG)([L.A, v.Ay], () => {
+        return (0, v.bG)([L.A, y.Ay], () => {
             let t = L.A.theme,
-                i = v.Ay.useForcedColors;
+                i = y.Ay.useForcedColors;
             return e && (0, b.q)(t) && !i;
         });
     },
     usePredicate: function () {
         let e = null != D.eh.useSetting().customUserThemeSettings,
             t = null != (0, O.Q)();
-        return (0, y.bG)([L.A, j.A], () => {
+        return (0, v.bG)([L.A, j.A], () => {
             let i = L.A.theme,
                 n = j.A.gradientPreset;
             return (0, b.q)(i) && null == n && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, y.bG)([L.A, v.Ay], () => {
+        return (0, v.bG)([L.A, y.Ay], () => {
             let e = L.A.theme,
-                t = v.Ay.useForcedColors;
+                t = y.Ay.useForcedColors;
             return e !== P.NJ.LIGHT || t;
         });
     },
     setValue: (e) => D.l$.updateSetting(e),
 });
-var U = i(331322),
-    M = i(487245),
+var M = i(331322),
+    U = i(487245),
     V = i(385803);
 let k = (0, n.E2)(s.X.APPEARANCE_DEFAULT_THEMES, {
         useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
         Component: function () {
-            return (0, o.jsxs)(M.Ay, {
-                type: M.v0.SETTINGS,
+            return (0, o.jsxs)(U.Ay, {
+                type: U.v0.SETTINGS,
                 children: [
                     (0, o.jsx)(m.D, {
                         variant: "heading-md/semibold",
                         color: "text-default",
                         children: r.intl.string(r.t["0EzVst"]),
                     }),
-                    (0, o.jsx)(U.B, {
+                    (0, o.jsx)(M.B, {
                         direction: "horizontal",
                         wrap: !0,
                         gap: 8,
                         padding: { top: 24 },
-                        children: (0, o.jsx)(M.t6, { size: V.ni.SIZE_48 }),
+                        children: (0, o.jsx)(U.t6, { size: V.ni.SIZE_48 }),
                     }),
                 ],
             });

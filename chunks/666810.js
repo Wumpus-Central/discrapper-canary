@@ -1,6 +1,6 @@
 o.d(i, { X: () => a, h: () => d });
-var n = o(627968),
-    e = o(64700),
+var n = o(477900),
+    e = o(582128),
     u = o(945810);
 let r = { clickRoutesToGift: !1, showGiftButton: !0 },
     c = (0, u.mj)({

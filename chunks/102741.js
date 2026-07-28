@@ -1,34 +1,34 @@
-n.d(l, { A: () => E });
-var r,
-    t,
-    s = n(627968),
-    i = n(64700),
-    a = n(503698),
-    d = n.n(a),
-    o = n(235986),
-    c = n(536554),
-    u =
-        (((r = u || {}).PRIMARY = "primary"),
-        (r.SECONDARY = "secondary"),
-        (r.WARNING = "warning"),
-        (r.ERROR = "error"),
-        r),
-    m = (((t = m || {}).SMALL = "small"), (t.LARGE = "large"), (t.NONE = "none"), t);
-let p = { primary: c.cG, secondary: c.QU, warning: c.SO, error: c._r },
-    N = { small: c.EX, large: c.as, none: null };
-class A extends i.PureComponent {
-    static Colors = u;
-    static Sizes = m;
+n.d(t, { A: () => E });
+var l,
+    i,
+    r = n(477900),
+    a = n(582128),
+    s = n(503698),
+    o = n.n(s),
+    u = n(235986),
+    c = n(392610),
+    d =
+        (((l = d || {}).PRIMARY = "primary"),
+        (l.SECONDARY = "secondary"),
+        (l.WARNING = "warning"),
+        (l.ERROR = "error"),
+        l),
+    p = (((i = p || {}).SMALL = "small"), (i.LARGE = "large"), (i.NONE = "none"), i);
+let m = { primary: c.cG, secondary: c.QU, warning: c.SO, error: c._r },
+    C = { small: c.EX, large: c.as, none: null };
+class h extends a.PureComponent {
+    static Colors = d;
+    static Sizes = p;
     render() {
-        let { icon: e, color: l, children: n, iconSize: r, className: t, iconClassName: i } = this.props;
-        return (0, s.jsxs)(o.A, {
-            className: d()(c.N4, p[l], t),
-            align: o.A.Align.CENTER,
+        let { icon: e, color: t, children: n, iconSize: l, className: i, iconClassName: a } = this.props;
+        return (0, r.jsxs)(u.A, {
+            className: o()(c.N4, m[t], i),
+            align: u.A.Align.CENTER,
             children: [
-                (0, s.jsx)(e, { className: d()(c.Kk, N[r], i), color: "currentColor" }),
-                (0, s.jsx)("div", { children: n }),
+                (0, r.jsx)(e, { className: o()(c.Kk, C[l], a), color: "currentColor" }),
+                (0, r.jsx)("div", { children: n }),
             ],
         });
     }
 }
-let E = A;
+let E = h;

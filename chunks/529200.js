@@ -1,26 +1,26 @@
 l.d(n, { A: () => R }), l(321073);
-var i = l(627968),
-    s = l(64700),
+var i = l(477900),
+    s = l(582128),
     t = l(503698),
     a = l.n(t),
-    r = l(534514),
+    r = l(297264),
     c = l(778712),
     u = l(849516),
     d = l(97808),
     o = l(939249),
     m = l(834730),
     h = l(571694),
-    p = l(47167),
-    x = l(713654),
+    x = l(47167),
+    p = l(713654),
     v = l(235986),
     N = l(769015),
     j = l(548118),
-    g = l(776231),
+    g = l(597098),
     I = l(885386),
-    f = l(486020),
-    C = l(821589),
+    C = l(486020),
+    f = l(821589),
     A = l(375708),
-    y = l(306571);
+    y = l(223171);
 function k(e) {
     let { text: n, extra: l } = e;
     return (0, i.jsxs)(r.D, { variant: "heading-md/semibold", className: y.header, children: [n, l] });
@@ -55,23 +55,23 @@ function _(e) {
             expired: r = !1,
             user: o,
             className: m,
-            channelIconSize: x = c._3.SIZE_56,
+            channelIconSize: p = c._3.SIZE_56,
         } = e,
-        v = (0, p.Ay)(s) ?? "",
+        v = (0, x.Ay)(s) ?? "",
         g = I.kt.useSetting();
     if (r)
         return (0, i.jsx)("div", {
             className: y.guildIconExpired,
             children: (0, i.jsx)(u.u, { size: "custom", width: 26, height: 26, color: "currentColor" }),
         });
-    let f = null == l || null != l.icon,
-        A = a()((0, C.t)(y, "guildIcon", f ? "Image" : "", null != t ? "Joined" : ""), m);
+    let C = null == l || null != l.icon,
+        A = a()((0, f.t)(y, "guildIcon", C ? "Image" : "", null != t ? "Joined" : ""), m);
     return null != n
         ? (0, i.jsx)(N.A, { game: n, onClick: t, size: y.applicationIcon, className: A })
         : null != l
           ? (0, i.jsx)(j.Ay, { onClick: t, active: !0, guild: l, className: A, animate: g })
           : null != s
-            ? (0, i.jsx)(d.eu, { onClick: t, src: (0, h.Y)(s, (0, c.FT)(x)), size: x, className: A, "aria-label": v })
+            ? (0, i.jsx)(d.eu, { onClick: t, src: (0, h.Y)(s, (0, c.FT)(p)), size: p, className: A, "aria-label": v })
             : null != o
               ? (0, i.jsx)(d.eu, {
                     onClick: t,
@@ -93,7 +93,7 @@ function S(e) {
         } = e,
         d = (0, i.jsx)(r.D, {
             variant: c,
-            className: a()((0, C.t)(y, "inviteDestination", s ? "Expired" : null != l ? "Joined" : ""), {
+            className: a()((0, f.t)(y, "inviteDestination", s ? "Expired" : null != l ? "Joined" : ""), {
                 [y.inviteDestinationMedium]: "heading-md/medium" === c,
             }),
             children: n,
@@ -152,8 +152,8 @@ function G(e) {
 }
 let b = (e) => {
     let { channel: n, guild: l } = e,
-        s = (0, p.Ay)(n),
-        t = (0, x.gU)(n, l);
+        s = (0, x.Ay)(n),
+        t = (0, p.gU)(n, l);
     return null == n || null == t
         ? null
         : (0, i.jsxs)("div", {
@@ -177,7 +177,7 @@ function B(e) {
 function D(e) {
     let { guild: n } = e,
         [l, t] = s.useState(!1),
-        r = f.Ay.getGuildSplashURL({ id: n.id, splash: n.splash, size: 400 * (0, g.mZ)() });
+        r = C.Ay.getGuildSplashURL({ id: n.id, splash: n.splash, size: 400 * (0, g.mZ)() });
     return null == r
         ? null
         : (0, i.jsx)("div", {

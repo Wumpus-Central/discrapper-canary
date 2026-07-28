@@ -1,6 +1,6 @@
-l.d(n, { n: () => b });
-var t = l(627968),
-    i = l(64700),
+l.d(n, { n: () => T });
+var t = l(477900),
+    i = l(582128),
     s = l(866665),
     r = l(254138),
     a = l(661531),
@@ -17,8 +17,8 @@ var t = l(627968),
     E = l(174459),
     N = l(652215),
     f = l(375708),
-    C = l(589256);
-function p(e) {
+    p = l(589256);
+function C(e) {
     let { channel: n } = e;
     return (0, j.bG)({ channelId: n.id })
         ? (0, t.jsx)(s.m, {
@@ -31,7 +31,7 @@ function p(e) {
           })
         : null;
 }
-let b = i.memo(function (e) {
+let T = i.memo(function (e) {
     let { channel: n } = e,
         i = n.id,
         r = (0, m.Ay)(n);
@@ -42,7 +42,7 @@ let b = i.memo(function (e) {
                 text: f.intl.string(f.t["5Q9+/L"]),
                 position: "bottom",
                 children: (0, t.jsxs)(c.D, {
-                    className: C.cD,
+                    className: p.cD,
                     onClick: () => {
                         (0, g.U)(i, x.A.HEADER_BAR);
                     },
@@ -56,11 +56,11 @@ let b = i.memo(function (e) {
                                     l.e("93190"),
                                     l.e("91763"),
                                     l.e("38730"),
-                                    l.e("34971"),
-                                    l.e("42339"),
+                                    l.e("47502"),
                                     l.e("21106"),
-                                    l.e("43746"),
-                                    l.e("12520"),
+                                    l.e("80740"),
+                                    l.e("90434"),
+                                    l.e("66378"),
                                     l.e("17244"),
                                     l.e("53416"),
                                     l.e("60200"),
@@ -83,18 +83,18 @@ let b = i.memo(function (e) {
                     "aria-label": f.intl.string(f.t["5Q9+/L"]),
                     children: [
                         (0, t.jsx)(A.A, {
-                            className: C.gn,
+                            className: p.gn,
                             "aria-hidden": !0,
                             channel: n,
                             size: o._3.SIZE_20,
                             facepileSizeOverride: o._3.SIZE_24,
                         }),
                         (0, t.jsx)(d.E, { variant: "text-md/medium", color: "text-strong", children: r ?? "" }),
-                        (0, t.jsx)(u.R, { className: C.IZ, size: "xs", color: "currentColor" }),
+                        (0, t.jsx)(u.R, { className: p.IZ, size: "xs", color: "currentColor" }),
                     ],
                 }),
             }),
-            (0, t.jsx)(p, { channel: n }),
+            (0, t.jsx)(C, { channel: n }),
         ],
     });
 });

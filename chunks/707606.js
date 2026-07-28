@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => a });
-var i = n(627968),
-    r = n(64700),
-    s = n(174459);
-function a(e) {
+n.d(t, { A: () => s });
+var i = n(477900),
+    r = n(582128),
+    a = n(174459);
+function s(e) {
     let t = r.forwardRef((t, n) =>
-        (0, i.jsx)(s.AnalyticsContext.Consumer, {
+        (0, i.jsx)(a.AnalyticsContext.Consumer, {
             children: (r) => (0, i.jsx)(e, { ...t, ref: n, analyticsContext: r }),
         }),
     );

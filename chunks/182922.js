@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => h });
+var i = n(477900);
+n(582128);
 var r = n(503698),
-    s = n.n(r),
-    a = n(834730),
-    o = n(27232),
-    l = n(953727);
-function u(e) {
-    let { width: t = 10, height: n = 13, color: r = "currentColor", foreground: s, ...a } = e;
+    a = n.n(r),
+    s = n(834730),
+    l = n(27232),
+    o = n(953727);
+function d(e) {
+    let { width: t = 10, height: n = 13, color: r = "currentColor", foreground: a, ...s } = e;
     return (0, i.jsx)("svg", {
-        ...(0, l.A)({ ...a }),
+        ...(0, o.A)({ ...s }),
         width: t,
         height: n,
         viewBox: `0 0 ${t} ${n}`,
-        className: s,
+        className: a,
         fill: r,
         xmlns: "http://www.w3.org/2000/svg",
         children: (0, i.jsx)("path", {
@@ -24,63 +24,63 @@ function u(e) {
     });
 }
 var c = n(771104),
-    d = n(732139),
+    u = n(732139),
     _ = n(375708),
-    h = n(759627);
-function f(e) {
+    E = n(665891);
+function A(e) {
     let { emojiSubCategory: t } = e;
     return (0, i.jsxs)("div", {
-        className: s()(h.KT, t === d.tm.TOP_GUILD_EMOJI ? h.S7 : h.lD),
+        className: a()(E.KT, t === u.tm.TOP_GUILD_EMOJI ? E.S7 : E.lD),
         children: [
-            t === d.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(u, { foreground: h.Gb }) : (0, i.jsx)(c.A, { foreground: h.Gb }),
-            (0, i.jsx)(a.E, {
+            t === u.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(d, { foreground: E.Gb }) : (0, i.jsx)(c.A, { foreground: E.Gb }),
+            (0, i.jsx)(s.E, {
                 variant: "text-sm/semibold",
                 color: "text-overlay-light",
-                children: t === d.tm.TOP_GUILD_EMOJI ? _.intl.string(_.t.TR2B4T) : _.intl.string(_.t["1aZ4V6"]),
+                children: t === u.tm.TOP_GUILD_EMOJI ? _.intl.string(_.t.TR2B4T) : _.intl.string(_.t["1aZ4V6"]),
             }),
         ],
     });
 }
-let E = function (e) {
+let h = function (e) {
     let {
         className: t,
         graphicPrimary: n,
         graphicSecondary: r,
-        titlePrimary: l,
-        titleSecondary: u,
+        titlePrimary: o,
+        titleSecondary: d,
         isFavorite: c = !1,
-        emojiSubCategory: E = d.tm.NONE,
+        emojiSubCategory: h = u.tm.NONE,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(h.qV, t),
+        className: a()(E.qV, t),
         children: [
-            (0, i.jsx)("div", { className: h.FZ, "aria-hidden": !0, children: n }),
+            (0, i.jsx)("div", { className: E.FZ, "aria-hidden": !0, children: n }),
             (0, i.jsxs)("div", {
-                className: h.tC,
+                className: E.tC,
                 children: [
-                    (0, i.jsxs)(a.E, {
-                        className: h.jn,
+                    (0, i.jsxs)(s.E, {
+                        className: E.jn,
                         variant: "text-md/semibold",
                         children: [
                             c
-                                ? (0, i.jsx)(o.G, {
+                                ? (0, i.jsx)(l.G, {
                                       size: "custom",
                                       color: "currentColor",
-                                      "aria-label": _.intl.formatToPlainString(_.t["+fdUkf"], { names: l }),
+                                      "aria-label": _.intl.formatToPlainString(_.t["+fdUkf"], { names: o }),
                                       width: 15,
                                       height: 15,
-                                      className: h.BI,
+                                      className: E.BI,
                                   })
                                 : null,
-                            l,
+                            o,
                         ],
                     }),
-                    null != u && (0, i.jsx)(a.E, { className: h.Fm, variant: "text-xs/normal", children: u }),
+                    null != d && (0, i.jsx)(s.E, { className: E.Fm, variant: "text-xs/normal", children: d }),
                 ],
             }),
-            E === d.tm.NONE
-                ? null != r && (0, i.jsx)("div", { className: h.vK, "aria-hidden": !0, children: r })
-                : (0, i.jsx)(f, { emojiSubCategory: E }),
+            h === u.tm.NONE
+                ? null != r && (0, i.jsx)("div", { className: E.vK, "aria-hidden": !0, children: r })
+                : (0, i.jsx)(A, { emojiSubCategory: h }),
         ],
     });
 };

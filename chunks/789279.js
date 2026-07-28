@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
-var i = n(64700);
+n.d(t, { A: () => s });
+var i = n(582128);
 n(321073);
 let r = 1 / 240;
-class s {
+class a {
     tension;
     friction;
     threshold;
@@ -27,19 +27,19 @@ class s {
         friction: n = 22,
         mass: i = 1,
         threshold: r = 0.001,
-        clamp: s = !1,
-        maxVelocity: a = 1 / 0,
-        getNodeWindow: o = () => window,
+        clamp: a = !1,
+        maxVelocity: s = 1 / 0,
+        getNodeWindow: l = () => window,
     }) {
         (this.callback = e),
             (this.from = 0),
             (this.tension = t),
             (this.friction = n),
             (this.mass = i),
-            (this.maxVelocity = a),
+            (this.maxVelocity = s),
             (this.threshold = r),
-            (this.clamp = s),
-            (this.getNodeWindow = o);
+            (this.clamp = a),
+            (this.getNodeWindow = l);
     }
     to(e) {
         let { to: t, from: n, animate: i = !1, callback: r } = e;
@@ -110,11 +110,11 @@ class s {
             this.callbacks.length > 0 && (this.callbacks.forEach((e) => e()), (this.callbacks.length = 0));
     }
 }
-function a(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
         [n] = (0, i.useState)(
             () =>
-                new s({
+                new a({
                     tension: 200,
                     friction: 35,
                     mass: 2,

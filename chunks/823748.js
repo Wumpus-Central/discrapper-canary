@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { Bp: () => h, EX: () => _, TF: () => f });
-var i = n(64700),
+n.d(t, { Bp: () => E, EX: () => _, TF: () => A });
+var i = n(582128),
     r = n(17928),
-    s = n(71393),
-    a = n(576705),
-    o = n(363487),
-    l = n(396748),
-    u = n(488803),
+    a = n(71393),
+    s = n(576705),
+    l = n(363487),
+    o = n(469014),
+    d = n(488803),
     c = n(522055);
-function d(e, t, n) {
-    let i = !0 === (0, o.G)(t, e),
-        r = (0, u.TS)(e.id, n);
+function u(e, t, n) {
+    let i = !0 === (0, l.G)(t, e),
+        r = (0, d.TS)(e.id, n);
     return i && r;
 }
 function _(e) {
-    return (0, r.yK)([s.A, a.A], () => s.A.getGuildsArray().filter((t) => d(t, a.A, e)));
+    return (0, r.yK)([a.A, s.A], () => a.A.getGuildsArray().filter((t) => u(t, s.A, e)));
 }
-function h(e) {
-    return (0, r.bG)([s.A, a.A], () => s.A.getGuildsArray().some((t) => d(t, a.A, e)));
+function E(e) {
+    return (0, r.bG)([a.A, s.A], () => a.A.getGuildsArray().some((t) => u(t, s.A, e)));
 }
-function f(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { shouldFetch: n = !1 } = t,
-        s = (0, r.bG)([c.A], () => {
+        a = (0, r.bG)([c.A], () => {
             if (null == e) return !1;
             let { catalog: t } = c.A.getGlobalCatalogState();
             return Object.values(t).some((t) => t.gameId === e);
         }, [e]),
-        a = (0, r.bG)([c.A], () => c.A.shouldFetchGlobalCatalog());
+        s = (0, r.bG)([c.A], () => c.A.shouldFetchGlobalCatalog());
     return (
         i.useEffect(() => {
-            null != e && n && a && (0, l.K)();
-        }, [e, n, a]),
-        s
+            null != e && n && s && (0, o.K)();
+        }, [e, n, s]),
+        a
     );
 }

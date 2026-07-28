@@ -1,6 +1,6 @@
 t.d(i, { ModifyMosaicAttachmentModal: () => y, default: () => k }), t(323874), t(14289), t(35956), t(938796);
-var n = t(627968),
-    s = t(64700),
+var n = t(477900),
+    s = t(582128),
     l = t(503698),
     a = t.n(l),
     r = t(665260),

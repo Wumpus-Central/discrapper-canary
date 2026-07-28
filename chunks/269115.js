@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { L: () => d, j: () => s }), n(899898);
+n.d(t, { L: () => u, j: () => a }), n(899898);
 var i = n(621466);
 let r = { root: null, rootMargin: "0px", threshold: 0.5 };
-class s {
+class a {
     _observer;
     _options;
     _nodes = new WeakMap();
@@ -54,17 +54,17 @@ class s {
             (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
     }
 }
-var a = n(64700),
-    o = n(835245);
-let l = (0, o.A)(),
-    u = new Map(),
+var s = n(582128),
+    l = n(132500);
+let o = (0, l.A)(),
+    d = new Map(),
     c = new Map();
-class d extends a.Component {
+class u extends s.Component {
     elementId;
     isVisible = !1;
     static defaultProps = {
         active: !0,
-        children: a.createElement("span"),
+        children: s.createElement("span"),
         root: null,
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, 5e-324],
@@ -72,9 +72,9 @@ class d extends a.Component {
     constructor(e) {
         super(e);
         const { root: t, rootMargin: n, threshold: i } = e;
-        t ? (u.has(t) ? (this.elementId = u.get(t) || "") : u.set(t, (0, o.A)())) : (this.elementId = l);
+        t ? (d.has(t) ? (this.elementId = d.get(t) || "") : d.set(t, (0, l.A)())) : (this.elementId = o);
         const r = this.getVisibilityObserverId();
-        c.has(r) || c.set(r, new s({ root: t, rootMargin: n, threshold: i }));
+        c.has(r) || c.set(r, new a({ root: t, rootMargin: n, threshold: i }));
     }
     componentDidMount() {
         if (this.props.active) {
@@ -107,6 +107,6 @@ class d extends a.Component {
         return t;
     }
     render() {
-        return a.Children.only(this.props.children);
+        return s.Children.only(this.props.children);
     }
 }

@@ -1,7 +1,7 @@
 n.d(t, { A: () => g });
-var l = n(627968),
-    i = n(64700),
-    s = n(835245),
+var l = n(477900),
+    i = n(582128),
+    s = n(132500),
     r = n(17928),
     a = n(228366),
     o = n(775602),
@@ -9,7 +9,7 @@ var l = n(627968),
     c = n(104142),
     d = n(407781),
     m = n(652215),
-    p = n(718699);
+    p = n(205123);
 function g(e) {
     let { channelId: t, guildId: n, userId: g, containerDimensions: h } = e,
         f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),

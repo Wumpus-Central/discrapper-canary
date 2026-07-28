@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { X: () => f });
-var i = n(627968),
-    r = n(64700),
-    s = n(534514),
-    a = n(939249),
-    o = n(789645),
-    l = n(187322),
-    u = n(364522),
+n.d(t, { X: () => A });
+var i = n(477900),
+    r = n(582128),
+    a = n(297264),
+    s = n(939249),
+    l = n(789645),
+    o = n(259678),
+    d = n(364522),
     c = n(289873),
-    d = n(445563),
+    u = n(445563),
     _ = n(375708),
-    h = n(834926);
-function f(e) {
-    let { text: t, isLoading: n = !1, onClose: f } = e,
-        p = r.useMemo(
+    E = n(668534);
+function A(e) {
+    let { text: t, isLoading: n = !1, onClose: A } = e,
+        h = r.useMemo(
             () =>
                 (t ?? "")
                     .split("\n")
@@ -24,36 +24,36 @@ function f(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: h.Mm,
+                className: E.Mm,
                 children: [
-                    (0, i.jsx)(s.D, {
+                    (0, i.jsx)(a.D, {
                         variant: "heading-md/semibold",
                         color: "currentColor",
-                        children: _.intl.string(d.default["VZkd/n"]),
+                        children: _.intl.string(u.default["VZkd/n"]),
                     }),
-                    (0, i.jsx)(a.D, {
-                        onClick: f,
-                        className: h.GI,
-                        "aria-label": _.intl.string(d.default["6/dkHh"]),
-                        children: (0, i.jsx)(o.P, { color: "currentColor" }),
+                    (0, i.jsx)(s.D, {
+                        onClick: A,
+                        className: E.GI,
+                        "aria-label": _.intl.string(u.default["6/dkHh"]),
+                        children: (0, i.jsx)(l.P, { color: "currentColor" }),
                     }),
                 ],
             }),
-            (0, i.jsx)(l.vN, {
-                children: (0, i.jsx)(u.Ar, {
-                    className: h.j5,
+            (0, i.jsx)(o.vN, {
+                children: (0, i.jsx)(d.Ar, {
+                    className: E.j5,
                     fade: !0,
                     children: (0, i.jsx)("div", {
-                        className: h.FN,
+                        className: E.FN,
                         children: n
                             ? (0, i.jsx)("div", {
-                                  className: h.Cw,
+                                  className: E.Cw,
                                   children: (0, i.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES }),
                               })
-                            : (0, i.jsx)(s.D, {
+                            : (0, i.jsx)(a.D, {
                                   variant: "heading-md/normal",
                                   color: "text-muted",
-                                  children: p.map((e, t) => (0, i.jsx)("p", { children: e }, t)),
+                                  children: h.map((e, t) => (0, i.jsx)("p", { children: e }, t)),
                               }),
                     }),
                 }),

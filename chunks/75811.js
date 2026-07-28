@@ -1,11 +1,11 @@
 r.d(l, { j: () => d });
-var s = r(627968),
-    a = r(64700),
+var s = r(477900),
+    a = r(582128),
     n = r(503698),
     u = r.n(n),
     t = r(289873),
     c = r(834730),
-    i = r(686052);
+    i = r(510316);
 function d(e) {
     let { chunks: l, columns: r, className: n } = e,
         d = a.useMemo(() => ({ "--secure-frames-columns": r }), [r]);

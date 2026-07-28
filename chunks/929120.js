@@ -1,61 +1,61 @@
-i.d(s, { n: () => b });
-var l = i(627968),
-    t = i(64700),
-    n = i(503698),
-    d = i.n(n),
-    c = i(534514),
-    a = i(834730),
-    r = i(17928),
-    u = i(939249),
-    m = i(881636),
-    o = i(661531),
-    h = i(71393),
-    x = i(365258),
-    j = i(926418),
-    v = i(375708),
-    N = i(563215);
-function b(e) {
-    let { guildIds: s, direction: i, onClick: n } = e,
-        b = (0, t.useMemo)(() => (0, x.AB)(s), [s]),
-        f = (0, r.bG)([h.A], () => h.A.getGuild(b[0])),
-        g = i === x.AI.RESTRICTING ? v.intl.string(v.t.e6Kpa7) : v.intl.string(v.t.cy4G4y),
-        p = f?.name ?? "",
-        A = null != f && b.length > 1,
-        I = null != n ? u.D : "div";
-    return (0, l.jsxs)(I, {
-        className: d()(N.Nr, { [N.vk]: null != n }),
+t.d(s, { n: () => N });
+var l = t(477900),
+    i = t(582128),
+    n = t(503698),
+    a = t.n(n),
+    d = t(297264),
+    u = t(834730),
+    r = t(17928),
+    c = t(939249),
+    m = t(881636),
+    o = t(661531),
+    x = t(71393),
+    h = t(365258),
+    A = t(926418),
+    f = t(375708),
+    j = t(975783);
+function N(e) {
+    let { guildIds: s, direction: t, onClick: n } = e,
+        N = (0, i.useMemo)(() => (0, h.AB)(s), [s]),
+        p = (0, r.bG)([x.A], () => x.A.getGuild(N[0])),
+        v = t === h.AI.RESTRICTING ? f.intl.string(f.t.e6Kpa7) : f.intl.string(f.t.cy4G4y),
+        I = p?.name ?? "",
+        G = null != p && N.length > 1,
+        S = null != n ? c.D : "div";
+    return (0, l.jsxs)(S, {
+        className: a()(j.Nr, { [j.vk]: null != n }),
         onClick: n,
         children: [
             (0, l.jsxs)("div", {
-                className: N.Bj,
+                className: j.Bj,
                 children: [
-                    (0, l.jsx)(c.D, {
+                    (0, l.jsx)(d.D, {
                         variant: "text-md/semibold",
-                        children: v.intl.format(v.t["0fkj8J"], { count: b.length }),
+                        children: f.intl.format(f.t["0fkj8J"], { count: N.length }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: N.jf,
+                        className: j.jf,
                         children: [
-                            (0, l.jsx)(a.E, {
+                            (0, l.jsx)(u.E, {
                                 variant: "text-sm/medium",
-                                color: i === x.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
-                                className: N.Rh,
-                                children: g,
+                                color: t === h.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
+                                className: j.Rh,
+                                children: v,
                             }),
-                            (0, l.jsx)(a.E, {
+                            (0, l.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: N.SI,
-                                children: v.intl.format(A ? v.t["8ZLbvR"] : v.t["+NoTYm"], { guildName: p }),
+                                className: j.SI,
+                                children: f.intl.format(G ? f.t["8ZLbvR"] : f.t["+NoTYm"], { guildName: I }),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: N.hE,
+                className: j.hE,
                 children: [
-                    (0, l.jsx)(j.l, { guildIds: b, iconSize: 24 }),
+                    (0, l.jsx)(A.l, { guildIds: N, iconSize: 24 }),
                     null != n && (0, l.jsx)(m.u, { color: o.A.colors.TEXT_SUBTLE, size: "xs" }),
                 ],
             }),

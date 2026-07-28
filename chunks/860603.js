@@ -1,7 +1,7 @@
-n.d(t, { A: () => t1 }), n(321073);
+n.d(t, { A: () => t8 }), n(321073);
 var i,
-    l = n(627968),
-    s = n(64700),
+    l = n(477900),
+    s = n(582128),
     a = n(435558),
     r = n.n(a),
     o = n(17928),
@@ -994,10 +994,10 @@ function e2(e) {
 }
 var e3 = n(573648);
 n(323874), n(14289), n(35956);
-var e7 = n(989349),
-    e1 = n.n(e7),
-    e6 = n(788373),
-    e8 =
+var e1 = n(989349),
+    e8 = n.n(e1),
+    e7 = n(788373),
+    e5 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
         (i[(i.SEVEN_DAYS = 7)] = "SEVEN_DAYS"),
@@ -1005,7 +1005,7 @@ var e7 = n(989349),
         (i[(i.THIRTY_DAYS = 30)] = "THIRTY_DAYS"),
         i),
     e4 = n(125744),
-    e5 = n(139033),
+    e6 = n(139033),
     e9 = n(408278),
     te = n(663417),
     tt = n(150934),
@@ -1033,9 +1033,9 @@ function tr(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e6.F.KICK) {
+                if (b || i.expire_behavior !== e7.F.KICK) {
                     let e =
-                        i.expire_behavior === e6.F.REMOVE_ROLE
+                        i.expire_behavior === e7.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, ew.A)({
@@ -1046,7 +1046,7 @@ function tr(e) {
                         variant: "critical",
                     });
                 } else
-                    (0, e5.A)({
+                    (0, e6.A)({
                         title: Z.intl.string(Z.t.emx3lN),
                         subtitle: i.type === e4.s.YOUTUBE ? Z.intl.string(Z.t.pDCiEf) : Z.intl.string(Z.t.sQqHFk),
                     });
@@ -1099,7 +1099,7 @@ function tr(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? Z.intl.formatToPlainString(Z.t.G16Wji, { user: i.user, platformName: t.name })
-                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e1()(i.synced_at).calendar() }),
+                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
             };
         }, [P, v, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eT.A], () => eT.A.getSortedRoles(n.id)),
@@ -1279,12 +1279,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e6.F.REMOVE_ROLE.toString(),
+                                                value: e7.F.REMOVE_ROLE.toString(),
                                                 label: Z.intl.string(Z.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e6.F.KICK.toString(),
+                                                value: e7.F.KICK.toString(),
                                                 label: Z.intl.string(Z.t.fQUQIJ),
                                             },
                                         ],
@@ -1300,7 +1300,7 @@ function tr(e) {
                                         placeholder: Z.intl.string(Z.t.uiXMow),
                                         maxOptionsVisible: 5,
                                         value: `${t.expire_grace_period}`,
-                                        options: Object.values(e8)
+                                        options: Object.values(e5)
                                             .filter(Number.isInteger)
                                             .map((e) => ({
                                                 id: `${e}`,
@@ -1324,7 +1324,7 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e6.F.KICK &&
+                        a.expire_behavior === e7.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
@@ -2244,7 +2244,7 @@ function t2(e) {
 }
 n(46121);
 var t3 = n(176547);
-function t7(e, t) {
+function t1(e, t) {
     switch (e) {
         case eW.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2264,7 +2264,7 @@ function t7(e, t) {
             return "";
     }
 }
-let t1 = s.memo(function (e) {
+let t8 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2476,10 +2476,10 @@ let t1 = s.memo(function (e) {
                 className: t3.jD,
                 children:
                     t === eW.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eW.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t1(eW.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eW.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, W[R]) })),
+                              breadcrumbs: [eW.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t1(e, W[R]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && G(parseInt(e.id));
                               },

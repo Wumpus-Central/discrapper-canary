@@ -1,6 +1,6 @@
 i.d(t, { A: () => F, k: () => U });
-var n = i(627968),
-    s = i(64700),
+var n = i(477900),
+    s = i(582128),
     l = i(503698),
     r = i.n(l),
     a = i(17928),
@@ -8,15 +8,15 @@ var n = i(627968),
     d = i(447453),
     c = i(280450),
     u = i(591179),
-    g = i(4798),
+    g = i(461376),
     m = i(866323),
     x = i(765178),
     f = i(834730),
     h = i(821609),
     I = i(631670),
     p = i(775602),
-    j = i(159001),
-    A = i(933725),
+    A = i(159001),
+    j = i(933725),
     E = i(625494),
     S = i(56348),
     T = i(207803),
@@ -30,8 +30,8 @@ var n = i(627968),
     O = i(518477),
     y = i(652215),
     _ = i(375708),
-    G = i(552024);
-let L = "user-profile-save-reset-toolbar-label";
+    L = i(552024);
+let G = "user-profile-save-reset-toolbar-label";
 function P(e) {
     let { className: t, guildId: i } = e,
         { trackUserProfileEditSaved: l } = (0, v.NJ)(),
@@ -112,7 +112,7 @@ function P(e) {
                             n = (0, S.C5)(t),
                             s = (0, S.yX)(t, i);
                         if (Object.keys(n).length > 0) {
-                            let s = await (0, j.GL)(i, n);
+                            let s = await (0, A.GL)(i, n);
                             (e = s?.ok ?? !1),
                                 s?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -134,7 +134,7 @@ function P(e) {
                     if (Object.keys(t).length > 0) {
                         let { primaryGuildId: i } = t;
                         if (void 0 !== i) {
-                            let t = await (0, A.m)(i, null !== i);
+                            let t = await (0, j.m)(i, null !== i);
                             (e = e && (t?.ok ?? !1)), t?.ok && (0, I.fw)();
                         }
                     }
@@ -189,18 +189,18 @@ function P(e) {
                       className: t,
                       style: e,
                       children: (0, n.jsxs)("footer", {
-                          className: r()(G.Qs, { [G.hO]: d }),
-                          "aria-labelledby": L,
+                          className: r()(L.Qs, { [L.hO]: d }),
+                          "aria-labelledby": G,
                           children: [
                               (0, n.jsx)(f.E, {
-                                  id: L,
+                                  id: G,
                                   variant: "text-md/medium",
                                   color: "text-strong",
-                                  className: G.iU,
+                                  className: L.iU,
                                   children: _.intl.string(_.t["/lQiX/"]),
                               }),
                               (0, n.jsxs)("div", {
-                                  className: G.o1,
+                                  className: L.o1,
                                   children: [
                                       (0, n.jsx)(h.$, {
                                           size: "sm",

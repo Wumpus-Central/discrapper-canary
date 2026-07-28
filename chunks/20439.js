@@ -1,5 +1,5 @@
 l.d(t, { A: () => h });
-var a = l(64700),
+var a = l(582128),
     n = l(17928),
     i = l(594061),
     r = l(967198),
@@ -15,7 +15,7 @@ function b(e, t, l) {
 }
 function h(e) {
     let t = (0, n.bG)([r.A], () => r.A.getGuildId()),
-        l = (0, c.JZ)(e, { cooldownDurationMs: o.A.Millis.WEEK, guildId: t }),
+        l = (0, c.HX)(e, { cooldownDurationMs: o.A.Millis.WEEK, guildId: t }),
         u = (0, a.useCallback)(() => {
             if ((0, d.L0)(e)) {
                 let t, a;

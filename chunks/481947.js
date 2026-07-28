@@ -1,13 +1,13 @@
 t.d(e, { Ay: () => Y, Kc: () => Q, Wr: () => X }), t(321073);
-var i = t(627968),
-    n = t(64700),
+var i = t(477900),
+    n = t(582128),
     l = t(503698),
     r = t.n(l),
     a = t(172218),
     c = t(738678),
     o = t(960027),
     d = t(17928),
-    u = t(990078),
+    u = t(866665),
     m = t(943812),
     x = t(428689),
     A = t(695366),
@@ -37,15 +37,15 @@ var i = t(627968),
     G = t(823854),
     z = t(445913),
     V = t(790381),
-    w = t(266080),
-    U = t(427262),
-    Z = t(652215),
-    H = t(806931),
-    J = t(544105),
+    Z = t(266080),
+    w = t(427262),
+    U = t(652215),
+    J = t(806931),
+    H = t(544105),
     B = t(375708),
-    F = t(58298);
+    F = t(79362);
 let W = (0, D.Fe)({
-    createPromise: () => Promise.all([t.e("89862"), t.e("28966")]).then(t.bind(t, 217356)),
+    createPromise: () => Promise.all([t.e("30366"), t.e("28966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
 });
 function X(s) {
@@ -73,7 +73,7 @@ function Q(s) {
         voicePlatform: y,
         application: G,
         game: z,
-        guildId: U,
+        guildId: w,
         channelId: W,
         user: X,
         disconnected: Q,
@@ -168,11 +168,11 @@ function Q(s) {
                     "activity",
                 ),
             ),
-        P === J.f$.XBOX || y === H.J7.XBOX
-            ? $.push((0, i.jsx)(w.A, { className: r()(F.Kk, K) }, "xbox"))
-            : P === J.f$.PLAYSTATION || y === H.J7.PLAYSTATION
+        P === H.f$.XBOX || y === J.J7.XBOX
+            ? $.push((0, i.jsx)(Z.A, { className: r()(F.Kk, K) }, "xbox"))
+            : P === H.f$.PLAYSTATION || y === J.J7.PLAYSTATION
               ? $.push((0, i.jsx)(V.A, { className: r()(F.Kk, K) }, "playstation"))
-              : y === H.J7.QUEST &&
+              : y === J.J7.QUEST &&
                 $.push((0, i.jsx)(c.G, { size: "xs", color: "currentColor", className: r()(F.Kk, K) }, "quest")),
         b &&
             $.push(
@@ -208,7 +208,7 @@ function Q(s) {
                     "ring",
                 ),
             );
-    let se = null != G && !(0, O.n)(G, Z.gfo.EMBEDDED);
+    let se = null != G && !(0, O.n)(G, U.gfo.EMBEDDED);
     return 0 !== $.length || 0 !== ss.length || se || D
         ? (0, i.jsxs)("div", {
               className: r()(F.Pt, e),
@@ -219,7 +219,7 @@ function Q(s) {
                             className: F.RL,
                             children: (0, i.jsx)(
                                 q,
-                                { application: G, game: z, iconClassName: K, guildId: U, channelId: W, userId: X.id },
+                                { application: G, game: z, iconClassName: K, guildId: w, channelId: W, userId: X.id },
                                 `${X.id}-game`,
                             ),
                         })
@@ -236,7 +236,7 @@ let Y = function (s) {
         {
             avatarContainerClass: c = F.H,
             userNameClassName: o = F.gr,
-            size: m = Z.OSZ.SMALL,
+            size: m = U.OSZ.SMALL,
             selected: x = !1,
             disabled: A = !1,
             isOverlay: g = !1,
@@ -257,9 +257,9 @@ let Y = function (s) {
             localMute: D,
             serverMute: P,
             deaf: V,
-            serverDeaf: w,
-            guildId: H,
-            nick: J,
+            serverDeaf: Z,
+            guildId: J,
+            nick: H,
             isGuest: X,
             flipped: Y,
             className: q,
@@ -268,7 +268,7 @@ let Y = function (s) {
             ringing: se,
             user: st,
         } = N,
-        si = (0, K.A)({ userId: st.id, guildId: H }),
+        si = (0, K.A)({ userId: st.id, guildId: J }),
         sn = (0, M.a)({ displayNameStyles: si }),
         sl = (0, T.A)(st.id),
         sr = (0, b.v)({
@@ -279,9 +279,9 @@ let Y = function (s) {
         [sa, sc] = n.useState(!1),
         so = (() => {
             if (null != ss) return ss;
-            let s = J ?? st.username,
+            let s = H ?? st.username,
                 e = null;
-            return (w
+            return (Z
                 ? (e = B.intl.string(B.t.btxSdB))
                 : V
                   ? (e = B.intl.string(B.t.NjmiOL))
@@ -299,12 +299,12 @@ let Y = function (s) {
     return (0, i.jsx)(f.s, {
         ref: h,
         className: r()(q, {
-            [F.q7]: !0,
+            [F.ZJ]: !0,
             [F.EF]: $,
             [F.wH]: x,
             [F.vk]: null != j,
-            [F.L9]: m === Z.OSZ.SMALL,
-            [F.p8]: m === Z.OSZ.LARGE,
+            [F.L9]: m === U.OSZ.SMALL,
+            [F.p8]: m === U.OSZ.LARGE,
             [F.r9]: !x && A,
         }),
         onClick: function (s) {
@@ -337,13 +337,13 @@ let Y = function (s) {
                           children: (0, i.jsx)("div", { className: r()(F.G, { [F.g4]: !R && !P && k }) }),
                       })
                     : null,
-                ((e = r()(F.my, { [F.Jb]: m === Z.OSZ.LARGE, [F.dT]: m === Z.OSZ.SMALL, [F.DF]: se })),
-                (t = { backgroundImage: `url(${st.getAvatarURL(H, m === Z.OSZ.LARGE ? 38 : 24)})`, ...sr }),
+                ((e = r()(F.my, { [F.Jb]: m === U.OSZ.LARGE, [F.dT]: m === U.OSZ.SMALL, [F.DF]: se })),
+                (t = { backgroundImage: `url(${st.getAvatarURL(J, m === U.OSZ.LARGE ? 38 : 24)})`, ...sr }),
                 se
                     ? (0, i.jsx)(v.A, {
-                          size: m === Z.OSZ.LARGE ? p._3.SIZE_40 : p._3.SIZE_24,
+                          size: m === U.OSZ.LARGE ? p._3.SIZE_40 : p._3.SIZE_24,
                           ringing: !0,
-                          src: st.getAvatarURL(H, m === Z.OSZ.LARGE ? 40 : 24),
+                          src: st.getAvatarURL(J, m === U.OSZ.LARGE ? 40 : 24),
                           className: r()(c, e),
                       })
                     : su
@@ -356,7 +356,7 @@ let Y = function (s) {
                 ((l = (0, i.jsxs)("div", {
                     className: r()(o, F.Xh, sn, { [F.Pi]: !R && !P && k, [F.DF]: se }),
                     children: [
-                        J ?? U.Ay.getName(st),
+                        H ?? w.Ay.getName(st),
                         X
                             ? (0, i.jsxs)("span", { className: F.IW, children: ["\xa0", B.intl.string(B.t["pFO/Ph"])] })
                             : "",
@@ -365,11 +365,11 @@ let Y = function (s) {
                 (a = {
                     primaryGuild: st.primaryGuild,
                     userId: st.id,
-                    contextGuildId: H,
+                    contextGuildId: J,
                     isOverlay: g,
                     disableTooltip: !0,
                     className: r()(F.fc, g && F.zW),
-                    profileViewedAnalytics: { source: g ? Z.JJy.OVERLAY : Z.ThZ.VOICE_PANEL },
+                    profileViewedAnalytics: { source: g ? U.JJy.OVERLAY : U.ThZ.VOICE_PANEL },
                 }),
                 !O || g ? (0, i.jsx)(W, { ...a, children: l }) : null),
                 (0, i.jsx)(Q, { disabled: A, ...N, isHovered: sa }),
@@ -384,7 +384,7 @@ function q(s) {
     return (
         n.useEffect(() => {
             m &&
-                k.Ay.trackWithMetadata(Z.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+                k.Ay.trackWithMetadata(U.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
                     channel_id: o,
                     guild_id: c,
                     user_id: d,
@@ -399,7 +399,7 @@ function q(s) {
                 game: t ?? e,
                 size: P.M.XSMALL,
                 onMouseEnter: function () {
-                    k.Ay.trackWithMetadata(Z.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+                    k.Ay.trackWithMetadata(U.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                         channel_id: o,
                         guild_id: c,
                         game_name: e.name,

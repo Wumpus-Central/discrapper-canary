@@ -1,7 +1,7 @@
 n.r(t), n.d(t, { default: () => ew });
 var s,
-    l = n(627968),
-    i = n(64700),
+    l = n(477900),
+    i = n(582128),
     a = n(503698),
     r = n.n(a),
     o = n(17928),
@@ -94,7 +94,7 @@ var q = n(738419),
     em = n(946979);
 let eh = (0, et.Fe)({
     createPromise: () =>
-        Promise.all([n.e("84368"), n.e("69047"), n.e("46859"), n.e("85787"), n.e("86537")]).then(n.bind(n, 33136)),
+        Promise.all([n.e("84368"), n.e("69047"), n.e("93279"), n.e("36920"), n.e("86537")]).then(n.bind(n, 33136)),
     webpackId: 33136,
     name: "CustomThemeColorPickerControlV2",
     renderLoader: function () {

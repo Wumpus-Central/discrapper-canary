@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => r });
-var i = n(64700);
+var i = n(582128);
 function r(e) {
     let { videoRef: t, enabled: n, onPipPause: r, onHiddenPause: a } = e,
         s = i.useRef(r),

@@ -1,84 +1,84 @@
 t.d(r, { Q: () => c });
-var n = t(64700),
+var n = t(582128),
     o = t(136857),
-    i = t(158317),
-    s = t(739508),
-    a = t(786953),
+    a = t(158317),
+    i = t(739508),
+    s = t(786953),
     l = t(211287),
     u = t(26279),
     d = t(375708);
 function c(e) {
     let [r, t] = (0, n.useState)(""),
         [c, f] = (0, n.useState)([]),
-        [h, p] = (0, n.useState)(null),
-        [b, g] = (0, n.useState)(!1),
-        { enabled: w } = l.A.useConfig({ location: "orb_checkout_modal" }),
-        y = e?.order ?? null,
-        m = e?.onSignFailure,
-        E = (0, n.useCallback)(
+        [m, h] = (0, n.useState)(null),
+        [p, g] = (0, n.useState)(!1),
+        { enabled: b } = l.A.useConfig({ location: "orb_checkout_modal" }),
+        w = e?.order ?? null,
+        k = e?.onSignFailure,
+        S = (0, n.useCallback)(
             async (e, r, t) => {
-                if (null == y) {
-                    p(new o.Ay("Order not created yet")), g(!1);
+                if (null == w) {
+                    h(new o.Ay("Order not created yet")), g(!1);
                     return;
                 }
-                g(!0), p(null);
+                g(!0), h(null);
                 try {
-                    let e = await (0, i.Ub)({ orderId: y.id, loadId: r });
+                    let e = await (0, a.Ub)({ orderId: w.id, loadId: r });
                     if (e.status !== u.Re.SIGNED) {
                         if (null != e.errors && e.errors.length > 0)
                             throw Error(`Order signing failed with errors: ${e.errors.join(", ")}`);
                         throw Error(`Unexpected order status: ${e.status}`);
                     }
-                    let n = await (0, i.pI)(y.id);
+                    let n = await (0, a.pI)(w.id);
                     for (let e of [250, 500, 1e3, 1500, 2500, 4250]) {
                         if (n.length > 0) break;
-                        await new Promise((r) => setTimeout(r, e)), (n = await (0, i.pI)(y.id));
+                        await new Promise((r) => setTimeout(r, e)), (n = await (0, a.pI)(w.id));
                     }
-                    if (0 === n.length) throw new i.j2();
+                    if (0 === n.length) throw new a.j2();
                     f(n), g(!1), t?.(n);
                 } catch (n) {
-                    if (n instanceof i.FY) {
-                        m?.(n.order), p(n), g(!1);
+                    if (n instanceof a.FY) {
+                        k?.(n.order), h(n), g(!1);
                         return;
                     }
                     let t = n instanceof o.Ay ? n : new o.Ay(n);
-                    (0, s.gr)(n) ||
-                        (0, s.pM)(n instanceof Error ? n : t, {
+                    (0, i.gr)(n) ||
+                        (0, i.pM)(n instanceof Error ? n : t, {
                             tags: { source: "orb_redeem_orders_api" },
-                            extra: { skuId: e, loadId: r, orderId: y.id },
+                            extra: { skuId: e, loadId: r, orderId: w.id },
                         }),
-                        p(t),
+                        h(t),
                         g(!1);
                 }
             },
-            [y, m],
+            [w, k],
         ),
         I = (0, n.useCallback)(
             (e, r, t) =>
-                (0, a.J$)({
+                (0, s.J$)({
                     skuId: e,
                     loadId: r,
                     onRedeemStart: function () {
-                        g(!0), p(null);
+                        g(!0), h(null);
                     },
                     onRedeemSucceed: function (e) {
                         f(e), g(!1), t?.(e);
                     },
                     onRedeemFail: function (e) {
-                        p(e), g(!1);
+                        h(e), g(!1);
                     },
                 }),
             [],
         ),
-        S = (0, n.useCallback)(
+        C = (0, n.useCallback)(
             (e, r, t) => {
-                w ? E(e, r, t) : I(e, r, t);
+                b ? S(e, r, t) : I(e, r, t);
             },
-            [w, E, I],
+            [b, S, I],
         );
     return (
         (0, n.useEffect)(() => {
-            if (null != h) return void t(d.intl.format(d.t["7gHWrd"], { amount: "1 orb", errorMessage: h.message }));
+            if (null != m) return void t(d.intl.format(d.t["7gHWrd"], { amount: "1 orb", errorMessage: m.message }));
             if (null != c && c.length > 0) {
                 let e = c.map((e) => e.sku?.name);
                 t(
@@ -90,7 +90,7 @@ function c(e) {
                 return;
             }
             t("");
-        }, [c, h]),
-        { entitlements: c, error: h, isSubmitting: b, responseMessage: r, redeemVirtualCurrency: S }
+        }, [c, m]),
+        { entitlements: c, error: m, isSubmitting: p, responseMessage: r, redeemVirtualCurrency: C }
     );
 }

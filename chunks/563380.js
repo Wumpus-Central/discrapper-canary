@@ -1,11 +1,11 @@
 n.r(t), n.d(t, { default: () => V });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
     d = n(284009),
     r = n.n(d),
-    o = n(534514),
+    o = n(297264),
     c = n(289873),
     u = n(408278),
     h = n(807072),
@@ -14,15 +14,15 @@ var i = n(627968),
     f = n(707554),
     p = n(17928),
     g = n(761508),
-    A = n(824552),
-    v = n(933958),
-    j = n(869003),
-    b = n(793574),
-    O = n(688810),
-    W = n(429913),
-    L = n(793943),
-    D = n(409626),
-    k = n(692969),
+    A = n(933958),
+    v = n(869003),
+    j = n(793574),
+    b = n(688810),
+    O = n(429913),
+    W = n(793943),
+    L = n(409626),
+    D = n(692969),
+    k = n(712440),
     y = n(134861),
     N = n(147964),
     E = n(206828),
@@ -30,11 +30,11 @@ var i = n(627968),
     R = n(942370),
     w = n(311350),
     C = n(375708),
-    G = n(564741);
+    G = n(246925);
 function V() {
-    let e = (0, W.h)(N.A.testModeApplicationId),
-        { analyticsLocations: t } = (0, O.Ay)(b.A.SDK_DEBUG_TOOLS),
-        n = (0, L.fy)().metadata,
+    let e = (0, O.h)(N.A.testModeApplicationId),
+        { analyticsLocations: t } = (0, b.Ay)(j.A.SDK_DEBUG_TOOLS),
+        n = (0, W.fy)().metadata,
         a = l.useRef(!1),
         {
             canStartAuthorization: d,
@@ -45,9 +45,9 @@ function V() {
             debug: { isSubscribedToAuthorizeRequest: I, oauth2Token: F, hasConnectionEntrypointUrl: K, validFlows: P },
         } = (0, E.RD)(e, { debug: !0 }),
         z = (0, p.bG)([y.A], () => null != e && y.A.isConnected(e.id)),
-        T = (0, p.bG)([v.Ay], () => v.Ay.getSelfEmbeddedActivities()),
+        T = (0, p.bG)([A.Ay], () => A.Ay.getSelfEmbeddedActivities()),
         J = e?.id ?? "",
-        U = (0, k.A)({ applicationId: J, source: D.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
+        U = (0, D.A)({ applicationId: J, source: L.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
     l.useEffect(() => {
         n?.shouldAutoOpenGameProfile !== !0 || null == U || a.current || ((a.current = !0), U());
     }, [n, U]);
@@ -76,7 +76,7 @@ function V() {
                                           variant: "icon-only",
                                           icon: h.U,
                                           "aria-label": "Close",
-                                          onClick: () => (0, L.Jp)(),
+                                          onClick: () => (0, W.Jp)(),
                                       }),
                                   ],
                               }),
@@ -176,10 +176,10 @@ function V() {
                                           (0, i.jsx)(x.$, {
                                               variant: "secondary",
                                               onClick: () => {
-                                                  A.A.delete(F.id);
+                                                  k.A.delete(F.id);
                                                   let t = T.get(e.id);
                                                   null != t &&
-                                                      j.A.leaveActivity({
+                                                      v.A.leaveActivity({
                                                           location: t.location,
                                                           applicationId: e.id,
                                                           showFeedback: !1,

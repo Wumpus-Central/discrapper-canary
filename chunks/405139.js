@@ -1,6 +1,6 @@
-n.d(t, { Mv: () => T, dP: () => I });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { Mv: () => _, dP: () => I });
+var l = n(477900),
+    i = n(582128),
     r = n(503698),
     a = n.n(r),
     s = n(821609),
@@ -10,22 +10,22 @@ var l = n(627968),
     d = n(111162),
     p = n(174459),
     m = n(723702),
-    h = n(71532),
-    C = n(427262),
+    C = n(71532),
+    h = n(427262),
     E = n(652215),
-    A = n(375708),
-    f = n(608956);
+    f = n(375708),
+    A = n(665972);
 let S = new u.A("PaymentRequest"),
     y = Object.values({ applePay: "applePay", googlePay: "googlePay", link: "link", browserCard: "browserCard" });
 class P extends i.Component {
     initialState = { submitting: !0, paymentRequest: null, canMakePaymentResult: null };
     state = { ...this.initialState };
     disableWallets = [];
-    isUserStaff = (0, C.Gn)();
+    isUserStaff = (0, h.Gn)();
     componentDidMount() {
         (0, m.isDesktop)() ||
             ((this.disableWallets = y.filter((e) => e !== this.paymentRequestWallet).sort()),
-            (0, h.Cv)().then((e) => {
+            (0, C.Cv)().then((e) => {
                 this.initPaymentRequest(e);
             }));
     }
@@ -108,7 +108,7 @@ class P extends i.Component {
                 onClick: this.attemptPaymentRequest,
                 text: n,
                 loading: this.state.submitting,
-                icon: () => (0, l.jsx)(c.Ay, { className: this.props.iconClassName ?? f.iA, type: t }),
+                icon: () => (0, l.jsx)(c.Ay, { className: this.props.iconClassName ?? A.iA, type: t }),
                 ...i,
             },
             E.hes.PAYMENT_REQUEST,
@@ -118,8 +118,8 @@ class P extends i.Component {
         return (0, l.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, l.jsx)(c.Ay, { type: c.Ay.Types.PAYMENT_REQUEST, size: c.y3.MEDIUM, className: f.rS }),
-                (0, l.jsx)(o.E, { variant: "text-md/medium", className: f.yW, children: A.intl.string(A.t.f19PPV) }),
+                (0, l.jsx)(c.Ay, { type: c.Ay.Types.PAYMENT_REQUEST, size: c.y3.MEDIUM, className: A.rS }),
+                (0, l.jsx)(o.E, { variant: "text-md/medium", className: A.yW, children: f.intl.string(f.t.f19PPV) }),
             ],
         });
     }
@@ -128,7 +128,7 @@ class P extends i.Component {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.PAYMENT_REQUEST,
-                  buttonText: A.intl.string(A.t.f19PPV),
+                  buttonText: f.intl.string(f.t.f19PPV),
                   loading: !(0, m.isDesktop)() && this.state.submitting,
               });
     }
@@ -159,8 +159,8 @@ class I extends P {
         return (0, l.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, l.jsx)(c.Ay, { type: c.Ay.Types.G_PAY, size: c.y3.MEDIUM, className: f.rS }),
-                (0, l.jsx)(o.E, { variant: "text-md/medium", className: f.yW, children: A.intl.string(A.t.ueoGef) }),
+                (0, l.jsx)(c.Ay, { type: c.Ay.Types.G_PAY, size: c.y3.MEDIUM, className: A.rS }),
+                (0, l.jsx)(o.E, { variant: "text-md/medium", className: A.yW, children: f.intl.string(f.t.ueoGef) }),
             ],
         });
     }
@@ -169,12 +169,12 @@ class I extends P {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.G_PAY,
-                  buttonText: A.intl.string(A.t.p2jr2E),
+                  buttonText: f.intl.string(f.t.p2jr2E),
                   loading: !(0, m.isDesktop)() && this.state.submitting,
               });
     }
 }
-class T extends P {
+class _ extends P {
     state = { ...this.initialState };
     paymentRequestWallet = "applePay";
     paymentRequestWalletName = "Apple Pay";
@@ -194,8 +194,8 @@ class T extends P {
         return (0, l.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, l.jsx)(c.Ay, { type: c.Ay.Types.APPLE, size: c.y3.MEDIUM, className: a()(f.rS, f.X6) }),
-                (0, l.jsx)(o.E, { variant: "text-md/medium", className: f.yW, children: A.intl.string(A.t.iv8pQV) }),
+                (0, l.jsx)(c.Ay, { type: c.Ay.Types.APPLE, size: c.y3.MEDIUM, className: a()(A.rS, A.X6) }),
+                (0, l.jsx)(o.E, { variant: "text-md/medium", className: A.yW, children: f.intl.string(f.t.iv8pQV) }),
             ],
         });
     }
@@ -204,7 +204,7 @@ class T extends P {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.APPLE_LIGHT,
-                  buttonText: A.intl.string(A.t.xdGS1o),
+                  buttonText: f.intl.string(f.t.xdGS1o),
                   loading: !(0, m.isDesktop)() && this.state.submitting,
               });
     }

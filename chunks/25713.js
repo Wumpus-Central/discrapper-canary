@@ -1,7 +1,7 @@
 l.r(t), l.d(t, { slayerStorefrontPlaygroundConfig: () => ea, storefrontCollection: () => el });
 var a = l(34188),
-    o = l(627968),
-    n = l(64700),
+    o = l(477900),
+    n = l(582128),
     i = l(331322),
     r = l(834730),
     s = l(821609),

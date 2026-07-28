@@ -1,6 +1,6 @@
 n.d(t, { A: () => j });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(435558),
@@ -13,11 +13,11 @@ var l = n(627968),
     g = n(218429),
     h = n(964486),
     f = n(461782),
-    x = n(186295),
-    A = n(40056),
+    A = n(293246),
+    x = n(40056),
     E = n(375708),
-    v = n(473772),
-    C = n(590782);
+    v = n(772148),
+    C = n(739014);
 function I(e) {
     e.preventDefault(), e.stopPropagation();
 }
@@ -43,7 +43,7 @@ let j = i.memo(function (e) {
             panOffset: G,
             setPanOffset: P,
             clampPanOffset: H,
-        } = i.useContext(A.e9),
+        } = i.useContext(x.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
         $ = y > T,
@@ -87,7 +87,7 @@ let j = i.memo(function (e) {
             },
             [U],
         ),
-        J = x.Ay.getVideoComponent(),
+        J = A.Ay.getVideoComponent(),
         ee = i.useMemo(() => {
             let e = null != V.current ? V.current.clientWidth : 1,
                 t = null != V.current ? V.current.clientHeight : 1,
@@ -108,13 +108,13 @@ let j = i.memo(function (e) {
         }, [R, U, k, w, G, y, V]),
         et = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), L(y - 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), L(y - 0.25, x.qd, "button");
             },
             [L, y],
         ),
         en = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), L(y + 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), L(y + 0.25, x.qd, "button");
             },
             [L, y],
         ),
@@ -122,7 +122,7 @@ let j = i.memo(function (e) {
         ei = i.useCallback(
             (e) => {
                 O(!0),
-                    L(e, A.qd, "slider"),
+                    L(e, x.qd, "slider"),
                     j(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {

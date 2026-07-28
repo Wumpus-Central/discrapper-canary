@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { V: () => a, k: () => s });
-var i = n(64700),
+n.d(t, { V: () => s, k: () => a });
+var i = n(582128),
     r = n(818348);
-function s() {
-    let e = i.useContext(a);
+function a() {
+    let e = i.useContext(s);
     if (null == e) throw Error("useModalContext must be used within a ModalContext.Provider");
     return e;
 }
-let a = i.createContext({ dismissable: !0, onClose: r.tE, id: "modal-id", headingId: "modal-heading-id" });
+let s = i.createContext({ dismissable: !0, onClose: r.tE, id: "modal-id", headingId: "modal-heading-id" });

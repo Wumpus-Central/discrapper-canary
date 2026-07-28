@@ -1,7 +1,7 @@
-t.d(e, { Ay: () => A, Or: () => C });
+t.d(e, { Ay: () => C, Or: () => v });
 var l,
-    n = t(627968),
-    i = t(64700),
+    n = t(477900),
+    i = t(582128),
     r = t(503698),
     s = t.n(r),
     c = t(615300),
@@ -12,23 +12,23 @@ var l,
     m = t(404374),
     p = t(998304),
     x = t(202541),
-    E = t(196063);
+    E = t(548455);
 let j = Object.freeze({
     DURATION: { [x.PremiumTypes.TIER_0]: 1e3, [x.PremiumTypes.TIER_1]: 1e3, [x.PremiumTypes.TIER_2]: 1500 },
     DELAY: { [x.PremiumTypes.TIER_0]: 400, [x.PremiumTypes.TIER_1]: 400, [x.PremiumTypes.TIER_2]: 2200 },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
 });
-var C =
+var v =
     (((l = {}).PREMIUM_ACTIVATED = "PREMIUM_ACTIVATED"),
     (l.PREMIUM_UPDATED = "PREMIUM_UPDATED"),
     (l.PREMIUM_UPGRADED = "PREMIUM_UPGRADED"),
     (l.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (l.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     l);
-class v extends i.PureComponent {
+class A extends i.PureComponent {
     animation = new c.A.Value(0);
-    static Types = C;
+    static Types = v;
     componentDidMount() {
         this.animate();
     }
@@ -290,11 +290,11 @@ class v extends i.PureComponent {
         });
     }
 }
-function A(a) {
+function C(a) {
     let { theme: e, ...t } = a,
         l = (0, u.r)(o.A.unsafe_rawColors.WHITE).hex(),
         i = (0, u.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
         r = (0, h.M)(e) ? l : i;
-    return (0, n.jsx)(v, { ...t, theme: e, flashColor: r });
+    return (0, n.jsx)(A, { ...t, theme: e, flashColor: r });
 }
-A.Types = C;
+C.Types = v;

@@ -1,13 +1,13 @@
 s.d(e, { default: () => q });
-var l = s(627968),
-    a = s(64700),
+var l = s(477900),
+    a = s(582128),
     i = s(17928),
     n = s(935462),
     r = s(821609),
     h = s(297264),
     o = s(228366),
     c = s(356645),
-    d = s(636537),
+    d = s(562465),
     u = s(568004),
     p = s(652215);
 async function A(t, e, s, l) {
@@ -38,7 +38,7 @@ var m = s(92077),
     S = s(975571),
     b = s(428262),
     T = s(375708),
-    L = s(103930);
+    L = s(909762);
 class j extends a.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -93,8 +93,8 @@ class j extends a.Component {
                                     onClick: (e) => {
                                         (0, v.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                s.e("38028"),
-                                                s.e("60464"),
+                                                s.e("49080"),
+                                                s.e("16008"),
                                                 s.e("92064"),
                                                 s.e("87297"),
                                             ]).then(s.bind(s, 294264));
@@ -181,7 +181,7 @@ s(321073);
 var O = s(691885),
     k = s(466472),
     R = s(19575),
-    w = s(245109);
+    w = s(331901);
 let F = "select";
 class W extends a.PureComponent {
     state = { newInstallationPath: null };
@@ -302,7 +302,7 @@ let K = i.Ay.connectStores([B.A], () => ({
     installationPaths: B.A.installationPaths,
     installationPathsMetadata: B.A.installationPathsMetadata,
 }))(W);
-var V = s(548268);
+var V = s(288676);
 class Z extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,

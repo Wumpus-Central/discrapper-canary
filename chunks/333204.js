@@ -1,6 +1,6 @@
 n.d(t, { V: () => E, _: () => v });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(866665),
     r = n(939249),
@@ -8,23 +8,23 @@ var i = n(627968),
     c = n(789645),
     d = n(834730),
     u = n(243721),
-    p = n(517461),
-    h = n(780964),
+    h = n(517461),
+    p = n(780964),
     m = n(766075),
     A = n(272812),
-    x = n(915725),
-    g = n(572164),
-    f = n(430795),
+    f = n(915725),
+    x = n(572164),
+    g = n(430795),
     C = n(118328),
-    y = n(679865),
+    y = n(300913),
     j = n(253146);
 function v() {
-    let [e, t] = (0, p.V)("clips-video-call-tile-dismissed", !1),
+    let [e, t] = (0, h.V)("clips-video-call-tile-dismissed", !1),
         n = l.useCallback(() => {
             t(!0);
         }, [t]),
         i = (0, C.A)("useIsClipsVideoCallTileVisible"),
-        [a] = l.useState(() => !(0, g.TD)() || !x.Ay.getEnableAutoclipping());
+        [a] = l.useState(() => !(0, x.TD)() || !f.Ay.getEnableAutoclipping());
     return [i && !e && a, n];
 }
 function E(e) {
@@ -41,7 +41,7 @@ function N(e) {
                 text: "Clips settings",
                 children: (0, i.jsx)(r.D, {
                     onClick: function () {
-                        (0, m.openUserSettings)(h.X.CLIPS_PANEL);
+                        (0, m.openUserSettings)(p.X.CLIPS_PANEL);
                     },
                     className: y.F1,
                     children: (0, i.jsx)("div", {
@@ -61,11 +61,11 @@ function N(e) {
 }
 function I(e) {
     let { width: t, handleClose: n } = e,
-        s = (0, g.Et)(),
-        o = (0, a.bG)([x.Ay], () => x.Ay.getEnableAutoclipping()),
-        [p, h] = l.useState(() => !s);
-    s || p || h(!0);
-    let m = p || !s,
+        s = (0, x.Et)(),
+        o = (0, a.bG)([f.Ay], () => f.Ay.getEnableAutoclipping()),
+        [h, p] = l.useState(() => !s);
+    s || h || p(!0);
+    let m = h || !s,
         C = t >= 300 ? "text-md/medium" : "text-sm/medium";
     return (0, i.jsxs)(A.A, {
         className: y.zr,
@@ -93,7 +93,7 @@ function I(e) {
                     label: m ? "Enable Clipping & Autoclipping" : "Enable Autoclipping",
                     checked: m ? s && o : o,
                     onChange: function (e) {
-                        m && (0, f.yO)({ clipsEnabled: e, trackAnalytics: !0 }), (0, f.uL)(e);
+                        m && (0, g.yO)({ clipsEnabled: e, trackAnalytics: !0 }), (0, g.uL)(e);
                     },
                 }),
             }),

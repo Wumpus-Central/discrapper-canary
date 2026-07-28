@@ -1,64 +1,64 @@
-n.d(e, { A: () => E });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => x });
+var i = n(477900);
+n(582128);
 var l = n(503698),
     r = n.n(l),
-    a = n(834730),
-    s = n(17928),
+    s = n(834730),
+    a = n(17928),
     o = n(349288),
     c = n(717398),
     u = n(994500),
     d = n(946356),
-    m = n(652215),
-    x = n(375708),
-    f = n(365887);
-function E(t) {
-    let { user: e, className: n } = t,
+    E = n(652215),
+    m = n(375708),
+    f = n(219575);
+function x(e) {
+    let { user: t, className: n } = e,
         {
             isPendingIncoming: l,
-            isBlocked: E,
-            isIgnored: g,
-        } = (0, s.cf)([u.A], () => ({
-            isPendingIncoming: u.A.getRelationshipType(e.id) === m.eA$.PENDING_INCOMING,
-            isBlocked: u.A.isBlocked(e.id),
-            isIgnored: u.A.isIgnored(e.id),
+            isBlocked: x,
+            isIgnored: R,
+        } = (0, a.cf)([u.A], () => ({
+            isPendingIncoming: u.A.getRelationshipType(t.id) === E.eA$.PENDING_INCOMING,
+            isBlocked: u.A.isBlocked(t.id),
+            isIgnored: u.A.isIgnored(t.id),
         }));
-    return E || (g && !l)
+    return x || (R && !l)
         ? (0, i.jsxs)(d.A.Overlay, {
               className: r()(f.k, n),
               children: [
-                  E &&
-                      (0, i.jsx)(a.E, {
+                  x &&
+                      (0, i.jsx)(s.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
-                          children: x.intl.string(x.t["oC/fU6"]),
+                          children: m.intl.string(m.t["oC/fU6"]),
                       }),
-                  g &&
+                  R &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(a.E, {
+                              (0, i.jsx)(s.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: x.intl.string(x.t.HXz5An),
+                                  children: m.intl.string(m.t.HXz5An),
                               }),
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(a.E, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: "\u2022",
                                       }),
-                                      (0, i.jsx)(a.E, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: x.intl.format(x.t.PrtAqy, {
-                                              unignoreHook: (t, n) =>
+                                          children: m.intl.format(m.t.PrtAqy, {
+                                              unignoreHook: (e, n) =>
                                                   (0, i.jsx)(
                                                       o.Anchor,
                                                       {
                                                           onClick: () =>
-                                                              c.A.unignoreUser(e.id, "UserProfileRemediatedNotice"),
-                                                          children: t,
+                                                              c.A.unignoreUser(t.id, "UserProfileRemediatedNotice"),
+                                                          children: e,
                                                       },
                                                       n,
                                                   ),

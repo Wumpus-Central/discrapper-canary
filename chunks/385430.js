@@ -1,6 +1,6 @@
 n.d(e, { default: () => W });
-var t = n(627968),
-    l = n(64700),
+var t = n(477900),
+    l = n(582128),
     a = n(935462),
     s = n(289873),
     c = n(780964),
@@ -11,7 +11,7 @@ var t = n(627968),
     m = n.n(u),
     p = n(731738),
     x = n(661531),
-    f = n(534514),
+    f = n(297264),
     _ = n(834730),
     h = n(349288),
     E = n(231483),
@@ -31,7 +31,7 @@ var t = n(627968),
     w = n(239093),
     D = n(652215),
     S = n(375708),
-    G = n(646704);
+    G = n(622456);
 function O(i) {
     let { classificationTypeText: e, guildMetadata: n } = i,
         a = l.useMemo(() => {
@@ -271,7 +271,7 @@ let M = (i) => {
                 ],
             });
 };
-var P = n(109659);
+var P = n(317891);
 let W = function (i) {
     let { transitionState: e, onClose: n, classificationId: l, source: u } = i,
         m = (0, d.A)(),

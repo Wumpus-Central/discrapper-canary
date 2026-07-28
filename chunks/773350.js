@@ -1,10 +1,10 @@
 a.d(r, { Z: () => o });
-var t = a(627968);
-a(64700);
+var t = a(477900);
+a(582128);
 let d =
     "https://cdn.discordapp.com/assets/content/354f49a6e211c21e698aad050121ad8b21a568e18f0e117346fded7089ebc51b.riv";
-var c = a(594639),
-    s = a(105596);
+var c = a(502377),
+    s = a(799226);
 let n = { Wumpus: {}, Background: {} };
 function o(e) {
     let { artboard: r = "Wumpus", stateMachine: a, ...o } = e,

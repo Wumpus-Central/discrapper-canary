@@ -1,6 +1,6 @@
 i.d(e, { EmojiAddModal: () => j });
-var a = i(627968),
-    n = i(64700),
+var a = i(477900),
+    n = i(582128),
     s = i(189213),
     l = i(27192),
     r = i(834730),
@@ -8,7 +8,7 @@ var a = i(627968),
     o = i(486020),
     c = i(320137),
     m = i(375708),
-    h = i(240640);
+    h = i(887016);
 function u(t) {
     let { emoji: e, onChange: i, value: n } = t,
         s = o.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 24 });

@@ -1,7 +1,7 @@
 t.d(n, { f: () => V }), t(938796);
-var l = t(627968),
-    i = t(64700),
-    s = t(835245),
+var l = t(477900),
+    i = t(582128),
+    s = t(132500),
     a = t(724002),
     r = t(287174),
     o = t(487899),
@@ -16,22 +16,22 @@ var l = t(627968),
     p = t(793574),
     g = t(688810),
     x = t(735991),
-    I = t(786115),
-    f = t(975412),
+    f = t(786115),
+    I = t(975412),
     T = t(392054),
     v = t(993748),
     _ = t(111042),
     j = t(939635),
     N = t(267102),
-    O = t(246356),
+    b = t(246356),
     S = t(111162),
-    b = t(174459),
+    O = t(174459),
     y = t(795816),
     R = t(648027),
     L = t(855446),
     M = t(652215),
     D = t(375708),
-    P = t(976524);
+    P = t(716660);
 let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
     k = `vc-activities-${(0, s.A)()}`;
 function U(e) {
@@ -52,7 +52,7 @@ function U(e) {
             let e = h?.application_directory_collection_items[0];
             return null == e ? null : e.type === o.L.APPLICATION_BANNER ? e : null;
         }, [h?.application_directory_collection_items]),
-        { trackItemImpressionRef: E } = (0, I.A)({
+        { trackItemImpressionRef: E } = (0, f.A)({
             applicationId: C?.application.id ?? "",
             applicationFlags: C?.application.flags,
             sectionName: "app_launcher_in_voice_banner",
@@ -70,7 +70,7 @@ function U(e) {
               innerRef: E,
               onClick: () => {
                   d(),
-                      (0, f.A)({
+                      (0, I.A)({
                           context: { type: "channel", channel: s },
                           openInPopout: r,
                           analyticsLocation: p.A.APP_LAUNCHER_IN_VOICE_BANNER,
@@ -85,10 +85,10 @@ function U(e) {
 }
 let V = i.forwardRef(function (e, n) {
     var t;
-    let { channel: s, isHovered: a, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: x, className: I } = e,
+    let { channel: s, isHovered: a, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: x, className: f } = e,
         { id: v, guild_id: _ } = s;
     i.useEffect(() => {
-        b.default.track(M.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: _ });
+        O.default.track(M.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: _ });
     }, [v, _]),
         i.useEffect(() => {
             a || r();
@@ -102,7 +102,7 @@ let V = i.forwardRef(function (e, n) {
         return () => clearTimeout(e);
     }, []);
     let H = i.useCallback(() => {
-            (0, f.A)({
+            (0, I.A)({
                 context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
                 openInPopout: V,
                 analyticsLocation: G,
@@ -113,7 +113,7 @@ let V = i.forwardRef(function (e, n) {
         w = i.useCallback(
             (e) => {
                 o(),
-                    b.default.track(M.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    O.default.track(M.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: s.id,
                         guild_id: s.getGuildId(),
                     });
@@ -122,11 +122,11 @@ let V = i.forwardRef(function (e, n) {
         );
     return (0, l.jsx)(g.f5, {
         value: S,
-        children: (0, l.jsx)(O.A, {
+        children: (0, l.jsx)(b.A, {
             children: (0, l.jsxs)(d.l, {
                 ref: n,
                 "aria-labelledby": k,
-                className: I,
+                className: f,
                 children: [
                     (0, l.jsx)(A.F, {
                         forceLevel: 2,

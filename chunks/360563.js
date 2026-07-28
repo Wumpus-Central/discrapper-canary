@@ -1,20 +1,20 @@
 t.d(l, { A: () => N });
-var s = t(627968);
-t(64700);
-var i = t(342952),
-    n = t(692617),
+var s = t(477900);
+t(582128);
+var n = t(342952),
+    i = t(692617),
     a = t(939249),
     r = t(834730),
     c = t(548118),
-    d = t(913453),
-    u = t(837531),
+    u = t(913453),
+    d = t(837531),
     o = t(186272),
     x = t(518477),
     h = t(778712),
-    m = t(403592);
+    m = t(456672);
 function N(e) {
     let { user: l, onOpenProfile: t } = e,
-        { mutualFriends: N, mutualGuilds: j } = (0, d.A)(l),
+        { mutualFriends: N, mutualGuilds: j } = (0, u.A)(l),
         v = null != N && N.length > 0,
         A = null != j && j.length > 0,
         p = v && A ? "text-xs/normal" : "text-sm/normal";
@@ -27,7 +27,7 @@ function N(e) {
                             className: m.uW,
                             onClick: () => t?.(x.RP.MUTUAL_FRIENDS),
                             children: [
-                                (0, s.jsx)(i.A, {
+                                (0, s.jsx)(n.A, {
                                     maxUsers: 3,
                                     users: N.map((e) => {
                                         let { user: l } = e;
@@ -42,7 +42,7 @@ function N(e) {
                                     className: m.Qq,
                                     variant: p,
                                     color: "interactive-text-default",
-                                    children: (0, u.A)(N.length),
+                                    children: (0, d.A)(N.length),
                                 }),
                             ],
                         })
@@ -54,7 +54,7 @@ function N(e) {
                             onClick: () => t?.(x.RP.MUTUAL_GUILDS),
                             children: [
                                 !v &&
-                                    (0, s.jsx)(n.A, {
+                                    (0, s.jsx)(i.A, {
                                         maxGuilds: 3,
                                         guilds: j.map((e) => {
                                             let { guild: l } = e;

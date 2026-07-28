@@ -1,31 +1,31 @@
 "use strict";
 n.d(t, { N: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(38021),
-    l = n(86182),
-    u = n(112834);
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(38021),
+    o = n(86182),
+    d = n(112834);
 function c(e) {
     let {
             theme: t,
             gradient: n,
-            disableAdaptiveTheme: s,
+            disableAdaptiveTheme: a,
             reduceAdaptiveTheme: c,
-            customBackgroundClassName: d,
+            customBackgroundClassName: u,
             children: _,
         } = e,
-        { theme: h } = r.useContext(o.Dx);
-    return (0, i.jsx)(l.w, {
+        { theme: E } = r.useContext(l.Dx);
+    return (0, i.jsx)(o.w, {
         theme: t,
         gradient: n,
-        disableAdaptiveTheme: s,
+        disableAdaptiveTheme: a,
         reduceAdaptiveTheme: c,
         children: _(
-            a()((0, u.m)(n?.theme ?? t ?? h), {
-                [d ?? ""]: null != n && null != d,
-                "disable-adaptive-theme": s,
+            s()((0, d.m)(n?.theme ?? t ?? E), {
+                [u ?? ""]: null != n && null != u,
+                "disable-adaptive-theme": a,
                 "reduce-adaptive-theme": c,
             }),
         ),

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { a: () => R });
-var i = n(636537),
+n.d(t, { a: () => O });
+var i = n(562465),
     r = n(306173),
     a = n(913122),
     s = n(626584),
-    l = n(451409),
+    l = n(293246),
     o = n(453771),
     d = n(77729),
     c = n(652215);
@@ -69,7 +69,7 @@ async function _(e, t) {
         );
 }
 var E = n(487329);
-n(627968), n(64700);
+n(477900), n(582128);
 let A = {};
 function h(e, t) {
     let n = e.length > t ? t : e.length;
@@ -78,7 +78,7 @@ function h(e, t) {
 var I = n(734057),
     f = n(53943);
 n(321073);
-var p = n(735438),
+var p = n(435558),
     T = n.n(p),
     m = n(61090),
     g = n(707539);
@@ -92,9 +92,9 @@ function S(e) {
 }
 var N = n(506774);
 let C = new s.A("DebugUploadManager");
-async function R(e, t) {
+async function O(e, t) {
     try {
-        await O(e), await _(0xe00000, t);
+        await R(e), await _(0xe00000, t);
     } catch (t) {
         let e;
         throw (
@@ -120,7 +120,7 @@ async function R(e, t) {
         );
     }
 }
-async function O(e) {
+async function R(e) {
     try {
         let t, n, a, s;
         try {
@@ -185,8 +185,8 @@ ${s}`;
                     h,
                     I,
                     { index: f, timestamp: p, logs: m, nativeLogs: N, serverTrace: C } = i,
-                    R = 0 === f ? (T().find(m, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
-                    O =
+                    O = 0 === f ? (T().find(m, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    R =
                         ((o =
                             ((r = m),
                             (a = N),
@@ -245,7 +245,7 @@ ${s}`;
                                     !(E && e.log.includes("\u21AA")) &&
                                     !(E = (!l && e.emoji === `\u{1F3A8}`) || !1 === e.shouldKeep),
                             ))),
-                        (d = R),
+                        (d = O),
                         (A = (function (e) {
                             let t = [];
                             for (let n = 0; n < e.length; n++) {
@@ -269,7 +269,7 @@ ${s}`;
                             return `${T().padStart(t, h)} ${T().padStart(n, I)} ${i}`;
                         }).join("")),
                     L = `Trace #${f + 1} started ${(0, g.aK)(p)}
-${O}`;
+${R}`;
                 return (
                     null != C &&
                         (L += `
@@ -298,7 +298,7 @@ ${O}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "574859", versionHash: "2b3cb1c01c77d876353e0aa508158adefc6110cb" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "585095", versionHash: "1a5aeb7efeaa9d6a06f84b3735b36ba840a21c5b" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}

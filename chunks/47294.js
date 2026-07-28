@@ -1,49 +1,49 @@
 "use strict";
-n.d(t, { A: () => h });
-var i = n(627968),
-    r = n(64700),
-    s = n(189213),
-    a = n(150934),
-    o = n(192308),
-    l = n(231723),
-    u = n(817281),
+n.d(t, { A: () => E });
+var i = n(477900),
+    r = n(582128),
+    a = n(189213),
+    s = n(150934),
+    l = n(192308),
+    o = n(231723),
+    d = n(817281),
     c = n(742023),
-    d = n(375708);
+    u = n(375708);
 function _(e) {
-    let { onConfirm: t, onCancel: n, ...o } = e,
-        [l, c] = r.useState(!1);
+    let { onConfirm: t, onCancel: n, ...l } = e,
+        [o, c] = r.useState(!1);
     return (
         r.useEffect(() => {
-            u.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: l });
-        }, [l]),
-        (0, i.jsx)(s.Modal, {
-            ...o,
+            d.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: o });
+        }, [o]),
+        (0, i.jsx)(a.Modal, {
+            ...l,
             size: "md",
-            title: d.intl.string(d.t.ye21jI),
-            subtitle: d.intl.string(d.t.hbagWD),
+            title: u.intl.string(u.t.ye21jI),
+            subtitle: u.intl.string(u.t.hbagWD),
             actions: [
                 {
-                    text: d.intl.string(d.t.B8pz37),
+                    text: u.intl.string(u.t.B8pz37),
                     onClick: function () {
-                        n?.(), o.onClose();
+                        n?.(), l.onClose();
                     },
                     variant: "secondary",
                 },
                 {
-                    text: d.intl.string(d.t.makWn9),
+                    text: u.intl.string(u.t.makWn9),
                     onClick: function () {
-                        t(), o.onClose();
+                        t(), l.onClose();
                     },
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, i.jsx)(a.S, { checked: l, onChange: (e) => c(e), label: d.intl.string(d.t.wGAwOS) }),
+            actionBarInput: (0, i.jsx)(s.S, { checked: o, onChange: (e) => c(e), label: u.intl.string(u.t.wGAwOS) }),
         })
     );
 }
-function h(e) {
+function E(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: r = !1 } = e;
     c.Ay.disableEmbeddedActivityPopOutAlert
         ? t()
-        : (0, o.openModal)((e) => (0, i.jsx)(_, { ...e, onConfirm: t, onCancel: n }), {}, r ? l.KX : void 0);
+        : (0, l.openModal)((e) => (0, i.jsx)(_, { ...e, onConfirm: t, onCancel: n }), {}, r ? o.KX : void 0);
 }

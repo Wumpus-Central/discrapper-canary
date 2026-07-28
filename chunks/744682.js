@@ -1,81 +1,81 @@
 "use strict";
-n.d(t, { P: () => p });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(488528),
-    l = n.n(o),
-    u = n(844222),
+n.d(t, { P: () => h });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(480664),
+    o = n.n(l),
+    d = n(844222),
     c = n(460890),
-    d = n(260612),
+    u = n(260612),
     _ = n(964486),
-    h = n(354328),
-    f = n(274661);
-let p = r.forwardRef(function (e, t) {
+    E = n(354328),
+    A = n(598893);
+let h = r.forwardRef(function (e, t) {
     let {
-            color: s,
-            useLottieDefaultColors: o,
-            src: p,
-            size: E = "md",
-            width: m,
-            height: g,
-            className: A,
-            initialAnimation: I,
-            initialFrame: T,
+            color: a,
+            useLottieDefaultColors: l,
+            src: h,
+            size: I = "md",
+            width: f,
+            height: p,
+            className: T,
+            initialAnimation: m,
+            initialFrame: g,
             markers: S,
-            onBeforeDismount: y,
+            onBeforeDismount: N,
         } = e,
-        [C, N] = r.useState(null),
-        v = r.useRef(null),
+        [C, O] = r.useState(null),
         R = r.useRef(null),
-        O = r.useRef(null),
-        b = "custom" === E ? { width: m, height: g } : (0, d.J)(E),
-        D = !(0, h.A)("lottie_hover_multiple_loop"),
-        L = r.useContext(u.C).reducedMotion.enabled,
-        w = (0, c.G9)().isMainWindowVisible?.() ?? !0,
-        M = L || !w,
-        P = r.useRef(I);
+        L = r.useRef(null),
+        y = r.useRef(null),
+        D = "custom" === I ? { width: f, height: p } : (0, u.J)(I),
+        v = !(0, E.A)("lottie_hover_multiple_loop"),
+        b = r.useContext(d.C).reducedMotion.enabled,
+        M = (0, c.G9)().isMainWindowVisible?.() ?? !0,
+        P = b || !M,
+        U = r.useRef(m);
     return (
         (0, _.l0)(() => {
-            y?.({ finalFrame: O.current?.currentFrame ?? null });
+            N?.({ finalFrame: y.current?.currentFrame ?? null });
         }),
         r.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null == O.current) return;
-                    let t = null == R.current;
-                    if (((R.current = e), M)) {
+                    if (null == y.current) return;
+                    let t = null == L.current;
+                    if (((L.current = e), P)) {
                         let t = S[e];
-                        O.current.resetSegments(!0),
-                            O.current.setSegment(t.start + t.duration, t.start + t.duration),
-                            O.current.stop();
+                        y.current.resetSegments(!0),
+                            y.current.setSegment(t.start + t.duration, t.start + t.duration),
+                            y.current.stop();
                     } else {
-                        O.current.setLoop(!D && e.includes("hover")), O.current.resetSegments(!0);
-                        let n = t && null != T && T >= S[e].start && T <= S[e].start + S[e].duration ? T : S[e].start;
-                        O.current.playSegments([n, S[e].start + S[e].duration], !0);
+                        y.current.setLoop(!v && e.includes("hover")), y.current.resetSegments(!0);
+                        let n = t && null != g && g >= S[e].start && g <= S[e].start + S[e].duration ? g : S[e].start;
+                        y.current.playSegments([n, S[e].start + S[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == O.current || M) return;
+                    if (null == y.current || P) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == O.current ||
-                        M ||
-                        (R.current === e &&
-                            (O.current.resetSegments(!0),
-                            O.current.setSegment(S[e].start, S[e].start),
-                            O.current.stop()));
+                    null == y.current ||
+                        P ||
+                        (L.current === e &&
+                            (y.current.resetSegments(!0),
+                            y.current.setSegment(S[e].start, S[e].start),
+                            y.current.stop()));
                 },
-                getDuration: (e) => (null == O.current ? null : O.current.getDuration(e)),
-                getCurrentFrame: () => (null == O.current ? null : O.current.currentFrame),
+                getDuration: (e) => (null == y.current ? null : y.current.getDuration(e)),
+                getCurrentFrame: () => (null == y.current ? null : y.current.currentFrame),
             }),
-            [M, D, S, T],
+            [P, v, S, g],
         ),
         r.useEffect(() => {
-            null == C && p().then((e) => N(e.default));
-        }, [C, p]),
+            null == C && h().then((e) => O(e.default));
+        }, [C, h]),
         r.useEffect(
             () => (
                 n
@@ -84,32 +84,32 @@ let p = r.forwardRef(function (e, t) {
                     .then((e) => {
                         let t,
                             { default: n } = e;
-                        if (null == v.current) return;
+                        if (null == R.current) return;
                         let i = 1 === Object.keys(S).length ? Object.values(S)[0].name : void 0,
-                            r = R.current ?? P.current ?? i;
+                            r = L.current ?? U.current ?? i;
                         if (null != r && null != S[r]) {
                             let e = S[r];
-                            t = null != e ? [T ?? e.start, e.start + e.duration] : void 0;
+                            t = null != e ? [g ?? e.start, e.start + e.duration] : void 0;
                         }
-                        O.current = n.loadAnimation({
-                            container: v.current,
+                        y.current = n.loadAnimation({
+                            container: R.current,
                             renderer: "svg",
                             loop: !1,
                             autoplay: !1,
-                            animationData: l()(C),
+                            animationData: o()(C),
                             initialSegment: t,
                         });
                     }),
                 () => {
-                    O.current?.destroy();
+                    y.current?.destroy();
                 }
             ),
-            [C, S, T],
+            [C, S, g],
         ),
         (0, i.jsx)("div", {
-            style: { "--__lottieIconColor": null != s && "string" == typeof s ? s : s?.css, display: "flex", ...b },
-            className: a()(f.f, o ? void 0 : f.P, A),
-            ref: v,
+            style: { "--__lottieIconColor": null != a && "string" == typeof a ? a : a?.css, display: "flex", ...D },
+            className: s()(A.f, l ? void 0 : A.P, T),
+            ref: R,
         })
     );
 });

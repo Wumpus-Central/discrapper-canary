@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => l });
+var i = n(477900);
+n(582128);
 var r = n(17928),
-    s = n(775602),
-    a = n(607470);
-let o = function (e) {
-    let { src: t, children: n, fallbackImage: o, className: l, preload: u, forceReducedMotion: c } = e,
-        d = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion) || c;
-    return d && null != o
-        ? (0, i.jsx)("img", { src: o, alt: "", className: l })
-        : (0, i.jsx)(a.A, {
+    a = n(775602),
+    s = n(607470);
+let l = function (e) {
+    let { src: t, children: n, fallbackImage: l, className: o, preload: d, forceReducedMotion: c } = e,
+        u = (0, r.bG)([a.Ay], () => a.Ay.useReducedMotion) || c;
+    return u && null != l
+        ? (0, i.jsx)("img", { src: l, alt: "", className: o })
+        : (0, i.jsx)(s.A, {
               muted: !0,
-              autoPlay: !d,
-              loop: !d,
+              autoPlay: !u,
+              loop: !u,
               playsInline: !0,
               "aria-hidden": "true",
               src: t,
-              className: l,
-              preload: u,
+              className: o,
+              preload: d,
               children: n,
           });
 };

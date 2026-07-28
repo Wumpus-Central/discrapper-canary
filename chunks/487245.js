@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, { t6: () => eE, Zg: () => e_, ew: () => eu, v0: () => ea, Ay: () => eh, X8: () => eo }), n(801541);
 var i,
-    r = n(627968),
-    a = n(64700),
+    r = n(477900),
+    a = n(582128),
     s = n(503698),
     l = n.n(s),
     o = n(889137),
     d = n(17928),
     c = n(873298),
     u = n(785007),
-    _ = n(534514),
+    _ = n(297264),
     E = n(604121),
     A = n(140735),
     h = n(331322),
@@ -20,13 +20,13 @@ var i,
     m = n(793943),
     g = n(915089),
     S = n(87719),
-    N = n(234419),
+    N = n(732280),
     C = n(811611),
-    R = n(450232),
-    O = n(973654),
+    O = n(450232),
+    R = n(973654),
     L = n(363195),
-    D = n(742023),
-    y = n(885386),
+    y = n(742023),
+    D = n(885386),
     v = n(830543),
     b = n(174459),
     M = n(823459),
@@ -46,7 +46,7 @@ var i,
     K = n(49999),
     $ = n(693227),
     z = n(375708),
-    q = n(645603);
+    q = n(804203);
 function Z() {
     return (0, r.jsxs)("svg", {
         className: q.JR,
@@ -87,7 +87,7 @@ function X(e) {
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = (0, d.bG)([B.A], () => B.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
         { shouldShowNewBadge: u, markNewBadgeAsDismissed: _ } =
-            ((t = (0, V.JZ)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE)),
+            ((t = (0, V.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE)),
             a.useEffect(() => {
                 if (!t)
                     return (
@@ -103,7 +103,7 @@ function X(e) {
                     (0, V.Dr)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, { dismissAction: K.i.TAKE_ACTION });
                 }, []),
             }),
-        E = (0, V.JZ)(w.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        E = (0, V.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         A = (0, F.Ay)(),
         h = (0, x.M)(A) ? q.Xu : q.VO,
         I = null != c && null != c.colors && c.colors.length > 0,
@@ -162,7 +162,7 @@ var Q = n(385803),
     et = n(185928),
     en = n(355097),
     ei = n(818348),
-    er = n(702709),
+    er = n(621885),
     ea = (((i = {}).EDITOR = "EDITOR"), (i.SETTINGS = "SETTINGS"), i);
 let es = Object.freeze({ EDITOR: en.Sb.SLOW_USER_ACTION, SETTINGS: en.Sb.INFREQUENT_USER_ACTION }),
     el = a.createContext({});
@@ -192,7 +192,7 @@ function ed(e) {
         className: er.DD,
         children: [
             (0, r.jsx)(_.D, { "aria-label": c, className: l()(er.Qw, a), variant: d, children: c }),
-            (0, r.jsx)(R.A, { className: l()(er.PC, s), size: "xs" }),
+            (0, r.jsx)(O.A, { className: l()(er.PC, s), size: "xs" }),
         ],
     });
 }
@@ -253,20 +253,20 @@ function e_(e) {
         [u, _] = (0, d.yK)([P.A], () => [P.A.isPreview, P.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
-        R = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        D = (0, g.GV)(),
-        y = L && u ? D : void 0,
-        b = L ? D : void 0;
+        y = (0, g.GV)(),
+        D = L && u ? y : void 0,
+        b = L ? y : void 0;
     function U(e, t) {
         var n;
         if (
             ((0, M.bc)(e.id),
             eo({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, O.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
                 : u
-                  ? (0, O.GQ)(e.theme)
+                  ? (0, R.GQ)(e.theme)
                   : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
             null != t)
         ) {
@@ -280,7 +280,7 @@ function e_(e) {
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                L && (0, r.jsx)(A.A, { id: D, children: z.intl.string(z.t.JIZSqz) }),
+                L && (0, r.jsx)(A.A, { id: y, children: z.intl.string(z.t.JIZSqz) }),
                 (0, r.jsx)(X, {
                     size: i,
                     isDisabled: t,
@@ -307,7 +307,7 @@ function e_(e) {
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
                             showLockedBadge: !1,
-                            ariaDescribedBy: y,
+                            ariaDescribedBy: D,
                         },
                         e.id,
                     ),
@@ -328,9 +328,9 @@ function e_(e) {
                                 preset: e,
                                 isSelected: _ === c.ju.EASTER_EGG,
                                 onSelect: () => U(e),
-                                ariaDescribedBy: y,
+                                ariaDescribedBy: D,
                             }),
-                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !R, className: er._7 }),
+                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !O, className: er._7 }),
                         ],
                     });
                 })(),
@@ -342,10 +342,10 @@ function eE(e) {
     let { size: t, systemSelectorFirst: n, hideSystemSelector: i = !1 } = e,
         { delay: s } = a.useContext(el),
         { analyticsLocations: l } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-        [o, c, u] = (0, d.yK)([L.A, D.Ay, P.A], () => [
+        [o, c, u] = (0, d.yK)([L.A, y.Ay, P.A], () => [
             L.A.theme,
-            null == P.A.gradientPreset && null == y.eh.getSetting().customUserThemeSettings,
-            D.Ay.useSystemTheme === et.Q_.ON,
+            null == P.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,
+            y.Ay.useSystemTheme === et.Q_.ON,
         ]);
     function _(e) {
         (0, M.Py)(),

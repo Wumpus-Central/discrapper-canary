@@ -1,6 +1,6 @@
 n.d(l, { PlaygroundEmbed: () => b }), n(323874), n(14289), n(35956);
-var t = n(627968),
-    r = n(64700),
+var t = n(477900),
+    r = n(582128),
     u = n(659421),
     o = n(700623),
     i = n(331322),
@@ -14,7 +14,7 @@ var t = n(627968),
     p = n(764451),
     g = n(836156),
     x = n(652215),
-    S = n(580400);
+    S = n(701864);
 let C = {
     mana: { name: "Mana", icon: u.H, defaultSubtitle: "Explore the Mana Design System" },
     revenue: { name: "Revenue", icon: o.d, defaultSubtitle: "Explore Revenue Components" },

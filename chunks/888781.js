@@ -1,10 +1,10 @@
 s.d(l, { D: () => m });
-var e = s(627968),
-    i = s(64700),
+var e = s(477900),
+    i = s(582128),
     r = s(855522),
-    n = s(534514),
+    n = s(297264),
     a = s(834730),
-    o = s(963925);
+    o = s(760714);
 function c(t) {
     let { benefits: l, description: s, imgSrc: i, title: c, tag: d, FallbackIcon: x } = t,
         u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;

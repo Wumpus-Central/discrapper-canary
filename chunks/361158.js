@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { B8: () => L, dF: () => D, up: () => O, xr: () => S });
-var i = n(627968),
-    r = n(64700),
-    a = n(296489),
+n.d(t, { B8: () => L, dF: () => y, up: () => R, xr: () => S });
+var i = n(477900),
+    r = n(582128),
+    a = n(277057),
     s = n.n(a),
-    l = n(580956),
-    o = n(451989),
-    d = n(353640),
+    l = n(758588),
+    o = n(93932),
+    d = n(196765),
     c = n(121894),
     u = n(319060),
     _ = n(315710),
@@ -16,7 +16,7 @@ var i = n(627968),
     I = n(750506),
     f = n(191627),
     p = n(87404),
-    T = n(215011);
+    T = n(416443);
 let m = new Set([p._s, f.Uy]),
     g = (0, h.xI)(u.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
     S = (0, d.v)((e) => ({
@@ -46,7 +46,7 @@ function N(e) {
                                 binds: ["esc"],
                                 comboKeysBindGlobal: !0,
                                 action() {
-                                    n?.() !== !0 && D(e);
+                                    n?.() !== !0 && y(e);
                                 },
                             },
                         }),
@@ -62,17 +62,17 @@ function N(e) {
                 ref: n,
                 children: [
                     (0, i.jsx)("div", { className: T.$E }),
-                    t.render({ transitionState: null != t ? t.transitionState : 3, closeLayer: () => D(t.key) }),
+                    t.render({ transitionState: null != t ? t.transitionState : 3, closeLayer: () => y(t.key) }),
                 ],
             }),
         })
     );
 }
 let C = { enter: T.Ve, enterActive: T.T8, enterDone: T.lG, exit: T.NS, exitActive: T.N5, exitDone: T.Dr },
-    R = { enter: T.Zf, enterActive: T.BA, enterDone: T.zo, exit: T.ph, exitActive: T.zX, exitDone: T.hf };
-function O() {
+    O = { enter: T.Zf, enterActive: T.BA, enterDone: T.zo, exit: T.ph, exitActive: T.zX, exitDone: T.hf };
+function R() {
     let { reducedMotion: e } = r.useContext(E.C),
-        t = e.enabled ? R : C,
+        t = e.enabled ? O : C,
         n = S((e) => e.fullScreenLayers),
         a = n.map((e) => ({ item: e, nodeRef: r.createRef() }));
     return (0, i.jsx)(l.A, {
@@ -121,7 +121,7 @@ function L(e) {
         o
     );
 }
-function D(e) {
+function y(e) {
     (0, c.r)(() => {
         S.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });

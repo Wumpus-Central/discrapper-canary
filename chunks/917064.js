@@ -1,38 +1,38 @@
 "use strict";
-n.d(t, { A: () => p, s: () => f });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => h, s: () => A });
+var i = n(477900);
+n(582128);
 var r = n(503698),
-    s = n.n(r),
-    a = n(104510),
-    o = n(957485),
-    l = n(926268),
-    u = n(534514),
+    a = n.n(r),
+    s = n(104510),
+    l = n(957485),
+    o = n(926268),
+    d = n(297264),
     c = n(834730),
-    d = n(375708),
-    _ = n(502997),
-    h = n(93364);
-let f = [
-    { icon: a._, getText: () => d.intl.string(d.t.TZigSO) },
+    u = n(375708),
+    _ = n(179869),
+    E = n(93364);
+let A = [
+    { icon: s._, getText: () => u.intl.string(u.t.TZigSO) },
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, i.jsx)("img", { className: s()(t, _.Dp), src: h, alt: "" });
+            return (0, i.jsx)("img", { className: a()(t, _.Dp), src: E, alt: "" });
         },
-        getText: () => d.intl.string(d.t.hjQuV2),
+        getText: () => u.intl.string(u.t.hjQuV2),
     },
-    { icon: o.i, getText: () => d.intl.string(d.t["2RUcaM"]) },
-    { icon: l.C, getText: () => d.intl.string(d.t.bJoZKV) },
+    { icon: l.i, getText: () => u.intl.string(u.t["2RUcaM"]) },
+    { icon: o.C, getText: () => u.intl.string(u.t.bJoZKV) },
 ];
-function p(e) {
+function h(e) {
     let { className: t } = e;
     return (0, i.jsxs)("div", {
-        className: s()(_.iE, t),
+        className: a()(_.iE, t),
         children: [
-            (0, i.jsx)(u.D, { className: _.R_, variant: "heading-xxl/semibold", children: d.intl.string(d.t.IzKs3o) }),
+            (0, i.jsx)(d.D, { className: _.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
             (0, i.jsx)("div", {
                 className: _.kR,
-                children: f.map((e, t) => {
+                children: A.map((e, t) => {
                     let n = e.icon;
                     return (0, i.jsxs)(
                         "div",

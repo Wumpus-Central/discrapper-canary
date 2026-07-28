@@ -1,30 +1,30 @@
-n.d(t, { Mg: () => a, RZ: () => u });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { Mg: () => a, RZ: () => d });
+var i = n(477900),
+    l = n(582128),
     r = n(403362);
-let s = i.createContext(void 0);
+let s = l.createContext(void 0);
 function a() {
-    let e = i.useContext(s);
+    let e = l.useContext(s);
     if (null == e) throw Error("No PollFocusContextProvider found");
     return e;
 }
 function o(e) {
     let { children: t, actionButtonRef: n, pollAnswerRef: r, manageFocusOnAction: a } = e,
-        o = i.useMemo(() => ({ actionButtonRef: n, pollAnswerRef: r, manageFocusOnAction: a }), [n, r, a]);
-    return (0, l.jsx)(s.Provider, { value: o, children: t });
+        o = l.useMemo(() => ({ actionButtonRef: n, pollAnswerRef: r, manageFocusOnAction: a }), [n, r, a]);
+    return (0, i.jsx)(s.Provider, { value: o, children: t });
 }
-function u(e) {
+function d(e) {
     let { children: t } = e,
-        [n, s] = i.useState(),
-        a = i.useRef(null),
-        u = i.useRef(null);
+        [n, s] = l.useState(),
+        a = l.useRef(null),
+        d = l.useRef(null);
     return (
-        i.useEffect(() => {
-            "POLL_ANSWERS" === n && null != u.current && u.current?.ref?.focus(),
+        l.useEffect(() => {
+            "POLL_ANSWERS" === n && null != d.current && d.current?.ref?.focus(),
                 "ACTION_BUTTON" === n && null != a.current && a.current?.focus();
         }, [n]),
-        (0, l.jsx)(o, {
-            pollAnswerRef: u,
+        (0, i.jsx)(o, {
+            pollAnswerRef: d,
             actionButtonRef: a,
             manageFocusOnAction: function (e) {
                 switch (e) {

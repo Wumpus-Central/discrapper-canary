@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { Ch: () => L, hg: () => D, dn: () => O, SD: () => R });
-var i = n(64700),
+n.d(t, { Ch: () => L, hg: () => y, dn: () => R, SD: () => O });
+var i = n(582128),
     r = n(435558),
     a = n.n(r),
     s = n(17928),
@@ -43,8 +43,8 @@ let N = {
             "spoiler",
         ],
     ),
-    R = l.aV(C);
-function O(e) {
+    O = l.aV(C);
+function R(e) {
     let {
             context: t,
             application: n,
@@ -58,7 +58,7 @@ function O(e) {
             onConfirmActivityLaunchChecksAlertOpen: N,
         } = e,
         C = (0, o.p)(),
-        R = (function (e) {
+        O = (function (e) {
             let [t, n] = i.useState(e);
             return (
                 i.useLayoutEffect(() => {
@@ -71,11 +71,11 @@ function O(e) {
                 t
             );
         })((0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: f })),
-        O = (0, s.bG)([T.A], () => T.A.entrypoint()),
+        R = (0, s.bG)([T.A], () => T.A.entrypoint()),
         L = i.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, _.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
-        D = (0, d.wK)({
+        y = (0, d.wK)({
             application: n,
             botUserIdForAppDM: L,
             embeddedActivitiesManager: c.A,
@@ -88,24 +88,24 @@ function O(e) {
                         location: r,
                         application_id: t,
                         section_name: a,
-                        action: R,
-                        source: O,
+                        action: O,
+                        source: R,
                     });
             },
             launchingComponentId: h,
             commandOrigin: E.iw.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: O,
+            source: R,
             fetchesApplication: f,
             onConfirmActivityLaunchChecksAlertOpen: N,
         }),
-        y = "primary",
+        D = "primary",
         v = l ?? S.intl.string(S.t.zKX8Nu);
     return (
-        R === d.o6.JOIN
-            ? ((y = "active"), (v = S.intl.string(S.t.d9PsMj)))
-            : R !== d.o6.LEAVE || I || ((y = "critical-primary"), (v = S.intl.string(S.t["Hi1/aQ"]))),
-        { onActivityItemSelected: D, activityAction: R, buttonVariant: y, buttonText: v }
+        O === d.o6.JOIN
+            ? ((D = "active"), (v = S.intl.string(S.t.d9PsMj)))
+            : O !== d.o6.LEAVE || I || ((D = "critical-primary"), (v = S.intl.string(S.t["Hi1/aQ"]))),
+        { onActivityItemSelected: y, activityAction: O, buttonVariant: D, buttonText: v }
     );
 }
 function L(e, t) {
@@ -125,6 +125,6 @@ function L(e, t) {
         null != e && a(e, n);
     }, [e, t, n, a]);
 }
-function D(e) {
+function y(e) {
     f._.dispatchToLastSubscribed(g.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

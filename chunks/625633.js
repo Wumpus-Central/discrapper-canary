@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { DU: () => v, QR: () => C, q5: () => O, $_: () => y, Lp: () => R, Pf: () => N });
+n.d(t, { DU: () => R, QR: () => C, q5: () => y, $_: () => N, Lp: () => L, Pf: () => O });
 var i = n(661531),
     r = n(477262),
-    s = n(391242),
-    a = n(957485),
-    o = n(797285),
-    l = n(27232),
-    u = n(460905),
+    a = n(391242),
+    s = n(957485),
+    l = n(797285),
+    o = n(27232),
+    d = n(460905),
     c = n(183623),
-    d = n(116891);
+    u = n(116891);
 n(358431);
-var _ = n(627968);
-n(64700);
-var h = n(953727);
-function f(e) {
+var _ = n(477900);
+n(582128);
+var E = n(953727);
+function A(e) {
     let { width: t = 40, height: n = 40, color: i = "currentColor", ...r } = e;
     return (0, _.jsx)("svg", {
-        ...(0, h.A)(r),
+        ...(0, E.A)(r),
         width: t,
         height: n,
         viewBox: "0 0 20 21",
@@ -30,18 +30,18 @@ function f(e) {
         }),
     });
 }
-var p = n(652215),
-    E = n(788868),
-    m = n(375708);
-function g() {
-    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css, icon: a.i, description: m.intl.string(m.t.zZe94m) };
+var h = n(652215),
+    I = n(202541),
+    f = n(375708);
+function p() {
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css, icon: s.i, description: f.intl.string(f.t.zZe94m) };
 }
-function A() {
+function T() {
     let e =
         arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
-    return { color: e, icon: o.t, description: m.intl.string(m.t.ZwOSdn) };
+    return { color: e, icon: l.t, description: f.intl.string(f.t.ZwOSdn) };
 }
-function I(e) {
+function m(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -49,88 +49,88 @@ function I(e) {
         n = 0,
         r = 0;
     switch (e) {
-        case p.TVA.TIER_1:
+        case h.TVA.TIER_1:
             (n = 15), (r = 100);
             break;
-        case p.TVA.TIER_2:
+        case h.TVA.TIER_2:
             (n = 30), (r = 150);
             break;
-        case p.TVA.TIER_3:
+        case h.TVA.TIER_3:
             (n = 60), (r = 250);
     }
     return {
         color: t,
-        icon: o.t,
-        description: m.intl.formatToPlainString(m.t["12vFYK"], { numStickers: n, numEmojis: r }),
+        icon: l.t,
+        description: f.intl.formatToPlainString(f.t["12vFYK"], { numStickers: n, numEmojis: r }),
     };
 }
-function T() {
-    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css, icon: l.G, description: m.intl.string(m.t["ThRK/u"]) };
+function g() {
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css, icon: o.G, description: f.intl.string(f.t["ThRK/u"]) };
 }
 function S() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.intl.string(m.t.SQV8g6);
-    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_BLUE.css, icon: u.n, description: e };
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.intl.string(f.t.SQV8g6);
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_BLUE.css, icon: d.n, description: e };
 }
-function y() {
+function N() {
     return [
-        g(),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t["n/HqCh"]) },
-        A(),
+        p(),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: f.intl.string(f.t["n/HqCh"]) },
+        T(),
         S(),
     ];
 }
 function C() {
     return [
-        g(),
-        I(p.TVA.TIER_2),
+        p(),
+        m(h.TVA.TIER_2),
         (function () {
             let e =
                     arguments.length > 0 && void 0 !== arguments[0]
                         ? arguments[0]
                         : i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
-                t = (0, d.eT)("GuildBoostingConstants"),
+                t = (0, u.eT)("GuildBoostingConstants"),
                 n =
-                    t === d.fj
-                        ? m.intl.string(m.t.oIKhwT)
-                        : m.intl.formatToPlainString(m.t["7y2ina"], {
+                    t === u.fj
+                        ? f.intl.string(f.t.oIKhwT)
+                        : f.intl.formatToPlainString(f.t["7y2ina"], {
                               resolution: t,
-                              framerate: E.TG[p.TVA.TIER_2].limits.screenShareQualityFramerate,
+                              framerate: I.TG[h.TVA.TIER_2].limits.screenShareQualityFramerate,
                           });
             return { color: e, icon: c.F, description: n };
         })(),
         S(),
     ];
 }
-function N() {
+function O() {
     return [
-        I(p.TVA.TIER_3, i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css, icon: f, description: m.intl.string(m.t.Tm40TZ) },
-        T(),
-        S(),
-    ];
-}
-function v() {
-    return [
-        T(),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: s.O, description: m.intl.string(m.t.AU0zcQ) },
-        I(p.TVA.TIER_3),
+        m(h.TVA.TIER_3, i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css, icon: A, description: f.intl.string(f.t.Tm40TZ) },
+        g(),
         S(),
     ];
 }
 function R() {
     return [
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t.iGuEFe) },
-        A(),
+        g(),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: a.O, description: f.intl.string(f.t.AU0zcQ) },
+        m(h.TVA.TIER_3),
+        S(),
+    ];
+}
+function L() {
+    return [
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: f.intl.string(f.t.iGuEFe) },
+        T(),
         (function () {
             let e =
                 arguments.length > 0 && void 0 !== arguments[0]
                     ? arguments[0]
                     : i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
-            return { color: e, icon: s.O, description: m.intl.string(m.t["94l3Ul"]) };
+            return { color: e, icon: a.O, description: f.intl.string(f.t["94l3Ul"]) };
         })(),
         S(),
     ];
 }
-function O() {
-    return [A(), S()];
+function y() {
+    return [T(), S()];
 }

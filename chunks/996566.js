@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { IE: () => u, km: () => c, rM: () => l });
-var i = n(64700),
-    r = n(735438),
-    s = n.n(r),
-    a = n(683973);
-let o = {};
-function l() {
-    let e = (0, a.k)();
-    return e.favoriteGifs?.gifs ?? o;
+n.d(t, { IE: () => d, km: () => c, rM: () => o });
+var i = n(582128),
+    r = n(435558),
+    a = n.n(r),
+    s = n(683973);
+let l = {};
+function o() {
+    let e = (0, s.k)();
+    return e.favoriteGifs?.gifs ?? l;
 }
-function u(e) {
-    let t = l();
+function d(e) {
+    let t = o();
     return i.useMemo(
         () =>
-            s()(t)
+            a()(t)
                 .map((t, n) => ({ ...t, url: n, src: e?.(t.src, n) ?? t.src }))
                 .sortBy("order")
                 .reverse()
@@ -22,5 +22,5 @@ function u(e) {
     );
 }
 function c(e) {
-    return null != l()[e];
+    return null != o()[e];
 }

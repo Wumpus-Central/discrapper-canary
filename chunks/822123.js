@@ -24,8 +24,8 @@ n.d(t, {
 }),
     n(667532),
     n(321073);
-var i = n(64700),
-    r = n(735438),
+var i = n(582128),
+    r = n(435558),
     a = n(132500),
     s = n(17928),
     l = n(95561),
@@ -49,8 +49,8 @@ var i = n(64700),
     O = n(307731),
     R = n(698279),
     L = n(202541),
-    D = n(375708);
-let y = /-/g;
+    y = n(375708);
+let D = /-/g;
 function v(e) {
     switch (e) {
         case O.EmojiIntention.REACTION:
@@ -63,7 +63,7 @@ function v(e) {
 }
 function b(e) {
     let { intention: t, location: n } = e,
-        i = (0, a.A)().replace(y, "");
+        i = (0, a.A)().replace(D, "");
     u.Om.setAnalyticsId(i), l.Ay.trackWithMetadata(C.HAw.SEARCH_OPENED, { search_type: v(t), load_id: i, location: n });
 }
 function M(e) {
@@ -82,13 +82,13 @@ function P(e, t) {
         C = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
         R = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
         L = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
-        y = (0, m.ki)(L),
+        D = (0, m.ki)(L),
         v = (0, _.Ym)({ location: "useEmojiCategories" });
     return i.useMemo(() => {
         let i = C.getGroupedCustomEmoji(),
             s = h.Ay.getFlattenedGuildIds(),
             c = [],
-            _ = { type: N.s.SOUNDMOJI, name: D.intl.string(D.t.f0Ezmv), id: N.R2.SOUNDMOJI, isNitroLocked: !1 };
+            _ = { type: N.s.SOUNDMOJI, name: y.intl.string(y.t.f0Ezmv), id: N.R2.SOUNDMOJI, isNitroLocked: !1 };
         function E(i) {
             return T.Ay.getEmojiUnavailableReasons({ categoryEmojis: i, channel: t, guildId: n, intention: e });
         }
@@ -112,7 +112,7 @@ function P(e, t) {
                         (h = {
                             type: N.s.GUILD,
                             guild: e,
-                            isNitroLocked: !y && u && d === a.length,
+                            isNitroLocked: !D && u && d === a.length,
                             emojis: a,
                             emojisDisabled: s,
                             emojisHidden: _,
@@ -128,7 +128,7 @@ function P(e, t) {
                         t.push({
                             type: N.s.TOP_GUILD_EMOJI,
                             id: i,
-                            name: D.intl.formatToPlainString(D.t.W6Wi1X, { guildName: R }),
+                            name: y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: R }),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e,
@@ -141,7 +141,7 @@ function P(e, t) {
                         t.push({
                             type: N.s.RECENT,
                             id: i,
-                            name: D.intl.string(D.t["5TvaSm"]),
+                            name: y.intl.string(y.t["5TvaSm"]),
                             isNitroLocked: !1,
                             emojis: r,
                             emojisDisabled: n,
@@ -152,7 +152,7 @@ function P(e, t) {
                         t.push({
                             type: N.s.FAVORITES,
                             id: i,
-                            name: D.intl.string(D.t.y3LQCG),
+                            name: y.intl.string(y.t.y3LQCG),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e,
@@ -167,7 +167,7 @@ function P(e, t) {
                 v && r ? [_] : [],
             )
         );
-    }, [C, t, n, e, y, p, R, d, l, u, a, v, r]);
+    }, [C, t, n, e, D, p, R, d, l, u, a, v, r]);
 }
 function U() {
     return d.Ay.getCategories().map((e) => ({ type: N.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));
@@ -308,31 +308,31 @@ function j(e, t) {
 function W(e, t) {
     switch (e) {
         case N.R2.TOP_GUILD_EMOJI:
-            return D.intl.formatToPlainString(D.t.W6Wi1X, { guildName: t });
+            return y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: t });
         case N.R2.RECENT:
-            return D.intl.string(D.t["5TvaSm"]);
+            return y.intl.string(y.t["5TvaSm"]);
         case N.R2.FAVORITES:
-            return D.intl.string(D.t.y3LQCG);
+            return y.intl.string(y.t.y3LQCG);
         case N.R2.ACTIVITY:
-            return D.intl.string(D.t.O783tR);
+            return y.intl.string(y.t.O783tR);
         case N.R2.FLAGS:
-            return D.intl.string(D.t.vvaizu);
+            return y.intl.string(y.t.vvaizu);
         case N.R2.FOOD:
-            return D.intl.string(D.t.ldm9aY);
+            return y.intl.string(y.t.ldm9aY);
         case N.R2.NATURE:
-            return D.intl.string(D.t.egIBDH);
+            return y.intl.string(y.t.egIBDH);
         case N.R2.OBJECTS:
-            return D.intl.string(D.t.gWm7Mk);
+            return y.intl.string(y.t.gWm7Mk);
         case N.R2.PEOPLE:
-            return D.intl.string(D.t.GX594D);
+            return y.intl.string(y.t.GX594D);
         case N.R2.SYMBOLS:
-            return D.intl.string(D.t.QXMYAb);
+            return y.intl.string(y.t.QXMYAb);
         case N.R2.TRAVEL:
-            return D.intl.string(D.t.w33hIP);
+            return y.intl.string(y.t.w33hIP);
         case N.R2.PREMIUM_UPSELL:
-            return D.intl.string(D.t.pAF6xE);
+            return y.intl.string(y.t.pAF6xE);
         case N.R2.SOUNDMOJI:
-            return D.intl.string(D.t.f0Ezmv);
+            return y.intl.string(y.t.f0Ezmv);
         default:
             return t ?? e;
     }
@@ -415,9 +415,9 @@ function X(e, t, n) {
 function Q(e, t) {
     return e === O.EmojiIntention.REACTION
         ? t
-            ? D.intl.string(D.t["h7ES+n"])
-            : D.intl.string(D.t["6any2A"])
-        : D.intl.string(D.t.KgK5qg);
+            ? y.intl.string(y.t["h7ES+n"])
+            : y.intl.string(y.t["6any2A"])
+        : y.intl.string(y.t.KgK5qg);
 }
 (0, r.throttle)(
     (e) => {

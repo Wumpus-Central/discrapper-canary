@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { r: () => o });
-var i = n(64700),
+n.d(t, { r: () => l });
+var i = n(582128),
     r = n(17928),
-    s = n(696451),
-    a = n(780898);
-function o(e) {
+    a = n(696451),
+    s = n(780898);
+function l(e) {
     let { user: t, guildId: n } = e,
-        o = (0, r.bG)([s.Ay], () => (null != n && null != t ? s.Ay.getMember(n, t.id) : null));
+        l = (0, r.bG)([a.Ay], () => (null != n && null != t ? a.Ay.getMember(n, t.id) : null));
     return i.useMemo(() => {
-        if (null != t) return (0, a.WK)(o?.collectibles?.nameplate) ?? t.nameplate;
-    }, [o, t]);
+        if (null != t) return (0, s.WK)(l?.collectibles?.nameplate) ?? t.nameplate;
+    }, [l, t]);
 }

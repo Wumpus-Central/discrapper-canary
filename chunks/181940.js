@@ -1,25 +1,25 @@
-s.d(t, { A: () => c });
-var a = s(64700),
-    r = s(868652);
-function c(e, t) {
-    let [s, c] = a.useState(!1),
-        [n, u] = a.useState(void 0);
+s.d(t, { A: () => a });
+var r = s(582128),
+    u = s(868652);
+function a(e, t) {
+    let [s, a] = r.useState(!1),
+        [i, o] = r.useState(void 0);
     return {
         isLoading: s,
-        error: n,
-        onToggle: a.useCallback(
+        error: i,
+        onToggle: r.useCallback(
             (s) => {
                 if (null == t) return Promise.resolve();
-                let a = s ? r.Qh : r.pz;
+                let r = s ? u.Qh : u.pz;
                 return (
-                    c(!0),
-                    u(void 0),
-                    a(e, t.skuId)
+                    a(!0),
+                    o(void 0),
+                    r(e, t.skuId)
                         .catch((e) => {
-                            throw (u(e.body?.message ?? void 0), e);
+                            throw (o(e.body?.message ?? void 0), e);
                         })
                         .finally(() => {
-                            c(!1);
+                            a(!1);
                         })
                 );
             },

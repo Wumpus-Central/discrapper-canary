@@ -1,6 +1,6 @@
 t.d(n, { A: () => j });
-var l = t(627968);
-t(64700);
+var l = t(477900);
+t(582128);
 var i = t(17928),
     s = t(980707),
     a = t(477782),
@@ -17,36 +17,36 @@ var i = t(17928),
     p = t(834857),
     g = t(451556),
     x = t(74329),
-    I = t(956747),
-    f = t(470743),
+    f = t(956747),
+    I = t(470743),
     T = t(806931),
     v = t(652215),
     _ = t(375708);
 function j(e) {
-    let { onClose: n, onSelect: t, channel: j, remoteMode: N, onInteraction: O } = e,
+    let { onClose: n, onSelect: t, channel: j, remoteMode: N, onInteraction: b } = e,
         S = (0, c.Us)(),
-        { id: b, type: y } = j,
+        { id: O, type: y } = j,
         R = (0, i.bG)([d.A], () => d.A.getGuild(j.guild_id), [j.guild_id]),
-        L = (0, i.bG)([A.A], () => A.A.getSelectedParticipant(b)),
+        L = (0, i.bG)([A.A], () => A.A.getSelectedParticipant(O)),
         M = L?.type === T.lp.STREAM ? L.stream : null,
         D = (0, i.bG)([r.A], () => (L?.type === T.lp.ACTIVITY ? r.A.getApplication(L.applicationId) : void 0)),
-        P = (0, C.A)(b),
-        G = (0, I.A)(b),
+        P = (0, C.A)(O),
+        G = (0, f.A)(O),
         k = (0, p.A)(j, R, M?.ownerId, D?.id),
-        U = (0, m.A)(b),
-        V = (0, f.A)(),
-        B = (0, u.RQ)(b),
-        H = (0, u.dA)(b),
+        U = (0, m.A)(O),
+        V = (0, I.A)(),
+        B = (0, u.RQ)(O),
+        H = (0, u.dA)(O),
         w = (0, x.A)(M, S),
-        Y = (0, g.A)(D, b),
+        Y = (0, g.A)(D, O),
         K = (0, E.A)(),
         F = (0, o.A)(j),
-        X = (0, h.f)(b);
+        X = (0, h.f)(O);
     return (0, l.jsxs)(s.W, {
         "data-menu-migrated": !0,
         onClose: n,
         onSelect: t,
-        onInteraction: O,
+        onInteraction: b,
         navId: "more-settings-context",
         "aria-label": _.intl.string(_.t.FTLzdR),
         children: [

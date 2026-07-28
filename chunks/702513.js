@@ -1,6 +1,6 @@
 n.d(t, { A: () => Q });
-var s = n(627968),
-    l = n(64700),
+var s = n(477900),
+    l = n(582128),
     r = n(503698),
     a = n.n(r),
     i = n(17928),
@@ -8,7 +8,7 @@ var s = n(627968),
     o = n(815021),
     d = n(707554),
     h = n(163328),
-    u = n(534514),
+    u = n(297264),
     x = n(892547),
     g = n(576705),
     j = n(867455),
@@ -18,7 +18,7 @@ var s = n(627968),
     v = n(834730),
     N = n(303727),
     w = n(375708),
-    S = n(322264);
+    S = n(269312);
 function k(e) {
     let { channel: t, header: n, startThread: l } = e,
         r = (0, m.n)(t),
@@ -49,7 +49,7 @@ function k(e) {
     });
 }
 var p = n(707335),
-    C = n(351848);
+    C = n(733264);
 function b(e) {
     let { channel: t, threadIds: n, startThread: r, goToThread: i } = e,
         c = l.useCallback(
@@ -138,7 +138,7 @@ function z(e) {
 var R = n(747926),
     D = n(37411),
     O = n(652215),
-    B = n(702726);
+    B = n(897902);
 function Q(e) {
     let { channel: t, className: n, onClose: r, context: x } = e,
         f = (0, i.bG)([g.A], () => g.A.can(O.xBc.READ_MESSAGE_HISTORY, t)),

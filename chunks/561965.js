@@ -1,6 +1,6 @@
 l.d(t, { default: () => A }), l(321073);
-var n = l(627968),
-    r = l(64700),
+var n = l(477900),
+    r = l(582128),
     i = l(989349),
     a = l.n(i),
     s = l(691885),
@@ -25,7 +25,7 @@ var n = l(627968),
     x = l(768570),
     C = l(652215),
     b = l(375708),
-    v = l(858398);
+    v = l(574006);
 function W(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: o, handleRemoveDateFilter: u } = e,
         g = a()(),

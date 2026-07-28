@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { G9: () => l, GE: () => u, VO: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(402112);
-let a = {
+n.d(t, { G9: () => o, GE: () => d, VO: () => l });
+var i = n(477900),
+    r = n(582128),
+    a = n(59344);
+let s = {
         i18n: {
             CANCEL: "Cancel",
             BACK: "Back",
@@ -62,12 +62,12 @@ let a = {
         isMainWindowVisible: void 0,
         dynamicGraphicComponents: void 0,
     },
-    o = r.createContext(a);
-function l() {
-    let e = r.useContext(o);
-    return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
+    l = r.createContext(s);
+function o() {
+    let e = r.useContext(l);
+    return e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
-function u(e) {
+function d(e) {
     let { children: t, value: n } = e;
-    return (0, i.jsx)(o.Provider, { value: n, children: (0, i.jsx)(s.C, { locale: n.locale, children: t }) });
+    return (0, i.jsx)(l.Provider, { value: n, children: (0, i.jsx)(a.C, { locale: n.locale, children: t }) });
 }

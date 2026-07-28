@@ -1,6 +1,6 @@
 l.r(t), l.d(t, { default: () => tN });
-var n = l(627968),
-    i = l(64700),
+var n = l(477900),
+    i = l(582128),
     s = l(562708),
     r = l(17928),
     o = l(688810),
@@ -121,8 +121,8 @@ var B = l(645619),
     z = l(554146),
     $ = l(545445),
     J = l(939981),
-    X = l(381724),
-    H = l(396748),
+    X = l(914732),
+    H = l(469014),
     Q = l(868652);
 l(667532);
 let Z = { guildTagsBadgePacks: [K.tv, K.OJ, K.Ht, K.jF] },
@@ -830,20 +830,20 @@ function e1(e) {
             ],
         });
 }
-var e4 = l(97808),
-    e9 = l(778712),
+var e9 = l(97808),
+    e8 = l(778712),
     e3 = l(463930),
-    e6 = l(730134),
+    e4 = l(730134),
     e5 = l(63152),
-    e8 = l(319756),
-    e2 = l(854627),
+    e2 = l(319756),
+    e6 = l(854627),
     e7 = l(696451),
     te = l(317525),
     tt = l(287809),
     tl = l(562153),
     tn = l(19575),
     ti = l(174338);
-let ts = tn.Ay.getEnableHardwareAcceleration() ? e4.Js : e6.A;
+let ts = tn.Ay.getEnableHardwareAcceleration() ? e9.Js : e4.A;
 function tr(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
@@ -857,7 +857,7 @@ function tr(e) {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: f,
-        } = (0, e2.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
+        } = (0, e6.A)({ userId: s?.id, guildId: t, size: e8._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
@@ -888,13 +888,13 @@ function tr(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e8.V, {
+                      (0, n.jsx)(e2.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...f,
                               user: s,
                               src: p,
                               avatarDecoration: m,
-                              size: e9._3.SIZE_40,
+                              size: e8._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),

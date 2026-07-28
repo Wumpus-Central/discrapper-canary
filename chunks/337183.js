@@ -1,6 +1,6 @@
 n.d(t, { A: () => K });
-var s = n(627968),
-    l = n(64700),
+var s = n(477900),
+    l = n(582128),
     r = n(503698),
     a = n.n(r),
     i = n(172218),
@@ -8,8 +8,8 @@ var s = n(627968),
     u = n(651162),
     c = n(17928),
     d = n(812993),
-    g = n(297264),
-    E = n(834730),
+    E = n(297264),
+    g = n(834730),
     _ = n(821609),
     A = n(793574),
     S = n(688810),
@@ -79,12 +79,12 @@ let F = function (e) {
                 a.rankedSkuIds.every((e) => v.A.getProduct(e)?.variantGroupStoreListingId != null),
             [u, a.rankedSkuIds, c.length],
         ),
-        g = u || d;
+        E = u || d;
     switch (i) {
         case "feed":
-            return (0, s.jsx)(G, { heroBlockRecord: a, isLoading: g, products: c, tab: o });
+            return (0, s.jsx)(G, { heroBlockRecord: a, isLoading: E, products: c, tab: o });
         case "hscroll":
-            return (0, s.jsx)(D, { heroBlockRecord: a, isLoading: g, products: c, tab: o });
+            return (0, s.jsx)(D, { heroBlockRecord: a, isLoading: E, products: c, tab: o });
     }
 };
 var U = n(758836),
@@ -237,7 +237,7 @@ let V = {
                                                                         style: Y?.toDesktopStyles(),
                                                                     }),
                                                                 null != W.title &&
-                                                                    (0, s.jsx)(g.D, {
+                                                                    (0, s.jsx)(E.D, {
                                                                         variant: "heading-xxl/bold",
                                                                         className: H.DD,
                                                                         color: "text-strong",
@@ -245,7 +245,7 @@ let V = {
                                                                     }),
                                                                 null != W.summary &&
                                                                     "" !== W.summary &&
-                                                                    (0, s.jsx)(E.E, {
+                                                                    (0, s.jsx)(g.E, {
                                                                         variant: "text-md/normal",
                                                                         className: et ? H.h4 : H.Tm,
                                                                         style:

@@ -1,40 +1,40 @@
-n.d(t, { QR: () => C, b: () => m, oc: () => p });
-var l,
-    i = n(64700),
-    r = n(17928),
-    a = n(451988),
-    s = n(277984),
-    o = n(617710),
-    u = n(166532),
+n.d(t, { QR: () => h, b: () => C, oc: () => E });
+var r,
+    l = n(582128),
+    i = n(17928),
+    o = n(451988),
+    u = n(277984),
+    s = n(617710),
+    a = n(166532),
     c = n(566980),
     d = n(153084),
-    p =
-        (((l = {})[(l.PENDING = 1)] = "PENDING"),
-        (l[(l.ERROR = 2)] = "ERROR"),
-        (l[(l.NONE = 3)] = "NONE"),
-        (l[(l.CANCELLED = 4)] = "CANCELLED"),
-        l);
-function m(e, t, n, l) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        a = arguments.length > 5 ? arguments[5] : void 0,
-        s = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-    i.useEffect(() => {
-        s ||
+    E =
+        (((r = {})[(r.PENDING = 1)] = "PENDING"),
+        (r[(r.ERROR = 2)] = "ERROR"),
+        (r[(r.NONE = 3)] = "NONE"),
+        (r[(r.CANCELLED = 4)] = "CANCELLED"),
+        r);
+function C(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        o = arguments.length > 5 ? arguments[5] : void 0,
+        u = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+    l.useEffect(() => {
+        u ||
             null == e ||
-            (1 === t && e !== u.pn.AWAITING_AUTHENTICATION
-                ? n(u.pn.AWAITING_AUTHENTICATION)
-                : e === u.pn.AWAITING_AUTHENTICATION &&
+            (1 === t && e !== a.pn.AWAITING_AUTHENTICATION
+                ? n(a.pn.AWAITING_AUTHENTICATION)
+                : e === a.pn.AWAITING_AUTHENTICATION &&
                   (2 === t || 4 === t
-                      ? n(u.pn.REVIEW)
-                      : 3 === t && (r ? (null != a ? a() : n(u.pn.REVIEW)) : (l(c.h.COMPLETED), n(u.pn.CONFIRM)))));
-    }, [e, t, n, l, r, a, s]);
+                      ? n(a.pn.REVIEW)
+                      : 3 === t && (i ? (null != o ? o() : n(a.pn.REVIEW)) : (r(c.h.COMPLETED), n(a.pn.CONFIRM)))));
+    }, [e, t, n, r, i, o, u]);
 }
-function C(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, r.bG)([d.A], () => d.A.awaitingPaymentId),
-        l = (0, r.bG)([o.A], () => o.A.isConnected()),
-        u = i.useRef(new a.IX());
-    i.useEffect(() => {
-        t || l || null == n || 1 !== e ? u.current.stop() : u.current.start(5e3, () => (0, s.TK)(n));
-    }, [n, e, l, t]);
+        n = (0, i.bG)([d.A], () => d.A.awaitingPaymentId),
+        r = (0, i.bG)([s.A], () => s.A.isConnected()),
+        a = l.useRef(new o.IX());
+    l.useEffect(() => {
+        t || r || null == n || 1 !== e ? a.current.stop() : a.current.start(5e3, () => (0, u.TK)(n));
+    }, [n, e, r, t]);
 }

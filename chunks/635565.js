@@ -1,8 +1,8 @@
 n.d(t, { B: () => rr, T: () => rs }), n(321073);
 var l,
     i,
-    s = n(627968),
-    r = n(64700),
+    s = n(477900),
+    r = n(582128),
     a = n(435558),
     o = n.n(a),
     d = n(837381),
@@ -23,8 +23,8 @@ var l,
     I = n(534890),
     b = n(951001),
     G = n(820284),
-    R = n(913247),
-    v = n(639627),
+    R = n(629675),
+    v = n(263619),
     j = n(192308),
     y = n(66834),
     M = n(999903),
@@ -661,8 +661,8 @@ let e3 = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             ],
         });
     });
-var e6 = n(4798),
-    e7 = n(717421),
+var e7 = n(461376),
+    e6 = n(717421),
     e5 = n(442433),
     e4 = n(230135),
     e8 = n(228366);
@@ -712,7 +712,7 @@ let to = r.forwardRef((e, t) => {
         o = n >= l,
         d = Math.min((n / l) * 100, 100),
         c = `calc(${d}% - 4px)`,
-        [u, h] = (0, e7.z)(
+        [u, h] = (0, e6.z)(
             () => ({ width: n === i ? c : "calc(0% - 0px)", config: { tension: 250, damping: 5, mass: 1 } }),
             "respect-motion-settings",
             [n, i],
@@ -726,7 +726,7 @@ let to = r.forwardRef((e, t) => {
             className: ta.hQ,
             children: [
                 (0, s.jsx)("div", { className: ez()(ta.L$, a) }),
-                (0, s.jsx)(e6.animated.div, { className: ez()(ta.qB, { [ta.mu]: d <= 5 }), style: u }),
+                (0, s.jsx)(e7.animated.div, { className: ez()(ta.qB, { [ta.mu]: d <= 5 }), style: u }),
                 (0, s.jsxs)("div", {
                     className: ta.FS,
                     children: [
@@ -861,7 +861,7 @@ var tK = n(871123),
     tY = n(3026),
     tX = n(821609),
     tq = n(499373),
-    tJ = n(187322),
+    tJ = n(259678),
     tZ = n(847374),
     t$ = n(285796),
     tQ = n(914430),
@@ -870,10 +870,10 @@ var tK = n(871123),
     t2 = n(323932),
     t3 = n(551851),
     t9 = n(485596);
-function t6(e) {
+function t7(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t6(e) {
     let { label: t, onClick: n, tabIndex: l } = e;
     return (0, s.jsx)(ej.m, {
         text: t,
@@ -1009,11 +1009,11 @@ let t5 = el(
                                         ],
                                     }),
                                     (0, s.jsx)("div", {
-                                        onClick: t6,
+                                        onClick: t7,
                                         className: t9.Y_,
                                         children:
                                             null != _
-                                                ? (0, s.jsx)(t7, { label: _.label, onClick: _.perform, tabIndex: I })
+                                                ? (0, s.jsx)(t6, { label: _.label, onClick: _.perform, tabIndex: I })
                                                 : null,
                                     }),
                                 ],
@@ -1493,7 +1493,7 @@ let nk = Math.ceil(Math.sqrt(115200)),
                 i(e.contentRect.width);
             }, []),
             o = (0, nH.w)(a, [], { fireOnMount: !0 }),
-            [{ shineSpring: d }, c] = (0, e7.z)(() => ({
+            [{ shineSpring: d }, c] = (0, e6.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
@@ -1509,7 +1509,7 @@ let nk = Math.ceil(Math.sqrt(115200)),
             A = r.useMemo(
                 () =>
                     n(
-                        (0, s.jsx)(e6.animated.div, {
+                        (0, s.jsx)(e7.animated.div, {
                             className: nB.q,
                             style: {
                                 transform: d.to(
@@ -1727,12 +1727,12 @@ function n9(e) {
         })
     );
 }
-var n6 = n(855473);
-function n7(e) {
+var n7 = n(855473);
+function n6(e) {
     let { guild: t, selected: n } = e;
     return (0, s.jsx)(ef.G, {
         id: `home-tab-${t.id}`,
-        renderIcon: (e) => (0, s.jsx)(n6.Z, { size: "md", color: "currentColor", className: e }),
+        renderIcon: (e) => (0, s.jsx)(n7.Z, { size: "md", color: "currentColor", className: e }),
         text: eC.intl.string(eC.t.VbpLyU),
         selected: n,
         onClick: function () {
@@ -2305,8 +2305,8 @@ var lk = n(922016),
     l2 = n(287809),
     l3 = n(53516),
     l9 = n(914081),
-    l6 = (((l = {})[(l.VOICE = 0)] = "VOICE"), l);
-let l7 = function (e) {
+    l7 = (((l = {})[(l.VOICE = 0)] = "VOICE"), l);
+let l6 = function (e) {
     let { type: t, guildId: l, closePopout: i } = e,
         r = (0, ea.GV)(),
         a = (0, u.bG)([l1.A], () => l1.A.getCheck(l), [l]),
@@ -2636,8 +2636,8 @@ class i_ extends nj {
         let { channel: e } = this.props,
             { shouldShowGuildVerificationPopout: t } = this.state;
         if (t)
-            return (0, s.jsx)(l7, {
-                type: l6.VOICE,
+            return (0, s.jsx)(l6, {
+                type: l7.VOICE,
                 guildId: e.guild_id,
                 closePopout: this.closeGuildVerificationPopout,
             });
@@ -3197,18 +3197,18 @@ function i9(e) {
               ],
           });
 }
-var i6 = n(565449);
-function i7(e) {
+var i7 = n(565449);
+function i6(e) {
     let { channel: t, onAction: n } = e,
         l = (0, ia.Ay)(t),
         i = Array.from((0, ia.Rz)(l).values());
     return 0 === i.length
         ? null
         : (0, s.jsxs)(iz.Ip, {
-              className: i6.kL,
+              className: i7.kL,
               children: [
-                  (0, s.jsx)("div", { className: i6.oT, children: (0, s.jsx)(i9, { channel: t }) }),
-                  (0, s.jsx)("div", { className: i6.zN }),
+                  (0, s.jsx)("div", { className: i7.oT, children: (0, s.jsx)(i9, { channel: t }) }),
+                  (0, s.jsx)("div", { className: i7.zN }),
                   i.map((e, l) =>
                       (0, s.jsx)(
                           i1,
@@ -3268,7 +3268,7 @@ class i5 extends nj {
         return t.isModeratorReportChannel() || i
             ? null
             : null != l && l.length > 0 && r && !n
-              ? (0, s.jsx)(i7, { onAction: this.handleActivitiesPopoutClose, channel: t })
+              ? (0, s.jsx)(i6, { onAction: this.handleActivitiesPopoutClose, channel: t })
               : (0, s.jsx)(iF, { ...e, channel: this.props.channel });
     };
     componentWillUnmount() {
@@ -3825,7 +3825,7 @@ function sS(e) {
         c = (0, u.bG)([sn.A], () => sn.A.isFocused()),
         { mode: h, mentionCount: A, targetChannelId: m } = "bottom" === t ? o : d,
         g = h === sl.HIDDEN,
-        f = (0, e7.z)(
+        f = (0, e6.z)(
             {
                 to: { transform: g ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: sN,
@@ -3840,7 +3840,7 @@ function sS(e) {
         );
     return (0, s.jsx)("div", {
         className: ez()(sx.kL, { [sx.Mn]: "top" === t, [sx.sQ]: "bottom" === t }),
-        children: (0, s.jsx)(e6.animated.div, {
+        children: (0, s.jsx)(e7.animated.div, {
             className: sx.pK,
             style: f,
             "aria-hidden": g,
@@ -4119,8 +4119,8 @@ var sQ = n(290863),
     s2 = n(882840),
     s3 = n(208971),
     s9 = n(46054),
-    s6 = n(500216),
-    s7 = n(742715);
+    s7 = n(500216),
+    s6 = n(742715);
 function s5(e) {
     let { channel: t, connected: n, hovered: l, subtitle: i, onClick: a } = e,
         o = (0, s3.G)((0, s2.l)(t)),
@@ -4136,14 +4136,14 @@ function s5(e) {
         null == t.guild_id)
     )
         return null;
-    let m = ez()(s6.Ui, n && h ? s6.BI : null);
+    let m = ez()(s7.Ui, n && h ? s7.BI : null);
     return u
         ? (0, s.jsx)(ey.D, {
               className: m,
               onClick: h ? a : void 0,
               children: (0, s.jsx)(N.E, {
                   variant: "text-xs/medium",
-                  className: ez()(s6.qS, s7.PT),
+                  className: ez()(s7.qS, s6.PT),
                   children: (0, s.jsx)(tY.A, { children: s9.A.parseVoiceChannelStatus(o, !0, { channelId: t.id }) }),
               }),
           })
@@ -4154,10 +4154,10 @@ function s5(e) {
                 children: [
                     (0, s.jsx)(N.E, {
                         variant: "text-xs/medium",
-                        className: s6.qS,
+                        className: s7.qS,
                         children: eC.intl.string(eC.t.Mgpxiw),
                     }),
-                    (0, s.jsx)(sH.R, { color: "currentColor", className: s6.rD, size: "xxs" }),
+                    (0, s.jsx)(sH.R, { color: "currentColor", className: s7.rD, size: "xxs" }),
                 ],
             })
           : A
@@ -4296,7 +4296,7 @@ class s4 extends nj {
         let { channel: e } = this.props,
             { shouldShowGuildVerificationPopout: t } = this.state;
         return t
-            ? (0, s.jsx)(l7, { type: l6.VOICE, guildId: e.guild_id, closePopout: this.closeGuildVerificationPopout })
+            ? (0, s.jsx)(l6, { type: l7.VOICE, guildId: e.guild_id, closePopout: this.closeGuildVerificationPopout })
             : null;
     };
     renderOpenChatButton = () => {
@@ -4911,7 +4911,7 @@ class rl extends r.PureComponent {
                 case tW.n.GUILD_SPACE:
                     return (0, s.jsx)(eS, { guild: l, selected: a === e_.VV.GUILD_SPACE }, tW.n.GUILD_SPACE);
                 case tW.n.GUILD_HOME:
-                    return (0, s.jsx)(n7, { guild: l, selected: a === e_.VV.GUILD_HOME }, tW.n.GUILD_HOME);
+                    return (0, s.jsx)(n6, { guild: l, selected: a === e_.VV.GUILD_HOME }, tW.n.GUILD_HOME);
                 case tW.n.GUILD_SCHEDULED_EVENTS:
                     return (0, s.jsx)(
                         sy,

@@ -1,6 +1,6 @@
-n.d(t, { A: () => h });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => p });
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(745601),
     r = n(763827),
@@ -8,34 +8,34 @@ var i = n(627968),
     c = n(38050),
     d = n(998740),
     u = n(572808),
-    p = n(241080);
-let h = function () {
+    h = n(241080);
+let p = function () {
     let e = (0, a.bG)([r.A], () => r.A.getChannelId()),
         t = (0, a.bG)([d.A], () => null != e && d.A.isUserConnected(e)),
         n = (0, c.n)((e) => e.genre),
-        h = (0, c.n)((e) => e.songIndex),
+        p = (0, c.n)((e) => e.songIndex),
         m = (0, c.n)((e) => e.playRadio),
         A = (0, c.n)((e) => e.globalMute),
-        x = (0, c.n)((e) => e.playNextSong),
-        g = (0, c.n)((e) => e.volumes),
-        f = l.useRef(null),
+        f = (0, c.n)((e) => e.playNextSong),
+        x = (0, c.n)((e) => e.volumes),
+        g = l.useRef(null),
         C = l.useRef(null),
         y = l.useRef(null),
-        E = (0, p.A)(n, h),
-        N = (0, a.bG)([d.A], () => d.A.assets);
+        j = (0, h.A)(n, p),
+        v = (0, a.bG)([d.A], () => d.A.assets);
     return (l.useEffect(() => {
-        let e = f.current;
+        let e = g.current;
         null != e &&
-            E?.src != null &&
+            j?.src != null &&
             (e.pause(),
-            (e.src = E.src),
+            (e.src = j.src),
             !A &&
                 m &&
                 t &&
                 e.play()?.catch((e) => {
                     o.A.captureException(e);
                 }));
-    }, [E?.src, A, m, t]),
+    }, [j?.src, A, m, t]),
     l.useEffect(() => {
         let e = C.current,
             n = y.current;
@@ -56,20 +56,20 @@ let h = function () {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(s.A, {
-                      ref: f,
-                      onEnded: x,
-                      volume: A ? 0 : g.radio,
-                      children: (0, i.jsx)("source", { src: E?.src }),
+                      ref: g,
+                      onEnded: f,
+                      volume: A ? 0 : x.radio,
+                      children: (0, i.jsx)("source", { src: j?.src }),
                   }),
                   (0, i.jsx)(s.A, {
                       ref: C,
-                      volume: A ? 0 : g.environment,
-                      children: (0, i.jsx)("source", { src: N?.sounds?.[u.qi.ENVIRONMENT] }),
+                      volume: A ? 0 : x.environment,
+                      children: (0, i.jsx)("source", { src: v?.sounds?.[u.qi.ENVIRONMENT] }),
                   }),
                   (0, i.jsx)(s.A, {
                       ref: y,
-                      volume: A ? 0 : g.campfire,
-                      children: (0, i.jsx)("source", { src: N?.sounds?.[u.qi.CAMPFIRE] }),
+                      volume: A ? 0 : x.campfire,
+                      children: (0, i.jsx)("source", { src: v?.sounds?.[u.qi.CAMPFIRE] }),
                   }),
               ],
           })

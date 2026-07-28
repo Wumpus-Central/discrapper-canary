@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { D: () => c });
-var i = n(64700),
+var i = n(582128),
     r = n(66455),
     a = n(710778),
     s = n(621466),
@@ -25,11 +25,11 @@ function c(e) {
             children: S,
             targetElementRef: N,
             asContainer: C = !1,
-            containerTag: R = "span",
-            ariaHidden: O = !1,
+            containerTag: O = "span",
+            ariaHidden: R = !1,
             ...L
         } = e,
-        D =
+        y =
             ((c = i.useRef(null)),
             {
                 triggerRef: i.useCallback(
@@ -40,7 +40,7 @@ function c(e) {
                 ),
                 targetElementRef: c,
             }),
-        y = i.useId(),
+        D = i.useId(),
         { isVisible: v, triggerProps: b } = (function (e) {
             let {
                     targetElementRef: t,
@@ -93,13 +93,13 @@ function c(e) {
                 C = i.useCallback(() => {
                     _ && N();
                 }, [N, _]),
-                R = i.useCallback(
+                O = i.useCallback(
                     (e) => {
                         null == h.current && (h.current = e.currentTarget), (T.current = !1), S();
                     },
                     [S, h],
                 ),
-                O = i.useCallback(
+                R = i.useCallback(
                     (e) => {
                         E && (null == h.current && (h.current = e.currentTarget), (T.current = !1), S());
                     },
@@ -108,9 +108,9 @@ function c(e) {
                 L = i.useCallback(() => {
                     p.current?.stop(), N();
                 }, [N]),
-                D = i.useMemo(
-                    () => ({ onMouseEnter: R, onMouseLeave: L, onFocus: O, onBlur: N, onContextMenu: N, onClick: C }),
-                    [R, L, O, N, C],
+                y = i.useMemo(
+                    () => ({ onMouseEnter: O, onMouseLeave: L, onFocus: R, onBlur: N, onContextMenu: N, onClick: C }),
+                    [O, L, R, N, C],
                 );
             return (
                 i.useEffect(() => {
@@ -139,13 +139,13 @@ function c(e) {
                         }
                     );
                 }, [g, N, h]),
-                { isVisible: g, triggerProps: D }
+                { isVisible: g, triggerProps: y }
             );
-        })({ targetElementRef: D.targetElementRef, ...L }),
-        M = O ? void 0 : y,
+        })({ targetElementRef: y.targetElementRef, ...L }),
+        M = R ? void 0 : D,
         P =
             ((t = i.isValidElement(S) ? S : d),
-            (n = D.triggerRef),
+            (n = y.triggerRef),
             (u = i.useCallback(
                 (e) => {
                     null == e ? n(null) : "function" == typeof e.getBoundingClientRect && n(e);
@@ -222,6 +222,6 @@ function c(e) {
                       }),
                   };
             return (0, a.EE)({ tag: l, children: t, triggerHandlers: o, triggerRef: i });
-        })(C, S, b, D.triggerRef, y, O, R);
-    return { tooltipId: y, isVisible: v, targetElementRef: D.targetElementRef, trigger: U ?? P, describedById: M };
+        })(C, S, b, y.triggerRef, D, R, O);
+    return { tooltipId: D, isVisible: v, targetElementRef: y.targetElementRef, trigger: U ?? P, describedById: M };
 }

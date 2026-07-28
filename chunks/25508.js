@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { A: () => np }), n(321073);
 var i,
-    r = n(627968),
-    a = n(64700),
+    r = n(477900),
+    a = n(582128),
     s = n(503698),
     l = n.n(s),
     o = n(284009),
@@ -35,7 +35,7 @@ var i,
     w = n(821609),
     G = n(652215),
     x = n(834730),
-    k = n(133171),
+    k = n(935154),
     F = n(243721),
     V = n(315710),
     B = n(404778),
@@ -497,9 +497,9 @@ var e0 = n(95701),
     e1 = n(616356),
     e2 = n(280450),
     e3 = n(734057),
-    e6 = n(184989),
-    e4 = n(71393),
-    e5 = n(186295),
+    e4 = n(184989),
+    e6 = n(71393),
+    e5 = n(293246),
     e7 = n(576705),
     e8 = n(290863),
     e9 = n(994500),
@@ -961,8 +961,8 @@ function t1(e) {
 }
 var t2 = n(532624),
     t3 = n(350535),
-    t6 = n(16590),
-    t4 = n(412126);
+    t4 = n(16590),
+    t6 = n(412126);
 function t5(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
         a = (0, _.bG)([t2.Ay], () => t2.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
@@ -980,11 +980,11 @@ function t5(e) {
               ? (0, r.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
-                    className: t4.En,
+                    className: t6.En,
                     tag: "div",
-                    children: z.intl.format(t6.default.ESZwQX, {
+                    children: z.intl.format(t4.default.ESZwQX, {
                         keybind: s,
-                        keybindHook: () => (0, r.jsx)(tJ.e, { shortcut: s, className: t4.oH, keyClassName: t4.Bj }),
+                        keybindHook: () => (0, r.jsx)(tJ.e, { shortcut: s, className: t6.oH, keyClassName: t6.Bj }),
                     }),
                 })
               : null
@@ -1508,11 +1508,11 @@ let np = (0, N.A)(function (e) {
         p = (0, _.bG)([te.Ay, e3.A], () => e3.A.getChannel(te.Ay.getVoiceChannelId())),
         T = (0, _.bG)([L.Ay], () => L.Ay.getConnectedActivityChannelId()),
         m = (0, _.bG)([e3.A], () => e3.A.getChannel(T)),
-        g = (0, _.bG)([e4.A], () => e4.A.getGuild(m?.guild_id)),
+        g = (0, _.bG)([e6.A], () => e6.A.getGuild(m?.guild_id)),
         [S, N] = (0, _.yK)([e1.A], () => [e1.A.getCurrentUserActiveStream(), e1.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
         R = (0, _.bG)([eD.A], () => eD.A.getConnectedFrame()),
-        y = (0, _.bG)([e4.A, e7.A], () => null == p || eH.vz(p, e4.A, e7.A, !1)),
+        y = (0, _.bG)([e6.A, e7.A], () => null == p || eH.vz(p, e6.A, e7.A, !1)),
         [b] = (0, eu.A)([
             (function () {
                 if (null != N && null != N.id) return N.id;
@@ -1563,7 +1563,7 @@ let np = (0, N.A)(function (e) {
             let e = A?.id ?? I?.id;
             return null != e ? nr[e] : void 0;
         }, [A?.id, I?.id]),
-        en = (0, _.bG)([e6.A], () => null != et && e6.A.isMember(et), [et]),
+        en = (0, _.bG)([e4.A], () => null != et && e4.A.isMember(et), [et]),
         ei = h && null != et && !en && (null != A || f) ? et : void 0,
         ea = null != A && (P || K) && (!x || N?.pid != null),
         [el, eo] = (function (e) {

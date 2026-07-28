@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { a: () => o });
-var i = n(627968);
-n(64700);
+n.d(t, { a: () => l });
+var i = n(477900);
+n(582128);
 var r = n(503698),
-    s = n.n(r),
-    a = n(489857);
-let o = (e) => {
+    a = n.n(r),
+    s = n(390825);
+let l = (e) => {
     let {
         left: t,
         top: n = 0,
         right: r = 0,
-        bottom: o,
-        size: l = 8,
-        alert: u = !1,
+        bottom: l,
+        size: o = 8,
+        alert: d = !1,
         showBlurpleTreatment: c = !1,
-        maskColor: d = 2,
+        maskColor: u = 2,
         additionalStyles: _,
     } = e;
     return (0, i.jsx)("span", {
-        className: s()(a.Om, {
-            [a.xE]: u,
-            [a.nB]: c,
-            [a.GS]: 0 === d,
-            [a.Pn]: 1 === d,
-            [a.HP]: 2 === d,
-            [a.gl]: 3 === d,
+        className: a()(s.Om, {
+            [s.xE]: d,
+            [s.nB]: c,
+            [s.GS]: 0 === u,
+            [s.Pn]: 1 === u,
+            [s.HP]: 2 === u,
+            [s.gl]: 3 === u,
             [_ ?? ""]: void 0 !== _,
         }),
-        style: { height: l, width: l, left: t, top: n, right: r, bottom: o },
+        style: { height: o, width: o, left: t, top: n, right: r, bottom: l },
     });
 };

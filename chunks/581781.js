@@ -1,14 +1,14 @@
 l.d(s, { A: () => m });
-var t = l(627968),
-    a = l(64700),
+var t = l(477900),
+    a = l(582128),
     d = l(503698),
     i = l.n(d),
-    c = l(990078),
+    c = l(866665),
     n = l(834730),
     r = l(145497),
     u = l(534400),
     o = l(743981),
-    h = l(446542);
+    h = l(991670);
 function m(e) {
     let { className: s, guildTag: l, guildBadge: d, guildId: m, guildName: x, guildIcon: g, guildIconSize: f } = e,
         p = a.useRef(null),

@@ -1,29 +1,29 @@
-n.d(t, { f: () => d });
-var i = n(64700),
+n.d(t, { f: () => c });
+var i = n(582128),
     l = n(435582),
     s = n(283488),
-    r = n(735991),
-    a = n(486020),
+    a = n(735991),
+    r = n(486020),
     o = n(572211);
-function d(e) {
+function c(e) {
     let { bot: t } = e,
-        n = (0, r.Ag)(e),
-        { url: d } = (0, s.A)({ applicationId: n ? e.id : void 0, size: 600, names: ["embedded_cover"] });
+        n = (0, a.Ag)(e),
+        { url: c } = (0, s.A)({ applicationId: n ? e.id : void 0, size: 600, names: ["embedded_cover"] });
     return i.useMemo(() => {
         let i,
             s,
-            c = o.u.BOT;
+            d = o.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            (i = (0, a.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
-                (0, a.VI)(e) && null == d && (s = (0, a.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 }));
+            (i = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
+                (0, r.VI)(e) && null == c && (s = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 }));
         }
         if (n) {
-            let t = (0, r.Cx)(e);
-            null != d && ((i = d), (c = o.u.ACTIVITY));
+            let t = (0, a.Cx)(e);
+            null != c && ((i = c), (d = o.u.ACTIVITY));
             let n = t?.activity_preview_video_asset_id;
-            null != n && ((s = (0, l.A)(e.id, n)), (c = o.u.ACTIVITY));
+            null != n && ((s = (0, l.A)(e.id, n)), (d = o.u.ACTIVITY));
         }
-        return { staticBannerSrc: i, videoBannerSrc: s, bannerAspectRatio: c };
-    }, [d, t, n, e]);
+        return { staticBannerSrc: i, videoBannerSrc: s, bannerAspectRatio: d };
+    }, [c, t, n, e]);
 }

@@ -1,8 +1,8 @@
 i.d(a, { default: () => o });
-var n = i(627968),
-    l = i(64700),
+var n = i(477900),
+    l = i(582128),
     r = i(189213),
-    s = i(315240),
+    s = i(430795),
     e = i(375708);
 function o(t) {
     let { onClose: a, onBeforeDelete: i, onAfterDelete: o, clips: c, ...d } = t,

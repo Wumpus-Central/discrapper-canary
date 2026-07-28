@@ -1,22 +1,22 @@
-i.d(e, { V: () => h });
-var n = i(627968),
-    r = i(64700),
-    l = i(772707),
-    a = i(17928),
-    s = i(775602),
-    o = i(524246),
-    u = i(816252),
-    c = i(916974),
-    d = i(788868),
-    m = i(375708),
-    f = i(476791),
-    g = i(303930),
-    p = i(977544);
+n.d(e, { V: () => h });
+var i = n(477900),
+    r = n(582128),
+    l = n(772707),
+    a = n(17928),
+    s = n(775602),
+    o = n(524246),
+    u = n(816252),
+    c = n(916974),
+    d = n(202541),
+    m = n(375708),
+    f = n(299183),
+    g = n(303930),
+    p = n(977544);
 let h = () => {
     let {
             transitionState: t,
             onClose: e,
-            premiumType: i,
+            premiumType: n,
             confettiCanvas: h,
             churnUserDiscountOffer: x,
             discountedPrice: P,
@@ -31,24 +31,24 @@ let h = () => {
         null === x)
     )
         return null;
-    let D = i === d.PremiumTypes.TIER_2;
-    return (0, n.jsxs)("div", {
+    let D = n === d.PremiumTypes.TIER_2;
+    return (0, i.jsxs)("div", {
         ref: C,
         children: [
-            (0, n.jsx)(l.k, {
+            (0, i.jsx)(l.k, {
                 graphic: { type: "image", src: D ? p.A : g },
                 gradientColor: D ? "nitro-pink" : "nitro-green",
                 transitionState: t,
                 title: m.intl.string(m.t.PZSyRk),
                 onClose: async () => e(),
-                children: (0, n.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: f.TA,
-                    children: (0, n.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: x }),
+                    children: (0, i.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: x }),
                 }),
             }),
             !v &&
                 y &&
-                (0, n.jsx)(o.A, { confettiTarget: C.current, confettiCanvas: h, confettiVelocityMultiplier: 0.75 }),
+                (0, i.jsx)(o.A, { confettiTarget: C.current, confettiCanvas: h, confettiVelocityMultiplier: 0.75 }),
         ],
     });
 };

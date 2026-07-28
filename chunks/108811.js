@@ -1,18 +1,18 @@
 s.d(t, { A: () => o });
-var i = s(627968);
-s(64700);
+var i = s(477900);
+s(582128);
 var l = s(821609),
-    a = s(534514),
-    n = s(834730),
+    n = s(297264),
+    a = s(834730),
     r = s(691885),
-    c = s(256096);
+    c = s(926296);
 function o(e) {
-    let { heading: t, subtitle: s, methodSelect: o, ctaButton: d, children: m } = e;
+    let { heading: t, subtitle: s, methodSelect: o, ctaButton: d, children: u } = e;
     return (0, i.jsxs)("div", {
         className: c.kL,
         children: [
-            (0, i.jsx)(a.D, { variant: "heading-xl/semibold", color: "text-strong", className: c.DD, children: t }),
-            (0, i.jsx)(n.E, { variant: "text-sm/medium", color: "text-subtle", className: c.VA, children: s }),
+            (0, i.jsx)(n.D, { variant: "heading-xl/semibold", color: "text-strong", className: c.DD, children: t }),
+            (0, i.jsx)(a.E, { variant: "text-sm/medium", color: "text-subtle", className: c.VA, children: s }),
             null != o &&
                 o.length > 0 &&
                 o.map(
@@ -39,7 +39,7 @@ function o(e) {
                             e.label,
                         ),
                 ),
-            m,
+            u,
             null != d &&
                 (0, i.jsx)("div", {
                     className: c.WJ,

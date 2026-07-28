@@ -1,75 +1,75 @@
 "use strict";
-n.d(t, { Ay: () => _, E0: () => f, Vr: () => p, c5: () => c, eI: () => h });
-var i = n(64700),
+n.d(t, { Ay: () => _, E0: () => A, Vr: () => h, c5: () => c, eI: () => E });
+var i = n(582128),
     r = n(485845),
-    s = n(155718),
-    a = n(734057),
-    o = n(577700),
-    l = n(264322),
-    u = n(210978);
+    a = n(155718),
+    s = n(734057),
+    l = n(577700),
+    o = n(264322),
+    d = n(210978);
 let c = "no primary app command for application",
-    d = [s.kc.PRIMARY_ENTRY_POINT];
+    u = [a.kc.PRIMARY_ENTRY_POINT];
 async function _(e, t) {
     let n,
-        i = a.A.getChannel(e);
+        i = s.A.getChannel(e);
     if (
         (null != i &&
-            null == (n = h({ channel: i, type: "channel" }, t)) &&
-            (await (0, l.Zn)({ type: "application", applicationId: t }), (n = h({ channel: i, type: "channel" }, t))),
+            null == (n = E({ channel: i, type: "channel" }, t)) &&
+            (await (0, o.Zn)({ type: "application", applicationId: t }), (n = E({ channel: i, type: "channel" }, t))),
         null != n)
     )
         return n;
     throw Error(c);
 }
-function h(e, t) {
-    return l.Ay.query(
+function E(e, t) {
+    return o.Ay.query(
         e,
-        { commandTypes: [s.kc.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [a.kc.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: u.M.COMMAND_ONLY,
+            scoreMethod: d.M.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0,
         },
     ).commands[0];
 }
-function f(e, t) {
+function A(e, t) {
     var n, r;
-    let { commands: s, loading: a } =
+    let { commands: a, loading: s } =
             ((n = e),
             (r = t),
-            (0, l.ZA)(
+            (0, o.ZA)(
                 n,
-                { commandTypes: d },
+                { commandTypes: u },
                 {
                     placeholderCount: 1,
-                    scoreMethod: u.M.COMMAND_ONLY,
+                    scoreMethod: d.M.COMMAND_ONLY,
                     applicationId: r,
                     allowFetch: !1,
                     allowApplicationState: !0,
                 },
             )),
-        c = s[0],
+        c = a[0],
         _ = null != c;
     return (
         i.useEffect(() => {
-            _ || a || (0, o.$)({ type: "application", applicationId: t });
-        }, [t, _, a]),
+            _ || s || (0, l.$)({ type: "application", applicationId: t });
+        }, [t, _, s]),
         c
     );
 }
-function p(e) {
+function h(e) {
     let { context: t, applicationId: n, botUserId: i } = e,
-        a = f(t, n);
+        s = A(t, n);
     return (
-        null != a &&
+        null != s &&
         null != i &&
         (function (e) {
             if (null == e) return !1;
             let t = null != e.integration_types && e.integration_types.includes(r.b.USER_INSTALL),
-                n = null != e.contexts && e.contexts.includes(s.OL.BOT_DM);
+                n = null != e.contexts && e.contexts.includes(a.OL.BOT_DM);
             return t && n;
-        })(a)
+        })(s)
     );
 }

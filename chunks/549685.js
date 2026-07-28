@@ -1,6 +1,6 @@
 e.d(V, { A: () => s });
-var i = e(627968);
-e(64700);
+var i = e(477900);
+e(582128);
 var d = e(953727);
 function s(H) {
     let { width: V = 24, height: e = 24, color: s = "currentColor", foreground: l, ...r } = H;

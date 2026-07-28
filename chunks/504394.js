@@ -1,232 +1,232 @@
-t.d(l, { A: () => H, M: () => B }), t(938796);
-var n = t(627968),
-    i = t(64700),
-    a = t(503698),
-    s = t.n(a),
+t.d(l, { A: () => Q, M: () => K }), t(938796);
+var n = t(477900),
+    i = t(582128),
+    s = t(503698),
+    a = t.n(s),
     r = t(821418),
     u = t(665260),
     c = t(17928),
-    d = t(778712),
-    o = t(834730),
-    m = t(331322),
+    o = t(778712),
+    m = t(834730),
+    d = t(331322),
     g = t(854378),
     x = t(47167),
     h = t(573435),
     j = t(769015),
     p = t(714991),
-    A = t(625903),
+    _ = t(625903),
     f = t(292666),
     v = t(539895),
-    N = t(844330),
-    _ = t(885386),
-    E = t(750994),
-    y = t(174459),
-    S = t(960736),
-    b = t(652215),
+    A = t(844330),
+    E = t(885386),
+    N = t(750994),
+    S = t(174459),
+    y = t(960736),
+    T = t(652215),
     C = t(375708),
-    L = t(353442);
-function T() {
-    return (0, n.jsx)("div", { className: L.m });
+    b = t(319514);
+function k() {
+    return (0, n.jsx)("div", { className: b.m });
 }
-function R(e) {
+function F(e) {
     let { label: l, children: t } = e;
-    return (0, n.jsxs)(m.B, {
+    return (0, n.jsxs)(d.B, {
         direction: "vertical",
         gap: 4,
-        children: [(0, n.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: l }), t],
+        children: [(0, n.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: l }), t],
     });
 }
-function k(e) {
+function I(e) {
     let { label: l, checked: t, onChange: i } = e;
-    return (0, n.jsxs)(m.B, {
+    return (0, n.jsxs)(d.B, {
         direction: "horizontal",
         justify: "space-between",
         align: "center",
         children: [
-            (0, n.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: l }),
-            (0, n.jsx)(E.Ay, { value: t, onChange: i, title: "" }),
+            (0, n.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: l }),
+            (0, n.jsx)(N.Ay, { value: t, onChange: i, title: "" }),
         ],
     });
 }
-function I() {
-    let e = _.tz.useSetting(),
+function P() {
+    let e = E.tz.useSetting(),
         {
             nickname: l,
             dmsAllowed: t,
-            showActivity: a,
-            setNickname: s,
+            showActivity: s,
+            setNickname: a,
             setDmsAllowed: r,
             setShowActivity: u,
             guildId: c,
-            inviteCode: d,
-        } = (0, S.lD)(),
-        o = v.A.getProps().invite?.is_nickname_changeable,
-        m = i.useCallback(() => {
-            y.default.track(b.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, { guild_id: c, invite_code: d });
-        }, [c, d]);
-    return (0, n.jsxs)(N.A, {
-        icon: (0, n.jsx)(A.Z, { size: "refresh_sm" }),
+            inviteCode: o,
+        } = (0, y.lD)(),
+        m = v.A.getProps().invite?.is_nickname_changeable,
+        d = i.useCallback(() => {
+            S.default.track(T.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, { guild_id: c, invite_code: o });
+        }, [c, o]);
+    return (0, n.jsxs)(A.A, {
+        icon: (0, n.jsx)(_.Z, { size: "refresh_sm" }),
         title: C.intl.string(C.t["A5wHQ/"]),
         subtitle: C.intl.string(C.t.UKCSEd),
-        onOpen: m,
-        maxHeight: o ? 220 : 130,
+        onOpen: d,
+        maxHeight: m ? 220 : 130,
         children: [
-            o &&
+            m &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(R, {
+                        (0, n.jsx)(F, {
                             label: C.intl.string(C.t.me1lRk),
                             children: (0, n.jsx)(f.k, {
                                 placeholder: C.intl.string(C.t["09Q8yp"]),
-                                maxLength: b.d0r,
+                                maxLength: T.d0r,
                                 value: l,
-                                onChange: s,
+                                onChange: a,
                             }),
                         }),
-                        (0, n.jsx)(T, {}),
+                        (0, n.jsx)(k, {}),
                     ],
                 }),
-            (0, n.jsx)(k, { label: C.intl.string(C.t["/2ed37"]), checked: t, onChange: r }),
-            (0, n.jsx)(T, {}),
-            e && (0, n.jsx)(k, { label: C.intl.string(C.t.bN4m1G), checked: a, onChange: u }),
+            (0, n.jsx)(I, { label: C.intl.string(C.t["/2ed37"]), checked: t, onChange: r }),
+            (0, n.jsx)(k, {}),
+            e && (0, n.jsx)(I, { label: C.intl.string(C.t.bN4m1G), checked: s, onChange: u }),
         ],
     });
 }
 var z = t(897288),
-    F = t(395671),
-    P = t(95701),
-    D = t(889227),
-    M = t(287809),
-    G = t(860689),
-    w = t(427262),
-    O = t(330936),
-    U = t(172799),
-    Q = t(493263);
-function B() {
+    D = t(395671),
+    L = t(95701),
+    R = t(889227),
+    w = t(287809),
+    M = t(860689),
+    U = t(427262),
+    $ = t(330936),
+    B = t(172799),
+    G = t(833303);
+function K() {
     return (0, n.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsx)(g.eu, { src: null, size: d._3.DEPRECATED_SIZE_100, className: Q.my }),
+            (0, n.jsx)(g.eu, { src: null, size: o._3.DEPRECATED_SIZE_100, className: G.my }),
             (0, n.jsx)(g.tK, { children: C.intl.string(C.t["3rE1P8"]) }),
-            (0, n.jsx)(g.hE, { className: Q.RG, children: C.intl.string(C.t.ZTNur7) }),
+            (0, n.jsx)(g.hE, { className: G.RG, children: C.intl.string(C.t.ZTNur7) }),
         ],
     });
 }
-function $(e) {
-    let { guild: l, user: t, application: i, compact: a } = e;
+function O(e) {
+    let { guild: l, user: t, application: i, compact: s } = e;
     return null != i
-        ? (0, n.jsx)(j.A, { className: Q.Z2, game: i, size: Q.q6 })
+        ? (0, n.jsx)(j.A, { className: G.Z2, game: i, size: G.q6 })
         : null != t
           ? (0, n.jsx)(g.eu, {
                 src: null != t ? t.getAvatarURL(void 0, 80) : null,
-                size: d._3.SIZE_80,
-                className: a ? void 0 : Q.my,
+                size: o._3.SIZE_80,
+                className: s ? void 0 : G.my,
             })
           : null != l
             ? (0, n.jsx)(h.Ay, {
                   mask: h.Ay.Masks.SQUIRCLE,
                   width: 64,
                   height: 64,
-                  className: Q.$f,
+                  className: G.$f,
                   children: (0, n.jsx)(g.$v, { guild: l, size: g.$v.Sizes.LARGER, animate: !0 }),
               })
             : null;
 }
-let H = function (e) {
+let Q = function (e) {
     let l,
         t,
         i,
         {
-            invite: a,
+            invite: s,
             disableUser: h = !1,
             error: j,
-            flatActivityCount: A = !1,
+            flatActivityCount: _ = !1,
             isRegister: f = !1,
             inUnclaimedFlow: v = !1,
-            showInvitedByHeader: N = !0,
-            className: _,
+            showInvitedByHeader: A = !0,
+            className: E,
         } = e,
-        { currentUser: E } = (0, c.cf)([M.default], () => ({ currentUser: M.default.getCurrentUser() })),
-        y = null != a && null != a.channel ? (0, P.OY)(a.channel) : null,
-        S = (0, x.Ay)(y);
-    if (null == a) return null;
-    let L = null != a.guild ? (G.fh(a.guild) ? a.guild : G.DY(a.guild)) : null,
-        T = null != a.target_application ? new F.Ay(a.target_application) : null,
-        R = h || null == a.inviter ? null : new D.A(a.inviter),
-        k =
+        { currentUser: N } = (0, c.cf)([w.default], () => ({ currentUser: w.default.getCurrentUser() })),
+        S = null != s && null != s.channel ? (0, L.OY)(s.channel) : null,
+        y = (0, x.Ay)(S);
+    if (null == s) return null;
+    let b = null != s.guild ? (M.fh(s.guild) ? s.guild : M.DY(s.guild)) : null,
+        k = null != s.target_application ? new D.Ay(s.target_application) : null,
+        F = h || null == s.inviter ? null : new R.A(s.inviter),
+        I =
             !(
-                (null != a.approximate_member_count && a.approximate_member_count > 100) ||
-                (null != L && L.features.has(b.GuildFeatures.COMMUNITY))
-            ) && null != R,
-        B = null,
-        H = (0, u.Lt)(a.flags ?? 0, r.Q.IS_GUEST_INVITE),
-        K = !1;
-    if (null != L)
-        N &&
-            ((B =
-                null == R
+                (null != s.approximate_member_count && s.approximate_member_count > 100) ||
+                (null != b && b.features.has(T.GuildFeatures.COMMUNITY))
+            ) && null != F,
+        K = null,
+        Q = (0, u.Lt)(s.flags ?? 0, r.Q.IS_GUEST_INVITE),
+        Z = !1;
+    if (null != b)
+        A &&
+            ((K =
+                null == F
                     ? C.intl.string(C.t["3rE1P8"])
-                    : C.intl.formatToPlainString(C.t["5u47va"], { username: w.Ay.getFormattedName(R) })),
-            a.target_type === U.yV.STREAM &&
-                null != a.target_user &&
-                (B = C.intl.formatToPlainString(C.t.x2L32Q, { username: w.Ay.getFormattedName(a.target_user) })),
-            a.target_type === U.yV.EMBEDDED_APPLICATION &&
-                null != a.target_application &&
-                (B =
-                    null != R
-                        ? C.intl.formatToPlainString(C.t.UW1Cav, { username: w.Ay.getFormattedName(R) })
+                    : C.intl.formatToPlainString(C.t["5u47va"], { username: U.Ay.getFormattedName(F) })),
+            s.target_type === B.yV.STREAM &&
+                null != s.target_user &&
+                (K = C.intl.formatToPlainString(C.t.x2L32Q, { username: U.Ay.getFormattedName(s.target_user) })),
+            s.target_type === B.yV.EMBEDDED_APPLICATION &&
+                null != s.target_application &&
+                (K =
+                    null != F
+                        ? C.intl.formatToPlainString(C.t.UW1Cav, { username: U.Ay.getFormattedName(F) })
                         : C.intl.string(C.t.ENSuN3))),
-            k && null == T && (l = (0, n.jsx)(g.$v, { className: Q.Kk, guild: L, size: g.$v.Sizes.SMALL })),
-            (t = L.name),
-            null != T &&
-                ((t = T.name),
+            I && null == k && (l = (0, n.jsx)(g.$v, { className: G.Kk, guild: b, size: g.$v.Sizes.SMALL })),
+            (t = b.name),
+            null != k &&
+                ((t = k.name),
                 (i = (0, n.jsxs)("div", {
                     children: [
-                        (0, n.jsx)(g.tK, { className: Q.R9, children: C.intl.string(C.t["3gg9fF"]) }),
+                        (0, n.jsx)(g.tK, { className: G.R9, children: C.intl.string(C.t["3gg9fF"]) }),
                         (0, n.jsxs)("div", {
-                            className: Q.bo,
+                            className: G.bo,
                             children: [
-                                (0, n.jsx)(g.$v, { guild: L, size: g.$v.Sizes.SMALL }),
-                                (0, n.jsx)(o.E, {
+                                (0, n.jsx)(g.$v, { guild: b, size: g.$v.Sizes.SMALL }),
+                                (0, n.jsx)(m.E, {
                                     tag: "span",
                                     variant: "text-lg/normal",
                                     color: "text-strong",
-                                    className: Q.Al,
-                                    children: L.name,
+                                    className: G.Al,
+                                    children: b.name,
                                 }),
                             ],
                         }),
                     ],
                 })));
-    else if (null != y) {
-        if (null == R) throw Error("no inviter in group DM invite");
-        let e = w.Ay.getFormattedName(R);
-        null != S && "" !== S
-            ? ((B = C.intl.formatToPlainString(C.t["5u47va"], { username: e })),
-              (t = S),
-              null != y.icon && (l = (0, n.jsx)(g.F4, { channel: y, size: d._3.SIZE_32 })))
-            : ((B = C.intl.string(C.t.OsdY8B)), (t = e));
-    } else if (null != R) {
-        let e = w.Ay.getFormattedName(R, !0);
+    else if (null != S) {
+        if (null == F) throw Error("no inviter in group DM invite");
+        let e = U.Ay.getFormattedName(F);
+        null != y && "" !== y
+            ? ((K = C.intl.formatToPlainString(C.t["5u47va"], { username: e })),
+              (t = y),
+              null != S.icon && (l = (0, n.jsx)(g.F4, { channel: S, size: o._3.SIZE_32 })))
+            : ((K = C.intl.string(C.t.OsdY8B)), (t = e));
+    } else if (null != F) {
+        let e = U.Ay.getFormattedName(F, !0);
         (t = C.intl.formatToPlainString(C.t["4aF92R"], { username: e })),
-            (K = !0),
+            (Z = !0),
             (i =
                 null != j
                     ? null
                     : (0, n.jsx)(g.tK, {
-                          className: Q.b$,
+                          className: G.b$,
                           children: f
                               ? C.intl.format(C.t["6r4JiR"], { username: e })
                               : C.intl.format(C.t.Quj7HX, { username: e }),
                       }));
     }
-    return (0, n.jsxs)(m.B, {
+    return (0, n.jsxs)(d.B, {
         direction: "vertical",
         gap: 8,
-        className: s()(Q.kL, _),
+        className: a()(G.kL, E),
         justify: "center",
         align: "center",
         children: [
-            (0, n.jsx)($, { application: T, guild: L, user: k ? R : null, compact: K }),
+            (0, n.jsx)(O, { application: k, guild: b, user: I ? F : null, compact: Z }),
             null != j
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
@@ -236,12 +236,12 @@ let H = function (e) {
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          null != B ? (0, n.jsx)(g.tK, { children: B }) : null,
+                          null != K ? (0, n.jsx)(g.tK, { children: K }) : null,
                           (0, n.jsxs)(g.hE, {
-                              className: Q.DD,
+                              className: G.DD,
                               children: [
-                                  null != L
-                                      ? (0, n.jsx)(p.A, { guild: L, className: Q.n2, tooltipPosition: "left" })
+                                  null != b
+                                      ? (0, n.jsx)(p.A, { guild: b, className: G.n2, tooltipPosition: "left" })
                                       : null,
                                   l,
                                   t,
@@ -250,24 +250,24 @@ let H = function (e) {
                       ],
                   }),
             i,
-            (0, n.jsxs)(m.B, {
+            (0, n.jsxs)(d.B, {
                 direction: "vertical",
                 gap: 24,
                 children: [
-                    (0, n.jsx)(m.B, {
+                    (0, n.jsx)(d.B, {
                         direction: "vertical",
                         gap: 4,
                         children:
-                            null != T || K || a?.guild?.id === O.TA
+                            null != k || Z || s?.guild?.id === $.TA
                                 ? null
                                 : (0, n.jsx)(g.R1, {
-                                      online: a.approximate_presence_count,
-                                      total: a.approximate_member_count,
-                                      flat: A,
+                                      online: s.approximate_presence_count,
+                                      total: s.approximate_member_count,
+                                      flat: _,
                                   }),
                     }),
-                    (0, n.jsx)(z.A, { guild: L, roles: a.roles, className: Q.Ei }),
-                    v || H || null == E ? (0, n.jsx)(g.xt, { user: E }) : (0, n.jsx)(I, {}),
+                    (0, n.jsx)(z.A, { guild: b, roles: s.roles, className: G.Ei }),
+                    v || Q || null == N ? (0, n.jsx)(g.xt, { user: N }) : (0, n.jsx)(P, {}),
                 ],
             }),
         ],

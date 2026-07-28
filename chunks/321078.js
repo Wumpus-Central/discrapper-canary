@@ -1,27 +1,27 @@
-n.d(i, { A: () => o });
-var t = n(64700),
-    l = n(201718),
-    r = n(534952);
-function o(e) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { includeHidden: n = !1 } = i,
-        { isLoading: o, data: u } = (0, l.P)(e);
+d.d(t, { A: () => s });
+var a = d(582128),
+    c = d(201718),
+    n = d(534952);
+function s(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { includeHidden: d = !1 } = t,
+        { isLoading: s, data: o } = (0, c.P)(e);
     return {
-        isLoading: o,
-        filteredAppIdentities: t.useMemo(
+        isLoading: s,
+        filteredAppIdentities: a.useMemo(
             () =>
-                (u ?? []).filter(
+                (o ?? []).filter(
                     (e) =>
-                        r.JW.some(
-                            (i) =>
-                                i.applicationId === e.application_id &&
-                                i.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),
+                        n.JW.some(
+                            (t) =>
+                                t.applicationId === e.application_id &&
+                                t.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),
                         ) &&
                         null != e.profile &&
                         null != e.profile.username &&
-                        (!0 === e.profile.connection_visible || n),
+                        (!0 === e.profile.connection_visible || d),
                 ),
-            [u, n],
+            [o, d],
         ),
     };
 }

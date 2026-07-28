@@ -1,7 +1,7 @@
 n.d(t, { A: () => m });
-var o = n(627968),
-    l = n(64700),
-    a = n(877624),
+var o = n(477900),
+    a = n(582128),
+    l = n(877624),
     r = n(338854),
     i = n(43105),
     d = n(59318),
@@ -12,13 +12,13 @@ var o = n(627968),
     b = n(49999);
 function m(e) {
     let { children: t, targetElementRef: n, dismissPopover: m } = e,
-        f = (0, s.c)(a.C.PREMIUM_TAB_POPOVER),
+        f = (0, s.c)(l.C.PREMIUM_TAB_POPOVER),
         _ =
             null != f && "premiumTabPopover" === f.properties.properties.oneofKind
                 ? f.properties.properties.premiumTabPopover
                 : null,
         A = (0, p.T)(_?.asset),
-        T = l.useMemo(() => null != A && (0, d.r1)(A), [A]);
+        T = a.useMemo(() => null != A && (0, d.r1)(A), [A]);
     if (null == _) return t;
     let { icon: g } = (0, u.x)({ buttonAction: _.button?.buttonAction });
     function I() {

@@ -1,31 +1,31 @@
-t.d(l, { D: () => c, r: () => o });
-var s = t(627968),
-    n = t(64700),
-    i = t(818348);
-let a = n.createContext(null),
-    r = { registerManageWidgetButtonRef: () => i.tE, manageFocusOnReorder: i.tE, getManageButtonForWidget: () => null };
+n.d(t, { D: () => d, r: () => o });
+var i = n(477900),
+    l = n(582128),
+    s = n(818348);
+let a = l.createContext(null),
+    r = { registerManageWidgetButtonRef: () => s.tE, manageFocusOnReorder: s.tE, getManageButtonForWidget: () => null };
 function o() {
-    return n.useContext(a) ?? r;
+    return l.useContext(a) ?? r;
 }
-function c(e) {
-    let { children: l } = e,
-        t = n.useRef(new Map()),
-        i = n.useCallback(
-            (e) => (l) => {
-                null != l ? t.current.set(e, l) : t.current.delete(e);
+function d(e) {
+    let { children: t } = e,
+        n = l.useRef(new Map()),
+        s = l.useCallback(
+            (e) => (t) => {
+                null != t ? n.current.set(e, t) : n.current.delete(e);
             },
             [],
         ),
-        r = n.useCallback((e) => {
+        r = l.useCallback((e) => {
             requestAnimationFrame(() => {
-                let l = t.current.get(e);
-                l?.focus();
+                let t = n.current.get(e);
+                t?.focus();
             });
         }, []),
-        o = n.useCallback((e) => t.current.get(e) ?? null, []),
-        c = n.useMemo(
-            () => ({ registerManageWidgetButtonRef: i, manageFocusOnReorder: r, getManageButtonForWidget: o }),
-            [i, r, o],
+        o = l.useCallback((e) => n.current.get(e) ?? null, []),
+        d = l.useMemo(
+            () => ({ registerManageWidgetButtonRef: s, manageFocusOnReorder: r, getManageButtonForWidget: o }),
+            [s, r, o],
         );
-    return (0, s.jsx)(a.Provider, { value: c, children: l });
+    return (0, i.jsx)(a.Provider, { value: d, children: t });
 }

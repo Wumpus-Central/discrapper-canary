@@ -1,6 +1,6 @@
 t.d(n, { h: () => o });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(416696),
     a = t(204651),
     r = t(375708);
@@ -26,9 +26,9 @@ function o(e) {
         : o
           ? r.intl.string(r.t.fjBNo1)
           : r.intl.string(r.t.uQn9B8);
-    let { Component: g, events: x, play: I } = (0, s.c)(c ? "disable" : "enable");
+    let { Component: g, events: x, play: f } = (0, s.c)(c ? "disable" : "enable");
     return (
-        i.useEffect(() => () => I(), [c, I]),
+        i.useEffect(() => () => f(), [c, f]),
         (0, l.jsx)(p, {
             buttonRef: C,
             isTrayButton: !0,

@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { e: () => l });
-var i = n(627968);
-n(64700);
+n.d(t, { e: () => o });
+var i = n(477900);
+n(582128);
 var r = n(671325),
-    s = n(594639),
-    a = n(105596);
-let o = {
+    a = n(502377),
+    s = n(799226);
+let l = {
     Base: { EntryTrigger: "trigger", ExitTrigger: "trigger", PosX: "number", PosY: "number" },
     "Nitro Illustration \u2014 Spaceship": {},
     "Nitro Illustration \u2014 Lightning": {},
@@ -16,19 +16,19 @@ let o = {
     "Nitro Illustration \u2014 Key": {},
     "Nitro Illustration \u2014 Star": {},
 };
-function l(e) {
-    let { artboard: t = "Base", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, a.CE)(r.A),
-        d = (0, a.m2)(r.A);
-    return u === a.BW.Loading
+function o(e) {
+    let { artboard: t = "Base", stateMachine: n, ...o } = e,
+        { status: d, buffer: c } = (0, s.CE)(r.A),
+        u = (0, s.m2)(r.A);
+    return d === s.BW.Loading
         ? null
-        : (0, i.jsx)(s.w, {
-              ...(d ? { key: "override" } : {}),
+        : (0, i.jsx)(a.w, {
+              ...(u ? { key: "override" } : {}),
               buffer: c,
               artboard: t,
               stateMachine: n,
-              artboardProperties: o,
-              ...l,
+              artboardProperties: l,
+              ...o,
           });
 }
-l.riveSrc = r.A;
+o.riveSrc = r.A;

@@ -1,8 +1,8 @@
 n.d(t, { A: () => N }), n(321073);
-var i = n(64700),
+var i = n(582128),
     l = n(284009),
     s = n.n(l),
-    a = n(735438),
+    a = n(435558),
     r = n.n(a),
     o = n(17928),
     c = n(282956),
@@ -14,11 +14,11 @@ var i = n(64700),
     x = n(576705),
     A = n(287809),
     p = n(403362),
-    b = n(803378),
-    f = n(200662),
+    f = n(803378),
+    b = n(200662),
     j = n(652215);
 function N(e, t, n) {
-    let l = (0, o.bG)([b.A], () => b.A.getApplicationPermissions()),
+    let l = (0, o.bG)([f.A], () => f.A.getApplicationPermissions()),
         a = i.useMemo(() => {
             var t;
             let n, i, s, a;
@@ -26,18 +26,18 @@ function N(e, t, n) {
                 (t = e),
                 (n = { ...(l ?? {}) }),
                 (i = (0, u.Ap)(t)),
-                (s = (0, f.Eu)(i, d.RA.CHANNEL)),
-                (a = (0, f.Eu)(t, d.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: d.RA.ROLE }),
+                (s = (0, b.Eu)(i, d.RA.CHANNEL)),
+                (a = (0, b.Eu)(t, d.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: d.RA.ROLE }),
                 s in n || (n[s] = { id: i, permission: !0, type: d.RA.CHANNEL }),
                 n
             );
         }, [l, e]),
-        N = (0, o.bG)([b.A], () => {
+        N = (0, o.bG)([f.A], () => {
             if (null == n) return;
-            let e = b.A.getCommand(n);
+            let e = f.A.getCommand(n);
             return e?.permissions ?? {};
         }, [n]),
-        E = (0, o.bG)([b.A], () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions), [n]),
+        E = (0, o.bG)([f.A], () => (null == n ? f.A.getEditedApplication() : f.A.getEditedCommand()?.permissions), [n]),
         C = n ?? t,
         v = null != n ? N : a,
         T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
@@ -59,8 +59,8 @@ function N(e, t, n) {
                 let r = a === n.ownerId,
                     {
                         channelIds: c,
-                        roleIds: b,
-                        userIds: f,
+                        roleIds: f,
+                        userIds: b,
                     } = i.useMemo(() => {
                         let e = [],
                             n = [],
@@ -96,23 +96,23 @@ function N(e, t, n) {
                         [g.A],
                         () =>
                             Object.fromEntries(
-                                b
+                                f
                                     .map((t) => g.A.getRole(e, t))
                                     .filter(p.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [b, e],
+                        [f, e],
                     ),
                     C = (0, o.cf)(
                         [A.default],
                         () =>
                             Object.fromEntries(
-                                f
+                                b
                                     .map(A.default.getUser)
                                     .filter(p.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [f],
+                        [b],
                     );
                 return i.useMemo(() => {
                     let e = n.id,

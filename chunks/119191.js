@@ -1,6 +1,6 @@
 i.d(e, { sI: () => p });
-var n = i(627968);
-i(64700);
+var n = i(477900);
+i(582128);
 var l = i(17928),
     a = i(834730),
     r = i(952818),
@@ -10,7 +10,7 @@ var l = i(17928),
     c = i(766075),
     d = i(22802),
     A = i(375708),
-    f = i(566935);
+    f = i(699356);
 function p(t, e) {
     let {
         highlightAdminWarningIfElevated: i,
@@ -31,14 +31,14 @@ function y(t) {
             message: i,
             highlightAdminWarningIfElevated: p = !1,
             useFlexboxLayout: y = !1,
-            keybindClassName: m,
+            keybindClassName: g,
         } = t,
-        g = (0, l.bG)([r.Ay], () => {
+        m = (0, l.bG)([r.Ay], () => {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
         I = (0, o.NP)();
-    return g
+    return m
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
               color: p ? "text-feedback-warning" : "text-muted",
@@ -55,7 +55,7 @@ function y(t) {
                 className: f.FH,
                 children: A.intl.format(i, {
                     keybind: e,
-                    keybindHook: (t) => (0, n.jsx)(d.G, { keybind: e, className: m }, e.join("+")),
+                    keybindHook: (t) => (0, n.jsx)(d.G, { keybind: e, className: g }, e.join("+")),
                 }),
             })
           : (0, n.jsx)(n.Fragment, {

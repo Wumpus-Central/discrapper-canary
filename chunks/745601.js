@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { A: () => s });
-var i = n(627968),
-    r = n(64700);
-let s = r.forwardRef(function (e, t) {
+n.d(t, { A: () => a });
+var i = n(477900),
+    r = n(582128);
+let a = r.forwardRef(function (e, t) {
     let n,
-        s,
-        { muted: a, volume: o, playing: l, playbackRate: u, ...c } = e,
-        [d, _] =
+        a,
+        { muted: s, volume: l, playing: o, playbackRate: d, ...c } = e,
+        [u, _] =
             ((n = r.useRef(null)),
-            (s = r.useCallback(
+            (a = r.useCallback(
                 (e) => {
                     null != t && ("function" == typeof t ? t(e) : (t.current = e), (n.current = e));
                 },
                 [t],
             )),
-            [n, s]);
+            [n, a]);
     return (
         r.useEffect(() => {
-            let e = d.current;
-            null == e || (void 0 !== a && (e.muted = a));
-        }, [d, a]),
+            let e = u.current;
+            null == e || (void 0 !== s && (e.muted = s));
+        }, [u, s]),
         r.useEffect(() => {
-            let e = d.current;
-            null == e || (void 0 !== o && (e.volume = o));
-        }, [d, o]),
+            let e = u.current;
+            null == e || (void 0 !== l && (e.volume = l));
+        }, [u, l]),
         r.useEffect(() => {
-            let e = d.current;
-            null == e || (null != u && (e.playbackRate = u));
-        }, [d, u]),
+            let e = u.current;
+            null == e || (null != d && (e.playbackRate = d));
+        }, [u, d]),
         r.useEffect(() => {
-            let e = d.current;
-            null == e || (void 0 !== l && (l ? e.play() : e.pause()));
-        }, [d, l]),
+            let e = u.current;
+            null == e || (void 0 !== o && (o ? e.play() : e.pause()));
+        }, [u, o]),
         (0, i.jsx)("audio", { ref: _, ...c })
     );
 });

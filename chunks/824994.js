@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { W: () => o });
-var i = n(64700),
+n.d(t, { W: () => l });
+var i = n(582128),
     r = n(17928),
-    s = n(775602),
-    a = n(871162);
-function o(e) {
-    let t = (0, r.bG)([s.Ay], () => s.Ay.displayNameStylesEnabled),
-        n = (0, i.useContext)(a.l);
+    a = n(775602),
+    s = n(871162);
+function l(e) {
+    let t = (0, r.bG)([a.Ay], () => a.Ay.displayNameStylesEnabled),
+        n = (0, i.useContext)(s.l);
     return t || n.overrideSettings;
 }

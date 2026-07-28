@@ -1,6 +1,6 @@
 l.d(i, { A: () => s, h: () => L });
-var e = l(627968);
-l(64700);
+var e = l(477900);
+l(582128);
 var t = l(953727);
 function L(C) {
     let { width: i = 24, height: l = 24, color: L = "currentColor", ...s } = C;

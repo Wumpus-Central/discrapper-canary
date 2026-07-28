@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { default: () => D });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(834730),
@@ -108,7 +108,7 @@ var G = n(278416),
     M = n(459192),
     P = n(866665),
     w = n(262427),
-    B = n(500524);
+    B = n(986820);
 function U(e) {
     let { className: t, Icon: n = G.g, iconSize: l = "xxs", gradientColor: s = "green", text: u, tooltip: d, ...o } = e;
     function c() {
@@ -128,7 +128,7 @@ function U(e) {
           : c();
 }
 var W = n(652215),
-    q = n(499362);
+    q = n(953834);
 function D(e) {
     let {
             className: t,

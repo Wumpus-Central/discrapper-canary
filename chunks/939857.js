@@ -1,19 +1,19 @@
 "use strict";
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(935462),
-    l = n(243926);
-let u = { SMALL: l.PG, MEDIUM: l.$g, LARGE: l.Pu };
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(935462),
+    o = n(282110);
+let d = { SMALL: o.PG, MEDIUM: o.$g, LARGE: o.Pu };
 class c extends r.PureComponent {
-    static Header = o.rQ;
-    static Footer = o.jl;
-    static Content = o.$m;
-    static ListContent = o.Dc;
-    static CloseButton = o.s_;
-    static Sizes = u;
-    static defaultProps = { fullscreenOnMobile: !0, size: u.SMALL, tag: "div" };
+    static Header = l.rQ;
+    static Footer = l.jl;
+    static Content = l.$m;
+    static ListContent = l.Dc;
+    static CloseButton = l.s_;
+    static Sizes = d;
+    static defaultProps = { fullscreenOnMobile: !0, size: d.SMALL, tag: "div" };
     _scroller = null;
     constructor(e) {
         super(e), (this.state = { hideSeparator: !1 });
@@ -40,20 +40,20 @@ class c extends r.PureComponent {
         let { hideSeparator: e } = this.state;
         return r.Children.map(this.props.children, (t) =>
             r.isValidElement(t)
-                ? t.type === o.$m || t.type === o.Dc
+                ? t.type === l.$m || t.type === l.Dc
                     ? r.cloneElement(t, {
                           scrollerRef: this.setRef,
                           onScroll: this.handleScroll,
                           onResize: this.handleScroll,
                       })
-                    : t.type === o.rQ && e
+                    : t.type === l.rQ && e
                       ? r.cloneElement(t, { separator: !1 })
                       : t
                 : t,
         );
     }
     render() {
-        let { className: e, children: t, tag: n, size: r, fullscreenOnMobile: s, ...o } = this.props;
-        return (0, i.jsx)(n, { className: a()(l.yl, e, r, { [l.z]: s }), ...o, children: this.renderChildren() });
+        let { className: e, children: t, tag: n, size: r, fullscreenOnMobile: a, ...l } = this.props;
+        return (0, i.jsx)(n, { className: s()(o.yl, e, r, { [o.z]: a }), ...l, children: this.renderChildren() });
     }
 }

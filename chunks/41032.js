@@ -1,14 +1,14 @@
-n.d(i, { z: () => l });
-var s = n(627968);
-n(64700);
-var e = n(20742),
+n.d(e, { z: () => i });
+var r = n(477900);
+n(582128);
+var l = n(20742),
     a = n(486318);
-function l(t) {
-    let { sku: i, title: n, reward: l } = t;
-    return (0, s.jsx)(e.rQ, {
+function i(t) {
+    let { sku: e, title: n, reward: i } = t;
+    return (0, r.jsx)(l.rQ, {
         alignCenter: !0,
         title: n,
         gradientColor: "purple",
-        graphic: (0, a.N)(i, { reward: l }),
+        graphic: (0, a.N)(e, { reward: i }),
     });
 }

@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { G: () => o });
-var i = n(64700),
+n.d(t, { G: () => l });
+var i = n(582128),
     r = n(561392),
-    s = n(716263),
-    a = n(844222);
-function o() {
-    let { reducedMotion: e } = i.useContext(a.C),
+    a = n(499957),
+    s = n(844222);
+function l() {
+    let { reducedMotion: e } = i.useContext(s.C),
         {
             isOpen: t,
             setIsOpen: n,
-            refs: o,
-            floatingStyles: l,
-            getReferenceProps: u,
+            refs: l,
+            floatingStyles: o,
+            getReferenceProps: d,
             getFloatingProps: c,
-            context: d,
+            context: u,
         } = (0, r.u)({ placement: "bottom", matchReferenceWidth: !0, transform: e.enabled }),
-        { styles: _ } = (0, s.DL)(d, {
+        { styles: _ } = (0, a.DL)(u, {
             common: { transformOrigin: "top center" },
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
@@ -23,9 +23,9 @@ function o() {
     return {
         isOpen: t,
         setIsOpen: n,
-        refs: o,
-        floatingStyles: l,
-        getReferenceProps: u,
+        refs: l,
+        floatingStyles: o,
+        getReferenceProps: d,
         getFloatingProps: c,
         transitionStyles: e.enabled ? {} : _,
     };

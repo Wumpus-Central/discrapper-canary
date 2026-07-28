@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { IDLE_TIMEOUT: () => ez, default: () => e$ });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(284009),
@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(562708),
     d = n(17928),
     u = n(554146),
-    p = n(451988),
-    h = n(408278),
+    h = n(451988),
+    p = n(408278),
     m = n(825860),
     A = n(43990),
     f = n(691540),
@@ -62,8 +62,8 @@ var i = n(627968),
     ec = n(622770),
     ed = n(423562),
     eu = n(520006),
-    ep = n(128286),
-    eh = n(619344),
+    eh = n(128286),
+    ep = n(619344),
     em = n(821747),
     eA = n(125248),
     ef = n(616356),
@@ -115,8 +115,8 @@ function eK(e) {
         } = e,
         c = (0, es.Bx)(),
         u = (0, d.bG)([k.A], () => (l?.type === eG.lp.ACTIVITY ? k.A.getApplication(l.applicationId) : void 0)),
-        p = t === eB.DUB.NO_CHAT ? ec.A.Directions.UP : ec.A.Directions.DOWN,
-        h = [eB.DUB.FULL_SCREEN, eB.DUB.NO_CHAT].includes(t);
+        h = t === eB.DUB.NO_CHAT ? ec.A.Directions.UP : ec.A.Directions.DOWN,
+        p = [eB.DUB.FULL_SCREEN, eB.DUB.NO_CHAT].includes(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             s && c < es.vs.NO_INVITE
@@ -135,11 +135,11 @@ function eK(e) {
                       align: V.A.Align.CENTER,
                       grow: 0,
                       children: (0, i.jsx)(ec.A, {
-                          label: h ? eH.intl.string(eH.t.kkKapG) : eH.intl.string(eH.t["5MstTl"]),
-                          direction: p,
+                          label: p ? eH.intl.string(eH.t.kkKapG) : eH.intl.string(eH.t["5MstTl"]),
+                          direction: h,
                           className: eF.jZ,
                           onClick: () => {
-                              (0, ek.X)(w.A.VOICE_CONTROL_TRAY, ek.O.CHAT, h), r();
+                              (0, ek.X)(w.A.VOICE_CONTROL_TRAY, ek.O.CHAT, p), r();
                           },
                       }),
                   })
@@ -153,7 +153,7 @@ class eX extends l.PureComponent {
     _callContainerRef = l.createRef();
     _channelChatRef = l.createRef();
     _contentRef = l.createRef();
-    _videoBackgroundTooltipTimeout = new p.Ep();
+    _videoBackgroundTooltipTimeout = new h.Ep();
     _lastIdleProps = null;
     state = { resizedHeight: et.Ay.callHeaderHeight };
     getRootNode() {
@@ -352,8 +352,8 @@ class eX extends l.PureComponent {
                                         n.e("93190"),
                                         n.e("91763"),
                                         n.e("8757"),
-                                        n.e("85968"),
                                         n.e("38730"),
+                                        n.e("85968"),
                                         n.e("89673"),
                                         n.e("29787"),
                                         n.e("82073"),
@@ -361,18 +361,18 @@ class eX extends l.PureComponent {
                                         n.e("91994"),
                                         n.e("76665"),
                                         n.e("76273"),
-                                        n.e("34971"),
+                                        n.e("47502"),
                                         n.e("45996"),
                                         n.e("23427"),
                                         n.e("29422"),
                                         n.e("7059"),
                                         n.e("72883"),
-                                        n.e("42339"),
                                         n.e("21106"),
-                                        n.e("43746"),
+                                        n.e("80740"),
+                                        n.e("90434"),
                                         n.e("98199"),
                                         n.e("17244"),
-                                        n.e("41175"),
+                                        n.e("64464"),
                                         n.e("39778"),
                                     ]).then(n.bind(n, 385913));
                                     return (n) =>
@@ -588,7 +588,7 @@ class eX extends l.PureComponent {
                       })
                     : null,
                 o
-                    ? (0, i.jsx)(eh.A, {
+                    ? (0, i.jsx)(ep.A, {
                           className: eF.iq,
                           popoutWindowAlwaysOnTop: t,
                           onToggleStayOnTop: this.handleStayOnTop,
@@ -596,14 +596,14 @@ class eX extends l.PureComponent {
                     : null,
                 s &&
                     a &&
-                    (0, i.jsx)(h.K, {
+                    (0, i.jsx)(p.K, {
                         variant: "icon-only",
                         "aria-label": "Haven",
                         icon: m.Y,
                         onClick: this.handleHaven,
                     }),
                 c
-                    ? (0, i.jsx)(ep.A, {
+                    ? (0, i.jsx)(eh.A, {
                           themeable: d,
                           popoutOpen: this.popoutOpen,
                           className: eF.iq,
@@ -678,8 +678,8 @@ class eX extends l.PureComponent {
                 filteredParticipants: c,
                 participantsVersion: d,
                 channel: u,
-                guild: p,
-                layout: h,
+                guild: h,
+                layout: p,
                 forceShowControls: m,
                 awaitingRemoteSessionInfo: A,
                 currentChannelActivities: f,
@@ -687,8 +687,8 @@ class eX extends l.PureComponent {
                 guildRoomVisible: g,
                 isPlacingNote: C,
             } = this.props,
-            y = h === eB.DUB.MINIMUM,
-            j = y || h === eB.DUB.NORMAL,
+            y = p === eB.DUB.MINIMUM,
+            j = y || p === eB.DUB.NORMAL,
             v = l && s === eB._Of.VIDEO,
             E = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
@@ -701,12 +701,12 @@ class eX extends l.PureComponent {
                       inCall: l,
                       channel: u,
                       hasConnectPermission: a,
-                      guild: p,
+                      guild: h,
                       participants: o,
                       filteredParticipants: c,
                       participantsVersion: d,
                       selectedParticipant: v ? n : null,
-                      layout: h,
+                      layout: p,
                       idle: e.idle,
                       mode: s,
                       onSelectParticipant: this.handleSelectParticipant,
@@ -744,20 +744,20 @@ class eX extends l.PureComponent {
                 inCall: d,
             } = this.props,
             { resizedHeight: u } = this.state,
-            p = l === eB._Of.VIDEO,
-            h = e !== eB.DUB.HAVEN && e !== eB.DUB.NO_CHAT && e !== eB.DUB.FULL_SCREEN && null != c,
+            h = l === eB._Of.VIDEO,
+            p = e !== eB.DUB.HAVEN && e !== eB.DUB.NO_CHAT && e !== eB.DUB.FULL_SCREEN && null != c,
             m = eB.NJ8.MIDNIGHT;
         return (0, i.jsxs)("div", {
             className: s()(eF.iE, eW[e], eY[r], {
                 [eF.XW]: this.popoutOpen && !this.inPopout && e !== eB.DUB.NO_CHAT && t.isPrivate(),
-                [eF.Ki]: p,
+                [eF.Ki]: h,
                 [eF.vc]: a,
-                [eF.ty]: h,
+                [eF.ty]: p,
             }),
             ref: (e) => {
                 (this._wrapperRef.current = e), (this.props.wrapperRef.current = e);
             },
-            style: h && null != u ? { minHeight: 230, maxHeight: c, height: u } : void 0,
+            style: p && null != u ? { minHeight: 230, maxHeight: c, height: u } : void 0,
             children: [
                 (0, i.jsx)(A.N, {
                     theme: m,
@@ -770,7 +770,7 @@ class eX extends l.PureComponent {
                             children: (0, i.jsx)(el.Ay, { timeout: ez, children: (e) => this.renderContent(e) }),
                         }),
                 }),
-                h &&
+                p &&
                     (0, i.jsx)(eD.A, {
                         minHeight: 230,
                         maxHeight: c,
@@ -795,7 +795,7 @@ class eX extends l.PureComponent {
 let e$ = function (e) {
     let { channel: t, renderExternalHeader: n, maxHeight: a, canPopout: s = !0, popoutType: r } = e,
         { width: o = 0, ref: c } = (0, b.Ay)(),
-        { width: p = 0, height: h = 0, ref: m } = (0, b.Ay)(),
+        { width: h = 0, height: p = 0, ref: m } = (0, b.Ay)(),
         { ref: A } = (0, b.Ay)(),
         y = (0, Z.Us)(),
         j = (0, H.A)(),
@@ -873,8 +873,8 @@ let e$ = function (e) {
         { analyticsLocations: ec } = (0, D.Ay)(w.A.CHANNEL_CALL),
         ed = L.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: eu } = $.s.useConfig({ location: "ChannelCall" }),
-        { enabled: ep } = Y.A.useExperiment({ guildId: t.guild_id, location: "ChannelCall" }),
-        eh = (0, d.bG)([W.A], () => W.A.isVisible(t.id)),
+        { enabled: eh } = Y.A.useExperiment({ guildId: t.guild_id, location: "ChannelCall" }),
+        ep = (0, d.bG)([W.A], () => W.A.isVisible(t.id)),
         em = (0, d.bG)([W.A], () => {
             let e = W.A.getPendingNote(t.id);
             return null != e && null == e.position;
@@ -913,7 +913,7 @@ let e$ = function (e) {
                             storedCallHeaderHeight: ei,
                             updateStoredCallHeaderHeight: el,
                             wrapperRef: c,
-                            callContainerDimensions: { width: p, height: h },
+                            callContainerDimensions: { width: h, height: p },
                             callContainerRef: m,
                             channelChatRef: A,
                             width: o,
@@ -925,7 +925,7 @@ let e$ = function (e) {
                             canPopout: s,
                             popoutType: r,
                             canUseHaven: eu,
-                            guildRoomVisible: ep && eh,
+                            guildRoomVisible: eh && ep,
                             isPlacingNote: em,
                         }),
                         !t.isPrivate() && (0, i.jsx)(eU.wQ, {}),

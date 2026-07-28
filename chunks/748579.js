@@ -1,11 +1,11 @@
 a.r(t), a.d(t, { default: () => N });
-var s = a(627968),
-    n = a(64700),
+var s = a(477900),
+    n = a(582128),
     i = a(503698),
     r = a.n(i),
     l = a(562708),
-    d = a(990078),
-    c = a(834730),
+    d = a(834730),
+    c = a(866665),
     u = a(408278),
     o = a(782134),
     m = a(139286),
@@ -14,10 +14,10 @@ var s = a(627968),
     p = a(174459),
     _ = a(764231),
     f = a(878784),
-    g = a(788868),
+    g = a(202541),
     x = a(652215),
     v = a(375708),
-    T = a(669622);
+    T = a(312094);
 function N(e) {
     let { levelUpData: t } = e,
         [a, i] = n.useState(!1),
@@ -79,18 +79,18 @@ function N(e) {
                 children: [
                     (0, s.jsx)(h.A, { width: 60, height: 15 }),
                     null != I &&
-                        (0, s.jsx)(c.E, {
+                        (0, s.jsx)(d.E, {
                             variant: "display-md",
                             className: r()(T.Vv, T.km),
                             children: v.intl.string(I.nameUnformatted),
                         }),
-                    (0, s.jsx)(c.E, {
+                    (0, s.jsx)(d.E, {
                         variant: "display-md",
                         className: r()(T.Vv, T.Hl),
                         children: v.intl.string(U.nameUnformatted),
                     }),
                     null != k &&
-                        (0, s.jsx)(c.E, {
+                        (0, s.jsx)(d.E, {
                             variant: "text-xs/medium",
                             className: T.SD,
                             children: v.intl.formatToPlainString(v.t["f/OGgM"], {
@@ -100,7 +100,7 @@ function N(e) {
                         }),
                     (0, s.jsx)("div", {
                         className: T.uu,
-                        children: (0, s.jsx)(d.m, {
+                        children: (0, s.jsx)(c.m, {
                             text: v.intl.string(v.t.hsvh0i),
                             children: (0, s.jsx)(u.K, {
                                 icon: o.u,

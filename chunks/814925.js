@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { A: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(953727);
-let l = function (e) {
-    let { width: t = 16, height: n = 16, color: r = "currentColor", foreground: s, ...a } = e;
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(953727);
+let o = function (e) {
+    let { width: t = 16, height: n = 16, color: r = "currentColor", foreground: a, ...s } = e;
     return (0, i.jsx)("svg", {
-        ...(0, o.A)(a),
+        ...(0, l.A)(s),
         width: t,
         height: n,
         viewBox: "0 0 16 16",
         children: (0, i.jsx)("path", {
-            className: s,
+            className: a,
             fill: r,
             fillRule: "evenodd",
             clipRule: "evenodd",
@@ -21,17 +21,17 @@ let l = function (e) {
         }),
     });
 };
-var u = n(767246);
+var d = n(166694);
 function c(e) {
-    let { children: t, size: n = 16, className: s, flowerStarClassName: o, ...c } = e,
-        d = r.Children.only(t),
+    let { children: t, size: n = 16, className: a, flowerStarClassName: l, ...c } = e,
+        u = r.Children.only(t),
         _ = !e.allowFullSizedIcon;
     return (0, i.jsxs)("div", {
-        className: a()(u.jH, s),
+        className: s()(d.jH, a),
         style: { width: n, height: n },
         children: [
-            (0, i.jsx)(l, { ...c, className: a()(o, u.mP) }),
-            (0, i.jsx)("div", { className: a()(u.sn, { [u.Qu]: _ }), children: d }),
+            (0, i.jsx)(o, { ...c, className: s()(l, d.mP) }),
+            (0, i.jsx)("div", { className: s()(d.sn, { [d.Qu]: _ }), children: u }),
         ],
     });
 }

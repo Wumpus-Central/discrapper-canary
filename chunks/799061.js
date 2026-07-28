@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { O: () => R });
+n.d(t, { O: () => L });
 var i = n(344351),
     r = n(228366),
-    s = n(913122),
-    a = n(20015),
-    o = n(734057),
-    l = n(933958),
-    u = n(627968);
-n(64700);
+    a = n(913122),
+    s = n(20015),
+    l = n(734057),
+    o = n(933958),
+    d = n(477900);
+n(582128);
 var c = n(231723),
-    d = n(192308),
+    u = n(192308),
     _ = n(851907),
-    h = n(157559),
-    f = n(47167),
-    p = n(994500),
-    E = n(287809),
-    m = n(240248),
-    g = n(375708),
-    A = n(969151),
-    I = n(817636),
-    T = n(574152),
+    E = n(157559),
+    A = n(47167),
+    h = n(994500),
+    I = n(287809),
+    f = n(240248),
+    p = n(375708),
+    T = n(969151),
+    m = n(817636),
+    g = n(574152),
     S = n(652215);
-async function y(e) {
-    let { applicationId: t, channelId: n, guildId: a } = e;
+async function N(e) {
+    let { applicationId: t, channelId: n, guildId: s } = e;
     try {
-        return await (0, I.A)(t, n);
-    } catch (o) {
-        let e = null != a ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
+        return await (0, m.A)(t, n);
+    } catch (l) {
+        let e = null != s ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         r.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
             nonce: "",
             applicationId: t,
             channelId: n ?? null,
-            guildId: a ?? null,
-            error: new s.LG(o),
+            guildId: s ?? null,
+            error: new a.LG(l),
             locationKind: e,
         });
     }
@@ -48,60 +48,60 @@ async function C(e) {
         (null == t ||
             !!(await new Promise((e) => {
                 let r,
-                    s = l.Ay.getSelfEmbeddedActivities().get(t.id),
-                    a = (0, A.H)(s?.location),
-                    u = o.A.getChannel(a);
-                null == s || null == u
+                    a = o.Ay.getSelfEmbeddedActivities().get(t.id),
+                    s = (0, T.H)(a?.location),
+                    d = l.A.getChannel(s);
+                null == a || null == d
                     ? e(!0)
                     : (i?.(),
-                      (r = null != u ? (0, f.m1)(u, E.default, p.A) : ""),
-                      h.A.show({
-                          title: g.intl.string(g.t.XkIWkk),
-                          cancelText: g.intl.string(g.t["ETE/oC"]),
-                          confirmText: g.intl.string(g.t["cY+Oob"]),
+                      (r = null != d ? (0, A.m1)(d, I.default, h.A) : ""),
+                      E.A.show({
+                          title: p.intl.string(p.t.XkIWkk),
+                          cancelText: p.intl.string(p.t["ETE/oC"]),
+                          confirmText: p.intl.string(p.t["cY+Oob"]),
                           onConfirm: () => {
-                              (0, T.A)().leaveActivity({
-                                  location: s.location,
+                              (0, g.A)().leaveActivity({
+                                  location: a.location,
                                   applicationId: t.id,
                                   shouldClosePopout: n,
                               }),
                                   e(!0);
                           },
                           onCancel: () => e(!1),
-                          body: g.intl.format(g.t["5/Xort"], {
-                              currentApplicationName: t?.name ?? g.intl.string(g.t.G99XFs),
-                              currentApplicationChannelName: (0, m.uJ)(r) ? g.intl.string(g.t.OGUjmt) : r,
+                          body: p.intl.format(p.t["5/Xort"], {
+                              currentApplicationName: t?.name ?? p.intl.string(p.t.G99XFs),
+                              currentApplicationChannelName: (0, f.uJ)(r) ? p.intl.string(p.t.OGUjmt) : r,
                           }),
                       }));
             }))) &&
         !0
     );
 }
-async function N(e) {
-    let { application: t, applicationId: i, channel: r, user: s, onConfirmActivityLaunchChecksAlertOpen: a } = e;
-    if (null == s.nsfwAllowed) {
-        let e = t ?? (await y({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
+async function O(e) {
+    let { application: t, applicationId: i, channel: r, user: a, onConfirmActivityLaunchChecksAlertOpen: s } = e;
+    if (null == a.nsfwAllowed) {
+        let e = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
         if (
             null == e ||
             (e.embeddedActivityConfig?.requires_age_gate &&
                 !(await new Promise((t) => {
-                    a?.(),
+                    s?.(),
                         (function (e) {
-                            let { application: t, channelId: i, onAgree: r, onDisagree: s } = e,
-                                a = null != (0, _.Ay)({ application: t, channelId: i }) ? c.KX : c.SY;
-                            (0, d.openModalLazy)(
+                            let { application: t, channelId: i, onAgree: r, onDisagree: a } = e,
+                                s = null != (0, _.Ay)({ application: t, channelId: i }) ? c.KX : c.SY;
+                            (0, u.openModalLazy)(
                                 async () => {
                                     let { ActivityAgeGateModal: e } = await n.e("75710").then(n.bind(n, 89805));
                                     return (n) =>
-                                        (0, u.jsx)(e, {
+                                        (0, d.jsx)(e, {
                                             ...n,
                                             channelId: i,
                                             application: t,
                                             onAgree: r,
-                                            onDisagree: s,
+                                            onDisagree: a,
                                         });
                                 },
-                                { modalKey: "activity-age-gate", contextKey: a },
+                                { modalKey: "activity-age-gate", contextKey: s },
                             ),
                                 Promise.resolve();
                         })({ application: e, channelId: r?.id, onAgree: () => t(!0), onDisagree: () => t(!1) });
@@ -111,33 +111,33 @@ async function N(e) {
     }
     return !0;
 }
-async function v(e) {
-    let { application: t, applicationId: i, channel: r, onConfirmActivityLaunchChecksAlertOpen: s } = e,
-        o = t ?? (await y({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
+async function R(e) {
+    let { application: t, applicationId: i, channel: r, onConfirmActivityLaunchChecksAlertOpen: a } = e,
+        l = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
     return (
-        null != o &&
-        (!!((0, a.n)(o, S.gfo.EMBEDDED_RELEASED) || o.isVerified || l.Ay.hasActivityEverBeenLaunched(i)) ||
+        null != l &&
+        (!!((0, s.n)(l, S.gfo.EMBEDDED_RELEASED) || l.isVerified || o.Ay.hasActivityEverBeenLaunched(i)) ||
             new Promise((e) => {
-                s?.(),
+                a?.(),
                     (function (e) {
                         let { application: t, onConfirm: i, onCancel: r } = e;
-                        (0, d.openModalLazy)(async () => {
+                        (0, u.openModalLazy)(async () => {
                             let { default: e } = await n.e("38435").then(n.bind(n, 130574));
-                            return (n) => (0, u.jsx)(e, { application: t, onConfirm: i, onCancel: r, ...n });
+                            return (n) => (0, d.jsx)(e, { application: t, onConfirm: i, onCancel: r, ...n });
                         }),
                             Promise.resolve();
-                    })({ application: o, onConfirm: () => e(!0), onCancel: () => e(!1) });
+                    })({ application: l, onConfirm: () => e(!0), onCancel: () => e(!1) });
             }))
     );
 }
-async function R(e) {
+async function L(e) {
     return (
         !!(await C({
             currentEmbeddedApplication: e.currentEmbeddedApplication,
             shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
             onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen,
         })) &&
-        !!(await N(e)) &&
-        !!(await v(e))
+        !!(await O(e)) &&
+        !!(await R(e))
     );
 }

@@ -1,6 +1,6 @@
 t.d(n, { A: () => y });
-var r = t(627968),
-    u = t(64700),
+var r = t(477900),
+    u = t(582128),
     c = t(688810),
     l = t(355622),
     a = t(408018),
@@ -12,7 +12,7 @@ var r = t(627968),
     p = t(448613),
     R = t(652215),
     f = t(375708),
-    C = t(831111);
+    C = t(571423);
 let m = (0, i.createChannelRecord)({ id: "1", type: R.rbe.DM });
 function y(e) {
     let { user: n, guildId: t, channelId: i, onClose: R, disableAutoFocus: y = !1 } = e,

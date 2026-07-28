@@ -1,14 +1,14 @@
-n.d(t, { Cy: () => d, IY: () => T, Ko: () => c, UY: () => A, YH: () => g, ii: () => I });
+n.d(t, { Cy: () => d, IY: () => T, Ko: () => _, UY: () => A, YH: () => g, ii: () => I });
 var l,
-    r = n(64700),
+    r = n(582128),
     a = n(702841),
     i = n(688810),
     s = n(975732),
     E = n(317525),
     u = n(71393),
     o = n(287809),
-    _ = n(841549);
-function c(e, t) {
+    c = n(841549);
+function _(e, t) {
     let { guildId: n, userId: l, colorRoleId: r } = e;
     (0, s.openUserProfileModal)({ userId: l, guildId: n, sourceAnalyticsLocations: t, roleId: r });
 }
@@ -20,7 +20,7 @@ function d(e, t, n, l) {
             let i = o.default.getUser(e.userId);
             null != i &&
                 (r.stopPropagation(),
-                (0, _.Mg)(r, {
+                (0, c.Mg)(r, {
                     user: i,
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : a,
@@ -39,7 +39,7 @@ function A(e, t, n) {
             let a = o.default.getUser(e.userId);
             null != a &&
                 (r.stopPropagation(),
-                (0, _.B8)(r, {
+                (0, c.B8)(r, {
                     user: a,
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : l,

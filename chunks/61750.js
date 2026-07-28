@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var r = n(192308),
     a = n(758836);
 let s = function (e) {
@@ -22,7 +22,7 @@ let s = function (e) {
         async () => {
             if ((0, a.EZ)(t.skuId) || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
-                    n.e("51869"),
+                    n.e("63576"),
                     n.e("2285"),
                     n.e("35062"),
                     n.e("77004"),
@@ -65,7 +65,7 @@ let s = function (e) {
                     });
             }
             let { default: e } = await Promise.all([
-                n.e("51869"),
+                n.e("63576"),
                 n.e("35062"),
                 n.e("77004"),
                 n.e("9334"),
@@ -93,8 +93,8 @@ let s = function (e) {
                 n.e("43256"),
                 n.e("14122"),
                 n.e("25265"),
-                n.e("95632"),
-            ]).then(n.bind(n, 879059));
+                n.e("93249"),
+            ]).then(n.bind(n, 600632));
             return (n) =>
                 (0, i.jsx)(e, {
                     product: t,

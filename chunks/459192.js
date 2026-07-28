@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { u: () => I });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(140735),
@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(834730),
     E = n(747556),
     A = n(255434),
-    h = n(600525);
+    h = n(168565);
 function I(e) {
     let {
             children: t,
@@ -27,29 +27,29 @@ function I(e) {
             align: S = "center",
             spacing: N,
             caretConfig: C,
-            targetElementRef: R,
-            anchorRef: O,
+            targetElementRef: O,
+            anchorRef: R,
             positionKey: L,
-            ariaHidden: D = !1,
-            lineClamp: y,
+            ariaHidden: y = !1,
+            lineClamp: D,
             ...v
         } = e,
         [b, M] = r.useState(null);
     r.useLayoutEffect(() => {
-        null != O && M(O.current);
-    }, [O]);
+        null != R && M(R.current);
+    }, [R]);
     let P = r.useCallback(
             (e) => {
-                null == O && M(e), (0, o.cZ)(R, e);
+                null == R && M(e), (0, o.cZ)(O, e);
             },
-            [R, O],
+            [O, R],
         ),
         {
             tooltipId: U,
             isVisible: w,
             targetElementRef: G,
             trigger: x,
-        } = (0, c.D)({ children: t, targetElementRef: P, asContainer: T, containerTag: m, ariaHidden: D, ...v }),
+        } = (0, c.D)({ children: t, targetElementRef: P, asContainer: T, containerTag: m, ariaHidden: y, ...v }),
         k = null != n && ("string" != typeof n || "" !== n),
         F = null != I && !r.isValidElement(I),
         V = r.useMemo(
@@ -70,14 +70,14 @@ function I(e) {
                                 (0, i.jsx)(_.E, {
                                     variant: "text-sm/normal",
                                     color: k ? "text-subtle" : "text-default",
-                                    lineClamp: y,
+                                    lineClamp: D,
                                     children: a,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [I, f, p, n, a, k, F, y],
+            [I, f, p, n, a, k, F, D],
         ),
         B = L ?? `${(0, o.Xj)(n ?? "")}|${(0, o.Xj)(a)}`,
         H = (0, d.j)({ shouldShow: w });
@@ -92,7 +92,7 @@ function I(e) {
                       isRendered: !0,
                       targetElementRef: G,
                       targetElement: b,
-                      anchorRef: O,
+                      anchorRef: R,
                       id: U,
                       content: V,
                       position: g,
@@ -106,6 +106,6 @@ function I(e) {
             : null,
     );
     return (0, i.jsxs)(i.Fragment, {
-        children: [x, D || null == V ? null : (0, i.jsx)(l.A, { id: U, children: V }), j],
+        children: [x, y || null == V ? null : (0, i.jsx)(l.A, { id: U, children: V }), j],
     });
 }

@@ -1,9 +1,9 @@
 e.r(s), e.d(s, { default: () => j });
-var l = e(627968),
-    n = e(64700),
+var l = e(477900),
+    n = e(582128),
     r = e(189213),
     a = e(17928),
-    c = e(534514),
+    c = e(297264),
     i = e(661531),
     o = e(834730),
     d = e(116956),
@@ -14,7 +14,7 @@ var l = e(627968),
     p = e(930840);
 e(603266);
 var g = e(375708),
-    k = e(751005);
+    k = e(588741);
 let j = function (t) {
     let { transitionState: s, streamKey: e, channelId: j, onClose: v } = t,
         A = (0, a.bG)([d.A], () => d.A.getSecureFramesState(e)?.epochAuthenticator),

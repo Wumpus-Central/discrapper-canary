@@ -1,6 +1,6 @@
 t.d(i, { w: () => W });
-var n = t(627968),
-    l = t(64700),
+var n = t(477900),
+    l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(284009),
@@ -12,7 +12,7 @@ var n = t(627968),
     m = t(834730),
     g = t(939249),
     h = t(177953),
-    p = t(133171),
+    p = t(935154),
     f = t(652215),
     I = t(778712),
     v = t(97808),
@@ -31,9 +31,9 @@ var n = t(627968),
     P = t(47167),
     k = t(713517),
     V = t(854627),
-    w = t(10862),
-    D = t(164891),
-    R = t(135635),
+    R = t(10862),
+    w = t(164891),
+    D = t(135635),
     U = t(696451),
     M = t(71393),
     L = t(958590),
@@ -50,7 +50,7 @@ function W(e) {
         I = l.useRef(null),
         v = (0, k.M)(I),
         x = (0, B.kt)({ channel: i }),
-        { enabled: S } = D.A.useExperiment({ guildId: i.guild_id, location: "VoiceInviteSuggestionsPopover" }),
+        { enabled: S } = w.A.useExperiment({ guildId: i.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: _ } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     l.useEffect(() => {
         s && I.current?.focus();
@@ -139,10 +139,10 @@ function Z(e) {
             icon: T,
             iconColor: G,
             tooltipText: O,
-            disabled: D,
+            disabled: w,
             shouldHideButton: M,
             onClick: B,
-        } = (0, R.A)({ user: t, channel: i, location: H }),
+        } = (0, D.A)({ user: t, channel: i, location: H }),
         {
             status: W,
             isMobileOnline: Z,
@@ -166,9 +166,9 @@ function Z(e) {
         en = "success" === A || "sending" === A,
         el = l.useCallback(
             (e) => {
-                e.stopPropagation(), D || B();
+                e.stopPropagation(), w || B();
             },
-            [B, D],
+            [B, w],
         ),
         es = l.useCallback(async () => {
             if (en) return;
@@ -240,7 +240,7 @@ function Z(e) {
                             className: $.J2,
                             children: [
                                 em
-                                    ? (0, n.jsx)(w.A, { size: "custom", color: et, channel: ee, className: $.RI })
+                                    ? (0, n.jsx)(R.A, { size: "custom", color: et, channel: ee, className: $.RI })
                                     : null != Q
                                       ? (0, n.jsx)(b.A, { icon: Q, className: $.RI })
                                       : null,
@@ -275,9 +275,9 @@ function Z(e) {
                 (0, n.jsx)(_.m, {
                     text: O,
                     children: (0, n.jsx)(g.D, {
-                        className: a()($.D9, q.button, q.secondary, { [$.r9]: D }),
+                        className: a()($.D9, q.button, q.secondary, { [$.r9]: w }),
                         onClick: el,
-                        "aria-disabled": D,
+                        "aria-disabled": w,
                         children: (0, n.jsx)(T, { size: "xxs", color: G, className: $.Kk }),
                     }),
                 }),

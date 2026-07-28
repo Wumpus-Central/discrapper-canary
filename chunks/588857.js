@@ -1,18 +1,18 @@
 n.d(t, { A: () => ib });
 var i,
     s,
-    r = n(627968),
+    r = n(477900),
     l = n(442433),
     a = n(763827),
     o = n(140069),
     d = n(589051),
     u = n(308726),
-    c = n(64700),
+    c = n(582128),
     h = n(503698),
     m = n.n(h),
     g = n(812729),
     p = n.n(g),
-    f = n(4798),
+    f = n(461376),
     x = n(866323),
     A = n(939249),
     E = n(834730),
@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(816578),
     eo = n(110234),
-    ed = n(210144),
+    ed = n(293246),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -1123,9 +1123,9 @@ var e0 = n(417098),
     e1 = n(55619),
     e2 = n(734066),
     e3 = n(200542),
-    e6 = n(351906),
-    e5 = n(377802),
-    e4 = n(348858),
+    e5 = n(351906),
+    e4 = n(377802),
+    e6 = n(348858),
     e8 = n(523875),
     e9 = n(416696),
     e7 = n(621956),
@@ -1391,7 +1391,7 @@ function tq(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e4.I)(a ? "undeafen" : "deafen"),
+        } = (0, e6.I)(a ? "undeafen" : "deafen"),
         m = l ? tn.T : o;
     function g() {
         (0, tc.A)(l, em.JJy.OVERLAY),
@@ -1696,7 +1696,7 @@ function t$(e) {
     let {
             Component: h,
             events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, e5.O)(),
+        } = (0, e4.O)(),
         p = tX(n),
         f = (0, tP.qZ)(),
         x = s ? h : ti._;
@@ -1791,7 +1791,7 @@ function t2(e) {
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
         s = (0, y.bG)([tU.A], () => null != n && tU.A.hasVideo(n), [n]),
         l = (0, d.Mn)("VoiceConnectionStatus"),
-        o = (0, y.bG)([e6.A], () => e6.A.hidePersonalInformation);
+        o = (0, y.bG)([e5.A], () => e5.A.hidePersonalInformation);
     return (
         null != n &&
         null != t &&
@@ -1855,14 +1855,14 @@ function t3(e) {
         })
     );
 }
-var t6 = n(145973);
-let t5 = c.memo(function () {
-    let e = (0, y.bG)([e6.A], () => e6.A.enabled),
+var t5 = n(145973);
+let t4 = c.memo(function () {
+    let e = (0, y.bG)([e5.A], () => e5.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
     return e && t
         ? (0, r.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t6.$X,
+              className: t5.$X,
               children: [
                   (0, r.jsx)(E.E, {
                       tag: "span",
@@ -1871,7 +1871,7 @@ let t5 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
-                      className: t6.lI,
+                      className: t5.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1880,7 +1880,7 @@ let t5 = c.memo(function () {
           })
         : null;
 });
-function t4(e) {
+function t6(e) {
     let { locked: t } = e,
         n = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
         { enableOverlayEntrypoint: i } = e3.A.useConfig({ location: "QuickActionsWidget" }),
@@ -1888,14 +1888,14 @@ function t4(e) {
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
-        className: m()({ [t6.KE]: !0, [t6.xt]: t }),
+        className: m()({ [t5.KE]: !0, [t5.xt]: t }),
         children: [
-            (0, r.jsx)(t5, {}),
+            (0, r.jsx)(t4, {}),
             (0, r.jsxs)("div", {
-                className: t6.Pm,
+                className: t5.Pm,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: t6.qi,
+                        className: t5.qi,
                         children: [
                             (0, r.jsx)(tB, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tq, { voiceChannel: l, locked: t }),
@@ -1903,7 +1903,7 @@ function t4(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: t6.qi,
+                        className: t5.qi,
                         children: [
                             (0, r.jsx)(tQ, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tJ, { voiceChannel: l, locked: t }),
@@ -1911,12 +1911,12 @@ function t4(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: m()(t6.qi, a && t6.SV),
+                        className: m()(t5.qi, a && t5.SV),
                         children: (0, r.jsx)(t$, { voiceChannel: l, locked: t }),
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t6.Pm, children: (0, r.jsx)(t2, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t5.Pm, children: (0, r.jsx)(t2, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -2544,8 +2544,8 @@ let nJ = c.memo(function (e) {
                                     n.e("46652"),
                                     n.e("93190"),
                                     n.e("8757"),
-                                    n.e("85968"),
                                     n.e("38730"),
+                                    n.e("85968"),
                                     n.e("89673"),
                                     n.e("29787"),
                                     n.e("82073"),
@@ -2674,14 +2674,14 @@ let nJ = c.memo(function (e) {
               }),
           });
 });
-var n$ = n(493336),
+var n$ = n(148494),
     n0 = n(928078),
     n1 = n(355622),
     n2 = n(232835),
     n3 = n(576705),
-    n6 = n(625494),
-    n5 = n(905816);
-function n4(e) {
+    n5 = n(625494),
+    n4 = n(905816);
+function n6(e) {
     let t,
         n,
         i,
@@ -2713,15 +2713,15 @@ function n4(e) {
     c.useEffect(() => {
         if (null == o) return;
         let e = u.requestAnimationFrame(() => {
-            n6._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n5._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => u.cancelAnimationFrame(e);
     }, [o, u]),
     null != d)
         ? (0, r.jsx)("div", {
-              className: n5.Q,
+              className: n4.Q,
               children: (0, r.jsx)("div", {
-                  className: n5.T,
+                  className: n4.T,
                   children: (0, r.jsx)(n0.A, { channel: d, guild: h, chatInputType: n1.oU.OVERLAY }, d.id),
               }),
           })
@@ -2832,7 +2832,7 @@ function n9(e) {
                             className: n8.oM,
                             children: [
                                 (0, r.jsx)(nG, { channel: u, user: S, guild: h, title: I, dragStart: t, dragging: n }),
-                                (0, r.jsx)(n4, { selectedChannelId: l }),
+                                (0, r.jsx)(n6, { selectedChannelId: l }),
                             ],
                         })
                       : null,
@@ -3296,7 +3296,7 @@ let iy = c.memo(function (e) {
         [em.uss.QUICK_ACTIONS]: {
             renderWidget(e) {
                 let { locked: t } = e;
-                return (0, r.jsx)(t4, { locked: t });
+                return (0, r.jsx)(t6, { locked: t });
             },
         },
         [em.uss.NOTIFICATIONS]: {

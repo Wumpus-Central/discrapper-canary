@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { Ay: () => d, JF: () => u, gA: () => l });
-var i = n(627968),
-    r = n(64700),
-    s = n(780777),
-    a = n(693591),
-    o = n(375708);
-function l() {
-    return [{ name: o.intl.string(o.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
+n.d(t, { Ay: () => u, JF: () => d, gA: () => o });
+var i = n(477900),
+    r = n(582128),
+    a = n(780777),
+    s = n(693591),
+    l = n(375708);
+function o() {
+    return [{ name: l.intl.string(l.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }
-function u(e, t, n) {
+function d(e, t, n) {
     if (null != e) {
         let i = new FileReader();
         (i.onload = (i) => {
             "string" == typeof i.target?.result &&
                 ((i) => {
-                    if (e.type === a.a.MP4) return t(i, e);
+                    if (e.type === s.a.MP4) return t(i, e);
                     let r = new Image();
                     (r.src = i),
                         (r.onload = () => {
@@ -44,7 +44,7 @@ class c extends r.PureComponent {
                     t?.(n, r.size);
                     continue;
                 }
-                u(r, this.handleFileRead, this.handleFileError);
+                d(r, this.handleFileRead, this.handleFileError);
             }
     };
     activateUploadDialogue() {
@@ -56,7 +56,7 @@ class c extends r.PureComponent {
     };
     handleFileError = async () => {
         let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 494921));
-        e({ title: o.intl.string(o.t["0egKg3"]), help: o.intl.string(o.t["7PnXqu"]) });
+        e({ title: l.intl.string(l.t["0egKg3"]), help: l.intl.string(l.t["7PnXqu"]) });
     };
     render() {
         let {
@@ -64,22 +64,22 @@ class c extends r.PureComponent {
             disabled: t,
             className: n,
             tabIndex: r,
-            "aria-label": a,
-            "aria-hidden": o,
-            filters: u,
+            "aria-label": s,
+            "aria-hidden": l,
+            filters: d,
         } = this.props;
-        return (0, i.jsx)(s.A, {
+        return (0, i.jsx)(a.A, {
             ref: this._ref,
             onClick: this.props.onClick,
             onChange: this.handleFileChange,
-            filters: u ?? l(),
+            filters: d ?? o(),
             multiple: e,
             disabled: t,
             className: n,
             tabIndex: r,
-            "aria-label": a,
-            "aria-hidden": o,
+            "aria-label": s,
+            "aria-hidden": l,
         });
     }
 }
-let d = c;
+let u = c;

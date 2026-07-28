@@ -12,11 +12,11 @@ n.r(t),
     n(14289),
     n(35956),
     n(321073);
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(873263),
+    l = n(806163),
     o = n(172218),
     d = n(935399),
     c = n(607399),
@@ -730,7 +730,7 @@ function e3(e) {
         children: (0, i.jsx)(W.A, { className: e0.dx, obscured: !0 === A, children: h }),
     });
 }
-function e6(e) {
+function e4(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, q.default], () => (null != $.default.getId() ? q.default.getCurrentUser() : null)),
@@ -797,7 +797,7 @@ function e6(e) {
         })
     );
 }
-function e4(e) {
+function e6(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -1113,7 +1113,7 @@ function e7(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
         case "CONNECT_ACCOUNT":
-            (t = (0, i.jsx)(e6, { clientId: A, platformType: e_, platformName: tc })),
+            (t = (0, i.jsx)(e4, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
@@ -1145,7 +1145,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e4, {
+                        (0, i.jsx)(e6, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,

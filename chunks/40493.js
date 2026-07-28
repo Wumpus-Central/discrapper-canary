@@ -1,36 +1,36 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(64700),
-    s = n(338854),
-    a = n(807098),
-    o = n(49999),
-    l = n(375708);
-function u(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: u, coachmarkConfig: c, children: d } = e,
-        _ = (0, a.T)(c?.asset),
-        h = r.useRef(null),
-        f = {
-            text: l.intl.string(l.t.RzWDqY),
+n.d(t, { A: () => d });
+var i = n(477900),
+    r = n(582128),
+    a = n(338854),
+    s = n(807098),
+    l = n(49999),
+    o = n(375708);
+function d(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: d, coachmarkConfig: c, children: u } = e,
+        _ = (0, s.T)(c?.asset),
+        E = r.useRef(null),
+        A = {
+            text: o.intl.string(o.t.RzWDqY),
             onClick: () => {
-                n(), t(), u(o.i.TAKE_ACTION);
+                n(), t(), d(l.i.TAKE_ACTION);
             },
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: h, children: d }),
-            (0, i.jsx)(s.H, {
-                targetElementRef: h,
+            (0, i.jsx)("div", { ref: E, children: u }),
+            (0, i.jsx)(a.H, {
+                targetElementRef: E,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
                 title: c?.header ?? "",
                 body: c?.body ?? "",
                 assetUrl: _ ?? "",
-                action: f,
+                action: A,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    t(), u(o.i.USER_DISMISS);
+                    t(), d(l.i.USER_DISMISS);
                 },
             }),
         ],

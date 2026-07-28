@@ -1,7 +1,7 @@
 n.d(t, { q: () => en });
-var i = n(627968),
-    s = n(64700),
-    l = n(976634),
+var i = n(477900),
+    s = n(582128),
+    l = n(999129),
     a = n(702841),
     u = n(568602),
     o = n(228366),
@@ -184,16 +184,16 @@ function en(e) {
         { isGift: eB, giftRecipient: eQ, customGiftMessage: eX, emojiConfetti: e$, soundEffect: e0 } = (0, L.Pv)(),
         e1 = (0, m.Z8)(),
         e2 = (0, m.s2)(),
-        e6 = s.useMemo(() => {
+        e5 = s.useMemo(() => {
             if (null != e1) return e1.options;
         }, [e1]),
-        e5 = (0, m.qv)(),
+        e6 = (0, m.qv)(),
         e4 = "sm";
     em ? (e4 = "xl") : (eT || e2 === G.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
-    let e8 = null != e6 ? e6.modalSizeGetter : void 0,
+    let e8 = null != e5 ? e5.modalSizeGetter : void 0,
         e3 = (0, b.O)(),
-        e7 = null != ee && !eB && (0, U.U9)(e3, ee),
-        [e9, te] = s.useState({
+        e9 = null != ee && !eB && (0, U.U9)(e3, ee),
+        [e7, te] = s.useState({
             load_id: eb.loadId,
             discovery_session_id: eb.discoverySessionId,
             payment_type: v.frM[eY],
@@ -209,7 +209,7 @@ function en(e) {
             guild_id: eE,
             payment_modal_version: eC,
             activity_session_id: ez,
-            eligible_for_discount: e7,
+            eligible_for_discount: e9,
             sku_product_line: eZ?.productLine,
             quantity: ej,
             checkout_design: p.r.UNIFIED,
@@ -240,7 +240,7 @@ function en(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 y.default.track(v.HAw.PAYMENT_FLOW_STARTED, e, t), D.trigger();
             })({
-                ...e9,
+                ...e7,
                 continue_session_initial_step: eP,
                 custom_checkout_flow: eH,
                 has_saved_payment_source: ev,
@@ -255,7 +255,7 @@ function en(e) {
             let e = (0, W.lo)(eQ) === W.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             y.default.track(v.HAw.PAYMENT_FLOW_SUCCEEDED, {
-                ...e9,
+                ...e7,
                 is_custom_message_edited: eB && e && null != eX ? eX !== X.intl.string(X.t.ZkOo1U) : void 0,
                 is_custom_emoji_sound_available: eB && e,
                 emoji_name: eB && e && e$?.id == null ? e$?.surrogates : void 0,
@@ -265,7 +265,7 @@ function en(e) {
                 gift_card_balance: tn,
                 gift_card_currency: ti,
             });
-        }, [e9, e$, eX, eQ, eB, e0, eb.startTime, tt, tn, ti]),
+        }, [e7, e$, eX, eQ, eB, e0, eb.startTime, tt, tn, ti]),
         ta = s.useCallback(() => {
             let { enabled: e } = g.u.getConfig({ location: "maybeSoftDismissGiftIntentOnPurchase" }),
                 t = null != P ? (0, w.NE)(P) : null;
@@ -279,17 +279,17 @@ function en(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: s, emitPaymentFlowLoadedEvent: l } = t,
                     a = Date.now();
                 if (e === G.pn.CONFIRM && (tl(), V?.(s), ta(), eI)) return void tu();
-                e5(e), eA?.(e), eU(null), e === G.pn.ADD_PAYMENT_STEPS && (o.h.wait(r.ET), o.h.wait(c.T3));
+                e6(e), eA?.(e), eU(null), e === G.pn.ADD_PAYMENT_STEPS && (o.h.wait(r.ET), o.h.wait(c.T3));
                 let u = null != n ? n : e2;
                 null === u || l
                     ? y.default.track(v.HAw.PAYMENT_FLOW_LOADED, {
-                          ...e9,
+                          ...e7,
                           initial_step: u ?? e,
                           continue_session_initial_step: eP,
                           has_saved_payment_source: ev,
                       })
                     : y.default.track(v.HAw.PAYMENT_FLOW_STEP, {
-                          ...e9,
+                          ...e7,
                           ...i,
                           from_step: u,
                           to_step: e === G.pn.ADD_PAYMENT_STEPS ? G.pn.PAYMENT_TYPE : e,
@@ -299,7 +299,7 @@ function en(e) {
                           gift_card_currency: ti,
                       });
             },
-            [e5, eA, eU, e2, eP, e9, to, eb.startTime, tl, V, ta, eI, tu, ev, tn, ti],
+            [e6, eA, eU, e2, eP, e7, to, eb.startTime, tl, V, ta, eI, tu, ev, tn, ti],
         );
     return (
         (0, x.b)(e2, eq, tr, ew, !1, void 0, ey),
@@ -331,7 +331,7 @@ function en(e) {
                         subscriptionTier: ee,
                         handleStepChange: tr,
                         handleClose: tu,
-                        analyticsData: e9,
+                        analyticsData: e7,
                         setAnalyticsData: te,
                         trialId: ei,
                         reviewWarningMessage: es,

@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { l: () => H });
-var i = n(64700),
+var i = n(582128),
     r = n(17928),
     a = n(308368),
     s = n(780907),
@@ -22,8 +22,8 @@ var i = n(64700),
     S = n(20015),
     N = n(207371),
     C = n(651743),
-    R = n(134861),
-    O = n(498642),
+    O = n(134861),
+    R = n(498642),
     L = n(71393),
     y = n(189081),
     D = n(480595),
@@ -66,7 +66,7 @@ function H(e) {
             );
         })({ channelId: (0, u.H)(H?.location), userId: j.id, activity: n }),
         en = (0, r.bG)(
-            [y.A, C.A, G.A, R.A],
+            [y.A, C.A, G.A, O.A],
             () =>
                 Q ||
                 (0, f.A)(n, F.jUm.SUPPORTS_JOIN_URL) ||
@@ -75,7 +75,7 @@ function H(e) {
                         LibraryApplicationStore: y.A,
                         LaunchableGameStore: C.A,
                         DispatchApplicationStore: G.A,
-                        ConnectedAppsStore: R.A,
+                        ConnectedAppsStore: O.A,
                         applicationId: X,
                     })),
         ),
@@ -92,7 +92,7 @@ function H(e) {
         ea = (0, g.h)(X),
         es = (0, N.x)(ea),
         el = (0, I.vG)({ userId: j.id, activity: n, channelId: et, application: ea }),
-        eo = (0, r.bG)([E.A, L.A, O.A, b.A, M.Ay, A.A, v.A, D.A, P.A, d.Ay], () =>
+        eo = (0, r.bG)([E.A, L.A, R.A, b.A, M.Ay, A.A, v.A, D.A, P.A, d.Ay], () =>
             null != H
                 ? el === I.Gy.CAN_JOIN
                     ? h.o.CAN_JOIN
@@ -106,7 +106,7 @@ function H(e) {
                       isEmbedded: Q,
                       ChannelStore: E.A,
                       GuildStore: L.A,
-                      GuildMemberCountStore: O.A,
+                      GuildMemberCountStore: R.A,
                       RelationshipStore: b.A,
                       SelectedChannelStore: M.Ay,
                       VoiceStateStore: A.A,

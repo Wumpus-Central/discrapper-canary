@@ -1,6 +1,6 @@
-n.d(t, { Fe: () => v, kc: () => R });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { Fe: () => x, kc: () => R });
+var l = n(477900),
+    i = n(582128),
     r = n(17928),
     a = n(20742),
     s = n(935462),
@@ -10,37 +10,37 @@ var l = n(627968),
     d = n(580133),
     p = n(316915),
     m = n(242874),
-    h = n(573359),
-    C = n(35587),
+    C = n(573359),
+    h = n(35587),
     E = n(165191),
     f = n(237412),
     A = n(45938),
-    y = n(951305),
-    S = n(166532),
+    S = n(951305),
+    y = n(166532),
     P = n(906234),
     I = n(652215),
     _ = n(202541),
     T = n(375708),
     g = n(562575);
-function x(e) {
+function v(e) {
     let { onClose: t } = e,
         { selectedSkuId: n, purchaseState: d } = (0, p.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseState: e.purchaseState,
         })),
-        C = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { isPremium: P, isPremiumGroupPurchase: x, isEligibleForTrial: v, isEligibleForDiscount: N } = (0, o.i)(),
+        h = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { isPremium: P, isPremiumGroupPurchase: v, isEligibleForTrial: x, isEligibleForDiscount: N } = (0, o.i)(),
         R = (0, c.S3)(),
-        M = (0, u.s2)(),
-        { isGift: b, selectedGiftStyle: j, giftRecipient: O } = (0, y.Pv)(),
+        b = (0, u.s2)(),
+        { isGift: M, selectedGiftStyle: j, giftRecipient: O } = (0, S.Pv)(),
         L = R?.productLine === I.EZt.COLLECTIBLES,
         w = R?.productLine === I.EZt.SOCIAL_LAYER_GAME_ITEM,
-        k = b && (0, A.Ik)(O) && M === S.pn.CONFIRM && null != j && !L && !w,
-        D = [S.pn.SKU_SELECT, S.pn.SELECT_FREE_SKU],
-        U = null != M && !D.includes(M) && null != n,
+        k = M && (0, A.Ik)(O) && b === y.pn.CONFIRM && null != j && !L && !w,
+        U = [y.pn.SKU_SELECT, y.pn.SELECT_FREE_SKU],
+        D = null != b && !U.includes(b) && null != n,
         G = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
-        if (null == M) return;
+        if (null == b) return;
         let e = null;
         return (
             k
@@ -59,29 +59,29 @@ function x(e) {
                           (0, l.jsx)(s.s_, { onClick: G, className: g.b, "data-migration-pending": !0 }),
                       ],
                   }))
-                : U &&
+                : D &&
                   (e =
                       n in _.WN
                           ? (0, l.jsx)(f.A, {
-                                currentStep: M ?? void 0,
+                                currentStep: b ?? void 0,
                                 purchaseState: d,
                                 premiumType: _.WN[n],
                                 onClose: G,
-                                showTrialBadge: v,
+                                showTrialBadge: x,
                                 showDiscountBadge: N,
-                                isGift: b,
+                                isGift: M,
                                 giftRecipient: O,
-                                isEligibleForTrial: v,
+                                isEligibleForTrial: x,
                                 enablePremiumBrandRefresh: P,
-                                isDisplayingWowMomentConfirmation: C,
-                                isPremiumGroupPurchase: x,
+                                isDisplayingWowMomentConfirmation: h,
+                                isPremiumGroupPurchase: v,
                             })
                           : (0, l.jsx)(a.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [j, G, d, n, M, v, N, k, U, b, O, P, C, x]);
+    }, [j, G, d, n, b, x, N, k, D, M, O, P, h, v]);
 }
-function v(e) {
+function x(e) {
     let {
             premiumDiscountPercent: t,
             selectedPlanId: n,
@@ -93,7 +93,7 @@ function v(e) {
         })),
         { isPremiumGroupPurchase: r, isEligibleForTrial: a, isEligibleForDiscount: s } = (0, o.i)(),
         u = (0, P.G)(n ?? "") && !a,
-        c = (0, C.Sq)();
+        c = (0, h.Sq)();
     return i.useMemo(() => {
         let n, i;
         return (r
@@ -110,10 +110,10 @@ function v(e) {
     }, [e, r, a, s, u, c, t, l]);
 }
 function N() {
-    let e = v();
+    let e = x();
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
 function R(e) {
-    let { isGift: t } = (0, y.Pv)();
-    return e.step !== S.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
+    let { isGift: t } = (0, S.Pv)();
+    return e.step !== y.pn.PLAN_SELECT || t ? (0, l.jsx)(v, { ...e }) : (0, l.jsx)(N, {});
 }

@@ -1,6 +1,6 @@
 t.d(l, { default: () => h });
-var r = t(627968);
-t(64700);
+var r = t(477900);
+t(582128);
 var d = t(17928),
     i = t(980707),
     n = t(477782),
@@ -42,7 +42,7 @@ function h(e) {
                         label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, a.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([t.e("80155"), t.e("99116")]).then(
+                                let { default: e } = await Promise.all([t.e("63779"), t.e("76735")]).then(
                                     t.bind(t, 672551),
                                 );
                                 return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: h, folderColor: x });

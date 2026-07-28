@@ -1,6 +1,6 @@
 i.d(d, { Z: () => o, q: () => a });
 var t,
-    u = i(64700),
+    u = i(582128),
     e = i(174459),
     k = i(652215),
     a = (((t = {}).DETAIL = "Boost Perk Shop Details"), (t.DEACTIVATE = "Boost Perk Shop Disable"), t);

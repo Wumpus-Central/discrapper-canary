@@ -1,24 +1,24 @@
 "use strict";
 n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var r = n(70688),
-    s = n(869003),
-    a = n(688810),
-    o = n(384059),
-    l = n(204651),
-    u = n(375708);
+    a = n(869003),
+    s = n(688810),
+    l = n(384059),
+    o = n(204651),
+    d = n(375708);
 function c(e) {
-    let { location: t, applicationId: n, centerButton: c = !1, ...d } = e,
-        { parentAnalyticsLocation: _ } = (0, a.Ay)(),
-        h = c ? l.l : l.A;
-    return (0, i.jsx)(h, {
-        ...d,
+    let { location: t, applicationId: n, centerButton: c = !1, ...u } = e,
+        { parentAnalyticsLocation: _ } = (0, s.Ay)(),
+        E = c ? o.l : o.A;
+    return (0, i.jsx)(E, {
+        ...u,
         isTrayButton: !1,
         onClick: function () {
-            (0, o.X)(_, o.O.LEAVE_ACTIVITY), s.A.leaveActivity({ location: t, applicationId: n, showFeedback: !0 });
+            (0, l.X)(_, l.O.LEAVE_ACTIVITY), a.A.leaveActivity({ location: t, applicationId: n, showFeedback: !0 });
         },
         iconComponent: r.o,
-        label: u.intl.string(u.t["R/FK4A"]),
+        label: d.intl.string(d.t["R/FK4A"]),
     });
 }

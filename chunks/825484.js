@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { e: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(331322),
-    a = n(977067);
-function o(e) {
+n.d(t, { e: () => l });
+var i = n(477900),
+    r = n(582128),
+    a = n(331322),
+    s = n(977067);
+function l(e) {
     let {
             size: t = "md",
             direction: n = "horizontal",
-            justify: o,
-            align: l,
-            padding: u,
+            justify: l,
+            align: o,
+            padding: d,
             className: c,
-            children: d,
+            children: u,
             wrap: _ = !0,
-            fullWidth: h = !1,
-            fullWidthContainer: f = !1,
+            fullWidth: E = !1,
+            fullWidthContainer: A = !1,
         } = e,
-        p = r.useMemo(() => ({ size: t, fullWidth: h }), [t, h]),
-        E = r.useRef(null),
-        m = (function (e, t, n) {
-            let [i, s] = r.useState(null);
+        h = r.useMemo(() => ({ size: t, fullWidth: E }), [t, E]),
+        I = r.useRef(null),
+        f = (function (e, t, n) {
+            let [i, a] = r.useState(null);
             return (
                 r.useLayoutEffect(() => {
                     if (null == e.current || !n || t.includes("vertical")) return;
@@ -28,7 +28,7 @@ function o(e) {
                         let t = Array.from(
                             e.current?.querySelectorAll('[data-mana-component="button"] [data-text-variant]') ?? [],
                         ).some((e) => e.scrollWidth > e.clientWidth);
-                        s((e) => e || t);
+                        a((e) => e || t);
                     }
                     let r = new MutationObserver(i);
                     return (
@@ -41,21 +41,21 @@ function o(e) {
                 }, [e, t, n]),
                 i
             );
-        })(E, n, _),
-        g = n;
+        })(I, n, _),
+        p = n;
     return (
-        m && (g = n.replace("horizontal", "vertical")),
-        (0, i.jsx)(s.B, {
-            direction: g,
+        f && (p = n.replace("horizontal", "vertical")),
+        (0, i.jsx)(a.B, {
+            direction: p,
             gap: 8,
-            justify: o,
-            align: l,
+            justify: l,
+            align: o,
             wrap: _,
-            padding: u,
+            padding: d,
             className: c,
-            fullWidth: !!f || h,
-            ref: E,
-            children: (0, i.jsx)(a.Z.Provider, { value: p, children: d }),
+            fullWidth: !!A || E,
+            ref: I,
+            children: (0, i.jsx)(s.Z.Provider, { value: h, children: u }),
         })
     );
 }

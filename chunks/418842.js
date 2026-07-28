@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { C: () => a });
-var i = n(64700),
+n.d(t, { C: () => s });
+var i = n(582128),
     r = n(873298),
-    s = n(885386);
-function a() {
-    let e = s.Xi.useSetting(),
+    a = n(885386);
+function s() {
+    let e = a.Xi.useSetting(),
         t = (function () {
             let [e, t] = i.useState("cozy");
             return (

@@ -1,13 +1,13 @@
 n.d(t, { A: () => A });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     s = n(17928),
     r = n(775602),
     a = n(607470),
     o = n(885386),
     d = n(522435);
 n(131955);
-var c = n(453656);
+var c = n(847744);
 function u(e) {
     let { src: t, className: n, autoPlayOnMount: s } = e,
         r = i.useRef(null),
@@ -65,10 +65,10 @@ function A(e) {
     let { imageUrl: t, animatedUrl: n, className: i, autoPlayOnMount: a = !0 } = e,
         c = (0, s.bG)([r.Ay], () => r.Ay.useReducedMotion),
         A = o.kt.useSetting(),
-        g = a && A && !c;
+        m = a && A && !c;
     return null != n && (0, d.LG)(n)
-        ? (0, l.jsx)(u, { src: n, className: i, autoPlayOnMount: g })
+        ? (0, l.jsx)(u, { src: n, className: i, autoPlayOnMount: m })
         : null != n
-          ? (0, l.jsx)(h, { animatedSrc: n, staticSrc: t, className: i, autoPlayOnMount: g }, n)
+          ? (0, l.jsx)(h, { animatedSrc: n, staticSrc: t, className: i, autoPlayOnMount: m }, n)
           : (0, l.jsx)("img", { className: i, src: t, alt: "" });
 }

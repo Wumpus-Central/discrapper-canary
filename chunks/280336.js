@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { j: () => l });
-var i = n(64700),
+var i = n(582128),
     r = n(866323),
     a = n(844222);
 let s = { tension: 2400, friction: 52 };

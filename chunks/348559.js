@@ -1,6 +1,6 @@
 s.d(e, { default: () => S });
-var i = s(627968),
-    n = s(64700),
+var i = s(477900),
+    n = s(582128),
     r = s(189213),
     l = s(834730),
     a = s(664121),
@@ -14,7 +14,7 @@ var i = s(627968),
     h = s(792620),
     T = s(652215),
     f = s(375708),
-    E = s(510070);
+    E = s(485870);
 function S(t) {
     let { transitionState: e, onClose: s, questContent: a, quest: c, returnRef: u } = t,
         o = d.H1.useSetting(),

@@ -1,9 +1,9 @@
 n.r(t), n.d(t, { QuestBar: () => t$, default: () => tz });
-var s = n(627968),
-    r = n(64700),
+var s = n(477900),
+    r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(4798),
+    a = n(461376),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -33,7 +33,7 @@ var C = n(186111),
     b = n(57718),
     O = n(398025);
 n(321073);
-var V = n(340287),
+var V = n(333007),
     L = n(765671);
 let k = "#00000000",
     q = "#CDD8FF1A",
@@ -580,7 +580,7 @@ function eS(e) {
 function eR(e) {
     return (0, s.jsx)(eS, { ...e, popoutTargetElementRef: e.parentContainerRef });
 }
-var ev = n(106778),
+var ev = n(776310),
     eT = n(536283),
     ey = n(166414);
 let eQ = (e) => {
@@ -870,9 +870,9 @@ var eV = n(889137),
     e0 = n(976019),
     e1 = n(442734),
     e2 = n(139384),
-    e6 = n(114046),
+    e3 = n(114046),
     e7 = n(695366),
-    e3 = n(274670),
+    e6 = n(274670),
     e4 = n(144779),
     e9 = n(30370),
     e5 = n(178540),
@@ -890,7 +890,7 @@ function tl(e) {
         className: tr.Z0,
         onClick: () => {
             (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e3.r)({
+                ? (0, e6.r)({
                       type: e4.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
@@ -936,7 +936,7 @@ function tc(e) {
             questId: t.id,
             beforeRequest: () => {
                 (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e3.r)({
+                    ? (0, e6.r)({
                           type: e4.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
@@ -970,7 +970,7 @@ function tc(e) {
                     ? function () {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
-                                  if (e.type === e6._.EXPIRED_CREDENTIAL) {
+                                  if (e.type === e3._.EXPIRED_CREDENTIAL) {
                                       let r = e9.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, F.IG)(e),
                                           i = (0, F.$J)(e);

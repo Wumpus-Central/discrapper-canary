@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { i: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(683071),
-    a = n(967744);
-function o(e) {
+n.d(t, { i: () => l });
+var i = n(477900),
+    r = n(582128),
+    a = n(683071),
+    s = n(617736);
+function l(e) {
     let { message: t, type: n } = e,
-        o = null == t || 0 === t.length || null == n,
-        [l, u] = r.useState(n ?? "info"),
-        [c, d] = r.useState(t ?? "");
+        l = null == t || 0 === t.length || null == n,
+        [o, d] = r.useState(n ?? "info"),
+        [c, u] = r.useState(t ?? "");
     return (
         r.useEffect(() => {
-            null != n && u(n), null != t && d(t);
+            null != n && d(n), null != t && u(t);
         }, [n, t]),
         (0, i.jsx)("div", {
-            className: o ? a.sectionHidden : a.section,
-            children: (0, i.jsx)(s.w, { type: l, hidden: o, children: c }),
+            className: l ? s.sectionHidden : s.section,
+            children: (0, i.jsx)(a.w, { type: o, hidden: l, children: c }),
         })
     );
 }

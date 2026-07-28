@@ -1,9 +1,9 @@
-s.d(e, { $b: () => g, QB: () => E, _k: () => _, bh: () => x }), s(64700);
+s.d(e, { $b: () => g, QB: () => E, _k: () => _, bh: () => x }), s(582128);
 var n = s(661531),
     i = s(628284),
     r = s(695366),
-    l = s(285796),
-    a = s(738188),
+    a = s(285796),
+    l = s(738188),
     c = s(290136),
     o = s(975807),
     d = s(739010),
@@ -48,7 +48,7 @@ function E() {
             title: h.t.MExFkz,
             description: h.intl.string(h.t["2liUvt"]),
             status: h.t["0OONGB"],
-            Icon: l.a,
+            Icon: a.a,
             color: n.A.colors.ICON_MUTED,
         },
     };
@@ -101,19 +101,19 @@ let I = {
         [d.PN.LIMITED]: {
             color: n.A.colors.ICON_FEEDBACK_WARNING,
             backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_WARNING,
-            Icon: a.i,
+            Icon: l.i,
         },
         [d.PN.VERY_LIMITED]: {
             color: n.A.unsafe_rawColors.ORANGE_345,
             backgroundColor: n.A.unsafe_rawColors.OPACITY_ORANGE_12,
-            Icon: a.i,
+            Icon: l.i,
         },
         [d.PN.AT_RISK]: {
             color: n.A.colors.ICON_FEEDBACK_CRITICAL,
             backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_CRITICAL,
             Icon: r.E,
         },
-        [d.PN.SUSPENDED]: { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: l.a },
+        [d.PN.SUSPENDED]: { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: a.a },
     },
     A = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: c.c };
 function _() {

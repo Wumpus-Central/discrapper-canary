@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { A: () => o });
-var i = n(64700),
+n.d(t, { A: () => l });
+var i = n(582128),
     r = n(17928),
-    s = n(885386),
-    a = n(994500);
-function o(e) {
-    let t = s.j0.useSetting(),
-        { isBlocked: n, isIgnored: o } = (0, r.cf)([a.A], () => ({
-            isBlocked: a.A.isBlocked(e),
-            isIgnored: a.A.isIgnored(e),
+    a = n(885386),
+    s = n(994500);
+function l(e) {
+    let t = a.j0.useSetting(),
+        { isBlocked: n, isIgnored: l } = (0, r.cf)([s.A], () => ({
+            isBlocked: s.A.isBlocked(e),
+            isIgnored: s.A.isIgnored(e),
         })),
-        [l, u] = (0, i.useState)(n || o);
+        [o, d] = (0, i.useState)(n || l);
     return (
-        (0, i.useEffect)(() => u(n || o), [n, o]),
+        (0, i.useEffect)(() => d(n || l), [n, l]),
         [
-            l && !(o && t),
+            o && !(l && t),
             (0, i.useCallback)(() => {
-                u(!1);
+                d(!1);
             }, []),
         ]
     );

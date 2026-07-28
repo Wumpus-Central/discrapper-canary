@@ -1,6 +1,6 @@
 n.d(t, { A: () => j });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(312640),
     r = n(798618),
@@ -8,22 +8,22 @@ var i = n(627968),
     c = n(97808),
     d = n(778712),
     u = n(834730),
-    p = n(241326),
-    h = n(46054),
+    h = n(241326),
+    p = n(46054),
     m = n(734057),
     A = n(287809),
-    x = n(562153),
-    f = n(446243),
+    f = n(562153),
+    x = n(446243),
     g = n(920639),
     C = n(781137),
-    y = n(599459);
+    y = n(904043);
 function j(e) {
     let { channelId: t, note: n, roomWidth: j } = e,
         [v, E] = (0, l.useState)(!1),
         N = (0, l.useRef)(null),
         I = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
         T = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
-        b = (0, x.tx)(T, t, I);
+        b = (0, f.tx)(T, t, I);
     return null == I || null == T
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -64,10 +64,10 @@ function j(e) {
                                           }),
                                           (0, i.jsx)(o.D, {
                                               onClick: function () {
-                                                  null != T && (0, f.yF)(T, t, n.objectId);
+                                                  null != T && (0, x.yF)(T, t, n.objectId);
                                               },
                                               className: y.Kk,
-                                              children: (0, i.jsx)(p.u, { size: "sm", color: "currentColor" }),
+                                              children: (0, i.jsx)(h.u, { size: "sm", color: "currentColor" }),
                                           }),
                                       ],
                                   }),
@@ -75,7 +75,7 @@ function j(e) {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       className: y.Qs,
-                                      children: h.A.parseTopic(n.content, !0, { channelId: t }),
+                                      children: p.A.parseTopic(n.content, !0, { channelId: t }),
                                   }),
                               ],
                           }),

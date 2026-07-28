@@ -1,5 +1,5 @@
-n.d(t, { E: () => h, p: () => C }), n(321073);
-var l = n(64700),
+n.d(t, { E: () => C, p: () => h }), n(321073);
+var l = n(582128),
     i = n(602853),
     r = n(661531),
     a = n(964486),
@@ -10,7 +10,7 @@ var l = n(64700),
     d = n(908166),
     p = n(818348);
 let m = new s.A("useStripePaymentElementOptions");
-function h() {
+function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, i.r)(r.A.colors.MODAL_BACKGROUND),
         n = (0, i.r)(r.A.colors.TEXT_STRONG),
@@ -43,23 +43,23 @@ function h() {
         },
     };
 }
-function C(e) {
+function h(e) {
     let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
         [i, r] = l.useState(void 0),
-        [s, C] = l.useState(null),
-        [E, A] = l.useState(!0),
-        [f, S] = l.useState([]),
+        [s, h] = l.useState(null),
+        [E, f] = l.useState(!0),
+        [A, S] = l.useState([]),
         { createSetupIntentDeduped: y } = (0, d.x)(),
         [P, I] = l.useState([]),
-        { customPaymentMethods: T, customPaymentMethodIdsToSourceTypes: _ } = l.useMemo(
+        { customPaymentMethods: _, customPaymentMethodIdsToSourceTypes: T } = l.useMemo(
             () => ({
-                customPaymentMethods: (0, c.Dd)(f),
-                customPaymentMethodIdsToSourceTypes: f.reduce(
+                customPaymentMethods: (0, c.Dd)(A),
+                customPaymentMethodIdsToSourceTypes: A.reduce(
                     (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                     {},
                 ),
             }),
-            [f],
+            [A],
         ),
         g = l.useCallback(async () => {
             try {
@@ -77,17 +77,17 @@ function C(e) {
                               e),
                     );
             } catch (e) {
-                C(e),
+                h(e),
                     null != t && t(e),
                     m.error("there was an error on setup for Payment Elements: ", e),
                     (0, o.pM)(e, { tags: { source: "payment_elements" } });
             }
-            A(!1);
+            f(!1);
         }, [t, y]);
     (0, a.Ay)(() => {
         g();
     });
-    let { elementsAppearance: v, elementsAppearanceOptions: x } = h(n),
+    let { elementsAppearance: v, elementsAppearanceOptions: x } = C(n),
         N = (0, u.PU)(),
         R = l.useMemo(
             () =>
@@ -97,15 +97,15 @@ function C(e) {
                           clientSecret: i,
                           appearance: v,
                           locale: N,
-                          customPaymentMethods: T,
+                          customPaymentMethods: _,
                           paymentMethodCreation: "manual",
                       },
-            [v, N, i, T, E],
+            [v, N, i, _, E],
         ),
         b = {
             setupError: s,
-            customPaymentMethods: T,
-            customPaymentMethodIdsToSourceTypes: _,
+            customPaymentMethods: _,
+            customPaymentMethodIdsToSourceTypes: T,
             paymentMethodOrder: P,
             elementsAppearanceOptions: x,
         };

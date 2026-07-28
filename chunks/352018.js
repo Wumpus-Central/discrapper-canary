@@ -1,81 +1,81 @@
 "use strict";
-n.d(t, { A: () => v });
-var i = n(627968),
-    r = n(64700),
-    s = n(17928),
-    a = n(625903),
-    o = n(922016),
-    l = n(688810),
-    u = n(384059),
+n.d(t, { A: () => R });
+var i = n(477900),
+    r = n(582128),
+    a = n(17928),
+    s = n(625903),
+    l = n(922016),
+    o = n(688810),
+    d = n(384059),
     c = n(480890),
-    d = n(573435),
+    u = n(573435),
     _ = n(848362),
-    h = n(471993),
-    f = n(734057),
-    p = n(287809),
-    E = n(964989),
-    m = n(428262),
-    g = n(447404),
-    A = n(204651),
-    I = n(806931),
-    T = n(788868),
+    E = n(471993),
+    A = n(734057),
+    h = n(287809),
+    I = n(964989),
+    f = n(428262),
+    p = n(447404),
+    T = n(204651),
+    m = n(806931),
+    g = n(202541),
     S = n(375708),
-    y = n(570027);
+    N = n(173171);
 function C(e) {
     let { className: t } = e;
-    return (0, i.jsx)(a.Z, { size: "md", color: "currentColor", className: t });
+    return (0, i.jsx)(s.Z, { size: "md", color: "currentColor", className: t });
 }
-function N(e) {
+function O(e) {
     let { className: t } = e;
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(d.Ay, { className: t, mask: d.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(C, {}) }),
-            (0, i.jsx)(E.A, { className: y.s }),
+            (0, i.jsx)(u.Ay, { className: t, mask: u.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(C, {}) }),
+            (0, i.jsx)(I.A, { className: N.s }),
         ],
     });
 }
-function v(e) {
-    let { hideBadges: t = !1, stream: n, location: a, ...d } = e,
-        E = r.useRef(null),
-        { analyticsLocations: y, parentAnalyticsLocation: v } = (0, l.Ay)(),
-        R = (0, s.bG)([p.default], () => m.Ay.isPremium(p.default.getCurrentUser(), T.PremiumTypes.TIER_1)),
-        O = (0, s.bG)([f.A], () => f.A.getChannel(n?.channelId)),
-        b = r.useMemo(() => (null != n ? [n] : []), [n]),
-        D = r.useCallback(() => {
-            null != O && (0, h.A)(O.getGuildId(), O.id, y);
-        }, [O, y]);
-    if (null == n || null == O) return null;
-    let L = C;
+function R(e) {
+    let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
+        I = r.useRef(null),
+        { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
+        L = (0, a.bG)([h.default], () => f.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
+        y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
+        D = r.useMemo(() => (null != n ? [n] : []), [n]),
+        v = r.useCallback(() => {
+            null != y && (0, E.A)(y.getGuildId(), y.id, N);
+        }, [y, N]);
+    if (null == n || null == y) return null;
+    let b = C;
     return (
-        t || R || (L = N),
-        (0, i.jsx)(o.Y, {
-            targetElementRef: E,
+        t || L || (b = O),
+        (0, i.jsx)(l.Y, {
+            targetElementRef: I,
             position: "top",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, i.jsx)(g.A, {
+                return (0, i.jsx)(p.A, {
                     children: (0, i.jsx)(_.A, {
-                        channel: O,
-                        currentUser: p.default.getCurrentUser(),
-                        activeStreams: b,
+                        channel: y,
+                        currentUser: h.default.getCurrentUser(),
+                        activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: D,
-                        onInteraction: (0, c.s)("ManageStreamsButton", v ?? a, { entrypoint: I.GK.OTHER_BUTTON }),
+                        handleGoLive: v,
+                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
                     }),
                 });
             },
-            animation: o.Y.Animation.FADE,
+            animation: l.Y.Animation.FADE,
             children: (e) =>
-                (0, i.jsx)(A.A, {
+                (0, i.jsx)(T.A, {
                     ...e,
-                    buttonRef: E,
+                    buttonRef: I,
                     label: S.intl.string(S.t.tmiYpF),
-                    iconComponent: L,
+                    iconComponent: b,
                     onClick: (t) => {
-                        (null != v || null != a) && (0, u.X)(v ?? a, u.O.STREAM_SETTINGS), e?.onClick(t);
+                        (null != R || null != s) && (0, d.X)(R ?? s, d.O.STREAM_SETTINGS), e?.onClick(t);
                     },
-                    ...d,
+                    ...u,
                 }),
         })
     );

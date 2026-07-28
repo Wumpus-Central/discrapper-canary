@@ -1,6 +1,6 @@
-i.d(t, { default: () => v });
-var n = i(627968),
-    s = i(64700),
+i.d(t, { default: () => y });
+var n = i(477900),
+    s = i(582128),
     l = i(284009),
     r = i.n(l),
     a = i(189213),
@@ -12,14 +12,14 @@ var n = i(627968),
     m = i(136857),
     A = i(793574),
     h = i(688810),
-    E = i(753390),
+    E = i(277984),
     S = i(253390),
     T = i(166403),
     x = i(428262),
     p = i(682502),
     f = i(816571),
     N = i(375708),
-    _ = i(366793);
+    _ = i(744609);
 async function I(e, t, i, n) {
     let s = (0, x.aE)(e, t);
     await (0, c.Ey)(i),
@@ -48,7 +48,7 @@ function b() {
         children: [(0, n.jsx)("div", { className: _.dk }), (0, n.jsx)("div", { children: N.intl.string(N.t.G27uHe) })],
     });
 }
-function y(e) {
+function v(e) {
     let { step: t, errorMsg: i, premiumSubscription: s } = e;
     if (null == s) return (0, n.jsx)(d.y, {});
     switch (t) {
@@ -60,7 +60,7 @@ function y(e) {
             throw new p.f({ message: `Unexpected step: ${t}` });
     }
 }
-function v(e) {
+function y(e) {
     let { guildBoostSlotId: t, transitionState: i, onClose: l } = e,
         { analyticsLocations: u } = (0, h.Ay)(A.A.GUILD_BOOST_UNCANCELLATION_MODAL);
     s.useEffect(() => {
@@ -69,11 +69,11 @@ function v(e) {
     let d = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
         [c, p] = s.useState(1),
         [_, C] = s.useState(!1),
-        [b, v] = s.useState(null),
+        [b, y] = s.useState(null),
         j = s.useCallback(async () => {
             if (null != d)
                 try {
-                    C(!0), v(null);
+                    C(!0), y(null);
                     let e = (0, S.v)(d, 1);
                     r()(
                         (0, x.bx)(e) <= (0, x.bx)(d.additionalPlans),
@@ -83,7 +83,7 @@ function v(e) {
                         p(2);
                 } catch (t) {
                     let e = t instanceof g.Ey ? t : new g.Ey(t, t.code);
-                    v(N.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? N.t.dq4vq7 : N.t["5mlOCW"])), C(!1);
+                    y(N.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? N.t.dq4vq7 : N.t["5mlOCW"])), C(!1);
                 }
         }, [d, t, u]);
     return (0, n.jsx)(h.f5, {
@@ -118,7 +118,7 @@ function v(e) {
             children: (0, n.jsx)(f.d, {
                 errorHandlingBehavior: "close-and-alert",
                 guildBoostSlotId: t,
-                children: (0, n.jsx)(y, { step: c, errorMsg: b, premiumSubscription: d }),
+                children: (0, n.jsx)(v, { step: c, errorMsg: b, premiumSubscription: d }),
             }),
         }),
     });

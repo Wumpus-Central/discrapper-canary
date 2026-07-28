@@ -1,6 +1,6 @@
 t.d(e, { $: () => i });
-var s = t(627968);
-t(64700);
+var s = t(477900);
+t(582128);
 var n = t(192308);
 function i(a) {
     let { orbsAmount: e } = a;

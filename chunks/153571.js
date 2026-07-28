@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { default: () => B });
-var o = n(627968),
-    i = n(64700),
+var o = n(477900),
+    i = n(582128),
     s = n(837381),
     r = n(17928),
     l = n(912592),
@@ -9,7 +9,7 @@ var o = n(627968),
     a = n(67811),
     d = n(941971),
     h = n(900848),
-    p = n(371911),
+    p = n(938483),
     g = n(309010),
     x = n(851109),
     C = n(394953),
@@ -24,8 +24,8 @@ function E(e) {
     return (0, o.jsx)(j.m, { spacing: 12, position: "right", text: i, children: (0, o.jsx)("div", { children: t }) });
 }
 n(445368);
-var I = n(652215),
-    U = n(773557);
+var U = n(652215),
+    I = n(350845);
 function m(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: p, ref: A } = e,
         j = (0, s.Vd)("notifications-inbox"),
@@ -48,7 +48,7 @@ function m(e) {
         L = k === x.U5.LEGACY ? l.K : c.X,
         P = (0, r.bG)([g.Ay], () => g.Ay.getChannelId()),
         S = i.useMemo(() => {
-            if (k === x.U5.SIDEBAR) return I.BVt.CHANNEL(I.gNP, P);
+            if (k === x.U5.SIDEBAR) return U.BVt.CHANNEL(U.gNP, P);
         }, [k, P]);
     return (0, o.jsxs)(h.c, {
         ref: A,
@@ -76,7 +76,7 @@ function m(e) {
                         children: (0, o.jsx)(L, {
                             size: "custom",
                             color: "currentColor",
-                            className: U.iZ,
+                            className: I.iZ,
                             width: 20,
                             height: 20,
                         }),
@@ -108,7 +108,7 @@ function B() {
                     }),
             })
           : t === x.U5.LEGACY
-            ? (0, o.jsx)(p.C, {
+            ? (0, o.jsx)(p.U, {
                   spacing: 0,
                   targetElementRef: e,
                   popoutPosition: "right",

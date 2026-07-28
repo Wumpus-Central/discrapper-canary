@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { Ay: () => y, YL: () => I, oN: () => T });
+n.d(t, { Ay: () => N, YL: () => m, oN: () => g });
 var i,
     r,
-    s = n(627968),
-    a = n(64700),
-    o = n(503698),
-    l = n.n(o),
-    u = n(305866),
+    a = n(477900),
+    s = n(582128),
+    l = n(503698),
+    o = n.n(l),
+    d = n(305866),
     c = n(707554),
-    d = n(825484),
+    u = n(825484),
     _ = n(821609),
-    h = n(43990),
-    f = n(922016),
-    p = n(235986),
-    E = n(174459),
-    m = n(652215),
-    g = n(375708),
-    A = n(291506),
-    I = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
-    T = (((r = {}).TOP = "top"), (r.MIDDLE = "middle"), r);
-class S extends a.PureComponent {
+    E = n(43990),
+    A = n(922016),
+    h = n(235986),
+    I = n(174459),
+    f = n(652215),
+    p = n(375708),
+    T = n(373834),
+    m = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
+    g = (((r = {}).TOP = "top"), (r.MIDDLE = "middle"), r);
+class S extends s.PureComponent {
     state = { confirmed: !1 };
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        E.default.track(m.HAw.SHOW_TUTORIAL, { tutorial: e });
+        I.default.track(f.HAw.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        E.default.track(m.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
+        I.default.track(f.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
     }
     handleDismiss = () => {
         let { onClickComplete: e } = this.props;
@@ -39,40 +39,40 @@ class S extends a.PureComponent {
                 isLongText: n,
                 title: i,
                 body: r,
-                className: a,
-                onClickSkipAll: o,
+                className: s,
+                onClickSkipAll: l,
             } = this.props,
-            h = "left" === t || n,
-            f = "center" === t || !h;
-        return (0, s.jsxs)(u.l, {
-            className: l()(A.Sy, a),
+            E = "left" === t || n,
+            A = "center" === t || !E;
+        return (0, a.jsxs)(d.l, {
+            className: o()(T.Sy, s),
             children: [
                 null != e &&
-                    (0, s.jsx)(p.A, {
-                        className: A.il,
-                        justify: h ? p.A.Justify.START : p.A.Justify.CENTER,
+                    (0, a.jsx)(h.A, {
+                        className: T.il,
+                        justify: E ? h.A.Justify.START : h.A.Justify.CENTER,
                         children: e(),
                     }),
-                (0, s.jsx)(c.H, { className: l()({ [A.Av]: f, [A.gH]: h }), children: i }),
-                (0, s.jsx)("string" == typeof r ? "p" : "div", {
-                    className: l()({ [A.IF]: f, [A.If]: h }),
+                (0, a.jsx)(c.H, { className: o()({ [T.Av]: A, [T.gH]: E }), children: i }),
+                (0, a.jsx)("string" == typeof r ? "p" : "div", {
+                    className: o()({ [T.IF]: A, [T.If]: E }),
                     children: r,
                 }),
-                (0, s.jsxs)(d.e, {
+                (0, a.jsxs)(u.e, {
                     fullWidth: !0,
                     direction: "vertical",
                     children: [
-                        (0, s.jsx)(_.$, {
+                        (0, a.jsx)(_.$, {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
-                            text: g.intl.string(g.t["+IrDzN"]),
+                            text: p.intl.string(p.t["+IrDzN"]),
                         }),
-                        (0, s.jsx)(_.$, {
+                        (0, a.jsx)(_.$, {
                             fullWidth: !0,
                             variant: "secondary",
-                            onClick: o,
-                            text: g.intl.string(g.t["33wtxt"]),
+                            onClick: l,
+                            text: p.intl.string(p.t["33wtxt"]),
                         }),
                     ],
                 }),
@@ -80,37 +80,37 @@ class S extends a.PureComponent {
         });
     }
 }
-class y extends a.PureComponent {
-    static TextAlignments = I;
+class N extends s.PureComponent {
+    static TextAlignments = m;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {
         e(), this.props.onComplete();
     };
     onClickSkipAll = (e) => {
         let { onSkipAll: t, uniqueId: n } = this.props;
-        e(), t(), E.default.track(m.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n });
+        e(), t(), I.default.track(f.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n });
     };
     renderPopoutContent = (e) => {
         let { closePopout: t, position: n } = e,
-            { forceTheme: i, isLongText: r, arrowAlignment: a, renderMedia: o } = this.props,
-            u = null != o;
-        return (0, s.jsx)(h.N, {
+            { forceTheme: i, isLongText: r, arrowAlignment: s, renderMedia: l } = this.props,
+            d = null != l;
+        return (0, a.jsx)(E.N, {
             theme: i,
             children: (e) =>
-                (0, s.jsx)(S, {
+                (0, a.jsx)(S, {
                     ...this.props,
-                    className: l()(
+                    className: o()(
                         {
-                            [A.sQ]: "bottom" === n,
-                            [A.eV]: !r && !u,
-                            [A.tJ]: !r && u,
-                            [A.II]: r && !u,
-                            [A.HU]: r && u,
-                            [A.pG]: "right" === n,
-                            [A.Mn]: "top" === n,
-                            [A.kb]: "left" === n,
-                            [A.ks]: "top" === a,
-                            [A.Eo]: "middle" === a,
+                            [T.sQ]: "bottom" === n,
+                            [T.eV]: !r && !d,
+                            [T.tJ]: !r && d,
+                            [T.II]: r && !d,
+                            [T.HU]: r && d,
+                            [T.pG]: "right" === n,
+                            [T.Mn]: "top" === n,
+                            [T.kb]: "left" === n,
+                            [T.ks]: "top" === s,
+                            [T.Eo]: "middle" === s,
                             "force-theme": null != i,
                         },
                         e,
@@ -127,23 +127,23 @@ class y extends a.PureComponent {
                 onComplete: n,
                 onSkipAll: i,
                 isLongText: r,
-                title: a,
-                body: o,
-                children: l,
-                spacing: u,
+                title: s,
+                body: l,
+                children: o,
+                spacing: d,
                 forceTheme: c,
-                innerRef: d,
+                innerRef: u,
                 ..._
             } = this.props,
-            h = "top" === _.position || "bottom" === _.position ? "center" : "top";
-        return (0, s.jsx)(f.Y, {
-            targetElementRef: d,
+            E = "top" === _.position || "bottom" === _.position ? "center" : "top";
+        return (0, a.jsx)(A.Y, {
+            targetElementRef: u,
             ..._,
-            align: h,
-            spacing: u ?? 0,
+            align: E,
+            spacing: d ?? 0,
             renderPopout: this.renderPopoutContent,
             nudgeAlignIntoViewport: !0,
-            children: l,
+            children: o,
         });
     }
 }

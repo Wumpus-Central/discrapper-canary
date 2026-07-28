@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => H });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(64015),
     s = n.n(a),
     l = n(837381),
@@ -25,8 +25,8 @@ var i = n(627968),
     O = n(688151);
 let R = new C.E([], O.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
 var L = n(611924),
-    D = n(277370),
-    y = n(380335),
+    y = n(277370),
+    D = n(380335),
     v = n(309199),
     b = n(157550),
     M = n(97469),
@@ -36,7 +36,7 @@ var L = n(611924),
     G = n(715069),
     x = n(652215),
     k = n(375708),
-    F = n(958847);
+    F = n(862279);
 let V = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
@@ -173,7 +173,7 @@ class B extends r.Component {
                       className: F._e,
                       children: [
                           (0, i.jsx)("span", { className: F.TK, children: k.intl.string(k.t.YUU0RF) }),
-                          (0, i.jsx)(D.Ay, {
+                          (0, i.jsx)(y.Ay, {
                               tooltip: k.intl.string(k.t.bA875g),
                               tooltipPosition: "top",
                               className: F.U2,
@@ -238,9 +238,9 @@ let H = function (e) {
         u = r.Children.count(s),
         _ = P.A.getMutablePrivateChannels(),
         E = (0, v.uX)(_),
-        h = (0, d.yK)([w.A, y.A, b.A], () => {
+        h = (0, d.yK)([w.A, D.A, b.A], () => {
             let e = w.A.getPrivateChannelIds();
-            return (0, v.eh)(e, [y.A, b.A]);
+            return (0, v.eh)(e, [D.A, b.A]);
         });
     (0, L.P)(R);
     let { analyticsLocations: p } = (0, T.Ay)(f.A.CONTACTS_LIST),
@@ -251,7 +251,7 @@ let H = function (e) {
         })),
         C = r.useRef(null),
         O = c ?? C,
-        D = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 let t = O.current,
                     n = document.querySelector(e);
@@ -295,7 +295,7 @@ let H = function (e) {
             scrollToStart: U,
             scrollToEnd: G,
             defaultFocused: (u + 1).toString(),
-            setFocus: D,
+            setFocus: y,
         });
     return (0, i.jsx)(T.f5, {
         value: p,

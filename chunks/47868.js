@@ -1,6 +1,6 @@
 t.d(n, { A: () => m });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(815021),
@@ -9,7 +9,7 @@ var l = t(627968),
     u = t(834730),
     d = t(320448),
     A = t(375708),
-    h = t(291552);
+    h = t(898491);
 function m(e) {
     let {
             className: n,
@@ -19,17 +19,17 @@ function m(e) {
             description: C,
             userCount: E,
             onClick: p,
-            highlight: x,
-            onDismiss: g,
+            highlight: g,
+            onDismiss: x,
         } = e,
         f = i.useCallback(
             (e) => {
-                e.stopPropagation(), g?.();
+                e.stopPropagation(), x?.();
             },
-            [g],
+            [x],
         );
     return (0, l.jsxs)(o.D, {
-        className: a()(h.kL, n, null != x && { [h.U6]: x }),
+        className: a()(h.kL, n, null != g && { [h.U6]: g }),
         onClick: p,
         children: [
             (0, l.jsx)("div", { className: a()(h.Kk, t), children: s }),
@@ -58,7 +58,7 @@ function m(e) {
                         : null,
                 ],
             }),
-            null != g
+            null != x
                 ? (0, l.jsx)("div", { className: h.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: f }) })
                 : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: h.OW }),
         ],

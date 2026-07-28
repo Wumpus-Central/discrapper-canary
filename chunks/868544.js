@@ -1,6 +1,6 @@
 d.r(a), d.d(a, { default: () => m });
-var c = d(627968);
-d(64700);
+var c = d(477900);
+d(582128);
 let t =
     "https://cdn.discordapp.com/assets/content/25db3694287e08eae733a6a231e2928d1839893a68f9284cd7cfebfe73966a84.png";
 function s(e) {
@@ -71,7 +71,7 @@ function p(e) {
         role: s ?? "img",
     });
 }
-var b = d(762232);
+var b = d(240960);
 function x() {
     return (0, c.jsxs)("div", {
         className: b.Re,

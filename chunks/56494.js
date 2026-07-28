@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { F: () => l });
-var i = n(64700),
+n.d(t, { F: () => o });
+var i = n(582128),
     r = n(17928),
-    s = n(594061),
-    a = n(26909),
-    o = n(355097);
-function l(e) {
+    a = n(594061),
+    s = n(26909),
+    l = n(355097);
+function o(e) {
     i.useEffect(() => {
-        s.bW.loadIfUncached(o.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        a.bW.loadIfUncached(l.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let t = (0, r.bG)([a.Ay], () => a.Ay.getTopCommandsWithoutLoadingLatest());
-    return i.useMemo(() => (0, a.RG)(t, e), [t, e]);
+    let t = (0, r.bG)([s.Ay], () => s.Ay.getTopCommandsWithoutLoadingLatest());
+    return i.useMemo(() => (0, s.RG)(t, e), [t, e]);
 }

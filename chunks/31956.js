@@ -1,11 +1,11 @@
 n.d(t, { A: () => c });
-var i = n(64700),
-    r = n(702841),
-    l = n(47675),
+var i = n(582128),
+    l = n(702841),
+    r = n(47675),
     s = n(590180);
 function c(e) {
     let { skuId: t, openedAt: n, context: c, analyticsLocations: a } = e,
-        o = (0, r.bG)([s.A], () => s.A.getProductFetch(t)),
+        o = (0, l.bG)([s.A], () => s.A.getProductFetch(t)),
         u = (0, i.useRef)(void 0),
         d = (0, i.useRef)(void 0),
         _ = (0, i.useRef)(void 0),
@@ -19,7 +19,7 @@ function c(e) {
             o?.state !== "success" ||
                 I.current ||
                 ((I.current = !0),
-                (0, l.wd)({
+                (0, r.wd)({
                     profileUi: "PROFILE_FRAME",
                     timeToInteractiveMs: u.current,
                     timeToLoadMs: e - n,

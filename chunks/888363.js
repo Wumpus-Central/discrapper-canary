@@ -1,8 +1,8 @@
 i.d(e, { default: () => v });
-var a = i(627968),
-    s = i(64700),
+var a = i(477900),
+    s = i(582128),
     n = i(935462),
-    l = i(534514),
+    l = i(297264),
     r = i(834730),
     c = i(331322),
     o = i(292666),
@@ -17,7 +17,7 @@ var a = i(627968),
     f = i(652215),
     g = i(315290),
     A = i(375708),
-    N = i(541028);
+    N = i(185964);
 function S(t) {
     let { email: e, setEmail: i, claimRequired: p, onSuccess: C, onClose: f } = t,
         [S, b] = s.useState(),

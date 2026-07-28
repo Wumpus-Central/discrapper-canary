@@ -1,45 +1,45 @@
 "use strict";
-n.d(t, { Op: () => h, R7: () => c, sk: () => d }), n(627968);
-var i = n(64700),
+n.d(t, { Op: () => E, R7: () => c, sk: () => u }), n(477900);
+var i = n(582128),
     r = n(52724),
-    s = n(621466),
-    a = n(650583);
-let o = "data-jump-section",
-    l = "global",
-    u = i.createContext(l);
+    a = n(621466),
+    s = n(650583);
+let l = "data-jump-section",
+    o = "global",
+    d = i.createContext(o);
 function c() {
-    let e = i.useContext(u);
-    return i.useMemo(() => ({ [o]: e }), [e]);
+    let e = i.useContext(d);
+    return i.useMemo(() => ({ [l]: e }), [e]);
 }
-function d(e) {
+function u(e) {
     let t = c();
     return e.children(t);
 }
 async function _(e) {
-    if (e.key !== a.mi) return;
-    let t = (0, s.BF)(e);
+    if (e.key !== s.mi) return;
+    let t = (0, a.BF)(e);
     if (null == t) return;
     let n = null,
         i = null,
-        u = e.target;
-    for (; null != u; ) {
-        if (u.hasAttribute(o)) {
-            (n = u.getAttribute(o)), (i = u);
+        d = e.target;
+    for (; null != d; ) {
+        if (d.hasAttribute(l)) {
+            (n = d.getAttribute(l)), (i = d);
             break;
         }
-        u = u.parentElement;
+        d = d.parentElement;
     }
     let c = (0, r.C)({
-        getFocusableElements: () => Array.from(t.querySelectorAll(`[${o}="${n ?? l}"]`)),
+        getFocusableElements: () => Array.from(t.querySelectorAll(`[${l}="${n ?? o}"]`)),
         getActiveElement: () => t.activeElement,
     });
-    (0, s.BF)(e)?.activeElement == null || null == i
+    (0, a.BF)(e)?.activeElement == null || null == i
         ? c.getFirstFocusableElement()?.focus()
         : e.getModifierState("Shift")
           ? (await c.getPreviousFocusableElement({ wrap: !0, from: i }))?.focus()
           : (await c.getNextFocusableElement({ wrap: !0, from: i }))?.focus();
 }
-function h(e) {
+function E(e) {
     i.useEffect(() => {
         if (e)
             return (

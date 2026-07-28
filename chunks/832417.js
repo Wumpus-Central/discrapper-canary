@@ -1,6 +1,6 @@
 n.d(t, { default: () => K });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     l = n.n(a),
     s = n(772707),
@@ -12,7 +12,7 @@ var i = n(627968),
     p = n(331322),
     _ = n(834730),
     I = n(289873);
-n(238819), n(743601), n(107439), n(740737);
+n(683590), n(896984), n(737952), n(348292);
 var E = n(736653),
     A = n(632738),
     C = n(295972),
@@ -24,7 +24,7 @@ var E = n(736653),
     v = n(731738),
     h = n(807393),
     b = n(40449),
-    k = n(898638);
+    k = n(465798);
 let m = { showTutorial: !0, autoCaptureTimeout: 10, captureAttempts: 3 },
     w = {
         ...m,
@@ -357,7 +357,7 @@ var j = n(793163),
     U = n(610402),
     q = n(516761),
     B = n(375708),
-    W = n(768971),
+    W = n(792675),
     G = n(700129);
 let K = function (e) {
     let { onClose: t, onComplete: n, onCancel: a, hideFooter: R, onDeviceIdCapture: y, transitionState: F } = e,

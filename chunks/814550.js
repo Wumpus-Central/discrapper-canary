@@ -1,46 +1,46 @@
 "use strict";
-n.d(t, { f: () => o, u: () => u });
+n.d(t, { f: () => l, u: () => d });
 var i,
-    r = n(64700),
-    s = n(735438),
-    a = n(860923),
-    o =
+    r = n(582128),
+    a = n(435558),
+    s = n(860923),
+    l =
         (((i = {}).IDLE = "idle"),
         (i.HEAD_TURN = "headTurn"),
         (i.HEAD_TURN_BACK = "headTurnBack"),
         (i.TALKING = "talking"),
         i);
-let l = {
+let o = {
         idle: ["headTurnBack", "talking"],
         headTurn: ["idle", "talking"],
         headTurnBack: ["headTurn"],
         talking: ["idle", "headTurnBack"],
     },
-    u = (e) => {
+    d = (e) => {
         let [t, n] = r.useState("idle"),
-            [i, o] = r.useState(),
-            u = (0, a.A)(),
-            c = r.useMemo(() => u?.characters[e], [u, e]),
-            d = r.useCallback(() => {
+            [i, l] = r.useState(),
+            d = (0, s.A)(),
+            c = r.useMemo(() => d?.characters[e], [d, e]),
+            u = r.useCallback(() => {
                 if (null == c) return i;
                 let e = c[t];
-                return (0, s.sample)(e);
+                return (0, a.sample)(e);
             }, [i, c, t]);
         return (
             r.useEffect(() => {
-                o(d());
-            }, [u, e, d]),
+                l(u());
+            }, [d, e, u]),
             r.useEffect(() => {
-                o(() => d());
+                l(() => u());
             }, [t]),
             {
                 animationState: t,
                 updateAnimationState: function (e) {
-                    return e === t ? t : l[e].includes(t) ? (n(e), e) : t;
+                    return e === t ? t : o[e].includes(t) ? (n(e), e) : t;
                 },
                 asset: i,
-                setAsset: o,
-                sampleAsset: d,
+                setAsset: l,
+                sampleAsset: u,
                 findAnimationTree: function () {
                     let e = 0,
                         n = new Set([t]);

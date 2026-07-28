@@ -1,6 +1,6 @@
 s.d(r, { A: () => h });
-var t = s(627968),
-    i = s(64700),
+var t = s(477900),
+    i = s(582128),
     C = s(953727);
 let h = i.forwardRef(function (e, r) {
     let { width: s = 24, height: i = 24, color: h = "currentColor", foreground: L, ...a } = e;

@@ -1,5 +1,5 @@
 s.d(t, { L: () => c, u: () => l });
-var a = s(64700),
+var a = s(582128),
     u = s(155078);
 function c(e) {
     let { protocol: t, hostname: s } = a.useMemo(() => ({ protocol: (0, u.J)(e), hostname: (0, u.E)(e) }), [e]),

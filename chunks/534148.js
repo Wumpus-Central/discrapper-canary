@@ -1,7 +1,7 @@
 n.d(t, { A: () => ef });
 var i,
-    l = n(627968),
-    s = n(64700),
+    l = n(477900),
+    s = n(582128),
     a = n(435558),
     r = n.n(a),
     o = n(136722),
@@ -55,8 +55,8 @@ var W = n(43105),
     Y = n(174459),
     q = n(562153),
     Q = n(935208),
-    Z = n(53656),
-    J = n(200662),
+    J = n(53656),
+    Z = n(200662),
     X = n(739174),
     $ = n(503698),
     ee = n.n($),
@@ -146,13 +146,13 @@ function ec(e) {
         }, [i, r, u]),
         p = s.useCallback(
             (e, t) => {
-                n({}, [(0, J.Eu)(e, t)]);
+                n({}, [(0, Z.Eu)(e, t)]);
             },
             [n],
         ),
         f = s.useCallback(
             (e, t, i) => {
-                let l = (0, J.Eu)(e, t);
+                let l = (0, Z.Eu)(e, t);
                 null != r[l] && n({ [l]: { id: e, permission: i, type: t } }, []);
             },
             [n, r],
@@ -164,8 +164,8 @@ function ec(e) {
         0 !== e.length && (H.A.requestMembersById(i, e, !1), g((t) => new Set([...t, ...e])));
     }, [i, r, m, g]);
     let N = (0, c.bG)([C.A], () => C.A.getApplicationId()),
-        E = (0, c.bG)([Z.default], () =>
-            null == N ? void 0 : Z.default.integrations.find((e) => e.application?.id === N),
+        E = (0, c.bG)([J.default], () =>
+            null == N ? void 0 : J.default.integrations.find((e) => e.application?.id === N),
         ),
         v = (0, c.bG)([K.A], () => void 0 !== E && K.A.canShowToggleTooltip(E.id));
     return h.length > 0

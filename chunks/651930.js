@@ -1,6 +1,6 @@
 n.d(t, { default: () => y, i: () => N }), n(321073);
-var a = n(627968),
-    i = n(64700),
+var a = n(477900),
+    i = n(582128),
     l = n(562708),
     s = n(189213),
     r = n(17928),
@@ -21,7 +21,7 @@ var a = n(627968),
     j = n(21241),
     k = n(652215),
     C = n(375708),
-    w = n(247947);
+    w = n(520467);
 let G = i.memo(function (e) {
         let { game: t } = e,
             n = (0, r.bG)([m.A], () => m.A.getApplicationByName(t.name) ?? m.A.getApplication(t.id), [t.id, t.name]),

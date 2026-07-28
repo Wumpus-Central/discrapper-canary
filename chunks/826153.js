@@ -1,8 +1,8 @@
 s.d(e, { default: () => T });
-var i = s(627968),
-    a = s(64700),
-    l = s(503698),
-    n = s.n(l),
+var i = s(477900),
+    a = s(582128),
+    n = s(503698),
+    l = s.n(n),
     r = s(390544),
     d = s(224640),
     c = s(20742),
@@ -12,10 +12,10 @@ var i = s(627968),
     p = s(834730),
     x = s(821609),
     h = s(624479),
-    g = s(793574),
-    A = s(46054),
+    A = s(793574),
+    g = s(46054),
     j = s(546385),
-    N = s(396748),
+    N = s(469014),
     S = s(522055),
     E = s(500897),
     f = s(117265),
@@ -23,13 +23,13 @@ var i = s(627968),
     I = s(375708),
     C = s(110860);
 function T(t) {
-    let { guildId: e, instance: s, onClose: l, transitionState: T } = t,
+    let { guildId: e, instance: s, onClose: n, transitionState: T } = t,
         _ = (0, u.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
     a.useEffect(() => {
         null == _ && (0, N.tT)(e, s.planId);
     }, [e, s.planId, _]);
     let b = (0, f.A)(s),
-        { handleCopyServerIp: M, animateCopyIcon: k } = (0, E.A)(e, s.id, g.A.GAME_SERVER_INSTRUCTIONS_MODAL, b ?? ""),
+        { handleCopyServerIp: M, animateCopyIcon: k } = (0, E.A)(e, s.id, A.A.GAME_SERVER_INSTRUCTIONS_MODAL, b ?? ""),
         G = a.useMemo(() => {
             switch (s.status) {
                 case r.M.STARTING:
@@ -41,10 +41,10 @@ function T(t) {
             }
         }, [s.status]);
     return (0, i.jsxs)(d.d, {
-        size: "lg",
+        size: "md",
         paddingSize: "lg",
         transitionState: T,
-        onClose: l,
+        onClose: n,
         "aria-label": s.name,
         children: [
             (0, i.jsx)(c.rQ, {
@@ -85,7 +85,7 @@ function T(t) {
                                               (0, i.jsx)(p.E, {
                                                   variant: "text-sm/normal",
                                                   color: "text-subtle",
-                                                  children: A.A.parse(t, !1, { allowLinks: !0 }),
+                                                  children: g.A.parse(t, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
@@ -98,7 +98,7 @@ function T(t) {
                                   className: C.i7,
                                   children: [
                                       (0, i.jsx)("div", {
-                                          className: n()(C.Nk, k && C.i0),
+                                          className: l()(C.Nk, k && C.i0),
                                           children: (0, i.jsx)(p.E, {
                                               variant: "text-md/medium",
                                               color: "text-strong",

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, { default: () => V }), n(321073);
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(4798),
+    l = n(461376),
     o = n(337836),
     d = n(17928),
     c = n(876230),
@@ -109,8 +109,8 @@ let k = { tension: 250, friction: 5, clamp: !0 },
             { focused: eZ, focusedChanged: eX } = (0, b.A7)(),
             { visible: eQ, visibleChanged: eJ, targetRef: e0 } = (0, b.O7)(),
             [e1, e2] = r.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
-            [e3, e6] = r.useState(!1),
-            [e4, e5] = r.useState(!1),
+            [e3, e4] = r.useState(!1),
+            [e6, e5] = r.useState(!1),
             [e7, e8] = r.useState(0),
             [e9, te] = r.useState(null),
             tt = r.useCallback((e) => {
@@ -167,8 +167,8 @@ let k = { tension: 250, friction: 5, clamp: !0 },
             [tQ, tJ] = r.useState(null),
             [t0, t1] = r.useState(0),
             [t2, t3] = r.useState(!1),
-            t6 = Z ?? tk.current?.duration ?? 0,
-            [t4, t5] = r.useState(c.oA.MD),
+            t4 = Z ?? tk.current?.duration ?? 0,
+            [t6, t5] = r.useState(c.oA.MD),
             t7 = { [c.oA.MD]: 56, [c.oA.LG]: 64 };
         (0, p.u5)(() => {
             tB.current && (tB.current = !1);
@@ -256,7 +256,7 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                 },
                 [],
             );
-        let na = !t9 && (e4 || e3 || e1 === c.Q6.ENDED),
+        let na = !t9 && (e6 || e3 || e1 === c.Q6.ENDED),
             ns = r.useRef(et);
         ns.current = et;
         let nl = r.useCallback(() => {
@@ -270,7 +270,7 @@ let k = { tension: 250, friction: 5, clamp: !0 },
         }
         function nd() {
             if (null == tk.current) return;
-            let e = Math.min((td.current ?? tk.current.currentTime) + 10, t6);
+            let e = Math.min((td.current ?? tk.current.currentTime) + 10, t4);
             nc(e), e1 !== c.Q6.ENDED && e >= tk.current.duration && t8(c.Q6.ENDED, c.KB.SEEK);
         }
         r.useEffect(() => {
@@ -432,13 +432,13 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                     tabIndex: tN ? -1 : 0,
                     focusProps: tN ? void 0 : { ringTarget: tn },
                     onMouseEnter: function () {
-                        e6(!0),
+                        e4(!0),
                             ne(!1),
                             (nn.current = performance.now()),
                             null != nt.current && clearTimeout(nt.current);
                     },
                     onMouseLeave: function () {
-                        e6(!1), ne(!1);
+                        e4(!1), ne(!1);
                     },
                     "aria-label": tN ? void 0 : G.intl.string(G.t.RscU7I),
                     onClick: tN ? void 0 : n_,
@@ -597,7 +597,7 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                                             className: s()(x.xr, ep, { [x.MZ]: "portrait" === V }),
                                             "data-testid": "discord-web-video-player-transcript",
                                             style: {
-                                                marginBottom: (0, l.to)([nI, nT], (e, t) => `${e * t7[t4] + t}px`),
+                                                marginBottom: (0, l.to)([nI, nT], (e, t) => `${e * t7[t6] + t}px`),
                                             },
                                             children: (0, i.jsx)(D.X, {
                                                 text: Q,
@@ -639,7 +639,7 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                                     "data-testid": "discord-web-video-player-captions",
                                     style: {
                                         translateY: (0, l.to)(
-                                            [nI.to({ range: [0, 1], output: [-20, -t7[t4]] })],
+                                            [nI.to({ range: [0, 1], output: [-20, -t7[t6]] })],
                                             (e) => `${e}px`,
                                         ),
                                     },
@@ -655,7 +655,7 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                                     className: x.r8,
                                     style: {
                                         height: (0, l.to)(
-                                            [nI.to({ range: [0, 1], output: [0, t7[t4]] })],
+                                            [nI.to({ range: [0, 1], output: [0, t7[t6]] })],
                                             (e) => `${e}px`,
                                         ),
                                     },
@@ -677,13 +677,13 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                                                         e1 === c.Q6.PLAYING &&
                                                         t2 &&
                                                         ts === c.h$.READY,
-                                                    interactionEnabled: tp && t6 > 0,
+                                                    interactionEnabled: tp && t4 > 0,
                                                     backgroundColor: na || eM ? void 0 : "rgba(0, 0, 0, 0.0)",
                                                     playerState: e1,
                                                     preloadedBuffers: na ? tc : void 0,
                                                     durationSec: t0 > 0 ? t0 : +!t2,
                                                     isFullyVisible: na && tp,
-                                                    maxSeekableTime: null != Z && t6 > 0 ? t6 : void 0,
+                                                    maxSeekableTime: null != Z && t4 > 0 ? t4 : void 0,
                                                     progressClassName: ev,
                                                     persistPlayhead: eP,
                                                     onClick: nh,
@@ -751,14 +751,14 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                                                 animSpring: nI,
                                                 visible: na,
                                                 seekForwardEnabled:
-                                                    null == Z || (tk.current?.currentTime ?? 0) + 1 < t6,
+                                                    null == Z || (tk.current?.currentTime ?? 0) + 1 < t4,
                                                 hideCaptionBtn: null == X,
                                                 hideTranscriptBtn: null == Q,
                                                 hideFullScreenBtn: eO,
                                                 hidePlaybackSpeedBtn: ey,
                                                 hideSkipButtons: eR ?? "portrait" === V,
                                                 compactTimeDisplay: eL,
-                                                size: t4,
+                                                size: t6,
                                                 downloadUrl: eS,
                                                 downloadContentType: eN,
                                                 extraButtons: eC,

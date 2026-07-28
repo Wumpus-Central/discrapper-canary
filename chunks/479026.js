@@ -1,24 +1,24 @@
-s.d(a, { e: () => e });
-var t = s(64700),
-    d = s(793574),
-    c = s(722258);
-function e(i) {
+o.d(i, { e: () => r });
+var n = o(582128),
+    e = o(793574),
+    u = o(722258);
+function r(t) {
     let {
-        sku: a,
-        analyticsLocations: s,
-        analyticsSource: e = d.A.USER_PROFILE_WISHLIST,
-        giftRecipient: u,
-        giftingOrigin: n,
-    } = i;
-    return t.useCallback(() => {
-        (0, c.B)({
-            skuId: a.id,
-            analyticsLocations: s ?? [],
-            analyticsSource: e,
+        sku: i,
+        analyticsLocations: o,
+        analyticsSource: r = e.A.USER_PROFILE_WISHLIST,
+        giftRecipient: c,
+        giftingOrigin: s,
+    } = t;
+    return n.useCallback(() => {
+        (0, u.B)({
+            skuId: i.id,
+            analyticsLocations: o ?? [],
+            analyticsSource: r,
             returnRef: void 0,
             tab: void 0,
-            giftRecipient: u,
-            giftingOrigin: n,
+            giftRecipient: c,
+            giftingOrigin: s,
         });
-    }, [s, e, u, n, a.id]);
+    }, [o, r, c, s, i.id]);
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => h });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(847374),
@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(367513),
     c = n(204651),
     u = n(375708),
-    _ = n(139352);
+    _ = n(777728);
 function E(e) {
     let { className: t, isVertical: n } = e;
     return (0, i.jsxs)("div", {

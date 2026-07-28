@@ -1,11 +1,11 @@
 let n;
 s.r(t), s.d(t, { default: () => lD }), s(323874), s(14289), s(35956);
 var l,
-    r = s(627968),
-    i = s(64700),
+    r = s(477900),
+    i = s(582128),
     a = s(503698),
     o = s.n(a),
-    u = s(873263),
+    u = s(806163),
     c = s(562708),
     d = s(607399),
     m = s(323889),
@@ -427,7 +427,7 @@ let eX = i.memo(function (e) {
         ],
     });
 });
-var eZ = s(4798);
+var eZ = s(461376);
 function e0(e, t, s) {
     if (null != s) {
         if (e)
@@ -446,8 +446,8 @@ var e1 = s(440703),
     e7 = s(621466),
     e8 = s(717421),
     e4 = s(939249),
-    e3 = s(187322),
-    e6 = s(508770),
+    e6 = s(259678),
+    e3 = s(508770),
     e5 = s(406810),
     e9 = s(628284),
     te = s(65154),
@@ -700,7 +700,7 @@ function tj(e) {
                                     `linear-gradient(to bottom, rgba(0,0,0,${1 - e}), #000 48px, #000 calc(100% - 48px), rgba(0,0,0,${1 - t}))`,
                             ),
                         },
-                        children: (0, r.jsx)(e3.vN, {
+                        children: (0, r.jsx)(e6.vN, {
                             children: (0, r.jsx)(eF.Ch, {
                                 ref: h,
                                 className: tf.hw,
@@ -820,10 +820,10 @@ function tS(e) {
                 direction: "horizontal",
                 gap: 4,
                 children: [
-                    (0, r.jsx)(e6.E, { type: { text: j } }),
+                    (0, r.jsx)(e3.E, { type: { text: j } }),
                     (0, r.jsx)(eZ.animated.div, {
                         style: { opacity: (0, tx.a)(b.to([0, 1], [1, 0])) },
-                        children: (0, r.jsx)(e6.E, { type: { text: x }, icon: e5.O }),
+                        children: (0, r.jsx)(e3.E, { type: { text: x }, icon: e5.O }),
                     }),
                 ],
             }),
@@ -1562,8 +1562,8 @@ let t4 = function (e) {
         }),
     });
 };
-var t3 = s(242939),
-    t6 = s(717695),
+var t6 = s(242939),
+    t3 = s(717695),
     t5 = s(928050),
     t9 = s(152049);
 let se = function (e) {
@@ -1584,12 +1584,12 @@ let se = function (e) {
                         className: t5.Z,
                         children: (0, r.jsx)("div", {
                             className: t9.C3,
-                            children: (0, r.jsx)(t6.A, {
+                            children: (0, r.jsx)(t3.A, {
                                 children: (0, r.jsx)($.y5, {
                                     source: "preview",
                                     adCreativeId: t.id,
                                     adCreativeType: m.p.QUEST,
-                                    children: (0, r.jsx)(t3.QuestBar, { quest: t }),
+                                    children: (0, r.jsx)(t6.QuestBar, { quest: t }),
                                 }),
                             }),
                         }),
@@ -2338,7 +2338,7 @@ var s0 = s(97808),
     s7 = s(427262),
     s8 = s(198525),
     s4 = s(715672);
-let s3 = function (e) {
+let s6 = function (e) {
     let { quest: t } = e,
         [s, n] = i.useState(!1),
         l = i.useRef(null),
@@ -2425,7 +2425,7 @@ let s3 = function (e) {
         }),
     });
 };
-function s6(e) {
+function s3(e) {
     let { questId: t, selectedSections: s } = e,
         n = (0, E.bG)([ee.A], () => ee.A.getQuest(t));
     if (null != (0, E.bG)([ee.A], () => ee.A.getFetchQuestPreviewError(t)) || null == n) return null;
@@ -2441,7 +2441,7 @@ function s6(e) {
             l("channel_call_header") &&
                 (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(sn, { quest: n }), (0, r.jsx)(t2, {})] }),
             l("members_list") &&
-                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(s3, { quest: n }), (0, r.jsx)(t2, {})] }),
+                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(s6, { quest: n }), (0, r.jsx)(t2, {})] }),
             l("activity_panel") &&
                 (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(t4, { quest: n }), (0, r.jsx)(t2, {})] }),
         ],
@@ -2542,7 +2542,7 @@ let ne = function (e) {
         onSectionSelect: (e) => {
             "all" === e ? d([]) : d([e]);
         },
-        children: o?.id != null ? (0, r.jsx)(s6, { questId: o?.id, selectedSections: c }) : null,
+        children: o?.id != null ? (0, r.jsx)(s3, { questId: o?.id, selectedSections: c }) : null,
     });
 };
 var nt = s(203879),
@@ -3035,7 +3035,7 @@ let nw = (0, i.memo)(function (e) {
     }
     return null == S || u
         ? null
-        : (0, r.jsx)(e3.vN, {
+        : (0, r.jsx)(e6.vN, {
               children: (0, r.jsxs)("div", {
                   ref: d,
                   tabIndex: 0,
@@ -3362,14 +3362,14 @@ class n4 extends E.Ay.PersistedStore {
         return n;
     }
 }
-let n3 = new n4(ty.h, {
+let n6 = new n4(ty.h, {
         QUESTS_MARK_DISCOVERED: function (e) {
             if (null == ee.A.getQuest(e.questId)) return !1;
             let t = new Map(n);
             t.set(e.questId, new Date().toISOString()), (n = t);
         },
     }),
-    n6 = 2 * ta.A.Millis.DAY,
+    n3 = 2 * ta.A.Millis.DAY,
     n5 = new Map(eB.map((e) => [e.identifier, e])),
     n9 = {
         [ew.DISCOVERED]: function (e, t) {
@@ -3413,7 +3413,7 @@ let ls = function () {
             lt,
         ),
         a = (0, tL.T2)(),
-        o = (0, E.bG)([n3], () => n3.getDiscoveredAtByQuestId(), []),
+        o = (0, E.bG)([n6], () => n6.getDiscoveredAtByQuestId(), []),
         u = i.useMemo(() => (l || !s) && 0 === r.length, [l, s, r.length]),
         c = i.useMemo(
             () =>
@@ -3459,7 +3459,7 @@ let ls = function () {
                                         ? [...u, ew.IN_PROGRESS]
                                         : null != s && (0, tm.I0)(s, t.id) && le(ew.FEATURED, l)
                                           ? [...u, ew.FEATURED]
-                                          : new Date(t.expiresAt).valueOf() <= Date.now() + n6
+                                          : new Date(t.expiresAt).valueOf() <= Date.now() + n3
                                             ? [...u, ew.ENDING_SOON]
                                             : le(ew.FEATURED, l)
                                               ? [...u, ew.FEATURED]
@@ -3647,7 +3647,7 @@ let ll = {
             }),
         });
     });
-var la = s(353640),
+var la = s(196765),
     lo = s(121894),
     lu = s(851936);
 let lc = (0, la.v)((e, t) => ({

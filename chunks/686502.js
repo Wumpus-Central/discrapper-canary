@@ -1,6 +1,6 @@
-n.d(t, { y: () => M });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { y: () => D });
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(554146),
@@ -8,12 +8,12 @@ var i = n(627968),
     c = n(866665),
     d = n(939249),
     u = n(323384),
-    p = n(43990),
-    h = n(285796),
+    h = n(43990),
+    p = n(285796),
     m = n(192308),
     A = n(231723),
-    x = n(825484),
-    f = n(821609),
+    f = n(825484),
+    x = n(821609),
     g = n(283973),
     C = n(834730),
     y = n(789645),
@@ -31,8 +31,8 @@ var i = n(627968),
     L = n(652215),
     O = n(375708),
     w = n(361595),
-    D = n(867010);
-function M(e) {
+    M = n(867010);
+function D(e) {
     let {
         channel: t,
         guild: n,
@@ -45,8 +45,8 @@ function M(e) {
     return l < 250
         ? (0, i.jsx)(U, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
-          ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
-          : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
+          ? (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+          : (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
@@ -74,13 +74,13 @@ function U(e) {
                         }),
                     }),
                 }),
-                (0, i.jsx)(p.N, {
+                (0, i.jsx)(h.N, {
                     theme: L.NJ8.DARK,
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
                             className: s()(e, w.lg),
-                            children: (0, i.jsx)(h.a, {
+                            children: (0, i.jsx)(p.a, {
                                 size: "md",
                                 color: "currentColor",
                                 className: w.yP,
@@ -92,7 +92,7 @@ function U(e) {
         }),
     });
 }
-function V(e) {
+function k(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
         S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -101,7 +101,7 @@ function V(e) {
         });
     }, []);
     let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
-    function h() {
+    function p() {
         (0, m.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
@@ -126,26 +126,26 @@ function V(e) {
     }
     return (0, i.jsx)(I.f5, {
         value: c,
-        children: (0, i.jsx)(p.N, {
+        children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
             theme: L.NJ8.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(P.A, {
                     className: s()(w.zr, w.co, e),
                     children: [
-                        (0, i.jsx)("img", { src: D, className: w.Qw, alt: "" }),
-                        (0, i.jsxs)(x.e, {
+                        (0, i.jsx)("img", { src: M, className: w.Qw, alt: "" }),
+                        (0, i.jsxs)(f.e, {
                             justify: "center",
                             align: "center",
                             children: [
-                                (0, i.jsx)(f.$, {
+                                (0, i.jsx)(x.$, {
                                     variant: "secondary",
                                     icon: g.R,
                                     text: O.intl.string(O.t["EE+P0H"]),
-                                    onClick: h,
+                                    onClick: p,
                                 }),
                                 o &&
-                                    (0, i.jsx)(f.$, {
+                                    (0, i.jsx)(x.$, {
                                         variant: "secondary",
                                         icon: u.k,
                                         text: O.intl.string(O.t.qnFavR),
@@ -158,7 +158,7 @@ function V(e) {
         }),
     });
 }
-function k(e) {
+function V(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, j.Ay)(() => {
         S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -167,10 +167,10 @@ function k(e) {
         });
     });
     let u = (0, v.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: p } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
-        h = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
+        { analyticsLocations: h } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
+        p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(I.f5, {
-        value: p,
+        value: h,
         children: (0, i.jsxs)(P.A, {
             className: w.zr,
             children: [
@@ -187,7 +187,7 @@ function k(e) {
                         (0, i.jsx)(
                             E.C,
                             {
-                                context: h,
+                                context: p,
                                 activityItem: e,
                                 aspectRatio: E.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: w.KU,

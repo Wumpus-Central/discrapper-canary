@@ -1,6 +1,6 @@
-t.d(i, { A: () => R }), t(321073);
-var n = t(627968),
-    l = t(64700),
+t.d(i, { A: () => D }), t(321073);
+var n = t(477900),
+    l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(17928),
@@ -20,7 +20,7 @@ var n = t(627968),
     S = t(481947),
     _ = t(616356),
     E = t(280450),
-    N = t(186295),
+    N = t(293246),
     y = t(576705),
     C = t(290863),
     b = t(528767),
@@ -30,8 +30,8 @@ var n = t(627968),
     O = t(340851),
     P = t(652215),
     k = t(31408),
-    V = t(588533);
-let w = l.memo((e) => {
+    V = t(566173);
+let R = l.memo((e) => {
     let { mute: i, deaf: t, user: l, channel: s, sessionId: a, nick: d } = e,
         f = l.id,
         I = (0, r.bG)([E.default], () => E.default.getId() === f, [f]),
@@ -44,9 +44,9 @@ let w = l.memo((e) => {
             [I, f],
         ),
         V = (0, r.bG)([j.A], () => j.A.isPrioritySpeaker(f)),
-        w = (0, u.A)({ userId: f, checkSoundSharing: !0 }),
-        D = (0, p.A)(s.guild_id, f),
-        R = (0, r.bG)([g.A], () => g.A.getGuildRingingUsers(s.id).has(f)),
+        R = (0, u.A)({ userId: f, checkSoundSharing: !0 }),
+        w = (0, p.A)(s.guild_id, f),
+        D = (0, r.bG)([g.A], () => g.A.getGuildRingingUsers(s.id).has(f)),
         U = (0, r.bG)(
             [o.Ay],
             () =>
@@ -71,11 +71,11 @@ let w = l.memo((e) => {
         H = (0, x.uy)(s.id, f);
     return (0, n.jsx)(v.A, {
         shakeLocation: k.uD.VOICE_USER,
-        isShaking: w,
+        isShaking: R,
         children: (0, n.jsx)(O.Ay, {
             ...e,
             nick: d ?? $,
-            canDrag: e.canDrag && !D,
+            canDrag: e.canDrag && !w,
             disconnected: H,
             otherClientSessionType: Y?.clientInfo?.os,
             voicePlatform: q,
@@ -83,22 +83,22 @@ let w = l.memo((e) => {
             localVideoDisabled: C,
             mute: i || S,
             deaf: t || y,
-            speaking: w,
-            ringing: R,
+            speaking: R,
+            ringing: D,
             priority: V,
             embeddedApplication: M[0],
             isStreaming: null != K && K.channelId === s.id,
             isWatching: null != B && B.state !== P.XYD.ENDED,
-            isGuest: D,
+            isGuest: w,
             isSelf: I,
             application: L?.session_id != null ? F : void 0,
             game: L?.session_id != null ? (z ?? void 0) : void 0,
         }),
     });
 });
-w.displayName = "ConnectedVoiceUser";
-let D = [],
-    R = function (e) {
+R.displayName = "ConnectedVoiceUser";
+let w = [],
+    D = function (e) {
         let {
                 allowPreviews: i = !0,
                 allowDragging: t = !0,
@@ -115,8 +115,8 @@ let D = [],
             } = e,
             [b, j] = l.useState(null),
             T = l.useRef(null),
-            G = (0, x.$n)(s.id, u ?? D),
-            { shouldShow: k, dismiss: R } = (0, I.Z0)(s, { collapsed: o }),
+            G = (0, x.$n)(s.id, u ?? w),
+            { shouldShow: k, dismiss: D } = (0, I.Z0)(s, { collapsed: o }),
             U = l.useRef(
                 new d.J_(50, () => {
                     j(T.current), (T.current = null);
@@ -163,7 +163,7 @@ let D = [],
                     let { user: t, nick: l, voiceState: a } = e,
                         r = i.has(t.id);
                     return (0, n.jsx)(
-                        w,
+                        R,
                         {
                             user: t,
                             nick: l,
@@ -189,7 +189,7 @@ let D = [],
                 null != h && h > 0
                     ? t.push((0, n.jsx)(O.aI, { collapsed: o, numAudience: h }, "audience"))
                     : o && G.length > c + 1 && t.push((0, n.jsx)(O.LR, { numUsers: G.length - c }, "collapsed-users")),
-                k && t.push((0, n.jsx)(f.p, { channel: s, onClose: R }, "voice-invite-suggestions-button")),
+                k && t.push((0, n.jsx)(f.p, { channel: s, onClose: D }, "voice-invite-suggestions-button")),
                 t
             );
         })();

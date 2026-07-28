@@ -1,12 +1,12 @@
 s.d(i, { default: () => u });
-var e = s(627968),
-    a = s(64700),
+var e = s(477900),
+    a = s(582128),
     n = s(189213),
     l = s(778712),
     r = s(834730),
     c = s(656925),
     o = s(375708),
-    d = s(918684);
+    d = s(384516);
 function u(t) {
     let { avatarId: i, storageHash: s, avatarDescription: u, onConfirmDelete: x, onClose: h, ...m } = t,
         [p, v] = a.useState(!1),

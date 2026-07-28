@@ -1,6 +1,6 @@
-l.d(t, { A: () => v });
-var s = l(627968),
-    i = l(64700),
+l.d(t, { A: () => A });
+var s = l(477900),
+    i = l(582128),
     a = l(503698),
     n = l.n(a),
     r = l(3666),
@@ -11,9 +11,9 @@ var s = l(627968),
     h = l(900797),
     m = l(847374),
     p = l(770178),
-    g = l(346970),
+    g = l(124589),
     x = l(375708),
-    A = l(948999);
+    v = l(653967);
 function j(e) {
     let { onTabSelect: t, tabs: l, selectedTab: a } = e,
         r = i.useMemo(
@@ -26,7 +26,7 @@ function j(e) {
             [a, l],
         ),
         [p, j] = i.useState(!1),
-        v = (function (e) {
+        A = (function (e) {
             let { selected: t, isHovered: l } = e;
             return l ? "text-strong" : t ? "text-brand" : "text-default";
         })({ selected: r, isHovered: p }),
@@ -52,19 +52,19 @@ function j(e) {
                 id: "more",
                 look: "brand",
                 selectedItem: r ? "more" : void 0,
-                className: n()(A.Mf, { [A.wH]: !1 }),
+                className: n()(v.Mf, { [v.wH]: !1 }),
                 clickableRef: (e) => {
                     null != e && null != e.ref && (E.current = e.ref);
                 },
                 "aria-label": x.intl.string(x.t["UKOtz+"]),
                 children: (0, s.jsxs)("div", {
-                    className: A.OS,
+                    className: v.OS,
                     onMouseEnter: _,
                     onMouseLeave: I,
                     children: [
                         (0, s.jsx)(u.E, {
                             variant: "text-sm/semibold",
-                            color: v,
+                            color: A,
                             children: x.intl.string(x.t["UKOtz+"]),
                         }),
                         l ? (0, s.jsx)(h.t, { size: "xs", color: C }) : (0, s.jsx)(m.a, { size: "xs", color: C }),
@@ -74,13 +74,13 @@ function j(e) {
         },
     });
 }
-function v(e) {
+function A(e) {
     let { className: t, selectedTab: l, tabs: a, onTabSelect: o, onAvailableWidthChange: c } = e,
         [h, m] = i.useState(0),
         g = i.useRef(h),
         {
             lastVisibleIndex: x,
-            onItemLayout: v,
+            onItemLayout: A,
             overflowItemsRef: C,
             itemWidthsRef: _,
         } = (0, r.Wv)({ items: a, itemGapPx: 20, maxLines: 1, containerWidth: h }),
@@ -100,22 +100,22 @@ function v(e) {
     (0, p.g)(f, N);
     let S = 0 !== h;
     return (0, s.jsxs)("div", {
-        className: n()(A.kL, t),
+        className: n()(v.kL, t),
         ref: f,
         children: [
             (0, s.jsxs)("div", {
-                className: A.Kk,
+                className: v.Kk,
                 children: [
                     a.map((e, t) =>
                         (0, s.jsx)(
                             r.Ae,
                             {
                                 index: t,
-                                onItemLayout: v,
+                                onItemLayout: A,
                                 children: (0, s.jsx)(d.V.Item, {
                                     id: e.id,
                                     "aria-label": e.label,
-                                    className: A.Mf,
+                                    className: v.Mf,
                                     children: (0, s.jsx)(u.E, { variant: "text-md/medium", children: e.label }),
                                 }),
                             },
@@ -131,12 +131,12 @@ function v(e) {
                     look: "brand",
                     selectedItem: l,
                     onItemSelect: o,
-                    className: A.vR,
+                    className: v.vR,
                     children: [
                         I.map((e) =>
                             (0, s.jsx)(
                                 d.V.Item,
-                                { id: e.id, look: "brand", "aria-label": e.label, className: A.Mf, children: e.label },
+                                { id: e.id, look: "brand", "aria-label": e.label, className: v.Mf, children: e.label },
                                 e.id,
                             ),
                         ),

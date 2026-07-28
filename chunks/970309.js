@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { default: () => tI });
-var s = n(627968),
-    l = n(64700),
+var s = n(477900),
+    l = n(582128),
     i = n(503698),
     a = n.n(i),
     r = n(837381),
@@ -27,7 +27,7 @@ var s = n(627968),
     N = n(821609),
     M = n(355622),
     T = n(58736),
-    G = n(353428),
+    G = n(131047),
     k = n(380335),
     y = n(157550),
     P = n(923457),
@@ -161,7 +161,7 @@ function eN(e) {
 }
 var eM = n(625494),
     eT = n(615300),
-    eG = n(187322),
+    eG = n(259678),
     ek = n(442433),
     ey = n(914147);
 let eP = function (e) {
@@ -258,11 +258,11 @@ var eB = n(707539),
     e7 = n(863439),
     e9 = n(521981),
     e1 = n(308334),
-    e3 = n(302031),
-    e8 = n(885386),
-    e4 = n(576705),
-    e6 = n(652215),
-    e2 = n(838541),
+    e8 = n(302031),
+    e4 = n(885386),
+    e3 = n(576705),
+    e2 = n(652215),
+    e6 = n(838541),
     e5 = n(716098),
     te = n(742715);
 let tt = l.memo(function (e) {
@@ -276,8 +276,8 @@ let tt = l.memo(function (e) {
             }),
             [r],
         ),
-        u = (0, o.bG)([e4.A], () => e4.A.can(e6.xBc.MANAGE_MESSAGES, t)),
-        h = e8.gs.useSetting(),
+        u = (0, o.bG)([e3.A], () => e3.A.can(e2.xBc.MANAGE_MESSAGES, t)),
+        h = e4.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -312,7 +312,7 @@ let tt = l.memo(function (e) {
             let { contentPlaceholder: e, renderedContent: t } = (0, e1.o)(r, m, c, d, a()(e5.BK, te.tZ), {
                 leadingIconClass: e5.AF,
                 trailingIconClass: e5.AF,
-                iconSize: e2.eJ,
+                iconSize: e6.eJ,
             });
             A =
                 null != t
@@ -332,7 +332,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t["0KfDxM"]),
             });
     else A = null;
-    return (0, s.jsx)(e3.Bs.Provider, {
+    return (0, s.jsx)(e8.Bs.Provider, {
         value: (0, e7.A)(h, u),
         children: (0, s.jsx)(e0.M, { className: e5.JY, children: A }),
     });
@@ -520,13 +520,13 @@ function tc(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                eu.default.track(e6.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: l.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e6.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tr, { active: e, user: i, channel: l, isRestricted: r }),
@@ -609,13 +609,13 @@ function tA(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                eu.default.track(e6.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: l.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e6.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tm, { active: e, user: i, channel: l }),
@@ -661,7 +661,7 @@ function tE() {
             b(d.map((e) => e.channel.id));
         }, [d, b]);
     (0, I.Ay)(() => {
-        eu.default.track(e6.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
+        eu.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
             es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = l.useCallback(
@@ -885,7 +885,7 @@ function tp(e) {
         l = (0, o.bG)([V.Ay], () => V.Ay.getSidebarState(V.fe)),
         i = (0, o.bG)([eo.A], () => eo.A.getChannel(l?.channelId));
     if (null == l || l.type !== el.PE.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
-    let a = t - e6.ItT;
+    let a = t - e2.ItT;
     return (0, s.jsx)(v.A, {
         sidebarType: v.X.MessageRequestSidebar,
         maxWidth: a,
@@ -961,9 +961,9 @@ let tI = (0, b.A)(function (e) {
     let { width: t } = e,
         n = (0, ef.W)();
     (0, I.Ay)(() => {
-        C.I(e6.BVt.MESSAGE_REQUESTS),
+        C.I(e2.BVt.MESSAGE_REQUESTS),
             (0, ei.d0)("message-requests"),
-            eu.default.track(e6.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            eu.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
     });
     let i = (0, o.bG)([ea.A], () => ea.A.theme),

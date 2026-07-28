@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { DynamicGraphicComponent: () => a, Q: () => l, m: () => s });
 var i,
-    r = n(64700),
+    r = n(582128),
     a =
         (((i = {})[(i.DEMO = 0)] = "DEMO"),
         (i[(i.COLLECTIBLES_PREVIEW = 1)] = "COLLECTIBLES_PREVIEW"),

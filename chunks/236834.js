@@ -1,14 +1,14 @@
-i.d(r, { A: () => o });
-var t = i(64700),
-    a = i(17928),
-    s = i(889227),
-    n = i(994500),
-    l = i(354670),
-    c = i(378135),
-    d = i(202541);
-function o() {
-    let e = (0, c.k)(d.Dw),
-        r = (0, a.bG)([l.A], () => l.A.getReferrer(e?.trial_id)),
-        i = (0, a.bG)([n.A], () => null == r || n.A.isBlockedOrIgnored(r.id));
-    return t.useMemo(() => (i || null == r ? null : new s.A(r)), [r, i]);
+t.d(r, { A: () => d });
+var i = t(582128),
+    n = t(17928),
+    l = t(889227),
+    a = t(994500),
+    s = t(354670),
+    o = t(378135),
+    c = t(202541);
+function d() {
+    let e = (0, o.k)(c.Dw),
+        r = (0, n.bG)([s.A], () => s.A.getReferrer(e?.trial_id)),
+        t = (0, n.bG)([a.A], () => null == r || a.A.isBlockedOrIgnored(r.id));
+    return i.useMemo(() => (t || null == r ? null : new l.A(r)), [r, t]);
 }

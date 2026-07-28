@@ -1,10 +1,10 @@
 c.r(a), c.d(a, { default: () => r });
-var e = c(627968);
-c(64700);
+var e = c(477900);
+c(582128);
 var i = c(503698),
     d = c.n(i),
-    l = c(225180),
-    j = c(291021);
+    l = c(2799),
+    j = c(670565);
 function r(s) {
     let { gameId: a } = s,
         c = (0, l.A)(a, "cover");

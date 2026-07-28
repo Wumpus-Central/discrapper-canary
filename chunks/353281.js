@@ -1,13 +1,13 @@
-l.d(t, { H: () => s, J: () => i });
-var n = l(627968),
-    a = l(64700);
-let r = (0, a.createContext)(null);
+l.d(t, { H: () => o, J: () => i });
+var r = l(477900),
+    n = l(582128);
+let a = (0, n.createContext)(null);
 function i(e) {
     let { renderHeader: t, getSocialLayerStorefrontLink: l, children: i } = e,
-        s = a.useMemo(() => ({ renderHeader: t, getSocialLayerStorefrontLink: l }), [t, l]);
-    return (0, n.jsx)(r.Provider, { value: s, children: i });
+        o = n.useMemo(() => ({ renderHeader: t, getSocialLayerStorefrontLink: l }), [t, l]);
+    return (0, r.jsx)(a.Provider, { value: o, children: i });
 }
-function s() {
-    let e = (0, a.useContext)(r);
+function o() {
+    let e = (0, n.useContext)(a);
     return { renderHeader: e?.renderHeader, getSocialLayerStorefrontLink: e?.getSocialLayerStorefrontLink };
 }

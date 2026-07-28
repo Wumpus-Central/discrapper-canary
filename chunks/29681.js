@@ -1,10 +1,10 @@
 n.d(e, { default: () => C });
-var a = n(627968),
-    s = n(64700),
+var a = n(477900),
+    s = n(582128),
     l = n(189213),
     i = n(17928),
     r = n(512950),
-    c = n(534514),
+    c = n(297264),
     o = n(834730),
     d = n(349288),
     u = n(97260),
@@ -15,7 +15,7 @@ var a = n(627968),
 n(980504);
 var m = n(652215),
     g = n(375708),
-    p = n(690320);
+    p = n(764232);
 function C(t) {
     let { transitionState: e, onClose: n } = t,
         C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),

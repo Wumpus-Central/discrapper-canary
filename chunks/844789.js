@@ -2,8 +2,8 @@ n.d(t, { Ay: () => lx, fD: () => lp });
 var l,
     r,
     a,
-    i = n(627968),
-    s = n(64700),
+    i = n(477900),
+    s = n(582128),
     o = n(503698),
     u = n.n(o),
     c = n(140735),
@@ -830,8 +830,8 @@ function e3(e) {
         ],
     });
 }
-var e6 = n(843282);
-function e7(e) {
+var e7 = n(843282);
+function e6(e) {
     let { emoji: t, label: n, description: l, isDisabled: r, isOffset: a } = e,
         s = u()(ed._A, { [ed.r9]: r, [ed.cY]: null == t && a });
     return (0, i.jsxs)("div", {
@@ -937,14 +937,14 @@ function tt(e) {
         I || (E.size === S.size && Array.from(S).every((e) => E.has(e))) || b();
     }, [I, E, S, b]);
     let O = (0, eu.Lr)(e, v ? "modal" : "message"),
-        R = e6.lS;
-    C ? (R = e6.M8) : O && (R = e6.$l);
-    let _ = (0, e6.Ev)({ value: E, onChange: (e) => y(e), onSelectInteraction: R });
+        R = e7.lS;
+    C ? (R = e7.M8) : O && (R = e7.$l);
+    let _ = (0, e7.Ev)({ value: E, onChange: (e) => y(e), onSelectInteraction: R });
     return (0, i.jsxs)(s.Fragment, {
         children: [
             (0, i.jsx)("div", {
                 className: ed.kL,
-                children: (0, i.jsx)(e6.Pw, {
+                children: (0, i.jsx)(e7.Pw, {
                     isProcessing: N,
                     isDisabled: a || f === B.BB.DISABLED || g,
                     className: u()(ed.Lt, { [ed.zE]: v }),
@@ -956,7 +956,7 @@ function tt(e) {
                     closeOnSelect: !C,
                     optionClassName: ed.MT,
                     renderOptionLabel: (e) =>
-                        (0, i.jsx)(e7, { ...e, isDisabled: C && !E.has(e.value) && E.size === r, isOffset: L }),
+                        (0, i.jsx)(e6, { ...e, isDisabled: C && !E.has(e.value) && E.size === r, isOffset: L }),
                     renderOptionValue: (e) => (C ? (0, i.jsx)(te, { options: e }) : (0, i.jsx)(e9, { ...e[0] })),
                     ..._,
                     "data-migration-pending": !0,
@@ -1437,7 +1437,7 @@ function t4(e) {
 let t2 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
 var t8 = n(258381),
     t3 = n(742715);
-function t6(e) {
+function t7(e) {
     let t,
         { content: n, className: l } = e,
         r =
@@ -1455,7 +1455,7 @@ function t6(e) {
         a = t5();
     return (0, i.jsx)("div", { className: u()(l, t3.PT, t8.T, a.className), children: r });
 }
-var t7 = n(838541),
+var t6 = n(838541),
     t9 = n(438998);
 function ne(e) {
     let { media: t, spoiler: n, description: l } = e,
@@ -1491,7 +1491,7 @@ function ne(e) {
                   minWidth: 85,
                   minHeight: 85,
                   autoPlay: o && !e,
-                  mediaLayoutType: t7.dG.MOSAIC,
+                  mediaLayoutType: t6.dG.MOSAIC,
                   reducedSizeAltTextButton: !0,
                   srcIsAnimated: a,
               });
@@ -1877,8 +1877,8 @@ var n5 = n(140651),
     n2 = n(915089),
     n8 = n(818348),
     n3 = n(651055),
-    n6 = n(521707);
-function n7(e) {
+    n7 = n(521707);
+function n6(e) {
     let { className: t, clickableClassName: n, clickable: l, children: r } = e,
         a = (0, n2.GV)();
     if (null != l && "href" in l) {
@@ -1906,7 +1906,7 @@ function n7(e) {
 }
 function n9(e) {
     let { clickable: t, ...n } = e;
-    return (0, i.jsx)(n7, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: n6.v });
+    return (0, i.jsx)(n6, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: n7.v });
 }
 function le(e) {
     let {
@@ -1935,7 +1935,7 @@ function le(e) {
                     className: u()(n3.kL, e),
                     style: m,
                     children: [
-                        (0, i.jsx)(n7, {
+                        (0, i.jsx)(n6, {
                             className: n3.iT,
                             clickableClassName: n3.vk,
                             clickable: c,
@@ -2129,7 +2129,7 @@ function lp(e) {
                         case d.I5.SECTION:
                             return (0, i.jsx)(ld, { ...t, renderComponents: lp }, n);
                         case d.I5.TEXT_DISPLAY:
-                            return (0, i.jsx)(t6, { ...t }, n);
+                            return (0, i.jsx)(t7, { ...t }, n);
                         case d.I5.MEDIA_GALLERY:
                             return (0, i.jsx)(tX, { ...t }, n);
                         case d.I5.THUMBNAIL:

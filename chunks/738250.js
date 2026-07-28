@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(429913),
     r = n(569926),
-    s = n(64700),
-    a = n(227309),
-    o = n(871633);
-function l(e) {
+    a = n(582128),
+    s = n(227309),
+    l = n(871633);
+function o(e) {
     let { applicationId: t, gameId: n } = e,
-        l = (0, i.h)(null == n ? t : void 0),
-        u = (function (e) {
+        o = (0, i.h)(null == n ? t : void 0),
+        d = (function (e) {
             let { applicationId: t, gameId: n } = e,
-                a = (0, i.h)(null == n ? t : void 0),
-                o = null == n && null != t && null == a,
-                l = s.useMemo(() => (null != n ? n : null == a ? null : a.getCanonicalGameId()), [n, a]),
-                { data: u, isLoading: c } = (0, r.I)(l);
-            return { gameId: l, gameRecord: u ?? null, isLoading: o || c };
-        })({ applicationId: t, gameId: null != l && (0, o.bB)(l) ? a.aX : n }),
-        c = null != u.gameRecord && (0, o.Zb)(u.gameRecord),
-        { data: d, isLoading: _ } = (0, r.I)(c ? a.aX : void 0);
-    return c ? { gameId: a.aX, gameRecord: d ?? null, isLoading: _ } : u;
+                s = (0, i.h)(null == n ? t : void 0),
+                l = null == n && null != t && null == s,
+                o = a.useMemo(() => (null != n ? n : null == s ? null : s.getCanonicalGameId()), [n, s]),
+                { data: d, isLoading: c } = (0, r.I)(o);
+            return { gameId: o, gameRecord: d ?? null, isLoading: l || c };
+        })({ applicationId: t, gameId: null != o && (0, l.bB)(o) ? s.aX : n }),
+        c = null != d.gameRecord && (0, l.Zb)(d.gameRecord),
+        { data: u, isLoading: _ } = (0, r.I)(c ? s.aX : void 0);
+    return c ? { gameId: s.aX, gameRecord: u ?? null, isLoading: _ } : d;
 }

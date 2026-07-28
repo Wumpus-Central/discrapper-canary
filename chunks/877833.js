@@ -1,7 +1,7 @@
 i.d(t, { default: () => C });
 var n,
-    l = i(627968),
-    s = i(64700),
+    l = i(477900),
+    s = i(582128),
     c = i(189213),
     d = i(150934),
     a = i(375708),
@@ -26,7 +26,7 @@ function k(e) {
             ...(0, o.H$)(i),
         });
 }
-var E = i(710825);
+var E = i(272993);
 function C(e) {
     let { guildId: t, transitionState: i, onClose: n, onConfirm: o } = e,
         { rules: r, rulesAccepted: u } = (function () {

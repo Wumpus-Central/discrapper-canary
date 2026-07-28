@@ -1,10 +1,10 @@
 n.d(a, { default: () => j });
-var i = n(627968),
-    t = n(64700),
+var i = n(477900),
+    t = n(582128),
     s = n(503698),
     l = n.n(s),
-    r = n(192308),
-    d = n(935462),
+    r = n(935462),
+    d = n(192308),
     c = n(825484),
     o = n(821609),
     u = n(548411),
@@ -14,8 +14,8 @@ var i = n(627968),
     f = n(40449),
     g = n(516761),
     x = n(375708),
-    k = n(755432),
-    C = n(971469);
+    k = n(468963),
+    C = n(486128);
 let j = function (e) {
     let { onClose: a, onComplete: n, transitionState: s, webviewUrl: j } = e,
         v = (0, h.W$)(),
@@ -24,7 +24,7 @@ let j = function (e) {
             n(), a();
         }, [n, a]),
         W = t.useCallback(() => {
-            (0, r.hasModalOpen)(f.SW) && E();
+            (0, d.hasModalOpen)(f.SW) && E();
         }, [E]);
     (0, m.dZ)(W);
     let M = t.useCallback(
@@ -46,14 +46,14 @@ let j = function (e) {
             ),
             [M],
         ),
-        (0, i.jsxs)(d.EO, {
+        (0, i.jsxs)(r.EO, {
             "data-migration-pending": !0,
             transitionState: s,
             className: l()(C.zr, k.rh),
             parentComponent: "AgeVerificationExpressiveModal",
-            size: d.rI.MEDIUM,
+            size: r.rI.MEDIUM,
             children: [
-                (0, i.jsx)(d.$m, {
+                (0, i.jsx)(r.$m, {
                     "data-migration-pending": !0,
                     className: l()(C.Qs, C.WM),
                     scrollbarType: "none",
@@ -63,7 +63,7 @@ let j = function (e) {
                         b,
                     ),
                 }),
-                (0, i.jsx)(d.jl, {
+                (0, i.jsx)(r.jl, {
                     "data-migration-pending": !0,
                     children: (0, i.jsxs)(c.e, {
                         fullWidth: !0,

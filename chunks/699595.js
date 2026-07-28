@@ -1,5 +1,5 @@
 n.d(t, { W: () => o });
-var l = n(64700),
+var l = n(582128),
     i = n(543767),
     r = n(410516),
     a = n(316915),
@@ -9,18 +9,18 @@ function o(e) {
         { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
         { isEligibleForDiscount: d, discountOffer: p } = (0, s.i)(),
         m = (0, r.YJ)(p),
-        h = !0 === n.loaded,
-        C = null != c,
+        C = !0 === n.loaded,
+        h = null != c,
         [E, f] = (0, i.YV)({
             items: null != m ? [{ planId: m, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: C || !d || null == m || !h,
+            preventFetch: h || !d || null == m || !C,
             trialId: o,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
             metadata: u,
         }),
-        A = C ? c : E,
+        A = h ? c : E,
         S = l.useMemo(() => {
             let e = d ? (A ?? null) : null;
             return {

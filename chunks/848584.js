@@ -1,6 +1,6 @@
-n.d(t, { Qf: () => L, Vm: () => x });
-var s = n(627968),
-    r = n(64700),
+n.d(t, { Qf: () => A, Vm: () => x });
+var s = n(477900),
+    r = n(582128),
     i = n(503698),
     a = n.n(i),
     l = n(338209),
@@ -59,7 +59,7 @@ function h(e) {
         collapsedContent:
             null != a
                 ? (0, s.jsx)(c.E, { variant: "text-md/medium", color: "text-feedback-positive", children: a })
-                : (0, s.jsx)(A, {
+                : (0, s.jsx)(v, {
                       amount: p < 0 ? Math.abs(p) : null,
                       currency: i,
                       labelType: f ? "adjustments" : "savings",
@@ -75,7 +75,7 @@ function h(e) {
         }),
     });
 }
-function A(e) {
+function v(e) {
     let { amount: t, currency: n, labelType: r } = e;
     if (0 === t || null == t) return null;
     let i = (0, o.$g)(t, n);
@@ -85,7 +85,7 @@ function A(e) {
         children: f.intl.format("adjustments" === r ? m.default["i3Q/6S"] : m.default.pDVleg, { amount: i }),
     });
 }
-function L(e) {
+function A(e) {
     let { label: t, value: n, className: r } = e;
     return (0, s.jsxs)(c.E, {
         variant: "text-lg/semibold",

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { W: () => o, t: () => l });
-var i = n(627968),
-    r = n(64700),
-    s = n(121894);
-class a {
+n.d(t, { W: () => l, t: () => o });
+var i = n(477900),
+    r = n(582128),
+    a = n(121894);
+class s {
     registeredNodes = new Map();
     visibleComponents = new Set();
     animatingComponents = new Set();
@@ -12,7 +12,7 @@ class a {
         if (e) return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, s.r)(() => {
+                (0, a.r)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null == t ||
@@ -86,14 +86,14 @@ class a {
         this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
 }
-let o = r.createContext({
-    manager: new a(!0),
+let l = r.createContext({
+    manager: new s(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
-function l(e) {
+function o(e) {
     let { children: t } = e,
         [n] = r.useState(() => {
-            let e = new a();
+            let e = new s();
             return {
                 manager: e,
                 useThoughtfullyAnimated() {
@@ -110,5 +110,5 @@ function l(e) {
                 },
             };
         });
-    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(o.Provider, { value: n, children: t });
+    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t });
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { w: () => s });
-var i = n(627968);
-n(64700);
+n.d(t, { w: () => a });
+var i = n(477900);
+n(582128);
 var r = n(512950);
-function s(e) {
-    let { type: t, hidden: n, iconAlign: s, children: a } = e;
+function a(e) {
+    let { type: t, hidden: n, iconAlign: a, children: s } = e;
     return (0, i.jsx)(r.p, {
         messageType: (function (e) {
             switch (e) {
@@ -19,7 +19,7 @@ function s(e) {
             }
         })(t),
         hidden: n,
-        iconAlign: s,
-        children: a,
+        iconAlign: a,
+        children: s,
     });
 }

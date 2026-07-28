@@ -1,14 +1,14 @@
 n.d(t, { H: () => f, r: () => p }), n(321073);
-var l = n(627968),
-    r = n(64700),
+var l = n(477900),
+    r = n(582128),
     a = n(503698),
     i = n.n(a),
-    s = n(735438),
+    s = n(435558),
     E = n.n(s),
     u = n(989349),
     o = n.n(u),
-    _ = n(317097),
-    c = n(834730),
+    c = n(317097),
+    _ = n(834730),
     d = n(939249),
     A = n(565645),
     g = n(429913),
@@ -23,12 +23,12 @@ var l = n(627968),
     D = n(555067),
     h = n(652215),
     L = n(375708),
-    C = n(214876);
+    C = n(149796);
 let M = { [h.RWi.CREATE]: C.typeCreate, [h.RWi.UPDATE]: C.typeUpdate, [h.RWi.DELETE]: C.typeDelete };
 function x(e) {
     let { applicationId: t } = e,
         n = (0, g.h)(t);
-    return null == n ? null : (0, l.jsx)(c.E, { variant: "text-md/normal", children: n.name });
+    return null == n ? null : (0, l.jsx)(_.E, { variant: "text-md/normal", children: n.name });
 }
 function U(e, t) {
     return (0, l.jsx)("div", { className: C.colorHook, style: { backgroundColor: t } }, e);
@@ -205,7 +205,7 @@ function p(e) {
                                             }
                                             let u = E().keyBy(a ?? [], "id"),
                                                 o = E().keyBy(r ?? [], "id"),
-                                                _ = E()
+                                                c = E()
                                                     .difference(Object.keys(o), Object.keys(u))
                                                     .map((e) => o[e]),
                                                 d = E()
@@ -217,7 +217,7 @@ function p(e) {
                                                 {
                                                     className: C.onboardingChangeLogContainer,
                                                     children: [
-                                                        _.map((e) => {
+                                                        c.map((e) => {
                                                             let { role_ids: n, channel_ids: r, title: a, id: E } = e,
                                                                 u = (n ?? []).map(i).filter(S.Vq),
                                                                 o = (r ?? []).map(s).filter(S.Vq);
@@ -233,7 +233,7 @@ function p(e) {
                                                                                     targetType: t.targetType,
                                                                                     action: t.action,
                                                                                 }),
-                                                                                (0, l.jsx)(c.E, {
+                                                                                (0, l.jsx)(_.E, {
                                                                                     variant: "text-md/normal",
                                                                                     children: L.intl.format(
                                                                                         L.t.CZ1tyo,
@@ -246,7 +246,7 @@ function p(e) {
                                                                             className: C.onboardingChangeLogItemChanges,
                                                                             children: [
                                                                                 u.length > 0 &&
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t["gt/5z1"],
@@ -254,7 +254,7 @@ function p(e) {
                                                                                         ),
                                                                                     }),
                                                                                 o.length > 0 &&
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t["4q006W"],
@@ -280,7 +280,7 @@ function p(e) {
                                                                                 targetType: t.targetType,
                                                                                 action: t.action,
                                                                             }),
-                                                                            (0, l.jsx)(c.E, {
+                                                                            (0, l.jsx)(_.E, {
                                                                                 variant: "text-md/normal",
                                                                                 children: L.intl.format(L.t["m3dt+K"], {
                                                                                     title: e.title,
@@ -297,10 +297,10 @@ function p(e) {
                                                                 let { title: r, id: a } = n,
                                                                     u = e.role_ids.map(i).filter(S.Vq),
                                                                     o = e.channel_ids.map(s).filter(S.Vq),
-                                                                    _ = n.role_ids.map(i).filter(S.Vq),
+                                                                    c = n.role_ids.map(i).filter(S.Vq),
                                                                     d = n.channel_ids.map(s).filter(S.Vq),
-                                                                    A = E().difference(_, u),
-                                                                    g = E().difference(u, _),
+                                                                    A = E().difference(c, u),
+                                                                    g = E().difference(u, c),
                                                                     T = E().difference(d, o),
                                                                     I = E().difference(o, d),
                                                                     N = [];
@@ -327,7 +327,7 @@ function p(e) {
                                                                                               targetType: t.targetType,
                                                                                               action: t.action,
                                                                                           }),
-                                                                                          (0, l.jsx)(c.E, {
+                                                                                          (0, l.jsx)(_.E, {
                                                                                               variant: "text-md/normal",
                                                                                               children: L.intl.format(
                                                                                                   L.t["WZO+ia"],
@@ -341,7 +341,7 @@ function p(e) {
                                                                                           C.onboardingChangeLogItemChanges,
                                                                                       children: [
                                                                                           A.length > 0 &&
-                                                                                              (0, l.jsx)(c.E, {
+                                                                                              (0, l.jsx)(_.E, {
                                                                                                   variant:
                                                                                                       "text-md/normal",
                                                                                                   children:
@@ -355,7 +355,7 @@ function p(e) {
                                                                                                       ),
                                                                                               }),
                                                                                           g.length > 0 &&
-                                                                                              (0, l.jsx)(c.E, {
+                                                                                              (0, l.jsx)(_.E, {
                                                                                                   variant:
                                                                                                       "text-md/normal",
                                                                                                   children:
@@ -369,7 +369,7 @@ function p(e) {
                                                                                                       ),
                                                                                               }),
                                                                                           T.length > 0 &&
-                                                                                              (0, l.jsx)(c.E, {
+                                                                                              (0, l.jsx)(_.E, {
                                                                                                   variant:
                                                                                                       "text-md/normal",
                                                                                                   children:
@@ -384,7 +384,7 @@ function p(e) {
                                                                                                       ),
                                                                                               }),
                                                                                           I.length > 0 &&
-                                                                                              (0, l.jsx)(c.E, {
+                                                                                              (0, l.jsx)(_.E, {
                                                                                                   variant:
                                                                                                       "text-md/normal",
                                                                                                   children:
@@ -400,7 +400,7 @@ function p(e) {
                                                                                               }),
                                                                                           N.map((t, r) =>
                                                                                               (0, l.jsx)(
-                                                                                                  c.E,
+                                                                                                  _.E,
                                                                                                   {
                                                                                                       variant:
                                                                                                           "text-md/normal",
@@ -448,20 +448,20 @@ function p(e) {
                                                 { targetType: u, action: o } = t;
                                             switch (s) {
                                                 case h.gGk.WELCOME_MESSAGE:
-                                                    let _, d, A, g;
+                                                    let c, d, A, g;
                                                     return (
-                                                        (_ = G.default.getUser(a?.author_ids?.[0])),
+                                                        (c = G.default.getUser(a?.author_ids?.[0])),
                                                         (d = G.default.getUser(i.author_ids?.[0])),
                                                         (A =
-                                                            _?.id !== d?.id
+                                                            c?.id !== d?.id
                                                                 ? (0, l.jsx)("li", {
                                                                       children: (0, l.jsx)("div", {
                                                                           className: C.onboardingChangeLogItemTitle,
-                                                                          children: (0, l.jsx)(c.E, {
+                                                                          children: (0, l.jsx)(_.E, {
                                                                               variant: "text-md/normal",
                                                                               children: L.intl.format(L.t["PrOzA+"], {
                                                                                   oldUser:
-                                                                                      _?.username ??
+                                                                                      c?.username ??
                                                                                       L.intl.string(L.t.PoWNfe),
                                                                                   newUser:
                                                                                       d?.username ??
@@ -476,7 +476,7 @@ function p(e) {
                                                                 ? (0, l.jsx)("li", {
                                                                       children: (0, l.jsx)("div", {
                                                                           className: C.onboardingChangeLogItemTitle,
-                                                                          children: (0, l.jsx)(c.E, {
+                                                                          children: (0, l.jsx)(_.E, {
                                                                               variant: "text-md/normal",
                                                                               children: L.intl.format(L.t.oB7rBb, {
                                                                                   oldMessage:
@@ -514,7 +514,7 @@ function p(e) {
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t.oFSu66,
@@ -540,7 +540,7 @@ function p(e) {
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t.GssWar,
@@ -580,7 +580,7 @@ function p(e) {
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t.HlGndE,
@@ -606,7 +606,7 @@ function p(e) {
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
-                                                                                    (0, l.jsx)(c.E, {
+                                                                                    (0, l.jsx)(_.E, {
                                                                                         variant: "text-md/normal",
                                                                                         children: L.intl.format(
                                                                                             L.t["7pysg6"],
@@ -660,9 +660,9 @@ function p(e) {
                                                                 children: [
                                                                     (0, l.jsx)("span", {
                                                                         className: C.colorsHook,
-                                                                        children: `${n > 0 ? ", " : ""}${(0, _.Hl)(e).toUpperCase()} `,
+                                                                        children: `${n > 0 ? ", " : ""}${(0, c.Hl)(e).toUpperCase()} `,
                                                                     }),
-                                                                    U(t, (0, _.Hl)(e)),
+                                                                    U(t, (0, c.Hl)(e)),
                                                                 ],
                                                             },
                                                             n,
@@ -688,7 +688,7 @@ function p(e) {
                                               className: C.detail,
                                               style: { position: "relative", top: 1 },
                                               children: [
-                                                  (0, l.jsxs)(c.E, {
+                                                  (0, l.jsxs)(_.E, {
                                                       className: C.prefix,
                                                       variant: "code",
                                                       color: (function (e) {

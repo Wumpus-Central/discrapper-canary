@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var r = n(17928),
     a = n(192308),
     s = n(688810),
@@ -12,7 +12,7 @@ var r = n(17928),
     u = n(766075),
     _ = n(287809),
     E = n(166403),
-    A = n(234419),
+    A = n(732280),
     h = n(202541),
     I = n(652215);
 function f(e) {
@@ -26,15 +26,15 @@ function f(e) {
             giftMessage: S,
             confirmationFooter: N,
             isGift: C,
-            initialPlanId: R = null,
-            children: O,
+            initialPlanId: O = null,
+            children: R,
         } = e,
         L = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
         y = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         { analyticsLocations: D } = (0, s.Ay)(),
         v = (0, A.V)(),
         b = !C && null != v && null != f && h.TP[v.trial_id].skus.includes(f);
-    return O({
+    return R({
         onClick: function (e) {
             if ((e.preventDefault(), null == L))
                 return void (0, d.pX)(I.BVt.LOGIN, { source: "premium_subscribe_button" });
@@ -45,7 +45,7 @@ function f(e) {
             if (!L.isClaimed())
                 return void (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("17487"),
+                        n.e("13655"),
                         n.e("12206"),
                         n.e("9998"),
                         n.e("80388"),
@@ -58,7 +58,7 @@ function f(e) {
             if (!L.verified)
                 return void (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("54681"),
+                        n.e("29097"),
                         n.e("74913"),
                         n.e("12206"),
                         n.e("90406"),
@@ -73,7 +73,7 @@ function f(e) {
             null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT),
                 (0, o.A)({
                     isGift: C,
-                    initialPlanId: R,
+                    initialPlanId: O,
                     subscriptionTier: f,
                     analyticsLocations: D,
                     analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },

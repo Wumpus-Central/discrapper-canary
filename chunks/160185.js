@@ -1,11 +1,11 @@
-s.d(t, { i: () => S });
-var n = s(627968),
-    i = s(64700),
+s.d(t, { i: () => q });
+var n = s(477900),
+    i = s(582128),
     a = s(503698),
     l = s.n(a),
-    r = s(835245),
+    r = s(132500),
     o = s(821609),
-    c = s(534514),
+    c = s(297264),
     u = s(834730),
     d = s(274670),
     m = s(144779),
@@ -18,7 +18,7 @@ var n = s(627968),
     g = s(765548),
     N = s(652215),
     v = s(375708),
-    A = s(651029);
+    A = s(662237);
 function _(e) {
     let { questId: t, questContent: s, fullWidth: i } = e;
     return (0, n.jsx)("div", {
@@ -49,7 +49,7 @@ function _(e) {
         }),
     });
 }
-function S(e) {
+function q(e) {
     let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
         { containerRef: o, size: d } = (function () {
             let [e, t] = i.useState("lg"),

@@ -1,28 +1,28 @@
-n.d(e, { A: () => A });
-var i = n(627968);
-n(64700);
-var r = n(17928),
-    a = n(477782),
-    l = n(579872),
-    d = n(435470),
-    s = n(867455),
-    o = n(406704),
-    u = n(734057),
-    c = n(746080),
-    h = n(375708);
+e.d(n, { A: () => A });
+var i = e(477900);
+e(582128);
+var r = e(17928),
+    l = e(477782),
+    a = e(579872),
+    d = e(435470),
+    s = e(867455),
+    o = e(406704),
+    u = e(734057),
+    c = e(746080),
+    h = e(375708);
 function A(t) {
-    let e = (0, r.bG)([u.A], () => u.A.getChannel(t.parent_id)),
-        n = (0, o.H_)(t),
+    let n = (0, r.bG)([u.A], () => u.A.getChannel(t.parent_id)),
+        e = (0, o.H_)(t),
         A = (0, d.Eh)(t);
-    return e?.isForumLikeChannel() && n
+    return n?.isForumLikeChannel() && e
         ? t.hasFlag(c.lx.PINNED)
-            ? (0, i.jsx)(a.Dr, { id: "unpin-thread", label: h.intl.string(h.t.trD8ao), action: () => s.A.unpin(t) })
-            : (0, i.jsx)(a.Dr, {
+            ? (0, i.jsx)(l.Dr, { id: "unpin-thread", label: h.intl.string(h.t.trD8ao), action: () => s.A.unpin(t) })
+            : (0, i.jsx)(l.Dr, {
                   id: "pin-thread",
                   label: h.intl.string(h.t.EnaWhu),
                   action: function () {
                       null != A
-                          ? l.A.show({
+                          ? a.A.show({
                                 title: h.intl.string(h.t.IMbjxo),
                                 body: h.intl.string(h.t["mi5+Vl"]),
                                 onConfirm: async () => {

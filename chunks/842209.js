@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { D3: () => C, EW: () => m, ZV: () => v, cu: () => S, eW: () => y, j8: () => T, s$: () => A, v7: () => I }),
+n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
     n(321073);
-var i = n(64700),
+var i = n(582128),
     r = n(17928),
-    s = n(155718),
-    a = n(71393),
-    o = n(403362),
-    l = n(917012),
-    u = n(264322),
+    a = n(155718),
+    s = n(71393),
+    l = n(403362),
+    o = n(917012),
+    d = n(264322),
     c = n(210978),
-    d = n(392054),
+    u = n(392054),
     _ = n(168186),
-    h = n(240591),
-    f = n(46477),
-    p = n(73510),
-    E = n(652215);
-function m(e, t, n) {
+    E = n(240591),
+    A = n(46477),
+    h = n(73510),
+    I = n(652215);
+function f(e, t, n) {
     if (null == t) return { application: void 0, command: void 0 };
-    let i = u.Ay.getUserState(),
-        r = u.Ay.getContextState(e),
-        s = Object.values(i.result?.sections ?? {}).concat(Object.values(r.result?.sections ?? {}));
+    let i = d.Ay.getUserState(),
+        r = d.Ay.getContextState(e),
+        a = Object.values(i.result?.sections ?? {}).concat(Object.values(r.result?.sections ?? {}));
     if (null != n) {
-        let e = s.find((e) => e.descriptor.application?.id === n);
+        let e = a.find((e) => e.descriptor.application?.id === n);
         if (null != e) {
-            let n = g(e, t);
+            let n = p(e, t);
             return { application: e.descriptor.application, command: n };
         }
     } else
-        for (let e of s) {
-            let n = g(e, t);
+        for (let e of a) {
+            let n = p(e, t);
             if (null != n) return { application: e.descriptor.application, command: n };
         }
     return { application: void 0, command: void 0 };
 }
-function g(e, t) {
+function p(e, t) {
     if (null == t) return;
     if (null != e.commands[t]) return e.commands[t];
     let n = Object.values(e.commands).find((e) => e.rootCommand?.id === t)?.rootCommand;
@@ -41,68 +41,68 @@ function g(e, t) {
         ? (0, _.Oe)({ rootCommand: n, command: n, applicationId: e.descriptor.application?.id ?? "" })
         : void 0;
 }
-function A(e, t, n) {
-    let i = u.Ay.getUserState(),
-        r = u.Ay.getContextState(e),
-        s = u.Ay.getApplicationState(n),
-        a = i.result?.sections?.[n] ?? r.result?.sections?.[n] ?? s.result?.sections?.[n];
-    return a?.descriptor;
+function T(e, t, n) {
+    let i = d.Ay.getUserState(),
+        r = d.Ay.getContextState(e),
+        a = d.Ay.getApplicationState(n),
+        s = i.result?.sections?.[n] ?? r.result?.sections?.[n] ?? a.result?.sections?.[n];
+    return s?.descriptor;
 }
-function I(e, t, n) {
-    let i = u.Ay.query(e, { commandTypes: [t], text: n }, { scoreMethod: c.M.COMMAND_OR_APPLICATION, allowFetch: !1 });
+function m(e, t, n) {
+    let i = d.Ay.query(e, { commandTypes: [t], text: n }, { scoreMethod: c.M.COMMAND_OR_APPLICATION, allowFetch: !1 });
     return { commands: i.commands, sections: i.descriptors };
 }
-function T(e) {
-    let t = u.Ay.getUserState(),
-        n = u.Ay.getContextState(e);
+function g(e) {
+    let t = d.Ay.getUserState(),
+        n = d.Ay.getContextState(e);
     return [t?.result, n?.result];
 }
 function S(e) {
-    let { context: t, filters: n, options: s, allowFetch: o } = e,
+    let { context: t, filters: n, options: a, allowFetch: l } = e,
         c = "channel" === t.type ? t.channel.guild_id : null,
-        d = (0, r.bG)([a.A], () => a.A.getGuild(c), [c]),
-        { descriptors: _, commands: h, sectionedCommands: f, loading: m } = (0, u.XC)(t, d, n, { ...s, allowFetch: o }),
-        [g, A] = i.useState(null),
-        I = i.useMemo(() => O(s.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, s.placeholderCount]);
+        u = (0, r.bG)([s.A], () => s.A.getGuild(c), [c]),
+        { descriptors: _, commands: E, sectionedCommands: A, loading: f } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
+        [p, T] = i.useState(null),
+        m = i.useMemo(() => y(a.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, a.placeholderCount]);
     return i.useMemo(() => {
         let e = {
-            loading: m,
-            commands: h,
+            loading: f,
+            commands: E,
             activeSections: _,
-            commandsByActiveSection: f,
-            filteredSectionId: g,
+            commandsByActiveSection: A,
+            filteredSectionId: p,
             hasMoreAfter: !1,
-            placeholders: m ? I : [],
+            placeholders: f ? m : [],
             sectionDescriptors: _,
             filterSection: (e) => {
-                A(e);
+                T(e);
             },
-            scrollDown: E.tEg,
+            scrollDown: I.tEg,
         };
-        if (null != g) {
-            let t = f.find((e) => e.section.id === g);
+        if (null != p) {
+            let t = A.find((e) => e.section.id === p);
             (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
         }
-        if (m) {
-            let t = f[0];
-            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...I] }, ...f.slice(1)];
+        if (f) {
+            let t = A[0];
+            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...m] }, ...A.slice(1)];
             else {
-                let t = l.gZ[p.Ik.BUILT_IN];
-                (e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: I }]);
+                let t = o.gZ[h.Ik.BUILT_IN];
+                (e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: m }]);
             }
-            e.commands = [...h, ...I];
+            e.commands = [...E, ...m];
         }
         return e;
-    }, [m, h, _, f, g, I]);
+    }, [f, E, _, A, p, m]);
 }
-function y(e, t, n) {
-    let { descriptors: i, commands: r, loading: s } = u.Ay.query(e, t, n),
-        a = O(s ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
-    return { commands: s ? [...r, ...a] : r, sections: s && 0 === i.length ? [l.gZ[p.Ik.BUILT_IN]] : i };
+function N(e, t, n) {
+    let { descriptors: i, commands: r, loading: a } = d.Ay.query(e, t, n),
+        s = y(a ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
+    return { commands: a ? [...r, ...s] : r, sections: a && 0 === i.length ? [o.gZ[h.Ik.BUILT_IN]] : i };
 }
 function C(e, t) {
-    let n = (0, u.A4)(!0, !0),
-        r = (0, u.SD)(e, !0, !0);
+    let n = (0, d.A4)(!0, !0),
+        r = (0, d.SD)(e, !0, !0);
     return i.useMemo(() => {
         if (null != t)
             for (let e of Object.values(n.result?.sections ?? {}).concat(Object.values(r.result?.sections ?? {}))) {
@@ -112,25 +112,25 @@ function C(e, t) {
         return { command: void 0, application: void 0 };
     }, [r.result, n.result, t]);
 }
-let N = [s.kc.CHAT];
-function v(e, t, n) {
+let O = [a.kc.CHAT];
+function R(e, t, n) {
     var r;
-    let s,
-        a,
+    let a,
+        s,
         {
-            commands: l,
+            commands: o,
             application: c,
-            sectionDescriptor: d,
-            isGuildInstalled: p,
-            isUserInstalled: E,
+            sectionDescriptor: u,
+            isGuildInstalled: h,
+            isUserInstalled: I,
         } = ((r = i.useMemo(() => ({ channel: e, type: "channel" }), [e])),
-        (s = (0, u.A4)(!0, !0)),
-        (a = (0, u.SD)(r, !0, !0)),
+        (a = (0, d.A4)(!0, !0)),
+        (s = (0, d.SD)(r, !0, !0)),
         i.useMemo(() => {
-            let e = s.result?.sections?.[t] != null,
-                i = a.result?.sections?.[t] != null,
-                r = s.result?.sections?.[t] ?? a.result?.sections[t],
-                l = Object.values(r?.commands ?? {})
+            let e = a.result?.sections?.[t] != null,
+                i = s.result?.sections?.[t] != null,
+                r = a.result?.sections?.[t] ?? s.result?.sections[t],
+                o = Object.values(r?.commands ?? {})
                     .map((e) =>
                         null == e.rootCommand
                             ? e
@@ -143,37 +143,37 @@ function v(e, t, n) {
                     .reduce((e, t) => ((e[t.id] = t), e), {});
             return {
                 application: r?.descriptor?.application,
-                commands: n.map((e) => l[e]).filter(o.Vq),
+                commands: n.map((e) => o[e]).filter(l.Vq),
                 sectionDescriptor: r?.descriptor,
                 isGuildInstalled: i,
                 isUserInstalled: e,
             };
-        }, [s?.result, a?.result, t, n])),
-        m = (0, h.MW)(e, N);
+        }, [a?.result, s?.result, t, n])),
+        f = (0, E.MW)(e, O);
     return {
         application: c,
         commands: i.useMemo(() => {
-            if (null == l) return;
+            if (null == o) return;
             let t =
-                    null != e.guild_id && d?.permissions != null
-                        ? f.we(d.permissions, e.guild_id, m.userId, m.roleIds, m.isImpersonating)
+                    null != e.guild_id && u?.permissions != null
+                        ? A.we(u.permissions, e.guild_id, f.userId, f.roleIds, f.isImpersonating)
                         : null,
-                n = null != e.guild_id && d?.permissions != null ? f._W(d.permissions, e, e.guild_id) : null;
-            return l.filter(
+                n = null != e.guild_id && u?.permissions != null ? A._W(u.permissions, e, e.guild_id) : null;
+            return o.filter(
                 (e) =>
-                    f.zl(e, m, {
+                    A.zl(e, f, {
                         applicationAllowedForUser: t,
                         applicationAllowedForChannel: n,
-                        isGuildInstalled: p,
-                        isUserInstalled: E,
-                        commandBotId: d?.botId,
-                    }) === f.CA.ALLOWED,
+                        isGuildInstalled: h,
+                        isUserInstalled: I,
+                        commandBotId: u?.botId,
+                    }) === A.CA.ALLOWED,
             );
-        }, [l, m, d, p, E, e]),
+        }, [o, f, u, h, I, e]),
     };
 }
-let R = { id: "placeholder-section", type: d.Hf.APPLICATION, name: "" };
-function O(e, t) {
+let L = { id: "placeholder-section", type: u.Hf.APPLICATION, name: "" };
+function y(e, t) {
     let n = [];
     for (let r = 0; r < e; r++) {
         var i;
@@ -181,14 +181,14 @@ function O(e, t) {
             ((i = r),
             {
                 type: t,
-                inputType: d.y$.PLACEHOLDER,
+                inputType: u.y$.PLACEHOLDER,
                 id: `placeholder-${i}`,
                 untranslatedName: "",
                 displayName: "",
                 untranslatedDescription: "",
                 displayDescription: "",
                 applicationId: "",
-                section: R,
+                section: L,
             }),
         );
     }

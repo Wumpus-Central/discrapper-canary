@@ -37,12 +37,12 @@ var t = o(567341),
     n = o(285828),
     l = o(168900),
     s = o(527383),
-    b = o(627968);
-o(64700);
+    b = o(477900);
+o(582128);
 let c =
     "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv";
-var d = o(594639),
-    u = o(105596);
+var d = o(502377),
+    u = o(799226);
 let m = {
     Main: {
         reducedMotion: "boolean",
@@ -528,7 +528,7 @@ I.riveSrc = L;
 var F = o(908803),
     U = o(90517),
     R = o(289704),
-    B = o(145188),
+    B = o(570950),
     N = o(970002),
     O = o(149282),
     _ = o(122720),

@@ -1,7 +1,7 @@
 n.d(t, { default: () => tu });
 var l,
-    i = n(627968),
-    r = n(64700),
+    i = n(477900),
+    r = n(582128),
     s = n(435558),
     a = n(17928),
     d = n(935462),
@@ -623,9 +623,9 @@ function eK(e) {
             : (0, x.openModalLazy)(async () => {
                   let { default: l } = await Promise.all([
                       n.e("14520"),
-                      n.e("64464"),
+                      n.e("42083"),
                       n.e("97250"),
-                      n.e("63232"),
+                      n.e("40851"),
                       n.e("43437"),
                       n.e("58164"),
                       n.e("71470"),
@@ -814,11 +814,11 @@ var e0 = n(789645),
     e1 = n(81466),
     e7 = n(842241),
     e9 = n(279208),
-    e2 = n(747007),
-    e8 = n(710358),
+    e8 = n(747007),
+    e2 = n(710358),
     e4 = n(958590),
-    e3 = n(174459),
-    e5 = n(957565),
+    e5 = n(174459),
+    e3 = n(957565),
     e6 = n(379728);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -847,7 +847,7 @@ function tn(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e8.A, {
+            (0, i.jsx)(e2.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.C, {
@@ -874,14 +874,14 @@ function tn(e) {
             (0, i.jsxs)("div", {
                 className: e6.EZ,
                 children: [
-                    (0, i.jsx)(e2.I, {
+                    (0, i.jsx)(e8.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e5.C)(e);
+                            (0, e3.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

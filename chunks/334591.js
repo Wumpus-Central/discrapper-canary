@@ -4,11 +4,11 @@ var i,
     a,
     r,
     l,
-    c = s(627968),
-    o = s(64700),
+    c = s(477900),
+    o = s(582128),
     d = s(503698),
     u = s.n(d),
-    m = s(873263),
+    m = s(806163),
     g = s(17928),
     x = s(289873),
     f = s(228366),
@@ -75,7 +75,7 @@ function $(e) {
 var ee = s(131168),
     et = s(482589),
     es = s(410516),
-    ei = s(4798),
+    ei = s(461376),
     en = s(661531),
     ea = s(717421),
     er = s(331322),
@@ -290,11 +290,11 @@ function e9(e) {
         t.id,
     );
 }
-function e5(e) {
+function e8(e) {
     let { slotIndex: t } = e;
     return (0, c.jsx)("div", { className: e3.p, children: t });
 }
-function e8(e) {
+function e5(e) {
     let { referralSentUsers: t, className: s } = e;
     return (0, c.jsx)("div", {
         className: u()(e3.L$, s),
@@ -305,7 +305,7 @@ function e8(e) {
                     let i = (0, c.jsx)(e9, { user: t[s] }, t[s].id);
                     e.push(i);
                 } else {
-                    let t = (0, c.jsx)(e5, { slotIndex: s + 1 }, s);
+                    let t = (0, c.jsx)(e8, { slotIndex: s + 1 }, s);
                     e.push(t);
                 }
             return e;
@@ -339,7 +339,7 @@ function te(e) {
             (0, c.jsxs)("div", {
                 className: e3.IH,
                 children: [
-                    (0, c.jsx)(e8, { referralSentUsers: s, className: e3.GV }),
+                    (0, c.jsx)(e5, { referralSentUsers: s, className: e3.GV }),
                     (0, c.jsxs)("div", {
                         className: e3.n4,
                         children: [
@@ -529,7 +529,7 @@ function tp(e) {
                             (0, c.jsx)(ec.E, { variant: "text-md/medium", color: "text-subtle", children: r }),
                         ],
                     }),
-                    (0, c.jsx)(e8, { referralSentUsers: s, className: tf.t7 }),
+                    (0, c.jsx)(e5, { referralSentUsers: s, className: tf.t7 }),
                 ],
             }),
             (0, c.jsx)(eo.$, {
@@ -1288,8 +1288,8 @@ function tV(e) {
                                                     s.e("48132"),
                                                     s.e("64729"),
                                                     s.e("5549"),
-                                                    s.e("42205"),
-                                                    s.e("55675"),
+                                                    s.e("62332"),
+                                                    s.e("8607"),
                                                     s.e("27962"),
                                                     s.e("64827"),
                                                     s.e("7167"),
@@ -1442,8 +1442,8 @@ var t2 = s(325499),
     t3 = s(885574),
     t7 = s(43990),
     t9 = s(993077),
-    t5 = s(139286),
-    t8 = s(872725),
+    t8 = s(139286),
+    t5 = s(872725),
     t4 = s(920050),
     se = s(375776),
     st = s(727811),
@@ -1511,7 +1511,7 @@ function sa(e) {
 }
 function sr(e) {
     let { glowing: t = !1 } = e;
-    (0, t5.A)({
+    (0, t8.A)({
         type: t6.ImpressionTypes.VIEW,
         name: t6.ImpressionNames.PERK_DISCOVERABILITY_CARD,
         properties: { name: t4.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
@@ -1530,7 +1530,7 @@ function sr(e) {
                 value: i,
                 children: (0, c.jsx)("div", {
                     className: u()(e, sn.kL),
-                    children: (0, c.jsx)(t8.A, {
+                    children: (0, c.jsx)(t5.A, {
                         cardType: t9.s.CUSTOM,
                         cardClassName: sn.Nr,
                         glowing: t,
@@ -1812,8 +1812,8 @@ let sT = function (e) {
                                 s.e("48132"),
                                 s.e("64729"),
                                 s.e("5549"),
-                                s.e("42205"),
-                                s.e("55675"),
+                                s.e("62332"),
+                                s.e("8607"),
                                 s.e("27962"),
                                 s.e("64827"),
                                 s.e("7167"),
@@ -2022,7 +2022,7 @@ var sW = s(462887),
     s3 = s(318254),
     s7 = s(490285),
     s9 = s(165815);
-let s5 = function () {
+let s8 = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, X.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
     let s =
@@ -2080,7 +2080,7 @@ let s5 = function () {
         ],
     });
 };
-var s8 = s(758836),
+var s5 = s(758836),
     s4 = s(190107),
     ie = s(55684);
 function it(e) {
@@ -2097,9 +2097,9 @@ function it(e) {
                           description: ex.intl.format(s7.default.wq3CF2, { orbsCount: n.reward_amount }),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: u()(ie.lH, ie.yK),
-                          footerContent: (0, c.jsx)(s5, {}),
+                          footerContent: (0, c.jsx)(s8, {}),
                           ctaText: ex.intl.string(s7.default.BxjHiu),
-                          onCtaClick: () => (0, S.pX)(e1.BVt.COLLECTIBLES_SHOP_WITH_TAB(s8.G2.ORBS)),
+                          onCtaClick: () => (0, S.pX)(e1.BVt.COLLECTIBLES_SHOP_WITH_TAB(s5.G2.ORBS)),
                       },
             [i, n],
         ),
@@ -2371,7 +2371,7 @@ function i_() {
                     "https://cdn.discordapp.com/assets/content/3ec210ddc834d1d72f1f84bd5bb0f7a76897b85c34b3602fea04cc0c74462a22.png",
                 primaryAssetClassName: u()(ie.lH, ie.yK),
                 ctaText: ex.intl.string(ex.t.jVcuVY),
-                onCtaClick: () => (0, S.pX)(e1.BVt.COLLECTIBLES_SHOP_WITH_TAB(s8.G2.PROFILE_FRAMES)),
+                onCtaClick: () => (0, S.pX)(e1.BVt.COLLECTIBLES_SHOP_WITH_TAB(s5.G2.PROFILE_FRAMES)),
             });
         }
         return e.length > s && e.splice(s, e.length - s), e;
@@ -3036,8 +3036,8 @@ let i7 = function (e) {
     });
 };
 var i9 = s(704333),
-    i5 = s(414499),
-    i8 = s(597770),
+    i8 = s(414499),
+    i5 = s(597770),
     i4 = s(500060),
     ne = s(866665),
     nt = s(406860),
@@ -3047,8 +3047,8 @@ function nn() {
     let { sectionRef: e, handleVisibilityChange: t } = (0, nt.A)({ boxType: se.$, thirdPartyPartner: "xbox" }),
         s = [
             { icon: i9.B, text: ex.intl.string(si.default.MUypiB) },
-            { icon: i5.h, text: ex.intl.string(si.default.ec5Rdd) },
-            { icon: i8.o, text: ex.intl.string(si.default["9t2CzW"]), tooltip: si.default.AyECej },
+            { icon: i8.h, text: ex.intl.string(si.default.ec5Rdd) },
+            { icon: i5.o, text: ex.intl.string(si.default["9t2CzW"]), tooltip: si.default.AyECej },
             { icon: i4.o, text: ex.intl.string(si.default.R7YJAY) },
         ];
     return (0, c.jsx)(V.L, {
@@ -4044,8 +4044,8 @@ function n9(e) {
     let { className: t } = e;
     return (0, c.jsx)(n3.Lp, { className: u()(n7.T, t), text: ex.intl.string(ex.t.EYxi0o) });
 }
-var n5 = s(904788),
-    n8 = s(507553),
+var n8 = s(904788),
+    n5 = s(507553),
     n4 = s(255438);
 let ae = "/assets/5b4fec8511c3676a.svg",
     at = "/assets/0838bda6ecd20d91.svg";
@@ -4084,7 +4084,7 @@ function aa(e) {
             className: u()(ai.perkCard, i),
             children: [
                 l
-                    ? (0, c.jsx)(n5.A, {
+                    ? (0, c.jsx)(n8.A, {
                           className: ai.perkCardNewBadge,
                           shouldInheritBackgroundColor: !0,
                           shouldInheritTextColor: !0,
@@ -4165,7 +4165,7 @@ let ar = function (e) {
                         function t() {
                             {
                                 let { openUserSettings: t } = s(766075);
-                                n8.A.setState({ scrollPosition: iI._F.TRY_IT_OUT }),
+                                n5.A.setState({ scrollPosition: iI._F.TRY_IT_OUT }),
                                     t(eS.X.PROFILE_PANEL, { analyticsLocations: e });
                             }
                         }
@@ -4357,10 +4357,10 @@ function au(e) {
 function am() {
     return (0, c.jsxs)(c.Fragment, {
         children: [
-            (0, c.jsx)(n5.p, { className: ad.zd }),
-            (0, c.jsx)(n5.p, { className: ad.G }),
-            (0, c.jsx)(n5.p, { className: ad.zy }),
-            (0, c.jsx)(n5.p, { className: ad.GX }),
+            (0, c.jsx)(n8.p, { className: ad.zd }),
+            (0, c.jsx)(n8.p, { className: ad.G }),
+            (0, c.jsx)(n8.p, { className: ad.zy }),
+            (0, c.jsx)(n8.p, { className: ad.GX }),
         ],
     });
 }

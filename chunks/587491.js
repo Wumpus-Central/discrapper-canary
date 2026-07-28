@@ -1,78 +1,78 @@
-n.d(t, { A: () => p });
-var a = n(627968),
-    i = n(64700),
-    c = n(503698),
-    r = n.n(c),
-    l = n(17928),
-    s = n(231723),
-    o = n(775602),
-    d = n(607470),
-    u = n(196527);
-let b =
+t.d(e, { A: () => m });
+var l = t(477900),
+    n = t(582128),
+    i = t(503698),
+    r = t.n(i),
+    s = t(17928),
+    c = t(231723),
+    o = t(775602),
+    h = t(607470),
+    d = t(544711);
+let u =
     "https://cdn.discordapp.com/assets/content/0f6e600fdc4948050869dfd104a8101154fe07ef3bddf5fb0e21ab070be221a2.png";
-function p(e) {
-    let { mediaUrls: t, isSuccess: n, transitionState: c, onClose: p, children: f } = e,
-        m = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        [y, E] = (0, i.useState)("entry"),
-        [h, v] = (0, i.useState)("entry"),
-        x = (0, i.useRef)(null),
-        R = (0, i.useCallback)(() => {
-            "entry" === y && (E("idle"), v("idle"), x.current?.play());
-        }, [y]),
-        j = (0, i.useCallback)(async () => {
-            "exit" !== y && (E("exit"), await new Promise((e) => setTimeout(e, 175)), await p());
-        }, [y, p]),
-        I = c === s.ip.EXITING;
+function m(a) {
+    let { mediaUrls: e, isSuccess: t, transitionState: i, onClose: m, children: p } = a,
+        x = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        [E, j] = (0, n.useState)("entry"),
+        [v, A] = (0, n.useState)("entry"),
+        C = (0, n.useRef)(null),
+        f = (0, n.useCallback)(() => {
+            "entry" === E && (j("idle"), A("idle"), C.current?.play());
+        }, [E]),
+        g = (0, n.useCallback)(async () => {
+            "exit" !== E && (j("exit"), await new Promise((a) => setTimeout(a, 175)), await m());
+        }, [E, m]),
+        b = i === c.ip.EXITING;
     if (
-        !m &&
-        n &&
-        null != t.activationEntry &&
-        null != t.activationIdle &&
-        null != t.celebrationEntry &&
-        null != t.celebrationIdle
+        !x &&
+        t &&
+        null != e.activationEntry &&
+        null != e.activationIdle &&
+        null != e.celebrationEntry &&
+        null != e.celebrationIdle
     ) {
-        let e =
-                "idle" === h
-                    ? { type: "video", src: t.activationIdle, fallbackImageSrc: b, loop: !0 }
-                    : { type: "video", src: t.activationEntry, fallbackImageSrc: b, loop: !1 },
-            n = "exit" === y || I;
-        return (0, a.jsxs)("div", {
+        let a =
+                "idle" === v
+                    ? { type: "video", src: e.activationIdle, fallbackImageSrc: u, loop: !0 }
+                    : { type: "video", src: e.activationEntry, fallbackImageSrc: u, loop: !1 },
+            t = "exit" === E || b;
+        return (0, l.jsxs)("div", {
             children: [
-                (0, a.jsxs)("div", {
-                    className: r()(u.j, { [u.Xn]: n }),
+                (0, l.jsxs)("div", {
+                    className: r()(d.j, { [d.Xn]: t }),
                     children: [
-                        (0, a.jsx)(d.A, {
+                        (0, l.jsx)(h.A, {
                             playsInline: !0,
                             muted: !0,
                             autoPlay: !0,
-                            onEnded: R,
-                            className: r()(u.Ki, "entry" === y ? u.RK : u.R),
-                            children: (0, a.jsx)("source", { src: t.celebrationEntry }),
+                            onEnded: f,
+                            className: r()(d.Ki, "entry" === E ? d.RK : d.R),
+                            children: (0, l.jsx)("source", { src: e.celebrationEntry }),
                         }),
-                        (0, a.jsx)(d.A, {
-                            ref: x,
+                        (0, l.jsx)(h.A, {
+                            ref: C,
                             playsInline: !0,
                             muted: !0,
                             loop: !0,
-                            className: r()(u.Ki, "idle" === y ? u.RK : u.R),
-                            children: (0, a.jsx)("source", { src: t.celebrationIdle }),
+                            className: r()(d.Ki, "idle" === E ? d.RK : d.R),
+                            children: (0, l.jsx)("source", { src: e.celebrationIdle }),
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", { className: n ? u.aO : u.ws, children: f(e, j) }),
+                (0, l.jsx)("div", { className: t ? d.aO : d.ws, children: p(a, g) }),
             ],
         });
     }
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            !m &&
-                !I &&
-                (0, a.jsx)("img", {
+            !x &&
+                !b &&
+                (0, l.jsx)("img", {
                     src: "https://cdn.discordapp.com/assets/content/5211bb6d712707a9ccfb69d14b3ead6a5ca172e1d1098e357b1d4865e90b525b.png",
                     alt: "",
-                    className: u.hK,
+                    className: d.hK,
                 }),
-            f({ type: "image", src: b, aspectRatio: "16/9" }, p),
+            p({ type: "image", src: u, aspectRatio: "16/9" }, m),
         ],
     });
 }

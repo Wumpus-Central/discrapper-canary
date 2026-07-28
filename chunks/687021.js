@@ -1,6 +1,6 @@
 n.d(l, { A: () => m, v: () => v }), n(667532);
-var i = n(627968),
-    a = n(64700),
+var i = n(477900),
+    a = n(582128),
     t = n(503698),
     r = n.n(t),
     s = n(17928),
@@ -12,7 +12,7 @@ var i = n(627968),
     f = n(711014),
     g = n(403362),
     h = n(375708),
-    x = n(379464);
+    x = n(451968);
 function m(e) {
     let { guildId: l, className: n, globalOption: a, hideDivider: t = !1, onChange: s, renderOptionSuffix: u } = e;
     return (0, i.jsx)(c.A, {

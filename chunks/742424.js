@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { Jd: () => n7, Ay: () => n8, h9: () => n2, bG: () => n1 });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(435558),
     s = n.n(a),
     l = n(837381),
@@ -245,7 +245,7 @@ async function ec(e) {
 var eu = n(506326),
     e_ = n(503698),
     eE = n.n(e_);
-n(340287);
+n(333007);
 var eA = n(554146),
     eh = n(661531),
     eI = n(342952),
@@ -408,15 +408,15 @@ var eq = n(47167),
     e1 = n(643501),
     e2 = n(409626),
     e3 = n(692969),
-    e6 = n(279250),
-    e4 = n(607407),
+    e4 = n(279250),
+    e6 = n(607407),
     e5 = n(548118),
     e7 = n(499211),
     e8 = n(378570),
     e9 = n(832163),
     te = n(565688),
     tt = n(533562),
-    tn = n(4798),
+    tn = n(461376),
     ti = n(805901),
     tr = n(565645);
 n(915089);
@@ -677,10 +677,10 @@ let tW = (0, eQ.Fe)({
                 n.e("97312"),
                 n.e("38469"),
                 n.e("16740"),
-                n.e("42205"),
-                n.e("55675"),
+                n.e("62332"),
+                n.e("8607"),
                 n.e("27962"),
-                n.e("36167"),
+                n.e("61282"),
                 n.e("64827"),
                 n.e("40851"),
                 n.e("7167"),
@@ -1429,7 +1429,7 @@ function t0(e) {
             ...A
         } = e,
         h = (0, d.bG)([tu.A], () => tu.A.getChannel(l?.channelId)),
-        [I] = r.useMemo(() => (0, e6.eo)(h, tI.A, t_.A, tE.A, e1.default), [h]),
+        [I] = r.useMemo(() => (0, e4.eo)(h, tI.A, t_.A, tE.A, e1.default), [h]),
         { entry: f } = A,
         p = (0, tm.zD)(f),
         T = p ? f.extra?.application_id : void 0,
@@ -1469,7 +1469,7 @@ function t0(e) {
                         children: (0, i.jsxs)("div", {
                             className: tj.nh,
                             children: [
-                                (0, i.jsx)(e4.A, { className: tj.j7, stream: l }),
+                                (0, i.jsx)(e6.A, { className: tj.j7, stream: l }),
                                 I &&
                                     (0, i.jsx)("div", {
                                         className: tj.NE,
@@ -1656,8 +1656,8 @@ let t2 = function (e) {
     });
 };
 var t3 = n(322789),
-    t6 = n(808380),
-    t4 = n(687966),
+    t4 = n(808380),
+    t6 = n(687966),
     t5 = n(39623),
     t7 = n(960076),
     t8 = n(544441),
@@ -1784,14 +1784,14 @@ function nu(e) {
 var n_ = n(18282);
 let nE = [...t3.n, eu.Yq],
     nA = {
-        [t6.Y.DESKTOP]: null,
-        [t6.Y.LINUX]: null,
-        [t6.Y.MACOS]: null,
-        [t6.Y.NINTENDO]: null,
-        [t6.Y.IOS]: null,
-        [t6.Y.ANDROID]: null,
-        [t6.Y.XBOX]: nl.A,
-        [t6.Y.PLAYSTATION]: ns.A,
+        [t4.Y.DESKTOP]: null,
+        [t4.Y.LINUX]: null,
+        [t4.Y.MACOS]: null,
+        [t4.Y.NINTENDO]: null,
+        [t4.Y.IOS]: null,
+        [t4.Y.ANDROID]: null,
+        [t4.Y.XBOX]: nl.A,
+        [t4.Y.PLAYSTATION]: ns.A,
     },
     nh = function (e) {
         let {
@@ -1812,7 +1812,7 @@ let nE = [...t3.n, eu.Yq],
             k = n.extra.platform,
             F = n.extra.application_id,
             V = null != k ? nA[k] : null,
-            B = nu(k === t6.Y.XBOX ? eW.fg2.XBOX : k === t6.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
+            B = nu(k === t4.Y.XBOX ? eW.fg2.XBOX : k === t4.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
             { data: H } = (0, D.YY)(F),
             j = (0, t8.A)(F),
             { analyticsLocations: W } = (0, ne.Ay)(L.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
@@ -1924,7 +1924,7 @@ let nE = [...t3.n, eu.Yq],
                     : null,
             Q = [
                 null == Z && ((0, N.A)(h, eW.jUm.JOIN) || (0, C.A)(h))
-                    ? (0, i.jsx)(R.A, { activity: h, user: _, variant: "primary", size: "md", icon: t4._ }, "join")
+                    ? (0, i.jsx)(R.A, { activity: h, user: _, variant: "primary", size: "md", icon: t6._ }, "join")
                     : null,
                 (0, t7.A)(h)
                     ? (0, i.jsx)(nr.A, { activity: h, size: "md", variant: "primary", icon: t5.b }, "watch")
@@ -1952,7 +1952,7 @@ let nE = [...t3.n, eu.Yq],
             ],
         });
     },
-    nI = (0, n(353640).v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) }));
+    nI = (0, n(196765).v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) }));
 function nf(e) {
     let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: a } = e,
         { data: s } = (0, D.YY)(t.extra.application_id),
@@ -2587,7 +2587,7 @@ function n3(e) {
             return null;
     }
 }
-function n6(e) {
+function n4(e) {
     let { entry: t, targetElementRef: n, ...r } = e;
     return t.content_type === o.ContentInventoryEntryType.PLAYED_GAME
         ? (0, i.jsx)(np, {
@@ -2597,7 +2597,7 @@ function n6(e) {
           })
         : null;
 }
-function n4(e) {
+function n6(e) {
     let { closePopout: t, ...n } = e;
     return (0, i.jsx)(n5, {
         onReaction: (e, i) => {
@@ -2703,7 +2703,7 @@ let n7 = r.createContext(void 0),
         }
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                m && (0, i.jsx)(n6, { ...o, targetElementRef: h }),
+                m && (0, i.jsx)(n4, { ...o, targetElementRef: h }),
                 (0, i.jsx)("div", {
                     ref: a,
                     onMouseEnter: () => {
@@ -2719,7 +2719,7 @@ let n7 = r.createContext(void 0),
                             let { closePopout: t } = e;
                             return (0, i.jsx)(n7.Provider, {
                                 value: x,
-                                children: (0, i.jsx)(n4, {
+                                children: (0, i.jsx)(n6, {
                                     closePopout: t,
                                     updatePopoutPosition: U,
                                     trackRankingItemInteraction: w,

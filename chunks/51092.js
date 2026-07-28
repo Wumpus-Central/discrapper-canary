@@ -1,7 +1,7 @@
-n.d(t, { $: () => A, A: () => E });
+n.d(t, { $: () => x, A: () => E });
 var l,
-    i = n(627968),
-    s = n(64700),
+    i = n(477900),
+    s = n(582128),
     r = n(503698),
     a = n.n(r),
     o = n(289873),
@@ -13,8 +13,8 @@ var l,
     g = n(37965);
 let h = 20 * p.A.Millis.SECOND;
 var f = n(821589),
-    x = n(473772),
-    A = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
+    A = n(772148),
+    x = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
 let E = s.memo(function (e) {
     let {
             streamId: t,
@@ -22,7 +22,7 @@ let E = s.memo(function (e) {
             wrapperClassName: l,
             videoComponent: r,
             className: p,
-            fit: A = "contain",
+            fit: x = "contain",
             mirror: E = !1,
             paused: v = !1,
             streamPreviewURL: C,
@@ -34,11 +34,11 @@ let E = s.memo(function (e) {
         [b, y] = s.useState(null),
         T = s.useCallback(
             (e) => {
-                "cover-landscape" === A && y(e), n?.(e);
+                "cover-landscape" === x && y(e), n?.(e);
             },
-            [A, n],
+            [x, n],
         ),
-        D = "cover-landscape" === A ? (null == b || b.width >= b.height ? "cover" : "contain") : A;
+        D = "cover-landscape" === x ? (null == b || b.width >= b.height ? "cover" : "contain") : x;
     !(function (e) {
         let { location: t, videoSpinnerContext: n, userId: l, streamId: i, loading: r, paused: a = !1 } = e,
             [o] = s.useState(() => new d.M(t));
@@ -74,11 +74,11 @@ let E = s.memo(function (e) {
             N(!1), R();
         }, [R]);
     return (0, i.jsxs)("div", {
-        className: a()(x.wrapper, l),
+        className: a()(A.wrapper, l),
         children: [
             null != t &&
                 (0, i.jsx)(r, {
-                    className: a()(x.video, (0, f.t)(x, "video", D), { [x.mirror]: E }, p),
+                    className: a()(A.video, (0, f.t)(A, "video", D), { [A.mirror]: E }, p),
                     streamId: t,
                     onResize: T,
                     onReady: k,
@@ -87,18 +87,18 @@ let E = s.memo(function (e) {
             v
                 ? null
                 : (0, i.jsx)("div", {
-                      className: a()(x.previewWrapper, { [x.loading]: _ }),
+                      className: a()(A.previewWrapper, { [A.loading]: _ }),
                       children:
                           _ &&
                           (0, i.jsxs)(s.Fragment, {
                               children: [
                                   null != C
-                                      ? (0, i.jsx)("img", { src: C, alt: "", className: x.previewImage })
+                                      ? (0, i.jsx)("img", { src: C, alt: "", className: A.previewImage })
                                       : (0, i.jsx)("div", {
-                                            className: x.emptyPreviewWrapper,
-                                            children: (0, i.jsx)("div", { className: x.emptyPreview }),
+                                            className: A.emptyPreviewWrapper,
+                                            children: (0, i.jsx)("div", { className: A.emptyPreview }),
                                         }),
-                                  (0, i.jsx)(o.y, { className: x.spinner }),
+                                  (0, i.jsx)(o.y, { className: A.spinner }),
                               ],
                           }),
                   }),

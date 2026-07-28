@@ -1,15 +1,15 @@
 s.d(l, { A: () => C, q: () => L });
 var n,
-    t = s(627968),
-    i = s(64700),
+    t = s(477900),
+    i = s(582128),
     a = s(503698),
     r = s.n(a),
     o = s(837381),
     c = s(17928),
-    d = s(990078),
-    u = s(789645),
-    m = s(834730),
-    x = s(939249),
+    d = s(789645),
+    u = s(834730),
+    m = s(939249),
+    x = s(866665),
     b = s(442433),
     j = s(565645),
     p = s(775602),
@@ -17,10 +17,10 @@ var n,
     g = s(885386),
     M = s(957565),
     y = s(375708),
-    A = s(422017),
+    A = s(867433),
     f = (((n = f || {})[(n.SMALL = 0)] = "SMALL"), (n[(n.MEDIUM = 1)] = "MEDIUM"), n);
 function C(e) {
-    let { tag: l, size: n = 1, disabled: a, className: d, onClick: f, onRemove: C, selected: L, ariaLabel: N } = e,
+    let { tag: l, size: n = 1, disabled: a, className: x, onClick: f, onRemove: C, selected: L, ariaLabel: N } = e,
         { name: k, emojiId: v, emojiName: S } = l,
         E = null != C,
         [z, P] = i.useState(!1),
@@ -45,9 +45,9 @@ function C(e) {
                     E &&
                     (0, t.jsx)("div", {
                         className: A.closeCircle,
-                        children: (0, t.jsx)(u.P, { size: "md", color: "currentColor", className: A.close }),
+                        children: (0, t.jsx)(d.P, { size: "md", color: "currentColor", className: A.close }),
                     }),
-                (0, t.jsx)(m.E, {
+                (0, t.jsx)(u.E, {
                     variant: T ? "text-xs/semibold" : "text-sm/semibold",
                     lineClamp: 1,
                     color: "currentColor",
@@ -66,7 +66,7 @@ function C(e) {
                     [A.selected]: L,
                     [A[l.color]]: null != l.color && !I,
                 },
-                d,
+                x,
             ),
             onClick: function (e) {
                 f?.(e), C?.(l), D || null == w.current || w.current.blur();
@@ -90,7 +90,7 @@ function C(e) {
         },
         G = (0, o.rm)(`forum-tag-${l.id}`);
     return I
-        ? (0, t.jsx)(x.D, {
+        ? (0, t.jsx)(m.D, {
               ...G,
               innerRef: w,
               focusProps: { ringTarget: w },
@@ -105,14 +105,14 @@ function C(e) {
 function L(e) {
     let { tags: l, count: s, size: n = 1 } = e,
         i = 0 === n;
-    return (0, t.jsx)(d.m, {
+    return (0, t.jsx)(x.m, {
         "aria-label": y.intl.string(y.t["P/y+sj"]),
         __unsupportedReactNodeAsText: (0, t.jsx)(t.Fragment, {
             children: l.map((e) => (0, t.jsx)(C, { tag: e, className: A.tooltipPill, size: C.Sizes.SMALL }, e.id)),
         }),
         children: (0, t.jsx)("div", {
             className: r()(A.pill, { [A.small]: i }),
-            children: (0, t.jsxs)(m.E, { variant: i ? "text-xs/semibold" : "text-sm/semibold", children: ["+", s] }),
+            children: (0, t.jsxs)(u.E, { variant: i ? "text-xs/semibold" : "text-sm/semibold", children: ["+", s] }),
         }),
     });
 }

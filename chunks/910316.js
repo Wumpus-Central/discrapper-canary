@@ -1,6 +1,6 @@
 t.d(e, { W: () => g });
-var n = t(627968),
-    r = t(64700),
+var n = t(477900),
+    r = t(582128),
     i = t(284009),
     s = t.n(i),
     l = t(935462),
@@ -12,7 +12,7 @@ var n = t(627968),
     u = t(887909),
     N = t(936525),
     h = t(375708),
-    p = t(729727);
+    p = t(952052);
 let j = new x.A("TwoWayLinkDiscordConsentWeb");
 function g(a) {
     let {

@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { w: () => a }), n(938796);
-var i = n(627968),
-    r = n(64700),
-    s = n(38021);
-function a(e) {
+n.d(t, { w: () => s }), n(938796);
+var i = n(477900),
+    r = n(582128),
+    a = n(38021);
+function s(e) {
     let {
             children: t,
             theme: n,
-            primaryColor: a,
-            secondaryColor: o,
-            gradient: l,
-            flags: u,
+            primaryColor: s,
+            secondaryColor: l,
+            gradient: o,
+            flags: d,
             contrast: c,
-            saturation: d,
+            saturation: u,
             enabledExperiments: _,
-            density: h,
-            disableAdaptiveTheme: f,
-            reduceAdaptiveTheme: p,
+            density: E,
+            disableAdaptiveTheme: A,
+            reduceAdaptiveTheme: h,
         } = e,
-        E = r.useContext(s.Dx);
-    s.PQ;
-    let m = r.useMemo(
+        I = r.useContext(a.Dx);
+    a.PQ;
+    let f = r.useMemo(
         () =>
-            (0, s.dI)({
-                theme: n ?? E.theme,
-                primaryColor: a ?? E.primaryColor,
-                secondaryColor: o ?? E.secondaryColor,
-                gradient: l ?? E.gradient,
-                flags: u ?? E.flags,
-                contrast: c ?? E.contrast,
-                saturation: d ?? E.saturation,
-                enabledExperiments: _ ?? E.enabledExperiments,
-                density: h ?? E.density,
-                disableAdaptiveTheme: f ?? E.disableAdaptiveTheme,
-                reduceAdaptiveTheme: p ?? E.reduceAdaptiveTheme,
+            (0, a.dI)({
+                theme: n ?? I.theme,
+                primaryColor: s ?? I.primaryColor,
+                secondaryColor: l ?? I.secondaryColor,
+                gradient: o ?? I.gradient,
+                flags: d ?? I.flags,
+                contrast: c ?? I.contrast,
+                saturation: u ?? I.saturation,
+                enabledExperiments: _ ?? I.enabledExperiments,
+                density: E ?? I.density,
+                disableAdaptiveTheme: A ?? I.disableAdaptiveTheme,
+                reduceAdaptiveTheme: h ?? I.reduceAdaptiveTheme,
             }),
         [
             n,
-            E.theme,
-            E.primaryColor,
-            E.secondaryColor,
-            E.gradient,
-            E.flags,
-            E.contrast,
-            E.saturation,
-            E.enabledExperiments,
-            E.density,
-            E.disableAdaptiveTheme,
-            E.reduceAdaptiveTheme,
-            a,
-            o,
+            I.theme,
+            I.primaryColor,
+            I.secondaryColor,
+            I.gradient,
+            I.flags,
+            I.contrast,
+            I.saturation,
+            I.enabledExperiments,
+            I.density,
+            I.disableAdaptiveTheme,
+            I.reduceAdaptiveTheme,
+            s,
             l,
-            u,
-            c,
+            o,
             d,
+            c,
+            u,
             _,
+            E,
+            A,
             h,
-            f,
-            p,
         ],
     );
-    return (0, i.jsx)(s.Dx.Provider, { value: m, children: t });
+    return (0, i.jsx)(a.Dx.Provider, { value: f, children: t });
 }

@@ -1,6 +1,6 @@
 i.d(t, { default: () => M });
-var l = i(627968),
-    n = i(64700),
+var l = i(477900),
+    n = i(582128),
     a = i(132500),
     s = i(830917),
     r = i(189213),
@@ -33,7 +33,7 @@ var l = i(627968),
     L = i(823894),
     N = i(652215),
     B = i(375708),
-    U = i(557155);
+    U = i(482651);
 let F = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
     G = [{ name: "Sticker file", extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"] }];
 function K(e, t) {

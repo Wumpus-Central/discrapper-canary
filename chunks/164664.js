@@ -1,9 +1,9 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i,
-    l = n(627968);
-n(64700);
+    l = n(477900);
+n(582128);
 var s = n(39623),
-    r =
+    a =
         (((i = {})[(i.NONE = 0)] = "NONE"),
         (i[(i.FEATURE_LIMITED = 1)] = "FEATURE_LIMITED"),
         (i[(i.GUILD_FEATURE_LIMITED = 2)] = "GUILD_FEATURE_LIMITED"),
@@ -24,12 +24,12 @@ var s = n(39623),
         (i[(i.BETA_GUILD_SIZE = 17)] = "BETA_GUILD_SIZE"),
         (i[(i.CANNOT_USE_EXTERNAL_APPS = 18)] = "CANNOT_USE_EXTERNAL_APPS"),
         i),
-    a = n(375708),
+    r = n(375708),
     o = n(652215),
-    d = n(473988);
-function c(e) {
+    c = n(872252);
+function d(e) {
     let t,
-        { message: n, onDeleteMessage: i, children: c } = e,
+        { message: n, onDeleteMessage: i, children: d } = e,
         u = n.interactionMetadata?.ephemerality_reason;
     function m() {
         return i(n, !0);
@@ -37,55 +37,55 @@ function c(e) {
     if (null != u) {
         let e = (function (e) {
             switch (e) {
-                case r.FEATURE_LIMITED:
-                    return a.intl.string(a.t.WCvmrR);
-                case r.GUILD_FEATURE_LIMITED:
-                    return a.intl.string(a.t["0QUDYf"]);
-                case r.USER_FEATURE_LIMITED:
-                    return a.intl.string(a.t.gs1sxd);
-                case r.SLOWMODE:
-                    return a.intl.string(a.t["9UAXh4"]);
-                case r.RATE_LIMIT:
-                    return a.intl.string(a.t.zBB9xD);
-                case r.CANNOT_MESSAGE_USER:
-                    return a.intl.string(a.t.w7sHnP);
-                case r.USER_VERIFICATION_LEVEL:
-                    return a.intl.string(a.t.SLAkFX);
-                case r.CANNOT_UNARCHIVE_THREAD:
-                    return a.intl.string(a.t.AIqS3n);
-                case r.CANNOT_JOIN_THREAD:
-                    return a.intl.string(a.t.BqKxlT);
-                case r.MISSING_PERMISSIONS:
-                    return a.intl.string(a.t.LLF2DJ);
-                case r.CANNOT_SEND_ATTACHMENTS:
-                    return a.intl.string(a.t.Htl7W1);
-                case r.CANNOT_SEND_EMBEDS:
-                    return a.intl.string(a.t.vGgPMH);
-                case r.CANNOT_SEND_STICKERS:
-                    return a.intl.string(a.t.byrr7l);
-                case r.AUTOMOD_BLOCKED:
-                    return a.intl.string(a.t["24PAJ+"]);
-                case r.HARMFUL_LINK:
-                    return a.intl.string(a.t.zeqgmP);
-                case r.CANNOT_USE_COMMAND:
-                    return a.intl.string(a.t.kzMhhk);
-                case r.BETA_GUILD_SIZE:
-                    return a.intl.string(a.t.Af3rGY);
-                case r.CANNOT_USE_EXTERNAL_APPS:
-                    return a.intl.string(a.t.Ji4l7E);
+                case a.FEATURE_LIMITED:
+                    return r.intl.string(r.t.WCvmrR);
+                case a.GUILD_FEATURE_LIMITED:
+                    return r.intl.string(r.t["0QUDYf"]);
+                case a.USER_FEATURE_LIMITED:
+                    return r.intl.string(r.t.gs1sxd);
+                case a.SLOWMODE:
+                    return r.intl.string(r.t["9UAXh4"]);
+                case a.RATE_LIMIT:
+                    return r.intl.string(r.t.zBB9xD);
+                case a.CANNOT_MESSAGE_USER:
+                    return r.intl.string(r.t.w7sHnP);
+                case a.USER_VERIFICATION_LEVEL:
+                    return r.intl.string(r.t.SLAkFX);
+                case a.CANNOT_UNARCHIVE_THREAD:
+                    return r.intl.string(r.t.AIqS3n);
+                case a.CANNOT_JOIN_THREAD:
+                    return r.intl.string(r.t.BqKxlT);
+                case a.MISSING_PERMISSIONS:
+                    return r.intl.string(r.t.LLF2DJ);
+                case a.CANNOT_SEND_ATTACHMENTS:
+                    return r.intl.string(r.t.Htl7W1);
+                case a.CANNOT_SEND_EMBEDS:
+                    return r.intl.string(r.t.vGgPMH);
+                case a.CANNOT_SEND_STICKERS:
+                    return r.intl.string(r.t.byrr7l);
+                case a.AUTOMOD_BLOCKED:
+                    return r.intl.string(r.t["24PAJ+"]);
+                case a.HARMFUL_LINK:
+                    return r.intl.string(r.t.zeqgmP);
+                case a.CANNOT_USE_COMMAND:
+                    return r.intl.string(r.t.kzMhhk);
+                case a.BETA_GUILD_SIZE:
+                    return r.intl.string(r.t.Af3rGY);
+                case a.CANNOT_USE_EXTERNAL_APPS:
+                    return r.intl.string(r.t.Ji4l7E);
                 default:
-                    return a.intl.string(a.t["v/OAcs"]);
+                    return r.intl.string(r.t["v/OAcs"]);
             }
         })(u);
-        t = (0, l.jsx)("div", { className: d.rd, children: a.intl.format(a.t.wx1tLQ, { handleDelete: m, reason: e }) });
+        t = (0, l.jsx)("div", { className: c.rd, children: r.intl.format(r.t.wx1tLQ, { handleDelete: m, reason: e }) });
     } else
         t =
             n.type === o.lAJ.STAGE_RAISE_HAND
-                ? a.intl.format(a.t["qDAX++"], { handleDelete: m })
-                : a.intl.format(a.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: m });
+                ? r.intl.format(r.t["qDAX++"], { handleDelete: m })
+                : r.intl.format(r.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: m });
     return (0, l.jsxs)("div", {
-        className: d.XO,
+        className: c.XO,
         onClick: (e) => e.stopPropagation(),
-        children: [(0, l.jsx)(s.b, { size: "xs", color: "currentColor", className: d.Kk }), t, c],
+        children: [(0, l.jsx)(s.b, { size: "xs", color: "currentColor", className: c.Kk }), t, d],
     });
 }

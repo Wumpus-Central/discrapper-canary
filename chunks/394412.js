@@ -1,6 +1,6 @@
-t.d(n, { A: () => g });
-var l = t(627968);
-t(64700);
+t.d(n, { A: () => x });
+var l = t(477900);
+t(582128);
 var i = t(17928),
     s = t(661531),
     a = t(192308),
@@ -15,37 +15,37 @@ var i = t(17928),
     C = t(974930),
     E = t(47868),
     p = t(375708),
-    x = t(908725);
-function g(e) {
-    let { channelId: n, showDismiss: g = !0 } = e,
+    g = t(822125);
+function x(e) {
+    let { channelId: n, showDismiss: x = !0 } = e,
         f = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
         I = (0, m.RO)(n),
-        v = null != (0, m.Qs)(n),
-        { canManageGuildEvent: T } = (0, o.nr)(f),
-        j = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
-        _ = (0, i.cf)([A.Ay], () => j.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
-            j,
+        T = null != (0, m.Qs)(n),
+        { canManageGuildEvent: v } = (0, o.nr)(f),
+        _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
+        j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
+            _,
         ]);
-    return j.length < 1 || v
+    return _.length < 1 || T
         ? null
         : (0, l.jsx)(l.Fragment, {
-              children: j.map((e) =>
+              children: _.map((e) =>
                   (0, l.jsx)(
                       E.A,
                       {
                           icon: (0, l.jsx)(r.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: p.intl.formatToPlainString(T(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
+                          title: p.intl.formatToPlainString(v(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
                           description: p.intl.formatToPlainString(p.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              T(e)
+                              v(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
-                                            t.e("38314"),
-                                            t.e("53032"),
-                                            t.e("70644"),
+                                            t.e("78638"),
+                                            t.e("25296"),
+                                            t.e("48263"),
                                             t.e("1922"),
                                             t.e("49347"),
                                             t.e("68248"),
@@ -55,14 +55,14 @@ function g(e) {
                                     })
                                   : (0, d.uR)({ eventId: e.id });
                           },
-                          onDismiss: g
+                          onDismiss: x
                               ? () => {
                                     var n;
                                     return (n = e.id), void (0, h.Nt)(n);
                                 }
                               : void 0,
-                          userCount: _[e.id],
-                          className: x.f,
+                          userCount: j[e.id],
+                          className: g.f,
                       },
                       e.id,
                   ),

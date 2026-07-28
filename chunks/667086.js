@@ -1,6 +1,6 @@
 o.r(s), o.d(s, { default: () => M });
-var t = o(627968),
-    n = o(64700),
+var t = o(477900),
+    n = o(582128),
     i = o(503698),
     c = o.n(i),
     l = o(877227),
@@ -22,7 +22,7 @@ var t = o(627968),
     E = o(625864),
     O = o(652215),
     y = o(375708),
-    P = o(393058);
+    P = o(130605);
 let R = { cozy: 0, default: 0, compact: 0 },
     v = { cozy: 0, default: 0, compact: 0 },
     z = { cozy: 95, default: 84, compact: 72 };

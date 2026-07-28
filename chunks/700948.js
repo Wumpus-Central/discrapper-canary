@@ -1,6 +1,6 @@
 n.d(t, { A: () => T });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(435558),
@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(821578),
     d = n(17928),
     u = n(313961),
-    p = n(734057),
-    h = n(446243),
+    h = n(734057),
+    p = n(446243),
     m = n(920639),
     A = n(558076),
     f = n(913481),
@@ -36,8 +36,8 @@ function T(e) {
         }, [t]),
         l.useEffect(() => {
             let e = !(0, r.isEqual)(A.A.getRoom(t), A.i),
-                n = p.A.getChannel(t)?.guild_id;
-            e || null == n || (0, h.z5)(n, t);
+                n = h.A.getChannel(t)?.guild_id;
+            e || null == n || (0, p.z5)(n, t);
         }, [t]),
         (0, i.jsxs)("div", {
             className: I.kL,

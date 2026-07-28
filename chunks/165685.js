@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => A });
+var i = n(477900);
+n(582128);
 var r = n(192308),
-    s = n(830215),
-    a = n(439372),
-    o = n(287809),
-    l = n(174459),
-    u = n(536194),
+    a = n(830215),
+    s = n(439372),
+    l = n(287809),
+    o = n(174459),
+    d = n(536194),
     c = n(715314),
-    d = n(652215),
+    u = n(652215),
     _ = n(818348);
-class h extends a.A {
+class E extends s.A {
     actions = { POST_CONNECTION_OPEN: this.handleConnectionOpen };
     handleConnectionOpen() {
-        let e = o.default.getCurrentUser();
-        if (null == e || u.P.isDisallowPopupsSet()) return;
-        let t = c.A.requiredActionsIncludes(e.id, [d.Kby.UPDATE_PASSWORD]);
+        let e = l.default.getCurrentUser();
+        if (null == e || d.P.isDisallowPopupsSet()) return;
+        let t = c.A.requiredActionsIncludes(e.id, [u.Kby.UPDATE_PASSWORD]);
         c.A.wasLoginAttemptedInSession(e.id) && t
             ? (0, r.openModalLazy)(
                   async () => {
@@ -25,12 +25,12 @@ class h extends a.A {
                       );
                       return function (t) {
                           async function n() {
-                              await t.onClose(), s.A.logout("login_required_account_manager", d.BVt.LOGIN);
+                              await t.onClose(), a.A.logout("login_required_account_manager", u.BVt.LOGIN);
                           }
                           return (0, i.jsx)(e, {
                               ...t,
                               onSuccess: function () {
-                                  l.default.track(d.HAw.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
+                                  o.default.track(u.HAw.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
                               },
                               onClose: n,
                               requirementsUpdated: !0,
@@ -39,7 +39,7 @@ class h extends a.A {
                   },
                   { modalKey: "LOGIN_REQUIRED_ACTIONS_MODAL_KEY", onCloseRequest: _.FX, instant: !0 },
               )
-            : t && s.A.logout("login_required_account_manager", d.BVt.LOGIN);
+            : t && a.A.logout("login_required_account_manager", u.BVt.LOGIN);
     }
 }
-let f = new h();
+let A = new E();

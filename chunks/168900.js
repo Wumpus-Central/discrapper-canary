@@ -1,10 +1,10 @@
 a.d(r, { J: () => i });
-var o = a(627968);
-a(64700);
+var o = a(477900);
+a(582128);
 let d =
     "https://cdn.discordapp.com/assets/content/f6be7075b3756dfb89ce77617b82d7a9a863a31483e03dfedb07377038197910.riv";
-var t = a(594639),
-    n = a(105596);
+var t = a(502377),
+    n = a(799226);
 let c = {
     "Gem L2": { reducedMotion: "boolean" },
     Sparkle: { reducedMotion: "boolean" },

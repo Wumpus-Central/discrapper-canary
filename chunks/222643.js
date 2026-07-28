@@ -1,6 +1,6 @@
 t.d(n, { x: () => d });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(17928),
     a = t(623646),
     r = t(43189),
@@ -19,16 +19,16 @@ function d(e) {
         C = i.useContext(c.vG),
         [E, p] = i.useState(""),
         [g, x] = i.useState(!1),
-        I = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
-        f = i.useRef(null),
+        f = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        I = i.useRef(null),
         T = i.useRef(0);
     i.useEffect(() => {
         let e = n.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         i.useEffect(() => {
-            m || (p(String(T.current)), x(void 0 !== I && I < (f.current?.clientHeight ?? 300) + 24), (T.current += 1));
-        }, [I, f, m]);
+            m || (p(String(T.current)), x(void 0 !== f && f < (I.current?.clientHeight ?? 300) + 24), (T.current += 1));
+        }, [f, I, m]);
     let { preventIdle: v, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
         ? null
@@ -42,7 +42,7 @@ function d(e) {
                   nudgeAlignIntoViewport: h,
                   children: () =>
                       (0, l.jsx)("div", {
-                          ref: f,
+                          ref: I,
                           onMouseOver: v,
                           onFocus: v,
                           onBlur: _,

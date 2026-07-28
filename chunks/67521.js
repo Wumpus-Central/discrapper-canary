@@ -1,6 +1,6 @@
 t.d(A, { A: () => p });
-var _ = t(627968);
-t(64700);
+var _ = t(477900);
+t(582128);
 var a = t(192308),
     s = t(228366),
     E = t(847599),
@@ -15,8 +15,8 @@ let o = {
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
                     let { default: A } = await Promise.all([
-                        t.e("28626"),
-                        t.e("40854"),
+                        t.e("83018"),
+                        t.e("12211"),
                         t.e("607"),
                         t.e("12755"),
                         t.e("9018"),
@@ -30,7 +30,7 @@ let o = {
             (0, a.openModalLazy)(
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                    let { default: A } = await Promise.all([t.e("40854"), t.e("607"), t.e("84794"), t.e("99487")]).then(
+                    let { default: A } = await Promise.all([t.e("12211"), t.e("607"), t.e("84794"), t.e("99487")]).then(
                         t.bind(t, 595746),
                     );
                     return (t) =>

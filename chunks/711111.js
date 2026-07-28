@@ -1,6 +1,6 @@
 t.d(l, { G: () => a });
-var r = t(64700),
-    n = t(4798);
+var r = t(582128),
+    n = t(461376);
 class s {
     top = new n.SpringValue(0);
     handleScroll(e) {

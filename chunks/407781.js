@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { A: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(735438),
-    a = n(104142),
-    o = n(194486),
-    l = n(628202);
-async function u(e) {
+var i = n(477900),
+    r = n(582128),
+    a = n(435558),
+    s = n(104142),
+    l = n(194486),
+    o = n(762450);
+async function d(e) {
     let { animationType: t, animationId: n, url: i, shouldResize: r } = e,
-        l = a.Bf[t] ?? a.Bf[o.B.BASIC],
-        u = JSON.parse(JSON.stringify(null != n && n < l.length ? l[n] : (0, s.sample)(l)));
-    return (u.assets[0].p = r ? await (0, a.tm)(i) : i), u;
+        o = s.Bf[t] ?? s.Bf[l.B.BASIC],
+        d = JSON.parse(JSON.stringify(null != n && n < o.length ? o[n] : (0, a.sample)(o)));
+    return (d.assets[0].p = r ? await (0, s.tm)(i) : i), d;
 }
 function c(e) {
-    let { containerDimensions: t, effect: s, onComplete: a } = e,
+    let { containerDimensions: t, effect: a, onComplete: s } = e,
         c = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -21,7 +21,7 @@ function c(e) {
             return (
                 !(async function () {
                     if (null != c.current) {
-                        let t = await u(s),
+                        let t = await d(a),
                             { default: i } = await n.e("96382").then(n.t.bind(n, 883885, 23));
                         null != c.current &&
                             ((e = i.loadAnimation({
@@ -32,15 +32,15 @@ function c(e) {
                                 animationData: t,
                                 rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
                             })),
-                            s.animationType === o.B.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener("complete", () => a?.(s.id)));
+                            a.animationType === l.B.PREMIUM && e.setSpeed(0.8),
+                            e.addEventListener("complete", () => s?.(a.id)));
                     }
                 })(),
                 () => {
                     e?.destroy();
                 }
             );
-        }, [a, s]),
-        (0, i.jsx)("div", { className: l.Q, style: { height: t.height, width: t.width }, ref: c })
+        }, [s, a]),
+        (0, i.jsx)("div", { className: o.Q, style: { height: t.height, width: t.width }, ref: c })
     );
 }

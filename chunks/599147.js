@@ -1,6 +1,6 @@
 l.d(t, { o: () => A });
-var a = l(627968),
-    n = l(64700),
+var a = l(477900),
+    n = l(582128),
     i = l(192308),
     r = l(691885),
     o = l(150934),
@@ -93,7 +93,7 @@ function j(e) {
     }
 }
 var T = l(601107),
-    P = l(788868),
+    P = l(202541),
     I = l(818348);
 let A = () => {
     let [e, t] = n.useState(P.PremiumTypes.TIER_0),
@@ -187,7 +187,7 @@ let A = () => {
                     ),
                 l !== d.g.PREVIEW && null !== j && A(null);
         }, [l, b, g, x, j]);
-    let L = n.useCallback(async () => {
+    let O = n.useCallback(async () => {
         V(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
@@ -234,8 +234,8 @@ let A = () => {
     }, [e, b, x, j, R, M, l, g]);
     return (
         (0, n.useEffect)(() => {
-            D && L();
-        }, [l, D, L]),
+            D && O();
+        }, [l, D, O]),
         (0, a.jsxs)(c.LB, {
             children: [
                 (0, a.jsx)(c.MG, {

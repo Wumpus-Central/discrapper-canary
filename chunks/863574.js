@@ -1,29 +1,29 @@
-n.d(t, { Tm: () => o, Wb: () => c, ug: () => d });
-var i = n(627968);
-n(64700);
+n.d(t, { Tm: () => o, Wb: () => d, ug: () => c });
+var i = n(477900);
+n(582128);
 var l = n(503698),
     s = n.n(l),
-    r = n(622413),
-    a = n(528241);
+    a = n(622413),
+    r = n(254937);
 let o = 660;
-function d(e) {
-    return (0, i.jsx)(r.A, { ...e, className: s()(e.className, { [a.sN]: !e.isHorizontal, [a.wO]: e.isHorizontal }) });
+function c(e) {
+    return (0, i.jsx)(a.A, { ...e, className: s()(e.className, { [r.sN]: !e.isHorizontal, [r.wO]: e.isHorizontal }) });
 }
-let c = (e) => {
+let d = (e) => {
     let { isHorizontal: t } = e;
-    return (0, i.jsx)(d, {
+    return (0, i.jsx)(c, {
         ...e,
         media: function () {
             return (0, i.jsx)("div", {
-                className: a.FR,
+                className: r.FR,
                 children: (0, i.jsx)("div", {
-                    className: s()(a.Wv, { [a._n]: t }),
-                    children: (0, i.jsx)("div", { className: a.h$ }),
+                    className: s()(r.Wv, { [r._n]: t }),
+                    children: (0, i.jsx)("div", { className: r.h$ }),
                 }),
             });
         },
         title: function () {
-            return (0, i.jsx)("div", { className: s()(a.GE, { [a.E9]: t }) });
+            return (0, i.jsx)("div", { className: s()(r.GE, { [r.E9]: t }) });
         },
     });
 };

@@ -1,101 +1,101 @@
 "use strict";
-n.d(t, { A: () => p, i: () => f });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => h, i: () => A });
+var i = n(477900);
+n(582128);
 var r = n(503698),
-    s = n.n(r),
-    a = n(607470),
-    o = n(572808),
-    l = n(860923),
-    u = n(149505),
+    a = n.n(r),
+    s = n(607470),
+    l = n(572808),
+    o = n(860923),
+    d = n(149505),
     c = n(577632),
-    d = n(451772),
+    u = n(451772),
     _ = n(822768),
-    h = n(683807);
-let f = { width: 2180, height: 1536 },
-    p = function (e) {
+    E = n(749719);
+let A = { width: 2180, height: 1536 },
+    h = function (e) {
         let {
                 roomSeats: t,
                 roomParticipants: n,
                 participants: r,
-                channel: f,
-                idle: p,
-                showAmbientEffects: E = !0,
-                enableAnimations: m = !0,
-                skipNewUserEducation: g = !1,
-                onSeatClick: A,
-                disableInteractions: I = !1,
+                channel: A,
+                idle: h,
+                showAmbientEffects: I = !0,
+                enableAnimations: f = !0,
+                skipNewUserEducation: p = !1,
+                onSeatClick: T,
+                disableInteractions: m = !1,
             } = e,
-            T = (0, l.A)();
-        return null == T
+            g = (0, o.A)();
+        return null == g
             ? null
             : (0, i.jsxs)("div", {
-                  className: h.cA,
+                  className: E.cA,
                   children: [
-                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.sky.static, alt: "", draggable: !1 }),
-                      E && (0, i.jsx)(_.A, {}),
+                      (0, i.jsx)("img", { className: E.Tp, src: g.backgrounds.sky.static, alt: "", draggable: !1 }),
+                      I && (0, i.jsx)(_.A, {}),
                       (0, i.jsx)("img", {
-                          className: h.Tp,
-                          src: T.backgrounds.mountains.static,
+                          className: E.Tp,
+                          src: g.backgrounds.mountains.static,
                           alt: "",
                           draggable: !1,
                       }),
-                      E && (0, i.jsx)(u.A, {}),
-                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.river.static, alt: "", draggable: !1 }),
-                      E &&
-                          (0, i.jsx)(a.A, {
-                              className: h.Ki,
+                      I && (0, i.jsx)(d.A, {}),
+                      (0, i.jsx)("img", { className: E.Tp, src: g.backgrounds.river.static, alt: "", draggable: !1 }),
+                      I &&
+                          (0, i.jsx)(s.A, {
+                              className: E.Ki,
                               style: { transform: "translate(779px, 1009px)" },
-                              src: T.ambience.river.animated,
+                              src: g.ambience.river.animated,
                               autoPlay: !0,
                               controls: !1,
                               loop: !0,
                           }),
-                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.camp.static, alt: "", draggable: !1 }),
-                      o.dG.map((e) =>
+                      (0, i.jsx)("img", { className: E.Tp, src: g.backgrounds.camp.static, alt: "", draggable: !1 }),
+                      l.dG.map((e) =>
                           (0, i.jsx)(
-                              d.A,
-                              { occupant: t[e.id - 1]?.claimedBy, onClick: A, skipNewUserEducation: g, ...e },
+                              u.A,
+                              { occupant: t[e.id - 1]?.claimedBy, onClick: T, skipNewUserEducation: p, ...e },
                               e.id,
                           ),
                       ),
                       n.map((e) =>
                           (0, i.jsx)(
                               c.A,
-                              { seats: t, participant: e, participants: r, channel: f, idle: p, enableAnimations: m },
+                              { seats: t, participant: e, participants: r, channel: A, idle: h, enableAnimations: f },
                               e.userId,
                           ),
                       ),
-                      E &&
+                      I &&
                           (0, i.jsxs)("div", {
-                              className: s()(h.cA, h.ey),
+                              className: a()(E.cA, E.ey),
                               children: [
-                                  (0, i.jsx)(a.A, {
-                                      className: h.Ki,
+                                  (0, i.jsx)(s.A, {
+                                      className: E.Ki,
                                       style: { transform: "translate(1014px, 773px)" },
-                                      src: T.ambience.fire.animated,
+                                      src: g.ambience.fire.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
-                                  (0, i.jsx)(a.A, {
-                                      className: h.Ki,
-                                      src: T.ambience.fireflies.animated,
+                                  (0, i.jsx)(s.A, {
+                                      className: E.Ki,
+                                      src: g.ambience.fireflies.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
-                                  (0, i.jsx)(a.A, {
-                                      className: h.Ki,
+                                  (0, i.jsx)(s.A, {
+                                      className: E.Ki,
                                       style: { transform: "translate(0, 1216px)" },
-                                      src: T.ambience.foliage_front.animated,
+                                      src: g.ambience.foliage_front.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
                               ],
                           }),
-                      I && (0, i.jsx)("div", { className: h.ps }),
+                      m && (0, i.jsx)("div", { className: E.ps }),
                   ],
               });
     };

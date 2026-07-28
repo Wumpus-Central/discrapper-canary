@@ -1,6 +1,6 @@
 i.d(n, { default: () => V });
-var t = i(627968),
-    r = i(64700),
+var t = i(477900),
+    r = i(582128),
     l = i(17928),
     a = i(980707),
     d = i(477782),
@@ -125,7 +125,7 @@ let V = (0, u.A)(
                                             action: () =>
                                                 (0, D.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        i.e("97660"),
+                                                        i.e("10788"),
                                                         i.e("40243"),
                                                     ]).then(i.bind(i, 547166));
                                                     return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
@@ -142,7 +142,7 @@ let V = (0, u.A)(
                                             action: () =>
                                                 (0, D.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        i.e("33847"),
+                                                        i.e("87407"),
                                                         i.e("2504"),
                                                     ]).then(i.bind(i, 333179));
                                                     return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });

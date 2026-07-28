@@ -1,15 +1,15 @@
-n.d(t, { A: () => r, J: () => a });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => a, J: () => r });
+var i = n(477900);
+n(582128);
 var l = n(21878),
     s = n(500414);
-function r(e) {
+function a(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: r = !1 },
-        hasSpoilerEmbeds: a,
+        channelMessageProps: { message: t, channel: n, compact: a = !1 },
+        hasSpoilerEmbeds: r,
         hasBailedAst: o,
-        handleContextMenu: d,
-        isInteracting: c,
+        handleContextMenu: c,
+        isInteracting: d,
         isAutomodBlockedMessage: u,
         isMessageSnapshot: m,
         renderThreadAccessory: h,
@@ -26,14 +26,14 @@ function r(e) {
               message: t,
               children: (0, i.jsx)(s.Ay, {
                   className: E,
-                  isInteracting: c,
+                  isInteracting: d,
                   message: t,
                   channel: n,
-                  compact: r,
-                  hasSpoilerEmbeds: a,
+                  compact: a,
+                  hasSpoilerEmbeds: r,
                   hasBailedAst: o,
                   isMessageSnapshot: m,
-                  onMediaItemContextMenu: d,
+                  onMediaItemContextMenu: c,
                   renderThreadAccessory: h,
                   disableComponentInteractivity: f,
                   renderSuppressEmbeds: g,
@@ -43,23 +43,23 @@ function r(e) {
               }),
           });
 }
-function a(e, t, n) {
+function r(e, t, n) {
     let {
         message: l,
-        channel: r,
-        compact: a = !1,
+        channel: a,
+        compact: r = !1,
         renderThreadAccessory: o,
-        disableReactionCreates: d,
-        disableReactionUpdates: c,
+        disableReactionCreates: c,
+        disableReactionUpdates: d,
     } = e;
     return (0, i.jsx)(s.OC, {
         message: l,
-        channel: r,
-        compact: a,
+        channel: a,
+        compact: r,
         hasSpoilerEmbeds: t,
         hasBailedAst: n,
         renderThreadAccessory: o,
-        disableReactionCreates: d,
-        disableReactionUpdates: c,
+        disableReactionCreates: c,
+        disableReactionUpdates: d,
     });
 }

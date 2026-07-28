@@ -1,6 +1,6 @@
 l.d(t, { A: () => m });
-var s = l(627968),
-    i = l(64700),
+var s = l(477900),
+    i = l(582128),
     a = l(503698),
     n = l.n(a),
     r = l(939249),
@@ -8,7 +8,7 @@ var s = l(627968),
     c = l(661531),
     d = l(892547),
     u = l(488995),
-    h = l(206293);
+    h = l(822669);
 function m(e) {
     let {
             state: t,
@@ -18,14 +18,14 @@ function m(e) {
             onCollapsedClick: p,
             onClear: g,
             onBlur: x,
-            onSubmit: A,
+            onSubmit: v,
         } = e,
         j = i.useRef(null),
-        v = i.useCallback(
+        A = i.useCallback(
             (e) => {
-                "Enter" === e.key && A();
+                "Enter" === e.key && v();
             },
-            [A],
+            [v],
         ),
         C = i.useCallback(() => {
             p(), setTimeout(() => j.current?.focus());
@@ -45,7 +45,7 @@ function m(e) {
                   placeholder: a,
                   onChange: m,
                   onClear: g,
-                  onKeyDown: v,
+                  onKeyDown: A,
                   onBlur: x,
               }),
           });

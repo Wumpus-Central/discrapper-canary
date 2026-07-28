@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { w: () => na, A: () => nl });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(989349),
     s = n.n(a),
-    l = n(936504),
+    l = n(561028),
     o = n(299855),
     d = n.n(o),
     c = n(17928),
@@ -485,20 +485,20 @@ var e$ = n(202384),
 n(321073);
 var eq = n(503698),
     eZ = n.n(eq),
-    eX = n(873263),
+    eX = n(806163),
     eQ = n(314116),
     eJ = n(821609),
     e0 = n(334465),
     e1 = n(624458),
     e2 = n(513461),
     e3 = n(709977),
-    e6 = n(212455),
-    e4 = n(7142),
+    e4 = n(212455),
+    e6 = n(7142),
     e5 = n(396769);
 let e7 = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
         t = (0, c.bG)([ey.A], () => ey.A.getGuild(e), [e]),
-        r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
+        r = (0, c.bG)([e4.A], () => (null != e ? e4.A.getRequest(e) : null), [e]),
         a = (0, eX.zy)(),
         s = (0, e0.B)(a.pathname, ei.BVt.CHANNEL(t?.id, eU.VV.GUILD_ONBOARDING))?.isExact === !0;
     if (null == t || !(0, e3.Qd)(t) || s) return null;
@@ -506,7 +506,7 @@ let e7 = function () {
         o = null,
         d = null,
         u = null,
-        E = [e4.lm, e5.lm];
+        E = [e6.lm, e5.lm];
     switch (l) {
         case e2.B5.SUBMITTED:
             (o = es.intl.string(es.t["5iLvSx"])),
@@ -532,7 +532,7 @@ let e7 = function () {
                             return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                         });
                 }),
-                E.push(e4.z3);
+                E.push(e6.z3);
             break;
         default:
             (o = es.intl.string(es.t.G5YKXP)),
@@ -544,7 +544,7 @@ let e7 = function () {
     return (0, i.jsxs)("div", {
         className: eZ()(...E),
         children: [
-            (0, i.jsx)(_.E, { className: e4.wx, variant: "text-sm/normal", children: o }),
+            (0, i.jsx)(_.E, { className: e6.wx, variant: "text-sm/normal", children: o }),
             (0, i.jsx)(eJ.$, { variant: "overlay-primary", size: "sm", onClick: u, text: d }),
         ],
     });
@@ -894,13 +894,13 @@ function tQ(e) {
         ...e,
     });
 }
-var tJ = n(210144),
+var tJ = n(293246),
     t0 = n(763827),
     t1 = n(67480),
     t2 = n(147964),
     t3 = n(177141),
-    t6 = n(975571),
-    t4 = n(723702),
+    t4 = n(975571),
+    t6 = n(723702),
     t5 = n(325278),
     t7 = n(831502),
     t8 = n(731854);
@@ -921,7 +921,7 @@ function ne(e) {
         ? (0, i.jsx)(E.D, {
               tag: "span",
               className: el.wz,
-              onClick: () => open(t6.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
+              onClick: () => open(t4.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
               children: s,
           })
         : s;
@@ -940,7 +940,7 @@ function nt(e) {
             es.intl.string(es.t.o3zuYz),
             (0, i.jsx)(ne, { error: eg.iy.NO_INPUT_DEVICES }),
             (0, i.jsx)(A.eC, {
-                href: t6.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
+                href: t4.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
                 noticeType: t,
                 children: es.intl.string(es.t.RYKKox),
             }),
@@ -968,7 +968,7 @@ function nn(e) {
     });
 }
 function ni(e) {
-    return (0, t4.isWindows)() && d().satisfies(M.A?.os.release, t5.PH)
+    return (0, t6.isWindows)() && d().satisfies(M.A?.os.release, t5.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
@@ -1001,7 +1001,7 @@ function nr(e) {
                   })))
                 : ((t = es.intl.string(es.t.nCO9bI)),
                   (n = (0, i.jsx)(A.eC, {
-                      href: t6.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
+                      href: t4.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
                       noticeType: r,
                       children: es.intl.string(es.t.RYKKox),
                   }))),
@@ -1088,7 +1088,7 @@ let ns = r.memo(function () {
                 color: A.Hv.WARNING,
                 children: [
                     (0, i.jsx)(A.PM, { onClick: () => na(H), noticeType: a.type }),
-                    es.intl.format(es.t["08KQ1P"], { helpCenterLink: t6.A.getArticleURL(ei.MVz.WIN32_DEPRECATE) }),
+                    es.intl.format(es.t["08KQ1P"], { helpCenterLink: t4.A.getArticleURL(ei.MVz.WIN32_DEPRECATE) }),
                 ],
             });
         case ei.kqX.WIN7_8_DEPRECATED_MESSAGE:
@@ -1097,7 +1097,7 @@ let ns = r.memo(function () {
                 color: A.Hv.WARNING,
                 children: [
                     (0, i.jsx)(A.PM, { onClick: () => na(j), noticeType: a.type }),
-                    es.intl.format(es.t["8Je+dX"], { helpCenterLink: t6.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
+                    es.intl.format(es.t["8Je+dX"], { helpCenterLink: t4.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
                 ],
             });
         case ei.kqX.WIN_COMPAT_MODE_MESSAGE:
@@ -1117,7 +1117,7 @@ let ns = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, { onClick: () => na(Y), noticeType: a.type }),
                     es.intl.format(es.t.q8VPLo, {
-                        helpCenterLink: t6.A.getArticleURL(K ? ei.MVz.MACOS_20_DEPRECATE : ei.MVz.MACOS_19_DEPRECATE),
+                        helpCenterLink: t4.A.getArticleURL(K ? ei.MVz.MACOS_20_DEPRECATE : ei.MVz.MACOS_19_DEPRECATE),
                     }),
                 ],
             });
@@ -1127,8 +1127,8 @@ let ns = r.memo(function () {
                 color: A.Hv.WARNING,
                 children: [
                     (0, i.jsx)(A.PM, { onClick: () => na(z), noticeType: a.type }),
-                    es.intl.format(t4.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
-                        helpCenterLink: t6.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
+                    es.intl.format(t6.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
+                        helpCenterLink: t4.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
                     }),
                 ],
             });
@@ -1139,7 +1139,7 @@ let ns = r.memo(function () {
                     (0, i.jsx)(A.PM, { onClick: () => na(), noticeType: a.type }),
                     es.intl.string(es.t.iW0fcQ),
                     (0, i.jsx)(A.eC, {
-                        href: t6.A.getArticleURL(ei.MVz.WINDOWS_MEDIA_PACK),
+                        href: t4.A.getArticleURL(ei.MVz.WINDOWS_MEDIA_PACK),
                         target: "_blank",
                         noticeType: a.type,
                         children: es.intl.string(es.t.LQG5j6),
@@ -1229,7 +1229,7 @@ let ns = r.memo(function () {
                     }),
                     (0, i.jsx)(h.Anchor, {
                         className: el.uD,
-                        href: t6.A.getArticleURL(ei.MVz.SPOTIFY_AUTO_PAUSED),
+                        href: t4.A.getArticleURL(ei.MVz.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
                         children: es.intl.string(es.t.CiqAIU),
                     }),
@@ -1426,8 +1426,8 @@ let ns = r.memo(function () {
                                     n.e("77873"),
                                     n.e("97312"),
                                     n.e("38469"),
-                                    n.e("42205"),
-                                    n.e("55675"),
+                                    n.e("62332"),
+                                    n.e("8607"),
                                     n.e("27962"),
                                     n.e("64827"),
                                     n.e("40851"),
@@ -1564,7 +1564,7 @@ let ns = r.memo(function () {
                 children: [
                     es.intl.string(es.t["ugxmk/"]),
                     (0, i.jsx)(A.eC, {
-                        href: t6.A.getArticleURL(ei.MVz.CORRUPT_INSTALLATION),
+                        href: t4.A.getArticleURL(ei.MVz.CORRUPT_INSTALLATION),
                         target: "_blank",
                         noticeType: a.type,
                         children: es.intl.string(es.t["6ik4Xk"]),
@@ -1762,8 +1762,8 @@ let ns = r.memo(function () {
                                         n.e("50693"),
                                         n.e("99424"),
                                         n.e("670"),
-                                        n.e("42205"),
-                                        n.e("55675"),
+                                        n.e("62332"),
+                                        n.e("8607"),
                                         n.e("27962"),
                                         n.e("64827"),
                                         n.e("40851"),
@@ -1958,7 +1958,7 @@ let ns = r.memo(function () {
                         children: es.intl.string(es.t.kvHdFN),
                     }),
                     (0, i.jsx)(h.Anchor, {
-                        href: t6.A.getArticleURL(ei.MVz.QUARANTINE),
+                        href: t4.A.getArticleURL(ei.MVz.QUARANTINE),
                         target: "_blank",
                         className: el.yw,
                         children: es.intl.string(es.t.hvVgAZ),

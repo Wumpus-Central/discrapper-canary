@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { ad: () => p, kD: () => h, uu: () => f }), n(321073);
-var i = n(64700),
+n.d(t, { ad: () => h, kD: () => E, uu: () => A }), n(321073);
+var i = n(582128),
     r = n(91871),
-    s = n.n(r),
-    a = n(17928),
-    o = n(287809),
-    l = n(274372),
-    u = n(372684),
+    a = n.n(r),
+    s = n(17928),
+    l = n(287809),
+    o = n(915725),
+    d = n(372684),
     c = n(111994),
-    d = n(792852);
+    u = n(792852);
 let _ = new Set();
-function h(e) {
-    return e.decision?.signal?.type === u.Gy.DISTRIBUTED;
+function E(e) {
+    return e.decision?.signal?.type === d.Gy.DISTRIBUTED;
 }
-function f(e, t) {
+function A(e, t) {
     return t === c.mu.OLDEST
         ? e.sort((e, t) => e.createdAt - t.createdAt)
         : e.sort((e, t) => t.createdAt - e.createdAt);
 }
-function p() {
-    let e = (0, a.yK)([l.Ay], () => Object.values(l.Ay.getClips())),
-        t = (0, a.yK)([l.Ay], () => l.Ay.getNewClipIds()),
-        n = (0, d.P)(),
-        r = (0, a.bG)([l.Ay], () => l.Ay.getSettings().showPovClipsInGallery),
-        p = (0, a.bG)([o.default], () => o.default.getCurrentUser()?.id);
+function h() {
+    let e = (0, s.yK)([o.Ay], () => Object.values(o.Ay.getClips())),
+        t = (0, s.yK)([o.Ay], () => o.Ay.getNewClipIds()),
+        n = (0, u.P)(),
+        r = (0, s.bG)([o.Ay], () => o.Ay.getSettings().showPovClipsInGallery),
+        h = (0, s.bG)([l.default], () => l.default.getCurrentUser()?.id);
     return i.useMemo(() => {
-        let i = r ? e : e.filter((e) => !h(e)),
-            a = new Set(t),
-            o = [],
-            l = new Map(),
-            d = new Map(),
-            E = new Map(),
-            m = { allClips: 0, autoClips: 0, favorites: 0 },
-            g = new Map(),
-            A = { allClips: 0, autoClips: 0, favorites: 0 };
+        let i = r ? e : e.filter((e) => !E(e)),
+            s = new Set(t),
+            l = [],
+            o = new Map(),
+            u = new Map(),
+            I = new Map(),
+            f = { allClips: 0, autoClips: 0, favorites: 0 },
+            p = new Map(),
+            T = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of i) {
             if (
                 ((function (e, t) {
@@ -47,7 +47,7 @@ function p() {
                         return !1;
                     if (!n.has(2) && null != t.clippedWithFacet) {
                         let n = e.decision?.signal;
-                        if (n?.type !== u.Gy.DISTRIBUTED || n.remoteTriggerUserId !== t.clippedWithFacet) return !1;
+                        if (n?.type !== d.Gy.DISTRIBUTED || n.remoteTriggerUserId !== t.clippedWithFacet) return !1;
                     }
                     if (
                         !n.has(3) &&
@@ -80,88 +80,88 @@ function p() {
                         let n = t.query.trim();
                         if ("" !== n) {
                             let t = n.toLowerCase(),
-                                i = null != e.name && s()(t, e.name.toLowerCase()),
-                                r = s()(t, e.applicationName.toLowerCase()),
-                                a = e.activity?.state != null && s()(t, e.activity.state.toLowerCase()),
-                                o = e.activity?.details != null && s()(t, e.activity.details.toLowerCase());
-                            if (!i && !r && !a && !o) return !1;
+                                i = null != e.name && a()(t, e.name.toLowerCase()),
+                                r = a()(t, e.applicationName.toLowerCase()),
+                                s = e.activity?.state != null && a()(t, e.activity.state.toLowerCase()),
+                                l = e.activity?.details != null && a()(t, e.activity.details.toLowerCase());
+                            if (!i && !r && !s && !l) return !1;
                         }
                     }
                     return !0;
-                })(e, n) && o.push(e),
-                (m.allClips += 1),
-                "auto" === e.clipMethod && (m.autoClips += 1),
-                e.isFavorite && (m.favorites += 1),
-                a.has(e.id) &&
-                    ((A.allClips += 1),
-                    "auto" === e.clipMethod && (A.autoClips += 1),
-                    e.isFavorite && (A.favorites += 1),
-                    null != e.applicationId && g.set(e.applicationId, (g.get(e.applicationId) ?? 0) + 1)),
+                })(e, n) && l.push(e),
+                (f.allClips += 1),
+                "auto" === e.clipMethod && (f.autoClips += 1),
+                e.isFavorite && (f.favorites += 1),
+                s.has(e.id) &&
+                    ((T.allClips += 1),
+                    "auto" === e.clipMethod && (T.autoClips += 1),
+                    e.isFavorite && (T.favorites += 1),
+                    null != e.applicationId && p.set(e.applicationId, (p.get(e.applicationId) ?? 0) + 1)),
                 null != e.applicationId)
             ) {
-                let t = l.get(e.applicationId);
-                null == t ? l.set(e.applicationId, { name: e.applicationName, count: 1 }) : (t.count += 1);
+                let t = o.get(e.applicationId);
+                null == t ? o.set(e.applicationId, { name: e.applicationName, count: 1 }) : (t.count += 1);
             }
-            for (let t of e.users) t !== p && d.set(t, (d.get(t) ?? 0) + 1);
-            let t = e.decision?.signal?.type === u.Gy.DISTRIBUTED ? e.decision.signal : null;
-            if (null != t && t.remoteTriggerUserId !== p) {
+            for (let t of e.users) t !== h && u.set(t, (u.get(t) ?? 0) + 1);
+            let t = e.decision?.signal?.type === d.Gy.DISTRIBUTED ? e.decision.signal : null;
+            if (null != t && t.remoteTriggerUserId !== h) {
                 let e = t.remoteTriggerUserId;
-                E.set(e, (E.get(e) ?? 0) + 1);
+                I.set(e, (I.get(e) ?? 0) + 1);
             }
         }
-        let I = f(o, n.sortOrder),
-            T = I.length,
+        let m = A(l, n.sortOrder),
+            g = m.length,
             S = null != n.gameFacet,
-            y = null != n.clippedWithFacet,
-            C = Array.from(l.entries())
+            N = null != n.clippedWithFacet,
+            C = Array.from(o.entries())
                 .map((e) => {
                     let [t, { name: i, count: r }] = e,
-                        s = n.gameFacet === t;
+                        a = n.gameFacet === t;
                     return {
                         key: t,
                         name: i,
-                        count: s ? T : r,
-                        isSelected: s,
+                        count: a ? g : r,
+                        isSelected: a,
                         isDisabled: !1,
-                        newCount: g.get(t) ?? 0,
+                        newCount: p.get(t) ?? 0,
                     };
                 })
                 .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-            N = Array.from(d.entries())
+            O = Array.from(u.entries())
                 .map((e) => {
                     let [t, i] = e,
                         r = n.clippedWithFacet === t;
-                    return { key: t, name: t, count: r ? T : i, isSelected: r, isDisabled: !1, newCount: 0 };
+                    return { key: t, name: t, count: r ? g : i, isSelected: r, isDisabled: !1, newCount: 0 };
                 })
                 .sort((e, t) => {
-                    let n = d.get(e.key) ?? 0,
-                        i = d.get(t.key) ?? 0;
+                    let n = u.get(e.key) ?? 0,
+                        i = u.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
-            v = Array.from(E.entries())
+            R = Array.from(I.entries())
                 .map((e) => {
                     let [t, i] = e,
                         r = n.clippedWithFacet === t;
-                    return { key: t, name: t, count: r ? T : i, isSelected: r, isDisabled: !1, newCount: 0 };
+                    return { key: t, name: t, count: r ? g : i, isSelected: r, isDisabled: !1, newCount: 0 };
                 })
                 .sort((e, t) => {
-                    let n = E.get(e.key) ?? 0,
-                        i = E.get(t.key) ?? 0;
+                    let n = I.get(e.key) ?? 0,
+                        i = I.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
-            R = !S && !y;
+            L = !S && !N;
         return {
             allClips: i,
-            filteredClips: I,
+            filteredClips: m,
             gamesFacet: C,
-            participantsFacet: N,
-            distributedClipInitiatorsFacet: v,
+            participantsFacet: O,
+            distributedClipInitiatorsFacet: R,
             mainLinkCounts: {
-                allClips: R && n.activeMainLink === c.oH.ALL_CLIPS ? T : m.allClips,
-                autoClips: R && n.activeMainLink === c.oH.AUTO_CLIPS ? T : m.autoClips,
-                favorites: R && n.activeMainLink === c.oH.FAVORITES ? T : m.favorites,
+                allClips: L && n.activeMainLink === c.oH.ALL_CLIPS ? g : f.allClips,
+                autoClips: L && n.activeMainLink === c.oH.AUTO_CLIPS ? g : f.autoClips,
+                favorites: L && n.activeMainLink === c.oH.FAVORITES ? g : f.favorites,
             },
-            mainLinkNewCounts: A,
+            mainLinkNewCounts: T,
         };
-    }, [e, t, n, p, r]);
+    }, [e, t, n, h, r]);
 }

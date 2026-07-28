@@ -1,6 +1,6 @@
 i.d(t, { default: () => I });
-var l = i(627968),
-    s = i(64700),
+var l = i(477900),
+    s = i(582128),
     r = i(70283),
     n = i(297264),
     a = i(834730),
@@ -12,13 +12,13 @@ var l = i(627968),
     x = i(982240),
     h = i(975732),
     g = i(287809),
-    j = i(751188),
+    j = i(788833),
     f = i(503698),
     p = i.n(f),
     v = i(914410),
     T = i(360615),
     N = i(375708),
-    _ = i(525897);
+    _ = i(273617);
 function M(e) {
     let { progress: t, currentTier: i, newTier: s, className: r } = e,
         n = (0, x.rL)(i ?? void 0),
@@ -58,7 +58,7 @@ function M(e) {
         ],
     });
 }
-var b = i(852406);
+var b = i(783246);
 function w(e) {
     let { progress: t, currentTier: i, nextTier: s, iconSize: r = 24, title: c } = e,
         o = (0, x.rL)(s),
@@ -95,7 +95,7 @@ function w(e) {
 }
 var y = i(315693),
     k = i(652215),
-    A = i(615876);
+    A = i(687372);
 function E(e) {
     let { progress: t, title: i, progressBarTitle: s, description: r, currentTier: c, nextTier: o } = e;
     return (0, l.jsxs)("div", {

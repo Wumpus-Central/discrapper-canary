@@ -1,6 +1,6 @@
 n.d(t, { G: () => h });
-var l = n(627968);
-n(64700);
+var l = n(477900);
+n(582128);
 var i = n(503698),
     s = n.n(i),
     r = n(837381),
@@ -16,8 +16,8 @@ function h(e) {
             innerClassName: i,
             renderIcon: h,
             text: A,
-            selected: g,
-            trailing: m,
+            selected: m,
+            trailing: g,
             background: f,
             showUnread: p = !1,
             ref: C,
@@ -39,7 +39,7 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: m }, n),
             children: [
                 f,
                 p ? (0, l.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
@@ -54,7 +54,7 @@ function h(e) {
                             "aria-hidden": !0,
                             children: A,
                         }),
-                        m,
+                        g,
                     ],
                 }),
             ],

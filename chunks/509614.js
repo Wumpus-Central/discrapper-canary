@@ -1,7 +1,7 @@
 n.d(e, { PremiumResubscribeModal: () => L });
 var i,
-    r = n(627968),
-    s = n(64700),
+    r = n(477900),
+    s = n(582128),
     a = n(284009),
     l = n.n(a),
     o = n(688810),
@@ -92,7 +92,7 @@ var R = n(935462),
     U = n(659746),
     _ = n(151595),
     F = n(771566),
-    w = n(306326);
+    w = n(987742);
 function O(t) {
     let { onClose: e } = t,
         n = (0, r.jsx)(g.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });

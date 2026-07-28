@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    o = n(649671),
-    l = n(707712);
-let u = function (e) {
+n.d(t, { A: () => d });
+var i = n(477900),
+    r = n(582128),
+    a = n(435558),
+    s = n.n(a),
+    l = n(649671),
+    o = n(451160);
+let d = function (e) {
     let { showImage: t } = e,
         {
             usageWidth: n,
-            descriptionWidth: s,
-            sourceWidth: u,
+            descriptionWidth: a,
+            sourceWidth: d,
         } = r.useMemo(
             () => ({
-                usageWidth: a().random(60, 120),
-                descriptionWidth: a().random(200, 600),
-                sourceWidth: a().random(45, 90),
+                usageWidth: s().random(60, 120),
+                descriptionWidth: s().random(200, 600),
+                sourceWidth: s().random(45, 90),
             }),
             [],
         );
     return (0, i.jsxs)("div", {
-        className: l.iE,
+        className: o.iE,
         children: [
-            t ? (0, i.jsx)("div", { className: l.Sl }) : null,
+            t ? (0, i.jsx)("div", { className: o.Sl }) : null,
             (0, i.jsxs)("div", {
-                className: l.QR,
+                className: o.QR,
                 children: [
-                    (0, i.jsx)("div", { style: { maxWidth: (0, o.a8)(n) }, className: l.nY }),
-                    (0, i.jsx)("div", { style: { maxWidth: (0, o.a8)(s) }, className: l.h_ }),
+                    (0, i.jsx)("div", { style: { maxWidth: (0, l.a8)(n) }, className: o.nY }),
+                    (0, i.jsx)("div", { style: { maxWidth: (0, l.a8)(a) }, className: o.h_ }),
                 ],
             }),
-            (0, i.jsx)("div", { style: { width: (0, o.a8)(u) }, className: l.sP }),
+            (0, i.jsx)("div", { style: { width: (0, l.a8)(d) }, className: o.sP }),
         ],
     });
 };

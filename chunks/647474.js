@@ -1,6 +1,6 @@
 n.d(e, { A: () => p, e: () => N });
-var r = n(627968),
-    l = n(64700),
+var r = n(477900),
+    l = n(582128),
     s = n(503698),
     o = n.n(s),
     c = n(317097),
@@ -13,7 +13,7 @@ var r = n(627968),
     h = n(421108),
     v = n(818348),
     j = n(375708),
-    f = n(569901);
+    f = n(280309);
 function p(t) {
     let { className: e, color: n = "default", sticky: l = !1, children: s } = t,
         a = l ? f.qf : void 0;

@@ -1,10 +1,10 @@
 t.d(r, { l: () => n });
-var a = t(627968);
-t(64700);
+var a = t(477900);
+t(582128);
 let o =
     "https://cdn.discordapp.com/assets/content/0ee832fb7026bd6a854e96096076fc8a7f77a42de83e540b99bcdc33415e97c2.riv";
-var i = t(594639),
-    d = t(105596);
+var i = t(502377),
+    d = t(799226);
 let c = { "Nitro Referral Confirmation - Old Logo": {} };
 function n(e) {
     let { artboard: r = "Nitro Referral Confirmation - Old Logo", stateMachine: t, ...n } = e,

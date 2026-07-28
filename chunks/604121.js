@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { a: () => l });
+n.d(t, { a: () => o });
 var i,
-    r = n(627968),
-    s = n(64700),
-    a = n(451988),
-    o = (((i = o || {}).SVG = "svg"), (i.CANVAS = "canvas"), i);
-class l extends s.Component {
+    r = n(477900),
+    a = n(582128),
+    s = n(451988),
+    l = (((i = l || {}).SVG = "svg"), (i.CANVAS = "canvas"), i);
+class o extends a.Component {
     static defaultProps = { loop: !0, autoplay: !0, renderer: "svg", shouldAnimate: !0, resetOnPlay: !1 };
-    static Renderers = o;
-    animationRef = s.createRef();
+    static Renderers = l;
+    animationRef = a.createRef();
     animation;
-    delayTimeout = new a.Ep();
+    delayTimeout = new s.Ep();
     loadAnimation = async () => {
         let {
             importData: e,
             loop: t,
             autoplay: i,
             delay: r,
-            renderer: s,
-            rendererSettings: a,
-            shouldAnimate: o,
+            renderer: a,
+            rendererSettings: s,
+            shouldAnimate: l,
         } = this.props;
         null != this.animation && this.animation.destroy();
-        let [l, { default: u }] = await Promise.all([e(), n.e("96382").then(n.t.bind(n, 883885, 23))]);
+        let [o, { default: d }] = await Promise.all([e(), n.e("96382").then(n.t.bind(n, 883885, 23))]);
         if (null == this.animationRef.current) return;
         let c =
-            "object" == typeof l && null != l && "default" in l && "string" == typeof l.default
-                ? { path: l.default }
-                : { animationData: l };
-        (this.animation = u.loadAnimation({
+            "object" == typeof o && null != o && "default" in o && "string" == typeof o.default
+                ? { path: o.default }
+                : { animationData: o };
+        (this.animation = d.loadAnimation({
             container: this.animationRef.current,
-            renderer: s,
+            renderer: a,
             loop: t,
-            autoplay: i && null == r && o,
-            rendererSettings: a,
+            autoplay: i && null == r && l,
+            rendererSettings: s,
             ...c,
         })),
             null != r

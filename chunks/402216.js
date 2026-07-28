@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { Ay: () => p, ed: () => _, gv: () => d, u1: () => h });
+n.d(t, { Ay: () => h, ed: () => _, gv: () => u, u1: () => E });
 var i,
-    r = n(627968);
-n(64700);
-var s = n(503698),
-    a = n.n(s),
-    o = n(661531),
-    l = n(812993),
-    u = n(375708),
-    c = n(494647),
-    d = (((i = {}).RED = "RED"), (i.GRAY = "GRAY"), i);
+    r = n(477900);
+n(582128);
+var a = n(503698),
+    s = n.n(a),
+    l = n(661531),
+    o = n(812993),
+    d = n(375708),
+    c = n(785231),
+    u = (((i = {}).RED = "RED"), (i.GRAY = "GRAY"), i);
 let _ = { LARGE: c.Kp, SMALL: c.qx },
-    h = { [l.EG.ROUND]: c.qG, [l.EG.ROUND_LEFT]: c.HZ, [l.EG.ROUND_RIGHT]: c.q5, [l.EG.SQUARE]: "" };
-function f(e) {
-    let { className: t, style: n, shape: i = l.EG.ROUND, look: s = "RED", size: d = _.LARGE } = e;
-    return "RED" === s
-        ? (0, r.jsx)(l.Lp, {
-              text: u.intl.string(u.t.dI3q4h),
-              className: a()(t, c.VD, d),
-              color: o.A.unsafe_rawColors.RED_400.css,
-              shape: h[i],
+    E = { [o.EG.ROUND]: c.qG, [o.EG.ROUND_LEFT]: c.HZ, [o.EG.ROUND_RIGHT]: c.q5, [o.EG.SQUARE]: "" };
+function A(e) {
+    let { className: t, style: n, shape: i = o.EG.ROUND, look: a = "RED", size: u = _.LARGE } = e;
+    return "RED" === a
+        ? (0, r.jsx)(o.Lp, {
+              text: d.intl.string(d.t.dI3q4h),
+              className: s()(t, c.VD, u),
+              color: l.A.unsafe_rawColors.RED_400.css,
+              shape: E[i],
               style: n,
           })
-        : (0, r.jsx)(l.Lp, {
-              text: u.intl.string(u.t.dI3q4h),
-              className: a()(t, c.VD, d, c.Oh),
+        : (0, r.jsx)(o.Lp, {
+              text: d.intl.string(d.t.dI3q4h),
+              className: s()(t, c.VD, u, c.Oh),
               disableColor: !0,
-              shape: h[i],
+              shape: E[i],
               style: n,
           });
 }
-(f.Looks = d), (f.Sizes = _);
-let p = f;
+(A.Looks = u), (A.Sizes = _);
+let h = A;

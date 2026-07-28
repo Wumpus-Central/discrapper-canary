@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { Ay: () => O, Cw: () => N, Z9: () => m, o9: () => S });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(17928),
@@ -16,7 +16,7 @@ var i = n(627968),
     I = n(743981),
     f = n(375708),
     p = n(661023),
-    T = n(330411);
+    T = n(862371);
 let m = r.memo(function (e) {
         let { src: t, className: n, size: a = I.Sl.SIZE_16 } = e,
             [l, o] = r.useState(!1);
@@ -69,8 +69,8 @@ let m = r.memo(function (e) {
                 badgeSize: R = I.Sl.SIZE_14,
                 inline: L = !0,
             } = e,
-            D = null != _,
-            y = (0, i.jsxs)(o.E, {
+            y = null != _,
+            D = (0, i.jsxs)(o.E, {
                 tag: "span",
                 variant: C,
                 lineClamp: 1,
@@ -88,7 +88,7 @@ let m = r.memo(function (e) {
                 ],
             }),
             v = s()(T.nz, L && T.os, a);
-        return D
+        return y
             ? (0, i.jsx)(c.D, {
                   tag: "span",
                   onClick: _,
@@ -98,9 +98,9 @@ let m = r.memo(function (e) {
                   "aria-controls": S,
                   "aria-expanded": N,
                   className: s()(v, T.vk),
-                  children: y,
+                  children: D,
               })
-            : (0, i.jsx)("span", { className: v, children: y });
+            : (0, i.jsx)("span", { className: v, children: D });
     }),
     N = r.memo(function (e) {
         return (0, i.jsx)(C, { Component: g, ...e });
@@ -124,13 +124,13 @@ let m = r.memo(function (e) {
             O = r.useRef(null),
             R = (0, l.bG)([A.default], () => A.default.getUser(n), [n]),
             L = (0, l.bG)([E.A], () => E.A.theme),
-            D = void 0 !== t ? t : R?.primaryGuild,
-            { tag: y, badge: v, guildId: b } = (0, h.Zo)(D);
-        return (0, h.Wb)(n, a, D) && null != b
+            y = void 0 !== t ? t : R?.primaryGuild,
+            { tag: D, badge: v, guildId: b } = (0, h.Zo)(y);
+        return (0, h.Wb)(n, a, y) && null != b
             ? p
                 ? (0, i.jsx)(C, {
                       guildId: b,
-                      guildTag: y,
+                      guildTag: D,
                       guildBadge: v,
                       className: s()(T.Zy, o, d),
                       textVariant: c,
@@ -153,7 +153,7 @@ let m = r.memo(function (e) {
                                   onClick: (e) => e.stopPropagation(),
                                   children: (0, i.jsx)(C, {
                                       guildId: b,
-                                      guildTag: y,
+                                      guildTag: D,
                                       guildBadge: v,
                                       className: o,
                                       textVariant: c,

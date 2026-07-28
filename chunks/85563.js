@@ -1,6 +1,6 @@
 n.d(t, { A: () => r });
-var i = n(627968);
-n(64700);
+var i = n(477900);
+n(582128);
 var l = n(953727);
 function r(e) {
     let { width: t = 55, height: n = 16, color: r = "currentColor", foreground: s, ...a } = e;

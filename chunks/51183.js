@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => h });
-var l = n(627968),
-    i = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    a = n(990078),
+n.d(t, { A: () => E });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(866665),
     o = n(565645),
-    u = n(7584),
+    d = n(7584),
     c = n(885386),
-    d = n(350593);
+    u = n(350593);
 n(851883);
-var m = n(124704);
-function h(e) {
-    let { emoji: t, className: n, animate: r = !0, hideTooltip: h = !1, tooltipDelay: p = 150 } = e,
-        f = c.Sf.useSetting(),
-        g = i.useRef(null),
-        E = null != t.id ? `:${t.name}:` : u.Ay.translateSurrogatesToInlineEmoji(t.name);
-    if (null == t.id && d.V.has(t.name)) return (0, l.jsx)("span", { className: s()(m.Zg, n), children: t.name });
-    let A = {
-        className: s()(m.Zg, n),
+var _ = n(491160);
+function E(e) {
+    let { emoji: t, className: n, animate: a = !0, hideTooltip: E = !1, tooltipDelay: A = 150 } = e,
+        h = c.Sf.useSetting(),
+        I = r.useRef(null),
+        f = null != t.id ? `:${t.name}:` : d.Ay.translateSurrogatesToInlineEmoji(t.name);
+    if (null == t.id && u.V.has(t.name)) return (0, i.jsx)("span", { className: s()(_.Zg, n), children: t.name });
+    let p = {
+        className: s()(_.Zg, n),
         emojiId: t.id,
         emojiName: t.name,
-        alt: E,
+        alt: f,
         autoplay: !0,
-        animated: !!(t.animated && f && r),
+        animated: !!(t.animated && h && a),
         registerInnerRef: (e) => {
-            g.current = e;
+            I.current = e;
         },
     };
-    return h
-        ? (0, l.jsx)(o.A, { ...A })
-        : (0, l.jsx)(a.m, { targetElementRef: g, text: E, delay: p, children: (0, l.jsx)(o.A, { ...A }) });
+    return E
+        ? (0, i.jsx)(o.A, { ...p })
+        : (0, i.jsx)(l.m, { targetElementRef: I, text: f, delay: A, children: (0, i.jsx)(o.A, { ...p }) });
 }

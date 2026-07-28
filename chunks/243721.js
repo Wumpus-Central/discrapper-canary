@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { d: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(844222),
-    a = n(553270);
-function o(e) {
-    let { switchIconsEnabled: t } = r.useContext(s.C),
+n.d(t, { d: () => l });
+var i = n(477900),
+    r = n(582128),
+    a = n(844222),
+    s = n(553270);
+function l(e) {
+    let { switchIconsEnabled: t } = r.useContext(a.C),
         n = void 0 !== e.hasIcon ? e.hasIcon : t;
-    return (0, i.jsx)(a.A, { ...e, hasIcon: n });
+    return (0, i.jsx)(s.A, { ...e, hasIcon: n });
 }

@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { ls: () => ek, z9: () => eF, w_: () => eP, Ay: () => eB, th: () => eV });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(284009),
     o = n.n(l),
-    d = n(936504),
+    d = n(561028),
     c = n(562708),
     u = n(837381),
     _ = n(172218),
@@ -45,7 +45,7 @@ var i = n(627968),
     Y = n(691540),
     K = n(857250),
     $ = n(97483),
-    z = n(493336),
+    z = n(148494),
     q = n(976860),
     Z = n(330001),
     X = n(989349),
@@ -63,7 +63,7 @@ var i = n(627968),
     ed = n(351952),
     ec = n(88686),
     eu = n(174755),
-    e_ = n(187322),
+    e_ = n(259678),
     eE = n(151093);
 let eA = r.forwardRef(function (e, t) {
     let { className: n, focusProps: r, ...a } = e;
@@ -294,8 +294,8 @@ function eV(e) {
         e1 = (eq || eJ || e0) && !(a || G),
         e2 = (0, h.bG)([eO.Ay], () => eO.Ay.getMentionCount(t.id) > 0),
         e3 = (0, W.Ay)(t),
-        e6 = r.useRef(null),
-        e4 = null != N && (a || G || e_);
+        e4 = r.useRef(null),
+        e6 = null != N && (a || G || e_);
     function e5() {
         X(!0);
     }
@@ -546,7 +546,7 @@ function eV(e) {
                         selected: a,
                         children: [
                             (0, i.jsx)(eu.A, {
-                                nameplate: e4 ? N : void 0,
+                                nameplate: e6 ? N : void 0,
                                 selected: a,
                                 hovered: G,
                                 content: to,
@@ -645,11 +645,11 @@ function eV(e) {
                                 }),
                             }),
                             (0, i.jsxs)("div", {
-                                className: s()(ev._q, { [ev.EY]: e4 }),
+                                className: s()(ev._q, { [ev.EY]: e6 }),
                                 children: [
                                     e0 ? (0, i.jsx)(ex, {}) : eJ ? (0, i.jsx)(eG, {}) : eZ ? (0, i.jsx)(ew, {}) : null,
                                     tA && null != e3
-                                        ? (0, i.jsx)(eU, { channelName: e3, onClick: th, showNameplate: e4 })
+                                        ? (0, i.jsx)(eU, { channelName: e3, onClick: th, showNameplate: e6 })
                                         : null,
                                     tA
                                         ? null
@@ -662,7 +662,7 @@ function eV(e) {
                                               onMouseDown: tn,
                                               nameplate: N,
                                               reducedClickTarget: !0,
-                                              visibleElementRef: e6,
+                                              visibleElementRef: e4,
                                           }),
                                 ],
                             }),

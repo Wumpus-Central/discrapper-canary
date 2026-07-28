@@ -1,13 +1,13 @@
 t.d(n, { A: () => h });
-var l = t(627968),
-    i = t(64700),
+var l = t(477900),
+    i = t(582128),
     s = t(503698),
     a = t.n(s),
-    r = t(835245),
+    r = t(132500),
     o = t(863610),
     c = t(534890),
     u = t(315502),
-    d = t(589203);
+    d = t(271547);
 function A(e) {
     let { width: n = 24, height: t = 24, isBadged: s = !1, isTyping: a = !1 } = e,
         [u] = i.useState(() => (0, r.A)());

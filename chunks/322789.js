@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => M, n: () => b });
-var i = n(627968),
-    r = n(64700),
+var i = n(477900),
+    r = n(582128),
     a = n(696292),
     s = n(554146),
     l = n(939249),
@@ -25,9 +25,9 @@ var i = n(627968),
     O = n(868065),
     R = n(424994),
     L = n(518477),
-    D = n(375708),
-    y = n(383374),
-    v = n(352760);
+    y = n(375708),
+    D = n(161878),
+    v = n(685504);
 let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
     M = r.memo(function (e) {
         let {
@@ -59,7 +59,7 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                 { onOpened: () => U(R.PA.OPENED_GAME_PROFILE) },
             ),
             H = V ? B : void 0,
-            j = D.intl.formatToPlainString(D.t["9sZWVp"], { gameName: t.extra.game_name }),
+            j = y.intl.formatToPlainString(y.t["9sZWVp"], { gameName: t.extra.game_name }),
             W = (0, i.jsx)(N.V, {
                 alt: w?.text ?? w?.alt,
                 src: w?.src,
@@ -82,7 +82,7 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                                 (0, i.jsxs)(O.UA, {
                                     children: [
                                         (0, i.jsx)(O.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != H ? (0, i.jsx)(S.A, { className: y.N4, onClick: H, children: Y }) : Y,
+                                        null != H ? (0, i.jsx)(S.A, { className: D.N4, onClick: H, children: Y }) : Y,
                                         (0, i.jsx)(C.mG, {
                                             location: C.N5.CARD,
                                             children: b.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: M }, n)),
@@ -90,7 +90,7 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                                     ],
                                 }),
                                 null != H
-                                    ? (0, i.jsx)(l.D, { className: y.vi, onClick: H, "aria-label": j, children: W })
+                                    ? (0, i.jsx)(l.D, { className: D.vi, onClick: H, "aria-label": j, children: W })
                                     : W,
                             ],
                         }),
@@ -100,22 +100,22 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                         children: [
                             (0, i.jsx)(O.ik, {}),
                             (0, i.jsxs)(O.dM, {
-                                className: y.DK,
+                                className: D.DK,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: y.tJ,
+                                        className: D.tJ,
                                         children: [
                                             (0, i.jsx)(o.h, { color: d.A.colors.ICON_SUBTLE, size: "xxs" }),
                                             (0, i.jsx)(c.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
-                                                children: D.intl.string(D.t["5HiF2i"]),
+                                                children: y.intl.string(y.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),
                                     F === s.M.CLOUD_PLAY_NEW_BADGE &&
                                         (0, i.jsx)(u.Lp, {
-                                            text: D.intl.string(D.t.y2b7CA),
+                                            text: y.intl.string(y.t.y2b7CA),
                                             color: d.A.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
@@ -128,7 +128,7 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,
-                        className: y.AB,
+                        className: D.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
                             U(R.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),

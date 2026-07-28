@@ -1,20 +1,20 @@
 n.d(t, { ImportBenefitsFromRoleModal: () => er, ImportBenefitsFromSubscriptionListingModal: () => et });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(189213),
     o = n(17928),
     d = n(52133),
     c = n(319060),
-    m = n(187322),
-    h = n(933832),
-    x = n(534514),
-    u = n(194117),
-    g = n(834730),
-    j = n(939249),
-    f = n(957485),
-    p = n(935462),
+    m = n(935462),
+    h = n(259678),
+    x = n(933832),
+    u = n(297264),
+    g = n(194117),
+    j = n(834730),
+    f = n(939249),
+    p = n(957485),
     v = n(276293),
     N = n(825484),
     C = n(821609),
@@ -51,7 +51,7 @@ function Q(e, t) {
 var $ = n(417360),
     q = n(898612),
     H = n(375708),
-    V = n(251148);
+    V = n(554372);
 let W = (0, I.Ld)(),
     Z = (0, I.Ld)(),
     U = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
@@ -71,7 +71,7 @@ function X(e) {
             (0, i.jsxs)("div", {
                 className: V.eF,
                 children: [
-                    (0, i.jsx)(m.vN, {
+                    (0, i.jsx)(h.vN, {
                         children: (0, i.jsx)("input", {
                             type: "checkbox",
                             checked: o,
@@ -84,7 +84,7 @@ function X(e) {
                     }),
                     (0, i.jsx)("div", {
                         className: V.Ew,
-                        children: (0, i.jsx)(h.A, {
+                        children: (0, i.jsx)(x.A, {
                             size: "md",
                             color: "currentColor",
                             className: V.pc,
@@ -103,17 +103,17 @@ function ee(e) {
         ? (0, i.jsxs)("div", {
               className: V.uW,
               children: [
-                  (0, i.jsx)(x.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+                  (0, i.jsx)(u.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
                   l.length - s.size > 1 &&
                       (0, i.jsx)("div", {
                           className: V.p_,
                           children: (0, i.jsx)(X, {
-                              icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor", className: V.aL }),
+                              icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor", className: V.aL }),
                               checked: o,
                               onChange: function (e) {
                                   for (let t of l) s.has(t) || a(t, e);
                               },
-                              children: (0, i.jsx)(g.E, {
+                              children: (0, i.jsx)(j.E, {
                                   color: "text-strong",
                                   variant: "text-md/normal",
                                   children: n,
@@ -135,12 +135,12 @@ function ee(e) {
                                   disabled: s.has(e),
                                   onChange: (t) => a(e, t),
                                   children: [
-                                      (0, i.jsx)(g.E, {
+                                      (0, i.jsx)(j.E, {
                                           color: "text-strong",
                                           variant: "text-md/semibold",
                                           children: (0, q.A)(e),
                                       }),
-                                      (0, i.jsx)(g.E, {
+                                      (0, i.jsx)(j.E, {
                                           color: "interactive-text-default",
                                           variant: "text-sm/normal",
                                           children: e.description,
@@ -167,9 +167,9 @@ function et(e) {
         m = n.role_benefits.benefits,
         [h, x] = l.useState(() => new Set(m)),
         u = l.useMemo(() => m.filter(F.B1), [m]),
-        j = (0, $.A)(u),
+        g = (0, $.A)(u),
         f = l.useMemo(() => m.filter(F.b1), [m]),
-        p = l.useMemo(() => new Set(j.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [j, s]),
+        p = l.useMemo(() => new Set(g.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [g, s]),
         v = l.useMemo(() => new Set(f.filter((e) => r.some((t) => (0, d.A)(e, t)))), [r, f]);
     function N(e, t) {
         x((n) => {
@@ -197,13 +197,13 @@ function et(e) {
                 { variant: "primary", text: H.intl.string(H.t["27a21y"]), disabled: 0 === h.size, onClick: C },
             ],
             children: [
-                0 === j.length &&
+                0 === g.length &&
                     0 === f.length &&
-                    (0, i.jsx)(g.E, { variant: "text-md/normal", children: H.intl.string(H.t["I+16xv"]) }),
+                    (0, i.jsx)(j.E, { variant: "text-md/normal", children: H.intl.string(H.t["I+16xv"]) }),
                 (0, i.jsx)(ee, {
                     title: H.intl.string(H.t.S2kKzP),
                     selectAllText: H.intl.string(H.t["5Q/fLO"]),
-                    benefits: j,
+                    benefits: g,
                     dupeBenefits: p,
                     selectedBenefits: h,
                     onToggleBenefit: N,
@@ -223,7 +223,7 @@ function et(e) {
 function en(e) {
     let { guildId: t, role: n, channelCount: l, onSelect: s } = e,
         r = (0, y.$7)({ guildId: t, roleId: n.id, size: U });
-    return (0, i.jsxs)(j.D, {
+    return (0, i.jsxs)(f.D, {
         className: V.xf,
         onClick: s,
         children: [
@@ -232,7 +232,7 @@ function en(e) {
                 children:
                     null != r
                         ? (0, i.jsx)(M.A, { ...r })
-                        : (0, i.jsx)(f.i, {
+                        : (0, i.jsx)(p.i, {
                               size: "custom",
                               width: 23,
                               height: 23,
@@ -243,13 +243,13 @@ function en(e) {
             (0, i.jsxs)("div", {
                 className: V.qg,
                 children: [
-                    (0, i.jsx)(g.E, {
+                    (0, i.jsx)(j.E, {
                         color: "text-strong",
                         variant: "text-md/normal",
                         className: V.__invalid_benefitTitle,
                         children: n.name,
                     }),
-                    (0, i.jsx)(g.E, {
+                    (0, i.jsx)(j.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
                         children: H.intl.format(H.t["2KzH89"], { num: l }),
@@ -299,7 +299,7 @@ function ei(e) {
                   ),
               ),
           })
-        : (0, i.jsx)(g.E, { variant: "text-md/normal", children: H.intl.string(H.t.u09gKk) });
+        : (0, i.jsx)(j.E, { variant: "text-md/normal", children: H.intl.string(H.t.u09gKk) });
 }
 function el(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
@@ -308,18 +308,18 @@ function el(e) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsxs)(p.rQ, {
+                  (0, i.jsxs)(m.rQ, {
                       "data-migration-pending": !0,
                       children: [
-                          (0, i.jsx)(x.D, {
+                          (0, i.jsx)(u.D, {
                               id: W,
                               variant: "heading-md/semibold",
                               children: H.intl.string(H.t["3JrZ/P"]),
                           }),
-                          (0, i.jsx)(p.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
+                          (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
                       ],
                   }),
-                  (0, i.jsx)(p.$m, {
+                  (0, i.jsx)(m.$m, {
                       "data-migration-pending": !0,
                       className: V.jE,
                       children: (0, i.jsx)(ei, { guild: s, onSelect: l }),
@@ -346,45 +346,45 @@ function es(e) {
                     }),
             );
         }),
-        m = l.useMemo(() => Q(c, d), [c, d]),
-        [h, j] = l.useState(() => new Set(m.map((e) => e.id)));
-    function f(e, t) {
-        j((n) => {
+        h = l.useMemo(() => Q(c, d), [c, d]),
+        [x, f] = l.useState(() => new Set(h.map((e) => e.id)));
+    function p(e, t) {
+        f((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
         });
     }
     return (0, i.jsxs)("form", {
         onSubmit: function (e) {
-            e.preventDefault(), a(m.map((e) => e.id).filter((e) => h.has(e))), t();
+            e.preventDefault(), a(h.map((e) => e.id).filter((e) => x.has(e))), t();
         },
         className: V.ID,
         children: [
-            (0, i.jsxs)(p.rQ, {
+            (0, i.jsxs)(m.rQ, {
                 "data-migration-pending": !0,
                 children: [
-                    (0, i.jsx)(x.D, {
+                    (0, i.jsx)(u.D, {
                         id: Z,
                         variant: "heading-md/semibold",
                         children: H.intl.format(H.t.iuPodG, { roleName: d.name }),
                     }),
-                    (0, i.jsx)(p.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
+                    (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
                 ],
             }),
-            (0, i.jsxs)(p.$m, {
+            (0, i.jsxs)(m.$m, {
                 "data-migration-pending": !0,
                 className: V.jE,
                 children: [
-                    m.length > 1 &&
+                    h.length > 1 &&
                         (0, i.jsx)("div", {
                             className: V.p_,
                             children: (0, i.jsx)(X, {
-                                icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor" }),
-                                checked: h.size === m.length,
+                                icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor" }),
+                                checked: x.size === h.length,
                                 onChange: function (e) {
-                                    for (let t of m) f(t.id, e);
+                                    for (let t of h) p(t.id, e);
                                 },
-                                children: (0, i.jsx)(g.E, {
+                                children: (0, i.jsx)(j.E, {
                                     color: "text-strong",
                                     variant: "text-md/normal",
                                     children: H.intl.string(H.t["5Q/fLO"]),
@@ -393,7 +393,7 @@ function es(e) {
                         }),
                     (0, i.jsx)("div", {
                         className: V.p_,
-                        children: m.map((e) => {
+                        children: h.map((e) => {
                             let t = (0, A._U)(e.type) ?? v.N;
                             return (0, i.jsx)(
                                 X,
@@ -407,9 +407,9 @@ function es(e) {
                                             height: "100%",
                                         }),
                                     }),
-                                    checked: h.has(e.id),
-                                    onChange: (t) => f(e.id, t),
-                                    children: (0, i.jsx)(g.E, {
+                                    checked: x.has(e.id),
+                                    onChange: (t) => p(e.id, t),
+                                    children: (0, i.jsx)(j.E, {
                                         color: "text-strong",
                                         variant: "text-md/normal",
                                         className: V.__invalid_benefitTitle,
@@ -422,7 +422,7 @@ function es(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(p.jl, {
+            (0, i.jsx)(m.jl, {
                 "data-migration-pending": !0,
                 children: (0, i.jsxs)(N.e, {
                     direction: "horizontal-reverse",
@@ -438,7 +438,7 @@ function es(e) {
 function er(e) {
     let { transitionState: t, guildId: n, onClose: s, onImport: r } = e,
         [a, o] = l.useState();
-    return (0, i.jsx)(p.EO, {
+    return (0, i.jsx)(m.EO, {
         "data-migration-pending": !0,
         transitionState: t,
         "aria-labelledby": null == a ? W : Z,

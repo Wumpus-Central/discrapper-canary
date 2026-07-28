@@ -1,9 +1,9 @@
 n.d(t, { A: () => f });
-var r = n(64700),
+var r = n(582128),
     l = n(412703),
     i = n(902173),
-    u = n(53200),
-    s = n(718499),
+    s = n(53200),
+    u = n(718499),
     a = n(291749),
     o = n(795068),
     c = n(652215);
@@ -22,7 +22,7 @@ function f(e, t, n, c) {
         T = r.useMemo(
             () =>
                 null != h
-                    ? !A && (0, u.Ap)() && null != h.videoHls
+                    ? !A && (0, s.Ap)() && null != h.videoHls
                         ? a.fY.VIDEO_PLAYER_VIDEO_HLS
                         : I
                           ? null
@@ -42,10 +42,10 @@ function f(e, t, n, c) {
             [_, T, c],
         );
     function R() {
-        null != S.current && S.current.config.minAutoBitrate !== s.XY && (S.current.config.minAutoBitrate = s.XY);
+        null != S.current && S.current.config.minAutoBitrate !== u.XY && (S.current.config.minAutoBitrate = u.XY);
     }
     let x = r.useCallback(() => {
-        null != S.current && (S.current.config.minAutoBitrate = s.XY);
+        null != S.current && (S.current.config.minAutoBitrate = u.XY);
     }, []);
     return (
         r.useEffect(() => {
@@ -53,12 +53,12 @@ function f(e, t, n, c) {
             let t = !1,
                 r = null;
             return (
-                (0, u.E)().then((l) => {
+                (0, s.E)().then((l) => {
                     if (!t && null != e.current && !p.current) {
                         if (!l.isSupported()) return void g(!0);
                         (r = new l({
-                            backBufferLength: s.OJ,
-                            maxBufferLength: s.Bu,
+                            backBufferLength: u.OJ,
+                            maxBufferLength: u.Bu,
                             startPosition: n,
                             startFragPrefetch: !0,
                             startLevel: -1,
@@ -72,7 +72,7 @@ function f(e, t, n, c) {
                 }),
                 () => {
                     t = !0;
-                    let e = (0, u.LA)();
+                    let e = (0, s.LA)();
                     null != r && null != e && r.off(e.Events.FRAG_LOADING, R);
                 }
             );

@@ -1,6 +1,6 @@
 t.d(l, { P: () => v });
-var i = t(627968),
-    n = t(64700),
+var i = t(477900),
+    n = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(834730),
@@ -12,7 +12,7 @@ var i = t(627968),
     A = t(775602),
     m = t(713517),
     C = t(690521),
-    f = t(446445);
+    f = t(803765);
 function x(e) {
     let { emoji: l, shouldAnimate: t } = e;
     if (null == l) return null;
@@ -69,7 +69,7 @@ function g(e) {
         ? null
         : (0, i.jsx)(d.ZV, { className: f.kL, items: l, renderItem: u, renderOverflow: o, maxLines: 2, itemGapPx: 4 });
 }
-var N = t(890653);
+var N = t(342949);
 function v(e) {
     let { profile: l, className: t } = e,
         { gamesToDisplay: s, lastGameToDisplay: o, remainingGames: d } = (0, u.A)(l),

@@ -1,15 +1,15 @@
 n.d(l, { A: () => h });
-var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    t = n.n(r),
+var i = n(477900),
+    a = n(582128),
+    t = n(503698),
+    r = n.n(t),
     s = n(834730),
     u = n(742158),
     d = n(244367),
     c = n(450232),
     o = n(252732),
     p = n(212168),
-    f = n(850949);
+    f = n(783757);
 function g(e) {
     let { errors: l } = e;
     return (0, i.jsx)(i.Fragment, {
@@ -26,7 +26,7 @@ let h = a.forwardRef(function (e, l) {
     let {
         title: n,
         titleIcon: a,
-        titleBadge: r,
+        titleBadge: t,
         titleId: s,
         description: o,
         children: h,
@@ -41,7 +41,7 @@ let h = a.forwardRef(function (e, l) {
         showPremiumIcon: y = !1,
     } = e;
     return (0, i.jsx)("div", {
-        className: t()(f.fz, x, { [f.r9]: v, [f.Ai]: A, [f.Ac]: b, [f.Cx]: k }),
+        className: r()(f.fz, x, { [f.r9]: v, [f.Ai]: A, [f.Ac]: b, [f.Cx]: k }),
         ref: l,
         children: (0, i.jsxs)(p.A, {
             className: f.D6,
@@ -54,7 +54,7 @@ let h = a.forwardRef(function (e, l) {
                     className: f.DD,
                     id: s,
                     "data-migration-pending": !0,
-                    children: [n, y && (0, i.jsx)(c.A, { size: "xs" }), a, r],
+                    children: [n, y && (0, i.jsx)(c.A, { size: "xs" }), a, t],
                 }),
                 null != o
                     ? (0, i.jsx)(d.a, {

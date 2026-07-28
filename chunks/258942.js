@@ -1,6 +1,6 @@
 i.d(s, { default: () => D });
-var e = i(627968),
-    r = i(64700),
+var e = i(477900),
+    r = i(582128),
     n = i(772707),
     a = i(554146),
     l = i(152367),
@@ -16,7 +16,7 @@ var e = i(627968),
     h = i(49999),
     N = i(488995),
     f = i(375708),
-    j = i(568163);
+    j = i(976811);
 function D(t) {
     let { guildId: s, transitionState: D, onClose: E, analyticsType: S = a.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (

@@ -1,16 +1,16 @@
-n.d(t, { A: () => I });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => C });
+var i = n(477900),
+    l = n(582128),
     s = n(503698),
-    r = n.n(s),
-    a = n(707554),
+    a = n.n(s),
+    r = n(707554),
     o = n(834730),
-    d = n(435558),
-    c = n.n(d),
+    c = n(435558),
+    d = n.n(c),
     u = n(223637),
     m = n(29814),
     h = n(46054);
-let g = c().omit(m.Ay.RULES, ["codeBlock", "heading"]),
+let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     p = {
         ...u.A,
         parse: function (e, t, n) {
@@ -23,19 +23,19 @@ let g = c().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     x = h.A.reactParserFor(A);
 var f = n(34193),
     E = n(742715);
-function I(e) {
-    let { color: t, className: n, variant: s, text: d, lineClamp: c } = e,
-        u = (0, a.$)(),
+function C(e) {
+    let { color: t, className: n, variant: s, text: c, lineClamp: d } = e,
+        u = (0, r.$)(),
         m = l.useMemo(
             () =>
-                null == d ? null : x(d, !0, { allowHeading: null == c, allowList: null == c, initialHeaderLevel: u }),
-            [d, c, u],
+                null == c ? null : x(c, !0, { allowHeading: null == d, allowList: null == d, initialHeaderLevel: u }),
+            [c, d, u],
         );
     return (0, i.jsx)(o.E, {
-        className: r()(n, E.PT, { [f.E]: null != c && c > 1, [f.D]: 1 === c }),
+        className: a()(n, E.PT, { [f.E]: null != d && d > 1, [f.D]: 1 === d }),
         color: t,
         variant: s,
-        lineClamp: c,
+        lineClamp: d,
         children: m,
     });
 }

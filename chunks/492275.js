@@ -1,29 +1,29 @@
 n.d(t, { A: () => m });
-var l = n(627968);
-n(64700);
+var l = n(477900);
+n(582128);
 var i = n(503698),
     r = n.n(i),
     a = n(562708),
     s = n(834730),
     o = n(688810),
     u = n(139286),
-    c = n(322798),
+    c = n(360615),
     d = n(375708),
-    p = n(670152);
+    p = n(425504);
 function m(e) {
-    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: h } = e,
-        { analyticsLocations: C } = (0, o.Ay)();
+    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: C } = e,
+        { analyticsLocations: h } = (0, o.Ay)();
     return (
         (0, u.A)(
             {
                 name: a.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER,
                 type: a.ImpressionTypes.VIEW,
-                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? C },
+                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? h },
             },
             { trackOnInitialLoad: !0 },
         ),
         (0, l.jsxs)("div", {
-            className: r()(p.kL, h),
+            className: r()(p.kL, C),
             children: [
                 (0, l.jsx)("div", {
                     className: p.zc,

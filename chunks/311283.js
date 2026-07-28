@@ -1,12 +1,12 @@
 n.d(t, { A: () => u });
-var a = n(64700);
+var a = n(582128);
 let i = new Map(),
     s = new Map(),
     l = new Map();
 function r(e) {
     return i.has(e) || i.set(e, !1), i.get(e);
 }
-function d(e) {
+function o(e) {
     var t;
     let n, a, i, r;
     return (
@@ -16,16 +16,16 @@ function d(e) {
                 e,
                 ((t = e),
                 (n = (e) => {
-                    o(e.shiftKey, t);
+                    d(e.shiftKey, t);
                 }),
                 (a = (e) => {
-                    o(e.shiftKey, t);
+                    d(e.shiftKey, t);
                 }),
                 (i = (e) => {
-                    o(e.shiftKey, t);
+                    d(e.shiftKey, t);
                 }),
                 (r = () => {
-                    o(!1, t);
+                    d(!1, t);
                 }),
                 t.addEventListener("keydown", n),
                 t.addEventListener("keyup", a),
@@ -41,8 +41,8 @@ function d(e) {
         s.get(e)
     );
 }
-function o(e, t) {
-    e !== r(t) && (i.set(t, e), d(t).forEach((t) => t(e)));
+function d(e, t) {
+    e !== r(t) && (i.set(t, e), o(t).forEach((t) => t(e)));
 }
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
@@ -53,9 +53,9 @@ function u() {
                 n(e);
             };
             return (
-                d(e).add(t),
+                o(e).add(t),
                 () => {
-                    d(e).delete(t), 0 === d(e).size && (l.get(e)?.(), l.delete(e), s.delete(e), i.delete(e));
+                    o(e).delete(t), 0 === o(e).size && (l.get(e)?.(), l.delete(e), s.delete(e), i.delete(e));
                 }
             );
         }, [e]),

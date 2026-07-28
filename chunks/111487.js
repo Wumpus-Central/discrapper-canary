@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => l, g: () => o });
-var i = n(627968);
-n(64700);
+n.d(t, { A: () => o, g: () => l });
+var i = n(477900);
+n(582128);
 var r = n(565645),
-    s = n(202027),
-    a = n(401252);
-let o = { SMALL: a.EX, MEDIUM: a.Y, LARGE: a.as };
-function l(e) {
-    let { emojiId: t, emojiName: n, defaultComponent: a, size: l = o.MEDIUM } = e,
-        { customEmoji: u, unicodeEmoji: c } = (0, s.A)(t, n);
-    return null == u && null == c
-        ? a
+    a = n(202027),
+    s = n(630828);
+let l = { SMALL: s.EX, MEDIUM: s.Y, LARGE: s.as };
+function o(e) {
+    let { emojiId: t, emojiName: n, defaultComponent: s, size: o = l.MEDIUM } = e,
+        { customEmoji: d, unicodeEmoji: c } = (0, a.A)(t, n);
+    return null == d && null == c
+        ? s
         : (0, i.jsx)(r.A, {
-              emojiName: null != u ? u?.name : n,
-              animated: null != u && u.animated,
-              emojiId: u?.id,
+              emojiName: null != d ? d?.name : n,
+              animated: null != d && d.animated,
+              emojiId: d?.id,
               autoplay: !0,
-              className: l,
+              className: o,
           });
 }

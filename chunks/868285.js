@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { F: () => a }), n(321073);
-var i = n(64700);
+n.d(t, { F: () => s }), n(321073);
+var i = n(582128);
 function r(e) {
     let t = {};
     return (
@@ -12,7 +12,7 @@ function r(e) {
         t
     );
 }
-function s() {
+function a() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -20,21 +20,21 @@ function s() {
         return n.hasOwnProperty(e) ? n[e] : t[e];
     }
     let r = {},
-        s = [];
-    for (let e in t) n.hasOwnProperty(e) ? s.length > 0 && ((r[e] = s), (s = [])) : s.push(e);
-    let a = {};
+        a = [];
+    for (let e in t) n.hasOwnProperty(e) ? a.length > 0 && ((r[e] = a), (a = [])) : a.push(e);
+    let s = {};
     for (let t in n) {
         if (r.hasOwnProperty(t))
             for (e = 0; e < r[t].length; e++) {
                 let n = r[t][e];
-                a[r[t][e]] = i(n);
+                s[r[t][e]] = i(n);
             }
-        a[t] = i(t);
+        s[t] = i(t);
     }
-    for (e = 0; e < s.length; e++) a[s[e]] = i(s[e]);
-    return a;
+    for (e = 0; e < a.length; e++) s[a[e]] = i(a[e]);
+    return s;
 }
-class a extends i.Component {
+class s extends i.Component {
     static defaultProps = {
         component: "span",
         transitionAppear: !0,
@@ -44,8 +44,8 @@ class a extends i.Component {
     };
     static getDerivedStateFromProps(e, t) {
         let { children: n, firstRender: i } = t,
-            a = r(e.children);
-        return { children: i ? a : s(n, a), firstRender: !1 };
+            s = r(e.children);
+        return { children: i ? s : a(n, s), firstRender: !1 };
     }
     _currentlyTransitioningKeys;
     _keysToEnter;
@@ -86,7 +86,7 @@ class a extends i.Component {
             else {
                 let t = [];
                 this._enqueueTransitions(n, e, t);
-                let i = s(n, e);
+                let i = a(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete i[t[e]];
                 this._isMounted && this.setState({ children: i }),
                     this._keysToLeave.length > 0 && (this._keysToLeave = []);
@@ -111,23 +111,23 @@ class a extends i.Component {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         this._currentlyTransitioningKeys.add(e);
         let r = () => this._handleDonePerform(e, n, i),
-            s = this._keyChildMapping[e];
-        null != s && null != s[t] ? s[t](r) : r();
+            a = this._keyChildMapping[e];
+        null != a && null != a[t] ? a[t](r) : r();
     }
     _handleDonePerform(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = this._keyChildMapping[e];
         null != i && null != i[t] && i[t](), this._currentlyTransitioningKeys.delete(e);
-        let s = r(this.props.children);
+        let a = r(this.props.children);
         n
-            ? null != s && s.hasOwnProperty(e)
+            ? null != a && a.hasOwnProperty(e)
                 ? this.performEnter(e)
                 : this.setState((t) => {
                       let { children: n } = t,
                           { [e]: i, ...r } = n;
                       return { children: r };
                   })
-            : (null != s && s.hasOwnProperty(e)) || this.performLeave(e);
+            : (null != a && a.hasOwnProperty(e)) || this.performLeave(e);
     }
     performAppear(e) {
         this._perform(e, "componentWillAppear", "componentDidAppear");
@@ -146,12 +146,12 @@ class a extends i.Component {
             { children: n } = this.state,
             r = [];
         for (let t in n) {
-            let s = n[t];
-            null != s &&
-                i.isValidElement(s) &&
-                r.push(i.cloneElement(null == e ? s : e(s), { ref: (e) => this.addChildRef(t, e), key: t }));
+            let a = n[t];
+            null != a &&
+                i.isValidElement(a) &&
+                r.push(i.cloneElement(null == e ? a : e(a), { ref: (e) => this.addChildRef(t, e), key: t }));
         }
-        let s = { ...this.props };
-        return Object.keys(a.defaultProps).forEach((e) => delete s[e]), i.createElement(t, s, r);
+        let a = { ...this.props };
+        return Object.keys(s.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
     }
 }

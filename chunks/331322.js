@@ -1,45 +1,45 @@
 "use strict";
 n.d(t, { B: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(855036),
-    l = n.n(o),
-    u = n(369997);
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(359689),
+    o = n.n(l),
+    d = n(537157);
 let c = r.forwardRef(function (e, t) {
         let {
             as: n = "div",
             gap: r = 8,
-            direction: s = "vertical",
-            align: o = "stretch",
-            justify: l = "start",
+            direction: a = "vertical",
+            align: l = "stretch",
+            justify: o = "start",
             wrap: c = !1,
-            padding: h = 0,
-            fullWidth: f = !0,
-            style: p,
-            className: E,
-            children: m,
-            ...g
+            padding: E = 0,
+            fullWidth: A = !0,
+            style: h,
+            className: I,
+            children: f,
+            ...p
         } = e;
         return (0, i.jsx)(n, {
             ref: t,
-            "data-align": o,
-            "data-justify": l,
-            "data-direction": s,
+            "data-align": l,
+            "data-justify": o,
+            "data-direction": a,
             "data-wrap": c,
-            "data-full-width": f,
-            className: a()(u.t, E),
-            style: { ...p, gap: d(r), ..._(h) },
-            ...g,
-            children: m,
+            "data-full-width": A,
+            className: s()(d.t, I),
+            style: { ...h, gap: u(r), ..._(E) },
+            ...p,
+            children: f,
         });
     }),
-    d = (e) => `var(--space-${e})`,
+    u = (e) => `var(--space-${e})`,
     _ = (e) =>
         "number" == typeof e || "string" == typeof e
-            ? { padding: d(e) }
+            ? { padding: u(e) }
             : Object.entries(e).reduce((e, t) => {
                   let [n, i] = t;
-                  return (e[`padding${l()(n)}`] = d(i)), e;
+                  return (e[`padding${o()(n)}`] = u(i)), e;
               }, {});

@@ -1,5 +1,5 @@
 t.d(n, { YC: () => x, zH: () => V, DD: () => y, RD: () => k, xb: () => B, vh: () => b }), t(667532);
-var l = t(64700),
+var l = t(582128),
     i = t(91871),
     a = t.n(i),
     r = t(989349),
@@ -29,13 +29,13 @@ async function I(e, n) {
 var L = t(976860),
     N = t(734057),
     D = t(769765),
-    p = t(222823),
+    p = t(568548),
     U = t(994500),
     w = t(287809),
     m = t(935208),
     T = t(746080),
-    G = t(281405),
-    H = t(790782),
+    H = t(281405),
+    G = t(790782),
     M = t(375708);
 function O(e, n) {
     e.index = n;
@@ -71,11 +71,11 @@ function B(e) {
     let n = e.getSections(!1);
     if (n[E.PU] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case G.n.GUILD_HOME:
+            case H.n.GUILD_HOME:
                 return T.VV.GUILD_HOME;
-            case G.n.GUILD_ROLE_SUBSCRIPTIONS:
+            case H.n.GUILD_ROLE_SUBSCRIPTIONS:
                 return T.VV.ROLE_SUBSCRIPTIONS;
-            case G.n.GUILD_MOD_DASH_MEMBER_SAFETY:
+            case H.n.GUILD_MOD_DASH_MEMBER_SAFETY:
                 return T.VV.MEMBER_SAFETY;
         }
     for (let t = E.bK; t < e.voiceChannelsSectionNumber; t++)
@@ -88,11 +88,11 @@ function B(e) {
 function y(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     I(e, n),
-        (0, s.Uq)(n.map((e) => ({ channelId: e, readStateType: H.P.CHANNEL, messageId: p.Ay.lastMessageId(e) }))),
+        (0, s.Uq)(n.map((e) => ({ channelId: e, readStateType: G.P.CHANNEL, messageId: p.Ay.lastMessageId(e) }))),
         null != t && (0, L.pX)(S.BVt.CHANNEL(e, t));
 }
 function V(e, n, t, l) {
-    let i = (0, _.JZ)(u.M.CHANNEL_BROWSER_NUX),
+    let i = (0, _.HX)(u.M.CHANNEL_BROWSER_NUX),
         a = (0, o.cf)([N.A], () => {
             let n = {},
                 t = N.A.getMutableGuildChannelsForGuild(e);

@@ -1,6 +1,6 @@
 a.d(i, { default: () => e });
-var n = a(627968);
-a(64700);
+var n = a(477900);
+a(582128);
 var s = a(189213);
 function e(t) {
     let { transitionState: i, header: a, body: e, confirmText: r, onClose: o, onConfirm: c } = t;

@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { v: () => g });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(941861),
-    l = n(844222),
-    u = n(604121),
+n.d(t, { v: () => p });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(941861),
+    o = n(844222),
+    d = n(604121),
     c = n(460890),
-    d = n(978495),
+    u = n(978495),
     _ = n(818348),
-    h = n(888061);
-function f(e) {
+    E = n(718933);
+function A(e) {
     let { src: t } = e;
-    return (0, i.jsx)("img", { className: h.image, src: t, alt: "", draggable: !1 });
+    return (0, i.jsx)("img", { className: E.image, src: t, alt: "", draggable: !1 });
 }
-function p(e) {
+function h(e) {
     let { lottie: t, props: n } = e,
-        { reducedMotion: s } = r.useContext(l.C);
-    return (0, i.jsx)(u.a, { className: h.lottie, importData: t, autoplay: !0, shouldAnimate: !s.enabled, ...n });
+        { reducedMotion: a } = r.useContext(o.C);
+    return (0, i.jsx)(d.a, { className: E.lottie, importData: t, autoplay: !0, shouldAnimate: !a.enabled, ...n });
 }
-function E(e) {
+function I(e) {
     let { rive: t, props: n } = e;
     return (0, i.jsx)(t, {
-        className: h.rive,
+        className: E.rive,
         withReducedMotion: "short-loop",
         autoplay: !0,
         fit: "contain",
@@ -31,69 +31,69 @@ function E(e) {
         ...n,
     });
 }
-function m(e) {
-    let { ref: t, src: n, fallbackImageSrc: s, loop: a, loopAt: o = 0, playbackRate: u, isWindowFocused: c } = e,
-        { reducedMotion: d } = r.useContext(l.C),
-        p = r.useRef(null);
-    return (r.useImperativeHandle(t, () => p.current),
+function f(e) {
+    let { ref: t, src: n, fallbackImageSrc: a, loop: s, loopAt: l = 0, playbackRate: d, isWindowFocused: c } = e,
+        { reducedMotion: u } = r.useContext(o.C),
+        h = r.useRef(null);
+    return (r.useImperativeHandle(t, () => h.current),
     r.useEffect(() => {
-        let e = p.current;
+        let e = h.current;
         if (null != e)
             return (
-                null != u && (e.playbackRate = u),
-                null != a && (e.loop = 0 === o && a),
+                null != d && (e.playbackRate = d),
+                null != s && (e.loop = 0 === l && s),
                 e.addEventListener("ended", t),
                 () => {
                     e.removeEventListener("ended", t);
                 }
             );
         function t() {
-            null != e && !0 === a && 0 !== o && ((e.currentTime = o), e.play());
+            null != e && !0 === s && 0 !== l && ((e.currentTime = l), e.play());
         }
-    }, [a, o, u]),
+    }, [s, l, d]),
     r.useEffect(() => {
-        null != p.current && (!d.enabled && c ? p.current?.play().catch(_.tE) : p.current?.pause());
-    }, [c, d.enabled]),
-    d.enabled && null != s)
-        ? (0, i.jsx)(f, { type: "image", src: s })
+        null != h.current && (!u.enabled && c ? h.current?.play().catch(_.tE) : h.current?.pause());
+    }, [c, u.enabled]),
+    u.enabled && null != a)
+        ? (0, i.jsx)(A, { type: "image", src: a })
         : (0, i.jsx)("video", {
-              className: h.video,
-              ref: p,
+              className: E.video,
+              ref: h,
               src: n,
-              autoPlay: !d.enabled && c,
+              autoPlay: !u.enabled && c,
               muted: !0,
               playsInline: !0,
               controls: !1,
               preload: "metadata",
           });
 }
-function g(e) {
+function p(e) {
     let { aspectRatio: t = "16/9", ...n } = e,
-        s = (0, c.G9)(),
-        l = (0, o.R)(),
-        u = s.isWindowFocused?.() ?? l;
+        a = (0, c.G9)(),
+        o = (0, l.R)(),
+        d = a.isWindowFocused?.() ?? o;
     return null == n
         ? null
         : (0, i.jsx)("div", {
-              className: a()(h.container, h[`aspect-ratio-${t}`]),
+              className: s()(E.container, E[`aspect-ratio-${t}`]),
               children: (function () {
-                  if ((0, d.wu)(n)) return (0, i.jsx)(f, { ...n });
-                  if ((0, d.al)(n)) return (0, i.jsx)(p, { ...n });
-                  if ((0, d.$P)(n)) return (0, i.jsx)(E, { ...n });
-                  if ((0, d.cZ)(n)) return (0, i.jsx)(m, { ...n, isWindowFocused: u });
-                  if ((0, d.Kh)(n))
-                      return null == s.dynamicGraphicComponents
+                  if ((0, u.wu)(n)) return (0, i.jsx)(A, { ...n });
+                  if ((0, u.al)(n)) return (0, i.jsx)(h, { ...n });
+                  if ((0, u.$P)(n)) return (0, i.jsx)(I, { ...n });
+                  if ((0, u.cZ)(n)) return (0, i.jsx)(f, { ...n, isWindowFocused: d });
+                  if ((0, u.Kh)(n))
+                      return null == a.dynamicGraphicComponents
                           ? (console.warn(
                                 "Dynamic graphic used but no dynamicGraphicComponents provided in ManaContext",
                             ),
                             null)
                           : (function (e) {
-                                let { component: t, props: n, componentMap: s } = e,
-                                    a = s[t];
-                                return null == a
+                                let { component: t, props: n, componentMap: a } = e,
+                                    s = a[t];
+                                return null == s
                                     ? (console.warn("No component found for dynamic graphic:", t), null)
-                                    : (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(a, { ...n }) });
-                            })({ component: n.component, props: n.props, componentMap: s.dynamicGraphicComponents });
+                                    : (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(s, { ...n }) });
+                            })({ component: n.component, props: n.props, componentMap: a.dynamicGraphicComponents });
                   return null;
               })(),
           });

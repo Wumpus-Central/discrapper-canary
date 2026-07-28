@@ -1,6 +1,6 @@
-n.d(t, { A: () => x });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => f });
+var i = n(477900),
+    l = n(582128),
     a = n(17928),
     s = n(305866),
     r = n(775602),
@@ -8,17 +8,17 @@ var i = n(627968),
     c = n(408018),
     d = n(138617),
     u = n(7584),
-    p = n(446243),
-    h = n(662731),
+    h = n(446243),
+    p = n(662731),
     m = n(375708),
     A = n(696034);
-function x(e) {
-    let { channel: t, position: n, setEditorRef: x } = e,
-        f = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
+function f(e) {
+    let { channel: t, position: n, setEditorRef: f } = e,
+        x = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
         [g, C] = (0, l.useState)(""),
         [y, j] = (0, l.useState)(""),
         [v, E] = (0, l.useState)((0, c.x7)("")),
-        [N, I] = (0, l.useState)(f),
+        [N, I] = (0, l.useState)(x),
         T = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: A.kL,
@@ -30,7 +30,7 @@ function x(e) {
             onChange: function (e, t, n) {
                 j(t), E(n), C(u.Ay.translateInlineEmojiToSurrogates(t));
             },
-            placeholder: m.intl.string(h.default.IAcEEn),
+            placeholder: m.intl.string(p.default.IAcEEn),
             channel: t,
             textValue: y,
             richValue: v,
@@ -49,10 +49,10 @@ function x(e) {
                     : T.current
                       ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
                       : ((T.current = !0),
-                        (0, p.zK)(e, t.id, g, n),
+                        (0, h.zK)(e, t.id, g, n),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },
-            setEditorRef: x,
+            setEditorRef: f,
             disableThemedBackground: !0,
             showValueWhenDisabled: !0,
         }),

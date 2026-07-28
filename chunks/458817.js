@@ -1,9 +1,9 @@
 n.d(t, { A: () => v });
-var r = n(64700),
+var r = n(582128),
     l = n(323889),
     i = n(731738),
-    u = n(17928),
-    s = n(274670),
+    s = n(17928),
+    u = n(274670),
     a = n(144779),
     o = n(807393),
     c = n(53200),
@@ -40,9 +40,9 @@ function v(e) {
         L = (0, f.u0)(),
         O = (0, f.Ut)(),
         P = (0, _.go)(),
-        N = (0, u.bG)([d.A], () => d.A.getEffectiveConnectionSpeed()),
-        k = (0, r.useRef)(-1),
-        b = r.useCallback(
+        N = (0, s.bG)([d.A], () => d.A.getEffectiveConnectionSpeed()),
+        b = (0, r.useRef)(-1),
+        k = r.useCallback(
             (e) => {
                 null != t.current &&
                     L({
@@ -162,14 +162,14 @@ function v(e) {
         ),
         B = r.useCallback(() => {
             null != t.current &&
-                ((k.current += 1),
+                ((b.current += 1),
                 L({
                     questId: T,
                     event: S.HAw.QUEST_VIDEO_BUFFERING_STARTED,
                     properties: {
                         video_asset_id: g,
                         network_connection_speed: N,
-                        buffer_index: k.current,
+                        buffer_index: b.current,
                         video_session_id: A,
                         ...C(n),
                     },
@@ -179,7 +179,7 @@ function v(e) {
         F = r.useCallback(
             (e) => {
                 null != t.current &&
-                    ((k.current += 1),
+                    ((b.current += 1),
                     L({
                         questId: T,
                         event: S.HAw.QUEST_VIDEO_BUFFERING_ENDED,
@@ -187,7 +187,7 @@ function v(e) {
                             video_asset_id: g,
                             network_connection_speed: N,
                             duration: e,
-                            buffer_index: k.current,
+                            buffer_index: b.current,
                             video_session_id: A,
                             ...C(n),
                         },
@@ -196,10 +196,10 @@ function v(e) {
             },
             [T, t, g, A, n, L, h, N],
         ),
-        Y = r.useCallback(
+        j = r.useCallback(
             (e, t) => {
                 (0, E.E5)(E.kI.STEP_2_CLICKED_INTERNAL, "video_quest_analytics")
-                    ? (0, s.r)({
+                    ? (0, u.r)({
                           type: a.F.CLICK_INTERNAL,
                           adCreativeType: l.p.QUEST,
                           adCreativeId: T,
@@ -212,7 +212,7 @@ function v(e) {
             },
             [T, h, O, P],
         ),
-        j = r.useCallback(
+        Y = r.useCallback(
             (e) => {
                 null != t.current &&
                     L({
@@ -236,21 +236,21 @@ function v(e) {
             (e, r) => {
                 if (null == t.current) return;
                 let l = t.current?.error,
-                    u = t.current?.networkState,
-                    s = null != t.current ? (0, m.zh)(t.current.currentTime, t.current.duration) : void 0,
+                    s = t.current?.networkState,
+                    u = null != t.current ? (0, m.zh)(t.current.currentTime, t.current.duration) : void 0,
                     a = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
                 L({
                     questId: T,
                     event: S.HAw.QUEST_VIDEO_ERROR,
                     properties: {
-                        video_progress: s,
+                        video_progress: u,
                         video_error_type: e,
                         video_asset_id: g,
                         network_connection_speed: N,
                         video_session_id: A,
                         video_error_code: l?.code,
                         video_error_message: l?.message,
-                        video_network_state: u,
+                        video_network_state: s,
                         is_full_episode_video_quest: R,
                         is_hls_supported: (0, c.Ap)(),
                         ...C(n),
@@ -326,17 +326,17 @@ function v(e) {
             [T, t, g, A, n, L, h],
         );
     return {
-        trackQuestVideoLoadingStarted: b,
+        trackQuestVideoLoadingStarted: k,
         trackQuestVideoLoadingEnded: y,
         trackQuestVideoTimeToFirstFrame: V,
         trackQuestVideoProgressed: U,
         trackQuestVideoResumed: Q,
         trackQuestVideoPaused: M,
         trackQuestVideoFocusChange: w,
-        trackQuestContentClick: Y,
+        trackQuestContentClick: j,
         trackQuestVideoBufferingStarted: B,
         trackQuestVideoBufferingEnded: F,
-        trackQuestVideoSegmentWatched: j,
+        trackQuestVideoSegmentWatched: Y,
         trackQuestVideoFullscreenChanged: H,
         trackQuestVideoError: K,
         trackQuestVideoVolumeChanged: G,

@@ -1,6 +1,6 @@
-n.d(t, { A: () => I });
-var i = n(627968),
-    a = n(64700),
+n.d(t, { A: () => _ });
+var i = n(477900),
+    a = n(582128),
     l = n(503698),
     r = n.n(l),
     s = n(172218),
@@ -9,21 +9,21 @@ var i = n(627968),
     c = n(763827),
     d = n(531685),
     g = n(25639),
-    h = n(668783);
+    h = n(329319);
 let f = "ease-in-out",
     m = [8, 16, 11, 13, 6],
-    A = Array.from({ length: 5 }, (e, t) => t),
-    N = [2, 2, 5, 2, 2],
-    x = [3, 3, 10, 6, 3],
-    E = [3, 3, 7, 12, 6],
-    v = [3, 3, 5, 10, 16],
-    S = [3, 3, 8, 13, 7],
-    D = [4, 6, 12, 9, 6],
+    x = Array.from({ length: 5 }, (e, t) => t),
+    A = [2, 2, 5, 2, 2],
+    N = [3, 3, 10, 6, 3],
+    v = [3, 3, 7, 12, 6],
+    E = [3, 3, 5, 10, 16],
+    D = [3, 3, 8, 13, 7],
+    S = [4, 6, 12, 9, 6],
     b = [6, 10, 9, 16, 8],
-    T = 6.67 / 8,
+    j = 6.67 / 8,
     y =
         "M16.5 18H16a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-.5v-.5a2.5 2.5 0 0 0-5 0v.5Zm3.5 0v-.5a1 1 0 1 0-2 0v.5h2Z",
-    j = `translate(${12.33 - 15 * T}, ${1 - 15.5 * T}) scale(${T})`;
+    T = `translate(${12.33 - 15 * j}, ${1 - 15.5 * j}) scale(${j})`;
 function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
@@ -38,7 +38,7 @@ function M(e, t) {
 function p(e, t) {
     return Math.random() * (t - e) + e;
 }
-let R = {
+let C = {
     [g.s.GENTLE_AMBIENT]: {
         firstState: "burst",
         transitionConfig: { durationMs: 180, timingFunction: f },
@@ -74,37 +74,37 @@ let R = {
                 getNextState: () => "waveBuildCenter",
             },
             waveBuildCenter: {
-                getHeights: (e) => M(e, 3, N),
+                getHeights: (e) => M(e, 3, A),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "waveBuildRight1",
             },
             waveBuildRight1: {
-                getHeights: (e) => M(e, 4, x, 1),
+                getHeights: (e) => M(e, 4, N, 1),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "waveBuildRight2",
             },
             waveBuildRight2: {
-                getHeights: (e) => M(e, 4, E, 1),
+                getHeights: (e) => M(e, 4, v, 1),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "wavePeakRight",
             },
             wavePeakRight: {
-                getHeights: (e) => M(e, 4, v, 1),
+                getHeights: (e) => M(e, 4, E, 1),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "waveReturnLeft1",
             },
             waveReturnLeft1: {
-                getHeights: (e) => M(e, 5, S),
+                getHeights: (e) => M(e, 5, D),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "waveReturnLeft2",
             },
             waveReturnLeft2: {
-                getHeights: (e) => M(e, 5, D),
+                getHeights: (e) => M(e, 5, S),
                 getAnimationDelay: () => p(64, 128),
                 getStateDuration: () => p(32, 64),
                 getNextState: () => "burst",
@@ -142,7 +142,7 @@ let R = {
         },
     },
 };
-function C(e) {
+function R(e) {
     let { iconSize: t = 20, locked: n = !1, maskId: a } = e;
     return n
         ? (0, i.jsx)("defs", {
@@ -165,34 +165,34 @@ function w(e) {
             className: c,
             animationStyle: f = g.s.GENTLE_AMBIENT,
             iconSize: m = 20,
-            locked: N = !1,
+            locked: A = !1,
         } = e,
-        x = a.useId(),
-        E = (0, u.bG)([d.A], () => d.A.isAppFocused()),
-        [v, S] = a.useState(!1),
-        D = a.useCallback((e) => {
-            S((t) => (t !== e ? e : t));
+        N = a.useId(),
+        v = (0, u.bG)([d.A], () => d.A.isAppFocused()),
+        [E, D] = a.useState(!1),
+        S = a.useCallback((e) => {
+            D((t) => (t !== e ? e : t));
         }, []),
-        b = (0, s.K)(D, 0.15),
-        T = a.useRef([, , , , ,].fill(0)),
-        M = R[f],
-        p = !E || !v,
+        b = (0, s.K)(S, 0.15),
+        j = a.useRef([, , , , ,].fill(0)),
+        M = C[f],
+        p = !v || !E,
         w = (m - 18) / 2,
-        _ = p ? 0 : M.transitionConfig.durationMs,
-        I = a.useRef(null),
+        I = p ? 0 : M.transitionConfig.durationMs,
+        _ = a.useRef(null),
         L = a.useMemo(
             () => ({
                 transitionProperty: "transform",
-                transitionDuration: `${_}ms`,
+                transitionDuration: `${I}ms`,
                 transitionTimingFunction: M.transitionConfig.timingFunction,
             }),
-            [M.transitionConfig.timingFunction, _],
+            [M.transitionConfig.timingFunction, I],
         ),
-        G = a.useMemo(() => ({ ...L, width: 2, height: 16, backgroundColor: o }), [L, o]),
-        U = a.useMemo(() => ({ left: w, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, w, 18]),
-        k = a.useCallback(
+        k = a.useMemo(() => ({ ...L, width: 2, height: 16, backgroundColor: o }), [L, o]),
+        G = a.useMemo(() => ({ left: w, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, w, 18]),
+        U = a.useCallback(
             (e) => {
-                let t = I.current;
+                let t = _.current;
                 if (null == t) return;
                 let n = t.children;
                 for (let t = 0; t < 5; t++) {
@@ -203,11 +203,11 @@ function w(e) {
                     i.style.transform = `scaleY(${l})`;
                 }
             },
-            [I],
+            [_],
         );
     a.useLayoutEffect(() => {
-        p || k(M.states[M.firstState].getHeights(T.current));
-    }, [k, M, p]),
+        p || U(M.states[M.firstState].getHeights(j.current));
+    }, [U, M, p]),
         (t = a.useRef(M.firstState)),
         (n = a.useRef(null)),
         (l = !p),
@@ -246,8 +246,8 @@ function w(e) {
                                                     return;
                                                 }
                                                 try {
-                                                    let e = s.getHeights(T.current);
-                                                    k(e);
+                                                    let e = s.getHeights(j.current);
+                                                    U(e);
                                                 } catch (e) {
                                                     i = !0;
                                                     return;
@@ -268,8 +268,8 @@ function w(e) {
                     (i = !0), s();
                 }
             );
-        }, [k, l, M, T]);
-    let H = N ? `url(#${x})` : void 0;
+        }, [U, l, M, j]);
+    let H = A ? `url(#${N})` : void 0;
     return (0, i.jsx)("span", {
         ref: b,
         className: r()(c, h.Aj),
@@ -279,7 +279,7 @@ function w(e) {
             viewBox: `0 0 ${m} ${m}`,
             fill: "none",
             children: [
-                (0, i.jsx)(C, { iconSize: m, locked: N, maskId: x }),
+                (0, i.jsx)(R, { iconSize: m, locked: A, maskId: N }),
                 (0, i.jsx)("g", {
                     mask: H,
                     children: (0, i.jsx)("foreignObject", {
@@ -290,20 +290,20 @@ function w(e) {
                         children: (0, i.jsx)("div", {
                             className: h.FH,
                             children: (0, i.jsx)("div", {
-                                ref: I,
+                                ref: _,
                                 className: h.Gb,
-                                style: U,
-                                children: A.map((e) => (0, i.jsx)("div", { className: h.M0, style: G }, e)),
+                                style: G,
+                                children: x.map((e) => (0, i.jsx)("div", { className: h.M0, style: k }, e)),
                             }),
                         }),
                     }),
                 }),
-                N && (0, i.jsx)("path", { d: y, transform: j, fill: o, fillRule: "evenodd", clipRule: "evenodd" }),
+                A && (0, i.jsx)("path", { d: y, transform: T, fill: o, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-function _(e) {
+function I(e) {
     let { color: t = "currentColor", className: n, iconSize: l = 20, locked: r = !1 } = e,
         s = a.useId(),
         u = (l - 18) / 2,
@@ -317,7 +317,7 @@ function _(e) {
             viewBox: `0 0 ${l} ${l}`,
             fill: "none",
             children: [
-                (0, i.jsx)(C, { iconSize: l, locked: r, maskId: s }),
+                (0, i.jsx)(R, { iconSize: l, locked: r, maskId: s }),
                 (0, i.jsx)("g", {
                     mask: o,
                     children: m.map((e, n) => {
@@ -325,12 +325,12 @@ function _(e) {
                         return (0, i.jsx)("rect", { x: u + 4 * n, y: a, width: 2, height: e, rx: 1, fill: t }, n);
                     }),
                 }),
-                r && (0, i.jsx)("path", { d: y, transform: j, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
+                r && (0, i.jsx)("path", { d: y, transform: T, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-function I(e) {
+function _(e) {
     let {
             color: t = "currentColor",
             className: n,
@@ -349,6 +349,6 @@ function I(e) {
         m(!1);
     }, [h]),
     d || f)
-        ? (0, i.jsx)(_, { color: t, className: n, iconSize: l, locked: s })
+        ? (0, i.jsx)(I, { color: t, className: n, iconSize: l, locked: s })
         : (0, i.jsx)(w, { color: t, className: n, animationStyle: r, iconSize: l, locked: s });
 }

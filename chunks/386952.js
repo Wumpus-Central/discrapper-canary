@@ -1,22 +1,22 @@
-r.d(t, { e: () => S });
-var i = r(627968),
-    n = r(64700),
-    a = r(503698),
-    l = r.n(a),
-    _ = r(839349);
-function S() {
-    let [e, t] = n.useState(!1);
+n.d(t, { e: () => o });
+var i = n(477900),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
+    a = n(862813);
+function o() {
+    let [e, t] = l.useState(!1);
     return {
         isTruncated: e,
-        ExpandableTextContainer: n.memo(function (e) {
-            let { showAll: r = !1, className: n, children: a, lineClamp: S = 2 } = e;
+        ExpandableTextContainer: l.memo(function (e) {
+            let { showAll: n = !1, className: l, children: r, lineClamp: o = 2 } = e;
             return (0, i.jsx)("div", {
                 ref: (e) => {
                     null != e && t(e.scrollHeight - e.clientHeight > 1);
                 },
-                className: l()(_.I, n),
-                style: r ? void 0 : { lineClamp: S, WebkitLineClamp: S },
-                children: a,
+                className: s()(a.I, l),
+                style: n ? void 0 : { lineClamp: o, WebkitLineClamp: o },
+                children: r,
             });
         }),
     };

@@ -1,10 +1,10 @@
 n.d(t, { A: () => m, O: () => c });
 var s,
-    i = n(627968);
-n(64700);
-var r = n(606049),
-    a = n(375708),
-    l = n(334211),
+    i = n(477900);
+n(582128);
+var a = n(606049),
+    r = n(375708),
+    l = n(281867),
     c = (((s = {})[(s.WITH_CONTENT = 0)] = "WITH_CONTENT"), (s[(s.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), s);
 function m(e) {
     let { message: t, compact: n, location: s } = e;
@@ -14,13 +14,13 @@ function m(e) {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       " ",
-                      (0, i.jsx)(r.A, {
+                      (0, i.jsx)(a.A, {
                           timestamp: t.editedTimestamp,
                           isEdited: !0,
                           isInline: !1,
                           children: (0, i.jsxs)("span", {
                               className: l.oh,
-                              children: ["(", a.intl.string(a.t.C8sXIM), ")"],
+                              children: ["(", r.intl.string(r.t.C8sXIM), ")"],
                           }),
                       }),
                   ],

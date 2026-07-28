@@ -1,9 +1,9 @@
 l.d(i, { default: () => x });
-var t = l(627968);
-l(64700);
+var t = l(477900);
+l(582128);
 var r = l(17928),
-    s = l(862482),
-    a = l(935462),
+    s = l(935462),
+    a = l(862482),
     e = l(297264),
     d = l(821609),
     c = l(587895),
@@ -11,7 +11,7 @@ var r = l(17928),
     u = l(755439),
     h = l(975571),
     p = l(375708),
-    j = l(663630);
+    j = l(623670);
 let x = function (n) {
     let { onClose: i, transitionState: l } = n,
         { error: x, applicationName: g } = (0, r.cf)([u.A, c.A], () => {
@@ -23,13 +23,13 @@ let x = function (n) {
             }
             return { error: n, applicationName: i };
         });
-    return (0, t.jsxs)(a.EO, {
+    return (0, t.jsxs)(s.EO, {
         transitionState: l,
-        size: a.rI.SMALL,
+        size: s.rI.SMALL,
         "aria-label": p.intl.string(p.t["6kHRYP"]),
         parentComponent: "DispatchErrorModal",
         children: [
-            (0, t.jsxs)(a.rQ, {
+            (0, t.jsxs)(s.rQ, {
                 justify: o.A.Justify.BETWEEN,
                 separator: !1,
                 children: [
@@ -40,10 +40,10 @@ let x = function (n) {
                             children: p.intl.string(p.t["6kHRYP"]),
                         }),
                     }),
-                    (0, t.jsx)(o.A.Child, { grow: 0, children: (0, t.jsx)(a.s_, { onClick: i }) }),
+                    (0, t.jsx)(o.A.Child, { grow: 0, children: (0, t.jsx)(s.s_, { onClick: i }) }),
                 ],
             }),
-            (0, t.jsx)(a.$m, {
+            (0, t.jsx)(s.$m, {
                 children: (0, t.jsxs)("div", {
                     className: j.rf,
                     children: [
@@ -79,7 +79,7 @@ let x = function (n) {
                     ],
                 }),
             }),
-            (0, t.jsxs)(a.jl, {
+            (0, t.jsxs)(s.jl, {
                 children: [
                     (0, t.jsx)(d.$, {
                         variant: "primary",
@@ -88,8 +88,8 @@ let x = function (n) {
                             window.open(h.A.getSubmitRequestURL());
                         },
                     }),
-                    (0, t.jsx)(s.$n, {
-                        look: s.$n.Looks.LINK,
+                    (0, t.jsx)(a.$n, {
+                        look: a.$n.Looks.LINK,
                         onClick: i,
                         color: j.bE,
                         children: p.intl.string(p.t.cpT0Cq),

@@ -1,6 +1,6 @@
-n.r(t), n.d(t, { waitForCSSLoad: () => e6, default: () => e9 });
-var r = n(627968),
-    i = n(64700),
+n.r(t), n.d(t, { waitForCSSLoad: () => e4, default: () => e9 });
+var r = n(477900),
+    i = n(582128),
     s = n(17928),
     o = n(684013),
     l = n(964486),
@@ -35,7 +35,7 @@ var w = n(503698),
     L = n(616356),
     M = n(734057),
     R = n(71393),
-    U = n(186295),
+    U = n(293246),
     K = n(532624),
     G = n(184809),
     F = n(625494),
@@ -636,8 +636,8 @@ function e2(e, t) {
 }
 n(96175), n(191701), n(921955);
 let e3 = !g.isPlatformEmbedded && !1,
-    e4 = new c.A("AppOverlay");
-function e6(e, t) {
+    e8 = new c.A("AppOverlay");
+function e4(e, t) {
     return new Promise((n, r) => {
         let i = Date.now();
         t.current = setInterval(() => {
@@ -665,14 +665,14 @@ function e6(e, t) {
         }, 200);
     });
 }
-async function e7(e, t) {
+async function e5(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1e3,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (g.isPlatformEmbedded) {
         try {
             await m.Ay.isAlwaysOnTop(t);
         } catch (e) {
-            e4.error("Window does not exist while trying to show inactive", e), (0, v.pj)(e, x.Ue.OutOfProcess);
+            e8.error("Window does not exist while trying to show inactive", e), (0, v.pj)(e, x.Ue.OutOfProcess);
         }
         for (let i = 0; i < r; i++)
             try {
@@ -682,16 +682,16 @@ async function e7(e, t) {
             } catch (e) {
                 if (e.message?.includes("IPC") && i < r - 1) {
                     let t = (n / 2) * Math.pow(2, i + 1);
-                    e4.error(`Failed to show inactive, retrying in ${t}ms`, e),
+                    e8.error(`Failed to show inactive, retrying in ${t}ms`, e),
                         await new Promise((e) => setTimeout(e, t));
                 } else throw ((0, v.pj)(e, x.Ue.OutOfProcess), e);
             }
     }
 }
-function e8() {
+function e7() {
     o.A.setFocusedPID(A.DEV_PID, null);
 }
-function e5() {
+function e6() {
     o.A.setFocusedPID(null, null);
 }
 let e9 = i.memo(function (e) {
@@ -703,10 +703,10 @@ let e9 = i.memo(function (e) {
                 return (
                     e3 &&
                         (t.document.hasFocus() && o.A.setFocusedPID(A.DEV_PID, null),
-                        t.addEventListener("focus", e8),
-                        t.addEventListener("blur", e5)),
+                        t.addEventListener("focus", e7),
+                        t.addEventListener("blur", e6)),
                     () => {
-                        e3 && (t.removeEventListener("focus", e8), t.removeEventListener("blur", e5));
+                        e3 && (t.removeEventListener("focus", e7), t.removeEventListener("blur", e6));
                     }
                 );
         });
@@ -735,16 +735,16 @@ let e9 = i.memo(function (e) {
                 O = i.useCallback(
                     async (e, t) => {
                         try {
-                            if ((await e6(e, b), N.current)) return;
+                            if ((await e4(e, b), N.current)) return;
                             e2("cssLoaded", !0);
                         } catch (e) {
-                            e4.error("Timed out waiting for CSS to load", e),
+                            e8.error("Timed out waiting for CSS to load", e),
                                 o.A.setOverlayCrashed(eb.A.getTargetPID(), e),
                                 e2("errorMessage", "CSS failed load");
                             return;
                         }
                         try {
-                            if ((await e7(e, t), N.current)) return;
+                            if ((await e5(e, t), N.current)) return;
                             (0, e0.Mq)();
                         } catch (e) {
                             o.A.setOverlayCrashed(eb.A.getTargetPID(), e), e2("errorMessage", "showInactive failed");

@@ -1,6 +1,6 @@
 n.d(t, { default: () => ek });
-var i = n(627968),
-    l = n(64700),
+var i = n(477900),
+    l = n(582128),
     a = n(731738),
     s = n(17928),
     r = n(935462),
@@ -39,26 +39,26 @@ var v = n(503698),
     P = n(887129),
     V = n(741918),
     G = n(939249),
-    M = n(228366);
-let $ = { seenBadgeIndicatorIds: new Set() };
+    $ = n(228366);
+let M = { seenBadgeIndicatorIds: new Set() };
 class L extends s.Ay.PersistedStore {
     static displayName = "BadgeDirectorySeenStore";
     static persistKey = "BadgeDirectorySeenStore";
     initialize(e) {
-        $ = { seenBadgeIndicatorIds: new Set(e?.seenBadgeIndicatorIds ?? []) };
+        M = { seenBadgeIndicatorIds: new Set(e?.seenBadgeIndicatorIds ?? []) };
     }
     getState() {
-        return { seenBadgeIndicatorIds: Array.from($.seenBadgeIndicatorIds) };
+        return { seenBadgeIndicatorIds: Array.from(M.seenBadgeIndicatorIds) };
     }
     getSeenBadgeIndicators() {
-        return $.seenBadgeIndicatorIds;
+        return M.seenBadgeIndicatorIds;
     }
 }
-let Z = new L(M.h, {
+let Z = new L($.h, {
     BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN: function (e) {
         let { badgeId: t } = e;
-        if ($.seenBadgeIndicatorIds.has(t)) return !1;
-        $ = { ...$, seenBadgeIndicatorIds: new Set([...$.seenBadgeIndicatorIds, t]) };
+        if (M.seenBadgeIndicatorIds.has(t)) return !1;
+        M = { ...M, seenBadgeIndicatorIds: new Set([...M.seenBadgeIndicatorIds, t]) };
     },
 });
 var H = n(92111),
@@ -763,8 +763,8 @@ function eU(e) {
             onToggleViewedUser: V,
             onViewOwnCatalog: G,
         } = e,
-        M = Y(I, f, 32),
-        $ = (function (e) {
+        $ = Y(I, f, 32),
+        M = (function (e) {
             let t = e.tiers;
             if (null == t || 0 === t.length) return;
             let n = e.owned ? e.current_tier : e.next_tier;
@@ -772,9 +772,9 @@ function eU(e) {
         })(_),
         L = (0, s.bG)([T.Ay], () => T.Ay.useReducedMotion)
             ? void 0
-            : ($?.complex_icon_animated_url ?? _.complex_icon_animated_url),
-        Z = $?.complex_icon_static_url ?? _.complex_icon_static_url,
-        J = $?.simple_icon_url ?? _.simple_icon_url,
+            : (M?.complex_icon_animated_url ?? _.complex_icon_animated_url),
+        Z = M?.complex_icon_static_url ?? _.complex_icon_static_url,
+        J = M?.simple_icon_url ?? _.simple_icon_url,
         q = L ?? Z ?? J,
         X =
             (function (e) {
@@ -791,10 +791,10 @@ function eU(e) {
                     default:
                         return null;
                 }
-            })($?.rarity ?? _.rarity) ?? void 0,
+            })(M?.rarity ?? _.rarity) ?? void 0,
         ee = (0, H.Om)(_.badge_id),
         et = _.badge_id === y.$.PREMIUM_TENURE,
-        en = et ? ($?.name ?? $?.key) : $?.name,
+        en = et ? (M?.name ?? M?.key) : M?.name,
         ei = et ? K.intl.string(K.t.Ipxkog) : _.name;
     et ? (r = null != en ? `${ei} ${en}` : ei) : null != en ? ((a = ei), (r = en)) : (r = ei);
     let el = (0, z.ie)(_.badge_id) && !_.is_earnable && _.badge_id !== y.$.STAFF,
@@ -823,7 +823,7 @@ function eU(e) {
         : ea
           ? "--"
           : void 0;
-    let ed = ((n = null == (t = _.tiers?.[0]?.key) || $?.key === t), K.intl.string(n ? K.t.WDhIz2 : K.t.wYaDmz)),
+    let ed = ((n = null == (t = _.tiers?.[0]?.key) || M?.key === t), K.intl.string(n ? K.t.WDhIz2 : K.t.wYaDmz)),
         ec = P && null != c && _.badge_id !== y.$.STAFF,
         eu = null != X,
         ev = null;
@@ -862,7 +862,7 @@ function eU(e) {
                 ? null
                 : (0, i.jsx)(E.w, { type: "info", children: K.intl.format(K.t.vFekBs, { onViewBadges: G }) }),
         eU = (0, s.bG)([R.A], () => R.A.hasConsented(ej.YAq.PERSONALIZATION)),
-        eO = P && (0, H.wM)(_.badge_id) && !f && !eU;
+        eO = P && (0, H.Jn)(_.badge_id) && !f && !eU;
     return (0, i.jsx)(A.F, {
         forceLevel: 2,
         children: (0, i.jsx)("div", {
@@ -912,7 +912,7 @@ function eU(e) {
                                                     isOwnProfile: p,
                                                     isViewingOtherUser: f,
                                                     targetUsername: w,
-                                                    viewedAvatarSrc: M,
+                                                    viewedAvatarSrc: $,
                                                     targetOwnsBadge: U,
                                                     viewerOwnsBadge: F,
                                                     unlockedStatusText: m,
@@ -926,7 +926,7 @@ function eU(e) {
                                             isOwnProfile: p,
                                             isViewingOtherUser: f,
                                             targetUsername: w,
-                                            viewedAvatarSrc: M,
+                                            viewedAvatarSrc: $,
                                             targetOwnsBadge: U,
                                             viewerOwnsBadge: F,
                                             unlockedStatusText: m,
@@ -1066,8 +1066,8 @@ function ek(e) {
     }, [F, A]);
     let V = (0, s.bG)([b.Ay], () => null != j && null != D && (b.Ay.getBadgeById(D.badge_id, j)?.owned ?? !1), [D, j]),
         G = (0, s.bG)([b.Ay], () => (null != p && null != D ? b.Ay.getBadgeById(D.badge_id, p) : void 0), [D, p]),
-        M = G?.owned ?? !1,
-        $ = l.useCallback(
+        $ = G?.owned ?? !1,
+        M = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 (0, eO._)({ ...e, stackingBehavior: "replace" }).then(() => {
@@ -1080,20 +1080,20 @@ function ek(e) {
             null != j &&
                 null != D &&
                 (I
-                    ? $({
+                    ? M({
                           initialBadgeId: D.badge_id,
                           targetUserId: j,
                           targetUsername: y,
                           viewingCurrentUserBadges: !0,
                       })
-                    : $({ initialBadgeId: D.badge_id, targetUserId: j, targetUsername: y }));
-        }, [I, D, $, j, y]),
+                    : M({ initialBadgeId: D.badge_id, targetUserId: j, targetUsername: y }));
+        }, [I, D, M, j, y]),
         Z = l.useCallback(() => {
             null != p &&
                 null != j &&
                 (ey({ actionName: "view_your_badges_pressed", badge: D, displayedUserId: E, isSociallyNavigated: I }),
-                $({ targetUserId: j, targetUsername: y, viewingCurrentUserBadges: !0 }));
-        }, [p, E, I, D, $, j, y]),
+                M({ targetUserId: j, targetUsername: y, viewingCurrentUserBadges: !0 }));
+        }, [p, E, I, D, M, j, y]),
         J = l.useCallback(() => {
             null != E && (0, h.RS)(E, { isRetry: !0 });
         }, [E]),
@@ -1170,7 +1170,7 @@ function ek(e) {
                                             targetUsername: y,
                                             displayedUserId: E,
                                             targetOwnsBadge: V,
-                                            viewerOwnsBadge: M,
+                                            viewerOwnsBadge: $,
                                             isMilestone2Enabled: f,
                                             onToggleViewedUser: L,
                                             onViewOwnCatalog: Z,

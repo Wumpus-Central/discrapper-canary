@@ -1,44 +1,44 @@
-i.d(e, { default: () => h });
-var n = i(627968),
-    l = i(64700),
-    r = i(732159),
-    s = i(691540),
-    a = i(857250),
-    d = i(97483),
-    c = i(885386),
-    o = i(365258),
-    u = i(929120),
-    C = i(481045),
-    f = i(375708);
+e.d(i, { default: () => h });
+var n = e(477900),
+    r = e(582128),
+    s = e(732159),
+    l = e(691540),
+    a = e(857250),
+    c = e(97483),
+    d = e(885386),
+    o = e(365258),
+    u = e(929120),
+    f = e(481045),
+    C = e(375708);
 function h(t) {
     let {
-            direction: e,
-            affectedGuildIds: i,
+            direction: i,
+            affectedGuildIds: e,
             settingName: h,
             mappedActivityValue: j,
             onClose: x,
             transitionState: p,
         } = t,
-        v = e === o.AI.RESTRICTING,
+        v = i === o.AI.RESTRICTING,
         { title: g, subtitle: k, confirmText: m, toastContent: S } = (0, o.vz)(v, h),
-        A = (0, l.useMemo)(
+        A = (0, r.useMemo)(
             () => () => {
-                c._Z.updateSetting(j), (0, o.gF)(e, i), (0, s.P0)((0, a.o)(S, d.Ck.SUCCESS));
+                d._Z.updateSetting(j), (0, o.gF)(i, e), (0, l.P0)((0, a.o)(S, c.Ck.SUCCESS));
             },
-            [j, e, i, S],
+            [j, i, e, S],
         ),
-        I = (0, l.useCallback)(() => {
-            x(), (0, C.L7)();
+        I = (0, r.useCallback)(() => {
+            x(), (0, f.L7)();
         }, [x]);
-    return (0, n.jsx)(r.ConfirmModal, {
+    return (0, n.jsx)(s.ConfirmModal, {
         title: g,
         subtitle: k,
         confirmText: m,
-        cancelText: f.intl.string(f.t.X1rGEm),
+        cancelText: C.intl.string(C.t.X1rGEm),
         variant: "primary",
         onConfirm: A,
         onClose: x,
         transitionState: p,
-        children: (0, n.jsx)(u.n, { guildIds: i, direction: e, onClick: I }),
+        children: (0, n.jsx)(u.n, { guildIds: e, direction: i, onClick: I }),
     });
 }

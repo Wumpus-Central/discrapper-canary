@@ -1,6 +1,6 @@
 n.d(t, { A: () => H });
-var l = n(627968),
-    i = n(64700),
+var l = n(477900),
+    i = n(582128),
     r = n(503698),
     a = n.n(r),
     s = n(435558),
@@ -10,8 +10,8 @@ var l = n(627968),
     d = n(821609),
     p = n(862482),
     m = n(109802),
-    h = n(452027),
-    C = n(778712),
+    C = n(452027),
+    h = n(778712),
     E = n(297264),
     f = n(289873),
     A = n(783878),
@@ -22,19 +22,19 @@ var l = n(627968),
     _ = n(242874),
     T = n(380619),
     g = n(219271),
-    x = n(427358),
-    v = n(7133),
+    v = n(427358),
+    x = n(7133),
     N = n(994500),
-    M = n(351906),
-    R = n(287809),
-    b = n(957565),
+    R = n(351906),
+    b = n(287809),
+    M = n(957565),
     j = n(45938),
     O = n(428262),
     L = n(427262),
     w = n(951305),
     k = n(482132),
-    D = n(652215),
-    U = n(202541),
+    U = n(652215),
+    D = n(202541),
     G = n(375708),
     F = n(729796);
 function H(e) {
@@ -48,12 +48,12 @@ function H(e) {
             hasSentMessage: y,
             giftRecipient: _,
             giftMessageError: g,
-            isSendingMessage: x,
+            isSendingMessage: v,
         } = e,
-        [N, R] = i.useState(m.e.Modes.DEFAULT),
-        H = (0, u.bG)([M.A], () => M.A.enabled),
+        [N, b] = i.useState(m.e.Modes.DEFAULT),
+        H = (0, u.bG)([R.A], () => R.A.enabled),
         Y = y || (null != o && null != _),
-        W = r?.productLine === D.EZt.COLLECTIBLES,
+        W = r?.productLine === U.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionReward: V,
             openGiftingBadgePostPurchaseModal: K,
@@ -70,10 +70,10 @@ function H(e) {
             ? G.intl.string(G.t.qB8aya)
             : null == s
               ? null
-              : ((e = s.interval === U.WT.MONTH ? (Y ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : Y ? G.t.p0pZXP : G.t.bXqk3o),
+              : ((e = s.interval === D.WT.MONTH ? (Y ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : Y ? G.t.p0pZXP : G.t.bXqk3o),
                 G.intl.format(e, { skuName: (0, O.RH)(s.id), intervalCount: s.intervalCount }));
     }
-    return x
+    return v
         ? (0, l.jsxs)("div", {
               className: F.EL,
               children: [
@@ -107,7 +107,7 @@ function H(e) {
                                         (0, l.jsxs)("div", {
                                             className: F.jx,
                                             children: [
-                                                (0, l.jsx)(P.A, { user: _, size: C._3.SIZE_40 }),
+                                                (0, l.jsx)(P.A, { user: _, size: h._3.SIZE_40 }),
                                                 (0, l.jsxs)("div", {
                                                     className: F.gn,
                                                     children: [
@@ -154,7 +154,7 @@ function H(e) {
                                                 className: F.PN,
                                                 children: [
                                                     null != t &&
-                                                        (0, l.jsx)(h.D, {
+                                                        (0, l.jsx)(C.D, {
                                                             label: G.intl.string(G.t["/dG4NA"]),
                                                             children: (0, l.jsx)(m.e, {
                                                                 hideMessage: H ? G.intl.string(G.t["0RLn47"]) : null,
@@ -163,17 +163,17 @@ function H(e) {
                                                                 text: e,
                                                                 onCopy: (e) => {
                                                                     null != r &&
-                                                                        (0, j.AK)(new v.A({ code: t, maxUses: 1 }), r),
-                                                                        (0, b.C)(
+                                                                        (0, j.AK)(new x.A({ code: t, maxUses: 1 }), r),
+                                                                        (0, M.C)(
                                                                             e,
-                                                                            () => R(m.e.Modes.SUCCESS),
-                                                                            () => R(m.e.Modes.ERROR),
+                                                                            () => b(m.e.Modes.SUCCESS),
+                                                                            () => b(m.e.Modes.ERROR),
                                                                         ),
                                                                         setTimeout(() => {
-                                                                            R(m.e.Modes.DEFAULT);
+                                                                            b(m.e.Modes.DEFAULT);
                                                                         }, 1500);
                                                                 },
-                                                                supportsCopy: b.p5,
+                                                                supportsCopy: M.p5,
                                                                 className: F.__invalid_copyInput,
                                                                 buttonColor: p.XD.LINK,
                                                                 buttonLook: p.pR.LINK,
@@ -217,17 +217,17 @@ function B(e) {
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
         [p, m] = i.useState(!1),
-        { userAffinities: h, isLoading: E } = (0, u.cf)([x.A], () => ({
-            userAffinities: x.A.getUserAffinitiesMap(),
-            isLoading: x.A.isFetching(),
+        { userAffinities: C, isLoading: E } = (0, u.cf)([v.A], () => ({
+            userAffinities: v.A.getUserAffinitiesMap(),
+            isLoading: v.A.isFetching(),
         })),
-        f = Array.from(h.keys()).sort((e, t) => x.A.compare(e, t)),
+        f = Array.from(C.keys()).sort((e, t) => v.A.compare(e, t)),
         S = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
         I = o().difference(S, f),
         T = [...f, ...I],
-        v = (0, u.bG)([R.default], () => R.default.filter((e) => T.includes(e.id) && !e.bot), [T]);
-    if (null == v || 0 === v.length) return null;
-    let M = o().sortBy(v, (e) => T.indexOf(e.id));
+        x = (0, u.bG)([b.default], () => b.default.filter((e) => T.includes(e.id) && !e.bot), [T]);
+    if (null == x || 0 === x.length) return null;
+    let R = o().sortBy(x, (e) => T.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: F.vt,
         children: [
@@ -243,11 +243,11 @@ function B(e) {
                         onSelectionChange: (e) => {
                             a(e), c(!1);
                         },
-                        options: M.map((e) => ({
+                        options: R.map((e) => ({
                             id: e.id,
                             value: e,
                             label: `${L.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(P.A, { user: e, size: C._3.SIZE_20 }),
+                            leading: (0, l.jsx)(P.A, { user: e, size: h._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

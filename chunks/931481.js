@@ -1,115 +1,115 @@
-n.d(e, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => b });
+var i = n(477900),
+    l = n(582128),
     r = n(503698),
-    a = n.n(r),
-    s = n(834730),
+    s = n.n(r),
+    a = n(834730),
     o = n(821609),
     c = n(688810),
     u = n(429913),
-    d = n(137177),
-    m = n(390848),
-    x = n(39623),
+    d = n(769015),
+    E = n(390848),
+    m = n(39623),
     f = n(17928),
-    E = n(885386),
-    g = n(994500),
+    x = n(885386),
+    R = n(994500),
     p = n(22212),
-    R = n(375708),
-    N = n(304265);
-function A(t) {
-    let { userId: e, analyticsLocation: n } = t,
-        r = E.Zd.useSetting(),
-        a = (0, f.bG)([g.A], () => g.A.getNote(e)),
+    g = n(375708),
+    A = n(461777);
+function I(e) {
+    let { userId: t, analyticsLocation: n } = e,
+        r = x.Zd.useSetting(),
+        s = (0, f.bG)([R.A], () => R.A.getNote(t)),
         [c, u] = l.useState(!1),
         d = l.useCallback(() => {
-            u(!0), (0, p.Yq)({ analyticsLocation: n, noteLength: a?.length ?? 0 });
-        }, [n, a]);
-    return r || null == a || "" === a
+            u(!0), (0, p.Yq)({ analyticsLocation: n, noteLength: s?.length ?? 0 });
+        }, [n, s]);
+    return r || null == s || "" === s
         ? null
         : (0, i.jsxs)("div", {
-              className: N.kL,
+              className: A.kL,
               children: [
                   c
                       ? null
                       : (0, i.jsx)("div", {
-                            className: N.p6,
+                            className: A.p6,
                             children: (0, i.jsx)(o.$, {
-                                icon: x.b,
+                                icon: m.b,
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: d,
-                                text: R.intl.string(R.t.sB0q4C),
+                                text: g.intl.string(g.t.sB0q4C),
                             }),
                         }),
-                  (0, i.jsx)(s.E, {
-                      className: c ? void 0 : N.R,
-                      "aria-label": c ? a : "",
+                  (0, i.jsx)(a.E, {
+                      className: c ? void 0 : A.R,
+                      "aria-label": c ? s : "",
                       variant: "redesign/message-preview/normal",
-                      children: a,
+                      children: s,
                   }),
               ],
           });
 }
-var j = n(562153),
+var _ = n(562153),
     h = n(183555),
-    b = n(939496),
-    I = n(996988),
-    v = n(581196);
-function _(t) {
-    let { user: e, guildId: n, channelId: r, applicationId: x, isGameRelationship: f = !1, className: E } = t,
-        { themeType: g } = (0, b.E)(),
-        p = g === I.d.MODAL_V2,
-        N = j.Ay.getName(n, r, e),
-        { trackUserProfileAction: _ } = (0, h.NJ)(),
-        { newestAnalyticsLocation: C } = (0, c.Ay)(),
-        { acceptFriendRequest: y, cancelFriendRequest: T } = (0, m.I)({
-            userId: e.id,
-            applicationId: x,
+    N = n(939496),
+    v = n(996988),
+    O = n(133188);
+function b(e) {
+    let { user: t, guildId: n, channelId: r, applicationId: m, isGameRelationship: f = !1, className: x } = e,
+        { themeType: R } = (0, N.E)(),
+        p = R === v.d.MODAL_V2,
+        A = _.Ay.getName(n, r, t),
+        { trackUserProfileAction: b } = (0, h.NJ)(),
+        { newestAnalyticsLocation: j } = (0, c.Ay)(),
+        { acceptFriendRequest: C, cancelFriendRequest: T } = (0, E.I)({
+            userId: t.id,
+            applicationId: m,
             isGameRelationship: f,
-            location: C,
+            location: j,
         }),
-        P = l.useCallback(() => {
-            y(), _({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
-        }, [y, f, _]),
-        G = l.useCallback(() => {
-            T(), _({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
-        }, [T, f, _]),
-        S = null != x,
-        O = (0, u.h)(x);
-    return S && null == O
+        S = l.useCallback(() => {
+            C(), b({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
+        }, [C, f, b]),
+        M = l.useCallback(() => {
+            T(), b({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
+        }, [T, f, b]),
+        P = null != m,
+        D = (0, u.h)(m);
+    return P && null == D
         ? null
         : (0, i.jsxs)("div", {
-              className: a()(v.kL, E),
+              className: s()(O.kL, x),
               children: [
-                  S
-                      ? (0, i.jsx)(s.E, {
+                  P
+                      ? (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: R.intl.format(f ? R.t.syHjLL : R.t.V15uUI, {
-                                username: N,
+                            children: g.intl.format(f ? g.t.syHjLL : g.t.V15uUI, {
+                                username: A,
                                 applicationIcon: () =>
-                                    (0, i.jsx)(d.A, { className: v.Gt, game: O, size: d.M.XXSMALL }, O?.id),
-                                applicationName: O?.name,
+                                    (0, i.jsx)(d.A, { className: O.Gt, game: D, size: d.M.XXSMALL }, D?.id),
+                                applicationName: D?.name,
                             }),
                         })
-                      : (0, i.jsx)(s.E, {
+                      : (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: R.intl.format(R.t.uIomXw, { username: N }),
+                            children: g.intl.format(g.t.uIomXw, { username: A }),
                         }),
-                  (0, i.jsx)(A, { userId: e.id, analyticsLocation: "User Profile" }),
+                  (0, i.jsx)(I, { userId: t.id, analyticsLocation: "User Profile" }),
                   (0, i.jsxs)("div", {
-                      className: v.UD,
+                      className: O.UD,
                       children: [
                           (0, i.jsx)(o.$, {
                               variant: p ? "secondary" : "primary",
                               size: "sm",
-                              onClick: P,
-                              text: R.intl.string(R.t.Zcibdf),
+                              onClick: S,
+                              text: g.intl.string(g.t.Zcibdf),
                           }),
                           (0, i.jsx)(o.$, {
                               variant: "secondary",
                               size: "sm",
-                              onClick: G,
-                              text: R.intl.string(R.t.xuio0C),
+                              onClick: M,
+                              text: g.intl.string(g.t.xuio0C),
                           }),
                       ],
                   }),

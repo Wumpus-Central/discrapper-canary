@@ -5,26 +5,26 @@ function i(e) {
         searchQuery: n,
         nitroLockedSectionStates: i,
         scrollTop: r,
-        sectionHeaderHeight: s = 0,
-        sectionFooterHeight: a = 0,
+        sectionHeaderHeight: a = 0,
+        sectionFooterHeight: s = 0,
     } = e;
     if ("" !== n) return { isNitroLockedSectionVisible: !1, areOnlyNitroLockedSectionsVisible: !1 };
-    let o = t?.current?.getSectionDescriptors(),
-        l = t.current?.getListDimensions()?.height;
-    if (null == o || o.length !== i.length || null == l || l <= 0)
+    let l = t?.current?.getSectionDescriptors(),
+        o = t.current?.getListDimensions()?.height;
+    if (null == l || l.length !== i.length || null == o || o <= 0)
         return { isNitroLockedSectionVisible: !1, areOnlyNitroLockedSectionsVisible: !1 };
-    let u = r + l,
+    let d = r + o,
         c = !1,
-        d = !1,
-        _ = "function" == typeof s ? s : () => s,
-        h = "function" == typeof a ? a : () => a;
+        u = !1,
+        _ = "function" == typeof a ? a : () => a,
+        E = "function" == typeof s ? s : () => s;
     return (
         i.forEach((e, t) => {
-            let n = o[t],
+            let n = l[t],
                 i = n.offset.top + _(t);
-            Math.min(n.offset.bottom - h(t), u) - Math.max(i, r) >= 20 && (e.isNitroLocked ? (c = !0) : (d = !0));
+            Math.min(n.offset.bottom - E(t), d) - Math.max(i, r) >= 20 && (e.isNitroLocked ? (c = !0) : (u = !0));
         }),
-        { isNitroLockedSectionVisible: c, areOnlyNitroLockedSectionsVisible: c && !d }
+        { isNitroLockedSectionVisible: c, areOnlyNitroLockedSectionsVisible: c && !u }
     );
 }
-n.d(t, { s: () => i }), n(64700);
+n.d(t, { s: () => i }), n(582128);

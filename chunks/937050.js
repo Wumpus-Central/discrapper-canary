@@ -1,19 +1,19 @@
-l.d(t, { A: () => m });
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    i = l.n(s),
-    a = l(435328),
-    c = l(17928),
-    u = l(808728),
-    o = l(215431),
-    d = l(992595);
-function m(e) {
-    let { description: t, className: l, guildId: s, truncate: m = !0 } = e,
-        x = (0, c.bG)([u.Ay], () => (null != s ? u.Ay.getDefaultChannel(s)?.id : void 0), [s]),
-        h = r.useMemo(
-            () => (0, a.l)(t, !0, { guildId: s, channelId: x, allowLinks: !0, allowHeading: !0, allowList: !0 }),
-            [t, s, x],
+n.d(e, { A: () => m });
+var l = n(477900),
+    r = n(582128),
+    i = n(503698),
+    s = n.n(i),
+    a = n(435328),
+    c = n(17928),
+    u = n(808728),
+    o = n(354671),
+    d = n(742715);
+function m(t) {
+    let { description: e, className: n, guildId: i, truncate: m = !0 } = t,
+        x = (0, c.bG)([u.Ay], () => (null != i ? u.Ay.getDefaultChannel(i)?.id : void 0), [i]),
+        g = r.useMemo(
+            () => (0, a.l)(e, !0, { guildId: i, channelId: x, allowLinks: !0, allowHeading: !0, allowList: !0 }),
+            [e, i, x],
         );
-    return (0, n.jsx)("div", { className: i()(o.i, l, d.PT, { [o.x]: m }), children: h });
+    return (0, l.jsx)("div", { className: s()(o.i, n, d.PT, { [o.x]: m }), children: g });
 }
