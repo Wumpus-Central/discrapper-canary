@@ -1,20 +1,23 @@
 r.d(t, { default: () => x });
 var n = r(627968),
-    a = r(64700),
-    i = r(17928),
-    s = r(935462),
+    i = r(64700),
+    s = r(17928),
+    a = r(935462),
     l = r(289873),
+    o = r(744082),
     u = r(561794),
-    o = r(4227),
-    d = r(298072),
-    c = r(642160),
+    d = r(4227),
+    c = r(298072),
+    h = r(71604),
+    p = r(642160),
     f = r(841702),
-    h = r(466459),
-    p = r(623373),
-    y = r(599062),
-    C = r(230540),
-    g = r(479568);
-let I = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 },
+    y = r(466459),
+    C = r(623373),
+    g = r(599062),
+    I = r(983251),
+    S = r(652215),
+    b = r(835576);
+let j = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 },
     x = function (e) {
         let {
                 skuId: t,
@@ -22,52 +25,53 @@ let I = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsG
                 onClose: x,
                 returnRef: O,
                 analyticsLocations: R,
-                analyticsSource: S,
-                shouldCheckoutWithOrbs: b,
-                tab: j,
-                giftRecipient: k,
-                giftingOrigin: P,
+                analyticsSource: k,
+                shouldCheckoutWithOrbs: A,
+                tab: P,
+                giftRecipient: w,
+                giftingOrigin: E,
             } = e,
-            { product: w, category: A, state: E, retry: N } = (0, c.I)(t, { needsCategory: !0, seedCategoryStore: !0 }),
-            { hasPreviouslyFetched: _, fetchPurchasesError: m } = (0, f.b5)(),
-            v = _ || null != m;
-        (0, u.pE)();
-        let D = (0, i.cf)([o.A], () => (null != w ? (0, h.o)(o.A, w) : I), [w]),
-            G = w?.isCategoryReward === !0 && !D.isPurchased;
-        a.useEffect(() => {
-            "ready" === E && v && G && x();
-        }, [E, v, G, x]);
-        let L = a.useRef(!1);
-        return (a.useEffect(() => {
-            if (L.current || null == w || !(0, p.B1)(w)) return;
-            let e = w.variants.findIndex((e) => e.skuId === t);
-            e > -1 && (0, d.n)(w, e), (L.current = !0);
-        }, [w, t]),
-        "ready" === E && v && !G && null != w && null != A)
-            ? (0, n.jsx)(C.default, {
+            { product: N, category: v, state: M, retry: _ } = (0, p.I)(t, { needsCategory: !0, seedCategoryStore: !0 }),
+            { hasPreviouslyFetched: m, fetchPurchasesError: D } = (0, f.b5)(),
+            G = m || null != D,
+            L = (0, h.M)("CollectiblesShop");
+        (0, o.A)(L ? S.FYj : void 0), (0, u.pE)();
+        let B = (0, s.cf)([d.A], () => (null != N ? (0, y.o)(d.A, N) : j), [N]),
+            F = N?.isCategoryReward === !0 && !B.isPurchased;
+        i.useEffect(() => {
+            "ready" === M && G && F && x();
+        }, [M, G, F, x]);
+        let Y = i.useRef(!1);
+        return (i.useEffect(() => {
+            if (Y.current || null == N || !(0, C.B1)(N)) return;
+            let e = N.variants.findIndex((e) => e.skuId === t);
+            e > -1 && (0, c.n)(N, e), (Y.current = !0);
+        }, [N, t]),
+        "ready" === M && G && !F && null != N && null != v)
+            ? (0, n.jsx)(I.default, {
                   transitionState: r,
                   onClose: x,
                   returnRef: O,
-                  product: w,
-                  category: A,
+                  product: N,
+                  category: v,
                   analyticsLocations: R,
-                  analyticsSource: S,
-                  shouldCheckoutWithOrbs: b,
-                  tab: j,
-                  giftRecipient: k,
-                  giftingOrigin: P,
+                  analyticsSource: k,
+                  shouldCheckoutWithOrbs: A,
+                  tab: P,
+                  giftRecipient: w,
+                  giftingOrigin: E,
               })
-            : (0, n.jsx)(s.EO, {
+            : (0, n.jsx)(a.EO, {
                   returnRef: O,
                   transitionState: r,
-                  size: s.rI.DYNAMIC,
+                  size: a.rI.DYNAMIC,
                   parentComponent: "CollectiblesShopStandaloneProductDetailsModal",
-                  children: (0, n.jsx)(s.$m, {
+                  children: (0, n.jsx)(a.$m, {
                       children:
-                          "error" === E
-                              ? (0, n.jsx)(y.h, { onRetry: N, errorOrigin: y.A.GIFT_MODAL })
+                          "error" === M
+                              ? (0, n.jsx)(g.h, { onRetry: _, errorOrigin: g.A.GIFT_MODAL })
                               : (0, n.jsx)("div", {
-                                    className: g.g,
+                                    className: b.g,
                                     children: (0, n.jsx)(l.y, { type: l.t.SPINNING_CIRCLE }),
                                 }),
                   }),

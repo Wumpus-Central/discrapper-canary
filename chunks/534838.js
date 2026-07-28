@@ -1390,7 +1390,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584549, Version Hash: d0828e4bd76838ca6e78a17ea5ded7bcd7c2c384`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 584590, Version Hash: 9d22f0f4c227304bbbaea8088e24a3316a95cbd5`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -2638,10 +2638,11 @@ let iE = (0, n5.Fe)({
                 n.e("35600"),
                 n.e("90237"),
                 n.e("828"),
+                n.e("70152"),
                 n.e("63176"),
                 n.e("59275"),
-            ]).then(n.bind(n, 379388)),
-        webpackId: 379388,
+            ]).then(n.bind(n, 991510)),
+        webpackId: 991510,
     }),
     ih = (0, n5.Fe)({
         createPromise: () =>
@@ -18330,7 +18331,7 @@ let gF = "isHideDevBanner",
                     className: to()(gk.Wz, gk.mr),
                     children: [
                         (0, O.jsx)(gx, { className: gk.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584549" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "584590" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -26360,10 +26361,11 @@ let OJ = (0, n5.Fe)({
                 n.e("35600"),
                 n.e("90237"),
                 n.e("828"),
+                n.e("70152"),
                 n.e("63176"),
                 n.e("59275"),
-            ]).then(n.bind(n, 379388)),
-        webpackId: 379388,
+            ]).then(n.bind(n, 991510)),
+        webpackId: 991510,
         name: "CollectiblesShop",
     }),
     O2 = (0, n5.Fe)({
@@ -39072,8 +39074,8 @@ let wa = (0, tH.Fe)({
             n.e("501"),
             n.e("86243"),
             n.e("85794"),
-            n.e("35485"),
             n.e("82069"),
+            n.e("35485"),
             n.e("67837"),
             n.e("73384"),
             n.e("82783"),
