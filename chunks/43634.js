@@ -11,7 +11,6 @@ _.exports = {
     Oo: "voteCount__01c8c",
     u1: "spinner__01c8c",
     Vq: "voter__01c8c",
-    Mg: "voterDefault__01c8c voter__01c8c",
     Ls: "voterClickable__01c8c voter__01c8c",
     x$: "voterAvatarContainer__01c8c",
     v3: "voterInfo__01c8c",
