@@ -20,10 +20,10 @@ var m = n(25639),
     D = n(945096),
     S = n(922301),
     b = n(660184),
-    j = n(584682),
-    y = n(598104),
-    T = n(95035),
-    M = n(373606),
+    j = n(598104),
+    y = n(95035),
+    T = n(162199),
+    M = n(491394),
     p = n(323384),
     C = n(818085),
     R = n(375708);
@@ -66,7 +66,7 @@ function z(e) {
 let q = H.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
 function K(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e;
-    return (0, i.jsx)(y.A, { className: a, channel: t, "aria-hidden": !0, size: n });
+    return (0, i.jsx)(j.A, { className: a, channel: t, "aria-hidden": !0, size: n });
 }
 function Z(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e,
@@ -164,7 +164,7 @@ let W = a.memo(function (e) {
                           onMouseUp: D,
                           onContextMenu: S,
                           connectDragPreview: b,
-                          className: y,
+                          className: j,
                           iconClassName: p,
                           subtitle: C,
                           subtitleColor: R,
@@ -188,7 +188,7 @@ let W = a.memo(function (e) {
                       { role: ea, ...el } = (0, s.rm)(n.id),
                       er = a.useRef(null),
                       es = a.useRef(null),
-                      eu = (0, j.A)(n);
+                      eu = (0, T.A)(n);
                   null != eu && O.A.getConfig({ guildId: eu, location: "channel_item" });
                   let eo = B.BVt.CHANNEL(eu, n.id),
                       ec = (0, N.Ay)(n),
@@ -197,7 +197,7 @@ let W = a.memo(function (e) {
                       eh = (0, i.jsx)("div", {
                           className: r()({ [F.ow]: X }),
                           ref: es,
-                          children: (0, i.jsxs)(T.A, {
+                          children: (0, i.jsxs)(y.A, {
                               role: ed && !g ? "button" : "link",
                               href: ed ? void 0 : eo,
                               target: "_blank",
@@ -262,7 +262,7 @@ let W = a.memo(function (e) {
                       children: (0, i.jsxs)("div", {
                           ref: t,
                           className: r()(
-                              y,
+                              j,
                               eg ? F.iE : F.IA,
                               (function () {
                                   if (d) return r()(P.rM, $.SELECTED);
