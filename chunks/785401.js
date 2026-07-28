@@ -2434,6 +2434,7 @@ class ta extends m.G {
                 T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", e7],
             },
             { no: 23, name: "enable_edit_raw_json_ui", kind: "scalar", T: 8 },
+            { no: 46, name: "dynamic_config_size_limit_override", kind: "message", T: () => g.as },
             { no: 24, name: "winning_variation_id", kind: "scalar", T: 5 },
             { no: 34, name: "extra_outcome_context", kind: "scalar", T: 9 },
             {
@@ -2599,6 +2600,14 @@ class ta extends m.G {
                 case 23:
                     r.enableEditRawJsonUi = e.bool();
                     break;
+                case 46:
+                    r.dynamicConfigSizeLimitOverride = g.as.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.dynamicConfigSizeLimitOverride,
+                    );
+                    break;
                 case 24:
                     r.winningVariationId = e.int32();
                     break;
@@ -2701,6 +2710,10 @@ class ta extends m.G {
             0 !== e.exposureTracking && t.tag(22, f.O0.Varint).int32(e.exposureTracking),
             0 !== e.assignmentMode && t.tag(25, f.O0.Varint).int32(e.assignmentMode),
             !1 !== e.enableEditRawJsonUi && t.tag(23, f.O0.Varint).bool(e.enableEditRawJsonUi),
+            e.dynamicConfigSizeLimitOverride &&
+                g.as
+                    .internalBinaryWrite(e.dynamicConfigSizeLimitOverride, t.tag(46, f.O0.LengthDelimited).fork(), n)
+                    .join(),
             0 !== e.winningVariationId && t.tag(24, f.O0.Varint).int32(e.winningVariationId),
             "" !== e.extraOutcomeContext && t.tag(34, f.O0.LengthDelimited).string(e.extraOutcomeContext),
             0 !== e.type && t.tag(26, f.O0.Varint).int32(e.type),

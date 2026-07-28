@@ -1,80 +1,103 @@
 "use strict";
-n.d(t, { Ay: () => u });
+n.d(t, { Ay: () => c });
 var i = n(64700),
-    r = n(17928),
-    s = n(80703),
-    a = n(495544),
+    r = n(17928);
+let a = new (n(118356).Vy)("ApexExperiment");
+var s = n(80703),
+    l = n(280450),
     o = n(403362),
-    l = n(710195);
-function u(e) {
+    d = n(710195);
+function c(e) {
     return (function (e, t, n, s) {
-        let { name: a, kind: o, variations: l, defaultConfig: u } = e;
-        return (
-            t.registerExperiment(e),
-            {
-                definition: e,
-                useConfig: function (e) {
-                    let n = s(o, e),
-                        c = s("user", e),
-                        [d, _] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(o, n, a, c), [n, c]),
-                        h = _?.variantId,
-                        f = _?.trackedVariantId ?? h,
-                        p = _?.revision,
-                        E = _?.isOverride,
-                        m = _?.exposureTrackingEnabled,
-                        g = _?.useAsEligibility;
-                    return ((0, i.useEffect)(() => {
-                        null != d &&
-                            null != f &&
-                            null != p &&
-                            !1 === E &&
-                            !0 === m &&
-                            !0 !== g &&
-                            t.trackExperimentExposure(d, a, e.location, o, p, f, n);
-                    }, [n, d, f, p, e.location, E, m, g]),
-                    null == h || !0 === g)
-                        ? u
-                        : (l[h] ?? u);
-                },
-                getConfig: function (e) {
-                    let i = n(o, e),
-                        r = "guild" === o ? n("user", { location: e.location }) : void 0,
-                        [s, c] = t.getEvaluationAndAssignment(o, i, a, r),
-                        d = c?.variantId,
-                        _ = c?.trackedVariantId ?? d,
-                        h = c?.revision,
-                        f = c?.isOverride,
-                        p = c?.exposureTrackingEnabled,
-                        E = c?.useAsEligibility;
-                    return (null != s &&
-                        null != _ &&
-                        null != h &&
-                        !1 === f &&
-                        !0 === p &&
-                        !0 !== E &&
-                        t.trackExperimentExposure(s, a, e.location, o, h, _, i),
-                    null == d || !0 === E)
-                        ? u
-                        : (l[d] ?? u);
-                },
-            }
-        );
-    })(e, l.A, c, d);
+        let l,
+            { name: o, kind: d, variations: c, defaultConfig: u } = e;
+        t.registerExperiment(e);
+        let _ = null;
+        function E(e) {
+            return null == e
+                ? null
+                : (e !== l &&
+                      ((l = e),
+                      (_ = (function (e) {
+                          let t = c[e.variantId] ?? u;
+                          if ("function" != typeof t) return t;
+                          if (null == e.config) return u;
+                          try {
+                              return t(e.config);
+                          } catch (e) {
+                              return a.error(`Failed to parse dynamic config for experiment ${o}`, e), null;
+                          }
+                      })(e))),
+                  _);
+        }
+        return {
+            definition: e,
+            useConfig: function (e) {
+                let n = s(d, e),
+                    a = s("user", e),
+                    [l, c] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(d, n, o, a), [n, a]),
+                    _ = c?.variantId,
+                    A = c?.trackedVariantId ?? _,
+                    h = c?.revision,
+                    I = c?.isOverride,
+                    f = c?.exposureTrackingEnabled,
+                    p = c?.useAsEligibility,
+                    T = E(c),
+                    m = null == T;
+                return ((0, i.useEffect)(() => {
+                    null == l ||
+                        null == A ||
+                        null == h ||
+                        !1 !== I ||
+                        !0 !== f ||
+                        !0 === p ||
+                        m ||
+                        t.trackExperimentExposure(l, o, e.location, d, h, A, n);
+                }, [n, l, A, h, e.location, I, f, p, m]),
+                null == _ || !0 === p || null == T)
+                    ? u
+                    : T;
+            },
+            getConfig: function (e) {
+                let i = n(d, e),
+                    r = "guild" === d ? n("user", { location: e.location }) : void 0,
+                    [a, s] = t.getEvaluationAndAssignment(d, i, o, r),
+                    l = s?.variantId,
+                    c = s?.trackedVariantId ?? l,
+                    _ = s?.revision,
+                    A = s?.isOverride,
+                    h = s?.exposureTrackingEnabled,
+                    I = s?.useAsEligibility,
+                    f = E(s);
+                return (null != a &&
+                    null != c &&
+                    null != _ &&
+                    !1 === A &&
+                    !0 === h &&
+                    !0 !== I &&
+                    null != f &&
+                    t.trackExperimentExposure(a, o, e.location, d, _, c, i),
+                null == l || !0 === I || null == f)
+                    ? u
+                    : f;
+            },
+        };
+    })(e, d.A, u, _);
 }
-function c(e, t) {
+function u(e, t) {
     switch (e) {
         case "guild":
             return t.guildId;
         case "user":
-            return a.default.getId();
+            return l.default.getId();
         case "installation":
-            return (0, s.v)(a.default.getInstallationForTracking()) ?? "";
+            return (0, s.v)(l.default.getInstallationForTracking()) ?? "";
         default:
             (0, o.xb)(e);
     }
 }
-function d(e, t) {
-    let [n, i] = (0, r.yK)([a.default], () => [a.default.getId(), a.default.getInstallationForTracking()]);
+function _(e, t) {
+    let [n, i] = (0, r.yK)([l.default], () => [l.default.getId(), l.default.getInstallationForTracking()]);
     switch (e) {
         case "guild":
             return t.guildId;
