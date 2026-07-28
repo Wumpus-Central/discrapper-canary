@@ -25,6 +25,7 @@
 
 .player__0add0 {
     aspect-ratio: 16/9;
+    margin-block: var(--space-16) var(--space-24);
     max-width: 100%;
     min-height: 0;
     position: relative
@@ -257,12 +258,24 @@
     z-index: 500
 }
 
+.timelineIconCompact__375f5 {
+    transform: translate(-50%, 100%)
+}
+
 .numberTimeline__0d645 {
     align-items: flex-end;
     display: flex;
     margin-bottom: var(--space-24);
     position: relative;
     width: 100%
+}
+
+.noBottomMargin__0d645 {
+    margin-bottom: 0
+}
+
+.compact__0d645 .numberTimelineTrack__0d645:before {
+    opacity: 0
 }
 
 .numberTimelineTrack__0d645 {

@@ -1,0 +1,71 @@
+.gradientButtonContainer__488d9 {
+    height: 50px;
+    margin-block: 10px 0;
+    margin-inline: 0 10px;
+    position: relative;
+    width: 154px
+}
+
+.dropperRow__488d9 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: space-between;
+    padding-inline: var(--space-8);
+    pointer-events: none;
+    position: absolute
+}
+
+.colorSelectorPopoutContainer__488d9 {
+    background: transparent;
+    pointer-events: auto
+}
+
+.gradientSwatch__488d9 {
+    border-radius: var(--radius-xs);
+    height: 100%;
+    pointer-events: none
+}
+
+.colorPickerDropper__488d9 {
+    align-items: center;
+    border-radius: var(--radius-round);
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    width: 34px
+}
+
+.lightRing__488d9 {
+    background: #fff
+}
+
+.darkRing__488d9 {
+    background: #000
+}
+
+.colorPickerDropperInner__488d9 {
+    align-items: center;
+    border-radius: var(--radius-round);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .05), 0 0 13px rgba(0, 0, 0, .15);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.colorPickerDropperLight__488d9 {
+    color: #fff;
+    fill: #fff
+}
+
+.colorPickerDropperDark__488d9 {
+    color: #000;
+    fill: #000
+}
+
+.disabled__488d9 {
+    cursor: not-allowed;
+    opacity: .3;
+    pointer-events: none
+}
