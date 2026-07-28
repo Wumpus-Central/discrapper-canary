@@ -20,4 +20,7 @@ a.exports = {
     j1: "projectName_f8194a",
     h3: "projectMetadata_f8194a",
     E8: "listState_f8194a",
+    D1: "projectsEmptyState_f8194a",
+    ST: "projectsEmptyStateContent_f8194a",
+    sI: "projectsEmptyStateText_f8194a",
 };

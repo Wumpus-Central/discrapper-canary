@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => Y, gm: () => W, IC: () => K, dG: () => z, Pk: () => Z });
+n.d(t, { Ay: () => W, gm: () => Z, IC: () => q, dG: () => $, Pk: () => K });
 var i = n(477900),
     a = n(582128),
     l = n(503698),
@@ -13,8 +13,8 @@ if (21552 == n.j) var h = n(834730);
 if (21552 == n.j) var f = n(259678);
 var m = n(25639),
     x = n(186369),
-    A = n(148719),
-    N = n(47167),
+    N = n(148719),
+    A = n(47167),
     v = n(970812),
     E = n(713654),
     D = n(945096),
@@ -23,7 +23,7 @@ var m = n(25639),
     j = n(598104),
     y = n(95035),
     T = n(162199),
-    M = n(491394),
+    M = n(683180),
     p = n(323384),
     C = n(818085),
     R = n(375708);
@@ -40,51 +40,50 @@ function w(e) {
         }),
     });
 }
-var I = n(20386),
-    _ = n(71393),
-    L = n(290863),
-    k = n(741961),
-    G = n(287809),
-    U = n(977997),
-    H = n(19575),
-    O = n(66933),
-    B = n(652215),
+var _ = n(71393),
+    I = n(290863),
+    L = n(741961),
+    k = n(287809),
+    G = n(977997),
+    U = n(19575),
+    H = n(66933),
+    O = n(652215),
     V = n(790782),
-    P = n(180961),
-    F = n(601551);
-let $ = {
-    SELECTED: F.J1,
-    CONNECTED: F.d4,
-    UNREAD_IMPORTANT: F.V2,
-    UNREAD_LESS_IMPORTANT: F.modeUnreadLessImportant,
-    MUTED: F.F4,
-    LOCKED: F.yg,
+    B = n(180961),
+    P = n(601551);
+let F = {
+    SELECTED: P.J1,
+    CONNECTED: P.d4,
+    UNREAD_IMPORTANT: P.V2,
+    UNREAD_LESS_IMPORTANT: P.modeUnreadLessImportant,
+    MUTED: P.F4,
+    LOCKED: P.yg,
 };
-function z(e) {
+function $(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let q = H.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
-function K(e) {
+let z = U.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
+function q(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e;
     return (0, i.jsx)(j.A, { className: a, channel: t, "aria-hidden": !0, size: n });
 }
-function Z(e) {
+function K(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e,
-        l = (0, u.bG)([G.default], () => G.default.getUser(t?.recipients[0])),
+        l = (0, u.bG)([k.default], () => k.default.getUser(t?.recipients[0])),
         r = (0, u.bG)(
-            [k.A],
-            () => !(null == l || null == t || t.isMultiUserDM()) && null != k.A.getTypingUsers(t?.id)[l?.id],
+            [L.A],
+            () => !(null == l || null == t || t.isMultiUserDM()) && null != L.A.getTypingUsers(t?.id)[l?.id],
         ),
         {
             status: s,
             isMobile: o,
             isVR: c,
-        } = (0, u.cf)([L.A], () =>
+        } = (0, u.cf)([I.A], () =>
             null == l || null == t || t.isMultiUserDM()
                 ? { status: null, isMobile: !1, isVR: !1 }
-                : { status: L.A.getStatus(l.id), isMobile: L.A.isMobileOnline(l.id), isVR: L.A.isVROnline(l.id) },
+                : { status: I.A.getStatus(l.id), isMobile: I.A.isMobileOnline(l.id), isVR: I.A.isVROnline(l.id) },
         );
-    return (0, i.jsx)(q, {
+    return (0, i.jsx)(z, {
         className: a,
         size: n,
         src: l?.getAvatarURL(void 0, 40),
@@ -96,7 +95,7 @@ function Z(e) {
         statusTooltip: !0,
     });
 }
-let W = a.memo(function (e) {
+let Z = a.memo(function (e) {
         let {
                 className: t,
                 containerClassName: n,
@@ -109,45 +108,45 @@ let W = a.memo(function (e) {
             { enableWaveformIcon: d } = (0, x.b)(a.guild_id, "ChannelItemIcon"),
             h = (0, M.Bp)(a, "ChannelItemIcon"),
             f = (0, u.bG)([m.A], () => m.A.getAnimationStyle(a.id), [a.id]);
-        if (h) return (0, i.jsx)(w, { channel: a, iconClassName: r()(F.Kk, t), containerClassName: r()(F.zc, n) });
-        let N = a.type === B.rbe.GUILD_VOICE,
+        if (h) return (0, i.jsx)(w, { channel: a, iconClassName: r()(P.Kk, t), containerClassName: r()(P.zc, n) });
+        let A = a.type === O.rbe.GUILD_VOICE,
             D = null;
-        if (d && N && !l && o)
+        if (d && A && !l && o)
             D = (0, i.jsx)(v.A, {
                 color: "currentColor",
-                className: r()(F.Kk, t),
+                className: r()(P.Kk, t),
                 animationStyle: f,
-                locked: (0, A.A)(a),
+                locked: (0, N.A)(a),
             });
         else {
             let e = (function (e, t, n) {
                 switch (e.type) {
-                    case B.rbe.DM:
-                        return function (t) {
-                            let { className: n } = t;
-                            return (0, i.jsx)(Z, { channel: e, className: n });
-                        };
-                    case B.rbe.GROUP_DM:
+                    case O.rbe.DM:
                         return function (t) {
                             let { className: n } = t;
                             return (0, i.jsx)(K, { channel: e, className: n });
+                        };
+                    case O.rbe.GROUP_DM:
+                        return function (t) {
+                            let { className: n } = t;
+                            return (0, i.jsx)(q, { channel: e, className: n });
                         };
                     default:
                         return (0, E.gU)(e, t, n);
                 }
             })(a, c, { locked: l, hasActiveThreads: s });
             if (null == e) return null;
-            D = (0, i.jsx)(e, { color: "currentColor", className: r()(F.Kk, t) });
+            D = (0, i.jsx)(e, { color: "currentColor", className: r()(P.Kk, t) });
         }
         let S = (0, E.Bq)(a, c, l, s),
             b = `${S} icon`;
         return (0, i.jsx)(g.m, {
             text: S,
             delay: 500,
-            children: (0, i.jsx)("div", { role: "img", "aria-label": b, className: r()(F.zc, n), children: D }),
+            children: (0, i.jsx)("div", { role: "img", "aria-label": b, className: r()(P.zc, n), children: D }),
         });
     }),
-    Y =
+    W =
         21552 == n.j
             ? a.forwardRef(function (e, t) {
                   let {
@@ -158,97 +157,95 @@ let W = a.memo(function (e) {
                           connected: g,
                           unread: m,
                           locked: x,
-                          hasActiveThreads: A,
+                          hasActiveThreads: N,
                           onClick: v,
                           onMouseDown: E,
                           onMouseUp: D,
                           onContextMenu: S,
                           connectDragPreview: b,
                           className: j,
-                          iconClassName: p,
-                          subtitle: C,
-                          subtitleColor: R,
-                          channel: { type: w },
-                          onMouseEnter: _,
-                          onMouseLeave: L,
-                          "aria-label": k,
-                          children: G,
-                          guild: H,
-                          channelTypeOverride: q,
-                          forceInteractable: K,
-                          mentionCount: Z,
-                          resolvedUnreadSetting: Y,
-                          isFavoriteSuggestion: X,
-                          hasActiveEvent: Q = !1,
-                          transitionExtras: ee,
+                          iconClassName: M,
+                          subtitle: p,
+                          subtitleColor: C,
+                          channel: { type: R },
+                          onMouseEnter: w,
+                          onMouseLeave: _,
+                          "aria-label": I,
+                          children: L,
+                          guild: k,
+                          channelTypeOverride: U,
+                          forceInteractable: z,
+                          mentionCount: q,
+                          resolvedUnreadSetting: K,
+                          isFavoriteSuggestion: W,
+                          hasActiveEvent: J = !1,
+                          transitionExtras: X,
                       } = e,
-                      et = Y === V.e.ALL_MESSAGES || (null != Z && Z > 0),
-                      en = (0, u.bG)([U.A], () => Object.values(U.A.getVoiceStatesForChannel(n.id)).length > 0, [n.id]),
-                      ei = (0, M.Bp)(n, "ChannelItem"),
-                      { role: ea, ...el } = (0, s.rm)(n.id),
-                      er = a.useRef(null),
-                      es = a.useRef(null),
-                      eu = (0, T.A)(n);
-                  null != eu && O.A.getConfig({ guildId: eu, location: "channel_item" });
-                  let eo = B.BVt.CHANNEL(eu, n.id),
-                      ec = (0, N.Ay)(n),
-                      ed = n.isGuildVocal(),
-                      eg = null != v || null != D || null != E || K,
-                      eh = (0, i.jsx)("div", {
-                          className: r()({ [F.ow]: X }),
-                          ref: es,
+                      Q = K === V.e.ALL_MESSAGES || (null != q && q > 0),
+                      ee = (0, u.bG)([G.A], () => Object.values(G.A.getVoiceStatesForChannel(n.id)).length > 0, [n.id]),
+                      { role: et, ...en } = (0, s.rm)(n.id),
+                      ei = a.useRef(null),
+                      ea = a.useRef(null),
+                      el = (0, T.A)(n);
+                  null != el && H.A.getConfig({ guildId: el, location: "channel_item" });
+                  let er = O.BVt.CHANNEL(el, n.id),
+                      es = (0, A.Ay)(n),
+                      eu = n.isGuildVocal(),
+                      eo = null != v || null != D || null != E || z,
+                      ec = (0, i.jsx)("div", {
+                          className: r()({ [P.ow]: W }),
+                          ref: ea,
                           children: (0, i.jsxs)(y.A, {
-                              role: ed && !g ? "button" : "link",
-                              href: ed ? void 0 : eo,
+                              role: eu && !g ? "button" : "link",
+                              href: eu ? void 0 : er,
                               target: "_blank",
-                              ref: er,
-                              className: F.nf,
+                              ref: ei,
+                              className: P.nf,
                               onClick: () => v?.(n),
-                              transitionExtras: ee,
-                              ...el,
-                              "aria-label": k,
+                              transitionExtras: X,
+                              ...en,
+                              "aria-label": I,
                               "aria-current": d ? "page" : void 0,
                               focusProps: { enabled: !1 },
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: F.Y5,
+                                      className: P.Y5,
                                       children: [
-                                          (0, i.jsx)(W, {
-                                              className: p,
+                                          (0, i.jsx)(Z, {
+                                              className: M,
                                               channel: n,
-                                              guild: H,
-                                              hasUsersInVoiceChannel: en,
-                                              hasActiveThreads: A,
+                                              guild: k,
+                                              hasUsersInVoiceChannel: ee,
+                                              hasActiveThreads: N,
                                               locked: x,
                                           }),
                                           (0, i.jsx)(o.A, {
-                                              className: r()(F.UU, { [F.NW]: Q }),
+                                              className: r()(P.UU, { [P.NW]: J }),
                                               "aria-hidden": !0,
-                                              children: (0, i.jsx)(J, {
+                                              children: (0, i.jsx)(Y, {
                                                   textVariant: "text-md/medium",
                                                   channel: n,
-                                                  name: null != l ? l : ec,
+                                                  name: null != l ? l : es,
                                               }),
                                           }),
-                                          ei ? (0, i.jsx)(I.A, { channel: n }) : null,
-                                          a.Children.count(G) > 0
+                                          a.Children.count(L) > 0
                                               ? (0, i.jsx)("div", {
-                                                    onClick: z,
-                                                    onKeyPress: z,
-                                                    className: F.Y_,
-                                                    children: G,
+                                                    onClick: $,
+                                                    onKeyPress: $,
+                                                    className: P.Y_,
+                                                    children: L,
                                                 })
                                               : null,
                                       ],
                                   }),
-                                  null != C
+                                  null != p
                                       ? (0, i.jsx)("div", {
-                                            className: F.MA,
+                                            className: P.MA,
                                             children: (0, i.jsx)(h.E, {
-                                                color: R ?? "text-muted",
+                                                color: C ?? "text-muted",
                                                 variant: "text-xs/medium",
-                                                className: F.VA,
-                                                children: C,
+                                                className: P.VA,
+                                                children: p,
                                             }),
                                         })
                                       : null,
@@ -256,57 +253,57 @@ let W = a.memo(function (e) {
                           }),
                       });
                   return (0, i.jsx)(f.vN, {
-                      focusTarget: er,
-                      ringTarget: es,
+                      focusTarget: ei,
+                      ringTarget: ea,
                       offset: { top: 2, bottom: 2, right: 4 },
                       children: (0, i.jsxs)("div", {
                           ref: t,
                           className: r()(
                               j,
-                              eg ? F.iE : F.IA,
+                              eo ? P.iE : P.IA,
                               (function () {
-                                  if (d) return r()(P.rM, $.SELECTED);
-                                  if (g) return r()(P.rM, $.CONNECTED);
-                                  if (x) return $.LOCKED;
-                                  if (c) return $.MUTED;
+                                  if (d) return r()(B.rM, F.SELECTED);
+                                  if (g) return r()(B.rM, F.CONNECTED);
+                                  if (x) return F.LOCKED;
+                                  if (c) return F.MUTED;
                                   if (m)
-                                      if (et) return $.UNREAD_IMPORTANT;
-                                      else return $.UNREAD_LESS_IMPORTANT;
+                                      if (Q) return F.UNREAD_IMPORTANT;
+                                      else return F.UNREAD_LESS_IMPORTANT;
                                   return null;
                               })(),
                               (function (e) {
                                   switch (e) {
-                                      case B.rbe.GUILD_STAGE_VOICE:
-                                      case B.rbe.GUILD_VOICE:
-                                          return F.typeVoice;
-                                      case B.rbe.ANNOUNCEMENT_THREAD:
-                                      case B.rbe.PUBLIC_THREAD:
-                                      case B.rbe.PRIVATE_THREAD:
-                                          return F.ZS;
-                                      case B.rbe.GUILD_ANNOUNCEMENT:
-                                      case B.rbe.GUILD_TEXT:
-                                      case B.rbe.GUILD_STORE:
-                                      case B.rbe.GUILD_FORUM:
-                                      case B.rbe.GUILD_MEDIA:
+                                      case O.rbe.GUILD_STAGE_VOICE:
+                                      case O.rbe.GUILD_VOICE:
+                                          return P.typeVoice;
+                                      case O.rbe.ANNOUNCEMENT_THREAD:
+                                      case O.rbe.PUBLIC_THREAD:
+                                      case O.rbe.PRIVATE_THREAD:
+                                          return P.ZS;
+                                      case O.rbe.GUILD_ANNOUNCEMENT:
+                                      case O.rbe.GUILD_TEXT:
+                                      case O.rbe.GUILD_STORE:
+                                      case O.rbe.GUILD_FORUM:
+                                      case O.rbe.GUILD_MEDIA:
                                       default:
-                                          return F.typeDefault;
+                                          return P.typeDefault;
                                   }
-                              })(q ?? w),
+                              })(U ?? R),
                           ),
                           onMouseUp: (e) => D?.(e, n),
                           onMouseDown: (e) => E?.(e, n),
                           onContextMenu: (e) => S?.(e, n),
-                          onMouseEnter: _,
-                          onMouseLeave: L,
+                          onMouseEnter: w,
+                          onMouseLeave: _,
                           children: [
-                              c || !m ? null : (0, i.jsx)("div", { className: r()(F.gy, et ? F.WS : void 0) }),
-                              b?.(eh) ?? eh,
+                              c || !m ? null : (0, i.jsx)("div", { className: r()(P.gy, Q ? P.WS : void 0) }),
+                              b?.(ec) ?? ec,
                           ],
                       }),
                   });
               })
             : null;
-function J(e) {
+function Y(e) {
     let { channel: t, name: n, textVariant: l } = e,
         r = t.isPrivate() && 1 === (t.rawRecipients ?? []).length,
         s = t.rawRecipients?.[0]?.display_name_styles,

@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
     HV: () => p,
-    M7: () => E,
     TV: () => h,
     Zq: () => f,
+    dm: () => A,
     gA: () => u,
     hF: () => c,
     oB: () => _,
     ti: () => I,
-    xx: () => A,
+    xx: () => E,
 });
 var i = n(562465),
     r = n(228366),
@@ -38,13 +38,12 @@ async function _(e, t) {
     let n = await i.Bo.patch({ url: o.Rsh.VIBEGRATIONS_PROJECT(e), body: { name: t }, rejectWithError: !1 });
     return n.ok && r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n;
 }
-async function E(e, t) {
-    let n = await i.Bo.patch({ url: o.Rsh.VIBEGRATIONS_PROJECT(e), body: t, rejectWithError: !1 });
-    return n.ok && r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n;
-}
-async function A(e) {
+async function E(e) {
     let t = await i.Bo.del({ url: o.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1 });
     return t.ok && r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: e }), t;
+}
+function A(e, t) {
+    r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: e, projectId: t });
 }
 async function h(e) {
     let t = await i.Bo.post({ url: o.Rsh.VIBEGRATIONS_PROJECT_PUBLISH(e), rejectWithError: !1 });

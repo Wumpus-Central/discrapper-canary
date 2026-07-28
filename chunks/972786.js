@@ -1,55 +1,65 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(228366);
 let a = new Map(),
-    s = null,
-    l = [],
-    o = new Map();
-class d extends i.Ay.Store {
+    s = new Map(),
+    l = null,
+    o = [],
+    d = new Map();
+class c extends i.Ay.Store {
     getAllProjects() {
         return Array.from(a.values());
     }
     getProject(e) {
         return a.get(e) ?? null;
     }
+    getSelectedProjectId(e) {
+        return s.get(e) ?? null;
+    }
     getLogs(e) {
-        return o.get(e) ?? l;
+        return d.get(e) ?? o;
     }
     getProjectsFetchState() {
-        return s;
+        return l;
     }
 }
-function c(e) {
+function u(e) {
     let { project: t } = e;
     a.set(t.id, t);
 }
-let u = new d(r.h, {
+let _ = new c(r.h, {
     LOGOUT: function () {
-        if (0 === a.size && 0 === o.size && null == s) return !1;
-        a.clear(), o.clear(), (s = null);
+        if (0 === a.size && 0 === s.size && 0 === d.size && null == l) return !1;
+        a.clear(), s.clear(), d.clear(), (l = null);
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
-        s = { type: "loading" };
+        l = { type: "loading" };
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e;
         for (let e of (a.clear(), t)) a.set(e.id, e);
-        s = { type: "success", fetchedAt: Date.now() };
+        for (let [e, t] of s) a.has(t) || s.delete(e);
+        l = { type: "success", fetchedAt: Date.now() };
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
-        s = { type: "error", fetchedAt: Date.now() };
+        l = { type: "error", fetchedAt: Date.now() };
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: c,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: c,
+    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: u,
+    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: u,
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        a.delete(t), o.delete(t);
+        for (let [e, n] of (a.delete(t), d.delete(t), s)) n === t && s.delete(e);
+    },
+    VIBEGRATIONS_PROJECT_SELECT: function (e) {
+        let { guildId: t, projectId: n } = e;
+        if ((s.get(t) ?? null) === n) return !1;
+        null == n ? s.delete(t) : s.set(t, n);
     },
     VIBEGRATIONS_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
-            i = o.get(t),
+            i = d.get(t),
             r = null == i ? [n] : i.concat(n);
-        o.set(t, r.length > 500 ? r.slice(-500) : r);
+        d.set(t, r.length > 500 ? r.slice(-500) : r);
     },
 });
