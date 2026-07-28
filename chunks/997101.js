@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M: () => s, d: () => r });
+n.d(t, { M: () => a, d: () => r });
 var i,
     r =
         (((i = {}).AD = "AD"),
@@ -261,7 +261,7 @@ var i,
         (i.TP = "TP"),
         (i.WK = "WK"),
         i);
-let s = {
+let a = {
     NON_STANDARD_CODES: new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]),
     ALL: new Set([
         "AC",
@@ -806,6 +806,7 @@ let s = {
         "NA",
         "NR",
         "NU",
+        "PS",
         "QA",
         "RW",
         "SB",

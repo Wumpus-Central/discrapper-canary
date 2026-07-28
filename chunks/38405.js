@@ -2,25 +2,25 @@
 n.d(t, { A: () => c });
 var i = n(668279),
     r = n(39304),
-    s = n(228366);
-function a(e) {
+    a = n(228366);
+function s(e) {
     return {
         ...e,
         extra: {
             ...e?.extra,
             ...{
-                ...(null != s.h._currentDispatchActionType ? { currentAction: s.h._currentDispatchActionType } : {}),
+                ...(null != a.h._currentDispatchActionType ? { currentAction: a.h._currentDispatchActionType } : {}),
                 lastFewActions: (0, r.lK)(),
             },
         },
     };
 }
-var o = n(723702),
-    l = n(19575);
-function u() {
+var l = n(723702),
+    o = n(19575);
+function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    o.isPlatformEmbedded &&
-        l.Ay.updateCrashReporter({
+    l.isPlatformEmbedded &&
+        o.Ay.updateCrashReporter({
             user_id: e.id ?? "",
             username: e.username ?? "",
             email: e.email ?? "",
@@ -30,10 +30,10 @@ function u() {
 let c = {
     setUser(e, t, n, i) {
         let r = { id: e, username: t, email: n, staff: i };
-        window.DiscordSentry?.getCurrentScope().setUser(r), u(r);
+        window.DiscordSentry?.getCurrentScope().setUser(r), d(r);
     },
     clearUser() {
-        window.DiscordSentry?.getCurrentScope().setUser(null), u();
+        window.DiscordSentry?.getCurrentScope().setUser(null), d();
     },
     setTags(e) {
         window.DiscordSentry?.getCurrentScope().setTags(e);
@@ -42,14 +42,14 @@ let c = {
         window.DiscordSentry?.getCurrentScope().setExtras(e);
     },
     captureException(e, t) {
-        let n = a(t);
+        let n = s(t);
         window.DiscordSentry?.withScope((t) => {
             null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureException(e);
         });
     },
     captureCrash(e, t) {
         let n,
-            i = a(t);
+            i = s(t);
         return (
             window.DiscordSentry?.withScope((t) => {
                 t.setExtras(i.extra),
@@ -65,7 +65,7 @@ let c = {
         );
     },
     captureMessage(e, t) {
-        let n = a(t);
+        let n = s(t);
         window.DiscordSentry?.withScope((t) => {
             null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureMessage(e);
         });
@@ -82,6 +82,7 @@ let c = {
     crash() {
         throw Error("crash");
     },
+    triggerMemoryWarning() {},
     markCrashHandled(e) {},
     getLastCrashReport: () => Promise.resolve(null),
 };
