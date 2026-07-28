@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Al: () => G, Ay: () => w, Vf: () => N, hW: () => _ });
+n.d(t, { Al: () => F, Ay: () => k, Vf: () => N, hW: () => _, l8: () => O });
 var i,
     r = n(627968),
     a = n(64700),
@@ -9,9 +9,12 @@ var i,
 n(883392);
 var d = n(190460),
     c = n(778712),
-    u = n(772998),
+    u = n(368814),
     _ =
         (((i = {}).SQUIRCLE = "svg-mask-squircle"),
+        (i.NOTCHED_SQUIRCLE_16 = "svg-mask-notched-squircle-16"),
+        (i.NOTCHED_SQUIRCLE_20 = "svg-mask-notched-squircle-20"),
+        (i.NOTCHED_SQUIRCLE_24 = "svg-mask-notched-squircle-24"),
         (i.HEADER_BAR_BADGE_TOP = "svg-mask-header-bar-badge-top"),
         (i.HEADER_BAR_BADGE_BOTTOM = "svg-mask-header-bar-badge-bottom"),
         (i.VOICE_USER_SUMMARY_ITEM = "svg-mask-voice-user-summary-item"),
@@ -362,8 +365,29 @@ function S(e, t) {
     });
 }
 let N =
-    "M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z";
-function C(e) {
+        "M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z",
+    C = { 16: 3, 20: 4, 24: 5 },
+    O = { 16: "svg-mask-notched-squircle-16", 20: "svg-mask-notched-squircle-20", 24: "svg-mask-notched-squircle-24" };
+function R(e, t) {
+    let n = C[t];
+    return (0, r.jsxs)("mask", {
+        id: e,
+        maskContentUnits: "objectBoundingBox",
+        viewBox: "0 0 1 1",
+        children: [
+            (0, r.jsx)("path", { fill: "white", d: N }),
+            (0, r.jsx)("path", {
+                fill: "black",
+                stroke: "black",
+                strokeWidth: (2 / t) * 2,
+                strokeLinejoin: "round",
+                d: N,
+                transform: `translate(${(t - n) / t} 0)`,
+            }),
+        ],
+    });
+}
+function L(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -371,7 +395,7 @@ function C(e) {
         children: (0, r.jsx)("circle", { fill: "white", cx: 0.5, cy: 0.5, r: 0.5 }),
     });
 }
-function O(e, t) {
+function y(e, t) {
     let n = (0, c.Kj)(t),
         i = n.status / 2;
     return (0, r.jsxs)("mask", {
@@ -394,7 +418,7 @@ function O(e, t) {
         ],
     });
 }
-function R(e, t) {
+function D(e, t) {
     let n = (0, c.Kj)(t),
         i = n.status / 2,
         a = (i + n.stroke) / n.size / d.Xq,
@@ -409,7 +433,7 @@ function R(e, t) {
         ],
     });
 }
-function L(e, t) {
+function v(e, t) {
     let n = (0, c.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         a = n.size - n.status - i - n.offset,
@@ -437,7 +461,7 @@ function L(e, t) {
         ],
     });
 }
-function D(e, t) {
+function b(e, t) {
     let n = (0, c.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         a = E((n.size - n.status - n.stroke - n.offset) / n.size),
@@ -455,7 +479,7 @@ function D(e, t) {
         ],
     });
 }
-function y(e, t) {
+function M(e, t) {
     let n = (0, c.Kj)(t);
     return (0, r.jsxs)("mask", {
         id: e,
@@ -480,7 +504,7 @@ function y(e, t) {
         ],
     });
 }
-function v(e, t) {
+function P(e, t) {
     let n = (0, c.Kj)(t),
         i = E((n.size - n.status - n.stroke - n.offset) / n.size),
         a = E((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
@@ -504,7 +528,7 @@ function v(e, t) {
         ],
     });
 }
-function b(e, t) {
+function U(e, t) {
     let n = (0, c.Kj)(t),
         i = +n.status,
         a = 1.5 * i,
@@ -533,7 +557,7 @@ function b(e, t) {
         ],
     });
 }
-function M(e, t) {
+function w(e, t) {
     let n = (0, c.Kj)(t),
         i = +n.status,
         a = 1.5 * i,
@@ -561,7 +585,7 @@ function M(e, t) {
         ],
     });
 }
-function P(e, t, n, i) {
+function G(e, t, n, i) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -577,7 +601,7 @@ function P(e, t, n, i) {
         ],
     });
 }
-function U(e) {
+function x(e) {
     let {
         mask: t,
         width: n = 24,
@@ -612,8 +636,8 @@ function U(e) {
         })
     );
 }
-U.Masks = _;
-let w = U;
+x.Masks = _;
+let k = x;
 (0, o.$d)([
     "svg-mask-avatar-default",
     "svg-mask-squircle",
@@ -634,7 +658,7 @@ let w = U;
     "svg-mask-avatar-status-round-40",
     "svg-mask-avatar-status-round-48",
 ]);
-let G = a.memo(function () {
+let F = a.memo(function () {
     var e;
     let t,
         n = (0, o.Hc)(),
@@ -651,6 +675,9 @@ let G = a.memo(function () {
                     viewBox: "0 0 1 1",
                     children: (0, r.jsx)("path", { fill: "white", d: N }),
                 }),
+            i.has("svg-mask-notched-squircle-16") && R("svg-mask-notched-squircle-16", 16),
+            i.has("svg-mask-notched-squircle-20") && R("svg-mask-notched-squircle-20", 20),
+            i.has("svg-mask-notched-squircle-24") && R("svg-mask-notched-squircle-24", 24),
             i.has("svg-mask-header-bar-badge-top") && I("svg-mask-header-bar-badge-top", 0.25),
             i.has("svg-mask-header-bar-badge-bottom") && I("svg-mask-header-bar-badge-bottom", 0.75),
             i.has("svg-mask-voice-user-summary-item") &&
@@ -717,151 +744,151 @@ let G = a.memo(function () {
                 h("svg-mask-channel-call-control-button-badge-22", 22),
             i.has("svg-mask-channel-call-control-button-badge-29") &&
                 h("svg-mask-channel-call-control-button-badge-29", 29),
-            i.has("svg-mask-avatar-default") && C("svg-mask-avatar-default"),
-            i.has("svg-mask-avatar-status-round-16") && O("svg-mask-avatar-status-round-16", c._3.SIZE_16),
+            i.has("svg-mask-avatar-default") && L("svg-mask-avatar-default"),
+            i.has("svg-mask-avatar-status-round-16") && y("svg-mask-avatar-status-round-16", c._3.SIZE_16),
             i.has("svg-mask-avatar-decoration-status-round-16") &&
-                R("svg-mask-avatar-decoration-status-round-16", c._3.SIZE_16),
-            i.has("svg-mask-avatar-status-mobile-16") && y("svg-mask-avatar-status-mobile-16", c._3.SIZE_16),
+                D("svg-mask-avatar-decoration-status-round-16", c._3.SIZE_16),
+            i.has("svg-mask-avatar-status-mobile-16") && M("svg-mask-avatar-status-mobile-16", c._3.SIZE_16),
             i.has("svg-mask-avatar-decoration-status-mobile-16") &&
-                v("svg-mask-avatar-decoration-status-mobile-16", c._3.SIZE_16),
-            i.has("svg-mask-avatar-status-typing-16") && L("svg-mask-avatar-status-typing-16", c._3.SIZE_16),
+                P("svg-mask-avatar-decoration-status-mobile-16", c._3.SIZE_16),
+            i.has("svg-mask-avatar-status-typing-16") && v("svg-mask-avatar-status-typing-16", c._3.SIZE_16),
             i.has("svg-mask-avatar-decoration-status-typing-16") &&
-                D("svg-mask-avatar-decoration-status-typing-16", c._3.SIZE_16),
-            i.has("svg-mask-avatar-status-round-20") && O("svg-mask-avatar-status-round-20", c._3.SIZE_20),
+                b("svg-mask-avatar-decoration-status-typing-16", c._3.SIZE_16),
+            i.has("svg-mask-avatar-status-round-20") && y("svg-mask-avatar-status-round-20", c._3.SIZE_20),
             i.has("svg-mask-avatar-decoration-status-round-20") &&
-                R("svg-mask-avatar-decoration-status-round-20", c._3.SIZE_20),
-            i.has("svg-mask-avatar-status-mobile-20") && y("svg-mask-avatar-status-mobile-20", c._3.SIZE_20),
+                D("svg-mask-avatar-decoration-status-round-20", c._3.SIZE_20),
+            i.has("svg-mask-avatar-status-mobile-20") && M("svg-mask-avatar-status-mobile-20", c._3.SIZE_20),
             i.has("svg-mask-avatar-decoration-status-mobile-20") &&
-                v("svg-mask-avatar-decoration-status-mobile-20", c._3.SIZE_20),
-            i.has("svg-mask-avatar-status-typing-20") && L("svg-mask-avatar-status-typing-20", c._3.SIZE_20),
+                P("svg-mask-avatar-decoration-status-mobile-20", c._3.SIZE_20),
+            i.has("svg-mask-avatar-status-typing-20") && v("svg-mask-avatar-status-typing-20", c._3.SIZE_20),
             i.has("svg-mask-avatar-decoration-status-typing-20") &&
-                D("svg-mask-avatar-decoration-status-typing-20", c._3.SIZE_20),
-            i.has("svg-mask-avatar-status-round-24") && O("svg-mask-avatar-status-round-24", c._3.SIZE_24),
+                b("svg-mask-avatar-decoration-status-typing-20", c._3.SIZE_20),
+            i.has("svg-mask-avatar-status-round-24") && y("svg-mask-avatar-status-round-24", c._3.SIZE_24),
             i.has("svg-mask-avatar-decoration-status-round-24") &&
-                R("svg-mask-avatar-decoration-status-round-24", c._3.SIZE_24),
-            i.has("svg-mask-avatar-status-mobile-24") && y("svg-mask-avatar-status-mobile-24", c._3.SIZE_24),
+                D("svg-mask-avatar-decoration-status-round-24", c._3.SIZE_24),
+            i.has("svg-mask-avatar-status-mobile-24") && M("svg-mask-avatar-status-mobile-24", c._3.SIZE_24),
             i.has("svg-mask-avatar-decoration-status-mobile-24") &&
-                v("svg-mask-avatar-decoration-status-mobile-24", c._3.SIZE_24),
-            i.has("svg-mask-avatar-status-typing-24") && L("svg-mask-avatar-status-typing-24", c._3.SIZE_24),
+                P("svg-mask-avatar-decoration-status-mobile-24", c._3.SIZE_24),
+            i.has("svg-mask-avatar-status-typing-24") && v("svg-mask-avatar-status-typing-24", c._3.SIZE_24),
             i.has("svg-mask-avatar-decoration-status-typing-24") &&
-                D("svg-mask-avatar-decoration-status-typing-24", c._3.SIZE_24),
-            i.has("svg-mask-avatar-status-round-32") && O("svg-mask-avatar-status-round-32", c._3.SIZE_32),
+                b("svg-mask-avatar-decoration-status-typing-24", c._3.SIZE_24),
+            i.has("svg-mask-avatar-status-round-32") && y("svg-mask-avatar-status-round-32", c._3.SIZE_32),
             i.has("svg-mask-avatar-decoration-status-round-32") &&
-                R("svg-mask-avatar-decoration-status-round-32", c._3.SIZE_32),
-            i.has("svg-mask-avatar-status-mobile-32") && y("svg-mask-avatar-status-mobile-32", c._3.SIZE_32),
+                D("svg-mask-avatar-decoration-status-round-32", c._3.SIZE_32),
+            i.has("svg-mask-avatar-status-mobile-32") && M("svg-mask-avatar-status-mobile-32", c._3.SIZE_32),
             i.has("svg-mask-avatar-decoration-status-mobile-32") &&
-                v("svg-mask-avatar-decoration-status-mobile-32", c._3.SIZE_32),
-            i.has("svg-mask-avatar-status-typing-32") && L("svg-mask-avatar-status-typing-32", c._3.SIZE_32),
+                P("svg-mask-avatar-decoration-status-mobile-32", c._3.SIZE_32),
+            i.has("svg-mask-avatar-status-typing-32") && v("svg-mask-avatar-status-typing-32", c._3.SIZE_32),
             i.has("svg-mask-avatar-decoration-status-typing-32") &&
-                D("svg-mask-avatar-decoration-status-typing-32", c._3.SIZE_32),
-            i.has("svg-mask-avatar-status-round-40") && O("svg-mask-avatar-status-round-40", c._3.SIZE_40),
+                b("svg-mask-avatar-decoration-status-typing-32", c._3.SIZE_32),
+            i.has("svg-mask-avatar-status-round-40") && y("svg-mask-avatar-status-round-40", c._3.SIZE_40),
             i.has("svg-mask-avatar-decoration-status-round-40") &&
-                R("svg-mask-avatar-decoration-status-round-40", c._3.SIZE_40),
-            i.has("svg-mask-avatar-status-mobile-40") && y("svg-mask-avatar-status-mobile-40", c._3.SIZE_40),
+                D("svg-mask-avatar-decoration-status-round-40", c._3.SIZE_40),
+            i.has("svg-mask-avatar-status-mobile-40") && M("svg-mask-avatar-status-mobile-40", c._3.SIZE_40),
             i.has("svg-mask-avatar-decoration-status-mobile-40") &&
-                v("svg-mask-avatar-decoration-status-mobile-40", c._3.SIZE_40),
-            i.has("svg-mask-avatar-status-typing-40") && L("svg-mask-avatar-status-typing-40", c._3.SIZE_40),
+                P("svg-mask-avatar-decoration-status-mobile-40", c._3.SIZE_40),
+            i.has("svg-mask-avatar-status-typing-40") && v("svg-mask-avatar-status-typing-40", c._3.SIZE_40),
             i.has("svg-mask-avatar-decoration-status-typing-40") &&
-                D("svg-mask-avatar-decoration-status-typing-40", c._3.SIZE_40),
-            i.has("svg-mask-avatar-status-round-44") && O("svg-mask-avatar-status-round-44", c._3.SIZE_44),
+                b("svg-mask-avatar-decoration-status-typing-40", c._3.SIZE_40),
+            i.has("svg-mask-avatar-status-round-44") && y("svg-mask-avatar-status-round-44", c._3.SIZE_44),
             i.has("svg-mask-avatar-decoration-status-round-44") &&
-                R("svg-mask-avatar-decoration-status-round-44", c._3.SIZE_44),
-            i.has("svg-mask-avatar-status-mobile-44") && y("svg-mask-avatar-status-mobile-44", c._3.SIZE_44),
+                D("svg-mask-avatar-decoration-status-round-44", c._3.SIZE_44),
+            i.has("svg-mask-avatar-status-mobile-44") && M("svg-mask-avatar-status-mobile-44", c._3.SIZE_44),
             i.has("svg-mask-avatar-decoration-status-mobile-44") &&
-                v("svg-mask-avatar-decoration-status-mobile-44", c._3.SIZE_44),
-            i.has("svg-mask-avatar-status-typing-44") && L("svg-mask-avatar-status-typing-44", c._3.SIZE_44),
+                P("svg-mask-avatar-decoration-status-mobile-44", c._3.SIZE_44),
+            i.has("svg-mask-avatar-status-typing-44") && v("svg-mask-avatar-status-typing-44", c._3.SIZE_44),
             i.has("svg-mask-avatar-decoration-status-typing-44") &&
-                D("svg-mask-avatar-decoration-status-typing-44", c._3.SIZE_44),
-            i.has("svg-mask-avatar-status-round-48") && O("svg-mask-avatar-status-round-48", c._3.SIZE_48),
+                b("svg-mask-avatar-decoration-status-typing-44", c._3.SIZE_44),
+            i.has("svg-mask-avatar-status-round-48") && y("svg-mask-avatar-status-round-48", c._3.SIZE_48),
             i.has("svg-mask-avatar-decoration-status-round-48") &&
-                R("svg-mask-avatar-decoration-status-round-48", c._3.SIZE_48),
-            i.has("svg-mask-avatar-status-mobile-48") && y("svg-mask-avatar-status-mobile-48", c._3.SIZE_48),
+                D("svg-mask-avatar-decoration-status-round-48", c._3.SIZE_48),
+            i.has("svg-mask-avatar-status-mobile-48") && M("svg-mask-avatar-status-mobile-48", c._3.SIZE_48),
             i.has("svg-mask-avatar-decoration-status-mobile-48") &&
-                v("svg-mask-avatar-decoration-status-mobile-48", c._3.SIZE_48),
-            i.has("svg-mask-avatar-status-typing-48") && L("svg-mask-avatar-status-typing-48", c._3.SIZE_48),
+                P("svg-mask-avatar-decoration-status-mobile-48", c._3.SIZE_48),
+            i.has("svg-mask-avatar-status-typing-48") && v("svg-mask-avatar-status-typing-48", c._3.SIZE_48),
             i.has("svg-mask-avatar-decoration-status-typing-48") &&
-                D("svg-mask-avatar-decoration-status-typing-48", c._3.SIZE_48),
-            i.has("svg-mask-avatar-status-round-56") && O("svg-mask-avatar-status-round-56", c._3.SIZE_56),
+                b("svg-mask-avatar-decoration-status-typing-48", c._3.SIZE_48),
+            i.has("svg-mask-avatar-status-round-56") && y("svg-mask-avatar-status-round-56", c._3.SIZE_56),
             i.has("svg-mask-avatar-decoration-status-round-56") &&
-                R("svg-mask-avatar-decoration-status-round-56", c._3.SIZE_56),
-            i.has("svg-mask-avatar-status-mobile-56") && y("svg-mask-avatar-status-mobile-56", c._3.SIZE_56),
+                D("svg-mask-avatar-decoration-status-round-56", c._3.SIZE_56),
+            i.has("svg-mask-avatar-status-mobile-56") && M("svg-mask-avatar-status-mobile-56", c._3.SIZE_56),
             i.has("svg-mask-avatar-decoration-status-mobile-56") &&
-                v("svg-mask-avatar-decoration-status-mobile-56", c._3.SIZE_56),
-            i.has("svg-mask-avatar-status-typing-56") && L("svg-mask-avatar-status-typing-56", c._3.SIZE_56),
+                P("svg-mask-avatar-decoration-status-mobile-56", c._3.SIZE_56),
+            i.has("svg-mask-avatar-status-typing-56") && v("svg-mask-avatar-status-typing-56", c._3.SIZE_56),
             i.has("svg-mask-avatar-decoration-status-typing-56") &&
-                D("svg-mask-avatar-decoration-status-typing-56", c._3.SIZE_56),
-            i.has("svg-mask-avatar-status-round-72") && O("svg-mask-avatar-status-round-72", c._3.SIZE_72),
+                b("svg-mask-avatar-decoration-status-typing-56", c._3.SIZE_56),
+            i.has("svg-mask-avatar-status-round-72") && y("svg-mask-avatar-status-round-72", c._3.SIZE_72),
             i.has("svg-mask-avatar-decoration-status-round-72") &&
-                R("svg-mask-avatar-decoration-status-round-72", c._3.SIZE_72),
-            i.has("svg-mask-avatar-status-mobile-72") && y("svg-mask-avatar-status-mobile-72", c._3.SIZE_72),
+                D("svg-mask-avatar-decoration-status-round-72", c._3.SIZE_72),
+            i.has("svg-mask-avatar-status-mobile-72") && M("svg-mask-avatar-status-mobile-72", c._3.SIZE_72),
             i.has("svg-mask-avatar-decoration-status-mobile-72") &&
-                v("svg-mask-avatar-decoration-status-mobile-72", c._3.SIZE_72),
-            i.has("svg-mask-avatar-status-typing-72") && L("svg-mask-avatar-status-typing-72", c._3.SIZE_72),
+                P("svg-mask-avatar-decoration-status-mobile-72", c._3.SIZE_72),
+            i.has("svg-mask-avatar-status-typing-72") && v("svg-mask-avatar-status-typing-72", c._3.SIZE_72),
             i.has("svg-mask-avatar-decoration-status-typing-72") &&
-                D("svg-mask-avatar-decoration-status-typing-72", c._3.SIZE_72),
-            i.has("svg-mask-avatar-status-round-80") && O("svg-mask-avatar-status-round-80", c._3.SIZE_80),
+                b("svg-mask-avatar-decoration-status-typing-72", c._3.SIZE_72),
+            i.has("svg-mask-avatar-status-round-80") && y("svg-mask-avatar-status-round-80", c._3.SIZE_80),
             i.has("svg-mask-avatar-decoration-status-round-80") &&
-                R("svg-mask-avatar-decoration-status-round-80", c._3.SIZE_80),
-            i.has("svg-mask-avatar-status-mobile-80") && y("svg-mask-avatar-status-mobile-80", c._3.SIZE_80),
+                D("svg-mask-avatar-decoration-status-round-80", c._3.SIZE_80),
+            i.has("svg-mask-avatar-status-mobile-80") && M("svg-mask-avatar-status-mobile-80", c._3.SIZE_80),
             i.has("svg-mask-avatar-decoration-status-mobile-80") &&
-                v("svg-mask-avatar-decoration-status-mobile-80", c._3.SIZE_80),
-            i.has("svg-mask-avatar-status-typing-80") && L("svg-mask-avatar-status-typing-80", c._3.SIZE_80),
+                P("svg-mask-avatar-decoration-status-mobile-80", c._3.SIZE_80),
+            i.has("svg-mask-avatar-status-typing-80") && v("svg-mask-avatar-status-typing-80", c._3.SIZE_80),
             i.has("svg-mask-avatar-decoration-status-typing-80") &&
-                D("svg-mask-avatar-decoration-status-typing-80", c._3.SIZE_80),
-            i.has("svg-mask-avatar-status-round-96") && O("svg-mask-avatar-status-round-96", c._3.SIZE_96),
+                b("svg-mask-avatar-decoration-status-typing-80", c._3.SIZE_80),
+            i.has("svg-mask-avatar-status-round-96") && y("svg-mask-avatar-status-round-96", c._3.SIZE_96),
             i.has("svg-mask-avatar-decoration-status-round-96") &&
-                R("svg-mask-avatar-decoration-status-round-96", c._3.SIZE_96),
-            i.has("svg-mask-avatar-status-mobile-96") && y("svg-mask-avatar-status-mobile-96", c._3.SIZE_96),
+                D("svg-mask-avatar-decoration-status-round-96", c._3.SIZE_96),
+            i.has("svg-mask-avatar-status-mobile-96") && M("svg-mask-avatar-status-mobile-96", c._3.SIZE_96),
             i.has("svg-mask-avatar-decoration-status-mobile-96") &&
-                v("svg-mask-avatar-decoration-status-mobile-96", c._3.SIZE_96),
-            i.has("svg-mask-avatar-status-typing-96") && L("svg-mask-avatar-status-typing-96", c._3.SIZE_96),
+                P("svg-mask-avatar-decoration-status-mobile-96", c._3.SIZE_96),
+            i.has("svg-mask-avatar-status-typing-96") && v("svg-mask-avatar-status-typing-96", c._3.SIZE_96),
             i.has("svg-mask-avatar-decoration-status-typing-96") &&
-                D("svg-mask-avatar-decoration-status-typing-96", c._3.SIZE_96),
-            i.has("svg-mask-avatar-status-round-120") && O("svg-mask-avatar-status-round-120", c._3.SIZE_120),
+                b("svg-mask-avatar-decoration-status-typing-96", c._3.SIZE_96),
+            i.has("svg-mask-avatar-status-round-120") && y("svg-mask-avatar-status-round-120", c._3.SIZE_120),
             i.has("svg-mask-avatar-decoration-status-round-120") &&
-                R("svg-mask-avatar-decoration-status-round-120", c._3.SIZE_120),
-            i.has("svg-mask-avatar-status-mobile-120") && y("svg-mask-avatar-status-mobile-120", c._3.SIZE_120),
+                D("svg-mask-avatar-decoration-status-round-120", c._3.SIZE_120),
+            i.has("svg-mask-avatar-status-mobile-120") && M("svg-mask-avatar-status-mobile-120", c._3.SIZE_120),
             i.has("svg-mask-avatar-decoration-status-mobile-120") &&
-                v("svg-mask-avatar-decoration-status-mobile-120", c._3.SIZE_120),
-            i.has("svg-mask-avatar-status-typing-120") && L("svg-mask-avatar-status-typing-120", c._3.SIZE_120),
+                P("svg-mask-avatar-decoration-status-mobile-120", c._3.SIZE_120),
+            i.has("svg-mask-avatar-status-typing-120") && v("svg-mask-avatar-status-typing-120", c._3.SIZE_120),
             i.has("svg-mask-avatar-decoration-status-typing-120") &&
-                D("svg-mask-avatar-decoration-status-typing-120", c._3.SIZE_120),
-            i.has("svg-mask-avatar-status-vr-16") && b("svg-mask-avatar-status-vr-16", c._3.SIZE_16),
+                b("svg-mask-avatar-decoration-status-typing-120", c._3.SIZE_120),
+            i.has("svg-mask-avatar-status-vr-16") && U("svg-mask-avatar-status-vr-16", c._3.SIZE_16),
             i.has("svg-mask-avatar-decoration-status-vr-16") &&
-                M("svg-mask-avatar-decoration-status-vr-16", c._3.SIZE_16),
-            i.has("svg-mask-avatar-status-vr-20") && b("svg-mask-avatar-status-vr-20", c._3.SIZE_20),
+                w("svg-mask-avatar-decoration-status-vr-16", c._3.SIZE_16),
+            i.has("svg-mask-avatar-status-vr-20") && U("svg-mask-avatar-status-vr-20", c._3.SIZE_20),
             i.has("svg-mask-avatar-decoration-status-vr-20") &&
-                M("svg-mask-avatar-decoration-status-vr-20", c._3.SIZE_20),
-            i.has("svg-mask-avatar-status-vr-24") && b("svg-mask-avatar-status-vr-24", c._3.SIZE_24),
+                w("svg-mask-avatar-decoration-status-vr-20", c._3.SIZE_20),
+            i.has("svg-mask-avatar-status-vr-24") && U("svg-mask-avatar-status-vr-24", c._3.SIZE_24),
             i.has("svg-mask-avatar-decoration-status-vr-24") &&
-                M("svg-mask-avatar-decoration-status-vr-24", c._3.SIZE_24),
-            i.has("svg-mask-avatar-status-vr-32") && b("svg-mask-avatar-status-vr-32", c._3.SIZE_32),
+                w("svg-mask-avatar-decoration-status-vr-24", c._3.SIZE_24),
+            i.has("svg-mask-avatar-status-vr-32") && U("svg-mask-avatar-status-vr-32", c._3.SIZE_32),
             i.has("svg-mask-avatar-decoration-status-vr-32") &&
-                M("svg-mask-avatar-decoration-status-vr-32", c._3.SIZE_32),
-            i.has("svg-mask-avatar-status-vr-40") && b("svg-mask-avatar-status-vr-40", c._3.SIZE_40),
+                w("svg-mask-avatar-decoration-status-vr-32", c._3.SIZE_32),
+            i.has("svg-mask-avatar-status-vr-40") && U("svg-mask-avatar-status-vr-40", c._3.SIZE_40),
             i.has("svg-mask-avatar-decoration-status-vr-40") &&
-                M("svg-mask-avatar-decoration-status-vr-40", c._3.SIZE_40),
-            i.has("svg-mask-avatar-status-vr-44") && b("svg-mask-avatar-status-vr-44", c._3.SIZE_44),
+                w("svg-mask-avatar-decoration-status-vr-40", c._3.SIZE_40),
+            i.has("svg-mask-avatar-status-vr-44") && U("svg-mask-avatar-status-vr-44", c._3.SIZE_44),
             i.has("svg-mask-avatar-decoration-status-vr-44") &&
-                M("svg-mask-avatar-decoration-status-vr-44", c._3.SIZE_44),
-            i.has("svg-mask-avatar-status-vr-48") && b("svg-mask-avatar-status-vr-48", c._3.SIZE_48),
+                w("svg-mask-avatar-decoration-status-vr-44", c._3.SIZE_44),
+            i.has("svg-mask-avatar-status-vr-48") && U("svg-mask-avatar-status-vr-48", c._3.SIZE_48),
             i.has("svg-mask-avatar-decoration-status-vr-48") &&
-                M("svg-mask-avatar-decoration-status-vr-48", c._3.SIZE_48),
-            i.has("svg-mask-avatar-status-vr-56") && b("svg-mask-avatar-status-vr-56", c._3.SIZE_56),
+                w("svg-mask-avatar-decoration-status-vr-48", c._3.SIZE_48),
+            i.has("svg-mask-avatar-status-vr-56") && U("svg-mask-avatar-status-vr-56", c._3.SIZE_56),
             i.has("svg-mask-avatar-decoration-status-vr-56") &&
-                M("svg-mask-avatar-decoration-status-vr-56", c._3.SIZE_56),
-            i.has("svg-mask-avatar-status-vr-72") && b("svg-mask-avatar-status-vr-72", c._3.SIZE_72),
+                w("svg-mask-avatar-decoration-status-vr-56", c._3.SIZE_56),
+            i.has("svg-mask-avatar-status-vr-72") && U("svg-mask-avatar-status-vr-72", c._3.SIZE_72),
             i.has("svg-mask-avatar-decoration-status-vr-72") &&
-                M("svg-mask-avatar-decoration-status-vr-72", c._3.SIZE_72),
-            i.has("svg-mask-avatar-status-vr-80") && b("svg-mask-avatar-status-vr-80", c._3.SIZE_80),
+                w("svg-mask-avatar-decoration-status-vr-72", c._3.SIZE_72),
+            i.has("svg-mask-avatar-status-vr-80") && U("svg-mask-avatar-status-vr-80", c._3.SIZE_80),
             i.has("svg-mask-avatar-decoration-status-vr-80") &&
-                M("svg-mask-avatar-decoration-status-vr-80", c._3.SIZE_80),
-            i.has("svg-mask-avatar-status-vr-96") && b("svg-mask-avatar-status-vr-96", c._3.SIZE_96),
+                w("svg-mask-avatar-decoration-status-vr-80", c._3.SIZE_80),
+            i.has("svg-mask-avatar-status-vr-96") && U("svg-mask-avatar-status-vr-96", c._3.SIZE_96),
             i.has("svg-mask-avatar-decoration-status-vr-96") &&
-                M("svg-mask-avatar-decoration-status-vr-96", c._3.SIZE_96),
-            i.has("svg-mask-avatar-status-vr-120") && b("svg-mask-avatar-status-vr-120", c._3.SIZE_120),
+                w("svg-mask-avatar-decoration-status-vr-96", c._3.SIZE_96),
+            i.has("svg-mask-avatar-status-vr-120") && U("svg-mask-avatar-status-vr-120", c._3.SIZE_120),
             i.has("svg-mask-avatar-decoration-status-vr-120") &&
-                M("svg-mask-avatar-decoration-status-vr-120", c._3.SIZE_120),
+                w("svg-mask-avatar-decoration-status-vr-120", c._3.SIZE_120),
             i.has("svg-mask-diagonal-facepile-16") && m("svg-mask-diagonal-facepile-16", c._3.SIZE_16),
             i.has("svg-mask-diagonal-facepile-back-16") && p("svg-mask-diagonal-facepile-back-16", c._3.SIZE_16),
             i.has("svg-mask-diagonal-facepile-status-16") && g("svg-mask-diagonal-facepile-status-16", c._3.SIZE_16),
@@ -953,7 +980,7 @@ let G = a.memo(function () {
                         ],
                     }),
                 }),
-            i.has("svg-mask-status-online") && C("svg-mask-status-online"),
+            i.has("svg-mask-status-online") && L("svg-mask-status-online"),
             i.has("svg-mask-status-idle") &&
                 (0, r.jsxs)("mask", {
                     id: "svg-mask-status-idle",
@@ -1169,9 +1196,9 @@ let G = a.memo(function () {
                         fill: "white",
                     }),
                 }),
-            i.has("svg-mask-content-image-60") && P("svg-mask-content-image-60", 60, 24, 2),
-            i.has("svg-mask-content-image-72") && P("svg-mask-content-image-72", 72, 32, 4),
-            i.has("svg-mask-content-image-100") && P("svg-mask-content-image-100", 100, 32, 4),
+            i.has("svg-mask-content-image-60") && G("svg-mask-content-image-60", 60, 24, 2),
+            i.has("svg-mask-content-image-72") && G("svg-mask-content-image-72", 72, 32, 4),
+            i.has("svg-mask-content-image-100") && G("svg-mask-content-image-100", 100, 32, 4),
             i.has("svg-mask-user-avatar-with-game-icon") &&
                 (0, r.jsx)("mask", {
                     id: "svg-mask-user-avatar-with-game-icon",

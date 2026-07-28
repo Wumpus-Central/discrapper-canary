@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -9,88 +9,125 @@ var r = n(503698),
     o = n(866665),
     d = n(862482),
     c = n(834730),
-    u = n(548118),
-    _ = n(150507);
-function E(e) {
-    let {
-            className: t,
-            maxGuilds: n,
-            guilds: r,
-            onFocus: s,
-            onClick: E,
-            size: A = u.Ay.Sizes.SMALLER,
-            hideOverflowCount: h = !1,
-            disableGuildNameTooltip: I = !1,
-        } = e,
-        f = (function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
+    u = n(573435),
+    _ = n(548118),
+    E = n(795502);
+function A(e) {
+    switch (e) {
+        case _.Ay.Sizes.SMOL:
+            return E.nc;
+        case _.Ay.Sizes.MINI:
+            return E.qV;
+        case _.Ay.Sizes.SMALLER:
+        default:
+            return E.q1;
+    }
+}
+function h(e) {
+    let { size: t, notched: n, width: r, children: a } = e,
+        s = _.iu[t];
+    return (0, i.jsx)(u.Ay, {
+        mask: n ? u.l8[s] : u.Ay.Masks.SQUIRCLE,
+        width: r ?? s,
+        height: s,
+        children: (0, i.jsx)("div", { className: E.A8, children: a }),
+    });
+}
+function I(e) {
+    let t,
+        { count: n, size: r, notched: s, tooltip: l, onFocus: u, onClick: A } = e,
+        I = (function (e) {
             switch (e) {
-                case u.Ay.Sizes.SMOL:
-                    return _.nc;
-                case u.Ay.Sizes.MINI:
-                    return _.qV;
-                case u.Ay.Sizes.SMALLER:
+                case _.Ay.Sizes.SMOL:
+                case _.Ay.Sizes.MINI:
+                    return "text-xxs/semibold";
+                case _.Ay.Sizes.SMALLER:
                 default:
-                    return _.q1;
+                    return "text-xs/medium";
             }
-        })(A);
-    return r.length <= 0
+        })(r),
+        f = n > 99 ? ">99" : `+${n}`,
+        p = ((t = _.iu[r]), f.length <= 2 ? t : t + 8),
+        T = (0, i.jsx)(d.$n, {
+            className: a()(E.ju, E.lv),
+            onFocus: u,
+            onClick: (e) => A?.(e),
+            look: d.$n.Looks.BLANK,
+            size: d.$n.Sizes.NONE,
+            children: (0, i.jsx)(c.E, { variant: I, children: f }),
+        });
+    return (0, i.jsx)(h, {
+        size: r,
+        notched: s,
+        width: p,
+        children: null != l ? (0, i.jsx)(o.m, { text: l, position: "top", asContainer: !0, children: T }) : T,
+    });
+}
+function f(e) {
+    let t,
+        n,
+        r,
+        s,
+        {
+            className: o,
+            maxGuilds: d,
+            guilds: c,
+            onFocus: u,
+            onClick: f,
+            size: p = _.Ay.Sizes.SMALLER,
+            hideOverflowCount: T = !1,
+            disableGuildNameTooltip: m = !1,
+            overflowTooltip: g,
+        } = e;
+    return c.length <= 0
         ? null
-        : (0, i.jsx)("div", {
-              className: a()(t, _.HD),
-              children: (function () {
-                  let e = r.length - n,
-                      t = e + 1,
-                      p = e > 0 && !h,
-                      T = Math.min(r.length, n) - 1,
-                      m = l()(r)
-                          .take(n)
-                          .map((e, t) => {
-                              let n = e.name,
-                                  r = a()(_.my, f, t === T && !p && _.NE);
-                              return (0, i.jsx)(
-                                  "div",
-                                  {
-                                      className: r,
-                                      children: I
-                                          ? (0, i.jsx)(u.Ay, { guild: e, onClick: E, size: A, showTooltip: !1 })
-                                          : (0, i.jsx)(o.m, {
-                                                asContainer: !0,
-                                                text: n,
-                                                children: (0, i.jsx)(u.Ay, {
-                                                    guild: e,
-                                                    onClick: E,
-                                                    size: A,
-                                                    showTooltip: !1,
-                                                }),
-                                            }),
-                                  },
-                                  e.id,
-                              );
-                          })
-                          .value();
-                  if (p) {
-                      let e = (function () {
-                          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
-                          switch (e) {
-                              case u.Ay.Sizes.SMOL:
-                              case u.Ay.Sizes.MINI:
-                                  return "text-xxs/semibold";
-                              case u.Ay.Sizes.SMALLER:
-                              default:
-                                  return "text-xs/medium";
-                          }
-                      })(A);
-                      m[m.length - 1] = (0, i.jsx)(d.$n, {
-                          className: a()(_.ju, f),
-                          onFocus: s,
-                          onClick: (e) => E?.(e),
-                          look: d.$n.Looks.BLANK,
-                          size: d.$n.Sizes.NONE,
-                          children: (0, i.jsx)(c.E, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
-                      });
-                  }
-                  return m;
-              })(),
+        : (0, i.jsx)("ul", {
+              className: a()(o, E.HD),
+              children:
+                  ((n = (t = c.length > d && !T) ? c.length - d + 1 : 0),
+                  (r = t ? Math.min(c.length, d) - 1 : Math.min(c.length, d)),
+                  (s = l()(c)
+                      .take(r)
+                      .map((e, n) =>
+                          (0, i.jsx)(
+                              "li",
+                              {
+                                  className: A(p),
+                                  children: (0, i.jsx)(h, {
+                                      size: p,
+                                      notched: t || n !== r - 1,
+                                      children: (0, i.jsx)(_.Ay, {
+                                          guild: e,
+                                          active: !0,
+                                          onClick: f,
+                                          size: p,
+                                          showTooltip: !m,
+                                      }),
+                                  }),
+                              },
+                              e.id,
+                          ),
+                      )
+                      .value()),
+                  t
+                      ? [
+                            ...s,
+                            (0, i.jsx)(
+                                "li",
+                                {
+                                    className: A(p),
+                                    children: (0, i.jsx)(I, {
+                                        count: n,
+                                        size: p,
+                                        notched: !1,
+                                        tooltip: g,
+                                        onFocus: u,
+                                        onClick: f,
+                                    }),
+                                },
+                                "overflow",
+                            ),
+                        ]
+                      : s),
           });
 }

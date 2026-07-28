@@ -1,47 +1,39 @@
 "use strict";
-n.d(t, { l: () => E }), n(667532);
+n.d(t, { l: () => c }), n(667532);
 var i = n(627968),
     r = n(64700),
     a = n(17928),
-    s = n(834730),
-    l = n(573435),
+    s = n(692617),
+    l = n(548118),
     o = n(71393),
-    d = n(967198),
-    c = n(743790),
-    u = n(516087);
-function _(e) {
-    let { children: t, iconSize: n } = e;
-    return (0, i.jsx)(l.Ay, { className: u.Iu, mask: l.Ay.Masks.SQUIRCLE, width: n + 5, height: n + 5, children: t });
-}
-function E(e) {
-    let { guildIds: t, iconSize: n = 20, prioritizeSelectedGuild: l = !1 } = e,
-        E = (0, a.bG)([d.A], () => (l ? d.A.getGuildId() : null), [l]),
-        A = (0, a.yK)([o.A], () => t.map((e) => o.A.getGuild(e)), [t]),
-        h = (0, r.useMemo)(() => A.filter((e) => null != e), [A]),
-        { visibleGuilds: I, numTruncated: f } = (0, r.useMemo)(() => {
-            let e = [...h];
-            if (null != E) {
-                let t = e.findIndex((e) => e.id === E);
-                t > 0 && (e.splice(t, 1), e.unshift(h[t]));
+    d = n(967198);
+function c(e) {
+    let { guildIds: t, iconSize: n = 20, prioritizeSelectedGuild: c = !1, className: u } = e,
+        _ = (0, a.bG)([d.A], () => (c ? d.A.getGuildId() : null), [c]),
+        E = (0, a.yK)([o.A], () => t.map((e) => o.A.getGuild(e)), [t]),
+        A = (0, r.useMemo)(() => E.filter((e) => null != e), [E]),
+        h = (0, r.useMemo)(() => {
+            let e = [...A];
+            if (null != _) {
+                let t = e.findIndex((e) => e.id === _);
+                t > 0 && (e.splice(t, 1), e.unshift(A[t]));
             }
-            return 4 === e.length
-                ? { visibleGuilds: e, numTruncated: 0 }
-                : { visibleGuilds: e.slice(0, 3), numTruncated: e.length - 3 };
-        }, [h, E]);
-    return (0, i.jsxs)("div", {
-        className: u.WM,
-        children: [
-            I.map((e) => (0, i.jsx)(_, { iconSize: n, children: (0, i.jsx)(c.K, { guild: e, size: n }) }, e.id)),
-            f > 0 &&
-                (0, i.jsx)(_, {
-                    iconSize: n,
-                    children: (0, i.jsxs)(s.E, {
-                        className: u.br,
-                        color: "text-subtle",
-                        variant: "text-xxs/semibold",
-                        children: ["+", f],
-                    }),
-                }),
-        ],
+            return e;
+        }, [A, _]);
+    return (0, i.jsx)(s.A, {
+        className: u,
+        guilds: h,
+        maxGuilds: 3,
+        size: (function (e) {
+            switch (e) {
+                case 16:
+                    return l.Ay.Sizes.SMOL;
+                case 24:
+                    return l.Ay.Sizes.SMALLER;
+                default:
+                    return l.Ay.Sizes.MINI;
+            }
+        })(n),
+        disableGuildNameTooltip: !0,
     });
 }
