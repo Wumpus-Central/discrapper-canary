@@ -270,7 +270,7 @@ function B(e) {
     });
 }
 var G = n(65412),
-    D = n(25204);
+    D = n(862706);
 function k(e, t) {
     return D.m.create({ contentIdentifier: e, properties: t });
 }
@@ -879,9 +879,9 @@ let eQ = "playground-premium-tab-popover",
         },
     };
 var e0 = n(796878);
-let e2 = "playground-premium-tab-tooltip";
+let e1 = "playground-premium-tab-tooltip";
 n(321073);
-var e1 = n(896170),
+var e2 = n(896170),
     e3 = n(783878),
     e6 = n(562465);
 async function e8() {
@@ -1204,11 +1204,11 @@ let te = {
                                     body: t.body,
                                     asset: V(t.assetUrl, d?.asset),
                                 }),
-                                (o = k(e2, {
+                                (o = k(e1, {
                                     oneofKind: "premiumTabTooltip",
                                     premiumTabTooltip: null != d ? { ...d, ...n } : n,
                                 })),
-                                F(e2, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
+                                F(e1, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                             ),
                             (0, u.jsx)(eZ, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(e0.A, { children: e }) })
                         );
@@ -1735,7 +1735,7 @@ let te = {
                 );
             }, []);
             let a = i.useMemo(() => e5(t), [t]),
-                l = i.useCallback((e, n) => e5((0, e1.Ht)(t, n, { keys: ["name"] })), [t]);
+                l = i.useCallback((e, n) => e5((0, e2.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, u.jsx)("div", {
