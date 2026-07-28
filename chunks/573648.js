@@ -1,14 +1,13 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => E });
 var i = n(435558),
     r = n.n(i),
     a = n(374994),
     s = n(472636),
     l = n(998218),
     o = n(652215),
-    d = n(534952),
-    c = n(452832);
-let u = [
+    d = n(534952);
+let c = [
         {
             type: o.fg2.TWITCH,
             name: "Twitch",
@@ -67,6 +66,7 @@ let u = [
                     s.battlenetSocialSDKMigrationExperiment.getConfig({ location: e }).enabled,
                 useMigrationExperimentEnabled: (e) =>
                     s.battlenetSocialSDKMigrationExperiment.useConfig({ location: e }).enabled,
+                helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
             },
         },
         {
@@ -137,7 +137,7 @@ let u = [
                 replacedBy: d.OW.RIOT_GAMES,
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
-                helpCenterLinkIntlMessage: c.default.LFRm9Y,
+                helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
             },
         },
         {
@@ -358,7 +358,7 @@ let u = [
                 replacedBy: d.OW.RIOT_GAMES,
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
-                helpCenterLinkIntlMessage: c.default.LFRm9Y,
+                helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
             },
         },
         {
@@ -524,25 +524,25 @@ let u = [
             enabled: !1,
         },
     ],
-    _ = r().keyBy(u, "type"),
-    E = {};
-u.forEach((e) => {
+    u = r().keyBy(c, "type"),
+    _ = {};
+c.forEach((e) => {
     e.domains?.forEach((t) => {
-        E[t] = e;
+        _[t] = e;
     });
 });
-let A = {
-    get: (e) => _[e] ?? null,
+let E = {
+    get: (e) => u[e] ?? null,
     getByUrl(e) {
         let t = l.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return E[n.startsWith("www.") ? n.slice(4) : n];
+        return _[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(_, e),
-    map: (e) => u.map(e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
+    map: (e) => c.map(e),
     filter(e) {
-        let t = u.filter(e);
+        let t = c.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
@@ -552,5 +552,5 @@ let A = {
             t
         );
     },
-    find: (e) => u.find(e),
+    find: (e) => c.find(e),
 };

@@ -14342,7 +14342,7 @@ function S1() {
 }
 var S2 = i(783419),
     S3 = i(534952),
-    S5 = i(452832),
+    S5 = i(230451),
     S6 = i(113463);
 function S4(e) {
     let t,
@@ -14991,9 +14991,7 @@ function Tr() {
                               applicationName: m,
                               connectionEntrypointUrl: o?.connectionEntrypointUrl,
                               helpCenterLink:
-                                  a.migrationData?.helpCenterLinkIntlMessage != null
-                                      ? j.intl.string(a.migrationData.helpCenterLinkIntlMessage)
-                                      : void 0,
+                                  a.migrationData?.helpCenterLink != null ? a.migrationData.helpCenterLink : "",
                           }),
                       }
                     : null,
