@@ -8,7 +8,7 @@ var i = n(477900),
     o = n(939249),
     d = n(866665),
     c = n(717421),
-    u = n(863610),
+    u = n(818670),
     _ = n(935154),
     E = n(556525),
     A = n(573435),
@@ -478,8 +478,9 @@ function v(e) {
                                           className: g.Hs,
                                       }),
                                       c
-                                          ? (0, i.jsx)(u.n, {
+                                          ? (0, i.jsx)(u.C, {
                                                 ref: E,
+                                                location: "Avatar",
                                                 dotRadius: G.status / 4,
                                                 x: G.size - 1.375 * G.status - G.offset,
                                                 y: G.size - G.status / 1.333 - G.offset,
@@ -607,8 +608,9 @@ function b(e) {
                                 children: [
                                     (0, _.pF)(Z, Q.status, B),
                                     (0, i.jsx)(l.animated.rect, { fill: q, width: J, height: ee, mask: `url(#${B})` }),
-                                    (0, i.jsx)(u.n, {
+                                    (0, i.jsx)(u.C, {
                                         ref: A,
+                                        location: "Avatar",
                                         dotRadius: Q.status / 4,
                                         x: 0.15 * J,
                                         y: 0.5 * ee,

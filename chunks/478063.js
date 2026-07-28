@@ -5,7 +5,7 @@ var i = n(477900),
     a = n(503698),
     s = n.n(a),
     l = n(97808),
-    o = n(863610),
+    o = n(818670),
     d = n(778712),
     c = n(652215),
     u = n(935154),
@@ -26,7 +26,7 @@ function I(e) {
             height: t,
             width: 2.5 * t,
         },
-        children: (0, i.jsx)(o.n, { className: E.r$, dotRadius: t * h }),
+        children: (0, i.jsx)(o.C, { className: E.r$, location: "DiagonalFacepile", dotRadius: t * h }),
     });
 }
 function f(e) {
