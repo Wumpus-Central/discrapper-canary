@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { ST: () => D, oM: () => T });
+n.d(t, { ST: () => y, oM: () => T });
 var i,
     r = n(627968),
     a = n(64700),
     s = n(503698),
     l = n.n(s),
     o = n(340287),
-    d = n(580929),
+    d = n(4798),
     c = n(607399),
     u = n(621466),
     _ = n(844222),
@@ -15,7 +15,7 @@ let A = { tension: 2400, friction: 52 };
 var h = n(866323),
     I = n(775602),
     f = n(750506),
-    p = n(418519),
+    p = n(622399),
     T =
         (((i = {}).PRIMARY = "primary"),
         (i.GREY = "grey"),
@@ -94,8 +94,8 @@ let N = (e) => {
         });
     },
     C = { scale: 0.95, opacity: 0 },
-    R = { scale: 1, opacity: 0 },
-    O = { scale: 1, opacity: 1 };
+    O = { scale: 1, opacity: 0 },
+    R = { scale: 1, opacity: 1 };
 function L(e) {
     let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...s } = e,
         { reducedMotion: l } = a.useContext(_.C);
@@ -104,9 +104,9 @@ function L(e) {
         {
             keys: (e) => (e ? "tooltip" : "empty"),
             config: A,
-            from: l.enabled ? R : C,
-            enter: O,
-            leave: l.enabled ? R : C,
+            from: l.enabled ? O : C,
+            enter: R,
+            leave: l.enabled ? O : C,
             onRest: n,
         },
         "animate-always",
@@ -114,7 +114,7 @@ function L(e) {
         t ? (0, r.jsx)(N, { "data-migration-pending": !0, animationStyle: e, targetElementRef: i, ...s }) : null,
     );
 }
-class D extends a.Component {
+class y extends a.Component {
     static Colors = T;
     static defaultProps = {
         hideOnClick: !0,

@@ -3,7 +3,7 @@ var n = t(627968),
     l = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(617498),
+    r = t(4798),
     d = t(562708),
     u = t(17928),
     o = t(192308),
@@ -36,8 +36,8 @@ function k(e) {
     let { channel: i, onClose: s } = e,
         k = l.useRef(null),
         V = l.useRef(null),
-        [w, D] = l.useState(!1),
-        [R, U] = l.useState(0),
+        [R, w] = l.useState(!1),
+        [D, U] = l.useState(0),
         { analyticsLocations: M } = (0, S.Ay)(x.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
@@ -63,7 +63,7 @@ function k(e) {
                     guild_id: i.guild_id,
                     location_stack: M,
                 }),
-                    D(!1),
+                    w(!1),
                     s?.();
             },
             [i.id, i.guild_id, s, M],
@@ -94,9 +94,9 @@ function k(e) {
             [et, Q],
         );
     l.useEffect(() => {
-        if (X) return void D(!0);
+        if (X) return void w(!0);
         let e = setTimeout(() => {
-            D(!1);
+            w(!1);
         }, 150);
         return () => {
             clearTimeout(e);
@@ -120,15 +120,15 @@ function k(e) {
         );
     }, [X, z, en]);
     let es = l.useCallback(() => {
-            D(!0);
+            w(!0);
         }, []),
         ea = l.useCallback(() => {
-            D(!1), H(!1), Z && (J(!1), k.current?.focus());
+            w(!1), H(!1), Z && (J(!1), k.current?.focus());
         }, [Z]);
     return L
         ? (0, n.jsx)(A.Y, {
               targetElementRef: k,
-              shouldShow: w,
+              shouldShow: R,
               position: "right",
               align: "top",
               spacing: 17,
@@ -172,7 +172,7 @@ function k(e) {
                                                             (0, n.jsx)("circle", { className: G.hN }),
                                                         ],
                                                     },
-                                                    `voice-invite-suggestions-timer-${R}`,
+                                                    `voice-invite-suggestions-timer-${D}`,
                                                 ),
                                           (0, n.jsx)(g.R, {
                                               size: "custom",

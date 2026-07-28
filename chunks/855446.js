@@ -4,7 +4,7 @@ var l,
     s = t(64700),
     a = t(503698),
     r = t.n(a),
-    o = t(617498),
+    o = t(4798),
     c = t(696292),
     u = t(834730),
     d = t(939249),
@@ -28,9 +28,9 @@ function j(e) {
     let { context: n, activityItem: t, onClick: l, aspectRatio: a = 0, animatedDivClass: _, commandOrigin: j } = e,
         {
             onActivityItemSelected: N,
-            imageBackground: O,
+            imageBackground: b,
             activityAction: S,
-            labelType: b,
+            labelType: O,
         } = (0, C.Ay)({
             context: n,
             activityItem: t,
@@ -52,9 +52,9 @@ function j(e) {
             () =>
                 (0, i.jsx)("div", {
                     className: I.Gz,
-                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(p.A, { labelType: b }) }),
+                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(p.A, { labelType: O }) }),
                 }),
-            [b],
+            [O],
         ),
         P = s.useMemo(() => {
             switch (S) {
@@ -113,7 +113,7 @@ function j(e) {
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, i.jsx)(E.A, {
-                                            imageBackground: O,
+                                            imageBackground: b,
                                             applicationName: t.application.name,
                                             imageClassName: I.jj,
                                             imageNotFoundClassName: I.v_,

@@ -8,22 +8,22 @@ var i = n(627968),
     o = n(276293),
     c = n(56059),
     u = n(834730),
-    E = n(534514),
+    E = n(297264),
     I = n(933832),
     N = n(821609),
     S = n(404778),
     m = n(95561),
     _ = n(201991),
-    g = n(580929),
+    g = n(4798),
     h = n(97808),
     T = n(778712),
     A = n(518009),
     D = n(408278),
-    O = n(477155),
-    f = n(935286),
+    f = n(477155),
+    O = n(712905),
     G = n(717421),
     p = n(375708),
-    x = n(926081);
+    x = n(809609);
 function L(t) {
     let { testimonial: e, className: n } = t,
         { message: l, profilePic: s, adminTitle: r, emphasisColor: a = "interactive-text-default" } = e;
@@ -79,14 +79,14 @@ function j(t) {
                     (0, i.jsx)(D.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: O.r,
+                        icon: f.r,
                         onClick: a,
                         "aria-label": p.intl.string(p.t["13/7kX"]),
                     }),
                     (0, i.jsx)(D.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: f.E,
+                        icon: O.E,
                         onClick: d,
                         "aria-label": p.intl.string(p.t.PDTjLN),
                     }),
@@ -125,11 +125,11 @@ var R = n(283012),
     P = n(71393),
     U = n(287809),
     b = n(174459),
-    y = n(913758),
+    y = n(555337),
     M = n(527678),
     w = n(400812),
     B = n(652215),
-    F = n(174154);
+    F = n(767106);
 function H(t) {
     let { isTooltip: e = !1 } = t,
         n = [

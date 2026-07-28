@@ -1,43 +1,43 @@
-n.d(e, { A: () => v });
+n.d(t, { A: () => O });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     r = n.n(l),
-    a = n(580929),
-    s = n(17928),
+    s = n(4798),
+    a = n(17928),
     o = n(866323),
     c = n(857250),
     u = n(97483),
     d = n(933832),
-    m = n(661531),
-    x = n(834730),
+    E = n(661531),
+    m = n(834730),
     f = n(289873),
-    E = n(308528),
-    g = n(775602),
+    x = n(308528),
+    R = n(775602),
     p = n(183555),
-    R = n(679492),
-    N = n(518477),
-    A = n(375708),
-    j = n(682676),
-    h = n(861173);
-function b(t) {
-    let { message: e, userId: n, onClose: l } = t,
-        { trackUserProfileAction: a } = (0, p.NJ)();
+    g = n(679492),
+    A = n(518477),
+    I = n(375708),
+    _ = n(167388),
+    h = n(871645);
+function N(e) {
+    let { message: t, userId: n, onClose: l } = e,
+        { trackUserProfileAction: s } = (0, p.NJ)();
     return (0, i.jsxs)("div", {
-        className: r()(h.oR, j.d6),
+        className: r()(h.oR, _.d6),
         children: [
-            (0, i.jsx)(d.A, { size: "sm", className: j.RC, color: m.A.colors.STATUS_POSITIVE.css }),
+            (0, i.jsx)(d.A, { size: "sm", className: _.RC, color: E.A.colors.STATUS_POSITIVE.css }),
             (0, i.jsxs)("div", {
-                className: j.Zx,
+                className: _.Zx,
                 children: [
-                    (0, i.jsx)(x.E, { color: "text-strong", variant: "text-sm/semibold", children: e }),
-                    (0, i.jsx)(x.E, {
+                    (0, i.jsx)(m.E, { color: "text-strong", variant: "text-sm/semibold", children: t }),
+                    (0, i.jsx)(m.E, {
                         variant: "text-sm/semibold",
-                        children: A.intl.format(A.t.QEW8Mq, {
+                        children: I.intl.format(I.t.QEW8Mq, {
                             onClick: () => {
-                                a({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                s({ action: "PRESS_REACT_REPLY_TOAST" }),
                                     l?.(),
-                                    E.A.openPrivateChannel({ recipientIds: n });
+                                    x.A.openPrivateChannel({ recipientIds: n });
                             },
                         }),
                     }),
@@ -46,22 +46,22 @@ function b(t) {
         ],
     });
 }
-function I() {
+function v() {
     return (0, i.jsxs)("div", {
-        className: r()(h.oR, j.d6),
+        className: r()(h.oR, _.d6),
         children: [
-            (0, i.jsx)(f.y, { type: f.t.SPINNING_CIRCLE_SIMPLE, className: j.RC }),
-            (0, i.jsx)(x.E, { color: "text-strong", variant: "text-sm/semibold", children: A.intl.string(A.t.tcARX0) }),
+            (0, i.jsx)(f.y, { type: f.t.SPINNING_CIRCLE_SIMPLE, className: _.RC }),
+            (0, i.jsx)(m.E, { color: "text-strong", variant: "text-sm/semibold", children: I.intl.string(I.t.tcARX0) }),
         ],
     });
 }
-let v = (t) => {
-    let { userId: e, onClose: n, className: l } = t,
-        { interactionTypeSent: d, showInteractionToast: m } = (0, R.Pq)(),
-        x = d === N.AQ.REPLY ? A.intl.string(A.t.BPaiaa) : A.intl.string(A.t.Ry2EtG),
-        f = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        E = (0, o.p)(
-            m,
+let O = (e) => {
+    let { userId: t, onClose: n, className: l } = e,
+        { interactionTypeSent: d, showInteractionToast: E } = (0, g.Pq)(),
+        m = d === A.AQ.REPLY ? I.intl.string(I.t.BPaiaa) : I.intl.string(I.t.Ry2EtG),
+        f = (0, a.bG)([R.Ay], () => R.Ay.useReducedMotion),
+        x = (0, o.p)(
+            E,
             {
                 from: { transform: f ? "translateY(0)" : "translateY(16px)", opacity: 0 },
                 enter: { transform: "translateY(0)", opacity: 1 },
@@ -72,25 +72,25 @@ let v = (t) => {
             "animate-always",
         );
     return (0, i.jsx)(i.Fragment, {
-        children: E(
-            (t, s) =>
-                s &&
-                (0, i.jsx)(a.animated.div, {
-                    className: r()(j.Jt, l),
-                    style: t,
+        children: x(
+            (e, a) =>
+                a &&
+                (0, i.jsx)(s.animated.div, {
+                    className: r()(_.Jt, l),
+                    style: e,
                     children:
                         null != d
                             ? (0, i.jsx)(c.y, {
                                   message: "",
                                   type: u.Ck.CUSTOM,
                                   id: "react_reply_success_toast",
-                                  options: { component: (0, i.jsx)(b, { userId: e, message: x, onClose: n }) },
+                                  options: { component: (0, i.jsx)(N, { userId: t, message: m, onClose: n }) },
                               })
                             : (0, i.jsx)(c.y, {
                                   message: "",
                                   type: u.Ck.CUSTOM,
                                   id: "react_reply_loading_toast",
-                                  options: { component: (0, i.jsx)(I, {}) },
+                                  options: { component: (0, i.jsx)(v, {}) },
                               }),
                 }),
         ),

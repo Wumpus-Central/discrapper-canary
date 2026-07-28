@@ -1,23 +1,23 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var l = n(627968),
     i = n(64700),
-    s = n(580929),
+    s = n(4798),
     r = n(17928),
     a = n(866323),
     o = n(565645),
     u = n(775602),
     c = n(927813),
     d = n(614518),
-    m = n(703302);
+    m = n(831470);
 let p = 6 * c.A.Millis.SECOND,
     g = 2 * c.A.Millis.SECOND,
     h = 2 * c.A.Millis.SECOND;
 function f(e) {
     return `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
 }
-function x(e) {
+function A(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
-        { emoji: x, sentAt: A } = n,
+        { emoji: A, sentAt: x } = n,
         E = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
         [v, C] = i.useState(!0),
         I = !E,
@@ -34,7 +34,7 @@ function x(e) {
     return (i.useEffect(() => {
         let e;
         return (
-            Date.now() - A >= h
+            Date.now() - x >= h
                 ? (0, d.a)(t)
                 : (e = setTimeout(
                       () => {
@@ -46,7 +46,7 @@ function x(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [A, t, I]),
+    }, [x, t, I]),
     I)
         ? null
         : S((e, t) => {
@@ -58,9 +58,9 @@ function x(e) {
                       style: { transform: n.to(f) },
                       children: (0, l.jsx)(o.A, {
                           className: m.F,
-                          emojiId: x.id,
-                          emojiName: x.name,
-                          animated: x.animated ?? !1,
+                          emojiId: A.id,
+                          emojiName: A.name,
+                          animated: A.animated ?? !1,
                       }),
                   })
               );

@@ -3,7 +3,7 @@ var r = n(627968),
     l = n(64700),
     i = n(503698),
     s = n.n(i),
-    u = n(372684),
+    u = n(4798),
     a = n(942381),
     o = n(337836),
     c = n(17928),
@@ -28,7 +28,7 @@ var r = n(627968),
     O = n(544180),
     P = n(723702),
     N = n(475815),
-    b = n(340124),
+    b = n(352774),
     k = n(24001),
     y = n(405670),
     V = n(291749),
@@ -44,7 +44,7 @@ var r = n(627968),
     H = n(458817),
     G = n(854356),
     $ = n(979204),
-    q = n(924838);
+    q = n(628110);
 function W(e) {
     let {
             targetSec: t,
@@ -92,7 +92,7 @@ function W(e) {
 var z = n(297264),
     X = n(187322),
     Z = n(364522),
-    J = n(834926);
+    J = n(668534);
 function ee(e) {
     let { quest: t, onClose: n } = e,
         i = (0, y.Kr)((e) => e.transcript);
@@ -206,8 +206,8 @@ function es(e) {
         e7 = (0, y.Kr)((e) => e.muted),
         e4 = (0, y.Kr)((e) => e.setMuted),
         e2 = (0, y.Kr)((e) => e.volume),
-        e9 = (0, y.Kr)((e) => e.setVolume),
-        e8 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
+        e8 = (0, y.Kr)((e) => e.setVolume),
+        e9 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e3 = (0, l.useRef)(null),
         e5 = (0, l.useRef)(null),
         te = (0, l.useRef)(null),
@@ -402,9 +402,9 @@ function es(e) {
         }, []);
     let t7 = l.useCallback(
             (e) => {
-                e9(e), tU(e);
+                e8(e), tU(e);
             },
-            [e9, tU],
+            [e8, tU],
         ),
         t4 = l.useCallback(
             (e) => {
@@ -456,8 +456,8 @@ function es(e) {
                 tH(Y.Q6.PAUSED), ts(k.Yg.LOST_FOCUS);
             },
         });
-    let t9 = l.useRef(!1);
-    function t8() {
+    let t8 = l.useRef(!1);
+    function t9() {
         if (null != e3.current)
             switch ((tf.info(`[QV] | handlePlaybackBtnClick | playerState: ${eh}`), tM(), eh)) {
                 case Y.Q6.ENDED:
@@ -549,21 +549,21 @@ function es(e) {
         [{ captionHeightSpring: ni }, ns] = (0, _.z)(() => ({ from: { captionHeightSpring: 0 }, config: ei }));
     l.useEffect(
         () => (
-            ns({ captionHeightSpring: em && null != to ? (nl.current?.clientHeight ?? 0) : 0, immediate: e8 }),
+            ns({ captionHeightSpring: em && null != to ? (nl.current?.clientHeight ?? 0) : 0, immediate: e9 }),
             () => {
                 ni.stop();
             }
         ),
-        [em, ns, e8, to, ni],
+        [em, ns, e9, to, ni],
     ),
         l.useEffect(
             () => (
-                nr({ controlBarAnimSpring: tJ || eG ? 1 : 0, immediate: e8 }),
+                nr({ controlBarAnimSpring: tJ || eG ? 1 : 0, immediate: e9 }),
                 () => {
                     nn.stop();
                 }
             ),
-            [tJ, nr, e8, eG, nn],
+            [tJ, nr, e9, eG, nn],
         );
     let nu = eh === Y.Q6.ENDED,
         na = l.useMemo(() => (0, V.tW)(eu, V.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [eu]),
@@ -656,7 +656,7 @@ function es(e) {
                                 },
                                 onLoadStart: function () {
                                     (eJ.current = performance.now()),
-                                        (t9.current = !1),
+                                        (t8.current = !1),
                                         tI(eB),
                                         tf.info(`[QV] | handleLoadStart | loadingStartTime: ${eJ.current}`);
                                 },
@@ -691,7 +691,7 @@ function es(e) {
                                 onCanPlay: nt,
                                 onCanPlayThrough: nt,
                                 onSeeked: function () {
-                                    tf.info("[QV] | handleSeeked"), t9.current || ((t9.current = !0), tj(0));
+                                    tf.info("[QV] | handleSeeked"), t8.current || ((t8.current = !0), tj(0));
                                 },
                                 onAbort: function () {
                                     return t5(Y.SB.ABORT);
@@ -706,7 +706,7 @@ function es(e) {
                                     return t5(Y.SB.STALLED);
                                 },
                                 onClick: function () {
-                                    tf.info("[QV] | handleVideoClick"), t8();
+                                    tf.info("[QV] | handleVideoClick"), t9();
                                 },
                                 crossOrigin: "anonymous",
                                 children: [
@@ -935,7 +935,7 @@ function es(e) {
                                             muted: e7,
                                             transcriptEnabled: ef,
                                             captionEnabled: em,
-                                            handlePlaybackBtnClick: t8,
+                                            handlePlaybackBtnClick: t9,
                                             handleTranscriptBtnClick: function () {
                                                 e_(!ef),
                                                     tO(

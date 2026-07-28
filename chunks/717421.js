@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { z: () => o });
+n.d(t, { z: () => l });
 var i = n(64700),
-    r = n(580929),
-    s = n(844222),
-    a = n(384494);
-function o(e) {
+    r = n(4798),
+    a = n(844222),
+    s = n(384494);
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "respect-motion-settings",
         n = arguments.length > 2 ? arguments[2] : void 0,
-        o = i.useContext(s.C).reducedMotion.enabled,
-        l = e;
+        l = i.useContext(a.C).reducedMotion.enabled,
+        o = e;
     "animate-always" !== t &&
-        ("respect-motion-settings" !== t || o) &&
-        (l = "function" == typeof e ? () => ({ ...e(), ...a.W }) : { ...e, ...a.W });
-    let u = "function" == typeof l,
-        [d, c, _] = (0, r.useSpring)(l, n);
-    return u || 3 == arguments.length ? [d, c, _] : d;
+        ("respect-motion-settings" !== t || l) &&
+        (o = "function" == typeof e ? () => ({ ...e(), ...s.W }) : { ...e, ...s.W });
+    let d = "function" == typeof o,
+        [c, u, _] = (0, r.useSpring)(o, n);
+    return d || 3 == arguments.length ? [c, u, _] : c;
 }

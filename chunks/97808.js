@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Js: () => M, Rb: () => O, d9: () => y, eu: () => v });
+n.d(t, { Js: () => M, Rb: () => O, d9: () => D, eu: () => v });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(580929),
+    l = n(4798),
     o = n(939249),
-    d = n(717421),
-    c = n(863610),
-    u = n(133171),
-    _ = n(990078),
+    d = n(866665),
+    c = n(717421),
+    u = n(863610),
+    _ = n(133171),
     E = n(556525),
     A = n(573435),
     h = n(849442),
@@ -18,7 +18,7 @@ var i = n(627968),
     p = n(190460),
     T = n(778712),
     m = n(375708),
-    g = n(282291);
+    g = n(653403);
 let S = { tension: 1200, friction: 70 };
 function N() {
     return document.hasFocus();
@@ -35,26 +35,26 @@ function C(e) {
 }
 function O(e, t, n) {
     let { isTyping: i, isMobile: r, isVR: a } = n,
-        s = (0, u.i0)(e.status, t, { isTyping: i, isMobile: r, isVR: a }),
+        s = (0, _.i0)(e.status, t, { isTyping: i, isMobile: r, isVR: a }),
         l = (i ? e.size - (s.width / 2 + e.status / 2) : e.size - s.width) - e.offset;
     return { ...s, x: l, y: e.size - s.height - e.offset };
 }
 function R(e, t, n, r) {
     let { isMobile: a, isTyping: s, isVR: l } = r,
         o = O(t, n, { isMobile: a, isTyping: s, isVR: l }),
-        d = (0, u.yi)(n, e),
+        d = (0, _.yi)(n, e),
         c = n === f.clD.ONLINE && l;
     if (!(a || c)) {
         let n = o.height / 2 + t.stroke,
             r = o.x + t.status / 2;
         return (0, i.jsx)("circle", { style: { opacity: d }, fill: e, r: n, cx: r, cy: r });
     }
-    let _ = o.height + 2 * t.stroke,
+    let u = o.height + 2 * t.stroke,
         E = o.width + 2 * t.stroke,
         A = o.x - t.stroke,
         h = o.y - t.stroke,
-        I = c ? _ / 2 : t.stroke;
-    return (0, i.jsx)("rect", { fill: e, height: _, width: E, style: { opacity: d }, x: A, y: h, rx: I });
+        I = c ? u / 2 : t.stroke;
+    return (0, i.jsx)("rect", { fill: e, height: u, width: E, style: { opacity: d }, x: A, y: h, rx: I });
 }
 function L(e) {
     let { status: t, isMobile: n, isTyping: i, size: r } = e,
@@ -75,10 +75,10 @@ function L(e) {
                 avatarCutoutRadius: c ? (u + 2 * r) * 0.2 : (i + 2 * r) / 2,
             };
         })(s, { isMobile: a, isTyping: i, isVR: !1 }),
-        ...(0, u.v)({ status: t, size: s.status, isMobile: a, isTyping: i, topOffset: 2, leftOffset: 6 }),
+        ...(0, _.v)({ status: t, size: s.status, isMobile: a, isTyping: i, topOffset: 2, leftOffset: 6 }),
     };
 }
-function D(e) {
+function y(e) {
     let {
             children: t,
             size: n,
@@ -96,8 +96,8 @@ function D(e) {
             isMobile: O = !1,
             isVR: R = !1,
             isTyping: L = !1,
-            avatarDecoration: D,
-            typingOffset: y,
+            avatarDecoration: y,
+            typingOffset: D,
             specs: v,
         } = e,
         b = { width: (0, T.FT)(n), height: (0, T.FT)(n) },
@@ -227,13 +227,13 @@ function D(e) {
             }
             return null;
         })(C, n, O, L, R);
-    (0, h.HZ)(null != D ? U : null);
+    (0, h.HZ)(null != y ? U : null);
     let w =
-        null != D &&
+        null != y &&
         (0, i.jsx)("svg", {
-            width: P + y,
+            width: P + D,
             height: P,
-            viewBox: `0 0 ${P + y} ${P}`,
+            viewBox: `0 0 ${P + D} ${P}`,
             className: g.DX,
             "aria-hidden": !0,
             children: (0, i.jsx)("foreignObject", {
@@ -242,7 +242,7 @@ function D(e) {
                 width: P,
                 height: P,
                 mask: null != U ? `url(#${U})` : void 0,
-                children: (0, i.jsx)("img", { className: g.M, src: D, alt: " ", "aria-hidden": !0 }),
+                children: (0, i.jsx)("img", { className: g.M, src: y, alt: " ", "aria-hidden": !0 }),
             }),
         });
     return null != r || null != a
@@ -272,7 +272,7 @@ function D(e) {
               children: [t, w],
           });
 }
-let y = r.forwardRef((e, t) => {
+let D = r.forwardRef((e, t) => {
     let { src: n, isSpeaking: r, className: a, voiceDb: l = -1 / 0, speakingStylesConfig: o } = e,
         d = (0, E.v)({ isSpeaking: r, voiceDb: l, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...o });
     return (0, i.jsxs)(
@@ -296,7 +296,7 @@ function v(e) {
             statusColor: a,
             isMobile: l = !1,
             isVR: o = !1,
-            isTyping: d = !1,
+            isTyping: c = !1,
             typingIndicatorRef: E,
             avatarContentRef: p,
             isSpeaking: m = !1,
@@ -314,7 +314,7 @@ function v(e) {
         G = (0, T.Kj)(r),
         x = null != w ? Math.ceil((2.5 * G.status - G.status) / 2) : 0,
         k = G.size + x,
-        F = (0, u.S3)(w, a),
+        F = (0, _.S3)(w, a),
         V = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             if (null == e) return A.hW.AVATAR_DEFAULT;
@@ -426,12 +426,12 @@ function v(e) {
                     return A.hW.AVATAR_STATUS_ROUND_120;
             }
             throw Error(`getMaskId(): Unsupported type, size: ${t}, status: ${e}, isMobile: ${n ? "true" : "false"}`);
-        })(w, r, l, d, o),
-        B = null != w ? (0, u.p8)(w, { isMobile: l, isTyping: d, isVR: o }) : null;
+        })(w, r, l, c, o),
+        B = null != w ? (0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o }) : null;
     return (
         (0, h.HZ)(V),
         (0, h.HZ)(B),
-        (0, i.jsx)(D, {
+        (0, i.jsx)(y, {
             ...e,
             ariaLabel: M,
             ariaHidden: b,
@@ -452,7 +452,7 @@ function v(e) {
                         width: G.size,
                         height: G.size,
                         mask: `url(#${V})`,
-                        children: (0, i.jsx)(y, {
+                        children: (0, i.jsx)(D, {
                             ref: p,
                             src: t,
                             isSpeaking: m,
@@ -461,9 +461,9 @@ function v(e) {
                             className: P,
                         }),
                     }),
-                    null != w && null != v ? R(v, G, w, { isMobile: l, isTyping: d, isVR: o }) : null,
+                    null != w && null != v ? R(v, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
                     null != w
-                        ? (0, i.jsx)(_.m, {
+                        ? (0, i.jsx)(d.m, {
                               text: C ? (0, I.MU)(w) : null,
                               ariaHidden: !0,
                               position: "top",
@@ -472,13 +472,13 @@ function v(e) {
                               children: (0, i.jsxs)("g", {
                                   children: [
                                       (0, i.jsx)("rect", {
-                                          ...O(G, w, { isMobile: l, isTyping: d, isVR: o }),
+                                          ...O(G, w, { isMobile: l, isTyping: c, isVR: o }),
                                           fill: F,
-                                          mask: `url(#${(0, u.p8)(w, { isMobile: l, isTyping: d, isVR: o })})`,
+                                          mask: `url(#${(0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o })})`,
                                           className: g.Hs,
                                       }),
-                                      d
-                                          ? (0, i.jsx)(c.n, {
+                                      c
+                                          ? (0, i.jsx)(u.n, {
                                                 ref: E,
                                                 dotRadius: G.status / 4,
                                                 x: G.size - 1.375 * G.status - G.offset,
@@ -517,7 +517,7 @@ function b(e) {
             imageClassName: x,
             pulseStatusIcon: k,
         } = e,
-        F = (0, u.S3)(v, b),
+        F = (0, _.S3)(v, b),
         V = r.useId(),
         B = r.useId(),
         [H] = r.useState(() => ({ fill: a, ...L({ size: m, status: n, isMobile: t, isTyping: !1 }) })),
@@ -530,14 +530,14 @@ function b(e) {
             avatarCutoutRadius: z,
             fill: q,
             ...Z
-        } = (0, d.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
+        } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
         X = (0, T.FT)(m),
         Q = (0, T.Kj)(m),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
         et = null != v ? (2.5 * Q.status - Q.status) / 2 : 0,
         en = Q.size + Math.ceil(et),
-        [ei, er, ea] = (0, d.z)(
+        [ei, er, ea] = (0, c.z)(
             {
                 config: { tension: 450, friction: 20, clamp: !0 },
                 from: { scale: 1 },
@@ -546,7 +546,7 @@ function b(e) {
             N() ? "animate-always" : "animate-never",
             [k, v],
         );
-    return (0, i.jsx)(D, {
+    return (0, i.jsx)(y, {
         ...e,
         ariaLabel: G,
         ariaHidden: w,
@@ -575,7 +575,7 @@ function b(e) {
                     width: X,
                     height: X,
                     mask: `url(#${V})`,
-                    children: (0, i.jsx)(y, {
+                    children: (0, i.jsx)(D, {
                         src: O,
                         isSpeaking: h,
                         voiceDb: f,
@@ -584,7 +584,7 @@ function b(e) {
                     }),
                 }),
                 null != U && R(U, Q, v, { isMobile: o, isTyping: E, isVR: !1 }),
-                (0, i.jsx)(_.m, {
+                (0, i.jsx)(d.m, {
                     text: M ? (0, I.MU)(v) : null,
                     ariaHidden: !0,
                     position: "top",
@@ -605,9 +605,9 @@ function b(e) {
                                 viewBox: `0 0 ${J} ${ee}`,
                                 className: M ? g.Oi : void 0,
                                 children: [
-                                    (0, u.pF)(Z, Q.status, B),
+                                    (0, _.pF)(Z, Q.status, B),
                                     (0, i.jsx)(l.animated.rect, { fill: q, width: J, height: ee, mask: `url(#${B})` }),
-                                    (0, i.jsx)(c.n, {
+                                    (0, i.jsx)(u.n, {
                                         ref: A,
                                         dotRadius: Q.status / 4,
                                         x: 0.15 * J,
@@ -624,31 +624,31 @@ function b(e) {
         }),
     });
 }
-y.displayName = "AvatarImg";
+D.displayName = "AvatarImg";
 let M = r.memo(function (e) {
     var t, n;
     let { statusColor: a, status: s, ...l } = e,
         { isMobile: o = !1, isTyping: d = !1, isVR: c = !1 } = l,
-        _ = r.useRef(s),
+        u = r.useRef(s),
         E = r.useRef(o),
-        A = (0, u.S3)(s, a),
+        A = (0, _.S3)(s, a),
         h = r.useRef(A),
         I = r.useRef(!1),
         p =
             I.current ||
-            ((t = _.current),
+            ((t = u.current),
             (n = E.current),
             null != t && null != s && (!!d || s !== t || (s === f.clD.ONLINE && o !== n)));
     return (
         r.useLayoutEffect(() => {
-            (I.current = p), (_.current = s), (E.current = o), (h.current = A);
+            (I.current = p), (u.current = s), (E.current = o), (h.current = A);
         }, [s, o, A, p]),
-        !c && null != s && null != _.current && p
+        !c && null != s && null != u.current && p
             ? (0, i.jsx)(b, {
                   ...l,
                   status: s,
                   statusColor: A,
-                  fromStatus: _.current,
+                  fromStatus: u.current,
                   fromIsMobile: E.current,
                   fromColor: h.current,
               })

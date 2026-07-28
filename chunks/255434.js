@@ -4,10 +4,10 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(580929),
+    l = n(4798),
     o = n(508382),
     d = n(834730),
-    c = n(310700);
+    c = n(850132);
 function u() {
     return (0, i.jsxs)("svg", {
         width: "16",
@@ -45,7 +45,7 @@ function u() {
     });
 }
 var _ = n(747556),
-    E = n(993673);
+    E = n(697089);
 function A(e, t, n) {
     let i = (t ? (n ? 372 : 272) : 200) / 2 - 8;
     return Math.max(-i, Math.min(i, e));
@@ -84,11 +84,11 @@ function f(e) {
             positionKey: N,
         } = e,
         { isRichTooltip: C } = (0, _.w6)(),
-        [R, O] = r.useState(u?.ownerDocument);
+        [O, R] = r.useState(u?.ownerDocument);
     if (
         (r.useLayoutEffect(() => {
             var e, t;
-            O(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
+            R(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
         }, [E, u, a]),
         !n)
     )
@@ -101,7 +101,7 @@ function f(e) {
         spacing: m,
         placement: L,
         reference: y,
-        ownerDocument: R,
+        ownerDocument: O,
         autoUpdate: null != N,
         renderLayer: (e) => {
             let { placement: t, shift: n } = e,

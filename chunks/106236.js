@@ -6,14 +6,14 @@ var i = n(627968),
     s = n.n(a),
     l = n(435558),
     o = n.n(l),
-    d = n(580929),
+    d = n(4798),
     c = n(621466),
     u = n(452027),
     _ = n(187322),
-    E = n(717421),
-    A = n(990078),
+    E = n(866665),
+    A = n(717421),
     h = n(775602),
-    I = n(160671);
+    I = n(300839);
 function f(e, t) {
     let n = 0;
     for (let i = 0; i < t.length; i++) {
@@ -94,7 +94,7 @@ class T extends r.PureComponent {
                 closestMarkerIndex: l,
                 newClosestIndex: o,
                 min: c,
-                max: E,
+                max: A,
             } = this.state,
             {
                 disabled: f,
@@ -104,11 +104,11 @@ class T extends r.PureComponent {
                 barStyles: S,
                 fillStyles: N,
                 mini: C,
-                hideBubble: R,
-                defaultValue: O,
+                hideBubble: O,
+                defaultValue: R,
                 orientation: L,
-                onValueRender: D,
-                renderMarker: y,
+                onValueRender: y,
+                renderMarker: D,
                 getAriaValueText: v,
                 barClassName: b,
                 grabberClassName: M,
@@ -128,7 +128,7 @@ class T extends r.PureComponent {
                 null != a && null != r
                     ? a.map((e, t) => {
                           let n = r[t],
-                              a = null != O && O === n,
+                              a = null != R && R === n,
                               l = this.renderMark(n);
                           return (0, i.jsx)(
                               "div",
@@ -140,8 +140,8 @@ class T extends r.PureComponent {
                                   }),
                                   style: { left: `${e}%` },
                                   children:
-                                      null != y
-                                          ? y(n)
+                                      null != D
+                                          ? D(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("div", { className: I.markValue, children: l }),
@@ -155,7 +155,7 @@ class T extends r.PureComponent {
                           );
                       })
                     : null,
-            j = null != D ? D(e) : `${V.toFixed(0)}%`,
+            j = null != y ? y(e) : `${V.toFixed(0)}%`,
             W = v?.(e) ?? void 0;
         return (0, i.jsx)(u.D, {
             ...F,
@@ -176,7 +176,7 @@ class T extends r.PureComponent {
                                 style: a?.sliderStyles,
                                 id: r.controlId,
                                 "aria-valuemin": c,
-                                "aria-valuemax": E,
+                                "aria-valuemax": A,
                                 "aria-valuenow": e,
                                 "aria-disabled": f,
                                 "aria-orientation": L,
@@ -214,8 +214,8 @@ class T extends r.PureComponent {
                                     g,
                                     (0, i.jsx)("div", {
                                         className: I.track,
-                                        children: (0, i.jsx)(A.m, {
-                                            __unsupportedReactNodeAsText: R || p ? null : j,
+                                        children: (0, i.jsx)(E.m, {
+                                            __unsupportedReactNodeAsText: O || p ? null : j,
                                             forceOpen: t || (n && h.Ay.keyboardModeEnabled),
                                             positionKey: B,
                                             children: (0, i.jsx)("div", {
@@ -408,7 +408,7 @@ function m(e) {
     let { active: t, keyboardFocused: n, children: i } = e,
         [a, s] = r.useState(!1);
     return i({
-        sliderStyles: (0, E.z)({
+        sliderStyles: (0, A.z)({
             "--grabber-size": n || t || a ? "20px" : "16px",
             "--bar-size": n || t || a ? "6px" : "4px",
             config: { ...d.config.stiff, duration: 100 },

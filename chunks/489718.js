@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(977418),
     s = n(967158),
-    l = n(580929),
+    l = n(4798),
     o = n(823807),
     d = n(661531),
     c = n(717421),
@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(844222),
     E = n(187322),
     A = n(140735),
-    h = n(764371);
+    h = n(394539);
 let I = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.10585 5.3837Z",
     f = "M10.61632 4.11091L11.88912 5.3837L5.3837 11.88912L4.11091 10.61632L10.61632 4.11091Z",
     p = "M5.25333 8.80104L5.25333 7.17346L10.85336 7.17346L10.85336 8.80104L5.25333 8.80104Z",
@@ -22,15 +22,15 @@ let I = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     S = [0, 0.1, 0.4, 0.6, 0.9, 1],
     N = [0, 0.1, 0.9, 1],
     C = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    R = [0, 0.3, 0.5, 0.8, 0.9, 1],
-    O = () => {};
+    O = [0, 0.3, 0.5, 0.8, 0.9, 1],
+    R = () => {};
 function L(e) {
     let t,
         {
             checked: n,
             disabled: L,
-            displayOnly: D,
-            id: y,
+            displayOnly: y,
+            id: D,
             onChange: v,
             focusProps: b,
             hasIcon: M = !1,
@@ -42,12 +42,12 @@ function L(e) {
         x = r.useRef(null),
         k = r.useRef(null),
         F = w ?? k,
-        V = (0, o.H)({ isSelected: n, onChange: v ?? O, isDisabled: L }),
+        V = (0, o.H)({ isSelected: n, onChange: v ?? R, isDisabled: L }),
         {
             inputProps: B,
             labelProps: H,
             isPressed: j,
-        } = (0, a.K)({ id: y, isDisabled: L, "aria-describedby": P, "aria-labelledby": U ?? "" }, V, F),
+        } = (0, a.K)({ id: D, isDisabled: L, "aria-describedby": P, "aria-labelledby": U ?? "" }, V, F),
         { hoverProps: W, isHovered: Y } = (0, s.M)({ isDisabled: L }),
         K = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         $ = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -67,16 +67,16 @@ function L(e) {
             {
                 config: { duration: G.enabled ? 200 : 300 },
                 opacity: L ? 0.5 : 1,
-                state: j ? (n ? R[R.length - 2] : C[1]) : +!!n,
+                state: j ? (n ? O[O.length - 2] : C[1]) : +!!n,
             },
             "animate-always",
         ),
         eo = function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
-            return n ? es.to({ range: R, output: t }) : es.to({ range: C, output: e });
+            return n ? es.to({ range: O, output: t }) : es.to({ range: C, output: e });
         },
         ed = (0, i.jsx)(l.animated.div, {
-            ...(D ? {} : W),
+            ...(y ? {} : W),
             ref: x,
             className: h.cw,
             "data-size": "md",
@@ -132,7 +132,7 @@ function L(e) {
                 ],
             }),
         });
-    return D
+    return y
         ? (0, i.jsx)("div", { className: h.kL, "data-disabled": L || void 0, children: ed })
         : (0, i.jsx)(E.vN, {
               ...b,

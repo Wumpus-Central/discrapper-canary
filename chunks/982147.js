@@ -1,17 +1,17 @@
-a.d(t, { m: () => i });
-var n = a(64700),
-    s = a(580929),
-    r = a(384494),
-    o = a(844222);
-function i(e, t) {
-    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "respect-motion-settings",
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        l = n.useContext(o.C).reducedMotion.enabled,
-        E = t;
-    "animate-always" !== a &&
-        ("respect-motion-settings" !== a || l) &&
-        (E = "function" == typeof t ? (e, a) => ({ ...t(e, a), ...r.W }) : t.map((e) => ({ ...e, ...r.W })));
-    let c = "function" == typeof E,
-        [d, u, S] = (0, s.useSprings)(e, E, i);
-    return c || 4 == arguments.length ? [d, u, S] : d;
+n.d(t, { m: () => o });
+var a = n(64700),
+    r = n(4798),
+    i = n(384494),
+    s = n(844222);
+function o(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "respect-motion-settings",
+        o = arguments.length > 3 ? arguments[3] : void 0,
+        l = a.useContext(s.C).reducedMotion.enabled,
+        _ = t;
+    "animate-always" !== n &&
+        ("respect-motion-settings" !== n || l) &&
+        (_ = "function" == typeof t ? (e, n) => ({ ...t(e, n), ...i.W }) : t.map((e) => ({ ...e, ...i.W })));
+    let E = "function" == typeof _,
+        [c, u, d] = (0, r.useSprings)(e, _, o);
+    return E || 4 == arguments.length ? [c, u, d] : c;
 }

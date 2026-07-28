@@ -1,147 +1,147 @@
 "use strict";
-n.d(t, { $m: () => P, Dc: () => x, EO: () => L, WM: () => b, jl: () => w, rI: () => R, rQ: () => D, s_: () => M });
+n.d(t, { $m: () => M, Dc: () => w, EO: () => v, WM: () => D, jl: () => P, rI: () => L, rQ: () => b, s_: () => U });
 var i,
     r,
-    s = n(627968),
-    a = n(64700),
-    o = n(503698),
-    l = n.n(o),
-    u = n(580929),
-    d = n(562708),
-    c = n(615300),
+    a = n(627968),
+    s = n(64700),
+    l = n(503698),
+    o = n.n(l),
+    d = n(4798),
+    c = n(562708),
+    u = n(615300),
     _ = n(789645),
-    h = n(844222),
-    f = n(717421),
-    E = n(187322),
-    p = n(689175),
-    m = n(475825),
-    g = n(862482),
-    A = n(305866),
-    I = n(707554),
-    T = n(989395),
+    E = n(844222),
+    A = n(717421),
+    h = n(187322),
+    I = n(689175),
+    f = n(475825),
+    p = n(862482),
+    T = n(305866),
+    m = n(707554),
+    g = n(989395),
     S = n(235986),
     N = n(231723),
     C = n(818348),
-    y = n(375708),
-    v = n(889277),
-    R = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), (i.DYNAMIC = "dynamic"), i);
-let O = Object.freeze({ small: v.EX, medium: v.Y, large: v.as, dynamic: null });
-var b = (((r = {}).DEFAULT = "default"), (r.SUBTLE = "subtle"), r);
-function L(e) {
+    O = n(375708),
+    R = n(156453),
+    L = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), (i.DYNAMIC = "dynamic"), i);
+let y = Object.freeze({ small: R.EX, medium: R.Y, large: R.as, dynamic: null });
+var D = (((r = {}).DEFAULT = "default"), (r.SUBTLE = "subtle"), r);
+function v(e) {
     let {
             transitionState: t,
             children: n,
             size: i = "small",
             role: r = "dialog",
-            className: o,
+            className: l,
             fullscreenOnMobile: _ = !0,
-            hideShadow: p = !1,
-            onAnimationEnd: m = C.tE,
-            returnRef: g,
-            animation: I = "default",
+            hideShadow: I = !1,
+            onAnimationEnd: f = C.tE,
+            returnRef: p,
+            animation: m = "default",
             parentComponent: S,
-            ...y
+            ...O
         } = e,
-        R = t === N.ip.ENTERING || t === N.ip.ENTERED;
-    a.useContext(T.A)({
-        type: d.ImpressionTypes.PAGE,
-        name: d.ImpressionNames.MODAL_ROOT_LEGACY,
+        L = t === N.ip.ENTERING || t === N.ip.ENTERED;
+    s.useContext(g.A)({
+        type: c.ImpressionTypes.PAGE,
+        name: c.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: S },
     });
-    let { reducedMotion: b } = a.useContext(h.C),
-        L = (0, f.z)(
+    let { reducedMotion: D } = s.useContext(E.C),
+        v = (0, A.z)(
             {
-                opacity: +!!R,
-                transform: R || b.enabled || "subtle" === I ? "scale(1)" : "scale(0.7)",
-                config: { duration: 200, easing: c.A.Easing.out(c.A.Easing.quad), clamp: !0 },
-                onRest: m,
+                opacity: +!!L,
+                transform: L || D.enabled || "subtle" === m ? "scale(1)" : "scale(0.7)",
+                config: { duration: 200, easing: u.A.Easing.out(u.A.Easing.quad), clamp: !0 },
+                onRest: f,
             },
             "animate-always",
         ),
-        D = a.useRef(null),
-        P = null != y["aria-label"],
-        w = null != y["aria-labelledby"],
-        M = a.useId(),
-        x = y["aria-labelledby"] ?? M,
-        U = a.useMemo(() => ({ headerId: x, headerIdIsManaged: w }), [x, w]);
-    return (0, s.jsx)(N.CP.Provider, {
-        value: U,
-        children: (0, s.jsx)(A.l, {
-            className: v.Gg,
+        b = s.useRef(null),
+        M = null != O["aria-label"],
+        P = null != O["aria-labelledby"],
+        U = s.useId(),
+        w = O["aria-labelledby"] ?? U,
+        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: P }), [w, P]);
+    return (0, a.jsx)(N.CP.Provider, {
+        value: G,
+        children: (0, a.jsx)(T.l, {
+            className: R.Gg,
             role: r,
-            returnRef: g,
-            impressionType: d.ImpressionTypes.MODAL,
-            "aria-labelledby": P ? void 0 : U.headerId,
-            ...y,
-            children: (0, s.jsx)(u.animated.div, {
-                className: l()(o, v.zr, O[i], { [v.z]: _, [v.vl]: !p }),
-                ref: D,
-                style: L,
-                children: (0, s.jsx)(E.xp, { containerRef: D, children: n }),
+            returnRef: p,
+            impressionType: c.ImpressionTypes.MODAL,
+            "aria-labelledby": M ? void 0 : G.headerId,
+            ...O,
+            children: (0, a.jsx)(d.animated.div, {
+                className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !I }),
+                ref: b,
+                style: v,
+                children: (0, a.jsx)(h.xp, { containerRef: b, children: n }),
             }),
         }),
     });
 }
-function D(e) {
-    let { headerId: t, headerIdIsManaged: n } = a.useContext(N.CP);
-    return (0, s.jsx)(S.A, {
+function b(e) {
+    let { headerId: t, headerIdIsManaged: n } = s.useContext(N.CP);
+    return (0, a.jsx)(S.A, {
         grow: 0,
         shrink: 0,
         direction: e.direction ?? S.A.Direction.HORIZONTAL,
         justify: e.justify ?? S.A.Justify.START,
         align: e.align ?? S.A.Align.CENTER,
         wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: l()(v.wx, e.className, { [v.me]: e.separator ?? !0 }),
+        className: o()(R.wx, e.className, { [R.me]: e.separator ?? !0 }),
         id: n ? void 0 : t,
         children: e.children,
     });
 }
-function P(e) {
-    let { className: t, children: n, scrollerRef: i, scrollbarType: r, ...a } = e,
-        o = (function (e) {
+function M(e) {
+    let { className: t, children: n, scrollerRef: i, scrollbarType: r, ...s } = e,
+        l = (function (e) {
             switch (e ?? "thin") {
                 case "auto":
-                    return p.Gt;
+                    return I.Gt;
                 case "none":
-                    return p.zC;
+                    return I.zC;
                 default:
-                    return p.Ch;
+                    return I.Ch;
             }
         })(r);
-    return (0, s.jsx)(o, {
+    return (0, a.jsx)(l, {
         "data-migration-pending": !0,
-        className: l()(v.Qs, t),
+        className: o()(R.Qs, t),
         ref: i,
-        ...a,
-        children: (0, s.jsx)(I.F, { children: n }),
+        ...s,
+        children: (0, a.jsx)(m.F, { children: n }),
     });
 }
-function w(e) {
-    return (0, s.jsx)(S.A, {
+function P(e) {
+    return (0, a.jsx)(S.A, {
         grow: 0,
         shrink: 0,
         direction: e.direction ?? S.A.Direction.HORIZONTAL_REVERSE,
         justify: e.justify ?? S.A.Justify.START,
         align: e.align ?? S.A.Align.STRETCH,
         wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: l()(v.qr, e.className, { [v.h0]: e.separator ?? !0 }),
-        children: (0, s.jsx)(I.F, { children: e.children }),
+        className: o()(R.qr, e.className, { [R.h0]: e.separator ?? !0 }),
+        children: (0, a.jsx)(m.F, { children: e.children }),
     });
 }
-function M(e) {
-    return (0, s.jsx)(g.$n, {
+function U(e) {
+    return (0, a.jsx)(p.$n, {
         "data-migration-pending": !0,
         focusProps: e.focusProps,
-        "aria-label": y.intl.string(y.t.cpT0Cq),
-        look: g.$n.Looks.BLANK,
-        size: g.$n.Sizes.NONE,
+        "aria-label": O.intl.string(O.t.cpT0Cq),
+        look: p.$n.Looks.BLANK,
+        size: p.$n.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: l()(e.innerClassName, { [v.Xk]: e.withCircleBackground }),
-        className: l()(e.className, { [v.zB]: e.hideOnFullscreen, [v.VN]: !e.withCircleBackground }),
-        children: (0, s.jsx)(_.P, { size: "md", color: "currentColor", className: l()(e.innerClassName, v.ut) }),
+        innerClassName: o()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
+        className: o()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),
+        children: (0, a.jsx)(_.P, { size: "md", color: "currentColor", className: o()(e.innerClassName, R.ut) }),
     });
 }
-function x(e) {
+function w(e) {
     let { className: t, scrollerRef: n, ...i } = e;
-    return (0, s.jsx)(m.OZ, { className: t, ref: n, ...i });
+    return (0, a.jsx)(f.OZ, { className: t, ref: n, ...i });
 }

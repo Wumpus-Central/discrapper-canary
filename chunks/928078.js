@@ -37,7 +37,7 @@ var l = n(627968),
     U = n(355622),
     w = n(408018);
 n(321073), n(323874), n(14289), n(35956);
-var F = n(183812),
+var F = n(4798),
     H = n(132500),
     B = n(661531),
     V = n(717421),
@@ -246,8 +246,8 @@ let eO = i.memo(
                 ),
             }),
             {
-                expressionPickerView: e8,
-                shouldHideExpressionPicker: e5,
+                expressionPickerView: e5,
+                shouldHideExpressionPicker: e8,
                 handleOuterClick: e6,
             } = (0, eN.MD)(f, el, A.id),
             { handleAutocompleteVisibilityChange: e9 } = (0, eN.uW)(f, A.id),
@@ -482,7 +482,7 @@ let eO = i.memo(
                                 canSendStickers: !0,
                                 textValue: s,
                                 focused: C,
-                                expressionPickerView: e8,
+                                expressionPickerView: e5,
                                 type: f,
                                 editorRef: el,
                                 onSendMessage: eJ,
@@ -494,7 +494,7 @@ let eO = i.memo(
                             }),
                         ],
                     }),
-                    e5
+                    e8
                         ? null
                         : (0, l.jsx)(eu.A, {
                               positionTargetRef: ee,
@@ -721,17 +721,17 @@ var e0 = n(206835),
     e3 = n(229527),
     e4 = n(340837),
     e7 = n(355097),
-    e8 = n(38241);
-function e5(e) {
+    e5 = n(38241);
+function e8(e) {
     let { guild: t } = e,
         n = (0, e0.A)({ scrollPosition: e7._F.GUILD_TAG });
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(eQ, {
-            bannerIcon: (0, l.jsx)(eY._, { size: "lg", color: "currentColor", className: e8.q3 }),
+            bannerIcon: (0, l.jsx)(eY._, { size: "lg", color: "currentColor", className: e5.q3 }),
             bannerHeader: eD.intl.format(eD.t.GgMwjk, { guildName: t?.name ?? "" }),
             bannerSubtext: eD.intl.string(eD.t.ONjwD5),
-            textStyles: e8.cI,
-            headerStyles: e8.U_,
+            textStyles: e5.cI,
+            headerStyles: e5.U_,
             children: (0, l.jsx)(z.$, {
                 variant: "primary",
                 size: "sm",
@@ -749,11 +749,11 @@ function e6(e) {
         r = s ? eD.intl.string(eD.t["/PGQf0"]) : eD.intl.string(eD.t.WikgZ1);
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(eQ, {
-            bannerIcon: (0, l.jsx)(eY._, { size: "lg", color: "currentColor", className: e8.q3 }),
+            bannerIcon: (0, l.jsx)(eY._, { size: "lg", color: "currentColor", className: e5.q3 }),
             bannerHeader: eD.intl.format(eD.t.kcYdTq, { guildName: t?.name ?? "" }),
             bannerSubtext: a,
-            textStyles: e8.cI,
-            headerStyles: e8.U_,
+            textStyles: e5.cI,
+            headerStyles: e5.U_,
             children: (0, l.jsx)(z.$, {
                 variant: "primary",
                 size: "sm",
@@ -775,7 +775,7 @@ function e9(e) {
     return n.has(e4.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(e4.D.AUTOMOD_QUARANTINED_BIO)
         ? (0, l.jsx)(e6, { guild: t })
         : n.has(e4.D.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, l.jsx)(e5, { guild: t })
+          ? (0, l.jsx)(e8, { guild: t })
           : (0, l.jsx)(e6, { guild: t });
 }
 var te = n(554146),
@@ -1062,12 +1062,12 @@ let t7 = function (e, t) {
         l = (0, h.bG)([ta.A], () => ta.A.getMessages(t.id).length > 0, [t]);
     return null != e && e.hasFlag(eM.nhx.QUARANTINED) && n && !l;
 };
-var t8 = n(831502);
-let t5 = function () {
+var t5 = n(831502);
+let t8 = function () {
     return (0, l.jsx)(eQ, {
         bannerIcon: (0, l.jsx)(t3.M, { alt: "", width: 80, height: 40 }),
         bannerHeader: eD.intl.string(eD.t.EouHwv),
-        bannerSubtext: eD.intl.format(eD.t.PThBel, { appealLink: t8.q }),
+        bannerSubtext: eD.intl.format(eD.t.PThBel, { appealLink: t5.q }),
     });
 };
 var t6 = n(118517),
@@ -1675,7 +1675,7 @@ class nZ extends i.PureComponent {
             : this.props.restrictedPreview && t.type === eM.rbe.DM
               ? (0, l.jsx)(nH, { channel: t })
               : t.type === eM.rbe.DM && n
-                ? (0, l.jsx)(t5, {})
+                ? (0, l.jsx)(t8, {})
                 : t.isModeratorReportChannel() && t.isArchivedThread()
                   ? (0, l.jsx)(nl, { channelId: t.id })
                   : null != s && (0, tg.n)(s) && null != i && !tr.A.can(eM.xBc.ADMINISTRATOR, i)
