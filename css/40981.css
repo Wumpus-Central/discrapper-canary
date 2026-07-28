@@ -84,6 +84,11 @@
     color: var(--text-feedback-positive)
 }
 
+.collectiblesGradient__3e43f {
+    background: linear-gradient(90deg, #212259, #343d88);
+    color: var(--text-overlay-light)
+}
+
 .customGraphicContainer__3e43f {
     flex-shrink: 0
 }

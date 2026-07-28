@@ -22,6 +22,7 @@ class _ extends u.A {
     tenantMetadata;
     static createFromServer(e) {
         var t, n, i;
+        let r, a;
         return new _({
             id: e.id,
             applicationId: e.application_id,
@@ -59,29 +60,36 @@ class _ extends u.A {
                           collectibles:
                               null != (n = e.tenant_metadata).collectibles
                                   ? ((i = n.collectibles),
-                                    {
-                                        reward:
-                                            i.reward?.storefront?.nagbar != null
-                                                ? {
-                                                      storefront: {
-                                                          nagbar: {
-                                                              headerText:
-                                                                  i.reward.storefront.nagbar.header_text ?? void 0,
-                                                              cta:
-                                                                  null != i.reward.storefront.nagbar.cta
-                                                                      ? {
-                                                                            text:
-                                                                                i.reward.storefront.nagbar.cta.text ??
-                                                                                void 0,
-                                                                        }
-                                                                      : void 0,
-                                                              helpCenterId:
-                                                                  i.reward.storefront.nagbar.help_center_id ?? void 0,
-                                                          },
-                                                      },
-                                                  }
-                                                : void 0,
-                                    })
+                                    (r = i.reward?.storefront?.nagbar),
+                                    (a = i.reward?.checkout?.offer_notice),
+                                    null == r && null == a
+                                        ? {}
+                                        : {
+                                              reward: {
+                                                  storefront:
+                                                      null != r
+                                                          ? {
+                                                                nagbar: {
+                                                                    headerText: r.header_text ?? void 0,
+                                                                    cta:
+                                                                        null != r.cta
+                                                                            ? { text: r.cta.text ?? void 0 }
+                                                                            : void 0,
+                                                                    helpCenterId: r.help_center_id ?? void 0,
+                                                                },
+                                                            }
+                                                          : void 0,
+                                                  checkout:
+                                                      null != a
+                                                          ? {
+                                                                offerNotice: {
+                                                                    icon: a.icon ?? void 0,
+                                                                    text: a.text ?? void 0,
+                                                                },
+                                                            }
+                                                          : void 0,
+                                              },
+                                          })
                                   : void 0,
                       }
                     : null,
