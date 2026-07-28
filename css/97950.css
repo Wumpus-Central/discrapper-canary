@@ -117,6 +117,10 @@ html:not(.keyboard-mode) .container__3d96b {
     position: absolute
 }
 
+.itemWrapperClosed_ded7b4 {
+    pointer-events: none
+}
+
 .item_ded7b4 {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
