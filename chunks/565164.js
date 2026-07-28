@@ -1,16 +1,25 @@
 "use strict";
-n.d(t, { B8: () => _, wb: () => E, z5: () => u }), n(321073);
+n.d(t, { B8: () => A, wb: () => h, xx: () => _, z5: () => E }), n(321073);
 var i = n(627968),
     r = n(64700),
     a = n(61491),
     s = n(834730),
-    l = n(984212),
-    o = n(491691);
-let d = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
-    c = [];
-function u(e, t, n, i) {
+    l = n(584669),
+    o = n(984212),
+    d = n(491691);
+let c = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
+    u = [];
+function _(e) {
+    let t = e.match(c);
+    if (null == t) return null;
+    let n = e.split("#")[0];
+    return 0 === n.length
+        ? null
+        : { imageUrl: n, x: parseInt(t[1], 10), y: parseInt(t[2], 10), w: parseInt(t[3], 10), h: parseInt(t[4], 10) };
+}
+function E(e, t, n, i) {
     let [a, s] = r.useState(null),
-        [o, u] = r.useState(null);
+        [l, d] = r.useState(null);
     return (
         r.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
@@ -28,21 +37,8 @@ function u(e, t, n, i) {
                     r = [];
                 for (let e = 0; e < t.length; e++) {
                     let n = t[e];
-                    if (!(0, l.C)(n)) continue;
-                    let i = (function (e) {
-                        let t = e.match(d);
-                        if (null == t) return null;
-                        let n = e.split("#")[0];
-                        return 0 === n.length
-                            ? null
-                            : {
-                                  imageUrl: n,
-                                  x: parseInt(t[1], 10),
-                                  y: parseInt(t[2], 10),
-                                  w: parseInt(t[3], 10),
-                                  h: parseInt(t[4], 10),
-                              };
-                    })(n.text);
+                    if (!(0, o.C)(n)) continue;
+                    let i = _(n.text);
                     null != i && r.push({ startSec: n.startTime, endSec: n.endTime, ...i });
                 }
                 r.sort((e, t) => e.startSec - t.startSec), s({ url: n, cues: r });
@@ -52,17 +48,17 @@ function u(e, t, n, i) {
             if (null == i || 0 === i.length || !e) return;
             let t = new Image();
             return (
-                (t.onload = () => u(i)),
+                (t.onload = () => d(i)),
                 (t.src = i),
                 () => {
                     t.onload = null;
                 }
             );
         }, [i, e]),
-        null != a && a?.url === n && o === i ? a.cues : c
+        null != a && a?.url === n && l === i ? a.cues : u
     );
 }
-function _(e, t) {
+function A(e, t) {
     if (0 === e.length) return null;
     let n = 0,
         i = e.length - 1;
@@ -77,30 +73,21 @@ function _(e, t) {
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
-function E(e) {
-    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: l } = e;
+function h(e) {
+    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: o } = e;
     if (t.w <= 0 || t.h <= 0) return null;
-    let d = t.w / 2,
-        c = 8 + d,
-        u = Math.max(c, l - 8 - d),
-        _ = Math.max(c, Math.min(r, u));
+    let c = t.w / 2,
+        u = 8 + c,
+        _ = Math.max(u, o - 8 - c),
+        E = Math.max(u, Math.min(r, _));
     return (0, i.jsxs)("div", {
-        className: o.kL,
+        className: d.kL,
         "aria-hidden": !0,
-        style: { left: `${_}px`, bottom: "16px", width: `${t.w}px` },
+        style: { left: `${E}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, i.jsx)("div", {
-                className: o.FF,
-                style: {
-                    width: `${t.w}px`,
-                    height: `${t.h}px`,
-                    backgroundImage: `url(${t.imageUrl})`,
-                    backgroundPosition: `-${t.x}px -${t.y}px`,
-                    backgroundRepeat: "no-repeat",
-                },
-            }),
+            (0, i.jsx)("div", { className: d.FF, style: (0, l.u)(t) }),
             (0, i.jsx)(s.E, {
-                className: o.Sp,
+                className: d.Sp,
                 variant: "text-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,
