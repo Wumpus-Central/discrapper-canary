@@ -134,7 +134,9 @@ function M(e) {
             l({ action: "PRESS_ADD_WIDGET" }),
                 (0, y.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("30794"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("8888"), i.e("22420"), i.e("26623")]).then(
+                            i.bind(i, 850370),
+                        );
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: l });
                     },
                     { stackingBehavior: "stack" },
@@ -824,8 +826,8 @@ function e7(e) {
         );
     return (0, n.jsx)(e5, { games: l, onClick: d, ...i });
 }
-var e3 = i(344287);
-function e6(e) {
+var e6 = i(344287);
+function e3(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case T.x.FAVORITE_GAMES:
@@ -866,7 +868,7 @@ function e9(e) {
         f = (0, Q.FM)(t, { showEditingControls: g }),
         h = (0, Q.uA)(t),
         I = 1 === (0, Q.cv)(t.type);
-    return (0, n.jsx)(e6, {
+    return (0, n.jsx)(e3, {
         widget: t,
         user: i,
         allowEditing: l,
@@ -883,7 +885,7 @@ function e9(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e3.r }),
+        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e6.r }),
         ...o,
     });
 }

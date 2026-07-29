@@ -1390,7 +1390,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 585679, Version Hash: a073d2fbbfc4e744d17abb7159c4869354e2f7a6`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 585759, Version Hash: 6b9b280a50e5112361e29e4596f16e2f4ba6136f`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -18255,7 +18255,7 @@ let gB = "isHideDevBanner",
                     className: to()(gV.Wz, gV.mr),
                     children: [
                         (0, O.jsx)(gF, { className: gV.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "585679" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "585759" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -34515,7 +34515,7 @@ let bC = new eW.A("RPCServer:PostMessage"),
         transports: [bO],
         registerTransportsForEmbeddedPlatform: function () {
             ex.Ay.ensureModule("discord_rpc").then(() => {
-                for (let e of [n(33006).A, n(998921).A]) vI.A.registerTransport(e);
+                for (let e of [n(33006).default, n(998921).A]) vI.A.registerTransport(e);
             });
         },
     },
@@ -39590,13 +39590,14 @@ let ws = (0, tH.Fe)({
             n.e("63309"),
             n.e("65836"),
             n.e("20516"),
+            n.e("22420"),
             n.e("15046"),
             n.e("23707"),
             n.e("90797"),
             n.e("34486"),
             n.e("86381"),
             n.e("50652"),
-            n.e("32910"),
+            n.e("22388"),
             n.e("23854"),
             n.e("77454"),
             n.e("3370"),

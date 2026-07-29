@@ -1,95 +1,94 @@
-"use strict";
 n.d(t, {
-    BB: () => X,
-    B_: () => Y,
+    BB: () => K,
+    B_: () => B,
     D2: () => ee,
-    Gc: () => B,
-    IR: () => H,
-    LP: () => j,
-    SK: () => W,
+    Gc: () => U,
+    IR: () => Y,
+    LP: () => x,
+    SK: () => F,
     SN: () => G,
-    Ub: () => Q,
-    Yj: () => F,
-    e2: () => q,
-    hk: () => k,
-    lG: () => J,
-    px: () => K,
-    qG: () => V,
-    sq: () => Z,
-    uM: () => z,
+    Ub: () => X,
+    Yj: () => j,
+    e2: () => Q,
+    hk: () => M,
+    lG: () => Z,
+    px: () => H,
+    qG: () => q,
+    sq: () => W,
+    uM: () => J,
 }),
     n(321073),
     n(938796),
-    n(735438);
-var i = n(567243),
-    r = n(179771),
-    s = n(636537),
-    a = n(898467),
-    o = n(493336),
-    l = n(956518),
-    u = n(587895),
-    c = n(46054),
+    n(435558);
+var o = n(567243),
+    i = n(179771),
+    r = n(562465),
+    s = n(898467),
+    l = n(148494),
+    c = n(956518),
+    a = n(587895),
+    u = n(46054),
     d = n(763754),
-    _ = n(395671),
-    h = n(95701),
-    f = n(889227),
-    p = n(734057),
-    E = n(71393),
-    m = n(394459),
+    h = n(395671),
+    p = n(95701),
+    _ = n(889227),
+    A = n(734057),
+    m = n(71393),
+    f = n(293246),
     g = n(232835),
-    A = n(290863),
-    I = n(287809),
-    T = n(977997),
-    S = n(927813),
-    y = n(562153),
-    C = n(257120),
-    N = n(998218),
-    v = n(636401),
-    R = n(639621),
-    O = n(613057),
-    b = n(652215);
-let D = N.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
-    L = (function () {
-        let e = D.split(":")[0];
+    I = n(290863),
+    v = n(287809),
+    E = n(977997),
+    y = n(927813),
+    C = n(562153),
+    O = n(257120),
+    w = n(998218),
+    S = n(636401),
+    N = n(639621),
+    k = n(613057),
+    L = n(652215);
+let T = w.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
+    R = (function () {
+        let e = T.split(":")[0];
         if (!e.includes(".")) return e;
         let t = e.split("."),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join(".");
     })(),
-    w = RegExp(`^${C.A.escape("https://")}(?:[a-z]+\\.)?(${C.A.escape(L)}|discordapp.com|discord.com)$`),
-    M = +S.A.Millis.MINUTE,
+    b = RegExp(`^${O.A.escape("https://")}(?:[a-z]+\\.)?(${O.A.escape(R)}|discordapp.com|discord.com)$`),
+    D = +y.A.Millis.MINUTE,
     P = {};
-function x(e) {
+function $(e) {
     return (
         "customEmoji" === e.type && (e.type = "emoji"),
-        "emoji" === e.type && e.src && (e.src = k(e.src)),
-        Array.isArray(e.content) && (e.content = e.content.map(x)),
+        "emoji" === e.type && e.src && (e.src = M(e.src)),
+        Array.isArray(e.content) && (e.content = e.content.map($)),
         e
     );
 }
-function k(e) {
+function M(e) {
     return /^http/.test(e) ? e : `${location.protocol}//${location.host}${"/" === e.charAt(0) ? "" : "/"}${e}`;
 }
-function U(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return t.indexOf(e) > -1;
 }
 function G(e, t) {
     let n = [],
-        i = e.getGuildId();
+        o = e.getGuildId();
     return (
-        [b.rbe.GUILD_CATEGORY, ...h.OU].includes(e.type) ||
+        [L.rbe.GUILD_CATEGORY, ...p.OU].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    g.A.whenReady(e.id, () => t()), o.A.fetchMessages({ channelId: e.id, limit: b.EMb });
+                    g.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: L.EMb });
                 }),
             ),
         Promise.all(n).then(() => {
             let n =
-                    (!e.isNSFW() || I.default.getCurrentUser()?.nsfwAllowed === !0) && t
-                        ? g.A.getMessages(e.id).toArray().map(F)
+                    (!e.isNSFW() || v.default.getCurrentUser()?.nsfwAllowed === !0) && t
+                        ? g.A.getMessages(e.id).toArray().map(j)
                         : [],
-                r = Object.values(T.A.getVoiceStatesForChannel(e.id)).map((t) => V(i, e.id, t));
+                i = Object.values(E.A.getVoiceStatesForChannel(e.id)).map((t) => q(o, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -97,27 +96,27 @@ function G(e, t) {
                 topic: e.topic,
                 bitrate: e.bitrate,
                 user_limit: e.userLimit,
-                guild_id: i,
+                guild_id: o,
                 position: e.position,
                 messages: n,
-                voice_states: r,
+                voice_states: i,
             };
         })
     );
 }
-function F(e) {
-    let t = c.A.parseToAST(e.content, !0, { channelId: e.channel_id }).map(x),
-        n = p.A.getChannel(e.channel_id),
-        i = null != e.author ? new f.A(e.author) : void 0,
-        r = null != e.author ? (0, d.FT)(i, n) : void 0;
+function j(e) {
+    let t = u.A.parseToAST(e.content, !0, { channelId: e.channel_id }).map($),
+        n = A.A.getChannel(e.channel_id),
+        o = null != e.author ? new _.A(e.author) : void 0,
+        i = null != e.author ? (0, d.FT)(o, n) : void 0;
     return {
         id: e.id,
         blocked: e.blocked,
         bot: e.bot,
         content: e.content,
         content_parsed: t.length ? t : void 0,
-        nick: r?.nick,
-        author_color: r?.colorString,
+        nick: i?.nick,
+        author_color: i?.colorString,
         edited_timestamp: e.edited_timestamp || e.editedTimestamp,
         timestamp: e.timestamp,
         tts: e.tts,
@@ -126,118 +125,118 @@ function F(e) {
         mention_roles: e.mention_roles || e.mentionRoles,
         embeds: e.embeds,
         attachments: e.attachments,
-        author: null != i ? (0, R.A)(i) : void 0,
+        author: null != o ? (0, N.A)(o) : void 0,
         pinned: e.pinned,
         type: e.type,
     };
 }
-function V(e, t, n) {
-    let { mute: i, deaf: r, selfMute: s, selfDeaf: a, suppress: o, userId: l } = n,
-        u = I.default.getUser(l);
-    if (null == u) throw Error(`Invalid user id: ${l}`);
+function q(e, t, n) {
+    let { mute: o, deaf: i, selfMute: r, selfDeaf: s, suppress: l, userId: c } = n,
+        a = v.default.getUser(c);
+    if (null == a) throw Error(`Invalid user id: ${c}`);
     return {
-        nick: y.Ay.getName(e, t, u),
-        mute: m.Ay.isLocalMute(u.id),
-        volume: m.Ay.getLocalVolume(u.id),
-        pan: m.Ay.getLocalPan(u.id),
-        voice_state: { mute: i, deaf: r, self_mute: s, self_deaf: a, suppress: o },
-        user: (0, R.A)(u),
+        nick: C.Ay.getName(e, t, a),
+        mute: f.Ay.isLocalMute(a.id),
+        volume: f.Ay.getLocalVolume(a.id),
+        pan: f.Ay.getLocalPan(a.id),
+        voice_state: { mute: o, deaf: i, self_mute: r, self_deaf: s, suppress: l },
+        user: (0, N.A)(a),
     };
 }
-function B(e, t) {
-    return { type: e, user: (0, R.A)(t), presence: { status: A.A.getStatus(t.id, null), activity: null } };
+function U(e, t) {
+    return { type: e, user: (0, N.A)(t), presence: { status: I.A.getStatus(t.id, null), activity: null } };
 }
-function j(e, t) {
+function x(e, t) {
     return null == t
         ? e
-        : { ...e, presence: { ...e.presence, activity: A.A.getApplicationActivity(e.user.id, t) ?? null } };
+        : { ...e, presence: { ...e.presence, activity: I.A.getApplicationActivity(e.user.id, t) ?? null } };
 }
-function H(e) {
+function Y(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
     if (e === n) return !0;
     try {
-        t = i.parse(e).hostname;
+        t = o.parse(e).hostname;
     } catch (e) {
         return !1;
     }
     return (
         (window.location.hostname === t && "localhost" === t) ||
-        (null == e.match("staging") && !!(w.test(e) && w.test(n)))
+        (null == e.match("staging") && !!(b.test(e) && b.test(n)))
     );
 }
-function Y(e, t, n) {
-    let i = E.A.getGuild(e.getGuildId());
-    return (null != i ? i.application_id : e.getApplicationId()) === t || n.indexOf(r.F.MESSAGES_READ) > -1;
+function B(e, t, n) {
+    let o = m.A.getGuild(e.getGuildId());
+    return (null != o ? o.application_id : e.getApplicationId()) === t || n.indexOf(i.F.MESSAGES_READ) > -1;
 }
-function W(e) {
+function F(e) {
     switch (e) {
-        case b.S7L.RTC_CONNECTED:
-        case b.S7L.RTC_CONNECTING:
-        case b.S7L.RTC_DISCONNECTED:
+        case L.S7L.RTC_CONNECTED:
+        case L.S7L.RTC_CONNECTING:
+        case L.S7L.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, "VOICE_");
         default:
             return e;
     }
 }
-function K(e, t, n) {
-    return e === b.xL.JOIN && null != t && null != t.id && null != n.join;
+function H(e, t, n) {
+    return e === L.xL.JOIN && null != t && null != t.id && null != n.join;
 }
-function $(e) {
-    return s.Bo.get({ url: b.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
+function z(e) {
+    return r.Bo.get({ url: L.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
         (e) => {
             let { body: t } = e;
             return t;
         },
         () => {
-            throw new v.A({ closeCode: b.YI$.INVALID_CLIENTID }, "Invalid Client ID");
+            throw new S.A({ closeCode: L.YI$.INVALID_CLIENTID }, "Invalid Client ID");
         },
     );
 }
-async function z(e, t, n) {
-    let i = u.A.getApplication(t);
+async function J(e, t, n) {
+    let o = a.A.getApplication(t);
     if ("string" == typeof n)
-        if (e.transport === O.z4.POST_MESSAGE) {
-            let e = (0, l.Ay)(t);
-            if (null == e || !U(n, [e])) throw new v.A({ closeCode: b.YI$.INVALID_ORIGIN }, "Invalid Origin");
+        if (e.transport === k.z4.POST_MESSAGE) {
+            let e = (0, c.Ay)(t);
+            if (null == e || !V(n, [e])) throw new S.A({ closeCode: L.YI$.INVALID_ORIGIN }, "Invalid Origin");
         } else {
-            let e = await $(t);
-            if (((i = _.Ay.createFromServer(e)), !U(n, e.rpc_origins)))
-                throw new v.A({ closeCode: b.YI$.INVALID_ORIGIN }, "Invalid Origin");
+            let e = await z(t);
+            if (((o = h.Ay.createFromServer(e)), !V(n, e.rpc_origins)))
+                throw new S.A({ closeCode: L.YI$.INVALID_ORIGIN }, "Invalid Origin");
         }
-    null == i && (i = _.Ay.createFromServer(await $(t)));
-    let { id: r, name: s, icon: a, coverImage: o, flags: c, parentId: d } = i;
-    e.application = { id: r, parentId: d, name: s, icon: a, coverImage: o, flags: c };
+    null == o && (o = h.Ay.createFromServer(await z(t)));
+    let { id: i, name: r, icon: s, coverImage: l, flags: u, parentId: d } = o;
+    e.application = { id: i, parentId: d, name: r, icon: s, coverImage: l, flags: u };
 }
-async function q(e, t, n) {
-    let i = P[e];
-    null == i && ((i = new a.A(t ? 2 : 60, M)), (P[e] = i));
+async function Q(e, t, n) {
+    let o = P[e];
+    null == o && ((o = new s.A(t ? 2 : 60, D)), (P[e] = o));
     try {
-        await i.process(n);
+        await o.process(n);
     } catch (e) {
-        throw new v.A({ closeCode: b.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
+        throw new S.A({ closeCode: L.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
     }
 }
-function Z(e, t) {
-    null == t && (e.authorization.scopes = [O.hj]);
+function W(e, t) {
+    null == t && (e.authorization.scopes = [k.hj]);
 }
-function X(e) {
-    let t = m.Ay.getSettings();
+function K(e) {
+    let t = f.Ay.getSettings();
     function n(e) {
         return Object.values(e)
             .sort((e, t) => e.index - t.index)
             .map((e) => ({ id: e.id, name: e.name }));
     }
-    let i = e(t);
+    let o = e(t);
     return {
-        input: { available_devices: n(m.Ay.getInputDevices()), device_id: t.inputDeviceId, volume: t.inputVolume },
-        output: { available_devices: n(m.Ay.getOutputDevices()), device_id: t.outputDeviceId, volume: t.outputVolume },
+        input: { available_devices: n(f.Ay.getInputDevices()), device_id: t.inputDeviceId, volume: t.inputVolume },
+        output: { available_devices: n(f.Ay.getOutputDevices()), device_id: t.outputDeviceId, volume: t.outputVolume },
         mode: {
             type: t.mode,
             auto_threshold: t.modeOptions.autoThreshold,
             threshold: t.modeOptions.threshold,
-            shortcut: i,
+            shortcut: o,
             delay: t.modeOptions.delay,
         },
         automatic_gain_control: t.automaticGainControl,
@@ -249,22 +248,22 @@ function X(e) {
         mute: t.mute,
     };
 }
-function Q(e, t) {
-    let n = m.Ay.getSettings(e),
-        i = t(n);
+function X(e, t) {
+    let n = f.Ay.getSettings(e),
+        o = t(n);
     return {
-        input_mode: { type: n.mode, shortcut: i },
+        input_mode: { type: n.mode, shortcut: o },
         local_mutes: Object.keys(n.localMutes),
         local_volumes: n.localVolumes,
         self_mute: n.mute,
         self_deaf: n.deaf,
     };
 }
-function J(e) {
-    if (e !== O.z4.POST_MESSAGE)
-        throw new v.A({ errorCode: b.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
+function Z(e) {
+    if (e !== k.z4.POST_MESSAGE)
+        throw new S.A({ errorCode: L.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
 }
 function ee(e) {
-    if (null == e.id) throw new v.A({ errorCode: b.Lw6.INVALID_COMMAND }, "Invalid application");
+    if (null == e.id) throw new S.A({ errorCode: L.Lw6.INVALID_COMMAND }, "Invalid application");
     return e.id;
 }

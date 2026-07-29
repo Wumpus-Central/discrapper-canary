@@ -1,0 +1,101 @@
+.options_e2762c {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.container__09e56 {
+    display: flex;
+    flex-direction: column
+}
+
+.container__09e56,
+.grid__09e56 {
+    gap: var(--space-12)
+}
+
+.grid__09e56 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%
+}
+
+.grid__09e56>* {
+    min-width: 0
+}
+
+.grid__09e56.dense__09e56 {
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.noResults__09e56 {
+    margin: var(--space-64) auto;
+    text-align: center
+}
+
+.body_b6c448 {
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex: 1 1 auto;
+    height: 540px;
+    margin-bottom: calc(var(--space-16)*-1);
+    margin-top: var(--space-4);
+    min-height: 0
+}
+
+.nav_b6c448 {
+    border-inline-end: 1px solid var(--border-subtle);
+    flex: 0 0 180px;
+    padding: var(--space-24) var(--space-16)
+}
+
+.nav_b6c448 .navItem_b6c448[role=tab] {
+    border-radius: var(--radius-sm);
+    line-height: 24px;
+    padding-bottom: var(--space-8);
+    padding-inline-end: var(--space-12);
+    padding-top: var(--space-8);
+    padding-inline-start: var(--space-8)
+}
+
+.navItem_b6c448[aria-selected=true] {
+    background-color: var(--background-mod-normal) !important
+}
+
+.navItem_b6c448[aria-selected=true]:hover {
+    background-color: var(--background-mod-strong) !important
+}
+
+.navItem_b6c448:not([aria-selected=true]):hover {
+    background-color: var(--interactive-background-hover) !important
+}
+
+.content_b6c448 {
+    display: flex
+}
+
+.content_b6c448,
+.scroller_b6c448 {
+    flex: 1 1 auto;
+    min-height: 0
+}
+
+.paneInner_b6c448 {
+    padding-bottom: var(--space-12);
+    padding-inline-end: var(--space-8);
+    padding-top: var(--space-24);
+    padding-inline-start: var(--space-24)
+}
+
+.categoryEmptyState_b6c448 {
+    padding-bottom: 0;
+    padding-top: var(--space-64);
+    padding-inline: var(--space-48);
+    text-align: center
+}
+
+.interestsList_b6c448 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}

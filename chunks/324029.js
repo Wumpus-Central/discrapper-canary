@@ -1,75 +1,75 @@
 "use strict";
-n.d(t, { JX: () => g, se: () => f, v_: () => T, xp: () => I, yR: () => m });
+n.d(t, { JX: () => m, se: () => I, v_: () => p, xp: () => h, yR: () => T });
 var i = n(240899),
     r = n(626584),
     a = n(723702),
     s = n(19575),
-    l = n(33006),
-    o = n(264572).Buffer;
-let d = new r.A("RPCServer:CS2GSI"),
+    l = n(264572).Buffer;
+let o = new r.A("RPCServer:CS2GSI"),
+    d = null,
     c = null,
-    u = null,
-    _ = 0,
-    E = null;
-function A() {
+    u = 0,
+    _ = null;
+function E() {
     let e = s.Ay.releaseChannel;
     return "" === e ? "stable" : e;
 }
-function h() {
-    return `/cs2-gsi-${A()}`;
+function A() {
+    return `/cs2-gsi-${E()}`;
 }
-function I(e) {
-    return e === h();
+function h(e) {
+    return e === A();
 }
-async function f(e) {
+async function I(e) {
     i.A.getConfig({ location: "gsi config install" }).enableCs2Gsi &&
-        (null != E && (await E),
-        (E = (async () => {
+        (null != _ && (await _),
+        (_ = (async () => {
             if (!(0, a.isWindows)()) return;
             if (!e) {
-                c = null;
-                let e = await s.Ay.deleteCs2GsiConfig(A());
-                d.info(`GSI config removal ${e ? "succeeded" : "failed"}`);
+                d = null;
+                let e = await s.Ay.deleteCs2GsiConfig(E());
+                o.info(`GSI config removal ${e ? "succeeded" : "failed"}`);
                 return;
             }
-            let t = l.A.getPort();
-            if (null == t) return void d.info("RPC server not ready yet; deferring GSI config install");
-            c = (await s.Ay.readCs2GsiToken(A())) ?? window.crypto.randomUUID().replace(/-/g, "");
-            let n = `http://127.0.0.1:${t}${h()}`;
+            let { default: t } = await n.e("6787").then(n.bind(n, 33006)),
+                i = t.getPort();
+            if (null == i) return void o.info("RPC server not ready yet; deferring GSI config install");
+            d = (await s.Ay.readCs2GsiToken(E())) ?? window.crypto.randomUUID().replace(/-/g, "");
+            let r = `http://127.0.0.1:${i}${A()}`;
             try {
-                let e = await s.Ay.writeCs2GsiConfig(n, c, A());
-                d.info(`GSI config install ${e ? "succeeded" : "skipped"}`);
+                let e = await s.Ay.writeCs2GsiConfig(r, d, E());
+                o.info(`GSI config install ${e ? "succeeded" : "skipped"}`);
             } catch (e) {
-                d.warn("GSI config install failed", e);
+                o.warn("GSI config install failed", e);
             }
         })()),
-        await E);
+        await _);
 }
-function p(e, t) {
+function f(e, t) {
     e.setHeader("Connection", "close"), e.writeHead(t), e.end();
 }
-function T(e) {
-    (u = e), (_ = 0);
+function p(e) {
+    (c = e), (u = 0);
 }
-function m() {
-    u = null;
+function T() {
+    c = null;
 }
-function g(e, t) {
-    let n = u;
-    if (null == n) return void p(t, 403);
-    if (null == c) return void p(t, 503);
+function m(e, t) {
+    let n = c;
+    if (null == n) return void f(t, 403);
+    if (null == d) return void f(t, 503);
     let i = e.headers();
-    if (!(i["user-agent"] ?? "").startsWith("Valve/Steam HTTP Client")) return void p(t, 403);
+    if (!(i["user-agent"] ?? "").startsWith("Valve/Steam HTTP Client")) return void f(t, 403);
     let r = Number(i["content-length"] ?? NaN);
-    if (!Number.isFinite(r) || r > 524288) return void p(t, 413);
+    if (!Number.isFinite(r) || r > 524288) return void f(t, 413);
     let a = "",
         s = 0,
-        l = !1;
+        _ = !1;
     e.on("data", (e) => {
-        if (l) return;
+        if (_) return;
         let n = String(e);
-        if ((s += o.byteLength(n)) > 524288) {
-            (l = !0), p(t, 413);
+        if ((s += l.byteLength(n)) > 524288) {
+            (_ = !0), f(t, 413);
             return;
         }
         a += n;
@@ -77,24 +77,24 @@ function g(e, t) {
         e.on("error", () => {}),
         e.on("end", () => {
             let e;
-            if (!l) {
+            if (!_) {
                 try {
                     e = JSON.parse(a);
                 } catch (e) {
-                    p(t, 400);
+                    f(t, 400);
                     return;
                 }
-                if ("string" != typeof e?.auth?.token || e.auth.token !== c) {
-                    ++_ >= 5 &&
-                        (d.warn("Too many bad GSI requests; unregistering handler for this session"), (u = null)),
-                        p(t, 401);
+                if ("string" != typeof e?.auth?.token || e.auth.token !== d) {
+                    ++u >= 5 &&
+                        (o.warn("Too many bad GSI requests; unregistering handler for this session"), (c = null)),
+                        f(t, 401);
                     return;
                 }
                 t.writeHead(200), t.end();
                 try {
                     n(e);
                 } catch (e) {
-                    d.warn("GSI payload handler threw", e);
+                    o.warn("GSI payload handler threw", e);
                 }
             }
         });

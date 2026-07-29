@@ -5458,6 +5458,22 @@
     }
   },
   {
+    "name": "2026-07-gdop-discovery",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-07-gsimagic",
     "defaultConfig": {

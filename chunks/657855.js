@@ -163,38 +163,39 @@ function y(a) {
             loading: v = !1,
             trackUserProfileEditAction: R,
             isHighlighted: _ = !1,
+            hideApplicationWidgetStatus: f = !1,
         } = a,
-        { placeholder: f, getAriaLabel: P, icon: T } = w[e.type],
-        D = I.useConfig({ location: m.A.USER_PROFILE_APPLICATION_WIDGET }).enabled,
-        C = e.type === r.x.APPLICATION,
-        S = C ? e.applicationId : void 0,
-        O = (0, N.h)(S),
-        { hasAlreadyLinked: y, canStartAuthorization: V, startAuthorization: B } = (0, x.RD)(O),
-        M = C && !y && V,
-        { analyticsLocations: K } = (0, A.Ay)(m.A.USER_PROFILE_APPLICATION_WIDGET),
-        Y = t.useCallback(() => {
+        { placeholder: P, getAriaLabel: T, icon: D } = w[e.type],
+        C = I.useConfig({ location: m.A.USER_PROFILE_APPLICATION_WIDGET }).enabled,
+        S = e.type === r.x.APPLICATION,
+        O = S ? e.applicationId : void 0,
+        y = (0, N.h)(O),
+        { hasAlreadyLinked: V, canStartAuthorization: B, startAuthorization: M } = (0, x.RD)(y),
+        K = S && !V && B,
+        { analyticsLocations: Y } = (0, A.Ay)(m.A.USER_PROFILE_APPLICATION_WIDGET),
+        H = t.useCallback(() => {
             !v &&
                 ((0, g.Y5)(e),
                 R({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
                 (0, j.XA)(U.jM.WIDGET_ADDED),
                 n?.(),
-                M && B({ analyticsLocations: K }));
-        }, [v, M, e, R, n, B, K]),
-        H = t.useMemo(() => f(e), [e, f]),
-        Q = T?.(e),
-        X = M && !D ? c.q : d.U;
+                K && M({ analyticsLocations: Y }));
+        }, [v, K, e, R, n, M, Y]),
+        Q = t.useMemo(() => P(e), [e, P]),
+        X = D?.(e),
+        z = K && !C ? c.q : d.U;
     return (0, l.jsxs)("div", {
         className: W.LG,
         children: [
             (0, l.jsxs)(o.D, {
                 className: s()(W.PH, "small" === E && W.PG, v && W.Lq),
-                onClick: Y,
+                onClick: H,
                 "aria-label":
-                    M && null != O ? G.intl.formatToPlainString(G.t.ATS0FK, { applicationName: O.name }) : P(e),
+                    K && null != y ? G.intl.formatToPlainString(G.t.ATS0FK, { applicationName: y.name }) : T(e),
                 "aria-busy": v,
                 children: [
                     (function () {
-                        let a = f(e);
+                        let a = P(e);
                         switch (a.variant) {
                             case "details":
                                 return (0, l.jsx)(h.E, {
@@ -214,7 +215,7 @@ function y(a) {
                                 return (0, L.xb)(a);
                         }
                     })(),
-                    D &&
+                    C &&
                         _ &&
                         (0, l.jsx)("div", {
                             className: W.X4,
@@ -223,30 +224,31 @@ function y(a) {
                     (0, l.jsxs)("div", {
                         className: W.Lw,
                         children: [
-                            (0, l.jsx)(X, { size: "md", color: "currentColor", className: W.c9 }),
+                            (0, l.jsx)(z, { size: "md", color: "currentColor", className: W.c9 }),
                             (0, l.jsxs)("div", {
                                 className: W.DD,
                                 children: [
-                                    null != Q
-                                        ? (0, l.jsx)("img", { src: Q, alt: "", width: 16, height: 16, className: W.Kk })
+                                    null != X
+                                        ? (0, l.jsx)("img", { src: X, alt: "", width: 16, height: 16, className: W.Kk })
                                         : null,
                                     (0, l.jsx)(u.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
                                         children: (0, g.L)(e),
                                     }),
-                                    !D && _ && (0, l.jsx)(p.E, { type: "new", variant: "brand" }),
+                                    !C && _ && (0, l.jsx)(p.E, { type: "new", variant: "brand" }),
                                 ],
                             }),
-                            D &&
-                                "application-widget" === H.variant &&
-                                (0, l.jsx)(F, { applicationId: H.applicationId }),
+                            C &&
+                                !f &&
+                                "application-widget" === Q.variant &&
+                                (0, l.jsx)(F, { applicationId: Q.applicationId }),
                         ],
                     }),
                 ],
             }),
-            !D &&
-                ("application-widget" === (i = f(e)).variant
+            !C &&
+                ("application-widget" === (i = P(e)).variant
                     ? (0, l.jsx)(k, { applicationId: i.applicationId, size: E })
                     : null),
         ],
