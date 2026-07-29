@@ -1,4 +1,4 @@
-l.d(t, { default: () => G });
+l.d(t, { default: () => T });
 var n = l(477900),
     r = l(582128),
     o = l(189213),
@@ -47,13 +47,13 @@ var m = l(989349),
     E = l(259407),
     b = l(607470),
     S = l(472501),
-    O = l(46054),
-    w = l(34337),
+    w = l(46054),
+    O = l(34337),
     D = l(550997),
     N = l(652215),
     j = l(375708),
     v = l(779464);
-let I = O.A.reactParserFor(D.default.getDefaultRules(v)),
+let I = w.A.reactParserFor(D.default.getDefaultRules(v)),
     P = {};
 class R extends r.PureComponent {
     scrollerRef = r.createRef();
@@ -115,9 +115,9 @@ class R extends r.PureComponent {
                 provider: E.m.YOUTUBE,
                 maxWidth: 432,
                 maxHeight: 240,
-                renderVideoComponent: w.$o,
-                renderImageComponent: w.LL,
-                renderLinkComponent: w.bU,
+                renderVideoComponent: O.$o,
+                renderImageComponent: O.LL,
+                renderLinkComponent: O.bU,
                 onPlay: () => {
                     this.track(N.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
@@ -169,13 +169,14 @@ class R extends r.PureComponent {
                         interpolations: P,
                         onLinkClick: this.trackLinkClick,
                         allowList: !0,
+                        allowGameMentions: !0,
                     }),
                 ],
             }),
         });
     }
 }
-class T extends r.PureComponent {
+class G extends r.PureComponent {
     maxScrolledPercentage = 0;
     mountedAt = 0;
     componentDidMount() {
@@ -216,7 +217,7 @@ class T extends r.PureComponent {
         });
     }
 }
-function G(e) {
+function T(e) {
     let {
         changelog: t,
         loaded: l,
@@ -253,5 +254,5 @@ function G(e) {
                 ...e,
             });
         else return (0, a.A)(e);
-    return (0, n.jsx)(T, { ...e, changeLog: t });
+    return (0, n.jsx)(G, { ...e, changeLog: t });
 }
