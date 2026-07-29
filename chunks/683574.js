@@ -9,7 +9,10 @@ function s() {
     return e;
 }
 function l(e) {
-    let { children: t, activeLayer: n, isFullscreen: s, videoRef: l } = e,
-        o = r.useMemo(() => ({ activeLayer: n, isFullscreen: s, videoRef: l }), [n, s, l]);
-    return (0, i.jsx)(a.Provider, { value: o, children: t });
+    let { children: t, activeLayer: n, isFullscreen: s, isActive: l, isControlBarExpanded: o, videoRef: d } = e,
+        c = r.useMemo(
+            () => ({ activeLayer: n, isFullscreen: s, isActive: l, isControlBarExpanded: o, videoRef: d }),
+            [n, s, l, o, d],
+        );
+    return (0, i.jsx)(a.Provider, { value: c, children: t });
 }

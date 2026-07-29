@@ -424,6 +424,8 @@ let k = { tension: 250, friction: 5, clamp: !0 },
                 activeLayer: tw ? R.$W : void 0,
                 isFullscreen: tw,
                 videoRef: tk,
+                isActive: tN,
+                isControlBarExpanded: na,
                 children: (0, i.jsx)(E.D, {
                     className: s()(x.W6, { [x.nZ]: !tN }),
                     style: { minWidth: ej, minHeight: eW },

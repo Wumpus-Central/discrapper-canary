@@ -58,7 +58,7 @@
 }
 
 .timeline__76ea6 {
-    bottom: 72px;
+    bottom: 68px;
     inset-inline-end: var(--space-20);
     inset-inline-start: var(--space-20);
     pointer-events: none;
@@ -67,27 +67,36 @@
     user-select: none
 }
 
-.marker__76ea6,
-.timeline__76ea6 {
+.timeline__76ea6,
+.timelineGradient__76ea6 {
     height: 24px;
     position: absolute
 }
 
-.marker__76ea6 {
-    align-items: center;
+.timelineGradient__76ea6 {
+    background: linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, .64) 70%, rgba(7, 7, 9, .8));
     bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0
+}
+
+.marker__76ea6 {
+    bottom: 0;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.marker__76ea6 .markerInner__76ea6 {
+    align-items: center;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    padding: 2px;
-    pointer-events: auto;
-    transform: translateX(-50%);
-    width: 24px
+    pointer-events: auto
 }
 
 .marker__76ea6 .emoji__76ea6 {
-    height: 20px;
-    width: 20px
+    height: 100%;
+    width: 100%
 }
 
 .marker__76ea6 .chatIcon__76ea6 {
