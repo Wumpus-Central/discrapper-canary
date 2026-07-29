@@ -8,7 +8,7 @@ function a(e, t, n, i) {
     for (let n = 0; n < a; n++) {
         let a = t + 1e3 * n,
             l = e.findLast((e) => e.timestamp_ms <= a);
-        r()(l, "bad timeline!"), s.push(i(l));
+        r()(null != l, "bad timeline!"), s.push(i(l));
     }
     return s;
 }
