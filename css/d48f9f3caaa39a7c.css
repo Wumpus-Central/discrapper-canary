@@ -66,18 +66,28 @@
     content: "";
     inset: 0;
     pointer-events: none;
-    position: absolute
+    position: absolute;
+    z-index: 3
 }
 
 .card_d7e618:before {
-    background: linear-gradient(to top, var(--background-base-low), transparent);
+    background: linear-gradient(to top, var(--background-base-low) 55%, transparent);
     content: "";
     inset-inline: 0;
     bottom: 0;
-    height: 55%;
+    height: 64%;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
     z-index: 1
+}
+
+.full-motion .card_d7e618:before {
+    transition: opacity .25s ease
+}
+
+.card_d7e618.hovered_d7e618:before {
+    opacity: 1
 }
 
 .artBackdrop_d7e618 {

@@ -1,7 +1,7 @@
 e.exports = {
     Nr: "card_d7e618",
-    q4: "artBackdrop_d7e618",
     yo: "hovered_d7e618",
+    q4: "artBackdrop_d7e618",
     xy: "artBackdropImage_d7e618",
     Iv: "cover_d7e618",
     N4: "coverImage_d7e618",
