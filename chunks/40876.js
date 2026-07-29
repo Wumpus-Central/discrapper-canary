@@ -23,6 +23,7 @@ let r = {
     },
     BlockedDomainManager: { inlineRequire: () => n(797164).A, loadAfterConnectionOpen: !0 },
     BulkBanManager: { actions: ["GUILD_BULK_BAN_FAILED", "GUILD_BULK_BAN_UPDATE"], inlineRequire: () => n(860410).A },
+    CallDisplaySleepManager: { inlineRequire: () => n(451099).A, hasStoreChangeListeners: !0 },
     CallIdleManager: {
         actions: ["VOICE_STATE_UPDATES", "EMBEDDED_ACTIVITY_CLOSE", "CONNECTION_CLOSED"],
         inlineRequire: () => n(167132).A,
