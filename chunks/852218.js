@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CD: () => l, Cs: () => d, KS: () => o, XY: () => c, km: () => u, pt: () => s, qn: () => a });
+n.d(t, { Bt: () => u, CD: () => l, Cs: () => d, KS: () => o, XY: () => c, km: () => _, pt: () => s, qn: () => a });
 var i,
     r,
     a = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
@@ -21,4 +21,5 @@ let l = {
     o = "steelseries",
     d = "kontrolfreek",
     c = "logitech",
-    u = new Set([c, "call_of_duty"]);
+    u = "call_of_duty",
+    _ = new Set([c, u]);

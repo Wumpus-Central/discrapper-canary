@@ -1,5 +1,5 @@
 _.r(
-    (o.exports = {
+    (e.exports = {
         boxBackdrop: "boxBackdrop__53b4c",
         bentoSectionHeader: "bentoSectionHeader__53b4c",
         highlightBento: "highlightBento__53b4c",
@@ -20,6 +20,7 @@ _.r(
         overlayImageMode: "overlayImageMode__53b4c",
         textBox: "textBox__53b4c",
         gradientBackground: "gradientBackground__53b4c",
+        callOfDutyGradient: "callOfDutyGradient__53b4c",
         overlayTextBox: "overlayTextBox__53b4c",
         backgroundVideoContainer: "backgroundVideoContainer__53b4c",
         backgroundVideo: "backgroundVideo__53b4c",

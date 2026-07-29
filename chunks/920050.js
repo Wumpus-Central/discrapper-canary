@@ -2,6 +2,7 @@
 n.r(t),
     n.d(t, {
         BADGE_CARD_ID: () => i,
+        CALL_OF_DUTY_3PP_CARD_ID: () => v,
         CLIENT_THEMES_CARD_ID: () => r,
         CUSTOM_APP_ICONS_CARD_ID: () => a,
         CUSTOM_SOUNDS_CARD_ID: () => s,
@@ -26,8 +27,8 @@ n.r(t),
         SUPER_REACTIONS_CARD_ID: () => g,
         TENURE_BADGE_CARD_ID: () => S,
         VIDEO_BACKGROUNDS_CARD_ID: () => N,
-        XBOX_PREMIUM_PERK_CARD_ID: () => D,
-        XBOX_PREMIUM_PERK_HERO_ID: () => y,
+        XBOX_PREMIUM_PERK_CARD_ID: () => y,
+        XBOX_PREMIUM_PERK_HERO_ID: () => D,
     });
 let i = "badge",
     r = "clientThemes",
@@ -54,5 +55,6 @@ let i = "badge",
     O = "orbMultiplier",
     R = "nitroOrbsRewards",
     L = "monthlyToYearlyUpsell",
-    y = "xgppHero",
-    D = "xgppPerk";
+    D = "xgppHero",
+    y = "xgppPerk",
+    v = "callOfDuty3PP";

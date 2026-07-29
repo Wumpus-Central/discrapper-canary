@@ -5357,6 +5357,22 @@
   },
   {
     "kind": "user",
+    "name": "2026-07-call-of-duty-3pp-expired",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-07-clips-game-events-on-player",
     "defaultConfig": {
       "enableGameEventsOnPlayer": false
@@ -5368,6 +5384,22 @@
       },
       "1": {
         "enableGameEventsOnPlayer": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-cod-3pp",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
       }
     }
   },

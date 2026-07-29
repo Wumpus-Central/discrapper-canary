@@ -25,18 +25,18 @@ var i = n(477900),
     O = n(397244),
     R = n(394871),
     L = n(461376),
-    y = n(866323),
-    D = n(746306);
+    D = n(866323),
+    y = n(746306);
 function v(e) {
     let { text: t } = e,
-        n = (0, y.p)(t, {
+        n = (0, D.p)(t, {
             from: { opacity: 0, transform: "translate3d(0, 107%, 0)" },
             enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
             config: { duration: 220, clamp: !0 },
         });
     return (0, i.jsx)("div", {
-        className: D.k,
-        children: n((e, t) => (0, i.jsx)(L.animated.div, { className: D.H, style: e, children: t })),
+        className: y.k,
+        children: n((e, t) => (0, i.jsx)(L.animated.div, { className: y.H, style: e, children: t })),
     });
 }
 var b = n(29160),
@@ -219,7 +219,7 @@ function eL(e) {
           })
         : null;
 }
-function ey() {
+function eD() {
     return null == eT.A.coachmarkDismissibleContent
         ? null
         : (0, i.jsx)(eL, {
@@ -228,7 +228,7 @@ function ey() {
               specialTextColor: eT.A.coachmarkSpecialTextColor,
           });
 }
-var eD = n(74848),
+var ey = n(74848),
     ev = n(607399),
     eb = n(707554),
     eM = n(224640),
@@ -662,8 +662,8 @@ var tC = n(480335),
     tO = n(577390),
     tR = n(372320),
     tL = n(31956),
-    ty = n(744808),
-    tD = n(645507),
+    tD = n(744808),
+    ty = n(645507),
     tv = n(131607),
     tb = n(970931),
     tM = n(315710),
@@ -852,23 +852,23 @@ var nn = n(983495),
     nO = n(429913),
     nR = n(334074),
     nL = n(633075),
-    ny = n(667049),
-    nD = n(280450),
+    nD = n(667049),
+    ny = n(280450),
     nv = n(90165),
     nb = n(403362),
     nM = n(518477);
 function nP(e) {
     let { targetElementRef: t, onClose: a } = e,
         [s, l] = r.useState(!1),
-        o = (0, c.bG)([nD.default], () => nD.default.getId()),
+        o = (0, c.bG)([ny.default], () => ny.default.getId()),
         { eligibleApplications: d, markAsDismissed: _ } = (function () {
             let e = (0, c.yK)([nN.A], () => nN.A.getFeaturedApplicationIds());
             (0, nC.A)(e),
                 r.useEffect(() => {
                     (0, nS.X)();
                 }, []);
-            let t = (0, c.bG)([nD.default], () => nD.default.getId()),
-                n = (0, ny.A)(t),
+            let t = (0, c.bG)([ny.default], () => ny.default.getId()),
+                n = (0, nD.A)(t),
                 i = r.useMemo(() => n.filter((e) => e instanceof nL.R), [n]),
                 a = (0, nO.A)(e),
                 s = r.useMemo(() => a.filter(nb.Vq), [a]),
@@ -1430,8 +1430,8 @@ function n9(e) {
         O = n6(nr.CY.useSetting()),
         R = (0, c.bG)([ns.A], () => ns.A.hidePersonalInformation),
         L = (0, tb.kB)(),
-        y = nr.Q_.useSetting(),
-        D = (function (e) {
+        D = nr.Q_.useSetting(),
+        y = (function (e) {
             let t = nr.CY.useSetting(),
                 n = (0, tb.kB)(),
                 r = nr.Jr.useSetting();
@@ -1628,7 +1628,7 @@ function n9(e) {
         k = (0, tO.A)(h?.profileFrame?.skuId);
     (0, tL.A)({ skuId: h?.profileFrame?.skuId, openedAt: o, context: p, analyticsLocations: I });
     let F = r.useRef((0, tP.A)((e) => e.shouldRenderTenureLevelUp)),
-        V = r.useMemo(() => (0, tD.A)(), []),
+        V = r.useMemo(() => (0, ty.A)(), []),
         [H, j] = r.useState(() => tP.A.getState().shouldRenderTenureLevelUp);
     function W(e) {
         n?.(), (0, tZ.openUserProfileModal)({ customStatusPrompt: V, sourceAnalyticsLocations: I, ...p, ...e });
@@ -1774,7 +1774,7 @@ function n9(e) {
                                                                                       B.t.E13trI,
                                                                                   ),
                                                                                   onClose: t,
-                                                                                  children: D,
+                                                                                  children: y,
                                                                               });
                                                                           },
                                                                     onClick: ev.Fr
@@ -1820,7 +1820,7 @@ function n9(e) {
                                                                                                               onSelect:
                                                                                                                   void 0,
                                                                                                               children:
-                                                                                                                  D,
+                                                                                                                  y,
                                                                                                           }),
                                                                                                       },
                                                                                                   );
@@ -1857,7 +1857,7 @@ function n9(e) {
                                                                 }),
                                                                 !__OVERLAY__ &&
                                                                     t8.p5 &&
-                                                                    y &&
+                                                                    D &&
                                                                     (0, i.jsx)(ez, {
                                                                         action: "COPY_USER_ID",
                                                                         icon: eB.L,
@@ -1876,7 +1876,7 @@ function n9(e) {
                                     h?.profileEffect != null &&
                                         !F.current &&
                                         (0, i.jsx)(tC.A, { skuId: h.profileEffect.skuId, isHovering: N }),
-                                    null != x && (0, i.jsx)(ty.A, { frame: x, fadeIn: k }),
+                                    null != x && (0, i.jsx)(tD.A, { frame: x, fadeIn: k }),
                                 ],
                             }),
                             (0, i.jsx)(nP, { targetElementRef: G, onClose: n }),
@@ -1914,8 +1914,8 @@ var im = n(616356),
     iO = n(486020),
     iR = n(625494),
     iL = n(536194),
-    iy = n(19575),
-    iD = n(994314),
+    iD = n(19575),
+    iy = n(994314),
     iv = n(485599),
     ib = n(338854);
 function iM(e) {
@@ -2289,7 +2289,7 @@ function ra(e) {
             events: { onMouseEnter: I, onMouseLeave: f },
         } = (0, i9.I)(_ ? "undeafen" : "deafen"),
         p = n ? i6.T : E,
-        { name: T } = (0, eD.x5)(i_.oh.AUDIO_OUTPUT),
+        { name: T } = (0, ey.x5)(i_.oh.AUDIO_OUTPUT),
         m = (0, re.A)(t, n, a),
         { analyticsLocations: g } = (0, P.Ay)(M.A.AUDIO_OUTPUT_BUTTON),
         S = r.useRef(null);
@@ -2434,9 +2434,9 @@ function rf(e) {
         C = (0, c.bG)([id.Ay], () => id.Ay.getSettings().modeOptions.shortcut),
         O = (0, c.bG)([ru], () => ru.getIsTutorialActive(r_.v.MUTE_TUTORIAL)),
         R = (0, c.bG)([ic.A], () => null != ic.A.getChannelId()),
-        { name: L } = (0, eD.x5)(i_.oh.AUDIO_INPUT),
-        { enabledInputProfiles: y } = (0, is.d)({ location: "MicrophoneButton" }),
-        D = r.useRef(null),
+        { name: L } = (0, ey.x5)(i_.oh.AUDIO_INPUT),
+        { enabledInputProfiles: D } = (0, is.d)({ location: "MicrophoneButton" }),
+        y = r.useRef(null),
         v = n || l || a,
         b = (0, rl.L)(v ? "unmute" : "mute"),
         { analyticsLocations: U } = (0, P.Ay)(M.A.AUDIO_INPUT_BUTTON),
@@ -2462,7 +2462,7 @@ function rf(e) {
         value: U,
         children: [
             (0, i.jsx)(h.Y, {
-                targetElementRef: D,
+                targetElementRef: y,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
@@ -2473,7 +2473,7 @@ function rf(e) {
                                 onInteraction: (0, J.s)("AudioDeviceMenu", M.A.ACCOUNT),
                                 onClose: t,
                                 maybeRenderPTTCheckbox: !0,
-                                renderInputProfiles: y.length > 0,
+                                renderInputProfiles: D.length > 0,
                                 renderInputDevices: !0,
                                 maybeRenderInputMeter: !0,
                                 renderInputVolume: !0,
@@ -2491,7 +2491,7 @@ function rf(e) {
                         { isShown: a } = n,
                         l = a ? i7.t : i8.a;
                     return (0, i.jsxs)("div", {
-                        ref: D,
+                        ref: y,
                         className: s()(ri.Lh, { [ri.v8]: v, [ri.q6]: a }),
                         children: [
                             (0, i.jsx)(rn.A, {
@@ -2548,7 +2548,7 @@ function rf(e) {
                 },
             }),
             (0, i.jsx)(V.A, {
-                targetElementRef: D,
+                targetElementRef: y,
                 shouldShow: O,
                 graphic: { type: "image", src: rI.A },
                 onRequestClose: () => {
@@ -2621,7 +2621,7 @@ function rL(e) {
         actions: [{ text: B.intl.string(B.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-function ry(e) {
+function rD(e) {
     let t,
         n,
         {
@@ -2681,8 +2681,8 @@ function ry(e) {
         })
     );
 }
-var rD = n(948198);
-let rv = iy.Ay.getEnableHardwareAcceleration() ? E.Js : E.eu,
+var ry = n(948198);
+let rv = iD.Ay.getEnableHardwareAcceleration() ? E.Js : E.eu,
     rb = 2.5 * e8.A.Millis.SECOND,
     rM = 2 * e8.A.Millis.MINUTE,
     rP = 2 * e8.A.Millis.MINUTE,
@@ -2736,7 +2736,7 @@ function rw(e) {
                 { updateOpenPopoutRef: t, highlightBadge: a ? n : void 0, setHighlightBadge: i }
             );
         })(),
-        y = (0, ei.K)(E);
+        D = (0, ei.K)(E);
     return null == o
         ? null
         : (0, i.jsx)(g.A, {
@@ -2760,7 +2760,7 @@ function rw(e) {
                           openedAt: t,
                           onClose: n,
                           setPopoutRef: r,
-                          className: rD.dI,
+                          className: ry.dI,
                       });
                   },
                   position: "top",
@@ -2777,13 +2777,13 @@ function rw(e) {
                       let { onMouseEnter: t, onMouseDown: r, ...u } = e;
                       return (0, i.jsxs)("div", {
                           ref: m,
-                          style: y,
+                          style: D,
                           onMouseEnter: t,
                           onMouseDown: r,
                           onClick: (t) => {
                               e.onClick?.(t), c?.(t);
                           },
-                          className: s()(rD.Q9, { [rD.ZQ]: null != E }),
+                          className: s()(ry.Q9, { [ry.ZQ]: null != E }),
                           children: [
                               (0, i.jsx)(I.D, {
                                   ...u,
@@ -2792,7 +2792,7 @@ function rw(e) {
                                   },
                                   "aria-label": B.intl.string(B.t["5fWB8U"]),
                                   focusProps: { ringTarget: m },
-                                  className: rD.$n,
+                                  className: ry.$n,
                                   "data-jump-section": p,
                               }),
                               (0, i.jsx)(rv, {
@@ -2802,10 +2802,10 @@ function rw(e) {
                                   status: l ? tf.clD.STREAMING : d,
                                   isSpeaking: n,
                                   voiceDb: a,
-                                  className: rD.my,
+                                  className: ry.my,
                                   "aria-hidden": !0,
                               }),
-                              (0, i.jsx)("div", { className: rD.oM, children: _(N) }),
+                              (0, i.jsx)("div", { className: ry.oM, children: _(N) }),
                           ],
                       });
                   },
@@ -3480,6 +3480,7 @@ class rG extends r.PureComponent {
                     n.e("91531"),
                     n.e("75284"),
                     n.e("62318"),
+                    n.e("63052"),
                     n.e("44912"),
                     n.e("13052"),
                     n.e("64926"),
@@ -3508,7 +3509,7 @@ class rG extends r.PureComponent {
                     n.e("76892"),
                     n.e("16799"),
                     n.e("52694"),
-                    n.e("58507"),
+                    n.e("25442"),
                     n.e("32482"),
                     n.e("62883"),
                     n.e("38249"),
@@ -3709,7 +3710,7 @@ class rG extends r.PureComponent {
                         activities: t,
                         applicationStream: n,
                         voiceChannel: l,
-                        textClassName: rD.XD,
+                        textClassName: ry.XD,
                         hideTooltip: !0,
                     }),
                 ],
@@ -3724,7 +3725,7 @@ class rG extends r.PureComponent {
                   forceHover: e,
                   children: [
                       (0, i.jsx)(f.A, { children: t9.Ay.humanizeStatus(a) }),
-                      (0, i.jsx)(es.A, { activity: o, emojiClassName: rD.Zg, className: rD.WO }),
+                      (0, i.jsx)(es.A, { activity: o, emojiClassName: ry.Zg, className: ry.WO }),
                   ],
               })
             : null != a && a !== tf.clD.UNKNOWN && r.hasUniqueUsername()
@@ -3742,9 +3743,9 @@ class rG extends r.PureComponent {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)("div", {
-                          className: rD.eW,
+                          className: ry.eW,
                           children: (0, i.jsx)(iv.A, {
-                              className: s()({ [rD.e8]: null != e }),
+                              className: s()({ [ry.e8]: null != e }),
                               children: (0, i.jsx)(ec.A, {
                                   userName: n,
                                   displayNameStyles: e,
@@ -3755,8 +3756,8 @@ class rG extends r.PureComponent {
                           }),
                       }),
                       (0, i.jsx)("div", {
-                          className: rD.XP,
-                          children: (0, i.jsx)(iD.A, { children: this.renderStatus() }),
+                          className: ry.XP,
+                          children: (0, i.jsx)(iy.A, { children: this.renderStatus() }),
                       }),
                   ],
               });
@@ -3791,7 +3792,7 @@ class rG extends r.PureComponent {
                           children: (e) =>
                               (0, i.jsxs)("div", {
                                   ref: this.containerRef,
-                                  className: s()(rD.kL, { [rD.UG]: null != n, [rD.bc]: !r, [rD.G5]: a }),
+                                  className: s()(ry.kL, { [ry.UG]: null != n, [ry.bc]: !r, [ry.G5]: a }),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   children: [
@@ -3814,7 +3815,7 @@ class rG extends r.PureComponent {
                                   ],
                               }),
                       }),
-                      (0, i.jsx)(ey, {}),
+                      (0, i.jsx)(eD, {}),
                   ],
               });
     }
@@ -3848,7 +3849,7 @@ function rx(e) {
         } = e,
         R = (0, ei.K)(m);
     return (0, i.jsxs)("div", {
-        className: rD.Uo,
+        className: ry.Uo,
         style: R,
         children: [
             (0, i.jsx)(rf, {
@@ -3861,7 +3862,7 @@ function rx(e) {
                 onMouseLeave: _,
                 onClick: A,
                 onContextMenu: h,
-                iconForeground: null != m ? rD.t4 : void 0,
+                iconForeground: null != m ? ry.t4 : void 0,
                 nameplate: m,
                 shouldShowSpeakingWhileMutedTooltip: o,
                 shouldShowInputDeviceChangedTooltip: !o && "input" === S,
@@ -3876,17 +3877,17 @@ function rx(e) {
                 onClick: E,
                 onContextMenu: I,
                 awaitingRemote: r,
-                iconForeground: null != m ? rD.t4 : void 0,
+                iconForeground: null != m ? ry.t4 : void 0,
                 nameplate: m,
                 shouldShowOutputDeviceChangedTooltip: "output" === S,
                 dismissTooltips: C,
             }),
-            (0, i.jsx)(ry, {
+            (0, i.jsx)(rD, {
                 webBuildOverride: c,
                 onClick: f,
                 onContextMenu: p,
                 dismissibleContents: T.settings,
-                iconForeground: null != m ? rD.t4 : void 0,
+                iconForeground: null != m ? ry.t4 : void 0,
                 nameplate: m,
             }),
         ],
@@ -3894,7 +3895,7 @@ function rx(e) {
 }
 function rk(e) {
     let t = (0, c.bG)([ic.A], () => null != ic.A.getChannelId()),
-        n = (0, eD.Py)(e),
+        n = (0, ey.Py)(e),
         i = r.useRef(new _.Ep()),
         [a, s] = r.useState(!1);
     r.useEffect(() => {
@@ -3917,7 +3918,7 @@ function rk(e) {
 }
 function rF() {
     let e = (0, c.bG)([nA.default], () => nA.default.getCurrentUser()),
-        t = (0, c.bG)([nD.default], () => nD.default.getId()),
+        t = (0, c.bG)([ny.default], () => ny.default.getId()),
         {
             activities: n,
             streaming: a,
@@ -3949,8 +3950,8 @@ function rF() {
         O = (0, c.bG)([id.Ay], () => id.Ay.getSpeakingWhileMuted()),
         R = (0, c.bG)([q.A], () => q.A.isFullscreenInContext()),
         L = (0, c.bG)([iN.A], () => iN.A.hasLayers()),
-        y = (0, T.useModalsStore)(T.hasAnyModalOpenSelector) || L || iL.P.isDisallowPopupsSet() || R,
-        D = (0, c.bG)([eu.default], () => null != eu.default.getAwaitingRemoteSessionInfo()),
+        D = (0, T.useModalsStore)(T.hasAnyModalOpenSelector) || L || iL.P.isDisallowPopupsSet() || R,
+        y = (0, c.bG)([eu.default], () => null != eu.default.getAwaitingRemoteSessionInfo()),
         v = (0, c.bG)([iC.A], () => iC.A.getGuildId()),
         b = e?.avatarDecoration,
         x = (0, ee.A)(b),
@@ -4018,7 +4019,7 @@ function rF() {
                     : { variant: "no-progress" }
                 : null;
         })({ currentUserId: e?.id, enabled: X });
-    !y &&
+    !D &&
         (Z && Y.avatar.push(u.M.DISPLAY_NAME_STYLES_FLYWHEEL_COACHMARK),
         null != Q && Y.avatar.push(u.M.BADGE_DIRECTORY_NUX_POPOVER),
         K && Y.settings.push(u.M.PRIVATE_PROFILE_COACHMARK));
@@ -4121,7 +4122,7 @@ function rF() {
             dismissibleContents: Y,
             badgeDirectoryNuxPopoverVariant: Q,
             userTag: A,
-            occluded: y,
+            occluded: D,
             selfDeaf: m,
             selfMute: f,
             serverDeaf: g,
@@ -4134,7 +4135,7 @@ function rF() {
             streaming: a,
             suppress: p,
             webBuildOverride: C,
-            awaitingRemote: D,
+            awaitingRemote: y,
             nameplate: B,
             selectedGuildId: v,
             avatarDecoration: x,
