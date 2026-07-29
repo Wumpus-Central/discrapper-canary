@@ -5797,6 +5797,22 @@
     }
   },
   {
+    "name": "2026-07-social-layer-storefront-spend-orbs-banner-copy",
+    "kind": "user",
+    "defaultConfig": {
+      "whileSuppliesLast": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "whileSuppliesLast": true
+      }
+    }
+  },
+  {
     "name": "2026-07-typing-users-css-dots",
     "kind": "user",
     "defaultConfig": {

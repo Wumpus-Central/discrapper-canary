@@ -1390,7 +1390,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 585822, Version Hash: 20ed45d221b366eac8289e38d8c914dbbe4b4b18`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 585842, Version Hash: 13a1c7ef5ea9db4df120a904b2edcf7dccc24c5d`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -18255,7 +18255,7 @@ let gB = "isHideDevBanner",
                     className: to()(gV.Wz, gV.mr),
                     children: [
                         (0, O.jsx)(gF, { className: gV.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "585822" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "585842" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -20772,8 +20772,8 @@ let CE = (0, tH.Fe)({
                 n.e("52803"),
                 n.e("61096"),
                 n.e("14078"),
-            ]).then(n.bind(n, 8459)),
-        webpackId: 8459,
+            ]).then(n.bind(n, 782274)),
+        webpackId: 782274,
         name: "SocialLayerStorefront",
         renderLoader: C_,
     }),
