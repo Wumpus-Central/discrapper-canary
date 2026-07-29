@@ -2,24 +2,24 @@ s.d(e, { default: () => B });
 var i = s(477900),
     a = s(582128),
     l = s(224640),
-    n = s(821609),
-    c = s(408278),
-    r = s(314116),
-    d = s(704333),
-    o = s(414499),
-    u = s(597770),
-    x = s(500060),
-    m = s(297264),
-    f = s(834730),
-    b = s(885574),
-    g = s(972213),
-    h = s(866665),
-    j = s(793574),
-    p = s(688810),
+    n = s(408278),
+    c = s(314116),
+    r = s(704333),
+    d = s(414499),
+    o = s(597770),
+    u = s(500060),
+    x = s(297264),
+    m = s(834730),
+    f = s(885574),
+    b = s(972213),
+    g = s(866665),
+    h = s(793574),
+    j = s(688810),
+    p = s(51965),
     N = s(792656),
     v = s(174459),
-    C = s(183972),
-    A = s(196099),
+    A = s(183972),
+    C = s(196099),
     E = s(297966),
     k = s(375776),
     O = s(727811),
@@ -34,15 +34,15 @@ var i = s(477900),
     y = s(375708),
     z = s(35158);
 let M = [
-    { icon: d.B, message: P.default.bpksos },
-    { icon: o.h, message: P.default["5rbQbD"] },
-    { icon: u.o, message: P.default.b1X5Jf, tooltip: P.default.AyECej },
-    { icon: x.o, message: P.default.xZiyZj },
+    { icon: r.B, message: P.default.bpksos },
+    { icon: d.h, message: P.default["5rbQbD"] },
+    { icon: o.o, message: P.default.b1X5Jf, tooltip: P.default.AyECej },
+    { icon: u.o, message: P.default.xZiyZj },
 ];
 function w(t) {
-    let { transitionState: e, onClose: s, variant: d, claimStatus: o, redirect: u, requestInProgress: x } = t,
-        j = (0, L.A)(u),
-        p = (0, A.M)("xbox"),
+    let { transitionState: e, onClose: s, variant: r, claimStatus: d, redirect: o, requestInProgress: u } = t,
+        h = (0, L.A)(o),
+        j = (0, C.M)("xbox"),
         v = (function (t) {
             let {
                 variant: e,
@@ -82,20 +82,20 @@ function w(t) {
                     };
             }
         })({
-            variant: d,
-            claimStatus: o,
-            handleActivationClick: j,
+            variant: r,
+            claimStatus: d,
+            handleActivationClick: h,
             cancelXboxPartnerPass: a.useCallback(() => {
-                (0, r.A)({
+                (0, c.A)({
                     title: y.intl.string(P.default["/GObQk"]),
                     subtitle: y.intl.string(P.default["r/jeXi"]),
                     confirmText: y.intl.string(P.default.bVwQhX),
                     variant: "critical",
-                    onConfirm: () => (0, C.RB)(E.n9.XGPP),
+                    onConfirm: () => (0, A.RB)(E.n9.XGPP),
                 }),
-                    p(A.H.CANCEL);
-            }, [p]),
-            requestInProgress: x,
+                    j(C.H.CANCEL);
+            }, [j]),
+            requestInProgress: u,
         });
     return (0, i.jsx)(l.d, {
         transitionState: e,
@@ -119,12 +119,12 @@ function w(t) {
                                 (0, i.jsxs)("div", {
                                     className: z.gY,
                                     children: [
-                                        (0, i.jsx)(m.D, {
+                                        (0, i.jsx)(x.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: y.intl.string(P.default.ukvxpp),
                                         }),
-                                        (0, i.jsx)(f.E, {
+                                        (0, i.jsx)(m.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
                                             children: y.intl.format(P.default.FO4faL, { termsLink: (0, S.xA)() }),
@@ -139,7 +139,7 @@ function w(t) {
                                       })
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              (0, i.jsx)(n.$, {
+                                              (0, i.jsx)(p.A, {
                                                   fullWidth: !0,
                                                   variant: v.ctaVariant,
                                                   size: "md",
@@ -152,8 +152,8 @@ function w(t) {
                                                   (0, i.jsxs)("div", {
                                                       className: z.ed,
                                                       children: [
-                                                          (0, i.jsx)(b.m, { size: "xs", color: "var(--text-subtle)" }),
-                                                          (0, i.jsx)(f.E, {
+                                                          (0, i.jsx)(f.m, { size: "xs", color: "var(--text-subtle)" }),
+                                                          (0, i.jsx)(m.E, {
                                                               variant: "text-xs/medium",
                                                               color: "text-subtle",
                                                               children: v.disclaimer,
@@ -177,10 +177,10 @@ function w(t) {
                         (0, i.jsx)("div", { className: z.gm }),
                         (0, i.jsx)("div", {
                             className: z.b,
-                            children: (0, i.jsx)(c.K, {
+                            children: (0, i.jsx)(n.K, {
                                 "aria-label": y.intl.string(y.t.cpT0Cq),
                                 onClick: s,
-                                icon: g.d,
+                                icon: b.d,
                                 variant: "overlay-secondary",
                                 size: "sm",
                             }),
@@ -195,7 +195,7 @@ function w(t) {
                                         className: z.vD,
                                         children: [
                                             (0, i.jsx)(s, { size: "sm", color: "var(--icon-strong)" }),
-                                            (0, i.jsx)(f.E, {
+                                            (0, i.jsx)(m.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-default",
                                                 children: y.intl.string(a),
@@ -203,10 +203,10 @@ function w(t) {
                                             null != l &&
                                                 (0, i.jsx)("div", {
                                                     className: z.Jn,
-                                                    children: (0, i.jsx)(h.m, {
+                                                    children: (0, i.jsx)(g.m, {
                                                         text: y.intl.string(l),
                                                         position: "top",
-                                                        children: (0, i.jsx)(b.m, {
+                                                        children: (0, i.jsx)(f.m, {
                                                             size: "xxs",
                                                             color: "var(--icon-default)",
                                                         }),
@@ -228,8 +228,8 @@ function B(t) {
     let { transitionState: e, onClose: s, sourceAnalyticsLocations: l } = t,
         n = (0, _.$)(),
         { status: c, redirect: r, requestInProgress: d } = (0, R.L)(),
-        { analyticsLocations: o } = (0, p.Ay)(
-            ...(null != l ? [l, j.A.CROISSANT_REWARD_MODAL] : [j.A.CROISSANT_REWARD_MODAL]),
+        { analyticsLocations: o } = (0, j.Ay)(
+            ...(null != l ? [l, h.A.CROISSANT_REWARD_MODAL] : [h.A.CROISSANT_REWARD_MODAL]),
         ),
         u = n === _.C.NONE;
     a.useEffect(() => {
@@ -241,7 +241,7 @@ function B(t) {
     }, [u, o]),
     u)
         ? null
-        : (0, i.jsx)(p.f5, {
+        : (0, i.jsx)(j.f5, {
               value: o,
               children: (0, i.jsx)(w, {
                   transitionState: e,
