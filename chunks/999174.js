@@ -36,8 +36,8 @@ var v = n(503698),
     D = n(240248),
     z = n(609782),
     F = n(837381),
-    P = n(887129),
-    V = n(741918),
+    V = n(887129),
+    P = n(741918),
     G = n(939249),
     $ = n(228366);
 let M = { seenBadgeIndicatorIds: new Set() };
@@ -114,10 +114,10 @@ function ee(e) {
 }
 function et(e) {
     let { label: t, navId: n, badges: l, selectedBadgeId: a, onSelectBadge: s, badgeIndicatorIds: r } = e,
-        d = (0, P.Ay)({
+        d = (0, V.Ay)({
             id: n,
             isEnabled: !0,
-            orientation: V.Gl.HORIZONTAL,
+            orientation: P.Gl.HORIZONTAL,
             scrollToStart: () => Promise.resolve(),
             scrollToEnd: () => Promise.resolve(),
         });
@@ -415,6 +415,7 @@ function eg(e) {
                                 null != E
                                     ? (0, i.jsx)(el.z, {
                                           value: I?.current ?? 0,
+                                          minValue: I?.floor ?? 0,
                                           maxValue: E,
                                           size: "md",
                                           className: eu.hr,
@@ -759,8 +760,8 @@ function eU(e) {
             displayedUserId: I,
             targetOwnsBadge: U,
             viewerOwnsBadge: F,
-            isMilestone2Enabled: P,
-            onToggleViewedUser: V,
+            isMilestone2Enabled: V,
+            onToggleViewedUser: P,
             onViewOwnCatalog: G,
         } = e,
         $ = Y(I, f, 32),
@@ -824,10 +825,10 @@ function eU(e) {
           ? "--"
           : void 0;
     let ed = ((n = null == (t = _.tiers?.[0]?.key) || M?.key === t), K.intl.string(n ? K.t.WDhIz2 : K.t.wYaDmz)),
-        ec = P && null != c && _.badge_id !== y.$.STAFF,
+        ec = V && null != c && _.badge_id !== y.$.STAFF,
         eu = null != X,
         ev = null;
-    P && (ec || eu)
+    V && (ec || eu)
         ? (ev = (0, i.jsxs)("div", {
               className: j()(Q.$S, (!ec || !eu) && Q.jQ),
               children: [
@@ -838,7 +839,7 @@ function eU(e) {
         : eu && (ev = (0, i.jsx)(eI, { rarityBadgeProps: X })),
         ec ||
             (m =
-                P || null == es
+                V || null == es
                     ? K.intl.string(K.t.sTFApF)
                     : K.intl.formatToPlainString(K.t["0aEh2a"], { date: new Date(es) }));
     let ep = v?.owned === !0 && (v.tiers?.length ?? 0) > 0 && null == v.next_tier,
@@ -862,7 +863,7 @@ function eU(e) {
                 ? null
                 : (0, i.jsx)(E.w, { type: "info", children: K.intl.format(K.t.vFekBs, { onViewBadges: G }) }),
         eU = (0, s.bG)([R.A], () => R.A.hasConsented(ej.YAq.PERSONALIZATION)),
-        eO = P && (0, H.Jn)(_.badge_id) && !f && !eU;
+        eO = V && (0, H.Jn)(_.badge_id) && !f && !eU;
     return (0, i.jsx)(A.F, {
         forceLevel: 2,
         children: (0, i.jsx)("div", {
@@ -906,7 +907,7 @@ function eU(e) {
                                                     r,
                                                 ],
                                             }),
-                                            P &&
+                                            V &&
                                                 (0, i.jsx)(eC, {
                                                     badge: _,
                                                     isOwnProfile: p,
@@ -916,11 +917,11 @@ function eU(e) {
                                                     targetOwnsBadge: U,
                                                     viewerOwnsBadge: F,
                                                     unlockedStatusText: m,
-                                                    onToggleViewedUser: V,
+                                                    onToggleViewedUser: P,
                                                 }),
                                         ],
                                     }),
-                                    !P &&
+                                    !V &&
                                         (0, i.jsx)(eT, {
                                             badge: _,
                                             isOwnProfile: p,
@@ -930,7 +931,7 @@ function eU(e) {
                                             targetOwnsBadge: U,
                                             viewerOwnsBadge: F,
                                             unlockedStatusText: m,
-                                            onToggleViewedUser: V,
+                                            onToggleViewedUser: P,
                                         }),
                                 ],
                             }),
@@ -994,7 +995,7 @@ function eU(e) {
                                                         className: Q.cJ,
                                                         children: [
                                                             (0, i.jsx)(B.c, {}),
-                                                            P
+                                                            V
                                                                 ? (0, i.jsx)(eg, {
                                                                       badge: _,
                                                                       viewerBadge: v,
@@ -1060,11 +1061,11 @@ function ek(e) {
         D = k ?? R,
         z = !T && !U,
         F = !T && U,
-        P = f && !I;
+        V = f && !I;
     l.useEffect(() => {
         F && null != A && m.A.increment({ name: a.K.BADGE_DIRECTORY_ERROR_STATE_VIEWED, tags: [A] });
     }, [F, A]);
-    let V = (0, s.bG)([b.Ay], () => null != j && null != D && (b.Ay.getBadgeById(D.badge_id, j)?.owned ?? !1), [D, j]),
+    let P = (0, s.bG)([b.Ay], () => null != j && null != D && (b.Ay.getBadgeById(D.badge_id, j)?.owned ?? !1), [D, j]),
         G = (0, s.bG)([b.Ay], () => (null != p && null != D ? b.Ay.getBadgeById(D.badge_id, p) : void 0), [D, p]),
         $ = G?.owned ?? !1,
         M = l.useCallback(
@@ -1103,8 +1104,8 @@ function ek(e) {
         q = D?.badge_id;
     return (
         l.useEffect(() => {
-            null != q && P && (0, H.Ce)(q) && (0, h.PV)(q);
-        }, [q, P]),
+            null != q && V && (0, H.Ce)(q) && (0, h.PV)(q);
+        }, [q, V]),
         l.useEffect(() => {
             null != D &&
                 ey({ actionName: "badge_detail_viewed", badge: D, displayedUserId: E, isSociallyNavigated: I });
@@ -1158,7 +1159,7 @@ function ek(e) {
                                         isViewingOtherUser: I,
                                         targetUsername: y,
                                         onViewOwnCatalog: Z,
-                                        showBadgeIndicators: P,
+                                        showBadgeIndicators: V,
                                     }),
                                     null != D &&
                                         (0, i.jsx)(eU, {
@@ -1169,7 +1170,7 @@ function ek(e) {
                                             isViewingOtherUser: I,
                                             targetUsername: y,
                                             displayedUserId: E,
-                                            targetOwnsBadge: V,
+                                            targetOwnsBadge: P,
                                             viewerOwnsBadge: $,
                                             isMilestone2Enabled: f,
                                             onToggleViewedUser: L,

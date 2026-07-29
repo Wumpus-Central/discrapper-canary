@@ -62,9 +62,8 @@ class T extends r.Ay.Store {
         if (n?.next_tier != null) return n.tiers.find((e) => e.key === n.next_tier);
     }
     getRemainingToNextTier(e, t) {
-        let n = this.getNextTier(e, t),
-            i = this.getSingleRequirementProgress(e, t);
-        return null == n || null == i ? 0 : Math.max(0, c(n) - i.current);
+        let n = this.getSingleRequirementProgress(e, t);
+        return n?.threshold == null ? 0 : Math.max(0, n.threshold - n.current);
     }
 }
 let m = new T(a.h, {
