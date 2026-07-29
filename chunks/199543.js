@@ -1,15 +1,12 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(439372),
-    r = n(966597),
-    s = n(216623);
-class a extends i.A {
+    r = n(8506),
+    a = n(216623);
+class s extends i.A {
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     handlePostConnectionOpen = () => {
-        !(function () {
-            let { enabled: e } = r.A.getConfig({ location: "saved_messages_manager" });
-            e && (0, s.AX)();
-        })();
+        (0, r.A9)("saved_messages_manager") && (0, a.AX)();
     };
 }
-let o = new a();
+let l = new s();

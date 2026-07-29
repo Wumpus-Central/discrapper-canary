@@ -5512,6 +5512,19 @@
     }
   },
   {
+    "name": "2026-07-message-bookmarks-v2",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": null,
+      "2": null
+    }
+  },
+  {
     "name": "2026-07-mkl-zen-cpu-dispatch-override",
     "kind": "user",
     "defaultConfig": {

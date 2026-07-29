@@ -9,7 +9,7 @@ var i = n(477900),
     d = n(688810),
     c = n(268218),
     u = n(335180),
-    _ = n(966597),
+    _ = n(8506),
     E = n(85109),
     A = n(910425),
     h = n(594061),
@@ -373,7 +373,6 @@ let T = (0, c.Fe)({
             n.e("77487"),
             n.e("94607"),
             n.e("82730"),
-            n.e("81754"),
             n.e("8536"),
             n.e("88393"),
             n.e("18706"),
@@ -454,7 +453,7 @@ function m(e) {
             [u, c, L, v],
         );
     r.useEffect(() => (f._.subscribe(p.jej.TOGGLE_INBOX, U), () => void f._.unsubscribe(p.jej.TOGGLE_INBOX, U)), [U]);
-    let { enabled: w } = _.A.useConfig({ location: "RecentsPopout" }),
+    let w = (0, _.jv)("RecentsPopout"),
         G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {
         (D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),

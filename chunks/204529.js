@@ -19,7 +19,7 @@ var i = n(477900),
     _ = n(956703),
     C = n(232835),
     I = n(994500),
-    v = n(966597),
+    v = n(8506),
     N = n(85109),
     j = n(652215);
 let T = "BookmarkNudgeLastShownAt",
@@ -38,7 +38,7 @@ let R = new b(f.h, {
     MESSAGE_REACTION_ADD: function (e) {
         if (!0 !== e.optimistic) return !1;
         let t = E.default.getId();
-        if (e.userId !== t || !v.A.getConfig({ location: "bookmark_nudge" }).enabled) return !1;
+        if (e.userId !== t || !(0, v.A9)("bookmark_nudge")) return !1;
         let n = C.A.getMessage(e.channelId, e.messageId);
         if (null == n || null != N.A.getSavedMessage(e.channelId, e.messageId)) return !1;
         {
@@ -98,7 +98,7 @@ var M = n(216623),
     P = n(129821);
 function D(e) {
     let { message: t, channel: n, useChatFontScaling: l, className: s } = e,
-        { enabled: r } = v.A.useConfig({ location: "message_reactions" }),
+        r = (0, v.jv)("message_reactions"),
         d = (0, h.bG)([N.A], () => null != N.A.getSavedMessage(n.id, t.id)),
         u = (0, h.bG)([R], () => R.isNudging(n.id, t.id));
     if (!r && !u) return null;
