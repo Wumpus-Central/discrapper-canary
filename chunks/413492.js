@@ -109,7 +109,7 @@ function U(e) {
     return (0, i.jsx)(b.A, { title: r, body: s, badgeImage: a, badgeName: r, children: t });
 }
 var w = n(470739),
-    G = n(34332),
+    G = n(839534),
     x = n(459192);
 function k(e) {
     let { targetElementRef: t, delay: n, forceOpen: r, badgeDescription: a, children: s } = e;
@@ -242,7 +242,7 @@ var et = n(30084),
     er = n(590202),
     ea = n(976860),
     es = n(305003),
-    el = n(312640),
+    el = n(273875),
     eo = n(798618),
     ed = n(752079),
     ec = n(641066);

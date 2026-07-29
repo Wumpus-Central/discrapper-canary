@@ -262,7 +262,9 @@
 .header__32c75 {
     align-items: center;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: -4px;
+    padding-top: 4px
 }
 
 .viewMore__32c75 {
