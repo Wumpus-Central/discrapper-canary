@@ -95,7 +95,7 @@ let L = (0, f.Fe)({
             t.e("40961"),
             t.e("93837"),
             t.e("6487"),
-            t.e("75594"),
+            t.e("32856"),
             t.e("69794"),
             t.e("5211"),
             t.e("83656"),
@@ -170,7 +170,7 @@ let L = (0, f.Fe)({
             t.e("69294"),
             t.e("94723"),
             t.e("62931"),
-            t.e("9679"),
+            t.e("71315"),
             t.e("45959"),
             t.e("58529"),
             t.e("81987"),
@@ -192,7 +192,7 @@ let L = (0, f.Fe)({
             t.e("63123"),
             t.e("27773"),
             t.e("52413"),
-            t.e("86212"),
+            t.e("99292"),
             t.e("50097"),
             t.e("57180"),
             t.e("48900"),
@@ -328,17 +328,17 @@ function K(e) {
         K = (0, s.bG)([b.default], () => b.default.getId()),
         B = (0, s.bG)([O.A], () => (0, x.nr)(V, O.A), [V]),
         Y = (0, h.r9)() && (0, h.UK)(a.id),
-        $ =
+        q =
             ((i = (0, m.Ay)(a)),
             (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
             [...(0, m.Rz)(t).values()]),
-        q = (0, N.W)(),
+        $ = (0, N.W)(),
         H = (0, E.m)({ location: "voice_channel_activities" }),
         W = (0, s.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
         Z = g ?? B,
         J = (0, A.m)(r, Z),
         X = null != V && null != p && !Y,
-        Q = X || J.length > 0 || $.length > 0,
+        Q = X || J.length > 0 || q.length > 0,
         ee = Q || j;
     if (
         (l.useEffect(() => {
@@ -367,7 +367,7 @@ function K(e) {
                     onAction: u,
                     showHeader: !0,
                 }),
-            $.map((e) =>
+            q.map((e) =>
                 (0, n.jsx)(
                     w.A,
                     {
@@ -381,7 +381,7 @@ function K(e) {
                 ),
             ),
             J.map((e) => {
-                let i = q ?? e.application_id;
+                let i = $ ?? e.application_id;
                 return (0, n.jsx)(
                     F,
                     {

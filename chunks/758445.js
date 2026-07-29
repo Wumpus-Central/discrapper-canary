@@ -14,6 +14,7 @@ class _ extends u.A {
     applicationId;
     displayName;
     rewardType;
+    rewardStatus;
     rewardConfig;
     skuIds;
     appliesToAllSkus;
@@ -29,6 +30,7 @@ class _ extends u.A {
             applicationId: e.application_id,
             displayName: e.display_name ?? null,
             rewardType: e.reward_type,
+            rewardStatus: e.reward_status ?? null,
             rewardConfig:
                 null != e.reward_config
                     ? null == (t = e.reward_config)
@@ -104,6 +106,7 @@ class _ extends u.A {
             (this.applicationId = e.applicationId),
             (this.displayName = e.displayName),
             (this.rewardType = e.rewardType),
+            (this.rewardStatus = e.rewardStatus),
             (this.rewardConfig = e.rewardConfig),
             (this.skuIds = e.skuIds),
             (this.appliesToAllSkus = e.appliesToAllSkus),
