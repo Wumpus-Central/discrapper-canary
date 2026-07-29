@@ -470,15 +470,18 @@ function tg(t) {
         actions: [{ text: f.intl.string(f.t["R3BPH+"]), variant: "primary", onClick: te }],
         children: [
             null != m &&
-                (0, l.jsx)("div", {
+                (0, l.jsxs)("div", {
                     className: tc.q5,
-                    children: (0, l.jsx)(td, {
-                        user: m,
-                        previewText: x,
-                        previewEmoji: y,
-                        placeHolderText: G,
-                        transitionState: e,
-                    }),
+                    children: [
+                        (0, l.jsx)(c.A, { children: f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: G ?? "" }) }),
+                        (0, l.jsx)(td, {
+                            user: m,
+                            previewText: x,
+                            previewEmoji: y,
+                            placeHolderText: G,
+                            transitionState: e,
+                        }),
+                    ],
                 }),
             (0, l.jsxs)("div", {
                 className: tc.eH,
@@ -581,7 +584,6 @@ function tg(t) {
                                 }),
                         ],
                     }),
-                    (0, l.jsx)(c.A, { children: f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: G ?? "" }) }),
                 ],
             }),
         ],
