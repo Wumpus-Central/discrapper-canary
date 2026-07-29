@@ -4414,28 +4414,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-06-game-profile-in-quickswitcher",
-    "defaultConfig": {
-      "enabled": false,
-      "alternatePosition": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "alternatePosition": false
-      },
-      "2": {
-        "enabled": true,
-        "alternatePosition": true
-      }
-    }
-  },
-  {
     "name": "2026-06-game-server-hosting-in-shop",
     "kind": "user",
     "defaultConfig": {
