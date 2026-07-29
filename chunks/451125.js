@@ -6,4 +6,6 @@ e.exports = {
     ZZ: "presetShuffle__82bda",
     nH: "inlineUpsell__82bda",
     Ei: "inlineUpsellDivider__82bda",
+    qf: "freeTrialDivider__82bda",
+    u8: "offerEndsText__82bda",
 };

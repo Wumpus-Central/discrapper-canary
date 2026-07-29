@@ -579,6 +579,28 @@
     margin-inline: calc(var(--space-16)*-1)
 }
 
+.freeTrialDivider__82bda {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-block: var(--space-4);
+    margin-inline: calc(var(--space-16)*-1);
+    position: relative
+}
+
+.freeTrialDivider__82bda:before {
+    background: var(--border-normal);
+    content: "";
+    height: 1px;
+    inset-block-start: 50%;
+    inset-inline: 0;
+    position: absolute
+}
+
+.offerEndsText__82bda {
+    text-align: center
+}
+
 .tabButton_b08638 {
     align-items: center;
     background: var(--profile-gradient-modal-background-color);
