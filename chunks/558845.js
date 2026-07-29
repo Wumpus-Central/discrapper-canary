@@ -1,13 +1,23 @@
 "use strict";
-n.d(t, { dD: () => S, oF: () => N, Ay: () => b, uW: () => C, oo: () => I, pd: () => T, Tc: () => R, mB: () => y }),
+n.d(t, {
+    dD: () => S,
+    oF: () => O,
+    _0: () => L,
+    Ay: () => v,
+    uW: () => C,
+    oo: () => m,
+    pd: () => g,
+    Tc: () => y,
+    mB: () => N,
+}),
     n(667532);
-var i = n(265690),
+var i = n(882035),
     r = n(121894),
-    s = n(17928),
-    a = n(228366),
-    o = n(715314),
-    l = n(870570),
-    u = n(787925);
+    a = n(17928),
+    s = n(228366),
+    l = n(715314),
+    o = n(870570),
+    d = n(787925);
 let c = new (class {
     timeoutId = null;
     schedule(e, t) {
@@ -23,7 +33,7 @@ let c = new (class {
         return null !== this.timeoutId;
     }
 })();
-function d() {
+function u() {
     return {
         candidates: new Map(),
         shownFatigableCandidate: null,
@@ -35,9 +45,9 @@ function d() {
         postConnectionOpen: !1,
     };
 }
-let _ = (0, i.h)(d),
-    h = !1;
-function f(e) {
+let _ = (0, i.h)(u),
+    E = !1;
+function A(e) {
     return {
         ...e,
         candidates: new Map(e.candidates),
@@ -45,7 +55,7 @@ function f(e) {
         currentlyShownGroup: new Set(e.currentlyShownGroup),
     };
 }
-function p(e, t) {
+function h(e, t) {
     return (
         null == t ||
             (null != t.content && e.currentlyShown.delete(t.content),
@@ -54,7 +64,7 @@ function p(e, t) {
         e
     );
 }
-function E(e, t) {
+function I(e, t) {
     if (null == t) return e;
     e.currentlyShown.add(t.content);
     let n = e.recentlyShown.filter((e) => e !== t.content);
@@ -63,7 +73,7 @@ function E(e, t) {
         n.splice(5),
         (e.recentlyShown = n),
         null != t.groupName && e.currentlyShownGroup.add(t.groupName),
-        u.C.has(t.content) ||
+        d.C.has(t.content) ||
             ((e.shownFatigableCandidate = t),
             e.prevFatigableCandidate?.content !== t.content &&
                 ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
@@ -71,13 +81,13 @@ function E(e, t) {
         e
     );
 }
-function m(e, t) {
+function f(e, t) {
     return e.candidates.delete(t.content), e;
 }
-function g(e, t) {
-    return E(p(e, e.shownFatigableCandidate), t);
+function p(e, t) {
+    return I(h(e, e.shownFatigableCandidate), t);
 }
-function A(e) {
+function T(e) {
     var t;
     let n;
     if (0 === e.candidates.size) return e;
@@ -90,7 +100,7 @@ function A(e) {
     )
         return (
             c.unschedule(),
-            g(e, null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0)
+            p(e, null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0)
         );
     return (
         (null != e.shownFatigableCandidate && !i) ||
@@ -100,8 +110,8 @@ function A(e) {
                 (0, r.r)(() => {
                     _.setState((e) => {
                         let t,
-                            n = f(e);
-                        return g(
+                            n = A(e);
+                        return p(
                             n,
                             ((t = [...n.candidates.keys()]),
                             null !== n.prevFatigableCandidate &&
@@ -116,62 +126,70 @@ function A(e) {
         e
     );
 }
-function I(e) {
-    let t = u.C.has(e.content);
+function m(e) {
+    let t = d.C.has(e.content);
     (0, r.r)(() => {
         _.setState((n) => {
-            let i = f(n);
-            return h ? i : t ? E(i, e) : A((i.candidates.set(e.content, e), i));
+            let i = A(n);
+            return E ? i : t ? I(i, e) : T((i.candidates.set(e.content, e), i));
         });
     });
 }
-function T(e, t) {
+function g(e, t) {
     (0, r.r)(() => {
         _.setState((n) => {
-            let i = f(n);
-            return t ? A(p(m(i, e), e)) : p(m(i, e), e);
+            let i = A(n);
+            return t ? T(h(f(i, e), e)) : h(f(i, e), e);
         });
     });
 }
 function S(e) {
     return _.getState().currentlyShown.has(e);
 }
-function y(e) {
+function N(e) {
     return _((t) => t.currentlyShown.has(e));
 }
 function C(e) {
     return _((t) => e.some((e) => t.currentlyShown.has(e)));
 }
-function N() {
-    let e = [..._.getState().currentlyShown].filter((e) => !u.C.has(e)).length;
+function O() {
+    let e = [..._.getState().currentlyShown].filter((e) => !d.C.has(e)).length;
     return [_.getState().currentlyShown.size, e];
 }
-function v() {
+function R() {
     (0, r.r)(() => {
         _.setState(() => {
-            let e = d();
+            let e = u();
             return (e.postConnectionOpen = !0), e;
         });
     }),
         c.unschedule();
 }
-function R() {
+function L() {
+    (0, r.r)(() => {
+        _.setState((e) => {
+            let t = A(e);
+            return (t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t;
+        });
+    });
+}
+function y() {
     return _.getState().postConnectionOpen;
 }
-class O extends s.Ay.Store {
+class D extends a.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
-        this.waitFor(o.A, l.A), this.syncWith([o.A, l.A], () => this.setHasRequiredAction());
+        this.waitFor(l.A, o.A), this.syncWith([l.A, o.A], () => this.setHasRequiredAction());
     }
     setHasRequiredAction() {
-        h = (function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A,
-                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
+        E = (function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.A,
+                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A;
             return null != t.getAction() || Object.keys(e.getState()).length > 0;
-        })(o.A, l.A);
+        })(l.A, o.A);
     }
 }
-function b(e, t) {
+function v(e, t) {
     return _(e, t);
 }
-new O(a.h, { CONNECTION_OPEN: () => v(), LOGOUT: () => v() });
+new D(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });
