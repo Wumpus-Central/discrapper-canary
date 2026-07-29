@@ -3302,6 +3302,22 @@
     }
   },
   {
+    "name": "2026-04-voice-gateway-protocol-version",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-04-wetf-parser",
     "kind": "user",
     "defaultConfig": {

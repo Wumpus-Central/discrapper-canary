@@ -559,8 +559,8 @@ class L extends s.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let y = new L();
-var D = n(959129),
+let D = new L();
+var y = n(959129),
     v = n(67948),
     b = n(978656),
     M = n(720119),
@@ -861,8 +861,8 @@ class Y extends s.G {
             { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => M.l },
             { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => b.s },
             { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => v.E },
-            { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => D.v },
-            { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => y },
+            { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => y.v },
+            { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => D },
             { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => R },
             { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => C },
             { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => S },
@@ -964,7 +964,7 @@ class Y extends s.G {
                 case 12:
                     a.properties = {
                         oneofKind: "billingSettingsNitroGiftBanner",
-                        billingSettingsNitroGiftBanner: D.v.internalBinaryRead(
+                        billingSettingsNitroGiftBanner: y.v.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -975,7 +975,7 @@ class Y extends s.G {
                 case 13:
                     a.properties = {
                         oneofKind: "giftReminderNagbar",
-                        giftReminderNagbar: y.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
+                        giftReminderNagbar: D.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
                     };
                     break;
                 case 14:
@@ -1100,7 +1100,7 @@ class Y extends s.G {
                     n,
                 ).join(),
             "billingSettingsNitroGiftBanner" === e.properties.oneofKind &&
-                D.v
+                y.v
                     .internalBinaryWrite(
                         e.properties.billingSettingsNitroGiftBanner,
                         t.tag(12, i.O0.LengthDelimited).fork(),
@@ -1108,9 +1108,11 @@ class Y extends s.G {
                     )
                     .join(),
             "giftReminderNagbar" === e.properties.oneofKind &&
-                y
-                    .internalBinaryWrite(e.properties.giftReminderNagbar, t.tag(13, i.O0.LengthDelimited).fork(), n)
-                    .join(),
+                D.internalBinaryWrite(
+                    e.properties.giftReminderNagbar,
+                    t.tag(13, i.O0.LengthDelimited).fork(),
+                    n,
+                ).join(),
             "giftReminderCoachmark" === e.properties.oneofKind &&
                 R.internalBinaryWrite(
                     e.properties.giftReminderCoachmark,

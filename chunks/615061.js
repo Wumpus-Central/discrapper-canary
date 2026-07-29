@@ -57,10 +57,10 @@ function L(e) {
     let t = O[e] ?? 0;
     0 === t && R?.(e, !0), (O[e] = t + 1);
 }
-function y(e) {
+function D(e) {
     O[e]--, 0 === O[e] && R?.(e, !1);
 }
-var D = n(143236),
+var y = n(143236),
     v = n(737005),
     b = n.n(v),
     M = n(731854);
@@ -175,7 +175,7 @@ class W {
 var Y = n(818348);
 let K = new g.Vy("Output"),
     $ = new j();
-class z extends D.EventEmitter {
+class z extends y.EventEmitter {
     stream;
     context;
     sourceId;
@@ -378,7 +378,7 @@ var q = n(434933),
     Q = n.n(X),
     J = n(201327);
 let ee = new j();
-class et extends D.EventEmitter {
+class et extends y.EventEmitter {
     stream = new MediaStream();
     sourceId = M.qe;
     streamId = null;
@@ -1022,6 +1022,7 @@ class eI extends S.A {
             this.emit(N.yq.LocalMute, e, t);
     }
     fastUdpReconnect() {}
+    setUdpEndpoint() {}
     getNumFastUdpReconnects() {
         return null;
     }
@@ -1304,7 +1305,7 @@ function eL(e) {
         media: e,
     });
 }
-function ey(e) {
+function eD(e) {
     let {
         mid: t,
         type: n,
@@ -1407,7 +1408,7 @@ function ey(e) {
     }
     return h;
 }
-function eD(e, t, n, i, r) {
+function ey(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
     if (null == a) return null;
     let s = t.find((e) => RegExp(`^apt=${a.payload}`).test(e.config)),
@@ -1426,7 +1427,7 @@ function ev(e, t) {
             switch ((e.outboundStreams.push({ type: r, direction: o, mid: d }), r)) {
                 case "audio":
                     [M.UK.OPUS].forEach((t, n) => {
-                        let i = eD(a, l, r, t, n);
+                        let i = ey(a, l, r, t, n);
                         null != i && e.codecs.push(i);
                     }),
                         "sendrecv" === o &&
@@ -1436,7 +1437,7 @@ function ev(e, t) {
                 case "video":
                     (t ? [M.UK.H265, M.UK.H264, M.UK.VP8, M.UK.VP9] : [M.UK.H264, M.UK.VP8, M.UK.VP9]).forEach(
                         (t, n) => {
-                            let i = eD(a, l, r, t, n);
+                            let i = ey(a, l, r, t, n);
                             null != i && e.codecs.push(i);
                         },
                     ),
@@ -1477,7 +1478,7 @@ function eP(e) {
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eU extends D.EventEmitter {
+class eU extends y.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1600,7 +1601,7 @@ class eU extends D.EventEmitter {
                     let [i, u, A, h, I] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
-                            ey({
+                            eD({
                                 mid: I,
                                 type: A,
                                 setup: e,
@@ -1627,7 +1628,7 @@ class eU extends D.EventEmitter {
                         });
                 if (
                     (E.push(
-                        ey({
+                        eD({
                             mid: "audio",
                             type: "audio",
                             setup: e,
@@ -1652,7 +1653,7 @@ class eU extends D.EventEmitter {
                             return eR(n, t, "v");
                         });
                     E.push(
-                        ey({
+                        eD({
                             mid: "video",
                             type: "video",
                             setup: e,
@@ -1687,7 +1688,7 @@ class eU extends D.EventEmitter {
     }
 }
 let ew = new g.Vy("PeerConnection");
-class eG extends D.EventEmitter {
+class eG extends y.EventEmitter {
     bitrate;
     pc;
     stream = null;
@@ -2372,7 +2373,7 @@ class e0 extends eI {
                             ? (t = eR(I, u, "audio" === f ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
-                                ey({
+                                eD({
                                     mid: T,
                                     type: f,
                                     setup: h,
@@ -2656,7 +2657,7 @@ class e2 extends eI {
 }
 let e3 = n.p + "worklet.8d84a64a97f8451a.js",
     e4 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e6 extends D.EventEmitter {
+class e5 extends y.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2751,7 +2752,7 @@ class e6 extends D.EventEmitter {
         });
     };
 }
-class e5 extends D.EventEmitter {
+class e6 extends y.EventEmitter {
     id;
     stream;
     pool;
@@ -2762,7 +2763,7 @@ class e5 extends D.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e5(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e6(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2799,7 +2800,7 @@ class e5 extends D.EventEmitter {
 class e7 {
     pool = {};
     async acquire(e, t) {
-        let n = await e5.get(e, t, this);
+        let n = await e6.get(e, t, this);
         return (this.pool[n.id] = n), n;
     }
     get(e) {
@@ -2825,13 +2826,13 @@ function tt(e) {
                 L(t),
                 (e.srcObject = (0, J.yL)(t)),
                 () => {
-                    y(t), (e.srcObject = null), e.load();
+                    D(t), (e.srcObject = null), e.load();
                 }
             );
     }, [t]),
         h.useEffect(
             () => (
-                n ? (l.current?.pause(), y(t)) : l.current?.play().catch(() => {}),
+                n ? (l.current?.pause(), D(t)) : l.current?.play().catch(() => {}),
                 () => {
                     n && L(t);
                 }
@@ -3194,7 +3195,7 @@ class tr extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e6(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e5(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }
