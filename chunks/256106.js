@@ -493,8 +493,8 @@ var eq = n(503698),
     e2 = n(513461),
     e3 = n(709977),
     e4 = n(212455),
-    e6 = n(7142),
-    e5 = n(396769);
+    e5 = n(7142),
+    e6 = n(396769);
 let e7 = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
         t = (0, c.bG)([ey.A], () => ey.A.getGuild(e), [e]),
@@ -506,7 +506,7 @@ let e7 = function () {
         o = null,
         d = null,
         u = null,
-        E = [e6.lm, e5.lm];
+        E = [e5.lm, e6.lm];
     switch (l) {
         case e2.B5.SUBMITTED:
             (o = es.intl.string(es.t["5iLvSx"])),
@@ -532,7 +532,7 @@ let e7 = function () {
                             return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                         });
                 }),
-                E.push(e6.z3);
+                E.push(e5.z3);
             break;
         default:
             (o = es.intl.string(es.t.G5YKXP)),
@@ -544,7 +544,7 @@ let e7 = function () {
     return (0, i.jsxs)("div", {
         className: eZ()(...E),
         children: [
-            (0, i.jsx)(_.E, { className: e6.wx, variant: "text-sm/normal", children: o }),
+            (0, i.jsx)(_.E, { className: e5.wx, variant: "text-sm/normal", children: o }),
             (0, i.jsx)(eJ.$, { variant: "overlay-primary", size: "sm", onClick: u, text: d }),
         ],
     });
@@ -583,7 +583,7 @@ let tl = function () {
         }
     }
     return (0, i.jsxs)("div", {
-        className: eZ()(ts.lm, e5.lm),
+        className: eZ()(ts.lm, e6.lm),
         children: [
             (0, i.jsxs)(ti.$n, {
                 look: ti.$n.Looks.OUTLINED,
@@ -900,8 +900,8 @@ var tJ = n(293246),
     t2 = n(147964),
     t3 = n(177141),
     t4 = n(975571),
-    t6 = n(723702),
-    t5 = n(325278),
+    t5 = n(723702),
+    t6 = n(325278),
     t7 = n(831502),
     t8 = n(731854);
 let t9 = new F.A("Notice");
@@ -968,7 +968,7 @@ function nn(e) {
     });
 }
 function ni(e) {
-    return (0, t6.isWindows)() && d().satisfies(M.A?.os.release, t5.PH)
+    return (0, t5.isWindows)() && d().satisfies(M.A?.os.release, t6.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
@@ -1127,7 +1127,7 @@ let ns = r.memo(function () {
                 color: A.Hv.WARNING,
                 children: [
                     (0, i.jsx)(A.PM, { onClick: () => na(z), noticeType: a.type }),
-                    es.intl.format(t6.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
+                    es.intl.format(t5.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
                         helpCenterLink: t4.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
                     }),
                 ],
@@ -1358,20 +1358,10 @@ let ns = r.memo(function () {
                         onClick: async () => {
                             try {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
-                                    n.e("63229"),
+                                    n.e("83118"),
                                     n.e("98942"),
                                     n.e("31076"),
                                     n.e("66806"),
-                                    n.e("26572"),
-                                    n.e("39737"),
-                                    n.e("85391"),
-                                    n.e("56356"),
-                                    n.e("29062"),
-                                    n.e("5270"),
-                                    n.e("42293"),
-                                    n.e("44018"),
-                                    n.e("60574"),
-                                    n.e("82222"),
                                     n.e("23102"),
                                     n.e("2285"),
                                     n.e("97726"),
@@ -1379,18 +1369,25 @@ let ns = r.memo(function () {
                                     n.e("44459"),
                                     n.e("98986"),
                                     n.e("18379"),
-                                    n.e("21133"),
-                                    n.e("60061"),
-                                    n.e("44083"),
-                                    n.e("62329"),
+                                    n.e("60411"),
+                                    n.e("93637"),
+                                    n.e("45807"),
+                                    n.e("26572"),
+                                    n.e("39737"),
+                                    n.e("85391"),
+                                    n.e("56356"),
+                                    n.e("18307"),
+                                    n.e("5270"),
+                                    n.e("42293"),
+                                    n.e("60574"),
+                                    n.e("82222"),
                                     n.e("18917"),
                                     n.e("94450"),
                                     n.e("86307"),
                                     n.e("3574"),
                                     n.e("711"),
                                     n.e("73153"),
-                                    n.e("18151"),
-                                    n.e("10543"),
+                                    n.e("25457"),
                                     n.e("40981"),
                                     n.e("75030"),
                                     n.e("63576"),
@@ -1402,7 +1399,7 @@ let ns = r.memo(function () {
                                     n.e("18315"),
                                     n.e("17776"),
                                     n.e("78969"),
-                                    n.e("17569"),
+                                    n.e("77770"),
                                     n.e("61275"),
                                     n.e("49557"),
                                     n.e("30072"),
@@ -1442,7 +1439,7 @@ let ns = r.memo(function () {
                                     n.e("47834"),
                                     n.e("18573"),
                                     n.e("97595"),
-                                    n.e("68708"),
+                                    n.e("47662"),
                                     n.e("44057"),
                                     n.e("55112"),
                                     n.e("28504"),
@@ -1468,7 +1465,7 @@ let ns = r.memo(function () {
                                     n.e("81987"),
                                     n.e("58038"),
                                     n.e("71202"),
-                                    n.e("81813"),
+                                    n.e("75201"),
                                     n.e("6174"),
                                     n.e("46070"),
                                     n.e("29963"),
@@ -1695,7 +1692,7 @@ let ns = r.memo(function () {
                             na(a.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, f.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("63229"),
+                                        n.e("45807"),
                                         n.e("98942"),
                                         n.e("31076"),
                                         n.e("66806"),
@@ -1706,14 +1703,6 @@ let ns = r.memo(function () {
                                         n.e("26572"),
                                         n.e("18629"),
                                         n.e("48132"),
-                                        n.e("39737"),
-                                        n.e("85391"),
-                                        n.e("56356"),
-                                        n.e("29062"),
-                                        n.e("5270"),
-                                        n.e("42293"),
-                                        n.e("60574"),
-                                        n.e("82222"),
                                         n.e("23102"),
                                         n.e("2285"),
                                         n.e("97726"),
@@ -1721,18 +1710,23 @@ let ns = r.memo(function () {
                                         n.e("44459"),
                                         n.e("98986"),
                                         n.e("18379"),
-                                        n.e("21133"),
-                                        n.e("60061"),
-                                        n.e("44083"),
-                                        n.e("62329"),
+                                        n.e("60411"),
+                                        n.e("93637"),
+                                        n.e("39737"),
+                                        n.e("85391"),
+                                        n.e("56356"),
+                                        n.e("18307"),
+                                        n.e("5270"),
+                                        n.e("42293"),
+                                        n.e("60574"),
+                                        n.e("82222"),
                                         n.e("18917"),
                                         n.e("94450"),
                                         n.e("86307"),
                                         n.e("3574"),
                                         n.e("711"),
                                         n.e("73153"),
-                                        n.e("18151"),
-                                        n.e("10543"),
+                                        n.e("25457"),
                                         n.e("40981"),
                                         n.e("75030"),
                                         n.e("63576"),
@@ -1743,7 +1737,7 @@ let ns = r.memo(function () {
                                         n.e("18315"),
                                         n.e("17776"),
                                         n.e("78969"),
-                                        n.e("17569"),
+                                        n.e("77770"),
                                         n.e("48227"),
                                         n.e("37175"),
                                         n.e("13920"),
@@ -1759,7 +1753,7 @@ let ns = r.memo(function () {
                                         n.e("77873"),
                                         n.e("97312"),
                                         n.e("38469"),
-                                        n.e("44018"),
+                                        n.e("83118"),
                                         n.e("50693"),
                                         n.e("99424"),
                                         n.e("670"),
@@ -1779,7 +1773,7 @@ let ns = r.memo(function () {
                                         n.e("47834"),
                                         n.e("18573"),
                                         n.e("97595"),
-                                        n.e("68708"),
+                                        n.e("47662"),
                                         n.e("44057"),
                                         n.e("55112"),
                                         n.e("28504"),
@@ -1805,7 +1799,7 @@ let ns = r.memo(function () {
                                         n.e("81987"),
                                         n.e("58038"),
                                         n.e("71202"),
-                                        n.e("81813"),
+                                        n.e("75201"),
                                         n.e("6174"),
                                         n.e("29963"),
                                         n.e("92075"),

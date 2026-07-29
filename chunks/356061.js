@@ -1,0 +1,17 @@
+_.exports = {
+    uW: "section__57a1b",
+    wx: "header__57a1b",
+    h_: "description__57a1b",
+    CQ: "ipRow__57a1b",
+    cL: "copyButton__57a1b",
+    p_: "list__57a1b",
+    nM: "row__57a1b",
+    M4: "rowLeft__57a1b",
+    CR: "serverInfo__57a1b",
+    Rd: "rowRight__57a1b",
+    Ff: "priceBlock__57a1b",
+    ez: "canceledDate__57a1b",
+    Vs: "tile__57a1b",
+    uP: "tileImage__57a1b",
+    tw: "tileGloss__57a1b",
+};

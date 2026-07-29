@@ -1,0 +1,21 @@
+.imageContainer__5c8ad {
+    align-items: center;
+    background: var(--background-base-lowest);
+    display: flex;
+    justify-content: center;
+    max-height: 205px;
+    padding: var(--space-24)
+}
+
+.image__5c8ad,
+.imageContainer__5c8ad {
+    border-radius: var(--radius-sm)
+}
+
+.image__5c8ad {
+    height: 160px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    rotate: 5deg;
+    width: 120px
+}

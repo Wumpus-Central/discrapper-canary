@@ -436,7 +436,7 @@ var eH = n(633965),
     e2 = n(131677),
     e3 = n(228366);
 let e4 = {};
-class e6 extends E.Ay.PersistedStore {
+class e5 extends E.Ay.PersistedStore {
     static displayName = "ViewHistoryStore";
     static persistKey = "ViewHistoryStore";
     initialize(e) {
@@ -452,7 +452,7 @@ class e6 extends E.Ay.PersistedStore {
         return null != e4[e];
     }
 }
-let e5 = new e6(e3.h, {
+let e6 = new e5(e3.h, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
         e4[t] = Date.now();
@@ -468,7 +468,7 @@ function tt() {
 function tn(e) {
     let t = eo.default.getMutableGuildStates();
     return (
-        (e === eL.sFm.SERVER_DISCOVERY_BADGE && !e5.hasViewed(eL.sFm.SERVER_DISCOVERY_BADGE)) ||
+        (e === eL.sFm.SERVER_DISCOVERY_BADGE && !e6.hasViewed(eL.sFm.SERVER_DISCOVERY_BADGE)) ||
         (e !== e9 && e !== te && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
@@ -1155,8 +1155,8 @@ function t3(e) {
     });
 }
 var t4 = n(819638),
-    t6 = n(441174);
-let t5 = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
+    t5 = n(441174);
+let t6 = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function t7(e) {
     (0, tc.L3)(e, async () => {
         let { default: e } = await n.e("17288").then(n.bind(n, 4571));
@@ -1171,10 +1171,10 @@ function t8(e) {
         o = (0, p.useModalsStore)((e) => (0, p.hasModalOpenSelector)(e, t4.fc)),
         { analyticsLocations: d } = (0, y.Ay)();
     return (0, r.jsx)("div", {
-        className: t6.Uq,
+        className: t5.Uq,
         children: (0, r.jsxs)(tj.A, {
             tutorialId: l ? "create-more-servers" : "create-first-server",
-            inlineSpecs: t5,
+            inlineSpecs: t6,
             position: "right",
             disabled: t,
             children: [
@@ -1478,7 +1478,7 @@ var n$ = n(930235),
     n2 = n(140735),
     n3 = n(548118),
     n4 = n(195451);
-function n6(e) {
+function n5(e) {
     let { guildId: t, animate: n } = e,
         i = (0, E.bG)([ez.A], () => ez.A.getGuild(t), [t]),
         a = (0, g.r)(f.A.modules.guildbar.AVATAR_SIZE);
@@ -1494,7 +1494,7 @@ function n6(e) {
               tabIndex: -1,
           });
 }
-function n5(e) {
+function n6(e) {
     let { folderNode: t, hovered: n, sorting: i } = e,
         { children: a } = t,
         s = n && i,
@@ -1509,7 +1509,7 @@ function n5(e) {
             className: n4.qJ,
             children: (0, r.jsx)("div", {
                 className: n4.jg,
-                children: a.slice(0, 4).map((e) => (0, r.jsx)(n6, { guildId: e.id, animate: n }, e.id)),
+                children: a.slice(0, 4).map((e) => (0, r.jsx)(n5, { guildId: e.id, animate: n }, e.id)),
             }),
         });
     return (0, r.jsxs)("div", {
@@ -1583,7 +1583,7 @@ function n7(e) {
                         children:
                             null != u
                                 ? (0, r.jsx)("div", { className: n4.hJ, children: u })
-                                : (0, r.jsx)(n5, { folderNode: t, hovered: g, sorting: i }),
+                                : (0, r.jsx)(n6, { folderNode: t, hovered: g, sorting: i }),
                     }),
                 }),
             ],
@@ -2334,20 +2334,10 @@ function i$(e, t) {
             n.e("24092"),
             n.e("33004"),
             n.e("3557"),
-            n.e("63229"),
+            n.e("83118"),
             n.e("98942"),
             n.e("31076"),
             n.e("66806"),
-            n.e("26572"),
-            n.e("39737"),
-            n.e("85391"),
-            n.e("56356"),
-            n.e("29062"),
-            n.e("5270"),
-            n.e("42293"),
-            n.e("44018"),
-            n.e("60574"),
-            n.e("82222"),
             n.e("23102"),
             n.e("2285"),
             n.e("97726"),
@@ -2355,17 +2345,24 @@ function i$(e, t) {
             n.e("44459"),
             n.e("98986"),
             n.e("18379"),
-            n.e("21133"),
-            n.e("60061"),
-            n.e("44083"),
-            n.e("62329"),
+            n.e("60411"),
+            n.e("93637"),
+            n.e("45807"),
+            n.e("26572"),
+            n.e("39737"),
+            n.e("85391"),
+            n.e("56356"),
+            n.e("18307"),
+            n.e("5270"),
+            n.e("42293"),
+            n.e("60574"),
+            n.e("82222"),
             n.e("18917"),
             n.e("94450"),
             n.e("86307"),
             n.e("3574"),
             n.e("711"),
-            n.e("18151"),
-            n.e("10543"),
+            n.e("25457"),
             n.e("40981"),
             n.e("63576"),
             n.e("50693"),
@@ -2376,7 +2373,7 @@ function i$(e, t) {
             n.e("18315"),
             n.e("17776"),
             n.e("78969"),
-            n.e("17569"),
+            n.e("77770"),
             n.e("61275"),
             n.e("49557"),
             n.e("30072"),
@@ -2414,6 +2411,9 @@ function i$(e, t) {
             n.e("69977"),
             n.e("94149"),
             n.e("55286"),
+            n.e("43325"),
+            n.e("72026"),
+            n.e("83536"),
             n.e("66756"),
             n.e("25167"),
             n.e("3650"),
@@ -2433,9 +2433,6 @@ function i$(e, t) {
             n.e("42745"),
             n.e("70148"),
             n.e("22878"),
-            n.e("63271"),
-            n.e("62240"),
-            n.e("99652"),
             n.e("74318"),
             n.e("10887"),
             n.e("99439"),
@@ -2472,9 +2469,9 @@ function i$(e, t) {
             n.e("9172"),
             n.e("65420"),
             n.e("3056"),
-            n.e("84710"),
+            n.e("62329"),
             n.e("80263"),
-            n.e("97106"),
+            n.e("74725"),
             n.e("78015"),
             n.e("22570"),
             n.e("99998"),
@@ -2484,7 +2481,7 @@ function i$(e, t) {
             n.e("988"),
             n.e("54540"),
             n.e("32744"),
-            n.e("52123"),
+            n.e("21035"),
             n.e("26738"),
             n.e("41295"),
             n.e("69960"),
@@ -2500,7 +2497,7 @@ function i$(e, t) {
             n.e("40804"),
             n.e("45827"),
             n.e("64477"),
-            n.e("68254"),
+            n.e("77962"),
             n.e("96393"),
             n.e("16123"),
             n.e("73193"),
@@ -2564,7 +2561,7 @@ function i$(e, t) {
             n.e("47834"),
             n.e("18573"),
             n.e("97595"),
-            n.e("68708"),
+            n.e("47662"),
             n.e("44057"),
             n.e("55112"),
             n.e("28504"),
@@ -2590,7 +2587,7 @@ function i$(e, t) {
             n.e("81987"),
             n.e("58038"),
             n.e("71202"),
-            n.e("81813"),
+            n.e("75201"),
             n.e("6174"),
             n.e("93103"),
             n.e("28367"),
@@ -2681,7 +2678,7 @@ function i$(e, t) {
             n.e("76413"),
             n.e("70104"),
             n.e("68214"),
-            n.e("7431"),
+            n.e("44761"),
             n.e("2564"),
             n.e("71477"),
             n.e("17563"),
@@ -2703,7 +2700,7 @@ function i$(e, t) {
             n.e("73958"),
             n.e("18465"),
             n.e("71430"),
-            n.e("50266"),
+            n.e("76516"),
             n.e("501"),
             n.e("86243"),
             n.e("85794"),
@@ -2712,7 +2709,7 @@ function i$(e, t) {
             n.e("82783"),
             n.e("32209"),
             n.e("5557"),
-            n.e("67200"),
+            n.e("68062"),
             n.e("93438"),
             n.e("9371"),
             n.e("45437"),
@@ -2747,18 +2744,18 @@ function i$(e, t) {
             n.e("19454"),
             n.e("15109"),
             n.e("94607"),
-            n.e("37084"),
+            n.e("82730"),
             n.e("81754"),
             n.e("8536"),
             n.e("28136"),
             n.e("57458"),
             n.e("38601"),
             n.e("1243"),
-            n.e("25559"),
+            n.e("88393"),
             n.e("18706"),
             n.e("872"),
             n.e("59797"),
-            n.e("37268"),
+            n.e("52531"),
             n.e("93336"),
             n.e("15920"),
             n.e("68530"),
@@ -3137,8 +3134,8 @@ var iX = n(922016),
     i2 = n(624458),
     i3 = n(408213),
     i4 = (((i = {})[(i.PENDING_JOIN_REQUESTS_FOLDER = 1)] = "PENDING_JOIN_REQUESTS_FOLDER"), i),
-    i6 = n(928568);
-function i5(e, t) {
+    i5 = n(928568);
+function i6(e, t) {
     (0, tc.L3)(e, async () => {
         let { default: e } = await n.e("49056").then(n.bind(n, 97187));
         return (n) => (0, r.jsx)(e, { ...n, guild: t });
@@ -3160,7 +3157,7 @@ function i7(e) {
               draggable: !1,
               selected: n === l,
               preloadOnClick: !1,
-              contextMenu: i5,
+              contextMenu: i6,
               lowerBadge:
                   i?.applicationStatus === iw.B5.REJECTED
                       ? (0, $.eW)({ guildJoinRequestStatus: i.applicationStatus })
@@ -3238,7 +3235,7 @@ function re(e) {
         [n, i] = a.useState(!1),
         s = (0, E.bG)([eJ.A], () => eJ.A.getGuildId()),
         l = (0, E.bG)([iu.A], () => iu.A.hasFetchedRequestToJoinGuilds),
-        o = (0, i6.A)(),
+        o = (0, i5.A)(),
         d = (0, i1.A)(s),
         c = a.useMemo(() => {
             let e = (0, eQ.xW)({

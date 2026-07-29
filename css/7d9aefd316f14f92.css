@@ -1,0 +1,47 @@
+.forwardPreview_e6dd8e {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: 16px;
+    padding-inline-start: 16px;
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview_e6dd8e:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer_e6dd8e {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.cardImage_e6dd8e {
+    aspect-ratio: 183/235;
+    border: 1px solid var(--opacity-white-12);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 68px;
+    overflow: hidden
+}
+
+.coverImage_e6dd8e {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}

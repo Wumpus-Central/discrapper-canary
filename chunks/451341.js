@@ -1,0 +1,17 @@
+_.exports = {
+    Nr: "card__78964",
+    ys: "glow__78964",
+    Fc: "glowImage__78964",
+    ex: "glowFade__78964",
+    wx: "header__78964",
+    Vs: "tile__78964",
+    uP: "tileImage__78964",
+    tw: "tileGloss__78964",
+    Vj: "tileFallback__78964",
+    i8: "titleGroup__78964",
+    M1: "stats__78964",
+    zu: "statCell__78964",
+    Wc: "statDivider__78964",
+    mi: "statValueRam__78964",
+    UK: "poweredBy__78964",
+};

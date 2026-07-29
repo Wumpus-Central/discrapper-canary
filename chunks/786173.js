@@ -1,22 +1,22 @@
 n.d(t, { A: () => d });
 var u = n(582128),
     l = n(512750),
-    r = n(17928);
+    r = n(17928),
+    i = n(831617);
 n(557193);
-var i = n(71393),
-    o = n(576705),
-    s = n(488803),
+var o = n(71393),
+    s = n(576705),
     A = n(383272),
     _ = n(414133),
     E = n(568065),
     a = n(652215);
 function d(e, t) {
-    let n = (0, s.C$)(e, "useGuildPowerupNewPerkMarketingVersion"),
-        d = (0, r.bG)([i.A], () => i.A.getGuild(e)?.features.has(a.GuildFeatures.GAME_SERVERS)),
+    let n = (0, i.C$)(e, "useGuildPowerupNewPerkMarketingVersion"),
+        d = (0, r.bG)([o.A], () => o.A.getGuild(e)?.features.has(a.GuildFeatures.GAME_SERVERS)),
         G = (0, A.DD)(e, "useGuildPowerupNewPerkMarketingVersion"),
         R = (0, _.OS)("useGuildPowerupNewPerkMarketingVersion"),
         S = G && R,
-        P = (0, r.bG)([o.A, i.A], () => o.A.can(a.xBc.MANAGE_GUILD, i.A.getGuild(e)));
+        P = (0, r.bG)([s.A, o.A], () => s.A.can(a.xBc.MANAGE_GUILD, o.A.getGuild(e)));
     return u.useMemo(() => {
         t?.allPowerups?.[l.SL], t?.unlockedPowerups?.[l.SL];
         let e = t?.allPowerups?.[l.d0] != null,
