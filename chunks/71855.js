@@ -57,9 +57,10 @@ function S(e) {
     let { leading: t, title: n, trailing: a, windowKey: l, className: o } = e,
         d = (0, E.getPlatform)(),
         c = r.useCallback(() => T(l), [l]),
-        u = d === E.PlatformTypes.WINDOWS || d === E.PlatformTypes.LINUX;
+        u = d === E.PlatformTypes.WINDOWS || d === E.PlatformTypes.LINUX,
+        _ = r.useMemo(() => d === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [d]);
     return (0, i.jsxs)("div", {
-        className: s()(I.M0, o),
+        className: s()(I.M0, { [I.CP]: _ }, o),
         onDoubleClick: c,
         "data-window-chrome": "true",
         children: [

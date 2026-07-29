@@ -20,6 +20,19 @@
     padding-inline-start: calc(100/var(--custom-zoom, 100)*(var(--custom-guild-list-width) + var(--space-md)))
 }
 
+.platform-osx .bar_c38106.macRtl_c38106 {
+    padding-inline-end: calc(100/var(--custom-zoom, 100)*(var(--custom-guild-list-width) + var(--space-md)));
+    padding-inline-start: var(--space-12)
+}
+
+.platform-osx .macRtl_c38106 .trailing_c38106 {
+    order: -1
+}
+
+.platform-osx .macRtl_c38106 .leading_c38106 {
+    order: 1
+}
+
 .platform-linux .bar_c38106,
 .platform-win .bar_c38106 {
     padding-inline-end: 0

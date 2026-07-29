@@ -34,6 +34,7 @@ var i,
         (i.APP_PAUSE_FRAME_EVICTOR = "DISCORD_APP_PAUSE_FRAME_EVICTOR"),
         (i.APP_UNPAUSE_FRAME_EVICTOR = "DISCORD_APP_UNPAUSE_FRAME_EVICTOR"),
         (i.APP_GET_PREFERRED_SYSTEM_LANGUAGES = "DISCORD_APP_GET_PREFERRED_SYSTEM_LANGUAGES"),
+        (i.APP_GET_SYSTEM_UI_DIRECTION_SYNC = "DISCORD_APP_GET_SYSTEM_UI_DIRECTION_SYNC"),
         (i.APP_GET_OPEN_ON_START = "DISCORD_APP_GET_OPEN_ON_START"),
         (i.CLIPBOARD_COPY = "DISCORD_CLIPBOARD_COPY"),
         (i.CLIPBOARD_CUT = "DISCORD_CLIPBOARD_CUT"),
@@ -729,6 +730,7 @@ let Y = {
             g.app.unpauseFrameEvictor?.();
         },
         getPreferredSystemLanguages: () => g.app.getPreferredSystemLanguages?.(),
+        getSystemUIDirection: () => g.app.getSystemUIDirection?.(),
         getPidFromDesktopSource(e) {
             if (!(0, f.isDesktop)() || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
             let t = e?.split(":"),
