@@ -3352,11 +3352,20 @@
     margin-inline-start: 8px
 }
 
-.backButton_fed6d3 {
+.favoritesHeader_fed6d3 {
+    flex-grow: 1;
+    gap: var(--space-24)
+}
+
+.backButton_fed6d3,
+.favoritesHeader_fed6d3 {
     align-items: center;
+    display: flex
+}
+
+.backButton_fed6d3 {
     color: var(--text-muted);
     cursor: pointer;
-    display: flex;
     height: 28px;
     margin-inline-end: 8px
 }

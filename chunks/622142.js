@@ -295,20 +295,35 @@ class $ extends r.PureComponent {
         });
     };
     renderHeaderContent() {
-        let { query: e, headingColor: t } = this.props,
-            { resultType: n } = this.state;
-        switch (n) {
+        let { query: e, favorites: t, headingColor: n } = this.props,
+            { resultType: r } = this.state;
+        switch (r) {
             case x.dD.FAVORITES:
-                return (0, i.jsx)(o.D, {
-                    variant: "heading-md/semibold",
-                    color: t,
-                    className: Y.wL,
-                    children: k.intl.string(k.t.y3LQCG),
+                return (0, i.jsxs)("div", {
+                    className: Y.XK,
+                    children: [
+                        (0, i.jsx)(o.D, {
+                            variant: "heading-md/semibold",
+                            color: n,
+                            className: Y.wL,
+                            children: k.intl.string(k.t.y3LQCG),
+                        }),
+                        t.length > 0 &&
+                            (0, i.jsx)(d.I, {
+                                query: e,
+                                onChange: h.Ri,
+                                onClear: () => (0, h.Ri)(""),
+                                placeholder: k.intl.string(k.t["+Kakw+"]),
+                                "aria-label": k.intl.string(k.t["+Kakw+"]),
+                                ref: this.props.searchBarRef,
+                                autoFocus: !0,
+                            }),
+                    ],
                 });
             case x.dD.TRENDING_GIFS:
                 return (0, i.jsx)(o.D, {
                     variant: "heading-md/semibold",
-                    color: t,
+                    color: n,
                     className: Y.wL,
                     children: k.intl.string(k.t.H6zNFz),
                 });
@@ -358,7 +373,7 @@ class $ extends r.PureComponent {
             ? (0, i.jsx)(H, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
             : (0, i.jsx)(G.Ay, {
                   className: e,
-                  data: u === x.dD.FAVORITES ? a : t,
+                  data: u === x.dD.FAVORITES ? (0, p.T)(a, r) : t,
                   onSelectGIF: this.handleSelectGIF,
                   resultType: u,
                   resultQuery: n,

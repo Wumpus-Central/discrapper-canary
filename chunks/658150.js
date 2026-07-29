@@ -3,5 +3,6 @@ e.exports = {
     Qs: "content_fed6d3",
     wx: "header_fed6d3",
     wL: "searchHeader_fed6d3",
+    XK: "favoritesHeader_fed6d3",
     Gv: "backButton_fed6d3",
 };

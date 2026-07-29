@@ -390,21 +390,24 @@ class k extends r.PureComponent {
     };
     render() {
         let { data: e, resultQuery: t, query: n, resultType: r } = this.props;
-        return 0 === e.length && t === n && r !== L.dD.TRENDING_GIFS
-            ? r === L.dD.FAVORITES
-                ? this.renderEmptyFavorites()
-                : (0, i.jsx)(g.A, { message: y.intl.string(y.t["5dX4UM"]), className: D.wV })
-            : (0, i.jsx)(
-                  m.A,
-                  {
-                      getItemGrid: this.getItemGrid,
-                      getCoordsMap: this.getCoordsMap,
-                      onFocus: this.handleFocus,
-                      onSelect: this.handleSelect,
-                      children: (0, i.jsx)(R.A, { desiredItemWidth: 200, maxColumns: 8, children: this.renderContent }),
-                  },
-                  t,
-              );
+        if (0 === e.length && r !== L.dD.TRENDING_GIFS) {
+            if (r === L.dD.FAVORITES)
+                return 0 === n.length
+                    ? this.renderEmptyFavorites()
+                    : (0, i.jsx)(g.A, { message: y.intl.string(y.t.ZH4o6l), className: D.wV });
+            else if (t === n) return (0, i.jsx)(g.A, { message: y.intl.string(y.t["5dX4UM"]), className: D.wV });
+        }
+        return (0, i.jsx)(
+            m.A,
+            {
+                getItemGrid: this.getItemGrid,
+                getCoordsMap: this.getCoordsMap,
+                onFocus: this.handleFocus,
+                onSelect: this.handleSelect,
+                children: (0, i.jsx)(R.A, { desiredItemWidth: 200, maxColumns: 8, children: this.renderContent }),
+            },
+            t,
+        );
     }
 }
 function F() {
