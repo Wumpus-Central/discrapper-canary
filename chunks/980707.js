@@ -300,7 +300,14 @@ function q(e) {
                     ],
                 }),
                 null != u && (0, r.jsx)("div", { className: D.shortcutContainer, children: u }),
-                null != I && (0, r.jsx)("div", { className: D.badgeContainer, children: (0, r.jsx)(w.E, { type: I }) }),
+                null != I &&
+                    (0, r.jsx)("div", {
+                        className: D.badgeContainer,
+                        children:
+                            "object" == typeof I && "type" in I
+                                ? (0, r.jsx)(w.E, { ...I })
+                                : (0, r.jsx)(w.E, { type: I }),
+                    }),
                 h &&
                     (0, r.jsx)("div", {
                         className: D.iconContainer,
