@@ -1,6 +1,7 @@
 e.exports = {
     wx: "header__2447f",
     cS: "collapseButton__2447f",
+    Lu: "premiumUpsell__2447f",
     eW: "guildProfileUpsell__2447f",
     tm: "guildProfileUpsellContent__2447f",
     nd: "guildProfileUpsellDivider__2447f",
