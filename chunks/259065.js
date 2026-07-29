@@ -7,7 +7,7 @@ var r = n(192308),
     s = n(652215);
 let l = "display-name-styles-modal";
 function o(e) {
-    let { analyticsLocations: t, guildId: o, stackingBehavior: d, returnRef: c } = e;
+    let { analyticsLocations: t, guildId: o, isPremiumTryItOut: d, stackingBehavior: c, returnRef: u } = e;
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -462,11 +462,12 @@ function o(e) {
                 n.e("72158"),
                 n.e("17488"),
             ]).then(n.bind(n, 734195));
-            return (n) => (0, i.jsx)(e, { ...n, guildId: o, analyticsLocations: t, returnRef: c });
+            return (n) =>
+                (0, i.jsx)(e, { ...n, guildId: o, analyticsLocations: t, isPremiumTryItOut: d, returnRef: u });
         },
         {
             modalKey: l,
-            stackingBehavior: d,
+            stackingBehavior: c,
             onCloseRequest: () => {
                 a.default.track(s.HAw.DISPLAY_NAME_STYLES_CLOSED), (0, r.closeModal)(l);
             },

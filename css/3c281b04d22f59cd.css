@@ -134,6 +134,10 @@
     --custom-preview-block-padding: var(--space-8)
 }
 
+.container__9c314.removeVerticalPadding__9c314 {
+    margin-block: calc((var(--custom-preview-block-padding) + 1px)*-1)
+}
+
 @keyframes fadeIn__9c314 {
     0% {
         opacity: 0
@@ -150,7 +154,8 @@
     min-height: var(--control-input-height-md)
 }
 
-.multiline__9c314 .preview__9c314 {
+.multiline__9c314 .preview__9c314,
+.removeVerticalPadding__9c314 .preview__9c314 {
     min-height: 0
 }
 
@@ -168,6 +173,10 @@
 .compact__9c314 .editable__9c314 {
     align-self: center;
     min-width: 0
+}
+
+.growWidth__9c314 .editable__9c314 {
+    flex-grow: 1
 }
 
 .multiline__9c314 .editable__9c314 {
