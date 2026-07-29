@@ -1,15 +1,5 @@
 "use strict";
-n.d(t, {
-    dD: () => S,
-    oF: () => O,
-    _0: () => L,
-    Ay: () => v,
-    uW: () => C,
-    oo: () => m,
-    pd: () => g,
-    Tc: () => y,
-    mB: () => N,
-}),
+n.d(t, { dD: () => S, oF: () => O, Ay: () => D, uW: () => C, oo: () => m, pd: () => g, Tc: () => L, mB: () => N }),
     n(667532);
 var i = n(882035),
     r = n(121894),
@@ -166,17 +156,9 @@ function R() {
         c.unschedule();
 }
 function L() {
-    (0, r.r)(() => {
-        _.setState((e) => {
-            let t = A(e);
-            return (t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t;
-        });
-    });
-}
-function y() {
     return _.getState().postConnectionOpen;
 }
-class D extends a.Ay.Store {
+class y extends a.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
         this.waitFor(l.A, o.A), this.syncWith([l.A, o.A], () => this.setHasRequiredAction());
@@ -189,7 +171,7 @@ class D extends a.Ay.Store {
         })(l.A, o.A);
     }
 }
-function v(e, t) {
+function D(e, t) {
     return _(e, t);
 }
-new D(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });
+new y(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });

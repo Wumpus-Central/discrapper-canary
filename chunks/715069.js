@@ -72,8 +72,8 @@ let eA = r.forwardRef(function (e, t) {
 var eh = n(824994),
     eI = n(922301),
     ef = n(660184),
-    ep = n(3322),
-    eT = n(355145),
+    ep = n(414808),
+    eT = n(302005),
     em = n(954376),
     eg = n(534400),
     eS = n(854627),
@@ -268,7 +268,8 @@ function eV(e) {
         eD = r.useRef(null),
         ek = C ?? eD,
         eF = (0, E.A)(ek, ey),
-        { showMenuItemPopover: eV, markMenuItemPopoverAsDismissed: eB } = (0, eT.B)({
+        { showMenuItemPopover: eV, markMenuItemPopoverAsDismissed: eB } = (0, eT.z)({
+            location: "PrivateChannel",
             isChannelSelected: !0 === a,
             isTargetInViewport: eC,
             channelType: t.type,

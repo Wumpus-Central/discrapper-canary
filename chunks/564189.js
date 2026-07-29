@@ -1,26 +1,26 @@
-i.d(t, { A: () => k });
-var n = i(477900),
-    l = i(477782),
-    r = i(789645),
-    u = i(952270),
-    a = i(72152),
-    s = i(582128),
-    c = i(976860),
-    o = i(967198),
-    d = i(422258),
-    f = i(298358),
-    b = i(5180),
-    p = i(652215),
-    g = i(449817),
-    v = i(375708),
-    x = i(241326),
-    h = i(885386);
+n.d(t, { A: () => k });
+var i = n(477900),
+    l = n(477782),
+    r = n(789645),
+    u = n(952270),
+    a = n(72152),
+    s = n(582128),
+    c = n(976860),
+    o = n(967198),
+    d = n(659324),
+    f = n(281980),
+    b = n(5180),
+    p = n(652215),
+    g = n(449817),
+    v = n(375708),
+    x = n(241326),
+    h = n(885386);
 function k() {
     let e = (function () {
             let {
                     isPreview: e,
                     label: t,
-                    subLabel: i,
+                    subLabel: n,
                     perform: x,
                 } = (function () {
                     let { hasAccess: e } = (0, f.TW)(),
@@ -36,10 +36,10 @@ function k() {
                     };
                 })(),
                 h = e ? r.P : u.G;
-            return (0, n.jsx)(l.Dr, {
+            return (0, i.jsx)(l.Dr, {
                 id: "hide-favorites",
                 label: t,
-                subtext: i,
+                subtext: n,
                 color: e ? "default" : "danger",
                 icon: h,
                 leadingAccessory: { type: "icon", icon: h },
@@ -52,26 +52,26 @@ function k() {
             let {
                 isAvailable: e,
                 label: t,
-                subLabel: i,
+                subLabel: n,
                 perform: r,
             } = (function () {
                 let e = h.Q_.useSetting(),
                     { hasAccess: t } = (0, f.TW)(),
-                    i = s.useCallback(() => {
-                        (0, b.ai)(o.A.getGuildId()) && (0, c.pX)(p.BVt.ME), (0, d.uM)();
+                    n = s.useCallback(() => {
+                        (0, d.uM)();
                     }, []);
                 return {
                     isAvailable: e && t,
                     label: v.intl.string(g.default.YkET6R),
                     subLabel: v.intl.string(g.default.ZzcwNk),
-                    perform: i,
+                    perform: n,
                 };
             })();
             return e
-                ? (0, n.jsx)(l.Dr, {
+                ? (0, i.jsx)(l.Dr, {
                       id: "reset-favorites",
                       label: t,
-                      subtext: i,
+                      subtext: n,
                       color: "danger",
                       icon: x.u,
                       leadingAccessory: { type: "icon", icon: x.u },
@@ -82,7 +82,7 @@ function k() {
                 : null;
         })();
     return [
-        (0, n.jsx)(l.rX, { children: e }, "favorites-actions"),
-        null != t ? (0, n.jsx)(l.rX, { children: t }, "favorites-developer") : null,
+        (0, i.jsx)(l.rX, { children: e }, "favorites-actions"),
+        null != t ? (0, i.jsx)(l.rX, { children: t }, "favorites-developer") : null,
     ];
 }

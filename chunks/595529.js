@@ -1,16 +1,6 @@
 "use strict";
 let i;
-n.d(t, {
-    b5: () => M,
-    Bo: () => v,
-    gc: () => G,
-    AA: () => U,
-    PP: () => w,
-    eE: () => D,
-    Vu: () => b,
-    DP: () => R,
-    Tr: () => P,
-});
+n.d(t, { b5: () => M, Bo: () => v, AA: () => U, eE: () => D, PP: () => w, Vu: () => b, Tr: () => P, DP: () => R });
 var r = n(582128),
     a = n(17928),
     s = n(554146),
@@ -123,7 +113,7 @@ function v(e, t, n) {
         l = (0, a.bG)([A.A], () => A.A.getGuildId()),
         o = null;
     return (
-        null != e && (o = x(!(0, S.P3)(e), i, s, t) ? e : null),
+        null != e && (o = G(!(0, S.P3)(e), i, s, t) ? e : null),
         [
             O(o, l, n),
             r.useCallback(
@@ -217,7 +207,7 @@ function w(e, t, n, i) {
         o = l?.numTimesDismissed,
         d = null;
     return (
-        null != e && (d = x(!(0, S.P3)(e), l?.lastDismissedAtMs, o, n) ? e : null),
+        null != e && (d = G(!(0, S.P3)(e), l?.lastDismissedAtMs, o, n) ? e : null),
         [
             O(d, t, i),
             r.useCallback(
@@ -229,11 +219,7 @@ function w(e, t, n, i) {
         ]
     );
 }
-function G(e) {
-    let t = (0, a.bG)([E.A], () => E.A.settings.userContent?.dismissedContents);
-    return e.filter((e) => null != t && !(0, f.c0)(t, e));
-}
-function x(e, t, n, i) {
+function G(e, t, n, i) {
     let r = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         a = void 0 === r ? 0 : r + i.cooldownDurationMs,
         s = Date.now(),
