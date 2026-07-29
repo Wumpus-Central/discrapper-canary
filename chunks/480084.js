@@ -470,36 +470,43 @@ function ev(e) {
         },
         emoji: a(
             (function (e) {
-                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
+                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0, emojiFocusable: r = !0 } = e;
                 return {
-                    react(e, r, a) {
-                        let { key: s, channelId: l, messageId: o } = a;
+                    react(e, a, s) {
+                        let { key: l, channelId: o, messageId: d } = s;
                         return e.src
                             ? (0, i.jsx)(
                                   O.H,
-                                  { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: o },
-                                  s,
+                                  {
+                                      node: e,
+                                      tooltipPosition: t,
+                                      enableClick: n,
+                                      focusable: r,
+                                      channelId: o,
+                                      messageId: d,
+                                  },
+                                  l,
                               )
-                            : (0, i.jsx)("span", { children: e.surrogate }, s);
+                            : (0, i.jsx)("span", { children: e.surrogate }, l);
                     },
                 };
             })(e),
         ),
         customEmoji: a(
             (function (e) {
-                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
+                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0, emojiFocusable: r = !0 } = e;
                 return {
-                    react(e, r, a) {
-                        let { key: s, guildId: l, channelId: o, messageId: d } = a,
-                            c = h.Ay.getDisambiguatedEmojiContext(l).getById(e.emojiId);
-                        if (null != c) {
-                            let t = c.require_colons;
-                            e = { ...e, name: t ? `:${c.name}:` : c.name };
+                    react(e, a, s) {
+                        let { key: l, guildId: o, channelId: d, messageId: c } = s,
+                            u = h.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                        if (null != u) {
+                            let t = u.require_colons;
+                            e = { ...e, name: t ? `:${u.name}:` : u.name };
                         }
                         return (0, i.jsx)(
                             O.X,
-                            { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: d },
-                            s,
+                            { node: e, tooltipPosition: t, enableClick: n, focusable: r, channelId: d, messageId: c },
+                            l,
                         );
                     },
                 };

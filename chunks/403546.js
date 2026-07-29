@@ -6828,7 +6828,7 @@ var ad = n(346055),
     aj = n(568241);
 let af = (0, aE.Fe)({
     createPromise: () =>
-        Promise.all([n.e("52123"), n.e("21398"), n.e("3930"), n.e("3663"), n.e("66147")]).then(n.bind(n, 48736)),
+        Promise.all([n.e("21035"), n.e("21398"), n.e("3930"), n.e("3663"), n.e("66147")]).then(n.bind(n, 48736)),
     webpackId: 48736,
 });
 function aN(e) {
@@ -13147,7 +13147,7 @@ let u7 = R.memo(function () {
                                           n.e("91377"),
                                           n.e("35723"),
                                           n.e("66378"),
-                                          n.e("66540"),
+                                          n.e("56372"),
                                           n.e("94138"),
                                           n.e("29542"),
                                           n.e("58262"),
@@ -13191,7 +13191,7 @@ let u7 = R.memo(function () {
                                           n.e("91377"),
                                           n.e("35723"),
                                           n.e("66378"),
-                                          n.e("66540"),
+                                          n.e("56372"),
                                           n.e("29542"),
                                           n.e("42865"),
                                           n.e("72239"),
@@ -14145,7 +14145,7 @@ function mD(e) {
                                           children: (0, p.jsx)(G.E, {
                                               className: mL.At,
                                               variant: "text-xs/normal",
-                                              children: uJ.A.parseTopic(t.topic, !0, { channelId: t.id }),
+                                              children: uJ.A.parseTruncatedTopic(t.topic, !0, { channelId: t.id }),
                                           }),
                                       },
                                       "topic",
@@ -17503,7 +17503,7 @@ async function xA(e, t, n) {
 }
 var xI = n(125744),
     xS = n(942370),
-    xC = n(452832),
+    xC = n(230451),
     x_ = n(827663);
 function xv() {
     let [e, t] = R.useState(!0);
@@ -18095,7 +18095,7 @@ let x9 = "/assets/6263c90899ad6dae.svg",
     x7 = "/assets/36799e0a695f945e.svg",
     x8 = (0, aE.Fe)({
         createPromise: () =>
-            Promise.all([n.e("52123"), n.e("21398"), n.e("3930"), n.e("3663"), n.e("66147")]).then(n.bind(n, 48736)),
+            Promise.all([n.e("21035"), n.e("21398"), n.e("3930"), n.e("3663"), n.e("66147")]).then(n.bind(n, 48736)),
         webpackId: 48736,
     }),
     he = P().debounce((e, t) => (0, g1.nK)(e, t), 200);

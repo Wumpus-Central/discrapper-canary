@@ -70,7 +70,7 @@ function I(e) {
                               color: "text-muted",
                               className: p.VA,
                               lineClamp: 3,
-                              children: f.A.parseTopic(a.topic, !0, { channelId: s }),
+                              children: f.A.parseTruncatedTopic(a.topic, !0, { channelId: s }),
                           }),
                           A &&
                               (0, n.jsx)(m.D, {

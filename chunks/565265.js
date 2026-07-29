@@ -55,7 +55,7 @@ class E extends i.Component {
                 l.e("90434"),
                 l.e("91377"),
                 l.e("35723"),
-                l.e("66540"),
+                l.e("56372"),
                 l.e("29542"),
                 l.e("59545"),
             ]).then(l.bind(l, 22496));
@@ -85,7 +85,7 @@ class E extends i.Component {
                                         tag: "span",
                                         color: "none",
                                         variant: "text-sm/medium",
-                                        children: h.A.parseTopic(e.topic, !0, { channelId: e.id }),
+                                        children: h.A.parseTruncatedTopic(e.topic, !0, { channelId: e.id }),
                                     })
                                   : m.intl.string(m.t["XJVlf/"]),
                           ],
