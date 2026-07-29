@@ -1026,6 +1026,14 @@ let Y = {
                     : g.riotGames.fetchLiveClientData(e, t)
                 : Promise.reject(Error("Not embedded!"));
         },
+        readCs2GsiToken: (e) =>
+            (0, f.isWindows)() ? (g.cs2Gsi?.readCs2GsiToken(e) ?? Promise.resolve(null)) : Promise.resolve(null),
+        writeCs2GsiConfig: (e, t, n) =>
+            (0, f.isWindows)() ? (g.cs2Gsi?.writeCs2GsiConfig(e, t, n) ?? Promise.resolve(!1)) : Promise.resolve(!1),
+        deleteCs2GsiConfig: (e) =>
+            (0, f.isWindows)() ? (g.cs2Gsi?.deleteCs2GsiConfig(e) ?? Promise.resolve(!1)) : Promise.resolve(!1),
+        debugLogCs2GsiPayload: (e) =>
+            (0, f.isWindows)() ? (g.cs2Gsi?.debugLogCs2GsiPayload(e) ?? Promise.resolve()) : Promise.resolve(),
         appViewed() {
             (0, f.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },

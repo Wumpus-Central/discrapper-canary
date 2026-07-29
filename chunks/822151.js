@@ -213,16 +213,7 @@ class y extends l.A {
             case p.Gy.GAME_EVENT: {
                 let n = 0;
                 if (e.type === p.Gy.GAME_EVENT) {
-                    if (
-                        (this.decisionSignals.gameEventData.push({
-                            timestamp_ms: t,
-                            score: e.score ?? 0,
-                            name: e.eventName ?? e.eventIconTag,
-                            additionalData: e.additionalData,
-                        }),
-                        1 !== e.importance)
-                    )
-                        break;
+                    if ((this.decisionSignals.gameEventData.push({ ...e, timestamp_ms: t }), 1 !== e.importance)) break;
                     n = Math.max((0, N.l)(), t + 1e4);
                 } else n = (0, N.l)() + 1e4;
                 if (

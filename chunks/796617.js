@@ -39,7 +39,7 @@ class _ {
                                 default:
                                     return "gameplay";
                             }
-                        })(t.name)
+                        })(t.eventName)
                     ) {
                         case "game_start":
                         case "respawn":
@@ -73,7 +73,7 @@ class _ {
         return i;
     }
     eventScoreMultiplier(e) {
-        if (e.name !== c.WU) return 1;
+        if (e.eventName !== c.WU) return 1;
         let t = e.additionalData?.[c.kt];
         return "number" != typeof t ? 1 : (0, c.nS)(t);
     }
@@ -81,10 +81,10 @@ class _ {
         return (0, o.r)(this.gameStateTimeline, e, t, (e) => e.in_game);
     }
     rescoreEvent(e) {
-        return null != e.name ? c.j3[e.name]?.scoreBoost : void 0;
+        return null != e.eventName ? c.j3[e.eventName]?.scoreBoost : void 0;
     }
     canAnchorReaction(e) {
-        return null != e.name && u.has(e.name);
+        return null != e.eventName && u.has(e.eventName);
     }
 }
 let E = { applicationIds: [d.m], create: (e) => new _(e) };
@@ -503,7 +503,7 @@ function L(e, t, n, i) {
                 for (let r of e) {
                     let e = t(r.timestamp_ms),
                         a = n(r);
-                    i += r.score * e * a;
+                    i += (r.score ?? 0) * e * a;
                 }
                 return i;
             })(V, U, w),

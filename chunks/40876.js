@@ -594,6 +594,7 @@ let r = {
             "RTC_CONNECTION_FLAGS",
             "RTC_CONNECTION_STATE",
             "POST_CONNECTION_OPEN",
+            "RPC_SERVER_READY",
             "RTC_CONNECTION_USERS_MERGED",
             "CLIPS_ALLOW_VOICE_RECORDING_UPDATE",
             "CLIPS_SETTINGS_UPDATE",
@@ -624,11 +625,11 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(899396).A,
+        inlineRequire: () => n(822151).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(966532).A,
+        inlineRequire: () => n(773870).A,
     },
     DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(109624).A },
     CustomCallSoundsManager: {
