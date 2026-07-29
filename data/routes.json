@@ -838,7 +838,6 @@
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
   "GUILD_ROOM": "/guilds/:param/rooms/:param",
   "GUILD_ROOM_CONNECT": "/guilds/:param/rooms/:param/connect",
-  "GUILD_ROOM_DISCONNECT": "/guilds/:param/rooms/:param/disconnect",
   "GUILD_ROOM_UPDATE": "/guilds/:param/rooms/:param/update",
   "GUILD_ROOM_OBJECT_CREATE": "/guilds/:param/rooms/:param/objects",
   "GUILD_ROOM_OBJECT_UPDATE": "/guilds/:param/rooms/:param/objects/:param/update",

@@ -47,12 +47,9 @@ async function A(e, t, n) {
         a.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t });
     }
 }
-async function h(e, t) {
-    try {
-        a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: l.default.getId(), roomId: t }),
-            await r.Bo.post({ url: _.Rsh.GUILD_ROOM_DISCONNECT(e, t), rejectWithError: !0 }),
-            t !== e && (0, o.e6)({ guildId: e, channelId: t });
-    } catch (e) {}
+function h(e, t) {
+    a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: l.default.getId(), roomId: t }),
+        t !== e && (0, o.e6)({ guildId: e, channelId: t });
 }
 function I(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });

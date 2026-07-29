@@ -16,7 +16,7 @@ class u extends i.A {
     isExperimentEnabled(e, t) {
         return o.A.getCurrentConfig({ guildId: e, location: t }).enabled;
     }
-    async handleVoiceStateUpdates(e) {
+    handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         for (let e of t) {
             let { userId: t, guildId: n, channelId: i, sessionId: a, oldChannelId: o } = e;
@@ -26,10 +26,7 @@ class u extends i.A {
             }
             if (a === r.default.getSessionId() && i !== d) {
                 if (
-                    (null != d &&
-                        null != c &&
-                        this.isExperimentEnabled(c, "VOICE_STATE_UPDATE") &&
-                        (await (0, s.x2)(c, d)),
+                    (null != d && null != c && this.isExperimentEnabled(c, "VOICE_STATE_UPDATE") && (0, s.x2)(c, d),
                     null != i && null != n)
                 ) {
                     let e = l.A.getPendingPosition();
