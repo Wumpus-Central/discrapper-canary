@@ -1,34 +1,36 @@
-n.d(e, { p: () => o });
+n.d(e, { p: () => f });
 var i = n(582128),
-    a = n(575593),
-    r = n(631670),
+    r = n(575593),
+    a = n(631670),
     l = n(56348),
     s = n(207803),
     u = n(442759),
-    c = n(375708);
-function o(t) {
-    let { product: e, onSuccess: o, onError: d } = t,
-        [f, p] = i.useState(!1),
-        { firstAvatarDecoration: h, firstProfileEffect: E, firstNameplate: R, firstProfileFrame: A } = (0, u.f5)(e),
-        g = (function (t) {
+    c = n(758836),
+    d = n(375708);
+function f(t) {
+    let { product: e, onSuccess: f, onError: o } = t,
+        [p, h] = i.useState(!1),
+        { firstAvatarDecoration: E, firstProfileEffect: R, firstNameplate: A, firstProfileFrame: g } = (0, u.f5)(e),
+        y = (function (t) {
             switch (t.type) {
-                case a.R.AVATAR_DECORATION:
-                    return c.intl.string(c.t.zOA4ax);
-                case a.R.NAMEPLATE:
-                    return c.intl.string(c.t.gOzMvx);
-                case a.R.PROFILE_FRAME:
-                    return c.intl.string(c.t.lOF4zR);
-                case a.R.PROFILE_EFFECT:
-                    return c.intl.string(c.t.SWm2ai);
-                case a.R.BUNDLE:
+                case r.R.AVATAR_DECORATION:
+                    return d.intl.string(d.t.zOA4ax);
+                case r.R.NAMEPLATE:
+                    return d.intl.string(d.t.gOzMvx);
+                case r.R.PROFILE_FRAME:
+                    return d.intl.string(d.t.lOF4zR);
+                case r.R.PROFILE_EFFECT:
+                    return d.intl.string(d.t.SWm2ai);
+                case r.R.BUNDLE:
                 default:
-                    return c.intl.string(c.t.tf1ZZ4);
+                    return d.intl.string(d.t.tf1ZZ4);
             }
         })(e),
-        y = i.useMemo(
+        O = i.useMemo(
             () =>
                 (function (t) {
-                    if (t.type !== a.R.BUNDLE) return !0;
+                    if ((0, c.pQ)(t.skuId)) return !1;
+                    if (t.type !== r.R.BUNDLE) return !0;
                     let e = new Set();
                     for (let n of t.items) {
                         if (e.has(n.type)) return !1;
@@ -40,33 +42,33 @@ function o(t) {
         );
     return {
         handleUseNow: i.useCallback(async () => {
-            if (!y) return;
-            p(!0);
+            if (!O) return;
+            h(!0);
             let t = {};
             try {
-                if ((null != h && (t.avatarDecoration = h), null != E || null != A)) {
-                    let t = (0, l.yX)({ pendingProfileEffect: E ?? void 0, pendingProfileFrame: A ?? void 0 });
+                if ((null != E && (t.avatarDecoration = E), null != R || null != g)) {
+                    let t = (0, l.yX)({ pendingProfileEffect: R ?? void 0, pendingProfileFrame: g ?? void 0 });
                     await (0, s.gi)(t);
                 }
-                null != R && (t.nameplate = R), Object.keys(t).length > 0 && (await (0, r._L)(t));
+                null != A && (t.nameplate = A), Object.keys(t).length > 0 && (await (0, a._L)(t));
                 {
                     let {
                         ToastPosition: t,
                         ToastType: e,
                         createToast: i,
-                        popToast: a,
-                        showToast: r,
+                        popToast: r,
+                        showToast: a,
                     } = await Promise.all([n.e("4823"), n.e("77260")]).then(n.bind(n, 397927));
-                    a(), r(i(g, e.MESSAGE, { duration: 6e3, position: t.TOP }));
+                    r(), a(i(y, e.MESSAGE, { duration: 6e3, position: t.TOP }));
                 }
-                o?.();
+                f?.();
             } catch (t) {
-                d?.(t);
+                o?.(t);
             } finally {
-                p(!1);
+                h(!1);
             }
-        }, [y, h, E, R, A, o, g, d]),
-        isApplying: f,
-        canUseNow: y,
+        }, [O, E, R, A, g, f, y, o]),
+        isApplying: p,
+        canUseNow: O,
     };
 }

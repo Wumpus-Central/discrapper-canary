@@ -82,17 +82,15 @@ function M(t) {
             product: e,
             onClose: n,
             analyticsLocations: i,
-            hasRequiredProductItems: r,
-            handleUseNow: a,
-            isApplying: R,
-            canUseNow: f = !0,
-            openProfileSettings: _,
-            itemConsumed: C,
+            handleUseNow: r,
+            isApplying: a,
+            canUseNow: R = !0,
+            openProfileSettings: f,
+            itemConsumed: _,
         } = t,
-        P = (r ?? !1) && f,
-        h = [];
+        C = [];
     if (T.Dp.ORB_PROFILE_BADGE === e.skuId)
-        h.push(
+        C.push(
             {
                 text: S.intl.string(g.default.yfwZuy),
                 variant: "primary",
@@ -115,8 +113,8 @@ function M(t) {
             },
         );
     else if ((0, T.EZ)(e.skuId))
-        C
-            ? h.push(
+        _
+            ? C.push(
                   { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
                   {
                       text: S.intl.string(S.t.ERKK6v),
@@ -126,7 +124,7 @@ function M(t) {
                       },
                   },
               )
-            : h.push(
+            : C.push(
                   { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
                   {
                       text: S.intl.string(S.t["Jr6N+s"]),
@@ -138,11 +136,11 @@ function M(t) {
               );
     else {
         let [t] = e.items;
-        h.push({
+        C.push({
             text: S.intl.string(S.t["2p2aYz"]),
-            variant: P ? "secondary" : "primary",
+            variant: R ? "secondary" : "primary",
             onClick: () => {
-                if ((n(), (0, s.jH)(), _?.(), e.type !== u.R.BUNDLE)) {
+                if ((n(), (0, s.jH)(), f?.(), e.type !== u.R.BUNDLE)) {
                     if (e.type === u.R.AVATAR_DECORATION) {
                         l()(t.type === u.R.AVATAR_DECORATION, "product type and item type are the same"),
                             (0, y.L)({ initialSelectedDecoration: t, analyticsLocations: i });
@@ -167,7 +165,7 @@ function M(t) {
             },
         });
     }
-    return P && h.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: a, loading: R }), h;
+    return R && C.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: r, loading: a }), C;
 }
 function N(t, e) {
     let n = i.useMemo(() => (0, _.V6)(t.type, t.skuId), [t.type, t.skuId]);
