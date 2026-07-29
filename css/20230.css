@@ -349,6 +349,17 @@
     font-size: 2rem
 }
 
+.experimental\/heading-xs\/medium__6ec1a {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2857142857142858
+}
+
+.experimental\/heading-xs\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: .875rem
+}
+
 .experimental\/heading-xs\/semibold__6ec1a {
     font-family: var(--font-display);
     font-size: 14px;
@@ -360,15 +371,15 @@
     font-size: .875rem
 }
 
-.experimental\/heading-xs\/bold__6ec1a {
+.experimental\/heading-sm\/medium__6ec1a {
     font-family: var(--font-display);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.2857142857142858
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25
 }
 
-.experimental\/heading-xs\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: .875rem
+.experimental\/heading-sm\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: 1rem
 }
 
 .experimental\/heading-sm\/semibold__6ec1a {
@@ -382,15 +393,15 @@
     font-size: 1rem
 }
 
-.experimental\/heading-sm\/bold__6ec1a {
+.experimental\/heading-md\/medium__6ec1a {
     font-family: var(--font-display);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.25
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2222222222222223
 }
 
-.experimental\/heading-sm\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: 1rem
+.experimental\/heading-md\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: 1.125rem
 }
 
 .experimental\/heading-md\/semibold__6ec1a {
@@ -404,15 +415,15 @@
     font-size: 1.125rem
 }
 
-.experimental\/heading-md\/bold__6ec1a {
+.experimental\/heading-lg\/medium__6ec1a {
     font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2222222222222223
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2
 }
 
-.experimental\/heading-md\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.125rem
+.experimental\/heading-lg\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: 1.25rem
 }
 
 .experimental\/heading-lg\/semibold__6ec1a {
@@ -426,37 +437,37 @@
     font-size: 1.25rem
 }
 
-.experimental\/heading-lg\/bold__6ec1a {
+.experimental\/heading-xl\/medium__6ec1a {
     font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3333333333333333
 }
 
-.experimental\/heading-lg\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.25rem
+.experimental\/heading-xl\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: 1.5rem
 }
 
 .experimental\/heading-xl\/semibold__6ec1a {
     font-family: var(--font-display);
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.25
+    line-height: 1.3333333333333333
 }
 
 .experimental\/heading-xl\/semibold__6ec1a.fontScaling__6ec1a {
     font-size: 1.5rem
 }
 
-.experimental\/heading-xl\/bold__6ec1a {
+.experimental\/heading-xxl\/medium__6ec1a {
     font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 500;
     line-height: 1.25
 }
 
-.experimental\/heading-xl\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.5rem
+.experimental\/heading-xxl\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: 2rem
 }
 
 .experimental\/heading-xxl\/semibold__6ec1a {
@@ -467,17 +478,6 @@
 }
 
 .experimental\/heading-xxl\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: 2rem
-}
-
-.experimental\/heading-xxl\/bold__6ec1a {
-    font-family: var(--font-display);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1.25
-}
-
-.experimental\/heading-xxl\/bold__6ec1a.fontScaling__6ec1a {
     font-size: 2rem
 }
 
@@ -912,6 +912,17 @@
     font-size: .75rem
 }
 
+.experimental\/body-xs\/semibold__6ec1a {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3333333333333333
+}
+
+.experimental\/body-xs\/semibold__6ec1a.fontScaling__6ec1a {
+    font-size: .75rem
+}
+
 .experimental\/body-sm\/normal__6ec1a {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -931,6 +942,17 @@
 }
 
 .experimental\/body-sm\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: .875rem
+}
+
+.experimental\/body-sm\/semibold__6ec1a {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2857142857142858
+}
+
+.experimental\/body-sm\/semibold__6ec1a.fontScaling__6ec1a {
     font-size: .875rem
 }
 
@@ -956,6 +978,17 @@
     font-size: 1rem
 }
 
+.experimental\/body-md\/semibold__6ec1a {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25
+}
+
+.experimental\/body-md\/semibold__6ec1a.fontScaling__6ec1a {
+    font-size: 1rem
+}
+
 .experimental\/body-lg\/normal__6ec1a {
     font-family: var(--font-primary);
     font-size: 20px;
@@ -978,26 +1011,48 @@
     font-size: 1.25rem
 }
 
-.experimental\/meta\/normal__6ec1a {
+.experimental\/body-lg\/semibold__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2
+}
+
+.experimental\/body-lg\/semibold__6ec1a.fontScaling__6ec1a {
+    font-size: 1.25rem
+}
+
+.experimental\/footnote\/normal__6ec1a {
+    font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 400;
-    line-height: 1.3333333333333333
+    line-height: 1.2
 }
 
-.experimental\/meta\/normal__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+.experimental\/footnote\/normal__6ec1a.fontScaling__6ec1a {
+    font-size: .625rem
 }
 
-.experimental\/meta\/medium__6ec1a {
+.experimental\/footnote\/medium__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
-    line-height: 1.3333333333333333
+    line-height: 1.2
 }
 
-.experimental\/meta\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+.experimental\/footnote\/medium__6ec1a.fontScaling__6ec1a {
+    font-size: .625rem
+}
+
+.experimental\/footnote\/semibold__6ec1a {
+    font-family: var(--font-primary);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2
+}
+
+.experimental\/footnote\/semibold__6ec1a.fontScaling__6ec1a {
+    font-size: .625rem
 }
 
 .display-sm__6ec1a {
@@ -1077,96 +1132,6 @@
     font-size: 2.75rem
 }
 
-.experimental\/label-xs\/medium__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
-}
-
-.experimental\/label-xs\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
-}
-
-.experimental\/label-xs\/semibold__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
-}
-
-.experimental\/label-xs\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
-}
-
-.experimental\/label-sm\/medium__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2857142857142858
-}
-
-.experimental\/label-sm\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: .875rem
-}
-
-.experimental\/label-sm\/semibold__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.2857142857142858
-}
-
-.experimental\/label-sm\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: .875rem
-}
-
-.experimental\/label-md\/medium__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.25
-}
-
-.experimental\/label-md\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: 1rem
-}
-
-.experimental\/label-md\/semibold__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.25
-}
-
-.experimental\/label-md\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: 1rem
-}
-
-.experimental\/label-lg\/medium__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.2222222222222223
-}
-
-.experimental\/label-lg\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: 1.125rem
-}
-
-.experimental\/label-lg\/semibold__6ec1a {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.2222222222222223
-}
-
-.experimental\/label-lg\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.125rem
-}
-
 .code__6ec1a {
     font-family: var(--font-code);
     font-size: 12px;
@@ -1200,32 +1165,10 @@
     font-size: .75rem
 }
 
-.experimental\/mono-sm\/normal__6ec1a {
-    font-family: var(--font-code);
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1.2
-}
-
-.experimental\/mono-sm\/normal__6ec1a.fontScaling__6ec1a {
-    font-size: .625rem
-}
-
-.experimental\/mono-sm\/bold__6ec1a {
-    font-family: var(--font-code);
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1.2
-}
-
-.experimental\/mono-sm\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: .625rem
-}
-
 :where(.mana-type-consolidation) .heading-sm\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2857142857142858
 }
 
@@ -1236,7 +1179,7 @@
 :where(.mana-type-consolidation) .heading-sm\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2857142857142858
 }
 
@@ -1258,7 +1201,7 @@
 :where(.mana-type-consolidation) .heading-sm\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2857142857142858
 }
 
@@ -1269,7 +1212,7 @@
 :where(.mana-type-consolidation) .heading-sm\/extrabold__6ec1a {
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2857142857142858
 }
 
@@ -1280,7 +1223,7 @@
 :where(.mana-type-consolidation) .heading-md\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1291,7 +1234,7 @@
 :where(.mana-type-consolidation) .heading-md\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1312,30 +1255,30 @@
 
 :where(.mana-type-consolidation) .heading-md\/bold__6ec1a {
     font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2222222222222223
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25
 }
 
 :where(.mana-type-consolidation) .heading-md\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.125rem
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .heading-md\/extrabold__6ec1a {
     font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2222222222222223
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25
 }
 
 :where(.mana-type-consolidation) .heading-md\/extrabold__6ec1a.fontScaling__6ec1a {
-    font-size: 1.125rem
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .heading-lg\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2
 }
 
@@ -1346,7 +1289,7 @@
 :where(.mana-type-consolidation) .heading-lg\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2
 }
 
@@ -1368,7 +1311,7 @@
 :where(.mana-type-consolidation) .heading-lg\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2
 }
 
@@ -1379,7 +1322,7 @@
 :where(.mana-type-consolidation) .heading-lg\/extrabold__6ec1a {
     font-family: var(--font-display);
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2
 }
 
@@ -1390,8 +1333,8 @@
 :where(.mana-type-consolidation) .heading-xl\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 24px;
-    font-weight: 600;
-    line-height: 1.25
+    font-weight: 500;
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-xl\/normal__6ec1a.fontScaling__6ec1a {
@@ -1401,8 +1344,8 @@
 :where(.mana-type-consolidation) .heading-xl\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 24px;
-    font-weight: 600;
-    line-height: 1.25
+    font-weight: 500;
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-xl\/medium__6ec1a.fontScaling__6ec1a {
@@ -1413,7 +1356,7 @@
     font-family: var(--font-display);
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.25
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-xl\/semibold__6ec1a.fontScaling__6ec1a {
@@ -1423,8 +1366,8 @@
 :where(.mana-type-consolidation) .heading-xl\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 24px;
-    font-weight: 700;
-    line-height: 1.25
+    font-weight: 600;
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-xl\/bold__6ec1a.fontScaling__6ec1a {
@@ -1434,8 +1377,8 @@
 :where(.mana-type-consolidation) .heading-xl\/extrabold__6ec1a {
     font-family: var(--font-display);
     font-size: 24px;
-    font-weight: 700;
-    line-height: 1.25
+    font-weight: 600;
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-xl\/extrabold__6ec1a.fontScaling__6ec1a {
@@ -1445,7 +1388,7 @@
 :where(.mana-type-consolidation) .heading-xxl\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1456,7 +1399,7 @@
 :where(.mana-type-consolidation) .heading-xxl\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1478,7 +1421,7 @@
 :where(.mana-type-consolidation) .heading-xxl\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25
 }
 
@@ -1489,7 +1432,7 @@
 :where(.mana-type-consolidation) .heading-xxl\/extrabold__6ec1a {
     font-family: var(--font-display);
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25
 }
 
@@ -1503,7 +1446,7 @@
     font-weight: 600;
     letter-spacing: normal;
     line-height: 1.3333333333333333;
-    text-transform: uppercase
+    text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow__6ec1a.fontScaling__6ec1a {
@@ -1536,8 +1479,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/semibold__6ec1a.fontScaling__6ec1a {
@@ -1548,8 +1490,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/bold__6ec1a.fontScaling__6ec1a {
@@ -1560,8 +1501,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/extrabold__6ec1a.fontScaling__6ec1a {
@@ -1571,7 +1511,7 @@
 :where(.mana-type-consolidation) .redesign\/heading-18\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2222222222222223
 }
 
@@ -1593,7 +1533,7 @@
 :where(.mana-type-consolidation) .redesign\/heading-18\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2222222222222223
 }
 
@@ -1603,46 +1543,46 @@
 
 :where(.mana-type-consolidation) .text-xxs\/normal__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
-    line-height: 1.3333333333333333
+    line-height: 1.2
 }
 
 :where(.mana-type-consolidation) .text-xxs\/normal__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+    font-size: .625rem
 }
 
 :where(.mana-type-consolidation) .text-xxs\/medium__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.3333333333333333
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2
 }
 
 :where(.mana-type-consolidation) .text-xxs\/medium__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+    font-size: .625rem
 }
 
 :where(.mana-type-consolidation) .text-xxs\/semibold__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.3333333333333333
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2
 }
 
 :where(.mana-type-consolidation) .text-xxs\/semibold__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+    font-size: .625rem
 }
 
 :where(.mana-type-consolidation) .text-xxs\/bold__6ec1a {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.3333333333333333
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2
 }
 
 :where(.mana-type-consolidation) .text-xxs\/bold__6ec1a.fontScaling__6ec1a {
-    font-size: .75rem
+    font-size: .625rem
 }
 
 :where(.mana-type-consolidation) .text-xs\/normal__6ec1a {
@@ -1671,8 +1611,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .text-xs\/semibold__6ec1a.fontScaling__6ec1a {
@@ -1683,8 +1622,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.3333333333333333;
-    text-transform: uppercase
+    line-height: 1.3333333333333333
 }
 
 :where(.mana-type-consolidation) .text-xs\/bold__6ec1a.fontScaling__6ec1a {
@@ -1802,7 +1740,7 @@
 }
 
 :where(.mana-type-consolidation) .text-lg\/semibold__6ec1a {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -1813,9 +1751,9 @@
 }
 
 :where(.mana-type-consolidation) .text-lg\/bold__6ec1a {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2
 }
 
@@ -1826,7 +1764,7 @@
 :where(.mana-type-consolidation) .redesign\/message-preview\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1837,7 +1775,7 @@
 :where(.mana-type-consolidation) .redesign\/message-preview\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1859,7 +1797,7 @@
 :where(.mana-type-consolidation) .redesign\/message-preview\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25
 }
 
@@ -1870,7 +1808,7 @@
 :where(.mana-type-consolidation) .redesign\/channel-title\/normal__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1881,7 +1819,7 @@
 :where(.mana-type-consolidation) .redesign\/channel-title\/medium__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25
 }
 
@@ -1903,7 +1841,7 @@
 :where(.mana-type-consolidation) .redesign\/channel-title\/bold__6ec1a {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25
 }
 

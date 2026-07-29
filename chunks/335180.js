@@ -55,33 +55,33 @@ n(819620);
 var U = n(207958);
 function w(e) {
     let { width: t, height: n, style: r } = e;
-    return (0, i.jsx)("div", { className: C.M00, style: { width: t, height: n, ...r }, "aria-hidden": !0 });
+    return (0, i.jsx)("div", { className: C.M0, style: { width: t, height: n, ...r }, "aria-hidden": !0 });
 }
 function G(e) {
     let { size: t } = e;
-    return (0, i.jsx)("div", { className: C.n1W, style: { width: t, height: t }, "aria-hidden": !0 });
+    return (0, i.jsx)("div", { className: C.n1, style: { width: t, height: t }, "aria-hidden": !0 });
 }
 function x(e) {
     let { icon: t, title: n } = e;
     return (0, i.jsxs)("div", {
-        className: C.wxE,
+        className: C.wx,
         children: [
             (0, i.jsx)("div", {
-                className: C.P05,
+                className: C.P0,
                 children: null != t && (0, i.jsx)(t, { size: "md", color: "icon-default" }),
             }),
-            null != n && (0, i.jsx)("h1", { className: C.DDF, children: n }),
+            null != n && (0, i.jsx)("h1", { className: C.DD, children: n }),
         ],
     });
 }
 function k(e) {
     let { width: t } = e;
     return (0, i.jsxs)("div", {
-        className: C.f03,
+        className: C.f0,
         children: [
             (0, i.jsx)(G, { size: 32 }),
             (0, i.jsxs)("div", {
-                className: C.iq4,
+                className: C.iq,
                 children: [(0, i.jsx)(w, { width: t, height: 14 }), (0, i.jsx)(w, { width: "14%", height: 10 })],
             }),
         ],
@@ -89,7 +89,7 @@ function k(e) {
 }
 function F() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t["jnXV/V"]),
         children: [
@@ -97,9 +97,9 @@ function F() {
             (0, i.jsx)("div", {
                 className: M.MJ,
                 children: (0, i.jsx)("div", {
-                    className: C.hWR,
+                    className: C.hW,
                     children: Array.from({ length: 5 }).map((e, t) =>
-                        (0, i.jsx)("div", { className: C.NrK, style: { height: 140 } }, t),
+                        (0, i.jsx)("div", { className: C.Nr, style: { height: 140 } }, t),
                     ),
                 }),
             }),
@@ -108,22 +108,22 @@ function F() {
 }
 function V() {
     return (0, i.jsxs)("div", {
-        className: C.NOq,
+        className: C.NO,
         role: "status",
         "aria-label": S.intl.string(S.t.JALI2K),
         children: [
             (0, i.jsx)(x, { icon: l.r, title: S.intl.string(S.t.JALI2K) }),
             (0, i.jsx)("div", {
-                className: a()(C.W23, C.hvY),
+                className: a()(C.W2, C.hv),
                 children: (0, i.jsxs)("div", {
-                    className: C.Jt3,
+                    className: C.Jt,
                     children: [
-                        (0, i.jsx)("div", { className: a()(C.NrK, C.hVj) }),
+                        (0, i.jsx)("div", { className: a()(C.Nr, C.hV) }),
                         (0, i.jsx)(w, { width: 145, height: 32 }),
                         (0, i.jsx)("div", {
-                            className: C.Jmg,
+                            className: C.Jm,
                             children: Array.from({ length: 6 }).map((e, t) =>
-                                (0, i.jsx)("div", { className: a()(C.NrK, C.Vru) }, t),
+                                (0, i.jsx)("div", { className: a()(C.Nr, C.Vr) }, t),
                             ),
                         }),
                     ],
@@ -134,7 +134,7 @@ function V() {
 }
 function B() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t.flPU6g),
         children: [
@@ -143,9 +143,9 @@ function B() {
                 className: M.MJ,
                 children: [
                     (0, i.jsx)("div", {
-                        className: a()(M.UL, C.vH3),
+                        className: a()(M.UL, C.vH),
                         children: (0, i.jsx)("div", {
-                            className: C.p_z,
+                            className: C.p_,
                             children: ["58%", "34%", "48%", "40%", "52%", "44%"].map((e, t) =>
                                 (0, i.jsx)(k, { width: e }, t),
                             ),
@@ -160,7 +160,7 @@ function B() {
 function H() {
     let e = S.intl.string(N.default.RZqaJn);
     return (0, i.jsxs)("div", {
-        className: C.dAj,
+        className: C.dA,
         role: "status",
         "aria-label": e,
         children: [
@@ -171,7 +171,7 @@ function H() {
                     className: y.kL,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: a()(D.a, L.kL, C.CC0),
+                            className: a()(D.a, L.kL, C.CC),
                             children: [
                                 (0, i.jsxs)("div", {
                                     className: L.TK,
@@ -187,7 +187,7 @@ function H() {
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)("div", { className: a()(C.M00, C.gj9) }),
+                                (0, i.jsx)("div", { className: a()(C.M0, C.gj) }),
                             ],
                         }),
                         (0, i.jsx)("div", {
@@ -196,11 +196,11 @@ function H() {
                                 (0, i.jsxs)(
                                     "div",
                                     {
-                                        className: a()(D.a, v.kL, C.abB),
+                                        className: a()(D.a, v.kL, C.ab),
                                         children: [
-                                            (0, i.jsx)("div", { className: a()(v.n1, C.VMy) }),
+                                            (0, i.jsx)("div", { className: a()(v.n1, C.VM) }),
                                             (0, i.jsxs)("div", {
-                                                className: C.oXZ,
+                                                className: C.oX,
                                                 children: [
                                                     (0, i.jsx)(w, { width: "70%", height: 16 }),
                                                     (0, i.jsx)(w, { width: "100%", height: 12 }),
@@ -214,10 +214,10 @@ function H() {
                             ),
                         }),
                         (0, i.jsxs)("div", {
-                            className: a()(D.a, C.cBQ),
+                            className: a()(D.a, C.cB),
                             children: [
                                 (0, i.jsxs)("div", {
-                                    className: C.niK,
+                                    className: C.ni,
                                     children: [
                                         (0, i.jsx)(w, { width: "70%", height: 18 }),
                                         (0, i.jsx)(w, { width: "100%", height: 13 }),
@@ -225,16 +225,16 @@ function H() {
                                     ],
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: C.HSm,
+                                    className: C.HS,
                                     children: Array.from({ length: 6 }).map((e, t) =>
                                         (0, i.jsxs)(
                                             "div",
                                             {
-                                                className: C.IEB,
+                                                className: C.IE,
                                                 children: [
                                                     (0, i.jsx)(G, { size: 36 }),
                                                     (0, i.jsxs)("div", {
-                                                        className: C.Tf4,
+                                                        className: C.Tf,
                                                         children: [
                                                             (0, i.jsx)(w, { width: "40%", height: 14 }),
                                                             (0, i.jsx)(w, { width: "75%", height: 12 }),
@@ -259,12 +259,10 @@ function j(e) {
     return (0, i.jsx)("div", {
         className: M.MJ,
         children: (0, i.jsx)("div", {
-            className: C.nry,
+            className: C.nr,
             children: (0, i.jsx)("div", {
-                className: C.$2h,
-                children: Array.from({ length: t }).map((e, t) =>
-                    (0, i.jsx)("div", { className: a()(C.NrK, C.H0Q) }, t),
-                ),
+                className: C.$2,
+                children: Array.from({ length: t }).map((e, t) => (0, i.jsx)("div", { className: a()(C.Nr, C.H0) }, t)),
             }),
         }),
     });
@@ -274,12 +272,10 @@ function W(e) {
     return (0, i.jsx)("div", {
         className: M.MJ,
         children: (0, i.jsx)("div", {
-            className: C.nry,
+            className: C.nr,
             children: (0, i.jsx)("div", {
-                className: C.fhM,
-                children: Array.from({ length: t }).map((e, t) =>
-                    (0, i.jsx)("div", { className: a()(C.NrK, C.Vsq) }, t),
-                ),
+                className: C.fh,
+                children: Array.from({ length: t }).map((e, t) => (0, i.jsx)("div", { className: a()(C.Nr, C.Vs) }, t)),
             }),
         }),
     });
@@ -292,7 +288,7 @@ function Y(e) {
         children: (0, i.jsx)("div", {
             className: M.UL,
             children: (0, i.jsx)("div", {
-                className: C.p_z,
+                className: C.p_,
                 children: Array.from({ length: t }).map((e, t) => (0, i.jsx)(k, { width: n[t % n.length] }, t)),
             }),
         }),
@@ -300,7 +296,7 @@ function Y(e) {
 }
 function K() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t.cw57ar),
         children: [(0, i.jsx)(x, { icon: c._, title: S.intl.string(S.t.cw57ar) }), (0, i.jsx)(j, { cardCount: 9 })],
@@ -309,7 +305,7 @@ function K() {
 function $() {
     let e = S.intl.string(S.t["4nEZLk"]);
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": e,
         children: [(0, i.jsx)(x, { icon: u.Q, title: e }), (0, i.jsx)(W, { tileCount: 9 })],
@@ -317,7 +313,7 @@ function $() {
 }
 function z() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t.Ym2Ri6),
         children: [
@@ -325,13 +321,13 @@ function z() {
             (0, i.jsx)("div", {
                 className: M.MJ,
                 children: (0, i.jsxs)("div", {
-                    className: C.nry,
+                    className: C.nr,
                     children: [
-                        (0, i.jsx)("div", { className: a()(C.NrK, C.CfH) }),
+                        (0, i.jsx)("div", { className: a()(C.Nr, C.Cf) }),
                         (0, i.jsx)("div", {
-                            className: C.$2h,
+                            className: C.$2,
                             children: Array.from({ length: 6 }).map((e, t) =>
-                                (0, i.jsx)("div", { className: a()(C.NrK, C.H0Q) }, t),
+                                (0, i.jsx)("div", { className: a()(C.Nr, C.H0) }, t),
                             ),
                         }),
                     ],
@@ -342,7 +338,7 @@ function z() {
 }
 function q() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t.al5EXL),
         children: [(0, i.jsx)(x, { icon: E.U, title: S.intl.string(S.t.al5EXL) }), (0, i.jsx)(j, { cardCount: 8 })],
@@ -351,7 +347,7 @@ function q() {
 function Z() {
     let e = S.intl.string(S.t.oclz3Z);
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": e,
         children: [(0, i.jsx)(x, { icon: A.l, title: e }), (0, i.jsx)(Y, { rowCount: 8 })],
@@ -359,7 +355,7 @@ function Z() {
 }
 function X() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": "Powerups",
         children: [(0, i.jsx)(x, { icon: h._, title: "Powerups" }), (0, i.jsx)(j, { cardCount: 6 })],
@@ -367,7 +363,7 @@ function X() {
 }
 function Q() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": S.intl.string(S.t.h9mGOP),
         children: [(0, i.jsx)(x, { icon: I.k, title: S.intl.string(S.t.h9mGOP) }), (0, i.jsx)(Y, { rowCount: 6 })],
@@ -375,7 +371,7 @@ function Q() {
 }
 function J() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         "aria-label": "Game Server",
         children: [
@@ -383,34 +379,34 @@ function J() {
             (0, i.jsx)("div", {
                 className: M.MJ,
                 children: (0, i.jsxs)("div", {
-                    className: C.bQR,
+                    className: C.bQ,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: C.JAj,
+                            className: C.JA,
                             children: [
                                 (0, i.jsx)(w, { width: "20%", height: 14 }),
-                                (0, i.jsx)("div", { className: C.NrK, style: { height: 40, borderRadius: 8 } }),
+                                (0, i.jsx)("div", { className: C.Nr, style: { height: 40, borderRadius: 8 } }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: C.JAj,
+                            className: C.JA,
                             children: [
                                 (0, i.jsx)(w, { width: "25%", height: 14 }),
-                                (0, i.jsx)("div", { className: C.NrK, style: { height: 80, borderRadius: 8 } }),
+                                (0, i.jsx)("div", { className: C.Nr, style: { height: 80, borderRadius: 8 } }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: C.JAj,
+                            className: C.JA,
                             children: [
                                 (0, i.jsx)(w, { width: "18%", height: 14 }),
-                                (0, i.jsx)("div", { className: C.NrK, style: { height: 40, borderRadius: 8 } }),
+                                (0, i.jsx)("div", { className: C.Nr, style: { height: 40, borderRadius: 8 } }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: C.JAj,
+                            className: C.JA,
                             children: [
                                 (0, i.jsx)(w, { width: "22%", height: 14 }),
-                                (0, i.jsx)("div", { className: C.NrK, style: { height: 120, borderRadius: 8 } }),
+                                (0, i.jsx)("div", { className: C.Nr, style: { height: 120, borderRadius: 8 } }),
                             ],
                         }),
                     ],
@@ -421,18 +417,18 @@ function J() {
 }
 function ee() {
     return (0, i.jsxs)("div", {
-        className: C.hfC,
+        className: C.hf,
         role: "status",
         "aria-label": "Loading profile",
         children: [
-            (0, i.jsx)("div", { className: C.CK_ }),
-            (0, i.jsx)("div", { className: C.jUK }),
+            (0, i.jsx)("div", { className: C.CK }),
+            (0, i.jsx)("div", { className: C.jU }),
             (0, i.jsxs)("div", {
-                className: C.Nr4,
+                className: C.eP,
                 children: [(0, i.jsx)(w, { width: "55%", height: 18 }), (0, i.jsx)(w, { width: "35%", height: 12 })],
             }),
             (0, i.jsxs)("div", {
-                className: C._Vi,
+                className: C._V,
                 children: [
                     (0, i.jsx)(w, { width: 52, height: 16 }),
                     (0, i.jsx)(w, { width: 72, height: 16 }),
@@ -440,7 +436,7 @@ function ee() {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: C.bsI,
+                className: C.bs,
                 children: [
                     (0, i.jsx)(w, { width: "90%", height: 12 }),
                     (0, i.jsx)(w, { width: "75%", height: 12 }),
@@ -457,7 +453,7 @@ function et(e) {
         "aria-label": S.intl.string(S.t.GSmTKJ),
         className: t,
         children: (0, i.jsxs)("div", {
-            className: a()(R.k, C.dgj),
+            className: a()(R.k, C.dg),
             children: [
                 (0, i.jsxs)("div", {
                     className: O.wx,
@@ -490,16 +486,16 @@ function et(e) {
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: C.TiI,
+                    className: C.Ti,
                     children: Array.from({ length: 6 }).map((e, t) =>
                         (0, i.jsxs)(
                             "div",
                             {
-                                className: C.D7h,
+                                className: C.D7,
                                 children: [
                                     (0, i.jsx)(G, { size: 28 }),
                                     (0, i.jsxs)("div", {
-                                        className: C.iq4,
+                                        className: C.iq,
                                         children: [
                                             (0, i.jsx)(w, { width: "55%", height: 13 }),
                                             (0, i.jsx)(w, { width: "35%", height: 11 }),
@@ -517,13 +513,13 @@ function et(e) {
 }
 function en() {
     return (0, i.jsxs)("div", {
-        className: C.zzs,
+        className: C.zz,
         role: "status",
         "aria-label": "Nitro",
         children: [
             (0, i.jsx)(x, { icon: m.t, title: "Nitro" }),
             (0, i.jsx)("div", {
-                className: C.W23,
+                className: C.W2,
                 children: (0, i.jsxs)("div", {
                     className: P.Qr,
                     children: [
@@ -536,20 +532,17 @@ function en() {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: C.LvN,
+                            className: C.Lv,
                             children: [
                                 (0, i.jsx)(w, { width: 220, height: 28 }),
                                 (0, i.jsxs)("div", {
-                                    className: C.mdG,
+                                    className: C.md,
                                     children: [
-                                        (0, i.jsx)("div", {
-                                            className: a()(C.NrK, C.pD2),
-                                            style: { gridRow: "span 2" },
-                                        }),
-                                        (0, i.jsx)("div", { className: a()(C.NrK, C.e2X) }),
-                                        (0, i.jsx)("div", { className: a()(C.NrK, C.e2X) }),
-                                        (0, i.jsx)("div", { className: a()(C.NrK, C.e2X) }),
-                                        (0, i.jsx)("div", { className: a()(C.NrK, C.e2X) }),
+                                        (0, i.jsx)("div", { className: a()(C.Nr, C.pD), style: { gridRow: "span 2" } }),
+                                        (0, i.jsx)("div", { className: a()(C.Nr, C.e2) }),
+                                        (0, i.jsx)("div", { className: a()(C.Nr, C.e2) }),
+                                        (0, i.jsx)("div", { className: a()(C.Nr, C.e2) }),
+                                        (0, i.jsx)("div", { className: a()(C.Nr, C.e2) }),
                                     ],
                                 }),
                             ],
@@ -562,13 +555,13 @@ function en() {
 }
 function ei() {
     return (0, i.jsxs)("div", {
-        className: C.MYz,
+        className: C.MY,
         role: "status",
         children: [
             (0, i.jsx)(x, {}),
             (0, i.jsxs)("div", {
-                className: C.IxC,
-                children: [(0, i.jsx)("div", {}), (0, i.jsx)("div", { className: C.pz7 })],
+                className: C.Ix,
+                children: [(0, i.jsx)("div", {}), (0, i.jsx)("div", { className: C.pz })],
             }),
         ],
     });
@@ -578,10 +571,10 @@ function er() {
 }
 function ea() {
     return (0, i.jsxs)("nav", {
-        className: C.uCn,
+        className: C.uC,
         role: "status",
         children: [
-            (0, i.jsx)("div", { className: C.BmQ, children: (0, i.jsx)(w, { width: "55%", height: 14 }) }),
+            (0, i.jsx)("div", { className: C.Bm, children: (0, i.jsx)(w, { width: "55%", height: 14 }) }),
             (0, i.jsx)(g.A, { withBannerPadding: !1 }),
         ],
     });

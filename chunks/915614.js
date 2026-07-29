@@ -7,17 +7,17 @@ var i = n(477900),
     l = n(317097),
     o = n(17928),
     d = n(661531),
-    c = n(778712),
-    u = n(602853),
+    c = n(602853),
+    u = n(778712),
     _ = n(654107),
     E = n(450373),
-    A = n(915089),
-    h = n(693875),
-    I = n(885386),
-    f = n(531685),
-    p = n(486020),
-    T = n(837529),
-    m = n(686189),
+    A = n(885386),
+    h = n(531685),
+    I = n(486020),
+    f = n(837529),
+    p = n(686189),
+    T = n(985240),
+    m = n(859161),
     g = n(985253),
     S = n(725905);
 function N(e) {
@@ -26,7 +26,7 @@ function N(e) {
             displayProfile: n,
             guildId: a,
             pendingBanner: g,
-            children: N,
+            overlay: N,
             className: C,
             avatarSize: O,
             avatarOffsetX: R,
@@ -37,63 +37,32 @@ function N(e) {
             pendingAccentColor: b,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        P = (0, A.GV)(),
-        [U, w] = r.useState(!1),
-        G = (0, o.bG)([f.A], () => f.A.isFocused()),
-        x = I.kt.getSetting(),
-        k = (0, T.Nx)(),
-        { bannerSrc: F, status: V } = (0, m.A)({
+        [P, U] = r.useState(!1),
+        w = (0, o.bG)([h.A], () => h.A.isFocused()),
+        G = A.kt.getSetting(),
+        x = (0, f.Nx)(),
+        { bannerSrc: k, status: F } = (0, p.A)({
             displayProfile: n,
             pendingBanner: g,
             size: y,
-            canAnimate: M || !x ? U : G,
+            canAnimate: M || !G ? P : w,
         }),
-        B = k ? null : F,
-        H = (0, u.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
-        j = t.getAvatarURL(a, (0, c.FT)(O)),
-        W = (0, l.LX)((0, _.Ay)(j, H, !1)),
-        Y = (0, E.A)(b ?? n?.primaryColor ?? W).hex,
-        K = (function (e) {
-            let { size: t, stroke: n } = (0, c.Kj)(e);
-            return t / 2 + n;
-        })(O),
-        $ = D - L - v;
-    return (0, i.jsxs)("svg", {
-        className: S.dK,
-        viewBox: `0 0 ${y} ${D}`,
-        style: { minWidth: y, minHeight: D },
-        children: [
-            (0, i.jsxs)("mask", {
-                id: P,
-                children: [
-                    (0, i.jsx)("rect", { fill: "white", x: "0", y: "0", width: "100%", height: "100%" }),
-                    (0, i.jsx)("circle", { fill: "black", cx: K + R - v, cy: $, r: K }),
-                ],
-            }),
-            (0, i.jsxs)("foreignObject", {
-                x: "0",
-                y: "0",
-                width: "100%",
-                height: "100%",
-                overflow: "visible",
-                mask: `url(#${P})`,
-                children: [
-                    N,
-                    (0, i.jsx)("div", {
-                        className: s()(S.vK, C),
-                        onMouseMove: () => w(!0),
-                        onMouseLeave: () => w(!1),
-                        style: {
-                            height: D,
-                            minHeight: D,
-                            backgroundImage: null != B ? `url(${B})` : void 0,
-                            backgroundColor: "COMPLETE" === V || k ? Y : d.A.unsafe_rawColors.PRIMARY_800.css,
-                        },
-                        children: !x && (0, p.o4)(B) && (0, i.jsx)(h.A, { className: S.pH }),
-                    }),
-                ],
-            }),
-        ],
+        V = x ? null : (k ?? null),
+        B = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
+        H = t.getAvatarURL(a, (0, u.FT)(O)),
+        j = (0, l.LX)((0, _.Ay)(H, B, !1)),
+        W = (0, E.A)(b ?? n?.primaryColor ?? j).hex,
+        Y = { align: "start", insetStart: R - v, insetBottom: L + v, radius: (0, m.A)(O) };
+    return (0, i.jsx)(T.A, {
+        fillClassName: s()(S.v, C),
+        bannerSrc: V,
+        backgroundColor: "COMPLETE" === F || x ? W : d.A.unsafe_rawColors.PRIMARY_800.css,
+        showGifTag: !G && (0, I.o4)(V),
+        height: D,
+        cutout: Y,
+        overlay: N,
+        onInteractionStart: () => U(!0),
+        onInteractionEnd: () => U(!1),
     });
 }
 function C(e) {
@@ -107,6 +76,6 @@ function C(e) {
         } = e,
         o = g.T[t],
         d = null != s ? { ...o, ...s } : o,
-        c = !(0, T.Qq)() && (a || r?.canUsePremiumProfileCustomization || !1);
+        c = !(0, f.Qq)() && (a || r?.canUsePremiumProfileCustomization || !1);
     return (0, i.jsx)(N, { ...l, ...d, user: n, displayProfile: r, themePadding: c ? d.themePadding : 0 });
 }

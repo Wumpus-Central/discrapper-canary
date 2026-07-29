@@ -141,7 +141,7 @@ function Y(e) {
         pendingBanner: s,
         pendingAccentColor: t,
         canUsePremiumProfileCustomization: n,
-        children:
+        overlay:
             !o &&
             (0, l.jsxs)(j.D, {
                 onClick: function () {
