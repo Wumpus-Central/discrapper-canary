@@ -235,6 +235,7 @@ var i,
         (R[(R.ACTIVITY = 3)] = "ACTIVITY"),
         (R[(R.IN_APP_REPORTS = 4)] = "IN_APP_REPORTS"),
         (R[(R.SEARCH_RESULTS = 8)] = "SEARCH_RESULTS"),
+        (R[(R.VIBEGRATIONS = 10)] = "VIBEGRATIONS"),
         R);
 class er extends v.G {
     constructor() {
@@ -3035,7 +3036,7 @@ class e2 extends v.G {
     }
 }
 let e3 = new e2();
-class e6 extends v.G {
+class e4 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3095,12 +3096,12 @@ class e6 extends v.G {
         return !1 !== i && (!0 == i ? L.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e4 = new e6();
+let e6 = new e4();
 class e5 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
             { no: 2, name: "background_gradient_preset_id", kind: "message", T: () => b.ZQ },
-            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e4 },
+            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e6 },
         ]);
     }
     create(e) {
@@ -3126,7 +3127,7 @@ class e5 extends v.G {
                     );
                     break;
                 case 4:
-                    r.customUserThemeSettings = e4.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
+                    r.customUserThemeSettings = e6.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3142,7 +3143,7 @@ class e5 extends v.G {
         e.backgroundGradientPresetId &&
             b.ZQ.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, L.O0.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                e4.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, L.O0.LengthDelimited).fork(), n).join();
+                e6.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, L.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? L.f$.onWrite : i)(this.typeName, e, t), t;
     }
