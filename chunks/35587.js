@@ -99,6 +99,6 @@ function f() {
         i.useEffect(() => {
             (0, d.BE)();
         }, []),
-        (0, r.bG)([c.A], () => c.A.getMarketingMomentPromotion()?.hasBogoReward === !0)
+        (0, r.bG)([c.A], () => null != c.A.getActiveBogoRewardPromotion())
     );
 }
