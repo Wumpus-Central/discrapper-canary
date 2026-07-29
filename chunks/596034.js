@@ -91,6 +91,7 @@ function b(e) {
                         l = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
                     switch (e.type) {
                         case 0:
+                        case 1:
                             let n = g(e);
                             if (null != n.multiPeriodDiscountAttributes) {
                                 let {
@@ -112,9 +113,8 @@ function b(e) {
                                     contactUsUrl: n.contactUsUrl,
                                 });
                             }
+                            if (1 === e.type) return p.intl.format(h.default["2pNIbI"], n);
                             return p.intl.format(h.default.OH1Evm, n);
-                        case 1:
-                            return p.intl.format(h.default["2pNIbI"], g(e));
                         case 2:
                             return p.intl.format(h.default.bbgJdE, g(e));
                         case 4:

@@ -5220,8 +5220,9 @@ function rM(e) {
             fractionalPremiumInfo: a,
             paymentMethodContent: s,
             legalContent: u,
+            overrideRenewalDate: c,
         } = e,
-        [c, d] = o.useMemo(
+        [d, p] = o.useMemo(
             () =>
                 null == n
                     ? [G.intl.string(W.default.R0cZsM), void 0]
@@ -5229,22 +5230,22 @@ function rM(e) {
             [n],
         );
     if (null == n) return (0, l.jsx)(I.Ed, { shouldShowUnifiedHeader: !0 });
-    let p = r
+    let m = r
             ? [{ key: "fractional-premium-notice", directContent: (0, l.jsx)(rj, { fractionalPremiumInfo: a }) }]
             : null,
-        m = (0, l.jsx)(rO, { plan: t, renewalInvoicePreview: n }),
-        C = (0, l.jsx)(rL, { renewalInvoicePreview: n, subscriptionTrial: i });
+        C = (0, l.jsx)(rO, { plan: t, renewalInvoicePreview: n }),
+        h = (0, l.jsx)(rL, { renewalInvoicePreview: n, subscriptionTrial: i, overrideRenewalDate: c });
     return (0, l.jsx)(I.T_, {
         shouldShowGlobalNotices: !0,
         headerBadgeConfig: rb,
-        upperInlineNoticeProps: p,
-        purchaseItemContent: m,
-        subscriptionDetailsContent: C,
+        upperInlineNoticeProps: m,
+        purchaseItemContent: C,
+        subscriptionDetailsContent: h,
         invoiceSummaryContent: null,
         paymentMethodContent: s,
         legalContent: u,
-        invoiceTotalDueLabel: c,
-        invoiceTotalDueValue: d,
+        invoiceTotalDueLabel: d,
+        invoiceTotalDueValue: p,
         promotionalNoticeContent:
             null != i &&
             (0, l.jsx)(rN.J, {
@@ -5267,10 +5268,10 @@ function rO(e) {
     });
 }
 function rL(e) {
-    let { renewalInvoicePreview: t, subscriptionTrial: n } = e;
+    let { renewalInvoicePreview: t, subscriptionTrial: n, overrideRenewalDate: i } = e;
     if (null == t) return (0, l.jsx)(tt.y, {});
-    let i = (0, b.Gj)(null, t, n, { isSubscriptionUpdate: !1 });
-    return (0, l.jsx)(k._D, { ...i, defaultExpanded: !0 });
+    let r = (0, b.Gj)(null, t, n, { overrideRenewalDate: i, isSubscriptionUpdate: !1 });
+    return (0, l.jsx)(k._D, { ...r, defaultExpanded: !0 });
 }
 let rw = [...eU.oz],
     rk = [
@@ -5424,7 +5425,23 @@ let rw = [...eU.oz],
                     }),
                     { renewalPrice: Z } = (0, b.QM)(U, i, null),
                     q = G.intl.formatToPlainString(G.t.BQPav6, { planPremiumType: O.Ay.getDisplayName(i.id) }),
-                    z = (0, l.jsx)(k._P, {
+                    { overrideRenewalDate: z, multiPeriodDiscountAttributes: Q } = (function (e, t) {
+                        if (e.intervalCount > 1) {
+                            let n = (0, b.XP)(new Date(), { intervalType: e.interval, intervalCount: e.intervalCount });
+                            return {
+                                overrideRenewalDate: n,
+                                multiPeriodDiscountAttributes: {
+                                    discountedRenewalPrice: 0,
+                                    discountEndDate: n,
+                                    priceWithoutDiscount: t,
+                                    intervalCount: e.intervalCount,
+                                    intervalType: e.interval,
+                                },
+                            };
+                        }
+                        return {};
+                    })(r, Z),
+                    $ = (0, l.jsx)(k._P, {
                         variant: {
                             type: k.I0.SubscriptionTrial,
                             purchaseButtonText: q,
@@ -5434,13 +5451,14 @@ let rw = [...eU.oz],
                             interval: i.interval,
                             intervalCount: i.intervalCount,
                             startDate: (0, tT.de)({ renewalInvoice: U, isSubscriptionUpdate: !1 }),
+                            multiPeriodDiscountAttributes: Q,
                         },
                         paymentSourceType: (0, M.W)(h, A)?.type ?? null,
                         immediateDelivery: N,
                     }),
-                    Q = null;
+                    J = null;
                 return (
-                    null == W ? (Q = G.intl.string(G.t.L7jbQV)) : g || (Q = G.intl.string(G.t.XdvBLS)),
+                    null == W ? (J = G.intl.string(G.t.L7jbQV)) : g || (J = G.intl.string(G.t.XdvBLS)),
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsxs)(eB.dZ, {
@@ -5453,7 +5471,8 @@ let rw = [...eU.oz],
                                         shouldShowFractionalPremiumBanner: v.isFractionalPremiumActive,
                                         fractionalPremiumInfo: v,
                                         paymentMethodContent: K,
-                                        legalContent: z,
+                                        legalContent: $,
+                                        overrideRenewalDate: z,
                                     }),
                                 ],
                             }),
@@ -5462,7 +5481,7 @@ let rw = [...eU.oz],
                                     onBackClick: () => t(a.pn.PROMOTION_INFO),
                                     primaryButtonProps: {
                                         text: q,
-                                        tooltipText: Q ?? void 0,
+                                        tooltipText: J ?? void 0,
                                         disabled: null == W || !W.canRedeemTrial() || B || !g,
                                         loading: P,
                                         onClick: () => {

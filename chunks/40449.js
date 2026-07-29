@@ -32,6 +32,7 @@ var h = (((i = {}).K_ID = "K_ID"), (i.GOOGLE_WALLET = "GOOGLE_WALLET"), (i.INCOD
         (r[(r.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
         (r[(r.MODULAR = 3)] = "MODULAR"),
         (r[(r.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
+        (r[(r.CREDIT_CARD = 11)] = "CREDIT_CARD"),
         r);
 let f = {
     1: { title: d.default["2yLvkS"], description: d.default.eJmat5 },
