@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => Z, i: () => q }), n(321073);
+n.d(t, { A: () => X, i: () => Z }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(459838),
@@ -819,7 +819,12 @@ function $() {
     return K.Ay.getMediaEngine().getSystemSteadyClockNowMs() ?? Date.now();
 }
 var z = n(696016);
-class q extends l.A {
+function q(e, t) {
+    if (e.length < 2) return !1;
+    for (let n = e.length - 2; n < e.length; n++) if (e[n].value <= t) return !1;
+    return !0;
+}
+class Z extends l.A {
     timeline;
     scheduledClips = [];
     decisionSignals = g();
@@ -852,14 +857,14 @@ class q extends l.A {
             t.data_points))
                 "laughter" === n.label
                     ? (e.laughterData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
-                      n.confidence > 0.5 &&
+                      q(e.laughterData, 0.5) &&
                           this.process(
                               { type: p.Gy.LAUGHTER, userId: t.user_id, confidence: n.confidence },
                               n.timestamp_ms,
                           ))
                     : "shouting" === n.label
                       ? (e.shoutingData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
-                        n.confidence > 0.35 &&
+                        q(e.shoutingData, 0.35) &&
                             this.process(
                                 { type: p.Gy.SHOUTING, userId: t.user_id, confidence: n.confidence },
                                 n.timestamp_ms,
@@ -1223,4 +1228,4 @@ class q extends l.A {
         this.timeline.updateLength(Math.max(I.Ay.getSettings().clipsLength, 6e4));
     }
 }
-let Z = new q();
+let X = new Z();
