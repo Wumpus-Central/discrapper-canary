@@ -1,25 +1,26 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i,
     r = n(17928),
-    s = n(228366),
-    a = n(763827),
-    o =
+    a = n(228366),
+    s = n(763827),
+    l =
         (((i = {}).UNKNOWN = "unknown"),
         (i.BLUETOOTH = "bluetooth"),
         (i.SPEAKER = "speaker"),
         (i.RECEIVER = "receiver"),
+        (i.WIRED = "wired"),
         i);
-class l extends r.Ay.Store {
+class o extends r.Ay.Store {
     static displayName = "AudioRouteStore";
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(s.A);
     }
     getCurrentRouteType() {
-        return o.UNKNOWN;
+        return l.UNKNOWN;
     }
     getMultipleRoutesAvailable() {
         return !1;
     }
 }
-let u = new l(s.h, {});
+let d = new o(a.h, {});
