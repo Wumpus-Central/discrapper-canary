@@ -116,8 +116,8 @@ function p(e) {
                 return t;
             })
             .join("\0"),
-        S = r.useMemo(() => m, [T, g]),
-        { layerData: N, loaded: C } = (0, _.A)({ skuId: t.skuId, layers: null != u ? void 0 : S }),
+        S = r.useMemo(() => m, [g]),
+        { layerData: N, settled: C } = (0, _.A)({ skuId: t.skuId, layers: null != u ? void 0 : S }),
         O = u?.layerData ?? N,
         R = null != u || C;
     return 0 !== S.length && R

@@ -13,11 +13,8 @@ async function o(e, t) {
     try {
         await Promise.race([
             i.decode(),
-            new Promise((e, r) => {
-                (n = () => {
-                    (i.src = ""), r(new DOMException("Aborted", "AbortError"));
-                }),
-                    t.addEventListener("abort", n, { once: !0 });
+            new Promise((e, i) => {
+                (n = () => i(new DOMException("Aborted", "AbortError"))), t.addEventListener("abort", n, { once: !0 });
             }),
         ]);
     } finally {
@@ -31,13 +28,15 @@ function d(e) {
 function c(e) {
     let { skuId: t, layers: n } = e,
         [r, c] = i.useState({}),
-        [u, _] = i.useState(t);
+        [u, _] = i.useState(() => new Set()),
+        [E, A] = i.useState(t);
     return (
-        t !== u && (_(t), c({})),
+        t !== E && (A(t), c({}), _(new Set())),
         i.useEffect(() => {
             if (null == t || null == n || 0 === n.length) return;
             let e = new AbortController(),
-                { signal: i } = e;
+                { signal: i } = e,
+                r = (e) => _((t) => (t.has(e) ? t : new Set(t).add(e)));
             return (
                 n.forEach(async (e) => {
                     let n =
@@ -47,14 +46,18 @@ function c(e) {
                     if (null != n)
                         try {
                             let t = await o(n, i);
-                            i.aborted || c((n) => ({ ...n, [d(e)]: t }));
-                        } catch (e) {
-                            !i.aborted && (0, a.m6)() && l.error(`Failed to preload layer image: ${n}`, e);
+                            i.aborted || (c((n) => ({ ...n, [d(e)]: t })), r(d(e)));
+                        } catch (t) {
+                            !i.aborted && (r(d(e)), (0, a.m6)() && l.error(`Failed to preload layer image: ${n}`, t));
                         }
                 }),
                 () => e.abort()
             );
         }, [t, n]),
-        { loaded: null != n && n.every((e) => null != r[d(e)]), layerData: r }
+        {
+            loaded: null != n && n.every((e) => null != r[d(e)]),
+            settled: null != n && n.every((e) => u.has(d(e))),
+            layerData: r,
+        }
     );
 }
