@@ -1037,8 +1037,14 @@ class eY extends f.A {
         this.update();
     };
     invertWants(e, t) {
-        for (let n of Object.values(this.videoSsrcs))
-            for (let i of n) eH ? (100 !== i.quality ? (e[i.ssrc] = 100) : (e[i.ssrc] = 0)) : (e[i.ssrc] = t);
+        for (let n of Object.values(this.videoSsrcs)) {
+            if (!eH) {
+                for (let i of n) e[i.ssrc] = t;
+                continue;
+            }
+            let i = ec().minBy(n, (e) => e.quality);
+            for (let t of n) e[t.ssrc] = 100 * (t.ssrc === i?.ssrc);
+        }
         for (let t of Object.values(this.audioSsrcs)) e[t] = 100;
     }
     update = (() => {
@@ -1945,8 +1951,8 @@ class e3 extends f.A {
     }
 }
 var e4 = n(935172);
-let e5 = [1, 100, 1e3, 1e4],
-    e6 = [100, 500, 1e3, 5e3];
+let e6 = [1, 100, 1e3, 1e4],
+    e5 = [100, 500, 1e3, 5e3];
 class e7 {
     userId;
     connection;
@@ -2034,7 +2040,7 @@ class e7 {
     computeSpeakingDurationMilestones(e, t, n) {
         if (null == e || null == t) return;
         let i = this.speaking.elapsed().asMilliseconds();
-        e5.filter((e) => !this.timesUntilSpeakingDurationMilestonesMs.has(e))
+        e6.filter((e) => !this.timesUntilSpeakingDurationMilestonesMs.has(e))
             .filter((e) => i >= e)
             .forEach((i) => {
                 this.timesUntilSpeakingDurationMilestonesMs.set(i, t - e + i - n);
@@ -2044,7 +2050,7 @@ class e7 {
         let e = this.speaking.lastStartTime;
         if (null == e) return;
         let t = this.timestampProducer.now() - e;
-        e6.filter((e) => t >= e).forEach((e) => {
+        e5.filter((e) => t >= e).forEach((e) => {
             let n = this.speakingMinimumChunks.get(e) ?? 0;
             this.speakingMinimumChunks.set(e, n + t);
             let i = this.speakingMinimumChunkCounts.get(e) ?? 0;
@@ -2091,7 +2097,7 @@ class e7 {
                 duration_noise_cancellation_enabled_ms: this.noiseCancellation.totalDuration(),
                 duration_spatial_ms: this.spatialAudio.totalDuration(),
                 speech_event_count: this.speechEventCount,
-                ...e5
+                ...e6
                     .filter((e) => this.timesUntilSpeakingDurationMilestonesMs.has(e))
                     .reduce(
                         (e, t) => ({
@@ -2100,7 +2106,7 @@ class e7 {
                         }),
                         {},
                     ),
-                ...e6
+                ...e5
                     .filter((e) => this.speakingMinimumChunks.has(e) || n >= e)
                     .reduce(
                         (e, t) => ({
