@@ -5746,6 +5746,22 @@
     }
   },
   {
+    "name": "2026-07-renewable-end-date-sort",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-07-rtc-panel-game-card",
     "defaultConfig": {
