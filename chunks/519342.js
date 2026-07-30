@@ -122,7 +122,11 @@ function w(e) {
             ringing: !1,
             className: X?.dim ? L.r3 : void 0,
         }),
-        et = { left: Z.x.to((e) => `calc(${e}% - ${O / 2}px)`), top: Z.y.to((e) => `calc(${e}% - ${O / 2}px)`) };
+        et = {
+            left: Z.x.to((e) => `calc(${e}% - ${O / 2}px)`),
+            top: Z.y.to((e) => `calc(${e}% - ${O / 2}px)`),
+            zIndex: V ? 1e6 : 1e3 * Math.round(I) + Math.round(N),
+        };
     if (!D)
         return (0, i.jsx)(r.animated.div, {
             role: "listitem",
@@ -238,6 +242,7 @@ function O(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
         { posturesEnabled: r } = N.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
     return (0, i.jsx)("div", {
+        className: L.Gh,
         role: "list",
         "aria-label": P.intl.string(S.default.xn1EI9),
         children: l.entries().map((e) => {

@@ -9,4 +9,5 @@ _.exports = {
     Gk: "editBadge__38ccf",
     v7: "badgeLayer__38ccf",
     Zu: "isStatusMenuOpen__38ccf",
+    Gh: "userList__38ccf",
 };

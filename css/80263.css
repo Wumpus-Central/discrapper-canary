@@ -337,6 +337,10 @@
     transform: scale(1)
 }
 
+.userList__38ccf {
+    isolation: isolate
+}
+
 .container__2aff1 {
     position: absolute;
     top: 0;
