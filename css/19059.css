@@ -222,7 +222,8 @@
 
 .noticeBody__86361 {
     color: var(--text-muted);
-    margin-top: var(--space-8)
+    margin-top: var(--space-8);
+    white-space: pre-line
 }
 
 .detailsButton__86361 {
