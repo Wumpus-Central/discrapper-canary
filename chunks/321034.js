@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(77729),
     r = n(626584),
-    s = n(832213),
-    a = n(19575);
-let o = new r.A("ProcessUtilsElectron");
-class l extends s.D {
+    a = n(832213),
+    s = n(19575);
+let l = new r.A("ProcessUtilsElectron");
+class o extends a.D {
     lastMemoryUsageKB = void 0;
     constructor() {
         super(), (this.cpuCoreCount = i.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer();
@@ -13,8 +13,8 @@ class l extends s.D {
     setupReportingTimer() {
         let e = i.A?.processUtils?.setMemoryInformation;
         null == e
-            ? o.log("setMemoryInformation not available.")
-            : (performance.memory?.usedJSHeapSize == null && o.error("usedJSHeapSize is not available."),
+            ? l.log("setMemoryInformation not available.")
+            : (performance.memory?.usedJSHeapSize == null && l.error("usedJSHeapSize is not available."),
               setInterval(() => {
                   let t = performance.memory?.usedJSHeapSize ?? 0;
                   e({ memoryUsageKB: this.lastMemoryUsageKB ?? 0, usedJSHeapSizeKB: Math.ceil(t / 1024) });
@@ -30,12 +30,12 @@ class l extends s.D {
         return i.A?.processUtils?.getCumulativeCPUUsage?.();
     }
     getCurrentMemoryUsageKB() {
-        let e = l.getCurrentMemoryUsageKBCore();
+        let e = o.getCurrentMemoryUsageKBCore();
         return (this.lastMemoryUsageKB = e), e;
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = a.Ay.getDiscordMemoryUsage();
+            let e = s.Ay.getDiscordMemoryUsage();
             if (null == e) return 0;
             let t = Object.values(e).reduce((e, t) => e + t, 0);
             return Math.ceil(t / 1024);
@@ -44,18 +44,18 @@ class l extends s.D {
         }
     }
     getMemoryUsageDetails() {
-        return a.Ay.getDiscordMemoryUsage();
+        return s.Ay.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return a.Ay.getDiscordMemoryUsageElectronRenderer();
+            return s.Ay.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
     }
     getMemoryPrivateUsageElectronRenderer() {
         try {
-            return a.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
+            return s.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
         } catch (e) {
             return null;
         }
@@ -71,55 +71,62 @@ class l extends s.D {
     }
     getMemoryUsageElectronProcessTypeDetails() {
         try {
-            return a.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
+            return s.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
+        } catch (e) {
+            return null;
+        }
+    }
+    getCpuUsageElectronProcessTypeDetails() {
+        try {
+            return i.A?.processUtils?.getCpuUsageElectronProcessTypeDetails?.() ?? null;
         } catch (e) {
             return null;
         }
     }
     enablePerfMemoryHooks(e) {
         try {
-            return a.Ay.enablePerfMemoryHooks(e);
+            return s.Ay.enablePerfMemoryHooks(e);
         } catch (e) {
             return null;
         }
     }
     disablePerfMemoryHooks() {
         try {
-            return a.Ay.disablePerfMemoryHooks();
+            return s.Ay.disablePerfMemoryHooks();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemory() {
         try {
-            return a.Ay.getPerfAttributedMemory();
+            return s.Ay.getPerfAttributedMemory();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryCallstacks(e) {
         try {
-            return a.Ay.getPerfAttributedMemoryCallstacks(e);
+            return s.Ay.getPerfAttributedMemoryCallstacks(e);
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryStats() {
         try {
-            return a.Ay.getPerfAttributedMemoryStats();
+            return s.Ay.getPerfAttributedMemoryStats();
         } catch (e) {
             return null;
         }
     }
     startCPUProfiling(e) {
         try {
-            return a.Ay.startCPUProfiling(e);
+            return s.Ay.startCPUProfiling(e);
         } catch (e) {
             return null;
         }
     }
     stopCPUProfiling() {
-        return a.Ay.stopCPUProfiling();
+        return s.Ay.stopCPUProfiling();
     }
     enablePAMemoryProfiler(e) {
         try {
@@ -189,4 +196,4 @@ class l extends s.D {
         }
     }
 }
-let u = new l();
+let d = new o();
