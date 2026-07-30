@@ -11,7 +11,7 @@ var l = n(477900),
     p = n(241989),
     m = n(316915),
     C = n(993408),
-    h = n(223311),
+    h = n(80151),
     E = n(287809),
     f = n(486020),
     A = n(428262),
@@ -156,7 +156,7 @@ function J(e) {
             () => [V.intl.string(Z.default.Zxav97), null != r ? (0, S.$g)(r.total, r.currency) : void 0],
             [r],
         ),
-        G = (0, h.A)(W.FYj),
+        G = (0, h.A)(),
         H = (0, m.t4)((e) => e.unifiedCheckoutFlow),
         B = i.useMemo(() => {
             let e = (function (e, t) {
