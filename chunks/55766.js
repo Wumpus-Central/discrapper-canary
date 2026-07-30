@@ -1,31 +1,34 @@
-n.d(t, { f: () => s });
+n.d(t, { f: () => m });
 var r = n(582128),
     a = n(390544),
     u = n(17928),
-    l = n(760751),
-    i = n(498480),
-    o = n(814201),
-    c = n(24641);
-function s() {
+    l = n(311043),
+    i = n(569926),
+    o = n(498480),
+    c = n(814201),
+    s = n(24641);
+function m() {
     let { enabled: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         [t, n] = r.useState(!1),
-        [s, m] = r.useState(0);
+        [m, p] = r.useState(0);
     r.useEffect(() => {
-        e && (0, i.hU)().catch(() => n(!0));
-    }, [s, e]);
-    let p = r.useCallback(() => {
-            n(!1), m((e) => e + 1);
+        e && (0, o.hU)().catch(() => n(!0));
+    }, [m, e]);
+    let d = r.useCallback(() => {
+            n(!1), p((e) => e + 1);
         }, []),
-        d = (0, u.bG)([o.A], () => o.A.getGameServers()),
-        f = (0, u.yK)([o.A, l.A], () => o.A.getGameServers().map((e) => l.A.getDetectableGame(e.game_id)?.name ?? ""));
+        f = (0, u.bG)([c.A], () => c.A.getGameServers()),
+        g = r.useMemo(() => f.map((e) => e.game_id), [f]);
+    (0, i.x)(g);
+    let v = (0, u.yK)([l.A], () => g.map((e) => l.A.getGame(e)?.name ?? ""), [g]);
     return {
         servers: r.useMemo(
             () =>
-                d
+                f
                     .map((e, t) => {
                         var n;
                         return (
-                            (n = f[t] ?? ""),
+                            (n = v[t] ?? ""),
                             {
                                 id: e.id,
                                 serverName: e.name,
@@ -36,14 +39,14 @@ function s() {
                                 serverIp: null != e.ip && null != e.port ? `${e.ip}:${e.port}` : "",
                                 isOnline: e.status === a.M.ONLINE,
                                 location: e.region_name ?? "",
-                                instance: (0, c.A)(e),
+                                instance: (0, s.A)(e),
                             }
                         );
                     })
                     .reverse(),
-            [d, f],
+            [f, v],
         ),
         hasError: t,
-        refetch: p,
+        refetch: d,
     };
 }
