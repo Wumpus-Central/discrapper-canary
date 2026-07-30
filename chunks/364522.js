@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(259678),
+    l = n(330573),
     o = n(936005),
     d = n(518898),
     c = n(751591);
@@ -18,21 +18,22 @@ function u(e, t) {
                 orientation: A = "vertical",
                 paddingFix: h = !0,
                 fade: I = !1,
-                onScroll: f,
-                style: p,
-                ...T
+                disableFocusRingScope: f = !1,
+                onScroll: p,
+                style: T,
+                ...m
             } = a,
-            m = r.useRef(null),
-            g = (0, d.A)({ paddingFix: h, orientation: A, dir: E, className: _, scrollerRef: m, specs: n });
+            g = r.useRef(null),
+            S = (0, d.A)({ paddingFix: h, orientation: A, dir: E, className: _, scrollerRef: g, specs: n });
         return (0, i.jsx)("div", {
             ref: (e) => {
-                "function" == typeof o ? o(e) : null != o && (o.current = e), (m.current = e);
+                "function" == typeof o ? o(e) : null != o && (o.current = e), (g.current = e);
             },
             className: s()(_, { [e]: !0, [t]: I }),
-            style: (0, c.Ay)(p, A),
+            style: (0, c.Ay)(T, A),
             dir: E,
-            ...T,
-            children: (0, i.jsxs)(l.xp, { containerRef: m, children: [u, g] }),
+            ...m,
+            children: (0, i.jsxs)(l.t, { disableFocusRingScope: f, containerRef: g, children: [u, S] }),
         });
     });
 }

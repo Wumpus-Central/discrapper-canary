@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { zC: () => p, Ch: () => T, Gt: () => m });
+n.d(t, { zC: () => f, Ch: () => p, Gt: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(259678),
-    o = n(331322),
+    l = n(331322),
+    o = n(330573),
     d = n(936005),
     c = n(536804),
     u = n(789279),
@@ -14,9 +14,9 @@ var i = n(477900),
     A = n(751591);
 function h(e, t, n) {
     let a = (0, d.A)(e);
-    return r.forwardRef(function (l, d) {
+    return r.forwardRef(function (d, h) {
         let {
-                children: h,
+                children: I,
                 className: f,
                 dir: p = "ltr",
                 orientation: T = "vertical",
@@ -28,41 +28,37 @@ function h(e, t, n) {
                 gap: O,
                 experimental_useStack: R,
                 disableFocusRingScope: L = !1,
-                ...y
-            } = l,
-            { scrollerRef: D, getScrollerState: v } = (0, c.A)(),
-            b = (0, u.A)(D, T);
+                ...D
+            } = d,
+            { scrollerRef: y, getScrollerState: v } = (0, c.A)(),
+            b = (0, u.A)(y, T);
         r.useImperativeHandle(
-            d,
-            () => ({ getScrollerNode: () => D.current, getScrollerState: v, ...(0, _.A)(D, v, b, T) }),
-            [D, v, T, b],
+            h,
+            () => ({ getScrollerNode: () => y.current, getScrollerState: v, ...(0, _.A)(y, v, b, T) }),
+            [y, v, T, b],
         );
-        let M = (0, E.A)({ paddingFix: N, orientation: T, dir: p, className: f, scrollerRef: D, specs: a });
+        let M = (0, E.A)({ paddingFix: N, orientation: T, dir: p, className: f, scrollerRef: y, specs: a });
         return R
-            ? (0, i.jsx)(o.B, {
+            ? (0, i.jsx)(l.B, {
                   gap: O,
-                  ref: D,
+                  ref: y,
                   className: s()(f, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, A.Ay)(C, T, m),
                   dir: p,
-                  ...y,
-                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: D, children: [h, M] }),
+                  ...D,
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: y, children: [I, M] }),
               })
             : (0, i.jsx)("div", {
-                  ref: D,
+                  ref: y,
                   className: s()(f, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, A.Ay)(C, T, m),
                   dir: p,
-                  ...y,
-                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: D, children: [h, M] }),
+                  ...D,
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: y, children: [I, M] }),
               });
     });
 }
-function I(e) {
-    let { disableFocusRingScope: t, containerRef: n, children: r } = e;
-    return t ? r : (0, i.jsx)(l.xp, { containerRef: n, children: r });
-}
-var f = n(947876);
-let p = h(f.dv, f.Rv, f.D8),
-    T = h(f.yL, f.Rv, f.D8),
-    m = h(f.qZ, f.Rv, f.D8);
+var I = n(947876);
+let f = h(I.dv, I.Rv, I.D8),
+    p = h(I.yL, I.Rv, I.D8),
+    T = h(I.qZ, I.Rv, I.D8);
