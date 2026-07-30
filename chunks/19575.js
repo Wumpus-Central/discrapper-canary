@@ -44,6 +44,7 @@ var i,
         (i.DELETE_CLIP = "DISCORD_DELETE_CLIP"),
         (i.MOVE_CLIP = "DISCORD_MOVE_CLIP"),
         (i.UPDATE_CLIP_METADATA = "DISCORD_UPDATE_CLIP_METADATA"),
+        (i.DEBUG_STASH_CLIP_DECIDER_DATA = "DISCORD_DEBUG_STASH_CLIP_DECIDER_DATA"),
         (i.CHECK_FOR_UPDATES = "DISCORD_CHECK_FOR_UPDATES"),
         (i.DESKTOP_CAPTURER_GET_SOURCES = "DISCORD_DESKTOP_CAPTURER_GET_SOURCES"),
         (i.CONSTANTS_GET = "DISCORD_CONSTANTS_GET"),
@@ -183,8 +184,8 @@ let g = window.DiscordNative,
     O = null,
     R = null,
     L = {},
-    y = !1,
-    D = {};
+    D = !1,
+    y = {};
 null != g &&
     ((C = g.app
         .getVersion()
@@ -267,9 +268,9 @@ function W(e) {
 }
 let Y = {
         requireModule(e) {
-            if (y && D.hasOwnProperty(e) && null != D[e]) return D[e];
+            if (D && y.hasOwnProperty(e) && null != y[e]) return y[e];
             let t = g.nativeModules.requireModule(e);
-            return y && (D[e] = t), t;
+            return D && (y[e] = t), t;
         },
         ensureModule: (e) =>
             f.isPlatformEmbedded
@@ -1049,7 +1050,7 @@ let Y = {
             W(c.APP_ASYNC_INDEX_TSX_LOADED);
         },
         setUseRequireModuleCache(e) {
-            y = e;
+            D = e;
         },
         async GetSystemGpuStats(e) {
             if (!f.isPlatformEmbedded) return [];

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => D, i: () => y }), n(321073);
+n.d(t, { A: () => y, i: () => D }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(459838),
@@ -64,7 +64,7 @@ function L(e, t) {
     for (let n = e.length - 2; n < e.length; n++) if (e[n].value <= t) return !1;
     return !0;
 }
-class y extends l.A {
+class D extends l.A {
     timeline;
     scheduledClips = [];
     decisionSignals = (0, C.A)();
@@ -418,7 +418,13 @@ class y extends l.A {
             n = null == e ? [] : t.filter((t) => t.gameSessionId === e.id),
             i = null == e ? t : t.filter((t) => t.gameSessionId !== e.id),
             r = this.decisionSignals;
-        if (((this.decisionSignals = (0, C.A)()), I.Ay.isAutoStashEnabled()))
+        if (
+            ((this.decisionSignals = (0, C.A)()),
+            R.nx.info(
+                `decider: processClipCandidates \u{2014} sessionId=${e?.id} candidates=${n.length} staleCandidates=${i.length} autoStashEnabled=${I.Ay.isAutoStashEnabled()}`,
+            ),
+            I.Ay.isAutoStashEnabled())
+        )
             try {
                 let t, i, a;
                 await this.stashDeciderData(
@@ -460,4 +466,4 @@ class y extends l.A {
         this.timeline.updateLength(Math.max(I.Ay.getSettings().clipsLength, 6e4));
     }
 }
-let D = new y();
+let y = new D();
