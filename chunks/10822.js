@@ -5,7 +5,7 @@ var s,
     r = n(582128),
     o = n(503698),
     c = n.n(o),
-    d = n(461376),
+    d = n(560952),
     u = n(837381),
     h = n(17928),
     m = n(446837),
@@ -3276,7 +3276,10 @@ class ic {
         else {
             if (null != e && e.target !== this.ref.current?.getScrollerNode()) return;
             this.scrollTopCache !== t.scrollTop &&
-                (this.loadMorePausedUntilUserScroll && null != e && (this.loadMorePausedUntilUserScroll = !1),
+                (this.loadMorePausedUntilUserScroll &&
+                    null != e &&
+                    1 !== this.isInScrollTriggerLoadingRegion(t) &&
+                    (this.loadMorePausedUntilUserScroll = !1),
                 (this.pinned = n),
                 (this.scrollCounter = Math.min(this.scrollCounter + 1, 5)),
                 this.pinned

@@ -4433,22 +4433,6 @@
     }
   },
   {
-    "name": "2026-06-gdm-invite-embed",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-gifting-badge-desktop",
     "kind": "user",
     "defaultConfig": {
