@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B9: () => h, Bp: () => S, QI: () => p, SH: () => I, gh: () => T, kg: () => g, pi: () => f });
+n.d(t, { B9: () => h, Bp: () => N, QI: () => T, SH: () => f, X0: () => I, gh: () => m, kg: () => S, pi: () => p });
 var i = n(17928),
     r = n(587895),
     a = n(808728),
@@ -18,6 +18,12 @@ function h(e) {
     return A.test(t) ? t : null;
 }
 function I(e, t) {
+    return (
+        null != e &&
+        (e.guild_id === t || e.preview_guild_id === t || (null == e.guild_id && null == e.preview_guild_id))
+    );
+}
+function f(e, t) {
     for (let { channel: n } of a.Ay.getChannels(e)[a.I6].filter((e) => {
         let { channel: t } = e;
         return t.type === _.rbe.GUILD_TEXT;
@@ -25,7 +31,7 @@ function I(e, t) {
         if (h(n.topic) === t) return n.id;
     return null;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (0, d.i)({ guildId: e.id, location: t }) &&
         l.A.can(_.xBc.MANAGE_CHANNELS, e) &&
@@ -33,13 +39,13 @@ function f(e, t) {
         !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
-function p(e, t) {
+function T(e, t) {
     let n = (0, i.bG)([l.A], () => l.A.can(_.xBc.MANAGE_CHANNELS, e) && l.A.can(_.xBc.MANAGE_GUILD, e), [e]),
         r = (0, d.f)({ guildId: e.id, location: t }),
         a = e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return r && n && !a;
 }
-async function T(e) {
+async function m(e) {
     let { countAsDeploy: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = c.A.getProject(e),
         i = n?.preview_guild_id,
@@ -51,7 +57,7 @@ async function T(e) {
     let A = r.A.getApplication(E);
     null != A && (await u.A.openVibegrationsAppInstallModal({ applicationId: s.id, application: A, guildId: i }));
 }
-function m(e, t) {
+function g(e, t) {
     return (
         null != e &&
         e.type === _.rbe.GUILD_TEXT &&
@@ -59,11 +65,11 @@ function m(e, t) {
         !t?.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
-function g(e, t) {
-    return m(e, s.A.getGuild(e?.guild_id)) && (0, d.i)({ guildId: e?.guild_id, location: t });
-}
 function S(e, t) {
+    return g(e, s.A.getGuild(e?.guild_id)) && (0, d.i)({ guildId: e?.guild_id, location: t });
+}
+function N(e, t) {
     let n = (0, i.bG)([s.A], () => s.A.getGuild(e?.guild_id)),
         r = (0, d.f)({ guildId: e?.guild_id, location: t });
-    return m(e, n) && r;
+    return g(e, n) && r;
 }

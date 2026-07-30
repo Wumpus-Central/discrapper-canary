@@ -1,5 +1,6 @@
-a.exports = {
+_.exports = {
     IM: "vibegrations-channel-dot-pulse__82d93",
     lU: "channelStatusDot__82d93",
     jP: "channelStatusDotBuilding__82d93",
+    vv: "channelStatusDotDone__82d93",
 };
