@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => I });
-var i = n(636537),
+var i = n(562465),
     r = n(228366),
     a = n(439372),
     s = n(626584),
-    l = n(186295),
+    l = n(293246),
     o = n(873985),
     d = n(927813),
     c = n(723702),
@@ -44,7 +44,7 @@ class h extends a.A {
             (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * d.A.Millis.MINUTE));
     };
     _handleConnectionOpen = () => {
-        if (c.isPlatformEmbedded && !__OVERLAY__) {
+        if (null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT && c.isPlatformEmbedded && !__OVERLAY__) {
             let e = Math.floor(_ + Math.random() * E);
             null != this.refetchTimeout && clearTimeout(this.refetchTimeout),
                 (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));

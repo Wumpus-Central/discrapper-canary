@@ -3,20 +3,20 @@ let i, r, a, s, l, o, d, c;
 n.r(t),
     n.d(t, {
         encodeProperties: () => I,
-        isThrottled: () => ef,
-        analyticsTrackingStoreMaker: () => $,
-        getOS: () => es,
-        getDevice: () => eo,
-        getCampaignParams: () => ec,
-        ImpressionNames: () => q.I,
-        ImpressionGroups: () => z.q,
-        getSuperPropertiesBase64: () => eA,
-        trackMaker: () => ep,
-        AnalyticsActionHandlers: () => j,
-        NetworkActionNames: () => q.D,
-        getSuperProperties: () => eE,
-        ImpressionTypes: () => z.z,
-        extendSuperProperties: () => e_,
+        isThrottled: () => eT,
+        analyticsTrackingStoreMaker: () => q,
+        getOS: () => eo,
+        getDevice: () => ec,
+        getCampaignParams: () => e_,
+        ImpressionNames: () => X.I,
+        ImpressionGroups: () => Z.q,
+        getSuperPropertiesBase64: () => eI,
+        trackMaker: () => em,
+        AnalyticsActionHandlers: () => Y,
+        NetworkActionNames: () => X.D,
+        getSuperProperties: () => eh,
+        ImpressionTypes: () => Z.z,
+        extendSuperProperties: () => eA,
     });
 var u = n(812729),
     _ = n.n(u),
@@ -37,66 +37,68 @@ var p = n(80703),
     T = n(17928),
     m = n(562465),
     g = n(187207),
-    S = n(818348);
-let N = "x-science-test",
-    C = [0, 100, 1e3],
-    O = 1500,
-    R = 0,
-    L = 0,
+    S = n(118356),
+    N = n(818348);
+let C = "x-science-test",
+    O = new S.Vy("AnalyticsTrackingStore"),
+    R = [0, 100, 1e3],
+    L = 1500,
     D = 0,
     y = 0,
     v = 0,
-    b = null,
+    b = 0,
     M = 0,
-    P = Number.MAX_SAFE_INTEGER,
+    P = null,
     U = 0,
-    w = 0,
-    G = null,
-    x = !1,
+    w = Number.MAX_SAFE_INTEGER,
+    G = 0,
+    x = 0,
     k = null,
-    F = null;
-function V(e) {
+    F = !1,
+    V = null,
+    B = null;
+function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
 }
-let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
-    H = new g.n(),
-    j = {
+let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
+    W = new g.n(),
+    Y = {
         handleConnectionOpen: () => {},
         handleConnectionClosed: () => {},
         handleFingerprint: () => {},
         handleTrack: () => {},
         handleSetAnalyticsToken: () => {},
     },
-    W = [],
-    Y = null,
-    K = () => Promise.resolve({ sessionId: void 0 }),
-    $ = (e) => {
+    K = [],
+    $ = null,
+    z = () => Promise.resolve({ sessionId: void 0 }),
+    q = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = K,
+            getSessionId: s = z,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
-            scheduleWhenIdle: c = B,
+            scheduleWhenIdle: c = j,
             getLaunchSignature: u = () => null,
             submitEvents: _,
         } = e;
         function E() {
-            return 0 !== W.length && (null != r ? null != i : null != a());
+            return 0 !== K.length && (null != r ? null != i : null != a());
         }
         function A(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == Y && E() && (Y = t ? setTimeout(h, 0) : c(h, { timeout: O }));
+            null == $ && E() && ($ = t ? setTimeout(h, 0) : c(h, { timeout: L }));
         }
         function h() {
-            if (((Y = null), !E())) return Promise.resolve();
-            let e = W.slice();
-            (W = []), (M = V(M));
+            if ((($ = null), !E())) return Promise.resolve();
+            let e = K.slice();
+            (K = []), (U = H(U));
             let t = e.length;
-            (P = Math.min(P, t)), (U = Math.max(U, t)), (w = V(w, t));
+            (w = Math.min(w, t)), (G = Math.max(G, t)), (x = H(x, t));
             let n = I(e);
             return (
                 n.then(
@@ -104,10 +106,10 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                         e.forEach((e) => {
                             e.resolve?.();
                         }),
-                            (D = V(D));
+                            (v = H(v));
                     },
                     (t) => {
-                        W.unshift(...e), (y = V(y));
+                        K.unshift(...e), (b = H(b));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -121,60 +123,62 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             if (null != _) return _(r, i);
             let a = {};
             return (
-                x || ((F = (0, f.A)()), (a[N] = F), (x = !0)),
+                F || ((B = (0, f.A)()), (a[C] = B), (F = !0)),
                 m.Bo.post({
                     url: t ?? l,
                     headers: a,
                     body: { token: i, events: r },
                     retries: 3,
                     rejectWithError: !1,
-                }).then((e) => (a[N] && (k = e?.headers?.[N] ?? null), e))
+                }).then((e) => (a[C] && (V = e?.headers?.[C] ?? null), e))
             );
         }
         function g() {
             let e = {
-                type: S.bZ.CLIENT_TELEMETRY,
+                type: N.bZ.CLIENT_TELEMETRY,
                 properties: {
                     client_track_timestamp: Date.now(),
-                    rpc_success_count: D,
-                    rpc_failure_count: y,
-                    first_seen_event_sequence_number: v,
-                    last_seen_event_sequence_number: R,
-                    telemetry_period_start_timestamp: b,
+                    rpc_success_count: v,
+                    rpc_failure_count: b,
+                    first_seen_event_sequence_number: M,
+                    last_seen_event_sequence_number: D,
+                    telemetry_period_start_timestamp: P,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: L,
-                    event_queue_batch_count: M,
-                    event_queue_batch_min_size: P === Number.MAX_SAFE_INTEGER ? 0 : P,
-                    event_queue_batch_max_size: U,
-                    event_queue_batch_avg_size: M > 0 ? w / M : 0,
-                    science_request_id: F,
-                    science_response: k,
+                    event_queue_rejection_count: y,
+                    event_queue_batch_count: U,
+                    event_queue_batch_min_size: w === Number.MAX_SAFE_INTEGER ? 0 : w,
+                    event_queue_batch_max_size: G,
+                    event_queue_batch_avg_size: U > 0 ? x / U : 0,
+                    science_request_id: B,
+                    science_response: V,
                     launch_signature: u(),
                 },
             };
             return (
-                (L = 0),
-                (D = 0),
                 (y = 0),
-                (M = 0),
-                (P = Number.MAX_SAFE_INTEGER),
+                (v = 0),
+                (b = 0),
                 (U = 0),
-                (w = 0),
-                (b = Date.now()),
-                (v = R),
-                I([e], S.mX.CLIENT_TELEMETRY)
+                (w = Number.MAX_SAFE_INTEGER),
+                (G = 0),
+                (x = 0),
+                (P = Date.now()),
+                (M = D),
+                I([e], N.mX.CLIENT_TELEMETRY).catch((e) => {
+                    O.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
+                })
             );
         }
-        (O = o ?? 1500),
-            (j.handleConnectionOpen = function (e) {
+        (L = o ?? 1500),
+            (Y.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
                 return (
                     null != t && (i = t),
                     null != n.id && (r = n.id),
                     !(function () {
-                        if (null != G) return;
+                        if (null != k) return;
                         let e = () => {
-                            G = {
+                            k = {
                                 type: "timeout",
                                 id: setTimeout(
                                     () => {
@@ -184,7 +188,7 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 ),
                             };
                         };
-                        G = {
+                        k = {
                             type: "timeout",
                             id: setTimeout(
                                 () => {
@@ -198,32 +202,32 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                     !1
                 );
             }),
-            (j.handleConnectionClosed = function () {
+            (Y.handleConnectionClosed = function () {
                 return (
                     h(),
                     (function () {
-                        if (null == G) return;
-                        switch (G.type) {
+                        if (null == k) return;
+                        switch (k.type) {
                             case "timeout":
-                                clearTimeout(G.id);
+                                clearTimeout(k.id);
                                 break;
                             case "interval":
-                                clearInterval(G.id);
+                                clearInterval(k.id);
                                 break;
                             default:
-                                G.type;
+                                k.type;
                         }
-                        G = null;
+                        k = null;
                     })(),
                     (i = null),
                     (r = null),
                     !1
                 );
             }),
-            (j.handleFingerprint = function () {
+            (Y.handleFingerprint = function () {
                 return h(), !1;
             }),
-            (j.handleTrack = function (e) {
+            (Y.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
                 return (
                     s().then((e) => {
@@ -234,7 +238,7 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 properties: {
                                     client_track_timestamp: Date.now(),
                                     client_heartbeat_session_id: s,
-                                    event_sequence_number: ++R,
+                                    event_sequence_number: ++D,
                                     ...n,
                                 },
                                 resolve: o,
@@ -244,56 +248,56 @@ let B = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 let t = e.fingerprint ?? a();
                                 return null != t ? (0, p.d)(t) : null;
                             })(d);
-                        if ((null != c && (d.properties.client_uuid = H.generate(c)), W.push(d), W.length > 1e4)) {
-                            let e = W.length - 1e4;
-                            (L = V(L, e)), (W = W.slice(-1e4));
+                        if ((null != c && (d.properties.client_uuid = W.generate(c)), K.push(d), K.length > 1e4)) {
+                            let e = K.length - 1e4;
+                            (y = H(y, e)), (K = K.slice(-1e4));
                         }
                         i ? A({ shouldFlushOnNextTick: !0 }) : A({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             }),
-            (j.handleSetAnalyticsToken = function (e) {
+            (Y.handleSetAnalyticsToken = function (e) {
                 let { analyticsToken: t, userId: n } = e;
                 return null == i && null != t && ((i = t), (r = n), A({ shouldFlushOnNextTick: !1 })), !1;
             });
-        class $ extends T.Ay.Store {
+        class S extends T.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
             }
             submitEventsImmediately = I;
             requestDrain = () => {
-                for (let e of (h(), C))
+                for (let e of (h(), R))
                     setTimeout(() => {
                         h();
                     }, e);
             };
         }
-        return new $(t, n);
+        return new S(t, n);
     };
-var z = n(412728),
-    q = n(239947),
-    Z = n(214958),
-    X = n.n(Z);
+var Z = n(412728),
+    X = n(239947),
+    Q = n(214958),
+    J = n.n(Q);
 n(689953);
-var Q = n(70298),
-    J = n(175259),
-    ee = n(506774),
-    et = n(362474),
-    en = n(71931);
-let ei = "deviceProperties",
-    er = "referralProperties",
-    ea = window.DiscordNative;
-if (null != ea) {
+var ee = n(70298),
+    et = n(175259),
+    en = n(506774),
+    ei = n(362474),
+    er = n(71931);
+let ea = "deviceProperties",
+    es = "referralProperties",
+    el = window.DiscordNative;
+if (null != el) {
     let e,
-        t = ea.app.getVersion(),
-        n = ea.process.platform,
-        i = ea.os.release,
-        r = ea.os.arch,
-        s = ea.os.appArch,
-        l = ea.app.getReleaseChannel(),
-        o = (0, J.c)();
+        t = el.app.getVersion(),
+        n = el.process.platform,
+        i = el.os.release,
+        r = el.os.arch,
+        s = el.os.appArch,
+        l = el.app.getReleaseChannel(),
+        o = (0, et.c)();
     switch (n) {
         case "win32":
             e = "Windows";
@@ -317,14 +321,14 @@ if (null != ea) {
             os_arch: r,
             app_arch: s,
             system_locale: o,
-            has_client_mods: (0, Q.b)(),
-            client_launch_id: en.C,
+            has_client_mods: (0, ee.b)(),
+            client_launch_id: er.C,
         }),
-        X().name?.toLocaleLowerCase() === "electron" &&
-            ((a.browser_user_agent = X().ua || ""), (a.browser_version = X().version || "")),
+        J().name?.toLocaleLowerCase() === "electron" &&
+            ((a.browser_user_agent = J().ua || ""), (a.browser_version = J().version || "")),
         "linux" === n)
     ) {
-        let e = ea.crashReporter.getMetadata();
+        let e = el.crashReporter.getMetadata();
         (a.window_manager = e.wm),
             (a.distro = e.distro),
             (a.runtime_environment = e.runtime_environment),
@@ -332,7 +336,7 @@ if (null != ea) {
     } else
         "darwin" === n ? (a.os_sdk_version = i?.split(".")[0]) : "win32" === n && (a.os_sdk_version = i?.split(".")[2]);
 }
-function es() {
+function eo() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -343,13 +347,13 @@ function es() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-function el(e, t) {
+function ed(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function eo() {
+function ec() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
     if (/Windows Phone/i.test(e)) return "Windows Phone";
@@ -358,18 +362,18 @@ function eo() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
-let ed = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function ec(e) {
+let eu = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function e_(e) {
     let t = {};
     return (
-        ed.forEach((n) => {
-            let i = el(e, n);
+        eu.forEach((n) => {
+            let i = ed(e, n);
             i.length > 0 && (t[n] = i);
         }),
         t
     );
 }
-function eu() {
+function eE() {
     let e,
         t = {};
     return (
@@ -377,7 +381,7 @@ function eu() {
         (t.referring_domain = (e = document.referrer.split("/")).length >= 3 ? e[2] : ""),
         (t = {
             ...t,
-            ...ec(window.location.href),
+            ...e_(window.location.href),
             ...(function () {
                 let e,
                     t = {},
@@ -394,7 +398,7 @@ function eu() {
                                   : null;
                 if (null != i) {
                     t.search_engine = i;
-                    let e = el(n, "yahoo" !== i ? "q" : "p");
+                    let e = ed(n, "yahoo" !== i ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -405,10 +409,10 @@ function eu() {
 if (null == a)
     try {
         a = (function () {
-            let e = ee.w.get(ei);
+            let e = en.w.get(ea);
             if (null == e) {
                 let t;
-                ((t = {}).os = es()),
+                ((t = {}).os = eo()),
                     (t.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
                             { opera: n } = window;
@@ -430,25 +434,25 @@ if (null == a)
                         else if (/Gecko/.test(e)) return "Mozilla";
                         else return "";
                     })()),
-                    (t.device = eo()),
-                    (t.system_locale = (0, J.c)()),
-                    (t.has_client_mods = (0, Q.b)()),
+                    (t.device = ec()),
+                    (t.system_locale = (0, et.c)()),
+                    (t.has_client_mods = (0, ee.b)()),
                     (e = t),
-                    ee.w.set(ei, e);
+                    en.w.set(ea, e);
             }
-            let t = ee.w.get(er);
-            null == t && ((t = eu()), ee.w.set(er, t));
-            let n = et.u.get(er);
+            let t = en.w.get(es);
+            null == t && ((t = eE()), en.w.set(es, t));
+            let n = ei.u.get(es);
             if (null == n) {
                 var i;
                 let e;
-                (i = eu()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), et.u.set(er, n);
+                (i = eE()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), ei.u.set(es, n);
             }
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: X().version || "" },
-                    os_version: X()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: J().version || "" },
+                    os_version: J()?.os?.version ?? "",
                 },
                 ...t,
                 ...n,
@@ -457,38 +461,38 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function e_(e) {
+function eA(e) {
     s = I((a = { ...a, ...e }));
 }
-function eE() {
+function eh() {
     return a;
 }
-function eA() {
+function eI() {
     return s;
 }
-e_(
+eA(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("586097", 10))) || (l.client_build_number = d),
-    null == (c = ea?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
+    isNaN((d = parseInt("586733", 10))) || (l.client_build_number = d),
+    null == (c = el?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (l.has_client_mods = (0, Q.b)()),
-    (l.client_launch_id = en.C),
+    (l.has_client_mods = (0, ee.b)()),
+    (l.client_launch_id = er.C),
     l),
 );
-let eh = {},
-    eI = {};
-function ef(e) {
-    return null != eh[e] && eh[e] > Date.now();
+let ef = {},
+    ep = {};
+function eT(e) {
+    return null != ef[e] && ef[e] > Date.now();
 }
-let ep = (e) => {
+let em = (e) => {
     let { addBreadcrumb: t, analyticEventConfigs: i, dispatcher: r, TRACK_ACTION_NAME: a } = e,
         s = function (e, t, n) {
             return new Promise((i) => {
@@ -510,14 +514,14 @@ let ep = (e) => {
         if (("function" == typeof o && (o = o(l) ?? null), null != o))
             if ("throttlePeriod" in o) {
                 let t = [e, ...o.throttleKeys(l)].join("_");
-                if (ef(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
+                if (eT(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
                     return Promise.resolve();
                 if (o.deduplicate) {
-                    let e = eI[t];
+                    let e = ep[t];
                     if (_()(e, l)) return Promise.resolve();
-                    eI[t] = l;
+                    ep[t] = l;
                 }
-                eh[t] = Date.now() + o.throttlePeriod;
+                ef[t] = Date.now() + o.throttlePeriod;
             } else if ("throttlePercent" in o) {
                 if (Math.random() > o.throttlePercent) return Promise.resolve();
             } else A()(!1, `Unsupported analytics event config: ${o}`);
