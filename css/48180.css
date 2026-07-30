@@ -537,20 +537,17 @@
 }
 
 .container__343c1 {
-    display: flex;
-    flex-direction: column;
     gap: 64px;
-    margin-top: 64px;
     padding-bottom: 144px
 }
 
-.containerWithoutHero__343c1 {
-    margin-top: 0
+.container__343c1,
+.sectionWrapper__343c1 {
+    display: flex;
+    flex-direction: column
 }
 
 .sectionWrapper__343c1 {
-    display: flex;
-    flex-direction: column;
     gap: 16px
 }
 
@@ -710,7 +707,7 @@
 }
 
 .heroWrapper__955a3 {
-    margin-bottom: 56px
+    margin-bottom: 64px
 }
 
 .heroBannerHidden__955a3 {

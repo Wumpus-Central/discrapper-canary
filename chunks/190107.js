@@ -27,13 +27,13 @@ n.d(t, {
     uz: () => W,
     Tz: () => g,
     aA: () => O,
-    i$: () => D,
+    i$: () => y,
     WQ: () => J,
     aJ: () => V,
     CI: () => U,
     pc: () => et,
     GD: () => P,
-    qh: () => y,
+    qh: () => D,
     kL: () => Z,
     TY: () => T,
 });
@@ -86,6 +86,7 @@ var m =
     (r.QUEST_CHANNEL_CALL_HEADER = "quests_channel_call_header"),
     (r.QUEST_HOME_DESKTOP = "quest_home_desktop"),
     (r.QUEST_HOME_HERO_SHELF_DESKTOP = "quest_home_hero_shelf_desktop"),
+    (r.QUEST_HOME_DEFAULT_BANNER = "quest_home_default_banner"),
     (r.QUEST_HOME_MOBILE = "quest_home_mobile"),
     (r.QUEST_PROGRESS_BAR = "quest_progress_bar"),
     (r.EMBED_MOBILE = "embed_mobile"),
@@ -125,8 +126,8 @@ let g = new Set([A.L.NITRO_2_POINT_0_CTA, A.L.ORBS_MULTIPLIER_QUEST, A.L.XBOX_GA
     O = 6,
     R = 2;
 var L = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
-    y = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
-let D = 454,
+    D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
+let y = 454,
     v = 190,
     b = 2,
     M = (0, I.TP)(),

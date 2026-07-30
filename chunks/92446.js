@@ -30,5 +30,3 @@ function e(a) {
         }),
     });
 }
-ssName: d;
-})})}
