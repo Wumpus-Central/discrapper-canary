@@ -25,7 +25,7 @@ class _ extends u.A {
     tenantMetadata;
     static createFromServer(e) {
         var t, n, i;
-        let r, a, s, l;
+        let r, a, s, l, o;
         return new _({
             id: e.id,
             applicationId: e.application_id,
@@ -69,7 +69,8 @@ class _ extends u.A {
                                     (r = i.reward?.storefront?.nagbar),
                                     (a = i.reward?.checkout?.offer_notice),
                                     (l = null == (s = i.reward?.collected?.override_title) || "" === s ? void 0 : s),
-                                    null == r && null == a && null == l
+                                    (o = i.reward?.flavor),
+                                    null == r && null == a && null == l && null == o
                                         ? {}
                                         : {
                                               reward: {
@@ -97,6 +98,7 @@ class _ extends u.A {
                                                             }
                                                           : void 0,
                                                   collected: null != l ? { overrideTitle: l } : void 0,
+                                                  flavor: o ?? void 0,
                                               },
                                           })
                                   : void 0,

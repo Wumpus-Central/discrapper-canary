@@ -5266,9 +5266,8 @@ function rw(e) {
             fractionalPremiumInfo: a,
             paymentMethodContent: s,
             legalContent: u,
-            overrideRenewalDate: c,
         } = e,
-        [d, p] = o.useMemo(
+        [c, d] = o.useMemo(
             () =>
                 null == n
                     ? [F.intl.string(V.default.R0cZsM), void 0]
@@ -5276,22 +5275,22 @@ function rw(e) {
             [n],
         );
     if (null == n) return (0, l.jsx)(I.Ed, { shouldShowUnifiedHeader: !0 });
-    let m = r
+    let p = r
             ? [{ key: "fractional-premium-notice", directContent: (0, l.jsx)(rk, { fractionalPremiumInfo: a }) }]
             : null,
-        C = (0, l.jsx)(rU, { plan: t, renewalInvoicePreview: n }),
-        h = (0, l.jsx)(rD, { renewalInvoicePreview: n, subscriptionTrial: i, overrideRenewalDate: c });
+        m = (0, l.jsx)(rU, { plan: t, renewalInvoicePreview: n }),
+        C = (0, l.jsx)(rD, { renewalInvoicePreview: n, subscriptionTrial: i });
     return (0, l.jsx)(I.T_, {
         shouldShowGlobalNotices: !0,
         headerBadgeConfig: rL,
-        upperInlineNoticeProps: m,
-        purchaseItemContent: C,
-        subscriptionDetailsContent: h,
+        upperInlineNoticeProps: p,
+        purchaseItemContent: m,
+        subscriptionDetailsContent: C,
         invoiceSummaryContent: null,
         paymentMethodContent: s,
         legalContent: u,
-        invoiceTotalDueLabel: d,
-        invoiceTotalDueValue: p,
+        invoiceTotalDueLabel: c,
+        invoiceTotalDueValue: d,
         promotionalNoticeContent:
             null != i &&
             (0, l.jsx)(rj.J, {
@@ -5314,10 +5313,10 @@ function rU(e) {
     });
 }
 function rD(e) {
-    let { renewalInvoicePreview: t, subscriptionTrial: n, overrideRenewalDate: i } = e;
+    let { renewalInvoicePreview: t, subscriptionTrial: n } = e;
     if (null == t) return (0, l.jsx)(tn.y, {});
-    let r = (0, b.Gj)(null, t, n, { overrideRenewalDate: i, isSubscriptionUpdate: !1 });
-    return (0, l.jsx)(U._D, { ...r, defaultExpanded: !0 });
+    let i = (0, b.Gj)(null, t, n, { isSubscriptionUpdate: !1 });
+    return (0, l.jsx)(U._D, { ...i, defaultExpanded: !0 });
 }
 let rG = [...eU.oz],
     rF = [
@@ -5469,35 +5468,23 @@ let rG = [...eU.oz],
                         onPaymentSourceAdd: () => t(a.pn.ADD_PAYMENT_STEPS),
                         hideCurrencySelect: !0,
                     }),
-                    { renewalPrice: K } = (0, b.QM)(k, i, null),
-                    Z = F.intl.formatToPlainString(F.t.BQPav6, { planPremiumType: O.Ay.getDisplayName(i.id) }),
-                    { overrideRenewalDate: q, multiPeriodDiscountAttributes: z } = (function (e, t) {
-                        if (e.intervalCount > 1) {
-                            let n = (0, b.XP)(new Date(), { intervalType: e.interval, intervalCount: e.intervalCount });
-                            return {
-                                overrideRenewalDate: n,
-                                multiPeriodDiscountAttributes: {
-                                    discountedRenewalPrice: 0,
-                                    discountEndDate: n,
-                                    priceWithoutDiscount: t,
-                                    intervalCount: e.intervalCount,
-                                    intervalType: e.interval,
-                                },
-                            };
-                        }
-                        return {};
-                    })(r, K),
+                    K = (0, tv.de)({ renewalInvoice: k, isSubscriptionUpdate: !1 }),
+                    { renewalPrice: Z, multiPeriodDiscountAttributes: q } = (0, b.QM)(k, i, {
+                        discountOffer: null,
+                        subscriptionTrial: r,
+                    }),
+                    z = F.intl.formatToPlainString(F.t.BQPav6, { planPremiumType: O.Ay.getDisplayName(i.id) }),
                     Q = (0, l.jsx)(U._P, {
                         variant: {
                             type: U.I0.SubscriptionTrial,
-                            purchaseButtonText: Z,
+                            purchaseButtonText: z,
                             totalDue: 0,
-                            renewalPrice: K,
+                            renewalPrice: Z,
                             currency: k.currency,
                             interval: i.interval,
                             intervalCount: i.intervalCount,
-                            startDate: (0, tv.de)({ renewalInvoice: k, isSubscriptionUpdate: !1 }),
-                            multiPeriodDiscountAttributes: z,
+                            startDate: K,
+                            multiPeriodDiscountAttributes: q,
                         },
                         paymentSourceType: (0, M.W)(h, A)?.type ?? null,
                         immediateDelivery: N,
@@ -5518,7 +5505,6 @@ let rG = [...eU.oz],
                                         fractionalPremiumInfo: v,
                                         paymentMethodContent: V,
                                         legalContent: Q,
-                                        overrideRenewalDate: q,
                                     }),
                                 ],
                             }),
@@ -5526,7 +5512,7 @@ let rG = [...eU.oz],
                                 children: (0, l.jsx)(ea.lo, {
                                     onBackClick: () => t(a.pn.PROMOTION_INFO),
                                     primaryButtonProps: {
-                                        text: Z,
+                                        text: z,
                                         tooltipText: $ ?? void 0,
                                         disabled: null == Y || !Y.canRedeemTrial() || H || !g,
                                         loading: P,

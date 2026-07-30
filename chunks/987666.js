@@ -17,31 +17,36 @@ function c(e) {
             fractionalPremiumInfo: m,
             isInvoiceBilledImmediately: C = !0,
             unifiedLegalType: h,
-            discountOffer: E,
+            discountOffer: f,
+            subscriptionTrial: E,
         } = e,
-        { immediateDelivery: f } = (0, s.U)(),
-        { checkoutReviewButtonLabel: A } = (0, u.t4)((e) => ({
+        { immediateDelivery: A } = (0, s.U)(),
+        { checkoutReviewButtonLabel: S } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
-    let { invoicePreview: S } = d,
-        y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? S,
-        { renewalPrice: P, multiPeriodDiscountAttributes: I } = (0, i.QM)(y, t, E),
-        _ = {
-            purchaseButtonText: A,
-            totalDue: C ? S.total : 0,
-            renewalPrice: P,
-            multiPeriodDiscountAttributes: I,
-            currency: S.currency,
+    let { invoicePreview: y } = d,
+        P = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? y,
+        I = (0, r.de)({
+            overrideRenewalDate: p,
+            currentInvoice: C ? y : void 0,
+            renewalInvoice: P,
+            isSubscriptionUpdate: null != c,
+            fractionalPremiumInfo: m,
+        }),
+        { renewalPrice: _, multiPeriodDiscountAttributes: T } = (0, i.QM)(P, t, {
+            discountOffer: f,
+            subscriptionTrial: E,
+        }),
+        g = {
+            purchaseButtonText: S,
+            totalDue: C ? y.total : 0,
+            renewalPrice: _,
+            multiPeriodDiscountAttributes: T,
+            currency: y.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: (0, r.de)({
-                overrideRenewalDate: p,
-                currentInvoice: C ? S : void 0,
-                renewalInvoice: y,
-                isSubscriptionUpdate: null != c,
-                fractionalPremiumInfo: m,
-            }),
+            startDate: I,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: f });
+    return (0, l.jsx)(o._P, { variant: { type: h, ...g }, paymentSourceType: n, immediateDelivery: A });
 }

@@ -25,9 +25,9 @@ function p(e) {
     return null != s && "" !== s ? (0, l.jsx)(i.w, { type: "info", children: s }) : null;
 }
 function m(e) {
-    let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, ...c } = e,
-        { unifiedCheckoutFlow: d } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
-        p = (function (e) {
+    let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, subscriptionTrial: c, ...d } = e,
+        { unifiedCheckoutFlow: p } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
+        m = (function (e) {
             let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
             return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
                 ? o.I0.SubscriptionApplication
@@ -36,7 +36,13 @@ function m(e) {
                   : n
                     ? o.I0.SubscriptionTrial
                     : o.I0.Subscription;
-        })({ isGift: t, isTrial: n, unifiedCheckoutFlow: d }),
-        { discountOffer: m, premiumGroupDiscountOffer: C } = (0, s.i)();
-    return (0, l.jsx)(a.$, { ...c, isInvoiceBilledImmediately: i, discountOffer: C ?? m, unifiedLegalType: p });
+        })({ isGift: t, isTrial: n, unifiedCheckoutFlow: p }),
+        { discountOffer: C, premiumGroupDiscountOffer: h } = (0, s.i)();
+    return (0, l.jsx)(a.$, {
+        ...d,
+        isInvoiceBilledImmediately: i,
+        subscriptionTrial: c,
+        discountOffer: h ?? C,
+        unifiedLegalType: m,
+    });
 }

@@ -1,14 +1,17 @@
-n.d(t, { s: () => a });
-var l = n(278416),
-    i = n(403581),
-    r = n(288106);
-function a(e) {
+t.d(r, { l: () => c, s: () => o });
+var n = t(278416),
+    a = t(403581),
+    l = t(288106);
+function o(e) {
     switch (e) {
-        case r.cR.TAG:
-            return l.g;
-        case r.cR.NITRO:
-            return i.t;
+        case l.cR.TAG:
+            return n.g;
+        case l.cR.NITRO:
+            return a.t;
         default:
             return null;
     }
+}
+function c(e) {
+    return e === l.Pz.NITRO ? "nitro-pink" : "collectibles";
 }
