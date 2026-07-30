@@ -1,5 +1,6 @@
-n.d(t, { A: () => o }), n(321073);
-class o {
+"use strict";
+n.d(t, { A: () => i }), n(321073);
+class i {
     _capacity;
     _tokenCount;
     _queue;
@@ -33,13 +34,13 @@ class o {
     process(e) {
         return new Promise((t, n) => {
             if (e?.aborted) return void n(Error("Already aborted"));
-            let o = { resolve: t, signal: e };
-            this._queue.push(o),
+            let i = { resolve: t, signal: e };
+            this._queue.push(i),
                 e &&
                     e.addEventListener(
                         "abort",
                         () => {
-                            let e = this._queue.indexOf(o);
+                            let e = this._queue.indexOf(i);
                             e >= 0 && this._queue.splice(e, 1), n(Error("Aborted"));
                         },
                         { once: !0 },

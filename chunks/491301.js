@@ -1,13 +1,14 @@
-e.d(r, { A: () => o });
-function o(t) {
-    return (o =
+"use strict";
+function n(e) {
+    return (n =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-            ? function (t) {
-                  return typeof t;
+            ? function (e) {
+                  return typeof e;
               }
-            : function (t) {
-                  return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype
+            : function (e) {
+                  return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
                       ? "symbol"
-                      : typeof t;
-              })(t);
+                      : typeof e;
+              })(e);
 }
+r.d(t, { A: () => n });

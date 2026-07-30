@@ -1275,6 +1275,7 @@ let ta = {
                                     shopNagbar: c.shopNagbar,
                                     componentId: c.componentId,
                                     tab: tn.G2.HOME,
+                                    onDismiss: () => {},
                                 }),
                         });
                     },

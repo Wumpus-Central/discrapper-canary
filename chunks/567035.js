@@ -1,42 +1,43 @@
-t.d(a, { A: () => i }), t(321073);
-var s = t(435558),
-    d = t.n(s),
-    l = t(334738),
-    r = t(591552),
-    n = t(695633),
-    c = t(808728),
-    p = t(568548),
-    u = t(174459),
-    I = t(935208),
-    h = t(652215),
-    A = t(790782);
-function i(e, a, t) {
-    let s = d()
+"use strict";
+n.d(t, { A: () => A }), n(321073);
+var i = n(435558),
+    r = n.n(i),
+    a = n(334738),
+    s = n(591552),
+    l = n(695633),
+    o = n(808728),
+    d = n(568548),
+    c = n(174459),
+    u = n(935208),
+    _ = n(652215),
+    E = n(790782);
+function A(e, t, n) {
+    let i = r()
         .flatMap(e, (e) => {
-            let a = c.Ay.getSelectableChannelIds(e),
-                t = [...a, ...c.Ay.getVocalChannelIds(e)],
-                s = n.A.getActiveJoinedThreadsForGuild(e);
-            for (let e of a) {
-                let a = s[e] ?? {};
-                for (let e in a) t.push(e);
+            let t = o.Ay.getSelectableChannelIds(e),
+                n = [...t, ...o.Ay.getVocalChannelIds(e)],
+                i = l.A.getActiveJoinedThreadsForGuild(e);
+            for (let e of t) {
+                let t = i[e] ?? {};
+                for (let e in t) n.push(e);
             }
-            return t;
+            return n;
         })
-        .map((e) => ({ channelId: e, readStateType: A.P.CHANNEL, messageId: p.Ay.lastMessageId(e) }));
+        .map((e) => ({ channelId: e, readStateType: E.P.CHANNEL, messageId: d.Ay.lastMessageId(e) }));
     return (
         e.forEach((e) => {
-            s.push({
-                channelId: I.default.cast(e),
-                readStateType: A.P.GUILD_EVENT,
-                messageId: p.Ay.lastMessageId(e, A.P.GUILD_EVENT),
+            i.push({
+                channelId: u.default.cast(e),
+                readStateType: E.P.GUILD_EVENT,
+                messageId: d.Ay.lastMessageId(e, E.P.GUILD_EVENT),
             }),
-                s.push({
-                    channelId: I.default.cast(e),
-                    readStateType: A.P.GUILD_ONBOARDING_QUESTION,
-                    messageId: r.A.ackIdForGuild(e),
+                i.push({
+                    channelId: u.default.cast(e),
+                    readStateType: E.P.GUILD_ONBOARDING_QUESTION,
+                    messageId: s.A.ackIdForGuild(e),
                 });
         }),
-        u.default.track(h.HAw.MARK_AS_READ, { source: a, type: "guild" }),
-        (0, l.Uq)(s, t)
+        c.default.track(_.HAw.MARK_AS_READ, { source: t, type: "guild" }),
+        (0, a.Uq)(i, n)
     );
 }

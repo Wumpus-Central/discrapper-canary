@@ -1,65 +1,67 @@
-n.d(t, { Ay: () => b, ZV: () => N, z8: () => I });
+n.d(t, { Ay: () => R, ZV: () => j, z8: () => N });
 var l,
     i = n(477900),
     a = n(582128),
-    r = n(503698),
-    c = n.n(r),
+    s = n(503698),
+    c = n.n(s),
     o = n(43990),
-    s = n(834730),
+    r = n(834730),
     d = n(349288),
     p = n(821609),
+    u = n(417098),
     h = n(812095),
-    u = n(975571),
-    x = n(80151),
-    m = n(151115),
-    A = n(758836),
+    x = n(975571),
+    m = n(80151),
+    A = n(151115),
+    T = n(758836),
     k = n(652215),
-    T = n(375708),
-    v = n(456670),
-    I = (((l = {}).DEFAULT = "default"), (l.NITRO = "nitro"), l);
-let C = { default: v.Hk, nitro: v.O5 };
-function N(e) {
+    C = n(375708),
+    I = n(456670),
+    N = (((l = {}).DEFAULT = "default"), (l.NITRO = "nitro"), l);
+let v = { default: I.Hk, nitro: I.O5 };
+function j(e) {
     let {
             promotionTheme: t = "default",
             icon: n,
             headerText: l,
-            helpCenterId: r,
-            helpCenterLinkText: x,
-            ctaText: A,
-            ctaIcon: I,
-            onCtaClick: N,
-            hideCta: b,
+            helpCenterId: s,
+            helpCenterLinkText: m,
+            ctaText: T,
+            ctaIcon: N,
+            onCtaClick: j,
+            hideCta: R,
+            onDismiss: b,
         } = e,
-        j = a.useMemo(() => (null == r ? null : u.A.getArticleURL(r)), [r]),
-        R = (0, m.s)(n);
+        E = a.useMemo(() => (null == s ? null : x.A.getArticleURL(s)), [s]),
+        O = (0, A.s)(n);
     return (0, i.jsx)(o.N, {
         theme: k.NJ8.DARKER,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: c()(v.kL, e),
+                className: c()(I.kL, e),
                 children: [
-                    (0, i.jsx)("div", { className: c()(v.D7, C[t]) }),
+                    (0, i.jsx)("div", { className: c()(I.D7, v[t]) }),
                     (0, i.jsxs)("div", {
-                        className: v.Qs,
+                        className: I.Qs,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: v.hu,
+                                className: I.hu,
                                 children: [
-                                    null != R && (0, i.jsx)(R, { size: "sm", colorClass: v.Kk }),
-                                    (0, i.jsxs)(s.E, {
+                                    null != O && (0, i.jsx)(O, { size: "sm", colorClass: I.Kk }),
+                                    (0, i.jsxs)(r.E, {
                                         variant: "text-sm/normal",
                                         color: "text-overlay-light",
                                         children: [
                                             null != l ? (0, h.U)(l) : null,
-                                            null != j &&
+                                            null != E &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
                                                         " ",
                                                         (0, i.jsx)(d.Anchor, {
-                                                            href: j,
+                                                            href: E,
                                                             target: "_blank",
-                                                            className: v.nf,
-                                                            children: x ?? T.intl.string(T.t.WQdkbb),
+                                                            className: I.nf,
+                                                            children: m ?? C.intl.string(C.t.WQdkbb),
                                                         }),
                                                     ],
                                                 }),
@@ -67,38 +69,49 @@ function N(e) {
                                     }),
                                 ],
                             }),
-                            !b &&
-                                null != A &&
-                                (0, i.jsx)(p.$, {
-                                    variant: "overlay-primary",
-                                    size: "sm",
-                                    text: A,
-                                    icon: I,
-                                    onClick: N,
-                                }),
+                            (0, i.jsxs)("div", {
+                                className: I.uJ,
+                                children: [
+                                    !R &&
+                                        null != T &&
+                                        (0, i.jsx)(p.$, {
+                                            variant: "overlay-primary",
+                                            size: "sm",
+                                            text: T,
+                                            icon: N,
+                                            onClick: j,
+                                        }),
+                                    null != b &&
+                                        (0, i.jsx)(u.PM, {
+                                            onClick: b,
+                                            noticeType: k.kqX.COLLECTIBLES_SHOP_NAGBAR,
+                                            className: I.r,
+                                        }),
+                                ],
+                            }),
                         ],
                     }),
                 ],
             }),
     });
 }
-let b =
+let R =
     21552 == n.j
         ? function (e) {
               let { tab: t, handleTransition: n } = e,
-                  l = (0, x.A)(),
-                  r = l?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
+                  l = (0, m.A)(),
+                  s = l?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
                   c = a.useCallback(() => {
-                      n(A.G2.OFFER_ELIGIBLE);
+                      n(T.G2.OFFER_ELIGIBLE);
                   }, [n]);
-              return t === A.G2.ORBS || null == r
+              return t === T.G2.ORBS || null == s
                   ? null
-                  : (0, i.jsx)(N, {
+                  : (0, i.jsx)(j, {
                         promotionTheme: void 0,
-                        icon: r.icon,
-                        headerText: r.headerText,
-                        ctaText: r.cta?.text,
-                        helpCenterId: r.helpCenterId,
+                        icon: s.icon,
+                        headerText: s.headerText,
+                        ctaText: s.cta?.text,
+                        helpCenterId: s.helpCenterId,
                         onCtaClick: c,
                     });
           }

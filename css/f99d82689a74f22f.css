@@ -85,12 +85,22 @@
 }
 
 .content__3b67f,
-.leftContent__3b67f {
+.rightContent__3b67f {
     align-items: center;
     display: flex
 }
 
+.rightContent__3b67f {
+    gap: var(--space-sm)
+}
+
+.rightContent__3b67f .dismissButton__3b67f {
+    position: static
+}
+
 .leftContent__3b67f {
+    align-items: center;
+    display: flex;
     gap: var(--space-xxs)
 }
 
