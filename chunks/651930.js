@@ -1,35 +1,35 @@
-n.d(t, { default: () => E, i: () => y }), n(321073);
-var a = n(477900),
-    i = n(582128),
-    l = n(562708),
-    s = n(189213),
-    r = n(17928),
-    o = n(783878),
-    c = n(834730),
-    d = n(144228),
-    u = n(260598),
-    m = n(587895),
-    g = n(429913),
-    p = n(952818),
-    h = n(769015),
-    x = n(409626),
-    _ = n(569926),
-    v = n(379078),
-    b = n(704554),
-    A = n(760751),
-    f = n(174459),
-    j = n(486020),
-    k = n(21241),
-    C = n(652215),
-    w = n(375708),
-    G = n(520467);
-let S = i.memo(function (e) {
+a.d(t, { default: () => S, i: () => N }), a(321073);
+var n = a(477900),
+    i = a(582128),
+    l = a(562708),
+    s = a(189213),
+    r = a(17928),
+    o = a(783878),
+    u = a(834730),
+    d = a(144228),
+    c = a(260598),
+    m = a(587895),
+    g = a(429913),
+    p = a(952818),
+    h = a(769015),
+    x = a(409626),
+    b = a(471677),
+    v = a(569926),
+    _ = a(106191),
+    f = a(379078),
+    A = a(704554),
+    C = a(174459),
+    j = a(21241),
+    k = a(652215),
+    I = a(375708),
+    w = a(520467);
+let M = i.memo(function (e) {
         let { game: t } = e,
-            n = (0, r.bG)([m.A], () => m.A.getApplicationByName(t.name) ?? m.A.getApplication(t.id), [t.id, t.name]),
+            a = (0, r.bG)([m.A], () => m.A.getApplicationByName(t.name) ?? m.A.getApplication(t.id), [t.id, t.name]),
             i = (0, r.bG)([p.Ay], () => {
                 let e = p.Ay.getVisibleGame(),
-                    n = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
-                return n?.name?.toLowerCase() === t.name.toLowerCase() ? n : p.Ay.getGameForName(t.name);
+                    a = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
+                return a?.name?.toLowerCase() === t.name.toLowerCase() ? a : p.Ay.getGameForName(t.name);
             }, [t]),
             [l] = (0, g.A)([
                 (function () {
@@ -41,25 +41,26 @@ let S = i.memo(function (e) {
                     if (null != i) return i.id;
                 })(),
             ]),
-            s = l ?? n,
-            { data: o } = (0, _.I)(null == s ? t.id : void 0);
-        return (0, a.jsx)(h.A, { pid: i?.pid, game: s ?? o, size: h.M.XSMALL, className: G.Gt });
+            s = l ?? a,
+            { data: o } = (0, v.I)(null == s ? t.id : void 0);
+        return (0, n.jsx)(h.A, { pid: i?.pid, game: s ?? o, size: h.M.XSMALL, className: w.Gt });
     }),
-    N = {
-        searchType: v.n.FUZZY,
-        sortType: v.r.JARO_WINKLER,
+    E = {
+        searchType: f.n.FUZZY,
+        sortType: f.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
-            let { game: t, label: n } = e,
-                a = [t.name, n, t.id.toString()];
-            return t.aliases.length > 0 && a.push(...t.aliases), null != t.description && a.push(t.description), a;
+            let { game: t, label: a } = e,
+                n = [t.name, a, t.id.toString()];
+            return t.aliases.length > 0 && n.push(...t.aliases), null != t.description && n.push(t.description), n;
         },
         throttleMs: 100,
         maxSearchResults: 20,
     },
-    y = i.memo(function (e) {
-        let { games: t, selectedGame: n, onGameSelected: l, onGameSearchQueryChange: s, placeholder: r } = e,
-            [c, d] = i.useState(""),
-            u = i.useCallback(
+    G = [],
+    N = i.memo(function (e) {
+        let { games: t, selectedGame: a, onGameSelected: l, onGameSearchQueryChange: s, placeholder: r } = e,
+            [u, d] = i.useState(""),
+            c = i.useCallback(
                 (e) => {
                     d(e), s?.(e);
                 },
@@ -67,41 +68,41 @@ let S = i.memo(function (e) {
             ),
             m = i.useMemo(() => {
                 let e = [];
-                for (let i of (null != n &&
-                    e.push({ id: n.id, value: n.id, label: n.name, game: n, leading: (0, a.jsx)(S, { game: n }) }),
+                for (let i of (null != a &&
+                    e.push({ id: a.id, value: a.id, label: a.name, game: a, leading: (0, n.jsx)(M, { game: a }) }),
                 t))
-                    (null == n || (n.id !== i.id && n.name.toLowerCase() !== i.name.toLowerCase())) &&
-                        e.push({ id: i.id, value: i.id, label: i.name, game: i, leading: (0, a.jsx)(S, { game: i }) });
+                    (null == a || (a.id !== i.id && a.name.toLowerCase() !== i.name.toLowerCase())) &&
+                        e.push({ id: i.id, value: i.id, label: i.name, game: i, leading: (0, n.jsx)(M, { game: i }) });
                 return e;
-            }, [t, n]),
+            }, [t, a]),
             g = i.useMemo(() => m.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [m]),
             [p, h] = i.useState(m),
             x = i.useCallback((e) => {
                 h(e);
             }, []),
-            _ = i.useCallback(
+            b = i.useCallback(
                 (e) => {
                     let t = g[e];
                     if (null == t) return;
-                    let n = t.game;
-                    l(n ?? null), u(n?.name ?? "");
+                    let a = t.game;
+                    l(a ?? null), c(a?.name ?? "");
                 },
-                [g, l, u],
+                [g, l, c],
             ),
             v = i.useCallback(
                 (e) => {
                     let t = e.target.value;
-                    u(t), null != n && t !== n.name && l(null);
+                    c(t), null != a && t !== a.name && l(null);
                 },
-                [n, l, u],
+                [a, l, c],
             );
         return (
-            (0, b.RT)(c, m, x, N),
-            (0, a.jsx)(o.Z, {
+            (0, A.RT)(u, m, x, E),
+            (0, n.jsx)(o.Z, {
                 options: p,
                 selectionMode: "single",
-                value: n?.id ?? void 0,
-                onSelectionChange: _,
+                value: a?.id ?? void 0,
+                onSelectionChange: b,
                 onQueryChange: v,
                 placeholder: r,
                 clearable: !0,
@@ -109,169 +110,191 @@ let S = i.memo(function (e) {
             })
         );
     });
-function E(e) {
-    let { onClose: t, transitionState: n, onSubmitted: o, detectedActivity: g, defaultStep: p = "issue_selection" } = e,
-        [h, _] = i.useState(p),
-        [v, b] = i.useState(null),
-        [S, N] = i.useState(""),
-        [E, I] = i.useState(null),
-        [M, T] = i.useState(""),
-        L = i.useMemo(() => (0, x.generateViewId)(), []),
-        D = (0, r.bG)([A.A], () => A.A.games),
-        O = null != g,
-        R = (0, r.bG)([m.A], () => (g?.application_id != null ? m.A.getApplication(g.application_id) : null));
-    function Z() {
+function S(e) {
+    let { onClose: t, transitionState: a, onSubmitted: g, detected: p, defaultStep: f = "issue_selection" } = e,
+        [A, M] = i.useState(f),
+        [E, N] = i.useState(null),
+        [S, y] = i.useState(""),
+        [T, D] = i.useState(null),
+        [L, O] = i.useState(""),
+        R = i.useMemo(() => (0, x.generateViewId)(), []),
+        Z = (0, b.J$)(S).results ?? G,
+        F = i.useMemo(
+            () =>
+                Z.map((e) => ({
+                    id: e.id,
+                    value: e.id,
+                    label: e.name,
+                    leading: (0, n.jsx)(_.A, { game: e, iconClassName: w.Gt }),
+                })),
+            [Z],
+        ),
+        Q = i.useCallback(
+            (e) => {
+                let t = Z.find((t) => {
+                    let { id: a } = t;
+                    return a === e;
+                });
+                D(t ?? null), y(t?.name ?? "");
+            },
+            [Z],
+        ),
+        J = i.useCallback(
+            (e) => {
+                let t = e.target.value;
+                y(t), null != T && t !== T.name && D(null);
+            },
+            [T],
+        ),
+        K = i.useCallback((e) => e, []),
+        P = (function (e) {
+            let t = e?.applicationId,
+                a = (0, r.bG)([m.A], () => m.A.getApplication(t), [t]),
+                { data: n } = (0, v.I)(e?.gameId);
+            return null == e
+                ? null
+                : {
+                      name: ("" === e.name ? void 0 : e.name) ?? n?.name ?? a?.name ?? "",
+                      icon: n ?? a,
+                      analyticsId: e.applicationId ?? e.gameId ?? "",
+                  };
+        })(p),
+        V = null != P;
+    function Y() {
         (0, x.trackGameProfileFeedback)({
-            viewId: L,
-            applicationId: g?.application_id ?? "",
+            viewId: R,
+            applicationId: P?.analyticsId ?? "",
             suggestedGameName: "" !== S.trim() ? S.trim() : void 0,
-            suggestedGameApplicationId: E?.id ?? null,
-            feedback: "" !== M.trim() ? M.trim() : void 0,
+            suggestedGameApplicationId: T?.id ?? null,
+            feedback: "" !== L.trim() ? L.trim() : void 0,
             submitted: !0,
         }),
-            o?.(E ?? null),
+            g?.(T ?? null),
             t();
     }
-    let F = (function () {
-        switch (h) {
+    let z = (function () {
+        switch (A) {
             case "issue_selection":
-                return { title: w.intl.string(w.t["6tnjbD"]), actions: [] };
+                return { title: I.intl.string(I.t["6tnjbD"]), actions: [] };
             case "game_search":
                 return {
-                    title: O ? w.intl.string(w.t.TZgkxY) : w.intl.string(w.t["+ie+wX"]),
+                    title: V ? I.intl.string(I.t.TZgkxY) : I.intl.string(I.t["+ie+wX"]),
                     actions: [
-                        { text: w.intl.string(w.t.geKm7t), onClick: Z, variant: "primary", disabled: "" === S.trim() },
+                        { text: I.intl.string(I.t.geKm7t), onClick: Y, variant: "primary", disabled: "" === S.trim() },
                     ],
                 };
             case "other_feedback":
                 return {
-                    title: w.intl.string(w.t.tdDpJj),
+                    title: I.intl.string(I.t.tdDpJj),
                     actions: [
-                        { text: w.intl.string(w.t.geKm7t), onClick: Z, variant: "primary", disabled: "" === M.trim() },
+                        { text: I.intl.string(I.t.geKm7t), onClick: Y, variant: "primary", disabled: "" === L.trim() },
                     ],
                 };
             default:
                 return { title: "", actions: [] };
         }
     })();
-    return (0, a.jsx)(s.Modal, {
-        ...F,
-        transitionState: n,
+    return (0, n.jsx)(s.Modal, {
+        ...z,
+        transitionState: a,
         onClose: t,
         trackingProps: { impression: { impressionName: l.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
         children: (function () {
-            switch (h) {
+            switch (A) {
                 case "issue_selection":
-                    return (0, a.jsxs)("div", {
-                        className: G.Qs,
+                    return (0, n.jsxs)("div", {
+                        className: w.Qs,
                         children: [
-                            (0, a.jsx)(c.E, {
+                            (0, n.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: w.intl.string(w.t.IQHicr),
+                                children: I.intl.string(I.t.IQHicr),
                             }),
-                            (0, a.jsx)("div", {
-                                className: G.R$,
-                                children: (0, a.jsx)(d.z, {
-                                    value: v ?? void 0,
+                            (0, n.jsx)("div", {
+                                className: w.R$,
+                                children: (0, n.jsx)(d.z, {
+                                    value: E ?? void 0,
                                     onChange: (e) => {
-                                        b(e),
-                                            f.default.track(C.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
+                                        N(e),
+                                            C.default.track(k.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
                                                 selected_option: e,
-                                                application_id: g?.application_id ?? null,
+                                                application_id: P?.analyticsId ?? null,
                                             }),
                                             setTimeout(() => {
                                                 "game_not_detected" === e || "wrong_game_shown" === e
-                                                    ? _("game_search")
-                                                    : _("other_feedback");
+                                                    ? M("game_search")
+                                                    : M("other_feedback");
                                             }, 100);
                                     },
-                                    options: O
+                                    options: V
                                         ? [
-                                              { name: w.intl.string(w.t.TZgkxY), value: "wrong_game_shown" },
-                                              { name: w.intl.string(w.t.tdDpJj), value: "other_feedback" },
+                                              { name: I.intl.string(I.t.TZgkxY), value: "wrong_game_shown" },
+                                              { name: I.intl.string(I.t.tdDpJj), value: "other_feedback" },
                                           ]
                                         : [
-                                              { name: w.intl.string(w.t["+ie+wX"]), value: "game_not_detected" },
-                                              { name: w.intl.string(w.t.tdDpJj), value: "other_feedback" },
+                                              { name: I.intl.string(I.t["+ie+wX"]), value: "game_not_detected" },
+                                              { name: I.intl.string(I.t.tdDpJj), value: "other_feedback" },
                                           ],
                                 }),
                             }),
                         ],
                     });
                 case "game_search":
-                    let e;
-                    return (0, a.jsxs)("div", {
-                        className: G.Qs,
+                    return (0, n.jsxs)("div", {
+                        className: w.Qs,
                         children: [
-                            (0, a.jsx)(c.E, {
+                            (0, n.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: O ? w.intl.string(w.t["79o/iq"]) : w.intl.string(w.t["r/2pZy"]),
+                                children: V ? I.intl.string(I.t["79o/iq"]) : I.intl.string(I.t["r/2pZy"]),
                             }),
-                            O &&
-                                (0, a.jsxs)(a.Fragment, {
+                            V &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, a.jsxs)("div", {
-                                            className: G.Gr,
+                                        (0, n.jsxs)("div", {
+                                            className: w.Gr,
                                             children: [
-                                                null !=
-                                                (e = j.Ay.getApplicationIconURL({
-                                                    id: g.application_id ?? "",
-                                                    icon: R?.icon ?? null,
-                                                }))
-                                                    ? (0, a.jsx)("img", {
-                                                          src: e,
-                                                          alt:
-                                                              null != g.name && "" !== g.name
-                                                                  ? g.name
-                                                                  : (R?.name ?? ""),
-                                                          className: G.q_,
-                                                      })
-                                                    : (0, a.jsx)("div", {
-                                                          className: `${G.q_} ${G.x_}`,
-                                                          children: (0, a.jsx)("div", {
-                                                              style: {
-                                                                  fontSize: "28px",
-                                                                  fontWeight: "bold",
-                                                                  color: "var(--text-muted)",
-                                                                  userSelect: "none",
-                                                              },
-                                                              children: "?",
-                                                          }),
-                                                      }),
-                                                (0, a.jsx)(c.E, {
+                                                (0, n.jsx)(h.A, {
+                                                    game: P?.icon,
+                                                    size: h.M.MEDIUM_LARGE,
+                                                    className: w.q_,
+                                                }),
+                                                (0, n.jsx)(u.E, {
                                                     variant: "text-md/semibold",
                                                     color: "text-strong",
-                                                    children: null != g.name && "" !== g.name ? g.name : R?.name,
+                                                    children: P?.name,
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(k.A, {}),
+                                        (0, n.jsx)(j.A, {}),
                                     ],
                                 }),
-                            (0, a.jsx)(y, {
-                                games: D,
-                                selectedGame: E,
-                                onGameSelected: I,
-                                onGameSearchQueryChange: N,
-                                placeholder: O ? w.intl.string(w.t["/SGi7v"]) : w.intl.string(w.t.ss9Zwa),
+                            (0, n.jsx)(o.Z, {
+                                options: F,
+                                selectionMode: "single",
+                                value: T?.id,
+                                onSelectionChange: Q,
+                                onQueryChange: J,
+                                customMatchSorter: K,
+                                clearable: !0,
+                                maxOptionsVisible: 5,
+                                placeholder: V ? I.intl.string(I.t["/SGi7v"]) : I.intl.string(I.t.ss9Zwa),
                             }),
                         ],
                     });
                 case "other_feedback":
-                    return (0, a.jsxs)("div", {
-                        className: G.Qs,
+                    return (0, n.jsxs)("div", {
+                        className: w.Qs,
                         children: [
-                            (0, a.jsx)(c.E, {
+                            (0, n.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: w.intl.string(w.t.IblYEw),
+                                children: I.intl.string(I.t.IblYEw),
                             }),
-                            (0, a.jsx)(u.f, {
-                                value: M,
-                                onChange: T,
-                                placeholder: w.intl.string(w.t.aiPKV4),
+                            (0, n.jsx)(c.f, {
+                                value: L,
+                                onChange: O,
+                                placeholder: I.intl.string(I.t.aiPKV4),
                                 maxLength: 300,
                                 rows: 4,
                             }),

@@ -2073,12 +2073,7 @@ function iB(e) {
                                                   return (i) =>
                                                       (0, E.jsx)(t, {
                                                           ...i,
-                                                          detectedActivity: {
-                                                              name: o.name ?? "",
-                                                              application_id: e?.id ?? o.id ?? void 0,
-                                                              type: U.$pd.PLAYING,
-                                                          },
-                                                          onSubmitted: () => {},
+                                                          detected: { name: o.name ?? "", gameId: e?.id ?? o.id },
                                                       });
                                               });
                                       },
@@ -8852,7 +8847,7 @@ let gW = function (e) {
 var gZ = i(338548),
     gq = i(776096),
     gQ = i(178368),
-    gJ = i(461376),
+    gJ = i(560952),
     g$ = i(866323),
     g0 = i(530005),
     g1 = i(443865),
