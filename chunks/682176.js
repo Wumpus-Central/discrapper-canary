@@ -1,126 +1,125 @@
-"use strict";
-n.d(t, { A: () => L }), n(938796), n(321073);
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(665260),
-    o = n(17928),
-    d = n(876230),
-    c = n(26137),
-    u = n(534890),
-    _ = n(268218),
-    E = n(597098),
-    A = n(614269),
-    h = n(829097),
-    I = n(734057),
-    f = n(102174),
-    p = n(664708),
-    T = n(349897),
-    m = n(215655),
-    g = n(696016),
-    S = n(652215),
-    N = n(16590),
-    C = n(375708),
-    O = n(237610);
-let R = (0, _.Fe)({
-    createPromise: () => Promise.resolve().then(n.bind(n, 664111)),
+i.d(t, { A: () => R }), i(938796), i(321073);
+var a = i(477900),
+    l = i(582128),
+    n = i(503698),
+    o = i.n(n),
+    s = i(665260),
+    r = i(17928),
+    c = i(876230),
+    d = i(26137),
+    h = i(534890),
+    p = i(268218),
+    u = i(597098),
+    m = i(614269),
+    v = i(829097),
+    g = i(734057),
+    C = i(102174),
+    A = i(664708),
+    _ = i(349897),
+    w = i(215655),
+    M = i(696016),
+    k = i(652215),
+    I = i(16590),
+    S = i(375708),
+    b = i(237610);
+let y = (0, p.Fe)({
+    createPromise: () => Promise.resolve().then(i.bind(i, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
-    renderLoader: () => (0, i.jsx)("div", { className: O.Lq }),
+    renderLoader: () => (0, a.jsx)("div", { className: b.Lq }),
 });
-function L(e) {
+function R(e) {
     let {
             attachment: t,
-            posterUrl: n,
-            className: a,
-            autoPlay: _,
-            src: L,
-            fillContainer: y = !1,
-            minWidth: D = 500,
-            maxWidth: v = 1 / 0,
-            maxHeight: b = 1 / 0,
-            channelId: M,
-            messageId: P,
-            showTextContent: U = v >= 250,
-            showParticipants: w = !0,
-            volume: G,
-            autoMute: x,
-            onVolumeChange: k,
-            onMutedChange: F,
-            onClick: V,
-            onContextMenu: B,
-            onPlay: H,
-            allowFullScreen: j = !0,
+            posterUrl: i,
+            className: n,
+            autoPlay: p,
+            src: R,
+            fillContainer: P = !1,
+            minWidth: f = 500,
+            maxWidth: E = 1 / 0,
+            maxHeight: T = 1 / 0,
+            channelId: x,
+            messageId: N,
+            showTextContent: B = E >= 250,
+            showParticipants: V = !0,
+            volume: D,
+            autoMute: F,
+            onVolumeChange: H,
+            onMutedChange: L,
+            onClick: U,
+            onContextMenu: j,
+            onPlay: K,
+            allowFullScreen: G = !0,
         } = e,
-        W = t.width ?? 0,
-        Y = t.height ?? 0,
-        K = (0, o.bG)([I.A], () => I.A.getBasicChannel(M)?.guild_id, [M]),
-        $ = W > 0 && Y > 0 ? W / Y : 16 / 9;
-    ($ > 2 || $ < 1) && ($ = 16 / 9);
-    let z = r.useRef(null);
-    (0, m.A)(t.id, z);
-    let q = Math.min(W > 0 ? W : D, v),
-        Z = q / $;
-    Z > b && (q = (Z = b) * $), q < D && (Z = (q = D) / $);
-    let X = Math.round(Math.min(q, v)),
-        Q = Math.round(Math.min(Z, b)),
-        J = W > 0 && Y > 0 ? Math.min(X / W, Q / Y, 1) : 1,
-        ee = (0, E.AE)({ src: n, width: Math.round(W * J), height: Math.round(Y * J) }),
-        [et, en] = r.useState(!1),
-        [ei, er] = r.useState(!0),
-        [ea, es] = r.useState(!0),
-        [el, eo] = r.useState(0),
-        ed = r.useRef(0),
-        ec = r.useCallback(
+        O = t.width ?? 0,
+        Z = t.height ?? 0,
+        J = (0, r.bG)([g.A], () => g.A.getBasicChannel(x)?.guild_id, [x]),
+        Q = O > 0 && Z > 0 ? O / Z : 16 / 9;
+    (Q > 2 || Q < 1) && (Q = 16 / 9);
+    let W = l.useRef(null);
+    (0, w.A)(t.id, W);
+    let Y = Math.min(O > 0 ? O : f, E),
+        q = Y / Q;
+    q > T && (Y = (q = T) * Q), Y < f && (q = (Y = f) / Q);
+    let X = Math.round(Math.min(Y, E)),
+        z = Math.round(Math.min(q, T)),
+        $ = O > 0 && Z > 0 ? Math.min(X / O, z / Z, 1) : 1,
+        ee = (0, u.AE)({ src: i, width: Math.round(O * $), height: Math.round(Z * $) }),
+        [et, ei] = l.useState(!1),
+        [ea, el] = l.useState(!0),
+        [en, eo] = l.useState(!0),
+        [es, er] = l.useState(0),
+        ec = l.useRef(0),
+        ed = l.useCallback(
             (e, t) => {
-                t !== d.KB.BUFFERING_RECOVERY && e === d.Q6.PLAYING && H?.(t !== d.KB.USER, 1e3 * ed.current, 1e3 * el);
+                t !== c.KB.BUFFERING_RECOVERY && e === c.Q6.PLAYING && K?.(t !== c.KB.USER, 1e3 * ec.current, 1e3 * es);
             },
-            [el, H],
+            [es, K],
         ),
-        eu = r.useCallback((e, t) => {
-            (ed.current = e), Number.isFinite(t) && t > 0 && eo((e) => (e === t ? e : t));
+        eh = l.useCallback((e, t) => {
+            (ec.current = e), Number.isFinite(t) && t > 0 && er((e) => (e === t ? e : t));
         }, []),
-        e_ = r.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
-        eE = (0, l.Lt)(t.flags ?? 0, S.sbO.HAS_TIMELINE_COMMENTS),
-        eA = r.useMemo(() => {
+        ep = l.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
+        eu = (0, s.Lt)(t.flags ?? 0, k.sbO.HAS_TIMELINE_COMMENTS),
+        em = l.useMemo(() => {
             let e = [];
             return (
-                e_ &&
+                ep &&
                     e.push({
                         id: "speaking-indicators",
-                        iconComponent: c.r,
-                        label: C.intl.string(N.default.hFWVZQ),
-                        active: ei,
-                        onClick: () => er((e) => !e),
+                        iconComponent: d.r,
+                        label: S.intl.string(I.default.hFWVZQ),
+                        active: ea,
+                        onClick: () => el((e) => !e),
                         "data-testid": "clips-player-speaking-indicators-toggle",
                     }),
-                eE &&
+                eu &&
                     e.push({
                         id: "timeline-comments",
-                        iconComponent: u.o,
-                        label: C.intl.string(N.default.XfP4bO),
-                        active: ea,
-                        onClick: () => es((e) => !e),
+                        iconComponent: h.o,
+                        label: S.intl.string(I.default.XfP4bO),
+                        active: en,
+                        onClick: () => eo((e) => !e),
                         "data-testid": "clips-player-timeline-comments-toggle",
                     }),
                 e
             );
-        }, [e_, ei, eE, ea]),
-        eh = (0, h._)({ location: g.Mu }).externalAnalyticsEnabled,
-        eI = r.useMemo(
+        }, [ep, ea, eu, en]),
+        ev = (0, v._)({ location: M.Mu }).externalAnalyticsEnabled,
+        eg = l.useMemo(
             () =>
-                eh
+                ev
                     ? {
-                          contentId: L.split("?")[0],
-                          videoStreamType: A.u.isHlsUrl(L) ? "hls" : "mp4",
+                          contentId: R.split("?")[0],
+                          videoStreamType: m.u.isHlsUrl(R) ? "hls" : "mp4",
                           contentType: "clips",
                           title: t.title,
                       }
                     : void 0,
-            [eh, L, t.title],
+            [ev, R, t.title],
         ),
-        ef = r.useMemo(
+        eC = l.useMemo(
             () =>
                 t.clip_participants?.map((e) => {
                     let { id: t } = e;
@@ -128,81 +127,81 @@ function L(e) {
                 }) ?? [],
             [t.clip_participants],
         ),
-        { enableScrubPreview: ep } = f.B.useConfig({ location: "ClipsPlayer" }),
-        eT = r.useCallback(
+        { enableScrubPreview: eA } = C.B.useConfig({ location: "ClipsPlayer" }),
+        e_ = l.useCallback(
             (e) => {
                 let {
-                    playerState: n,
-                    isControlBarExpanded: r,
-                    videoRef: a,
-                    isActive: s,
-                    isVolumeExpanded: l,
-                    controlBarAnimationSpring: o,
+                    playerState: i,
+                    isControlBarExpanded: l,
+                    videoRef: n,
+                    isActive: o,
+                    isVolumeExpanded: s,
+                    controlBarAnimationSpring: r,
                 } = e;
-                return (0, i.jsx)(p.A, {
+                return (0, a.jsx)(A.A, {
                     attachment: t,
-                    controlBarAnimationSpring: o,
-                    guildId: K,
+                    controlBarAnimationSpring: r,
+                    guildId: J,
                     isFullScreen: et,
-                    showParticipants: w,
-                    showTextContent: U,
-                    channelId: M,
-                    messageId: P,
-                    showSpeakingIndicators: ei,
-                    clipUserIds: ef,
-                    durationSeconds: el,
-                    playerState: n,
-                    isControlBarExpanded: r,
-                    videoRef: a,
-                    isActive: s,
-                    isVolumeExpanded: l,
-                    showTimelineComments: ea,
+                    showParticipants: V,
+                    showTextContent: B,
+                    channelId: x,
+                    messageId: N,
+                    showSpeakingIndicators: ea,
+                    clipUserIds: eC,
+                    durationSeconds: es,
+                    playerState: i,
+                    isControlBarExpanded: l,
+                    videoRef: n,
+                    isActive: o,
+                    isVolumeExpanded: s,
+                    showTimelineComments: en,
                 });
             },
-            [t, K, et, w, U, M, P, ei, ef, el, ea],
+            [t, J, et, V, B, x, N, ea, eC, es, en],
         ),
-        em = (0, T.T)(t.clip_events_timeline ?? []);
-    return (0, i.jsx)("div", {
-        className: s()(O.kL, { [O.HA]: y }, a),
+        ew = (0, _.T)(t.clip_events_timeline ?? []);
+    return (0, a.jsx)("div", {
+        className: o()(b.kL, { [b.HA]: P }, n),
         onClick: (e) => e.stopPropagation(),
-        onContextMenu: B,
-        style: y ? void 0 : { width: X, height: Q },
-        children: (0, i.jsx)(R, {
-            src: L,
+        onContextMenu: j,
+        style: P ? void 0 : { width: X, height: z },
+        children: (0, a.jsx)(y, {
+            src: R,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            extraButtons: eA,
+            extraButtons: em,
             poster: ee,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
-            autoplay: _,
+            autoplay: p,
             initialActive: !1,
-            initialVolume: G,
-            initialMuted: x,
-            onVolumeChange: k,
-            onMutedChange: F,
-            onProgressUpdate: eu,
+            initialVolume: D,
+            initialMuted: F,
+            onVolumeChange: H,
+            onMutedChange: L,
+            onProgressUpdate: eh,
             orientation: "landscape",
-            timelineIndicatorConfig: em,
+            timelineIndicatorConfig: ew,
             minWidth: 0,
             minHeight: 0,
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: eT,
+            renderPersistentOverlay: e_,
             parentTransitionState: null,
-            onFullscreenChange: en,
-            onClick: V,
-            onPlayerStateChange: ec,
+            onFullscreenChange: ei,
+            onClick: U,
+            onPlayerStateChange: ed,
             withVideoHalo: !0,
-            objectFit: y ? "cover" : void 0,
-            muxContentMetadata: eI,
-            hideFullScreenBtn: !j,
+            objectFit: P ? "cover" : void 0,
+            muxContentMetadata: eg,
+            hideFullScreenBtn: !G,
             hideSkipButtons: !0,
             compactTimeDisplay: !0,
             autoHideVolumeSlider: !0,
             hidePlaybackSpeedBtn: !0,
-            playerRef: z,
-            scrubPreviewVttUrl: ep ? t.spritesheet_vtt_url : void 0,
-            scrubPreviewImageUrl: ep ? t.spritesheet_image_url : void 0,
+            playerRef: W,
+            scrubPreviewVttUrl: eA ? t.spritesheet_vtt_url : void 0,
+            scrubPreviewImageUrl: eA ? t.spritesheet_image_url : void 0,
         }),
     });
 }

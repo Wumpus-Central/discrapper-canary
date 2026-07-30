@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => E });
-var i = n(477900);
+n.d(t, { A: () => h });
+var a = n(477900);
 n(582128);
-var r = n(231723),
-    a = n(192308),
-    s = n(709055),
-    l = n(568548),
-    o = n(174459),
+var i = n(231723),
+    l = n(192308),
+    r = n(709055),
+    o = n(568548),
+    s = n(174459),
     d = n(211401),
     c = n(500049),
     u = n(60809),
-    _ = n(652215);
-function E(e) {
-    let { context: t, openInPopout: E, analyticsLocation: A = "open-activity-shelf", initialState: h } = e;
-    E && (0, s.A)(_.MLl.CHANNEL_CALL_POPOUT);
-    let I = E ? r.KX : r.SY;
-    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, h, "channel" === t.type ? t.channel.id : void 0);
-    let f = "contextless" !== t.type && (l.Ay.hasUnread(t.channel.id) || l.Ay.getMentionCount(t.channel.id) > 0);
+    A = n(652215);
+function h(e) {
+    let { context: t, openInPopout: h, analyticsLocation: f = "open-activity-shelf", initialState: S } = e;
+    h && (0, r.A)(A.MLl.CHANNEL_CALL_POPOUT);
+    let M = h ? i.KX : i.SY;
+    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, S, "channel" === t.type ? t.channel.id : void 0);
+    let p = "contextless" !== t.type && (o.Ay.hasUnread(t.channel.id) || o.Ay.getMentionCount(t.channel.id) > 0);
     return (
-        o.default.track(_.HAw.VOICE_PANEL_TAB_OPENED, {
+        s.default.track(A.HAw.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: A,
+            location: f,
             source: c.s4.VOICE,
-            is_chat_badged: f,
+            is_chat_badged: p,
         }),
-        (0, a.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("35062"),
+                    n.e("73470"),
                     n.e("47292"),
                     n.e("41295"),
                     n.e("40351"),
@@ -43,13 +42,13 @@ function E(e) {
                     n.e("97270"),
                     n.e("93103"),
                     n.e("34552"),
-                    n.e("32191"),
                     n.e("71210"),
+                    n.e("32191"),
                     n.e("88342"),
                     n.e("71273"),
                     n.e("89421"),
                     n.e("98965"),
-                    n.e("71133"),
+                    n.e("93514"),
                     n.e("37977"),
                     n.e("28662"),
                     n.e("43780"),
@@ -77,9 +76,9 @@ function E(e) {
                     n.e("11584"),
                     n.e("12313"),
                 ]).then(n.bind(n, 126784));
-                return (n) => (0, i.jsx)(e, { context: t, ...n });
+                return (n) => (0, a.jsx)(e, { context: t, ...n });
             },
-            { modalKey: u.gS, contextKey: I },
+            { modalKey: u.gS, contextKey: M },
         )
     );
 }

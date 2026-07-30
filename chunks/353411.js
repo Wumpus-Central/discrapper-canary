@@ -1,85 +1,84 @@
-"use strict";
-n.d(t, { Gq: () => S, J$: () => g, _B: () => m });
-var i = n(582128),
-    r = n(17928),
-    a = n(451988),
-    s = n(475743),
-    l = n(280450),
-    o = n(927813),
-    d = n(427262),
-    c = n(655116),
-    u = n(160768),
-    _ = n(341335),
-    E = n(286617),
-    A = n(533207),
-    h = n(881335),
-    I = n(272984);
-let f = 30 * o.A.Millis.SECOND;
-function p(e) {
-    let { currentUserTrackId: t, syncingWithUser: n, syncingWithParty: r } = e,
-        [l, o] = i.useState(!1),
-        [d] = i.useState(() => new a.Ep()),
-        c = (0, s.A)(t);
-    i.useEffect(() => {
-        l && (t !== c || n || r) && (o(!1), d.stop());
-    }, [t, c, n, r, l, d]);
-    let u = i.useCallback(() => {
-            o(!0), d.start(f, () => o(!1));
+l.d(e, { Gq: () => T, J$: () => S, _B: () => I });
+var a = l(582128),
+    C = l(17928),
+    i = l(451988),
+    s = l(475743),
+    n = l(280450),
+    u = l(927813),
+    d = l(427262),
+    c = l(655116),
+    r = l(160768),
+    A = l(341335),
+    o = l(286617),
+    E = l(533207),
+    _ = l(881335),
+    p = l(272984);
+let N = 30 * u.A.Millis.SECOND;
+function h(t) {
+    let { currentUserTrackId: e, syncingWithUser: l, syncingWithParty: C } = t,
+        [n, u] = a.useState(!1),
+        [d] = a.useState(() => new i.Ep()),
+        c = (0, s.A)(e);
+    a.useEffect(() => {
+        n && (e !== c || l || C) && (u(!1), d.stop());
+    }, [e, c, l, C, n, d]);
+    let r = a.useCallback(() => {
+            u(!0), d.start(N, () => u(!1));
         }, [d]),
-        _ = i.useCallback(() => {
-            o(!1), d.stop();
+        A = a.useCallback(() => {
+            u(!1), d.stop();
         }, [d]);
-    return i.useEffect(() => () => d.stop(), [d]), { loading: l, startLoading: u, clearLoading: _ };
+    return a.useEffect(() => () => d.stop(), [d]), { loading: n, startLoading: r, clearLoading: A };
 }
-function T(e, t) {
-    return (0, r.cf)([c.A, l.default], () => (0, E.A)(c.A, l.default, t, e), [e, t]);
+function f(t, e) {
+    return (0, C.cf)([c.A, n.default], () => (0, o.A)(c.A, n.default, e, t), [t, e]);
 }
-function m(e, t, n) {
-    let r = T(e, t),
-        { notPlayable: a, isCurrentUser: s, playingSameTrack: l } = r,
-        { loading: o, startLoading: d, clearLoading: c } = p(r),
-        E = i.useCallback(() => {
-            d(), (0, h.A)(r, I.Qp.USER_ACTIVITY_PLAY, n).catch(c);
-        }, [r, n, d, c]);
+function I(t, e, l) {
+    let C = f(t, e),
+        { notPlayable: i, isCurrentUser: s, playingSameTrack: n } = C,
+        { loading: u, startLoading: d, clearLoading: c } = h(C),
+        o = a.useCallback(() => {
+            d(), (0, _.A)(C, p.Qp.USER_ACTIVITY_PLAY, l).catch(c);
+        }, [C, l, d, c]);
     return {
-        label: (0, u.A)(r, I.Qp.USER_ACTIVITY_PLAY),
-        tooltip: (0, _.A)(r, I.Qp.USER_ACTIVITY_PLAY),
-        disabled: !o && (s || a || l),
-        loading: o,
-        onClick: E,
-        spotifyData: r,
+        label: (0, r.A)(C, p.Qp.USER_ACTIVITY_PLAY),
+        tooltip: (0, A.A)(C, p.Qp.USER_ACTIVITY_PLAY),
+        disabled: !u && (s || i || n),
+        loading: u,
+        onClick: o,
+        spotifyData: C,
     };
 }
-function g(e, t, n, r) {
-    let a = r ?? d.Ay.getName(t),
-        s = T(e, t),
-        { notPlayable: l, syncingWithUser: o, syncingWithParty: c, isCurrentUser: E } = s,
-        { loading: h, startLoading: f, clearLoading: m } = p(s),
-        g = i.useCallback(() => {
-            f(), (0, A.A)(s, I.Qp.USER_ACTIVITY_SYNC, n).catch(m);
-        }, [s, n, f, m]);
+function S(t, e, l, C) {
+    let i = C ?? d.Ay.getName(e),
+        s = f(t, e),
+        { notPlayable: n, syncingWithUser: u, syncingWithParty: c, isCurrentUser: o } = s,
+        { loading: _, startLoading: N, clearLoading: I } = h(s),
+        S = a.useCallback(() => {
+            N(), (0, E.A)(s, p.Qp.USER_ACTIVITY_SYNC, l).catch(I);
+        }, [s, l, N, I]);
     return {
-        label: (0, u.A)(s, I.Qp.USER_ACTIVITY_SYNC),
-        tooltip: (0, _.A)(s, I.Qp.USER_ACTIVITY_SYNC, a),
-        disabled: !h && (l || E || o || c),
-        loading: h,
-        onClick: g,
+        label: (0, r.A)(s, p.Qp.USER_ACTIVITY_SYNC),
+        tooltip: (0, A.A)(s, p.Qp.USER_ACTIVITY_SYNC, i),
+        disabled: !_ && (n || o || u || c),
+        loading: _,
+        onClick: S,
         spotifyData: s,
     };
 }
-function S(e, t, n) {
-    let r = T(e, t),
-        { notPlayable: a, syncingWithUser: s, syncingWithParty: l, isCurrentUser: o } = r,
-        { loading: d, startLoading: c, clearLoading: E } = p(r),
-        h = i.useCallback(() => {
-            c(), (0, A.A)(r, I.Qp.EMBED_SYNC, n).catch(E);
-        }, [r, n, c, E]);
+function T(t, e, l) {
+    let C = f(t, e),
+        { notPlayable: i, syncingWithUser: s, syncingWithParty: n, isCurrentUser: u } = C,
+        { loading: d, startLoading: c, clearLoading: o } = h(C),
+        _ = a.useCallback(() => {
+            c(), (0, E.A)(C, p.Qp.EMBED_SYNC, l).catch(o);
+        }, [C, l, c, o]);
     return {
-        label: (0, u.A)(r, I.Qp.EMBED_SYNC),
-        tooltip: (0, _.A)(r, I.Qp.EMBED_SYNC),
-        disabled: !d && (o || s || l || a),
+        label: (0, r.A)(C, p.Qp.EMBED_SYNC),
+        tooltip: (0, A.A)(C, p.Qp.EMBED_SYNC),
+        disabled: !d && (u || s || n || i),
         loading: d,
-        onClick: h,
-        spotifyData: r,
+        onClick: _,
+        spotifyData: C,
     };
 }

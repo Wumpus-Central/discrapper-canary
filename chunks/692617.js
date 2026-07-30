@@ -1,107 +1,106 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(435558),
-    l = n.n(s),
-    o = n(866665),
-    d = n(862482),
-    c = n(834730),
-    u = n(573435),
-    _ = n(548118),
-    E = n(795502);
+i.d(s, { A: () => m });
+var n = i(477900);
+i(582128);
+var t = i(503698),
+    l = i.n(t),
+    c = i(435558),
+    a = i.n(c),
+    o = i(834730),
+    r = i(866665),
+    h = i(862482),
+    u = i(573435),
+    d = i(548118),
+    x = i(795502);
 function A(e) {
     switch (e) {
-        case _.Ay.Sizes.SMOL:
-            return E.nc;
-        case _.Ay.Sizes.MINI:
-            return E.qV;
-        case _.Ay.Sizes.SMALLER:
+        case d.Ay.Sizes.SMOL:
+            return x.nc;
+        case d.Ay.Sizes.MINI:
+            return x.qV;
+        case d.Ay.Sizes.SMALLER:
         default:
-            return E.q1;
+            return x.q1;
     }
 }
-function h(e) {
-    let { size: t, notched: n, width: r, children: a } = e,
-        s = _.iu[t];
-    return (0, i.jsx)(u.Ay, {
-        mask: n ? u.l8[s] : u.Ay.Masks.SQUIRCLE,
-        width: r ?? s,
-        height: s,
-        children: (0, i.jsx)("div", { className: E.A8, children: a }),
+function S(e) {
+    let { size: s, notched: i, width: t, children: l } = e,
+        c = d.iu[s];
+    return (0, n.jsx)(u.Ay, {
+        mask: i ? u.l8[c] : u.Ay.Masks.SQUIRCLE,
+        width: t ?? c,
+        height: c,
+        children: (0, n.jsx)("div", { className: x.A8, children: l }),
     });
 }
-function I(e) {
-    let t,
-        { count: n, size: r, notched: s, tooltip: l, onFocus: u, onClick: A } = e,
-        I = (function (e) {
+function j(e) {
+    let s,
+        { count: i, size: t, notched: c, tooltip: a, onFocus: u, onClick: A } = e,
+        j = (function (e) {
             switch (e) {
-                case _.Ay.Sizes.SMOL:
-                case _.Ay.Sizes.MINI:
+                case d.Ay.Sizes.SMOL:
+                case d.Ay.Sizes.MINI:
                     return "text-xxs/semibold";
-                case _.Ay.Sizes.SMALLER:
+                case d.Ay.Sizes.SMALLER:
                 default:
                     return "text-xs/medium";
             }
-        })(r),
-        f = n > 99 ? ">99" : `+${n}`,
-        p = ((t = _.iu[r]), f.length <= 2 ? t : t + 8),
-        T = (0, i.jsx)(d.$n, {
-            className: a()(E.ju, E.lv),
+        })(t),
+        m = i > 99 ? ">99" : `+${i}`,
+        z = ((s = d.iu[t]), m.length <= 2 ? s : s + 8),
+        k = (0, n.jsx)(h.$n, {
+            className: l()(x.ju, x.lv),
             onFocus: u,
             onClick: (e) => A?.(e),
-            look: d.$n.Looks.BLANK,
-            size: d.$n.Sizes.NONE,
-            children: (0, i.jsx)(c.E, { variant: I, children: f }),
+            look: h.$n.Looks.BLANK,
+            size: h.$n.Sizes.NONE,
+            children: (0, n.jsx)(o.E, { variant: j, children: m }),
         });
-    return (0, i.jsx)(h, {
-        size: r,
-        notched: s,
-        width: p,
-        children: null != l ? (0, i.jsx)(o.m, { text: l, position: "top", asContainer: !0, children: T }) : T,
+    return (0, n.jsx)(S, {
+        size: t,
+        notched: c,
+        width: z,
+        children: null != a ? (0, n.jsx)(r.m, { text: a, position: "top", asContainer: !0, children: k }) : k,
     });
 }
-function f(e) {
-    let t,
-        n,
-        r,
-        s,
+function m(e) {
+    let s,
+        i,
+        t,
+        c,
         {
             className: o,
-            maxGuilds: d,
-            guilds: c,
+            maxGuilds: r,
+            guilds: h,
             onFocus: u,
-            onClick: f,
-            size: p = _.Ay.Sizes.SMALLER,
-            hideOverflowCount: T = !1,
-            disableGuildNameTooltip: m = !1,
-            overflowTooltip: g,
+            onClick: m,
+            size: z = d.Ay.Sizes.SMALLER,
+            hideOverflowCount: k = !1,
+            disableGuildNameTooltip: p = !1,
+            overflowTooltip: L,
         } = e;
-    return c.length <= 0
+    return h.length <= 0
         ? null
-        : (0, i.jsx)("ul", {
-              className: a()(o, E.HD),
+        : (0, n.jsx)("ul", {
+              className: l()(o, x.HD),
               children:
-                  ((n = (t = c.length > d && !T) ? c.length - d + 1 : 0),
-                  (r = t ? Math.min(c.length, d) - 1 : Math.min(c.length, d)),
-                  (s = l()(c)
-                      .take(r)
-                      .map((e, n) =>
-                          (0, i.jsx)(
+                  ((i = (s = h.length > r && !k) ? h.length - r + 1 : 0),
+                  (t = s ? Math.min(h.length, r) - 1 : Math.min(h.length, r)),
+                  (c = a()(h)
+                      .take(t)
+                      .map((e, i) =>
+                          (0, n.jsx)(
                               "li",
                               {
-                                  className: A(p),
-                                  children: (0, i.jsx)(h, {
-                                      size: p,
-                                      notched: t || n !== r - 1,
-                                      children: (0, i.jsx)(_.Ay, {
+                                  className: A(z),
+                                  children: (0, n.jsx)(S, {
+                                      size: z,
+                                      notched: s || i !== t - 1,
+                                      children: (0, n.jsx)(d.Ay, {
                                           guild: e,
                                           active: !0,
-                                          onClick: f,
-                                          size: p,
-                                          showTooltip: !m,
+                                          onClick: m,
+                                          size: z,
+                                          showTooltip: !p,
                                       }),
                                   }),
                               },
@@ -109,25 +108,25 @@ function f(e) {
                           ),
                       )
                       .value()),
-                  t
+                  s
                       ? [
-                            ...s,
-                            (0, i.jsx)(
+                            ...c,
+                            (0, n.jsx)(
                                 "li",
                                 {
-                                    className: A(p),
-                                    children: (0, i.jsx)(I, {
-                                        count: n,
-                                        size: p,
+                                    className: A(z),
+                                    children: (0, n.jsx)(j, {
+                                        count: i,
+                                        size: z,
                                         notched: !1,
-                                        tooltip: g,
+                                        tooltip: L,
                                         onFocus: u,
-                                        onClick: f,
+                                        onClick: m,
                                     }),
                                 },
                                 "overflow",
                             ),
                         ]
-                      : s),
+                      : c),
           });
 }
