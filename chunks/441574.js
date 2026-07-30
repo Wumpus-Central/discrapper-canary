@@ -222,6 +222,7 @@ var i,
         (i[(i.SPAM_SMITE = 3030)] = "SPAM_SMITE"),
         (i[(i.SPAM_CEILING_SMITE = 3120)] = "SPAM_CEILING_SMITE"),
         (i[(i.VOLUMETRIC_ABUSE_SMITE = 3130)] = "VOLUMETRIC_ABUSE_SMITE"),
+        (i[(i.MISLEADING_ABUSE_REPORTS_SMITE = 3140)] = "MISLEADING_ABUSE_REPORTS_SMITE"),
         (i[(i.CHARGEBACK_HIGH_RISK_SMITE = 3040)] = "CHARGEBACK_HIGH_RISK_SMITE"),
         (i[(i.CHARGEBACK_LOW_RISK_SMITE = 3050)] = "CHARGEBACK_LOW_RISK_SMITE"),
         (i[(i.NON_CONSENSUAL_SEXUALLY_EXPLICIT_CONTENT_GUILD_SMITE = 3065)] =
@@ -826,7 +827,7 @@ var i,
         (r[(r.GENERIC_MANUAL_SAFETY_ACTION = 13)] = "GENERIC_MANUAL_SAFETY_ACTION"),
         (r[(r.BANNED_USER_BACKFILL = 14)] = "BANNED_USER_BACKFILL"),
         r),
-    y =
+    D =
         (((a = {})[(a.ANNOTATION_UNSPECIFIED = 0)] = "ANNOTATION_UNSPECIFIED"),
         (a[(a.SPAMMER = 1)] = "SPAMMER"),
         (a[(a.SELF_DELETED = 2)] = "SELF_DELETED"),
@@ -836,7 +837,7 @@ var i,
         (a[(a.INACTIVITY_DELETED = 6)] = "INACTIVITY_DELETED"),
         (a[(a.GENERIC_DELETED = 7)] = "GENERIC_DELETED"),
         a);
-class D extends N.G {
+class y extends N.G {
     constructor() {
         super("discord_protos.safety_common.v1.NormalState", []);
     }
@@ -856,7 +857,7 @@ class D extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let v = new D();
+let v = new y();
 class b extends N.G {
     constructor() {
         super("discord_protos.safety_common.v1.RestrictedState", [
@@ -1068,7 +1069,7 @@ class F extends N.G {
                 name: "annotations",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", y],
+                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", D],
             },
             { no: 3, name: "last_mutation_id", kind: "message", T: () => C.ol },
         ]);
@@ -2134,8 +2135,8 @@ class eL extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ey = new eL();
-class eD extends N.G {
+let eD = new eL();
+class ey extends N.G {
     constructor() {
         super("discord_protos.users.v1.AnonymizationInfo", [
             {
@@ -2184,7 +2185,7 @@ class eD extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ev = new eD();
+let ev = new ey();
 class eb extends N.G {
     constructor() {
         super("discord_protos.users.v1.UserData", [
@@ -2202,8 +2203,8 @@ class eb extends N.G {
             { no: 12, name: "restricted_schedule", kind: "message", T: () => ep },
             { no: 13, name: "age_assurance_data", kind: "message", T: () => eP },
             { no: 14, name: "perks", kind: "message", T: () => e2 },
-            { no: 15, name: "badges", kind: "message", T: () => ey },
-            { no: 16, name: "country_data", kind: "message", T: () => e6 },
+            { no: 15, name: "badges", kind: "message", T: () => eD },
+            { no: 16, name: "country_data", kind: "message", T: () => e4 },
             { no: 17, name: "is_pending_required_action", kind: "scalar", T: 8 },
             { no: 18, name: "anonymization_info", kind: "message", T: () => ev },
         ]);
@@ -2265,10 +2266,10 @@ class eb extends N.G {
                     r.perks = e2.internalBinaryRead(e, e.uint32(), n, r.perks);
                     break;
                 case 15:
-                    r.badges = ey.internalBinaryRead(e, e.uint32(), n, r.badges);
+                    r.badges = eD.internalBinaryRead(e, e.uint32(), n, r.badges);
                     break;
                 case 16:
-                    r.countryData = e6.internalBinaryRead(e, e.uint32(), n, r.countryData);
+                    r.countryData = e4.internalBinaryRead(e, e.uint32(), n, r.countryData);
                     break;
                 case 17:
                     r.isPendingRequiredAction = e.bool();
@@ -2383,8 +2384,8 @@ class eb extends N.G {
             e.ageAssuranceData &&
                 eP.internalBinaryWrite(e.ageAssuranceData, t.tag(13, m.O0.LengthDelimited).fork(), n).join(),
             e.perks && e2.internalBinaryWrite(e.perks, t.tag(14, m.O0.LengthDelimited).fork(), n).join(),
-            e.badges && ey.internalBinaryWrite(e.badges, t.tag(15, m.O0.LengthDelimited).fork(), n).join(),
-            e.countryData && e6.internalBinaryWrite(e.countryData, t.tag(16, m.O0.LengthDelimited).fork(), n).join(),
+            e.badges && eD.internalBinaryWrite(e.badges, t.tag(15, m.O0.LengthDelimited).fork(), n).join(),
+            e.countryData && e4.internalBinaryWrite(e.countryData, t.tag(16, m.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isPendingRequiredAction && t.tag(17, m.O0.Varint).bool(e.isPendingRequiredAction),
             e.anonymizationInfo &&
                 ev.internalBinaryWrite(e.anonymizationInfo, t.tag(18, m.O0.LengthDelimited).fork(), n).join();
@@ -3191,4 +3192,4 @@ class e3 extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e6 = new e3();
+let e4 = new e3();
