@@ -202,10 +202,6 @@
     width: 100%
 }
 
-.voiceAvatar_f910d0.ringingOutgoing_f910d0 {
-    opacity: .3
-}
-
 .border_f910d0 {
     border-radius: 50%;
     inset: 0;
@@ -242,6 +238,28 @@
 .callAvatarMaskContainer_f910d0 {
     height: 100%;
     position: relative
+}
+
+.avatarDecorationContainer_f910d0 {
+    contain: paint;
+    inset-inline-start: var(--custom-avatar-avatar-decoration-border-position);
+    pointer-events: none;
+    position: absolute;
+    top: var(--custom-avatar-avatar-decoration-border-position)
+}
+
+.avatarDecorationImage_f910d0 {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+    width: 100%
+}
+
+.avatarDecorationImage_f910d0.ringingOutgoing_f910d0,
+.voiceAvatar_f910d0.ringingOutgoing_f910d0 {
+    opacity: .3
 }
 
 .content_ced382 {
