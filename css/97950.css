@@ -185,6 +185,7 @@ html:not(.keyboard-mode) .container__3d96b {
 }
 
 .seat__80369 {
+    border-radius: var(--radius-round);
     cursor: pointer;
     position: absolute
 }
@@ -211,5 +212,5 @@ html:not(.keyboard-mode) .container__3d96b {
 .seat__80369:focus-visible .graphic__80369,
 .seat__80369:hover .graphic__80369 {
     border: 2px solid #fff;
-    border-radius: 50%
+    border-radius: var(--radius-round)
 }

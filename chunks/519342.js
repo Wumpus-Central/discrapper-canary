@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(461376),
+    r = n(560952),
     o = n(821578),
     c = n(17928),
     d = n(717421),
@@ -24,8 +24,8 @@ var i = n(477900),
     I = n(996752),
     b = n(610274),
     T = n(655413),
-    _ = n(884863),
-    R = n(971954),
+    R = n(884863),
+    _ = n(971954),
     S = n(662731),
     P = n(375708),
     L = n(820447);
@@ -49,7 +49,7 @@ function w(e) {
         z = (0, c.bG)([C.A], () => C.A.isFocused()),
         W = (0, y.tx)(B, a, U),
         Y = (0, c.bG)([E.A], () => E.A.getRoom(a)?.background ?? o.I.DEFAULT),
-        { seats: K } = R.iX[Y],
+        { seats: K } = _.iX[Y],
         X = K.find((e) => e.position.x === N && e.position.y === I),
         Z = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
         $ = l.useCallback(() => {
@@ -128,95 +128,110 @@ function w(e) {
             role: "listitem",
             className: L.f1,
             style: et,
-            children: (0, i.jsx)(u.D, { "aria-label": J, onMouseEnter: Q, onClick: $, onContextMenu: q, children: ee }),
+            children: (0, i.jsx)(u.D, {
+                "aria-label": J,
+                className: L.KI,
+                onMouseEnter: Q,
+                onClick: $,
+                onContextMenu: q,
+                children: ee,
+            }),
         });
     let en = b.x.find((e) => e.id === w),
         ei = en?.icon,
-        el = (0, i.jsxs)("div", {
-            className: L.R3,
-            children: [
-                ee,
-                null != en &&
-                    null != ei &&
-                    (0, i.jsx)("div", {
-                        className: s()(L.qS, L.Od),
-                        children: (0, i.jsx)(ei, { size: "xxs", color: "currentColor" }),
-                    }),
-                k &&
-                    (0, i.jsx)("div", {
-                        className: s()(L.qS, L.Gk),
-                        children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
-                    }),
-            ],
-        });
-    return (0, i.jsx)(r.animated.div, {
-        role: "listitem",
-        className: L.f1,
-        style: et,
-        children: k
-            ? (0, i.jsxs)(_.T, {
-                  isOpen: V,
-                  onOpenChange: G,
-                  children: [
-                      (0, i.jsx)(_.T.Trigger, {
-                          children: (e) => {
-                              let { ref: t, onClick: n, ...l } = e;
-                              return (0, i.jsx)(T.A, {
-                                  name: W,
-                                  status: en,
-                                  shouldShow: !V,
-                                  children: (0, i.jsx)(u.D, {
-                                      ...l,
-                                      "aria-label": J,
-                                      className: s()(L.hZ, { [L.Zu]: V }),
-                                      innerRef: (e) => {
-                                          t.current = e;
-                                      },
-                                      onMouseEnter: Q,
-                                      onClick: () => {
-                                          n(), $();
-                                      },
-                                      onContextMenu: q,
-                                      children: el,
-                                  }),
-                              });
-                          },
-                      }),
-                      (0, i.jsx)(_.T.Popup, {
-                          "aria-label": P.intl.string(S.default.LTAf2V),
-                          children: b.x.map((e) => {
-                              let t = e.icon;
-                              return (0, i.jsx)(
-                                  _.T.Item,
-                                  {
-                                      text: P.intl.string(e.label),
-                                      icon: t,
-                                      selected: w === e.id,
-                                      onClick: () => {
-                                          let t = w === e.id;
-                                          (0, j.AQ)(B, a, {
-                                              user_status_id: t ? 0 : e.id,
-                                              user_status_text: t ? "" : P.intl.string(e.label),
-                                          });
-                                      },
+        el = (0, i.jsx)("div", { className: L.R3, children: ee });
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(r.animated.div, {
+                role: "listitem",
+                className: L.f1,
+                style: et,
+                children: k
+                    ? (0, i.jsxs)(R.T, {
+                          isOpen: V,
+                          onOpenChange: G,
+                          children: [
+                              (0, i.jsx)(R.T.Trigger, {
+                                  children: (e) => {
+                                      let { ref: t, onClick: n, ...l } = e;
+                                      return (0, i.jsx)(T.A, {
+                                          name: W,
+                                          status: en,
+                                          shouldShow: !V,
+                                          children: (0, i.jsx)(u.D, {
+                                              ...l,
+                                              "aria-label": J,
+                                              className: s()(L.KI, L.hZ, { [L.Zu]: V }),
+                                              innerRef: (e) => {
+                                                  t.current = e;
+                                              },
+                                              onMouseEnter: Q,
+                                              onClick: () => {
+                                                  n(), $();
+                                              },
+                                              onContextMenu: q,
+                                              children: el,
+                                          }),
+                                      });
                                   },
-                                  e.id,
-                              );
+                              }),
+                              (0, i.jsx)(R.T.Popup, {
+                                  "aria-label": P.intl.string(S.default.LTAf2V),
+                                  children: b.x.map((e) => {
+                                      let t = e.icon;
+                                      return (0, i.jsx)(
+                                          R.T.Item,
+                                          {
+                                              text: P.intl.string(e.label),
+                                              icon: t,
+                                              selected: w === e.id,
+                                              onClick: () => {
+                                                  let t = w === e.id;
+                                                  (0, j.AQ)(B, a, {
+                                                      user_status_id: t ? 0 : e.id,
+                                                      user_status_text: t ? "" : P.intl.string(e.label),
+                                                  });
+                                              },
+                                          },
+                                          e.id,
+                                      );
+                                  }),
+                              }),
+                          ],
+                      })
+                    : (0, i.jsx)(T.A, {
+                          name: W,
+                          status: en,
+                          children: (0, i.jsx)(u.D, {
+                              "aria-label": J,
+                              className: L.KI,
+                              onMouseEnter: Q,
+                              onClick: $,
+                              onContextMenu: q,
+                              children: el,
                           }),
                       }),
-                  ],
-              })
-            : (0, i.jsx)(T.A, {
-                  name: W,
-                  status: en,
-                  children: (0, i.jsx)(u.D, {
-                      "aria-label": J,
-                      onMouseEnter: Q,
-                      onClick: $,
-                      onContextMenu: q,
-                      children: el,
-                  }),
-              }),
+            }),
+            (k || (null != en && null != ei)) &&
+                (0, i.jsxs)(r.animated.div, {
+                    className: s()(L.v7, { [L.Zu]: V }),
+                    style: { ...et, width: O, height: O },
+                    "aria-hidden": !0,
+                    children: [
+                        null != en &&
+                            null != ei &&
+                            (0, i.jsx)("div", {
+                                className: s()(L.qS, L.Od),
+                                children: (0, i.jsx)(ei, { size: "xxs", color: "currentColor" }),
+                            }),
+                        k &&
+                            (0, i.jsx)("div", {
+                                className: s()(L.qS, L.Gk),
+                                children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
+                            }),
+                    ],
+                }),
+        ],
     });
 }
 function O(e) {

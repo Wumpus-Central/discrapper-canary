@@ -281,6 +281,10 @@
     position: relative
 }
 
+.avatarButton__38ccf {
+    border-radius: var(--radius-round)
+}
+
 .trigger__38ccf {
     cursor: pointer
 }
@@ -320,9 +324,15 @@
     transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), opacity .18s cubic-bezier(.34, 1.56, .64, 1)
 }
 
-.trigger__38ccf.isStatusMenuOpen__38ccf .editBadge__38ccf,
-.trigger__38ccf:focus-visible .editBadge__38ccf,
-.trigger__38ccf:hover .editBadge__38ccf {
+.badgeLayer__38ccf {
+    pointer-events: none;
+    position: absolute;
+    z-index: 2
+}
+
+.badgeLayer__38ccf.isStatusMenuOpen__38ccf .editBadge__38ccf,
+.userContainer__38ccf:hover+.badgeLayer__38ccf .editBadge__38ccf,
+.keyboard-mode .userContainer__38ccf:focus-within+.badgeLayer__38ccf .editBadge__38ccf {
     opacity: 1;
     transform: scale(1)
 }
