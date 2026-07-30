@@ -1,44 +1,44 @@
 "use strict";
 n.d(t, {
-    G8: () => w,
-    NV: () => O,
-    QY: () => R,
-    V: () => D,
-    Xk: () => L,
-    ax: () => x,
-    ds: () => M,
-    fK: () => N,
-    fS: () => P,
-    nh: () => v,
-    p6: () => b,
+    G8: () => M,
+    NV: () => D,
+    QY: () => L,
+    V: () => v,
+    Xk: () => b,
+    ax: () => w,
+    ds: () => P,
+    fK: () => O,
+    fS: () => U,
+    nh: () => R,
+    p6: () => y,
 }),
     n(938796),
     n(323874),
     n(14289),
     n(35956),
     n(321073);
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
-    s = n(989349),
-    a = n.n(s),
-    o = n(317097),
-    l = n(665260),
-    u = n(814890),
+    a = n(989349),
+    s = n.n(a),
+    l = n(317097),
+    o = n(665260),
+    d = n(814890),
     c = n(935208),
-    d = n(652215),
+    u = n(652215),
     _ = n(581619);
-let h = /sketchfab/i,
-    f = /^https:\/\/sketchfab\.com/i,
-    p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    g = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
-    A = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
-    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
-    T =
+let E = /sketchfab/i,
+    A = /^https:\/\/sketchfab\.com/i,
+    h = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    p = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
+    T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
+    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
+    g =
         /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/,
     S = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
-function y(e) {
+function N(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
@@ -48,10 +48,10 @@ function C(e) {
         proxy_url: n,
         width: i,
         height: r,
-        placeholder: s,
-        placeholder_version: a,
-        description: o,
-        flags: u,
+        placeholder: a,
+        placeholder_version: s,
+        description: l,
+        flags: d,
         content_type: c,
     } = e;
     return {
@@ -59,18 +59,18 @@ function C(e) {
         proxyURL: n,
         width: i,
         height: r,
-        placeholder: s,
-        placeholderVersion: a,
-        description: o,
-        srcIsAnimated: (0, l.Lt)(u ?? 0, d.qNw.IS_ANIMATED),
-        flags: u ?? 0,
+        placeholder: a,
+        placeholderVersion: s,
+        description: l,
+        srcIsAnimated: (0, o.Lt)(d ?? 0, u.qNw.IS_ANIMATED),
+        flags: d ?? 0,
         contentType: c ?? void 0,
     };
 }
-function N(e, t, n) {
-    var i, s;
-    let l,
-        E = {
+function O(e, t, n) {
+    var i, a;
+    let o,
+        I = {
             id: r().uniqueId("embed_"),
             url: n.url,
             type: n.type,
@@ -82,73 +82,73 @@ function N(e, t, n) {
         };
     if (
         (null != n.footer &&
-            (E.footer = { text: n.footer.text, iconURL: n.footer.icon_url, iconProxyURL: n.footer.proxy_icon_url }),
+            (I.footer = { text: n.footer.text, iconURL: n.footer.icon_url, iconProxyURL: n.footer.proxy_icon_url }),
         null != n.author &&
             null != n.author.name &&
-            (E.author = {
+            (I.author = {
                 name: n.author.name,
                 url: n.author.url,
                 iconURL: n.author.icon_url,
                 iconProxyURL: n.author.proxy_icon_url,
             }),
-        null != n.provider && null != n.provider.name && (E.provider = { name: n.provider.name, url: n.provider.url }),
-        null != n.timestamp && (E.timestamp = a()(new Date(n.timestamp))),
-        null != n.color && (E.color = (0, o.$k)(n.color, !0)),
-        null != n.thumbnail && y(n.thumbnail))
+        null != n.provider && null != n.provider.name && (I.provider = { name: n.provider.name, url: n.provider.url }),
+        null != n.timestamp && (I.timestamp = s()(new Date(n.timestamp))),
+        null != n.color && (I.color = (0, l.$k)(n.color, !0)),
+        null != n.thumbnail && N(n.thumbnail))
     )
-        switch (E.type) {
-            case d.Auw.ARTICLE:
-            case d.Auw.IMAGE:
-                E.image = C(n.thumbnail);
+        switch (I.type) {
+            case u.Auw.ARTICLE:
+            case u.Auw.IMAGE:
+                I.image = C(n.thumbnail);
                 break;
             default:
-                E.thumbnail = C(n.thumbnail);
+                I.thumbnail = C(n.thumbnail);
         }
     if (
-        (null != n.image && y(n.image) && (E.image = C(n.image)),
+        (null != n.image && N(n.image) && (I.image = C(n.image)),
         null != n.video &&
-            (null == E.thumbnail &&
+            (null == I.thumbnail &&
                 null != n.video.proxy_url &&
-                y(n.video) &&
-                (E.thumbnail = {
+                N(n.video) &&
+                (I.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
                     url:
                         ((i = n.video.proxy_url),
-                        (s = { format: "webp" }),
-                        (l = new URL(i)),
-                        Object.keys(s).forEach((e) => {
-                            l.searchParams.set(e, s[e]);
+                        (a = { format: "webp" }),
+                        (o = new URL(i)),
+                        Object.keys(a).forEach((e) => {
+                            o.searchParams.set(e, a[e]);
                         }),
-                        l.toString()),
+                        o.toString()),
                 }),
-            null != E.thumbnail &&
-                y(n.video) &&
+            null != I.thumbnail &&
+                N(n.video) &&
                 (function (e, t, n) {
-                    if ((null != t && h.test(t.name)) || f.test(n.url)) return !1;
+                    if ((null != t && E.test(t.name)) || A.test(n.url)) return !1;
                     let i = null != n.proxy_url || /^https:/i.test(n.url);
                     return (
                         null != e &&
                             0x15b7e4a5bfb > c.default.extractTimestamp(e) &&
-                            (i = i && null != t && p.test(t.name)),
+                            (i = i && null != t && h.test(t.name)),
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (E.video = C(n.video))),
-        _.p.has(E.type)
-            ? (E.fields = (n.fields ?? []).map((e) => {
+                (I.video = C(n.video))),
+        _.p.has(I.type)
+            ? (I.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
                   return { rawName: t, rawValue: n, inline: i };
               }))
-            : (E.fields = []),
+            : (I.fields = []),
         null != n.components)
     ) {
-        let e = (0, u.ZV)(n.components);
-        E.components = e.length > 0 ? e : void 0;
+        let e = (0, d.ZV)(n.components);
+        I.components = e.length > 0 ? e : void 0;
     }
-    return E;
+    return I;
 }
-function v(e) {
+function R(e) {
     let t = new Map(),
         n = [];
     return (
@@ -166,7 +166,7 @@ function v(e) {
         n
     );
 }
-function R(e, t) {
+function L(e, t) {
     if ("YouTube" === e || "TikTok" === e) return e;
     if (null != t)
         try {
@@ -176,33 +176,34 @@ function R(e, t) {
         } catch {}
     return e;
 }
-function O(e) {
-    let { image: t, video: n, type: i, author: r, rawTitle: s } = e;
-    return (null != t || null != n) && (i === d.Auw.GIFV || (i !== d.Auw.RICH && null == r && null == s));
+function D(e) {
+    let { image: t, video: n, type: i, author: r, rawTitle: a } = e;
+    return (null != t || null != n) && (i === u.Auw.GIFV || (i !== u.Auw.RICH && null == r && null == a));
+}
+function y(e) {
+    return e.type === u.Auw.ARTICLE && null != e.url && (f.test(e.url) || I.test(e.url));
+}
+function v(e) {
+    return e.type === u.Auw.ARTICLE && null != e.url && p.test(e.url);
 }
 function b(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && (m.test(e.url) || E.test(e.url));
+    return e.type === u.Auw.ARTICLE && null != e.url && S.test(e.url);
 }
-function D(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && g.test(e.url);
+function M(e) {
+    return e.type === u.Auw.ARTICLE && null != e.url && (m.test(e.url) || T.test(e.url) || g.test(e.url));
 }
-function L(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && S.test(e.url);
-}
-function w(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && (I.test(e.url) || A.test(e.url) || T.test(e.url));
-}
-function M(e, t, n) {
+function P(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
-        : e.provider?.name === "TikTok"
+        : e.provider?.name === "TikTok" ||
+            (null != e.video && e.video.height > e.video.width && "YouTube" === L(e.provider?.name, e.video.url))
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function P(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(d.xBc.EMBED_LINKS, e);
+function U(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(u.xBc.EMBED_LINKS, e);
 }
-function x(e) {
+function w(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );
