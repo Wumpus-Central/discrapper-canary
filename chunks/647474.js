@@ -1,9 +1,9 @@
-n.d(e, { A: () => p, e: () => N });
+n.d(e, { A: () => N, e: () => k });
 var r = n(477900),
     l = n(582128),
     s = n(503698),
-    o = n.n(s),
-    c = n(317097),
+    c = n.n(s),
+    o = n(317097),
     i = n(43990),
     a = n(406810),
     u = n(834730),
@@ -14,7 +14,7 @@ var r = n(477900),
     v = n(818348),
     j = n(375708),
     f = n(280309);
-function p(t) {
+function N(t) {
     let { className: e, color: n = "default", sticky: l = !1, children: s } = t,
         a = l ? f.qf : void 0;
     function u() {
@@ -27,20 +27,20 @@ function p(t) {
     }
     if ("nitro-pink" === n)
         return u({
-            className: o()(f.cI, f.p3, a, e),
+            className: c()(f.cI, f.p3, a, e),
             customStyle: {
                 "--custom-notice-background": "var(--background-surface-highest)",
                 "--custom-notice-text": "var(--text-strong)",
                 "--custom-notice-button-hover": "var(--background-surface-highest)",
             },
         });
-    if ((0, c.qt)(n)) {
-        let t = (0, c.OK)((0, c.LX)(n)) > 0.5 ? v.NJ.DARK : v.NJ.LIGHT;
+    if ((0, o.qt)(n)) {
+        let t = (0, o.OK)((0, o.LX)(n)) > 0.5 ? v.NJ.DARK : v.NJ.LIGHT;
         return (0, r.jsx)(i.N, {
             theme: t,
             children: (t) =>
                 u({
-                    className: o()(t, f.cI, a, e),
+                    className: c()(t, f.cI, a, e),
                     customStyle: {
                         "--custom-notice-background": n,
                         "--custom-notice-text": "var(--text-strong)",
@@ -51,31 +51,31 @@ function p(t) {
     }
     return (0, r.jsx)(i.N, {
         theme: v.NJ.DARK,
-        children: (t) => u({ className: o()(t, f.cI, a, e), noticeColor: x.Hv.BRAND }),
+        children: (t) => u({ className: c()(t, f.cI, a, e), noticeColor: x.Hv.BRAND }),
     });
 }
-function N(t) {
-    let { Icon: e, children: n, endDatetime: s, ...o } = t,
-        [c, i] = l.useState(() => (0, h.Z)(s));
+function k(t) {
+    let { Icon: e, children: n, endDatetime: s, ...c } = t,
+        [o, i] = l.useState(() => (0, h.Z)(s));
     function a() {
         return (0, r.jsxs)("div", {
             className: f.lt,
-            children: [null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor" }), n],
+            children: [null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor", className: f.Kk }), n],
         });
     }
     return ((0, m.A)(() => {
         let t = (0, h.Z)(s);
         i((e) => (null == t ? null : null != e && (0, d.A)(e, t) ? e : t));
     }, 1e3),
-    null != c)
-        ? c.days > 0
-            ? (0, r.jsxs)(p, { ...o, children: [a(), (0, r.jsx)(g, { days: c.days })] })
-            : (0, r.jsxs)(p, { ...o, children: [a(), (0, r.jsx)(k, { timeLeft: c })] })
+    null != o)
+        ? o.days > 0
+            ? (0, r.jsxs)(N, { ...c, children: [a(), (0, r.jsx)(p, { days: o.days })] })
+            : (0, r.jsxs)(N, { ...c, children: [a(), (0, r.jsx)(g, { timeLeft: o })] })
         : null != s
           ? null
-          : (0, r.jsx)(p, { ...o, children: a() });
+          : (0, r.jsx)(N, { ...c, children: a() });
 }
-function g(t) {
+function p(t) {
     let { days: e } = t;
     return (0, r.jsxs)("div", {
         className: f.S5,
@@ -89,11 +89,11 @@ function g(t) {
         ],
     });
 }
-function k(t) {
+function g(t) {
     let {
         timeLeft: { days: e, hours: n, minutes: l, seconds: s },
     } = t;
-    function c(t) {
+    function o(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = String(t).padStart(2, "0").split("");
         return (0, r.jsx)(r.Fragment, {
@@ -101,7 +101,7 @@ function k(t) {
                 (0, r.jsx)(
                     u.E,
                     {
-                        className: o()(f.g2, { [f.$2]: e }),
+                        className: c()(f.g2, { [f.$2]: e }),
                         variant: "text-sm/bold",
                         color: "currentColor",
                         children: t,
@@ -116,6 +116,6 @@ function k(t) {
     }
     return (0, r.jsxs)("div", {
         className: f.kz,
-        children: [e > 0 && c(e), e > 0 && i(), c(n), i(), c(l), i(), c(s, !0)],
+        children: [e > 0 && o(e), e > 0 && i(), o(n), i(), o(l), i(), o(s, !0)],
     });
 }

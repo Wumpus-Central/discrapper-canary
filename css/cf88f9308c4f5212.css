@@ -45,26 +45,30 @@
 }
 
 .bannerTextContainer__2fc34 {
-    text-align: start
-}
-
-.bannerTextContainer__2fc34,
-.countdownDaysContainer__2fc34 {
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: var(--space-4)
+    gap: var(--space-4);
+    text-align: start
 }
 
-.countdownDaysContainer__2fc34 {
+.icon__2fc34 {
     flex-shrink: 0
 }
 
+.countdownDaysContainer__2fc34 {
+    gap: var(--space-4)
+}
+
+.countdownDaysContainer__2fc34,
 .countdownSecondsContainer__2fc34 {
     align-items: center;
     display: flex;
     flex-direction: row;
-    flex-shrink: 0;
+    flex-shrink: 0
+}
+
+.countdownSecondsContainer__2fc34 {
     gap: var(--space-xxs)
 }
 
@@ -101,6 +105,10 @@
 
 .textContainer__898a6 {
     gap: var(--space-4)
+}
+
+.icon__898a6 {
+    flex-shrink: 0
 }
 
 .container_e176e1 {
