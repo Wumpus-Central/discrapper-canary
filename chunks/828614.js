@@ -585,37 +585,36 @@ let e1 = i.memo(function (e) {
             hidePrimaryCTA: I,
             hideSecondaryCTA: m,
             badgeOverride: v,
-            skipLimitedTimeCheck: _,
-            onClickCard: H,
-            onClickPrimaryCTA: B,
-            onClickSecondaryCTA: U,
-            onMouseEnter: F,
-            onMouseLeave: G,
-            onFocus: W,
-            onBlur: z,
-            primaryCTAText: $,
-            secondaryCTAIcon: Y,
-            productNameClassName: K,
-            badgeClassName: Q,
-            cardClassName: q,
-            prioritizedCurrency: X,
-            aspectRatio: Z,
-            hideStaticBundleBackgroundAsset: J,
+            onClickCard: _,
+            onClickPrimaryCTA: H,
+            onClickSecondaryCTA: B,
+            onMouseEnter: U,
+            onMouseLeave: F,
+            onFocus: G,
+            onBlur: W,
+            primaryCTAText: z,
+            secondaryCTAIcon: $,
+            productNameClassName: Y,
+            badgeClassName: K,
+            cardClassName: Q,
+            prioritizedCurrency: q,
+            aspectRatio: X,
+            hideStaticBundleBackgroundAsset: Z,
         } = e,
-        { previewingVariantIndex: ee, handleEntering: et, handleLeaving: en } = (0, eJ.f)(t),
-        er = (0, D.gZ)() ?? X,
-        es = (0, h.Nc)(t),
-        el = er ?? (es ? D.Hi.FIAT : void 0),
-        ea = (0, k.Mk)(),
-        eo = ea?.tab,
-        eu = (0, A.uM)(),
-        ec = i.useMemo(() => (0, D.UU)(t, eo, eu), [t, eo, eu]),
-        ed = (0, V.s7)(t),
-        eC = i.useId(),
-        eI = i.useRef(null),
-        { isHoveringOrFocusing: ex } = (0, f.A)(eI),
-        eg = (0, e0.$c)(t.skuId),
-        ef = (function (e) {
+        { previewingVariantIndex: J, handleEntering: ee, handleLeaving: et } = (0, eJ.f)(t),
+        en = (0, D.gZ)() ?? q,
+        er = (0, h.Nc)(t),
+        es = en ?? (er ? D.Hi.FIAT : void 0),
+        el = (0, k.Mk)(),
+        ea = el?.tab,
+        eo = (0, A.uM)(),
+        eu = i.useMemo(() => (0, D.UU)(t, ea, eo), [t, ea, eo]),
+        ec = (0, V.s7)(t),
+        ed = i.useId(),
+        eC = i.useRef(null),
+        { isHoveringOrFocusing: eI } = (0, f.A)(eC),
+        ex = (0, e0.$c)(t.skuId),
+        eg = (function (e) {
             let t = (0, A.uM)(),
                 { analyticsLocations: n } = (0, g.Ay)(),
                 r = (0, y.Q)(e),
@@ -666,11 +665,11 @@ let e1 = i.memo(function (e) {
                 d
             );
         })(t),
-        eA = (0, o.A)(eI, ef),
-        { handleCardVisibilityChange: ek } = (0, E.Z)(t.skuId, eo === ej.G2.CATALOG ? "full" : eo),
-        em = (0, D.ql)(t, x.A.COLLECTIBLES_SHOP_CARD, ec),
-        { analyticsLocations: ev } = (0, g.Ay)(),
-        e_ = (function (e) {
+        ef = (0, o.A)(eC, eg),
+        { handleCardVisibilityChange: eA } = (0, E.Z)(t.skuId, ea === ej.G2.CATALOG ? "full" : ea),
+        ek = (0, D.ql)(t, x.A.COLLECTIBLES_SHOP_CARD, eu),
+        { analyticsLocations: em } = (0, g.Ay)(),
+        ev = (function (e) {
             let { product: t, analyticsLocations: n } = e,
                 { cardId: r, sessionId: s, tilePosition: l } = (0, A.uM)() ?? {},
                 a = (0, y.Q)(t),
@@ -692,12 +691,12 @@ let e1 = i.memo(function (e) {
                 },
                 [t, a, s, r, n, l, u],
             );
-        })({ product: t, analyticsLocations: ev }),
-        eh = i.useCallback(
+        })({ product: t, analyticsLocations: em }),
+        e_ = i.useCallback(
             (e) => {
-                null != H ? H(e) : (e_(ej.sH.OPEN_DETAILS), em(e));
+                null != _ ? _(e) : (ev(ej.sH.OPEN_DETAILS), ek(e));
             },
-            [e_, H, em],
+            [ev, _, ek],
         );
     !(function (e, t) {
         let n = (0, A.uM)(),
@@ -730,42 +729,42 @@ let e1 = i.memo(function (e) {
             }, 250);
             return () => clearTimeout(t);
         }, [e, a, o, u, c]);
-    })(ex, t);
-    let eE = t.type === u.R.BUNDLE && t.previewAssets?.fgStatic != null,
-        eR = t.type === u.R.VARIANTS_GROUP && !a,
-        ey = i.useMemo(() => ({ maxVariantsToShow: 4, onClick: em }), [em]),
-        eT = t.type === u.R.BUNDLE && !J,
-        eb = !I || !m,
-        eP = !(c && s) || eR,
-        eL = eP || eb,
-        eS = eb || eR;
+    })(eI, t);
+    let eh = t.type === u.R.BUNDLE && t.previewAssets?.fgStatic != null,
+        eE = t.type === u.R.VARIANTS_GROUP && !a,
+        eR = i.useMemo(() => ({ maxVariantsToShow: 4, onClick: ek }), [ek]),
+        ey = t.type === u.R.BUNDLE && !Z,
+        eT = !I || !m,
+        eb = !(c && s) || eE,
+        eP = eb || eT,
+        eL = eT || eE;
     return (0, r.jsx)(d.L, {
-        innerRef: eI,
-        onChange: ek,
+        innerRef: eC,
+        onChange: eA,
         threshold: 0,
         children: (0, r.jsx)(C.s, {
-            ref: eA,
-            onClick: eh,
-            "aria-label": ed,
-            "aria-describedby": eC,
-            className: l()(q, e2.ty, { [e2.yo]: ex }),
-            onFocus: () => W?.(t.skuId),
-            onBlur: () => z?.(t.skuId),
-            onMouseEnter: () => F?.(t.skuId),
-            onMouseLeave: () => G?.(t.skuId),
+            ref: ef,
+            onClick: e_,
+            "aria-label": ec,
+            "aria-describedby": ed,
+            className: l()(Q, e2.ty, { [e2.yo]: eI }),
+            onFocus: () => G?.(t.skuId),
+            onBlur: () => W?.(t.skuId),
+            onMouseEnter: () => U?.(t.skuId),
+            onMouseLeave: () => F?.(t.skuId),
             children: (0, r.jsx)(e0.vf.Provider, {
-                value: eg ? eI : null,
+                value: ex ? eC : null,
                 children: (0, r.jsxs)("div", {
-                    id: eC,
+                    id: ed,
                     className: e2.qt,
-                    style: { aspectRatio: Z },
+                    style: { aspectRatio: X },
                     children: [
-                        eT &&
+                        ey &&
                             t.previewAssets?.bgStatic != null &&
                             (0, r.jsx)("img", { className: e2.vD, src: t.previewAssets.bgStatic, alt: "" }),
                         (0, r.jsx)("div", {
-                            className: l()(e2.Dq, { [e2.$r]: !s || eP || eS, [e2.T9]: eE }),
-                            children: (0, r.jsx)(ei, { skuId: t.skuId, isCardHovered: ex, overrideVariantIndex: ee }),
+                            className: l()(e2.Dq, { [e2.$r]: !s || eb || eL, [e2.T9]: eh }),
+                            children: (0, r.jsx)(ei, { skuId: t.skuId, isCardHovered: eI, overrideVariantIndex: J }),
                         }),
                         (0, r.jsxs)("div", {
                             className: e2.N1,
@@ -773,21 +772,20 @@ let e1 = i.memo(function (e) {
                                 (0, r.jsx)(M.A, {
                                     skuId: t.skuId,
                                     badgeOverride: v,
-                                    className: Q,
-                                    prioritizedCurrency: el,
-                                    skipLimitedTimeCheck: _,
+                                    className: K,
+                                    prioritizedCurrency: es,
                                 }),
-                                !n && (0, r.jsx)(eZ, { skuId: t.skuId, isCardHovered: ex, onTrackClick: e_ }),
+                                !n && (0, r.jsx)(eZ, { skuId: t.skuId, isCardHovered: eI, onTrackClick: ev }),
                             ],
                         }),
-                        eL &&
+                        eP &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)("div", { className: l()(e2.wY, { [e2.KY]: eE }) }),
+                                    (0, r.jsx)("div", { className: l()(e2.wY, { [e2.KY]: eh }) }),
                                     (0, r.jsxs)("div", {
                                         className: e2.xQ,
                                         children: [
-                                            eP &&
+                                            eb &&
                                                 (0, r.jsxs)("div", {
                                                     className: e2.xE,
                                                     children: [
@@ -798,30 +796,30 @@ let e1 = i.memo(function (e) {
                                                                     !s &&
                                                                         (0, r.jsx)(w, {
                                                                             skuId: t.skuId,
-                                                                            className: l()(K, e2.tZ),
+                                                                            className: l()(Y, e2.tZ),
                                                                         }),
                                                                     !c &&
                                                                         (0, r.jsx)("div", {
                                                                             className: e2.oh,
                                                                             children: (0, r.jsx)(ep, {
                                                                                 skuId: t.skuId,
-                                                                                prioritizedCurrency: el,
+                                                                                prioritizedCurrency: es,
                                                                             }),
                                                                         }),
                                                                 ],
                                                             }),
-                                                        eR &&
+                                                        eE &&
                                                             (0, r.jsx)(eK.A, {
                                                                 skuId: t.skuId,
-                                                                isCollapsed: !ex,
-                                                                onVariantEnter: et,
-                                                                onVariantExit: en,
-                                                                overflowProps: ey,
-                                                                onTrackClick: e_,
+                                                                isCollapsed: !eI,
+                                                                onVariantEnter: ee,
+                                                                onVariantExit: et,
+                                                                overflowProps: eR,
+                                                                onTrackClick: ev,
                                                             }),
                                                     ],
                                                 }),
-                                            eb &&
+                                            eT &&
                                                 (0, r.jsx)("div", {
                                                     className: e2.Vs,
                                                     children: (0, r.jsxs)(p.e, {
@@ -832,22 +830,22 @@ let e1 = i.memo(function (e) {
                                                             !I &&
                                                                 (0, r.jsx)(ew, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: eI,
-                                                                    onClick: B,
-                                                                    text: $,
-                                                                    prioritizedCurrency: el,
-                                                                    onClickAnalytics: ec,
-                                                                    onTrackClick: e_,
+                                                                    cardRef: eC,
+                                                                    onClick: H,
+                                                                    text: z,
+                                                                    prioritizedCurrency: es,
+                                                                    onClickAnalytics: eu,
+                                                                    onTrackClick: ev,
                                                                 }),
                                                             !m &&
                                                                 (0, r.jsx)(e$, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: eI,
-                                                                    onClick: U,
-                                                                    icon: Y,
-                                                                    prioritizedCurrency: el,
-                                                                    onClickAnalytics: ec,
-                                                                    onTrackClick: e_,
+                                                                    cardRef: eC,
+                                                                    onClick: B,
+                                                                    icon: $,
+                                                                    prioritizedCurrency: es,
+                                                                    onClickAnalytics: eu,
+                                                                    onTrackClick: ev,
                                                                 }),
                                                         ],
                                                     }),
@@ -862,22 +860,22 @@ let e1 = i.memo(function (e) {
         }),
     });
 });
-function e8(e) {
+function e7(e) {
     let t = (0, v.c)("product_card");
     return e === c.j.PREMIUM_TIER_2_1_DAY && !t;
 }
-function e7(e) {
+function e8(e) {
     let { skuId: t, ...n } = e,
         i = (0, D.Vm)(t),
         s = (0, I.A)(() => ({ cardId: (0, a.A)() })),
-        l = e8(t);
+        l = e7(t);
     return null == i || l ? null : (0, r.jsx)(A.R9, { newValue: s, children: (0, r.jsx)(e1, { product: i, ...n }) });
 }
 function e5(e) {
     let { skuId: t, ...n } = e,
         { state: s, product: l } = (0, _.I)(t, { needsCategory: !1, seedCategoryStore: !0 }),
         o = (0, I.A)(() => ({ cardId: (0, a.A)() })),
-        u = e8(t),
+        u = e7(t),
         c = i.useContext(D.v3),
         d = i.useMemo(() => ({ ...c, productOverride: l ?? void 0, standalonePreview: !0 }), [c, l]);
     return u
@@ -892,5 +890,5 @@ function e5(e) {
               });
 }
 let e3 = function (e) {
-    return (0, m.$)("product_card") ? (0, r.jsx)(e5, { ...e }) : (0, r.jsx)(e7, { ...e });
+    return (0, m.$)("product_card") ? (0, r.jsx)(e5, { ...e }) : (0, r.jsx)(e8, { ...e });
 };
