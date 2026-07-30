@@ -37,8 +37,8 @@ function S(e, t, n, a) {
             {
                 className: R,
                 onScroll: L,
-                onResize: y = null,
-                onContentResize: D = null,
+                onResize: D = null,
+                onContentResize: y = null,
                 dir: v = "ltr",
                 sections: b,
                 sectionHeight: M,
@@ -121,7 +121,7 @@ function S(e, t, n, a) {
                         let e = Math.max(0, g * o);
                         return null != s && e < s;
                     }, [o, g, s]),
-                    y = (0, r.useMemo)(
+                    D = (0, r.useMemo)(
                         () =>
                             m > 0
                                 ? p.current
@@ -139,8 +139,8 @@ function S(e, t, n, a) {
                         [m, g, S, n, i, a, l, c, d, t, T, o, _],
                     );
                 return (
-                    (0, r.useLayoutEffect)(() => void (p.current = y)),
-                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
+                    (0, r.useLayoutEffect)(() => void (p.current = D)),
+                    { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
                 sections: b,
@@ -156,10 +156,10 @@ function S(e, t, n, a) {
                 getAnchorId: W,
             }),
             eT = (0, p.A)(ed),
-            em = r.useRef(y),
-            eg = r.useRef(D);
+            em = r.useRef(D),
+            eg = r.useRef(y);
         r.useLayoutEffect(() => {
-            (em.current = y), (eg.current = D);
+            (em.current = D), (eg.current = y);
         });
         let eS = r.useCallback(
                 function () {
@@ -192,34 +192,39 @@ function S(e, t, n, a) {
                     }
                     return [0, 0];
                 }, []));
-        r.useImperativeHandle(c, () => {
-            let e, t;
-            return {
+        r.useImperativeHandle(
+            c,
+            () => ({
                 getScrollerNode: () => ed.current,
                 getScrollerState: eu,
                 getItems: eC,
                 getSectionRowFromIndex: eO,
-                ...((e = (0, T.A)(ed, eu, eT)),
-                (t = (e, t) => eI.computeScrollPosition(e, t)),
-                {
-                    ...e,
-                    getScrollPosition: t,
-                    isItemVisible(e, n) {
-                        let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                            [r, a] = t(e, n),
-                            s = eu();
-                        return i
-                            ? r >= s.scrollTop && r + a <= s.scrollTop + s.offsetHeight
-                            : r + a >= s.scrollTop && r <= s.scrollTop + s.offsetHeight;
-                    },
-                    scrollToIndex(n) {
-                        let { section: i, row: r, animate: a, callback: s, padding: l = 0 } = n,
-                            [o, d] = t(i, r);
-                        e.scrollIntoViewRect({ start: o, end: o + d, padding: l, animate: a, callback: s });
-                    },
-                }),
-            };
-        }, [ed, eu, eO, eC, eI, eT]);
+                ...(function (e, t, n, i) {
+                    let r = (0, T.A)(e, t, i);
+                    function a(e, t) {
+                        return n.computeScrollPosition(e, t);
+                    }
+                    return {
+                        ...r,
+                        getScrollPosition: a,
+                        isItemVisible(e, n) {
+                            let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                                [r, s] = a(e, n),
+                                l = t();
+                            return i
+                                ? r >= l.scrollTop && r + s <= l.scrollTop + l.offsetHeight
+                                : r + s >= l.scrollTop && r <= l.scrollTop + l.offsetHeight;
+                        },
+                        scrollToIndex(e) {
+                            let { section: t, row: n, animate: i, callback: s, padding: l = 0 } = e,
+                                [o, d] = a(t, n);
+                            r.scrollIntoViewRect({ start: o, end: o + d, padding: l, animate: i, callback: s });
+                        },
+                    };
+                })(ed, eu, eI, eT),
+            }),
+            [ed, eu, eO, eC, eI, eT],
+        );
         let eR = r.useCallback(
             (e) => {
                 eS(1),
@@ -247,14 +252,26 @@ function S(e, t, n, a) {
                 (0, r.useLayoutEffect)(() => {
                     let { current: e } = t,
                         { scrollTop: r } = i();
-                    if (null == n || null == n.row || null == e || null == s || 0 === r) return;
-                    let l = (t) => {
-                        if (t < 0 || t >= a.sections[n.section] || s(n.section, n.row) !== n.id) return !1;
+                    function l(t) {
+                        if (
+                            null == n ||
+                            null == s ||
+                            null == e ||
+                            t < 0 ||
+                            t >= a.sections[n.section] ||
+                            s(n.section, n.row) !== n.id
+                        )
+                            return !1;
                         let [i] = a.computeScrollPosition(n.section, t),
                             l = i - n.scrollOffset;
                         return r !== l && (e.scrollTop = l), !0;
-                    };
-                    l(n.row) || l(n.row - 1) || l(n.row + 1);
+                    }
+                    null != n &&
+                        null != n.row &&
+                        null != e &&
+                        null != s &&
+                        0 !== r &&
+                        (l(n.row) || l(n.row - 1) || l(n.row + 1));
                 }, [l]);
             })({
                 scrollerRef: ed,

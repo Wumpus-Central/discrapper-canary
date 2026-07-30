@@ -26,10 +26,14 @@ function s() {
     let [e, t] = i.useState(!0);
     return (
         i.useEffect(() => {
-            t(window.document.hasFocus());
-            let e = () => t(!0),
-                n = () => t(!1);
+            function e() {
+                return t(!0);
+            }
+            function n() {
+                return t(!1);
+            }
             return (
+                t(window.document.hasFocus()),
                 window.addEventListener("focus", e),
                 window.addEventListener("blur", n),
                 () => {

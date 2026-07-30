@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(735518),
     s = n(400274),
-    l = n(461376),
+    l = n(560952),
     o = n(60339),
     d = n(661531),
     c = n(717421),
@@ -22,15 +22,15 @@ let I = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     S = [0, 0.1, 0.4, 0.6, 0.9, 1],
     N = [0, 0.1, 0.9, 1],
     C = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    O = [0, 0.3, 0.5, 0.8, 0.9, 1],
-    R = () => {};
+    O = [0, 0.3, 0.5, 0.8, 0.9, 1];
+function R() {}
 function L(e) {
     let t,
         {
             checked: n,
             disabled: L,
-            displayOnly: y,
-            id: D,
+            displayOnly: D,
+            id: y,
             onChange: v,
             focusProps: b,
             hasIcon: M = !1,
@@ -47,7 +47,7 @@ function L(e) {
             inputProps: B,
             labelProps: H,
             isPressed: j,
-        } = (0, a.K)({ id: D, isDisabled: L, "aria-describedby": P, "aria-labelledby": U ?? "" }, V, F),
+        } = (0, a.K)({ id: y, isDisabled: L, "aria-describedby": P, "aria-labelledby": U ?? "" }, V, F),
         { hoverProps: W, isHovered: Y } = (0, s.M)({ isDisabled: L }),
         K = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         $ = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -70,69 +70,69 @@ function L(e) {
                 state: j ? (n ? O[O.length - 2] : C[1]) : +!!n,
             },
             "animate-always",
-        ),
-        eo = function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
-            return n ? es.to({ range: O, output: t }) : es.to({ range: C, output: e });
-        },
-        ed = (0, i.jsx)(l.animated.div, {
-            ...(y ? {} : W),
-            ref: x,
-            className: h.cw,
-            "data-size": "md",
-            "data-mana-component": "switch",
-            style: {
-                opacity: el,
-                backgroundColor: es.to({ range: N, output: [Y ? Q : K, $, q, Y ? J : z], extrapolate: "clamp" }),
-                border: "1px solid",
-                borderColor: es.to({
-                    range: N,
-                    output: [Y ? ee : Z, Y ? ee : Z, Y ? et : X, Y ? et : X],
-                    extrapolate: "clamp",
-                }),
-            },
-            children: (0, i.jsxs)(l.animated.svg, {
-                className: h.FF,
-                viewBox: "0 0 24 24",
-                preserveAspectRatio: "xMidYMin meet",
-                style: {
-                    left: es.to(
-                        G.enabled ? { range: N, output: [1, 1, 24, 24] } : { range: S, output: [1, 1, 1, 24, 24, 24] },
-                    ),
-                },
-                "aria-hidden": !0,
-                children: [
-                    (0, i.jsx)(l.animated.rect, {
-                        fill: es.to({ range: N, output: [er, er, ea, ea] }),
-                        x: G.enabled ? 4 : eo([4, 4, 2.5, 1, 2.5, 4]),
-                        y: G.enabled ? 4 : eo([4, 7, 2.5, 7, 2.5, 4]),
-                        width: G.enabled ? 16 : eo([16, 16, 19, 22, 19, 16]),
-                        height: G.enabled ? 16 : eo([16, 10, 19, 10, 19, 16]),
-                        rx: G.enabled ? 8 : eo([8, 5, 9.5, 5, 9.5, 8]),
-                    }),
-                    M &&
-                        ((t = es.to({ range: N, output: [en, en, ei, ei], extrapolate: "clamp" })),
-                        (0, i.jsx)("svg", {
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            children: (0, i.jsxs)("g", {
-                                transform: "translate(4 4)",
-                                children: [
-                                    (0, i.jsx)(l.animated.path, {
-                                        fill: t,
-                                        d: es.to({ range: N, output: [I, p, p, m], extrapolate: "clamp" }),
-                                    }),
-                                    (0, i.jsx)(l.animated.path, {
-                                        fill: t,
-                                        d: es.to({ range: N, output: [f, T, T, g], extrapolate: "clamp" }),
-                                    }),
-                                ],
-                            }),
-                        })),
-                ],
+        );
+    function eo(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
+        return n ? es.to({ range: O, output: t }) : es.to({ range: C, output: e });
+    }
+    let ed = (0, i.jsx)(l.animated.div, {
+        ...(D ? {} : W),
+        ref: x,
+        className: h.cw,
+        "data-size": "md",
+        "data-mana-component": "switch",
+        style: {
+            opacity: el,
+            backgroundColor: es.to({ range: N, output: [Y ? Q : K, $, q, Y ? J : z], extrapolate: "clamp" }),
+            border: "1px solid",
+            borderColor: es.to({
+                range: N,
+                output: [Y ? ee : Z, Y ? ee : Z, Y ? et : X, Y ? et : X],
+                extrapolate: "clamp",
             }),
-        });
-    return y
+        },
+        children: (0, i.jsxs)(l.animated.svg, {
+            className: h.FF,
+            viewBox: "0 0 24 24",
+            preserveAspectRatio: "xMidYMin meet",
+            style: {
+                left: es.to(
+                    G.enabled ? { range: N, output: [1, 1, 24, 24] } : { range: S, output: [1, 1, 1, 24, 24, 24] },
+                ),
+            },
+            "aria-hidden": !0,
+            children: [
+                (0, i.jsx)(l.animated.rect, {
+                    fill: es.to({ range: N, output: [er, er, ea, ea] }),
+                    x: G.enabled ? 4 : eo([4, 4, 2.5, 1, 2.5, 4]),
+                    y: G.enabled ? 4 : eo([4, 7, 2.5, 7, 2.5, 4]),
+                    width: G.enabled ? 16 : eo([16, 16, 19, 22, 19, 16]),
+                    height: G.enabled ? 16 : eo([16, 10, 19, 10, 19, 16]),
+                    rx: G.enabled ? 8 : eo([8, 5, 9.5, 5, 9.5, 8]),
+                }),
+                M &&
+                    ((t = es.to({ range: N, output: [en, en, ei, ei], extrapolate: "clamp" })),
+                    (0, i.jsx)("svg", {
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        children: (0, i.jsxs)("g", {
+                            transform: "translate(4 4)",
+                            children: [
+                                (0, i.jsx)(l.animated.path, {
+                                    fill: t,
+                                    d: es.to({ range: N, output: [I, p, p, m], extrapolate: "clamp" }),
+                                }),
+                                (0, i.jsx)(l.animated.path, {
+                                    fill: t,
+                                    d: es.to({ range: N, output: [f, T, T, g], extrapolate: "clamp" }),
+                                }),
+                            ],
+                        }),
+                    })),
+            ],
+        }),
+    });
+    return D
         ? (0, i.jsx)("div", { className: h.kL, "data-disabled": L || void 0, children: ed })
         : (0, i.jsx)(E.vN, {
               ...b,

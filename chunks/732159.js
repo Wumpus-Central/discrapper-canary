@@ -31,10 +31,10 @@ function o(e) {
             },
             [],
         );
-    let [g, S] = r.useState(void 0),
-        N = (e) => {
-            S(e);
-        };
+    let [g, S] = r.useState(void 0);
+    function N(e) {
+        S(e);
+    }
     return (0, i.jsx)(s.Modal, {
         actions: [
             {

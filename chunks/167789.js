@@ -3,18 +3,18 @@ n.d(t, { O: () => r });
 let i = (0, n(613345).V)();
 function r(e, t) {
     if (void 0 !== i && null != i.requestIdleCallback && null != i.cancelIdleCallback) {
-        let n = !1,
-            r = null,
-            s = () => {
-                n || ((n = !0), null != r && (i.clearTimeout(r), (r = null)), e());
-            },
-            a = i.requestIdleCallback(s, t);
+        let r = !1,
+            a = null;
+        function n() {
+            r || ((r = !0), null != a && (i.clearTimeout(a), (a = null)), e());
+        }
+        let s = i.requestIdleCallback(n, t);
         return (
-            (r = i.setTimeout(() => {
-                n || i.cancelIdleCallback(a), s();
+            (a = i.setTimeout(() => {
+                r || i.cancelIdleCallback(s), n();
             }, t?.timeout ?? 1e3)),
             () => {
-                i.cancelIdleCallback(a), null != r && (i.clearTimeout(r), (r = null));
+                i.cancelIdleCallback(s), null != a && (i.clearTimeout(a), (a = null));
             }
         );
     }

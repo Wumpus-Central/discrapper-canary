@@ -37,9 +37,9 @@ function h(e) {
             eventCapture: O,
             assetLoader: R,
             onLoad: L,
-            stateMachine: y,
+            stateMachine: D,
         } = e,
-        D = r.useContext(o.C),
+        y = r.useContext(o.C),
         v = (0, l.R)(),
         b = (0, d.G9)().isWindowFocused?.() ?? v,
         [M, P] = (0, l.X)(3e4),
@@ -49,7 +49,7 @@ function h(e) {
             eventTarget: h?.current,
             buffer: t,
             autoplay: n,
-            stateMachines: null != y ? [y] : U,
+            stateMachines: null != D ? [D] : U,
             artboard: I,
             useOffscreenRenderer: !0,
             layout: new s.Layout({
@@ -240,16 +240,17 @@ function h(e) {
             onDataBindingChange: g,
         }),
         r.useEffect(() => {
-            if (null != x && "short-loop" === f && D.reducedMotion.enabled) {
-                let e = () => {
+            if (null != x && "short-loop" === f && y.reducedMotion.enabled) {
+                function e() {
+                    null != x &&
                         x.isPlaying &&
-                            (G.current = setTimeout(() => {
-                                x.pause();
-                            }, 5e3));
-                    },
-                    t = () => {
-                        clearTimeout(G.current);
-                    };
+                        (G.current = setTimeout(() => {
+                            x.pause();
+                        }, 5e3));
+                }
+                function t() {
+                    clearTimeout(G.current);
+                }
                 return (
                     x.on(s.EventType.Play, e),
                     x.on(s.EventType.Pause, t),
@@ -259,7 +260,7 @@ function h(e) {
                     }
                 );
             }
-        }, [x, f, D.reducedMotion.enabled]),
+        }, [x, f, y.reducedMotion.enabled]),
         r.useLayoutEffect(() => {
             if (null != x) {
                 "layout" === c && x.resizeDrawingSurfaceToCanvas();
@@ -272,7 +273,7 @@ function h(e) {
             }
         }, [x, c]),
         r.useEffect(() => {
-            if (null == x || !D.reducedMotion.enabled) return;
+            if (null == x || !y.reducedMotion.enabled) return;
             let e = x.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
@@ -280,15 +281,15 @@ function h(e) {
                     x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering()));
             });
             return t.observe(e), () => t.disconnect();
-        }, [x, D.reducedMotion.enabled]),
+        }, [x, y.reducedMotion.enabled]),
         r.useEffect(() => {
             null != x &&
                 null == U &&
-                null == y &&
+                null == D &&
                 (w(x.stateMachineNames),
                 x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: I, autoBind: !0 }),
                 x.setupRiveListeners());
-        }, [x, n, U, I, y]);
+        }, [x, n, U, I, D]);
     let F = r.useRef(0);
     r.useEffect(() => {
         if (null == x) return;
@@ -297,7 +298,7 @@ function h(e) {
                 "number" == typeof t.data &&
                 ((F.current = t.data),
                 t.data > 0 &&
-                    ("halt" === f && D.reducedMotion.enabled && x.isPlaying && x.pause(),
+                    ("halt" === f && y.reducedMotion.enabled && x.isPlaying && x.pause(),
                     x.off(s.EventType.Advance, e)));
         };
         return (
@@ -307,7 +308,7 @@ function h(e) {
                 x.off(s.EventType.Advance, e);
             }
         );
-    }, [x, D.reducedMotion.enabled, f, n]),
+    }, [x, y.reducedMotion.enabled, f, n]),
         r.useEffect(() => {
             P();
         }, [P, I, c, u, m, N, T]);

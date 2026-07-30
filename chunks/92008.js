@@ -8,10 +8,14 @@ var i = n(446837),
     o = n(936005),
     d = n(154327),
     c = n(518898);
+function u(e) {
+    return `__section__${e}`;
+}
+function _(e) {
+    return `__section_header__${e}`;
+}
 n(321073), n(667532);
-let u = (e) => `__section__${e}`,
-    _ = (e) => `__section_header__${e}`,
-    E = () => 0;
+let E = () => 0;
 class A {
     visibleSections = {};
     gridData = { coordinates: {}, boundaries: [] };
@@ -272,8 +276,8 @@ function C(e, t, n) {
                 sections: O,
                 columns: R,
                 getItemKey: L,
-                getItemHeight: y,
-                getSectionHeight: D,
+                getItemHeight: D,
+                getSectionHeight: y,
                 chunkSize: v,
                 renderSection: b,
                 renderItem: M,
@@ -333,8 +337,8 @@ function C(e, t, n) {
                 R = null != d ? Math.max(0, C.offsetWidth - d) : 0,
                 {
                     dirty: L,
-                    chunkStart: y,
-                    chunkEnd: D,
+                    chunkStart: D,
+                    chunkEnd: y,
                     forceUpdateOnChunkChange: v,
                 } = (0, I.A)({ chunkSize: l, getScrollerState: o, forceUpdate: g });
             return (
@@ -358,9 +362,9 @@ function C(e, t, n) {
                                   marginLeft: R / 2,
                                   dir: m,
                               }),
-                              N.computeVisibleSections(Math.max(0, y * l), D * l),
+                              N.computeVisibleSections(Math.max(0, D * l), y * l),
                               N.getState()),
-                    [L, N, t, n, i, r, s, y, D, l, c, u, _, E, p, T, O, R, m],
+                    [L, N, t, n, i, r, s, D, y, l, c, u, _, E, p, T, O, R, m],
                 )),
                 { ...S.current, masonryComputer: N, forceUpdateOnChunkChange: v, forceUpdate: g }
             );
@@ -368,8 +372,8 @@ function C(e, t, n) {
             sections: O,
             columns: R,
             getItemKey: L,
-            getItemHeight: y,
-            getSectionHeight: D,
+            getItemHeight: D,
+            getSectionHeight: y,
             chunkSize: v,
             itemGutter: U,
             removeEdgeItemGutters: w,

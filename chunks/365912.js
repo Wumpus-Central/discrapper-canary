@@ -25,7 +25,7 @@ class E extends r.Component {
         return (0, i.jsx)(e.Provider, { value: this.getContextValue(n), children: t });
     }
 }
-let A = (e) => {
+function A(e) {
     let { layerContext: t, className: n } = e,
         [, a] = r.useContext(t),
         l = r.useCallback(
@@ -35,7 +35,7 @@ let A = (e) => {
             [a],
         );
     return (0, i.jsx)("div", { className: s()(_, n), ref: l });
-};
+}
 function h(e) {
     let t = (0, o.p3)(e, u.n7);
     if ((null == t && (t = (0, o.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");

@@ -90,7 +90,7 @@ class u extends r.PureComponent {
         return (0, i.jsx)("div", { ref: this.handleSetRef, className: s()(this.props.className, c.i) });
     }
 }
-let _ = (e) => {
+function _(e) {
     let { componentRef: t, ignoreReducedMotion: n = !1, ...a } = e,
         { isWindowFocused: s } = (0, d.G9)(),
         c = (0, l.R)(),
@@ -98,4 +98,4 @@ let _ = (e) => {
         E = _.enabled && !n,
         A = { ...a, isWindowFocused: s?.() ?? c, useReducedMotion: E };
     return (0, i.jsx)(u, { ...A, ref: t });
-};
+}

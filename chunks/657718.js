@@ -32,8 +32,8 @@ function g(e) {
             loading: O,
             loadingStartedLabel: R,
             loadingFinishedLabel: L,
-            rounded: y = !1,
-            type: D = "button",
+            rounded: D = !1,
+            type: y = "button",
             rel: v,
             onClick: b,
             onDoubleClick: M,
@@ -82,10 +82,10 @@ function g(e) {
             "data-mana-component": "button",
             role: t,
             "aria-busy": O,
-            className: s()(f.button, f[Y], f[n], { [f.hasText]: $, [f.fullWidth]: K, [f.rounded]: y }),
+            className: s()(f.button, f[Y], f[n], { [f.hasText]: $, [f.fullWidth]: K, [f.rounded]: D }),
             ref: q,
             rel: v,
-            type: D,
+            type: y,
             onClick: er ? (e) => e.preventDefault() : b,
             onDoubleClick: er ? (e) => e.preventDefault() : M,
             onMouseUp: er ? void 0 : w,
@@ -156,18 +156,18 @@ function N(e) {
     return (
         r.useEffect(() => {
             if (!l && t) {
-                let e = n.current,
-                    t = () => {
-                        o.current?.play();
-                    },
-                    i = () => {
-                        o.current?.pause();
-                    };
+                let t = n.current;
+                function e() {
+                    o.current?.play();
+                }
+                function i() {
+                    o.current?.pause();
+                }
                 return (
-                    e?.addEventListener("mouseenter", t, !0),
-                    e?.addEventListener("mouseleave", i, !0),
+                    t?.addEventListener("mouseenter", e, !0),
+                    t?.addEventListener("mouseleave", i, !0),
                     () => {
-                        e?.removeEventListener("mouseenter", t, !0), e?.removeEventListener("mouseleave", i, !0);
+                        t?.removeEventListener("mouseenter", e, !0), t?.removeEventListener("mouseleave", i, !0);
                     }
                 );
             }
@@ -202,18 +202,18 @@ function C(e) {
     if (
         (r.useEffect(() => {
             if ("object" == typeof t && "sticker" === t.type && null != l.current) {
-                let e = l.current,
-                    t = () => {
-                        o || u(!0);
-                    },
-                    n = () => {
-                        o || u(!1);
-                    };
+                let t = l.current;
+                function e() {
+                    o || u(!0);
+                }
+                function n() {
+                    o || u(!1);
+                }
                 return (
-                    e.addEventListener("mouseenter", t),
-                    e.addEventListener("mouseleave", n),
+                    t.addEventListener("mouseenter", e),
+                    t.addEventListener("mouseleave", n),
                     () => {
-                        e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", n);
+                        t.removeEventListener("mouseenter", e), t.removeEventListener("mouseleave", n);
                     }
                 );
             }

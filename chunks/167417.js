@@ -1,28 +1,28 @@
-i.d(a, { $: () => r });
-var n = i(477900),
-    l = i(901240),
-    c = i(568385),
-    d = i(452027),
-    s = i(289308);
-function r(e) {
-    let { onChange: a, options: i, selectedValues: r, disabled: o = !1, ...p } = e;
-    return (0, n.jsx)(d.D, {
-        ...p,
+n.d(a, { $: () => o });
+var i = n(477900),
+    c = n(901240),
+    l = n(568385),
+    d = n(452027),
+    s = n(289308);
+function o(e) {
+    let { onChange: a, options: n, selectedValues: o, disabled: r = !1, ...u } = e;
+    return (0, i.jsx)(d.D, {
+        ...u,
         role: "group",
-        children: (0, n.jsx)(l.$Q, {
+        children: (0, i.jsx)(c.$Q, {
             className: s.O,
-            value: r.map(String),
-            onChange: (e) => {
+            value: o.map(String),
+            onChange: function (e) {
                 a?.(e);
             },
             "data-mana-component": "checkbox-group",
-            isDisabled: o,
-            children: i.map((e) =>
-                (0, n.jsx)(
-                    c.J,
+            isDisabled: r,
+            children: n.map((e) =>
+                (0, i.jsx)(
+                    l.J,
                     {
-                        disabled: o || e.disabled,
-                        checked: r.includes(e.value),
+                        disabled: r || e.disabled,
+                        checked: o.includes(e.value),
                         label: e.label,
                         value: e.value,
                         description: e.description,
