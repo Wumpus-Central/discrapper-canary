@@ -1059,6 +1059,15 @@ let eK = {
             );
         return { type: I };
     },
+    getSpaceSelectIndex(e) {
+        let {
+                results: { users: t, globals: n },
+                queryText: l,
+            } = e,
+            i = l.toLowerCase(),
+            r = n.findIndex((e) => !0 === e.autoInsertOnSpace && e.test === i);
+        return -1 === r ? null : t.length + r;
+    },
 };
 var eJ = n(307731);
 let ez = { results: { command: null, stickers: [] } };

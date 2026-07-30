@@ -58,6 +58,13 @@ class _ extends i.EventEmitter {
         }
         return this.selectResult(this.state.selectedIndex, e, !0);
     }
+    onSpace() {
+        if (!this.state.isVisible) return !1;
+        let e = this.state.query;
+        if (null == e) return !1;
+        let t = e.typeInfo.getSpaceSelectIndex?.({ results: e.results, queryText: e.queryText });
+        return null != t && this.selectResult(t, !1);
+    }
     onMoveSelection(e) {
         if (!this.state.isVisible) return !1;
         if (
@@ -155,13 +162,13 @@ class _ extends i.EventEmitter {
         i && T.length > 0 && T !== this.state.query?.queryText && (0, a.AR)(f, E);
         let R = !0 === N.isLoading,
             L = this.shouldShow(O, R, p),
-            y = this.state.selectedIndex;
-        !L || R ? (y = null) : null != y && y >= O && (y = O - 1),
+            D = this.state.selectedIndex;
+        !L || R ? (D = null) : null != D && D >= O && (D = O - 1),
             L && !this.state.isVisible && (0, a.uA)(f, this.props.channel, C),
             this.setState({
                 query: { type: f, typeInfo: p, queryText: T, results: N, resultCount: O, options: E, isLoading: R },
                 isVisible: L,
-                selectedIndex: y,
+                selectedIndex: D,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             });
