@@ -18,7 +18,7 @@ var i = n(435558),
     p = n(439174),
     T = n(633075),
     m = n(289173),
-    g = n(210598);
+    g = n(590630);
 function S(e) {
     let t, n;
     if (e?.collectibles == null) return { collectibles: void 0, profileEffect: void 0, profileFrame: void 0 };
@@ -43,8 +43,8 @@ var N = n(652215),
 let O = Symbol("NO GUILD ID"),
     R = new Map(),
     L = new Set(),
-    y = new Map(),
     D = new Map(),
+    y = new Map(),
     v = {},
     b = new Map(),
     M = new Map(),
@@ -64,13 +64,7 @@ function G(e) {
         case s.x.APPLICATION:
             return new T.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
-            if (null == e.data.title) return;
-            try {
-                let t = JSON.parse(e.data.title);
-                return new g.T({ id: e.id, header: t.header, top: t.top, bottom: t.bottom });
-            } catch (e) {
-                return;
-            }
+            return new g.Tu({ id: e.id, header: e.data.header ?? void 0, sections: (0, g.wv)(e.data.sections) });
         default:
             return;
     }
@@ -78,7 +72,7 @@ function G(e) {
 let x = !1,
     k = null;
 function F(e, t) {
-    let n = null != t ? D.get(e)?.get(t) : y.get(e);
+    let n = null != t ? y.get(e)?.get(t) : D.get(e);
     if (n?.collectibles == null) return;
     let i = [];
     n.collectibles.forEach((n) => {
@@ -101,11 +95,11 @@ function F(e, t) {
                     : i.type === a.R.PROFILE_FRAME && (n.profileFrame = void 0),
                     delete v[e]?.[t ?? O]?.[i.skuId];
             }),
-            "guildId" in n ? D.get(e)?.set(n.guildId, n) : y.set(e, n),
+            "guildId" in n ? y.get(e)?.set(n.guildId, n) : D.set(e, n),
             el.emitChange());
 }
 function V() {
-    R.clear(), L.clear(), y.clear(), D.clear(), b.clear(), M.clear(), P.clear(), (x = !1);
+    R.clear(), L.clear(), D.clear(), y.clear(), b.clear(), M.clear(), P.clear(), (x = !1);
 }
 function B(e) {
     let { userId: t } = e;
@@ -175,7 +169,7 @@ function Y(e) {
     null != k && k.userId === t.user.id && (Date.now() > k.expiresAtMs ? (k = null) : K(d, k));
     let c = Date.now();
     if (
-        (y.set(t.user.id, {
+        (D.set(t.user.id, {
             ...S(t.user_profile),
             userId: t.user.id,
             banner: t.user_profile?.banner,
@@ -230,11 +224,11 @@ function Y(e) {
                 fetchStartedAt: n,
                 fetchEndedAt: c,
             },
-            i = D.get(t.user.id);
+            i = y.get(t.user.id);
         if (null != i) i.set(t.guild_member_profile.guild_id, e);
         else {
             let n = new Map();
-            n.set(t.guild_member_profile.guild_id, e), D.set(t.user.id, n);
+            n.set(t.guild_member_profile.guild_id, e), y.set(t.user.id, n);
         }
         F(t.user.id, t.guild_member_profile.guild_id);
     }
@@ -259,7 +253,7 @@ function $(e) {
 function z(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
     R.get(t)?.delete(n ?? O), L.delete(t);
-    let a = y.get(t) ?? {
+    let a = D.get(t) ?? {
             connectedAccounts: [],
             applicationRoleConnections: [],
             premiumSince: null,
@@ -277,8 +271,8 @@ function z(e) {
             fetchError: void 0,
         },
         s = Date.now();
-    if (((a.fetchStartedAt = r), (a.fetchEndedAt = s), (a.fetchError = i), y.set(t, a), null != n)) {
-        let e = D.get(t)?.get(n);
+    if (((a.fetchStartedAt = r), (a.fetchEndedAt = s), (a.fetchError = i), D.set(t, a), null != n)) {
+        let e = y.get(t)?.get(n);
         null != e && ((e.fetchStartedAt = r), (e.fetchEndedAt = s), (e.fetchError = i));
     }
     i?.status === 404 && (M.set(t, 0), b.set(t, U), P.set(t, w));
@@ -301,7 +295,7 @@ function Z(e) {
                           theme_colors: o,
                           collectibles: d,
                       } = e,
-                      c = D.get(t);
+                      c = y.get(t);
                   if (null == n || null == c) return;
                   let u = c.get(n);
                   null == u ||
@@ -328,9 +322,9 @@ function Z(e) {
                           theme_colors: l,
                           collectibles: o,
                       } = e,
-                      d = y.get(t);
+                      d = D.get(t);
                   null == d ||
-                      (y.set(t, {
+                      (D.set(t, {
                           ...d,
                           ...S({ collectibles: o }),
                           accentColor: n,
@@ -348,17 +342,17 @@ function X(e) {
 }
 function Q(e) {
     let { userId: t, widgets: n } = e,
-        i = y.get(t);
+        i = D.get(t);
     if (null == i) return !1;
-    y.set(t, { ...i, widgets: n.map(G).filter(f.Vq) });
+    D.set(t, { ...i, widgets: n.map(G).filter(f.Vq) });
 }
 function J(e) {
     let { badges: t, ttlInSeconds: n, userId: i } = e;
     k = { userId: i, badges: t, expiresAtMs: Date.now() + 1e3 * n };
-    let r = y.get(i);
+    let r = D.get(i);
     if (null != r) {
         let e = r.badges ?? [];
-        K(e, k), y.set(i, { ...r, badges: e });
+        K(e, k), D.set(i, { ...r, badges: e });
     }
 }
 function ee(e) {
@@ -366,7 +360,7 @@ function ee(e) {
     return !((R.get(t)?.size ?? 0) > 0) && ea(t);
 }
 function et(e) {
-    return [...y.keys()].reduce((e, t) => ea(t) || e, !1);
+    return [...D.keys()].reduce((e, t) => ea(t) || e, !1);
 }
 function en(e) {
     return ea(e.user.id);
@@ -375,14 +369,14 @@ function ei(e) {
     return ea(e.relationship.id);
 }
 function er() {
-    R.clear(), L.clear(), y.clear(), D.clear();
+    R.clear(), L.clear(), D.clear(), y.clear();
 }
 function ea(e) {
     if (null == e) return !1;
-    let t = y.get(e);
+    let t = D.get(e);
     if (null == t) return !1;
     (t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0);
-    let n = D.get(e);
+    let n = y.get(e);
     if (null != n) for (let e of n.values()) (e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0);
 }
 class es extends A.A {
@@ -429,10 +423,10 @@ class es extends A.A {
         return x;
     }
     getUserProfile(e) {
-        return y.get(e);
+        return D.get(e);
     }
     getGuildMemberProfile(e, t) {
-        return null == t ? null : (D.get(e)?.get(t) ?? null);
+        return null == t ? null : (y.get(e)?.get(t) ?? null);
     }
     getMutualFriends(e) {
         return b.get(e);
@@ -444,10 +438,10 @@ class es extends A.A {
         return P.get(e);
     }
     getWidgets(e) {
-        return y.get(e)?.widgets;
+        return D.get(e)?.widgets;
     }
     getWishlistIds(e) {
-        let t = y.get(e);
+        let t = D.get(e);
         return t?.wishlistSettings != null ? Object.keys(t.wishlistSettings) : [];
     }
     getFirstWishlistId(e) {
@@ -456,7 +450,7 @@ class es extends A.A {
         return t.length > 0 ? t[0] : null;
     }
     getWishlistSettings(e, t) {
-        let n = y.get(e);
+        let n = D.get(e);
         return n?.wishlistSettings?.[t] ?? null;
     }
     loadCache = () => {
@@ -464,12 +458,12 @@ class es extends A.A {
         null != e &&
             e.forEach((e) => {
                 let { userId: t, profile: n } = e;
-                null != t && (null != n ? y.set(t, n) : y.delete(t));
+                null != t && (null != n ? D.set(t, n) : D.delete(t));
             });
     };
     takeSnapshot() {
         let e = _.default.getId(),
-            t = y.get(e);
+            t = D.get(e);
         return null != t
             ? { version: es.LATEST_SNAPSHOT_VERSION, data: [{ userId: e, profile: t }] }
             : { version: es.LATEST_SNAPSHOT_VERSION, data: [] };
