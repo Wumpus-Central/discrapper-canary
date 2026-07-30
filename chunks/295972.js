@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { D0: () => c, DJ: () => h, Zo: () => E, eb: () => A, uf: () => d });
-var i = n(636537),
+n.d(t, { D0: () => c, DJ: () => I, UQ: () => _, Zo: () => A, eb: () => h, uf: () => d });
+var i = n(562465),
     r = n(228366),
     a = n(393033),
     s = n(280450),
@@ -8,7 +8,7 @@ var i = n(636537),
     o = n(652215);
 async function d(e) {
     let { method: t, classificationId: n, vendor: i } = e;
-    return (0, a.qn)() ? await _({ classificationId: n, method: t }) : await u(t, i);
+    return (0, a.qn)() ? await E({ classificationId: n, method: t }) : await u(t, i);
 }
 async function c(e) {
     let {
@@ -24,7 +24,10 @@ async function c(e) {
 async function u(e, t) {
     return (await i.Bo.post({ url: o.Rsh.VERIFY_AGE, body: { method: e, vendor: t }, rejectWithError: !0 })).body;
 }
-async function _(e) {
+async function _(e, t) {
+    return (await i.Bo.post({ url: o.Rsh.VERIFY_AGE_V2, body: { method: e, vendor: t }, rejectWithError: !0 })).body;
+}
+async function E(e) {
     let { classificationId: t, method: n } = e,
         r = s.default.getSuspendedUserToken();
     return (
@@ -35,10 +38,10 @@ async function _(e) {
         })
     ).body;
 }
-async function E(e) {
+async function A(e) {
     await i.Bo.post({ url: o.Rsh.REGISTER_INCODE_INTERVIEW, body: { interview_id: e }, rejectWithError: !0 });
 }
-async function A() {
+async function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (
         await i.Bo.post({
@@ -48,7 +51,7 @@ async function A() {
         })
     ).body;
 }
-async function h() {
+async function I() {
     let e, t;
     return (
         r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),

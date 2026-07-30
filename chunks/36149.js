@@ -2,23 +2,24 @@
 n.d(t, {
     $8: () => F,
     Dn: () => B,
-    I7: () => ee,
+    I7: () => en,
     NI: () => x,
+    Ny: () => X,
     Q9: () => $,
-    ST: () => Q,
-    Sr: () => X,
+    ST: () => ee,
+    Sr: () => J,
     Wv: () => W,
     Y2: () => H,
     YU: () => Y,
     b8: () => z,
-    dZ: () => Z,
+    dZ: () => Q,
     i2: () => G,
     lU: () => M,
     lW: () => K,
-    mK: () => J,
-    nn: () => q,
+    mK: () => et,
+    nn: () => Z,
     p9: () => w,
-    tC: () => et,
+    tC: () => ei,
     uE: () => V,
     uN: () => j,
     yM: () => k,
@@ -48,8 +49,8 @@ var i,
     O = n(652215),
     R = n(204925),
     L = n(835002),
-    y = n(516761),
-    D = n(375708);
+    D = n(516761),
+    y = n(375708);
 let v = new Set([m.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, m.q1.START_STAGE_PROMPT, m.q1.STAGE_CHANNEL_RAISE_HAND]),
     b = new Set([
         R.w_.NSFW_SERVER,
@@ -145,42 +146,60 @@ function z() {
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
 function q(e) {
-    let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, classificationId: r = null } = e,
-        [s, d] = a.useState(!1),
-        c = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
-        { current: u } = a.useRef(c?.ageVerificationStatus),
-        _ = a.useCallback(() => {
-            o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: u });
-        }, [u]),
-        E = a.useCallback(
-            async (e, a) => {
-                d(!0);
+    let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1 } = e,
+        [r, s] = a.useState(!1),
+        d = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
+        { current: c } = a.useRef(d?.ageVerificationStatus),
+        u = a.useCallback(() => {
+            o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: c });
+        }, [c]);
+    return {
+        loading: r,
+        startVerification: a.useCallback(
+            async (e) => {
+                s(!0);
                 try {
                     o.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-                    let s = await (0, S.uf)({ method: e, classificationId: r ?? void 0, vendor: a }),
-                        l = T.A.showAgeVerification({
-                            webviewUrl: s.verification_webview_url,
-                            verificationRequestId: s.verification_request_id,
-                            verificationVendorName: s.verification_vendor_name,
-                            incodeParameters: s.incode_parameters,
+                    let r = await e(),
+                        a = T.A.showAgeVerification({
+                            webviewUrl: r.verification_webview_url,
+                            verificationRequestId: r.verification_request_id,
+                            verificationVendorName: r.verification_vendor_name,
+                            incodeParameters: r.incode_parameters,
                             onComplete: t,
-                            onClose: _,
-                            onCancel: _,
+                            onClose: u,
+                            onCancel: u,
                             entryPoint: n,
                             shouldShowExpressiveModal: i,
                         });
-                    !1 === l && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
+                    !1 === a && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), u());
                 } catch (e) {
-                    h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _();
+                    h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), u();
                 } finally {
-                    d(!1);
+                    s(!1);
                 }
             },
-            [t, _, i, r, n],
-        );
-    return { loading: s, initiateAgeVerification: E };
+            [t, u, i, n],
+        ),
+    };
 }
 function Z(e) {
+    let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, classificationId: r = null } = e,
+        { loading: s, startVerification: l } = q({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
+    return {
+        loading: s,
+        initiateAgeVerification: a.useCallback(
+            (e, t) => l(() => (0, S.uf)({ method: e, classificationId: r ?? void 0, vendor: t })),
+            [l, r],
+        ),
+    };
+}
+function X(e) {
+    let { onComplete: t, entryPoint: n } = e,
+        { loading: i, startVerification: r } = q({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: !0 });
+    return { loading: i, initiateAgeVerificationV2: a.useCallback((e, t) => r(() => (0, S.UQ)(e, t)), [r]) };
+}
+function Q(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, c.A)(t),
         i = (0, l.bG)([I.default], () => null != I.default.getSuspendedUserToken()),
@@ -191,23 +210,23 @@ function Z(e) {
         (s || o) && e();
     }, [e, s, o]);
 }
-function X(e) {
+function J(e) {
     return null != e && C.zn.has(e);
 }
-function Q(e) {
-    return v.has(e) ? D.intl.string(D.t.lSWVTM) : D.intl.string(D.t.xYXsr6);
+function ee(e) {
+    return v.has(e) ? y.intl.string(y.t.lSWVTM) : y.intl.string(y.t.xYXsr6);
 }
-function J(e, t) {
+function et(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return v.has(e)
-        ? D.intl.string(D.t["S/xS/w"])
+        ? y.intl.string(y.t["S/xS/w"])
         : n
-          ? D.intl.string(y.default.h7qzoa)
+          ? y.intl.string(D.default.h7qzoa)
           : null != t
-            ? D.intl.format(y.default.RpMIT0, { handleOnHelpUrlHook: t })
-            : D.intl.string(D.t.HxS3oQ);
+            ? y.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
+            : y.intl.string(y.t.HxS3oQ);
 }
-function ee(e) {
+function en(e) {
     let t,
         n,
         i =
@@ -218,6 +237,6 @@ function ee(e) {
         i && R.Qx.has(e) && (0, N.z)();
     }, [i, e]);
 }
-async function et() {
+async function ei() {
     return !$() && P() && g.A.shouldCallReactiveCheck() ? await (0, N.z)() : null;
 }

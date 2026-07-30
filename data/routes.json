@@ -264,6 +264,7 @@
   "CAPTCHA_TEST": "/captcha/decider",
   "AGE_ASSURANCE_TEST": "/age-verification/test",
   "VERIFY_AGE": "/age-verification/verify",
+  "VERIFY_AGE_V2": "/age-verification/verify/v2",
   "REGISTER_INCODE_INTERVIEW": "/age-verification/incode/interview",
   "CREATE_INCODE_SESSION": "/age-verification/incode/session",
   "AGE_VERIFICATION_METHODS": "/age-verification/methods",

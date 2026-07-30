@@ -1,33 +1,28 @@
 r.d(t, { default: () => N });
 var s = r(477900),
     l = r(582128),
-    n = r(132500),
-    i = r(772707),
-    a = r(441574),
-    d = r(428103),
-    c = r(26137),
+    i = r(132500),
+    a = r(772707),
+    n = r(441574),
+    c = r(428103),
+    d = r(26137),
     o = r(473935),
     u = r(331322),
-    E = r(289873),
-    h = r(512950),
-    m = r(821609),
-    _ = r(939249),
-    A = r(834730),
-    p = r(320448),
-    v = r(975571),
-    I = r(31720),
-    x = r(847599),
-    C = r(562465),
-    R = r(40449),
-    f = r(652215);
-let T = {
-        [a.mG.FACIAL_AGE_ESTIMATION]: R.VF.FACIAL_AGE_ESTIMATION,
-        [a.mG.ID_SELFIE_MATCH]: R.VF.ID_VERIFICATION,
-        [a.mG.CREDIT_CARD]: R.VF.CREDIT_CARD,
-    },
-    S = { [a.dd.K_ID]: R.XM.K_ID, [a.dd.INCODE]: R.XM.INCODE, [a.dd.GOOGLE_WALLET]: R.XM.GOOGLE_WALLET };
-async function O() {
-    return (await C.Bo.get({ url: f.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => ({
+    h = r(289873),
+    m = r(512950),
+    E = r(821609),
+    p = r(939249),
+    v = r(834730),
+    _ = r(320448),
+    x = r(975571),
+    f = r(31720),
+    A = r(847599),
+    R = r(36149),
+    S = r(228366),
+    g = r(562465),
+    y = r(652215);
+async function C() {
+    return (await g.Bo.get({ url: y.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => ({
         method: e.method,
         vendor: e.vendor,
         title: e.title,
@@ -35,156 +30,137 @@ async function O() {
         providedBy: e.provided_by ?? null,
     }));
 }
-var g = r(36149),
-    y = r(228366),
-    j = r(787301),
-    L = r(516761),
-    V = r(375708),
-    D = r(658103);
-let G = { [a.mG.GOOGLE_WALLET]: d.l, [a.mG.FACIAL_AGE_ESTIMATION]: c.r, [a.mG.ID_SELFIE_MATCH]: o.L },
+var j = r(787301),
+    I = r(516761),
+    T = r(375708),
+    V = r(658103);
+let b = { [n.mG.GOOGLE_WALLET]: c.l, [n.mG.FACIAL_AGE_ESTIMATION]: d.r, [n.mG.ID_SELFIE_MATCH]: o.L },
     N = function (e) {
-        let { transitionState: t, entryPoint: r, onClose: a, dismissable: d } = e,
+        let { transitionState: t, entryPoint: r, onClose: n, dismissable: c } = e,
             {
-                loading: c,
+                loading: d,
                 error: o,
-                methods: C,
-                refetch: R,
+                methods: g,
+                refetch: N,
             } = (function () {
                 let [e, t] = l.useState(() => j.A.methodsV2 ?? []),
                     [r, s] = l.useState(() => null == j.A.methodsV2),
-                    [n, i] = l.useState(!1),
-                    a = l.useRef(!0),
-                    d = l.useCallback(async (e) => {
+                    [i, a] = l.useState(!1),
+                    n = l.useRef(!0),
+                    c = l.useCallback(async (e) => {
                         let r = j.A.methodsV2;
                         if (!e && null != r) {
-                            t(r), s(!1), i(!1);
+                            t(r), s(!1), a(!1);
                             return;
                         }
-                        s(!0), i(!1);
+                        s(!0), a(!1);
                         try {
-                            let e = await O();
-                            y.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
-                                a.current && t(e);
+                            let e = await C();
+                            S.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
+                                n.current && t(e);
                         } catch {
-                            a.current && i(!0);
+                            n.current && a(!0);
                         } finally {
-                            a.current && s(!1);
+                            n.current && s(!1);
                         }
                     }, []);
                 return (
                     l.useEffect(
                         () => (
-                            (a.current = !0),
-                            d(!1),
+                            (n.current = !0),
+                            c(!1),
                             () => {
-                                a.current = !1;
+                                n.current = !1;
                             }
                         ),
-                        [d],
+                        [c],
                     ),
-                    { loading: r, error: n, methods: e, refetch: l.useCallback(() => void d(!0), [d]) }
+                    { loading: r, error: i, methods: e, refetch: l.useCallback(() => void c(!0), [c]) }
                 );
             })(),
-            N = C.length > 0,
-            { initiateAgeVerification: b } = (0, g.nn)({ onComplete: a, entryPoint: r, shouldShowExpressiveModal: !0 }),
-            [M, k] = l.useState(!1),
+            k = g.length > 0,
+            { initiateAgeVerificationV2: O } = (0, R.Ny)({ onComplete: n, entryPoint: r }),
             w = l.useRef(!1),
-            F = l.useMemo(() => (0, n.A)(), []);
+            L = l.useMemo(() => (0, i.A)(), []);
         l.useEffect(() => {
-            (0, x.Bs)(F, x.WU.EXPRESSIVE_V2, r);
-        }, [F, r]);
-        let B = l.useCallback(
+            (0, A.Bs)(L, A.WU.EXPRESSIVE_V2, r);
+        }, [L, r]);
+        let G = l.useCallback(
             async (e) => {
-                if (w.current) return;
-                let t = T[e.method],
-                    r = S[e.vendor];
-                if (((0, x.St)(F, x.WU.EXPRESSIVE_V2, x._7.METHOD_SELECT, t), null == t || null == r))
-                    return void k(!0);
-                w.current = !0;
-                try {
-                    await b(t, r);
-                } finally {
-                    w.current = !1;
+                if (!w.current) {
+                    (0, A.St)(L, A.WU.EXPRESSIVE_V2, A._7.METHOD_SELECT, e.method), (w.current = !0);
+                    try {
+                        await O(e.method, e.vendor);
+                    } finally {
+                        w.current = !1;
+                    }
                 }
             },
-            [b, F],
+            [O, L],
         );
-        return (0, s.jsxs)(i.k, {
+        return (0, s.jsxs)(a.k, {
             transitionState: t,
-            onClose: a,
+            onClose: n,
             gradientColor: "blue",
-            dismissable: d,
+            dismissable: c,
             graphic: {
                 type: "image",
                 src: "https://cdn.discordapp.com/assets/content/f76008165147c5af20b933379e590f857bab9a8c0d80e1222e16dcd34b4b75c2.svg",
                 aspectRatio: "21/9",
             },
-            title: (0, g.ST)(r),
-            subtitle: (0, g.mK)(r, () => {
-                I.A.openUrl(v.A.getArticleURL(f.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                    (0, x.St)(F, x.WU.EXPRESSIVE_V2, x._7.LEARN_MORE);
+            title: (0, R.ST)(r),
+            subtitle: (0, R.mK)(r, () => {
+                f.A.openUrl(x.A.getArticleURL(y.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, A.St)(L, A.WU.EXPRESSIVE_V2, A._7.LEARN_MORE);
             }),
             children: [
-                c && (0, s.jsx)(u.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
-                M &&
-                    (0, s.jsx)(h.p, {
-                        messageType: h.Y.ERROR,
-                        action: (0, s.jsx)(m.$, {
+                d && (0, s.jsx)(u.B, { direction: "vertical", align: "center", children: (0, s.jsx)(h.y, {}) }),
+                !d &&
+                    !k &&
+                    (0, s.jsx)(m.p, {
+                        messageType: m.Y.ERROR,
+                        action: (0, s.jsx)(E.$, {
                             variant: "overlay-secondary",
                             size: "sm",
-                            text: V.intl.string(L.default.b7Oqdu),
-                            onClick: () => k(!1),
+                            text: T.intl.string(I.default.hDvmYP),
+                            onClick: N,
                         }),
-                        children: V.intl.string(L.default["1RD2jW"]),
+                        children: T.intl.string(o ? I.default.Bkmk4Y : I.default.cR6336),
                     }),
-                !M &&
-                    !c &&
-                    !N &&
-                    (0, s.jsx)(h.p, {
-                        messageType: h.Y.ERROR,
-                        action: (0, s.jsx)(m.$, {
-                            variant: "overlay-secondary",
-                            size: "sm",
-                            text: V.intl.string(L.default.hDvmYP),
-                            onClick: R,
-                        }),
-                        children: V.intl.string(o ? L.default.Bkmk4Y : L.default.cR6336),
-                    }),
-                !M &&
-                    N &&
+                k &&
                     (0, s.jsx)(u.B, {
                         direction: "vertical",
                         gap: 8,
-                        children: C.map((e) => {
-                            let t = G[e.method];
+                        children: g.map((e) => {
+                            let t = b[e.method];
                             return (0, s.jsxs)(
-                                _.D,
+                                p.D,
                                 {
-                                    className: D.kZ,
-                                    onClick: () => void B(e),
+                                    className: V.kZ,
+                                    onClick: () => void G(e),
                                     children: [
                                         null != t &&
                                             (0, s.jsx)("div", {
-                                                className: D.zc,
+                                                className: V.zc,
                                                 children: (0, s.jsx)(t, { size: "md", color: "var(--text-strong)" }),
                                             }),
                                         (0, s.jsxs)("div", {
-                                            className: D.Qq,
+                                            className: V.Qq,
                                             children: [
-                                                (0, s.jsx)(A.E, {
+                                                (0, s.jsx)(v.E, {
                                                     variant: "text-md/normal",
                                                     color: "text-strong",
                                                     children: e.title,
                                                 }),
-                                                (0, s.jsx)(A.E, {
+                                                (0, s.jsx)(v.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     children: e.description,
                                                 }),
                                                 null != e.providedBy &&
                                                     (0, s.jsx)("div", {
-                                                        className: D.Vp,
-                                                        children: (0, s.jsx)(A.E, {
+                                                        className: V.Vp,
+                                                        children: (0, s.jsx)(v.E, {
                                                             variant: "text-sm/normal",
                                                             color: "text-subtle",
                                                             children: e.providedBy,
@@ -192,7 +168,7 @@ let G = { [a.mG.GOOGLE_WALLET]: d.l, [a.mG.FACIAL_AGE_ESTIMATION]: c.r, [a.mG.ID
                                                     }),
                                             ],
                                         }),
-                                        (0, s.jsx)(p._, { className: D.ai }),
+                                        (0, s.jsx)(_._, { className: V.ai }),
                                     ],
                                 },
                                 `${e.method}-${e.vendor}`,
