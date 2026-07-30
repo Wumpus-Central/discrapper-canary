@@ -12,6 +12,7 @@ var i = n(562465),
 class _ extends u.A {
     id;
     applicationId;
+    name;
     displayName;
     rewardType;
     rewardStatus;
@@ -28,6 +29,7 @@ class _ extends u.A {
         return new _({
             id: e.id,
             applicationId: e.application_id,
+            name: e.name ?? null,
             displayName: e.display_name ?? null,
             rewardType: e.reward_type,
             rewardStatus: e.reward_status ?? null,
@@ -104,6 +106,7 @@ class _ extends u.A {
         super(),
             (this.id = e.id),
             (this.applicationId = e.applicationId),
+            (this.name = e.name),
             (this.displayName = e.displayName),
             (this.rewardType = e.rewardType),
             (this.rewardStatus = e.rewardStatus),
