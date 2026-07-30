@@ -4658,6 +4658,7 @@ var rv =
         (ew.CLIPS_SESSION_STARTED = "clips_session_started"),
         (ew.CLIPS_SESSION_ENDED = "clips_session_ended"),
         (ew.CLIP_PROMOTED = "clip_promoted"),
+        (ew.CLIP_EXPORTED = "clip_exported"),
         (ew.STANDALONE_BILLING_FLOW_STARTED = "standalone_billing_flow_started"),
         (ew.DUNNING_EMAIL_LANDING_VIEWED = "dunning_email_landing_viewed"),
         (ew.PAST_DUE_CHECKOUT_INVOICE_LOAD_FAILED = "past_due_checkout_invoice_load_failed"),

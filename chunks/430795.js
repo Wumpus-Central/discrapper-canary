@@ -6,7 +6,7 @@ n.d(t, {
     YP: () => ei,
     Uh: () => ea,
     Fb: () => eC,
-    VO: () => eD,
+    VO: () => ey,
     uL: () => eU,
     GS: () => el,
     fd: () => en,
@@ -26,7 +26,7 @@ n.d(t, {
     K7: () => eR,
     HU: () => es,
     Mt: () => er,
-    oH: () => ey,
+    oH: () => eD,
     Yy: () => eh,
     Vp: () => eT,
     XK: () => eI,
@@ -58,8 +58,8 @@ var i = n(562465),
     O = n(486925),
     R = n(915725),
     L = n(372684),
-    y = n(974293),
-    D = n(458977),
+    D = n(974293),
+    y = n(458977),
     v = n(439818),
     b = n(572164);
 let M = ["filepath", "sizeBytes"];
@@ -422,7 +422,7 @@ function eo(e) {
 }
 async function ed(e) {
     if (
-        !D.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
+        !y.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
         e.isCandidate ||
         null == e.applicationId ||
         e.decision?.signal.type !== L.Gy.MANUAL
@@ -496,8 +496,8 @@ async function eu(e) {
     g.isCandidate = o ?? !1;
     let S = `${(0, v.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
         C = a.A.fileManager.join(T, S),
-        y = p.Ay.getMediaEngine(),
-        D = JSON.stringify(g),
+        D = p.Ay.getMediaEngine(),
+        y = JSON.stringify(g),
         b = N.TX(g),
         M =
             ((t = p.Ay.getNoiseCancellation()),
@@ -519,9 +519,9 @@ async function eu(e) {
             clipStats: i,
             thumbnail: s,
             metadata: l,
-        } = await y.saveClipEx({
+        } = await D.saveClipEx({
             filepath: C,
-            metadata: D,
+            metadata: y,
             thumbnailMs: w,
             startMs: P,
             endMs: U,
@@ -575,7 +575,7 @@ async function eu(e) {
                 } catch (e) {
                     G.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                (g.thumbnail = e), await y.updateClipMetadata(C, JSON.stringify(g));
+                (g.thumbnail = e), await D.updateClipMetadata(C, JSON.stringify(g));
             }
             t = g;
         }
@@ -599,7 +599,7 @@ async function e_(e) {
         n = [...Object.values(R.Ay.getClips()), ...R.Ay.getClipCandidates()].filter((e) => (0, O.Fk)(e.filepath, t));
     for (let t of (0, O.SF)(n, G.CN, e))
         try {
-            await ey(t, !1);
+            await eD(t, !1);
         } catch (e) {
             G.nx.error("Failed to evict transient clip", e);
         }
@@ -616,7 +616,7 @@ async function eE(e) {
     } = e;
     if (R.Ay.getIsAtMaxSaveClipOperations())
         return void r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: L.RC.MAX_CONCURRENT_SAVES });
-    if ((0, y.qi)("saveClip") && !(0, J.t_)()) {
+    if ((0, D.qi)("saveClip") && !(0, J.t_)()) {
         G.nx.warn("Save clip ignored: discord_clips module not loaded yet"),
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: L.RC.MODULE_NOT_LOADED });
         return;
@@ -641,7 +641,7 @@ async function eE(e) {
                 hasClipsSource: f,
             },
         });
-    if ((0, y.qi)("saveClip") && p.Ay.isClipsRecordingReadySignalSupported() && !p.Ay.isClipsRecordingReady()) {
+    if ((0, D.qi)("saveClip") && p.Ay.isClipsRecordingReadySignalSupported() && !p.Ay.isClipsRecordingReady()) {
         G.nx.warn("Save clip ignored: clips recorder not ready (still starting up or idle shut down)"),
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: L.RC.RECORDING_NOT_READY });
         return;
@@ -668,7 +668,7 @@ async function eE(e) {
                 let t = n.sort((e, t) => e.createdAt - t.createdAt).slice(0, i);
                 for (let n of (G.nx.info(`Deleting ${t.length} temporary clips to stay within limit of ${e}`), t))
                     try {
-                        await ey(n, !1);
+                        await eD(n, !1);
                     } catch (e) {
                         G.nx.error("Failed to delete temporary clip", e);
                     }
@@ -684,7 +684,7 @@ async function eE(e) {
             decisionSignals: o,
         });
         if (s && null != e.gameSessionId && R.Ay.getCurrentClipsSession()?.id !== e.gameSessionId) {
-            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), ey(e);
+            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), eD(e);
             return;
         }
         r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }), (0, O.C5)(t) && (await e_(e.id)), ed(e);
@@ -712,7 +712,7 @@ async function eE(e) {
 async function eA(e) {
     let t, n;
     if (R.Ay.getIsAtMaxSaveClipOperations()) return;
-    if ((0, y.qi)("saveScreenshotFromClip") && !(0, J.t_)())
+    if ((0, D.qi)("saveScreenshotFromClip") && !(0, J.t_)())
         return void G.nx.warn("Screenshot ignored: discord_clips module not loaded yet");
     let i = p.Ay.getMediaEngine(),
         s = Q(e, L.nQ.SCREENSHOT),
@@ -763,10 +763,10 @@ async function eh(e, t) {
     let s = { ...i, ...t };
     if (null == (await V(s))) return;
     let l = a.A.clips.updateClipMetadata;
-    (0, y.qi)("updateClipMetadata") && s.type === L.nQ.CLIP && null != l
+    (0, D.qi)("updateClipMetadata") && s.type === L.nQ.CLIP && null != l
         ? await l(s.filepath, P(s))
         : await p.Ay.getMediaEngine().updateClipMetadata(s.filepath, P(s)),
-        n && m.default.track(d.HAw.CLIP_EDITED, { clip_uuid: s.id, ...N.lc("updateClipMetadata") }),
+        n && N.PQ(i, t),
         r.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: s });
 }
 async function eI(e) {
@@ -879,7 +879,7 @@ async function eL(e) {
     }
     return !0;
 }
-async function ey(e) {
+async function eD(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, g.isDesktop)() || a.A.clips?.deleteClip == null) return;
     let { filepath: n, id: i } = e;
@@ -895,12 +895,14 @@ async function ey(e) {
               }))
         : r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
-async function eD(e) {
+async function ey(e, t) {
+    let { analyticsLocations: n } = t,
+        i = performance.now();
     try {
         eb([e.id]);
         let t = p.Ay.getMediaEngine();
         if (
-            (0, y.qi)("exportClip") &&
+            (0, D.qi)("exportClip") &&
             ((0, J.UW)({ forceV3Capability: !0 }), !(0, J.t_)()) &&
             (await (0, J.so)({ forceV3Capability: !0 }), !(0, J.t_)())
         )
@@ -917,7 +919,7 @@ async function eD(e) {
             }),
             crop: (0, L._1)(e.editMetadata?.crop) ?? void 0,
         };
-        if (t.hasExportClipToFile() && (0, y.qi)("exportClip")) {
+        if (t.hasExportClipToFile() && (0, D.qi)("exportClip")) {
             let n = await a.A.app.getPath("temp"),
                 i = a.A.fileManager.join(n, "Discord Clips"),
                 s = `${crypto.randomUUID()}-${Date.now()}.mp4`,
@@ -937,6 +939,13 @@ async function eD(e) {
         return K(s);
     } finally {
         eb(null);
+        let t = performance.now();
+        m.default.track(d.HAw.CLIP_EXPORTED, {
+            ...N.lc("exportClip"),
+            ...N.Zy(e),
+            location_stack: n,
+            export_duration: t - i,
+        });
     }
 }
 async function ev(e) {

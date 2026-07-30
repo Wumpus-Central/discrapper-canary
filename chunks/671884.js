@@ -308,13 +308,14 @@ function e1(e) {
                             l.e("38601"),
                             l.e("18489"),
                             l.e("69006"),
-                            l.e("18307"),
+                            l.e("40688"),
                             l.e("86456"),
                             l.e("80955"),
                         ]).then(l.bind(l, 80982));
                         return (l) =>
                             (0, n.jsx)(e, {
                                 ...l,
+                                analyticsLocations: m,
                                 clips: i,
                                 actionsDisabled: t,
                                 onSelectClip: null != f ? () => f(d) : void 0,
@@ -346,7 +347,7 @@ function e1(e) {
                     { onClose: O },
                 );
             },
-            [d, g, h, t, O, o, z, f],
+            [d, g, h, t, O, o, z, f, m],
         ),
         K = i.useCallback(
             (e) => {
@@ -415,7 +416,7 @@ function e1(e) {
                             ],
                         }),
                     }),
-                    (0, n.jsx)(e8, { showHoverState: _, playbackProgress: E, onEdit: $, onSeek: G }),
+                    (0, n.jsx)(e7, { showHoverState: _, playbackProgress: E, onEdit: $, onSeek: G }),
                 ],
             }),
         }),
@@ -477,7 +478,7 @@ function e9() {
     return (0, n.jsxs)("div", {
         className: eJ.E4,
         children: [
-            (0, n.jsx)(e7, {}),
+            (0, n.jsx)(e8, {}),
             e.isFavorite &&
                 (0, n.jsx)("div", {
                     className: s()(eJ.cH, eJ.y8),
@@ -487,7 +488,7 @@ function e9() {
         ],
     });
 }
-function e7() {
+function e8() {
     let e = (0, eF.Y_)(),
         t = 0 === e.length,
         l = !0 === e.pending,
@@ -529,7 +530,7 @@ function e7() {
               ],
           });
 }
-function e8(e) {
+function e7(e) {
     let { showHoverState: t, playbackProgress: l, onEdit: a, onSeek: r } = e,
         o = (0, eF.Y_)(),
         c = o.type === T.nQ.SCREENSHOT,
@@ -2072,8 +2073,8 @@ function t9(e) {
         ],
     });
 }
-var t7 = l(430643);
-function t8(e) {
+var t8 = l(430643);
+function t7(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: a, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: o } = tq.useConfig({ location: "ClipsGalleryHome" }),
         c = i.useMemo(() => tZ(t), [t]),
@@ -2130,15 +2131,15 @@ function t8(e) {
         }, []);
     return p.length > 0 || d
         ? (0, n.jsx)(t$.Ip, {
-              className: t7.iR,
+              className: t8.iR,
               fade: !0,
               children: (0, n.jsxs)("div", {
-                  className: t7.Qs,
+                  className: t8.Qs,
                   ref: v,
                   children: [
                       d &&
                           (0, n.jsx)("div", {
-                              className: t7.Dk,
+                              className: t8.Dk,
                               children: (0, n.jsx)(t0, { clips: t, onEdit: a, onEdgeNavigate: b }),
                           }),
                       p.length > 0 &&
@@ -2166,7 +2167,7 @@ function t8(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t7.dp,
+                                      className: t8.dp,
                                       children: (0, n.jsx)(eA.$, {
                                           variant: "primary",
                                           text: ed.intl.string(eu.default.RQtkop),
@@ -2179,7 +2180,7 @@ function t8(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(B.y, {}) })
+          ? (0, n.jsx)("div", { className: t8.dc, children: (0, n.jsx)(B.y, {}) })
           : (0, n.jsx)(eg, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(7689),
@@ -2763,7 +2764,7 @@ function lx(e) {
                                             ],
                                         }),
                                         eP === V.fB.HOME
-                                            ? (0, n.jsx)(t8, {
+                                            ? (0, n.jsx)(t7, {
                                                   filteredClips: el,
                                                   totalClipCount: ea.length,
                                                   onEdit: eH,

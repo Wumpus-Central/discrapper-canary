@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M }), n(321073);
+n.d(t, { A: () => P }), n(321073);
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
@@ -91,7 +91,7 @@ function p(e) {
           };
 }
 var T = n(575279);
-let m = new (r())({ max: 10, dispose: D }),
+let m = new (r())({ max: 10, dispose: v }),
     g = new Map();
 function S(e, t) {
     let n = g.get(e);
@@ -144,6 +144,24 @@ function L(e) {
         _ = "MESSAGE_REACTION_ADD" === t ? c.message.addReaction(a, u, e.colors, s) : c.message.removeReaction(a, u, s);
     return R(l, c, i, _), !0;
 }
+function D() {
+    let e = !1;
+    return (
+        m.forEach((t) => {
+            t.messageMetadataByMessageId.forEach((n, i) => {
+                if (null == n.message) return;
+                let r = u.A.isBlockedForMessage(n.message),
+                    a = u.A.isIgnoredForMessage(n.message);
+                if (n.message.blocked !== r || n.message.ignored !== a) {
+                    e = !0;
+                    let s = n.message.set("blocked", r).set("ignored", a);
+                    R(t, n, i, s);
+                }
+            });
+        }),
+        e
+    );
+}
 function y(e, t) {
     let n = m.peek(e);
     if (null == n) return !1;
@@ -154,16 +172,16 @@ function y(e, t) {
     }
     return n.messageMetadataByMessageId.delete(t);
 }
-function D(e) {
+function v(e) {
     return g.delete(e);
 }
-function v(e) {
+function b(e) {
     let t = m.has(e);
     m.del(e);
-    let n = D(e);
+    let n = v(e);
     return t || n;
 }
-class b extends a.Ay.Store {
+class M extends a.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
         this.waitFor(d.default, c.A, I.A, u.A, _.Ay, E.default);
@@ -223,7 +241,7 @@ class b extends a.Ay.Store {
         return m.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let M = new b(s.h, {
+let P = new M(s.h, {
     CONVERSATION_FETCH_START: function (e) {
         var t;
         let n,
@@ -366,13 +384,13 @@ let M = new b(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return v(t.id);
+        return b(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let e of m.keys()) m.peek(e)?.guildId === t.id && v(e) && (n = !0);
+        for (let e of m.keys()) m.peek(e)?.guildId === t.id && b(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
@@ -450,6 +468,9 @@ let M = new b(s.h, {
         for (let e of n) y(t, e) && (i = !0);
         return i;
     },
+    RELATIONSHIP_ADD: D,
+    RELATIONSHIP_UPDATE: D,
+    RELATIONSHIP_REMOVE: D,
     LOGOUT: function () {
         m.reset(), g.clear(), N.clear();
     },

@@ -25,7 +25,7 @@ async function h(e, t) {
             let t = [],
                 n = [];
             for (let i of e) {
-                let e = await (0, _.VO)(i),
+                let e = await (0, _.VO)(i, { analyticsLocations: I }),
                     r = (0, E.A)(i, i.type === u.nQ.SCREENSHOT ? "jpeg" : "mp4");
                 switch (i.type) {
                     case u.nQ.CLIP:
