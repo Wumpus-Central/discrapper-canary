@@ -24,6 +24,7 @@ class o {
     giftCardWallet;
     giftCardsEnabled;
     hasInitialPaymentSourceSeed;
+    hasAddedPaymentSourceThisSession;
     constructor({
         checkoutPaymentSources: e,
         dropdownPaymentSources: t,
@@ -34,6 +35,7 @@ class o {
         paymentSourceId: o,
         giftCardsEnabled: u,
         hasInitialPaymentSourceSeed: s,
+        hasAddedPaymentSourceThisSession: a,
     }) {
         (this.checkoutPaymentSources = e),
             (this.isReady = l),
@@ -43,7 +45,8 @@ class o {
             (this.subscriptionPaymentSourceId = n),
             (this.giftCardWallet = r),
             (this.giftCardsEnabled = u),
-            (this.hasInitialPaymentSourceSeed = s);
+            (this.hasInitialPaymentSourceSeed = s),
+            (this.hasAddedPaymentSourceThisSession = a);
     }
     get hasPaymentSourcesFromCheckoutStore() {
         return this.isReady && this.checkoutPaymentSources.length > 0;
@@ -65,7 +68,8 @@ class o {
             !t.current &&
             !!this.hasPaymentSourcesFromCheckoutStore &&
             !this.isPendingPaymentSourceEqualToCurrent &&
-            (!this.hasInitialPaymentSourceSeed || !this.isSelectedPaymentSourceValid)
+            ((!this.hasInitialPaymentSourceSeed && !this.hasAddedPaymentSourceThisSession) ||
+                !this.isSelectedPaymentSourceValid)
         );
     }
     checkAndResolveInitialPaymentSourceId(e) {

@@ -44,15 +44,21 @@ let f = (e) => {
             paymentSources: s,
             initialPaymentSourceId: o,
         } = e,
-        { setPaymentSourceId: u, setPendingPaymentSourceId: p } = (0, C.t4)((e) => ({
+        {
+            setPaymentSourceId: u,
+            setPendingPaymentSourceId: p,
+            setHasAddedPaymentSourceThisSession: m,
+        } = (0, C.t4)((e) => ({
             setPaymentSourceId: e.setPaymentSourceId,
             setPendingPaymentSourceId: e.setPendingPaymentSourceId,
+            setHasAddedPaymentSourceThisSession: e.setHasAddedPaymentSourceThisSession,
         })),
-        m = i.useRef(!1),
-        f = i.useCallback(() => {
-            if (!m.current) {
+        f = i.useRef(!1),
+        A = i.useRef(!1),
+        S = i.useCallback(() => {
+            if (!f.current && !A.current) {
                 if (h(o, { paymentSources: s, eligiblePaymentGateways: r })) {
-                    u(o), (m.current = !0);
+                    u(o), (f.current = !0);
                     return;
                 }
                 u(
@@ -67,24 +73,24 @@ let f = (e) => {
             }
         }, [t, n, l, r, u, o]);
     i.useEffect(() => {
-        a ? f() : (0, d.$o)();
-    }, [a, f]);
-    let A = i.useCallback(
+        a ? S() : (0, d.$o)();
+    }, [a, S]);
+    let y = i.useCallback(
         (e) => {
             let { paymentSource: t } = e;
-            p(t.id), u(t.id);
+            (A.current = !0), m(), p(t.id), u(t.id);
         },
-        [u, p],
+        [u, p, m],
     );
     return (
         i.useEffect(
             () => (
-                c.h.subscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", A),
+                c.h.subscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", y),
                 () => {
-                    c.h.unsubscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", A);
+                    c.h.unsubscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", y);
                 }
             ),
-            [A],
+            [y],
         ),
         null
     );
