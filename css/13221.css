@@ -453,9 +453,9 @@
     background-color: var(--background-mod-normal);
     border-radius: var(--radius-md);
     box-sizing: border-box;
-    max-width: 240px;
     padding: var(--space-12) var(--space-16);
-    width: 100%
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .closeButton_f5cd6a {
