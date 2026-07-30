@@ -1,4 +1,4 @@
-n.d(t, { A: () => w }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -22,10 +22,10 @@ var i = n(477900),
     E = n(564009),
     N = n(880872),
     I = n(849351),
-    T = n(572316),
-    b = n(192063);
+    b = n(572316),
+    T = n(192063);
 let _ = {
-        0: { src: T.A, alt: j.default.IrukuA },
+        0: { src: b.A, alt: j.default.IrukuA },
         1: { src: I.A, alt: j.default.yITFQ7 },
         2: { src: N.A, alt: j.default.uUhyVw },
     },
@@ -86,7 +86,7 @@ function L(e) {
             clearTimeout(n);
         };
     }, [a, m, I]);
-    let T = l.useCallback(() => {
+    let b = l.useCallback(() => {
         a?.objectId != null && (0, f.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
     }, [a, t, n]);
     return (0, i.jsxs)(y.T, {
@@ -103,25 +103,23 @@ function L(e) {
                         },
                         onClick: h ? void 0 : n,
                         "aria-disabled": h,
+                        role: "listitem",
+                        "aria-label": v.intl.string(_[m].alt),
                         ...l,
                         children: [
                             N((e, t) => {
-                                let { src: n, alt: l } = _[t],
-                                    a = t === m;
+                                let { src: n } = _[t],
+                                    l = t === m;
                                 return (0, i.jsx)(r.animated.img, {
-                                    className: s()(E.zs, { [E.tB]: !a }),
+                                    className: s()(E.zs, { [E.tB]: !l }),
                                     style: { opacity: e.opacity },
                                     src: n,
-                                    alt: v.intl.string(l),
+                                    alt: "",
+                                    "aria-hidden": !0,
                                     draggable: !1,
                                 });
                             }),
-                            (0, i.jsx)("img", {
-                                className: E.tB,
-                                src: b.A,
-                                alt: v.intl.string(j.default.cPQCeg),
-                                draggable: !1,
-                            }),
+                            (0, i.jsx)("img", { className: E.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
                         ],
                     });
                 },
@@ -132,24 +130,26 @@ function L(e) {
                     icon: u.B,
                     text: v.intl.string(j.default.aduS3B),
                     selected: !1,
-                    onClick: T,
+                    onClick: b,
                 }),
             }),
         ],
     });
 }
-function O(e) {
+function w(e) {
     let { plantPosition: t, plantWidth: n } = e;
     return (0, i.jsxs)("div", {
         className: E.CV,
+        role: "listitem",
+        "aria-label": v.intl.string(j.default.IrukuA),
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: E.zs, src: T.A, alt: v.intl.string(j.default.IrukuA), draggable: !1 }),
-            (0, i.jsx)("img", { className: E.tB, src: b.A, alt: v.intl.string(j.default.cPQCeg), draggable: !1 }),
+            (0, i.jsx)("img", { className: E.zs, src: b.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: E.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });
 }
-function w(e) {
+function O(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
         d = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
         u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
@@ -175,7 +175,7 @@ function w(e) {
                             { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A || f, plantWidth: g },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: g }, n);
+                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: g }, n);
               }),
           });
 }

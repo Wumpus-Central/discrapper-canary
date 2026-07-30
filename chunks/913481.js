@@ -146,7 +146,12 @@ function I(e) {
                     children: (0, i.jsx)(N, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r }),
                 }),
             o?.position != null && (0, i.jsx)(A.A, { channelId: t, position: o.position, roomWidth: n }),
-            d.map((e) => (0, i.jsx)(p.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
+            d.length > 0 &&
+                (0, i.jsx)("div", {
+                    role: "list",
+                    "aria-label": g.intl.string(x.default.zzZaRe),
+                    children: d.map((e) => (0, i.jsx)(p.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
+                }),
         ],
     });
 }

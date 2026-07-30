@@ -22,21 +22,21 @@ var i = n(477900),
     E = n(558076),
     N = n(360729),
     I = n(996752),
-    T = n(610274),
-    b = n(655413),
+    b = n(610274),
+    T = n(655413),
     _ = n(884863),
     R = n(971954),
     S = n(662731),
     P = n(375708),
     L = n(820447);
-function O(e) {
+function w(e) {
     let {
             userId: t,
             channelId: a,
             x: N,
             y: I,
-            statusId: O,
-            numericAvatarSize: w,
+            statusId: w,
+            numericAvatarSize: O,
             avatarSize: M,
             posturesEnabled: D,
         } = e,
@@ -51,8 +51,8 @@ function O(e) {
         Y = (0, c.bG)([E.A], () => E.A.getRoom(a)?.background ?? o.I.DEFAULT),
         { seats: K } = R.iX[Y],
         X = K.find((e) => e.position.x === N && e.position.y === I),
-        $ = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
-        Z = l.useCallback(() => {
+        Z = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
+        $ = l.useCallback(() => {
             null != B && (0, v.EB)({ guildId: B, channelId: a, targetUserId: t, interactionType: "clicked" });
         }, [t, B, a]),
         q = l.useCallback(
@@ -107,9 +107,14 @@ function O(e) {
             null != B && (0, v.EB)({ guildId: B, channelId: a, targetUserId: t, interactionType: "hovered" });
         }, [t, B, a]);
     if (null == U || null == B) return null;
-    let J = (0, i.jsx)(A.A, {
+    let J = H?.isVoiceDeafened()
+            ? P.intl.formatToPlainString(P.t["9hDjai"], { username: W })
+            : H?.isVoiceMuted()
+              ? P.intl.formatToPlainString(P.t.Hd1oVG, { username: W })
+              : W,
+        ee = (0, i.jsx)(A.A, {
             userId: U.id,
-            src: U.getAvatarURL(B, w, F && z),
+            src: U.getAvatarURL(B, O, F && z),
             size: M,
             muted: H?.isVoiceMuted() ?? !1,
             deafen: H?.isVoiceDeafened() ?? !1,
@@ -117,25 +122,25 @@ function O(e) {
             ringing: !1,
             className: X?.dim ? L.r3 : void 0,
         }),
-        ee = { left: $.x.to((e) => `calc(${e}% - ${w / 2}px)`), top: $.y.to((e) => `calc(${e}% - ${w / 2}px)`) };
+        et = { left: Z.x.to((e) => `calc(${e}% - ${O / 2}px)`), top: Z.y.to((e) => `calc(${e}% - ${O / 2}px)`) };
     if (!D)
         return (0, i.jsx)(r.animated.div, {
-            "aria-label": W,
+            role: "listitem",
             className: L.f1,
-            style: ee,
-            children: (0, i.jsx)(u.D, { onMouseEnter: Q, onClick: Z, onContextMenu: q, children: J }),
+            style: et,
+            children: (0, i.jsx)(u.D, { "aria-label": J, onMouseEnter: Q, onClick: $, onContextMenu: q, children: ee }),
         });
-    let et = T.x.find((e) => e.id === O),
-        en = et?.icon,
-        ei = (0, i.jsxs)("div", {
+    let en = b.x.find((e) => e.id === w),
+        ei = en?.icon,
+        el = (0, i.jsxs)("div", {
             className: L.R3,
             children: [
-                J,
-                null != et &&
-                    null != en &&
+                ee,
+                null != en &&
+                    null != ei &&
                     (0, i.jsx)("div", {
                         className: s()(L.qS, L.Od),
-                        children: (0, i.jsx)(en, { size: "xxs", color: "currentColor" }),
+                        children: (0, i.jsx)(ei, { size: "xxs", color: "currentColor" }),
                     }),
                 k &&
                     (0, i.jsx)("div", {
@@ -145,9 +150,9 @@ function O(e) {
             ],
         });
     return (0, i.jsx)(r.animated.div, {
-        "aria-label": W,
+        role: "listitem",
         className: L.f1,
-        style: ee,
+        style: et,
         children: k
             ? (0, i.jsxs)(_.T, {
                   isOpen: V,
@@ -156,38 +161,39 @@ function O(e) {
                       (0, i.jsx)(_.T.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e;
-                              return (0, i.jsx)(b.A, {
+                              return (0, i.jsx)(T.A, {
                                   name: W,
-                                  status: et,
+                                  status: en,
                                   shouldShow: !V,
                                   children: (0, i.jsx)(u.D, {
                                       ...l,
+                                      "aria-label": J,
                                       className: s()(L.hZ, { [L.Zu]: V }),
                                       innerRef: (e) => {
                                           t.current = e;
                                       },
                                       onMouseEnter: Q,
                                       onClick: () => {
-                                          n(), Z();
+                                          n(), $();
                                       },
                                       onContextMenu: q,
-                                      children: ei,
+                                      children: el,
                                   }),
                               });
                           },
                       }),
                       (0, i.jsx)(_.T.Popup, {
                           "aria-label": P.intl.string(S.default.LTAf2V),
-                          children: T.x.map((e) => {
+                          children: b.x.map((e) => {
                               let t = e.icon;
                               return (0, i.jsx)(
                                   _.T.Item,
                                   {
                                       text: P.intl.string(e.label),
                                       icon: t,
-                                      selected: O === e.id,
+                                      selected: w === e.id,
                                       onClick: () => {
-                                          let t = O === e.id;
+                                          let t = w === e.id;
                                           (0, j.AQ)(B, a, {
                                               user_status_id: t ? 0 : e.id,
                                               user_status_text: t ? "" : P.intl.string(e.label),
@@ -200,21 +206,29 @@ function O(e) {
                       }),
                   ],
               })
-            : (0, i.jsx)(b.A, {
+            : (0, i.jsx)(T.A, {
                   name: W,
-                  status: et,
-                  children: (0, i.jsx)(u.D, { onMouseEnter: Q, onClick: Z, onContextMenu: q, children: ei }),
+                  status: en,
+                  children: (0, i.jsx)(u.D, {
+                      "aria-label": J,
+                      onMouseEnter: Q,
+                      onClick: $,
+                      onContextMenu: q,
+                      children: el,
+                  }),
               }),
     });
 }
-function w(e) {
+function O(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
         { posturesEnabled: r } = N.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
-    return (0, i.jsx)(i.Fragment, {
+    return (0, i.jsx)("div", {
+        role: "list",
+        "aria-label": P.intl.string(S.default.xn1EI9),
         children: l.entries().map((e) => {
             let [n, l] = e;
             return (0, i.jsx)(
-                O,
+                w,
                 {
                     userId: n,
                     channelId: t,
@@ -237,5 +251,5 @@ function M(e) {
         { numericAvatarSize: s, avatarSize: r } = (0, I.F)(n);
     return 0 === a.size || null == l
         ? null
-        : (0, i.jsx)(w, { channelId: t, guildId: l, users: a, numericAvatarSize: s, avatarSize: r });
+        : (0, i.jsx)(O, { channelId: t, guildId: l, users: a, numericAvatarSize: s, avatarSize: r });
 }

@@ -18,17 +18,17 @@ var i = n(17928),
     p = n(818085),
     T = n(375708);
 let m = "message1",
-    g = new Set(["reply", "plan_proposed", "preview_ready", "terminal_error"]);
+    g = new Set(["reply", "plan_proposed", "terminal_error"]);
 function S(e) {
-    return "" !== e.content || null != e.proposal || e.steps.some((e) => g.has(e.kind));
+    return !0 === e.finished || "" !== e.content || null != e.proposal || e.steps.some((e) => g.has(e.kind));
 }
 let N = new Map(),
     C = new Map(),
     O = new Map(),
     R = new Map(),
     L = 0,
-    y = null,
-    D = [],
+    D = null,
+    y = [],
     v = 0;
 function b(e, t, n) {
     return { id: `m${++v}`, role: e, content: t, steps: [], created_at: null != n ? Date.parse(n) : Date.now() };
@@ -136,7 +136,7 @@ class x extends i.Ay.Store {
         this.waitFor(s.A, c.A, u.Ay, _.A, E.A, h.A);
     }
     getMessages(e) {
-        return N.get(e) ?? D;
+        return N.get(e) ?? y;
     }
     isThinking(e) {
         return U(e);
@@ -151,7 +151,7 @@ class x extends i.Ay.Store {
         return L;
     }
     getBuilderPreviewApplicationId() {
-        return y;
+        return D;
     }
     isAnyThinking() {
         for (let e of N.keys()) if (this.isThinking(e)) return !0;
@@ -160,8 +160,8 @@ class x extends i.Ay.Store {
 }
 let k = new x(r.h, {
     LOGOUT: function () {
-        if (0 === N.size && 0 === C.size && 0 === O.size && 0 === R.size && 0 === L && null == y) return !1;
-        N.clear(), C.clear(), O.clear(), R.clear(), (L = 0), (y = null);
+        if (0 === N.size && 0 === C.size && 0 === O.size && 0 === R.size && 0 === L && null == D) return !1;
+        N.clear(), C.clear(), O.clear(), R.clear(), (L = 0), (D = null);
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n } = e;
@@ -176,6 +176,10 @@ let k = new x(r.h, {
         let { projectId: t, step: n } = e;
         P(t, (e) => ({ ...e, steps: [...e.steps, n] })), w(t);
     },
+    VIBEGRATIONS_CHAT_TURN_FINISHED: function (e) {
+        let { projectId: t, summary: n } = e;
+        P(t, (e) => ({ ...e, finished: !0, content: "" !== e.content ? e.content : (n ?? "") })), w(t);
+    },
     VIBEGRATIONS_CHAT_USAGE_SET: function (e) {
         let { projectId: t, project: n } = e;
         R.set(t, n);
@@ -187,8 +191,8 @@ let k = new x(r.h, {
     },
     VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;
-        if (y === t) return !1;
-        y = t;
+        if (D === t) return !1;
+        D = t;
     },
     VIBEGRATIONS_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n } = e;

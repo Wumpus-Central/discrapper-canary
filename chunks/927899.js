@@ -12,6 +12,8 @@ let o = {
     PUBLISH_FAILED: "PUBLISH_FAILED",
     WS_OPEN_FAILED: "WS_OPEN_FAILED",
     SEND_FAILED: "SEND_FAILED",
+    RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
+    RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
 function d(e) {
     return null == e || "" === e ? null : e.slice(0, 256);

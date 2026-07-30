@@ -34,7 +34,7 @@ function E(e) {
         r = (0, i.jsx)("img", { className: j.wZ, src: v.A, alt: y.intl.string(C.default["93KE7U"]) });
     return a && null != s
         ? (0, i.jsx)(N, { channelId: t, sound: s, children: r })
-        : (0, i.jsx)("div", { className: j.p9, children: r });
+        : (0, i.jsx)("div", { role: "listitem", className: j.p9, children: r });
 }
 function N(e) {
     let { channelId: t, sound: n, children: a } = e,
@@ -51,5 +51,11 @@ function N(e) {
                 null != e && (0, x.n0)({ interactionType: "duck_quacked", channelId: e });
             }
         }, [v, y, d?.id]);
-    return (0, i.jsx)(r.D, { className: s()(j.uA, v ? void 0 : j.r9), "aria-disabled": !v, onClick: E, children: a });
+    return (0, i.jsx)(r.D, {
+        role: "listitem",
+        className: s()(j.uA, v ? void 0 : j.r9),
+        "aria-disabled": !v,
+        onClick: E,
+        children: a,
+    });
 }
