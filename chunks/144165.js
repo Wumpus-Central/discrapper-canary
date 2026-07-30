@@ -3,8 +3,11 @@ n.d(t, { _: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
-    s = n.n(a);
-function l(e) {
+    s = n.n(a),
+    l = n(259678),
+    o = n(939249),
+    d = n(834730);
+function c(e) {
     let { alt: t, ariaLabel: n, ariaHidden: r, role: a, width: s = 288, height: l = 162 } = e;
     return (0, i.jsx)("img", {
         style: { width: s, height: l },
@@ -15,10 +18,7 @@ function l(e) {
         role: a ?? "img",
     });
 }
-var o = n(259678),
-    d = n(939249),
-    c = n(834730),
-    u = n(264927),
+var u = n(264927),
     _ = n(515718),
     E = n(835517),
     A = n(966697),
@@ -27,7 +27,7 @@ var o = n(259678),
     f = n(375708),
     p = n(397813);
 let T = r.forwardRef((e, t) => {
-    var n, a, l, c;
+    var n, a, d, c;
     let E,
         {
             className: T,
@@ -37,10 +37,10 @@ let T = r.forwardRef((e, t) => {
             placeholder: O,
             placeholderVersion: R,
             alt: L,
-            width: y,
-            height: D,
-            maxWidth: v = y,
-            maxHeight: b = D,
+            width: D,
+            height: y,
+            maxWidth: v = D,
+            maxHeight: b = y,
             minWidth: M = 0,
             minHeight: P = 0,
             mediaLayoutType: U,
@@ -68,8 +68,8 @@ let T = r.forwardRef((e, t) => {
         } = e,
         z = r.useRef(null),
         q = r.useRef(null);
-    if (1 === y && 1 === D) return null;
-    let Z = (0, _.Uj)({ width: y, height: D, maxWidth: v, maxHeight: b, minWidth: M, minHeight: P }),
+    if (1 === D && 1 === y) return null;
+    let Z = (0, _.Uj)({ width: D, height: y, maxWidth: v, maxHeight: b, minWidth: M, minHeight: P }),
         X = 0 !== Z.width ? Z.width / Z.height : 1;
     "" !== C && N !== h.Rv1.ERROR
         ? (E = F({ src: C, size: Z, alt: L, className: S, mediaLayoutType: U }))
@@ -86,7 +86,7 @@ let T = r.forwardRef((e, t) => {
     let Q = null != V ? V() : null;
     return (
         (Q = Q ?? G),
-        (0, i.jsx)(o.vN, {
+        (0, i.jsx)(l.vN, {
             ringTarget: z,
             focusTarget: q,
             children: (0, i.jsxs)("div", {
@@ -95,13 +95,13 @@ let T = r.forwardRef((e, t) => {
                 style:
                     ((n = Z),
                     (a = w),
-                    (l = W),
+                    (d = W),
                     (c = U) === I.dG.MOSAIC
                         ? {
                               display: "block",
                               maxHeight: "inherit",
                               margin: "auto",
-                              width: l ? "100%" : n.width,
+                              width: d ? "100%" : n.width,
                               height: "100%",
                           }
                         : c === I.dG.RESPONSIVE
@@ -121,7 +121,7 @@ let T = r.forwardRef((e, t) => {
                             "data-safe-src": j ?? C,
                         }),
                     null != B
-                        ? (0, i.jsx)(d.D, {
+                        ? (0, i.jsx)(o.D, {
                               className: p.w8,
                               tabIndex: H ?? 0,
                               onClick: B,
@@ -161,9 +161,9 @@ function m(e) {
         children: [
             (0, i.jsx)("div", {
                 className: p.QM,
-                children: (0, i.jsx)(l, { alt: r ?? f.intl.string(f.t.X4IxWL), height: "auto" }),
+                children: (0, i.jsx)(c, { alt: r ?? f.intl.string(f.t.X4IxWL), height: "auto" }),
             }),
-            (0, i.jsx)(c.E, {
+            (0, i.jsx)(d.E, {
                 className: p.b4,
                 variant: "text-sm/medium",
                 color: "text-subtle",

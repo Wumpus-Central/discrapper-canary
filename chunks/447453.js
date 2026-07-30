@@ -5,10 +5,10 @@ var i = n(477900),
     a = n(503698),
     s = n.n(a),
     l = n(461376),
-    o = n(17928),
-    d = n(866323),
-    c = n(834730),
-    u = n(475358),
+    o = n(866323),
+    d = n(834730),
+    c = n(475358),
+    u = n(17928),
     _ = n(775602),
     E = n(425763),
     A = n(375708),
@@ -20,9 +20,9 @@ function I(e) {
             { keybinds: ["up", "down"], name: A.intl.string(A.t.dmMqay) },
             { keybinds: ["ESC"], name: A.intl.string(A.t["1ioMJQ"]) },
         ],
-        a = (0, o.bG)([_.Ay], () => _.Ay.useReducedMotion),
+        a = (0, u.bG)([_.Ay], () => _.Ay.useReducedMotion),
         I = (0, E.VU)();
-    return (0, d.p)(
+    return (0, o.p)(
         I,
         {
             enter: { from: { opacity: 0, y: 80 * !a }, to: { opacity: 1, y: 0 } },
@@ -43,8 +43,8 @@ function I(e) {
                               r.Fragment,
                               {
                                   children: [
-                                      (0, i.jsx)(c.E, { variant: "text-md/semibold", className: h.nx, children: s }),
-                                      a.map((e) => (0, i.jsx)(u.e, { shortcut: e, className: h.LE }, e)),
+                                      (0, i.jsx)(d.E, { variant: "text-md/semibold", className: h.nx, children: s }),
+                                      a.map((e) => (0, i.jsx)(c.e, { shortcut: e, className: h.LE }, e)),
                                       t < n.length - 1 ? (0, i.jsx)("span", { className: h.me }) : null,
                                   ],
                               },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ST: () => y, oM: () => T });
+n.d(t, { ST: () => D, oM: () => T });
 var i,
     r = n(477900),
     a = n(582128),
@@ -10,10 +10,10 @@ var i,
     c = n(607399),
     u = n(621466),
     _ = n(844222),
-    E = n(451988);
-let A = { tension: 2400, friction: 52 };
-var h = n(866323),
-    I = n(775602),
+    E = n(866323),
+    A = n(451988);
+let h = { tension: 2400, friction: 52 };
+var I = n(775602),
     f = n(750506),
     p = n(622399),
     T =
@@ -99,11 +99,11 @@ let N = (e) => {
 function L(e) {
     let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...s } = e,
         { reducedMotion: l } = a.useContext(_.C);
-    return (0, h.p)(
+    return (0, E.p)(
         t,
         {
             keys: (e) => (e ? "tooltip" : "empty"),
-            config: A,
+            config: h,
             from: l.enabled ? O : C,
             enter: R,
             leave: l.enabled ? O : C,
@@ -114,7 +114,7 @@ function L(e) {
         t ? (0, r.jsx)(N, { "data-migration-pending": !0, animationStyle: e, targetElementRef: i, ...s }) : null,
     );
 }
-class y extends a.Component {
+class D extends a.Component {
     static Colors = T;
     static defaultProps = {
         hideOnClick: !0,
@@ -129,7 +129,7 @@ class y extends a.Component {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
-    showTimeout = new E.Ep();
+    showTimeout = new A.Ep();
     domElementRef = a.createRef();
     hasDomElement = !1;
     siblingDomRef = a.createRef();

@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { r: () => o }), n(321073);
-var i = n(702841),
-    r = n(38021),
-    s = n(775602),
-    a = n(534409);
-function o(e, t) {
-    let { theme: n, density: o } = (0, r.wR)(),
-        l = (0, i.bG)([s.Ay], () => s.Ay.saturation),
-        u = (0, i.bG)([s.Ay], () => s.Ay.isHighContrastModeEnabled),
-        c = (0, a.qK)("useToken"),
-        d = (0, a.k5)("useToken"),
-        _ = (0, a.lV)("useToken"),
-        h = [];
+n.d(t, { r: () => l }), n(321073);
+var i = n(38021),
+    r = n(702841),
+    a = n(775602),
+    s = n(534409);
+function l(e, t) {
+    let { theme: n, density: l } = (0, i.wR)(),
+        o = (0, r.bG)([a.Ay], () => a.Ay.saturation),
+        d = (0, r.bG)([a.Ay], () => a.Ay.isHighContrastModeEnabled),
+        c = (0, s.qK)("useToken"),
+        u = (0, s.k5)("useToken"),
+        _ = (0, s.lV)("useToken"),
+        E = [];
     return (
-        c && h.push("refresh-fast-follow-avatars"),
-        d && h.push("refresh-fast-follow-guild-bg"),
-        _ && h.push("refresh-fast-follow-distinct-borders"),
-        e.resolve({ theme: t ?? n, saturation: l, enabledExperiments: h, density: o, highContrastModeEnabled: u })
+        c && E.push("refresh-fast-follow-avatars"),
+        u && E.push("refresh-fast-follow-guild-bg"),
+        _ && E.push("refresh-fast-follow-distinct-borders"),
+        e.resolve({ theme: t ?? n, saturation: o, enabledExperiments: E, density: l, highContrastModeEnabled: d })
     );
 }
