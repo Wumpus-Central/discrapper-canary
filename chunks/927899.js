@@ -37,7 +37,7 @@ function _(e, t) {
     r.default.track(l.HAw.VIBEGRATION_TURN_RESULTED, {
         ...c(e),
         turn_result: t.result ?? null,
-        turn_summary: d(t.summary),
+        turn_summary: d(t.detail ?? t.summary),
         turn_cost: t.cost_usd ?? null,
     });
 }

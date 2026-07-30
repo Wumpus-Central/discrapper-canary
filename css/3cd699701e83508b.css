@@ -214,6 +214,11 @@
     font-size: 14px
 }
 
+.turnAnnouncement__30c5c {
+    line-height: 1.4;
+    word-break: break-word
+}
+
 .turnSteps__30c5c {
     display: flex;
     flex-direction: column;
@@ -235,22 +240,51 @@
 }
 
 .stepItem__30c5c {
+    line-height: 1.4;
     -webkit-user-select: text;
     -moz-user-select: text;
-    user-select: text
-}
-
-.stepDetail__30c5c,
-.stepItem__30c5c {
-    line-height: 1.4;
+    user-select: text;
     white-space: pre-wrap;
     word-break: break-word
 }
 
+.stepDisclosureToggle__30c5c {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.stepDisclosureToggle__30c5c:focus-visible,
+.stepDisclosureToggle__30c5c:hover {
+    text-decoration: underline
+}
+
+.stepChevron__30c5c {
+    color: var(--text-muted);
+    flex-shrink: 0
+}
+
+.stepDisclosureToggle__30c5c:focus-visible .stepChevron__30c5c,
+.stepDisclosureToggle__30c5c:hover .stepChevron__30c5c {
+    color: var(--text-default)
+}
+
 .stepDetail__30c5c {
     border-inline-start: 2px solid var(--border-subtle);
-    margin-top: 2px;
-    padding-inline-start: var(--space-12)
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.4;
+    margin-top: var(--space-4);
+    padding-inline-start: var(--space-12);
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+.stepDetail__30c5c[hidden] {
+    display: none
 }
 
 .createForm_a57d27 {
@@ -511,6 +545,7 @@
 }
 
 .chat_f35ad6 {
+    display: flex;
     flex-direction: column;
     gap: var(--space-4);
     -webkit-user-select: text;
@@ -519,44 +554,13 @@
 }
 
 .chat_f35ad6,
-.chatLogWrap_f35ad6 {
-    display: flex;
+.chatLog_f35ad6 {
     flex: 1;
     min-height: 0
 }
 
-.chatLogWrap_f35ad6 {
-    flex-direction: column;
-    position: relative
-}
-
 .chatLog_f35ad6 {
-    flex: 1;
-    min-height: 0;
     padding-inline-end: var(--space-4)
-}
-
-.chatLogFade_f35ad6 {
-    background: linear-gradient(to bottom, transparent, var(--background-base-lowest));
-    inset-inline: 0 8px;
-    bottom: 0;
-    height: 48px;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    transition: opacity .15s ease-out
-}
-
-.chatLogFade_f35ad6[data-visible=true] {
-    opacity: 1
-}
-
-.custom-theme-background .chatLogFade_f35ad6 {
-    display: none
-}
-
-.reduce-motion .chatLogFade_f35ad6 {
-    transition: none
 }
 
 .channelView__67841 {

@@ -1,4 +1,4 @@
-n.d(t, { Hc: () => w, Ay: () => P, dv: () => I }), n(321073);
+n.d(t, { Hc: () => R, Ay: () => P, dv: () => I }), n(321073);
 var s = n(158390),
     l = n(17928),
     a = n(562465),
@@ -44,8 +44,8 @@ class d {
 }
 var m = n(208137),
     p = n(972786),
-    f = n(652215),
-    h = n(818085),
+    h = n(652215),
+    f = n(818085),
     g = n(375708);
 let x = new Map(),
     _ = new Map(),
@@ -55,7 +55,7 @@ function j(e, t) {
 }
 let E = { location: "connection", code: o.xA.SEND_FAILED },
     A = { location: "agent", code: o.xA.AGENT_ERROR };
-function N(e, t) {
+function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E;
     r.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
@@ -64,7 +64,7 @@ function N(e, t) {
     }),
         (0, o.Z0)(e, { ...n, message: t });
 }
-let k = {
+let N = {
         build_error: { location: "build", code: o.xA.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: o.xA.HEALTHCHECK_FAILED },
         error: { location: "agent", code: o.xA.AGENT_ERROR },
@@ -77,7 +77,7 @@ let k = {
 async function S(e, t) {
     t.ws.close();
     try {
-        let { body: n } = await a.Bo.post({ url: f.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !1 });
+        let { body: n } = await a.Bo.post({ url: h.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !1 });
         if (t.disposed) return;
         let s = (0, m.V)() ?? n.url;
         t.ws.open({
@@ -97,7 +97,7 @@ async function S(e, t) {
                                 t.ws.sendUserMessage(n);
                             } catch (t) {
                                 console.error("[vibegrations] queued send failed", t),
-                                    N(e, t instanceof Error ? t.message : "send failed");
+                                    k(e, t instanceof Error ? t.message : "send failed");
                             }
                         }
                     } else if ("step" === n.type)
@@ -109,7 +109,15 @@ async function S(e, t) {
                                       projectId: e,
                                       patch: { content: t, kind: "message" },
                                   })
-                                : N(e, g.intl.string(h.default.Z8Eo8I), A);
+                                : k(e, g.intl.string(f.default.Z8Eo8I), A);
+                        } else if ("announcement" === n.kind) {
+                            let t = n.message ?? "";
+                            "" !== t &&
+                                r.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_TURN_PATCH",
+                                    projectId: e,
+                                    patch: { announcement: t },
+                                });
                         } else if ("plan_proposed" === n.kind)
                             null != n.proposal
                                 ? r.h.dispatch({
@@ -117,7 +125,7 @@ async function S(e, t) {
                                       projectId: e,
                                       patch: { proposal: n.proposal, kind: "proposal" },
                                   })
-                                : N(e, g.intl.string(h.default.IHCafX), A);
+                                : k(e, g.intl.string(f.default.IHCafX), A);
                         else if ("usage" === n.kind)
                             null != n.turn &&
                                 null != n.project &&
@@ -146,7 +154,7 @@ async function S(e, t) {
                                 });
                         else {
                             r.h.dispatch({ type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: e, step: n });
-                            let t = k[n.kind];
+                            let t = N[n.kind];
                             null != t && (0, o.Z0)(e, { ...t, message: n.message, details: n.stderr_tail }),
                                 "preview_ready" === n.kind &&
                                     (r.h.dispatch({
@@ -215,11 +223,11 @@ function T(e) {
     let n = t;
     (n.helloSeen = !1), (n.disposed = !1), (n.reconnectPending = !1), j(e, "connecting"), S(e, n);
 }
-function R(e) {
+function w(e) {
     let t = x.get(e);
     return null != t && ((t.disposed = !0), t.backoff.cancel(), t.ws.close(), x.delete(e), j(e, "closed"), !0);
 }
-function w(e) {
+function R(e) {
     let t = x.get(e);
     if (null == t) return void T(e);
     let n = _.get(e);
@@ -235,7 +243,7 @@ function I(e, t) {
         if (null == s) throw Error("Not connected");
         s.ws.sendUserMessage(n);
     } catch (t) {
-        console.error("[vibegrations] send failed", t), N(e, t instanceof Error ? t.message : "send failed");
+        console.error("[vibegrations] send failed", t), k(e, t instanceof Error ? t.message : "send failed");
     }
 }
 class C extends l.Ay.Store {
@@ -261,17 +269,17 @@ let P = new C(r.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!R(t)) return !1;
+        if (!w(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
             s = !1;
-        for (let e of Array.from(x.keys())) !n.has(e) && R(e) && (s = !0);
+        for (let e of Array.from(x.keys())) !n.has(e) && w(e) && (s = !0);
         if (!s) return !1;
     },
     LOGOUT: function () {
         if (0 === x.size) return !1;
-        for (let e of Array.from(x.keys())) R(e);
+        for (let e of Array.from(x.keys())) w(e);
     },
 });
