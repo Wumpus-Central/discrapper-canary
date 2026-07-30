@@ -2,7 +2,7 @@
 n.d(t, { Ay: () => eO }), n(321073);
 var i = n(435558),
     r = n.n(i),
-    a = n(791332),
+    a = n(478676),
     s = n.n(a),
     l = n(7584),
     o = n(744700),
@@ -14,15 +14,14 @@ var i = n(435558),
     A = n(317525),
     h = n(71393),
     I = n(287809),
-    f = n(486020),
-    p = n(562153),
-    T = n(427262);
-let m =
+    f = n(562153),
+    p = n(427262);
+let T =
         /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-    g = {
+    m = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => m.exec(e),
+        match: (e) => T.exec(e),
         parse(e, t, n) {
             var i;
             let r = e[0];
@@ -34,14 +33,15 @@ let m =
             };
         },
     };
-var S = n(717125),
-    N = n(47167),
-    C = n(499211),
-    O = n(376943),
-    R = n(576705),
-    L = n(994500),
-    y = n(871237),
-    D = n(240248),
+var g = n(717125),
+    S = n(47167),
+    N = n(499211),
+    C = n(376943),
+    O = n(576705),
+    R = n(994500),
+    L = n(486020),
+    D = n(871237),
+    y = n(240248),
     v = n(465365),
     b = n(704726),
     M = n(652215),
@@ -54,12 +54,12 @@ function w(e) {
     return {
         type: "guild",
         guildId: e.id,
-        content: (0, D.EJ)(e.name, 32),
-        icon: f.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
+        content: (0, y.EJ)(e.name, 32),
+        icon: L.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
     };
 }
 function G(e, t) {
-    let n = V((0, D.EJ)(e.name, 32));
+    let n = V((0, y.EJ)(e.name, 32));
     return {
         type: "channel",
         content: ["italics" === t ? { type: "em", content: [n] } : n],
@@ -72,8 +72,8 @@ function x(e) {
 }
 function k(e, t) {
     let n = _.A.getChannel(e),
-        i = (0, C.p)(e, _.A, S.A, R.A).isSubscriptionGated,
-        r = (0, y.QG)(n) ?? "text";
+        i = (0, N.p)(e, _.A, g.A, O.A).isSubscriptionGated,
+        r = (0, D.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
         if (null != a)
@@ -96,11 +96,11 @@ function k(e, t) {
               type: n.type,
               id: n.id,
               guildId: n.guild_id,
-              name: (0, N.m1)(n, I.default, L.A),
+              name: (0, S.m1)(n, I.default, R.A),
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, v.Y)(n.type),
-              canViewChannel: (0, O.nc)(n),
+              canViewChannel: (0, C.nc)(n),
               roleSubscriptionGated: i,
               iconType: r,
               parentId: n.parent_id,
@@ -161,9 +161,9 @@ function H(e, t, n, i) {
                         return {
                             inContent: [
                                 G({
-                                    name: (0, N.m1)(e, I.default, L.A),
+                                    name: (0, S.m1)(e, I.default, R.A),
                                     type: e.type,
-                                    iconType: (0, y.QG)(e) ?? "forum",
+                                    iconType: (0, D.QG)(e) ?? "forum",
                                 }),
                             ],
                             content: [a],
@@ -196,7 +196,7 @@ let j = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = O.Ju.exec(e);
+            let t = C.Ju.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -212,7 +212,7 @@ let j = {
     Y = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => O.En.exec(e),
+        match: (e) => C.En.exec(e),
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
@@ -483,7 +483,7 @@ let e_ = {
                           null != l &&
                               ((i = l.id),
                               (n = l.toString()),
-                              null != o && (n = p.Ay.getNickname(o.getGuildId(), t.channelId, l) ?? T.Ay.getName(l)));
+                              null != o && (n = f.Ay.getNickname(o.getGuildId(), t.channelId, l) ?? p.Ay.getName(l)));
                           let d = null != a && M.Ut1.test(a.trim()),
                               c = d && t.unknownUserMentionPlaceholder ? `@${P.intl.string(P.t.sKdZ6U)}` : r;
                           return {
@@ -509,7 +509,7 @@ let e_ = {
         channelMention: j,
         channelOrMessageUrl: W,
         mediaPostLink: Y,
-        attachmentLink: g,
+        attachmentLink: m,
         commandMention: {
             order: s().defaultRules.text.order,
             requiredFirstCharacters: ["<"],
@@ -545,27 +545,21 @@ let e_ = {
             match: (e, t) => (t.allowGameMentions ? ei.P7.exec(e) : null),
             parse: (e, t, n) =>
                 (function (e, t) {
-                    let n,
-                        i = t.mentionGames?.get(e),
-                        r = E.A.getDetectableGame(e);
-                    if (!0 !== t.returnMentionIds && null == i && null == r)
+                    let n = t.mentionGames?.get(e),
+                        i = E.A.getDetectableGame(e);
+                    if (!0 !== t.returnMentionIds && null == n && null == i)
                         return { type: "text", content: `@${P.intl.string(P.t["11pdXZ"])}` };
-                    let a = i?.name ?? r?.name ?? P.intl.string(P.t["11pdXZ"]),
-                        s = (0, o.A)(e, i?.icon, { size: 32 });
-                    return (
-                        null != s
-                            ? (n = s)
-                            : r?.icon != null && (n = f.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 32 })),
-                        {
-                            type: "gameMention",
-                            gameId: e,
-                            channelId: t.channelId,
-                            gameName: i?.name,
-                            gameIcon: i?.icon,
-                            icon: n,
-                            displayName: a,
-                        }
-                    );
+                    let r = n?.name ?? i?.name ?? P.intl.string(P.t["11pdXZ"]),
+                        a = (0, o.A)(e, n?.icon, { size: 32 }) ?? void 0;
+                    return {
+                        type: "gameMention",
+                        gameId: e,
+                        channelId: t.channelId,
+                        gameName: n?.name,
+                        gameIcon: n?.icon,
+                        icon: a,
+                        displayName: r,
+                    };
                 })(e[1], n),
         },
         emoji: {

@@ -58,6 +58,11 @@
     padding-inline-start: var(--space-8)
 }
 
+.navItemWithBadge_b6c448 {
+    display: inline-flex;
+    gap: var(--space-12)
+}
+
 .navItem_b6c448[aria-selected=true] {
     background-color: var(--background-mod-normal) !important
 }
