@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { oq: () => m, qC: () => g, xI: () => p, WF: () => I, Eg: () => f, p7: () => S, P7: () => T });
 var i = n(517846),
-    r = n(636537),
+    r = n(562465),
     a = n(228366),
-    s = n(493336),
+    s = n(148494),
     l = n(27620),
     o = n(828488),
     d = n(727011),
@@ -101,7 +101,7 @@ async function g(e, t, n, i) {
         try {
             let t = await r.Bo.get({
                 url: h.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
-                query: { limit: s, include_ancestors: l, include_reactions: d },
+                query: { limit: s, include_message_references: l, include_reactions: d },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
@@ -110,7 +110,7 @@ async function g(e, t, n, i) {
                 channelId: e,
                 conversationId: n,
                 messages: t.body.messages,
-                messageReferences: t.body.ancestors,
+                messageReferences: t.body.reference_messages,
                 fullyHydrated: u,
             });
         } catch (t) {
