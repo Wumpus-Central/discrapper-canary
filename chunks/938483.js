@@ -224,13 +224,14 @@ let T = (0, c.Fe)({
             n.e("69294"),
             n.e("94723"),
             n.e("62931"),
-            n.e("71315"),
+            n.e("30316"),
             n.e("45959"),
             n.e("58529"),
             n.e("81987"),
             n.e("58038"),
             n.e("71202"),
             n.e("75201"),
+            n.e("76909"),
             n.e("6174"),
             n.e("93103"),
             n.e("28367"),
@@ -417,8 +418,8 @@ function m(e) {
             dialogClassName: O,
         } = e,
         { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
-        [L, y] = r.useState(!1),
-        [D, v] = [
+        [L, D] = r.useState(!1),
+        [y, v] = [
             (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
             r.useCallback((e) => {
                 h.wc.updateAsync(
@@ -442,13 +443,13 @@ function m(e) {
                     h.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && D === s.Y2.UNREADS, setSeenTutorial: n }),
+            { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
         P = r.useCallback(() => {
-            y(!1), L && u?.();
+            D(!1), L && u?.();
         }, [u, L]),
         U = r.useCallback(
             (e) => {
-                y(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.();
+                D(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.();
             },
             [u, c, L, v],
         );
@@ -456,8 +457,8 @@ function m(e) {
     let w = (0, _.jv)("RecentsPopout"),
         G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {
-        (D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
-            (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
+        (y !== s.Y2.BOOKMARKS && y !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
+            (y === s.Y2.GAME_INVITES || y === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
     });
     let x = r.useCallback(
             (e) => {
@@ -480,7 +481,7 @@ function m(e) {
                 return (0, i.jsx)(T, {
                     dialogClassName: O,
                     isScheduledMessagesEnabled: k,
-                    tab: D,
+                    tab: y,
                     setTab: v,
                     closePopout: P,
                     handleMentionsJump: x,

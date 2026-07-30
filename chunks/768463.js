@@ -10839,7 +10839,7 @@ function AR(e, t) {
     );
 }
 let AL = S.memo(function (e) {
-    let { server: t, planOptionBySkuId: i, hasNitro: n } = e,
+    let { server: t, planOptionBySkuId: i, canUseShopDiscount: n } = e,
         { analyticsLocations: l } = (0, n1.Ay)(),
         s = t.instance.subscriptionId,
         r = t.instance.planId,
@@ -11073,7 +11073,7 @@ function AD(e) {
     let { servers: t } = e,
         i = (0, Af.H)({ location: "user_settings_subscriptions" }),
         { games: n } = (0, AC.Y)(),
-        l = (0, g.bG)([iA.default], () => uh.Ay.isPremium(iA.default.getCurrentUser(), l1.PremiumTypes.TIER_2)),
+        l = (0, g.bG)([iA.default], () => uh.Ay.canUseShopDiscounts(iA.default.getCurrentUser())),
         s = S.useMemo(() => {
             let e = new Map();
             for (let t of n) for (let i of t.plans ?? []) e.set(i.id, i);
@@ -11122,7 +11122,9 @@ function AD(e) {
             }),
             (0, E.jsx)("div", {
                 className: Ay.p_,
-                children: t.map((e) => (0, E.jsx)(AL, { server: e, planOptionBySkuId: s, hasNitro: l }, e.id)),
+                children: t.map((e) =>
+                    (0, E.jsx)(AL, { server: e, planOptionBySkuId: s, canUseShopDiscount: l }, e.id),
+                ),
             }),
         ],
     });

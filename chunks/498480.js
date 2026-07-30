@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
     Wp: () => O,
-    pj: () => D,
+    pj: () => y,
     cq: () => N,
     Jr: () => b,
     hU: () => P,
     as: () => G,
     e_: () => v,
     hE: () => U,
-    jL: () => y,
+    jL: () => D,
     K: () => S,
     tT: () => C,
     dk: () => M,
@@ -302,7 +302,7 @@ function R() {
 function L(e, t) {
     a.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function y(e, t, n, i) {
+function D(e, t, n, i) {
     return r.Bo.post({
         url: m.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         body: { game_server_name: n, game_server_region: i },
@@ -310,7 +310,7 @@ function y(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
-function D(e, t, n, i) {
+function y(e, t, n, i) {
     return r.Bo.patch({
         url: m.Rsh.GUILD_POWERUP_UPDATE(e, t),
         body: { game_server_name: i, sku_id: n },
@@ -350,7 +350,11 @@ function M() {
 function P() {
     return r.Bo.get({ url: m.Rsh.GAME_SERVERS_ME, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then((e) => {
         let t = e.body;
-        a.h.dispatch({ type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: t.game_servers ?? [] });
+        a.h.dispatch({
+            type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+            gameServers: t.game_servers ?? [],
+            maxServers: t.max_game_servers,
+        });
     });
 }
 function U(e) {

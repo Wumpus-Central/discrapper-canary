@@ -40,7 +40,7 @@ function A(e) {
             });
         return;
     }
-    function y() {
+    function D() {
         d.default.track(u.HAw.MODAL_DISMISSED, { type: u.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: A });
     }
     return (
@@ -169,13 +169,14 @@ function A(e) {
             n.e("69294"),
             n.e("94723"),
             n.e("62931"),
-            n.e("71315"),
+            n.e("30316"),
             n.e("45959"),
             n.e("58529"),
             n.e("81987"),
             n.e("58038"),
             n.e("71202"),
             n.e("75201"),
+            n.e("76909"),
             n.e("6174"),
             n.e("32191"),
             n.e("77084"),
@@ -252,7 +253,7 @@ function A(e) {
                         },
                     },
                     unifiedCheckoutProviderProps: { analyticsLocations: t, analyticsSourceLocation: h ?? A },
-                    modalAPIOptions: { modalKey: "guild-boost-purchase-modal", contextKey: R, onCloseCallback: y },
+                    modalAPIOptions: { modalKey: "guild-boost-purchase-modal", contextKey: R, onCloseCallback: D },
                     tenantParams: {
                         guildId: I,
                         totalNumberOfSlotsToAssign: T,

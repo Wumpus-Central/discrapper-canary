@@ -245,17 +245,17 @@ function en(e) {
             _.rX,
             {
                 children: t.map((e) => {
-                    let { tab: t, label: o, renderOverflowContent: i } = e;
+                    let { tab: t, label: o, renderOverflowContent: i, trailingBadge: c } = e;
                     if (null != i)
                         return (0, n.jsx)(_.Dr, { id: t, label: o, hasSubmenu: !0, children: i({ onClose: s }) }, t);
-                    let c = t === v.G2.ORBS && r;
+                    let u = null != c ? { type: "beta", variant: "brand" } : t === v.G2.ORBS && r ? "new" : void 0;
                     return (0, n.jsx)(
                         _.Dr,
                         {
                             id: t,
                             label: o,
                             trailingIndicator: t === l ? { type: "icon", icon: F.U } : void 0,
-                            badge: c ? "new" : void 0,
+                            badge: u,
                             action: () => a(t),
                         },
                         t,

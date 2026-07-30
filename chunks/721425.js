@@ -14,11 +14,15 @@ function m() {
         variant: "text-sm/medium",
         className: o.Q,
         children: c.intl.format(r.default.fcJiY8, {
-            provider: (0, n.jsx)("img", {
-                className: o.S,
-                src: e !== d.NJ.LIGHT ? "/assets/2980fac538c392b2.svg" : "/assets/42be501fd1509fb8.svg",
-                alt: "Shockbyte",
-            }),
+            provider: (0, n.jsx)(
+                "img",
+                {
+                    className: o.S,
+                    src: e !== d.NJ.LIGHT ? "/assets/2980fac538c392b2.svg" : "/assets/42be501fd1509fb8.svg",
+                    alt: "Shockbyte",
+                },
+                "shockbyte-logo",
+            ),
         }),
     });
 }

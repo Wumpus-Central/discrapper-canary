@@ -1,52 +1,53 @@
-n.d(t, { f: () => m });
-var r = n(582128),
-    a = n(390544),
-    u = n(17928),
-    l = n(311043),
-    i = n(569926),
-    o = n(498480),
-    c = n(814201),
-    s = n(24641);
-function m() {
+r.d(a, { f: () => c });
+var s = r(582128),
+    t = r(390544),
+    n = r(17928),
+    p = r(311043),
+    i = r(569926),
+    l = r(498480),
+    m = r(814201),
+    u = r(24641);
+function c() {
     let { enabled: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [t, n] = r.useState(!1),
-        [m, p] = r.useState(0);
-    r.useEffect(() => {
-        e && (0, o.hU)().catch(() => n(!0));
-    }, [m, e]);
-    let d = r.useCallback(() => {
-            n(!1), p((e) => e + 1);
+        [a, r] = s.useState(!1),
+        [c, o] = s.useState(0);
+    s.useEffect(() => {
+        e && (0, l.hU)().catch(() => r(!0));
+    }, [c, e]);
+    let d = s.useCallback(() => {
+            r(!1), o((e) => e + 1);
         }, []),
-        f = (0, u.bG)([c.A], () => c.A.getGameServers()),
-        g = r.useMemo(() => f.map((e) => e.game_id), [f]);
-    (0, i.x)(g);
-    let v = (0, u.yK)([l.A], () => g.map((e) => l.A.getGame(e)?.name ?? ""), [g]);
+        v = (0, n.bG)([m.A], () => m.A.getGameServers()),
+        _ = s.useMemo(() => v.map((e) => e.game_id), [v]);
+    (0, i.x)(_);
+    let g = (0, n.yK)([p.A], () => _.map((e) => p.A.getGame(e)?.name ?? ""), [_]);
     return {
-        servers: r.useMemo(
+        servers: s.useMemo(
             () =>
-                f
-                    .map((e, t) => {
-                        var n;
+                v
+                    .map((e, a) => {
+                        var r;
                         return (
-                            (n = v[t] ?? ""),
+                            (r = g[a] ?? ""),
                             {
                                 id: e.id,
                                 serverName: e.name,
-                                gameName: n,
+                                gameName: r,
                                 gameId: e.game_id,
                                 planName: e.plan_name,
                                 playersOnline: `${e.players_count ?? 0}/${e.max_players_count ?? 0}`,
                                 serverIp: null != e.ip && null != e.port ? `${e.ip}:${e.port}` : "",
-                                isOnline: e.status === a.M.ONLINE,
+                                isOnline: e.status === t.M.ONLINE,
                                 location: e.region_name ?? "",
-                                instance: (0, s.A)(e),
+                                instance: (0, u.A)(e),
                             }
                         );
                     })
                     .reverse(),
-            [f, v],
+            [v, g],
         ),
-        hasError: t,
+        maxServers: (0, n.bG)([m.A], () => m.A.getMaxServers()),
+        hasError: a,
         refetch: d,
     };
 }

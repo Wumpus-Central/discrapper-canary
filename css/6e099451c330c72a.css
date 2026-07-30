@@ -431,19 +431,7 @@
 }
 
 .scrim__5e7e6 {
-    background: linear-gradient(to right, color-mix(in oklab, var(--background-base-lower) 82%, transparent) 0, color-mix(in oklab, var(--background-base-lower) 65%, transparent) 30%, color-mix(in oklab, var(--background-base-lower) 32%, transparent) 50%, color-mix(in oklab, var(--background-base-lower) 0%, transparent) 65%)
-}
-
-@container (max-width: 1074px) {
-    .scrim__5e7e6 {
-        background: linear-gradient(to right, color-mix(in oklab, var(--background-base-lower) 96%, transparent) 0, color-mix(in oklab, var(--background-base-lower) 85%, transparent) 40%, color-mix(in oklab, var(--background-base-lower) 55%, transparent) 65%, color-mix(in oklab, var(--background-base-lower) 0%, transparent) 90%)
-    }
-}
-
-@container (max-width: 867px) {
-    .scrim__5e7e6 {
-        background: linear-gradient(to right, color-mix(in oklab, var(--background-base-lower) 98%, transparent) 0, color-mix(in oklab, var(--background-base-lower) 90%, transparent) 45%, color-mix(in oklab, var(--background-base-lower) 65%, transparent) 75%, color-mix(in oklab, var(--background-base-lower) 0%, transparent) 100%)
-    }
+    background: linear-gradient(to right, color-mix(in oklab, var(--background-base-lower) 98%, transparent) 0, color-mix(in oklab, var(--background-base-lower) 90%, transparent) 45%, color-mix(in oklab, var(--background-base-lower) 65%, transparent) 75%, color-mix(in oklab, var(--background-base-lower) 0%, transparent) 100%)
 }
 
 @container (max-width: 660px) {
