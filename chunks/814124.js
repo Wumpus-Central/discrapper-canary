@@ -11,8 +11,8 @@ var n,
     h = l(812095),
     u = l(975571),
     x = l(80151),
-    A = l(365491),
-    m = l(151115),
+    m = l(365491),
+    A = l(151115),
     k = l(758836),
     T = l(652215),
     v = l(375708),
@@ -26,13 +26,13 @@ function N(e) {
             headerText: n,
             helpCenterId: r,
             helpCenterLinkText: x,
-            ctaText: A,
+            ctaText: m,
             ctaIcon: k,
             onCtaClick: I,
             hideCta: N,
         } = e,
         f = a.useMemo(() => (null == r ? null : u.A.getArticleURL(r)), [r]),
-        j = (0, m.s)(l);
+        j = (0, A.s)(l);
     return (0, i.jsx)(o.N, {
         theme: T.NJ8.DARKER,
         children: (e) =>
@@ -69,8 +69,14 @@ function N(e) {
                                 ],
                             }),
                             !N &&
-                                null != A &&
-                                (0, i.jsx)(p.$, { variant: "overlay-primary", text: A, icon: k, onClick: I }),
+                                null != m &&
+                                (0, i.jsx)(p.$, {
+                                    variant: "overlay-primary",
+                                    size: "sm",
+                                    text: m,
+                                    icon: k,
+                                    onClick: I,
+                                }),
                         ],
                     }),
                 ],
@@ -82,7 +88,7 @@ let f =
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
                   n = (0, x.A)(),
-                  r = (0, A.v)((e) => e.offerEligible),
+                  r = (0, m.v)((e) => e.offerEligible),
                   c = n?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
                   o = a.useCallback(() => {
                       l(k.G2.OFFER_ELIGIBLE);

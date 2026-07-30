@@ -25,8 +25,8 @@ var i = n(477900),
     O = n(549254),
     R = n(445529),
     L = n(778712),
-    y = n(192308),
-    D = n(834730),
+    D = n(192308),
+    y = n(834730),
     v = n(789645),
     b = n(308528),
     M = n(442433),
@@ -72,8 +72,8 @@ let eA = r.forwardRef(function (e, t) {
 var eh = n(824994),
     eI = n(922301),
     ef = n(660184),
-    ep = n(414808),
-    eT = n(302005),
+    ep = n(3322),
+    eT = n(355145),
     em = n(954376),
     eg = n(534400),
     eS = n(854627),
@@ -82,10 +82,10 @@ var eh = n(824994),
     eO = n(568548),
     eR = n(741961),
     eL = n(543465),
-    ey = n(287809),
-    eD = n(19575),
+    eD = n(287809),
+    ey = n(19575),
     ev = n(403796);
-let eb = eD.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
+let eb = ey.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     eM = { offset: { top: 2, bottom: 2, right: 4 } };
 function eP(e) {
     let { nameplate: t, icon: n, forceShow: r = !1, reducedClickTarget: a = !1, visibleElementRef: l, ...o } = e,
@@ -188,7 +188,7 @@ function eF(e) {
             hoverGradientEnd: O,
             ...L
         } = e,
-        { width: y, ref: D } = (0, P.Ay)(),
+        { width: D, ref: y } = (0, P.Ay)(),
         v = r.useRef(null),
         b = r.useRef(null),
         M = (0, E.A)(m, v);
@@ -209,7 +209,7 @@ function eF(e) {
                     (0, i.jsx)(ek, {
                         eventTargetRef: v,
                         isNitro: S,
-                        contentWidth: y,
+                        contentWidth: D,
                         hoverGradientStart: N,
                         hoverGradientMiddle: C,
                         hoverGradientEnd: O,
@@ -221,7 +221,7 @@ function eF(e) {
                     ...L,
                     children: [
                         (0, i.jsx)(F.A, {
-                            ref: g ? D : void 0,
+                            ref: g ? y : void 0,
                             muted: !1,
                             avatar: (0, i.jsx)(a, {
                                 size: "refresh_sm",
@@ -260,16 +260,15 @@ function eV(e) {
         [e_, eE] = r.useState(!1),
         eN = r.useRef(null),
         [eC, eR] = r.useState(!1),
-        ey = (0, _.K)(
+        eD = (0, _.K)(
             r.useCallback((e) => {
                 eR(e);
             }, []),
         ),
-        eD = r.useRef(null),
-        ek = C ?? eD,
-        eF = (0, E.A)(ek, ey),
-        { showMenuItemPopover: eV, markMenuItemPopoverAsDismissed: eB } = (0, eT.z)({
-            location: "PrivateChannel",
+        ey = r.useRef(null),
+        ek = C ?? ey,
+        eF = (0, E.A)(ek, eD),
+        { showMenuItemPopover: eV, markMenuItemPopoverAsDismissed: eB } = (0, eT.B)({
             isChannelSelected: !0 === a,
             isTargetInViewport: eC,
             channelType: t.type,
@@ -384,7 +383,7 @@ function eV(e) {
                               n.e("82073"),
                               n.e("97558"),
                               n.e("54625"),
-                              n.e("71133"),
+                              n.e("93514"),
                               n.e("91994"),
                               n.e("76665"),
                               n.e("61268"),
@@ -438,7 +437,7 @@ function eV(e) {
         t.isManaged() &&
             ((r = el.intl.formatToPlainString(el.t.hVGjEW, { name: e3 })),
             (a = el.intl.format(el.t.IK1Qvs, { name: e3 }))),
-            (0, y.openModalLazy)(async () => {
+            (0, D.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("56852"), n.e("37803")]).then(n.bind(n, 148166));
                 return (t) => (0, i.jsx)(e, { title: r, body: a, onSubmit: te, ...t });
             });
@@ -604,7 +603,7 @@ function eV(e) {
                                     highlighted: e2 && !e1,
                                     muted: e1,
                                     subText: t.isSystemDM()
-                                        ? (0, i.jsx)(D.E, {
+                                        ? (0, i.jsx)(y.E, {
                                               variant: "text-xs/medium",
                                               color: "none",
                                               className: ev.W$,
@@ -613,7 +612,7 @@ function eV(e) {
                                                   : el.intl.string(el.t.NnY5lc),
                                           })
                                         : t.isMultiUserDM()
-                                          ? (0, i.jsx)(D.E, {
+                                          ? (0, i.jsx)(y.E, {
                                                 variant: "text-xs/medium",
                                                 color: "none",
                                                 className: ev.W$,
@@ -676,7 +675,7 @@ function eV(e) {
 }
 let eB = function (e) {
     let { channel: t, selected: n, ...r } = e,
-        a = (0, h.bG)([ey.default], () => ey.default.getUser(t.getRecipientId())),
+        a = (0, h.bG)([eD.default], () => eD.default.getUser(t.getRecipientId())),
         s = a?.id,
         l = (0, h.cf)([eC.A, eN.A], () => {
             let e;
@@ -695,10 +694,10 @@ let eB = function (e) {
         { voiceChannel: o } = (0, G.Ay)({ userId: s }),
         d = (0, eo.r)({ user: a }),
         c = (0, h.bG)(
-            [ey.default, eR.A],
+            [eD.default, eR.A],
             () =>
                 t.isMultiUserDM()
-                    ? ei.default.keys(eR.A.getTypingUsers(t.id)).some((e) => e !== ey.default.getCurrentUser()?.id)
+                    ? ei.default.keys(eR.A.getTypingUsers(t.id)).some((e) => e !== eD.default.getCurrentUser()?.id)
                     : null != a && eR.A.isTyping(t.id, t.getRecipientId()),
             [t, a],
         );

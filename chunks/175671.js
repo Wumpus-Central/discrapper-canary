@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => ea, rr: () => ei }), n(321073);
+n.d(t, { Ay: () => es, rr: () => er }), n(321073);
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -99,7 +99,7 @@ n(508300);
 var R = n(607470);
 n(516653);
 var L = n(375708);
-function y(e) {
+function D(e) {
     let {
             poster: t,
             src: n,
@@ -139,7 +139,7 @@ function y(e) {
           })
         : (0, i.jsx)("img", { alt: "", src: t, width: a, height: s });
 }
-function D(e) {
+function y(e) {
     let {
         src: t,
         poster: n,
@@ -170,7 +170,7 @@ function D(e) {
                 dataSafeSrc: t,
                 children(e) {
                     let { src: n, size: l, animating: c, alt: u } = e;
-                    return (0, i.jsx)(y, {
+                    return (0, i.jsx)(D, {
                         alt: u,
                         className: o,
                         poster: n,
@@ -286,12 +286,13 @@ function Q(e) {
 }
 var J = n(692051),
     ee = n(838541),
-    et = n(742715);
-function en(e) {
+    et = n(768570),
+    en = n(742715);
+function ei(e) {
     let t = K.A.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
-function ei(e) {
+function er(e) {
     let {
             className: t,
             iframeWrapperClassName: n,
@@ -315,8 +316,8 @@ function ei(e) {
             onControlsHide: O,
             onControlsShow: R,
             onVolumeChange: L,
-            onMute: y,
-            href: D,
+            onMute: D,
+            href: y,
             placeholder: v,
             placeholderVersion: M,
             sourceMetadata: P,
@@ -365,7 +366,7 @@ function ei(e) {
                 volume: g,
                 onPlay: S,
                 onPause: N,
-                onMute: y,
+                onMute: D,
                 onControlsHide: O,
                 onControlsShow: R,
                 sourceMetadata: P,
@@ -426,7 +427,7 @@ function ei(e) {
                     children: f
                         ? (0, i.jsx)(b.A, {
                               onPlay: null != d ? k : null,
-                              externalURL: D,
+                              externalURL: y,
                               renderLinkComponent: I,
                               messageId: P?.message?.id,
                               channelId: P?.message?.channel_id,
@@ -437,7 +438,7 @@ function ei(e) {
         ],
     });
 }
-function er(e) {
+function ea(e) {
     let {
         className: t,
         href: n,
@@ -456,7 +457,7 @@ function er(e) {
         placeholderVersion: f,
         sourceMetadata: T,
     } = e;
-    return (0, i.jsx)(D, {
+    return (0, i.jsx)(y, {
         className: s()(p.pu, t),
         original: n,
         poster: (0, V.E)(o),
@@ -479,7 +480,7 @@ function er(e) {
         sourceMetadata: T,
     });
 }
-class ea extends r.PureComponent {
+class es extends r.PureComponent {
     static defaultProps = {
         hideMedia: !1,
         allowFullScreen: !0,
@@ -552,7 +553,7 @@ class ea extends r.PureComponent {
                                     ? (0, i.jsx)("img", {
                                           alt: "",
                                           className: p.SG,
-                                          src: a && !o ? t.iconProxyURL : en(t.iconProxyURL),
+                                          src: a && !o ? t.iconProxyURL : ei(t.iconProxyURL),
                                       })
                                     : null,
                                 null != t.url
@@ -854,7 +855,7 @@ class ea extends r.PureComponent {
                 : (0, i.jsx)(J.Y.Consumer, {
                       children: (e) => {
                           let { disableAnimations: l } = e;
-                          return (0, i.jsx)(er, {
+                          return (0, i.jsx)(ea, {
                               className: p.W$,
                               href: r,
                               thumbnail: a,
@@ -879,7 +880,7 @@ class ea extends r.PureComponent {
             T = () => {
                 this.setState({ videoControlsShown: !1 });
             };
-        return (0, i.jsx)(ei, {
+        return (0, i.jsx)(er, {
             className: p.W$,
             href: r,
             allowFullScreen: u,
@@ -914,7 +915,7 @@ class ea extends r.PureComponent {
                                   ? (0, i.jsx)("img", {
                                         alt: "",
                                         className: p.mG,
-                                        src: e && !a ? t.iconProxyURL : en(t.iconProxyURL),
+                                        src: e && !a ? t.iconProxyURL : ei(t.iconProxyURL),
                                     })
                                   : null,
                               (0, i.jsxs)("span", {
@@ -974,34 +975,26 @@ class ea extends r.PureComponent {
     }
     renderAll() {
         let e,
-            t,
-            { embed: n, hideMedia: i } = this.props,
-            { isVisible: r } = this.state,
-            a = this.renderProvider(r),
-            s = this.renderAuthor(r),
-            l = this.renderTitle(r);
-        switch (n.type) {
-            case _.Auw.IMAGE:
-            case _.Auw.VIDEO:
-            case _.Auw.GIFV:
-                break;
-            default:
-                e = this.renderDescription();
-        }
-        let o = this.renderFields();
-        i || (t = this.renderMedia(!r));
+            { embed: t, hideMedia: n } = this.props,
+            { isVisible: i } = this.state,
+            r = this.renderProvider(i),
+            a = this.renderAuthor(i),
+            s = this.renderTitle(i),
+            l = et.Mg.has(t.type) ? null : this.renderDescription(),
+            o = this.renderFields();
+        n || (e = this.renderMedia(!i));
         let d = this.renderFooter(),
-            c = null == t;
+            c = null == e;
         return (
-            n.type === _.Auw.RICH && (c = null == n.video),
+            t.type === _.Auw.RICH && (c = null == t.video),
             {
-                provider: a,
-                author: s,
-                title: l,
-                description: e,
-                thumbnail: !i && c ? this.renderThumbnail(r) : null,
+                provider: r,
+                author: a,
+                title: s,
+                description: l,
+                thumbnail: !n && c ? this.renderThumbnail(i) : null,
                 fields: o,
-                media: t,
+                media: e,
                 footer: d,
             }
         );
@@ -1093,7 +1086,7 @@ class ea extends r.PureComponent {
                     footer: A,
                 } = e.renderAll();
             return (0, i.jsx)("article", {
-                className: s()(n, p.vO, et.PT, {
+                className: s()(n, p.vO, en.PT, {
                     [p.dK]: t,
                     [p.o4]: a === m.Oc.SPOILER,
                     [p.q$]: e.shouldObscure,

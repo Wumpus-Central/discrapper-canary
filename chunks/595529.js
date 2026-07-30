@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { b5: () => b, Bo: () => D, AA: () => P, eE: () => y, PP: () => U, Vu: () => v, Tr: () => M, DP: () => O });
+n.d(t, {
+    b5: () => b,
+    Bo: () => y,
+    gc: () => w,
+    AA: () => P,
+    PP: () => U,
+    eE: () => D,
+    Vu: () => v,
+    DP: () => O,
+    Tr: () => M,
+});
 var i = n(582128),
     r = n(17928),
     a = n(554146),
@@ -87,7 +97,7 @@ function L(e) {
         () => (null !== e ? _.A.settings.userContent?.recurringDismissibleContentStates?.[e] : null) ?? R,
     );
 }
-function y(e, t, n) {
+function D(e, t, n) {
     let { lastDismissedVersion: a } = L(e),
         s = (0, r.bG)([E.A], () => E.A.getGuildId()),
         l = null;
@@ -107,12 +117,12 @@ function y(e, t, n) {
         ),
     ];
 }
-function D(e, t, n) {
+function y(e, t, n) {
     let { lastDismissedAtMs: a, numTimesDismissed: s } = L(e),
         l = (0, r.bG)([E.A], () => E.A.getGuildId()),
         o = null;
     return (
-        null != e && (o = w(!(0, g.P3)(e), a, s, t) ? e : null),
+        null != e && (o = G(!(0, g.P3)(e), a, s, t) ? e : null),
         [
             C(o, l, n),
             i.useCallback(
@@ -206,7 +216,7 @@ function U(e, t, n, a) {
         o = l?.numTimesDismissed,
         d = null;
     return (
-        null != e && (d = w(!(0, g.P3)(e), l?.lastDismissedAtMs, o, n) ? e : null),
+        null != e && (d = G(!(0, g.P3)(e), l?.lastDismissedAtMs, o, n) ? e : null),
         [
             C(d, t, a),
             i.useCallback(
@@ -218,7 +228,11 @@ function U(e, t, n, a) {
         ]
     );
 }
-function w(e, t, n, i) {
+function w(e) {
+    let t = (0, r.bG)([_.A], () => _.A.settings.userContent?.dismissedContents);
+    return e.filter((e) => null != t && !(0, I.c0)(t, e));
+}
+function G(e, t, n, i) {
     let r = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         a = void 0 === r ? 0 : r + i.cooldownDurationMs,
         s = Date.now(),
