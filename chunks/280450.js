@@ -13,7 +13,7 @@ var _ = n(15552),
     E = n(53943),
     A = n(626584),
     h = n(620233),
-    I = n(636537),
+    I = n(562465),
     f = n(652215),
     p = n(976860);
 let T = function () {
@@ -24,11 +24,11 @@ var m = n(252919),
     S = n(612181),
     N = n(38405),
     C = n(115036),
-    R = n(536802),
-    O = n(204925);
+    O = n(536802),
+    R = n(204925);
 let L = new A.A("AuthenticationStore"),
-    y = "fingerprint",
-    D = "installation_id_v3",
+    D = "fingerprint",
+    y = "installation_id_v3",
     v = "user_id_cache",
     b = null,
     M = null,
@@ -57,14 +57,14 @@ function Q(e) {
     L.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
 }
 function J() {
-    let e = o.w.get(D);
+    let e = o.w.get(y);
     if (null != e && e.length > 0) return e;
     let t = o.w.get("analytics_installation");
-    return null != t && t.length > 0 ? (o.w.set(D, t), t) : null;
+    return null != t && t.length > 0 ? (o.w.set(y, t), t) : null;
 }
 function ee() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((w = o.w.get(y)), (x = J()), null != $)) return $;
+    if (((w = o.w.get(D)), (x = J()), null != $)) return $;
     let t = null != w ? w : a.getToken();
     return !(0, p.m)() || (!e && null != t) || C.A.isHandoffAvailable()
         ? Promise.resolve()
@@ -109,7 +109,7 @@ function et(e) {
     );
 }
 function en() {
-    (G = w), (w = null), o.w.remove(y);
+    (G = w), (w = null), o.w.remove(D);
 }
 function ei(e, t) {
     Q("setAuthToken called."), (null == t || t !== b) && a.removeAnalyticsToken(), a.setToken(e, t);
@@ -131,7 +131,7 @@ function es() {
 function el(e) {
     let { installation: t } = e;
     if (null != x && x.length > 0) return !1;
-    (x = t), T() && o.w.set(D, t);
+    (x = t), T() && o.w.set(y, t);
 }
 function eo() {
     (V = !0),
@@ -157,11 +157,12 @@ function ed(e) {
                 "LayoutStore",
                 "OverlaySettingsStore",
                 "ApexExperimentStore",
+                "AccessibilityStore",
             ],
             type: e?.isSwitchingAccount ? "user-data-only" : "all",
         }),
         l.Ay.Store.removeAllConditionalListeners(),
-        R.A.clearAll(),
+        O.A.clearAll(),
         E.IU(),
         N.A.clearUser(),
         o.w.remove(v),
@@ -289,7 +290,7 @@ let eu = new ec(
             Q(`handleConnectionClosed called with code ${t}.`);
             let i = n(192308).hasModalOpen;
             if (4004 === t) {
-                if (V || i(O.jc) || i(O.Uy)) return void eo();
+                if (V || i(R.jc) || i(R.Uy)) return void eo();
                 g.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(v) }),
                     ed(),
                     setImmediate(() => (0, p.pX)(f.BVt.DEFAULT_LOGGED_OUT));
@@ -357,7 +358,7 @@ let eu = new ec(
                       }),
                       (w = t),
                       (G = t),
-                      o.w.set(y, w))
+                      o.w.set(D, w))
                     : ee()
                 : null != t &&
                   w !== t &&
