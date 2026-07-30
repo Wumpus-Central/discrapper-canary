@@ -1332,27 +1332,6 @@ let { Themes: c } = d.zv,
             [c.MIDNIGHT]: { raw: "YELLOW_NEW_80", opacity: 1 },
             [c.DARKER]: { raw: "YELLOW_NEW_80", opacity: 1 },
         },
-        COLLECTIBLES_TAB_GRADIENT_CENTER: {
-            category: "generic",
-            [c.DARK]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.MIDNIGHT]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.DARKER]: { raw: "ILLO_PINK_40", opacity: 1 },
-        },
-        COLLECTIBLES_TAB_GRADIENT_INNER: {
-            category: "generic",
-            [c.DARK]: { raw: "ILLO_PINK_30", opacity: 0.5 },
-            [c.LIGHT]: { raw: "ILLO_PINK_30", opacity: 0.5 },
-            [c.MIDNIGHT]: { raw: "ILLO_PINK_30", opacity: 0.5 },
-            [c.DARKER]: { raw: "ILLO_PINK_30", opacity: 0.5 },
-        },
-        COLLECTIBLES_TAB_GRADIENT_OUTER: {
-            category: "generic",
-            [c.DARK]: { raw: "ILLO_PINK_30", opacity: 0 },
-            [c.LIGHT]: { raw: "ILLO_PINK_30", opacity: 0 },
-            [c.MIDNIGHT]: { raw: "ILLO_PINK_30", opacity: 0 },
-            [c.DARKER]: { raw: "ILLO_PINK_30", opacity: 0 },
-        },
         CONTENT_INVENTORY_MEDIA_SEEKBAR_CONTAINER: {
             category: "generic",
             [c.DARK]: { raw: "PLUM_6", opacity: 0.24 },
@@ -9066,7 +9045,7 @@ let { Themes: c } = d.zv,
         },
     },
     L = o()(p, (e) => r()(e)),
-    y = {
+    D = {
         themes: I,
         modules: N,
         colors: o()(f, (e, t) => ({
@@ -9084,16 +9063,16 @@ let { Themes: c } = d.zv,
                     let e = m[t]?.[n.theme];
                     null != e && ((r = e.raw ?? r), (a = e.opacity ?? a));
                 }
-                if (1 === a) return y.unsafe_rawColors[r].resolve(n);
+                if (1 === a) return D.unsafe_rawColors[r].resolve(n);
                 {
                     let e = L[r];
-                    return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), D(e, n.saturation);
+                    return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), y(e, n.saturation);
                 }
             },
         })),
         unsafe_rawColors: o()(p, (e, t) => {
             let n = L[t];
-            return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
+            return { css: M(t), resolve: (e) => y(n, e?.saturation ?? 1) };
         }),
         shadows: o()(g, (e, t) => ({
             css: M(t),
@@ -9117,7 +9096,7 @@ let { Themes: c } = d.zv,
             ...o()(R, (e) => `${e}px`),
         },
     };
-function D(e, t) {
+function y(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -9156,4 +9135,4 @@ function M(e, t) {
         i = b(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let P = y;
+let P = D;

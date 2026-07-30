@@ -3613,9 +3613,6 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #ff4dd1;
-    --collectibles-tab-gradient-inner: rgba(252, 153, 232, .5);
-    --collectibles-tab-gradient-outer: rgba(252, 153, 232, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -4278,9 +4275,6 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #ff4dd1;
-    --collectibles-tab-gradient-inner: rgba(252, 153, 232, .5);
-    --collectibles-tab-gradient-outer: rgba(252, 153, 232, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -4943,9 +4937,6 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #ff4dd1;
-    --collectibles-tab-gradient-inner: rgba(252, 153, 232, .5);
-    --collectibles-tab-gradient-outer: rgba(252, 153, 232, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -5608,9 +5599,6 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #ff4dd1;
-    --collectibles-tab-gradient-inner: rgba(252, 153, 232, .5);
-    --collectibles-tab-gradient-outer: rgba(252, 153, 232, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
