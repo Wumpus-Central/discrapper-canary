@@ -13,10 +13,11 @@ class o extends s.G {
             { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
             { no: 4, name: "textarea_field", kind: "message", T: () => l.X },
             { no: 5, name: "checkbox_field", kind: "scalar", T: 8 },
+            { no: 6, name: "asset_field", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { deprecatedField: "", plainTextField: "", checkboxField: !1 };
+        let t = { deprecatedField: "", plainTextField: "", checkboxField: !1, assetField: "" };
         return (
             globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
@@ -44,6 +45,9 @@ class o extends s.G {
                 case 5:
                     a.checkboxField = e.bool();
                     break;
+                case 6:
+                    a.assetField = e.string();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -61,7 +65,8 @@ class o extends s.G {
             "" !== e.plainTextField && t.tag(3, i.O0.LengthDelimited).string(e.plainTextField),
             e.textareaField &&
                 l.X.internalBinaryWrite(e.textareaField, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.checkboxField && t.tag(5, i.O0.Varint).bool(e.checkboxField);
+            !1 !== e.checkboxField && t.tag(5, i.O0.Varint).bool(e.checkboxField),
+            "" !== e.assetField && t.tag(6, i.O0.LengthDelimited).string(e.assetField);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
