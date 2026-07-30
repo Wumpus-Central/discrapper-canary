@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, {
-    A5: () => m,
+    A5: () => f,
     Bf: () => S,
-    Bs: () => A,
-    IY: () => g,
-    Im: () => E,
-    St: () => I,
-    UT: () => T,
-    Vh: () => N,
-    WU: () => f,
-    _7: () => p,
-    mU: () => y,
+    Bs: () => T,
+    IY: () => p,
+    Im: () => I,
+    St: () => m,
+    UT: () => g,
+    Vh: () => O,
+    WU: () => A,
+    _7: () => h,
+    mU: () => N,
     oQ: () => C,
-    q1: () => h,
+    q1: () => E,
 });
 var i,
     r,
-    s,
     a,
-    o,
+    s,
     l,
-    u,
+    o,
+    d,
     c = n(734057),
-    d = n(174459),
+    u = n(174459),
     _ = n(652215),
-    h =
+    E =
         (((i = {}).GET_STARTED_MODAL = "get_started_modal"),
         (i.RETRY_MODAL = "retry_modal"),
         (i.NSFW_GUILD = "nsfw_guild"),
@@ -51,59 +51,60 @@ var i,
         (i.FAMILY_CENTER_CONNECTION = "family_center_connection"),
         (i.PARENTAL_CONSENT_LOCKOUT = "parental_consent_lockout"),
         i),
-    f =
+    A =
         (((r = {})[(r.PRIMARY = 1)] = "PRIMARY"),
         (r[(r.RETRY = 2)] = "RETRY"),
         (r[(r.EXPRESSIVE_PRIMARY = 3)] = "EXPRESSIVE_PRIMARY"),
         (r[(r.SAFETY_FLOWS = 4)] = "SAFETY_FLOWS"),
+        (r[(r.EXPRESSIVE_V2 = 5)] = "EXPRESSIVE_V2"),
         r),
+    h =
+        (((a = {}).MANUAL_REVIEW_REQUEST = "manual_review_request"),
+        (a.LEARN_MORE = "learn_more"),
+        (a.GET_STARTED = "get_started"),
+        (a.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
+        (a.METHOD_SELECT = "method_select"),
+        (a.LOG_OUT = "log_out"),
+        a),
+    I = (((s = {}).RETRY = "retry"), (s.CONNECT_TO_TEEN = "connect_to_teen"), s),
+    f =
+        (((l = {}).NSFW_CHANNEL_AGE_VERIFY = "nsfw_channel_age_verify"),
+        (l.NSFW_CHANNEL_UNDERAGE = "nsfw_channel_underage"),
+        (l.NSFW_CHANNEL_VERIFIED = "nsfw_channel_verified"),
+        (l.GUILD_LARGE_SERVER = "guild_large_server"),
+        (l.GUILD_LARGE_SERVER_UNDERAGE = "guild_large_server_underage"),
+        (l.NSFW_EMBEDDED_ACTIVITY = "nsfw_embedded_activity"),
+        (l.NSFW_APP_LISTING = "nsfw_app_listing"),
+        (l.SPOILER_CHANNEL = "spoiler_channel"),
+        l),
     p =
-        (((s = {}).MANUAL_REVIEW_REQUEST = "manual_review_request"),
-        (s.LEARN_MORE = "learn_more"),
-        (s.GET_STARTED = "get_started"),
-        (s.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
-        (s.METHOD_SELECT = "method_select"),
-        (s.LOG_OUT = "log_out"),
-        s),
-    E = (((a = {}).RETRY = "retry"), (a.CONNECT_TO_TEEN = "connect_to_teen"), a),
-    m =
-        (((o = {}).NSFW_CHANNEL_AGE_VERIFY = "nsfw_channel_age_verify"),
-        (o.NSFW_CHANNEL_UNDERAGE = "nsfw_channel_underage"),
-        (o.NSFW_CHANNEL_VERIFIED = "nsfw_channel_verified"),
-        (o.GUILD_LARGE_SERVER = "guild_large_server"),
-        (o.GUILD_LARGE_SERVER_UNDERAGE = "guild_large_server_underage"),
-        (o.NSFW_EMBEDDED_ACTIVITY = "nsfw_embedded_activity"),
-        (o.NSFW_APP_LISTING = "nsfw_app_listing"),
-        (o.SPOILER_CHANNEL = "spoiler_channel"),
-        o),
-    g =
-        (((l = {}).NSFW_CHANNEL_AGREE_CTA = "nsfw_channel_agree_cta"),
-        (l.NSFW_CHANNEL_DISAGREE_CTA = "nsfw_channel_disagree_cta"),
-        l);
-function A(e, t, n) {
-    d.default.track(_.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
+        (((o = {}).NSFW_CHANNEL_AGREE_CTA = "nsfw_channel_agree_cta"),
+        (o.NSFW_CHANNEL_DISAGREE_CTA = "nsfw_channel_disagree_cta"),
+        o);
+function T(e, t, n) {
+    u.default.track(_.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function I(e, t, n, i) {
-    d.default.track(_.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
+function m(e, t, n, i) {
+    u.default.track(_.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
-function T(e, t) {
-    d.default.track(_.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
+function g(e, t) {
+    u.default.track(_.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
 }
 function S(e, t, n) {
-    d.default.track(_.HAw.NSFW_SPACE_WARNING_MODAL_VIEWED, { channel_id: t, guild_id: n, modal_type: e });
+    u.default.track(_.HAw.NSFW_SPACE_WARNING_MODAL_VIEWED, { channel_id: t, guild_id: n, modal_type: e });
 }
-function y(e, t, n, i) {
+function N(e, t, n, i) {
     let r = null != n ? c.A.getChannel(n) : null,
-        s = r?.topic != null && "" !== r.topic.trim();
-    d.default.track(_.HAw.NSFW_SPACE_WARNING_MODAL_CLICKED, {
+        a = r?.topic != null && "" !== r.topic.trim();
+    u.default.track(_.HAw.NSFW_SPACE_WARNING_MODAL_CLICKED, {
         cta: e,
         modal_type: t,
         channel_id: n,
         guild_id: i,
-        has_channel_topic: s,
+        has_channel_topic: a,
     });
 }
-var C = (((u = {}).VERIFIED_TEEN = "verified_teen"), (u.VERIFIED_ADULT = "verified_adult"), (u.ERROR = "error"), u);
-function N(e) {
-    d.default.track(_.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
+var C = (((d = {}).VERIFIED_TEEN = "verified_teen"), (d.VERIFIED_ADULT = "verified_adult"), (d.ERROR = "error"), d);
+function O(e) {
+    u.default.track(_.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
 }
