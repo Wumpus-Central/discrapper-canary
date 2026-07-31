@@ -5285,8 +5285,9 @@ let s6 = nK(iX),
             ((0, l1.Ay)(() => {
                 let e = eX.default.getAnalyticsToken();
                 if (
-                    (null != e &&
-                        x.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: eX.default.getId() }),
+                    (null != e
+                        ? x.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: eX.default.getId() })
+                        : eX.default.isAuthenticated() && nu.fetchCurrentUser({ withAnalyticsToken: !0 }).catch(R.tEg),
                     S.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
                     (0, D.d0)("invite"),
                     lz.VP || eY.A.launch("discord://" + R.BVt.INVITE(t), () => void 0),
