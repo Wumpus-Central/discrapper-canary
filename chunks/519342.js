@@ -25,7 +25,7 @@ var i = n(477900),
     b = n(610274),
     T = n(655413),
     R = n(884863),
-    _ = n(971954),
+    _ = n(4264),
     S = n(662731),
     P = n(375708),
     L = n(820447);
@@ -51,8 +51,8 @@ function w(e) {
         Y = (0, c.bG)([E.A], () => E.A.getRoom(a)?.background ?? o.I.DEFAULT),
         { seats: K } = _.iX[Y],
         X = K.find((e) => e.position.x === N && e.position.y === I),
-        Z = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
-        $ = l.useCallback(() => {
+        $ = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
+        Z = l.useCallback(() => {
             null != B && (0, v.EB)({ guildId: B, channelId: a, targetUserId: t, interactionType: "clicked" });
         }, [t, B, a]),
         q = l.useCallback(
@@ -123,8 +123,8 @@ function w(e) {
             className: X?.dim ? L.r3 : void 0,
         }),
         et = {
-            left: Z.x.to((e) => `calc(${e}% - ${O / 2}px)`),
-            top: Z.y.to((e) => `calc(${e}% - ${O / 2}px)`),
+            left: $.x.to((e) => `calc(${e}% - ${O / 2}px)`),
+            top: $.y.to((e) => `calc(${e}% - ${O / 2}px)`),
             zIndex: V ? 1e6 : 1e3 * Math.round(I) + Math.round(N),
         };
     if (!D)
@@ -136,7 +136,7 @@ function w(e) {
                 "aria-label": J,
                 className: L.KI,
                 onMouseEnter: Q,
-                onClick: $,
+                onClick: Z,
                 onContextMenu: q,
                 children: ee,
             }),
@@ -171,7 +171,7 @@ function w(e) {
                                               },
                                               onMouseEnter: Q,
                                               onClick: () => {
-                                                  n(), $();
+                                                  n(), Z();
                                               },
                                               onContextMenu: q,
                                               children: el,
@@ -210,7 +210,7 @@ function w(e) {
                               "aria-label": J,
                               className: L.KI,
                               onMouseEnter: Q,
-                              onClick: $,
+                              onClick: Z,
                               onContextMenu: q,
                               children: el,
                           }),

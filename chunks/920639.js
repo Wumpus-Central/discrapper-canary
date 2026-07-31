@@ -17,7 +17,7 @@ var i = n(95561),
     s = n(763827),
     l = n(977997),
     o = n(558076),
-    d = n(971954),
+    d = n(4264),
     c = n(652215);
 function u(e) {
     let { userId: t, guildId: n, channelId: i } = e,

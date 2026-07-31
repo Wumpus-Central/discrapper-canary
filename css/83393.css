@@ -185,19 +185,12 @@
 
 .container_fae5e9 {
     align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: space-around
-}
-
-.container_fae5e9,
-.image_fae5e9 {
     height: 100%;
+    justify-content: space-around;
     width: 100%
-}
-
-.image_fae5e9 {
-    inset: 0;
-    position: absolute
 }
 
 .seats_fae5e9 {

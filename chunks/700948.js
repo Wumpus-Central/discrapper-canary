@@ -23,24 +23,25 @@ var i = n(477900),
     N = n(519342),
     I = n(241215),
     b = n(207274),
-    T = n(971954),
+    T = n(4264),
     R = n(662731),
     _ = n(375708),
     S = n(886943);
 function P(e) {
     let { channelId: t, popoutType: n, controlsIdle: a } = e,
         P = (0, u.bG)([x.A], () => x.A.getRoom(t)?.background ?? d.I.DEFAULT),
-        { background: L, seats: w, aspectRatio: O, plants: M, getName: D } = T.iX[P],
-        { width: U = 0, height: k = 0, ref: V } = (0, c.Ay)(),
-        G = U / k > O,
-        B = (0, u.bG)([p.A], () => null != p.A.getSelectedParticipant(t)),
-        H = l.useRef(null),
-        F = (0, u.bG)([x.A], () => x.A.getRoomUsers(t)),
-        z = (0, u.bG)([x.A], () => x.A.getRoomObjects(t)),
-        W = F.size,
-        Y = Math.max(0, w.length - F.size),
-        K = z.get(g.N.NOTE)?.length ?? 0,
-        X = M.length + 1 + K;
+        { background: L, backgroundBlurred: w, seats: O, aspectRatio: M, plants: D, getName: U } = T.iX[P],
+        { width: k = 0, height: V = 0, ref: G } = (0, c.Ay)(),
+        B = k / V > M,
+        H = (0, u.bG)([p.A], () => null != p.A.getSelectedParticipant(t)),
+        F = H ? (0, T.bf)(M, B) : 1,
+        z = l.useRef(null),
+        W = (0, u.bG)([x.A], () => x.A.getRoomUsers(t)),
+        Y = (0, u.bG)([x.A], () => x.A.getRoomObjects(t)),
+        K = W.size,
+        X = Math.max(0, O.length - W.size),
+        $ = Y.get(g.N.NOTE)?.length ?? 0,
+        Z = D.length + 1 + $;
     return (
         l.useEffect(() => {
             (0, f.zR)({ channelId: t });
@@ -50,67 +51,79 @@ function P(e) {
                 n = m.A.getChannel(t)?.guild_id;
             e || null == n || (0, A.z5)(n, t);
         }, [t]),
-        (0, i.jsxs)("div", {
+        (0, i.jsx)("div", {
             className: S.kL,
-            ref: V,
+            style: {
+                backgroundImage: `url(${H ? w : L})`,
+                backgroundSize: B ? `auto ${100 * F}%` : `${100 * F}% auto`,
+            },
+            ref: G,
             role: "region",
-            "aria-label": D(),
-            children: [
-                (0, i.jsx)(o.s, {
-                    children: _.intl.formatToPlainString(R.default["/l5Wn+"], {
-                        seatedCount: W,
-                        openSeatCount: Y,
-                        objectCount: X,
-                    }),
-                }),
-                (0, i.jsx)("div", {
-                    className: s()(S.hk, { [S.Nb]: G }),
-                    style: { aspectRatio: O },
-                    ref: H,
-                    children: (0, i.jsxs)(h.xp, {
-                        containerRef: H,
-                        children: [
-                            (0, i.jsx)("img", { className: S.Sl, src: L, alt: "" }),
-                            (0, i.jsx)(N.A, { channelId: t, roomWidth: U }),
-                            (0, i.jsx)("div", {
-                                role: "list",
-                                "aria-label": _.intl.string(R.default.F9DcvR),
-                                children: w.map((e, n) =>
-                                    (0, i.jsx)(
-                                        j.A,
-                                        {
-                                            channelId: t,
-                                            x: e.position.x,
-                                            y: e.position.y,
-                                            label: e.getLabel(),
-                                            roomWidth: U,
-                                        },
-                                        n,
-                                    ),
-                                ),
-                            }),
-                            (0, i.jsxs)("div", {
-                                role: "list",
-                                "aria-label": _.intl.string(R.default.JYlbK5),
-                                children: [
-                                    (0, i.jsx)(y.A, {
-                                        channelId: t,
-                                        plantConfig: M,
-                                        roomWidth: U,
-                                        roomHeight: k,
-                                        aspectRatio: O,
-                                    }),
-                                    (0, i.jsx)(b.A, { channelId: t }),
-                                ],
-                            }),
-                            (0, i.jsx)(C.A, { channelId: t, roomWidth: U }),
-                            !B && (0, i.jsx)(E.A, { channelId: t, popoutType: n, aspectRatio: O }),
-                            (0, i.jsx)(v.A, { channelId: t, popoutType: n, seatsRef: H, controlsIdle: a, height: k }),
-                        ],
-                    }),
-                }),
-                B && (0, i.jsx)(I.A, { channelId: t, popoutType: n, width: U, height: k }),
-            ],
+            "aria-label": U(),
+            children: H
+                ? (0, i.jsx)(I.A, { channelId: t, popoutType: n, width: k, height: V })
+                : (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          (0, i.jsx)(o.s, {
+                              children: _.intl.formatToPlainString(R.default["/l5Wn+"], {
+                                  seatedCount: K,
+                                  openSeatCount: X,
+                                  objectCount: Z,
+                              }),
+                          }),
+                          (0, i.jsx)("div", {
+                              className: s()(S.hk, { [S.Nb]: B }),
+                              style: { aspectRatio: M },
+                              ref: z,
+                              children: (0, i.jsxs)(h.xp, {
+                                  containerRef: z,
+                                  children: [
+                                      (0, i.jsx)(N.A, { channelId: t, roomWidth: k }),
+                                      (0, i.jsx)("div", {
+                                          role: "list",
+                                          "aria-label": _.intl.string(R.default.F9DcvR),
+                                          children: O.map((e, n) =>
+                                              (0, i.jsx)(
+                                                  j.A,
+                                                  {
+                                                      channelId: t,
+                                                      x: e.position.x,
+                                                      y: e.position.y,
+                                                      label: e.getLabel(),
+                                                      roomWidth: k,
+                                                  },
+                                                  n,
+                                              ),
+                                          ),
+                                      }),
+                                      (0, i.jsxs)("div", {
+                                          role: "list",
+                                          "aria-label": _.intl.string(R.default.JYlbK5),
+                                          children: [
+                                              (0, i.jsx)(y.A, {
+                                                  channelId: t,
+                                                  plantConfig: D,
+                                                  roomWidth: k,
+                                                  roomHeight: V,
+                                                  aspectRatio: M,
+                                              }),
+                                              (0, i.jsx)(b.A, { channelId: t }),
+                                          ],
+                                      }),
+                                      (0, i.jsx)(C.A, { channelId: t, roomWidth: k }),
+                                      (0, i.jsx)(E.A, { channelId: t, popoutType: n, aspectRatio: M }),
+                                      (0, i.jsx)(v.A, {
+                                          channelId: t,
+                                          popoutType: n,
+                                          seatsRef: z,
+                                          controlsIdle: a,
+                                          height: V,
+                                      }),
+                                  ],
+                              }),
+                          }),
+                      ],
+                  }),
         })
     );
 }
