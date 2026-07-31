@@ -1,4 +1,4 @@
-r.d(t, { S: () => F, v: () => m });
+r.d(t, { S: () => m, v: () => O });
 var s = r(582128),
     i = r(196765),
     l = r(537812),
@@ -44,7 +44,7 @@ function p(e) {
     let { colorFilters: t, themeFilters: r, searchQuery: s, itemTypeFilters: i } = e;
     return t.size > 0 || r.size > 0 || "" !== s.trim() ? b : i.size > 0 ? d : h;
 }
-let m = (0, i.v)(
+let O = (0, i.v)(
     (0, l.eh)((e, t) => ({
         ...E,
         hasDefaultFilters: () =>
@@ -181,6 +181,7 @@ let m = (0, i.v)(
                 orbEligible: !1,
                 thirdPartyOnly: !1,
                 offerEligible: !1,
+                queryPageOffset: 0,
             });
         },
         reset: () => {
@@ -192,7 +193,7 @@ let m = (0, i.v)(
         },
     })),
 );
-function F(e) {
+function m(e) {
     let { onSetResponse: t, setSearchError: r, setIsFetchingResults: i } = (0, y.S)();
     s.useEffect(() => {
         function s(e) {
@@ -249,14 +250,14 @@ function F(e) {
                 };
             })(t, e);
         }
-        s(l(m.getState()));
-        let o = m.subscribe(l, s, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-            n = m.subscribe(
+        s(l(O.getState()));
+        let o = O.subscribe(l, s, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+            n = O.subscribe(
                 (e) => e.hasFilters(),
                 (e, t) => {
                     if (!e && t) {
-                        let e = m.getState();
-                        e.userHasSelectedSort || m.setState({ sort: p(e) });
+                        let e = O.getState();
+                        e.userHasSelectedSort || O.setState({ sort: p(e) });
                     }
                 },
             );
