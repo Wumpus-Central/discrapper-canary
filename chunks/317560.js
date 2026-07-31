@@ -1,5 +1,5 @@
 n.d(t, { R: () => a, j: () => s });
-var l = n(627968),
+var l = n(477900),
     i = n(192308);
 let r = "social-layer-storefront-product-details-modal",
     a = (e) => {
@@ -18,7 +18,7 @@ let r = "social-layer-storefront-product-details-modal",
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("30814"),
-                    n.e("92576"),
+                    n.e("13586"),
                     n.e("77004"),
                     n.e("87236"),
                     n.e("18582"),
@@ -46,10 +46,10 @@ let r = "social-layer-storefront-product-details-modal",
                     n.e("3131"),
                     n.e("47177"),
                     n.e("69201"),
-                    n.e("51778"),
                     n.e("8563"),
                     n.e("36149"),
                     n.e("69985"),
+                    n.e("51778"),
                     n.e("24265"),
                     n.e("40492"),
                     n.e("27272"),

@@ -1,45 +1,42 @@
-n.d(l, { A: () => x });
-var t = n(477900);
+"use strict";
+n.d(t, { H: () => l });
+var i = n(477900);
 n(582128);
-var i = n(17928),
-    r = n(696451),
-    a = n(317525),
-    s = n(71393),
-    o = n(576705),
-    d = n(183555),
-    u = n(1659),
-    c = n(166005),
-    g = n(900179),
-    f = n(518477),
-    m = n(652215),
-    p = n(375708);
-function x(e) {
-    let { userId: l, guildId: n, ...x } = e,
-        { trackUserProfileAction: h } = (0, d.NJ)(),
-        v = (0, i.bG)([s.A], () => s.A.getGuild(n)),
-        A = (0, i.bG)([r.Ay], () => r.Ay.getMember(n, l)),
-        b = A?.roles,
-        j = (0, i.yK)([a.A], () => a.A.getManyRoles(n, b ?? []).sort(u.m), [b, n]),
-        [I] = (0, i.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(n)]);
-    if (null == v) return null;
-    let C = I && null != A;
-    return 0 !== j.length || C
-        ? (0, t.jsx)(g.A, {
-              heading: p.intl.string(p.t["LPJmL/"]),
-              scrollTargetId: f.bk.ROLES,
-              ...x,
-              children: (0, t.jsx)(c.YR, {
-                  userId: l,
-                  guild: v,
-                  roles: j,
-                  onAddRole: () => {
-                      h({ action: "ADD_ROLE" });
-                  },
-                  onRemoveRole: () => {
-                      h({ action: "REMOVE_ROLE" });
-                  },
-                  allowEditing: !0,
-              }),
-          })
-        : null;
+var r = n(661531),
+    a = n(996682),
+    s = n(27989);
+function l(e) {
+    let {
+            size: t = "md",
+            width: n,
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
+            ...c
+        } = e,
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        E = u?.height ?? l;
+    return (0, i.jsxs)("svg", {
+        ...(0, a.A)(c),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: _,
+        height: E,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, i.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
+                d: "M7.71 9.1a2.06 2.06 0 1 1 0 4.12 2.06 2.06 0 0 1 0-4.13Z",
+                className: d,
+            }),
+            (0, i.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
+                fillRule: "evenodd",
+                d: "M21 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h18ZM4.78 6.88a2 2 0 0 0-2 2v7c0 .26.03.48.08.66.15.5.8.3 1.02-.18A3.89 3.89 0 0 1 7.59 14h.24c1.62 0 2.9.77 3.59 2.33.21.48.9.7 1.04.2.04-.18.07-.4.07-.66v-7a2 2 0 0 0-2-2H4.78Zm11.15 7.85a1 1 0 0 0 0 2h4.37a1 1 0 1 0 0-2h-4.37Zm0-3.4a1 1 0 0 0 0 2h4.37a1 1 0 1 0 0-2h-4.37Zm0-3.4a1 1 0 0 0 0 2h2.69a1 1 0 0 0 0-2h-2.69Z",
+                clipRule: "evenodd",
+                className: d,
+            }),
+        ],
+    });
 }

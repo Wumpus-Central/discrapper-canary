@@ -144,9 +144,7 @@ let m = {
         I.getConfig({ location: r }).enabled
             ? (0, a.openModalLazy)(
                   async () => {
-                      let { default: e } = await Promise.all([n.e("63452"), n.e("51778"), n.e("22153")]).then(
-                          n.bind(n, 808400),
-                      );
+                      let { default: e } = await Promise.all([n.e("63452"), n.e("22153")]).then(n.bind(n, 808400));
                       return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                   },
                   { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
