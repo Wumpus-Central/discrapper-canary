@@ -3,7 +3,7 @@ n.d(t, {
     $F: () => l.LG,
     Bo: () => R,
     Cu: () => b,
-    IA: () => D,
+    IA: () => y,
     TP: () => L,
     Wl: () => d.L,
     bG: () => 50035,
@@ -61,6 +61,11 @@ function h(e, t) {
     }
 }
 function I(e, t, n, i, s) {
+    if (t.signal?.aborted) {
+        let e = Object.assign(Error("Request aborted"), { code: "ABORTED" });
+        T(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e });
+        return;
+    }
     let l = r()[e](t.url);
     if ((null != t.onRequestCreated && t.onRequestCreated(l), null != t.query)) {
         let e = t.query;
@@ -107,7 +112,7 @@ function I(e, t, n, i, s) {
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
                 t.backoff.fail(() => v(t.url).then(() => I(e, t, n, i, s)));
         },
-        u = y?.prepareRequest?.(l);
+        u = D?.prepareRequest?.(l);
     l.ok((e) => null != e.status),
         l.then(
             (r) => {
@@ -129,7 +134,7 @@ function I(e, t, n, i, s) {
                     E = (e) => {
                         l || (i(e), s?.({ ok: !1, hasErr: !0, err: e }));
                     };
-                if (t?.interceptResponse?.(r, c, E) !== !0 && y?.interceptResponse?.(r, c, E, u) !== !0) {
+                if (t?.interceptResponse?.(r, c, E) !== !0 && D?.interceptResponse?.(r, c, E, u) !== !0) {
                     if (r.ok) n(a);
                     else {
                         if (t.oldFormErrors && a?.body?.code === 50035) {
@@ -235,9 +240,9 @@ function L() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? `/v${window.GLOBAL_ENV.API_VERSION}` : "");
 }
-let y = null;
-function D(e) {
-    y = e;
+let D = null;
+function y(e) {
+    D = e;
 }
 let v = () => Promise.resolve();
 function b(e) {

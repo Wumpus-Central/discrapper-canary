@@ -25,14 +25,14 @@ var i = n(889137),
     O = n(617710),
     R = n(607399),
     L = n(309010),
-    y = n(967198),
-    D = n(174459),
+    D = n(967198),
+    y = n(174459),
     v = n(652215);
 function b(e, t) {
-    D.default.track(v.HAw.APP_DIRECTORY_PROFILE_EMBED_SENT, {
+    y.default.track(v.HAw.APP_DIRECTORY_PROFILE_EMBED_SENT, {
         application_id: e,
         device_platform: R.Fr ? "mobile_web" : "desktop_web",
-        guild_id: y.A.getGuildId(),
+        guild_id: D.A.getGuildId(),
         channel_id: L.Ay.getChannelId(),
         section: t,
     });
@@ -86,7 +86,7 @@ function J(e) {
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
         r = (0, $.O)();
-    D.default.track(v.HAw.SEND_MESSAGE_ROUNDTRIP, {
+    y.default.track(v.HAw.SEND_MESSAGE_ROUNDTRIP, {
         ...(0, K.A)(),
         api_latency_ms: n,
         gateway_latency_ms: i,
@@ -174,8 +174,8 @@ var eS = n(71393),
     eO = n(576705),
     eR = n(290863),
     eL = n(568548),
-    ey = n(101392),
-    eD = n(287809),
+    eD = n(101392),
+    ey = n(287809),
     ev = n(927813),
     eb = n(45938),
     eM = n(975571),
@@ -889,7 +889,7 @@ ${a}`),
                     messageReference: O,
                     allowedMentions: R,
                     poll: L,
-                    sharedCustomTheme: y,
+                    sharedCustomTheme: D,
                     contentInventoryEntry: M,
                     attachments: x,
                     attachmentsToUpload: k,
@@ -911,7 +911,7 @@ ${a}`),
                 null == A &&
                 null == S &&
                 null == L &&
-                null == y &&
+                null == D &&
                 null == M &&
                 !J &&
                 (null == x || 0 === x.length) &&
@@ -932,7 +932,7 @@ ${a}`),
                     flags: 0 !== K ? K : void 0,
                     nonce: es,
                     poll: (0, ed.G8)(L),
-                    sharedCustomTheme: y,
+                    sharedCustomTheme: D,
                     mediaMention: Y,
                     mentionGames: t.mentionGames,
                 });
@@ -944,7 +944,7 @@ ${a}`),
                 !ej && null != d && d.length > 0)
             ) {
                 ej = !0;
-                let t = eD.default.getCurrentUser(),
+                let t = ey.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: i } = e$.validateMessage(d, t, e);
                 e$.sendBotMessage(e, n, i);
             }
@@ -987,7 +987,7 @@ ${a}`),
             }
             if (
                 (null != L && (eu.message.poll = L),
-                null != y && (eu.message.shared_client_theme = y),
+                null != D && (eu.message.shared_client_theme = D),
                 null != S && (eu.message.sticker_ids = S),
                 eo.A.isEnabled() && (eu.message.has_poggermode_enabled = !0),
                 B && (eu.message.with_checkpoint = !0),
@@ -1023,7 +1023,7 @@ ${a}`),
                         (A) => {
                             let R = Date.now() - s;
                             if (A.ok) {
-                                var y, x, F, V, B, j, W;
+                                var D, x, F, V, B, j, W;
                                 let a;
                                 en.donateSentMessage(l, e),
                                     e$.receiveMessage(e, A.body, !0, {
@@ -1040,7 +1040,7 @@ ${a}`),
                                                         channelId: i,
                                                         destinationChannelId: r,
                                                     } = e;
-                                                    D.default.track(v.HAw.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, {
+                                                    y.default.track(v.HAw.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, {
                                                         referenced_message_id: t,
                                                         guild_id: n,
                                                         channel_id: i,
@@ -1079,14 +1079,14 @@ ${a}`),
                                 et.recordMessageSendApiResponse(es),
                                     o.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
-                                        slowmodeType: ey.R.SendMessage,
+                                        slowmodeType: eD.R.SendMessage,
                                         channelId: e,
                                     }),
                                     o.h.dispatch({ type: "EMOJI_TRACK_USAGE", emojiUsed: c }),
                                     o.h.dispatch({ type: "STICKER_TRACK_USAGE", stickerIds: S }),
                                     o.h.dispatch({
                                         type: "LOCAL_MESSAGE_CREATE",
-                                        message: { channel_id: e, author: eD.default.getCurrentUser() },
+                                        message: { channel_id: e, author: ey.default.getCurrentUser() },
                                     }),
                                     (function (e) {
                                         let {
@@ -1175,7 +1175,7 @@ ${a}`),
                                                         break;
                                                     }
                                                     case m.I.GAME_PROFILE:
-                                                        D.default.track(v.HAw.GAME_PROFILE_LINK_EMBED_SENT, {
+                                                        y.default.track(v.HAw.GAME_PROFILE_LINK_EMBED_SENT, {
                                                             game_id: d,
                                                         });
                                                         break;
@@ -1193,11 +1193,11 @@ ${a}`),
                                         location: h ?? "chat_input",
                                         inviteAnalyticsMetadata: f,
                                     }),
-                                    (y = l),
+                                    (D = l),
                                     (x = A.body.id),
                                     (F = h ?? "chat_input"),
                                     (V = !!n.isGiftLinkSentOnBehalfOfUser),
-                                    (0, eb.e7)(y).forEach((t) => {
+                                    (0, eb.e7)(D).forEach((t) => {
                                         let n = z.A.getChannel(e);
                                         null != n &&
                                             _.Ay.trackWithMetadata(v.HAw.GIFT_CODE_SENT, {
@@ -1215,7 +1215,7 @@ ${a}`),
                                         (j = A.body.id),
                                         (W = h ?? "chat_input"),
                                         null != (a = z.A.getChannel(e)) &&
-                                            D.default.track(v.HAw.MESSAGE_SENT_WITH_GIF, {
+                                            y.default.track(v.HAw.MESSAGE_SENT_WITH_GIF, {
                                                 location: W,
                                                 message_id: j,
                                                 gif_provider: B.gif_provider,
@@ -1244,7 +1244,7 @@ ${a}`),
                                             let o =
                                                 l.state === eh.a.LOADED &&
                                                 l.message.attachments.some((e) => e.clip_remote_id === a.remoteClipId);
-                                            D.default.track(v.HAw.CLIP_SHARED, {
+                                            y.default.track(v.HAw.CLIP_SHARED, {
                                                 ...p.Zy(a),
                                                 ...p.lc("trackClipsShared"),
                                                 channel_id: t,
@@ -1291,7 +1291,7 @@ ${a}`),
                                             o.h.dispatch({
                                                 type: "SLOWMODE_SET_COOLDOWN",
                                                 channelId: e,
-                                                slowmodeType: ey.R.SendMessage,
+                                                slowmodeType: eD.R.SendMessage,
                                                 cooldownMs: t * ev.A.Millis.SECOND,
                                             });
                                     } else
@@ -1307,7 +1307,7 @@ ${a}`),
                                                 ? (t = eF.ty.EXPLICIT_CONTENT)
                                                 : null != L || J || null != M || e$.sendClydeError(e, A.body.code);
                                 r
-                                    ? e$.deleteMessage(e, es, !0)
+                                    ? null != eC.A.getMessage(e, es) && e$.deleteMessage(e, es, !0)
                                     : (null != i &&
                                           o.h.dispatch({
                                               type: "UPLOAD_FAIL",

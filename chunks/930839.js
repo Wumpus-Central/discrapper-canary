@@ -1,13 +1,14 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(562708),
     r = n(167789),
     a = n(228366),
-    s = n(404851),
-    l = n(174459),
-    o = n(280450),
-    d = n(652215);
-let c = (0, i.analyticsTrackingStoreMaker)({
+    s = n(434797),
+    l = n(404851),
+    o = n(174459),
+    d = n(280450),
+    c = n(652215);
+let u = (0, i.analyticsTrackingStoreMaker)({
     dispatcher: a.h,
     actionHandler: {
         CONNECTION_OPEN: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
@@ -18,10 +19,11 @@ let c = (0, i.analyticsTrackingStoreMaker)({
         TRACK: (e) => i.AnalyticsActionHandlers.handleTrack(e),
         SET_ANALYTICS_TOKEN: (e) => i.AnalyticsActionHandlers.handleSetAnalyticsToken(e),
     },
-    TRACKING_URL: d.Rsh.TRACK,
-    waitFor: [o.default],
-    getFingerprint: o.default.getFingerprint,
-    getSessionId: () => (0, s.Ht)().then((e) => ({ sessionId: e?.uuid })),
-    getLaunchSignature: () => l.launchSignature,
+    TRACKING_URL: c.Rsh.TRACK,
+    waitFor: [d.default],
+    getFingerprint: d.default.getFingerprint,
+    getSessionId: () => (0, l.Ht)().then((e) => ({ sessionId: e?.uuid })),
+    getLaunchSignature: () => o.launchSignature,
     scheduleWhenIdle: r.O,
+    sendUnloadRequest: s.L,
 });
