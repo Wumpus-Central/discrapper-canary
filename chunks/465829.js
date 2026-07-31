@@ -125,7 +125,7 @@ function O(e) {
                         }),
                     ],
                 }),
-            (0, i.jsx)(I.Ay, { primaryGuild: o, userId: t.id, onClose: E, containerClassName: T.L4, className: T.Mp }),
+            (0, i.jsx)(I.Ay, { primaryGuild: o, userId: t.id, onClose: E, className: T.Mp }),
             _,
         ],
     });

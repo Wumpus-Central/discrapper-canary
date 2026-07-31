@@ -2024,18 +2024,17 @@
     width: 4px
 }
 
-.guildTagContainer__26b1f {
+.guildTag__26b1f {
+    background: transparent;
     border: 1px solid var(--user-profile-border);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    height: 20px
+    height: 20px;
+    margin: 0 auto;
+    transition: background 50ms ease-in
 }
 
-.guildTagContainer__26b1f:hover {
-    background-color: var(--user-profile-background-hover)
-}
-
-.guildTag__26b1f {
-    background: unset;
-    margin: 0 auto
+.guildTag__26b1f:hover {
+    background-color: var(--user-profile-background-hover);
+    transition: background .15s ease-out
 }

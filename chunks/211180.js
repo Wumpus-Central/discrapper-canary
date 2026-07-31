@@ -16,6 +16,5 @@ _.exports = {
     eb: "userTagUsername__26b1f",
     sw: "userTagDiscriminator__26b1f",
     SC: "dotSpacer__26b1f",
-    L4: "guildTagContainer__26b1f",
     Mp: "guildTag__26b1f",
 };
