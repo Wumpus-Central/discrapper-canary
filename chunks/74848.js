@@ -115,9 +115,9 @@ function m(e) {
 function O(e) {
     let { getCurrentDeviceId: t, getSelectedDeviceId: i } = y(e),
         { resolvedId: s, selectedId: c } = (0, n.cf)([I.Ay], () => ({ resolvedId: t(I.Ay), selectedId: i(I.Ay) })),
-        r = (0, v.A)(s) ?? s,
+        r = (0, v.Ay)(s) ?? s,
         l = s !== r,
-        d = (0, v.A)(c) ?? c,
+        d = (0, v.Ay)(c) ?? c,
         a = c !== d;
     return l && !a;
 }

@@ -1,26 +1,26 @@
-n.d(t, { z: () => m });
+n.d(t, { z: () => g });
 var i = n(477900),
     r = n(582128),
     l = n(192308),
-    a = n(691540),
-    s = n(97483),
+    s = n(691540),
+    a = n(97483),
     o = n(475743),
     u = n(942370),
     c = n(311350),
     d = n(375708);
 let f = "in-game-auth-check-modal";
-function m(e, t) {
-    let { showInGameModal: m = !0, showToastOnSuccess: g = !0 } =
+function g(e, t) {
+    let { showInGameModal: g = !0, showToastOnSuccess: m = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        [A, E] = r.useState(!1),
+        [E, A] = r.useState(!1),
         C = r.useCallback(
             function () {
-                for (var t = arguments.length, r = Array(t), a = 0; a < t; a++) r[a] = arguments[a];
-                E(!0);
-                let s = e(...r);
+                for (var t = arguments.length, r = Array(t), s = 0; s < t; s++) r[s] = arguments[s];
+                A(!0);
+                let a = e(...r);
                 return (
-                    s === u._M.RPC &&
-                        m &&
+                    a === u._M.RPC &&
+                        g &&
                         (0, l.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e("30724").then(n.bind(n, 272047));
@@ -28,25 +28,25 @@ function m(e, t) {
                             },
                             { modalKey: f },
                         ),
-                    s
+                    a
                 );
             },
-            [e, E, m],
+            [e, A, g],
         ),
-        _ = (0, o.A)(t);
+        _ = (0, o.Ay)(t);
     return (
         r.useEffect(() => {
-            if (A && !1 === _ && !0 === t) {
+            if (E && !1 === _ && !0 === t) {
                 function e() {
-                    (0, a.P0)({
+                    (0, s.P0)({
                         id: "account-linked-toast",
                         message: d.intl.string(c.default.uG6teD),
-                        type: s.Ck.SUCCESS,
+                        type: a.Ck.SUCCESS,
                     });
                 }
                 (0, l.closeModal)(f),
-                    E(!1),
-                    g &&
+                    A(!1),
+                    m &&
                         ("visible" === document.visibilityState
                             ? e()
                             : document.addEventListener("visibilitychange", function t() {
@@ -54,7 +54,7 @@ function m(e, t) {
                                       (e(), document.removeEventListener("visibilitychange", t));
                               }));
             }
-        }, [A, t, _, g]),
+        }, [E, t, _, m]),
         C
     );
 }

@@ -18,7 +18,7 @@ var l,
     G = n(946356),
     O = n(287809),
     S = n(985925),
-    m = n(461376),
+    m = n(560952),
     R = n(66455),
     D = n(844222),
     h = n(866323),
@@ -771,7 +771,7 @@ function eq(e, t, n) {
 function eZ(e, t, n, l) {
     let r = i.useMemo(() => eY(e, t, n, l, !0), [e, t, n, l]),
         a = eQ(r),
-        s = (0, L.A)(r);
+        s = (0, L.Ay)(r);
     return { key: r, previousKey: s, state: a };
 }
 var e$ = n(452027),
@@ -1530,7 +1530,7 @@ function tw(e) {
             let { addtionalQuery: r, shouldDispatch: a = !1 } = l,
                 s = i.useMemo(() => eY(e, t, n, r), [e, t, n, r]),
                 E = eQ(s),
-                u = (0, L.A)(s),
+                u = (0, L.Ay)(s),
                 [o, c] = i.useState({});
             return (
                 i.useEffect(() => {
@@ -1985,7 +1985,7 @@ function t6(e) {
     let { userId: t, guildId: n, onClose: l, analyticsLocation: r, className: s } = e,
         E = (0, u.bG)([M.Ay], () => M.Ay.getGuildSidebarState(n), [n]),
         o = E?.details.modViewPanel ?? j.g.INFO,
-        c = (0, L.A)(t),
+        c = (0, L.Ay)(t),
         _ = null == o ? null : o === j.g.INFO ? "backwards" : "forwards",
         d = (0, R.A)(_),
         { reducedMotion: A } = i.useContext(D.C),

@@ -6,7 +6,7 @@ var a = n(477900),
     i = n(939249);
 let u = { EARN: 0.25, SPEND: 0.3 };
 var c = n(305003),
-    o = n(461376),
+    o = n(560952),
     d = n(834730),
     m = n(717421),
     f = n(475743),
@@ -71,7 +71,7 @@ let A = (e) => {
             i = null === t,
             [u, c] = (0, l.useState)(null),
             o = (0, l.useMemo)(() => b(t), [t]),
-            m = (0, f.A)(o) ?? 0,
+            m = (0, f.Ay)(o) ?? 0,
             x = (0, l.useMemo)(() => (null === u ? Math.max(m, o) : Math.max(o, u)), [m, o, u]),
             h = `${i ? 0 : x}ch`;
         return (0, a.jsx)(d.E, {
@@ -93,8 +93,8 @@ var R = n(744682);
 let k = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } },
     E = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
 var p = n(462887),
-    S = n(736653),
-    y = n(595055);
+    y = n(736653),
+    S = n(595055);
 let O = { width: 60, height: 60 };
 function D(e) {
     let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: r, getDuration: s } = e,
@@ -144,7 +144,7 @@ function M(e) {
             });
     return (
         D({ currentAnimationType: c, ...o, ...m }),
-        (0, a.jsx)(d, { ...O, size: "custom", className: y.E$, useLottieDefaultColors: !0 })
+        (0, a.jsx)(d, { ...O, size: "custom", className: S.E$, useLottieDefaultColors: !0 })
     );
 }
 function T(e) {
@@ -184,16 +184,16 @@ function T(e) {
             });
     return (
         D({ currentAnimationType: c, ...o, ...m }),
-        (0, a.jsx)(d, { ...O, size: "custom", className: y.E$, useLottieDefaultColors: !0 })
+        (0, a.jsx)(d, { ...O, size: "custom", className: S.E$, useLottieDefaultColors: !0 })
     );
 }
 let _ = function (e) {
-    let t = (0, S.Ay)();
+    let t = (0, y.Ay)();
     return (0, p.q)(t) ? (0, a.jsx)(T, { ...e }) : (0, a.jsx)(M, { ...e });
 };
 var L = n(375708);
 function w() {
-    return (0, a.jsx)("img", { className: y.V8, src: n(324292), alt: "" });
+    return (0, a.jsx)("img", { className: S.V8, src: n(324292), alt: "" });
 }
 let P = (0, l.forwardRef)(function (e, t) {
     let {
@@ -208,7 +208,7 @@ let P = (0, l.forwardRef)(function (e, t) {
             className: h,
         } = e,
         [j, v] = (0, l.useState)(!1),
-        g = (0, l.useMemo)(() => (u === c.k.SELECTED ? y.wH : j ? y.mr : y.Ay), [u, j]),
+        g = (0, l.useMemo)(() => (u === c.k.SELECTED ? S.wH : j ? S.mr : S.Ay), [u, j]),
         [C, b] = (0, l.useState)(!1),
         [A, R] = (0, l.useState)(!1),
         [k, E] = (0, l.useState)(2700),
@@ -224,7 +224,7 @@ let P = (0, l.forwardRef)(function (e, t) {
         (0, l.useEffect)(() => {
             A && !p && b(!1);
         }, [p, A]);
-    let S = p || C,
+    let y = p || C,
         O = C ? null : r,
         [D, M] = (0, l.useState)(null),
         T = (0, l.useRef)(null),
@@ -239,20 +239,20 @@ let P = (0, l.forwardRef)(function (e, t) {
             [M, D],
         );
     return (0, a.jsx)(i.D, {
-        onClick: S ? void 0 : d,
-        "aria-label": S ? L.intl.string(L.t.y0WGqP) : L.intl.formatToPlainString(L.t.zPaLL9, { balance: O ?? 0 }),
-        "aria-busy": S,
-        className: s()(y.vk, { [y.r9]: f }),
+        onClick: y ? void 0 : d,
+        "aria-label": y ? L.intl.string(L.t.y0WGqP) : L.intl.formatToPlainString(L.t.zPaLL9, { balance: O ?? 0 }),
+        "aria-busy": y,
+        className: s()(S.vk, { [S.r9]: f }),
         id: n ?? "balance-widget-pill",
         children: (0, a.jsxs)("span", {
             onMouseDown: m,
             onMouseEnter: f ? void 0 : () => v(!0),
             onMouseLeave: f ? void 0 : () => v(!1),
             ref: t,
-            className: s()(y.kL, g, h, { [y.En]: S, [y.dA]: x, [y.r9]: f }),
+            className: s()(S.kL, g, h, { [S.En]: y, [S.dA]: x, [S.r9]: f }),
             children: [
                 (0, a.jsx)("div", {
-                    className: s()(y.hr, S ? y.nr : void 0),
+                    className: s()(S.hr, y ? S.nr : void 0),
                     children: (0, a.jsx)(_, {
                         currentAnimationType: D,
                         animationTypeRef: T,
@@ -264,7 +264,7 @@ let P = (0, l.forwardRef)(function (e, t) {
                     onValueChange: B,
                     onValueReached: P,
                     targetTotalCounterTime: k,
-                    className: S ? y.F : void 0,
+                    className: y ? S.F : void 0,
                 }),
                 o && (0, a.jsx)(w, {}),
             ],

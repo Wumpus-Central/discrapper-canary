@@ -1624,7 +1624,7 @@ function nL(e) {
             overrideImageUrl: p,
             showsPromoted: h,
         } = e,
-        A = (0, nh.A)(m) ?? m;
+        A = (0, nh.Ay)(m) ?? m;
     return (0, r.jsx)(nR, {
         application: t,
         onClick: l,
@@ -2801,9 +2801,9 @@ function lp(e) {
         i = n.length > 4,
         s = o.useMemo(() => (i ? n.slice(0, 4) : n), [n, i]),
         [a, c] = o.useState(!1),
-        d = (0, nh.A)(a) ?? a,
+        d = (0, nh.Ay)(a) ?? a,
         m = o.useCallback(() => c((e) => !e), []),
-        h = ((0, nh.A)(l) ?? l)[0] !== l[0],
+        h = ((0, nh.Ay)(l) ?? l)[0] !== l[0],
         A = a && !h;
     o.useLayoutEffect(() => c(!1), [h]);
     let {

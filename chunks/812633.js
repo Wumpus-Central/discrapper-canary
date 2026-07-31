@@ -29,8 +29,8 @@ var a = i(477900),
     O = i(976860),
     k = i(4274),
     M = i(652215),
-    v = i(375708),
-    y = i(725086),
+    y = i(375708),
+    v = i(725086),
     R = i(906471),
     w = i(168482);
 let b = "hTKzmak",
@@ -43,27 +43,27 @@ let b = "hTKzmak",
 function q(e) {
     let { onClick: t } = e;
     return (0, a.jsxs)(A.D, {
-        className: y.qd,
+        className: v.qd,
         onClick: function () {
             t(), (0, O.pX)(M.BVt.GUILD_DISCOVERY);
         },
         children: [
-            (0, a.jsx)("img", { width: 40, height: 40, className: y.aL, alt: "", src: w }),
+            (0, a.jsx)("img", { width: 40, height: 40, className: v.aL, alt: "", src: w }),
             (0, a.jsxs)("div", {
                 children: [
                     (0, a.jsx)(h.D, {
-                        className: y.qg,
+                        className: v.qg,
                         variant: "heading-md/semibold",
-                        children: v.intl.string(v.t.DwDxDU),
+                        children: y.intl.string(y.t.DwDxDU),
                     }),
                     (0, a.jsx)(x.E, {
-                        className: y.qg,
+                        className: v.qg,
                         variant: "text-xs/normal",
-                        children: v.intl.string(v.t["5RL4CD"]),
+                        children: y.intl.string(y.t["5RL4CD"]),
                     }),
                 ],
             }),
-            (0, a.jsx)("img", { className: y.y8, alt: "", src: R }),
+            (0, a.jsx)("img", { className: v.y8, alt: "", src: R }),
         ],
     });
 }
@@ -76,7 +76,7 @@ function H(e) {
     async function p(e) {
         e.preventDefault();
         let t = s.trim();
-        if ("" === t) return void u(v.intl.string(v.t.IRq5ah));
+        if ("" === t) return void u(y.intl.string(y.t.IRq5ah));
         u(null), c(!0);
         let n = t.split("/"),
             a = n[n.length - 1];
@@ -88,7 +88,7 @@ function H(e) {
             } catch (e) {
                 throw new U.Wl(e);
             }
-            if (e?.channel == null) throw v.intl.string(v.t["GEYI+Z"]);
+            if (e?.channel == null) throw y.intl.string(y.t["GEYI+Z"]);
             let n = j.Ay.getInviteContext("Join Guild", e);
             await j.Ay.acceptInvite({
                 inviteKey: e.code,
@@ -102,7 +102,7 @@ function H(e) {
                 ? u(e)
                 : e instanceof U.Wl || e instanceof U.LG
                   ? u((0, k.s)(e.code))
-                  : u(v.intl.string(v.t.dDZRdy));
+                  : u(y.intl.string(y.t.dDZRdy));
         } finally {
             c(!1);
         }
@@ -115,32 +115,32 @@ function H(e) {
             children: [
                 (0, a.jsxs)(I.rQ, {
                     "data-migration-pending": !0,
-                    className: y.wx,
+                    className: v.wx,
                     direction: g.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
                         (0, a.jsx)(h.D, {
-                            className: y.DD,
+                            className: v.DD,
                             variant: "heading-xl/semibold",
-                            children: v.intl.string(v.t.riOUtB),
+                            children: y.intl.string(y.t.riOUtB),
                         }),
                         (0, a.jsx)(x.E, {
                             color: "text-default",
                             variant: "text-sm/normal",
-                            children: v.intl.string(v.t["7jub2t"]),
+                            children: y.intl.string(y.t["7jub2t"]),
                         }),
-                        (0, a.jsx)(I.s_, { "data-migration-pending": !0, className: y.b, onClick: i }),
+                        (0, a.jsx)(I.s_, { "data-migration-pending": !0, className: v.b, onClick: i }),
                     ],
                 }),
                 (0, a.jsxs)(I.$m, {
                     "data-migration-pending": !0,
-                    className: y.__invalid_content,
+                    className: v.__invalid_content,
                     children: [
                         (0, a.jsx)("form", {
                             onSubmit: p,
-                            className: y.$j,
+                            className: v.$j,
                             children: (0, a.jsx)(G.k, {
-                                label: v.intl.string(v.t.qreV25),
+                                label: y.intl.string(y.t.qreV25),
                                 required: !0,
                                 error: d,
                                 value: s,
@@ -152,12 +152,12 @@ function H(e) {
                         (0, a.jsx)(x.E, {
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: v.intl.string(v.t.Bnq46H),
+                            children: y.intl.string(y.t.Bnq46H),
                         }),
                         (0, a.jsx)("div", {
-                            className: y.eU,
+                            className: v.eU,
                             children: $.map((e) =>
-                                (0, a.jsx)(A.D, { className: y.Bb, onClick: () => o(e), children: e }, e),
+                                (0, a.jsx)(A.D, { className: v.Bb, onClick: () => o(e), children: e }, e),
                             ),
                         }),
                         (0, a.jsx)(q, { onClick: i }),
@@ -165,11 +165,11 @@ function H(e) {
                 }),
                 (0, a.jsxs)(I.jl, {
                     "data-migration-pending": !0,
-                    className: y.qr,
+                    className: v.qr,
                     children: [
                         (0, a.jsx)(f.$, {
                             variant: "primary",
-                            text: v.intl.string(v.t["Ts/9Ac"]),
+                            text: y.intl.string(y.t["Ts/9Ac"]),
                             loading: r,
                             onClick: p,
                         }),
@@ -179,7 +179,7 @@ function H(e) {
                             look: T.$n.Looks.LINK,
                             size: T.$n.Sizes.MIN,
                             onClick: t,
-                            children: v.intl.string(v.t["13/7kX"]),
+                            children: y.intl.string(y.t["13/7kX"]),
                         }),
                     ],
                 }),
@@ -199,7 +199,7 @@ function V(e) {
             hasJoinButton: r,
         } = e,
         [d, T] = l.useState(i),
-        A = (0, S.A)(d),
+        A = (0, S.Ay)(d),
         [h, x] = l.useState(null),
         [G, f] = l.useState(null),
         [j, U] = l.useState(null),
@@ -215,10 +215,10 @@ function V(e) {
                 f(e),
                 c.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.id, template_code: e.code });
         }, []),
-        v = l.useCallback((e) => {
+        y = l.useCallback((e) => {
             O(e === J.IR.COMMUNITY), T(J.oS.CUSTOMIZE_GUILD);
         }, []),
-        y = l.useCallback(() => T(J.oS.JOIN_GUILD), [T]),
+        v = l.useCallback(() => T(J.oS.JOIN_GUILD), [T]),
         R = l.useCallback(() => {
             d === J.oS.CUSTOMIZE_GUILD ? T(J.oS.CREATION_INTENT) : (T(J.oS.GUILD_TEMPLATES), f(null));
         }, [d]),
@@ -253,7 +253,7 @@ function V(e) {
                     impressionProperties: P,
                     children: (0, a.jsx)(L.A, {
                         isNewUser: !1,
-                        onJoin: r ? y : void 0,
+                        onJoin: r ? v : void 0,
                         onChooseTemplate: k,
                         onClose: s,
                     }),
@@ -262,7 +262,7 @@ function V(e) {
                     id: J.oS.CREATION_INTENT,
                     impressionName: m.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                     impressionProperties: P,
-                    children: (0, a.jsx)(E.A, { onClose: s, onBack: R, onCreationIntentChosen: v }),
+                    children: (0, a.jsx)(E.A, { onClose: s, onBack: R, onCreationIntentChosen: y }),
                 }),
                 (0, a.jsx)(N.q, {
                     id: J.oS.CUSTOMIZE_GUILD,

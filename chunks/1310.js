@@ -1278,8 +1278,8 @@ let ts = d.forwardRef(function (e, t) {
                   ).catch((e) => eN({ networkError: e, showVanityURL: eh }))),
                 eO !== tt.value && eP !== tt.value && eN({ savedMaxAge: tt.value });
         }, [eh, V, S, s, W?.id, f, o, eO, eD, eB, eN, eP, eF, ek]),
-        ez = (0, $.A)(S),
-        eY = (0, $.A)((0, m.Lt)(eF, A.Q.IS_APPLICATION_BYPASS)),
+        ez = (0, $.Ay)(S),
+        eY = (0, $.Ay)((0, m.Lt)(eF, A.Q.IS_APPLICATION_BYPASS)),
         e$ = null != ez && ez !== S,
         eJ = null != eY && eY !== (0, m.Lt)(eF, A.Q.IS_APPLICATION_BYPASS);
     d.useEffect(() => {

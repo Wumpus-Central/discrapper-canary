@@ -6,7 +6,7 @@ var n = t(582128),
     l = t(652215);
 function c(a, e) {
     let [t, c] = n.useState(s.N.LANDING),
-        d = (0, r.A)(t),
+        d = (0, r.Ay)(t),
         [o, m] = n.useState(null),
         [x, u] = n.useState(null),
         [N, h] = n.useState(void 0),

@@ -1,10 +1,10 @@
-l.d(n, { Ay: () => y, Fq: () => N, Py: () => A, ic: () => F });
+l.d(n, { Ay: () => w, Fq: () => N, Py: () => A, ic: () => F });
 var i,
     r = l(477900),
     o = l(582128),
     t = l(503698),
     s = l.n(t),
-    c = l(461376),
+    c = l(560952),
     a = l(359459),
     d = l(607399),
     u = l(868285),
@@ -48,7 +48,7 @@ let E = Object.freeze({
     wide: "contentColumnWide",
     scrollableCustom: "contentColumnCustom",
 });
-function w(e) {
+function y(e) {
     let { isMobile: n, mobileSidebarOpen: l, closeAction: i } = e,
         t = o.useRef(null);
     return null == i
@@ -74,7 +74,7 @@ function w(e) {
               }),
           });
 }
-let y = function (e) {
+let w = function (e) {
     let {
             sidebar: n,
             content: l,
@@ -86,14 +86,14 @@ let y = function (e) {
             scrollerRef: N,
             mobileSidebarOpen: F,
             toggleSidebar: A,
-            hideSidebar: y = !1,
+            hideSidebar: w = !1,
         } = e,
         T = o.useRef(null),
         D = o.useRef(null),
-        I = (0, R.A)(t),
+        I = (0, R.Ay)(t),
         M = (0, x.p)(
-            y,
-            { from: { position: "absolute", opacity: 0 }, enter: { opacity: 1 }, reverse: y, config: c.config.stiff },
+            w,
+            { from: { position: "absolute", opacity: 0 }, enter: { opacity: 1 }, reverse: w, config: c.config.stiff },
             "animate-always",
         ),
         H = o.useCallback(
@@ -105,7 +105,7 @@ let y = function (e) {
     o.useLayoutEffect(() => {
         null != T.current && I !== t && T.current.scrollTo({ to: 0 });
     }, [t, I, T]);
-    let O = (0, r.jsx)(w, { isMobile: d.Fr, mobileSidebarOpen: F, closeAction: m });
+    let O = (0, r.jsx)(y, { isMobile: d.Fr, mobileSidebarOpen: F, closeAction: m });
     function k() {
         return (0, r.jsx)(
             u.F,
@@ -115,7 +115,7 @@ let y = function (e) {
                     null != i &&
                     (0, r.jsx)(
                         b.F,
-                        { className: s()(v.noticeRegion, { [v.noticeRegionHiddenSidebar]: y }), children: i },
+                        { className: s()(v.noticeRegion, { [v.noticeRegionHiddenSidebar]: w }), children: i },
                         t,
                     ),
             },
@@ -177,7 +177,7 @@ let y = function (e) {
                                     (0, r.jsxs)(C.Gt, {
                                         className: s()(
                                             v.contentRegionScroller,
-                                            y ? v.contentRegionHiddenSidebar : v.contentRegionShownSidebar,
+                                            w ? v.contentRegionHiddenSidebar : v.contentRegionShownSidebar,
                                         ),
                                         ref: H,
                                         children: [
@@ -203,7 +203,7 @@ let y = function (e) {
                                 (0, r.jsxs)(C.Gt, {
                                     className: s()(
                                         v.contentRegionScroller,
-                                        y ? v.contentRegionHiddenSidebar : v.contentRegionShownSidebar,
+                                        w ? v.contentRegionHiddenSidebar : v.contentRegionShownSidebar,
                                     ),
                                     ref: H,
                                     children: [
@@ -214,7 +214,7 @@ let y = function (e) {
                                                 className: s()(v.contentColumn, v[i], { [v.mobileContent]: d.Fr }),
                                                 ref: D,
                                                 style: d.Fr ? { maxWidth: window.innerWidth } : void 0,
-                                                children: y ? l : (0, r.jsx)(h.xp, { containerRef: D, children: l }),
+                                                children: w ? l : (0, r.jsx)(h.xp, { containerRef: D, children: l }),
                                             }),
                                         }),
                                         !d.Fr && O,

@@ -545,7 +545,7 @@ function e3(e) {
             );
         }, [M]),
         D = (function (e, n, t) {
-            let i = (0, eI.A)(e),
+            let i = (0, eI.Ay)(e),
                 l = e !== i,
                 [a, r] = s.useState(!1);
             s.useEffect(() => {
@@ -5774,7 +5774,7 @@ let ds = (0, ep.A)(dl),
             T = (0, m.bG)([eU.Ay], () => (N?.channelId ?? eU.Ay.getVoiceChannelId()) === f?.id),
             _ = (0, m.bG)([ej.Ay], () => (null != f ? ej.Ay.getSelfEmbeddedActivityForChannel(f.id) : null), [f]),
             S = (0, m.bG)([rz.A], () => rz.A.isConnected()),
-            R = (0, eI.A)(S),
+            R = (0, eI.Ay)(S),
             L = S && !1 === R;
         s.useEffect(() => {
             T &&
@@ -5907,8 +5907,8 @@ let ds = (0, ep.A)(dl),
             }, [r, eo]);
         let em = (0, ef.cI)(f),
             eA = null != f && f.isPrivate(),
-            eg = (0, eI.A)(eA),
-            ex = (0, eI.A)(f?.id);
+            eg = (0, eI.Ay)(eA),
+            ex = (0, eI.Ay)(f?.id);
         s.useEffect(() => {
             let e = eg && !eA,
                 n = eg && eA && f?.id !== ex;

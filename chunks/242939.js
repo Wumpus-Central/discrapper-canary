@@ -3,7 +3,7 @@ var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(461376),
+    a = n(560952),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -13,7 +13,7 @@ let m = new d.E([], x.$G.QUEST_BAR_RENDERED, { location: "quest bar rendered" })
 var C = n(186111),
     p = n(859703),
     f = n(24001),
-    E = n(201274),
+    E = n(514547),
     h = n(971276),
     g = n(851936),
     _ = n(792620),
@@ -22,8 +22,8 @@ var C = n(186111),
     S = n(764336),
     R = n(617986),
     v = n(939249),
-    T = n(834730),
-    y = n(290136),
+    y = n(834730),
+    T = n(290136),
     Q = n(661531),
     N = n(365199),
     U = n(590202),
@@ -320,7 +320,7 @@ let es = function (e) {
                     (0, s.jsx)(a.animated.div, {
                         className: i()(en.ol, { [en.yZ]: l }),
                         style: { opacity: (0, O.a)(d.to({ range: [0, 1], output: [l ? 1 : 0.7, 0] })) },
-                        children: (0, s.jsx)(T.E, {
+                        children: (0, s.jsx)(y.E, {
                             color: "text-overlay-light",
                             lineClamp: 1,
                             variant: "text-xs/medium",
@@ -392,12 +392,12 @@ let el = (0, a.animated)(b.Ay),
                             className: er.y8,
                             onClick: x,
                             children: [
-                                (0, s.jsx)(T.E, {
+                                (0, s.jsx)(y.E, {
                                     color: "text-overlay-light",
                                     variant: "text-xs/normal",
                                     children: et.intl.string(et.t.o6FLcF),
                                 }),
-                                (0, s.jsx)(y.c, { color: Q.A.colors.WHITE, className: er.P$ }),
+                                (0, s.jsx)(T.c, { color: Q.A.colors.WHITE, className: er.P$ }),
                             ],
                         }),
                         (0, s.jsx)(I.C, {
@@ -581,8 +581,8 @@ function eR(e) {
     return (0, s.jsx)(eS, { ...e, popoutTargetElementRef: e.parentContainerRef });
 }
 var ev = n(776310),
-    eT = n(536283),
-    ey = n(166414);
+    ey = n(536283),
+    eT = n(166414);
 let eQ = (e) => {
     let { overlayRef: t, progressBarRef: n, isHovered: l } = e,
         { quest: o, isExpanded: d } = r.useContext($),
@@ -601,27 +601,27 @@ let eQ = (e) => {
         h = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         g = r.useRef(null),
         _ = (0, u.bG)([C.A], () => C.A.hasLayers()),
-        j = (0, c.A)(_),
+        j = (0, c.Ay)(_),
         [A, S] = r.useState(null),
         [R, v] = r.useState(null),
-        T = r.useRef(new ev.OH({ gravity: 0, wind: 0 })),
-        y = (0, ev.f9)(A, R),
+        y = r.useRef(new ev.OH({ gravity: 0, wind: 0 })),
+        T = (0, ev.f9)(A, R),
         Q = r.useMemo(() => ["#51BC9D"], []),
         N = r.useCallback(() => {
             if (h) return;
             let e = n.current,
                 t = g.current;
-            if (null != t && null != e && y.isReady) {
+            if (null != t && null != e && T.isReady) {
                 var s, r, l, i;
                 let { x: n, y: a } = e.getBoundingClientRect(),
                     { x: o, y: u } = t.getBoundingClientRect();
-                y.createMultipleConfetti(
+                T.createMultipleConfetti(
                     ((s = n - o),
                     (r = a - u),
                     (l = e.clientHeight),
                     (i = e.clientWidth),
                     {
-                        ...eT.Mw,
+                        ...ey.Mw,
                         position: { type: "static-random", minValue: { x: s, y: r }, maxValue: { x: s + l, y: r + i } },
                         velocity: { type: "static-random", minValue: { x: -20, y: -20 }, maxValue: { x: 20, y: 20 } },
                         opacity: { type: "linear", value: 2, addValue: -0.1 },
@@ -631,8 +631,8 @@ let eQ = (e) => {
                     100,
                 );
             }
-        }, [n, g, y, h]),
-        U = (0, c.A)(d);
+        }, [n, g, T, h]),
+        U = (0, c.Ay)(d);
     return (r.useEffect(() => {
         f && d && !U && (p(), N());
     }, [d, f, p, N, U]),
@@ -645,36 +645,36 @@ let eQ = (e) => {
             }, 200);
     }, [f, j, _, p, N]),
     r.useEffect(() => {
-        y.isReady && (!E.current && f && (p(), N()), (E.current = f));
-    }, [f, E, N, p, y]),
+        T.isReady && (!E.current && f && (p(), N()), (E.current = f));
+    }, [f, E, N, p, T]),
     r.useEffect(() => {
         l && f && (p(), N());
     }, [l, f, p, N]),
     h)
         ? null
         : (0, s.jsxs)("div", {
-              className: ey.iE,
+              className: eT.iE,
               "aria-hidden": "true",
               ref: g,
               children: [
-                  (0, s.jsx)(a.animated.div, { className: ey.Tp, style: { opacity: (0, O.a)(m) } }),
-                  (0, s.jsx)(a.animated.div, { className: i()(ey.sJ, ey.ix), style: { opacity: (0, O.a)(m) } }),
+                  (0, s.jsx)(a.animated.div, { className: eT.Tp, style: { opacity: (0, O.a)(m) } }),
+                  (0, s.jsx)(a.animated.div, { className: i()(eT.sJ, eT.ix), style: { opacity: (0, O.a)(m) } }),
                   (0, s.jsxs)(a.animated.div, {
-                      className: ey.KG,
+                      className: eT.KG,
                       style: { transform: x.to({ range: [0, 1], output: [-35, 0] }).to((e) => `translateY(${e}px)`) },
                       children: [
-                          (0, s.jsx)(ev.Fk, { ref: S, className: ey.t_, environment: T.current }),
+                          (0, s.jsx)(ev.Fk, { ref: S, className: eT.t_, environment: y.current }),
                           (0, s.jsx)(ev.K_, {
                               ref: v,
                               sprites: ["/assets/b909790cf1d80597.svg"],
                               colors: Q,
-                              spriteWidth: eT.wn,
-                              spriteHeight: eT.wn,
+                              spriteWidth: ey.wn,
+                              spriteHeight: ey.wn,
                           }),
                           null != t.current &&
                               (0, V.createPortal)(
                                   (0, s.jsx)(a.animated.div, {
-                                      className: i()(ey.sJ, ey.d7),
+                                      className: i()(eT.sJ, eT.d7),
                                       style: { opacity: (0, O.a)(m) },
                                   }),
                                   t.current,
@@ -732,7 +732,7 @@ let eB = function (e) {
                         inState: n,
                         id: "progress-title",
                         children: (e) =>
-                            (0, s.jsx)(T.E, {
+                            (0, s.jsx)(y.E, {
                                 ref: e,
                                 className: eU.FZ,
                                 color: "text-strong",
@@ -745,7 +745,7 @@ let eB = function (e) {
                         id: "progress-subtitle",
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, s.jsx)(T.E, {
+                            (0, s.jsx)(y.E, {
                                 ref: e,
                                 className: eU.FZ,
                                 color: "text-subtle",
@@ -765,7 +765,7 @@ function eI() {
     return (0, s.jsxs)("div", {
         className: eF.pS,
         children: [
-            (0, s.jsx)(T.E, {
+            (0, s.jsx)(y.E, {
                 variant: "text-xxs/medium",
                 className: i()(eF.Uu, eF.TK),
                 children: et.intl.format(et.t["pX+fmn"], { expirationDate: a }),
@@ -873,8 +873,8 @@ var eV = n(889137),
     e3 = n(114046),
     e7 = n(695366),
     e6 = n(274670),
-    e4 = n(144779),
-    e9 = n(30370),
+    e9 = n(144779),
+    e4 = n(30370),
     e5 = n(178540),
     e8 = n(104886),
     te = n(18437),
@@ -891,7 +891,7 @@ function tl(e) {
         onClick: () => {
             (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
                 ? (0, e6.r)({
-                      type: e4.F.CLICK_INTERNAL,
+                      type: e9.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -907,7 +907,7 @@ function tl(e) {
                   }),
                 (0, tn.openUserSettings)(tt.X.CONNECTIONS_PANEL);
         },
-        children: (0, s.jsx)(T.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
+        children: (0, s.jsx)(y.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
     });
 }
 function ti(e) {
@@ -923,7 +923,7 @@ function ta(e) {
 }
 var to = n(760479);
 function tu(e) {
-    return (0, s.jsx)(T.E, { className: to.eW, color: "text-muted", variant: "text-xxs/normal", children: e.children });
+    return (0, s.jsx)(y.E, { className: to.eW, color: "text-muted", variant: "text-xxs/normal", children: e.children });
 }
 function tc(e) {
     let { quest: t, useReducedMotion: n } = e,
@@ -937,7 +937,7 @@ function tc(e) {
             beforeRequest: () => {
                 (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
                     ? (0, e6.r)({
-                          type: e4.F.CLICK_INTERNAL,
+                          type: e9.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -971,7 +971,7 @@ function tc(e) {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
                                   if (e.type === e3._.EXPIRED_CREDENTIAL) {
-                                      let r = e9.A.getAccount(e.connected_account_id, e.connected_account_type),
+                                      let r = e4.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, F.IG)(e),
                                           i = (0, F.$J)(e);
                                       return (0, s.jsx)(
@@ -1000,7 +1000,7 @@ function tc(e) {
                           });
                       }
                     : () =>
-                          (0, s.jsx)(T.E, {
+                          (0, s.jsx)(y.E, {
                               className: to.eW,
                               color: "text-muted",
                               variant: "text-xxs/normal",
@@ -1023,7 +1023,7 @@ function tc(e) {
                         width: 16,
                         height: 16,
                     }),
-                    (0, s.jsx)(T.E, { variant: "text-xs/medium", children: C }),
+                    (0, s.jsx)(y.E, { variant: "text-xs/medium", children: C }),
                     (0, s.jsx)(v.D, { className: i()(to.w, { [to.r9]: x }), onClick: () => m(), children: a.render() }),
                 ],
             }),
@@ -1100,7 +1100,7 @@ function tC(e) {
         { springConfig: n, isExpanded: l } = r.useContext(tx),
         i = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         { ref: o, height: d = null } = (0, L.Ay)(),
-        x = (0, c.A)(d) ?? null,
+        x = (0, c.Ay)(d) ?? null,
         [{ height: m }, C] = (0, J.z)(() => ({ from: { height: 0 }, config: n }));
     return (
         r.useLayoutEffect(() => {
@@ -1132,7 +1132,7 @@ function tf(e) {
                     (0, s.jsx)(eq.D, { color: "text-default", variant: "heading-sm/medium", children: t }),
                 ],
             }),
-            (0, s.jsx)(T.E, { color: "text-muted", variant: "text-xs/normal", className: tp.r2, children: n }),
+            (0, s.jsx)(y.E, { color: "text-muted", variant: "text-xs/normal", className: tp.r2, children: n }),
         ],
     });
 }
@@ -1259,7 +1259,7 @@ function tv(e) {
         sourceQuestContent: f.uF.QUEST_BAR_V2,
     });
 }
-function tT(e) {
+function ty(e) {
     let { isCtaInteractable: t, containerRef: n, onAcceptQuest: l } = e,
         { quest: o, onGameSheetOpen: c, onGameSheetClose: d, taskDetails: x } = r.useContext($),
         { expansionSpring: m } = r.useContext(w),
@@ -1269,7 +1269,7 @@ function tT(e) {
         { enabled: _, showPlayInstantlyLabel: A } = ez.Bm.useConfig({ location: H.rE.QUESTS_BAR }),
         S = (0, eo.NA)({ quest: o, showPlayInstantlyLabel: A }),
         v = r.useMemo(() => (0, eZ.tW)(o, eZ.fY.HERO_IMAGE), [o]),
-        y = r.useMemo(() => (null == v ? {} : { backgroundImage: `url(${v.url})` }), [v]),
+        T = r.useMemo(() => (null == v ? {} : { backgroundImage: `url(${v.url})` }), [v]),
         Q = eK.t.useConfig({ location: H.rE.QUESTS_BAR }),
         N = (0, eo.mU)({
             quest: o,
@@ -1312,7 +1312,7 @@ function tT(e) {
                                 (0, s.jsxs)("div", {
                                     className: tA.zf,
                                     children: [
-                                        (0, s.jsx)(T.E, { className: tA.h_, variant: "text-xs/normal", children: N }),
+                                        (0, s.jsx)(y.E, { className: tA.h_, variant: "text-xs/normal", children: N }),
                                         b && (0, s.jsx)(e1.e, { questId: o.id, orbMultiplierEligibility: I }),
                                     ],
                                 }),
@@ -1370,7 +1370,7 @@ function tT(e) {
                 (0, s.jsx)(a.animated.div, {
                     className: tA.AK,
                     style: { opacity: (0, O.a)(m.to([0, 1], [1, 0])) },
-                    children: (0, s.jsx)("div", { className: i()(tA.LC, tA.Ge), style: y }),
+                    children: (0, s.jsx)("div", { className: i()(tA.LC, tA.Ge), style: T }),
                 }),
             (0, s.jsxs)(a.animated.div, {
                 className: tA.IC,
@@ -1394,7 +1394,7 @@ function tT(e) {
         ],
     });
 }
-function ty(e) {
+function tT(e) {
     let { quest: t } = e,
         { hasAlreadyLinked: n, onClickGameTitle: l } = r.useContext(z);
     return !0 !== n ? null : (0, s.jsx)(e0.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: l });
@@ -1404,7 +1404,7 @@ function tQ(e) {
         { quest: l, taskDetails: i } = r.useContext($);
     return (0, eV.YW)(t)
         .with(f.X0.SELECT, () => (0, s.jsx)(tj, { onConsole: () => n(H.fO.CONSOLE), onDesktop: () => n(H.fO.DESKTOP) }))
-        .with(f.X0.DESKTOP, () => ((0, _.I6)(l) ? (0, s.jsx)(ty, { quest: l }) : (0, s.jsx)(tE, { quest: l })))
+        .with(f.X0.DESKTOP, () => ((0, _.I6)(l) ? (0, s.jsx)(tT, { quest: l }) : (0, s.jsx)(tE, { quest: l })))
         .with(f.X0.CONSOLE, () => (0, s.jsx)(td, { quest: l, taskDetails: i }))
         .exhaustive();
 }
@@ -1570,7 +1570,7 @@ let tO = r.forwardRef(function (e, t) {
                 style: { opacity: 1 },
                 children: g
                     ? (0, s.jsx)(tI, { overlayRef: o, containerRef: t })
-                    : (0, s.jsx)(tT, { isCtaInteractable: !c || d, containerRef: t, onAcceptQuest: h }),
+                    : (0, s.jsx)(ty, { isCtaInteractable: !c || d, containerRef: t, onAcceptQuest: h }),
             }),
         ],
     });
@@ -1659,10 +1659,10 @@ function t$(e) {
         { isQuestBarVisible: d, reason: x } = (0, S.TQ)({ quest: t }),
         m = (0, u.bG)([C.A], () => C.A.hasLayers()),
         v = r.useRef(null),
-        T = r.useMemo(() => (0, _.vv)(t), [t]),
-        y = t.id,
+        y = r.useMemo(() => (0, _.vv)(t), [t]),
+        T = t.id,
         Q = t.userStatus?.enrolledAt != null,
-        N = (0, c.A)(Q),
+        N = (0, c.Ay)(Q),
         B = t.userStatus?.completedAt != null,
         { hasError: F, isLoading: I } = (0, j.zT)(),
         b = r.useContext(tV.Z) || (l && d && !I && !o),
@@ -1806,7 +1806,7 @@ function t$(e) {
                         (d.current = !0),
                         A({ withDelay: !0 });
                 }, [A, u, t.id]),
-                T = r.useCallback(() => {
+                y = r.useCallback(() => {
                     (0, tq.av)({
                         questId: t.id,
                         event: tw.HAw.QUEST_HOVER_OFF,
@@ -1821,19 +1821,19 @@ function t$(e) {
                         R();
                 }, [R, u, t.id]);
             r.useEffect(() => {
-                C && d.current && T();
-            }, [C, T]),
+                C && d.current && y();
+            }, [C, y]),
                 r.useLayoutEffect(() => {
                     a && !o && d.current && l();
                 }, [l, a, o]),
                 r.useLayoutEffect(() => {
                     i || !a || o || d.current || s(!1);
                 }, [a, i, o, s]);
-            let y = (0, tk.useHasAnyModalOpen)();
+            let T = (0, tk.useHasAnyModalOpen)();
             return (
                 r.useEffect(() => {
-                    y && d.current && T();
-                }, [T, y]),
+                    T && d.current && y();
+                }, [y, T]),
                 {
                     ctxMenuOpen: x,
                     gameSheetOpen: C,
@@ -1846,7 +1846,7 @@ function t$(e) {
                     handleFocusWithoutDelay: S,
                     handleBlur: R,
                     handleMouseEnter: v,
-                    handleMouseLeave: T,
+                    handleMouseLeave: y,
                 }
             );
         })({
@@ -1946,8 +1946,8 @@ function t$(e) {
         eo = (0, E.UH)(t);
     if (
         (r.useEffect(() => {
-            T && (0, R.l9)();
-        }, [T]),
+            y && (0, R.l9)();
+        }, [y]),
         !l || (!b && q && !I) || F)
     )
         return F ? n.log("Not rendered due to asset error") : l || n.log("Not rendered due to ineligibility"), null;
@@ -1965,7 +1965,7 @@ function t$(e) {
                 children: [
                     b &&
                         (0, s.jsxs)(s.Fragment, {
-                            children: [(0, s.jsx)(tW, { questId: y, isExpanded: O }), (0, s.jsx)(tH, {})],
+                            children: [(0, s.jsx)(tW, { questId: T, isExpanded: O }), (0, s.jsx)(tH, {})],
                         }),
                     (0, s.jsx)(a.animated.div, {
                         "data-testid": "quest-bar-container",

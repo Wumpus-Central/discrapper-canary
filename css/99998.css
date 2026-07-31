@@ -71,26 +71,6 @@
     transition: opacity .25s ease
 }
 
-.nudgeLabel_f8896c {
-    align-items: center;
-    display: inline-flex;
-    margin-inline-start: 0;
-    max-width: 0;
-    opacity: 0;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.full-motion .nudgeLabel_f8896c {
-    transition: max-width .25s ease, margin-inline-start .25s ease, opacity .25s ease
-}
-
-.nudgeLabel_f8896c.nudgeLabelExpanded_f8896c {
-    margin-inline-start: 4px;
-    max-width: 160px;
-    opacity: 1
-}
-
 .hideEmoji_f8896c {
     opacity: 0
 }
@@ -357,26 +337,6 @@
 
 .full-motion .bookmarkBtn__23977 {
     transition: opacity .25s ease
-}
-
-.nudgeLabel__23977 {
-    align-items: center;
-    display: inline-flex;
-    margin-inline-start: 0;
-    max-width: 0;
-    opacity: 0;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.full-motion .nudgeLabel__23977 {
-    transition: max-width .25s ease, margin-inline-start .25s ease, opacity .25s ease
-}
-
-.nudgeLabel__23977.nudgeLabelExpanded__23977 {
-    margin-inline-start: .25rem;
-    max-width: 10rem;
-    opacity: 1
 }
 
 .hideEmoji__23977 {

@@ -1,6 +1,6 @@
 e.d(n, { Y: () => R, x: () => f });
-var l = e(477900),
-    i = e(873298),
+var i = e(477900),
+    l = e(873298),
     a = e(192308),
     s = e(691540),
     d = e(857250),
@@ -17,8 +17,8 @@ async function R(t) {
     let { displayToast: n = !1, ...R } = t;
     if (null == O.A.getSavedMessage(R.channelId, R.messageId) && !(0, g.we)("addOrUpdateSavedMessage"))
         return void (0, a.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([e.e("22540"), e.e("63238")]).then(e.bind(e, 530951));
-            return (n) => (0, l.jsx)(t, { ...n });
+            let { default: t } = await e.e("22540").then(e.bind(e, 530951));
+            return (n) => (0, i.jsx)(t, { ...n });
         });
     if (
         null !=
@@ -33,7 +33,7 @@ async function R(t) {
                             }),
                             cancelText: C.intl.string(C.t.BddRzS),
                             confirmText: C.intl.string(C.t.ZGbTcy),
-                            onConfirm: () => o._.dispatch(p.jej.TOGGLE_INBOX, i.Y2.BOOKMARKS),
+                            onConfirm: () => o._.dispatch(p.jej.TOGGLE_INBOX, l.Y2.BOOKMARKS),
                         }),
                         null
                     );
@@ -48,16 +48,16 @@ async function R(t) {
     }
 }
 async function f(t) {
-    let { displayToast: n = !1, isReminder: e, ...l } = t;
+    let { displayToast: n = !1, isReminder: e, ...i } = t;
     if (
         null !=
-            (await (0, A.cf)(l).catch(
+            (await (0, A.cf)(i).catch(
                 (t) => ((0, s.P0)((0, d.o)(t?.body?.message ?? C.intl.string(C.t.R0RpRX), r.Ck.FAILURE)), null),
             )) &&
         n
     ) {
-        let t = null != l.dueAt || e ? C.intl.string(C.t.D0tS02) : C.intl.string(C.t["5KOMiV"]),
-            n = null != l.dueAt || e ? r.Ck.CLOCK : r.Ck.BOOKMARK;
+        let t = null != i.dueAt || e ? C.intl.string(C.t.D0tS02) : C.intl.string(C.t["5KOMiV"]),
+            n = null != i.dueAt || e ? r.Ck.CLOCK : r.Ck.BOOKMARK;
         (0, c.Dc)({ message: t, icon: n });
     }
 }

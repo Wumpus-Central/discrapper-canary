@@ -23,8 +23,8 @@ var i = n(477900),
     p = n(36149),
     A = n(287809),
     b = n(486020),
-    v = n(899847),
-    y = n(191627);
+    y = n(899847),
+    v = n(191627);
 let T = Object.freeze({
         PREREQ_LOADING: "PREREQ_LOADING",
         CONFIRM_AGE: "CONFIRM_AGE",
@@ -36,12 +36,12 @@ let T = Object.freeze({
         MUST_BE_ADULT: "MUST_BE_ADULT",
         TEEN_SCAN: "TEEN_SCAN",
     }),
-    h = { section: T.ERROR, params: { failureCode: y.vW.GENERIC_ERROR } };
+    h = { section: T.ERROR, params: { failureCode: v.vW.GENERIC_ERROR } };
 async function k(t, e) {
     try {
         var n;
         return (
-            (n = await v.Ay.getConnectionPrerequisites(t, e)),
+            (n = await y.Ay.getConnectionPrerequisites(t, e)),
             "ready" in n
                 ? { section: T.REQUEST, params: { teenIdentity: n.teen_identity } }
                 : "invalid_link_code" in n
@@ -66,7 +66,7 @@ var O = n(923531),
     P = n(31008);
 function V(t) {
     let e = (0, s.bG)([A.default], () => A.default.getCurrentUser()?.ageVerificationStatus),
-        n = (0, g.A)(e);
+        n = (0, g.Ay)(e);
     a.useEffect(() => {
         null == n || n === e || (null != e && e !== I.Tk.UNVERIFIED && t());
     }, [e, n, t]);
@@ -172,7 +172,7 @@ function B(t) {
     let { transitionState: e, failureCode: n, onClose: a } = t,
         r = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
         l = (0, G.A)(),
-        o = y.H1[n],
+        o = v.H1[n],
         c = { isAdult: l, email: r?.email ?? void 0 };
     return (0, i.jsx)(Q, {
         transitionState: e,
@@ -233,7 +233,7 @@ function H(t) {
 function J(t) {
     let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: E, onError: C } = t,
         m = (0, S.A)(() => {
-            v.Ay.clearPendingConnection(), E();
+            y.Ay.clearPendingConnection(), E();
         }),
         R = (0, S.A)((t) => {
             C((0, O.Nv)(t));
@@ -312,7 +312,7 @@ function Z(t) {
         a.useEffect(() => {
             let t = setTimeout(() => {
                 u.current || ((u.current = !0), f());
-            }, y.tN);
+            }, v.tN);
             return () => clearTimeout(t);
         }, [f]),
         (0, i.jsx)(w, { transitionState: e, onClose: l })
@@ -321,10 +321,10 @@ function Z(t) {
 function K(t) {
     let { userId: e, linkCode: n, transitionState: s, onClose: r } = t,
         [l, o] = a.useState(T.PREREQ_LOADING),
-        [c, u] = a.useState(y.vW.GENERIC_ERROR),
+        [c, u] = a.useState(v.vW.GENERIC_ERROR),
         [d, f] = a.useState(void 0),
         E = a.useCallback(function () {
-            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : y.vW.GENERIC_ERROR;
+            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.vW.GENERIC_ERROR;
             u(t), o(T.ERROR);
         }, []),
         C = a.useCallback(

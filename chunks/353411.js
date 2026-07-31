@@ -19,7 +19,7 @@ function p(e) {
     let { currentUserTrackId: t, syncingWithUser: n, syncingWithParty: r } = e,
         [l, o] = i.useState(!1),
         [d] = i.useState(() => new a.Ep()),
-        c = (0, s.A)(t);
+        c = (0, s.Ay)(t);
     i.useEffect(() => {
         l && (t !== c || n || r) && (o(!1), d.stop());
     }, [t, c, n, r, l, d]);

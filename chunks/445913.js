@@ -27,50 +27,50 @@ function N(e) {
             return e?.presence?.phase === A.COMPLETED;
         }, [r]),
         R = (0, c.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        D = (0, l.A)(d),
-        m = (0, l.A)(N),
+        D = (0, l.Ay)(d),
+        m = (0, l.Ay)(N),
         { createMultipleConfettiAt: x } = n.useContext(E.x),
         p = (0, i.r)(u.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
         I = (0, i.r)(u.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
         T = (0, i.r)(u.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
         g = n.useRef(0),
         f = n.useRef(null),
-        O = Math.max(0, Math.min(1, d ?? 0)),
-        F = O >= 1 ? T : I,
-        L = n.useMemo(
-            () => ({ backgroundImage: `conic-gradient(${F} ${Math.round(360 * O)}deg, ${p} 0deg)` }),
-            [O, F, p],
+        y = Math.max(0, Math.min(1, d ?? 0)),
+        O = y >= 1 ? T : I,
+        F = n.useMemo(
+            () => ({ backgroundImage: `conic-gradient(${O} ${Math.round(360 * y)}deg, ${p} 0deg)` }),
+            [y, O, p],
         ),
-        M = n.useMemo(
+        L = n.useMemo(
             () => ({
                 size: { type: "static-random", minValue: 2, maxValue: 6 },
                 velocity: { type: "static-random", minValue: { x: -120, y: -140 }, maxValue: { x: 120, y: -260 } },
             }),
             [],
         ),
-        V = n.useCallback(() => {
+        M = n.useCallback(() => {
             if (R) return;
             let e = f.current?.getBoundingClientRect();
-            null != e && x(e.left + e.width / 2, e.top + e.height / 2, M, 250);
-        }, [M, x, R]);
+            null != e && x(e.left + e.width / 2, e.top + e.height / 2, L, 250);
+        }, [L, x, R]);
     n.useEffect(() => {
-        R || ((D ?? 0) < 1 && O >= 1 && V());
-    }, [O, V, D, R]),
+        R || ((D ?? 0) < 1 && y >= 1 && M());
+    }, [y, M, D, R]),
         n.useEffect(() => {
-            R || !0 !== N || (!0 !== m && V());
-        }, [V, N, m, R]);
-    let b = n.useCallback(() => {
-        if (R || O < 1) return;
+            R || !0 !== N || (!0 !== m && M());
+        }, [M, N, m, R]);
+    let V = n.useCallback(() => {
+        if (R || y < 1) return;
         let e = Date.now();
-        e - g.current < 4e3 || ((g.current = e), V());
-    }, [O, V, R]);
+        e - g.current < 4e3 || ((g.current = e), M());
+    }, [y, M, R]);
     return (0, a.jsx)("div", {
         className: s,
-        onMouseEnter: b,
+        onMouseEnter: V,
         children: (0, a.jsxs)("div", {
             ref: f,
             className: h.R,
-            children: [(0, a.jsx)("div", { className: h.h, style: L }), t],
+            children: [(0, a.jsx)("div", { className: h.h, style: F }), t],
         }),
     });
 }

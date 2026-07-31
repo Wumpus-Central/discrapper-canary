@@ -24,8 +24,8 @@ var e = l(477900),
     E = l(402216),
     I = l(450149),
     L = l(279250),
-    S = l(734057),
-    y = l(71393),
+    y = l(734057),
+    S = l(71393),
     D = l(576705),
     V = l(290863),
     b = l(607567),
@@ -49,8 +49,8 @@ function J(i) {
     let t,
         { user: l, currentUser: s, stream: J, className: X, onClose: Z } = i,
         { themeType: K, theme: W } = (0, P.E)(),
-        ii = (0, d.bG)([y.A], () => y.A.getGuild(J?.guildId)),
-        it = (0, d.bG)([S.A], () => S.A.getChannel(J?.channelId)),
+        ii = (0, d.bG)([S.A], () => S.A.getGuild(J?.guildId)),
+        it = (0, d.bG)([y.A], () => y.A.getChannel(J?.channelId)),
         il = (0, O.Ay)(it),
         ie = (0, d.yK)([b.Ay], () =>
             null != it
@@ -68,7 +68,7 @@ function J(i) {
         [iu, iA] = (0, L.zP)(it),
         ih = (0, _.a9)() && (0, _.UK)(it?.id),
         ix = (0, d.bG)([D.A], () => null != it && !ih && D.A.canBasicChannel(z.hVb.CONNECT, it)),
-        ig = (0, j.A)(ic ? null : ir),
+        ig = (0, j.Ay)(ic ? null : ir),
         im = ic || null == ir ? ig : ir,
         ip = n.useId();
     if (null == ii || null == it || !1 === J.discoverable) return null;

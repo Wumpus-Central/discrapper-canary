@@ -29,7 +29,7 @@ function u(e) {
     let { adContentIds: t, adCreativeType: n } = e,
         d = (0, a.bG)([l.A], () => (n !== r.p.QUEST || 1 !== t.length ? null : l.A.getQuest(t[0])), [t, n]),
         c = i.useMemo(() => (null == d ? null : (0, o.NI)(d)), [d]),
-        u = (0, s.A)(c);
+        u = (0, s.Ay)(c);
     return c !== u;
 }
 function _() {

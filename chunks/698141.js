@@ -13,7 +13,7 @@ function c(e) {
         E = (0, r.bG)([s.Ay], () => s.Ay.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
         A = (0, r.bG)([o.A], () => o.A.isLaunchingFrame(t)),
         h = null != _ && (0, d.x)(_) ? A : null != E && E.isLaunching && E.componentId === c,
-        I = (0, a.A)(h);
+        I = (0, a.Ay)(h);
     return (
         i.useEffect(() => {
             !h && I && u?.();

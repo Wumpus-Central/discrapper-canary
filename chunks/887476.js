@@ -139,7 +139,7 @@ function G() {
     let { action: e, theme: t } = (0, s.cf)([p.A, f.A], () => ({ action: p.A.getAction(), theme: f.A.theme })),
         m = T.A.getVerificationTypes(e),
         [g, S] = r.useState(0),
-        N = (0, _.A)(m);
+        N = (0, _.Ay)(m);
     function C() {
         (0, u.Cw)(),
             (0, o.openModalLazy)(

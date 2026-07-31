@@ -321,7 +321,7 @@ var es = t(998258);
 function er(e) {
     let { activity: n, renderHeader: t, renderActivityIFrameWithLoadedData: a, isLoading: s = !1 } = e,
         o = r.useRef(null),
-        c = (0, m.A)(n);
+        c = (0, m.Ay)(n);
     r.useEffect(() => {
         null != n
             ? clearTimeout(o.current)

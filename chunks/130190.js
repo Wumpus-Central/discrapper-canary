@@ -22,8 +22,8 @@ var s = n(477900),
     N = n(859703),
     f = n(24001),
     g = n(104886),
-    T = n(3738),
-    y = n(201274),
+    y = n(3738),
+    T = n(514547),
     v = n(975807),
     w = n(352774),
     j = n(18437),
@@ -80,7 +80,7 @@ function K(e) {
             transitionState: C,
             impressionRef: c,
         } = e,
-        E = (0, T.XR)({ quest: t, rewardCode: d }) ?? "",
+        E = (0, y.XR)({ quest: t, rewardCode: d }) ?? "",
         m = r.useMemo(() => {
             let e = (0, k.cg)({ quest: t, idx: 0 })?.redemptionLink;
             if ((0, q.uJ)(e)) return null;
@@ -205,7 +205,7 @@ function z(e) {
         a,
         i,
         { initialQuest: d, onClose: u, transitionState: l, sourceQuestContent: c } = e,
-        A = (0, y.C5)(d.id) ?? d,
+        A = (0, T.C5)(d.id) ?? d,
         p = f.uF.REWARD_MODAL,
         _ = (0, o.bG)([x.default], () => x.default.getCurrentUser()),
         {
@@ -217,7 +217,7 @@ function z(e) {
             isFetchingRewardCode: N.A.isFetchingRewardCode(A.id),
             isClaimingReward: N.A.isClaimingReward(A.id),
         })),
-        { hasError: g, setHasError: T } = (function (e) {
+        { hasError: g, setHasError: y } = (function (e) {
             let {
                     isClaimingReward: t,
                     isFetchingRewardCode: n,
@@ -259,10 +259,10 @@ function z(e) {
             );
         })({ isClaimingReward: q, isFetchingRewardCode: h, quest: A, questContent: p, rewardCode: I });
     (t = (0, m.A)(() => {
-        T(!0);
+        y(!0);
     })),
         (n = R.default.useIsCaptchaModalOpen()),
-        (a = (0, E.A)(n)),
+        (a = (0, E.Ay)(n)),
         (i = !!(!n && a)),
         r.useEffect(() => {
             i && t();

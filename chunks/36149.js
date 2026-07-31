@@ -201,7 +201,7 @@ function X(e) {
 }
 function Q(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
-        n = (0, c.A)(t),
+        n = (0, c.Ay)(t),
         i = (0, l.bG)([I.default], () => null != I.default.getSuspendedUserToken()),
         r = (0, l.bG)([I.default], () => I.default.isAuthenticated()),
         s = null != n && null != t && n !== t,

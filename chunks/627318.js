@@ -25,8 +25,8 @@ function v(e) {
         t
     );
 }
-var b = a(231723),
-    y = a(887909),
+var y = a(231723),
+    b = a(887909),
     C = a(321987),
     A = a(284009),
     E = a.n(A),
@@ -92,8 +92,8 @@ function P(e) {
         c = r.useCallback((e) => i(t, e), [t, i]);
     return (0, l.jsx)(C.$, {
         removeChildWrapper: !0,
-        children: (0, l.jsx)(y.OAuth2AuthorizeModal, {
-            transitionState: b.ip.ENTERED,
+        children: (0, l.jsx)(b.OAuth2AuthorizeModal, {
+            transitionState: y.ip.ENTERED,
             clientId: t.clientId,
             scopes: t.scopes,
             showLogout: !0,
@@ -423,7 +423,7 @@ function er() {
         p.default.isAuthenticated() && !f && d.A.getExperiments();
     }, [f]),
         (0, o.A)(),
-        (t = (0, N.A)(s)),
+        (t = (0, N.Ay)(s)),
         r.useEffect(() => {
             if (s === t) return;
             let e = null;
@@ -434,10 +434,10 @@ function er() {
                     platform_type: e,
                 });
         }, [t, s]);
-    let b = r.useCallback(() => {
+    let y = r.useCallback(() => {
             u({ type: "user-code-input" });
         }, [u]),
-        y = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 u({ type: "authorization", userCodeData: e });
             },
@@ -461,16 +461,16 @@ function er() {
             (e = (0, l.jsx)(M, { code: s.code })), (E = !1);
             break;
         case "user-code-input":
-            e = (0, l.jsx)(ea, { usePrefilledCode: s.usePrefilledCode || !1, onUserCodeAccepted: y });
+            e = (0, l.jsx)(ea, { usePrefilledCode: s.usePrefilledCode || !1, onUserCodeAccepted: b });
             break;
         case "authorization":
-            (e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: b, onError: A, onSuccess: C })), (E = !1);
+            (e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: y, onError: A, onSuccess: C })), (E = !1);
             break;
         case "success":
             e = (0, l.jsx)(q, { onComplete: () => (0, m.pX)(j.BVt.ME), data: s.userCodeData });
             break;
         case "error":
-            e = (0, l.jsx)(W, { onTryAgain: b });
+            e = (0, l.jsx)(W, { onTryAgain: y });
             break;
         default:
             e = null;

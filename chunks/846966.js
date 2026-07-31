@@ -569,7 +569,7 @@ var eF = n(284009),
     eY = n(877062);
 g.Ay.initialize();
 var e$ = n(842241),
-    eZ = n(461376),
+    eZ = n(560952),
     eJ = n(280513),
     e0 = n(717421),
     e1 = n(661531),
@@ -2437,7 +2437,7 @@ function iB(e) {
         k = null == x.email && null != x.password,
         w = c.useRef(null),
         D = c.useRef(null),
-        P = (0, ic.A)(x);
+        P = (0, ic.Ay)(x);
     c.useEffect(() => {
         function e(e) {
             return null != x[e];
@@ -2917,7 +2917,7 @@ function iX(e) {
             f.A.getLocationMetadata(),
             (0, D.d0)("login");
     });
-    let et = (0, ic.A)(x);
+    let et = (0, ic.Ay)(x);
     if (
         (c.useEffect(() => {
             let e = v && (p || N);
@@ -3344,7 +3344,7 @@ function lN(e) {
         em = null != E && B;
     !(function (e) {
         let { apiErrors: t, emailRef: n, usernameRef: i, globalNameRef: l, passwordRef: s } = e,
-            r = (0, ic.A)(t);
+            r = (0, ic.Ay)(t);
         c.useEffect(() => {
             null == r ||
                 (r !== t &&
@@ -3832,7 +3832,7 @@ function lP(e) {
         v = null != e.location ? (0, d.parse)(e.location.search) : {},
         [N, I] = c.useState(v.email ?? ""),
         [C, y] = c.useState({}),
-        b = (0, ic.A)(E),
+        b = (0, ic.Ay)(E),
         T = (function (e, t, n) {
             if (null != e) return "gift";
             if (null != t) return "guild_template";
@@ -5310,8 +5310,8 @@ let s6 = nK(iX),
                         handleContinue: a,
                         transitionTo: o,
                     } = e,
-                    d = (0, ic.A)(i),
-                    u = (0, ic.A)(l);
+                    d = (0, ic.Ay)(i),
+                    u = (0, ic.Ay)(l);
                 c.useEffect(() => {
                     if (s === sW && i && !1 === d) {
                         let e = eX.default.getFingerprint();

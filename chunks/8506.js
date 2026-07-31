@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { lF: () => f, we: () => I, lA: () => h, jv: () => E, A9: () => A });
+n.d(t, { U_: () => h, lF: () => p, we: () => f, lA: () => I, jv: () => E, A9: () => A });
 var i = n(284009),
     r = n.n(i),
     a = n(945810),
@@ -43,18 +43,21 @@ function A(e) {
     return _.getConfig({ location: e }).enabled || c.getConfig({ location: e }).enabled;
 }
 function h(e) {
+    return _.getConfig({ location: e }).enabled;
+}
+function I(e) {
     let { enabled: t } = _.useConfig({ location: e }),
         { enabled: n } = c.useConfig({ location: e });
     return (function (e, t) {
         return !!e || (!!t && d());
     })(t, n);
 }
-function I(e) {
+function f(e) {
     return (function (e, t) {
         return !!e || (!!t && d());
     })(_.getConfig({ location: e }).enabled, c.getConfig({ location: e }).enabled);
 }
-function f(e, t) {
+function p(e, t) {
     let n = _.getConfig({ location: e });
     if (n.enabled)
         if (d()) return t ? 50 : 200;

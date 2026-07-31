@@ -17,8 +17,8 @@ var t = l(477900),
     v = l(292666),
     A = l(783878),
     b = l(834730),
-    C = l(922016),
-    y = l(144228),
+    y = l(922016),
+    C = l(144228),
     N = l(565645),
     S = l(475743),
     f = l(47167),
@@ -124,9 +124,9 @@ function X(e) {
                   ? _.Ay.getNewMemberActionIconURL({ channelId: $, icon: ex })
                   : null,
         ),
-        eb = (0, S.A)(eh),
-        eC = (0, S.A)(ev),
-        ey = null == es || 0 === es.length || null == er || null == $,
+        eb = (0, S.Ay)(eh),
+        ey = (0, S.Ay)(ev),
+        eC = null == es || 0 === es.length || null == er || null == $,
         eN = Object.values(ei).flat().length > 0,
         eS = i.useCallback(() => {
             if (null == $ || null == er || es.length <= 0) return;
@@ -136,7 +136,7 @@ function X(e) {
                 i = { icon: ev ?? null, emoji: eh };
             (e || (n && t)) && (n && (0, H.Rp)(ep), (0, H.J4)($, i));
             let a = eh !== eb,
-                s = ev !== eC;
+                s = ev !== ey;
             X(
                 {
                     channelId: $,
@@ -150,7 +150,7 @@ function X(e) {
                 (a || s) && !e,
             ),
                 l();
-        }, [X, l, es, er, $, eh, ex, ev, eb, eC, ep, ej]),
+        }, [X, l, es, er, $, eh, ex, ev, eb, ey, ep, ej]),
         ef = i.useCallback(() => {
             q?.(), l();
         }, [q, l]),
@@ -231,9 +231,9 @@ function X(e) {
         e_ = i.useMemo(
             () => [
                 { text: W.intl.string(W.t["ETE/oC"]), onClick: l, variant: "secondary" },
-                { text: W.intl.string(W.t["R3BPH+"]), variant: "primary", onClick: eS, disabled: ey || eN },
+                { text: W.intl.string(W.t["R3BPH+"]), variant: "primary", onClick: eS, disabled: eC || eN },
             ],
-            [eS, eN, ey, l],
+            [eS, eN, eC, l],
         );
     return (0, t.jsxs)(a.Modal, {
         title: W.intl.string(W.t.ncTLSo),
@@ -304,7 +304,7 @@ function X(e) {
                     (0, t.jsxs)("div", {
                         className: B.um,
                         children: [
-                            (0, t.jsx)(C.Y, {
+                            (0, t.jsx)(y.Y, {
                                 position: "bottom",
                                 renderPopout: function (e) {
                                     let { closePopout: n } = e;
@@ -427,7 +427,7 @@ function X(e) {
                                     },
                                 }),
                             }),
-                            (0, t.jsx)(C.Y, {
+                            (0, t.jsx)(y.Y, {
                                 targetElementRef: Z,
                                 position: "top",
                                 shouldShow: eu,
@@ -486,7 +486,7 @@ function X(e) {
                         color: "text-strong",
                         children: [W.intl.string(W.t.MIMVLa), (0, t.jsx)(V.A, {})],
                     }),
-                    (0, t.jsx)(y.z, {
+                    (0, t.jsx)(C.z, {
                         value: er,
                         onChange: eM,
                         options: null == en ? et : et.map((e) => ({ ...e, disabled: !Y(e.value, en) })),

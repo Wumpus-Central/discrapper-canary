@@ -1,4 +1,4 @@
-a.r(
+i.r(
     (e.exports = {
         reactions: "reactions_f8896c",
         icon: "icon_f8896c",
@@ -7,8 +7,6 @@ a.r(
         visible: "visible_f8896c",
         bookmarkBtn: "bookmarkBtn_f8896c",
         forceShow: "forceShow_f8896c",
-        nudgeLabel: "nudgeLabel_f8896c",
-        nudgeLabelExpanded: "nudgeLabelExpanded_f8896c",
         hideEmoji: "hideEmoji_f8896c",
         reaction: "reaction_f8896c",
         shakeReaction: "shakeReaction_f8896c",

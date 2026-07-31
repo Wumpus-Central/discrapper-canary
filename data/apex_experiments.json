@@ -5888,6 +5888,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-07-unobtrusive-device-suggestions",
+    "defaultConfig": {
+      "showDeviceDetectedPanel": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showDeviceDetectedPanel": true
+      }
+    }
+  },
+  {
     "name": "2026-07-vibegrations-guild",
     "kind": "guild",
     "defaultConfig": {

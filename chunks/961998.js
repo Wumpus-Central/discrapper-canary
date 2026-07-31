@@ -3149,7 +3149,7 @@ function i5(e) {
         l = a.useCallback(() => {
             i0.Ay.clearCoachmark();
         }, []),
-        o = (0, iQ.A)(s),
+        o = (0, iQ.Ay)(s),
         d = a.useRef(null);
     return (
         a.useEffect(() => {
@@ -3212,7 +3212,7 @@ function i7(e) {
         s = (0, E.bG)([eq.A], () => eq.A.getGuildId()),
         l = (0, E.bG)([io.A], () => io.A.hasFetchedRequestToJoinGuilds),
         o = (0, i2.A)(),
-        d = (0, iQ.A)(s),
+        d = (0, iQ.Ay)(s),
         c = a.useMemo(() => {
             let e = (0, ez.xW)({
                 folderId: i1.PENDING_JOIN_REQUESTS_FOLDER,
