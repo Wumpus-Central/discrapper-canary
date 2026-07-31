@@ -1,1 +1,7 @@
-a.exports = { w: "header__90588", D: "title__90588" };
+a.exports = {
+    wx: "header__90588",
+    QF: "breadcrumb__90588",
+    Kk: "icon__90588",
+    DD: "title__90588",
+    Qw: "titleText__90588",
+};

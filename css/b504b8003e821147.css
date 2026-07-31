@@ -29,26 +29,30 @@
     max-width: 360px
 }
 
-.permissionsCard__61d51 {
+.previewStatusCard__61d51 {
+    align-items: center;
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-16);
+    max-width: 100%;
+    padding: var(--space-24) var(--space-32)
+}
+
+.previewStatusCardWide__61d51 {
     max-width: 414px;
-    padding: var(--space-24) var(--space-32);
     width: 100%
 }
 
-.permissionsCard__61d51,
-.permissionsCopy__61d51 {
+.previewStatusCopy__61d51 {
     align-items: center;
     display: flex;
-    flex-direction: column
-}
-
-.permissionsCopy__61d51 {
-    gap: var(--space-4)
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
 }
 
 .composer_ffba0c {
@@ -691,12 +695,28 @@
     z-index: 100
 }
 
-.title__90588 {
-    margin-inline-start: var(--space-12);
+.breadcrumb__90588 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    overflow: hidden
+}
+
+.icon__90588 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.title__90588 {
+    flex: 1 1 auto;
+    margin-inline-end: 0;
+    min-width: 0;
+    overflow: hidden
+}
+
+.titleText__90588 {
+    text-overflow: ellipsis
 }
 
 .stop-animations .header__90588 {
