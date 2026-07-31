@@ -22,16 +22,16 @@ let o = {},
     S = {},
     N = {},
     C = {},
-    O = {},
-    R = new Set(),
+    R = {},
+    O = new Set(),
     L = null;
-function y(e) {
+function D(e) {
     return {
         guildId: "guild" === e.type ? e.guildId : N[e.applicationId],
         applicationId: "guild" === e.type ? S[e.guildId] : e.applicationId,
     };
 }
-function D(e, t, n) {
+function y(e, t, n) {
     null != e && (d[e] = { ...d[e], ...n }), null != t && (c[t] = { ...c[t], ...n }), (d = { ...d }), (c = { ...c });
 }
 function v() {
@@ -49,8 +49,11 @@ class b extends r.Ay.Store {
     getStorefrontDataForApplicationId(e) {
         return c[e];
     }
+    getLoadedStorefrontApplicationIds() {
+        return Object.keys(c);
+    }
     getStorefrontFetchState(e) {
-        let { guildId: t, applicationId: n } = y(e);
+        let { guildId: t, applicationId: n } = D(e);
         return null != t ? d[t] : null != n ? c[n] : void 0;
     }
     getSkuAssets() {
@@ -78,7 +81,7 @@ class b extends r.Ay.Store {
         return "success" === m.state ? m.config : null;
     }
     getConfigForApplicationId(e) {
-        return O[e];
+        return R[e];
     }
     getApplicationIdFromDetectableId(e) {
         return C[e];
@@ -99,7 +102,7 @@ class b extends r.Ay.Store {
         return g;
     }
     getStorefrontGuildIds() {
-        return R;
+        return O;
     }
     getSKUEligibility(e) {
         return f[e]?.state;
@@ -131,8 +134,8 @@ let M = new b(a.h, {
             (S = {}),
             (N = {}),
             (C = {}),
-            (O = {}),
-            (R = new Set()),
+            (R = {}),
+            (O = new Set()),
             (L = null);
     },
     STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function () {
@@ -169,18 +172,18 @@ let M = new b(a.h, {
     },
     SOCIAL_LAYER_STOREFRONT_LOAD: function (e) {
         let { guildOrApplicationId: t } = e,
-            { guildId: n, applicationId: i } = y(t);
-        D(n, i, { state: "loading" });
+            { guildId: n, applicationId: i } = D(t);
+        y(n, i, { state: "loading" });
     },
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function (e) {
         let { guildOrApplicationId: t, storefront: n } = e,
-            i = "guild" === t.type ? t.guildId : y(t).guildId;
+            i = "guild" === t.type ? t.guildId : D(t).guildId;
         null != i && null == S[i] && ((S[i] = n.applicationId), (S = { ...S })),
             null != n.applicationId &&
                 null != i &&
                 null == N[n.applicationId] &&
                 ((N[n.applicationId] = i), (N = { ...N })),
-            D(i, n.applicationId, { state: "fetched", fetchedAt: Date.now(), storefront: n }),
+            y(i, n.applicationId, { state: "fetched", fetchedAt: Date.now(), storefront: n }),
             null != n.assets && (A = { ...A, ...n.assets });
     },
     SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: function (e) {
@@ -193,13 +196,13 @@ let M = new b(a.h, {
     },
     SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: function (e) {
         let { guildOrApplicationId: t, eager: n } = e,
-            { guildId: i, applicationId: r } = y(t),
+            { guildId: i, applicationId: r } = D(t),
             a = null != i ? d[i] : null != r ? c[r] : void 0;
         if (null == a) return !1;
         if (n)
-            if ("loading" === a.state && null != a.storefront) D(i, r, { state: "fetched" });
+            if ("loading" === a.state && null != a.storefront) y(i, r, { state: "fetched" });
             else null != i && delete d[i], null != r && delete c[r], (d = { ...d }), (c = { ...c });
-        else D(i, r, { state: "error", fetchedAt: Date.now(), storefront: void 0 });
+        else y(i, r, { state: "error", fetchedAt: Date.now(), storefront: void 0 });
     },
     SET_SOCIAL_LAYER_STOREFRONT_STATE: function (e) {
         let { applicationId: t, pageIndex: n, skuId: i } = e;
@@ -224,7 +227,7 @@ let M = new b(a.h, {
         let { config: t } = e;
         (m = { state: "success", config: t, fetchedAt: Date.now() }),
             (g = new Set(t.storefronts.map((e) => e.applicationId))),
-            (R = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
+            (O = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
             (S = t.storefronts.reduce((e, t) => (null != t.guildId && (e[t.guildId] = t.applicationId), e), {})),
             (N = t.storefronts.reduce(
                 (e, t) => (null != t.guildId && ((e[t.applicationId] = t.guildId), (e[t.gameId] = t.guildId)), e),
@@ -234,7 +237,7 @@ let M = new b(a.h, {
                 (e, t) => ((e[t.gameId] = t.applicationId), (e[t.applicationId] = t.applicationId), e),
                 {},
             )),
-            (O = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {}));
+            (R = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {}));
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
         m = { state: "error", fetchedAt: Date.now() };

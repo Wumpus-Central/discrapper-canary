@@ -734,7 +734,7 @@ let r = {
             "WINDOW_FOCUS",
             "WINDOW_VISIBILITY_CHANGE",
         ],
-        inlineRequire: () => n(208207).A,
+        inlineRequire: () => n(599812).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     DmSettingsUpsellManager: {
@@ -925,6 +925,15 @@ let r = {
         loadRightBeforeConnectionOpen: !0,
     },
     SocialLayerStorefrontConfigManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(49431).A },
+    SocialLayerStorefrontRefreshManager: {
+        actions: [
+            "SKU_PURCHASE_SUCCESS",
+            "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
+            "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
+            "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+        ],
+        inlineRequire: () => n(650408).A,
+    },
     CacheRequireModuleExperimentManager: {
         actions: [],
         inlineRequire: () => n(964176).A,
