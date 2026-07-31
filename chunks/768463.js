@@ -896,7 +896,8 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                 [e, i],
                 ts(),
             ),
-            { enabledLegacy: l, enabledOOP: s } = (0, g.cf)(
+            { data: l } = (0, tT.I)(n?.applicationId),
+            { enabledLegacy: s, enabledOOP: r } = (0, g.cf)(
                 [tL.A, tD.A, tS.A],
                 () =>
                     null == e && null == n
@@ -906,37 +907,37 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                           : (0, m.hw)(e, !1, [tL.A, tD.A, tS.A]),
                 [e, n],
             ),
-            r = (0, g.bG)(
+            a = (0, g.bG)(
                 [m.Ay, tL.A, tD.A, tS.A],
                 () => (null == e ? null : (0, m.xU)(e, m.Ay, tL.A, tD.A, tS.A)),
                 [e],
                 ts(),
             ),
-            [a, o] = S.useState(s),
-            [u, d] = S.useState(l),
-            [c, A] = S.useState(!1);
+            [o, u] = S.useState(r),
+            [d, c] = S.useState(s),
+            [A, h] = S.useState(!1);
         S.useEffect(() => {
-            o(s), d(l);
-        }, [s, l]);
-        let h = !(0, tP.supportsLegacy)(),
-            T = !(0, tP.supportsOutOfProcess)(),
-            { legacyEnabled: x, oopEnabled: f } = (0, g.cf)([tN.default], () => tN.default.getGlobalEnabledStatus());
-        function N(t, i) {
+            u(r), c(s);
+        }, [r, s]);
+        let T = !(0, tP.supportsLegacy)(),
+            x = !(0, tP.supportsOutOfProcess)(),
+            { legacyEnabled: f, oopEnabled: N } = (0, g.cf)([tN.default], () => tN.default.getGlobalEnabledStatus());
+        function _(t, i) {
             if (null == e) return;
             let n = !1,
                 l = !1;
             switch (i) {
                 case tp.OverlayToggledClientSettingType.LEGACY_GAME:
-                    d(t), tm.Ay.toggleOverlay(e, t, a), (n = !t && u);
+                    c(t), tm.Ay.toggleOverlay(e, t, o), (n = !t && d);
                     break;
                 case tp.OverlayToggledClientSettingType.OOP_GAME:
-                    o(t), tm.Ay.toggleOverlay(e, u, t), (l = !t && a);
+                    u(t), tm.Ay.toggleOverlay(e, d, t), (l = !t && o);
                     break;
                 case tp.OverlayToggledClientSettingType.LEGACY:
-                    tA.A.setEnabled(t, f), (0, tp.Q3)(t, tp.OverlayToggledClientSettingType.LEGACY, e.id ?? null);
+                    tA.A.setEnabled(t, N), (0, tp.Q3)(t, tp.OverlayToggledClientSettingType.LEGACY, e.id ?? null);
                     break;
                 case tp.OverlayToggledClientSettingType.OOP:
-                    tA.A.setEnabled(x, t), (0, tp.Q3)(t, tp.OverlayToggledClientSettingType.OOP, e.id ?? null);
+                    tA.A.setEnabled(f, t), (0, tp.Q3)(t, tp.OverlayToggledClientSettingType.OOP, e.id ?? null);
             }
             (n || l) &&
                 tb(
@@ -944,21 +945,21 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                     e.id ?? null,
                 );
         }
-        let _ = h && T,
-            I = !x && !f,
-            C = !a && !x && u && !h,
-            b = !u && !f && a && !T,
-            v = n?.overlayMethod === tf.Ue.Disabled,
-            y = n?.state === tf.AR.OVERLAY_RENDERING && !v,
-            O = n?.state != null && tU.has(n.state) && !v,
-            R = n?.overlayMethod === tf.Ue.OutOfProcess,
-            L = n?.overlayMethod === tf.Ue.OutOfProcessLimitedInteraction,
-            D = n?.overlayMethod === tf.Ue.Hook,
-            P = n?.state === tf.AR.OVERLAY_CRASHED || n?.state === tf.AR.OVERLAY_CRASHED_DISABLED,
-            G = !a && !u,
-            [M, U] = (function () {
+        let I = T && x,
+            C = !f && !N,
+            b = !o && !f && d && !T,
+            v = !d && !N && o && !x,
+            y = n?.overlayMethod === tf.Ue.Disabled,
+            O = n?.state === tf.AR.OVERLAY_RENDERING && !y,
+            R = n?.state != null && tU.has(n.state) && !y,
+            L = n?.overlayMethod === tf.Ue.OutOfProcess,
+            D = n?.overlayMethod === tf.Ue.OutOfProcessLimitedInteraction,
+            P = n?.overlayMethod === tf.Ue.Hook,
+            G = n?.state === tf.AR.OVERLAY_CRASHED || n?.state === tf.AR.OVERLAY_CRASHED_DISABLED,
+            M = !o && !d,
+            [U, V] = (function () {
                 switch (!0) {
-                    case y && R:
+                    case O && L:
                         return [
                             j.intl.format(j.t.hFVBIg, {
                                 overlayMethod: j.intl.string(j.t.a3eXSw),
@@ -977,7 +978,7 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                             }),
                             null,
                         ];
-                    case y && L:
+                    case O && D:
                         return [
                             j.intl.format(j.t.hFVBIg, {
                                 overlayMethod: j.intl.string(j.t["506Aba"]),
@@ -996,7 +997,7 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                             }),
                             null,
                         ];
-                    case y && D:
+                    case O && P:
                         return [
                             j.intl.format(j.t.hFVBIg, {
                                 overlayMethod: j.intl.string(j.t.bvlpDR),
@@ -1012,38 +1013,38 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                                 switch (!0) {
                                     case n?.fullscreenType !== th.aI.BORDERLESS_FULLSCREEN:
                                         return j.intl.string(j.t.mJmbeC);
-                                    case T:
+                                    case x:
                                         return j.intl.string(j.t.C7bLTQ);
                                     case !n?.oopEnabled:
                                         return j.intl.string(j.t.WiY24u);
-                                    case !f:
+                                    case !N:
                                         return j.intl.string(j.t.cAFVsL);
-                                    case !n?.supportsOutOfProcess:
+                                    case !(l?.supportsOutOfProcessOverlay ?? !0):
                                         return j.intl.string(j.t.XcGEcs);
                                     default:
                                         return j.intl.string(j.t.bJXH2v);
                                 }
                             })(),
                         ];
-                    case P:
-                        return [j.intl.string(j.t.OFC2aw), null];
-                    case _:
-                        return [j.intl.string(j.t.m7X4az), null];
-                    case I:
-                        return [j.intl.string(j.t["9DUS5l"]), null];
                     case G:
-                        return [j.intl.string(j.t.nQ9EdJ), null];
+                        return [j.intl.string(j.t.OFC2aw), null];
+                    case I:
+                        return [j.intl.string(j.t.m7X4az), null];
                     case C:
+                        return [j.intl.string(j.t["9DUS5l"]), null];
+                    case M:
+                        return [j.intl.string(j.t.nQ9EdJ), null];
                     case b:
+                    case v:
                         return [j.intl.string(j.t.VWUn0a), null];
-                    case O:
-                        if (R) return [j.intl.string(j.t["s8+CFq"]), null];
-                        if (D) return [j.intl.string(j.t.JEEdqt), null];
-                        if (L) return [j.intl.string(j.t.pzBMwY), null];
+                    case R:
+                        if (L) return [j.intl.string(j.t["s8+CFq"]), null];
+                        if (P) return [j.intl.string(j.t.JEEdqt), null];
+                        if (D) return [j.intl.string(j.t.pzBMwY), null];
                         return [j.intl.string(j.t["2Xhy9k"]), null];
                     case null == n:
                         return [j.intl.string(j.t.vwHPRi), null];
-                    case v: {
+                    case y: {
                         let e = n?.fullscreenType === th.aI.FULLSCREEN ? j.intl.string(j.t.mJmbeC) : null;
                         return [j.intl.string(j.t.VPW4XY), e];
                     }
@@ -1054,28 +1055,28 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
         (0, tE.Ay)(() => {
             tm.Ay.getDetectableGames();
         });
-        let [V, k] = S.useMemo(
+        let [k, w] = S.useMemo(
             () =>
-                O
+                R
                     ? ["text-muted", er.A.colors.TEXT_MUTED.css]
-                    : y && L
+                    : O && D
                       ? ["text-feedback-warning", er.A.colors.TEXT_FEEDBACK_WARNING.css]
-                      : y && R
+                      : O && L
                         ? ["text-feedback-positive", er.A.colors.TEXT_FEEDBACK_POSITIVE.css]
-                        : y && D
+                        : O && P
                           ? ["text-strong", er.A.colors.TEXT_STRONG.css]
                           : ["interactive-text-default", er.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
-            [O, y, L, R, D],
+            [R, O, D, L, P],
         );
         return null == e
             ? null
             : (0, E.jsxs)(tV, {
-                  onExpand: A,
-                  className: c ? te.tx : void 0,
+                  onExpand: h,
+                  className: A ? te.tx : void 0,
                   title: (0, E.jsxs)(E.Fragment, {
                       children: [
-                          t?.name ?? r?.name ?? e?.gameName ?? "",
-                          null != r && r.verified
+                          t?.name ?? a?.name ?? e?.gameName ?? "",
+                          null != a && a.verified
                               ? (0, E.jsx)(td.m, {
                                     text: j.intl.string(j.t["4PJP5p"]),
                                     children: (0, E.jsx)(tx.A, {
@@ -1092,16 +1093,16 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                               : null,
                       ],
                   }),
-                  description: M,
-                  hint: null != U ? U : void 0,
+                  description: U,
+                  hint: null != V ? V : void 0,
                   header: (0, E.jsxs)(E.Fragment, {
                       children: [
-                          y || O
-                              ? (0, E.jsx)(tg.k, { size: "xxs", color: k })
+                          O || R
+                              ? (0, E.jsx)(tg.k, { size: "xxs", color: w })
                               : (0, E.jsx)("div", { className: te.W4 }),
                           (0, E.jsx)(el.E, {
                               variant: "text-xs/semibold",
-                              color: V,
+                              color: k,
                               children: j.intl.string(j.t.CDOx3w),
                           }),
                       ],
@@ -1111,8 +1112,8 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                   action: (0, E.jsx)(en.D, {
                       onClick: (e) => tt(e),
                       children: (0, E.jsx)(J.d, {
-                          checked: (a && f) || (u && x),
-                          disabled: _,
+                          checked: (o && N) || (d && f),
+                          disabled: I,
                           onChange: (t) => {
                               !(function (t, i) {
                                   if (null == e) return;
@@ -1120,18 +1121,18 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                                       l = !1;
                                   switch (i) {
                                       case "game":
-                                          tm.Ay.toggleOverlay(e, t, t), d(t), o(t), (n = !t && u), (l = !t && a);
+                                          tm.Ay.toggleOverlay(e, t, t), c(t), u(t), (n = !t && d), (l = !t && o);
                                           break;
                                       case "global":
-                                          tA.A.setEnabled(t, t), (n = !t && x), (l = !t && f);
+                                          tA.A.setEnabled(t, t), (n = !t && f), (l = !t && N);
                                           break;
                                       case "both":
                                           tA.A.setEnabled(t, t),
                                               tm.Ay.toggleOverlay(e, t, t),
-                                              d(t),
-                                              o(t),
-                                              (n = (!t && x) || (!t && u)),
-                                              (l = (!t && f) || (!t && a));
+                                              c(t),
+                                              u(t),
+                                              (n = (!t && f) || (!t && d)),
+                                              (l = (!t && N) || (!t && o));
                                   }
                                   let s = null;
                                   n
@@ -1149,10 +1150,10 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                                   t,
                                   (function (e, t) {
                                       let i = !t && e,
-                                          n = !f && a,
-                                          l = !x && u,
-                                          s = !a && f,
-                                          r = !u && x;
+                                          n = !N && o,
+                                          l = !f && d,
+                                          s = !o && N,
+                                          r = !d && f;
                                       switch (!0) {
                                           case i && (n || l) && (s || r):
                                               return "both";
@@ -1161,7 +1162,7 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                                           default:
                                               return "game";
                                       }
-                                  })(t, (a && f) || (u && x)),
+                                  })(t, (o && N) || (d && f)),
                               );
                           },
                       }),
@@ -1171,17 +1172,17 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                       (0, E.jsx)(ti, {
                           title: j.intl.string(j.t["7BlVIs"]),
                           description: j.intl.string(j.t.ndgADE),
-                          hint: f ? void 0 : j.intl.string(j.t.cAFVsL),
+                          hint: N ? void 0 : j.intl.string(j.t.cAFVsL),
                           "aria-label": j.intl.string(j.t["7BlVIs"]),
                           action: (0, E.jsxs)(E.Fragment, {
                               children: [
                                   (0, E.jsx)(J.d, {
-                                      checked: a && f,
-                                      disabled: T,
+                                      checked: o && N,
+                                      disabled: x,
                                       onChange: (e) => {
-                                          e && !f
-                                              ? N(e, tp.OverlayToggledClientSettingType.OOP)
-                                              : N(e, tp.OverlayToggledClientSettingType.OOP_GAME);
+                                          e && !N
+                                              ? _(e, tp.OverlayToggledClientSettingType.OOP)
+                                              : _(e, tp.OverlayToggledClientSettingType.OOP_GAME);
                                       },
                                   }),
                                   (0, E.jsx)("div", { className: te.Kz }),
@@ -1191,17 +1192,17 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                       (0, E.jsx)(ti, {
                           title: j.intl.string(j.t.BfFpW1),
                           description: j.intl.string(j.t.OzInYk),
-                          hint: x ? void 0 : j.intl.string(j.t["3sYHXm"]),
+                          hint: f ? void 0 : j.intl.string(j.t["3sYHXm"]),
                           "aria-label": j.intl.string(j.t.BfFpW1),
                           action: (0, E.jsxs)(E.Fragment, {
                               children: [
                                   (0, E.jsx)(J.d, {
-                                      checked: u && x,
-                                      disabled: h,
+                                      checked: d && f,
+                                      disabled: T,
                                       onChange: (e) => {
-                                          e && !x
-                                              ? N(e, tp.OverlayToggledClientSettingType.LEGACY)
-                                              : N(e, tp.OverlayToggledClientSettingType.LEGACY_GAME);
+                                          e && !f
+                                              ? _(e, tp.OverlayToggledClientSettingType.LEGACY)
+                                              : _(e, tp.OverlayToggledClientSettingType.LEGACY_GAME);
                                       },
                                   }),
                                   (0, E.jsx)("div", { className: te.Kz }),

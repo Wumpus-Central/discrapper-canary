@@ -1,14 +1,14 @@
 a.d(t, { default: () => S, i: () => N }), a(321073);
 var n = a(477900),
-    i = a(582128),
-    l = a(562708),
+    l = a(582128),
+    i = a(562708),
     s = a(189213),
     r = a(17928),
     o = a(783878),
     u = a(834730),
     d = a(144228),
-    c = a(260598),
-    m = a(587895),
+    m = a(260598),
+    c = a(587895),
     g = a(429913),
     p = a(952818),
     h = a(769015),
@@ -23,27 +23,27 @@ var n = a(477900),
     k = a(652215),
     I = a(375708),
     w = a(520467);
-let M = i.memo(function (e) {
+let M = l.memo(function (e) {
         let { game: t } = e,
-            a = (0, r.bG)([m.A], () => m.A.getApplicationByName(t.name) ?? m.A.getApplication(t.id), [t.id, t.name]),
-            i = (0, r.bG)([p.Ay], () => {
+            a = (0, r.bG)([c.A], () => c.A.getApplicationByName(t.name) ?? c.A.getApplication(t.id), [t.id, t.name]),
+            l = (0, r.bG)([p.Ay], () => {
                 let e = p.Ay.getVisibleGame(),
                     a = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
                 return a?.name?.toLowerCase() === t.name.toLowerCase() ? a : p.Ay.getGameForName(t.name);
             }, [t]),
-            [l] = (0, g.A)([
+            [i] = (0, g.A)([
                 (function () {
                     if (null != t.id) return t.id;
                     if (null != t.name) {
-                        let e = m.A.getApplicationByName(t.name);
+                        let e = c.A.getApplicationByName(t.name);
                         if (null != e) return e.id;
                     }
-                    if (null != i) return i.id;
+                    if (null != l) return l.id;
                 })(),
             ]),
-            s = l ?? a,
+            s = i ?? a,
             { data: o } = (0, v.I)(null == s ? t.id : void 0);
-        return (0, n.jsx)(h.A, { pid: i?.pid, game: s ?? o, size: h.M.XSMALL, className: w.Gt });
+        return (0, n.jsx)(h.A, { pid: l?.pid, game: s ?? o, size: h.M.XSMALL, className: w.Gt });
     }),
     E = {
         searchType: f.n.FUZZY,
@@ -51,53 +51,53 @@ let M = i.memo(function (e) {
         searchStringGenerator: (e) => {
             let { game: t, label: a } = e,
                 n = [t.name, a, t.id.toString()];
-            return t.aliases.length > 0 && n.push(...t.aliases), null != t.description && n.push(t.description), n;
+            return t.aliases.length > 0 && n.push(...t.aliases), n;
         },
         throttleMs: 100,
         maxSearchResults: 20,
     },
     G = [],
-    N = i.memo(function (e) {
-        let { games: t, selectedGame: a, onGameSelected: l, onGameSearchQueryChange: s, placeholder: r } = e,
-            [u, d] = i.useState(""),
-            c = i.useCallback(
+    N = l.memo(function (e) {
+        let { games: t, selectedGame: a, onGameSelected: i, onGameSearchQueryChange: s, placeholder: r } = e,
+            [u, d] = l.useState(""),
+            m = l.useCallback(
                 (e) => {
                     d(e), s?.(e);
                 },
                 [s],
             ),
-            m = i.useMemo(() => {
+            c = l.useMemo(() => {
                 let e = [];
-                for (let i of (null != a &&
+                for (let l of (null != a &&
                     e.push({ id: a.id, value: a.id, label: a.name, game: a, leading: (0, n.jsx)(M, { game: a }) }),
                 t))
-                    (null == a || (a.id !== i.id && a.name.toLowerCase() !== i.name.toLowerCase())) &&
-                        e.push({ id: i.id, value: i.id, label: i.name, game: i, leading: (0, n.jsx)(M, { game: i }) });
+                    (null == a || (a.id !== l.id && a.name.toLowerCase() !== l.name.toLowerCase())) &&
+                        e.push({ id: l.id, value: l.id, label: l.name, game: l, leading: (0, n.jsx)(M, { game: l }) });
                 return e;
             }, [t, a]),
-            g = i.useMemo(() => m.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [m]),
-            [p, h] = i.useState(m),
-            x = i.useCallback((e) => {
+            g = l.useMemo(() => c.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [c]),
+            [p, h] = l.useState(c),
+            x = l.useCallback((e) => {
                 h(e);
             }, []),
-            b = i.useCallback(
+            b = l.useCallback(
                 (e) => {
                     let t = g[e];
                     if (null == t) return;
                     let a = t.game;
-                    l(a ?? null), c(a?.name ?? "");
+                    i(a ?? null), m(a?.name ?? "");
                 },
-                [g, l, c],
+                [g, i, m],
             ),
-            v = i.useCallback(
+            v = l.useCallback(
                 (e) => {
                     let t = e.target.value;
-                    c(t), null != a && t !== a.name && l(null);
+                    m(t), null != a && t !== a.name && i(null);
                 },
-                [a, l, c],
+                [a, i, m],
             );
         return (
-            (0, A.RT)(u, m, x, E),
+            (0, A.RT)(u, c, x, E),
             (0, n.jsx)(o.Z, {
                 options: p,
                 selectionMode: "single",
@@ -112,14 +112,14 @@ let M = i.memo(function (e) {
     });
 function S(e) {
     let { onClose: t, transitionState: a, onSubmitted: g, detected: p, defaultStep: f = "issue_selection" } = e,
-        [A, M] = i.useState(f),
-        [E, N] = i.useState(null),
-        [S, y] = i.useState(""),
-        [T, D] = i.useState(null),
-        [L, O] = i.useState(""),
-        R = i.useMemo(() => (0, x.generateViewId)(), []),
+        [A, M] = l.useState(f),
+        [E, N] = l.useState(null),
+        [S, y] = l.useState(""),
+        [T, D] = l.useState(null),
+        [L, O] = l.useState(""),
+        R = l.useMemo(() => (0, x.generateViewId)(), []),
         Z = (0, b.J$)(S).results ?? G,
-        F = i.useMemo(
+        F = l.useMemo(
             () =>
                 Z.map((e) => ({
                     id: e.id,
@@ -129,7 +129,7 @@ function S(e) {
                 })),
             [Z],
         ),
-        Q = i.useCallback(
+        Q = l.useCallback(
             (e) => {
                 let t = Z.find((t) => {
                     let { id: a } = t;
@@ -139,17 +139,17 @@ function S(e) {
             },
             [Z],
         ),
-        J = i.useCallback(
+        J = l.useCallback(
             (e) => {
                 let t = e.target.value;
                 y(t), null != T && t !== T.name && D(null);
             },
             [T],
         ),
-        K = i.useCallback((e) => e, []),
+        K = l.useCallback((e) => e, []),
         P = (function (e) {
             let t = e?.applicationId,
-                a = (0, r.bG)([m.A], () => m.A.getApplication(t), [t]),
+                a = (0, r.bG)([c.A], () => c.A.getApplication(t), [t]),
                 { data: n } = (0, v.I)(e?.gameId);
             return null == e
                 ? null
@@ -198,7 +198,7 @@ function S(e) {
         ...z,
         transitionState: a,
         onClose: t,
-        trackingProps: { impression: { impressionName: l.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
+        trackingProps: { impression: { impressionName: i.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
         children: (function () {
             switch (A) {
                 case "issue_selection":
@@ -291,7 +291,7 @@ function S(e) {
                                 color: "text-muted",
                                 children: I.intl.string(I.t.IblYEw),
                             }),
-                            (0, n.jsx)(c.f, {
+                            (0, n.jsx)(m.f, {
                                 value: L,
                                 onChange: O,
                                 placeholder: I.intl.string(I.t.aiPKV4),

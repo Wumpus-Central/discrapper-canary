@@ -1837,7 +1837,7 @@ var t_ = a(702841),
     tC = a(793574),
     tS = a(590180),
     tN = a(4227),
-    tA = a(828614),
+    tA = a(258245),
     tk = a(61750),
     tD = a(128818);
 let tI = (e) => {
@@ -7841,7 +7841,7 @@ var rO = a(687813),
     rw = a(604121);
 let rM = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
-        () => a.e("36508").then(a.t.bind(a, 655671, 17)),
+        () => a.e("14127").then(a.t.bind(a, 655671, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
         () => a.e("5252").then(a.t.bind(a, 323823, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_CombinedEE.lottie":
@@ -7895,7 +7895,7 @@ let rM = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge12.lottie":
         () => a.e("94131").then(a.t.bind(a, 676574, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge15.lottie":
-        () => a.e("65404").then(a.t.bind(a, 384407, 17)),
+        () => a.e("43023").then(a.t.bind(a, 384407, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge18.lottie":
         () => a.e("11817").then(a.t.bind(a, 110320, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge24.lottie":
@@ -8849,7 +8849,7 @@ let os = {
         return (t) => (0, r.jsx)(e, { claimRequired: !0, ...t });
     },
     AutomatedUnderageAppealModal: async () => {
-        let { default: e } = await Promise.all([a.e("28813"), a.e("9018")]).then(a.bind(a, 244321));
+        let { default: e } = await Promise.all([a.e("28813"), a.e("9018")]).then(a.bind(a, 466702));
         return (t) => (0, r.jsx)(e, { ...t, classificationId: "123" });
     },
     AutomodRaidResolveModal: async () => {
@@ -10897,7 +10897,8 @@ let o9 = o.memo(function (e) {
         let { trackedGame: t } = e,
             a = (0, d.bG)([E.Ay], () => E.Ay.getGameOrTransformedSubgameForPID(t.pid)),
             n = (0, d.bG)([S.A], () => S.A.getGameForPID(t.pid)),
-            l = (0, d.bG)([E.Ay], () => (null == a ? null : E.Ay.getGameOverlayStatus(a)));
+            { data: l } = (0, ai.I)(n?.id),
+            s = (0, d.bG)([E.Ay], () => (null == a ? null : E.Ay.getGameOverlayStatus(a)));
         return (0, r.jsxs)("div", {
             className: o8.st,
             children: [
@@ -10951,29 +10952,29 @@ let o9 = o.memo(function (e) {
                         }),
                     ],
                 }),
-                null != l &&
+                null != s &&
                     (0, r.jsxs)("div", {
                         className: o8.st,
                         children: [
                             (0, r.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw source: ", l.source],
+                                children: ["raw source: ", s.source],
                             }),
                             (0, r.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw enabledLegacy: ", l.enabledLegacy ? "Yes" : "No"],
+                                children: ["raw enabledLegacy: ", s.enabledLegacy ? "Yes" : "No"],
                             }),
                             (0, r.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw enabledOOP: ", l.enabledOOP ? "Yes" : "No"],
+                                children: ["raw enabledOOP: ", s.enabledOOP ? "Yes" : "No"],
                             }),
                             (0, r.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw overlayMethod: ", (0, oH.gK)(l.overlayMethod)],
+                                children: ["raw overlayMethod: ", (0, oH.gK)(s.overlayMethod)],
                             }),
                         ],
                     }),
@@ -10985,22 +10986,22 @@ let o9 = o.memo(function (e) {
                 (0, r.jsxs)(p.E, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["hook: ", n?.hook ? "Yes" : "No"],
+                    children: ["hook: ", l?.hook ? "Yes" : "No"],
                 }),
                 (0, r.jsxs)(p.E, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["overlay: ", n?.overlay ? "Yes" : "No"],
+                    children: ["overlay: ", l?.overlay ? "Yes" : "No"],
                 }),
                 (0, r.jsxs)(p.E, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["overlayCompatibilityHook: ", n?.overlayCompatibilityHook ? "Yes" : "No"],
+                    children: ["overlayCompatibilityHook: ", l?.overlayCompatibilityHook ? "Yes" : "No"],
                 }),
                 (0, r.jsxs)(p.E, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["supportsOutOfProcessOverlay: ", n?.supportsOutOfProcessOverlay ? "Yes" : "No"],
+                    children: ["supportsOutOfProcessOverlay: ", l?.supportsOutOfProcessOverlay ? "Yes" : "No"],
                 }),
             ],
         });
@@ -19662,7 +19663,7 @@ function pc() {
     });
 }
 var pu = a(963935),
-    pm = a(504007),
+    pm = a(768463),
     ph = a(604261);
 function px(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

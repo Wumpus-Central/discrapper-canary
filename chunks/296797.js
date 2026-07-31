@@ -18,7 +18,7 @@ class E extends a.A {
         RUNNING_GAMES_CHANGE: (e) => this.fetchRunningGameRecords(e),
     };
     fetchRunningGameRecords(e) {
-        let t = e.games.map((e) => e.id).filter(c.Vq);
+        let t = e.games.map((e) => e.id ?? l.A.findGame(e)?.id).filter(c.Vq);
         0 !== t.length && s.I.fetchMany(...t.map((e) => [e]));
     }
     handlePostConnectionOpen() {
