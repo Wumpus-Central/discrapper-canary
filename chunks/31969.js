@@ -1,14 +1,14 @@
 l.d(t, { F: () => v });
-var i = l(582128),
-    n = l(17928),
+var n = l(582128),
+    i = l(17928),
     a = l(318254),
     r = l(278416),
     s = l(561573),
     o = l(288106),
     c = l(240248),
     d = l(429635),
-    h = l(430825),
-    u = l(375708);
+    u = l(430825),
+    h = l(375708);
 let f = "{value}",
     p = { ORBS: a.C, TAG: r.g };
 function _(e) {
@@ -20,7 +20,7 @@ function S(e, t) {
 function v(e, t) {
     let { applicationId: l, skuId: a } = t,
         r = (0, d.A)({ applicationId: l }),
-        f = i.useMemo(() => {
+        f = n.useMemo(() => {
             let e = r?.storefront?.promotions;
             return null == e ? null : (Object.values(e)[0] ?? null);
         }, [r]),
@@ -28,7 +28,7 @@ function v(e, t) {
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? o.QK.GIFT
                 : o.QK.SELF_PURCHASE,
-        v = (0, n.bG)(
+        v = (0, i.bG)(
             [s.A],
             () =>
                 (function (e, t) {
@@ -41,7 +41,7 @@ function v(e, t) {
                 })(s.A.getRewardsForSkuId(a), p),
             [a, p],
         );
-    return i.useMemo(() => {
+    return n.useMemo(() => {
         if (null == f) return null;
         let t = null != f.endsAt ? new Date(f.endsAt) : null;
         switch (e) {
@@ -62,23 +62,35 @@ function v(e, t) {
                 if ((0, c.uJ)(e)) return null;
                 return {
                     Icon: _("TAG"),
-                    text: u.intl.string(h.default.hriMCc),
+                    text: h.intl.string(u.default.hriMCc),
                     tooltip: e,
                     endsAt: t,
                     flavor: f.flavor,
                     reward: null,
                 };
             }
-            case "pdp":
-            case "card":
             case "gift_customization": {
-                let l = "gift_customization" === e ? f.checkout : f.pdp,
-                    i = S(l?.label ?? null, v?.amount ?? null);
-                if ((0, c.uJ)(i)) return null;
+                if (null == v) return null;
+                let e = S(f.checkout?.label ?? null, v.amount);
+                if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: _(l?.icon ?? null),
-                    text: i,
-                    tooltip: S(l?.tooltip ?? null, v?.amount ?? null),
+                    Icon: _(f.checkout?.icon ?? null),
+                    text: e,
+                    tooltip: S(f.checkout?.tooltip ?? null, v.amount),
+                    endsAt: t,
+                    flavor: f.flavor,
+                    reward: v,
+                };
+            }
+            case "pdp":
+            case "card": {
+                let e = f.pdp,
+                    l = S(e?.label ?? null, v?.amount ?? null);
+                if ((0, c.uJ)(l)) return null;
+                return {
+                    Icon: _(e?.icon ?? null),
+                    text: l,
+                    tooltip: S(e?.tooltip ?? null, v?.amount ?? null),
                     endsAt: t,
                     flavor: f.flavor,
                     reward: v,
@@ -101,11 +113,11 @@ function v(e, t) {
             case "sku_gift_badge": {
                 if (null == v) return null;
                 let l = "sku_gift_badge" === e ? f.checkout : f.pdp,
-                    i = S(l?.label ?? null, v.amount);
-                if ((0, c.uJ)(i)) return null;
+                    n = S(l?.label ?? null, v.amount);
+                if ((0, c.uJ)(n)) return null;
                 return {
                     Icon: _("TAG"),
-                    text: u.intl.string(h.default.hriMCc),
+                    text: h.intl.string(u.default.hriMCc),
                     tooltip: S(l?.tooltip ?? null, v.amount),
                     endsAt: t,
                     flavor: f.flavor,
