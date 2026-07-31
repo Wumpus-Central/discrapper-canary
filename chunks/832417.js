@@ -12,15 +12,15 @@ var i = n(477900),
     p = n(331322),
     _ = n(834730),
     I = n(289873);
-n(683590), n(896984), n(737952), n(348292);
+n(748951), n(737045), n(588816), n(507861);
 var E = n(736653),
     A = n(632738),
     C = n(295972),
     g = n(36149),
-    R = n(448026),
-    y = n(354331),
-    F = n(651386),
-    T = n(277262),
+    R = n(979555),
+    T = n(200432),
+    y = n(844887),
+    F = n(217870),
     v = n(731738),
     h = n(807393),
     b = n(40449),
@@ -129,7 +129,7 @@ let M = function (e) {
         [v, h] = r.useState({ sessionToken: n, interviewId: a });
     r.useEffect(() => {
         let e = V(l, s);
-        0 !== e.length && (0, T.ZU)((0, T.Dz)({ pipelines: e })).catch(() => {});
+        0 !== e.length && (0, F.ZU)((0, F.Dz)({ pipelines: e })).catch(() => {});
     }, []),
         r.useEffect(() => {
             h((e) =>
@@ -219,7 +219,7 @@ let M = function (e) {
         r.useEffect(() => {
             var e, n;
             let r, a;
-            if (!o || "capturing" !== p) return;
+            if (!o || "capturing" !== p || 0 === v.sessionToken.length) return;
             let c = new AbortController(),
                 { signal: I } = c,
                 A = f.current,
@@ -250,7 +250,7 @@ let M = function (e) {
                                 captureFailureReason: "id_capture_error",
                                 requiresManualFinish: !1,
                             }),
-                T = !1;
+                F = !1;
             function h(e) {
                 f.current || P(e), q();
             }
@@ -265,7 +265,7 @@ let M = function (e) {
                                 encryption: { mgf1: "sha256" },
                                 wasm: { pipelines: C.wasmPipelines },
                             }),
-                            S(I) || (await (0, F.T7)({ token: v.sessionToken }), S(I)))
+                            S(I) || (await (0, y.T7)({ token: v.sessionToken }), S(I)))
                         )
                             return;
                         let a = u.current;
@@ -273,21 +273,21 @@ let M = function (e) {
                         function e() {
                             null != a &&
                                 ("incode-selfie" === C.tag &&
-                                    (r = (0, y.Ns)((e) => {
-                                        "screenOpened" === e.code && e.screen?.endsWith("Exhausted") && (T = !0);
+                                    (r = (0, T.Ns)((e) => {
+                                        "screenOpened" === e.code && e.screen?.endsWith("Exhausted") && (F = !0);
                                     })),
                                 (d.current = x(C.tag, {
                                     container: a,
                                     config: C.config,
                                     signal: I,
                                     onFinish: () => {
-                                        "incode-selfie" === C.tag && T && !f.current
+                                        "incode-selfie" === C.tag && F && !f.current
                                             ? h("selfie_error_triggered_fallback")
                                             : C.requiresManualFinish
                                               ? (g(!0),
                                                 (async () => {
                                                     try {
-                                                        let e = await (0, F.uR)(void 0, I);
+                                                        let e = await (0, y.uR)(void 0, I);
                                                         if (S(I)) return;
                                                         g(!1);
                                                         let t =
@@ -360,12 +360,12 @@ var j = n(793163),
     W = n(792675),
     G = n(700129);
 let K = function (e) {
-    let { onClose: t, onComplete: n, onCancel: a, hideFooter: R, onDeviceIdCapture: y, transitionState: F } = e,
-        T = !0 === e.pickerMode ? null : e.initialSession,
+    let { onClose: t, onComplete: n, onCancel: a, hideFooter: R, onDeviceIdCapture: T, transitionState: y } = e,
+        F = !0 === e.pickerMode ? null : e.initialSession,
         v = !0 === e.pickerMode ? null : e.initialMethod,
         h = r.useRef(!1),
         [k, m] = r.useState(v),
-        [w, L] = r.useState(T),
+        [w, L] = r.useState(F),
         [D, N] = r.useState(!1),
         S = r.useCallback(async (e) => {
             m(e), N(!1), L(null);
@@ -397,7 +397,7 @@ let K = function (e) {
             consentId: w?.consentId ?? "",
             interviewId: w?.interviewId ?? "",
             flow: k ?? void 0,
-            onDeviceIdCapture: y,
+            onDeviceIdCapture: T,
             enabled: null != k && null != w,
             webviewHost: V,
         });
@@ -429,7 +429,7 @@ let K = function (e) {
               : null;
     return null == k
         ? (0, i.jsx)(s.k, {
-              transitionState: F,
+              transitionState: y,
               onClose: t,
               gradientColor: "blue",
               graphic: { type: "image", src: G.A },
@@ -457,7 +457,7 @@ let K = function (e) {
           })
         : (0, i.jsx)(j.A, {
               parentComponent: "IncodeAgeVerificationModal",
-              transitionState: F,
+              transitionState: y,
               onBackToStart: t,
               footerRightSlot: ei,
               hideFooter: R,
