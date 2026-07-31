@@ -17328,6 +17328,7 @@
   "Pi5yMJ": "{num} × {num, plural,one {Server Boost}other {Server Boosts} Monthly",
   "YAIIWp": "**{num}** × {num, plural,one {Server Boost}other {Server Boosts} {intervalCount} Month",
   "JVW4UN": "**{num}** × {num, plural,one {Server Boost}other {Server Boosts} Yearly",
+  "H4KPuV": "{num} × {num, plural,one {Server Boost}other {Server Boosts} Yearly",
   "Qp7/8o": "Boosted server perks include —",
   "LwkXeO": "Support your favorite server with a Boost. Every Boost helps unlock new levels and more perks for everyone in the server. [Learn more about Server Boosting](Learn more about Server Boosting). Manage your Boosts in [User Settings](User Settings).",
   "LvDDzX": "Support your favorite server with a Boost. Every Boost helps unlock new levels and more perks for everyone in the server.",

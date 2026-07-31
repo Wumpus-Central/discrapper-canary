@@ -5070,7 +5070,7 @@ let aV = r.memo(function (e) {
             : null
         : (0, a.jsx)("div", { className: aH.yF });
 });
-var aK = n(204529),
+var aK = n(279182),
     az = n(831688),
     aW = n(226698),
     a$ = n(892340),
@@ -5359,7 +5359,7 @@ function ru(e) {
                                               null != R &&
                                               (0, a.jsx)("div", {
                                                   className: ro.reactions,
-                                                  children: (0, a.jsx)(az.qT, {
+                                                  children: (0, a.jsx)(az.q, {
                                                       message: _,
                                                       readOnly: !1,
                                                       useChatFontScaling: !1,

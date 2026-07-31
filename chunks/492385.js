@@ -371,7 +371,7 @@ function e7(e) {
         { disableReactionCreates: a, isLurking: r, isPendingMember: o } = (0, ew.A)(n);
     return null == s || a
         ? null
-        : (0, i.jsx)(eD.qT, {
+        : (0, i.jsx)(eD.q, {
               className: e0.vC,
               message: t,
               readOnly: n.isArchivedLockedThread(),

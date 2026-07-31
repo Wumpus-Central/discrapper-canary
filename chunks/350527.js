@@ -30,14 +30,14 @@ var s = n(477900),
     C = n(534890),
     b = n(866665),
     y = n(144165),
-    M = n(425551),
+    M = n(119031),
     S = n(765671),
     _ = n(738768),
     k = n(104171),
     L = n(31720),
-    T = n(847599),
-    P = n(114166),
-    E = n(47167),
+    P = n(847599),
+    E = n(114166),
+    T = n(47167),
     w = n(810181),
     I = n(390248),
     R = n(59318),
@@ -100,7 +100,7 @@ let em = 72,
                     { messageCountText: o } = (0, Y.k6)(s);
                 return { channel: s, isOpen: l, messageCount: o, firstMessage: a, content: i, media: n ?? r };
             })({ threadId: t, overrideMedia: r }),
-            b = (0, E.Ay)(g),
+            b = (0, T.Ay)(g),
             { ref: y, height: M } = (0, S.Ay)(),
             _ = (0, es.kU)((e) => e.setCardHeight, u.x);
         l.useEffect(() => {
@@ -110,20 +110,20 @@ let em = 72,
                 a?.(y.current, t);
             }, [y, a, t]);
         let k = l.useRef(null),
-            { handleLeftClick: L, handleRightClick: T } = (0, er.A)({ facepileRef: k, goToThread: n, channel: g }),
-            { role: P, onFocus: w, ...I } = (0, h.rm)(t),
+            { handleLeftClick: L, handleRightClick: P } = (0, er.A)({ facepileRef: k, goToThread: n, channel: g }),
+            { role: E, onFocus: w, ...I } = (0, h.rm)(t),
             { isFocused: R, handleFocus: z, handleBlur: B } = (0, ei.A)(w);
         return (0, s.jsxs)("div", {
             ref: y,
             "data-item-id": t,
             onClick: L,
-            onContextMenu: T,
+            onContextMenu: P,
             className: i()(eu.kL, o, { [eu.nT]: j }),
             children: [
                 (0, s.jsx)(x.D, {
                     onClick: L,
                     focusProps: { ringTarget: y },
-                    onContextMenu: T,
+                    onContextMenu: P,
                     "aria-label": ed.intl.formatToPlainString(ed.t.pgYN6c, { title: b ?? "", count: v }),
                     className: eu.Kv,
                     onFocus: z,
@@ -217,7 +217,7 @@ function eA(e) {
     });
 }
 function ef(e) {
-    let t = (0, E.Ay)(e),
+    let t = (0, T.Ay)(e),
         n = (0, m.bG)([et.A], () => et.A.getHasSearchResults(e.parent_id)),
         a = (0, m.bG)([et.A], () => et.A.getSearchQuery(e.parent_id)),
         i = l.useMemo(() => (0, _.wG)(n && null != a ? a : "", !0), [n, a]);
@@ -331,7 +331,7 @@ function eN(e) {
                 children: (0, s.jsx)(C.o, { size: "custom", color: "currentColor", width: n, height: n }),
             }),
             "number" == typeof a
-                ? (0, s.jsx)(P.A, { value: a, digitWidth: 9, className: eu.gv })
+                ? (0, s.jsx)(E.A, { value: a, digitWidth: 9, className: eu.gv })
                 : (0, s.jsx)("div", { className: eu.gv, children: a }),
             null == r
                 ? null
@@ -351,7 +351,7 @@ function ep(e) {
         { disableReactionCreates: i, isLurking: r, isPendingMember: c } = (0, G.A)(n);
     return null == a || i
         ? null
-        : (0, s.jsx)(W.qT, {
+        : (0, s.jsx)(W.q, {
               className: eu.vC,
               message: t,
               readOnly: n.isArchivedLockedThread(),
@@ -376,7 +376,7 @@ function eC(e) {
     return null == l
         ? null
         : (0, s.jsx)(
-              W.qT,
+              W.q,
               {
                   className: eu.vC,
                   message: t,
@@ -477,7 +477,7 @@ function eS(e) {
                     i &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        L.A.showAgeVerificationGetStartedModal({ entryPoint: T.q1.FORUM_POST_MEDIA_PREVIEW }));
+                        L.A.showAgeVerificationGetStartedModal({ entryPoint: P.q1.FORUM_POST_MEDIA_PREVIEW }));
             },
             children: [
                 (0, s.jsx)(eM, { firstMedia: n, shouldObscure: l, obscureReason: a, shouldShowAgeVerification: i }),

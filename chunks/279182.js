@@ -1,4 +1,4 @@
-n.d(t, { A: () => Q }), n(321073);
+n.d(t, { A: () => $ }), n(321073);
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -76,10 +76,10 @@ let S = new T(x.h, {
 var y = n(554146),
     b = n(43105),
     R = n(826673),
-    M = n(367727),
-    L = n(49999),
-    O = n(375708),
-    k = n(936037);
+    L = n(367727),
+    M = n(49999),
+    k = n(375708),
+    O = n(936037);
 let P = y.M.FOR_LATER_REACTION_COACHMARK;
 function D(e) {
     let { targetElementRef: t, onDismiss: n } = e;
@@ -91,11 +91,11 @@ function D(e) {
         shouldShow: !0,
         scrollBehavior: "close",
         caretConfig: { align: "start" },
-        onRequestClose: () => n(L.i.USER_DISMISS),
-        title: O.intl.string(O.t.qPbFK2),
-        body: O.intl.string(O.t.FMaaaB),
-        actions: [{ text: O.intl.string(O.t["NX+WJN"]), onClick: () => n(L.i.USER_DISMISS) }],
-        graphic: { type: "image", src: k },
+        onRequestClose: () => n(M.i.USER_DISMISS),
+        title: k.intl.string(k.t.qPbFK2),
+        body: k.intl.string(k.t.FMaaaB),
+        actions: [{ text: k.intl.string(k.t["NX+WJN"]), onClick: () => n(M.i.USER_DISMISS) }],
+        graphic: { type: "image", src: O },
     });
 }
 var U = n(519222),
@@ -126,10 +126,10 @@ function H(e) {
                 );
             return (
                 l.useEffect(() => {
-                    n && !t && d(L.i.INDIRECT_ACTION);
+                    n && !t && d(M.i.INDIRECT_ACTION);
                 }, [n, t, d]),
                 l.useEffect(() => {
-                    c && ((0, M.Wx)(P), d(L.i.AUTO_DISMISS));
+                    c && ((0, L.Wx)(P), d(M.i.AUTO_DISMISS));
                 }, [c, d]),
                 { isCoachmarkVisible: c, dismissCoachmark: u }
             );
@@ -143,11 +143,11 @@ function H(e) {
         children: [
             (0, i.jsx)(A.m, {
                 asContainer: !0,
-                text: d ? O.intl.string(O.t.LHUP9D) : O.intl.string(O.t["9p3D9p"]),
+                text: d ? k.intl.string(k.t.LHUP9D) : k.intl.string(k.t["9p3D9p"]),
                 children: (0, i.jsx)(o.D, {
                     innerRef: m,
                     onClick: (e) => {
-                        e.stopPropagation(), d ? (0, U.r7)(n, t) : (0, U.wF)(n, t), x && f(L.i.TAKE_ACTION);
+                        e.stopPropagation(), d ? (0, U.r7)(n, t) : (0, U.wF)(n, t), x && f(M.i.TAKE_ACTION);
                     },
                     className: a()(N.reactionBtn, N.bookmarkBtn, { [N.visible]: d || u }, r),
                     children: (0, i.jsx)(j, { size: "sm", color: "currentColor", className: N.icon }),
@@ -158,13 +158,14 @@ function H(e) {
     });
 }
 var V = n(860227),
-    F = n(172218),
-    B = n(317097),
+    B = n(172218),
+    F = n(317097),
     z = n(565645),
     J = n(114166),
     Y = n(891734),
-    K = n(831688);
-let W = l.memo(function (e) {
+    K = n(815807),
+    W = n(831688);
+let X = l.memo(function (e) {
         let t,
             n,
             {
@@ -187,11 +188,11 @@ let W = l.memo(function (e) {
             C = (0, Y.g)(E && null != h ? h : []),
             I = l ? w : G,
             v = E ? m : o,
-            N = (0, J.x)(v, K.$Z),
+            N = (0, J.x)(v, W.$),
             j = {};
         if (E && null != C) {
             let { accentColor: e, backgroundColor: i, opacity: l } = C,
-                s = (0, B.xp)(i ?? "", l) ?? "";
+                s = (0, F.xp)(i ?? "", l) ?? "";
             _ && (j.borderColor = i), (j.background = s), (t = e), (n = e);
         }
         let T = { minWidth: N, color: t, borderColor: n };
@@ -204,7 +205,7 @@ let W = l.memo(function (e) {
             ],
         });
     }),
-    X = l.memo(function (e) {
+    Z = l.memo(function (e) {
         let { showImmediate: t, reactions: n, ...s } = e,
             [a, r] = l.useState(!1),
             [o, c] = l.useTransition(),
@@ -219,8 +220,8 @@ let W = l.memo(function (e) {
                 },
                 [a, o],
             ),
-            m = (0, F.K)(d),
-            h = (a && !o) || t ? K.qT : W;
+            m = (0, B.K)(d),
+            h = (a && !o) || t ? W.q : X;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", { ref: m }),
@@ -234,10 +235,10 @@ let W = l.memo(function (e) {
             ],
         });
     });
-function Z(e, t) {
+function q(e, t) {
     return (null == e && null == t) || e === t;
 }
-class q extends l.PureComponent {
+class Q extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
@@ -275,7 +276,7 @@ class q extends l.PureComponent {
                   transitionLeave: !1,
                   id: (0, V.JH)(e),
                   children: [
-                      (0, i.jsx)(X, {
+                      (0, i.jsx)(Z, {
                           reactions: E,
                           message: e,
                           readOnly: n,
@@ -291,7 +292,7 @@ class q extends l.PureComponent {
                                   t.stopPropagation(), (0, d.$)(e);
                               },
                               className: a()(I.reaction, p, I.remainingReactions),
-                              "aria-label": O.intl.string(O.t.lfIHs4),
+                              "aria-label": k.intl.string(k.t.lfIHs4),
                               children: (0, i.jsxs)(c.E, {
                                   className: I.reactionInner,
                                   variant: "text-sm/normal",
@@ -307,7 +308,7 @@ class q extends l.PureComponent {
             : null;
     }
 }
-let Q = function (e) {
+let $ = function (e) {
     let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
             combinedReactions: a,
@@ -317,7 +318,7 @@ let Q = function (e) {
             let e = [],
                 i = (function (e, t) {
                     if (null == t) return e;
-                    let n = e.findIndex((e) => Z(e.emoji.id, t?.id) && Z(e.emoji.name, t?.name));
+                    let n = e.findIndex((e) => q(e.emoji.id, t?.id) && q(e.emoji.name, t?.name));
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, s),
                 l = null != n && n < i.length ? i.slice(0, n) : i,
@@ -332,5 +333,5 @@ let Q = function (e) {
                 { combinedReactions: e, visibleReactionsCount: r, remainingReactions: a }
             );
         }, [s, n, t.reactions]);
-    return (0, i.jsx)(q, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
+    return (0, i.jsx)(Q, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
 };
