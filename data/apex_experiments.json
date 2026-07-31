@@ -5920,22 +5920,6 @@
     }
   },
   {
-    "name": "2026-07-windows-camera-mic-permissions",
-    "kind": "user",
-    "defaultConfig": {
-      "checkPermissionsEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "checkPermissionsEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-wishlist-direct-to-gifting",
     "kind": "user",
     "defaultConfig": null,
