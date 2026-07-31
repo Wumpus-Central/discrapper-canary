@@ -195,10 +195,10 @@ function h(e) {
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (function (e, t) {
-        arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        let { content: n, guildId: i, channelId: r, messageId: a, authorId: s } = t;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { content: i, guildId: r, channelId: a, messageId: s, authorId: l } = t;
         return e(
-            n,
+            i,
             !0,
             {
                 allowLinks: !1,
@@ -215,12 +215,13 @@ function I(e, t) {
                 disableAutoBlockNewlines: !0,
                 previewLinkTarget: !1,
                 disableAnimatedEmoji: !0,
-                guildId: i,
-                channelId: r,
-                messageId: a,
-                authorId: s,
+                guildId: r,
+                channelId: a,
+                messageId: s,
+                authorId: l,
                 muted: !1,
                 disablePressableChannelMention: !0,
+                textColor: n.textColor,
             },
             (e) => (Array.isArray(e) || (e = [e]), e),
         );
