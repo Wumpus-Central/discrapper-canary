@@ -41,12 +41,10 @@ class x extends r.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
-        this.props.disableAutoFocus ||
-            (Promise.resolve().then(() => {
-                let { value: e } = this.props;
-                this._ref?.setSelection(e.length, e.length);
-            }),
-            this.focus()),
+        Promise.resolve().then(() => {
+            let { value: e } = this.props;
+            this._ref?.setSelection(e.length, e.length);
+        }),
             null != h.A.getActiveCommand(this.props.channel.id) &&
                 b.Gf({ channelId: this.props.channel.id, command: null, section: null });
     }
@@ -472,7 +470,7 @@ let ef = r.forwardRef(function (e, t) {
                     r = { anchor: t, focus: t };
                 }
                 let o = null != r && !Y.Ot.equals(r, s);
-                if ((l && !em && Y.VW.focus(e), null != r && o)) {
+                if (null != r && o) {
                     e.selection = r;
                     let t = B.o.currentEntry(e);
                     null != t && (t.selection = r), (l = !0);
@@ -494,7 +492,7 @@ let ef = r.forwardRef(function (e, t) {
                         }
                     else e.onChange();
             },
-            [A.id, A.guild_id, em],
+            [A.id, A.guild_id],
         ),
         ek = r.useCallback(() => {
             eU.current = !1;
