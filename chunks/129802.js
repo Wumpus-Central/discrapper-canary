@@ -4,11 +4,11 @@ var n = a(477900),
     i = a(812729),
     r = a.n(i),
     u = a(189213),
-    o = a(17928),
-    d = a(499979),
-    s = a(192308),
-    c = a(568602),
-    m = a(834730),
+    d = a(17928),
+    s = a(499979),
+    o = a(192308),
+    m = a(568602),
+    c = a(834730),
     g = a(691885),
     f = a(260598),
     y = a(684013),
@@ -16,32 +16,32 @@ var n = a(477900),
     v = a(964486),
     h = a(77729),
     _ = a(736056),
-    b = a(763827),
-    I = a(773371),
+    I = a(763827),
+    b = a(773371),
     N = a(174459),
     A = a(220478),
     S = a(9302),
     x = a(41984),
     G = a(181435),
     E = a(78878),
-    k = a(651930);
+    w = a(651930);
 a(321073);
-var w = a(952818),
+var k = a(952818),
     D = a(760751),
     j = a(935208),
     T = a(296027),
     P = a(243612);
-let O = new j.SnowflakeSequence(),
-    M = {};
-function C(e) {
+let M = new j.SnowflakeSequence(),
+    C = {};
+function O(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [T.default];
     for (let a of Object.values(t.getClosedTrackedGamesHistory()))
         if (a.applicationId === e.id || a.gameName === e.name) return a;
     return null;
 }
 function F(e) {
-    let [t, a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [w.Ay, T.default],
-        n = C(e, [a]),
+    let [t, a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [k.Ay, T.default],
+        n = O(e, [a]),
         l = null != e.name ? (t.getGameForName(e.name) ?? void 0) : void 0;
     return {
         gameId: e.id,
@@ -72,46 +72,30 @@ function L(e) {
     let n =
         e.gameId ??
         (function (e) {
-            if (null != M[e]) return M[e];
+            if (null != C[e]) return C[e];
             let t = Date.now(),
                 a = null;
             try {
-                O.willOverflowNext() && O.reset(), (a = j.default.fromTimestampWithSequence(t, O));
+                M.willOverflowNext() && M.reset(), (a = j.default.fromTimestampWithSequence(t, M));
             } catch {
-                O.reset(), (a = j.default.fromTimestampWithSequence(t, O));
+                M.reset(), (a = j.default.fromTimestampWithSequence(t, M));
             }
             if (null == a) throw Error("Failed to generate snowflake id");
-            return (M[e] = a), a;
+            return (C[e] = a), a;
         })(e.gameName);
-    return {
-        id: j.default.cast(n),
-        name: e.gameName,
-        description: void 0,
-        icon: void 0,
-        icon_hash: void 0,
-        cover_image_hash: void 0,
-        aliases: [],
-        executables: [],
-        overlay: !1,
-        overlayWarn: !1,
-        overlayCompatibilityHook: !1,
-        hook: !0,
-        supportsOutOfProcessOverlay: !1,
-        thirdPartySkus: [],
-        themes: [],
-    };
+    return { id: j.default.cast(n), name: e.gameName, aliases: [], executables: [], thirdPartySkus: [] };
 }
 function W(e) {
     let { selectedGame: t, setSelectedGame: a, placeholder: l } = e,
-        i = (0, o.yK)([D.A, w.Ay, T.default], () => {
+        i = (0, d.yK)([D.A, k.Ay, T.default], () => {
             let e = D.A.games,
                 t = e.reduce((e, t) => ((e[t.id] = t), e), {});
             return [
                 ...e,
-                ...w.Ay.getGamesSeen(!1).reduce((e, a) => {
+                ...k.Ay.getGamesSeen(!1).reduce((e, a) => {
                     let n = a.id;
                     if (null != n && null != t[n]) return e;
-                    let l = L(F(a, [w.Ay, T.default]), [D.A]);
+                    let l = L(F(a, [k.Ay, T.default]), [D.A]);
                     if (null != l) {
                         if (null != t[l.id]) return e;
                         e.push(l);
@@ -120,8 +104,8 @@ function W(e) {
                 }, []),
             ];
         }, []),
-        r = (0, o.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
-    return (0, n.jsx)(k.i, {
+        r = (0, d.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
+    return (0, n.jsx)(w.i, {
         games: i,
         selectedGame: r ?? null,
         onGameSelected: function (e) {
@@ -129,8 +113,8 @@ function W(e) {
                 ? a(
                       (function (e) {
                           let [t, a] =
-                                  arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [w.Ay, T.default],
-                              n = C(e, [a]);
+                                  arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [k.Ay, T.default],
+                              n = O(e, [a]);
                           return {
                               gameId: e.id,
                               gameName: e.name,
@@ -185,24 +169,24 @@ function X(e) {
     let t,
         i,
         r,
-        k,
+        w,
         D,
-        { onClose: j, transitionState: O, location: M, appContext: L } = e,
-        X = (0, o.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
-        $ = (0, o.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
+        { onClose: j, transitionState: M, location: C, appContext: L } = e,
+        X = (0, d.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)(),
+        $ = (0, d.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
         [V, Y] = l.useState(null),
         [Q, ee] = l.useState(""),
         et =
             ((t = (0, P.b4)()),
-            (i = (0, o.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)()),
-            (r = (0, o.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
-            (k = (0, o.bG)([w.Ay], () => w.Ay.getVisibleGame())),
-            (D = (0, o.bG)([w.Ay], () => w.Ay.getGamesSeen(!1)[0])),
-            (0, o.bG)([w.Ay, T.default], () => {
+            (i = (0, d.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)()),
+            (r = (0, d.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
+            (w = (0, d.bG)([k.Ay], () => k.Ay.getVisibleGame())),
+            (D = (0, d.bG)([k.Ay], () => k.Ay.getGamesSeen(!1)[0])),
+            (0, d.bG)([k.Ay, T.default], () => {
                 switch (!0) {
                     case null != r:
                         return (function (e) {
-                            let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [w.Ay];
+                            let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [k.Ay];
                             return {
                                 gameId: e.applicationId ?? void 0,
                                 gameName: e.gameName ?? void 0,
@@ -211,11 +195,11 @@ function X(e) {
                                 trackedGame: e,
                                 runningGame: null != e.gameName ? (t.getGameForName(e.gameName) ?? void 0) : void 0,
                             };
-                        })(r, [w.Ay]);
+                        })(r, [k.Ay]);
                     case null != t:
                         return (function (e) {
                             let [t, a] =
-                                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [w.Ay, T.default],
+                                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [k.Ay, T.default],
                                 n = t.getGameForName(e.name),
                                 l = n?.pid;
                             return {
@@ -226,8 +210,8 @@ function X(e) {
                                 runningGame: n ?? void 0,
                                 trackedGame: null != l ? (a.getTrackedGameByPid(l) ?? void 0) : void 0,
                             };
-                        })(t, [w.Ay, T.default]);
-                    case null != k:
+                        })(t, [k.Ay, T.default]);
+                    case null != w:
                         return (function (e) {
                             let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [T.default];
                             return {
@@ -235,23 +219,23 @@ function X(e) {
                                 gameName: e.name,
                                 gamePid: e.pid,
                                 fullscreenType: e.fullscreenType,
-                                trackedGame: C(e, [t]) ?? void 0,
+                                trackedGame: O(e, [t]) ?? void 0,
                                 runningGame: e,
                             };
-                        })(k, [T.default]);
+                        })(w, [T.default]);
                     case null != D:
-                        return F(D, [w.Ay, T.default]);
+                        return F(D, [k.Ay, T.default]);
                     default:
                         return null;
                 }
-            }, [t, r, k, D])),
+            }, [t, r, w, D])),
         [ea, en] = l.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
         [el, ei] = l.useState(et),
         [er, eu] = l.useState(!1),
-        [eo, ed] = l.useState(!1),
-        [es, ec] = l.useState(!1),
+        [ed, es] = l.useState(!1),
+        [eo, em] = l.useState(!1),
         {
-            nativeState: em,
+            nativeState: ec,
             breadcrumbs: [eg],
         } =
             ((0, v.Ay)(
@@ -263,7 +247,7 @@ function X(e) {
                     }
                 ),
             ),
-            (0, o.bG)(
+            (0, d.bG)(
                 [B.A],
                 () => ({ nativeState: B.A.getDebuggingState(), breadcrumbs: B.A.getOverlayLoggingBreadcrumbs() }),
                 [],
@@ -294,15 +278,15 @@ function X(e) {
             return [...J].map((t) => ({ id: t.toString(), label: K.intl.string(e[t]), value: t }));
         }, []);
     async function ep() {
-        ed(!0), await (0, d.yy)(500), ed(!1);
+        es(!0), await (0, s.yy)(500), es(!1);
     }
     async function ev() {
         if (null === V && 0 === Q.length) {
-            ec(!0), ep();
+            em(!0), ep();
             return;
         }
         eu(!0);
-        let e = I.default.getFocusedPID() ?? (0, S.getPID)(),
+        let e = b.default.getFocusedPID() ?? (0, S.getPID)(),
             t = T.default.getTrackedGameByPid(e),
             l = U.A.getPopoutInitializationStages(),
             i = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
@@ -316,9 +300,9 @@ function X(e) {
                     }
                 return !0;
             }),
-            o = E.A.getRecentActions(10),
-            c = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
-            m =
+            d = E.A.getRecentActions(10),
+            m = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+            c =
                 t?.fullscreenHistory == null
                     ? null
                     : Object.entries(t.fullscreenHistory)
@@ -340,35 +324,35 @@ function X(e) {
                 application_id: t?.applicationId,
                 application_name: t?.gameName,
                 game_pid: t?.pid,
-                recent_overlay_flux_actions: o,
+                recent_overlay_flux_actions: d,
                 overlay_module_state: t?.state,
-                overlay_native_state: JSON.stringify(em),
+                overlay_native_state: JSON.stringify(ec),
                 overlay_module_oop_initialization_state: JSON.stringify(l),
                 overlay_module_error_message: R.A.errorMessage,
                 overlay_module_breadcrumbs: JSON.stringify(u),
-                fullscreen_history_for_pid: m,
-                media_session_id: b.A.getMediaSessionId(),
-                recent_experiment_buckets: JSON.stringify(c),
-                location: M,
+                fullscreen_history_for_pid: c,
+                media_session_id: I.A.getMediaSessionId(),
+                recent_experiment_buckets: JSON.stringify(m),
+                location: C,
             };
         await N.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
-            await (0, d.yy)(1e3),
+            await (0, s.yy)(1e3),
             eu(!1),
             j?.(),
-            (0, s.openModalLazy)(
+            (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([a.e("87605"), a.e("36058")]).then(a.bind(a, 823777));
                     return (t) => (0, n.jsx)(e, { ...t });
                 },
-                { contextKey: (0, s.modalContextFromAppContext)(L) },
+                { contextKey: (0, o.modalContextFromAppContext)(L) },
             );
     }
     return (
         (0, v.Ay)(() => {
-            N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: M });
+            N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
         }),
         (0, n.jsx)(u.Modal, {
-            transitionState: O,
+            transitionState: M,
             title: K.intl.string(K.t.OKmenM),
             actions: [
                 { text: K.intl.string(K.t["ETE/oC"]), onClick: j, variant: "secondary", disabled: er },
@@ -381,12 +365,12 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(c.b, {
-                                isShaking: eo,
+                            (0, n.jsx)(m.b, {
+                                isShaking: ed,
                                 intensity: 1.5,
-                                children: (0, n.jsx)(m.E, {
+                                children: (0, n.jsx)(c.E, {
                                     variant: "text-md/medium",
-                                    color: es ? "text-feedback-critical" : "text-strong",
+                                    color: eo ? "text-feedback-critical" : "text-strong",
                                     children: K.intl.string(K.t.Trx7eJ),
                                 }),
                             }),
@@ -397,13 +381,13 @@ function X(e) {
                                 options: ef,
                                 value: V,
                                 onSelectionChange: function (e) {
-                                    Y(e), ec(!1), ed(!1);
+                                    Y(e), em(!1), es(!1);
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            es &&
-                                (0, n.jsx)(m.E, {
+                            eo &&
+                                (0, n.jsx)(c.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
                                     children: K.intl.string(K.t["5cqa9J"]),
@@ -413,7 +397,7 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(m.E, {
+                            (0, n.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: K.intl.string(K.t.iZufAY),
@@ -426,7 +410,7 @@ function X(e) {
                                 placeholder: K.intl.string(K.t["68mJXW"]),
                                 onChange: ee,
                             }),
-                            (0, n.jsx)(m.E, {
+                            (0, n.jsx)(c.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 children: K.intl.string(K.t.TzkM2a),
@@ -437,7 +421,7 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(m.E, {
+                            (0, n.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: K.intl.string(K.t["8+SU+a"]),
