@@ -5955,6 +5955,22 @@
     }
   },
   {
+    "name": "2026-07-wishlist-show-owned-items-last",
+    "kind": "user",
+    "defaultConfig": {
+      "isEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isEnabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-08-audio-fidelity",
     "defaultConfig": {
