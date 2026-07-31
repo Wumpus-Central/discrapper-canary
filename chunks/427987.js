@@ -134,8 +134,7 @@ function E(e) {
     let { mode: t, hydration: a, type: r, title: i, initialConfig: s, successData: n } = e,
         [d, c] = o.useState(s),
         u = (0, l.jsx)(b.P, {
-            type: r,
-            config: d,
+            widget: { id: "1", type: r, config: d },
             guildSpaceMode: t,
             title: i,
             hydration: (function (e, t) {

@@ -13,7 +13,7 @@ function o(e) {
             i.id,
             i.requires_hydration,
         ]);
-    return (0, n.jsx)(d.P, { type: i.type, config: i.config, guildSpaceMode: "view", hydration: l });
+    return (0, n.jsx)(d.P, { widget: i, guildSpaceMode: "view", hydration: l });
 }
 function u(e) {
     let { guildId: t, widgets: i } = e,
