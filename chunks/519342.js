@@ -53,8 +53,8 @@ function w(e) {
         X = K.find((e) => e.position.x === N && e.position.y === I),
         $ = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
         Z = l.useCallback(() => {
-            null != B && (0, v.EB)({ guildId: B, channelId: a, targetUserId: t, interactionType: "clicked" });
-        }, [t, B, a]),
+            null != B && (0, v.EB)({ guildId: B, channelId: a, interactionType: "clicked" });
+        }, [B, a]),
         q = l.useCallback(
             (e) => {
                 let t = f.A.getChannel(a);
@@ -104,8 +104,8 @@ function w(e) {
             [B, U, a],
         ),
         Q = l.useCallback(() => {
-            null != B && (0, v.EB)({ guildId: B, channelId: a, targetUserId: t, interactionType: "hovered" });
-        }, [t, B, a]);
+            null != B && (0, v.EB)({ guildId: B, channelId: a, interactionType: "hovered" });
+        }, [B, a]);
     if (null == U || null == B) return null;
     let J = H?.isVoiceDeafened()
             ? P.intl.formatToPlainString(P.t["9hDjai"], { username: W })

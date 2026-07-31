@@ -100,14 +100,9 @@ function f(e) {
     });
 }
 function p(e) {
-    let { targetUserId: t, interactionType: n, ...r } = e;
-    _(r.channelId, (e) => {
-        i.Ay.trackWithMetadata(c.HAw.GUILD_ROOM_USER_INTERACTED, {
-            ...u(r),
-            target_user_id: t,
-            interaction_type: n,
-            ...e,
-        });
+    let { interactionType: t, ...n } = e;
+    _(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(c.HAw.GUILD_ROOM_USER_INTERACTED, { ...u(n), interaction_type: t, ...e });
     });
 }
 function T(e) {

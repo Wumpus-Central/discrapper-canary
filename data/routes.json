@@ -15,6 +15,7 @@
   "APPLICATION_WIDGET_CONFIGS": "/applications/:param/widget-configs",
   "USER_GUILD_PROFILE": "/guilds/:param/profile/:param",
   "USER_CHANNELS": "/users/@me/channels",
+  "USER_CHANNELS_BULK_LEAVE": "/users/@me/channels/bulk-leave",
   "USER_GROUP_DM_SHELL": "/users/@me/channels/group-dm-shell",
   "USER_WISHLIST": "/wishlists/:param",
   "USER_WISHLIST_PATCH": "/users/@me/wishlists/:param",

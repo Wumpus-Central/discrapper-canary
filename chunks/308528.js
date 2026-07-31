@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => S });
-var i = n(636537),
+var i = n(562465),
     r = n(765178),
     a = n(228366),
     s = n(883600),
@@ -139,6 +139,13 @@ let S = {
                 })
         );
     },
+    bulkLeaveGroupDMs: (e) =>
+        i.Bo.post({
+            url: m.Rsh.USER_CHANNELS_BULK_LEAVE,
+            body: { channel_ids: e },
+            oldFormErrors: !0,
+            rejectWithError: !0,
+        }),
     async updatePermissionOverwrite(e, t) {
         let n = await i.Bo.put({
             url: m.Rsh.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),

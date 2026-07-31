@@ -25,7 +25,8 @@ function b(e) {
                         t.e("92639"),
                         t.e("90480"),
                         t.e("40963"),
-                        t.e("56169"),
+                        t.e("66031"),
+                        t.e("94317"),
                         t.e("64307"),
                     ]).then(t.bind(t, 420222));
                     return (t) => (0, l.jsx)(e, { ...t, parentId: a, source: "favorites_add_to_category" });

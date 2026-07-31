@@ -31,6 +31,24 @@
     width: 16px
 }
 
+.headerActions__99e7c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+@media (hover:hover) {
+    .moreButton__99e7c {
+        opacity: 0
+    }
+
+    .moreButton__99e7c[aria-expanded=true],
+    .privateChannelsHeaderContainer__99e7c:focus-within .moreButton__99e7c,
+    .privateChannelsHeaderContainer__99e7c:hover .moreButton__99e7c {
+        opacity: 1
+    }
+}
+
 .privateChannelRecipientsInviteButtonIcon__99e7c,
 .privateChannelRecipientsInviteButtonIconContainer__99e7c {
     height: 16px;

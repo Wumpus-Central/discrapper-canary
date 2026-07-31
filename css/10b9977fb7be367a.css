@@ -1,0 +1,37 @@
+.container__362a9 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-medium)
+}
+
+.listControls__31004 {
+    justify-content: space-between
+}
+
+.emptyState__31004,
+.listControls__31004 {
+    align-items: center;
+    display: flex
+}
+
+.emptyState__31004 {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    max-height: 45vh;
+    padding: var(--space-16) var(--space-8);
+    text-align: center
+}
+
+.sortTrigger__31004 {
+    align-items: center;
+    color: var(--text-subtle);
+    cursor: pointer;
+    display: inline-flex;
+    gap: var(--space-4)
+}
+
+.sortTrigger__31004:hover {
+    color: var(--text-strong)
+}

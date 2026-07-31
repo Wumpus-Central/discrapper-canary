@@ -3,6 +3,8 @@ e.exports = {
     TK: "headerText__99e7c",
     _e: "privateChannelsHeaderContainer__99e7c",
     Br: "privateChannelRecipientsInviteButtonIcon__99e7c",
+    $s: "headerActions__99e7c",
+    Mj: "moreButton__99e7c",
     U2: "privateChannelRecipientsInviteButtonIconContainer__99e7c",
     XG: "scroller__99e7c",
 };

@@ -781,17 +781,20 @@
 .questRewardTileWrapper_e3f38d {
     border-radius: calc(var(--radius-xl) - 2px);
     height: 100%;
-    overflow: hidden;
-    position: relative;
     width: 100%
+}
+
+.questRewardTileWrapper_e3f38d,
+.questRewardTileWrapperUnenrolled_e3f38d {
+    background-color: var(--background-base-lowest);
+    overflow: hidden;
+    position: relative
 }
 
 .questRewardTileWrapperUnenrolled_e3f38d {
     border-radius: calc(var(--radius-md) - 2px);
     height: 58px;
     margin-inline-end: var(--space-8);
-    overflow: hidden;
-    position: relative;
     width: 58px
 }
 
