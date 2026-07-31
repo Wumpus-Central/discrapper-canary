@@ -74,37 +74,36 @@ function T(e) {
         source: r ?? void 0,
     });
 }
-var S = n(43105),
-    M = n(554146),
-    P = n(131607);
-function D(e, t, n) {
-    let i = x("UserProfileMarketing"),
-        l = h(e, t),
-        r = n && i && l.length > 0,
-        [s, a] = (0, P.kn)(r ? [M.M.SHOP_THIS_LOOK_WEB_MARKETING] : [], void 0, !0);
-    return { isVisible: null != s, markAsDismissed: a };
+var S = n(554146),
+    M = n(131607);
+function P(e, t, n) {
+    let i = h(e, t).length > 0,
+        [l, r] = (0, M.kn)(n && i ? [S.M.SHOP_THIS_LOOK_WEB_MARKETING] : [], void 0, !0);
+    return { isVisible: null != l, markAsDismissed: r };
 }
-var k = n(49999),
+var D = n(43105),
+    k = n(49999),
     y = n(996988),
     U = n(375708),
     L = n(227143);
 function G(e) {
     let { user: t, guildId: n, shouldShow: i, isMenuOpen: l, targetElementRef: r, onClick: o } = e,
-        { isVisible: c, markAsDismissed: u } = D(t.id, n, i);
+        c = x("UserProfileMarketing"),
+        { isVisible: u, markAsDismissed: d } = P(t.id, n, i && c);
     return (a.useEffect(() => {
-        if (c)
+        if (u)
             return () => {
-                C(b.COACHMARK_DISMISSED, y.d.POPOUT), u(k.i.AUTO_DISMISS);
+                C(b.COACHMARK_DISMISSED, y.d.POPOUT), d(k.i.AUTO_DISMISS);
             };
-    }, [c, u]),
+    }, [u, d]),
     a.useEffect(() => {
-        i && c && C(b.COACHMARK_VIEWED, y.d.POPOUT);
-    }, [i, c]),
+        i && u && C(b.COACHMARK_VIEWED, y.d.POPOUT);
+    }, [i, u]),
     a.useEffect(() => {
-        i && c && l && u(k.i.TAKE_ACTION);
-    }, [i, c, l, u]),
-    c)
-        ? (0, s.jsx)(S.A, {
+        i && u && l && d(k.i.TAKE_ACTION);
+    }, [i, u, l, d]),
+    u)
+        ? (0, s.jsx)(D.A, {
               badge: "beta",
               graphic: { type: "image", src: L.A },
               title: U.intl.string(U.t.TrOccu),
@@ -114,13 +113,13 @@ function G(e) {
               align: "top",
               caretConfig: { align: "start" },
               targetElementRef: r,
-              onRequestClose: () => u(k.i.USER_DISMISS),
+              onRequestClose: () => d(k.i.USER_DISMISS),
               actions: [
                   {
                       text: U.intl.string(U.t["bqZVd/"]),
                       variant: "primary",
                       onClick: () => {
-                          C(b.COACHMARK_CTA_CLICKED, y.d.POPOUT), u(k.i.TAKE_ACTION), o();
+                          C(b.COACHMARK_CTA_CLICKED, y.d.POPOUT), d(k.i.TAKE_ACTION), o();
                       },
                   },
               ],
@@ -483,37 +482,38 @@ function eA(e) {
         { themeType: n } = (0, em.E)(),
         i = n === y.d.POPOUT,
         l = n === y.d.SIDEBAR,
-        { isVisible: r, markAsDismissed: o } = D(e.user.id, e.guildId, l);
+        r = x("UserProfileMarketing"),
+        { isVisible: o, markAsDismissed: c } = P(e.user.id, e.guildId, l && r);
     a.useEffect(() => {
-        r && C(b.RED_DOT_VIEWED, n);
-    }, [r, n]);
-    let [c, u] = a.useState(!1),
-        d = a.useCallback(() => {
-            u(!0), r && (C(b.RED_DOT_DISMISSED, n), o(k.i.TAKE_ACTION));
-        }, [r, o, n]);
+        o && C(b.RED_DOT_VIEWED, n);
+    }, [o, n]);
+    let [u, d] = a.useState(!1),
+        E = a.useCallback(() => {
+            d(!0), o && (C(b.RED_DOT_DISMISSED, n), c(k.i.TAKE_ACTION));
+        }, [o, c, n]);
     return (0, s.jsxs)("div", {
         className: eR.g2,
         children: [
             (0, s.jsx)("div", {
-                className: r ? eR.t8 : void 0,
+                className: o ? eR.t8 : void 0,
                 children: (0, s.jsx)(eg, {
                     ...e,
                     popoutTargetRef: t,
-                    shouldShow: i ? c : void 0,
-                    onRequestOpen: d,
-                    onRequestClose: () => u(!1),
+                    shouldShow: i ? u : void 0,
+                    onRequestOpen: E,
+                    onRequestClose: () => d(!1),
                     children: (e) => (0, s.jsx)(ef.br, { buttonRef: t, ...e }),
                 }),
             }),
-            r && (0, s.jsx)("div", { className: eR.Vx, "aria-hidden": !0 }),
+            o && (0, s.jsx)("div", { className: eR.Vx, "aria-hidden": !0 }),
             (0, s.jsx)(G, {
                 user: e.user,
                 guildId: e.guildId,
                 shouldShow: i,
-                isMenuOpen: c,
+                isMenuOpen: u,
                 targetElementRef: t,
                 onClick: () => {
-                    C(b.MENU_VIEWED, n), u(!0);
+                    C(b.MENU_VIEWED, n), d(!0);
                 },
             }),
         ],
