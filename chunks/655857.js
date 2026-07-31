@@ -60,19 +60,14 @@ function I() {
             hasFetchedRelatedSubscriptionPlans: c,
         } = h({ skuIDs: A(e), paymentSourceId: n, isGift: t }),
         { allowedCurrencies: u } = (function () {
-            let e = (0, o.t4)((e) => e.checkoutInvoicePreview),
-                { allowedCurrencies: t, invoiceCurrency: n } = i.useMemo(
-                    () =>
-                        null == e
-                            ? { allowedCurrencies: [], invoiceCurrency: void 0 }
-                            : {
-                                  allowedCurrencies:
-                                      null != e.checkoutContext ? (e.checkoutContext.allowed_currencies ?? []) : [],
-                                  invoiceCurrency: e.currency,
-                              },
-                    [e],
-                );
-            return { allowedCurrencies: t, invoiceCurrency: n };
+            let { checkoutContext: e, invoiceCurrency: t } = (0, o.t4)((e) => ({
+                checkoutContext: e.get("checkoutContext"),
+                invoiceCurrency: null != e.checkoutInvoicePreview ? e.checkoutInvoicePreview.currency : void 0,
+            }));
+            return {
+                allowedCurrencies: i.useMemo(() => (null != e ? (e.allowed_currencies ?? []) : []), [e]),
+                invoiceCurrency: t,
+            };
         })(),
         _ = i.useMemo(() => (u.length > 0 ? u : l), [u, l]),
         E = i.useMemo(() => a.paymentSourceId !== n || !a.loaded || null == d || !c, [a, n, d, c]),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y0: () => R, Ni: () => L, t4: () => y, Q9: () => D, y$: () => b });
+n.d(t, { y0: () => L, Ni: () => D, t4: () => v, Q9: () => y, y$: () => M });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -211,27 +211,34 @@ var I = n(566980),
     T = n(786300),
     m = n(428262),
     g = n(202541);
-function S(e) {
+function S(e, t) {
+    return null != e && null != e.checkout_context
+        ? e.checkout_context
+        : null != t && null != t.checkoutContext
+          ? t.checkoutContext
+          : null;
+}
+function N(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
         : { isPremiumPurchase: (0, m.ys)(e), isPremiumGroupPurchase: e === g.gD.PREMIUM_GROUP_MONTH };
 }
-var N = n(504275),
-    C = n(219538),
+var C = n(504275),
+    R = n(219538),
     O = n(75304);
-let R = 1,
-    [L, D] = (0, T.A)();
-function y(e) {
+let L = 1,
+    [D, y] = (0, T.A)();
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return D()(e, t);
+    return y()(e, t);
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function b(e) {
+function M(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -242,9 +249,9 @@ function b(e) {
     } = e;
     return (0, r.h)((e, i) => {
         let r = {
-            isPremiumPurchase: () => S(i().selectedPlanId).isPremiumPurchase,
-            isPremiumGroupPurchase: () => S(i().selectedPlanId).isPremiumGroupPurchase,
-            selectedPlanAttributes: () => S(i().selectedPlanId),
+            isPremiumPurchase: () => N(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => N(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => N(i().selectedPlanId),
             premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
             premiumDiscountPercent: () => {
                 let e = i().premiumDiscountInfo.discountOffer;
@@ -260,10 +267,15 @@ function b(e) {
                     t = null == i().checkoutInvoicePreview && null == i().checkoutInvoiceError;
                 return null != e && t;
             },
+            checkoutContext: () => S(i().order, i().checkoutInvoicePreview),
+            isCheckoutDataLoading: () => {
+                let { order: e, checkoutInvoicePreview: t, checkoutInvoiceError: n, purchasePreviewError: r } = i();
+                return null == n && null == r && (null == t || null == S(e, t));
+            },
             primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
         };
         return {
-            ...(0, N.p)(e, i, t),
+            ...(0, C.p)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -290,7 +302,7 @@ function b(e) {
                         r = JSON.stringify(t),
                         { fetchSetupIntentRequestKey: a, fetchSetupIntentPromise: s, clearFetchSetupIntent: l } = i();
                     if (!n && null != s && a === r) return s;
-                    let o = (0, C.w)({ body: t });
+                    let o = (0, R.w)({ body: t });
                     return (
                         e({ fetchSetupIntentRequestKey: r, fetchSetupIntentPromise: o }),
                         o.catch(() => {
@@ -338,29 +350,29 @@ function b(e) {
             contextMetadata: a,
             order: s,
             orderRecord: null != s ? h.createFromServer(s) : null,
-            setOrder: (t) => e({ order: t, orderRecord: h.createFromServer(t) }),
+            setOrder: (t) => e({ order: t, orderRecord: h.createFromServer(t), pendingPaymentSourceId: null }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: R }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: L }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: R }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: L }) : e({ selectedPlanId: i });
             },
-            quantity: R,
+            quantity: L,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: v(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: b(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
                 e((e) => ({
                     checkoutInvoicePreview: t ?? null,
                     checkoutInvoiceError: n ?? null,
-                    pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
+                    pendingPaymentSourceId: null != t && null == e.order ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: b(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

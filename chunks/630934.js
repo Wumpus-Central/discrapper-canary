@@ -223,6 +223,7 @@ function X(e) {
                     paymentSourceId: r,
                     purchasePreviewError: a,
                     unifiedCheckoutFlow: s,
+                    isCheckoutDataLoading: o,
                 } = (0, C.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
@@ -230,34 +231,35 @@ function X(e) {
                     paymentSourceId: e.paymentSourceId,
                     purchasePreviewError: e.purchasePreviewError,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
+                    isCheckoutDataLoading: e.get("isCheckoutDataLoading"),
                 })),
-                { hasPaymentSources: o } = (0, b.jm)(),
-                { application: c, isEmbeddedIAP: d } = (0, j.V)(),
-                p = (0, g.bG)([x.A], () => x.A.getFetchState()),
-                { checkoutPaymentSources: m, hasInvoiceOrderContextLoaded: h } = (0, M.t)(),
+                { hasPaymentSources: c } = (0, b.jm)(),
+                { application: d, isEmbeddedIAP: p } = (0, j.V)(),
+                m = (0, g.bG)([x.A], () => x.A.getFetchState()),
+                { checkoutPaymentSources: h } = (0, M.t)(),
                 f = (0, O.gU)(),
                 { isGift: E, giftRecipient: A } = (0, H.Pv)(),
                 S = E && (0, G.Ik)(A),
-                { fetched: y, hasAlreadyLinked: P } = (0, N.RD)(c);
+                { fetched: y, hasAlreadyLinked: P } = (0, N.RD)(d);
             T()(null != e, "Expected selectedSkuId");
             let I = f[e],
                 _ = I?.eligiblePaymentGateways;
-            T()(null != I, "SKU must exist and be fetched."), T()(null != c, "Application must exist.");
-            let v = (0, w.uS)(c.id),
+            T()(null != I, "SKU must exist and be fetched."), T()(null != d, "Application must exist.");
+            let v = (0, w.uS)(d.id),
                 L = t === B.h.PURCHASING || t === B.h.COMPLETED,
-                k = m.find((e) => e.id === r) ?? null,
+                k = h.find((e) => e.id === r) ?? null,
                 F = null != k ? k.type : null,
-                K = null != _ && _.length > 0 && (null == r || null === F) && o ? U.fU.SELECT_PAYMENT_METHOD : void 0,
+                K = null != _ && _.length > 0 && (null == r || null === F) && c ? U.fU.SELECT_PAYMENT_METHOD : void 0,
                 Z = I.productLine === W.EZt.SOCIAL_LAYER_GAME_ITEM,
                 q = S && !Z,
                 z = i.useMemo(
                     () => ({
                         testModeWarning: v ? V.intl.string(V.t.OvMyMd) : null,
                         devShelfError:
-                            (0, R.n)(c, W.gfo.EMBEDDED) && p === x.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
-                        socialLayerGameItemDisclaimer: Z && y && !P && !E ? (0, D.k3)(c) : null,
+                            (0, R.n)(d, W.gfo.EMBEDDED) && m === x.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
+                        socialLayerGameItemDisclaimer: Z && y && !P && !E ? (0, D.k3)(d) : null,
                     }),
-                    [v, c, p, Z, y, P, E],
+                    [v, d, m, Z, y, P, E],
                 ),
                 Q = i.useMemo(
                     () =>
@@ -268,15 +270,15 @@ function X(e) {
                 );
             return {
                 sku: I,
-                application: c,
+                application: d,
                 giftRecipient: A,
                 isGift: E,
                 invoicePreview: n,
-                isEmbeddedIAP: d,
+                isEmbeddedIAP: p,
                 shouldShowPurchaseReviewImage: q,
                 paymentRestrictionBannerType: K,
-                devShelfFetchState: p,
-                isStepLoading: !h && null == a,
+                devShelfFetchState: m,
+                isStepLoading: o,
                 purchasePreviewError: a,
                 warningAndErrorMessages: z,
                 purchaseTermsAndLegalContent: Q,

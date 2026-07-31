@@ -35,12 +35,11 @@ function c(e) {
     );
 }
 function d() {
-    let e = (0, u.t4)((e) => e.checkoutInvoicePreview);
-    return l.useMemo(() => {
-        if (null == e) return [];
-        let t = e.checkoutContext;
-        return null == t || null == t.payment_sources ? [] : t.payment_sources.map(a.A.createFromCheckoutContext);
-    }, [e]);
+    let e = (0, u.t4)((e) => e.get("checkoutContext"));
+    return l.useMemo(
+        () => (null == e || null == e.payment_sources ? [] : e.payment_sources.map(a.A.createFromCheckoutContext)),
+        [e],
+    );
 }
 function p() {
     let { selectedSkuId: e } = (0, u.t4)((e) => ({ selectedSkuId: e.selectedSkuId })),

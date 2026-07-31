@@ -1,19 +1,13 @@
-n.d(t, { P: () => o, t: () => s });
+n.d(t, { P: () => s, t: () => a });
 var l = n(582128),
     i = n(826469),
     r = n(316915);
-function a(e) {
-    return null != e && null != e.checkoutContext ? e.checkoutContext : null;
-}
-function s() {
-    let e = (0, r.t4)((e) => {
-            let { checkoutInvoicePreview: t } = e;
-            return a(t);
-        }),
+function a() {
+    let e = (0, r.t4)((e) => e.get("checkoutContext")),
         {
             paymentSourceRecords: t,
             allowedCurrencies: n,
-            storeCountry: s,
+            storeCountry: a,
         } = l.useMemo(
             () =>
                 (function (e) {
@@ -30,14 +24,14 @@ function s() {
     return {
         checkoutPaymentSources: t,
         allowedCurrencies: n,
-        storeCountry: s,
+        storeCountry: a,
         hasInvoiceOrderContextLoaded: null != e,
         invoiceOrderContext: e,
     };
 }
-function o() {
+function s() {
     return (0, r.t4)((e) => {
-        let t = a(e.checkoutInvoicePreview);
+        let t = e.get("checkoutContext");
         return null == t || null == t.store_country ? null : t.store_country.country;
     });
 }
