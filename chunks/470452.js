@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { t: () => l, U: () => o });
+n.d(t, { Uq: () => d, tT: () => o, mN: () => l });
 var i = n(17928),
     r = n(576705);
 let a = (0, n(600975).C)({
@@ -10,18 +10,22 @@ let a = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Enable Guild Space", config: { enabled: !0 } }],
 });
 var s = n(652215);
-function l(e, t) {
-    var n;
+function l(e) {
+    return (0, i.bG)([r.A], () => null != e && r.A.can(s.xBc.MANAGE_GUILD, e), [e]);
+}
+function o(e, t) {
+    var n, i;
     return (
         null != e &&
         ((n = e.id),
         a.getCurrentConfig({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled &&
-            r.A.can(s.xBc.MANAGE_GUILD, e))
+            null != (i = e) &&
+            r.A.can(s.xBc.MANAGE_GUILD, i))
     );
 }
-function o(e, t) {
+function d(e, t) {
     var n;
-    let l = ((n = e?.id), a.useExperiment({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled),
-        o = (0, i.bG)([r.A], () => null != e && r.A.can(s.xBc.MANAGE_GUILD, e), [e]);
-    return null != e && l && o;
+    let i = ((n = e?.id), a.useExperiment({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled),
+        r = l(e);
+    return null != e && i && r;
 }

@@ -1,47 +1,29 @@
 i.d(t, { A: () => u });
 var n = i(477900),
-    s = i(582128),
-    l = i(17928),
-    r = i(363957),
-    a = i(770224),
-    d = i(934746);
-function c(e, t) {
-    return e.position.order - t.position.order;
-}
+    l = i(582128),
+    r = i(17928),
+    s = i(363957),
+    a = i(754674),
+    d = i(770224),
+    c = i(934746);
 function o(e) {
     let { guildId: t, widget: i } = e,
-        s = (0, l.bG)([r.A], () => (i.requires_hydration ? r.A.getHydration(t, i.id) : void 0), [
+        l = (0, r.bG)([s.A], () => (i.requires_hydration ? s.A.getHydration(t, i.id) : void 0), [
             t,
             i.id,
             i.requires_hydration,
         ]);
-    return (0, n.jsx)(a.P, { type: i.type, config: i.config, guildSpaceMode: "view", hydration: s });
+    return (0, n.jsx)(d.P, { type: i.type, config: i.config, guildSpaceMode: "view", hydration: l });
 }
 function u(e) {
     let { guildId: t, widgets: i } = e,
-        [l, r] = s.useMemo(
-            () => [
-                i
-                    .filter((e) => {
-                        let { position: t } = e;
-                        return 1 !== t.column;
-                    })
-                    .sort(c),
-                i
-                    .filter((e) => {
-                        let { position: t } = e;
-                        return 1 === t.column;
-                    })
-                    .sort(c),
-            ],
-            [i],
-        );
+        r = l.useMemo(() => (0, a.Rl)(i), [i]);
     return (0, n.jsx)("div", {
-        className: d.V,
-        children: [l, r].map((e, i) =>
+        className: c.V,
+        children: r.map((e, i) =>
             (0, n.jsx)(
                 "div",
-                { className: d.f, children: e.map((e) => (0, n.jsx)(o, { guildId: t, widget: e }, e.id)) },
+                { className: c.f, children: e.map((e) => (0, n.jsx)(o, { guildId: t, widget: e }, e.id)) },
                 i,
             ),
         ),

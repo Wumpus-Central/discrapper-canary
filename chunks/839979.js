@@ -5442,7 +5442,7 @@ function rd(e) {
                 A = (0, tP.A)(e.id),
                 g = (0, tD.jY)(e.id),
                 m = (0, tT.fw)(e.id),
-                f = (0, tB.U)(e, "useGuildActionRows"),
+                f = (0, tB.Uq)(e, "useGuildActionRows"),
                 p = [],
                 C = e.features.has(Y.GuildFeatures.HUB),
                 E = e.features.has(Y.GuildFeatures.COMMUNITY),

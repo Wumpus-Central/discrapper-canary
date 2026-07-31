@@ -1374,7 +1374,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 586918, Version Hash: fd727bc0ddff8d262843c400ada716cf18a79eed`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 586928, Version Hash: affeb511f1c69eafd1e22587265cafa0fd8fc449`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     eT.A.initBasic(),
@@ -18112,7 +18112,7 @@ let gU = "isHideDevBanner",
                     className: to()(gP.Wz, gP.mr),
                     children: [
                         (0, R.jsx)(gM, { className: gP.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "586918" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "586928" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -21413,8 +21413,8 @@ let Cp = (0, tH.Fe)({
     }),
     CO = (0, tH.Fe)({
         createPromise: () =>
-            Promise.all([n.e("72228"), n.e("68201"), n.e("63584"), n.e("69170"), n.e("93756")]).then(n.bind(n, 704443)),
-        webpackId: 704443,
+            Promise.all([n.e("72228"), n.e("68201"), n.e("63584"), n.e("69170"), n.e("93756")]).then(n.bind(n, 425767)),
+        webpackId: 425767,
         name: "GuildSpacePage",
     }),
     CR = (0, tH.Fe)({
@@ -24626,7 +24626,7 @@ let Cp = (0, tH.Fe)({
             u = (0, rX.Bp)(i, "ChannelRenderer"),
             _ = (0, gO.f)({ guildId: r, location: "ChannelRenderer" }),
             E = (0, aE.C$)(r, "ChannelRenderer"),
-            A = (0, aG.U)(d, "ChannelRenderer"),
+            A = (0, aG.Uq)(d, "ChannelRenderer"),
             h = (0, aA.N)("ChannelRenderer"),
             I = d?.features.has(F.GuildFeatures.GAME_SERVERS) ?? !1,
             f = (0, aj.bW)(r, "ChannelRenderer"),

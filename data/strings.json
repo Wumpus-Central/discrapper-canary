@@ -12639,6 +12639,8 @@
   "HHM53+": "{mentionCount, plural,one {# mention}other {# mentions}, {channelName} (voice channel), {userCount, plural,one {# user}other {# users}",
   "LmYuHT": "Active activities in this channel: {activeActivities}",
   "04IVMq": "Server Hub",
+  "lXCMda": "Edit Hub",
+  "HmFYc5": "Your changes couldn't be saved. Try again.",
   "X1GuNO": "This Stage isn't scheduled to start until {startDate} at {startTime}",
   "Arwnev": "Update",
   "BGAQRd": "Remove attached {name} sticker from message",

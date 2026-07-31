@@ -15,7 +15,7 @@ function _(e) {
         n = o.Ay.getDefaultChannel(e)?.id ?? void 0;
     return (t !== u.VV.GUILD_ONBOARDING || i.Ay.shouldShowOnboarding(e)) && (t !== u.VV.GUILD_HOME || (0, r.K)(e))
         ? t === u.VV.GUILD_SPACE
-            ? (0, a.t)(d.A.getGuild(e), "getChannelIdForGuildTransition")
+            ? (0, a.tT)(d.A.getGuild(e), "getChannelIdForGuildTransition")
                 ? t
                 : n
             : t === u.VV.GAME_SHOP && (0, s.Ye)(e)
