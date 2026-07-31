@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     kL: "container_ab8609",
     LL: "editable_ab8609",
     zf: "hoisted_ab8609",
@@ -6,8 +6,10 @@ a.exports = {
     A7: "outer_ab8609",
     vW: "inner_ab8609",
     Qs: "content_ab8609",
-    m2: "unclamped_ab8609",
     vk: "clickable_ab8609",
+    m2: "unclamped_ab8609",
+    p$: "compactExpanded_ab8609",
+    mj: "referenceMeasurement_ab8609",
     hN: "ring_ab8609",
     qS: "statusText_ab8609",
     H0: "statusEmoji_ab8609",

@@ -291,11 +291,6 @@ html:not(.chat-input) .inputInner_b1f01d {
     max-width: 155px
 }
 
-.referenceContainer_ab8609>.outer_ab8609>.inner_ab8609>.content_ab8609.unclamped_ab8609 {
-    position: absolute;
-    top: 0
-}
-
 .referenceContainer_ab8609>.outer_ab8609 {
     max-width: none;
     width: -moz-max-content;
@@ -381,7 +376,19 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .content_ab8609.unclamped_ab8609 {
-    -webkit-line-clamp: 9
+    display: block;
+    -webkit-line-clamp: unset
+}
+
+.content_ab8609.compactExpanded_ab8609 {
+    -webkit-line-clamp: 8
+}
+
+.referenceMeasurement_ab8609 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
 .singleLineTextClamp_ab8609 {
