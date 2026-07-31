@@ -22,6 +22,7 @@ let o = [r.F.BOT, r.F.APPLICATIONS_COMMANDS],
                     integrationType: i.b.GUILD_INSTALL,
                     scopes: d?.scopes ?? o,
                     permissions: d?.permissions != null ? a.iu(d.permissions) : void 0,
+                    callback: () => !0,
                 },
                 () => {
                     l?.(), u(t, { withMutualGuilds: !0 });
