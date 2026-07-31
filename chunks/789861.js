@@ -10,5 +10,6 @@ function r() {
     }).formatRange(s, a);
 }
 function l() {
-    return new Intl.DateTimeFormat(n.intl.currentLocale, { day: "numeric", month: "short", timeZone: "UTC" }).format(a);
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
+    return new Intl.DateTimeFormat(n.intl.currentLocale, { day: "numeric", month: "short", timeZone: "UTC" }).format(e);
 }
