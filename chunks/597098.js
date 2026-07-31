@@ -144,19 +144,21 @@ function N(e) {
                       let { targetWidth: t, targetHeight: n, sourceWidth: i, sourceHeight: r, maxUpscale: a } = e,
                           s = Math.max(t, n);
                       if (s <= 0) return { width: t, height: n };
-                      let l = E.find((e) => s <= e) ?? E[E.length - 1];
-                      if (null != a && a > 1) {
+                      let l = E.find((e) => s <= e) ?? E[E.length - 1],
+                          o = null != i && null != r && Math.max(i, r) <= l,
+                          d = l;
+                      if (null != a && a > 1 && !o) {
                           let e;
                           for (let t of E)
                               if (t <= s) e = t;
                               else break;
-                          null != e && s <= e * a && (l = e);
+                          null != e && s <= e * a && (d = e);
                       }
-                      if (null != i && null != r && Math.max(i, r) <= l) return { width: i, height: r };
-                      let o = l / s,
-                          d = Math.max(1, Math.round(t * o)),
-                          c = Math.max(1, Math.round(n * o));
-                      return { width: null != i ? Math.min(d, i) : d, height: null != r ? Math.min(c, r) : c };
+                      if (null != i && null != r && Math.max(i, r) <= d) return { width: i, height: r };
+                      let c = d / s,
+                          u = Math.max(1, Math.round(t * c)),
+                          _ = Math.max(1, Math.round(n * c));
+                      return { width: null != i ? Math.min(u, i) : u, height: null != r ? Math.min(_, r) : _ };
                   })({ targetWidth: s, targetHeight: o, sourceWidth: i, sourceHeight: a, maxUpscale: 1.1 });
             (e.width !== i || e.height !== a) && ((m.width = 0 | e.width), (m.height = 0 | e.height));
         }
