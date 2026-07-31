@@ -65,19 +65,22 @@ function h(e) {
             items: c,
             onRemove: u,
             children: _,
+            selectedKeys: h,
+            onSelectionChange: I,
+            disallowEmptySelection: f,
         } = e,
-        [h, I] = r.useState(() => new Set()),
-        f = r.useContext(s._);
+        p = r.useContext(s._);
     return (0, i.jsxs)(a.CR, {
         "aria-label": n,
-        id: f?.controlId,
-        "aria-describedby": f?.describedById,
+        id: p?.controlId,
+        "aria-describedby": p?.describedById,
         "data-layout": d,
         className: E.WD,
         selectionMode: o,
         selectedKeys: h,
         onSelectionChange: I,
         disabledKeys: l,
+        disallowEmptySelection: f,
         onRemove: u,
         children: [
             (0, i.jsx)(a.LY, {
