@@ -1160,7 +1160,7 @@ let a = {
     TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
     QUESTS_1P_DATA_OPT_OUT_U18_REGIONS: new Set(["AR", "NY"]),
     QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: new Set(["CA", "MN", "NH", "OR"]),
-    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY"]),
+    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY", "TX"]),
     QUESTS_3P_DATA_OPT_OUT_COUNTRIES: new Set(["BR", "KR"]),
     STRIPE_CONNECT_SUPPORTED_COUNTRIES: new Set([
         "AT",
