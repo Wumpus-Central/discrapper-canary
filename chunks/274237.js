@@ -1,8 +1,15 @@
 e.exports = {
     kL: "container_deb389",
     dc: "spinnerContainer_deb389",
+    xX: "artwork_deb389",
+    fB: "bundleBackground_deb389",
     VH: "preview_deb389",
-    Nr: "card_deb389",
+    GJ: "artworkHeader_deb389",
+    gj: "utilityButtons_deb389",
+    Hk: "utilityButtonHidden_deb389",
+    VD: "utilityButton_deb389",
     zH: "details_deb389",
+    pq: "info_deb389",
+    y3: "priceRow_deb389",
     fN: "orbIconAligned_deb389",
 };

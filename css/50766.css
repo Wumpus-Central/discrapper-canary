@@ -4,33 +4,149 @@
     border-radius: var(--radius-lg);
     display: flex;
     flex-direction: column;
-    max-width: 380px;
+    max-width: 512px;
     overflow: hidden;
     width: 100%
 }
 
 .spinnerContainer_deb389 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     min-height: 240px
 }
 
-.preview_deb389,
-.spinnerContainer_deb389 {
-    align-items: center;
+.artwork_deb389 {
+    aspect-ratio: 516/259;
+    background: var(--background-base-lower);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    cursor: pointer;
     display: flex;
-    justify-content: center
+    flex-direction: column;
+    overflow: hidden;
+    position: relative
 }
 
-.preview_deb389 .card_deb389 {
-    border: none;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0
+.artwork_deb389>[role=button]:first-child {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%
+}
+
+.bundleBackground_deb389 {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+    position: absolute;
+    width: 100%
+}
+
+.preview_deb389 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 0 var(--space-8);
+    position: absolute
+}
+
+.artworkHeader_deb389 {
+    justify-content: space-between;
+    padding: var(--space-12);
+    position: relative;
+    z-index: 1
+}
+
+.artworkHeader_deb389,
+.utilityButtons_deb389 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.utilityButtons_deb389 {
+    align-items: center;
+    margin-inline-start: auto
+}
+
+.utilityButtonHidden_deb389 {
+    opacity: 0;
+    pointer-events: none
+}
+
+.utilityButton_deb389 {
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--icon-strong);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    transition: background-color 50ms ease-in, opacity .15s ease;
+    width: 40px
+}
+
+.utilityButton_deb389:hover {
+    transition: background-color .15s ease-out
+}
+
+.theme-light .utilityButton_deb389 {
+    background: hsl(var(--primary-100-hsl)/.66);
+    border: 1px solid var(--border-subtle)
+}
+
+.theme-light .utilityButton_deb389:hover {
+    background: hsl(var(--primary-100-hsl)/1)
+}
+
+.theme-light .utilityButton_deb389:active {
+    background: hsl(var(--primary-100-hsl)/.52)
+}
+
+.theme-dark .utilityButton_deb389 {
+    background: var(--control-overlay-secondary-background-default);
+    border: 1px solid var(--border-muted)
+}
+
+.theme-dark .utilityButton_deb389:hover {
+    background: var(--control-overlay-secondary-background-hover)
+}
+
+.theme-dark .utilityButton_deb389:active {
+    background: var(--control-overlay-secondary-background-active)
 }
 
 .details_deb389 {
     border-top: 1px solid var(--border-subtle);
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.details_deb389,
+.info_deb389 {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-16);
-    padding: var(--space-16)
+    flex-direction: column
+}
+
+.info_deb389 {
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.priceRow_deb389 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    justify-content: space-between;
+    min-height: 24px;
+    min-width: 0
 }
 
 .orbIconAligned_deb389 {
