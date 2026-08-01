@@ -4,6 +4,7 @@ a.exports = {
     rf: "body_f8194a",
     JX: "chatBody_f8194a",
     wO: "projectHeaderActions_f8194a",
+    FO: "projectHeaderIconActions_f8194a",
     sD: "projectUnavailable_f8194a",
     Qs: "content_f8194a",
     Ix: "creation_f8194a",
