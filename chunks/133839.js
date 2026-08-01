@@ -826,8 +826,8 @@ function e7(e) {
         );
     return (0, n.jsx)(e5, { games: l, onClick: d, ...i });
 }
-var e6 = i(344287);
-function e3(e) {
+var e3 = i(344287);
+function e6(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case T.x.FAVORITE_GAMES:
@@ -868,7 +868,7 @@ function e9(e) {
         x = (0, Q.FM)(t, { showEditingControls: g }),
         h = (0, Q.uA)(t),
         I = 1 === (0, Q.cv)(t.type);
-    return (0, n.jsx)(e3, {
+    return (0, n.jsx)(e6, {
         widget: t,
         user: i,
         allowEditing: l,
@@ -885,7 +885,7 @@ function e9(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e6.r }),
+        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e3.r }),
         ...o,
     });
 }
@@ -895,8 +895,8 @@ function e4(e) {
 }
 var te = i(576260),
     tt = i(94160),
-    ti = i(725386),
-    tn = i(657855),
+    ti = i(96173),
+    tn = i(916533),
     ts = i(902394);
 function tl(e) {
     let { userId: t } = e,
