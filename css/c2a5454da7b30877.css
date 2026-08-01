@@ -1,0 +1,16 @@
+.header__36335 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.container__91876 {
+    gap: var(--space-24)
+}
+
+.emptyState__91876 {
+    display: flex;
+    justify-content: center;
+    text-align: center
+}
