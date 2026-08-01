@@ -3877,6 +3877,10 @@
     --mobile-toast-background-default: #404047;
     --mobile-typing-indicator-background-default: #333338;
     --mobile-unreadbar-text-default: #94a8ff;
+    --mobile-voice-message-recording-lock-background-active: #fff;
+    --mobile-voice-message-recording-lock-background-default: #2b2e33;
+    --mobile-voice-message-recording-lock-icon-active: #24a659;
+    --mobile-voice-message-recording-lock-icon-default: #fff;
     --mobile-voice-message-recording-spinner-color: #fff;
     --mobile-voice-message-recording-waveform-bar-background: #fff;
     --mobile-voice-panel-background: #2b2e33;
@@ -4539,6 +4543,10 @@
     --mobile-toast-background-default: #fff;
     --mobile-typing-indicator-background-default: #fafafa;
     --mobile-unreadbar-text-default: #525ee0;
+    --mobile-voice-message-recording-lock-background-active: #fff;
+    --mobile-voice-message-recording-lock-background-default: #fff;
+    --mobile-voice-message-recording-lock-icon-active: #24944f;
+    --mobile-voice-message-recording-lock-icon-default: #595963;
     --mobile-voice-message-recording-spinner-color: #fff;
     --mobile-voice-message-recording-waveform-bar-background: #fff;
     --mobile-voice-panel-background: #f2f2f5;
@@ -5201,6 +5209,10 @@
     --mobile-toast-background-default: #1f1f21;
     --mobile-typing-indicator-background-default: #070709;
     --mobile-unreadbar-text-default: #6b7df5;
+    --mobile-voice-message-recording-lock-background-active: #fff;
+    --mobile-voice-message-recording-lock-background-default: #000;
+    --mobile-voice-message-recording-lock-icon-active: #24a659;
+    --mobile-voice-message-recording-lock-icon-default: #e3e3e6;
     --mobile-voice-message-recording-spinner-color: #fff;
     --mobile-voice-message-recording-waveform-bar-background: #fff;
     --mobile-voice-panel-background: #000;
@@ -5863,6 +5875,10 @@
     --mobile-toast-background-default: #2b2e33;
     --mobile-typing-indicator-background-default: #1a1a1f;
     --mobile-unreadbar-text-default: #788cfa;
+    --mobile-voice-message-recording-lock-background-active: #fff;
+    --mobile-voice-message-recording-lock-background-default: #121214;
+    --mobile-voice-message-recording-lock-icon-active: #24a659;
+    --mobile-voice-message-recording-lock-icon-default: #fafafa;
     --mobile-voice-message-recording-spinner-color: #fff;
     --mobile-voice-message-recording-waveform-bar-background: #fff;
     --mobile-voice-panel-background: #121214;

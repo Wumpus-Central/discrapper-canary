@@ -9580,17 +9580,20 @@
     --mobile-user-row-label-line-height-android: 16px;
     --mobile-user-row-label-line-height-ios: 22px;
     --mobile-voice-channel-user-limit-border-width: 0px;
+    --mobile-voice-message-chat-gap: 8px;
     --mobile-voice-message-duration-line-height-android: 14px;
     --mobile-voice-message-duration-line-height-ios: 17px;
+    --mobile-voice-message-duration-margin-left: 4px;
     --mobile-voice-message-duration-text-style: text-sm/semibold;
     --mobile-voice-message-recording-chat-container-height: 40px;
     --mobile-voice-message-recording-chat-container-margin-right: 8px;
     --mobile-voice-message-recording-container-padding-bottom: 9px;
     --mobile-voice-message-recording-container-padding-horizontal: 12px;
     --mobile-voice-message-recording-container-padding-vertical: 10px;
+    --mobile-voice-message-recording-lock-pill-offset-right: 12px;
+    --mobile-voice-message-recording-lock-pill-width: 40px;
     --mobile-voice-message-recording-pill-border-radius: 32px;
     --mobile-voice-message-recording-pill-padding-horizontal: 12px;
-    --mobile-voice-message-recording-waveform-margin-left: 8px;
     --mobile-voice-panel-controls-border-radius: 32px;
     --mobile-voice-panel-controls-padding: 16px;
     --mobile-voice-panel-gutter: 12px;
@@ -9716,10 +9719,10 @@
     --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;
     --mobile-voice-channel-user-limit-border-width: 1px;
-    --mobile-voice-message-duration-line-height-android: 13px;
     --mobile-voice-message-duration-text-style: text-xs/semibold;
     --mobile-voice-message-recording-chat-container-height: 32px;
     --mobile-voice-message-recording-container-padding-vertical: 6px;
+    --mobile-voice-message-recording-lock-pill-width: 32px;
     --mobile-voice-panel-controls-border-radius: 16px;
     --mobile-voice-panel-controls-padding: 4px;
     --mobile-voice-panel-gutter: 16px;
@@ -9751,14 +9754,18 @@
     --mobile-chat-input-send-button-width: 36px;
     --mobile-mobile-keyboard-top-border-radius: 24px;
     --mobile-mobile-media-keyboard-top-border-radius: 24px;
-    --mobile-voice-message-recording-chat-container-height: 54px;
+    --mobile-voice-message-chat-gap: 10px;
+    --mobile-voice-message-duration-margin-left: 0px;
+    --mobile-voice-message-duration-text-style: text-sm/semibold;
+    --mobile-voice-message-recording-chat-container-height: 58px;
     --mobile-voice-message-recording-chat-container-margin-right: 0px;
     --mobile-voice-message-recording-container-padding-bottom: 0px;
     --mobile-voice-message-recording-container-padding-horizontal: 16px;
     --mobile-voice-message-recording-container-padding-vertical: 0px;
+    --mobile-voice-message-recording-lock-pill-offset-right: 27px;
+    --mobile-voice-message-recording-lock-pill-width: 36px;
     --mobile-voice-message-recording-pill-border-radius: 16px;
-    --mobile-voice-message-recording-pill-padding-horizontal: 10px;
-    --mobile-voice-message-recording-waveform-margin-left: 0px
+    --mobile-voice-message-recording-pill-padding-horizontal: 10px
 }
 
 .mobile-visual-refresh-legacy-send-button {

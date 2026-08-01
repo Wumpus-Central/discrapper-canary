@@ -8680,20 +8680,35 @@ let { Themes: c } = d.zv,
                         return 0;
                     },
                 },
-                VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: {
+                VOICE_MESSAGE_CHAT_GAP: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 14;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 13;
-                        return 14;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 10;
+                        return 8;
                     },
                 },
+                VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: { resolve: () => 14 },
                 VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: { resolve: () => 17 },
+                VOICE_MESSAGE_DURATION_MARGIN_LEFT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 4;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 4;
+                    },
+                },
                 VOICE_MESSAGE_DURATION_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "text-sm/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/semibold";
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                    return "text-xs/semibold";
+                                case "mobile-visual-refresh-floating":
+                                    return "text-sm/semibold";
+                            }
                         return "text-sm/semibold";
                     },
                 },
@@ -8706,7 +8721,7 @@ let { Themes: c } = d.zv,
                                 case "mobile-visual-refresh":
                                     return 32;
                                 case "mobile-visual-refresh-floating":
-                                    return 54;
+                                    return 58;
                             }
                         return 40;
                     },
@@ -8749,6 +8764,28 @@ let { Themes: c } = d.zv,
                         return 10;
                     },
                 },
+                VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 12;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 27;
+                        return 12;
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 40;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                    return 32;
+                                case "mobile-visual-refresh-floating":
+                                    return 36;
+                            }
+                        return 40;
+                    },
+                },
                 VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -8769,14 +8806,6 @@ let { Themes: c } = d.zv,
                                     return 12;
                             }
                         return 12;
-                    },
-                },
-                VOICE_MESSAGE_RECORDING_WAVEFORM_MARGIN_LEFT: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 8;
-                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
-                        return 8;
                     },
                 },
                 VOICE_PANEL_CONTROLS_BORDER_RADIUS: {
