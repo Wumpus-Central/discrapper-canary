@@ -26,28 +26,28 @@ var r = n(503698),
     O = n(375708),
     R = n(789167);
 function L(e) {
-    let { markAsDismissed: t, recurringDismiss: n, deprecationDate: r, platformType: s, noticeType: _ } = e,
-        E = T.A.getGuildId(),
-        A = (0, c.DP)(),
-        f = (0, o.bG)([I.default], () => I.default.locale);
-    l()(null != E, "Guild Id must be defined");
-    let p = u.A.get(s),
-        m = r.toLocaleDateString(f, { month: "long", day: "numeric", year: "numeric" });
+    let { markAsDismissed: t, recurringDismiss: n, platformType: r, noticeType: s } = e,
+        _ = T.A.getGuildId(),
+        E = (0, c.DP)(),
+        A = (0, o.bG)([I.default], () => I.default.locale);
+    l()(null != _, "Guild Id must be defined");
+    let f = u.A.get(r),
+        p = f.migrationData?.deprecationDate?.toLocaleDateString(A, { month: "long", day: "numeric", year: "numeric" });
     return (0, i.jsxs)(d.$T, {
         color: d.Hv.WARNING,
         children: [
-            (0, i.jsx)(d.PM, { onClick: () => n(N.i.USER_DISMISS), noticeType: _ }),
+            (0, i.jsx)(d.PM, { onClick: () => n(N.i.USER_DISMISS), noticeType: s }),
             (0, i.jsx)("img", {
-                src: "light" === A ? p?.icon.blackSVG : p?.icon.whiteSVG,
-                alt: p?.name,
+                src: "light" === E ? f?.icon.blackSVG : f?.icon.whiteSVG,
+                alt: f?.name,
                 className: a()(R.tV, R.Y5),
             }),
-            O.intl.format(C.default.iMCLA5, { connectionName: p?.name, date: m }),
+            O.intl.format(C.default.iMCLA5, { connectionName: f?.name, date: p }),
             (0, i.jsx)(d.Z_, {
                 onClick: () => {
-                    t(N.i.TAKE_ACTION), h.A.open(E, S.BEX.ROLES);
+                    t(N.i.TAKE_ACTION), h.A.open(_, S.BEX.ROLES);
                 },
-                noticeType: _,
+                noticeType: s,
                 className: R.NS,
                 children: O.intl.string(C.default.kxlybP),
             }),

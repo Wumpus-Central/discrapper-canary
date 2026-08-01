@@ -16,7 +16,7 @@ let h = Symbol();
 var I = n(942370),
     f = n(652215);
 let p = "AUTHORIZE_REQUEST",
-    T = [I._M.RPC, I._M.WEB];
+    T = [I._.RPC, I._.WEB];
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
@@ -73,10 +73,10 @@ function m(e) {
                             N.map((e) => {
                                 let t = [];
                                 if (
-                                    (A.includes(I._M.RPC) &&
+                                    (A.includes(I._.RPC) &&
                                         e.isSubscribedToAuthorizeRequest &&
                                         t.push({
-                                            type: I._M.RPC,
+                                            type: I._.RPC,
                                             initiate(t) {
                                                 d.A.dispatchToSubscriptions(
                                                     p,
@@ -89,7 +89,7 @@ function m(e) {
                                                         {
                                                             location_stack: t.analyticsLocations,
                                                             application_id: e.application.id,
-                                                            flow_type: I._M.RPC,
+                                                            flow_type: I._.RPC,
                                                         },
                                                     ),
                                                     (0, _.gk)(e.application.id, {
@@ -98,11 +98,11 @@ function m(e) {
                                                     });
                                             },
                                         }),
-                                    A.includes(I._M.WEB) && null != e.application.connectionEntrypointUrl)
+                                    A.includes(I._.WEB) && null != e.application.connectionEntrypointUrl)
                                 ) {
                                     let n = e.application.connectionEntrypointUrl;
                                     t.push({
-                                        type: I._M.WEB,
+                                        type: I._.WEB,
                                         initiate(t) {
                                             (0, c.h)({
                                                 href: n,
@@ -118,7 +118,7 @@ function m(e) {
                                                 o.Ay.trackWithMetadata(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                                     location_stack: t.analyticsLocations,
                                                     application_id: e.application.id,
-                                                    flow_type: I._M.WEB,
+                                                    flow_type: I._.WEB,
                                                 });
                                         },
                                     });

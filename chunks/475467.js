@@ -843,7 +843,7 @@ let tY = a.memo(function (e) {
                     : (0, r.jsx)(tK, {
                           runningGame: u,
                           startAuthorization: function () {
-                              S({ analyticsLocations: D }) === tH._M.RPC &&
+                              S({ analyticsLocations: D }) === tH._.RPC &&
                                   (Q(!0),
                                   null != Z.current && clearTimeout(Z.current),
                                   (Z.current = setTimeout(() => {
@@ -1146,12 +1146,11 @@ function nc(e) {
     )
         return null;
     let p = z.intl.formatToPlainString(E.altTitle ? z.t.hUbQT2 : z.t["lo6H6+"], { gameName: I.name }),
-        T = z.intl.string(z.t["2lfjU+"]),
-        m = z.intl.string(E.altCta ? z.t.jynBQ5 : z.t.lw71Nf);
-    s && (m = z.intl.string(ns.default["2cOIOr"]));
-    let g = [
+        T = z.intl.string(E.altCta ? z.t.jynBQ5 : z.t.lw71Nf);
+    s && (T = z.intl.string(ns.default["2cOIOr"]));
+    let m = [
         {
-            text: m,
+            text: T,
             onClick: () => {
                 o(er.i.TAKE_ACTION), d({ analyticsLocations: u });
             },
@@ -1161,7 +1160,6 @@ function nc(e) {
         s &&
             ((t = "beta"),
             (p = z.intl.formatToPlainString(ns.default.dPuaZE, { applicationName: I.name })),
-            (T = z.intl.string(ns.default.jR3bbS)),
             (n = {
                 text: z.intl.string(z.t.hvVgAZ),
                 link: "https://www.riotgames.com/integrating-with-discord",
@@ -1176,7 +1174,7 @@ function nc(e) {
             },
             badge: t,
             title: p,
-            body: T,
+            body: z.intl.string(z.t["2lfjU+"]),
             textLink: n,
             targetElementRef: _,
             align: "right",
@@ -1184,7 +1182,7 @@ function nc(e) {
             gradientColor: "purple",
             onRequestClose: () => o(er.i.USER_DISMISS),
             caretConfig: { align: "end" },
-            actions: g,
+            actions: m,
         })
     );
 }
@@ -1540,7 +1538,7 @@ let np = (0, N.A)(function (e) {
             canStartAuthorization: K,
             connectionApp: $,
             startAuthorization: z,
-        } = (0, ed.RD)(b, { allowedFlows: [tH._M.RPC, tH._M.WEB] }),
+        } = (0, ed.RD)(b, { allowedFlows: [tH._.RPC, tH._.WEB] }),
         [q, Z] = a.useState(null),
         X = null != q,
         Q = a.useCallback(

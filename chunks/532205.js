@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => z, D: () => $ });
+n.d(t, { $: () => $, D: () => K });
 var i = n(477900),
     r = n(582128),
     a = n(989349),
@@ -26,34 +26,27 @@ var i = n(477900),
     R = n(375708),
     L = n(789167);
 let D = function (e) {
-    let {
-            markAsDismissed: t,
-            recurringDismiss: a,
-            applicationName: s,
-            platformTypes: l,
-            platformIconOverride: d,
-            noticeType: D,
-        } = e,
-        y = (0, u.bG)([m.A], () => m.A.getAccounts().find((e) => l.includes(e.type))?.type),
-        v = (0, I.Ay)(),
-        b = null != y ? o.A.get(y) : null,
-        M = b?.migrationData?.replacedBy,
-        P = (0, T.h)(M);
-    s = s ?? P?.name;
-    let { startAuthorization: U, canStartAuthorization: w, hasAlreadyLinked: G, fetched: x } = (0, N.RD)(P),
+    let { markAsDismissed: t, recurringDismiss: a, platformTypes: s, platformIconOverride: l, noticeType: d } = e,
+        D = (0, u.bG)([m.A], () => m.A.getAccounts().find((e) => s.includes(e.type))?.type),
+        y = (0, I.Ay)(),
+        v = null != D ? o.A.get(D) : null,
+        b = v?.migrationData?.replacedBy,
+        M = (0, T.h)(b),
+        P = M?.name,
+        { startAuthorization: U, canStartAuthorization: w, hasAlreadyLinked: G, fetched: x } = (0, N.RD)(M),
         { analyticsLocations: k } = (0, p.Ay)(f.A.NOTICE),
-        F = null == d ? b : d;
+        F = null == l ? v : l;
     if (
         (r.useEffect(() => {
-            G && x && (null != M && (0, S.M8)(M), t(C.i.INDIRECT_ACTION));
-        }, [G, x, t, M]),
-        null == P || !w || !x || G)
+            G && x && (null != b && (0, S.M8)(b), t(C.i.INDIRECT_ACTION));
+        }, [G, x, t, b]),
+        null == M || !w || !x || G)
     )
         return null;
     function V() {
-        null != P &&
+        null != M &&
             (0, g.RI)({
-                applicationId: P.id,
+                applicationId: M.id,
                 onSuccess: () => {
                     (0, _.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
@@ -66,19 +59,18 @@ let D = function (e) {
         color: E.Hv.WARNING,
         children: [
             (0, i.jsx)(E.PM, {
-                noticeType: D,
+                noticeType: d,
                 onClick: () => {
                     t(C.i.USER_DISMISS);
                 },
             }),
             (0, i.jsx)("img", {
-                src: "light" === v ? F?.icon.blackSVG : F?.icon.whiteSVG,
-                alt: s,
+                src: "light" === y ? F?.icon.blackSVG : F?.icon.whiteSVG,
+                alt: P,
                 className: c()(L.tV, L.Y5),
             }),
-            R.intl.format(O.default.DfSSdL, {
-                connectionName: b?.name,
-                applicationName: s,
+            R.intl.format(O.default.qV9zT6, {
+                connectionName: v?.name,
                 orbsIconHook: () =>
                     (0, i.jsx)(A.C, {
                         size: "xs",
@@ -92,7 +84,7 @@ let D = function (e) {
                     U({ analyticsLocations: k, onSuccess: V });
                 },
                 className: L.NS,
-                noticeType: D,
+                noticeType: d,
                 children: R.intl.string(O.default.ZeOhh9),
             }),
             (0, i.jsx)(E.zr, {
@@ -151,9 +143,8 @@ var B = n(745299),
     H = n(354670),
     j = n(428262),
     W = n(826673),
-    Y = n(595529),
-    K = n(942370);
-function $(e) {
+    Y = n(595529);
+function K(e) {
     switch (e) {
         case F.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
             let t = H.A.getAlmostExpiringTrialOffersForReminder([k.pe.TIER_2]);
@@ -170,9 +161,9 @@ function $(e) {
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-function z(e) {
+function $(e) {
     let { dismissibleContent: t, noticeType: n } = e,
-        a = r.useMemo(() => $(n), [n]),
+        a = r.useMemo(() => K(n), [n]),
         d = s()().add(5, "days").toDate(),
         [c, u] = (0, Y.Bo)(t, a, C.m.NOTICE_BAR);
     if (null == c) return null;
@@ -202,7 +193,6 @@ function z(e) {
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                applicationName: R.intl.string(O.default["1S6oAo"]),
                 platformTypes: [F.fg2.LEAGUE_OF_LEGENDS, F.fg2.RIOT_GAMES],
                 platformIconOverride: o.A.get(F.fg2.RIOT_GAMES),
             });
@@ -215,7 +205,6 @@ function z(e) {
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                deprecationDate: K.af,
                 platformType: F.fg2.RIOT_GAMES,
             });
         case l.M.BATTLENET_CONNECTION_DEPRECATION:
@@ -239,7 +228,6 @@ function z(e) {
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                deprecationDate: K.NX,
                 platformType: F.fg2.BATTLENET,
             });
     }

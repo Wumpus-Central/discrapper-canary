@@ -13,7 +13,7 @@ function i(t) {
             function () {
                 for (var n = arguments.length, r = Array(n), l = 0; l < n; l++) r[l] = arguments[l];
                 let o = t(...r),
-                    d = o === a._M.RPC;
+                    d = o === a._.RPC;
                 return (
                     c(),
                     i(d),

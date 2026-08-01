@@ -67,6 +67,7 @@ let c = [
                 useMigrationExperimentEnabled: (e) =>
                     s.battlenetSocialSDKMigrationExperiment.useConfig({ location: e }).enabled,
                 helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
+                deprecationDate: new Date("2026-09-22Z-07:00"),
             },
         },
         {
@@ -138,6 +139,7 @@ let c = [
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
+                deprecationDate: new Date("2026-07-10Z-07:00"),
             },
         },
         {
@@ -359,6 +361,7 @@ let c = [
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
+                deprecationDate: new Date("2026-07-10Z-07:00"),
             },
         },
         {

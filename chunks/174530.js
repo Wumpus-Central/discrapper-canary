@@ -3214,8 +3214,8 @@ function ni() {
             [tF.A],
             () => v?.linkedGames?.map((e) => tF.A.getApplication(e.id)).filter((e) => null != e) ?? [],
         ),
-        C = (0, a5.RD)(v, { allowedFlows: [na._M.RPC], debug: !0 }),
-        N = (0, a5.RD)(v, { allowedFlows: [na._M.WEB], debug: !0 }),
+        C = (0, a5.RD)(v, { allowedFlows: [na._.RPC], debug: !0 }),
+        N = (0, a5.RD)(v, { allowedFlows: [na._.WEB], debug: !0 }),
         A = (0, d.bG)([a9.A], () => null != j && a9.A.isConnected(j.id)),
         k = (0, a5.RD)(v, { debug: !0 }),
         { canDeauthorize: D, deauthorize: I } =
@@ -3306,7 +3306,7 @@ function ni() {
                 children: [
                     (0, r.jsx)(K.D, { variant: "heading-lg/normal", children: "Authorization status" }),
                     (0, r.jsx)(a6.VT, {
-                        flow: na._M.RPC,
+                        flow: na._.RPC,
                         showGlobalFlowToggle: !0,
                         overallStatus: C.debug.isSubscribedToAuthorizeRequest
                             ? a6.nW.OVERALL_GOOD
@@ -3340,10 +3340,10 @@ function ni() {
                                         : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                         ],
-                        isChosen: k.chosenFlow === na._M.RPC,
+                        isChosen: k.chosenFlow === na._.RPC,
                     }),
                     (0, r.jsx)(a6.VT, {
-                        flow: na._M.WEB,
+                        flow: na._.WEB,
                         showGlobalFlowToggle: !0,
                         overallStatus: N.debug.hasConnectionEntrypointUrl ? a6.nW.OVERALL_GOOD : a6.nW.OVERALL_BAD,
                         name: nn.intl.string(nl.default.K3ObrU),
@@ -3358,7 +3358,7 @@ function ni() {
                                     : null,
                             },
                         ],
-                        isChosen: k.chosenFlow === na._M.WEB,
+                        isChosen: k.chosenFlow === na._.WEB,
                     }),
                     (0, r.jsx)(a6.Sy, {
                         status: k.hasAlreadyLinked ? a6.nW.OVERALL_GOOD : a6.nW.OVERALL_BAD,

@@ -19,7 +19,7 @@ function g(e, t) {
                 A(!0);
                 let a = e(...r);
                 return (
-                    a === u._M.RPC &&
+                    a === u._.RPC &&
                         g &&
                         (0, l.openModalLazy)(
                             async () => {

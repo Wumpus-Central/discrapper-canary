@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => T });
+n.r(t), n.d(t, { default: () => P });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -57,7 +57,7 @@ function I(e) {
                         children: G.intl.string(S.default["no+FQS"]),
                     }),
                     (0, i.jsx)(_.VT, {
-                        flow: w._M.RPC,
+                        flow: w._.RPC,
                         overallStatus: o ? _.nW.OVERALL_GOOD : f ? _.nW.WARN : _.nW.OVERALL_BAD,
                         name: G.intl.string(S.default.AGLx00),
                         steps: [
@@ -79,10 +79,10 @@ function I(e) {
                                         : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                         ],
-                        isChosen: d === w._M.RPC,
+                        isChosen: d === w._.RPC,
                     }),
                     (0, i.jsx)(_.VT, {
-                        flow: w._M.WEB,
+                        flow: w._.WEB,
                         overallStatus: u ? _.nW.OVERALL_GOOD : _.nW.OVERALL_BAD,
                         name: G.intl.string(S.default.K3ObrU),
                         steps: [
@@ -96,7 +96,7 @@ function I(e) {
                                     : null,
                             },
                         ],
-                        isChosen: d === w._M.WEB,
+                        isChosen: d === w._.WEB,
                     }),
                 ],
             }),
@@ -144,16 +144,16 @@ function I(e) {
         ],
     });
 }
-var M = n(414792);
-let V = "social_layer_dev_tools_panel_width";
-function z() {
-    let e = f.w.get(V);
+var V = n(414792);
+let z = "social_layer_dev_tools_panel_width";
+function B() {
+    let e = f.w.get(z);
     return "number" == typeof e && Number.isFinite(e) && e > 0 ? e : 350;
 }
-function B(e) {
-    f.w.set(V, e);
-}
 function F(e) {
+    f.w.set(z, e);
+}
+function T(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         s = (0, h.A)({
             minDimension: 320,
@@ -164,9 +164,9 @@ function F(e) {
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, i.jsx)("div", { onMouseDown: s, className: M.Di, "aria-hidden": !0 });
+    return (0, i.jsx)("div", { onMouseDown: s, className: V.Di, "aria-hidden": !0 });
 }
-function T() {
+function P() {
     var e;
     let t = (0, p.h)(j.A.testModeApplicationId),
         n = (0, g.fy)(),
@@ -177,7 +177,7 @@ function T() {
         f?.shouldAutoOpenGameProfile !== !0 || null == h || s.current || ((s.current = !0), h());
     }, [f, h]);
     let D = l.useRef(null),
-        [O, b] = l.useState(z),
+        [O, b] = l.useState(B),
         E = (0, d.clamp)(O, 320, 720),
         R = l.useMemo(
             () => [
@@ -193,10 +193,10 @@ function T() {
         L = R.find((e) => e.id === W) ?? R[0];
     function _(e) {
         return (0, i.jsxs)("div", {
-            className: M.wx,
+            className: V.wx,
             children: [
                 (0, i.jsx)("div", {
-                    className: M.if,
+                    className: V.if,
                     children: (0, i.jsx)(r.D, {
                         variant: "heading-lg/extrabold",
                         children: G.intl.format(S.default.KoK4J9, { appName: e }),
@@ -215,10 +215,10 @@ function T() {
     return (0, i.jsxs)("div", {
         "data-app-right-panel": !0,
         ref: D,
-        className: M.nE,
+        className: V.nE,
         style: { width: E },
         children: [
-            (0, i.jsx)(F, { resizableNode: D, onResize: b, onResizeEnd: B }),
+            (0, i.jsx)(T, { resizableNode: D, onResize: b, onResizeEnd: F }),
             (0, i.jsx)(m.F, {
                 children:
                     null != t
@@ -227,9 +227,9 @@ function T() {
                               children: [
                                   _(e),
                                   (0, i.jsx)("div", {
-                                      className: M.Mv,
+                                      className: V.Mv,
                                       children: (0, i.jsx)(x.V, {
-                                          className: M.$H,
+                                          className: V.$H,
                                           selectedItem: L?.id,
                                           onItemSelect: y,
                                           orientation: "horizontal",
@@ -239,7 +239,7 @@ function T() {
                                               (0, i.jsx)(
                                                   x.V.Item,
                                                   {
-                                                      className: a()(M.Mf, { [M.wH]: e.id === L?.id }),
+                                                      className: a()(V.Mf, { [V.wH]: e.id === L?.id }),
                                                       id: e.id,
                                                       "aria-label": e.name,
                                                       children: e.name,
@@ -256,8 +256,8 @@ function T() {
                               children: [
                                   _(""),
                                   (0, i.jsx)("div", {
-                                      className: M.TG,
-                                      children: (0, i.jsx)(u.y, { className: M.u1 }),
+                                      className: V.TG,
+                                      children: (0, i.jsx)(u.y, { className: V.u1 }),
                                   }),
                               ],
                           }),
