@@ -80,8 +80,10 @@
 }
 
 .gradient_f11c9b {
+    align-items: center;
     border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-muted);
+    display: flex;
     flex-direction: column;
     inset: 0;
     justify-content: space-between;
@@ -89,25 +91,14 @@
     position: absolute
 }
 
-.gradient_f11c9b,
 .swatchButton_f11c9b {
-    align-items: center;
-    display: flex
-}
-
-.swatchButton_f11c9b {
-    --custom-swatch-size: 32px;
-    border-radius: var(--radius-sm);
     cursor: pointer;
-    height: var(--custom-swatch-size);
-    justify-content: center;
-    position: relative;
-    width: var(--custom-swatch-size)
+    position: relative
 }
 
 .swatchButton_f11c9b:before {
     content: "";
-    inset-inline: calc((var(--custom-swatch-size) - var(--custom-tile-width)*1px)/2);
+    inset-inline: calc(50% - var(--custom-tile-width)*1px/2);
     position: absolute
 }
 
@@ -119,6 +110,16 @@
 .swatchButton_f11c9b:last-child:before {
     inset-block-end: 0;
     inset-block-start: -18px
+}
+
+.swatchOuter_f11c9b {
+    --custom-swatch-size: 32px;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: var(--custom-swatch-size);
+    justify-content: center;
+    width: var(--custom-swatch-size)
 }
 
 .swatchInner_f11c9b {
@@ -133,7 +134,7 @@
     box-shadow: inset 0 0 0 1px var(--neutral-33), 0 0 0 1px var(--neutral-33), var(--shadow-high)
 }
 
-.full-motion .swatchInner_f11c9b {
+.full-motion .swatchButton_f11c9b .swatchInner_f11c9b {
     transition: padding .1s ease
 }
 
