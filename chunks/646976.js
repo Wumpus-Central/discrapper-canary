@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { k: () => l });
+n.d(t, { $: () => o, k: () => l });
 var i = n(812729),
     r = n.n(i),
     a = n(540185);
@@ -36,3 +36,4 @@ class l {
         return { widgetEdited: this.type };
     }
 }
+let o = "video/mp4";
