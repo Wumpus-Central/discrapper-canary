@@ -102,9 +102,10 @@ let D = new L(r.h, {
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
-        return (
-            null != t && (null == T[t] || m[t] < Date.now() - h.A.Millis.HOUR ? (O(t), !0) : (null != n && C(t, n), !1))
-        );
+        if (null == t) return !1;
+        let i = T[t],
+            r = !1;
+        return (null == i || m[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r;
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
