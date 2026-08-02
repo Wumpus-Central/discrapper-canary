@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(17928),
     r = n(228366),
     a = n(617617),
@@ -45,7 +45,7 @@ function N() {
 function C() {
     T = a.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
 }
-class R extends i.Ay.PersistedStore {
+class O extends i.Ay.PersistedStore {
     static displayName = "PromotionsStore";
     static persistKey = "PromotionsPersistedStore";
     initialize(e) {
@@ -148,7 +148,7 @@ class R extends i.Ay.PersistedStore {
         return S;
     }
 }
-let O = new R(r.h, {
+let R = new O(r.h, {
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: function (e) {
         let { promotions: t, consumedInboundPromotionId: n } = e;
         (p = u()),
@@ -156,8 +156,8 @@ let O = new R(r.h, {
             t.forEach((e) => {
                 let t = s.A.createFromServer(e);
                 (p[e.promotion_type][e.id] = t),
-                    e.marketing_components?.forEach((e) => {
-                        m.set(e.component_type, l.A.createFromServer(e));
+                    e.marketing_components?.forEach((t) => {
+                        m.set(t.component_type, l.A.createFromServer(t, e));
                     });
             }),
             (I = Date.now()),
@@ -220,7 +220,7 @@ let O = new R(r.h, {
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
-            n = l.A.createFromServer(t);
+            n = l.A.createFromServer(t, t.promotion);
         if ((m.set(n.componentType, n), null != t.promotion)) {
             let e = s.A.createFromServer(t.promotion);
             p[t.promotion.promotion_type][t.promotion.id] = e;
