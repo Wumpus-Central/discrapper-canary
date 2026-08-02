@@ -37,15 +37,12 @@ class o {
     calculateModifiers(e, t) {
         let n = this.gameStateTimeline,
             i = [],
-            a = (t - e) / 1e3 + 1;
-        for (let t = 0; t < a; t++) {
-            let a = e + 1e3 * t,
-                s = (function (e, t) {
-                    let n = e.findLast((e) => e.timestamp_ms <= t);
-                    return r()(null != n, "bad timeline!"), n;
-                })(n, a),
-                l = 1;
-            s.inGame ? s.bombPlanted && (l *= 2) : (l /= 4), i.push({ timestamp_ms: a, modifier: l });
+            r = (t - e) / 1e3 + 1;
+        for (let t = 0; t < r; t++) {
+            let r = e + 1e3 * t,
+                a = c(n, r),
+                s = 1;
+            a.inGame ? a.bombPlanted && (s *= 2) : (s /= 4), i.push({ timestamp_ms: r, modifier: s });
         }
         return i;
     }
@@ -55,6 +52,9 @@ class o {
     rescoreEvent(e) {
         return (0, s.z)(e) ? (0, a.n)(e).score : void 0;
     }
+    isInGame(e) {
+        return c(this.gameStateTimeline, e).inGame;
+    }
     canAnchorReaction(e) {
         let t = e.eventName;
         return (
@@ -63,3 +63,7 @@ class o {
     }
 }
 let d = { applicationIds: ["1158877933042143272", "356875057940791296"], create: (e) => new o(e) };
+function c(e, t) {
+    let n = e.findLast((e) => e.timestamp_ms <= t);
+    return r()(null != n, "bad timeline!"), n;
+}
