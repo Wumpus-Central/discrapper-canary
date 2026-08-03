@@ -5273,6 +5273,38 @@
   },
   {
     "kind": "user",
+    "name": "2026-07-call-of-duty-3pp-marketing",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-call-of-duty-3pp-non-sub-marketing",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-07-clips-game-events-on-player",
     "defaultConfig": {
       "enableGameEventsOnPlayer": false
