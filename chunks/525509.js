@@ -1,11 +1,11 @@
-l.r(t), l.d(t, { default: () => v });
+l.r(t), l.d(t, { default: () => C });
 var n = l(324029),
     i = l(31048);
 l(321073);
 var r = l(132500),
-    a = l(372684),
-    s = l(260549),
-    u = l(106983);
+    a = l(260549),
+    s = l(106983),
+    u = l(696016);
 let o = new Set(["warmup", "paused", "timeout_ct", "timeout_t", "intermission", "gameover"]),
     d = new Set(["menu", "textinput"]);
 function p(e, t) {
@@ -50,7 +50,7 @@ function y(e, t, l, n) {
 function c(e, t, l) {
     let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return {
-        type: a.Gy.GAME_EVENT,
+        type: u.Gy.GAME_EVENT,
         eventType: t,
         eventName: e,
         score: 0,
@@ -74,8 +74,8 @@ class I {
             return (
                 this.wasPlaying &&
                     ((this.wasPlaying = !1),
-                    i.push(c(u.C.PlayStateChange, a.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: !1 }, !0))),
-                i.map(s.n)
+                    i.push(c(s.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: !1 }, !0))),
+                i.map(a.n)
             );
         if (
             (null == e.map &&
@@ -94,19 +94,19 @@ class I {
             v = e.player?.state?.round_kills;
         if (I && "number" == typeof C && "number" == typeof v && v > C) {
             let n = b(e.player),
-                s = n?.type ?? "",
+                a = n?.type ?? "",
                 o = n?.name ?? "";
             for (let e = 0; e < v - C; e++) {
                 let e = (0, r.A)();
                 this.roundKillIds.push(e),
                     (l = e),
-                    i.push(c(u.C.Kill, a.rb.KILL, { id: e, weaponType: s, weaponName: o })),
+                    i.push(c(s.C.Kill, u.rb.KILL, { id: e, weaponType: a, weaponName: o })),
                     null != this.lastKillMs && t - this.lastKillMs <= 5e3
                         ? this.multiKillChain.push(e)
                         : (this.multiKillChain = [e]),
                     (this.lastKillMs = t),
                     this.multiKillChain.length >= 2 &&
-                        i.push(c(u.C.MultiKill, a.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.multiKillChain] }));
+                        i.push(c(s.C.MultiKill, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.multiKillChain] }));
             }
         }
         I &&
@@ -114,32 +114,32 @@ class I {
             "number" == typeof C &&
             C < 5 &&
             5 === v &&
-            i.push(c(u.C.Ace, a.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.roundKillIds] }));
+            i.push(c(s.C.Ace, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.roundKillIds] }));
         let S = o?.match_stats?.deaths,
             K = e.player?.match_stats?.deaths;
         if (I && "number" == typeof S && "number" == typeof K && K > S) {
-            for (let e = 0; e < K - S; e++) i.push(c(u.C.Death, a.rb.DEATH, { id: (0, r.A)() }));
+            for (let e = 0; e < K - S; e++) i.push(c(s.C.Death, u.rb.DEATH, { id: (0, r.A)() }));
             (this.multiKillChain = []), (this.lastKillMs = null);
         }
         let A = o?.match_stats?.assists,
             w = e.player?.match_stats?.assists;
         if (I && "number" == typeof A && "number" == typeof w && w > A)
-            for (let e = 0; e < w - A; e++) i.push(c(u.C.Assist, a.rb.ASSIST, { id: (0, r.A)() }));
+            for (let e = 0; e < w - A; e++) i.push(c(s.C.Assist, u.rb.ASSIST, { id: (0, r.A)() }));
         let g = e.map?.mode === "casual" || e.map?.mode === "competitive";
         if (g && p(e, ["round", "win_team"]) && e.round?.win_team != null) {
             let t = (p(e, ["map", "round"]) ? d?.round : e.map?.round) ?? 0;
             (n = (0, r.A)()),
-                i.push(c(u.C.RoundEnd, a.rb.UNCLASSIFIED, { id: n, round: t, winTeam: e.round.win_team }, !0)),
+                i.push(c(s.C.RoundEnd, u.rb.UNCLASSIFIED, { id: n, round: t, winTeam: e.round.win_team }, !0)),
                 null != l &&
                     e.round.win_team === e.player?.team &&
-                    i.push(c(u.C.RoundWinningKill, a.rb.KILL, { id: (0, r.A)(), killId: l, roundEndId: n }));
+                    i.push(c(s.C.RoundWinningKill, u.rb.KILL, { id: (0, r.A)(), killId: l, roundEndId: n }));
         }
         e.map?.phase === "gameover" &&
             null != l &&
             e.round?.win_team != null &&
             e.round.win_team === e.player?.team &&
             i.push(
-                c(u.C.GameWinningKill, a.rb.KILL, {
+                c(s.C.GameWinningKill, u.rb.KILL, {
                     id: (0, r.A)(),
                     killId: l,
                     ...(null != n ? { roundEndId: n } : {}),
@@ -149,7 +149,7 @@ class I {
             M = p(e, ["map", "round"]) && "number" == typeof e.map?.round;
         if (g && (L || M) && e.map?.phase !== "gameover") {
             let t = e.map.round ?? 0;
-            i.push(c(u.C.RoundStart, a.rb.UNCLASSIFIED, { id: (0, r.A)(), round: t }, !0)),
+            i.push(c(s.C.RoundStart, u.rb.UNCLASSIFIED, { id: (0, r.A)(), round: t }, !0)),
                 (this.bombPlanterIsMe = !1),
                 (this.roundKillIds = []);
         }
@@ -160,11 +160,11 @@ class I {
         h(e) && f(m(e.previously?.player)?.weapons) && !f(e.player?.weapons) && (this.bombPlanterIsMe = !0),
             p(e, ["round", "bomb"]) &&
                 (e.round?.bomb === "planted"
-                    ? i.push(c(u.C.BombPlant, a.rb.UNCLASSIFIED, { id: (0, r.A)(), byMe: this.bombPlanterIsMe }))
+                    ? i.push(c(s.C.BombPlant, u.rb.UNCLASSIFIED, { id: (0, r.A)(), byMe: this.bombPlanterIsMe }))
                     : e.round?.bomb === "defused"
-                      ? i.push(c(u.C.BombDefused, a.rb.UNCLASSIFIED, { id: (0, r.A)() }))
+                      ? i.push(c(s.C.BombDefused, u.rb.UNCLASSIFIED, { id: (0, r.A)() }))
                       : e.round?.bomb === "exploded" &&
-                        i.push(c(u.C.BombExploded, a.rb.UNCLASSIFIED, { id: (0, r.A)() })),
+                        i.push(c(s.C.BombExploded, u.rb.UNCLASSIFIED, { id: (0, r.A)() })),
                 (e.round?.bomb === "defused" ||
                     e.round?.bomb === "exploded" ||
                     e.round?.bomb === "dropped" ||
@@ -182,28 +182,27 @@ class I {
             x = y(_, P, E, F);
         return (
             x !== y(D, N, U, R) &&
-                i.push(c(u.C.PlayStateChange, a.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: x }, !0)),
+                i.push(c(s.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: x }, !0)),
             (this.wasPlaying = x),
             e.map?.phase === "live" && (this.announcedFirstRound = !0),
-            i.map(s.n)
+            i.map(a.n)
         );
     }
 }
-var C = l(696016);
-function v(e) {
+function C(e) {
     let t = !1,
         l = new I();
     function r(t) {
         let n = (0, i.l)();
         for (let i of l.processPayload(t, n))
-            C.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), e(i, n);
+            u.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), e(i, n);
     }
     return {
         start() {
-            t || ((t = !0), C.nx.info("[CS2] starting GSI listener"), (0, n.v_)(r));
+            t || ((t = !0), u.nx.info("[CS2] starting GSI listener"), (0, n.v_)(r));
         },
         stop() {
-            t && ((t = !1), C.nx.info("[CS2] stopping GSI listener"), (0, n.yR)(), (l = new I()));
+            t && ((t = !1), u.nx.info("[CS2] stopping GSI listener"), (0, n.yR)(), (l = new I()));
         },
         getState: () => null,
     };

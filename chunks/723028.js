@@ -14,7 +14,7 @@ var i = s(477900),
     j = s(362081),
     x = s(217482),
     A = s(328461),
-    I = s(853073),
+    I = s(801835),
     m = s(884003);
 function f(n) {
     let { clipId: e, onEdit: s, channelId: f, transitionState: E, onClose: _ } = n;
@@ -40,7 +40,7 @@ function f(n) {
                           modalContainerRef: y,
                           children: g
                               ? (0, i.jsxs)(
-                                    I.F,
+                                    I.JQ,
                                     {
                                         children: [
                                             (0, i.jsx)(A.A, { transitionState: E, onClose: _ }),

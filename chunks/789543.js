@@ -377,18 +377,17 @@ var eZ = n(734066),
     e8 = n(927813),
     e9 = n(879631),
     te = n(350535),
-    tt = n(372684),
-    tn = n(974293),
-    ti = n(572164),
-    tr = n(953932),
-    ta = n(280483),
-    ts = n(890856),
-    tl = n(713517),
-    to = n(609174),
-    td = n(619744);
-function tc(e) {
+    tt = n(974293),
+    tn = n(572164),
+    ti = n(953932),
+    tr = n(280483),
+    ta = n(890856),
+    ts = n(713517),
+    tl = n(609174),
+    to = n(619744);
+function td(e) {
     let { onBeforeEdit: t, variant: n = "primary" } = e,
-        a = (0, to.Y_)(),
+        a = (0, tl.Y_)(),
         s = r.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), t?.(), (0, eJ.p)({ initialEditingClipId: a.id });
@@ -404,42 +403,42 @@ function tc(e) {
         fullWidth: !0,
     });
 }
-var tu = n(82716),
-    t_ = n(585579),
-    tE = n(930317),
-    tA = n(285072),
-    th = n(13769);
-let tI = r.memo(function (e) {
+var tc = n(82716),
+    tu = n(585579),
+    t_ = n(930317),
+    tE = n(285072),
+    tA = n(13769);
+let th = r.memo(function (e) {
     let { clip: t, isNew: n, onClose: a, className: l } = e,
         o = r.useRef(null),
-        { isHoveringOrFocusing: d } = (0, tl.A)(o),
+        { isHoveringOrFocusing: d } = (0, ts.A)(o),
         c = r.useCallback(() => {
             a?.(), (0, eJ.p)({ initialEditingClipId: t.id });
         }, [t.id, a]);
-    return (0, i.jsx)(to.Cl, {
+    return (0, i.jsx)(tl.Cl, {
         clip: t,
-        children: (0, i.jsx)(ts.s, {
+        children: (0, i.jsx)(ta.s, {
             ref: o,
             "aria-label": B.intl.string(B.t.bt75uw),
             onClick: c,
-            className: s()(th.Z1, l),
-            children: (0, i.jsxs)(tE.d, {
+            className: s()(tA.Z1, l),
+            children: (0, i.jsxs)(t_.d, {
                 isStatic: !0,
                 children: [
-                    n && (0, i.jsx)(eG.Lp, { className: th.Ad, text: B.intl.string(B.t.y2b7CA) }),
-                    (0, i.jsxs)(tA.h, {
+                    n && (0, i.jsx)(eG.Lp, { className: tA.Ad, text: B.intl.string(B.t.y2b7CA) }),
+                    (0, i.jsxs)(tE.h, {
                         isVisible: d,
-                        className: th.Lw,
+                        className: tA.Lw,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: th.mY,
-                                children: [(0, i.jsx)(tu.z, {}), (0, i.jsx)(td.k, {})],
+                                className: tA.mY,
+                                children: [(0, i.jsx)(tc.z, {}), (0, i.jsx)(to.k, {})],
                             }),
                             (0, i.jsxs)("div", {
-                                className: th.E_,
+                                className: tA.E_,
                                 children: [
-                                    (0, i.jsx)(tc, { onBeforeEdit: a, variant: "overlay-secondary" }),
-                                    (0, i.jsx)(t_.E, {}),
+                                    (0, i.jsx)(td, { onBeforeEdit: a, variant: "overlay-secondary" }),
+                                    (0, i.jsx)(tu.E, {}),
                                 ],
                             }),
                         ],
@@ -449,17 +448,18 @@ let tI = r.memo(function (e) {
         }),
     });
 });
-var tf = n(652215),
+var tI = n(696016),
+    tf = n(652215),
     tp = n(753070),
     tT = n(16590),
     tm = n(301414);
 function tg(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: a, setPopoutRef: s } = e;
-    (0, ta.A)();
+    (0, tr.A)();
     let l = (0, c.yK)([eX.Ay], () => Object.values(eX.Ay.getClips())),
         o = (0, c.bG)([eX.Ay], () => eX.Ay.getSettings()),
         d = (0, c.bG)([eX.Ay], () => eX.Ay.getNewClipIds()),
-        u = (0, tn.aJ)("ClipsPopout"),
+        u = (0, tt.aJ)("ClipsPopout"),
         _ = (0, c.bG)([eX.Ay], () => eX.Ay.getEnableAutoclipping()),
         E = (0, c.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(tf.hCu.SAVE_CLIP)),
         A = r.useCallback(
@@ -470,7 +470,7 @@ function tg(e) {
         ),
         h = !o.showPovClipsInGallery,
         I = r.useMemo(() => {
-            let e = l.filter((e) => e.type === tt.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, eQ.kD)(e)));
+            let e = l.filter((e) => e.type === tI.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, eQ.kD)(e)));
             return e.sort((e, t) => t.createdAt - e.createdAt), e;
         }, [l, h]),
         f = r.useMemo(() => I.slice(0, 16), [I]),
@@ -568,7 +568,7 @@ function tg(e) {
                           fade: !0,
                           disableFocusRingScope: !0,
                           children: [
-                              f.map((e) => (0, i.jsx)(tI, { clip: e, isNew: d.includes(e.id), onClose: a }, e.id)),
+                              f.map((e) => (0, i.jsx)(th, { clip: e, isNew: d.includes(e.id), onClose: a }, e.id)),
                               p &&
                                   (0, i.jsx)("div", {
                                       className: tm.qr,
@@ -588,7 +588,7 @@ function tg(e) {
 }
 function tS(e) {
     let { keybindString: t } = e,
-        n = (0, ti.Et)();
+        n = (0, tn.Et)();
     return (0, i.jsxs)("div", {
         className: tm.p$,
         children: [
@@ -619,7 +619,7 @@ function tS(e) {
                           keybind: (0, i.jsx)(e0.e, { shortcut: t }),
                       }),
                   })
-                : (0, i.jsx)(tr.A, {}),
+                : (0, i.jsx)(ti.A, {}),
         ],
     });
 }
@@ -1126,7 +1126,7 @@ function nP(e) {
                 n.e("27880"),
                 n.e("8032"),
                 n.e("77970"),
-                n.e("36450"),
+                n.e("90407"),
                 n.e("71367"),
                 n.e("75072"),
                 n.e("69443"),
@@ -1421,7 +1421,7 @@ function n9(e) {
         { analyticsLocations: I } = (0, P.Ay)(M.A.USER_PROFILE_ACCOUNT_POPOUT),
         p = (0, tz.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 }),
         { ref: m, height: g } = (0, eH.Ay)(),
-        { isHoveringOrFocusing: S, isHovering: N } = (0, tl.A)(m);
+        { isHoveringOrFocusing: S, isHovering: N } = (0, ts.A)(m);
     r.useEffect(() => {
         a?.(m.current);
     }, [m, a]),

@@ -1,18 +1,17 @@
-i.r(t), i.d(t, { default: () => d }), i(321073);
+i.r(t), i.d(t, { default: () => h }), i(321073);
 var l = i(19575),
-    n = i(372684),
-    r = i(696016),
-    a = i(801344),
-    s = i(375708);
-async function o(e) {
+    n = i(696016),
+    r = i(801344),
+    a = i(375708);
+async function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await l.Ay.fetchRiotGamesLiveClientData(e, t);
     if (i.status >= 200 && i.status < 300) return JSON.parse(i.body);
     throw Error(`HTTP ${i.status}: ${i.body}`);
 }
-function m(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        i = a.j3[e],
+        i = r.j3[e],
         l = t.triggerOverride ?? i.triggerClipCandidate;
     return {
         type: n.Gy.GAME_EVENT,
@@ -25,7 +24,7 @@ function m(e) {
         hiddenFromTimeline: t.hiddenFromTimeline,
     };
 }
-class c {
+class m {
     activePlayerRiotId = null;
     activePlayerName = null;
     nextEventId = 0;
@@ -53,7 +52,7 @@ class c {
     }
     async fetchActivePlayerData() {
         try {
-            let e = await o("activeplayer");
+            let e = await s("activeplayer");
             if (null == e.riotId) return null;
             return e;
         } catch (e) {
@@ -66,10 +65,10 @@ class c {
                 ((this.activePlayerRiotId = e.riotId ?? null), (this.activePlayerName = e.riotIdGameName ?? "")),
             this.isInGame ||
                 ((this.isInGame = !0),
-                r.nx.info(
+                n.nx.info(
                     `[LoL] connected to Live Client API \u{2014} game started (player=${this.activePlayerName ?? "?"})`,
                 ),
-                this.emitLifecycleEvent(a.rS, s.intl.string(s.t["94Kji7"]), s.intl.string(s.t.fyCsox))),
+                this.emitLifecycleEvent(r.rS, a.intl.string(a.t["94Kji7"]), a.intl.string(a.t.fyCsox))),
             (this.currentHealthFraction = (function (e) {
                 let { currentHealth: t, maxHealth: i } = e.championStats;
                 return i <= 0 ? 1 : Math.max(0, Math.min(1, t / i));
@@ -78,17 +77,17 @@ class c {
     handlePollFailure() {
         this.isInGame &&
             ((this.consecutiveFailures += 1),
-            r.nx.info(`[LoL] active-player poll failed (${this.consecutiveFailures}/10)`),
+            n.nx.info(`[LoL] active-player poll failed (${this.consecutiveFailures}/10)`),
             this.consecutiveFailures >= 10 &&
-                (r.nx.info("[LoL] game ended (no API response)"),
-                this.emitLifecycleEvent(a.oy, s.intl.string(s.t.hlOYoA), s.intl.string(s.t.NxavgD)),
+                (n.nx.info("[LoL] game ended (no API response)"),
+                this.emitLifecycleEvent(r.oy, a.intl.string(a.t.hlOYoA), a.intl.string(a.t.NxavgD)),
                 this.resetGameState()));
     }
     async pollPlayerState(e) {
         let t;
         if (null == this.activePlayerRiotId) return;
         try {
-            t = await o("playerlist");
+            t = await s("playerlist");
         } catch (e) {
             return;
         }
@@ -106,10 +105,10 @@ class c {
     updateDeadState(e) {
         e !== this.isDead &&
             ((this.isDead = e),
-            e || this.emitLifecycleEvent(a.Ou, s.intl.string(s.t.ebbBDl), s.intl.string(s.t.CCiFY7)));
+            e || this.emitLifecycleEvent(r.Ou, a.intl.string(a.t.ebbBDl), a.intl.string(a.t.CCiFY7)));
     }
     emitLifecycleEvent(e, t, i) {
-        r.nx.info(`[LoL] lifecycle marker: ${e}`),
+        n.nx.info(`[LoL] lifecycle marker: ${e}`),
             this.emitSignal({
                 type: n.Gy.GAME_EVENT,
                 eventType: n.rb.UNCLASSIFIED,
@@ -122,13 +121,13 @@ class c {
     }
     async pollEvents() {
         try {
-            let e = await o("eventdata", { eventID: this.nextEventId });
+            let e = await s("eventdata", { eventID: this.nextEventId });
             if (e.Events?.length > 0) {
                 if (
-                    (r.nx.info(`[LoL] eventdata received: ${e.Events.map((e) => e.EventName).join(", ")}`),
+                    (n.nx.info(`[LoL] eventdata received: ${e.Events.map((e) => e.EventName).join(", ")}`),
                     this.isFirstPoll)
                 )
-                    r.nx.info(`[LoL] first poll \u{2014} skipping ${e.Events.length} historical events`),
+                    n.nx.info(`[LoL] first poll \u{2014} skipping ${e.Events.length} historical events`),
                         (this.isFirstPoll = !1);
                 else
                     for (let t of e.Events) {
@@ -198,111 +197,111 @@ class c {
             switch (e.type) {
                 case "ChampionKill":
                     if (e.playerIsKiller)
-                        return m(a.WU, {
-                            title: s.intl.string(s.t.ky6syM),
-                            description: s.intl.formatToPlainString(s.t["2sxvfW"], { name: e.victimName }),
+                        return o(r.WU, {
+                            title: a.intl.string(a.t.ky6syM),
+                            description: a.intl.formatToPlainString(a.t["2sxvfW"], { name: e.victimName }),
                         });
                     if (e.playerIsAssister)
-                        return m(a.ve, {
-                            title: s.intl.string(s.t["3CK6jo"]),
-                            description: s.intl.formatToPlainString(s.t.NyJvKf, { name: e.victimName }),
+                        return o(r.ve, {
+                            title: a.intl.string(a.t["3CK6jo"]),
+                            description: a.intl.formatToPlainString(a.t.NyJvKf, { name: e.victimName }),
                         });
                     if (e.victimIsActivePlayer)
-                        return m(a.Wi, {
-                            title: s.intl.string(s.t["C/WqTT"]),
-                            description: s.intl.formatToPlainString(s.t["wZ/IFO"], { name: e.killerName }),
+                        return o(r.Wi, {
+                            title: a.intl.string(a.t["C/WqTT"]),
+                            description: a.intl.formatToPlainString(a.t["wZ/IFO"], { name: e.killerName }),
                         });
                     return null;
                 case "Multikill":
                     if (e.killerIsActivePlayer) {
                         let t = Math.max(2, Math.min(5, e.killStreak)),
-                            i = a.Br[t],
+                            i = r.Br[t],
                             { title: l, description: n } = (() => {
                                 switch (t) {
                                     case 2:
                                         return {
-                                            title: s.intl.string(s.t["+K7bbR"]),
-                                            description: s.intl.string(s.t["+zq0aZ"]),
+                                            title: a.intl.string(a.t["+K7bbR"]),
+                                            description: a.intl.string(a.t["+zq0aZ"]),
                                         };
                                     case 3:
                                         return {
-                                            title: s.intl.string(s.t.fzI1wr),
-                                            description: s.intl.string(s.t.brXPUX),
+                                            title: a.intl.string(a.t.fzI1wr),
+                                            description: a.intl.string(a.t.brXPUX),
                                         };
                                     case 4:
                                         return {
-                                            title: s.intl.string(s.t.ntn0Eu),
-                                            description: s.intl.string(s.t.GcWpwl),
+                                            title: a.intl.string(a.t.ntn0Eu),
+                                            description: a.intl.string(a.t.GcWpwl),
                                         };
                                     case 5:
                                         return {
-                                            title: s.intl.string(s.t.JMxzCr),
-                                            description: s.intl.string(s.t["9yXGOS"]),
+                                            title: a.intl.string(a.t.JMxzCr),
+                                            description: a.intl.string(a.t["9yXGOS"]),
                                         };
                                     default:
                                         return { title: void 0, description: void 0 };
                                 }
                             })();
-                        return m(i, { title: l, description: n });
+                        return o(i, { title: l, description: n });
                     }
                     return null;
                 case "LevelUp":
-                    return m(a.Ur, {
-                        title: s.intl.string(s.t["cp+kpc"]),
-                        description: s.intl.formatToPlainString(s.t["le5/P1"], { level: e.newLevel }),
+                    return o(r.Ur, {
+                        title: a.intl.string(a.t["cp+kpc"]),
+                        description: a.intl.formatToPlainString(a.t["le5/P1"], { level: e.newLevel }),
                     });
                 case "ItemPurchase":
-                    return m(a.Zv, {
-                        title: s.intl.string(s.t["89CDAj"]),
-                        description: s.intl.formatToPlainString(s.t.cpRNkD, { itemName: e.itemName }),
+                    return o(r.Zv, {
+                        title: a.intl.string(a.t["89CDAj"]),
+                        description: a.intl.formatToPlainString(a.t.cpRNkD, { itemName: e.itemName }),
                         hiddenFromTimeline: !0,
                     });
                 case "TurretKill":
                     if (e.playerHelpedKill)
-                        return m(a.Nv, { title: s.intl.string(s.t["SoivN/"]), description: s.intl.string(s.t.eZ1OSn) });
+                        return o(r.Nv, { title: a.intl.string(a.t["SoivN/"]), description: a.intl.string(a.t.eZ1OSn) });
                     return null;
                 case "InhibitorKill":
                     if (e.playerHelpedKill)
-                        return m(a.fH, { title: s.intl.string(s.t["0Ttct6"]), description: s.intl.string(s.t.Pewjjq) });
+                        return o(r.fH, { title: a.intl.string(a.t["0Ttct6"]), description: a.intl.string(a.t.Pewjjq) });
                     return null;
                 case "DragonKill":
                     if (e.playerHelpedKill) {
                         if (e.stolen)
-                            return m(a.d4, {
-                                title: s.intl.formatToPlainString(s.t.DUQK8U, { drakeName: e.drakeName }),
-                                description: s.intl.formatToPlainString(s.t["8qsedd"], { killerName: e.killerName }),
+                            return o(r.d4, {
+                                title: a.intl.formatToPlainString(a.t.DUQK8U, { drakeName: e.drakeName }),
+                                description: a.intl.formatToPlainString(a.t["8qsedd"], { killerName: e.killerName }),
                             });
-                        return m(a.Cq, {
-                            title: s.intl.formatToPlainString(s.t["AjNN1/"], { drakeName: e.drakeName }),
-                            description: s.intl.formatToPlainString(s.t.HlopAO, { killerName: e.killerName }),
+                        return o(r.Cq, {
+                            title: a.intl.formatToPlainString(a.t["AjNN1/"], { drakeName: e.drakeName }),
+                            description: a.intl.formatToPlainString(a.t.HlopAO, { killerName: e.killerName }),
                         });
                     }
                     return null;
                 case "BaronKill":
                     if (e.playerHelpedKill) {
                         if (e.stolen)
-                            return m(a.oB, {
-                                title: s.intl.string(s.t["+WhzbK"]),
-                                description: s.intl.formatToPlainString(s.t.FUBbYu, { killerName: e.killerName }),
+                            return o(r.oB, {
+                                title: a.intl.string(a.t["+WhzbK"]),
+                                description: a.intl.formatToPlainString(a.t.FUBbYu, { killerName: e.killerName }),
                             });
-                        return m(a.zy, {
-                            title: s.intl.string(s.t.KohKss),
-                            description: s.intl.formatToPlainString(s.t["4yYLUi"], { killerName: e.killerName }),
+                        return o(r.zy, {
+                            title: a.intl.string(a.t.KohKss),
+                            description: a.intl.formatToPlainString(a.t["4yYLUi"], { killerName: e.killerName }),
                         });
                     }
                     return null;
                 case "GameEnd":
                     if (e.win)
-                        return m(a.aP, { title: s.intl.string(s.t.vS7yZW), description: s.intl.string(s.t.qkARs9) });
-                    return m(a.j7, { title: s.intl.string(s.t["+sdglm"]), description: s.intl.string(s.t.xdsqBt) });
+                        return o(r.aP, { title: a.intl.string(a.t.vS7yZW), description: a.intl.string(a.t.qkARs9) });
+                    return o(r.j7, { title: a.intl.string(a.t["+sdglm"]), description: a.intl.string(a.t.xdsqBt) });
                 default:
                     return null;
             }
         })(e);
         null != t &&
             (t.type === n.Gy.GAME_EVENT &&
-                (t.eventName === a.WU && (t.additionalData = { [a.kt]: this.currentHealthFraction }),
-                r.nx.info(`[LoL] emit event: ${t.eventName} score=${t.score?.toFixed(2)} importance=${t.importance}`)),
+                (t.eventName === r.WU && (t.additionalData = { [r.kt]: this.currentHealthFraction }),
+                n.nx.info(`[LoL] emit event: ${t.eventName} score=${t.score?.toFixed(2)} importance=${t.importance}`)),
             this.emitSignal(t));
     }
     detectStateChanges(e, t) {
@@ -345,12 +344,12 @@ class c {
     }
 }
 i(876474);
-class h {
+class c {
     pollIntervalId = null;
     isPolling = !1;
     eventPoller;
     constructor(e) {
-        this.eventPoller = new c(e);
+        this.eventPoller = new m(e);
     }
     start() {
         this.isPolling ||
@@ -372,4 +371,4 @@ class h {
         await this.eventPoller.poll();
     }
 }
-let d = (e) => new h(e);
+let h = (e) => new c(e);

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => h }), n(321073);
+n.d(t, { K: () => A }), n(321073);
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -9,39 +9,38 @@ var r = n(192308),
     o = n(31717),
     d = n(232835),
     c = n(518960),
-    u = n(372684),
-    _ = n(430795),
-    E = n(589553),
-    A = n(696016);
-async function h(e, t) {
-    let { channelId: h, analyticsLocations: I, messageReference: f } = t,
-        p = l.A.getChannel(h);
-    if (null != p) {
-        if (null != f) {
-            let e = d.A.getMessage(f.channel_id, f.message_id);
-            null != e && (0, s.Yf)({ message: e, channel: p, shouldMention: !1, showMentionToggle: !1 });
+    u = n(430795),
+    _ = n(589553),
+    E = n(696016);
+async function A(e, t) {
+    let { channelId: A, analyticsLocations: h, messageReference: I } = t,
+        f = l.A.getChannel(A);
+    if (null != f) {
+        if (null != I) {
+            let e = d.A.getMessage(I.channel_id, I.message_id);
+            null != e && (0, s.Yf)({ message: e, channel: f, shouldMention: !1, showMentionToggle: !1 });
         }
         try {
             let t = [],
                 n = [];
             for (let i of e) {
-                let e = await (0, _.VO)(i, { analyticsLocations: I }),
-                    r = (0, E.A)(i, i.type === u.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                let e = await (0, u.VO)(i, { analyticsLocations: h }),
+                    r = (0, _.A)(i, i.type === E.nQ.SCREENSHOT ? "jpeg" : "mp4");
                 switch (i.type) {
-                    case u.nQ.CLIP:
-                    case u.nQ.VOICE_CLIP:
+                    case E.nQ.CLIP:
+                    case E.nQ.VOICE_CLIP:
                         t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i });
                         break;
-                    case u.nQ.SCREENSHOT:
+                    case E.nQ.SCREENSHOT:
                         t.push(new File([e], r, { type: "image/jpeg" })), n.push({});
                         break;
                     default:
                         i.type;
                 }
             }
-            (0, c.R)(t, p, o.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), r.closeAllModals();
+            (0, c.R)(t, f, o.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), r.closeAllModals();
         } catch (e) {
-            throw (A.nx.error(e), e);
+            throw (E.nx.error(e), e);
         }
     } else
         (0, r.openModalLazy)(
@@ -75,7 +74,7 @@ async function h(e, t) {
                     n.e("95008"),
                     n.e("92871"),
                 ]).then(n.bind(n, 243258));
-                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: I });
+                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: h });
             },
             { stackingBehavior: "stack", modalKey: a.aU },
         );

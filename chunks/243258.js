@@ -24,11 +24,11 @@ var s = l(477900),
     w = l(31717),
     N = l(403362),
     R = l(518960),
-    T = l(372684),
-    I = l(430795),
-    _ = l(74847),
-    v = l(589553),
-    O = l(280483),
+    T = l(430795),
+    I = l(74847),
+    _ = l(589553),
+    v = l(280483),
+    O = l(696016),
     P = l(381941),
     S = l(375708),
     F = l(434581),
@@ -89,7 +89,7 @@ function M(e) {
 }
 function V(e) {
     let { clips: t, onClose: l, analyticsLocations: n, ...a } = e;
-    (0, O.A)();
+    (0, v.A)();
     let { analyticsLocations: c } = (0, f.Ay)(...n, g.A.CLIPS_SHARE_MODAL),
         o = i.useCallback(
             async (e, s, i) => {
@@ -99,21 +99,21 @@ function V(e) {
                     let s = [],
                         d = [];
                     for (let e of t) {
-                        let t = await (0, I.VO)(e, { analyticsLocations: c }),
-                            l = (0, v.A)(e, e.type === T.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                        let t = await (0, T.VO)(e, { analyticsLocations: c }),
+                            l = (0, _.A)(e, e.type === O.nQ.SCREENSHOT ? "jpeg" : "mp4");
                         switch (e.type) {
-                            case T.nQ.CLIP:
-                            case T.nQ.VOICE_CLIP:
+                            case O.nQ.CLIP:
+                            case O.nQ.VOICE_CLIP:
                                 s.push(new File([t], l, { type: "video/mp4" })), d.push({ clip: e });
                                 break;
-                            case T.nQ.SCREENSHOT:
+                            case O.nQ.SCREENSHOT:
                                 s.push(new File([t], l, { type: "image/jpeg" })), d.push({});
                                 break;
                             default:
                                 e.type;
                         }
                     }
-                    let g = (await Promise.all(e.map(k.pk))).filter(N.Vq).filter((e) => (0, _.t)(e));
+                    let g = (await Promise.all(e.map(k.pk))).filter(N.Vq).filter((e) => (0, I.t)(e));
                     if (0 === g.length) {
                         (0, h.P0)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE)), i(!1);
                         return;
@@ -140,7 +140,7 @@ function V(e) {
             [t, l, c],
         ),
         d = i.useCallback((e) => {
-            if (e instanceof j.YB && !(0, _.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
+            if (e instanceof j.YB && !(0, I.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
         }, []);
     return (0, s.jsx)(A.ForwardModal, {
         ...a,

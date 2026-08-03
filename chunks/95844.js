@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => j });
+n.d(t, { A: () => H });
 var i = n(691540),
     r = n(97483),
     a = n(228366),
@@ -24,14 +24,13 @@ var i = n(691540),
     C = n(723702),
     O = n(734066),
     R = n(915725),
-    L = n(372684),
-    y = n(974293),
+    L = n(974293),
     D = n(915618),
-    v = n(572164),
-    b = n(696016),
-    M = n(652215),
-    P = n(325278);
-class U extends p.A {
+    y = n(572164),
+    v = n(696016),
+    b = n(652215),
+    M = n(325278);
+class P extends p.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -50,7 +49,7 @@ class U extends p.A {
     };
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, O.Pm)() || n !== M.S7L.RTC_CONNECTED) return;
+        if (!(0, O.Pm)() || n !== b.S7L.RTC_CONNECTED) return;
         let r = A.default.getId();
         switch (t) {
             case f.x.DEFAULT:
@@ -77,16 +76,16 @@ class U extends p.A {
         let { userId: t, channelId: n, guildId: i } = e;
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t);
         let r = S.A.getRTCConnection(
-            u._z({ streamType: null != i ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: n, guildId: i }),
+            u._z({ streamType: null != i ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
         null != r && this.applyStreamRecording(t, r);
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        N.default.track(M.HAw.CLIPS_INIT_FAILURE, {
+        N.default.track(b.HAw.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n,
-            clip_runtime: (0, y.GN)("handleClipsInitFailure"),
+            clip_runtime: (0, L.GN)("handleClipsInitFailure"),
         });
     }
     maybeShowClipsWarning(e) {
@@ -108,7 +107,7 @@ class U extends p.A {
                 (this.loadClipsFromStorage(),
                 (null == R.Ay.getHardwareClassification() ||
                     null == R.Ay.getHardwareClassificationForDecoupled() ||
-                    R.Ay.getHardwareClassificationVersion() !== b.V0) &&
+                    R.Ay.getHardwareClassificationVersion() !== v.V0) &&
                     this.classifyHardwareAndTrack().then((e) => {
                         a.h.dispatch({ type: "CLIPS_CLASSIFY_HARDWARE", classification: e });
                     })));
@@ -118,7 +117,7 @@ class U extends p.A {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
         if (n !== f.x.STREAM || !(0, D.A)(h.Ay)) return;
         let a = S.A.getRTCConnection(
-            u._z({ streamType: null != r ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: i, guildId: r }),
+            u._z({ streamType: null != r ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
         null != a && this.applyStreamRecording(t, a);
     }
@@ -141,59 +140,59 @@ class U extends p.A {
                 }
             })();
             return (
-                N.default.track(M.HAw.CLIPS_HARDWARE_CLASSIFICATION, {
+                N.default.track(b.HAw.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
-                    version: b.V0,
+                    version: v.V0,
                     gpu_models: e,
-                    clip_runtime: (0, y.GN)("classifyHardwareAndTrack"),
+                    clip_runtime: (0, L.GN)("classifyHardwareAndTrack"),
                 }),
                 t
             );
         } catch (e) {
-            return L.k9.UNKNOWN;
+            return v.k9.UNKNOWN;
         }
     }
     classifyHardware(e) {
         if ((0, C.isWindows)()) {
-            let t = e.some((e) => b.sc.test(e)),
-                n = e.some((e) => b.l_.test(e));
-            return t ? L.k9.MEETS_AUTO_ENABLE : n ? L.k9.MEETS_MINIMUM : L.k9.BELOW_MINIMUM;
+            let t = e.some((e) => v.sc.test(e)),
+                n = e.some((e) => v.l_.test(e));
+            return t ? v.k9.MEETS_AUTO_ENABLE : n ? v.k9.MEETS_MINIMUM : v.k9.BELOW_MINIMUM;
         }
         return (0, C.isMac)()
             ? "arm64" === s.A.app.getAppArch()
-                ? L.k9.MEETS_AUTO_ENABLE
-                : L.k9.MEETS_MINIMUM
-            : L.k9.UNKNOWN;
+                ? v.k9.MEETS_AUTO_ENABLE
+                : v.k9.MEETS_MINIMUM
+            : v.k9.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
         if (!(0, D.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
         if (null == t) return;
-        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, v.TD)());
+        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, y.TD)());
         let n = R.Ay.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
         if (!(0, D.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
-        null != t && t.setClipRecordUser(e, "soundboard", (0, v.TD)());
+        null != t && t.setClipRecordUser(e, "soundboard", (0, y.TD)());
     }
     applyStreamRecording(e, t) {
         if ((0, D.A)(h.Ay) && A.default.getId() === e) {
-            let n = (0, v.TD)();
+            let n = (0, y.TD)();
             t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
             return;
         }
     }
 }
-var w = n(430795);
+var U = n(430795);
 n(822151);
-var G = n(201538),
-    x = n(409067),
-    k = n(227628),
-    F = n(468550),
-    V = n(375708);
-class B extends U {
+var w = n(201538),
+    G = n(409067),
+    x = n(227628),
+    k = n(468550),
+    F = n(375708);
+class V extends P {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -208,7 +207,7 @@ class B extends U {
                 },
                 CLIPS_SESSION_START: (e) => {
                     let { previousGameId: t } = e;
-                    null != t ? this.handleClipsReminder(t) : (0, F.kF)();
+                    null != t ? this.handleClipsReminder(t) : (0, k.kF)();
                 },
                 RPC_SERVER_READY: () => {
                     (0, _.se)(R.Ay.getEnableAutoclipping());
@@ -226,7 +225,7 @@ class B extends U {
             (R.Ay.getLastClipsSession()
                 ?.newClipIds.map(R.Ay.getClipById)
                 .some((t) => t?.applicationId === e.id) &&
-                (k.MZ.getState().isOpen || (0, k.w9)()));
+                (x.MZ.getState().isOpen || (0, x.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e || !R.Ay.canShowReminders()) return;
@@ -235,25 +234,25 @@ class B extends U {
         let n = !R.Ay.getSettings().showPovClipsInGallery;
         t.newClipIds.some((t) => {
             let i = R.Ay.getClipById(t);
-            return null != i && i.applicationId === e && (!n || !(0, x.kD)(i));
-        }) && (0, F.M8)(e);
+            return null != i && i.applicationId === e && (!n || !(0, G.kD)(i));
+        }) && (0, k.M8)(e);
     }
     showClipsToast() {
         (0, i.P0)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: V.intl.string(V.t["d+41qJ"]),
+            message: F.intl.string(F.t["d+41qJ"]),
             type: r.Ck.CLIP,
-            options: { duration: b.Vi },
+            options: { duration: v.Vi },
         });
     }
     applyNativeClipsSettings(e) {
         if ((e?.settings.enableAutoclipping != null && (0, _.se)(e.settings.enableAutoclipping), !(0, D.A)(h.Ay)))
             return;
-        let { midSessionV3Flip: t } = (0, G.UW)(),
+        let { midSessionV3Flip: t } = (0, w.UW)(),
             n = h.Ay.getMediaEngine(),
             i = () => {
                 let i = R.Ay.getSettings(),
-                    r = (0, v.TD)();
+                    r = (0, y.TD)();
                 if (
                     (n.setClipsRecordingEnabled(r),
                     n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
@@ -267,10 +266,10 @@ class B extends U {
                         this.fireClipsInitEvent();
                 }
                 t &&
-                    (b.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
+                    (v.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
                     a.h.dispatch({ type: "CLIPS_RESTART" }));
             };
-        (0, v.TD)() && (0, y.qi)("applyNativeClipsSettings") && !(0, G.t_)() ? (0, G.so)().then(i) : i();
+        (0, y.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, w.t_)() ? (0, w.so)().then(i) : i();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -278,11 +277,11 @@ class B extends U {
     }
     handleClipsInitOnGamesChange(e) {
         let t = d.Ay.getVisibleGame();
-        (0, k.yj)(),
+        (0, x.yj)(),
             null == t ||
                 (this.prefetchRichPresenceData(t.id),
                 e.added.find((e) => e.pid === t.pid)
-                    ? setTimeout(() => this.fireClipsInitEvent(), b.dV)
+                    ? setTimeout(() => this.fireClipsInitEvent(), v.dV)
                     : this.fireClipsInitEvent(),
                 this.maybeOpenQuickBar());
     }
@@ -290,18 +289,18 @@ class B extends U {
         c.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
     handleStreamEnded(e) {
-        if (!(0, v.TD)()) return;
+        if (!(0, y.TD)()) return;
         let { ownerId: t } = (0, u.Iy)(e.streamKey);
-        t !== A.default.getId() || ((0, y.qi)("handleStreamEnded") && this.fireClipsInitEvent());
+        t !== A.default.getId() || ((0, L.qi)("handleStreamEnded") && this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(0, v.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
+        if (!(0, y.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
         let t = d.Ay.getVisibleGame();
         if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
-        if ((0, y.qi)("fireClipsInitEvent") && !(0, G.t_)())
-            return void (0, G.so)().then(() => {
-                (0, G.t_)() && this.fireClipsInitEvent(e);
+        if ((0, L.qi)("fireClipsInitEvent") && !(0, w.t_)())
+            return void (0, w.so)().then(() => {
+                (0, w.t_)() && this.fireClipsInitEvent(e);
             });
         let n = R.Ay.getSettings();
         a.h.dispatch({
@@ -315,23 +314,22 @@ class B extends U {
         let { storageLocation: e } = R.Ay.getSettings();
         "" !== e &&
             e !== R.he &&
-            w
-                .Fb(e)
-                .then(() => H())
+            U.Fb(e)
+                .then(() => B())
                 .catch((e) => {
-                    b.nx.error("Failed to load clips directory on connection open", e);
+                    v.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function H() {
+async function B() {
     if (R.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
         try {
             let e = await s.A.app.getPath("videos");
-            w.HU((0, I.CN)(e, R._c));
+            U.HU((0, I.CN)(e, R._c));
         } catch (e) {
-            b.nx.error("Failed to resolve videos path for old default storage migration", e);
+            v.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let j = new B();
+let H = new V();
