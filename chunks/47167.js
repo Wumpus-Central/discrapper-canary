@@ -1,75 +1,78 @@
 "use strict";
-n.d(t, { Ay: () => g, Bi: () => f, Eq: () => E, Jo: () => d, LG: () => m, e5: () => h, ks: () => _, m1: () => p });
+n.d(t, { Ay: () => p, Bi: () => A, Eq: () => I, Jo: () => u, LG: () => f, e5: () => E, ks: () => _, m1: () => h });
 var i = n(17928),
     r = n(736056),
-    s = n(994500),
-    a = n(287809),
-    o = n(403362),
-    l = n(427262),
-    u = n(652215),
+    a = n(994500),
+    s = n(287809),
+    l = n(403362),
+    o = n(427262),
+    d = n(652215),
     c = n(375708);
-function d(e, t, n) {
+function u(e, t, n) {
     let i = e
         .map(t.getUser)
-        .filter(o.Vq)
-        .map((e) => n.getNickname(e.id) ?? l.Ay.getName(e));
+        .filter(l.Vq)
+        .map((e) => n.getNickname(e.id) ?? o.Ay.getName(e));
     return i.length > 0
         ? i.join(", ")
-        : c.intl.formatToPlainString(c.t["9Uk8PF"], { name: l.Ay.getName(t.getCurrentUser()) });
+        : c.intl.formatToPlainString(c.t["9Uk8PF"], { name: o.Ay.getName(t.getCurrentUser()) });
 }
 function _(e, t, n) {
-    return d(e.recipients, t, n);
+    return u(e.recipients, t, n);
 }
-function h(e) {
-    return (0, i.bG)([a.default, s.A], () => (null != e && e.isMultiUserDM() ? _(e, a.default, s.A) : null));
+function E(e) {
+    return (0, i.bG)([s.default, a.A], () => (null != e && e.isMultiUserDM() ? _(e, s.default, a.A) : null));
 }
-function f(e) {
+function A(e) {
     if (e.isObfuscated() || !e.isMultiUserDM()) return;
     let t = e.name;
     if ("" !== t) return t;
 }
-function p(e, t, n) {
+function h(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        s = e.name;
+        a = e.name;
     if (e.isObfuscated()) return c.intl.string(c.t["/YzI63"]);
     switch (e.type) {
-        case u.rbe.DM:
-            var a;
-            if ("" !== s) return i ? `@${s}` : s;
-            let [d] = e.recipients.map(t.getUser).filter(o.Vq);
-            if (null == d) return "???";
-            if (d.isProvisional && null != d.globalName) return d.globalName;
-            return (a = n.getNickname(d.id) ?? l.Ay.getName(d) ?? "???"), i ? `@${a}` : a;
-        case u.rbe.GROUP_DM:
-            if ("" !== s) return s;
+        case d.rbe.DM:
+            var s;
+            if ("" !== a) return i ? `@${a}` : a;
+            let [u] = e.recipients.map(t.getUser).filter(l.Vq);
+            if (null == u) return "???";
+            if (u.isProvisional && null != u.globalName) return u.globalName;
+            return (s = n.getNickname(u.id) ?? o.Ay.getName(u) ?? "???"), i ? `@${s}` : s;
+        case d.rbe.GROUP_DM:
+            if ("" !== a) return a;
             return _(e, t, n);
-        case u.rbe.GUILD_ANNOUNCEMENT:
-        case u.rbe.GUILD_TEXT:
-        case u.rbe.GUILD_FORUM:
-        case u.rbe.GUILD_MEDIA:
-            if (i) return `#${s}`;
-            return s;
-        case u.rbe.PUBLIC_THREAD:
-        case u.rbe.PRIVATE_THREAD:
-        case u.rbe.ANNOUNCEMENT_THREAD:
-        case u.rbe.GUILD_VOICE:
-        case u.rbe.GUILD_STAGE_VOICE:
-        case u.rbe.GUILD_CATEGORY:
-            if (r) return `#"${E(s)}"`;
-            if (i && e.isThread()) return `"${s}"`;
-            return s;
+        case d.rbe.GUILD_ANNOUNCEMENT:
+        case d.rbe.GUILD_TEXT:
+        case d.rbe.GUILD_FORUM:
+        case d.rbe.GUILD_MEDIA:
+            if (i) return `#${a}`;
+            return a;
+        case d.rbe.GUILD_CATEGORY:
+            if (e.id === d._Ee) return c.intl.string(c.t.GSfOoo);
+            if (r) return `#"${I(a)}"`;
+            return a;
+        case d.rbe.PUBLIC_THREAD:
+        case d.rbe.PRIVATE_THREAD:
+        case d.rbe.ANNOUNCEMENT_THREAD:
+        case d.rbe.GUILD_VOICE:
+        case d.rbe.GUILD_STAGE_VOICE:
+            if (r) return `#"${I(a)}"`;
+            if (i && e.isThread()) return `"${a}"`;
+            return a;
         default:
-            return s;
+            return a;
     }
 }
-function E(e) {
+function I(e) {
     return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
-function m(e) {
+function f(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 }
-function g(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, i.bG)([a.default, r.A, s.A], () => (null == e ? null : p(e, a.default, s.A, t)));
+    return (0, i.bG)([s.default, r.A, a.A], () => (null == e ? null : h(e, s.default, a.A, t)));
 }
