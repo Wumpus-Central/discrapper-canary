@@ -96,7 +96,7 @@ function b(e) {
         : (0, i.jsx)(c.s, {
               "aria-label": L.intl.string(null != I ? L.t.xB7MI3 : L.t["+Xp3hq"]),
               ...u,
-              onMouseEnter: () => {
+              onMouseEnter: function () {
                   u.onMouseEnter(), null != I && (0, S.V)({ user: a.user, guildId: h });
               },
               className: s()(A, D.vk),
