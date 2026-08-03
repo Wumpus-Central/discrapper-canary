@@ -107,7 +107,7 @@ function H(e) {
         d = (0, h.bG)([v.A], () => null != v.A.getSavedMessage(n.id, t.id)),
         u = (0, h.bG)([S], () => S.isNudging(n.id, t.id)),
         m = l.useRef(null),
-        { isCoachmarkVisible: x, dismissCoachmark: f } = (function (e) {
+        { isCoachmarkVisible: x, dismissCoachmark: E } = (function (e) {
             let t = (0, R.HX)(P),
                 n = (0, h.bG)([v.A], () => v.A.getSavedMessageCount() > 0),
                 i = e && !t && !n,
@@ -134,11 +134,11 @@ function H(e) {
                 { isCoachmarkVisible: c, dismissCoachmark: u }
             );
         })(u),
-        E = t.reactions.some((e) => e.me || e.me_burst),
-        [_, C] = l.useState(E);
-    if ((E && !_ && C(!0), (!_ && !E) || !c)) return null;
-    let N = s ? w : G,
-        j = d ? g.c : p.c;
+        _ = t.reactions.some((e) => e.me || e.me_burst),
+        [C, N] = l.useState(_);
+    if ((_ && !C && N(!0), (!C && !_) || !c || t.author.id === f.default.getId())) return null;
+    let j = s ? w : G,
+        T = d ? g.c : p.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(A.m, {
@@ -147,13 +147,13 @@ function H(e) {
                 children: (0, i.jsx)(o.D, {
                     innerRef: m,
                     onClick: (e) => {
-                        e.stopPropagation(), d ? (0, U.r7)(n, t) : (0, U.wF)(n, t), x && f(M.i.TAKE_ACTION);
+                        e.stopPropagation(), d ? (0, U.r7)(n, t) : (0, U.wF)(n, t), x && E(M.i.TAKE_ACTION);
                     },
-                    className: a()(N.reactionBtn, N.bookmarkBtn, { [N.visible]: d || u }, r),
-                    children: (0, i.jsx)(j, { size: "sm", color: "currentColor", className: N.icon }),
+                    className: a()(j.reactionBtn, j.bookmarkBtn, { [j.visible]: d || u }, r),
+                    children: (0, i.jsx)(T, { size: "sm", color: "currentColor", className: j.icon }),
                 }),
             }),
-            x && (0, i.jsx)(D, { targetElementRef: m, onDismiss: f }),
+            x && (0, i.jsx)(D, { targetElementRef: m, onDismiss: E }),
         ],
     });
 }
