@@ -38,6 +38,7 @@
 
 .reactionBtn_f8896c.active_f8896c,
 .reactionBtn_f8896c.visible_f8896c,
+.reactions_f8896c:focus-within .reactionBtn_f8896c,
 .reactions_f8896c:hover .reactionBtn_f8896c {
     opacity: 1
 }
@@ -303,6 +304,7 @@
 
 .reactionBtn__23977.active__23977,
 .reactionBtn__23977.visible__23977,
+.reactions__23977:focus-within .reactionBtn__23977,
 .reactions__23977:hover .reactionBtn__23977 {
     opacity: 1
 }
