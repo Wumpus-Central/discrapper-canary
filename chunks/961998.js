@@ -435,8 +435,8 @@ let e2 = new e1(eJ.h, {
 });
 var e3 = n(531685),
     e4 = n(583613);
-let e6 = "app-download-item",
-    e5 = "add-server-item";
+let e5 = "app-download-item",
+    e6 = "add-server-item";
 function e7() {
     return !1;
 }
@@ -444,10 +444,10 @@ function e8(e) {
     let t = ei.default.getMutableGuildStates();
     return (
         (e === eL.sFm.SERVER_DISCOVERY_BADGE && !e2.hasViewed(eL.sFm.SERVER_DISCOVERY_BADGE)) ||
-        (e !== e6 && e !== e5 && t[e ?? "null"]?.highImportanceMentionCount > 0)
+        (e !== e5 && e !== e6 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e9 = (0, e4.L_)((e, t, n) => ["null", ...t, ...e, e5, eL.sFm.E3_SERVER_DISCOVERY_BADGE, e6]),
+let e9 = (0, e4.L_)((e, t, n) => ["null", ...t, ...e, e6, eL.sFm.E3_SERVER_DISCOVERY_BADGE, e5]),
     te = a.forwardRef(function (e, t) {
         let n = (0, E.yK)([eY.Ay, eQ.A, ei.default], () =>
                 e9(eY.Ay.getGuildFolders(), eQ.A.getUnreadPrivateChannelIds(), ei.default.getStoreChangeSentinel()),
@@ -469,7 +469,7 @@ let e9 = (0, e4.L_)((e, t, n) => ["null", ...t, ...e, e5, eL.sFm.E3_SERVER_DISCO
 n(667532);
 var tt = n(868285),
     tn = n(763827),
-    ti = n(560952),
+    ti = n(534740),
     tr = n(778712),
     ta = n(812993),
     ts = n(442433),
@@ -1179,8 +1179,8 @@ function t4(e) {
         }),
     });
 }
-var t6 = n(565787),
-    t5 = n(791606),
+var t5 = n(565787),
+    t6 = n(791606),
     t7 = n(486020),
     t8 = n(184291);
 function t9(e) {
@@ -1192,7 +1192,7 @@ function t9(e) {
             children: (0, r.jsx)(U.Q, {
                 className: t8.o,
                 selected: t,
-                lowerBadge: (0, r.jsx)(ta.fk, { icon: (0, t6.k)(t5.A), disableColor: !0, className: t8._ }),
+                lowerBadge: (0, r.jsx)(ta.fk, { icon: (0, t5.k)(t6.A), disableColor: !0, className: t8._ }),
                 children: (0, r.jsx)(w.j, {
                     name: e.name,
                     onMouseEnter: function () {
@@ -1566,17 +1566,17 @@ function n4(e) {
         }),
     });
 }
-var n6 = n(573435),
-    n5 = n(32294);
+var n5 = n(573435),
+    n6 = n(32294);
 function n7(e) {
     let { className: t, isFolder: n } = e,
         i = (0, m.r)(I.A.modules.guildbar.AVATAR_SIZE);
-    return (0, r.jsx)(n6.Ay, {
-        mask: n6.Ay.Masks.SQUIRCLE,
-        className: l()(t, n5.OL, { [n5.lQ]: n }),
+    return (0, r.jsx)(n5.Ay, {
+        mask: n5.Ay.Masks.SQUIRCLE,
+        className: l()(t, n6.OL, { [n6.lQ]: n }),
         width: i,
         height: i,
-        children: (0, r.jsx)("div", { className: n5.ZU }),
+        children: (0, r.jsx)("div", { className: n6.ZU }),
     });
 }
 var n8 = n(114329),
@@ -2647,9 +2647,9 @@ function iW(e, t) {
             n.e("48948"),
             n.e("94427"),
             n.e("63244"),
+            n.e("76413"),
             n.e("32756"),
             n.e("64850"),
-            n.e("76413"),
             n.e("70104"),
             n.e("68214"),
             n.e("44761"),
@@ -2725,12 +2725,12 @@ function iW(e, t) {
             n.e("38601"),
             n.e("1243"),
             n.e("88393"),
+            n.e("15920"),
             n.e("18706"),
             n.e("872"),
             n.e("59797"),
             n.e("52531"),
             n.e("93336"),
-            n.e("15920"),
             n.e("68530"),
             n.e("36894"),
             n.e("16084"),
@@ -2820,8 +2820,9 @@ function iW(e, t) {
             n.e("6410"),
             n.e("61309"),
             n.e("94529"),
+            n.e("95210"),
             n.e("30313"),
-            n.e("57683"),
+            n.e("98415"),
             n.e("21300"),
             n.e("53584"),
             n.e("17699"),
@@ -3138,8 +3139,8 @@ function i4(e) {
               route: eL.BVt.GUILD_MEMBER_VERIFICATION(n),
           });
 }
-var i6 = n(295783);
-function i5(e) {
+var i5 = n(295783);
+function i6(e) {
     let { onActivate: t, children: n } = e,
         i = a.useRef(null),
         s = (0, E.bG)([io.A], () => io.A.hasJoinRequestCoackmark()),
@@ -3153,7 +3154,7 @@ function i5(e) {
             s && s !== o && (t(), d.current?.ref?.current?.layerRef?.current?.updatePosition());
         }, [d, s, o, t]),
         (0, r.jsxs)("div", {
-            className: i6.kL,
+            className: i5.kL,
             children: [
                 (0, r.jsx)(iz.Y, {
                     ref: d,
@@ -3161,13 +3162,13 @@ function i5(e) {
                     shouldShow: s,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
-                            className: i6.jC,
+                            className: i5.jC,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: i6.Bm,
+                                    className: i5.Bm,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: i6.q3,
+                                            className: i5.q3,
                                             children: [
                                                 (0, r.jsx)(iq.D, {
                                                     variant: "heading-md/medium",
@@ -3189,14 +3190,14 @@ function i5(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: i6.ed }),
+                                (0, r.jsx)("div", { className: i5.ed }),
                             ],
                         }),
                     position: "right",
                     animationPosition: "right",
                     align: "top",
                     spacing: 16,
-                    children: (e) => (0, r.jsx)("div", { ...e, className: i6.Ne, ref: i }),
+                    children: (e) => (0, r.jsx)("div", { ...e, className: i5.Ne, ref: i }),
                 }),
                 n,
             ],
@@ -3229,7 +3230,7 @@ function i7(e) {
     }, [n, u, d, s]),
     0 === o.length)
         ? null
-        : (0, r.jsx)(i5, {
+        : (0, r.jsx)(i6, {
               onActivate: t,
               children: (0, r.jsx)(ii, {
                   folderNode: c,
@@ -3242,7 +3243,7 @@ function i7(e) {
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
-                      className: i6.rH,
+                      className: i5.rH,
                       children: (0, r.jsx)(iX.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
