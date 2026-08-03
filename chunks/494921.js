@@ -14,26 +14,27 @@ var r = n(192308),
     E = n(652215),
     A = n(375708);
 let h = function (e) {
-    let { handleLearnMore: t, kestrelTreated: n, effectiveMaxSize: r, ...a } = e,
-        s = (0, l.bG)([o.A], () => o.A.getGuildId()),
-        h = (0, c.Iu)({
-            guildId: s,
-            maxSize: r,
+    let { handleLearnMore: t, kestrelBeta: n, kestrelGA: r, effectiveMaxSize: a, ...s } = e,
+        h = (0, l.bG)([o.A], () => o.A.getGuildId()),
+        I = (0, c.Iu)({
+            guildId: h,
+            maxSize: a,
+            hideLearnMore: !0 === r,
             onClick: () => {
                 window.open(u.A.getArticleURL(E.MVz.NITRO_FAQ), "_blank");
             },
         }),
-        I = (0, d.TM)()
+        f = (0, d.TM)()
             ? "https://cdn.discordapp.com/assets/content/951fb14c4f181e23caa1730b070ffd1b04bf13850e686221fc596c3d7fd7b234.mov"
             : "https://cdn.discordapp.com/assets/content/cedc17f03dee621e55eb1b301c68372f08ac64f32ce656ac5b9cbc0fc0d149f0.webm";
     return (0, i.jsx)(_.A, {
         title: A.intl.string(A.t["9C+41g"]),
-        subtitle: h,
-        graphic: { type: "video", src: I, loop: !0, loopAt: 2.1 },
+        subtitle: I,
+        graphic: { type: "video", src: f, loop: !0, loopAt: 2.1 },
         secondaryCTA: A.intl.string(A.t.ZnqyZ2),
         onSecondaryClick: t,
         badgeType: !0 === n ? "beta" : null,
-        ...a,
+        ...s,
     });
 };
 var I = n(976860),
@@ -43,34 +44,36 @@ function p(e) {
         title: t,
         help: n,
         showPremiumUpsell: r,
-        kestrelTreated: l,
-        effectiveMaxSize: o,
-        transitionState: d,
-        onClose: c,
+        kestrelBeta: l,
+        kestrelGA: o,
+        effectiveMaxSize: d,
+        transitionState: c,
+        onClose: u,
     } = e;
     if (r)
         return (0, i.jsx)(h, {
-            transitionState: d,
-            onClose: c,
+            transitionState: c,
+            onClose: u,
             handleLearnMore: function () {
                 (0, s.A)(),
-                    c(),
+                    u(),
                     f.default.track(E.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_section: E.JJy.FILE_UPLOAD_UPSELL_MODAL,
                         location_object: E.ZSU.NAVIGATION_LINK,
                     }),
                     (0, I.pX)(E.BVt.APPLICATION_STORE);
             },
-            kestrelTreated: l,
-            effectiveMaxSize: o,
+            kestrelBeta: l,
+            kestrelGA: o,
+            effectiveMaxSize: d,
         });
-    let u = !0 === l ? A.intl.string(A.t.bRYgjH) : t;
+    let _ = !0 === l ? A.intl.string(A.t.bRYgjH) : t;
     return (0, i.jsx)(a.Modal, {
-        title: u,
+        title: _,
         subtitle: n,
-        transitionState: d,
-        actions: [{ text: A.intl.string(A.t["NX+WJN"]), onClick: c, variant: "primary" }],
-        onClose: c,
+        transitionState: c,
+        actions: [{ text: A.intl.string(A.t["NX+WJN"]), onClick: u, variant: "primary" }],
+        onClose: u,
     });
 }
 let T = "UPLOAD_ERROR_MODAL_KEY";

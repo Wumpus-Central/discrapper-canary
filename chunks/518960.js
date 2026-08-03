@@ -56,7 +56,8 @@ function O(e, t, n) {
                 help: (0, m.WQ)(i, r, l.enabled ? o : void 0),
                 showPremiumUpsell: !(0, T.YE)(i, N.PremiumTypes.TIER_2),
                 fileSize: h,
-                kestrelTreated: l.enabled,
+                kestrelBeta: l.enabled && !l.isGA,
+                kestrelGA: l.isGA,
                 effectiveMaxSize: l.enabled ? o : void 0,
             });
         return;
@@ -64,7 +65,8 @@ function O(e, t, n) {
     (0, s.openUploadError)({
         title: C.intl.string(C.t["/tGlcj"]),
         help: C.intl.formatToPlainString(C.t.tUOJdH, { maxSize: p.Hb(p.bB()) }),
-        kestrelTreated: l.enabled,
+        kestrelBeta: l.enabled && !l.isGA,
+        kestrelGA: l.isGA,
     });
 }
 async function R(e, t, n) {

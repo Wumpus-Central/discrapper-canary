@@ -1,35 +1,35 @@
 "use strict";
 n.d(t, {
     Aw: () => C,
-    GD: () => A,
-    Hb: () => I,
-    Iu: () => v,
-    SH: () => y,
-    TX: () => g,
-    VE: () => E,
-    bB: () => N,
+    GD: () => T,
+    Hb: () => m,
+    Iu: () => R,
+    SH: () => N,
+    TX: () => p,
+    VE: () => I,
+    bB: () => O,
     o2: () => S,
-    ww: () => p,
+    ww: () => h,
 });
 var i = n(796873),
     r = n.n(i),
-    s = n(735438),
-    a = n.n(s),
-    o = n(228756),
-    l = n(71393),
-    u = n(287809),
+    a = n(435558),
+    s = n.n(a),
+    l = n(228756),
+    o = n(71393),
+    d = n(287809),
     c = n(255438),
-    d = n(428262),
+    u = n(428262),
     _ = n(652215),
-    h = n(788868),
-    f = n(375708);
-function p(e, t) {
-    return e instanceof File ? e : E(e.data.buffer, e.filename, t ?? "text/plain");
+    E = n(202541),
+    A = n(375708);
+function h(e, t) {
+    return e instanceof File ? e : I(e.data.buffer, e.filename, t ?? "text/plain");
 }
-function E(e, t, n) {
+function I(e, t, n) {
     return new File([e], t, { type: n });
 }
-let m = [
+let f = [
     { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
     { reType: /^image\/svg\+xml/, klass: "webcode" },
     { reType: /^image\//, klass: "image" },
@@ -48,43 +48,43 @@ let m = [
     { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" },
     { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
 ];
-function g(e) {
-    return A(e.name, e.type);
+function p(e) {
+    return T(e.name, e.type);
 }
-function A(e, t) {
+function T(e, t) {
     e = e?.toLowerCase() ?? "";
-    let n = a().find(m, (n) =>
+    let n = s().find(f, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function I(e) {
+function m(e) {
     return r().filesize(e);
 }
-let T = [
-    [_.GuildFeatures.MAX_FILE_SIZE_250_MB, h.q9],
-    [_.GuildFeatures.MAX_FILE_SIZE_100_MB, h.w6],
-    [_.GuildFeatures.MAX_FILE_SIZE_50_MB, h.eZ],
+let g = [
+    [_.GuildFeatures.MAX_FILE_SIZE_250_MB, E.q9],
+    [_.GuildFeatures.MAX_FILE_SIZE_100_MB, E.w6],
+    [_.GuildFeatures.MAX_FILE_SIZE_50_MB, E.eZ],
 ];
 function S(e) {
-    let t = u.default.getCurrentUser(),
-        n = d.Ay.getUserMaxFileSize(t);
+    let t = d.default.getCurrentUser(),
+        n = u.Ay.getUserMaxFileSize(t);
     if (null == e) return n;
-    let i = l.A.getGuild(e);
+    let i = o.A.getGuild(e);
     return Math.max(
         null != i
             ? (function (e) {
-                  let { enabled: t } = o.E.getConfig({ location: "getGuildMaxFileSize" });
-                  return T.reduce((n, i) => {
-                      let [r, s] = i;
-                      return t && r === _.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(r) && s > n ? s : n;
+                  let { enabled: t } = l.E.getConfig({ location: "getGuildMaxFileSize" });
+                  return g.reduce((n, i) => {
+                      let [r, a] = i;
+                      return t && r === _.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(r) && a > n ? a : n;
                   }, _.TbF);
               })(i)
             : _.TbF,
         n,
     );
 }
-function y(e, t) {
+function N(e, t) {
     let n = S(t);
     return Array.from(e).some((e) => e.size > n);
 }
@@ -94,16 +94,18 @@ function C(e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > N()
+        })(e) > O()
     );
 }
-function N() {
-    let e = u.default.getCurrentUser();
+function O() {
+    let e = d.default.getCurrentUser();
     return null != e && e.isStaff(), 524288e3;
 }
-function v(e) {
-    let { guildId: t, onClick: n, maxSize: i } = e,
-        r = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, c.Xq)(h.f3 / 1024, { useKibibytes: !0 });
-    return f.intl.format(f.t.tRuxk9, { maxSize: r, premiumMaxSize: s, onClick: n });
+function R(e) {
+    let { guildId: t, onClick: n, maxSize: i, hideLearnMore: r } = e,
+        a = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
+        s = (0, c.Xq)(E.f3 / 1024, { useKibibytes: !0 });
+    return !0 === r
+        ? A.intl.format(A.t["+R2TzS"], { maxSize: a, premiumMaxSize: s })
+        : A.intl.format(A.t.tRuxk9, { maxSize: a, premiumMaxSize: s, onClick: n });
 }
