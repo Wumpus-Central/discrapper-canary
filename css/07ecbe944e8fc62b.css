@@ -161,6 +161,23 @@
     width: 100%
 }
 
+.modalTeaser_e99fef {
+    align-self: stretch;
+    flex-direction: column;
+    padding-top: var(--space-24)
+}
+
+.modalTeaser_e99fef,
+.modalTeaserTitle_e99fef {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.modalTeaserTitle_e99fef {
+    align-items: center;
+    color: var(--text-default)
+}
+
 .footerClaimButton_e99fef {
     box-sizing: border-box;
     width: 100%

@@ -72,6 +72,10 @@
     color: var(--text-default)
 }
 
+.locationText__4591d em {
+    font-style: italic
+}
+
 .externalLocation__4591d {
     cursor: auto;
     display: flex;

@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { Ay: () => ey, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
+n.d(t, { Ay: () => eD, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
 var r = n(91871),
     a = n.n(r),
     s = n(435558),
@@ -30,20 +30,31 @@ function h(e, t) {
     return r < a ? -1 : +(r > a);
 }
 var I = n(626584),
-    f = n(159273),
-    p = n(892462),
-    T = n(202776),
-    m = n(473529),
-    g = n(69945),
-    S = n(796774),
-    N = n(209932),
-    C = n(147472),
-    O = n(361670),
-    R = n(931959),
-    L = n(750385),
-    y = n(194004),
+    f = n(159273);
+(0, n(945810).mj)({
+    name: "2026-07-game-mentions-v2-mobile",
+    kind: "user",
+    defaultConfig: { enabled: !1, showNewTag: !1, combineMentionAutocomplete: !1 },
+    variations: {
+        0: { enabled: !1, showNewTag: !1, combineMentionAutocomplete: !1 },
+        1: { enabled: !0, showNewTag: !0, combineMentionAutocomplete: !1 },
+        2: { enabled: !0, showNewTag: !1, combineMentionAutocomplete: !1 },
+        3: { enabled: !0, showNewTag: !1, combineMentionAutocomplete: !0 },
+    },
+});
+var p = n(202776),
+    T = n(473529),
+    m = n(69945),
+    g = n(796774),
+    S = n(209932),
+    N = n(147472),
+    C = n(361670),
+    O = n(931959),
+    R = n(750385),
+    L = n(194004),
     D = n(695633),
-    v = n(152007),
+    y = n(152007),
+    v = n(885386),
     b = n(594061),
     M = n(95701),
     P = n(34457),
@@ -317,7 +328,7 @@ let eL = (0, z.L_)((e, t, n) => {
             { channelsByRecipientId: i, recipientsById: r, recipients: a }
         );
     }),
-    ey = {
+    eD = {
         queryFriends(e) {
             let { query: t, limit: n = 10, _fuzzy: i = !0, filter: r } = e;
             return eC({
@@ -517,7 +528,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         (1 !== r.length || r[0].isFullMatch || o) &&
                         ((i = e.type),
                         h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
-                        e.isThread() && (e.isActiveThread() || (c -= 3), v.A.hasJoined(e.id) || (c -= 5)),
+                        e.isThread() && (e.isActiveThread() || (c -= 3), y.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
                             c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
                             c >= 7 ? 10 : 7,
@@ -714,7 +725,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     request: I,
                     allowSnowflake: f = !1,
                 } = e,
-                T = s
+                p = s
                     ? (u && null != n.guild_id
                           ? this.queryGuildUsers({
                                 guildId: n.guild_id,
@@ -742,10 +753,10 @@ let eL = (0, z.L_)((e, t, n) => {
                           };
                       })
                     : [],
-                m = T.length,
-                g = t.toLowerCase(),
-                S = [];
-            if (m < h && d) {
+                T = p.length,
+                m = t.toLowerCase(),
+                g = [];
+            if (T < h && d) {
                 let e = n.getGuildId(),
                     r = F.A.getGuild(e);
                 if (null != r) {
@@ -754,29 +765,30 @@ let eL = (0, z.L_)((e, t, n) => {
                             let { mentionable: n, name: r, id: s } = t;
                             return (
                                 (n || i || _) &&
-                                (a()(g, r.toLowerCase()) || (f && g === s)) &&
+                                (a()(m, r.toLowerCase()) || (f && m === s)) &&
                                 s !== ee.default.castGuildIdAsEveryoneGuildRoleId(e)
                             );
                         })
                         .value();
-                    (S = (0, o.Ht)(n, t, { keys: ["name"] }).slice(0, h - m)), (m += S.length);
+                    (g = (0, o.Ht)(n, t, { keys: ["name"] }).slice(0, h - T)), (T += g.length);
                 }
             }
-            let N = [];
-            function C(e) {
+            let S = [];
+            function N(e) {
                 !c ||
                     null == e ||
-                    ((((m < h || 0 === g.length) && a()(g, e.test)) || g === e.test) &&
-                        (m >= h && (S.length > 0 ? S.pop() : T.length > 0 && T.pop()), N.push(e), (m += 1)));
+                    ((((T < h || 0 === m.length) && a()(m, e.test)) || m === e.test) &&
+                        (T >= h && (g.length > 0 ? g.pop() : p.length > 0 && p.pop()), S.push(e), (T += 1)));
             }
-            !n.isPrivate() &&
-                i &&
-                d &&
-                (m < h && a()(g, ec().test) && (N.push(ec()), (m += 1)),
-                r && m < h && a()(g, eu().test) && (N.push(eu()), (m += 1)));
-            let O = (0, p._)("mention autocomplete");
             return (
-                O.enabled && !O.combineMentionAutocomplete && C(e_?.()), C(eE?.()), { users: T, globals: N, roles: S }
+                !n.isPrivate() &&
+                    i &&
+                    d &&
+                    (T < h && a()(m, ec().test) && (S.push(ec()), (T += 1)),
+                    r && T < h && a()(m, eu().test) && (S.push(eu()), (T += 1))),
+                v.BQ.getSetting() && N(e_?.()),
+                N(eE?.()),
+                { users: p, globals: S, roles: g }
             );
         },
         queryGuildMentionResults(e) {
@@ -843,9 +855,9 @@ let eL = (0, z.L_)((e, t, n) => {
                     containQuery: RegExp(J.A.escape(i), "i"),
                     queryLower: i,
                 },
-                a = (0, m.K)(n.id) && !n.features.has(E.GuildFeatures.HUB),
+                a = (0, T.K)(n.id) && !n.features.has(E.GuildFeatures.HUB),
                 s = n.features.has(E.GuildFeatures.COMMUNITY),
-                l = (0, T.u)(n) && n.features.has(E.GuildFeatures.COMMUNITY),
+                l = (0, p.u)(n) && n.features.has(E.GuildFeatures.COMMUNITY),
                 o = [
                     { id: er.T4.SERVER_GUIDE, name: ea.intl.string(ea.t.VbpLyU) },
                     { id: er.T4.CHANNEL_BROWSER, name: ea.intl.string(ea.t.et6wav) },
@@ -937,24 +949,24 @@ let eL = (0, z.L_)((e, t, n) => {
                     o = (0, et.sS)(e),
                     d = RegExp(`^${J.A.escape(o)}`, "i"),
                     c = RegExp(`${J.A.escape(o)}`, "i");
-                L.A.getStickerMetadataArrays().forEach((l) => {
+                R.A.getStickerMetadataArrays().forEach((l) => {
                     l.forEach((l, o) => {
                         let u = 0,
                             _ = null,
-                            E = L.A.getStickerById(o);
-                        if (null == E || !i(E, (0, O.W$)(E, r, n))) return;
+                            E = R.A.getStickerById(o);
+                        if (null == E || !i(E, (0, C.W$)(E, r, n))) return;
                         for (let n of l) {
                             let { type: i, value: r } = n,
                                 a = (function (e) {
                                     switch (e) {
-                                        case y.cG.STICKER_NAME:
+                                        case L.cG.STICKER_NAME:
                                             return 11;
-                                        case y.cG.CORRELATED_EMOJI:
+                                        case L.cG.CORRELATED_EMOJI:
                                             return 6;
-                                        case y.cG.TAG:
+                                        case L.cG.TAG:
                                             return 1;
-                                        case y.cG.GUILD_NAME:
-                                        case y.cG.PACK_NAME:
+                                        case L.cG.GUILD_NAME:
+                                        case L.cG.PACK_NAME:
                                             return 8;
                                         default:
                                             return 1;
@@ -966,13 +978,13 @@ let eL = (0, z.L_)((e, t, n) => {
                                     ? (s = 10 * a)
                                     : d.test(r)
                                       ? (s = 7 * a)
-                                      : (i === y.cG.GUILD_NAME || i === y.cG.PACK_NAME || i === y.cG.STICKER_NAME) &&
+                                      : (i === L.cG.GUILD_NAME || i === L.cG.PACK_NAME || i === L.cG.STICKER_NAME) &&
                                         c.test(r) &&
                                         (s = 5 * a)
                                 : r === e && ((s = 10 * a), (_ = r)),
                                 s > u && ((u = s), (_ = r));
                         }
-                        let A = R.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                        let A = O.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
                         null != A && (u *= A / 100),
                             u > 0 &&
                                 null != _ &&
@@ -991,17 +1003,17 @@ let eL = (0, z.L_)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = K.default.getCurrentUser();
-            N.A.isFetching() || N.A.hasFetchedAllSounds() || (0, S.E7)(), b.bW.loadIfNecessary();
-            let i = Array.from(N.A.getSounds().values()).reduce(
+            S.A.isFetching() || S.A.hasFetchedAllSounds() || (0, g.E7)(), b.bW.loadIfNecessary();
+            let i = Array.from(S.A.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {
-                        (0, g.A)(n, t?.guild_id, t?.id) && e.push(n);
+                        (0, m.A)(n, t?.guild_id, t?.id) && e.push(n);
                     }),
                     e
                 ),
                 [],
             );
-            return (0, C.lG)(e, i, n, t);
+            return (0, N.lG)(e, i, n, t);
         },
         matchSentinel: (e, t, n) => !eo.test(t) && e === n,
         hasSameRoleAsUsername(e, t) {

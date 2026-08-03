@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => B });
+n.d(t, { A: () => V });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -14,72 +14,71 @@ var i = n(477900),
     A = n(659280),
     h = n(579940),
     I = n(915089),
-    f = n(892462),
-    p = n(750506),
-    T = n(513609),
-    m = n(71393),
-    g = n(597184),
-    S = n(105330),
-    N = n(265431),
-    C = n(459016),
-    O = n(861382),
-    R = n(355622),
-    L = n(820066),
-    y = n(696451),
+    f = n(750506),
+    p = n(513609),
+    T = n(71393),
+    m = n(597184),
+    g = n(105330),
+    S = n(265431),
+    N = n(459016),
+    C = n(861382),
+    O = n(355622),
+    R = n(820066),
+    L = n(696451),
     D = n(576705),
-    v = n(351906),
-    b = n(287809),
-    M = n(31498),
-    P = n(887129),
-    U = n(741918),
-    w = n(267102),
-    G = n(652215),
-    x = n(307731);
-let k = new Map([["thread", new Set(["name"])]]);
-var F = n(5867),
-    V = n(175916);
-let B = r.forwardRef(function (e, t) {
-    let { channel: n, type: a, editorHeight: B, onVisibilityChange: H, editorScrollerRef: j, barsHeight: W } = e,
-        Y = (0, I.GV)(),
-        K = (0, o.bG)([m.A], () => m.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
-        $ = r.useRef(null),
-        [z, q, Z] = (function (e, t, n) {
+    y = n(351906),
+    v = n(287809),
+    b = n(31498),
+    M = n(887129),
+    P = n(741918),
+    U = n(267102),
+    w = n(652215),
+    G = n(307731);
+let x = new Map([["thread", new Set(["name"])]]);
+var k = n(5867),
+    F = n(175916);
+let V = r.forwardRef(function (e, t) {
+    let { channel: n, type: a, editorHeight: V, onVisibilityChange: B, editorScrollerRef: H, barsHeight: j } = e,
+        W = (0, I.GV)(),
+        Y = (0, o.bG)([T.A], () => T.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+        K = r.useRef(null),
+        [$, z, q] = (function (e, t, n) {
             let { channel: i, type: a } = e,
-                [s, l] = r.useState(() => (0, M.Ur)()),
-                d = (0, N.A)(),
-                c = (0, o.bG)([y.Ay, b.default], () => {
-                    let e = b.default.getCurrentUser();
-                    return (null != i.guild_id && null != e ? y.Ay.getMember(i.guild_id, e.id)?.isPending : null) ?? !1;
+                [s, l] = r.useState(() => (0, b.Ur)()),
+                d = (0, S.A)(),
+                c = (0, o.bG)([L.Ay, v.default], () => {
+                    let e = v.default.getCurrentUser();
+                    return (null != i.guild_id && null != e ? L.Ay.getMember(i.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: u, hidePersonalInformation: _ } = (0, o.cf)(
-                    [D.A, v.A],
+                    [D.A, y.A],
                     () => ({
                         canMentionEveryone:
-                            i.isPrivate() || c || a === R.oU.RULES_INPUT || D.A.can(G.xBc.MENTION_EVERYONE, i),
-                        hidePersonalInformation: v.A.hidePersonalInformation,
+                            i.isPrivate() || c || a === O.oU.RULES_INPUT || D.A.can(w.xBc.MENTION_EVERYONE, i),
+                        hidePersonalInformation: y.A.hidePersonalInformation,
                     }),
                     [i, a, c],
                 ),
-                { activeCommand: E, activeCommandOption: A } = (0, o.cf)([O.A], () => ({
-                    activeCommand: O.A.getActiveCommand(i.id),
-                    activeCommandOption: O.A.getActiveOption(i.id),
+                { activeCommand: E, activeCommandOption: A } = (0, o.cf)([C.A], () => ({
+                    activeCommand: C.A.getActiveCommand(i.id),
+                    activeCommandOption: C.A.getActiveOption(i.id),
                 })),
                 h = r.useMemo(
                     () =>
                         E?.untranslatedName != null &&
                         A?.name != null &&
-                        (k.get(E.untranslatedName)?.has(A.name) ?? !1),
+                        (x.get(E.untranslatedName)?.has(A.name) ?? !1),
                     [E?.untranslatedName, A?.name],
                 ),
                 I = (function (e) {
                     let { navId: t, scrollerRef: n, state: i, onFocus: a } = e,
-                        { renderWindow: s } = r.useContext(w.Ay);
+                        { renderWindow: s } = r.useContext(U.Ay);
                     function l(e, t, r) {
                         if ((n.current?.scrollToTop(), e && null != i.query)) {
                             let e = i.query.typeInfo.focusMode,
                                 n =
-                                    e !== g.e.MANUAL &&
-                                    (e !== g.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
+                                    e !== m.e.MANUAL &&
+                                    (e !== m.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
                             i.isVisible && (!0 !== t || !1 !== n) && !0 !== r
                                 ? (d.setFocus("0"), a?.(0))
                                 : (d.setFocus(null), a?.(null));
@@ -91,10 +90,10 @@ let B = r.forwardRef(function (e, t) {
                             d.setFocus(e.toString()), a?.(e);
                         }
                     }
-                    let d = (0, P.Ay)({
+                    let d = (0, M.Ay)({
                             id: t,
                             isEnabled: i.isVisible,
-                            orientation: U.Gl.VERTICAL,
+                            orientation: P.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let i = s.document.querySelector(e);
@@ -115,12 +114,12 @@ let B = r.forwardRef(function (e, t) {
                         }, [i.query?.type, i.query?.queryText, i.query?.isLoading, i.isVisible, i.isInitialAfterError]),
                         d
                     );
-                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => S.setSelectedIndex(e) }),
+                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => k.setSelectedIndex(e) }),
                 f = e.editorRef.current?.getCurrentWord(),
                 p = e.editorRef.current?.getSlateEditor(),
                 T = null;
-            null != p && (T = L.VW.getSelectedParentOfType(p, M.mk)?.[0] ?? null);
-            let m = {
+            null != p && (T = R.VW.getSelectedParentOfType(p, b.mk)?.[0] ?? null);
+            let g = {
                     ...e,
                     navigator: I,
                     activeCommand: E,
@@ -129,138 +128,136 @@ let B = r.forwardRef(function (e, t) {
                     canMentionUsers: a.users?.allowMentioning ?? !1,
                     canMentionEveryone: u,
                     hidePersonalInformation: _,
-                    hideMentionDescription: a === R.oU.RULES_INPUT,
+                    hideMentionDescription: a === O.oU.RULES_INPUT,
                     emojiIntention:
-                        a === R.oU.RULES_INPUT
-                            ? x.EmojiIntention.COMMUNITY_CONTENT
+                        a === O.oU.RULES_INPUT
+                            ? G.EmojiIntention.COMMUNITY_CONTENT
                             : h
-                              ? x.EmojiIntention.NO_CUSTOM_EMOJI
-                              : x.EmojiIntention.CHAT,
+                              ? G.EmojiIntention.NO_CUSTOM_EMOJI
+                              : G.EmojiIntention.CHAT,
                     currentWord: f?.word ?? "",
                     currentWordIsAtStart: f?.isAtStart === !0,
                     optionText:
                         null != A
-                            ? (0, C.getString)(
+                            ? (0, N.getString)(
                                   { [A.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   A.name,
                               )
                             : "",
                 },
-                [S] = r.useState(() => new M.Ay(m));
+                [k] = r.useState(() => new b.Ay(g));
             return (
                 r.useEffect(() => {
-                    S.updateProps(m);
+                    k.updateProps(g);
                 }),
-                r.useImperativeHandle(t, () => S, [S]),
+                r.useImperativeHandle(t, () => k, [k]),
                 r.useEffect(() => {
                     function e(e) {
                         return l(e);
                     }
                     return (
-                        S.on("change", e),
-                        S.on("update", d),
+                        k.on("change", e),
+                        k.on("update", d),
                         () => {
-                            S.off("change", e), S.off("update", d);
+                            k.off("change", e), k.off("update", d);
                         }
                     );
-                }, [d, S]),
+                }, [d, k]),
                 r.useEffect(() => {
                     let e = s.query?.typeInfo.stores;
                     if (null != e) {
                         function t() {
-                            return S.queryResults();
+                            return k.queryResults();
                         }
                         for (let n of e) n.addChangeListener(t);
                         return () => {
                             for (let n of e) n.removeChangeListener(t);
                         };
                     }
-                }, [S, s.query?.typeInfo]),
-                [s, S, I]
+                }, [k, s.query?.typeInfo]),
+                [s, k, I]
             );
-        })({ ...e, guild: K }, t, $),
-        X = a.autocomplete?.forceChatLayer ? T.Ay : p.Ay,
-        Q = (0, A.aI)(z.selectedIndex);
-    (0, h.gf)(Y, z.isVisible, Q);
-    let J = (0, S.l)({ editorHeight: B, type: a, state: z }),
-        ee = (0, o.bG)([_.Ay], () => {
+        })({ ...e, guild: Y }, t, K),
+        Z = a.autocomplete?.forceChatLayer ? p.Ay : f.Ay,
+        X = (0, A.aI)($.selectedIndex);
+    (0, h.gf)(W, $.isVisible, X);
+    let Q = (0, g.l)({ editorHeight: V, type: a, state: $ }),
+        J = (0, o.bG)([_.Ay], () => {
             let e = _.Ay.getSelfEmbeddedActivityForChannel(n.id),
                 t = _.Ay.getActivityPanelMode();
-            return (0, u.AX)(n) && null != e && (0, E.H)(e.location) === n.id && t === F.Gd.PANEL;
+            return (0, u.AX)(n) && null != e && (0, E.H)(e.location) === n.id && t === k.Gd.PANEL;
         }, [n]),
-        et = r.useMemo(
+        ee = r.useMemo(
             () =>
-                J?.top == null && J?.left == null && J?.bottom == null && J?.right == null ? "" : String(Date.now()),
-            [J?.top, J?.left, J?.bottom, J?.right],
+                Q?.top == null && Q?.left == null && Q?.bottom == null && Q?.right == null ? "" : String(Date.now()),
+            [Q?.top, Q?.left, Q?.bottom, Q?.right],
         );
     if (
         (r.useEffect(() => {
-            H(z.isVisible);
-        }, [H, z.isVisible]),
-        !z.isVisible || null == z.query || void 0 === J)
+            B($.isVisible);
+        }, [B, $.isVisible]),
+        !$.isVisible || null == $.query || void 0 === Q)
     )
         return null;
-    let en =
-        z.query.typeInfo.renderResults({
-            results: z.query.results,
-            selectedIndex: z.selectedIndex,
+    let et =
+        $.query.typeInfo.renderResults({
+            results: $.query.results,
+            selectedIndex: $.selectedIndex,
             channel: n,
-            guild: K,
-            query: z.query.queryText,
-            options: z.query.options,
-            onHover: (e) => q.onResultHover(e),
-            onClick: (e) => q.onResultClick(e),
+            guild: Y,
+            query: $.query.queryText,
+            options: $.query.options,
+            onHover: (e) => z.onResultHover(e),
+            onClick: (e) => z.onResultClick(e),
         }) ?? null;
-    if (null == en) return null;
-    let ei = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === e.position, [V.mO]: ee },
-        er = (0, f._)("channel autocomplete"),
-        ea = z.query?.type === g.DB.MENTIONS,
-        es = er.enabled && er.combineMentionAutocomplete && ea ? 670 : 490;
-    null != J && (es = a.autocomplete?.small ? 200 : z.query?.type === g.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let el = Math.max(B, j?.current?.clientHeight ?? 0),
-        eo = Math.min(0.5 * window.innerHeight, el);
-    es = Math.min(window.innerHeight - 120 - eo - (W ?? 0), es);
-    let ed = (0, i.jsx)(A.Ay, {
-        id: Y,
-        className: s()(V.nx, ei),
-        innerClassName: V.Fv,
+    if (null == et) return null;
+    let en = { [F.pK]: null == Q, [F.YB]: null != Q, [F.sQ]: null == Q && "bottom" === e.position, [F.mO]: J },
+        ei = 490;
+    null != Q && (ei = a.autocomplete?.small ? 200 : $.query?.type === m.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    let er = Math.max(V, H?.current?.clientHeight ?? 0),
+        ea = Math.min(0.5 * window.innerHeight, er);
+    ei = Math.min(window.innerHeight - 120 - ea - (j ?? 0), ei);
+    let es = (0, i.jsx)(A.Ay, {
+        id: W,
+        className: s()(F.nx, en),
+        innerClassName: F.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, i.jsx)(l.hD, {
-            navigator: Z,
+            navigator: q,
             children: (0, i.jsx)(l.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
                     return (0, i.jsx)(d.Ch, {
-                        id: Y,
+                        id: W,
                         ref: (e) => {
-                            (t.current = e?.getScrollerNode() ?? null), ($.current = e);
+                            (t.current = e?.getScrollerNode() ?? null), (K.current = e);
                         },
                         orientation: "vertical",
                         overflow: "auto",
                         ...n,
-                        className: V.XG,
-                        style: { maxHeight: es },
+                        className: F.XG,
+                        style: { maxHeight: ei },
                         role: "listbox",
-                        "aria-labelledby": (0, A.Sz)(Y),
-                        children: en,
+                        "aria-labelledby": (0, A.Sz)(W),
+                        children: et,
                     });
                 },
             }),
         }),
     });
-    return null != J
-        ? (0, i.jsx)(X, {
+    return null != Q
+        ? (0, i.jsx)(Z, {
               children: (0, i.jsx)(c.Q, {
                   targetRef: e.targetRef,
-                  overrideTargetRect: J,
-                  positionKey: et,
+                  overrideTargetRect: Q,
+                  positionKey: ee,
                   position: e.position ?? "top",
                   align: "left",
                   spacing: 8,
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
-                  children: () => ed,
+                  children: () => es,
               }),
           })
-        : ed;
+        : es;
 });

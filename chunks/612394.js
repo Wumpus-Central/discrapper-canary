@@ -2,8 +2,8 @@
 n.d(t, { AR: () => _, So: () => A, fh: () => h, uA: () => E });
 var i = n(95561),
     r = n(597184),
-    a = n(892462),
-    s = n(194004),
+    a = n(194004),
+    s = n(885386),
     l = n(174459),
     o = n(652215);
 let d = new Map(),
@@ -15,16 +15,9 @@ function u() {
     d.clear();
 }
 function _(e, t) {
-    let n,
-        i = (0, a._)("autocomplete_analytics");
-    if (i.enabled) {
-        if (e === r.DB.GAME) n = "game_mention_autocomplete";
-        else {
-            if (e !== r.DB.MENTIONS || !i.combineMentionAutocomplete || !t.mentions.otherGlobals) return;
-            n = "mention_autocomplete";
-        }
-        d.set(n, (d.get(n) ?? 0) + 1), null == c && (c = setTimeout(u, 1e3));
-    }
+    if (!s.BQ.getSetting() || e !== r.DB.GAME) return;
+    let n = "game_mention_autocomplete";
+    d.set(n, (d.get(n) ?? 0) + 1), null == c && (c = setTimeout(u, 1e3));
 }
 function E(e, t, n) {
     l.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
@@ -59,11 +52,11 @@ function h(e) {
         replaced: i,
         source: (function (e) {
             switch (e) {
-                case s.D6.AUTOCOMPLETE:
+                case a.D6.AUTOCOMPLETE:
                     return "autocomplete";
-                case s.D6.STICKER_PICKER:
+                case a.D6.STICKER_PICKER:
                     return "picker";
-                case s.D6.BUILT_IN_INTEGRATION:
+                case a.D6.BUILT_IN_INTEGRATION:
                     return "built_in_integration";
                 default:
                     return null;

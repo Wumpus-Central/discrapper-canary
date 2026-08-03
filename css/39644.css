@@ -57,6 +57,10 @@
     white-space: nowrap
 }
 
+.channelDescription_da5e8d em {
+    font-style: italic
+}
+
 .guildBadge_da5e8d {
     flex-shrink: 0
 }
