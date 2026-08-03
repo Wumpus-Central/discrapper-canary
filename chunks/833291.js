@@ -28,8 +28,8 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     O = /^\/channels\/([0-9]+)\/shop$/,
     R = /^\/quests\/([0-9-]+)\/?$/,
     L = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
-    y = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
-    D = /^\/oauth2\/authorize/,
+    D = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
+    y = /^\/oauth2\/authorize/,
     v = /^#itemSkuId=([0-9]+)$/,
     b = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     M = B(window.GLOBAL_ENV.INVITE_HOST),
@@ -113,6 +113,7 @@ function $(e) {
                 primaryHostRemainingPath: A,
             } = Y(s);
             if (null == e || null == e.pathname) continue;
+            let R = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function r(e, i) {
                 t.has(i) || (t.add(i), n.push({ type: e, code: i, url: s }));
             }
@@ -122,68 +123,68 @@ function $(e) {
                 r(E.I.INVITE, t);
             }
             _?.match(I) != null && r(E.I.TEMPLATE, _.substring(1));
-            let R = A?.match(p);
-            if (null != R) {
-                let t = R[1].toUpperCase();
+            let b = A?.match(p);
+            if (null != b) {
+                let t = b[1].toUpperCase();
                 if (t === E.I.INVITE) {
                     if (s.includes("\\")) continue;
-                    let t = (0, o.fB)(R[2], e.search);
+                    let t = (0, o.fB)(b[2], e.search);
                     r(E.I.INVITE, t);
-                } else r(t, R[2]);
+                } else r(t, b[2]);
             }
             A?.match(f) != null && r(E.I.CHANNEL_LINK, A.replace("/channels/", ""));
-            let b = (function (e) {
+            let M = (function (e) {
                 if (null == e) return null;
                 let t = e.match(T);
                 return null != t && t.length >= 4 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
             })(e.pathname);
             if (
-                (null != b &&
+                (null != M &&
                     r(
                         E.I.EVENT,
-                        `${b.guildId}-${b.guildEventId}` + (null != b.recurrenceId ? `-${b.recurrenceId}` : ""),
+                        `${M.guildId}-${M.guildEventId}` + (null != M.recurrenceId ? `-${M.recurrenceId}` : ""),
                     ),
-                null != A?.match(D) && null != e.query)
+                null != A?.match(y) && null != R)
             ) {
-                let t = (0, c._)(e.query),
-                    n = t.clientId;
-                null == n ||
-                    "" === n ||
-                    t.scopes?.some((e) => e !== a.F.APPLICATIONS_COMMANDS) ||
-                    r(E.I.APP_OAUTH2_LINK, n);
+                let e = (0, c._)(R),
+                    t = e.clientId;
+                null == t ||
+                    "" === t ||
+                    e.scopes?.some((e) => e !== a.F.APPLICATIONS_COMMANDS) ||
+                    r(E.I.APP_OAUTH2_LINK, t);
             }
-            let M = A?.match(m);
-            if (null != M) {
-                let e = M[2];
+            let P = A?.match(m);
+            if (null != P) {
+                let e = P[2];
                 r(E.I.APP_DIRECTORY_PROFILE, e);
             }
-            let P = A?.match(g);
-            if (null != P) {
-                let e = P[2],
-                    t = P[3];
+            let U = A?.match(g);
+            if (null != U) {
+                let e = U[2],
+                    t = U[3];
                 if (null != t) {
                     let n = (0, l.L)(e, t);
                     r(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
                 } else r(E.I.APP_DIRECTORY_STOREFRONT, e);
             }
-            let U = A?.match(S);
-            if (null != U) {
-                let e = U[1];
+            let w = A?.match(S);
+            if (null != w) {
+                let e = w[1];
                 r(E.I.ACTIVITY_BOOKMARK, e);
             }
-            let w = A?.match(N);
-            null != w && r(E.I.GUILD_PRODUCT, `${w[1]}-${w[2]}`);
-            let G = A?.match(O);
-            null != G && r(E.I.SERVER_SHOP, G[1]);
-            let x = A?.match(C);
-            null != x && r(E.I.SOCIAL_LAYER_STOREFRONT, `${x[3]}-${x[1] ?? x[2]}`);
-            let k = z(s);
-            null != k && r(E.I.QUESTS_EMBED, k);
-            let F = A?.match(y);
-            null != F && r(E.I.GAME_PROFILE, F[1]);
-            let V = A?.match(L);
-            if ((null != V && r(E.I.GAME_SERVER_SHARE, V[1]), "/shop" === A)) {
-                let t = null != e.query ? (0, i.parse)(e.query) : null,
+            let G = A?.match(N);
+            null != G && r(E.I.GUILD_PRODUCT, `${G[1]}-${G[2]}`);
+            let x = A?.match(O);
+            null != x && r(E.I.SERVER_SHOP, x[1]);
+            let k = A?.match(C);
+            null != k && r(E.I.SOCIAL_LAYER_STOREFRONT, `${k[3]}-${k[1] ?? k[2]}`);
+            let F = z(s);
+            null != F && r(E.I.QUESTS_EMBED, F);
+            let V = A?.match(D);
+            null != V && r(E.I.GAME_PROFILE, V[1]);
+            let B = A?.match(L);
+            if ((null != B && r(E.I.GAME_SERVER_SHARE, B[1]), "/shop" === A)) {
+                let t = null != R ? (0, i.parse)(R) : null,
                     n = t?.tab;
                 if (n === h.G2.GAME_SHOPS && t?.applicationId != null && t?.skuId != null) {
                     let e = t.applicationId,
