@@ -11,9 +11,9 @@ var o =
     n = f(r(143243)),
     i = f(r(562627)),
     a = f(r(223108)),
-    s = r(582128),
-    u = f(s),
-    l = f(r(543865));
+    u = r(582128),
+    s = f(u),
+    l = f(r(322383));
 function f(t) {
     return t && t.__esModule ? t : { default: t };
 }
@@ -24,10 +24,10 @@ var h = {
         size: a.default.number,
         value: a.default.string.isRequired,
     },
-    g = (0, s.forwardRef)(function (t, e) {
+    g = (0, u.forwardRef)(function (t, e) {
         var r = t.bgColor,
             a = t.fgColor,
-            s = t.level,
+            u = t.level,
             f = t.size,
             h = t.value,
             g = (function (t, e) {
@@ -35,10 +35,10 @@ var h = {
                 for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
                 return r;
             })(t, ["bgColor", "fgColor", "level", "size", "value"]),
-            d = new n.default(-1, i.default[s]);
+            d = new n.default(-1, i.default[u]);
         d.addData(h), d.make();
         var c = d.modules;
-        return u.default.createElement(
+        return s.default.createElement(
             l.default,
             o({}, g, {
                 bgColor: r,
