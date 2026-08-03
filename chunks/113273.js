@@ -1,4 +1,4 @@
-e.d(n, { default: () => U });
+e.d(n, { default: () => d });
 var s = e(477900),
     i = e(582128),
     o = e(772707),
@@ -8,7 +8,7 @@ var s = e(477900),
     E = e(859703),
     T = e(24001),
     c = e(3738),
-    C = e(201274),
+    C = e(514547),
     l = e(590202),
     _ = e(73473),
     L = e(190107),
@@ -16,13 +16,14 @@ var s = e(477900),
 function A(t) {
     let { transitionState: n, onClose: e, quest: _ } = t,
         A = (0, C.fc)(_),
-        U = (0, c.mU)({
+        d = (0, c.mU)({
             quest: _,
             taskDetails: A,
             location: L.rE.QUEST_ACTIVITY_UNENROLLED_MODAL,
             sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+            withoutMarkdown: !0,
         }),
-        d = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
+        U = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
         p = i.useCallback(async () => {
             await (0, r.Oy)(_.id, {
                 questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
@@ -42,11 +43,11 @@ function A(t) {
         },
         gradientColor: "blue",
         title: N.intl.string(N.t.IrNgN4),
-        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: _.config.messages.questName })} ${U}`,
-        actions: [{ text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: p, loading: d }],
+        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: _.config.messages.questName })} ${d}`,
+        actions: [{ text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: p, loading: U }],
     });
 }
-function U(t) {
+function d(t) {
     let { quest: n, transitionState: e, onClose: i } = t;
     return (0, s.jsx)(_.R, {
         questOrQuests: n,
