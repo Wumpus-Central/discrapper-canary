@@ -290,7 +290,7 @@ var eR = n(284009),
     eG = n(376728),
     eP = n(976860),
     eO = n(71393),
-    e_ = n(385648);
+    e_ = n(449054);
 async function eM(e) {
     let { invite: t, guildId: n, channelId: l, messageId: i, analyticsLocationStack: a } = e;
     eL()(a.length > 0, "analyticsLocationStack must have at least one location");
@@ -714,8 +714,8 @@ function e8(e) {
 var e2 = n(998445),
     e4 = n(274997),
     e6 = n(80500),
-    e3 = n(319745),
-    e5 = n(488225),
+    e5 = n(319745),
+    e3 = n(488225),
     e9 = n(967492),
     e7 = n(72265),
     te = n(454346),
@@ -751,13 +751,13 @@ function ti(e) {
                     };
                 case U.V.FACEBOOK:
                     return {
-                        icon: (0, i.jsx)(e3.Z, { ...t }),
+                        icon: (0, i.jsx)(e5.Z, { ...t }),
                         action: O.GameProfileTrackActionActions.FacebookLink,
                         title: eh.intl.string(eh.t.FjyREK),
                     };
                 case U.V.INSTAGRAM:
                     return {
-                        icon: (0, i.jsx)(e5.L, { ...t }),
+                        icon: (0, i.jsx)(e3.L, { ...t }),
                         action: O.GameProfileTrackActionActions.InstagramLink,
                         title: eh.intl.string(eh.t["cgR+IK"]),
                     };
@@ -1162,7 +1162,7 @@ var tv = n(369606),
     tK = n(321191),
     tJ = n(958805),
     t$ = n(735321),
-    tq = n(96173),
+    tq = n(616714),
     tQ = n(280450),
     tZ = n(403362);
 async function t0(e) {
@@ -1484,7 +1484,7 @@ function t2(e) {
                         className: t8.hm,
                         children: [
                             (0, i.jsx)(en.D, { variant: "heading-md/semibold", lineClamp: 1, children: a }),
-                            null != t.l30Rank && (0, i.jsx)(t5, { rank: t.l30Rank }),
+                            null != t.l30Rank && (0, i.jsx)(t3, { rank: t.l30Rank }),
                         ],
                     }),
                 ],
@@ -1519,12 +1519,12 @@ let t6 = a.forwardRef(function (e, t) {
               ],
           });
 });
-function t3(e) {
+function t5(e) {
     let { game: t } = e,
         n = (t.genres ?? []).map(eK.du).join(", ");
     return (0, eJ.uJ)(n) ? null : (0, i.jsx)(et.E, { variant: "text-md/normal", color: "text-muted", children: n });
 }
-function t5(e) {
+function t3(e) {
     let { rank: t } = e;
     return (0, i.jsxs)("div", {
         className: t8.Qc,
@@ -1576,9 +1576,9 @@ let t7 = function (e) {
             (0, i.jsxs)("div", {
                 className: t8.lu,
                 children: [
-                    null != t.l30Rank && (0, i.jsx)(t5, { rank: t.l30Rank }),
+                    null != t.l30Rank && (0, i.jsx)(t3, { rank: t.l30Rank }),
                     (0, i.jsx)(en.D, { ref: o, variant: "heading-xxl/semibold", children: u }),
-                    (0, i.jsx)(t3, { game: t }),
+                    (0, i.jsx)(t5, { game: t }),
                 ],
             }),
         ],
@@ -2466,8 +2466,8 @@ n(667532);
 var n2 = n(853022);
 let n4 = new Set(["1402418703554842694", "356877880938070016"]),
     n6 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
-var n3 = n(349361),
-    n5 = n(924895),
+var n5 = n(349361),
+    n3 = n(924895),
     n9 = n(422688),
     n7 = n(505200),
     le = n(695250);
@@ -2483,7 +2483,7 @@ let lt = function (e) {
             };
         case U.V.EPICGAMES:
             return {
-                icon: n3.r,
+                icon: n5.r,
                 text: eh.intl.string(eh.t.ZbBMHa),
                 ariaLabel: eh.intl.string(eh.t.BwX0UW),
                 action: O.GameProfileTrackActionActions.EpicStoreLink,
@@ -2491,7 +2491,7 @@ let lt = function (e) {
             };
         case U.V.ROBLOX:
             return {
-                icon: n5.H,
+                icon: n3.H,
                 text: eh.intl.string(eh.t["pJ+P+h"]),
                 ariaLabel: eh.intl.string(eh.t.tYxpdf),
                 action: O.GameProfileTrackActionActions.RobloxStoreLink,

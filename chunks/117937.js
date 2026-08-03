@@ -1,4 +1,4 @@
-e.d(i, { A: () => B });
+e.d(i, { A: () => M });
 var l = e(477900),
     t = e(582128),
     n = e(503698),
@@ -34,8 +34,8 @@ let j = {
     SILKSONG: "1413176957381771337",
 };
 Object.values(j);
-var L = e(735321),
-    g = e(384377),
+var g = e(735321),
+    L = e(384377),
     h = e(492280),
     f = e(794248),
     R = e(598748),
@@ -164,15 +164,14 @@ let V = {
     },
     [r.x.PERSONAL]: {
         placeholder: () => ({ variant: "grid", applicationIds: [] }),
-        icon: () => null,
-        getAriaLabel: () => "",
+        getAriaLabel: () => G.intl.string(G.t.AVkYMx),
     },
     [r.x.CLIPS_GALLERY]: {
         placeholder: () => ({ variant: "clips-gallery" }),
         getAriaLabel: () => G.intl.string(G.t["7AVpta"]),
     },
 };
-function B(a) {
+function M(a) {
     let i,
         {
             widget: e,
@@ -188,20 +187,20 @@ function B(a) {
         S = e.type === r.x.APPLICATION,
         O = S ? e.applicationId : void 0,
         U = (0, E.h)(O),
-        { hasAlreadyLinked: B, canStartAuthorization: M, startAuthorization: K } = (0, A.RD)(U),
-        Q = S && !B && M,
-        { analyticsLocations: Y } = (0, x.Ay)(u.A.USER_PROFILE_APPLICATION_WIDGET),
+        { hasAlreadyLinked: M, canStartAuthorization: B, startAuthorization: Y } = (0, A.RD)(U),
+        K = S && !M && B,
+        { analyticsLocations: Q } = (0, x.Ay)(u.A.USER_PROFILE_APPLICATION_WIDGET),
         H = t.useCallback(() => {
             !j &&
-                ((0, L.Y5)(e),
+                ((0, g.Y5)(e),
                 f({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, g.XA)(w.jM.WIDGET_ADDED),
+                (0, L.XA)(w.jM.WIDGET_ADDED),
                 n?.(),
-                Q && K({ analyticsLocations: Y }));
-        }, [j, Q, e, f, n, K, Y]),
+                K && Y({ analyticsLocations: Q }));
+        }, [j, K, e, f, n, Y, Q]),
         X = t.useMemo(() => T(e), [e, T]),
         z = D?.(e),
-        $ = Q && !C ? c.q : d.U;
+        $ = K && !C ? c.q : d.U;
     return (0, l.jsxs)("div", {
         className: y.LG,
         children: [
@@ -209,7 +208,7 @@ function B(a) {
                 className: s()(y.PH, "small" === I && y.PG, j && y.Lq),
                 onClick: H,
                 "aria-label":
-                    Q && null != U ? G.intl.formatToPlainString(G.t.ATS0FK, { applicationName: U.name }) : P(e),
+                    K && null != U ? G.intl.formatToPlainString(G.t.ATS0FK, { applicationName: U.name }) : P(e),
                 "aria-busy": j,
                 children: [
                     (function () {
@@ -254,7 +253,7 @@ function B(a) {
                                     (0, l.jsx)(m.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
-                                        children: (0, L.L)(e),
+                                        children: (0, g.L)(e),
                                     }),
                                     !C && R && (0, l.jsx)(p.E, { type: "new", variant: "brand" }),
                                 ],

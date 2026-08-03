@@ -7,18 +7,18 @@ n.d(t, {
     $jw: () => r$,
     $pd: () => id,
     AD1: () => tW.AD,
-    AKn: () => aK,
+    AKn: () => a$,
     AMi: () => ro,
     AO_: () => rj,
     Ahp: () => iw,
-    Ajs: () => aq,
-    An1: () => aB,
+    Ajs: () => aZ,
+    An1: () => aH,
     AnalyticsObjectTypes: () => iJ,
     Auw: () => tU.A,
     BBH: () => iY,
     BEX: () => tQ,
     BIo: () => rM,
-    BRT: () => al,
+    BRT: () => ao,
     BVt: () => tH.BV,
     BYE: () => r_,
     CS1: () => nZ,
@@ -30,10 +30,10 @@ n.d(t, {
     DUB: () => rk,
     DYY: () => tW.DY,
     Dmq: () => rO,
-    DpB: () => aE,
+    DpB: () => aA,
     DqD: () => ip,
     EMb: () => nj,
-    EZt: () => aT,
+    EZt: () => am,
     EkJ: () => nR,
     F05: () => ij,
     FBC: () => rS,
@@ -44,69 +44,69 @@ n.d(t, {
     Fz7: () => rZ,
     G2g: () => i5,
     G6Q: () => nm,
-    GD: () => af,
+    GD: () => ap,
     GaG: () => rY,
     Gg3: () => tW.Gg,
     GuildFeatures: () => nt,
-    H2B: () => ab,
+    H2B: () => aM,
     HAw: () => rb,
-    Hf6: () => a_,
+    Hf6: () => aE,
     I4_: () => iW,
     IWg: () => tz,
     Ign: () => nQ,
     IjB: () => iA,
     ItT: () => iP,
-    J$u: () => r9,
+    J$u: () => ae,
     JJy: () => iX,
     Joy: () => tW.Jo,
-    K3c: () => aW,
+    K3c: () => aY,
     KE7: () => tZ,
     KIY: () => rr,
     KL3: () => nX,
     Kby: () => rq,
     KcG: () => tW.Kc,
     Ks6: () => rJ,
-    LU7: () => aM,
+    LU7: () => aP,
     LWr: () => rE,
     L_o: () => tW.L_,
     Lti: () => tW.Lt,
     Lw6: () => tW.Lw,
-    Ly6: () => aO,
+    Ly6: () => aR,
     M2T: () => rT,
     ME: () => tH.ME,
-    MLl: () => aD,
+    MLl: () => ay,
     MRS: () => tG.M,
     MVz: () => r4,
     MdR: () => ib,
     Mmu: () => iZ,
     NA2: () => n3,
-    NH1: () => ak,
+    NH1: () => aF,
     NJ8: () => tW.NJ,
-    NKC: () => aw,
-    NOr: () => aH,
+    NKC: () => aG,
+    NOr: () => aj,
     NcF: () => tW.Nc,
-    NzX: () => r8,
+    NzX: () => r9,
     O3O: () => ra,
     OLI: () => tW.OL,
-    OQC: () => ac,
+    OQC: () => au,
     OSZ: () => np,
-    Oi0: () => az,
+    Oi0: () => aq,
     P0V: () => ia,
-    P6Q: () => aR,
-    PE$: () => r7,
+    P6Q: () => aL,
+    PE$: () => r8,
     PE1: () => i4,
     Pq7: () => tW.Pq,
-    Puh: () => ap,
+    Puh: () => aT,
     PvD: () => nC,
     Q4z: () => i2,
     Q7O: () => tW.Q7,
-    QCW: () => ao,
+    QCW: () => ad,
     RCc: () => iN,
     RWi: () => rH,
-    R_U: () => an,
+    R_U: () => ai,
     RoK: () => iv,
     Rsh: () => nk,
-    Rv1: () => aZ,
+    Rv1: () => aX,
     S3d: () => nl,
     S7L: () => ni,
     SH7: () => tw.S,
@@ -134,25 +134,25 @@ n.d(t, {
     VE5: () => n4,
     VFs: () => ir,
     VVm: () => tW.VV,
-    VX0: () => at,
+    VX0: () => an,
     W6J: () => tY.W6,
     WA1: () => n7,
     WMy: () => tY.WM,
-    WTw: () => au,
-    WxW: () => aY,
+    WTw: () => a_,
+    WxW: () => aK,
     Wzo: () => tW.Wz,
     X7G: () => ix,
-    X8x: () => ag,
+    X8x: () => aS,
     XAf: () => iE,
     XL8: () => rC,
-    XYD: () => av,
+    XYD: () => ab,
     XYq: () => tY.XY,
     XgB: () => n9,
     XlF: () => tW.Xl,
     XlH: () => t$,
     Xlh: () => iU,
     Xmn: () => rv,
-    YAq: () => ar,
+    YAq: () => aa,
     YI$: () => tW.YI,
     YYv: () => tH.YY,
     Yri: () => tW.Yr,
@@ -162,7 +162,7 @@ n.d(t, {
     ZGg: () => ii,
     ZSU: () => iQ,
     ZzC: () => ic,
-    _4N: () => aV,
+    _4N: () => aB,
     _Ak: () => tW._A,
     _Ee: () => nw,
     _Of: () => io,
@@ -186,14 +186,14 @@ n.d(t, {
     d3x: () => tM.D,
     d68: () => tx.d,
     d7Q: () => nW,
-    dD: () => aC,
+    dD: () => aO,
     dHA: () => tW.dH,
     dJq: () => nM,
     dL4: () => tW.dL,
     dSh: () => ik,
     da6: () => iM,
     do8: () => tW.do,
-    dzt: () => aa,
+    dzt: () => as,
     e$_: () => tW.e$,
     eA$: () => nD,
     eAD: () => iu,
@@ -201,35 +201,36 @@ n.d(t, {
     eQT: () => i_,
     elq: () => t9,
     ewM: () => rl,
+    f34: () => r5,
     f5z: () => nh,
     fAW: () => ne,
     fHV: () => n0,
     fg2: () => rn,
-    fic: () => aX,
+    fic: () => aQ,
     frM: () => tW.fr,
     frR: () => ny,
     ftr: () => i8,
     g0g: () => rW,
     g6G: () => tY.g6,
-    gG4: () => ai,
+    gG4: () => ar,
     gGk: () => rK,
     gNP: () => tH.gN,
     gT8: () => iG,
-    geh: () => aS,
+    geh: () => aN,
     gfo: () => rU,
     gfq: () => i7,
     gh6: () => nL,
     gkb: () => rG,
     gp3: () => iI,
-    guM: () => a$,
+    guM: () => az,
     gxX: () => tW.gx,
     h3J: () => im,
     hCb: () => tW.hC,
     hCu: () => tq,
     hE4: () => rQ,
     hH7: () => ry,
-    hK1: () => ay,
-    hM6: () => ae,
+    hK1: () => av,
+    hM6: () => at,
     hVb: () => tW.hV,
     hcd: () => ih,
     hes: () => tW.he,
@@ -249,19 +250,19 @@ n.d(t, {
     kqX: () => t8,
     kvI: () => tP.k,
     l2F: () => iT,
-    l6E: () => ad,
+    l6E: () => ac,
     l90: () => iB,
     lAJ: () => tG.l,
-    lLE: () => ax,
-    lM6: () => am,
+    lLE: () => ak,
+    lM6: () => ag,
     lT7: () => rL,
     liQ: () => iq,
     lid: () => rN,
     m3P: () => t3,
-    m_i: () => aL,
+    m_i: () => aD,
     mdB: () => i3,
     meB: () => tW.me,
-    mnr: () => aJ,
+    mnr: () => a0,
     mu: () => it,
     n5X: () => rw,
     nRU: () => t4,
@@ -290,7 +291,7 @@ n.d(t, {
     rbe: () => tP.r,
     rs7: () => iF,
     rzx: () => tW.rz,
-    sFm: () => aN,
+    sFm: () => aC,
     sJq: () => tW.sJ,
     s_7: () => n8,
     sbO: () => nu,
@@ -299,24 +300,24 @@ n.d(t, {
     t02: () => iK,
     tEg: () => tW.tE,
     tF5: () => tW.tF,
-    tSW: () => aA,
+    tSW: () => ah,
     txh: () => rs,
-    uJ2: () => r5,
-    uJv: () => aQ,
-    uPF: () => aP,
+    uJ2: () => r7,
+    uJv: () => aJ,
+    uPF: () => aU,
     uaN: () => iL,
     ugG: () => rt,
-    uje: () => ah,
+    uje: () => aI,
     ump: () => rI,
     uss: () => nI,
     uvi: () => nq,
-    uw8: () => aj,
+    uw8: () => aW,
     vkP: () => na,
     w7I: () => tW.w7,
     wLU: () => iD,
-    wLn: () => aF,
-    wY_: () => aU,
-    wqg: () => aG,
+    wLn: () => aV,
+    wY_: () => aw,
+    wqg: () => ax,
     x0t: () => tW.x0,
     x2k: () => rA,
     xBc: () => tW.xB,
@@ -325,9 +326,9 @@ n.d(t, {
     xei: () => tW.xe,
     xfJ: () => tW.xf,
     yFH: () => nT,
-    yKI: () => as,
+    yKI: () => al,
     yTV: () => ri,
-    zF_: () => aI,
+    zF_: () => af,
     zOV: () => re,
     zWA: () => tX,
     zgK: () => rV,
@@ -6046,11 +6047,12 @@ var r4 =
         (e1.LFG_CHANNELS = "41832532728215"),
         e1),
     r6 = (((e2 = {}).INVALID_BILLING_ADDRESS = "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618"), e2);
-let r5 = (e) => `https://www.youtube.com/embed/${e}`,
-    r7 = (e) => `https://img.youtube.com/vi/${e}/maxresdefault.jpg`,
-    r8 = "2",
-    r9 = "https://discordapp.com/mweb-handoff";
-var ae =
+let r5 = "cdn.discordapp.com",
+    r7 = (e) => `https://www.youtube.com/embed/${e}`,
+    r8 = (e) => `https://img.youtube.com/vi/${e}/maxresdefault.jpg`,
+    r9 = "2",
+    ae = "https://discordapp.com/mweb-handoff";
+var at =
         (((e3 = {})[(e3.HIDDEN = 1)] = "HIDDEN"),
         (e3[(e3.PRIVATE = 2)] = "PRIVATE"),
         (e3[(e3.OVERLAY_DISABLED = 4)] = "OVERLAY_DISABLED"),
@@ -6058,7 +6060,7 @@ var ae =
         (e3[(e3.PREMIUM = 16)] = "PREMIUM"),
         (e3[(e3.OVERLAY_V3_DISABLED = 32)] = "OVERLAY_V3_DISABLED"),
         e3),
-    at =
+    an =
         (((e4 = {}).DONE = "DONE"),
         (e4.PLANNING = "PLANNING"),
         (e4.PREPARING = "PREPARING"),
@@ -6067,8 +6069,8 @@ var ae =
         (e4.CONFLICT = "CONFLICT"),
         (e4.ERROR = "ERROR"),
         e4),
-    an = (((e6 = {}).PULL = "PULL"), (e6.PUSH = "PUSH"), (e6.CONFLICT = "CONFLICT"), (e6.NONE = "NONE"), e6);
-let ai = Object.freeze({
+    ai = (((e6 = {}).PULL = "PULL"), (e6.PUSH = "PUSH"), (e6.CONFLICT = "CONFLICT"), (e6.NONE = "NONE"), e6);
+let ar = Object.freeze({
     [tM.D.DISCORD]: "Discord",
     [tM.D.STEAM]: "Steam",
     [tM.D.UPLAY]: "Uplay",
@@ -6093,22 +6095,22 @@ let ai = Object.freeze({
     [tM.D.GDCO]: "GDCO",
     [tM.D.OPENCRITIC]: "OpenCritic",
 });
-var ar = (((e5 = {}).USAGE_STATISTICS = "usage_statistics"), (e5.PERSONALIZATION = "personalization"), e5),
-    aa =
+var aa = (((e5 = {}).USAGE_STATISTICS = "usage_statistics"), (e5.PERSONALIZATION = "personalization"), e5),
+    as =
         (((e7 = {})[(e7.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
         (e7[(e7.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
         (e7[(e7.NO_RELATION = 8)] = "NO_RELATION"),
         e7);
-let as = 14;
-var al =
+let al = 14;
+var ao =
     (((e8 = {}).OVERLAY = "OVERLAY"),
     (e8.APP = "APP"),
     (e8.POPOUT = "POPOUT"),
     (e8.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"),
     e8);
-let ao = __OVERLAY__ ? "OVERLAY" : "APP";
-var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9),
-    ac =
+let ad = __OVERLAY__ ? "OVERLAY" : "APP";
+var ac = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9),
+    au =
         (((te = {}).QUEUED = "queued"),
         (te.PLANNING = "planning"),
         (te.ALLOCATING_DISK = "allocating_disk"),
@@ -6120,7 +6122,7 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (te.POST_INSTALL_SCRIPTS = "running_install_scripts"),
         (te.UNINSTALLING = "uninstalling"),
         te),
-    au =
+    a_ =
         (((tt = {}).INSTALL_REQUIRED = "install_required"),
         (tt.INSTALLING = "installing"),
         (tt.UP_TO_DATE = "up_to_date"),
@@ -6129,7 +6131,7 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (tt.REPAIRING = "repairing"),
         (tt.UNINSTALLING = "uninstalling"),
         tt),
-    a_ =
+    aE =
         (((tn = {}).PLAY = "play"),
         (tn.INSTALL = "install"),
         (tn.UPDATE = "update"),
@@ -6137,15 +6139,15 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (tn.MOVE_UP = "move_up"),
         (tn.RESUME = "resume"),
         tn),
-    aE =
+    aA =
         (((ti = {}).NAME = "name"),
         (ti.PLATFORM = "platform"),
         (ti.ACTIONS = "actions"),
         (ti.LAST_PLAYED = "last_played"),
         ti),
-    aA = (((tr = {}).ASCENDING = "asc"), (tr.DESCENDING = "desc"), tr),
-    ah = (((ta = {}).WINDOWS = "1"), (ta.MACOS = "2"), (ta.LINUX = "3"), ta),
-    aI =
+    ah = (((tr = {}).ASCENDING = "asc"), (tr.DESCENDING = "desc"), tr),
+    aI = (((ta = {}).WINDOWS = "1"), (ta.MACOS = "2"), (ta.LINUX = "3"), ta),
+    af =
         (((ts = {})[(ts.PURCHASE = 1)] = "PURCHASE"),
         (ts[(ts.PREMIUM_SUBSCRIPTION = 2)] = "PREMIUM_SUBSCRIPTION"),
         (ts[(ts.DEVELOPER_GIFT = 3)] = "DEVELOPER_GIFT"),
@@ -6159,7 +6161,7 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (ts[(ts.FRACTIONAL_REDEMPTION = 11)] = "FRACTIONAL_REDEMPTION"),
         (ts[(ts.VIRTUAL_CURRENCY_REDEMPTION = 12)] = "VIRTUAL_CURRENCY_REDEMPTION"),
         ts),
-    af =
+    ap =
         (((tl = {})[(tl.QUEST_REWARD = 1)] = "QUEST_REWARD"),
         (tl[(tl.DEVELOPER_GIFT = 2)] = "DEVELOPER_GIFT"),
         (tl[(tl.INVOICE = 3)] = "INVOICE"),
@@ -6168,7 +6170,7 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (tl[(tl.SUBSCRIPTION = 9)] = "SUBSCRIPTION"),
         (tl[(tl.SUBSCRIPTION_MEMBER = 11)] = "SUBSCRIPTION_MEMBER"),
         tl),
-    ap =
+    aT =
         (((to = {})[(to.DURABLE_PRIMARY = 1)] = "DURABLE_PRIMARY"),
         (to[(to.DURABLE = 2)] = "DURABLE"),
         (to[(to.CONSUMABLE = 3)] = "CONSUMABLE"),
@@ -6176,7 +6178,7 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (to[(to.SUBSCRIPTION = 5)] = "SUBSCRIPTION"),
         (to[(to.SUBSCRIPTION_GROUP = 6)] = "SUBSCRIPTION_GROUP"),
         to),
-    aT =
+    am =
         (((td = {})[(td.PREMIUM = 1)] = "PREMIUM"),
         (td[(td.BOOST = 2)] = "BOOST"),
         (td[(td.GUILD_ROLE = 4)] = "GUILD_ROLE"),
@@ -6185,32 +6187,32 @@ var ad = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (td[(td.COLLECTIBLES = 7)] = "COLLECTIBLES"),
         (td[(td.SOCIAL_LAYER_GAME_ITEM = 14)] = "SOCIAL_LAYER_GAME_ITEM"),
         td),
-    am = (((tc = {}).WIN32 = "win32"), (tc.WIN64 = "win64"), (tc.MACOS = "macos"), (tc.LINUX = "linux"), tc),
-    ag =
+    ag = (((tc = {}).WIN32 = "win32"), (tc.WIN64 = "win64"), (tc.MACOS = "macos"), (tc.LINUX = "linux"), tc),
+    aS =
         (((tu = {}).EMPTY_MESSAGE = "EMPTY_MESSAGE"),
         (tu.MESSAGE_TOO_LONG = "MESSAGE_TOO_LONG"),
         (tu.RATE_LIMITED = "RATE_LIMITED"),
         (tu.SHOUTING_CANCELLED = "SHOUTING_CANCELLED"),
         (tu.SLOWMODE_COOLDOWN = "SLOWMODE_COOLDOWN"),
         tu),
-    aS =
+    aN =
         (((t_ = {})[(t_.IMG = 1)] = "IMG"),
         (t_[(t_.YOUTUBE_VIDEO = 2)] = "YOUTUBE_VIDEO"),
         (t_[(t_.VIDEO = 3)] = "VIDEO"),
         t_),
-    aN =
+    aC =
         (((tE = {}).APPLICATION_LIBRARY_BADGE = "application_library_badge_18_11_02"),
         (tE.SERVER_DISCOVERY_BADGE = "server_discovery_badge_19_02_11"),
         (tE.E3_SERVER_DISCOVERY_BADGE = "e3_server_discovery_badge_19_06_08"),
         tE),
-    aC =
+    aO =
         (((tA = {}).TRENDING_GIFS = "Trending"),
         (tA.FAVORITES = "Favorites"),
         (tA.TRENDING_CATEGORY = "Category"),
         (tA.SEARCH = "Search"),
         (tA.SEARCH_SUGGESTION = "Search Suggestion"),
         tA);
-let aO = new Set([
+let aR = new Set([
     tW.Yr.USD,
     tW.Yr.CAD,
     tW.Yr.EUR,
@@ -6222,9 +6224,9 @@ let aO = new Set([
     tW.Yr.KRW,
     tW.Yr.IDR,
 ]);
-var aR = (((th = {}).ALWAYS = "ALWAYS"), (th.ON_CLICK = "ON_CLICK"), (th.IF_MODERATOR = "IF_MODERATOR"), th);
-let aL = [];
-var aD =
+var aL = (((th = {}).ALWAYS = "ALWAYS"), (th.ON_CLICK = "ON_CLICK"), (th.IF_MODERATOR = "IF_MODERATOR"), th);
+let aD = [];
+var ay =
         (((tI = {}).CHANNEL_CALL_POPOUT = "DISCORD_CHANNEL_CALL_POPOUT"),
         (tI.CALL_TILE_POPOUT = "DISCORD_CALL_TILE_POPOUT"),
         (tI.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
@@ -6234,8 +6236,8 @@ var aD =
         (tI.DEVTOOLS_POPOUT = "DISCORD_DEVTOOLS_POPOUT"),
         (tI.STATS_POPOUT = "DISCORD_STATS_POPOUT"),
         tI),
-    ay = (((tf = {}).LOADED = "loaded"), (tf.UNLOADED = "unloaded"), tf),
-    av =
+    av = (((tf = {}).LOADED = "loaded"), (tf.UNLOADED = "unloaded"), tf),
+    ab =
         (((tp = {}).CONNECTING = "CONNECTING"),
         (tp.ACTIVE = "ACTIVE"),
         (tp.RECONNECTING = "RECONNECTING"),
@@ -6243,15 +6245,15 @@ var aD =
         (tp.PAUSED = "PAUSED"),
         (tp.FAILED = "FAILED"),
         tp),
-    ab =
+    aM =
         (((tT = {}).USER_REQUESTED = "user_requested"),
         (tT.STREAM_FULL = "stream_full"),
         (tT.UNAUTHORIZED = "unauthorized"),
         (tT.SAFETY_GUILD_RATE_LIMITED = "safety_guild_rate_limited"),
         tT),
-    aM = (((tm = {}).SOUND = "SOUND"), (tm.VIDEO = "VIDEO"), tm),
-    aP = (((tg = {}).PLAYING = "playing"), (tg.PAUSED = "paused"), tg),
-    aU =
+    aP = (((tm = {}).SOUND = "SOUND"), (tm.VIDEO = "VIDEO"), tm),
+    aU = (((tg = {}).PLAYING = "playing"), (tg.PAUSED = "paused"), tg),
+    aw =
         (((tS = {}).NONE = "none"),
         (tS.WIFI = "wifi"),
         (tS.CELLULAR = "cellular"),
@@ -6261,7 +6263,7 @@ var aD =
         (tS.WIMAX = "wimax"),
         (tS.OTHER = "other"),
         tS),
-    aw =
+    aG =
         (((tN = {}).UNKNOWN = "unknown"),
         (tN.SLOW_TWO_G = "slow-2g"),
         (tN.TWO_G = "2g"),
@@ -6269,10 +6271,10 @@ var aD =
         (tN.FOUR_G = "4g"),
         (tN.FIVE_G = "5g"),
         tN);
-let aG = "discodoEasterEgg";
-var ax = (((tC = {}).INITIAL = "initial"), (tC.ENTER = "enter"), (tC.UPDATE = "update"), (tC.LEAVE = "leave"), tC),
-    ak = (((tO = {})[(tO.INCOMING = 1)] = "INCOMING"), (tO[(tO.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), tO),
-    aF =
+let ax = "discodoEasterEgg";
+var ak = (((tC = {}).INITIAL = "initial"), (tC.ENTER = "enter"), (tC.UPDATE = "update"), (tC.LEAVE = "leave"), tC),
+    aF = (((tO = {})[(tO.INCOMING = 1)] = "INCOMING"), (tO[(tO.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), tO),
+    aV =
         (((tR = {})[(tR.APPLICATION = 0)] = "APPLICATION"),
         (tR[(tR.OVERVIEW = 1)] = "OVERVIEW"),
         (tR[(tR.CHANNEL_FOLLOWING = 2)] = "CHANNEL_FOLLOWING"),
@@ -6281,23 +6283,23 @@ var ax = (((tC = {}).INITIAL = "initial"), (tC.ENTER = "enter"), (tC.UPDATE = "u
         (tR[(tR.WEBHOOKS = 5)] = "WEBHOOKS"),
         (tR[(tR.LOBBIES_LINKED = 6)] = "LOBBIES_LINKED"),
         tR);
-let aV = 2500,
-    aB = 0,
-    aH = 2592e6;
-var aj = (((tL = {}).USERS = "users"), (tL.ROLES = "roles"), (tL.EVERYONE = "everyone"), tL),
-    aW = (((tD = {})[(tD.AUTO = 1)] = "AUTO"), (tD[(tD.FULL = 2)] = "FULL"), tD);
-let aY = 100,
-    aK = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var a$ =
+let aB = 2500,
+    aH = 0,
+    aj = 2592e6;
+var aW = (((tL = {}).USERS = "users"), (tL.ROLES = "roles"), (tL.EVERYONE = "everyone"), tL),
+    aY = (((tD = {})[(tD.AUTO = 1)] = "AUTO"), (tD[(tD.FULL = 2)] = "FULL"), tD);
+let aK = 100,
+    a$ = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var az =
     (((ty = {})[(ty.NULL = 0)] = "NULL"), (ty[(ty.DISABLED = 1)] = "DISABLED"), (ty[(ty.ENABLED = 2)] = "ENABLED"), ty);
-let az = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
-var aq =
+let aq = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+var aZ =
         (((tv = {})[(tv.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
         (tv[(tv.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
         (tv[(tv.ALLOW_ANY_VIEWER_CLIPS = 4)] = "ALLOW_ANY_VIEWER_CLIPS"),
         tv),
-    aZ = (((tb = {}).LOADING = "LOADING"), (tb.ERROR = "ERROR"), (tb.READY = "READY"), tb);
-let aX = Object.freeze({
+    aX = (((tb = {}).LOADING = "LOADING"), (tb.ERROR = "ERROR"), (tb.READY = "READY"), tb);
+let aQ = Object.freeze({
         APPLICATIONS: (e) => (null != e ? `applications/${e}` : null),
         APP_PREMIUM_BUTTON: (e) => (null != e ? `premium-button/${e}` : null),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null != e && null != t ? `custom-activity-links/${e}/${t}` : null),
@@ -6313,5 +6315,5 @@ let aX = Object.freeze({
         GUILD_OFFICIAL_MESSAGES: (e) => (null != e ? `guild-official-messages/${e}` : null),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),
-    aQ = 4096,
-    aJ = 0x7fffffff;
+    aJ = 4096,
+    a0 = 0x7fffffff;
