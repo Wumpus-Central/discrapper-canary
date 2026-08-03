@@ -1,4 +1,4 @@
-n.d(e, { FG: () => D, aV: () => G, uD: () => M }), n(323874), n(14289), n(35956);
+n.d(e, { FG: () => D, aV: () => B, uD: () => M }), n(323874), n(14289), n(35956);
 var l = n(582128),
     i = n(284009),
     a = n.n(i),
@@ -21,17 +21,19 @@ var l = n(582128),
     f = n(486020),
     h = n(927813),
     y = n(935208),
-    O = n(292348),
-    L = n(298236),
+    L = n(292348),
+    O = n(298236),
     N = n(814890),
     v = n(750128),
     R = n(138321),
     U = n(652215),
     b = n(375708);
 function D(t) {
-    let e = (0, L.jc)(),
+    let e = (0, O.jc)(),
         n = e?.modal?.components[0];
-    return n?.type === s.I5.ACTION_ROW && n.components[0].id === t;
+    return (
+        (n?.type === s.I5.ACTION_ROW && n.components[0].id === t) || (n?.type === s.I5.LABEL && n.component.id === t)
+    );
 }
 function P(t) {
     return l.useMemo(() => {
@@ -79,7 +81,7 @@ function M(t, e) {
             (r.h.dispatch({ type: "CLEAR_INTERACTION_MODAL_STATE", customId: i }),
             d.A.removeFiles(
                 t.channelId,
-                B(t.channelId, i).map((t) => t.id),
+                G(t.channelId, i).map((t) => t.id),
                 A.C.InteractionModal,
             ),
             e()),
@@ -98,7 +100,7 @@ function M(t, e) {
         onSubmit: _,
     };
 }
-function G(t) {
+function B(t) {
     let { application: e, customId: n } = t,
         { applicationIconURL: l, applicationName: i, applicationBaseUrl: u } = P(e),
         o = g.A.getChannel(t.channelId);
@@ -111,18 +113,18 @@ function G(t) {
         { applicationIconURL: l, applicationName: i, applicationBaseUrl: u, queryParams: r, iframeUrl: d.toString() }
     );
 }
-function B(t, e) {
+function G(t, e) {
     return _.A.getUploads(t, A.C.InteractionModal).filter((t) => (0, N.j2)(t.id)?.containerId === e);
 }
 async function w(t, e, n) {
     let l = t.channelId,
         i = g.A.getChannel(l);
     a()(null != i, "expected channel");
-    let u = B(l, t.customId),
+    let u = G(l, t.customId),
         r = u.length > 0 ? (0, I.A)(u) : void 0;
     (0, m.tU)(n, { data: { interactionType: s.G4.MODAL_SUBMIT, applicationId: t.application.id }, preflight: r }),
         await r;
-    let d = u.map((t, e) => (0, O.OW)(t, e)),
+    let d = u.map((t, e) => (0, L.OW)(t, e)),
         c = (function t(e, n, l) {
             return n.map((n) => {
                 switch (n.type) {

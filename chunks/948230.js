@@ -1,14 +1,15 @@
 i.d(e, {
-    HV: () => C,
-    TV: () => S,
+    HV: () => P,
+    M7: () => T,
+    TV: () => h,
     U1: () => d,
-    Zq: () => O,
-    dm: () => A,
+    Zq: () => C,
+    dm: () => S,
     gA: () => I,
     hF: () => R,
     oB: () => u,
-    ti: () => h,
-    xx: () => T,
+    ti: () => O,
+    xx: () => A,
 });
 var r = i(562465),
     _ = i(228366),
@@ -65,14 +66,18 @@ async function u(t, e) {
     let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: { name: e }, rejectWithError: !1 });
     return i.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
 }
-async function T(t) {
+async function T(t, e) {
+    let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
+    return i.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+}
+async function A(t) {
     let e = await r.Bo.del({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
     return e.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e;
 }
-function A(t, e) {
+function S(t, e) {
     _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: t, projectId: e });
 }
-async function S(t) {
+async function h(t) {
     let e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH(t), rejectWithError: !1 });
     if (!e.ok) return p(t, e.status, !1), e;
     let { application: i, project: n } = e.body;
@@ -84,7 +89,7 @@ async function S(t) {
         e
     );
 }
-async function h(t) {
+async function O(t) {
     let { countAsDeploy: e = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
     if (!i.ok) return p(t, i.status, !0), i;
@@ -98,9 +103,9 @@ async function h(t) {
         i
     );
 }
-function O(t) {
+function C(t) {
     _.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: t });
 }
-function C(t) {
+function P(t) {
     _.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
 }
