@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { CH: () => y, jA: () => b, cy: () => D, av: () => v });
+n.d(t, { CH: () => D, jA: () => b, cy: () => y, av: () => v });
 var i = n(66834),
     r = n(730852),
     a = n(401843),
     s = n(389234),
     l = n(652896),
-    o = n(271004),
+    o = n(854492),
     d = n(616356),
     c = n(734057),
     u = n(71393),
@@ -57,27 +57,27 @@ class R extends f.A {
     };
     handleDisconnectFromStageChannel = (e) => {
         let t = C.A.getGuildId();
-        (0, o.As)([t, e].filter(O.Vq));
+        (0, o.A)([t, e].filter(O.Vq));
     };
     handleLogout = () => {
         this.terminate(), this.handleDisconnectFromStageChannel(null);
     };
 }
 let L = new R();
-function y(e, t) {
+function D(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {
         let a = c.A.getChannel(t);
-        if (null != a) return D(a, n), r(a);
-        await (0, o.As)([e]),
+        if (null != a) return y(a, n), r(a);
+        await (0, o.A)([e]),
             await i.A.joinGuild(e, { lurker: !0 }),
             u.A.addConditionalChangeListener(() => {
                 let e = c.A.getChannel(t);
-                return null == e || (D(e), L.initialize(), r(e), !1);
+                return null == e || (y(e), L.initialize(), r(e), !1);
             });
     });
 }
-function D(e) {
+function y(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = E.Ay.getVoiceChannelId();
@@ -94,7 +94,7 @@ function v(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = E.Ay.getVoiceChannelId();
-    (!i && r !== e.id && (0, s.H)(e) && A.E9(e, () => v(e, t, n, !0))) || (D(e, t) && b(e, r));
+    (!i && r !== e.id && (0, s.H)(e) && A.E9(e, () => v(e, t, n, !0))) || (y(e, t) && b(e, r));
 }
 function b(e, t) {
     A.jA(e, t);

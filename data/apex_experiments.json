@@ -3826,28 +3826,6 @@
     }
   },
   {
-    "name": "2026-05-mobile-lurker-server-preview",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "stickyLurk": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "stickyLurk": false
-      },
-      "2": {
-        "enabled": true,
-        "stickyLurk": true
-      }
-    }
-  },
-  {
     "name": "2026-05-nitro-home-header",
     "kind": "user",
     "defaultConfig": {
