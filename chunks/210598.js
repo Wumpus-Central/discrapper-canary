@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => o, Tu: () => m, g0: () => _, wv: () => f, yL: () => u });
+n.d(t, { K: () => o, Tu: () => m, g0: () => _, wv: () => f, yL: () => u }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
@@ -43,20 +43,28 @@ function I(e) {
     };
 }
 function f(e) {
-    return null == e
-        ? []
-        : e
-              .map((e) => {
-                  switch (e.type) {
-                      case a.K.COVER:
-                          return { type: e.type, title: e.title ?? "", subtitle: e.subtitle ?? "", image: h(e.image) };
-                      case a.K.FIELDS:
-                          return { type: e.type, fields: e.fields.map(I) };
-                      default:
-                          return;
-                  }
-              })
-              .filter(l.Vq);
+    var t;
+    let n =
+        null == (t = e)
+            ? []
+            : t
+                  .map((e) => {
+                      switch (e.type) {
+                          case a.K.COVER:
+                              return {
+                                  type: e.type,
+                                  title: e.title ?? "",
+                                  subtitle: e.subtitle ?? "",
+                                  image: h(e.image),
+                              };
+                          case a.K.FIELDS:
+                              return { type: e.type, fields: e.fields.map(I) };
+                          default:
+                              return;
+                      }
+                  })
+                  .filter(l.Vq);
+    return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
 }
 function p(e) {
     if (null != e)
@@ -87,14 +95,21 @@ class m {
     toSubmission() {
         return {
             id: this.id,
-            data: { type: this.type, header: this.header, sections: this.sections.map(T).filter(l.Vq) },
+            data: {
+                type: this.type,
+                header: this.header,
+                sections: this.sections
+                    .filter((e) => !A(e))
+                    .map(T)
+                    .filter(l.Vq),
+            },
         };
     }
     isDiscardable() {
         return "" === this.header.trim() && this.sections.every(A);
     }
     isValid() {
-        return !this.isDiscardable();
+        return this.sections.some((e) => !A(e));
     }
     isEqual(e) {
         return (
