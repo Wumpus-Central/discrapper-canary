@@ -51,7 +51,7 @@ let _ = {
         backgroundBlurred:
             "https://cdn.discordapp.com/assets/content/8e37993ad6f8ec19df3a8b32fc1d3c7957fe1e2e8f1c81f6d9d6f7fbe6fec34b.webp",
         aspectRatio: 4384 / 3208,
-        getName: () => s.intl.string(a.default["4KcB5R"]),
+        getName: () => s.intl.string(a.default.y33CVg),
         seats: [
             { name: "PC_SEAT_1", getLabel: c(a.default.ytIYuY, 1), position: i[r.I.DEFAULT][0] },
             { name: "PC_SEAT_2", getLabel: c(a.default.ytIYuY, 2), position: i[r.I.DEFAULT][1] },
