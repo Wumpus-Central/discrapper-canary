@@ -20,8 +20,8 @@ var s,
     S = i(839534),
     k = i(993408),
     C = i(821701),
-    f = i(841702),
-    y = i(727170),
+    y = i(841702),
+    f = i(727170),
     N = i(503698),
     _ = i.n(N),
     E = i(778712),
@@ -86,9 +86,9 @@ let w = [
             ],
         });
     };
-var M = i(939249),
-    z = i(428678),
-    H = i(834730),
+var H = i(939249),
+    M = i(428678),
+    z = i(834730),
     U = i(34188),
     G = i(92008),
     V = i(713517),
@@ -140,7 +140,7 @@ var Y = i(963977),
 let ee = () => 80;
 function et(e) {
     let { children: t, className: i, onSelect: s, isSelected: n, ...a } = e;
-    return (0, r.jsx)(M.D, {
+    return (0, r.jsx)(H.D, {
         "aria-pressed": n,
         className: _()(Q.eA, n ? Q.wH : void 0, i),
         ...a,
@@ -216,8 +216,8 @@ let es = function (e) {
                         isSelected: null === s,
                         onSelect: () => a(null),
                         children: [
-                            (0, r.jsx)(z.K, { size: "md", color: "currentColor", className: Q.Kk }),
-                            (0, r.jsx)(H.E, {
+                            (0, r.jsx)(M.K, { size: "md", color: "currentColor", className: Q.Kk }),
+                            (0, r.jsx)(z.E, {
                                 variant: "text-xs/normal",
                                 color: "text-strong",
                                 children: (0, $.uZ)(t, i) ? O.intl.string(O.t.CHf9iJ) : O.intl.string(O.t.PoWNfe),
@@ -240,7 +240,7 @@ let es = function (e) {
                                 color: "currentColor",
                                 className: Q.sV,
                             }),
-                            (0, r.jsx)(H.E, {
+                            (0, r.jsx)(z.E, {
                                 variant: "text-xs/normal",
                                 color: "text-strong",
                                 children: O.intl.string(O.t.pWG4ze),
@@ -290,50 +290,51 @@ function el(e) {
             categories: i,
             purchases: s,
             analyticsLocations: c,
-            onClose: m,
-            initialSelectedDecoration: x,
-            guild: I,
+            modalHeadingId: m,
+            onClose: x,
+            initialSelectedDecoration: I,
+            guild: y,
         } = e,
-        f = (0, a.bG)([v.Ay], () => (null != I ? v.Ay.getMember(I.id, t.id) : null)),
-        N = null != f ? f.avatarDecoration : t.avatarDecoration,
-        { pendingAvatarDecoration: _, setPendingAvatarDecoration: E } = (0, A.A)({
+        N = (0, a.bG)([v.Ay], () => (null != y ? v.Ay.getMember(y.id, t.id) : null)),
+        _ = null != N ? N.avatarDecoration : t.avatarDecoration,
+        { pendingAvatarDecoration: E, setPendingAvatarDecoration: D } = (0, A.A)({
             analyticsLocations: c,
-            guildId: I?.id,
+            guildId: y?.id,
         }),
-        [D, b] = n.useState(() =>
-            null != x
-                ? x
-                : void 0 !== _
-                  ? _
-                  : null == N
+        [b, T] = n.useState(() =>
+            null != I
+                ? I
+                : void 0 !== E
+                  ? E
+                  : null == _
                     ? null
                     : ((0, k.ps)(s, i).find((e) => {
                           let { skuId: t } = e;
-                          return t === N.skuId;
+                          return t === _.skuId;
                       }) ?? null),
         ),
-        T = (0, g.lw)({
-            pendingValue: D,
+        R = (0, g.lw)({
+            pendingValue: b,
             userValue: t?.avatarDecoration,
-            guildValue: f?.avatarDecoration,
-            guildId: I?.id,
+            guildValue: N?.avatarDecoration,
+            guildId: y?.id,
         }),
-        { product: R, purchase: w } = (0, C.A)(D?.skuId),
-        M = null != w ? (0, k.gA)(w) : (0, k.G0)(R),
+        { product: w, purchase: H } = (0, C.A)(b?.skuId),
+        M = null != H ? (0, k.gA)(H) : (0, k.G0)(w),
         z = j.Ay.canUseCollectibles(t),
-        H = n.useRef(null),
-        U = (0, y.A)(c),
-        G = void 0 === _ ? D?.skuId === N?.skuId : D?.skuId === _?.skuId,
-        V = n.useCallback(
+        U = n.useRef(null),
+        G = (0, f.A)(c),
+        V = void 0 === E ? b?.skuId === _?.skuId : b?.skuId === E?.skuId,
+        K = n.useCallback(
             (e) => {
-                m(),
+                x(),
                     (0, S.Cz)({
                         analyticsLocations: c,
                         analyticsSource: d.A.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [c, m],
+            [c, x],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -342,8 +343,8 @@ function el(e) {
                 separator: !1,
                 className: ea.Hc,
                 children: [
-                    (0, r.jsx)(o.D, { variant: "heading-lg/semibold", children: O.intl.string(O.t.HykynS) }),
-                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: ea.iT, onClick: m }),
+                    (0, r.jsx)(o.D, { id: m, variant: "heading-lg/semibold", children: O.intl.string(O.t.HykynS) }),
+                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: ea.iT, onClick: x }),
                 ],
             }),
             (0, r.jsxs)(l.$m, {
@@ -353,20 +354,20 @@ function el(e) {
                 children: [
                     (0, r.jsx)(es, {
                         user: t,
-                        guild: I,
-                        pendingAvatarDecoration: D,
-                        selectedAvatarDecorationRef: H,
+                        guild: y,
+                        pendingAvatarDecoration: b,
+                        selectedAvatarDecorationRef: U,
                         onSelect: function (e) {
-                            b(e), null != e && U(e);
+                            T(e), null != e && G(e);
                         },
-                        onOpenShop: V,
+                        onOpenShop: K,
                     }),
                     (0, r.jsx)(P, {
                         className: ea.kk,
                         user: t,
-                        guildId: I?.id,
-                        avatarDecoration: T,
-                        decorationName: D?.label ?? null,
+                        guildId: y?.id,
+                        avatarDecoration: R,
+                        decorationName: b?.label ?? null,
                     }),
                 ],
             }),
@@ -374,19 +375,19 @@ function el(e) {
                 "data-migration-pending": !0,
                 className: ea.Hx,
                 children: [
-                    (null != w && (z || !M)) || null === D
+                    (null != H && (z || !M)) || null === b
                         ? (0, r.jsx)(u.$, {
                               variant: "primary",
                               text: O.intl.string(O.t.Jh8fJz),
                               onClick: function () {
-                                  E(D), m();
+                                  D(b), x();
                               },
-                              disabled: G,
+                              disabled: V,
                           })
-                        : null == w && (z || !M)
+                        : null == H && (z || !M)
                           ? (0, r.jsx)(u.$, {
                                 variant: "primary",
-                                onClick: () => V(R?.skuId),
+                                onClick: () => K(w?.skuId),
                                 text: O.intl.string(O.t.fYfGgK),
                             })
                           : (0, r.jsx)(p.A, {
@@ -401,8 +402,8 @@ function el(e) {
                                 },
                             }),
                     !z && M
-                        ? (0, r.jsx)(h.A, { itemType: w?.type ?? R?.type, onClose: m })
-                        : (0, r.jsx)(u.$, { variant: "secondary", text: O.intl.string(O.t["ETE/oC"]), onClick: m }),
+                        ? (0, r.jsx)(h.A, { itemType: H?.type ?? w?.type, onClose: x })
+                        : (0, r.jsx)(u.$, { variant: "secondary", text: O.intl.string(O.t["ETE/oC"]), onClick: x }),
                 ],
             }),
         ],
@@ -420,8 +421,9 @@ function eu(e) {
         } = e,
         g = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: A } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: v, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, f.Ay)(),
-        C = S || (k && 0 === j.size);
+        { categories: v, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, y.Ay)(),
+        C = S || (k && 0 === j.size),
+        f = n.useId();
     return (
         n.useEffect(() => {
             I.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
@@ -436,6 +438,8 @@ function eu(e) {
                       size: C ? l.rI.DYNAMIC : l.rI.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       returnRef: p,
+                      "aria-label": C ? O.intl.string(O.t.HykynS) : void 0,
+                      "aria-labelledby": C ? void 0 : f,
                       "data-migration-pending": !0,
                       children: C
                           ? (0, r.jsx)(c.y, { className: ea.u1, type: c.y.Type.SPINNING_CIRCLE })
@@ -445,6 +449,7 @@ function eu(e) {
                                 categories: v,
                                 purchases: j,
                                 analyticsLocations: A,
+                                modalHeadingId: f,
                                 initialSelectedDecoration: o,
                                 onClose: function () {
                                     u(), s?.();
