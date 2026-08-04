@@ -1,234 +1,250 @@
-"use strict";
-n.d(t, { $: () => $, D: () => K });
+n.d(t, { $: () => Y, D: () => K });
 var i = n(477900),
-    r = n(582128),
-    a = n(989349),
-    s = n.n(a),
-    l = n(554146),
-    o = n(573648),
-    d = n(503698),
-    c = n.n(d),
-    u = n(17928),
-    _ = n(192308),
-    E = n(417098),
-    A = n(318254),
-    h = n(661531),
-    I = n(736653),
-    f = n(793574),
-    p = n(688810),
-    T = n(429913),
-    m = n(30370),
-    g = n(772680),
-    S = n(281020),
-    N = n(206828),
-    C = n(49999),
-    O = n(230451),
-    R = n(375708),
-    L = n(789167);
-let D = function (e) {
-    let { markAsDismissed: t, recurringDismiss: a, platformTypes: s, platformIconOverride: l, noticeType: d } = e,
-        D = (0, u.bG)([m.A], () => m.A.getAccounts().find((e) => s.includes(e.type))?.type),
-        y = (0, I.Ay)(),
-        v = null != D ? o.A.get(D) : null,
-        b = v?.migrationData?.replacedBy,
-        M = (0, T.h)(b),
-        P = M?.name,
-        { startAuthorization: U, canStartAuthorization: w, hasAlreadyLinked: G, fetched: x } = (0, N.RD)(M),
-        { analyticsLocations: k } = (0, p.Ay)(f.A.NOTICE),
-        F = null == l ? v : l;
-    if (
-        (r.useEffect(() => {
-            G && x && (null != b && (0, S.M8)(b), t(C.i.INDIRECT_ACTION));
-        }, [G, x, t, b]),
-        null == M || !w || !x || G)
-    )
-        return null;
-    function V() {
-        null != M &&
-            (0, g.RI)({
-                applicationId: M.id,
-                onSuccess: () => {
-                    (0, _.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
-                        return (t) => (0, i.jsx)(e, { ...t });
+    l = n(582128),
+    r = n(989349),
+    s = n.n(r),
+    a = n(554146),
+    E = n(573648),
+    o = n(503698),
+    c = n.n(o),
+    u = n(17928);
+if (21552 == n.j) var _ = n(192308);
+if (21552 == n.j) var A = n(417098);
+if (21552 == n.j) var T = n(318254);
+if (21552 == n.j) var d = n(661531);
+var I = n(736653),
+    N = n(793574),
+    R = n(688810),
+    S = n(429913),
+    O = n(30370),
+    C = n(772680),
+    D = n(281020),
+    m = n(206828),
+    p = n(49999),
+    P = n(230451),
+    M = n(375708),
+    f = n(789167);
+let g =
+    21552 == n.j
+        ? function (e) {
+              let {
+                      markAsDismissed: t,
+                      recurringDismiss: r,
+                      platformTypes: s,
+                      platformIconOverride: a,
+                      noticeType: o,
+                  } = e,
+                  g = (0, u.bG)([O.A], () => O.A.getAccounts().find((e) => s.includes(e.type))?.type),
+                  h = (0, I.Ay)(),
+                  U = null != g ? E.A.get(g) : null,
+                  y = U?.migrationData?.replacedBy,
+                  L = (0, S.h)(y),
+                  k = L?.name,
+                  { startAuthorization: x, canStartAuthorization: G, hasAlreadyLinked: v, fetched: j } = (0, m.RD)(L),
+                  { analyticsLocations: q } = (0, R.Ay)(N.A.NOTICE),
+                  X = null == a ? U : a;
+              if (
+                  (l.useEffect(() => {
+                      v && j && (null != y && (0, D.M8)(y), t(p.i.INDIRECT_ACTION));
+                  }, [v, j, t, y]),
+                  null == L || !G || !j || v)
+              )
+                  return null;
+              function b() {
+                  null != L &&
+                      (0, C.RI)({
+                          applicationId: L.id,
+                          onSuccess: () => {
+                              (0, _.openModalLazy)(async () => {
+                                  let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(
+                                      n.bind(n, 494886),
+                                  );
+                                  return (t) => (0, i.jsx)(e, { ...t });
+                              });
+                          },
+                      });
+              }
+              return (0, i.jsxs)(A.$T, {
+                  color: A.Hv.WARNING,
+                  children: [
+                      (0, i.jsx)(A.PM, {
+                          noticeType: o,
+                          onClick: () => {
+                              t(p.i.USER_DISMISS);
+                          },
+                      }),
+                      (0, i.jsx)("img", {
+                          src: "light" === h ? X?.icon.blackSVG : X?.icon.whiteSVG,
+                          alt: k,
+                          className: c()(f.tV, f.Y5),
+                      }),
+                      M.intl.format(P.default.qV9zT6, {
+                          connectionName: U?.name,
+                          orbsIconHook: () =>
+                              (0, i.jsx)(T.C, {
+                                  size: "xs",
+                                  style: { verticalAlign: "-0.22em" },
+                                  color: d.A.colors.NOTICE_TEXT_WARNING,
+                              }),
+                          orbCount: 200,
+                      }),
+                      (0, i.jsx)(A.Z_, {
+                          onClick: function () {
+                              x({ analyticsLocations: q, onSuccess: b });
+                          },
+                          className: f.NS,
+                          noticeType: o,
+                          children: M.intl.string(P.default.ZeOhh9),
+                      }),
+                      (0, i.jsx)(A.zr, {
+                          onClick: () => r(p.i.USER_DISMISS),
+                          className: f.go,
+                          children: M.intl.string(P.default["8qJAeT"]),
+                      }),
+                  ],
+              });
+          }
+        : null;
+var h = n(521790),
+    U = n(256106),
+    y = n(496431),
+    L = n(532794),
+    k = n(174459),
+    x = n(724651),
+    G = n(410516),
+    v = n(635995),
+    j = n(99462),
+    q = n(202541),
+    X = n(652215);
+let b =
+    21552 == n.j
+        ? function (e) {
+              let { dismissCurrentNotice: t, subscriptionTier: n } = e,
+                  { analyticsLocations: l } = (0, R.Ay)(N.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+                  r = (0, x.O)(),
+                  s = (0, y.A)(null != r && null != r.expiresAt ? r.expiresAt.getTime() : 0);
+              return null == r ||
+                  r.discount?.planIds.some((e) => q.hd[e].skuId !== n) ||
+                  !r.hasAcknowledged() ||
+                  Object.values(s).every((e) => 0 === e)
+                  ? null
+                  : (0, i.jsxs)(v.T0, {
+                        onClick: () => {
+                            t(),
+                                k.default.track(X.HAw.APP_NOTICE_CLOSED, {
+                                    notice_type: X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                                });
+                        },
+                        children: [
+                            (0, i.jsx)(v.In, { children: (0, j.rn)(s, Number(r.discount.amount), (0, G.hm)(r)) }),
+                            (0, i.jsx)(v.fY, {
+                                onClick: function () {
+                                    (0, L.A)({
+                                        subscriptionTier: n,
+                                        analyticsLocations: l,
+                                        analyticsObject: {
+                                            page: X.liQ.IN_APP,
+                                            section: X.JJy.NOTIFICATION_BAR,
+                                            object: X.ZSU.BUTTON_CTA,
+                                        },
+                                    });
+                                },
+                                text: M.intl.string(M.t.zLXssK),
+                            }),
+                        ],
                     });
-                },
-            });
-    }
-    return (0, i.jsxs)(E.$T, {
-        color: E.Hv.WARNING,
-        children: [
-            (0, i.jsx)(E.PM, {
-                noticeType: d,
-                onClick: () => {
-                    t(C.i.USER_DISMISS);
-                },
-            }),
-            (0, i.jsx)("img", {
-                src: "light" === y ? F?.icon.blackSVG : F?.icon.whiteSVG,
-                alt: P,
-                className: c()(L.tV, L.Y5),
-            }),
-            R.intl.format(O.default.qV9zT6, {
-                connectionName: v?.name,
-                orbsIconHook: () =>
-                    (0, i.jsx)(A.C, {
-                        size: "xs",
-                        style: { verticalAlign: "-0.22em" },
-                        color: h.A.colors.NOTICE_TEXT_WARNING,
-                    }),
-                orbCount: 200,
-            }),
-            (0, i.jsx)(E.Z_, {
-                onClick: function () {
-                    U({ analyticsLocations: k, onSuccess: V });
-                },
-                className: L.NS,
-                noticeType: d,
-                children: R.intl.string(O.default.ZeOhh9),
-            }),
-            (0, i.jsx)(E.zr, {
-                onClick: () => a(C.i.USER_DISMISS),
-                className: L.go,
-                children: R.intl.string(O.default["8qJAeT"]),
-            }),
-        ],
-    });
-};
-var y = n(521790),
-    v = n(256106),
-    b = n(496431),
-    M = n(532794),
-    P = n(174459),
-    U = n(724651),
-    w = n(410516),
-    G = n(635995),
-    x = n(99462),
-    k = n(202541),
-    F = n(652215);
-let V = function (e) {
-    let { dismissCurrentNotice: t, subscriptionTier: n } = e,
-        { analyticsLocations: r } = (0, p.Ay)(f.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        a = (0, U.O)(),
-        s = (0, b.A)(null != a && null != a.expiresAt ? a.expiresAt.getTime() : 0);
-    return null == a ||
-        a.discount?.planIds.some((e) => k.hd[e].skuId !== n) ||
-        !a.hasAcknowledged() ||
-        Object.values(s).every((e) => 0 === e)
-        ? null
-        : (0, i.jsxs)(G.T0, {
-              onClick: () => {
-                  t(), P.default.track(F.HAw.APP_NOTICE_CLOSED, { notice_type: F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING });
-              },
-              children: [
-                  (0, i.jsx)(G.In, { children: (0, x.rn)(s, Number(a.discount.amount), (0, w.hm)(a)) }),
-                  (0, i.jsx)(G.fY, {
-                      onClick: function () {
-                          (0, M.A)({
-                              subscriptionTier: n,
-                              analyticsLocations: r,
-                              analyticsObject: {
-                                  page: F.liQ.IN_APP,
-                                  section: F.JJy.NOTIFICATION_BAR,
-                                  object: F.ZSU.BUTTON_CTA,
-                              },
-                          });
-                      },
-                      text: R.intl.string(R.t.zLXssK),
-                  }),
-              ],
-          });
-};
+          }
+        : null;
 var B = n(745299),
-    H = n(354670),
-    j = n(428262),
-    W = n(826673),
-    Y = n(595529);
+    w = n(354670),
+    F = n(158045),
+    H = n(826673),
+    V = n(595529);
 function K(e) {
     switch (e) {
-        case F.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-            let t = H.A.getAlmostExpiringTrialOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, j.e1)(t[0]) };
-        case F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-            let n = H.A.getAlmostExpiringDiscountOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, j.e1)(n[0]) };
-        case F.kqX.RIOT_MIGRATION:
-        case F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
-        case F.kqX.BATTLENET_MIGRATION:
-        case F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
+        case X.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+            let t = w.A.getAlmostExpiringTrialOffersForReminder([q.pe.TIER_2]);
+            return { cooldownDurationMs: (0, F.e1)(t[0]) };
+        case X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+            let n = w.A.getAlmostExpiringDiscountOffersForReminder([q.pe.TIER_2]);
+            return { cooldownDurationMs: (0, F.e1)(n[0]) };
+        case X.kqX.RIOT_MIGRATION:
+        case X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case X.kqX.BATTLENET_MIGRATION:
+        case X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-function $(e) {
+function Y(e) {
     let { dismissibleContent: t, noticeType: n } = e,
-        a = r.useMemo(() => K(n), [n]),
-        d = s()().add(5, "days").toDate(),
-        [c, u] = (0, Y.Bo)(t, a, C.m.NOTICE_BAR);
+        r = l.useMemo(() => K(n), [n]),
+        o = s()().add(5, "days").toDate(),
+        [c, u] = (0, V.Bo)(t, r, p.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
-        case l.M.NAGBAR_NOTICE_OFFER_EXPIRING:
-            if (n === F.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+        case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
+            if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        u(C.i.USER_DISMISS), (0, v.w)(d);
+                        u(p.i.USER_DISMISS), (0, U.w)(o);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: q.pe.TIER_2,
                 });
-            if (n === F.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(V, {
+            if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+                return (0, i.jsx)(b, {
                     dismissCurrentNotice: () => {
-                        u(C.i.USER_DISMISS), (0, v.w)(d);
+                        u(p.i.USER_DISMISS), (0, U.w)(o);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: q.pe.TIER_2,
                 });
             break;
-        case l.M.RIOT_CONNECTION_DEPRECATION:
-            return (0, i.jsx)(D, {
-                noticeType: F.kqX.RIOT_MIGRATION,
+        case a.M.RIOT_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(g, {
+                noticeType: X.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformTypes: [F.fg2.LEAGUE_OF_LEGENDS, F.fg2.RIOT_GAMES],
-                platformIconOverride: o.A.get(F.fg2.RIOT_GAMES),
+                platformTypes: [X.fg2.LEAGUE_OF_LEGENDS, X.fg2.RIOT_GAMES],
+                platformIconOverride: E.A.get(X.fg2.RIOT_GAMES),
             });
-        case l.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
-            return (0, i.jsx)(y.Ay, {
-                noticeType: F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+        case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
+            return (0, i.jsx)(h.Ay, {
+                noticeType: X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
+                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformType: F.fg2.RIOT_GAMES,
+                platformType: X.fg2.RIOT_GAMES,
             });
-        case l.M.BATTLENET_CONNECTION_DEPRECATION:
-            return (0, i.jsx)(D, {
-                noticeType: F.kqX.BATTLENET_MIGRATION,
+        case a.M.BATTLENET_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(g, {
+                noticeType: X.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformTypes: [F.fg2.BATTLENET],
-                platformIconOverride: o.A.get(F.fg2.BATTLENET),
+                platformTypes: [X.fg2.BATTLENET],
+                platformIconOverride: E.A.get(X.fg2.BATTLENET),
             });
-        case l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
-            return (0, i.jsx)(y.Ay, {
-                noticeType: F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
+        case a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
+            return (0, i.jsx)(h.Ay, {
+                noticeType: X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
-                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
+                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformType: F.fg2.BATTLENET,
+                platformType: X.fg2.BATTLENET,
             });
     }
 }

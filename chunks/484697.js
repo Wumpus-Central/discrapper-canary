@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { Y: () => r, l: () => a });
-let i = new WeakMap();
-function r(e, t) {
-    i.set(e, t);
+n.d(t, { Y: () => a, l: () => r });
+let s = new WeakMap();
+function a(e, t) {
+    s.set(e, t);
 }
-function a(e) {
-    return i.get(e) ?? null;
+function r(e) {
+    return s.get(e) ?? null;
 }

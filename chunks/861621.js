@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(652215);
-let r = "<removed>";
-function a(e) {
+n.d(t, { A: () => r });
+var o = n(652215);
+let i = "<removed>";
+function r(e) {
     var t, n;
-    let a = { ...e };
+    let r = { ...e };
     return (
-        "object" == typeof (t = a).args &&
+        "object" == typeof (t = r).args &&
             "string" == typeof t.cmd &&
-            (a = (function (e) {
+            (r = (function (e) {
                 switch (e.cmd) {
-                    case i.e$_.AUTHENTICATE:
-                    case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, args: { ...e.args, access_token: r } };
+                    case o.e$_.AUTHENTICATE:
+                    case o.e$_.GET_PROVIDER_ACCESS_TOKEN:
+                        return { ...e, args: { ...e.args, access_token: i } };
                     default:
                         return { ...e };
                 }
-            })(a)),
-        "object" == typeof (n = a).data &&
+            })(r)),
+        "object" == typeof (n = r).data &&
             "string" == typeof n.cmd &&
-            (a = (function (e) {
+            (r = (function (e) {
                 switch (e.cmd) {
-                    case i.e$_.AUTHENTICATE:
-                    case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, data: { ...e.data, access_token: r } };
+                    case o.e$_.AUTHENTICATE:
+                    case o.e$_.GET_PROVIDER_ACCESS_TOKEN:
+                        return { ...e, data: { ...e.data, access_token: i } };
                     default:
                         return { ...e };
                 }
-            })(a)),
-        a
+            })(r)),
+        r
     );
 }
