@@ -9,7 +9,7 @@ var i = n(562465),
 async function d(e) {
     let t = await i.Bo.put({
         url: o.Rsh.PUT_SAVED_MESSAGE(e.channelId, e.messageId),
-        body: { due_at: e.dueAt },
+        body: { due_at: e.dueAt, source: e.source },
         rejectWithError: (0, i.fT)(),
     });
     if (t.ok) return (0, l.iz)(t.body);

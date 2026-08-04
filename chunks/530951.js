@@ -1,37 +1,57 @@
-i.d(n, { default: () => u });
-var a = i(477900);
-i(582128);
-var l = i(976860),
-    o = i(174459),
-    r = i(831318),
-    c = i(652215);
-i(811233);
-var e = i(375708),
-    s = i(936037);
-function u(t) {
-    let { onClose: n, isReminder: i = !1, limit: u, ...p } = t,
-        _ = i ? 50 : 200;
-    return (0, a.jsx)(r.A, {
-        title:
-            null == u
-                ? e.intl.string(e.t.w4DRbZ)
-                : e.intl.formatToPlainString(i ? e.t["cpj9o/"] : e.t.Oxm3Sq, { premiumMax: _ }),
-        subtitle:
-            null == u
-                ? e.intl.string(e.t.F6u3E3)
-                : e.intl.formatToPlainString(i ? e.t.IwWQgO : e.t.sgXqR1, { max: u, premiumMax: _ }),
-        graphic: { src: s, type: "image" },
-        badgeType: "beta",
-        secondaryCTA: e.intl.string(e.t.PcTCB7),
-        onSecondaryClick: function () {
-            o.default.track(c.HAw.PREMIUM_PROMOTION_OPENED, {
-                location_section: c.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
-                location_object: c.ZSU.NAVIGATION_LINK,
+n.d(i, { default: () => M });
+var a = n(477900);
+n(582128);
+var c = n(83790),
+    o = n(964486),
+    l = n(793574),
+    e = n(688810),
+    _ = n(976860),
+    s = n(174459),
+    r = n(158045),
+    E = n(831318),
+    A = n(202541),
+    u = n(652215);
+n(811233);
+var L = n(375708),
+    P = n(936037);
+function M(t) {
+    let { onClose: i, isReminder: n = !1, limit: M, analyticsLocations: p = [], ...I } = t,
+        O = n ? 50 : 200,
+        { analyticsLocations: R } = (0, e.Ay)(p, l.A.PREMIUM_UPSELL_MODAL);
+    return (
+        (0, o.Ay)(() => {
+            s.default.track(u.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: c.w.SAVED_MESSAGES,
+                location_section: u.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
+                location_stack: R,
+                sku_id: (0, r.mH)(A.pe.TIER_2),
+            });
+        }),
+        (0, a.jsx)(e.f5, {
+            value: R,
+            children: (0, a.jsx)(E.A, {
+                title:
+                    null == M
+                        ? L.intl.string(L.t.w4DRbZ)
+                        : L.intl.formatToPlainString(n ? L.t["cpj9o/"] : L.t.Oxm3Sq, { premiumMax: O }),
+                subtitle:
+                    null == M
+                        ? L.intl.string(L.t.F6u3E3)
+                        : L.intl.formatToPlainString(n ? L.t.IwWQgO : L.t.sgXqR1, { max: M, premiumMax: O }),
+                graphic: { src: P, type: "image" },
+                badgeType: "beta",
+                secondaryCTA: L.intl.string(L.t.PcTCB7),
+                onSecondaryClick: function () {
+                    s.default.track(u.HAw.PREMIUM_PROMOTION_OPENED, {
+                        location_section: u.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
+                        location_object: u.ZSU.NAVIGATION_LINK,
+                    }),
+                        i(),
+                        (0, _.pX)(u.BVt.APPLICATION_STORE);
+                },
+                onClose: i,
+                ...I,
             }),
-                n(),
-                (0, l.pX)(c.BVt.APPLICATION_STORE);
-        },
-        onClose: n,
-        ...p,
-    });
+        })
+    );
 }

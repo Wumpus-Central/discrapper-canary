@@ -1,4 +1,4 @@
-n.d(t, { A: () => $ }), n(321073);
+n.d(t, { A: () => ee }), n(321073);
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -73,17 +73,18 @@ let S = new T(x.h, {
         j = null;
     },
 });
-var y = n(554146),
-    b = n(43105),
-    R = n(826673),
-    L = n(367727),
-    M = n(49999),
-    k = n(375708),
-    O = n(936037);
-let P = y.M.FOR_LATER_REACTION_COACHMARK;
-function D(e) {
+var y = n(738125),
+    b = n(554146),
+    R = n(43105),
+    L = n(826673),
+    M = n(367727),
+    k = n(49999),
+    O = n(375708),
+    P = n(936037);
+let D = b.M.FOR_LATER_REACTION_COACHMARK;
+function U(e) {
     let { targetElementRef: t, onDismiss: n } = e;
-    return (0, i.jsx)(b.A, {
+    return (0, i.jsx)(R.A, {
         targetElementRef: t,
         gradientColor: "purple",
         position: "top",
@@ -91,24 +92,26 @@ function D(e) {
         shouldShow: !0,
         scrollBehavior: "close",
         caretConfig: { align: "start" },
-        onRequestClose: () => n(M.i.USER_DISMISS),
-        title: k.intl.string(k.t.qPbFK2),
-        body: k.intl.string(k.t.FMaaaB),
-        actions: [{ text: k.intl.string(k.t["NX+WJN"]), onClick: () => n(M.i.USER_DISMISS) }],
-        graphic: { type: "image", src: O },
+        onRequestClose: () => n(k.i.USER_DISMISS),
+        title: O.intl.string(O.t.qPbFK2),
+        body: O.intl.string(O.t.FMaaaB),
+        actions: [{ text: O.intl.string(O.t["NX+WJN"]), onClick: () => n(k.i.USER_DISMISS) }],
+        graphic: { type: "image", src: P },
     });
 }
-var U = n(519222),
-    G = n(435153),
-    w = n(129821);
-function H(e) {
+var G = n(519222),
+    w = n(435153),
+    H = n(129821);
+function V(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, I.jv)("message_reactions"),
-        d = (0, h.bG)([v.A], () => null != v.A.getSavedMessage(n.id, t.id)),
-        u = (0, h.bG)([S], () => S.isNudging(n.id, t.id)),
-        m = l.useRef(null),
-        { isCoachmarkVisible: x, dismissCoachmark: E } = (function (e) {
-            let t = (0, R.HX)(P),
+        d = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
+        u = null != d && null == d.saveData.dueAt,
+        m = null != d && null != d.saveData.dueAt,
+        x = (0, h.bG)([S], () => S.isNudging(n.id, t.id)),
+        E = l.useRef(null),
+        { isCoachmarkVisible: _, dismissCoachmark: C } = (function (e) {
+            let t = (0, L.HX)(D),
                 n = (0, h.bG)([v.A], () => v.A.getSavedMessageCount() > 0),
                 i = e && !t && !n,
                 [s, a] = l.useState(!1);
@@ -116,7 +119,7 @@ function H(e) {
             let [r, o] = l.useState(!1),
                 c = e && !r && (i || s),
                 d = l.useCallback((e) => {
-                    (0, R.Dr)(P, { dismissAction: e });
+                    (0, L.Dr)(D, { dismissAction: e });
                 }, []),
                 u = l.useCallback(
                     (e) => {
@@ -126,46 +129,48 @@ function H(e) {
                 );
             return (
                 l.useEffect(() => {
-                    n && !t && d(M.i.INDIRECT_ACTION);
+                    n && !t && d(k.i.INDIRECT_ACTION);
                 }, [n, t, d]),
                 l.useEffect(() => {
-                    c && ((0, L.Wx)(P), d(M.i.AUTO_DISMISS));
+                    c && ((0, M.Wx)(D), d(k.i.AUTO_DISMISS));
                 }, [c, d]),
                 { isCoachmarkVisible: c, dismissCoachmark: u }
             );
-        })(u),
-        _ = t.reactions.some((e) => e.me || e.me_burst),
-        [C, N] = l.useState(_);
-    if ((_ && !C && N(!0), (!C && !_) || !c || t.author.id === f.default.getId())) return null;
-    let j = s ? w : G,
-        T = d ? g.c : p.c;
+        })(x),
+        N = t.reactions.some((e) => e.me || e.me_burst),
+        [j, T] = l.useState(N);
+    if ((N && !j && T(!0), (!j && !N) || !c || t.author.id === f.default.getId() || m)) return null;
+    let b = s ? H : w,
+        R = u ? g.c : p.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(A.m, {
                 asContainer: !0,
-                text: d ? k.intl.string(k.t.LHUP9D) : k.intl.string(k.t["9p3D9p"]),
+                text: u ? O.intl.string(O.t.LHUP9D) : O.intl.string(O.t["9p3D9p"]),
                 children: (0, i.jsx)(o.D, {
-                    innerRef: m,
+                    innerRef: E,
                     onClick: (e) => {
-                        e.stopPropagation(), d ? (0, U.r7)(n, t) : (0, U.wF)(n, t), x && E(M.i.TAKE_ACTION);
+                        e.stopPropagation(),
+                            u ? (0, G.r7)(n, t) : (0, G.wF)(n, t, y.r.REACTION_BUTTON),
+                            _ && C(k.i.TAKE_ACTION);
                     },
-                    className: a()(j.reactionBtn, j.bookmarkBtn, { [j.visible]: d || u }, r),
-                    children: (0, i.jsx)(T, { size: "sm", color: "currentColor", className: j.icon }),
+                    className: a()(b.reactionBtn, b.bookmarkBtn, { [b.visible]: u || x }, r),
+                    children: (0, i.jsx)(R, { size: "sm", color: "currentColor", className: b.icon }),
                 }),
             }),
-            x && (0, i.jsx)(D, { targetElementRef: m, onDismiss: E }),
+            _ && (0, i.jsx)(U, { targetElementRef: E, onDismiss: C }),
         ],
     });
 }
-var V = n(860227),
-    B = n(172218),
-    F = n(317097),
-    z = n(565645),
-    J = n(114166),
-    Y = n(891734),
-    K = n(815807),
-    W = n(831688);
-let X = l.memo(function (e) {
+var B = n(860227),
+    F = n(172218),
+    z = n(317097),
+    J = n(565645),
+    Y = n(114166),
+    K = n(891734),
+    W = n(815807),
+    X = n(831688);
+let Z = l.memo(function (e) {
         let t,
             n,
             {
@@ -184,15 +189,15 @@ let X = l.memo(function (e) {
                 emojiSize: f,
             } = e,
             E = x === u.v.BURST,
-            _ = (0, K.IN)(c, d, x),
-            C = (0, Y.g)(E && null != h ? h : []),
-            I = l ? w : G,
+            _ = (0, W.IN)(c, d, x),
+            C = (0, K.g)(E && null != h ? h : []),
+            I = l ? H : w,
             v = E ? m : o,
-            N = (0, J.x)(v, W.$),
+            N = (0, Y.x)(v, X.$),
             j = {};
         if (E && null != C) {
             let { accentColor: e, backgroundColor: i, opacity: l } = C,
-                s = (0, F.xp)(i ?? "", l) ?? "";
+                s = (0, z.xp)(i ?? "", l) ?? "";
             _ && (j.borderColor = i), (j.background = s), (t = e), (n = e);
         }
         let T = { minWidth: N, color: t, borderColor: n };
@@ -200,12 +205,12 @@ let X = l.memo(function (e) {
             className: a()(I.reaction, I.reactionInner, r, { [I.reactionMe]: _, [I.reactionReadOnly]: g && !p && !A }),
             style: j,
             children: [
-                (0, i.jsx)(z.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
+                (0, i.jsx)(J.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
                 (0, i.jsx)("div", { className: I.reactionCount, style: T, children: v }),
             ],
         });
     }),
-    Z = l.memo(function (e) {
+    q = l.memo(function (e) {
         let { showImmediate: t, reactions: n, ...s } = e,
             [a, r] = l.useState(!1),
             [o, c] = l.useTransition(),
@@ -220,8 +225,8 @@ let X = l.memo(function (e) {
                 },
                 [a, o],
             ),
-            m = (0, B.K)(d),
-            h = (a && !o) || t ? W.q : X;
+            m = (0, F.K)(d),
+            h = (a && !o) || t ? X.q : Z;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", { ref: m }),
@@ -235,10 +240,10 @@ let X = l.memo(function (e) {
             ],
         });
     });
-function q(e, t) {
+function Q(e, t) {
     return (null == e && null == t) || e === t;
 }
-class Q extends l.PureComponent {
+class $ extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
@@ -266,7 +271,7 @@ class Q extends l.PureComponent {
                 visibleReactionsCount: _,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            I = A ? w : G;
+            I = A ? H : w;
         return _ > 0
             ? (0, i.jsxs)(r.F, {
                   component: "div",
@@ -274,9 +279,9 @@ class Q extends l.PureComponent {
                   transitionAppear: !C,
                   role: "group",
                   transitionLeave: !1,
-                  id: (0, V.JH)(e),
+                  id: (0, B.JH)(e),
                   children: [
-                      (0, i.jsx)(Z, {
+                      (0, i.jsx)(q, {
                           reactions: E,
                           message: e,
                           readOnly: n,
@@ -292,7 +297,7 @@ class Q extends l.PureComponent {
                                   t.stopPropagation(), (0, d.$)(e);
                               },
                               className: a()(I.reaction, p, I.remainingReactions),
-                              "aria-label": k.intl.string(k.t.lfIHs4),
+                              "aria-label": O.intl.string(O.t.lfIHs4),
                               children: (0, i.jsxs)(c.E, {
                                   className: I.reactionInner,
                                   variant: "text-sm/normal",
@@ -302,13 +307,13 @@ class Q extends l.PureComponent {
                       !t &&
                           !x &&
                           (0, i.jsx)(m.t, { message: e, channel: h, useChatFontScaling: A, className: I.forceShow }),
-                      !u && (0, i.jsx)(H, { message: e, channel: h, useChatFontScaling: A }),
+                      !u && (0, i.jsx)(V, { message: e, channel: h, useChatFontScaling: A }),
                   ],
               })
             : null;
     }
 }
-let $ = function (e) {
+let ee = function (e) {
     let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
             combinedReactions: a,
@@ -318,7 +323,7 @@ let $ = function (e) {
             let e = [],
                 i = (function (e, t) {
                     if (null == t) return e;
-                    let n = e.findIndex((e) => q(e.emoji.id, t?.id) && q(e.emoji.name, t?.name));
+                    let n = e.findIndex((e) => Q(e.emoji.id, t?.id) && Q(e.emoji.name, t?.name));
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, s),
                 l = null != n && n < i.length ? i.slice(0, n) : i,
@@ -333,5 +338,5 @@ let $ = function (e) {
                 { combinedReactions: e, visibleReactionsCount: r, remainingReactions: a }
             );
         }, [s, n, t.reactions]);
-    return (0, i.jsx)(Q, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
+    return (0, i.jsx)($, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
 };
