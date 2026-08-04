@@ -17,6 +17,10 @@
     margin-inline-end: 4px
 }
 
+.churnDiscountBadgeLabel_b65b20 {
+    text-transform: uppercase
+}
+
 .imageWrapper__313d2 {
     margin-top: var(--space-16);
     padding: 0 var(--space-16)

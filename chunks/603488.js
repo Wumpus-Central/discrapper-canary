@@ -16,7 +16,12 @@ function _() {
               className: a()(u.Fg, u.Hh, {}),
               children: [
                   (0, i.jsx)(l.O, { size: "custom", width: 12, height: 12, color: "currentColor", className: u.iD }),
-                  (0, i.jsx)(o.E, { variant: "eyebrow", color: "text-subtle", children: c.intl.string(c.t.OS9KPu) }),
+                  (0, i.jsx)(o.E, {
+                      variant: "eyebrow",
+                      color: "text-subtle",
+                      className: u.lJ,
+                      children: c.intl.string(c.t.OS9KPu),
+                  }),
               ],
           })
         : (0, i.jsx)("div", {
@@ -24,6 +29,7 @@ function _() {
               children: (0, i.jsx)(o.E, {
                   variant: "eyebrow",
                   color: "text-overlay-light",
+                  className: u.lJ,
                   children: c.intl.string(c.t.OS9KPu),
               }),
           });

@@ -3,4 +3,5 @@ e.exports = {
     N4: "backgroundGradient_e4ef22",
     Hh: "premiumTrialAcknowledgedBadge_e4ef22",
     iD: "BogoBadgeClockIcon_e4ef22",
+    lJ: "bogoBadgeLabel_e4ef22",
 };

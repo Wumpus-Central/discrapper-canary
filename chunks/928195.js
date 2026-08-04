@@ -4,4 +4,5 @@ e.exports = {
     C8: "premiumOfferWithTimerAcknowledgedBadge__4c1e4",
     WO: "premiumTrialBadgeSelected__4c1e4",
     md: "premiumOfferBadgeCopy__4c1e4",
+    a7: "acknowledgedBadgeLabel__4c1e4",
 };

@@ -245,7 +245,8 @@
     flex-shrink: 0;
     font-weight: var(--font-weight-semibold);
     height: 16px;
-    padding: 2px var(--space-8)
+    padding: 2px var(--space-8);
+    text-transform: uppercase
 }
 
 .text_eaab0b {
