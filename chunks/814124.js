@@ -34,11 +34,11 @@ function g(e) {
             ctaIcon: S,
             onCtaClick: O,
             hideCta: R,
-            onDismiss: y,
+            onDismiss: j,
         } = e,
-        { analyticsLocations: j } = (0, _.Ay)(u.A.COLLECTIBLES_SHOP_NAGBAR),
+        { analyticsLocations: y } = (0, _.Ay)(u.A.COLLECTIBLES_SHOP_NAGBAR),
         M = a.useMemo(() => (null == k ? null : E.A.getArticleURL(k)), [k]),
-        f = (0, I.s)(i),
+        f = (0, I.sj)(i),
         B = b[l] ?? N.Hk,
         P = (0, x.uM)(),
         G = a.useCallback(() => {
@@ -52,7 +52,7 @@ function g(e) {
             });
         }, [t, P]);
     return (0, n.jsx)(_.f5, {
-        value: j,
+        value: y,
         children: (0, n.jsx)(c.N, {
             theme: L.NJ8.DARKER,
             children: (e) =>
@@ -101,9 +101,9 @@ function g(e) {
                                                 icon: S,
                                                 onClick: O,
                                             }),
-                                        null != y &&
+                                        null != j &&
                                             (0, n.jsx)(d.PM, {
-                                                onClick: y,
+                                                onClick: j,
                                                 noticeType: L.kqX.COLLECTIBLES_SHOP_NAGBAR,
                                                 className: N.r,
                                             }),

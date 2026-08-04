@@ -14,23 +14,23 @@ var l = n(477900),
     h = n(993408),
     f = n(80151),
     E = n(629042),
-    A = n(287809),
-    S = n(486020),
-    y = n(428262),
-    P = n(580630),
-    I = n(1076),
-    _ = n(284009),
-    T = n.n(_),
-    g = n(17928),
-    v = n(318254),
-    x = n(10716),
-    N = n(206828),
-    R = n(20015),
-    b = n(202475),
-    M = n(364995),
-    j = n(31823),
-    O = n(427675),
-    L = n(151115),
+    A = n(151115),
+    S = n(287809),
+    y = n(486020),
+    P = n(158045),
+    I = n(580630),
+    _ = n(1076),
+    T = n(284009),
+    g = n.n(T),
+    v = n(17928),
+    x = n(318254),
+    N = n(10716),
+    R = n(206828),
+    b = n(20015),
+    M = n(202475),
+    j = n(364995),
+    O = n(31823),
+    L = n(427675),
     w = n(977445),
     k = n(812095),
     U = n(218075),
@@ -67,14 +67,14 @@ function J(e) {
             sku: n,
             invoicePreview: r,
             paymentMethodContent: c,
-            legalContent: _,
-            isGift: T,
-            giftRecipient: g,
-            upperInlineNoticeProps: x,
-            footerInlineNoticeProps: N,
+            legalContent: T,
+            isGift: g,
+            giftRecipient: v,
+            upperInlineNoticeProps: N,
+            footerInlineNoticeProps: R,
         } = e,
-        { product: R, isSocialLayerGameItem: b } = (0, K.AO)({ sku: n }),
-        { unifiedInvoiceSummaryProps: M, priceText: j } = i.useMemo(
+        { product: b, isSocialLayerGameItem: M } = (0, K.AO)({ sku: n }),
+        { unifiedInvoiceSummaryProps: j, priceText: O } = i.useMemo(
             () =>
                 (function (e) {
                     let { sku: t, invoicePreview: n } = e,
@@ -97,7 +97,7 @@ function J(e) {
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
-                                priceText: (0, P.$g)(i, n.currency),
+                                priceText: (0, I.$g)(i, n.currency),
                                 discount: e,
                             }
                         );
@@ -106,7 +106,7 @@ function J(e) {
                 })({ sku: n, invoicePreview: r }),
             [n, r],
         ),
-        O = i.useMemo(() => (null != M ? (0, l.jsx)(p.Vm, { ...M }) : null), [M]),
+        L = i.useMemo(() => (null != j ? (0, l.jsx)(p.Vm, { ...j }) : null), [j]),
         w = i.useMemo(
             () =>
                 (function (e) {
@@ -120,7 +120,7 @@ function J(e) {
                     let c = r
                             ? {
                                   header: i.name,
-                                  headerIconSrc: S.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }),
+                                  headerIconSrc: y.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }),
                               }
                             : {},
                         d = (0, l.jsx)(m.WH, { sku: t, product: n }),
@@ -128,8 +128,8 @@ function J(e) {
                     return (
                         null != n &&
                             (p = (function (e) {
-                                let t = A.default.getCurrentUser(),
-                                    n = y.Ay.canUseShopDiscounts(t),
+                                let t = S.default.getCurrentUser(),
+                                    n = P.Ay.canUseShopDiscounts(t),
                                     l = (0, h.xM)(t),
                                     i = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
                                 if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
@@ -149,21 +149,22 @@ function J(e) {
                             target: null != o ? { type: "gift", user: o } : void 0,
                         }
                     );
-                })({ sku: n, product: R, application: t, isSocialLayerGameItem: b, giftRecipient: g }),
-            [n, R, t, b, g],
+                })({ sku: n, product: b, application: t, isSocialLayerGameItem: M, giftRecipient: v }),
+            [n, b, t, M, v],
         ),
         [U, D] = i.useMemo(
-            () => [V.intl.string(Z.default.Zxav97), null != r ? (0, P.$g)(r.total, r.currency) : void 0],
+            () => [V.intl.string(Z.default.Zxav97), null != r ? (0, I.$g)(r.total, r.currency) : void 0],
             [r],
         ),
         G = (0, f.A)(),
         H = (0, C.t4)((e) => e.unifiedCheckoutFlow),
-        { setCollectedModalOverrideTitle: B } = (0, I.z)(),
-        Y = H === u.C.COLLECTIBLES_CHECKOUT && null != R ? (0, E.L0)(R, G) : null;
+        { setCollectedModalOverrideTitle: B, setCollectedModalGradientColor: Y } = (0, _.z)(),
+        Q = H === u.C.COLLECTIBLES_CHECKOUT && null != b ? (0, E.L0)(b, G) : null;
     i.useEffect(() => {
-        B(Y?.tenantMetadata?.collectibles?.reward?.collected?.overrideTitle);
-    }, [Y, B]);
-    let Q = i.useMemo(() => {
+        B(Q?.tenantMetadata?.collectibles?.reward?.collected?.overrideTitle),
+            Y(null != Q ? (0, A.KD)(Q.tenantMetadata?.collectibles?.reward?.flavor) : void 0);
+    }, [Q, B, Y]);
+    let J = i.useMemo(() => {
             let e = (function (e, t) {
                 let { productLine: n, isGift: l, product: i, promotion: r, unifiedCheckoutFlow: a } = t;
                 if (a === u.C.COLLECTIBLES_CHECKOUT && null != i) {
@@ -172,32 +173,32 @@ function J(e) {
                         n = e?.tenantMetadata?.collectibles?.reward?.flavor,
                         l = t?.text;
                     if (!(0, F.uJ)(l))
-                        return { Icon: (0, L.s)(t?.icon), text: (0, k.U)(l), gradientColor: (0, L.l)(n) };
+                        return { Icon: (0, A.sj)(t?.icon), text: (0, k.U)(l), gradientColor: (0, A.lx)(n) };
                 }
                 if (null == e) return null;
                 let s = e.orbsReward;
                 if (null != s && s > 0) {
                     let e = l ? V.t["ZV+aS9"] : V.t["0StwHe"];
                     return {
-                        Icon: v.C,
+                        Icon: x.C,
                         text: V.intl.format(e, { orbCount: s }),
                         gradientColor: n === W.EZt.SOCIAL_LAYER_GAME_ITEM ? "green" : "default",
                     };
                 }
-            })(r, { productLine: n.productLine, isGift: T, product: R, promotion: G, unifiedCheckoutFlow: H });
+            })(r, { productLine: n.productLine, isGift: g, product: b, promotion: G, unifiedCheckoutFlow: H });
             return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
-        }, [r, T, R, G, n.productLine, H]),
-        J = i.useMemo(() => (null != Q ? { headerBadgeText: V.intl.string(Z.default.Fjpyfj) } : {}), [Q]);
+        }, [r, g, b, G, n.productLine, H]),
+        X = i.useMemo(() => (null != J ? { headerBadgeText: V.intl.string(Z.default.Fjpyfj) } : {}), [J]);
     return (0, l.jsx)(d.T_, {
         shouldShowGlobalNotices: !0,
-        headerBadgeConfig: J,
-        purchaseItemContent: (0, l.jsx)(m.f7, { ...w, price: j }),
-        invoiceSummaryContent: O,
+        headerBadgeConfig: X,
+        purchaseItemContent: (0, l.jsx)(m.f7, { ...w, price: O }),
+        invoiceSummaryContent: L,
         paymentMethodContent: c,
-        legalContent: _,
-        promotionalNoticeContent: Q,
-        upperInlineNoticeProps: x,
-        footerInlineNoticeProps: N,
+        legalContent: T,
+        promotionalNoticeContent: J,
+        upperInlineNoticeProps: N,
+        footerInlineNoticeProps: R,
         invoiceTotalDueLabel: U,
         invoiceTotalDueValue: D,
     });
@@ -233,20 +234,20 @@ function X(e) {
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
                     isCheckoutDataLoading: e.get("isCheckoutDataLoading"),
                 })),
-                { hasPaymentSources: c } = (0, b.jm)(),
-                { application: d, isEmbeddedIAP: p } = (0, j.V)(),
-                m = (0, g.bG)([x.A], () => x.A.getFetchState()),
-                { checkoutPaymentSources: h } = (0, M.t)(),
-                f = (0, O.gU)(),
+                { hasPaymentSources: c } = (0, M.jm)(),
+                { application: d, isEmbeddedIAP: p } = (0, O.V)(),
+                m = (0, v.bG)([N.A], () => N.A.getFetchState()),
+                { checkoutPaymentSources: h } = (0, j.t)(),
+                f = (0, L.gU)(),
                 { isGift: E, giftRecipient: A } = (0, H.Pv)(),
                 S = E && (0, G.Ik)(A),
-                { fetched: y, hasAlreadyLinked: P } = (0, N.RD)(d);
-            T()(null != e, "Expected selectedSkuId");
+                { fetched: y, hasAlreadyLinked: P } = (0, R.RD)(d);
+            g()(null != e, "Expected selectedSkuId");
             let I = f[e],
                 _ = I?.eligiblePaymentGateways;
-            T()(null != I, "SKU must exist and be fetched."), T()(null != d, "Application must exist.");
-            let v = (0, w.uS)(d.id),
-                L = t === B.h.PURCHASING || t === B.h.COMPLETED,
+            g()(null != I, "SKU must exist and be fetched."), g()(null != d, "Application must exist.");
+            let T = (0, w.uS)(d.id),
+                x = t === B.h.PURCHASING || t === B.h.COMPLETED,
                 k = h.find((e) => e.id === r) ?? null,
                 F = null != k ? k.type : null,
                 K = null != _ && _.length > 0 && (null == r || null === F) && c ? U.fU.SELECT_PAYMENT_METHOD : void 0,
@@ -254,12 +255,12 @@ function X(e) {
                 q = S && !Z,
                 z = i.useMemo(
                     () => ({
-                        testModeWarning: v ? V.intl.string(V.t.OvMyMd) : null,
+                        testModeWarning: T ? V.intl.string(V.t.OvMyMd) : null,
                         devShelfError:
-                            (0, R.n)(d, W.gfo.EMBEDDED) && m === x.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
+                            (0, b.n)(d, W.gfo.EMBEDDED) && m === N.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
                         socialLayerGameItemDisclaimer: Z && y && !P && !E ? (0, D.k3)(d) : null,
                     }),
-                    [v, d, m, Z, y, P, E],
+                    [T, d, m, Z, y, P, E],
                 ),
                 Q = i.useMemo(
                     () =>
@@ -283,7 +284,7 @@ function X(e) {
                 warningAndErrorMessages: z,
                 purchaseTermsAndLegalContent: Q,
                 eligiblePaymentGateways: _,
-                disabled: L,
+                disabled: x,
             };
         })(),
         A = i.useMemo(() => ({ paymentGatewayRestrictions: o, shouldUseUnifiedCheckoutUI: !0 }), [o]),

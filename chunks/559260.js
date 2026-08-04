@@ -55,7 +55,7 @@ var m = n(465657),
     b = n(888751),
     M = n(216641),
     j = n(815545),
-    O = n(428262),
+    O = n(158045),
     L = n(580630);
 n(321073);
 var w = n(17928),
@@ -2255,46 +2255,47 @@ var nb = n(702841),
     nG = n(972607),
     nF = n(901930);
 function nH(e) {
-    let { handleClose: t, analyticsLocations: n, collectedModalOverrideTitle: i } = e,
+    let { handleClose: t, analyticsLocations: n, collectedModalOverrideTitle: i, collectedModalGradientColor: r } = e,
         {
-            selectedSkuId: r,
-            purchaseError: a,
-            purchasePreviewError: s,
-            appliedUserDiscounts: u,
+            selectedSkuId: a,
+            purchaseError: s,
+            purchasePreviewError: u,
+            appliedUserDiscounts: c,
         } = (0, f.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
             appliedUserDiscounts: e.appliedUserDiscounts,
         })),
-        { paymentError: c } = (0, el.o)(),
-        { application: d } = (0, nj.V)(),
-        p = (0, nO.gU)(),
-        m = (0, nb.bG)([nL.A], () => nL.A.getProduct(r)),
-        C = o.useRef(!1);
-    eZ()(null != r, "Expected selectedSkuId"), eZ()(null != d, "Expected application");
-    let h = p[r];
-    eZ()(null != h, "Expected sku");
-    let E = null != c || null != a || null != s,
-        A =
+        { paymentError: d } = (0, el.o)(),
+        { application: p } = (0, nj.V)(),
+        m = (0, nO.gU)(),
+        C = (0, nb.bG)([nL.A], () => nL.A.getProduct(a)),
+        h = o.useRef(!1);
+    eZ()(null != a, "Expected selectedSkuId"), eZ()(null != p, "Expected application");
+    let E = m[a];
+    eZ()(null != E, "Expected sku");
+    let A = null != d || null != s || null != u,
+        S =
             i ??
-            (u.length > 0
-                ? F.intl.formatToPlainString(F.t.VuV3Td, { discountOfferAmount: u[0].discount.amount })
+            (c.length > 0
+                ? F.intl.formatToPlainString(F.t.VuV3Td, { discountOfferAmount: c[0].discount.amount })
                 : void 0);
     return (o.useEffect(() => {
-        null == m ||
-            E ||
-            C.current ||
-            ((C.current = !0),
+        null == C ||
+            A ||
+            h.current ||
+            ((h.current = !0),
             (0, nD.A)({
-                product: m,
-                overrideTitle: A,
+                product: C,
+                overrideTitle: S,
+                overrideGradientColor: r,
                 analyticsLocations: n,
                 onCloseCallback: t,
                 purchaseType: nv.gs.FIAT,
             }));
-    }, [m, n, t, E, A]),
-    E)
+    }, [C, n, t, A, S, r]),
+    A)
         ? (0, l.jsx)(eY.dZ, { children: (0, l.jsx)(nF.A, {}) })
         : null;
 }
@@ -2574,13 +2575,19 @@ function lf(e) {
     });
 }
 function lE(e) {
-    let { hideConfirmStepConfetti: t, confettiCanvas: n, collectedModalOverrideTitle: i } = (0, nP.z)(),
-        { analyticsLocations: r } = (0, ti.Ay)();
+    let {
+            hideConfirmStepConfetti: t,
+            confettiCanvas: n,
+            collectedModalOverrideTitle: i,
+            collectedModalGradientColor: r,
+        } = (0, nP.z)(),
+        { analyticsLocations: a } = (0, ti.Ay)();
     return (0, l.jsx)(nB, {
-        analyticsLocations: r,
+        analyticsLocations: a,
         hideConfetti: t,
         confettiCanvas: n,
         collectedModalOverrideTitle: i,
+        collectedModalGradientColor: r,
         ...e,
     });
 }
@@ -2765,7 +2772,8 @@ let ly = {
                     return null != t ? [t] : [];
                 })({ skuId: t }),
                 [C, h] = (0, o.useState)(void 0),
-                f = (0, o.useMemo)(
+                [f, E] = (0, o.useState)(void 0),
+                A = (0, o.useMemo)(
                     () => ({
                         skuIDs: m,
                         setCustomConfettiVisible: c,
@@ -2773,8 +2781,10 @@ let ly = {
                         confettiCanvas: a,
                         collectedModalOverrideTitle: C,
                         setCollectedModalOverrideTitle: h,
+                        collectedModalGradientColor: f,
+                        setCollectedModalGradientColor: E,
                     }),
-                    [m, c, p, a, C],
+                    [m, c, p, a, C, f],
                 );
             return (0, l.jsxs)(l.Fragment, {
                 children: [
@@ -2791,7 +2801,7 @@ let ly = {
                         activeSubscription: null,
                         purchaseType: tx.VV.ONE_TIME,
                         excludeSubscriptionPlansBySKU: !0,
-                        children: (0, l.jsx)(nP.i.Provider, { value: f, children: n }),
+                        children: (0, l.jsx)(nP.i.Provider, { value: A, children: n }),
                     }),
                 ],
             });
