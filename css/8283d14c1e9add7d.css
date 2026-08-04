@@ -1,22 +1,3 @@
-.singleItemInfo__08054 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-width: 0
-}
-
-.singleItemName__08054 {
-    cursor: pointer;
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-.singleItemName__08054:focus-visible,
-.singleItemName__08054:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--text-default)
-}
-
 .container__73abe {
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, .08);
     box-sizing: border-box;

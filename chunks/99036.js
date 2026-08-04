@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588109, Version Hash: ba464cd5b0d9af1c06f2769466862513aa088f32`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588152, Version Hash: 2ee082df63c0c5bfc9fa3ad61f20c7494b4fe800`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     ef.A.initBasic(),
@@ -18262,7 +18262,7 @@ let gK = "isHideDevBanner",
                     className: ts()(gY.Wz, gY.mr),
                     children: [
                         (0, R.jsx)(gW, { className: gY.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588109" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588152" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -24037,7 +24037,7 @@ let Cv = (0, tB.Fe)({
                 n.e("83663"),
                 n.e("27670"),
                 n.e("84126"),
-                n.e("87285"),
+                n.e("64625"),
                 n.e("27324"),
                 n.e("16331"),
                 n.e("27556"),
@@ -24353,8 +24353,8 @@ let Cv = (0, tB.Fe)({
                 n.e("85681"),
                 n.e("97934"),
                 n.e("92461"),
-            ]).then(n.bind(n, 744940)),
-        webpackId: 744940,
+            ]).then(n.bind(n, 13245)),
+        webpackId: 13245,
         name: "Channel",
         renderLoader: nJ.l3,
     }),
@@ -40910,7 +40910,7 @@ let GT = (0, nQ.Fe)({
                 n.e("83663"),
                 n.e("27670"),
                 n.e("84126"),
-                n.e("87285"),
+                n.e("64625"),
                 n.e("27324"),
                 n.e("16331"),
                 n.e("27556"),
