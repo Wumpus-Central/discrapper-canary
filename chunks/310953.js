@@ -2,9 +2,9 @@
 n.d(t, { A: () => _, W: () => E }), n(321073);
 var i = n(582128),
     r = n(17928),
-    a = n(5180),
-    s = n(960755),
-    l = n(866842),
+    a = n(796637),
+    s = n(5180),
+    l = n(960755),
     o = n(95701),
     d = n(924985),
     c = n(458294),
@@ -14,7 +14,7 @@ function _(e) {
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
     return A(
-        (0, a.ai)(e) ? (0, l.g)() : s.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
+        (0, s.ai)(e) ? (0, a.g)() : l.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         { currentVoiceChannelId: u.Ay.getVoiceChannelId(), selectedChannelId: u.Ay.getChannelId() },
         { withVoiceChannels: t, withCurrentVoiceChannel: n },
         i,
