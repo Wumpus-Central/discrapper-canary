@@ -1,21 +1,22 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(17928),
     s = n(192308),
     l = n(866665),
     o = n(442433),
-    d = n(60465),
-    c = n(409626),
-    u = n(106191),
-    _ = n(734057),
-    E = n(332173),
-    A = n(936755),
-    h = n(827669);
-let I = 0,
-    f = "data-mention-game-id",
-    p = new Set([
+    d = n(442247),
+    c = n(60465),
+    u = n(409626),
+    _ = n(106191),
+    E = n(734057),
+    A = n(332173),
+    h = n(936755),
+    I = n(827669);
+let f = 0,
+    p = "data-mention-game-id",
+    T = new Set([
         "DIV",
         "P",
         "LI",
@@ -34,15 +35,15 @@ let I = 0,
         "ARTICLE",
         "SECTION",
     ]);
-function T(e) {
+function m(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest('[contenteditable="true"]') != null;
 }
-function m(e) {
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    return t?.closest(`[${f}]`) ?? null;
-}
 function g(e) {
+    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+    return t?.closest(`[${p}]`) ?? null;
+}
+function S(e) {
     let t;
     if (null == e.clipboardData) return;
     let n = window.getSelection();
@@ -52,18 +53,18 @@ function g(e) {
     } catch {
         return;
     }
-    if (t.collapsed || T(t.startContainer) || T(t.endContainer)) return;
+    if (t.collapsed || m(t.startContainer) || m(t.endContainer)) return;
     let i = t.cloneContents(),
-        r = null != i.querySelector(`[${f}]`),
-        a = m(t.startContainer),
-        s = m(t.endContainer),
+        r = null != i.querySelector(`[${p}]`),
+        a = g(t.startContainer),
+        s = g(t.endContainer),
         l = !r && null != a && a === s;
     if (r || l) {
         let t, n;
         if (l) {
-            let t = a.getAttribute(f);
+            let t = a.getAttribute(p);
             if (null == t || "" === t) return;
-            e.preventDefault(), e.clipboardData.setData("text/plain", (0, h.KW)(t));
+            e.preventDefault(), e.clipboardData.setData("text/plain", (0, I.KW)(t));
             return;
         }
         e.preventDefault(),
@@ -77,8 +78,8 @@ function g(e) {
                             if (n > 200) return "";
                             if (t.nodeType === Node.TEXT_NODE) return t.textContent ?? "";
                             if (t.nodeType !== Node.ELEMENT_NODE) return "";
-                            let i = t.getAttribute(f);
-                            if (null != i) return (0, h.KW)(i);
+                            let i = t.getAttribute(p);
+                            if (null != i) return (0, I.KW)(i);
                             let r = t.tagName.toUpperCase();
                             if ("IMG" === r) {
                                 let e = t.getAttribute("alt");
@@ -89,51 +90,54 @@ function g(e) {
                             if ("BR" === r) return "\n";
                             let a = "";
                             for (let i = 0; i < t.childNodes.length; i++) a += e(t.childNodes[i], n + 1);
-                            return p.has(r) && "" !== a && !a.endsWith("\n") && (a += "\n"), a;
+                            return T.has(r) && "" !== a && !a.endsWith("\n") && (a += "\n"), a;
                         })(e.childNodes[n]);
                     return t.endsWith("\n") ? t.slice(0, -1) : t;
                 })(i),
             ),
             e.clipboardData.setData(
                 "text/html",
-                ((t = i.cloneNode(!0)).querySelectorAll(`[${f}]`).forEach((e) => {
-                    let t = e.getAttribute(f);
+                ((t = i.cloneNode(!0)).querySelectorAll(`[${p}]`).forEach((e) => {
+                    let t = e.getAttribute(p);
                     if (null == t || "" === t) return;
                     let n = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(n.createTextNode((0, h.KW)(t)), e);
+                    e.parentNode?.replaceChild(n.createTextNode((0, I.KW)(t)), e);
                 }),
                 (n = document.createElement("div")).appendChild(t),
                 n.innerHTML),
             );
     }
 }
-var S = n(679621),
-    N = n(156452);
-let C = function (e) {
-    let { gameId: t, channelId: h, authorId: f, gameName: p, gameIcon: T } = e,
-        m = (0, a.bG)([_.A], () => _.A.getChannel(h)),
-        C = null != m ? m.getGuildId() : null,
-        { name: O, hasName: R } = (0, S.V)({ gameName: p, gameId: t });
+var N = n(375708),
+    C = n(156452);
+let O = function (e) {
+    let { gameId: t, channelId: I, authorId: p } = e,
+        T = (0, a.bG)([E.A], () => E.A.getChannel(I)),
+        m = null != T ? T.getGuildId() : null,
+        g = (0, d.K)(t),
+        O = null != g,
+        R = g?.gameName ?? N.intl.string(N.t["11pdXZ"]),
+        L = g?.gameIcon;
     r.useEffect(
         () => (
-            1 === (I += 1) && document.addEventListener("copy", g),
+            1 === (f += 1) && document.addEventListener("copy", S),
             () => {
-                0 == (I -= 1) && document.removeEventListener("copy", g);
+                0 == (f -= 1) && document.removeEventListener("copy", S);
             }
         ),
         [],
     );
-    let L = r.useCallback(
+    let D = r.useCallback(
             (e) => {
-                R &&
+                O &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await Promise.all([n.e("26132"), n.e("46652"), n.e("38392")]).then(
                             n.bind(n, 55947),
                         );
-                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: O, guildId: C, authorId: f });
+                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: R, guildId: m, authorId: p });
                     });
             },
-            [R, t, O, C, f],
+            [O, t, R, m, p],
         ),
         y = r.useCallback(() => {
             (0, s.openModalLazy)(async () => {
@@ -141,39 +145,39 @@ let C = function (e) {
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         }, []),
-        D = r.useCallback(
+        v = r.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), R)
-                    ? d.default.openGameProfileModal({
+                (e.stopPropagation(), e.preventDefault(), O)
+                    ? c.default.openGameProfileModal({
                           gameId: t,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
-                          source: c.GameProfileSources.GameMention,
-                          sourceUserId: f,
+                          source: u.GameProfileSources.GameMention,
+                          sourceUserId: p,
                       })
                     : y();
             },
-            [t, R, y, f],
+            [t, O, y, p],
         ),
-        v = R ? `@game ${O}` : void 0;
+        b = O ? `@game ${R}` : void 0;
     return (0, i.jsx)(l.m, {
         asContainer: !0,
         tag: "span",
-        text: v,
-        "aria-label": v,
+        text: b,
+        "aria-label": b,
         delay: 750,
-        children: (0, i.jsxs)(E.A, {
+        children: (0, i.jsxs)(A.A, {
             "data-mention-game-id": t,
-            onContextMenu: L,
-            onClick: D,
+            onContextMenu: D,
+            onClick: v,
             children: [
-                (0, i.jsx)(A.A, {
+                (0, i.jsx)(h.A, {
                     children: (0, i.jsx)("span", {
                         "aria-hidden": "true",
-                        className: N.P0,
-                        children: (0, i.jsx)(u.A, { game: { id: t, icon: T }, iconClassName: N.Kk }),
+                        className: C.P0,
+                        children: (0, i.jsx)(_.A, { game: { id: t, icon: L }, iconClassName: C.Kk, allowFetch: !1 }),
                     }),
                 }),
-                (0, i.jsx)("span", { className: N.UU, children: O }),
+                (0, i.jsx)("span", { className: C.UU, children: R }),
             ],
         }),
     });

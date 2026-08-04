@@ -32,8 +32,8 @@ var C = n(112107),
     O = n(930101),
     R = n(976860),
     L = n(302031),
-    y = n(157941),
-    D = n(696451),
+    D = n(157941),
+    y = n(696451),
     v = n(317525),
     b = n(71393),
     M = n(957565),
@@ -193,7 +193,7 @@ function eL(e) {
         react: (t, n, r) => (0, i.jsx)("span", { style: eO, onClick: eR, children: e.react(t, n, r) }, r.key),
     };
 }
-function ey(e) {
+function eD(e) {
     let { text: t } = e,
         [n, a] = r.useState(!1);
     return (0, i.jsx)(o.D, {
@@ -209,7 +209,7 @@ function ey(e) {
             : (0, i.jsx)(c.T, { size: "xs", color: "currentColor" }),
     });
 }
-let eD = {
+let ey = {
     blockQuote: {
         react: (e, t, n) =>
             (0, i.jsxs)(
@@ -240,9 +240,9 @@ let eD = {
                         className: eN.Hy,
                         children: [
                             M.p5
-                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(ey, { text: e.content }) })
+                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(eD, { text: e.content }) })
                                 : null,
-                            (0, i.jsx)(y.l, {
+                            (0, i.jsx)(D.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
@@ -327,7 +327,7 @@ let eD = {
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
-                                                  let t = D.Ay.getSelfMember(e);
+                                                  let t = y.Ay.getSelfMember(e);
                                                   if (null == t) return;
                                                   let i = v.A.getRole(e, n);
                                                   null == i || t.roles.includes(i.id)
@@ -423,7 +423,7 @@ function ev(e) {
         return !0 === t ? eL(e) : e;
     }
     return {
-        ...eD,
+        ...ey,
         link: (0, eg.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eT.exec(e) : null),
@@ -555,15 +555,11 @@ function ev(e) {
                 );
             },
         },
-        soundboard: a(eD.soundboard),
+        soundboard: a(ey.soundboard),
         gameMention: {
             react(e, t, n) {
-                let { gameId: r, channelId: a, gameName: s, gameIcon: l } = e;
-                return (0, i.jsx)(
-                    em.A,
-                    { gameId: r, channelId: a, authorId: n.authorId, gameName: s, gameIcon: l },
-                    n.key,
-                );
+                let { gameId: r, channelId: a } = e;
+                return (0, i.jsx)(em.A, { gameId: r, channelId: a, authorId: n.authorId }, n.key);
             },
         },
     };
