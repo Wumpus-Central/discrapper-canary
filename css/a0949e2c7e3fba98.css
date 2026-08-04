@@ -709,7 +709,7 @@
 .centeredSection__95a3f {
     box-sizing: border-box;
     max-width: 1144px;
-    padding-inline: var(--space-32);
+    padding: var(--space-32);
     position: relative;
     width: 100%
 }
