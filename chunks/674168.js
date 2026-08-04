@@ -1,48 +1,47 @@
-"use strict";
-n.d(t, { m: () => N });
+n.d(t, { m: () => L });
 var i = n(477900);
 n(582128);
-var r = n(17928),
-    a = n(834730),
+var l = n(17928),
+    r = n(834730),
     s = n(862482),
-    l = n(939249),
+    a = n(939249),
     o = n(789645),
     d = n(403581),
     c = n(297264),
     u = n(821609),
-    _ = n(725807),
-    E = n(212168),
-    A = n(780964),
-    h = n(766075),
-    I = n(287809),
-    f = n(428262),
-    p = n(652215),
+    A = n(725807),
+    h = n(212168),
+    E = n(780964),
+    g = n(766075),
+    C = n(287809),
+    _ = n(428262),
+    I = n(652215),
     T = n(49999),
-    m = n(202541),
-    g = n(375708),
+    p = n(202541),
+    N = n(375708),
     S = n(186457);
-function N(e) {
+function L(e) {
     var t;
-    let { onClose: n, markAsDismissed: N } = e,
-        C = (0, r.bG)([I.default], () => I.default.getCurrentUser()),
-        O =
-            (t = C?.premiumType) === m.PremiumTypes.TIER_2
-                ? g.intl.string(g.t.jqO5Qn)
+    let { onClose: n, markAsDismissed: L } = e,
+        m = (0, l.bG)([C.default], () => C.default.getCurrentUser()),
+        f =
+            (t = m?.premiumType) === p.PremiumTypes.TIER_2
+                ? N.intl.string(N.t.jqO5Qn)
                 : null == t
-                  ? g.intl.string(g.t.f2qjw5)
-                  : g.intl.string(g.t.SblICW),
-        R = f.Ay.canUseCustomCallSounds(C);
-    return (0, i.jsxs)(E.A, {
+                  ? N.intl.string(N.t.f2qjw5)
+                  : N.intl.string(N.t.SblICW),
+        O = _.Ay.canUseCustomCallSounds(m);
+    return (0, i.jsxs)(h.A, {
         isShown: !0,
-        type: E.i.PREMIUM,
+        type: h.i.PREMIUM,
         className: S.ne,
         backgroundClassName: S.u4,
         children: [
-            null != N
-                ? (0, i.jsx)(l.D, {
+            null != L
+                ? (0, i.jsx)(a.D, {
                       className: S.VN,
-                      onClick: () => N?.(T.i.DISMISS),
-                      "aria-label": g.intl.string(g.t.cpT0Cq),
+                      onClick: () => L?.(T.i.DISMISS),
+                      "aria-label": N.intl.string(N.t.cpT0Cq),
                       children: (0, i.jsx)(o.P, { size: "xs", color: "currentColor", className: S.ut }),
                   })
                 : null,
@@ -50,27 +49,27 @@ function N(e) {
                 className: S.ex,
                 children: [
                     (0, i.jsx)(d.t, { size: "sm", color: "currentColor", className: S.ax }),
-                    (0, i.jsx)(c.D, { variant: "heading-sm/bold", children: g.intl.string(g.t.dTbAxx) }),
+                    (0, i.jsx)(c.D, { variant: "heading-sm/bold", children: N.intl.string(N.t.dTbAxx) }),
                 ],
             }),
-            (0, i.jsx)(a.E, { variant: "text-sm/normal", children: O }),
-            R
+            (0, i.jsx)(r.E, { variant: "text-sm/normal", children: f }),
+            O
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          (0, h.openUserSettings)(A.X.SOUNDBOARD_CATEGORY), n?.(), N?.(T.i.PRIMARY);
+                          (0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), L?.(T.i.PRIMARY);
                       },
-                      text: g.intl.string(g.t.RzWDqY),
+                      text: N.intl.string(N.t.RzWDqY),
                       fullWidth: !0,
                   })
-                : (0, i.jsx)(_.A, {
-                      textOptions: { textOverride: g.intl.string(g.t.pj0XBN) },
-                      subscriptionTier: m.pe.TIER_2,
+                : (0, i.jsx)(A.A, {
+                      textOptions: { textOverride: N.intl.string(N.t.pj0XBN) },
+                      subscriptionTier: p.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: p.JJy.SOUNDBOARD_SOUND_PICKER,
-                          object: p.ZSU.BUTTON_CTA,
+                          section: I.JJy.SOUNDBOARD_SOUND_PICKER,
+                          object: I.ZSU.BUTTON_CTA,
                       },
                       color: s.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => N?.(T.i.PRIMARY),
+                      onSubscribeModalClose: () => L?.(T.i.PRIMARY),
                   }),
         ],
     });

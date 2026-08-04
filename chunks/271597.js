@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { p: () => l });
+n.d(t, { p: () => r });
 var i = n(477900);
 n(582128);
-var r = n(192308),
+var l = n(192308),
     a = n(792852),
     s = n(696016);
-function l() {
+function r() {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetAll: l, setGameFacet: o } = a.P.getState();
-    l(),
+        { resetAll: r, setGameFacet: o } = a.P.getState();
+    r(),
         null != t && o(t),
-        (0, r.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("69884"),
@@ -22,7 +21,7 @@ function l() {
                     n.e("21035"),
                     n.e("21398"),
                     n.e("81277"),
-                    n.e("52798"),
+                    n.e("68877"),
                     n.e("41882"),
                     n.e("57066"),
                     n.e("48442"),
@@ -41,7 +40,7 @@ function l() {
                     n.e("32736"),
                     n.e("74049"),
                     n.e("52566"),
-                    n.e("39408"),
+                    n.e("89492"),
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),

@@ -1,50 +1,49 @@
-"use strict";
-r.d(t, { pq: () => s, vF: () => l });
-var n = r(780755),
-    a = r(978862);
-let o = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-    i = {};
-function s(e) {
-    if (!("console" in a.O)) return e();
-    let t = a.O.console,
-        r = {},
-        n = Object.keys(i);
-    n.forEach((e) => {
-        let n = i[e];
-        (r[e] = t[e]), (t[e] = n);
+s.d(e, { pq: () => a, vF: () => c });
+var i = s(780755),
+    n = s(978862);
+let r = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+    o = {};
+function a(t) {
+    if (!("console" in n.O)) return t();
+    let e = n.O.console,
+        s = {},
+        i = Object.keys(o);
+    i.forEach((t) => {
+        let i = o[t];
+        (s[t] = e[t]), (e[t] = i);
     });
     try {
-        return e();
+        return t();
     } finally {
-        n.forEach((e) => {
-            t[e] = r[e];
+        i.forEach((t) => {
+            e[t] = s[t];
         });
     }
 }
-let l = (0, a.B)("logger", function () {
-    let e = !1,
-        t = {
+let c = (0, n.B)("logger", function () {
+    let t = !1,
+        e = {
             enable: () => {
-                e = !0;
+                t = !0;
             },
             disable: () => {
-                e = !1;
+                t = !1;
             },
-            isEnabled: () => e,
+            isEnabled: () => t,
         };
     return (
-        n.T
-            ? o.forEach((r) => {
-                  t[r] = (...t) => {
-                      e &&
-                          s(() => {
-                              a.O.console[r](`Sentry Logger [${r}]:`, ...t);
+        i.T
+            ? r.forEach((s) => {
+                  e[s] = (...e) => {
+                      t &&
+                          a(() => {
+                              n.O.console[s](`Sentry Logger [${s}]:`, ...e);
                           });
                   };
               })
-            : o.forEach((e) => {
-                  t[e] = () => void 0;
+            : r.forEach((t) => {
+                  e[t] = () => void 0;
               }),
-        t
+        e
     );
 });
