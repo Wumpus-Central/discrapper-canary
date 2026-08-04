@@ -206,6 +206,10 @@
     overflow-y: auto
 }
 
+.incodeElement__07ac3 .IncodeRedirectQrWrapper {
+    --surface-neutral-0: var(--white-500)
+}
+
 .dataAssurance__2a048 {
     background-color: var(--background-feedback-info);
     border: 1px solid var(--border-muted);
