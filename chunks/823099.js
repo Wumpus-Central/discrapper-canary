@@ -9,7 +9,9 @@ var i = n(139033),
     d = n(292348),
     c = n(652215),
     u = n(375708);
-let _ = (e) => e.reduce((e, t) => e + t, 0);
+function _(e) {
+    return e.reduce((e, t) => e + t, 0);
+}
 var E = n(381941);
 function A(e) {
     let { file: t, guildId: n, code: A, reason: h } = e;

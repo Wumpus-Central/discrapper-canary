@@ -13,12 +13,12 @@ var n = l(477900),
     h = l(584794),
     x = l(362081),
     v = l(56416);
-let p = () => {
+function p() {
     let { clip: e } = (0, x.T)();
     return "" !== e.thumbnail
         ? (0, n.jsx)("img", { className: v.T, src: e.thumbnail, alt: "", "aria-hidden": !0 })
         : null;
-};
+}
 var g = l(17928),
     j = l(342952),
     C = l(834730),

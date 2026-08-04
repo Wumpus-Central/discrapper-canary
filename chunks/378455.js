@@ -32,10 +32,7 @@ var A = n(592080),
     D = n(375708),
     M = n(945619);
 function O(e) {
-    let { sortOrder: t, onChangeSortOrder: n, closePopout: l } = e,
-        a = (e) => {
-            n(e), l();
-        };
+    let { sortOrder: t, onChangeSortOrder: n, closePopout: l } = e;
     return (0, i.jsx)("div", {
         className: M.k,
         children: (0, i.jsx)(j.W, {
@@ -51,14 +48,18 @@ function O(e) {
                         group: "clean-up-gdms-sort",
                         label: D.intl.string(A.default.VHmOpK),
                         checked: t === P.NEWEST,
-                        action: () => a(P.NEWEST),
+                        action: () => {
+                            n(P.NEWEST), l();
+                        },
                     }),
                     (0, i.jsx)(C.iD, {
                         id: "clean-up-gdms-sort-oldest",
                         group: "clean-up-gdms-sort",
                         label: D.intl.string(A.default.NLTGck),
                         checked: t === P.OLDEST,
-                        action: () => a(P.OLDEST),
+                        action: () => {
+                            n(P.OLDEST), l();
+                        },
                     }),
                 ],
             }),

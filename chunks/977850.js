@@ -1611,7 +1611,7 @@ function tE(e) {
         r = i.useRef(null),
         a = i.useRef(null),
         { goToPremiumTryItOut: s } = lG(),
-        o = (() => {
+        o = (function () {
             let { analyticsLocations: e } = (0, I.Ay)();
             return i.useCallback(() => {
                 (0, nm.L)({ analyticsLocations: e, isPremiumTryItOut: !0, stackingBehavior: "stack" });

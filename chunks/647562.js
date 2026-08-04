@@ -1019,7 +1019,9 @@ function eT(e) {
         l.useLayoutEffect(() => {
             let e = p.current;
             if (null == e) return;
-            let t = () => x(e.getBoundingClientRect().width);
+            function t() {
+                if (null != e) return x(e.getBoundingClientRect().width);
+            }
             t();
             let n = new ResizeObserver(t);
             return n.observe(e), () => n.disconnect();

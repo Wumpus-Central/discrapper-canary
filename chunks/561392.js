@@ -26,11 +26,13 @@ function o(e) {
         f.current = u;
     }, [u]);
     let p = i.useRef(d);
+    function T() {
+        return { boundary: h?.ref.current ?? "clippingAncestors", padding: h?.padding };
+    }
     i.useEffect(() => {
         p.current = d;
     }, [d]);
-    let T = () => ({ boundary: h?.ref.current ?? "clippingAncestors", padding: h?.padding }),
-        {
+    let {
             refs: m,
             floatingStyles: g,
             context: S,

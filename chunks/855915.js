@@ -35,8 +35,10 @@ function c(e) {
         i.useEffect(() => {
             if (null == t || null == n || 0 === n.length) return;
             let e = new AbortController(),
-                { signal: i } = e,
-                r = (e) => _((t) => (t.has(e) ? t : new Set(t).add(e)));
+                { signal: i } = e;
+            function r(e) {
+                return _((t) => (t.has(e) ? t : new Set(t).add(e)));
+            }
             return (
                 n.forEach(async (e) => {
                     let n =
