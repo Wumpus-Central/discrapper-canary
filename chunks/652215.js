@@ -5357,6 +5357,7 @@ var rv =
         (ew.GAME_SERVER_JOIN_CLICKED = "game_server_join_clicked"),
         (ew.GAME_SERVER_COPY_IP_CLICKED = "game_server_copy_ip_clicked"),
         (ew.GAME_SERVER_VIEW_GAME_PANEL_CLICKED = "game_server_view_game_panel_clicked"),
+        (ew.GAME_SERVER_SHARE_FORWARDED = "game_server_share_forwarded"),
         (ew.IMPRESSION_GAME_SERVERS_TAB_VIEWED = "impression_game_servers_tab_viewed"),
         (ew.IMPRESSION_GAME_SERVER_ACTIVITY_BUTTON = "impression_game_server_activity_button"),
         (ew.GAME_SERVER_ACTIVITY_BUTTON_CLICKED = "game_server_activity_button_clicked"),
