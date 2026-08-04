@@ -18262,17 +18262,7 @@ function hi(e) {
                 colors: i === g$.y.GRADIENT && l ? x3.Oz : ei._tK,
                 value: t.color,
                 disabled: n,
-                onChange: (e) => {
-                    var n;
-                    return (
-                        (n = e),
-                        void (
-                            t.color !== n &&
-                            (n !== ei.TGz || 0 !== t.color) &&
-                            (n === ei.TGz && (n = 0), (0, g1.ZH)(t.id, n))
-                        )
-                    );
-                },
+                onChange: (e) => (0, g1.ZH)(t, e),
                 gradientColors: i === g$.y.GRADIENT && l ? [t.color, t.colors?.secondary_color ?? ei.TGz] : void 0,
                 onChangeGradientColors: function (e) {
                     (0, g1.uc)(
