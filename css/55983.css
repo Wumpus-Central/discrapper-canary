@@ -334,8 +334,8 @@
 }
 
 .card_a2332b.giftSelectionModalContext_a2332b .cardTitle_a2332b {
-    font-size: 1.875rem;
-    line-height: 1.5625rem
+    font-size: 30px;
+    line-height: 25px
 }
 
 .card_a2332b.borderGradient_a2332b {
@@ -603,9 +603,9 @@
 }
 
 .cardTitle_a2332b {
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
-    line-height: 1.6875rem;
+    line-height: 27px;
     text-transform: uppercase
 }
 

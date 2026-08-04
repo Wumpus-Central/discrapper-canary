@@ -1,32 +1,33 @@
-l.d(s, { a: () => c });
-var t = l(477900);
-l(582128);
-var v = l(661531),
-    i = l(996682),
-    e = l(27989);
-function c(h) {
+"use strict";
+n.d(t, { a: () => l });
+var i = n(477900);
+n(582128);
+var r = n(661531),
+    a = n(996682),
+    s = n(27989);
+function l(e) {
     let {
-            size: s = "md",
-            width: l,
-            height: c,
-            color: a = v.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: n = "",
-            ...r
-        } = h,
-        o = (0, e.J)(s),
-        d = o?.width ?? l,
-        w = o?.height ?? c;
-    return (0, t.jsx)("svg", {
-        ...(0, i.A)(r),
+            size: t = "md",
+            width: n,
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
+            ...c
+        } = e,
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        E = u?.height ?? l;
+    return (0, i.jsx)("svg", {
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: d,
-        height: w,
+        width: _,
+        height: E,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, t.jsx)("path", {
-            fill: "string" == typeof a ? a : a.css,
+        children: (0, i.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
             d: "m21.67 12-7.25 7.07h-3.23L7.17 23v-3.93H2.33V4.93L6.36 1h15.3v11Zm-14.5 2.36h3.62v2.75l2.82-2.75h3.22l3.23-3.15V2.57H7.16v11.79Zm6.04-9.04v4.72H11.6V5.32h1.6Zm4.43 4.72h-1.61V5.32h1.6v4.72Z",
-            className: n,
+            className: d,
         }),
     });
 }
