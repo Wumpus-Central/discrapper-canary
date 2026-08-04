@@ -10,5 +10,6 @@ e.exports = {
     YA: "gradientBottom_bfe55a gradientContainer_bfe55a",
     t4: "controlSection_bfe55a",
     i$: "edgeControls_bfe55a",
+    He: "edgeControlsEnd_bfe55a edgeControls_bfe55a",
     Kz: "centerControls_bfe55a",
 };

@@ -1984,16 +1984,11 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
 
 .bottomControls_bfe55a {
     align-items: center;
-    display: flex;
+    -moz-column-gap: var(--space-xl);
+    column-gap: var(--space-xl);
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
     line-height: 0
-}
-
-.bottomControls_bfe55a .edgeControls_bfe55a:first-child:not(:empty) {
-    margin-inline-end: var(--space-md)
-}
-
-.bottomControls_bfe55a .edgeControls_bfe55a:last-child:not(:empty) {
-    margin-inline-start: var(--space-md)
 }
 
 .edgeControls_bfe55a {
@@ -2002,9 +1997,12 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
     gap: var(--space-lg)
 }
 
+.edgeControlsEnd_bfe55a {
+    justify-content: flex-end
+}
+
 .centerControls_bfe55a {
     display: flex;
-    flex: 1 0 auto;
     flex-direction: row;
     justify-content: center
 }
