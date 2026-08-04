@@ -1,42 +1,43 @@
-n.d(t, { l: () => d });
-var r = n(477900),
-    i = n(582128),
-    s = n(776310),
-    o = n(17928),
+"use strict";
+n.d(t, { l: () => u });
+var i = n(477900),
+    r = n(582128),
+    a = n(776310),
+    s = n(17928),
     l = n(309010),
-    a = n(21161),
-    c = n(536283),
-    u = n(517220);
-function d(e) {
+    o = n(21161),
+    d = n(536283),
+    c = n(517220);
+function u(e) {
     let { children: t } = e,
-        [n, d] = i.useState(null),
-        [h, f] = i.useState(null),
-        p = i.useRef(new Set()),
-        [g, m] = i.useState(!1),
-        A = (0, o.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
-        y = i.useCallback((e) => {
-            p.current.delete(e), m(p.current.size > 0);
+        [n, u] = r.useState(null),
+        [_, E] = r.useState(null),
+        A = r.useRef(new Set()),
+        [h, I] = r.useState(!1),
+        f = (0, s.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
+        p = r.useCallback((e) => {
+            A.current.delete(e), I(A.current.size > 0);
         }, []),
-        v = i.useCallback((e) => (p.current.add(e), m(!0), () => y(e)), [y]),
-        x = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+        T = r.useCallback((e) => (A.current.add(e), I(!0), () => p(e)), [p]),
+        m = r.useCallback((e, t) => {
+            for (let n of A.current) n(e, t);
         }, []);
     return (
-        i.useEffect(() => {
-            h?.clearConfetti();
-        }, [h, A]),
-        (0, r.jsxs)(r.Fragment, {
+        r.useEffect(() => {
+            _?.clearConfetti();
+        }, [_, f]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(a.k, {
-                    confettiCanvas: h,
+                (0, i.jsx)(o.k, {
+                    confettiCanvas: _,
                     spriteCanvas: n,
-                    baseConfig: c.Mw,
-                    addClickListener: v,
-                    removeClickListener: y,
+                    baseConfig: d.Mw,
+                    addClickListener: T,
+                    removeClickListener: p,
                     children: t,
                 }),
-                (0, r.jsx)(s.Fk, { ref: f, className: u.J, environment: c.XA, onClick: g ? x : void 0 }),
-                (0, r.jsx)(s.K_, { ref: d, colors: c._t, sprites: c.uI, spriteWidth: c.wn, spriteHeight: c.wn }),
+                (0, i.jsx)(a.Fk, { ref: E, className: c.J, environment: d.XA, onClick: h ? m : void 0 }),
+                (0, i.jsx)(a.K_, { ref: u, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
             ],
         })
     );
