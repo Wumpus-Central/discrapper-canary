@@ -111,20 +111,21 @@ html:not(.keyboard-mode) .container__3d96b {
     width: 0
 }
 
+.radialClosed_ded7b4 {
+    pointer-events: none
+}
+
 .itemWrapper_ded7b4 {
     inset-block-start: 0;
     inset-inline-start: 0;
     position: absolute
 }
 
-.itemWrapperClosed_ded7b4 {
-    pointer-events: none
-}
-
 .item_ded7b4 {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
-    border-radius: var(--radius-sm)
+    border-radius: var(--radius-sm);
+    opacity: var(--custom-radial-opacity, 1)
 }
 
 .full-motion .item_ded7b4 {

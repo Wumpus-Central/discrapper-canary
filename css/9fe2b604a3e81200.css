@@ -16,6 +16,10 @@
     flex-shrink: 0
 }
 
+.warningIcon__98678 {
+    color: var(--text-feedback-warning)
+}
+
 .container_d42d06 {
     box-sizing: border-box;
     height: 480px;
