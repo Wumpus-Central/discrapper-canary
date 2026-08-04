@@ -1,79 +1,80 @@
-s.d(i, { default: () => g });
-var a = s(477900),
-    n = s(582128),
-    r = s(935462),
-    e = s(297264),
-    l = s(475358),
-    d = s(834730),
-    c = s(821609),
-    o = s(675704),
-    x = s(28647),
-    h = s(915089),
-    m = s(975571),
-    j = s(955572),
-    u = s(652215),
-    p = s(375708),
-    b = s(336260);
+i.d(s, { default: () => g });
+var r = i(477900),
+    a = i(582128),
+    n = i(935462),
+    e = i(297264),
+    l = i(475358),
+    d = i(834730),
+    c = i(821609),
+    o = i(675704),
+    x = i(28647),
+    h = i(915089),
+    m = i(975571),
+    j = i(955572),
+    u = i(652215),
+    b = i(375708),
+    p = i(336260);
 function g(t) {
-    let { transitionState: i, onClose: s } = t,
+    let { transitionState: s, onClose: i } = t,
         g = (0, h.GV)();
     return (
-        n.useEffect(() => {
+        a.useEffect(() => {
             j.Er();
         }, []),
-        (0, a.jsxs)(r.EO, {
-            transitionState: i,
+        (0, r.jsxs)(n.EO, {
+            transitionState: s,
             role: "alertdialog",
             "aria-labelledby": g,
             parentComponent: "KeyboardNavigationModal",
             children: [
-                (0, a.jsxs)(r.$m, {
-                    className: b.Qs,
+                (0, r.jsxs)(n.$m, {
+                    className: p.Qs,
+                    scrollbarGutter: !1,
                     children: [
-                        (0, a.jsx)(e.D, {
+                        (0, r.jsx)(e.D, {
                             variant: "heading-xl/semibold",
                             id: g,
-                            className: b.wx,
-                            children: p.intl.format(p.t.V4fxrp, {
-                                tab: (t, i) => (0, a.jsx)(l.e, { shortcut: "tab", className: b.Wj }, i),
+                            className: p.wx,
+                            children: b.intl.format(b.t.V4fxrp, {
+                                tab: (t, s) => (0, r.jsx)(l.e, { shortcut: "tab", className: p.Wj }, s),
                             }),
                         }),
-                        (0, a.jsx)(d.E, { variant: "text-md/normal", children: p.intl.string(p.t["oQA/OB"]) }),
-                        (0, a.jsxs)("ul", {
-                            className: b.Xq,
+                        (0, r.jsx)(d.E, { variant: "text-md/normal", children: b.intl.string(b.t["oQA/OB"]) }),
+                        (0, r.jsxs)("ul", {
+                            className: p.Xq,
                             children: [
-                                (0, a.jsxs)("li", {
+                                (0, r.jsxs)("li", {
                                     children: [
-                                        (0, a.jsx)(l.e, { shortcut: x.z.binds["0"] }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, r.jsx)(l.e, { shortcut: x.z.binds["0"] }),
+                                        (0, r.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: p.intl.string(p.t["43Qn2r"]),
+                                            children: b.intl.string(b.t["43Qn2r"]),
                                         }),
                                     ],
                                 }),
-                                (0, a.jsxs)("li", {
+                                (0, r.jsxs)("li", {
                                     children: [
-                                        (0, a.jsx)(l.e, { shortcut: o.R.binds["0"] }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, r.jsx)(l.e, { shortcut: o.R.binds["0"] }),
+                                        (0, r.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: p.intl.string(p.t.zJg4FY),
+                                            children: b.intl.string(b.t.zJg4FY),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(d.E, {
+                        (0, r.jsx)(d.E, {
                             variant: "text-md/normal",
-                            children: p.intl.format(p.t.EWFVSW, { link: m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION) }),
+                            children: b.intl.format(b.t.EWFVSW, { link: m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
-                (0, a.jsx)(r.jl, {
-                    children: (0, a.jsx)(c.$, {
+                (0, r.jsx)(n.jl, {
+                    children: (0, r.jsx)(c.$, {
                         variant: "primary",
                         size: "sm",
-                        text: p.intl.string(p.t.BddRzS),
-                        onClick: s,
+                        text: b.intl.string(b.t.BddRzS),
+                        onClick: i,
                         autoFocus: !0,
                     }),
                 }),

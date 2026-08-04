@@ -1,12 +1,12 @@
 t.d(e, { W: () => g });
-var n = t(477900),
-    r = t(582128),
-    i = t(284009),
-    s = t.n(i),
-    l = t(935462),
+var r = t(477900),
+    n = t(582128),
+    s = t(284009),
+    l = t.n(s),
+    i = t(935462),
     c = t(834730),
-    d = t(821609),
-    o = t(77468),
+    o = t(821609),
+    d = t(77468),
     m = t(235986),
     x = t(626584),
     u = t(887909),
@@ -18,26 +18,26 @@ function g(a) {
     let {
             platformType: e,
             clientId: t,
-            scopes: i,
+            scopes: s,
             authToken: x,
             onContinue: g,
             onError: C,
             onClose: b,
             redirectUri: v,
         } = a,
-        [E, k] = r.useState(!1),
-        A = r.useCallback(
+        [E, k] = n.useState(!1),
+        A = n.useCallback(
             async (a) => {
                 let t,
-                    n,
-                    { location: r } = a,
-                    { callbackCode: i, callbackState: s } = x;
+                    r,
+                    { location: n } = a,
+                    { callbackCode: s, callbackState: l } = x;
                 try {
-                    t = await o.A.completeTwoWayLink(e, r, i, s);
+                    t = await d.A.completeTwoWayLink(e, n, s, l);
                 } catch (a) {
-                    j.error(`${e} link error:`, a), (n = a.body?.code);
+                    j.error(`${e} link error:`, a), (r = a.body?.code);
                 }
-                null != t ? g() : C(n);
+                null != t ? g() : C(r);
             },
             [e, x, g, C],
         ),
@@ -48,7 +48,7 @@ function g(a) {
             sendAuthorize: L,
         } = (0, u.useOAuth2AuthorizeForm)({
             clientId: t,
-            scopes: i,
+            scopes: s,
             responseType: "code",
             callback: A,
             isTrustedName: !0,
@@ -56,39 +56,39 @@ function g(a) {
             redirectUri: v,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        R = r.useCallback(() => {
-            s()(null != L, "sendAuthorize not available"), k(!0), L(!0);
+        R = n.useCallback(() => {
+            l()(null != L, "sendAuthorize not available"), k(!0), L(!0);
         }, [L]);
-    return (0, n.jsxs)(N.A, {
+    return (0, r.jsxs)(N.A, {
         children: [
-            (0, n.jsxs)(l.rQ, {
+            (0, r.jsxs)(i.rQ, {
                 "data-migration-pending": !0,
                 direction: m.A.Direction.VERTICAL,
                 className: p.wx,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(c.E, {
+                    (0, r.jsx)(c.E, {
                         className: p.u1,
                         variant: "text-xs/bold",
                         color: "text-default",
                         children: h.intl.format(h.t.fHz6eR, { number: 2, total: 2 }),
                     }),
-                    null != b && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: p.b, onClick: b }),
+                    null != b && (0, r.jsx)(i.s_, { "data-migration-pending": !0, className: p.b, onClick: b }),
                 ],
             }),
-            (0, n.jsxs)(l.$m, {
+            (0, r.jsxs)(i.$m, {
                 "data-migration-pending": !0,
                 className: p.mB,
-                paddingFix: !1,
-                children: [(0, n.jsx)("div", { className: p.a8, children: f }), w, D],
+                scrollbarGutter: !1,
+                children: [(0, r.jsx)("div", { className: p.a8, children: f }), w, D],
             }),
-            (0, n.jsx)(l.jl, {
+            (0, r.jsx)(i.jl, {
                 "data-migration-pending": !0,
                 className: p.qr,
-                children: (0, n.jsx)("div", {
+                children: (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: p.wC,
-                    children: (0, n.jsx)(d.$, {
+                    children: (0, r.jsx)(o.$, {
                         variant: "primary",
                         text: h.intl.string(h.t.ZN4hkc),
                         loading: E,

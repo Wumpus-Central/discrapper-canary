@@ -58,7 +58,12 @@
 .scroller__99e7c {
     background: var(--background-gradient-high, var(--background-base-lowest));
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 16px);
-    padding-bottom: 16px
+    padding-bottom: 16px;
+    padding-inline-end: 8px
+}
+
+.has-webkit-scrollbar .scroller__99e7c {
+    padding-inline-end: 0
 }
 
 .scroller__99e7c::-webkit-scrollbar-track {

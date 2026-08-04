@@ -12,6 +12,10 @@
     padding-top: var(--space-sm)
 }
 
+.has-webkit-scrollbar .container_d7bc5d {
+    padding-inline-end: calc(var(--space-16) - var(--space-8))
+}
+
 .headerDivider_d7bc5d {
     background-color: var(--border-subtle);
     height: 1px;
@@ -46,6 +50,10 @@
     gap: var(--space-sm);
     max-height: 404px;
     padding: var(--space-md)
+}
+
+.has-webkit-scrollbar .scroller_d7bc5d {
+    padding-inline-end: calc(var(--space-md) - var(--space-8))
 }
 
 .scroller_d7bc5d>:not(:first-child) {

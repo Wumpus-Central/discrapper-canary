@@ -545,6 +545,10 @@
     z-index: 1
 }
 
+.has-webkit-scrollbar .scroller__629e4 {
+    padding-inline-end: 0
+}
+
 .scroller__629e4::-webkit-scrollbar-track {
     margin-bottom: 16px
 }

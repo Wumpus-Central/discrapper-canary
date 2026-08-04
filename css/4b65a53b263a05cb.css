@@ -163,6 +163,10 @@
     padding-top: var(--space-20)
 }
 
+.has-webkit-scrollbar .tabPanelScroller__37bfc {
+    padding-inline-end: calc(var(--custom-modal-v2-tabpanel-scrollbar-offset) - var(--space-8))
+}
+
 @media (min-width:929px) {
     .tabPanelScroller__37bfc {
         padding-bottom: var(--space-16)

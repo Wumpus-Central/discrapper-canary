@@ -8,6 +8,8 @@ e.exports = {
     qr: "footer__49fc1",
     wx: "header__49fc1",
     Qs: "content__49fc1",
+    h3: "contentScrollbarGutter__49fc1",
+    QX: "contentScrollbarGutterAuto__49fc1",
     VN: "close__49fc1",
     Xk: "closeWithCircleBackground__49fc1",
     ut: "closeIcon__49fc1",

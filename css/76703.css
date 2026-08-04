@@ -264,6 +264,10 @@
     padding: 6px 16px 16px
 }
 
+.has-webkit-scrollbar .scroller__7d20c {
+    padding-inline: 8px
+}
+
 .scroller__7d20c.standalone__7d20c {
     border-inline-start: none;
     display: flex;

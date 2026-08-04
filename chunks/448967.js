@@ -75,6 +75,7 @@ function L(e) {
                             }),
                             (0, i.jsx)(o.$m, {
                                 "data-migration-pending": !0,
+                                scrollbarGutter: !1,
                                 className: O.jE,
                                 children: n.choices.map((e) => (0, i.jsx)(D, { choice: e, onClick: y }, e.key)),
                             }),

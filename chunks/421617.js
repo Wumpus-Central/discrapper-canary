@@ -364,6 +364,7 @@ function ea(e) {
                 }),
                 (0, a.jsxs)(o.$m, {
                     className: J.jE,
+                    scrollbarGutter: !1,
                     "data-migration-pending": !0,
                     children: [
                         (0, a.jsxs)("div", {

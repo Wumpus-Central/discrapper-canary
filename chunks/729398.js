@@ -625,7 +625,7 @@ function eK(e) {
                       n.e("14520"),
                       n.e("42083"),
                       n.e("97250"),
-                      n.e("40851"),
+                      n.e("63232"),
                       n.e("43437"),
                       n.e("58164"),
                       n.e("71470"),
@@ -814,11 +814,11 @@ var e0 = n(789645),
     e1 = n(81466),
     e7 = n(842241),
     e9 = n(279208),
-    e8 = n(747007),
-    e2 = n(710358),
+    e2 = n(747007),
+    e8 = n(710358),
     e4 = n(958590),
-    e5 = n(174459),
-    e3 = n(957565),
+    e3 = n(174459),
+    e5 = n(957565),
     e6 = n(379728);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -847,7 +847,7 @@ function tn(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e2.A, {
+            (0, i.jsx)(e8.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.C, {
@@ -874,14 +874,14 @@ function tn(e) {
             (0, i.jsxs)("div", {
                 className: e6.EZ,
                 children: [
-                    (0, i.jsx)(e8.I, {
+                    (0, i.jsx)(e2.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e3.C)(e);
+                            (0, e5.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,
@@ -1030,6 +1030,7 @@ function td(e) {
                 (0, i.jsxs)(d.$m, {
                     className: tl.Qs,
                     scrollerRef: O,
+                    scrollbarGutter: !1,
                     "data-migration-pending": !0,
                     children: [
                         !z &&

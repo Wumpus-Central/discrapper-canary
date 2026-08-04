@@ -567,6 +567,10 @@
     position: relative
 }
 
+.has-webkit-scrollbar .profileBody__9c3be {
+    padding-inline-end: calc(var(--custom-modal-v2-profile-card-padding) - var(--space-8))
+}
+
 .profileOverlay__9c3be {
     overflow: visible
 }

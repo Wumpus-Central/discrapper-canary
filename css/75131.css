@@ -47,6 +47,10 @@
     padding: 4px 16px 8px
 }
 
+.has-webkit-scrollbar .body__5be3e {
+    padding-inline-end: calc(16px - var(--space-8))
+}
+
 .card__5be3e {
     padding: 12px
 }

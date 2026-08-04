@@ -1,5 +1,7 @@
 e.exports = {
     Gd: "scrollerBase_d125d2",
+    GV: "scrollbarGutter_d125d2",
+    x2: "scrollbarGutterStable_d125d2",
     qZ: "auto_d125d2 scrollerBase_d125d2",
     dv: "none_d125d2 scrollerBase_d125d2",
     yL: "thin_d125d2 scrollerBase_d125d2",

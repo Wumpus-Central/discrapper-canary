@@ -102,6 +102,7 @@ i.r(
         "experimental/mono-md/bold": "experimental/mono-md/bold_c1e9c4",
         menu: "menu_c1e9c4",
         scroller: "scroller_c1e9c4",
+        scrollerWithScrollbar: "scrollerWithScrollbar_c1e9c4",
         fixed: "fixed_c1e9c4",
         flexible: "flexible_c1e9c4",
         item: "item_c1e9c4 text-sm/medium_c1e9c4",

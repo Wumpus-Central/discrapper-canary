@@ -367,6 +367,14 @@
     position: relative
 }
 
+.scrollbarGutter_d125d2 {
+    scrollbar-gutter: stable both-edges
+}
+
+.scrollbarGutterStable_d125d2 {
+    scrollbar-gutter: stable
+}
+
 .auto_d125d2,
 .none_d125d2,
 .thin_d125d2 {}
@@ -1649,6 +1657,14 @@ screen and (max-width:485px) {
     padding-inline: var(--modal-horizontal-padding);
     padding-top: var(--space-8);
     position: relative
+}
+
+.has-webkit-scrollbar .contentScrollbarGutter__49fc1 {
+    padding-inline-end: calc(var(--modal-horizontal-padding) - var(--space-8))
+}
+
+.has-webkit-scrollbar .contentScrollbarGutterAuto__49fc1 {
+    padding-inline-end: calc(var(--modal-horizontal-padding) - var(--space-16))
 }
 
 .close__49fc1 {
@@ -3886,6 +3902,10 @@ screen and (max-width:485px) {
     padding-top: var(--custom-list-scrollbar-top-padding)
 }
 
+.has-webkit-scrollbar .bodyList__8a031 {
+    padding-inline-end: calc(var(--custom-modal-padding) - var(--space-16))
+}
+
 .bodyList__8a031::-webkit-scrollbar-thumb,
 .bodyList__8a031::-webkit-scrollbar-track {
     margin-top: var(--custom-list-scrollbar-top-padding)
@@ -3946,7 +3966,7 @@ screen and (max-width:485px) {
 }
 
 .has-webkit-scrollbar .bodyInner__8a031 {
-    padding-right: calc(var(--custom-modal-padding) - var(--space-16))
+    padding-inline-end: calc(var(--custom-modal-padding) - var(--space-16))
 }
 
 .bodyControls__8a031+.body__8a031 .bodyInner__8a031 {

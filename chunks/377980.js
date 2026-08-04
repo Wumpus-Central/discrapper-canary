@@ -185,15 +185,15 @@ function w(e) {
         : j;
 }
 var Z = t(751075);
-function P(e) {
+function G(e) {
     let { decoration: n } = e;
     return null == n.icons ? null : (0, r.jsx)(Z.qP, { icons: n.icons });
 }
-function F(e) {
+function P(e) {
     let { decoration: n } = e;
-    if (n.type === p.wF.STACKED_ICONS) return (0, r.jsx)(P, { decoration: n });
+    if (n.type === p.wF.STACKED_ICONS) return (0, r.jsx)(G, { decoration: n });
 }
-var G = t(390936);
+var F = t(390936);
 function K(e) {
     let { node: n } = e,
         { destinationKey: t, useTrailingDecoration: l, useTitle: i, useSubtitle: s } = n,
@@ -213,8 +213,8 @@ function K(e) {
         description: o,
         leadingElement: null != m && (0, r.jsx)(I.A, { icon: m }),
         trailingElement: (0, r.jsxs)("div", {
-            className: G.M,
-            children: [null != a && (0, r.jsx)(F, { decoration: a }), (0, r.jsx)(A.u, {})],
+            className: F.M,
+            children: [null != a && (0, r.jsx)(P, { decoration: a }), (0, r.jsx)(A.u, {})],
         }),
         onClick: function () {
             C.A.navigate(t, { animateSidebarScroll: !1 }), f();
@@ -863,8 +863,8 @@ let ew = l.memo(function (e) {
     });
 });
 var eZ = t(140735),
-    eP = t(597894);
-function eF(e) {
+    eG = t(597894);
+function eP(e) {
     let { title: n, subtitle: t, isHiddenVisually: l } = e;
     return null == n || "" === n
         ? null
@@ -874,11 +874,11 @@ function eF(e) {
                 tag: "legend",
                 variant: "text-md/semibold",
                 color: "text-strong",
-                className: a()(eP.D, { [eP.h]: null != t && "" !== t }),
+                className: a()(eG.D, { [eG.h]: null != t && "" !== t }),
                 children: n,
             });
 }
-let eG = l.memo(function (e) {
+let eF = l.memo(function (e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: i, layout: s, variant: a = "default", isTitleHiddenVisually: o } = n,
         c = t(),
@@ -897,7 +897,7 @@ let eG = l.memo(function (e) {
     return (0, r.jsxs)("fieldset", {
         "aria-describedby": f ? d : void 0,
         children: [
-            (0, r.jsx)(eF, { title: c, subtitle: u, isHiddenVisually: o }),
+            (0, r.jsx)(eP, { title: c, subtitle: u, isHiddenVisually: o }),
             f ? (0, r.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", id: d, children: u }) : null,
             (0, r.jsx)(x.B, {
                 gap: h,
@@ -1060,6 +1060,7 @@ function e3(e) {
               notice: n,
               children: (0, r.jsxs)(eJ.Gt, {
                   className: e8.XG,
+                  scrollbarGutter: "both-edges",
                   ref: (e) => {
                       e6.A.setPanelScrollerRef(e);
                   },
@@ -1217,7 +1218,7 @@ function ni(e) {
         case i.Z6.LIST:
             return (0, r.jsx)(eV, { node: t });
         case i.Z6.FIELD_SET:
-            return (0, r.jsx)(eG, { node: t });
+            return (0, r.jsx)(eF, { node: t });
         case i.Z6.RELATED:
             return (0, r.jsx)(nt, { node: t });
         case i.Z6.CARD:

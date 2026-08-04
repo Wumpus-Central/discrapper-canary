@@ -5468,6 +5468,14 @@
     position: relative
 }
 
+.scrollbarGutter__99f8c {
+    scrollbar-gutter: stable both-edges
+}
+
+.scrollbarGutterStable__99f8c {
+    scrollbar-gutter: stable
+}
+
 .auto__99f8c,
 .none__99f8c,
 .thin__99f8c {}

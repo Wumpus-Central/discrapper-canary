@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588275, Version Hash: c940d773d440bc82a82031ebb9fb482f5e2a0d5b`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588278, Version Hash: a54872616e3b32d1dec2fd3956c4683bac399281`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     ef.A.initBasic(),
@@ -7112,6 +7112,7 @@ function oh() {
                 "aria-labelledby": n,
                 children: (0, R.jsx)(a5.Ip, {
                     className: oA.XG,
+                    scrollbarGutter: "both-edges",
                     children: (0, R.jsxs)("div", {
                         children: [
                             (0, R.jsx)(aT.D, {
@@ -18263,7 +18264,7 @@ let gK = "isHideDevBanner",
                     className: ts()(gY.Wz, gY.mr),
                     children: [
                         (0, R.jsx)(gW, { className: gY.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588275" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588278" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })

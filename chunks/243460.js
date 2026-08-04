@@ -1,4 +1,4 @@
-e.d(n, { A: () => G, u: () => I });
+e.d(n, { A: () => I, u: () => G });
 var i = e(477900);
 e(582128);
 var a = e(862482),
@@ -6,8 +6,8 @@ var a = e(862482),
     l = e(297264),
     s = e(834730);
 let d = "/assets/7f384b2c31f586cd.svg",
-    p = "/assets/2f0ebe181e1cce00.svg";
-var c = e(235986),
+    c = "/assets/2f0ebe181e1cce00.svg";
+var p = e(235986),
     m = e(174459),
     _ = e(878314),
     g = e(819638),
@@ -15,8 +15,8 @@ var c = e(235986),
     E = e(375708),
     C = e(629448);
 let T = 0.5 > Math.random();
-function I(t) {
-    let { onClose: n, onBack: e, onCreationIntentChosen: I, hasFooter: G = !0 } = t,
+function G(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: G, hasFooter: I = !0 } = t,
         b = (0, i.jsx)(a.$n, {
             "data-migration-pending": !0,
             className: C.Gv,
@@ -30,14 +30,14 @@ function I(t) {
             skipped: null == t,
             is_community: t === g.IR.COMMUNITY,
         }),
-            I(t);
+            G(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(r.rQ, {
                     "data-migration-pending": !0,
-                    direction: c.A.Direction.VERTICAL,
+                    direction: p.A.Direction.VERTICAL,
                     className: C.wx,
                     separator: !1,
                     children: [
@@ -57,6 +57,7 @@ function I(t) {
                 }),
                 (0, i.jsxs)(r.$m, {
                     "data-migration-pending": !0,
+                    scrollbarGutter: !1,
                     className: C.f9,
                     children: [
                         T
@@ -68,7 +69,7 @@ function I(t) {
                                           onClick: () => D(g.IR.FRIENDS),
                                       }),
                                       (0, i.jsx)(_.A, {
-                                          icon: p,
+                                          icon: c,
                                           message: E.intl.string(E.t.h9Q1lG),
                                           onClick: () => D(g.IR.COMMUNITY),
                                       }),
@@ -77,7 +78,7 @@ function I(t) {
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(_.A, {
-                                          icon: p,
+                                          icon: c,
                                           message: E.intl.string(E.t.h9Q1lG),
                                           onClick: () => D(g.IR.COMMUNITY),
                                       }),
@@ -96,13 +97,13 @@ function I(t) {
                         }),
                     ],
                 }),
-                G && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: c.A.Justify.BETWEEN, children: b }),
+                I && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: p.A.Justify.BETWEEN, children: b }),
             ],
         }),
         footer: b,
     };
 }
-function G(t) {
-    let { content: n } = I(t);
+function I(t) {
+    let { content: n } = G(t);
     return n;
 }

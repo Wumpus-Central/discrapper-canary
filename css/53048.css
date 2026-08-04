@@ -2368,6 +2368,10 @@
     padding: 8px
 }
 
+.has-webkit-scrollbar .scrollerWithScrollbar_c1e9c4 {
+    padding-inline-end: 0
+}
+
 .fixed_c1e9c4 {
     width: 220px
 }

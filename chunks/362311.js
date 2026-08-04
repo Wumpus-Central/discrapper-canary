@@ -5,8 +5,8 @@ var i = e(477900),
     l = e(862482),
     s = e(935462),
     d = e(821609),
-    p = e(834730),
-    c = e(297264),
+    c = e(834730),
+    p = e(297264),
     m = e(292666),
     _ = e(308528),
     g = e(913122),
@@ -14,8 +14,8 @@ var i = e(477900),
     E = e(915089),
     C = e(548118),
     T = e(808728),
-    I = e(71393),
-    G = e(375708),
+    G = e(71393),
+    I = e(375708),
     b = e(90200);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: L, isSlideReady: u } = t,
@@ -23,7 +23,7 @@ function D(t) {
         [x, y] = a.useState(null),
         [O, S] = a.useState(!1),
         N = (0, E.GV)(),
-        h = (0, r.bG)([I.A], () => I.A.getGuild(n), [n]),
+        h = (0, r.bG)([G.A], () => G.A.getGuild(n), [n]),
         v = a.useRef(null);
     a.useEffect(() => {
         u && v.current?.focus();
@@ -34,7 +34,7 @@ function D(t) {
                 S(!0), y(null);
                 let n = T.Ay.getDefaultChannel(h.id);
                 try {
-                    let t = G.intl.formatToPlainString(G.t.V4lepJ, { topic: U });
+                    let t = I.intl.formatToPlainString(I.t.V4lepJ, { topic: U });
                     await _.A.createTextChannel(h.id, U, n?.parent_id, t), L();
                 } catch (t) {
                     y(new g.Wl(t));
@@ -47,7 +47,7 @@ function D(t) {
             children: [
                 (0, i.jsx)(d.$, {
                     variant: "primary",
-                    text: G.intl.string(G.t.i4jeWR),
+                    text: I.intl.string(I.t.i4jeWR),
                     onClick: R,
                     disabled: 0 === U.length,
                     loading: O,
@@ -58,7 +58,7 @@ function D(t) {
                     look: l.$n.Looks.BLANK,
                     size: l.$n.Sizes.MIN,
                     onClick: L,
-                    children: G.intl.string(G.t["5Wxrcd"]),
+                    children: I.intl.string(I.t["5Wxrcd"]),
                 }),
             ],
         });
@@ -72,46 +72,47 @@ function D(t) {
                     separator: !1,
                     children: [
                         null != h && (0, i.jsx)(C.Ay, { guild: h }),
-                        (0, i.jsx)(p.E, {
+                        (0, i.jsx)(c.E, {
                             className: b.J5,
                             color: "text-strong",
                             variant: "text-sm/semibold",
                             children: h?.name,
                         }),
-                        (0, i.jsx)(c.D, {
+                        (0, i.jsx)(p.D, {
                             className: b.DD,
                             variant: "heading-sm/semibold",
-                            children: G.intl.string(G.t["8VRa7d"]),
+                            children: I.intl.string(I.t["8VRa7d"]),
                         }),
-                        (0, i.jsx)(p.E, {
+                        (0, i.jsx)(c.E, {
                             className: b.VA,
                             color: "text-default",
                             variant: "text-md/normal",
-                            children: G.intl.string(G.t["+855Pm"]),
+                            children: I.intl.string(I.t["+855Pm"]),
                         }),
                         null != D && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: b.b, onClick: D }),
                     ],
                 }),
                 (0, i.jsxs)(s.$m, {
                     "data-migration-pending": !0,
+                    scrollbarGutter: !1,
                     className: b.Q6,
                     children: [
                         (0, i.jsx)("form", {
                             onSubmit: R,
                             children: (0, i.jsx)(m.k, {
-                                label: G.intl.string(G.t.bY20tU),
+                                label: I.intl.string(I.t.bY20tU),
                                 error: x?.getFieldMessage("name"),
                                 type: "text",
                                 value: U,
                                 id: N,
                                 onChange: A,
-                                placeholder: G.intl.string(G.t.xGOYA8),
+                                placeholder: I.intl.string(I.t.xGOYA8),
                                 inputRef: v,
                             }),
                         }),
                         null != x &&
                             0 === Object.keys(x.fields).length &&
-                            (0, i.jsx)(p.E, {
+                            (0, i.jsx)(c.E, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
                                 children: x.message,
