@@ -35,6 +35,7 @@ let o = r.forwardRef(function (e, t) {
             autoFocus: !1,
             "aria-label": u,
             ref: E,
+            focusProps: { offset: { top: 2, bottom: 2, left: 4, right: 4 } },
         })
     );
 });

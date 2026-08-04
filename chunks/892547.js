@@ -19,8 +19,9 @@ function l(e) {
         onFocus: A,
         autoComplete: h,
         inputProps: I,
-        "aria-label": f = s.intl.string(s.t["5h0QOP"]),
-        ref: p,
+        focusProps: f,
+        "aria-label": p = s.intl.string(s.t["5h0QOP"]),
+        ref: T,
     } = e;
     return (0, i.jsx)(a.k, {
         ...I,
@@ -33,12 +34,13 @@ function l(e) {
         disabled: u,
         autoFocus: n,
         autoComplete: h,
-        "aria-label": f,
-        inputRef: p,
+        "aria-label": p,
+        inputRef: T,
         leading: r.$,
         onClear: l,
         clearable: null != l,
         size: c,
         fullWidth: !0,
+        focusProps: f,
     });
 }
