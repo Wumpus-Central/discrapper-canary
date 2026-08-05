@@ -27,22 +27,23 @@ function f(e) {
             confirmationFooter: N,
             isGift: C,
             initialPlanId: O = null,
-            children: R,
+            shouldDisallowPlanSelection: R = !1,
+            children: L,
         } = e,
-        L = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
+        D = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
         y = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-        { analyticsLocations: D } = (0, s.Ay)(),
-        v = (0, A.V)(),
-        b = !C && null != v && null != f && h.TP[v.trial_id].skus.includes(f);
-    return R({
+        { analyticsLocations: v } = (0, s.Ay)(),
+        b = (0, A.V)(),
+        M = !C && null != b && null != f && h.TP[b.trial_id].skus.includes(f);
+    return L({
         onClick: function (e) {
-            if ((e.preventDefault(), null == L))
+            if ((e.preventDefault(), null == D))
                 return void (0, d.pX)(I.BVt.LOGIN, { source: "premium_subscribe_button" });
             if ((t?.(e), y?.status === I.Dmq.ACCOUNT_HOLD)) {
                 (0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), T?.(!1);
                 return;
             }
-            if (!L.isClaimed())
+            if (!D.isClaimed())
                 return void (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         n.e("13655"),
@@ -55,7 +56,7 @@ function f(e) {
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            if (!L.verified)
+            if (!D.verified)
                 return void (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         n.e("29097"),
@@ -68,22 +69,23 @@ function f(e) {
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            let r = b ? v.subscription_trial?.id : null,
+            let r = M ? b.subscription_trial?.id : null,
                 s = I.AnalyticsObjectTypes.BUY;
-            null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT),
-                (0, o.A)({
-                    isGift: C,
-                    initialPlanId: O,
-                    subscriptionTier: f,
-                    analyticsLocations: D,
-                    analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },
-                    trialId: r,
-                    postSuccessGuild: p,
-                    onClose: T,
-                    applicationId: g,
-                    giftMessage: S,
-                    confirmationFooter: N,
-                });
+            null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT);
+            let _ = {
+                isGift: C,
+                initialPlanId: O,
+                subscriptionTier: f,
+                analyticsLocations: v,
+                analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },
+                trialId: r,
+                postSuccessGuild: p,
+                onClose: T,
+                applicationId: g,
+                giftMessage: S,
+                confirmationFooter: N,
+            };
+            R && null != O ? (0, o.A)({ ..._, initialPlanId: O, shouldDisallowPlanSelection: !0 }) : (0, o.A)(_);
         },
     });
 }

@@ -171,12 +171,14 @@
 }
 
 .icon_b807c8 {
+    flex-shrink: 0;
     height: 24px;
     margin-inline-end: 8px;
     width: 24px
 }
 
 .smallIcon_b807c8 {
+    flex-shrink: 0;
     height: 18px;
     margin-inline-end: 10px;
     width: 18px

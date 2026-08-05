@@ -68,7 +68,7 @@ function U() {
     });
 }
 var L = n(286320),
-    b = n(422936),
+    b = n(724651),
     G = n(732280),
     O = n(410516),
     w = n(774774),
@@ -124,7 +124,7 @@ var J = n(214947),
     q = n(460905),
     $ = n(183623),
     X = n(861004),
-    ee = n(428262),
+    ee = n(158045),
     et = n(202541),
     en = n(88001),
     er = n(466919);
@@ -283,7 +283,7 @@ function ep(e) {
     });
 }
 function eE(e) {
-    let { isApplicationHome: t } = e;
+    let { isApplicationHome: t, textVariant: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t &&
@@ -292,30 +292,34 @@ function eE(e) {
                     className: eh.tier2ApplicationHomeSubheader,
                     children: Z.intl.string(er.default.ItfIa5),
                 }),
-            ei.map((e, n) => {
-                let { Icon: r, getText: l } = e;
-                return (0, i.jsx)(ep, { Icon: r, text: l(), enablePremiumBrandRefresh: !0, isApplicationHome: t }, n);
+            ei.map((e, r) => {
+                let { Icon: l, getText: s } = e;
+                return (0, i.jsx)(
+                    ep,
+                    { Icon: l, text: s(), textVariant: n, enablePremiumBrandRefresh: !0, isApplicationHome: t },
+                    r,
+                );
             }),
         ],
     });
 }
 function eA(e) {
-    let { isApplicationHome: t, enablePremiumBrandRefresh: n } = e,
-        r = t && !n ? eg : ex;
+    let { isApplicationHome: t, enablePremiumBrandRefresh: n, textVariant: r } = e,
+        l = t && !n ? eg : ex;
     return (0, i.jsx)(i.Fragment, {
-        children: r.map((e, r) => {
-            let { Icon: l, getText: s } = e;
+        children: l.map((e, l) => {
+            let { Icon: s, getText: a } = e;
             return (0, i.jsx)(
                 ep,
                 {
-                    Icon: l,
-                    text: s(),
+                    Icon: s,
+                    text: a(),
                     className: t && !n ? eI.dT : eI.HW,
-                    textVariant: t && !n ? "text-sm/normal" : void 0,
+                    textVariant: r ?? (t && !n ? "text-sm/normal" : void 0),
                     enablePremiumBrandRefresh: n,
                     isApplicationHome: t,
                 },
-                r,
+                l,
             );
         }),
     });
@@ -397,12 +401,13 @@ function ev(e) {
             enablePremiumBrandRefresh: l = !1,
             isApplicationHome: s = !1,
             firstFeatureItemClassName: c,
+            textVariant: d,
         } = e,
-        d = (0, o.bG)([h.default], () => h.default.locale),
-        m = (0, L.b)(),
-        g = !l && n && !r && m.length > 0,
-        x = 3 === t || (0 === t && l && s),
-        T = (function () {
+        m = (0, o.bG)([h.default], () => h.default.locale),
+        g = (0, L.b)(),
+        x = !l && n && !r && g.length > 0,
+        T = 3 === t || (0 === t && l && s),
+        f = (function () {
             switch (t) {
                 case 3:
                     return ec;
@@ -420,28 +425,28 @@ function ev(e) {
         })();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            x &&
+            T &&
                 (0, i.jsx)(u.E, {
                     variant: "text-sm/bold",
                     className: l ? eh.tier2ApplicationHomeSubheader : eI.RQ,
                     children: Z.intl.string(Z.t.AozD3Q),
                 }),
-            T.map((e, n) => {
+            f.map((e, n) => {
                 let { Icon: r, getText: o } = e;
                 return (0, i.jsx)(
                     ep,
                     {
                         Icon: r,
-                        text: o(d),
+                        text: o(m),
                         className: a()(3 === t ? eI.dT : eI.HW, 0 === n ? c : void 0),
-                        textVariant: 3 === t ? "text-sm/normal" : void 0,
+                        textVariant: d ?? (3 === t ? "text-sm/normal" : void 0),
                         isApplicationHome: s,
                         enablePremiumBrandRefresh: l,
                     },
                     n,
                 );
             }),
-            g && (3 === t || 0 === t) && (0, i.jsx)(V, {}),
+            x && (3 === t || 0 === t) && (0, i.jsx)(V, {}),
         ],
     });
 }
