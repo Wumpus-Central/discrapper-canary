@@ -455,13 +455,17 @@ let Q = function (e) {
                           variant: "clickable",
                           title: w.intl.string(m.default.rgXXcW),
                           description: w.intl.string(m.default.fm7qBC),
-                          onButtonPress: () => void V(y.VF.FACIAL_AGE_ESTIMATION),
+                          onButtonPress: () => {
+                              V(y.VF.FACIAL_AGE_ESTIMATION);
+                          },
                       }),
                       (0, i.jsx)(E.PQ, {
                           variant: "clickable",
                           title: w.intl.string(m.default["NeVlw/"]),
                           description: w.intl.string(m.default.ARmJ0M),
-                          onButtonPress: () => void V(y.VF.ID_VERIFICATION),
+                          onButtonPress: () => {
+                              V(y.VF.ID_VERIFICATION);
+                          },
                       }),
                   ],
               }),
@@ -506,7 +510,9 @@ let Q = function (e) {
                                           variant: "primary",
                                           text: w.intl.string(m.default.eVjNWp),
                                           loading: ee,
-                                          onClick: () => void $(),
+                                          onClick: () => {
+                                              $();
+                                          },
                                       }),
                                   ],
                               }),

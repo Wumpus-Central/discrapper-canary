@@ -98,7 +98,14 @@ let M = function (e) {
                     ),
                     [c],
                 ),
-                { loading: l, error: r, methods: e, refetch: s.useCallback(() => void c(!0), [c]) }
+                {
+                    loading: l,
+                    error: r,
+                    methods: e,
+                    refetch: s.useCallback(() => {
+                        c(!0);
+                    }, [c]),
+                }
             );
         })(),
         L = Z.length > 0,
@@ -179,7 +186,9 @@ let M = function (e) {
                                 E.D,
                                 {
                                     className: S.kZ,
-                                    onClick: () => void G(e),
+                                    onClick: () => {
+                                        G(e);
+                                    },
                                     children: [
                                         (0, a.jsx)("div", { className: S.zc, children: t }),
                                         (0, a.jsxs)("div", {
