@@ -59,6 +59,7 @@ function G(t) {
                     "data-migration-pending": !0,
                     scrollbarGutter: !1,
                     className: C.f9,
+                    disableFocusRingScope: !0,
                     children: [
                         T
                             ? (0, i.jsxs)(i.Fragment, {
