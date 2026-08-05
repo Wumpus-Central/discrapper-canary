@@ -1,16 +1,16 @@
-i.r(e), i.d(e, { default: () => tA });
-var a = i(477900),
-    r = i(582128),
-    l = i(17928),
-    n = i(834730),
-    s = i(289873),
-    c = i(689175),
-    d = i(71393),
-    u = i(562708),
-    o = i(228366),
-    _ = i(499785),
-    f = i(158390),
-    E = i(927813);
+a.r(e), a.d(e, { default: () => tA });
+var i = a(477900),
+    r = a(582128),
+    l = a(17928),
+    n = a(834730),
+    s = a(289873),
+    c = a(689175),
+    d = a(71393),
+    u = a(562708),
+    o = a(228366),
+    _ = a(499785),
+    f = a(158390),
+    E = a(927813);
 let S = E.A.Millis.SECOND,
     h = E.A.Millis.MINUTE,
     A = {};
@@ -29,61 +29,61 @@ class g extends l.Ay.Store {
 let I = new g(o.h, {
     GUILD_SPACE_FETCH_START: function (t) {
         let e,
-            { guildId: i, requestId: a } = t,
-            r = (null == (e = A[i]) && ((e = { fetchStatus: "idle" }), (A[i] = e)), e);
-        (r.fetchStatus = "loading"), (r.activeFetchRequestId = a);
+            { guildId: a, requestId: i } = t,
+            r = (null == (e = A[a]) && ((e = { fetchStatus: "idle" }), (A[a] = e)), e);
+        (r.fetchStatus = "loading"), (r.activeFetchRequestId = i);
     },
     GUILD_SPACE_FETCH_SUCCESS: function (t) {
-        let { guildId: e, requestId: i, space: a } = t,
+        let { guildId: e, requestId: a, space: i } = t,
             r = A[e];
-        if (r?.activeFetchRequestId !== i) return !1;
-        delete r.activeFetchRequestId, (r.space = a), (r.fetchStatus = "success"), r.backoff?.succeed();
+        if (r?.activeFetchRequestId !== a) return !1;
+        delete r.activeFetchRequestId, (r.space = i), (r.fetchStatus = "success"), r.backoff?.succeed();
     },
     GUILD_SPACE_FETCH_FAILURE: function (t) {
-        let { guildId: e, requestId: i, retryable: a } = t,
+        let { guildId: e, requestId: a, retryable: i } = t,
             r = A[e];
-        if (r?.activeFetchRequestId !== i) return !1;
+        if (r?.activeFetchRequestId !== a) return !1;
         delete r.activeFetchRequestId,
             (r.fetchStatus = "error"),
-            a &&
+            i &&
                 (null == r.backoff && (r.backoff = new f.A(S, h, !0)),
                 r.backoff.pending ||
                     r.backoff.fail(() => o.h.dispatch({ type: "GUILD_SPACE_FETCH_BACKOFF_EXPIRED", guildId: e })));
     },
     GUILD_SPACE_FETCH_BACKOFF_EXPIRED: function (t) {
         let { guildId: e } = t,
-            i = A[e];
-        if (i?.fetchStatus !== "error") return !1;
-        i.backoff?.cancel(), (i.fetchStatus = "idle");
+            a = A[e];
+        if (a?.fetchStatus !== "error") return !1;
+        a.backoff?.cancel(), (a.fetchStatus = "idle");
     },
     GUILD_SPACE_UPDATE_SUCCESS: function (t) {
-        let { guildId: e, space: i } = t,
-            a = A[e];
-        if (null == a) return !1;
-        delete a.activeFetchRequestId, (a.space = i), (a.fetchStatus = "success"), a.backoff?.succeed();
+        let { guildId: e, space: a } = t,
+            i = A[e];
+        if (null == i) return !1;
+        delete i.activeFetchRequestId, (i.space = a), (i.fetchStatus = "success"), i.backoff?.succeed();
     },
     GUILD_DELETE: function (t) {
         let {
-            guild: { id: e, unavailable: i },
+            guild: { id: e, unavailable: a },
         } = t;
-        if (i) return !1;
+        if (a) return !1;
         A[e]?.backoff?.cancel(), delete A[e];
     },
     LOGOUT: function () {
         Object.values(A).forEach((t) => t?.backoff?.cancel()), (A = {});
     },
 });
-var C = i(562465);
+var C = a(562465);
 function D(t) {
     return !(t instanceof C.oh) || t.status < 400 || t.status >= 500 || 429 === t.status;
 }
-var T = i(652215);
+var T = a(652215);
 let p = 0;
 async function G(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        i = I.getFetchStatus(t),
-        a = e && "error" === i && !I.isInBackoff(t);
-    if ("idle" !== i && !a) return;
+        a = I.getFetchStatus(t),
+        i = e && "error" === a && !I.isInBackoff(t);
+    if ("idle" !== a && !i) return;
     let r = p++;
     o.h.dispatch({ type: "GUILD_SPACE_FETCH_START", guildId: t, requestId: r });
     try {
@@ -97,8 +97,8 @@ async function G(t) {
         o.h.dispatch({ type: "GUILD_SPACE_FETCH_FAILURE", guildId: t, requestId: r, retryable: D(e) });
     }
 }
-var L = i(626584),
-    v = i(754674);
+var L = a(626584),
+    v = a(754674);
 let U = {};
 function x(t) {
     let e = U[t];
@@ -118,52 +118,52 @@ class y extends l.Ay.Store {
 }
 let m = new y(o.h, {
     GUILD_SPACE_EDIT_START: function (t) {
-        let { guildId: e, space: i } = t;
-        U[e] = { draft: { header: i.header, widgets: (0, v.W$)(i.widgets) }, saveStatus: "idle" };
+        let { guildId: e, space: a } = t;
+        U[e] = { draft: { header: a.header, widgets: (0, v.W$)(a.widgets) }, saveStatus: "idle" };
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (t) {
-        let { guildId: e, widget: i } = t,
-            a = x(e);
-        if (null == a) return !1;
-        a.draft = { ...a.draft, widgets: (0, v.QD)(a.draft.widgets, i) };
+        let { guildId: e, widget: a } = t,
+            i = x(e);
+        if (null == i) return !1;
+        i.draft = { ...i.draft, widgets: (0, v.QD)(i.draft.widgets, a) };
     },
     GUILD_SPACE_EDIT_MOVE_WIDGET: function (t) {
-        let { guildId: e, widgetId: i, targetColumn: a, targetIndex: r } = t,
+        let { guildId: e, widgetId: a, targetColumn: i, targetIndex: r } = t,
             l = x(e);
         if (null == l) return !1;
-        let n = (0, v.Gm)(l.draft.widgets, i, a, r);
+        let n = (0, v.Gm)(l.draft.widgets, a, i, r);
         if (null == n) return !1;
         l.draft = { ...l.draft, widgets: n };
     },
     GUILD_SPACE_EDIT_REMOVE_WIDGET: function (t) {
-        let { guildId: e, widgetId: i } = t,
-            a = x(e);
-        if (null == a) return !1;
-        let r = a.draft.widgets.filter((t) => {
+        let { guildId: e, widgetId: a } = t,
+            i = x(e);
+        if (null == i) return !1;
+        let r = i.draft.widgets.filter((t) => {
             let { id: e } = t;
-            return e !== i;
+            return e !== a;
         });
-        if (r.length === a.draft.widgets.length) return !1;
-        a.draft = { ...a.draft, widgets: (0, v.W$)(r) };
+        if (r.length === i.draft.widgets.length) return !1;
+        i.draft = { ...i.draft, widgets: (0, v.W$)(r) };
     },
     GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG: function (t) {
-        let { guildId: e, widgetId: i, config: a } = t,
+        let { guildId: e, widgetId: a, config: i } = t,
             r = x(e);
         if (null == r) return !1;
-        let l = r.draft.widgets.map((t) => (t.id === i ? { ...t, config: a } : t));
+        let l = r.draft.widgets.map((t) => (t.id === a ? { ...t, config: i } : t));
         r.draft = { ...r.draft, widgets: l };
     },
     GUILD_SPACE_EDIT_SAVE_START: function (t) {
-        let { guildId: e, requestId: i } = t,
-            a = U[e];
-        if (null == a) return !1;
-        (a.saveStatus = "saving"), (a.activeSaveRequestId = i);
+        let { guildId: e, requestId: a } = t,
+            i = U[e];
+        if (null == i) return !1;
+        (i.saveStatus = "saving"), (i.activeSaveRequestId = a);
     },
     GUILD_SPACE_EDIT_SAVE_FAILURE: function (t) {
-        let { guildId: e, requestId: i } = t,
-            a = U[e];
-        if (a?.activeSaveRequestId !== i) return !1;
-        delete a.activeSaveRequestId, (a.saveStatus = "error");
+        let { guildId: e, requestId: a } = t,
+            i = U[e];
+        if (i?.activeSaveRequestId !== a) return !1;
+        delete i.activeSaveRequestId, (i.saveStatus = "error");
     },
     GUILD_SPACE_EDIT_CANCEL: function (t) {
         let { guildId: e } = t;
@@ -177,16 +177,16 @@ let m = new y(o.h, {
     },
     GUILD_DELETE: function (t) {
         let {
-            guild: { id: e, unavailable: i },
+            guild: { id: e, unavailable: a },
         } = t;
-        if (i || null == U[e]) return !1;
+        if (a || null == U[e]) return !1;
         delete U[e];
     },
     LOGOUT: function () {
         U = {};
     },
 });
-var P = i(593673);
+var P = a(593673);
 let R = "draft:",
     j = 0,
     w = new L.A("GuildSpaceEditorActionCreators"),
@@ -197,38 +197,38 @@ function N(t) {
 async function b(t) {
     let e = m.getDraft(t);
     if (null == e || "saving" === m.getSaveStatus(t)) return;
-    let i = {
+    let a = {
             header: e.header,
             widgets: e.widgets.map((t) => {
-                let { id: e, type: i, position: a, config: r } = t;
+                let { id: e, type: a, position: i, config: r } = t;
                 return e.startsWith(R)
-                    ? { type: i, position: a, config: r }
-                    : { id: e, type: i, position: a, config: r };
+                    ? { type: a, position: i, config: r }
+                    : { id: e, type: a, position: i, config: r };
             }),
         },
-        a = F++;
-    o.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: t, requestId: a });
+        i = F++;
+    o.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: t, requestId: i });
     try {
-        let { body: e } = await C.Bo.put({ url: T.Rsh.GUILD_SPACE(t), body: i, rejectWithError: !0 });
+        let { body: e } = await C.Bo.put({ url: T.Rsh.GUILD_SPACE(t), body: a, rejectWithError: !0 });
         o.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: t, space: e });
     } catch (e) {
         w.error("Failed to save guild space", { guildId: t, error: e }),
-            o.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: t, requestId: a });
+            o.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: t, requestId: i });
     }
 }
-var k = i(363957);
+var k = a(363957);
 let H = 0;
 async function O(t, e) {
-    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    i && o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_RESET_ERRORS", guildId: t, widgetIds: e });
-    let a = k.A.getWidgetIdsToHydrate(t, e);
-    if (0 === a.length) return;
+    let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    a && o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_RESET_ERRORS", guildId: t, widgetIds: e });
+    let i = k.A.getWidgetIdsToHydrate(t, e);
+    if (0 === i.length) return;
     let r = H++;
-    o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_START", guildId: t, requestId: r, widgetIds: a });
+    o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_START", guildId: t, requestId: r, widgetIds: i });
     try {
         let { body: e } = await C.Bo.get({
             url: T.Rsh.GUILD_SPACE_WIDGETS_HYDRATE(t),
-            query: { widget_ids: a },
+            query: { widget_ids: i },
             rejectWithError: !0,
         });
         o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_SUCCESS", guildId: t, requestId: r, widgets: e.widgets });
@@ -236,18 +236,18 @@ async function O(t, e) {
         o.h.dispatch({ type: "GUILD_SPACE_HYDRATE_FAILURE", guildId: t, requestId: r, retryable: D(e) });
     }
 }
-var W = i(470452),
-    B = i(331322),
-    M = i(821609),
-    q = i(499373),
-    K = i(825484),
-    Y = i(189213),
-    V = i(939249),
-    X = i(245604),
-    $ = i(104510),
-    z = i(661531),
-    Q = i(192308),
-    J = i(775602);
+var W = a(470452),
+    B = a(331322),
+    M = a(821609),
+    q = a(499373),
+    K = a(825484),
+    Y = a(189213),
+    V = a(939249),
+    X = a(245604),
+    $ = a(104510),
+    z = a(661531),
+    Q = a(192308),
+    J = a(775602);
 async function Z(t) {
     o.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_START", guildId: t });
     try {
@@ -262,7 +262,7 @@ function te(t) {
     let e = tt[t];
     return null == e && ((e = { fetchStatus: "idle" }), (tt[t] = e)), e;
 }
-class ti extends l.Ay.Store {
+class ta extends l.Ay.Store {
     static displayName = "GuildSpaceCatalogStore";
     getWidgets(t) {
         return tt[t]?.widgets;
@@ -271,15 +271,15 @@ class ti extends l.Ay.Store {
         return tt[t]?.fetchStatus ?? "idle";
     }
 }
-let ta = new ti(o.h, {
+let ti = new ta(o.h, {
     GUILD_SPACE_CATALOG_FETCH_START: function (t) {
         let { guildId: e } = t;
         te(e).fetchStatus = "loading";
     },
     GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (t) {
-        let { guildId: e, widgets: i } = t,
-            a = te(e);
-        (a.widgets = i), (a.fetchStatus = "success");
+        let { guildId: e, widgets: a } = t,
+            i = te(e);
+        (i.widgets = a), (i.fetchStatus = "success");
     },
     GUILD_SPACE_CATALOG_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
@@ -287,45 +287,45 @@ let ta = new ti(o.h, {
     },
     GUILD_DELETE: function (t) {
         let {
-            guild: { id: e, unavailable: i },
+            guild: { id: e, unavailable: a },
         } = t;
-        if (i || null == tt[e]) return !1;
+        if (a || null == tt[e]) return !1;
         delete tt[e];
     },
     LOGOUT: function () {
         tt = {};
     },
 });
-var tr = i(983283),
-    tl = i(375708),
-    tn = i(241181);
+var tr = a(983283),
+    tl = a(375708),
+    tn = a(241181);
 function ts(t) {
-    let { widget: e, onClick: i } = t,
+    let { widget: e, onClick: a } = t,
         r = (0, l.bG)([J.Ay], () => J.Ay.useReducedMotion),
         { catalog_image_static_url: s, catalog_image_animated_url: c } = e.assets,
         d = (r ? null : c) ?? s,
         u = e.boost_price;
-    return (0, a.jsxs)(V.D, {
+    return (0, i.jsxs)(V.D, {
         className: tn.HL,
-        onClick: i,
+        onClick: a,
         children: [
-            (0, a.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: tn.b3,
                 children: [
-                    null != d && (0, a.jsx)("img", { className: tn.YI, src: d, alt: "" }),
-                    (0, a.jsxs)("div", {
+                    null != d && (0, i.jsx)("img", { className: tn.YI, src: d, alt: "" }),
+                    (0, i.jsxs)("div", {
                         className: tn.Nt,
                         "aria-hidden": !0,
                         children: [
-                            (0, a.jsx)("div", { className: tn.Ti, children: (0, a.jsx)("div", { className: tn.dK }) }),
-                            (0, a.jsxs)(B.B, {
+                            (0, i.jsx)("div", { className: tn.Ti, children: (0, i.jsx)("div", { className: tn.dK }) }),
+                            (0, i.jsxs)(B.B, {
                                 className: tn.Cq,
                                 align: "center",
                                 justify: "center",
                                 gap: 4,
                                 children: [
-                                    (0, a.jsx)(X.U, {}),
-                                    (0, a.jsx)(n.E, {
+                                    (0, i.jsx)(X.U, {}),
+                                    (0, i.jsx)(n.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
                                         children: tl.intl.string(tr.default.IuT87w),
@@ -336,18 +336,18 @@ function ts(t) {
                     }),
                 ],
             }),
-            (0, a.jsxs)(B.B, {
+            (0, i.jsxs)(B.B, {
                 gap: 4,
                 children: [
-                    (0, a.jsx)(n.E, { variant: "text-sm/semibold", color: "text-default", children: e.name }),
+                    (0, i.jsx)(n.E, { variant: "text-sm/semibold", color: "text-default", children: e.name }),
                     null != u && u > 0
-                        ? (0, a.jsxs)(B.B, {
+                        ? (0, i.jsxs)(B.B, {
                               direction: "horizontal",
                               align: "center",
                               gap: 4,
                               children: [
-                                  (0, a.jsx)($._, { size: "sm", color: z.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
-                                  (0, a.jsx)(n.E, {
+                                  (0, i.jsx)($._, { size: "sm", color: z.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, i.jsx)(n.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       lineClamp: 1,
@@ -355,7 +355,7 @@ function ts(t) {
                                   }),
                               ],
                           })
-                        : (0, a.jsx)(n.E, {
+                        : (0, i.jsx)(n.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               lineClamp: 1,
@@ -367,46 +367,48 @@ function ts(t) {
     });
 }
 function tc(t) {
-    let { guildId: e, ...i } = t,
-        n = (0, l.yK)([ta, m], () => {
+    let { guildId: e, ...a } = t,
+        n = (0, l.yK)([ti, m], () => {
             let t = m.getDraft(e)?.widgets ?? [];
-            var i = ta.getWidgets(e) ?? [];
-            let a = new Map();
-            for (let e of t) a.set(e.type, (a.get(e.type) ?? 0) + 1);
-            return i.filter((t) => (a.get(t.type) ?? 0) < t.max_instances);
+            var a = ti.getWidgets(e) ?? [];
+            let i = new Map();
+            for (let e of t) i.set(e.type, (i.get(e.type) ?? 0) + 1);
+            return a.filter((t) => (i.get(t.type) ?? 0) < t.max_instances);
         }, [e]);
     return (
         r.useEffect(() => {
             Z(e);
         }, [e]),
-        (0, a.jsx)(Y.Modal, {
+        (0, i.jsx)(Y.Modal, {
             title: tl.intl.string(tr.default.L8Xfoo),
             subtitle: tl.intl.string(tr.default["N8nJ+T"]),
             actions: [],
-            ...i,
-            children: (0, a.jsx)("div", {
+            ...a,
+            children: (0, i.jsx)("div", {
                 className: tn.Vg,
                 children: n.map((t) =>
-                    (0, a.jsx)(
+                    (0, i.jsx)(
                         ts,
                         {
                             widget: t,
                             onClick: () => {
-                                var a;
-                                (a = t.type),
+                                var i, r;
+                                (i = t.type),
+                                    (r = t.name),
                                     o.h.dispatch({
                                         type: "GUILD_SPACE_EDIT_ADD_WIDGET",
                                         guildId: e,
-                                        widget: (function (t) {
-                                            let e = {
+                                        widget: (function (t, e) {
+                                            let a = {
                                                 id: `${R}${j++}`,
                                                 position: { column: v.FT, order: 0 },
                                                 requires_hydration: !1,
+                                                default_title: e,
                                             };
                                             switch (t) {
                                                 case P.a.IMAGE_TEXT:
                                                     return {
-                                                        ...e,
+                                                        ...a,
                                                         type: t,
                                                         config: { type: t, image_hash: null, text: null },
                                                     };
@@ -414,11 +416,11 @@ function tc(t) {
                                                 case P.a.WHITEBOARD:
                                                 case P.a.POPULAR_MUSIC:
                                                 case P.a.LIVE_ACTIVITY:
-                                                    return { ...e, type: t, config: { type: t } };
+                                                    return { ...a, type: t, config: { type: t } };
                                             }
-                                        })(a),
+                                        })(i, r),
                                     }),
-                                    i.onClose();
+                                    a.onClose();
                             },
                         },
                         t.type,
@@ -429,13 +431,13 @@ function tc(t) {
     );
 }
 function td(t) {
-    let { guildId: e, isEditing: i } = t,
+    let { guildId: e, isEditing: a } = t,
         r = (0, l.bG)([m], () => m.getSaveStatus(e), [e]);
-    if (!i)
-        return (0, a.jsx)(B.B, {
+    if (!a)
+        return (0, i.jsx)(B.B, {
             direction: "horizontal",
             justify: "end",
-            children: (0, a.jsx)(M.$, {
+            children: (0, i.jsx)(M.$, {
                 variant: "secondary",
                 text: tl.intl.string(tl.t.lXCMda),
                 onClick: () => {
@@ -446,13 +448,13 @@ function td(t) {
             }),
         });
     let s = "saving" === r;
-    return (0, a.jsxs)(B.B, {
+    return (0, i.jsxs)(B.B, {
         direction: "horizontal",
         justify: "end",
         align: "center",
         gap: 12,
         children: [
-            (0, a.jsx)(M.$, {
+            (0, i.jsx)(M.$, {
                 variant: "secondary",
                 icon: q.T,
                 text: tl.intl.string(tr.default.L8Xfoo),
@@ -460,27 +462,27 @@ function td(t) {
                 onClick: () => {
                     let t;
                     return (
-                        (t = (t) => (0, a.jsx)(tc, { guildId: e, ...t })),
+                        (t = (t) => (0, i.jsx)(tc, { guildId: e, ...t })),
                         void (0, Q.openModalLazy)(() => Promise.resolve(t), { modalKey: "guild-space-add-widget" })
                     );
                 },
             }),
             "error" === r &&
-                (0, a.jsx)(n.E, {
+                (0, i.jsx)(n.E, {
                     variant: "text-sm/normal",
                     color: "text-feedback-critical",
                     role: "alert",
                     children: tl.intl.string(tl.t.HmFYc5),
                 }),
-            (0, a.jsxs)(K.e, {
+            (0, i.jsxs)(K.e, {
                 children: [
-                    (0, a.jsx)(M.$, {
+                    (0, i.jsx)(M.$, {
                         variant: "secondary",
                         text: tl.intl.string(tl.t["ETE/oC"]),
                         disabled: s,
                         onClick: () => N(e),
                     }),
-                    (0, a.jsx)(M.$, {
+                    (0, i.jsx)(M.$, {
                         variant: "primary",
                         text: tl.intl.string(tl.t["R3BPH+"]),
                         loading: s,
@@ -491,46 +493,46 @@ function td(t) {
         ],
     });
 }
-var tu = i(529609),
-    to = i(297264),
-    t_ = i(548118),
-    tf = i(486020),
-    tE = i(555063);
+var tu = a(529609),
+    to = a(297264),
+    t_ = a(548118),
+    tf = a(486020),
+    tE = a(555063);
 function tS(t) {
-    let { guildId: e, header: i } = t,
+    let { guildId: e, header: a } = t,
         n = (0, l.bG)([d.A], () => d.A.getGuild(e), [e]),
-        s = i.custom_banner_hash ?? n?.banner,
+        s = a.custom_banner_hash ?? n?.banner,
         c = r.useMemo(() => (null == n ? null : tf.Ay.getGuildBannerURL({ id: n.id, banner: s })), [n, s]);
     return null == n
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: tE.wx,
               children: [
-                  null != c ? (0, a.jsx)("img", { className: tE.vK, src: c, alt: "" }) : null,
-                  (0, a.jsxs)("div", {
+                  null != c ? (0, i.jsx)("img", { className: tE.vK, src: c, alt: "" }) : null,
+                  (0, i.jsxs)("div", {
                       className: tE.D_,
                       children: [
-                          (0, a.jsx)(t_.Ay, {
+                          (0, i.jsx)(t_.Ay, {
                               className: tE.Kk,
                               guild: n,
                               size: t_.Ay.Sizes.XLARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
-                          (0, a.jsx)(to.D, { variant: "heading-xxl/bold", color: "text-strong", children: n.name }),
+                          (0, i.jsx)(to.D, { variant: "heading-xxl/bold", color: "text-strong", children: n.name }),
                       ],
                   }),
               ],
           });
 }
-var th = i(278093);
+var th = a(278093);
 function tA(t) {
     let { guildId: e } = t,
-        i = r.useRef(null),
+        a = r.useRef(null),
         [u, o, _] = (0, l.yK)([I], () => [I.getSpace(e), I.getFetchStatus(e), I.isInBackoff(e)], [e]);
     r.useEffect(() => {
-        let t = i.current !== e;
-        (i.current = e), G(e, t);
+        let t = a.current !== e;
+        (a.current = e), G(e, t);
     }, [o, e]);
     let f = (0, l.bG)([d.A], () => d.A.getGuild(e), [e]),
         E = (0, W.mN)(f),
@@ -563,17 +565,17 @@ function tA(t) {
         O(e, D);
     }, [e, u, C, D]),
     null == u || null == g)
-        ? (0, a.jsx)("div", {
+        ? (0, i.jsx)("div", {
               className: th.MY,
-              children: (0, a.jsx)("div", {
+              children: (0, i.jsx)("div", {
                   className: th.F,
                   children:
                       "error" !== o || _
-                          ? (0, a.jsx)(s.y, {
+                          ? (0, i.jsx)(s.y, {
                                 type: s.y.Type.SPINNING_CIRCLE,
                                 "aria-label": tl.intl.string(tl.t.ZTNur7),
                             })
-                          : (0, a.jsx)(n.E, {
+                          : (0, i.jsx)(n.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
                                 role: "alert",
@@ -581,16 +583,16 @@ function tA(t) {
                             }),
               }),
           })
-        : (0, a.jsx)("div", {
+        : (0, i.jsx)("div", {
               className: th.MY,
-              children: (0, a.jsx)(c.Gt, {
+              children: (0, i.jsx)(c.Gt, {
                   className: th.XG,
-                  children: (0, a.jsxs)("div", {
+                  children: (0, i.jsxs)("div", {
                       className: th.Qs,
                       children: [
-                          (0, a.jsx)(tS, { guildId: e, header: A ? S.header : u.header }),
-                          E && (0, a.jsx)(td, { guildId: e, isEditing: A }),
-                          (0, a.jsx)(tu.A, { guildId: e, widgets: g }),
+                          (0, i.jsx)(tS, { guildId: e, header: A ? S.header : u.header }),
+                          E && (0, i.jsx)(td, { guildId: e, isEditing: A }),
+                          (0, i.jsx)(tu.A, { guildId: e, widgets: g }),
                       ],
                   }),
               }),

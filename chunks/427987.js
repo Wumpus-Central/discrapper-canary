@@ -12,6 +12,7 @@ function u(e, t, a, l) {
     return {
         id: e,
         type: t,
+        default_title: null,
         position: { column: a, order: l },
         config: { type: t, ...o },
         requires_hydration: t === n.a.LEADERBOARD,
