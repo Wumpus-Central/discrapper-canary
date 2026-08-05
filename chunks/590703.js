@@ -9,7 +9,7 @@ var i = n(582128),
     d = n(476931),
     c = n(875317),
     u = n(363195),
-    _ = n(617617),
+    _ = n(885386),
     E = n(141343),
     A = n(467135),
     h = n(147248),
@@ -51,7 +51,7 @@ function T() {
         m = (function () {
             let e = (0, l.bG)([u.A], () => u.A.theme),
                 { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: a } = (0, A.ko)(),
-                o = (0, l.bG)([_.A], () => _.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
+                o = _.eh.useSetting().customUserThemeSettings,
                 d = i.useRef(void 0);
             return (
                 i.useEffect(() => {

@@ -62,11 +62,8 @@ function f(e) {
 }
 function p(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: i, useSystemTheme: r } = e,
-        l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION,
-        c = "system" === i ? A.Q_.ON : A.Q_.OFF;
-    if (
-        (s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != r ? r : c } }),
-        null == t && "system" !== i && (0, a.M)(i) && (0, d.NA)({ [A.Fc.DARK]: i }),
+        l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION;
+    null == t && "system" !== i && (0, a.M)(i) && (0, d.NA)({ [A.Fc.DARK]: i }),
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -77,7 +74,11 @@ function p(e) {
                     },
                 },
             },
-        }),
+        });
+    let u = "system" === i ? A.Q_.ON : A.Q_.OFF;
+    if (
+        (s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != r ? r : u } }),
+        c.A.isSameAsDeviceThemeEnabled() && (0, d.ZM)(!1),
         o.A.shouldSync("appearance"))
     )
         return _.wc.updateAsync(
@@ -143,7 +144,10 @@ let T = {
                         ? {}
                         : {
                               theme: c.A.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: l.A.gradientPreset?.id },
+                              clientThemeSettings: {
+                                  backgroundGradientPresetId: l.A.gradientPreset?.id,
+                                  customUserThemeSettings: u.eh.getSetting().customUserThemeSettings,
+                              },
                               developerMode: u.Q_.getSetting(),
                           },
                 },

@@ -38,7 +38,6 @@ function v() {
     (O = e), (L = !1);
 }
 function b() {
-    if (!c.A.shouldSync("appearance")) return !1;
     let e = A.eh.getSetting().backgroundGradientPresetId;
     if (null == e) {
         if (null == i) return !1;
@@ -56,7 +55,6 @@ function P() {
     return D();
 }
 function U() {
-    if (!c.A.shouldSync("appearance")) return !1;
     let e = A.eh.getSetting().backgroundGradientPresetId;
     if ((E.Ay.useSystemTheme !== I.Q_.ON || null == e || f(D) || (0, u.k7)(I.Q_.OFF), null == e)) {
         null != i && (i = void 0);

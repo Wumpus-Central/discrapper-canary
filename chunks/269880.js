@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => I });
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -7,32 +7,34 @@ var r = n(17928),
     s = n(817281),
     l = n(775602),
     o = n(688810),
-    d = n(487245),
-    c = n(363195),
-    u = n(742023),
-    _ = n(185928),
-    E = n(652215),
-    A = n(375708);
-function h() {
+    d = n(823459),
+    c = n(487245),
+    u = n(363195),
+    _ = n(742023),
+    E = n(185928),
+    A = n(652215),
+    h = n(375708);
+function I() {
     let { analyticsLocations: e } = (0, o.Ay)(),
         {
             theme: t,
             useSystemTheme: n,
-            useForcedColors: h,
-        } = (0, r.cf)([c.A, u.Ay, l.Ay], () => ({
-            theme: c.A.theme,
-            useSystemTheme: u.Ay.useSystemTheme,
+            useForcedColors: I,
+        } = (0, r.cf)([u.A, _.Ay, l.Ay], () => ({
+            theme: u.A.theme,
+            useSystemTheme: _.Ay.useSystemTheme,
             useForcedColors: l.Ay.useForcedColors,
         }));
-    function I(r, l) {
+    function f(r, l) {
         return (0, i.jsx)(a.iD, {
             id: r,
             group: "input-modes",
             label: l,
-            disabled: h,
-            checked: n === _.Q_.ON ? "system" === r : r === t,
+            disabled: I,
+            checked: n === E.Q_.ON ? "system" === r : r === t,
             action: () => {
-                (0, d.X8)({ isPersisted: !0, analyticsLocations: e, themeName: `default ${r}` }),
+                (0, d.Py)(),
+                    (0, c.X8)({ isPersisted: !0, analyticsLocations: e, themeName: `default ${r}` }),
                     (0, s.u_)({ theme: r });
             },
         });
@@ -42,11 +44,11 @@ function h() {
             a.rX,
             {
                 children: [
-                    I(E.NJ8.LIGHT, A.intl.string(A.t.K2sFfo)),
-                    I(E.NJ8.DARK, A.intl.string(A.t.SMPT1k)),
-                    I(E.NJ8.DARKER, A.intl.string(A.t.b8Cei3)),
-                    I(E.NJ8.MIDNIGHT, A.intl.string(A.t.Do4ZJx)),
-                    I("system", A.intl.string(A.t["7rOU6j"])),
+                    f(A.NJ8.LIGHT, h.intl.string(h.t.K2sFfo)),
+                    f(A.NJ8.DARK, h.intl.string(h.t.SMPT1k)),
+                    f(A.NJ8.DARKER, h.intl.string(h.t.b8Cei3)),
+                    f(A.NJ8.MIDNIGHT, h.intl.string(h.t.Do4ZJx)),
+                    f("system", h.intl.string(h.t["7rOU6j"])),
                 ],
             },
             "theme-items",

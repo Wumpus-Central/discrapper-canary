@@ -3,11 +3,11 @@ n.d(t, {
     Sf: () => eY,
     n6: () => eo,
     X6: () => eU,
-    Iv: () => e6,
+    Iv: () => e4,
     NF: () => e7,
     j0: () => ti,
     Pf: () => ee,
-    Vd: () => e5,
+    Vd: () => e6,
     CY: () => ev,
     NO: () => V,
     D_: () => R,
@@ -15,7 +15,7 @@ n.d(t, {
     JI: () => ek,
     HZ: () => e3,
     vf: () => ep,
-    Vv: () => e4,
+    Vv: () => e5,
     BQ: () => v,
     HO: () => eh,
     SY: () => M,
@@ -40,7 +40,7 @@ n.d(t, {
     _Z: () => eQ,
     T3: () => k,
     cU: () => eT,
-    ML: () => y,
+    ML: () => D,
     WY: () => es,
     Zk: () => e1,
     vL: () => eu,
@@ -57,14 +57,14 @@ n.d(t, {
     zY: () => tt,
     KP: () => eL,
     jW: () => ex,
-    eK: () => D,
+    eK: () => y,
     m$: () => e0,
     YX: () => ea,
     Zr: () => er,
     eh: () => ej,
     uB: () => J,
     wv: () => Z,
-    jP: () => eD,
+    jP: () => ey,
     tP: () => W,
     PZ: () => te,
     H1: () => ef,
@@ -212,13 +212,13 @@ let R = f(
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: e }),
     ),
-    y = f(
+    D = f(
         "textAndImages",
         "includeStickersInAutocomplete",
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    D = f(
+    y = f(
         "textAndImages",
         "includeSoundmojiInAutocomplete",
         (e) => e?.value ?? !0,
@@ -598,11 +598,11 @@ let eL = f(
         (e) => (null == e || e === s.KP.UNSET ? s.KP.FRIENDS_AND_ALL_GUILDS : e),
         (e) => e,
     ),
-    ey = new Set(Object.values(C.clD)),
-    eD = f(
+    eD = new Set(Object.values(C.clD)),
+    ey = f(
         "status",
         "status",
-        (e) => (null != e && ey.has(e.value) ? e.value : C.clD.UNKNOWN),
+        (e) => (null != e && eD.has(e.value) ? e.value : C.clD.UNKNOWN),
         (e) => l.hU.create({ value: e }),
     ),
     ev = f(
@@ -732,35 +732,41 @@ let eB = p(
         (e) => e ?? !1,
         (e) => e,
     ),
-    ej = f(
+    ej = p(
+        f(
+            "appearance",
+            "clientThemeSettings",
+            (e) => ({
+                backgroundGradientPresetId: e?.backgroundGradientPresetId?.value,
+                customUserThemeSettings:
+                    e?.customUserThemeSettings != null
+                        ? {
+                              colors: e.customUserThemeSettings.colors,
+                              gradientColorStops: e.customUserThemeSettings.gradientColorStops,
+                              gradientAngle: e.customUserThemeSettings.gradientAngle,
+                              baseMix: e.customUserThemeSettings.baseMix,
+                          }
+                        : void 0,
+            }),
+            (e) => ({
+                backgroundGradientPresetId:
+                    null != e.backgroundGradientPresetId
+                        ? l.ZQ.create({ value: e.backgroundGradientPresetId })
+                        : void 0,
+                customUserThemeSettings:
+                    null != e.customUserThemeSettings
+                        ? {
+                              colors: e.customUserThemeSettings.colors,
+                              gradientColorStops: e.customUserThemeSettings.gradientColorStops,
+                              gradientAngle: e.customUserThemeSettings.gradientAngle,
+                              baseMix: e.customUserThemeSettings.baseMix,
+                          }
+                        : void 0,
+            }),
+            { comparator: i.isEqual },
+        ),
         "appearance",
         "clientThemeSettings",
-        (e) => ({
-            backgroundGradientPresetId: e?.backgroundGradientPresetId?.value,
-            customUserThemeSettings:
-                e?.customUserThemeSettings != null
-                    ? {
-                          colors: e.customUserThemeSettings.colors,
-                          gradientColorStops: e.customUserThemeSettings.gradientColorStops,
-                          gradientAngle: e.customUserThemeSettings.gradientAngle,
-                          baseMix: e.customUserThemeSettings.baseMix,
-                      }
-                    : void 0,
-        }),
-        (e) => ({
-            backgroundGradientPresetId:
-                null != e.backgroundGradientPresetId ? l.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
-            customUserThemeSettings:
-                null != e.customUserThemeSettings
-                    ? {
-                          colors: e.customUserThemeSettings.colors,
-                          gradientColorStops: e.customUserThemeSettings.gradientColorStops,
-                          gradientAngle: e.customUserThemeSettings.gradientAngle,
-                          baseMix: e.customUserThemeSettings.baseMix,
-                      }
-                    : void 0,
-        }),
-        { comparator: i.isEqual },
     ),
     eW = T(
         p(
@@ -882,7 +888,7 @@ let eQ = m({
         (e) => e ?? !1,
         (e) => e,
     );
-function e6(e) {
+function e4(e) {
     let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e ?? {};
     return {
         explicitContentGuilds: t ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
@@ -890,7 +896,7 @@ function e6(e) {
         explicitContentNonFriendDm: i ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
     };
 }
-function e4(e) {
+function e5(e) {
     let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e;
     return {
         explicitContentGuilds: t ?? void 0,
@@ -898,7 +904,7 @@ function e4(e) {
         explicitContentNonFriendDm: i ?? void 0,
     };
 }
-let e5 = f("textAndImages", "explicitContentSettings", e6, e4);
+let e6 = f("textAndImages", "explicitContentSettings", e4, e5);
 function e7(e) {
     let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e ?? {};
     return {
