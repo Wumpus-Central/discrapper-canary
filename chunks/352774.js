@@ -61,7 +61,7 @@ var i,
     O = n(789999),
     R = n(322683),
     L = n(652215);
-function y(e) {
+function D(e) {
     if (Math.random() > 0.1) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         n = (0, R.O)();
@@ -78,7 +78,7 @@ function y(e) {
         is_foregrounded: (0, O.R)(),
     });
 }
-class D {
+class y {
     pendingRequests = new Map();
     recordEarnedRequestAttempt(e, t) {
         let n = {
@@ -93,18 +93,18 @@ class D {
         this.pendingRequests.set(e, n),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (y(t), this.pendingRequests.delete(e));
+                null != t && (D(t), this.pendingRequests.delete(e));
             }, 3e4);
     }
     recordEarnedRequestApiResponse(e, t) {
         let { wasSuccessful: n, requestId: i = null, fetchedAt: r = null } = t,
             a = this.pendingRequests.get(e);
         null != a &&
-            (y({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }),
+            (D({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }),
             this.pendingRequests.delete(e));
     }
 }
-let v = new D();
+let v = new y();
 var b = n(260364),
     M = n(859703),
     P = n(302654);
@@ -289,33 +289,35 @@ async function X() {
             n = t.body.quests,
             i = n.filter((e) => (0, Y.s2)(e)).map((e) => (0, Y.rO)(e)),
             r = t.body.quest_enrollment_blocked_until,
-            a = i.filter((e) => e.userStatus?.claimedAt != null || e.config.rewardsConfig.platforms.length > 0),
-            o = n.map((e) => e.id),
-            d = i.map((e) => e.id),
-            c = o.filter((e) => !d.includes(e)),
-            u = a.map((e) => e.id),
-            _ = d.filter((e) => !u.includes(e)),
-            E = e.filter((e) => !u.includes(e));
+            a = t.body.quest_access_suspended_until,
+            o = i.filter((e) => e.userStatus?.claimedAt != null || e.config.rewardsConfig.platforms.length > 0),
+            d = n.map((e) => e.id),
+            c = i.map((e) => e.id),
+            u = d.filter((e) => !c.includes(e)),
+            _ = o.map((e) => e.id),
+            E = c.filter((e) => !_.includes(e)),
+            A = e.filter((e) => !_.includes(e));
         N.A.addBreadcrumb({
             category: "quests.fetch",
             message: "fetchCurrentQuests completed",
             data: {
-                rawCount: o.length,
-                rawIds: o,
-                validCount: u.length,
-                validIds: u,
+                rawCount: d.length,
+                rawIds: d,
+                validCount: _.length,
+                validIds: _,
                 prevQuestIds: e,
-                droppedByConfigVersion: c,
-                droppedByPlatformFilter: _,
-                removedFromStore: E,
+                droppedByConfigVersion: u,
+                droppedByPlatformFilter: E,
+                removedFromStore: A,
             },
         });
-        let A = t.body.excluded_quests.map((e) => (0, Y._g)(e));
+        let h = t.body.excluded_quests.map((e) => (0, Y._g)(e));
         l.h.dispatch({
             type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-            quests: a,
-            excludedQuests: A,
+            quests: o,
+            excludedQuests: h,
             questEnrollmentBlockedUntil: r,
+            questAccessSuspendedUntil: a,
         });
     } catch (e) {
         l.h.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE", error: new o.A(e) });
