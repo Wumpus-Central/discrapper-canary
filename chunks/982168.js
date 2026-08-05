@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => d }), n(321073);
-var i = n(296489),
+n.d(t, { A: () => u }), n(321073);
+var i = n(277057),
     r = n.n(i),
-    s = n(228366),
-    a = n(250953),
-    o = n(33524);
-let l = new (class {
+    a = n(228366),
+    s = n(250953),
+    l = n(33524);
+let o = new (class {
     queue = [];
     enqueue(e) {
         this.queue.push(e);
@@ -14,22 +14,21 @@ let l = new (class {
         for (; this.queue.length > 0; ) this.queue.shift()?.();
     }
 })();
-var u = n(775602),
+var d = n(775602),
     c = n(652215);
-let d = {
+let u = {
     push(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r()("modal"),
             i = arguments.length > 3 ? arguments[3] : void 0,
-            a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : c.BRT.APP;
+            s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : c.BRT.APP;
         return (
-            (0, o.GR)({
-                key: n,
+            (0, l.GR)({
                 modal: (function (e, t, n) {
                     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     return {
                         key: t.key ?? i ?? "modal",
                         modal: e,
-                        animation: t.animation ?? (u.Ay.useReducedMotion ? c.WMy.FADE : c.WMy.SLIDE_UP),
+                        animation: t.animation ?? (d.Ay.useReducedMotion ? c.WMy.FADE : c.WMy.SLIDE_UP),
                         shouldPersistUnderModals: t.shouldPersistUnderModals ?? !1,
                         props: n,
                         backdropStyle: t.backdropStyle ?? null,
@@ -42,15 +41,15 @@ let d = {
                 })(e, {}, t, n),
                 ...i,
             }),
-            s.h.dispatch({ type: "MODAL_PUSH", modal: e, props: t, key: n, appContext: a }),
+            a.h.dispatch({ type: "MODAL_PUSH", modal: e, props: t, key: n, appContext: s }),
             n
         );
     },
     pushLazy(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r()("modal"),
             i = arguments.length > 3 ? arguments[3] : void 0,
-            s = (0, a.Y)();
-        return null != s && s.isReady()
+            a = (0, s.Y)();
+        return null != a && a.isReady()
             ? (e instanceof Promise
                   ? e.then((e) => {
                         let { default: t } = e;
@@ -58,29 +57,29 @@ let d = {
                     })
                   : e()
               ).then((e) => this.push(e, t, n, i))
-            : new Promise((r) => l.enqueue(() => r(this.pushLazy(e, t, n, i))));
+            : new Promise((r) => o.enqueue(() => r(this.pushLazy(e, t, n, i))));
     },
     updateAnimation(e, t) {
-        s.h.dispatch({ type: "MODAL_UPDATE", key: e, props: {}, partial: !0, animation: t });
+        a.h.dispatch({ type: "MODAL_UPDATE", key: e, props: {}, partial: !0, animation: t });
     },
     pop() {
-        (0, o.tu)(), s.h.dispatch({ type: "MODAL_POP" });
+        (0, l.tu)(), a.h.dispatch({ type: "MODAL_POP" });
     },
     popWithKey(e, t) {
-        (0, o.tu)(e, t), s.h.dispatch({ type: "MODAL_POP", key: e, onExited: t });
+        (0, l.tu)(e, t), a.h.dispatch({ type: "MODAL_POP", key: e, onExited: t });
     },
-    popAboveKey: (e) => (0, o.WR)(e),
+    popAboveKey: (e) => (0, l.WR)(e),
     popAll() {
-        (0, o.f3)(),
-            s.h.dispatch({ type: "MODAL_POP_ALL" }),
-            s.h.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" }),
-            s.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" }),
-            s.h.dispatch({ type: "HIDE_ACTION_SHEET" }),
-            s.h.dispatch({ type: "DISPLAYED_INVITE_CLEAR" }),
-            s.h.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" }),
-            s.h.dispatch({ type: "QUICKSWITCHER_HIDE" }),
-            s.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" }),
-            s.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" }),
-            s.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
+        (0, l.f3)(),
+            a.h.dispatch({ type: "MODAL_POP_ALL" }),
+            a.h.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" }),
+            a.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" }),
+            a.h.dispatch({ type: "HIDE_ACTION_SHEET" }),
+            a.h.dispatch({ type: "DISPLAYED_INVITE_CLEAR" }),
+            a.h.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" }),
+            a.h.dispatch({ type: "QUICKSWITCHER_HIDE" }),
+            a.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" }),
+            a.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" }),
+            a.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
     },
 };
