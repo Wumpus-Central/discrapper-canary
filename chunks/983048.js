@@ -84,13 +84,13 @@ function b(e) {
 var v = i(85563),
     y = i(739508),
     j = i(625494),
-    O = i(428262),
+    O = i(158045),
     R = i(83617),
     L = i(615396),
     D = i(526292),
     P = i(881489),
     G = i(573359),
-    M = i(422936),
+    M = i(724651),
     U = i(774774),
     V = i(132500),
     k = i(543767),
@@ -98,7 +98,7 @@ var v = i(85563),
     F = i(652215),
     B = i(375708),
     z = i(327105);
-function Y(e) {
+function X(e) {
     let { subscription: t, wrapperClassName: i, fallback: s } = e,
         { enabled: r, bannerVariant: a } = (0, T.z0)({ location: "premium_settings_subscription_header" }),
         { analyticsLocations: o } = (0, S.Ay)(E.A.SUBSCRIPTION_HEADER),
@@ -136,7 +136,7 @@ function Y(e) {
         }),
     });
 }
-var X = i(327479),
+var Y = i(327479),
     H = i(473702),
     K = i(202541),
     W = i(601107),
@@ -245,7 +245,7 @@ function ei() {
     return (0, n.jsx)($, {
         wordMark: (0, n.jsx)(et, {}),
         subscriptionInfo: (0, n.jsx)("div", { className: Z.MS, children: B.intl.string(B.t.R0GJL2) }),
-        buttons: (0, n.jsx)(X.A, {
+        buttons: (0, n.jsx)(Y.A, {
             className: Z.au,
             onClick: () => (0, N.A)({ subscriptionTier: K.pe.TIER_1, analyticsLocations: e, analyticsObject: Q }),
             text: B.intl.string(B.t["/ygMUY"]),
@@ -450,7 +450,7 @@ let en = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         loading: p,
-                        text: B.intl.string(B.t.obRG6Y).toLocaleUpperCase(),
+                        text: B.intl.string(B.t.obRG6Y),
                     }),
                 });
             }
@@ -460,7 +460,7 @@ let en = function (e) {
                     l = (0, n.jsx)(m.m, {
                         text: i,
                         asContainer: !0,
-                        children: (0, n.jsx)(X.A, {
+                        children: (0, n.jsx)(Y.A, {
                             className: r()(Z.au, Z.lB),
                             disabled: e,
                             onClick: () => {
@@ -488,7 +488,7 @@ let en = function (e) {
                             }),
                         }),
                         t.status === F.Dmq.PAST_DUE
-                            ? (0, n.jsx)(Y, { subscription: t, wrapperClassName: Z.au, fallback: l })
+                            ? (0, n.jsx)(X, { subscription: t, wrapperClassName: Z.au, fallback: l })
                             : l,
                     ],
                 });
