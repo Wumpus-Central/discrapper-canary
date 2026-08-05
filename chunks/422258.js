@@ -7,6 +7,7 @@ n.d(t, {
     fv: () => V,
     hR: () => W,
     i_: () => x,
+    kG: () => q,
     od: () => F,
     tV: () => z,
     uM: () => $,
@@ -265,4 +266,7 @@ function z(e) {
         u.Sb.INFREQUENT_USER_ACTION,
         M,
     );
+}
+function q(e) {
+    z(e, "settings_page"), !e && (0, S.ai)(I.A.getGuildId()) && (0, c.pX)(C.BVt.ME);
 }
