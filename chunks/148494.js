@@ -179,7 +179,7 @@ var eS = n(71393),
     ev = n(927813),
     eb = n(45938),
     eM = n(975571),
-    eP = n(428262),
+    eP = n(158045),
     eU = n(935208),
     ew = n(292348),
     eG = n(157559),
@@ -934,7 +934,6 @@ ${a}`),
                     poll: (0, ed.G8)(L),
                     sharedCustomTheme: D,
                     mediaMention: Y,
-                    mentionGames: t.mentionGames,
                 });
             if (
                 (!1 !== n.eagerDispatch &&

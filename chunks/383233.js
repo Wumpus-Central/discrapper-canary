@@ -59,7 +59,6 @@ let E = class extends c {
     mentions;
     mentionRoles;
     mentionChannels;
-    mentionGames;
     mentionEveryone;
     mentioned;
     tts;
@@ -107,8 +106,6 @@ let E = class extends c {
             (this.mentions = e.mentions || []),
             (this.mentionRoles = e.mentionRoles || []),
             (this.mentionChannels = e.mentionChannels || []),
-            (this.mentionGames =
-                e.mentionGames instanceof Map ? e.mentionGames : new Map((e.mentionGames ?? []).map((e) => [e.id, e]))),
             (this.mentioned = e.mentioned || !1),
             (this.pinned = e.pinned || !1),
             (this.mentionEveryone = e.mentionEveryone || !1),
@@ -295,7 +292,6 @@ let E = class extends c {
     toJS() {
         return {
             ...this,
-            mentionGames: [...this.mentionGames.values()],
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
             mention_everyone: this.mentionEveryone,

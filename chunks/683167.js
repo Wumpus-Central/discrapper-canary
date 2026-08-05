@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { a: () => M, A: () => b });
+n.d(t, { a: () => v, A: () => y });
 var i = n(582128),
     r = n(143236),
     a = n(719442),
@@ -22,14 +22,12 @@ function m(e) {
         n = h.VW.getCurrentInline(e);
     return null != t && !p.includes(t[0].type) && !T.includes(n?.[0]?.type);
 }
-var g = n(580745),
-    S = n(232835);
-function N(e) {
+function g(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: h.VW.richValue(e), selection: e.selection };
 }
-var C = n(113001),
-    O = n(2368);
-function R(e, t, n) {
+var S = n(113001),
+    N = n(2368);
+function C(e, t, n) {
     let i = h.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let r = h.VW.getCurrentText(e);
@@ -73,19 +71,19 @@ function R(e, t, n) {
         }
     return A.b.delete(e, { at: d, unit: t, reverse: n, select: !0 }), !0;
 }
-var L = n(694403),
-    y = n(323350),
-    D = n(530795),
-    v = n(551483);
-function b(e) {
+var O = n(694403),
+    R = n(323350),
+    L = n(530795),
+    D = n(551483);
+function y(e) {
     let t = i.useContext(o.Ay),
         n = c.SI.useSetting(),
         [r] = i.useState(() => {
             let i = (0, a.ie)();
             return (
                 (i.children = (0, u.x7)("")),
-                (i.selection = { anchor: v.K, focus: v.K }),
-                M({ ...e, editor: i, windowContext: t, previewMarkdown: n }),
+                (i.selection = { anchor: D.K, focus: D.K }),
+                v({ ...e, editor: i, windowContext: t, previewMarkdown: n }),
                 i
             );
         });
@@ -109,37 +107,31 @@ function b(e) {
         r
     );
 }
-function M(e) {
+function v(e) {
+    var t;
     let {
-            editor: t,
-            chatInputType: n,
-            channel: i,
-            windowContext: s,
-            previewMarkdown: l,
-            forTests: o,
-            onChangeStart: d,
-            onChangeEnd: c,
-            updateState: u,
+            editor: n,
+            chatInputType: i,
+            channel: s,
+            windowContext: l,
+            previewMarkdown: o,
+            forTests: d,
+            onChangeStart: c,
+            onChangeEnd: u,
+            updateState: p,
         } = e,
-        p = t,
-        { onChange: T } = p;
-    (p.chatInputType = n),
-        (p.windowContext = s),
-        (p.previewMarkdown = l),
-        (p.composition = null),
-        (p.events = new r.EventEmitter()),
-        (p.isMac = "MacIntel" === navigator.platform);
-    var b,
-        M = p;
-    let P = g.A.getEditingMessageId(i.id);
-    if (null != P) {
-        let e = S.A.getMessage(i.id, P);
-        M.mentionGames = new Map(e?.mentionGames ?? []);
-    } else M.mentionGames = new Map();
-    (p.onChange = () => {
-        p.events.emit("onChange"), T();
-    }),
-        ((b = p =
+        T = n,
+        { onChange: y } = T;
+    (T.chatInputType = i),
+        (T.windowContext = l),
+        (T.previewMarkdown = o),
+        (T.composition = null),
+        (T.events = new r.EventEmitter()),
+        (T.isMac = "MacIntel" === navigator.platform),
+        (T.onChange = () => {
+            T.events.emit("onChange"), y();
+        }),
+        ((t = T =
             (function (e, t) {
                 let {
                     addMark: n,
@@ -152,7 +144,7 @@ function M(e) {
                     insertTextData: d,
                 } = e;
                 return (
-                    ((e = (0, D.o$)(e)).addMark = n),
+                    ((e = (0, L.o$)(e)).addMark = n),
                     (e.removeMark = i),
                     (e.setFragmentData = s),
                     (e.insertData = l),
@@ -192,42 +184,42 @@ function M(e) {
                     }),
                     e
                 );
-            })(p, !0 === o)).setFragmentData = (e) => {
-            if (null != b.selection && !h.Kh.equals(b.selection.anchor, b.selection.focus)) {
-                let t = (0, y.WO)(h.VW.richValue(b), { mode: "plain", range: b.selection, preventEmojiSurrogates: !0 });
-                e.setData("text/plain", t);
+            })(T, !0 === d)).setFragmentData = (e) => {
+            if (null != t.selection && !h.Kh.equals(t.selection.anchor, t.selection.focus)) {
+                let n = (0, R.WO)(h.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
+                e.setData("text/plain", n);
             }
         }),
-        (b.insertData = (e) => {
-            b.insertTextData(e);
+        (t.insertData = (e) => {
+            t.insertTextData(e);
         }),
-        (b.insertFragmentData = (e) => !1),
-        (b.insertTextData = (e) => {
-            let t = e.getData("text/plain");
-            if (0 === t.length) return !1;
-            if (null != b.selection && h.ZF.isExpanded(b.selection)) {
-                let e = a.KE.string(b, b.selection),
-                    n = (0, L.W1)(t),
-                    i = (0, L.W1)(e);
-                if (null != n && null == i) {
-                    let [e, t] = h.ZF.edges(b.selection);
+        (t.insertFragmentData = (e) => !1),
+        (t.insertTextData = (e) => {
+            let n = e.getData("text/plain");
+            if (0 === n.length) return !1;
+            if (null != t.selection && h.ZF.isExpanded(t.selection)) {
+                let e = a.KE.string(t, t.selection),
+                    i = (0, O.W1)(n),
+                    r = (0, O.W1)(e);
+                if (null != i && null == r) {
+                    let [e, n] = h.ZF.edges(t.selection);
                     return (
-                        h.VW.withoutNormalizing(b, () => {
-                            A.b.select(b, e),
-                                b.insertText("["),
-                                A.b.select(b, t),
-                                0 === h.PW.compare(e.path, t.path) && A.b.move(b, { distance: 1 }),
-                                b.insertText(`](${n.target})`);
+                        h.VW.withoutNormalizing(t, () => {
+                            A.b.select(t, e),
+                                t.insertText("["),
+                                A.b.select(t, n),
+                                0 === h.PW.compare(e.path, n.path) && A.b.move(t, { distance: 1 }),
+                                t.insertText(`](${i.target})`);
                         }),
                         !0
                     );
                 }
-                if (null != n && null != i) return A.b.delete(b, { at: b.selection }), b.insertText(n.target), !0;
-                A.b.delete(b, { at: b.selection });
+                if (null != i && null != r) return A.b.delete(t, { at: t.selection }), t.insertText(i.target), !0;
+                A.b.delete(t, { at: t.selection });
             }
-            return b.insertText(t), !0;
+            return t.insertText(n), !0;
         }),
-        (p = (function (e) {
+        (T = (function (e) {
             let { apply: t, deleteBackward: n, deleteForward: i, deleteFragment: r, insertText: a } = e;
             return (
                 (e.apply = (n) => {
@@ -248,10 +240,10 @@ function M(e) {
                     null != e.selection && null != h.VW.getCurrentInline(e) ? A.b.insertText(e, t) : a(t);
                 }),
                 (e.deleteBackward = (t) => {
-                    R(e, t, !0) || n(t);
+                    C(e, t, !0) || n(t);
                 }),
                 (e.deleteForward = (t) => {
-                    R(e, t, !1) || i(t);
+                    C(e, t, !1) || i(t);
                 }),
                 (e.deleteFragment = (t) => {
                     if (null != e.selection && h.ZF.isExpanded(e.selection)) {
@@ -285,11 +277,11 @@ function M(e) {
                 }),
                 e
             );
-        })((p = b))),
-        n.commands?.enabled && (p = (0, _.A)(p, i)),
-        (p = (0, O.Ay)(p, i.guild_id, i.id)),
-        n.markdown?.disableBlockQuotes ||
-            (p = (function (e) {
+        })((T = t))),
+        i.commands?.enabled && (T = (0, _.A)(T, s)),
+        (T = (0, N.Ay)(T, s.guild_id, s.id)),
+        i.markdown?.disableBlockQuotes ||
+            (T = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: i, onChange: r } = e;
                 (e.deleteBackward = (n) => {
                     let i = h.VW.getCurrentBlock(e);
@@ -391,18 +383,18 @@ function M(e) {
                     }),
                     e
                 );
-            })(p)),
-        n.markdown?.disableCodeBlocks || (p = (0, I.Ay)(p)),
-        o &&
-            (p = (function (e) {
+            })(T)),
+        i.markdown?.disableCodeBlocks || (T = (0, I.Ay)(T)),
+        d &&
+            (T = (function (e) {
                 let { isInline: t, isVoid: n } = e;
                 return (
                     (e.isInline = (e) => "testInline" === e.type || "testInlineVoid" === e.type || t(e)),
                     (e.isVoid = (e) => "testInlineVoid" === e.type || n(e)),
                     e
                 );
-            })(p)),
-        (p = (function (e, t) {
+            })(T)),
+        (T = (function (e, t) {
             let {
                 apply: n,
                 deleteBackward: i,
@@ -422,7 +414,7 @@ function M(e) {
             (e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    0 === t.stack.length && ((t.stack = [N(e)]), (t.index = 0)),
+                    0 === t.stack.length && ((t.stack = [g(e)]), (t.index = 0)),
                         null != e.selection && (E.o.currentEntry(e).selection = e.selection),
                         (u = null),
                         o();
@@ -442,7 +434,7 @@ function M(e) {
                     n(t);
                     let r = h.VW.richValue(e);
                     r !== _ &&
-                        (0 === i.stack.length && ((i.stack = [N(e)]), (i.index = 0)),
+                        (0 === i.stack.length && ((i.stack = [g(e)]), (i.index = 0)),
                         E.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var i, r;
@@ -499,7 +491,7 @@ function M(e) {
                 e
             );
         })(
-            (p = (function (e, t, n) {
+            (T = (function (e, t, n) {
                 let { onChange: i } = e,
                     r = !1,
                     a = !1;
@@ -528,7 +520,7 @@ function M(e) {
                     e
                 );
             })(
-                (p = (function (e) {
+                (T = (function (e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
@@ -554,12 +546,12 @@ function M(e) {
                                     a = !1;
                                 for (
                                     ;
-                                    null != i && null != (t = h.VW.getParentVoid(e, i)) && !v.XR.includes(t[0].type);
+                                    null != i && null != (t = h.VW.getParentVoid(e, i)) && !D.XR.includes(t[0].type);
                                 )
                                     (i = h.VW.before(e, i, { unit: "offset" })), (a = !0);
                                 for (
                                     ;
-                                    null != r && null != (n = h.VW.getParentVoid(e, r)) && !v.XR.includes(n[0].type);
+                                    null != r && null != (n = h.VW.getParentVoid(e, r)) && !D.XR.includes(n[0].type);
                                 )
                                     (r = h.VW.after(e, r, { unit: "offset" })), (a = !0);
                                 a &&
@@ -574,7 +566,7 @@ function M(e) {
                         e
                     );
                 })(
-                    (p = (function (e) {
+                    (T = (function (e) {
                         let { insertBreak: t, insertText: n } = e;
                         return (
                             (e.insertBreak = () => {
@@ -595,14 +587,14 @@ function M(e) {
                             }),
                             e
                         );
-                    })((p = (0, C.A)(p)))),
+                    })((T = (0, S.A)(T)))),
                 )),
-                d,
                 c,
+                u,
             )),
             (e) => {
                 let { newValue: t, newSelection: n } = e;
-                return u(p, "undo", { value: t, selection: n });
+                return p(T, "undo", { value: t, selection: n });
             },
         ));
 }

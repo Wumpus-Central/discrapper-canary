@@ -1,4 +1,4 @@
-n.d(t, { findMatchingAutocompleteType: () => ta, getOptions: () => tu, findCommandOptionAutocompleteType: () => tm });
+n.d(t, { findMatchingAutocompleteType: () => ta, getOptions: () => tu, findCommandOptionAutocompleteType: () => tc });
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -6,8 +6,8 @@ var l = n(284009),
     u = n(408018),
     o = n(189551),
     a = n(597184),
-    m = n(477900),
-    c = n(582128),
+    c = n(477900),
+    m = n(582128),
     d = n(123292),
     p = n(192308),
     y = n(721768),
@@ -33,7 +33,7 @@ function O(e) {
             headerTrailingContent: s,
         } = e,
         u = l.length > 0 ? D.intl.formatToPlainString(t, { prefix: i(l) }) : n;
-    return (0, m.jsx)(S.Ay.Title, { className: r, title: u, children: s }, `autocomplete-title-${u}`);
+    return (0, c.jsx)(S.Ay.Title, { className: r, title: u, children: s }, `autocomplete-title-${u}`);
 }
 function _(e) {
     let {
@@ -57,10 +57,10 @@ function _(e) {
     let I = l?.map((e, t) => {
         let l = t + y,
             s = a(e, l);
-        return (0, c.createElement)(o, { onClick: r, onHover: i, selected: n === l, index: l, ...s, key: s.key });
+        return (0, m.createElement)(o, { onClick: r, onHover: i, selected: n === l, index: l, ...s, key: s.key });
     });
-    return (0, m.jsxs)(
-        c.Fragment,
+    return (0, c.jsxs)(
+        m.Fragment,
         {
             children: [
                 null != s && null != u
@@ -87,7 +87,7 @@ let x = { results: { entries: [] } };
 function Y() {
     (0, p.openModalLazy)(async () => {
         let { default: e } = await n.e("52855").then(n.bind(n, 563478));
-        return (t) => (0, m.jsx)(e, { ...t });
+        return (t) => (0, c.jsx)(e, { ...t });
     });
 }
 let B = {
@@ -105,25 +105,25 @@ let B = {
             return 0 === u.length ? x : { results: { entries: u.map((e) => ({ command: e, section: o })) } };
         }
         let u = (0, N.Yn)(e, n),
-            { commands: o, sections: m } = A.eW(
+            { commands: o, sections: c } = A.eW(
                 { channel: e, type: "channel" },
                 { commandTypes: [r.kc.CHAT], text: u.text },
                 { limit: 20, placeholderCount: 3, scoreMethod: I.M.COMMAND_OR_APPLICATION, allowFetch: i },
             );
         if (null == o) return x;
-        let c = o;
+        let m = o;
         if (u.hasSpaceTerminator) {
             let e = u.text.trim(),
                 t = e + " ";
-            c = c.filter((n) => n.displayName === e || n.displayName.startsWith(t));
+            m = m.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
-        return 0 === c.length
+        return 0 === m.length
             ? x
             : {
                   results: {
-                      entries: c
+                      entries: m
                           .slice(0, 20)
-                          .map((e) => ({ command: e, section: m?.find((t) => t.id === e.applicationId) })),
+                          .map((e) => ({ command: e, section: c?.find((t) => t.id === e.applicationId) })),
                   },
               };
     },
@@ -138,7 +138,7 @@ let B = {
                 onClick: u,
             } = e,
             o = (0, N.Yn)(l, i),
-            c = r.commands === a.Ze.OLD_BUILT_INS;
+            m = r.commands === a.Ze.OLD_BUILT_INS;
         return _({
             query: o.text,
             selectedIndex: n,
@@ -148,14 +148,14 @@ let B = {
             titleWithQuery: D.t.HFRoZR,
             titleWithoutQuery: D.intl.string(D.t["0hKkS+"]),
             getQuery: (e) => `/${e}`,
-            Component: c ? S.Ay.Command : S.Ay.NewCommand,
+            Component: m ? S.Ay.Command : S.Ay.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return { key: t.id, command: t, channel: l, guildId: l.guild_id, showImage: !0, section: n };
             },
             key: "commands",
-            headerClassName: c ? k.Y : null,
-            headerTrailingContent: c && (0, m.jsx)(d.Q, { size: "xs", onClick: Y, text: D.intl.string(D.t["8a0P0y"]) }),
+            headerClassName: m ? k.Y : null,
+            headerTrailingContent: m && (0, c.jsx)(d.Q, { size: "xs", onClick: Y, text: D.intl.string(D.t["8a0P0y"]) }),
         });
     },
     onSelect(e) {
@@ -168,15 +168,15 @@ let B = {
                 location: s,
                 tabOrEnter: u,
             } = e,
-            { command: o, section: m } = t[n];
+            { command: o, section: c } = t[n];
         if (o.inputType === E.y$.PLACEHOLDER) return null;
         if (i.commands === a.Ze.OLD_BUILT_INS) {
-            var c;
-            i.insertText(((c = o), `/${c.displayName}`));
+            var m;
+            i.insertText(((m = o), `/${m.displayName}`));
         } else {
             let e = s;
             null == e && (e = u ? E.Oh.QUERY : E.Oh.DISCOVERY),
-                y.Gf({ channelId: r.id, command: o, section: m ?? null, location: e, queryLength: l?.length });
+                y.Gf({ channelId: r.id, command: o, section: c ?? null, location: e, queryLength: l?.length });
         }
         return { type: a.kc.COMMAND };
     },
@@ -185,15 +185,15 @@ var q = n(435558),
     v = n.n(q),
     H = n(537652),
     U = n(166862),
-    G = n(545152),
-    W = n(237116),
-    j = n(268949),
+    W = n(545152),
+    j = n(237116),
+    G = n(268949),
     P = n(911385);
 let Q = { results: { choices: [] } },
     b = { results: { choices: [], isLoading: !0 } },
     V = Array.from({ length: 5 }, () => ({ name: "", displayName: "", value: "" })),
     $ = { results: { choices: [], isError: !0 } },
-    w = v().debounce(G.A, R.$r, { leading: !0, trailing: !0 }),
+    w = v().debounce(W.A, R.$r, { leading: !0, trailing: !0 }),
     F = {
         stores: [M.A, U.A],
         showEmpty: !0,
@@ -223,7 +223,7 @@ let Q = { results: { choices: [] } },
                 return null == r ? b : { results: { choices: r } };
             }
             return {
-                results: W.Ay.queryChoiceResults({
+                results: j.Ay.queryChoiceResults({
                     query: n,
                     choices: s.type === r.n4.BOOLEAN ? R.Ss : (s.choices ?? []),
                 }),
@@ -238,7 +238,7 @@ let Q = { results: { choices: [] } },
                 onClick: u,
             } = e;
             return l
-                ? (0, m.jsx)(H.A, { message: D.intl.string(D.t.rTAbPn), noResultsImageURL: P, className: j.k })
+                ? (0, c.jsx)(H.A, { message: D.intl.string(D.t.rTAbPn), noResultsImageURL: P, className: G.k })
                 : 0 !== t.length || n
                   ? _({
                         query: r,
@@ -253,7 +253,7 @@ let Q = { results: { choices: [] } },
                         getQuery: (e) => e,
                         key: "choice",
                     })
-                  : (0, m.jsx)(H.A, { message: D.intl.string(D.t["41014u"]), noResultsImageURL: P, className: j.k });
+                  : (0, c.jsx)(H.A, { message: D.intl.string(D.t["41014u"]), noResultsImageURL: P, className: G.k });
         },
         onSelect(e) {
             let {
@@ -333,7 +333,7 @@ let Z = { results: { commandOptions: [] } },
                               indexOffset: s.length,
                           })
                         : null;
-            return (0, m.jsxs)(m.Fragment, { children: [o, a] });
+            return (0, c.jsxs)(c.Fragment, { children: [o, a] });
         },
         onSelect(e) {
             var t;
@@ -365,12 +365,12 @@ let ee = {
         } = e;
         if (0 === t.length) return null;
         let s = t.map((e, t) =>
-                (0, m.jsx)(S.Ay.Game, { onClick: r, onHover: i, selected: n === t, index: t, game: e }, e.id),
+                (0, c.jsx)(S.Ay.Game, { onClick: r, onHover: i, selected: n === t, index: t, game: e }, e.id),
             ),
             u = D.t["/U2VW+"],
             o = D.intl.string(D.t.URyqtP);
-        return (0, m.jsxs)(
-            c.Fragment,
+        return (0, c.jsxs)(
+            m.Fragment,
             { children: [O({ titleWithQuery: u, titleWithoutQuery: o, query: l, getQuery: et }), s] },
             "mentions",
         );
@@ -383,7 +383,6 @@ let ee = {
             } = e,
             i = t[n];
         return (
-            l.addMentionGame({ id: i.id, name: i.name, icon: i.icon }),
             l.replaceInlineInput("gameMentionInput", et(i.name), (0, L.KW)(i.id)),
             { type: a.kc.GAME_MENTION, metadata: { gameId: i.id } }
         );
@@ -401,8 +400,8 @@ var en = n(478437),
     eu = n(994500),
     eo = n(287809),
     ea = n(746080),
-    em = n(926972),
-    ec = n(937862),
+    ec = n(926972),
+    em = n(937862),
     ed = n(361670),
     ep = n(631576),
     ey = n(750385),
@@ -412,19 +411,19 @@ var en = n(478437),
     eI = n(652215),
     eM = n(638435);
 function eE(e, t) {
-    return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
+    return (0, c.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
 let eN = {
     sentinel: ":",
     stores: [ey.A],
     matches: (e, t, n, l, i) => n.length > 1,
     queryResults(e, t, n, l, i) {
-        let r = l.allowSoundmoji && (0, em.AA)({ location: "queryResults" }),
+        let r = l.allowSoundmoji && (0, ec.AA)({ location: "queryResults" }),
             s = l.allowStickers || r ? 0 : 40,
             u = eI.rs7 + s,
             {
                 emojis: { unlocked: o },
-            } = W.Ay.queryEmojiResults({ query: n, channel: e, intention: l.emojiIntention, maxCount: u });
+            } = j.Ay.queryEmojiResults({ query: n, channel: e, intention: l.emojiIntention, maxCount: u });
         "-" === n[0] &&
             (o = o.filter(function (e) {
                 return e.names?.includes(n);
@@ -432,20 +431,20 @@ let eN = {
         let a = [];
         if (l.allowStickers) {
             (0, ep.YB)();
-            let t = W.Ay.queryStickers([n], !0, [e, (e, t) => t === ed.Ux.SENDABLE]),
+            let t = j.Ay.queryStickers([n], !0, [e, (e, t) => t === ed.Ux.SENDABLE]),
                 l = Math.max(4, 8 - o.length);
             (a = t.slice(0, l)), "-" === n[0] && (a = t.filter((e) => e.sticker.name === n));
         }
-        let m = [];
+        let c = [];
         r &&
-            ((m = W.Ay.querySoundmoji(n, e)
+            ((c = j.Ay.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
                 .slice(0, 4)),
-            "-" === n[0] && (m = m.filter((e) => e.sound.name === n)));
-        let c = o.slice(0, Math.max(6, u - a.length - m.length));
+            "-" === n[0] && (c = c.filter((e) => e.sound.name === n)));
+        let m = o.slice(0, Math.max(6, u - a.length - c.length));
         return {
-            results: { emojis: c, stickers: a, soundmoji: m },
-            metadata: { numEmojiResults: c.length, numStickerResults: a.length, numSoundmojiResults: m.length },
+            results: { emojis: m, stickers: a, soundmoji: c },
+            metadata: { numEmojiResults: m.length, numStickerResults: a.length, numSoundmojiResults: c.length },
         };
     },
     renderResults(e) {
@@ -458,7 +457,7 @@ let eN = {
             } = e,
             o = t.length > 0,
             a = n.length > 0;
-        return (0, m.jsxs)(m.Fragment, {
+        return (0, c.jsxs)(c.Fragment, {
             children: [
                 _({
                     query: r,
@@ -478,7 +477,7 @@ let eN = {
                     getQuery: (e) => `:${e}`,
                     key: "emoji",
                 }),
-                o && a && (0, m.jsx)(S.Ay.Divider, { className: eM.y }),
+                o && a && (0, c.jsx)(S.Ay.Divider, { className: eM.y }),
                 _({
                     query: r,
                     selectedIndex: i,
@@ -502,7 +501,7 @@ let eN = {
                     indexOffset: t.length,
                     headerClassName: o ? eM._ : void 0,
                 }),
-                (o || a) && l.length > 0 && (0, m.jsx)(S.Ay.Divider, { className: eM.y }),
+                (o || a) && l.length > 0 && (0, c.jsx)(S.Ay.Divider, { className: eM.y }),
                 _({
                     query: r,
                     selectedIndex: i,
@@ -568,7 +567,7 @@ let eN = {
         if ((i -= l.length) < n.length) {
             let e = n[i];
             return (
-                r.insertText((0, ec.A)(e.sound.guildId, e.sound.soundId)),
+                r.insertText((0, em.A)(e.sound.guildId, e.sound.soundId)),
                 eA.default.track(eI.HAw.SOUNDMOJI_SELECT, {
                     channel_id: s.id,
                     guild_id: s.guild_id,
@@ -673,7 +672,7 @@ let eU = {
             } = e,
             { command: d, query: p } = eH(i, r, s);
         if (null == d || 0 === p.length) return null;
-        if (n) return (0, m.jsx)(eS.y, { className: eq.u1, type: eS.y.Type.SPINNING_CIRCLE });
+        if (n) return (0, c.jsx)(eS.y, { className: eq.u1, type: eS.y.Type.SPINNING_CIRCLE });
         if (null != t) {
             let e = !1,
                 n = t.map((t, n) => {
@@ -682,7 +681,7 @@ let eU = {
                         let r, s;
                         return (
                             (e = !0),
-                            (0, m.jsx)(
+                            (0, c.jsx)(
                                 S.Ay.GIFIntegration,
                                 {
                                     className: eq.ho,
@@ -710,12 +709,12 @@ let eU = {
                         : null != r
                           ? r
                           : d;
-            return (0, m.jsxs)(
-                c.Fragment,
+            return (0, c.jsxs)(
+                m.Fragment,
                 {
                     children: [
-                        (0, m.jsx)(S.Ay.Title, { title: y }),
-                        e ? (0, m.jsx)(eY.A, { className: eq.os, children: n }) : n,
+                        (0, c.jsx)(S.Ay.Title, { title: y }),
+                        e ? (0, c.jsx)(eY.A, { className: eq.os, children: n }) : n,
                     ],
                 },
                 "gifs",
@@ -760,10 +759,10 @@ let eU = {
         return { type: a.kc.GIF };
     },
 };
-var eG = n(562153);
-let eW = /^<@!?(\d+)>/u;
-function ej(e) {
-    let t = eW.exec(e);
+var eW = n(562153);
+let ej = /^<@!?(\d+)>/u;
+function eG(e) {
+    let t = ej.exec(e);
     if (null != t) {
         let n = t[1],
             l = eo.default.getUser(n);
@@ -778,12 +777,12 @@ let eP = {
     matches(e, t, n, l, i) {
         if (i.commands === a.Ze.DISABLED || i.commands === a.Ze.OLD_BUILT_INS || n.length < 2 || !X._3.getSetting())
             return !1;
-        let r = ej(n);
+        let r = eG(n);
         return null != r && r.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, l, i) {
         if (!X._3.getSetting()) return x;
-        let s = ej(n);
+        let s = eG(n);
         if (null == s) return x;
         let u = (0, N.Yn)(e, s.cleanedQuery),
             { commands: o, sections: a } = A.eW(
@@ -792,17 +791,17 @@ let eP = {
                 { limit: 20, placeholderCount: 3, scoreMethod: I.M.COMMAND_OR_APPLICATION, allowFetch: i },
             );
         if (null == o) return x;
-        let m = o.filter((e) => e.section.botId === s.user.id);
+        let c = o.filter((e) => e.section.botId === s.user.id);
         if (u.hasSpaceTerminator) {
             let e = u.text.trim(),
                 t = e + " ";
-            m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
+            c = c.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
-        return 0 === m.length
+        return 0 === c.length
             ? x
             : {
                   results: {
-                      entries: m
+                      entries: c
                           .slice(0, 20)
                           .map((e) => ({ command: e, section: a?.find((t) => t.id === e.applicationId) })),
                   },
@@ -833,9 +832,9 @@ let eP = {
                 return { key: t.id, command: t, channel: i, guildId: i.guild_id, showImage: !0, section: n };
             },
             getQuery: (e) => {
-                let t = ej(e),
-                    n = eG.Ay.getName(l?.id, i.id, t.user);
-                return e.replace(eW, `@${n}`);
+                let t = eG(e),
+                    n = eW.Ay.getName(l?.id, i.id, t.user);
+                return e.replace(ej, `@${n}`);
             },
             key: "commands",
         });
@@ -856,7 +855,7 @@ let eP = {
 };
 function eQ(e) {
     let { onClick: t, onHover: n, selected: l, index: i, text: r, description: s } = e;
-    return (0, m.jsx)(S.Ay.Generic, {
+    return (0, c.jsx)(S.Ay.Generic, {
         onClick: t,
         onHover: n,
         selected: l,
@@ -878,13 +877,13 @@ let e$ = {
             s = l.mentions.global === a.VN.ALLOW_EVERYONE_OR_HERE,
             u = l.mentions.user !== a.Vf.DENY,
             o = l.mentions.role !== a.eP.DENY,
-            m = l.mentions.user === a.Vf.ALLOW_GUILD,
-            c = l.mentions.role === a.eP.ALLOW_ALL,
+            c = l.mentions.user === a.Vf.ALLOW_GUILD,
+            m = l.mentions.role === a.eP.ALLOW_ALL,
             {
                 users: d,
                 globals: p,
                 roles: y,
-            } = W.Ay.queryMentionResults({
+            } = j.Ay.queryMentionResults({
                 query: n,
                 channel: e,
                 canMentionEveryone: r,
@@ -892,8 +891,8 @@ let e$ = {
                 canMentionUsers: u,
                 canMentionRoles: o,
                 canMentionOtherGlobals: l.mentions.otherGlobals,
-                includeAllGuildUsers: m,
-                includeNonMentionableRoles: c,
+                includeAllGuildUsers: c,
+                includeNonMentionableRoles: m,
                 request: i,
             });
         return { results: { users: d, globals: p, roles: y }, metadata: { gameMentionsAvailable: X.BQ.getSetting() } };
@@ -909,7 +908,7 @@ let e$ = {
                 onClick: d,
             } = e,
             p = t.map((e, t) =>
-                (0, m.jsx)(
+                (0, c.jsx)(
                     S.Ay.User,
                     {
                         guildId: r.guild_id,
@@ -935,11 +934,11 @@ let e$ = {
                     description: u.hideMentionDescription ? null : e.description,
                 };
                 return "gameMentionInput" === e.inlineAutocompleteType
-                    ? (0, c.createElement)(eQ, { ...l, key: e.text })
-                    : (0, c.createElement)(S.Ay.Generic, { ...l, key: e.text, "aria-label": e.text });
+                    ? (0, m.createElement)(eQ, { ...l, key: e.text })
+                    : (0, m.createElement)(S.Ay.Generic, { ...l, key: e.text, "aria-label": e.text });
             }),
             h = l.map((e, l) =>
-                (0, m.jsx)(
+                (0, c.jsx)(
                     S.Ay.Role,
                     {
                         onClick: d,
@@ -961,11 +960,11 @@ let e$ = {
                 ? (I = { titleWithQuery: D.t.pg0anB, titleWithoutQuery: D.intl.string(D.t["+1H47t"]) })
                 : (g || (0 === t.length && l.length > 0)) &&
                   (I = { titleWithQuery: D.t.MLiD1e, titleWithoutQuery: D.intl.string(D.t["LPJmL/"]) }),
-            (0, m.jsx)(
-                c.Fragment,
+            (0, c.jsx)(
+                m.Fragment,
                 {
                     children: A
-                        ? (0, m.jsxs)(m.Fragment, {
+                        ? (0, c.jsxs)(c.Fragment, {
                               children: [
                                   O({
                                       ...I,
@@ -975,9 +974,9 @@ let e$ = {
                                       },
                                   }),
                                   p,
-                                  n.length > 0 && t.length > 0 ? (0, m.jsx)(S.Ay.Divider, {}) : null,
+                                  n.length > 0 && t.length > 0 ? (0, c.jsx)(S.Ay.Divider, {}) : null,
                                   y,
-                                  l.length > 0 && (t.length > 0 || n.length > 0) ? (0, m.jsx)(S.Ay.Divider, {}) : null,
+                                  l.length > 0 && (t.length > 0 || n.length > 0) ? (0, c.jsx)(S.Ay.Divider, {}) : null,
                                   h,
                               ],
                           })
@@ -990,21 +989,21 @@ let e$ = {
     onSelect(e) {
         var t, n, l, i, r, s;
         let {
-                results: { users: u, globals: o, roles: m },
-                index: c,
+                results: { users: u, globals: o, roles: c },
+                index: m,
                 options: d,
                 channel: p,
             } = e,
-            y = u[c],
-            h = o[c - u.length],
-            g = m[c - u.length - o.length],
+            y = u[m],
+            h = o[m - u.length],
+            g = c[m - u.length - o.length],
             A = a.kc.MENTION;
         if (null != y) {
             d.insertText(
                 ((t = y.user),
                 (n = p),
                 (l = d.hidePersonalInformation),
-                W.Ay.hasSameRoleAsUsername(n, t)
+                j.Ay.hasSameRoleAsUsername(n, t)
                     ? `@${t.tag}`
                     : `@${eV.Ay.getUserTag(t, { identifiable: l ? "never" : "always" })}`),
                 ((i = y.user), `<@${i.id}>`),
@@ -1037,7 +1036,7 @@ let e$ = {
 var ew = n(307731);
 let eF = { results: { command: null, stickers: [] } };
 function eZ(e, t) {
-    return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
+    return (0, c.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
 let eK = {
     stores: [ey.A],
@@ -1055,7 +1054,7 @@ let eK = {
             {
                 results: {
                     command: i,
-                    stickers: (r = W.Ay.queryStickers([n], !0, [e, (e, t) => t === ed.Ux.SENDABLE]).slice(0, 8)),
+                    stickers: (r = j.Ay.queryStickers([n], !0, [e, (e, t) => t === ed.Ux.SENDABLE]).slice(0, 8)),
                 },
                 metadata: { numStickerResults: r.length },
             }
@@ -1069,7 +1068,7 @@ let eK = {
             onHover: i,
             onClick: r,
         } = e;
-        return (0, m.jsx)(m.Fragment, {
+        return (0, c.jsx)(c.Fragment, {
             children: _({
                 query: l,
                 selectedIndex: n,
@@ -1104,35 +1103,35 @@ let eK = {
                 queryText: o,
             } = e;
         if (null == n || i >= l.length) return { type: null };
-        let m = M.A.getActiveCommand(s.id);
-        m?.inputType === E.y$.BUILT_IN_INTEGRATION &&
+        let c = M.A.getActiveCommand(s.id);
+        c?.inputType === E.y$.BUILT_IN_INTEGRATION &&
             (ef.h.dispatch({
                 type: "APPLICATION_COMMAND_USED",
                 context: { channel: s, guild: u },
-                command: m,
+                command: c,
                 commandOrigin: E.iw.CHAT,
             }),
             ex.Ay.trackWithMetadata(eI.HAw.APPLICATION_COMMAND_USED, {
-                command_id: m.id,
-                application_id: m.applicationId,
-                command_type: m.type,
+                command_id: c.id,
+                application_id: c.applicationId,
+                command_type: c.type,
                 source: M.A.getSource(s.id),
             }));
-        let c = l[i];
+        let m = l[i];
         return (
-            r.sendSticker(c.sticker, eh.D6.BUILT_IN_INTEGRATION),
-            c.sticker.type === eh.NL.GUILD && (t = c.sticker.guild_id),
+            r.sendSticker(m.sticker, eh.D6.BUILT_IN_INTEGRATION),
+            m.sticker.type === eh.NL.GUILD && (t = m.sticker.guild_id),
             ex.Ay.trackWithMetadata(eI.HAw.SEARCH_RESULT_SELECTED, {
-                load_id: c.sticker.id,
+                load_id: m.sticker.id,
                 search_type: eI.I4_.STICKER,
                 source_object: `/${n}`,
                 total_results: l.length,
                 index_num: i,
                 expression_guild_id: t,
-                sticker_id: c.sticker.id,
+                sticker_id: m.sticker.id,
                 query: o,
             }),
-            { type: a.kc.STICKER, metadata: { numStickerResults: l.length, stickerId: c.sticker.id } }
+            { type: a.kc.STICKER, metadata: { numStickerResults: l.length, stickerId: m.sticker.id } }
         );
     },
 };
@@ -1217,14 +1216,14 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 return (
                     n.charAt(0) === el.AT.VOICE_CHANNEL && ((u = es.vM), (n = n.substring(1))),
                     l.forNonStringCommandOption
-                        ? (r = W.Ay.queryApplicationCommandChannelResults({
+                        ? (r = j.Ay.queryApplicationCommandChannelResults({
                               query: n,
                               channel: e,
                               channelTypes: l.allowedChannelTypes,
                           }))
-                        : ((r = W.Ay.queryChannelResults({ query: n, channel: e, type: u })),
+                        : ((r = j.Ay.queryChannelResults({ query: n, channel: e, type: u })),
                           null != t &&
-                              ((s = W.Ay.queryStaticRouteChannels({ query: n, guild: t })), r.channels.unshift(...s))),
+                              ((s = j.Ay.queryStaticRouteChannels({ query: n, guild: t })), r.channels.unshift(...s))),
                     { results: r, staticRouteChannels: s }
                 );
             },
@@ -1306,7 +1305,7 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 (i.chatInputType.autocomplete?.addReactionShortcut ?? !1) &&
                 (f.A.can(eI.xBc.ADD_REACTIONS, e) || e.isPrivate()),
             queryResults(e, t, n, l, i) {
-                let { emojis: r } = W.Ay.queryEmojiResults({
+                let { emojis: r } = j.Ay.queryEmojiResults({
                     query: n,
                     channel: e,
                     intention: ew.EmojiIntention.REACTION,
@@ -1396,9 +1395,9 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                             ? r.start.isCertain("day") || r.start.isCertain("month") || r.start.isCertain("year")
                             : a?.includes("D"),
                         i = s ? r.start.isCertain("year") : a?.includes("Y"),
-                        m = s ? r.start.isCertain("second") : a?.includes("s"),
-                        c = u.unix().toString(),
-                        d = m ? "S" : "s";
+                        c = s ? r.start.isCertain("second") : a?.includes("s"),
+                        m = u.unix().toString(),
+                        d = c ? "S" : "s";
                     n || t
                         ? t && !n
                             ? (e = {
@@ -1415,7 +1414,7 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                                   nextName: D.t.OppVVE,
                               })
                         : (o.push({
-                              mention: { timestamp: c, format: m ? "T" : "t" },
+                              mention: { timestamp: m, format: c ? "T" : "t" },
                               description: D.intl.string(D.t.yHv4oJ),
                           }),
                           o.push({}),
@@ -1452,10 +1451,10 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                         o.push({ mention: { timestamp: p, format: "F" } }),
                         o.push({ mention: { timestamp: p, format: "R" } }),
                         o.push({})),
-                        o.push({ mention: { timestamp: c, format: d }, description: h }),
-                        o.push({ mention: { timestamp: c, format: "f" } }),
-                        o.push({ mention: { timestamp: c, format: "F" } }),
-                        o.push({ mention: { timestamp: c, format: "R" } });
+                        o.push({ mention: { timestamp: m, format: d }, description: h }),
+                        o.push({ mention: { timestamp: m, format: "f" } }),
+                        o.push({ mention: { timestamp: m, format: "F" } }),
+                        o.push({ mention: { timestamp: m, format: "R" } });
                 }
                 return { results: { mentions: o } };
             },
@@ -1469,11 +1468,11 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                     } = e,
                     s = t.map((e, t) => {
                         let { mention: l, description: s } = e;
-                        if (void 0 === l) return (0, m.jsx)(S.Ay.Divider, {}, `divider-${t}`);
+                        if (void 0 === l) return (0, c.jsx)(S.Ay.Divider, {}, `divider-${t}`);
                         let u = (0, tn.WA)(l);
                         return null == u
                             ? null
-                            : (0, m.jsx)(
+                            : (0, c.jsx)(
                                   S.Ay.Timestamp,
                                   { onClick: r, onHover: i, selected: n === t, index: t, timestamp: u, description: s },
                                   `timestamp-${t}`,
@@ -1481,8 +1480,8 @@ let tl = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                     }),
                     u = D.t.I4nJDb,
                     o = D.intl.string(D.t.pUP8UM);
-                return (0, m.jsxs)(
-                    c.Fragment,
+                return (0, c.jsxs)(
+                    m.Fragment,
                     {
                         children: [
                             O({ titleWithQuery: u, titleWithoutQuery: o, query: l, getQuery: (e) => `${e}` }),
@@ -1515,8 +1514,8 @@ function tu(e) {
             canMentionRoles: l = !0,
             canMentionChannels: i = !0,
             canMentionEveryone: o,
-            canMentionOtherGlobals: m = !0,
-            useNewSlashCommands: c,
+            canMentionOtherGlobals: c = !0,
+            useNewSlashCommands: m,
             canOnlyUseTextCommands: d,
             canSendStickers: p,
             canSendSoundmoji: y,
@@ -1554,10 +1553,6 @@ function tu(e) {
             replaceInlineInput: (e, t, n) => {
                 M.current?.replaceInlineAutocompleteInput(e, t, n ?? t);
             },
-            addMentionGame: (e) => {
-                let t = M.current?.getSlateEditor?.();
-                null == t || t.mentionGames.has(e.id) || t.mentionGames.set(e.id, e);
-            },
             getCommandOptionValues: () => M.current?.getCommandOptionValues(),
         };
     if (null != t) {
@@ -1575,10 +1570,10 @@ function tu(e) {
             l && (f.mentions.role = a.eP.ALLOW_MENTIONABLE),
             n && (f.mentions.user = a.Vf.ALLOW_CHANNEL),
             o && (f.mentions.global = a.VN.ALLOW_EVERYONE_OR_HERE),
-            m && (f.mentions.otherGlobals = !0);
+            c && (f.mentions.otherGlobals = !0);
     return (
         A.commands?.enabled &&
-            (c ? (f.commands = d ? a.Ze.NEW_TEXT_ONLY : a.Ze.NEW) : (f.commands = a.Ze.OLD_BUILT_INS)),
+            (m ? (f.commands = d ? a.Ze.NEW_TEXT_ONLY : a.Ze.NEW) : (f.commands = a.Ze.OLD_BUILT_INS)),
         null != t && null != t.channelTypes && (f.allowedChannelTypes = t.channelTypes),
         f
     );
@@ -1600,15 +1595,15 @@ function ta(e) {
             currentWord: r,
             currentWordIsAtStart: s,
             textValue: u,
-            optionText: m,
-            parentAutocompleteInputType: c,
+            optionText: c,
+            parentAutocompleteInputType: m,
             parentAutocompleteInputValue: d,
         } = e,
         p = null;
     for (let e of tr) {
         let y = ts[e];
-        if (null != c) {
-            if (y.autocompleteInputElementType === c) {
+        if (null != m) {
+            if (y.autocompleteInputElementType === m) {
                 i()(null != d, "parentAutocompleteInputValue is null, but we're in an inline autocomplete object"),
                     (p = { type: e, typeInfo: y, query: d });
                 break;
@@ -1622,11 +1617,11 @@ function ta(e) {
                         p = { type: e, typeInfo: y, query: u };
                         break;
                     }
-                } else if (to({ type: e, channel: t, guild: n, query: m, isAtStart: !1, options: l }))
-                    return { type: e, typeInfo: y, query: m };
+                } else if (to({ type: e, channel: t, guild: n, query: c, isAtStart: !1, options: l }))
+                    return { type: e, typeInfo: y, query: c };
             } else if (e === a.DB.STICKERS) {
-                if (to({ type: e, channel: t, guild: n, query: m, isAtStart: !1, options: l }))
-                    return { type: e, typeInfo: y, query: m };
+                if (to({ type: e, channel: t, guild: n, query: c, isAtStart: !1, options: l }))
+                    return { type: e, typeInfo: y, query: c };
             } else if (e === a.DB.COMMANDS && l.commands !== a.Ze.OLD_BUILT_INS) {
                 if (to({ type: e, channel: t, guild: n, query: u, isAtStart: !0, options: l })) {
                     p = { type: e, typeInfo: y, query: u.substring(y.sentinel?.length ?? 0) };
@@ -1653,7 +1648,7 @@ function ta(e) {
     }
     return null == p ? null : ((p.query = p.query.toLocaleLowerCase()), p);
 }
-function tm(e, t) {
+function tc(e, t) {
     let n;
     if (null == t || null == e) return null;
     if (null != e.choices || e.autocomplete) n = a.DB.CHOICES;

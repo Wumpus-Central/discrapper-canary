@@ -14,8 +14,8 @@ let u = (0, t(945810).mj)({
 });
 var c = t(652215),
     h = t(375708),
-    m = t(779464);
-let p = s.lazy(() => Promise.all([t.e("7549"), t.e("27719"), t.e("38506"), t.e("72756")]).then(t.bind(t, 532255)));
+    p = t(779464);
+let m = s.lazy(() => Promise.all([t.e("7549"), t.e("27719"), t.e("38506"), t.e("72756")]).then(t.bind(t, 532255)));
 function f(e, n) {
     let {
             hideSimpleEmbedContent: f,
@@ -33,13 +33,13 @@ function f(e, n) {
             let { location: n } = e;
             return u.useConfig({ location: n });
         })({ location: "useMessageRenderedContent" }),
-        [G, I] = s.useState(!1),
-        S = s.useCallback((e) => {
-            e && I(!0);
+        [I, S] = s.useState(!1),
+        _ = s.useCallback((e) => {
+            e && S(!0);
         }, []);
     return (
         s.useEffect(() => {
-            I(!1);
+            S(!1);
         }, [e.content]),
         s.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -48,7 +48,7 @@ function f(e, n) {
                 return { content: (0, a.jsx)(l.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
             if (e.type === c.lAJ.CHANGELOG) {
                 let { renderChangelogMessageMarkup: n } = t(550997);
-                return n(e, m, {
+                return n(e, p, {
                     track: (e, n) => {
                         d.default.track(e, n);
                     },
@@ -64,12 +64,12 @@ function f(e, n) {
                                   viewingChannelId: y,
                                   guildId: (0, r.U)(e),
                                   authorId: e.author?.id,
-                                  setHasSpoilerEmbeds: S,
+                                  setHasSpoilerEmbeds: _,
                               },
-                              children: (0, a.jsx)(p, { content: e.content }),
+                              children: (0, a.jsx)(m, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: G,
+                      hasSpoilerEmbeds: I,
                       hasBailedAst: !1,
                   }
                 : (0, i.Ay)(e, {
@@ -90,7 +90,6 @@ function f(e, n) {
             e.customRenderedContent,
             e.embeds,
             e.interaction,
-            e.mentionGames,
             e.state,
             e.type,
             f,
@@ -104,7 +103,7 @@ function f(e, n) {
             y,
             E,
             j.enabled,
-            G,
+            I,
         ])
     );
 }

@@ -55,7 +55,6 @@ function E(e, t) {
         allowLinks: i || n.allowLinks,
         allowEmojiLinks: i,
         mentionChannels: e.mentionChannels,
-        mentionGames: e.mentionGames ?? new Map(),
         soundboardSounds: e.soundboardSounds ?? [],
     };
 }
@@ -78,7 +77,6 @@ function A(e) {
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
-        mentionGames: new Map(),
         soundboardSounds: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
@@ -206,7 +204,6 @@ function I(e, t) {
                 allowEmojiLinks: !1,
                 allowGameMentions: !1,
                 mentionChannels: [],
-                mentionGames: new Map(),
                 soundboardSounds: [],
                 formatInline: !0,
                 noStyleAndInteraction: !1,
@@ -228,31 +225,26 @@ function I(e, t) {
     })(e, t, n);
 }
 function f(e, t, n) {
-    var r;
-    return (
-        (r = i.A.parseAutoModerationSystemMessage),
-        r(
-            e,
-            !0,
-            {
-                allowLinks: !1,
-                allowDevLinks: !1,
-                allowEmojiLinks: !1,
-                allowGameMentions: !1,
-                mentionChannels: [],
-                mentionGames: new Map(),
-                soundboardSounds: [],
-                formatInline: !1,
-                noStyleAndInteraction: !1,
-                allowHeading: !1,
-                allowList: !1,
-                disableAutoBlockNewlines: !0,
-                highlightWord: t,
-                disableAnimatedEmoji: !1,
-                channelId: n,
-                muted: !1,
-            },
-            (e) => (Array.isArray(e) || (e = [e]), e),
-        )
+    return (0, i.A.parseAutoModerationSystemMessage)(
+        e,
+        !0,
+        {
+            allowLinks: !1,
+            allowDevLinks: !1,
+            allowEmojiLinks: !1,
+            allowGameMentions: !1,
+            mentionChannels: [],
+            soundboardSounds: [],
+            formatInline: !1,
+            noStyleAndInteraction: !1,
+            allowHeading: !1,
+            allowList: !1,
+            disableAutoBlockNewlines: !0,
+            highlightWord: t,
+            disableAnimatedEmoji: !1,
+            channelId: n,
+            muted: !1,
+        },
+        (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }

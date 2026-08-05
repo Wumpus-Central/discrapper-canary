@@ -29,12 +29,11 @@ function u(e) {
             boostingPrompt: g,
             state: S,
             mediaMention: N,
-            mentionGames: C,
         } = e,
-        O = [];
+        C = [];
     if (u === d.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == E || E.replied_user)) {
         let e = a.A.getMessageByReference(_);
-        e?.state === a.a.LOADED && O.push(c(e.message.author));
+        e?.state === a.a.LOADED && C.push(c(e.message.author));
     }
     return (
         null == A && (A = l.default.getCurrentUser()),
@@ -49,11 +48,10 @@ function u(e) {
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: O,
+            mentions: C,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
-            mention_games: C,
             timestamp: new Date().toISOString(),
             state: S ?? d.cmJ.SENDING,
             tts: i,

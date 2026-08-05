@@ -212,12 +212,9 @@ function S(e, t, n, i) {
             case "timestamp":
                 _ = { type: "timestamp", parsed: E.data, children: [{ text: "" }] };
                 break;
-            case "gameMention": {
-                let t = E.data.id,
-                    n = e.mentionGames.get(t);
-                _ = { type: "gameMention", gameId: t, gameName: n?.name, gameIcon: n?.icon, children: [{ text: "" }] };
+            case "gameMention":
+                _ = { type: "gameMention", gameId: E.data.id, children: [{ text: "" }] };
                 break;
-            }
             case "timestampMentionInput":
                 _ = { type: "timestampMentionInput", children: [{ text: E.data.content }] };
                 break;
