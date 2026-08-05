@@ -21,11 +21,11 @@ var n = i(477900),
     E = i(61881),
     S = i(435558),
     C = i.n(S),
-    b = i(196765),
-    N = i(540185),
+    N = i(196765),
+    b = i(540185),
     w = i(282435);
 let T = (0, S.sampleSize)(w.sx, w.sx.length),
-    k = (0, b.v)((e, t) => ({
+    k = (0, N.v)((e, t) => ({
         stack: [],
         wishlistStack: [],
         gameIds: {},
@@ -36,7 +36,7 @@ let T = (0, S.sampleSize)(w.sx, w.sx.length),
                 stack: [...i.filter((e) => !s.has(e)), ...T],
                 wishlistStack: [...n.filter((e) => !s.has(e)), ...T],
             }),
-            Object.values(N.x)))
+            Object.values(b.x)))
                 t().setNext(6, l);
         },
         setNext: (e, i) => {
@@ -46,12 +46,12 @@ let T = (0, S.sampleSize)(w.sx, w.sx.length),
             t()._setPeekedGameIds(i, l);
         },
         getNext: (e, i) => {
-            let n = i === N.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack,
+            let n = i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack,
                 l = n.slice(0, e),
                 s = n.slice(e);
             return t()._setStack(i, s), l;
         },
-        peekNext: (e, i) => (i === N.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).slice(0, e),
+        peekNext: (e, i) => (i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).slice(0, e),
         bump: (e, i) => {
             let n = t().gameIds[i] ?? [],
                 l = n.indexOf(e);
@@ -69,14 +69,14 @@ let T = (0, S.sampleSize)(w.sx, w.sx.length),
             t()._setGameIds(i, [...n, ...l]), t()._setPeekedGameIds(i, [...s, ...l]);
         },
         remove: (e, i) => {
-            let n = (i === N.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
+            let n = (i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
             t()._setStack(i, n), t()._setPeekedGameIds(i, t().peekNext(7, i));
         },
         _setGameIds: (t, i) => {
             e((e) => ({ gameIds: { ...e.gameIds, [t]: i } }));
         },
         _setStack: (t, i) => {
-            t === N.x.WANT_TO_PLAY_GAMES ? e({ wishlistStack: i }) : e({ stack: i });
+            t === b.x.WANT_TO_PLAY_GAMES ? e({ wishlistStack: i }) : e({ stack: i });
         },
         _setPeekedGameIds: (t, i) => {
             e((e) => ({ peekedGameIds: { ...e.peekedGameIds, [t]: i } }));
@@ -204,7 +204,7 @@ function er(e) {
                 disableMarkdown: e.disableMarkdown,
             });
 }
-var ea = i(103310),
+var ea = i(326009),
     eo = i(372638),
     ed = i(231088),
     ec = i(458710);
@@ -576,11 +576,11 @@ function eC(e) {
         ? null
         : (0, n.jsx)("div", { className: eA.kL, children: d });
 }
-var eb = i(396395);
-function eN(e) {
+var eN = i(396395);
+function eb(e) {
     let { widget: t, canEdit: i } = e;
     return (0, n.jsxs)("div", {
-        className: eb.wx,
+        className: eN.wx,
         children: [
             (0, n.jsx)(P.t, { size: "xs" }),
             (0, n.jsx)(er, {
@@ -588,7 +588,7 @@ function eN(e) {
                 variant: "text-sm/medium",
                 color: "text-default",
                 value: t.header,
-                placeholder: ef.intl.string(ef.t.AVkYMx),
+                placeholder: ef.intl.string(ef.t.fjSaAm),
                 onCommit: function (e) {
                     (0, G.AD)((t) => new I.Tu({ ...t, header: e }));
                 },
@@ -618,11 +618,12 @@ function eT(e) {
         disableInteraction: r,
         index: a,
         trailingContent: o,
-        headerClassName: eb.JE,
+        className: eN.Nr,
+        headerClassName: eN.JE,
         children: (0, n.jsxs)("div", {
-            className: eb.kL,
+            className: eN.kL,
             children: [
-                (0, n.jsx)(eN, { widget: t, canEdit: d }),
+                (0, n.jsx)(eb, { widget: t, canEdit: d }),
                 d && !c ? (0, n.jsx)(ep, {}) : null,
                 t.sections.map((e, t) => (0, n.jsx)(ew, { userId: i.id, section: e, sectionIndex: t, canEdit: d }, t)),
             ],
@@ -715,7 +716,7 @@ var eB = i(663341),
     eq = i(693117),
     eZ = i(195880),
     eJ = i(696016);
-let eQ = (0, b.v)(() => ({ localClips: new Map() }));
+let eQ = (0, N.v)(() => ({ localClips: new Map() }));
 function e$(e, t) {
     eQ.setState((i) => ({ localClips: new Map(i.localClips).set(e, t) }));
 }
@@ -780,7 +781,7 @@ function e8(e) {
                     (0, G.mC)(t),
                         null != i && e0(i),
                         ez.O.announce(ef.intl.string(ef.t.zyPNb3)),
-                        s({ action: "CLIP_REMOVED", widgetEdited: N.x.CLIPS_GALLERY });
+                        s({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY });
                 },
             }),
         }),
@@ -1252,7 +1253,7 @@ function tC(e) {
             }),
     });
 }
-function tb(e) {
+function tN(e) {
     let t = l.useRef(null);
     return (0, n.jsx)(tS, {
         targetElementRef: t,
@@ -1269,7 +1270,7 @@ function tb(e) {
             }),
     });
 }
-let tN = l.createContext(null);
+let tb = l.createContext(null);
 function tw(e) {
     let { widgetType: t, children: i } = e,
         s = (0, a.bG)([E.A], () => {
@@ -1281,10 +1282,10 @@ function tw(e) {
             return i.games.length > n;
         }),
         [r, o] = l.useState(s);
-    return (0, n.jsx)(tN.Provider, { value: { expanded: r, setExpanded: o }, children: i });
+    return (0, n.jsx)(tb.Provider, { value: { expanded: r, setExpanded: o }, children: i });
 }
 function tT() {
-    let e = l.useContext(tN);
+    let e = l.useContext(tb);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
@@ -1298,7 +1299,7 @@ function ty(e) {
     return (0, n.jsxs)("div", {
         className: l ? tk.O : tk.k,
         children: [
-            l && (0, n.jsx)(tb, { widget: t, widgetType: t.type }),
+            l && (0, n.jsx)(tN, { widget: t, widgetType: t.type }),
             (0, n.jsx)(d.E, { variant: "text-xs/normal", color: "text-subtle", children: s }),
         ],
     });
@@ -1674,13 +1675,13 @@ var ie = i(344287);
 function it(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
-        case N.x.FAVORITE_GAMES:
+        case b.x.FAVORITE_GAMES:
             return (0, n.jsx)(tV, { widget: t, ...i });
-        case N.x.CURRENT_GAMES:
+        case b.x.CURRENT_GAMES:
             return (0, n.jsx)(tW, { widget: t, ...i });
-        case N.x.WANT_TO_PLAY_GAMES:
+        case b.x.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(t2, { widget: t, ...i });
-        case N.x.PLAYED_GAMES:
+        case b.x.PLAYED_GAMES:
             return (0, n.jsx)(t8, { widget: t, ...i });
         default:
             return null;

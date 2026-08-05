@@ -135,8 +135,7 @@
     margin-bottom: calc(var(--space-4)*-1);
     margin-top: calc(var(--space-4)*-1);
     margin-inline-end: calc(var(--space-4)*-1);
-    -o-object-fit: cover;
-    object-fit: cover;
+    overflow: hidden;
     width: 100px
 }
 
@@ -155,8 +154,7 @@
 .fieldsImage__4d7f8 {
     border-radius: var(--radius-xs);
     height: 24px;
-    -o-object-fit: cover;
-    object-fit: cover;
+    overflow: hidden;
     width: 24px
 }
 

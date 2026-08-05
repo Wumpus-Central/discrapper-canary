@@ -1,48 +1,49 @@
 "use strict";
-n.d(t, { K: () => o, Tu: () => m, g0: () => _, wv: () => f, yL: () => u }), n(321073);
+n.d(t, { K: () => d, Tu: () => g, g0: () => E, wv: () => p, yL: () => _ }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
     s = n(540185),
-    l = n(403362);
-function o() {
+    l = n(403362),
+    o = n(375708);
+function d() {
     return { type: a.K.COVER, title: "", subtitle: "" };
 }
-let d = 0;
-function c() {
-    return `field-${d++}`;
-}
+let c = 0;
 function u() {
-    return { key: c(), title: "", description: "" };
+    return `field-${c++}`;
 }
 function _() {
-    return new m({ sections: [o(), { type: a.K.FIELDS, fields: [u()] }] });
+    return { key: u(), title: "", description: "" };
 }
-function E(e) {
-    return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
+function E() {
+    return new g({ header: o.intl.string(o.t.QxKl9A), sections: [d(), { type: a.K.FIELDS, fields: [_()] }] });
 }
 function A(e) {
+    return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
+}
+function h(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
         case a.K.FIELDS:
-            return e.fields.every(E);
+            return e.fields.every(A);
     }
 }
-function h(e) {
+function I(e) {
     if (null != e && "file_id" in e) return { fileId: e.file_id, width: e.width, height: e.height };
 }
-function I(e) {
-    let t = h(e.image);
+function f(e) {
+    let t = I(e.image);
     return {
-        key: c(),
+        key: u(),
         title: e.title ?? "",
         description: e.description ?? "",
         image: t,
         hideImage: null == t || void 0,
     };
 }
-function f(e) {
+function p(e) {
     var t;
     let n =
         null == (t = e)
@@ -55,10 +56,10 @@ function f(e) {
                                   type: e.type,
                                   title: e.title ?? "",
                                   subtitle: e.subtitle ?? "",
-                                  image: h(e.image),
+                                  image: I(e.image),
                               };
                           case a.K.FIELDS:
-                              return { type: e.type, fields: e.fields.map(I) };
+                              return { type: e.type, fields: e.fields.map(f) };
                           default:
                               return;
                       }
@@ -66,25 +67,25 @@ function f(e) {
                   .filter(l.Vq);
     return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
 }
-function p(e) {
+function T(e) {
     if (null != e)
         return "localDataUri" in e ? { filename: e.filename } : { file_id: e.fileId, width: e.width, height: e.height };
 }
-function T(e) {
+function m(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: p(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: T(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
-                .filter((e) => !E(e))
-                .map((e) => ({ title: e.title, description: e.description, image: p(e.image) }));
+                .filter((e) => !A(e))
+                .map((e) => ({ title: e.title, description: e.description, image: T(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
             return e;
     }
 }
-class m {
+class g {
     id;
     type;
     header;
@@ -99,21 +100,21 @@ class m {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !A(e))
-                    .map(T)
+                    .filter((e) => !h(e))
+                    .map(m)
                     .filter(l.Vq),
             },
         };
     }
     isDiscardable() {
-        return "" === this.header.trim() && this.sections.every(A);
+        return this.sections.every(h);
     }
     isValid() {
-        return this.sections.some((e) => !A(e));
+        return this.sections.some((e) => !h(e));
     }
     isEqual(e) {
         return (
-            e instanceof m &&
+            e instanceof g &&
             this.header === e.header &&
             (function (e, t) {
                 if (e.length !== t.length) return !1;

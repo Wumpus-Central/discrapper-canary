@@ -22,9 +22,16 @@ var p = n(375708),
     T = n(902391);
 function m(e) {
     let { className: t, userId: n, image: r } = e;
-    if ("localDataUri" in r) return (0, i.jsx)("img", { className: t, alt: "", src: r.localDataUri });
+    if ("localDataUri" in r)
+        return (0, i.jsx)("div", {
+            className: t,
+            children: (0, i.jsx)("img", { className: T.Sl, alt: "", src: r.localDataUri }),
+        });
     let a = f(n, r.fileId);
-    return (0, i.jsx)("img", { className: t, alt: "", src: a, width: r.width, height: r.height });
+    return (0, i.jsx)("div", {
+        className: t,
+        children: (0, i.jsx)("img", { className: T.Sl, alt: "", src: a, width: r.width, height: r.height }),
+    });
 }
 function g(e) {
     let { canEdit: t } = e;
@@ -82,20 +89,20 @@ function N(e) {
         canEdit: n,
         userId: r,
         image: a,
-        previewUri: l,
-        onImageUploadStarted: o,
-        onImageUploadCompleted: d,
+        previewUri: s,
+        onImageUploadStarted: l,
+        onImageUploadCompleted: o,
     } = e;
     return n
         ? (0, i.jsx)(S, {
               className: t,
               userId: r,
               image: a,
-              previewUri: l,
-              onImageUploadStarted: o,
-              onImageUploadCompleted: d,
+              previewUri: s,
+              onImageUploadStarted: l,
+              onImageUploadCompleted: o,
           })
         : null == a
           ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)(g, { canEdit: !1 }) })
-          : (0, i.jsx)(m, { className: s()(T.Sl, t), userId: r, image: a });
+          : (0, i.jsx)(m, { className: t, userId: r, image: a });
 }
