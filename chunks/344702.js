@@ -31,7 +31,7 @@ let T = (0, S.sampleSize)(w.sx, w.sx.length),
         gameIds: {},
         peekedGameIds: {},
         onLoad: (i, n, l) => {
-            let s = new Set(l.map((e) => e.applicationId));
+            let s = new Set(l.map((e) => e.gameId));
             for (let l of (e({
                 stack: [...i.filter((e) => !s.has(e)), ...T],
                 wishlistStack: [...n.filter((e) => !s.has(e)), ...T],
@@ -117,7 +117,7 @@ function y(e) {
         });
         t.length > 0 && i(t, e);
     }, [s, e, i, o]);
-    let d = l.useMemo(() => s.map((e) => ({ applicationId: e })), [s]);
+    let d = l.useMemo(() => s.map((e) => ({ gameId: e })), [s]);
     return { applicationIds: s, games: d, onAddGame: r };
 }
 var R = i(600761),
@@ -1130,7 +1130,7 @@ var tm = i(128988),
     tE = i(250573);
 function tS(e) {
     let { widgetType: t, widget: i, onAddGame: s, children: r, ...a } = e,
-        o = l.useMemo(() => new Set(i.games.map((e) => e.applicationId)), [i.games]),
+        o = l.useMemo(() => new Set(i.games.map((e) => e.gameId)), [i.games]),
         { trackUserProfileEditAction: d } = (0, eO.NJ)(),
         [c, u] = l.useState(""),
         g = l.useRef(""),
@@ -1140,7 +1140,7 @@ function tS(e) {
         I = (0, tv.A)(h),
         j = l.useCallback(
             (e) => {
-                (0, G.ew)({ widgetType: t, game: { applicationId: e } }),
+                (0, G.ew)({ widgetType: t, game: { gameId: e } }),
                     ez.O.announce(ef.intl.string(ef.t.q0U3DE)),
                     d({ action: "GAME_ADDED", gameId: e, widgetEdited: t }),
                     h.includes(e) && p(e),
@@ -1350,12 +1350,12 @@ function tU(e) {
                         user: i,
                         game: e,
                         widgetType: l,
-                        coverRef: r(e.applicationId),
+                        coverRef: r(e.gameId),
                         onRemoveGame: a,
                         ...s,
                     }),
                 },
-                e.applicationId,
+                e.gameId,
             ),
         ),
     });
@@ -1432,7 +1432,7 @@ function tB(e) {
     let { games: t, renderGame: i } = e;
     return (0, n.jsx)("ul", {
         className: tH.V,
-        children: t.map((e, t) => (0, n.jsx)("li", { children: i(e, t) }, e.applicationId)),
+        children: t.map((e, t) => (0, n.jsx)("li", { children: i(e, t) }, e.gameId)),
     });
 }
 var tz = i(686246),
@@ -1448,13 +1448,13 @@ function tQ(e) {
         c = l.useRef(null);
     return (0, n.jsx)(tK.mG, {
         index: t,
-        itemId: s.applicationId,
+        itemId: s.gameId,
         listType: i,
         itemType: "GAME_COVER",
         itemPreviewProps: { imageSrc: r, gameName: a, getWidth: () => c.current?.offsetWidth },
         "aria-label": ef.intl.formatToPlainString(ef.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, G.Un)(i, e, t),
-        onEnd: () => d(s.applicationId),
+        onEnd: () => d(s.gameId),
         className: tJ.kL,
         dropBeforeClassName: tJ.A,
         dropAfterClassName: tJ.Ze,
@@ -1473,7 +1473,7 @@ function t$(e) {
             onRemoveGame: o,
             coverRef: d,
         } = e,
-        { coverImageUrl: c, gameName: u, isLoading: g } = (0, tX.A)(t.applicationId),
+        { coverImageUrl: c, gameName: u, isLoading: g } = (0, tX.A)(t.gameId),
         { registerDragHandleRef: m } = (0, tR.r)(),
         x = s && !r,
         { isDragging: f } = (0, tz.V)((e) => ({ isDragging: e.isDragging() }));
@@ -1483,21 +1483,15 @@ function t$(e) {
                 (0, n.jsx)(tY.A, {
                     imageSrc: c,
                     gameName: u,
-                    applicationId: t.applicationId,
+                    gameId: t.gameId,
                     userId: i,
                     disableInteraction: r,
                     className: null == c || r ? void 0 : tZ.iL,
                     hideTooltip: f,
                     coverRef: d,
                 }),
-                x && (0, n.jsx)(tK.jV, { buttonRef: m(t.applicationId), className: tJ.BU }),
-                x &&
-                    (0, n.jsx)(tq.A, {
-                        game: t,
-                        widgetType: l,
-                        className: tJ.vS,
-                        onRemove: () => o?.(t.applicationId),
-                    }),
+                x && (0, n.jsx)(tK.jV, { buttonRef: m(t.gameId), className: tJ.BU }),
+                x && (0, n.jsx)(tq.A, { game: t, widgetType: l, className: tJ.vS, onRemove: () => o?.(t.gameId) }),
             ],
         });
     }
@@ -1520,7 +1514,7 @@ function t0(e) {
                 widgetType: l,
                 allowEditing: s,
                 disableInteraction: r,
-                coverRef: a(e.applicationId),
+                coverRef: a(e.gameId),
                 onRemoveGame: o,
             }),
     });
@@ -1595,7 +1589,7 @@ var t7 = i(297264),
     t5 = i(915089),
     t6 = i(30061);
 function t3(e) {
-    let { applicationId: t, userId: i, onClick: l } = e,
+    let { gameId: t, userId: i, onClick: l } = e,
         { coverImageUrl: s, gameName: r, isLoading: o } = (0, tX.A)(t),
         d = (0, a.bG)([E.A], () => E.A.suggestedFetchIsLoading),
         c = ef.intl.formatToPlainString(ef.t["3mb1s5"], { game: r });
@@ -1613,7 +1607,7 @@ function t3(e) {
                           className: t6.Iv,
                           imageSrc: s,
                           gameName: r,
-                          applicationId: t,
+                          gameId: t,
                           userId: i,
                           disableInteraction: !0,
                       }),
@@ -1649,10 +1643,10 @@ function t9(e) {
             (0, n.jsx)("ul", {
                 className: t6.Vg,
                 children: i.map((e) => {
-                    let { applicationId: i } = e;
+                    let { gameId: i } = e;
                     return (0, n.jsx)(
                         "li",
-                        { children: (0, n.jsx)(t3, { onClick: () => s(i), userId: t, applicationId: i }) },
+                        { children: (0, n.jsx)(t3, { onClick: () => s(i), userId: t, gameId: i }) },
                         i,
                     );
                 }),
@@ -1669,7 +1663,7 @@ function t4(e) {
             (e) => {
                 r(e),
                     a(!0),
-                    (0, G.ew)({ widgetType: t, game: { applicationId: e } }),
+                    (0, G.ew)({ widgetType: t, game: { gameId: e } }),
                     o({ action: "GAME_ADDED", gameId: e, widgetEdited: t });
             },
             [r, t, o, a],

@@ -209,7 +209,7 @@ function q(e) {
                     a
                         .map((e) =>
                             e instanceof p.Yy
-                                ? e.games.map((e) => e.applicationId)
+                                ? e.games.map((e) => e.gameId)
                                 : e instanceof f.R
                                   ? d[e.applicationId]
                                   : void 0,

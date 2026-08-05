@@ -37,7 +37,7 @@ var i = n(477900),
     x = n(141639),
     k = n(61330),
     F = n(544441),
-    V = n(737393),
+    V = n(146779),
     B = n(540185),
     H = n(569926),
     j = n(289173),
@@ -60,9 +60,7 @@ function Z(e) {
                     null == o ||
                     l?.widgets?.some(
                         (e) =>
-                            e instanceof j.Yy &&
-                            e.type === B.x.CURRENT_GAMES &&
-                            e.games?.some((e) => e.applicationId === o),
+                            e instanceof j.Yy && e.type === B.x.CURRENT_GAMES && e.games?.some((e) => e.gameId === o),
                     )
                 ) && (0, W.XX)(d),
             [o, l?.widgets, d],
@@ -72,7 +70,7 @@ function Z(e) {
                 null != o &&
                     (e.stopPropagation(),
                     n?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, W.ew)({ widgetType: B.x.CURRENT_GAMES, game: { applicationId: o }, ignoreMaxGames: !0 }),
+                    (0, W.ew)({ widgetType: B.x.CURRENT_GAMES, game: { gameId: o }, ignoreMaxGames: !0 }),
                     (0, v.openUserProfileModal)({
                         userId: s,
                         tabSection: z.RP.WIDGETS,

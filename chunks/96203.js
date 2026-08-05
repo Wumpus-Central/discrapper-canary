@@ -21,7 +21,7 @@ function u(e) {
             for (let t of n?.widgets ?? [])
                 if (t instanceof l.Yy)
                     t.games.forEach((t) => {
-                        let n = d.A.getApplicationIdFromDetectableId(t.applicationId);
+                        let n = d.A.getApplicationIdFromDetectableId(t.gameId);
                         null != n && e.add(n);
                     });
                 else if (t instanceof s.R) {

@@ -52,7 +52,7 @@ function x(e) {
                                       className: m.XJ,
                                       imageSrc: e,
                                       gameName: l,
-                                      applicationId: i,
+                                      gameId: i,
                                       userId: t?.id,
                                       disableInteraction: !0,
                                   }),

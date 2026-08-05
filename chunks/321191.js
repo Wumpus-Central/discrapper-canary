@@ -19,7 +19,7 @@ var i = n(435558),
     T = n(633075),
     m = n(646976),
     g = n(289173),
-    S = n(590630);
+    S = n(210598);
 function N(e) {
     let t, n;
     if (e?.collectibles == null) return { collectibles: void 0, profileEffect: void 0, profileFrame: void 0 };
@@ -59,8 +59,8 @@ function x(e) {
         case s.x.FAVORITE_GAMES:
         case s.x.PLAYED_GAMES:
         case s.x.WANT_TO_PLAY_GAMES:
-            let n = e.data.games.map((e) => ({ applicationId: e.game_id, comment: e.comment, tags: e.tags })),
-                i = r().uniqBy(n, "applicationId");
+            let n = e.data.games.map((e) => ({ gameId: e.game_id, comment: e.comment, tags: e.tags })),
+                i = r().uniqBy(n, "gameId");
             return new g.Yy({ id: e.id, type: t, games: i });
         case s.x.APPLICATION:
             return new T.R({ id: e.id, applicationId: e.data.application_id });

@@ -1,8 +1,8 @@
 i.d(t, { A: () => u });
 var n = i(477900);
 i(582128);
-var s = i(765178),
-    l = i(866665),
+var l = i(765178),
+    s = i(866665),
     r = i(408278),
     a = i(241326),
     o = i(183555),
@@ -14,7 +14,7 @@ function u(e) {
         x = c.intl.string(c.t.HUvyDc);
     return (0, n.jsx)("div", {
         className: u,
-        children: (0, n.jsx)(l.m, {
+        children: (0, n.jsx)(s.m, {
             text: x,
             ariaHidden: !0,
             children: (0, n.jsx)(r.K, {
@@ -23,9 +23,9 @@ function u(e) {
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    (0, d.ef)(i, t.applicationId),
-                        s.O.announce(c.intl.string(c.t["08HmMj"])),
-                        m({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: i }),
+                    (0, d.ef)(i, t.gameId),
+                        l.O.announce(c.intl.string(c.t["08HmMj"])),
+                        m({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: i }),
                         g?.();
                 },
             }),

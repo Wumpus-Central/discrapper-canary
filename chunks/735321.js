@@ -111,17 +111,17 @@ function b(e, t, n) {
     if (n.length > i) return;
     let a = N(e);
     if (null == a) return;
-    let s = a.games.find((e) => e.applicationId === t);
+    let s = a.games.find((e) => e.gameId === t);
     if (null == s) return;
     let l = { ...s, tags: n },
-        o = a.games.map((e) => (e.applicationId === t ? l : e)),
+        o = a.games.map((e) => (e.gameId === t ? l : e)),
         c = C(new d.Yy({ ...a, games: o }));
     _.A.setPendingWidgets(c);
 }
 function M(e, t, n) {
     let i = N(e);
     if (null == i) return;
-    let r = i.games.find((e) => e.applicationId === t);
+    let r = i.games.find((e) => e.gameId === t);
     if (null == r || null == r.tags || 0 === r.tags.length) return;
     let a = r.tags.filter((e) => e !== n);
     b(i.type, t, a.length > 0 ? a : []);
@@ -129,10 +129,10 @@ function M(e, t, n) {
 function P(e, t, n) {
     let i = N(e);
     if (null == i) return;
-    let r = i.games.find((e) => e.applicationId === t);
+    let r = i.games.find((e) => e.gameId === t);
     if (null == r || n === r.comment) return;
     let a = { ...r, comment: n },
-        s = i.games.map((e) => (e.applicationId === t ? a : e)),
+        s = i.games.map((e) => (e.gameId === t ? a : e)),
         l = C(new d.Yy({ ...i, games: s }));
     _.A.setPendingWidgets(l);
 }
@@ -143,12 +143,12 @@ function U(e) {
         l = m(n);
     if (null != a) {
         let e = a.games?.length ?? 0;
-        if ((!r && e >= l) || (a.games ?? []).some((e) => e.applicationId === i.applicationId)) return;
+        if ((!r && e >= l) || (a.games ?? []).some((e) => e.gameId === i.gameId)) return;
     }
-    let o = { applicationId: i.applicationId, comment: i.comment, tags: i.tags };
+    let o = { gameId: i.gameId, comment: i.comment, tags: i.tags };
     t = null != a ? [o, ...(a.games ?? [])] : [o];
     let c = C(new d.Yy({ ...(a ?? { type: n }), games: t }));
-    _.A.setPendingWidgets(c), s.I.fetchMany([i.applicationId]);
+    _.A.setPendingWidgets(c), s.I.fetchMany([i.gameId]);
 }
 function w(e, t) {
     if (e === t) return;
@@ -171,7 +171,7 @@ function G(e, t, n) {
 function x(e, t) {
     let n = N(e);
     if (null == n) return;
-    let i = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
+    let i = (null != n.games ? n.games : []).filter((e) => e.gameId !== t),
         r = C(new d.Yy({ ...n, games: i }));
     _.A.setPendingWidgets(r);
 }
@@ -187,7 +187,7 @@ function V(e, t, n) {
         e.length === t.length &&
         e.every((e, i) =>
             (function (e, t, n) {
-                if (e.applicationId !== t.applicationId || (p(n) && F(e.comment) !== F(t.comment))) return !1;
+                if (e.gameId !== t.gameId || (p(n) && F(e.comment) !== F(t.comment))) return !1;
                 if (T(n)) {
                     let n = F(e.tags),
                         i = F(t.tags);

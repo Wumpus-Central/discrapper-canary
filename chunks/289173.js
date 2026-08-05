@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { Yy: () => u, fu: () => l, hL: () => o });
+n.d(t, { Yy: () => d, fu: () => o, hL: () => l });
 var i = n(926675),
     r = n(540185),
-    s = n(735321);
-let a = [r.x.CURRENT_GAMES, r.x.FAVORITE_GAMES, r.x.WANT_TO_PLAY_GAMES, r.x.PLAYED_GAMES];
-function o(e) {
-    return a.includes(e);
-}
+    a = n(735321);
+let s = [r.x.CURRENT_GAMES, r.x.FAVORITE_GAMES, r.x.WANT_TO_PLAY_GAMES, r.x.PLAYED_GAMES];
 function l(e) {
-    return e instanceof u;
+    return s.includes(e);
 }
-class u {
+function o(e) {
+    return e instanceof d;
+}
+class d {
     id;
     type;
     games;
@@ -23,7 +23,7 @@ class u {
             data: {
                 type: this.type,
                 games: this.games.map(function (e) {
-                    return { game_id: e.applicationId, comment: e.comment, tags: e.tags };
+                    return { game_id: e.gameId, comment: e.comment, tags: e.tags };
                 }),
             },
         };
@@ -35,7 +35,7 @@ class u {
         return this.games.length > 0 && this.games.length <= i.u[this.type];
     }
     isEqual(e) {
-        return e instanceof u && e.type === this.type && (0, s.g1)(this.games, e.games, this.type);
+        return e instanceof d && e.type === this.type && (0, a.g1)(this.games, e.games, this.type);
     }
     getUniqueKey() {
         return this.type;

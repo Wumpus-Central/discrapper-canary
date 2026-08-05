@@ -1255,14 +1255,13 @@ function t1(e) {
                             (await t0((i) => {
                                 let a = i.filter(tX.fu).find((t) => t.type === e) ?? null;
                                 if (n) {
-                                    if (a?.games.some((e) => e.applicationId === t) || (null != a && (0, t$.uA)(a)))
-                                        return i;
-                                    let n = { applicationId: t },
+                                    if (a?.games.some((e) => e.gameId === t) || (null != a && (0, t$.uA)(a))) return i;
+                                    let n = { gameId: t },
                                         r = null != a ? [n, ...(a.games ?? [])] : [n];
                                     l = new tX.Yy({ ...(a ?? { type: e }), games: r });
                                 } else {
                                     if (null == a) return i;
-                                    let e = a.games.filter((e) => e.applicationId !== t);
+                                    let e = a.games.filter((e) => e.gameId !== t);
                                     l = new tX.Yy({ ...a, games: e });
                                 }
                                 var r = l;
@@ -1329,7 +1328,7 @@ function t1(e) {
             if (x)
                 for (let e of r) {
                     let n = s.filter(tX.fu).find((t) => t.type === e.type) ?? null,
-                        l = null != n && n.games.some((e) => e.applicationId === t),
+                        l = null != n && n.games.some((e) => e.gameId === t),
                         a = !l && null != n && (0, t$.uA)(n);
                     h.push(
                         (0, i.jsx)(
