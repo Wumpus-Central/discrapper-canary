@@ -4555,18 +4555,6 @@
     }
   },
   {
-    "name": "2026-06-nitro-basic-card-color",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-06-nitro-gifting-price-copy-tweaks",
     "kind": "user",
     "defaultConfig": {
