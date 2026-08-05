@@ -97,7 +97,7 @@ async function Z(e) {
         pid: e,
         oopEnabled: r,
         legacyEnabled: a,
-        applicationId: l?.id ?? null,
+        gameId: l?.id ?? null,
         gameName: n.name ?? null,
         state: m.AR.INITIALIZING,
         timer: { startTrackingTimestamp: Date.now() },

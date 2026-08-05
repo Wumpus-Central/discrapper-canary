@@ -9572,7 +9572,7 @@ let ol = {
     },
     GuildVerificationLevelModal: async () => {
         let { default: e } = await Promise.all([a.e("82653"), a.e("78618"), a.e("70232")]).then(a.bind(a, 313003)),
-            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(a.bind(a, 860689)),
+            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(a.bind(a, 149790)),
             n = t({
                 id: "123456789",
                 name: "Test Server",
@@ -9617,7 +9617,7 @@ let ol = {
     },
     GuildVerificationLevelModalCommunity: async () => {
         let { default: e } = await Promise.all([a.e("82653"), a.e("78618"), a.e("70232")]).then(a.bind(a, 313003)),
-            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(a.bind(a, 860689)),
+            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(a.bind(a, 149790)),
             { GuildFeatures: n } = await Promise.resolve().then(a.bind(a, 652215)),
             l = t({
                 id: "123456789",
@@ -10891,7 +10891,7 @@ function o6(e) {
                 (0, nS.C)(t, () => n(!0));
             },
             className: o3.DT,
-            children: ["Application Id: ", t, " ", a ? na.intl.string(na.t.t5VZ88) : null],
+            children: ["Game Id: ", t, " ", a ? na.intl.string(na.t.t5VZ88) : null],
         })
     );
 }
@@ -10912,11 +10912,11 @@ let o4 = o.memo(function (e) {
                     color: "text-default",
                     children: ["isLauncher: ", a?.isLauncher ? "Yes" : "No"],
                 }),
-                null != t.applicationId &&
+                null != t.gameId &&
                     (0, r.jsx)(p.E, {
                         variant: "text-md/bold",
                         color: "text-strong",
-                        children: (0, r.jsx)(o6, { id: t.applicationId }),
+                        children: (0, r.jsx)(o6, { id: t.gameId }),
                     }),
                 (0, r.jsxs)(p.E, {
                     variant: "text-sm/normal",
@@ -18737,7 +18737,7 @@ var xy = a(913122),
     xA = a(205761),
     xk = a(860071),
     xD = a(696451),
-    xI = a(860689),
+    xI = a(149790),
     xT = a(926140);
 let xR = new xS.A("SearchDebugUtils");
 function xO() {

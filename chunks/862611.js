@@ -9,8 +9,8 @@ var i,
     c = n(834730),
     d = n(939249),
     f = n(789645),
-    g = n(192308),
-    m = n(866665),
+    m = n(192308),
+    g = n(866665),
     E = n(922016),
     A = n(775602),
     C = n(274670),
@@ -18,10 +18,10 @@ var i,
     S = n(429913),
     T = n(409626),
     I = n(921138),
-    p = n(459746),
-    N = n(311043),
-    h = n(569926),
-    L = n(363195),
+    N = n(459746),
+    h = n(311043),
+    L = n(569926),
+    p = n(363195),
     R = n(174459),
     v = n(24001),
     G = n(104886),
@@ -32,16 +32,16 @@ var i,
     D = n(73473),
     y = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
     k = n(190107),
-    w = n(652215),
-    q = n(375708),
+    q = n(652215),
+    w = n(375708),
     U = n(664418);
 function j(e) {
     let t,
         n,
         i,
         { quest: l, onClose: s } = e,
-        o = (0, a.bG)([L.A], () => L.A.getState().theme),
-        g = (0, u.M)(o) ? w.NJ8.DARK : w.NJ8.LIGHT;
+        o = (0, a.bG)([p.A], () => p.A.getState().theme),
+        m = (0, u.M)(o) ? q.NJ8.DARK : q.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
         className: U.N1,
         children: [
@@ -51,7 +51,7 @@ function j(e) {
                     (0, r.jsx)("img", {
                         className: U.rC,
                         alt: l.config.messages.gameTitle,
-                        src: (0, O.tW)(l, O.fY.GAME_TILE, g).url,
+                        src: (0, O.tW)(l, O.fY.GAME_TILE, m).url,
                     }),
                     (0, r.jsxs)("div", {
                         className: U.if,
@@ -61,23 +61,23 @@ function j(e) {
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [k.Li.PACKAGE_ACTION_ADVENTURE]: q.t.PYFVdf,
-                                        [k.Li.PACKAGE_RPG_MMO]: q.t.rFQo2F,
-                                        [k.Li.PACKAGE_RACING_SPORTS]: q.t.zDRa6g,
-                                        [k.Li.PACKAGE_SANDBOX_CREATIVE]: q.t.vz9U2Q,
-                                        [k.Li.PACKAGE_FAMILY_FRIENDLY]: q.t.IOiAE0,
-                                        [k.Li.PACKAGE_HOLIDAY_SEASON]: q.t.cJPqvD,
-                                        [k.Li.PACKAGE_NEW_YEARS]: q.t.S0w2mv,
+                                        [k.Li.PACKAGE_ACTION_ADVENTURE]: w.t.PYFVdf,
+                                        [k.Li.PACKAGE_RPG_MMO]: w.t.rFQo2F,
+                                        [k.Li.PACKAGE_RACING_SPORTS]: w.t.zDRa6g,
+                                        [k.Li.PACKAGE_SANDBOX_CREATIVE]: w.t.vz9U2Q,
+                                        [k.Li.PACKAGE_FAMILY_FRIENDLY]: w.t.IOiAE0,
+                                        [k.Li.PACKAGE_HOLIDAY_SEASON]: w.t.cJPqvD,
+                                        [k.Li.PACKAGE_NEW_YEARS]: w.t.S0w2mv,
                                     }),
                                     (i =
                                         (null != (n = l.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                        q.t["D+DkEH"]),
-                                    q.intl.string(i)),
+                                        w.t["D+DkEH"]),
+                                    w.intl.string(i)),
                             }),
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: q.intl.string(q.t.VgN1Bn),
+                                children: w.intl.string(w.t.VgN1Bn),
                             }),
                         ],
                     }),
@@ -85,7 +85,7 @@ function j(e) {
             }),
             (0, r.jsx)(d.D, {
                 className: U.b,
-                "aria-label": q.intl.string(q.t.cpT0Cq),
+                "aria-label": w.intl.string(w.t.cpT0Cq),
                 onClick: s,
                 children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
             }),
@@ -98,8 +98,8 @@ function Q(e) {
         E = (0, M.go)(),
         S = (0, a.bG)([A.Ay], () => A.Ay.useReducedMotion),
         I = l.useRef(null),
-        N = null != i.gameRecord;
-    function h() {
+        h = null != i.gameRecord;
+    function L() {
         (0, G.E5)(G.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
             ? (0, C.r)({
                   type: _.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -116,8 +116,8 @@ function Q(e) {
                   sourceQuestContent: o,
               });
     }
-    async function L() {
-        N &&
+    async function p() {
+        h &&
             ((0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
                 ? (0, C.r)({
                       type: _.F.CLICK_INTERNAL,
@@ -134,7 +134,7 @@ function Q(e) {
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
                       sourceQuestContent: o,
                   }),
-            await (0, g.openModalLazy)(
+            await (0, m.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("69884"),
@@ -166,7 +166,7 @@ function Q(e) {
                         n.e("44459"),
                         n.e("64293"),
                         n.e("98986"),
-                        n.e("18379"),
+                        n.e("37467"),
                         n.e("60411"),
                         n.e("93637"),
                         n.e("45807"),
@@ -199,7 +199,7 @@ function Q(e) {
                         n.e("32856"),
                         n.e("69794"),
                         n.e("5211"),
-                        n.e("83656"),
+                        n.e("95325"),
                         n.e("25162"),
                         n.e("27670"),
                         n.e("20661"),
@@ -248,7 +248,7 @@ function Q(e) {
                         n.e("84569"),
                         n.e("61060"),
                         n.e("10471"),
-                        n.e("40135"),
+                        n.e("52457"),
                         n.e("60235"),
                         n.e("77333"),
                         n.e("6338"),
@@ -274,8 +274,8 @@ function Q(e) {
                         n.e("89088"),
                         n.e("69294"),
                         n.e("94723"),
-                        n.e("62931"),
                         n.e("30316"),
+                        n.e("62931"),
                         n.e("45959"),
                         n.e("58529"),
                         n.e("81987"),
@@ -383,7 +383,7 @@ function Q(e) {
                         n.e("24637"),
                         n.e("82022"),
                         n.e("93461"),
-                        n.e("23934"),
+                        n.e("65527"),
                         n.e("83827"),
                         n.e("1962"),
                         n.e("93767"),
@@ -399,9 +399,9 @@ function Q(e) {
                     ]).then(n.bind(n, 995142));
                     return (t) =>
                         (0, r.jsx)(e, {
-                            gameId: i.applicationId,
+                            gameId: i.gameId,
                             source: T.GameProfileSources.GameSheet,
-                            trackExternalAction: h,
+                            trackExternalAction: L,
                             ...t,
                         });
                 },
@@ -424,11 +424,11 @@ function Q(e) {
         O = l.useCallback(() => {
             null == I.current || S || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [S]);
-    return (0, r.jsx)(m.m, {
+    return (0, r.jsx)(g.m, {
         text: i.name,
         children: (0, r.jsx)(d.D, {
             className: U.zR,
-            onClick: L,
+            onClick: p,
             onMouseMove: R,
             onMouseLeave: O,
             children: (0, r.jsx)("div", {
@@ -436,7 +436,7 @@ function Q(e) {
                 className: U._M,
                 children:
                     null != i.gameRecord
-                        ? (0, r.jsx)(p.A, { game: i.gameRecord, className: U.xe, size: p.w.SMALL })
+                        ? (0, r.jsx)(N.A, { game: i.gameRecord, className: U.xe, size: N.w.SMALL })
                         : null,
             }),
         }),
@@ -481,39 +481,38 @@ function F(e) {
         onGameProfileModalOpen: c,
         onGameProfileModalClose: d,
     } = e;
-    (0, S.A)(i), (0, h.x)(i);
-    let f = (0, a.bG)([N.A], () => i.some((e) => N.A.isFetching(e))),
-        m = (0, a.bG)([N.A], () => i.some((e) => N.A.didFetchingFail(e))),
-        E = (0, a.yK)([N.A], () =>
-            i
-                .map((e) => N.A.getGame(e))
+    (0, S.A)(i);
+    let f = l.useMemo(() => i, [i]);
+    (0, L.x)(f);
+    let g = (0, a.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
+        E = (0, a.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
+        A = (0, a.yK)([h.A], () =>
+            f
+                .map((e) => h.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, I.oS)(e.applicationId))
+                .filter((e) => (0, I.oS)(e.id))
                 .slice(0, 10),
         ),
-        A = l.useMemo(
-            () => E.map((e) => ({ applicationId: e.applicationId, name: e.name, gameRecord: e })).slice(0, 10),
-            [E],
-        ),
-        C = l.useMemo(() => {
-            let e = A.length;
+        C = l.useMemo(() => A.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [A]),
+        _ = l.useMemo(() => {
+            let e = C.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
-        }, [A.length]),
-        _ = !f && 0 === A.length,
-        T = m || _;
+        }, [C.length]),
+        T = !g && 0 === C.length,
+        N = E || T;
     if (
         (l.useEffect(() => {
-            if (T) {
-                let e = m ? y.FETCH_FAILED : y.NO_GAMES_AVAILABLE;
-                R.default.track(w.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+            if (N) {
+                let e = E ? y.FETCH_FAILED : y.NO_GAMES_AVAILABLE;
+                R.default.track(q.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     s(),
-                    (0, g.openModalLazy)(async () => {
+                    (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
                         return (t) => (0, r.jsx)(e, { ...t });
                     });
             }
-        }, [T, m, t.id, s]),
-        f && !T)
+        }, [N, E, t.id, s]),
+        g && !N)
     ) {
         let e = Math.min(i.length, 10);
         return (0, r.jsxs)("div", {
@@ -527,7 +526,7 @@ function F(e) {
             ],
         });
     }
-    return T
+    return N
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
@@ -539,7 +538,7 @@ function F(e) {
                   (0, r.jsxs)("div", {
                       className: U.LA,
                       children: [
-                          A.map((e) =>
+                          C.map((e) =>
                               (0, r.jsx)(
                                   Q,
                                   {
@@ -549,10 +548,10 @@ function F(e) {
                                       onGameProfileModalOpen: c,
                                       onGameProfileModalClose: d,
                                   },
-                                  e.applicationId,
+                                  e.gameId,
                               ),
                           ),
-                          Array.from({ length: C }, (e, t) => (0, r.jsx)(b, {}, `placeholder-${t}`)),
+                          Array.from({ length: _ }, (e, t) => (0, r.jsx)(b, {}, `placeholder-${t}`)),
                       ],
                   }),
               ],
@@ -569,20 +568,20 @@ function X(e) {
             sourceQuestContent: d,
             impressionRef: f,
         } = e,
-        [g, m] = l.useState(!1),
+        [m, g] = l.useState(!1),
         A = (0, x.Ut)(),
         S = (0, M.go)(),
         T = l.useRef(null),
         I = t?.current != null,
-        p = I ? t : T;
-    function N() {
-        m(!0);
-    }
+        N = I ? t : T;
     function h() {
-        m(!1);
+        g(!0);
+    }
+    function L() {
+        g(!1);
     }
     return (0, r.jsx)(E.Y, {
-        targetElementRef: p,
+        targetElementRef: N,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -592,8 +591,8 @@ function X(e) {
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: f,
-                onGameProfileModalOpen: N,
-                onGameProfileModalClose: h,
+                onGameProfileModalOpen: h,
+                onGameProfileModalClose: L,
             });
         },
         onRequestOpen: function () {
@@ -616,7 +615,7 @@ function X(e) {
                       });
         },
         onRequestClose: function () {
-            if (g) return o.o;
+            if (m) return o.o;
             u?.();
         },
         position: I ? "right" : "top",

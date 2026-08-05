@@ -45,19 +45,19 @@ function A(e) {
 class h extends i.Ay.Store {
     static displayName = "NewGameStore";
     isFetching(e) {
-        return o.has(e);
+        return null != e && o.has(e);
     }
     didFetchingFail(e) {
-        return d.has(e);
+        return null != e && d.has(e);
     }
     getGame(e) {
-        return l.get(e);
+        return null != e ? l.get(e) : void 0;
     }
     hasNoData(e) {
-        return c.has(e);
+        return null != e && c.has(e);
     }
     getCoverImageUrl(e, t) {
-        let n = l.get(e)?.getCoverURL();
+        let n = null != e ? l.get(e)?.getCoverURL() : null;
         if (null == n) return null;
         if (null == t) return n;
         let i = a.A.toURLSafe(n);

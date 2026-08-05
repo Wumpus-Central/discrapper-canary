@@ -34,9 +34,9 @@ let E = {
     SILKSONG: "1413176957381771337",
 };
 Object.values(E);
-var h = i(735321),
-    L = i(384377),
-    g = i(492280),
+var g = i(735321),
+    h = i(384377),
+    L = i(492280),
     f = i(794248),
     _ = i(598748),
     R = i(141628),
@@ -222,9 +222,9 @@ function $(a) {
         { analyticsLocations: K } = (0, x.Ay)(p.A.USER_PROFILE_APPLICATION_WIDGET),
         M = t.useCallback(() => {
             !j &&
-                ((0, h.Y5)(e),
+                ((0, g.Y5)(e),
                 E({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, L.XA)(H.jM.WIDGET_ADDED),
+                (0, h.XA)(H.jM.WIDGET_ADDED),
                 i?.(),
                 V && y({ analyticsLocations: K }));
         }, [j, V, e, E, i, y, K]),
@@ -245,16 +245,16 @@ function $(a) {
                         let a = R(e);
                         switch (a.variant) {
                             case "details":
-                                return (0, l.jsx)(g.E, {
+                                return (0, l.jsx)(L.E, {
                                     className: X.l4,
                                     gridClassName: X.Qs,
-                                    applicationId: a.applicationId,
+                                    gameId: a.applicationId,
                                 });
                             case "grid":
-                                return (0, l.jsx)(g.l, {
+                                return (0, l.jsx)(L.l, {
                                     className: X.l4,
                                     gridClassName: X.Qs,
-                                    applicationIds: a.applicationIds,
+                                    gameIds: a.applicationIds,
                                 });
                             case "application-widget":
                                 return (0, l.jsx)(S, { applicationId: a.applicationId, size: s });
@@ -285,7 +285,7 @@ function $(a) {
                                     (0, l.jsx)(u.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
-                                        children: (0, h.L)(e),
+                                        children: (0, g.L)(e),
                                     }),
                                     !P && f && (0, l.jsx)(m.E, { type: "new", variant: "brand" }),
                                 ],

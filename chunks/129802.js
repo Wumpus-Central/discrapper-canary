@@ -1,8 +1,8 @@
 a.d(t, { default: () => X });
 var n = a(477900),
     l = a(582128),
-    i = a(812729),
-    r = a.n(i),
+    r = a(812729),
+    i = a.n(r),
     u = a(189213),
     d = a(17928),
     s = a(499979),
@@ -36,7 +36,7 @@ let M = new j.SnowflakeSequence(),
 function O(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [T.default];
     for (let a of Object.values(t.getClosedTrackedGamesHistory()))
-        if (a.applicationId === e.id || a.gameName === e.name) return a;
+        if (a.gameId === e.id || a.gameName === e.name) return a;
     return null;
 }
 function F(e) {
@@ -87,7 +87,7 @@ function L(e) {
 }
 function W(e) {
     let { selectedGame: t, setSelectedGame: a, placeholder: l } = e,
-        i = (0, d.yK)([D.A, k.Ay, T.default], () => {
+        r = (0, d.yK)([D.A, k.Ay, T.default], () => {
             let e = D.A.games,
                 t = e.reduce((e, t) => ((e[t.id] = t), e), {});
             return [
@@ -104,10 +104,10 @@ function W(e) {
                 }, []),
             ];
         }, []),
-        r = (0, d.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
+        i = (0, d.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
     return (0, n.jsx)(w.i, {
-        games: i,
-        selectedGame: r ?? null,
+        games: r,
+        selectedGame: i ?? null,
         onGameSelected: function (e) {
             null != e
                 ? a(
@@ -137,7 +137,7 @@ var U = a(489277),
     K = a(375708),
     z = a(7147);
 function q(e, t) {
-    return r()(e, t);
+    return i()(e, t);
 }
 let J = new Set([
         p.aI.BORDERLESS_FULLSCREEN,
@@ -167,8 +167,8 @@ let J = new Set([
     };
 function X(e) {
     let t,
-        i,
         r,
+        i,
         w,
         D,
         { onClose: j, transitionState: M, location: C, appContext: L } = e,
@@ -178,24 +178,24 @@ function X(e) {
         [Q, ee] = l.useState(""),
         et =
             ((t = (0, P.b4)()),
-            (i = (0, d.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)()),
-            (r = (0, d.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
+            (r = (0, d.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)()),
+            (i = (0, d.bG)([T.default], () => T.default.getTrackedGameByPid(r), [r])),
             (w = (0, d.bG)([k.Ay], () => k.Ay.getVisibleGame())),
             (D = (0, d.bG)([k.Ay], () => k.Ay.getGamesSeen(!1)[0])),
             (0, d.bG)([k.Ay, T.default], () => {
                 switch (!0) {
-                    case null != r:
+                    case null != i:
                         return (function (e) {
                             let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [k.Ay];
                             return {
-                                gameId: e.applicationId ?? void 0,
+                                gameId: e.gameId ?? void 0,
                                 gameName: e.gameName ?? void 0,
                                 gamePid: e.pid,
                                 fullscreenType: e.fullscreenType,
                                 trackedGame: e,
                                 runningGame: null != e.gameName ? (t.getGameForName(e.gameName) ?? void 0) : void 0,
                             };
-                        })(r, [k.Ay]);
+                        })(i, [k.Ay]);
                     case null != t:
                         return (function (e) {
                             let [t, a] =
@@ -228,10 +228,10 @@ function X(e) {
                     default:
                         return null;
                 }
-            }, [t, r, w, D])),
+            }, [t, i, w, D])),
         [ea, en] = l.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
-        [el, ei] = l.useState(et),
-        [er, eu] = l.useState(!1),
+        [el, er] = l.useState(et),
+        [ei, eu] = l.useState(!1),
         [ed, es] = l.useState(!1),
         [eo, em] = l.useState(!1),
         {
@@ -289,8 +289,8 @@ function X(e) {
         let e = b.default.getFocusedPID() ?? (0, S.getPID)(),
             t = T.default.getTrackedGameByPid(e),
             l = U.A.getPopoutInitializationStages(),
-            i = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
-            r = t?.fullscreenType ?? p.aI.UNKNOWN,
+            r = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
+            i = t?.fullscreenType ?? p.aI.UNKNOWN,
             u = (0, G.tn)(eg, (t) => {
                 for (let a of Object.values(Z))
                     try {
@@ -318,10 +318,10 @@ function X(e) {
             g = {
                 issue_category: V,
                 details: Q,
-                overlay_render_method: i,
+                overlay_render_method: r,
                 hardware_display_count: (await h.A?.hardware?.getDisplayCount?.()) ?? null,
-                detected_fullscreen_type: p.aI[r],
-                application_id: t?.applicationId,
+                detected_fullscreen_type: p.aI[i],
+                application_id: t?.gameId,
                 application_name: t?.gameName,
                 game_pid: t?.pid,
                 recent_overlay_flux_actions: d,
@@ -355,8 +355,8 @@ function X(e) {
             transitionState: M,
             title: K.intl.string(K.t.OKmenM),
             actions: [
-                { text: K.intl.string(K.t["ETE/oC"]), onClick: j, variant: "secondary", disabled: er },
-                { text: K.intl.string(K.t.geKm7t), onClick: ev, variant: "primary", loading: er },
+                { text: K.intl.string(K.t["ETE/oC"]), onClick: j, variant: "secondary", disabled: ei },
+                { text: K.intl.string(K.t.geKm7t), onClick: ev, variant: "primary", loading: ei },
             ],
             onClose: j,
             children: (0, n.jsxs)("div", {
@@ -428,7 +428,7 @@ function X(e) {
                             }),
                             (0, n.jsx)(W, {
                                 selectedGame: el,
-                                setSelectedGame: ei,
+                                setSelectedGame: er,
                                 placeholder: K.intl.string(K.t.b1IW2e),
                             }),
                             (0, n.jsx)(g.l, {

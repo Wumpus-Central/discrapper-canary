@@ -896,7 +896,7 @@ let tk = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                 [e, i],
                 ts(),
             ),
-            { data: l } = (0, tT.I)(n?.applicationId),
+            { data: l } = (0, tT.I)(n?.gameId),
             { enabledLegacy: s, enabledOOP: r } = (0, g.cf)(
                 [tL.A, tD.A, tS.A],
                 () =>
