@@ -4553,19 +4553,20 @@ function sP(e) {
                     return !t && !n;
                 }),
                 { threadIds: r, canLoadMore: o, loadMore: c, loading: d } = (0, ts.Fr)(e, t, n, i),
-                { searchResults: u, isSearchLoading: m } = (0, ev.cA)({ channelId: e.id });
+                { activeThreadIds: u, archivedThreadIds: m } = (0, G.WP)(e, s, r),
+                { searchResults: h, isSearchLoading: x } = (0, ev.cA)({ channelId: e.id });
             return (
                 (0, ev.yz)(e, t, n, i),
                 {
-                    activeThreadIds: s,
-                    archivedThreadIds: r,
-                    searchResults: u,
+                    activeThreadIds: u,
+                    archivedThreadIds: m,
+                    searchResults: h,
                     canLoadMore: o,
                     loadMore: c,
-                    loading: a || d || m,
+                    loading: a || d || x,
                     archivedThreadsLoading: d,
                     activeThreadsLoading: a,
-                    isSearchLoading: m,
+                    isSearchLoading: x,
                     layoutType: l,
                 }
             );
