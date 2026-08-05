@@ -6,13 +6,13 @@ n.d(t, {
     VL: () => U,
     T0: () => L,
     UY: () => w,
-    yp: () => V,
+    yp: () => B,
     Yq: () => D,
     r4: () => G,
     Ck: () => z,
     Am: () => H,
     Jo: () => O,
-    ri: () => B,
+    ri: () => V,
     m: () => b,
     Ge: () => P,
 }),
@@ -34,8 +34,8 @@ var i = n(477900),
     x = n(580745),
     f = n(232835),
     E = n(287809),
-    C = n(174459),
-    _ = n(625494),
+    _ = n(174459),
+    C = n(625494),
     I = n(723702),
     v = n(427262),
     N = n(841549),
@@ -54,7 +54,7 @@ function y(e, t, n) {
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${v.Ay.getUserTag(l, { decoration: "never" })}`,
                 a = `<@${e}>`;
-            _._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: a }), c.A.startTyping(t);
+            C._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: a }), c.A.startTyping(t);
         },
         [e, t, n],
     );
@@ -113,7 +113,7 @@ function U(e, t, s, o) {
             null == l ||
                 null == a ||
                 d ||
-                (C.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (_.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
                     channel: c,
                     location: "right_click",
@@ -155,6 +155,7 @@ function U(e, t, s, o) {
                             n.e("49629"),
                             n.e("78601"),
                             n.e("80407"),
+                            n.e("81949"),
                             n.e("21455"),
                             n.e("74021"),
                             n.e("44801"),
@@ -203,7 +204,7 @@ function H(e, t) {
         [e, t],
     );
 }
-function B(e, t) {
+function V(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return l.useCallback(
@@ -213,7 +214,7 @@ function B(e, t) {
         [i, n],
     );
 }
-function V(e) {
+function B(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
         s = n.author.id,
         a = `${t}:${s}`,
@@ -221,10 +222,10 @@ function V(e) {
         [o, c] = l.useState(i);
     r.current = o || r.current;
     let d = l.useCallback(() => {
-            (0, p.cE)(), o || (_._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
+            (0, p.cE)(), o || (C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
         }, [o, a]),
         u = l.useCallback(() => {
-            _._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
+            C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
         }, [a]);
     return { hasHovered: r.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: u };
 }
@@ -264,7 +265,7 @@ function z(e, t, n) {
                 onJumpComplete:
                     null != t
                         ? () => {
-                              _._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, t.attachment_id, { timestampMs: t.timestamp });
+                              C._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, t.attachment_id, { timestampMs: t.timestamp });
                           }
                         : void 0,
             });

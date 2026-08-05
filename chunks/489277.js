@@ -128,8 +128,8 @@ let L = new R(
               },
           },
 );
-var y = n(812729),
-    D = n.n(y),
+var D = n(812729),
+    y = n.n(D),
     v = n(118356),
     b = n(567249),
     M = n(96175),
@@ -159,7 +159,7 @@ function V(e, t) {
                         n = k[e.name];
                     return null != n && clearTimeout(n), (k[e.name] = i), t;
                 }));
-        D()(e, G) || (0, A._r)(n, "capture_zones_set", { source: t, capture_zones: r, rawZones: e }),
+        y()(e, G) || (0, A._r)(n, "capture_zones_set", { source: t, capture_zones: r, rawZones: e }),
             w.setCaptureZones(r);
     } catch (e) {
         U.error("Error setting capture zones:", e);
@@ -409,6 +409,9 @@ class eC extends i.Ay.Store {
     getFocusedPID() {
         return ee;
     }
+    getNativeLimitedInteraction() {
+        return es;
+    }
     getFocusedWindowHandle() {
         return et;
     }
@@ -522,6 +525,7 @@ let eO = new eC(
                           (ea = null),
                           (en = null),
                           (0, c.setPID)(c.UNSET_PID),
+                          (es = null),
                           e_();
                   },
                   OVERLAY_V3_NATIVE_FOCUS_GAINED: function (e) {
