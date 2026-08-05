@@ -558,8 +558,8 @@ function ev(e) {
         soundboard: a(ey.soundboard),
         gameMention: {
             react(e, t, n) {
-                let { gameId: r, channelId: a } = e;
-                return (0, i.jsx)(em.A, { gameId: r, channelId: a, authorId: n.authorId }, n.key);
+                let { gameId: r } = e;
+                return (0, i.jsx)(em.A, { gameId: r, authorId: n.authorId }, n.key);
             },
         },
     };

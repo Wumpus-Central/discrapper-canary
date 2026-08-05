@@ -126,7 +126,7 @@ function z(e) {
 function T(e) {
     let { id: n } = e,
         t = (0, v.p)();
-    return (0, l.jsx)(x.A, { gameId: n, channelId: t?.channelId, authorId: t?.authorId });
+    return (0, l.jsx)(x.A, { gameId: n, authorId: t?.authorId });
 }
 function L(e) {
     let { roleName: n } = e,

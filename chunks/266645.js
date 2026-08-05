@@ -1,22 +1,20 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => N });
 var i = n(477900),
     r = n(582128),
-    a = n(17928),
-    s = n(192308),
-    l = n(866665),
-    o = n(442433),
-    d = n(442247),
-    c = n(60465),
-    u = n(409626),
-    _ = n(106191),
-    E = n(734057),
-    A = n(332173),
-    h = n(936755),
-    I = n(827669);
-let f = 0,
-    p = "data-mention-game-id",
-    T = new Set([
+    a = n(192308),
+    s = n(866665),
+    l = n(442433),
+    o = n(442247),
+    d = n(60465),
+    c = n(409626),
+    u = n(106191),
+    _ = n(332173),
+    E = n(936755),
+    A = n(827669);
+let h = 0,
+    I = "data-mention-game-id",
+    f = new Set([
         "DIV",
         "P",
         "LI",
@@ -35,15 +33,15 @@ let f = 0,
         "ARTICLE",
         "SECTION",
     ]);
-function m(e) {
+function p(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest('[contenteditable="true"]') != null;
 }
-function g(e) {
+function T(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    return t?.closest(`[${p}]`) ?? null;
+    return t?.closest(`[${I}]`) ?? null;
 }
-function S(e) {
+function m(e) {
     let t;
     if (null == e.clipboardData) return;
     let n = window.getSelection();
@@ -53,18 +51,18 @@ function S(e) {
     } catch {
         return;
     }
-    if (t.collapsed || m(t.startContainer) || m(t.endContainer)) return;
+    if (t.collapsed || p(t.startContainer) || p(t.endContainer)) return;
     let i = t.cloneContents(),
-        r = null != i.querySelector(`[${p}]`),
-        a = g(t.startContainer),
-        s = g(t.endContainer),
+        r = null != i.querySelector(`[${I}]`),
+        a = T(t.startContainer),
+        s = T(t.endContainer),
         l = !r && null != a && a === s;
     if (r || l) {
         let t, n;
         if (l) {
-            let t = a.getAttribute(p);
+            let t = a.getAttribute(I);
             if (null == t || "" === t) return;
-            e.preventDefault(), e.clipboardData.setData("text/plain", (0, I.KW)(t));
+            e.preventDefault(), e.clipboardData.setData("text/plain", (0, A.KW)(t));
             return;
         }
         e.preventDefault(),
@@ -78,8 +76,8 @@ function S(e) {
                             if (n > 200) return "";
                             if (t.nodeType === Node.TEXT_NODE) return t.textContent ?? "";
                             if (t.nodeType !== Node.ELEMENT_NODE) return "";
-                            let i = t.getAttribute(p);
-                            if (null != i) return (0, I.KW)(i);
+                            let i = t.getAttribute(I);
+                            if (null != i) return (0, A.KW)(i);
                             let r = t.tagName.toUpperCase();
                             if ("IMG" === r) {
                                 let e = t.getAttribute("alt");
@@ -90,94 +88,92 @@ function S(e) {
                             if ("BR" === r) return "\n";
                             let a = "";
                             for (let i = 0; i < t.childNodes.length; i++) a += e(t.childNodes[i], n + 1);
-                            return T.has(r) && "" !== a && !a.endsWith("\n") && (a += "\n"), a;
+                            return f.has(r) && "" !== a && !a.endsWith("\n") && (a += "\n"), a;
                         })(e.childNodes[n]);
                     return t.endsWith("\n") ? t.slice(0, -1) : t;
                 })(i),
             ),
             e.clipboardData.setData(
                 "text/html",
-                ((t = i.cloneNode(!0)).querySelectorAll(`[${p}]`).forEach((e) => {
-                    let t = e.getAttribute(p);
+                ((t = i.cloneNode(!0)).querySelectorAll(`[${I}]`).forEach((e) => {
+                    let t = e.getAttribute(I);
                     if (null == t || "" === t) return;
                     let n = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(n.createTextNode((0, I.KW)(t)), e);
+                    e.parentNode?.replaceChild(n.createTextNode((0, A.KW)(t)), e);
                 }),
                 (n = document.createElement("div")).appendChild(t),
                 n.innerHTML),
             );
     }
 }
-var N = n(375708),
-    C = n(156452);
-let O = function (e) {
-    let { gameId: t, channelId: I, authorId: p } = e,
-        T = (0, a.bG)([E.A], () => E.A.getChannel(I)),
-        m = null != T ? T.getGuildId() : null,
-        g = (0, d.K)(t),
-        O = null != g,
-        R = g?.gameName ?? N.intl.string(N.t["11pdXZ"]),
-        L = g?.gameIcon;
+var g = n(375708),
+    S = n(156452);
+let N = function (e) {
+    let { gameId: t, authorId: A } = e,
+        I = (0, o.K)(t),
+        f = null != I,
+        p = I?.gameName ?? g.intl.string(g.t["11pdXZ"]),
+        T = I?.gameIcon;
     r.useEffect(
         () => (
-            1 === (f += 1) && document.addEventListener("copy", S),
+            1 === (h += 1) && document.addEventListener("copy", m),
             () => {
-                0 == (f -= 1) && document.removeEventListener("copy", S);
+                0 == (h -= 1) && document.removeEventListener("copy", m);
             }
         ),
         [],
     );
-    let D = r.useCallback(
+    let N = r.useCallback(
             (e) => {
-                O &&
-                    (0, o.L3)(e, async () => {
+                f &&
+                    (0, l.L3)(e, async () => {
                         let { default: e } = await Promise.all([n.e("26132"), n.e("46652"), n.e("38392")]).then(
                             n.bind(n, 55947),
                         );
-                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: R, guildId: m, authorId: p });
+                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: p, authorId: A });
                     });
             },
-            [O, t, R, m, p],
+            [f, t, p, A],
         ),
-        y = r.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+        C = r.useCallback(() => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e("56466").then(n.bind(n, 188841));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         }, []),
-        v = r.useCallback(
+        O = r.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), O)
-                    ? c.default.openGameProfileModal({
+                (e.stopPropagation(), e.preventDefault(), f)
+                    ? d.default.openGameProfileModal({
                           gameId: t,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
-                          source: u.GameProfileSources.GameMention,
-                          sourceUserId: p,
+                          source: c.GameProfileSources.GameMention,
+                          sourceUserId: A,
                       })
-                    : y();
+                    : C();
             },
-            [t, O, y, p],
+            [t, f, C, A],
         ),
-        b = O ? `@game ${R}` : void 0;
-    return (0, i.jsx)(l.m, {
+        R = f ? `@game ${p}` : void 0;
+    return (0, i.jsx)(s.m, {
         asContainer: !0,
         tag: "span",
-        text: b,
-        "aria-label": b,
+        text: R,
+        "aria-label": R,
         delay: 750,
-        children: (0, i.jsxs)(A.A, {
+        children: (0, i.jsxs)(_.A, {
             "data-mention-game-id": t,
-            onContextMenu: D,
-            onClick: v,
+            onContextMenu: N,
+            onClick: O,
             children: [
-                (0, i.jsx)(h.A, {
+                (0, i.jsx)(E.A, {
                     children: (0, i.jsx)("span", {
                         "aria-hidden": "true",
-                        className: C.P0,
-                        children: (0, i.jsx)(_.A, { game: { id: t, icon: L }, iconClassName: C.Kk, allowFetch: !1 }),
+                        className: S.P0,
+                        children: (0, i.jsx)(u.A, { game: { id: t, icon: T }, iconClassName: S.Kk, allowFetch: !1 }),
                     }),
                 }),
-                (0, i.jsx)("span", { className: C.UU, children: R }),
+                (0, i.jsx)("span", { className: S.UU, children: p }),
             ],
         }),
     });

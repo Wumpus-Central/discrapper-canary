@@ -23,47 +23,47 @@ let _ = (0, o.A)(
     (0, c.A)(
         function (e) {
             let t,
-                { gameId: n, gameName: c, guildId: o, authorId: u, context: _, onSelect: C } = e,
-                G =
+                { gameId: n, gameName: c, authorId: o, context: u, onSelect: _ } = e,
+                C =
                     ((t = (0, j.A)(
                         {
                             location: "useOpenGameProfileItem",
                             gameId: n,
                             source: f.GameProfileSources.GameMention,
                             trackEntryPointImpression: !0,
-                            sourceUserId: u,
+                            sourceUserId: o,
                         },
                         {},
                     )),
                     (0, i.jsx)(r.Dr, { id: "game-profile-item", label: b.intl.string(b.t.f7aVGn), action: t })),
-                P = (function (e, t, n, a) {
-                    let [s, c] = (0, A.yK)([g.Ay, p.A, E.A], () => {
-                            let e = g.Ay.getChannelId(n),
+                G = (function (e, t, n) {
+                    let [a, s] = (0, A.yK)([g.Ay, p.A, E.A], () => {
+                            let e = g.Ay.getChannelId(),
                                 t = p.A.getChannel(e);
                             return [e, null != t && (t.isPrivate() || E.A.can(S.xBc.SEND_MESSAGES, t))];
-                        }, [n]),
-                        o = a === S.BRT.POPOUT,
-                        u = l.useCallback(() => {
-                            if (null != s) {
+                        }),
+                        c = n === S.BRT.POPOUT,
+                        o = l.useCallback(() => {
+                            if (null != a) {
                                 let n, i;
                                 (n = `@${t}`),
                                     (i = (0, T.KW)(e)),
                                     h._.dispatchToLastSubscribed(S.jej.INSERT_TEXT, { plainText: n, rawText: i }),
-                                    null != s && m.A.startTyping(s);
+                                    null != a && m.A.startTyping(a);
                             }
-                        }, [s, e, t]);
-                    return !c || o
+                        }, [a, e, t]);
+                    return !s || c
                         ? null
-                        : (0, i.jsx)(r.Dr, { id: "mention", label: b.intl.string(b.t.P8tvKG), action: u });
-                })(n, c, o, _),
-                x = (0, d.A)({ id: n, label: b.intl.string(b.t.SHQGPj) });
+                        : (0, i.jsx)(r.Dr, { id: "mention", label: b.intl.string(b.t.P8tvKG), action: o });
+                })(n, c, u),
+                P = (0, d.A)({ id: n, label: b.intl.string(b.t.SHQGPj) });
             return (0, i.jsxs)(a.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "game-context",
                 onClose: s.Z_,
                 "aria-label": b.intl.string(b.t.Hf9fuS),
-                onSelect: C,
-                children: [(0, i.jsxs)(r.rX, { children: [G, P] }), (0, i.jsx)(r.rX, { children: x })],
+                onSelect: _,
+                children: [(0, i.jsxs)(r.rX, { children: [C, G] }), (0, i.jsx)(r.rX, { children: P })],
             });
         },
         { object: S.ZSU.CONTEXT_MENU },

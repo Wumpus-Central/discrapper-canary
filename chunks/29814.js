@@ -541,7 +541,7 @@ let ec = {
             order: s().defaultRules.text.order,
             requiredFirstCharacters: ["<"],
             match: (e, t) => (t.allowGameMentions ? et.P7.exec(e) : null),
-            parse: (e, t, n) => ({ type: "gameMention", gameId: e[1], channelId: n.channelId }),
+            parse: (e) => ({ type: "gameMention", gameId: e[1] }),
         },
         emoji: {
             order: y.Ay.order,
