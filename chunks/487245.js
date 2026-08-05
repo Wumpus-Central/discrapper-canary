@@ -25,8 +25,8 @@ var i,
     O = n(450232),
     R = n(973654),
     L = n(363195),
-    y = n(742023),
-    D = n(885386),
+    D = n(742023),
+    y = n(885386),
     v = n(830543),
     b = n(174459),
     M = n(823459),
@@ -255,9 +255,9 @@ function e_(e) {
         [N, C] = a.useState(-1),
         O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        y = (0, g.GV)(),
-        D = L && u ? y : void 0,
-        b = L ? y : void 0;
+        D = (0, g.GV)(),
+        y = L && u ? D : void 0,
+        b = L ? D : void 0;
     function U(e, t) {
         var n;
         if (
@@ -280,7 +280,7 @@ function e_(e) {
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                L && (0, r.jsx)(A.A, { id: y, children: z.intl.string(z.t.JIZSqz) }),
+                L && (0, r.jsx)(A.A, { id: D, children: z.intl.string(z.t.JIZSqz) }),
                 (0, r.jsx)(X, {
                     size: i,
                     isDisabled: t,
@@ -292,10 +292,7 @@ function e_(e) {
                             "SETTINGS" === s && (0, v.default)();
                     },
                 }),
-                Q.Jm.filter((e) => {
-                    let { id: t } = e;
-                    return t !== c.ju.EASTER_EGG;
-                }).map((e, n) =>
+                Q.Jm.filter(Q.Qm).map((e, n) =>
                     (0, r.jsx)(
                         j.MX,
                         {
@@ -307,7 +304,7 @@ function e_(e) {
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
                             showLockedBadge: !1,
-                            ariaDescribedBy: D,
+                            ariaDescribedBy: y,
                         },
                         e.id,
                     ),
@@ -328,7 +325,7 @@ function e_(e) {
                                 preset: e,
                                 isSelected: _ === c.ju.EASTER_EGG,
                                 onSelect: () => U(e),
-                                ariaDescribedBy: D,
+                                ariaDescribedBy: y,
                             }),
                             (0, r.jsx)(E.a, { importData: t, shouldAnimate: !O, className: er._7 }),
                         ],
@@ -342,10 +339,10 @@ function eE(e) {
     let { size: t, systemSelectorFirst: n, hideSystemSelector: i = !1 } = e,
         { delay: s } = a.useContext(el),
         { analyticsLocations: l } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-        [o, c, u] = (0, d.yK)([L.A, y.Ay, P.A], () => [
+        [o, c, u] = (0, d.yK)([L.A, D.Ay, P.A], () => [
             L.A.theme,
-            null == P.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,
-            y.Ay.useSystemTheme === et.Q_.ON,
+            null == P.A.gradientPreset && null == y.eh.getSetting().customUserThemeSettings,
+            D.Ay.useSystemTheme === et.Q_.ON,
         ]);
     function _(e) {
         (0, M.Py)(),
@@ -370,24 +367,9 @@ function eE(e) {
                 onSelect: () => _(ei.NJ.LIGHT),
                 tabIndex: E ? void 0 : 0,
             }),
-            (0, r.jsx)(j.zy, {
-                size: t,
-                theme: ei.NJ.DARK,
-                isSelected: c && !u && o === ei.NJ.DARK,
-                onSelect: () => _(ei.NJ.DARK),
-            }),
-            (0, r.jsx)(j.zy, {
-                size: t,
-                theme: ei.NJ.DARKER,
-                isSelected: c && !u && o === ei.NJ.DARKER,
-                onSelect: () => _(ei.NJ.DARKER),
-            }),
-            (0, r.jsx)(j.zy, {
-                size: t,
-                theme: ei.NJ.MIDNIGHT,
-                isSelected: c && !u && o === ei.NJ.MIDNIGHT,
-                onSelect: () => _(ei.NJ.MIDNIGHT),
-            }),
+            Q.f5.map((e) =>
+                (0, r.jsx)(j.zy, { size: t, theme: e, isSelected: c && !u && o === e, onSelect: () => _(e) }, e),
+            ),
             !i && !n && (0, r.jsx)(j.zy, { size: t, theme: "system", isSelected: c && u, onSelect: () => _("system") }),
         ],
     });

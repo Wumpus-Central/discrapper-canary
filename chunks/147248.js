@@ -1,98 +1,100 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => U });
+n.d(t, { A: () => G });
 var a = n(17928),
     s = n(554146),
     l = n(228366),
-    o = n(826673);
-n(458024);
-var d = n(284016),
-    c = n(973654),
-    u = n(363195),
-    _ = n(742023),
-    E = n(885386),
-    A = n(617617),
-    h = n(185928);
-function I(e) {
-    return _.Ay.useSystemTheme === h.Q_.ON && u.A.isSameAsDeviceThemeEnabled() && e();
+    o = n(826673),
+    d = n(458024),
+    c = n(284016),
+    u = n(973654),
+    _ = n(363195),
+    E = n(742023),
+    A = n(885386),
+    h = n(617617),
+    I = n(185928);
+function f(e) {
+    return E.Ay.useSystemTheme === I.Q_.ON && _.A.isSameAsDeviceThemeEnabled() && e();
 }
-var f = n(95701),
-    p = n(734057),
-    T = n(287809),
-    m = n(428262),
-    g = n(427262),
-    S = n(644235),
-    N = n(385803);
-let C = !0,
-    R = !1;
-function O() {
-    return !1;
-}
-function L() {
-    C && (i = void 0), (R = !1);
-}
+var p = n(95701),
+    T = n(734057),
+    m = n(287809),
+    g = n(158045),
+    S = n(427262),
+    N = n(644235),
+    C = n(385803);
+let O = !0,
+    R = !1,
+    L = !1;
 function D() {
-    let e = !m.Ay.canUseClientThemes(T.default.getCurrentUser());
-    if (e === C) return !1;
-    C = e;
+    return (0, d.$Y)("ClientThemesBackgroundStore");
 }
 function y() {
-    if (!d.A.shouldSync("appearance")) return !1;
-    let e = E.eh.getSetting().backgroundGradientPresetId;
+    O && (i = void 0), (L = !1), (R = !1);
+}
+function v() {
+    let e = !g.Ay.canUseClientThemes(m.default.getCurrentUser());
+    if (e === O) return !1;
+    (O = e), (L = !1);
+}
+function b() {
+    if (!c.A.shouldSync("appearance")) return !1;
+    let e = A.eh.getSetting().backgroundGradientPresetId;
     if (null == e) {
         if (null == i) return !1;
         i = void 0;
     } else {
-        let t = N.ag[e];
+        let t = C.ag[e];
         if (t === i) return !1;
         i = t;
     }
 }
-function v() {
-    return I(O);
-}
-function b() {
-    return O();
-}
 function M() {
-    if (!d.A.shouldSync("appearance")) return !1;
-    let e = E.eh.getSetting().backgroundGradientPresetId;
-    if (
-        (_.Ay.useSystemTheme !== h.Q_.ON || null == e || u.A.isSameAsDeviceThemeEnabled() || (0, c.k7)(h.Q_.OFF),
-        null == e)
-    ) {
+    return f(D);
+}
+function P() {
+    return D();
+}
+function U() {
+    if (!c.A.shouldSync("appearance")) return !1;
+    let e = A.eh.getSetting().backgroundGradientPresetId;
+    if ((E.Ay.useSystemTheme !== I.Q_.ON || null == e || f(D) || (0, u.k7)(I.Q_.OFF), null == e)) {
         null != i && (i = void 0);
         return;
     }
-    let t = N.ag[e],
+    let t = C.ag[e],
         n = i?.id === t?.id;
     null == t || n || (i = t);
 }
-class P extends a.Ay.PersistedStore {
+class w extends a.Ay.PersistedStore {
     static displayName = "ClientThemesBackgroundStore";
     static persistKey = "ClientThemesBackgroundStore";
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
     initialize(e) {
-        null != e && (i = e?.gradientPresetId != null ? N.ag[e.gradientPresetId] : void 0),
-            this.waitFor(p.A, d.A, u.A, _.Ay, A.A, T.default),
-            this.syncWith([T.default], D),
-            this.syncWith([d.A], y);
+        (L = !1),
+            null != e &&
+                ((i = null != e.gradientPresetId ? C.ag[e.gradientPresetId] : void 0),
+                (O = !0 !== e.canUseClientThemes)),
+            this.waitFor(T.A, c.A, _.A, E.Ay, h.A, m.default),
+            this.syncWith([m.default], v),
+            this.syncWith([c.A], b);
     }
     getState() {
-        return C ? {} : { gradientPresetId: i?.id };
+        return O ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
     }
     get gradientPreset() {
-        if (I(O)) {
-            let e = u.A.getSyncedClientTheme(u.A.systemTheme)?.backgroundGradientPresetId;
-            return null != e ? N.ag[e] : void 0;
+        if (f(D)) {
+            if (O) return L ? i : void 0;
+            let e = _.A.getSyncedClientTheme(_.A.systemTheme)?.backgroundGradientPresetId;
+            return null != e ? C.ag[e] : void 0;
         }
         return i;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, S.FK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, N.FK)(this.gradientPreset);
     }
     get isPreview() {
-        return C;
+        return O;
     }
     get isCoachmark() {
         return R;
@@ -101,14 +103,14 @@ class P extends a.Ay.PersistedStore {
         return r;
     }
 }
-let U = new P(l.h, {
+let G = new w(l.h, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
-        if (null == t) {
+        if (((L = O), null == t)) {
             i = void 0;
             return;
         }
-        i = N.ag[t];
+        i = C.ag[t];
     },
     UPDATE_MOBILE_PENDING_THEME_INDEX: function (e) {
         let { mobileThemesIndex: t } = e;
@@ -119,25 +121,25 @@ let U = new P(l.h, {
         r = t;
     },
     RESET_PREVIEW_CLIENT_THEME: function (e) {
-        i = void 0;
+        (i = void 0), (L = !1);
     },
-    CLIENT_THEMES_EDITOR_CLOSE: L,
+    CLIENT_THEMES_EDITOR_CLOSE: y,
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
-            i = T.default.getCurrentUser();
-        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, g.G2)(i)) return;
-        let r = p.A.getChannel(t);
-        null != r && (0, f.ke)(r.type) && (R = !0);
+            i = m.default.getCurrentUser();
+        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, S.G2)(i)) return;
+        let r = T.A.getChannel(t);
+        null != r && (0, p.ke)(r.type) && (R = !0);
     },
-    LOGOUT: L,
-    CACHE_LOADED: M,
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: M,
-    UNSYNCED_USER_SETTINGS_UPDATE: M,
-    USER_SETTINGS_PROTO_UPDATE: M,
-    SYSTEM_THEME_CHANGE: v,
-    UPDATE_SYNCED_CLIENT_THEME: v,
-    SET_SAME_AS_DEVICE_THEME_ENABLED: b,
-    CLEAR_SYNCED_CLIENT_THEMES: b,
+    LOGOUT: y,
+    CACHE_LOADED: U,
+    CONNECTION_OPEN: U,
+    OVERLAY_INITIALIZE: U,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: U,
+    UNSYNCED_USER_SETTINGS_UPDATE: U,
+    USER_SETTINGS_PROTO_UPDATE: U,
+    SYSTEM_THEME_CHANGE: M,
+    UPDATE_SYNCED_CLIENT_THEME: M,
+    SET_SAME_AS_DEVICE_THEME_ENABLED: P,
+    CLEAR_SYNCED_CLIENT_THEMES: P,
 });

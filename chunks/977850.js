@@ -208,7 +208,7 @@ function eq(e) {
 var e$ = n(240248),
     eZ = n(308244),
     eJ = n(81400),
-    eQ = n(428262),
+    eQ = n(158045),
     e0 = n(84540),
     e1 = n(621466),
     e2 = n(231088),
@@ -1625,17 +1625,14 @@ function tE(e) {
         children: [
             (0, t.jsx)(nE, {
                 heading: eK.intl.string(eK.t.NEzEws),
-                showNitroIcon: !0,
                 children: (0, t.jsx)(tb, { user: l, onClick: c ? o : s, "aria-haspopup": c ? "dialog" : void 0 }),
             }),
             (0, t.jsx)(nE, {
                 heading: eK.intl.string(eK.t.DMeO2X),
-                showNitroIcon: !0,
                 children: c ? (0, t.jsx)(ty, { user: l }) : (0, t.jsx)(tI, { user: l, onClick: s }),
             }),
             (0, t.jsx)(nE, {
                 heading: eK.intl.string(eK.t.Vgdusv),
-                showNitroIcon: !0,
                 children: (0, t.jsx)(tA, {
                     userId: l.id,
                     buttonRef: a,
@@ -1645,7 +1642,6 @@ function tE(e) {
             }),
             (0, t.jsx)(nE, {
                 heading: eK.intl.string(eK.t.vtFfPX),
-                showNitroIcon: !0,
                 children: (0, t.jsx)(tv, {
                     user: l,
                     buttonRef: r,
@@ -2492,7 +2488,6 @@ function iI(e) {
             a.current?.focus();
         }, []),
         (0, t.jsxs)(te, {
-            hasGradientBackground: !0,
             children: [
                 (0, t.jsxs)("div", {
                     className: iA.wx,
@@ -2505,7 +2500,7 @@ function iI(e) {
                             children: (0, t.jsx)(iu.r, { size: "md", color: "currentColor" }),
                         }),
                         (0, t.jsx)(lW.D, {
-                            variant: "text-lg/normal",
+                            variant: "text-md/medium",
                             color: "text-default",
                             className: iA.R_,
                             children: eK.intl.string(eK.t.PxUx8e),

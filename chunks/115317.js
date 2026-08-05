@@ -1,1 +1,0 @@
-p.exports = JSON.parse('{"Lx0P8k":["\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u043E"]}');

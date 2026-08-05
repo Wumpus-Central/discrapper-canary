@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => r });
+n.d(t, { $Y: () => a, Ay: () => r });
 let i = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-02-mobile-visual-refresh",
@@ -14,4 +14,7 @@ let i = (0, n(240921).Ay)({
 });
 function r(e) {
     return i.useConfig({ location: e }).enabled;
+}
+function a(e) {
+    return i.getConfig({ location: e }).enabled;
 }
