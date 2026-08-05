@@ -54,6 +54,9 @@ class I extends r.Ay.Store {
     isFavorite(e) {
         return null != e && null != u[e];
     }
+    isChannelOrParentFavorited(e) {
+        return this.isFavorite(e.id) || (e.isThread() && this.isFavorite(e.parent_id));
+    }
     getFavorite(e) {
         if (null != e) return u[e];
     }

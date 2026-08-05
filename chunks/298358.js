@@ -1,6 +1,5 @@
 "use strict";
-n.d(t, { m_: () => m, e4: () => N, Af: () => T, ad: () => p, CJ: () => C, TW: () => f, Rm: () => g, DZ: () => S }),
-    n(321073);
+n.d(t, { ad: () => p, m_: () => m, CJ: () => N, TW: () => f, Af: () => T, e4: () => S, DZ: () => g }), n(321073);
 var i = n(17928),
     r = n(873298),
     a = n(967198),
@@ -61,23 +60,16 @@ function m() {
     return t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t;
 }
 function g() {
-    return (0, i.bG)([o.A], () => m(o.A.getFavoriteChannels()));
-}
-function S() {
     let e = (0, i.bG)([a.A], () => a.A.getGuildId());
     return (0, E.ai)(e);
 }
-function N(e, t) {
-    let n = S(),
+function S(e, t) {
+    let n = g(),
         { hasAccess: r } = f(t),
-        a = (0, i.bG)(
-            [o.A],
-            () => null != e && (o.A.isFavorite(e.id) || (e.isThread() && o.A.isFavorite(e.parent_id))),
-            [e],
-        );
+        a = (0, i.bG)([o.A], () => null != e && o.A.isChannelOrParentFavorited(e), [e]);
     return n && (!r || !a || e?.isCategory()) ? null : (e ?? null);
 }
-function C() {
+function N() {
     let e = _((e) => e.favoriteAdded);
     return {
         favoriteAdded: e,
