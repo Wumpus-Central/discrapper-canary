@@ -1,62 +1,63 @@
+"use strict";
 n.d(t, { o: () => L }), n(323874), n(14289), n(35956);
-var s = n(477900),
+var i = n(477900),
     r = n(582128),
     a = n(503698),
-    i = n.n(a),
+    s = n.n(a),
     l = n(727522),
-    c = n(132500),
-    o = n(440454),
-    u = n(484697),
-    d = n(363195),
-    A = n(625494),
-    f = n(851907),
-    m = n(435558),
-    E = n(17928),
-    N = n(192308),
-    h = n(267102),
-    j = n(186111),
-    _ = n(712687),
-    p = n(652215),
-    O = n(775602);
-let I = (0, m.debounce)((e) => {
+    o = n(132500),
+    d = n(440454),
+    c = n(484697),
+    u = n(363195),
+    _ = n(625494),
+    E = n(851907),
+    A = n(435558),
+    h = n(17928),
+    I = n(192308),
+    f = n(267102),
+    p = n(186111),
+    T = n(712687),
+    m = n(652215),
+    g = n(775602);
+let S = (0, A.debounce)((e) => {
         setTimeout(() => {
             e.current?.focus();
         }, 0);
     }, 50),
-    M = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-var b = n(360469),
-    x = n(2771);
-function v(e) {
+    N = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
+var C = n(360469),
+    O = n(2771);
+function R(e) {
     let {
             url: t,
             className: n,
             style: a,
-            shouldRefocus: i,
-            queryParams: m,
-            allowPopups: x = !1,
-            referrerPolicy: v = "origin",
+            shouldRefocus: s,
+            queryParams: A,
+            allowPopups: O = !1,
+            referrerPolicy: R = "origin",
             onLoad: L,
-            onIframeMount: T,
-            onIframeUnmount: R,
+            onIframeMount: D,
+            onIframeUnmount: y,
         } = e,
-        g = (0, f.xi)({}),
-        w = (0, l.useMemoOne)(() => (0, c.A)(), [t]),
-        S = r.useRef(null),
-        C = (function (e, t) {
+        v = (0, E.xi)({}),
+        b = (0, l.useMemoOne)(() => (0, o.A)(), [t]),
+        M = r.useRef(null),
+        P = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-                s = (0, E.bG)([O.Ay], () => O.Ay.keyboardModeEnabled),
+                i = (0, h.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
                 a = (function () {
-                    let e = (0, N.useModalsStore)(
+                    let e = (0, I.useModalsStore)(
                             (e) =>
                                 !Object.entries(e).every((e) => {
                                     let [t, n] = e;
                                     return 0 === n.length;
                                 }),
                         ),
-                        t = (0, E.bG)([_.A], () => _.A.isOpen()),
-                        n = (0, E.bG)([j.A], () => j.A.hasLayers()),
-                        [s, a] = r.useState(!1),
-                        i = (0, h.aL)();
+                        t = (0, h.bG)([T.A], () => T.A.isOpen()),
+                        n = (0, h.bG)([p.A], () => p.A.hasLayers()),
+                        [i, a] = r.useState(!1),
+                        s = (0, f.aL)();
                     return (
                         r.useEffect(() => {
                             function e() {
@@ -66,112 +67,112 @@ function v(e) {
                                 a(!1);
                             }
                             return (
-                                i.subscribe(p.jej.POPOUT_SHOW, e),
-                                i.subscribe(p.jej.POPOUT_HIDE, t),
+                                s.subscribe(m.jej.POPOUT_SHOW, e),
+                                s.subscribe(m.jej.POPOUT_HIDE, t),
                                 () => {
-                                    i.unsubscribe(p.jej.POPOUT_SHOW, e), i.unsubscribe(p.jej.POPOUT_HIDE, t);
+                                    s.unsubscribe(m.jej.POPOUT_SHOW, e), s.unsubscribe(m.jej.POPOUT_HIDE, t);
                                 }
                             );
-                        }, [i]),
-                        e || t || s || n
+                        }, [s]),
+                        e || t || i || n
                     );
                 })(),
-                [i, l] = r.useState(!1),
-                c = (0, h.aL)();
+                [s, l] = r.useState(!1),
+                o = (0, f.aL)();
             return (
                 r.useEffect(() => {
                     if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
                     function e() {
-                        a && (c.dispatch(p.jej.POPOUT_CLOSE), A._.dispatch(p.jej.CONTEXT_MENU_CLOSE));
+                        a && (o.dispatch(m.jej.POPOUT_CLOSE), _._.dispatch(m.jej.CONTEXT_MENU_CLOSE));
                     }
-                }, [n, a, t, c]),
+                }, [n, a, t, o]),
                 r.useEffect(() => {
-                    if (s || !i || !t) return;
+                    if (i || !s || !t) return;
                     let { current: r } = e,
                         l = a;
-                    function c(t) {
+                    function o(t) {
                         let n = t.relatedTarget;
                         setTimeout(() => {
-                            (null != n && ("BUTTON" !== n.tagName || n.hasAttribute("aria-expanded"))) || l || I(e);
+                            (null != n && ("BUTTON" !== n.tagName || n.hasAttribute("aria-expanded"))) || l || S(e);
                         }, 100);
                     }
                     return (
-                        r?.addEventListener("focusout", c),
+                        r?.addEventListener("focusout", o),
                         n.document.activeElement?.tagName === "IFRAME" || l || r?.focus(),
                         () => {
-                            r?.removeEventListener("focusout", c), (l = !0);
+                            r?.removeEventListener("focusout", o), (l = !0);
                         }
                     );
-                }, [t, i, s, e, n, a]),
+                }, [t, s, i, e, n, a]),
                 l
             );
-        })(S, i, null == g ? window : g),
-        D = { ...m, frame_id: w, platform: b.vu.DESKTOP },
-        [H, P] = r.useState(!1),
-        U = d.A.theme,
+        })(M, s, null == v ? window : v),
+        U = { ...A, frame_id: b, platform: C.vu.DESKTOP },
+        [w, G] = r.useState(!1),
+        x = u.A.theme,
         k = { ...a };
-    U === p.NJ8.LIGHT ? (k.colorScheme = "light") : (k.colorScheme = "dark");
-    let y = r.useCallback(
+    x === m.NJ8.LIGHT ? (k.colorScheme = "light") : (k.colorScheme = "dark");
+    let F = r.useCallback(
         (e) => {
-            (S.current = e), e?.contentWindow != null && (0, u.Y)(e.contentWindow, w);
+            (M.current = e), e?.contentWindow != null && (0, c.Y)(e.contentWindow, b);
         },
-        [w],
+        [b],
     );
     return (
         !(function (e) {
             let {
                     onIframeMount: t,
                     onIframeUnmount: n,
-                    isNewIframe: s = !0,
+                    isNewIframe: i = !0,
                     isIframeRetiring: a = !0,
                 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                i = r.useRef(t),
+                s = r.useRef(t),
                 l = r.useRef(n),
-                c = r.useRef(s),
-                o = r.useRef(a);
+                o = r.useRef(i),
+                d = r.useRef(a);
             r.useEffect(() => {
-                (i.current = t), (l.current = n), (c.current = s), (o.current = a);
+                (s.current = t), (l.current = n), (o.current = i), (d.current = a);
             }),
                 r.useEffect(
                     () => (
-                        c.current && (A._.dispatch(p.jej.IFRAME_MOUNT, { id: e }), i.current?.(e)),
+                        o.current && (_._.dispatch(m.jej.IFRAME_MOUNT, { id: e }), s.current?.(e)),
                         () => {
-                            o.current && (A._.dispatch(p.jej.IFRAME_UNMOUNT, { id: e }), l.current?.(e));
+                            d.current && (_._.dispatch(m.jej.IFRAME_UNMOUNT, { id: e }), l.current?.(e));
                         }
                     ),
                     [e],
                 );
-        })(w, { onIframeMount: T, onIframeUnmount: R }),
+        })(b, { onIframeMount: D, onIframeUnmount: y }),
         r.useEffect(() => {
             function e(e) {
                 let { resizing: t } = e;
-                P(t);
+                G(t);
             }
             return (
-                A._.subscribe(p.jej.MANUAL_IFRAME_RESIZING, e),
+                _._.subscribe(m.jej.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    A._.unsubscribe(p.jej.MANUAL_IFRAME_RESIZING, e);
+                    _._.unsubscribe(m.jej.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        H && (k.pointerEvents = "none"),
+        w && (k.pointerEvents = "none"),
         null != t
-            ? (0, s.jsx)("iframe", {
-                  ref: y,
+            ? (0, i.jsx)("iframe", {
+                  ref: F,
                   style: k,
                   allow: "autoplay; encrypted-media",
-                  referrerPolicy: v,
+                  referrerPolicy: R,
                   onLoad: function (e) {
                       let n = e.target;
-                      null != n.contentWindow && n.contentWindow.postMessage([o.A.HELLO, D], t ?? ""), C(!0), L?.(n);
+                      null != n.contentWindow && n.contentWindow.postMessage([d.A.HELLO, U], t ?? ""), P(!0), L?.(n);
                   },
                   sandbox: (function (e) {
                       let { allowPopups: t } = e,
-                          n = M;
-                      return t && (n = [...M, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
-                  })({ allowPopups: x }),
+                          n = N;
+                      return t && (n = [...N, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
+                  })({ allowPopups: O }),
                   className: n,
-                  src: `${t}?${new URLSearchParams(D)}`,
+                  src: `${t}?${new URLSearchParams(U)}`,
               })
             : null
     );
@@ -185,13 +186,13 @@ function L(e) {
             },
             [t],
         );
-    return (0, s.jsxs)("div", {
-        className: x.Qf,
+    return (0, i.jsxs)("div", {
+        className: O.Qf,
         children: [
-            !n && (0, s.jsx)("div", { className: i()(x.Qf, x.SL) }),
-            (0, s.jsx)("div", {
-                className: i()(x.Qf, n ? void 0 : x.Ar),
-                children: (0, s.jsx)(v, { ...e, onLoad: l }),
+            !n && (0, i.jsx)("div", { className: s()(O.Qf, O.SL) }),
+            (0, i.jsx)("div", {
+                className: s()(O.Qf, n ? void 0 : O.Ar),
+                children: (0, i.jsx)(R, { ...e, onLoad: l }),
             }),
         ],
     });

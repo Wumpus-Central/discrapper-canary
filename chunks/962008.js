@@ -1,33 +1,34 @@
+"use strict";
 n.d(t, { q: () => S });
 var i,
-    l = n(582128),
-    r = n(989349),
-    s = n.n(r),
-    a = n(465323),
+    r = n(582128),
+    a = n(989349),
+    s = n.n(a),
+    l = n(465323),
     o = n(17928),
     d = n(803496),
     c = n(773669),
     u = n(252424),
-    h = n(158045),
-    A = n(580630),
-    E = n(615396),
-    g = n(945810),
-    C =
+    _ = n(158045),
+    E = n(580630),
+    A = n(615396),
+    h = n(945810),
+    I =
         (((i = {})[(i.CONTROL = 0)] = "CONTROL"),
         (i[(i.OPPORTUNITY = 1)] = "OPPORTUNITY"),
         (i[(i.CONVENIENCE = 2)] = "CONVENIENCE"),
         (i[(i.LOYALTY = 3)] = "LOYALTY"),
         i);
-let _ = (0, g.mj)({
+let f = (0, h.mj)({
     name: "2026-07-monthly-to-yearly-upsell-copy",
     kind: "user",
     defaultConfig: 0,
     variations: { 0: 0, 1: 1, 2: 2, 3: 3 },
 });
-var I = n(202541),
+var p = n(202541),
     T = n(652215),
-    p = n(375708);
-function N(e) {
+    m = n(375708);
+function g(e) {
     let t = e.premiumSince;
     return null == t ? null : s()().diff(s()(t).add(1, "day"), "months");
 }
@@ -35,71 +36,71 @@ function S(e) {
     var t;
     let n,
         i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = (0, o.bG)([c.default], () => c.default.locale),
+        a = (0, o.bG)([c.default], () => c.default.locale),
         s = (function (e) {
             let { location: t } = e;
-            return _.useConfig({ location: t });
+            return f.useConfig({ location: t });
         })({ location: "useMonthlyToYearlyUpsellContent" }),
-        g =
+        h =
             i &&
             null != e &&
             (t = e).status === T.Dmq.ACTIVE &&
             !t.isPurchasedExternally &&
-            !(0, h.Nc)(t) &&
-            null != (n = N(t)) &&
+            !(0, _.Nc)(t) &&
+            null != (n = g(t)) &&
             n <= 4
                 ? (function (e) {
-                      let t = (0, h.EL)(e);
-                      if (null == t || !I.BL.has(t.planId)) return null;
-                      let n = I.hd[t.planId]?.skuId;
+                      let t = (0, _.EL)(e);
+                      if (null == t || !p.BL.has(t.planId)) return null;
+                      let n = p.hd[t.planId]?.skuId;
                       if (null == n) return null;
-                      let i = I.zE[n];
-                      return null == i ? null : { yearlyPlanId: i, skuId: (0, h.mH)(n) };
+                      let i = p.zE[n];
+                      return null == i ? null : { yearlyPlanId: i, skuId: (0, _.mH)(n) };
                   })(e)
                 : null,
-        S = (0, E.zz)(g?.yearlyPlanId ?? null),
-        L = e?.paymentSourceId ?? void 0,
-        { priceOptions: m } = (0, d.A)({
+        S = (0, A.zz)(h?.yearlyPlanId ?? null),
+        N = e?.paymentSourceId ?? void 0,
+        { priceOptions: C } = (0, d.A)({
             activeSubscription: e ?? null,
-            skuIDs: null != g ? [g.skuId] : [],
-            paymentSourceId: L,
+            skuIDs: null != h ? [h.skuId] : [],
+            paymentSourceId: N,
             isGift: !1,
         });
-    return (0, l.useMemo)(() => {
-        if (null == S || null == e || !m.loaded || m.paymentSourceId !== L) return null;
-        let t = (0, h.z_)(S, !1, m);
+    return (0, r.useMemo)(() => {
+        if (null == S || null == e || !C.loaded || C.paymentSourceId !== N) return null;
+        let t = (0, _.z_)(S, !1, C);
         if (null == t) return null;
-        let n = (0, a.LQ)(t.amount, t.currency);
+        let n = (0, l.LQ)(t.amount, t.currency);
         if (null == n || n <= 0) return null;
-        let i = (0, A.$g)(n, t.currency, { maximumFractionDigits: 0 }),
-            l = (0, h.L_)({ planId: S.id, priceOptions: m, subscriptionPlan: S }),
-            o = null != l ? (0, u.l9)(r, l / 100) : null,
-            d = null != o ? p.intl.formatToPlainString(p.t.IAybsG, { discount: o }) : void 0,
+        let i = (0, E.$g)(n, t.currency, { maximumFractionDigits: 0 }),
+            r = (0, _.L_)({ planId: S.id, priceOptions: C, subscriptionPlan: S }),
+            o = null != r ? (0, u.l9)(a, r / 100) : null,
+            d = null != o ? m.intl.formatToPlainString(m.t.IAybsG, { discount: o }) : void 0,
             c = (function (e, t, n) {
                 switch (e) {
-                    case C.CONTROL:
+                    case I.CONTROL:
                         return {
-                            title: p.intl.formatToPlainString(p.t.cZPXK6, { amount: t }),
-                            body: p.intl.string(p.t.KD6MH5),
+                            title: m.intl.formatToPlainString(m.t.cZPXK6, { amount: t }),
+                            body: m.intl.string(m.t.KD6MH5),
                         };
-                    case C.OPPORTUNITY:
+                    case I.OPPORTUNITY:
                         return {
-                            title: p.intl.formatToPlainString(p.t.aKa3qR, { amount: t }),
-                            body: p.intl.string(p.t.NE8WXI),
+                            title: m.intl.formatToPlainString(m.t.aKa3qR, { amount: t }),
+                            body: m.intl.string(m.t.NE8WXI),
                         };
-                    case C.CONVENIENCE:
+                    case I.CONVENIENCE:
                         return {
-                            title: p.intl.formatToPlainString(p.t["/JpB6y"], { amount: t }),
-                            body: p.intl.string(p.t.deiBu8),
+                            title: m.intl.formatToPlainString(m.t["/JpB6y"], { amount: t }),
+                            body: m.intl.string(m.t.deiBu8),
                         };
-                    case C.LOYALTY: {
-                        let e = N(n) ?? 0;
+                    case I.LOYALTY: {
+                        let e = g(n) ?? 0;
                         return {
                             title:
                                 e > 0
-                                    ? p.intl.formatToPlainString(p.t.n0NjuD, { amount: t, months: e })
-                                    : p.intl.formatToPlainString(p.t.WBEYyz, { amount: t }),
-                            body: p.intl.string(p.t.UZWxcy),
+                                    ? m.intl.formatToPlainString(m.t.n0NjuD, { amount: t, months: e })
+                                    : m.intl.formatToPlainString(m.t.WBEYyz, { amount: t }),
+                            body: m.intl.string(m.t.UZWxcy),
                         };
                     }
                     default:
@@ -107,7 +108,7 @@ function S(e) {
                 }
             })(s, i, e);
         if (null == c) return null;
-        let { title: E, body: g } = c;
-        return { title: E, body: g, cta: p.intl.string(p.t.xmQfYw), badge: d, yearlyPlanId: S.id };
-    }, [r, s, e, S, m, L]);
+        let { title: A, body: h } = c;
+        return { title: A, body: h, cta: m.intl.string(m.t.xmQfYw), badge: d, yearlyPlanId: S.id };
+    }, [a, s, e, S, C, N]);
 }

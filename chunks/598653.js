@@ -1,5 +1,6 @@
-s.d(_, { o: () => c });
-var a = s(228366);
-function c(p) {
-    a.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT", value: p });
+"use strict";
+n.d(t, { o: () => r });
+var i = n(228366);
+function r(e) {
+    i.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT", value: e });
 }

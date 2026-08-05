@@ -501,18 +501,19 @@ async function er(e) {
         r.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
 async function ea(e) {
-    let { clipsEnabled: t, guildId: n, trackAnalytics: i = !1 } = e,
-        a = !t || (0, C.Fp)();
+    let { clipsEnabled: t, guildId: n, trackAnalytics: i = !1, analyticsLocation: a } = e,
+        s = !t || (0, C.Fp)();
     await r.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipsEnabled: t, ...(a && { decoupledClipsEnabled: t }) },
+        settings: { clipsEnabled: t, ...(s && { decoupledClipsEnabled: t }) },
     }),
         i &&
             m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, {
+                location: a,
                 ...N.lc("updateClipsEnabled"),
                 clips_enabled: t,
                 guild_id: n,
-                ...(a && { decoupled_clips_enabled: t }),
+                ...(s && { decoupled_clips_enabled: t }),
             });
 }
 function es(e) {
@@ -1099,16 +1100,22 @@ function ex(e) {
 }
 function ek(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, O.C5)("auto");
+        n = arguments.length > 2 ? arguments[2] : void 0,
+        i = (0, O.C5)("auto");
     if (
-        (r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }), !n && (0, O.C5)("auto"))
+        (r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }), !i && (0, O.C5)("auto"))
     ) {
         let { storageLocation: e } = R.Ay.getSettings();
         eD(e).catch((e) => {
             w.nx.error("Failed to reload clips after enabling autoclipping", e);
         });
     }
-    t && m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, { ...N.lc("updateEnableAutoclipping"), autoclips_enabled: e });
+    t &&
+        m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, {
+            ...N.lc("updateEnableAutoclipping"),
+            autoclips_enabled: e,
+            location: n,
+        });
 }
 function eF(e) {
     r.h.dispatch({

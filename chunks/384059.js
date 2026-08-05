@@ -1,9 +1,10 @@
-n.d(t, { O: () => o, X: () => c });
+"use strict";
+n.d(t, { O: () => o, X: () => d });
 var i,
     r = n(734057),
-    l = n(763827),
+    a = n(763827),
     s = n(174459),
-    a = n(652215),
+    l = n(652215),
     o =
         (((i = {}).MIC = "Mic"),
         (i.CAMERA = "Camera"),
@@ -43,16 +44,16 @@ var i,
         (i.VOICE_USER = "Voice User"),
         (i.STREAM_SETTINGS = "Stream Settings"),
         i);
-function c(e, t, n) {
-    let i = l.A.getChannelId(),
-        o = l.A.getGuildId(),
-        c = r.A.getChannel(i)?.type;
-    s.default.track(a.HAw.CALL_BUTTON_CLICKED, {
+function d(e, t, n) {
+    let i = a.A.getChannelId(),
+        o = a.A.getGuildId(),
+        d = r.A.getChannel(i)?.type;
+    s.default.track(l.HAw.CALL_BUTTON_CLICKED, {
         location: e,
         button_name: t,
         toggled_active: n,
         guild_id: o,
         channel_id: i,
-        channel_type: c,
+        channel_type: d,
     });
 }

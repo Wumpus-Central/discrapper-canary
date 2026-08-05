@@ -419,7 +419,7 @@
 .gradient_f5cd6a {
     background: radial-gradient(75% 90% at 50% 100%, var(--background-base-lowest) 55%, var(--transparent) 100%), linear-gradient(90deg, var(--expressive-gradient-blue-start) 0, var(--expressive-gradient-blue-end) 100%);
     bottom: auto;
-    height: 70%;
+    height: 100%;
     inset-inline-end: 0;
     inset-inline-start: 0;
     pointer-events: none;
