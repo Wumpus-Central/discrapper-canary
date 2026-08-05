@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(661531),
     N = n(27232),
     C = n(555704),
-    R = n(92008),
-    O = n(25277),
+    O = n(92008),
+    R = n(25277),
     L = n(583613),
     D = n(327143),
     y = n(615300),
@@ -196,7 +196,7 @@ class B extends r.PureComponent {
         let { className: r, trendingCategories: a } = this.props;
         return 0 === a.length
             ? (0, i.jsx)(w, { columns: e, width: t, renderColumn: V })
-            : (0, i.jsx)(R.f, {
+            : (0, i.jsx)(O.f, {
                   ref: this._masonryRef,
                   fade: !0,
                   className: s()(F.kL, r),
@@ -218,7 +218,7 @@ class B extends r.PureComponent {
         return null != e ? e.getCoordsMap() : {};
     };
     render() {
-        return (0, i.jsx)(O.A, {
+        return (0, i.jsx)(R.A, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
@@ -250,7 +250,11 @@ class $ extends r.PureComponent {
         "" === e.query &&
             "" !== this.props.query &&
             null == this.state.resultType &&
-            this.search(this.props.query, x.dD.SEARCH);
+            this.search(this.props.query, x.dD.SEARCH),
+            "" !== e.query &&
+                "" === this.props.query &&
+                this.state.resultType === x.dD.SEARCH &&
+                this.setState({ resultType: null });
     }
     componentWillUnmount() {
         _.h.wait(() => E.Se()), document.removeEventListener("keydown", this.backToFrontPage);
@@ -413,9 +417,15 @@ class $ extends r.PureComponent {
     }
 }
 let z = r.forwardRef((e, t) => {
-    r.useEffect(() => {
-        e.persistSearch || ((0, h.Ri)(e.initialQuery ?? ""), E.$P(e.initialQuery ?? "", x.dD.SEARCH));
-    }, [e.persistSearch, e.initialQuery]);
+    r.useEffect(
+        () => (
+            e.persistSearch || ((0, h.Ri)(e.initialQuery ?? ""), E.$P(e.initialQuery ?? "", x.dD.SEARCH)),
+            () => {
+                e.persistSearch || (0, h.Ri)("");
+            }
+        ),
+        [e.persistSearch, e.initialQuery],
+    );
     let {
             query: n,
             resultQuery: a,
