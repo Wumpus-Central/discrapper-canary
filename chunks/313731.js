@@ -5,7 +5,7 @@ var i = n(435558),
     a = n(636401),
     s = n(652215);
 class l {
-    transport;
+    source;
     version;
     encoding;
     id = r().uniqueId();
@@ -13,10 +13,13 @@ class l {
     application = { id: null, name: null, icon: null };
     abortController = new AbortController();
     constructor(e, t, n) {
-        (this.transport = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t);
+        (this.source = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t);
     }
     checkRpcVersion(e) {
         if (null == e || e > s.dL4 || e < 1)
             throw new a.A({ closeCode: s.YI$.INVALID_VERSION }, `Invalid Version: ${e}`);
+    }
+    get transport() {
+        return this.source.type;
     }
 }

@@ -357,7 +357,7 @@ var es = n(688810),
     eT = n(927813),
     em = n(915725),
     eg = n(572164),
-    eS = n(430795),
+    eS = n(693117),
     eN = n(118328),
     eC = n(253146);
 let eO = 2 * eT.A.Millis.WEEK;
@@ -498,8 +498,8 @@ var e0 = n(95701),
     e2 = n(280450),
     e3 = n(734057),
     e4 = n(184989),
-    e6 = n(71393),
-    e5 = n(293246),
+    e5 = n(71393),
+    e6 = n(293246),
     e7 = n(576705),
     e8 = n(290863),
     e9 = n(994500),
@@ -691,7 +691,7 @@ let tY = a.memo(function (e) {
             ),
             j = a.useCallback(
                 (e) => () => {
-                    (0, eE.X)(L, eE.O.LEAVE_ACTIVITY), eD.A.stopFrame({ applicationId: e });
+                    (0, eE.X)(L, eE.O.LEAVE_ACTIVITY), eD.A.stopFrame(e);
                 },
                 [L],
             ),
@@ -832,11 +832,7 @@ let tY = a.memo(function (e) {
             ea =
                 null == A
                     ? null
-                    : (0, r.jsx)(tN.A, {
-                          tooltipText: z.intl.string(z.t["R/FK4A"]),
-                          onClick: j(A.applicationId),
-                          icon: tE.o,
-                      }),
+                    : (0, r.jsx)(tN.A, { tooltipText: z.intl.string(z.t["R/FK4A"]), onClick: j(A.id), icon: tE.o }),
             el =
                 !N || C
                     ? null
@@ -962,8 +958,8 @@ function t1(e) {
 var t2 = n(532624),
     t3 = n(350535),
     t4 = n(16590),
-    t6 = n(412126);
-function t5(e) {
+    t5 = n(412126);
+function t6(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
         a = (0, _.bG)([t2.Ay], () => t2.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
         s = null != a && a.shortcut.length > 0 ? t3.dI(a.shortcut, !0) : null,
@@ -980,11 +976,11 @@ function t5(e) {
               ? (0, r.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
-                    className: t6.En,
+                    className: t5.En,
                     tag: "div",
                     children: z.intl.format(t4.default.ESZwQX, {
                         keybind: s,
-                        keybindHook: () => (0, r.jsx)(tJ.e, { shortcut: s, className: t6.oH, keyClassName: t6.Bj }),
+                        keybindHook: () => (0, r.jsx)(tJ.e, { shortcut: s, className: t5.oH, keyClassName: t5.Bj }),
                     }),
                 })
               : null
@@ -1072,7 +1068,7 @@ function nt(e) {
                     className: t7.pq,
                     children: [
                         null != h ? (0, r.jsx)(t8, { name: h, applicationId: s?.id }) : null,
-                        (0, r.jsx)(t5, { isStreaming: i, isCurrentlyRunningGame: A, onClickNotSharing: o }),
+                        (0, r.jsx)(t6, { isStreaming: i, isCurrentlyRunningGame: A, onClickNotSharing: o }),
                     ],
                 }),
             }),
@@ -1421,7 +1417,7 @@ function nh(e) {
 }
 function nI(e) {
     let { frame: t, application: n, accountLinkUpsellTargetRef: i, isActivityPopoutOpen: s } = e,
-        l = a.useMemo(() => ({ start: t.connectedSince }), [t.connectedSince]),
+        l = a.useMemo(() => ({ start: t.data.connectedSince }), [t.data.connectedSince]),
         o = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(eV.A, { className: nl.n8, game: n, size: eV.M.SMALL, ref: i }),
@@ -1432,10 +1428,7 @@ function nI(e) {
                             onClick: function () {
                                 s
                                     ? p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
-                                    : eD.A.updateFrameLayoutMode({
-                                          applicationId: t.applicationId,
-                                          layoutMode: ni.y.FOCUSED,
-                                      });
+                                    : eD.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: ni.y0.FOCUSED });
                             },
                             onMouseDown: (e) => {
                                 e.stopPropagation();
@@ -1506,11 +1499,11 @@ let np = (0, N.A)(function (e) {
         p = (0, _.bG)([te.Ay, e3.A], () => e3.A.getChannel(te.Ay.getVoiceChannelId())),
         T = (0, _.bG)([L.Ay], () => L.Ay.getConnectedActivityChannelId()),
         m = (0, _.bG)([e3.A], () => e3.A.getChannel(T)),
-        g = (0, _.bG)([e6.A], () => e6.A.getGuild(m?.guild_id)),
+        g = (0, _.bG)([e5.A], () => e5.A.getGuild(m?.guild_id)),
         [S, N] = (0, _.yK)([e1.A], () => [e1.A.getCurrentUserActiveStream(), e1.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
-        R = (0, _.bG)([ey.A], () => ey.A.getConnectedFrame()),
-        D = (0, _.bG)([e6.A, e7.A], () => null == p || eH.vz(p, e6.A, e7.A, !1)),
+        R = (0, _.bG)([ey.A], () => (0, ni.ny)(ey.A.getMainFrame())),
+        D = (0, _.bG)([e5.A, e7.A], () => null == p || eH.vz(p, e5.A, e7.A, !1)),
         [b] = (0, eu.A)([
             (function () {
                 if (null != N && null != N.id) return N.id;
@@ -1522,7 +1515,7 @@ let np = (0, N.A)(function (e) {
         ]),
         P =
             ((0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
-            (0, _.bG)([e5.Ay], () => (0, ej.A)(e5.Ay) && (0, tr.isWindows)()) || !1),
+            (0, _.bG)([e6.Ay], () => (0, ej.A)(e6.Ay) && (0, tr.isWindows)()) || !1),
         w = (0, _.bG)([e8.A], () => (null != c ? e8.A.findActivity(c, (e) => e.type === G.$pd.PLAYING) : null)),
         x = null != S && S.ownerId === c && S.state !== G.XYD.ENDED,
         k = (0, _.bG)([tt.default, e9.A], () => (null != m ? (0, eA.m1)(m, tt.default, e9.A) : void 0)),

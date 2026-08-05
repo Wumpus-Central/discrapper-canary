@@ -19,22 +19,22 @@ var r = n(646865),
     p = n(431740),
     T = n(516184);
 function m(e) {
-    let { applicationId: t, onMouseDown: n, onMouseMove: m, onMouseLeave: g, onFocus: S, idle: N } = e,
-        C = (0, o.h)(t),
-        O = (0, u.Us)() === f.BRT.POPOUT,
-        { parentAnalyticsLocation: R } = (0, l.Ay)();
+    let { applicationId: t, frameId: n, onMouseDown: m, onMouseMove: g, onMouseLeave: S, onFocus: N, idle: C } = e,
+        O = (0, o.h)(t),
+        R = (0, u.Us)() === f.BRT.POPOUT,
+        { parentAnalyticsLocation: L } = (0, l.Ay)();
     return (0, i.jsxs)("div", {
         className: T._v,
-        onMouseMove: m,
-        onMouseDown: n,
-        onMouseLeave: g,
+        onMouseMove: g,
+        onMouseDown: m,
+        onMouseLeave: S,
         children: [
             (0, i.jsx)("div", {
                 className: T.K1,
                 children: (0, i.jsx)(E.X, {
-                    idle: N,
-                    title: C?.name ?? "",
-                    onJumpToChannel: S,
+                    idle: C,
+                    title: O?.name ?? "",
+                    onJumpToChannel: N,
                     preventIdleComponent: _.A,
                 }),
             }),
@@ -46,22 +46,22 @@ function m(e) {
                     justify: c.A.Justify.END,
                     align: c.A.Align.CENTER,
                     children: [
-                        O || (0, r.f)()
+                        R || (0, r.f)()
                             ? null
                             : (0, i.jsx)(A.A, {
                                   className: p.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      (0, d.X)(R, d.O.POPOUT, !0),
+                                      (0, d.X)(L, d.O.POPOUT, !0),
                                           (0, s.A)({
                                               onConfirm: async () => {
-                                                  await h.A.refreshProxyTicket({ applicationId: t }), (0, a.jp)();
+                                                  await h.A.refreshProxyTicket(n), (0, a.jp)();
                                               },
                                           });
                                   },
                                   onClosePopout: f.FXj,
                               }),
-                        (0, i.jsx)(I.A, { applicationId: t, className: p.BD }),
+                        (0, i.jsx)(I.A, { frameId: n, className: p.BD }),
                     ],
                 }),
             }),

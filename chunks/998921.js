@@ -1,39 +1,40 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => N });
 var i = n(264572),
     r = n(143236),
-    s = n(735438),
-    a = n.n(s),
-    o = n(626584),
-    l = n(19575),
-    u = n(861621),
+    a = n(435558),
+    s = n.n(a),
+    l = n(626584),
+    o = n(19575),
+    d = n(861621),
     c = n(313731),
-    d = n(546983),
-    _ = n(652215);
-let h = l.Ay.requireModule("discord_rpc").RPCIPC,
-    f = new o.A("RPCServer:IPC"),
-    p = { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, PING: 3, PONG: 4 };
-function E(e, t) {
+    u = n(546983),
+    _ = n(613057),
+    E = n(652215);
+let A = o.Ay.requireModule("discord_rpc").RPCIPC,
+    h = new l.A("RPCServer:IPC"),
+    I = { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, PING: 3, PONG: 4 };
+function f(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : (e._didHandshake = t);
 }
-function m(e) {
+function p(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
-function g(e) {
+function T(e) {
     return new Promise((t, n) => {
-        "string" == typeof e && (e = h.net.createConnection(e));
-        let i = new I(e, "json");
+        "string" == typeof e && (e = A.net.createConnection(e));
+        let i = new g(e, "json");
         function r() {
-            i.close(_.YI$.CLOSE_NORMAL, "test client going away");
+            i.close(E.YI$.CLOSE_NORMAL, "test client going away");
         }
         e.on("data", (e) => {
             try {
                 i.read(e);
             } catch (e) {
-                i.close(_.YI$.CLOSE_UNSUPPORTED, e.message);
+                i.close(E.YI$.CLOSE_UNSUPPORTED, e.message);
             }
         });
-        let s = Promise.race([
+        let a = Promise.race([
             new Promise((t) => e.on("error", () => t())),
             new Promise((t, n) => {
                 e.on("pong", () => n(Error("socket responded with pong")));
@@ -49,10 +50,10 @@ function g(e) {
                 throw (r(), e);
             },
         );
-        return e.write(A(p.PING, a().uniqueId())), s.then(t, n);
+        return e.write(m(I.PING, s().uniqueId())), a.then(t, n);
     });
 }
-function A(e, t) {
+function m(e, t) {
     t = JSON.stringify(t);
     let n = i.Buffer.byteLength(t),
         r = i.Buffer.alloc(8 + n);
@@ -63,7 +64,7 @@ function A(e, t) {
         r.buffer.slice(r.byteOffset, r.byteOffset + r.byteLength)
     );
 }
-class I extends c.A {
+class g extends c.A {
     messageBuffer = i.Buffer.alloc(0);
     currentHeader = null;
     MAX_BUFFER_SIZE = 5242880;
@@ -71,10 +72,10 @@ class I extends c.A {
     onClose = null;
     clientId = null;
     constructor(e, t, n = null) {
-        super("ipc", _.dL4, t),
+        super({ type: _.z4.IPC }, E.dL4, t),
             (this.socket = e),
             (this.onClose = n),
-            E(e, !1),
+            f(e, !1),
             this.socket.on("close", () => {
                 null != this.onClose && (this.onClose(), (this.onClose = null));
             });
@@ -84,18 +85,18 @@ class I extends c.A {
         return e.copy(r, 0, t, n), r;
     }
     send(e) {
-        f.info(`Socket Emit: ${this.id}`, (0, u.A)(e)), this.socket.write(A(p.FRAME, e));
+        h.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(m(I.FRAME, e));
     }
     close(e, t) {
         try {
-            this.socket.end(A(p.CLOSE, { code: e, message: t }));
+            this.socket.end(m(I.CLOSE, { code: e, message: t }));
         } catch (e) {
-            f.error(`Socket End Error: ${e.message}`);
+            h.error(`Socket End Error: ${e.message}`);
         }
         try {
             this.socket.destroy();
         } catch (e) {
-            f.error(`Socket Destroy Error: ${e.message}`);
+            h.error(`Socket Destroy Error: ${e.message}`);
         }
         null != this.onClose && (this.onClose(), (this.onClose = null));
     }
@@ -119,7 +120,7 @@ class I extends c.A {
                         opcode: this.messageBuffer.readInt32LE(0),
                         size: this.messageBuffer.readInt32LE(4),
                     }),
-                    !Object.values(p).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
+                    !Object.values(I).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
                 )
                     throw Error("protocol error");
                 if (this.currentHeader.size > 3145728) throw Error("message too large");
@@ -139,67 +140,67 @@ class I extends c.A {
     }
     dispatchMessage(e, t) {
         switch (e) {
-            case p.PING:
-                this.socket.emit("ping", t), this.socket.write(A(p.PONG, t));
+            case I.PING:
+                this.socket.emit("ping", t), this.socket.write(m(I.PONG, t));
                 break;
-            case p.PONG:
+            case I.PONG:
                 this.socket.emit("pong", t);
                 break;
-            case p.HANDSHAKE:
+            case I.HANDSHAKE:
                 this.handleHandshake(t), this.socket.emit("handshake", t);
                 break;
-            case p.FRAME:
-                if (!m(this.socket)) throw Error("did not handshake");
+            case I.FRAME:
+                if (!p(this.socket)) throw Error("did not handshake");
                 this.socket.emit("request", t);
                 break;
-            case p.CLOSE:
-                this.close(_.YI$.CLOSE_NORMAL, "client disconnect");
+            case I.CLOSE:
+                this.close(E.YI$.CLOSE_NORMAL, "client disconnect");
         }
     }
     handleHandshake(e) {
-        if (m(this.socket)) throw Error("already did handshake");
-        (this.clientId = e.client_id), this.checkRpcVersion(+e.v), E(this.socket, !0);
+        if (p(this.socket)) throw Error("already did handshake");
+        (this.clientId = e.client_id), this.checkRpcVersion(+e.v), f(this.socket, !0);
     }
 }
-class T extends r.EventEmitter {
+class S extends r.EventEmitter {
     activeConnections = 0;
     MAX_CONNECTIONS = 100;
     constructor() {
         super();
-        const e = h.net.createServer((e) => this.handleConnection(e));
-        e.on("error", (e) => f.error(`Error: ${e.message}`)),
-            h.getAvailableSocket(g).then((t) => {
+        const e = A.net.createServer((e) => this.handleConnection(e));
+        e.on("error", (e) => h.error(`Error: ${e.message}`)),
+            A.getAvailableSocket(T).then((t) => {
                 e.listen(t, () => {
                     ("function" == typeof e.listening ? e.listening() : e.listening) &&
-                        f.info(`Starting on ${e.address()}`);
+                        h.info(`Starting on ${e.address()}`);
                 });
             });
     }
     handleConnection(e) {
         if (this.activeConnections >= this.MAX_CONNECTIONS) {
-            f.warn(`Connection limit reached (${this.MAX_CONNECTIONS}), rejecting connection`);
+            h.warn(`Connection limit reached (${this.MAX_CONNECTIONS}), rejecting connection`);
             try {
-                e.end(A(p.CLOSE, { code: _.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
+                e.end(m(I.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
             } catch (e) {
-                f.error(`Socket End Error: ${e.message}`);
+                h.error(`Socket End Error: ${e.message}`);
             }
             try {
                 e.destroy();
             } catch (e) {
-                f.error(`Socket Destroy Error: ${e.message}`);
+                h.error(`Socket Destroy Error: ${e.message}`);
             }
             return;
         }
         this.activeConnections++;
-        let t = new I(e, "json", () => {
+        let t = new g(e, "json", () => {
                 this.activeConnections--,
-                    f.info(`Socket Close: ${t.id} ${t.clientId ?? "unknown"} (active: ${this.activeConnections})`),
+                    h.info(`Socket Close: ${t.id} ${t.clientId ?? "unknown"} (active: ${this.activeConnections})`),
                     t.abortController.abort(),
                     this.emit("disconnect", t);
             }),
             n = setTimeout(() => {
-                f.warn("Handshake timeout for connection, closing socket"),
-                    t.close(_.YI$.CLOSE_ABNORMAL, "Handshake timeout");
+                h.warn("Handshake timeout for connection, closing socket"),
+                    t.close(E.YI$.CLOSE_ABNORMAL, "Handshake timeout");
             }, 1e4);
         e.on("readable", () => {
             let n = e.read();
@@ -209,19 +210,19 @@ class T extends r.EventEmitter {
                 try {
                     t.read(i.Buffer.from(e));
                 } catch (e) {
-                    clearTimeout(n), f.error(`Socket Error: ${e.message}`), t.close(_.YI$.CLOSE_UNSUPPORTED, e.message);
+                    clearTimeout(n), h.error(`Socket Error: ${e.message}`), t.close(E.YI$.CLOSE_UNSUPPORTED, e.message);
                 }
             }),
             e.once("handshake", () => {
                 clearTimeout(n);
                 let i = t.clientId;
-                f.info(`Socket Opened: ${t.id} ${i ?? "unknown"} (active: ${this.activeConnections})`),
-                    e.on("error", (e) => f.error(`Socket Error: ${e.message}`)),
-                    (0, d.j7)(t, null, i)
+                h.info(`Socket Opened: ${t.id} ${i ?? "unknown"} (active: ${this.activeConnections})`),
+                    e.on("error", (e) => h.error(`Socket Error: ${e.message}`)),
+                    (0, u.j7)(t, null, i)
                         .then(() => {
                             t.abortController.signal.aborted ||
                                 (e.on("request", (e) => {
-                                    f.info(`Socket Message: ${t.id}`, (0, u.A)(e)), this.emit("request", t, e);
+                                    h.info(`Socket Message: ${t.id}`, (0, d.A)(e)), this.emit("request", t, e);
                                 }),
                                 this.emit("connect", t));
                         })
@@ -232,4 +233,4 @@ class T extends r.EventEmitter {
             });
     }
 }
-let S = new T();
+let N = new S();

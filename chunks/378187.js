@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G });
+n.d(t, { A: () => x });
 var i = n(412703),
     r = n(902173),
     a = n(439372),
@@ -15,7 +15,7 @@ var i = n(412703),
     h = n(607567),
     I = n(927813),
     f = n(403362),
-    p = n(340124),
+    p = n(352774),
     T = n(859703),
     m = n(24001),
     g = n(759366),
@@ -25,14 +25,15 @@ var i = n(412703),
     O = n(639214),
     R = n(792620),
     L = n(814793),
-    y = n(190107);
-let D = +I.A.Millis.MINUTE,
-    v = +I.A.Millis.SECOND,
-    b = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
-function M(e) {
+    D = n(190107),
+    y = n(165610);
+let v = +I.A.Millis.MINUTE,
+    b = +I.A.Millis.SECOND,
+    M = (0, N.L)({ location: D.rE.QUESTS_MANAGER });
+function P(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
-function P(e) {
+function U(e) {
     let t = g.A.getState().autoEnroll,
         n = T.A.quests;
     for (let i of (0, O.jm)(n, e))
@@ -43,10 +44,10 @@ function P(e) {
                 sourceQuestContent: m.uF.RUNNING_ACTIVITY,
             });
 }
-function U(e) {
+function w(e) {
     return null != e && e.config.features.includes(r.L.MANUAL_HEARTBEAT_INITIALIZATION);
 }
-class w extends a.A {
+class G extends a.A {
     heartbeats = {
         [i.n.PLAY_ON_DESKTOP]: new Map(),
         [i.n.STREAM_ON_DESKTOP]: new Map(),
@@ -54,14 +55,14 @@ class w extends a.A {
     };
     calculateHeartbeatDurationMs = (e) => {
         let t = T.A.quests.get(e);
-        if (null == t || null == t.config || null == t.userStatus) return D;
+        if (null == t || null == t.config || null == t.userStatus) return v;
         let { progressSeconds: n, targetSeconds: r } = (0, R.Yh)(t, i.o.DESKTOP),
             a = Math.max(0, (r - n) * I.A.Millis.SECOND);
-        return a <= D ? a + v : D;
+        return a <= v ? a + b : v;
     };
     initiateHeartbeat = (e, t, n) => {
         let r = this.heartbeats[t];
-        if (r.has(e)) return void b.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
+        if (r.has(e)) return void M.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
         let a = () => {
             let s = this.getActivelyProgressingQuests(t);
             if (s.has(e)) {
@@ -72,14 +73,14 @@ class w extends a.A {
                 if (t === i.n.STREAM_ON_DESKTOP) {
                     let n = E.A.getCurrentUserActiveStream();
                     if (null == n) {
-                        b.log(
+                        M.log(
                             `~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: ${e}`,
                         ),
                             this.terminateHeartbeat(e, t);
                         return;
                     }
                     let i = (0, c._z)(n);
-                    b.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                    M.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
                         (0, p.R2)({
                             questId: e,
                             streamKey: i,
@@ -88,36 +89,36 @@ class w extends a.A {
                             executableFingerprint: d,
                         });
                 } else
-                    b.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                    M.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
                         (0, p.R2)({ questId: e, applicationId: o, executablePath: u, executableFingerprint: d });
                 let _ = this.calculateHeartbeatDurationMs(e),
                     A = window.setTimeout(a, _);
                 r.set(e, A);
             } else
-                b.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
+                M.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
                     this.terminateHeartbeat(e, t);
         };
-        b.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), a();
+        M.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), a();
     };
     terminateHeartbeat = (e, t) => {
         let n = this.heartbeats[t],
             i = T.A.quests,
             r = n.get(e);
         if (null != r) {
-            b.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
+            M.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
                 window.clearTimeout(r),
                 n.delete(e);
             let t = i.get(e);
             null != t &&
-                M(t) &&
-                (b.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
+                P(t) &&
+                (M.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
                 (0, p.R2)({ questId: e, terminal: !0 }));
         }
     };
     handleSendHeartbeatSuccess = (e) => {
         let { questId: t, userStatus: n } = e;
-        if ((b.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
-            for (let e of (b.log(
+        if ((M.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
+            for (let e of (M.log(
                 `~ handleSendHeartbeatSuccess -> Quest ${t} completed, terminating any heartbeats for it`,
             ),
             Object.keys(this.heartbeats)))
@@ -125,12 +126,12 @@ class w extends a.A {
     };
     handleSendHeartbeatFailure = (e) => {
         let { questId: t } = e;
-        b.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
+        M.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
     };
     syncHeartbeats(e, t, n) {
         for (let i of ("VOICE_STATE_UPDATES" !== t &&
             "PASSIVE_UPDATE_V2" !== t &&
-            b.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
+            M.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
         e)) {
             let e = this.heartbeats[i],
                 t = this.getActivelyProgressingQuests(i);
@@ -156,7 +157,7 @@ class w extends a.A {
             t = d.Ay.getRunningGames(),
             n = d.Ay.getRunningNonGames(),
             i = T.A.quests;
-        b.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
+        M.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
         let r = {};
         for (let e of t) {
             if (e.isLauncher) continue;
@@ -178,7 +179,7 @@ class w extends a.A {
                 a = (0, o.Ic)(n.exePath);
             for (let r of i.values()) {
                 let i = (0, R.pU)(r);
-                if (!M(r) || null == i) continue;
+                if (!P(r) || null == i) continue;
                 let s = i.find((e) => e === t);
                 if (null != s)
                     e.set(r.id, {
@@ -198,7 +199,7 @@ class w extends a.A {
             }
         }
         return (
-            b.log(
+            M.log(
                 "~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -211,15 +212,15 @@ class w extends a.A {
         if (null == t || 2 > h.Ay.countVoiceStatesForChannel(t.channelId)) return e;
         let n = E.A.getStreamerActiveStreamMetadata();
         if (null == n) return e;
-        b.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
+        M.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let i = n.id;
         if (null == i) return e;
         for (let t of T.A.quests.values()) {
             let n = (0, R.a2)(t);
-            M(t) && null != n && n === i && e.set(t.id, { applicationId: i });
+            P(t) && null != n && n === i && e.set(t.id, { applicationId: i });
         }
         return (
-            b.log(
+            M.log(
                 "~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -229,11 +230,11 @@ class w extends a.A {
     getActivelyProgressingActivityQuests() {
         let e = new Map(),
             t = s.Ay.getSelfEmbeddedActivities(),
-            n = l.A.getConnectedFrame(),
+            n = l.A.getMainFrame(),
             i = new Set(t.keys());
         if (
-            (null != n && i.add(n.applicationId),
-            b.log("~ getActivelyProgressingActivityQuestIds -> Running activity applicationIds: ", Array.from(i)),
+            ((0, y.x1)(n) && i.add(n.applicationId),
+            M.log("~ getActivelyProgressingActivityQuestIds -> Running activity applicationIds: ", Array.from(i)),
             0 === i.size)
         )
             return e;
@@ -241,11 +242,11 @@ class w extends a.A {
         for (let t of i)
             for (let n of r.values()) {
                 let i = (0, R.vS)(n);
-                M(n) && null != i && i === t && e.set(n.id, { applicationId: t });
+                P(n) && null != i && i === t && e.set(n.id, { applicationId: t });
             }
-        for (let t of r.values()) M(t) && (0, L._e)(t) && e.set(t.id, { applicationId: y.ej });
+        for (let t of r.values()) P(t) && (0, L._e)(t) && e.set(t.id, { applicationId: D.ej });
         return (
-            b.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
+            M.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e
         );
     }
@@ -256,7 +257,7 @@ class w extends a.A {
             this.syncHeartbeats(
                 [i.n.PLAY_ON_DESKTOP, i.n.STREAM_ON_DESKTOP, i.n.PLAY_ACTIVITY],
                 "QUESTS_ENROLL_SUCCESS",
-                (e) => !U(e),
+                (e) => !w(e),
             ),
         QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
         QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
@@ -274,26 +275,26 @@ class w extends a.A {
         VOICE_STATE_UPDATES: () => this.syncHeartbeats([i.n.STREAM_ON_DESKTOP], "VOICE_STATE_UPDATES"),
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: (e) => {
             let { applicationId: t } = e;
-            P(t);
+            U(t);
         },
         FRAME_LAUNCH: async (e) => {
             let { applicationId: t } = e;
-            await P(t), this.syncHeartbeats([i.n.PLAY_ACTIVITY], "FRAME_LAUNCH", (e) => !U(e));
+            await U(t), this.syncHeartbeats([i.n.PLAY_ACTIVITY], "FRAME_LAUNCH", (e) => !w(e));
         },
         FRAME_STOP: () => {
             this.syncHeartbeats([i.n.PLAY_ACTIVITY], "FRAME_STOP");
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: () => {
-            this.syncHeartbeats([i.n.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !U(e));
+            this.syncHeartbeats([i.n.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !w(e));
         },
         QUEST_APPLICATION_START_TIMER: (e) => {
             let { questId: t } = e;
             this.syncHeartbeats(
                 [i.n.PLAY_ACTIVITY],
                 "QUEST_APPLICATION_START_TIMER",
-                (e) => null != e && e.id === t && U(e),
+                (e) => null != e && e.id === t && w(e),
             );
         },
     };
 }
-let G = new w();
+let x = new G();

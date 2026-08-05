@@ -4,89 +4,113 @@ var i = n(17928),
     r = n(228366),
     a = n(956518),
     s = n(165610),
-    l = n(5867);
-let o = null,
-    d = new Map(),
-    c = new Map(),
-    u = new Map(),
-    _ = new Map();
+    l = n(5867),
+    o = n(818348);
+let d = new Map(),
+    c = null;
+function u(e, t) {
+    return _(e, o.YQ, t);
+}
+function _(e, t, n) {
+    if (null == e) return !1;
+    let i = d.get(e);
+    return !!(0, s.x1)(i) && !!t(i.data) && (d.set(e, { ...i, data: n(i.data) }), !0);
+}
 class E extends i.Ay.Store {
     static displayName = "FramesStore";
-    getConnectedFrame() {
-        return o;
+    getFrame(e) {
+        return d.get(e);
     }
-    getFrameLayoutMode() {
-        return o?.layoutMode;
+    getMainFrame() {
+        return null != c ? (d.get(c) ?? null) : null;
     }
-    getActivityPanelMode() {
-        return o?.activityPanelMode ?? l.Gd.DISCONNECTED;
+    getAllFrames() {
+        return Array.from(d.values());
     }
-    isFrameActive() {
-        return null != o;
+    getFrameByIframeId(e) {
+        for (let t of d.values()) if ((0, s.x1)(t) && t.data.iframeId === e) return t;
     }
-    isLaunchingFrame(e) {
-        return null != e ? (d.get(e) ?? !1) : d.size > 0;
-    }
-    isProxyTicketRefreshing(e) {
-        return c.has(e);
-    }
-    getOrientationLockStateForApp(e) {
-        return u.get(e);
-    }
-    getPipOrientationLockStateForApp(e) {
-        return _.get(e) ?? this.getOrientationLockStateForApp(e);
+    getFrameBySurface(e, t) {
+        return d.get((0, s.VA)(e, t));
     }
 }
 let A = new E(r.h, {
     FRAME_LAUNCH_START: function (e) {
-        let { applicationId: t } = e;
-        d.set(t, !0);
+        let { applicationId: t, frameId: n, surface: i } = e,
+            r = (0, s.Yf)(i);
+        d.set(n, { id: n, applicationId: t, intent: r, surface: i, state: "loading", data: null }),
+            r === s.sV.MAIN && (c = n);
     },
     FRAME_LAUNCH: function (e) {
-        let { applicationId: t, proxyTicket: n, channelId: i } = e,
-            r = (0, a.Ay)(t);
-        null == r
-            ? d.delete(t)
-            : (d.delete(t),
-              (o = {
-                  applicationId: t,
-                  url: r,
-                  connectedSince: Date.now(),
-                  layoutMode: s.y.FOCUSED,
-                  activityPanelMode: l.Gd.PANEL,
-                  proxyTicket: n,
-                  channelId: i,
-              }));
+        let { frameId: t, proxyTicket: n } = e,
+            i = d.get(t);
+        if (null == i) return;
+        let r = (0, a.Ay)(i.applicationId);
+        if (null == r) {
+            d.delete(t), c === t && (c = null);
+            return;
+        }
+        d.set(t, {
+            ...i,
+            state: "launched",
+            data: {
+                url: r,
+                connectedSince: Date.now(),
+                layoutMode: s.y0.FOCUSED,
+                activityPanelMode: l.Gd.PANEL,
+                proxyTicket: n,
+                proxyTicketRefreshing: !1,
+                orientationLock: null,
+                pipOrientationLock: null,
+                iframeId: null,
+            },
+        });
     },
     FRAME_LAUNCH_FAIL: function (e) {
-        let { applicationId: t } = e;
-        d.delete(t);
+        let { frameId: t } = e;
+        d.delete(t), c === t && (c = null);
     },
     FRAME_STOP: function (e) {
-        let { applicationId: t } = e;
-        o?.applicationId === t && (o = null);
+        let { frameId: t } = e;
+        d.delete(t), c === t && (c = null);
     },
     FRAME_UPDATE_LAYOUT_MODE: function (e) {
-        let { applicationId: t, layoutMode: n } = e;
-        o?.applicationId === t && (o = { ...o, layoutMode: n });
+        let { frameId: t, layoutMode: n } = e;
+        return u(t, (e) => ({ ...e, layoutMode: n }));
     },
     FRAME_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
-        null != o && (o = { ...o, activityPanelMode: t });
+        return u(c, (e) => ({ ...e, activityPanelMode: t }));
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
-        let { applicationId: t, lockState: n, pictureInPictureLockState: i } = e;
-        null == n ? u.delete(t) : u.set(t, n), null === i ? _.delete(t) : void 0 !== i && _.set(t, i);
+        let { frameId: t, lockState: n, pictureInPictureLockState: i } = e;
+        return u(t, (e) => ({
+            ...e,
+            orientationLock: n ?? null,
+            pipOrientationLock: void 0 === i ? e.pipOrientationLock : i,
+        }));
     },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
-        let { applicationId: t, refreshing: n } = e;
-        n ? c.set(t, !0) : c.delete(t);
+        let { frameId: t, refreshing: n } = e;
+        return u(t, (e) => ({ ...e, proxyTicketRefreshing: n }));
     },
     FRAME_UPDATE_PROXY_TICKET: function (e) {
-        let { applicationId: t, proxyTicket: n } = e;
-        o?.applicationId === t && (o = { ...o, proxyTicket: n });
+        let { frameId: t, proxyTicket: n } = e;
+        return u(t, (e) => ({ ...e, proxyTicket: n }));
+    },
+    FRAME_IFRAME_MOUNT: function (e) {
+        let { frameId: t, iframeId: n } = e;
+        return u(t, (e) => ({ ...e, iframeId: n }));
+    },
+    FRAME_IFRAME_UNMOUNT: function (e) {
+        let { frameId: t, iframeId: n } = e;
+        return _(
+            t,
+            (e) => e.iframeId === n,
+            (e) => ({ ...e, iframeId: null }),
+        );
     },
     CHANNEL_SELECT: function (e) {
-        return null != o && o.layoutMode !== s.y.PIP && ((o = { ...o, layoutMode: s.y.PIP }), !0);
+        return u(c, (e) => ({ ...e, layoutMode: s.y0.PIP }));
     },
 });

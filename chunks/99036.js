@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588515, Version Hash: 5c4bc184b890390dd26244becef39234ec252a8e`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 588693, Version Hash: fd5ed37c031a292262b65656f259611691752e44`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     ef.A.initBasic(),
@@ -3118,10 +3118,10 @@ function rg() {
         l = (0, ru.DZ)(),
         o = (0, rh.lI)(),
         { application: d, isFrameInFocusedMode: c } = (0, eo.cf)([ih.A, rE.A], () => {
-            let e = rE.A.getConnectedFrame();
+            let e = (0, rp.ny)(rE.A.getMainFrame());
             return {
                 application: ih.A.getApplication(e?.applicationId),
-                isFrameInFocusedMode: rE.A.getFrameLayoutMode() === rp.y.FOCUSED,
+                isFrameInFocusedMode: e?.data.layoutMode === rp.y0.FOCUSED,
             };
         }),
         u = null != d ? rf.Ay.getApplicationIconURL({ id: d.id, icon: d.icon, bot: d.bot }) : void 0,
@@ -3968,7 +3968,7 @@ let rv = (0, nQ.Fe)({
                 n.e("47999"),
                 n.e("37886"),
                 n.e("46416"),
-                n.e("38746"),
+                n.e("49500"),
                 n.e("15622"),
                 n.e("61750"),
                 n.e("54624"),
@@ -4190,51 +4190,50 @@ function r5(e, t) {
 }
 function r6(e) {
     let { embedId: t, className: n, style: i, currentWindow: r } = e,
-        a = (0, eo.bG)([rE.A], () => rE.A.getConnectedFrame()),
-        s = (0, eo.bG)([rE.A], () => rE.A.getFrameLayoutMode()),
-        l = null != a && s === rp.y.FOCUSED ? window : (r ?? window),
-        o = e_.useRef(null),
-        d = e_.useCallback(() => {
-            null == o.current || r5(t, o.current.getBoundingClientRect());
+        a = (0, eo.bG)([rE.A], () => (0, rp.ny)(rE.A.getMainFrame())),
+        s = null != a && a.data.layoutMode === rp.y0.FOCUSED ? window : (r ?? window),
+        l = e_.useRef(null),
+        o = e_.useCallback(() => {
+            null == l.current || r5(t, l.current.getBoundingClientRect());
         }, [t]);
     e_.useLayoutEffect(() => {
-        d();
+        o();
     });
-    let c = e_.useMemo(
+    let d = e_.useMemo(
         () =>
             new ResizeObserver(() => {
-                d();
+                o();
             }),
-        [d],
+        [o],
     );
     return (
         e_.useLayoutEffect(() => {
-            let e = o.current;
-            if (null != e) return c.observe(e), () => c.unobserve(e);
-        }, [c]),
+            let e = l.current;
+            if (null != e) return d.observe(e), () => d.unobserve(e);
+        }, [d]),
         e_.useLayoutEffect(() => {
             function e() {
-                return d();
+                return o();
             }
             function t() {
-                return d();
+                return o();
             }
             return (
-                l.addEventListener("scroll", e, !0),
-                l.addEventListener("resize", t),
+                s.addEventListener("scroll", e, !0),
+                s.addEventListener("resize", t),
                 () => {
-                    l.removeEventListener("scroll", e, !0), l.removeEventListener("resize", t);
+                    s.removeEventListener("scroll", e, !0), s.removeEventListener("resize", t);
                 }
             );
-        }, [d, l]),
+        }, [o, s]),
         e_.useLayoutEffect(
             () => (
-                r4._.subscribe(x.jej.MANUAL_IFRAME_RESIZING, d),
+                r4._.subscribe(x.jej.MANUAL_IFRAME_RESIZING, o),
                 () => {
-                    r4._.unsubscribe(x.jej.MANUAL_IFRAME_RESIZING, d);
+                    r4._.unsubscribe(x.jej.MANUAL_IFRAME_RESIZING, o);
                 }
             ),
-            [d],
+            [o],
         ),
         e_.useLayoutEffect(
             () => () => {
@@ -4242,7 +4241,7 @@ function r6(e) {
             },
             [t],
         ),
-        (0, R.jsx)("div", { ref: o, className: n, style: i })
+        (0, R.jsx)("div", { ref: l, className: n, style: i })
     );
 }
 var r7 = n(227042),
@@ -4253,18 +4252,18 @@ function at(e) {
     return `framepip:${e.applicationId}`;
 }
 function an() {
-    let e = rE.A.getConnectedFrame();
-    if (null == e) {
-        let e;
-        return void (null != (e = ae) && r9.A.isOpen(e) && (M.h.wait(() => r3.VN(e)), (ae = null)));
+    let e,
+        t = rE.A.getMainFrame();
+    if ((0, rp.x1)(t)) {
+        var n = at(t);
+        if (r9.A.isOpen(n)) return !1;
+        if (null != ae) {
+            let e = ae;
+            M.h.wait(() => r3.VN(e));
+        }
+        return M.h.wait(() => r3.ho(n, x.o1q.FRAME, {})), void (ae = n);
     }
-    var t = at(e);
-    if (r9.A.isOpen(t)) return !1;
-    if (null != ae) {
-        let e = ae;
-        M.h.wait(() => r3.VN(e));
-    }
-    return M.h.wait(() => r3.ho(t, x.o1q.FRAME, {})), void (ae = t);
+    null != (e = ae) && r9.A.isOpen(e) && (M.h.wait(() => r3.VN(e)), (ae = null));
 }
 function ai() {
     let e;
@@ -4296,40 +4295,41 @@ function ac(e) {
             selectedVoiceChannelId: ni.Ay.getVoiceChannelId(),
         })),
         s = (0, eo.bG)([tc.A], () => null != a && r === a && tc.A.getChatOpen(a), [r, a]),
-        l = (0, eo.bG)([rI.A], () => rI.A.getChannel(t.channelId), [t.channelId]),
-        o = (0, rX.Bp)(l, "FramePanelFocusedView"),
-        d = (0, eo.bG)([rQ.A], () => rQ.A.getBuilderPreviewApplicationId()),
-        c = r === al.VV.VIBEGRATIONS && null == t.channelId && t.applicationId === d,
-        u = o || c,
-        _ = (0, eo.bG)([rZ.Ay], () => rZ.Ay.callChatSidebarWidth),
-        E = (0, eo.bG)([rQ.A], () => rQ.A.getSidebarWidth()),
-        A = (0, rF.r)(iy.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        h = e_.useRef(null),
+        l = (0, rp.h)(t.surface),
+        o = (0, eo.bG)([rI.A], () => rI.A.getChannel(l), [l]),
+        d = (0, rX.Bp)(o, "FramePanelFocusedView"),
+        c = (0, eo.bG)([rQ.A], () => rQ.A.getBuilderPreviewApplicationId()),
+        u = r === al.VV.VIBEGRATIONS && null == l && t.applicationId === c,
+        _ = d || u,
+        E = (0, eo.bG)([rZ.Ay], () => rZ.Ay.callChatSidebarWidth),
+        A = (0, eo.bG)([rQ.A], () => rQ.A.getSidebarWidth()),
+        h = (0, rF.r)(iy.A.modules.chat.RESIZE_HANDLE_WIDTH),
         I = e_.useRef(null),
-        [f, p] = e_.useState({ width: 0, height: 0 }),
-        T = e_.useCallback(() => {
-            r2.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: rp.y.PIP });
-        }, [t.applicationId]),
+        f = e_.useRef(null),
+        [p, T] = e_.useState({ width: 0, height: 0 }),
         m = e_.useCallback(() => {
-            r2.A.stopFrame({ applicationId: t.applicationId });
-        }, [t.applicationId]);
+            r2.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: rp.y0.PIP });
+        }, [t.id]),
+        g = e_.useCallback(() => {
+            r2.A.stopFrame(t.id);
+        }, [t.id]);
     e_.useLayoutEffect(() => {
-        if (null == I.current) return;
+        if (null == f.current) return;
         let e = new ResizeObserver(() => {
-            p({ width: I.current?.clientWidth ?? 0, height: I.current?.clientHeight ?? 0 });
+            T({ width: f.current?.clientWidth ?? 0, height: f.current?.clientHeight ?? 0 });
         });
-        return e.observe(I.current), () => e.disconnect();
+        return e.observe(f.current), () => e.disconnect();
     }, []),
         e_.useEffect(() => {
             function e(e) {
-                if (u) return;
+                if (_) return;
                 let n = e.target;
-                null == h.current ||
+                null == I.current ||
                     null == n ||
-                    (0, rV.H)(h.current, n) ||
+                    (0, rV.H)(I.current, n) ||
                     null != n.closest("[data-window-chrome]") ||
                     i ||
-                    r2.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: rp.y.PIP });
+                    r2.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: rp.y0.PIP });
             }
             return (
                 document.addEventListener("mousedown", e),
@@ -4337,50 +4337,50 @@ function ac(e) {
                     document.removeEventListener("mousedown", e);
                 }
             );
-        }, [t.applicationId, i, u]);
-    let g = f.width / Math.max(f.height, 1) < as.B5,
-        S = 0,
+        }, [t.id, i, _]);
+    let S = p.width / Math.max(p.height, 1) < as.B5,
         N = 0,
-        C = (0, rW.A)(n?.id);
-    if (!C) {
-        let e = f.width,
-            t = f.height;
-        g
-            ? ((t = f.width / as.B5) > f.height && (e = (t = f.height) * as.B5), (N = (f.height - t) / 2))
-            : ((e = Math.min(f.height * as.B5, f.width)) > f.width && (t = (e = f.width) / as.B5),
-              (S = (f.width - e) / 2));
+        C = 0,
+        O = (0, rW.A)(n?.id);
+    if (!O) {
+        let e = p.width,
+            t = p.height;
+        S
+            ? ((t = p.width / as.B5) > p.height && (e = (t = p.height) * as.B5), (C = (p.height - t) / 2))
+            : ((e = Math.min(p.height * as.B5, p.width)) > p.width && (t = (e = p.width) / as.B5),
+              (N = (p.width - e) / 2));
     }
-    let O = as.E8.NO_CHAT,
-        L = (0, rK.G)();
+    let L = as.E8.NO_CHAT,
+        D = (0, rK.G)();
     if (null == n) return null;
-    let D = (_ ?? x.da6) + A,
-        y = c ? E : s && !Number.isNaN(D) ? D : 0,
-        v = at(t);
+    let y = (E ?? x.da6) + h,
+        v = u ? A : s && !Number.isNaN(y) ? y : 0,
+        b = at(t);
     return (0, R.jsx)(to.N, {
         theme: x.NJ8.DARK,
         children: (e) =>
             (0, R.jsxs)("div", {
-                className: ts()(ao.iE, ad[O], e, { [ao.$h]: u }),
-                ref: h,
-                style: { right: y },
+                className: ts()(ao.iE, ad[L], e, { [ao.$h]: _ }),
+                ref: I,
+                style: { right: v },
                 children: [
-                    (0, R.jsx)(rq.A, { applicationId: t.applicationId }),
+                    (0, R.jsx)(rq.A, { type: "frame", applicationId: t.applicationId, frameId: t.id }),
                     (0, R.jsx)("div", {
                         className: ao.lq,
                         children: (0, R.jsx)("div", {
-                            className: ts()(ao.ht, { [ao.kK]: C }),
-                            style: { paddingLeft: S, paddingRight: S, paddingTop: N, paddingBottom: N },
-                            ref: I,
-                            children: (0, R.jsx)(r6, { className: ao.pU, embedId: v }),
+                            className: ts()(ao.ht, { [ao.kK]: O }),
+                            style: { paddingLeft: N, paddingRight: N, paddingTop: C, paddingBottom: C },
+                            ref: f,
+                            children: (0, R.jsx)(r6, { className: ao.pU, embedId: b }),
                         }),
                     }),
-                    !u && (0, R.jsx)(au, { application: n, canPopout: L, onMinimize: T, onClose: m }),
+                    !_ && (0, R.jsx)(au, { application: n, frameId: t.id, canPopout: D, onMinimize: m, onClose: g }),
                 ],
             }),
     });
 }
 function au(e) {
-    let { application: t, canPopout: n, onMinimize: i, onClose: r } = e;
+    let { application: t, frameId: n, canPopout: i, onMinimize: r, onClose: a } = e;
     return (0, R.jsxs)("div", {
         className: ao.qr,
         children: [
@@ -4403,7 +4403,7 @@ function au(e) {
                         children: (0, R.jsx)(rJ.l, {
                             isTrayButton: !0,
                             label: tm.intl.string(tm.t.brPQ5U),
-                            onClick: i,
+                            onClick: r,
                             iconComponent: rB.g,
                             themeable: !0,
                         }),
@@ -4411,20 +4411,20 @@ function au(e) {
                     (0, R.jsx)(rJ.l, {
                         isTrayButton: !1,
                         label: tm.intl.string(tm.t["R/FK4A"]),
-                        onClick: r,
+                        onClick: a,
                         iconComponent: rH.o,
                         color: "disconnect",
                     }),
                 ],
             }),
-            n
+            i
                 ? (0, R.jsx)(r1.A, {
                       popoutOpen: !1,
                       onOpenPopout: () => {
                           (0, r$.zV)(x.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
                               (0, rY.A)({
                                   onConfirm: async () => {
-                                      await r2.A.refreshProxyTicket({ applicationId: t.id }), (0, rj.jp)();
+                                      await r2.A.refreshProxyTicket(n), (0, rj.jp)();
                                   },
                               });
                       },
@@ -4435,10 +4435,9 @@ function au(e) {
     });
 }
 function a_() {
-    let e = (0, eo.bG)([rE.A], () => rE.A.getConnectedFrame()),
-        t = (0, eo.bG)([rE.A], () => rE.A.getFrameLayoutMode()),
-        n = (0, eo.bG)([nC.A], () => nC.A.getWindowOpen(x.MLl.ACTIVITY_POPOUT));
-    return t !== rp.y.FOCUSED || null == e || n ? null : (0, R.jsx)(ac, { frame: e });
+    let e = (0, eo.bG)([rE.A], () => (0, rp.ny)(rE.A.getMainFrame())),
+        t = (0, eo.bG)([nC.A], () => nC.A.getWindowOpen(x.MLl.ACTIVITY_POPOUT));
+    return null == e || e.data.layoutMode !== rp.y0.FOCUSED || t ? null : (0, R.jsx)(ac, { frame: e });
 }
 var aE = n(831617),
     aA = n(589603),
@@ -18265,7 +18264,7 @@ let gK = "isHideDevBanner",
                     className: ts()(gY.Wz, gY.mr),
                     children: [
                         (0, R.jsx)(gW, { className: gY.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588515" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "588693" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -21094,11 +21093,11 @@ let Cv = (0, tB.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("23981"),
-                n.e("62359"),
+                n.e("86277"),
                 n.e("4374"),
                 n.e("79888"),
                 n.e("85311"),
-                n.e("791"),
+                n.e("592"),
                 n.e("30615"),
             ]).then(n.bind(n, 524917)),
         webpackId: 524917,
@@ -24364,7 +24363,7 @@ let Cv = (0, tB.Fe)({
     }),
     CQ = (0, tB.Fe)({
         createPromise: () =>
-            Promise.all([n.e("62359"), n.e("4374"), n.e("79888"), n.e("791"), n.e("73092")]).then(n.bind(n, 792669)),
+            Promise.all([n.e("86277"), n.e("4374"), n.e("79888"), n.e("592"), n.e("73092")]).then(n.bind(n, 792669)),
         webpackId: 792669,
         name: "VibegrationsChannel",
         renderLoader: nJ.l3,
@@ -25160,7 +25159,7 @@ function Oh() {
         c = d?.params?.channelId === al.VV.GUILD_ONBOARDING,
         u = e_.useCallback(() => aW.openSidebar(), []),
         _ = (rU((e) => !e.isOpen), (0, eo.bG)([tc.A], () => tc.A.isFullscreenInContext())),
-        E = (0, eo.bG)([rE.A], () => rE.A.isFrameActive());
+        E = (0, eo.bG)([rE.A], () => (0, rp.x1)(rE.A.getMainFrame()));
     return (
         e_.useEffect(() => {
             (0, n5.t)(() => {
@@ -25680,9 +25679,10 @@ function Ob() {
                     s = (0, la.Vq)(e) ? lk.Ay.getEmbeddedActivitiesForChannel(e) : lk.Am,
                     l = (0, la.Vq)(i) ? lk.Ay.getEmbeddedActivitiesForChannel(i) : lk.Am,
                     o = (0, la.Vq)(n) ? lk.Ay.getSelfEmbeddedActivityForLocation(n) : null,
-                    d = rE.A.getConnectedFrame(),
-                    c = d?.channelId == null && OT.A.isOwnedVibegrationsProjectApplication(d?.applicationId),
-                    u = (d?.channelId != null && (0, rX.kg)(rI.A.getChannel(d?.channelId), "ActivitySounds")) || c;
+                    d = rE.A.getMainFrame(),
+                    c = (0, rp.h)(d?.surface),
+                    u = null == c && OT.A.isOwnedVibegrationsProjectApplication(d?.applicationId),
+                    _ = (null != c && (0, rX.kg)(rI.A.getChannel(c), "ActivitySounds")) || u;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
@@ -25691,8 +25691,8 @@ function Ob() {
                     connectedChannelActivities: l,
                     userConnectedActivity: o,
                     voiceChannelActivities: s,
-                    connectedFrame: d,
-                    inVibegrationsChannel: u,
+                    hasFrame: (0, rp.x1)(d),
+                    inVibegrationsChannel: _,
                 };
             },
             (e, t) => {
@@ -25705,7 +25705,7 @@ function Ob() {
                         connectedChannelActivities: l,
                         userConnectedActivity: o,
                         voiceChannelActivities: d,
-                        connectedFrame: c,
+                        hasFrame: c,
                         inVibegrationsChannel: u,
                     } = t,
                     _ = d.some((e) => e.applicationId === o?.applicationId && e.launchId === o.launchId);
@@ -25747,9 +25747,9 @@ function Ob() {
                                     : e.userConnectedActivity.userIds.size > o.userIds.size &&
                                       (n = "activity_user_leave"))),
                     null == n &&
-                        (null != e.connectedFrame || null != c) &&
-                        (null != e.connectedFrame || null == c || u
-                            ? null == e.connectedFrame || null != c || e.inVibegrationsChannel || (n = "activity_end")
+                        (e.hasFrame || c) &&
+                        (e.hasFrame || !c || u
+                            ? !e.hasFrame || c || e.inVibegrationsChannel || (n = "activity_end")
                             : (n = "activity_launch")),
                     n
                 );
@@ -28018,7 +28018,7 @@ function Lx(e) {
 var Lk = n(53677),
     LF = n(734066),
     LV = n(572164),
-    LB = n(430795),
+    LB = n(693117),
     LH = n(299855),
     Lj = n.n(LH),
     LW = n(997630),
@@ -31198,7 +31198,7 @@ var yb = n(119966),
     yP = n(344351),
     yU = n(855687);
 function yw() {
-    let e = rE.A.getConnectedFrame();
+    let e = (0, rp.ny)(rE.A.getMainFrame());
     if (null != e) return { frame: e, channel: void 0, guild: void 0 };
     let t = yp();
     if (null == t) throw new yf.A({ errorCode: x.Lw6.INVALID_CHANNEL }, "Invalid channel");
@@ -31885,25 +31885,31 @@ let y4 = ["1402418171662569542"],
                     }),
             handler(e) {
                 let {
-                        socket: t,
-                        args: { lock_state: n, picture_in_picture_lock_state: i, grid_lock_state: r },
-                    } = e,
-                    a = t.application.id;
-                if (null != a)
+                    socket: t,
+                    args: { lock_state: n, picture_in_picture_lock_state: i, grid_lock_state: r },
+                } = e;
+                if (t.source.type !== CL.z4.POST_MESSAGE)
+                    throw new yf.A(
+                        { errorCode: yd.Lw.INVALID_COMMAND },
+                        `command not available from "${t.source.type}" transport`,
+                    );
+                let a = t.application.id;
+                if (null == a) throw new yf.A({ errorCode: yd.Lw.INVALID_COMMAND }, "No application.");
+                let s = rE.A.getFrameByIframeId(t.source.iframeId);
+                null != s &&
                     M.h.dispatch({
                         type: "FRAME_SET_ORIENTATION_LOCK_STATE",
-                        applicationId: a,
+                        frameId: s.id,
                         lockState: n,
                         pictureInPictureLockState: i,
                     }),
-                        M.h.dispatch({
-                            type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
-                            applicationId: a,
-                            lockState: n,
-                            pictureInPictureLockState: i,
-                            gridLockState: r,
-                        });
-                else throw new yf.A({ errorCode: yd.Lw.INVALID_COMMAND }, "No application.");
+                    M.h.dispatch({
+                        type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
+                        applicationId: a,
+                        lockState: n,
+                        pictureInPictureLockState: i,
+                        gridLockState: r,
+                    });
             },
         },
     };
@@ -32058,8 +32064,10 @@ let v_ = {
                                 return null != n ? { layout_mode: n } : null;
                             }
                             case x.ZE4.FRAME_LAYOUT_MODE_UPDATE: {
-                                let t = null != e.application?.id ? rE.A.getConnectedFrame()?.layoutMode : null;
-                                return null != t ? { layout_mode: t } : null;
+                                if (e.source.type !== CL.z4.POST_MESSAGE) return null;
+                                let t = (0, rp.ny)(rE.A.getFrameByIframeId(e.source.iframeId));
+                                if (null == t) return null;
+                                return { layout_mode: t.data.layoutMode };
                             }
                             case x.ZE4.THERMAL_STATE_UPDATE: {
                                 let e = ye();
@@ -34472,7 +34480,6 @@ class by extends ee.EventEmitter {
 }
 var bv = n(313731);
 class bb extends bv.A {
-    source;
     postMessageToRPCClient;
     logger;
     postClose;
@@ -34487,11 +34494,10 @@ class bb extends bv.A {
         postClose: a,
         onSendingToRPCClient: s,
     }) {
-        if ((super(CL.z4.POST_MESSAGE, n, i), -1 === ["etf", "json"].indexOf(i)))
+        if ((super(e, n, i), -1 === ["etf", "json"].indexOf(i)))
             throw new yf.A({ closeCode: x.YI$.INVALID_ENCODING }, `Invalid Encoding: ${i}`);
         if ("etf" === i) throw new yf.A({ closeCode: x.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
-        (this.source = e),
-            (this.postMessageToRPCClient = t),
+        (this.postMessageToRPCClient = t),
             (this.logger = r),
             (this.postClose = a),
             (this.onSendingToRPCClient = s),
@@ -34539,7 +34545,7 @@ let bP = new eH.A("RPCServer:PostMessage"),
                 i = e.origin,
                 r = (0, bM.l)(t);
             null != r &&
-                c.handleMessage(n, { origin: i, iframeId: r }, (e, n) => {
+                c.handleMessage(n, { type: CL.z4.POST_MESSAGE, origin: i, iframeId: r }, (e, n) => {
                     !(function (e) {
                         try {
                             return e.closed;
@@ -34588,7 +34594,12 @@ let bP = new eH.A("RPCServer:PostMessage"),
         init() {
             (this.rpcServer.getCurrentUser = () => eU.default.getCurrentUser()),
                 (this.rpcServer.onConnect = (e) => {
-                    M.h.dispatch({ type: "RPC_APP_CONNECTED", socketId: e.id, application: e.application }),
+                    M.h.dispatch({
+                        type: "RPC_APP_CONNECTED",
+                        socketId: e.id,
+                        application: e.application,
+                        source: e.source,
+                    }),
                         k.default.track(x.HAw.AUTHORIZED_APP_CONNECTED, {
                             app_id: e.application.id,
                             transport: e.transport,
@@ -34599,6 +34610,7 @@ let bP = new eH.A("RPCServer:PostMessage"),
                         type: "RPC_APP_DISCONNECTED",
                         socketId: e.id,
                         application: e.application,
+                        source: e.source,
                         reason: t,
                     });
                 });
@@ -34756,26 +34768,20 @@ let bP = new eH.A("RPCServer:PostMessage"),
                 );
         };
         handleFrameUpdateLayoutMode = (e) => {
-            let { applicationId: t, layoutMode: n } = e;
+            let { frameId: t, layoutMode: n } = e;
             if (0 === this.rpcServer.subscriptions.length) return;
-            let i = n === rp.y.PIP ? yl.bN.PIP : yl.bN.FOCUSED,
-                r = i !== yl.bN.FOCUSED;
-            this.rpcServer.dispatchToSubscriptions(
-                x.ZE4.ACTIVITY_PIP_MODE_UPDATE,
-                (e) => e.socket.application.id === t,
-                { is_pip_mode: r },
-            );
-            let a = { layout_mode: i };
-            this.rpcServer.dispatchToSubscriptions(
-                x.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE,
-                (e) => e.socket.application.id === t,
-                a,
-            ),
-                this.rpcServer.dispatchToSubscriptions(
-                    x.ZE4.FRAME_LAYOUT_MODE_UPDATE,
-                    (e) => e.socket.application.id === t,
-                    a,
+            function i(e) {
+                return (
+                    e.socket.source.type === CL.z4.POST_MESSAGE &&
+                    rE.A.getFrameByIframeId(e.socket.source.iframeId)?.id === t
                 );
+            }
+            let r = n === rp.y0.PIP ? yl.bN.PIP : yl.bN.FOCUSED,
+                a = r !== yl.bN.FOCUSED;
+            this.rpcServer.dispatchToSubscriptions(x.ZE4.ACTIVITY_PIP_MODE_UPDATE, i, { is_pip_mode: a });
+            let s = { layout_mode: r };
+            this.rpcServer.dispatchToSubscriptions(x.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE, i, s),
+                this.rpcServer.dispatchToSubscriptions(x.ZE4.FRAME_LAYOUT_MODE_UPDATE, i, s);
         };
         handleThermalStateChange = (e) => {
             let { applicationId: t } = e;
@@ -36434,7 +36440,7 @@ let PS = new (class {
         );
     }
 })();
-var PN = n(860689),
+var PN = n(149790),
     PC = n(9865),
     PO = n(7864);
 let PR = new eH.A("Guilds"),
@@ -39478,7 +39484,7 @@ let wE = (0, tB.Fe)({
             n.e("47999"),
             n.e("37886"),
             n.e("46416"),
-            n.e("38746"),
+            n.e("49500"),
             n.e("15622"),
             n.e("61750"),
             n.e("74857"),

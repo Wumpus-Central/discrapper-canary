@@ -11,7 +11,10 @@ function c(e) {
     let { applicationId: t, context: n, launchingComponentId: c, onSubmissionComplete: u } = e,
         _ = (0, l.h)(t),
         E = (0, r.bG)([s.Ay], () => s.Ay.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
-        A = (0, r.bG)([o.A], () => o.A.isLaunchingFrame(t)),
+        A = (0, r.bG)([o.A], () => {
+            let e = o.A.getMainFrame();
+            return e?.state === "loading" && e.applicationId === t;
+        }),
         h = null != _ && (0, d.x)(_) ? A : null != E && E.isLaunching && E.componentId === c,
         I = (0, a.Ay)(h);
     return (

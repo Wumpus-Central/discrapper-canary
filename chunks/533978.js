@@ -1,4 +1,4 @@
-t.d(n, { A: () => b });
+t.d(n, { A: () => S });
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -23,8 +23,8 @@ var l = t(477900),
     _ = t(204651),
     j = t(376086),
     N = t(375708);
-function b(e) {
-    let { channel: n, themeable: b, whichPopoutIsOpen: S, setWhichPopoutIsOpen: O, idle: y } = e,
+function S(e) {
+    let { channel: n, themeable: S, whichPopoutIsOpen: b, setWhichPopoutIsOpen: O, idle: y } = e,
         { parentAnalyticsLocation: R } = (0, u.Ay)(),
         {
             Component: M,
@@ -53,32 +53,33 @@ function b(e) {
             });
     }
     function q() {
-        L(), null != S && z(), O?.(j.P.SOUNDBOARD);
+        L(), null != b && z(), O?.(j.P.SOUNDBOARD);
     }
-    function $() {
-        (0, d.X)(R, d.O.SOUNDBOARD), S === j.P.SOUNDBOARD ? (O?.(void 0), J()) : q();
+    function Q() {
+        (0, d.X)(R, d.O.SOUNDBOARD), b === j.P.SOUNDBOARD ? (O?.(void 0), J()) : q();
     }
-    let Q = i.useCallback(() => {
-            null == S && O?.(j.P.SOUNDBOARD);
-        }, [S, O]),
+    let $ = i.useCallback(() => {
+            null == b && O?.(j.P.SOUNDBOARD);
+        }, [b, O]),
         Z = i.useRef(null),
-        { enabled: ee } = (0, C.H)("SoundboardButton"),
-        { usersInChannel: en } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
+        ee = i.useMemo(() => (F && (b === j.P.SOUNDBOARD || null == b)) || b === j.P.SOUNDBOARD, [F, b]),
+        { enabled: en } = (0, C.H)("SoundboardButton"),
+        { usersInChannel: et } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
         ]),
-        [et, el] = i.useState(!1);
+        [el, ei] = i.useState(!1);
     return (
         i.useEffect(() => {
-            let e = en >= 2 && !B && null == S;
-            if (y || !e) return void el(!1);
-            let n = setTimeout(() => el(!0), 300);
+            let e = et >= 2 && !B && null == b;
+            if (y || !e) return void ei(!1);
+            let n = setTimeout(() => ei(!0), 300);
             return () => clearTimeout(n);
-        }, [y, B, en, S]),
+        }, [y, B, et, b]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(o.Y, {
                     targetElementRef: Z,
-                    shouldShow: (F && (S === j.P.SOUNDBOARD || null == S)) || S === j.P.SOUNDBOARD,
+                    shouldShow: ee,
                     animation: o.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
@@ -95,7 +96,7 @@ function b(e) {
                                   children: (0, l.jsx)("div", {
                                       onMouseEnter: z,
                                       onMouseLeave: J,
-                                      onMouseDown: Q,
+                                      onMouseDown: $,
                                       children: (0, l.jsx)(x.A, {
                                           guildId: k,
                                           channel: n,
@@ -112,7 +113,7 @@ function b(e) {
                         (0, l.jsx)(_.l, {
                             ref: Z,
                             isTrayButton: !0,
-                            themeable: b,
+                            themeable: S,
                             label: G
                                 ? N.intl.string(N.t["Ox4/zU"])
                                 : U
@@ -123,18 +124,20 @@ function b(e) {
                             iconComponent: M,
                             disabled: B,
                             onContextMenu: W,
-                            onClick: $,
+                            onClick: Q,
                             onMouseEnter: (e) => {
                                 D(), "focus" !== e.type && z();
                             },
                             onMouseLeave: () => {
-                                null == S && (J(), P());
+                                null == b && (J(), P());
                             },
-                            isActive: F || S === j.P.SOUNDBOARD,
-                            color: F || S === j.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: F || b === j.P.SOUNDBOARD,
+                            color: F || b === j.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
-                ee && et && (0, l.jsx)(g.A, { targetElementRef: Z, openSoundboardPicker: q }),
+                en &&
+                    el &&
+                    (0, l.jsx)(g.A, { targetElementRef: Z, openSoundboardPicker: q, shouldShowSoundboardPicker: ee }),
             ],
         })
     );

@@ -27,10 +27,10 @@ n.d(t, {
     dV: () => H,
     gC: () => J,
     iJ: () => W,
-    jH: () => eu,
     k9: () => et,
     kd: () => R,
     l_: () => D,
+    mO: () => eu,
     mY: () => es,
     mk: () => M,
     nQ: () => eE,
@@ -157,8 +157,8 @@ let es = { text: "#D53FAE" },
     eo = 1,
     ed = { x: 0.5, y: 0.5 };
 var ec = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
-let eu = { none: 0, small: 1, medium: 2, large: 4 },
-    e_ = { fontSize: 32, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
+let eu = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
+    e_ = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
 var eE = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
     eA =
         (((h = {}).UNCLASSIFIED = "unclassified"),

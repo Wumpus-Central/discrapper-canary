@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Q: () => s });
+n.d(t, { Q: () => a });
 var i = n(91242),
     r = n(809871);
-function s() {
-    let e = i.A.getConnectedFrame();
-    null != e && r.A.leaveFrame({ applicationId: e.applicationId });
+function a() {
+    let e = i.A.getMainFrame();
+    null != e && r.A.leaveFrame(e.id);
 }

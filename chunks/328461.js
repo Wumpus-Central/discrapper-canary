@@ -146,113 +146,124 @@ function K(e) {
         u = a.useRef(null),
         d = a.useRef(null),
         m = a.useRef(null),
-        f = a.useRef(!1),
-        h = a.useRef({ x: 0, y: 0 }),
-        { position: v } = t.data,
-        p = a.useRef(v),
-        g = a.useCallback(() => {
-            let e = m.current,
+        f = a.useRef(null),
+        h = a.useRef(!1),
+        v = a.useRef({ x: 0, y: 0 }),
+        { position: p, style: g } = t.data,
+        j = a.useRef(p),
+        C = a.useRef(g.fontSize),
+        b = a.useRef(g.strokeWidth),
+        y = a.useCallback(() => {
+            let e = f.current,
                 t = d.current;
             if (null == e || null == t) return;
-            let { x: l, y: n } = p.current;
+            let { x: l, y: n } = j.current;
             (t.style.left = `${e.left + l * e.width}px`), (t.style.top = `${e.top + n * e.height}px`);
+            let a = C.current * e.height;
+            t.style.fontSize = `${a}px`;
+            let i = m.current;
+            if (null != i) {
+                let e = P.mO[b.current] * a;
+                i.style.webkitTextStrokeWidth = `${e}px`;
+            }
         }, []),
-        j = a.useCallback(() => {
+        E = a.useCallback(() => {
             let e = u.current,
                 t = e?.parentElement;
             if (null == e || null == t) return;
             let l = t.getBoundingClientRect(),
                 n = (s.current?.videoElement ?? t).getBoundingClientRect();
-            (m.current = { left: n.left - l.left, top: n.top - l.top, width: n.width, height: n.height }), g();
-        }, [s, g]);
+            (f.current = { left: n.left - l.left, top: n.top - l.top, width: n.width, height: n.height }), y();
+        }, [s, y]);
     a.useEffect(() => {
         let e = u.current;
         if (null == e) return;
-        j();
-        let t = new ResizeObserver(j);
+        E();
+        let t = new ResizeObserver(E);
         t.observe(e.parentElement ?? e);
         let l = s.current?.videoElement;
         return (
             null != l && t.observe(l),
-            window.addEventListener("resize", j),
+            window.addEventListener("resize", E),
             () => {
-                t.disconnect(), window.removeEventListener("resize", j);
+                t.disconnect(), window.removeEventListener("resize", E);
             }
         );
-    }, [j, s]),
+    }, [E, s]),
         a.useEffect(() => {
-            (p.current = v), g();
-        }, [v, g]);
-    let C = a.useCallback(
+            (j.current = p), (C.current = g.fontSize), (b.current = g.strokeWidth), y();
+        }, [p, g.fontSize, g.strokeWidth, y]);
+    let N = a.useCallback(
             (e) => {
-                if (!f.current) return;
-                let l = m.current;
+                if (!h.current) return;
+                let l = f.current;
                 if (null == l) return;
                 let n = u.current,
                     a = n?.getBoundingClientRect();
                 if (null == a) return;
-                let i = (0, G.clamp)((e.clientX - a.left - l.left) / l.width - h.current.x, 0, 1),
-                    s = (0, G.clamp)((e.clientY - a.top - l.top) / l.height - h.current.y, 0, 1);
+                let i = (0, G.clamp)((e.clientX - a.left - l.left) / l.width - v.current.x, 0, 1),
+                    s = (0, G.clamp)((e.clientY - a.top - l.top) / l.height - v.current.y, 0, 1);
                 c(t.id, (e) => ({ ...e, position: { x: i, y: s } }));
             },
             [c, t.id],
         ),
-        b = a.useCallback(() => {
-            f.current = !1;
+        k = a.useCallback(() => {
+            h.current = !1;
         }, []);
     a.useEffect(
         () => (
-            document.addEventListener("mousemove", C),
-            document.addEventListener("mouseup", b),
+            document.addEventListener("mousemove", N),
+            document.addEventListener("mouseup", k),
             () => {
-                document.removeEventListener("mousemove", C), document.removeEventListener("mouseup", b);
+                document.removeEventListener("mousemove", N), document.removeEventListener("mouseup", k);
             }
         ),
-        [C, b],
+        [N, k],
     );
-    let y = a.useCallback(
+    let w = a.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), i();
-                let t = m.current,
+                let t = f.current,
                     l = u.current?.getBoundingClientRect();
                 if (null != t && null != l && t.width > 0 && t.height > 0) {
                     let n = (e.clientX - l.left - t.left) / t.width,
                         a = (e.clientY - l.top - t.top) / t.height;
-                    h.current = { x: n - v.x, y: a - v.y };
-                } else h.current = { x: 0, y: 0 };
-                f.current = !0;
+                    v.current = { x: n - p.x, y: a - p.y };
+                } else v.current = { x: 0, y: 0 };
+                h.current = !0;
             },
-            [i, v.x, v.y],
+            [i, p.x, p.y],
         ),
-        E = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
-        { text: N, style: k } = t.data,
-        w = P.jH[k.strokeWidth];
+        A = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
+        { text: L } = t.data,
+        R = P.mO[g.strokeWidth] > 0;
     return (0, n.jsx)("div", {
         ref: u,
         className: V.at,
         children: (0, n.jsxs)("div", {
             ref: d,
             className: B()(V.DU, { [V.oy]: l }),
-            style: { display: E ? void 0 : "none", fontSize: k.fontSize },
-            onMouseDown: y,
+            style: { display: A ? void 0 : "none" },
+            onMouseDown: w,
             children: [
-                w > 0 &&
+                R &&
                     (0, n.jsx)("span", {
+                        ref: m,
                         "aria-hidden": !0,
                         className: V.Cp,
-                        style: { color: k.strokeColor, WebkitTextStroke: `${2 * w}px ${k.strokeColor}` },
-                        children: N,
+                        style: { color: g.strokeColor, WebkitTextStrokeColor: g.strokeColor },
+                        children: L,
                     }),
-                (0, n.jsx)("span", { className: V.Lo, style: { color: k.color }, children: N }),
+                (0, n.jsx)("span", { className: V.Lo, style: { color: g.color }, children: L }),
             ],
         }),
     });
 }
 l(321073);
 var F = l(702841),
-    X = l(408278),
-    Z = l(461150),
-    W = l(782134),
+    W = l(408278),
+    X = l(461150),
+    Z = l(782134),
     Y = l(113494),
     Q = l(898196),
     J = l(259678),
@@ -620,21 +631,21 @@ function ed(e) {
                     (0, n.jsxs)("div", {
                         className: ec.s2,
                         children: [
-                            (0, n.jsx)(X.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
                                 variant: "icon-only",
-                                icon: Z.q,
+                                icon: X.q,
                                 onClick: eb,
                                 "aria-label": es.intl.string(er.default["dRVF+Z"]),
                             }),
-                            (0, n.jsx)(X.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
-                                icon: r ? Y.E : W.u,
+                                icon: r ? Y.E : Z.u,
                                 onClick: eE,
                                 "aria-label": es.intl.string(r ? es.t.ZcgDJX : es.t.RscU7I),
                                 variant: "icon-only",
                             }),
-                            (0, n.jsx)(X.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
                                 variant: "icon-only",
                                 icon: Q.i,

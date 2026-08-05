@@ -1,220 +1,219 @@
-t.r(n), t.d(n, { default: () => eI });
-var l = t(477900),
-    i = t(17928),
-    a = t(627363),
-    s = t(91242),
-    r = t(582128),
-    o = t(536246),
-    c = t(395678),
-    u = t(813280);
-function d(e) {
-    let { application: n, queryParams: t, url: i } = e;
+n.r(t), n.d(t, { default: () => eh });
+var l = n(477900),
+    i = n(17928),
+    a = n(627363),
+    r = n(91242),
+    s = n(582128),
+    o = n(536246),
+    c = n(809239),
+    d = n(813280);
+function u(e) {
+    let { application: t, queryParams: n, url: i, onIframeMount: a, onIframeUnmount: r } = e;
     return (0, l.jsx)(c.o, {
-        allowPopups: (0, o.b)(n),
+        allowPopups: (0, o.b)(t),
         referrerPolicy: "origin",
         url: i,
-        queryParams: t,
-        className: u.p,
+        onIframeMount: a,
+        onIframeUnmount: r,
+        queryParams: n,
+        className: d.p,
         shouldRefocus: !1,
     });
 }
-var p = t(289873),
-    m = t(475743),
-    A = t(587895),
-    x = t(574172),
-    I = t(850891),
-    h = t(933958),
-    y = t(969151),
-    f = t(503698),
-    j = t.n(f),
-    v = t(3026),
-    C = t(862482),
-    P = t(866665),
-    T = t(43990),
-    b = t(834730),
-    g = t(922016),
-    N = t(95561),
-    k = t(717048),
-    O = t(567249),
-    _ = t(885386),
-    w = t(246356),
-    E = t(365199),
-    L = t(688810),
-    R = t(384059),
-    U = t(204651),
-    G = t(375708);
+var m = n(289873),
+    p = n(475743),
+    A = n(587895),
+    x = n(574172),
+    I = n(850891),
+    f = n(933958),
+    h = n(969151),
+    y = n(503698),
+    j = n.n(y),
+    v = n(3026),
+    P = n(862482),
+    T = n(866665),
+    C = n(43990),
+    g = n(834730),
+    b = n(922016),
+    N = n(95561),
+    O = n(717048),
+    k = n(567249),
+    _ = n(885386),
+    w = n(246356),
+    E = n(365199),
+    U = n(688810),
+    L = n(384059),
+    R = n(204651),
+    M = n(375708);
 function S(e) {
-    let { onClick: n, ...t } = e,
-        { parentAnalyticsLocation: i } = (0, L.Ay)();
-    return (0, l.jsx)(U.A, {
-        label: G.intl.string(G.t["UKOtz+"]),
+    let { onClick: t, ...n } = e,
+        { parentAnalyticsLocation: i } = (0, U.Ay)();
+    return (0, l.jsx)(R.A, {
+        label: M.intl.string(M.t["UKOtz+"]),
         iconComponent: E.j,
         tooltipPosition: "bottom",
         onClick: (e) => {
-            (0, R.X)(i, R.O.MORE), n(e);
+            (0, L.X)(i, L.O.MORE), t(e);
         },
-        ...t,
+        ...n,
     });
 }
-var D = t(423562),
-    F = t(520006),
-    M = t(128286),
-    W = t(619344),
-    Y = t(734057),
-    z = t(696451),
-    K = t(287809),
-    V = t(723702),
-    B = t(427262),
-    q = t(19575),
-    H = t(475815),
-    $ = t(795816),
-    X = t(869003),
-    Z = t(104171),
-    J = t(47294),
-    Q = t(728033),
-    ee = t(652215),
-    en = t(16961),
-    et = t(955385);
+var D = n(423562),
+    F = n(520006),
+    G = n(128286),
+    W = n(619344),
+    Y = n(734057),
+    z = n(696451),
+    K = n(287809),
+    V = n(723702),
+    B = n(427262),
+    q = n(19575),
+    H = n(475815),
+    $ = n(795816),
+    X = n(869003),
+    Z = n(104171),
+    J = n(47294),
+    Q = n(728033),
+    ee = n(652215),
+    et = n(16961),
+    en = n(955385);
 let el = Z.DN.SIZE_24;
 function ei(e) {
-    let n,
-        t,
+    let t,
+        n,
         {
-            hasActivity: a,
-            applicationId: s,
-            channelId: o,
-            compositeInstanceId: c,
-            userIds: u,
+            application: a,
+            channelId: r,
+            compositeInstanceId: o,
+            userIds: c,
             isRichPresenceInvite: d,
-            onConfirmClosePopout: p,
+            onConfirmClosePopout: u,
         } = e,
-        m = (0, i.bG)([A.A], () => A.A.getApplication(s)),
-        I = (0, i.bG)([Y.A], () => Y.A.getChannel(o)),
-        h = _.Q_.useSetting(),
-        y = (0, i.yK)(
+        m = (0, i.bG)([Y.A], () => Y.A.getChannel(r)),
+        p = _.Q_.useSetting(),
+        A = (0, i.yK)(
             [z.Ay],
-            () => (null == I || null == u ? [] : Array.from(u ?? []).map((e) => z.Ay.getMember(I.guild_id, e))),
-            [I, u],
+            () => (null == m || null == c ? [] : Array.from(c ?? []).map((e) => z.Ay.getMember(m.guild_id, e))),
+            [m, c],
         ),
-        f = r.useMemo(() => {
+        I = s.useMemo(() => {
             let e = new Map();
             return (
-                y.forEach((n) => {
-                    null != n && void 0 !== n && e.set(n.userId, n);
+                A.forEach((t) => {
+                    null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [y]),
-        E = r.useCallback(
-            (e, n) => {
+        }, [A]),
+        f = s.useCallback(
+            (e, t) => {
                 if (null == e || e === Z.mt) return null;
-                let t = f.get(e.id),
-                    i = t?.nick ?? B.Ay.getName(e);
+                let n = I.get(e.id),
+                    i = n?.nick ?? B.Ay.getName(e);
                 return (0, l.jsx)(
-                    P.m,
+                    T.m,
                     {
                         asContainer: !0,
                         text: i,
                         position: "bottom",
                         children: (0, l.jsx)(
                             "img",
-                            { src: e.getAvatarURL(n?.guild_id, el), alt: i, className: et.my },
+                            { src: e.getAvatarURL(t?.guild_id, el), alt: i, className: en.my },
                             e.id,
                         ),
                     },
                     e.id,
                 );
             },
-            [f],
+            [I],
         ),
-        L = (0, i.yK)(
+        h = (0, i.yK)(
             [K.default],
             () =>
-                Array.from(u ?? [])
+                Array.from(c ?? [])
                     .map((e) => K.default.getUser(e))
                     .filter((e) => null != e),
-            [u],
+            [c],
         ),
         {
-            canStayOnTop: R,
-            popoutWindowAlwaysOnTop: U,
-            handleStayOnTop: $,
-        } = ((n = (0, i.bG)([O.A], () => O.A.getIsAlwaysOnTop(ee.MLl.ACTIVITY_POPOUT))),
-        (t = r.useCallback((e) => {
+            canStayOnTop: y,
+            popoutWindowAlwaysOnTop: E,
+            handleStayOnTop: U,
+        } = ((t = (0, i.bG)([k.A], () => k.A.getIsAlwaysOnTop(ee.MLl.ACTIVITY_POPOUT))),
+        (n = s.useCallback((e) => {
             x.setAlwaysOnTop(ee.MLl.ACTIVITY_POPOUT, e);
         }, [])),
         {
             canStayOnTop: V.isPlatformEmbedded && q.Ay.supportsFeature(ee.BYE.POPOUT_WINDOWS),
-            popoutWindowAlwaysOnTop: n,
-            handleStayOnTop: t,
+            popoutWindowAlwaysOnTop: t,
+            handleStayOnTop: n,
         }),
-        X = (0, en.G)(),
+        L = (0, et.G)(),
         {
-            rootNode: ei,
-            popoutWindow: ea,
-            toggleFullScreen: es,
+            rootNode: R,
+            popoutWindow: $,
+            toggleFullScreen: X,
         } = (function () {
             let e,
-                n,
                 t,
+                n,
                 {
                     popoutWindow: l,
                     currentDocument: a,
-                    rootNode: s,
-                } = ((e = (0, i.bG)([O.A], () => O.A.getWindow(ee.MLl.ACTIVITY_POPOUT))),
-                (n = r.useMemo(() => e?.window.document, [e])),
-                (t = r.useMemo(() => n?.getElementById("app-mount"), [n])),
-                { popoutWindow: e, currentDocument: n, rootNode: t }),
-                [o, c] = r.useState(!1),
-                u = r.useCallback(() => {
-                    null == s || (o && (c(!1), (0, H.sP)(s, a)));
-                }, [s, a, o]),
-                d = r.useCallback(() => {
-                    null != s && (o ? u() : (c(!0), (0, H.tl)(s)));
-                }, [s, o, u]),
-                p = r.useCallback(() => {
-                    null != s && !(0, H._U)(s, a) && o && d();
-                }, [s, a, o, d]);
+                    rootNode: r,
+                } = ((e = (0, i.bG)([k.A], () => k.A.getWindow(ee.MLl.ACTIVITY_POPOUT))),
+                (t = s.useMemo(() => e?.window.document, [e])),
+                (n = s.useMemo(() => t?.getElementById("app-mount"), [t])),
+                { popoutWindow: e, currentDocument: t, rootNode: n }),
+                [o, c] = s.useState(!1),
+                d = s.useCallback(() => {
+                    null == r || (o && (c(!1), (0, H.sP)(r, a)));
+                }, [r, a, o]),
+                u = s.useCallback(() => {
+                    null != r && (o ? d() : (c(!0), (0, H.tl)(r)));
+                }, [r, o, d]),
+                m = s.useCallback(() => {
+                    null != r && !(0, H._U)(r, a) && o && u();
+                }, [r, a, o, u]);
             return (
-                r.useEffect(
+                s.useEffect(
                     () => (
-                        a?.addEventListener(H.Wb, p),
+                        a?.addEventListener(H.Wb, m),
                         () => {
-                            a?.removeEventListener(H.Wb, p);
+                            a?.removeEventListener(H.Wb, m);
                         }
                     ),
-                    [a, p],
+                    [a, m],
                 ),
-                { rootNode: s, popoutWindow: l, toggleFullScreen: d }
+                { rootNode: r, popoutWindow: l, toggleFullScreen: u }
             );
         })(),
-        er = r.useRef(null);
-    if (null == m || !a) return null;
-    let eo = (0, l.jsx)(k.A, { application: m, size: 24, className: et.Z2 });
+        ei = s.useRef(null),
+        ea = (0, l.jsx)(O.A, { application: a, size: 24, className: en.Z2 });
     return (
-        h && null != c && (eo = (0, l.jsx)(P.m, { asContainer: !0, text: c, position: "bottom", children: eo })),
-        (0, l.jsx)(T.N, {
+        p && null != o && (ea = (0, l.jsx)(T.m, { asContainer: !0, text: o, position: "bottom", children: ea })),
+        (0, l.jsx)(C.N, {
             theme: ee.NJ8.DARK,
             children: (e) =>
                 (0, l.jsxs)("div", {
-                    className: j()(et.kL, e),
+                    className: j()(en.kL, e),
                     children: [
                         (0, l.jsxs)("div", {
-                            className: j()(et.ND, et.c8),
+                            className: j()(en.ND, en.c8),
                             children: [
-                                eo,
-                                (0, l.jsx)(b.E, {
+                                ea,
+                                (0, l.jsx)(g.E, {
                                     variant: "text-md/normal",
                                     color: "text-strong",
-                                    className: et.SX,
-                                    children: (0, l.jsx)(v.A, { children: m.name }),
+                                    className: en.SX,
+                                    children: (0, l.jsx)(v.A, { children: a.name }),
                                 }),
-                                L.length > 0
+                                h.length > 0
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)("div", {
-                                                  className: et.SC,
-                                                  children: (0, l.jsx)(b.E, {
+                                                  className: en.SC,
+                                                  children: (0, l.jsx)(g.E, {
                                                       variant: "text-md/normal",
                                                       color: "text-muted",
                                                       children: ".",
@@ -222,10 +221,10 @@ function ei(e) {
                                               }),
                                               (0, l.jsx)(Z.Ay, {
                                                   renderIcon: !1,
-                                                  users: L,
+                                                  users: h,
                                                   size: el,
                                                   max: 6,
-                                                  renderUser: (e) => E(e, I),
+                                                  renderUser: (e) => f(e, m),
                                               }),
                                           ],
                                       })
@@ -233,60 +232,60 @@ function ei(e) {
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: j()(et.ND, et.fU),
+                            className: j()(en.ND, en.fU),
                             children: [
-                                (0, l.jsx)("div", { className: et.Rv }),
+                                (0, l.jsx)("div", { className: en.Rv }),
                                 (0, l.jsxs)("div", {
-                                    className: et.fc,
+                                    className: en.fc,
                                     children: [
                                         (0, l.jsx)(F.A, {
                                             appContext: ee.BRT.POPOUT,
-                                            applicationId: s,
-                                            channel: I,
+                                            applicationId: a.id,
+                                            channel: m,
                                             shouldPrioritizeGroupPlusIcon: !0,
                                             isRichPresenceInvite: d,
-                                            iconClassName: et.NS,
-                                            size: C.$n.Sizes.TINY,
-                                            look: C.$n.Looks.FILLED,
-                                            buttonText: G.intl.string(G.t["6F9ivu"]),
-                                            color: C.$n.Colors.TRANSPARENT,
+                                            iconClassName: en.NS,
+                                            size: P.$n.Sizes.TINY,
+                                            look: P.$n.Looks.FILLED,
+                                            buttonText: M.intl.string(M.t["6F9ivu"]),
+                                            color: P.$n.Colors.TRANSPARENT,
                                         }),
-                                        R
-                                            ? (0, l.jsx)(W.A, { popoutWindowAlwaysOnTop: U, onToggleStayOnTop: $ })
+                                        y
+                                            ? (0, l.jsx)(W.A, { popoutWindowAlwaysOnTop: E, onToggleStayOnTop: U })
                                             : null,
-                                        X
-                                            ? (0, l.jsx)(M.A, {
+                                        L
+                                            ? (0, l.jsx)(G.A, {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
                                                       (0, N.zV)(ee.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
-                                                          (0, J.A)({ onConfirm: p });
+                                                          (0, J.A)({ onConfirm: u });
                                                   },
                                               })
                                             : null,
-                                        (0, l.jsx)(D.A, { node: ei, guestWindow: ea, onClick: es }),
+                                        (0, l.jsx)(D.A, { node: R, guestWindow: $, onClick: X }),
                                         (0, l.jsx)(
-                                            g.Y,
+                                            b.Y,
                                             {
-                                                targetElementRef: er,
+                                                targetElementRef: ei,
                                                 position: "bottom",
                                                 renderPopout: (e) => {
-                                                    let { closePopout: n } = e;
+                                                    let { closePopout: t } = e;
                                                     return (0, l.jsx)(w.A, {
                                                         children: (0, l.jsx)(Q.default, {
-                                                            application: m,
-                                                            channelId: o,
-                                                            onClose: n,
+                                                            application: a,
+                                                            channelId: r,
+                                                            onClose: t,
                                                         }),
                                                     });
                                                 },
-                                                children: (e, n) => {
-                                                    let { isShown: t } = n;
-                                                    return (0, r.createElement)(S, {
+                                                children: (e, t) => {
+                                                    let { isShown: n } = t;
+                                                    return (0, s.createElement)(S, {
                                                         ...e,
-                                                        buttonRef: er,
+                                                        buttonRef: ei,
                                                         key: "more-options",
-                                                        isActive: t,
+                                                        isActive: n,
                                                     });
                                                 },
                                             },
@@ -302,52 +301,51 @@ function ei(e) {
     );
 }
 function ea(e) {
-    let { applicationId: n, channelId: t } = e,
-        a = (0, i.bG)([h.Ay], () => h.Ay.getSelfEmbeddedActivities().get(n)),
-        s = r.useCallback(async () => {
-            await (0, $.od)(n, t ?? null), X.A.popInActivity();
-        }, [n, t]);
+    let { application: t, channelId: n } = e,
+        a = (0, i.bG)([f.Ay], () => f.Ay.getSelfEmbeddedActivities().get(t.id)),
+        r = s.useCallback(async () => {
+            await (0, $.od)(t.id, n ?? null), X.A.popInActivity();
+        }, [t.id, n]);
     return (0, l.jsx)(ei, {
-        hasActivity: null != a,
-        applicationId: n,
-        channelId: t,
+        application: t,
+        channelId: n,
         compositeInstanceId: a?.compositeInstanceId,
         userIds: a?.userIds,
         isRichPresenceInvite: !1,
-        onConfirmClosePopout: s,
+        onConfirmClosePopout: r,
     });
 }
-var es = t(998258);
-function er(e) {
-    let { activity: n, renderHeader: t, renderActivityIFrameWithLoadedData: a, isLoading: s = !1 } = e,
-        o = r.useRef(null),
-        c = (0, m.Ay)(n);
-    r.useEffect(() => {
-        null != n
+var er = n(998258);
+function es(e) {
+    let { activity: t, renderHeader: n, renderActivityIFrameWithLoadedData: a, isLoading: r = !1 } = e,
+        o = s.useRef(null),
+        c = (0, p.Ay)(t);
+    s.useEffect(() => {
+        null != t
             ? clearTimeout(o.current)
             : null != c &&
-              null == n &&
+              null == t &&
               (o.current = window.setTimeout(() => {
                   (0, x.close)(ee.MLl.ACTIVITY_POPOUT);
               }, 5e3));
-    }, [c, n]);
-    let u = (0, i.bG)([A.A], () => {
-        let e = n?.applicationId;
+    }, [c, t]);
+    let d = (0, i.bG)([A.A], () => {
+        let e = t?.applicationId;
         return null == e ? void 0 : A.A.getApplication(e);
     });
     return (0, l.jsx)("div", {
-        className: es.kL,
+        className: er.kL,
         children:
-            null == n || null == u || s
-                ? (0, l.jsx)(p.y, { className: es.pU })
+            null == t || null == d || r
+                ? (0, l.jsx)(m.y, { className: er.pU })
                 : (0, l.jsx)("div", {
-                      className: es.U$,
+                      className: er.U$,
                       children: (0, l.jsxs)("div", {
-                          className: es.kq,
+                          className: er.kq,
                           children: [
-                              (0, l.jsx)("div", { className: es.N1, children: t({ application: u }) }),
-                              (0, l.jsx)(I.A, { applicationId: u.id }),
-                              (0, l.jsx)("div", { className: es.Wc, children: a({ application: u }) }),
+                              (0, l.jsx)("div", { className: er.N1, children: n({ activity: t, application: d }) }),
+                              (0, l.jsx)(I.A, { type: "embedded-activity", applicationId: d.id }),
+                              (0, l.jsx)("div", { className: er.Wc, children: a({ activity: t, application: d }) }),
                           ],
                       }),
                   }),
@@ -356,92 +354,91 @@ function er(e) {
 function eo() {
     let {
             embeddedActivity: e,
-            channelId: n,
-            guildId: t,
-        } = (0, i.cf)([h.Ay], () => {
-            let e = h.Ay.getCurrentEmbeddedActivity(),
-                n = (0, y.H)(e?.location),
-                t = (0, y.D)(e?.location);
-            return { embeddedActivity: e, channelId: n, guildId: t };
+            channelId: t,
+            guildId: n,
+        } = (0, i.cf)([f.Ay], () => {
+            let e = f.Ay.getCurrentEmbeddedActivity(),
+                t = (0, h.H)(e?.location),
+                n = (0, h.D)(e?.location);
+            return { embeddedActivity: e, channelId: t, guildId: n };
         }),
-        a = (0, i.bG)([h.Ay], () => e?.applicationId != null && h.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
-        s = r.useCallback(
+        a = (0, i.bG)([f.Ay], () => e?.applicationId != null && f.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
+        r = s.useCallback(
             (e) => {
-                let { application: t } = e;
-                return (0, l.jsx)(ea, { applicationId: t.id, channelId: n });
+                let { application: n } = e;
+                return (0, l.jsx)(ea, { application: n, channelId: t });
             },
-            [n],
+            [t],
         ),
-        o = r.useCallback(
+        o = s.useCallback(
             (i) => {
                 let { application: a } = i,
-                    s = {};
+                    r = {};
                 null != e &&
-                    ((s.instance_id = e.compositeInstanceId ?? e.launchId ?? ""),
-                    (s.location_id = e.location?.id),
-                    (s.launch_id = e.launchId),
-                    (s.referrer_id = e.referrerId),
-                    (s.custom_id = e.customId),
-                    null != t && "" !== t && (s.guild_id = t),
-                    null != n && "" !== n && (s.channel_id = n));
-                let r = e?.url;
-                return (0, l.jsx)(d, { application: a, queryParams: s, url: r });
+                    ((r.instance_id = e.compositeInstanceId ?? e.launchId ?? ""),
+                    (r.location_id = e.location?.id),
+                    (r.launch_id = e.launchId),
+                    (r.referrer_id = e.referrerId),
+                    (r.custom_id = e.customId),
+                    null != n && "" !== n && (r.guild_id = n),
+                    null != t && "" !== t && (r.channel_id = t));
+                let s = e?.url;
+                return (0, l.jsx)(u, { application: a, queryParams: r, url: s });
             },
-            [n, t, e],
+            [t, n, e],
         );
-    return (0, l.jsx)(er, { activity: e, isLoading: a, renderHeader: s, renderActivityIFrameWithLoadedData: o });
+    return (0, l.jsx)(es, { activity: e, isLoading: a, renderHeader: r, renderActivityIFrameWithLoadedData: o });
 }
-var ec = t(113854),
-    eu = t(809871);
-function ed(e) {
-    let { applicationId: n } = e,
-        t = (0, i.bG)([s.A], () => s.A.getConnectedFrame()),
-        a = r.useCallback(async () => {
-            await ec.A.refreshProxyTicket({ applicationId: n }), eu.A.popInFrame();
-        }, [n]);
-    return (0, l.jsx)(ei, {
-        hasActivity: null != t,
-        applicationId: n,
-        isRichPresenceInvite: !0,
-        onConfirmClosePopout: a,
-        channelId: void 0,
+var ec = n(113854),
+    ed = n(809871);
+function eu(e) {
+    let { frame: t, application: n } = e,
+        i = s.useCallback(async () => {
+            await ec.A.refreshProxyTicket(t.id), ed.A.popInFrame();
+        }, [t.id]);
+    return (0, l.jsx)(ei, { application: n, isRichPresenceInvite: !0, onConfirmClosePopout: i, channelId: void 0 });
+}
+var em = n(165610),
+    ep = n(360469);
+function eA(e) {
+    let { frame: t, application: n } = e,
+        i = { instance_id: "example-cl-instance", platform: ep.vu.DESKTOP, discord_proxy_ticket: t.data.proxyTicket };
+    return (0, l.jsx)(u, {
+        application: n,
+        queryParams: i,
+        url: t.data.url,
+        onIframeMount: (e) => ec.A.attachFrameIframe(t.id, e),
+        onIframeUnmount: (e) => ec.A.detachFrameIframe(t.id, e),
     });
 }
-var ep = t(360469);
-function em() {
-    let e = (0, i.bG)([s.A], () => s.A.getConnectedFrame()),
-        n = (0, i.bG)([s.A], () => e?.applicationId != null && s.A.isProxyTicketRefreshing(e.applicationId), [e]),
-        t = r.useCallback((e) => {
-            let { application: n } = e;
-            return (0, l.jsx)(ed, { applicationId: n.id });
-        }, []),
-        a = r.useCallback(
-            (n) => {
-                let { application: t } = n,
-                    i = {};
-                null != e &&
-                    ((i.instance_id = "example-cl-instance"),
-                    (i.platform = ep.vu.DESKTOP),
-                    null != e.proxyTicket && (i.discord_proxy_ticket = e.proxyTicket));
-                let a = e?.url;
-                return (0, l.jsx)(d, { application: t, queryParams: i, url: a });
-            },
-            [e],
-        );
-    return (0, l.jsx)(er, { activity: e, isLoading: n, renderHeader: t, renderActivityIFrameWithLoadedData: a });
+function ex() {
+    let e = (0, i.bG)([r.A], () => (0, em.ny)(r.A.getMainFrame())),
+        t = e?.data.proxyTicketRefreshing ?? !1;
+    return (0, l.jsx)(es, {
+        activity: e,
+        isLoading: t,
+        renderHeader: (e) => {
+            let { activity: t, application: n } = e;
+            return (0, l.jsx)(eu, { frame: t, application: n });
+        },
+        renderActivityIFrameWithLoadedData: (e) => {
+            let { activity: t, application: n } = e;
+            return (0, l.jsx)(eA, { frame: t, application: n });
+        },
+    });
 }
-var eA = t(979186),
-    ex = t(620148);
-function eI(e) {
-    let { windowKey: n } = e,
-        t = (0, ex.A)(),
-        r = (0, i.bG)([s.A], () => s.A.getConnectedFrame()),
-        { data: o } = (0, a.YY)(r?.applicationId),
-        c = t?.name ?? o?.name ?? G.intl.string(G.t.IC5Ann);
-    return (0, l.jsx)(eA.A, {
+var eI = n(979186),
+    ef = n(620148);
+function eh(e) {
+    let { windowKey: t } = e,
+        n = (0, ef.A)(),
+        s = (0, i.bG)([r.A], () => r.A.getMainFrame()),
+        { data: o } = (0, a.YY)(s?.applicationId),
+        c = n?.name ?? o?.name ?? M.intl.string(M.t.IC5Ann);
+    return (0, l.jsx)(eI.A, {
         withTitleBar: !0,
-        windowKey: n,
+        windowKey: t,
         title: c,
-        children: null != t ? (0, l.jsx)(eo, {}) : (0, l.jsx)(em, {}),
+        children: null != n ? (0, l.jsx)(eo, {}) : (0, l.jsx)(ex, {}),
     });
 }

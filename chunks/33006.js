@@ -65,10 +65,10 @@ function k(e, t, n, o) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
     N(e, t, { code: i, message: o }, n);
 }
-class L extends A.A {
+class T extends A.A {
     _socket;
     constructor(e, t, n) {
-        if ((super("ws", t, n), -1 === ["etf", "json"].indexOf(n)))
+        if ((super({ type: g.z4.WEBSOCKET }, t, n), -1 === ["etf", "json"].indexOf(n)))
             throw new p.A({ closeCode: I.YI$.INVALID_ENCODING }, `Invalid Encoding: ${n}`);
         if ("etf" === n && null == o)
             throw new p.A({ closeCode: I.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
@@ -85,11 +85,11 @@ class L extends A.A {
         this._socket.close(e, t);
     }
 }
-class T extends A.A {
+class L extends A.A {
     _sendCallback;
     _closeCallback;
     constructor(e, t, n, o) {
-        if ((super("http", n, o), "json" !== o))
+        if ((super({ type: g.z4.HTTP }, n, o), "json" !== o))
             throw new p.A({ closeCode: I.YI$.INVALID_ENCODING }, `Invalid Encoding: ${o}`);
         (this._sendCallback = e), (this._closeCallback = t);
     }
@@ -134,7 +134,7 @@ class R extends r.EventEmitter {
                         t.writeHead(301),
                         t.end();
                 },
-                l = new T(!r ? s : N.bind(null, e, t), !r ? s : k.bind(null, e, t, 400), Number(n.get("v")), i);
+                l = new L(!r ? s : N.bind(null, e, t), !r ? s : k.bind(null, e, t, 400), Number(n.get("v")), i);
             r
                 ? (0, f.j7)(l, w(e.headers).origin, n.get("client_id"))
                       .then(() => {
@@ -158,7 +158,7 @@ class R extends r.EventEmitter {
             n = new URLSearchParams(w(e.upgradeReq).url.split("?")[1]),
             o = w(e.upgradeReq).headers.origin ?? "";
         try {
-            t = new L(e, Number(n.get("v")), n.get("encoding") ?? "json");
+            t = new T(e, Number(n.get("v")), n.get("encoding") ?? "json");
         } catch (t) {
             e.close(t.code, t.message);
             return;

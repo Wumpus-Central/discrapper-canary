@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => eo });
+l.r(t), l.d(t, { default: () => eu });
 var i,
     a = l(477900),
     n = l(582128),
@@ -31,7 +31,7 @@ var i,
     R = l(998939),
     T = l(972786),
     z = l(20386),
-    D = l(647562),
+    D = l(602323),
     P = l(922016),
     O = l(980707),
     B = l(477782),
@@ -219,11 +219,12 @@ function ei(e) {
     });
 }
 var ea = l(746080),
-    en = l(401029);
-function es(e) {
+    en = l(165610),
+    es = l(401029);
+function er(e) {
     return (0, a.jsx)(u.o, { ...e, size: "custom", width: 20, height: 20 });
 }
-function er(e) {
+function ed(e) {
     let { project: t, onSelect: l } = e,
         i = (0, o.bG)([V.A], () => V.A.isThinking(t.id), [t.id]),
         n =
@@ -231,24 +232,24 @@ function er(e) {
                 ? null
                 : F.intl.formatToPlainString(M.default.oMDaqr, { time: c()(t.updated_at).fromNow() });
     return (0, a.jsxs)("div", {
-        className: en.OY,
+        className: es.OY,
         children: [
             (0, a.jsx)(m.D, {
-                className: en.W6,
+                className: es.W6,
                 onClick: l,
                 children: (0, a.jsxs)("div", {
-                    className: en.MM,
+                    className: es.MM,
                     children: [
                         (0, a.jsx)(x.E, {
                             variant: "text-md/semibold",
                             color: "text-strong",
-                            className: en.j1,
+                            className: es.j1,
                             children: t.name,
                         }),
                         null == n
                             ? null
                             : (0, a.jsx)("div", {
-                                  className: en.h3,
+                                  className: es.h3,
                                   children: (0, a.jsx)(x.E, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
@@ -259,11 +260,11 @@ function er(e) {
                 }),
             }),
             (0, a.jsxs)("div", {
-                className: en.M2,
+                className: es.M2,
                 children: [
-                    i ? (0, a.jsx)(z.Ty, { className: en.O$ }) : null,
+                    i ? (0, a.jsx)(z.Ty, { className: es.O$ }) : null,
                     (0, a.jsx)("div", {
-                        className: en.Pl,
+                        className: es.Pl,
                         children: (0, a.jsx)(G, { projectId: t.id, projectName: t.name }),
                     }),
                 ],
@@ -271,7 +272,7 @@ function er(e) {
         ],
     });
 }
-function ed(e) {
+function ec(e) {
     let { project: t, projectsLoaded: l, onBack: i, guildId: s } = e,
         [r, d] = n.useState(!1),
         [c, u] = n.useState(!0),
@@ -355,7 +356,7 @@ function ed(e) {
         }
     }, [s, P, z, t]);
     return (0, a.jsxs)("div", {
-        className: en.nj,
+        className: es.nj,
         children: [
             (0, a.jsx)(W, {
                 title: t?.name ?? F.intl.string(M.default.F2dRba),
@@ -364,17 +365,17 @@ function ed(e) {
                     null == t
                         ? null
                         : (0, a.jsxs)("div", {
-                              className: en.wO,
+                              className: es.wO,
                               children: [
                                   (0, a.jsxs)("div", {
-                                      className: en.FO,
+                                      className: es.FO,
                                       children: [
                                           (0, a.jsx)(G, { projectId: t.id, projectName: t.name }),
                                           (0, a.jsx)(p.m, {
                                               text: B,
                                               ariaHidden: !0,
                                               children: (0, a.jsx)(f.K, {
-                                                  icon: es,
+                                                  icon: er,
                                                   size: "sm",
                                                   variant: "icon-only",
                                                   "aria-label": B,
@@ -396,11 +397,11 @@ function ed(e) {
                           }),
             }),
             (0, a.jsx)("main", {
-                className: en.JX,
+                className: es.JX,
                 children:
                     null == t
                         ? (0, a.jsxs)("div", {
-                              className: en.sD,
+                              className: es.sD,
                               children: [
                                   (0, a.jsx)(N.D, {
                                       variant: "heading-lg/semibold",
@@ -423,7 +424,8 @@ function ed(e) {
                               D.A,
                               {
                                   projectId: t.id,
-                                  appId: t.preview_application_id,
+                                  applicationId: t.preview_application_id,
+                                  surface: en.sd,
                                   chatOpen: c,
                                   previewReady: z,
                                   previewGate: J,
@@ -434,7 +436,7 @@ function ed(e) {
         ],
     });
 }
-function ec(e) {
+function eo(e) {
     let {
             projects: t,
             fetchState: l,
@@ -470,35 +472,35 @@ function ec(e) {
             [o, g],
         );
     return (0, a.jsxs)("div", {
-        className: r()(en.nj, en.a0),
+        className: r()(es.nj, es.a0),
         children: [
             (0, a.jsx)(W, { title: F.intl.string(M.default.Xmvb23) }),
             (0, a.jsx)(b.Ip, {
                 children: (0, a.jsx)("main", {
-                    className: en.rf,
+                    className: es.rf,
                     children: (0, a.jsxs)("div", {
-                        className: en.Qs,
+                        className: es.Qs,
                         children: [
                             (0, a.jsxs)("section", {
-                                className: en.Ix,
+                                className: es.Ix,
                                 children: [
                                     (0, a.jsx)(N.D, {
                                         variant: "heading-xl/semibold",
                                         children: F.intl.string(M.default["2tYpRK"]),
                                     }),
                                     (0, a.jsx)("div", {
-                                        className: en.Aw,
+                                        className: es.Aw,
                                         children: f.map((e) =>
                                             (0, a.jsx)(
                                                 m.D,
                                                 {
                                                     "aria-disabled": d,
-                                                    className: en.nx,
+                                                    className: es.nx,
                                                     onClick: d ? void 0 : () => g(e),
                                                     children: (0, a.jsx)(x.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
-                                                        className: en.un,
+                                                        className: es.un,
                                                         children: e,
                                                     }),
                                                 },
@@ -507,7 +509,7 @@ function ec(e) {
                                         ),
                                     }),
                                     (0, a.jsxs)("div", {
-                                        className: en.DA,
+                                        className: es.DA,
                                         children: [
                                             (0, a.jsx)(C.f, {
                                                 label: p,
@@ -520,7 +522,7 @@ function ec(e) {
                                                 onKeyDown: A,
                                             }),
                                             (0, a.jsx)("div", {
-                                                className: en.VP,
+                                                className: es.VP,
                                                 children: (0, a.jsx)(v.$, {
                                                     variant: "primary",
                                                     size: "md",
@@ -535,10 +537,10 @@ function ec(e) {
                                 ],
                             }),
                             (0, a.jsxs)("section", {
-                                className: en.hK,
+                                className: es.hK,
                                 children: [
                                     (0, a.jsxs)("div", {
-                                        className: en.RM,
+                                        className: es.RM,
                                         children: [
                                             (0, a.jsx)(x.E, {
                                                 variant: "text-md/medium",
@@ -553,10 +555,10 @@ function ec(e) {
                                         ],
                                     }),
                                     (null == l || "loading" === l.type) && 0 === h.length
-                                        ? (0, a.jsx)("div", { className: en.E8, children: (0, a.jsx)(E.y, {}) })
+                                        ? (0, a.jsx)("div", { className: es.E8, children: (0, a.jsx)(E.y, {}) })
                                         : l?.type === "error" && 0 === h.length
                                           ? (0, a.jsxs)("div", {
-                                                className: en.E8,
+                                                className: es.E8,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
                                                         variant: "text-sm/normal",
@@ -573,9 +575,9 @@ function ec(e) {
                                             })
                                           : 0 === h.length
                                             ? (0, a.jsx)("div", {
-                                                  className: en.D1,
+                                                  className: es.D1,
                                                   children: (0, a.jsxs)("div", {
-                                                      className: en.ST,
+                                                      className: es.ST,
                                                       children: [
                                                           (0, a.jsx)(y.D, {
                                                               size: "lg",
@@ -584,14 +586,14 @@ function ec(e) {
                                                           (0, a.jsx)(x.E, {
                                                               variant: "text-sm/normal",
                                                               color: "text-subtle",
-                                                              className: en.sI,
+                                                              className: es.sI,
                                                               children: F.intl.string(M.default["vqy+in"]),
                                                           }),
                                                       ],
                                                   }),
                                               })
                                             : h.map((e) =>
-                                                  (0, a.jsx)(er, { project: e, onSelect: () => u(e.id) }, e.id),
+                                                  (0, a.jsx)(ed, { project: e, onSelect: () => u(e.id) }, e.id),
                                               ),
                                 ],
                             }),
@@ -602,7 +604,7 @@ function ec(e) {
         ],
     });
 }
-function eo(e) {
+function eu(e) {
     let { guildId: t, projectId: l } = e,
         i = (0, o.yK)([T.A], () => T.A.getAllProjects()),
         s = (0, o.bG)([T.A], () => T.A.getProjectsFetchState()),
@@ -648,8 +650,8 @@ function eo(e) {
         }, []),
         N = null == c ? null : (i.find((e) => e.id === c) ?? null);
     return null != c
-        ? (0, a.jsx)(ed, { project: N, projectsLoaded: s?.type === "success", onBack: f, guildId: t })
-        : (0, a.jsx)(ec, {
+        ? (0, a.jsx)(ec, { project: N, projectsLoaded: s?.type === "success", onBack: f, guildId: t })
+        : (0, a.jsx)(eo, {
               projects: i,
               fetchState: s,
               idea: r,

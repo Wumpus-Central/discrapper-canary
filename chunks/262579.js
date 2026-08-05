@@ -7,9 +7,9 @@ var i = n(477900),
     l = n(113854),
     o = n(375708);
 function d(e) {
-    let { applicationId: t, centerButton: n = !1, ...d } = e,
+    let { frameId: t, centerButton: n = !1, ...d } = e,
         c = r.useCallback(() => {
-            l.A.stopFrame({ applicationId: t });
+            l.A.stopFrame(t);
         }, [t]),
         u = n ? s.l : s.A;
     return (0, i.jsx)(u, { ...d, isTrayButton: !1, onClick: c, iconComponent: a.P, label: o.intl.string(o.t.cpT0Cq) });

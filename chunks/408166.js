@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, { default: () => a });
+n.r(t), n.d(t, { default: () => s });
 var i = n(113854),
     r = n(91242),
-    s = n(165610);
-function a() {
-    let e = r.A.getConnectedFrame();
-    null != e && i.A.updateFrameLayoutMode({ applicationId: e.applicationId, layoutMode: s.y.PIP });
+    a = n(165610);
+function s() {
+    let e = r.A.getMainFrame();
+    (0, a.x1)(e) && i.A.updateFrameLayoutMode({ frameId: e.id, layoutMode: a.y0.PIP });
 }

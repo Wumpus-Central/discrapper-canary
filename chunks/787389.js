@@ -14,13 +14,13 @@ function E(e) {
     let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: E, runAfterLaunchAttempt: A } = e,
         { data: h } = (0, s.YY)(t),
         I = (0, r.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
-        f = (0, r.bG)([o.A], () => o.A.getConnectedFrame()),
+        f = (0, r.bG)([o.A], () => o.A.getMainFrame()),
         p = (0, d.x)(h);
     return i.useCallback(async () => {
         if (null == t || null == h) return;
         let e = null != I && I.applicationId === t;
         if (null != f && f.applicationId === t)
-            return void l.A.updateFrameLayoutMode({ applicationId: f.applicationId, layoutMode: _.y.FOCUSED });
+            return void l.A.updateFrameLayoutMode({ frameId: f.id, layoutMode: _.y0.FOCUSED });
         if (e) {
             let e = I.location;
             (0, u.A)("guild_id" in e ? e.guild_id : null, e);
@@ -29,7 +29,7 @@ function E(e) {
         E?.();
         try {
             p
-                ? await l.A.launchFrame({ applicationId: t })
+                ? await l.A.launchFrame({ applicationId: t, surface: _.sd })
                 : h?.bot?.id != null && (await (0, a.Q)({ appId: t, botId: h?.bot?.id, analyticsLocations: n ?? [] }));
         } catch (e) {}
         A?.();
