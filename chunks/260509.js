@@ -1,41 +1,41 @@
 "use strict";
 n.d(t, {
-    DG: () => E,
-    Fy: () => A,
+    DG: () => I,
+    Fy: () => T,
     Iv: () => _,
-    Rb: () => h,
-    af: () => m,
-    bM: () => f,
-    do: () => d,
-    kn: () => g,
-    ok: () => p,
+    Rb: () => E,
+    af: () => f,
+    bM: () => A,
+    do: () => u,
+    kn: () => p,
+    ok: () => h,
     uA: () => c,
-    vI: () => u,
-    wh: () => I,
+    vI: () => d,
+    wh: () => m,
 });
 var i = n(867051),
     r = n(329972),
-    s = n(486020),
-    a = n(935208),
-    o = n(240248),
-    l = n(652215);
-let u = "Guild",
-    c = new Set([l.ftr.EXPLICIT, l.ftr.AGE_RESTRICTED]),
-    d = Object.freeze({
-        mfaLevel: l.EkJ.NONE,
+    a = n(486020),
+    s = n(935208),
+    l = n(240248),
+    o = n(652215);
+let d = "Guild",
+    c = new Set([o.ftr.EXPLICIT, o.ftr.AGE_RESTRICTED]),
+    u = Object.freeze({
+        mfaLevel: o.EkJ.NONE,
         preferredLocale: "en-US",
         afkTimeout: 0,
-        defaultMessageNotifications: l.orn.ALL_MESSAGES,
-        verificationLevel: l.PvD.NONE,
-        explicitContentFilter: l.gh6.DISABLED,
+        defaultMessageNotifications: o.orn.ALL_MESSAGES,
+        verificationLevel: o.PvD.NONE,
+        explicitContentFilter: o.gh6.DISABLED,
         premiumProgressBarEnabled: !1,
         premiumProgressBarEnabledUserUpdatedAt: null,
         systemChannelFlags: 0,
         maxStageVideoChannelUsers: -1,
         maxVideoChannelUsers: -1,
         maxMembers: -1,
-        premiumTier: l.TVA.NONE,
-        nsfwLevel: l.ftr.DEFAULT,
+        premiumTier: o.TVA.NONE,
+        nsfwLevel: o.ftr.DEFAULT,
         premiumSubscriberCount: 0,
         features: new Set(),
         description: null,
@@ -63,37 +63,38 @@ let u = "Guild",
         verificationRoleId: null,
         gameApplicationIds: null,
         officialMessageColor: null,
+        incidentsData: null,
     });
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return s.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: i });
+    return a.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: i });
 }
-function h(e) {
-    return (0, o.oN)(e.name);
+function E(e) {
+    return (0, l.oN)(e.name);
 }
-function f(e, t) {
+function A(e, t) {
     let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
-function p(e, t) {
-    return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && f(e, t);
-}
-function E(e) {
-    return null == e.joinedAt;
-}
-function m(e) {
-    return a.default.castGuildIdAsEveryoneGuildRoleId(e.id);
-}
-function g(e, t) {
-    return (0, i.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
-}
-function A(e, t) {
-    return (0, i.hZ)(e, "gameApplicationIds", t);
+function h(e, t) {
+    return (!!t.mfaEnabled || e.mfaLevel !== o.EkJ.ELEVATED) && A(e, t);
 }
 function I(e) {
+    return null == e.joinedAt;
+}
+function f(e) {
+    return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+}
+function p(e, t) {
+    return (0, i.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
+}
+function T(e, t) {
+    return (0, i.hZ)(e, "gameApplicationIds", t);
+}
+function m(e) {
     return (
         null != e &&
-        ((0, r.v)("guild_record") ? c.has(e.nsfwLevel) : c.has(e.ownerConfiguredContentLevel ?? l.ftr.DEFAULT))
+        ((0, r.v)("guild_record") ? c.has(e.nsfwLevel) : c.has(e.ownerConfiguredContentLevel ?? o.ftr.DEFAULT))
     );
 }

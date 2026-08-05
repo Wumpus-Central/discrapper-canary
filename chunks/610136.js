@@ -15,15 +15,10 @@ function _() {
     for (let n of ((u = {}), t)) u[n.id] = { guildId: n.id, guildName: n.name, ...e[n.id] };
 }
 function E(e) {
-    return null != e && Object.keys(e).length > 0
-        ? {
-              raidDetectedAt: e.raid_detected_at,
-              dmSpamDetectedAt: e.dm_spam_detected_at,
-              dmsDisabledUntil: e.dms_disabled_until,
-              invitesDisabledUntil: e.invites_disabled_until,
-              lockdownDurationHours: e.lockdown_duration_hours,
-          }
-        : null;
+    let t = c[e],
+        n = l.A.getGuild(e)?.incidentsData,
+        i = null != n && ((0, d.k$)(n) || (0, d._J)(n)) ? n : void 0;
+    return t !== i && (null == i ? delete c[e] : (c[e] = i), !0);
 }
 class A extends i.Ay.Store {
     static displayName = "GuildIncidentsStore";
@@ -42,20 +37,16 @@ class A extends i.Ay.Store {
 }
 let h = new A(r.h, {
     CONNECTION_OPEN: function (e) {
-        for (let t of ((c = {}), e.guilds)) {
-            let e = E(t.properties?.incidents_data);
-            null != e && ((0, d.k$)(e) || (0, d._J)(e)) && (c[t.id] = e);
-        }
+        let { guilds: t } = e;
+        for (let { id: e } of ((c = {}), t)) E(e);
     },
     GUILD_CREATE: function (e) {
-        let { guild: t } = e,
-            n = E(t.properties?.incidents_data);
-        null != n && ((0, d.k$)(n) || (0, d._J)(n)) && (c[t.id] = n);
+        let { guild: t } = e;
+        return E(t.id);
     },
     GUILD_UPDATE: function (e) {
-        let { guild: t } = e,
-            n = E(t.incidents_data);
-        null != n && ((0, d.k$)(n) || (0, d._J)(n)) ? (c[t.id] = n) : delete c[t.id];
+        let { guild: t } = e;
+        return E(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
