@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(582128),
-    r = n(17928),
-    a = n(733391),
-    s = n(832163);
-function l(e) {
+l.d(t, { A: () => s });
+var n = l(582128),
+    i = l(17928),
+    a = l(733391),
+    r = l(832163);
+function s(e) {
     let { applicationId: t } = e,
-        n = (0, r.bG)([s.A], () => (null != t ? s.A.getStorefrontDataForApplicationId(t) : void 0), [t]);
+        l = (0, i.bG)([r.A], () => (null != t ? r.A.getStorefrontDataForApplicationId(t) : void 0), [t]);
     return (
-        i.useEffect(() => {
+        n.useEffect(() => {
             null != t && (0, a.ap)(t, { eager: !1 });
         }, [t]),
-        n
+        l
     );
 }

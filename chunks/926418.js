@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { l: () => c }), n(667532);
-var i = n(477900),
-    r = n(582128),
-    a = n(17928),
-    s = n(692617),
-    l = n(548118),
-    o = n(71393),
-    d = n(967198);
+t.d(s, { l: () => c }), t(667532);
+var l = t(477900),
+    i = t(582128),
+    n = t(17928),
+    a = t(692617),
+    d = t(548118),
+    u = t(71393),
+    r = t(967198);
 function c(e) {
-    let { guildIds: t, iconSize: n = 20, prioritizeSelectedGuild: c = !1, className: u } = e,
-        _ = (0, a.bG)([d.A], () => (c ? d.A.getGuildId() : null), [c]),
-        E = (0, a.yK)([o.A], () => t.map((e) => o.A.getGuild(e)), [t]),
-        A = (0, r.useMemo)(() => E.filter((e) => null != e), [E]),
-        h = (0, r.useMemo)(() => {
-            let e = [...A];
-            if (null != _) {
-                let t = e.findIndex((e) => e.id === _);
-                t > 0 && (e.splice(t, 1), e.unshift(A[t]));
+    let { guildIds: s, iconSize: t = 20, prioritizeSelectedGuild: c = !1, className: m } = e,
+        o = (0, n.bG)([r.A], () => (c ? r.A.getGuildId() : null), [c]),
+        x = (0, n.yK)([u.A], () => s.map((e) => u.A.getGuild(e)), [s]),
+        h = (0, i.useMemo)(() => x.filter((e) => null != e), [x]),
+        A = (0, i.useMemo)(() => {
+            let e = [...h];
+            if (null != o) {
+                let s = e.findIndex((e) => e.id === o);
+                s > 0 && (e.splice(s, 1), e.unshift(h[s]));
             }
             return e;
-        }, [A, _]);
-    return (0, i.jsx)(s.A, {
-        className: u,
-        guilds: h,
+        }, [h, o]);
+    return (0, l.jsx)(a.A, {
+        className: m,
+        guilds: A,
         maxGuilds: 3,
         size: (function (e) {
             switch (e) {
                 case 16:
-                    return l.Ay.Sizes.SMOL;
+                    return d.Ay.Sizes.SMOL;
                 case 24:
-                    return l.Ay.Sizes.SMALLER;
+                    return d.Ay.Sizes.SMALLER;
                 default:
-                    return l.Ay.Sizes.MINI;
+                    return d.Ay.Sizes.MINI;
             }
-        })(n),
+        })(t),
         disableGuildNameTooltip: !0,
     });
 }

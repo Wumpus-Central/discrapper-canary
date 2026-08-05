@@ -951,7 +951,7 @@ let eL = !1;
 async function eD(e) {
     if (!(0, g.isDesktop)() || a.A.clips?.loadClipsDirectory == null) return;
     let t = await eR(e);
-    if ((0, O.rX)()) {
+    if ((0, O.C5)("auto")) {
         let n = (0, O.xT)(e);
         await a.A.fileManager.createDirectoryIfNotExists(n, !0), t.push(...(await eR(n)));
     }
@@ -1098,13 +1098,17 @@ function ex(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
 function ek(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }),
-        t &&
-            m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, {
-                ...N.lc("updateEnableAutoclipping"),
-                autoclips_enabled: e,
-            });
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = (0, O.C5)("auto");
+    if (
+        (r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }), !n && (0, O.C5)("auto"))
+    ) {
+        let { storageLocation: e } = R.Ay.getSettings();
+        eD(e).catch((e) => {
+            w.nx.error("Failed to reload clips after enabling autoclipping", e);
+        });
+    }
+    t && m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, { ...N.lc("updateEnableAutoclipping"), autoclips_enabled: e });
 }
 function eF(e) {
     r.h.dispatch({
