@@ -11,3 +11,13 @@
     height: 80px;
     width: 80px
 }
+
+.uploadLabel__98cf7 {
+    position: absolute;
+    top: 44px;
+    inset-inline: 0;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+    text-align: center;
+    text-transform: uppercase
+}

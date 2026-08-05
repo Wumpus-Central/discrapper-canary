@@ -907,27 +907,27 @@ let e4 = (e) => {
         ],
     });
 };
-var e9 = l(628245);
-let e7 = (e) => {
+var e7 = l(628245);
+let e9 = (e) => {
     let { event: t } = e,
         l = (0, G.bG)([eZ.A], () => eZ.A.getGuild(t.guild_id));
     return null == l
         ? null
         : (0, n.jsxs)("div", {
-              className: e9.kL,
+              className: e7.kL,
               children: [
                   (0, n.jsx)(_.D, {
-                      className: e9.wx,
+                      className: e7.wx,
                       variant: "heading-sm/semibold",
                       children: T.intl.string(T.t.SDTOL7),
                   }),
                   (0, n.jsxs)("div", {
-                      className: e9.bo,
+                      className: e7.bo,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: e9.OA,
+                              className: e7.OA,
                               children: [
-                                  (0, n.jsx)(eJ.Ay, { guild: l, size: eJ.Ay.Sizes.MINI, className: e9.$f }),
+                                  (0, n.jsx)(eJ.Ay, { guild: l, size: eJ.Ay.Sizes.MINI, className: e7.$f }),
                                   (0, n.jsx)(P.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
@@ -1513,19 +1513,19 @@ function t2(e) {
 }
 var t8 = l(778712),
     t4 = l(730134),
-    t9 = l(349224);
-let t7 = (e) => {
+    t7 = l(349224);
+let t9 = (e) => {
     let { user: t } = e;
     return (0, n.jsxs)("div", {
-        className: t9.kL,
+        className: t7.kL,
         children: [
-            (0, n.jsx)(_.D, { className: t9.wx, variant: "heading-sm/semibold", children: T.intl.string(T.t.Rsth7z) }),
+            (0, n.jsx)(_.D, { className: t7.wx, variant: "heading-sm/semibold", children: T.intl.string(T.t.Rsth7z) }),
             (0, n.jsx)("div", {
-                className: t9.f1,
+                className: t7.f1,
                 children: (0, n.jsxs)("div", {
-                    className: t9.eF,
+                    className: t7.eF,
                     children: [
-                        (0, n.jsx)(t4.A, { className: t9.Hk, user: t, size: t8._3.SIZE_40 }),
+                        (0, n.jsx)(t4.A, { className: t7.Hk, user: t, size: t8._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1547,7 +1547,7 @@ let t7 = (e) => {
         ],
     });
 };
-var t5 = l(133839),
+var t5 = l(177e3),
     t6 = l(287809),
     le = l(805267);
 let lt = (e) => {
@@ -1801,7 +1801,7 @@ let ls = (e) => {
                     null != la(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tj, { message: l.record }),
-                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t7, { user: l.record }) : null,
+                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t9, { user: l.record }) : null,
                     null != la(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(lt, { widget: l.widget, userId: l.user_id })
                         : null,
@@ -1881,7 +1881,7 @@ let ls = (e) => {
                         (0, n.jsx)(tY, { stageInstance: l.record }),
                     null != la(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === l.name &&
-                        (0, n.jsx)(e7, { event: l.record }),
+                        (0, n.jsx)(e9, { event: l.record }),
                     null != la(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === l.name &&
                         (0, n.jsx)(e0, { entry: l.record }),

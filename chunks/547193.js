@@ -5,4 +5,5 @@ e.exports = {
     Vs: "tile_afbdeb",
     wH: "selected_afbdeb",
     nC: "tileMedia_afbdeb",
+    nM: "removeClipButton_afbdeb",
 };
