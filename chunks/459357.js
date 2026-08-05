@@ -8,4 +8,4 @@ let r = (0, e(945810).mj)({
 function o(a) {
     return { enabled: r.useConfig(a).enabled };
 }
-let t = r;
+let t = 88245 != e.j ? r : null;
