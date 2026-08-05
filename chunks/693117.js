@@ -303,29 +303,29 @@ async function W(e) {
         null != t && clearTimeout(t), (0, j.A)(n);
     }
 }
-async function Y(e, t, n) {
-    let i = document.createElement("canvas");
-    (i.width = t), (i.height = n);
-    let r = i.getContext("2d");
-    if (null == r) throw Error("rasterizeTextTrack: could not create a 2D canvas context");
-    await document.fonts.ready;
-    let a = getComputedStyle(document.body).fontFamily,
-        { text: s, style: l, position: o } = e.data,
-        d = l.fontSize * n,
-        c = w.mO[l.strokeWidth] * d;
-    (r.font = `700 ${d}px ${"" === a ? "sans-serif" : a}`), (r.textAlign = "center"), (r.textBaseline = "middle");
-    let u = o.x * t,
-        _ = o.y * n;
-    c > 0 &&
-        ((r.lineJoin = "round"),
-        (r.miterLimit = 2),
-        (r.lineWidth = c),
-        (r.strokeStyle = l.strokeColor),
-        r.strokeText(s, u, _)),
-        (r.fillStyle = l.color),
-        r.fillText(s, u, _);
-    let E = i.toDataURL("image/png");
-    return { pngBase64: E.slice(E.indexOf(",") + 1), x: 0, y: 0, width: 1, height: 1 };
+async function Y(e, t, i) {
+    if (0 === e.length) return [];
+    let r = getComputedStyle(document.body).fontFamily,
+        a = "" === r ? "sans-serif" : r,
+        s = new Worker(new URL("/assets/" + n.u("83400"), n.b));
+    try {
+        return await new Promise((n, r) => {
+            s.addEventListener(
+                "message",
+                (e) => {
+                    let {
+                        data: { results: t, error: i },
+                    } = e;
+                    null != i ? r(Error(i)) : n(t ?? []);
+                },
+                { once: !0 },
+            ),
+                s.addEventListener("error", (e) => r(Error(e.message)), { once: !0 }),
+                s.postMessage({ tracks: e, canvasWidth: t, canvasHeight: i, fontFamily: a });
+        });
+    } finally {
+        s.terminate();
+    }
 }
 async function K(e, t) {
     let { width: n, height: i } = await W(e);
@@ -352,42 +352,26 @@ async function $(e, t, n) {
                 return n > t;
             });
     if (0 === a.length) return [];
-    let { width: s, height: l } = await K(n, t);
+    let { width: s, height: l } = await K(n, t),
+        o = await Y(
+            a.map((e) => {
+                let { track: t } = e;
+                return t;
+            }),
+            s,
+            l,
+        );
     return [
         {
-            segments: await Promise.all(
-                a.map(async (e) => {
-                    let { track: t, start_ms: n, end_ms: i } = e,
-                        {
-                            pngBase64: r,
-                            x: a,
-                            y: o,
-                            width: d,
-                            height: c,
-                        } = await (function (e, t, n) {
-                            if (e.type === w.Me.TEXT) return Y(e, t, n);
-                            {
-                                let t = e.type;
-                                throw Error(`rasterizeTrack: unhandled track type '${t}'`);
-                            }
-                        })(t, s, l);
-                    return {
-                        start_ms: n,
-                        end_ms: i,
-                        x: a,
-                        y: o,
-                        width: d,
-                        height: c,
-                        opacity: 1,
-                        kind: "bitmap",
-                        png: r,
-                    };
-                }),
-            ),
+            segments: a.map((e, t) => {
+                let { start_ms: n, end_ms: i } = e,
+                    { pngBase64: r, x: a, y: s, width: l, height: d } = o[t];
+                return { start_ms: n, end_ms: i, x: a, y: s, width: l, height: d, opacity: 1, kind: "bitmap", png: r };
+            }),
         },
     ];
 }
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+n(323874), n(14289), n(35956), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
 var z = n(284009),
     q = n.n(z);
 async function Z(e) {
