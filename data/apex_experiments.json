@@ -5665,6 +5665,18 @@
     }
   },
   {
+    "name": "2026-07-plan-select-ui-redesign",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-07-powerups-coachmark-scroll-close",
     "kind": "user",
     "defaultConfig": {
