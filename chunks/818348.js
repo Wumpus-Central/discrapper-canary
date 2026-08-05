@@ -690,6 +690,7 @@ var eG =
         (g.SEO_TRENDING_GAMES_CTA_CLICKED = "seo_trending_games_cta_clicked"),
         (g.SEO_AGGREGATOR_PAGE_VIEWED = "seo_aggregator_page_viewed"),
         (g.SEO_AGGREGATOR_CTA_CLICKED = "seo_aggregator_page_cta_clicked"),
+        (g.SEO_AGGREGATOR_SEARCH_PERFORMED = "seo_aggregator_search_performed"),
         (g.LOCATION_STACK_METADATA = "location_stack_metadata"),
         (g.CREATOR_STORE_PAGE_VIEWED = "creator_store_page_viewed"),
         (g.CREATOR_STORE_PAGE_CTA_CLICKED = "creator_store_page_cta_clicked"),
