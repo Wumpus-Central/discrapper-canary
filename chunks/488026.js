@@ -1,29 +1,29 @@
-l.d(t, { default: () => L });
-var a = l(477900),
-    s = l(582128),
-    r = l(503698),
-    i = l.n(r),
-    n = l(132500),
-    c = l(772707),
-    d = l(441574),
-    o = l(991049),
-    h = l(280645),
-    u = l(952146),
-    v = l(331322),
-    m = l(289873),
-    p = l(512950),
-    E = l(821609),
-    f = l(109112),
-    x = l(939249),
-    A = l(834730),
-    _ = l(320448),
-    g = l(975571),
-    w = l(31720),
-    R = l(847599),
-    j = l(36149),
-    I = l(228366),
-    C = l(562465),
-    y = l(652215);
+a.d(t, { default: () => L });
+var l = a(477900),
+    s = a(582128),
+    r = a(503698),
+    i = a.n(r),
+    n = a(132500),
+    c = a(772707),
+    d = a(441574),
+    o = a(991049),
+    h = a(280645),
+    u = a(952146),
+    v = a(331322),
+    m = a(289873),
+    p = a(512950),
+    E = a(821609),
+    f = a(109112),
+    x = a(939249),
+    A = a(834730),
+    g = a(320448),
+    _ = a(975571),
+    w = a(31720),
+    R = a(847599),
+    j = a(36149),
+    I = a(228366),
+    C = a(562465),
+    y = a(652215);
 async function N() {
     return (await C.Bo.get({ url: y.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => {
         var t;
@@ -45,23 +45,23 @@ async function N() {
         };
     });
 }
-var S = l(787301);
+var S = a(787301);
 let T = function (e) {
-    let { icon: t, size: l = 24 } = e;
-    return (0, a.jsx)("svg", {
-        width: l,
-        height: l,
+    let { icon: t, size: a = 24 } = e;
+    return (0, l.jsx)("svg", {
+        width: a,
+        height: a,
         viewBox: "0 0 24 24",
         fill: "currentColor",
         "aria-hidden": !0,
-        children: t.paths.map((e) => (0, a.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
+        children: t.paths.map((e) => (0, l.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var V = l(516761),
-    M = l(375708),
-    b = l(658103);
+var V = a(516761),
+    M = a(375708),
+    b = a(658103);
 let L = function (e) {
-    let { transitionState: t, entryPoint: l, onClose: r, dismissable: C } = e,
+    let { transitionState: t, entryPoint: a, onClose: r, dismissable: C } = e,
         {
             loading: L,
             error: O,
@@ -69,16 +69,16 @@ let L = function (e) {
             refetch: k,
         } = (function () {
             let [e, t] = s.useState(() => S.A.methodsV2 ?? []),
-                [l, a] = s.useState(() => null == S.A.methodsV2),
+                [a, l] = s.useState(() => null == S.A.methodsV2),
                 [r, i] = s.useState(!1),
                 n = s.useRef(!0),
                 c = s.useCallback(async (e) => {
-                    let l = S.A.methodsV2;
-                    if (!e && null != l) {
-                        t(l), a(!1), i(!1);
+                    let a = S.A.methodsV2;
+                    if (!e && null != a) {
+                        t(a), l(!1), i(!1);
                         return;
                     }
-                    a(!0), i(!1);
+                    l(!0), i(!1);
                     try {
                         let e = await N();
                         I.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
@@ -86,7 +86,7 @@ let L = function (e) {
                     } catch {
                         n.current && i(!0);
                     } finally {
-                        n.current && a(!1);
+                        n.current && l(!1);
                     }
                 }, []);
             return (
@@ -101,7 +101,7 @@ let L = function (e) {
                     [c],
                 ),
                 {
-                    loading: l,
+                    loading: a,
                     error: r,
                     methods: e,
                     refetch: s.useCallback(() => {
@@ -111,14 +111,14 @@ let L = function (e) {
             );
         })(),
         B = Z.length > 0,
-        { initiateAgeVerificationV2: G } = (0, j.Ny)({ onComplete: r, entryPoint: l, onMethodUnavailable: k }),
+        { initiateAgeVerificationV2: G } = (0, j.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: k }),
         H = s.useRef(!1),
         [D, U] = s.useState(null),
         F = null != D,
         P = s.useMemo(() => (0, n.A)(), []);
     s.useEffect(() => {
-        (0, R.Bs)(P, R.WU.EXPRESSIVE_V2, l);
-    }, [P, l]);
+        (0, R.Bs)(P, R.WU.EXPRESSIVE_V2, a);
+    }, [P, a]);
     let W = s.useCallback(
         async (e, t) => {
             if (!H.current) {
@@ -132,7 +132,7 @@ let L = function (e) {
         },
         [G, P],
     );
-    return (0, a.jsxs)(c.k, {
+    return (0, l.jsxs)(c.k, {
         transitionState: t,
         onClose: r,
         gradientColor: "blue",
@@ -142,18 +142,19 @@ let L = function (e) {
             src: "https://cdn.discordapp.com/assets/content/f76008165147c5af20b933379e590f857bab9a8c0d80e1222e16dcd34b4b75c2.svg",
             aspectRatio: "21/9",
         },
-        title: (0, j.ST)(l),
-        subtitle: (0, j.mK)(l, () => {
-            w.A.openUrl(g.A.getArticleURL(y.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+        title: (0, j.ST)(a),
+        subtitle: (0, j.mK)(a, () => {
+            w.A.openUrl(_.A.getArticleURL(y.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                 (0, R.St)(P, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
         }),
         children: [
-            L && (0, a.jsx)(v.B, { direction: "vertical", align: "center", children: (0, a.jsx)(m.y, {}) }),
+            (0, l.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
+            L && (0, l.jsx)(v.B, { direction: "vertical", align: "center", children: (0, l.jsx)(m.y, {}) }),
             !L &&
                 !B &&
-                (0, a.jsx)(p.p, {
+                (0, l.jsx)(p.p, {
                     messageType: p.Y.ERROR,
-                    action: (0, a.jsx)(E.$, {
+                    action: (0, l.jsx)(E.$, {
                         variant: "overlay-secondary",
                         size: "sm",
                         text: M.intl.string(V.default.hDvmYP),
@@ -162,12 +163,12 @@ let L = function (e) {
                     children: M.intl.string(O ? V.default.Bkmk4Y : V.default.cR6336),
                 }),
             B &&
-                (0, a.jsx)(v.B, {
+                (0, l.jsx)(v.B, {
                     direction: "vertical",
                     gap: 8,
                     children: Z.map((e) => {
                         let t,
-                            l = (function (e) {
+                            a = (function (e) {
                                 switch (e) {
                                     case d.mG.FACIAL_AGE_ESTIMATION:
                                         return o.t;
@@ -180,48 +181,49 @@ let L = function (e) {
                                 }
                             })(e.method);
                         t =
-                            null != l
-                                ? (0, a.jsx)(l, { size: "md", color: "var(--text-strong)" })
+                            null != a
+                                ? (0, l.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, a.jsx)(T, { icon: e.icon })
-                                  : (0, a.jsx)(f._, { size: "md", color: "var(--text-strong)" });
+                                  ? (0, l.jsx)(T, { icon: e.icon })
+                                  : (0, l.jsx)(f._, { size: "md", color: "var(--text-strong)" });
                         let s = `${e.method}-${e.vendor}`,
                             r = D === s;
-                        return (0, a.jsxs)(
+                        return (0, l.jsxs)(
                             x.D,
                             {
                                 className: i()(b.kZ, { [b.w1]: F }),
                                 "aria-busy": r,
-                                onClick: F ? void 0 : () => void W(e, s),
+                                "aria-disabled": F,
+                                onClick: F ? void 0 : () => W(e, s),
                                 children: [
-                                    (0, a.jsx)("div", { className: b.zc, children: t }),
-                                    (0, a.jsxs)("div", {
+                                    (0, l.jsx)("div", { className: b.zc, children: t }),
+                                    (0, l.jsxs)("div", {
                                         className: b.Qq,
                                         children: [
-                                            (0, a.jsx)(A.E, {
+                                            (0, l.jsx)(A.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-strong",
                                                 children: e.title,
                                             }),
-                                            (0, a.jsx)(A.E, {
+                                            (0, l.jsx)(A.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children: e.description,
                                             }),
                                             null != e.providedBy &&
-                                                (0, a.jsx)("div", {
+                                                (0, l.jsx)("div", {
                                                     className: b.Vp,
-                                                    children: (0, a.jsx)(A.E, {
+                                                    children: (0, l.jsx)(A.E, {
                                                         variant: "text-sm/normal",
-                                                        color: "text-subtle",
+                                                        color: "text-muted",
                                                         children: e.providedBy,
                                                     }),
                                                 }),
                                         ],
                                     }),
                                     r
-                                        ? (0, a.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
-                                        : (0, a.jsx)(_._, { className: b.ai }),
+                                        ? (0, l.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
+                                        : (0, l.jsx)(g._, { className: b.ai }),
                                 ],
                             },
                             s,

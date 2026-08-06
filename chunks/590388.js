@@ -1,68 +1,68 @@
-n.d(t, { A: () => v });
-var i = n(477900),
-    l = n(582128);
-if (21552 == n.j) var r = n(922016);
-if (21552 == n.j) var s = n(980707);
-if (21552 == n.j) var a = n(477782);
-if (21552 == n.j) var o = n(534890);
-if (21552 == n.j) var d = n(625903);
-if (21552 == n.j) var u = n(939249);
-if (21552 == n.j) var c = n(365199);
-var E = n(442433),
-    g = n(793574),
-    h = n(363487),
-    A = n(123917),
-    _ = n(981381),
-    f = n(144977),
-    S = n(628049),
-    I = n(275695),
-    C = n(375708),
-    m = n(409205);
-let p = { steps: { [S.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
-function v(e) {
-    let { guildId: t, instance: n } = e,
-        S = l.useRef(null),
-        v = (0, _.A)(n.providerType, n.gameServerPanelUrl);
-    return (0, h.A)(t)
-        ? (0, i.jsx)(r.Y, {
-              targetElementRef: S,
+t.d(n, { A: () => E });
+var l = t(477900),
+    r = t(582128),
+    i = t(922016),
+    s = t(980707),
+    a = t(477782),
+    o = t(534890),
+    c = t(625903),
+    d = t(939249),
+    u = t(365199),
+    p = t(442433),
+    v = t(793574),
+    m = t(363487),
+    g = t(123917),
+    h = t(981381),
+    x = t(144977),
+    f = t(628049),
+    j = t(275695),
+    A = t(375708),
+    b = t(409205);
+let y = { steps: { [f.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+function E(e) {
+    let { guildId: n, instance: t } = e,
+        f = r.useRef(null),
+        E = (0, h.A)(t.providerType, t.gameServerPanelUrl);
+    return (0, m.A)(n)
+        ? (0, l.jsx)(i.Y, {
+              targetElementRef: f,
               align: "top",
               position: "right",
               animationPosition: "bottom",
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: l } = e;
-                  return (0, i.jsx)(s.W, {
+                  let { closePopout: r } = e;
+                  return (0, l.jsx)(s.W, {
                       "data-menu-migrated": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, E.Z_)(), l();
+                          (0, p.Z_)(), r();
                       },
-                      "aria-label": C.intl.string(I.default["yb+ork"]),
+                      "aria-label": A.intl.string(j.default["yb+ork"]),
                       onSelect: void 0,
-                      children: (0, i.jsxs)(a.rX, {
+                      children: (0, l.jsxs)(a.rX, {
                           children: [
-                              null != v &&
-                                  (0, i.jsx)(a.Dr, {
+                              null != E &&
+                                  (0, l.jsx)(a.Dr, {
                                       id: "get-support",
                                       icon: o.o,
                                       leadingAccessory: { type: "icon", icon: o.o },
-                                      label: C.intl.string(I.default.bBkeMs),
+                                      label: A.intl.string(j.default.bBkeMs),
                                       action: () => {
-                                          (0, A.h)({ href: v });
+                                          (0, g.h)({ href: E });
                                       },
                                   }),
-                              (0, i.jsx)(a.Dr, {
+                              (0, l.jsx)(a.Dr, {
                                   id: "settings",
-                                  icon: d.Z,
-                                  leadingAccessory: { type: "icon", icon: d.Z },
-                                  label: C.intl.string(I.default["feUiM/"]),
+                                  icon: c.Z,
+                                  leadingAccessory: { type: "icon", icon: c.Z },
+                                  label: A.intl.string(j.default["feUiM/"]),
                                   action: () => {
-                                      (0, f.A)({
-                                          guildId: t,
-                                          stepConfig: p,
-                                          initialGameServerInstance: n,
-                                          analyticsLocation: g.A.GAME_SERVER_PAGE,
+                                      (0, x.A)({
+                                          guildId: n,
+                                          stepConfig: y,
+                                          initialGameServerInstance: t,
+                                          analyticsLocation: v.A.GAME_SERVER_PAGE,
                                       });
                                   },
                               }),
@@ -71,12 +71,12 @@ function v(e) {
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(u.D, {
-                      "aria-label": C.intl.string(C.t["UKOtz+"]),
-                      className: m.v,
+                  (0, l.jsx)(d.D, {
+                      "aria-label": A.intl.string(A.t["UKOtz+"]),
+                      className: b.v,
                       ...e,
-                      innerRef: S,
-                      children: (0, i.jsx)(c.j, { color: "currentColor", size: "sm" }),
+                      innerRef: f,
+                      children: (0, l.jsx)(u.j, { color: "currentColor", size: "sm" }),
                   }),
           })
         : null;

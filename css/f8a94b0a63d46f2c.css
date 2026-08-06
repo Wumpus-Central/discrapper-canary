@@ -1,11 +1,24 @@
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) div:has(>img) {
+    aspect-ratio: auto;
+    height: 104.5px
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) div:has(>div>div>img) {
+    padding-bottom: var(--space-4);
+    padding-top: 0
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) header {
+    padding-bottom: var(--space-8)
+}
+
 .methodRow_bbc786 {
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
-    gap: var(--space-16);
     padding: var(--space-12);
     text-align: start;
     width: 100%
@@ -24,7 +37,12 @@
     flex-shrink: 0;
     height: calc(var(--space-24)*2);
     justify-content: center;
+    margin-inline-end: var(--space-12);
     width: calc(var(--space-24)*2)
+}
+
+.methodRow_bbc786:not(.methodRowDisabled_bbc786):hover .iconContainer_bbc786 {
+    background-color: var(--background-mod-muted)
 }
 
 .text_bbc786 {
@@ -40,8 +58,10 @@
 }
 
 .chevron_bbc786 {
+    align-self: center;
     color: var(--icon-subtle);
-    flex-shrink: 0
+    flex-shrink: 0;
+    margin-inline-start: var(--space-16)
 }
 
 .methodRowDisabled_bbc786 {
@@ -53,7 +73,9 @@
 }
 
 .rowSpinner_bbc786 {
+    align-self: center;
     flex-shrink: 0;
     height: var(--space-24);
+    margin-inline-start: var(--space-16);
     width: var(--space-24)
 }
