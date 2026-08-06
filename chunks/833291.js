@@ -136,7 +136,11 @@ function $(e) {
             let M = (function (e) {
                 if (null == e) return null;
                 let t = e.match(T);
-                return null != t && t.length >= 4 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
+                if (null != t && t.length >= 4) {
+                    let e = t[2];
+                    return null == e ? null : { guildId: t[1], guildEventId: e, recurrenceId: t[4] };
+                }
+                return null;
             })(e.pathname);
             if (
                 (null != M &&

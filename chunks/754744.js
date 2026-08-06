@@ -965,18 +965,17 @@ function ta(e) {
                               ? (0, a.jsxs)("div", {
                                     className: X.yk,
                                     children: [
-                                        (0, a.jsx)(es.m, {
-                                            asContainer: !0,
-                                            "aria-label": P.intl.string(P.t["0g8Xd/"]),
-                                            text: P.intl.string(P.t["93S+lG"]),
-                                            children: (0, a.jsx)(f.D, {
+                                        null != u &&
+                                            (0, a.jsx)(es.m, {
+                                                asContainer: !0,
+                                                "aria-label": P.intl.string(P.t["0g8Xd/"]),
+                                                text: P.intl.string(P.t["93S+lG"]),
                                                 children: (0, a.jsx)(tn.A, {
                                                     className: E()(X.Zf, X.Lc),
                                                     role: u,
                                                     guildId: t.guildId,
                                                 }),
                                             }),
-                                        }),
                                         r.map((e) =>
                                             (0, a.jsx)(tn.A, { className: X.Zf, role: e, guildId: t.guildId }, e.id),
                                         ),
