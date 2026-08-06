@@ -4555,36 +4555,6 @@
     }
   },
   {
-    "name": "2026-06-nitro-gifting-price-copy-tweaks",
-    "kind": "user",
-    "defaultConfig": {
-      "showGiftPrice": true,
-      "useNewCopy": false,
-      "monthlyDefaultSelected": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showGiftPrice": false,
-        "useNewCopy": false,
-        "monthlyDefaultSelected": false
-      },
-      "2": {
-        "showGiftPrice": true,
-        "useNewCopy": true,
-        "monthlyDefaultSelected": false
-      },
-      "3": {
-        "showGiftPrice": true,
-        "useNewCopy": true,
-        "monthlyDefaultSelected": true
-      }
-    }
-  },
-  {
     "name": "2026-06-non-friend-messages-requests-in-uk",
     "kind": "user",
     "defaultConfig": {

@@ -1,97 +1,101 @@
-n.d(e, { A: () => q });
+n.d(e, { A: () => y });
 var s = n(477900),
-    u = n(582128),
-    o = n(17928),
+    l = n(582128),
+    u = n(17928),
     i = n(661531),
-    l = n(242644),
-    c = n(866665),
+    o = n(242644),
     r = n(821609),
+    c = n(866665),
     a = n(775602),
-    d = n(201274),
+    d = n(514547),
     C = n(801365),
-    f = n(792620),
-    S = n(630037),
+    S = n(792620),
+    A = n(608935),
+    f = n(617986),
+    m = n(630037),
     p = n(793574),
-    A = n(839534),
-    h = n(764336),
-    m = n(758836),
+    h = n(839534),
+    v = n(764336),
+    x = n(758836),
     g = n(375708);
-function x(t) {
-    let { quest: e, onClaimRewardClick: n, size: u = "md" } = t,
-        S = (0, d.LS)(e),
-        p = (0, o.bG)([a.Ay], () => a.Ay.useReducedMotion),
-        A = null != (0, C._Z)(e.config),
-        h = (0, f.vv)(e),
-        m =
+function k(t) {
+    let { quest: e, onClaimRewardClick: n, size: l = "md" } = t,
+        m = (0, d.LS)(e),
+        p = (0, d.Hv)(),
+        h = (0, u.bG)([a.Ay], () => a.Ay.useReducedMotion),
+        v = null != (0, C._Z)(e.config),
+        x = (0, S.vv)(e),
+        k =
             e.userStatus?.claimedAt != null
-                ? A
+                ? v
                     ? g.intl.string(g.t.WYchde)
                     : g.intl.string(g.t.vTgCWx)
                 : g.intl.string(g.t.cfY4PE),
-        x =
+        j = e.userStatus?.completedAt != null && e.userStatus?.claimedAt == null,
+        q = p && j,
+        y =
             e.userStatus?.completedAt == null
-                ? S
+                ? m
                     ? g.intl.string(g.t.NJ6Bnm)
-                    : h
+                    : x
                       ? g.intl.string(g.t.USNO1K)
                       : void 0
-                : void 0;
-    return (0, s.jsx)(c.m, {
-        text: x,
-        children: (0, s.jsx)("div", {
-            children: (0, s.jsx)(r.$, {
-                variant: "secondary",
-                fullWidth: !0,
-                icon: (function (t, e) {
-                    if (t.userStatus?.claimedAt == null)
-                        return {
-                            type: "rive",
-                            asset: l.V,
-                            riveProps: {
-                                withReducedMotion: "play",
-                                dataBinding: {
-                                    locked: t.userStatus?.completedAt === null,
-                                    fill: i.A.colors.ICON_STRONG,
-                                    reducedMotion: e,
-                                },
+                : void 0,
+        b = (0, s.jsx)(r.$, {
+            variant: "secondary",
+            fullWidth: !0,
+            icon: (function (t, e) {
+                if (t.userStatus?.claimedAt == null)
+                    return {
+                        type: "rive",
+                        asset: o.V,
+                        riveProps: {
+                            withReducedMotion: "play",
+                            dataBinding: {
+                                locked: t.userStatus?.completedAt === null,
+                                fill: i.A.colors.ICON_STRONG,
+                                reducedMotion: e,
                             },
-                        };
-                })(e, p),
-                onClick: n,
-                text: m,
-                disabled: e.userStatus?.completedAt == null,
-                size: u,
-            }),
-        }),
-    });
+                        },
+                    };
+            })(e, h),
+            onClick: q ? f.FS : n,
+            text: k,
+            disabled: e.userStatus?.completedAt == null,
+            "aria-disabled": q || void 0,
+            size: l,
+        });
+    return q
+        ? (0, s.jsx)(A.A, { fitContent: !0, children: b })
+        : (0, s.jsx)(c.m, { text: y, children: (0, s.jsx)("div", { children: b }) });
 }
-function k(t) {
-    let e = (0, S.D)({
+function j(t) {
+    let e = (0, m.D)({
         quest: t.quest,
         questContent: t.questContent,
         sourceQuestContent: t.sourceQuestContent,
         onCloseModal: t.onClose,
     });
-    return (0, s.jsx)(x, { ...t, onClaimRewardClick: e });
+    return (0, s.jsx)(k, { ...t, onClaimRewardClick: e });
 }
-function v(t) {
+function q(t) {
     let e = (function (t) {
         let {
                 quest: e,
                 questContent: n,
                 sourceQuestContent: s,
-                onCloseModal: o,
+                onCloseModal: u,
                 shouldShowShopIfAlreadyClaimed: i,
             } = t,
-            l = (0, h.ix)({ quest: e, questContent: n, sourceQuestContent: s });
-        return u.useCallback(
+            o = (0, v.ix)({ quest: e, questContent: n, sourceQuestContent: s });
+        return l.useCallback(
             (t) => {
                 (0, C.ks)(e.config) && e.userStatus?.claimedAt != null && i
-                    ? (o?.(t),
-                      (0, A.Cz)({ tab: m.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_HOME_PAGE }))
-                    : ((0, C.K9)(e.config) && o?.(t), l());
+                    ? (u?.(t),
+                      (0, h.Cz)({ tab: x.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_HOME_PAGE }))
+                    : ((0, C.K9)(e.config) && u?.(t), o());
             },
-            [e.config, e.userStatus?.claimedAt, l, i, o],
+            [e.config, e.userStatus?.claimedAt, o, i, u],
         );
     })({
         quest: t.quest,
@@ -100,9 +104,9 @@ function v(t) {
         onCloseModal: t.onClose,
         shouldShowShopIfAlreadyClaimed: !0,
     });
-    return (0, s.jsx)(x, { ...t, onClaimRewardClick: e });
+    return (0, s.jsx)(k, { ...t, onClaimRewardClick: e });
 }
-function q(t) {
+function y(t) {
     let { shouldRedirectToQuestHome: e = !0, ...n } = t;
-    return e ? (0, s.jsx)(k, { ...n }) : (0, s.jsx)(v, { ...n });
+    return e ? (0, s.jsx)(j, { ...n }) : (0, s.jsx)(q, { ...n });
 }
