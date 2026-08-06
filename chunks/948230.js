@@ -13,30 +13,30 @@ i.d(e, {
 });
 var r = i(562465),
     _ = i(228366),
-    E = i(113854),
+    E = i(625180),
     n = i(91242),
-    a = i(927899),
-    o = i(972786),
+    o = i(927899),
+    a = i(972786),
     c = i(652215),
     l = i(165610);
 function p(t, e) {
     _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: t, integrationStatus: e });
 }
 function s(t, e, i) {
-    (0, a.Z0)(t, {
+    (0, o.Z0)(t, {
         location: "publish",
-        code: a.xA.PUBLISH_FAILED,
+        code: o.xA.PUBLISH_FAILED,
         message: `publish${i ? "-preview" : ""} failed`,
         details: `HTTP ${e}`,
         isPreview: i,
     });
 }
 function R(t) {
-    let e = n.A.getMainFrame();
-    null != t && (0, l.x1)(e) && e.applicationId === t && E.A.refreshProxyTicket(e.id);
+    if (null != t)
+        for (let e of n.A.getAllFrames()) (0, l.x1)(e) && e.applicationId === t && E.A.refreshProxyTicket(e.id);
 }
 async function d() {
-    if (o.A.getProjectsFetchState()?.type !== "loading") {
+    if (a.A.getProjectsFetchState()?.type !== "loading") {
         _.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
         try {
             let { body: t } = await r.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECTS, rejectWithError: !0 });
@@ -87,7 +87,7 @@ async function O(t) {
         _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: E }),
         _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i, isHydrated: !0 }),
         R(i.id),
-        (0, a.qs)(t, { isPreview: !1 }),
+        (0, o.qs)(t, { isPreview: !1 }),
         e
     );
 }
@@ -95,13 +95,13 @@ async function C(t) {
     let { countAsDeploy: e = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
     if (!i.ok) return s(t, i.status, !0), i;
-    let { application: E, bot_permissions_changed: n, integration_installed: o, project: l } = i.body;
+    let { application: E, bot_permissions_changed: n, integration_installed: a, project: l } = i.body;
     return (
         _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: l }),
         _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: E, isHydrated: !0 }),
-        p(t, { bot_permissions_changed: n, integration_installed: o, preview_ready: !0 }),
-        o && !n && R(E.id),
-        e && (0, a.qs)(t, { isPreview: !0 }),
+        p(t, { bot_permissions_changed: n, integration_installed: a, preview_ready: !0 }),
+        a && !n && R(E.id),
+        e && (0, o.qs)(t, { isPreview: !0 }),
         i
     );
 }

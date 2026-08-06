@@ -6,7 +6,7 @@ var i = n(691540),
     s = n(228366),
     l = n(574172),
     o = n(869146),
-    d = n(113854),
+    d = n(625180),
     c = n(439372),
     u = n(957292),
     _ = n(400115),
@@ -47,6 +47,10 @@ class f extends c.A {
                 }),
                 this.showRPCDisconnectErrorUI(t)));
     };
+    leaveFrame(e) {
+        let t = A.A.getFrame(e);
+        null != t && s.h.dispatch({ type: "FRAME_STOP", applicationId: t.applicationId, frameId: t.id });
+    }
 }
 var p = n(165610),
     T = n(375708);
@@ -71,23 +75,16 @@ let m = !1,
         handlePopoutWindowUpdate = () => {
             let e = m,
                 t = o.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
-            if (e && !t && !g) {
-                let e = A.A.getMainFrame();
-                null != e && d.A.stopFrame(e.id);
-            }
-            m = t;
+            !e || t || g || d.A.clearMainFrameSlot(), (m = t);
         };
         popInFrame = () => {
             (g = !0), l.close(h.MLl.ACTIVITY_POPOUT);
             let e = A.A.getMainFrame();
-            null != e && d.A.updateFrameLayoutMode({ frameId: e.id, layoutMode: p.y0.FOCUSED });
+            null != e && (e.intent === p.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };
         showRPCDisconnectErrorUI(e) {
             let { code: t, message: n } = e,
                 s = `${T.intl.formatToPlainString(T.t.hbiAO6, { code: t })}: ${n}`;
             (0, i.P0)((0, r.o)(s, a.Ck.FAILURE));
-        }
-        leaveFrame(e) {
-            null != e && d.A.stopFrame(e);
         }
     })();

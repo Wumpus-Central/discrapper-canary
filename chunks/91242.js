@@ -19,7 +19,7 @@ function _(e, t, n) {
 class E extends i.Ay.Store {
     static displayName = "FramesStore";
     getFrame(e) {
-        return d.get(e);
+        if (null != e) return d.get(e);
     }
     getMainFrame() {
         return null != c ? (d.get(c) ?? null) : null;
@@ -74,13 +74,23 @@ let A = new E(r.h, {
         let { frameId: t } = e;
         d.delete(t), c === t && (c = null);
     },
+    FRAME_CLEAR_MAIN_SLOT: function (e) {
+        let { frameId: t } = e;
+        if (c !== t) return !1;
+        c = null;
+    },
+    FRAME_PROMOTE: function (e) {
+        let { frameId: t } = e;
+        if (null == d.get(t)) return !1;
+        c = t;
+    },
     FRAME_UPDATE_LAYOUT_MODE: function (e) {
         let { frameId: t, layoutMode: n } = e;
         return u(t, (e) => ({ ...e, layoutMode: n }));
     },
     FRAME_SET_PANEL_MODE: function (e) {
-        let { activityPanelMode: t } = e;
-        return u(c, (e) => ({ ...e, activityPanelMode: t }));
+        let { frameId: t, activityPanelMode: n } = e;
+        return u(t, (e) => ({ ...e, activityPanelMode: n }));
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { frameId: t, lockState: n, pictureInPictureLockState: i } = e;

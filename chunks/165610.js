@@ -20,8 +20,9 @@ var d = (((a = {})[(a.MAIN = 0)] = "MAIN"), (a[(a.INLINE = 1)] = "INLINE"), a);
 function c(e) {
     switch (e.type) {
         case 0:
-        case 1:
             return 0;
+        case 1:
+            return 1;
     }
 }
 function u(e, t) {

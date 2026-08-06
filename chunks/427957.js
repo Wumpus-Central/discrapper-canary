@@ -6,6 +6,6 @@ e.exports = {
     R: "hidden_c5bcbe",
     pU: "iframe_c5bcbe",
     v8: "pipNonInteractive_c5bcbe",
-    OB: "clickShield_c5bcbe",
+    IU: "activitySensor_c5bcbe",
     Gq: "multiPIPMode_c5bcbe",
 };
