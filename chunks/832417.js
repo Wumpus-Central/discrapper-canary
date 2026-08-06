@@ -198,14 +198,14 @@ let B = function (e) {
                     clearTimeout(e);
                 };
             }
-            if (("waiting_for_result" !== _ && !E) || (null != c && "waiting_for_result" === _)) return;
+            if ("waiting_for_result" !== _ && !E) return;
             let e = setTimeout(() => {
                 C(!1), P("result_wait_timeout"), I({ type: "VERIFICATION_FAILED" });
             }, 3e4);
             return () => {
                 clearTimeout(e);
             };
-        }, [_, E, c]),
+        }, [_, E]),
         r.useEffect(() => {
             var e, n;
             let i, r, a;
