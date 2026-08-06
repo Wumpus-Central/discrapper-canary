@@ -2912,7 +2912,6 @@ function i8(e) {
                             }),
                         (0, c.jsxs)(el.B, {
                             direction: "horizontal",
-                            justify: "space-between",
                             align: "center",
                             gap: 4,
                             className: i9.qU,
@@ -2921,6 +2920,7 @@ function i8(e) {
                                     direction: "vertical",
                                     align: "start",
                                     gap: 4,
+                                    fullWidth: !1,
                                     className: i9.NI,
                                     children: [
                                         (0, c.jsx)(ec.E, {
@@ -2940,6 +2940,7 @@ function i8(e) {
                                     direction: "vertical",
                                     align: "end",
                                     gap: 4,
+                                    fullWidth: !1,
                                     className: i9.br,
                                     children: [
                                         null != e.secondaryText &&
@@ -4502,7 +4503,7 @@ let ao = () => {
     });
 };
 var ad = s(862482),
-    au = s(412260),
+    au = s(616431),
     am = s(662367),
     ag = s(374403),
     ax = s(396375),

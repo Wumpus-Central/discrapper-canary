@@ -15,8 +15,7 @@
 }
 
 .radioItemNameBody__71ec0 {
-    min-width: 0;
-    width: 100%
+    min-width: 0
 }
 
 .radioItemPrimaryColumn__71ec0 {
@@ -25,8 +24,7 @@
 }
 
 .radioItemSecondaryColumn__71ec0 {
-    min-width: 0;
-    text-align: end
+    flex: 0 0 auto
 }
 
 .radioItemSecondaryColumn__71ec0>* {
