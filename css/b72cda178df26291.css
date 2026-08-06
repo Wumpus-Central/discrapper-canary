@@ -43,3 +43,17 @@
     color: var(--icon-subtle);
     flex-shrink: 0
 }
+
+.methodRowDisabled_bbc786 {
+    cursor: default
+}
+
+.methodRowDisabled_bbc786:hover {
+    background-color: transparent
+}
+
+.rowSpinner_bbc786 {
+    flex-shrink: 0;
+    height: var(--space-24);
+    width: var(--space-24)
+}

@@ -1,29 +1,31 @@
-l.d(t, { default: () => M });
+l.d(t, { default: () => L });
 var a = l(477900),
     s = l(582128),
-    r = l(132500),
-    i = l(772707),
-    n = l(441574),
-    c = l(991049),
-    d = l(280645),
-    o = l(952146),
-    h = l(331322),
-    u = l(289873),
-    v = l(512950),
-    m = l(821609),
-    p = l(109112),
-    E = l(939249),
-    f = l(834730),
-    x = l(320448),
-    A = l(975571),
-    g = l(31720),
-    _ = l(847599),
-    w = l(36149),
-    R = l(228366),
-    j = l(562465),
-    C = l(652215);
-async function I() {
-    return (await j.Bo.get({ url: C.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => {
+    r = l(503698),
+    i = l.n(r),
+    n = l(132500),
+    c = l(772707),
+    d = l(441574),
+    o = l(991049),
+    h = l(280645),
+    u = l(952146),
+    v = l(331322),
+    m = l(289873),
+    p = l(512950),
+    E = l(821609),
+    f = l(109112),
+    x = l(939249),
+    A = l(834730),
+    _ = l(320448),
+    g = l(975571),
+    w = l(31720),
+    R = l(847599),
+    j = l(36149),
+    I = l(228366),
+    C = l(562465),
+    y = l(652215);
+async function N() {
+    return (await C.Bo.get({ url: y.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body.methods.map((e) => {
         var t;
         return {
             method: e.method,
@@ -43,8 +45,8 @@ async function I() {
         };
     });
 }
-var T = l(787301);
-let y = function (e) {
+var S = l(787301);
+let T = function (e) {
     let { icon: t, size: l = 24 } = e;
     return (0, a.jsx)("svg", {
         width: l,
@@ -56,30 +58,30 @@ let y = function (e) {
     });
 };
 var V = l(516761),
-    N = l(375708),
-    S = l(658103);
-let M = function (e) {
-    let { transitionState: t, entryPoint: l, onClose: j, dismissable: M } = e,
+    M = l(375708),
+    b = l(658103);
+let L = function (e) {
+    let { transitionState: t, entryPoint: l, onClose: r, dismissable: C } = e,
         {
-            loading: b,
+            loading: L,
             error: O,
             methods: Z,
             refetch: k,
         } = (function () {
-            let [e, t] = s.useState(() => T.A.methodsV2 ?? []),
-                [l, a] = s.useState(() => null == T.A.methodsV2),
+            let [e, t] = s.useState(() => S.A.methodsV2 ?? []),
+                [l, a] = s.useState(() => null == S.A.methodsV2),
                 [r, i] = s.useState(!1),
                 n = s.useRef(!0),
                 c = s.useCallback(async (e) => {
-                    let l = T.A.methodsV2;
+                    let l = S.A.methodsV2;
                     if (!e && null != l) {
                         t(l), a(!1), i(!1);
                         return;
                     }
                     a(!0), i(!1);
                     try {
-                        let e = await I();
-                        R.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
+                        let e = await N();
+                        I.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: e }),
                             n.current && t(e);
                     } catch {
                         n.current && i(!0);
@@ -108,118 +110,121 @@ let M = function (e) {
                 }
             );
         })(),
-        L = Z.length > 0,
-        { initiateAgeVerificationV2: B } = (0, w.Ny)({ onComplete: j, entryPoint: l, onMethodUnavailable: k }),
+        B = Z.length > 0,
+        { initiateAgeVerificationV2: G } = (0, j.Ny)({ onComplete: r, entryPoint: l, onMethodUnavailable: k }),
         H = s.useRef(!1),
-        D = s.useMemo(() => (0, r.A)(), []);
+        [D, U] = s.useState(null),
+        F = null != D,
+        P = s.useMemo(() => (0, n.A)(), []);
     s.useEffect(() => {
-        (0, _.Bs)(D, _.WU.EXPRESSIVE_V2, l);
-    }, [D, l]);
-    let G = s.useCallback(
-        async (e) => {
+        (0, R.Bs)(P, R.WU.EXPRESSIVE_V2, l);
+    }, [P, l]);
+    let W = s.useCallback(
+        async (e, t) => {
             if (!H.current) {
-                (0, _.St)(D, _.WU.EXPRESSIVE_V2, _._7.METHOD_SELECT, e.method), (H.current = !0);
+                (0, R.St)(P, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (H.current = !0), U(t);
                 try {
-                    await B(e.method, e.vendor);
+                    await G(e.method, e.vendor);
                 } finally {
-                    H.current = !1;
+                    (H.current = !1), U(null);
                 }
             }
         },
-        [B, D],
+        [G, P],
     );
-    return (0, a.jsxs)(i.k, {
+    return (0, a.jsxs)(c.k, {
         transitionState: t,
-        onClose: j,
+        onClose: r,
         gradientColor: "blue",
-        dismissable: M,
+        dismissable: C,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/f76008165147c5af20b933379e590f857bab9a8c0d80e1222e16dcd34b4b75c2.svg",
             aspectRatio: "21/9",
         },
-        title: (0, w.ST)(l),
-        subtitle: (0, w.mK)(l, () => {
-            g.A.openUrl(A.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                (0, _.St)(D, _.WU.EXPRESSIVE_V2, _._7.LEARN_MORE);
+        title: (0, j.ST)(l),
+        subtitle: (0, j.mK)(l, () => {
+            w.A.openUrl(g.A.getArticleURL(y.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                (0, R.St)(P, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
         }),
         children: [
-            b && (0, a.jsx)(h.B, { direction: "vertical", align: "center", children: (0, a.jsx)(u.y, {}) }),
-            !b &&
-                !L &&
-                (0, a.jsx)(v.p, {
-                    messageType: v.Y.ERROR,
-                    action: (0, a.jsx)(m.$, {
+            L && (0, a.jsx)(v.B, { direction: "vertical", align: "center", children: (0, a.jsx)(m.y, {}) }),
+            !L &&
+                !B &&
+                (0, a.jsx)(p.p, {
+                    messageType: p.Y.ERROR,
+                    action: (0, a.jsx)(E.$, {
                         variant: "overlay-secondary",
                         size: "sm",
-                        text: N.intl.string(V.default.hDvmYP),
+                        text: M.intl.string(V.default.hDvmYP),
                         onClick: k,
                     }),
-                    children: N.intl.string(O ? V.default.Bkmk4Y : V.default.cR6336),
+                    children: M.intl.string(O ? V.default.Bkmk4Y : V.default.cR6336),
                 }),
-            L &&
-                (0, a.jsx)(h.B, {
+            B &&
+                (0, a.jsx)(v.B, {
                     direction: "vertical",
                     gap: 8,
                     children: Z.map((e) => {
                         let t,
                             l = (function (e) {
                                 switch (e) {
-                                    case n.mG.FACIAL_AGE_ESTIMATION:
-                                        return c.t;
-                                    case n.mG.ID_SELFIE_MATCH:
-                                        return d.H;
-                                    case n.mG.GOOGLE_WALLET:
-                                        return o.A;
+                                    case d.mG.FACIAL_AGE_ESTIMATION:
+                                        return o.t;
+                                    case d.mG.ID_SELFIE_MATCH:
+                                        return h.H;
+                                    case d.mG.GOOGLE_WALLET:
+                                        return u.A;
                                     default:
                                         return;
                                 }
                             })(e.method);
-                        return (
-                            (t =
-                                null != l
-                                    ? (0, a.jsx)(l, { size: "md", color: "var(--text-strong)" })
-                                    : null != e.icon
-                                      ? (0, a.jsx)(y, { icon: e.icon })
-                                      : (0, a.jsx)(p._, { size: "md", color: "var(--text-strong)" })),
-                            (0, a.jsxs)(
-                                E.D,
-                                {
-                                    className: S.kZ,
-                                    onClick: () => {
-                                        G(e);
-                                    },
-                                    children: [
-                                        (0, a.jsx)("div", { className: S.zc, children: t }),
-                                        (0, a.jsxs)("div", {
-                                            className: S.Qq,
-                                            children: [
-                                                (0, a.jsx)(f.E, {
-                                                    variant: "text-md/normal",
-                                                    color: "text-strong",
-                                                    children: e.title,
-                                                }),
-                                                (0, a.jsx)(f.E, {
-                                                    variant: "text-sm/normal",
-                                                    color: "text-muted",
-                                                    children: e.description,
-                                                }),
-                                                null != e.providedBy &&
-                                                    (0, a.jsx)("div", {
-                                                        className: S.Vp,
-                                                        children: (0, a.jsx)(f.E, {
-                                                            variant: "text-sm/normal",
-                                                            color: "text-subtle",
-                                                            children: e.providedBy,
-                                                        }),
+                        t =
+                            null != l
+                                ? (0, a.jsx)(l, { size: "md", color: "var(--text-strong)" })
+                                : null != e.icon
+                                  ? (0, a.jsx)(T, { icon: e.icon })
+                                  : (0, a.jsx)(f._, { size: "md", color: "var(--text-strong)" });
+                        let s = `${e.method}-${e.vendor}`,
+                            r = D === s;
+                        return (0, a.jsxs)(
+                            x.D,
+                            {
+                                className: i()(b.kZ, { [b.w1]: F }),
+                                "aria-busy": r,
+                                onClick: F ? void 0 : () => void W(e, s),
+                                children: [
+                                    (0, a.jsx)("div", { className: b.zc, children: t }),
+                                    (0, a.jsxs)("div", {
+                                        className: b.Qq,
+                                        children: [
+                                            (0, a.jsx)(A.E, {
+                                                variant: "text-md/normal",
+                                                color: "text-strong",
+                                                children: e.title,
+                                            }),
+                                            (0, a.jsx)(A.E, {
+                                                variant: "text-sm/normal",
+                                                color: "text-muted",
+                                                children: e.description,
+                                            }),
+                                            null != e.providedBy &&
+                                                (0, a.jsx)("div", {
+                                                    className: b.Vp,
+                                                    children: (0, a.jsx)(A.E, {
+                                                        variant: "text-sm/normal",
+                                                        color: "text-subtle",
+                                                        children: e.providedBy,
                                                     }),
-                                            ],
-                                        }),
-                                        (0, a.jsx)(x._, { className: S.ai }),
-                                    ],
-                                },
-                                `${e.method}-${e.vendor}`,
-                            )
+                                                }),
+                                        ],
+                                    }),
+                                    r
+                                        ? (0, a.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
+                                        : (0, a.jsx)(_._, { className: b.ai }),
+                                ],
+                            },
+                            s,
                         );
                     }),
                 }),
