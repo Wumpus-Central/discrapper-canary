@@ -170,8 +170,12 @@
     margin-top: var(--space-8)
 }
 
+.problemContentSpacing__6c12c,
 .ratingSelectorContainer__6c12c {
-    padding-bottom: var(--space-16);
+    padding-bottom: var(--space-16)
+}
+
+.ratingSelectorContainer__6c12c {
     padding-top: var(--space-16);
     padding-inline: var(--space-24)
 }
