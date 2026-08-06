@@ -6,11 +6,11 @@ var n = s(477900),
     r = s(17928),
     o = s(859703),
     u = s(24001),
-    c = s(201274),
+    c = s(514547),
     d = s(73473),
     x = s(321503);
 s(134528), s(947204);
-var m = s(461376),
+var m = s(682577),
     C = s(462887),
     h = s(717421),
     E = s(695366),
@@ -234,10 +234,12 @@ function G(t) {
                             (0, n.jsxs)("div", {
                                 className: W.E_,
                                 children: [
-                                    (0, n.jsxs)("span", {
+                                    (0, n.jsxs)("div", {
                                         className: W.O,
                                         children: [
                                             (0, n.jsx)(g.E, {
+                                                tag: "span",
+                                                className: W.vT,
                                                 variant: "text-sm/medium",
                                                 color: G,
                                                 children: V.intl.string(V.t.VAbKhK),
@@ -256,6 +258,8 @@ function G(t) {
                                                 }),
                                             }),
                                             (0, n.jsx)(g.E, {
+                                                className: W.eA,
+                                                tag: "span",
                                                 variant: "text-sm/medium",
                                                 color: "text-overlay-light",
                                                 children:
@@ -266,6 +270,7 @@ function G(t) {
                                     N || Q
                                         ? null
                                         : (0, n.jsx)(g.E, {
+                                              className: W.xK,
                                               variant: "text-sm/medium",
                                               color: G,
                                               children: V.intl.format(V.t["7D8r4F"], { expiryDate: q }),

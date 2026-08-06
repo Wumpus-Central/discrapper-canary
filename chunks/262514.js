@@ -1,11 +1,11 @@
-s.d(t, { M: () => eg });
+s.d(t, { M: () => ej });
 var n = s(477900),
     i = s(582128),
     a = s(503698),
     l = s.n(a),
     r = s(24001),
     o = s(73473),
-    c = s(461376),
+    c = s(682577),
     u = s(494012),
     d = s(323889),
     m = s(717421),
@@ -14,8 +14,8 @@ var n = s(477900),
     E = s(297264),
     C = s(825484),
     f = s(821609),
-    j = s(17928),
-    g = s(775602),
+    g = s(17928),
+    j = s(775602),
     N = s(274670),
     v = s(144779),
     A = s(409626),
@@ -25,7 +25,7 @@ var n = s(477900),
     S = s(104886),
     y = s(112142),
     b = s(3738),
-    p = s(201274),
+    p = s(514547),
     T = s(646917),
     D = s(561844),
     L = s(590202),
@@ -65,7 +65,7 @@ function J(e) {
         ea = en === Q.MA.NITRO && ei,
         el = (0, M.Ic)(t),
         er = (0, p.In)(t),
-        eo = (0, j.bG)([q.default], () => q.default.getCurrentUser()),
+        eo = (0, g.bG)([q.default], () => q.default.getCurrentUser()),
         ec = (0, k.mq)(t.config, eo),
         eu = (0, k.mH)(t.config, eo),
         ed = t.userStatus?.enrolledAt != null,
@@ -74,8 +74,8 @@ function J(e) {
         eh = (0, k.ks)(t.config),
         eE = t.userStatus?.orbQuantityClaimed ?? (0, k._Z)(t.config),
         eC = (0, k.wo)(t.config, eo),
-        { completedRatio: ef, completedRatioDisplay: ej } = (0, p.O9)(t),
-        eg = (0, b.A9)(t, o, H.rE.EMBED_DESKTOP, A.GameProfileSources.QuestEmbed, U),
+        { completedRatio: ef, completedRatioDisplay: eg } = (0, p.O9)(t),
+        ej = (0, b.A9)(t, o, H.rE.EMBED_DESKTOP, A.GameProfileSources.QuestEmbed, U),
         eN = (0, F.Pd)(t),
         ev = i.useMemo(
             () =>
@@ -118,15 +118,15 @@ function J(e) {
             [ec, ex, eu, t.id, eC, eE, eh],
         ),
         eA = i.useMemo(() => {
-            if (null != eg)
+            if (null != ej)
                 return (0, n.jsx)(x.E, {
                     variant: "text-sm/medium",
                     color: "text-muted",
                     className: X.h_,
-                    children: eg,
+                    children: ej,
                 });
-        }, [eg]),
-        e_ = (0, j.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        }, [ej]),
+        e_ = (0, g.bG)([j.Ay], () => j.Ay.useReducedMotion),
         eq = i.useMemo(() => (0, M.Ic)(t) && !(0, M.GR)(t.userStatus), [t]),
         eI = (0, p.do)({ quest: t, content: s, ctaContent: L.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
         eS = (0, w.wr)(t),
@@ -152,7 +152,7 @@ function J(e) {
                             sourceQuestContent: o,
                         }));
         }, [eq, eI, t.id, s, r, o]),
-        eb = (0, j.bG)([I.A], () => null != I.A.questEnrollmentBlockedUntil, []),
+        eb = (0, g.bG)([I.A], () => null != I.A.questEnrollmentBlockedUntil, []),
         ep = y.t.useConfig({ location: H.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
         className: X.kL,
@@ -182,7 +182,7 @@ function J(e) {
                                           (0, n.jsx)(P.A, {
                                               size: 76,
                                               percentComplete: ef,
-                                              overlayText: a && !el ? ej : void 0,
+                                              overlayText: a && !el ? eg : void 0,
                                               children: (0, n.jsx)(G.A, {
                                                   quest: t,
                                                   questContent: s,
@@ -306,7 +306,7 @@ function et(e) {
 }
 function es(e) {
     let { quest: t, questContent: s, questContentPosition: i, sourceQuestContent: a } = e,
-        l = (0, j.bG)([I.A], () => I.A.isClaimingReward(t.id) || I.A.isFetchingRewardCode(t.id)),
+        l = (0, g.bG)([I.A], () => I.A.isClaimingReward(t.id) || I.A.isFetchingRewardCode(t.id)),
         r = (0, $.D)({ quest: t, questContent: s, questContentPosition: i, sourceQuestContent: a });
     return (0, n.jsx)(f.$, {
         fullWidth: !0,
@@ -318,7 +318,7 @@ function es(e) {
 }
 function en(e) {
     let { quest: t, progressState: s, questContent: i, questContentPosition: a, sourceQuestContent: l } = e,
-        r = (0, j.bG)([I.A], () => I.A.isEnrolling(t.id)),
+        r = (0, g.bG)([I.A], () => I.A.isEnrolling(t.id)),
         o = (0, U.vv)(t),
         c = (0, U.Cr)(t),
         u = (0, M.Ic)(t),
@@ -433,6 +433,8 @@ function eC(e) {
                                     className: eE.O,
                                     children: [
                                         (0, n.jsx)(x.E, {
+                                            className: eE.vT,
+                                            tag: "span",
                                             variant: "text-sm/medium",
                                             color: u,
                                             children: Y.intl.string(Y.t.VAbKhK),
@@ -451,6 +453,8 @@ function eC(e) {
                                             }),
                                         }),
                                         (0, n.jsx)(x.E, {
+                                            className: eE.eA,
+                                            tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-overlay-light",
                                             children:
@@ -461,6 +465,7 @@ function eC(e) {
                                 l || r
                                     ? null
                                     : (0, n.jsx)(x.E, {
+                                          className: eE.xK,
                                           variant: "text-sm/medium",
                                           color: u,
                                           children: Y.intl.format(Y.t["7D8r4F"], { expiryDate: o }),
@@ -474,8 +479,8 @@ function eC(e) {
     });
 }
 var ef = s(905292),
-    ej = s(307073);
-function eg(e) {
+    eg = s(307073);
+function ej(e) {
     let { quest: t, location: s, questContentPosition: a, sourceQuestContent: c } = e,
         [u, d] = i.useState(!1);
     function m() {
@@ -495,7 +500,7 @@ function eg(e) {
                 ref: (t) => {
                     e.current = t;
                 },
-                className: l()(ef.k, ej.A),
+                className: l()(ef.k, eg.A),
                 onMouseEnter: m,
                 onMouseLeave: x,
                 onFocus: m,

@@ -16,5 +16,8 @@ a.exports = {
     XZ: "hints_b5b7aa",
     M5: "hintsContainer_b5b7aa",
     O: "promotedByRow_b5b7aa",
+    xK: "expirationCopy_b5b7aa",
+    vT: "promotedByCopy_b5b7aa",
+    eA: "promoterName_b5b7aa",
     w$: "verifiedIcon_b5b7aa",
 };
