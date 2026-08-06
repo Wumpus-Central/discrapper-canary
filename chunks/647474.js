@@ -56,7 +56,7 @@ function N(t) {
 }
 function k(t) {
     let { Icon: e, children: n, endDatetime: s, ...c } = t,
-        [o, i] = l.useState(() => (0, h.Z)(s));
+        [o, i] = l.useState(() => (0, h.ZH)(s));
     function a() {
         return (0, r.jsxs)("div", {
             className: f.lt,
@@ -64,7 +64,7 @@ function k(t) {
         });
     }
     return ((0, m.A)(() => {
-        let t = (0, h.Z)(s);
+        let t = (0, h.ZH)(s);
         i((e) => (null == t ? null : null != e && (0, d.A)(e, t) ? e : t));
     }, 1e3),
     null != o)

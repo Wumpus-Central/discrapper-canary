@@ -17,7 +17,7 @@ function h(e) {
         _ = n.useCallback(() => {
             p(), (0, o.A)({ subscriptionTier: m.pe.TIER_2, applicationId: t, analyticsLocations: h });
         }, [p, t, h]);
-    return null != l.endsAt && null == (0, d.Z)(l.endsAt)
+    return null != l.endsAt && null == (0, d.ZH)(l.endsAt)
         ? null
         : "nitro" !== l.flavor
           ? (0, s.jsx)(u.O0, { Icon: l.Icon, text: l.text, endDatetime: l.endsAt, tooltip: l.tooltip })

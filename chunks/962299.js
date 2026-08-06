@@ -21,7 +21,7 @@ function N(t) {
         p = N?.endsAt ?? null,
         [, g] = l.useReducer((t) => t + 1, 0);
     (0, i.A)(g, null != p ? 1e3 : null);
-    let b = null != p && null == (0, m.Z)(p),
+    let b = null != p && null == (0, m.ZH)(p),
         A = l.useCallback(() => {
             (0, u.A)({ subscriptionTier: v.pe.TIER_2, analyticsLocations: n, applicationId: e });
         }, [n, e]);

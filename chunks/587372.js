@@ -44,7 +44,7 @@ var y = n(806163),
     V = n(280450),
     K = n(166403),
     Y = n(123917),
-    W = n(428262),
+    W = n(158045),
     $ = n(814201),
     q = n(581453),
     Z = n(43990),
@@ -1989,7 +1989,7 @@ function nO(e) {
     return (0, o.jsx)(nL.Provider, { value: s, children: n });
 }
 var nT = n(755172),
-    nR = n(534740),
+    nR = n(682577),
     nk = n(607399),
     ny = n(946015),
     nM = n(717421),
@@ -3124,7 +3124,7 @@ let sM = function (e) {
             ctaType: d = "storefront",
             logoUrl: u,
         } = e,
-        m = (0, sk.u)(r) ?? void 0,
+        m = (0, sk.ur)(r) ?? void 0,
         g = (0, sT.W8)(),
         h = c.useMemo(
             () =>
