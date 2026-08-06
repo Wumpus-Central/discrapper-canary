@@ -171,7 +171,7 @@
 
 .displayName_a4e9ae {
     color: var(--text-default);
-    font-size: 44px;
+    font-size: 2.75rem;
     line-height: normal;
     max-width: 380px;
     overflow: hidden;
@@ -181,13 +181,13 @@
 
 @container premium-marketing-page-container (max-width: 720px) {
     .displayName_a4e9ae {
-        font-size: 42px
+        font-size: 2.625rem
     }
 }
 
 @container premium-marketing-page-container (max-width: 540px) {
     .displayName_a4e9ae {
-        font-size: 38px
+        font-size: 2.375rem
     }
 }
 
