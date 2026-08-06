@@ -1,94 +1,93 @@
-"use strict";
-n.d(t, { E: () => s });
-var i = n(477900);
-n(582128);
-var r = n(996682),
-    a = n(27989);
-function s(e) {
-    let { size: t = "md", width: n, height: s, ...l } = e,
+l.d(t, { E: () => r });
+var n = l(477900);
+l(582128);
+var i = l(996682),
+    a = l(27989);
+function r(e) {
+    let { size: t = "md", width: l, height: r, ...s } = e,
         o = (0, a.J)(t),
-        d = o?.width ?? n,
-        c = o?.height ?? s;
-    return (0, i.jsxs)("svg", {
-        ...(0, r.A)(l),
+        c = o?.width ?? l,
+        d = o?.height ?? r;
+    return (0, n.jsxs)("svg", {
+        ...(0, i.A)(s),
         xmlns: "http://www.w3.org/2000/svg",
-        width: d,
-        height: c,
+        width: c,
+        height: d,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("mask", {
+            (0, n.jsx)("mask", {
                 id: "a",
                 fill: "#fff",
-                children: (0, i.jsx)("path", {
+                children: (0, n.jsx)("path", {
                     fillRule: "evenodd",
                     d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
                     clipRule: "evenodd",
                 }),
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#FFF48D",
                 fillRule: "evenodd",
                 d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
                 clipRule: "evenodd",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#97979F",
                 fillOpacity: ".3",
                 d: "M2.4 4v.5h19.2v-1H2.4V4Zm19.2 0v.5c1.14 0 1.9.75 1.9 1.5h1c0-1.46-1.39-2.5-2.9-2.5V4ZM24 6h-.5v12h1V6H24Zm0 12h-.5c0 .75-.76 1.5-1.9 1.5v1c1.51 0 2.9-1.04 2.9-2.5H24Zm-2.4 2v-.5H2.4v1h19.2V20ZM2.4 20v-.5C1.26 19.5.5 18.75.5 18h-1c0 1.46 1.39 2.5 2.9 2.5V20ZM0 18h.5V6h-1v12H0ZM0 6h.5c0-.75.76-1.5 1.9-1.5v-1C.89 3.5-.5 4.54-.5 6H0Z",
                 mask: "url(#a)",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#fff",
                 d: "M1.5 9.06v6.38c0 .31.25.56.56.56h3.85c2.91 0 4.18-1.62 4.18-3.76 0-2.14-1.27-3.74-4.18-3.74H2.06c-.3 0-.56.25-.56.56Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#C06",
                 d: "M4.08 10.07v4.72h2.07c1.88 0 2.7-1.06 2.7-2.55 0-1.49-.82-2.53-2.7-2.53H4.44c-.2 0-.36.16-.36.36Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#232323",
                 fillRule: "evenodd",
                 d: "M2.56 15.5h3.35c2.35 0 3.65-1.16 3.65-3.26 0-1.2-.47-3.23-3.65-3.23H2.56c-.3 0-.54.24-.54.54v5.4c0 .3.25.54.54.54ZM2.2 9.54c0-.2.16-.36.36-.36h3.35c1.3 0 3.47.4 3.47 3.05 0 1.98-1.23 3.07-3.47 3.07H2.56a.36.36 0 0 1-.36-.35V9.55Z",
                 clipRule: "evenodd",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#fff",
                 fillRule: "evenodd",
                 d: "M5.1 11.56a.59.59 0 0 0-.2-.04h-.48v1.14h.48c.09 0 .16-.02.22-.04a.46.46 0 0 0 .25-.3.86.86 0 0 0 0-.48.58.58 0 0 0-.11-.18.45.45 0 0 0-.16-.1Zm-.12.88a.34.34 0 0 1-.1.01h-.22v-.71h.18a.4.4 0 0 1 .15.02l.1.08.05.12.02.15c0 .07 0 .12-.02.16a.33.33 0 0 1-.07.1.2.2 0 0 1-.09.07Z",
                 clipRule: "evenodd",
             }),
-            (0, i.jsx)("path", { fill: "#fff", d: "M6.4 11.74h-.6v.24h.55v.2H5.8v.27h.6v.21h-.85v-1.14h.84v.22Z" }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", { fill: "#fff", d: "M6.4 11.74h-.6v.24h.55v.2H5.8v.27h.6v.21h-.85v-1.14h.84v.22Z" }),
+            (0, n.jsx)("path", {
                 fill: "#fff",
                 fillRule: "evenodd",
                 d: "m7.65 12.67-.42-1.14h-.25l-.42 1.14h.25l.08-.26h.42l.09.26h.25Zm-.54-.86.14.41h-.29l.15-.41Z",
                 clipRule: "evenodd",
             }),
-            (0, i.jsx)("path", { fill: "#fff", d: "M8.05 11.52v.93h.54v.21h-.78v-1.14h.24Z" }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", { fill: "#fff", d: "M8.05 11.52v.93h.54v.21h-.78v-1.14h.24Z" }),
+            (0, n.jsx)("path", {
                 fill: "#232323",
                 d: "M3.11 12.68a.54.54 0 1 0 0-1.07.54.54 0 0 0 0 1.07ZM3.43 14.83c-.41 0-.75-.36-.75-.8v-.63c0-.22.17-.4.38-.4s.38.18.38.4v1.43Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#1D1C1C",
                 d: "M20.06 12.28c0-.63.44-1.2 1.22-1.2.77 0 1.22.57 1.22 1.2 0 .62-.45 1.2-1.22 1.2-.78 0-1.22-.58-1.22-1.2Zm1.76 0c0-.3-.2-.59-.54-.59-.35 0-.55.28-.55.59 0 .3.2.58.55.58.34 0 .54-.28.54-.58ZM19.58 12.72a.83.83 0 0 0 .41-.73.82.82 0 0 0-.84-.85h-1.09v2.27h.67v-.58h.13l.38.58h.8l-.46-.69Zm-.57-.41h-.28v-.64h.28c.18 0 .3.14.3.32 0 .17-.12.32-.3.32ZM15 11.14l-.4 1.35-.39-1.35h-.53l-.4 1.35-.4-1.35h-.7l.8 2.26h.59l.37-1.23.38 1.23h.58l.81-2.26h-.7ZM16.72 12.85a.52.52 0 0 1-.5-.35h1.7a1.17 1.17 0 0 0-1.2-1.42v.61c.26 0 .43.15.5.35h-1.7l-.02.23c0 .63.45 1.2 1.22 1.2v-.62Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "url(#b)",
                 d: "M16.72 13.47h.08c.16-.01.3-.04.43-.1a1.12 1.12 0 0 0 .68-.82h-.7a.58.58 0 0 1-.15.19.5.5 0 0 1-.26.1l-.08.01a.52.52 0 0 1-.38-.16l-.46.47c.2.19.5.3.84.3Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "url(#c)",
                 d: "M16.72 11.08c-.65 0-1.07.4-1.18.91h.7c.09-.17.25-.3.48-.3.19 0 .33.08.42.2l.47-.47c-.21-.21-.51-.34-.89-.34Z",
             }),
-            (0, i.jsx)("path", {
+            (0, n.jsx)("path", {
                 fill: "#1D1C1C",
                 d: "M11.12 14.78a.1.1 0 0 1-.1-.1V9.81a.1.1 0 0 1 .2 0v4.87a.1.1 0 0 1-.1.1Z",
             }),
-            (0, i.jsxs)("defs", {
+            (0, n.jsxs)("defs", {
                 children: [
-                    (0, i.jsxs)("linearGradient", {
+                    (0, n.jsxs)("linearGradient", {
                         id: "b",
                         x1: "17.57",
                         x2: "16.51",
@@ -96,11 +95,11 @@ function s(e) {
                         y2: "13.43",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { offset: ".02", stopColor: "#1D1C1C", stopOpacity: "0" }),
-                            (0, i.jsx)("stop", { offset: ".68", stopColor: "#1D1C1C" }),
+                            (0, n.jsx)("stop", { offset: ".02", stopColor: "#1D1C1C", stopOpacity: "0" }),
+                            (0, n.jsx)("stop", { offset: ".68", stopColor: "#1D1C1C" }),
                         ],
                     }),
-                    (0, i.jsxs)("linearGradient", {
+                    (0, n.jsxs)("linearGradient", {
                         id: "c",
                         x1: "15.72",
                         x2: "16.8",
@@ -108,8 +107,8 @@ function s(e) {
                         y2: "11.34",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { offset: ".02", stopColor: "#1D1C1C", stopOpacity: "0" }),
-                            (0, i.jsx)("stop", { offset: ".68", stopColor: "#1D1C1C" }),
+                            (0, n.jsx)("stop", { offset: ".02", stopColor: "#1D1C1C", stopOpacity: "0" }),
+                            (0, n.jsx)("stop", { offset: ".68", stopColor: "#1D1C1C" }),
                         ],
                     }),
                 ],

@@ -1,6 +1,5 @@
-"use strict";
-n.r(t), n.d(t, { default: () => s, messagesLoader: () => r });
-let { createLoader: i } = n(982253),
-    r = i({ "en-US": () => n.e("70873").then(n.bind(n, 10368)) }, "en-US"),
-    { makeMessagesProxy: a } = n(982253),
-    s = a(r);
+d.r(s), d.d(s, { default: () => h, messagesLoader: () => p });
+let { createLoader: a } = d(982253),
+    p = a({ "en-US": () => d.e("70873").then(d.bind(d, 10368)) }, "en-US"),
+    { makeMessagesProxy: t } = d(982253),
+    h = t(p);
