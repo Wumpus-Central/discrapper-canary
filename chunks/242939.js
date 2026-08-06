@@ -3,7 +3,7 @@ var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(560952),
+    a = n(682577),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -873,8 +873,8 @@ var eV = n(889137),
     e3 = n(114046),
     e7 = n(695366),
     e6 = n(274670),
-    e9 = n(144779),
-    e4 = n(30370),
+    e4 = n(144779),
+    e9 = n(30370),
     e5 = n(178540),
     e8 = n(104886),
     te = n(18437),
@@ -891,7 +891,7 @@ function tl(e) {
         onClick: () => {
             (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
                 ? (0, e6.r)({
-                      type: e9.F.CLICK_INTERNAL,
+                      type: e4.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -937,7 +937,7 @@ function tc(e) {
             beforeRequest: () => {
                 (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
                     ? (0, e6.r)({
-                          type: e9.F.CLICK_INTERNAL,
+                          type: e4.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -971,7 +971,7 @@ function tc(e) {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
                                   if (e.type === e3._.EXPIRED_CREDENTIAL) {
-                                      let r = e4.A.getAccount(e.connected_account_id, e.connected_account_type),
+                                      let r = e9.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, F.IG)(e),
                                           i = (0, F.$J)(e);
                                       return (0, s.jsx)(
@@ -1665,16 +1665,17 @@ function t$(e) {
         N = (0, c.Ay)(Q),
         B = t.userStatus?.completedAt != null,
         { hasError: F, isLoading: I } = (0, j.zT)(),
-        b = r.useContext(tV.Z) || (l && d && !I && !o),
+        b = r.useContext(tV.Z),
+        O = b || (l && d && !I && !o),
         {
-            isExpanded: O,
-            setIsExpanded: V,
-            expandQuestBar: L,
-            isExpansionAnimationComplete: k,
-            isVisibilityAnimationAtRest: q,
-            expansionSpring: w,
-            visibilitySpring: M,
-            springConfig: D,
+            isExpanded: V,
+            setIsExpanded: L,
+            expandQuestBar: k,
+            isExpansionAnimationComplete: q,
+            isVisibilityAnimationAtRest: w,
+            expansionSpring: M,
+            visibilitySpring: D,
+            springConfig: G,
         } = (function (e) {
             let { isQuestAccepted: t, isQuestCompleted: n, isQuestBarVisible: s } = e,
                 l = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
@@ -1735,17 +1736,17 @@ function t$(e) {
                     springConfig: E,
                 }
             );
-        })({ isQuestAccepted: Q, isQuestCompleted: B, isQuestBarVisible: b }),
+        })({ isQuestAccepted: Q, isQuestCompleted: B, isQuestBarVisible: O }),
         {
-            handleCtxMenuOpened: G,
-            handleCtxMenuClosed: W,
-            handleCtxMenuSelection: $,
-            handleGameSheetOpened: z,
-            handleGameSheetClosed: K,
-            handleFocusWithoutDelay: Y,
-            handleBlur: ee,
-            handleMouseEnter: et,
-            handleMouseLeave: en,
+            handleCtxMenuOpened: W,
+            handleCtxMenuClosed: $,
+            handleCtxMenuSelection: z,
+            handleGameSheetOpened: K,
+            handleGameSheetClosed: Y,
+            handleFocusWithoutDelay: ee,
+            handleBlur: et,
+            handleMouseEnter: en,
+            handleMouseLeave: es,
         } = (function (e) {
             let {
                     quest: t,
@@ -1851,9 +1852,9 @@ function t$(e) {
             );
         })({
             quest: t,
-            isExpanded: O,
-            setIsExpanded: V,
-            expandQuestBar: L,
+            isExpanded: V,
+            setIsExpanded: L,
+            expandQuestBar: k,
             isQuestCompleted: B,
             isQuestAccepted: Q,
             prevIsQuestAccepted: N,
@@ -1931,86 +1932,88 @@ function t$(e) {
         quest: t,
         hasAssetsError: F,
         isEligibleForQuests: l,
-        isQuestBarVisible: b,
-        isVisibilityAnimationAtRest: q,
+        isQuestBarVisible: O,
+        isVisibilityAnimationAtRest: w,
         isLoadingAssets: I,
         currentQuestVisibleReason: x,
         shouldShowQuestBar: d,
         isQuestEnrollmentBlocked: o,
         impressionRef: v,
     });
-    let es = r.useRef(null),
-        er = r.useRef(null),
+    let er = r.useRef(null),
         el = r.useRef(null),
-        ea = (0, E.fc)(t),
-        eo = (0, E.UH)(t);
+        ea = r.useRef(null),
+        eo = (0, E.fc)(t),
+        eu = (0, E.UH)(t);
     if (
         (r.useEffect(() => {
             y && (0, R.l9)();
         }, [y]),
-        !l || (!b && q && !I) || F)
+        !l || (!O && w && !I) || (F && !b))
     )
-        return F ? n.log("Not rendered due to asset error") : l || n.log("Not rendered due to ineligibility"), null;
-    let eu = 70 + 78 * !!B;
+        return (
+            F && !b ? n.log("Not rendered due to asset error") : l || n.log("Not rendered due to ineligibility"), null
+        );
+    let ec = 70 + 78 * !!B;
     return (0, s.jsx)(A.Z, {
         questOrQuests: t,
         questContent: f.uF.QUEST_BAR_V2,
-        overrideVisibility: !m && b,
-        onImpression: eo,
+        overrideVisibility: !m && O,
+        onImpression: eu,
         sourceQuestContent: f.uF.QUEST_BAR_V2,
         children: (e, n) => (
             (v.current = n.current),
             (0, s.jsxs)("div", {
                 className: tG.dK,
                 children: [
-                    b &&
+                    O &&
                         (0, s.jsxs)(s.Fragment, {
-                            children: [(0, s.jsx)(tW, { questId: T, isExpanded: O }), (0, s.jsx)(tH, {})],
+                            children: [(0, s.jsx)(tW, { questId: T, isExpanded: V }), (0, s.jsx)(tH, {})],
                         }),
                     (0, s.jsx)(a.animated.div, {
                         "data-testid": "quest-bar-container",
-                        "aria-hidden": !b,
-                        onMouseLeave: en,
-                        onMouseEnter: et,
-                        onFocus: Y,
-                        onBlur: ee,
-                        className: i()(tG.iE, { [tG.Xc]: !b, [tG.uv]: b && q }),
-                        style: { height: M.to({ range: [0, 1], output: [0, eu] }) },
+                        "aria-hidden": !O,
+                        onMouseLeave: es,
+                        onMouseEnter: en,
+                        onFocus: ee,
+                        onBlur: et,
+                        className: i()(tG.iE, { [tG.Xc]: !O, [tG.uv]: O && w }),
+                        style: { height: D.to({ range: [0, 1], output: [0, ec] }) },
                         children: (0, s.jsx)(a.animated.div, {
-                            className: i()(tG.FG, { [tG.E$]: O, [tG.KA]: Q }),
+                            className: i()(tG.FG, { [tG.E$]: V, [tG.KA]: Q }),
                             children: (0, s.jsx)(tm, {
-                                springConfig: D,
-                                isExpanded: O,
+                                springConfig: G,
+                                isExpanded: V,
                                 children: (0, s.jsx)(P, {
-                                    expandedContentRef: es,
-                                    collapsedContentRef: er,
-                                    expansionSpring: w,
+                                    expandedContentRef: er,
+                                    collapsedContentRef: el,
+                                    expansionSpring: M,
                                     children: (0, s.jsxs)(X, {
                                         quest: t,
-                                        taskDetails: ea,
-                                        isExpanded: O,
-                                        isExpansionAnimationComplete: k,
-                                        onCtxMenuClose: W,
-                                        onCtxMenuOpen: G,
-                                        onCtxMenuSelect: $,
-                                        onGameSheetOpen: z,
-                                        onGameSheetClose: K,
-                                        collapsedHeight: eu,
+                                        taskDetails: eo,
+                                        isExpanded: V,
+                                        isExpansionAnimationComplete: q,
+                                        onCtxMenuClose: $,
+                                        onCtxMenuOpen: W,
+                                        onCtxMenuSelect: z,
+                                        onGameSheetOpen: K,
+                                        onGameSheetClose: Y,
+                                        collapsedHeight: ec,
                                         children: [
                                             (0, s.jsx)(
                                                 eO,
-                                                { ref: er, className: tG.Qs, overlayRef: el },
+                                                { ref: el, className: tG.Qs, overlayRef: ea },
                                                 B ? "collapsed-with-rewards" : "collapsed-without-rewards",
                                             ),
                                             (0, s.jsx)(tO, {
                                                 className: tG.Qs,
-                                                overlayRef: el,
-                                                ref: es,
+                                                overlayRef: ea,
+                                                ref: er,
                                                 children: (0, s.jsxs)(s.Fragment, {
                                                     children: [(0, s.jsx)(tL, {}), !Q && (0, s.jsx)(ei, {})],
                                                 }),
                                             }),
-                                            (0, s.jsx)("div", { ref: el, className: tG.Lw }),
+                                            (0, s.jsx)("div", { ref: ea, className: tG.Lw }),
                                         ],
                                     }),
                                 }),
