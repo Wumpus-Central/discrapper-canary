@@ -31,9 +31,10 @@ function C(e, t) {
     null != n &&
         null != t &&
         n.has(t) &&
-        A.Ay.isOptInEnabled(e) &&
+        S(e) &&
         !d.A.getChannel(t)?.isThread() &&
         null == E.Ay.ackMessageId(t) &&
+        0 === E.Ay.getMentionCount(t) &&
         r.h.wait(() =>
             (0, a.ack)(
                 t,
