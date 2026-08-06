@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(534740),
     o = n(717421),
     d = n(866323),
     c = n(597619),
@@ -26,7 +26,12 @@ let h = r.memo(function (e) {
         let { dotRadius: t, dotPosition: n, fill: a = "currentColor", spacing: s = 2.5 } = e,
             { focused: d } = (0, c.xb)(),
             u = r.useRef(!0);
-        r.useEffect(() => () => void (u.current = !1), []);
+        r.useEffect(
+            () => () => {
+                u.current = !1;
+            },
+            [],
+        );
         let [_] = (0, o.z)(
                 () => ({
                     ...E,

@@ -135,7 +135,9 @@ function m(e, t, n, a) {
                         [m, g, S, n, i, a, l, c, d, t, T, o, I],
                     );
                 return (
-                    (0, r.useLayoutEffect)(() => void (p.current = D)),
+                    (0, r.useLayoutEffect)(() => {
+                        p.current = D;
+                    }),
                     { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
