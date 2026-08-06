@@ -2,7 +2,7 @@
 n.d(t, { A: () => C });
 var i = n(687123),
     r = n(508602),
-    a = n(493336),
+    a = n(148494),
     s = n(155718),
     l = n(439372),
     o = n(292446),
@@ -26,10 +26,16 @@ function S(e) {
         let e = i.embeds[0].fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
         e?.rawValue === p.Wv.ERROR
             ? (_.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
-            : e?.rawValue === p.Wv.VERIFIED_ADULT
-              ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
-              : e?.rawValue === p.Wv.VERIFIED_TEEN &&
-                (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN));
+            : e?.rawValue === p.Wv.FAE_FAILED
+              ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_FAE_FAILED), (0, f.Vh)(f.oQ.FAE_FAILED))
+              : e?.rawValue === p.Wv.ID_FAILED
+                ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_ID_FAILED), (0, f.Vh)(f.oQ.ID_FAILED))
+                : e?.rawValue === p.Wv.UNDERAGE
+                  ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_UNDERAGE), (0, f.Vh)(f.oQ.UNDERAGE))
+                  : e?.rawValue === p.Wv.VERIFIED_ADULT
+                    ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
+                    : e?.rawValue === p.Wv.VERIFIED_TEEN &&
+                      (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN));
     }
 }
 class N extends l.A {

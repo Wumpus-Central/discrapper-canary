@@ -32,6 +32,12 @@ function A(e, t, n) {
             return u.intl.formatToPlainString(u.t.FOptFU, { username: a });
         case c.OB.TIGGER_PAWTECT_ERROR:
             return u.intl.string(u.t.c6kn6F);
+        case c.OB.AGE_VERIFICATION_FAE_FAILED:
+            return u.intl.string(_.default["9F2y52"]);
+        case c.OB.AGE_VERIFICATION_ID_FAILED:
+            return u.intl.string(_.default["40UKek"]);
+        case c.OB.AGE_VERIFICATION_UNDERAGE:
+            return u.intl.string(_.default.XBGt7g);
         case c.OB.TIGGER_PAWTECT_VERIFIED:
             return u.intl.string(u.t["7nKAXx"]);
         case c.OB.GENERIC_ERROR:

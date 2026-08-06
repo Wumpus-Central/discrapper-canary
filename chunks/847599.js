@@ -104,7 +104,14 @@ function N(e, t, n, i) {
         has_channel_topic: a,
     });
 }
-var C = (((d = {}).VERIFIED_TEEN = "verified_teen"), (d.VERIFIED_ADULT = "verified_adult"), (d.ERROR = "error"), d);
+var C =
+    (((d = {}).VERIFIED_TEEN = "verified_teen"),
+    (d.VERIFIED_ADULT = "verified_adult"),
+    (d.ERROR = "error"),
+    (d.FAE_FAILED = "fae_failed"),
+    (d.ID_FAILED = "id_failed"),
+    (d.UNDERAGE = "underage"),
+    d);
 function O(e) {
     u.default.track(_.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
 }

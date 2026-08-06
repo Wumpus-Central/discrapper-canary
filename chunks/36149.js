@@ -106,7 +106,14 @@ function H() {
     return (0, A.aX)(s.t.REACTIVE_CHECK) && e;
 }
 var j = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
-    W = (((r = {}).VERIFIED_ADULT = "verified_adult"), (r.VERIFIED_TEEN = "verified_teen"), (r.ERROR = "error"), r);
+    W =
+        (((r = {}).VERIFIED_ADULT = "verified_adult"),
+        (r.VERIFIED_TEEN = "verified_teen"),
+        (r.ERROR = "error"),
+        (r.FAE_FAILED = "fae_failed"),
+        (r.ID_FAILED = "id_failed"),
+        (r.UNDERAGE = "underage"),
+        r);
 function Y(e, t) {
     let n = f.A.getMessage(e, t);
     if (
