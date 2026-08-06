@@ -1,35 +1,36 @@
-l.d(t, { A: () => N });
-var n,
-    i = l(477900);
-l(582128);
-var r = l(503698),
-    s = l.n(r),
-    a = l(607399),
-    o = l(939249),
-    c = l(285796),
-    d = l(789645),
-    u = l(834730),
-    h = l(375708),
-    T = l(288305),
-    E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
-function N(e) {
-    let { closeAction: t, variant: l = "", keybind: n, className: r } = e;
-    return (0, i.jsxs)("div", {
-        className: s()(T.kL, r),
+"use strict";
+n.d(t, { A: () => h });
+var i,
+    r = n(477900);
+n(582128);
+var a = n(503698),
+    s = n.n(a),
+    l = n(607399),
+    o = n(939249),
+    d = n(285796),
+    c = n(789645),
+    u = n(834730),
+    _ = n(375708),
+    E = n(288305),
+    A = (((i = A || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
+function h(e) {
+    let { closeAction: t, variant: n = "", keybind: i, className: a } = e;
+    return (0, r.jsxs)("div", {
+        className: s()(E.kL, a),
         children: [
-            (0, i.jsx)(o.D, {
-                className: s()(T.b, { [T.EH]: "Bold" === l, [T.O3]: "Solid" === l }),
+            (0, r.jsx)(o.D, {
+                className: s()(E.b, { [E.EH]: "Bold" === n, [E.O3]: "Solid" === n }),
                 onClick: t,
-                "aria-label": h.intl.string(h.t.cpT0Cq),
+                "aria-label": _.intl.string(_.t.cpT0Cq),
                 children:
-                    "Solid" === l
-                        ? (0, i.jsx)(c.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, i.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === n
+                        ? (0, r.jsx)(d.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            a.Fr
+            l.Fr
                 ? null
-                : (0, i.jsx)(u.E, { variant: "text-xs/semibold", className: T.P, "aria-hidden": !0, children: n }),
+                : (0, r.jsx)(u.E, { variant: "text-xs/semibold", className: E.P, "aria-hidden": !0, children: i }),
         ],
     });
 }
-N.Variants = E;
+h.Variants = A;

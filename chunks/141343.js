@@ -1,9 +1,10 @@
-o.d(t, { V: () => n });
-var r = o(17928),
-    l = o(458024),
-    s = o(363195);
-function n() {
-    let e = (0, l.Ay)("SameAsDeviceTheme"),
-        t = (0, r.bG)([s.A], () => s.A.isSameAsDeviceThemeEnabled());
+"use strict";
+n.d(t, { V: () => s });
+var i = n(17928),
+    r = n(458024),
+    a = n(363195);
+function s() {
+    let e = (0, r.Ay)("SameAsDeviceTheme"),
+        t = (0, i.bG)([a.A], () => a.A.isSameAsDeviceThemeEnabled());
     return e && t;
 }

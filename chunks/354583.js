@@ -1,13 +1,14 @@
-t.d(n, { A: () => l });
-var i = t(17928),
-    u = t(734057),
-    r = t(309010);
-function l() {
-    return (0, i.bG)([r.Ay, u.A], () => {
-        let e = r.Ay.getVoiceChannelId();
+"use strict";
+n.d(t, { A: () => s });
+var i = n(17928),
+    r = n(734057),
+    a = n(309010);
+function s() {
+    return (0, i.bG)([a.Ay, r.A], () => {
+        let e = a.Ay.getVoiceChannelId();
         if (null != e) {
-            let n = u.A.getChannel(e);
-            if (n?.isGuildStageVoice()) return n;
+            let t = r.A.getChannel(e);
+            if (t?.isGuildStageVoice()) return t;
         }
         return null;
     });

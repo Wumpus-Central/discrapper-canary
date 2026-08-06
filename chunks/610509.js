@@ -1,32 +1,33 @@
-n.d(t, { z: () => a });
+"use strict";
+n.d(t, { z: () => l });
 var i = n(477900);
 n(582128);
-var l = n(661531),
-    r = n(996682),
+var r = n(661531),
+    a = n(996682),
     s = n(27989);
-function a(e) {
+function l(e) {
     let {
             size: t = "md",
             width: n,
-            height: a,
-            color: E = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: o = "",
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
             ...c
         } = e,
         u = (0, s.J)(t),
         _ = u?.width ?? n,
-        A = u?.height ?? a;
+        E = u?.height ?? l;
     return (0, i.jsx)("svg", {
-        ...(0, r.A)(c),
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: _,
-        height: A,
+        height: E,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof E ? E : E.css,
+            fill: "string" == typeof o ? o : o.css,
             d: "M19.76 8.82c-.11.09-2.16 1.24-2.16 3.8 0 2.98 2.6 4.03 2.68 4.05 0 .07-.41 1.44-1.37 2.84-.86 1.23-1.75 2.46-3.11 2.46-1.36 0-1.71-.79-3.28-.79-1.53 0-2.08.82-3.32.82-1.24 0-2.11-1.14-3.11-2.54A12.25 12.25 0 0 1 4 12.84c0-3.9 2.53-5.95 5.02-5.95 1.32 0 2.42.86 3.25.86.8 0 2.02-.92 3.53-.92.57 0 2.62.06 3.96 1.99Zm-4.68-3.63a4.47 4.47 0 0 0 1.07-2.79c0-.14-.02-.28-.04-.4a4.47 4.47 0 0 0-2.95 1.52 4.35 4.35 0 0 0-1.1 2.7c0 .16.03.32.04.37l.27.02c.91 0 2.05-.6 2.71-1.42Z",
-            className: o,
+            className: d,
         }),
     });
 }
