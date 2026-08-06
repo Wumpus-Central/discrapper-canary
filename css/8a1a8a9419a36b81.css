@@ -1,13 +1,16 @@
+.headerContainer__5d903 {
+    position: sticky;
+    top: -16px;
+    z-index: 10
+}
+
 .channelHeader__5d903 {
     align-items: center;
     background-color: var(--background-surface-higher);
     border-bottom: 1px solid var(--border-subtle);
     display: flex;
     gap: var(--space-8);
-    padding: var(--space-12);
-    position: sticky;
-    top: -16px;
-    z-index: 10
+    padding: var(--space-12)
 }
 
 .channelHeader__5d903.collapsed__5d903 {
@@ -92,24 +95,17 @@
 
 .status__5d903 {
     align-items: center;
+    background-color: var(--background-base-low);
     border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-muted);
     display: flex;
     gap: var(--space-4);
-    margin-bottom: var(--space-8);
-    padding: var(--space-8);
-    padding-inline-start: 70px
+    justify-content: center;
+    padding: var(--space-12)
 }
 
-.error__5d903 {
-    background-color: rgba(255, 0, 0, .05)
-}
-
-.success__5d903 {
-    background-color: rgba(0, 255, 0, .03)
-}
-
-.normal__5d903 {
-    background-color: var(--background-base-low)
+.errorIcon__5d903 {
+    color: var(--text-feedback-critical)
 }
 
 .noCollapseButton__5d903 {

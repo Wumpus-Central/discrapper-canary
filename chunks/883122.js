@@ -60,34 +60,49 @@ var s,
     er = n(842971);
 let ed = { top: 8, bottom: 8, left: -4, right: -4 };
 function ec(e) {
-    let { channel: t, children: n, onClick: s, collapsed: a = !1, mentionCount: l, onToggleCollapse: r, itemId: d } = e,
-        o = (0, j.rm)(d);
-    return (0, i.jsx)(F.vN, {
-        offset: ed,
-        children: (0, i.jsxs)("div", {
-            className: c()(er.ZO, { [er.yZ]: a }),
-            ...o,
-            "data-recents-channel": t.id,
-            onKeyDown: function (e) {
-                if ((e.key === el.dh.ENTER || e.key === el.dh.SPACE) && e.target === e.currentTarget) {
-                    e.preventDefault(), s(e);
-                    return;
-                }
-                null != r && ((e.key === el.dh.ARROW_RIGHT && a) || (e.key === el.dh.ARROW_LEFT && !a)) && r();
-            },
-            children: [
-                (0, i.jsx)(U.D, {
-                    className: er.YT,
-                    onClick: s,
-                    tabIndex: -1,
-                    "aria-hidden": !0,
-                    children: (0, i.jsx)(eo, { channel: t }),
+    let {
+            channel: t,
+            children: n,
+            status: s,
+            onClick: a,
+            collapsed: l = !1,
+            mentionCount: r,
+            onToggleCollapse: d,
+            itemId: o,
+        } = e,
+        u = (0, j.rm)(o);
+    return (0, i.jsxs)("div", {
+        className: er.N1,
+        children: [
+            s,
+            (0, i.jsx)(F.vN, {
+                offset: ed,
+                children: (0, i.jsxs)("div", {
+                    className: c()(er.ZO, { [er.yZ]: l }),
+                    ...u,
+                    "data-recents-channel": t.id,
+                    onKeyDown: function (e) {
+                        if ((e.key === el.dh.ENTER || e.key === el.dh.SPACE) && e.target === e.currentTarget) {
+                            e.preventDefault(), a(e);
+                            return;
+                        }
+                        null != d && ((e.key === el.dh.ARROW_RIGHT && l) || (e.key === el.dh.ARROW_LEFT && !l)) && d();
+                    },
+                    children: [
+                        (0, i.jsx)(U.D, {
+                            className: er.YT,
+                            onClick: a,
+                            tabIndex: -1,
+                            "aria-hidden": !0,
+                            children: (0, i.jsx)(eo, { channel: t }),
+                        }),
+                        (0, i.jsx)(w._, { className: er.ai, size: "xxs" }),
+                        (0, i.jsx)(eu, { channel: t, onClick: a, mentionCount: r }),
+                        n,
+                    ],
                 }),
-                (0, i.jsx)(w._, { className: er.ai, size: "xxs" }),
-                (0, i.jsx)(eu, { channel: t, onClick: s, mentionCount: l }),
-                n,
-            ],
-        }),
+            }),
+        ],
     });
 }
 function eo(e) {
@@ -177,14 +192,12 @@ function em(e) {
 function eg(e) {
     let { type: t, text: n } = e;
     return (0, i.jsxs)("div", {
-        className: c()(er.h5, { [er.z3]: "error" === t, [er.kX]: "success" === t, [er.qb]: "normal" === t }),
+        className: er.h5,
         children: [
-            "error" === t ? (0, i.jsx)(S.E, { size: "xs" }) : (0, i.jsx)(B.O, { size: "xs" }),
-            (0, i.jsx)(z.E, {
-                variant: "text-xs/medium",
-                color: "error" === t ? "text-feedback-critical" : "text-muted",
-                children: n,
-            }),
+            "error" === t
+                ? (0, i.jsx)(S.E, { size: "xs", color: "currentColor", className: er.ik })
+                : (0, i.jsx)(B.O, { size: "xs", color: "currentColor" }),
+            (0, i.jsx)(z.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
         ],
     });
 }
@@ -247,12 +260,11 @@ function eB(e) {
             u
                 ? (0, i.jsx)(eG.i, { size: "md", color: "currentColor", className: ez.QW })
                 : (0, i.jsx)(eT.t, { size: "md", color: eF.k0.PREMIUM_TIER_2 }),
-            (0, i.jsx)(eU.A, { className: ez.TN }),
-            (0, i.jsx)(z.E, {
+            (0, i.jsxs)(z.E, {
                 variant: "text-xs/medium",
                 color: "text-strong",
                 className: ez.tD,
-                children:
+                children: [
                     ((t = c),
                     (s = o),
                     (a = u),
@@ -267,6 +279,9 @@ function eB(e) {
                                 premiumMax: t ? 50 : 200,
                             })
                           : ei.intl.formatToPlainString(t ? ei.t["W+ZaoS"] : ei.t["0hoV2D"], { nitroTierName: d })),
+                    " ",
+                    (0, i.jsx)(eU.A, { className: ez.TN }),
+                ],
             }),
             (0, i.jsx)(ew.A, {
                 size: "sm",
@@ -420,8 +435,8 @@ var e$ = n(318061),
     eQ = n(824385);
 let e0 = "ForLaterPopout",
     e1 = "Bookmarks",
-    e3 = "Reminders";
-function e2(e) {
+    e2 = "Reminders";
+function e3(e) {
     let { closePopout: t, type: n } = e,
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.Yf.ALL,
@@ -482,7 +497,7 @@ function e2(e) {
     );
     let h = r.useRef(null),
         m = (0, O.A)("for-later", h);
-    (0, eA.xN)(h), (0, eA.yW)(n === g.Yf.BOOKMARK ? e1 : e3);
+    (0, eA.xN)(h), (0, eA.yW)(n === g.Yf.BOOKMARK ? e1 : e2);
     let [A, f] = r.useState(new Date());
     return (r.useEffect(() => {
         let e = setInterval(() => f(new Date()), ep.A.Millis.MINUTE);
@@ -536,7 +551,7 @@ function e8(e) {
             async (e) => {
                 await (0, eS.le)(t, a),
                     e.shiftKey || n(),
-                    b.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? e3 : e1);
+                    b.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? e2 : e1);
             },
             [n, t, a],
         ),
@@ -555,13 +570,13 @@ function e8(e) {
                           l(e), n();
                       },
                       collapsed: !1,
+                      status: null != t.saveData.dueAt ? (0, i.jsx)(eq, { reminder: t, throttledNow: s }) : null,
                       children: (0, i.jsx)(v.e, {
                           size: "sm",
                           className: er.GC,
                           children: (0, i.jsx)(e7, { savedMessage: t, jumpToMessage: l, throttledNow: s }),
                       }),
                   }),
-                  null != t.saveData.dueAt ? (0, i.jsx)(eq, { reminder: t, throttledNow: s }) : null,
                   (0, i.jsx)(
                       ef.A,
                       {
@@ -986,8 +1001,8 @@ function t1(e) {
         },
     });
 }
-var t3 = n(350527),
-    t2 = n(218152),
+var t2 = n(350527),
+    t3 = n(218152),
     t8 = n(970278),
     t7 = n(747926),
     t5 = n(935208),
@@ -1040,8 +1055,8 @@ function t9(e) {
             className: t6.k,
             children: a.map((e) =>
                 (0, i.jsx)(
-                    t2.Cp,
-                    { channel: n, children: (0, i.jsx)(t3.Ay, { className: t6.u, threadId: e.id, goToThread: l }) },
+                    t3.Cp,
+                    { channel: n, children: (0, i.jsx)(t2.Ay, { className: t6.u, threadId: e.id, goToThread: l }) },
                     e.id,
                 ),
             ),
@@ -1207,7 +1222,7 @@ var nb = n(143236),
     nk = n(567035),
     nG = n(202803),
     nF = n(455234),
-    nU = n(695633),
+    nU = n(863005),
     nw = n(152007),
     nP = n(607508),
     nK = n(594061),
@@ -1562,8 +1577,8 @@ function nQ(e, t, n, s) {
 }
 let n0 = 2 * ep.A.Millis.DAY,
     n1 = 10 * ep.A.Millis.DAY;
-var n3 = n(358402);
-let n2 = { left: 4, right: -12 },
+var n2 = n(358402);
+let n3 = { left: 4, right: -12 },
     n8 = [eK.lAJ.THREAD_CREATED];
 function n7(e) {
     let { channel: t, message: n, compact: s, isGroupStart: a, gotoChannel: l } = e,
@@ -1580,18 +1595,18 @@ function n7(e) {
         ),
         o = n8.includes(n.type);
     return (0, i.jsx)(F.vN, {
-        offset: n2,
+        offset: n3,
         children: (0, i.jsxs)("div", {
-            className: n3.zC,
+            className: n2.zC,
             onKeyDown: c,
             ...d,
             children: [
-                !o && (0, i.jsx)(nL, { className: n3.nn, onJump: (e) => l(e, n.id) }),
+                !o && (0, i.jsx)(nL, { className: n2.nn, onJump: (e) => l(e, n.id) }),
                 (0, i.jsx)(nI, {
                     id: n.id,
                     message: n,
                     channel: t,
-                    className: n3.iU,
+                    className: n2.iU,
                     compact: s,
                     animateAvatar: !1,
                     isGroupStart: a,
@@ -1611,7 +1626,7 @@ function n5(e) {
     o.forEach((e) => {
         if (!l && (null == d || !d.isSame(e.timestamp, "day"))) {
             let t = (0, nM.i$)(e.timestamp, "LL");
-            r.push((0, i.jsx)(tF.A, { className: n3.yF, children: t }, t)), (d = nt()(e.timestamp));
+            r.push((0, i.jsx)(tF.A, { className: n2.yF, children: t }, t)), (d = nt()(e.timestamp));
         }
         let t = null == c || (0, ns.A)(n, c, e);
         (c = e), r.push((0, i.jsx)(n7, { channel: n, message: e, compact: a, isGroupStart: t, gotoChannel: s }, e.id));
@@ -1624,7 +1639,7 @@ function n5(e) {
                 (0, i.jsx)(
                     "div",
                     {
-                        className: n3.Gr,
+                        className: n2.Gr,
                         children: (0, i.jsx)(nn.Q, {
                             variant: "primary",
                             text: `${ei.intl.string(ei.t["9OB9hq"])} \u203A`,
@@ -1635,7 +1650,7 @@ function n5(e) {
                 ),
             ),
         0 === r.length && (r = [(0, i.jsx)(tN.y, {}, "spinner")]),
-        (0, i.jsx)("div", { className: n3.DZ, children: r })
+        (0, i.jsx)("div", { className: n2.DZ, children: r })
     );
 }
 let n4 = r.memo(function (e) {
@@ -2405,6 +2420,14 @@ let sI = r.memo(function (e) {
                           channel: l,
                           onClick: (e) => (0, eA.n4)(l.id, l.guild_id, sC, () => a(e)),
                           collapsed: !1,
+                          status: (0, i.jsx)(eg, {
+                              type: d ? "error" : "normal",
+                              text: d
+                                  ? c
+                                  : ei.intl.formatToPlainString(ei.t["CvHu/j"], {
+                                        timestamp: new Date(t.sendAtTimestamp).valueOf(),
+                                    }),
+                          }),
                           children: (0, i.jsxs)(v.e, {
                               size: "sm",
                               className: er.GC,
@@ -2433,14 +2456,6 @@ let sI = r.memo(function (e) {
                                   }),
                               ],
                           }),
-                      }),
-                      (0, i.jsx)(eg, {
-                          type: d ? "error" : "success",
-                          text: d
-                              ? c
-                              : ei.intl.formatToPlainString(ei.t["CvHu/j"], {
-                                    timestamp: new Date(t.sendAtTimestamp).valueOf(),
-                                }),
                       }),
                       s
                           ? (0, i.jsx)(tN.y, { className: eQ.Lq })
@@ -2487,9 +2502,9 @@ function sM(e) {
                         s === u.Y2.MENTIONS
                             ? (0, i.jsx)(sx, { onJump: r })
                             : f && s === u.Y2.BOOKMARKS
-                              ? (0, i.jsx)(e2, { closePopout: l, type: g.Yf.BOOKMARK }, "bookmarks")
+                              ? (0, i.jsx)(e3, { closePopout: l, type: g.Yf.BOOKMARK }, "bookmarks")
                               : f && s === u.Y2.REMINDERS
-                                ? (0, i.jsx)(e2, { closePopout: l, type: g.Yf.REMINDER }, "reminders")
+                                ? (0, i.jsx)(e3, { closePopout: l, type: g.Yf.REMINDER }, "reminders")
                                 : s === u.Y2.SCHEDULED
                                   ? (0, i.jsx)(sR, { onJump: r })
                                   : (0, i.jsx)(ss, { onJump: r, showTutorial: d, setSeenTutorial: A, closePopout: l }),

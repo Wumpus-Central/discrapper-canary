@@ -13,7 +13,10 @@
 }
 
 .betaTag__98678 {
-    flex-shrink: 0
+    bottom: 1px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle
 }
 
 .warningIcon__98678 {
@@ -69,8 +72,8 @@
 }
 
 .messages_d42d06 {
-    background: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
+    background: var(--background-base-lowest);
+    border: 1px solid var(--border-normal);
     border-radius: var(--radius-md);
     margin: var(--space-16) 0;
     padding: var(--space-8) 0;

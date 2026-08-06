@@ -1,4 +1,5 @@
 _.exports = {
+    N1: "headerContainer__5d903",
     ZO: "channelHeader__5d903",
     yZ: "collapsed__5d903",
     Kk: "icon__5d903",
@@ -13,8 +14,6 @@ _.exports = {
     j1: "channelTypeIcon__5d903",
     GC: "buttonGroup__5d903",
     h5: "status__5d903",
-    z3: "error__5d903",
-    kX: "success__5d903",
-    qb: "normal__5d903",
+    ik: "errorIcon__5d903",
     Pt: "noCollapseButton__5d903",
 };
