@@ -5008,6 +5008,7 @@ var rv =
         (ew.BOOSTING_UPSELL_CLICKED = "boosting_upsell_clicked"),
         (ew.BOOSTING_MARKETING_VIDEO_PLAYED = "boosting_marketing_video_played"),
         (ew.BOOSTING_MARKETING_VIDEO_COMPLETED = "boosting_marketing_video_completed"),
+        (ew.BOOST_PLAN_ROW_SELECTED = "boost_plan_row_selected"),
         (ew.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED = "guild_boost_past_due_cancellation_flow_completed"),
         (ew.GUILD_BOOST_PAST_DUE_CANCEL_MODAL_VIEWED = "guild_boost_past_due_cancel_modal_viewed"),
         (ew.TNS_SKU_REPORT_SUBMITTED = "tns_sku_report_submitted"),
