@@ -209,10 +209,9 @@ function ea(e) {
         ),
         g = (0, X.Ay)(s),
         x = null != n ? (0, Z.oF)(n) : void 0,
-        p = g ?? x,
-        v = null != s ? (0, q.gU)(s) : null;
+        p = null != s ? (0, q.gU)(s) : null;
     if (null == n || null == l) return null;
-    let f = null != n.description && n.description.length > 0;
+    let v = null != n.description && n.description.length > 0;
     return (0, a.jsxs)("div", {
         className: en.Qo,
         children: [
@@ -224,8 +223,8 @@ function ea(e) {
                     children: h,
                 }),
             }),
-            (0, a.jsx)(R.E, { variant: "text-lg/semibold", className: f ? en.X_ : void 0, children: n.name }),
-            f &&
+            (0, a.jsx)(R.E, { variant: "text-lg/semibold", className: v ? en.X_ : void 0, children: n.name }),
+            v &&
                 (0, a.jsx)(R.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
@@ -250,12 +249,12 @@ function ea(e) {
                     (0, a.jsxs)("div", {
                         className: en.ik,
                         children: [
-                            null != v ? (0, a.jsx)(v, { size: "xs", color: "currentColor" }) : null,
+                            null != p ? (0, a.jsx)(p, { size: "xs", color: "currentColor" }) : null,
                             (0, a.jsx)(R.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 className: en.HA,
-                                children: null != p ? (0, B.l)(p, !0) : null,
+                                children: g ?? (null != x ? (0, B.y)(x, !0) : null),
                             }),
                         ],
                     }),

@@ -31,7 +31,7 @@ function p(l) {
                     color: "text-default",
                     variant: "text-sm/normal",
                     className: o.fN,
-                    children: (0, i.l)(N, !0),
+                    children: m ? (0, i.y)(N, !0) : N,
                 }),
             ],
         });
