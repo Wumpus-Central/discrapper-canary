@@ -1,4 +1,4 @@
-n.d(t, { Df: () => R, LB: () => _ });
+n.d(t, { Df: () => R, LB: () => x });
 var i = n(367513),
     r = n(148494),
     l = n(334738),
@@ -20,33 +20,35 @@ var i = n(367513),
     v = n(309010),
     S = n(967198),
     y = n(712687),
-    T = n(531685),
-    x = n(625494),
-    O = n(652215);
-function _(e) {
+    O = n(531685),
+    T = n(625494),
+    _ = n(652215);
+function x(e) {
     return {
         binds: ["esc", "shift+pagedown"],
         comboKeysBindGlobal: !0,
         action(t) {
-            if (T.A.isElementFullScreen()) return !1;
-            if (x._.hasSubscribers(O.jej.CALL_DECLINE)) return x._.dispatch(O.jej.CALL_DECLINE), !1;
+            if (O.A.isElementFullScreen()) return !1;
+            if (T._.hasSubscribers(_.jej.CALL_DECLINE)) return T._.dispatch(_.jej.CALL_DECLINE), !1;
             if (y.A.close()) return !1;
-            if (x._.hasSubscribers(O.jej.MEDIA_MODAL_CLOSE)) return x._.dispatch(O.jej.MEDIA_MODAL_CLOSE), !1;
+            if (T._.hasSubscribers(_.jej.MEDIA_MODAL_CLOSE)) return T._.dispatch(_.jej.MEDIA_MODAL_CLOSE), !1;
             let n = (0, a.wp)(t);
-            if (n?.hasSubscribers(O.jej.POPOUT_CLOSE)) return n.dispatch(O.jej.POPOUT_CLOSE), !1;
-            if (x._.hasSubscribers(O.jej.CLOSE_GIF_PICKER)) return x._.dispatch(O.jej.CLOSE_GIF_PICKER), !1;
-            if (x._.hasSubscribers(O.jej.MODAL_CLOSE)) return x._.dispatch(O.jej.MODAL_CLOSE), !1;
-            if (x._.hasSubscribers(O.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
-                return x._.dispatch(O.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
-            if (x._.hasSubscribers(O.jej.SEARCH_RESULTS_CLOSE)) return x._.dispatch(O.jej.SEARCH_RESULTS_CLOSE), !1;
-            if (n?.hasSubscribers(O.jej.POPOUT_CLOSE_AFTER_MODALS))
-                return n.dispatch(O.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
+            if (n?.hasSubscribers(_.jej.POPOUT_CLOSE)) return n.dispatch(_.jej.POPOUT_CLOSE), !1;
+            if (T._.hasSubscribers(_.jej.CLOSE_GIF_PICKER)) return T._.dispatch(_.jej.CLOSE_GIF_PICKER), !1;
+            if (T._.hasSubscribers(_.jej.MODAL_CLOSE)) return T._.dispatch(_.jej.MODAL_CLOSE), !1;
+            if (T._.hasSubscribers(_.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
+                return T._.dispatch(_.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
+            if (T._.hasSubscribers(_.jej.SEARCH_RESULTS_CLOSE)) return T._.dispatch(_.jej.SEARCH_RESULTS_CLOSE), !1;
+            if (n?.hasSubscribers(_.jej.POPOUT_CLOSE_AFTER_MODALS))
+                return n.dispatch(_.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = S.A.getGuildId(),
                 l = e ?? v.Ay.getChannelId(r),
                 o = g.A.getChannel(l),
-                c = m.Ay.getSection(l, o?.isDM()) === O.YvQ.SIDEBAR_CHAT ? m.Ay.getSidebarState(l) : null,
+                c = m.Ay.getSection(l, o?.isDM()) === _.YvQ.SIDEBAR_CHAT ? m.Ay.getSidebarState(l) : null,
                 A = c?.type === d.PE.VIEW_THREAD || c?.type === d.PE.VIEW_CHANNEL ? c.channelId : null;
             if (!1 === j(l) || !1 === j(A)) return !1;
+            if (T._.hasSubscribers(_.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE))
+                return T._.dispatch(_.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE), !1;
             if (null != l && c?.type === d.PE.CREATE_THREAD) return u.A.closeChannelSidebar(l), !1;
             let h = I(l),
                 f = I(A);
@@ -54,7 +56,7 @@ function _(e) {
                 null == l || h || f || null == c
                     ? null != l && !h && !1 !== p.A.isAtBottom(l) && s.A.getChatOpen(l)
                         ? i.A.updateChatOpen(l, !1)
-                        : x._.dispatch(O.jej.SCROLLTO_PRESENT)
+                        : T._.dispatch(_.jej.SCROLLTO_PRESENT)
                     : u.A.closeChannelSidebar(l),
                 !1
             );
@@ -72,15 +74,15 @@ function I(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        b.A.getMessages(e).hasMoreAfter && (r.A.jumpToPresent(e, O.EMb), (t = !0)),
+        b.A.getMessages(e).hasMoreAfter && (r.A.jumpToPresent(e, _.EMb), (t = !0)),
         C.Ay.hasUnread(e) &&
             ((0, l.ack)(e, {
-                object: O.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,
-                objectType: O.AnalyticsObjectTypes.ACK_MANUAL,
+                object: _.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,
+                objectType: _.AnalyticsObjectTypes.ACK_MANUAL,
             }),
             (t = !0)),
         (0, l.fb)(e),
         t
     );
 }
-let R = _();
+let R = x();

@@ -1,79 +1,98 @@
-n.d(t, { A: () => f });
-var i = n(627968),
-    l = n(17928),
-    a = n(939249),
-    s = n(367513),
-    r = n(313961),
-    o = n(267102),
-    c = n(699707),
-    d = n(461782),
-    u = n(734057),
+n.d(t, { A: () => C });
+var i = n(477900),
+    l = n(582128),
+    a = n(17928),
+    s = n(939249),
+    r = n(367513),
+    o = n(313961),
+    c = n(267102),
+    d = n(699707),
+    u = n(461782),
+    h = n(734057),
     p = n(309010),
-    h = n(920639),
-    m = n(889426),
-    A = n(652215),
-    x = n(496978);
-let f = function (e) {
-    let { channelId: t, popoutType: n, width: f, height: g } = e,
-        C = (0, o.Us)(),
-        y = (0, l.bG)([r.A], () => r.A.getSelectedParticipant(t)),
-        j = (0, l.bG)([u.A], () => u.A.getChannel(t)),
-        v = (0, l.bG)([p.Ay], () => null != j && p.Ay.getVoiceChannelId() === j.id),
+    m = n(625494),
+    A = n(920639),
+    f = n(889426),
+    x = n(652215),
+    g = n(804362);
+let C = function (e) {
+    let { channelId: t, popoutType: n, width: C, height: y } = e,
+        j = (0, c.Us)(),
+        v = (0, a.bG)([o.A], () => o.A.getSelectedParticipant(t)),
+        E = (0, a.bG)([h.A], () => h.A.getChannel(t)),
+        N = (0, a.bG)([p.Ay], () => null != E && p.Ay.getVoiceChannelId() === E.id),
         {
-            participants: E,
-            layout: N,
-            participantsOpen: I,
-        } = (0, l.cf)([r.A], () => {
-            let e = null != j ? r.A.getLayout(j.id, C) : A.DUB.NORMAL;
+            participants: I,
+            layout: b,
+            participantsOpen: T,
+        } = (0, a.cf)([o.A], () => {
+            let e = null != E ? o.A.getLayout(E.id, j) : x.DUB.NORMAL;
             return {
-                participants: r.A.getParticipants(t),
-                layout: C === A.BRT.POPOUT && e !== A.DUB.FULL_SCREEN ? A.DUB.NO_CHAT : e,
-                participantsOpen: r.A.getParticipantsOpen(t),
+                participants: o.A.getParticipants(t),
+                layout: j === x.BRT.POPOUT && e !== x.DUB.FULL_SCREEN ? x.DUB.NO_CHAT : e,
+                participantsOpen: o.A.getParticipantsOpen(t),
             };
         }),
-        T = (0, l.yK)([r.A], () => [...r.A.getStreamParticipants(t), ...r.A.getVideoParticipants(t)]);
-    if (null == y || null == j) return null;
-    function _(e, n) {
-        null != j &&
+        _ = (0, a.yK)([o.A], () => [...o.A.getStreamParticipants(t), ...o.A.getVideoParticipants(t)]);
+    if (
+        ((0, l.useEffect)(() => {
+            if (null != v && null != E)
+                return (
+                    m._.subscribe(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE, e),
+                    () => {
+                        m._.unsubscribe(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE, e);
+                    }
+                );
+            function e() {
+                null != E &&
+                    (r.A.selectParticipant(E.id, null),
+                    (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
+            }
+        }, [v, E, t]),
+        null == v || null == E)
+    )
+        return null;
+    function R(e, n) {
+        null != E &&
             (n.preventDefault(),
             n.stopPropagation(),
-            y?.id === e.id
-                ? (s.A.selectParticipant(j.id, null),
-                  (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t }))
-                : s.A.selectParticipant(j.id, e.id));
+            v?.id === e.id
+                ? (r.A.selectParticipant(E.id, null),
+                  (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }))
+                : r.A.selectParticipant(E.id, e.id));
     }
-    return (0, i.jsx)(a.D, {
-        style: { width: f, height: g },
-        className: x.L,
+    return (0, i.jsx)(s.D, {
+        style: { width: C, height: y },
+        className: g.L,
         onClick: function () {
-            null != j &&
-                (s.A.selectParticipant(j.id, null),
-                (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
+            null != E &&
+                (r.A.selectParticipant(E.id, null),
+                (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
         },
-        children: (0, i.jsx)(d.Ay, {
+        children: (0, i.jsx)(u.Ay, {
             timeout: 2e3,
             children: (e) =>
-                (0, i.jsx)(c.A, {
-                    onSelectParticipant: _,
-                    selectedParticipant: y,
+                (0, i.jsx)(d.A, {
+                    onSelectParticipant: R,
+                    selectedParticipant: v,
                     popoutType: n,
-                    channel: j,
-                    width: f,
-                    height: g,
-                    inCall: v,
-                    participants: E,
-                    layout: N,
-                    filteredParticipants: T,
+                    channel: E,
+                    width: C,
+                    height: y,
+                    inCall: N,
+                    participants: I,
+                    layout: b,
+                    filteredParticipants: _,
                     idle: e.idle,
-                    showParticipants: I,
+                    showParticipants: T,
                     onContextMenuParticipant: (e, n, i, l) =>
-                        (0, m.A)({
+                        (0, f.A)({
                             participant: e,
                             event: n,
                             minimalContextMenu: i,
                             entrypoint: l,
                             channelId: t,
-                            appContext: C,
+                            appContext: j,
                             location: "GuildRoomVideoOverlay",
                         }),
                 }),
