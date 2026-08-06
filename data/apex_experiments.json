@@ -6039,6 +6039,22 @@
     }
   },
   {
+    "name": "2026-08-hide-gift-shop-upsell",
+    "kind": "user",
+    "defaultConfig": {
+      "isHidden": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isHidden": true
+      }
+    }
+  },
+  {
     "name": "2026-08-kestrel-ga",
     "kind": "user",
     "defaultConfig": {
