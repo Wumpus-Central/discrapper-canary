@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var i = n(435558),
     r = n(17928),
     a = n(873298),
@@ -9,47 +9,52 @@ var i = n(435558),
     d = n(349828),
     c = n(652215);
 let u = {},
-    _ = !1,
+    _ = 0,
     E = !1,
-    A = !1;
-function h() {
+    A = !1,
+    h = !1;
+function I() {
     let e = l.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
-        r = e?.favoriteChannels;
-    if (null != r)
-        for (let e in r) {
-            let t = r[e];
-            n[e] = {
-                id: e,
-                nickname: "" !== t.nickname ? t.nickname : null,
-                type: t.type,
-                channelType: t.channelType?.value,
-                order: t.position,
-                parentId: t.parentId !== d.O8 ? t.parentId : null,
-            };
+        r = 0,
+        s = e?.favoriteChannels;
+    if (null != s)
+        for (let e in s) {
+            let t = s[e];
+            t.type !== a.Ip.CATEGORY && r++,
+                (n[e] = {
+                    id: e,
+                    nickname: "" !== t.nickname ? t.nickname : null,
+                    type: t.type,
+                    channelType: t.channelType?.value,
+                    order: t.position,
+                    parentId: t.parentId !== d.O8 ? t.parentId : null,
+                });
         }
-    let a = e?.guildVisible?.value,
-        s = a ?? !(0, i.isEmpty)(n),
-        o = !1 === a;
-    return !(_ === t && E === s && A === o && (0, i.isEqual)(u, n)) && ((_ = t), (E = s), (A = o), (u = n), !0);
+    let o = e?.guildVisible?.value,
+        c = o ?? !(0, i.isEmpty)(n),
+        I = !1 === o;
+    return (
+        !(E === t && A === c && h === I && (0, i.isEqual)(u, n)) && ((E = t), (A = c), (h = I), (u = n), (_ = r), !0)
+    );
 }
-class I extends r.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(l.A), h(), this.syncWith([l.A], h);
+        this.waitFor(l.A), I(), this.syncWith([l.A], I);
     }
     getFavoriteChannels() {
         return u;
     }
     get favoriteGuildMuted() {
-        return _;
-    }
-    get favoriteGuildEnabled() {
         return E;
     }
-    get favoriteGuildExplicitlyHidden() {
+    get favoriteGuildEnabled() {
         return A;
+    }
+    get favoriteGuildExplicitlyHidden() {
+        return h;
     }
     isFavorite(e) {
         return null != e && null != u[e];
@@ -83,8 +88,11 @@ class I extends r.Ay.Store {
     getFavoritesCount() {
         return Object.keys(this.getFavoriteChannels()).length;
     }
+    getFavoritesCountAgainstLimit() {
+        return _;
+    }
     hasStoredFavorites() {
         return !(0, i.isEmpty)(this.getFavoriteChannels());
     }
 }
-let f = new I(s.h, {});
+let p = new f(s.h, {});

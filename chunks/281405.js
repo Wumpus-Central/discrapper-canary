@@ -1,7 +1,8 @@
 "use strict";
-n.d(t, { n: () => r });
+n.d(t, { n: () => a, r: () => s });
 var i,
-    r =
+    r,
+    a =
         (((i = {}).GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar"),
         (i.GUILD_SCHEDULED_EVENTS = "guild-scheduled-events"),
         (i.GUILD_HUB_HEADER_OPTIONS = "guild-hub-header-options"),
@@ -22,4 +23,13 @@ var i,
         (i.GAME_SERVERS = "game-servers"),
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-        i);
+        i),
+    s =
+        (((r = {}).SPACER = "spacer"),
+        (r.GUILD_PROGRESS = "guild-progress"),
+        (r.MFA_WARNING = "mfa-warning"),
+        (r.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
+        (r.GAME_CLAIM = "game-claim"),
+        (r.APPLICATION_ACCOUNT_LINK = "application-account-link"),
+        (r.FAVORITES_UPSELL = "favorites-upsell"),
+        r);
