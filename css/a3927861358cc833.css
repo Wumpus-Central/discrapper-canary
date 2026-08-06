@@ -171,10 +171,10 @@
 
 .cardTitle_c19a92 {
     font-family: var(--font-display-marketing-header) !important;
-    font-size: 1.75rem !important;
+    font-size: 28px !important;
     font-style: italic;
     font-weight: 900;
-    line-height: 1.8125rem;
+    line-height: 29px;
     margin: 0;
     text-transform: uppercase
 }
