@@ -12,7 +12,7 @@ var i = n(827343),
 n(17928);
 var _ = n(558076),
     E = n(360729),
-    A = n(4264);
+    A = n(189998);
 let h = { x: 50, y: 50 };
 class I extends r.A {
     actions = {

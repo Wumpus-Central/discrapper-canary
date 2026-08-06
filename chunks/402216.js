@@ -13,22 +13,17 @@ var a = n(503698),
 let _ = { LARGE: c.Kp, SMALL: c.qx },
     E = { [o.EG.ROUND]: c.qG, [o.EG.ROUND_LEFT]: c.HZ, [o.EG.ROUND_RIGHT]: c.q5, [o.EG.SQUARE]: "" };
 function A(e) {
-    let { className: t, style: n, shape: i = o.EG.ROUND, look: a = "RED", size: u = _.LARGE } = e;
+    let { className: t, style: n, shape: i = o.EG.ROUND, look: a = "RED", size: u = _.LARGE, count: A } = e,
+        h = null != A && A > 1 ? d.intl.format(d.t.hOnBrr, { count: A }) : d.intl.string(d.t.dI3q4h);
     return "RED" === a
         ? (0, r.jsx)(o.Lp, {
-              text: d.intl.string(d.t.dI3q4h),
+              text: h,
               className: s()(t, c.VD, u),
               color: l.A.unsafe_rawColors.RED_400.css,
               shape: E[i],
               style: n,
           })
-        : (0, r.jsx)(o.Lp, {
-              text: d.intl.string(d.t.dI3q4h),
-              className: s()(t, c.VD, u, c.Oh),
-              disableColor: !0,
-              shape: E[i],
-              style: n,
-          });
+        : (0, r.jsx)(o.Lp, { text: h, className: s()(t, c.VD, u, c.Oh), disableColor: !0, shape: E[i], style: n });
 }
 (A.Looks = u), (A.Sizes = _);
 let h = A;

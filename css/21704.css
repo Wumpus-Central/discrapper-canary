@@ -1,0 +1,322 @@
+.container__52fde {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(.8)
+}
+
+.full-motion .container__52fde {
+    transition: transform .3s ease-in-out
+}
+
+.container__52fde:hover {
+    transform: translate(-50%, -50%) scale(1)
+}
+
+.note__52fde {
+    filter: drop-shadow(0 4px 4px var(--opacity-black-60))
+}
+
+.popover__52fde {
+    flex-direction: column;
+    text-align: start
+}
+
+.header__52fde,
+.popover__52fde {
+    display: flex;
+    gap: var(--space-sm)
+}
+
+.header__52fde {
+    justify-content: space-between;
+    width: 100%
+}
+
+.header__52fde,
+.user__52fde {
+    align-items: center
+}
+
+.user__52fde {
+    display: flex;
+    gap: var(--space-xs)
+}
+
+.icon__52fde {
+    color: var(--interactive-icon-default);
+    cursor: pointer
+}
+
+.icon__52fde:hover {
+    color: var(--interactive-icon-hover)
+}
+
+.icon__52fde:active {
+    color: var(--interactive-icon-active)
+}
+
+.content__52fde {
+    word-wrap: break-word
+}
+
+.container__50d91 {
+    background-color: var(--background-base-low);
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    display: flex;
+    flex-direction: column;
+    width: 250px
+}
+
+.container__50d91,
+.inputContainer__50d91 {
+    border-radius: var(--radius-md)
+}
+
+.inputContainer__50d91 {
+    border: none
+}
+
+.clickable__50d91 {
+    cursor: pointer
+}
+
+.container__3d96b {
+    inset: 0;
+    position: absolute
+}
+
+html:not(.keyboard-mode) .container__3d96b {
+    cursor: none
+}
+
+.cursor__3d96b {
+    pointer-events: none;
+    position: absolute
+}
+
+.keyboardCursor__3d96b {
+    display: flex;
+    outline: none;
+    position: absolute;
+    transform: translate(-50%, -50%)
+}
+
+.radial_ded7b4 {
+    height: 0;
+    outline: none;
+    position: relative;
+    width: 0
+}
+
+.radialClosed_ded7b4 {
+    pointer-events: none
+}
+
+.itemWrapper_ded7b4 {
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    position: absolute
+}
+
+.item_ded7b4 {
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border-radius: var(--radius-sm);
+    opacity: var(--custom-radial-opacity, 1)
+}
+
+.full-motion .item_ded7b4 {
+    transition: transform .24s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.full-motion .item_ded7b4:focus-visible,
+.full-motion .item_ded7b4:hover {
+    transform: scale(1.08)
+}
+
+.full-motion .item_ded7b4:active {
+    transform: scale(.985)
+}
+
+.belowLayer_ded7b4 {
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    position: absolute;
+    z-index: -1
+}
+
+.plant_b29b5a {
+    position: absolute;
+    width: 6.25%
+}
+
+.plantInteractive_b29b5a {
+    cursor: pointer
+}
+
+.plantInteractive_b29b5a:not(.disabled_b29b5a):hover .backdrop_b29b5a,
+.plantInteractive_b29b5a:not(.disabled_b29b5a):hover .plantImage_b29b5a {
+    filter: brightness(110%)
+}
+
+.plantInteractive_b29b5a.disabled_b29b5a {
+    cursor: default;
+    pointer-events: none
+}
+
+.plantImage_b29b5a {
+    position: relative;
+    z-index: 1
+}
+
+.backdrop_b29b5a,
+.plantImage_b29b5a {
+    display: block;
+    width: 100%
+}
+
+.backdrop_b29b5a {
+    bottom: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.screen__9677b {
+    position: absolute
+}
+
+.screenSkew__9677b {
+    transform: matrix(.949589, .301343, -.0279882, 1.00341, 0, 0)
+}
+
+.sheen__9677b {
+    inset: -8%;
+    pointer-events: none;
+    position: absolute
+}
+
+.action_cba7a7 {
+    cursor: pointer;
+    inset: 0;
+    position: absolute
+}
+
+.contentAnchor_cba7a7 {
+    position: absolute;
+    transform: translate(-50%, -50%)
+}
+
+.icon_cba7a7 {
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, .6));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease-out
+}
+
+.action_cba7a7:focus-visible .icon_cba7a7,
+.action_cba7a7:hover .icon_cba7a7 {
+    opacity: .7
+}
+
+.glow_cba7a7 {
+    inset: -8%;
+    opacity: 40%;
+    position: absolute;
+    transition: filter .15s ease-out
+}
+
+.action_cba7a7:focus-visible .glow_cba7a7,
+.action_cba7a7:hover .glow_cba7a7 {
+    filter: brightness(130%)
+}
+
+.preview_ca5185 {
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    position: absolute;
+    transform-origin: 0 0;
+    width: 100%
+}
+
+.previewImage_ca5185 {
+    filter: brightness(.6);
+    height: 100%;
+    transition: filter .15s ease-out;
+    width: 100%
+}
+
+.preview_ca5185:focus-visible .previewImage_ca5185,
+.preview_ca5185:hover .previewImage_ca5185 {
+    filter: brightness(1)
+}
+
+.watchButtonWrapper_ca5185 {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-sm);
+    inset-inline-start: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%
+}
+
+.preview_ca5185:focus-visible .watchButtonWrapper_ca5185 button,
+.preview_ca5185:hover .watchButtonWrapper_ca5185 button {
+    background-color: var(--control-overlay-secondary-background-hover);
+    border-color: var(--control-overlay-secondary-border-hover);
+    color: var(--control-overlay-secondary-text-hover)
+}
+
+.liveIndicator_ca5185 {
+    inset-inline-end: 5%;
+    pointer-events: none;
+    position: absolute;
+    top: 5%;
+    transform-origin: top right
+}
+
+.tooltipContent_ca5185 {
+    box-sizing: border-box;
+    max-width: 272px
+}
+
+.tooltipTextColumn_ca5185 {
+    flex: 1 1 0%;
+    min-width: 0
+}
+
+.seat__80369 {
+    border-radius: var(--radius-round);
+    cursor: pointer;
+    position: absolute
+}
+
+.graphic__80369 {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.seat__80369:focus-visible .glow__80369,
+.seat__80369:hover .glow__80369 {
+    filter: none;
+    opacity: 1
+}
+
+.seat__80369:focus-visible .fill__80369,
+.seat__80369:hover .fill__80369 {
+    r: 40px;
+    fill: var(--background-mod-subtle)
+}
+
+.seat__80369:focus-visible .graphic__80369,
+.seat__80369:hover .graphic__80369 {
+    border: 2px solid #fff;
+    border-radius: var(--radius-round)
+}
