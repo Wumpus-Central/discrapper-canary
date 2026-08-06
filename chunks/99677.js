@@ -37,5 +37,3 @@ function a(e) {
         ],
     });
 }
-sName: d;
-})]})}
