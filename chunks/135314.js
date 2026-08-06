@@ -1,4 +1,4 @@
-n.d(t, { O7: () => R, Ay: () => j, gS: () => M });
+n.d(t, { O7: () => N, Ay: () => j, gS: () => R });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -12,32 +12,31 @@ var l = n(477900),
     m = n(663803),
     C = n(316915),
     h = n(951305),
-    E = n(773669),
-    f = n(97352),
-    A = n(45938),
-    S = n(252424),
-    y = n(428262),
+    f = n(773669),
+    E = n(97352),
+    S = n(45938),
+    A = n(252424),
+    y = n(158045),
     P = n(580630),
-    I = n(960851),
-    _ = n(986883);
-let T = (0, n(945810).mj)({
+    I = n(960851);
+let g = (0, n(945810).mj)({
     name: "2026-06-bulk-nitro-gifting",
     kind: "user",
     defaultConfig: !1,
     variations: { 0: !1, 1: !0 },
 });
-var g = n(186223),
-    v = n(202541),
-    x = n(375708),
-    N = n(877385);
-function R(e, t) {
-    let n = e.interval === v.WT.YEAR ? x.t.ECT4A5 : x.t.v9QeON;
-    return x.intl.format(n, { price: (0, P.$g)(t.amount, t.currency) });
+var v = n(186223),
+    _ = n(202541),
+    T = n(375708),
+    x = n(877385);
+function N(e, t) {
+    let n = e.interval === _.WT.YEAR ? T.t.ECT4A5 : T.t.v9QeON;
+    return T.intl.format(n, { price: (0, P.$g)(t.amount, t.currency) });
 }
 function b(e) {
     return { type: "badge", textBadgeVariant: "eyebrow", text: e };
 }
-function M(e, t, n) {
+function R(e, t, n) {
     let {
             userLocale: l,
             isEligibleForBOGOPromotion: i,
@@ -46,30 +45,23 @@ function M(e, t, n) {
             planId: s,
             savingsPercent: o,
             priceOptions: u,
-            annualPlanCheckoutCopyTreatment: c,
-            isEligibleForTrial: d,
+            isEligibleForTrial: c,
         } = n,
-        p = null != e && (e.planId === s || (null != t && e.planId === t.id));
-    if (i) return a || s !== v.gD.PREMIUM_MONTH_TIER_2 ? null : b(x.intl.string(x.t.iQTfWx));
-    if (null != t && (t.interval !== v.WT.YEAR || null == e) && !(r && !p)) return null;
+        d = null != e && (e.planId === s || (null != t && e.planId === t.id));
+    if (i) return a || s !== _.gD.PREMIUM_MONTH_TIER_2 ? null : b(T.intl.string(T.t.iQTfWx));
+    if (null != t && (t.interval !== _.WT.YEAR || null == e) && !(r && !d)) return null;
     if (
         null != t &&
-        !p &&
-        (0, g.is)({
-            treatment: c,
-            targetSubscriptionPlan: t,
-            isGift: a,
-            shouldShowSavingsPercent: r,
-            isEligibleForTrial: d ?? !1,
-        })
+        !d &&
+        (0, v.sR)({ targetSubscriptionPlan: t, isGift: a, shouldShowSavingsPercent: r, isEligibleForTrial: c ?? !1 })
     ) {
-        let e = (0, g.ou)(c, t, a, u);
+        let e = (0, v.vK)(t, a, u);
         return null != e ? b(e) : null;
     }
-    return null != t && t.interval === v.WT.YEAR && null != e
-        ? x.intl.string(x.t["122kWB"])
-        : r && !p && null != o
-          ? b(x.intl.format(x.t.IAybsG, { discount: (0, S.l9)(l, o / 100) }))
+    return null != t && t.interval === _.WT.YEAR && null != e
+        ? T.intl.string(T.t["122kWB"])
+        : r && !d && null != o
+          ? b(T.intl.format(T.t.IAybsG, { discount: (0, A.l9)(l, o / 100) }))
           : null;
 }
 function j(e) {
@@ -78,20 +70,20 @@ function j(e) {
             planId: n,
             selected: r,
             priceOptions: s,
-            isPrepaid: S,
-            shouldShowTrialOrDiscountLayout: g,
+            isPrepaid: A,
+            shouldShowTrialOrDiscountLayout: v,
             isEligibleForDiscount: b,
             isEligibleForTrial: j,
-            isCurrentPlan: O,
-            disabled: L,
+            isCurrentPlan: M,
+            disabled: O,
         } = e,
-        w = (0, u.bG)([E.default], () => E.default.locale),
+        L = (0, u.bG)([f.default], () => f.default.locale),
         {
-            discountInfo: k,
-            setSelectedPlanId: U,
-            isGift: D,
-            quantity: G,
-            setQuantity: F,
+            discountInfo: w,
+            setSelectedPlanId: k,
+            isGift: U,
+            quantity: D,
+            setQuantity: G,
         } = (0, C.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
@@ -99,132 +91,130 @@ function j(e) {
             quantity: e.quantity,
             setQuantity: e.setQuantity,
         })),
-        { giftRecipient: H } = (0, h.Pv)(),
-        B = D && (0, A.Ik)(H),
-        { discountOffer: Y, discountAmountOff: W, applicablePlan: V } = k,
-        K = (0, u.bG)([f.A], () => f.A.get(n));
-    o()(null != K, "Missing subscriptionPlan");
-    let Z = (0, y.m6)(K.id),
-        q = (0, I.cg)(),
-        z = (0, _.DQ)({ location: "PremiumSwitchPlanSelectOption" }),
-        Q =
+        { giftRecipient: F } = (0, h.Pv)(),
+        H = U && (0, S.Ik)(F),
+        { discountOffer: B, discountAmountOff: Y, applicablePlan: W } = w,
+        V = (0, u.bG)([E.A], () => E.A.get(n));
+    o()(null != V, "Missing subscriptionPlan");
+    let K = (0, y.m6)(V.id),
+        Z = (0, I.cg)(),
+        q =
             (function (e) {
                 let { location: t } = e;
-                return T.useConfig({ location: t });
-            })({ location: "PremiumSwitchPlanSelectOption" }) && Z === v.PremiumTypes.TIER_2,
-        $ = (0, y.L_)({ planId: n, isGift: D, priceOptions: s, subscriptionPlan: K }),
-        J = (0, y.y8)(n, !1, D, s),
-        X = null != $ && !g,
-        ee = i.useCallback(() => {
-            let e = M(t, K, {
-                userLocale: w,
-                isEligibleForBOGOPromotion: q,
-                shouldShowSavingsPercent: X,
-                isGift: D,
+                return g.useConfig({ location: t });
+            })({ location: "PremiumSwitchPlanSelectOption" }) && K === _.PremiumTypes.TIER_2,
+        z = (0, y.L_)({ planId: n, isGift: U, priceOptions: s, subscriptionPlan: V }),
+        $ = (0, y.y8)(n, !1, U, s),
+        Q = null != z && !v,
+        J = i.useCallback(() => {
+            let e = R(t, V, {
+                userLocale: L,
+                isEligibleForBOGOPromotion: Z,
+                shouldShowSavingsPercent: Q,
+                isGift: U,
                 planId: n,
-                savingsPercent: $,
+                savingsPercent: z,
                 priceOptions: s,
-                annualPlanCheckoutCopyTreatment: z,
                 isEligibleForTrial: j,
             });
             return "string" == typeof e
-                ? (0, l.jsxs)("span", { className: N.IS, children: ["(", e, ")"] })
+                ? (0, l.jsxs)("span", { className: x.IS, children: ["(", e, ")"] })
                 : null != e
                   ? (e.type,
                     (0, l.jsx)(c.E, {
                         tag: "span",
                         variant: e.textBadgeVariant,
                         color: "text-overlay-light",
-                        className: N.kP,
+                        className: x.kP,
                         children: e.text,
                     }))
                   : null;
-        }, [w, q, K, t, X, D, n, $, s, z, j]),
-        et = i.useMemo(
-            () => (0, y.D8)(K.interval, D, S, K.intervalCount, B, Z),
-            [K.interval, K.intervalCount, D, S, B, Z],
+        }, [L, Z, V, t, Q, U, n, z, s, j]),
+        X = i.useMemo(
+            () => (0, y.D8)(V.interval, U, A, V.intervalCount, H, K),
+            [V.interval, V.intervalCount, U, A, H, K],
         ),
-        en = null != V && n === V;
-    function el() {
-        L || r || U(n);
+        ee = null != W && n === W;
+    function et() {
+        O || r || k(n);
     }
-    let ei = g
-        ? x.intl.format(x.t.hXcaLT, {
+    let en = v
+        ? T.intl.format(T.t.hXcaLT, {
               price:
-                  b && null != W && en
-                      ? (0, P.$g)(J.amount - W, J.currency)
+                  b && null != Y && ee
+                      ? (0, P.$g)($.amount - Y, $.currency)
                       : j
-                        ? (0, P.$g)(0, J.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                        : (0, P.$g)(J.amount, J.currency),
+                        ? (0, P.$g)(0, $.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                        : (0, P.$g)($.amount, $.currency),
           })
-        : (0, P.$g)(J.amount, J.currency);
+        : (0, P.$g)($.amount, $.currency);
     return (0, l.jsxs)(d.D, {
         role: "radio",
         "aria-checked": r,
         tabIndex: r ? 0 : -1,
         focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
-        onClick: el,
-        className: a()(N.G_, { [N.vW]: B && r, [N.Gb]: B }),
+        onClick: et,
+        className: a()(x.G_, { [x.vW]: H && r, [x.Gb]: H }),
         children: [
             (0, l.jsxs)("div", {
-                className: a()(N.XM, { [N.PA]: L }),
+                className: a()(x.XM, { [x.PA]: O }),
                 children: [
                     (0, l.jsxs)("div", {
-                        className: N.l,
+                        className: x.l,
                         children: [
-                            !B &&
+                            !H &&
                                 (0, l.jsx)("div", {
-                                    className: N.E2,
+                                    className: x.E2,
                                     children: (0, l.jsx)(p.S, {
                                         checked: r,
                                         value: r,
                                         label: "",
                                         description: "",
-                                        onChange: el,
+                                        onChange: et,
                                     }),
                                 }),
                             (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: a()(N.Gl, { [N.h4]: r || B, [N.ox]: g && (r || B) }),
-                                        children: [et, B && ee()],
+                                        className: a()(x.Gl, { [x.h4]: r || H, [x.ox]: v && (r || H) }),
+                                        children: [X, H && J()],
                                     }),
-                                    B &&
+                                    H &&
                                         (0, l.jsx)("div", {
-                                            className: N._R,
-                                            children: x.intl.format(x.t.ori2Jm, {
-                                                currencyAmount: (0, P.$g)(J.amount, J.currency),
+                                            className: x._R,
+                                            children: T.intl.format(T.t.ori2Jm, {
+                                                currencyAmount: (0, P.$g)($.amount, $.currency),
                                             }),
                                         }),
                                 ],
                             }),
-                            O &&
+                            M &&
                                 (0, l.jsxs)("span", {
-                                    className: N.bq,
-                                    children: ["(", x.intl.string(x.t.ymSxhy), ")"],
+                                    className: x.bq,
+                                    children: ["(", T.intl.string(T.t.ymSxhy), ")"],
                                 }),
-                            !B && ee(),
+                            !H && J(),
                         ],
                     }),
-                    g
-                        ? (0, l.jsx)("div", { className: a()({ [N.kb]: r }), children: ei })
-                        : (0, l.jsx)("div", { className: a()({ [N.h4]: r || B }), children: ei }),
+                    v
+                        ? (0, l.jsx)("div", { className: a()({ [x.kb]: r }), children: en })
+                        : (0, l.jsx)("div", { className: a()({ [x.h4]: r || H }), children: en }),
                 ],
             }),
-            B &&
+            H &&
                 r &&
-                Q &&
+                q &&
                 (0, l.jsx)("div", {
-                    className: N.ci,
-                    children: (0, l.jsx)(m.l, { value: G, onChange: F, minValue: C.y0, maxValue: 50 }),
+                    className: x.ci,
+                    children: (0, l.jsx)(m.l, { value: D, onChange: G, minValue: C.y0, maxValue: 50 }),
                 }),
-            g &&
+            v &&
                 (0, l.jsx)("div", {
-                    className: N.hB,
+                    className: x.hB,
                     children: (0, l.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: r ? "text-default" : "interactive-text-default",
-                        className: a()(N.Ub, { [N.sw]: b || j }),
+                        className: a()(x.Ub, { [x.sw]: b || j }),
                         children: (function (e, t) {
                             let {
                                 price: n,
@@ -236,29 +226,29 @@ function j(e) {
                                 savingsPercent: o,
                             } = t;
                             return l && null != r && s
-                                ? e.interval === v.WT.YEAR
-                                    ? x.intl.format(x.t["EQmTl+"], {
-                                          numYears: a?.discount.userUsageLimit ?? v.OJ,
+                                ? e.interval === _.WT.YEAR
+                                    ? T.intl.format(T.t["EQmTl+"], {
+                                          numYears: a?.discount.userUsageLimit ?? _.OJ,
                                           regularPrice: (0, P.$g)(n.amount, n.currency),
                                       })
-                                    : x.intl.format(x.t["VeE/4E"], {
-                                          numMonths: a?.discount.userUsageLimit ?? v.OJ,
+                                    : T.intl.format(T.t["VeE/4E"], {
+                                          numMonths: a?.discount.userUsageLimit ?? _.OJ,
                                           discountedPrice: (0, P.$g)(n.amount - r, n.currency),
                                           regularPrice: (0, P.$g)(n.amount, n.currency),
                                       })
                                 : i
-                                  ? R(e, n)
-                                  : e.interval === v.WT.YEAR
-                                    ? x.intl.formatToPlainString(x.t.rtLTJP, { percent: o ?? "" })
+                                  ? N(e, n)
+                                  : e.interval === _.WT.YEAR
+                                    ? T.intl.formatToPlainString(T.t.rtLTJP, { percent: o ?? "" })
                                     : null;
-                        })(K, {
-                            price: J,
+                        })(V, {
+                            price: $,
                             isEligibleForDiscount: b,
                             isEligibleForTrial: j,
-                            discountAmountOff: W,
-                            discountOffer: Y,
-                            isDiscountApplicableToPlan: en,
-                            savingsPercent: $,
+                            discountAmountOff: Y,
+                            discountOffer: B,
+                            isDiscountApplicableToPlan: ee,
+                            savingsPercent: z,
                         }),
                     }),
                 }),

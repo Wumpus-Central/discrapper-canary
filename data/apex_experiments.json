@@ -4044,21 +4044,6 @@
     }
   },
   {
-    "name": "2026-06-annual-plan-checkout-copy",
-    "kind": "user",
-    "defaultConfig": 0,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": 1,
-      "2": 2,
-      "3": 3,
-      "4": 4
-    }
-  },
-  {
     "name": "2026-06-av1-encode-linux",
     "kind": "user",
     "defaultConfig": {

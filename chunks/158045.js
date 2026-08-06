@@ -20,7 +20,7 @@ n.d(t, {
     VA: () => tF,
     Dd: () => ez,
     kX: () => e9,
-    To: () => tW,
+    To: () => tj,
     _e: () => e8,
     l6: () => eU,
     y8: () => eG,
@@ -30,8 +30,8 @@ n.d(t, {
     Zb: () => e5,
     Pr: () => ew,
     nK: () => tP,
-    Tm: () => eQ,
     mv: () => tL,
+    Tm: () => eQ,
     J$: () => tn,
     Pg: () => tm,
     D8: () => eH,
@@ -51,14 +51,13 @@ n.d(t, {
     Of: () => tf,
     tW: () => tI,
     mH: () => tb,
-    XN: () => tj,
-    Ay: () => tY,
+    XN: () => tH,
+    Ay: () => tW,
     EL: () => eM,
     bx: () => e0,
     Zw: () => eK,
     Om: () => tS,
     GX: () => tg,
-    qi: () => tH,
     JM: () => eP,
     UC: () => eF,
     e1: () => tU,
@@ -1383,24 +1382,13 @@ function tH(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (e.interval !== N.WT.YEAR) return null;
-    let i = tx({ subscriptionPlan: e, isGift: t, priceOptions: n });
-    if (null == i || 0 === i.amount) return null;
-    let r = tB(e, t, n);
-    if (null == r) return null;
-    let a = Math.floor((r.amount / i.amount) * 2) / 2;
-    return a <= 0 ? null : a;
-}
-function tj(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if (e.interval !== N.WT.YEAR) return null;
     let i = eG(e.id, !1, t, n);
     return 0 === i.amount ? null : { amount: Math.round(i.amount / 12), currency: i.currency };
 }
-function tW(e) {
+function tj(e) {
     return null == e ? 0 : Math.max((0, em.m_)(new Date(), new Date(e)), 0);
 }
-let tY = Object.freeze({
+let tW = Object.freeze({
     isNewUser: tL,
     isPremiumAtLeast: a.CC,
     isPremium: a.ki,
@@ -1621,9 +1609,8 @@ let tY = Object.freeze({
     castPremiumSubscriptionAsSkuId: tb,
     calculateDiscountPercentageForYearlyPlan: tV,
     calculateYearlyPlanDollarSavingsAmount: tB,
-    calculateYearlyPlanMonthsSaved: tH,
-    calculateYearlyPlanMonthlyRateAmount: tj,
-    getDaysSincePremium: tW,
+    calculateYearlyPlanMonthlyRateAmount: tH,
+    getDaysSincePremium: tj,
     getDaysRemainingUntilSubscriptionCurrentPeriodEnds: function (e) {
         return Math.max(1, Math.ceil((0, em.c_)(new Date(e.currentPeriodEnd), new Date())));
     },
