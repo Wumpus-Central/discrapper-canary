@@ -1,107 +1,108 @@
-a.d(l, { A: () => U, N: () => I });
-var t = a(477900),
-    s = a(582128),
-    i = a(503698),
-    n = a.n(i),
-    r = a(750943),
-    c = a(691540),
-    u = a(857250),
-    d = a(97483),
-    m = a(259678),
-    o = a(289873),
-    h = a(946274),
-    x = a(38405),
-    N = a(958805),
-    j = a(652215);
-function p(e, l) {
-    let a = window.GLOBAL_ENV.CDN_HOST ?? j.f34;
-    return `https://${a}/widget-assets/${e}/${l}`;
+"use strict";
+n.d(t, { A: () => N, N: () => m });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(750943),
+    o = n(691540),
+    d = n(857250),
+    c = n(97483),
+    u = n(259678),
+    _ = n(289873),
+    E = n(946274),
+    A = n(38405),
+    h = n(958805),
+    I = n(652215);
+function f(e, t) {
+    let n = window.GLOBAL_ENV.CDN_HOST ?? I.f34;
+    return `https://${n}/widget-assets/${e}/${t}`;
 }
-var f = a(375708),
-    g = a(902391);
-function I(e) {
-    let { className: l, userId: a, image: s } = e;
-    if ("localDataUri" in s)
-        return (0, t.jsx)("div", {
-            className: l,
-            children: (0, t.jsx)("img", { className: g.Sl, alt: "", src: s.localDataUri }),
+var p = n(375708),
+    T = n(902391);
+function m(e) {
+    let { className: t, userId: n, image: r } = e;
+    if ("localDataUri" in r)
+        return (0, i.jsx)("div", {
+            className: t,
+            children: (0, i.jsx)("img", { className: T.Sl, alt: "", src: r.localDataUri }),
         });
-    let i = p(a, s.fileId);
-    return (0, t.jsx)("div", {
-        className: l,
-        children: (0, t.jsx)("img", { className: g.Sl, alt: "", src: i, width: s.width, height: s.height }),
+    let a = f(n, r.fileId);
+    return (0, i.jsx)("div", {
+        className: t,
+        children: (0, i.jsx)("img", { className: T.Sl, alt: "", src: a, width: r.width, height: r.height }),
     });
 }
-function v(e) {
-    let { canEdit: l } = e;
-    return (0, t.jsx)("div", {
-        className: g.qf,
-        children: l ? (0, t.jsx)(r.X, { className: g.Dm, size: "md" }) : null,
+function g(e) {
+    let { canEdit: t } = e;
+    return (0, i.jsx)("div", {
+        className: T.qf,
+        children: t ? (0, i.jsx)(l.X, { className: T.Dm, size: "md" }) : null,
     });
 }
-function w(e) {
-    let { className: l, userId: a, image: i, previewUri: r, onImageUploadStarted: j, onImageUploadCompleted: I } = e,
-        w = s.useRef(0),
-        U = s.useCallback(
-            async (e, l) => {
-                w.current = w.current + 1;
-                let a = w.current;
-                j?.(e);
+function S(e) {
+    let { className: t, userId: n, image: a, previewUri: l, onImageUploadStarted: I, onImageUploadCompleted: m } = e,
+        S = r.useRef(0),
+        N = r.useCallback(
+            async (e, t) => {
+                S.current = S.current + 1;
+                let n = S.current;
+                I?.(e);
                 try {
-                    let t = await N.A.uploadWidgetAsset(l);
-                    if (w.current !== a) return;
-                    I({ filename: t, localDataUri: e });
+                    let i = await h.A.uploadWidgetAsset(t);
+                    if (S.current !== n) return;
+                    m({ filename: i, localDataUri: e });
                 } catch (e) {
-                    if (w.current !== a) return;
-                    (0, c.P0)((0, u.o)(f.intl.string(f.t.F4Neqh), d.Ck.FAILURE)), x.A.captureException(e), I(null);
+                    if (S.current !== n) return;
+                    (0, o.P0)((0, d.o)(p.intl.string(p.t.F4Neqh), c.Ck.FAILURE)), A.A.captureException(e), m(null);
                 }
             },
-            [j, I],
+            [I, m],
         ),
-        C = r ?? (null != i ? ("localDataUri" in i ? i.localDataUri : p(a, i.fileId)) : null);
-    return (0, t.jsx)(m.vN, {
+        C = l ?? (null != a ? ("localDataUri" in a ? a.localDataUri : f(n, a.fileId)) : null);
+    return (0, i.jsx)(u.vN, {
         within: !0,
-        children: (0, t.jsxs)("div", {
-            className: n()(g.kL, l),
+        children: (0, i.jsxs)("div", {
+            className: s()(T.kL, t),
             children: [
-                null != C ? (0, t.jsx)("img", { alt: "", src: C, className: g.Sl }) : (0, t.jsx)(v, { canEdit: !0 }),
-                null != r
-                    ? (0, t.jsx)("div", {
-                          className: g.ob,
-                          children: (0, t.jsx)(o.y, { type: o.t.SPINNING_CIRCLE_SIMPLE }),
+                null != C ? (0, i.jsx)("img", { alt: "", src: C, className: T.Sl }) : (0, i.jsx)(g, { canEdit: !0 }),
+                null != l
+                    ? (0, i.jsx)("div", {
+                          className: T.ob,
+                          children: (0, i.jsx)(_.y, { type: _.t.SPINNING_CIRCLE_SIMPLE }),
                       })
                     : null,
-                (0, t.jsx)(h.Ay, {
+                (0, i.jsx)(E.Ay, {
                     tabIndex: 0,
-                    onChange: U,
+                    onChange: N,
                     maxFileSizeBytes: 0xa00000,
                     multiple: !1,
-                    "aria-label": f.intl.string(f.t["MsUY/S"]),
+                    "aria-label": p.intl.string(p.t["MsUY/S"]),
                 }),
             ],
         }),
     });
 }
-function U(e) {
+function N(e) {
     let {
-        className: l,
-        canEdit: a,
-        userId: s,
-        image: i,
-        previewUri: n,
-        onImageUploadStarted: r,
-        onImageUploadCompleted: c,
+        className: t,
+        canEdit: n,
+        userId: r,
+        image: a,
+        previewUri: s,
+        onImageUploadStarted: l,
+        onImageUploadCompleted: o,
     } = e;
-    return a
-        ? (0, t.jsx)(w, {
-              className: l,
-              userId: s,
-              image: i,
-              previewUri: n,
-              onImageUploadStarted: r,
-              onImageUploadCompleted: c,
+    return n
+        ? (0, i.jsx)(S, {
+              className: t,
+              userId: r,
+              image: a,
+              previewUri: s,
+              onImageUploadStarted: l,
+              onImageUploadCompleted: o,
           })
-        : null == i
-          ? (0, t.jsx)("div", { className: l, children: (0, t.jsx)(v, { canEdit: !1 }) })
-          : (0, t.jsx)(I, { className: l, userId: s, image: i });
+        : null == a
+          ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)(g, { canEdit: !1 }) })
+          : (0, i.jsx)(m, { className: t, userId: r, image: a });
 }
