@@ -81,8 +81,8 @@ async function h(e) {
 }
 let s = new n.A("useAnimatedImageCheck");
 function u(e) {
-    let t = "image/gif" === e.type,
-        n = "image/webp" === e.type,
+    let t = e?.type === "image/gif",
+        n = e?.type === "image/webp",
         [i, o] = a.useState(!1),
         [c, u] = a.useState(null),
         f = n && c !== e;
@@ -91,7 +91,7 @@ function u(e) {
         return (
             t
                 ? (r.e("47580").then(r.bind(r, 844183)), o(!1), u(e))
-                : n
+                : n && null != e
                   ? (async function () {
                         try {
                             let t = await e.arrayBuffer(),
