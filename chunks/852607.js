@@ -16,30 +16,30 @@ var d = n(830382),
     m = n(297264),
     C = n(834730),
     h = n(349288),
-    E = n(375708),
-    f = n(811252);
-function A(e) {
+    f = n(375708),
+    E = n(811252);
+function S(e) {
     let { className: t, isEmailResent: n, resendEmail: i } = e;
     return (0, l.jsx)("div", {
         className: t,
         children: (0, l.jsxs)("div", {
-            className: f.a,
+            className: E.a,
             children: [
-                (0, l.jsx)(m.D, { variant: "heading-xl/bold", children: E.intl.string(E.t.Q03WWV) }),
+                (0, l.jsx)(m.D, { variant: "heading-xl/bold", children: f.intl.string(f.t.Q03WWV) }),
                 (0, l.jsxs)("p", {
                     children: [
-                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: E.intl.string(E.t.BxPxhI) }),
+                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: f.intl.string(f.t.BxPxhI) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: E.intl.string(E.t.Y3fdOp) }),
+                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: f.intl.string(f.t.Y3fdOp) }),
                         (0, l.jsx)("br", {}),
                         (0, l.jsxs)(C.E, {
                             variant: "text-md/normal",
                             children: [
-                                E.intl.string(E.t.Paa4v4),
+                                f.intl.string(f.t.Paa4v4),
                                 "\xa0",
                                 n
-                                    ? E.intl.string(E.t.StGVvC)
-                                    : (0, l.jsx)(h.Anchor, { onClick: i, children: E.intl.string(E.t.Ex7sk9) }),
+                                    ? f.intl.string(f.t.StGVvC)
+                                    : (0, l.jsx)(h.Anchor, { onClick: i, children: f.intl.string(f.t.Ex7sk9) }),
                             ],
                         }),
                     ],
@@ -48,8 +48,8 @@ function A(e) {
         }),
     });
 }
-function S() {
-    let e = i.useMemo(() => [{ variant: "primary", text: E.intl.string(E.t.g8vPzy), disabled: !0 }], []);
+function A() {
+    let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(p.H, { actions: e });
 }
 var y = n(781409);
@@ -61,28 +61,28 @@ function P() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(s.A, {}),
-            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(A, { className: y.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(S, {}) }),
+            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: y.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(A, {}) }),
         ],
     });
 }
 var I = n(702841),
-    _ = n(339048),
-    T = n(428644),
-    g = n(86379),
-    v = n(545075),
+    g = n(339048),
+    v = n(428644),
+    _ = n(86379),
+    T = n(545075),
     x = n(590180),
     N = n(951305),
-    R = n(20742),
-    b = n(430993),
-    M = n(579151),
-    j = n(599062);
+    b = n(20742),
+    R = n(430993),
+    j = n(579151),
+    M = n(599062);
 function O() {
-    let { refreshCategories: e } = (0, M.A)();
+    let { refreshCategories: e } = (0, j.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(R.rQ, { title: E.intl.string(E.t["p8+qtU"]) }),
-            (0, l.jsx)(b.c, { children: (0, l.jsx)(j.h, { onRetry: e, errorOrigin: j.A.GIFT_MODAL }) }),
+            (0, l.jsx)(b.rQ, { title: f.intl.string(f.t["p8+qtU"]) }),
+            (0, l.jsx)(R.c, { children: (0, l.jsx)(M.h, { onRetry: e, errorOrigin: M.A.GIFT_MODAL }) }),
         ],
     });
 }
@@ -103,12 +103,12 @@ function K(e) {
         n = (0, Y.t4)((e) => e.selectedSkuId),
         { paymentSources: a, hasFetchedPaymentSources: s } = (0, G.jm)(),
         { application: o } = (0, F.V)(),
-        u = (0, g.Hp)(),
+        u = (0, _.Hp)(),
         c = (0, B.gU)(),
         d = (0, B.Hu)(),
         { isGift: p } = (0, N.Pv)(),
         [m, C] = i.useState(!0),
-        [h, E] = (0, I.yK)([x.A], () => [x.A.isFetchingCategories, x.A.error]);
+        [h, f] = (0, I.yK)([x.A], () => [x.A.isFetchingCategories, x.A.error]);
     return (i.useEffect(() => {
         let e = null != o;
         d && s && e && C(h);
@@ -128,8 +128,8 @@ function K(e) {
     m)
         ? (0, l.jsx)(L.A, {})
         : u
-          ? (0, l.jsx)(v.oO, {})
-          : null != E
+          ? (0, l.jsx)(T.oO, {})
+          : null != f
             ? (0, l.jsx)(O, {})
             : null;
 }
@@ -147,54 +147,56 @@ function Z(e) {
             setSelectedPlanId: p,
             activeSubscription: m,
             defaultPlanId: C,
+            shouldUseStripeExpressCheckout: h,
         } = (0, Y.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             activeSubscription: e.activeSubscription,
             defaultPlanId: e.defaultPlanId,
+            shouldUseStripeExpressCheckout: e.getShouldUseStripeExpressCheckout(),
         })),
-        h = (0, g.Hp)(),
+        f = (0, _.Hp)(),
         E = (0, w.A)(),
-        { hasFetchedRelatedSubscriptionPlans: f, subscriptionPriceOptionsLoading: A } = (0, H.Jn)(),
-        { isGift: S } = (0, N.Pv)(),
-        y = (0, U.A)({ isGift: S, skuId: d }),
-        P = !E || !f || A || !c,
-        x = (0, I.bG)([D.A], () => D.A.applicationIdsFetched.has(V.tv));
-    (0, T.A)(
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: A } = (0, H.Jn)(),
+        { isGift: y } = (0, N.Pv)(),
+        P = (0, U.A)({ isGift: y, skuId: d }),
+        x = !E || !S || A || !c,
+        b = (0, I.bG)([D.A], () => D.A.applicationIdsFetched.has(V.tv));
+    (0, v.A)(
         "Payment Modal",
-        P,
+        x,
         5,
         {
             hasFetchedSubscriptions: E,
-            hasFetchedSubscriptionPlans: f,
+            hasFetchedSubscriptionPlans: S,
             subscriptionPriceOptionsLoading: A,
             hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
     );
-    let R = (0, Y.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: y }));
+    let R = (0, Y.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: P }));
     return (i.useEffect(() => {
-        x || (0, _.LM)(V.tv),
-            P ||
-                h ||
-                (null != s
-                    ? a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })
-                    : null != o
-                      ? a(o)
-                      : null != n
-                        ? n !== V.gD.PREMIUM_GROUP_MONTH || u
-                            ? a(r.pn.REVIEW)
-                            : a(r.pn.ADD_PAYMENT_STEPS)
-                        : R
-                          ? (p((0, k.x)(d, m, C)), a(r.pn.REVIEW))
-                          : null != t
-                            ? a(r.pn.PLAN_SELECT)
-                            : a(r.pn.SKU_SELECT));
-    }, [s, o, m, h, x, n, P, a, t, d, p, y, C, S, R, u]),
-    P)
+        b || (0, g.LM)(V.tv),
+            x ||
+                f ||
+                (null == s || h
+                    ? null != o
+                        ? a(o)
+                        : null != n
+                          ? n !== V.gD.PREMIUM_GROUP_MONTH || u
+                              ? a(r.pn.REVIEW)
+                              : a(r.pn.ADD_PAYMENT_STEPS)
+                          : R
+                            ? (p((0, k.x)(d, m, C)), a(r.pn.REVIEW))
+                            : null != t
+                              ? a(r.pn.PLAN_SELECT)
+                              : a(r.pn.SKU_SELECT)
+                    : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s }));
+    }, [h, s, o, m, f, b, n, x, a, t, d, p, P, C, y, R, u]),
+    x)
         ? (0, l.jsx)(L.A, {})
-        : h
-          ? (0, l.jsx)(v.oO, {})
+        : f
+          ? (0, l.jsx)(T.oO, {})
           : null;
 }
 let q = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y0: () => L, Ni: () => D, t4: () => v, Q9: () => y, y$: () => M });
+n.d(t, { y0: () => y, Ni: () => v, t4: () => M, Q9: () => b, y$: () => U });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -205,40 +205,42 @@ class h extends a.A {
         return this.unsatisfiedConstraints.length > 0 ? this.unsatisfiedConstraints[0].reason_code : null;
     }
 }
-var I = n(566980),
-    f = n(410516),
-    p = n(815545),
-    T = n(786300),
-    m = n(428262),
-    g = n(202541);
-function S(e, t) {
+var I = n(826469),
+    f = n(566980),
+    p = n(511484),
+    T = n(815545),
+    m = n(786300),
+    g = n(158045),
+    S = n(202541);
+function N(e, t) {
     return null != e && null != e.checkout_context
         ? e.checkout_context
         : null != t && null != t.checkoutContext
           ? t.checkoutContext
           : null;
 }
-function N(e) {
+function C(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
-        : { isPremiumPurchase: (0, m.ys)(e), isPremiumGroupPurchase: e === g.gD.PREMIUM_GROUP_MONTH };
+        : { isPremiumPurchase: (0, g.ys)(e), isPremiumGroupPurchase: e === S.gD.PREMIUM_GROUP_MONTH };
 }
-var C = n(504275),
+var O = n(504275),
     R = n(219538),
-    O = n(75304);
-let L = 1,
-    [D, y] = (0, T.A)();
-function v(e) {
+    L = n(75304),
+    D = n(652215);
+let y = 1,
+    [v, b] = (0, m.A)();
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return y()(e, t);
+    return b()(e, t);
 }
-function b(e, t) {
+function P(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function M(e) {
+function U(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -249,9 +251,9 @@ function M(e) {
     } = e;
     return (0, r.h)((e, i) => {
         let r = {
-            isPremiumPurchase: () => N(i().selectedPlanId).isPremiumPurchase,
-            isPremiumGroupPurchase: () => N(i().selectedPlanId).isPremiumGroupPurchase,
-            selectedPlanAttributes: () => N(i().selectedPlanId),
+            isPremiumPurchase: () => C(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => C(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => C(i().selectedPlanId),
             premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
             premiumDiscountPercent: () => {
                 let e = i().premiumDiscountInfo.discountOffer;
@@ -260,22 +262,32 @@ function M(e) {
             isPremiumDiscountAppliedToCheckoutInvoice: () => {
                 let { discountOffer: e } = i().premiumDiscountInfo,
                     t = i().checkoutInvoicePreview;
-                return null != e && null != e.discount && null != t && (0, p.Ro)(t, e.discount.id);
+                return null != e && null != e.discount && null != t && (0, T.Ro)(t, e.discount.id);
             },
             isCheckoutInvoicePreviewLoading: () => {
                 let e = i().fetchCheckoutInvoicePreviewRequest,
                     t = null == i().checkoutInvoicePreview && null == i().checkoutInvoiceError;
                 return null != e && t;
             },
-            checkoutContext: () => S(i().order, i().checkoutInvoicePreview),
+            checkoutContext: () => N(i().order, i().checkoutInvoicePreview),
+            checkoutPaymentSources: () => {
+                let e = i().get("checkoutContext");
+                return null == e || null == e.payment_sources
+                    ? []
+                    : e.payment_sources.map(I.A.createFromCheckoutContext);
+            },
+            hasFiatCheckoutPaymentSources: () =>
+                i()
+                    .get("checkoutPaymentSources")
+                    .some((e) => e.type !== D.hes.TDS_WALLET && e.type !== D.hes.UNKNOWN),
             isCheckoutDataLoading: () => {
                 let { order: e, checkoutInvoicePreview: t, checkoutInvoiceError: n, purchasePreviewError: r } = i();
-                return null == n && null == r && (null == t || null == S(e, t));
+                return null == n && null == r && (null == t || null == N(e, t));
             },
             primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
         };
         return {
-            ...(0, C.p)(e, i, t),
+            ...(0, O.p)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -321,7 +333,7 @@ function M(e) {
             },
             ...{
                 getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(O.C.PREMIUM_CHECKOUT);
+                    let e = i().getTenantParams(L.C.PREMIUM_CHECKOUT);
                     return null != e && (e.shouldDisallowPlanSelection ?? !1);
                 },
                 getIsInOneStepSubscriptionCheckout: (e) => {
@@ -331,9 +343,10 @@ function M(e) {
                             selectedSkuId: a,
                             startedPaymentFlowWithPaymentSources: s,
                             getShouldDisallowPlanSelection: l,
+                            getShouldUseStripeExpressCheckout: o,
                         } = i();
                     return (
-                        !!l() ||
+                        !!(l() || o()) ||
                         (function (e) {
                             let {
                                 isTrial: t,
@@ -341,7 +354,7 @@ function M(e) {
                                 selectedSkuId: i,
                                 startedPaymentFlowWithPaymentSources: r,
                             } = e;
-                            return !t && !n && null != i && g.oz.includes(i) && !!r;
+                            return !t && !n && null != i && S.oz.includes(i) && !!r;
                         })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s })
                     );
                 },
@@ -353,16 +366,16 @@ function M(e) {
             setOrder: (t) => e({ order: t, orderRecord: h.createFromServer(t), pendingPaymentSourceId: null }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: L }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: y }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: L }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: y }) : e({ selectedPlanId: i });
             },
-            quantity: L,
+            quantity: y,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: b(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: P(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -372,11 +385,11 @@ function M(e) {
                     pendingPaymentSourceId: null != t && null == e.order ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: b(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: P(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            premiumDiscountInfo: f.TI,
+            premiumDiscountInfo: p.TI,
             setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
@@ -398,7 +411,7 @@ function M(e) {
             setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
             setCheckoutCurrency: (t) =>
                 e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),
-            purchaseState: I.h.WAITING,
+            purchaseState: f.h.WAITING,
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],
             setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
@@ -410,6 +423,8 @@ function M(e) {
             setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
             readySlideId: null,
             setReadySlideId: (t) => e({ readySlideId: t ?? null }),
+            disableCTAs: !1,
+            setDisableCTAs: (t) => e({ disableCTAs: t }),
         };
     }, i.x);
 }
