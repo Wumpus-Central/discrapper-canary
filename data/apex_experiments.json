@@ -336,28 +336,6 @@
     }
   },
   {
-    "name": "2025-10-emoji-search-ranking-tweaks",
-    "kind": "user",
-    "defaultConfig": {
-      "boostFavorites": false,
-      "boostCapitalizedWords": false,
-      "boostAtEnd": false,
-      "boostsIgnoreDisambiguators": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "boostFavorites": true,
-        "boostCapitalizedWords": true,
-        "boostAtEnd": true,
-        "boostsIgnoreDisambiguators": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2025-10-force-sdr-emojis-stickers",
     "defaultConfig": {
