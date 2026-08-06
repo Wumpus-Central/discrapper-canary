@@ -9,13 +9,13 @@ var o =
             }
             return t;
         },
-    n = s(r(223108)),
+    n = u(r(223108)),
     i = r(582128),
-    a = s(i);
-function s(t) {
+    a = u(i);
+function u(t) {
     return t && t.__esModule ? t : { default: t };
 }
-var u = {
+var s = {
         bgColor: n.default.oneOfType([n.default.object, n.default.string]).isRequired,
         bgD: n.default.string.isRequired,
         fgColor: n.default.oneOfType([n.default.object, n.default.string]).isRequired,
@@ -29,8 +29,8 @@ var u = {
         var r = t.bgColor,
             n = t.bgD,
             i = t.fgD,
-            s = t.fgColor,
-            u = t.size,
+            u = t.fgColor,
+            s = t.size,
             l = t.title,
             f = t.viewBoxSize,
             h = (function (t, e) {
@@ -40,13 +40,13 @@ var u = {
             })(t, ["bgColor", "bgD", "fgD", "fgColor", "size", "title", "viewBoxSize"]);
         return a.default.createElement(
             "svg",
-            o({}, h, { height: u, ref: e, viewBox: "0 0 " + f + " " + f, width: u }),
+            o({}, h, { height: s, ref: e, viewBox: "0 0 " + f + " " + f, width: s }),
             l ? a.default.createElement("title", null, l) : null,
             a.default.createElement("path", { d: n, fill: r }),
-            a.default.createElement("path", { d: i, fill: s }),
+            a.default.createElement("path", { d: i, fill: u }),
         );
     });
 (l.displayName = "QRCodeSvg"),
-    (l.propTypes = u),
+    (l.propTypes = s),
     (l.defaultProps = { title: void 0, xmlns: "http://www.w3.org/2000/svg" }),
     (e.default = l);
