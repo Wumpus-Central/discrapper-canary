@@ -109,7 +109,7 @@ let M = function (e) {
             );
         })(),
         L = Z.length > 0,
-        { initiateAgeVerificationV2: B } = (0, w.Ny)({ onComplete: j, entryPoint: l }),
+        { initiateAgeVerificationV2: B } = (0, w.Ny)({ onComplete: j, entryPoint: l, onMethodUnavailable: k }),
         H = s.useRef(!1),
         D = s.useMemo(() => (0, r.A)(), []);
     s.useEffect(() => {

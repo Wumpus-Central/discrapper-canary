@@ -146,18 +146,18 @@ function z() {
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
 function q(e) {
-    let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1 } = e,
-        [r, s] = a.useState(!1),
-        d = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
-        { current: c } = a.useRef(d?.ageVerificationStatus),
-        u = a.useCallback(() => {
-            o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: c });
-        }, [c]);
+    let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, onMethodUnavailable: r } = e,
+        [s, d] = a.useState(!1),
+        c = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
+        { current: u } = a.useRef(c?.ageVerificationStatus),
+        _ = a.useCallback(() => {
+            o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: u });
+        }, [u]);
     return {
-        loading: r,
+        loading: s,
         startVerification: a.useCallback(
             async (e) => {
-                s(!0);
+                d(!0);
                 try {
                     o.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await e(),
@@ -167,19 +167,22 @@ function q(e) {
                             verificationVendorName: r.verification_vendor_name,
                             incodeParameters: r.incode_parameters,
                             onComplete: t,
-                            onClose: u,
-                            onCancel: u,
+                            onClose: _,
+                            onCancel: _,
                             entryPoint: n,
                             shouldShowExpressiveModal: i,
                         });
-                    !1 === a && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), u());
+                    !1 === a && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
-                    h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), u();
+                    _(),
+                        null != r && e?.body?.code === O.t02.AGE_VERIFICATION_METHOD_UNAVAILABLE
+                            ? (h.A.showFailedToast(L.OB.AGE_VERIFICATION_METHOD_UNAVAILABLE), r())
+                            : h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR);
                 } finally {
-                    s(!1);
+                    d(!1);
                 }
             },
-            [t, u, i, n],
+            [t, _, i, n, r],
         ),
     };
 }
@@ -195,9 +198,14 @@ function Z(e) {
     };
 }
 function X(e) {
-    let { onComplete: t, entryPoint: n } = e,
-        { loading: i, startVerification: r } = q({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: !0 });
-    return { loading: i, initiateAgeVerificationV2: a.useCallback((e, t) => r(() => (0, S.UQ)(e, t)), [r]) };
+    let { onComplete: t, entryPoint: n, onMethodUnavailable: i } = e,
+        { loading: r, startVerification: s } = q({
+            onComplete: t,
+            entryPoint: n,
+            shouldShowExpressiveModal: !0,
+            onMethodUnavailable: i,
+        });
+    return { loading: r, initiateAgeVerificationV2: a.useCallback((e, t) => s(() => (0, S.UQ)(e, t)), [s]) };
 }
 function Q(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
