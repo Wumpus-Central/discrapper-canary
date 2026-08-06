@@ -85,7 +85,7 @@ function x() {
 }
 function u(e) {
     let { iconUrl: a } = e;
-    return (0, c.jsx)("img", { className: b.rF, src: a, alt: "", "aria-hidden": !0 });
+    return (0, c.jsx)("img", { className: b.rF, src: a, alt: "", "aria-hidden": !0, draggable: !1 });
 }
 function g(e) {
     let { badgeIconUrls: a = [] } = e,
