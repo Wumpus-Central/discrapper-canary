@@ -4,16 +4,18 @@ var i = n(852015),
     r = n(144367),
     a = n(428420),
     s = n(535384),
-    l = n(991023);
-class o extends s.G {
+    l = n(453360),
+    o = n(991023);
+class d extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AdminEditorTestComponent", [
             { no: 1, name: "deprecated_field", kind: "scalar", T: 9 },
-            { no: 2, name: "localized_text_field", kind: "message", T: () => l.X },
+            { no: 2, name: "localized_text_field", kind: "message", T: () => o.X },
             { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
-            { no: 4, name: "textarea_field", kind: "message", T: () => l.X },
+            { no: 4, name: "textarea_field", kind: "message", T: () => o.X },
             { no: 5, name: "checkbox_field", kind: "scalar", T: 8 },
             { no: 6, name: "asset_field", kind: "scalar", T: 9 },
+            { no: 7, name: "themed_asset_field", kind: "message", T: () => l.i },
         ]);
     }
     create(e) {
@@ -34,13 +36,13 @@ class o extends s.G {
                     a.deprecatedField = e.string();
                     break;
                 case 2:
-                    a.localizedTextField = l.X.internalBinaryRead(e, e.uint32(), n, a.localizedTextField);
+                    a.localizedTextField = o.X.internalBinaryRead(e, e.uint32(), n, a.localizedTextField);
                     break;
                 case 3:
                     a.plainTextField = e.string();
                     break;
                 case 4:
-                    a.textareaField = l.X.internalBinaryRead(e, e.uint32(), n, a.textareaField);
+                    a.textareaField = o.X.internalBinaryRead(e, e.uint32(), n, a.textareaField);
                     break;
                 case 5:
                     a.checkboxField = e.bool();
@@ -48,12 +50,15 @@ class o extends s.G {
                 case 6:
                     a.assetField = e.string();
                     break;
+                case 7:
+                    a.themedAssetField = l.i.internalBinaryRead(e, e.uint32(), n, a.themedAssetField);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let d = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, d);
             }
         }
         return a;
@@ -61,21 +66,23 @@ class o extends s.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.deprecatedField && t.tag(1, i.O0.LengthDelimited).string(e.deprecatedField),
             e.localizedTextField &&
-                l.X.internalBinaryWrite(e.localizedTextField, t.tag(2, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.localizedTextField, t.tag(2, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.plainTextField && t.tag(3, i.O0.LengthDelimited).string(e.plainTextField),
             e.textareaField &&
-                l.X.internalBinaryWrite(e.textareaField, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.textareaField, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.checkboxField && t.tag(5, i.O0.Varint).bool(e.checkboxField),
-            "" !== e.assetField && t.tag(6, i.O0.LengthDelimited).string(e.assetField);
+            "" !== e.assetField && t.tag(6, i.O0.LengthDelimited).string(e.assetField),
+            e.themedAssetField &&
+                l.i.internalBinaryWrite(e.themedAssetField, t.tag(7, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let d = new o();
-var c = n(406935),
-    u = n(330287),
-    _ = n(308588);
-class E extends s.G {
+let c = new d();
+var u = n(406935),
+    _ = n(330287),
+    E = n(308588);
+class A extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.ShopNagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
@@ -84,13 +91,13 @@ class E extends s.G {
                 no: 3,
                 name: "cta_action",
                 kind: "enum",
-                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", _.d, "BUTTON_ACTION_"],
+                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", E.d, "BUTTON_ACTION_"],
             },
             { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
-            { no: 5, name: "help_article", kind: "message", T: () => u.O },
-            { no: 6, name: "body_localized", kind: "message", T: () => l.X },
-            { no: 7, name: "cta_label_localized", kind: "message", T: () => l.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => c.ol },
+            { no: 5, name: "help_article", kind: "message", T: () => _.O },
+            { no: 6, name: "body_localized", kind: "message", T: () => o.X },
+            { no: 7, name: "cta_label_localized", kind: "message", T: () => o.X },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => u.ol },
         ]);
     }
     create(e) {
@@ -120,16 +127,16 @@ class E extends s.G {
                     a.deeplinkSection = e.string();
                     break;
                 case 5:
-                    a.helpArticle = u.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
+                    a.helpArticle = _.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
                     break;
                 case 6:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 case 7:
-                    a.ctaLabelLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
+                    a.ctaLabelLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = c.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = u.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -140,8 +147,8 @@ class E extends s.G {
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -151,29 +158,28 @@ class E extends s.G {
             "" !== e.ctaLabel && t.tag(2, i.O0.LengthDelimited).string(e.ctaLabel),
             0 !== e.ctaAction && t.tag(3, i.O0.Varint).int32(e.ctaAction),
             "" !== e.deeplinkSection && t.tag(4, i.O0.LengthDelimited).string(e.deeplinkSection),
-            e.helpArticle && u.O.internalBinaryWrite(e.helpArticle, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && _.O.internalBinaryWrite(e.helpArticle, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
             e.ctaLabelLocalized &&
-                l.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                c.ol
+                u.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, i.O0.LengthDelimited).fork(), n)
                     .join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let A = new E();
-var h = n(520361),
-    I = n(453360);
+let h = new A();
+var I = n(520361);
 class f extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PlanSelectCardBanner", [
-            { no: 1, name: "asset", kind: "message", T: () => I.i },
+            { no: 1, name: "asset", kind: "message", T: () => l.i },
             { no: 2, name: "body", kind: "scalar", T: 9 },
-            { no: 3, name: "body_localized", kind: "message", T: () => l.X },
-            { no: 4, name: "help_article", kind: "message", T: () => u.O },
+            { no: 3, name: "body_localized", kind: "message", T: () => o.X },
+            { no: 4, name: "help_article", kind: "message", T: () => _.O },
         ]);
     }
     create(e) {
@@ -191,33 +197,33 @@ class f extends s.G {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    a.asset = I.i.internalBinaryRead(e, e.uint32(), n, a.asset);
+                    a.asset = l.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 2:
                     a.body = e.string();
                     break;
                 case 3:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 case 4:
-                    a.helpArticle = u.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
+                    a.helpArticle = _.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let d = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, d);
             }
         }
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.asset && I.i.internalBinaryWrite(e.asset, t.tag(1, i.O0.LengthDelimited).fork(), n).join(),
+        e.asset && l.i.internalBinaryWrite(e.asset, t.tag(1, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.body && t.tag(2, i.O0.LengthDelimited).string(e.body),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
-            e.helpArticle && u.O.internalBinaryWrite(e.helpArticle, t.tag(4, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && _.O.internalBinaryWrite(e.helpArticle, t.tag(4, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -232,13 +238,13 @@ class T extends s.G {
                 no: 3,
                 name: "cta_action",
                 kind: "enum",
-                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", _.d, "BUTTON_ACTION_"],
+                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", E.d, "BUTTON_ACTION_"],
             },
             { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
-            { no: 5, name: "help_article", kind: "message", T: () => u.O },
-            { no: 6, name: "body_localized", kind: "message", T: () => l.X },
-            { no: 7, name: "cta_label_localized", kind: "message", T: () => l.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => c.ol },
+            { no: 5, name: "help_article", kind: "message", T: () => _.O },
+            { no: 6, name: "body_localized", kind: "message", T: () => o.X },
+            { no: 7, name: "cta_label_localized", kind: "message", T: () => o.X },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => u.ol },
         ]);
     }
     create(e) {
@@ -268,16 +274,16 @@ class T extends s.G {
                     a.deeplinkSection = e.string();
                     break;
                 case 5:
-                    a.helpArticle = u.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
+                    a.helpArticle = _.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
                     break;
                 case 6:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 case 7:
-                    a.ctaLabelLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
+                    a.ctaLabelLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = c.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = u.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -288,8 +294,8 @@ class T extends s.G {
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -299,13 +305,13 @@ class T extends s.G {
             "" !== e.ctaLabel && t.tag(2, i.O0.LengthDelimited).string(e.ctaLabel),
             0 !== e.ctaAction && t.tag(3, i.O0.Varint).int32(e.ctaAction),
             "" !== e.deeplinkSection && t.tag(4, i.O0.LengthDelimited).string(e.deeplinkSection),
-            e.helpArticle && u.O.internalBinaryWrite(e.helpArticle, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && _.O.internalBinaryWrite(e.helpArticle, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
             e.ctaLabelLocalized &&
-                l.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                c.ol
+                u.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, i.O0.LengthDelimited).fork(), n)
                     .join();
         let r = n.writeUnknownFields;
@@ -318,12 +324,12 @@ class g extends s.G {
         super("discord_protos.premium_marketing.v1.PremiumTabPopover", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
             { no: 2, name: "body", kind: "scalar", T: 9 },
-            { no: 3, name: "asset", kind: "message", T: () => I.i },
-            { no: 4, name: "button", kind: "message", T: () => _.$ },
+            { no: 3, name: "asset", kind: "message", T: () => l.i },
+            { no: 4, name: "button", kind: "message", T: () => E.$ },
             { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
-            { no: 6, name: "help_article", kind: "message", T: () => u.O },
-            { no: 7, name: "header_localized", kind: "message", T: () => l.X },
-            { no: 8, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 6, name: "help_article", kind: "message", T: () => _.O },
+            { no: 7, name: "header_localized", kind: "message", T: () => o.X },
+            { no: 8, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -347,29 +353,29 @@ class g extends s.G {
                     a.body = e.string();
                     break;
                 case 3:
-                    a.asset = I.i.internalBinaryRead(e, e.uint32(), n, a.asset);
+                    a.asset = l.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 4:
-                    a.button = _.$.internalBinaryRead(e, e.uint32(), n, a.button);
+                    a.button = E.$.internalBinaryRead(e, e.uint32(), n, a.button);
                     break;
                 case 5:
                     a.helpArticleId = e.string();
                     break;
                 case 6:
-                    a.helpArticle = u.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
+                    a.helpArticle = _.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
                     break;
                 case 7:
-                    a.headerLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
+                    a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
                     break;
                 case 8:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let d = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, d);
             }
         }
         return a;
@@ -377,14 +383,14 @@ class g extends s.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, i.O0.LengthDelimited).string(e.body),
-            e.asset && I.i.internalBinaryWrite(e.asset, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
-            e.button && _.$.internalBinaryWrite(e.button, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+            e.asset && l.i.internalBinaryWrite(e.asset, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
+            e.button && E.$.internalBinaryWrite(e.button, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.helpArticleId && t.tag(5, i.O0.LengthDelimited).string(e.helpArticleId),
-            e.helpArticle && u.O.internalBinaryWrite(e.helpArticle, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && _.O.internalBinaryWrite(e.helpArticle, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
-                l.X.internalBinaryWrite(e.headerLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.headerLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(8, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(8, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -395,9 +401,9 @@ class N extends s.G {
         super("discord_protos.premium_marketing.v1.PremiumTabTooltip", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
             { no: 2, name: "body", kind: "scalar", T: 9 },
-            { no: 3, name: "asset", kind: "message", T: () => I.i },
-            { no: 4, name: "header_localized", kind: "message", T: () => l.X },
-            { no: 5, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 3, name: "asset", kind: "message", T: () => l.i },
+            { no: 4, name: "header_localized", kind: "message", T: () => o.X },
+            { no: 5, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -421,20 +427,20 @@ class N extends s.G {
                     a.body = e.string();
                     break;
                 case 3:
-                    a.asset = I.i.internalBinaryRead(e, e.uint32(), n, a.asset);
+                    a.asset = l.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 4:
-                    a.headerLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
+                    a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
                     break;
                 case 5:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let d = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, d);
             }
         }
         return a;
@@ -442,11 +448,11 @@ class N extends s.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, i.O0.LengthDelimited).string(e.body),
-            e.asset && I.i.internalBinaryWrite(e.asset, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
+            e.asset && l.i.internalBinaryWrite(e.asset, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
-                l.X.internalBinaryWrite(e.headerLocalized, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.headerLocalized, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -458,9 +464,9 @@ class O extends s.G {
             { no: 1, name: "header", kind: "scalar", T: 9 },
             { no: 2, name: "body", kind: "scalar", T: 9 },
             { no: 3, name: "asset_url", kind: "scalar", T: 9 },
-            { no: 4, name: "asset", kind: "message", T: () => I.i },
-            { no: 5, name: "header_localized", kind: "message", T: () => l.X },
-            { no: 6, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 4, name: "asset", kind: "message", T: () => l.i },
+            { no: 5, name: "header_localized", kind: "message", T: () => o.X },
+            { no: 6, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -487,20 +493,20 @@ class O extends s.G {
                     a.assetUrl = e.string();
                     break;
                 case 4:
-                    a.asset = I.i.internalBinaryRead(e, e.uint32(), n, a.asset);
+                    a.asset = l.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 5:
-                    a.headerLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
+                    a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
                     break;
                 case 6:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let d = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, d);
             }
         }
         return a;
@@ -509,11 +515,11 @@ class O extends s.G {
         "" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, i.O0.LengthDelimited).string(e.body),
             "" !== e.assetUrl && t.tag(3, i.O0.LengthDelimited).string(e.assetUrl),
-            e.asset && I.i.internalBinaryWrite(e.asset, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+            e.asset && l.i.internalBinaryWrite(e.asset, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
-                l.X.internalBinaryWrite(e.headerLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.headerLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(6, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -523,7 +529,7 @@ class L extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderNagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
-            { no: 2, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 2, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -544,14 +550,14 @@ class L extends s.G {
                     a.body = e.string();
                     break;
                 case 2:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -559,7 +565,7 @@ class L extends s.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.body && t.tag(1, i.O0.LengthDelimited).string(e.body),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(2, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(2, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -633,16 +639,16 @@ class x extends s.G {
             { no: 2, name: "header", kind: "scalar", T: 9 },
             { no: 3, name: "body", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
-            { no: 5, name: "button", kind: "message", T: () => _.$ },
+            { no: 5, name: "button", kind: "message", T: () => E.$ },
             {
                 no: 6,
                 name: "dismissible_content",
                 kind: "enum",
                 T: () => ["discord_protos.discord_users.v1.DismissibleContent", G.M],
             },
-            { no: 7, name: "help_article", kind: "message", T: () => u.O },
-            { no: 8, name: "header_localized", kind: "message", T: () => l.X },
-            { no: 9, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 7, name: "help_article", kind: "message", T: () => _.O },
+            { no: 8, name: "header_localized", kind: "message", T: () => o.X },
+            { no: 9, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -672,26 +678,26 @@ class x extends s.G {
                     a.helpArticleId = e.string();
                     break;
                 case 5:
-                    a.button = _.$.internalBinaryRead(e, e.uint32(), n, a.button);
+                    a.button = E.$.internalBinaryRead(e, e.uint32(), n, a.button);
                     break;
                 case 6:
                     a.dismissibleContent = e.int32();
                     break;
                 case 7:
-                    a.helpArticle = u.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
+                    a.helpArticle = _.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
                     break;
                 case 8:
-                    a.headerLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
+                    a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
                     break;
                 case 9:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -701,13 +707,13 @@ class x extends s.G {
             "" !== e.header && t.tag(2, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(3, i.O0.LengthDelimited).string(e.body),
             "" !== e.helpArticleId && t.tag(4, i.O0.LengthDelimited).string(e.helpArticleId),
-            e.button && _.$.internalBinaryWrite(e.button, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
+            e.button && E.$.internalBinaryWrite(e.button, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             0 !== e.dismissibleContent && t.tag(6, i.O0.Varint).int32(e.dismissibleContent),
-            e.helpArticle && u.O.internalBinaryWrite(e.helpArticle, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && _.O.internalBinaryWrite(e.helpArticle, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
-                l.X.internalBinaryWrite(e.headerLocalized, t.tag(8, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.headerLocalized, t.tag(8, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(9, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(9, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -719,8 +725,8 @@ class F extends s.G {
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
             { no: 2, name: "header", kind: "scalar", T: 9 },
             { no: 3, name: "body", kind: "scalar", T: 9 },
-            { no: 4, name: "header_localized", kind: "message", T: () => l.X },
-            { no: 5, name: "body_localized", kind: "message", T: () => l.X },
+            { no: 4, name: "header_localized", kind: "message", T: () => o.X },
+            { no: 5, name: "body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -747,17 +753,17 @@ class F extends s.G {
                     a.body = e.string();
                     break;
                 case 4:
-                    a.headerLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
+                    a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
                     break;
                 case 5:
-                    a.bodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
+                    a.bodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.bodyLocalized);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -767,9 +773,9 @@ class F extends s.G {
             "" !== e.header && t.tag(2, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(3, i.O0.LengthDelimited).string(e.body),
             e.headerLocalized &&
-                l.X.internalBinaryWrite(e.headerLocalized, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.headerLocalized, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                l.X.internalBinaryWrite(e.bodyLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.bodyLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
@@ -783,8 +789,8 @@ class H extends s.G {
             { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 },
             { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 },
             { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
-            { no: 5, name: "badge_label_localized", kind: "message", T: () => l.X },
-            { no: 6, name: "acknowledged_badge_label_localized", kind: "message", T: () => l.X },
+            { no: 5, name: "badge_label_localized", kind: "message", T: () => o.X },
+            { no: 6, name: "acknowledged_badge_label_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
@@ -814,10 +820,10 @@ class H extends s.G {
                     a.deeplinkSection = e.string();
                     break;
                 case 5:
-                    a.badgeLabelLocalized = l.X.internalBinaryRead(e, e.uint32(), n, a.badgeLabelLocalized);
+                    a.badgeLabelLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.badgeLabelLocalized);
                     break;
                 case 6:
-                    a.acknowledgedBadgeLabelLocalized = l.X.internalBinaryRead(
+                    a.acknowledgedBadgeLabelLocalized = o.X.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -828,8 +834,8 @@ class H extends s.G {
                     let s = n.readUnknownField;
                     if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
         return a;
@@ -840,9 +846,9 @@ class H extends s.G {
             !1 !== e.showHoverGradient && t.tag(3, i.O0.Varint).bool(e.showHoverGradient),
             "" !== e.deeplinkSection && t.tag(4, i.O0.LengthDelimited).string(e.deeplinkSection),
             e.badgeLabelLocalized &&
-                l.X.internalBinaryWrite(e.badgeLabelLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.badgeLabelLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             e.acknowledgedBadgeLabelLocalized &&
-                l.X.internalBinaryWrite(
+                o.X.internalBinaryWrite(
                     e.acknowledgedBadgeLabelLocalized,
                     t.tag(6, i.O0.LengthDelimited).fork(),
                     n,
@@ -873,9 +879,9 @@ class Y extends s.G {
             { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => S },
             { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => m },
             { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => p },
-            { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => h.h },
-            { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => A },
-            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => d },
+            { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => I.h },
+            { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => h },
+            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => c },
             { no: 3, name: "content_identifier", kind: "scalar", T: 9 },
             { no: 18, name: "is_default_base", kind: "scalar", T: 8 },
         ]);
@@ -1021,7 +1027,7 @@ class Y extends s.G {
                 case 20:
                     a.properties = {
                         oneofKind: "billingSettingsBanner",
-                        billingSettingsBanner: h.h.internalBinaryRead(
+                        billingSettingsBanner: I.h.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1032,13 +1038,13 @@ class Y extends s.G {
                 case 21:
                     a.properties = {
                         oneofKind: "shopNagbar",
-                        shopNagbar: A.internalBinaryRead(e, e.uint32(), n, a.properties.shopNagbar),
+                        shopNagbar: h.internalBinaryRead(e, e.uint32(), n, a.properties.shopNagbar),
                     };
                     break;
                 case 22:
                     a.properties = {
                         oneofKind: "adminEditorTestComponent",
-                        adminEditorTestComponent: d.internalBinaryRead(
+                        adminEditorTestComponent: c.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1135,13 +1141,13 @@ class Y extends s.G {
                     .internalBinaryWrite(e.properties.planSelectCardBanner, t.tag(19, i.O0.LengthDelimited).fork(), n)
                     .join(),
             "billingSettingsBanner" === e.properties.oneofKind &&
-                h.h
+                I.h
                     .internalBinaryWrite(e.properties.billingSettingsBanner, t.tag(20, i.O0.LengthDelimited).fork(), n)
                     .join(),
             "shopNagbar" === e.properties.oneofKind &&
-                A.internalBinaryWrite(e.properties.shopNagbar, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
+                h.internalBinaryWrite(e.properties.shopNagbar, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
             "adminEditorTestComponent" === e.properties.oneofKind &&
-                d
+                c
                     .internalBinaryWrite(
                         e.properties.adminEditorTestComponent,
                         t.tag(22, i.O0.LengthDelimited).fork(),
