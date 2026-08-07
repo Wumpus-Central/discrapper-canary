@@ -1,21 +1,21 @@
 i.d(e, { A: () => A });
 var u = i(582128),
     n = i(435558),
-    r = i(17928),
-    s = i(919796),
+    r = i(819169),
+    s = i(17928),
     l = i(427358),
     d = i(711014),
     a = i(321191);
 function A(t) {
-    let [e, i, A, o, c] = (0, r.yK)([a.A], () => [
+    let [e, i, A, o, c] = (0, s.yK)([a.A], () => [
             a.A.getMutualFriendsCount(t.id),
             a.A.getMutualFriends(t.id),
             a.A.getMutualGuilds(t.id),
             a.A.isFetchingProfile(t.id),
             a.A.isFetchingFriends(t.id),
         ]),
-        g = (0, r.bG)([l.A], () => l.A.getUserAffinitiesMap()),
-        h = (0, r.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
+        g = (0, s.bG)([l.A], () => l.A.getUserAffinitiesMap()),
+        h = (0, s.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
         m = (0, u.useMemo)(
             () =>
                 null == i || i.length < 2
@@ -34,9 +34,9 @@ function A(t) {
                 return t[i.id] ?? h.length;
             });
         }, [A, h]),
-        F = (0, s.A)(e),
-        b = (0, s.A)(m),
-        f = (0, s.A)(p);
+        F = (0, r.A)(e),
+        b = (0, r.A)(m),
+        f = (0, r.A)(p);
     return {
         mutualFriendsCount: e ?? F,
         mutualFriends: m ?? b,

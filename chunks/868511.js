@@ -1,10 +1,10 @@
 i.d(t, { A: () => x });
 var n = i(477900),
-    s = i(582128),
-    l = i(189213),
+    l = i(582128),
+    s = i(189213),
     r = i(17928),
     a = i(683071),
-    o = i(292666),
+    o = i(95477),
     u = i(691885),
     d = i(228366),
     c = i(271866),
@@ -26,9 +26,9 @@ function x(e) {
             authorizationError: A.A.error,
             authorizing: A.A.isFetchingAuthorization,
         })),
-        [N, _] = s.useState(x ?? ""),
-        [I, C] = s.useState("8080"),
-        [b, v] = s.useState("localhost"),
+        [N, _] = l.useState(x ?? ""),
+        [I, C] = l.useState("8080"),
+        [b, v] = l.useState("localhost"),
         y = T.test(N);
     async function j() {
         c.SH();
@@ -43,14 +43,14 @@ function x(e) {
         })(b, I, N);
         null != (await c.q1(N, e)) && t();
     }
-    s.useEffect(() => () => d.h.wait(() => c.SH()), []);
+    l.useEffect(() => () => d.h.wait(() => c.SH()), []);
     let O = null != x && x === N,
         R = O
             ? function () {
                   c.cL(), _(""), v(null);
               }
             : j,
-        L = s.useMemo(
+        L = l.useMemo(
             () => [
                 {
                     loading: f,
@@ -62,7 +62,7 @@ function x(e) {
             ],
             [N.length, f, O, y, I.length, R, b],
         );
-    return (0, n.jsxs)(l.Modal, {
+    return (0, n.jsxs)(s.Modal, {
         title: h.intl.string(h.t.f8fzky),
         subtitle: h.intl.string(h.t.a6Vill),
         actions: L,

@@ -4,9 +4,9 @@ var i,
     r = n(477900),
     a = n(582128),
     s = n(132500),
-    l = n(17928),
-    o = n(964486),
-    d = n(919796),
+    l = n(819169),
+    o = n(17928),
+    d = n(964486),
     c = n(174459),
     u = n(310031),
     _ = n(394953),
@@ -74,11 +74,11 @@ function S(e) {
         } = e,
         I = a.useRef(null),
         f = a.useRef(!1),
-        p = (0, l.bG)([u.A], () => u.A.isLoading),
-        T = (0, d.A)(p),
-        m = (0, l.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+        p = (0, o.bG)([u.A], () => u.A.isLoading),
+        T = (0, l.A)(p),
+        m = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
         { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
-    (0, o.Ay)(() => {
+    (0, d.Ay)(() => {
         !(function (e) {
             let { variant: t, viewId: n, entrypoint: i } = e;
             c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
@@ -138,7 +138,7 @@ function S(e) {
                     mentionsFetched: m?.mentionsFetched,
                 });
         }, [p, i, r, s, T, m]),
-        (0, o.l0)(() => {
+        (0, d.l0)(() => {
             !(function (e) {
                 let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;
                 c.default.track(A.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {

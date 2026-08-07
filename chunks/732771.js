@@ -15,11 +15,11 @@ var i = n(477900),
     h = n(44482),
     I = n(601973),
     f = n(991957),
-    p = n(340351),
-    T = n(259678),
-    m = n(460890),
-    g = n(661531),
-    S = n(292666),
+    p = n(95477),
+    T = n(340351),
+    m = n(259678),
+    g = n(460890),
+    S = n(661531),
     N = n(602853),
     C = n(652215);
 function O() {
@@ -45,9 +45,9 @@ let R = r.createContext({
     setIsEditing: C.tEg,
 });
 var L = n(571247),
-    y = n(375708),
-    D = n(372461),
-    v = n(37712);
+    D = n(375708),
+    y = n(37712),
+    v = n(579240);
 let b = { keys: ["label"] };
 function M(e) {
     let {
@@ -74,8 +74,8 @@ function M(e) {
         S = r.useId(),
         N = r.useRef(null),
         [C, O] = r.useState(null),
-        [L, y] = r.useState(!1),
-        [D, v] = r.useState(""),
+        [L, D] = r.useState(!1),
+        [y, v] = r.useState(""),
         [M, P] = r.useState(""),
         {
             options: U,
@@ -87,11 +87,11 @@ function M(e) {
             P(e), v(t ?? e);
         }, []);
     r.useEffect(() => {
-        x(D);
-    }, [x, D]);
-    let F = r.useCallback((e) => (null != T ? T(e, D) : (0, l.Ht)(e, D, m ?? b)), [D, T, m]),
+        x(y);
+    }, [x, y]);
+    let F = r.useCallback((e) => (null != T ? T(e, y) : (0, l.Ht)(e, y, m ?? b)), [y, T, m]),
         { flatOptions: V, groups: B } = r.useMemo(() => {
-            if ("" === D) return { flatOptions: U, groups: w };
+            if ("" === y) return { flatOptions: U, groups: w };
             if (0 === w.length) return { flatOptions: F(U), groups: [] };
             let e = [],
                 t = [],
@@ -101,7 +101,7 @@ function M(e) {
                 (n += i.count), 0 !== r.length && (e.push(...r), t.push({ label: i.label, count: r.length }));
             }
             return { flatOptions: e, groups: t };
-        }, [U, w, D, F]),
+        }, [U, w, y, F]),
         H = r.useRef(void 0),
         j = r.useMemo(
             () =>
@@ -127,7 +127,7 @@ function M(e) {
                 let t = Array.from(e);
                 "multiple" === u && t.length < 1 ? f([]) : "multiple" === u ? f(t.map((e) => e.value)) : f(t[0]?.value),
                     h && s && o?.(!1),
-                    y(!1);
+                    D(!1);
             },
             [W, u, f, h, s, o, g],
         ),
@@ -154,7 +154,7 @@ function M(e) {
             isOpen: s,
             setIsOpen: o,
             isEditing: L,
-            setIsEditing: y,
+            setIsEditing: D,
             ...c,
         },
         children: t,
@@ -163,7 +163,7 @@ function M(e) {
 function P(e) {
     let { ref: t, ...n } = e,
         { fieldProps: a, props: s } = (0, d.n)(n),
-        l = (0, N.r)(g.A.modules.select.MAX_WIDTH),
+        l = (0, N.r)(S.A.modules.select.MAX_WIDTH),
         o = r.useMemo(() => ({ horizontalControlColumnWidth: `minmax(${l}px, auto)` }), [l]);
     return (0, i.jsx)(d.D, {
         ...a,
@@ -176,14 +176,14 @@ function U(e) {
     let {
             id: t,
             autoFocus: n,
-            placeholder: a = y.intl.string(L.default["A+pfVR"]),
+            placeholder: a = D.intl.string(L.default["A+pfVR"]),
             hideTags: l,
             name: d,
             form: u,
             showChevronButton: _ = !1,
             onQueryChange: E,
-            onFocus: m,
-            onBlur: g,
+            onFocus: g,
+            onBlur: S,
             onKeyDown: N,
             wrapTags: C,
             ref: R,
@@ -229,18 +229,18 @@ function U(e) {
         }, [Z, x, B, ei]),
         ec = r.useCallback(
             (e) => {
-                ea(!0), m?.(e), M.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0);
+                ea(!0), g?.(e), M.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0);
             },
-            [m, ea, en],
+            [g, ea, en],
         ),
         eu = r.useCallback(() => {
             K || Q?.(!0);
         }, [Q, K]),
         e_ = r.useCallback(
             (e) => {
-                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), g?.(e));
+                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), S?.(e));
             },
-            [g, Q, j, ea],
+            [S, Q, j, ea],
         );
     r.useEffect(() => {
         es &&
@@ -337,7 +337,7 @@ function U(e) {
                 if (er) return null;
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
-                    className: v.OS,
+                    className: y.OS,
                     children: (0, i.jsx)(h.c, { ...e, onClick: eA, "aria-hidden": !0, inInput: !0 }),
                 });
             }
@@ -351,13 +351,13 @@ function U(e) {
                         label: e.label,
                         icon: t,
                         isDisabled: k || e.disabled,
-                        accessibilityHint: y.intl.string(L.default["/Y7vRd"]),
+                        accessibilityHint: D.intl.string(L.default["/Y7vRd"]),
                     }
                 );
             });
-            return (0, i.jsx)(p.C, {
+            return (0, i.jsx)(T.C, {
                 listRef: b,
-                label: y.intl.string(L.default.VMNfsY),
+                label: D.intl.string(L.default.VMNfsY),
                 items: e,
                 layout: "inline",
                 onRemove: eh,
@@ -381,18 +381,18 @@ function U(e) {
                 handleToggle: eo,
                 handleClear: ed,
                 children: (0, i.jsx)("div", {
-                    className: s()(v._U, { [v.kS]: es, [v.kj]: es && C }),
+                    className: s()(y._U, { [y.kS]: es, [y.kj]: es && C }),
                     onClick: eE,
                     children: (0, i.jsxs)("div", {
-                        className: v.P$,
+                        className: y.P$,
                         children: [
                             ep,
-                            (0, i.jsx)(T.vN, {
+                            (0, i.jsx)(m.vN, {
                                 ringTarget: W,
-                                children: (0, i.jsx)(S.p, {
+                                children: (0, i.jsx)(p.p, {
                                     ref: M,
                                     id: t,
-                                    className: s()(D.input, v.kk, { [v.kK]: "single" === x && z && !er }),
+                                    className: s()(v.input, y.kk, { [y.kK]: "single" === x && z && !er }),
                                     autoFocus: n,
                                     placeholder: a,
                                     role: "combobox",
@@ -449,7 +449,7 @@ function w(e) {
             query: p,
             loading: T,
         } = O(),
-        { i18n: g } = r.useContext(m.VO);
+        { i18n: m } = r.useContext(g.VO);
     return (0, i.jsx)(u.q, {
         id: A,
         required: h,
@@ -466,7 +466,7 @@ function w(e) {
             n ??
             (() =>
                 (0, i.jsx)(_.o, {
-                    message: null == p || "" === p ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(p),
+                    message: null == p || "" === p ? m.LISTBOX_EMPTY_STATE : m.LISTBOX_EMPTY_STATE_WITH_QUERY(p),
                 })),
         maxVisibleItems: a,
         loading: T,

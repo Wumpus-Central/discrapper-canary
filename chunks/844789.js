@@ -29,7 +29,7 @@ var E = n(17928),
     b = n(97352),
     O = n(67480),
     R = n(328968),
-    _ = n(428262),
+    _ = n(158045),
     P = n(580630),
     k = n(963179),
     M = n(168393),
@@ -230,7 +230,7 @@ var K = n(678708),
     Z = n(317525),
     Q = n(994500),
     ee = n(287809),
-    et = n(768038),
+    et = n(237116),
     en = n(403362),
     el = n(562153);
 function er(e, t) {
@@ -801,8 +801,8 @@ function e5(e) {
     });
 }
 var e4 = n(144228),
-    e2 = n(821609),
-    e8 = n(621385);
+    e8 = n(821609),
+    e2 = n(621385);
 function e3(e) {
     let { type: t, options: n, required: l } = e,
         r = s.useMemo(() => n.find((e) => e.default)?.value, [n]),
@@ -818,9 +818,9 @@ function e3(e) {
             (0, i.jsx)(e4.z, { options: m, value: c ?? "", onChange: p, required: l }),
             !l &&
                 (0, i.jsx)("div", {
-                    className: u()(e8.H, { [e8.d]: !d }),
+                    className: u()(e2.H, { [e2.d]: !d }),
                     "aria-hidden": !d,
-                    children: (0, i.jsx)(e2.$, {
+                    children: (0, i.jsx)(e8.$, {
                         text: D.intl.string(D.t["5uAtZN"]),
                         variant: "secondary",
                         size: "sm",
@@ -966,7 +966,7 @@ function tt(e) {
         ],
     });
 }
-var tn = n(292666),
+var tn = n(95477),
     tl = n(260598),
     tr = n(321471),
     ta = n(969508),
@@ -1434,8 +1434,8 @@ function t4(e) {
         }, [n, l, r, a]);
     return (0, i.jsx)(t1.Provider, { value: o, children: t });
 }
-let t2 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
-var t8 = n(258381),
+let t8 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
+var t2 = n(258381),
     t3 = n(742715);
 function t7(e) {
     let t,
@@ -1448,12 +1448,12 @@ function t7(e) {
                     ? null
                     : ((e =
                           null != t.message
-                              ? (0, tZ.ko)(t.message, t2)
-                              : (0, tZ.Le)({ channelId: t.channelId, renderOptions: t2 })),
+                              ? (0, tZ.ko)(t.message, t8)
+                              : (0, tZ.Le)({ channelId: t.channelId, renderOptions: t8 })),
                       tJ.A.parse(n, !0, e));
             }, [n, t])),
         a = t5();
-    return (0, i.jsx)("div", { className: u()(l, t3.PT, t8.T, a.className), children: r });
+    return (0, i.jsx)("div", { className: u()(l, t3.PT, t2.T, a.className), children: r });
 }
 var t6 = n(838541),
     t9 = n(438998);
@@ -1874,13 +1874,13 @@ function n1(e) {
 }
 var n5 = n(140651),
     n4 = n(506326),
-    n2 = n(915089),
-    n8 = n(818348),
+    n8 = n(915089),
+    n2 = n(818348),
     n3 = n(651055),
     n7 = n(521707);
 function n6(e) {
     let { className: t, clickableClassName: n, clickable: l, children: r } = e,
-        a = (0, n2.GV)();
+        a = (0, n8.GV)();
     if (null != l && "href" in l) {
         let { ariaDescription: e, href: s } = l;
         return (0, i.jsxs)(i.Fragment, {
@@ -1921,12 +1921,12 @@ function le(e) {
             providerIconProps: d,
             style: m = {},
         } = e,
-        h = (0, n2.GV)(),
+        h = (0, n8.GV)(),
         { primaryColor: p, secondaryColor: x } = (0, n5.A)(a);
     return (
         null != a && (m.background = `linear-gradient(45deg, ${p}, ${x})`),
         (0, i.jsx)(nw.N, {
-            theme: n8.NJ.DARK,
+            theme: n2.NJ.DARK,
             disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, i.jsxs)("figure", {

@@ -2,7 +2,7 @@ l.d(t, { A: () => p });
 var a = l(477900),
     n = l(582128),
     i = l(435558),
-    r = l(292666),
+    r = l(95477),
     o = l(691885),
     s = l(150934),
     u = l(834730),
@@ -17,8 +17,8 @@ let p = function () {
         [v, g] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
         [C, j] = n.useState("pink"),
-        [T, P] = n.useState(!0),
-        I = n.useMemo(
+        [T, I] = n.useState(!0),
+        P = n.useMemo(
             () =>
                 Object.entries(d.fh).map((e) => {
                     let [t, l] = e;
@@ -99,7 +99,7 @@ let p = function () {
                         null !== e && x(e);
                     },
                     value: h,
-                    options: I,
+                    options: P,
                 }),
             }),
             (0, a.jsx)(c.MG, {
@@ -107,7 +107,7 @@ let p = function () {
                     label: "Glowing",
                     checked: T,
                     onChange: (e) => {
-                        P(e);
+                        I(e);
                     },
                 }),
             }),

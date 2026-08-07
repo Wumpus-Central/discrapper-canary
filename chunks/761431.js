@@ -1,7 +1,7 @@
 i.d(t, { TX: () => o, yV: () => c });
 var n = i(477900),
     l = i(582128),
-    s = i(292666),
+    s = i(95477),
     r = i(231088),
     a = i(375708);
 function o(e) {
@@ -64,9 +64,9 @@ function c(e) {
             error: E,
             warning: S,
             trailing: N,
-            className: w,
+            className: C,
             disabled: b = !1,
-            growWidth: C,
+            growWidth: w,
             removeVerticalPadding: T,
         } = e,
         k =
@@ -81,8 +81,8 @@ function c(e) {
         editButtonRef: o,
         editButtonAriaLabel: I,
         onStartEditing: c,
-        className: w,
-        growWidth: C,
+        className: C,
+        growWidth: w,
         removeVerticalPadding: T,
         wrapperRef: u,
         onBlur: g,

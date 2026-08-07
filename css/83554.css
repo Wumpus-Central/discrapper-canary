@@ -1,0 +1,102 @@
+.row__06c2b {
+    padding-top: 20px
+}
+
+.row__06c2b:first-child {
+    padding-top: 0
+}
+
+.section__06c2b {
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    padding-inline-start: 20px
+}
+
+.section__06c2b:first-child {
+    padding-inline-start: 0
+}
+
+.width100__06c2b {
+    width: 100%
+}
+
+.width75__06c2b {
+    width: 75%
+}
+
+.width60__06c2b {
+    width: 60%
+}
+
+.width40__06c2b {
+    width: 40%
+}
+
+.width30__06c2b {
+    width: 30%
+}
+
+.width50__06c2b {
+    width: 50%
+}
+
+.width25__06c2b {
+    width: 25%
+}
+
+.cardNumberWrapper__8b579 {
+    position: relative
+}
+
+.cardIcon__8b579 {
+    inset-inline-start: 10px;
+    position: absolute;
+    top: 10px
+}
+
+.cardInput__8b579 {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--input-border-default);
+    border-radius: var(--radius-sm);
+    padding: 10px 9px
+}
+
+.hiddenDiv__8b579 {
+    height: 0;
+    padding: 0;
+    visibility: hidden
+}
+
+.cardNumberInput__8b579 {
+    padding-inline-start: 55px
+}
+
+.cardInputFocused__8b579 {
+    border-color: var(--text-link)
+}
+
+.cardInputError__8b579 {
+    border-color: var(--border-feedback-critical)
+}
+
+.theme-dark .inputPrefix__8b579 {
+    opacity: .5
+}
+
+.enable-forced-colors .cardInput__8b579 {
+    border: 1px solid ButtonText;
+    display: block
+}
+
+.enable-forced-colors .cardInput__8b579:focus,
+.enable-forced-colors .cardInput__8b579:hover {
+    border-color: Highlight
+}
+
+.enable-forced-colors .cardInputFocused__8b579 {
+    border-color: Highlight
+}
+
+.enable-forced-colors .inputPrefix__8b579 {
+    opacity: 1
+}

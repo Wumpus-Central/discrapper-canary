@@ -862,7 +862,7 @@ let t1 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAU
             children: (0, i.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
-function t2(t, e) {
+function t4(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -873,7 +873,7 @@ function t2(t, e) {
             return (0, tz.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t4 = {
+let t2 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -903,7 +903,7 @@ let t4 = {
     },
 };
 function t6(t, e, n, i, l) {
-    let s = t4[e],
+    let s = t2[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
     if (null != s && null != a) {
@@ -914,8 +914,8 @@ function t6(t, e, n, i, l) {
 }
 function t3(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: r } = t,
-        a = t2(s, n),
-        o = t2(l, n);
+        a = t4(s, n),
+        o = t4(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -1005,8 +1005,8 @@ class t7 extends l.PureComponent {
         if (null != n) {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
-                let n = t2(l, s),
-                    r = t2(i, s),
+                let n = t4(l, s),
+                    r = t4(i, s),
                     a = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1366,7 +1366,7 @@ var ec = n(665260),
     ef = n(314116),
     ey = n(821609),
     eI = n(993077),
-    eN = n(292666),
+    eN = n(95477),
     eT = n(150934),
     eC = n(825484),
     eR = n(452027),
