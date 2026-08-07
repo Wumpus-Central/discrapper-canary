@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 589889, Version Hash: bdf2c385b429686176494e1203e8a320af110b26`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 589926, Version Hash: 1c984ebee6aa6cc6a0f2c79c9521a12365567213`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     ef.A.initBasic(),
@@ -17471,41 +17471,41 @@ function m4(e) {
         })),
             (n = 4);
     } else
-        T
-            ? ((t = (0, R.jsx)(T3.MA, {
-                  isTabSelected: a,
-                  badgeCopy: tm.intl.string(tm.t.raP9dM),
-                  offerExpiresAt: null,
-                  unackedBadgeStyle: en,
-              })),
-              (n = 4))
-            : eG === eA && eE?.badge != null
-              ? ((t = (0, R.jsx)(pX.E, { type: { text: eE.badge }, variant: "expressive" })), (n = 16), (eV = !0))
-              : null != O
-                ? ((t = (0, R.jsx)(pX.E, { type: { text: O }, variant: "expressive" })), (n = 1))
-                : null != f && f.discountId === dr.xH
-                  ? ((t = (0, R.jsx)(T5, { userDiscount: f, isTabSelected: a })), (n = 9))
-                  : null != f
-                    ? ((t = (0, R.jsx)(T3.fY, {
-                          userDiscount: f,
-                          isTabSelected: a,
-                          includesAmountOff: !1,
-                          badgeStyle: en,
-                      })),
-                      (n = 3),
-                      (ek = et === Tk.F.POPOVER && eM === i0.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                      (eF = et === Tk.F.TOOLTIP && !f.hasAcknowledged()))
-                    : null == I || ec
-                      ? Q
-                          ? ((t = (0, R.jsx)(me, { isSelected: a, discountOffer: p })), (n = 8))
-                          : ej
-                            ? (j
-                                  ? (t = (0, R.jsx)(pX.E, {
-                                        type: { text: tm.intl.string(mI.default["20lfHk"]) },
-                                        variant: "expressive",
-                                    }))
-                                  : W && (t = (0, R.jsx)(pX.E, { type: "new", variant: "expressive" })),
-                              (n = 17))
+        ej
+            ? (j
+                  ? (t = (0, R.jsx)(pX.E, {
+                        type: { text: tm.intl.string(mI.default["20lfHk"]) },
+                        variant: "expressive",
+                    }))
+                  : W && (t = (0, R.jsx)(pX.E, { type: "new", variant: "expressive" })),
+              (n = 17))
+            : T
+              ? ((t = (0, R.jsx)(T3.MA, {
+                    isTabSelected: a,
+                    badgeCopy: tm.intl.string(tm.t.raP9dM),
+                    offerExpiresAt: null,
+                    unackedBadgeStyle: en,
+                })),
+                (n = 4))
+              : eG === eA && eE?.badge != null
+                ? ((t = (0, R.jsx)(pX.E, { type: { text: eE.badge }, variant: "expressive" })), (n = 16), (eV = !0))
+                : null != O
+                  ? ((t = (0, R.jsx)(pX.E, { type: { text: O }, variant: "expressive" })), (n = 1))
+                  : null != f && f.discountId === dr.xH
+                    ? ((t = (0, R.jsx)(T5, { userDiscount: f, isTabSelected: a })), (n = 9))
+                    : null != f
+                      ? ((t = (0, R.jsx)(T3.fY, {
+                            userDiscount: f,
+                            isTabSelected: a,
+                            includesAmountOff: !1,
+                            badgeStyle: en,
+                        })),
+                        (n = 3),
+                        (ek = et === Tk.F.POPOVER && eM === i0.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                        (eF = et === Tk.F.TOOLTIP && !f.hasAcknowledged()))
+                      : null == I || ec
+                        ? Q
+                            ? ((t = (0, R.jsx)(me, { isSelected: a, discountOffer: p })), (n = 8))
                             : (K && eT === i0.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
                                 (X && eT === i0.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
                                 (Z && eD === i0.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
@@ -17519,10 +17519,10 @@ function m4(e) {
                                     ((t = (0, R.jsx)(pX.E, { type: "new", variant: "expressive" })),
                                     (n = 15),
                                     (r = mn.PROFILE_FRAMES_CARD_ID))
-                      : ((t = (0, R.jsx)(T3.Ag, { trialOffer: I, isTabSelected: a, badgeStyle: en })),
-                        (n = 4),
-                        (ek = et === Tk.F.POPOVER && eM === i0.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                        (eF = et === Tk.F.TOOLTIP && null == I.expires_at));
+                        : ((t = (0, R.jsx)(T3.Ag, { trialOffer: I, isTabSelected: a, badgeStyle: en })),
+                          (n = 4),
+                          (ek = et === Tk.F.POPOVER && eM === i0.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                          (eF = et === Tk.F.TOOLTIP && null == I.expires_at));
     let ez = m0.NONE;
     eR === i0.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
         ? (ez = m0.MARKETING_MOMENT_POPOVER)
@@ -17540,9 +17540,9 @@ function m4(e) {
                     ? (ez = m0.ORBS_INTRO)
                     : Z && eD === i0.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
                       ? (ez = m0.ORBS_DROP)
-                      : 17 === n && j
+                      : ej && j
                         ? (ez = m0.COD_3PP_NITRO)
-                        : 17 === n && W
+                        : ej && W
                           ? (ez = m0.COD_3PP_NON_NITRO)
                           : eB
                             ? (ez = m0.TOOLTIP)
@@ -18260,7 +18260,7 @@ let g$ = "isHideDevBanner",
                     className: ts()(gK.Wz, gK.mr),
                     children: [
                         (0, R.jsx)(gY, { className: gK.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "589889" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "589926" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
