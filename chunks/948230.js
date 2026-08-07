@@ -92,17 +92,16 @@ async function O(t) {
     );
 }
 async function C(t) {
-    let { countAsDeploy: e = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        i = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
-    if (!i.ok) return s(t, i.status, !0), i;
-    let { application: E, bot_permissions_changed: n, integration_installed: a, project: l } = i.body;
+    let e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
+    if (!e.ok) return s(t, e.status, !0), e;
+    let { application: i, bot_permissions_changed: E, integration_installed: n, project: a } = e.body;
     return (
-        _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: l }),
-        _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: E, isHydrated: !0 }),
-        p(t, { bot_permissions_changed: n, integration_installed: a, preview_ready: !0 }),
-        a && !n && R(E.id),
-        e && (0, o.qs)(t, { isPreview: !0 }),
-        i
+        _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: a }),
+        _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i, isHydrated: !0 }),
+        p(t, { bot_permissions_changed: E, integration_installed: n, preview_ready: !0 }),
+        n && !E && R(i.id),
+        (0, o.qs)(t, { isPreview: !0 }),
+        e
     );
 }
 function P(t) {
