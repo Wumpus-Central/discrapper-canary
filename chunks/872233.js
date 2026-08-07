@@ -1,175 +1,177 @@
-n.d(e, { default: () => T }), n(323874), n(14289), n(35956);
-var a = n(477900),
-    i = n(582128),
+n.d(t, { default: () => T }), n(323874), n(14289), n(35956);
+var i = n(477900),
+    a = n(582128),
     c = n(224640),
-    s = n(20742),
-    l = n(430993),
+    l = n(20742),
+    s = n(430993),
     o = n(696208),
     r = n(17928),
-    u = n(192308),
-    d = n(104510),
-    _ = n(793574),
-    p = n(688810),
-    b = n(607470),
-    A = n(987144),
-    U = n(773669),
-    f = n(71393),
+    u = n(876230),
+    d = n(192308),
+    _ = n(104510),
+    p = n(793574),
+    b = n(688810),
+    U = n(987144),
+    f = n(773669),
+    A = n(613373),
+    y = n(71393),
     L = n(174459),
-    y = n(652215),
+    R = n(652215),
     E = n(375708),
     M = n(58023),
     O = n(519636);
-function T(t) {
+function T(e) {
     let {
-            guildId: e,
+            guildId: t,
             transitionState: T,
-            onClose: R,
-            analyticsLocation: g,
-            sourceAnalyticsLocations: I,
-            videoPlacement: k,
-        } = t,
-        j = (0, r.bG)([f.A], () => (null != e ? f.A.getGuild(e) : null)),
-        D = (0, r.bG)([U.default], () => U.default.locale),
-        m = (function (t) {
-            let [e, n] = i.useState(void 0);
+            onClose: I,
+            analyticsLocation: h,
+            sourceAnalyticsLocations: j,
+            videoPlacement: D,
+        } = e,
+        G = (0, r.bG)([y.A], () => (null != t ? y.A.getGuild(t) : null)),
+        S = (function (e) {
+            let [t, n] = a.useState(void 0);
             return (
-                i.useEffect(() => {
-                    let e;
-                    if (t.startsWith("en")) return;
-                    let a = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${t}.vtt`,
-                        i = !1;
+                a.useEffect(() => {
+                    let t;
+                    if (e.startsWith("en")) return;
+                    let i = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${e}.vtt`,
+                        a = !1;
                     return (
-                        fetch(a)
-                            .then((t) => {
-                                if (t.ok) return t.text();
+                        fetch(i)
+                            .then((e) => {
+                                if (e.ok) return e.text();
                             })
-                            .then((t) => {
-                                i || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
+                            .then((e) => {
+                                a || null == e || n((t = URL.createObjectURL(new Blob([e], { type: "text/vtt" }))));
                             })
                             .catch(() => {}),
                         () => {
-                            (i = !0), null != e && URL.revokeObjectURL(e), n(void 0);
+                            (a = !0), null != t && URL.revokeObjectURL(t), n(void 0);
                         }
                     );
-                }, [t]),
-                e
+                }, [e]),
+                t
             );
-        })(D),
-        { analyticsLocations: G } = (0, p.Ay)(I, _.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [h, x] = i.useState(!1),
-        C = i.useRef(!1),
-        S = i.useRef(null),
-        P = i.useMemo(
+        })((0, r.bG)([f.default], () => f.default.locale)),
+        { analyticsLocations: g } = (0, b.Ay)(j, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [k, m] = a.useState(!1),
+        C = a.useRef(!1),
+        x = a.useRef(null),
+        v = a.useRef(null),
+        N = a.useMemo(
             () => ({
-                ...(null != e ? { guild_id: e } : {}),
-                type: y.liQ.PREMIUM_GUILD_USER_MODAL,
-                location_stack: G,
-                location_section: g.section,
-                location_object: g.object,
-                video_placement: k,
+                ...(null != t ? { guild_id: t } : {}),
+                type: R.liQ.PREMIUM_GUILD_USER_MODAL,
+                location_stack: g,
+                location_section: h.section,
+                location_object: h.object,
+                video_placement: D,
             }),
-            [g.object, g.section, G, e, k],
+            [h.object, h.section, g, t, D],
         ),
-        v = i.useCallback(
-            (t) => {
-                let e = t.currentTarget.duration;
-                C.current ||
-                    ((C.current = !0),
-                    L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
-                        ...P,
-                        ...(Number.isFinite(e) ? { video_duration_sec: e } : {}),
-                    }));
-            },
-            [P],
-        ),
-        N = i.useCallback(
-            (t) => {
-                let e = t.currentTarget.currentTime,
-                    n = t.currentTarget.duration;
-                L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
-                    ...P,
-                    ...(Number.isFinite(e) ? { seconds_played: e } : {}),
-                    ...(Number.isFinite(n) ? { video_duration_sec: n } : {}),
+        P = a.useCallback(
+            (e) => {
+                if (e !== u.Q6.PLAYING || C.current) return;
+                C.current = !0;
+                let t = x.current?.duration;
+                L.default.track(R.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
+                    ...N,
+                    ...(null != t && Number.isFinite(t) ? { video_duration_sec: t } : {}),
                 });
             },
-            [P],
-        );
+            [N],
+        ),
+        B = a.useCallback(() => {
+            let e = x.current?.currentTime,
+                t = x.current?.duration;
+            L.default.track(R.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
+                ...N,
+                ...(null != e && Number.isFinite(e) ? { seconds_played: e } : {}),
+                ...(null != t && Number.isFinite(t) ? { video_duration_sec: t } : {}),
+            });
+        }, [N]);
     async function w() {
-        null != j &&
-            (S.current?.pause(),
-            x(!0),
-            await (0, A.g)({
-                analyticsLocations: G,
+        null != G &&
+            (v.current?.pause(),
+            m(!0),
+            await (0, U.g)({
+                analyticsLocations: g,
                 analyticsLocation: {
-                    page: y.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: y.ZSU.BUTTON_CTA,
-                    objectType: y.AnalyticsObjectTypes.BUY,
+                    page: R.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: R.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: R.ZSU.BUTTON_CTA,
+                    objectType: R.AnalyticsObjectTypes.BUY,
                 },
-                guild: j,
-                onClose: R,
+                guild: G,
+                onClose: I,
             }),
-            x(!1));
+            m(!1));
     }
-    async function B() {
-        S.current?.pause(),
-            await (0, u.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("93781"), n.e("96329")]).then(n.bind(n, 770101));
-                return (e) =>
-                    (0, a.jsx)(t, {
-                        ...e,
-                        onSelectGuild: (t) => {
-                            e.onClose(),
-                                R(),
-                                (0, A.g)({
-                                    analyticsLocations: G,
+    async function Q() {
+        v.current?.pause(),
+            await (0, d.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("93781"), n.e("96329")]).then(n.bind(n, 770101));
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        ...t,
+                        onSelectGuild: (e) => {
+                            t.onClose(),
+                                I(),
+                                (0, U.g)({
+                                    analyticsLocations: g,
                                     analyticsLocation: {
-                                        page: y.liQ.PREMIUM_GUILD_USER_MODAL,
-                                        section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                        object: y.ZSU.BUTTON_CTA,
-                                        objectType: y.AnalyticsObjectTypes.BUY,
+                                        page: R.liQ.PREMIUM_GUILD_USER_MODAL,
+                                        section: R.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                        object: R.ZSU.BUTTON_CTA,
+                                        objectType: R.AnalyticsObjectTypes.BUY,
                                     },
-                                    guild: t,
+                                    guild: e,
                                 });
                         },
                     });
             });
     }
-    let H = E.intl.string(E.t["0f1VCH"]);
-    return (0, a.jsxs)(c.d, {
+    let F = E.intl.string(E.t["0f1VCH"]);
+    return (0, i.jsxs)(c.d, {
         size: "xxl",
         transitionState: T,
-        onClose: R,
-        "aria-label": H,
+        onClose: I,
+        "aria-label": F,
         children: [
-            (0, a.jsx)(s.rQ, { title: H }),
-            (0, a.jsx)(l.c, {
-                children: (0, a.jsx)(b.A, {
-                    ref: S,
+            (0, i.jsx)(l.rQ, { title: F }),
+            (0, i.jsx)(s.c, {
+                children: (0, i.jsx)("div", {
                     className: M.K,
-                    src: "https://cdn.discordapp.com/assets/content/f0b9a61f96ee69dc341c22c04fe6458660d9317caae3d381c05cf8348fca5b95.mp4",
-                    poster: O.A,
-                    controls: !0,
-                    autoPlay: !0,
-                    controlsList: "nodownload noremoteplayback noplaybackrate",
-                    onPlay: v,
-                    onEnded: N,
-                    disablePictureInPicture: !0,
-                    children: null != m && (0, a.jsx)("track", { src: m, kind: "captions", srcLang: D, default: !0 }),
+                    children: (0, i.jsx)(A.Ft, {
+                        ref: x,
+                        playerRef: v,
+                        parentTransitionState: T,
+                        orientation: "landscape",
+                        src: "https://cdn.discordapp.com/assets/content/f0b9a61f96ee69dc341c22c04fe6458660d9317caae3d381c05cf8348fca5b95.mp4",
+                        poster: O.A,
+                        captionTrackUrl: S,
+                        autoplay: !0,
+                        autoFocus: !0,
+                        hidePlaybackSpeedBtn: !0,
+                        onPlayerStateChange: P,
+                        onEnded: B,
+                    }),
                 }),
             }),
-            (0, a.jsx)(o.H, {
+            (0, i.jsx)(o.H, {
                 actions: [
-                    null != j
+                    null != G
                         ? {
                               variant: "expressive",
                               size: "md",
-                              icon: d._,
+                              icon: _._,
                               text: E.intl.string(E.t.gKmQ1G),
                               onClick: w,
-                              loading: h,
+                              loading: k,
                           }
-                        : { variant: "primary", size: "md", text: E.intl.string(E.t.BMx1iy), onClick: B },
+                        : { variant: "primary", size: "md", text: E.intl.string(E.t.BMx1iy), onClick: Q },
                 ],
             }),
         ],

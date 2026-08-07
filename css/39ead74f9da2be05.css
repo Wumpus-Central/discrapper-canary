@@ -1,5 +1,6 @@
 .video__6b794 {
     border-radius: var(--radius-sm);
-    display: block;
+    display: flex;
+    overflow: hidden;
     width: 100%
 }
