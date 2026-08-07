@@ -154,7 +154,12 @@ function Q(e) {
         G = n.useRef(null),
         J = n.useRef(null),
         V = n.useRef(!0);
-    n.useEffect(() => () => void (V.current = !1), []);
+    n.useEffect(
+        () => () => {
+            V.current = !1;
+        },
+        [],
+    );
     let ee = n.useRef(!1),
         et = n.useCallback(() => s.bP.string(Q), [Q]),
         el = n.useCallback(() => {
@@ -293,7 +298,9 @@ function Q(e) {
                         !0 !== n && K(!0),
                         !0 === n && es({ queryString: et(), searchQuerySource: u });
                 } finally {
-                    Promise.resolve().then(() => void (ee.current = !1));
+                    Promise.resolve().then(() => {
+                        ee.current = !1;
+                    });
                 }
             },
             [Q, et, eu, es],

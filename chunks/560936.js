@@ -11,7 +11,9 @@ function l(e) {
         let { setAnimate: e } = A;
         return (
             r._.subscribeKeyed(i.zOV.ANIMATE_CHAT_AVATAR, `${n}:${l}`, e),
-            () => void r._.unsubscribeKeyed(i.zOV.ANIMATE_CHAT_AVATAR, `${n}:${l}`, e)
+            () => {
+                r._.unsubscribeKeyed(i.zOV.ANIMATE_CHAT_AVATAR, `${n}:${l}`, e);
+            }
         );
     }, [t, l, n, A]);
 }

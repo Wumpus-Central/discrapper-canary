@@ -31,7 +31,7 @@ var i,
     R = l(998939),
     T = l(972786),
     z = l(20386),
-    D = l(602323),
+    D = l(750896),
     P = l(922016),
     O = l(980707),
     B = l(477782),
@@ -330,7 +330,9 @@ function ec(e) {
                     applicationId: e,
                     application: _ ?? null,
                     guildId: L,
-                    onClose: () => void U(),
+                    onClose: () => {
+                        U();
+                    },
                 });
         }, [U, L, _, t]),
         J = P ? { type: "permissions", onReviewPermissions: Q, loading: V || R } : R ? { type: "checking" } : void 0;

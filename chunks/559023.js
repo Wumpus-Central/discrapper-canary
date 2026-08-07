@@ -110,8 +110,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "564083",
-            built_at: "1781640804075",
+            build_number: "589545",
+            built_at: "1786065304640",
             release_channel: n.y ?? "unknown",
             meticulous_perf_version: 5,
             tags: this.getTags(),
@@ -263,8 +263,8 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "564083",
-                built_at: "1781640804075",
+                build_number: "589545",
+                built_at: "1786065304640",
                 release_channel: n.y ?? "unknown",
                 meticulous_perf_version: 5,
                 tags: { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(o) },
@@ -465,7 +465,9 @@ class v {
         this.pressureTracker.start(e),
             this.actionTracker.start(this.mode, t),
             this.heapSampler.start(this.mode, t, () => this.pressureTracker.collect()),
-            (this.boundBeforeUnload = () => void this.terminate()),
+            (this.boundBeforeUnload = () => {
+                this.terminate();
+            }),
             window.addEventListener("beforeunload", this.boundBeforeUnload);
     }
     async terminate() {

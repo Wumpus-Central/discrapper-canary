@@ -313,7 +313,9 @@ function G() {
                                 (0, r.jsx)(x.$, {
                                     text: "refresh sessions",
                                     variant: "secondary",
-                                    onClick: () => void J(),
+                                    onClick: () => {
+                                        J();
+                                    },
                                 }),
                             ],
                         }),

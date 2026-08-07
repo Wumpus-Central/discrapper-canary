@@ -1,6 +1,6 @@
 a.r(i), a.d(i, { default: () => T });
-var d = a(477900),
-    l = a(582128),
+var l = a(477900),
+    d = a(582128),
     n = a(17928),
     t = a(834730),
     s = a(47167),
@@ -12,8 +12,8 @@ var d = a(477900),
     p = a(408278),
     x = a(811893),
     m = a(47294),
-    v = a(16961),
-    I = a(672929),
+    I = a(16961),
+    v = a(672929),
     g = a(228366),
     A = a(494126),
     _ = a(91242),
@@ -30,16 +30,16 @@ var y = a(165610),
     b = a(375708);
 function P(e) {
     let { applicationId: i, surface: a } = e,
-        n = (0, I.A)(i, a),
-        t = (0, v.G)(),
-        s = l.useCallback(() => {
-            null != n && (0, m.A)({ onConfirm: () => void j(n.id) });
+        n = (0, v.A)(i, a),
+        t = (0, I.G)(),
+        s = d.useCallback(() => {
+            null != n && (0, m.A)({ onConfirm: () => j(n.id) });
         }, [n]);
     return t && (0, y.x1)(n)
-        ? (0, d.jsx)(h.m, {
+        ? (0, l.jsx)(h.m, {
               text: b.intl.string(N.default["6g22y7"]),
               ariaHidden: !0,
-              children: (0, d.jsx)(p.K, {
+              children: (0, l.jsx)(p.K, {
                   "aria-label": b.intl.string(N.default["6g22y7"]),
                   icon: x.t,
                   variant: "icon-only",
@@ -58,26 +58,26 @@ function T(e) {
         h = (0, C.A)(i),
         p = (0, s.Ay)(i),
         x = (0, n.bG)([o.A], () => o.A.getGuild(i.guild_id), [i.guild_id]),
-        m = l.useMemo(() => ({ type: y.U4.APP_CHANNEL, channelId: i.id, guildId: i.guild_id ?? void 0 }), [i]);
+        m = d.useMemo(() => ({ type: y.U4.APP_CHANNEL, channelId: i.id, guildId: i.guild_id ?? void 0 }), [i]);
     return null == a
         ? null
-        : (0, d.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: O.kL,
               children: [
-                  (0, d.jsx)(c.HI, { location: x?.name, subsection: p ?? void 0 }),
-                  (0, d.jsx)("div", {
+                  (0, l.jsx)(c.HI, { location: x?.name, subsection: p ?? void 0 }),
+                  (0, l.jsx)("div", {
                       className: O.N1,
-                      children: (0, d.jsx)(
+                      children: (0, l.jsx)(
                           r.A,
                           {
                               guildId: i.guild_id,
                               channelId: i.id,
                               channelType: i.type,
                               hideSearch: !0,
-                              toolbar: (0, d.jsx)(P, { applicationId: a, surface: m }),
+                              toolbar: (0, l.jsx)(P, { applicationId: a, surface: m }),
                               className: O.wx,
                               "aria-label": p ?? void 0,
-                              children: (0, d.jsx)(t.E, {
+                              children: (0, l.jsx)(t.E, {
                                   variant: "text-md/semibold",
                                   color: "text-default",
                                   className: O.Bv,
@@ -87,10 +87,10 @@ function T(e) {
                           `header-${i.id}`,
                       ),
                   }),
-                  (0, d.jsx)("div", {
+                  (0, l.jsx)("div", {
                       className: O.Ix,
                       "data-vibegrations-channel": !0,
-                      children: (0, d.jsx)(k.A, {
+                      children: (0, l.jsx)(k.A, {
                           projectId: h?.id ?? null,
                           applicationId: a,
                           surface: m,

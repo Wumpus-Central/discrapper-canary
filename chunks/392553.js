@@ -267,7 +267,7 @@ var k = n(95561),
     Y = n(820066),
     K = n(702483),
     $ = n(490682),
-    z = n(739181),
+    z = n(683167),
     q = n(284009),
     Z = n.n(q),
     X = n(530795),
@@ -1000,7 +1000,9 @@ class em extends r.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), 1e3));
+            (this._initTimeoutId = setTimeout(() => {
+                this._getEditorWindow();
+            }, 1e3));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {

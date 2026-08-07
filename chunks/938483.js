@@ -170,7 +170,7 @@ let T = (0, c.Fe)({
             n.e("65420"),
             n.e("3056"),
             n.e("62329"),
-            n.e("80263"),
+            n.e("48391"),
             n.e("74725"),
             n.e("78015"),
             n.e("22570"),
@@ -459,7 +459,15 @@ function m(e) {
             },
             [u, c, L, v],
         );
-    r.useEffect(() => (f._.subscribe(p.jej.TOGGLE_INBOX, U), () => void f._.unsubscribe(p.jej.TOGGLE_INBOX, U)), [U]);
+    r.useEffect(
+        () => (
+            f._.subscribe(p.jej.TOGGLE_INBOX, U),
+            () => {
+                f._.unsubscribe(p.jej.TOGGLE_INBOX, U);
+            }
+        ),
+        [U],
+    );
     let w = (0, _.jv)("RecentsPopout"),
         G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {

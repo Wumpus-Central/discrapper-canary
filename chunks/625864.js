@@ -30,7 +30,12 @@ function p(e) {
         return r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         s.useEffect(
-            () => (u._.subscribe(T.jej.TOGGLE_INBOX, L), () => void u._.unsubscribe(T.jej.TOGGLE_INBOX, L)),
+            () => (
+                u._.subscribe(T.jej.TOGGLE_INBOX, L),
+                () => {
+                    u._.unsubscribe(T.jej.TOGGLE_INBOX, L);
+                }
+            ),
             [L],
         );
     let { entrypoint: N } = (0, d.X8)({ location: "NotificationsInboxPopout" });

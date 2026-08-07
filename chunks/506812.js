@@ -98,40 +98,40 @@ async function G(t) {
     }
 }
 var L = a(626584),
-    v = a(754674);
-let U = {};
+    U = a(754674);
+let v = {};
 function x(t) {
-    let e = U[t];
+    let e = v[t];
     return e?.saveStatus === "saving" ? void 0 : e;
 }
 class y extends l.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(t) {
-        return U[t]?.draft;
+        return v[t]?.draft;
     }
     isEditing(t) {
-        return null != U[t];
+        return null != v[t];
     }
     getSaveStatus(t) {
-        return U[t]?.saveStatus ?? "idle";
+        return v[t]?.saveStatus ?? "idle";
     }
 }
 let m = new y(o.h, {
     GUILD_SPACE_EDIT_START: function (t) {
         let { guildId: e, space: a } = t;
-        U[e] = { draft: { header: a.header, widgets: (0, v.W$)(a.widgets) }, saveStatus: "idle" };
+        v[e] = { draft: { header: a.header, widgets: (0, U.W$)(a.widgets) }, saveStatus: "idle" };
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (t) {
         let { guildId: e, widget: a } = t,
             i = x(e);
         if (null == i) return !1;
-        i.draft = { ...i.draft, widgets: (0, v.QD)(i.draft.widgets, a) };
+        i.draft = { ...i.draft, widgets: (0, U.QD)(i.draft.widgets, a) };
     },
     GUILD_SPACE_EDIT_MOVE_WIDGET: function (t) {
         let { guildId: e, widgetId: a, targetColumn: i, targetIndex: r } = t,
             l = x(e);
         if (null == l) return !1;
-        let n = (0, v.Gm)(l.draft.widgets, a, i, r);
+        let n = (0, U.Gm)(l.draft.widgets, a, i, r);
         if (null == n) return !1;
         l.draft = { ...l.draft, widgets: n };
     },
@@ -144,7 +144,7 @@ let m = new y(o.h, {
             return e !== a;
         });
         if (r.length === i.draft.widgets.length) return !1;
-        i.draft = { ...i.draft, widgets: (0, v.W$)(r) };
+        i.draft = { ...i.draft, widgets: (0, U.W$)(r) };
     },
     GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG: function (t) {
         let { guildId: e, widgetId: a, config: i } = t,
@@ -155,35 +155,35 @@ let m = new y(o.h, {
     },
     GUILD_SPACE_EDIT_SAVE_START: function (t) {
         let { guildId: e, requestId: a } = t,
-            i = U[e];
+            i = v[e];
         if (null == i) return !1;
         (i.saveStatus = "saving"), (i.activeSaveRequestId = a);
     },
     GUILD_SPACE_EDIT_SAVE_FAILURE: function (t) {
         let { guildId: e, requestId: a } = t,
-            i = U[e];
+            i = v[e];
         if (i?.activeSaveRequestId !== a) return !1;
         delete i.activeSaveRequestId, (i.saveStatus = "error");
     },
     GUILD_SPACE_EDIT_CANCEL: function (t) {
         let { guildId: e } = t;
-        if (null == U[e]) return !1;
-        delete U[e];
+        if (null == v[e]) return !1;
+        delete v[e];
     },
     GUILD_SPACE_UPDATE_SUCCESS: function (t) {
         let { guildId: e } = t;
-        if (null == U[e]) return !1;
-        delete U[e];
+        if (null == v[e]) return !1;
+        delete v[e];
     },
     GUILD_DELETE: function (t) {
         let {
             guild: { id: e, unavailable: a },
         } = t;
-        if (a || null == U[e]) return !1;
-        delete U[e];
+        if (a || null == v[e]) return !1;
+        delete v[e];
     },
     LOGOUT: function () {
-        U = {};
+        v = {};
     },
 });
 var P = a(593673);
@@ -401,7 +401,7 @@ function tc(t) {
                                         widget: (function (t, e) {
                                             let a = {
                                                 id: `${R}${j++}`,
-                                                position: { column: v.FT, order: 0 },
+                                                position: { column: U.FT, order: 0 },
                                                 requires_hydration: !1,
                                                 default_title: e,
                                             };
@@ -486,7 +486,9 @@ function td(t) {
                         variant: "primary",
                         text: tl.intl.string(tl.t["R3BPH+"]),
                         loading: s,
-                        onClick: () => void b(e),
+                        onClick: () => {
+                            b(e);
+                        },
                     }),
                 ],
             }),

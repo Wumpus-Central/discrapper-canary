@@ -31,7 +31,9 @@ function r(e, t) {
             }
             return (
                 l._.subscribeKeyed(s.zOV.TOGGLE_REACTION_POPOUT, e, t),
-                () => void l._.unsubscribeKeyed(s.zOV.TOGGLE_REACTION_POPOUT, e, t)
+                () => {
+                    l._.unsubscribeKeyed(s.zOV.TOGGLE_REACTION_POPOUT, e, t);
+                }
             );
         }, [e, m]),
         { popouts: n, setPopout: m, selected: o }

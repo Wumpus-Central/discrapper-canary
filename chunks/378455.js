@@ -215,7 +215,15 @@ function H(e) {
                               },
                           },
                     actions: C
-                        ? [{ variant: "secondary", text: z.intl.string(z.t["ETE/oC"]), onClick: () => void n() }]
+                        ? [
+                              {
+                                  variant: "secondary",
+                                  text: z.intl.string(z.t["ETE/oC"]),
+                                  onClick: () => {
+                                      n();
+                                  },
+                              },
+                          ]
                         : [{ variant: "critical-primary", text: U, onClick: K, disabled: 0 === k, loading: S }],
                     children: C ? (0, i.jsx)(G, {}) : void 0,
                 });

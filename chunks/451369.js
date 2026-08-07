@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 589495, Version Hash: 06a581455bc3fe50a6ed72a20806584a66f20ec5`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 589545, Version Hash: 636fc9154676f875494242138859993411361136`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     ef.A.initBasic(),
@@ -18254,7 +18254,7 @@ let g$ = "isHideDevBanner",
                     className: ts()(gK.Wz, gK.mr),
                     children: [
                         (0, R.jsx)(gY, { className: gK.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "589495" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "589545" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -18879,7 +18879,9 @@ class SF extends e_.PureComponent {
                                 size: sP._3.SIZE_24,
                                 className: ts()(Sk.my, t),
                                 "aria-label": e.username,
-                                onContextMenu: (t) => void (null != e && r?.(t, e)),
+                                onContextMenu: (t) => {
+                                    null != e && r?.(t, e);
+                                },
                                 avatarContentRef: this.partyMemberAvatarRef,
                             }),
                         }),
