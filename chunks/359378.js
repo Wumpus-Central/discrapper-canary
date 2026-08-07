@@ -15,27 +15,28 @@ function h(a) {
             icon: s,
             label: l,
             subLabel: h,
-            selected: x,
-            disabled: u,
+            subLabelLineClamp: x = 1,
+            selected: u,
+            disabled: p,
             onPress: v,
-            trailing: p,
-            "aria-label": j,
-            "aria-setsize": b,
-            "aria-posinset": N,
-            className: k,
+            trailing: j,
+            "aria-label": b,
+            "aria-setsize": N,
+            "aria-posinset": k,
+            className: C,
         } = a,
         f = (0, r.rm)(i),
-        g = !0 === x && null != j ? o.intl.formatToPlainString(o.t.QymItZ, { text: j }) : j;
+        g = !0 === u && null != b ? o.intl.formatToPlainString(o.t.QymItZ, { text: b }) : b;
     return (0, e.jsx)(n.vN, {
         offset: { right: 4, bottom: 4 },
         children: (0, e.jsxs)(d.D, {
-            className: t()(m.HP, k, { [m.r9]: u }),
-            onClick: u ? void 0 : v,
+            className: t()(m.HP, C, { [m.r9]: p }),
+            onClick: p ? void 0 : v,
             "aria-label": g,
-            "aria-selected": x,
-            "aria-disabled": u,
-            "aria-setsize": b,
-            "aria-posinset": N,
+            "aria-selected": u,
+            "aria-disabled": p,
+            "aria-setsize": N,
+            "aria-posinset": k,
             ...f,
             children: [
                 (0, e.jsxs)("div", {
@@ -47,19 +48,24 @@ function h(a) {
                             children: [
                                 (0, e.jsx)(c.E, {
                                     tag: "strong",
-                                    color: u ? "text-muted" : void 0,
+                                    color: p ? "text-muted" : void 0,
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
                                     children: l,
                                 }),
                                 null != h
-                                    ? (0, e.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: h })
+                                    ? (0, e.jsx)(c.E, {
+                                          variant: "text-xs/normal",
+                                          color: "text-muted",
+                                          lineClamp: x,
+                                          children: h,
+                                      })
                                     : null,
                             ],
                         }),
                     ],
                 }),
-                null != p ? (0, e.jsx)("div", { className: m.ZY, children: p }) : null,
+                null != j ? (0, e.jsx)("div", { className: m.ZY, children: j }) : null,
             ],
         }),
     });
