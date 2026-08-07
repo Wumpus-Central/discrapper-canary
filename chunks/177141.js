@@ -821,7 +821,7 @@ let ta = {
     },
     [eI.kqX.RIOT_MIGRATION]: {
         predicate: () => {
-            if (!(0, E.getIsRiotSocialSDKMigrationEnabled)({ location: "NoticeStore" })) return !1;
+            if (!(0, E.NX)({ location: "NoticeStore" })) return !1;
             let e = null != eo.A.getAccount(null, eI.fg2.RIOT_GAMES),
                 t = null != eo.A.getAccount(null, eI.fg2.LEAGUE_OF_LEGENDS);
             if (ti(eI.kqX.RIOT_MIGRATION) || (0, f.k8)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))

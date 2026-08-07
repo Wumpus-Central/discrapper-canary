@@ -14683,7 +14683,7 @@ function Td() {
     });
 }
 var Tc = i(783419),
-    Tg = i(534952),
+    Tg = i(360308),
     Tm = i(230451),
     TA = i(113463);
 function Th(e) {
@@ -15134,7 +15134,7 @@ function Tx(e) {
 }
 function Tp() {
     let e = (0, SX.gn)(),
-        t = (0, tr.A)((0, Tg.Gl)("NewConnectionsList"));
+        t = (0, tr.A)((0, Tg.getMigratedApplicationIdentityConnectionsScreenApplications)("NewConnectionsList"));
     return (0, E.jsxs)("div", {
         className: TA.lA,
         children: [

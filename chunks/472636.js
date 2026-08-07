@@ -1,10 +1,5 @@
 "use strict";
-n.r(t),
-    n.d(t, {
-        battlenetSocialSDKMigrationExperiment: () => u,
-        getIsRiotSocialSDKMigrationEnabled: () => c,
-        useIsRiotSocialSDKMigrationEnabled: () => d,
-    });
+n.d(t, { Cl: () => d, MQ: () => u, NX: () => c });
 var i = n(945810);
 let r = { 0: { enabled: !1 }, 1: { enabled: !0 } },
     a = { enabled: !1 },

@@ -65,6 +65,7 @@ let m = {
             "https://vrchat.com/home/profile",
             "https://account.1047games.com/",
             "https://discord.facepunch.com/",
+            "https://account.battle.net/connections/discord",
         ]),
     ]);
 var S = n(788995),
@@ -73,15 +74,15 @@ var S = n(788995),
     O = n(71393),
     R = n(17928),
     L = n(506774),
-    y = n(998218),
-    D = n(155078),
+    D = n(998218),
+    y = n(155078),
     v = n(272984);
 let b = "MaskedLinkStore",
     M = new Set(),
     P = new Set(),
     U = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.replace("//", "");
 function w(e) {
-    let t = (0, D.E)(e);
+    let t = (0, y.E)(e);
     switch (t) {
         case window.GLOBAL_ENV.INVITE_HOST:
         case window.GLOBAL_ENV.GIFT_CODE_HOST:
@@ -90,11 +91,11 @@ function w(e) {
         case location.hostname:
             return !0;
         default:
-            return v.UN.includes(t) || y.A.isDiscordHostname(t) || M.has(t);
+            return v.UN.includes(t) || D.A.isDiscordHostname(t) || M.has(t);
     }
 }
 function G(e) {
-    let t = (0, D.J)(e);
+    let t = (0, y.J)(e);
     return P.has(t);
 }
 class x extends R.Ay.Store {
@@ -118,12 +119,12 @@ let k = new x(s.h, {
     MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
         let { url: t } = e;
         if (w(t)) return !1;
-        M.add((0, D.E)(t)), L.w.set(b, { trustedDomains: M, trustedProtocols: P });
+        M.add((0, y.E)(t)), L.w.set(b, { trustedDomains: M, trustedProtocols: P });
     },
     MASKED_LINK_ADD_TRUSTED_PROTOCOL: function (e) {
         let { url: t } = e;
         if (G(t)) return !1;
-        P.add((0, D.J)(t)), L.w.set(b, { trustedDomains: M, trustedProtocols: P });
+        P.add((0, y.J)(t)), L.w.set(b, { trustedDomains: M, trustedProtocols: P });
     },
 });
 var F = n(232835),
@@ -137,7 +138,7 @@ function j(e, t) {
 function W(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         s = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: c, onClick: u, onConfirm: E, onCancel: R, shouldConfirm: L, messageId: y, channelId: v } = e,
+        { trusted: c, onClick: u, onConfirm: E, onCancel: R, shouldConfirm: L, messageId: D, channelId: v } = e,
         b = r().sanitizeUrl(e.href);
     if (null == b) {
         null != t && t.preventDefault(),
@@ -157,11 +158,11 @@ function W(e, t) {
     }
     let P = null,
         U = !1,
-        w = y,
+        w = D,
         G = v,
         x = null;
-    if (null != y && null != v) {
-        let e = F.A.getMessage(v, y),
+    if (null != D && null != v) {
+        let e = F.A.getMessage(v, D),
             t = C.A.getBasicChannel(v);
         P = t?.guild_id ?? null;
         let n = O.A.getGuild(P),
@@ -185,14 +186,14 @@ function W(e, t) {
         null != e &&
             null != t &&
             t.features.has(h.GuildFeatures.DISCOVERABLE) &&
-            A.default.track(h.HAw.URL_CLICKED, { url_domain: (0, D.E)(M), guild_id: t.id, channel_id: e.id }),
+            A.default.track(h.HAw.URL_CLICKED, { url_domain: (0, y.E)(M), guild_id: t.id, channel_id: e.id }),
             (0, f.A)(v) && A.default.track(h.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: M });
     }
     if ((p.A.trackLinkClicked(M), null != u)) {
         if (u(t)) return;
     } else {
         let { default: e } = n(983555),
-            r = e(M, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: y, channelId: v });
+            r = e(M, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: D, channelId: v });
         if (null != r && r(t)) return;
     }
     function V() {
@@ -218,7 +219,7 @@ function W(e, t) {
         return;
     }
     let j = ("function" == typeof c ? c() : c) || g.has(M),
-        W = (0, D.J)(M),
+        W = (0, y.J)(M),
         Y = "http:" !== W && "https:" !== W;
     if ((!Y && (j || k.isTrustedDomain(M))) || (Y && k.isTrustedProtocol(M)))
         return void (null == t || (null != L && L)

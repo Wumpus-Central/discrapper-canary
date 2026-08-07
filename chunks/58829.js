@@ -8,12 +8,12 @@ var i = e(284009),
     r = e(939249),
     o = e(297264),
     d = e(730134),
-    u = e(289498),
-    p = e(858177),
+    p = e(289498),
+    u = e(858177),
     m = e(429913),
     x = e(672130),
     h = e(874490),
-    j = e(534952),
+    j = e(360308),
     f = e(375708),
     v = e(19362);
 function N(n) {
@@ -23,7 +23,9 @@ function N(n) {
             includedPlatformTypes: i,
             includeApplicationConnections: s = !0,
         } = n,
-        a = (0, m.A)(s ? (0, j.Gl)("ConnectionsGridModal") : []),
+        a = (0, m.A)(
+            s ? (0, j.getMigratedApplicationIdentityConnectionsScreenApplications)("ConnectionsGridModal") : [],
+        ),
         c = (0, h.gn)();
     return (0, t.jsxs)("div", {
         className: v.lA,
@@ -33,7 +35,7 @@ function N(n) {
                 .filter((n) => !e?.has(n.type) && (null == i || i.has(n.type)))
                 .map((n) =>
                     (0, t.jsx)(
-                        u.A,
+                        p.A,
                         { type: n.type, className: v.W2, innerClassName: v.Uz, onConnect: () => l(n.type) },
                         n.type,
                     ),
@@ -41,7 +43,7 @@ function N(n) {
         ],
     });
 }
-function C(n) {
+function g(n) {
     let { integrations: l, onCompleteApplication: e } = n;
     if (null == l || null == e) return null;
     let i = l.filter((n) => n.application?.roleConnectionsVerificationUrl != null);
@@ -98,9 +100,9 @@ function C(n) {
               ],
           });
 }
-function g(n) {
+function C(n) {
     let { applicationId: l, onCompleteIdentityApplication: e } = n,
-        i = (0, p.O)(l);
+        i = (0, u.O)(l);
     if (null == i) return null;
     let s = i.bot;
     return (0, t.jsxs)(r.D, {
@@ -139,7 +141,7 @@ function y(n) {
                   }),
                   (0, t.jsx)("div", {
                       className: v.$v,
-                      children: l.map((n) => (0, t.jsx)(g, { applicationId: n, onCompleteIdentityApplication: e }, n)),
+                      children: l.map((n) => (0, t.jsx)(C, { applicationId: n, onCompleteIdentityApplication: e }, n)),
                   }),
               ],
           });
@@ -154,8 +156,8 @@ function A(n) {
         integrations: r,
         onCompleteApplication: o,
         includeApplicationConnections: d,
-        gameApplicationIds: u,
-        onCompleteIdentityApplication: p,
+        gameApplicationIds: p,
+        onCompleteIdentityApplication: u,
     } = n;
     return (0, t.jsxs)(a.Modal, {
         title: f.intl.string(f.t.syl6HS),
@@ -171,7 +173,7 @@ function A(n) {
                 includedPlatformTypes: c,
                 includeApplicationConnections: d,
             }),
-            (0, t.jsx)(C, {
+            (0, t.jsx)(g, {
                 integrations: r,
                 onCompleteApplication:
                     null != o
@@ -181,11 +183,11 @@ function A(n) {
                         : void 0,
             }),
             (0, t.jsx)(y, {
-                gameApplicationIds: u ?? null,
+                gameApplicationIds: p ?? null,
                 onCompleteIdentityApplication:
-                    null != p
+                    null != u
                         ? function (n) {
-                              p?.(n), i();
+                              u?.(n), i();
                           }
                         : void 0,
             }),

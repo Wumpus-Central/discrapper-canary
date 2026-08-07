@@ -1,7 +1,7 @@
 d.d(t, { A: () => s });
 var a = d(582128),
     c = d(201718),
-    n = d(534952);
+    n = d(360308);
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { includeHidden: d = !1 } = t,
@@ -12,7 +12,7 @@ function s(e) {
             () =>
                 (o ?? []).filter(
                     (e) =>
-                        n.JW.some(
+                        n.APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS.some(
                             (t) =>
                                 t.applicationId === e.application_id &&
                                 t.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),

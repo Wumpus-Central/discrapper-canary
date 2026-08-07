@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { kJ: () => p, lg: () => f, Ay: () => E }), n(938796);
+n.d(t, { kJ: () => h, lg: () => A, Ay: () => I }), n(938796);
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
-    s = n(136722),
-    a = n(315069),
-    o = n(486020),
-    l = n(935208);
-class u extends a.A {
+    a = n(136722),
+    s = n(315069),
+    l = n(486020),
+    o = n(935208);
+class d extends s.A {
     id;
     name;
     static createFromServer(e) {
-        return new u(e);
+        return new d(e);
     }
     constructor(e) {
         super(), (this.id = e.id), (this.name = e.name);
     }
 }
 var c = n(889227),
-    d = n(360469),
+    u = n(360469),
     _ = n(705751);
-let h = { [d.I4]: 7, [d.qA]: 12 };
-function f(e) {
+let E = { [u.I4]: 7, [u.qA]: 12 };
+function A(e) {
     let t = { os: e.os, name: e.name };
     return (
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class p extends a.A {
+class h extends s.A {
     id;
     name;
     icon;
@@ -44,7 +44,7 @@ class p extends a.A {
     _connectionEntrypointUrl;
     contentClassification;
     static createFromServer(e) {
-        return new p({
+        return new h({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -77,32 +77,30 @@ class p extends a.A {
             (this.contentClassification = e.content_classification ?? e.contentClassification);
     }
     get connectionEntrypointUrl() {
-        let { getIsRiotSocialSDKMigrationEnabled: e } = n(941314),
-            { getIsValorantSocialSDKEnabled: t } = n(159276);
-        return ["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id) &&
-            ("1443350165678198935" !== this.id || t({ location: "ApplicationRecord" })) &&
-            e({ location: "ApplicationRecord" })
-            ? "https://aes.sgp.pvp.net/providers/discord/link/v1?origin=Discord"
+        let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(360308),
+            t = e[this.id];
+        return t?.connectionEntrypointUrlOverride != null && t.getMigrationExperimentEnabled("ApplicationRecord")
+            ? t.connectionEntrypointUrlOverride
             : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
-        return null != this.icon ? o.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? l.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getIconSource(e, t) {
-        return null != this.icon ? o.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? l.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? o.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
+            ? l.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
             : null;
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? o.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
+            ? l.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
             : null;
     }
 }
-class E extends p {
+class I extends h {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -136,7 +134,7 @@ class E extends p {
     deepLinkUri;
     applicationAccountLinkBenefitConfig;
     static createFromServer(e) {
-        return new E({
+        return new I({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -150,11 +148,11 @@ class E extends p {
             storeListingSkuId: e.store_listing_sku_id,
             guildId: e.guild_id,
             guild: e.guild,
-            publishers: null != e.publishers ? e.publishers.map(u.createFromServer) : [],
-            developers: null != e.developers ? e.developers.map(u.createFromServer) : [],
+            publishers: null != e.publishers ? e.publishers.map(d.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(d.createFromServer) : [],
             eulaId: e.eula_id,
             slug: e.slug,
-            flags: s.iu(e.flags_new ?? e.flags ?? 0),
+            flags: a.iu(e.flags_new ?? e.flags ?? 0),
             maxParticipants: e.max_participants,
             tags: e.tags,
             embeddedActivityConfig: e.embedded_activity_config,
@@ -174,7 +172,7 @@ class E extends p {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? E.createFromServer(e.application) : void 0,
+                application: null != e.application ? I.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -194,11 +192,11 @@ class E extends p {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(f)),
+            (this.executables = (e.executables ?? []).map(A)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
-            (this.flags = s.iu(e.flags ?? 0)),
+            (this.flags = a.iu(e.flags ?? 0)),
             (this.tags = e.tags ?? []),
             (this.maxParticipants = e.maxParticipants),
             (this.embeddedActivityConfig = e.embedded_activity_config ?? e.embeddedActivityConfig),
@@ -215,7 +213,7 @@ class E extends p {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? E.createFromServer(e.application) : void 0,
+                    application: null != e.application ? I.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
@@ -224,12 +222,12 @@ class E extends p {
     }
     getCanonicalGameId() {
         return this.type === _.S7.GAME
-            ? l.default.cast(this.id)
+            ? o.default.cast(this.id)
             : (this.linkedGames?.find((e) => e.application?.type === _.S7.GAME)?.id ?? null);
     }
     mergeFromApplicationUpdate(e) {
         var t, n;
-        return new E({
+        return new I({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -297,7 +295,7 @@ class E extends p {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? h[this.id] ?? 0;
+        return this.maxParticipants ?? E[this.id] ?? 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -308,7 +306,7 @@ class E extends p {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return E.supportsOutOfProcessOverlay(this.overlayMethods);
+        return I.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.OUT_OF_PROCESS;

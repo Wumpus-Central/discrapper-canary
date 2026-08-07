@@ -1111,7 +1111,7 @@ let ns = {
     "1121201675240210523": "884849473329692723",
     "1402418594532298837": "560127830160048128",
 };
-var nl = n(534952),
+var nl = n(360308),
     no = n(911070),
     nd = n(524224),
     nc = n(268920),
@@ -1284,7 +1284,9 @@ function nh(e) {
         { isEligible: g, displayedApp: S } = (function (e) {
             let { connectionApp: t } = e,
                 { data: n } = (0, ec.YY)(t?.parentId ?? t?.id),
-                i = nl.ji.find((e) => e.applicationId === n?.id);
+                i = nl.APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS.find(
+                    (e) => e.applicationId === n?.id,
+                );
             return {
                 isEligible: null != i && i.getMigrationExperimentEnabled("ActivityPanelGameCard") && null != t,
                 displayedApp: n,
