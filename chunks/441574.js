@@ -1230,6 +1230,7 @@ var B =
         (c[(c.OS_SIGNAL = 7)] = "OS_SIGNAL"),
         (c[(c.ML_AGE_INFERENCE = 8)] = "ML_AGE_INFERENCE"),
         (c[(c.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
+        (c[(c.NEW_METHOD = 10)] = "NEW_METHOD"),
         c),
     K =
         (((u = {})[(u.UNSPECIFIED = 0)] = "UNSPECIFIED"),
