@@ -96,6 +96,7 @@ var i,
         (a.QuickSwitcher = "quick_switcher"),
         (a.GuildProfileGames = "guild_profile_games"),
         (a.GameInvitesChannel = "game_invites_channel"),
+        (a.VoiceChannelGames = "voice_channel_games"),
         a),
     h = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
 function I() {

@@ -5154,6 +5154,7 @@ var rv =
         (ew.GAME_PROFILE_OPEN = "game_profile_open"),
         (ew.GAME_PROFILE_CLOSE = "game_profile_close"),
         (ew.GAME_PROFILE_ENTRY_POINT_AVAILABLE = "game_profile_entry_point_available"),
+        (ew.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN = "voice_channel_game_activity_shown"),
         (ew.GAME_PROFILE_FOLLOW_SURVEY = "game_profile_follow_survey"),
         (ew.GAME_PROFILE_FEEDBACK = "game_profile_feedback"),
         (ew.GAME_PROFILE_LINK_EMBED_SENT = "game_profile_link_embed_sent"),
