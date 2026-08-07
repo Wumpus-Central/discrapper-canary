@@ -6,7 +6,8 @@ function i(e) {
     let { guildId: a, userId: i, anaylticsLocations: s, modReportId: l } = e;
     (0, d.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            t.e("95921"),
+            t.e("27358"),
+            t.e("9198"),
             t.e("8891"),
             t.e("91671"),
             t.e("70314"),

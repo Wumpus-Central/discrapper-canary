@@ -202,7 +202,7 @@ function v(e, t, v, P, T) {
                                     action: () =>
                                         (0, c.openModalLazy)(async () => {
                                             let { default: a } = await Promise.all([
-                                                i.e("95921"),
+                                                i.e("9198"),
                                                 i.e("10788"),
                                                 i.e("8891"),
                                                 i.e("91671"),
@@ -224,7 +224,7 @@ function v(e, t, v, P, T) {
                                     action: () =>
                                         (0, c.openModalLazy)(async () => {
                                             let { default: a } = await Promise.all([
-                                                i.e("95921"),
+                                                i.e("9198"),
                                                 i.e("87407"),
                                                 i.e("8891"),
                                                 i.e("91671"),

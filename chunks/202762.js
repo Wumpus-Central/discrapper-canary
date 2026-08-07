@@ -1,4 +1,4 @@
-i.d(t, { Fj: () => S, GP: () => I, Vk: () => h, Wd: () => f, iX: () => E, j0: () => g, lr: () => _ });
+i.d(t, { Fj: () => m, GP: () => _, Vk: () => I, Wd: () => f, iX: () => g, j0: () => h, lr: () => E });
 var n = i(562465),
     l = i(228366),
     a = i(626584),
@@ -12,29 +12,30 @@ function f(e) {
     let t = s.A.getSpace(e);
     null != t && l.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: t });
 }
-function E(e) {
+function g(e) {
     l.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e });
 }
-function _(e, t, i) {
+function E(e, t, i) {
     l.h.dispatch({ type: "GUILD_SPACE_EDIT_ADD_WIDGET", guildId: e, widget: (0, d.ox)(t, i) });
 }
-function g(e, t, i, n) {
+function h(e, t, i, n) {
     l.h.dispatch({ type: "GUILD_SPACE_EDIT_MOVE_WIDGET", guildId: e, widgetId: t, targetColumn: i, targetIndex: n });
 }
-function I(e, t) {
+function _(e, t) {
     l.h.dispatch({ type: "GUILD_SPACE_EDIT_REMOVE_WIDGET", guildId: e, widgetId: t });
 }
-function h(e, t, i) {
+function I(e, t, i) {
     l.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG", guildId: e, widgetId: t, config: i });
 }
-async function S(e) {
+async function m(e) {
     let t = r.A.getDraft(e);
     if (null == t || "saving" === r.A.getSaveStatus(e)) return;
     let i = {
             header: t.header,
             widgets: t.widgets.map((e) => {
-                let { id: t, type: i, position: n, config: l } = e;
-                return (0, d.Ny)(t) ? { type: i, position: n, config: l } : { id: t, type: i, position: n, config: l };
+                let { id: t, type: i, position: n, config: l } = e,
+                    a = { type: i, position: n, config: (0, d.y0)(l) };
+                return (0, d.Ny)(t) || (a.id = t), a;
             }),
         },
         a = o++;
