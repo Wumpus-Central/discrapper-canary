@@ -121,6 +121,12 @@ html:not(.keyboard-mode) .container__3d96b {
     position: absolute
 }
 
+.itemGroup_ded7b4 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
 .item_ded7b4 {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
@@ -128,16 +134,23 @@ html:not(.keyboard-mode) .container__3d96b {
     opacity: var(--custom-radial-opacity, 1)
 }
 
-.full-motion .item_ded7b4 {
+.itemGroup_ded7b4:has(.item_ded7b4+.item_ded7b4):has(.item_ded7b4:focus-visible) .item_ded7b4 button,
+.itemGroup_ded7b4:has(.item_ded7b4+.item_ded7b4):hover .item_ded7b4 button {
+    background-color: var(--control-overlay-primary-background-hover);
+    border-color: var(--control-overlay-primary-border-hover);
+    color: var(--control-overlay-primary-text-hover)
+}
+
+.full-motion .itemGroup_ded7b4 {
     transition: transform .24s cubic-bezier(.34, 1.56, .64, 1)
 }
 
-.full-motion .item_ded7b4:focus-visible,
-.full-motion .item_ded7b4:hover {
+.full-motion .itemGroup_ded7b4:has(.item_ded7b4:focus-visible),
+.full-motion .itemGroup_ded7b4:hover {
     transform: scale(1.08)
 }
 
-.full-motion .item_ded7b4:active {
+.full-motion .itemGroup_ded7b4:has(.item_ded7b4:active) {
     transform: scale(.985)
 }
 

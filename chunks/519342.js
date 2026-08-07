@@ -12,8 +12,8 @@ var i = n(477900),
     p = n(442433),
     m = n(717558),
     A = n(85448),
-    x = n(734057),
-    f = n(287809),
+    f = n(734057),
+    x = n(287809),
     g = n(977997),
     y = n(531685),
     C = n(562153),
@@ -40,24 +40,24 @@ function w(e) {
             avatarSize: M,
             posturesEnabled: D,
         } = e,
-        U = (0, c.bG)([f.default], () => f.default.getUser(t)),
-        k = (0, c.bG)([f.default], () => f.default.getCurrentUser()?.id === t),
+        U = (0, c.bG)([x.default], () => x.default.getUser(t)),
+        k = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
         [V, G] = l.useState(!1),
-        B = (0, c.bG)([x.A], () => x.A.getChannel(a)?.guild_id),
+        B = (0, c.bG)([f.A], () => f.A.getChannel(a)?.guild_id),
         H = (0, c.bG)([g.A], () => g.A.getVoiceState(B, t)),
         F = (0, m.A)({ userId: t }),
         z = (0, c.bG)([y.A], () => y.A.isFocused()),
         W = (0, C.tx)(B, a, U),
         $ = (0, c.bG)([E.A], () => E.A.getRoom(a)?.background ?? o.I.DEFAULT),
-        { seats: Y } = R.iX[$],
-        K = Y.find((e) => e.position.x === N && e.position.y === I),
+        { seats: K } = R.iX[$],
+        Y = K.find((e) => e.position.x === N && e.position.y === I),
         X = (0, d.z)({ x: N, y: I, config: { ...r.config.default, duration: 250 } }),
-        Z = l.useCallback(() => {
+        q = l.useCallback(() => {
             null != B && (0, v.EB)({ guildId: B, channelId: a, interactionType: "clicked" });
         }, [B, a]),
-        q = l.useCallback(
+        Z = l.useCallback(
             (e) => {
-                let t = x.A.getChannel(a);
+                let t = f.A.getChannel(a);
                 if (null != B && null != U && null != t)
                     return (0, p.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -107,13 +107,20 @@ function w(e) {
             null != B && (0, v.EB)({ guildId: B, channelId: a, interactionType: "hovered" });
         }, [B, a]);
     if (null == U || null == B) return null;
-    let J = null != K ? L.intl.formatToPlainString(S.default["4bL+KW"], { username: W, seatLabel: K.getLabel() }) : W,
-        ee = H?.isVoiceDeafened()
-            ? L.intl.formatToPlainString(L.t["9hDjai"], { username: J })
+    let J = D ? b.x.find((e) => e.id === w) : null,
+        ee =
+            null != Y
+                ? L.intl.formatToPlainString(J?.userLabel ?? S.default["4bL+KW"], {
+                      username: W,
+                      seatLabel: Y.getLabel(),
+                  })
+                : W,
+        et = H?.isVoiceDeafened()
+            ? L.intl.formatToPlainString(L.t["9hDjai"], { username: ee })
             : H?.isVoiceMuted()
-              ? L.intl.formatToPlainString(L.t.Hd1oVG, { username: J })
-              : J,
-        et = (0, i.jsx)(A.A, {
+              ? L.intl.formatToPlainString(L.t.Hd1oVG, { username: ee })
+              : ee,
+        en = (0, i.jsx)(A.A, {
             userId: U.id,
             src: U.getAvatarURL(B, O, F && z),
             size: M,
@@ -121,9 +128,11 @@ function w(e) {
             deafen: H?.isVoiceDeafened() ?? !1,
             speaking: F,
             ringing: !1,
-            className: K?.dim ? P.r3 : void 0,
+            className: Y?.dim ? P.r3 : void 0,
+            avatarDecoration: J?.src,
+            avatarClassName: J?.avatarClassName,
         }),
-        en = {
+        ei = {
             left: X.x.to((e) => `calc(${e}% - ${O / 2}px)`),
             top: X.y.to((e) => `calc(${e}% - ${O / 2}px)`),
             zIndex: V ? 1e6 : 1e3 * Math.round(I) + Math.round(N),
@@ -132,25 +141,23 @@ function w(e) {
         return (0, i.jsx)(r.animated.div, {
             role: "listitem",
             className: P.f1,
-            style: en,
+            style: ei,
             children: (0, i.jsx)(u.D, {
-                "aria-label": ee,
+                "aria-label": et,
                 className: P.KI,
                 onMouseEnter: Q,
-                onClick: Z,
-                onContextMenu: q,
-                children: et,
+                onClick: q,
+                onContextMenu: Z,
+                children: en,
             }),
         });
-    let ei = b.x.find((e) => e.id === w),
-        el = ei?.icon,
-        ea = (0, i.jsx)("div", { className: P.R3, children: et });
+    let el = (0, i.jsx)("div", { className: P.R3, children: en });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.animated.div, {
                 role: "listitem",
                 className: P.f1,
-                style: en,
+                style: ei,
                 children: k
                     ? (0, i.jsxs)(_.T, {
                           isOpen: V,
@@ -161,21 +168,20 @@ function w(e) {
                                       let { ref: t, onClick: n, ...l } = e;
                                       return (0, i.jsx)(T.A, {
                                           name: W,
-                                          status: ei,
                                           shouldShow: !V,
                                           children: (0, i.jsx)(u.D, {
                                               ...l,
-                                              "aria-label": ee,
+                                              "aria-label": et,
                                               className: s()(P.KI, P.hZ, { [P.Zu]: V }),
                                               innerRef: (e) => {
                                                   t.current = e;
                                               },
                                               onMouseEnter: Q,
                                               onClick: () => {
-                                                  n(), Z();
+                                                  n(), q();
                                               },
-                                              onContextMenu: q,
-                                              children: ea,
+                                              onContextMenu: Z,
+                                              children: el,
                                           }),
                                       });
                                   },
@@ -197,6 +203,7 @@ function w(e) {
                                                       user_status_text: t ? "" : L.intl.string(e.label),
                                                   });
                                               },
+                                              clearButtonAriaLabel: L.intl.string(L.t.VkKicb),
                                           },
                                           e.id,
                                       );
@@ -206,35 +213,27 @@ function w(e) {
                       })
                     : (0, i.jsx)(T.A, {
                           name: W,
-                          status: ei,
                           children: (0, i.jsx)(u.D, {
-                              "aria-label": ee,
+                              "aria-label": et,
                               className: P.KI,
                               onMouseEnter: Q,
-                              onClick: Z,
-                              onContextMenu: q,
-                              children: ea,
+                              onClick: q,
+                              onContextMenu: Z,
+                              children: el,
                           }),
                       }),
             }),
-            (k || (null != ei && null != el)) &&
-                (0, i.jsxs)(r.animated.div, {
+            (k || null != J) &&
+                (0, i.jsx)(r.animated.div, {
                     className: s()(P.v7, { [P.Zu]: V }),
-                    style: { ...en, width: O, height: O },
+                    style: { ...ei, width: O, height: O },
                     "aria-hidden": !0,
-                    children: [
-                        null != ei &&
-                            null != el &&
-                            (0, i.jsx)("div", {
-                                className: s()(P.qS, P.Od),
-                                children: (0, i.jsx)(el, { size: "xxs", color: "currentColor" }),
-                            }),
+                    children:
                         k &&
-                            (0, i.jsx)("div", {
-                                className: s()(P.qS, P.Gk),
-                                children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
-                            }),
-                    ],
+                        (0, i.jsx)("div", {
+                            className: s()(P.qS, P.Gk),
+                            children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
+                        }),
                 }),
         ],
     });
@@ -267,7 +266,7 @@ function O(e) {
 }
 function M(e) {
     let { channelId: t, roomWidth: n } = e,
-        l = (0, c.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
+        l = (0, c.bG)([f.A], () => f.A.getChannel(t)?.guild_id),
         a = (0, c.bG)([E.A], () => E.A.getRoomUsers(t)),
         { numericAvatarSize: s, avatarSize: r } = (0, I.F)(n);
     return 0 === a.size || null == l

@@ -94,6 +94,7 @@ function L(s) {
                 className: I.lN,
                 children: [
                     (0, l.jsx)(d.Ay, { className: I.KQ, width: t, height: t, mask: C, children: A }),
+                    k && (0, l.jsx)("div", { className: I.PQ, style: E }),
                     null != g &&
                         (0, l.jsx)(d.Ay, {
                             className: I.DX,
@@ -108,7 +109,6 @@ function L(s) {
                                 draggable: !1,
                             }),
                         }),
-                    k && (0, l.jsx)("div", { className: I.PQ, style: E }),
                     b?.(),
                     ((s = V ? _.O : o ? u.c : c.z),
                     a || o || V
