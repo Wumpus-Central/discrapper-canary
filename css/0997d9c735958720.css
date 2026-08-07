@@ -14,24 +14,29 @@
 }
 
 .table__7eea4 {
-    display: flex;
     flex-direction: column
 }
 
 .headerRow__7eea4,
-.row__7eea4 {
+.row__7eea4,
+.table__7eea4 {
     display: flex;
+    min-width: 536px
+}
+
+.headerRow__7eea4,
+.row__7eea4 {
     flex-direction: row;
     z-index: 5
 }
 
 .headerRow__7eea4 {
-    height: 56px;
-    margin-top: 24px
+    margin-top: 24px;
+    min-height: 56px
 }
 
 .row__7eea4 {
-    height: 68px
+    min-height: 68px
 }
 
 .rowBottomBorder__7eea4 {
@@ -39,11 +44,11 @@
 }
 
 .wideRow__7eea4 {
-    height: 128px
+    min-height: 128px
 }
 
 .shortRow__7eea4 {
-    height: 20px
+    min-height: 20px
 }
 
 .cell__7eea4,
@@ -51,6 +56,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     width: 208px
 }
 
@@ -67,6 +73,7 @@
     display: flex;
     flex: 1;
     justify-content: flex-start;
+    min-width: 120px;
     text-align: start
 }
 
@@ -101,6 +108,7 @@
 }
 
 .tableWrapper__7eea4 {
+    min-width: 536px;
     padding: 2px;
     position: relative
 }
