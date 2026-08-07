@@ -2,9 +2,9 @@
 n.d(t, { Yz: () => l, dM: () => o, n_: () => s });
 var i = n(17928),
     r = n(181079),
-    a = n(281980);
+    a = n(313281);
 function s(e, t) {
-    return e ? !t.favoriteGuildExplicitlyHidden : t.favoriteGuildEnabled;
+    return e ? !1 !== t.favoriteGuildVisibleSetting : t.favoriteGuildEnabled;
 }
 function l() {
     return s((0, a.ad)().isFreemium, r.A);
