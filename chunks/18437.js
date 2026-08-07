@@ -1,4 +1,4 @@
-i.d(t, { Ii: () => I, Ut: () => k, WS: () => v, cR: () => N, tG: () => f, u0: () => T });
+i.d(t, { Ii: () => N, Ut: () => k, WS: () => f, cR: () => H, tG: () => v, u0: () => T });
 var n = i(582128),
     l = i(132500),
     a = i(323889),
@@ -14,10 +14,10 @@ var n = i(582128),
     C = i(823784),
     O = i(652215);
 function T() {
-    let e = (0, p.vU)();
+    let e = (0, p.wW)();
     return n.useCallback(
         (t) => {
-            (0, o.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, o.av)({ ...t, properties: { ...t.properties, impression_id: e() } });
         },
         [e],
     );
@@ -61,17 +61,17 @@ function k() {
         [e],
     );
 }
-function v() {
-    let e = (0, p.vU)();
+function f() {
+    let e = (0, p.wW)();
     return n.useCallback(
         (t) => {
-            (0, o.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, o.Qg)({ ...t, properties: { ...t.properties, impression_id: e() } });
         },
         [e],
     );
 }
-function f() {
-    let e = v();
+function v() {
+    let e = f();
     return n.useCallback(
         (t) => {
             let {
@@ -109,12 +109,12 @@ function f() {
         [e],
     );
 }
-function I(e, t) {
+function N(e, t) {
     n.useEffect(() => {
         (0, o.DZ)(t, e);
     }, [e, t]);
 }
-function N(e) {
+function H(e) {
     let { questHomeHero: t, shouldShowQuestHomeHeroContent: i } = e,
         l = i ? _.uF.QUEST_HOME_ENTRYPOINT_THEMED : _.uF.QUEST_HOME_ENTRYPOINT,
         s = n.useMemo(() => {
