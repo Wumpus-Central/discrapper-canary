@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { Av: () => O, uz: () => v, d1: () => N, kv: () => C, nL: () => b, rK: () => R, TT: () => S });
-var i = n(77729),
-    r = n(87955),
-    s = n(735438),
-    a = n.n(s),
-    o = n(621466),
-    l = n(626584),
-    u = n(773669),
+n.d(t, { Av: () => b, uz: () => y, d1: () => D, kv: () => L, nL: () => M, rK: () => v, TT: () => C });
+var i = n(77729);
+n(321073);
+var r = n(87955),
+    a = n(435558),
+    s = n.n(a),
+    l = n(621466),
+    o = n(626584),
+    d = n(773669),
     c = n(403362),
-    d = n(19575);
+    u = n(19575);
 class _ {
     _language;
     _onChange;
@@ -38,8 +39,8 @@ class _ {
                     : (e.length > 256 && (e = e.slice(0, 256)),
                       ((n = e),
                       (i = this._languageHint),
-                      d.Ay.ensureModule("discord_spellcheck").then(() => {
-                          let { cld: e } = d.Ay.requireModule("discord_spellcheck");
+                      u.Ay.ensureModule("discord_spellcheck").then(() => {
+                          let { cld: e } = u.Ay.requireModule("discord_spellcheck");
                           return new Promise((t, r) => {
                               e.detect(n, { httpHint: i, encodingHint: "UTF8" }, (e, n) => {
                                   null != e
@@ -64,7 +65,13 @@ class _ {
         (this._processing = !1), e && this._minimumTimeRemaining++;
     }
 }
-let h = {
+let E = (0, n(945810).mj)({
+        kind: "user",
+        name: "2026-05-electron-multilang-spellcheck",
+        defaultConfig: { enableElectronMultilangSpellcheck: !1 },
+        variations: { 1: { enableElectronMultilangSpellcheck: !0 } },
+    }),
+    A = {
         aa: "aa-ET",
         af: "af-ZA",
         ak: "ak-GH",
@@ -203,37 +210,56 @@ let h = {
         zh: "zh-CN",
         zu: "zu-ZA",
     },
-    f = new l.A("Spellchecker"),
-    p = i.A?.spellCheck;
-function E(e) {
-    e = h[e] ?? e;
+    h = new o.A("Spellchecker"),
+    I = i.A?.spellCheck;
+function f(e) {
+    e = A[(e = "no" === e ? "nb" : e)] ?? e;
     let t = (0, r.parse)(e.replace(/[_-]/g, "-"));
     if (null == t || null == t.langtag.language || null == t.langtag.region)
-        return void f.error(`${e} is not a valid locale.`);
+        return void h.error(`${e} is not a valid locale.`);
     let { language: n, region: i } = t.langtag;
     return `${n.language.toLowerCase()}-${i.toUpperCase()}`;
 }
-class m {
-    languageDetector;
+class p {
+    availableLocales;
+    rawLocaleByNormalized = {};
+    useMultilang;
+    languageDetector = null;
     regionPreference;
+    availableLanguagesByLanguage = {};
     _enabled = !0;
     misspelledWord = "";
     corrections = [];
     constructor(e) {
-        const [t, n] = u.default.locale.split("-");
-        this.regionPreference = n;
-        const i = this.getAvailableLanguages(e);
-        (this.languageDetector = new _(t, (n) => {
-            let r = `${n}-${this.regionPreference}`;
-            if (-1 !== e.indexOf(r)) this.setLocale(r);
-            else {
-                let e = i[n] ?? h[t];
-                null != e && this.setLocale(e);
-            }
-        })),
-            p.on("spellcheck-result", (e, t) => {
-                (this.misspelledWord = e ?? ""), (this.corrections = t ?? []);
-            });
+        const t = [];
+        if (
+            (e.forEach((e) => {
+                let n = f(e);
+                null != n && (t.push(n), (this.rawLocaleByNormalized[n] = this.rawLocaleByNormalized[n] ?? e));
+            }),
+            (this.availableLocales = t),
+            (this.useMultilang = E.getConfig({
+                location: "isElectronMultilangSpellcheckEnabled",
+            }).enableElectronMultilangSpellcheck),
+            (this.availableLanguagesByLanguage = this.buildLanguageIndex(t)),
+            this.useMultilang)
+        )
+            this.applyLanguages(d.default.locale);
+        else {
+            const [e, t] = d.default.locale.split("-");
+            (this.regionPreference = t),
+                (this.languageDetector = new _(e, (t) => {
+                    let n = `${t}-${this.regionPreference}`;
+                    if (-1 !== this.availableLocales.indexOf(n)) this.applyLocale(n);
+                    else {
+                        let n = this.availableLanguagesByLanguage[t] ?? A[e];
+                        null != n && this.applyLocale(n);
+                    }
+                }));
+        }
+        I.on("spellcheck-result", (e, t) => {
+            (this.misspelledWord = e ?? ""), (this.corrections = t ?? []);
+        });
     }
     get enabled() {
         return this._enabled;
@@ -241,29 +267,17 @@ class m {
     set enabled(e) {
         this._enabled = e;
     }
-    setLearnedWords(e) {
-        p.setLearnedWords(e);
+    get usesMultilang() {
+        return this.useMultilang;
     }
-    setLocale(e) {
-        p.setLocale(e)?.then((t) => {
-            f.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
-        });
+    setLearnedWords(e) {
+        I.setLearnedWords(e);
     }
     setAppLocale(e) {
-        this.regionPreference = e.split("-")[1];
+        this.useMultilang ? this.applyLanguages(e) : (this.regionPreference = e.split("-")[1]);
     }
     detectLanguage(e) {
-        this.enabled && this.languageDetector.process(e);
-    }
-    getAvailableLanguages(e) {
-        let t = {};
-        return (
-            e.forEach((e) => {
-                let [n] = e.split("-");
-                t[n] = t[n] ?? e;
-            }),
-            t
-        );
+        !this.useMultilang && this.enabled && this.languageDetector?.process(e);
     }
     isMisspelled(e, t) {
         return "" !== this.misspelledWord && e === this.misspelledWord;
@@ -275,56 +289,113 @@ class m {
         return { misspelledWord: this.misspelledWord, corrections: this.corrections };
     }
     replaceMisspelling(e) {
-        p.replaceMisspelling(e);
+        I.replaceMisspelling(e);
+    }
+    applyLocale(e) {
+        I.setLocale(e)?.then((t) => {
+            h.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
+        });
+    }
+    applyLanguages(e) {
+        let t = [e, ...navigator.languages],
+            n = Array.from(
+                new Set(
+                    t
+                        .map((e) => {
+                            let t = f(e);
+                            if (null != t && this.availableLocales.includes(t)) return t;
+                            let [n] = e.replace(/_/g, "-").split("-");
+                            return this.availableLanguagesByLanguage[n.toLowerCase()] ?? null;
+                        })
+                        .filter(c.Vq),
+                ),
+            );
+        if (0 === n.length) return void h.info(`No spellcheck languages resolved from candidates: ${t.join(", ")}`);
+        let i = n.map((e) => this.rawLocaleByNormalized[e] ?? e);
+        if (null == I.setSpellCheckerLanguages) {
+            h.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
+                this.applyLocale(i[0]);
+            return;
+        }
+        I.setSpellCheckerLanguages(i)?.then((e) => {
+            if (!e) {
+                h.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
+                    this.applyLocale(i[0]);
+                return;
+            }
+            h.info(`Spellcheck languages: ${i.join(", ")}`, "(applied)");
+        });
+    }
+    buildLanguageIndex(e) {
+        let t = {};
+        return (
+            e.forEach((e) => {
+                let [n] = e.split("-");
+                t[n] = t[n] ?? e;
+            }),
+            t
+        );
     }
 }
-let g = a().debounce((e, t) => {
+let T = s().debounce((e, t) => {
     var n;
     let i =
         null == (n = t)
             ? null
-            : (0, o.vq)(n, HTMLInputElement) || (0, o.vq)(n, HTMLTextAreaElement)
+            : (0, l.vq)(n, HTMLInputElement) || (0, l.vq)(n, HTMLTextAreaElement)
               ? n.value
-              : (0, o.vq)(n) && n.hasAttribute("contenteditable")
+              : (0, l.vq)(n) && n.hasAttribute("contenteditable")
                 ? n.textContent
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-async function A() {
-    let e = new m(((await p.getAvailableDictionaries()) ?? []).map(E).filter(c.Vq));
-    return null != document.body && document.body.addEventListener("beforeinput", (t) => g(e, t.target), !0), e;
+async function m() {
+    let e = new p((await I.getAvailableDictionaries()) ?? []);
+    return (
+        e.usesMultilang ||
+            (null != document.body && document.body.addEventListener("beforeinput", (t) => T(e, t.target), !0)),
+        e
+    );
 }
-var I = n(723702);
-function T() {
+var g = n(507263),
+    S = n(723702);
+function N() {
     return i.A?.spellCheck != null;
 }
-function S() {
-    return (0, I.isDesktop)() && T();
+function C() {
+    return (0, S.isDesktop)() && N();
 }
-let y = S() ? A() : null;
-async function C(e) {
-    let t = await y;
+let O = C()
+        ? new Promise((e) => {
+              Promise.resolve().then(() => (0, g.B)(() => e(m())));
+          })
+        : null,
+    R = null;
+async function L(e) {
+    let t = await O;
     null != t && (t.enabled = e);
 }
-async function N(e) {
-    let t = await y;
+async function D(e) {
+    let t = await O;
     null != t && t.setLearnedWords(e);
 }
-async function v() {
+async function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-        t = await y;
+        t = await O;
     if (null == t) return { misspelledWord: "", corrections: [] };
     let { misspelledWord: n, corrections: i } = t.getCachedMisspelling();
     return { misspelledWord: n, corrections: i.slice(0, e) };
 }
-async function R(e) {
-    let t = await y;
+async function v(e) {
+    let t = await O;
     null != t && t.replaceMisspelling(e);
 }
-async function O(e) {
-    let t = await y;
-    null != t && t.setAppLocale(e);
-}
 function b(e) {
-    return T() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
+    null != R && R.setAppLocale(e);
 }
+function M(e) {
+    return N() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
+}
+O?.then((e) => {
+    R = e;
+});

@@ -3653,6 +3653,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-05-electron-multilang-spellcheck",
+    "defaultConfig": {
+      "enableElectronMultilangSpellcheck": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableElectronMultilangSpellcheck": true
+      }
+    }
+  },
+  {
     "name": "2026-05-global-soundboard-wheel-popout",
     "kind": "user",
     "defaultConfig": {
