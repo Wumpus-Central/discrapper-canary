@@ -42,8 +42,8 @@ var c = n(803805),
     O = n(998218),
     R = n(327143),
     L = n(652215),
-    y = n(375708),
-    D = n(385286);
+    D = n(375708),
+    y = n(385286);
 let v = [u.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
     b = Array.from({ length: 16 }).map((e, t) => ({ id: `${t}`, height: Math.floor(100 * Math.random()) + 120 }));
 function M(e) {
@@ -57,7 +57,7 @@ function U(e, t, n, r) {
     if (!(e > 0))
         return null == b[t]
             ? null
-            : (0, i.jsx)("div", { className: D.qf, style: { animationDelay: `${75 * t}ms`, ...n } }, r);
+            : (0, i.jsx)("div", { className: y.qf, style: { animationDelay: `${75 * t}ms`, ...n } }, r);
 }
 function w(e, t) {
     return e > 0 ? "" : (b[t]?.id ?? "");
@@ -142,7 +142,7 @@ class x extends r.PureComponent {
                           : n),
                   width: r,
                   height: a,
-                  className: D.nX,
+                  className: y.nX,
                   alt: "",
               })
             : null;
@@ -156,7 +156,7 @@ class x extends r.PureComponent {
             innerRef: (e) => {
                 this.ref = e;
             },
-            className: D.Ke,
+            className: y.Ke,
             "data-focused": a,
             "data-selected": s,
             onClick: this.handleClick,
@@ -228,7 +228,7 @@ class k extends r.PureComponent {
                 src: c.src,
                 coords: n,
                 onClick: this.handleClickItem,
-                renderExtras: () => (0, i.jsx)(C.A, { className: D.uJ, ...c }),
+                renderExtras: () => (0, i.jsx)(C.A, { className: y.uJ, ...c }),
                 focused: M(c) === o,
                 imagePool: this.props.imagePool,
                 videoPool: this.props.videoPool,
@@ -242,7 +242,7 @@ class k extends r.PureComponent {
                     (l.length >= 8 && /^[0-9a-f]+$/i.test(l)) ||
                     (l.length > 12 && !/[-_ ]/.test(l) && /\d/.test(l)) ||
                     /^(giphy|tenor|\d+[wh]?|xs|sm|md|lg|xl)$/i.test(l)
-                        ? y.intl.formatToPlainString(y.t["5iIGZI"], { index: t + 1 })
+                        ? D.intl.formatToPlainString(D.t["5iIGZI"], { index: t + 1 })
                         : l),
             },
             r,
@@ -267,7 +267,7 @@ class k extends r.PureComponent {
             ? (0, i.jsx)(
                   "div",
                   {
-                      className: D.jZ,
+                      className: y.jZ,
                       style: t,
                       children:
                           s.length > 0
@@ -276,12 +276,12 @@ class k extends r.PureComponent {
                                         (0, i.jsx)(E.E, {
                                             variant: "text-md/medium",
                                             color: "text-feedback-warning",
-                                            className: D.Z4,
-                                            children: y.intl.string(y.t["3JGJo2"]),
+                                            className: y.Z4,
+                                            children: D.intl.string(D.t["3JGJo2"]),
                                         }),
                                         (0, i.jsx)(A.e, {
                                             size: "sm",
-                                            className: D.yB,
+                                            className: y.yB,
                                             children: s.map((e) =>
                                                 (0, i.jsx)(
                                                     h.$,
@@ -307,37 +307,37 @@ class k extends r.PureComponent {
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (0, i.jsx)("div", {
-            className: D.LA,
+            className: y.LA,
             children:
                 null != e
                     ? (0, i.jsxs)("div", {
-                          className: D.BA,
+                          className: y.BA,
                           children: [
-                              t ? (0, i.jsx)(I.G, { size: "xs", color: "currentColor", className: D.$2 }) : null,
-                              (0, i.jsx)("div", { className: D.i6, children: e }),
+                              t ? (0, i.jsx)(I.G, { size: "xs", color: "currentColor", className: y.$2 }) : null,
+                              (0, i.jsx)("div", { className: y.i6, children: e }),
                           ],
                       })
-                    : (0, i.jsx)("div", { className: D.Hc }),
+                    : (0, i.jsx)("div", { className: y.Hc }),
         });
     }
     renderEmptyFavorites() {
         return (0, i.jsx)(f.Ip, {
-            className: D.Xv,
+            className: y.Xv,
             fade: !0,
             children: (0, i.jsxs)("div", {
-                className: D.Ep,
+                className: y.Ep,
                 children: [
-                    this.renderEmptyFavorite(y.intl.string(y.t["3gyw4Z"]), !0),
-                    this.renderEmptyFavorite(y.intl.string(y.t.yThUi4)),
-                    this.renderEmptyFavorite(y.intl.string(y.t.MeP0SF)),
+                    this.renderEmptyFavorite(D.intl.string(D.t["3gyw4Z"]), !0),
+                    this.renderEmptyFavorite(D.intl.string(D.t.yThUi4)),
+                    this.renderEmptyFavorite(D.intl.string(D.t.MeP0SF)),
                     Array.from({ length: 15 }).map((e, t) =>
                         (0, i.jsx)(r.Fragment, { children: this.renderEmptyFavorite() }, t),
                     ),
-                    this.renderEmptyFavorite(y.intl.string(y.t["5u99Xb"])),
+                    this.renderEmptyFavorite(D.intl.string(D.t["5u99Xb"])),
                     Array.from({ length: 16 }).map((e, t) =>
                         (0, i.jsx)(r.Fragment, { children: this.renderEmptyFavorite() }, t),
                     ),
-                    this.renderEmptyFavorite(y.intl.string(y.t.o6CLL4)),
+                    this.renderEmptyFavorite(D.intl.string(D.t.o6CLL4)),
                 ],
             }),
         });
@@ -349,7 +349,7 @@ class k extends r.PureComponent {
                   p.f,
                   {
                       fade: !0,
-                      className: s()(D.Xv, r),
+                      className: s()(y.Xv, r),
                       sections: [b.length],
                       columns: e,
                       itemGutter: 12,
@@ -366,7 +366,7 @@ class k extends r.PureComponent {
                       ref: this._masonryRef,
                       fade: !0,
                       itemGutter: 12,
-                      className: s()(D.Xv, r),
+                      className: s()(y.Xv, r),
                       columns: e,
                       sections: [a.length, 0],
                       getItemKey: this.getItemKey,
@@ -394,8 +394,8 @@ class k extends r.PureComponent {
             if (r === L.dD.FAVORITES)
                 return 0 === n.length
                     ? this.renderEmptyFavorites()
-                    : (0, i.jsx)(g.A, { message: y.intl.string(y.t.ZH4o6l), className: D.wV });
-            else if (t === n) return (0, i.jsx)(g.A, { message: y.intl.string(y.t["5dX4UM"]), className: D.wV });
+                    : (0, i.jsx)(g.A, { message: D.intl.string(D.t.ZH4o6l), className: y.wV });
+            else if (t === n) return (0, i.jsx)(g.A, { message: D.intl.string(D.t["5dX4UM"]), className: y.wV });
         }
         return (0, i.jsx)(
             m.A,
@@ -428,12 +428,13 @@ function F() {
                     () => {
                         let e = t.createElement("video");
                         return (
-                            (e.className = D.nX),
+                            (e.className = y.nX),
                             (e.autoplay = !0),
                             (e.loop = !0),
                             (e.muted = !0),
                             (e.preload = "auto"),
                             (e.controls = !1),
+                            (e.tabIndex = -1),
                             e
                         );
                     },
