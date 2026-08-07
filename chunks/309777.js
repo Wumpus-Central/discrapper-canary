@@ -45,8 +45,9 @@ var n = l(477900),
     F = l(352527),
     W = l(718812),
     X = l(362081),
-    Z = l(696016),
-    Y = l(16590),
+    Z = l(696016);
+l(600253);
+var Y = l(16590),
     Q = l(375708),
     J = l(954634);
 let q = H.I.difference(new Set([H.C.EXPORT_TO_SOUNDBOARD, H.C.FAVORITE, H.C.DELETE, H.C.SHARE, H.C.EDIT]));
@@ -203,7 +204,7 @@ function ee(e) {
                             },
                             value: eo,
                             minLength: Z.U_,
-                            maxLength: Z.mk,
+                            maxLength: 200,
                             placeholder: eb,
                         }),
                         !ev &&

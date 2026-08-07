@@ -9,8 +9,9 @@ var n = l(477900),
     u = l(22231),
     d = l(718812),
     m = l(362081),
-    f = l(696016),
-    h = l(226180);
+    f = l(696016);
+l(600253);
+var h = l(226180);
 function x(e) {
     let { variant: t, className: l, containerClassName: i } = e,
         { clip: x, clipName: v, setClipName: p } = (0, m.T)(),
@@ -22,7 +23,7 @@ function x(e) {
             value: v,
             placeholder: g,
             minLength: f.U_,
-            maxLength: f.mk,
+            maxLength: 200,
             onChange: (e) => p("" === e ? void 0 : e),
             onBlur: () => C(!1),
             onKeyDown: (e) => {
