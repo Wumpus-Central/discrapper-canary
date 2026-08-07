@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, UX: () => y, dZ: () => S });
+n.d(t, { Ay: () => S, UX: () => y, dZ: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,52 +10,52 @@ var l = n(477900),
     d = n(529427),
     p = n(883645),
     m = n(601194),
-    C = n(316915),
+    C = n(87725),
     h = n(573359),
-    E = n(166532),
-    f = n(239945);
-function A(e) {
+    f = n(166532),
+    E = n(239945);
+function S(e) {
     let { header: t, stepProps: n } = (function (e) {
             let { header: t, ...n } = e;
             return { header: t, stepProps: n };
         })(e),
         { step: r, stepConfigs: s } = (0, p.Ay)(),
-        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, m.Gm)(),
+        { setBodyNode: S, setFooterNode: A, setModalOverlayNode: y } = (0, m.Gm)(),
         P = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, C.t4)((e) => ({
+        { setReadySlideId: I, unifiedCheckoutFlow: g } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        T = s.find((e) => e.key === r);
+        v = s.find((e) => e.key === r);
     if (
         (i.useEffect(() => {
             y(null);
         }, [r, y]),
-        null == T)
+        null == v)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: T, step: r, unifiedCheckoutFlow: _, stepConfigs: s },
+            extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: g, stepConfigs: s },
         });
-    let g = T?.options?.hideSlider ?? !1,
-        v = T?.options?.hideDefaultModalBody ?? !1,
-        x = T?.options?.sliderBodyClassName,
-        N = r === E.pn.REVIEW,
-        R = i.useCallback(
+    let T = v?.options?.hideSlider ?? !1,
+        _ = v?.options?.hideDefaultModalBody ?? !1,
+        x = v?.options?.sliderBodyClassName,
+        N = r === f.pn.REVIEW,
+        b = i.useCallback(
             (e, t) => {
-                t === r && A(e);
+                t === r && S(e);
             },
-            [r, A],
+            [r, S],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (T?.options?.renderHeader ?? !0) ? t : null,
-            T.renderStep(n),
-            null == r || g
+            (v?.options?.renderHeader ?? !0) ? t : null,
+            v.renderStep(n),
+            null == r || T
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          v
+                          _
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
@@ -74,8 +74,8 @@ function A(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, l.jsx)("form", {
-                                                            className: a()(f.OO, { [f.Wq]: N }, x),
-                                                            ref: (t) => R(t, e.key),
+                                                            className: a()(E.OO, { [E.Wq]: N }, x),
+                                                            ref: (t) => b(t, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),
                                                     },
@@ -84,7 +84,7 @@ function A(e) {
                                             ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => S(e) }),
+                          (0, l.jsx)("div", { ref: (e) => A(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
                                   y(e);
@@ -95,7 +95,7 @@ function A(e) {
         ],
     });
 }
-function S(e) {
+function A(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);

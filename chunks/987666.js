@@ -6,7 +6,7 @@ var i = n(888751),
     a = n(400612),
     s = n(818824),
     o = n(936477),
-    u = n(316915);
+    u = n(87725);
 function c(e) {
     let {
             plan: t,
@@ -20,8 +20,8 @@ function c(e) {
             discountOffer: f,
             subscriptionTrial: E,
         } = e,
-        { immediateDelivery: A } = (0, s.U)(),
-        { checkoutReviewButtonLabel: S } = (0, u.t4)((e) => ({
+        { immediateDelivery: S } = (0, s.U)(),
+        { checkoutReviewButtonLabel: A } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
@@ -34,19 +34,19 @@ function c(e) {
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: m,
         }),
-        { renewalPrice: _, multiPeriodDiscountAttributes: T } = (0, i.QM)(P, t, {
+        { renewalPrice: g, multiPeriodDiscountAttributes: v } = (0, i.QM)(P, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        g = {
-            purchaseButtonText: S,
+        T = {
+            purchaseButtonText: A,
             totalDue: C ? y.total : 0,
-            renewalPrice: _,
-            multiPeriodDiscountAttributes: T,
+            renewalPrice: g,
+            multiPeriodDiscountAttributes: v,
             currency: y.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: I,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ...g }, paymentSourceType: n, immediateDelivery: A });
+    return (0, l.jsx)(o._P, { variant: { type: h, ...T }, paymentSourceType: n, immediateDelivery: S });
 }

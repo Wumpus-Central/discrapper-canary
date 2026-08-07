@@ -10,7 +10,7 @@ var l = n(477900),
     d = n(463376),
     p = n(266060),
     m = n(951305),
-    C = n(316915),
+    C = n(87725),
     h = n(473617),
     f = n(699595),
     E = n(669510),
@@ -22,8 +22,8 @@ var P = n(202541),
     I = n(594387),
     g = n(375708),
     v = n(732280),
-    _ = n(361597),
-    T = n(815545),
+    T = n(361597),
+    _ = n(815545),
     x = n(344159),
     N = n(45938),
     b = n(158045),
@@ -32,8 +32,8 @@ var P = n(202541),
     M = n(216641),
     O = n(222707),
     L = n(559778),
-    w = n(319668);
-function k(e) {
+    k = n(319668);
+function w(e) {
     let {
             handlePaymentSourceAdd: t,
             isTrial: n,
@@ -43,7 +43,7 @@ function k(e) {
             label: o = g.intl.string(g.t["u+Cw58"]),
             location: c = "PremiumSubscriptionReview",
         } = e,
-        { paymentGatewayRestrictions: d } = (0, u.Yh)(),
+        { paymentGatewayRestrictions: d } = (0, u.Y)(),
         p = i.useMemo(
             () => ({
                 newPaymentMethodOptionLabel: s && !n ? g.intl.string(g.t.IGU7El) : null,
@@ -52,7 +52,7 @@ function k(e) {
             }),
             [s, n, d],
         );
-    return (0, l.jsx)(w.N, {
+    return (0, l.jsx)(k.N, {
         label: o,
         disabled: a,
         onPaymentSourceAdd: t,
@@ -72,7 +72,7 @@ function W(e) {
     let {
             verifiedPlanId: t,
             verifiedTrialId: n,
-            selectedPlan: w,
+            selectedPlan: k,
             planGroup: W,
             metadata: V,
             reviewWarningMessage: K,
@@ -81,14 +81,14 @@ function W(e) {
         {
             checkoutInvoicePreview: q,
             checkoutPriceOptions: z,
-            checkoutInvoiceError: Q,
-            referralTrialOfferId: $,
+            checkoutInvoiceError: $,
+            referralTrialOfferId: Q,
             isGift: J,
             selectedSkuId: X,
             defaultPlanId: ee,
             activeSubscription: et,
             shouldDisallowPlanSelection: en,
-            disableCTAs: el,
+            expressCheckoutSubmitting: el,
             shouldUseStripeExpressCheckout: ei,
         } = (0, C.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -100,7 +100,7 @@ function W(e) {
             defaultPlanId: e.defaultPlanId,
             activeSubscription: e.activeSubscription,
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
-            disableCTAs: e.disableCTAs,
+            expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             shouldUseStripeExpressCheckout: e.getShouldUseStripeExpressCheckout(),
         })),
         {
@@ -155,8 +155,8 @@ function W(e) {
                         } = (0, h.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
                             universalInvoiceRequestParams: v,
-                            checkoutInvoiceRequestParams: _,
-                            renewalInvoiceRequestParams: T,
+                            checkoutInvoiceRequestParams: T,
+                            renewalInvoiceRequestParams: _,
                         } = (0, h.jq)({
                             items: I,
                             preventFetch: g,
@@ -171,10 +171,10 @@ function W(e) {
                                           type: "premium_one_time_gift_purchase_invoice",
                                           params: { ...v, skuId: s, subscriptionPlanId: t, quantity: E },
                                       }
-                                    : { type: "subscription_checkout_invoice", params: _ },
-                            [v, _, A, t, s, E],
+                                    : { type: "subscription_checkout_invoice", params: T },
+                            [v, T, A, t, s, E],
                         ),
-                        N = i.useMemo(() => (A ? null : { type: "subscription_renewal_invoice", params: T }), [T, A]);
+                        N = i.useMemo(() => (A ? null : { type: "subscription_renewal_invoice", params: _ }), [_, A]);
                     i.useEffect(() => {
                         o(x);
                     }, [x, o]),
@@ -222,11 +222,11 @@ function W(e) {
         ey = V?.guild_id ?? void 0,
         eP = (0, r.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         eI = i.useMemo(() => (0, b.Tm)({ skuId: X, isPremium: eo, defaultPlanId: ee }), [X, ee, eo]),
-        { paymentSources: eg } = (0, u.jm)(),
+        { paymentSources: eg } = (0, u.j)(),
         {
             hasEntitlements: ev,
-            paymentSourceType: e_,
-            isPrepaid: eT,
+            paymentSourceType: eT,
+            isPrepaid: e_,
             paymentSourceOptionalWarningCopy: ex,
         } = (function (e) {
             let { subscriptionPlan: t, paymentSources: n } = e,
@@ -249,13 +249,13 @@ function W(e) {
                 paymentSourceOptionalWarningCopy: d,
                 hasEntitlements: u,
             };
-        })({ subscriptionPlan: w, paymentSources: eg }),
+        })({ subscriptionPlan: k, paymentSources: eg }),
         eN = em ?? q,
         eb = i.useMemo(
-            () => null != ef && null != ef.discount && null != eN && (0, T.Ro)(eN, ef.discount.id),
+            () => null != ef && null != ef.discount && null != eN && (0, _.Ro)(eN, ef.discount.id),
             [ef, eN],
         ),
-        eR = (0, l.jsx)(k, {
+        eR = (0, l.jsx)(w, {
             label: g.intl.string(g.t["u+Cw58"]),
             handlePaymentSourceAdd: Z,
             isTrial: ec,
@@ -263,21 +263,21 @@ function W(e) {
             disabled: eC,
             hasEntitlements: ev,
         }),
-        ej = (0, v.V)($),
-        { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, _.O8)(),
-        ew = (0, O.pt)({
+        ej = (0, v.V)(Q),
+        { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, T.O8)(),
+        ek = (0, O.pt)({
             fractionalPremiumInfo: eP,
             selectedPlanId: t,
             planGroup: W,
             premiumSubscription: et,
             isGift: J,
         }),
-        ek = J && w.interval === P.WT.YEAR && (0, b.xq)(w.id),
-        eU = (0, b.L_)({ planId: w.id, isGift: !0, priceOptions: z, subscriptionPlan: w }),
+        ew = J && k.interval === P.WT.YEAR && (0, b.xq)(k.id),
+        eU = (0, b.L_)({ planId: k.id, isGift: !0, priceOptions: z, subscriptionPlan: k }),
         eD = i.useMemo(() => {
-            if (null != eU && ek)
+            if (null != eU && ew)
                 return { headerBadgeText: g.intl.formatToPlainString(Y.default["Mi5BH/"], { percentOff: eU }) };
-        }, [eU, ek]),
+        }, [eU, ew]),
         eG = (0, j.Fe)(eD),
         eF = i.useMemo(() => {
             if (null != ed && ed.type === c.u$.PREMIUM_WITH_TRIAL && null != eL)
@@ -292,11 +292,11 @@ function W(e) {
                 if (e.userUsageLimitInterval === P.Ff.YEAR)
                     return (0, l.jsx)(L.Y, { text: g.intl.format(Y.default["tUzT/U"], { percentOff: e.amount }) });
             }
-            return ek && null != eU
+            return ew && null != eU
                 ? (0, l.jsx)(L.Y, { text: g.intl.format(Y.default["7sYIBL"], { savingsPercent: eU }) })
                 : null;
-        }, [eL, eb, ef, eO, ed, eU, ek]),
-        eH = (0, B.G)(w.id),
+        }, [eL, eb, ef, eO, ed, eU, ew]),
+        eH = (0, B.G)(k.id),
         eB = i.useMemo(() => (eH ? (0, l.jsx)(G.a, {}) : null), [eH]),
         eY = (function (e) {
             let { skuId: t, isGift: n } = e,
@@ -314,15 +314,15 @@ function W(e) {
                           }),
                 [n, t, r],
             );
-        })({ skuId: w.skuId, isGift: J }),
-        eW = (0, R.i)({ planSkuId: w.skuId, invoice: eN }),
+        })({ skuId: k.skuId, isGift: J }),
+        eW = (0, R.i)({ planSkuId: k.skuId, invoice: eN }),
         eV = i.useMemo(() => (null != eF ? eF : null != eW ? eW : null != eB ? eB : null), [eF, eW, eB]),
         eK = i.useMemo(() => {
             let e = [];
             return (
                 null != K && "" !== K && e.push({ type: "warning", message: K, key: "review-warning" }),
                 null != ex && e.push({ type: "info", message: ex, key: "payment-source-optional-warning" }),
-                ew
+                ek
                     ? e.push({
                           directContent: (0, l.jsx)(U.l, {
                               fractionalPremiumInfo: eP,
@@ -336,10 +336,10 @@ function W(e) {
                 null != eY && e.push({ directContent: eY, key: "xbox-perks-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [K, ex, ew, eP, er, eM, ep, eu, eY]),
+        }, [K, ex, ek, eP, er, eM, ep, eu, eY]),
         eZ = null != ed ? ed.invoicePreview : null,
-        { priceOptions: eq, planPricesLoading: ez } = (0, b.Pr)(z, eZ, Q),
-        eQ = {
+        { priceOptions: eq, planPricesLoading: ez } = (0, b.Pr)(z, eZ, $),
+        e$ = {
             shouldShowGlobalNotices: !0,
             upperInlineNoticeProps: eK,
             planSelectContent: eA
@@ -356,28 +356,28 @@ function W(e) {
             promotionalNoticeContent: eV,
             headerBadgeConfig: eG,
         };
-    if (null == ed && null != Q) return (0, l.jsx)(o.T_, { ...eQ, legalContent: null });
+    if (null == ed && null != $) return (0, l.jsx)(o.T_, { ...e$, legalContent: null });
     if (null == ed || ed.type === c.u$.LOADING)
         return (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eG });
-    let e$ = null != ej ? ej.subscription_trial : void 0,
+    let eQ = null != ej ? ej.subscription_trial : void 0,
         eJ =
             ed.type === c.u$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, l.jsx)(s.k, {
                       discriminatedInvoicePreview: ed,
-                      subscriptionPlan: w,
-                      isPrepaidPaymentSource: eT,
-                      subscriptionTrial: e$,
+                      subscriptionPlan: k,
+                      isPrepaidPaymentSource: e_,
+                      subscriptionTrial: eQ,
                       isCustomGift: eS,
                   }),
         eX = null;
     if (
-        !eT &&
+        !e_ &&
         (c.ME.has(ed.type) || ed.type === c.u$.PREMIUM_WITH_TRIAL) &&
         "renewalInvoicePreview" in ed &&
         null != ed.renewalInvoicePreview
     ) {
-        let e = (0, H.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, e$, {
+        let e = (0, H.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eQ, {
             discountOffer: ef,
             isSubscriptionUpdate: null != et,
             fractionalPremiumInfo: eP,
@@ -390,8 +390,8 @@ function W(e) {
                   type: ed.type,
                   invoicePreview: ed.invoicePreview,
                   storeListing: eh,
-                  subscriptionPlan: w,
-                  isPrepaidPaymentSource: eT,
+                  subscriptionPlan: k,
+                  isPrepaidPaymentSource: e_,
                   giftRecipient: eE,
                   isPremiumGroupPurchase: eu,
                   guildId: ey,
@@ -399,9 +399,9 @@ function W(e) {
         e1 = (0, l.jsx)(U.P, {
             activeSubscription: et,
             isTrial: ec,
-            plan: w,
+            plan: k,
             isGift: J,
-            paymentSourceType: e_,
+            paymentSourceType: eT,
             discriminatedInvoicePreview: ed,
             fractionalPremiumInfo: eP,
         }),
@@ -410,7 +410,7 @@ function W(e) {
                 ? (0, H.ib)(ed.invoicePreview.currency)
                 : (0, a.kw)({ subscriptionInvoiceRecord: ed.invoicePreview });
     return (0, l.jsx)(o.T_, {
-        ...eQ,
+        ...e$,
         purchaseItemContent: e0,
         subscriptionDetailsContent: eX,
         invoiceSummaryContent: eJ,

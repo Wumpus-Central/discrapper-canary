@@ -1,4 +1,4 @@
-n.d(t, { EB: () => h, T3: () => E });
+n.d(t, { EB: () => h, T3: () => f });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -7,7 +7,7 @@ var l = n(477900),
     o = n(120700),
     u = n(818824),
     c = n(936477),
-    d = n(316915),
+    d = n(87725),
     p = n(67480),
     m = n(951305),
     C = n(652215);
@@ -20,7 +20,7 @@ function h(e) {
             checkoutLegalType: m = c.I0.GiftGameShop,
         } = e,
         { immediateDelivery: h } = (0, u.U)(),
-        E = (function (e) {
+        f = (function (e) {
             let { skuId: t, purchaseButtonText: n, checkoutLegalType: l = c.I0.OrbsGameShop, isGift: i = !1 } = e,
                 { checkoutReviewButtonLabel: o } = (0, d.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
@@ -28,19 +28,19 @@ function h(e) {
                 u = (0, r.bG)([p.A], () => p.A.get(t), [t]),
                 m = u?.productLine,
                 h = u?.applicationId,
-                E = (0, r.bG)([s.A], () => (m === C.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(h) : null), [h, m]),
-                { fetched: f, hasAlreadyLinked: A } = (0, a.RD)(E);
+                f = (0, r.bG)([s.A], () => (m === C.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(h) : null), [h, m]),
+                { fetched: E, hasAlreadyLinked: S } = (0, a.RD)(f);
             return {
                 type: l,
                 purchaseButtonText: n ?? o,
-                applicationName: E?.name,
+                applicationName: f?.name,
                 applicationId: h,
-                shouldAppendDisclaimer: i || (f && !A),
+                shouldAppendDisclaimer: i || (E && !S),
             };
         })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m });
-    return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: h });
+    return (0, l.jsx)(c._P, { variant: f, paymentSourceType: n, immediateDelivery: h });
 }
-function E(e) {
+function f(e) {
     let { paymentSourceType: t } = e,
         { unifiedCheckoutFlow: n, checkoutReviewButtonLabel: r } = (0, d.t4)((e) => ({
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,

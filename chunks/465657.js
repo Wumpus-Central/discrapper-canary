@@ -1,4 +1,4 @@
-n.d(t, { Y: () => A });
+n.d(t, { Y: () => E });
 var l = n(477900),
     i = n(582128),
     r = n(284009),
@@ -9,34 +9,35 @@ var l = n(477900),
     c = n(216641),
     d = n(649791),
     p = n(202475),
-    m = n(364995),
-    C = n(883645),
-    h = n(666646),
-    E = n(316915),
+    m = n(883645),
+    C = n(666646),
+    h = n(87725),
     f = n(26279);
-function A(e) {
+function E(e) {
     let {
             customFooterProps: t,
             onFooterBackClick: n,
             isBackButtonEligible: r,
-            subscriptionMetadata: A,
+            subscriptionMetadata: E,
             renderStepBody: S,
-            resolveInternalState: y,
-            resolveTenantReviewButtonProps: P,
-            handleStepChange: I,
-            openInvoiceId: _,
-            analyticsData: T,
-            analyticsLocation: g,
+            resolveInternalState: A,
+            resolveTenantReviewButtonProps: y,
+            handleStepChange: P,
+            openInvoiceId: I,
+            analyticsData: g,
+            analyticsLocation: v,
         } = e,
         {
-            paymentSourceId: v,
-            purchasePreviewError: x,
-            customCheckoutFlow: N,
-            contextMetadata: R,
+            paymentSourceId: T,
+            purchasePreviewError: _,
+            customCheckoutFlow: x,
+            contextMetadata: N,
             purchaseError: b,
-            setCheckoutCurrency: M,
+            setCheckoutCurrency: R,
             setLinkWalletEnabled: j,
-        } = (0, E.t4)((e) => ({
+            checkoutPaymentSources: M,
+            hasCheckoutContextLoaded: O,
+        } = (0, h.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
             paymentSourceId: e.paymentSourceId,
@@ -44,65 +45,66 @@ function A(e) {
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
             setLinkWalletEnabled: e.setLinkWalletEnabled,
+            checkoutPaymentSources: e.get("checkoutPaymentSources"),
+            hasCheckoutContextLoaded: e.get("hasCheckoutContextLoaded"),
         })),
-        O = (0, C.s2)();
-    a()(null != O, "Step should be set");
-    let L = i.useRef(null),
-        { paymentSources: w } = (0, p.jm)(),
-        { checkoutPaymentSources: k, hasInvoiceOrderContextLoaded: U } = (0, m.t)(),
-        D = (0, h.sw)(),
-        G = (0, c.W)(w, v),
-        F = i.useMemo(() => {
-            if (null == v) return !1;
-            if (!U) return !0;
-            let e = k.find((e) => e.id === v);
+        L = (0, m.s2)();
+    a()(null != L, "Step should be set");
+    let k = i.useRef(null),
+        { paymentSources: w } = (0, p.j)(),
+        U = (0, C.sw)(),
+        D = (0, c.W)(w, T),
+        G = i.useMemo(() => {
+            if (null == T) return !1;
+            if (!O) return !0;
+            let e = M.find((e) => e.id === T);
             return null != e && !e.enabled;
-        }, [k, U, v]),
-        H = (0, s.iB)({ checkoutPaymentSources: k, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
-        { disablePurchase: B } = i.useMemo(() => {
-            let e = { disablePurchase: H || N === f.uH.DEV_STORYBOOK_CHECKOUT };
-            return null != y
-                ? y(
+        }, [M, O, T]),
+        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: T, location: "CheckoutBaseReviewStep" }),
+        { disablePurchase: H } = i.useMemo(() => {
+            let e = { disablePurchase: F || x === f.uH.DEV_STORYBOOK_CHECKOUT };
+            return null != A
+                ? A(
                       { ...e },
                       {
-                          paymentSource: G,
-                          paymentSourceId: v,
-                          isSelectedPaymentSourceDisabled: F,
-                          invoicePreview: D,
-                          purchasePreviewError: x,
+                          paymentSource: D,
+                          paymentSourceId: T,
+                          isSelectedPaymentSourceDisabled: G,
+                          invoicePreview: U,
+                          purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [y, G, v, F, D, x, H, N]);
+        }, [A, D, T, G, U, _, F, x]);
     i.useEffect(() => {
-        null != b && null != L.current && L.current.scrollIntoView({ behavior: "smooth" });
+        null != b && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [b]);
-    let Y = i.useCallback(() => {
-            M(void 0), n();
-        }, [M, n]),
-        W = i.useCallback(
+    let B = i.useCallback(() => {
+            R(void 0), n();
+        }, [R, n]),
+        Y = i.useCallback(
             (e) => {
-                j(e?.linkWalletEnabled ?? !0), I(o.pn.ADD_PAYMENT_STEPS);
+                j(e?.linkWalletEnabled ?? !0), P(o.pn.ADD_PAYMENT_STEPS);
             },
-            [I, j],
+            [P, j],
         ),
-        V = i.useMemo(() => S({ handlePaymentSourceAdd: W }), [S, W]),
-        K = (0, l.jsx)(d.U, {
-            resolveTenantReviewButtonProps: P,
-            onBack: Y,
-            flowStartTime: R.startTime,
-            onPaymentSourceAdd: W,
-            disablePurchase: B,
-            analyticsLocation: g,
-            baseAnalyticsData: T,
-            openInvoiceId: _,
-            handleStepChange: I,
+        W = i.useMemo(() => S({ handlePaymentSourceAdd: Y }), [S, Y]),
+        V = (0, l.jsx)(d.U, {
+            resolveTenantReviewButtonProps: y,
+            onBack: B,
+            flowStartTime: N.startTime,
+            onPaymentSourceAdd: Y,
+            disablePurchase: H,
+            analyticsLocation: v,
+            baseAnalyticsData: g,
+            openInvoiceId: I,
+            handleStepChange: P,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
-            metadata: A,
+            metadata: E,
             ...t,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: V }), (0, l.jsx)(u.UX, { children: K })],
+        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: V })],
     });
 }
