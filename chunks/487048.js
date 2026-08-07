@@ -12,15 +12,15 @@ var i = n(477900),
     p = n(170865),
     m = n(948822),
     A = n(321486),
-    x = n(660443);
-let f = 16 / 9;
+    f = n(660443);
+let x = 16 / 9;
 function g(e) {
-    let { channelId: t, corners: n, roomWidth: a, roomHeight: g, aspectRatio: y } = e,
+    let { channelId: t, corners: n, roomWidth: a } = e,
         {
-            screenBounds: C,
-            screenClipPath: j,
-            center: v,
-            boundingBoxCorners: E,
+            screenBounds: g,
+            screenClipPath: y,
+            center: C,
+            boundingBoxCorners: j,
         } = l.useMemo(() => {
             let e = (function (e) {
                     let { topLeft: t, topRight: n, bottomRight: i, bottomLeft: l } = e,
@@ -60,25 +60,25 @@ function g(e) {
                 boundingBoxCorners: t,
             };
         }, [n]),
-        { ref: N, width: I, height: b } = (0, r.Ay)(),
-        T = l.useMemo(() => (null == I || null == b ? null : (0, h.t)(E, I, b, f)), [E, I, b]),
-        _ = l.useMemo(() => Math.min(48, Math.max(20, (a / g > y ? g * y : a) * 0.025)), [a, g, y]),
-        { previewStream: R, liveCount: S } = (0, o.cf)([d.A, u.default], () => {
+        { ref: v, width: E, height: N } = (0, r.Ay)(),
+        I = l.useMemo(() => (null == E || null == N ? null : (0, h.t)(j, E, N, x)), [j, E, N]),
+        b = Math.min(48, Math.max(20, 0.025 * a)),
+        { previewStream: T, liveCount: _ } = (0, o.cf)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return { previewStream: null, liveCount: 0 };
             let e = u.default.getId(),
                 n = d.A.getAllApplicationStreamsForChannel(t);
             return { previewStream: n.find((t) => t.ownerId !== e) ?? n[0] ?? null, liveCount: n.length };
         }),
-        L = l.useMemo(() => (null == b ? 0 : -(((E.topLeft.y + E.topRight.y) / 2 / 100) * b)), [E, b]);
+        R = l.useMemo(() => (null == N ? 0 : -(((j.topLeft.y + j.topRight.y) / 2 / 100) * N)), [j, N]);
     return (0, i.jsxs)("div", {
-        ref: N,
-        className: x.nj,
-        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: j },
+        ref: v,
+        className: f.nj,
+        style: { left: `${g.left}%`, top: `${g.top}%`, width: `${g.width}%`, height: `${g.height}%`, clipPath: y },
         children: [
-            null != R && null != T && null != I
-                ? (0, i.jsx)(A.A, { stream: R, fit: T, tooltipSpacing: L, liveCount: S, containerWidthPx: I })
-                : (0, i.jsx)(m.A, { channelId: t, center: v, iconSize: _ }),
-            (0, i.jsx)(p.A, { className: s()(x.MQ, x.zq) }),
+            null != T && null != I && null != E
+                ? (0, i.jsx)(A.A, { stream: T, fit: I, tooltipSpacing: R, liveCount: _, containerWidthPx: E })
+                : (0, i.jsx)(m.A, { channelId: t, center: C, iconSize: b }),
+            (0, i.jsx)(p.A, { className: s()(f.MQ, f.zq) }),
         ],
     });
 }

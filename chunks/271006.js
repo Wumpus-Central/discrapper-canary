@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(461376),
+    r = n(682577),
     o = n(939249),
     c = n(17928),
     d = n(866323),
@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(446243),
     x = n(558076),
     g = n(872772),
-    C = n(360729),
-    y = n(884863),
+    y = n(360729),
+    C = n(884863),
     j = n(662731),
     v = n(375708),
     E = n(564009),
@@ -31,7 +31,7 @@ let _ = {
     },
     R = 30 * m.A.Millis.MINUTE,
     S = m.A.Millis.HOUR;
-function P(e) {
+function L(e) {
     let t = (function (e) {
         if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : A.default.extractTimestamp(e.objectId);
     })(e);
@@ -43,11 +43,11 @@ function P(e) {
           ? { stage: 1, timeUntilNextStage: S - n }
           : { stage: 2, timeUntilNextStage: null };
 }
-function L(e) {
+function P(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
-        [m, A] = l.useState(P(a).stage),
+        [m, A] = l.useState(L(a).stage),
         x = l.useRef([]),
-        C = l.useCallback(
+        y = l.useCallback(
             (e) => {
                 if (x.current.length > 0 || e === m) return;
                 let [t, ...n] = (function (e, t) {
@@ -76,11 +76,11 @@ function L(e) {
             "respect-motion-settings",
         ),
         I = l.useCallback(() => {
-            let { stage: e } = P(a);
-            C(e);
-        }, [a, C]);
+            let { stage: e } = L(a);
+            y(e);
+        }, [a, y]);
     l.useEffect(() => {
-        let { stage: e, timeUntilNextStage: t } = P(a),
+        let { stage: e, timeUntilNextStage: t } = L(a),
             n = setTimeout(() => I(), (null != a && m > e) || null == t ? 0 : t);
         return () => {
             clearTimeout(n);
@@ -89,10 +89,10 @@ function L(e) {
     let b = l.useCallback(() => {
         a?.objectId != null && (0, f.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
     }, [a, t, n]);
-    return (0, i.jsxs)(y.T, {
+    return (0, i.jsxs)(C.T, {
         centerSingleItem: !0,
         children: [
-            (0, i.jsx)(y.T.Trigger, {
+            (0, i.jsx)(C.T.Trigger, {
                 children: (e) => {
                     let { ref: t, onClick: n, ...l } = e;
                     return (0, i.jsxs)(o.D, {
@@ -124,9 +124,9 @@ function L(e) {
                     });
                 },
             }),
-            (0, i.jsx)(y.T.Popup, {
+            (0, i.jsx)(C.T.Popup, {
                 "aria-label": v.intl.string(j.default.B0gnKP),
-                children: (0, i.jsx)(y.T.Item, {
+                children: (0, i.jsx)(C.T.Item, {
                     icon: u.B,
                     text: v.intl.string(j.default.aduS3B),
                     selected: !1,
@@ -150,32 +150,32 @@ function w(e) {
     });
 }
 function O(e) {
-    let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
-        d = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
-        u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
-        { interactionsEnabled: m } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
-        A = (0, c.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
-        f = (0, c.bG)([x.A], () => null != x.A.getPendingNote(t)),
-        g = (s / r > o ? r * o : s) * 0.0625;
+    let { channelId: t, plants: n, plantConfig: a, roomWidth: s } = e,
+        r = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
+        o = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
+        { interactionsEnabled: d } = y.A.useExperiment({ guildId: r, location: "GuildRoomPlants" }),
+        u = (0, c.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
+        m = (0, c.bG)([x.A], () => null != x.A.getPendingNote(t)),
+        A = 0.0625 * s;
     return (l.useEffect(() => {
-        m &&
+        d &&
             Object.values(_).forEach((e) => {
                 let { src: t } = e;
                 new Image().src = t;
             });
-    }, [m]),
-    null == d)
+    }, [d]),
+    null == r)
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: u.map((e, n) => {
+              children: o.map((e, n) => {
                   let { plant: l, plantPosition: a } = e;
-                  return m
+                  return d
                       ? (0, i.jsx)(
-                            L,
-                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A || f, plantWidth: g },
+                            P,
+                            { guildId: r, channelId: t, plant: l, plantPosition: a, disabled: !u || m, plantWidth: A },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: g }, n);
+                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: A }, n);
               }),
           });
 }
