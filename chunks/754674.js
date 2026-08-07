@@ -1,6 +1,7 @@
-i.d(t, { FT: () => n, Gm: () => c, QD: () => d, Rl: () => r, W$: () => a }), i(321073);
-let n = 0;
-function l(e, t) {
+i.d(t, { FT: () => n, Gm: () => c, QD: () => u, Rl: () => r, W$: () => d, yM: () => l }), i(321073);
+let n = 0,
+    l = 1;
+function a(e, t) {
     return e.position.order - t.position.order;
 }
 function r(e) {
@@ -8,15 +9,15 @@ function r(e) {
         e
             .filter((e) => {
                 let { position: t } = e;
-                return 1 !== t.column;
+                return t.column !== l;
             })
-            .sort(l),
+            .sort(a),
         e
             .filter((e) => {
                 let { position: t } = e;
-                return 1 === t.column;
+                return t.column === l;
             })
-            .sort(l),
+            .sort(a),
     ];
 }
 function s(e) {
@@ -26,30 +27,30 @@ function s(e) {
         ),
     );
 }
-function a(e) {
+function d(e) {
     return s(r(e));
 }
-function d(e, t) {
+function u(e, t) {
     let i = r(e);
     return i[n].push(t), s(i);
 }
-function c(e, t, i, l) {
-    let a = e.find((e) => {
+function c(e, t, i, a) {
+    let d = e.find((e) => {
         let { id: i } = e;
         return i === t;
     });
-    if (null == a) return null;
-    let d = r(e),
+    if (null == d) return null;
+    let u = r(e),
         c = [
-            d[n].filter((e) => {
+            u[n].filter((e) => {
                 let { id: i } = e;
                 return i !== t;
             }),
-            d[1].filter((e) => {
+            u[l].filter((e) => {
                 let { id: i } = e;
                 return i !== t;
             }),
         ],
-        o = c[1 === i ? 1 : n];
-    return o.splice(Math.max(0, Math.min(l, o.length)), 0, a), s(c);
+        o = c[i === l ? l : n];
+    return o.splice(Math.max(0, Math.min(a, o.length)), 0, d), s(c);
 }

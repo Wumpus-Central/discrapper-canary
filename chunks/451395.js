@@ -22,28 +22,30 @@ function f(e) {
             onReorder: g,
             onEnd: p,
             disableDefaultPreview: f = !0,
+            canDrag: h = !0,
         } = e,
-        h = `${o}_${i}`,
-        m = r.useCallback(
+        m = `${o}_${i}`,
+        b = r.useCallback(
             (e, l) => {
                 g?.(e, l);
             },
             [g],
         ),
-        [{ isDragging: b }, x, k] = (0, s.i)({
-            type: h,
+        [{ isDragging: x }, k, D] = (0, s.i)({
+            type: m,
             item: { id: a, index: t, itemType: o, itemPreviewProps: d },
+            canDrag: h,
             collect: (e) => ({ isDragging: e.isDragging() }),
             end: p,
         });
     r.useEffect(() => {
-        f && k((0, u.n)(), { captureDraggingState: !0 });
-    }, [k, f]);
-    let [{ dragSourcePosition: D }, j] = (0, c.H)({
-        accept: h,
+        f && D((0, u.n)(), { captureDraggingState: !0 });
+    }, [D, f]);
+    let [{ dragSourcePosition: j }, C] = (0, c.H)({
+        accept: m,
         drop: (e) => {
             let l = e.index;
-            l !== t && (m(l, t), (e.index = t));
+            l !== t && (b(l, t), (e.index = t));
         },
         collect: (e) => {
             let l = e.getItem(),
@@ -54,15 +56,15 @@ function f(e) {
     return (
         r.useLayoutEffect(
             () => (
-                x(l),
-                j(n),
+                k(l),
+                C(n),
                 () => {
-                    j(null), x(null);
+                    C(null), k(null);
                 }
             ),
-            [x, l, j, n],
+            [k, l, C, n],
         ),
-        { isDragging: b, dragSourcePosition: D }
+        { isDragging: x, dragSourcePosition: j }
     );
 }
 let h = r.memo(function (e) {

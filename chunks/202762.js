@@ -1,0 +1,49 @@
+i.d(t, { Fj: () => S, GP: () => I, Vk: () => h, Wd: () => f, iX: () => E, j0: () => g, lr: () => _ });
+var n = i(562465),
+    l = i(228366),
+    a = i(626584),
+    r = i(88592),
+    s = i(716357),
+    d = i(855823),
+    u = i(652215);
+let c = new a.A("GuildSpaceEditorActionCreators"),
+    o = 0;
+function f(e) {
+    let t = s.A.getSpace(e);
+    null != t && l.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: t });
+}
+function E(e) {
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e });
+}
+function _(e, t, i) {
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_ADD_WIDGET", guildId: e, widget: (0, d.ox)(t, i) });
+}
+function g(e, t, i, n) {
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_MOVE_WIDGET", guildId: e, widgetId: t, targetColumn: i, targetIndex: n });
+}
+function I(e, t) {
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_REMOVE_WIDGET", guildId: e, widgetId: t });
+}
+function h(e, t, i) {
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG", guildId: e, widgetId: t, config: i });
+}
+async function S(e) {
+    let t = r.A.getDraft(e);
+    if (null == t || "saving" === r.A.getSaveStatus(e)) return;
+    let i = {
+            header: t.header,
+            widgets: t.widgets.map((e) => {
+                let { id: t, type: i, position: n, config: l } = e;
+                return (0, d.Ny)(t) ? { type: i, position: n, config: l } : { id: t, type: i, position: n, config: l };
+            }),
+        },
+        a = o++;
+    l.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: a });
+    try {
+        let { body: t } = await n.Bo.put({ url: u.Rsh.GUILD_SPACE(e), body: i, rejectWithError: !0 });
+        l.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: t });
+    } catch (t) {
+        c.error("Failed to save guild space", { guildId: e, error: t }),
+            l.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: a });
+    }
+}
