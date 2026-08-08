@@ -1,0 +1,69 @@
+.container_b08af5 {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-12);
+    row-gap: var(--space-12);
+    width: 288px
+}
+
+.unfocusedMessage_b08af5 {
+    opacity: .2
+}
+
+.badgeContainer_b08af5 {
+    height: 100%
+}
+
+.badgeContainer_b08af5,
+.tagText_b08af5 {
+    align-items: center;
+    display: flex
+}
+
+.tagText_b08af5 {
+    flex-direction: row;
+    gap: 2px
+}
+
+.badgePreview_b08af5 {
+    margin-inline-end: 2px
+}
+
+.messageContainer_b08af5 {
+    display: flex;
+    flex-direction: row
+}
+
+.avatarContainer_b08af5 {
+    height: 40px;
+    margin-inline-end: var(--space-12);
+    width: 40px
+}
+
+.avatar_b08af5,
+.avatarContainer_b08af5 {
+    border-radius: var(--radius-round)
+}
+
+.avatar_b08af5 {
+    overflow: hidden
+}
+
+.contentContainer_b08af5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.decorationsContainer_b08af5,
+.usernameContainer_b08af5 {
+    display: flex;
+    flex-direction: row
+}
+
+.decorationsContainer_b08af5 {
+    align-items: center;
+    margin-inline-start: var(--space-4)
+}
