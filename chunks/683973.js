@@ -5,10 +5,11 @@ var i = n(582128),
     a = n(594061),
     s = n(617617);
 function l() {
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return (
         i.useEffect(() => {
-            a.bW.loadIfNecessary();
-        }, []),
+            e && a.bW.loadIfNecessary();
+        }, [e]),
         (0, r.bG)([s.A], () => s.A.frecencyWithoutFetchingLatest)
     );
 }
