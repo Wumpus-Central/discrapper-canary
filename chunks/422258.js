@@ -1,18 +1,17 @@
 "use strict";
 n.d(t, {
-    JD: () => z,
+    JD: () => Y,
     Jz: () => x,
-    O8: () => Y,
     S_: () => k,
+    _2: () => j,
     fv: () => H,
-    hR: () => K,
     i_: () => F,
-    kG: () => X,
+    kG: () => z,
     od: () => B,
-    tV: () => Z,
-    uM: () => q,
+    tV: () => $,
+    uM: () => K,
     w6: () => V,
-    zN: () => $,
+    zN: () => W,
 });
 var i = n(435558),
     r = n.n(i),
@@ -201,30 +200,22 @@ function H(e) {
     F(e);
 }
 function j(e, t) {
-    return null != e && e.type === a.Ip.CATEGORY && e.collapsed !== t && ((e.collapsed = t), !0);
-}
-function W(e) {
     u.wc.updateAsync(
         "favorites",
-        (t) => {
-            if (!e(t)) return !1;
+        (n) => {
+            let i = null != t ? [t] : Object.keys(n.favoriteChannels),
+                r = !1;
+            for (let t of i) {
+                let i = n.favoriteChannels[t];
+                null != i && i.type === a.Ip.CATEGORY && i.collapsed !== e && ((i.collapsed = e), (r = !0));
+            }
+            if (!r) return !1;
         },
         u.Sb.FREQUENT_USER_ACTION,
         U,
     );
 }
-function Y(e, t) {
-    let n = p.A.getFavorite(e);
-    null != n && n.type === a.Ip.CATEGORY && W((n) => j(n.favoriteChannels[e], t));
-}
-function K(e) {
-    W((t) => {
-        let n = !1;
-        for (let i in t.favoriteChannels) j(t.favoriteChannels[i], e) && (n = !0);
-        return n;
-    });
-}
-function $(e) {
+function W(e) {
     0 !== e.length &&
         u.wc.updateAsync(
             "favorites",
@@ -241,7 +232,7 @@ function $(e) {
             U,
         );
 }
-function z(e, t) {
+function Y(e, t) {
     u.wc.updateAsync(
         "favorites",
         (n) => {
@@ -251,7 +242,7 @@ function z(e, t) {
         U,
     );
 }
-function q() {
+function K() {
     for (let e of (u.wc.updateAsync(
         "favorites",
         (e) => {
@@ -265,7 +256,7 @@ function q() {
     m.dt))
         (0, u.xB)(e);
 }
-function Z(e) {
+function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "settings_page";
     u.wc.updateAsync(
         "favorites",
@@ -277,6 +268,6 @@ function Z(e) {
         U,
     );
 }
-function X(e) {
-    Z(e, "settings_page"), !e && (0, S.ai)(I.A.getGuildId()) && (0, c.pX)(R.BVt.ME);
+function z(e) {
+    $(e, "settings_page"), !e && (0, S.ai)(I.A.getGuildId()) && (0, c.pX)(R.BVt.ME);
 }
