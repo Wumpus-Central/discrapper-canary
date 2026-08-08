@@ -1,7 +1,6 @@
 .destinationRow_ba7598 {
     align-items: center;
     border-radius: 8px;
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,11 +9,15 @@
     padding: 0 8px
 }
 
+.destinationRow_ba7598.pressable_ba7598 {
+    cursor: pointer
+}
+
 .destinationRow_ba7598.disabled_ba7598 {
     cursor: not-allowed
 }
 
-.destinationRow_ba7598:not(.disabled_ba7598):hover {
+.destinationRow_ba7598.pressable_ba7598:not(.disabled_ba7598):hover {
     background-color: var(--interactive-background-hover)
 }
 
