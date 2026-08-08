@@ -1,4 +1,4 @@
-i.d(e, { C: () => D, z: () => F });
+i.d(e, { C: () => L, z: () => D });
 var l = i(477900);
 i(582128);
 var t = i(435558),
@@ -12,23 +12,23 @@ var t = i(435558),
     h = i(260509),
     f = i(808728),
     _ = i(71393),
-    b = i(994500),
-    A = i(287809),
+    A = i(994500),
+    b = i(287809),
     G = i(181079),
     g = i(422258),
     p = i(676168),
-    v = i(313281),
+    v = i(93055),
     m = i(5180),
-    x = i(652215),
-    C = i(449817),
-    j = i(375708);
-function y(n) {
-    return n ? j.intl.string(C.default.TN4nAX) : j.intl.string(C.default.G9fGlP);
-}
+    x = i(606660),
+    j = i(652215),
+    y = i(449817),
+    C = i(375708);
 function F(n) {
-    let e = (0, r.bG)([f.Ay], () => f.Ay.getChannels(x.YYv))[x.rbe.GUILD_CATEGORY],
-        { notifyFavoriteAdded: t } = (0, v.CJ)(),
-        { hasAccess: F, isExperimentEnabled: D, hasHigherPrivileges: L } = (0, v.TW)("useAddToFavoritesItem"),
+    return n ? C.intl.string(y.default.TN4nAX) : C.intl.string(y.default.G9fGlP);
+}
+function D(n) {
+    let e = (0, r.bG)([f.Ay], () => f.Ay.getChannels(j.YYv))[j.rbe.GUILD_CATEGORY],
+        { hasAccess: t, isExperimentEnabled: D, hasHigherPrivileges: L } = (0, v.TW)("useAddToFavoritesItem"),
         k = (0, m.IF)(n, L),
         T = (0, r.bG)([_.A], () => {
             if (null == n.guild_id) return !0;
@@ -37,8 +37,8 @@ function F(n) {
         }),
         Y = !__OVERLAY__ && k && T,
         I = (0, r.bG)([G.A], () => G.A.isFavorite(n.id)),
-        { shouldShowBetaTag: R, dismissBetaTag: w } = (0, p.k3)(D && Y && F && !I),
-        z = y(!1);
+        { shouldShowBetaTag: R, dismissBetaTag: w } = (0, p.k3)(D && Y && t && !I),
+        z = F(!1);
     function E(n, e, i) {
         return (0, l.jsx)(d.Dr, {
             id: "favorite-channel",
@@ -51,7 +51,7 @@ function F(n) {
         });
     }
     if (!D || !Y) return null;
-    if (!F)
+    if (!t)
         return E(u.t, () =>
             (0, c.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([i.e("90797"), i.e("89946")]).then(i.bind(i, 507809));
@@ -59,15 +59,15 @@ function F(n) {
             }),
         );
     if (I) return null;
-    let [[O], J] = a().partition(e, (n) => "null" === n.channel.id);
-    function X(e) {
-        w(), t(), (0, g.Jz)(n.id, e, "channel_context_menu");
+    let [[O], X] = a().partition(e, (n) => "null" === n.channel.id);
+    function J(e) {
+        w(), (0, x.A)(), (0, g.Jz)(n.id, e, "channel_context_menu");
     }
-    if (0 === J.length) return E(o.G, () => X(null));
-    let M = j.intl.string(C.default.CgmkFJ);
+    if (0 === X.length) return E(o.G, () => J(null));
+    let M = C.intl.string(y.default.CgmkFJ);
     return E(
         o.G,
-        () => X(null),
+        () => J(null),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.rX, {
@@ -76,19 +76,19 @@ function F(n) {
                         {
                             id: `favorite-${O.channel.id}`,
                             label: M,
-                            action: () => X("null" === O.channel.id ? null : O.channel.id),
+                            action: () => J("null" === O.channel.id ? null : O.channel.id),
                         },
                         O.channel.id,
                     ),
                 }),
                 (0, l.jsx)(d.rX, {
-                    children: J.map((n) =>
+                    children: X.map((n) =>
                         (0, l.jsx)(
                             d.Dr,
                             {
                                 id: `favorite-${n.channel.id}`,
-                                label: (0, s.m1)(n.channel, A.default, b.A),
-                                action: () => X(n.channel.id),
+                                label: (0, s.m1)(n.channel, b.default, A.A),
+                                action: () => J(n.channel.id),
                             },
                             n.channel.id,
                         ),
@@ -98,16 +98,16 @@ function F(n) {
         }),
     );
 }
-function D(n) {
+function L(n) {
     let e = (0, r.bG)([G.A], () => G.A.isFavorite(n.id)),
         { hasAccess: t } = (0, v.TW)("useRemoveFromFavoritesItem");
     return !__OVERLAY__ && t && e
         ? (0, l.jsx)(d.Dr, {
               id: "favorite-channel",
-              label: y(!0),
+              label: F(!0),
               color: "danger",
               action: () =>
-                  n.type === x.rbe.GUILD_CATEGORY
+                  n.type === j.rbe.GUILD_CATEGORY
                       ? (0, c.openModalLazy)(async () => {
                             let { default: e } = await i.e("52210").then(i.bind(i, 862377));
                             return (i) =>

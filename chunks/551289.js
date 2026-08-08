@@ -2,7 +2,7 @@
 n.d(t, { Yz: () => l, dM: () => o, n_: () => s });
 var i = n(17928),
     r = n(181079),
-    a = n(313281);
+    a = n(93055);
 function s(e, t) {
     return e ? !1 !== t.favoriteGuildVisibleSetting : t.favoriteGuildEnabled;
 }

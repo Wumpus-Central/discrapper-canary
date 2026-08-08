@@ -319,6 +319,7 @@ let ej = i.memo(function () {
                                           t.e("46652"),
                                           t.e("93190"),
                                           t.e("38730"),
+                                          t.e("92997"),
                                           t.e("47502"),
                                           t.e("43266"),
                                           t.e("9004"),
@@ -348,6 +349,7 @@ let ej = i.memo(function () {
                                           t.e("46652"),
                                           t.e("93190"),
                                           t.e("38730"),
+                                          t.e("92997"),
                                           t.e("47502"),
                                           t.e("43266"),
                                           t.e("9004"),
@@ -593,8 +595,8 @@ var ey = t(202776),
     e6 = t(961973),
     e5 = t(435558),
     e9 = t.n(e5),
-    e8 = t(665260),
-    e2 = t(355097);
+    e2 = t(665260),
+    e8 = t(355097);
 function e7(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
@@ -662,11 +664,11 @@ function ne(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e8.lA)(l, e2.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e8.lA)(l, e2.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e0.A.selectOption(e, n.id, t.id, l),
