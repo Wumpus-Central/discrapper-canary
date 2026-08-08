@@ -2,70 +2,54 @@ s.d(t, { A: () => N });
 var i = s(477900),
     r = s(582128),
     l = s(607399),
-    a = s(17928),
-    n = s(289873),
+    n = s(17928),
+    a = s(289873),
     d = s(396478),
     c = s(93055),
     h = s(499373),
-    o = s(192308),
-    u = s(331322),
-    p = s(144165),
-    x = s(821609),
-    j = s(793574),
-    f = s(688810),
-    g = s(792656),
-    m = s(422258),
-    b = s(202541),
+    o = s(331322),
+    u = s(144165),
+    p = s(821609),
+    x = s(793574),
+    j = s(688810),
+    f = s(792656),
+    g = s(422258),
+    A = s(17839),
+    m = s(202541),
     v = s(449817),
-    y = s(375708),
-    A = s(850145),
-    _ = s(988572);
+    _ = s(375708),
+    b = s(850145),
+    y = s(988572);
 function k(e) {
     let { theme: t } = e,
-        { hasAccess: l } = (0, c.TW)("favorites_empty_state"),
-        { analyticsLocations: a } = (0, f.Ay)(j.A.FAVORITES_GUILD_HOME),
+        { hasAccess: s } = (0, c.TW)("favorites_empty_state"),
+        { analyticsLocations: l } = (0, j.Ay)(x.A.FAVORITES_GUILD_HOME),
         n = r.useCallback(() => {
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    s.e("73883"),
-                    s.e("73216"),
-                    s.e("69977"),
-                    s.e("74390"),
-                    s.e("92997"),
-                    s.e("36946"),
-                    s.e("92639"),
-                    s.e("90480"),
-                    s.e("40963"),
-                    s.e("66031"),
-                    s.e("94317"),
-                    s.e("64307"),
-                ]).then(s.bind(s, 420222));
-                return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_state" });
-            });
+            (0, A.A)({ source: "favorites_empty_state" });
         }, []);
-    return (0, i.jsx)(f.f5, {
-        value: a,
+    return (0, i.jsx)(j.f5, {
+        value: l,
         children: (0, i.jsx)(d.pp, {
             theme: t,
-            children: (0, i.jsxs)(u.B, {
+            children: (0, i.jsxs)(o.B, {
                 direction: "vertical",
                 align: "center",
                 gap: "md",
                 children: [
-                    (0, i.jsx)(p._, { zoomable: !1, src: _.A, width: 197, height: 107 }),
+                    (0, i.jsx)(u._, { zoomable: !1, src: y.A, width: 197, height: 107 }),
                     (0, i.jsx)(d.SG, {
-                        className: A.Y,
-                        noteClassName: A.A3,
-                        note: y.intl.string(v.default["+SuGKb"]),
-                        children: y.intl.string(v.default["wh+Rz1"]),
+                        className: b.Y,
+                        noteClassName: b.A3,
+                        note: _.intl.string(v.default["+SuGKb"]),
+                        children: _.intl.string(v.default["wh+Rz1"]),
                     }),
-                    l
-                        ? (0, i.jsx)(x.$, { text: y.intl.string(v.default["6kk0gM"]), onClick: n, icon: h.T })
-                        : (0, i.jsx)(g.A, {
-                              subscriptionTier: b.pe.TIER_2,
-                              defaultTextOverride: y.intl.string(v.default.yYVbdv),
+                    s
+                        ? (0, i.jsx)(p.$, { text: _.intl.string(v.default["6kk0gM"]), onClick: n, icon: h.T })
+                        : (0, i.jsx)(f.A, {
+                              subscriptionTier: m.pe.TIER_2,
+                              defaultTextOverride: _.intl.string(v.default.yYVbdv),
                               onSubscribeModalClose: (e) => {
-                                  e && (0, m.tV)(!0, "favorites_empty_state");
+                                  e && (0, g.tV)(!0, "favorites_empty_state");
                               },
                           }),
                 ],
@@ -84,7 +68,7 @@ function N(e) {
         C.A.loadThread(h);
     });
     let o = (0, c.DZ)(),
-        u = (0, a.bG)([S.A], () => S.A.theme);
+        u = (0, n.bG)([S.A], () => S.A.theme);
     return o
         ? (0, i.jsxs)("div", {
               className: G.A,
@@ -92,8 +76,8 @@ function N(e) {
           })
         : ((t =
               null != h
-                  ? (0, i.jsx)(n.y, { type: n.y.Type.SPINNING_CIRCLE })
-                  : (0, i.jsx)(d.SG, { note: y.intl.string(y.t["LTr+x9"]), children: y.intl.string(y.t.ai6Lbr) })),
+                  ? (0, i.jsx)(a.y, { type: a.y.Type.SPINNING_CIRCLE })
+                  : (0, i.jsx)(d.SG, { note: _.intl.string(_.t["LTr+x9"]), children: _.intl.string(_.t.ai6Lbr) })),
           (0, i.jsxs)("div", {
               className: G.j,
               children: [

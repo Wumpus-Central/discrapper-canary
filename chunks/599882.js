@@ -26,7 +26,7 @@ var s = n(477900),
     M = n(652215),
     E = n(449817),
     S = n(375708);
-let L = i.lazy(() => n.e("79948").then(n.bind(n, 329671)));
+let L = i.lazy(() => Promise.all([n.e("32100"), n.e("79948")]).then(n.bind(n, 329671)));
 function R(e) {
     let { className: t } = e,
         {
@@ -85,8 +85,8 @@ function R(e) {
           });
 }
 var D = n(454938),
-    O = n(855687),
-    P = n(259678),
+    P = n(855687),
+    O = n(259678),
     w = n(657718),
     z = n(85277),
     B = n(48525);
@@ -117,7 +117,7 @@ function F(e) {
             ref: g,
             disabled: h,
         });
-    return (0, s.jsx)(P.vN, {
+    return (0, s.jsx)(O.vN, {
         ...d,
         children: (0, s.jsx)("button", {
             role: t,
@@ -283,7 +283,7 @@ function eo(e) {
 function ec(e) {
     let { bannerVisible: t, guild: a, onClick: r, onContextMenu: l, ariaControls: o, ariaExpanded: u, children: x } = e,
         m = (0, v.YC)(a),
-        h = (0, c.bG)([ee.A], () => (0, O.K)(ee.A, a)),
+        h = (0, c.bG)([ee.A], () => (0, P.K)(ee.A, a)),
         b = i.useCallback(() => {
             h
                 ? (0, j.openModalLazy)(async () => {
@@ -382,9 +382,9 @@ let ed = i.memo(function (e) {
         E = !y && C,
         S = (0, et.VI)(p) && I && !m,
         [L, R] = i.useState(!1),
-        O = i.useRef(!1),
-        P = i.useRef(null),
-        w = t ?? P,
+        P = i.useRef(!1),
+        O = i.useRef(null),
+        w = t ?? O,
         z = i.useRef(void 0),
         B = Z.kt.getSetting(),
         F = (0, c.bG)([J.A], () => J.A.theme);
@@ -394,7 +394,7 @@ let ed = i.memo(function (e) {
     }
     return (
         i.useEffect(() => {
-            if (S && n && !O.current && B)
+            if (S && n && !P.current && B)
                 return (
                     R(!0),
                     (z.current = setTimeout(() => {
@@ -406,7 +406,7 @@ let ed = i.memo(function (e) {
                 );
         }, [S, n, B]),
         i.useEffect(() => {
-            O.current = n;
+            P.current = n;
         }, [n]),
         (0, s.jsx)(b.N, {
             theme: F,

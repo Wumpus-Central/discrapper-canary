@@ -18,7 +18,7 @@ var l = n(477900),
     E = n(611371),
     x = n(532794),
     _ = n(158045),
-    N = n(518082),
+    N = n(17839),
     S = n(349828),
     I = n(202541),
     b = n(449817),
@@ -28,7 +28,7 @@ function j() {
     let e = i.useCallback(() => {
         let { hasAccess: e } = (0, o.ad)();
         e
-            ? (0, N.A)(null, "favorites_empty_sidebar")
+            ? (0, N.A)({ source: "favorites_empty_sidebar" })
             : (0, d.openModalLazy)(async () => {
                   let { default: e } = await n.e("89946").then(n.bind(n, 507809));
                   return (t) => (0, l.jsx)(e, { ...t, source: "favorites_empty_sidebar" });

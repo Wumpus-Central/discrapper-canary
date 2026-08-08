@@ -1,0 +1,10 @@
+.actionBarInput_f87756 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.emptyState_f87756 {
+    margin: 8px 24px;
+    text-align: center
+}

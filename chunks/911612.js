@@ -18,7 +18,7 @@ function u(e) {
                 label: o.intl.string(o.t["ISN+NM"]),
                 action: () =>
                     (0, r.openModalLazy)(async () => {
-                        let { default: e } = await t.e("28020").then(t.bind(t, 395199));
+                        let { default: e } = await t.e("3956").then(t.bind(t, 703551));
                         return (a) => (0, n.jsx)(e, { ...a });
                     }),
             })

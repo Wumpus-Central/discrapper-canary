@@ -862,7 +862,7 @@ var tV = n(871123),
     tX = n(914430),
     tq = n(47167),
     tZ = n(485947),
-    tJ = n(20427),
+    tJ = n(970853),
     t$ = n(551851),
     tQ = n(485596);
 function t0(e) {
@@ -923,8 +923,8 @@ let t2 = J(
                                         n.e("91377"),
                                         n.e("35723"),
                                         n.e("66378"),
-                                        n.e("73589"),
-                                    ]).then(n.bind(n, 617396));
+                                        n.e("15675"),
+                                    ]).then(n.bind(n, 740438));
                                     return (n) => (0, s.jsx)(e, { ...n, channel: l, guild: t });
                                 });
                         }
@@ -962,7 +962,7 @@ let t2 = J(
                                 });
                         });
                 }, [l]),
-                N = (0, tJ.C)(l);
+                N = (0, tJ.A)(l);
             null == N && p && !o && (N = { label: em.intl.string(em.t["fUYU+j"]), perform: _ });
             let { role: I, tabIndex: b, ...G } = (0, d.rm)(l.id),
                 R = r.useRef(null),

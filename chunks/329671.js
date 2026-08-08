@@ -1,70 +1,53 @@
-a.r(t), a.d(t, { default: () => b });
-var i = a(477900),
-    n = a(582128),
-    r = a(192308),
-    l = a(980707),
-    d = a(477782),
-    o = a(499373),
-    c = a(234020),
-    s = a(442433),
-    u = a(93055),
-    f = a(928424),
-    h = a(449817),
-    p = a(375708);
-function b(e) {
-    let { navId: t, onClose: b = s.Z_, onSelect: x } = e,
-        { shouldShowUpsell: _, isAtLimit: g, favoriteLimit: j } = (0, u.ft)(),
+i.r(a), i.d(a, { default: () => x });
+var e = i(477900),
+    n = i(582128),
+    r = i(192308),
+    l = i(980707),
+    c = i(477782),
+    d = i(499373),
+    o = i(234020),
+    s = i(442433),
+    u = i(93055),
+    f = i(17839),
+    h = i(928424),
+    p = i(449817),
+    b = i(375708);
+function x(t) {
+    let { navId: a, onClose: x = s.Z_, onSelect: _ } = t,
+        { shouldShowUpsell: g, isAtLimit: j, favoriteLimit: k } = (0, u.ft)(),
+        v = n.useCallback(() => {
+            g && j ? (0, h.A)(k) : (0, f.A)({ source: "favorites_header_add_button_context_menu" });
+        }, [g, j, k]),
         y = n.useCallback(() => {
-            _ && g
-                ? (0, f.A)(j)
-                : (0, r.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([
-                          a.e("73883"),
-                          a.e("73216"),
-                          a.e("69977"),
-                          a.e("74390"),
-                          a.e("92997"),
-                          a.e("36946"),
-                          a.e("92639"),
-                          a.e("90480"),
-                          a.e("40963"),
-                          a.e("66031"),
-                          a.e("94317"),
-                          a.e("64307"),
-                      ]).then(a.bind(a, 420222));
-                      return (t) => (0, i.jsx)(e, { ...t, source: "favorites_header_add_button_context_menu" });
-                  });
-        }, [_, g, j]),
-        k = n.useCallback(() => {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await a.e("28020").then(a.bind(a, 395199));
-                return (t) => (0, i.jsx)(e, { ...t });
+                let { default: t } = await i.e("3956").then(i.bind(i, 703551));
+                return (a) => (0, e.jsx)(t, { ...a });
             });
         }, []);
-    return (0, i.jsxs)(l.W, {
+    return (0, e.jsxs)(l.W, {
         variant: "fixed",
         "data-menu-migrated": !0,
-        navId: t,
-        onClose: b,
-        "aria-label": p.intl.string(p.t.liqwPJ),
-        onSelect: x,
+        navId: a,
+        onClose: x,
+        "aria-label": b.intl.string(b.t.liqwPJ),
+        onSelect: _,
         children: [
-            (0, i.jsx)(d.rX, {
-                children: (0, i.jsx)(d.Dr, {
+            (0, e.jsx)(c.rX, {
+                children: (0, e.jsx)(c.Dr, {
                     id: "add-to-favorites",
-                    label: p.intl.string(h.default.G9fGlP),
-                    trailingIndicator: { type: "icon", icon: o.T },
-                    icon: o.T,
-                    action: y,
+                    label: b.intl.string(p.default.G9fGlP),
+                    trailingIndicator: { type: "icon", icon: d.T },
+                    icon: d.T,
+                    action: v,
                 }),
             }),
-            (0, i.jsx)(d.rX, {
-                children: (0, i.jsx)(d.Dr, {
+            (0, e.jsx)(c.rX, {
+                children: (0, e.jsx)(c.Dr, {
                     id: "create-favorites-category",
-                    label: p.intl.string(p.t["ISN+NM"]),
-                    trailingIndicator: { type: "icon", icon: c.Y },
-                    icon: c.Y,
-                    action: k,
+                    label: b.intl.string(b.t["ISN+NM"]),
+                    trailingIndicator: { type: "icon", icon: o.Y },
+                    icon: o.Y,
+                    action: y,
                 }),
             }),
         ],

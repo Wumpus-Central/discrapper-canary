@@ -9441,12 +9441,12 @@ let ol = {
             });
         };
     },
-    AddFavoriteChannelModal: async () => {
+    FavoritesGuildAddChannelModal: async () => {
         let { default: e } = await Promise.all([
             a.e("73883"),
             a.e("73216"),
             a.e("69977"),
-            a.e("74390"),
+            a.e("64250"),
             a.e("92997"),
             a.e("36946"),
             a.e("92639"),
@@ -9454,8 +9454,8 @@ let ol = {
             a.e("40963"),
             a.e("66031"),
             a.e("94317"),
-            a.e("64307"),
-        ]).then(a.bind(a, 420222));
+            a.e("65785"),
+        ]).then(a.bind(a, 542432));
         return (t) => (0, r.jsx)(e, { ...t, parentId: null });
     },
     ActivityShareMomentModal: async () => {
