@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => p });
+n.d(t, { A: () => T });
 var r = n(435558),
     a = n(17928),
     s = n(873298),
@@ -11,18 +11,21 @@ var r = n(435558),
     u = n(652215);
 let _ = {},
     E = 0,
-    A = !1,
-    h = !1;
-function I() {
+    A = 0,
+    h = !1,
+    I = !1;
+function f() {
     let e = o.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
         a = 0,
-        l = e?.favoriteChannels;
-    if (null != l)
-        for (let e in l) {
-            let t = l[e];
-            t.type !== s.Ip.CATEGORY && a++,
+        l = 0,
+        d = e?.favoriteChannels;
+    if (null != d)
+        for (let e in d) {
+            let t = d[e];
+            a++,
+                t.type !== s.Ip.CATEGORY && l++,
                 (n[e] = {
                     id: e,
                     nickname: "" !== t.nickname ? t.nickname : null,
@@ -32,25 +35,26 @@ function I() {
                     parentId: t.parentId !== c.O8 ? t.parentId : null,
                 });
         }
-    let d = e?.guildVisible?.value,
-        u = d ?? !(0, r.isEmpty)(n);
+    let u = e?.guildVisible?.value,
+        f = u ?? !(0, r.isEmpty)(n);
     return (
-        !(A === t && h === u && i === d && (0, r.isEqual)(_, n)) && ((A = t), (h = u), (i = d), (_ = n), (E = a), !0)
+        !(h === t && I === f && i === u && (0, r.isEqual)(_, n)) &&
+        ((h = t), (I = f), (i = u), (_ = n), (E = a), (A = l), !0)
     );
 }
-class f extends a.Ay.Store {
+class p extends a.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(o.A), I(), this.syncWith([o.A], I);
+        this.waitFor(o.A), f(), this.syncWith([o.A], f);
     }
     getFavoriteChannels() {
         return _;
     }
     get favoriteGuildMuted() {
-        return A;
+        return h;
     }
     get favoriteGuildEnabled() {
-        return h;
+        return I;
     }
     get favoriteGuildVisibleSetting() {
         return i;
@@ -80,18 +84,26 @@ class f extends a.Ay.Store {
         }
         return null;
     }
+    getCategoryIdByName(e) {
+        let t = e.trim().toLowerCase();
+        for (let e in _) {
+            let n = _[e];
+            if (n.type === s.Ip.CATEGORY && n.nickname?.trim().toLowerCase() === t) return e;
+        }
+        return null;
+    }
     getNickname(e) {
         let t = this.getFavorite(e);
         return t?.nickname ?? void 0;
     }
     getFavoritesCount() {
-        return Object.keys(this.getFavoriteChannels()).length;
+        return E;
     }
     getFavoritesCountAgainstLimit() {
-        return E;
+        return A;
     }
     hasStoredFavorites() {
         return !(0, r.isEmpty)(this.getFavoriteChannels());
     }
 }
-let p = new f(l.h, {});
+let T = new p(l.h, {});

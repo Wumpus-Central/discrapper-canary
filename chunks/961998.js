@@ -48,8 +48,8 @@ var M = n(862328),
     $ = n(935208),
     z = n(181079),
     q = n(422258),
-    Z = n(668267),
-    X = n(5180),
+    Z = n(5180),
+    X = n(635233),
     Q = n(863005),
     J = n(152007),
     ee = n(458294),
@@ -251,7 +251,7 @@ function eP(e) {
         R = (0, E.bG)([Y.Ay], () => Y.Ay.getChannelId(eC.YYv)),
         L = (0, E.bG)([W.A], () => W.A.getChannel(R)),
         D = (0, B.A)((e) => e.guildId),
-        y = (0, X.ai)(D),
+        y = (0, Z.ai)(D),
         { badge: v, unread: b } = (0, E.cf)([Q.A, W.A, ee.default, J.A, et.A, en.Ay, ei.Ay], () => {
             let e = $.default.keys(O),
                 t = new Set();
@@ -314,7 +314,7 @@ function eP(e) {
         ),
         e_ = a.useCallback(
             (e) => {
-                e && ((0, Z.mv)("intro_dc"), (0, H.u)(eC.YYv)),
+                e && ((0, X.mv)("intro_dc"), (0, H.u)(eC.YYv)),
                     (0, er.Yz)() || (0, q.tV)(!0, "favorites_button_onboarding"),
                     eu(ev.i.TAKE_ACTION);
             },

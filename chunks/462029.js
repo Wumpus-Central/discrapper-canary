@@ -76,9 +76,7 @@ function U() {
                 let { hasAccess: e, isFreemium: t } = (0, C.ad)();
                 e &&
                     t &&
-                    (N.A.hasStoredFavorites() ||
-                        null != N.A.favoriteGuildVisibleSetting ||
-                        (0, R.tV)(!1, "auto_hide_empty_guild"));
+                    (N.A.hasStoredFavorites() || null != N.A.favoriteGuildVisibleSetting || (0, R.tV)(!1, "auto"));
             },
             [],
         );
