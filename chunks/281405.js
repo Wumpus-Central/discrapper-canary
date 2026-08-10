@@ -1,7 +1,8 @@
-n.d(t, { n: () => l, r: () => r });
+"use strict";
+n.d(t, { n: () => a, r: () => s });
 var i,
-    s,
-    l =
+    r,
+    a =
         (((i = {}).GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar"),
         (i.GUILD_SCHEDULED_EVENTS = "guild-scheduled-events"),
         (i.GUILD_HUB_HEADER_OPTIONS = "guild-hub-header-options"),
@@ -23,13 +24,12 @@ var i,
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
         i),
-    r =
-        (((s = {}).SPACER = "spacer"),
-        (s.GUILD_PROGRESS = "guild-progress"),
-        (s.MFA_WARNING = "mfa-warning"),
-        (s.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
-        (s.GAME_CLAIM = "game-claim"),
-        (s.APPLICATION_ACCOUNT_LINK = "application-account-link"),
-        (s.FAVORITES_UPSELL = "favorites-upsell"),
-        s);
-/^(14256|21552)$/.test(n.j);
+    s =
+        (((r = {}).SPACER = "spacer"),
+        (r.GUILD_PROGRESS = "guild-progress"),
+        (r.MFA_WARNING = "mfa-warning"),
+        (r.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
+        (r.GAME_CLAIM = "game-claim"),
+        (r.APPLICATION_ACCOUNT_LINK = "application-account-link"),
+        (r.FAVORITES_UPSELL = "favorites-upsell"),
+        r);
