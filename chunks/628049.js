@@ -3,18 +3,19 @@ n.d(t, {
     FG: () => I,
     HS: () => s,
     LC: () => f,
-    NQ: () => _,
     PH: () => A,
     ST: () => d,
     U$: () => c,
-    W5: () => m,
+    W5: () => g,
     XF: () => E,
     Yh: () => p,
     ZI: () => u,
     ZN: () => l,
     by: () => o,
-    eh: () => T,
+    eh: () => m,
     q4: () => h,
+    qL: () => _,
+    qb: () => T,
 });
 var i,
     r = n(281445),
@@ -61,6 +62,11 @@ class p {
     static SECOND_GAME_NAME = "Factorio";
     static THIRD_GAME_NAME = "V Rising";
 }
-r.X.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, a.B.STAGING;
-let T = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    m = "0";
+let T = {
+        [r.X.SHOCKBYTE]:
+            window.GLOBAL_ENV.RELEASE_CHANNEL === a.B.STAGING
+                ? "https://purple-prod.shockbyte.dev/support"
+                : "https://discord.shockbyte.com/support",
+    },
+    m = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    g = "0";

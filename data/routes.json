@@ -388,6 +388,7 @@
   "GAME_SERVER_MY_REGIONS": "/users/@me/game-server-regions",
   "GAME_SERVERS_ME": "/users/@me/game-servers",
   "GAME_SERVER_ME": "/users/@me/game-servers/:param",
+  "GAME_SERVER_ME_WAKE": "/users/@me/game-servers/:param/wake",
   "GAME_SERVER_WAKE": "/guilds/:param/game-servers/:param/wake",
   "SEARCH_CHANNEL": "/channels/:param/messages/search",
   "SEARCH_TABS_CHANNEL": "/channels/:param/messages/search/tabs",

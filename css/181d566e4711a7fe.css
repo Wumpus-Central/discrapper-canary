@@ -747,6 +747,10 @@
     width: 8px
 }
 
+.statusDotCritical__892b9 {
+    background: var(--text-feedback-critical)
+}
+
 .copyButton__892b9 {
     align-items: center;
     color: var(--icon-muted);
@@ -819,6 +823,22 @@
 .footerButtonSecondary__892b9:active {
     background-color: var(--control-secondary-background-active);
     border-color: var(--control-secondary-border-active)
+}
+
+.footerButtonSlot__892b9 {
+    display: flex;
+    flex: 1 0 0
+}
+
+.footerButtonDisabled__892b9 {
+    color: var(--text-muted);
+    cursor: not-allowed
+}
+
+.footerButtonDisabled__892b9:active,
+.footerButtonDisabled__892b9:hover {
+    background-color: var(--control-secondary-background-default);
+    border-color: var(--control-secondary-border-default)
 }
 
 .section_fa7eb1 {

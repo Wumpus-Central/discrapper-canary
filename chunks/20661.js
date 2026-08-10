@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card__892b9",
     Wb: "gameServerOwnedCardGlow__892b9",
     mr: "highlighted__892b9",
@@ -21,9 +21,12 @@ e.exports = {
     gv: "statColGrow__892b9",
     Yb: "statValueRow__892b9",
     kg: "statusDot__892b9",
+    rU: "statusDotCritical__892b9",
     cL: "copyButton__892b9",
     qr: "footer__892b9",
     wC: "footerButton__892b9",
     QV: "footerButtonPrimary__892b9",
     y2: "footerButtonSecondary__892b9",
+    y7: "footerButtonSlot__892b9",
+    Gz: "footerButtonDisabled__892b9",
 };

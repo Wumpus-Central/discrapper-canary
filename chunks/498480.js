@@ -5,7 +5,7 @@ n.d(t, {
     cq: () => N,
     Jr: () => b,
     hU: () => P,
-    as: () => G,
+    as: () => x,
     e_: () => v,
     hE: () => U,
     jL: () => D,
@@ -13,6 +13,7 @@ n.d(t, {
     tT: () => C,
     dk: () => M,
     z9: () => g,
+    Kz: () => G,
     Ce: () => w,
     KH: () => R,
     QK: () => L,
@@ -375,7 +376,26 @@ function w(e, t) {
                   throw (P().catch(() => {}), e);
               }));
 }
-function G(e, t) {
+function G(e) {
+    let t = c.A.getGameServers().find((t) => t.id === e);
+    return (
+        null != t &&
+            a.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: i.M.STARTING } }),
+        r.Bo.post({ url: m.Rsh.GAME_SERVER_ME_WAKE(e), rejectWithError: !0 })
+            .then((e) => {
+                let t = e.body;
+                a.h.dispatch({
+                    type: "GAME_SERVER_UPDATE",
+                    guildId: void 0,
+                    gameServer: t.status === i.M.SLEEPING ? { ...t, status: i.M.STARTING } : t,
+                });
+            })
+            .catch((e) => {
+                throw (P().catch(() => {}), e);
+            })
+    );
+}
+function x(e, t) {
     return r.Bo.post({ url: m.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
         a.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, I.A)(t.body) });
     });
