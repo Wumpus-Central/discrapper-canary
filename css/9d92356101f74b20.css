@@ -78,7 +78,7 @@
 }
 
 .themeNitro__3b67f {
-    background: linear-gradient(90deg, rgba(179, 38, 156, .4), rgba(20, 20, 203, .4))
+    background: linear-gradient(90deg, rgba(179, 38, 156, .7) 0, rgba(20, 20, 203, .7) 100%), var(--background-base-lowest)
 }
 
 .content__3b67f {
