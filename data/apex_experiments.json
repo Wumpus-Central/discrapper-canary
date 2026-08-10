@@ -5466,20 +5466,6 @@
     }
   },
   {
-    "name": "2026-07-monthly-to-yearly-upsell-copy",
-    "kind": "user",
-    "defaultConfig": 0,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": 1,
-      "2": 2,
-      "3": 3
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-07-nitro-home-header-followup",
     "defaultConfig": {
