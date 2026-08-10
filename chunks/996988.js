@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { d: () => r });
-var i,
-    r =
-        (((i = {}).POPOUT = "POPOUT"),
-        (i.MODAL = "MODAL"),
-        (i.MODAL_V2 = "MODAL_V2"),
-        (i.SIDEBAR = "SIDEBAR"),
-        (i.VIDEO_TILE_BACKGROUND = "VIDEO_TILE_BACKGROUND"),
-        i);
+o.d(t, { d: () => l });
+var r,
+    l =
+        (((r = {}).POPOUT = "POPOUT"),
+        (r.MODAL = "MODAL"),
+        (r.MODAL_V2 = "MODAL_V2"),
+        (r.SIDEBAR = "SIDEBAR"),
+        (r.VIDEO_TILE_BACKGROUND = "VIDEO_TILE_BACKGROUND"),
+        r);

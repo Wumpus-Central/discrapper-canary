@@ -1,56 +1,55 @@
-"use strict";
-n.d(t, { A: () => _, W: () => E }), n(321073);
+n.d(t, { A: () => h, W: () => A }), n(321073);
 var i = n(582128),
-    r = n(17928),
-    a = n(796637),
+    l = n(17928),
+    r = n(462029),
     s = n(5180),
-    l = n(960755),
+    a = n(960755),
     o = n(95701),
     d = n(924985),
     c = n(458294),
     u = n(309010);
-function _(e) {
+function h(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
-    return A(
-        (0, s.ai)(e) ? (0, a.g)() : l.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
+    return E(
+        (0, s.ai)(e) ? (0, r.g)() : a.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         { currentVoiceChannelId: u.Ay.getVoiceChannelId(), selectedChannelId: u.Ay.getChannelId() },
         { withVoiceChannels: t, withCurrentVoiceChannel: n },
         i,
     );
 }
-function E(e, t, n) {
-    let { withVoiceChannels: a = !1, withCurrentVoiceChannel: s = !1 } =
+function A(e, t, n) {
+    let { withVoiceChannels: r = !1, withCurrentVoiceChannel: s = !1 } =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        l = arguments.length > 4 ? arguments[4] : void 0,
-        o = (0, r.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
-        _ = (0, r.bG)([d.A], () => d.A.version),
-        { currentVoiceChannelId: E, selectedChannelId: h } = (0, r.cf)([u.Ay], () => ({
+        a = arguments.length > 4 ? arguments[4] : void 0,
+        o = (0, l.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
+        h = (0, l.bG)([d.A], () => d.A.version),
+        { currentVoiceChannelId: A, selectedChannelId: g } = (0, l.cf)([u.Ay], () => ({
             currentVoiceChannelId: u.Ay.getVoiceChannelId(),
             selectedChannelId: u.Ay.getChannelId(),
         }));
     return (0, i.useMemo)(
         () =>
-            A(
+            E(
                 t,
-                { currentVoiceChannelId: E, selectedChannelId: h },
-                { withVoiceChannels: a, withCurrentVoiceChannel: s },
-                l,
+                { currentVoiceChannelId: A, selectedChannelId: g },
+                { withVoiceChannels: r, withCurrentVoiceChannel: s },
+                a,
             ).map((e) => e.id),
-        [t, n, o, _],
+        [t, n, o, h],
     );
 }
-function A(e, t) {
+function E(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: i } = t,
-        { withVoiceChannels: r, withCurrentVoiceChannel: a } =
+        { withVoiceChannels: l, withCurrentVoiceChannel: r } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         s = arguments.length > 3 ? arguments[3] : void 0,
-        l = [];
+        a = [];
     return (
         e.forEachShownChannel((e) => {
-            ((0, o.tr)(e.type) || (r && (0, o.ay)(e.type)) || (a && (e.id === n || e.id === i))) && l.push(e);
+            ((0, o.tr)(e.type) || (l && (0, o.ay)(e.type)) || (r && (e.id === n || e.id === i))) && a.push(e);
         }, s),
-        l
+        a
     );
 }

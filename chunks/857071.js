@@ -66,9 +66,6 @@ let f = new I(r.h, {
                 case d.Q4z.DIRECTORY_ENTRY:
                     h(t, { type: d.Q4z.DIRECTORY_ENTRY, directoryChannelId: r });
                     break;
-                case d.Q4z.GAME_COMMUNITY_UPSELL:
-                    h(t, { type: d.Q4z.GAME_COMMUNITY_UPSELL });
-                    break;
                 default:
                     h(t, null);
             }

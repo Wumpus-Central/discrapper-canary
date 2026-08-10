@@ -1,84 +1,83 @@
-"use strict";
-n.d(t, { A: () => _, d: () => u });
-var i,
-    r = n(562708),
-    a = n(562465),
-    s = n(228366),
-    l = n(280450),
-    o = n(499785),
-    d = n(53516),
-    c = n(652215),
-    u =
-        (((i = {}).USER_ACTION_REQUIRED = "user_action_required"),
-        (i.USER_SETTINGS_UPDATE = "user_settings_update"),
-        (i.GUILD_PHONE_REQUIRED = "guild_phone_required"),
-        (i.MFA_PHONE_UPDATE = "mfa_phone_update"),
-        (i.CONTACT_SYNC = "contact_sync"),
-        i);
-let _ = {
-    setCountryCode(e) {
-        s.h.dispatch({ type: "PHONE_SET_COUNTRY_CODE", countryCode: e });
+o.d(e, { A: () => p, d: () => a });
+var t,
+    n = o(562708),
+    h = o(562465),
+    E = o(228366),
+    _ = o(280450),
+    s = o(499785),
+    d = o(53516),
+    i = o(652215),
+    a =
+        (((t = {}).USER_ACTION_REQUIRED = "user_action_required"),
+        (t.USER_SETTINGS_UPDATE = "user_settings_update"),
+        (t.GUILD_PHONE_REQUIRED = "guild_phone_required"),
+        (t.MFA_PHONE_UPDATE = "mfa_phone_update"),
+        (t.CONTACT_SYNC = "contact_sync"),
+        t);
+let p = {
+    setCountryCode(r) {
+        E.h.dispatch({ type: "PHONE_SET_COUNTRY_CODE", countryCode: r });
     },
-    removePhone: (e, t) =>
-        a.Bo.del({
-            url: c.Rsh.PHONE,
-            body: { password: e, change_phone_reason: t },
+    removePhone: (r, e) =>
+        h.Bo.del({
+            url: i.Rsh.PHONE,
+            body: { password: r, change_phone_reason: e },
             oldFormErrors: !0,
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, h.fT)(),
         }),
-    resendCode(e) {
-        let t = {},
-            n = l.default.getFingerprint();
+    resendCode(r) {
+        let e = {},
+            o = _.default.getFingerprint();
         return (
-            null != n && "" !== n && (t["X-Fingerprint"] = n),
-            a.Bo.post({ url: c.Rsh.RESEND_PHONE, headers: t, body: { phone: e }, rejectWithError: (0, a.fT)() })
+            null != o && "" !== o && (e["X-Fingerprint"] = o),
+            h.Bo.post({ url: i.Rsh.RESEND_PHONE, headers: e, body: { phone: r }, rejectWithError: (0, h.fT)() })
         );
     },
-    beginAddPhone: (e, t) =>
-        a.Bo.post({ url: c.Rsh.PHONE, body: { phone: e, change_phone_reason: t }, rejectWithError: (0, a.fT)() }),
-    addPhone: (e, t, n) =>
-        a.Bo.post({
-            url: c.Rsh.PHONE,
-            body: { phone_token: e, password: t, change_phone_reason: n },
+    beginAddPhone: (r, e) =>
+        h.Bo.post({ url: i.Rsh.PHONE, body: { phone: r, change_phone_reason: e }, rejectWithError: (0, h.fT)() }),
+    addPhone: (r, e, o) =>
+        h.Bo.post({
+            url: i.Rsh.PHONE,
+            body: { phone_token: r, password: e, change_phone_reason: o },
             oldFormErrors: !0,
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, h.fT)(),
         }),
-    addPhoneWithoutPassword: (e) =>
-        a.Bo.post({ url: c.Rsh.PHONE_VERIFY_NO_PASSWORD, body: { code: e }, rejectWithError: (0, a.fT)() }),
-    beginReverifyPhone: (e, t) =>
-        a.Bo.post({
-            url: c.Rsh.PHONE_REVERIFY,
-            body: { phone: e, change_phone_reason: t },
-            rejectWithError: (0, a.fT)(),
+    addPhoneWithoutPassword: (r) =>
+        h.Bo.post({ url: i.Rsh.PHONE_VERIFY_NO_PASSWORD, body: { code: r }, rejectWithError: (0, h.fT)() }),
+    beginReverifyPhone: (r, e) =>
+        h.Bo.post({
+            url: i.Rsh.PHONE_REVERIFY,
+            body: { phone: r, change_phone_reason: e },
+            rejectWithError: (0, h.fT)(),
         }),
-    reverifyPhone: (e, t, n) =>
-        a.Bo.post({
-            url: c.Rsh.PHONE_REVERIFY,
-            body: { phone_token: e, password: t, change_phone_reason: n },
+    reverifyPhone: (r, e, o) =>
+        h.Bo.post({
+            url: i.Rsh.PHONE_REVERIFY,
+            body: { phone_token: r, password: e, change_phone_reason: o },
             oldFormErrors: !0,
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, h.fT)(),
         }),
-    validatePhoneForSupport: (e) =>
-        a.Bo.post({
-            url: c.Rsh.VERIFY_PHONE_FOR_TICKET,
-            body: { token: e },
+    validatePhoneForSupport: (r) =>
+        h.Bo.post({
+            url: i.Rsh.VERIFY_PHONE_FOR_TICKET,
+            body: { token: r },
             oldFormErrors: !0,
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, h.fT)(),
         }),
-    async verifyPhone(e, t) {
-        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            u = {},
-            _ = l.default.getFingerprint();
-        null != _ && "" !== _ && (u["X-Fingerprint"] = _), i && (u.authorization = "");
-        let E = await o.A.post({
-            url: c.Rsh.VERIFY_PHONE,
-            headers: u,
-            body: { phone: e, code: t },
+    async verifyPhone(r, e) {
+        let o = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            t = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            a = {},
+            p = _.default.getFingerprint();
+        null != p && "" !== p && (a["X-Fingerprint"] = p), t && (a.authorization = "");
+        let u = await s.A.post({
+            url: i.Rsh.VERIFY_PHONE,
+            headers: a,
+            body: { phone: r, code: e },
             oldFormErrors: !0,
-            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY_PHONE },
-            rejectWithError: (0, a.fT)(),
+            trackedActionData: { event: n.NetworkActionNames.USER_VERIFY_PHONE },
+            rejectWithError: (0, h.fT)(),
         });
-        return n && s.h.dispatch({ type: "MODAL_POP", key: d.V }), E.body;
+        return o && E.h.dispatch({ type: "MODAL_POP", key: d.V }), u.body;
     },
 };
