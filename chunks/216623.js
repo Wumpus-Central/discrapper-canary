@@ -23,10 +23,10 @@ async function c(e) {
 async function u() {
     if (!s.A.getIsStale()) return Promise.resolve();
     let e = await i.Bo.get({ url: o.Rsh.GET_SAVED_MESSAGES, rejectWithError: (0, i.fT)() });
-    if (!e.ok) return void r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
+    if (!e.ok) return void (await r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] }));
     let t = e.body.results.map((e) => ({
         message: null != e.message ? (0, a.rh)(e.message) : null,
         saveData: (0, l.Dd)(e.save_data),
     }));
-    r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: t });
+    await r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: t });
 }

@@ -1,12 +1,15 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(439372),
     r = n(269073),
     a = n(216623);
-class s extends i.A {
+async function s() {
+    (0, r.A9)("saved_messages_manager") && (await (0, a.AX)());
+}
+class l extends i.A {
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     handlePostConnectionOpen = () => {
-        (0, r.A9)("saved_messages_manager") && (0, a.AX)();
+        s();
     };
 }
-let l = new s();
+let o = new l();
