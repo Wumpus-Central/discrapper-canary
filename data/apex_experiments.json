@@ -5972,5 +5972,21 @@
         "enabled": true
       }
     }
+  },
+  {
+    "name": "2026-08-user-bio-max-length",
+    "kind": "user",
+    "defaultConfig": {
+      "maxLength": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "maxLength": null
+      }
+    }
   }
 ]

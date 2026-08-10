@@ -1,4 +1,4 @@
-n.d(e, { default: () => to, Z: () => ts }), n(321073);
+n.d(e, { default: () => tc, Z: () => tr }), n(321073);
 var i,
     l = n(477900),
     s = n(582128),
@@ -17,8 +17,8 @@ var i,
     j = n(287809),
     C = n(53505),
     v = n(4274),
-    E = n(723702),
-    f = n(834730),
+    f = n(723702),
+    E = n(834730),
     N = n(975571),
     y = n(652215),
     S = n(375708);
@@ -26,8 +26,8 @@ function w() {
     let t = N.A.getArticleURL(y.MVz.GUILD_GETTING_STARTED);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(f.E, { variant: "text-md/normal", children: S.intl.string(S.t.crKvu5) }),
-            (0, l.jsx)(f.E, {
+            (0, l.jsx)(E.E, { variant: "text-md/normal", children: S.intl.string(S.t.crKvu5) }),
+            (0, l.jsx)(E.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 style: { marginTop: 8 },
@@ -74,7 +74,7 @@ function T() {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(D.D, { variant: "heading-md/semibold", children: S.intl.string(S.t.Ksh3ik) }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(E.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: S.intl.string(S.t["mz+/o+"]),
@@ -94,7 +94,7 @@ function T() {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(D.D, { variant: "heading-md/semibold", children: S.intl.string(S.t["C/5V0A"]) }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(E.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: S.intl.string(S.t.sBENmo),
@@ -128,17 +128,19 @@ var K = n(17928),
     U = n(939249),
     I = n(332461),
     B = n(452027),
-    M = n(95477),
-    _ = n(260598),
+    _ = n(95477),
+    M = n(260598),
     F = n(252732),
-    G = n(486020),
-    z = n(339984);
-function V(t) {
+    G = n(290386),
+    z = n(486020),
+    V = n(339984);
+function X(t) {
     let { pendingGlobalName: e, onGlobalNameChange: n, pendingBio: i, onBioChange: r } = t,
         a = (0, K.bG)([j.default], () => j.default.getCurrentUser()),
-        o = null != a ? G.Ay.getUserAvatarURL(a, !0, 80) : void 0,
-        c = s.useCallback(() => {
-            (0, F.XD)({ uploadType: z.HL.AVATAR });
+        o = null != a ? z.Ay.getUserAvatarURL(a, !0, 80) : void 0,
+        c = (0, G.U)({ location: "onboarding_profile_slide" }),
+        d = s.useCallback(() => {
+            (0, F.XD)({ uploadType: V.HL.AVATAR });
         }, []);
     return (0, l.jsxs)("div", {
         className: R.eE,
@@ -148,7 +150,7 @@ function V(t) {
                 children: (0, l.jsx)(L.vN, {
                     children: (0, l.jsxs)(U.D, {
                         className: R.nz,
-                        onClick: c,
+                        onClick: d,
                         role: "button",
                         "aria-label": S.intl.string(S.t["70lEQe"]),
                         children: [
@@ -168,25 +170,25 @@ function V(t) {
             }),
             (0, l.jsx)(B.D, {
                 label: S.intl.string(S.t["9AjdkD"]),
-                children: (0, l.jsx)(M.k, { value: e, onChange: n, placeholder: a?.username, maxLength: 32 }),
+                children: (0, l.jsx)(_.k, { value: e, onChange: n, placeholder: a?.username, maxLength: 32 }),
             }),
-            (0, l.jsx)(_.f, {
+            (0, l.jsx)(M.f, {
                 label: S.intl.string(S.t["61W33d"]),
                 value: i,
                 onChange: r,
-                maxLength: y.NA2,
+                maxLength: c,
                 showCharacterCount: !0,
                 rows: 3,
             }),
         ],
     });
 }
-var X = n(998445),
-    W = n(836480),
-    J = n(283973),
-    Z = n(664121),
-    q = n(906471);
-function Q(t) {
+var W = n(998445),
+    J = n(836480),
+    Z = n(283973),
+    q = n(664121),
+    Q = n(906471);
+function Y(t) {
     let { icon: e, title: n, description: i, onClick: s } = t;
     return (0, l.jsx)(L.vN, {
         children: (0, l.jsxs)("button", {
@@ -197,39 +199,39 @@ function Q(t) {
                 (0, l.jsxs)("div", {
                     className: R.ht,
                     children: [
-                        (0, l.jsx)(f.E, { variant: "text-md/semibold", children: n }),
-                        (0, l.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: i }),
+                        (0, l.jsx)(E.E, { variant: "text-md/semibold", children: n }),
+                        (0, l.jsx)(E.E, { variant: "text-sm/normal", color: "text-subtle", children: i }),
                     ],
                 }),
-                (0, l.jsx)("img", { className: R.$O, alt: "", src: q }),
+                (0, l.jsx)("img", { className: R.$O, alt: "", src: Q }),
             ],
         }),
     });
 }
-function Y(t) {
+function H(t) {
     let { onSelectOption: e, onExplore: n, onCreateServer: i } = t;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(Q, {
-                icon: X.L,
+            (0, l.jsx)(Y, {
+                icon: W.L,
                 title: S.intl.string(S.t.riOUtB),
                 description: S.intl.string(S.t["5u0zvP"]),
-                onClick: () => e(ts.JOIN_SERVER),
+                onClick: () => e(tr.JOIN_SERVER),
             }),
-            (0, l.jsx)(Q, {
-                icon: W.Q,
+            (0, l.jsx)(Y, {
+                icon: J.Q,
                 title: S.intl.string(S.t.gHNiza),
                 description: S.intl.string(S.t.v7xiEA),
                 onClick: n,
             }),
-            (0, l.jsx)(Q, {
-                icon: J.R,
+            (0, l.jsx)(Y, {
+                icon: Z.R,
                 title: S.intl.string(S.t.w5uwoI),
                 description: S.intl.string(S.t.bgoxKS),
-                onClick: () => e(ts.ADD_FRIEND),
+                onClick: () => e(tr.ADD_FRIEND),
             }),
-            (0, l.jsx)(Q, {
-                icon: Z.R,
+            (0, l.jsx)(Y, {
+                icon: q.R,
                 title: S.intl.string(S.t.ZLfEo8),
                 description: S.intl.string(S.t.z7OAvN),
                 onClick: i,
@@ -237,26 +239,26 @@ function Y(t) {
         ],
     });
 }
-function H(t) {
+function $(t) {
     let { inviteLink: e, onInviteLinkChange: n } = t;
     return (0, l.jsx)(B.D, {
         label: S.intl.string(S.t.riOUtB),
-        children: (0, l.jsx)(M.k, { value: e, onChange: n, placeholder: S.intl.string(S.t["+9XKWu"]), autoFocus: !0 }),
+        children: (0, l.jsx)(_.k, { value: e, onChange: n, placeholder: S.intl.string(S.t["+9XKWu"]), autoFocus: !0 }),
     });
 }
-function $(t) {
+function tt(t) {
     let { friendUsername: e, onFriendUsernameChange: n } = t;
     return (0, l.jsx)(B.D, {
         label: S.intl.string(S.t.w5uwoI),
-        children: (0, l.jsx)(M.k, { value: e, onChange: n, placeholder: S.intl.string(S.t.qRaqel), autoFocus: !0 }),
+        children: (0, l.jsx)(_.k, { value: e, onChange: n, placeholder: S.intl.string(S.t.qRaqel), autoFocus: !0 }),
     });
 }
-var tt = n(488995),
-    te = n(324580),
-    tn = n(315290),
-    ti = n(227143);
-let tl = new m.A("NewUserOnboarding");
-var ts =
+var te = n(488995),
+    tn = n(324580),
+    ti = n(315290),
+    tl = n(227143);
+let ts = new m.A("NewUserOnboarding");
+var tr =
     (((i = {}).WELCOME = "welcome"),
     (i.APPEARANCE = "appearance"),
     (i.DOWNLOAD_DESKTOP = "download-desktop"),
@@ -265,38 +267,38 @@ var ts =
     (i.JOIN_SERVER = "join-server"),
     (i.ADD_FRIEND = "add-friend"),
     i);
-let tr = {
-    welcome: tn.jK.WELCOME,
-    appearance: tn.jK.APPEARANCE,
-    "download-desktop": tn.jK.DOWNLOAD_DESKTOP,
-    profile: tn.jK.PROFILE,
-    "next-steps": tn.jK.NEXT_STEPS,
-    "join-server": tn.jK.JOIN_SERVER,
-    "add-friend": tn.jK.ADD_FRIEND,
+let ta = {
+    welcome: ti.jK.WELCOME,
+    appearance: ti.jK.APPEARANCE,
+    "download-desktop": ti.jK.DOWNLOAD_DESKTOP,
+    profile: ti.jK.PROFILE,
+    "next-steps": ti.jK.NEXT_STEPS,
+    "join-server": ti.jK.JOIN_SERVER,
+    "add-friend": ti.jK.ADD_FRIEND,
 };
-function ta(t) {
-    h.A.flowStep(tn.do.ANY, t);
-}
 function to(t) {
+    h.A.flowStep(ti.do.ANY, t);
+}
+function tc(t) {
     let { onClose: e, ...n } = t,
         [i, m] = s.useState("welcome"),
-        [h, f] = s.useState(null),
+        [h, E] = s.useState(null),
         N = j.default.getCurrentUser()?.isClaimed() === !0,
         [y, A] = s.useState(() => j.default.getCurrentUser()?.globalName ?? ""),
         [k, D] = s.useState(""),
         [O, P] = s.useState(""),
         [R, K] = s.useState("");
     s.useEffect(() => {
-        ta(tn.jK.WELCOME);
+        to(ti.jK.WELCOME);
     }, []);
     let L = s.useCallback((t) => {
-            ta(tr[t]), f(t), m(t);
+            to(ta[t]), E(t), m(t);
         }, []),
         U = s.useCallback(
             (t, e) => {
-                "next-steps" === t && null != h && f(null);
-                let n = tr[t];
-                null != n && ta(n), m(t);
+                "next-steps" === t && null != h && E(null);
+                let n = ta[t];
+                null != n && to(n), m(t);
             },
             [h],
         ),
@@ -308,19 +310,19 @@ function to(t) {
                 try {
                     await (0, u._L)({ globalName: e });
                 } catch (t) {
-                    tl.warn("failed to save globalName", t);
+                    ts.warn("failed to save globalName", t);
                 }
             if (k.trim().length > 0)
                 try {
                     await (0, b.gi)({ bio: k.trim() });
                 } catch (t) {
-                    tl.warn("failed to save bio", t);
+                    ts.warn("failed to save bio", t);
                 }
         }, [y, k]),
         B = s.useCallback(async () => {
-            "next-steps" === i && ta(tn.jK.DISMISSED), await I();
+            "next-steps" === i && to(ti.jK.DISMISSED), await I();
         }, [i, I]),
-        M = s.useCallback(async () => {
+        _ = s.useCallback(async () => {
             let t = O.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
             if (0 === t.length) return !1;
             try {
@@ -336,11 +338,11 @@ function to(t) {
                 return o.A.show({ title: S.intl.string(S.t.R0RpRX), body: (0, v.s)(t) }), !1;
             }
         }, [O]),
-        _ = s.useCallback(async () => {
-            ta(tn.jK.EXPLORE),
+        M = s.useCallback(async () => {
+            to(ti.jK.EXPLORE),
                 await I(),
                 await e(),
-                (0, x.transitionToGlobalDiscovery)({ tab: tt.GlobalDiscoveryTab.SERVERS, entrypoint: te.J8.UNKNOWN });
+                (0, x.transitionToGlobalDiscovery)({ tab: te.GlobalDiscoveryTab.SERVERS, entrypoint: tn.J8.UNKNOWN });
         }, [I, e]),
         F = s.useCallback(async () => {
             let t = R.trim();
@@ -352,7 +354,7 @@ function to(t) {
             }
         }, [R]),
         G = s.useCallback(async () => {
-            ta(tn.jK.CREATE_SERVER),
+            to(ti.jK.CREATE_SERVER),
                 await I(),
                 await e(),
                 (0, g.openCreateGuildModal)({ location: "New User Onboarding" });
@@ -360,7 +362,7 @@ function to(t) {
         z = s.useCallback(() => {
             window.open((0, C.SU)());
         }, []),
-        X = s.useMemo(() => {
+        V = s.useMemo(() => {
             let t = [
                 {
                     stepKey: "welcome",
@@ -384,7 +386,7 @@ function to(t) {
                 },
             ];
             return (
-                E.isPlatformEmbedded ||
+                f.isPlatformEmbedded ||
                     t.push({
                         stepKey: "download-desktop",
                         modalProps: {
@@ -407,7 +409,7 @@ function to(t) {
                     t.push({
                         stepKey: "profile",
                         modalProps: { title: S.intl.string(S.t["6A8F1a"]), subtitle: S.intl.string(S.t.sqjmbr) },
-                        body: (0, l.jsx)(V, {
+                        body: (0, l.jsx)(X, {
                             pendingGlobalName: y,
                             onGlobalNameChange: A,
                             pendingBio: k,
@@ -417,40 +419,40 @@ function to(t) {
                 t.push({
                     stepKey: "next-steps",
                     modalProps: {
-                        graphic: { type: "image", src: ti.A },
+                        graphic: { type: "image", src: tl.A },
                         gradientColor: "blue",
                         title: S.intl.string(S.t["++F+ha"]),
                         subtitle: S.intl.string(S.t.yMX0GO),
                     },
-                    body: (0, l.jsx)(Y, { onSelectOption: L, onExplore: _, onCreateServer: G }),
+                    body: (0, l.jsx)(H, { onSelectOption: L, onExplore: M, onCreateServer: G }),
                     nextButtonProps: { text: S.intl.string(S.t.zcmBTS) },
                 }),
                 t
             );
-        }, [N, y, k, L, _, G, z]),
-        W = s.useMemo(() => X.map((t) => t.stepKey), [X]),
+        }, [N, y, k, L, M, G, z]),
+        W = s.useMemo(() => V.map((t) => t.stepKey), [V]),
         J = s.useMemo(
             () => ({
                 "join-server": {
                     stepKey: "join-server",
                     modalProps: { title: S.intl.string(S.t.riOUtB), subtitle: S.intl.string(S.t.cs48bs) },
-                    body: (0, l.jsx)(H, { inviteLink: O, onInviteLinkChange: P }),
+                    body: (0, l.jsx)($, { inviteLink: O, onInviteLinkChange: P }),
                     nextButtonProps: { text: S.intl.string(S.t["Ts/9Ac"]) },
                     nextEnabled: O.trim().length > 0,
-                    onNext: M,
+                    onNext: _,
                 },
                 "add-friend": {
                     stepKey: "add-friend",
                     modalProps: { title: S.intl.string(S.t.w5uwoI), subtitle: S.intl.string(S.t.jy1kln) },
-                    body: (0, l.jsx)($, { friendUsername: R, onFriendUsernameChange: K }),
+                    body: (0, l.jsx)(tt, { friendUsername: R, onFriendUsernameChange: K }),
                     nextButtonProps: { text: S.intl.string(S.t["PMsq/b"]) },
                     nextEnabled: R.trim().length > 0,
                     onNext: F,
                 },
             }),
-            [O, R, M, F],
+            [O, R, _, F],
         ),
-        Z = s.useMemo(() => (null != h && null != J[h] ? [...X, J[h]] : X), [X, h, J]);
+        Z = s.useMemo(() => (null != h && null != J[h] ? [...V, J[h]] : V), [V, h, J]);
     return (0, l.jsx)(a.t, {
         ...n,
         onClose: e,
