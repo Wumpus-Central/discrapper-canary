@@ -118,7 +118,7 @@ function y(e) {
         t.length > 0 && i(t, e);
     }, [s, e, i, o]);
     let d = l.useMemo(() => s.map((e) => ({ gameId: e })), [s]);
-    return { applicationIds: s, games: d, onAddGame: r };
+    return { gameIds: s, games: d, onAddGame: r };
 }
 var R = i(600761),
     O = i(667049),
@@ -1210,7 +1210,7 @@ function tR(e) {
         g = l.useRef(""),
         { options: m, matchSorterOptions: x } = (0, tk.R)({ query: c }),
         f = c.trim().length > 0,
-        { applicationIds: h, onAddGame: p } = y(t),
+        { gameIds: h, onAddGame: p } = y(t),
         I = (0, tT.A)(h),
         j = l.useCallback(
             (e) => {
