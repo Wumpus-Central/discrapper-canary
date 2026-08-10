@@ -4643,22 +4643,6 @@
     }
   },
   {
-    "name": "2026-06-server-boost-bar-nudge",
-    "kind": "guild",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-server-ladder",
     "kind": "user",
     "defaultConfig": {

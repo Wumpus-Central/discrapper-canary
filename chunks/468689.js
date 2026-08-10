@@ -970,13 +970,6 @@ let C = new c.A("GuildSettingsActionCreators"),
                 oldFormErrors: !0,
                 rejectWithError: (0, a.fT)(),
             }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
-        updateGuildPremiumProgressBar: (e, t) =>
-            a.Bo.patch({
-                url: S.Rsh.GUILD(e),
-                body: { premium_progress_bar_enabled: t },
-                oldFormErrors: !0,
-                rejectWithError: (0, a.fT)(),
-            }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
         transferOwnership(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
