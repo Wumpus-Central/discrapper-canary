@@ -2,7 +2,7 @@
 n.d(t, {
     A_: () => m,
     B4: () => et,
-    Do: () => D,
+    Do: () => y,
     Gw: () => b,
     IY: () => q,
     JT: () => K,
@@ -12,7 +12,7 @@ n.d(t, {
     MK: () => P,
     OU: () => R,
     OY: () => eR,
-    QE: () => y,
+    QE: () => D,
     TA: () => eo,
     UE: () => eO,
     YB: () => eE,
@@ -21,7 +21,7 @@ n.d(t, {
     ay: () => L,
     bk: () => $,
     cq: () => eS,
-    createChannelRecord: () => eD,
+    createChannelRecord: () => ey,
     fT: () => j,
     gV: () => x,
     ig: () => F,
@@ -32,7 +32,7 @@ n.d(t, {
     nA: () => ef,
     nb: () => Q,
     oH: () => N,
-    oh: () => ey,
+    oh: () => eD,
     p6: () => ee,
     pQ: () => w,
     pd: () => ed,
@@ -131,11 +131,11 @@ let R = new Set([I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]);
 function L(e) {
     return "SELECTABLE" !== e && R.has(e);
 }
-function y(e) {
+function D(e) {
     var t;
     return L(e) || ((t = e), B.has(t));
 }
-let D = new Set([I.rbe.GUILD_STAGE_VOICE]),
+let y = new Set([I.rbe.GUILD_STAGE_VOICE]),
     v = new Set([I.rbe.DM, I.rbe.GROUP_DM]);
 function b(e) {
     return v.has(e);
@@ -351,6 +351,7 @@ class ec {
     hdStreamingBuyerId;
     voiceHangout;
     lastNonMessageActivityTimestamp;
+    gameId;
     constructor(e) {
         (this.id = e.id),
             (this.type = e.type ?? I.rbe.GUILD_TEXT),
@@ -571,12 +572,14 @@ class eA extends eE {
             (this.defaultTagSetting = e.defaultTagSetting),
             (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
             (this.flags_ = e.flags_),
+            (this.gameId = e.gameId),
             (this.icon = e.icon),
             (this.iconEmoji = e.iconEmoji),
             (this.isMessageRequest = e.isMessageRequest),
             (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp),
             (this.isSpam = e.isSpam),
             (this.lastMessageId = e.lastMessageId),
+            (this.lastNonMessageActivityTimestamp = e.lastNonMessageActivityTimestamp),
             (this.lastPinTimestamp = e.lastPinTimestamp),
             (this.member = e.member),
             (this.memberCount = e.memberCount),
@@ -608,8 +611,7 @@ class eA extends eE {
             (this.linkedLobby = e.linkedLobby),
             (this.hdStreamingUntil = e.hdStreamingUntil),
             (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
-            (this.voiceHangout = e.voiceHangout),
-            (this.lastNonMessageActivityTimestamp = e.lastNonMessageActivityTimestamp);
+            (this.voiceHangout = e.voiceHangout);
     }
     static fromServer(e, t) {
         let n = {
@@ -630,6 +632,7 @@ class eA extends eE {
             defaultTagSetting: e.default_tag_setting,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
+            gameId: e.game_id,
             guild_id: t ?? e.guild_id ?? null,
             icon: e.icon,
             iconEmoji: ea(e.icon_emoji),
@@ -638,6 +641,7 @@ class eA extends eE {
             isMessageRequestTimestamp: e.is_message_request_timestamp,
             isSpam: e.is_spam,
             lastMessageId: e.last_message_id,
+            lastNonMessageActivityTimestamp: e.last_non_message_activity_timestamp,
             lastPinTimestamp: e.last_pin_timestamp,
             member:
                 null != e.member
@@ -691,7 +695,6 @@ class eA extends eE {
             hdStreamingUntil: e.hd_streaming_until,
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
             voiceHangout: e.voice_hangout,
-            lastNonMessageActivityTimestamp: e.last_non_message_activity_timestamp,
         };
         return (0, _.pp)(n, eA);
     }
@@ -723,7 +726,7 @@ class eh extends eE {
             (this.voiceHangout = e.voiceHangout);
     }
     static fromServer(e, t) {
-        return ey({
+        return eD({
             application_id: e.application_id,
             bitrate_: e.bitrate,
             flags_: e.flags,
@@ -777,7 +780,7 @@ class eI extends eE {
             (this.hdStreamingUntil = e.hdStreamingUntil);
     }
     static fromServer(e, t) {
-        return ey({
+        return eD({
             application_id: e.application_id,
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
@@ -816,6 +819,7 @@ class ep extends eE {
             (this.defaultTagSetting = e.defaultTagSetting),
             (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
             (this.flags_ = e.flags_),
+            (this.gameId = e.gameId),
             (this.iconEmoji = e.iconEmoji),
             (this.lastMessageId = e.lastMessageId),
             (this.lastPinTimestamp = e.lastPinTimestamp),
@@ -846,6 +850,7 @@ class ep extends eE {
             defaultTagSetting: e.default_tag_setting,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
+            gameId: e.game_id,
             guild_id: t ?? e.guild_id ?? null,
             iconEmoji: ea(e.icon_emoji),
             id: e.id,
@@ -1046,7 +1051,7 @@ function eO(e, t) {
     return (eC[e.type ?? I.rbe.GUILD_TEXT] ?? eA.fromServer)(e, t);
 }
 function eR(e) {
-    return eD(e);
+    return ey(e);
 }
 let eL = {
     [I.rbe.DM]: class extends eS {},
@@ -1065,10 +1070,10 @@ let eL = {
     [I.rbe.GUILD_FORUM]: ep,
     [I.rbe.GUILD_MEDIA]: ep,
 };
-function ey(e) {
+function eD(e) {
     let t = eL[e.type ?? I.rbe.GUILD_TEXT] ?? eA;
     return (0, _.pp)(e, t);
 }
-function eD(e) {
+function ey(e) {
     return new (eL[e.type ?? I.rbe.GUILD_TEXT] ?? eA)(eu(e));
 }

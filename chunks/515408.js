@@ -77,7 +77,7 @@ function z(e) {
     let t,
         { parentChannel: n, transitionState: c, onClose: h } = e,
         E = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
-        { application: S } = (0, b._k)(n.guild_id),
+        { application: S } = (0, b._k)(n.id),
         y = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, S?.id), [S]),
         [{ textValue: T, richValue: I }, _] = i.useState(() => (0, x.N3)()),
         [R, F] = i.useState(!1),

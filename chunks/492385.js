@@ -551,7 +551,7 @@ var tA = n(682577),
 function tW(e) {
     let { channel: t, tagFilter: n } = e,
         l = (0, ta.AI)(t),
-        { application: s } = (0, G._k)(t.guild_id);
+        { application: s } = (0, G._k)(t.id);
     function a() {
         return (0, z.d)(t);
     }
@@ -5734,7 +5734,7 @@ function sH(e) {
 }
 function sB(e) {
     let { channel: t } = e,
-        { application: n } = (0, G._k)(t.guild_id),
+        { application: n } = (0, G._k)(t.id),
         l = (0, H.A)({ applicationId: n?.id, source: U.GameProfileSources.GameInvitesChannel });
     if (null == n) return null;
     let s = (0, i.jsx)(F.A, { game: n, size: F.M.MEDIUM_LARGE, className: na.gameIcon });
