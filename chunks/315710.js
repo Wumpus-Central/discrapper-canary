@@ -1,23 +1,24 @@
 "use strict";
-n.d(t, { Ok: () => o, se: () => s, tj: () => l });
+n.d(t, { Ok: () => c, se: () => o, tj: () => d });
 var i = n(582128),
     r = n(557361),
     a = n(844222);
-function s() {
+let s = "u" < typeof document ? void 0 : document,
+    l = null == s ? () => void 0 : r.Ay;
+function o() {
     return r.rx.isActive();
 }
-function l(e) {
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = i.useContext(a.C),
-        s = t.keyboardModeEnabled ?? n.keyboardModeEnabled,
-        l = i.useRef(!1);
-    l.current = !s || !0 === t.disable;
-    let o = i.useMemo(() => t.attachTo ?? e.current?.ownerDocument ?? document, [t.attachTo, e]),
-        d = i.useRef(null),
-        c = t.disable ? d : e;
-    return (0, r.Ay)(c, { ...t, disableReturnRef: l, attachTo: o });
+        r = t.keyboardModeEnabled ?? n.keyboardModeEnabled,
+        o = i.useRef(!1);
+    o.current = !r || !0 === t.disable;
+    let d = i.useMemo(() => t.attachTo ?? e.current?.ownerDocument ?? s, [t.attachTo, e]),
+        c = i.useRef(null);
+    return l(t.disable ? c : e, { ...t, disableReturnRef: o, attachTo: d });
 }
-function o(e) {
+function c(e) {
     let { keyboardModeEnabled: t } = e;
-    return l(e.containerRef, { keyboardModeEnabled: t }), e.children;
+    return d(e.containerRef, { keyboardModeEnabled: t }), e.children;
 }
