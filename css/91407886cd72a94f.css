@@ -64,6 +64,11 @@
     margin-inline-start: var(--space-16)
 }
 
+.footer_bbc786 {
+    margin-top: var(--space-24);
+    text-align: center
+}
+
 .methodRowDisabled_bbc786 {
     cursor: default
 }
