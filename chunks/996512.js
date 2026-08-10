@@ -1,7 +1,13 @@
 "use strict";
-n.d(t, { S: () => s });
-var i = n(872772);
-function r(e) {
+n.d(t, { S: () => d, r: () => s });
+var i = n(821578),
+    r = n(872772),
+    a = n(189998);
+function s(e) {
+    let { seats: t } = a.iX[i.I.DEFAULT];
+    return t.find((t) => t.position.x === e.x && t.position.y === e.y);
+}
+function l(e) {
     return {
         objectId: e.object_id,
         createdBy: e.created_by,
@@ -9,12 +15,12 @@ function r(e) {
         updatedBy: e.updated_by,
     };
 }
-function a(e) {
-    return e.object_type === i.N.PLANT
-        ? { objectType: i.N.PLANT, ...r(e) }
-        : { objectType: i.N.NOTE, ...r(e), content: e.content, position: e.position };
+function o(e) {
+    return e.object_type === r.N.PLANT
+        ? { objectType: r.N.PLANT, ...l(e) }
+        : { objectType: r.N.NOTE, ...l(e), content: e.content, position: e.position };
 }
-function s(e) {
+function d(e) {
     return {
         roomId: e.room_id,
         users: e.users.reduce(
@@ -32,7 +38,7 @@ function s(e) {
         background: e.background,
         objects: Object.entries(e.objects).reduce((e, t) => {
             let [n, i] = t;
-            return e.set(+n, i.map(a)), e;
+            return e.set(+n, i.map(o)), e;
         }, new Map()),
     };
 }

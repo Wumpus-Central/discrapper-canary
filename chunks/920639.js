@@ -18,7 +18,7 @@ var i = n(821578),
     l = n(763827),
     o = n(977997),
     d = n(558076),
-    c = n(189998),
+    c = n(996512),
     u = n(652215);
 function _(e) {
     let { userId: t, guildId: n, channelId: r } = e,
@@ -85,7 +85,7 @@ function p(e) {
         let s, l, o, E;
         r.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_SEAT_SELECTED, {
             ..._(i),
-            seat_name: (0, c.ls)(t.x, t.y),
+            seat_name: (0, c.r)(t)?.name ?? "",
             seat_position_v2: [t.x, t.y],
             update_reason: t.x !== n?.x || t.y !== n?.y ? "default" : "user_selected",
             ...((a = i.channelId),
@@ -94,7 +94,7 @@ function p(e) {
             (o = []),
             (E = []),
             d.A.getRoomUsers(a).forEach((e, t) => {
-                s.push(t), l.push((0, c.ls)(e.position.x, e.position.y)), o.push(e.position.x), E.push(e.position.y);
+                s.push(t), l.push((0, c.r)(e.position)?.name ?? ""), o.push(e.position.x), E.push(e.position.y);
             }),
             { seated_user_ids: s, seated_user_seat_names: l, seated_user_x_positions: o, seated_user_y_positions: E }),
             ...e,
