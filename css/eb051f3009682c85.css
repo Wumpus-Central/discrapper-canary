@@ -144,6 +144,12 @@
     width: 24px
 }
 
+.largeDigits_d0d75b .timeBoxOutline_d0d75b {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
 .unitDivider_d0d75b {
     margin: 0 6px;
     position: relative;

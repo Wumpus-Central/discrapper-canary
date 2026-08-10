@@ -4,5 +4,6 @@ e.exports = {
     bh: "timeUnitInnerContainer_d0d75b",
     kB: "time_d0d75b",
     B2: "timeBoxOutline_d0d75b",
+    a3: "largeDigits_d0d75b",
     cV: "unitDivider_d0d75b",
 };
