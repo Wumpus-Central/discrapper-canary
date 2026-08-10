@@ -1,70 +1,78 @@
 "use strict";
-let a;
+let l;
 s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A });
-var l = s(791332),
-    n = s.n(l),
+var a = s(478676),
+    n = s.n(a),
     r = s(873879),
-    u = s(683412),
-    c = s(704726),
-    o = s(46054);
+    o = s(683412),
+    u = s(704726),
+    c = s(46054);
 let i = n().defaultRules.lheading,
     p = n().defaultRules.heading,
     d = n().defaultRules.link,
     g = n().defaultRules.image,
     m = n().defaultRules.list,
-    h = n().defaultRules.blockQuote,
-    f = n().defaultRules.paragraph,
-    k = /\{(.+?)}/,
-    R = /^\$(\w+?)\$/;
+    f = n().defaultRules.blockQuote,
+    h = n().defaultRules.paragraph,
+    R = /\{(.+?)}/,
+    k = /^\$(\w+?)\$/;
 function b(e) {
     let { transformUpperCase: t = !1 } = e;
-    return (e, s, a) => {
-        let l = k.exec(e[1]),
-            r = e[1].replace(k, "");
+    return (e, s, l) => {
+        let a = R.exec(e[1]),
+            r = e[1].replace(R, "");
         return (
             t && (r = r.toUpperCase()),
-            { className: null != l ? l[1] : null, level: "=" === e[2] ? 1 : 2, content: n().parseInline(s, r, a) }
+            { className: null != a ? a[1] : null, level: "=" === e[2] ? 1 : 2, content: n().parseInline(s, r, l) }
         );
     };
 }
 function y(e) {
     return {
-        ...a.baseRules,
-        image: { ...g, ...("function" == typeof a.customRules.image ? a.customRules.image(e) : a.customRules.image) },
-        link: { ...d, ...("function" == typeof a.customRules.link ? a.customRules.link(e) : a.customRules.link) },
-        list: { ...m, ...("function" == typeof a.customRules.list ? a.customRules.list(e) : a.customRules.list) },
+        ...l.baseRules,
+        ...(null != l.customRules.strong
+            ? {
+                  strong: {
+                      ...l.baseRules.strong,
+                      ...("function" == typeof l.customRules.strong ? l.customRules.strong(e) : l.customRules.strong),
+                  },
+              }
+            : {}),
+        image: { ...g, ...("function" == typeof l.customRules.image ? l.customRules.image(e) : l.customRules.image) },
+        link: { ...d, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
+        list: { ...m, ...("function" == typeof l.customRules.list ? l.customRules.list(e) : l.customRules.list) },
         interpolation: {
-            order: c.Ay.order,
-            match: (e) => R.exec(e),
+            order: u.Ay.order,
+            match: (e) => k.exec(e),
             parse(e, t, s) {
-                let a = s.interpolations[e[1]];
-                return null == a ? { type: "text", content: e[0] } : { type: "interpolation", renderer: a };
+                let l = s.interpolations[e[1]];
+                return null == l ? { type: "text", content: e[0] } : { type: "interpolation", renderer: l };
             },
             react: (e) => e.renderer(),
         },
         lheading: {
             ...i,
             parse: b({ transformUpperCase: !0 }),
-            ...("function" == typeof a.customRules.lheading ? a.customRules.lheading(e) : a.customRules.lheading),
+            ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
         },
         heading: {
             ...p,
-            ...("function" == typeof a.customRules.heading ? a.customRules.heading(e) : a.customRules.heading),
+            ...("function" == typeof l.customRules.heading ? l.customRules.heading(e) : l.customRules.heading),
         },
         blockQuote: {
-            ...h,
-            ...("function" == typeof a.customRules.blockQuote ? a.customRules.blockQuote(e) : a.customRules.blockQuote),
+            ...f,
+            ...("function" == typeof l.customRules.blockQuote ? l.customRules.blockQuote(e) : l.customRules.blockQuote),
         },
         paragraph: {
-            ...f,
-            ...("function" == typeof a.customRules.paragraph ? a.customRules.paragraph(e) : a.customRules.paragraph),
+            ...h,
+            ...("function" == typeof l.customRules.paragraph ? l.customRules.paragraph(e) : l.customRules.paragraph),
         },
     };
 }
 function C(e) {
     return { ...y(e) };
 }
-a = s(482644);
+l = s(482644);
 let x = {
     getDefaultRules: C,
     getSpecialRules: (e) => ({
@@ -73,18 +81,18 @@ let x = {
             lheading: {
                 ...i,
                 parse: b({ transformUpperCase: !1 }),
-                ...("function" == typeof a.customRules.lheading ? a.customRules.lheading(e) : a.customRules.lheading),
+                ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
             },
         },
     }),
     getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: c.Ay, list: r.A, subtext: u.A },
+        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: u.Ay, list: r.A, subtext: o.A },
     }),
 };
 function A(e, t, s) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,
-        content: o.A.reactParserFor(C(t))(e.content, !1, null != s ? { changeLog: s } : {}),
+        content: c.A.reactParserFor(C(t))(e.content, !1, null != s ? { changeLog: s } : {}),
     };
 }
