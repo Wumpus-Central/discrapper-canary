@@ -4214,6 +4214,11 @@
     width: 100%
 }
 
+.emojiIcon_c1e9c4 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .avatarAccessory_c1e9c4,
 .imageAccessory_c1e9c4 {
     flex: 0 0 auto;

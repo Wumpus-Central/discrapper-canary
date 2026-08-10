@@ -121,6 +121,7 @@ i.r(
         badgeContainer: "badgeContainer_c1e9c4",
         switchContainer: "switchContainer_c1e9c4",
         icon: "icon_c1e9c4",
+        emojiIcon: "emojiIcon_c1e9c4 icon_c1e9c4",
         avatarAccessory: "avatarAccessory_c1e9c4",
         imageAccessory: "imageAccessory_c1e9c4",
         roleDotAccessory: "roleDotAccessory_c1e9c4",

@@ -183,7 +183,7 @@ function K(e) {
             })(t, n, i.enabled);
             return (0, r.jsx)("div", {
                 className: y.iconContainerLeft,
-                children: (0, r.jsx)("img", { "aria-hidden": !0, alt: "", src: e, className: y.icon }),
+                children: (0, r.jsx)("img", { "aria-hidden": !0, alt: "", src: e, className: y.emojiIcon }),
             });
         }
         case "image":
