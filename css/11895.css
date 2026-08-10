@@ -705,7 +705,6 @@
     opacity: 0;
     position: absolute;
     transform: translateY(calc(100% + var(--space-20)));
-    will-change: transform, opacity;
     z-index: 1
 }
 
