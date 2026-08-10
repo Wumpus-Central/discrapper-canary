@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(155718),
     r = n(315069),
-    s = n(395671),
-    a = n(486020),
-    o = n(403362),
-    l = n(744700);
-class u extends r.A {
+    a = n(395671),
+    s = n(486020),
+    l = n(403362),
+    o = n(744700);
+class d extends r.A {
     id;
     name;
     description;
@@ -37,9 +37,6 @@ class u extends r.A {
     opencriticUrl;
     gameFlags;
     contentClassification;
-    get applicationId() {
-        return this.id;
-    }
     getOfficialApplicationId() {
         return this.linkedApplications?.find((e) => e.type === i.Mh.OFFICIAL)?.id;
     }
@@ -49,12 +46,12 @@ class u extends r.A {
             (this.name = e.name),
             (this.description = e.description),
             (this.aliases = e.aliases ?? []),
-            (this.executables = (e.executables ?? []).map(s.lg)),
+            (this.executables = (e.executables ?? []).map(a.lg)),
             (this.overlay = e.overlay ?? !1),
             (this.overlayWarn = e.overlay_warn ?? !1),
             (this.overlayCompatibilityHook = e.overlay_compatibility_hook ?? !1),
             (this.hook = e.hook ?? !0),
-            (this.supportsOutOfProcessOverlay = s.Ay.supportsOutOfProcessOverlay(e.overlay_methods)),
+            (this.supportsOutOfProcessOverlay = a.Ay.supportsOutOfProcessOverlay(e.overlay_methods)),
             (this.thirdPartySkus = e.third_party_skus ?? []),
             (this.themes = e.themes ?? []),
             (this.linkedApplications = e.linked_applications),
@@ -100,16 +97,16 @@ class u extends r.A {
             (this.contentClassification = e.content_classification);
     }
     getIconURL(e, t) {
-        return (0, l.A)(this.id, this.media?.icon, { size: e, format: t });
+        return (0, o.A)(this.id, this.media?.icon, { size: e, format: t });
     }
     getBannerURL(e) {
-        return (0, l.A)(this.id, this.media?.banner, { keepAspectRatio: !0, size: e });
+        return (0, o.A)(this.id, this.media?.banner, { keepAspectRatio: !0, size: e });
     }
     getCoverURL(e) {
-        return (0, l.A)(this.id, this.media?.cover, { keepAspectRatio: !0, format: a.QB ? "webp" : "png", size: e });
+        return (0, o.A)(this.id, this.media?.cover, { keepAspectRatio: !0, format: s.QB ? "webp" : "png", size: e });
     }
     getArtworkURLs() {
-        return (this.media?.artwork ?? []).map((e) => (0, l.A)(this.id, e, { keepAspectRatio: !0 })).filter(o.Vq);
+        return (this.media?.artwork ?? []).map((e) => (0, o.A)(this.id, e, { keepAspectRatio: !0 })).filter(l.Vq);
     }
     getCompanyByRole(e) {
         return this.companies?.filter((t) => t.roles.includes(e)) ?? [];
