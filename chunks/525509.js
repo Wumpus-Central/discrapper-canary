@@ -89,7 +89,7 @@ class I {
             return i;
         let o = m(e.previously?.player),
             d = m(e.previously?.map),
-            I = h(e) && o?.steamid === void 0,
+            I = h(e) && o?.steamid === void 0 && e.map?.phase !== "warmup",
             C = o?.state?.round_kills,
             v = e.player?.state?.round_kills;
         if (I && "number" == typeof C && "number" == typeof v && v > C) {
@@ -127,11 +127,12 @@ class I {
             for (let e = 0; e < w - A; e++) i.push(c(s.C.Assist, u.rb.ASSIST, { id: (0, r.A)() }));
         let g = e.map?.mode === "casual" || e.map?.mode === "competitive";
         if (g && p(e, ["round", "win_team"]) && e.round?.win_team != null) {
-            let t = (p(e, ["map", "round"]) ? d?.round : e.map?.round) ?? 0;
+            let t = (p(e, ["map", "round"]) ? d?.round : e.map?.round) ?? 0,
+                a = e.round.win_team === e.player?.team;
             (n = (0, r.A)()),
-                i.push(c(s.C.RoundEnd, u.rb.UNCLASSIFIED, { id: n, round: t, winTeam: e.round.win_team }, !0)),
+                i.push(c(s.C.RoundEnd, u.rb.UNCLASSIFIED, { id: n, round: t, win: a }, !0)),
                 null != l &&
-                    e.round.win_team === e.player?.team &&
+                    a &&
                     i.push(c(s.C.RoundWinningKill, u.rb.KILL, { id: (0, r.A)(), killId: l, roundEndId: n }));
         }
         e.map?.phase === "gameover" &&
