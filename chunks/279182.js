@@ -1,4 +1,4 @@
-n.d(t, { A: () => ee }), n(321073);
+n.d(t, { A: () => en }), n(321073);
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -21,34 +21,43 @@ var i = n(477900),
     I = n(269073),
     v = n(85109),
     N = n(652215);
-let j = null;
-class T extends h.Ay.Store {
+let j = null,
+    T = {};
+function S(e, t) {
+    return `${e}:${t}`;
+}
+class y extends h.Ay.Store {
     static displayName = "BookmarkNudgeStore";
     initialize() {
         this.waitFor(f.default, _.A, E.A, C.A, v.A);
     }
     isNudging(e, t) {
-        return j === `${e}:${t}`;
+        return j === S(e, t);
+    }
+    hasRecentlyReacted(e, t) {
+        let n = T[S(e, t)];
+        return null != n && Date.now() - n < 9e5;
     }
 }
-let S = new T(x.h, {
+let b = new y(x.h, {
     MESSAGE_REACTION_ADD: function (e) {
-        var t, n, i, l, s;
-        if (!0 !== e.optimistic || null != j) return !1;
-        let a = f.default.getId();
-        if (e.userId !== a || !(0, I.U_)("bookmark_nudge")) return !1;
-        let r = _.A.getMessage(e.channelId, e.messageId);
+        var t, n, i;
+        if (!0 !== e.optimistic) return !1;
+        let l = f.default.getId();
+        if (e.userId !== l) return !1;
+        if (((T[S(e.channelId, e.messageId)] = Date.now()), null != j || !(0, I.U_)("bookmark_nudge"))) return !0;
+        let s = _.A.getMessage(e.channelId, e.messageId);
         return (
             !(
-                null == r ||
-                null != v.A.getSavedMessage(e.channelId, e.messageId) ||
-                3 > r.reactions.reduce((e, t) => e + t.count + t.burst_count, 0)
-            ) &&
-            ((i = r),
-            (l = a),
-            !!(
-                ((s = i).attachments.some((e) => null != e.content_type && /^(image|video)\//.test(e.content_type)) ||
-                    s.embeds.some(
+                !(
+                    null == s ||
+                    null != v.A.getSavedMessage(e.channelId, e.messageId) ||
+                    3 > s.reactions.reduce((e, t) => e + t.count + t.burst_count, 0)
+                ) &&
+                ((t = s),
+                (n = l),
+                ((i = t).attachments.some((e) => null != e.content_type && /^(image|video)\//.test(e.content_type)) ||
+                    i.embeds.some(
                         (e) =>
                             e.type === N.Auw.IMAGE ||
                             e.type === N.Auw.VIDEO ||
@@ -57,15 +66,14 @@ let S = new T(x.h, {
                             null != e.video ||
                             (null != e.images && e.images.length > 0),
                     )) &&
-                (C.A.isFriend(i.author.id) ||
-                    Array.from(
-                        E.A.getKnownReactorIds(
-                            i.id,
-                            i.reactions.map((e) => e.emoji),
-                        ),
-                    ).some((e) => e !== l && C.A.isFriend(e)))
-            )) &&
-            ((t = e.channelId), (n = e.messageId), (j = `${t}:${n}`), !0)
+                    (C.A.isFriend(t.author.id) ||
+                        Array.from(
+                            E.A.getKnownReactorIds(
+                                t.id,
+                                t.reactions.map((e) => e.emoji),
+                            ),
+                        ).some((e) => e !== n && C.A.isFriend(e))))
+            ) || ((j = S(e.channelId, e.messageId)), !0)
         );
     },
     CHANNEL_SELECT: function () {
@@ -73,18 +81,18 @@ let S = new T(x.h, {
         j = null;
     },
 });
-var y = n(738125),
-    b = n(554146),
-    R = n(43105),
-    L = n(826673),
-    M = n(367727),
-    k = n(49999),
-    O = n(375708),
-    P = n(936037);
-let D = b.M.FOR_LATER_REACTION_COACHMARK;
-function U(e) {
+var R = n(738125),
+    L = n(554146),
+    M = n(43105),
+    k = n(826673),
+    O = n(367727),
+    P = n(49999),
+    D = n(375708),
+    U = n(936037);
+let G = L.M.FOR_LATER_REACTION_COACHMARK;
+function w(e) {
     let { targetElementRef: t, onDismiss: n } = e;
-    return (0, i.jsx)(R.A, {
+    return (0, i.jsx)(M.A, {
         targetElementRef: t,
         gradientColor: "purple",
         position: "top",
@@ -92,26 +100,26 @@ function U(e) {
         shouldShow: !0,
         scrollBehavior: "close",
         caretConfig: { align: "start" },
-        onRequestClose: () => n(k.i.USER_DISMISS),
-        title: O.intl.string(O.t.qPbFK2),
-        body: O.intl.string(O.t.FMaaaB),
-        actions: [{ text: O.intl.string(O.t["NX+WJN"]), onClick: () => n(k.i.USER_DISMISS) }],
-        graphic: { type: "image", src: P },
+        onRequestClose: () => n(P.i.USER_DISMISS),
+        title: D.intl.string(D.t.qPbFK2),
+        body: D.intl.string(D.t.FMaaaB),
+        actions: [{ text: D.intl.string(D.t["NX+WJN"]), onClick: () => n(P.i.USER_DISMISS) }],
+        graphic: { type: "image", src: U },
     });
 }
-var G = n(519222),
-    w = n(435153),
-    H = n(129821);
-function V(e) {
+var H = n(519222),
+    V = n(435153),
+    B = n(129821);
+function F(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, I.jv)("message_reactions"),
         d = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
         u = null != d && null == d.saveData.dueAt,
         m = null != d && null != d.saveData.dueAt,
-        x = (0, h.bG)([S], () => S.isNudging(n.id, t.id)),
+        x = (0, h.bG)([b], () => b.isNudging(n.id, t.id)),
         E = l.useRef(null),
         { isCoachmarkVisible: _, dismissCoachmark: C } = (function (e) {
-            let t = (0, L.HX)(D),
+            let t = (0, k.HX)(G),
                 n = (0, h.bG)([v.A], () => v.A.getSavedMessageCount() > 0),
                 i = e && !t && !n,
                 [s, a] = l.useState(!1);
@@ -119,7 +127,7 @@ function V(e) {
             let [r, o] = l.useState(!1),
                 c = e && !r && (i || s),
                 d = l.useCallback((e) => {
-                    (0, L.Dr)(D, { dismissAction: e });
+                    (0, k.Dr)(G, { dismissAction: e });
                 }, []),
                 u = l.useCallback(
                     (e) => {
@@ -129,48 +137,47 @@ function V(e) {
                 );
             return (
                 l.useEffect(() => {
-                    n && !t && d(k.i.INDIRECT_ACTION);
+                    n && !t && d(P.i.INDIRECT_ACTION);
                 }, [n, t, d]),
                 l.useEffect(() => {
-                    c && ((0, M.Wx)(D), d(k.i.AUTO_DISMISS));
+                    c && ((0, O.Wx)(G), d(P.i.AUTO_DISMISS));
                 }, [c, d]),
                 { isCoachmarkVisible: c, dismissCoachmark: u }
             );
-        })(x),
-        N = t.reactions.some((e) => e.me || e.me_burst),
-        [j, T] = l.useState(N);
-    if ((N && !j && T(!0), (!j && !N) || !c || t.author.id === f.default.getId() || m)) return null;
-    let b = s ? H : w,
-        R = u ? g.c : p.c;
+        })(x);
+    if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !c || t.author.id === f.default.getId() || m)
+        return null;
+    let N = s ? B : V,
+        j = u ? g.c : p.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(A.m, {
                 asContainer: !0,
-                text: u ? O.intl.string(O.t.LHUP9D) : O.intl.string(O.t["9p3D9p"]),
+                text: u ? D.intl.string(D.t.LHUP9D) : D.intl.string(D.t["9p3D9p"]),
                 children: (0, i.jsx)(o.D, {
                     innerRef: E,
                     onClick: (e) => {
                         e.stopPropagation(),
-                            u ? (0, G.r7)(n, t) : (0, G.wF)(n, t, y.r.REACTION_BUTTON),
-                            _ && C(k.i.TAKE_ACTION);
+                            u ? (0, H.r7)(n, t) : (0, H.wF)(n, t, R.r.REACTION_BUTTON),
+                            _ && C(P.i.TAKE_ACTION);
                     },
-                    className: a()(b.reactionBtn, b.bookmarkBtn, { [b.visible]: u || x }, r),
-                    children: (0, i.jsx)(R, { size: "sm", color: "currentColor", className: b.icon }),
+                    className: a()(N.reactionBtn, N.bookmarkBtn, { [N.visible]: u || x }, r),
+                    children: (0, i.jsx)(j, { size: "sm", color: "currentColor", className: N.icon }),
                 }),
             }),
-            _ && (0, i.jsx)(U, { targetElementRef: E, onDismiss: C }),
+            _ && (0, i.jsx)(w, { targetElementRef: E, onDismiss: C }),
         ],
     });
 }
-var B = n(860227),
-    F = n(172218),
-    z = n(317097),
-    J = n(565645),
-    Y = n(114166),
-    K = n(891734),
-    W = n(815807),
-    X = n(831688);
-let Z = l.memo(function (e) {
+var z = n(860227),
+    J = n(172218),
+    Y = n(317097),
+    K = n(565645),
+    W = n(114166),
+    X = n(891734),
+    Z = n(815807),
+    q = n(831688);
+let Q = l.memo(function (e) {
         let t,
             n,
             {
@@ -189,15 +196,15 @@ let Z = l.memo(function (e) {
                 emojiSize: f,
             } = e,
             E = x === u.v.BURST,
-            _ = (0, W.IN)(c, d, x),
-            C = (0, K.g)(E && null != h ? h : []),
-            I = l ? H : w,
+            _ = (0, Z.IN)(c, d, x),
+            C = (0, X.g)(E && null != h ? h : []),
+            I = l ? B : V,
             v = E ? m : o,
-            N = (0, Y.x)(v, X.$),
+            N = (0, W.x)(v, q.$),
             j = {};
         if (E && null != C) {
             let { accentColor: e, backgroundColor: i, opacity: l } = C,
-                s = (0, z.xp)(i ?? "", l) ?? "";
+                s = (0, Y.xp)(i ?? "", l) ?? "";
             _ && (j.borderColor = i), (j.background = s), (t = e), (n = e);
         }
         let T = { minWidth: N, color: t, borderColor: n };
@@ -205,12 +212,12 @@ let Z = l.memo(function (e) {
             className: a()(I.reaction, I.reactionInner, r, { [I.reactionMe]: _, [I.reactionReadOnly]: g && !p && !A }),
             style: j,
             children: [
-                (0, i.jsx)(J.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
+                (0, i.jsx)(K.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
                 (0, i.jsx)("div", { className: I.reactionCount, style: T, children: v }),
             ],
         });
     }),
-    q = l.memo(function (e) {
+    $ = l.memo(function (e) {
         let { showImmediate: t, reactions: n, ...s } = e,
             [a, r] = l.useState(!1),
             [o, c] = l.useTransition(),
@@ -225,8 +232,8 @@ let Z = l.memo(function (e) {
                 },
                 [a, o],
             ),
-            m = (0, F.K)(d),
-            h = (a && !o) || t ? X.q : Z;
+            m = (0, J.K)(d),
+            h = (a && !o) || t ? q.q : Q;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", { ref: m }),
@@ -240,10 +247,10 @@ let Z = l.memo(function (e) {
             ],
         });
     });
-function Q(e, t) {
+function ee(e, t) {
     return (null == e && null == t) || e === t;
 }
-class $ extends l.PureComponent {
+class et extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
@@ -271,7 +278,7 @@ class $ extends l.PureComponent {
                 visibleReactionsCount: _,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            I = A ? H : w;
+            I = A ? B : V;
         return _ > 0
             ? (0, i.jsxs)(r.F, {
                   component: "div",
@@ -279,9 +286,9 @@ class $ extends l.PureComponent {
                   transitionAppear: !C,
                   role: "group",
                   transitionLeave: !1,
-                  id: (0, B.JH)(e),
+                  id: (0, z.JH)(e),
                   children: [
-                      (0, i.jsx)(q, {
+                      (0, i.jsx)($, {
                           reactions: E,
                           message: e,
                           readOnly: n,
@@ -297,7 +304,7 @@ class $ extends l.PureComponent {
                                   t.stopPropagation(), (0, d.$)(e);
                               },
                               className: a()(I.reaction, p, I.remainingReactions),
-                              "aria-label": O.intl.string(O.t.lfIHs4),
+                              "aria-label": D.intl.string(D.t.lfIHs4),
                               children: (0, i.jsxs)(c.E, {
                                   className: I.reactionInner,
                                   variant: "text-sm/normal",
@@ -307,13 +314,13 @@ class $ extends l.PureComponent {
                       !t &&
                           !x &&
                           (0, i.jsx)(m.t, { message: e, channel: h, useChatFontScaling: A, className: I.forceShow }),
-                      !u && (0, i.jsx)(V, { message: e, channel: h, useChatFontScaling: A }),
+                      !u && (0, i.jsx)(F, { message: e, channel: h, useChatFontScaling: A }),
                   ],
               })
             : null;
     }
 }
-let ee = function (e) {
+let en = function (e) {
     let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
             combinedReactions: a,
@@ -323,7 +330,7 @@ let ee = function (e) {
             let e = [],
                 i = (function (e, t) {
                     if (null == t) return e;
-                    let n = e.findIndex((e) => Q(e.emoji.id, t?.id) && Q(e.emoji.name, t?.name));
+                    let n = e.findIndex((e) => ee(e.emoji.id, t?.id) && ee(e.emoji.name, t?.name));
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, s),
                 l = null != n && n < i.length ? i.slice(0, n) : i,
@@ -338,5 +345,5 @@ let ee = function (e) {
                 { combinedReactions: e, visibleReactionsCount: r, remainingReactions: a }
             );
         }, [s, n, t.reactions]);
-    return (0, i.jsx)($, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
+    return (0, i.jsx)(et, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
 };
