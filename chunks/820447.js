@@ -2,6 +2,8 @@ a.exports = {
     f1: "userContainer__38ccf",
     r3: "dim__38ccf",
     R3: "avatarWrapper__38ccf",
+    gP: "videoOverlay__38ccf",
+    Kf: "videoOverlayVisible__38ccf",
     KI: "avatarButton__38ccf",
     hZ: "trigger__38ccf",
     qS: "badge__38ccf",

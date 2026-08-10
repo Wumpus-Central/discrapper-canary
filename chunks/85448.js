@@ -1,75 +1,68 @@
-e.d(t, { A: () => g });
+e.d(t, { Ay: () => m, n6: () => L });
 var A,
     l = e(477900);
 e(582128);
 var a = e(503698),
-    i = e.n(a),
-    n = e(17928),
+    n = e.n(a),
+    i = e(17928),
     h = e(778712),
-    _ = e(666654),
-    u = e(990836),
+    u = e(666654),
+    _ = e(990836),
     c = e(83107),
     r = e(661531),
     T = e(562819),
     d = e(573435),
-    N = e(293246),
+    N = e(505643),
     C = e(863089),
     O = e(556525),
-    I = e(149941),
-    o = (((A = o || {})[(A.OUTGOING = 0)] = "OUTGOING"), (A[(A.INCOMING = 1)] = "INCOMING"), A);
+    o = e(149941),
+    I = (((A = I || {})[(A.OUTGOING = 0)] = "OUTGOING"), (A[(A.INCOMING = 1)] = "INCOMING"), A);
 function L(s) {
     let {
             userId: t,
             size: e,
             speaking: A = !1,
             muted: a = !1,
-            deafen: o = !1,
-            src: L,
-            avatarDecoration: g = null,
-            disabled: m = !1,
-            ringing: R,
-            ringingType: S = 0,
-            avatarClassName: f,
-            renderIcon: b,
-            style: j,
-            onClick: v,
+            deafen: I = !1,
+            avatarDecoration: L = null,
+            disabled: g = !1,
+            ringing: m,
+            ringingType: R = 0,
+            renderIcon: S,
+            style: f,
+            onClick: j,
             onContextMenu: x,
             className: y,
+            children: b,
         } = s,
-        V = (0, n.bG)([N.Ay], () => null != t && N.Ay.isLocalMute(t)),
-        p = (0, C.A)(t),
-        E = (0, O.v)({ isSpeaking: A, voiceDb: p }),
-        W = (0, h.Kj)(e),
-        k = !a && !o && !V,
-        G = i()(
-            I.iE,
+        v = (0, i.bG)([N.Ay], () => null != t && N.Ay.isLocalMute(t)),
+        V = (0, C.A)(t),
+        p = (0, O.v)({ isSpeaking: A, voiceDb: V }),
+        E = (0, h.Kj)(e),
+        W = !a && !I && !v,
+        k = n()(
+            o.iE,
             {
-                [I.vk]: null != v,
-                [I.tb]: R && 0 === S,
-                [I.hs]: R && 1 === S,
-                [I.EX]: e === h._3.SIZE_32 || e === h._3.SIZE_24,
+                [o.vk]: null != j,
+                [o.tb]: m && 0 === R,
+                [o.hs]: m && 1 === R,
+                [o.EX]: e === h._3.SIZE_32 || e === h._3.SIZE_24,
             },
             y,
         ),
-        w = (0, h.FT)(e),
-        U = { height: w, width: w, ...j };
+        G = (0, h.FT)(e),
+        w = { height: G, width: G, ...f };
     return (0, l.jsx)("div", {
-        style: U,
+        style: w,
         onContextMenu: x,
-        className: G,
+        className: k,
         children: (function () {
             let s,
-                t = (0, h.FT)(e),
-                A = (0, l.jsx)("img", {
-                    src: L,
-                    alt: " ",
-                    className: i()(I.sb, f, { [I.tb]: R && 0 === S }),
-                    draggable: !1,
-                });
-            if (m) return A;
-            let n = null != b,
-                N = a || o || V,
-                C = (function (s, t) {
+                t = (0, h.FT)(e);
+            if (g) return b;
+            let A = null != S,
+                i = a || I || v,
+                N = (function (s, t) {
                     let { hasIcon: e = !1, hasStatus: A = !1 } = t;
                     return e && A
                         ? (d.Kh[s] ?? d.hW.AVATAR_CALL_ICON_STATUS_80)
@@ -78,8 +71,8 @@ function L(s) {
                           : A
                             ? (d.mC[s] ?? d.hW.AVATAR_CALL_STATUS_80)
                             : (d.$O[s] ?? d.hW.AVATAR_CALL_80);
-                })(e, { hasIcon: n, hasStatus: N }),
-                O = (function (s, t) {
+                })(e, { hasIcon: A, hasStatus: i }),
+                C = (function (s, t) {
                     let { hasIcon: e = !1, hasStatus: A = !1 } = t;
                     return e && A
                         ? (d.nv[s] ?? d.hW.AVATAR_DECORATION_CALL_ICON_STATUS_80)
@@ -88,36 +81,36 @@ function L(s) {
                           : A
                             ? (d.X7[s] ?? d.hW.AVATAR_DECORATION_CALL_STATUS_80)
                             : (d.aM[s] ?? d.hW.AVATAR_DECORATION_CALL_80);
-                })(e, { hasIcon: n, hasStatus: N }),
-                j = (0, T.Te)(t);
+                })(e, { hasIcon: A, hasStatus: i }),
+                O = (0, T.Te)(t);
             return (0, l.jsxs)("div", {
-                className: I.lN,
+                className: o.lN,
                 children: [
-                    (0, l.jsx)(d.Ay, { className: I.KQ, width: t, height: t, mask: C, children: A }),
-                    k && (0, l.jsx)("div", { className: I.PQ, style: E }),
-                    null != g &&
+                    (0, l.jsx)(d.Ay, { className: o.KQ, width: t, height: t, mask: N, children: b }),
+                    W && (0, l.jsx)("div", { className: o.PQ, style: p }),
+                    null != L &&
                         (0, l.jsx)(d.Ay, {
-                            className: I.DX,
-                            width: j,
-                            height: j,
-                            mask: O,
+                            className: o.DX,
+                            width: O,
+                            height: O,
+                            mask: C,
                             children: (0, l.jsx)("img", {
-                                className: i()(I.tB, { [I.tb]: R && 0 === S }),
-                                src: g,
+                                className: n()(o.tB, { [o.tb]: m && 0 === R }),
+                                src: L,
                                 alt: "",
                                 "aria-hidden": !0,
                                 draggable: !1,
                             }),
                         }),
-                    b?.(),
-                    ((s = V ? _.O : o ? u.c : c.z),
-                    a || o || V
+                    S?.(),
+                    ((s = v ? u.O : I ? _.c : c.z),
+                    a || I || v
                         ? (0, l.jsx)("div", {
-                              className: I.II,
-                              style: { width: W.status + 2 * W.offset, height: W.status + 2 * W.offset },
+                              className: o.II,
+                              style: { width: E.status + 2 * E.offset, height: E.status + 2 * E.offset },
                               children: (0, l.jsx)(
                                   s,
-                                  { color: r.A.colors.WHITE.css, style: { width: W.status, height: W.status } },
+                                  { color: r.A.colors.WHITE.css, style: { width: E.status, height: E.status } },
                                   "status",
                               ),
                           })
@@ -127,5 +120,18 @@ function L(s) {
         })(),
     });
 }
-L.RingingType = o;
-let g = L;
+function g(s) {
+    let { src: t, avatarClassName: e, ...A } = s,
+        { ringing: a, ringingType: i } = A;
+    return (0, l.jsx)(L, {
+        ...A,
+        children: (0, l.jsx)("img", {
+            src: t,
+            alt: " ",
+            className: n()(o.sb, e, { [o.tb]: a && 0 === i }),
+            draggable: !1,
+        }),
+    });
+}
+g.RingingType = I;
+let m = g;

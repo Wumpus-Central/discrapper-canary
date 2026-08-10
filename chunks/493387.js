@@ -10,13 +10,13 @@ var i = n(477900),
     u = n(778712),
     h = n(890856),
     p = n(736653),
-    m = n(293246),
-    A = n(531685),
-    f = n(85448),
+    m = n(505643),
+    f = n(531685),
+    A = n(85448),
     x = n(806931),
     g = n(375708),
-    C = n(506682),
-    y = n(582835),
+    y = n(506682),
+    C = n(582835),
     j = n(197692);
 let v = {
     SCALE_MIN: 0.7,
@@ -80,14 +80,14 @@ class E extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.M)(e),
-            a = s()(C._y, { [j.cp]: l, [j.QB]: !l });
+            a = s()(y._y, { [j.cp]: l, [j.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: s()(C.kY, n),
+            className: s()(y.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(C.XY, y.xM, y.wq, y.Hu),
+                    className: s()(y.XY, C.xM, C.wq, C.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -97,12 +97,12 @@ class E extends l.PureComponent {
 }
 function N(e) {
     var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
+    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: C } = e,
         j = (0, p.Ay)(),
         v = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        N = (0, o.bG)([A.A], () => A.A.isFocused()),
+        N = (0, o.bG)([f.A], () => f.A.isFocused()),
         I = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
-        T = n.map((e) => {
+        b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
             let { user: t, voiceState: n, speaking: a, ringing: s } = e,
                 o = null;
@@ -116,7 +116,7 @@ function N(e) {
             return (0, i.jsx)(
                 E,
                 {
-                    className: C.Wp,
+                    className: y.Wp,
                     width: (0, u.FT)(v),
                     theme: j,
                     children: (0, i.jsx)(h.s, {
@@ -124,10 +124,10 @@ function N(e) {
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            f.A,
+                            A.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(y, (0, u.FT)(v), a && N),
+                                src: t.getAvatarURL(C, (0, u.FT)(v), a && N),
                                 size: v,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,
@@ -141,5 +141,5 @@ function N(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(C.zr, a), children: T });
+    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(y.zr, a), children: b });
 }

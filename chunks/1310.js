@@ -520,7 +520,7 @@ let e9 = d.memo(
                     children: [
                         z
                             ? G
-                                ? (0, u.jsx)(eY.A, { size: eF._3.SIZE_32, ringing: G, src: q, className: e6.hO })
+                                ? (0, u.jsx)(eY.Ay, { size: eF._3.SIZE_32, ringing: G, src: q, className: e6.hO })
                                 : (0, u.jsx)(ek.eu, {
                                       src: q,
                                       "aria-label": Q,

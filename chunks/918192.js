@@ -80,7 +80,7 @@ function b(t) {
             className: p.kQ,
             children: [
                 (0, e.jsx)(
-                    j.A,
+                    j.Ay,
                     {
                         src: s.getAvatarURL(null, 32),
                         size: x._3.SIZE_32,
