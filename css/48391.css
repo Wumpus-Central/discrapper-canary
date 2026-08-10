@@ -295,6 +295,7 @@
 }
 
 .userContainer__38ccf {
+    filter: var(--shadow-medium-filter);
     position: absolute;
     z-index: 0
 }
