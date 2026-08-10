@@ -368,6 +368,69 @@
     isolation: isolate
 }
 
+.streamingBadge__38ccf {
+    align-items: center;
+    background-color: var(--text-voice-connected);
+    border-radius: 50%;
+    display: flex;
+    inset-inline-end: 0;
+    justify-content: center;
+    position: absolute;
+    top: 0
+}
+
+.streamTooltipContent__38ccf {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-8);
+    max-width: 240px;
+    padding: var(--space-8) var(--space-12)
+}
+
+.streamTooltipTitle__38ccf {
+    flex: 1;
+    min-width: 0
+}
+
+.streamPreviewAsset__38ccf {
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 45px;
+    max-width: 80px;
+    min-width: 32px;
+    overflow: hidden;
+    position: relative
+}
+
+.streamPreviewImage__38ccf {
+    height: 100%;
+    width: 100%
+}
+
+.streamPreviewEyeOverlay__38ccf {
+    align-items: center;
+    background-color: var(--opacity-black-60);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute
+}
+
+.full-motion .streamPreviewEyeOverlay__38ccf {
+    transition: opacity .12s ease-out
+}
+
+.streamPreviewAsset__38ccf:focus-visible .streamPreviewEyeOverlay__38ccf,
+.streamPreviewAsset__38ccf:hover .streamPreviewEyeOverlay__38ccf {
+    opacity: 1
+}
+
 .container__2aff1 {
     position: absolute;
     top: 0;
