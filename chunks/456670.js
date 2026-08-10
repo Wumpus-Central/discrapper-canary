@@ -8,5 +8,6 @@ _.exports = {
     r: "dismissButton__3b67f",
     hu: "leftContent__3b67f",
     Kk: "icon__3b67f",
+    d7: "iconColor__3b67f",
     nf: "link__3b67f",
 };

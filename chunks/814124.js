@@ -14,20 +14,20 @@ var n = l(477900),
     h = l(288106),
     C = l(174459),
     E = l(975571),
-    x = l(440938),
-    m = l(80151),
+    m = l(440938),
+    x = l(80151),
     I = l(151115),
     k = l(758836),
     L = l(652215),
-    T = l(375708),
-    N = l(456670);
-let b = { [h.Pz.DEFAULT]: N.Hk, [h.Pz.NITRO]: N.O5 };
+    N = l(375708),
+    T = l(456670);
+let b = { [h.Pz.DEFAULT]: T.Hk, [h.Pz.NITRO]: T.O5 };
 function g(e) {
     let {
             tab: t,
             promotionFlavor: l = h.Pz.DEFAULT,
             icon: i,
-            headerText: m,
+            headerText: x,
             helpCenterId: k,
             helpCenterLinkText: g,
             ctaText: v,
@@ -39,8 +39,8 @@ function g(e) {
         { analyticsLocations: y } = (0, _.Ay)(u.A.COLLECTIBLES_SHOP_NAGBAR),
         M = a.useMemo(() => (null == k ? null : E.A.getArticleURL(k)), [k]),
         f = (0, I.sj)(i),
-        B = b[l] ?? N.Hk,
-        P = (0, x.uM)(),
+        B = b[l] ?? T.Hk,
+        P = (0, m.uM)(),
         G = a.useCallback(() => {
             C.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: P?.sessionId,
@@ -57,21 +57,21 @@ function g(e) {
             theme: L.NJ8.DARKER,
             children: (e) =>
                 (0, n.jsxs)("div", {
-                    className: s()(N.kL, e),
+                    className: s()(T.kL, e),
                     children: [
-                        (0, n.jsx)("div", { className: s()(N.D7, B) }),
+                        (0, n.jsx)("div", { className: s()(T.D7, B) }),
                         (0, n.jsxs)("div", {
-                            className: N.Qs,
+                            className: T.Qs,
                             children: [
                                 (0, n.jsxs)("div", {
-                                    className: N.hu,
+                                    className: T.hu,
                                     children: [
-                                        null != f && (0, n.jsx)(f, { size: "sm", colorClass: N.Kk }),
+                                        null != f && (0, n.jsx)(f, { size: "sm", colorClass: T.d7, className: T.Kk }),
                                         (0, n.jsxs)(o.E, {
                                             variant: "text-sm/normal",
                                             color: "text-overlay-light",
                                             children: [
-                                                null != m ? (0, A.U)(m) : null,
+                                                null != x ? (0, A.U)(x) : null,
                                                 null != M &&
                                                     (0, n.jsxs)(n.Fragment, {
                                                         children: [
@@ -79,9 +79,9 @@ function g(e) {
                                                             (0, n.jsx)(r.Anchor, {
                                                                 href: M,
                                                                 target: "_blank",
-                                                                className: N.nf,
+                                                                className: T.nf,
                                                                 onClick: G,
-                                                                children: g ?? T.intl.string(T.t.WQdkbb),
+                                                                children: g ?? N.intl.string(N.t.WQdkbb),
                                                             }),
                                                         ],
                                                     }),
@@ -90,7 +90,7 @@ function g(e) {
                                     ],
                                 }),
                                 (0, n.jsxs)("div", {
-                                    className: N.uJ,
+                                    className: T.uJ,
                                     children: [
                                         !R &&
                                             null != v &&
@@ -105,7 +105,7 @@ function g(e) {
                                             (0, n.jsx)(d.PM, {
                                                 onClick: j,
                                                 noticeType: L.kqX.COLLECTIBLES_SHOP_NAGBAR,
-                                                className: N.r,
+                                                className: T.r,
                                             }),
                                     ],
                                 }),
@@ -120,8 +120,8 @@ let v =
     21552 == l.j
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
-                  i = (0, x.uM)(),
-                  s = (0, m.A)(),
+                  i = (0, m.uM)(),
+                  s = (0, x.A)(),
                   c = s?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
                   o = s?.tenantMetadata?.collectibles?.reward?.flavor,
                   r = a.useCallback(() => {

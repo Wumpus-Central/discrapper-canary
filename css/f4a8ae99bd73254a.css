@@ -56,9 +56,12 @@
 }
 
 .container__3b67f {
+    align-items: center;
     background-color: var(--background-base-low);
     box-sizing: border-box;
-    height: 54px;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 54px;
     padding: var(--space-xs) var(--space-md);
     position: relative
 }
@@ -79,7 +82,8 @@
 }
 
 .content__3b67f {
-    height: 100%;
+    flex: 1;
+    gap: var(--space-xs);
     justify-content: space-between;
     position: relative
 }
@@ -105,6 +109,10 @@
 }
 
 .icon__3b67f {
+    flex-shrink: 0
+}
+
+.iconColor__3b67f {
     fill: var(--text-overlay-light)
 }
 
