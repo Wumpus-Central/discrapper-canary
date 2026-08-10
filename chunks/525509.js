@@ -1,209 +1,237 @@
-l.r(t), l.d(t, { default: () => C });
-var n = l(324029),
-    i = l(31048);
-l(321073);
-var r = l(132500),
-    a = l(260549),
-    s = l(106983),
-    u = l(696016);
-let o = new Set(["warmup", "paused", "timeout_ct", "timeout_t", "intermission", "gameover"]),
-    d = new Set(["menu", "textinput"]);
-function p(e, t) {
+n.r(e), n.d(e, { default: () => K });
+var l = n(324029),
+    i = n(31048);
+n(321073);
+var r = n(132500),
+    s = n(260549),
+    a = n(106983),
+    u = n(696016),
+    o = n(16590),
+    d = n(375708);
+let p = new Set(["warmup", "paused", "timeout_ct", "timeout_t", "intermission", "gameover"]),
+    m = new Set(["menu", "textinput"]);
+function h(t, e) {
     return (
-        (function (e, t) {
-            let l = e.previously;
-            for (let e of t) {
-                if (null == l) return !1;
-                l = l[e];
+        (function (t, e) {
+            let n = t.previously;
+            for (let t of e) {
+                if (null == n) return !1;
+                n = n[t];
             }
-            return null != l;
-        })(e, t) ||
-        (function (e, t) {
-            let l = e.added;
-            for (let e of t) {
-                if (!0 === l) return !0;
-                if (null == l) return !1;
-                l = l[e];
+            return null != n;
+        })(t, e) ||
+        (function (t, e) {
+            let n = t.added;
+            for (let t of e) {
+                if (!0 === n) return !0;
+                if (null == n) return !1;
+                n = n[t];
             }
-            return !0 === l;
-        })(e, t)
+            return !0 === n;
+        })(t, e)
     );
 }
-function m(e) {
-    return !0 === e ? void 0 : e;
+function b(t) {
+    return !0 === t ? void 0 : t;
 }
-function h(e) {
-    return e.player?.steamid != null && e.provider?.steamid != null && e.player.steamid === e.provider.steamid;
+function f(t) {
+    return t.player?.steamid != null && t.provider?.steamid != null && t.player.steamid === t.provider.steamid;
 }
-function b(e) {
-    let t = e?.weapons;
-    if (null == t) return null;
-    for (let e in t) if (t[e]?.state === "active") return t[e];
+function c(t) {
+    let e = t?.weapons;
+    if (null == e) return null;
+    for (let t in e) if (e[t]?.state === "active") return e[t];
     return null;
 }
-function f(e) {
-    return null != e && Object.values(e).some((e) => m(e)?.type === "C4");
+function C(t) {
+    return null != t && Object.values(t).some((t) => b(t)?.type === "C4");
 }
-function y(e, t, l, n) {
-    return !(!e || null == t || null == l || o.has(t) || d.has(l)) && 0 !== n;
+function y(t, e, n, l) {
+    return !(!t || null == e || null == n || p.has(e) || m.has(n)) && 0 !== l;
 }
-function c(e, t, l) {
-    let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+function I(t, e, n) {
+    let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return {
         type: u.Gy.GAME_EVENT,
-        eventType: t,
-        eventName: e,
+        title: (function (t) {
+            switch (t) {
+                case a.C.Kill:
+                    return d.intl.string(o.default["3U5H62"]);
+                case a.C.MultiKill:
+                    return d.intl.string(o.default.mnZiTO);
+                case a.C.Ace:
+                    return d.intl.string(o.default.CWgKMS);
+                case a.C.Assist:
+                    return d.intl.string(o.default.qhZmhU);
+                case a.C.Death:
+                    return d.intl.string(o.default.ejnmIP);
+                case a.C.BombPlant:
+                    return d.intl.string(o.default.bdMG43);
+                case a.C.BombDefused:
+                    return d.intl.string(o.default.IptBJr);
+                case a.C.BombExploded:
+                    return d.intl.string(o.default.tAXn5v);
+                case a.C.RoundWinningKill:
+                    return d.intl.string(o.default.Ce0ZBI);
+                case a.C.GameWinningKill:
+                    return d.intl.string(o.default.b0i6PM);
+                default:
+                    return;
+            }
+        })(t),
+        eventType: e,
+        eventName: t,
         score: 0,
         importance: 0,
-        hiddenFromTimeline: n,
-        additionalData: l,
+        hiddenFromTimeline: l,
+        additionalData: n,
     };
 }
-class I {
+class g {
     bombPlanterIsMe = !1;
     announcedFirstRound = !1;
     roundKillIds = [];
     multiKillChain = [];
     lastKillMs = null;
     wasPlaying = !1;
-    processPayload(e, t) {
-        let l,
-            n,
+    processPayload(t, e) {
+        let n,
+            l,
             i = [];
-        if (!h(e))
+        if (!f(t))
             return (
                 this.wasPlaying &&
                     ((this.wasPlaying = !1),
-                    i.push(c(s.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: !1 }, !0))),
-                i.map(a.n)
+                    i.push(I(a.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: !1 }, !0))),
+                i.map(s.n)
             );
         if (
-            (null == e.map &&
+            (null == t.map &&
                 ((this.bombPlanterIsMe = !1),
                 (this.announcedFirstRound = !1),
                 (this.roundKillIds = []),
                 (this.multiKillChain = []),
                 (this.lastKillMs = null)),
-            e.provider?.timestamp == null)
+            t.provider?.timestamp == null)
         )
             return i;
-        let o = m(e.previously?.player),
-            d = m(e.previously?.map),
-            I = h(e) && o?.steamid === void 0 && e.map?.phase !== "warmup",
-            C = o?.state?.round_kills,
-            v = e.player?.state?.round_kills;
-        if (I && "number" == typeof C && "number" == typeof v && v > C) {
-            let n = b(e.player),
-                a = n?.type ?? "",
-                o = n?.name ?? "";
-            for (let e = 0; e < v - C; e++) {
-                let e = (0, r.A)();
-                this.roundKillIds.push(e),
-                    (l = e),
-                    i.push(c(s.C.Kill, u.rb.KILL, { id: e, weaponType: a, weaponName: o })),
-                    null != this.lastKillMs && t - this.lastKillMs <= 5e3
-                        ? this.multiKillChain.push(e)
-                        : (this.multiKillChain = [e]),
-                    (this.lastKillMs = t),
+        let o = b(t.previously?.player),
+            d = b(t.previously?.map),
+            p = f(t) && o?.steamid === void 0 && t.map?.phase !== "warmup",
+            m = o?.state?.round_kills,
+            g = t.player?.state?.round_kills;
+        if (p && "number" == typeof m && "number" == typeof g && g > m) {
+            let l = c(t.player),
+                s = l?.type ?? "",
+                o = l?.name ?? "";
+            for (let t = 0; t < g - m; t++) {
+                let t = (0, r.A)();
+                this.roundKillIds.push(t),
+                    (n = t),
+                    i.push(I(a.C.Kill, u.rb.KILL, { id: t, weaponType: s, weaponName: o })),
+                    null != this.lastKillMs && e - this.lastKillMs <= 5e3
+                        ? this.multiKillChain.push(t)
+                        : (this.multiKillChain = [t]),
+                    (this.lastKillMs = e),
                     this.multiKillChain.length >= 2 &&
-                        i.push(c(s.C.MultiKill, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.multiKillChain] }));
+                        i.push(I(a.C.MultiKill, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.multiKillChain] }));
             }
         }
-        I &&
-            e.map?.mode === "competitive" &&
-            "number" == typeof C &&
-            C < 5 &&
-            5 === v &&
-            i.push(c(s.C.Ace, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.roundKillIds] }));
-        let S = o?.match_stats?.deaths,
-            K = e.player?.match_stats?.deaths;
-        if (I && "number" == typeof S && "number" == typeof K && K > S) {
-            for (let e = 0; e < K - S; e++) i.push(c(s.C.Death, u.rb.DEATH, { id: (0, r.A)() }));
+        p &&
+            t.map?.mode === "competitive" &&
+            "number" == typeof m &&
+            m < 5 &&
+            5 === g &&
+            i.push(I(a.C.Ace, u.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.roundKillIds] }));
+        let K = o?.match_stats?.deaths,
+            v = t.player?.match_stats?.deaths;
+        if (p && "number" == typeof K && "number" == typeof v && v > K) {
+            for (let t = 0; t < v - K; t++) i.push(I(a.C.Death, u.rb.DEATH, { id: (0, r.A)() }));
             (this.multiKillChain = []), (this.lastKillMs = null);
         }
         let A = o?.match_stats?.assists,
-            w = e.player?.match_stats?.assists;
-        if (I && "number" == typeof A && "number" == typeof w && w > A)
-            for (let e = 0; e < w - A; e++) i.push(c(s.C.Assist, u.rb.ASSIST, { id: (0, r.A)() }));
-        let g = e.map?.mode === "casual" || e.map?.mode === "competitive";
-        if (g && p(e, ["round", "win_team"]) && e.round?.win_team != null) {
-            let t = (p(e, ["map", "round"]) ? d?.round : e.map?.round) ?? 0,
-                a = e.round.win_team === e.player?.team;
-            (n = (0, r.A)()),
-                i.push(c(s.C.RoundEnd, u.rb.UNCLASSIFIED, { id: n, round: t, win: a }, !0)),
-                null != l &&
-                    a &&
-                    i.push(c(s.C.RoundWinningKill, u.rb.KILL, { id: (0, r.A)(), killId: l, roundEndId: n }));
+            S = t.player?.match_stats?.assists;
+        if (p && "number" == typeof A && "number" == typeof S && S > A)
+            for (let t = 0; t < S - A; t++) i.push(I(a.C.Assist, u.rb.ASSIST, { id: (0, r.A)() }));
+        let M = t.map?.mode === "casual" || t.map?.mode === "competitive";
+        if (M && h(t, ["round", "win_team"]) && t.round?.win_team != null) {
+            let e = (h(t, ["map", "round"]) ? d?.round : t.map?.round) ?? 0,
+                s = t.round.win_team === t.player?.team;
+            (l = (0, r.A)()),
+                i.push(I(a.C.RoundEnd, u.rb.UNCLASSIFIED, { id: l, round: e, win: s }, !0)),
+                null != n &&
+                    s &&
+                    i.push(I(a.C.RoundWinningKill, u.rb.KILL, { id: (0, r.A)(), killId: n, roundEndId: l }));
         }
-        e.map?.phase === "gameover" &&
-            null != l &&
-            e.round?.win_team != null &&
-            e.round.win_team === e.player?.team &&
+        t.map?.phase === "gameover" &&
+            null != n &&
+            t.round?.win_team != null &&
+            t.round.win_team === t.player?.team &&
             i.push(
-                c(s.C.GameWinningKill, u.rb.KILL, {
+                I(a.C.GameWinningKill, u.rb.KILL, {
                     id: (0, r.A)(),
-                    killId: l,
-                    ...(null != n ? { roundEndId: n } : {}),
+                    killId: n,
+                    ...(null != l ? { roundEndId: l } : {}),
                 }),
             );
-        let L = !this.announcedFirstRound && e.map?.phase === "live" && "number" == typeof e.map.round,
-            M = p(e, ["map", "round"]) && "number" == typeof e.map?.round;
-        if (g && (L || M) && e.map?.phase !== "gameover") {
-            let t = e.map.round ?? 0;
-            i.push(c(s.C.RoundStart, u.rb.UNCLASSIFIED, { id: (0, r.A)(), round: t }, !0)),
+        let w = !this.announcedFirstRound && t.map?.phase === "live" && "number" == typeof t.map.round,
+            L = h(t, ["map", "round"]) && "number" == typeof t.map?.round;
+        if (M && (w || L) && t.map?.phase !== "gameover") {
+            let e = t.map.round ?? 0;
+            i.push(I(a.C.RoundStart, u.rb.UNCLASSIFIED, { id: (0, r.A)(), round: e }, !0)),
                 (this.bombPlanterIsMe = !1),
                 (this.roundKillIds = []);
         }
-        if (p(e, ["round", "bomb"]) && e.round?.bomb === "planting") {
-            let t = b(e.player);
-            t?.type === "C4" && (this.bombPlanterIsMe = !0);
+        if (h(t, ["round", "bomb"]) && t.round?.bomb === "planting") {
+            let e = c(t.player);
+            e?.type === "C4" && (this.bombPlanterIsMe = !0);
         }
-        h(e) && f(m(e.previously?.player)?.weapons) && !f(e.player?.weapons) && (this.bombPlanterIsMe = !0),
-            p(e, ["round", "bomb"]) &&
-                (e.round?.bomb === "planted"
-                    ? i.push(c(s.C.BombPlant, u.rb.UNCLASSIFIED, { id: (0, r.A)(), byMe: this.bombPlanterIsMe }))
-                    : e.round?.bomb === "defused"
-                      ? i.push(c(s.C.BombDefused, u.rb.UNCLASSIFIED, { id: (0, r.A)() }))
-                      : e.round?.bomb === "exploded" &&
-                        i.push(c(s.C.BombExploded, u.rb.UNCLASSIFIED, { id: (0, r.A)() })),
-                (e.round?.bomb === "defused" ||
-                    e.round?.bomb === "exploded" ||
-                    e.round?.bomb === "dropped" ||
-                    e.round?.bomb === "carried") &&
+        f(t) && C(b(t.previously?.player)?.weapons) && !C(t.player?.weapons) && (this.bombPlanterIsMe = !0),
+            h(t, ["round", "bomb"]) &&
+                (t.round?.bomb === "planted"
+                    ? i.push(I(a.C.BombPlant, u.rb.UNCLASSIFIED, { id: (0, r.A)(), byMe: this.bombPlanterIsMe }))
+                    : t.round?.bomb === "defused"
+                      ? i.push(I(a.C.BombDefused, u.rb.UNCLASSIFIED, { id: (0, r.A)() }))
+                      : t.round?.bomb === "exploded" &&
+                        i.push(I(a.C.BombExploded, u.rb.UNCLASSIFIED, { id: (0, r.A)() })),
+                (t.round?.bomb === "defused" ||
+                    t.round?.bomb === "exploded" ||
+                    t.round?.bomb === "dropped" ||
+                    t.round?.bomb === "carried") &&
                     (this.bombPlanterIsMe = !1));
-        let _ = h(e),
-            P = e.map?.phase,
-            E = e.player?.activity,
-            F = e.player?.state?.health,
-            k = o?.steamid ?? e.player?.steamid,
-            D = null != k && e.provider?.steamid != null && k === e.provider.steamid,
-            N = d?.phase ?? P,
-            U = o?.activity ?? E,
-            R = o?.state?.health ?? F,
-            x = y(_, P, E, F);
+        let P = f(t),
+            _ = t.map?.phase,
+            E = t.player?.activity,
+            D = t.player?.state?.health,
+            F = o?.steamid ?? t.player?.steamid,
+            U = null != F && t.provider?.steamid != null && F === t.provider.steamid,
+            k = d?.phase ?? _,
+            N = o?.activity ?? E,
+            R = o?.state?.health ?? D,
+            x = y(P, _, E, D);
         return (
-            x !== y(D, N, U, R) &&
-                i.push(c(s.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: x }, !0)),
+            x !== y(U, k, N, R) &&
+                i.push(I(a.C.PlayStateChange, u.rb.UNCLASSIFIED, { id: (0, r.A)(), playing: x }, !0)),
             (this.wasPlaying = x),
-            e.map?.phase === "live" && (this.announcedFirstRound = !0),
-            i.map(a.n)
+            t.map?.phase === "live" && (this.announcedFirstRound = !0),
+            i.map(s.n)
         );
     }
 }
-function C(e) {
-    let t = !1,
-        l = new I();
-    function r(t) {
-        let n = (0, i.l)();
-        for (let i of l.processPayload(t, n))
-            u.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), e(i, n);
+function K(t) {
+    let e = !1,
+        n = new g();
+    function r(e) {
+        let l = (0, i.l)();
+        for (let i of n.processPayload(e, l))
+            u.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), t(i, l);
     }
     return {
         start() {
-            t || ((t = !0), u.nx.info("[CS2] starting GSI listener"), (0, n.v_)(r));
+            e || ((e = !0), u.nx.info("[CS2] starting GSI listener"), (0, l.v_)(r));
         },
         stop() {
-            t && ((t = !1), u.nx.info("[CS2] stopping GSI listener"), (0, n.yR)(), (l = new I()));
+            e && ((e = !1), u.nx.info("[CS2] stopping GSI listener"), (0, l.yR)(), (n = new g()));
         },
         getState: () => null,
     };
