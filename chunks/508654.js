@@ -23,15 +23,15 @@ function p(e, t) {
             : d.Ay.getGuildScheduledEventsByIndex(t ?? d.ej.GUILD_EVENT_UPCOMING(n.id)).filter((e) => {
                   let t = e.channel_id;
                   if (null == t) return !0;
-                  let n = a.A.getChannel(t);
-                  return l.A.can(h.xBc.VIEW_CHANNEL, n);
+                  let n = a.A.getBasicChannel(t);
+                  return null != n && l.A.canBasicChannel(h.hVb.VIEW_CHANNEL, n);
               });
     }, [t, e]);
 }
 function T(e) {
     return (0, r.bG)([d.Ay, a.A, l.A], () => {
-        let t = a.A.getChannel(e);
-        if (!l.A.can(h.xBc.VIEW_CHANNEL, t) || null == t?.guild_id) return null;
+        let t = a.A.getBasicChannel(e);
+        if (null == t || !l.A.canBasicChannel(h.hVb.VIEW_CHANNEL, t) || null == t?.guild_id) return null;
         let n = d.Ay.getGuildScheduledEventsByIndex(d.ej.CHANNEL_EVENT_ACTIVE(e));
         return n.length > 0 ? n[0] : null;
     }, [e]);
@@ -56,8 +56,8 @@ function g(e) {
                 d.Ay.getGuildScheduledEventsByIndex(d.ej.GUILD_EVENT_UPCOMING(e)).filter((e) => {
                     if (e.entity_type === A.Ps.NONE || e.status !== A.XG.SCHEDULED) return !1;
                     if (null == e.channel_id) return !0;
-                    let t = a.A.getChannel(e.channel_id);
-                    return l.A.can(h.xBc.VIEW_CHANNEL, t);
+                    let t = a.A.getBasicChannel(e.channel_id);
+                    return null != t && l.A.canBasicChannel(h.hVb.VIEW_CHANNEL, t);
                 }),
             [e],
         ),
@@ -96,8 +96,8 @@ function S(e) {
             d.Ay.getGuildScheduledEventsByIndex(d.ej.GUILD_EVENT_ACTIVE(e)).find((e) => {
                 if (e.entity_type === A.Ps.NONE || !(0, d.Fd)(e)) return !1;
                 if (null == e.channel_id) return !0;
-                let t = a.A.getChannel(e.channel_id);
-                return l.A.can(h.xBc.VIEW_CHANNEL, t);
+                let t = a.A.getBasicChannel(e.channel_id);
+                return null != t && l.A.canBasicChannel(h.hVb.VIEW_CHANNEL, t);
             }),
         [e],
     );
