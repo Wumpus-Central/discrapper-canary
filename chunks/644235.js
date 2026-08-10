@@ -1,9 +1,17 @@
 "use strict";
-n.d(t, { FK: () => s, PC: () => a });
-var i = n(374994);
+n.d(t, { FK: () => d, GX: () => o, PC: () => c, Zu: () => l });
+var i = n(374994),
+    r = n(462887);
 n(385803);
-var r = n(185928);
-function s(e) {
+var a = n(185928),
+    s = n(818348);
+function l(e) {
+    return (0, r.M)(e) ? s.NJ.DARKER : s.NJ.LIGHT;
+}
+function o(e, t) {
+    return null != t && t.colors.length > 0 ? l(e) : e;
+}
+function d(e) {
     let { angle: t, colors: n } = e;
     return `linear-gradient(${t}deg, ${n
         .map((e) => {
@@ -12,7 +20,6 @@ function s(e) {
         })
         .join(", ")})`;
 }
-function a(e) {
-    return r.dP[e];
+function c(e) {
+    return l(a.dP[e]);
 }
-n(818348);

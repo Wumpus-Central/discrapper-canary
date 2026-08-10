@@ -1,50 +1,64 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var i = n(17928),
     r = n(462887),
     a = n(228366),
     s = n(677313),
     l = n(873298),
     o = n(775602),
-    d = n(284016),
-    c = n(742023),
-    u = n(617617),
-    _ = n(652215),
-    E = n(185928),
-    A = n(661531),
-    h = n(353835),
-    I = n(723702);
-function f(e) {
-    if (!__OVERLAY__ && I.isPlatformEmbedded)
+    d = n(644235),
+    c = n(284016),
+    u = n(742023),
+    _ = n(617617),
+    E = n(652215),
+    A = n(185928),
+    h = n(661531),
+    I = n(353835),
+    f = n(723702);
+function p(e) {
+    if (!__OVERLAY__ && f.isPlatformEmbedded)
         try {
-            let t = A.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: o.Ay.saturation }).hex();
-            h.A.setApplicationBackgroundColor(t);
+            let t = h.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: o.Ay.saturation }).hex();
+            I.A.setApplicationBackgroundColor(t);
         } catch {}
 }
-var p = n(594061),
-    T = n(355097);
-let m = 0,
-    g = E.qj,
-    S = (0, s.A)(),
-    N = g[S],
-    C = null,
+var T = n(594061),
+    m = n(355097);
+let g = 0,
+    S = A.qj,
+    N = (0, s.A)(),
+    C = S[N],
+    O = null,
     R = {},
-    O = !1;
-function L() {
-    let e = (function () {
-        if (!__OVERLAY__ && null != C) return C;
-        var e = S,
-            t = g;
-        if (__OVERLAY__) return _.NJ8.DARK;
-        let n = E.dP;
-        if (o.Ay.syncForcedColors && "active" === o.Ay.systemForcedColors && e !== E.Fc.NO_PREFERENCE) return e;
-        if (c.Ay.useSystemTheme === E.Q_.ON && e !== E.Fc.NO_PREFERENCE) return t[e];
-        let i = d.A.getAppearanceSettings()?.theme;
-        return null != i ? i : n[u.A.settings.appearance?.theme ?? l.Sx.UNSET];
-    })();
-    return e !== N && (f((N = e)), !0);
+    L = !1;
+function D() {
+    let e =
+        __OVERLAY__ || null == O
+            ? (function (e, t) {
+                  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                  if (__OVERLAY__) return E.NJ8.DARK;
+                  let i = A.dP;
+                  if (o.Ay.syncForcedColors && "active" === o.Ay.systemForcedColors && e !== A.Fc.NO_PREFERENCE)
+                      return e;
+                  let r = c.A.getAppearanceSettings(),
+                      a = r?.theme,
+                      s = _.A.settings.appearance,
+                      h =
+                          null != r
+                              ? r.clientThemeSettings?.customUserThemeSettings
+                              : s?.clientThemeSettings?.customUserThemeSettings;
+                  return u.Ay.useSystemTheme === A.Q_.ON && e !== A.Fc.NO_PREFERENCE
+                      ? n
+                          ? t[e]
+                          : (0, d.GX)(t[e], h)
+                      : null != a
+                        ? (0, d.GX)(a, r?.clientThemeSettings?.customUserThemeSettings)
+                        : (0, d.GX)(i[s?.theme ?? l.Sx.UNSET], s?.clientThemeSettings?.customUserThemeSettings);
+              })(N, S, L)
+            : O;
+    return e !== C && (p((C = e)), !0);
 }
-class D extends i.Ay.PersistedStore {
+class y extends i.Ay.PersistedStore {
     static displayName = "ThemeStore";
     static persistKey = "ThemeStore";
     static migrations = [
@@ -56,87 +70,87 @@ class D extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         e?.theme != null &&
-            ((m = 1),
-            f((N = e.theme)),
-            null != e.preferences && (g = e.preferences),
+            ((g = 1),
+            p((C = e.theme)),
+            null != e.preferences && (S = e.preferences),
             null != e.syncedClientThemes && (R = e.syncedClientThemes),
-            null != e.syncedThemesEnabled && (O = e.syncedThemesEnabled),
-            (0, r.M)(N) && (g[E.Fc.DARK] = N)),
-            this.waitFor(c.Ay, d.A, u.A);
+            null != e.syncedThemesEnabled && (L = e.syncedThemesEnabled),
+            (0, r.M)(C) && (S[A.Fc.DARK] = C)),
+            this.waitFor(u.Ay, c.A, _.A);
     }
     getState() {
-        return { theme: this.theme, preferences: g, syncedClientThemes: R, syncedThemesEnabled: O, status: m };
+        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: g };
     }
     get theme() {
-        return N;
+        return C;
     }
     get systemTheme() {
-        return S;
+        return N;
     }
     themePreferenceForSystemTheme(e) {
-        return g[e];
+        return S[e];
     }
     getSyncedClientTheme(e) {
         return R[e];
     }
     isSameAsDeviceThemeEnabled() {
-        return O;
+        return L;
     }
 }
-let y = new D(a.h, {
-    CACHE_LOADED: L,
+let v = new y(a.h, {
+    CACHE_LOADED: D,
     CONNECTION_OPEN: function () {
         return (
-            0 === m && ((g = { ...g, [E.Fc.DARK]: _.NJ8.DARKER }), (m = 1)),
-            c.Ay.darkSidebar &&
-                (u.A.settings.appearance?.darkSidebar ||
-                    p.wc.updateAsync(
+            0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARKER }), (g = 1)),
+            u.Ay.darkSidebar &&
+                (_.A.settings.appearance?.darkSidebar ||
+                    T.wc.updateAsync(
                         "appearance",
                         (e) => {
                             e.darkSidebar = !0;
                         },
-                        T.Sb.INFREQUENT_USER_ACTION,
+                        m.Sb.INFREQUENT_USER_ACTION,
                     ),
                 a.h.wait(() => {
                     a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });
                 })),
-            L()
+            D()
         );
     },
     LOGOUT: function (e) {
-        return (C = null), (R = {}), (O = !1), !e.isSwitchingAccount && N !== _.NJ8.DARK && (f((N = _.NJ8.DARK)), L());
+        return (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), D());
     },
-    OVERLAY_INITIALIZE: L,
+    OVERLAY_INITIALIZE: D,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-        return null != e.changes.appearance && (C = null), L();
+        return null != e.changes.appearance && (O = null), D();
     },
-    UNSYNCED_USER_SETTINGS_UPDATE: L,
-    USER_SETTINGS_PROTO_UPDATE: L,
-    RESET_PREVIEW_CLIENT_THEME: L,
+    UNSYNCED_USER_SETTINGS_UPDATE: D,
+    USER_SETTINGS_PROTO_UPDATE: D,
+    RESET_PREVIEW_CLIENT_THEME: D,
     SYSTEM_THEME_CHANGE: function (e) {
         let { systemTheme: t } = e;
-        return (S = t), L();
+        return (N = t), D();
     },
     UPDATE_THEME_PREFERENCES: function (e) {
-        return (g = { ...g, ...e.preferences }), L();
+        return (S = { ...S, ...e.preferences }), D();
     },
     UPDATE_SYNCED_CLIENT_THEME: function (e) {
         return (R = { ...R, [e.systemTheme]: e.clientTheme }), !0;
     },
     SET_SAME_AS_DEVICE_THEME_ENABLED: function (e) {
-        return O !== e.enabled && ((O = e.enabled), !0);
+        return L !== e.enabled && ((L = e.enabled), !0);
     },
     CLEAR_SYNCED_CLIENT_THEMES: function () {
-        let e = O || null != R[E.Fc.LIGHT] || null != R[E.Fc.DARK];
-        return (R = {}), (O = !1), e;
+        let e = L || null != R[A.Fc.LIGHT] || null != R[A.Fc.DARK];
+        return (R = {}), (L = !1), e;
     },
     SET_THEME_OVERRIDE: function (e) {
-        return (C = e.theme), L();
+        return (O = e.theme), D();
     },
     CLEAR_THEME_OVERRIDE: function () {
-        return (C = null), L();
+        return (O = null), D();
     },
     REFRESH_THEME: function () {
-        return L();
+        return D();
     },
 });

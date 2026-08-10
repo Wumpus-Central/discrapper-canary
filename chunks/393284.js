@@ -258,6 +258,7 @@ let W = (0, n.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
 var Z = i(458024),
     q = i(462887),
     Q = i(817281);
+i(644235);
 let J = (0, n.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
@@ -277,7 +278,7 @@ let J = (0, n.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
                     (0, X.NA)({ [t]: e }),
                         null != i ? (0, X.qX)(t, { backgroundGradientPresetId: i }) : (0, X.qX)(t, { theme: e });
                 }
-                (0, X.k7)(Y.Q_.ON), (0, X.ZM)(!0);
+                (0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON);
             } else (0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1);
         },
         usePredicate: () => (0, Z.Ay)("SameAsDeviceThemeSetting"),

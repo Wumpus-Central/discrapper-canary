@@ -116,7 +116,7 @@ let u = [
             midpointPercentage: 50,
         },
     ],
-    _ = l.NJ.DARK,
+    _ = l.NJ.DARKER,
     E = [
         {
             type: s.F.BACKGROUND_GRADIENT_PRESET,
