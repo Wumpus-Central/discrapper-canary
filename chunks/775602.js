@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => S, IG: () => I, _1: () => h });
+n.d(t, { Ay: () => C, IG: () => I, _1: () => h });
 var i,
     r,
     a = n(17928),
@@ -48,6 +48,8 @@ let f = {
         emojiButtonEnabled: !0,
         gifButtonEnabled: !0,
         stickerButtonEnabled: !0,
+        youBarNameplateAnimation: "animate-never",
+        youBarAvatarDecoAnimation: "animate-never",
     },
     p = f,
     T = {
@@ -60,6 +62,16 @@ let f = {
         24: "font-size-24",
     };
 function m() {
+    switch (p.prefersReducedMotion) {
+        case "no-preference":
+            return !1;
+        case "reduce":
+            return !0;
+        default:
+            return "reduce" === p.systemPrefersReducedMotion;
+    }
+}
+function g() {
     let e;
     return (
         !p.officialMessageStyleExplicitlySet &&
@@ -72,7 +84,17 @@ function m() {
         ((p.officialMessageStyle = "no_text_color"), !0)
     );
 }
-class g extends a.Ay.DeviceSettingsStore {
+function S() {
+    function e(e) {
+        return "animate-never" === e ? "animate-never" : m() ? "respect-motion-settings" : "animate-always";
+    }
+    p = {
+        ...p,
+        youBarNameplateAnimation: e(p.youBarNameplateAnimation),
+        youBarAvatarDecoAnimation: e(p.youBarAvatarDecoAnimation),
+    };
+}
+class N extends a.Ay.DeviceSettingsStore {
     static displayName = "AccessibilityStore";
     static persistKey = "AccessibilityStore";
     static migrations = [
@@ -141,13 +163,14 @@ class g extends a.Ay.DeviceSettingsStore {
             gifButtonEnabled: !0,
             stickerButtonEnabled: !0,
         }),
+        (e) => ({ ...e, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" }),
     ];
     initialize(e) {
         this.waitFor(u.A),
             isNaN((p = { ...f, ...(e ?? null) }).fontSize) && (p.fontSize = E.hH7.FONT_SIZE_DEFAULT),
             0 > A.qh.indexOf(null != p.messageGroupSpacing ? p.messageGroupSpacing : -1) &&
                 (p.messageGroupSpacing = null),
-            this.syncWith([u.A, o.A], m);
+            this.syncWith([u.A, o.A], g);
     }
     get fontScale() {
         return (p.fontSize / E.hH7.FONT_SIZE_DEFAULT) * 100;
@@ -226,14 +249,7 @@ class g extends a.Ay.DeviceSettingsStore {
         return p.prefersReducedMotion;
     }
     get useReducedMotion() {
-        switch (p.prefersReducedMotion) {
-            case "no-preference":
-                return !1;
-            case "reduce":
-                return !0;
-            default:
-                return "reduce" === p.systemPrefersReducedMotion;
-        }
+        return m();
     }
     get systemForcedColors() {
         return p.systemForcedColors;
@@ -289,11 +305,37 @@ class g extends a.Ay.DeviceSettingsStore {
     get isStickerButtonEnabled() {
         return p.stickerButtonEnabled;
     }
+    get animateYouBarNameplate() {
+        switch (p.youBarNameplateAnimation) {
+            case "animate-never":
+                return !1;
+            case "animate-always":
+                return !0;
+            case "respect-motion-settings":
+                return !this.useReducedMotion;
+        }
+    }
+    get animateYouBarAvatarDeco() {
+        switch (p.youBarAvatarDecoAnimation) {
+            case "animate-never":
+                return !1;
+            case "animate-always":
+                return !0;
+            case "respect-motion-settings":
+                return !this.useReducedMotion;
+        }
+    }
+    get youBarNameplateAnimation() {
+        return p.youBarNameplateAnimation;
+    }
+    get youBarAvatarDecoAnimation() {
+        return p.youBarAvatarDecoAnimation;
+    }
     getUserAgnosticState() {
         return p;
     }
 }
-let S = new g(l.h, {
+let C = new N(l.h, {
     ACCESSIBILITY_SET_FONT_SIZE: function (e) {
         var t;
         let n = ((t = e.fontSize), E.hH7.FONT_SIZES.indexOf(t) >= 0 ? t : E.hH7.FONT_SIZE_DEFAULT);
@@ -340,7 +382,7 @@ let S = new g(l.h, {
     },
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function (e) {
         if (p.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-        p = { ...p, systemPrefersReducedMotion: e.systemPrefersReducedMotion };
+        (p = { ...p, systemPrefersReducedMotion: e.systemPrefersReducedMotion }), S();
     },
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function (e) {
         if (p.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
@@ -348,7 +390,7 @@ let S = new g(l.h, {
     },
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: function (e) {
         if (p.prefersReducedMotion === e.prefersReducedMotion) return !1;
-        p = { ...p, prefersReducedMotion: e.prefersReducedMotion };
+        (p = { ...p, prefersReducedMotion: e.prefersReducedMotion }), S();
     },
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function (e) {
         p.syncForcedColors = e.syncForcedColors;
@@ -404,6 +446,23 @@ let S = new g(l.h, {
             ...(null != e.emojiButtonEnabled && { emojiButtonEnabled: e.emojiButtonEnabled }),
             ...(null != e.gifButtonEnabled && { gifButtonEnabled: e.gifButtonEnabled }),
             ...(null != e.stickerButtonEnabled && { stickerButtonEnabled: e.stickerButtonEnabled }),
+        };
+    },
+    ACCESSIBILITY_SET_YOU_BAR_ANIMATIONS: function (e) {
+        function t(e, t) {
+            switch (t) {
+                case !0:
+                    return "animate-always";
+                case !1:
+                    return "animate-never";
+                case void 0:
+                    return e;
+            }
+        }
+        p = {
+            ...p,
+            youBarNameplateAnimation: t(p.youBarNameplateAnimation, e.animateNameplate),
+            youBarAvatarDecoAnimation: t(p.youBarAvatarDecoAnimation, e.animateAvatarDeco),
         };
     },
 });
