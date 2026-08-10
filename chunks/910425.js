@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { dx: () => E, UF: () => A, Sc: () => h, Lg: () => I }), n(938796);
+n.d(t, { f8: () => I, UF: () => A, dx: () => E, Sc: () => h, Lg: () => f }), n(938796);
 var i = n(989349),
     r = n.n(i),
     a = n(665260),
@@ -27,6 +27,9 @@ function h() {
     return e || t;
 }
 function I(e) {
+    return (c.default.getCurrentUser()?.isStaff() ?? !1) || u.getConfig({ location: e });
+}
+function f(e) {
     var t;
     return {
         userId: e.user_id,
@@ -40,6 +43,12 @@ function I(e) {
             messageReference: t.message_reference,
         },
         state: e.state,
+        attachmentUploads: (e.attachment_uploads ?? []).map((e) => ({
+            filename: e.filename,
+            uploadedFilename: e.uploaded_filename,
+            description: e.description,
+            title: e.title,
+        })),
         record: new d.Ay({
             id: e.scheduled_message_id,
             content: e.scheduled_message.content,

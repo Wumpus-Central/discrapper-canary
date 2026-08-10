@@ -5,7 +5,7 @@ var s,
     r = n(582128),
     o = n(503698),
     c = n.n(o),
-    d = n(534740),
+    d = n(682577),
     u = n(837381),
     h = n(17928),
     m = n(446837),
@@ -1403,7 +1403,7 @@ function nU(e) {
               cozyAlt: !0,
           });
 }
-var nw = n(141268),
+var nw = n(91624),
     nF = n(155718),
     nH = n(168186),
     nB = n(994500),
@@ -1697,7 +1697,7 @@ function n3(e) {
         F = (0, e7.Ay)(n),
         H = (0, e6.fF)(n, m),
         B = (0, e6.ZD)(n),
-        V = (0, a.jsx)(tn.x, { value: k, children: (0, nw.A)(e, O, !1) }),
+        V = (0, a.jsx)(tn.x, { value: k, children: (0, nw.Ay)(e, O, !1) }),
         K = r.useCallback(() => (0, eY.uh)(s, i, l), [s, i, l]),
         z = (0, eW.$7)({ guildId: s, roleId: F.iconRoleId });
     return (0, a.jsxs)("div", {
@@ -1866,7 +1866,7 @@ let n4 = r.memo(function (e) {
                     let { message: n, compact: l } = e;
                     return (0, a.jsx)(tG, { message: n, content: t, compact: l ?? !1 });
                 })(e, X)
-              : (0, nw.A)(e, X, V)),
+              : (0, nw.Ay)(e, X, V)),
         (n = (0, a.jsx)(tn.x, { value: W, children: n }));
     let ex = i.id === f,
         eE = (0, a.jsx)(g.vN, {

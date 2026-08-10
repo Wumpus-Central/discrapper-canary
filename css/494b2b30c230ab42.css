@@ -1,0 +1,19 @@
+.messageWithAttachments__2eae8 {
+    margin-block-end: 2px;
+    margin-block-start: var(--space-12);
+    overflow: hidden
+}
+
+.attachmentCount__2eae8 {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    gap: var(--space-4);
+    margin-block-end: var(--space-12);
+    margin-inline-end: var(--space-16);
+    padding-inline-start: var(--custom-message-margin-left-content-cozy)
+}
+
+.attachmentCount__2eae8.compact__2eae8 {
+    padding-inline-start: var(--custom-message-margin-compact-indent)
+}

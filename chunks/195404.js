@@ -37,15 +37,7 @@ function b(e) {
     let { createReminder: t } = e,
         l = n.useCallback(() => {
             (0, i.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    r.e("16755"),
-                    r.e("15990"),
-                    r.e("52789"),
-                    r.e("61156"),
-                    r.e("16767"),
-                    r.e("6841"),
-                    r.e("49208"),
-                ]).then(r.bind(r, 148216));
+                let { default: e } = await Promise.all([r.e("52789"), r.e("49208")]).then(r.bind(r, 148216));
                 return (r) => (0, a.jsx)(e, { ...r, createReminder: t });
             });
         }, [t]);
