@@ -1,8 +1,10 @@
 "use strict";
-n.d(t, { DynamicGraphicComponent: () => a, Q: () => l, m: () => s });
+n.d(t, { DynamicGraphicComponent: () => l, Q: () => _, m: () => o });
 var i,
     r = n(582128),
-    a =
+    a = n(268218),
+    s = n(38405),
+    l =
         (((i = {})[(i.DEMO = 0)] = "DEMO"),
         (i[(i.COLLECTIBLES_PREVIEW = 1)] = "COLLECTIBLES_PREVIEW"),
         (i[(i.GUILD_TAG_COACHMARK_ASSET = 2)] = "GUILD_TAG_COACHMARK_ASSET"),
@@ -16,7 +18,7 @@ var i,
         (i[(i.GUILD_THEME_NUX_PREVIEW = 10)] = "GUILD_THEME_NUX_PREVIEW"),
         (i[(i.BADGE_DIRECTORY_NUX = 11)] = "BADGE_DIRECTORY_NUX"),
         i);
-let s = {
+let o = {
         0: () => Promise.all([n.e("39382"), n.e("48565")]).then(n.bind(n, 732852)),
         1: () =>
             Promise.all([
@@ -51,11 +53,11 @@ let s = {
             ]).then(n.bind(n, 510273)),
         2: () => Promise.all([n.e("53020"), n.e("58831")]).then(n.bind(n, 677074)),
         3: () => Promise.all([n.e("57073"), n.e("21041"), n.e("38672")]).then(n.bind(n, 289363)),
-        4: () => Promise.all([n.e("74704"), n.e("47662"), n.e("9010")]).then(n.bind(n, 892740)),
+        4: () => Promise.all([n.e("58295"), n.e("47662"), n.e("9010")]).then(n.bind(n, 892740)),
         5: () => Promise.all([n.e("61686"), n.e("58038"), n.e("62507")]).then(n.bind(n, 839238)),
         6: () =>
             Promise.all([n.e("64293"), n.e("77873"), n.e("58529"), n.e("88990"), n.e("59880")]).then(n.bind(n, 275256)),
-        7: () => Promise.all([n.e("74704"), n.e("58407")]).then(n.bind(n, 939034)),
+        7: () => Promise.all([n.e("58295"), n.e("58407")]).then(n.bind(n, 939034)),
         8: () => Promise.all([n.e("5211"), n.e("54282")]).then(n.bind(n, 140049)),
         9: () =>
             Promise.all([
@@ -78,17 +80,49 @@ let s = {
         10: () => Promise.all([n.e("20182"), n.e("46570"), n.e("44262")]).then(n.bind(n, 276837)),
         11: () => Promise.all([n.e("74905"), n.e("77433")]).then(n.bind(n, 868544)),
     },
-    l = {
-        0: r.lazy(s[0]),
-        1: r.lazy(s[1]),
-        2: r.lazy(s[2]),
-        3: r.lazy(s[3]),
-        4: r.lazy(s[4]),
-        5: r.lazy(s[5]),
-        6: r.lazy(s[6]),
-        7: r.lazy(s[7]),
-        8: r.lazy(s[8]),
-        9: r.lazy(s[9]),
-        10: r.lazy(s[10]),
-        11: r.lazy(s[11]),
+    d = {
+        0: 732852,
+        1: 510273,
+        2: 677074,
+        3: 289363,
+        4: 892740,
+        5: 839238,
+        6: 275256,
+        7: 939034,
+        8: 140049,
+        9: 392498,
+        10: 276837,
+        11: 868544,
     };
+function c() {
+    return null;
+}
+function u(e) {
+    return r.lazy(() =>
+        (0, a.sq)({ createPromise: o[e], webpackId: d[e], name: `DynamicGraphic:${l[e]}` }).catch((t) => {
+            let i = l[e],
+                r = d[e] in n.c ? "module_execution" : "chunk_load";
+            return (
+                s.A.captureException(Error(`Dynamic graphic failed to load: ${i}`, { cause: t }), {
+                    tags: { dynamic_graphic: i, dynamic_graphic_failure_reason: r },
+                    extra: { originalError: String(t) },
+                }),
+                { default: c }
+            );
+        }),
+    );
+}
+let _ = {
+    0: u(0),
+    1: u(1),
+    2: u(2),
+    3: u(3),
+    4: u(4),
+    5: u(5),
+    6: u(6),
+    7: u(7),
+    8: u(8),
+    9: u(9),
+    10: u(10),
+    11: u(11),
+};
