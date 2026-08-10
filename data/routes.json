@@ -7,6 +7,7 @@
   "USER_PROFILE": "/users/:param/profile",
   "USER_BADGES": "/users/:param/badges",
   "USER_BADGE": "/users/:param/badges/:param",
+  "USER_BADGE_SETTINGS": "/users/@me/badges/settings",
   "USER_PROFILE_WIDGETS": "/users/@me/widgets",
   "USER_PROFILE_SUGGESTED_GAMES": "/users/@me/widgets/suggested-games",
   "USER_PROFILE_WIDGET_ASSET_UPLOAD": "/users/@me/widgets/assets/upload",
