@@ -43,6 +43,7 @@ function x(e, n) {
                 id: "bookmark",
                 label: v ? b.intl.string(b.t.SvXS1Z) : b.intl.string(b.t.tpxJto),
                 leadingAccessory: { type: "icon", icon: v ? c.c : d.c },
+                icon: v ? c.c : d.c,
                 action: () =>
                     v
                         ? (0, p.x)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 })
@@ -58,7 +59,6 @@ function x(e, n) {
                 id: "reminder",
                 label: E ? b.intl.string(b.t.vrbqs1) : b.intl.string(b.t.mJ3P0N),
                 leadingAccessory: { type: "icon", icon: o.O },
-                icon: o.O,
                 children: I,
             }),
         ],
