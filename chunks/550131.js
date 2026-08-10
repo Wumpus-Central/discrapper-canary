@@ -2,6 +2,7 @@ e.exports = {
     Rh: "contentExpanded__24e2c",
     iH: "contentExpandedAccepted__24e2c",
     do: "questPromoContent__24e2c",
+    _o: "ctaNotInteractable__24e2c",
     yF: "divider__24e2c",
     zH: "details__24e2c",
     QO: "videoQuestPreviewCont__24e2c",

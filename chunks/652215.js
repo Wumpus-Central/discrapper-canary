@@ -1001,6 +1001,7 @@ var nc =
         (y[(y.HIDDEN_SUSPENDED_USER = 131072)] = "HIDDEN_SUSPENDED_USER"),
         (y[(y.IS_FIRST_BOOSTER = 262144)] = "IS_FIRST_BOOSTER"),
         (y[(y.IS_GUILD_OFFICIAL = 524288)] = "IS_GUILD_OFFICIAL"),
+        (y[(y.IS_SCHEDULED = 1048576)] = "IS_SCHEDULED"),
         y),
     nu =
         (((v = {})[(v.IS_CLIP = 1)] = "IS_CLIP"),

@@ -27,6 +27,7 @@ function d(e, t, n) {
                   (0, a.A)(t) ||
                   t.author.id !== n.author.id ||
                   t.hasFlag(o.pr7.EPHEMERAL) !== n.hasFlag(o.pr7.EPHEMERAL) ||
+                  t.hasFlag(o.pr7.IS_SCHEDULED) !== n.hasFlag(o.pr7.IS_SCHEDULED) ||
                   (null != n.webhookId && t.author.username !== n.author.username) ||
                   (e?.isForumPost() && t.id === l.default.castChannelIdAsMessageId(e.id)) ||
                   !(0, s.ro)(t.timestamp, n.timestamp) ||

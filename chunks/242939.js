@@ -808,7 +808,6 @@ let eO = r.forwardRef(function (e, t) {
             (0, s.jsx)(a.animated.div, {
                 ref: t,
                 "aria-hidden": d,
-                inert: !!d || void 0,
                 className: i()(n, eb.hR, { [eb.Ag]: d, [eb.s]: p }),
                 style: {
                     opacity: (0, O.a)(o.to({ range: [0, 1], output: [1, 0] })),
@@ -1319,9 +1318,8 @@ function ty(e) {
                             ],
                         }),
                         (0, s.jsx)("div", {
-                            className: tA.lO,
+                            className: i()(tA.lO, { [tA._o]: !t }),
                             "data-testid": "quest-bar-enroll-cta",
-                            inert: !t || void 0,
                             children: (0, s.jsxs)(ew.e, {
                                 direction: "horizontal",
                                 fullWidth: !0,
@@ -1556,7 +1554,6 @@ let tO = r.forwardRef(function (e, t) {
         g = x.userStatus?.enrolledAt != null;
     return (0, s.jsxs)(a.animated.div, {
         "aria-hidden": !c,
-        inert: !c || void 0,
         className: i()(l, tA.Rh, { [tA.iH]: g }),
         style: {
             transform: (0, a.to)(
