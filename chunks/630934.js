@@ -158,12 +158,20 @@ function Q(e) {
         F = (0, f.A)(),
         H = (0, C.t4)((e) => e.unifiedCheckoutFlow),
         { setCollectedModalOverrideTitle: B, setCollectedModalGradientColor: z } = (0, g.z)(),
-        Q = H === u.C.COLLECTIBLES_CHECKOUT && null != R ? (0, E.L0)(R, F) : null;
+        Q = H === u.C.COLLECTIBLES_CHECKOUT && null != R ? (0, E.L0)(R, F) : null,
+        J = Q?.rewardConfig?.discount?.id,
+        X = null != J && r?.getDiscountIdIfExists() === String(J),
+        ee = i.useMemo(() => {
+            let e;
+            return null == (e = Q?.tenantMetadata?.collectibles?.reward)
+                ? null
+                : { overrideTitle: e.collected?.overrideTitle, gradientColor: (0, S.KD)(e.flavor) };
+        }, [Q]);
     i.useEffect(() => {
-        B(Q?.tenantMetadata?.collectibles?.reward?.collected?.overrideTitle),
-            z(null != Q ? (0, S.KD)(Q.tenantMetadata?.collectibles?.reward?.flavor) : void 0);
-    }, [Q, B, z]);
-    let J = i.useMemo(() => {
+        let e = X ? ee : null;
+        B(e?.overrideTitle), z(e?.gradientColor);
+    }, [X, ee, B, z]);
+    let et = i.useMemo(() => {
             let e = (function (e, t) {
                 let { productLine: n, isGift: l, product: i, promotion: r, unifiedCheckoutFlow: a } = t;
                 if (a === u.C.COLLECTIBLES_CHECKOUT && null != i) {
@@ -187,15 +195,15 @@ function Q(e) {
             })(r, { productLine: n.productLine, isGift: T, product: R, promotion: F, unifiedCheckoutFlow: H });
             return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
         }, [r, T, R, F, n.productLine, H]),
-        X = i.useMemo(() => (null != J ? { headerBadgeText: W.intl.string(K.default.Fjpyfj) } : {}), [J]);
+        en = i.useMemo(() => (null != et ? { headerBadgeText: W.intl.string(K.default.Fjpyfj) } : {}), [et]);
     return (0, l.jsx)(d.T_, {
         shouldShowGlobalNotices: !0,
-        headerBadgeConfig: X,
+        headerBadgeConfig: en,
         purchaseItemContent: (0, l.jsx)(m.f7, { ...w, price: O }),
         invoiceSummaryContent: L,
         paymentMethodContent: c,
         legalContent: v,
-        promotionalNoticeContent: J,
+        promotionalNoticeContent: et,
         upperInlineNoticeProps: N,
         footerInlineNoticeProps: b,
         invoiceTotalDueLabel: U,
