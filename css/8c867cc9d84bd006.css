@@ -161,13 +161,7 @@
     margin-bottom: 60px;
     max-width: 1124px;
     padding: 0 20px;
-    width: 100%;
-
-    @container (min-width: 486px) and (max-width: 1124px) {
-        .has-webkit-scrollbar & {
-            padding-inline-end: calc(20px - var(--space-16))
-        }
-    }
+    width: 100%
 }
 
 @media (max-width:485px) {
@@ -175,6 +169,11 @@
         max-width: calc(485 + 16px);
         padding: 0 8px 32px
     }
+}
+
+.has-webkit-scrollbar .inventory__1feb0 {
+    max-width: calc(1124px - var(--space-16)*2);
+    padding-inline: calc(20px - var(--space-16))
 }
 
 .controls__1feb0 {
@@ -274,7 +273,6 @@
 
 .inventoryWrapper__1feb0 {
     align-items: flex-start;
-    container-type: inline-size;
     min-height: 100%;
     overflow: hidden
 }
