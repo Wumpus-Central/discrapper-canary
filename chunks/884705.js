@@ -1,19 +1,18 @@
-"use strict";
 n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366);
-let a = !1;
+    l = n(228366);
+let r = !1;
 function s() {
-    a = !1;
+    r = !1;
 }
-class l extends i.Ay.Store {
+class a extends i.Ay.Store {
     isTogglesDisabled() {
-        return a;
+        return r;
     }
 }
-let o = new l(r.h, {
+let o = new a(l.h, {
     AD_PERSONALIZATION_TOGGLES_RESTRICTED: function (e) {
-        a = e.disabled ?? !1;
+        r = e.disabled ?? !1;
     },
     CONNECTION_OPEN: s,
     LOGOUT: s,

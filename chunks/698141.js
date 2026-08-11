@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(582128),
-    r = n(17928),
-    a = n(475743),
-    s = n(933958),
-    l = n(429913),
-    o = n(91242),
-    d = n(207371);
-function c(e) {
-    let { applicationId: t, context: n, launchingComponentId: c, onSubmissionComplete: u } = e,
-        _ = (0, l.h)(t),
-        E = (0, r.bG)([s.Ay], () => s.Ay.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
-        A = (0, r.bG)([o.A], () => {
-            let e = o.A.getMainFrame();
-            return e?.state === "loading" && e.applicationId === t;
+e.d(t, { A: () => d });
+var a = e(582128),
+    i = e(17928),
+    u = e(475743),
+    c = e(933958),
+    l = e(429913),
+    p = e(91242),
+    s = e(207371);
+function d(n) {
+    let { applicationId: t, context: e, launchingComponentId: d, onSubmissionComplete: h } = n,
+        r = (0, l.h)(t),
+        o = (0, i.bG)([c.Ay], () => c.Ay.getLaunchState(t, "channel" === e.type ? e.channel.id : void 0)),
+        A = (0, i.bG)([p.A], () => {
+            let n = p.A.getMainFrame();
+            return n?.state === "loading" && n.applicationId === t;
         }),
-        h = null != _ && (0, d.x)(_) ? A : null != E && E.isLaunching && E.componentId === c,
-        I = (0, a.Ay)(h);
+        b = null != r && (0, s.x)(r) ? A : null != o && o.isLaunching && o.componentId === d,
+        g = (0, u.Ay)(b);
     return (
-        i.useEffect(() => {
-            !h && I && u?.();
-        }, [h, I, u]),
-        { submitting: h, wasSubmitting: I ?? null }
+        a.useEffect(() => {
+            !b && g && h?.();
+        }, [b, g, h]),
+        { submitting: b, wasSubmitting: g ?? null }
     );
 }

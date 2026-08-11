@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { E: () => s });
-var i = n(477900);
-n(582128);
-var r = n(996682),
-    a = n(27989);
-function s(e) {
-    let { size: t = "md", width: n, height: s, ...l } = e,
+l.d(t, { E: () => r });
+var i = l(477900);
+l(582128);
+var n = l(996682),
+    a = l(27989);
+function r(e) {
+    let { size: t = "md", width: l, height: r, ...s } = e,
         o = (0, a.J)(t),
-        d = o?.width ?? n,
-        c = o?.height ?? s;
+        c = o?.width ?? l,
+        d = o?.height ?? r;
     return (0, i.jsxs)("svg", {
-        ...(0, r.A)(l),
+        ...(0, n.A)(s),
         xmlns: "http://www.w3.org/2000/svg",
-        width: d,
-        height: c,
+        width: c,
+        height: d,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

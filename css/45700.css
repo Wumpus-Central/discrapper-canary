@@ -3805,6 +3805,23 @@ screen and (max-width:485px) {
     .headerGraphicContainer__8a031>* {
         max-height: 15vh
     }
+
+    @supports (max-height:1dvh) {
+        .headerGraphicContainer__8a031>* {
+            max-height: 15dvh
+        }
+    }
+}
+
+@media (max-height:430px) {
+    .headerGraphic__8a031 {
+        display: none
+    }
+
+    .headerCentered__8a031 .headerLeadingSpacer__8a031,
+    .headerCentered__8a031 .headerTrailingSpacer__8a031 {
+        max-height: 0
+    }
 }
 
 .headerLeading__8a031,

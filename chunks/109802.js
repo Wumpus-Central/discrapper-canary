@@ -1,101 +1,100 @@
-"use strict";
-n.d(t, { e: () => I, q: () => h });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(668639),
-    o = n(765178),
-    d = n(259678),
-    c = n(862482),
-    u = n(235986),
-    _ = n(821589),
-    E = n(375708),
-    A = n(810333);
-let h = { DEFAULT: "default", SUCCESS: "success", ERROR: "error" };
-class I extends r.PureComponent {
-    inputRef = r.createRef();
-    containerRef = r.createRef();
-    static contextType = l.cK;
-    static defaultProps = { supportsCopy: !0, buttonColor: c.XD.PRIMARY, buttonLook: c.pR.FILLED, mode: h.DEFAULT };
-    static Modes = h;
-    static ButtonColors = c.XD;
-    static ButtonLooks = c.pR;
-    componentDidUpdate(e) {
-        e.mode !== this.props.mode && this.props.mode === h.SUCCESS && o.O.announce(E.intl.string(E.t.t5VZ88));
+s.d(e, { e: () => k, q: () => C });
+var n = s(477900),
+    i = s(582128),
+    l = s(503698),
+    r = s.n(l),
+    a = s(668639),
+    o = s(765178),
+    c = s(259678),
+    p = s(862482),
+    d = s(235986),
+    u = s(821589),
+    h = s(375708),
+    R = s(810333);
+let C = { DEFAULT: "default", SUCCESS: "success", ERROR: "error" };
+class k extends i.PureComponent {
+    inputRef = i.createRef();
+    containerRef = i.createRef();
+    static contextType = a.cK;
+    static defaultProps = { supportsCopy: !0, buttonColor: p.XD.PRIMARY, buttonLook: p.pR.FILLED, mode: C.DEFAULT };
+    static Modes = C;
+    static ButtonColors = p.XD;
+    static ButtonLooks = p.pR;
+    componentDidUpdate(t) {
+        t.mode !== this.props.mode && this.props.mode === C.SUCCESS && o.O.announce(h.intl.string(h.t.t5VZ88));
     }
     select() {
         this.inputRef.current?.select();
     }
-    renderInput(e) {
-        let { value: t, mode: n, autoFocus: r, spellCheck: a, inputClassName: l, placeholder: o } = this.props,
-            d = this.context?.titleId;
-        return (0, i.jsx)("input", {
-            className: s()((0, _.t)(A, "input", n), l, { [A.inputHidden]: e }),
+    renderInput(t) {
+        let { value: e, mode: s, autoFocus: i, spellCheck: l, inputClassName: a, placeholder: o } = this.props,
+            c = this.context?.titleId;
+        return (0, n.jsx)("input", {
+            className: r()((0, u.t)(R, "input", s), a, { [R.inputHidden]: t }),
             ref: this.inputRef,
             type: "text",
-            value: t,
+            value: e,
             onClick: this.handleInputClick,
             readOnly: !0,
-            "aria-labelledby": d,
-            autoFocus: r,
-            spellCheck: a,
+            "aria-labelledby": c,
+            autoFocus: i,
+            spellCheck: l,
             placeholder: o,
         });
     }
     render() {
-        let e,
+        let t,
             {
-                text: t = E.intl.string(E.t.OpuAlK),
-                mode: n,
-                hideMessage: r,
-                className: a,
-                buttonLook: l,
+                text: e = h.intl.string(h.t.OpuAlK),
+                mode: s,
+                hideMessage: i,
+                className: l,
+                buttonLook: a,
                 supportsCopy: o,
-                disabled: I,
+                disabled: k,
             } = this.props,
-            f = null != r;
-        switch (n) {
-            case h.SUCCESS:
-                e = c.XD.GREEN;
+            f = null != i;
+        switch (s) {
+            case C.SUCCESS:
+                t = p.XD.GREEN;
                 break;
-            case h.ERROR:
-                e = c.XD.RED;
+            case C.ERROR:
+                t = p.XD.RED;
                 break;
             default:
-                e = this.props.buttonColor;
+                t = this.props.buttonColor;
         }
-        return (0, i.jsx)(d.vN, {
+        return (0, n.jsx)(c.vN, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
-            children: (0, i.jsx)("div", {
-                className: s()((0, _.t)(A, "copyInput", n), a),
+            children: (0, n.jsx)("div", {
+                className: r()((0, u.t)(R, "copyInput", s), l),
                 ref: this.containerRef,
-                "data-disabled": I,
-                children: (0, i.jsxs)(u.A, {
-                    className: A.layout,
+                "data-disabled": k,
+                children: (0, n.jsxs)(d.A, {
+                    className: R.layout,
                     children: [
-                        (0, i.jsxs)(u.A, {
-                            className: A.inputWrapper,
+                        (0, n.jsxs)(d.A, {
+                            className: R.inputWrapper,
                             children: [
                                 this.renderInput(f),
-                                f ? (0, i.jsx)("div", { className: A.hiddenMessage, children: r }) : null,
+                                f ? (0, n.jsx)("div", { className: R.hiddenMessage, children: i }) : null,
                             ],
                         }),
                         o
-                            ? (0, i.jsx)(u.A, {
+                            ? (0, n.jsx)(d.A, {
                                   shrink: 1,
                                   grow: 0,
                                   style: { margin: 0 },
-                                  children: (0, i.jsx)(c.$n, {
+                                  children: (0, n.jsx)(p.$n, {
                                       "data-migration-pending": !0,
-                                      className: A.button,
+                                      className: R.button,
                                       onClick: this.handleButtonClick,
-                                      size: c.lO.MIN,
-                                      color: e,
-                                      look: l,
-                                      disabled: I,
-                                      children: t,
+                                      size: p.lO.MIN,
+                                      color: t,
+                                      look: a,
+                                      disabled: k,
+                                      children: e,
                                   }),
                               })
                             : null,
@@ -105,8 +104,8 @@ class I extends r.PureComponent {
         });
     }
     handleButtonClick = () => {
-        let { onCopy: e, value: t } = this.props;
-        e(t);
+        let { onCopy: t, value: e } = this.props;
+        t(e);
     };
     handleInputClick = () => {
         this.select();

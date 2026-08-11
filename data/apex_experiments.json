@@ -4849,25 +4849,6 @@
     }
   },
   {
-    "name": "2026-07-activity-entrypoint-ui",
-    "kind": "user",
-    "defaultConfig": {
-      "variant": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "variant": 1
-      },
-      "2": {
-        "variant": 2
-      }
-    }
-  },
-  {
     "name": "2026-07-ad-recheck-interval-experiment",
     "kind": "user",
     "defaultConfig": {

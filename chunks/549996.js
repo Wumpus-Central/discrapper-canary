@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { c: () => d });
-var i = n(582128),
-    r = n(17928),
-    a = n(354670),
-    s = n(962644),
-    l = n(616431),
+n.d(t, { c: () => c });
+var r = n(582128),
+    l = n(17928),
+    i = n(354670),
+    a = n(962644),
+    u = n(528464),
     o = n(852218);
-function d(e) {
-    i.useEffect(() => {
-        (0, s.BE)();
+function c(e) {
+    r.useEffect(() => {
+        (0, a.BE)();
     }, []);
-    let t = (0, r.bG)([l.A, a.A], () => {
-            let t = l.A.getMarketingComponentByType(e);
+    let t = (0, l.bG)([u.A, i.A], () => {
+            let t = u.A.getMarketingComponentByType(e);
             if (null == t) return null;
             let n = t.promotionId,
-                i = l.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, n);
-            if (i?.trialId != null) {
-                let e = a.A.getUserTrialOffer(i.trialId);
+                r = u.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, n);
+            if (r?.trialId != null) {
+                let e = i.A.getUserTrialOffer(r.trialId);
                 if (null == e || (null != e.expires_at && Date.parse(e.expires_at) < Date.now())) return null;
             }
             return t;
         }),
-        n = (0, r.bG)([l.A], () => l.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
-        d = n?.endDate,
-        [c, u] = i.useState(!1),
-        _ = i.useRef(null);
+        n = (0, l.bG)([u.A], () => u.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
+        c = n?.endDate,
+        [d, s] = r.useState(!1),
+        f = r.useRef(null);
     return (
-        i.useEffect(() => {
-            if (null != d) {
-                let e = d.getTime() - Date.now();
+        r.useEffect(() => {
+            if (null != c) {
+                let e = c.getTime() - Date.now();
                 return (
                     e > 0 && e < 864e5
-                        ? (u(!1),
-                          clearTimeout(_.current),
-                          (_.current = setTimeout(() => {
-                              u(!0);
+                        ? (s(!1),
+                          clearTimeout(f.current),
+                          (f.current = setTimeout(() => {
+                              s(!0);
                           }, e)))
-                        : e <= 0 && u(!0),
+                        : e <= 0 && s(!0),
                     () => {
-                        clearTimeout(_.current);
+                        clearTimeout(f.current);
                     }
                 );
             }
-            u(!1), clearTimeout(_.current);
-        }, [d]),
-        c ? null : t
+            s(!1), clearTimeout(f.current);
+        }, [c]),
+        d ? null : t
     );
 }
