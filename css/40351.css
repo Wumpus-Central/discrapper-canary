@@ -479,12 +479,12 @@
 }
 
 .togglesGroup__6dc2e {
-    border-bottom: 1px solid var(--border-subtle);
     gap: 12px;
     padding: 16px 12px
 }
 
-.section__6dc2e:not(:last-child) {
+.section__6dc2e:not(:last-child),
+.togglesGroup__6dc2e {
     border-bottom: 1px solid var(--border-subtle)
 }
 

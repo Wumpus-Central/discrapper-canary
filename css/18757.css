@@ -493,23 +493,25 @@
 }
 
 .playhead_f18995 {
-    background-color: var(--red-430);
     bottom: 0;
     left: var(--custom-video-progress);
-    position: absolute;
     top: -48px;
     transform: translateX(-50%);
     width: 2px;
     z-index: 1000
 }
 
+.playhead_f18995,
 .playhead_f18995:after {
     background-color: var(--red-430);
+    position: absolute
+}
+
+.playhead_f18995:after {
     border-radius: 50%;
     content: "";
     height: 16px;
     left: 0;
-    position: absolute;
     top: -6px;
     transform: translate(-7px);
     width: 16px

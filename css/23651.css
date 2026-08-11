@@ -479,10 +479,7 @@
     border-bottom-color: var(--brand-500)
 }
 
-.tabItemSelected__3932d {
-    border-bottom-color: var(--control-brand-foreground)
-}
-
+.tabItemSelected__3932d,
 .tabItemSelected__3932d:hover {
     border-bottom-color: var(--control-brand-foreground)
 }

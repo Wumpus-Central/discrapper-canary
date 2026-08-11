@@ -185,14 +185,16 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .plated__67645:hover {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
     background-color: var(--custom-nameplate) !important
 }
 
-.plateMuted__67645 {
+.plateMuted__67645,
+.plated__67645:hover {
     -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px)
+}
+
+.plateMuted__67645 {
     background-color: var(--custom-nameplate-neutral) !important
 }
 

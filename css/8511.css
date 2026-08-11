@@ -2315,19 +2315,20 @@
 }
 
 .rangeTrackFill_b1a1c5 {
+    overflow: hidden
+}
+
+.rangeTrackFill_b1a1c5,
+.rangeTrackFill_b1a1c5:after {
     border-radius: inherit;
     inset: 0;
-    overflow: hidden;
     position: absolute
 }
 
 .rangeTrackFill_b1a1c5:after {
-    border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-subtle);
     content: "";
-    inset: 0;
-    pointer-events: none;
-    position: absolute
+    pointer-events: none
 }
 
 .rangeControl_b1a1c5 {

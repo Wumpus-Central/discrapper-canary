@@ -32,19 +32,19 @@
 }
 
 .closeButton_c2b141:hover {
-    background-color: var(--interactive-background-hover);
-    color: var(--interactive-text-hover)
+    background-color: var(--interactive-background-hover)
 }
 
+.closeButton_c2b141:hover,
 .closeButton_c2b141:hover+.keybind_c2b141 {
     color: var(--interactive-text-hover)
 }
 
 .closeButton_c2b141:active {
-    background-color: var(--interactive-background-active);
-    color: var(--interactive-text-active)
+    background-color: var(--interactive-background-active)
 }
 
+.closeButton_c2b141:active,
 .closeButton_c2b141:active+.keybind_c2b141 {
     color: var(--interactive-text-active)
 }

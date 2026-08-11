@@ -202,6 +202,7 @@
     }
 }
 
+.moreMutualGuildsBtn_e1ecd3,
 .mutualGuilds_e1ecd3 a+a {
     margin-inline-start: 6px
 }
@@ -218,7 +219,6 @@
     font-weight: var(--font-weight-bold);
     height: 30px;
     justify-content: center;
-    margin-inline-start: 6px;
     width: 30px
 }
 

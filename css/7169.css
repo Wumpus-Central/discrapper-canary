@@ -26,10 +26,7 @@
     transition: opacity var(--connecting-container-fade-duration, .2s) ease-out
 }
 
-.container_a2f514[data-fade=true] {
-    opacity: 0
-}
-
+.container_a2f514[data-fade=true],
 .container_a2f514[data-fade=true] .text_a2f514 {
     opacity: 0
 }

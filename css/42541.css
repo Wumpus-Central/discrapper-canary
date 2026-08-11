@@ -730,7 +730,8 @@
     text-decoration-thickness: auto
 }
 
-.IncodeButton.IncodeButtonLink.IncodeButtonInline:active {
+.IncodeButton.IncodeButtonLink.IncodeButtonInline:active,
+.IncodeButton.IncodeButtonLink.IncodeButtonInline:disabled {
     font-family: var(--typography-button-family);
     font-size: var(--typography-button-m-size);
     font-weight: var(--typography-button-m-weight);
@@ -741,13 +742,7 @@
 
 .IncodeButton.IncodeButtonLink.IncodeButtonInline:disabled {
     color: var(--color-button-tertiary-text-disabled, var(--button-tertiary-text-disabled));
-    cursor: not-allowed;
-    font-family: var(--typography-button-family);
-    font-size: var(--typography-button-m-size);
-    font-weight: var(--typography-button-m-weight);
-    letter-spacing: var(--typography-button-m-letter-spacing);
-    line-height: var(--typography-button-m-line-height);
-    text-decoration-line: none
+    cursor: not-allowed
 }
 
 .IncodeCheckbox {
@@ -1153,13 +1148,12 @@
 }
 
 .IncodeInput:focus {
-    background-color: var(--color-input-surface-focused, var(--input-surface-focused));
-    border-color: var(--color-input-border-focused, var(--input-border-focused));
     border-style: var(--tw-border-style);
     border-width: 2px
 }
 
-.IncodeInput:active:not(:disabled) {
+.IncodeInput:active:not(:disabled),
+.IncodeInput:focus {
     background-color: var(--color-input-surface-focused, var(--input-surface-focused));
     border-color: var(--color-input-border-focused, var(--input-border-focused))
 }
@@ -1183,10 +1177,7 @@
     text-align: start
 }
 
-.IncodeInput[type=date]::-webkit-calendar-picker-indicator {
-    display: none
-}
-
+.IncodeInput[type=date]::-webkit-calendar-picker-indicator,
 .IncodeInput[type=date]::-webkit-inner-spin-button {
     display: none
 }
@@ -1200,10 +1191,7 @@
     opacity: 1
 }
 
-.IncodeInput[type=date]:focus::-webkit-datetime-edit {
-    color: var(--color-input-text-field-default, var(--input-text-field-default))
-}
-
+.IncodeInput[type=date]:focus::-webkit-datetime-edit,
 .IncodeInput[type=date][data-has-value=true]::-webkit-datetime-edit {
     color: var(--color-input-text-field-default, var(--input-text-field-default))
 }
@@ -1216,11 +1204,8 @@
     color: var(--color-input-text-field-disabled, var(--input-text-field-disabled))
 }
 
+.IncodeInput[type=date]:disabled::-webkit-date-and-time-value,
 .IncodeInput[type=date]:disabled::-webkit-datetime-edit {
-    color: var(--color-input-text-field-disabled, var(--input-text-field-disabled))
-}
-
-.IncodeInput[type=date]:disabled::-webkit-date-and-time-value {
     color: var(--color-input-text-field-disabled, var(--input-text-field-disabled))
 }
 
@@ -1270,13 +1255,12 @@
 }
 
 .IncodeTextArea:focus {
-    background-color: var(--color-input-surface-focused, var(--input-surface-focused));
-    border-color: var(--color-input-border-focused, var(--input-border-focused));
     border-style: var(--tw-border-style);
     border-width: 2px
 }
 
-.IncodeTextArea:active:not(:disabled) {
+.IncodeTextArea:active:not(:disabled),
+.IncodeTextArea:focus {
     background-color: var(--color-input-surface-focused, var(--input-surface-focused));
     border-color: var(--color-input-border-focused, var(--input-border-focused))
 }
@@ -1482,10 +1466,10 @@
 .IncodeSegmentedDateInput .IncodeSegmentedDateInputField[data-disabled=true] {
     background-color: var(--color-input-surface-disabled, var(--input-surface-disabled));
     border-color: var(--color-input-border-disabled, var(--input-border-disabled));
-    color: var(--color-input-text-field-disabled, var(--input-text-field-disabled));
     cursor: not-allowed
 }
 
+.IncodeSegmentedDateInput .IncodeSegmentedDateInputField[data-disabled=true],
 .IncodeSegmentedDateInput .IncodeSegmentedDateInputField[data-disabled=true] .IncodeSegmentedDateInputSeparator {
     color: var(--color-input-text-field-disabled, var(--input-text-field-disabled))
 }

@@ -615,10 +615,14 @@
 }
 
 .IncodeFaceMatchTooltip:after {
+    border-top: 9px solid var(--surface-neutral-50);
+    bottom: -9px
+}
+
+.IncodeFaceMatchTooltip:after,
+.IncodeFaceMatchTooltip:before {
     border-left: 9px solid #0000;
     border-right: 9px solid #0000;
-    border-top: 9px solid var(--surface-neutral-50);
-    bottom: -9px;
     content: "";
     height: 0;
     left: 50%;
@@ -628,16 +632,8 @@
 }
 
 .IncodeFaceMatchTooltip:before {
-    border-left: 9px solid #0000;
-    border-right: 9px solid #0000;
     border-top: 9px solid var(--border-neutral-100);
-    bottom: -10px;
-    content: "";
-    height: 0;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 0
+    bottom: -10px
 }
 
 .IncodeFaceMatchAnimatedTitle {

@@ -105,20 +105,21 @@
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background: transparent;
-    content: "";
-    position: absolute;
     top: 16px;
-    inset-inline: 16px;
-    bottom: 0
+    inset-inline: 16px
+}
+
+.background_fdf9c0:after,
+.background_fdf9c0:before {
+    bottom: 0;
+    content: "";
+    position: absolute
 }
 
 .background_fdf9c0:after {
     background-color: var(--background-surface-high);
-    content: "";
-    position: absolute;
     top: 0;
     inset-inline: 0;
-    bottom: 0;
     opacity: .7
 }
 

@@ -396,11 +396,10 @@
 
 .methodSelectSlot__4b182 {
     display: flex;
-    flex: 0 0 auto;
-    margin-bottom: 8px;
-    width: 100%
+    margin-bottom: 8px
 }
 
+.methodSelectSlot__4b182,
 .methodSelectSlot__4b182>* {
     flex: 0 0 auto;
     width: 100%

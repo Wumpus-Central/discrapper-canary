@@ -4359,13 +4359,10 @@
 }
 
 .chatHeaderBar_dc83f5:after {
-    display: none
-}
-
-.chatHeaderBar_dc83f5:after {
     bottom: -1px;
     box-shadow: var(--elevation-low);
     content: "";
+    display: none;
     display: block;
     height: 1px;
     inset-inline: 0;

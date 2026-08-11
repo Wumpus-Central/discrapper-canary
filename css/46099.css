@@ -235,13 +235,13 @@
 }
 
 .clickableImage__39ec2,
+.clickableImage__39ec2:after,
 .image__39ec2 {
     border-radius: var(--radius-sm)
 }
 
 .clickableImage__39ec2:after {
     background-color: var(--black);
-    border-radius: var(--radius-sm);
     content: "";
     height: 100%;
     inset-inline-end: 0;

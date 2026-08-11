@@ -36,10 +36,7 @@
     gap: var(--space-8)
 }
 
-.buttons_effb26>:first-child {
-    flex: 1
-}
-
+.buttons_effb26>:first-child,
 .copyButtonWrapper_effb26 {
     flex: 1
 }

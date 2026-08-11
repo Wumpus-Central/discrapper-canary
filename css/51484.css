@@ -91,11 +91,8 @@
     width: 24px
 }
 
+.viewersIcon_d6b206.activeButton_d6b206,
 .viewersIcon_d6b206:hover {
-    color: var(--white)
-}
-
-.viewersIcon_d6b206.activeButton_d6b206 {
     color: var(--white)
 }
 

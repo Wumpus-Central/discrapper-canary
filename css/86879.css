@@ -137,17 +137,14 @@
     color: var(--interactive-text-hover)
 }
 
+.navItem__551b0.selected__551b0,
 .navItem__551b0:active {
-    background: var(--interactive-background-active);
-    color: var(--interactive-text-active)
-}
-
-.navItem__551b0.selected__551b0 {
     background: var(--interactive-background-active)
 }
 
 .navItem__551b0.selected__551b0,
-.navItem__551b0.selected__551b0 .navItemIcon__551b0 {
+.navItem__551b0.selected__551b0 .navItemIcon__551b0,
+.navItem__551b0:active {
     color: var(--interactive-text-active)
 }
 

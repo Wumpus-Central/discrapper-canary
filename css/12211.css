@@ -69,13 +69,13 @@
     position: absolute
 }
 
+.clickable__19fd1,
 .row__19fd1:last-child {
     border-bottom: none
 }
 
 .clickable__19fd1 {
     background-color: var(--background-mod-subtle);
-    border-bottom: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
     margin: 0;

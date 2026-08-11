@@ -27,7 +27,8 @@
     position: relative
 }
 
-.artwork_deb389>[role=button]:first-child {
+.artwork_deb389>[role=button]:first-child,
+.bundleBackground_deb389 {
     height: 100%;
     inset: 0;
     position: absolute;
@@ -35,13 +36,9 @@
 }
 
 .bundleBackground_deb389 {
-    height: 100%;
-    inset: 0;
     -o-object-fit: cover;
     object-fit: cover;
-    pointer-events: none;
-    position: absolute;
-    width: 100%
+    pointer-events: none
 }
 
 .preview_deb389 {

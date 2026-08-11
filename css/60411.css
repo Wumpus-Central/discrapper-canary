@@ -23,27 +23,24 @@
     background-image: url(/assets/22f7eeb9ea9904c1.svg);
     background-size: 100% 100%;
     border-radius: 2px;
+    transform: rotateY(0deg)
+}
+
+.cardIcon__29abc:after,
+.cardIcon__29abc:before {
     content: "";
     display: block;
     height: 100%;
     inset-inline-start: 0;
     position: absolute;
     top: 0;
-    transform: rotateY(0deg);
     width: 100%
 }
 
 .cardIcon__29abc:after {
     background: url(/assets/fea1d83d02c90c67.svg);
     background-size: 100% 100%;
-    content: "";
-    display: block;
-    height: 100%;
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0;
-    transform: rotateY(180deg);
-    width: 100%
+    transform: rotateY(180deg)
 }
 
 .cardIcon__29abc.visa__29abc:before {
@@ -132,10 +129,7 @@
     background-image: url(/assets/3de97fb87787f20b.svg)
 }
 
-.cardIcon__29abc.apple__29abc:before {
-    background-image: url(/assets/824341c879ac6d59.svg)
-}
-
+.cardIcon__29abc.apple__29abc:before,
 .cardIcon__29abc.apple_light__29abc:before {
     background-image: url(/assets/824341c879ac6d59.svg)
 }

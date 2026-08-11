@@ -18,7 +18,11 @@
 
 .rewardHighlight__28141:after {
     border: 1px solid var(--opacity-white-16);
-    border-radius: inherit;
+    border-radius: inherit
+}
+
+.borderOverlay__28141:before,
+.rewardHighlight__28141:after {
     box-sizing: border-box;
     content: "";
     height: 100%;
@@ -31,15 +35,8 @@
 .borderOverlay__28141:before {
     border: 2px solid var(--white);
     border-radius: inherit;
-    box-sizing: border-box;
-    content: "";
-    height: 100%;
-    inset-inline-start: 0;
     -webkit-mask-image: linear-gradient(-45deg, transparent 50%, #000);
     mask-image: linear-gradient(-45deg, transparent 50%, #000);
-    position: absolute;
-    top: 0;
-    width: 100%;
     z-index: 1
 }
 

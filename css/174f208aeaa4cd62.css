@@ -1,0 +1,491 @@
+.shelfCard__2b19e {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 355px;
+    overflow: clip;
+    width: 300px
+}
+
+.shelfLeadingCard__2b19e {
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-20);
+    padding: var(--space-16);
+    position: relative;
+    width: 620px
+}
+
+.shelfCardGradient__2b19e {
+    background: linear-gradient(105deg, var(--custom-hero-shelf-scrim-gradient-start) 0, var(--custom-hero-shelf-scrim-gradient-end) 100%);
+    height: 100%;
+    inset-inline-start: 0;
+    opacity: .15;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.shelfLeadingCardContainer__2b19e {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding-top: var(--space-16);
+    width: 100%
+}
+
+.shelfLeadingCardHeader__2b19e {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.shelfLeadingCardTags__2b19e {
+    display: inline
+}
+
+.shelfLeadingCardTags__2b19e>svg {
+    color: var(--text-muted);
+    margin-inline-end: var(--space-6);
+    margin-inline-start: var(--space-6);
+    opacity: .65;
+    vertical-align: middle
+}
+
+.shelfLeadingCardDescriptionText__2b19e {
+    padding-inline-end: var(--space-12)
+}
+
+.shelfLeadingCardDescriptionFade__2b19e {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%
+}
+
+.shelfLeadingCardDescription__2b19e {
+    flex: 1;
+    width: 100%
+}
+
+.shelfLeadingCardDescription__2b19e::-webkit-scrollbar-thumb {
+    background-color: var(--text-muted)
+}
+
+.shelfCardIntro__2b19e {
+    position: relative
+}
+
+.shelfCardBackground__2b19e {
+    isolation: isolate;
+    z-index: 0
+}
+
+.shelfCardBackground__2b19e,
+.shelfCardIntroAsset__2b19e {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.shelfCardIntroAsset__2b19e {
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.shelfLeadingCardAsset__2b19e {
+    aspect-ratio: 2/3;
+    border-radius: var(--radius-lg);
+    display: block;
+    flex-shrink: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.shelfCardIntroImage__2b19e {
+    z-index: 0
+}
+
+.shelfCardIntroVideo__2b19e {
+    opacity: 0;
+    z-index: 1
+}
+
+.full-motion .shelfCardIntroVideo__2b19e {
+    transition: opacity .3s ease-in-out
+}
+
+.shelfCardIntro__2b19e:has(:focus-visible) .shelfCardIntroVideo__2b19e,
+.shelfCardIntro__2b19e:hover .shelfCardIntroVideo__2b19e {
+    opacity: 1
+}
+
+.shelfLeadingCard__2b19e:has(:focus-visible) .shelfCardIntroVideo__2b19e,
+.shelfLeadingCard__2b19e:hover .shelfCardIntroVideo__2b19e {
+    opacity: 1
+}
+
+.introCardCta__2b19e {
+    bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    padding: var(--space-16);
+    position: absolute
+}
+
+.shelfCardQuest__2b19e {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16);
+    position: relative
+}
+
+.shelfCardQuestDetails__2b19e {
+    align-self: stretch;
+    padding: 0 var(--space-8) var(--space-8)
+}
+
+.progressWrapper__2b19e {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    will-change: transform
+}
+
+.rewardName__2b19e {
+    align-self: stretch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.viewQuestCta__2b19e {
+    bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    padding: var(--space-16);
+    position: absolute
+}
+
+@keyframes loadingSkeletonPulse_aee3fe {
+
+    0%,
+    to {
+        background-color: var(--background-mod-subtle)
+    }
+
+    50% {
+        background-color: var(--background-mod-muted)
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .loadingSkeleton_aee3fe {
+        animation: none
+    }
+}
+
+.loadingSkeleton_aee3fe {
+    animation: loadingSkeletonPulse_aee3fe 1.6s ease-in-out infinite;
+    background-color: var(--background-mod-subtle)
+}
+
+.shelf_ee2856 {
+    margin-top: var(--space-24)
+}
+
+.shelfCards_ee2856 {
+    width: -moz-min-content;
+    width: min-content
+}
+
+.shelfCardLoadingPlaceholder_ee2856 {
+    border-radius: var(--radius-xl);
+    flex-shrink: 0;
+    height: 355px;
+    width: 300px
+}
+
+.shelfCardLoadingPlaceholderLeadingTile_ee2856 {
+    width: 620px
+}
+
+.heroBackground__4972f {
+    border-radius: inherit;
+    overflow: hidden;
+    z-index: 0
+}
+
+.heroBannerHidden__4972f {
+    display: none
+}
+
+.backgroundOverlay__4972f,
+.backgroundOverlay__4972f:after,
+.backgroundOverlay__4972f:before,
+.heroAsset__4972f,
+.heroBackground__4972f {
+    bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.asset__4972f {
+    bottom: 0;
+    height: auto;
+    inset-inline-end: 0;
+    inset-inline-start: auto;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 1234px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto
+}
+
+.heroAssetBlurred__4972f .asset__4972f {
+    filter: blur(var(--custom-image-blur-amount)) brightness(.5) saturate(120%)
+}
+
+.heroAssetBlurredA__4972f {
+    --custom-image-blur-amount: 10px;
+    -webkit-mask: linear-gradient(90deg, #000, transparent 30%);
+    mask: linear-gradient(90deg, #000, transparent 30%)
+}
+
+.heroAssetBlurredB__4972f {
+    --custom-image-blur-amount: 5px;
+    -webkit-mask: linear-gradient(90deg, #000 30%, transparent 70%);
+    mask: linear-gradient(90deg, #000 30%, transparent 70%)
+}
+
+.backgroundOverlay__4972f {
+    overflow: hidden;
+    z-index: 1
+}
+
+.backgroundOverlay__4972f:after {
+    inset-inline-end: auto;
+    -webkit-mask: linear-gradient(270deg, transparent, rgba(0, 0, 0, .83) 68%, #000);
+    mask: linear-gradient(270deg, transparent, rgba(0, 0, 0, .83) 68%, #000);
+    width: 600px
+}
+
+.backgroundOverlay__4972f:after,
+.backgroundOverlay__4972f:before {
+    background-color: var(--background-base-lower);
+    content: ""
+}
+
+.backgroundOverlay__4972f:before {
+    display: none;
+    height: 500px;
+    -webkit-mask: linear-gradient(180deg, transparent, #000);
+    mask: linear-gradient(180deg, transparent, #000);
+    top: auto
+}
+
+@container wrapper (width < 725px) {
+    .heroAssetBlurred__4972f {
+        display: none
+    }
+
+    .backgroundOverlay__4972f:after {
+        -webkit-mask: linear-gradient(135deg, #000, rgba(0, 0, 0, .83) 15%, transparent 30%);
+        mask: linear-gradient(135deg, #000, rgba(0, 0, 0, .83) 15%, transparent 30%)
+    }
+
+    .backgroundOverlay__4972f:before {
+        display: block
+    }
+}
+
+.logo__4972f {
+    flex-shrink: 0;
+    max-height: 56px;
+    max-width: 132px;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.sponsoredTag__4972f {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    margin-inline-end: -8px;
+    margin-top: -8px;
+    padding: 4px 8px
+}
+
+.themeSection_f7cedc,
+.themeSelector_f7cedc {
+    align-items: flex-start;
+    display: flex
+}
+
+.themeSelector_f7cedc {
+    flex-direction: row;
+    gap: var(--space-md)
+}
+
+.themeOption_f7cedc {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    transition: opacity .2s
+}
+
+.themeOption_f7cedc:hover {
+    opacity: .8
+}
+
+.themeCircle_f7cedc {
+    border: 2px solid var(--border-normal);
+    border-radius: 50%;
+    height: 32px;
+    transition: border-color .2s;
+    width: 32px
+}
+
+.themeCircleSelected_f7cedc {
+    border-color: var(--brand-500)
+}
+
+.themeLabel_f7cedc {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500
+}
+
+.controlBar__04a02 {
+    flex-direction: column;
+    width: 100%
+}
+
+.controlBar__04a02,
+.questInput__04a02 {
+    display: flex;
+    gap: var(--space-sm)
+}
+
+.questInput__04a02 {
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: row;
+    min-width: 600px
+}
+
+.currentQuestInfo__04a02 {
+    flex: 1;
+    gap: var(--space-xs);
+    justify-content: flex-end
+}
+
+.currentQuestInfo__04a02,
+.questName__04a02 {
+    align-items: center;
+    display: flex
+}
+
+.questName__04a02 {
+    border: 1px solid var(--interactive-background-selected);
+    border-radius: var(--radius-sm);
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-sm)
+}
+
+.questLabel__04a02 {
+    color: var(--interactive-text-default);
+    font-weight: 500
+}
+
+.questTitle__04a02 {
+    color: var(--interactive-text-active);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.divider__04a02 {
+    background: var(--interactive-background-selected);
+    height: 1px;
+    margin-block: var(--space-sm) var(--space-sm);
+    margin-inline: 0;
+    width: 100%
+}
+
+.controlsSection__04a02 {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.controlsHeading__04a02 {
+    color: var(--text-strong);
+    margin: 0
+}
+
+.controlButtons__04a02 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center
+}
+
+.questSelectorContainer__04a02 {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-sm);
+    justify-content: flex-end
+}
+
+.questSelectorWrapper__04a02 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.copyInput__04a02 {
+    width: 100%
+}
+
+.sharePopover__04a02 {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    padding: var(--space-sm);
+    width: 400px
+}
+
+.divider__3b806 {
+    background: var(--interactive-background-selected);
+    height: 1px;
+    margin-block: var(--space-sm) var(--space-sm);
+    margin-inline: 0;
+    width: 100%
+}
