@@ -17,6 +17,9 @@ class l {
     toSubmission() {
         return { id: this.id, data: { type: this.type, clips: this.clips.map(s) } };
     }
+    isUpdatable() {
+        return !0;
+    }
     isDiscardable() {
         return 0 === this.clips.length;
     }

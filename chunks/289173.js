@@ -28,6 +28,9 @@ class d {
             },
         };
     }
+    isUpdatable() {
+        return !0;
+    }
     isDiscardable() {
         return 0 === this.games.length;
     }

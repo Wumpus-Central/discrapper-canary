@@ -1,49 +1,52 @@
 "use strict";
-n.d(t, { K: () => d, Tu: () => g, g0: () => E, wv: () => p, yL: () => _ }), n(321073);
+n.d(t, { K: () => _, Tu: () => C, g0: () => I, wv: () => g, yL: () => h }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
     s = n(540185),
-    l = n(403362),
-    o = n(375708);
-function d() {
+    l = n(287809),
+    o = n(403362),
+    d = n(474090),
+    c = n(202541),
+    u = n(375708);
+function _() {
     return { type: a.K.COVER, title: "", subtitle: "" };
 }
-let c = 0;
-function u() {
-    return `field-${c++}`;
+let E = 0;
+function A() {
+    return `field-${E++}`;
 }
-function _() {
-    return { key: u(), title: "", description: "" };
+function h() {
+    return { key: A(), title: "", description: "" };
 }
-function E() {
-    return new g({ header: o.intl.string(o.t.QxKl9A), sections: [d(), { type: a.K.FIELDS, fields: [_()] }] });
+function I() {
+    return new C({ header: u.intl.string(u.t.QxKl9A), sections: [_(), { type: a.K.FIELDS, fields: [h()] }] });
 }
-function A(e) {
+function f(e) {
     return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
 }
-function h(e) {
+function p(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
         case a.K.FIELDS:
-            return e.fields.every(A);
+            return e.fields.every(f);
     }
 }
-function I(e) {
+function T(e) {
     if (null != e && "file_id" in e) return { fileId: e.file_id, width: e.width, height: e.height };
 }
-function f(e) {
-    let t = I(e.image);
+function m(e) {
+    let t = T(e.image);
     return {
-        key: u(),
+        key: A(),
         title: e.title ?? "",
         description: e.description ?? "",
         image: t,
         hideImage: null == t || void 0,
     };
 }
-function p(e) {
+function g(e) {
     var t;
     let n =
         null == (t = e)
@@ -56,36 +59,36 @@ function p(e) {
                                   type: e.type,
                                   title: e.title ?? "",
                                   subtitle: e.subtitle ?? "",
-                                  image: I(e.image),
+                                  image: T(e.image),
                               };
                           case a.K.FIELDS:
-                              return { type: e.type, fields: e.fields.map(f) };
+                              return { type: e.type, fields: e.fields.map(m) };
                           default:
                               return;
                       }
                   })
-                  .filter(l.Vq);
+                  .filter(o.Vq);
     return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
 }
-function T(e) {
+function S(e) {
     if (null != e)
         return "localDataUri" in e ? { filename: e.filename } : { file_id: e.fileId, width: e.width, height: e.height };
 }
-function m(e) {
+function N(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: T(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: S(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
-                .filter((e) => !A(e))
-                .map((e) => ({ title: e.title, description: e.description, image: T(e.image) }));
+                .filter((e) => !f(e))
+                .map((e) => ({ title: e.title, description: e.description, image: S(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
             return e;
     }
 }
-class g {
+class C {
     id;
     type;
     header;
@@ -100,21 +103,24 @@ class g {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !h(e))
-                    .map(m)
-                    .filter(l.Vq),
+                    .filter((e) => !p(e))
+                    .map(N)
+                    .filter(o.Vq),
             },
         };
     }
     isDiscardable() {
-        return this.sections.every(h);
+        return this.sections.every(p);
     }
     isValid() {
-        return this.sections.some((e) => !h(e));
+        return this.sections.some((e) => !p(e));
+    }
+    isUpdatable() {
+        return (0, d.ki)(l.default.getCurrentUser(), c.PremiumTypes.TIER_2);
     }
     isEqual(e) {
         return (
-            e instanceof g &&
+            e instanceof C &&
             this.header === e.header &&
             (function (e, t) {
                 if (e.length !== t.length) return !1;

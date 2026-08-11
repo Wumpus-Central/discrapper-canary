@@ -11,6 +11,9 @@ class r {
     toSubmission() {
         return { id: this.id, data: { type: this.type, application_id: this.applicationId } };
     }
+    isUpdatable() {
+        return !0;
+    }
     isDiscardable() {
         return !1;
     }
