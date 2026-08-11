@@ -102,6 +102,7 @@ function _(e, t, n) {
                       moderatorReportChannelId: u.moderator_report_channel_id,
                   }
                 : null,
+        guildSpaceSettings: e.guild_space_settings ?? null,
         verificationRoleId: e.verification_role_id ?? null,
         gameApplicationIds: e.game_application_ids ?? null,
         officialMessageColor: e.official_message_color ?? null,
@@ -261,6 +262,7 @@ function S(e) {
         guildTheme: e.guildTheme ?? null,
         premiumFeatures: e.premiumFeatures ?? null,
         moderatorReporting: e.moderatorReporting ?? null,
+        guildSpaceSettings: e.guildSpaceSettings ?? null,
         gameApplicationIds: e.gameApplicationIds ?? null,
         officialMessageColor: e.officialMessageColor ?? null,
         verificationRoleId: e.verificationRoleId ?? null,
@@ -323,6 +325,7 @@ function N(e) {
                       moderator_report_channel_id: r.moderatorReportChannelId,
                   }
                 : null,
+        guild_space_settings: e.guildSpaceSettings,
         official_message_color: e.officialMessageColor,
         incidents_data:
             null == (t = e.incidentsData) || l(t)

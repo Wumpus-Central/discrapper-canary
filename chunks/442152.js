@@ -593,7 +593,7 @@ let te = r.memo(function (e) {
                                         (0, E.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
                                                 n.e("47899"),
-                                                n.e("9198"),
+                                                n.e("98064"),
                                                 n.e("75091"),
                                                 n.e("56963"),
                                                 n.e("8891"),
@@ -1399,7 +1399,7 @@ let tw = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                     (0, E.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("47899"),
-                                            n.e("9198"),
+                                            n.e("98064"),
                                             n.e("75091"),
                                             n.e("56963"),
                                             n.e("8891"),

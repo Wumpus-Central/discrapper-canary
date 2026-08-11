@@ -26373,6 +26373,7 @@
   "N8nJ+T": "Click the panel you want to add to your Server Hub page, and then drag and drop them around.",
   "L8Xfoo": "Add Panels",
   "IuT87w": "Add Panel",
+  "Z2z85q": "This page is a draft. Only server admins can see it until it's published.",
   "+cSvS8": "Position {positionNumber} of {positionCount} in the main column",
   "KcdDyT": "End of the main column",
   "O9RvHQ": "Position {positionNumber} of {positionCount} in the side column",
@@ -26380,6 +26381,8 @@
   "zleX9q": "Add text or an image",
   "8wD0Un": "{boostPrice, plural,one {# Boost}other {# Boosts}",
   "Lx0P8k": "Free",
+  "yul+0g": "Publish",
+  "pDzipI": "Server Hub published. Everyone in the server can see it now.",
   "hmNYxk": "Remove {widgetName}",
   "NV85DR": "Reorder {widgetName}"
 }

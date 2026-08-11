@@ -129,6 +129,7 @@
   "GUILD_SPACE": "/guilds/:param/space",
   "GUILD_SPACE_WIDGETS_HYDRATE": "/guilds/:param/space/widgets/hydrate",
   "GUILD_SPACE_WIDGETS_CATALOG": "/guilds/:param/space/widgets/catalog",
+  "GUILD_SPACE_SETTINGS": "/guilds/:param/space/settings",
   "GUILD_PINCODE": "/guilds/:param/pincode",
   "GUILD_DELETE": "/guilds/:param/delete",
   "CHANNELS": "/channels",

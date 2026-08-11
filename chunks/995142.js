@@ -1183,7 +1183,7 @@ function t1(e) {
                     (c?.(O.GameProfileTrackActionActions.Feedback),
                     (0, f.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("9198"),
+                            n.e("98064"),
                             n.e("22876"),
                             n.e("21072"),
                             n.e("8891"),

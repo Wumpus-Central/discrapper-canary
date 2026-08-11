@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Uq: () => d, tT: () => o, mN: () => l });
+n.d(t, { Uq: () => u, tT: () => c, mN: () => o });
 var i = n(17928),
     r = n(576705);
 let a = (0, n(600975).C)({
@@ -9,23 +9,26 @@ let a = (0, n(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable Guild Space", config: { enabled: !0 } }],
 });
-var s = n(652215);
-function l(e) {
-    return (0, i.bG)([r.A], () => null != e && r.A.can(s.xBc.MANAGE_GUILD, e), [e]);
+var s = n(593673),
+    l = n(652215);
+function o(e) {
+    return (0, i.bG)([r.A], () => null != e && r.A.can(l.xBc.MANAGE_GUILD, e), [e]);
 }
-function o(e, t) {
-    var n, i;
+function d(e) {
+    let t = e.guildSpaceSettings;
+    return null != t && t.enabled && t.publish_status === s.B.PUBLISHED;
+}
+function c(e, t) {
+    var n;
     return (
         null != e &&
-        ((n = e.id),
-        a.getCurrentConfig({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled &&
-            null != (i = e) &&
-            r.A.can(s.xBc.MANAGE_GUILD, i))
+        ((n = e.id), !!a.getCurrentConfig({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled) &&
+        ((null != e && r.A.can(l.xBc.MANAGE_GUILD, e)) || d(e))
     );
 }
-function d(e, t) {
+function u(e, t) {
     var n;
     let i = ((n = e?.id), a.useExperiment({ guildId: n, location: t }, { autoTrackExposure: !1 }).enabled),
-        r = l(e);
-    return null != e && i && r;
+        r = o(e);
+    return null != e && !!i && (r || d(e));
 }
