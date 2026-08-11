@@ -9431,6 +9431,8 @@
     --icon-size-sm: 18px;
     --icon-size-xs: 16px;
     --icon-size-xxs: 12px;
+    --menu-border-width: 1px;
+    --menu-scroller-block-padding: 8px;
     --mobile-bounty-tile-border-radius: 24px;
     --mobile-card-default-radius: 16px;
     --mobile-channel-details-nav-buttons-gap: 12px;

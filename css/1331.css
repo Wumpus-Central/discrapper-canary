@@ -4063,7 +4063,7 @@
     --custom-menu-flexible-min-width: 188px;
     background: var(--background-surface-high);
     background-color: var(--background-surface-higher);
-    border: 1px solid var(--border-subtle);
+    border: var(--menu-border-width) solid var(--border-subtle);
     border-radius: 8px;
     box-shadow: var(--shadow-high);
     box-sizing: border-box;
@@ -4075,7 +4075,8 @@
 }
 
 .scroller_c1e9c4 {
-    padding: 8px
+    padding-block: var(--menu-scroller-block-padding);
+    padding-inline: 8px
 }
 
 .has-webkit-scrollbar .scrollerWithScrollbar_c1e9c4 {

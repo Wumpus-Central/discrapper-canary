@@ -7617,6 +7617,7 @@ let { Themes: c } = d.zv,
                 SIZE_XS: { resolve: () => 16 },
                 SIZE_XXS: { resolve: () => 12 },
             },
+            menu: { BORDER_WIDTH: { resolve: () => 1 }, SCROLLER_BLOCK_PADDING: { resolve: () => 8 } },
             mobile: {
                 BOUNTY_TILE_BORDER_RADIUS: {
                     resolve(e) {
