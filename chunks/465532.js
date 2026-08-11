@@ -14,4 +14,7 @@ let r = {
     changeThreadSettings(e, t) {
         i.h.dispatch({ type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: e, draft: t });
     },
+    changeScheduledMessage(e, t) {
+        i.h.dispatch({ type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId: e, draft: t });
+    },
 };

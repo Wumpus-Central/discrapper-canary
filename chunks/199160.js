@@ -1,15 +1,14 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366);
 let a = !1,
     s = {},
-    l = new Set(),
-    o = {};
-function d() {
-    o = {};
+    l = new Set();
+function o() {
+    (a = !1), (s = {}), (l = new Set());
 }
-class c extends i.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "scheduledMessageStore";
     getMessagesPendingDeletion() {
         return l;
@@ -17,17 +16,14 @@ class c extends i.Ay.Store {
     getScheduledMessagesForInbox() {
         return s;
     }
-    getPendingScheduledMessage(e) {
-        return o[e];
-    }
     get loading() {
         return a;
     }
 }
-let u = new c(r.h, {
+let c = new d(r.h, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
-        let { channelId: t, scheduledMessageSend: n } = e;
-        (s = { ...s, [n.scheduledMessageId]: n }), (o = { ...o }), delete o[t];
+        let { scheduledMessageSend: t } = e;
+        s = { ...s, [t.scheduledMessageId]: t };
     },
     SCHEDULED_MESSAGES_UPDATE_SUCCESS: function (e) {
         let { scheduledMessageSend: t } = e;
@@ -61,14 +57,6 @@ let u = new c(r.h, {
         let {} = e;
         a = !1;
     },
-    CREATE_PENDING_SCHEDULED_MESSAGE: function (e) {
-        let { channelId: t, scheduledTimestamp: n } = e;
-        o = { ...o, [t]: { channelId: t, scheduledTimestamp: n } };
-    },
-    DELETE_PENDING_SCHEDULED_MESSAGE: function (e) {
-        let { channelId: t } = e;
-        (o = { ...o }), delete o[t];
-    },
-    LOGOUT: d,
-    CONNECTION_OPEN: d,
+    LOGOUT: o,
+    CONNECTION_OPEN: o,
 });

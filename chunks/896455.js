@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(189213),
     s = n(192308),
-    l = n(151282),
+    l = n(465532),
     o = n(388096),
     d = n(375708);
 let c = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
@@ -23,7 +23,8 @@ function u(e) {
                 text: d.intl.string(d.t.iQ1SwX),
                 onClick: function () {
                     let e = A.toISOString();
-                    null != E ? E(e) : (0, l.yF)({ channelId: t.id, scheduledTimestamp: e }), (0, s.closeModal)(c);
+                    null != E ? E(e) : l.A.changeScheduledMessage(t.id, { scheduledTimestamp: e }),
+                        (0, s.closeModal)(c);
                 },
             },
         ],
