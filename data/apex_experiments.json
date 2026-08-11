@@ -5910,6 +5910,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-08-dont-close-chat",
+    "defaultConfig": {
+      "closeChatOnLeave": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "closeChatOnLeave": false
+      }
+    }
+  },
+  {
     "name": "2026-08-hide-gift-shop-upsell",
     "kind": "user",
     "defaultConfig": {
