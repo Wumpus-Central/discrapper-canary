@@ -18672,6 +18672,7 @@
   "x/ERbV": "Chart",
   "9bEWZJ": "Rating",
   "/0p2sz": "{label}, {rating} out of {maxRating} stars{ratingCount, plural,one {, # rating}other {, # ratings}",
+  "EV1W/L": "Trailers & Screenshots",
   "N0IE3v": "Trailer",
   "H485IA": "Play any of the $[Action Packed event titles](gameSheetHook) for {targetMinutes, number} minutes and unlock **{rewardNameWithArticle}**.",
   "PYFVdf": "Action Packed",

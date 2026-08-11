@@ -33,13 +33,19 @@ let c = (0, l.mj)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
-    }),
-    _ = (0, l.mj)({
-        name: "2026-03-quest-reload-video-on-obscured",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
     });
+(0, l.mj)({
+    name: "2026-07-custom-app-store-overlay",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+let _ = (0, l.mj)({
+    name: "2026-03-quest-reload-video-on-obscured",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
 var E =
     (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
     (r[(r.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
