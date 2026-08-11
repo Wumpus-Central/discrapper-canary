@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { T_: () => h, oS: () => I, Ay: () => f }), n(321073);
+n.d(t, { T_: () => I, oS: () => f, Ay: () => p }), n(321073);
 var i,
     r = n(582128),
     a = n(284009),
@@ -12,31 +12,32 @@ var i,
     _ = n(738250),
     E = n(652215);
 function A(e) {
-    if (null == e) return ["no match"];
-    let t = [];
-    return (
-        o.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
-        (0, d.K)(e.contentClassification) && t.push("nsfw"),
-        t
-    );
+    return o.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED);
 }
 function h(e) {
-    return 0 === A(e).length;
+    if (null == e) return ["no match"];
+    let t = [];
+    return A(e) && t.push("profile disabled"), (0, d.K)(e.contentClassification) && t.push("nsfw"), t;
 }
 function I(e) {
-    return h(c.A.getGame(e));
+    return 0 === h(e).length;
 }
-let f = function (e) {
+function f(e) {
+    return I(c.A.getGame(e));
+}
+let p = function (e) {
     let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: a = !0 } = e,
         l = r.useRef(!1),
         { gameId: o, gameRecord: d, isLoading: c } = (0, _.A)({ applicationId: t, gameId: n }),
-        I = h(d);
+        I = null != d && !A(d);
     return (
         r.useEffect(() => {
-            if (!l.current && a && !c && null != d) {
-                s()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                let e = A(d);
-                !(function (e, t) {
+            l.current ||
+                !a ||
+                c ||
+                null == d ||
+                (s()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source."),
+                (function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         i = arguments.length > 3 ? arguments[3] : void 0;
                     u.default.track(E.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
@@ -45,9 +46,8 @@ let f = function (e) {
                         rejection_reason: n,
                         source: i,
                     });
-                })(I, d.id, e, i),
-                    (l.current = !0);
-            }
+                })(I, d.id, h(d), i),
+                (l.current = !0));
         }, [d, I, c, i, a]),
         { shouldOpenGameProfile: I, gameId: o }
     );
