@@ -76,7 +76,7 @@ function F(e) {
                             label: D.intl.formatToPlainString(D.t.XWSHTb, { platform: w.HD }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, O.openUserSettings)(C.X.CONNECTIONS_PANEL),
+                                    (0, O.openUserSettings)(C.X.CONNECTIONS_CATEGORY),
                                     s?.();
                             },
                         });
@@ -122,7 +122,7 @@ function F(e) {
                             }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, O.openUserSettings)(C.X.CONNECTIONS_PANEL),
+                                    (0, O.openUserSettings)(C.X.CONNECTIONS_CATEGORY),
                                     s?.();
                             },
                         });

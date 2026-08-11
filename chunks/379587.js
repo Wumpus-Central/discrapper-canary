@@ -1,20 +1,26 @@
 "use strict";
-n.d(t, { B: () => a, m: () => r });
-let i = (0, n(945810).mj)({
-    name: "2026-01-favorites-server",
-    kind: "user",
-    defaultConfig: { enabled: !1, hasHigherPrivileges: !1 },
-    variations: {
-        1: { enabled: !0, hasHigherPrivileges: !0 },
-        2: { enabled: !0, hasHigherPrivileges: !1 },
-        3: { enabled: !0, hasHigherPrivileges: !0, isFreemium: !0 },
-    },
-});
-function r(e) {
-    let { location: t } = e;
-    return i.useConfig({ location: t });
+n.d(t, { B: () => o, m: () => l });
+var i = n(945810);
+let r = (0, i.mj)({
+        name: "2026-01-favorites-server",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 }, 2: { enabled: !0 } },
+    }),
+    a = (0, i.mj)({
+        name: "2026-08-favorites-server",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    });
+function s(e, t) {
+    return { enabled: e.enabled || t.enabled, isFreemium: e.enabled };
 }
-function a(e) {
+function l(e) {
     let { location: t } = e;
-    return i.getConfig({ location: t });
+    return s(a.useConfig({ location: t }), r.useConfig({ location: t }));
+}
+function o(e) {
+    let { location: t } = e;
+    return s(a.getConfig({ location: t }), r.getConfig({ location: t }));
 }

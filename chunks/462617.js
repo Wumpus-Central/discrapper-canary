@@ -1,34 +1,32 @@
-n.d(e, { A: () => h });
-var c = n(582128),
-    t = n(17928),
+n.d(e, { A: () => C });
+var t = n(582128),
+    c = n(17928),
     u = n(115718),
     l = n(734057),
     a = n(576705),
     d = n(403362),
     s = n(181079),
-    i = n(93055),
-    o = n(5180),
-    C = n(652215);
-function h() {
-    let { hasHigherPrivileges: r } = (0, i.TW)(),
-        e = (0, t.bG)([s.A], () => s.A.getFavoriteChannels());
-    return c.useCallback(
-        (n, c) => {
-            switch (n.type) {
+    i = n(5180),
+    o = n(652215);
+function C() {
+    let r = (0, c.bG)([s.A], () => s.A.getFavoriteChannels());
+    return t.useCallback(
+        (e, n) => {
+            switch (e.type) {
                 case u.rD.USER: {
-                    let r = l.A.getDMChannelFromUserId(n.record.id);
-                    if (!c && null == r) return !1;
-                    return null == r || null == e[r.id];
+                    let t = l.A.getDMChannelFromUserId(e.record.id);
+                    if (!n && null == t) return !1;
+                    return null == t || null == r[t.id];
                 }
                 case u.rD.GROUP_DM:
-                    return null == e[n.record.id];
+                    return null == r[e.record.id];
                 case u.rD.TEXT_CHANNEL:
                 case u.rD.VOICE_CHANNEL:
-                    return a.A.can(C.xBc.VIEW_CHANNEL, n.record) && (0, o.IF)(n.record, r) && null == e[n.record.id];
+                    return a.A.can(o.xBc.VIEW_CHANNEL, e.record) && (0, i.jt)(e.record) && null == r[e.record.id];
                 default:
-                    return (0, d.xb)(n);
+                    return (0, d.xb)(e);
             }
         },
-        [e, r],
+        [r],
     );
 }

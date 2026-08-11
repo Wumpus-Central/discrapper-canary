@@ -18,8 +18,8 @@ var n = l(477900),
     g = l(939249),
     v = l(602853),
     y = l(866665),
-    N = l(885574),
-    E = l(243721),
+    E = l(885574),
+    N = l(243721),
     b = l(192308),
     S = l(231723),
     C = l(289873),
@@ -27,23 +27,23 @@ var n = l(477900),
     k = l(123292),
     P = l(77468),
     T = l(66834),
-    w = l(730134),
-    R = l(964486),
+    R = l(730134),
+    w = l(964486),
     G = l(736653),
     I = l(573648),
-    L = l(95561),
-    M = l(206828),
-    V = l(858177),
-    H = l(709066),
-    O = l(920268),
+    M = l(95561),
+    O = l(206828),
+    L = l(858177),
+    V = l(709066),
+    H = l(920268),
     U = l(47167),
     D = l(713654),
     z = l(733110),
     X = l(46937),
     F = l(773669),
     $ = l(780964),
-    B = l(766075),
-    Y = l(889227),
+    Y = l(766075),
+    B = l(889227),
     Q = l(280450),
     W = l(734057),
     Z = l(30370),
@@ -133,8 +133,8 @@ function eh(e) {
     let t,
         s,
         { eligibilityState: r, onAttempted: o } = e,
-        c = (0, V.O)(r.application_id),
-        { canStartAuthorization: u, startAuthorization: m } = (0, M.RD)(c),
+        c = (0, L.O)(r.application_id),
+        { canStartAuthorization: u, startAuthorization: m } = (0, O.RD)(c),
         x = u,
         h = r.identity_connected_account_type,
         A = r.identity_auth_required_scopes;
@@ -143,9 +143,9 @@ function eh(e) {
         null != e && e.enabled && (x = !0);
     }
     let p = r.application,
-        v = i.useMemo(() => (p?.bot != null ? new Y.A(p.bot) : null), [p]),
+        v = i.useMemo(() => (p?.bot != null ? new B.A(p.bot) : null), [p]),
         y = r.result;
-    null != v && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: v.isVerifiedBot() })),
+    null != v && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: v.isVerifiedBot() })),
         (s = y
             ? (0, n.jsx)(j.A, { size: "md", color: "currentColor", className: eu.rA })
             : x
@@ -155,7 +155,7 @@ function eh(e) {
                     color: "text-muted",
                     children: ec.intl.string(ec.t.cEts68),
                 }));
-    let N = i.useCallback(() => {
+    let E = i.useCallback(() => {
         y ||
             !x ||
             (o(null != h && Z.A.getAccounts().some((e) => e.type === h) ? null : r.connection_type, p ?? null),
@@ -180,9 +180,9 @@ function eh(e) {
         ? null
         : (0, n.jsxs)(g.D, {
               className: a()(eu.UY, y ? eu.o6 : null, x ? null : eu.pC),
-              onClick: !y && x ? N : void 0,
+              onClick: !y && x ? E : void 0,
               children: [
-                  null != v ? (0, n.jsx)(w.A, { user: v }) : null,
+                  null != v ? (0, n.jsx)(R.A, { user: v }) : null,
                   (0, n.jsxs)("div", {
                       className: eu.EZ,
                       children: [
@@ -216,7 +216,7 @@ function eA(e) {
         [r, c] = i.useState({}),
         [d, m] = i.useState(0),
         [x, A] = i.useState(null),
-        [p, E] = i.useState(null),
+        [p, N] = i.useState(null),
         b = i.useMemo(() => u().flatten(t), [t]),
         S = i.useMemo(
             () =>
@@ -248,7 +248,7 @@ function eA(e) {
                         {
                             eligibilityState: u[0],
                             onAttempted: (e, t) => {
-                                A(e), E(t), l();
+                                A(e), N(t), l();
                             },
                         },
                         e,
@@ -264,12 +264,12 @@ function eA(e) {
                         v.migrationData?.getMigrationExperimentEnabled("GuildRoleConnectionsConnectAccountsModal"),
                     k = _ || !b,
                     P = p?.application,
-                    T = P?.bot != null ? new Y.A(P.bot) : null;
+                    T = P?.bot != null ? new B.A(P.bot) : null;
                 el.iC.includes(P?.id ?? "")
                     ? (t = (0, n.jsx)(ei.A, { className: eu.AO, color: C, size: 16 }))
-                    : null != T && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: T.isVerifiedBot() }));
-                let R = r[v?.type ?? er.zR],
-                    G = !h && null != R && R <= d;
+                    : null != T && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: T.isVerifiedBot() }));
+                let w = r[v?.type ?? er.zR],
+                    G = !h && null != w && w <= d;
                 return (
                     (i = h
                         ? (0, n.jsx)(j.A, { size: "md", color: "currentColor", className: eu.rA })
@@ -308,7 +308,7 @@ function eA(e) {
                                               }),
                                               c({ ...r, [e]: Date.now() }),
                                               A(e),
-                                              E(P ?? null),
+                                              N(P ?? null),
                                               l())
                                           );
                                       },
@@ -324,7 +324,7 @@ function eA(e) {
                                       })
                                     : null,
                                 null != v ? (0, n.jsx)(ed, { platformType: v.type }) : null,
-                                null != T ? (0, n.jsx)(w.A, { user: T }) : null,
+                                null != T ? (0, n.jsx)(R.A, { user: T }) : null,
                                 (0, n.jsxs)("div", {
                                     className: eu.EZ,
                                     children: [
@@ -340,7 +340,7 @@ function eA(e) {
                                                 null != s
                                                     ? (0, n.jsx)(y.m, {
                                                           text: s,
-                                                          children: (0, n.jsx)(N.m, {
+                                                          children: (0, n.jsx)(E.m, {
                                                               size: "xs",
                                                               color: "currentColor",
                                                               className: eu.$I,
@@ -396,13 +396,13 @@ function ep(e) {
         [d, m] = i.useState(a.showActivity),
         [x, h] = i.useState(1 === a.metadataVisibility),
         [A, p] = i.useState(1 === a.visibility);
-    (0, R.Ay)(() => {
+    (0, w.Ay)(() => {
         r(!A), o(x);
     });
     let f = I.A.get(a.type);
     return (
         eo.txh.has(a.type) &&
-            (t = (0, n.jsx)(E.d, {
+            (t = (0, n.jsx)(N.d, {
                 label: ec.intl.string(ec.t["+KCMSi"]),
                 checked: c,
                 onChange: (e) => {
@@ -410,7 +410,7 @@ function ep(e) {
                 },
             })),
         eo.ewM.has(a.type) &&
-            (l = (0, n.jsx)(E.d, {
+            (l = (0, n.jsx)(N.d, {
                 label: ec.intl.format(ec.t["6u6J0q"], { platform: f.name }),
                 checked: d,
                 onChange: (e) => {
@@ -418,7 +418,7 @@ function ep(e) {
                 },
             })),
         !0 === f.hasMetadata &&
-            (s = (0, n.jsx)(E.d, {
+            (s = (0, n.jsx)(N.d, {
                 label: ec.intl.string(ec.t.FYKGsL),
                 checked: x,
                 disabled: !A,
@@ -429,7 +429,7 @@ function ep(e) {
         (0, n.jsxs)("div", {
             className: eu.ek,
             children: [
-                (0, n.jsx)(E.d, {
+                (0, n.jsx)(N.d, {
                     label: ec.intl.string(ec.t.f7yOAX),
                     checked: A,
                     onChange: (e) => {
@@ -452,12 +452,12 @@ function ef(e) {
         { transitionState: c, onClose: u, guildId: d, role: h } = e,
         [A, p] = i.useState(0),
         [j, g] = i.useState(null),
-        [v, E] = i.useState(!1),
-        [P, w] = i.useState(!0),
-        [R, M] = i.useState(!1),
-        [V, H] = i.useState(!0),
+        [v, N] = i.useState(!1),
+        [P, R] = i.useState(!0),
+        [w, O] = i.useState(!1),
+        [L, V] = i.useState(!0),
         [U, D] = i.useState(!1),
-        Y = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
+        B = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
         J = (0, x.bG)([z.default], () => z.default.getNewestTokens()),
         el = (0, x.bG)([Q.default], () => Q.default.getId()),
         [en, ei] = i.useState(null),
@@ -467,37 +467,37 @@ function ef(e) {
         ej = (0, x.bG)([F.default], () => F.default.locale),
         eg = (0, x.bG)([K.Ay], () => K.Ay.getMember(d, el)),
         ev = Object.values((0, x.bG)([W.A], () => W.A.getMutableGuildChannelsForGuild(d))).filter(
-            (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, O.A)(e).includes(h),
+            (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, H.A)(e).includes(h),
         );
     function ey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         u?.(), e && (0, b.closeModal)(ea.CB, S.SY);
     }
-    function eN() {
-        ey(!0), (0, B.openUserSettings)($.X.AUTHORIZED_APPS_PANEL);
-    }
     function eE() {
-        ey(!0), (0, B.openUserSettings)($.X.CONNECTIONS_PANEL);
+        ey(!0), (0, Y.openUserSettings)($.X.AUTHORIZED_APPS_CATEGORY);
+    }
+    function eN() {
+        ey(!0), (0, Y.openUserSettings)($.X.CONNECTIONS_CATEGORY);
     }
     async function eb() {
-        M(!0), await T.A.assignGuildRoleConnection(d, h.id);
+        O(!0), await T.A.assignGuildRoleConnection(d, h.id);
     }
     i.useEffect(() => {
         T.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
-            g(e), E(e.some((e) => e.every((e) => e.result))), w(!1);
+            g(e), N(e.some((e) => e.every((e) => e.result))), R(!1);
         });
-    }, [d, h.id, Y, J]),
+    }, [d, h.id, B, J]),
         i.useEffect(() => {
-            ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: h.id, ...(0, L.H$)(d) });
+            ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: h.id, ...(0, M.H$)(d) });
         }, [d, h.id]),
         i.useEffect(() => {
-            R &&
+            w &&
                 null != eg &&
                 eg.roles.includes(h.id) &&
-                (M(!1),
+                (O(!1),
                 ev.length > 0 ? p(2) : u?.(),
-                ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, L.H$)(d) }));
-        }, [R, ev.length, eg, d, h.id, u]);
+                ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, M.H$)(d) }));
+        }, [w, ev.length, eg, d, h.id, u]);
     let eS = j?.flat().some((e) => null == e.application_id) ?? !1;
     switch (A) {
         case 0: {
@@ -523,7 +523,7 @@ function ef(e) {
                                           onPlatformConnect: function () {
                                               ee.default.track(eo.HAw.PASSPORT_CHALLENGE_STARTED, {
                                                   role_id: h.id,
-                                                  ...(0, L.H$)(d),
+                                                  ...(0, M.H$)(d),
                                               });
                                           },
                                           onPlatformConnected: function (e) {
@@ -547,8 +547,8 @@ function ef(e) {
                                       color: "text-default",
                                       children: ec.intl.format(ec.t.gsgvxh, {
                                           privacyPolicyUrl: eo.X7G.PRIVACY,
-                                          onAuthorizedApplicationsClick: () => eN(),
-                                          onConnectionsClick: () => eE(),
+                                          onAuthorizedApplicationsClick: () => eE(),
+                                          onConnectionsClick: () => eN(),
                                       }),
                                   }),
                               ],
@@ -558,11 +558,11 @@ function ef(e) {
                         variant: "primary",
                         text: ec.intl.string(ec.t["8SuVoE"]),
                         onClick: () => eb(),
-                        disabled: P || !v || R,
+                        disabled: P || !v || w,
                     },
                 ]),
                 (a = eS
-                    ? (0, n.jsx)(k.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eE })
+                    ? (0, n.jsx)(k.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
                     : void 0),
                 (r = () => (ey(), Promise.resolve()));
             break;
@@ -570,7 +570,7 @@ function ef(e) {
         case 1: {
             o()(null != en, "lastPlatformConnected is null");
             let e = I.A.get(en)?.name ?? er?.name,
-                i = Y.find((e) => {
+                i = B.find((e) => {
                     let { type: t } = e;
                     return en === t;
                 }),
@@ -586,8 +586,8 @@ function ef(e) {
                             color: "text-default",
                             children: ec.intl.format(ec.t.gsgvxh, {
                                 privacyPolicyUrl: eo.X7G.PRIVACY,
-                                onAuthorizedApplicationsClick: () => eN(),
-                                onConnectionsClick: () => eE(),
+                                onAuthorizedApplicationsClick: () => eE(),
+                                onConnectionsClick: () => eN(),
                             }),
                         }),
                         (0, n.jsx)("div", {
@@ -614,7 +614,7 @@ function ef(e) {
                                                                         theme: ef,
                                                                         locale: ej,
                                                                         className: eu.eT,
-                                                                        showMetadata: V,
+                                                                        showMetadata: L,
                                                                         showInvisibleIcon: U,
                                                                     }),
                                                                 ],
@@ -630,7 +630,7 @@ function ef(e) {
                                                                     (0, n.jsx)(ep, {
                                                                         account: i,
                                                                         setShowPreviewInvisibleIcon: D,
-                                                                        setShowPreviewMetadata: H,
+                                                                        setShowPreviewMetadata: V,
                                                                     }),
                                                                 ],
                                                             }),
@@ -651,7 +651,7 @@ function ef(e) {
                                                                     }),
                                                                     (0, n.jsx)(y.m, {
                                                                         text: ec.intl.string(ec.t.x3svVc),
-                                                                        children: (0, n.jsx)(N.m, {
+                                                                        children: (0, n.jsx)(E.m, {
                                                                             size: "xs",
                                                                             color: "currentColor",
                                                                         }),
@@ -700,7 +700,7 @@ function ef(e) {
                 })),
                 (s = [{ variant: "primary", text: ec.intl.string(ec.t.cpT0Cq), onClick: () => ey(!0) }]),
                 (a = eS
-                    ? (0, n.jsx)(k.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eE })
+                    ? (0, n.jsx)(k.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
                     : void 0),
                 (r = () => (ey(!0), Promise.resolve()));
     }

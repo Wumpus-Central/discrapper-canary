@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, {
-    $J: () => R,
-    IG: () => b,
-    Ps: () => x,
+    $J: () => L,
+    IG: () => y,
+    Ps: () => w,
     UR: () => N,
-    W1: () => y,
-    WU: () => v,
-    _Q: () => P,
-    b6: () => w,
+    W1: () => O,
+    WU: () => R,
+    _Q: () => M,
+    b6: () => P,
     bg: () => C,
-    pu: () => D,
-    se: () => M,
-    v0: () => O,
+    pu: () => b,
+    se: () => U,
+    v0: () => D,
 }),
     n(321073),
     n(323874),
@@ -20,111 +20,111 @@ n.d(t, {
     n(134528),
     n(947204);
 var i,
-    r = n(835245),
-    s = n(323889),
-    a = n(412703),
-    o = n(228366),
-    l = n(975807),
-    u = n(274670),
-    d = n(144779),
-    c = n(968309),
+    r = n(132500),
+    a = n(323889),
+    s = n(412703),
+    l = n(228366),
+    o = n(975807),
+    d = n(274670),
+    c = n(144779),
+    u = n(968309),
     _ = n(780964),
-    h = n(625494),
-    f = n(723702),
-    E = n(192444),
-    p = n(104886),
-    m = n(561844),
-    g = n(651892),
-    A = n(792620),
-    I = n(190107),
-    T = n(652215),
+    E = n(625494),
+    A = n(723702),
+    h = n(192444),
+    I = n(104886),
+    f = n(561844),
+    p = n(651892),
+    T = n(792620),
+    m = n(190107),
+    g = n(652215),
     S = n(375708);
 function N(e) {
-    let t = (0, A.t)({ quest: e }) || (0, A.fE)({ quest: e }) || (0, A.I6)(e),
-        n = (0, A.uD)(e),
+    let t = (0, T.t)({ quest: e }) || (0, T.fE)({ quest: e }) || (0, T.I6)(e),
+        n = (0, T.uD)(e),
         i = [];
-    return t && i.push(I.fO.DESKTOP), n && i.push(I.fO.CONSOLE), i;
+    return t && i.push(m.fO.DESKTOP), n && i.push(m.fO.CONSOLE), i;
 }
 function C(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
         switch (e) {
-            case a.n.PLAY_ON_XBOX:
-                n.push(T.fg2.XBOX);
+            case s.n.PLAY_ON_XBOX:
+                n.push(g.fg2.XBOX);
                 break;
-            case a.n.PLAY_ON_PLAYSTATION:
-                n.push(T.fg2.PLAYSTATION);
+            case s.n.PLAY_ON_PLAYSTATION:
+                n.push(g.fg2.PLAYSTATION);
         }
     return n;
 }
-function y(e) {
-    let t = (0, A.vv)(e),
-        n = (0, A.vl)(e);
+function O(e) {
+    let t = (0, T.vv)(e),
+        n = (0, T.vl)(e);
     return t || n;
 }
-var v = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
-function R(e) {
-    return "xbox" === e.connected_account_type ? T.fg2.XBOX : T.fg2.PLAYSTATION;
+var R = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
+function L(e) {
+    return "xbox" === e.connected_account_type ? g.fg2.XBOX : g.fg2.PLAYSTATION;
 }
-function O(e, t) {
+function D(e, t) {
     let { platformType: n, quest: i } = e;
-    (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
-        ? (0, u.r)({
-              type: d.F.CLICK_INTERNAL,
-              adCreativeType: s.p.QUEST,
+    (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
+        ? (0, d.r)({
+              type: c.F.CLICK_INTERNAL,
+              adCreativeType: a.p.QUEST,
               adCreativeId: i.id,
               questContentCTA: t.ctaContent,
               surfaceId: t.content,
               sourceQuestContent: t.sourceQuestContent,
               impressionId: t.impressionId,
           })
-        : (0, m.Y5)({
+        : (0, f.Y5)({
               questId: i.id,
               questContent: t.content,
               sourceQuestContent: t.sourceQuestContent,
               questContentCTA: t.ctaContent,
               impressionId: t.impressionId,
           }),
-        (0, c.A)({ platformType: n, location: t.ctaContent });
+        (0, u.A)({ platformType: n, location: t.ctaContent });
 }
-function b(e) {
-    return R(e) === T.fg2.XBOX ? S.t["mytEv+"] : S.t.iDiwby;
+function y(e) {
+    return L(e) === g.fg2.XBOX ? S.t["mytEv+"] : S.t.iDiwby;
 }
-function L(e) {
-    if (((0, f.isIOS)() || "ios" === (0, f.getOS)()) && e.ios?.iosAppId != null) {
+function v(e) {
+    if (((0, A.isIOS)() || "ios" === (0, A.getOS)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
     }
-    return ((0, f.isAndroid)() || "android" === (0, f.getOS)()) && e.android?.androidAppId != null
+    return ((0, A.isAndroid)() || "android" === (0, A.getOS)()) && e.android?.androidAppId != null
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
-function D(e, t) {
+function b(e, t) {
     let n,
         i,
-        a = (0, g.Jx)(e.config),
-        o = null == (n = e.config.ctaConfig) ? null : L({ url: (0, g.Jx)(e.config), android: n.android, ios: n.ios });
-    null != o && (a = o),
+        s = (0, p.Jx)(e.config),
+        l = null == (n = e.config.ctaConfig) ? null : v({ url: (0, p.Jx)(e.config), android: n.android, ios: n.ios });
+    null != l && (s = l),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
             } catch {
                 return !1;
             }
-        })(a) &&
-            (a = (function (e, t) {
+        })(s) &&
+            (s = (function (e, t) {
                 try {
                     let n = new URL(e);
                     return n.searchParams.set("dclid", t), n.toString();
                 } catch {
                     return e;
                 }
-            })(a, (i = (0, r.A)()))),
-        (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
-            ? (0, u.r)({
-                  type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                  adCreativeType: s.p.QUEST,
+            })(s, (i = (0, r.A)()))),
+        (0, I.E5)(I.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
+            ? (0, d.r)({
+                  type: c.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                  adCreativeType: a.p.QUEST,
                   adCreativeId: e.id,
                   questContentCTA: t.ctaContent,
                   surfaceId: t.content,
@@ -133,7 +133,7 @@ function D(e, t) {
                   impressionId: t.impressionId,
                   clickId: i,
               })
-            : (0, m.Y5)({
+            : (0, f.Y5)({
                   questId: e.id,
                   questContent: t.content,
                   questContentCTA: t.ctaContent,
@@ -142,18 +142,18 @@ function D(e, t) {
                   sourceQuestContent: t.sourceQuestContent,
                   clickId: i,
               }),
-        h._.dispatch(T.jej.QUEST_GAME_LINK_OPENED),
-        E.OO.getConfig({ location: "quest_open_game_link" }).enabled,
-        (0, l.A)(a);
+        E._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
+        h.OO.getConfig({ location: "quest_open_game_link" }).enabled,
+        (0, o.A)(s);
 }
-function P(e, t) {
+function M(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e,
-        s = r.url,
-        a = L(r);
-    null != a && (s = a),
-        (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
-            ? (0, u.r)({
-                  type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+        a = r.url,
+        s = v(r);
+    null != s && (a = s),
+        (0, I.E5)(I.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
+            ? (0, d.r)({
+                  type: c.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                   adCreativeType: i,
                   adCreativeId: n,
                   questContentCTA: t.ctaContent,
@@ -162,7 +162,7 @@ function P(e, t) {
                   questContentPosition: t.position,
                   impressionId: t.impressionId,
               })
-            : (0, m.vK)({
+            : (0, f.vK)({
                   adContentId: n,
                   adCreativeType: i,
                   questContent: t.content,
@@ -171,16 +171,16 @@ function P(e, t) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        h._.dispatch(T.jej.QUEST_GAME_LINK_OPENED),
-        E.OO.getConfig({ location: "quest_open_game_link" }).enabled,
-        (0, l.A)(s);
+        E._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
+        h.OO.getConfig({ location: "quest_open_game_link" }).enabled,
+        (0, o.A)(a);
 }
-function w(e, t) {
+function P(e, t) {
     let { quest: i } = e;
-    (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
-        ? (0, u.r)({
-              type: d.F.CLICK_INTERNAL,
-              adCreativeType: s.p.QUEST,
+    (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
+        ? (0, d.r)({
+              type: c.F.CLICK_INTERNAL,
+              adCreativeType: a.p.QUEST,
               adCreativeId: i.id,
               questContentCTA: t.ctaContent,
               surfaceId: t.content,
@@ -188,7 +188,7 @@ function w(e, t) {
               impressionId: t.impressionId,
               questContentPosition: t.position,
           })
-        : (0, m.Y5)({
+        : (0, f.Y5)({
               questId: i.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -199,16 +199,16 @@ function w(e, t) {
         (function () {
             {
                 let { openUserSettings: e } = n(766075);
-                e(_.X.CONNECTIONS_PANEL);
+                e(_.X.CONNECTIONS_CATEGORY);
             }
         })();
 }
-function M(e, t) {
+function U(e, t) {
     let { quest: n } = e;
-    (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
-        ? (0, u.r)({
-              type: d.F.CLICK_INTERNAL,
-              adCreativeType: s.p.QUEST,
+    (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
+        ? (0, d.r)({
+              type: c.F.CLICK_INTERNAL,
+              adCreativeType: a.p.QUEST,
               adCreativeId: n.id,
               questContentCTA: t.ctaContent,
               surfaceId: t.content,
@@ -217,7 +217,7 @@ function M(e, t) {
               questContentPosition: t.position,
               questContentRowIndex: t.rowIndex,
           })
-        : (0, m.Y5)({
+        : (0, f.Y5)({
               questId: n.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -227,21 +227,21 @@ function M(e, t) {
               sourceQuestContent: t.sourceQuestContent,
           });
     let i = C(n);
-    if (1 === i.length) return (0, c.A)({ platformType: i.at(0) });
-    o.h.dispatch({
+    if (1 === i.length) return (0, u.A)({ platformType: i.at(0) });
+    l.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, c.A)({ platformType: e }),
+        onComplete: (e) => (0, u.A)({ platformType: e }),
         includedPlatformTypes: new Set(i),
         includeApplicationConnections: !1,
     });
 }
-function x(e, t, n) {
+function w(e, t, n) {
     let { quest: i } = e;
     return (
-        (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
-            ? (0, u.r)({
-                  type: d.F.CLICK_INTERNAL,
-                  adCreativeType: s.p.QUEST,
+        (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
+            ? (0, d.r)({
+                  type: c.F.CLICK_INTERNAL,
+                  adCreativeType: a.p.QUEST,
                   adCreativeId: i.id,
                   questContentCTA: t.ctaContent,
                   surfaceId: t.content,
@@ -250,7 +250,7 @@ function x(e, t, n) {
                   questContentPosition: t.position,
                   questContentRowIndex: t.rowIndex,
               })
-            : (0, m.Y5)({
+            : (0, f.Y5)({
                   questId: i.id,
                   questContent: t.content,
                   questContentPosition: t.position,
@@ -259,6 +259,6 @@ function x(e, t, n) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        (0, c.A)({ platformType: n })
+        (0, u.A)({ platformType: n })
     );
 }

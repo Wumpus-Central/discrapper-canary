@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { IF: () => d, QN: () => o, YC: () => s, ai: () => l });
+n.d(t, { QN: () => o, YC: () => s, ai: () => l, jt: () => d });
 var i = n(349828),
     r = n(652215),
     a = n(375708);
@@ -12,6 +12,6 @@ function l(e) {
 function o(e) {
     return "" !== e.trim();
 }
-function d(e, t) {
-    return !e.isCategory() && (!e.isThread() || t);
+function d(e) {
+    return !e.isCategory();
 }

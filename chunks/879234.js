@@ -19104,7 +19104,7 @@ function _Y(e) {
                     (0, E.jsx)(el.E, { variant: "text-md/normal", color: "text-strong", children: n }),
                     (0, E.jsxs)(en.D, {
                         onClick: function () {
-                            (0, eq.openUserSettings)(u.X.AUTHORIZED_APPS_PANEL);
+                            (0, eq.openUserSettings)(u.X.AUTHORIZED_APPS_CATEGORY);
                         },
                         className: _X.bJ,
                         children: [

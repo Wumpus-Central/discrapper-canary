@@ -31,8 +31,8 @@ var l = i(477900),
     b = i(955437),
     k = i(201505),
     y = i(975571),
-    M = i(652215),
-    R = i(204925),
+    R = i(652215),
+    M = i(204925),
     P = i(375708),
     w = i(153847);
 function W(e) {
@@ -45,10 +45,10 @@ function W(e) {
     async function E(e) {
         e.preventDefault(), L()(null != t, "Cannot submit null birthday."), m(!0);
         try {
-            await b.n7(t, R.w_.NEW_USER_FLOW), s();
+            await b.n7(t, M.w_.NEW_USER_FLOW), s();
         } catch (e) {
             null != e.body && null != e.body.date_of_birth
-                ? (b.Xv(R.w_.NEW_USER_FLOW), b.$2(R.w_.NEW_USER_FLOW), i())
+                ? (b.Xv(M.w_.NEW_USER_FLOW), b.$2(M.w_.NEW_USER_FLOW), i())
                 : e?.body?.username != null
                   ? o(P.intl.string(P.t["TGg/2k"]))
                   : o(e?.body.message);
@@ -89,10 +89,10 @@ function W(e) {
                       color: "text-default",
                       className: w.h_,
                       variant: "text-md/normal",
-                      children: P.intl.format(P.t.fa8kW1, { helpURL: y.A.getArticleURL(M.MVz.AGE_GATE) }),
+                      children: P.intl.format(P.t.fa8kW1, { helpURL: y.A.getArticleURL(R.MVz.AGE_GATE) }),
                   }),
                   (0, l.jsx)(S.w, {
-                      theme: M.NJ8.LIGHT,
+                      theme: R.NJ8.LIGHT,
                       children: (0, l.jsx)(k.A, {
                           required: !0,
                           autoFocus: !0,
@@ -159,7 +159,7 @@ var q = i(95477),
 let Q =
     ((t = window.GLOBAL_ENV.INVITE_HOST),
     (n = ""),
-    null == t && ((t = location.host), (n = M.BVt.INVITE(""))),
+    null == t && ((t = location.host), (n = R.BVt.INVITE(""))),
     `${location.protocol}//${t}${n}/`);
 var X = i(994277),
     ee = i(862518);
@@ -204,7 +204,7 @@ function ea(e) {
     a.useEffect(() => {
         i(r ? X.i.COMPLETE : O);
     }, [i, O, r]);
-    let [y, R] = a.useState(null),
+    let [y, M] = a.useState(null),
         [w, H] = a.useState(null),
         [J, ee] = a.useState(!1),
         ea = (0, d.bG)([f.A], () => f.A.getType() === ei.zY.INVITE_UNCLAIMED),
@@ -212,7 +212,7 @@ function ea(e) {
             (e) => {
                 H(e),
                     S(X.i.CREATION_INTENT),
-                    g.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code });
+                    g.default.track(R.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code });
             },
             [H, S],
         ),
@@ -230,7 +230,7 @@ function ea(e) {
             titleClassName: el.RH,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                R(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0);
+                M(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0);
             },
             onBack: () => {
                 S(X.i.CREATION_INTENT);
@@ -338,7 +338,7 @@ function ea(e) {
                                     className: Y.LR,
                                     children: P.intl.format(P.t["8F/who"], {
                                         onClick: function () {
-                                            t(), (0, Z.openUserSettings)(V.X.CONNECTIONS_PANEL);
+                                            t(), (0, Z.openUserSettings)(V.X.CONNECTIONS_CATEGORY);
                                         },
                                     }),
                                 }),
@@ -410,7 +410,7 @@ function ea(e) {
         children: [
             (0, l.jsx)("div", { className: el.pz, children: (0, l.jsx)(es, { step: O }) }),
             (0, l.jsx)(u.N, {
-                theme: M.NJ8.LIGHT,
+                theme: R.NJ8.LIGHT,
                 children: (e) =>
                     (0, l.jsxs)("div", {
                         className: o()(el.Qs, e),

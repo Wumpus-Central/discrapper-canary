@@ -14,38 +14,29 @@ var o = n(181079),
     u = n(349828),
     _ = n(202541);
 function E(e) {
-    let { isExperimentEnabled: t, hasHigherPrivileges: n, isFreemium: i, isPremiumTier2: r } = e,
-        a = t && (r || i),
-        s = 0;
+    let { isExperimentEnabled: t, isFreemium: n, isPremiumTier2: i } = e,
+        r = t && (i || n),
+        a = 0;
     return (
-        a && (s = r ? u.lj : 3 * !!i),
-        {
-            hasAccess: a,
-            isExperimentEnabled: t,
-            isFreemium: i,
-            hasHigherPrivileges: n,
-            favoriteLimit: s,
-            canUpsellFavoriteLimit: t && i && !r,
-        }
+        r && (a = i ? u.lj : 3 * !!n),
+        { hasAccess: r, isExperimentEnabled: t, isFreemium: n, favoriteLimit: a, canUpsellFavoriteLimit: t && n && !i }
     );
 }
 function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "useFavoritesAccess",
-        { enabled: t, hasHigherPrivileges: n, isFreemium: r = !1 } = (0, d.m)({ location: e }),
-        a = (0, i.bG)([s.default], () => s.default.getCurrentUser());
+        { enabled: t, isFreemium: n } = (0, d.m)({ location: e }),
+        r = (0, i.bG)([s.default], () => s.default.getCurrentUser());
     return E({
         isExperimentEnabled: t,
-        hasHigherPrivileges: n,
-        isFreemium: r,
-        isPremiumTier2: l.Ay.isPremiumExactly(a, _.PremiumTypes.TIER_2),
+        isFreemium: n,
+        isPremiumTier2: l.Ay.isPremiumExactly(r, _.PremiumTypes.TIER_2),
     });
 }
 function h() {
-    let { enabled: e, hasHigherPrivileges: t, isFreemium: n = !1 } = (0, d.B)({ location: "getFavoritesAccess" });
+    let { enabled: e, isFreemium: t } = (0, d.B)({ location: "getFavoritesAccess" });
     return E({
         isExperimentEnabled: e,
-        hasHigherPrivileges: t,
-        isFreemium: n,
+        isFreemium: t,
         isPremiumTier2: l.Ay.isPremiumExactly(s.default.getCurrentUser(), _.PremiumTypes.TIER_2),
     });
 }

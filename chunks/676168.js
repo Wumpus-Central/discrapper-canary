@@ -15,7 +15,7 @@ let d = [
     c = [i.M.FAVORITES_SERVER_ONBOARDING_INTRO, i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 function u() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { isFreemium: t = !1 } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
+        { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
         n = (0, r.Ay)((e) => e.postConnectionOpen),
         [s, o] = (0, a.kn)(t && e && n ? [i.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
         [d] = (0, a.kn)(
@@ -26,7 +26,7 @@ function u() {
     return { shouldShowPopover: d === i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: o };
 }
 function _(e) {
-    let { isFreemium: t = !1 } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
+    let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
         n =
             (function () {
                 let [e] = (0, s.gc)(c);
@@ -44,7 +44,7 @@ function A() {
     return e && t;
 }
 function h(e) {
-    let { isFreemium: t = !1 } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
+    let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
         [n, r] = (0, a.kn)(t && e ? [i.M.FAVORITES_GUILD_NEW_BADGE] : []),
         s = n === i.M.FAVORITES_GUILD_NEW_BADGE;
     return {

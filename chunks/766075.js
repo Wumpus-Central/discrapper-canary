@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => h, openUserSettings: () => I });
+n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => E, openUserSettings: () => A });
 var i = n(477900),
     r = n(192308),
     a = n(231723),
@@ -7,31 +7,24 @@ var i = n(477900),
     l = n(790284),
     o = n(272053),
     d = n(280450),
-    c = n(780964),
-    u = n(358776),
-    _ = n(843010),
-    E = n(402651),
-    A = n(355097);
-let h = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function I(e) {
+    c = n(843010),
+    u = n(402651),
+    _ = n(355097);
+let E = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function A(e) {
     let {
             path: t,
-            stackingBehavior: I = "replaceAll",
-            searchParams: f,
-            analyticsLocations: p,
+            stackingBehavior: A = "replaceAll",
+            searchParams: h,
+            analyticsLocations: I,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        T = arguments.length > 2 ? arguments[2] : void 0;
+        f = arguments.length > 2 ? arguments[2] : void 0;
     if (d.default.isAuthenticated()) {
         if (
-            ((0, u.Bv)("openUserSettings") &&
-                (e === c.X.CONNECTIONS_PANEL && (e = c.X.CONNECTIONS_CATEGORY),
-                e === c.X.AUTHORIZED_APPS_PANEL && (e = c.X.AUTHORIZED_APPS_CATEGORY),
-                e === c.X.CONTENT_AND_SOCIAL_PANEL && (e = c.X.MESSAGING_PERMISSIONS_PANEL),
-                e === c.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB && (e = c.X.CONNECTED_GAMES_CATEGORY)),
-            null != t && t === A.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: A.nR }),
-            E.A.setState({ source: f?.source, analyticsLocations: p ?? [] }),
+            (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: _.nR }),
+            u.A.setState({ source: h?.source, analyticsLocations: I ?? [] }),
             s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
-            (0, _.f)())
+            (0, c.f)())
         ) {
             if (null == e) return;
             o.A.navigate(e);
@@ -1064,15 +1057,15 @@ async function I(e) {
                     return (n) => (0, i.jsx)(t, { ...n, target: e });
                 },
                 {
-                    modalKey: h,
-                    stackingBehavior: I,
+                    modalKey: E,
+                    stackingBehavior: A,
                     stackNextByDefault: !0,
                     contextKey: a.SY,
                     onCloseRequest: () => {
-                        null != o.A.closeWithValidation ? o.A.closeWithValidation() : (0, r.closeModal)(h, a.SY);
+                        null != o.A.closeWithValidation ? o.A.closeWithValidation() : (0, r.closeModal)(E, a.SY);
                     },
                 },
             );
-        T?.();
+        f?.();
     }
 }

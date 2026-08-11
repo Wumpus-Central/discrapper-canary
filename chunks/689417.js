@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 591091, Version Hash: 2867d1cf761a64141d81d1e26977ccf356999eab`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 591197, Version Hash: 2717db11b80f8452e82bd144033594535a35d196`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -6061,7 +6061,7 @@ function os(e) {
                         ? null
                         : (0, O.jsx)(iP.Dr, {
                               id: "xbox-connect",
-                              action: () => (0, si.openUserSettings)(sn.X.CONNECTIONS_PANEL),
+                              action: () => (0, si.openUserSettings)(sn.X.CONNECTIONS_CATEGORY),
                               label: tT.intl.formatToPlainString(tT.t.XWSHTb, { platform: l0 }),
                           });
                 })(e),
@@ -18266,7 +18266,7 @@ let gq = "isHideDevBanner",
                     className: ta()(gz.Wz, gz.mr),
                     children: [
                         (0, O.jsx)(g$, { className: gz.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "591091" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "591197" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -21122,7 +21122,7 @@ let CU = (0, tV.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("76011"),
-                n.e("86277"),
+                n.e("69698"),
                 n.e("4374"),
                 n.e("79888"),
                 n.e("85311"),
@@ -24464,7 +24464,7 @@ let CU = (0, tV.Fe)({
     }),
     C2 = (0, tV.Fe)({
         createPromise: () =>
-            Promise.all([n.e("86277"), n.e("4374"), n.e("79888"), n.e("2985"), n.e("73092")]).then(n.bind(n, 135109)),
+            Promise.all([n.e("69698"), n.e("4374"), n.e("79888"), n.e("2985"), n.e("73092")]).then(n.bind(n, 135109)),
         webpackId: 135109,
         name: "VibegrationsChannel",
         renderLoader: nQ.l3,
@@ -31437,7 +31437,7 @@ let yk = new Set([yn.AM, yn.eK]),
                     );
                 {
                     let { openUserSettings: e } = n(766075);
-                    e(sn.X.CONNECTIONS_PANEL);
+                    e(sn.X.CONNECTIONS_CATEGORY);
                 }
             },
         },

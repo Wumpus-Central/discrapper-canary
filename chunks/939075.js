@@ -17,7 +17,7 @@ var r = n(17928),
     I = n(301736),
     f = n(375708);
 function p() {
-    return (0, A.openUserSettings)(E.X.CONNECTIONS_PANEL);
+    return (0, A.openUserSettings)(E.X.CONNECTIONS_CATEGORY);
 }
 function T(e) {
     let { entry: t, onOpenGameSettings: n } = e;

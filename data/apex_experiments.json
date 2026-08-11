@@ -903,8 +903,7 @@
     "name": "2026-01-favorites-server",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "hasHigherPrivileges": false
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -912,17 +911,10 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "hasHigherPrivileges": true
+        "enabled": true
       },
       "2": {
-        "enabled": true,
-        "hasHigherPrivileges": false
-      },
-      "3": {
-        "enabled": true,
-        "hasHigherPrivileges": true,
-        "isFreemium": true
+        "enabled": true
       }
     }
   },
@@ -5884,6 +5876,22 @@
       },
       "1": {
         "closeChatOnLeave": false
+      }
+    }
+  },
+  {
+    "name": "2026-08-favorites-server",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
       }
     }
   },
