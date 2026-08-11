@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"2X8Wod":["Ikke bytt"],"RJttRt":["Bytt inngang og utgang"],"VLKyL8":["Bytt inngang"],"Jat8cd":["Bytt utgang"],"I9iaw+":["Avvis forslag om enhet"],"xYe9fZ":["Discord anbefaler \xe5 bruke ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]]," til lyd."],"1l/LhA":["Discord anbefaler \xe5 bruke lydinngangen p\xe5 ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]],"."],"SupmjL":["Discord anbefaler \xe5 bruke lydutgangen p\xe5 ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]],"."],"EUsbHW":["Bruke ",[8,"$b",[[1,"deviceName"]]]," til lyd?"],"PAYExK":["Bruke lydinngangen p\xe5 ",[8,"$b",[[1,"deviceName"]]],"?"],"aljl4r":["Bruke lydutgangen p\xe5 ",[8,"$b",[[1,"deviceName"]]],"?"]}',
+);

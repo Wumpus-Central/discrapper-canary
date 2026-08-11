@@ -1,0 +1,3 @@
+s.exports = JSON.parse(
+    '{"EgekTm":["\u547C\u3073\u51FA\u3057"],"8t5EiI":["\u624B\u3092\u632F\u308B"],"6ZxPAQ":["\u9069\u7528"],"TswY68":["\u4ECA\u3059\u3050\u30C1\u30A7\u30C3\u30AF"],"CroLGN":["\u6C17\u304C\u5411\u3044\u305F\u3089"],"l8CZ7+":["\u7D75\u6587\u5B57"],"6NP6ic":["\u4ECA\u3059\u3050\u30C1\u30A7\u30C3\u30AF"],"UnIf+S":["\u30EA\u30BB\u30C3\u30C8"],"q4045h":["\u304A\u3069\u304B\u3057\u3066\u307F\u3066"],"X+ijyw":["\u30C6\u30AD\u30B9\u30C8"]}',
+);
