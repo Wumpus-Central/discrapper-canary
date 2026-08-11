@@ -1,4 +1,4 @@
-r.d(t, { F3: () => l, Qp: () => u, Qx: () => h, l$: () => s, ny: () => o }),
+r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => u, l$: () => s, ny: () => o }),
     r(323874),
     r(14289),
     r(35956),
@@ -9,7 +9,7 @@ r.d(t, { F3: () => l, Qp: () => u, Qx: () => h, l$: () => s, ny: () => o }),
     r(949626),
     r(767709),
     r(65162);
-var a = r(735438),
+var a = r(435558),
     n = r(830917),
     i = r(339984);
 async function o(e) {
@@ -18,26 +18,26 @@ async function o(e) {
             image: a,
             cropDimensions: o,
             cropOriginCoordinates: l,
-            maxDimensions: c,
-            imageRotation: h = 0,
-            flipHorizontal: s = !1,
-            resizeWidth: u = null,
+            maxDimensions: h,
+            imageRotation: c = 0,
+            flipHorizontal: u = !1,
+            resizeWidth: s = null,
             resizeHeight: f = null,
         } = e,
         {
-            sourceX: A,
-            sourceY: m,
-            sourceWidth: w,
-            sourceHeight: E,
+            sourceX: m,
+            sourceY: A,
+            sourceWidth: d,
+            sourceHeight: w,
         } = (0, n.R7)({
             image: a,
             cropDimensions: o,
             cropOriginCoordinates: l,
-            maxDimensions: c,
-            imageRotation: h,
-            flipHorizontal: s,
+            maxDimensions: h,
+            imageRotation: c,
+            flipHorizontal: u,
         }),
-        d = await t.arrayBuffer(),
+        E = await t.arrayBuffer(),
         _ = new Worker(new URL("/assets/" + r.u("24962"), r.b)),
         p = new Promise((e, r) => {
             _.onmessage = (a) => {
@@ -64,32 +64,45 @@ async function o(e) {
             };
         }),
         b = "image/webp" === t.type ? "webp" : "gif",
-        y = Math.max(0, Math.round(A)),
-        M = Math.max(0, Math.round(m)),
+        y = Math.max(0, Math.round(m)),
+        g = Math.max(0, Math.round(A)),
+        M = Math.round(d),
         H = Math.round(w),
-        g = Math.round(E),
         D = a.naturalWidth - y,
-        I = a.naturalHeight - M,
-        P = Math.min(H, D),
-        L = Math.min(g, I);
+        I = a.naturalHeight - g,
+        P = Math.min(M, D),
+        L = Math.min(H, I);
     return (
         _.postMessage({
             type: i.lA.CROP_ANIMATED_IMAGE_START,
-            data: new Uint8Array(d),
+            data: new Uint8Array(E),
             x: y,
-            y: M,
+            y: g,
             width: P,
             height: L,
-            imageRotation: 0 | h,
-            flipHorizontal: s,
-            resizeWidth: u,
+            imageRotation: 0 | c,
+            flipHorizontal: u,
+            resizeWidth: s,
             resizeHeight: f,
             format: b,
         }),
         { result: p, cancelFn: () => _.terminate() }
     );
 }
-function l(e, t, r) {
+async function l(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1024,
+        r = new Image();
+    await new Promise((t, a) => {
+        (r.onload = () => t()), (r.onerror = () => a(Error("Failed to load image for static preview"))), (r.src = e);
+    });
+    let a = Math.min(1, t / Math.max(r.naturalWidth, r.naturalHeight)),
+        n = document.createElement("canvas");
+    (n.width = Math.round(r.naturalWidth * a)), (n.height = Math.round(r.naturalHeight * a));
+    let i = n.getContext("2d");
+    if (null == i) throw Error("Canvas 2d context unavailable");
+    return i.drawImage(r, 0, 0, n.width, n.height), n.toDataURL("image/png");
+}
+function h(e, t, r) {
     return { x: (0, a.clamp)(e, r.left, r.right), y: (0, a.clamp)(t, r.bottom, r.top) };
 }
 function c(e, t, r, a) {
@@ -100,7 +113,7 @@ function c(e, t, r, a) {
         ? { width: n, height: o }
         : { width: (t / o) * n, height: t };
 }
-function h(e, t, r) {
+function u(e, t, r) {
     switch (e) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
@@ -132,7 +145,7 @@ function s(e, t, r) {
         a
     );
 }
-function u(e, t, r, a) {
+function f(e, t, r, a) {
     switch (e) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
@@ -146,13 +159,13 @@ function u(e, t, r, a) {
             let l = Math.min(t, i.Ip);
             return { width: l, height: Math.min((9 / 16) * l, a) };
         case i.HL.VIDEO_BACKGROUND:
-            let c = Math.min(t, i.Ip);
-            return { width: c, height: (9 / 16) * c };
-        case i.HL.SCHEDULED_EVENT_IMAGE:
             let h = Math.min(t, i.Ip);
-            return { width: h, height: 0.4 * h };
+            return { width: h, height: (9 / 16) * h };
+        case i.HL.SCHEDULED_EVENT_IMAGE:
+            let c = Math.min(t, i.Ip);
+            return { width: c, height: 0.4 * c };
         case i.HL.HOME_HEADER:
-            let s = Math.min(t, i.Ip);
-            return { width: s, height: s * (1 / i.ny) };
+            let u = Math.min(t, i.Ip);
+            return { width: u, height: u * (1 / i.ny) };
     }
 }

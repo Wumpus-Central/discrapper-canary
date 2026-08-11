@@ -26,7 +26,7 @@ var i = r(477900),
     _ = r(925895),
     b = r(702211),
     G = r(699576),
-    N = r(392107),
+    N = r(469054),
     S = r(174459),
     L = r(403362),
     O = r(424632),
@@ -349,22 +349,22 @@ function K(e) {
             [eN, eb, ea, es, ez],
         ),
         e0 = n.useCallback(async () => {
-            let e;
+            let e, r;
             if (null == W.current) return;
             eE(!0);
-            let r = W.current,
-                i = P(K);
+            let i = W.current,
+                n = P(K);
             if (e_)
                 try {
-                    let { result: n, cancelFn: a } = await (0, O.ny)({
+                    let { result: a, cancelFn: o } = await (0, O.ny)({
                         file: t,
-                        image: r,
+                        image: i,
                         cropDimensions: en,
                         cropOriginCoordinates: Y.current,
-                        maxDimensions: i,
+                        maxDimensions: n,
                         imageRotation: es,
                     });
-                    (et.current = a), (e = await n), (et.current = null);
+                    (et.current = o), (e = await a), (et.current = null), (r = await (0, O.MS)(e).catch(() => void 0));
                 } catch (e) {
                     throw (
                         (et.current?.(),
@@ -373,11 +373,11 @@ function K(e) {
                     );
                 }
             else
-                e = (0, l.iL)({
-                    image: r,
+                r = e = (0, l.iL)({
+                    image: i,
                     cropDimensions: en,
                     cropOriginCoordinates: Y.current,
-                    maxDimensions: i,
+                    maxDimensions: n,
                     imageRotation: es,
                 });
             await j({
@@ -386,6 +386,7 @@ function K(e) {
                     return r ? (t ? N.E.EDITED_ARCHIVED_ASSET : N.E.ARCHIVED_ASSET) : N.E.NEW_ASSET;
                 })({ hasImageEdits: eg, hasOriginalAsset: null != a }),
                 imageUri: e,
+                staticImageUri: r,
                 file: t,
                 originalAsset: a,
             }),

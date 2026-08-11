@@ -56,9 +56,9 @@ function c(e) {
                 ? (E.pendingProfileFrame = void 0)
                 : (E.pendingProfileFrame = n.profileFrame)),
         "banner" in n &&
-            ((n.banner ?? null) === (null != t ? (u?.banner ?? null) : (i.banner ?? null))
-                ? ((E.pendingBanner = void 0), (E.pendingBannerOriginalMd5 = void 0))
-                : ((E.pendingBanner = n.banner), (E.pendingBannerOriginalMd5 = n.bannerOriginalMd5 ?? null))),
+            ((n.banner?.imageUri ?? null) === (null != t ? (u?.banner ?? null) : (i.banner ?? null))
+                ? (E.pendingBanner = void 0)
+                : (E.pendingBanner = n.banner)),
         "accentColor" in n)
     ) {
         let e = n.accentColor ?? null;

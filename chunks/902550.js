@@ -19,7 +19,7 @@ var n = a(477900),
     p = a(946274),
     j = a(702211),
     R = a(699576),
-    T = a(392107),
+    T = a(469054),
     N = a(866665),
     v = a(259678),
     y = a(241326),
@@ -370,7 +370,7 @@ var en = a(45837),
     er = a(967198),
     es = a(174459),
     ei = a(473145),
-    ec = a(428262);
+    ec = a(158045);
 function eo(e, t) {
     let { isGIF: a } = t;
     if (e === Y.HL.GUILD_BANNER) return a ? V.GuildFeatures.ANIMATED_BANNER : V.GuildFeatures.BANNER;
@@ -555,8 +555,15 @@ function eE(e) {
         { analyticsLocations: U } = (0, E.Ay)(p, x.A.SELECT_IMAGE_MODAL),
         D = l.useCallback(
             (e) => {
-                let { assetOrigin: t = T.E.NEW_ASSET, imageUri: a, file: n, originalAsset: l, isFromTenor: i = !1 } = e;
-                r(), s({ assetOrigin: t, imageUri: a, file: n, originalAsset: l, isFromTenor: i });
+                let {
+                    assetOrigin: t = T.E.NEW_ASSET,
+                    imageUri: a,
+                    staticImageUri: n = a,
+                    file: l,
+                    originalAsset: i,
+                    isFromTenor: c = !1,
+                } = e;
+                r(), s({ assetOrigin: t, imageUri: a, staticImageUri: n, file: l, originalAsset: i, isFromTenor: c });
             },
             [r, s],
         ),
@@ -621,8 +628,8 @@ function eE(e) {
                         (0, n.jsx)(e, {
                             uploadType: d,
                             onComplete: (e) => {
-                                let { imageUri: t, file: a } = e;
-                                return D({ imageUri: t, file: a, isFromTenor: !0 });
+                                let { imageUri: t, staticImageUri: a, file: n } = e;
+                                return D({ imageUri: t, staticImageUri: a, file: n, isFromTenor: !0 });
                             },
                             showUpsellHeader: A,
                             analyticsPage: C?.page,

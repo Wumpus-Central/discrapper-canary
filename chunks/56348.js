@@ -1,13 +1,13 @@
 i.d(e, { yX: () => d, Sk: () => o, C5: () => p, yg: () => s }), i(321073);
 var a = i(575593),
-    l = i(392107),
+    l = i(469054),
     r = i(287809),
     t = i(321191);
 function d(n, e) {
     let i = {};
     void 0 !== n.pendingBanner &&
-        ((i.banner = n.pendingBanner),
-        null !== n.pendingBanner && (i.bannerOriginalMd5 = n.pendingBannerOriginalMd5 ?? null)),
+        ((i.banner = n.pendingBanner?.imageUri ?? null),
+        null !== n.pendingBanner && (i.bannerOriginalMd5 = n.pendingBanner.originalMd5 ?? null)),
         null != n.pendingBio && (i.bio = n.pendingBio),
         null != n.pendingPronouns && (i.pronouns = n.pendingPronouns),
         void 0 !== n.pendingAccentColor && (i.accent_color = n.pendingAccentColor),

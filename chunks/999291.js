@@ -5,7 +5,7 @@ var i = n(17928),
     a = n(583613),
     s = n(919395),
     l = n(486020),
-    o = n(428262),
+    o = n(158045),
     d = n(289173),
     c = n(202541);
 function u(e, t) {
@@ -105,7 +105,9 @@ class _ {
     getPreviewBanner(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
         return null != e
-            ? e
+            ? t
+                ? e.imageUri
+                : (e.staticImageUri ?? e.imageUri)
             : null === e
               ? this.isUsingGuildMemberBanner()
                   ? (0, l.z)({ id: this.userId, banner: this._userProfile.banner, canAnimate: t, size: n })

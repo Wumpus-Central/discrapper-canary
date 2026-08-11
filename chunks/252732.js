@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { XD: () => I, sv: () => f, eh: () => p, sN: () => m, rM: () => T, d3: () => g });
+n.d(t, { XD: () => p, sv: () => T, eh: () => m, sN: () => S, rM: () => g, d3: () => N });
 var i = n(477900);
 n(582128);
 var r = n(317097),
@@ -11,29 +11,31 @@ var s = n(77257),
     d = n(486020),
     c = n(453771),
     u = n(427262),
-    _ = n(228366),
-    E = n(478644),
-    A = n(339984),
-    h = n(375708);
-function I(e) {
+    _ = n(469054),
+    E = n(601298),
+    A = n(228366),
+    h = n(478644),
+    I = n(339984),
+    f = n(375708);
+function p(e) {
     let {
             uploadType: t,
             guildId: r,
             analyticsSource: d,
             filters: c,
             isTryItOut: u = !1,
-            stackingBehavior: I,
-            returnRef: f,
+            stackingBehavior: p,
+            returnRef: T,
         } = e,
-        p = (0, l.Y)(t, r),
-        T = null;
+        m = (0, l.Y)(t, r),
+        g = null;
     (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("73193"),
                 n.e("97250"),
                 n.e("22089"),
-                n.e("40851"),
+                n.e("63232"),
                 n.e("29666"),
                 n.e("80436"),
                 n.e("93513"),
@@ -46,60 +48,55 @@ function I(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     filters: c,
-                    maxFileSizeBytes: E.j,
-                    imageSpecifications: t === A.HL.BANNER ? h.intl.string(h.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: h.j,
+                    imageSpecifications: t === I.HL.BANNER ? f.intl.string(f.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        T = null != p ? s.A.fromBlob(p, e) : null;
+                        g = null != m ? s.A.fromBlob(m, e) : null;
                     },
                     onComplete: async (e) => {
-                        let { assetOrigin: n, imageUri: i, file: a, originalAsset: l } = e;
-                        null == T && null != p && (T = s.A.fromBlob(p, a));
-                        let c = (await T?.getOriginalMd5()) ?? null,
-                            E = a.name.replace(/\.[^/.]+$/, ""),
-                            A = (0, o.Rh)({ filename: E, assetOrigin: n });
-                        !(function (e) {
-                            let {
-                                image: t,
-                                file: n,
-                                uploadType: i,
-                                guildId: r,
-                                analyticsSource: a,
-                                isTryItOut: s = !1,
-                            } = e;
-                            _.h.dispatch({
-                                type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                                image: t,
-                                file: n,
-                                uploadType: i,
-                                guildId: r,
-                                analyticsSource: a,
-                                isTryItOut: s,
-                            });
-                        })({
-                            image: (0, o.XB)({
-                                assetOrigin: n,
-                                imageUri: i,
-                                description: A,
-                                originalAsset: l,
-                                originalMd5: c,
-                            }),
-                            file: a,
-                            uploadType: t,
+                        var n;
+                        let { assetOrigin: i, imageUri: a, staticImageUri: l, file: c, originalAsset: h } = e;
+                        null == g && null != m && (g = s.A.fromBlob(m, c));
+                        let p = (await g?.getOriginalMd5()) ?? null,
+                            T = c.name.replace(/\.[^/.]+$/, ""),
+                            S = { imageUri: a, staticImageUri: l, originalMd5: p };
+                        (n = {
+                            ...(t === I.HL.AVATAR
+                                ? {
+                                      uploadType: t,
+                                      pendingImage: (0, E.X)({
+                                          ...S,
+                                          assetOrigin: i,
+                                          description: (0, o.Rh)({ filename: T, assetOrigin: i }),
+                                          originalAsset: h,
+                                      }),
+                                  }
+                                : {
+                                      uploadType: t,
+                                      pendingImage: (0, E.X)({
+                                          ...S,
+                                          assetOrigin: _.E.NEW_ASSET,
+                                          description: "" !== T ? T : f.intl.string(f.t.yiRnNO),
+                                          originalAsset: void 0,
+                                      }),
+                                  }),
+                            file: c,
                             guildId: r,
                             analyticsSource: d,
                             isTryItOut: u,
-                        });
+                        }),
+                            A.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" });
                     },
                     uploadType: t,
                     showUpsellHeader: !0,
-                    returnRef: f,
+                    returnRef: T,
                     ...n,
                 });
         },
-        { stackingBehavior: I },
+        { stackingBehavior: p },
     );
 }
-function f(e, t, n) {
+function T(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
     let { size: r = 80, canAnimate: a = !0 } = i,
@@ -110,19 +107,19 @@ function f(e, t, n) {
           ? n.getAvatarURL(void 0, r, a)
           : n.getAvatarURL(t?.guildId, r, a);
 }
-function p(e) {
+function m(e) {
     let { pendingNickname: t, pendingGlobalName: n, user: i, guildMember: r } = e,
         a = "" === t ? null : (t ?? r?.nick),
         s = "" === n ? i.username : n;
     return a ?? s ?? u.Ay.getName(i);
 }
-function T(e, t, n) {
+function g(e, t, n) {
     n(e ?? (null != t ? null : void 0));
 }
-function m(e) {
+function S(e) {
     return (null != e ? (0, r.OK)(e) : 1) > 0.25;
 }
-function g(e) {
+function N(e) {
     return null == e
         ? e
         : e.replace(/[0-9.,]+ ?kb/gi, (e) => {

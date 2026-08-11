@@ -1,48 +1,48 @@
 "use strict";
-n.d(t, { Rh: () => _, V7: () => p, XB: () => f, Xp: () => d, yM: () => h });
+n.d(t, { Rh: () => _, V7: () => A, Xp: () => u, yM: () => E });
 var i = n(488428),
-    r = n(776231),
+    r = n(597098),
+    a = n(469054),
     s = n(486020),
-    a = n(403362),
-    o = n(392107),
-    l = n(652215),
-    u = n(375708);
+    l = n(403362),
+    o = n(652215),
+    d = n(375708);
 function c(e) {
     let { storageHash: t, canAnimate: n = !1, allowWebp: i = !0 } = e;
     if (n && (0, s.VI)(t)) return i && s.QB ? "webp" : "gif";
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     return null == r ? "jpg" : i && s.QB ? "webp" : "png";
 }
-function d(e) {
-    let { userId: t, avatarId: n, storageHash: a, canAnimate: o = !1, allowWebp: u = !0, size: d } = e,
+function u(e) {
+    let { userId: t, avatarId: n, storageHash: a, canAnimate: l = !1, allowWebp: d = !0, size: u } = e,
         { CDN_HOST: _ } = window.GLOBAL_ENV,
-        h = null != _ ? `https://${_}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
-        f = c({ storageHash: a, canAnimate: o, allowWebp: u }),
-        p = { size: (0, r.kr)(d * (0, r.mZ)()) };
+        E = null != _ ? `https://${_}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        A = c({ storageHash: a, canAnimate: l, allowWebp: d }),
+        h = { size: (0, r.kr)(u * (0, r.mZ)()) };
     return (
-        "webp" === f && o && (0, s.VI)(a) && (p.animated = !0),
-        `${h}${l.Rsh.ARCHIVED_AVATAR(t, n, a, f)}?${i.stringify(p)}`
+        "webp" === A && l && (0, s.VI)(a) && (h.animated = !0),
+        `${E}${o.Rsh.ARCHIVED_AVATAR(t, n, a, A)}?${i.stringify(h)}`
     );
 }
 function _(e) {
-    let { filename: t, assetOrigin: n = o.E.NEW_ASSET } = e ?? {};
-    if (n === o.E.ARCHIVED_ASSET) return;
-    let i = t ?? u.intl.string(u.t.lqaIxI),
-        r = new Date().toLocaleString(u.intl.currentLocale, {
+    let { filename: t, assetOrigin: n = a.E.NEW_ASSET } = e ?? {};
+    if (n === a.E.ARCHIVED_ASSET) return;
+    let i = t ?? d.intl.string(d.t.lqaIxI),
+        r = new Date().toLocaleString(d.intl.currentLocale, {
             year: "numeric",
             day: "numeric",
             month: "long",
             hour: "numeric",
             minute: "numeric",
         });
-    return u.intl.formatToPlainString(n === o.E.EDITED_ARCHIVED_ASSET ? u.t.eC2sZi : u.t.DYil93, {
+    return d.intl.formatToPlainString(n === a.E.EDITED_ARCHIVED_ASSET ? d.t.eC2sZi : d.t.DYil93, {
         name: i,
         dateTime: r,
     });
 }
-function h(e, t) {
+function E(e, t) {
     let n = c({ storageHash: e, canAnimate: !0, allowWebp: s.QB }),
-        i = null == t ? u.intl.string(u.t.lqaIxI) : t.split(",")[0];
+        i = null == t ? d.intl.string(d.t.lqaIxI) : t.split(",")[0];
     return {
         filename: `${i}.${n}`,
         type: (function (e) {
@@ -56,35 +56,24 @@ function h(e, t) {
                 case "webp":
                     return "image/webp";
                 default:
-                    (0, a.xb)(e);
+                    (0, l.xb)(e);
             }
         })(n),
     };
 }
-function f(e) {
-    let { assetOrigin: t = o.E.NEW_ASSET, imageUri: n, description: i, originalAsset: r, originalMd5: s } = e;
-    switch (t) {
-        case o.E.NEW_ASSET:
-            return { assetOrigin: t, imageUri: n, description: i, originalMd5: s };
-        case o.E.EDITED_ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, description: i, originalAsset: r, originalMd5: s };
-        case o.E.ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, originalAsset: r };
-        default:
-            (0, a.xb)(t);
-    }
-}
-function p(e) {
+function A(e) {
     let { userId: t, image: n, size: i = 80, canAnimate: r = !0 } = e;
     return null != n && "string" != typeof n
-        ? n.assetOrigin === o.E.ARCHIVED_ASSET
-            ? d({
+        ? n.assetOrigin === a.E.ARCHIVED_ASSET
+            ? u({
                   userId: t,
                   avatarId: n.originalAsset.id,
                   storageHash: n.originalAsset.storageHash,
                   size: i,
                   canAnimate: r,
               })
-            : n.imageUri
+            : r
+              ? n.imageUri
+              : (n.staticImageUri ?? n.imageUri)
         : n;
 }
