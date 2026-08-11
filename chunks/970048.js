@@ -17,16 +17,16 @@ var i = n(228366),
     f = n(967347),
     p = n(929921),
     T = n(734057),
-    m = n(186295),
+    m = n(350055),
     g = n(763827),
     S = n(873985),
     N = n(116956),
     C = n(174459),
-    R = n(353835),
-    O = n(321034),
+    O = n(353835),
+    R = n(321034),
     L = n(652215),
-    y = n(731854);
-function D(e) {
+    D = n(731854);
+function y(e) {
     let t = I.A.getConnectionStats(e);
     return null == t ? null : (t.stats.rtp.outbound.find((e) => "video" === e.type) ?? null);
 }
@@ -38,7 +38,7 @@ function v(e, t) {
     return null == i ? null : (i.find((e) => "video" === e.type) ?? null);
 }
 function b(e, t, n) {
-    return e ? D(t) : v(t, n);
+    return e ? y(t) : v(t, n);
 }
 var M = n(161518),
     P = n(927813),
@@ -63,7 +63,7 @@ let B = 20 * P.A.Millis.SECOND;
 var H = n(723702);
 let j = BigInt(-3821);
 var W = n(403362),
-    Y = n(313961),
+    Y = n(198052),
     K = n(650338);
 let $ = 20 * P.A.Millis.SECOND;
 var z = n(877717);
@@ -418,14 +418,14 @@ class J extends r.A {
                     { resolution: z, fps: q } = p.A.getState(),
                     { gameName: Z, gameId: X, exe: Q, distributor: J } = (0, A.wH)($),
                     ee = r.isErrorOutbound,
-                    et = c ?? y.x.DEFAULT,
+                    et = c ?? D.x.DEFAULT,
                     en = null != W ? W.ownerId : j,
                     ei = null != Y ? Y?.getVoiceParticipantType() : ee ? "sender" : "receiver",
                     er = K?.getMediaEngineConnectionId() ?? null;
                 (n =
                     null != o && null != W
                         ? ee
-                            ? K?.getOutboundStats()?.find((e) => e.quality === y.Y4)
+                            ? K?.getOutboundStats()?.find((e) => e.quality === D.Y4)
                             : K?.getInboundStats(W.ownerId)
                         : ee
                           ? (u().maxBy(K?.getOutboundStats() ?? [], (e) => e.num_frames) ?? null)
@@ -458,14 +458,17 @@ class J extends r.A {
                             num_bytes: n?.num_bytes ?? 0,
                             num_packets_lost: b(ee, er, en)?.packetsLost ?? 0,
                             video_codec: G ?? (0, _.aV)(b(ee, er, en)?.codec.name) ?? null,
-                            video_encoder: x ?? (0, _.kZ)(D(er)?.encoderImplementationName) ?? null,
+                            video_encoder: x ?? (0, _.kZ)(y(er)?.encoderImplementationName) ?? null,
                             video_decoder: k ?? (0, _.s7)(v(er, en)?.decoderImplementationName) ?? null,
                             audio_capture_sample_rate_mismatch_percent: F ?? null,
+                            audio_capture_processing_sample_rate:
+                                I.A.getConnectionStats(er)?.stats.rtp.outbound.find((e) => "audio" === e.type)
+                                    ?.currentSampleRate ?? null,
                             incoming_video_stopped_for_occlusion: !E.X.isIncomingVideoEnabled(),
                             bitrate: b(ee, er, en)?.bitrate ?? null,
-                            target_bitrate: ee ? (D(er)?.bitrateTarget ?? null) : null,
-                            fps: (ee ? (D(et)?.frameRateEncode ?? null) : (v(et, en)?.frameRateDecode ?? null)) ?? null,
-                            target_fps: et === y.x.STREAM && ee ? q : null,
+                            target_bitrate: ee ? (y(er)?.bitrateTarget ?? null) : null,
+                            fps: (ee ? (y(et)?.frameRateEncode ?? null) : (v(et, en)?.frameRateDecode ?? null)) ?? null,
+                            target_fps: et === D.x.STREAM && ee ? q : null,
                             sender_user_id: W?.ownerId ?? null,
                             stream_region: Y?.getRegion() ?? null,
                             stream_source_type: ee ? (Y?.analyticsContext?.streamSourceType ?? null) : null,
@@ -512,8 +515,8 @@ class J extends r.A {
                             gpu_device_sub_sys_id: t?.gpu_device_sub_sys_id ?? null,
                             gpu_device_revision: t?.gpu_device_revision ?? null,
                             gpu_driver_version: t?.gpu_driver_version ?? null,
-                            cpu_usage: O.A.getCurrentCPUUsagePercent() ?? null,
-                            memory_usage: O.A.getCurrentMemoryUsageKB() ?? null,
+                            cpu_usage: R.A.getCurrentCPUUsagePercent() ?? null,
+                            memory_usage: R.A.getCurrentMemoryUsageKB() ?? null,
                             outbound_bitrate_estimate:
                                 I.A.getConnectionStats(er)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
@@ -537,7 +540,7 @@ class J extends r.A {
                             output_volume: m.Ay.getOutputVolume(),
                             audio_input_device_count: Object.keys(m.Ay.getInputDevices()).length,
                             audio_output_device_count: Object.keys(m.Ay.getOutputDevices()).length,
-                            app_hardware_acceleration_enabled: R.A.getAppHardwareAccelerationEnabled(),
+                            app_hardware_acceleration_enabled: O.A.getAppHardwareAccelerationEnabled(),
                             input_device_os_muted: m.Ay.getInputDeviceOSMuted() ?? null,
                             input_device_os_volume: m.Ay.getInputDeviceOSVolume() ?? null,
                         };
