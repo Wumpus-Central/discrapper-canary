@@ -5474,7 +5474,8 @@
     "name": "2026-07-personal-widget",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "showCreateEntrypoint": false
     },
     "variations": {
       "0": {
@@ -5482,10 +5483,12 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "showCreateEntrypoint": false
       },
       "2": {
-        "enabled": true
+        "enabled": true,
+        "showCreateEntrypoint": true
       }
     }
   },

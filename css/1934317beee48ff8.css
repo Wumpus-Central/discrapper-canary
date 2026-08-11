@@ -269,5 +269,11 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    gap: var(--space-16)
+}
+
+.title__36335 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-inline-end: auto
 }
