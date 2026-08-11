@@ -654,7 +654,7 @@ function eP(e) {
                 (0, n.jsx)(eO, { widget: t, canEdit: d }),
                 d && !u ? (0, n.jsx)(ev, {}) : null,
                 t.sections.map((e, t) => (0, n.jsx)(e_, { userId: i.id, section: e, sectionIndex: t, canEdit: d }, t)),
-                (0, n.jsx)(eL, {}),
+                d ? (0, n.jsx)(eL, {}) : null,
             ],
         }),
     });
