@@ -1,4 +1,4 @@
-t.d(i, { default: () => w });
+t.d(e, { default: () => w });
 var n = t(477900),
     a = t(582128),
     s = t(562708),
@@ -10,33 +10,33 @@ var n = t(477900),
     x = t(17928),
     m = t(297264),
     g = t(834730),
-    N = t(144228),
-    p = t(260598),
+    p = t(144228),
+    N = t(260598),
     h = t(825484),
     j = t(821609),
-    u = t(228366),
-    A = t(235986),
+    A = t(228366),
+    u = t(235986),
     E = t(207913),
     _ = t(393033),
     C = t(239093),
     I = t(375708),
     S = t(412885),
     k = t(723041);
-function v(e) {
-    let { className: i, isDsaEligible: t = !1, onClose: s, onNext: r, onBack: o } = e,
+function v(i) {
+    let { className: e, isDsaEligible: t = !1, onClose: s, onNext: r, onBack: o } = i,
         v = (0, c.y5)(),
-        b = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
-        [L, T] = a.useState(""),
+        L = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
+        [b, T] = a.useState(""),
         [f, P] = a.useState(!1);
     a.useEffect(() => {
-        T(b ?? ""), P(v === C.Iv.SOMETHING_ELSE);
-    }, [b, v, t]);
-    let G = C.Qv.map((e) => ({ value: e, name: (0, _.l0)(e) }));
+        T(L ?? ""), P(v === C.Iv.SOMETHING_ELSE);
+    }, [L, v, t]);
+    let G = C.Qv.map((i) => ({ value: i, name: (0, _.l0)(i) }));
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: A.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -56,32 +56,32 @@ function v(e) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: d()(S.j, i),
+                className: d()(S.j, e),
                 scrollbarGutter: !1,
                 children: [
-                    (0, n.jsx)(N.z, {
+                    (0, n.jsx)(p.z, {
                         value: v,
                         options: G,
-                        onChange: (e) => {
-                            P(e === C.Iv.SOMETHING_ELSE),
-                                e !== C.Iv.SOMETHING_ELSE &&
+                        onChange: (i) => {
+                            P(i === C.Iv.SOMETHING_ELSE),
+                                i !== C.Iv.SOMETHING_ELSE &&
                                     (T(""),
-                                    u.h.dispatch({
+                                    A.h.dispatch({
                                         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
                                         userInput: "",
                                     })),
-                                u.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal: e });
+                                A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal: i });
                         },
                     }),
                     t &&
                         f &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(p.f, {
+                                (0, n.jsx)(N.f, {
                                     rows: 4,
                                     maxLength: 1024,
                                     placeholder: I.intl.string(I.t.bQrZIN),
-                                    value: L,
+                                    value: b,
                                     onChange: T,
                                     autoFocus: !0,
                                 }),
@@ -108,7 +108,7 @@ function v(e) {
                             variant: "primary",
                             text: I.intl.string(I.t.PDTjLN),
                             onClick: function () {
-                                u.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: L }),
+                                A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
                                     r?.();
                             },
                         }),
@@ -116,7 +116,7 @@ function v(e) {
                             variant: "secondary",
                             text: I.intl.string(I.t["13/7kX"]),
                             onClick: function () {
-                                u.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: L }),
+                                A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
                                     o?.();
                             },
                         }),
@@ -126,36 +126,36 @@ function v(e) {
         ],
     });
 }
-var b = t(349288),
-    L = t(308645),
+var L = t(349288),
+    b = t(308645),
     T = t(652215),
     f = t(341111);
-function P(e) {
-    let { className: i, isDsaEligible: t, onClose: s, onNext: r, onBack: o } = e,
+function P(i) {
+    let { className: e, isDsaEligible: t, onClose: s, onNext: r, onBack: o } = i,
         d = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
-        { classification: N } = (0, c.LJ)(d ?? T.dJq),
-        C = (0, _.eu)(N?.description),
+        { classification: p } = (0, c.LJ)(d ?? T.dJq),
+        C = (0, _.eu)(p?.description),
         S = (0, x.bG)([E.A], () => E.A.getIsSubmitting()),
         v = (0, x.bG)([E.A], () => E.A.getAppealSignal()),
         P = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
         [G, D] = a.useState(!1),
         [U, y] = a.useState(""),
-        M = a.useCallback((e) => {
-            u.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: e });
+        M = a.useCallback((i) => {
+            A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: i });
         }, []),
         O = a.useCallback(async () => {
             if (null !== d)
                 try {
-                    y(""), await L.Gf(d, v, P), r?.();
-                } catch (e) {
-                    y((0, _.Tk)(e.body?.code));
+                    y(""), await b.Gf(d, v, P), r?.();
+                } catch (i) {
+                    y((0, _.Tk)(i.body?.code));
                 }
         }, [d, v, P, r]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: A.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -175,14 +175,14 @@ function P(e) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: i,
+                className: e,
                 scrollbarGutter: !1,
                 children: [
                     (0, n.jsx)("ul", {
                         className: f.qI,
                         children: [(0, _.l0)(v), P]
-                            .filter((e) => e.length > 0)
-                            .map((e, i) =>
+                            .filter((i) => i.length > 0)
+                            .map((i, e) =>
                                 (0, n.jsx)(
                                     "li",
                                     {
@@ -190,18 +190,18 @@ function P(e) {
                                         children: (0, n.jsx)(g.E, {
                                             tag: "span",
                                             variant: "text-md/normal",
-                                            children: e,
+                                            children: i,
                                         }),
                                     },
-                                    i,
+                                    e,
                                 ),
                             ),
                     }),
                     t &&
                         (0, n.jsx)("div", {
                             className: f.DE,
-                            children: (0, n.jsx)(b.Anchor, {
-                                onClick: () => D((e) => !e),
+                            children: (0, n.jsx)(L.Anchor, {
+                                onClick: () => D((i) => !i),
                                 children: (0, n.jsx)(m.D, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
@@ -211,7 +211,7 @@ function P(e) {
                         }),
                     G &&
                         t &&
-                        (0, n.jsx)("div", { className: f.Kf, children: (0, n.jsx)(p.f, { value: P, onChange: M }) }),
+                        (0, n.jsx)("div", { className: f.Kf, children: (0, n.jsx)(N.f, { value: P, onChange: M }) }),
                     (0, n.jsx)("div", {
                         className: k.kU,
                         children: (0, n.jsx)(g.E, { variant: "text-md/semibold", children: C }),
@@ -226,7 +226,7 @@ function P(e) {
             }),
             (0, n.jsxs)(l.jl, {
                 "data-migration-pending": !0,
-                direction: A.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 children: [
                     "" !== U &&
                         (0, n.jsx)(g.E, {
@@ -264,8 +264,8 @@ var G = t(26095),
     D = t(174459),
     U = t(335891);
 function y() {
-    let e = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
-        i = (0, c.LJ)(e ?? T.dJq),
+    let i = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
+        e = (0, c.LJ)(i ?? T.dJq),
         t = (0, U.K)(),
         n = (0, x.bG)([E.A], () => E.A.getIsDsaEligible());
     return a.useCallback(
@@ -273,48 +273,48 @@ function y() {
             D.default.track(T.HAw.SAFETY_HUB_ACTION, {
                 action: a,
                 account_standing: t.state,
-                classification_ids: null != e ? [Number(e)] : null,
+                classification_ids: null != i ? [Number(i)] : null,
                 source: C.XN.AppealIngestion,
                 is_dsa_eligible: n,
-                violation_type: i.violationType,
+                violation_type: e.violationType,
             });
         },
-        [t.state, e, i, n],
+        [t.state, i, e, n],
     );
 }
 var M = t(939249),
     O = t(147925),
-    R = t(22854);
-function F(e) {
-    let { url: i, text: t, onClick: a } = e;
-    return (0, n.jsx)(b.Anchor, {
-        href: i,
+    H = t(22854);
+function R(i) {
+    let { url: e, text: t, onClick: a } = i;
+    return (0, n.jsx)(L.Anchor, {
+        href: e,
         onClick: a,
-        className: R.jH,
+        className: H.jH,
         children: (0, n.jsxs)(M.D, {
-            className: R.Zm,
+            className: H.Zm,
             children: [
-                (0, n.jsx)(g.E, { className: R.ix, variant: "text-md/semibold", children: t }),
-                (0, n.jsx)(O.A, { className: R._2, direction: O.A.Directions.RIGHT }),
+                (0, n.jsx)(g.E, { className: H.ix, variant: "text-md/semibold", children: t }),
+                (0, n.jsx)(O.A, { className: H._2, direction: O.A.Directions.RIGHT }),
             ],
         }),
     });
 }
-var H = t(137714);
-function B(e) {
-    let { className: i, onNext: t, onClose: a } = e,
+var F = t(137714);
+function B(i) {
+    let { className: e, onNext: t, onClose: a } = i,
         s = y();
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: A.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
                     (0, n.jsx)("div", {
-                        className: H.zc,
-                        children: (0, n.jsx)("img", { src: "/assets/60e9812b94a3894e.png", alt: "", className: H.Kk }),
+                        className: F.zc,
+                        children: (0, n.jsx)("img", { src: "/assets/60e9812b94a3894e.png", alt: "", className: F.Kk }),
                     }),
                     (0, n.jsx)(m.D, {
                         className: k.DD,
@@ -332,21 +332,21 @@ function B(e) {
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: d()(H.jE, i),
+                className: d()(F.jE, e),
                 scrollbarGutter: !1,
                 children: [
                     (0, n.jsx)(m.D, {
                         variant: "heading-md/bold",
                         color: "text-strong",
-                        className: H.f9,
+                        className: F.f9,
                         children: I.intl.string(I.t["9BRc1N"]),
                     }),
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(R, {
                         text: I.intl.string(I.t.PxL38B),
                         url: C.d$.COMMUNITY_GUIDELINES,
                         onClick: () => s(C.ZU.ClickCommunityGuidelinesLink),
                     }),
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(R, {
                         text: I.intl.string(I.t.qC3XKa),
                         url: C.d$.WARNING_SYSTEM_HELPCENTER_LINK,
                         onClick: () => s(C.ZU.ClickWarningSystemHelpcenterLink),
@@ -361,29 +361,30 @@ function B(e) {
     });
 }
 var Y = t(739010),
-    V = t(607739);
-function $(e) {
+    $ = t(607739);
+function V(i) {
     let {
-            classification: i,
+            classification: e,
             isDsaEligible: t = !1,
             isSpam: a = !1,
             isCoppa: s = !1,
-            appealIngestionType: r,
-            className: c,
-            onClose: o,
-            onNext: x,
-        } = e,
+            isDeveloperClassification: r = !1,
+            appealIngestionType: c,
+            className: o,
+            onClose: x,
+            onNext: p,
+        } = i,
         N = y(),
-        p = i?.explainer_link ?? "",
-        h = null != i && null != i.flagged_content && i.flagged_content.length > 0,
-        u = (0, _.eu)(i?.description),
-        E = !a && !s && (null == r || r === Y.Il.IN_APP),
-        S = null != i && ((0, _._g)(i) || h);
+        h = e?.explainer_link ?? "",
+        A = null != e && null != e.flagged_content && e.flagged_content.length > 0,
+        E = (0, _.eu)(e?.description),
+        S = !a && !s && !r && (null == c || c === Y.Il.IN_APP),
+        v = null != e && ((0, _._g)(e) || A);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: A.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -398,15 +399,15 @@ function $(e) {
                         variant: "text-md/normal",
                         children: I.intl.string(I.t.URt7VI),
                     }),
-                    null != o && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: k.b, onClick: o }),
+                    null != x && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: k.b, onClick: x }),
                 ],
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: d()(k.jE, !S && k.bQ, c),
+                className: d()(k.jE, !v && k.bQ, o),
                 scrollbarGutter: !1,
                 children: [
-                    S && (0, n.jsx)(V.U, { flaggedContent: i.flagged_content ?? [] }),
+                    v && (0, n.jsx)($.U, { flaggedContent: e.flagged_content ?? [] }),
                     (0, n.jsx)(g.E, {
                         className: k.l8,
                         color: "text-default",
@@ -415,28 +416,34 @@ function $(e) {
                     }),
                     (0, n.jsx)("div", {
                         className: k.kU,
-                        children: (0, n.jsx)(g.E, { variant: "text-md/semibold", children: u }),
+                        children: (0, n.jsx)(g.E, { variant: "text-md/semibold", children: E }),
                     }),
                     s &&
-                        (0, n.jsx)(F, {
+                        (0, n.jsx)(R, {
                             url: C.d$.AGE_VERIFICATION_LINK,
                             text: I.intl.string(I.t["gJs+kf"]),
                             onClick: () => N(C.ZU.ClickAgeVerificationLink),
                         }),
                     a &&
                         !s &&
-                        (0, n.jsx)(F, {
+                        (0, n.jsx)(R, {
                             url: C.d$.SPAM_LINK,
                             text: I.intl.string(I.t["PaNS+I"]),
                             onClick: () => N(C.ZU.ClickSpamWebformLink),
                         }),
+                    r &&
+                        (0, n.jsx)(R, {
+                            url: C.d$.APP_APPEAL_LINK,
+                            text: I.intl.string(I.t.n9cZTH),
+                            onClick: () => N(C.ZU.ClickAppAppealLink),
+                        }),
                     !s &&
-                        (0, n.jsx)(F, {
+                        (0, n.jsx)(R, {
                             text: I.intl.string(I.t["Vtyn/7"]),
-                            url: p,
+                            url: h,
                             onClick: () => N(C.ZU.ClickLearnMoreLink),
                         }),
-                    E &&
+                    S &&
                         t &&
                         (0, n.jsx)(g.E, {
                             className: k.C2,
@@ -445,35 +452,36 @@ function $(e) {
                         }),
                 ],
             }),
-            E &&
+            S &&
                 (0, n.jsx)(l.jl, {
                     "data-migration-pending": !0,
-                    children: (0, n.jsx)(j.$, { variant: "primary", text: I.intl.string(I.t.PDTjLN), onClick: x }),
+                    children: (0, n.jsx)(j.$, { variant: "primary", text: I.intl.string(I.t.PDTjLN), onClick: p }),
                 }),
         ],
     });
 }
 var q = t(895473);
-function w(e) {
-    let { classificationId: i, transitionState: t, initialSlide: o = C.yN.SPEED_BUMP, onClose: d } = e,
+function w(i) {
+    let { classificationId: e, transitionState: t, initialSlide: o = C.yN.SPEED_BUMP, onClose: d } = i,
         [x, m] = a.useState(o),
-        { classification: g, isDsaEligible: N } = (0, c.LJ)(i ?? T.dJq),
-        p = g?.is_spam || !1,
+        { classification: g, isDsaEligible: p } = (0, c.LJ)(e ?? T.dJq),
+        N = g?.is_spam || !1,
         h = g?.is_coppa || !1,
-        j = g?.appeal_ingestion_type;
+        j = g?.is_developer_classification || !1,
+        A = g?.appeal_ingestion_type;
     a.useEffect(() => {
         m(o);
     }, [m, o]);
     let u = a.useCallback(() => {
             G.A.close(), d();
         }, [d]),
-        A = a.useCallback(() => {
-            let e = C.A8[x]?.next;
-            null != e ? m(e) : u();
-        }, [x, u]),
         E = a.useCallback(() => {
-            let e = C.A8[x]?.prev;
-            null != e ? m(e) : u();
+            let i = C.A8[x]?.next;
+            null != i ? m(i) : u();
+        }, [x, u]),
+        _ = a.useCallback(() => {
+            let i = C.A8[x]?.prev;
+            null != i ? m(i) : u();
         }, [x, u]);
     return (0, n.jsx)(l.EO, {
         "data-migration-pending": !0,
@@ -491,33 +499,34 @@ function w(e) {
                         id: C.yN.SPEED_BUMP,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
                         impressionProperties: C.nY,
-                        children: (0, n.jsx)($, {
+                        children: (0, n.jsx)(V, {
                             classification: g,
                             onClose: u,
-                            onNext: A,
-                            isSpam: p,
+                            onNext: E,
+                            isSpam: N,
                             isCoppa: h,
-                            appealIngestionType: j,
-                            isDsaEligible: N,
+                            isDeveloperClassification: j,
+                            appealIngestionType: A,
+                            isDsaEligible: p,
                         }),
                     }),
                     (0, n.jsx)(r.q, {
                         id: C.yN.COLLECT_SIGNAL,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
                         impressionProperties: C.nY,
-                        children: (0, n.jsx)(v, { isDsaEligible: N, onClose: u, onNext: A, onBack: E }),
+                        children: (0, n.jsx)(v, { isDsaEligible: p, onClose: u, onNext: E, onBack: _ }),
                     }),
                     (0, n.jsx)(r.q, {
                         id: C.yN.CONFIRM_SUBMISSION,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
                         impressionProperties: C.nY,
-                        children: (0, n.jsx)(P, { isDsaEligible: N, onClose: u, onNext: A, onBack: E }),
+                        children: (0, n.jsx)(P, { isDsaEligible: p, onClose: u, onNext: E, onBack: _ }),
                     }),
                     (0, n.jsx)(r.q, {
                         id: C.yN.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: C.nY,
-                        children: (0, n.jsx)(B, { onNext: A }),
+                        children: (0, n.jsx)(B, { onNext: E }),
                     }),
                 ],
             }),

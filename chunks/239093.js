@@ -1,33 +1,33 @@
 "use strict";
 n.d(t, {
     A8: () => C,
-    AT: () => h,
-    Eb: () => O,
-    Iv: () => g,
-    M8: () => T,
-    Qv: () => A,
-    V5: () => I,
-    XN: () => m,
-    ZU: () => E,
+    AT: () => E,
+    Eb: () => D,
+    Iv: () => p,
+    M8: () => g,
+    Qv: () => T,
+    V5: () => m,
+    XN: () => f,
+    ZU: () => I,
     d$: () => _,
-    g0: () => p,
+    g0: () => h,
     nY: () => S,
-    qN: () => v,
-    ti: () => b,
-    w$: () => N,
-    wQ: () => R,
-    xw: () => f,
-    yN: () => y,
+    qN: () => R,
+    ti: () => y,
+    w$: () => O,
+    wQ: () => L,
+    xw: () => A,
+    yN: () => N,
 });
 var i,
     r,
-    s,
     a,
-    o,
+    s,
     l,
-    u,
+    o,
+    d,
     c = n(562708),
-    d = n(652215);
+    u = n(652215);
 class _ {
     static TOS_LINK = "https://discord.com/terms";
     static COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
@@ -37,13 +37,14 @@ class _ {
     static SPAM_LINK =
         "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
     static LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
+    static APP_APPEAL_LINK = "https://dis.gd/app-appeal";
 }
-class h {
+class E {
     static CLASSIFICATION_ID = "classification_id";
     static INCIDENT_TIMESTAMP = "incident_time";
 }
-var f = (((i = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (i.LEARN_MORE_LINK = "learn_more_link"), i);
-class p {
+var A = (((i = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (i.LEARN_MORE_LINK = "learn_more_link"), i);
+class h {
     static ICON_TYPE = "icon_type";
     static HEADER = "header";
     static BODY = "body";
@@ -54,7 +55,7 @@ class p {
     static LEARN_MORE_LINK = "learn_more_link";
     static CLASSIFICATION_ID = "classification_id";
 }
-var E =
+var I =
         (((r = {})[(r.ViewViolationDetail = 0)] = "ViewViolationDetail"),
         (r[(r.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
         (r[(r.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
@@ -63,55 +64,56 @@ var E =
         (r[(r.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
         (r[(r.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
         (r[(r.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
+        (r[(r.ClickAppAppealLink = 8)] = "ClickAppAppealLink"),
         r),
-    m =
-        (((s = {})[(s.SystemDM = 0)] = "SystemDM"),
-        (s[(s.StandingTab = 1)] = "StandingTab"),
-        (s[(s.AppealIngestion = 2)] = "AppealIngestion"),
-        s);
+    f =
+        (((a = {})[(a.SystemDM = 0)] = "SystemDM"),
+        (a[(a.StandingTab = 1)] = "StandingTab"),
+        (a[(a.AppealIngestion = 2)] = "AppealIngestion"),
+        a);
 Object.freeze({
-    SPEED_BUMP: d.JJy.APPEAL_INGESTION_SPEED_BUMP,
-    COLLECT_SIGNAL: d.JJy.APPEAL_INGESTION_COLLECT_SIGNAL,
-    CONFIRM_SUBMISSION: d.JJy.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-    REQUEST_SENT: d.JJy.APPEAL_INGESTION_REQUEST_SENT,
-    THANKS: d.JJy.APPEAL_INGESTION_THANKS,
-    SPAM: d.JJy.APPEAL_INGESTION_SPAM,
+    SPEED_BUMP: u.JJy.APPEAL_INGESTION_SPEED_BUMP,
+    COLLECT_SIGNAL: u.JJy.APPEAL_INGESTION_COLLECT_SIGNAL,
+    CONFIRM_SUBMISSION: u.JJy.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+    REQUEST_SENT: u.JJy.APPEAL_INGESTION_REQUEST_SENT,
+    THANKS: u.JJy.APPEAL_INGESTION_THANKS,
+    SPAM: u.JJy.APPEAL_INGESTION_SPAM,
 });
-var g =
-    (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
-    (a[(a.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
-    (a[(a.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
-    (a[(a.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
-    a);
-let A = [0, 1, 2, 3],
-    I = 372,
-    T = 279,
+var p =
+    (((s = {})[(s.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
+    (s[(s.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
+    (s[(s.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
+    (s[(s.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
+    s);
+let T = [0, 1, 2, 3],
+    m = 372,
+    g = 279,
     S = { impression_group: c.ImpressionGroups.APPEAL_INGESTION };
-var y =
-    (((o = {}).SPEED_BUMP = "speed-bump"),
-    (o.COLLECT_SIGNAL = "collect-signal"),
-    (o.CONFIRM_SUBMISSION = "confirm-submission"),
-    (o.REQUEST_SENT = "request-sent"),
-    (o.THANKS = "thanks"),
-    o);
+var N =
+    (((l = {}).SPEED_BUMP = "speed-bump"),
+    (l.COLLECT_SIGNAL = "collect-signal"),
+    (l.CONFIRM_SUBMISSION = "confirm-submission"),
+    (l.REQUEST_SENT = "request-sent"),
+    (l.THANKS = "thanks"),
+    l);
 let C = {
     "speed-bump": { next: "collect-signal", prev: null },
     "collect-signal": { next: "confirm-submission", prev: "speed-bump" },
     "confirm-submission": { next: "request-sent", prev: "collect-signal" },
     "request-sent": { next: null, prev: null },
 };
-var N =
-        (((l = {})[(l.USER = 1)] = "USER"),
-        (l[(l.GUILD_OWNER = 2)] = "GUILD_OWNER"),
-        (l[(l.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
-        l),
-    v =
-        (((u = {}).LOADING = "loading"),
-        (u.ERROR = "error"),
-        (u.SUCCESS = "success"),
-        (u.FAILURE = "failure"),
-        (u.NONE = "none"),
-        u);
-let R = 2e3,
-    O = 15e3,
-    b = 5;
+var O =
+        (((o = {})[(o.USER = 1)] = "USER"),
+        (o[(o.GUILD_OWNER = 2)] = "GUILD_OWNER"),
+        (o[(o.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
+        o),
+    R =
+        (((d = {}).LOADING = "loading"),
+        (d.ERROR = "error"),
+        (d.SUCCESS = "success"),
+        (d.FAILURE = "failure"),
+        (d.NONE = "none"),
+        d);
+let L = 2e3,
+    D = 15e3,
+    y = 5;
