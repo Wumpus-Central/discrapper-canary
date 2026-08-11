@@ -5943,5 +5943,24 @@
         "maxLength": null
       }
     }
+  },
+  {
+    "name": "2026-08-vq-remaining-time-truncation",
+    "kind": "user",
+    "defaultConfig": {
+      "truncateMoreThanSeconds": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "truncateMoreThanSeconds": 30
+      },
+      "2": {
+        "truncateMoreThanSeconds": 60
+      }
+    }
   }
 ]
