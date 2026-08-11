@@ -2016,7 +2016,6 @@ function iV(e) {
                     loop: !0,
                 },
                 size: "lg",
-                badge: { type: "beta", variant: "expressive" },
                 title: B.intl.string(ik.default.cYwrp8),
                 body: A,
                 actions: [{ text: B.intl.string(B.t["4P5I8V"]), variant: "primary", onClick: _ }],
