@@ -2431,6 +2431,7 @@ class eM extends N.G {
                 T: () => ["discord_protos.users.v1.AgeAssuranceGroup", $],
             },
             { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 },
+            { no: 8, name: "cooldown_reset_at", kind: "message", T: () => O.D },
         ]);
     }
     create(e) {
@@ -2468,6 +2469,9 @@ class eM extends N.G {
                 case 7:
                     r.isRegionalAdult = e.bool();
                     break;
+                case 8:
+                    r.cooldownResetAt = O.D.internalBinaryRead(e, e.uint32(), n, r.cooldownResetAt);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2486,7 +2490,9 @@ class eM extends N.G {
             0 !== e.vendor && t.tag(4, m.O0.Varint).int32(e.vendor),
             e.verifiedAt && O.D.internalBinaryWrite(e.verifiedAt, t.tag(5, m.O0.LengthDelimited).fork(), n).join(),
             0 !== e.estimatedAgeGroup && t.tag(6, m.O0.Varint).int32(e.estimatedAgeGroup),
-            !1 !== e.isRegionalAdult && t.tag(7, m.O0.Varint).bool(e.isRegionalAdult);
+            !1 !== e.isRegionalAdult && t.tag(7, m.O0.Varint).bool(e.isRegionalAdult),
+            e.cooldownResetAt &&
+                O.D.internalBinaryWrite(e.cooldownResetAt, t.tag(8, m.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
