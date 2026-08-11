@@ -6,7 +6,6 @@ let l = r.createContext({
         videoSessionId: "",
         isPortrait: !1,
         isFullscreenEnabled: !1,
-        useNewProgressBarStyling: !1,
         onClose: () => {},
         setIsFullscreenEnabled: () => {},
         maxProgressSec: 0,

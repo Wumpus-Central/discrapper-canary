@@ -1411,22 +1411,6 @@
     }
   },
   {
-    "name": "2026-02-new-video-quest-progress-bar-styling",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-02-non-dm-gifting-modal-redesign",
     "kind": "user",
     "defaultConfig": {

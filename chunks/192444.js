@@ -1,17 +1,16 @@
 "use strict";
 n.d(t, {
-    Bm: () => S,
-    m8: () => E,
-    n6: () => p,
-    Ig: () => h,
-    OO: () => _,
-    jS: () => u,
-    aD: () => T,
+    Bm: () => g,
+    m8: () => _,
+    n6: () => f,
+    Ig: () => A,
+    OO: () => u,
+    aD: () => p,
     uK: () => c,
-    lk: () => f,
-    Mk: () => g,
-    d: () => m,
-    sy: () => A,
+    lk: () => I,
+    Mk: () => m,
+    sy: () => E,
+    d: () => T,
 });
 var i,
     r,
@@ -30,42 +29,36 @@ let c = (0, l.mj)({
         variations: { 1: { enabled: !0 } },
     }),
     u = (0, l.mj)({
-        name: "2026-02-new-video-quest-progress-bar-styling",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    }),
-    _ = (0, l.mj)({
         name: "2026-05-app-store-overlay-feature-gate",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    E = (0, l.mj)({
+    _ = (0, l.mj)({
         name: "2026-03-quest-reload-video-on-obscured",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var A =
+var E =
     (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
     (r[(r.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (r[(r.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
     r);
-let h = (0, l.mj)({
+let A = (0, l.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    I = (0, l.mj)({
+    h = (0, l.mj)({
         name: "2026-04-quests-premium-orb-multiplier-marketing",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function f(e) {
-    let { enabled: t } = I.useConfig({ location: e }),
+function I(e) {
+    let { enabled: t } = h.useConfig({ location: e }),
         n = (0, o.z)();
     return {
         shouldShowBonusOrbsUX: n !== d.MA.INELIGIBLE && n !== d.MA.CREPE && t,
@@ -78,7 +71,7 @@ function f(e) {
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let p = (0, l.mj)({
+let f = (0, l.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -90,7 +83,7 @@ let p = (0, l.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let T = (0, l.mj)({
+let p = (0, l.mj)({
     name: "2026-05-quest-home-tile-redesign",
     kind: "user",
     defaultConfig: {
@@ -115,14 +108,14 @@ let T = (0, l.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var m =
+var T =
     (((a = {})[(a.CONTROL = 0)] = "CONTROL"),
     (a[(a.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
     (a[(a.LARGE_MASK_MARGIN = 2)] = "LARGE_MASK_MARGIN"),
     (a[(a.REMOVE_QUEST_TITLE_SUFFIX = 3)] = "REMOVE_QUEST_TITLE_SUFFIX"),
     (a[(a.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
     a);
-let g = (0, l.mj)({
+let m = (0, l.mj)({
         name: "2026-06-quest-home-layout-visual-tweaks",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
@@ -134,7 +127,7 @@ let g = (0, l.mj)({
             4: { enabled: !0, variant: 4 },
         },
     }),
-    S = (0, l.mj)({
+    g = (0, l.mj)({
         name: "2026-07-quest-bar-secondary-cta",
         kind: "user",
         defaultConfig: { enabled: !1, showPlayInstantlyLabel: !1 },
