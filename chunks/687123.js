@@ -11,4 +11,5 @@ var i,
         (i[(i.COMMANDS_TOGGLE = 32)] = "COMMANDS_TOGGLE"),
         (i[(i.REACTIVE_CHECK = 64)] = "REACTIVE_CHECK"),
         (i[(i.STAGE_SPEAKING = 128)] = "STAGE_SPEAKING"),
+        (i[(i.JOIN_DISCOVERABLE_SERVER = 256)] = "JOIN_DISCOVERABLE_SERVER"),
         i);
