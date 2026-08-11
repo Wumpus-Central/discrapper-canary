@@ -1,55 +1,58 @@
-n.d(i, { default: () => A });
+n.d(i, { default: () => O });
 var r = n(477900),
     e = n(582128),
     l = n(122720),
-    o = n(772707),
-    s = n(403581),
-    a = n(793574),
-    p = n(688810),
-    c = n(235693),
-    u = n(532794),
-    _ = n(976860),
-    b = n(975571),
-    C = n(576761),
-    M = n(652215),
-    R = n(202541),
-    d = n(375708),
-    k = n(594387);
-function A(t) {
-    let { onClose: i, multiplier: n, orbMultiplierEligibility: A, ...E } = t,
-        { analyticsLocations: O } = (0, p.Ay)(a.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
-        T = (0, C.B9)(A),
-        f = A === C.MA.CREPE,
-        g = A === C.MA.NITRO || A === C.MA.UPSELL,
-        L = f ? d.intl.string(k.default.c5usUr) : d.intl.string(d.t.Csf5Ol),
-        U = e.useMemo(
+    o = n(17928),
+    s = n(772707),
+    a = n(403581),
+    p = n(775602),
+    u = n(793574),
+    c = n(688810),
+    d = n(235693),
+    b = n(532794),
+    M = n(976860),
+    R = n(975571),
+    _ = n(576761),
+    A = n(652215),
+    C = n(202541),
+    k = n(375708),
+    E = n(594387);
+function O(t) {
+    let { onClose: i, multiplier: n, orbMultiplierEligibility: O, ...g } = t,
+        { analyticsLocations: T } = (0, c.Ay)(u.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
+        f = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
+        L = (0, _.B9)(O),
+        U = O === _.MA.CREPE,
+        v = O === _.MA.NITRO || O === _.MA.UPSELL,
+        I = U ? k.intl.string(E.default.c5usUr) : k.intl.string(k.t.Csf5Ol),
+        y = e.useMemo(
             () =>
-                f
-                    ? d.intl.format(k.default.UkrcSH, { bonusOrbMultiplier: n })
-                    : T
-                      ? d.intl.format(d.t.NpUfej, { bonusOrbMultiplier: n })
-                      : d.intl.format(d.t["G5k+lZ"], { bonusOrbMultiplier: n }),
-            [f, T, n],
+                U
+                    ? k.intl.format(E.default.UkrcSH, { bonusOrbMultiplier: n })
+                    : L
+                      ? k.intl.format(k.t.NpUfej, { bonusOrbMultiplier: n })
+                      : k.intl.format(k.t["G5k+lZ"], { bonusOrbMultiplier: n }),
+            [U, L, n],
         );
-    return (0, r.jsx)(o.k, {
-        ...E,
+    return (0, r.jsx)(s.k, {
+        ...g,
         onClose: i,
-        gradientColor: g ? "nitro-pink" : "blue",
-        title: L,
-        subtitle: U,
-        graphic: { type: "rive", rive: l.E, props: { artboard: "Torbs_Multiply" } },
-        actions: T
+        gradientColor: v ? "nitro-pink" : "blue",
+        title: I,
+        subtitle: y,
+        graphic: { type: "rive", rive: l.E, props: { artboard: "Torbs_Multiply", dataBinding: { reducedMotion: f } } },
+        actions: L
             ? [
-                  { text: d.intl.string(d.t.cpT0Cq), variant: "secondary", onClick: i },
+                  { text: k.intl.string(k.t.cpT0Cq), variant: "secondary", onClick: i },
                   {
-                      text: d.intl.string(d.t.hvVgAZ),
+                      text: k.intl.string(k.t.hvVgAZ),
                       variant: "primary",
                       onClick: function () {
                           i(),
-                              f
-                                  ? (0, c.o)()
+                              U
+                                  ? (0, d.o)()
                                   : window.open(
-                                        b.A.getArticleURL(M.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
+                                        R.A.getArticleURL(A.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
                                         "_blank",
                                     );
                       },
@@ -57,18 +60,18 @@ function A(t) {
               ]
             : [
                   {
-                      text: d.intl.string(d.t.PcTCB7),
+                      text: k.intl.string(k.t.PcTCB7),
                       variant: "secondary",
                       onClick: () => {
-                          i(), (0, _.pX)(M.BVt.NITRO_HOME);
+                          i(), (0, M.pX)(A.BVt.NITRO_HOME);
                       },
                   },
                   {
-                      text: d.intl.string(d.t.pj0XBN),
+                      text: k.intl.string(k.t.pj0XBN),
                       variant: "expressive",
-                      icon: s.t,
+                      icon: a.t,
                       onClick: () => {
-                          i(), (0, u.A)({ subscriptionTier: R.pe.TIER_2, analyticsLocations: O });
+                          i(), (0, b.A)({ subscriptionTier: C.pe.TIER_2, analyticsLocations: T });
                       },
                   },
               ],

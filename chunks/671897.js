@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(682577),
     o = n(621466),
     d = n(17928),
     c = n(661531),
@@ -25,8 +25,8 @@ var i = n(477900),
     O = n(268791),
     R = n(315710),
     L = n(297264),
-    y = n(775602),
-    D = n(174459),
+    D = n(775602),
+    y = n(174459),
     v = n(683574),
     b = n(61491),
     M = n(113494),
@@ -94,28 +94,31 @@ function W(e) {
 }
 let Y = r.forwardRef(function (e, t) {
     let {
-        iconComponent: n,
-        animationTime: r,
-        visible: a,
-        ariaLabel: o,
-        active: d,
-        disabled: _,
-        tooltipLabel: E,
-        tooltipDelayMs: A = 1500,
-        shortcut: h,
-        onClick: I,
-        buttonSize: f = u.n4.MD,
-        "data-testid": p,
-        clickableProps: T,
-    } = e;
+            iconComponent: n,
+            animationTime: r,
+            visible: a,
+            ariaLabel: o,
+            active: d,
+            disabled: _,
+            tooltipLabel: E,
+            tooltipDelayMs: A = 1500,
+            shortcut: h,
+            onClick: I,
+            buttonSize: f = u.n4.MD,
+            "data-testid": p,
+            clickableProps: T,
+        } = e,
+        m = "" !== (h ?? "").trim();
     return (0, i.jsx)(x.m, {
         text: a ? E : void 0,
-        keyboardShortcut: "" !== (h ?? "").trim() ? h : void 0,
+        keyboardShortcut: m ? h : void 0,
+        ariaHidden: !0,
         delay: A,
         children: (0, i.jsx)(w.D, {
             onClick: !0 === _ ? void 0 : I,
             className: s()(F.K5, { [F.Iy]: _ }),
             "aria-label": o,
+            "aria-keyshortcuts": m ? h : void 0,
             "aria-disabled": _,
             "data-testid": p,
             innerRef: t,
@@ -177,8 +180,8 @@ function ee(e) {
             onMutedChange: ed,
             onVolumeExpandedChange: ec,
         } = e,
-        eu = (0, d.bG)([y.Ay], () => y.Ay.useReducedMotion),
-        e_ = (0, d.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
+        eu = (0, d.bG)([D.Ay], () => D.Ay.useReducedMotion),
+        e_ = (0, d.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         { isFullscreen: eE, videoRef: eA } = (0, v.X$)(),
         [eh, eI] = r.useState(x ? 0 : G),
         [ef, ep] = r.useState(!1),
@@ -198,25 +201,25 @@ function ee(e) {
         eL = r.useCallback(() => {
             if (null == b) return;
             let e = M?.split("/");
-            D.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            y.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
                 window.open(b, "_blank");
         }, [b, M]),
-        ey = r.useCallback(
+        eD = r.useCallback(
             (e) => {
                 null != eA.current && (e !== eA.current.volume && (eA.current.volume = e), e !== eh && eI(e));
             },
             [eA, eh],
         ),
-        eD = r.useCallback(() => {
+        ey = r.useCallback(() => {
             if (null != eA.current)
                 if (0 === eh) {
                     let e = 0 === G ? 0.3 : G;
-                    ey(e), ed(!1), eo(e);
-                } else eo(eh), ey(0), ed(!0);
-        }, [eA, eh, ey, G, ed, eo]);
+                    eD(e), ed(!1), eo(e);
+                } else eo(eh), eD(0), ed(!0);
+        }, [eA, eh, eD, G, ed, eo]);
     function ev() {
         ep(!0), ec(!0);
     }
@@ -248,10 +251,10 @@ function ee(e) {
                         e.stopPropagation(), O || ee();
                         break;
                     case u.TJ.MUTE:
-                        e.stopPropagation(), eD();
+                        e.stopPropagation(), ey();
                 }
         },
-        [J, ee, X, en, er, eD, S, O, e_],
+        [J, ee, X, en, er, ey, S, O, e_],
     );
     r.useEffect(() => {
         U && null != eN.current && eN.current.focus();
@@ -275,18 +278,19 @@ function ee(e) {
             [ea, eT, ef, eS, eu, eg],
         );
     let eP = 0 === eh ? A._ : eh < 0.5 ? h.S : I.H,
-        { icon: eU, label: ew } = B[t];
+        eU = k.intl.string(0 === eh ? k.t.YqAjXy : k.t.w4m945),
+        { icon: ew, label: eG } = B[t];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
                 className: F.X3,
                 children: [
                     (0, i.jsx)(Y, {
-                        iconComponent: eU,
+                        iconComponent: ew,
                         animationTime: n,
                         visible: a,
-                        ariaLabel: ew,
-                        tooltipLabel: ew,
+                        ariaLabel: eG,
+                        tooltipLabel: eG,
                         shortcut: u.TJ.PLAYBACK,
                         onClick: X,
                         ref: eN,
@@ -342,9 +346,9 @@ function ee(e) {
                                 iconComponent: eP,
                                 animationTime: n,
                                 visible: a,
-                                onClick: eD,
-                                ariaLabel: k.intl.string(Z.default.XiLvuG),
-                                tooltipLabel: k.intl.string(Z.default.XiLvuG),
+                                onClick: ey,
+                                ariaLabel: eU,
+                                tooltipLabel: eU,
                                 shortcut: u.TJ.MUTE,
                                 buttonSize: H[L],
                                 "data-testid": "discord-web-video-player-volume-btn",
@@ -366,13 +370,13 @@ function ee(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: function (e) {
-                                        ey(e),
+                                        eD(e),
                                             eo(e),
                                             eT && (em(!1), el(!1)),
                                             x && e > 0 ? ed(!1) : x || 0 !== e || ed(!0);
                                     },
                                     asValueChanges: function (e) {
-                                        ey(e), eT || (em(!0), el(!0));
+                                        eD(e), eT || (em(!0), el(!0));
                                     },
                                     fillStyles: { backgroundColor: c.A.colors.WHITE.css },
                                     orientation: "horizontal",
