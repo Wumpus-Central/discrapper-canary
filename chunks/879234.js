@@ -4225,7 +4225,7 @@ let rP = (0, a.t_)(u.X.POGGERMODE_PANEL, { useTitle: () => j.intl.string(j.t.AtC
 var rM = i(307301),
     rU = i(410767),
     rV = i(695366),
-    rk = i(505643),
+    rk = i(350055),
     rw = i(868886);
 function rF(e) {
     let { game: t, application: i } = e;
@@ -17596,22 +17596,22 @@ function fS(e) {
     return `${"*".repeat(t.length)}@${i}`;
 }
 function fT(e) {
-    let { text: t, censor: i, revealLabel: n, hideLabel: l, redesign: s = !1 } = e,
-        [r, a] = S.useState(!1),
-        o = r ? t : i(t);
+    let { text: t, censor: i, revealLabel: n, hideLabel: l } = e,
+        [s, r] = S.useState(!1),
+        a = s ? t : i(t);
     return (0, E.jsxs)(Q.B, {
         direction: "horizontal",
         align: "center",
         gap: 4,
-        justify: s ? "end" : "start",
+        justify: "end",
         children: [
-            s ? (0, E.jsx)(el.E, { variant: "text-md/medium", children: o }) : o,
+            (0, E.jsx)(el.E, { variant: "text-md/medium", children: a }),
             (0, E.jsx)(ea.Q, {
                 variant: "primary",
-                textVariant: s ? "text-md/medium" : "text-sm/medium",
-                "aria-label": r ? l : n,
-                onClick: () => a(!r),
-                text: r ? j.intl.string(j.t.fgq1gs) : j.intl.string(j.t.dcztdU),
+                textVariant: "text-md/medium",
+                "aria-label": s ? l : n,
+                onClick: () => r(!s),
+                text: s ? j.intl.string(j.t.fgq1gs) : j.intl.string(j.t.dcztdU),
             }),
         ],
     });
@@ -17625,7 +17625,6 @@ function fx() {
               censor: fS,
               revealLabel: j.intl.string(j.t["Zvx+yV"]),
               hideLabel: j.intl.string(j.t.nqTD4d),
-              redesign: !0,
           });
 }
 let fp = (0, a.Tf)(u.X.ACCOUNT_INFO_EMAIL_SETTING, {
@@ -17667,7 +17666,6 @@ function f_() {
                   censor: fE,
                   revealLabel: j.intl.string(j.t.eY3xlT),
                   hideLabel: j.intl.string(j.t["jllbv+"]),
-                  redesign: !0,
               }),
           });
 }
