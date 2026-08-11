@@ -1,6 +1,7 @@
-r.exports = {
+_.exports = {
     Ui: "cardContainer__5b393",
     Nr: "card__5b393",
+    _7: "expired__5b393",
     Io: "pill__5b393",
     Wi: "descriptionWrapper__5b393",
     h_: "description__5b393",

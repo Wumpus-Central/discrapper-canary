@@ -1,85 +1,85 @@
-s.d(t, { P: () => y, ThirdPartyPromotionsModal: () => S });
-var i = s(477900);
-s(582128);
-var n = s(289873),
-    a = s(189213),
-    r = s(834730),
-    l = s(403581),
-    c = s(17928),
-    o = s(192308),
-    d = s(793574),
-    u = s(363195),
-    m = s(174459),
-    g = s(962644),
-    x = s(35587),
-    f = s(412260),
-    p = s(772167);
+i.d(t, { P: () => y, ThirdPartyPromotionsModal: () => S });
+var s = i(477900);
+i(582128);
+var n = i(289873),
+    a = i(189213),
+    l = i(834730),
+    r = i(403581),
+    c = i(17928),
+    o = i(192308),
+    d = i(793574),
+    u = i(363195),
+    m = i(174459),
+    g = i(962644),
+    x = i(35587),
+    f = i(528464),
+    p = i(772167);
 function h(e) {
-    let { promotion: t, claimButtonPlacement: s = p.u5.INLINE, analyticsLocations: n } = e;
-    return (0, i.jsx)(p.wx, {
+    let { promotion: t, claimButtonPlacement: i = p.u5.INLINE, analyticsLocations: n } = e;
+    return (0, s.jsx)(p.wx, {
         recurrence: t,
         titleVariant: "secondary",
         showPartnerImage: null != t.asset,
         roundPromotionImage: null != t.asset,
-        claimButtonPlacement: s,
+        claimButtonPlacement: i,
         analyticsLocations: n,
     });
 }
-var N = s(975571),
-    A = s(789861),
-    C = s(881373),
-    j = s(264779),
-    E = s(852218),
-    b = s(652215),
-    R = s(806343),
-    T = s(962995),
-    _ = s(375708);
-let I = {
-    [E.XY]: {
-        getModalTitle: () => _.intl.string(T.default["2I7nK+"]),
+var N = i(975571),
+    A = i(789861),
+    j = i(881373),
+    b = i(264779),
+    C = i(852218),
+    E = i(652215),
+    T = i(806343),
+    R = i(962995),
+    v = i(375708);
+let _ = {
+    [C.XY]: {
+        getModalTitle: () => v.intl.string(R.default["2I7nK+"]),
         getModalSubtitle: () =>
-            _.intl.format(T.default.W8jOD0, { termsUrl: N.A.getArticleURL(b.MVz.LOGITECH_PROMOTION) }),
+            v.intl.format(R.default.W8jOD0, { termsUrl: N.A.getArticleURL(E.MVz.LOGITECH_PROMOTION) }),
         landingUrl: "https://www.logitech.com/",
         outboundConfigs: {
             "Logitech G": {
-                getTitle: () => _.intl.formatToPlainString(T.default.jkdhZq, { discountPercent: C.aW }),
-                getBody: () => _.intl.formatToPlainString(T.default.mH30Yx, {}),
+                getTitle: () => v.intl.formatToPlainString(R.default.jkdhZq, { discountPercent: j.aW }),
+                getBody: () => v.intl.formatToPlainString(R.default.mH30Yx, {}),
             },
             "Logitech 5%": {
-                getTitle: () => _.intl.formatToPlainString(T.default.zeBjoX, { discountPercent: C.y$ }),
-                getBody: () => _.intl.formatToPlainString(T.default.fC4abC, { months: 6 }),
+                getTitle: () => v.intl.formatToPlainString(R.default.zeBjoX, { discountPercent: j.y$ }),
+                getBody: () => v.intl.formatToPlainString(R.default.fC4abC, { months: 6 }),
             },
             "Logitech PRO Series Sim": {
-                getTitle: () => _.intl.formatToPlainString(T.default.pSBCjv, { discountPercent: C.K2 }),
-                getBody: () => _.intl.formatToPlainString(T.default.lsRjfl, {}),
+                getTitle: () => v.intl.formatToPlainString(R.default.pSBCjv, { discountPercent: j.K2 }),
+                getBody: () => v.intl.formatToPlainString(R.default.lsRjfl, {}),
             },
         },
     },
-    [E.Bt]: {
-        getModalTitle: () => _.intl.string(R.default.YJsqDS),
+    [C.Bt]: {
+        getModalTitle: () => v.intl.string(T.default.YJsqDS),
         getModalSubtitle: () =>
-            _.intl.format(R.default.ieA3V0, {
+            v.intl.format(T.default.ieA3V0, {
                 termsUrl: "https://support.discord.com/hc/en-us/articles/39188406147479-Nitro-Rewards",
             }),
-        getModalTeaser: () => ({ title: _.intl.string(R.default.Dkm10r), body: _.intl.string(R.default.LHAkT9) }),
+        getModalTeaser: () => ({ title: v.intl.string(T.default.Dkm10r), body: v.intl.string(T.default.LHAkT9) }),
         showSectionHeaders: !1,
         landingUrl: "https://www.callofduty.com/",
         outboundConfigs: {
             "CoD MW4 Beta": {
-                getTitle: () => _.intl.string(R.default["6vVfeK"]),
-                getBody: (e) => _.intl.formatToPlainString(R.default.nsmhS2, { date: (0, A.m)(e.endDate) }),
-                getAsset: (e, t) => (0, j.WD)(e.id, t),
-                getClaimCtaText: () => _.intl.string(R.default["lbyFG+"]),
-                getRedeemCtaText: () => _.intl.string(R.default["6rwUm2"]),
+                getTitle: () => v.intl.string(T.default["6vVfeK"]),
+                getBody: (e) => v.intl.formatToPlainString(T.default.nsmhS2, { date: (0, A.mh)(e.endDate) }),
+                getAsset: (e, t) => (0, b.WD)(e.id, t),
+                getClaimCtaText: () => v.intl.string(T.default["lbyFG+"]),
+                getRedeemCtaText: () => v.intl.string(T.default["6rwUm2"]),
                 claimButtonPlacement: p.u5.FOOTER,
             },
         },
     },
 };
-var v = s(640886);
-function P(e, t, s) {
-    let i = I[e.partnerId ?? ""],
-        n = i?.outboundConfigs[e.outboundTitle];
+var I = i(640886);
+function P(e, t, i) {
+    let s = _[e.partnerId ?? ""],
+        n = s?.outboundConfigs[e.outboundTitle];
     return {
         id: e.id,
         partnerId: e.partnerId ?? "",
@@ -90,74 +90,74 @@ function P(e, t, s) {
         endDate: e.endDate,
         redemptionURL: e.outboundRedemptionPageLink,
         code: t,
-        asset: n?.getAsset?.(e, s),
+        asset: n?.getAsset?.(e, i),
         claimCtaText: n?.getClaimCtaText?.(),
         redeemCtaText: n?.getRedeemCtaText?.(),
     };
 }
 function S(e) {
-    let { partnerId: t, transitionState: s, onClose: o } = e,
-        m = I[t],
+    let { partnerId: t, transitionState: i, onClose: o } = e,
+        m = _[t],
         g = (0, c.bG)([u.A], () => u.A.theme),
         [N, A] = (0, c.yK)([f.A], () => {
-            let { recurring: e, oneTime: s } = f.A.getPromotionsByPartner(t),
-                i = m?.outboundConfigs ?? {};
-            return [e.filter((e) => null != i[e.outboundTitle]), s.filter((e) => null != i[e.outboundTitle])];
+            let { recurring: e, oneTime: i } = f.A.getPromotionsByPartner(t),
+                s = m?.outboundConfigs ?? {};
+            return [e.filter((e) => null != s[e.outboundTitle]), i.filter((e) => null != s[e.outboundTitle])];
         }),
-        { promotionsLoaded: C, claimedOutboundPromotionCodeMap: j } = (0, x.y7)();
-    if (!C) return (0, i.jsx)(n.y, {});
-    let E = m?.getModalSubtitle?.(),
-        b = m?.getModalTitle() ?? t,
-        R = m?.showSectionHeaders !== !1,
-        S = R ? { recurring: _.intl.string(T.default["9Y2p6p"]), oneTime: _.intl.string(T.default.Wm58LR) } : void 0,
+        { promotionsLoaded: j, claimedOutboundPromotionCodeMap: b } = (0, x.y7)();
+    if (!j) return (0, s.jsx)(n.y, {});
+    let C = m?.getModalSubtitle?.(),
+        E = m?.getModalTitle() ?? t,
+        T = m?.showSectionHeaders !== !1,
+        S = T ? { recurring: v.intl.string(R.default["9Y2p6p"]), oneTime: v.intl.string(R.default.Wm58LR) } : void 0,
         y = m?.getModalTeaser?.(),
-        D = (0, i.jsx)("div", {
-            className: v.kR,
+        D = (0, s.jsx)("div", {
+            className: I.kR,
             children: A.map((e) => {
-                let t = P(e, j[e.id] ?? null, g),
-                    s = m?.outboundConfigs[e.outboundTitle];
-                return (0, i.jsx)(
+                let t = P(e, b[e.id] ?? null, g),
+                    i = m?.outboundConfigs[e.outboundTitle];
+                return (0, s.jsx)(
                     h,
                     {
                         promotion: t,
-                        claimButtonPlacement: s?.claimButtonPlacement,
+                        claimButtonPlacement: i?.claimButtonPlacement,
                         analyticsLocations: [d.A.THIRD_PARTY_PROMOTIONS_MODAL],
                     },
                     e.id,
                 );
             }),
         });
-    return (0, i.jsx)(a.Modal, {
-        title: b,
-        subtitle: E,
+    return (0, s.jsx)(a.Modal, {
+        title: E,
+        subtitle: C,
         actions: [],
-        transitionState: s,
+        transitionState: i,
         onClose: o,
-        children: (0, i.jsxs)("div", {
-            className: v.kL,
+        children: (0, s.jsxs)("div", {
+            className: I.kL,
             children: [
                 N.length > 0 &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, s.jsxs)(s.Fragment, {
                         children: [
                             null != S &&
-                                (0, i.jsx)(r.E, {
+                                (0, s.jsx)(l.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
                                     children: S.recurring,
                                 }),
-                            (0, i.jsx)("div", {
-                                className: v.kR,
+                            (0, s.jsx)("div", {
+                                className: I.kR,
                                 children: N.map((e) => {
                                     var t;
-                                    return (0, i.jsx)(
+                                    return (0, s.jsx)(
                                         p.wx,
                                         {
                                             recurrence:
-                                                ((t = j[e.id] ?? null),
+                                                ((t = b[e.id] ?? null),
                                                 { ...P(e, t, g), asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "" }),
                                             showPartnerImage: !0,
                                             claimButtonPlacement: p.u5.FOOTER,
-                                            footerContent: (0, i.jsx)(p.vw, {}),
+                                            footerContent: (0, s.jsx)(p.vw, {}),
                                             analyticsLocations: [d.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                         },
                                         e.id,
@@ -167,12 +167,12 @@ function S(e) {
                         ],
                     }),
                 A.length > 0 &&
-                    (R
-                        ? (0, i.jsxs)("div", {
-                              className: v.E7,
+                    (T
+                        ? (0, s.jsxs)("div", {
+                              className: I.E7,
                               children: [
                                   null != S &&
-                                      (0, i.jsx)(r.E, {
+                                      (0, s.jsx)(l.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
                                           children: S.oneTime,
@@ -182,21 +182,21 @@ function S(e) {
                           })
                         : D),
                 null != y &&
-                    (0, i.jsxs)("div", {
-                        className: v.ar,
+                    (0, s.jsxs)("div", {
+                        className: I.ar,
                         children: [
-                            (0, i.jsxs)("div", {
-                                className: v.Uv,
+                            (0, s.jsxs)("div", {
+                                className: I.Uv,
                                 children: [
-                                    (0, i.jsx)(l.t, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                                    (0, i.jsx)(r.E, {
+                                    (0, s.jsx)(r.t, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                                    (0, s.jsx)(l.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
                                         children: y.title,
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: y.body }),
+                            (0, s.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: y.body }),
                         ],
                     }),
             ],
@@ -205,10 +205,10 @@ function S(e) {
 }
 function y(e) {
     let { partnerId: t, analyticsLocations: n } = e;
-    m.default.track(b.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: n }),
+    m.default.track(E.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: n }),
         g.Ay.fetchActivePromotions(),
         (0, o.openModalLazy)(async () => {
-            let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(s.bind(s, 672787));
-            return (s) => (0, i.jsx)(e, { ...s, partnerId: t });
+            let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(i.bind(i, 672787));
+            return (i) => (0, s.jsx)(e, { ...i, partnerId: t });
         });
 }

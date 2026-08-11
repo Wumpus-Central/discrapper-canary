@@ -3,6 +3,7 @@ n.r(t),
     n.d(t, {
         BADGE_CARD_ID: () => i,
         CALL_OF_DUTY_3PP_CARD_ID: () => v,
+        CALL_OF_DUTY_3PP_EXPIRED_CARD_ID: () => b,
         CLIENT_THEMES_CARD_ID: () => r,
         CUSTOM_APP_ICONS_CARD_ID: () => a,
         CUSTOM_SOUNDS_CARD_ID: () => s,
@@ -57,4 +58,5 @@ let i = "badge",
     L = "monthlyToYearlyUpsell",
     D = "xgppHero",
     y = "xgppPerk",
-    v = "callOfDuty3PP";
+    v = "callOfDuty3PP",
+    b = "callOfDuty3PPExpired";
