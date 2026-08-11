@@ -1815,8 +1815,8 @@ function il(e) {
 var io = n(347951),
     id = n(478437),
     ic = n(811024),
-    iu = n(508654),
-    i_ = n(233993),
+    iu = n(890615),
+    i_ = n(508654),
     iE = n(446600),
     iA = n(95701),
     ih = n(280450);
@@ -1836,7 +1836,7 @@ function iT(e, t) {
 function im(e) {
     let t = (0, E.bG)([ei.Ay], () => ei.Ay.isMuted(e)),
         n = ip("useGuildMediaState"),
-        i = (0, iu.BP)(e),
+        i = (0, i_.BP)(e),
         r = (0, E.yK)([G.Ay, tl.A], () =>
             G.Ay.getEmbeddedActivitiesForGuild(e).filter((e) => {
                 var t, n;
@@ -1911,8 +1911,8 @@ function im(e) {
                 isCurrentUserConnected: !1,
             };
         let p = $.default.keys(iE.A.getStageInstancesByGuild(e)).some((e) => {
-                let t = W.A.getChannel(e);
-                return null != t && et.A.can(i_.Gk, t);
+                let t = W.A.getBasicChannel(e);
+                return null != t && (0, iu.A)(t, et.A);
             }),
             T = d && (W.A.getChannel(a)?.isGuildStageVoice() ?? !1),
             m = !!d && null != j.A.getActiveStreamForUser(u, e),

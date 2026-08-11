@@ -246,9 +246,9 @@ function eR(e) {
               },
           });
 }
-var eL = n(378570),
-    eD = n(790535),
-    ey = n(233993),
+var eL = n(890615),
+    eD = n(378570),
+    ey = n(790535),
     ev = n(734057),
     eb = n(576705),
     eM = n(977997);
@@ -258,9 +258,11 @@ function eP(e) {
         s = a === ea.d.MODAL_V2,
         { channelId: l, guildId: o } = (0, O.UW)(t) ?? {},
         d = (0, P.bG)([eM.A], () => null != l && eM.A.isInChannel(l), [l]),
-        c = (0, P.bG)([ev.A], () => (null != l ? ev.A.getChannel(l) : null), [l]),
-        u = (0, P.bG)([eb.A], () => null != c && eb.A.can(ey.Gk, c), [c]);
-    return (0, O.Cy)(t) && u && null != o && null != l
+        c = (0, P.bG)([ev.A, eb.A], () => {
+            let e = ev.A.getBasicChannel(l);
+            return null != e && (0, eL.A)(e, eb.A);
+        }, [l]);
+    return (0, O.Cy)(t) && c && null != o && null != l
         ? (0, i.jsx)(K.FD, {
               text: q.intl.string(q.t.ZYO5OK),
               fullWidth: !s,
@@ -270,8 +272,8 @@ function eP(e) {
                       null != l &&
                       (e.stopPropagation(),
                       n?.({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
-                      eD.CH(o, l),
-                      (0, eL.iN)(l),
+                      ey.CH(o, l),
+                      (0, eD.iN)(l),
                       r?.());
               },
           })
