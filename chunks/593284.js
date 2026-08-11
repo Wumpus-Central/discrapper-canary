@@ -25,8 +25,8 @@ var i = n(477900),
     O = n(676608),
     R = n(342296),
     L = n(260509),
-    y = n(734057),
-    D = n(696451),
+    D = n(734057),
+    y = n(696451),
     v = n(317525),
     b = n(71393),
     M = n(287809),
@@ -39,7 +39,7 @@ function x(e) {
         d = r.useRef(null),
         c = (0, o.bG)([b.A], () => b.A.getGuild(a)?.ownerId, [a]),
         u = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
-        _ = (0, o.bG)([y.A], () => y.A.getChannel(s), [s]);
+        _ = (0, o.bG)([D.A], () => D.A.getChannel(s), [s]);
     return null == u || null == _
         ? null
         : (0, i.jsx)(
@@ -82,45 +82,45 @@ function x(e) {
                                           n.e("93103"),
                                           n.e("93190"),
                                           n.e("34552"),
-                                          n.e("21921"),
                                           n.e("8757"),
-                                          n.e("76418"),
+                                          n.e("21921"),
                                           n.e("71210"),
-                                          n.e("85968"),
                                           n.e("89673"),
-                                          n.e("66495"),
+                                          n.e("85968"),
+                                          n.e("76418"),
                                           n.e("68403"),
                                           n.e("88342"),
+                                          n.e("66495"),
                                           n.e("29787"),
-                                          n.e("89421"),
-                                          n.e("98965"),
                                           n.e("82073"),
                                           n.e("97558"),
+                                          n.e("89421"),
+                                          n.e("98965"),
+                                          n.e("91994"),
                                           n.e("54625"),
                                           n.e("35027"),
-                                          n.e("71133"),
-                                          n.e("28662"),
-                                          n.e("91994"),
+                                          n.e("93514"),
                                           n.e("76665"),
-                                          n.e("61268"),
+                                          n.e("28662"),
                                           n.e("35313"),
-                                          n.e("39171"),
+                                          n.e("61268"),
                                           n.e("36564"),
-                                          n.e("52229"),
-                                          n.e("24198"),
                                           n.e("45996"),
+                                          n.e("39171"),
+                                          n.e("52229"),
                                           n.e("792"),
-                                          n.e("56753"),
+                                          n.e("24198"),
                                           n.e("92822"),
                                           n.e("23427"),
-                                          n.e("49145"),
                                           n.e("29422"),
+                                          n.e("56753"),
                                           n.e("9291"),
+                                          n.e("49145"),
+                                          n.e("7059"),
                                           n.e("65826"),
                                           n.e("49520"),
                                           n.e("14461"),
                                           n.e("93014"),
-                                          n.e("7059"),
                                           n.e("25486"),
                                           n.e("42204"),
                                           n.e("22261"),
@@ -168,8 +168,8 @@ function k(e) {
             let e = b.A.getGuild(a);
             return null == e ? null : (0, L.af)(e);
         }, [a]),
-        A = (0, o.yK)([D.Ay, M.default], () => {
-            let e = D.Ay.getMembers(a),
+        A = (0, o.yK)([y.Ay, M.default], () => {
+            let e = y.Ay.getMembers(a),
                 t = null == n || n === E ? e : e.filter((e) => e.roles.includes(n));
             return s()(t)
                 .filter((e) => null != M.default.getUser(e.userId))
@@ -222,10 +222,10 @@ function F(e) {
         g = m && "dot" === A,
         R = m && "username" === A,
         L = T && null != h ? h.colorStrings : null,
-        y = r.useRef(null);
-    function D(e) {
+        D = r.useRef(null);
+    function y(e) {
         return (0, i.jsxs)(N.A, {
-            ref: y,
+            ref: D,
             className: w.Dz,
             color: R ? h.color : null,
             roleColors: R ? L : null,
@@ -245,17 +245,17 @@ function F(e) {
         });
     }
     return c || null == n || null == s || (null == t && "@everyone" !== a)
-        ? (0, i.jsx)(p.f5, { value: E, children: D() })
+        ? (0, i.jsx)(p.f5, { value: E, children: y() })
         : (0, i.jsx)(p.f5, {
               value: E,
               children: (0, i.jsx)(_.Y, {
-                  targetElementRef: y,
+                  targetElementRef: D,
                   preload: async () => {
                       null != t && (await (0, S.a)(s, t));
                   },
                   renderPopout: (e) => (0, i.jsx)(k, { guildId: s, channelId: n, roleId: t, popoutProps: e }),
                   position: "right",
-                  children: D,
+                  children: y,
               }),
           });
 }

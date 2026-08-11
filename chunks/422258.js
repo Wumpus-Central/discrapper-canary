@@ -1,16 +1,17 @@
 "use strict";
 n.d(t, {
-    JD: () => W,
+    JD: () => Y,
     S_: () => x,
-    _2: () => H,
-    fv: () => B,
+    _2: () => j,
+    fv: () => H,
     i_: () => k,
-    kG: () => $,
+    kG: () => z,
+    nR: () => B,
     od: () => V,
-    tV: () => K,
-    uM: () => Y,
+    tV: () => $,
+    uM: () => K,
     w6: () => F,
-    zN: () => j,
+    zN: () => W,
 });
 var i = n(435558),
     r = n.n(i),
@@ -193,10 +194,17 @@ async function V(e, t) {
         null != p.A.getFavorite(i) ? i : null
     );
 }
-function B(e) {
+async function B(e) {
+    let { channelIds: t, categoryName: n, source: i } = e,
+        r = t.filter((e) => !p.A.isFavorite(e));
+    if (0 === r.length) return;
+    let a = p.A.getCategoryIdByName(n) ?? (await V(n, i));
+    null != a && x({ channelIds: r, parentId: a, source: i });
+}
+function H(e) {
     k(e);
 }
-function H(e, t) {
+function j(e, t) {
     u.wc.updateAsync(
         "favorites",
         (n) => {
@@ -212,7 +220,7 @@ function H(e, t) {
         U,
     );
 }
-function j(e) {
+function W(e) {
     0 !== e.length &&
         u.wc.updateAsync(
             "favorites",
@@ -229,7 +237,7 @@ function j(e) {
             U,
         );
 }
-function W(e, t) {
+function Y(e, t) {
     u.wc.updateAsync(
         "favorites",
         (n) => {
@@ -239,7 +247,7 @@ function W(e, t) {
         U,
     );
 }
-function Y() {
+function K() {
     for (let e of (u.wc.updateAsync(
         "favorites",
         (e) => {
@@ -253,7 +261,7 @@ function Y() {
     T.dt))
         (0, u.xB)(e);
 }
-function K(e) {
+function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "settings_page";
     u.wc.updateAsync(
         "favorites",
@@ -265,6 +273,6 @@ function K(e) {
         U,
     );
 }
-function $(e) {
-    K(e, "settings_page"), !e && (0, g.ai)(I.A.getGuildId()) && (0, c.pX)(R.BVt.ME);
+function z(e) {
+    $(e, "settings_page"), !e && (0, g.ai)(I.A.getGuildId()) && (0, c.pX)(R.BVt.ME);
 }

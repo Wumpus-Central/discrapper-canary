@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(816578),
     eo = n(110234),
-    ed = n(293246),
+    ed = n(505643),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -1122,8 +1122,8 @@ function e$(e) {
 var e0 = n(417098),
     e1 = n(55619),
     e2 = n(734066),
-    e3 = n(200542),
-    e5 = n(351906),
+    e5 = n(200542),
+    e3 = n(351906),
     e4 = n(377802),
     e6 = n(348858),
     e8 = n(523875),
@@ -1247,7 +1247,7 @@ var tC = n(414405),
     tw = n(548118),
     tN = n(999751),
     t_ = n(209932),
-    tR = n(333216),
+    tR = n(484036),
     tO = n(167579),
     tM = n(704877),
     tk = n(173660),
@@ -1791,7 +1791,7 @@ function t2(e) {
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
         s = (0, y.bG)([tU.A], () => null != n && tU.A.hasVideo(n), [n]),
         l = (0, d.Mn)("VoiceConnectionStatus"),
-        o = (0, y.bG)([e5.A], () => e5.A.hidePersonalInformation);
+        o = (0, y.bG)([e3.A], () => e3.A.hidePersonalInformation);
     return (
         null != n &&
         null != t &&
@@ -1810,7 +1810,7 @@ function t2(e) {
         })
     );
 }
-function t3(e) {
+function t5(e) {
     let t,
         n = c.useRef(null),
         i = (0, tp.Et)(),
@@ -1855,14 +1855,14 @@ function t3(e) {
         })
     );
 }
-var t5 = n(145973);
+var t3 = n(145973);
 let t4 = c.memo(function () {
-    let e = (0, y.bG)([e5.A], () => e5.A.enabled),
+    let e = (0, y.bG)([e3.A], () => e3.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
     return e && t
         ? (0, r.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t5.$X,
+              className: t3.$X,
               children: [
                   (0, r.jsx)(E.E, {
                       tag: "span",
@@ -1871,7 +1871,7 @@ let t4 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
-                      className: t5.lI,
+                      className: t3.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1883,19 +1883,19 @@ let t4 = c.memo(function () {
 function t6(e) {
     let { locked: t } = e,
         n = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
-        { enableOverlayEntrypoint: i } = e3.A.useConfig({ location: "QuickActionsWidget" }),
+        { enableOverlayEntrypoint: i } = e5.A.useConfig({ location: "QuickActionsWidget" }),
         s = (0, e2.sw)(),
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
-        className: m()({ [t5.KE]: !0, [t5.xt]: t }),
+        className: m()({ [t3.KE]: !0, [t3.xt]: t }),
         children: [
             (0, r.jsx)(t4, {}),
             (0, r.jsxs)("div", {
-                className: t5.Pm,
+                className: t3.Pm,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: t5.qi,
+                        className: t3.qi,
                         children: [
                             (0, r.jsx)(tB, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tq, { voiceChannel: l, locked: t }),
@@ -1903,20 +1903,20 @@ function t6(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: t5.qi,
+                        className: t3.qi,
                         children: [
                             (0, r.jsx)(tQ, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tJ, { voiceChannel: l, locked: t }),
-                            i && s && (0, r.jsx)(t3, { voiceChannel: l, locked: t }),
+                            i && s && (0, r.jsx)(t5, { voiceChannel: l, locked: t }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: m()(t5.qi, a && t5.SV),
+                        className: m()(t3.qi, a && t3.SV),
                         children: (0, r.jsx)(t$, { voiceChannel: l, locked: t }),
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t5.Pm, children: (0, r.jsx)(t2, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t3.Pm, children: (0, r.jsx)(t2, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -2543,10 +2543,10 @@ let nJ = c.memo(function (e) {
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
-                                    n.e("8757"),
                                     n.e("38730"),
-                                    n.e("85968"),
+                                    n.e("8757"),
                                     n.e("89673"),
+                                    n.e("85968"),
                                     n.e("29787"),
                                     n.e("82073"),
                                     n.e("97558"),
@@ -2561,8 +2561,8 @@ let nJ = c.memo(function (e) {
                                     n.e("9291"),
                                     n.e("7059"),
                                     n.e("72883"),
-                                    n.e("81609"),
                                     n.e("98199"),
+                                    n.e("81609"),
                                     n.e("64464"),
                                     n.e("96443"),
                                     n.e("23490"),
@@ -2622,8 +2622,8 @@ let nJ = c.memo(function (e) {
                                     n.e("9004"),
                                     n.e("44058"),
                                     n.e("91377"),
-                                    n.e("81609"),
                                     n.e("56372"),
+                                    n.e("81609"),
                                     n.e("54036"),
                                 ]).then(n.bind(n, 813407));
                                 return (n) =>
@@ -2678,8 +2678,8 @@ var n$ = n(148494),
     n0 = n(373204),
     n1 = n(355622),
     n2 = n(232835),
-    n3 = n(576705),
-    n5 = n(625494),
+    n5 = n(576705),
+    n3 = n(625494),
     n4 = n(973196),
     n6 = n(905816);
 function n8(e) {
@@ -2706,7 +2706,7 @@ function n8(e) {
     return ((t = d?.id ?? null),
     (n = c.useRef(new Set())),
     (i = (0, y.bG)([n2.A], () => (null != t ? n2.A.getMessages(t) : null), [t])),
-    (s = (0, y.bG)([n3.A], () => n3.A.can(em.xBc.READ_MESSAGE_HISTORY, d), [d])),
+    (s = (0, y.bG)([n5.A], () => n5.A.can(em.xBc.READ_MESSAGE_HISTORY, d), [d])),
     (l = i?.first() ?? null),
     (a = null != d && null == l && null != i && !i.loadingMore && !i.ready && !i.hasFetched && s),
     c.useEffect(() => {
@@ -2715,7 +2715,7 @@ function n8(e) {
     c.useEffect(() => {
         if (null == o || m) return;
         let e = u.requestAnimationFrame(() => {
-            n5._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n3._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => u.cancelAnimationFrame(e);
     }, [o, u, m]),
@@ -2885,8 +2885,8 @@ let io = c.memo(function (e) {
                                 n.e("46652"),
                                 n.e("93190"),
                                 n.e("8757"),
-                                n.e("85968"),
                                 n.e("89673"),
+                                n.e("85968"),
                                 n.e("82073"),
                                 n.e("97558"),
                                 n.e("91994"),

@@ -50,26 +50,30 @@ function P(e) {
     return r;
 }
 function U() {
-    let { withUpsellNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { hasAccess: t, canUpsellFavoriteLimit: n } = (0, C.TW)("FavoritesGuildChannelList"),
-        r = e && n,
-        [s, l] = i.useState(() => w(void 0, { withUpsellNotice: r })),
-        d = o.A.isConnected(),
-        u = i.useMemo(() => w({}), []);
+    let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        { hasAccess: t } = (0, C.TW)("FavoritesGuildChannelList"),
+        [n, r] = i.useState(() => w(void 0, { withSuggestionsNotice: e })),
+        s = o.A.isConnected(),
+        l = i.useMemo(() => w({}), []);
     i.useEffect(() => {
-        function e() {
-            l(w(void 0, { withUpsellNotice: r }));
+        function t() {
+            r(w(void 0, { withSuggestionsNotice: e }));
         }
-        e();
-        let t = a().throttle(e, 100);
-        return M.forEach((e) => e.addChangeListener(t)), () => M.forEach((e) => e.removeChangeListener(t));
-    }, [r]),
+        t();
+        let n = a().throttle(t, 100);
+        return (
+            M.forEach((e) => e.addChangeListener(n)),
+            () => {
+                n.cancel(), M.forEach((e) => e.removeChangeListener(n));
+            }
+        );
+    }, [e]),
         i.useEffect(() => {
-            if (t && d) {
+            if (t && s) {
                 let e;
                 0 === (e = P({ limit: y.lj, includeLoading: !1 })).length ? Promise.resolve() : E.A.loadThreadsBulk(e);
             }
-        }, [t, d]),
+        }, [t, s]),
         i.useEffect(
             () => () => {
                 if ((0, L.ai)(O.A.getGuildId())) return;
@@ -80,9 +84,9 @@ function U() {
             },
             [],
         );
-    let _ = t ? s : u,
-        A = t && P({ limit: 1, includeLoading: !0 }).length > 0,
-        h = (function (e) {
+    let d = t ? n : l,
+        u = t && P({ limit: 1, includeLoading: !0 }).length > 0,
+        _ = (function (e) {
             if (e.getSections().length > c.TF) return !1;
             let t = !1;
             return (
@@ -91,11 +95,11 @@ function U() {
                 }),
                 !t
             );
-        })(_);
-    return { guildChannels: _, shouldShowEmptyState: h && !A, hasNoChannels: h };
+        })(d);
+    return { guildChannels: d, shouldShowEmptyState: _ && !u, hasNoChannels: _ };
 }
 function w(e) {
-    let { withUpsellNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
         i = g.Ay.isGuildCollapsed(y.Vc),
         r = m.Ay.getChannelId(),
@@ -194,8 +198,9 @@ function w(e) {
         P = 0;
     for (let e of [L, ...M]) for (let t of ((e.position = ++P), e.channelList)) t.position = ++P;
     let U = { isEmpty: () => !0, getRows: () => [], getRow: () => null },
-        w = t ? [v.r.FAVORITES_UPSELL] : [],
-        G = { isEmpty: () => 0 === w.length, getRows: () => w, getRow: (e) => w[e] ?? null };
+        w = [];
+    t && w.push(v.r.FAVORITES_SUGGESTIONS);
+    let G = { isEmpty: () => 0 === w.length, getRows: () => w, getRow: (e) => w[e] ?? null };
     return {
         id: y.Vc,
         hideMutedChannels: i,

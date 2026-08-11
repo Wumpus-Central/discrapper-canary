@@ -31,5 +31,5 @@ var i,
         (r.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
         (r.GAME_CLAIM = "game-claim"),
         (r.APPLICATION_ACCOUNT_LINK = "application-account-link"),
-        (r.FAVORITES_UPSELL = "favorites-upsell"),
+        (r.FAVORITES_SUGGESTIONS = "favorites-suggestions"),
         r);

@@ -1,0 +1,37 @@
+.threadSubLabel__62280 {
+    align-items: center;
+    display: flex
+}
+
+.subLabelIcon__62280 {
+    height: 12px;
+    margin-inline-end: 2px;
+    width: 12px
+}
+
+.subLabelSeparator__62280 {
+    margin: 0 4px
+}
+
+.warningIcon__62280 {
+    color: var(--text-feedback-warning)
+}
+
+.noResults__62280 {
+    margin: 16px 24px;
+    text-align: center
+}
+
+.noResultsImg__62280 {
+    width: 200px
+}
+
+.messageInput__62280 {
+    max-height: 88px;
+    padding-inline-start: 16px;
+    --custom-channel-textarea-text-area-height: 38px
+}
+
+.slowmodeWarning__62280 {
+    margin-top: 12px
+}
