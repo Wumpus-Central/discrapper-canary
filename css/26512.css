@@ -1576,10 +1576,11 @@
 
 .option__56a50 {
     align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
     cursor: pointer;
     display: grid;
     flex-shrink: 1;
-    gap: var(--space-4);
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr
 }
