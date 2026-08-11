@@ -229,10 +229,36 @@
 }
 
 .header__17b8c {
-    align-items: center;
-    display: flex;
     gap: var(--space-4);
     height: var(--space-24)
+}
+
+.header__17b8c,
+.nitroUpsellContainer__17b8c {
+    align-items: center;
+    display: flex
+}
+
+.nitroUpsellContainer__17b8c {
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    flex-direction: row;
+    gap: var(--space-16);
+    isolation: isolate;
+    overflow: hidden;
+    padding: var(--space-12);
+    position: relative
+}
+
+.nitroUpsellBackground__17b8c {
+    inset: 0;
+    position: absolute;
+    z-index: -1
+}
+
+.nitroUpsellText__17b8c {
+    flex: 1;
+    min-width: 0
 }
 
 .divider__17b8c {

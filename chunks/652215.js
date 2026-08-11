@@ -2664,6 +2664,7 @@ var iQ =
         (ed.MESSAGE_LENGTH_UPSELL_MODAL = "Message Length Upsell Modal"),
         (ed.USER_PROFILE = "User Profile"),
         (ed.USER_PROFILE_MUTUAL_FRIENDS = "User Profile Mutual Friends"),
+        (ed.PERSONAL_WIDGET = "Personal Widget"),
         (ed.INBOX = "Inbox"),
         (ed.CHANNEL = "Channel"),
         (ed.MANAGE_ACCOUNTS_MODAL = "Manage Accounts Modal"),
