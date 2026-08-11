@@ -2268,7 +2268,7 @@ let iB = { analyticsSource: { page: eC.liQ.GUILD_CHANNEL, section: eC.JJy.CHANNE
 function iH(e, t) {
     (0, tn.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("94614"),
+            n.e("50614"),
             n.e("38108"),
             n.e("31668"),
             n.e("35285"),
@@ -2450,8 +2450,7 @@ function iH(e, t) {
             n.e("41295"),
             n.e("69960"),
             n.e("46148"),
-            n.e("91922"),
-            n.e("79414"),
+            n.e("94848"),
             n.e("64488"),
             n.e("91109"),
             n.e("61439"),

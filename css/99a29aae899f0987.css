@@ -1,0 +1,57 @@
+.stackedIconsContainer__99961 {
+    align-items: center;
+    display: flex;
+    isolation: isolate;
+    justify-content: flex-end;
+    position: relative;
+    width: 56px
+}
+
+.frontIcon__99961 {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2
+}
+
+.backIcon__99961 {
+    flex-shrink: 0;
+    inset-inline-start: 0;
+    opacity: .6;
+    position: absolute;
+    top: var(--space-4);
+    z-index: 1
+}
+
+.frame__99961 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    overflow: hidden
+}
+
+.frameRounded__99961 {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-md)
+}
+
+.frameRounded__99961:after {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.squircleIconWrapper__99961 {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    display: flex;
+    justify-content: center
+}
+
+.squircleBorder__99961 {
+    inset: 0;
+    overflow: visible;
+    position: absolute
+}
