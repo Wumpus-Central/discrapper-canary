@@ -12,6 +12,7 @@ class u extends i.A {
     actions = {
         VOICE_STATE_UPDATES: (e) => this.handleVoiceStateUpdates(e),
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: (e) => this.handleEmbeddedActivityLaunchSuccess(e),
+        CONNECTION_RESUMED: () => this.handleConnectionResumed(),
     };
     isExperimentEnabled(e, t) {
         return o.A.getCurrentConfig({ guildId: e, location: t }).enabled;
@@ -35,6 +36,9 @@ class u extends i.A {
                 (d = i), (c = n);
             }
         }
+    }
+    handleConnectionResumed() {
+        null == d || null == c || (this.isExperimentEnabled(c, "CONNECTION_RESUMED") && (0, s.z5)(c, d));
     }
     handleEmbeddedActivityLaunchSuccess(e) {
         if (null == e.channelId) return;
