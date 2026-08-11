@@ -5742,11 +5742,12 @@ var ob = n(9994),
 function oU(e) {
     let { invite: t, isMemberOfGuild: n, message: i, onTransitionToInviteChannel: a, onAcceptInstantInvite: o } = e,
         c = s.useRef(null),
-        [u, m] = s.useState(!0),
-        [h, g] = s.useState(!1),
-        p = t.state === K.elq.ACCEPTING,
-        A = (0, d.bG)([aH.Ay], () => aH.Ay.useReducedMotion),
-        { analyticsLocations: E } = (0, f.Ay)(x.A.INVITE_EMBED);
+        u = s.useId(),
+        [m, h] = s.useState(!0),
+        [g, p] = s.useState(!1),
+        A = t.state === K.elq.ACCEPTING,
+        E = (0, d.bG)([aH.Ay], () => aH.Ay.useReducedMotion),
+        { analyticsLocations: _ } = (0, f.Ay)(x.A.INVITE_EMBED);
     (0, e3.A)({
         name: e2.ImpressionNames.INVITE_EMBED,
         type: e2.ImpressionTypes.VIEW,
@@ -5757,87 +5758,91 @@ function oU(e) {
             invite_instance_id: (0, lm._U)(t.code, i.id),
             invite_channel_type: t.channel?.type,
             embed_type: "guild_invite_v2",
-            location_stack: E,
+            location_stack: _,
         },
     }),
         s.useLayoutEffect(() => {
-            g((c.current?.clientHeight ?? 0) > 292);
-        }, [g]);
-    let _ = (0, ob.oO)(t),
-        C = s.useCallback(() => {
-            !h || (u && m(!1));
-        }, [u, h]),
+            p((c.current?.clientHeight ?? 0) > 292);
+        }, [p]);
+    let C = (0, ob.oO)(t),
         I = s.useCallback(() => {
-            !h || u || m(!0);
-        }, [u, h]),
-        v = s.useMemo(
+            !g || (m && h(!1));
+        }, [m, g]),
+        v = s.useCallback(() => {
+            !g || m || h(!0);
+        }, [m, g]),
+        N = s.useMemo(
             () =>
-                h && c.current?.clientHeight != null
+                g && c.current?.clientHeight != null
                     ? {
-                          height: u ? 292 : c.current.clientHeight + 36 + 48,
-                          transition: A ? void 0 : "height 0.2s ease",
+                          height: m ? 292 : c.current.clientHeight + 36 + 48,
+                          transition: E ? void 0 : "height 0.2s ease",
                       }
                     : {},
-            [u, h, A],
+            [m, g, E],
         );
-    return null == _
-        ? (0, l.jsx)(oc, {})
-        : (0, l.jsxs)(tH.s, {
-              className: r()(oD.Gg, { [oD.vk]: h && u }),
-              onClick: C,
-              style: v,
-              "aria-label": W.intl.string(W.t.dcl9MQ),
-              children: [
-                  (0, l.jsxs)("div", {
-                      className: oD.uY,
-                      ref: c,
-                      children: [
-                          (0, l.jsx)(oO.J$, { profile: _, className: oD.vK }),
-                          (0, l.jsx)(oO.CG, { profile: _ }),
-                          (0, l.jsx)(ok.A, { profile: _ }),
-                          (0, l.jsx)(oL.P, { profile: _, className: oD.rb }),
-                          (0, l.jsx)(oP.A, {
-                              guild: null != t.guild ? (0, oa.DY)(t.guild) : null,
-                              roles: t.roles,
-                              className: oD.Ei,
-                          }),
-                      ],
-                  }),
-                  h && !u
-                      ? (0, l.jsx)("div", {
-                            className: oD.Se,
-                            children: (0, l.jsx)(sd.Q, {
-                                textVariant: "text-xs/medium",
-                                variant: "secondary",
-                                size: "sm",
-                                onClick: I,
-                                text: W.intl.string(W.t.xdCLeM),
+    if (null == C) return (0, l.jsx)(oc, {});
+    let j = (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsxs)("div", {
+                className: oD.uY,
+                ref: c,
+                children: [
+                    (0, l.jsx)(oO.J$, { profile: C, className: oD.vK }),
+                    (0, l.jsx)(oO.CG, { profile: C }),
+                    (0, l.jsx)(ok.A, { profile: C, disableGuildNameClick: !g, guildNameId: u }),
+                    (0, l.jsx)(oL.P, { profile: C, className: oD.rb }),
+                    (0, l.jsx)(oP.A, {
+                        guild: null != t.guild ? (0, oa.DY)(t.guild) : null,
+                        roles: t.roles,
+                        className: oD.Ei,
+                    }),
+                ],
+            }),
+            g && !m
+                ? (0, l.jsx)("div", {
+                      className: oD.Se,
+                      children: (0, l.jsx)(sd.Q, {
+                          textVariant: "text-xs/medium",
+                          variant: "secondary",
+                          size: "sm",
+                          onClick: v,
+                          text: W.intl.string(W.t.xdCLeM),
+                      }),
+                  })
+                : null,
+            (0, l.jsxs)("div", {
+                className: r()(oD.qr, { [oD.iK]: g }),
+                children: [
+                    g && m ? (0, l.jsx)("div", { className: oD.D7 }) : null,
+                    (0, l.jsx)("div", {
+                        className: r()(oD.z8, { [oD.it]: g && m }),
+                        children: (0, l.jsx)("div", {
+                            className: oD.UD,
+                            children: (0, l.jsx)(oG, {
+                                invite: t,
+                                profile: C,
+                                isMemberOfGuild: n,
+                                message: i,
+                                submitting: A,
+                                onTransitionToInviteChannel: a,
+                                onAcceptInstantInvite: o,
                             }),
-                        })
-                      : null,
-                  (0, l.jsxs)("div", {
-                      className: r()(oD.qr, { [oD.iK]: h }),
-                      children: [
-                          h && u ? (0, l.jsx)("div", { className: oD.D7 }) : null,
-                          (0, l.jsx)("div", {
-                              className: r()(oD.z8, { [oD.it]: h && u }),
-                              children: (0, l.jsx)("div", {
-                                  className: oD.UD,
-                                  children: (0, l.jsx)(oG, {
-                                      invite: t,
-                                      profile: _,
-                                      isMemberOfGuild: n,
-                                      message: i,
-                                      submitting: p,
-                                      onTransitionToInviteChannel: a,
-                                      onAcceptInstantInvite: o,
-                                  }),
-                              }),
-                          }),
-                      ],
-                  }),
-              ],
-          });
+                        }),
+                    }),
+                ],
+            }),
+        ],
+    });
+    return g
+        ? (0, l.jsx)(tH.s, {
+              className: r()(oD.Gg, { [oD.vk]: m }),
+              onClick: I,
+              style: N,
+              "aria-label": W.intl.string(W.t.dcl9MQ),
+              children: j,
+          })
+        : (0, l.jsx)("div", { className: oD.Gg, role: "group", "aria-labelledby": u, children: j });
 }
 function oG(e) {
     let {
@@ -5879,15 +5884,18 @@ function oG(e) {
 function ow(e) {
     let t,
         n,
-        { author: i, banned: s } = e;
+        { author: i, banned: a } = e,
+        r = s.useId();
     return (
         (0, d.bG)([O.default], () => O.default.getId()) === i.id
             ? ((n = W.intl.string(W.t.HfUzlI)), (t = W.intl.string(W.t.y7uT5j)))
-            : s
+            : a
               ? ((n = W.intl.string(W.t.OMfs8i)), (t = W.intl.string(W.t["57nBty"])))
               : ((n = W.intl.string(W.t.OMfs8i)), (t = W.intl.string(W.t["p/zTYn"]))),
         (0, l.jsxs)(i3.A, {
             className: ld.TV,
+            role: "group",
+            "aria-labelledby": r,
             children: [
                 (0, l.jsx)(p.E, {
                     variant: "text-sm/medium",
@@ -5904,6 +5912,7 @@ function ow(e) {
                             (0, l.jsx)(i3.A.Info, {
                                 expired: !0,
                                 title: W.intl.string(W.t["Jhx/ud"]),
+                                titleId: r,
                                 titleVariant: "heading-md/medium",
                                 children: t,
                             }),

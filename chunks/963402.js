@@ -5,8 +5,8 @@ var a = t(477900),
     n = t.n(s),
     r = t(17928),
     c = t(866665),
-    o = t(297264),
-    d = t(939249),
+    d = t(297264),
+    o = t(939249),
     m = t(834730),
     u = t(986268),
     x = t(534400),
@@ -14,7 +14,7 @@ var a = t(477900),
     g = t(773669),
     h = t(280450),
     j = t(696451),
-    f = t(860689),
+    f = t(149790),
     b = t(935208),
     p = t(107123);
 let N = (0, t(945810).mj)({
@@ -26,33 +26,35 @@ let N = (0, t(945810).mj)({
 var A = t(375708),
     k = t(238525);
 function y(e) {
-    let { profile: l, disableGuildNameClick: t } = e,
-        s = l.id,
-        n = (0, r.bG)([j.Ay, h.default], () => j.Ay.getMember(s, h.default.getId())?.joinedAt != null, [s]),
-        m = i.useCallback(
+    let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,
+        n = l.id,
+        m = (0, r.bG)([j.Ay, h.default], () => j.Ay.getMember(n, h.default.getId())?.joinedAt != null, [n]),
+        u = i.useCallback(
             (e) => {
-                n && (e.stopPropagation(), (0, v.u)(l.id));
+                m && (e.stopPropagation(), (0, v.u)(l.id));
             },
-            [n, l.id],
+            [m, l.id],
         );
-    return !n || t
+    return !m || t
         ? (0, a.jsx)(c.m, {
               text: l.name,
               overflowOnly: !0,
-              children: (0, a.jsx)(o.D, {
+              children: (0, a.jsx)(d.D, {
+                  id: s,
                   className: k.J5,
                   variant: "heading-md/semibold",
                   color: "text-strong",
                   children: l.name,
               }),
           })
-        : (0, a.jsx)(d.D, {
+        : (0, a.jsx)(o.D, {
               className: k.YS,
-              onClick: m,
+              onClick: u,
               children: (0, a.jsx)(c.m, {
                   text: l.name,
                   overflowOnly: !0,
-                  children: (0, a.jsx)(o.D, {
+                  children: (0, a.jsx)(d.D, {
+                      id: s,
                       className: k.J5,
                       variant: "heading-md/semibold",
                       color: "text-strong",
@@ -104,10 +106,10 @@ function C(e) {
     });
 }
 function _(e) {
-    let { profile: l, disableGuildNameClick: t } = e,
-        s = (0, r.bG)([g.default], () => g.default.locale),
-        n = (0, p.P)(b.default.extractTimestamp(l.id), s),
-        c = i.useMemo(() => {
+    let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,
+        n = (0, r.bG)([g.default], () => g.default.locale),
+        c = (0, p.P)(b.default.extractTimestamp(l.id), n),
+        d = i.useMemo(() => {
             let e = (0, f.b9)(l);
             return (0, a.jsx)(u.A, { guild: e, isBannerVisible: !1 });
         }, [l]);
@@ -117,8 +119,8 @@ function _(e) {
             (0, a.jsxs)("div", {
                 className: k.VW,
                 children: [
-                    (0, a.jsx)(y, { profile: l, disableGuildNameClick: t }),
-                    c,
+                    (0, a.jsx)(y, { profile: l, disableGuildNameClick: t, guildNameId: s }),
+                    d,
                     null != l.tag && "" !== l.tag && (0, a.jsx)(G, { profile: l }),
                 ],
             }),
@@ -128,7 +130,7 @@ function _(e) {
                 children: (0, a.jsx)(m.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: n }),
+                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: c }),
                 }),
             }),
         ],
