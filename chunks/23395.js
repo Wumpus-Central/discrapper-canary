@@ -19,7 +19,9 @@ function A(e) {
     async function T() {
         p(!0);
         try {
-            await (0, d.Eg)(t.scheduledMessageId, h.toISOString()), (0, u.kb)(), (0, o.closeModal)(E);
+            await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: h.toISOString() }),
+                (0, u.kb)(),
+                (0, o.closeModal)(E);
         } catch (e) {
             (0, u.xP)(e.message);
         } finally {

@@ -1,15 +1,16 @@
 "use strict";
 n.d(t, {
     CI: () => L,
-    Re: () => N,
     V0: () => m,
+    XM: () => N,
     c_: () => T,
     e0: () => R,
-    kM: () => C,
     kb: () => g,
     s: () => O,
+    tu: () => C,
     xP: () => S,
 }),
+    n(938796),
     n(321073);
 var i = n(477900),
     r = n(989349),
@@ -40,11 +41,21 @@ function g() {
 function S(e) {
     (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.slM6In, { error: e }), s.Ck.FAILURE));
 }
-function N() {
-    (0, E.Dc)({ message: p.intl.string(p.t["JF/LWn"]), icon: s.Ck.CLOCK });
+async function N(e) {
+    let { scheduledMessageId: t, content: n, flags: i } = e;
+    try {
+        await (0, h.Eg)({ scheduledMessageId: t, content: n, flags: i }), g();
+    } catch (e) {
+        S(e.message);
+    }
 }
-function C(e) {
-    (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.sUvyW3, { error: e }), s.Ck.FAILURE));
+async function C(e) {
+    try {
+        await (0, h.mk)(e), (0, E.Dc)({ message: p.intl.string(p.t["JF/LWn"]), icon: s.Ck.CLOCK });
+    } catch (e) {
+        var t;
+        (t = e.message), (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.sUvyW3, { error: t }), s.Ck.FAILURE));
+    }
 }
 function O(e) {
     let { channel: t } = e,

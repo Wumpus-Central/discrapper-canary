@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { f8: () => I, UF: () => A, dx: () => E, Sc: () => h, Lg: () => f }), n(938796);
+n.d(t, { f8: () => f, UF: () => A, dx: () => E, zs: () => h, Sc: () => I, Lg: () => p }), n(938796);
 var i = n(989349),
     r = n.n(i),
     a = n(665260),
@@ -18,18 +18,22 @@ var _ = n(652215);
 let E = new l.A("Scheduled Messages");
 function A(e) {
     let { content: t, flags: n } = e,
-        [i, r] = (0, o.A)(t);
+        [i, r] = (0, o.Ay)(t);
     return i ? [r, (0, a.UI)(n ?? 0, _.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
 }
-function h() {
+function h(e) {
+    let { content: t, flags: n } = e;
+    return (0, a.Lt)(n ?? 0, _.pr7.SUPPRESS_NOTIFICATIONS) ? `${o.f5} ${t}` : t;
+}
+function I() {
     let e = (0, s.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1),
         t = u.useConfig({ location: "useCanUseScheduledMessages" });
     return e || t;
 }
-function I(e) {
+function f(e) {
     return (c.default.getCurrentUser()?.isStaff() ?? !1) || u.getConfig({ location: e });
 }
-function f(e) {
+function p(e) {
     var t;
     return {
         userId: e.user_id,

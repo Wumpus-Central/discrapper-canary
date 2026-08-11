@@ -25,8 +25,8 @@ var i,
     O = n(232835),
     R = n(101392),
     L = n(927813),
-    y = n(935208),
-    D = n(292348),
+    D = n(935208),
+    y = n(292348),
     v = n(268761),
     b = n(406704),
     M = n(474078),
@@ -99,7 +99,7 @@ function H(e) {
                 f = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
             }
             let p = (0, v.Gl)(t),
-                m = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
+                m = N.A.getChannel(D.default.castMessageIdAsChannelId(n)),
                 g = await Y(t, [], void 0, () => {
                     let e = null != n ? U.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : U.Rsh.CHANNEL_THREADS(t.id);
                     return s.Bo.post({
@@ -118,7 +118,7 @@ function H(e) {
                     });
                 });
             if (g !== m) {
-                var S, O, R, L, D;
+                var S, O, R, L, y;
                 let n = C.A.getDraft(t.id, C.C.FirstThreadMessage),
                     i = n.trim();
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
@@ -130,8 +130,8 @@ function H(e) {
                         (O = e),
                         (R = r),
                         (L = A),
-                        null != (D = E) && null != L && L.length > 0
-                            ? D(S, L, O, R)
+                        null != (y = E) && null != L && L.length > 0
+                            ? y(S, L, O, R)
                             : null != R && R.length > 0
                               ? u.A.sendStickers(S.id, R, T.Ay.parse(S, O), { location: w.Hx.THREAD_CREATION })
                               : u.A.sendMessage(S.id, T.Ay.parse(S, O), void 0, { location: w.Hx.THREAD_CREATION }));
@@ -169,8 +169,8 @@ function W(e) {
                 N,
                 O,
                 R = 0,
-                [L, y] = (0, g.A)(e);
-            L && ((e = y), (R = (0, a.UI)(R, U.pr7.SUPPRESS_NOTIFICATIONS)));
+                [L, D] = (0, g.Ay)(e);
+            L && ((e = D), (R = (0, a.UI)(R, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let b = (0, v.Gl)(t, null),
                 M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
                 P = {
@@ -198,7 +198,7 @@ function W(e) {
             )
                 try {
                     let e = await d(I);
-                    (O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t)));
+                    (O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, y.OW)(e, t)));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
                     throw (

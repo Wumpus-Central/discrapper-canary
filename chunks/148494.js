@@ -899,7 +899,7 @@ ${a}`),
                     mediaMention: Y,
                 } = n,
                 K = n.flags ?? 0,
-                [$, q] = (0, ef.A)(l);
+                [$, q] = (0, ef.Ay)(l);
             $ && ((l = q), (K = (0, a.UI)(K, v.pr7.SUPPRESS_NOTIFICATIONS)));
             let Z = z.A.getChannel(e),
                 X = eS.A.getGuild(Z?.guild_id);
