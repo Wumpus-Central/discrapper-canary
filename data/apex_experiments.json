@@ -5405,28 +5405,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-07-krisp-cpu-disablement",
-    "defaultConfig": {
-      "consecutiveFailures": 1
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "consecutiveFailures": 3
-      },
-      "2": {
-        "consecutiveFailures": 5
-      },
-      "3": {
-        "consecutiveFailures": 10
-      }
-    }
-  },
-  {
     "name": "2026-07-message-bookmarks-v2",
     "kind": "user",
     "defaultConfig": null,

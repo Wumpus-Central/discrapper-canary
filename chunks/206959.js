@@ -515,7 +515,6 @@ class H extends g.A {
     automaticGainControl = { enabled: !0 };
     noiseCancellation = !1;
     noiseCancellationDuringProcessing = !1;
-    noiseCancellationConsecutiveFailures = 0;
     echoReferenceMode = "mix";
     attenuationFactor = 0.5;
     attenuateWhileSpeakingSelf = !1;
@@ -673,7 +672,6 @@ class H extends g.A {
                                         automaticGainControlConfig: this.automaticGainControl,
                                         noiseCancellation: this.noiseCancellation,
                                         noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
-                                        noiseCancellationConsecutiveFailures: this.noiseCancellationConsecutiveFailures,
                                     }),
                                     n.setNoInputThreshold(-100),
                                     n.setNoInputCallback(this.handleNoInput),
@@ -1014,12 +1012,6 @@ class H extends g.A {
         (this.noiseCancellationDuringProcessing = e),
             (0, y.lE)().setTransportOptions({
                 noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
-            });
-    }
-    setNoiseCancellationCpuDisablement(e) {
-        (this.noiseCancellationConsecutiveFailures = e),
-            (0, y.lE)().setTransportOptions({
-                noiseCancellationConsecutiveFailures: this.noiseCancellationConsecutiveFailures,
             });
     }
     setEchoReferenceMode(e) {
