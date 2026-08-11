@@ -127,7 +127,7 @@ function ed(e) {
 }
 var er = i(308244),
     ea = i(743987),
-    ec = i(280645),
+    ec = i(503026),
     eo = i(347805),
     eu = i(518477),
     ex = i(663036);
@@ -538,9 +538,9 @@ function e3(e) {
               ],
           });
 }
-var e1 = i(186272),
+var e5 = i(186272),
     e9 = i(996988),
-    e5 = i(134492);
+    e1 = i(134492);
 function e2(e) {
     let {
             user: s,
@@ -581,7 +581,7 @@ function e2(e) {
                 i = s?.length;
             return [
                 { section: eu.RP.BOT_INFO, text: X.intl.string(X.t.ZzAR2Y) },
-                { section: eu.RP.MUTUAL_GUILDS, text: (0, e1.A)(i) },
+                { section: eu.RP.MUTUAL_GUILDS, text: (0, e5.A)(i) },
                 { section: eu.RP.BOT_DATA_ACCESS, text: X.intl.string(X.t.WstFb0) },
             ];
         })(s),
@@ -599,7 +599,7 @@ function e2(e) {
                 children: (0, l.jsx)(o.EO, {
                     "data-migration-pending": !0,
                     transitionState: G,
-                    className: e5.zr,
+                    className: e1.zr,
                     hideShadow: !0,
                     "aria-labelledby": J,
                     parentComponent: "BotUserProfileModal",
@@ -619,7 +619,7 @@ function e2(e) {
                                     children: [
                                         (0, l.jsx)(O.A, { user: s, displayProfile: Y, themeType: e9.d.MODAL }),
                                         (0, l.jsxs)("div", {
-                                            className: e5.El,
+                                            className: e1.El,
                                             children: [
                                                 (0, l.jsx)(E.A, {
                                                     user: s,
@@ -637,10 +637,10 @@ function e2(e) {
                                                     disableToolbar: !0,
                                                 }),
                                                 (0, l.jsxs)("div", {
-                                                    className: e5.Pz,
+                                                    className: e1.Pz,
                                                     children: [
                                                         (0, l.jsx)("div", {
-                                                            className: e5.jS,
+                                                            className: e1.jS,
                                                             children: (0, l.jsx)(R.e, {
                                                                 variant: "secondary",
                                                                 userId: s.id,
@@ -648,7 +648,7 @@ function e2(e) {
                                                             }),
                                                         }),
                                                         (0, l.jsx)("div", {
-                                                            className: e5.pg,
+                                                            className: e1.pg,
                                                             children: (0, l.jsx)(R.l, {
                                                                 variant: "secondary",
                                                                 userId: s.id,
@@ -663,12 +663,12 @@ function e2(e) {
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(T.A, { userId: s.id, className: e5.Fd }),
+                                (0, l.jsx)(T.A, { userId: s.id, className: e1.Fd }),
                                 (0, l.jsxs)("div", {
-                                    className: e5.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e5.eF,
+                                            className: e1.eF,
                                             user: s,
                                             guildId: w,
                                             displayName: H,
@@ -746,7 +746,7 @@ function e4(e) {
             children: (0, l.jsxs)(o.EO, {
                 "data-migration-pending": !0,
                 transitionState: c,
-                className: e5.zr,
+                className: e1.zr,
                 hideShadow: !0,
                 "aria-labelledby": R,
                 parentComponent: "NonUserBotProfileModal",
@@ -766,7 +766,7 @@ function e4(e) {
                                     children: [
                                         (0, l.jsx)(O.A, { user: s, displayProfile: T, themeType: e9.d.MODAL }),
                                         (0, l.jsx)("div", {
-                                            className: e5.El,
+                                            className: e1.El,
                                             children: (0, l.jsx)(E.A, {
                                                 user: s,
                                                 displayProfile: T,
@@ -779,10 +779,10 @@ function e4(e) {
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: e5.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e5.eF,
+                                            className: e1.eF,
                                             user: s,
                                             guildId: v,
                                             displayName: P,
@@ -979,7 +979,7 @@ function sA(e) {
         }),
     });
 }
-var sh = i(138916);
+var sh = i(4258);
 function sj(e) {
     let { hideRestrictedProfile: s, ...i } = e,
         { user: o } = i,
