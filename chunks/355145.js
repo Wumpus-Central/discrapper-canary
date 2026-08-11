@@ -1,12 +1,13 @@
-n.d(t, { B: () => a });
+"use strict";
+n.d(t, { B: () => l });
 var i = n(676168),
     r = n(501672),
-    l = n(652215);
-let s = new Set([l.rbe.DM, l.rbe.GROUP_DM, l.rbe.GUILD_TEXT, l.rbe.GUILD_ANNOUNCEMENT, l.rbe.GUILD_FORUM]);
-function a(e) {
-    let { isChannelSelected: t, isTargetInViewport: n = !0, channelType: l, isPopoverAllowed: a = !0 } = e,
+    a = n(652215);
+let s = new Set([a.rbe.DM, a.rbe.GROUP_DM, a.rbe.GUILD_TEXT, a.rbe.GUILD_ANNOUNCEMENT, a.rbe.GUILD_FORUM]);
+function l(e) {
+    let { isChannelSelected: t, isTargetInViewport: n = !0, channelType: a, isPopoverAllowed: l = !0 } = e,
         o = (0, r.A)(),
-        u = n && t && s.has(l) && a && o,
-        { shouldShowPopover: c, markPopoverAsDismissed: d } = (0, i.zO)(u);
-    return { showMenuItemPopover: c, markMenuItemPopoverAsDismissed: d };
+        d = n && t && s.has(a) && l && o,
+        { shouldShowPopover: c, markPopoverAsDismissed: u } = (0, i.zO)(d);
+    return { showMenuItemPopover: c, markMenuItemPopoverAsDismissed: u };
 }

@@ -3989,6 +3989,7 @@ let ae = [
                     wrapTags: { type: "boolean", label: "Wrap tags", defaultValue: !1 },
                     maxOptionsVisible: { type: "number", label: "Max options visible", defaultValue: 5 },
                     label: { type: "text", label: "Label", defaultValue: "Sort by" },
+                    helperText: { type: "text", label: "Helper text", defaultValue: void 0 },
                     hideLabel: { type: "boolean", label: "Hide Label", defaultValue: !1 },
                     placeholder: { type: "text", label: "Placeholder", defaultValue: void 0 },
                     description: { type: "text", label: "Description", defaultValue: "This is an example description" },

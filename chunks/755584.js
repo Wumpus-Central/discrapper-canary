@@ -1,83 +1,84 @@
-r.d(t, { A: () => A }), r(938796);
-var i = r(562708),
-    a = r(562465),
-    n = r(933681),
-    o = r(228366),
-    l = r(568185),
-    d = r(543465),
-    p = r(477427),
-    s = r(499785),
-    _ = r(832712),
-    c = r(652215),
-    h = r(355097);
+"use strict";
+n.d(t, { A: () => A }), n(938796);
+var i = n(562708),
+    r = n(562465),
+    a = n(933681),
+    s = n(228366),
+    l = n(568185),
+    o = n(543465),
+    d = n(477427),
+    c = n(499785),
+    u = n(832712),
+    _ = n(652215),
+    E = n(355097);
 let A = {
     createChannel(e) {
         let {
             guildId: t,
-            type: r,
+            type: n,
             name: A,
-            permissionOverwrites: E = [],
-            bitrate: m,
-            userLimit: u,
-            parentId: N,
-            skuId: y,
-            branchId: b,
-            flags: C,
-            availableTags: L,
-            gameId: T,
+            permissionOverwrites: h = [],
+            bitrate: I,
+            userLimit: f,
+            parentId: p,
+            skuId: T,
+            branchId: m,
+            flags: g,
+            availableTags: S,
+            gameId: N,
         } = e;
-        o.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: r });
-        let k = { type: r, name: A, permission_overwrites: E };
+        s.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: n });
+        let C = { type: n, name: A, permission_overwrites: h };
         if (
-            (null != m && m !== c.gp3 && (k.bitrate = m),
-            null != u && u > 0 && (k.user_limit = u),
-            null != N && (k.parent_id = N),
-            null != C && (k.flags = C),
-            null != L &&
-                L.length > 0 &&
-                (k.available_tags = L.map((e) => ({
+            (null != I && I !== _.gp3 && (C.bitrate = I),
+            null != f && f > 0 && (C.user_limit = f),
+            null != p && (C.parent_id = p),
+            null != g && (C.flags = g),
+            null != S &&
+                S.length > 0 &&
+                (C.available_tags = S.map((e) => ({
                     name: e.name,
                     emoji_id: e.emojiId,
                     emoji_name: e.emojiName,
                     moderated: e.moderated,
                 }))),
-            null != T && (k.game_id = T),
-            r === c.rbe.GUILD_STORE)
+            null != N && (C.game_id = N),
+            n === _.rbe.GUILD_STORE)
         ) {
-            if (null == y) throw Error("Unexpected missing SKU");
-            (k.sku_id = y), (k.branch_id = b);
+            if (null == T) throw Error("Unexpected missing SKU");
+            (C.sku_id = T), (C.branch_id = m);
         }
-        return s.A.post({
-            url: c.Rsh.GUILD_CHANNELS(t),
-            body: k,
+        return c.A.post({
+            url: _.Rsh.GUILD_CHANNELS(t),
+            body: C,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) =>
-                    (0, n.e0)({ is_private: E.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                    (0, a.e0)({ is_private: h.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, r.fT)(),
         }).then(
             (e) => (
-                d.Ay.isOptInEnabled(t) &&
-                    _.A.updateChannelOverrideSettings(t, e.body.id, { flags: h.vv.OPT_IN_ENABLED }, p.fd.OptedIn),
+                o.Ay.isOptInEnabled(t) &&
+                    u.A.updateChannelOverrideSettings(t, e.body.id, { flags: E.vv.OPT_IN_ENABLED }, d.fd.OptedIn),
                 l.A.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {
-                throw (o.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
+                throw (s.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
             },
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, r, o) =>
-        s.A.post({
-            url: c.Rsh.GUILD_CHANNELS(e),
-            body: { name: t, type: r, topic: o },
+    createRoleSubscriptionTemplateChannel: (e, t, n, s) =>
+        c.A.post({
+            url: _.Rsh.GUILD_CHANNELS(e),
+            body: { name: t, type: n, topic: s },
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
-                properties: (e) => (0, n.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                properties: (e) => (0, a.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, r.fT)(),
         }),
 };
