@@ -1,16 +1,17 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var i = n(439372),
     r = n(773669),
     a = n(287809),
     s = n(166403),
-    l = n(428262);
+    l = n(158045);
 n(960851);
 var o = n(962644),
-    d = n(412260),
+    d = n(528464),
     c = n(202541),
-    u = n(652215);
-class _ extends i.A {
+    u = n(652215),
+    _ = n(818348);
+class E extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
         EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
@@ -47,6 +48,7 @@ class _ extends i.A {
                 null == (e = s.A.getSubscriptions(!1))
                     ? ""
                     : Object.values(e)
+                          .filter((e) => e.type === _.rz.PREMIUM)
                           .map((e) => {
                               let t = e.items
                                   .map((e) => e.planId)
@@ -55,11 +57,9 @@ class _ extends i.A {
                               return `${e.id}:${e.type}:${e.status}:${t}`;
                           })
                           .sort()
-                          .join(",");
-        if (
-            t !== this.lastSubscriptionStateSignature &&
-            ((this.lastSubscriptionStateSignature = t), null != d.A.lastFetchedActivePromotions)
-        ) {
+                          .join(","),
+            n = null == this.lastSubscriptionStateSignature;
+        if (t !== this.lastSubscriptionStateSignature && ((this.lastSubscriptionStateSignature = t), !n)) {
             if (d.A.isFetchingActivePromotions) {
                 this.hasPendingSubscriptionRefetch = !0;
                 return;
@@ -83,4 +83,4 @@ class _ extends i.A {
         t.some((e) => e.type === u.zF_.FRACTIONAL_REDEMPTION) && (0, o.BE)(!1);
     }
 }
-let E = new _();
+let A = new E();
