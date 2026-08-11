@@ -439,22 +439,6 @@
   },
   {
     "kind": "user",
-    "name": "2025-10-vad-before-processing",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2025-11-age-verification-expressive-everywhere",
     "defaultConfig": {
       "enabled": false

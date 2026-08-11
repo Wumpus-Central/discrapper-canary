@@ -505,7 +505,6 @@ class H extends g.A {
     vadUseKrisp = !0;
     vadLeading = 5;
     vadTrailing = 25;
-    vadDuringPreProcess = !1;
     pttReleaseDelay = 20;
     soundshareActive = !1;
     soundshareId = null;
@@ -1045,8 +1044,7 @@ class H extends g.A {
                     (this.vadUseKrisp = t.vadUseKrisp),
                     (this.vadLeading = t.vadLeading),
                     (this.vadTrailing = t.vadTrailing),
-                    (this.vadKrispActivationThreshold = t.vadKrispActivationThreshold),
-                    (this.vadDuringPreProcess = t.vadDuringPreProcess);
+                    (this.vadKrispActivationThreshold = t.vadKrispActivationThreshold);
                 break;
             default:
                 throw Error(`Unknown Input Mode: ${e}`);
@@ -1353,7 +1351,6 @@ class H extends g.A {
                     vadLeading: this.vadLeading,
                     vadTrailing: this.vadTrailing,
                     vadKrispActivationThreshold: this.vadKrispActivationThreshold,
-                    vadDuringPreProcess: this.vadDuringPreProcess,
                 };
             case N.TB.PUSH_TO_TALK:
                 return { pttReleaseDelay: this.pttReleaseDelay };
