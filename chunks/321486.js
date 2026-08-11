@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => L });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -12,76 +12,83 @@ var i = n(477900),
     p = n(834730),
     m = n(748562),
     A = n(661531),
-    x = n(140735),
-    f = n(747556),
+    f = n(140735),
+    x = n(747556),
     g = n(255434),
+    C = n(367513),
     y = n(401843),
-    C = n(402216),
-    j = n(607407),
-    v = n(287809),
-    E = n(562153),
-    N = n(662731),
-    I = n(375708),
-    b = n(948559);
-function T(e) {
-    let { stream: t, fit: n, tooltipSpacing: T, liveCount: _, containerWidthPx: R } = e,
-        S = (0, a.bG)([v.default], () => v.default.getUser(t.ownerId)),
-        L = E.Ay.useName(t.guildId, t.channelId, S),
-        P = R / 225,
-        w = I.intl.string(I.t["7Xq/nV"]),
-        O = l.useCallback(() => {
-            (0, y.A9)(t);
+    j = n(402216),
+    I = n(652896),
+    v = n(607407),
+    E = n(616356),
+    N = n(287809),
+    b = n(562153),
+    T = n(652215),
+    _ = n(662731),
+    R = n(375708),
+    S = n(948559);
+function L(e) {
+    let { stream: t, fit: n, tooltipSpacing: L, liveCount: P, containerWidthPx: O } = e,
+        w = (0, a.bG)([N.default], () => N.default.getUser(t.ownerId)),
+        M = b.Ay.useName(t.guildId, t.channelId, w),
+        D = O / 225,
+        U = R.intl.string(R.t["7Xq/nV"]),
+        V = l.useCallback(() => {
+            let e = E.A.getActiveStreamForApplicationStream(t);
+            null != e && e.state !== T.XYD.ENDED && e.ownerId === t.ownerId
+                ? C.A.selectParticipant(t.channelId, (0, I._z)(t))
+                : (0, y.A9)(t);
         }, [t]),
-        M = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
+        k = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         {
-            tooltipId: D,
-            isVisible: U,
-            targetElementRef: k,
-            trigger: V,
+            tooltipId: G,
+            isVisible: B,
+            targetElementRef: F,
+            trigger: z,
         } = (0, s.D)({
             children: (0, i.jsxs)(r.D, {
                 tag: "div",
-                "aria-label": w,
-                className: b.VH,
-                style: M,
-                onClick: O,
+                "aria-label": U,
+                className: S.VH,
+                style: k,
+                onClick: V,
                 children: [
-                    (0, i.jsx)(j.A, { stream: t, className: b.oz, noText: !0 }),
+                    (0, i.jsx)(v.A, { stream: t, className: S.oz, noText: !0 }),
                     (0, i.jsx)("div", {
-                        className: b.d3,
-                        style: { transform: `translate(-50%, -50%) scale(${P})` },
+                        className: S.d3,
+                        style: { transform: `translate(-50%, -50%) scale(${D})` },
                         children: (0, i.jsx)(o.$, {
-                            text: w,
+                            text: U,
                             variant: "overlay-secondary",
                             tabIndex: -1,
                             "aria-hidden": !0,
                         }),
                     }),
-                    (0, i.jsx)(C.Ay, {
-                        size: C.Ay.Sizes.SMALL,
-                        className: b.Ok,
-                        style: { transform: `scale(${P})` },
-                        count: _,
+                    (0, i.jsx)(j.Ay, {
+                        size: j.Ay.Sizes.SMALL,
+                        className: S.Ok,
+                        style: { transform: `scale(${D})` },
+                        count: P,
                     }),
                 ],
             }),
         }),
-        G = (0, c.j)({ shouldShow: U }),
-        B = (0, i.jsxs)(d.B, {
+        H = (0, c.j)({ shouldShow: B }),
+        W = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 8,
             fullWidth: !1,
             padding: { top: 8, right: 12, bottom: 8, left: 12 },
-            className: b.rv,
+            className: S.rv,
             children: [
-                (0, i.jsx)(u.eu, { src: S?.getAvatarURL(t.guildId, 96), size: h._3.SIZE_48, "aria-hidden": !0 }),
+                (0, i.jsx)(u.eu, { src: w?.getAvatarURL(t.guildId, 96), size: h._3.SIZE_48, "aria-hidden": !0 }),
                 (0, i.jsxs)(d.B, {
                     gap: 0,
                     fullWidth: !1,
-                    className: b.x8,
+                    className: S.x8,
                     children: [
-                        (0, i.jsx)(p.E, { variant: "text-sm/medium", lineClamp: 1, children: L }),
+                        (0, i.jsx)(p.E, { variant: "text-sm/medium", lineClamp: 1, children: M }),
                         (0, i.jsxs)(d.B, {
                             direction: "horizontal",
                             align: "center",
@@ -92,7 +99,7 @@ function T(e) {
                                 (0, i.jsx)(p.E, {
                                     variant: "text-sm/normal",
                                     color: "text-feedback-positive",
-                                    children: I.intl.string(N.default["2Ll0vk"]),
+                                    children: R.intl.string(_.default["2Ll0vk"]),
                                 }),
                             ],
                         }),
@@ -102,19 +109,19 @@ function T(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            V,
-            (0, i.jsx)(x.A, { id: D, children: B }),
-            G((e, t) =>
+            z,
+            (0, i.jsx)(f.A, { id: G, children: W }),
+            H((e, t) =>
                 t
-                    ? (0, i.jsx)(f.Bc, {
+                    ? (0, i.jsx)(x.Bc, {
                           isRichTooltip: !0,
                           children: (0, i.jsx)(g.R, {
-                              isVisible: U,
-                              targetElementRef: k,
-                              id: D,
-                              content: B,
+                              isVisible: B,
+                              targetElementRef: F,
+                              id: G,
+                              content: W,
                               position: "top",
-                              spacing: T,
+                              spacing: L,
                               animationStyle: e,
                           }),
                       })

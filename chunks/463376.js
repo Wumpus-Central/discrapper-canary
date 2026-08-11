@@ -26,27 +26,27 @@ function d() {
         }),
         u = (0, r.V)(a ?? void 0),
         d = !n && !s && null != e,
-        p = !!(d && null != u && c.TP[u.trial_id].skus.includes(e)),
+        p = !!(d && null != u && c.TP[u.trial_id].skus.includes(e) && !n),
         m = (0, i.O)(),
-        C =
+        h =
             null != e &&
             null != m &&
             null != m.discount &&
             null != m.discount.planIds &&
             m.discount.planIds.some((t) => c.hd[t].skuId === e),
-        h = !!(d && null != m && C),
+        C = !!(d && null != m && h),
         f = (0, i.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
             isEligibleForTrial: p,
-            isEligibleForDiscount: h,
+            isEligibleForDiscount: C,
             userTrialOffer: u,
             discountOffer: m,
             premiumGroupDiscountOffer: n ? f : null,
         }),
-        [t, n, p, h, u, m, f],
+        [t, n, p, C, u, m, f],
     );
 }
 function p(e) {
