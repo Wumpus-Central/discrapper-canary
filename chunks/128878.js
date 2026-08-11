@@ -1,4 +1,4 @@
-n.d(t, { A: () => en });
+n.d(t, { A: () => et });
 var l = n(477900),
     i = n(582128),
     s = n(38021),
@@ -144,10 +144,9 @@ var H = n(866665),
     X = n(994500),
     q = n(287809),
     Z = n(427262),
-    J = n(422258),
-    $ = n(606660),
-    Q = n(266141);
-function ee(e) {
+    J = n(16236),
+    $ = n(266141);
+function Q(e) {
     let t,
         { withDivider: n = !1 } = e,
         s = x((e) => e.suggestions),
@@ -156,33 +155,31 @@ function ee(e) {
             { canDismiss: (0, u.bG)([m.A], () => m.A.getFavoritesCountAgainstLimit() > 0), dismiss: t }),
         d = i.useCallback(async (e) => {
             let t = await (0, Y.pk)(e);
-            null != t &&
-                ((0, $.A)(),
-                (0, J.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.k8fFjp), source: "suggestions" }));
+            null != t && (0, J.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.k8fFjp), source: "suggestions" });
         }, []);
     return 0 === s.length
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: Q.kL,
+                      className: $.kL,
                       children: [
                           (0, l.jsxs)("div", {
-                              className: Q.wx,
+                              className: $.wx,
                               children: [
-                                  (0, l.jsx)(z.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
+                                  (0, l.jsx)(z.A, { className: $.TK, children: D.intl.string(U.default.oHWnLy) }),
                                   r
                                       ? (0, l.jsx)(H.m, {
                                             text: D.intl.string(D.t.WAI6xu),
                                             children: (0, l.jsx)(B.D, {
-                                                className: Q.r,
+                                                className: $.r,
                                                 onClick: a,
                                                 role: "button",
                                                 "aria-label": D.intl.string(U.default.F3dWTe),
                                                 children: (0, l.jsx)(k.P, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: Q.CB,
+                                                    className: $.CB,
                                                 }),
                                             }),
                                         })
@@ -190,7 +187,7 @@ function ee(e) {
                               ],
                           }),
                           (0, l.jsx)("div", {
-                              className: Q.p_,
+                              className: $.p_,
                               role: "list",
                               children: s.map((e, t) =>
                                   (0, l.jsx)(
@@ -222,18 +219,18 @@ function ee(e) {
               ],
           });
 }
-var et = n(808240);
-function en(e) {
+var ee = n(808240);
+function et(e) {
     let { guildChannels: t, shouldShowEmptyState: n, hasNoChannels: i } = (0, a.D)(),
         { density: o } = (0, s.wR)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(I, {}),
             n
-                ? (0, l.jsxs)("div", { className: et.XG, children: [(0, l.jsx)(w, {}), (0, l.jsx)(ee, {})] })
+                ? (0, l.jsxs)("div", { className: ee.XG, children: [(0, l.jsx)(w, {}), (0, l.jsx)(Q, {})] })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)("div", { className: Q._I, children: (0, l.jsx)(ee, { withDivider: !i }) }),
+                          (0, l.jsx)("div", { className: $._I, children: (0, l.jsx)(Q, { withDivider: !i }) }),
                           (0, l.jsx)(r.i, {
                               ...e,
                               guildChannels: t,

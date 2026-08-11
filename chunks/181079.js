@@ -84,14 +84,6 @@ class p extends a.Ay.Store {
         }
         return null;
     }
-    getCategoryIdByName(e) {
-        let t = e.trim().toLowerCase();
-        for (let e in _) {
-            let n = _[e];
-            if (n.type === s.Ip.CATEGORY && n.nickname?.trim().toLowerCase() === t) return e;
-        }
-        return null;
-    }
     getNickname(e) {
         let t = this.getFavorite(e);
         return t?.nickname ?? void 0;

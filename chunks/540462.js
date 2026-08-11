@@ -18,8 +18,8 @@ var i = n(477900),
     C = n(367513),
     y = n(442433),
     j = n(730852),
-    v = n(401843),
-    I = n(817281),
+    I = n(401843),
+    v = n(817281),
     E = n(820284),
     N = n(765671),
     b = n(475743),
@@ -72,8 +72,8 @@ var i = n(477900),
     eC = n(287809),
     ey = n(977997),
     ej = n(174459),
-    ev = n(871237),
-    eI = n(625494),
+    eI = n(871237),
+    ev = n(625494),
     eE = n(723702),
     eN = n(19575),
     eb = n(475815),
@@ -249,7 +249,7 @@ class eH extends l.PureComponent {
         let { channel: t, appContext: n, layout: i } = this.props;
         i !== e &&
             (C.A.updateLayout(t.id, e, n),
-            e === eU.DUB.FULL_SCREEN && t.isPrivate() && eI._.dispatch(eU.jej.TEXTAREA_BLUR));
+            e === eU.DUB.FULL_SCREEN && t.isPrivate() && ev._.dispatch(eU.jej.TEXTAREA_BLUR));
     };
     handleDisconnect = () => {
         this.props.layout === eU.DUB.FULL_SCREEN && this.handleFullScreen();
@@ -335,28 +335,27 @@ class eH extends l.PureComponent {
                                         n.e("46652"),
                                         n.e("93190"),
                                         n.e("91763"),
-                                        n.e("38730"),
                                         n.e("8757"),
-                                        n.e("89673"),
+                                        n.e("38730"),
                                         n.e("85968"),
+                                        n.e("89673"),
                                         n.e("29787"),
                                         n.e("82073"),
                                         n.e("97558"),
                                         n.e("91994"),
-                                        n.e("47502"),
                                         n.e("76665"),
                                         n.e("76273"),
-                                        n.e("92997"),
+                                        n.e("47502"),
                                         n.e("45996"),
                                         n.e("23427"),
                                         n.e("29422"),
-                                        n.e("87048"),
                                         n.e("7059"),
                                         n.e("72883"),
                                         n.e("21106"),
+                                        n.e("87048"),
                                         n.e("90434"),
-                                        n.e("17244"),
                                         n.e("98199"),
+                                        n.e("17244"),
                                         n.e("64464"),
                                         n.e("39778"),
                                     ]).then(n.bind(n, 385913));
@@ -388,16 +387,16 @@ class eH extends l.PureComponent {
                                         n.e("46652"),
                                         n.e("93190"),
                                         n.e("8757"),
-                                        n.e("89673"),
                                         n.e("85968"),
+                                        n.e("89673"),
                                         n.e("29787"),
                                         n.e("82073"),
                                         n.e("97558"),
                                         n.e("91994"),
                                         n.e("76665"),
                                         n.e("76273"),
-                                        n.e("45996"),
                                         n.e("24198"),
+                                        n.e("45996"),
                                         n.e("23427"),
                                         n.e("29422"),
                                         n.e("7059"),
@@ -437,18 +436,18 @@ class eH extends l.PureComponent {
                                             n.e("46652"),
                                             n.e("93190"),
                                             n.e("8757"),
-                                            n.e("89673"),
                                             n.e("85968"),
+                                            n.e("89673"),
                                             n.e("29787"),
                                             n.e("82073"),
                                             n.e("97558"),
                                             n.e("91994"),
                                             n.e("76665"),
-                                            n.e("45996"),
                                             n.e("24198"),
+                                            n.e("45996"),
                                             n.e("23427"),
-                                            n.e("29422"),
                                             n.e("49145"),
+                                            n.e("29422"),
                                             n.e("7059"),
                                             n.e("43116"),
                                             n.e("70314"),
@@ -492,7 +491,7 @@ class eH extends l.PureComponent {
             (0, F.eo)(n, ey.A, ef.A, ex.A, k.default)[0] &&
             (j.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, B._z)(t) === e.id && t.state !== eU.XYD.ENDED).length &&
-                (0, v.A9)((0, B.Iy)(e.id), { forceMultiple: t.shiftKey })),
+                (0, I.A9)((0, B.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eU._Of.VIDEO &&
                 (i?.id === e.id ? C.A.selectParticipant(n.id, null) : C.A.selectParticipant(n.id, e.id));
@@ -502,7 +501,7 @@ class eH extends l.PureComponent {
         async function n() {
             t?.applicationId != null && (await (0, R.od)(t.applicationId, e.id));
             let n = e.getGuildId();
-            null == n || eA.Ay.isCurrentUserGuest(n) || (0, q.pX)((0, ev.vJ)(n)), Y.openChannelCallPopout(e);
+            null == n || eA.Ay.isCurrentUserGuest(n) || (0, q.pX)((0, eI.vJ)(n)), Y.openChannelCallPopout(e);
         }
         null == t || (0, T.f)() ? n() : (0, L.A)({ onConfirm: n });
     };
@@ -659,8 +658,8 @@ class eH extends l.PureComponent {
             } = this.props,
             y = p === eU.DUB.MINIMUM,
             j = y || p === eU.DUB.NORMAL,
-            v = l && s === eU._Of.VIDEO,
-            I = (f?.length ?? 0) > 0 && u.isPrivate();
+            I = l && s === eU._Of.VIDEO,
+            v = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
         let E = !l || !(this.popoutOpen && !this.inPopout),
             N = !m && l && !y && e.idle,
@@ -675,13 +674,13 @@ class eH extends l.PureComponent {
                       participants: o,
                       filteredParticipants: c,
                       participantsVersion: d,
-                      selectedParticipant: v ? n : null,
+                      selectedParticipant: I ? n : null,
                       layout: p,
                       idle: e.idle,
                       mode: s,
                       onSelectParticipant: this.handleSelectParticipant,
                       onContextMenuParticipant: this.handleContextMenu,
-                      showParticipants: r && (!j || I),
+                      showParticipants: r && (!j || v),
                       popoutType: t,
                       awaitingRemoteSessionInfo: A,
                       callContainerDimensions: x,
@@ -769,7 +768,7 @@ let eW = function (e) {
         { ref: C } = (0, N.Ay)(),
         y = (0, $.Us)(),
         j = (0, G.A)(),
-        v = (0, d.bG)([eg.Ay], () => (j?.channelId ?? eg.Ay.getVoiceChannelId()) === t.id),
+        I = (0, d.bG)([eg.Ay], () => (j?.channelId ?? eg.Ay.getVoiceChannelId()) === t.id),
         {
             participants: T,
             filteredParticipants: R,
@@ -816,7 +815,7 @@ let eW = function (e) {
         et = (0, d.bG)([k.default], () => k.default.getAwaitingRemoteSessionInfo()),
         en = (0, d.bG)([Z.Ay], () => Z.Ay.callHeaderHeight),
         ei = l.useCallback((e) => {
-            I.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
+            v.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         el = (0, d.bG)([_.A], () => _.A.getFetchState(), []),
         ea = (0, b.Ay)(el);
@@ -852,7 +851,7 @@ let eW = function (e) {
                             popoutWindowAlwaysOnTop: Q,
                             selectedStream: W,
                             mode: O,
-                            inCall: v,
+                            inCall: I,
                             participants: T,
                             filteredParticipants: R,
                             participantsVersion: L,

@@ -3174,7 +3174,7 @@ let l5 = (0, a.zZ)(u.X.APPEARANCE_IN_APP_ICON_CATEGORY, {
     l6 = (0, a.gN)(u.X.APPEARANCE_CHAT_RELATED_SETTINGS, { buildLayout: () => [l4] });
 var l8 = i(452027),
     l7 = i(976860),
-    l9 = i(422258),
+    l9 = i(16236),
     se = i(635233),
     st = i(551289),
     si = i(449817);
@@ -4225,7 +4225,7 @@ let rP = (0, a.t_)(u.X.POGGERMODE_PANEL, { useTitle: () => j.intl.string(j.t.AtC
 var rM = i(307301),
     rU = i(410767),
     rV = i(695366),
-    rk = i(350055),
+    rk = i(749983),
     rw = i(868886);
 function rF(e) {
     let { game: t, application: i } = e;

@@ -27,7 +27,7 @@ var t = l(980707),
     N = l(661504),
     k = l(969128),
     E = l(192308),
-    M = l(422258);
+    M = l(16236);
 function D(n) {
     let e,
         { channel: s, onSelect: d } = n,

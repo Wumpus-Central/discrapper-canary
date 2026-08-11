@@ -13,56 +13,55 @@ var n = l(477900),
     g = l(223863),
     f = l(151054),
     m = l(403362),
-    k = l(422258),
+    k = l(16236),
     x = l(174459),
     C = l(652215),
     b = l(462617),
     D = l(449817),
     R = l(375708),
-    S = l(606660),
-    A = l(349828),
+    S = l(349828),
     E = l(221313);
 function I(t) {
     let { transitionState: e, onClose: l, parentId: d, source: I } = t;
     a.useEffect(() => {
         x.default.track(C.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: I });
     }, [I]);
-    let [w, P] = a.useState(""),
-        [_, M] = a.useState([]),
-        [v, L] = a.useState(!1),
-        O = (0, b.A)(),
-        { results: y, updateSearchText: F } = (0, f.R)({
+    let [w, A] = a.useState(""),
+        [P, _] = a.useState([]),
+        [M, v] = a.useState(!1),
+        L = (0, b.A)(),
+        { results: O, updateSearchText: y } = (0, f.R)({
             includeMissingDMs: !0,
-            channelFilter: O,
-            selectedDestinations: _,
+            channelFilter: L,
+            selectedDestinations: P,
         }),
-        H = _.length,
-        N = H >= A.dh,
-        Q = a.useCallback(
+        F = P.length,
+        H = F >= S.dh,
+        N = a.useCallback(
             (t) => {
-                P(t), F(t);
+                A(t), y(t);
             },
-            [F],
+            [y],
         ),
-        U = a.useCallback((t) => {
-            M((e) => {
+        Q = a.useCallback((t) => {
+            _((e) => {
                 let l = (0, g.I)(t),
                     n = e.filter((t) => (0, g.I)(t) !== l);
-                return n.length < e.length ? n : e.length >= A.dh ? e : [...e, t];
+                return n.length < e.length ? n : e.length >= S.dh ? e : [...e, t];
             });
         }, []),
-        q = a.useCallback(async () => {
-            L(!0);
-            let t = (await Promise.all(_.map(g.pk))).filter(m.Vq);
+        U = a.useCallback(async () => {
+            v(!0);
+            let t = (await Promise.all(P.map(g.pk))).filter(m.Vq);
             if (0 === t.length) {
-                (0, s.P0)((0, r.o)(R.intl.string(R.t.R0RpRX), u.Ck.FAILURE)), L(!1);
+                (0, s.P0)((0, r.o)(R.intl.string(R.t.R0RpRX), u.Ck.FAILURE)), v(!1);
                 return;
             }
-            (0, S.A)(), (0, k.S_)({ channelIds: t, parentId: d ?? null, source: "modal" }), l();
-        }, [l, d, _]),
-        T = a.useMemo(() => y.filter((t) => t.type !== h.rD.HEADER), [y]),
-        V = (0, p.s)({ rowData: T, selectedDestinations: _, handleToggleDestination: U, disableSelection: N }),
-        X = a.useMemo(
+            (0, k.S_)({ channelIds: t, parentId: d ?? null, source: "modal" }), l();
+        }, [l, d, P]),
+        q = a.useMemo(() => O.filter((t) => t.type !== h.rD.HEADER), [O]),
+        T = (0, p.s)({ rowData: q, selectedDestinations: P, handleToggleDestination: Q, disableSelection: H }),
+        V = a.useMemo(
             () => ({ sections: [1], sectionHeight: 0, rowHeight: 72, renderRow: () => (0, n.jsx)(j, {}) }),
             [],
         );
@@ -73,8 +72,8 @@ function I(t) {
         onClose: l,
         input: (0, n.jsx)(o.I, {
             query: w,
-            onChange: Q,
-            onClear: () => Q(""),
+            onChange: N,
+            onClear: () => N(""),
             placeholder: R.intl.string(R.t["5h0QOP"]),
             "aria-label": R.intl.string(R.t["5h0QOP"]),
             autoFocus: !0,
@@ -86,15 +85,15 @@ function I(t) {
                 size: "md",
                 fullWidth: !0,
                 text:
-                    H >= 2
-                        ? R.intl.formatToPlainString(D.default.LbCa8x, { count: H })
+                    F >= 2
+                        ? R.intl.formatToPlainString(D.default.LbCa8x, { count: F })
                         : R.intl.string(D.default.xKXcSu),
-                onClick: q,
-                disabled: 0 === H,
-                loading: v,
+                onClick: U,
+                disabled: 0 === F,
+                loading: M,
             }),
         }),
-        listProps: 0 === T.length ? X : V,
+        listProps: 0 === q.length ? V : T,
     });
 }
 function j() {
