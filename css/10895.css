@@ -107,12 +107,3 @@
 .submenuIcon__19b5e:active {
     color: var(--interactive-text-active)
 }
-
-.wrapperV2__19b5e {
-    box-sizing: border-box;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
-    position: absolute;
-    top: 100%;
-    z-index: 1
-}

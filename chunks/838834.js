@@ -12,5 +12,4 @@ e.exports = {
     uz: "ctas__19b5e",
     rb: "submenuWrapper__19b5e",
     Bx: "submenuIcon__19b5e",
-    W2: "wrapperV2__19b5e",
 };
