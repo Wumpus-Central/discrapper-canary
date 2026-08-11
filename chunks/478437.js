@@ -64,7 +64,7 @@ let a = {
     SUMMARIZEABLE: new Set([0]),
     CONTENT_ENTRY_EMBEDS: new Set([0, 1, 5]),
     POLLS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18, 19, 21]),
-    ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3, 20]),
+    ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3, 20, 21]),
     APPLICATION_MANAGEABLE: new Set([3, 18]),
     ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]),
 };

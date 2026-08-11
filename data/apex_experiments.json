@@ -3018,18 +3018,6 @@
     }
   },
   {
-    "name": "2026-04-premium-group-gift-selection-upsell",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-04-premium-group-primary-reminder-nagbar",
     "kind": "user",
     "defaultConfig": false,
