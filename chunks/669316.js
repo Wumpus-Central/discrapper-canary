@@ -1,8 +1,7 @@
 "use strict";
 n.d(t, { A: () => a });
 var i = n(315069),
-    r = n(788868);
-let s = { [r.Ff.DAY]: r.WT.DAY, [r.Ff.WEEK]: r.WT.DAY, [r.Ff.MONTH]: r.WT.MONTH, [r.Ff.YEAR]: r.WT.YEAR };
+    r = n(511963);
 class a extends i.A {
     id;
     discountId;
@@ -15,14 +14,7 @@ class a extends i.A {
         return new a({
             id: e.id,
             discountId: e.discount_id,
-            discount: {
-                id: e.discount.id,
-                planIds: e.discount.plan_ids,
-                userUsageLimitInterval: e.discount.user_usage_limit_interval,
-                userUsageLimitIntervalCount: e.discount.user_usage_limit_interval_count,
-                userUsageLimit: e.discount.user_usage_limit,
-                amount: e.discount.amount,
-            },
+            discount: r.A.createFromServer(e.discount),
             userId: e.user_id,
             appliedAt: null != e.applied_at ? new Date(e.applied_at) : null,
             deletedAt: null != e.deleted_at ? new Date(e.deleted_at) : null,
@@ -50,22 +42,5 @@ class a extends i.A {
     }
     hasAcknowledged() {
         return null != this.expiresAt;
-    }
-    getFullIntervalCount() {
-        return null == this.discount ? 0 : this.discount.userUsageLimit;
-    }
-    getDiscountInterval() {
-        return this.discount.userUsageLimitInterval;
-    }
-    getApplicableSubscriptionInterval() {
-        return s[this.getDiscountInterval()];
-    }
-    getIsMultiIntervalDiscount() {
-        return this.getFullIntervalCount() > 1;
-    }
-    getApproximateDiscountAmountOff(e) {
-        if (this.discount?.amount == null) return null;
-        let t = parseFloat(this.discount.amount);
-        return Number.isNaN(t) ? null : Math.round(e * (1 - t / 100));
     }
 }

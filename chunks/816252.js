@@ -1,17 +1,17 @@
-n.d(e, { _: () => f, b: () => m });
+e.d(n, { _: () => f, b: () => m });
 var i,
-    r = n(477900);
-n(582128);
-var l = n(834730),
-    a = n(428262),
-    s = n(916974),
-    o = n(652215),
-    u = n(375708),
-    c = n(455139),
-    d = n(67423),
+    r = e(477900);
+e(582128);
+var l = e(834730),
+    a = e(158045),
+    s = e(916974),
+    o = e(652215),
+    u = e(375708),
+    c = e(455139),
+    d = e(67423),
     m = (((i = {}).NONE = "none"), (i.CONFIRMING = "confirming"), (i.APPLIED = "applied"), i);
 function f(t) {
-    let { userDiscountOffer: e, offerState: n = "none" } = t,
+    let { userDiscountOffer: n, offerState: e = "none" } = t,
         { discountedPrice: i, premiumSubscription: a } = (0, s.X)();
     return (0, r.jsxs)("div", {
         className: c.j2,
@@ -25,29 +25,29 @@ function f(t) {
                         children:
                             a.status === o.Dmq.CANCELED
                                 ? u.intl.format(u.t["DC+nPC"], {
-                                      numMonths: e.discount.userUsageLimit,
+                                      numMonths: n.discount.intervalCount,
                                       discountedPrice: i,
                                   })
-                                : u.intl.format(u.t.tQvNll, { numMonths: e.discount.userUsageLimit }),
+                                : u.intl.format(u.t.tQvNll, { numMonths: n.discount.intervalCount }),
                     }),
-                    (0, r.jsx)(g, { userDiscountOffer: e, offerState: n }),
+                    (0, r.jsx)(p, { userDiscountOffer: n, offerState: e }),
                 ],
             }),
         ],
     });
 }
-function g(t) {
-    let { userDiscountOffer: e, offerState: n } = t,
+function p(t) {
+    let { userDiscountOffer: n, offerState: e } = t,
         { discountedPrice: i, fullPrice: c, premiumSubscription: d } = (0, s.X)();
-    switch (n) {
+    switch (e) {
         case "applied":
             if (d.status === o.Dmq.CANCELED)
                 return (0, r.jsx)(l.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     children: u.intl.formatToPlainString(u.t.h2g1Ia, {
-                        billingPeriod: (0, a.Ke)(e.discount.userUsageLimitInterval),
-                        numMonths: e.discount.userUsageLimit,
+                        billingPeriod: (0, a.Ke)(n.discount.intervalType),
+                        numMonths: n.discount.intervalCount,
                         fullPrice: c,
                     }),
                 });
@@ -55,7 +55,7 @@ function g(t) {
                 variant: "text-md/normal",
                 color: "text-subtle",
                 children: u.intl.formatToPlainString(u.t.gPzMHa, {
-                    numMonths: e.discount.userUsageLimit,
+                    numMonths: n.discount.intervalCount,
                     discountedPrice: i,
                     regularPrice: c,
                 }),
@@ -66,8 +66,8 @@ function g(t) {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     children: u.intl.formatToPlainString(u.t.iDFk3v, {
-                        billingPeriod: (0, a.Ke)(e.discount.userUsageLimitInterval),
-                        numMonths: e.discount.userUsageLimit,
+                        billingPeriod: (0, a.Ke)(n.discount.intervalType),
+                        numMonths: n.discount.intervalCount,
                         fullPrice: c,
                     }),
                 });
@@ -75,8 +75,8 @@ function g(t) {
                 variant: "text-md/normal",
                 color: "text-subtle",
                 children: u.intl.formatToPlainString(u.t.Eq1RHL, {
-                    percent: e.discount.amount,
-                    numMonths: e.discount.userUsageLimit,
+                    percent: n.discount.amount,
+                    numMonths: n.discount.intervalCount,
                     price: c,
                 }),
             });
@@ -85,8 +85,8 @@ function g(t) {
                 variant: "text-md/normal",
                 color: "text-subtle",
                 children: u.intl.formatToPlainString(u.t["2gem05"], {
-                    percent: e.discount.amount,
-                    numMonths: e.discount.userUsageLimit,
+                    percent: n.discount.amount,
+                    numMonths: n.discount.intervalCount,
                 }),
             });
     }

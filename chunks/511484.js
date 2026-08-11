@@ -29,7 +29,7 @@ function f(e) {
     return null != e && I.U4.includes(e.discountId);
 }
 function p(e) {
-    return null != e && e.discount.userUsageLimitInterval === I.Ff.MONTH;
+    return null != e && e.discount.intervalType === I.Ff.MONTH;
 }
 let T = {
         discountOffer: null,
@@ -127,7 +127,7 @@ function L(e, t) {
     } catch {
         return null;
     }
-    let u = e.getApproximateDiscountAmountOff(n.amount);
+    let u = e.discount.getApproximateDiscountAmountOff(n.amount);
     return null == u ? null : { discountedAmount: u, currency: n.currency };
 }
 function D(e, t, n) {

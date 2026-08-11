@@ -1,10 +1,10 @@
 n.d(t, { A: () => P });
 var r = n(477900);
 n(582128);
-var i = n(503698),
-    l = n.n(i),
-    s = n(989349),
-    a = n.n(s),
+var l = n(503698),
+    i = n.n(l),
+    a = n(989349),
+    s = n.n(a),
     o = n(17928),
     c = n(297264),
     u = n(531260),
@@ -23,8 +23,8 @@ function P(e) {
     let {
             isGift: t,
             premiumTier: n,
-            offerTierMatchesCard: i,
-            offerType: s,
+            offerTierMatchesCard: l,
+            offerType: a,
             showYearlyPrice: P,
             priceOptions: _,
             textVariant: j,
@@ -49,19 +49,19 @@ function P(e) {
         Z = null != D && (0, f.YJ)(D) === F,
         B = w?.subscription_trial;
     if (!R && !t && null != k && n === k && null != C && null != C.planIdFromItems) {
-        let e = null != C.trialEndsAt ? a()(C?.trialEndsAt).diff(a()(), "d") : 0,
+        let e = null != C.trialEndsAt ? s()(C?.trialEndsAt).diff(s()(), "d") : 0,
             t = p.hd[C.planIdFromItems],
             n = g.Ay.formatPriceString(g.Ay.getDefaultPrice(t.id), t.interval),
-            i = s === p.Vk.PREMIUM_TRIAL,
+            l = a === p.Vk.PREMIUM_TRIAL,
             o = C.planIdFromItems === p.gD.PREMIUM_YEAR_TIER_2;
         return (0, r.jsx)(c.D, {
             variant: S,
             color: y,
-            className: l()((i || !o) && A.K, N),
+            className: i()((l || !o) && A.K, N),
             children:
                 null == C
                     ? null
-                    : i
+                    : l
                       ? E.intl.format(E.t["2CGBri"], { remainingTime: e, price: n })
                       : o
                         ? E.intl.format(E.t.z2oQtA, {
@@ -76,16 +76,16 @@ function P(e) {
                           }),
         });
     }
-    if (!R && !t && i) {
+    if (!R && !t && l) {
         let e = g.Ay.formatPriceString(
             g.Ay.getDefaultPrice(n === p.PremiumTypes.TIER_0 ? p.gD.PREMIUM_MONTH_TIER_0 : p.gD.PREMIUM_MONTH_TIER_2),
             p.WT.MONTH,
         );
-        if (s === p.Vk.PREMIUM_TRIAL)
+        if (a === p.Vk.PREMIUM_TRIAL)
             return (0, r.jsx)(c.D, {
                 variant: S,
                 color: y,
-                className: l()(A.K, N),
+                className: i()(A.K, N),
                 children: E.intl.format(E.t["9vyovu"], {
                     planName: (0, g.RH)(p.En[B?.sku_id ?? p.pe.NONE] ?? p.gD.PREMIUM_MONTH_TIER_2),
                     duration: (0, g.re)({
@@ -100,9 +100,9 @@ function P(e) {
             return (0, r.jsx)(c.D, {
                 variant: S,
                 color: y,
-                className: l()(A.K, N),
+                className: i()(A.K, N),
                 children: E.intl.format(E.t.sJTwHQ, {
-                    numMonths: D.discount.userUsageLimit ?? p.OJ,
+                    numMonths: D.discount.intervalCount ?? p.OJ,
                     discountedPrice: H,
                     regularPrice: e,
                 }),
