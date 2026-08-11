@@ -1,57 +1,68 @@
 "use strict";
-n.d(t, { DA: () => A, PK: () => u, UW: () => E, dt: () => d, k3: () => h, zO: () => _ });
-var i = n(554146),
-    r = n(558845),
-    a = n(131607),
-    s = n(595529),
-    l = n(379587),
-    o = n(49999);
-let d = [
-        i.M.FAVORITES_SERVER_ONBOARDING_INTRO,
-        i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
-        i.M.FAVORITES_GUILD_NEW_BADGE,
-        i.M.FAVORITES_GUILD_SUGGESTIONS,
+n.d(t, { DA: () => T, PK: () => h, UW: () => p, dt: () => _, k3: () => m, r1: () => f, zO: () => I });
+var i = n(582128),
+    r = n(554146),
+    a = n(558845),
+    s = n(131607),
+    l = n(595529),
+    o = n(379587),
+    d = n(93055),
+    c = n(501672),
+    u = n(49999);
+let _ = [
+        r.M.FAVORITES_SERVER_ONBOARDING_INTRO,
+        r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+        r.M.FAVORITES_GUILD_NEW_BADGE,
+        r.M.FAVORITES_GUILD_SUGGESTIONS,
     ],
-    c = [i.M.FAVORITES_SERVER_ONBOARDING_INTRO, i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
-function u() {
+    E = [r.M.FAVORITES_SERVER_ONBOARDING_INTRO, r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM],
+    A = [r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
-        n = (0, r.Ay)((e) => e.postConnectionOpen),
-        [s, o] = (0, a.kn)(t && e && n ? [i.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
-        [d] = (0, a.kn)(
-            s === i.M.FAVORITES_SERVER_ONBOARDING_INTRO ? [i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [],
+        { isFreemium: t } = (0, o.m)({ location: "FavoritesDismissibleContent" }),
+        n = (0, a.Ay)((e) => e.postConnectionOpen),
+        [i, l] = (0, s.kn)(t && e && n ? [r.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
+        [d] = (0, s.kn)(
+            i === r.M.FAVORITES_SERVER_ONBOARDING_INTRO ? [r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [],
             void 0,
             !0,
         );
-    return { shouldShowPopover: d === i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: o };
+    return { shouldShowPopover: d === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: l };
 }
-function _(e) {
-    let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
-        n =
+function I(e) {
+    let { isFreemium: t } = (0, o.m)({ location: "FavoritesDismissibleContent" }),
+        n = (0, d.DZ)(),
+        i = (0, c.A)(),
+        a =
             (function () {
-                let [e] = (0, s.gc)(c);
+                let [e] = (0, l.gc)(E);
                 return e ?? null;
-            })() === i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
-        [r, o] = (0, a.kn)(t && e && n ? [i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
-    return { shouldShowPopover: r === i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: o };
+            })() === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+        [u, _] = (0, s.kn)(t && e && i && !n && a ? [r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
+    return { shouldShowPopover: u === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: _ };
 }
-function E() {
-    return (0, r.dD)(i.M.FAVORITES_SERVER_ONBOARDING_INTRO) && (0, r.dD)(i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+function f() {
+    let [e] = (0, l.gc)(A),
+        t = e === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+        [n, a] = i.useState(t);
+    return t && !n && a(!0), t || n;
 }
-function A() {
-    let e = (0, r.mB)(i.M.FAVORITES_SERVER_ONBOARDING_INTRO),
-        t = (0, r.mB)(i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+function p() {
+    return (0, a.dD)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO) && (0, a.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+}
+function T() {
+    let e = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO),
+        t = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
     return e && t;
 }
-function h(e) {
-    let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
-        [n, r] = (0, a.kn)(t && e ? [i.M.FAVORITES_GUILD_NEW_BADGE] : []),
-        s = n === i.M.FAVORITES_GUILD_NEW_BADGE;
+function m(e) {
+    let { isFreemium: t } = (0, o.m)({ location: "FavoritesDismissibleContent" }),
+        [n, i] = (0, s.kn)(t && e ? [r.M.FAVORITES_GUILD_NEW_BADGE] : []),
+        a = n === r.M.FAVORITES_GUILD_NEW_BADGE;
     return {
-        shouldShowBetaTag: s,
+        shouldShowBetaTag: a,
         dismissBetaTag: () => {
-            s && r(o.i.TAKE_ACTION);
+            a && i(u.i.TAKE_ACTION);
         },
     };
 }
-i.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
