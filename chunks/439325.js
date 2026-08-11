@@ -121,7 +121,7 @@ var et = t(310784),
     ei = t(654107),
     er = t(175671),
     ea = t(619517),
-    eo = t(34337),
+    eo = t(966245),
     ec = t(318375);
 function ed(e) {
     return (0, eo.$o)({ ...e, className: ec.tN, mediaPlayerClassName: ec.yf });

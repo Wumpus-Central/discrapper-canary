@@ -1,7 +1,6 @@
 c.exports = {
     iE: "wrapper_cb9592",
     qb: "normal_cb9592",
-    VT: "haven_cb9592",
     Bp: "minimum_cb9592",
     Ki: "video_cb9592",
     iy: "fullScreen_cb9592",

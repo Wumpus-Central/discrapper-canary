@@ -58,10 +58,7 @@ function j(e) {
                       let t = H(e);
                       if (0 === t.size()) return;
                       let n = es(e) || q(t) ? L._Of.VIDEO : L._Of.VOICE;
-                      if (n === L._Of.VOICE) {
-                          let t = G[e]?.[L.BRT.APP];
-                          delete w[e], t !== L.DUB.HAVEN && delete G[e];
-                      } else w[e] = n;
+                      n === L._Of.VOICE ? (delete w[e], delete G[e]) : (w[e] = n);
                   })(n),
                   (function (e) {
                       let t = h.default.getId(),

@@ -3,7 +3,6 @@ e.exports = {
     CS: "animated__94748",
     qb: "normal__94748",
     Bp: "minimum__94748",
-    VT: "haven__94748",
     Oo: "noChat__94748",
     iy: "fullScreen__94748",
     Ki: "video__94748",

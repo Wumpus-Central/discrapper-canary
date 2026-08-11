@@ -93,10 +93,10 @@ function K(e) {
         ],
     });
 }
-var Z = l(935573),
-    $ = l(702841),
-    q = l(932793),
-    Q = l(919796),
+var Z = l(819169),
+    $ = l(935573),
+    q = l(702841),
+    Q = l(932793),
     J = l(111042),
     ee = l(651753),
     et = l(289873),
@@ -363,13 +363,13 @@ let ef = { results: [], totalPages: 0, loadId: "" },
             r(1);
         }, [t]);
         let c = i.useMemo(() => ({ query: M.EMPTY_QUERY, page: n, pageSize: M.PAGE_SIZE, categoryId: t }), [n, t]),
-            d = (0, $.bG)([ee.A], () =>
+            d = (0, q.bG)([ee.A], () =>
                 ee.A.getFetchState({ query: M.EMPTY_QUERY, page: n, pageSize: M.PAGE_SIZE, categoryId: t }),
             ),
-            u = (0, $.cf)([ee.A], () => ee.A.getSearchResults(c) ?? ef),
-            h = (0, Q.A)(u) ?? ef,
+            u = (0, q.cf)([ee.A], () => ee.A.getSearchResults(c) ?? ef),
+            h = (0, Z.A)(u) ?? ef,
             { results: m, totalPages: p, loadId: g } = i.useMemo(() => (d === J.e.FETCHING ? h : u), [d, h, u]),
-            x = i.useMemo(() => m?.filter((e) => e.type === Z.j.APPLICATION), [m]),
+            x = i.useMemo(() => m?.filter((e) => e.type === $.j.APPLICATION), [m]),
             v = i.useCallback((e) => {
                 let { page: t, activeCategoryId: l, onSuccessCallback: s, guildId: i, fetchCounts: a } = e;
                 a && S.$P({ query: M.EMPTY_QUERY, guildId: i }),
@@ -403,14 +403,14 @@ let ef = { results: [], totalPages: 0, loadId: "" },
                       (0, s.jsx)("div", {
                           className: eE.Qs,
                           children: x?.map((e, t) => {
-                              if (e.type !== Z.j.APPLICATION) return e.type, null;
+                              if (e.type !== $.j.APPLICATION) return e.type, null;
                               {
                                   let l = e.data;
                                   return (0, s.jsx)(eI, { application: l, onSelectApplication: (e) => j(e, t) }, l.id);
                               }
                           }),
                       }),
-                      (0, s.jsx)(q.m, {
+                      (0, s.jsx)(Q.m, {
                           className: eE.JV,
                           totalCount: Math.min(p * M.PAGE_SIZE, M.MAX_PAGES * M.PAGE_SIZE),
                           pageSize: M.PAGE_SIZE,
@@ -714,7 +714,7 @@ class eZ extends i.PureComponent {
 }
 var e$ = l(619517),
     eq = l(248643),
-    eQ = l(34337),
+    eQ = l(966245),
     eJ = l(615300),
     e0 = l(456412),
     e1 = l(133296),
@@ -722,7 +722,7 @@ var e$ = l(619517),
     e8 = l(532197),
     e9 = l(651183);
 let e2 = { CENTER: e9.Hu, LEFT: e9.Vl };
-class e3 extends i.PureComponent {
+class e5 extends i.PureComponent {
     static Align = e2;
     static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e2.CENTER };
     _scrollerRef = null;
@@ -763,7 +763,7 @@ class e3 extends i.PureComponent {
         });
     }
 }
-class e5 extends i.PureComponent {
+class e3 extends i.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -990,7 +990,7 @@ class tu extends i.PureComponent {
                   className: tt.HY,
                   children: [
                       r,
-                      (0, s.jsx)(e5, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
+                      (0, s.jsx)(e3, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
                       (0, s.jsx)(e6, { onClick: this.manualNext, className: n()(tt.UE, { [tt.h_]: a }) }),
                   ],
               });
@@ -1041,14 +1041,14 @@ class tu extends i.PureComponent {
                 this.renderCarousel(),
                 (0, s.jsx)("div", {
                     className: tt.X$,
-                    children: (0, s.jsx)(e3, {
+                    children: (0, s.jsx)(e5, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: a,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: tt.XG,
-                        align: e.length < 6 ? e3.Align.LEFT : e3.Align.CENTER,
+                        align: e.length < 6 ? e5.Align.LEFT : e5.Align.CENTER,
                     }),
                 }),
             ],
@@ -1598,13 +1598,13 @@ function t7(e) {
         children: d,
     });
 }
-var t8 = l(385648),
+var t8 = l(449054),
     t9 = l(900002),
     t2 = l(950305),
-    t3 = l(573435),
-    t5 = l(714991),
+    t5 = l(573435),
+    t3 = l(714991),
     t6 = l(597098),
-    t4 = l(860689),
+    t4 = l(149790),
     le = l(575504),
     lt = l(937495),
     ll = l(517061);
@@ -1636,8 +1636,8 @@ function ls(e) {
                     (0, s.jsx)("img", { src: c, alt: "", className: le.j0 }),
                     (0, s.jsx)("div", {
                         className: le.$f,
-                        children: (0, s.jsx)(t3.Ay, {
-                            mask: t3.Ay.Masks.AVATAR_DEFAULT,
+                        children: (0, s.jsx)(t5.Ay, {
+                            mask: t5.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, s.jsx)("div", {
@@ -1659,7 +1659,7 @@ function ls(e) {
                     (0, s.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, s.jsx)(t5.A, { className: le.n2, guild: t, tooltipColor: t9.ST.Colors.PRIMARY }),
+                            (0, s.jsx)(t3.A, { className: le.n2, guild: t, tooltipColor: t9.ST.Colors.PRIMARY }),
                             (0, s.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -2047,8 +2047,8 @@ var lM = l(607399),
     l8 = l(957565),
     l9 = l(692848),
     l2 = l(848194);
-let l3 = "start_application_install",
-    l5 = "launch_activity";
+let l5 = "start_application_install",
+    l3 = "launch_activity";
 function l6(e) {
     let { renderDropdown: t, size: l } = e,
         a = i.useRef(null);
@@ -2093,8 +2093,8 @@ function l4(e) {
             }, [t])),
             i.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l3)) {
-                    e.searchParams.delete(l3);
+                if (l && "true" === e.searchParams.get(l5)) {
+                    e.searchParams.delete(l5);
                     let t = e.pathname + e.search;
                     (0, I.bG)(t), a();
                 }
@@ -2123,7 +2123,7 @@ function l4(e) {
                             source: "product_page",
                             device_platform: lM.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            G({ [l3]: "true" });
+                            G({ [l5]: "true" });
                     }
                 }, [t, a, l]),
                 canInstall: i.useMemo(
@@ -2237,9 +2237,9 @@ let st = i.forwardRef(function (e, t) {
                 });
             i.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l5);
+                    t = "true" === e.searchParams.get(l3);
                 if (u && r && t && null != s && null != h) {
-                    e.searchParams.delete(l5);
+                    e.searchParams.delete(l3);
                     let t = e.pathname + e.search;
                     (0, I.bG)(t), m();
                 }
@@ -2247,7 +2247,7 @@ let st = i.forwardRef(function (e, t) {
             let p = i.useCallback(async () => {
                 if (null != s) {
                     if ((O(L.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void G({ [l5]: "true" });
+                        return void G({ [l3]: "true" });
                     await m();
                 }
             }, [l, s, u, m]);
@@ -3122,7 +3122,7 @@ function sK(e) {
                                                 : (0, s.jsx)("div", {
                                                       className: sW.Qs,
                                                       children: C?.results.map((e, t) => {
-                                                          if (e.type === Z.j.APPLICATION) {
+                                                          if (e.type === $.j.APPLICATION) {
                                                               let l = e.data;
                                                               return (0, s.jsx)(
                                                                   eI,
@@ -3138,7 +3138,7 @@ function sK(e) {
                                                       }),
                                                   }),
                                     }),
-                                    (0, s.jsx)(q.m, {
+                                    (0, s.jsx)(Q.m, {
                                         className: sW.JV,
                                         totalCount: Math.min(
                                             (C?.totalPages ?? 0) * M.PAGE_SIZE,

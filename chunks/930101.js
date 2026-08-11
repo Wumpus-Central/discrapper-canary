@@ -13,7 +13,7 @@ var i = n(477900),
     E = n(189551),
     A = n(174459),
     h = n(639245),
-    I = n(34337),
+    I = n(966245),
     f = n(516287),
     p = n(652215),
     T = n(307731),
@@ -96,7 +96,7 @@ let C = (e) => {
         } = e,
         C = (0, f.n)(),
         [R, L] = r.useState(String(Date.now())),
-        [y, D] = r.useState(!1),
+        [D, y] = r.useState(!1),
         [v, b] = r.useState(!1),
         M = r.useRef(null);
     function P(e) {
@@ -121,7 +121,7 @@ let C = (e) => {
             position: n,
             shouldShow: !v,
             onTooltipShow: () => {
-                D(!0),
+                y(!0),
                     a &&
                         (O({ emojiNode: t, isCustomEmoji: !0, nonce: U }),
                         (0, E.K)(T.EmojiInteractionPoint.CustomEmojiTooltipShown));
@@ -134,11 +134,11 @@ let C = (e) => {
                 },
                 onClick: a
                     ? (t) => {
-                          D(!1), b(!0), e?.onClick?.(t);
+                          y(!1), b(!0), e?.onClick?.(t);
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    y && (A.default.track(p.HAw.CLOSE_POPOUT, { nonce: U }), D(!1));
+                    D && (A.default.track(p.HAw.CLOSE_POPOUT, { nonce: U }), y(!1));
                 },
                 tag: "span",
                 tabIndex: _ ? 0 : -1,
@@ -153,7 +153,7 @@ let C = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  A.default.track(p.HAw.CLOSE_POPOUT, { nonce: U }), D(!1), b(!1);
+                  A.default.track(p.HAw.CLOSE_POPOUT, { nonce: U }), y(!1), b(!1);
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,

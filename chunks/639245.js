@@ -25,8 +25,8 @@ var i = n(477900),
     O = n(836039),
     R = n(702841),
     L = n(71393),
-    y = n(159273),
-    D = n(770335),
+    D = n(236285),
+    y = n(770335),
     v = n(624793),
     b = n(652215),
     M = n(731383),
@@ -43,12 +43,12 @@ var i = n(477900),
     j = n(287809),
     W = n(174459),
     Y = n(486020),
-    K = n(385648),
-    $ = n(428262),
+    K = n(449054),
+    $ = n(158045),
     z = n(450707),
     q = n(773669),
     Z = n(375708),
-    X = n(34337),
+    X = n(966245),
     Q = n(746080),
     J = n(202541),
     ee = n(241860);
@@ -197,14 +197,14 @@ function ei(e) {
             isFetching: E,
         } = (function (e) {
             let { emojiId: t, refreshPositionKey: n } = e,
-                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, R.cf)([y.Ay, L.A], () => {
+                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, R.cf)([D.Ay, L.A], () => {
                     var e, n;
                     let i;
                     return (
-                        (e = y.Ay),
+                        (e = D.Ay),
                         (n = L.A),
                         (i = null != t ? e.getCustomEmojiById(t) : null),
-                        i?.type === D.i.GUILD
+                        i?.type === y.i.GUILD
                             ? { emoji: i, joinedEmojiSourceGuildRecord: n.getGuild(i?.guildId) }
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
@@ -277,8 +277,8 @@ function er(e) {
             joinedEmojiSourceGuildRecord: C,
             closePopout: R,
             onToggleShowMoreEmojis: L,
-            guildEmoji: y,
-            demoMode: D = !1,
+            guildEmoji: D,
+            demoMode: y = !1,
             nonce: P,
         } = e,
         U = (0, o.bG)([j.default], () => j.default.getCurrentUser()),
@@ -287,7 +287,7 @@ function er(e) {
         Y = null != V && (V === f?.id || V === C?.id),
         K = null != C,
         q = f?.isDiscoverable() ?? !1;
-    D && ((B = !0), (q = !0), (K = !1), (Y = !1));
+    y && ((B = !0), (q = !0), (K = !1), (Y = !1));
     let et = {
             page: null != (0, o.bG)([H.A], () => H.A.getGuildId()) ? b.liQ.GUILD_CHANNEL : b.liQ.DM_CHANNEL,
             section: b.JJy.EMOJI_UPSELL_POPOUT,
@@ -298,22 +298,22 @@ function er(e) {
             userIsRoleSubscriber: es,
         } = r.useMemo(
             () =>
-                null == y
+                null == D
                     ? { isRoleSubscriptionEmoji: !1, isUnusableRoleSubscriptionEmoji: !1, userIsRoleSubscriber: !1 }
                     : {
-                          isRoleSubscriptionEmoji: w.kT(y),
-                          isUnusableRoleSubscriptionEmoji: w.JN(y, V ?? void 0),
-                          userIsRoleSubscriber: G.A.getUserSubscriptionRoles(y.guildId).size > 0,
+                          isRoleSubscriptionEmoji: w.kT(D),
+                          isUnusableRoleSubscriptionEmoji: w.JN(D, V ?? void 0),
+                          userIsRoleSubscriber: G.A.getUserSubscriptionRoles(D.guildId).size > 0,
                       },
-            [y, V],
+            [D, V],
         ),
-        el = !!er && (0, O.tE)(y?.guildId),
+        el = !!er && (0, O.tE)(D?.guildId),
         { analyticsLocations: eo } = (0, g.Ay)(m.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, S.A)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
-            properties: { location_stack: eo, emoji_guild_id: y?.guildId ?? null, emoji_id: y?.id ?? null },
+            properties: { location_stack: eo, emoji_guild_id: D?.guildId ?? null, emoji_id: D?.id ?? null },
         },
         { disableTrack: !ei },
     );
@@ -346,7 +346,7 @@ function er(e) {
             popoutData: ec,
             emojiSourceGuildId: f?.id,
             nonce: P,
-            demoMode: D,
+            demoMode: y,
         }),
         eA = ec.type === z.u.JOIN_GUILD,
         eh = ec.type === z.u.GET_PREMIUM,
@@ -357,7 +357,7 @@ function er(e) {
         children: [
             (function () {
                 async function e() {
-                    if (D || null == f || K) return;
+                    if (y || null == f || K) return;
                     R();
                     let e = f.id;
                     try {
@@ -463,7 +463,7 @@ function er(e) {
                                             n &&
                                                 (L?.(),
                                                 eI ||
-                                                    D ||
+                                                    y ||
                                                     W.default.track(b.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE),
                                                 ef(!eI));
                                         },

@@ -2016,10 +2016,6 @@ let nM = "",
         GUILD_ROOM_OBJECT_CREATE: (e, t) => `/guilds/${e}/rooms/${t}/objects`,
         GUILD_ROOM_OBJECT_UPDATE: (e, t, n) => `/guilds/${e}/rooms/${t}/objects/${n}/update`,
         GUILD_ROOM_OBJECT_DELETE: (e, t, n) => `/guilds/${e}/rooms/${t}/objects/${n}`,
-        HAVEN_CONNECT: (e) => `/haven/${e}/connect`,
-        HAVEN_DISCONNECT: (e) => `/haven/${e}/disconnect`,
-        HAVEN_UPDATE: (e) => `/haven/${e}/update`,
-        HAVEN_GET_ASSETS: "/haven/assets",
         VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
         VIBEGRATIONS_PROJECT: (e) => `/vibegrations/projects/${e}`,
         VIBEGRATIONS_PROJECT_WS_TICKET: (e) => `/vibegrations/projects/${e}/ws-ticket`,
@@ -5507,7 +5503,6 @@ var rF =
         (eF.MINIMUM = "minimum"),
         (eF.NO_CHAT = "no-chat"),
         (eF.FULL_SCREEN = "full-screen"),
-        (eF.HAVEN = "haven"),
         eF),
     rV =
         (((eV = {}).THEATRE = "theatre"),
@@ -5853,7 +5848,7 @@ var rJ =
         (eQ.BOTTOM_LEFT = "bottom-left"),
         (eQ.BOTTOM_RIGHT = "bottom-right"),
         eQ),
-    r2 = (((eJ = {}).VIDEO = "VIDEO"), (eJ.ACTIVITY = "ACTIVITY"), (eJ.FRAME = "FRAME"), (eJ.HAVEN = "HAVEN"), eJ),
+    r2 = (((eJ = {}).VIDEO = "VIDEO"), (eJ.ACTIVITY = "ACTIVITY"), (eJ.FRAME = "FRAME"), eJ),
     r3 = (((e0 = {}).GIF = "GIF"), (e0.STICKER = "STICKER"), e0);
 let r4 = Object.freeze({ GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" } });
 var r5 =

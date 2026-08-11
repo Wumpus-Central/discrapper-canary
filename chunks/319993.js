@@ -20,15 +20,15 @@ var i,
     m = n(967198),
     g = n(287809),
     S = n(824744),
-    N = n(428262),
+    N = n(158045),
     C = n(926972),
     O = n(885386),
     R = n(862482),
     L = n(821609),
-    y = n(66834),
-    D = n(624793),
+    D = n(66834),
+    y = n(624793),
     v = n(639245),
-    b = n(34337),
+    b = n(966245),
     M = n(796774),
     P = n(807348),
     U = n(805945),
@@ -51,7 +51,7 @@ function j(e) {
         s = a.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await y.A.joinGuild(t), y.A.transitionToGuildSync(t);
+                    await D.A.joinGuild(t), D.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return i === F.GET_NITRO
@@ -99,7 +99,7 @@ function W(e) {
                     R(!1), A();
                 }));
     }, [A, S, l.guildId, l.soundId]);
-    let { buttonType: L, description: y } =
+    let { buttonType: L, description: D } =
             ((t = "0" === l.guildId),
             (n = (0, o.bG)([g.default], () => N.Ay.canUseSoundboardEverywhere(g.default.getCurrentUser()))),
             (i = (0, C.tj)({ location: "useSoundmojiGuildInfoData" })),
@@ -149,7 +149,7 @@ function W(e) {
         G = L === F.JOIN_GUILD,
         V = !h && O,
         B = a.useMemo(
-            () => (f ? D.GO.createFromGuildRecord(I) : null != p ? D.GO.createFromDiscoverableGuild(p) : void 0),
+            () => (f ? y.GO.createFromGuildRecord(I) : null != p ? y.GO.createFromDiscoverableGuild(p) : void 0),
             [I, f, p],
         );
     return V
@@ -169,7 +169,7 @@ function W(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, r.jsx)(u.E, { variant: "text-sm/normal", children: y }),
+                                  (0, r.jsx)(u.E, { variant: "text-sm/normal", children: D }),
                               ],
                           }),
                           null != B &&
