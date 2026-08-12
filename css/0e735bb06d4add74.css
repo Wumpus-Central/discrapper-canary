@@ -22,7 +22,7 @@
     z-index: -2
 }
 
-.removeImageButton__70feb {
+.removeButton__70feb {
     inset-inline-end: var(--space-8);
     opacity: 0;
     position: absolute;
@@ -30,25 +30,12 @@
     transition: opacity .1s ease
 }
 
-.coverImageContainer__70feb:focus-within .removeImageButton__70feb,
-.coverImageContainer__70feb:hover .removeImageButton__70feb {
+.container__70feb:focus-within :is(.removeButton__70feb),
+.container__70feb:hover :is(.removeButton__70feb) {
     opacity: 1
 }
 
-.removeBlockButton__70feb {
-    inset-inline-end: var(--space-8);
-    opacity: 0;
-    position: absolute;
-    top: var(--space-8);
-    transition: opacity .1s ease
-}
-
-.container__70feb:focus-within .removeBlockButton__70feb,
-.container__70feb:hover .removeBlockButton__70feb {
-    opacity: 1
-}
-
-.container__70feb:has(:is(input, textarea):focus) :is(.removeImageButton__70feb, .removeBlockButton__70feb) {
+.container__70feb:has(:is(input, textarea):focus) :is(.removeButton__70feb) {
     opacity: 0;
     pointer-events: none
 }

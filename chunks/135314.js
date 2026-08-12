@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(939249),
     p = n(150934),
     m = n(663803),
-    h = n(87725),
-    C = n(951305),
+    C = n(87725),
+    h = n(951305),
     f = n(773669),
     E = n(97352),
     S = n(45938),
@@ -84,14 +84,14 @@ function j(e) {
             isGift: U,
             quantity: D,
             setQuantity: G,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
             isGift: e.isGift,
             quantity: e.quantity,
             setQuantity: e.setQuantity,
         })),
-        { giftRecipient: F } = (0, C.Pv)(),
+        { giftRecipient: F } = (0, h.Pv)(),
         B = U && (0, S.Ik)(F),
         { discountOffer: H, discountAmountOff: Y, applicablePlan: W } = k,
         V = (0, u.bG)([E.A], () => E.A.get(n));
@@ -102,7 +102,9 @@ function j(e) {
             (function (e) {
                 let { location: t } = e;
                 return g.useConfig({ location: t });
-            })({ location: "PremiumSwitchPlanSelectOption" }) && K === v.PremiumTypes.TIER_2,
+            })({ location: "PremiumSwitchPlanSelectOption" }) &&
+            K === v.PremiumTypes.TIER_2 &&
+            null == F,
         z = (0, A.L_)({ planId: n, isGift: U, priceOptions: s, subscriptionPlan: V }),
         Q = (0, A.y8)(n, !1, U, s),
         $ = null != z && !_,
@@ -206,7 +208,7 @@ function j(e) {
                 Z &&
                 (0, l.jsx)("div", {
                     className: x.ci,
-                    children: (0, l.jsx)(m.l, { value: D, onChange: G, minValue: h.y0, maxValue: 50 }),
+                    children: (0, l.jsx)(m.l, { value: D, onChange: G, minValue: C.y0, maxValue: 50 }),
                 }),
             _ &&
                 (0, l.jsx)("div", {
