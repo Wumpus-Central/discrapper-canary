@@ -173,6 +173,9 @@ function U(e, t) {
         consecutiveStaticColorFrames: n.encoderQualityStats?.consecutiveStaticColorFrames,
         minResolutionWidth: n.encoderQualityStats?.minResolutionWidth,
         minResolutionHeight: n.encoderQualityStats?.minResolutionHeight,
+        reconFramesRequested: n.encoderQualityStats?.reconFramesRequested,
+        reconFramesSuccessful: n.encoderQualityStats?.reconFramesSuccessful,
+        reconFramesFailed: n.encoderQualityStats?.reconFramesFailed,
     };
 }
 function w(e, t, n, i) {
