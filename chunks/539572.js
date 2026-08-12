@@ -44,7 +44,7 @@ var i = n(562465),
     h = n(280450),
     I = n(131319),
     f = n(734057),
-    p = n(749983),
+    p = n(626822),
     T = n(763827),
     m = n(174459),
     g = n(723702),
@@ -857,10 +857,11 @@ async function em(e) {
     let u = (0, E.Ak)("clip_save", 0.5),
         _ = performance.now();
     try {
+        null != a.A.fileManager.createDirectoryIfNotExists && (await a.A.fileManager.createDirectoryIfNotExists(l, !1));
         let e = { ...s, filepath: d, length: 0, thumbnail: "" },
             n = G(e),
-            a = (await i.saveScreenshot(d, n, 90, void 0, t)).toString("base64");
-        (e.thumbnail = `data:image/jpeg;base64,${a}`),
+            o = (await i.saveScreenshot(d, n, 90, void 0, t)).toString("base64");
+        (e.thumbnail = `data:image/jpeg;base64,${o}`),
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }),
             R.nx.info(`Screenshot save took ${Math.round(performance.now() - _)}ms`),
             R.nx.log("Successfully saved screenshot to:", d);
@@ -941,7 +942,7 @@ async function ev(e) {
     let t = await eD(e);
     if (D("auto")) {
         let n = y(e);
-        await a.A.fileManager.createDirectoryIfNotExists(n, !0), t.push(...(await eD(n)));
+        t.push(...(await eD(n)));
     }
     if (!ey) {
         ey = !0;
