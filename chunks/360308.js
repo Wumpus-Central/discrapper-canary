@@ -2,10 +2,9 @@
 n.r(t),
     n.d(t, {
         ApplicationIdentityAppIds: () => u,
-        APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS: () => h,
-        APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: () => I,
-        APPLICATION_IDENTITY_CONNECTIONS_SCREEN_APPLICATIONS: () => A,
-        getMigratedApplicationIdentityConnectionsScreenApplications: () => f,
+        APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS: () => A,
+        APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: () => h,
+        getMigratedApplicationIdentityConnectionsScreenApplications: () => I,
         APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS: () => E,
     });
 var i,
@@ -74,15 +73,14 @@ let _ = {
             connectionEntrypointUrlOverride: "https://account.battle.net/connections/discord",
         },
     },
-    E = [_["1443033465766281327"]],
+    E = [_["1443033465766281327"], _["1356665549089800303"]],
     A = [_["1443033465766281327"], _["1356665549089800303"]],
-    h = [_["1443033465766281327"], _["1356665549089800303"]],
-    I = {
+    h = {
         "1384671873593512078": _["1384671873593512078"],
         "1443033465766281327": _["1443033465766281327"],
         "1443349464290168976": _["1443349464290168976"],
         "1443350165678198935": _["1443350165678198935"],
     };
-function f(e) {
-    return A.filter((t) => t.getMigrationExperimentEnabled(e)).map((e) => e.applicationId);
+function I(e) {
+    return E.filter((t) => t.getMigrationExperimentEnabled(e)).map((e) => e.applicationId);
 }
