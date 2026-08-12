@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => C });
 var i = n(478437),
     r = n(451988),
     a = n(885386),
@@ -11,16 +11,15 @@ var i = n(478437),
     u = n(507104),
     _ = n(158390),
     E = n(228366),
-    A = n(493336),
+    A = n(148494),
     h = n(439372),
     I = n(931480),
     f = n(617617),
     p = n(927813),
-    T = n(19745),
-    m = n(652215);
-let g = 10 * p.A.Millis.SECOND,
-    S = 5 * p.A.Millis.MINUTE;
-class N extends h.A {
+    T = n(652215);
+let m = 10 * p.A.Millis.SECOND,
+    g = 5 * p.A.Millis.MINUTE;
+class S extends h.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
         CHANNEL_SELECT: (e) => this.onChannelSelect(e),
@@ -29,7 +28,7 @@ class N extends h.A {
         LOGOUT: () => this.onLogout(),
     };
     stores = new Map([[u.Ay, () => this.onPremiumGiftingIntentStoreChange()]]);
-    reconcileBackoff = new _.A(g, S);
+    reconcileBackoff = new _.A(m, g);
     isReconciling = !1;
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();
@@ -40,15 +39,13 @@ class N extends h.A {
         this.maybeReconcileServerDismissals(), this.maybeRetryHeldGiftingPromptSystemMessage();
     }
     maybeReconcileServerDismissals() {
-        !this.isReconcileEligible("maybeReconcileServerDismissals") ||
-            this.reconcileBackoff.pending ||
-            this.attemptReconcileFetch();
+        !this.isReconcileEligible() || this.reconcileBackoff.pending || this.attemptReconcileFetch();
     }
     retryReconcileServerDismissals = () => {
-        this.isReconcileEligible("retryReconcileServerDismissals") && this.attemptReconcileFetch();
+        this.isReconcileEligible() && this.attemptReconcileFetch();
     };
-    isReconcileEligible(e) {
-        return 0 !== u.Ay.getFriendAnniversaries().length && T.H.getConfig({ location: e }).enabled;
+    isReconcileEligible() {
+        return u.Ay.getFriendAnniversaries().length > 0;
     }
     getServerDismissalTimestampMs() {
         return Number(f.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
@@ -73,7 +70,7 @@ class N extends h.A {
             let i = s.A.getDMFromUserId(t);
             if (null != i)
                 for (let e of I.A.getMessages(i))
-                    e.type === m.lAJ.GIFTING_PROMPT &&
+                    e.type === T.lAJ.GIFTING_PROMPT &&
                         e.giftingPrompt?.recipientUserId === t &&
                         E.h.dispatch({ type: "MESSAGE_DELETE", id: e.id, channelId: i });
         }
@@ -89,14 +86,11 @@ class N extends h.A {
             u.Ay.getLastKnownGiftIntentDismissedAtMs() < this.getServerDismissalTimestampMs() ||
             ((this.heldGiftingPromptSystemMessage = !1), this.sendGiftingPromptSystemMessagesIfEligible());
     }
-    shouldHoldGiftingPromptSystemMessageForServerReconcile(e) {
-        return (
-            !!T.H.getConfig({ location: e }).enabled &&
-            u.Ay.getLastKnownGiftIntentDismissedAtMs() < this.getServerDismissalTimestampMs()
-        );
+    shouldHoldGiftingPromptSystemMessageForServerReconcile() {
+        return u.Ay.getLastKnownGiftIntentDismissedAtMs() < this.getServerDismissalTimestampMs();
     }
-    trySendGiftingPromptSystemMessage(e, t, n, i, r) {
-        return this.shouldHoldGiftingPromptSystemMessageForServerReconcile(r)
+    trySendGiftingPromptSystemMessage(e, t, n, i) {
+        return this.shouldHoldGiftingPromptSystemMessageForServerReconcile()
             ? ((this.heldGiftingPromptSystemMessage = !0), !1)
             : (A.A.sendGiftingPromptSystemMessage(e, {
                   giftIntentType: t,
@@ -106,8 +100,8 @@ class N extends h.A {
               !0);
     }
 }
-var C = n(202541);
-let R = new (class extends N {
+var N = n(202541);
+let C = new (class extends S {
     isChannelEligible(e) {
         switch (e.type) {
             case i.r.DM:
@@ -130,8 +124,7 @@ let R = new (class extends N {
         u.Ay.isGiftIntentMessageInCooldown(n) ||
             e !== r ||
             (s
-                ? this.trySendGiftingPromptSystemMessage(e, t, n, i, "maybeSendGiftingPromptSystemMessage") &&
-                  (0, c.xs)(n)
+                ? this.trySendGiftingPromptSystemMessage(e, t, n, i) && (0, c.xs)(n)
                 : l.A.whenReady(e, () => {
                       o.Ay.getChannelId() === e && this.maybeSendGiftingPromptSystemMessage(e, t, n, i);
                   }));
@@ -144,7 +137,7 @@ let R = new (class extends N {
                 t = u.Ay.getFriendAnniversaries().filter((t) => e.has(t));
             if (t.length > 0) {
                 let e = t[0];
-                this.maybeSendGiftingPromptSystemMessageDelayed(n.id, C.np.FRIEND_ANNIVERSARY, e, C.l1.SEND_MESSAGE);
+                this.maybeSendGiftingPromptSystemMessageDelayed(n.id, N.np.FRIEND_ANNIVERSARY, e, N.l1.SEND_MESSAGE);
             }
         }
     }

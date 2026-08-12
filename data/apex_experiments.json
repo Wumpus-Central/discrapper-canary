@@ -4177,22 +4177,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-06-friendship-anniversary-backend-persistence",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "guild",
     "name": "2026-06-game-invites-channel",
     "defaultConfig": {
