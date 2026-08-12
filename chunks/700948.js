@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => L });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -9,43 +9,41 @@ var i = n(477900),
     d = n(821578),
     u = n(17928),
     h = n(259678),
-    p = n(313961),
+    p = n(198052),
     m = n(734057),
     f = n(446243),
     A = n(920639),
     x = n(558076),
-    g = n(872772),
-    y = n(913481),
+    g = n(913481),
     C = n(711478),
-    j = n(487048),
-    v = n(232571),
-    E = n(109591),
-    N = n(519342),
-    I = n(241215),
-    b = n(207274),
-    T = n(956480),
-    _ = n(189998),
-    R = n(662731),
-    S = n(375708),
-    L = n(886943);
-function P(e) {
+    y = n(487048),
+    j = n(232571),
+    I = n(109591),
+    v = n(519342),
+    E = n(241215),
+    N = n(207274),
+    b = n(956480),
+    T = n(189998),
+    _ = n(662731),
+    R = n(375708),
+    S = n(886943);
+function L(e) {
     let { channelId: t, popoutType: n, controlsIdle: a } = e,
-        P = (0, u.bG)([x.A], () => x.A.getRoom(t)?.background ?? d.I.DEFAULT),
-        { background: w, backgroundBlurred: O, seats: M, aspectRatio: D, plants: U, screen: k, getName: V } = _.iX[P],
-        { width: G = 0, height: B = 0, ref: F } = (0, c.Ay)(),
-        H = G / B > D,
-        z = H ? B * D : G,
-        W = (0, u.bG)([p.A], () => null != p.A.getSelectedParticipant(t)),
-        $ = W ? (0, _.bf)(D, H) : 1,
-        Y = l.useRef(null),
-        K = (0, u.bG)([x.A], () => x.A.getRoomUsers(t)),
-        X = (0, u.bG)([x.A], () => x.A.getRoomObjects(t)),
-        q = K.size,
-        Z = Math.max(0, M.length - K.size),
-        Q = X.get(g.N.NOTE)?.length ?? 0,
-        J = U.length + 1 + Q;
+        L = (0, u.bG)([x.A], () => x.A.getRoom(t)?.background ?? d.I.DEFAULT),
+        { background: P, backgroundBlurred: O, seats: w, aspectRatio: M, plants: D, screen: U, getName: V } = T.iX[L],
+        { width: k = 0, height: G = 0, ref: B } = (0, c.Ay)(),
+        F = k / G > M,
+        z = F ? G * M : k,
+        H = (0, u.bG)([p.A], () => null != p.A.getSelectedParticipant(t)),
+        W = H ? (0, T.bf)(M, F) : 1,
+        $ = l.useRef(null),
+        Y = (0, u.bG)([x.A], () => x.A.getRoomUsers(t)),
+        K = (0, u.bG)([x.A], () => x.A.getNotes(t)),
+        q = Y.size,
+        X = Math.max(0, w.length - Y.size),
+        Z = D.length + 1 + K.length;
     return (
-        (0, T.A)(t, K),
+        (0, b.A)(t, Y, K),
         l.useEffect(() => {
             (0, A.zR)({ channelId: t });
         }, [t]),
@@ -55,40 +53,40 @@ function P(e) {
             e || null == n || (0, f.z5)(n, t);
         }, [t]),
         (0, i.jsx)("div", {
-            className: L.kL,
+            className: S.kL,
             style: {
-                backgroundImage: `url(${W ? O : w})`,
-                backgroundSize: H ? `auto ${100 * $}%` : `${100 * $}% auto`,
+                backgroundImage: `url(${H ? O : P})`,
+                backgroundSize: F ? `auto ${100 * W}%` : `${100 * W}% auto`,
             },
-            ref: F,
+            ref: B,
             role: "region",
             "aria-label": V(),
-            children: W
-                ? (0, i.jsx)(I.A, { channelId: t, popoutType: n, width: G, height: B })
+            children: H
+                ? (0, i.jsx)(E.A, { channelId: t, popoutType: n, width: k, height: G })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.s, {
-                              children: S.intl.formatToPlainString(R.default["/l5Wn+"], {
+                              children: R.intl.formatToPlainString(_.default["/l5Wn+"], {
                                   seatedCount: q,
-                                  openSeatCount: Z,
-                                  objectCount: J,
+                                  openSeatCount: X,
+                                  objectCount: Z,
                               }),
                           }),
                           (0, i.jsx)("div", {
-                              className: s()(L.hk, { [L.Nb]: H }),
-                              style: { aspectRatio: D },
-                              ref: Y,
+                              className: s()(S.hk, { [S.Nb]: F }),
+                              style: { aspectRatio: M },
+                              ref: $,
                               children: (0, i.jsxs)(h.xp, {
-                                  containerRef: Y,
+                                  containerRef: $,
                                   children: [
-                                      (0, i.jsx)(j.A, { channelId: t, corners: k, roomWidth: z }),
-                                      (0, i.jsx)(N.A, { channelId: t, roomWidth: z }),
+                                      (0, i.jsx)(y.A, { channelId: t, corners: U, roomWidth: z }),
+                                      (0, i.jsx)(v.A, { channelId: t, roomWidth: z }),
                                       (0, i.jsx)("div", {
                                           role: "list",
-                                          "aria-label": S.intl.string(R.default.F9DcvR),
-                                          children: M.map((e, n) =>
+                                          "aria-label": R.intl.string(_.default.F9DcvR),
+                                          children: w.map((e, n) =>
                                               (0, i.jsx)(
-                                                  v.A,
+                                                  j.A,
                                                   {
                                                       channelId: t,
                                                       x: e.position.x,
@@ -102,19 +100,19 @@ function P(e) {
                                       }),
                                       (0, i.jsxs)("div", {
                                           role: "list",
-                                          "aria-label": S.intl.string(R.default.JYlbK5),
+                                          "aria-label": R.intl.string(_.default.JYlbK5),
                                           children: [
-                                              (0, i.jsx)(C.A, { channelId: t, plantConfig: U, roomWidth: z }),
-                                              (0, i.jsx)(b.A, { channelId: t }),
+                                              (0, i.jsx)(C.A, { channelId: t, plantConfig: D, roomWidth: z }),
+                                              (0, i.jsx)(N.A, { channelId: t }),
                                           ],
                                       }),
-                                      (0, i.jsx)(y.A, { channelId: t, roomWidth: z }),
-                                      (0, i.jsx)(E.A, {
+                                      (0, i.jsx)(g.A, { channelId: t, roomWidth: z }),
+                                      (0, i.jsx)(I.A, {
                                           channelId: t,
                                           popoutType: n,
-                                          seatsRef: Y,
+                                          seatsRef: $,
                                           controlsIdle: a,
-                                          height: B,
+                                          height: G,
                                       }),
                                   ],
                               }),
