@@ -21,6 +21,7 @@ let p = {
         [f.d.MODAL_V2]: "user-profile-modal-v2",
         [f.d.SIDEBAR]: "user-profile-sidebar",
         [f.d.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
+        [f.d.EMBED]: "user-profile-embed",
     },
     T = Object.freeze({
         "--profile-gradient-primary-color": "var(--background-surface-high)",

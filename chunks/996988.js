@@ -7,4 +7,5 @@ var i,
         (i.MODAL_V2 = "MODAL_V2"),
         (i.SIDEBAR = "SIDEBAR"),
         (i.VIDEO_TILE_BACKGROUND = "VIDEO_TILE_BACKGROUND"),
+        (i.EMBED = "EMBED"),
         i);

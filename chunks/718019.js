@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b, V: () => v });
+n.d(t, { A: () => v, V: () => y });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -23,84 +23,81 @@ var i = n(477900),
     N = n(518477),
     C = n(652215),
     O = n(202541),
-    R = n(985253),
-    L = n(375708),
-    D = n(145762);
-let y = f.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
-function v(e) {
+    R = n(375708),
+    L = n(145762);
+let D = f.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
+function y(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: i,
             channelId: a,
-            themeType: s,
+            avatarSize: s,
             animateOnHover: o,
             previewStatus: c,
-            specOverrides: _,
-            avatarDecorationOverride: E,
-            avatarOverride: f,
+            avatarDecorationOverride: _,
+            avatarOverride: E,
         } = e,
-        { theme: p } = (0, g.E)(),
-        S = I.Ay.isPremiumAtLeast(n?.premiumType, O.PremiumTypes.TIER_2),
-        L = r.useMemo(() => t.isNonUserBot() || (0, A.c)(t, a), [t, a]),
-        { live: D } = (0, T.A)(t.id),
-        [y] = D,
+        { theme: f } = (0, g.E)(),
+        p = I.Ay.isPremiumAtLeast(n?.premiumType, O.PremiumTypes.TIER_2),
+        S = r.useMemo(() => t.isNonUserBot() || (0, A.c)(t, a), [t, a]),
+        { live: R } = (0, T.A)(t.id),
+        [L] = R,
         {
-            status: v,
-            isMobileOnline: b,
-            isVROnline: M,
+            status: D,
+            isMobileOnline: y,
+            isVROnline: v,
         } = (0, l.cf)([h.A], () => ({
-            status: (0, u.A)(y) ? C.clD.STREAMING : h.A.getStatus(t.id),
+            status: (0, u.A)(L) ? C.clD.STREAMING : h.A.getStatus(t.id),
             isMobileOnline: h.A.isMobileOnline(t.id),
             isVROnline: h.A.isVROnline(t.id),
         })),
-        P = _?.avatarSize ?? R.T[s].avatarSize,
         {
-            avatarDecorationSrc: U,
-            avatarSrc: w,
-            eventHandlers: G,
+            avatarDecorationSrc: b,
+            avatarSrc: M,
+            eventHandlers: P,
         } = (0, m.A)({
             userId: t.id,
             guildId: null != n ? n.guildId : i,
-            size: P,
+            size: s,
             animateOnHover: o,
-            avatarDecorationOverride: E,
-            avatarOverride: f,
+            avatarDecorationOverride: _,
+            avatarOverride: E,
         });
     return {
         avatarProps: {
-            src: w,
-            avatarDecoration: U,
-            size: P,
+            src: M,
+            avatarDecoration: b,
+            size: s,
             "aria-label": t.username,
-            status: L ? C.clD.UNKNOWN : void 0 !== c ? c : v,
-            statusBackdropColor: S && !L ? (0, d.C$)(p) : void 0,
-            isMobile: b,
-            isVR: M,
+            status: S ? C.clD.UNKNOWN : void 0 !== c ? c : D,
+            statusBackdropColor: p && !S ? (0, d.C$)(f) : void 0,
+            isMobile: y,
+            isVR: v,
             statusTooltip: !0,
             statusTooltipDelay: N.In,
         },
-        eventHandlers: G,
+        eventHandlers: P,
     };
 }
-function b(e) {
+function v(e) {
     let { onOpenProfile: t, onOpenAvatar: n, className: r, ...a } = e,
         { analyticsLocations: l } = (0, E.Ay)(_.A.AVATAR),
         { trackUserProfileAction: o } = (0, p.NJ)(),
-        { avatarProps: d, eventHandlers: u } = v(a),
-        A = s()(D.my, r),
+        { avatarProps: d, eventHandlers: u } = y(a),
+        A = s()(L.my, r),
         h = a.displayProfile?.guildId ?? a.guildId,
         I = null != a.user.avatar || a.user.hasAvatarForGuild(h) ? n : void 0;
     return null == t && null == I
-        ? (0, i.jsx)("div", { ...u, className: A, children: (0, i.jsx)(y, { ...d }) })
+        ? (0, i.jsx)("div", { ...u, className: A, children: (0, i.jsx)(D, { ...d }) })
         : (0, i.jsx)(c.s, {
-              "aria-label": L.intl.string(null != I ? L.t.xB7MI3 : L.t["+Xp3hq"]),
+              "aria-label": R.intl.string(null != I ? R.t.xB7MI3 : R.t["+Xp3hq"]),
               ...u,
               onMouseEnter: function () {
                   u.onMouseEnter(), null != I && (0, S.V)({ user: a.user, guildId: h });
               },
-              className: s()(A, D.vk),
-              focusProps: { ringClassName: D.Rg },
+              className: s()(A, L.vk),
+              focusProps: { ringClassName: L.Rg },
               onClick: () => {
                   if (null != I) {
                       o({ action: N.pt.VIEW_AVATAR, analyticsLocations: l }), I();
@@ -108,6 +105,6 @@ function b(e) {
                   }
                   o({ action: N.pt.PRESS_VIEW_PROFILE, analyticsLocations: l }), t?.();
               },
-              children: (0, i.jsx)(y, { ...d, imageClassName: D.Lw }),
+              children: (0, i.jsx)(D, { ...d, imageClassName: L.Lw }),
           });
 }

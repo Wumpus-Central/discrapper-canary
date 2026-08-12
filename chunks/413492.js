@@ -525,7 +525,13 @@ function eN(e) {
     });
 }
 var eC = n(996988);
-let eO = { [eC.d.POPOUT]: 12, [eC.d.MODAL]: 26, [eC.d.SIDEBAR]: 13, [eC.d.VIDEO_TILE_BACKGROUND]: 12 };
+let eO = {
+    [eC.d.POPOUT]: 12,
+    [eC.d.MODAL]: 26,
+    [eC.d.SIDEBAR]: 13,
+    [eC.d.VIDEO_TILE_BACKGROUND]: 12,
+    [eC.d.EMBED]: 12,
+};
 function eR(e) {
     let {
             displayProfile: t,

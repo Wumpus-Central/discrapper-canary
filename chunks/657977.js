@@ -1,4 +1,4 @@
-n.d(e, { default: () => tp });
+n.d(e, { default: () => tf });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -9,20 +9,20 @@ var l = n(477900),
     d = n(843282);
 n(321073);
 var h = n(132500),
-    c = n(259678),
-    g = n(140735),
-    m = n(504345),
+    c = n(668639),
+    g = n(259678),
+    m = n(140735),
     p = n(834730),
     f = n(826745),
     x = n(375708),
     T = n(790634),
     y = n(498740),
     A = n(15328);
-let j = (0, h.A)(),
-    v = (0, h.A)(),
-    S = (0, h.A)();
+let v = (0, h.A)(),
+    S = (0, h.A)(),
+    j = (0, h.A)();
 class w extends r.Component {
-    static contextType = m.cK;
+    static contextType = c.cK;
     static defaultProps = {
         name: "",
         disabled: !1,
@@ -43,7 +43,7 @@ class w extends r.Component {
             r = this.context?.errorId;
         return (
             null != r && l.push(r),
-            null != n ? l.push(j) : (null != t && l.push(S), null != e && l.push(v)),
+            null != n ? l.push(v) : (null != t && l.push(j), null != e && l.push(S)),
             l.length > 0 ? l.join(" ") : void 0
         );
     };
@@ -107,7 +107,7 @@ class w extends r.Component {
         return null == t
             ? null
             : (0, l.jsx)(p.E, {
-                  id: j,
+                  id: v,
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
                   className: T.gJ,
@@ -126,9 +126,9 @@ class w extends r.Component {
                 spellCheck: u,
                 resizeable: d,
                 className: h,
-                id: m,
+                id: c,
                 rows: p,
-                flex: j,
+                flex: v,
                 autosize: w,
                 required: N,
                 onInvalid: D,
@@ -139,12 +139,12 @@ class w extends r.Component {
             E = this.props["aria-labelledby"] ?? this.context?.titleId,
             b = this.getAriaDescribedBy();
         return (0, l.jsxs)("div", {
-            className: a()(y.I6, { [T.Uu]: j }),
+            className: a()(y.I6, { [T.Uu]: v }),
             children: [
                 (0, l.jsxs)("div", {
-                    className: a()(T.b4, { [T.Uu]: j }),
+                    className: a()(T.b4, { [T.Uu]: v }),
                     children: [
-                        (0, l.jsx)(c.vN, {
+                        (0, l.jsx)(g.vN, {
                             children: (0, l.jsx)(C, {
                                 type: "text",
                                 className: a()(y.hF, T.Tg, A.qD, h, { [y.z3]: P, [y.r9]: t, [T.Xl]: d }),
@@ -152,7 +152,7 @@ class w extends r.Component {
                                 "aria-describedby": b,
                                 "aria-invalid": P,
                                 style: { paddingRight: this.getPaddingRight() },
-                                id: m,
+                                id: c,
                                 disabled: t,
                                 placeholder: n,
                                 value: e,
@@ -171,9 +171,9 @@ class w extends r.Component {
                             }),
                         }),
                         null != i &&
-                            (0, l.jsx)(g.A, { id: v, children: x.intl.format(x.t["bmQU//"], { minLength: i }) }),
+                            (0, l.jsx)(m.A, { id: S, children: x.intl.format(x.t["bmQU//"], { minLength: i }) }),
                         null != s &&
-                            (0, l.jsx)(g.A, { id: S, children: x.intl.format(x.t["+DFxLc"], { maxLength: s }) }),
+                            (0, l.jsx)(m.A, { id: j, children: x.intl.format(x.t["+DFxLc"], { maxLength: s }) }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),
                     ],
@@ -217,9 +217,9 @@ var N = n(922016),
     F = n(284009),
     Y = n.n(F),
     $ = n(927813),
-    B = n(403918),
-    K = n(652215);
-let z = [B.yt.MINUTES_30, B.yt.HOURS_1, B.yt.HOURS_4];
+    z = n(403918),
+    B = n(652215);
+let K = [z.yt.MINUTES_30, z.yt.HOURS_1, z.yt.HOURS_4];
 var q = n(58703),
     G = n(403362);
 function J(t) {
@@ -230,15 +230,15 @@ function J(t) {
 }
 function Q(t) {
     switch (t) {
-        case B.yt.TODAY:
+        case z.yt.TODAY:
             return J($.A.Millis.DAY);
-        case B.yt.HOURS_4:
+        case z.yt.HOURS_4:
             return J(4 * $.A.Millis.HOUR);
-        case B.yt.HOURS_1:
+        case z.yt.HOURS_1:
             return J(+$.A.Millis.HOUR);
-        case B.yt.MINUTES_30:
+        case z.yt.MINUTES_30:
             return J(30 * $.A.Millis.MINUTE);
-        case B.yt.DONT_CLEAR:
+        case z.yt.DONT_CLEAR:
             return x.intl.string(x.t.bRn8cq);
         default:
             (0, G.xb)(t);
@@ -263,8 +263,9 @@ var X = n(685396),
     ts = n(983495),
     to = n(562153),
     tu = n(996988),
-    td = n(344580);
-function th(t) {
+    td = n(985253),
+    th = n(344580);
+function tc(t) {
     let { user: e, previewText: n, previewEmoji: r, previewStatus: i, placeHolderText: a, transitionState: s } = t,
         o = (0, te.Ay)(e.id),
         u = (0, tt.G)(n),
@@ -279,7 +280,7 @@ function th(t) {
             user: e,
             displayProfile: o,
             themeType: tu.d.POPOUT,
-            className: td.ti,
+            className: th.ti,
             "aria-hidden": "true",
             children: [
                 (0, l.jsxs)("header", {
@@ -290,9 +291,9 @@ function th(t) {
                             children: (0, l.jsx)(tn.A, {
                                 user: e,
                                 displayProfile: o,
-                                themeType: tu.d.POPOUT,
+                                avatarSize: td.T[tu.d.POPOUT].avatarSize,
                                 previewStatus: i,
-                                className: td.my,
+                                className: th.my,
                             }),
                         }),
                         (0, l.jsx)(ts.A, {
@@ -307,7 +308,7 @@ function th(t) {
                 }),
                 o?.profileEffect != null && (0, l.jsx)(W.A, { skuId: o.profileEffect.skuId }),
                 (0, l.jsx)("div", {
-                    className: td.QV,
+                    className: th.QV,
                     inert: !0,
                     children: (0, l.jsx)(ta.Ay, {
                         user: e,
@@ -320,29 +321,29 @@ function th(t) {
         }),
     });
 }
-var tc = n(307731),
-    tg = n(180259);
-let tm = "CLEAR_AFTER";
-function tp(t) {
+var tg = n(307731),
+    tm = n(180259);
+let tp = "CLEAR_AFTER";
+function tf(t) {
     let { transitionState: e, onClose: n, sourceAnalyticsLocations: i = [], prompt: h = null } = t,
         { analyticsLocations: c } = (0, R.Ay)(i, b.A.CUSTOM_STATUS_MODAL),
-        m = (0, u.bG)([_.default], () => _.default.getCurrentUser() ?? null),
+        g = (0, u.bG)([_.default], () => _.default.getCurrentUser() ?? null),
         f = (0, X.K)(),
         [T, y] = r.useState(f?.state ?? ""),
-        [A, j] = r.useState(f?.emoji ?? null),
-        [v, S] = r.useState(
+        [A, v] = r.useState(f?.emoji ?? null),
+        [S, j] = r.useState(
             (function () {
                 let t = H.G2.getSetting();
-                if (null == t || "" === t.expiresAtMs) return B.yt.TODAY;
+                if (null == t || "" === t.expiresAtMs) return z.yt.TODAY;
                 let e = Number(t.expiresAtMs);
-                if (isNaN(e)) return B.yt.TODAY;
-                if (0 === e) return B.yt.DONT_CLEAR;
+                if (isNaN(e)) return z.yt.TODAY;
+                if (0 === e) return z.yt.DONT_CLEAR;
                 let n = new Date(),
                     l = new Date(e);
                 if (n.getFullYear() !== l.getFullYear() || n.getMonth() !== l.getMonth() || n.getDate() !== l.getDate())
-                    return B.yt.TODAY;
+                    return z.yt.TODAY;
                 let r = Number(e) - Date.now();
-                return z.find((t) => r <= t) ?? B.yt.TODAY;
+                return K.find((t) => r <= t) ?? z.yt.TODAY;
             })(),
         ),
         L = r.useRef(null),
@@ -352,7 +353,7 @@ function tp(t) {
         [Z, W] = r.useState(J),
         { ref: tt, width: te } = (0, P.Ay)(J);
     function tn() {
-        v !== tm &&
+        S !== tp &&
             (!(function (t) {
                 let {
                         text: e,
@@ -368,11 +369,11 @@ function tp(t) {
                 H.G2.updateSetting({
                     text: o.length > 0 ? o : "",
                     expiresAtMs:
-                        null != l && l !== B.yt.DONT_CLEAR
+                        null != l && l !== z.yt.DONT_CLEAR
                             ? String(
                                   k()()
                                       .add(
-                                          l === B.yt.TODAY
+                                          l === z.yt.TODAY
                                               ? $.A.Millis.DAY
                                               : (Y()("number" == typeof l, "Invalid custom status clear timeout"), l),
                                           "ms",
@@ -385,7 +386,7 @@ function tp(t) {
                     emojiName: null != n ? n.name : "",
                     createdAtMs: String(i ?? k()().toDate().getTime()),
                 }),
-                    I.default.track(K.HAw.CUSTOM_STATUS_UPDATED, {
+                    I.default.track(B.HAw.CUSTOM_STATUS_UPDATED, {
                         location: null != r ? r.location : null,
                         emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
                         text_len: o.length,
@@ -393,7 +394,7 @@ function tp(t) {
                         prompt_type: a?.value,
                         location_stack: s,
                     });
-            })({ text: T, emojiInfo: A, clearAfter: v, prompt: h, analyticsLocations: c }),
+            })({ text: T, emojiInfo: A, clearAfter: S, prompt: h, analyticsLocations: c }),
             n());
     }
     r.useEffect(() => {
@@ -410,48 +411,48 @@ function tp(t) {
         }
     }, [te, J]),
         r.useEffect(() => {
-            I.default.track(K.HAw.OPEN_MODAL, { type: b.A.CUSTOM_STATUS_MODAL, location_stack: c });
+            I.default.track(B.HAw.OPEN_MODAL, { type: b.A.CUSTOM_STATUS_MODAL, location_stack: c });
         }, [c]),
         (0, E.Ay)(() => {
             L.current?.focus(), L.current?.setSelection(T.length, T.length);
         }),
-        (0, s.$)({ currentLength: T.length, maxLength: B.hp, message: x.intl.string(x.t.c2Jqed) });
+        (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) });
     let tl = x.intl.string(x.t.rp0ahn),
         tr = "custom-status-input";
     return (0, l.jsxs)(o.Modal, {
         title: x.intl.string(x.t.Zx4jzN),
         actionBarInput: (0, l.jsx)("div", {
-            className: tg.l3,
+            className: tm.l3,
             children: (0, l.jsx)(d.Te, {
                 "aria-label": x.intl.formatToPlainString(x.t.NFJUPa, {
-                    value: v === tm ? x.intl.string(x.t.E45wvP) : Q(v),
+                    value: S === tp ? x.intl.string(x.t.E45wvP) : Q(S),
                 }),
-                maxVisibleItems: B.SX.length + 1,
-                value: v,
+                maxVisibleItems: z.SX.length + 1,
+                value: S,
                 options: [
-                    { value: tm, key: tm, label: x.intl.string(x.t.E45wvP), disabled: !0 },
-                    ...B.SX.map((t) => ({ value: t, key: t, label: Q(t) })),
+                    { value: tp, key: tp, label: x.intl.string(x.t.E45wvP), disabled: !0 },
+                    ...z.SX.map((t) => ({ value: t, key: t, label: Q(t) })),
                 ],
-                onChange: (t) => S(t),
-                optionClassName: tg.Pl,
+                onChange: (t) => j(t),
+                optionClassName: tm.Pl,
                 renderOptionLabel: (t) => {
                     let { value: e, label: n, disabled: r } = t;
                     return (0, l.jsx)("span", {
-                        className: a()(tg.j3, r ? tg.r9 : void 0),
+                        className: a()(tm.j3, r ? tm.r9 : void 0),
                         children:
-                            e === tm
+                            e === tp
                                 ? n
                                 : (function (t) {
                                       switch (t) {
-                                          case B.yt.TODAY:
+                                          case z.yt.TODAY:
                                               return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 24 })} (${V($.A.Millis.DAY)})`;
-                                          case B.yt.HOURS_4:
+                                          case z.yt.HOURS_4:
                                               return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 4 })} (${V(4 * $.A.Millis.HOUR)})`;
-                                          case B.yt.HOURS_1:
+                                          case z.yt.HOURS_1:
                                               return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 1 })} (${V($.A.Millis.HOUR)})`;
-                                          case B.yt.MINUTES_30:
+                                          case z.yt.MINUTES_30:
                                               return `${x.intl.formatToPlainString(x.t.TS3eJb, { minutes: 30 })} (${V(30 * $.A.Millis.MINUTE)})`;
-                                          case B.yt.DONT_CLEAR:
+                                          case z.yt.DONT_CLEAR:
                                               return x.intl.string(x.t.bRn8cq);
                                           default:
                                               (0, G.xb)(t);
@@ -471,13 +472,13 @@ function tp(t) {
         transitionState: e,
         actions: [{ text: x.intl.string(x.t["R3BPH+"]), variant: "primary", onClick: tn }],
         children: [
-            null != m &&
+            null != g &&
                 (0, l.jsxs)("div", {
-                    className: tg.q5,
+                    className: tm.q5,
                     children: [
-                        (0, l.jsx)(g.A, { children: x.intl.formatToPlainString(x.t.IKBvFl, { placeholder: J ?? "" }) }),
-                        (0, l.jsx)(th, {
-                            user: m,
+                        (0, l.jsx)(m.A, { children: x.intl.formatToPlainString(x.t.IKBvFl, { placeholder: J ?? "" }) }),
+                        (0, l.jsx)(tc, {
+                            user: g,
                             previewText: T,
                             previewEmoji: A,
                             placeHolderText: J,
@@ -486,22 +487,22 @@ function tp(t) {
                     ],
                 }),
             (0, l.jsxs)("div", {
-                className: tg.eH,
+                className: tm.eH,
                 children: [
                     (0, l.jsx)(p.E, {
                         tag: "label",
                         htmlFor: tr,
                         variant: "heading-md/semibold",
-                        className: tg.wW,
+                        className: tm.wW,
                         children: tl,
                     }),
                     (0, l.jsxs)("div", {
-                        className: tg.Kf,
+                        className: tm.Kf,
                         ref: tt,
                         children: [
-                            (0, l.jsx)("span", { ref: q, className: tg._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", { ref: q, className: tm._D, "aria-hidden": "true" }),
                             (0, l.jsx)("div", {
-                                className: tg.S0,
+                                className: tm.S0,
                                 children: (0, l.jsx)(N.Y, {
                                     targetElementRef: F,
                                     renderPopout: function (t) {
@@ -511,7 +512,7 @@ function tp(t) {
                                             onSelectEmoji: (t) => {
                                                 let { emoji: n, willClose: l } = t;
                                                 null == n ||
-                                                    j(
+                                                    v(
                                                         null != n.id
                                                             ? { id: n.id, name: n.name, animated: n.animated }
                                                             : {
@@ -522,7 +523,7 @@ function tp(t) {
                                                     ),
                                                     l && e();
                                             },
-                                            pickerIntention: tc.EmojiIntention.STATUS,
+                                            pickerIntention: tg.EmojiIntention.STATUS,
                                             onNavigateAway: n,
                                         });
                                     },
@@ -541,7 +542,7 @@ function tp(t) {
                                                           currentValue: A.name,
                                                       })
                                                     : x.intl.string(x.t.psHnw8),
-                                            className: tg.Z8,
+                                            className: tm.Z8,
                                             spriteSize: 24,
                                             tabIndex: 0,
                                             renderButtonContents:
@@ -549,7 +550,7 @@ function tp(t) {
                                                     ? null
                                                     : () =>
                                                           (0, l.jsx)(C.A, {
-                                                              className: tg.Zg,
+                                                              className: tm.Zg,
                                                               emojiId: A.id,
                                                               emojiName: A.name,
                                                               animated: !!A.animated,
@@ -561,7 +562,7 @@ function tp(t) {
                             (0, l.jsx)(w, {
                                 autosize: !0,
                                 value: T,
-                                maxLength: B.hp,
+                                maxLength: z.hp,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
                                 placeholder: Z,
@@ -571,18 +572,18 @@ function tp(t) {
                                 onKeyDown: function (t) {
                                     "Enter" === t.key && (t.preventDefault(), t.shiftKey || tn());
                                 },
-                                className: tg.hF,
+                                className: tm.hF,
                                 inputRef: L,
                                 id: tr,
                             }),
                             (T.length > 0 || null != A) &&
                                 (0, l.jsx)(D.D, {
                                     "aria-label": x.intl.string(x.t.wfYTHe),
-                                    className: tg.mt,
+                                    className: tm.mt,
                                     onClick: function () {
-                                        y(""), j(null);
+                                        y(""), v(null);
                                     },
-                                    children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tg.hj }),
+                                    children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tm.hj }),
                                 }),
                         ],
                     }),
