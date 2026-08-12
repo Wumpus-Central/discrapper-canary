@@ -1,36 +1,49 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => A });
 var i = n(477900),
     r = n(582128),
-    a = n(338854),
-    s = n(807098),
-    l = n(49999),
-    o = n(375708);
-function d(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: d, coachmarkConfig: c, children: u } = e,
-        _ = (0, s.T)(c?.asset),
-        E = r.useRef(null),
-        A = {
-            text: o.intl.string(o.t.RzWDqY),
-            onClick: () => {
-                n(), t(), d(l.i.TAKE_ACTION);
-            },
-        };
+    a = n(17928),
+    s = n(338854),
+    l = n(406810),
+    o = n(475743),
+    d = n(421108),
+    c = n(807098),
+    u = n(528464),
+    _ = n(49999),
+    E = n(375708);
+function A(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: A, coachmarkConfig: h, children: I } = e,
+        f = (0, c.T)(h?.asset),
+        p = (0, a.bG)([u.A], () => u.A.getGiftPromotion()),
+        T = (0, d.dA)(p?.endDate),
+        m = null != T,
+        g = (0, o.Ay)(m),
+        S = r.useRef(null);
+    r.useEffect(() => {
+        !0 !== g || m || (t(), A(_.i.AUTO_DISMISS));
+    }, [g, m, t, A]);
+    let N = {
+        text: E.intl.string(E.t.RzWDqY),
+        onClick: () => {
+            n(), t(), A(_.i.TAKE_ACTION);
+        },
+    };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: E, children: u }),
-            (0, i.jsx)(a.H, {
-                targetElementRef: E,
+            (0, i.jsx)("div", { ref: S, children: I }),
+            (0, i.jsx)(s.H, {
+                targetElementRef: S,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                title: c?.header ?? "",
-                body: c?.body ?? "",
-                assetUrl: _ ?? "",
-                action: A,
+                title: h?.header ?? "",
+                body: h?.body ?? "",
+                assetUrl: f ?? "",
+                badge: null != T ? { type: { text: T.toUpperCase() }, variant: "brand", icon: l.O } : void 0,
+                action: N,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    t(), d(l.i.USER_DISMISS);
+                    t(), A(_.i.USER_DISMISS);
                 },
             }),
         ],
