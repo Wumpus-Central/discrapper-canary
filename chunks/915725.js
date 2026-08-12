@@ -46,7 +46,7 @@ let T = "default",
         decoupledClipsEnabled: !1,
         viewerClipsEnabled: !0,
         viewerConnectivity: I.on.ALL,
-        maxAutoClips: I.T2,
+        maxAutoClips: 20,
         clipSignals: { enableDistributedSignals: !0, enableGameSignals: !0 },
         debugTooltipsEnabled: !1,
         enableAutoclipping: void 0,
@@ -105,7 +105,7 @@ class F extends s.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: w.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(293246).Ay.getHardwareEncoding();
+            let t = n(749983).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {

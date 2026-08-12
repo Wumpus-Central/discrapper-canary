@@ -1,6 +1,5 @@
 _.exports = {
     uW: "section__95407",
-    hL: "warningNotice__95407",
     L0: "infoCard__95407",
     Nf: "infoThumbnail__95407",
     FA: "infoTitle__95407",

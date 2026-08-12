@@ -27,10 +27,10 @@ var n = l(477900),
     E = l(27620),
     L = l(540999),
     S = l(287809),
-    D = l(723702),
-    M = l(553933),
+    M = l(723702),
+    D = l(553933),
     I = l(915725),
-    T = l(693117),
+    T = l(539572),
     _ = l(951592),
     R = l(309777),
     F = l(362081),
@@ -50,7 +50,7 @@ function Y(e) {
     let { alt: t, ariaLabel: l, ariaHidden: i, role: a, width: s = 288, height: r = 162 } = e;
     return (0, n.jsx)("img", {
         style: { width: s, height: r },
-        src: "https://cdn.discordapp.com/assets/content/5cbe59588641e0337b4a5e93e16f0ab02d494b2033f96505d343d31aae29d89c.svg",
+        src: "https://cdn.discordapp.com/assets/content/1e6b3a97c86291528609222cdeb8b18fdcce3270f796106d4af3d0f7fa3cce18.svg",
         alt: t,
         "aria-label": l,
         "aria-hidden": i,
@@ -161,8 +161,8 @@ var ef = l(621466),
     eE = l(47167),
     eL = l(549973),
     eS = l(734057),
-    eD = l(71393),
-    eM = l(549685),
+    eM = l(71393),
+    eD = l(549685),
     eI = l(174459),
     eT = l(403362),
     e_ = l(53677),
@@ -262,20 +262,20 @@ function e1(e) {
         [w, P] = i.useState(!1),
         [E, L] = i.useState(0),
         S = h.has(d.id),
-        D = d.type === eq.nQ.SCREENSHOT,
-        M = (0, u.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
-        T = (y || p || (b && M)) && !S,
+        M = d.type === eq.nQ.SCREENSHOT,
+        D = (0, u.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
+        T = (y || p || (b && D)) && !S,
         _ = i.useCallback(() => N(!0), []),
         R = i.useCallback((e) => {
             e.currentTarget.contains(e.relatedTarget) || N(!1);
         }, []);
     i.useEffect(() => {
-        if (!T || D) return;
+        if (!T || M) return;
         let e = window.setTimeout(() => P(!0), 150);
         return () => {
             window.clearTimeout(e), P(!1);
         };
-    }, [T, D]);
+    }, [T, M]);
     let F = i.useRef(null),
         H = i.useCallback(() => {
             F.current?.releaseSource();
@@ -310,8 +310,8 @@ function e1(e) {
                             l.e("69006"),
                             l.e("40688"),
                             l.e("86456"),
-                            l.e("80955"),
-                        ]).then(l.bind(l, 80982));
+                            l.e("69370"),
+                        ]).then(l.bind(l, 621953));
                         return (l) =>
                             (0, n.jsx)(e, {
                                 ...l,
@@ -393,7 +393,7 @@ function e1(e) {
             onBlur: R,
             children: (0, n.jsxs)(ey.s, {
                 "aria-disabled": t,
-                "aria-label": eu.intl.string(D ? eu.t["HO/oXl"] : eu.t.bt75uw),
+                "aria-label": eu.intl.string(M ? eu.t["HO/oXl"] : eu.t.bt75uw),
                 onClick: t ? void 0 : $,
                 onContextMenu: U,
                 buttonProps: null != c ? { role: "button", id: c.id, tabIndex: c.tabIndex } : void 0,
@@ -416,7 +416,7 @@ function e1(e) {
                             ],
                         }),
                     }),
-                    (0, n.jsx)(e7, { showHoverState: T, playbackProgress: E, onEdit: V, onSeek: z }),
+                    (0, n.jsx)(e8, { showHoverState: T, playbackProgress: E, onEdit: V, onSeek: z }),
                 ],
             }),
         }),
@@ -478,7 +478,7 @@ function e9() {
     return (0, n.jsxs)("div", {
         className: eJ.E4,
         children: [
-            (0, n.jsx)(e8, {}),
+            (0, n.jsx)(e7, {}),
             e.isFavorite &&
                 (0, n.jsx)("div", {
                     className: s()(eJ.cH, eJ.y8),
@@ -488,7 +488,7 @@ function e9() {
         ],
     });
 }
-function e8() {
+function e7() {
     let e = (0, eR.Y_)(),
         t = 0 === e.length,
         l = !0 === e.pending,
@@ -520,7 +520,7 @@ function e8() {
         : (0, n.jsxs)("div", {
               className: eJ.cH,
               children: [
-                  a && (0, n.jsx)(eM.A, { color: "white", width: 14, height: 14 }),
+                  a && (0, n.jsx)(eD.A, { color: "white", width: 14, height: 14 }),
                   (0, n.jsx)($.E, {
                       variant: "text-xs/semibold",
                       color: "text-overlay-light",
@@ -530,7 +530,7 @@ function e8() {
               ],
           });
 }
-function e7(e) {
+function e8(e) {
     let { showHoverState: t, playbackProgress: l, onEdit: a, onSeek: r } = e,
         o = (0, eR.Y_)(),
         c = o.type === eq.nQ.SCREENSHOT,
@@ -567,7 +567,7 @@ function e7(e) {
         }, []),
         j = (0, u.yK)([S.default], () => o.users.map((e) => S.default.getUser(e)).filter(eT.Vq)),
         y = (0, u.bG)([eS.A], () => (null != o.channelId ? eS.A.getChannel(o.channelId) : null)),
-        v = (0, u.bG)([eD.A], () => (null != o.guildId ? eD.A.getGuild(o.guildId) : null)),
+        v = (0, u.bG)([eM.A], () => (null != o.guildId ? eM.A.getGuild(o.guildId) : null)),
         b = (0, eE.Ay)(y),
         C = "" === o.applicationName && null != b && "" !== b ? b : o.applicationName,
         A = (0, eL.e)({ timestamp: o.createdAt }),
@@ -744,7 +744,7 @@ function ts(e) {
                 }),
                 n.length > 0)
             ) {
-                let t = n.some((e) => e.isTemporary);
+                let t = n.some((e) => "auto" === e.clipMethod);
                 e.push({
                     type: "today",
                     title: eu.intl.string(eu.t["kB2R/0"]),
@@ -801,8 +801,8 @@ function ts(e) {
         } = (0, V.A)({ navId: b, columnCounts: k, prepareFocus: N }),
         L = i.useMemo(() => p.map((e) => Math.ceil(e.clips.length / v)), [p, v]),
         S = i.useMemo(() => L.reduce((e, t) => e + t, 0), [L]),
-        D = Math.floor(y / eg),
-        M = p.length > 0 ? `${h}:${x ?? ""}:${g ?? ""}` : null,
+        M = Math.floor(y / eg),
+        D = p.length > 0 ? `${h}:${x ?? ""}:${g ?? ""}` : null,
         T = (function (e) {
             let t = (0, u.bG)([C.Ay], () => C.Ay.useReducedMotion),
                 [l, n] = i.useState(null),
@@ -816,7 +816,7 @@ function ts(e) {
                 }, [a]),
                 !t && null != a
             );
-        })(M),
+        })(D),
         _ = i.useCallback(
             (e, t) => {
                 let { sectionIndex: l, sectionRowIndex: i } = t,
@@ -847,7 +847,7 @@ function ts(e) {
                                             gridItemProps: P(l, e),
                                         }),
                                     },
-                                    `${M ?? "static"}:${t.id}`,
+                                    `${D ?? "static"}:${t.id}`,
                                 )
                             );
                         }),
@@ -855,7 +855,7 @@ function ts(e) {
                     `row-${l}-${i}`,
                 );
             },
-            [p, v, y, m, d, a, s, E, P, T, M],
+            [p, v, y, m, d, a, s, E, P, T, D],
         ),
         R = i.useCallback(
             (e) => {
@@ -903,7 +903,7 @@ function ts(e) {
             renderSectionHeader: F,
             rowCount: S,
             rowCountBySection: L,
-            rowHeight: D + 96 + 16,
+            rowHeight: M + 96 + 16,
             sectionHeaderHeight: R,
             onResize: c,
         }),
@@ -1225,8 +1225,8 @@ function tL(e) {
     });
 }
 var tS = l(91871),
-    tD = l.n(tS),
-    tM = l(103552),
+    tM = l.n(tS),
+    tD = l(103552),
     tI = l(914427),
     tT = l(160168);
 function t_(e) {
@@ -1244,16 +1244,16 @@ function t_(e) {
         m = i.useCallback(
             (e) => {
                 let t;
-                return ("" === (t = e.trim().toLowerCase()) ? l : l.filter((e) => tD()(t, e.label.toLowerCase()))).map(
+                return ("" === (t = e.trim().toLowerCase()) ? l : l.filter((e) => tM()(t, e.label.toLowerCase()))).map(
                     (e) =>
                         (0, n.jsxs)(
-                            tM.x4,
+                            tD.x4,
                             {
                                 value: e.key,
                                 children: [
                                     null != e.icon && (0, n.jsx)("span", { className: tT.H, children: e.icon }),
-                                    (0, n.jsx)(tM.x4.Label, { children: e.label }),
-                                    r ? (0, n.jsx)(tM.x4.Checkbox, {}) : (0, n.jsx)(tM.x4.Checkmark, {}),
+                                    (0, n.jsx)(tD.x4.Label, { children: e.label }),
+                                    r ? (0, n.jsx)(tD.x4.Checkbox, {}) : (0, n.jsx)(tD.x4.Checkmark, {}),
                                 ],
                             },
                             e.key,
@@ -1470,11 +1470,11 @@ function tK(e) {
         N = (0, te.P)((e) => e.setSelectedGuildId),
         E = (0, te.P)((e) => e.setSelectedActivity),
         L = (0, te.P)((e) => e.setDateFilter),
-        D = (0, te.P)((e) => e.clearFilters);
+        M = (0, te.P)((e) => e.clearFilters);
     i.useEffect(() => {
         o && (u.current?.focus(), c(!1));
     }, [o, c]);
-    let M = i.useRef(null);
+    let D = i.useRef(null);
     i.useEffect(() => {
         let e = {
             type_filter: "all" !== m ? m : "",
@@ -1496,11 +1496,11 @@ function tK(e) {
                 e.filtered_by_activity
             )
         ) {
-            M.current = null;
+            D.current = null;
             return;
         }
         let t = JSON.stringify(e);
-        t !== M.current && ((M.current = t), eI.default.track(eo.HAw.CLIPS_FILTER_CHANGED, e));
+        t !== D.current && ((D.current = t), eI.default.track(eo.HAw.CLIPS_FILTER_CHANGED, e));
     }, [m, f, j, C, v, p, y, d, b]);
     let I = i.useMemo(() => l.map((e) => e.key), [l]),
         T = (0, w.A)(I),
@@ -1521,7 +1521,7 @@ function tK(e) {
                     for (let l of e) null != l.guildId && t.add(l.guildId);
                     let l = [];
                     for (let e of t) {
-                        let t = eD.A.getGuild(e);
+                        let t = eM.A.getGuild(e);
                         null != t && l.push({ key: e, label: t.name, guild: t });
                     }
                     return l.sort((e, t) => e.label.toLowerCase().localeCompare(t.label.toLowerCase())), l;
@@ -1699,7 +1699,7 @@ function tK(e) {
                             size: "sm",
                             variant: "primary",
                             text: eu.intl.string(eu.t.O8k7O4),
-                            onClick: D,
+                            onClick: M,
                         }),
                     ],
                 }),
@@ -1921,8 +1921,8 @@ function t9(e) {
             w(e.target.clientWidth);
         }),
         L = (0, t1.w)(E),
-        D = Math.max(1, (N - 32) / 3),
-        M = i.useMemo(() => {
+        M = Math.max(1, (N - 32) / 3),
+        D = i.useMemo(() => {
             let e = t.clips.slice(0, 6),
                 l = [];
             for (let t = 0; t < e.length; t += 3) l.push(e.slice(t, t + 3));
@@ -1930,7 +1930,7 @@ function t9(e) {
         }, [t.clips]),
         I = t.clips.length > 6,
         T = (0, Q.GV)(),
-        _ = i.useMemo(() => M.map((e) => e.length), [M]),
+        _ = i.useMemo(() => D.map((e) => e.length), [D]),
         { getContainerProps: R, getItemProps: F, getRowProps: H } = (0, V.A)({ navId: T, columnCounts: _ }),
         { onFocus: z, onKeyDown: G, ...O } = R(),
         U = i.useCallback(
@@ -2027,14 +2027,14 @@ function t9(e) {
                 ...O,
                 tabIndex: -1,
                 onKeyDown: U,
-                children: M.map((e, t) =>
+                children: D.map((e, t) =>
                     (0, n.jsx)(
                         "div",
                         {
                             className: t5.UX,
                             ...H(t),
                             children: e.map((e, i) => {
-                                let s = { width: D };
+                                let s = { width: M };
                                 return (
                                     c && (s["--custom-entrance-delay"] = `${tt(d + t + i)}ms`),
                                     (0, n.jsx)(
@@ -2073,8 +2073,8 @@ function t9(e) {
         ],
     });
 }
-var t8 = l(430643);
-function t7(e) {
+var t7 = l(430643);
+function t8(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: a, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: o } = tq.useConfig({ location: "ClipsGalleryHome" }),
         c = i.useMemo(() => tZ(t), [t]),
@@ -2131,15 +2131,15 @@ function t7(e) {
         }, []);
     return p.length > 0 || d
         ? (0, n.jsx)(t$.Ip, {
-              className: t8.iR,
+              className: t7.iR,
               fade: !0,
               children: (0, n.jsxs)("div", {
-                  className: t8.Qs,
+                  className: t7.Qs,
                   ref: v,
                   children: [
                       d &&
                           (0, n.jsx)("div", {
-                              className: t8.Dk,
+                              className: t7.Dk,
                               children: (0, n.jsx)(t0, { clips: t, onEdit: a, onEdgeNavigate: b }),
                           }),
                       p.length > 0 &&
@@ -2167,7 +2167,7 @@ function t7(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t8.dp,
+                                      className: t7.dp,
                                       children: (0, n.jsx)(eC.$, {
                                           variant: "primary",
                                           text: eu.intl.string(ec.default.RQtkop),
@@ -2180,7 +2180,7 @@ function t7(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t8.dc, children: (0, n.jsx)(q.y, {}) })
+          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(q.y, {}) })
           : (0, n.jsx)(ex, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(7689),
@@ -2483,7 +2483,7 @@ function lh(e) {
         [ex, eg] = i.useState(q ?? null),
         ef = (0, u.bG)([I.Ay], () => (null != ex ? I.Ay.getClipById(ex) : null), [ex]),
         ep = (0, d.useIsModalAtTop)(eq.nm),
-        { enabled: ej } = M._.useConfig({ location: "ClipsGalleryModal" }),
+        { enabled: ej } = D._.useConfig({ location: "ClipsGalleryModal" }),
         ey = i.useRef(em);
     (ey.current = em), (i.useRef(ex).current = ex);
     let [ev, eb] = i.useState(null != q ? h.ip.ENTERED : h.ip.HIDDEN),
@@ -2528,13 +2528,13 @@ function lh(e) {
     i.useEffect(() => {
         eN === K.oH.HOME && eS && te.P.getState().setActiveMainLink(K.oH.ALL_CLIPS);
     }, [eN, eS]);
-    let eD = i.useMemo(() => (null != eA ? [eA] : []), [eA]),
-        eM = (0, w.A)(eD)[0] ?? null,
+    let eM = i.useMemo(() => (null != eA ? [eA] : []), [eA]),
+        eD = (0, w.A)(eM)[0] ?? null,
         eI = (0, u.bG)([S.default], () => (null != ek ? S.default.getUser(ek) : null), [ek]),
         eT = i.useMemo(() => {
             if (null != eA) {
                 let e = Z.find((e) => e.key === eA)?.name ?? eu.intl.string(eu.t.dPVrEv);
-                return { icon: (0, n.jsx)(P.A, { game: eM, size: P.M.SMALL, "aria-hidden": !0 }), title: e };
+                return { icon: (0, n.jsx)(P.A, { game: eD, size: P.M.SMALL, "aria-hidden": !0 }), title: e };
             }
             if (null != ek) {
                 let e = null != eI ? (eI.globalName ?? eI.username) : ek;
@@ -2557,7 +2557,7 @@ function lh(e) {
                   : eN === K.oH.HOME
                     ? { icon: null, title: eu.intl.string(eu.t.Ym2Ri6) }
                     : { icon: null, title: eu.intl.string(eu.t.dPVrEv) };
-        }, [eA, ek, eN, Z, eM, eI]),
+        }, [eA, ek, eN, Z, eD, eI]),
         e_ = i.useCallback(() => {
             eh("editing"), C.Ay.useReducedMotion && eb(h.ip.ENTERED);
         }, []),
@@ -2593,7 +2593,7 @@ function lh(e) {
                     ("f" !== e.key && "F" !== e.key) ||
                     e.altKey ||
                     e.shiftKey ||
-                    ((0, D.isMac)() ? !e.metaKey || e.ctrlKey : !e.ctrlKey || e.metaKey) ||
+                    ((0, M.isMac)() ? !e.metaKey || e.ctrlKey : !e.ctrlKey || e.metaKey) ||
                     !ep ||
                     "gallery" !== ey.current
                 )
@@ -2763,7 +2763,7 @@ function lh(e) {
                                             ],
                                         }),
                                         ew === K.fB.HOME
-                                            ? (0, n.jsx)(t7, {
+                                            ? (0, n.jsx)(t8, {
                                                   filteredClips: et,
                                                   totalClipCount: ei.length,
                                                   onEdit: eF,

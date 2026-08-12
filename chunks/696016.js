@@ -1,53 +1,52 @@
 "use strict";
 n.d(t, {
-    CN: () => $,
-    Cx: () => ea,
+    CN: () => K,
+    Cx: () => er,
     Fv: () => m,
     GU: () => w,
-    Gy: () => X,
+    Gy: () => Z,
     LX: () => p,
-    Me: () => en,
+    Me: () => et,
     Mu: () => M,
     Ot: () => S,
     P4: () => g,
-    QK: () => ed,
-    RC: () => J,
-    SC: () => z,
-    T2: () => j,
-    UY: () => el,
-    U_: () => q,
+    QK: () => eo,
+    RC: () => Q,
+    SC: () => $,
+    UY: () => es,
+    U_: () => z,
     V0: () => L,
     VP: () => k,
     Vi: () => C,
-    Y2: () => K,
+    Y2: () => Y,
     YM: () => B,
-    _1: () => et,
-    _S: () => es,
+    _1: () => ee,
+    _S: () => ea,
     cM: () => x,
     dV: () => V,
-    gC: () => Z,
+    gC: () => q,
     iJ: () => H,
-    k9: () => Q,
+    k9: () => X,
     kd: () => R,
     l_: () => D,
-    mO: () => eo,
-    mY: () => ei,
-    nQ: () => ec,
+    mO: () => el,
+    mY: () => en,
+    nQ: () => ed,
     nm: () => b,
     nx: () => O,
     on: () => T,
-    rb: () => eu,
-    rv: () => Y,
+    rb: () => ec,
+    rv: () => W,
     s3: () => U,
     sc: () => y,
     sz: () => N,
-    tS: () => er,
+    tS: () => ei,
     td: () => G,
     ut: () => F,
     vZ: () => P,
-    yz: () => ee,
+    yz: () => J,
     zj: () => v,
-    zq: () => W,
+    zq: () => j,
 });
 var i,
     r,
@@ -94,20 +93,19 @@ let S = "alt+c",
     B = 30,
     H = 10;
 f.A.Millis.DAY;
-let j = 20,
-    W = 10,
-    Y = 100,
-    K = 75,
-    $ = 0x3c0000000,
-    z = ".autoclip-cache",
-    q = 0;
-var Z =
+let j = 10,
+    W = 100,
+    Y = 75,
+    K = 0x3c0000000,
+    $ = ".autoclip-cache",
+    z = 0;
+var q =
         (((l = {}).ALL = ":all"),
         (l.APPLICATION = ":application"),
         (l.VOICE = ":voice"),
         (l.SOUNDBOARD = ":soundboard"),
         l),
-    X =
+    Z =
         (((o = {}).MANUAL = "manual"),
         (o.DISTRIBUTED = "distributed"),
         (o.SHOUTING = "shouting"),
@@ -116,13 +114,13 @@ var Z =
         (o.SPEAKING = "speaking"),
         (o.SOUNDBOARD = "soundboard"),
         o),
-    Q =
+    X =
         (((d = {}).UNKNOWN = "unknown"),
         (d.BELOW_MINIMUM = "below_minimum"),
         (d.MEETS_MINIMUM = "meets_minimum"),
         (d.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         d),
-    J =
+    Q =
         (((c = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (c.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (c.MODULE_NOT_LOADED = "module_not_loaded"),
@@ -130,8 +128,8 @@ var Z =
         (c.BRIDGE_SHUTDOWN = "bridge_shutdown"),
         (c.RECORDING_NOT_READY = "recording_not_ready"),
         c),
-    ee = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
-function et(e) {
+    J = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
+function ee(e) {
     if (e?.bounds != null) return e.bounds;
     let t = (function (e) {
         switch (e) {
@@ -145,16 +143,16 @@ function et(e) {
     })(e?.preset);
     return null != t ? { aspectRatio: t } : null;
 }
-var en = (((_ = {}).TEXT = "text"), _);
-let ei = { text: "#D53FAE" },
-    er = 5,
-    ea = 1,
-    es = { x: 0.5, y: 0.5 };
-var el = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
-let eo = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    ed = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
-var ec = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
-    eu =
+var et = (((_ = {}).TEXT = "text"), _);
+let en = { text: "#D53FAE" },
+    ei = 5,
+    er = 1,
+    ea = { x: 0.5, y: 0.5 };
+var es = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
+let el = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
+    eo = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
+var ed = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
+    ec =
         (((h = {}).UNCLASSIFIED = "unclassified"),
         (h.KILL = "kill"),
         (h.MULTIKILL = "multikill"),

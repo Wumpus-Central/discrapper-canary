@@ -11,7 +11,6 @@ n.d(t, {
     h$: () => eA,
     YP: () => ed,
     Fb: () => ev,
-    w7: () => ej,
     K7: () => eM,
     Uh: () => eu,
     HU: () => e_,
@@ -486,7 +485,6 @@ function ea() {
         activity: _,
         users: Array.from(m),
         clipMethod: e,
-        isTemporary: !1,
         guildId: p ?? void 0,
         channelId: I ?? void 0,
         timeline: n,
@@ -794,21 +792,6 @@ async function eT(e) {
                 r.h.dispatch({ type: "CLIPS_SAVE_CLIP_TIMEOUT", clipMethod: t, elapsedMs: R.ut });
         }, R.ut);
     try {
-        if ("auto" === t && !s && !L()) {
-            let e = C.Ay.getSettings().maxAutoClips,
-                t = C.Ay.getClips(),
-                n = Object.values(t).filter((e) => !0 === e.isTemporary),
-                i = n.length - e + 1;
-            if (i > 0) {
-                let t = n.sort((e, t) => e.createdAt - t.createdAt).slice(0, i);
-                for (let n of (R.nx.info(`Deleting ${t.length} temporary clips to stay within limit of ${e}`), t))
-                    try {
-                        await eU(n, !1);
-                    } catch (e) {
-                        R.nx.error("Failed to delete temporary clip", e);
-                    }
-            }
-        }
         let e = await ef({
             clipMethod: t,
             request: n,
@@ -1124,7 +1107,4 @@ function eB(e) {
 }
 function eH() {
     eV({ type: R.Gy.MANUAL });
-}
-async function ej(e) {
-    await eg(e, { isTemporary: !1 }, !0);
 }
