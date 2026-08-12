@@ -10,7 +10,7 @@ var r = n(132500),
     c = n(793574),
     u = n(240591),
     _ = n(627363),
-    E = n(313961),
+    E = n(198052),
     A = n(655087),
     h = n(625180),
     I = n(95701),
@@ -220,7 +220,7 @@ function ec(e) {
         location: o,
         inviterUserId: d,
     } = e;
-    if ((h.A.clearMainFrameSlot(), (0, J.y)({ applicationId: t })))
+    if ((!0 !== s.renderInFramePool && h.A.clearMainFrameSlot(), (0, J.y)({ applicationId: t })))
         return void (0, Q.j$)(t, {
             isStart: i,
             inviterUserId: d,

@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { A: () => l });
-var i = n(580954),
-    r = n(812901);
-let a = { [r.A.WithinAppContent]: 0, [r.A.AboveAppContent]: 1 };
-class s {
-    strategy = (0, r.G)();
+n.d(t, { A: () => o });
+var i = n(256693),
+    r = n(580954),
+    a = n(812901);
+let s = { [a.A.WithinAppContent]: 0, [a.A.AboveAppContent]: 1 };
+class l {
+    strategy = (0, a.G)();
     entries = new Map();
     entryListeners = new Set();
     targets = new Map();
@@ -63,7 +64,7 @@ class s {
         if (null == t) return null;
         let n = null;
         for (let e of t.values())
-            (null == n || a[e.level] > a[n.level] || (a[e.level] === a[n.level] && e.seq > n.seq)) && (n = e);
+            (null == n || s[e.level] > s[n.level] || (s[e.level] === s[n.level] && e.seq > n.seq)) && (n = e);
         return n;
     }
     background(e) {
@@ -85,7 +86,7 @@ class s {
         null != t && (clearTimeout(t), this.backgrounded.delete(e));
     }
     evict(e) {
-        this.cancelBackground(e), (0, i.A)().leaveFrame(e);
+        (this.cancelBackground(e), (0, i.fS)(e)) ? (0, i.aQ)(e) : (0, r.A)().leaveFrame(e);
     }
 }
-let l = new s();
+let o = new l();

@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { Ay: () => O, bK: () => g, cK: () => S });
+n.d(t, { Ay: () => R, bK: () => g, cK: () => S });
 var r = n(228366),
     a = n(31728),
     s = n(272355),
@@ -31,7 +31,7 @@ function N() {
         t = null != e ? I.Ay.getSelfEmbeddedActivityForLocation(e) : null,
         n = (0, f.H)(e),
         s = o.A.getChannel(n);
-    if (null == t || null == s) {
+    if (null == t || null == s || !0 === t.renderInFramePool) {
         let e;
         return void (null != (e = i) && c.A.isOpen(e) && (r.h.wait(() => a.VN(e)), (i = null)));
     }
@@ -48,7 +48,7 @@ function N() {
 function C() {
     return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? g() : S();
 }
-class R extends s.A {
+class O extends s.A {
     _initialize() {
         _.Ay.addChangeListener(N),
             E.A.addChangeListener(N),
@@ -68,4 +68,4 @@ class R extends s.A {
             d.A.removeChangeListener(C);
     }
 }
-let O = new R();
+let R = new O();

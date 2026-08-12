@@ -35,7 +35,7 @@ var i = n(562708),
     T = n(972995),
     m = n(20015),
     g = n(568598),
-    S = n(313961),
+    S = n(198052),
     N = n(367727),
     C = n(744230),
     O = n(113267),
@@ -93,33 +93,34 @@ async function el(e) {
             referrerId: I,
             customId: f,
             inviterUserId: T,
-            onConfirmActivityLaunchChecksAlertOpen: g,
+            renderInFramePool: g,
+            onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
-        S = U.A.getChannel(t),
-        N = S?.getGuildId() ?? void 0;
-    if (null == N && !S?.isPrivate()) return !1;
-    let D = p.A.getApplication(i),
-        b = null != D && (0, L.x)(D),
-        M = (0, y.m)();
+        N = U.A.getChannel(t),
+        D = N?.getGuildId() ?? void 0;
+    if (null == D && !N?.isPrivate()) return !1;
+    let b = p.A.getApplication(i),
+        M = null != b && (0, L.x)(b),
+        P = (0, y.m)();
     try {
         if (v.A.getWindowOpen(et.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
             e(et.MLl.ACTIVITY_POPOUT);
         }
-        if ((R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
+        if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
             return (
                 (0, q.j$)(i, {
                     isStart: a,
                     inviterUserId: T,
                     channelId: t ?? null,
-                    guildId: N ?? null,
-                    locationKind: null != N ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
+                    guildId: D ?? null,
+                    locationKind: null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
                 }),
                 !0
             );
         l.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-            nonce: M,
+            nonce: P,
             applicationId: i,
             channelId: t ?? null,
             componentId: c,
@@ -127,7 +128,7 @@ async function el(e) {
             source: A,
             commandOrigin: u,
             inviterUserId: T,
-            launchParams: { customId: f, referrerId: I },
+            launchParams: { customId: f, referrerId: I, renderInFramePool: g },
         });
         let e = await eS(i, t ?? void 0);
         l.h.dispatch({
@@ -142,9 +143,9 @@ async function el(e) {
                 (0, X.A)({
                     type: a ? et.UqL.LAUNCH : et.UqL.JOIN,
                     userId: E?.id,
-                    guildId: N,
+                    guildId: D,
                     channelId: t,
-                    channelType: S?.type,
+                    channelType: N?.type,
                     applicationId: i,
                     locationObject: o,
                     analyticsLocations: s ?? [],
@@ -154,29 +155,29 @@ async function el(e) {
                 }),
             a)
         ) {
-            var P, w;
+            var w, G;
             let e, n, r, a;
             if (
                 null == t ||
-                ((P = i),
-                (w = S),
-                (e = w?.type === et.rbe.GUILD_VOICE),
-                (n = p.A.getApplication(P)),
+                ((w = i),
+                (G = N),
+                (e = G?.type === et.rbe.GUILD_VOICE),
+                (n = p.A.getApplication(w)),
                 (r = (0, m.n)(n, et.gfo.EMBEDDED)),
-                (a = (0, H.AX)(w)),
+                (a = (0, H.AX)(G)),
                 (!e || !r) && !a)
             )
                 throw new C.A(C.A.Reasons.INVALID_CHANNEL);
             let s = await eo({
                 applicationId: i,
-                nonce: M,
+                nonce: P,
                 channelId: t,
-                guildId: N,
+                guildId: D,
                 commandOrigin: u,
                 sectionName: _,
                 source: A,
                 onExecutedCallback: h,
-                onConfirmActivityLaunchChecksAlertOpen: g,
+                onConfirmActivityLaunchChecksAlertOpen: S,
                 embeddedActivitiesManager: d,
             });
             if ("failure" === s.result)
@@ -184,7 +185,7 @@ async function el(e) {
                     return (
                         l.h.dispatch({
                             type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL",
-                            nonce: M,
+                            nonce: P,
                             applicationId: i,
                             channelId: t ?? null,
                         }),
@@ -192,21 +193,21 @@ async function el(e) {
                     );
                 else throw new C.A(C.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await ed({ applicationId: i, channelId: t, embeddedActivitiesManager: d, isStart: a, guildId: N });
+            let e = await ed({ applicationId: i, channelId: t, embeddedActivitiesManager: d, isStart: a, guildId: D });
             if ((h?.(), "failure" === e.result))
                 throw new C.A(C.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
-        l.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: M, applicationId: i, channelId: t ?? null });
+        l.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: P, applicationId: i, channelId: t ?? null });
     } catch (n) {
-        if (b) return !1;
-        let e = null != N ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
+        if (M) return !1;
+        let e = null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
         return (
             l.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: M,
+                nonce: P,
                 applicationId: i,
                 channelId: t ?? null,
-                guildId: N ?? null,
+                guildId: D ?? null,
                 isStart: a,
                 error: n instanceof C.A || n instanceof E.A || n instanceof O.A ? n : new E.A(n),
                 locationKind: e,
