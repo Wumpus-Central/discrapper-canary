@@ -1,4 +1,4 @@
-l.d(t, { Bv: () => s, SV: () => i });
+l.d(t, { SV: () => i });
 let n = (0, l(945810).mj)({
     name: "2026-05-user-settings-redesign-4d",
     kind: "user",
@@ -7,7 +7,4 @@ let n = (0, l(945810).mj)({
 });
 function i(e) {
     return n.useConfig({ location: e }).enabled;
-}
-function s(e) {
-    return n.getConfig({ location: e }).enabled;
 }
