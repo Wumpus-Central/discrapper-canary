@@ -131,6 +131,7 @@
 
 .coverImage__4d7f8 {
     border-radius: var(--radius-xs);
+    flex-shrink: 0;
     height: 72px;
     margin-bottom: calc(var(--space-4)*-1);
     margin-top: calc(var(--space-4)*-1);

@@ -28,5 +28,3 @@ function h(e) {
         { theme: w, primaryColor: T, secondaryColor: g }
     );
 }
-daryColor: R;
-}}
