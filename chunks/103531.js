@@ -3137,99 +3137,115 @@ function nx(e) {
 }
 function nf(e) {
     let { skuId: t, className: i } = e,
-        s = tB.zE[t],
-        n = t === tB.pe.TIER_2,
-        [a, l] = o.useState(() => (n ? s : null)),
-        r = (0, i1.q)((0, i2.Ay)()),
-        d = (0, eG.V)(),
-        m = d?.subscription_trial,
-        x = m?.sku_id === t,
-        f = n && x && null != m,
-        p = (0, eU.p)(),
-        { planRadioOptions: h, shouldSuppressDiscountCta: N } = (function (e) {
-            let { skuId: t, selectedPlanId: i } = e,
-                s = tB.En[t],
-                n = tB.zE[t],
-                a = t === tB.pe.TIER_2,
-                l = nd(t),
-                r = (0, eG.V)(),
-                c = r?.subscription_trial?.sku_id === t,
-                o =
-                    (0, g.bG)([O.A], () => {
-                        let e = O.A.getPremiumTypeSubscription();
-                        return (0, eO.aZ)(e);
-                    }) === t,
-                d = (0, eU.O)(),
-                u = (0, nl.k5)(),
-                m = (0, g.bG)([ns.default], () => ns.default.locale),
-                x = (0, ei.U9)(d, t),
-                f = (0, ei.N1)(s),
-                p = (0, ei.N1)(n),
-                [h, N] = (0, g.yK)([nn.A], () => [nn.A.get(s), nn.A.get(n)], [s, n]),
-                A = null != h ? (0, eO.sS)(h, l) : null,
-                j = null != N ? (0, eO.sS)(N, l) : null,
-                b =
-                    x && d?.discount.amount != null && !u
+        s = t === tB.pe.TIER_2,
+        n = (0, i1.q)((0, i2.Ay)()),
+        a = (0, eG.V)(),
+        l = a?.subscription_trial,
+        r = l?.sku_id === t,
+        d = s && r && null != l,
+        m = (0, eU.p)(),
+        {
+            planRadioOptions: x,
+            selectedPlanId: f,
+            setSelectedPlanId: p,
+            shouldSuppressDiscountCta: h,
+        } = (function (e) {
+            let { skuId: t } = e,
+                [i, s] = o.useState(null),
+                n = tB.En[t],
+                a = tB.zE[t],
+                l = t === tB.pe.TIER_2,
+                r = nd(t),
+                c = (0, eG.V)(),
+                d = c?.subscription_trial?.sku_id === t,
+                { subscribedSkuId: u, isMonthlyPlanDisabled: m } = (0, g.cf)([O.A], () => {
+                    let e = O.A.getPremiumTypeSubscription();
+                    return {
+                        subscribedSkuId: (0, eO.aZ)(e),
+                        isMonthlyPlanDisabled:
+                            n === tB.gD.PREMIUM_MONTH_TIER_2 &&
+                            null != e &&
+                            [tB.gD.PREMIUM_YEAR_TIER_0, tB.gD.PREMIUM_YEAR_TIER_1].includes(e.planId),
+                    };
+                }, [n]),
+                x = u === t,
+                f = (0, eU.O)(),
+                p = (0, nl.k5)(),
+                h = (0, g.bG)([ns.default], () => ns.default.locale),
+                N = (0, ei.U9)(f, t),
+                A = (0, ei.N1)(n),
+                j = (0, ei.N1)(a),
+                [b, C] = (0, g.yK)([nn.A], () => [nn.A.get(n), nn.A.get(a)], [n, a]),
+                E = null != b ? (0, eO.sS)(b, r) : null,
+                T = null != C ? (0, eO.sS)(C, r) : null,
+                R =
+                    N && f?.discount.amount != null && !p
                         ? ex.intl.formatToPlainString(ex.t.IAybsG, {
-                              discount: (0, na.l9)(m, Number(d.discount.amount) / 100),
+                              discount: (0, na.l9)(h, Number(f.discount.amount) / 100),
                           })
                         : null,
-                C = d?.discount?.planIds,
-                E = nu(n, x, C, p, j),
-                T = nu(s, x, C, f, A),
-                R = d?.discount.userUsageLimitInterval,
-                v = d?.discount.userUsageLimit ?? tB.OJ,
-                _ = !a || E || T || null == N ? null : (0, nr.Cj)(N, !1, l),
-                I = [
+                v = f?.discount?.planIds,
+                _ = nu(a, N, v, j, T),
+                I = nu(n, N, v, A, E),
+                P = f?.discount.userUsageLimitInterval,
+                S = f?.discount.userUsageLimit ?? tB.OJ,
+                y = !l || _ || I || null == C ? null : (0, nr.Cj)(C, !1, r),
+                D = !I || m,
+                M = (function (e) {
+                    let { skuId: t, monthlyHasDiscount: i, isMonthlyPlanDisabled: s } = e;
+                    return t !== tB.pe.TIER_2 ? null : i && !s ? tB.En[t] : tB.zE[t];
+                })({ skuId: t, monthlyHasDiscount: I, isMonthlyPlanDisabled: m }),
+                L = null == i || (i === n && m) ? M : i,
+                k = [
                     {
-                        value: n,
+                        value: a,
                         primaryText: ex.intl.string(ex.t["/Q4HRN"]),
                         primarySubText:
-                            (E
+                            (_
                                 ? nm({
                                       expectedUsageInterval: tB.Ff.YEAR,
-                                      usageInterval: R,
-                                      discountDuration: v,
-                                      regularPrice: j,
-                                      discountedPrice: p,
+                                      usageInterval: P,
+                                      discountDuration: S,
+                                      regularPrice: T,
+                                      discountedPrice: j,
                                   })
-                                : null) ?? _,
-                        secondaryText: E ? p : j,
-                        secondarySubText: E ? j : null,
-                        badgeText: E ? b : null,
-                        useGradientSelectedBorder: a && (c || E || !T),
-                        isDisabled: o,
+                                : null) ?? y,
+                        secondaryText: _ ? j : T,
+                        secondarySubText: _ ? T : null,
+                        badgeText: _ ? R : null,
+                        useGradientSelectedBorder: l && (d || _ || D),
+                        isDisabled: x,
                     },
                     {
-                        value: s,
+                        value: n,
                         primaryText: ex.intl.string(ex.t.DKzs96),
-                        primarySubText: T
+                        primarySubText: I
                             ? nm({
                                   expectedUsageInterval: tB.Ff.MONTH,
-                                  usageInterval: R,
-                                  discountDuration: v,
-                                  regularPrice: A,
-                                  discountedPrice: f,
+                                  usageInterval: P,
+                                  discountDuration: S,
+                                  regularPrice: E,
+                                  discountedPrice: A,
                               })
                             : null,
-                        secondaryText: T ? f : A,
-                        secondarySubText: T ? A : null,
-                        badgeText: T ? b : null,
-                        useGradientSelectedBorder: a && (c || T),
-                        isDisabled: o,
+                        secondaryText: I ? A : E,
+                        secondarySubText: I ? E : null,
+                        badgeText: I ? R : null,
+                        useGradientSelectedBorder: l && (d || I),
+                        isDisabled: x || m,
                     },
                 ],
-                P = i === n ? E : i === s && T;
-            return { planRadioOptions: I, shouldSuppressDiscountCta: x && !P };
-        })({ skuId: t, selectedPlanId: a }),
-        A = n && null == p ? "expressive" : "secondary",
-        { buttonText: j } = (0, s5.A)({ subscriptionTier: t }),
-        { subscribeButtonProps: b } = (0, s8.$)({
+                U = L === a ? _ : L === n && I;
+            return { planRadioOptions: k, selectedPlanId: L, setSelectedPlanId: s, shouldSuppressDiscountCta: N && !U };
+        })({ skuId: t }),
+        N = s && null == m ? "expressive" : "secondary",
+        { buttonText: A } = (0, s5.A)({ subscriptionTier: t }),
+        { subscribeButtonProps: j } = (0, s8.$)({
             subscriptionTier: t,
-            variantOverride: A,
-            buttonTextOverride: N ? j : void 0,
+            variantOverride: N,
+            buttonTextOverride: h ? A : void 0,
         }),
-        C = (0, c.jsxs)(el.B, {
+        b = (0, c.jsxs)(el.B, {
             direction: "vertical",
             gap: 0,
             fullWidth: !0,
@@ -3244,9 +3260,9 @@ function nf(e) {
                     className: ng.MY,
                     children: (0, c.jsx)(er.D, {
                         variant: "display-md",
-                        color: r ? "text-strong" : "text-overlay-light",
+                        color: n ? "text-strong" : "text-overlay-light",
                         className: ng.JJ,
-                        children: n ? ex.intl.string(ex.t.lG6a5x) : ex.intl.string(ex.t.tUbSDK),
+                        children: s ? ex.intl.string(ex.t.lG6a5x) : ex.intl.string(ex.t.tUbSDK),
                     }),
                 }),
                 (0, c.jsx)(el.B, {
@@ -3254,7 +3270,7 @@ function nf(e) {
                     gap: 0,
                     fullWidth: !0,
                     className: ng.qT,
-                    children: n
+                    children: s
                         ? (0, c.jsx)(s2.ZP, {
                               featureSet: s2.Nz.DEFAULT,
                               isApplicationHome: !0,
@@ -3267,8 +3283,8 @@ function nf(e) {
                               textVariant: "text-md/medium",
                           }),
                 }),
-                n && (0, c.jsx)(s9.K, {}),
-                f
+                s && (0, c.jsx)(s9.K, {}),
+                d
                     ? (0, c.jsx)("div", {
                           className: ng.qS,
                           role: "separator",
@@ -3289,34 +3305,34 @@ function nf(e) {
                                       default:
                                           return null;
                                   }
-                              })(m.interval, m.interval_count),
+                              })(l.interval, l.interval_count),
                           }),
                       })
                     : (0, c.jsx)("hr", { className: ng.yF }),
                 (0, c.jsxs)("div", {
                     className: ng.qr,
                     children: [
-                        (0, c.jsx)(ni, { planRadioOptions: h, value: a ?? "", onChange: (e) => l(e.value) }),
-                        (0, c.jsx)(nx, { skuId: t, selectedPlanId: a, subscribeButtonProps: b }),
+                        (0, c.jsx)(ni, { planRadioOptions: x, value: f ?? "", onChange: (e) => p(e.value) }),
+                        (0, c.jsx)(nx, { skuId: t, selectedPlanId: f, subscribeButtonProps: j }),
                     ],
                 }),
             ],
         }),
-        E = u()(ng.Nr, i, { [ng.Fw]: n });
-    return n
+        C = u()(ng.Nr, i, { [ng.Fw]: s });
+    return s
         ? (0, c.jsxs)(eN.h, {
               color: "nitro-pink",
-              className: E,
+              className: C,
               children: [
                   (0, c.jsx)("div", {
                       className: ng.kX,
                       "aria-hidden": !0,
                       children: (0, c.jsx)(s6, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
-                  C,
+                  b,
               ],
           })
-        : (0, c.jsx)("div", { className: E, children: C });
+        : (0, c.jsx)("div", { className: C, children: b });
 }
 function np(e) {
     let { className: t } = e,

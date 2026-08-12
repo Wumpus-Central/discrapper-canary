@@ -11,13 +11,21 @@ var i = n(477900),
     u = n(460890);
 function _() {
     let e = r.useId(),
-        t = r.useRef(null);
+        t = r.useRef(null),
+        n = r.useRef(null),
+        s = r.useRef(null);
     return (
         r.useEffect(
             () => (
-                a.O.moveTo?.(e, t.current),
+                (n.current = requestAnimationFrame(() => {
+                    s.current = setTimeout(() => {
+                        a.O.moveTo?.(e, t.current);
+                    }, 0);
+                })),
                 () => {
-                    a.O.remove?.(e);
+                    null != n.current && cancelAnimationFrame(n.current),
+                        null != s.current && clearTimeout(s.current),
+                        a.O.remove?.(e);
                 }
             ),
             [e],
