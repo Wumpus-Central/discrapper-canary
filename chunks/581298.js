@@ -9,21 +9,13 @@ class u {
     map = new Map();
     defaultPanel;
     register(e) {
-        let {
-            node: t,
-            parentSidebarItemKey: n,
-            parentPanelKey: i,
-            parentTabKey: l,
-            parentCategoryKey: s,
-            parentAccordionKey: r,
-        } = e;
+        let { node: t, parentSidebarItemKey: n, parentPanelKey: i, parentCategoryKey: l, parentAccordionKey: s } = e;
         this.map.set(t.key, {
             node: t,
             parentSidebarItemKey: n,
             parentPanelKey: i,
-            parentTabKey: l,
-            parentCategoryKey: s,
-            parentAccordionKey: r,
+            parentCategoryKey: l,
+            parentAccordionKey: s,
         });
     }
     entry(e) {
@@ -53,7 +45,6 @@ function d(e, t, n) {
                 node: l,
                 parentSidebarItemKey: i.sidebarItem,
                 parentPanelKey: i.panel?.key,
-                parentTabKey: i.tab?.key,
                 parentCategoryKey: i.category?.key,
                 parentAccordionKey: i.accordion?.key,
             }),
@@ -65,8 +56,7 @@ function d(e, t, n) {
         e.type === o.Z6.PANEL && (l = { sidebarItem: i.sidebarItem, panel: e }),
         e.type === o.Z6.NESTED_PANEL_NAVIGATOR && (l = { ...i, panel: e.layout[0] }),
         e.type === o.Z6.CATEGORY && (l = { ...i, category: e }),
-        e.type === o.Z6.ACCORDION && (l = { ...i, accordion: e }),
-        e.type === o.Z6.TAB_ITEM && (l = { ...i, tab: e });
+        e.type === o.Z6.ACCORDION && (l = { ...i, accordion: e });
     let s = e.layout.map((e) => d(e, t, n, l)).filter((e) => null != e);
     if (
         0 === s.length &&
@@ -81,7 +71,6 @@ function d(e, t, n) {
             node: u,
             parentSidebarItemKey: l.sidebarItem,
             parentPanelKey: l.panel?.key,
-            parentTabKey: l.tab?.key,
             parentCategoryKey: l.category?.key,
             parentAccordionKey: l.accordion?.key,
         }),
@@ -119,7 +108,6 @@ function x(e, t) {
                         u =
                             (function (e, t, n) {
                                 if (e.type === o.Z6.SECTION && e.hoisted) return !0;
-                                if (e.type === o.Z6.TAB_ITEM) return !1;
                                 let i = "useTitle" in e ? e.useTitle?.(!1) : void 0,
                                     l = "useSearchTerms" in e ? e.useSearchTerms?.() : void 0;
                                 if (n || (null == i && null == l)) return !1;

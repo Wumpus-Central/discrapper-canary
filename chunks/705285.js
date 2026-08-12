@@ -6,7 +6,10 @@ var s,
     r = n(174459),
     o = n(652215),
     c = n(758836),
-    d = (((s = {}).SHOP_CARD = "GAME_SERVER_SHOP_CARD"), s),
+    d =
+        (((s = {}).SHOP_CARD = "GAME_SERVER_SHOP_CARD"),
+        (s.ACTIVITY_PANEL_DEEP_LINK = "GAME_SERVER_ACTIVITY_PANEL_DEEP_LINK"),
+        s),
     u = (((l = {}).OPEN_PLAN_MODAL = "open_game_server_plan_modal"), l);
 function m(e) {
     return e.isGroupDM() ? "group_dm" : e.isDM() ? "dm" : "guild_channel";

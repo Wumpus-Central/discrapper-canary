@@ -57,7 +57,7 @@ class l {
             return;
         }
         let a = i.layout;
-        if (!(0, r.Iu)(a)) return;
+        if (!(0, r.zS)(a)) return;
         let s = [],
             l = new Set();
         a.forEach((e) => {
@@ -86,60 +86,50 @@ class l {
         if (null == n) return;
         let l = n.parentPanelKey;
         if (null == l) return;
-        let o = a.A.getField("currentTabKeys"),
-            d = a.A.getField("currentPanelKey"),
-            c = o.get(l),
-            u = a.A.getField("scrollPositionSnapshots"),
-            _ = n.node.type === r.Z6.PANEL ? u.get(l) : void 0,
-            E = _?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
-            A = null != d ? this.accessibleDirectory.entry(d) : void 0,
-            h = A?.parentSidebarItemKey === n.parentSidebarItemKey,
-            I = n.parentPanelKey === d,
-            f = null == n.parentTabKey || n.parentTabKey === c,
-            p = I && f,
-            T = async () => {
+        let o = a.A.getField("currentPanelKey"),
+            d = a.A.getField("scrollPositionSnapshots"),
+            c = n.node.type === r.Z6.PANEL ? d.get(l) : void 0,
+            u = c?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
+            _ = null != o ? this.accessibleDirectory.entry(o) : void 0,
+            E = _?.parentSidebarItemKey === n.parentSidebarItemKey,
+            A = n.parentPanelKey === o,
+            h = async () => {
                 t.onTransitionStart?.(),
-                    h
-                        ? this.maybeCreatePanelSnapshot({ currentPanelKey: d, nextPanelKey: l })
+                    E
+                        ? this.maybeCreatePanelSnapshot({ currentPanelKey: o, nextPanelKey: l })
                         : this.deleteAllPanelSnapshots(),
                     n.node.type === r.Z6.PANEL && s.A.enableSidebarCategoryAutoSelect(),
                     a.A.setState({
                         currentPanelKey: l,
-                        currentTabKeys: null != n.parentTabKey ? new Map(o).set(l, n.parentTabKey) : o,
-                        currentCategoryKey: E,
+                        currentCategoryKey: u,
                         requestAccordionOpenKey: n.parentAccordionKey,
                         showNavigationMobile:
                             null != t.showNavigationMobile
                                 ? t.showNavigationMobile
                                 : a.A.getField("showNavigationMobile"),
                     });
-                let c = null != t.animatePanelScroll ? t.animatePanelScroll : p,
-                    u = null != t.animateSidebarScroll && t.animateSidebarScroll;
-                null != _
-                    ? (await this.scrollToOffset({ scrollOffset: _.scrollOffset }), this.deletePanelSnapshot(l))
+                let d = null != t.animatePanelScroll ? t.animatePanelScroll : A,
+                    _ = null != t.animateSidebarScroll && t.animateSidebarScroll;
+                null != c
+                    ? (await this.scrollToOffset({ scrollOffset: c.scrollOffset }), this.deletePanelSnapshot(l))
                     : await this.scrollToTarget({
                           targetKey: e,
                           targetPanelKey: l,
                           targetAccordionKey: n.parentAccordionKey,
                           scrollBlock: t.panelScrollBlock ?? "start",
-                          animatePanelScroll: c,
-                          animateSidebarScroll: u,
+                          animatePanelScroll: d,
+                          animateSidebarScroll: _,
                       });
-                let A = document.querySelector(`[data-nav-anchor-key="${e}"]`);
-                if (
-                    (null != A
-                        ? A.focus({ preventScroll: !0 })
-                        : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
-                    !p)
-                ) {
-                    let e = this.accessibleDirectory?.get(l),
-                        t = e?.type === r.Z6.PANEL && (0, r.zY)(e.layout) ? e.layout[0].key : void 0,
-                        i = n.parentTabKey ?? t ?? l;
-                    this.onViewChange?.(i);
-                }
-                (!c || i.Ay.useReducedMotion) && n.node.type !== r.Z6.CATEGORY && a.A.setState({ requestFlashKey: e });
+                let h = document.querySelector(`[data-nav-anchor-key="${e}"]`);
+                null != h
+                    ? h.focus({ preventScroll: !0 })
+                    : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
+                    A || this.onViewChange?.(l),
+                    (!d || i.Ay.useReducedMotion) &&
+                        n.node.type !== r.Z6.CATEGORY &&
+                        a.A.setState({ requestFlashKey: e });
             };
-        I ? T() : this.navigateWithValidation?.(e, T);
+        A ? h() : this.navigateWithValidation?.(e, h);
     }
     async scrollToOffset(e) {
         let { scrollOffset: t } = e;
