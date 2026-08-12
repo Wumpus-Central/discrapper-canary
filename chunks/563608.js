@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => Q }), n(321073);
+n.d(t, { A: () => ee }), n(321073);
 var i = n(477900),
     r = n(582128),
     a = n(176999),
@@ -74,91 +74,93 @@ var M = n(403581),
     P = n(661531),
     U = n(297264),
     w = n(939249),
-    G = n(326009),
-    x = n(375708),
-    k = n(943919);
-function F(e) {
+    G = n(448766),
+    x = n(326009),
+    k = n(375708),
+    F = n(995919),
+    V = n(943919);
+function B(e) {
     let { header: t } = e;
     return (0, i.jsxs)("div", {
-        className: k.wx,
+        className: V.wx,
         children: [
-            (0, i.jsx)(M.t, { className: k.nr, size: "xxs", color: P.A.colors.ICON_DEFAULT }),
-            (0, i.jsx)(O.E, { className: k.TK, variant: "text-xs/medium", lineClamp: 1, children: t }),
+            (0, i.jsx)(M.t, { className: V.nr, size: "xxs", color: P.A.colors.ICON_DEFAULT }),
+            (0, i.jsx)(O.E, { className: V.TK, variant: "text-xs/medium", lineClamp: 1, children: t }),
         ],
     });
 }
-function V(e) {
+function H(e) {
     let { header: t, section: n, userId: r } = e;
     return (0, i.jsxs)("div", {
-        className: k.PY,
+        className: V.PY,
         children: [
             (0, i.jsxs)("div", {
-                className: k.rD,
+                className: V.rD,
                 children: [
-                    (0, i.jsx)(F, { header: t }),
+                    (0, i.jsx)(B, { header: t }),
                     (0, i.jsx)(U.D, {
-                        className: k.CH,
+                        className: S()(V.CH, F.Y),
                         variant: "heading-sm/semibold",
                         color: "text-default",
                         lineClamp: 1,
-                        children: n.title,
+                        children: (0, G.j)(n.title),
                     }),
                     (0, i.jsx)(O.E, {
-                        className: k.G6,
+                        className: V.G6,
                         variant: "text-xs/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        children: x.intl.string(x.t["8L/eYB"]),
+                        children: k.intl.string(k.t["8L/eYB"]),
                     }),
                 ],
             }),
-            null != n.image ? (0, i.jsx)(G.N, { className: k.N4, userId: r, image: n.image }) : null,
-        ],
-    });
-}
-function B(e) {
-    let { header: t, section: n, userId: r } = e,
-        a = n.fields.map((e) => e.image).filter(h.Vq);
-    return 0 === a.length
-        ? (0, i.jsx)(H, { header: t })
-        : (0, i.jsxs)("div", {
-              className: k.Zz,
-              children: [
-                  (0, i.jsx)(F, { header: t }),
-                  (0, i.jsx)("div", {
-                      className: k.SS,
-                      children: a.map((e, t) => (0, i.jsx)(G.N, { className: k.Bi, userId: r, image: e }, t)),
-                  }),
-              ],
-          });
-}
-function H(e) {
-    let { header: t } = e;
-    return (0, i.jsxs)("div", {
-        className: k.$R,
-        children: [
-            (0, i.jsx)(F, { header: t }),
-            (0, i.jsx)(O.E, {
-                className: k.VC,
-                variant: "text-xs/medium",
-                color: "text-subtle",
-                children: x.intl.string(x.t["8L/eYB"]),
-            }),
+            null != n.image ? (0, i.jsx)(x.N, { className: V.N4, userId: r, image: n.image }) : null,
         ],
     });
 }
 function j(e) {
+    let { header: t, section: n, userId: r } = e,
+        a = n.fields.map((e) => e.image).filter(h.Vq);
+    return 0 === a.length
+        ? (0, i.jsx)(W, { header: t })
+        : (0, i.jsxs)("div", {
+              className: V.Zz,
+              children: [
+                  (0, i.jsx)(B, { header: t }),
+                  (0, i.jsx)("div", {
+                      className: V.SS,
+                      children: a.map((e, t) => (0, i.jsx)(x.N, { className: V.Bi, userId: r, image: e }, t)),
+                  }),
+              ],
+          });
+}
+function W(e) {
+    let { header: t } = e;
+    return (0, i.jsxs)("div", {
+        className: V.$R,
+        children: [
+            (0, i.jsx)(B, { header: t }),
+            (0, i.jsx)(O.E, {
+                className: V.VC,
+                variant: "text-xs/medium",
+                color: "text-subtle",
+                children: k.intl.string(k.t["8L/eYB"]),
+            }),
+        ],
+    });
+}
+function Y(e) {
     let { userId: t, widget: n } = e,
         r = n.sections[0];
     return null == r
-        ? (0, i.jsx)(H, { header: n.header })
+        ? (0, i.jsx)(W, { header: n.header })
         : "cover" === r.type && ("" !== r.title || null != r.image)
-          ? (0, i.jsx)(V, { header: n.header, section: r, userId: t })
+          ? (0, i.jsx)(H, { header: n.header, section: r, userId: t })
           : "fields" === r.type
-            ? (0, i.jsx)(B, { header: n.header, section: r, userId: t })
-            : (0, i.jsx)(H, { header: n.header });
+            ? (0, i.jsx)(j, { header: n.header, section: r, userId: t })
+            : (0, i.jsx)(W, { header: n.header });
 }
-function W(e) {
+function K(e) {
     let { className: t, onClick: n, userId: a, widget: s } = e,
         { trackUserProfileAction: l } = (0, I.NJ)(),
         o = r.useRef(!1);
@@ -170,19 +172,19 @@ function W(e) {
             onClick: function () {
                 l({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), n?.();
             },
-            "aria-label": x.intl.string(x.t["2sdfeb"]),
+            "aria-label": k.intl.string(k.t["2sdfeb"]),
             children: (0, i.jsx)(D.A.Overlay, {
-                className: S()(k.kL, t),
-                children: (0, i.jsx)(j, { userId: a, widget: s }),
+                className: S()(V.kL, t),
+                children: (0, i.jsx)(Y, { userId: a, widget: s }),
             }),
         })
     );
 }
-var Y = n(321108),
-    K = n(939496),
-    $ = n(996988),
-    z = n(107562);
-function q(e) {
+var $ = n(321108),
+    z = n(939496),
+    q = n(996988),
+    Z = n(107562);
+function X(e) {
     var t;
     let n,
         { widgets: a = [], onClick: s, className: l } = e,
@@ -220,10 +222,10 @@ function q(e) {
             ],
             [a, d],
         ),
-        { themeType: u } = (0, K.E)(),
-        E = u === $.d.SIDEBAR,
+        { themeType: u } = (0, z.E)(),
+        E = u === q.d.SIDEBAR,
         A = (0, r.useRef)(!1),
-        T = (0, Y.A)(c),
+        T = (0, $.A)(c),
         m = (0, r.useMemo)(
             () =>
                 T.map((e) => ({ image: e.getIconURL(48) ?? "", name: e.name }))
@@ -236,23 +238,23 @@ function q(e) {
             0 === m.length || A.current || (o({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (A.current = !0));
         }, [o, m.length]),
         (0, i.jsx)(w.D, {
-            "aria-label": x.intl.string(x.t.JjiwFx),
+            "aria-label": k.intl.string(k.t.JjiwFx),
             onClick: () => {
                 o({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), s();
             },
-            className: z.QF,
+            className: Z.QF,
             children: (0, i.jsxs)(D.A.Overlay, {
-                className: S()(z.WH, l),
+                className: S()(Z.WH, l),
                 children: [
                     (0, i.jsx)(O.E, {
                         variant: E ? "text-sm/medium" : "text-xs/medium",
-                        children: x.intl.string(x.t.JjiwFx),
+                        children: k.intl.string(k.t.JjiwFx),
                     }),
                     (0, i.jsx)("div", {
-                        className: z.Pt,
+                        className: Z.Pt,
                         children: m.map((e, t) =>
                             (0, i.jsx)(
-                                Z,
+                                Q,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
@@ -268,29 +270,29 @@ function q(e) {
         })
     );
 }
-function Z(e) {
+function Q(e) {
     let { iconUrl: t, name: n, displayCount: r, gameCount: a } = e;
     return (0, i.jsxs)("div", {
-        className: z.Kk,
+        className: Z.Kk,
         children: [
-            (0, i.jsx)("img", { className: S()({ [z.um]: r }), src: t, alt: n }),
+            (0, i.jsx)("img", { className: S()({ [Z.um]: r }), src: t, alt: n }),
             r &&
                 (0, i.jsx)("div", {
-                    className: z.pp,
-                    children: (0, i.jsxs)(O.E, { variant: "text-xs/medium", className: z.gq, children: ["+", a] }),
+                    className: Z.pp,
+                    children: (0, i.jsxs)(O.E, { variant: "text-xs/medium", className: Z.gq, children: ["+", a] }),
                 }),
         ],
     });
 }
-var X = n(518477);
-function Q(e) {
+var J = n(518477);
+function ee(e) {
     let { user: t, widgets: n = [], ...g } = e,
         { openModal: S, onExpand: N } = (function (e) {
             let { onOpenUserProfileModal: t } = e,
                 { analyticsLocations: n } = (0, o.Ay)(),
                 { trackUserProfileAction: i } = (0, I.NJ)(),
                 a = r.useCallback(() => {
-                    t?.({ tabSection: X.RP.WIDGETS });
+                    t?.({ tabSection: J.RP.WIDGETS });
                 }, [t]),
                 s = r.useCallback(() => {
                     i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: n }), a();
@@ -360,12 +362,12 @@ function Q(e) {
                         );
                     } else
                         s instanceof p.Yy && !a
-                            ? (r.push((0, i.jsx)(q, { widgets: n, onClick: S, ...e }, "collection-breadcrumb")),
+                            ? (r.push((0, i.jsx)(X, { widgets: n, onClick: S, ...e }, "collection-breadcrumb")),
                               (a = !0))
                             : s instanceof T.Tu &&
                               r.push(
                                   (0, i.jsx)(
-                                      W,
+                                      K,
                                       { userId: t.id, widget: s, onClick: S, ...e },
                                       s.id ?? "personal-widget",
                                   ),
@@ -374,5 +376,5 @@ function Q(e) {
             },
             [n, S, w, P, t.id],
         );
-    return 0 === n.length ? null : (0, i.jsx)(m.A, { renderCards: G, heading: x.intl.string(x.t.Y55Tua), onExpand: N });
+    return 0 === n.length ? null : (0, i.jsx)(m.A, { renderCards: G, heading: k.intl.string(k.t.Y55Tua), onExpand: N });
 }
