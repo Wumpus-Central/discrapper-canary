@@ -1,15 +1,16 @@
-n.d(t, { A: () => I });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(17928),
-    l = n(228366),
-    s = n(640631),
-    r = n(626584),
-    a = n(734057),
+    r = n(228366),
+    a = n(640631),
+    s = n(626584),
+    l = n(734057),
     o = n(232835),
-    u = n(320095),
-    d = n(383233),
-    c = n(568548),
-    h = n(935208);
-class g {
+    d = n(320095),
+    c = n(383233),
+    u = n(568548),
+    _ = n(935208);
+class E {
     localNeeded = !0;
     messages = new Map();
     isLatest(e, t) {
@@ -19,7 +20,7 @@ class g {
         let n = this.messages.get(e);
         return null == n
             ? -1 / 0
-            : n.generation !== t && null != n.message && n.message.id === c.Ay.lastMessageId(e)
+            : n.generation !== t && null != n.message && n.message.id === u.Ay.lastMessageId(e)
               ? (this.messages.set(e, { ...n, generation: t }), t)
               : n.generation;
     }
@@ -30,7 +31,7 @@ class g {
     messageRecord(e) {
         let t = this.messages.get(e);
         return (
-            null == t || null == t.message || t.message instanceof d.Ay || (t.message = (0, u.rh)(t.message)),
+            null == t || null == t.message || t.message instanceof c.Ay || (t.message = (0, d.rh)(t.message)),
             t?.message ?? null
         );
     }
@@ -41,9 +42,9 @@ class g {
         this.messages.set(e, { message: t, generation: n });
     }
     putNew(e, t, n) {
-        var i, l;
-        let s = this.messages.get(e);
-        null != t && ((i = t.id), null == (l = s?.message?.id) || h.default.compare(i, l) > 0) && this.put(e, t, n);
+        var i, r;
+        let a = this.messages.get(e);
+        null != t && ((i = t.id), null == (r = a?.message?.id) || _.default.compare(i, r) > 0) && this.put(e, t, n);
     }
     putMany(e, t) {
         for (let n of e) this.put(n.channel_id, n, t);
@@ -53,23 +54,23 @@ class g {
         let t = e.channel_id,
             n = this.messages.get(t);
         if (n?.message?.id !== e.id) return;
-        let i = n.message instanceof d.Ay ? (0, u.IU)(n.message, e) : (0, u.SP)(n.message, e);
+        let i = n.message instanceof c.Ay ? (0, d.IU)(n.message, e) : (0, d.SP)(n.message, e);
         this.messages.set(t, { ...n, message: i });
     }
     delete(e) {
         this.messages.delete(e);
     }
 }
-let f = -1 / 0,
-    A = new r.A("MessagePreviewStore");
-class E extends i.Ay.Store {
+let A = -1 / 0,
+    h = new s.A("MessagePreviewStore");
+class I extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.A, o.A);
+        this.waitFor(l.A, o.A);
     }
     guilds = new Map();
     generation = 0;
     constructor() {
-        super(l.h, {
+        super(r.h, {
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
             GUILD_CREATE: (e) => this.handleGuildCreate(e),
             GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -95,7 +96,7 @@ class E extends i.Ay.Store {
         return this.guilds.get(e)?.messageRecord(t) ?? null;
     }
     data(e) {
-        return this.guilds.has(e) || this.guilds.set(e, new g()), this.guilds.get(e);
+        return this.guilds.has(e) || this.guilds.set(e, new E()), this.guilds.get(e);
     }
     handleOneGuildCreate(e) {
         let t = this.data(e.id);
@@ -129,38 +130,38 @@ class E extends i.Ay.Store {
             n = e.message.channel_id,
             i = e.message.id;
         if (null == n || null == i) return !1;
-        let l = this.data(t);
-        if (l?.messageId(n) !== i) return !1;
-        l?.update(e.message);
+        let r = this.data(t);
+        if (r?.messageId(n) !== i) return !1;
+        r?.update(e.message);
     }
     handleThreadListSync(e) {
         this.data(e.guildId).putMany(e.mostRecentMessages ?? [], this.generation);
     }
     handleLoadMessagesSuccess(e) {
-        let t = a.A.getBasicChannel(e.channelId);
+        let t = l.A.getBasicChannel(e.channelId);
         if (null == t) return !1;
-        (0, s.D)(e.messages),
+        (0, a.D)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
                 ? this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, this.generation)
                 : this.data(t.guild_id).put(e.channelId, e.messages[0] ?? null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
-        let t = a.A.getBasicChannel(e.channelId);
-        null != t && ((0, s.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, f));
+        let t = l.A.getBasicChannel(e.channelId);
+        null != t && ((0, a.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, A));
     }
     handleMessagePreviewsLoaded(e) {
-        A.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        h.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
         for (let n of e.messages) t.isLatest(n.channel_id, this.generation) || t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
-        A.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        h.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
-        for (let [n, i] of e.messages) t.has(n) || t.put(n, i, f);
+        for (let [n, i] of e.messages) t.has(n) || t.put(n, i, A);
         t.localNeeded = !1;
     }
     handleLogout(e) {
         this.guilds.clear();
     }
 }
-let I = new E();
+let f = new I();

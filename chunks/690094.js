@@ -1,10 +1,11 @@
-s.d(e, { my: () => r });
-var i = s(780755),
-    n = s(272469);
-function r(t, e, s) {
+"use strict";
+r.d(t, { my: () => o });
+var n = r(780755),
+    a = r(272469);
+function o(e, t, r) {
     try {
-        Object.defineProperty(t, e, { value: s, writable: !0, configurable: !0 });
-    } catch (s) {
-        i.T && n.vF.log(`Failed to add non-enumerable property "${e}" to object`, t);
+        Object.defineProperty(e, t, { value: r, writable: !0, configurable: !0 });
+    } catch (r) {
+        n.T && a.vF.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
