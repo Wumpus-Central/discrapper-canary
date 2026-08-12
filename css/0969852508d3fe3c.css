@@ -73,14 +73,6 @@
     padding: var(--space-16)
 }
 
-.inviteSplash__3ae56 {
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    height: 112px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
-}
-
 .fallbackSplash__3ae56 {
     align-items: center;
     display: flex;

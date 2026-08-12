@@ -2354,16 +2354,6 @@
     border-radius: var(--radius-lg)
 }
 
-.guildIconContainer__04bc3 {
-    height: var(--size-12);
-    position: relative
-}
-
-.guildIconInnerContainer__04bc3 {
-    position: absolute;
-    transform: translateY(-75%)
-}
-
 .guildIcon__04bc3 {
     border: var(--size-4) solid var(--background-surface-high);
     border-radius: var(--radius-md);
@@ -2372,28 +2362,18 @@
 }
 
 .contentContainer__04bc3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
     padding-inline: var(--space-16);
     padding-bottom: var(--space-16);
     padding-top: var(--space-16)
-}
-
-.contentContainer__04bc3,
-.iconTextContainer__04bc3 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16)
 }
 
 .iconTextContainerCondensed__04bc3 {
     display: flex;
     flex-direction: row;
     gap: var(--space-16)
-}
-
-.textContainer__04bc3 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8)
 }
 
 .textContainerCondensed__04bc3 {
@@ -2407,6 +2387,13 @@
     display: flex;
     flex-direction: row;
     gap: var(--space-4)
+}
+
+.description__04bc3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
 }
 
 .pillIcon__04bc3 {
@@ -2437,12 +2424,4 @@
 
 .memberCountContainer__04bc3 {
     gap: var(--space-4)
-}
-
-.inviteSplash__04bc3 {
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    height: 112px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
 }

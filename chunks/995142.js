@@ -1014,25 +1014,15 @@ var tf = n(714991),
     tp = n(880851);
 function tj(e) {
     let { trackAction: t } = e,
-        { canStartAuthorization: n, hasAlreadyLinked: l, invite: r, isMember: s, closeModal: c } = q(),
-        o = a.useCallback(() => {
-            null != r &&
+        { invite: n, isMember: l, closeModal: r } = q(),
+        s = a.useCallback(() => {
+            null != n &&
                 (t(O.GameProfileTrackActionActions.JoinServer),
-                c(),
-                eI.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: r, code: r.code, context: ek.BRT.APP }));
-        }, [r, t, c]);
-    if (null == r || null == r.guild) return null;
-    let u = tA.Ay.getGuildIconURL({ id: r.guild.id, icon: r.guild.icon, size: 48 }),
-        d = tA.Ay.getGuildSplashURL({ id: r.guild.id, splash: r.guild.splash }),
-        m = (n && !l) || null == d,
-        x = (0, i.jsx)("img", {
-            className: tp.$f,
-            src: u,
-            alt: eg.intl.formatToPlainString(eg.t.xm6W9D, { guildName: r.guild.name }),
-            draggable: !1,
-        }),
-        g = m ? tp.To : tp.Kt,
-        f = m ? tp.yj : tp.FS;
+                r(),
+                eI.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: n, code: n.code, context: ek.BRT.APP }));
+        }, [n, t, r]);
+    if (null == n || null == n.guild) return null;
+    let c = tA.Ay.getGuildIconURL({ id: n.guild.id, icon: n.guild.icon, size: 48 });
     return (0, i.jsxs)("div", {
         className: tp.uW,
         children: [
@@ -1042,91 +1032,88 @@ function tj(e) {
                 color: "text-strong",
                 children: eg.intl.string(eg.t["U2N+ci"]),
             }),
-            (0, i.jsxs)("div", {
+            (0, i.jsx)("div", {
                 className: tp.kL,
-                children: [
-                    !m && null != d && (0, i.jsx)("img", { className: tp.ll, src: d, alt: "", draggable: !1 }),
-                    (0, i.jsxs)("div", {
-                        className: tp.hQ,
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: g,
-                                children: [
-                                    m
-                                        ? x
-                                        : (0, i.jsx)("div", {
-                                              className: tp._C,
-                                              children: (0, i.jsx)("div", { className: tp.kW, children: x }),
-                                          }),
-                                    (0, i.jsxs)("div", {
-                                        className: f,
-                                        children: [
-                                            (0, i.jsxs)("div", {
-                                                className: tp.YS,
-                                                children: [
-                                                    (0, i.jsx)(tf.A, { guild: r.guild, size: 16 }),
-                                                    (0, i.jsx)(en.D, {
-                                                        variant: "heading-md/semibold",
-                                                        color: "text-default",
-                                                        children: r.guild.name,
-                                                    }),
-                                                ],
-                                            }),
-                                            !(0, e$.uJ)(r.guild?.description) &&
-                                                (0, i.jsx)(et.E, {
-                                                    variant: "text-sm/medium",
-                                                    color: "text-muted",
-                                                    children: r.guild?.description,
+                children: (0, i.jsxs)("div", {
+                    className: tp.hQ,
+                    children: [
+                        (0, i.jsxs)("div", {
+                            className: tp.To,
+                            children: [
+                                (0, i.jsx)("img", {
+                                    className: tp.$f,
+                                    src: c,
+                                    alt: eg.intl.formatToPlainString(eg.t.xm6W9D, { guildName: n.guild.name }),
+                                    draggable: !1,
+                                }),
+                                (0, i.jsxs)("div", {
+                                    className: tp.yj,
+                                    children: [
+                                        (0, i.jsxs)("div", {
+                                            className: tp.YS,
+                                            children: [
+                                                (0, i.jsx)(tf.A, { guild: n.guild, size: 16 }),
+                                                (0, i.jsx)(en.D, {
+                                                    variant: "heading-md/semibold",
+                                                    color: "text-default",
+                                                    children: n.guild.name,
                                                 }),
-                                            null != r.approximate_member_count || null != r.approximate_presence_count
-                                                ? (0, i.jsxs)("div", {
-                                                      className: tp.iR,
-                                                      children: [
-                                                          null != r.approximate_presence_count &&
-                                                              (0, i.jsxs)("div", {
-                                                                  className: tp.Tb,
-                                                                  children: [
-                                                                      (0, i.jsx)("i", { className: tp._o }),
-                                                                      (0, i.jsx)(et.E, {
-                                                                          variant: "text-xs/normal",
-                                                                          color: "text-muted",
-                                                                          children: eg.intl.format(eg.t["LC+S+m"], {
-                                                                              membersOnline:
-                                                                                  r.approximate_presence_count,
-                                                                          }),
+                                            ],
+                                        }),
+                                        !(0, e$.uJ)(n.guild?.description) &&
+                                            (0, i.jsx)(et.E, {
+                                                className: tp.h_,
+                                                variant: "text-sm/medium",
+                                                color: "text-muted",
+                                                children: n.guild?.description,
+                                            }),
+                                        null != n.approximate_member_count || null != n.approximate_presence_count
+                                            ? (0, i.jsxs)("div", {
+                                                  className: tp.iR,
+                                                  children: [
+                                                      null != n.approximate_presence_count &&
+                                                          (0, i.jsxs)("div", {
+                                                              className: tp.Tb,
+                                                              children: [
+                                                                  (0, i.jsx)("i", { className: tp._o }),
+                                                                  (0, i.jsx)(et.E, {
+                                                                      variant: "text-xs/normal",
+                                                                      color: "text-muted",
+                                                                      children: eg.intl.format(eg.t["LC+S+m"], {
+                                                                          membersOnline: n.approximate_presence_count,
                                                                       }),
-                                                                  ],
-                                                              }),
-                                                          null != r.approximate_member_count &&
-                                                              (0, i.jsxs)("div", {
-                                                                  className: tp.Tb,
-                                                                  children: [
-                                                                      (0, i.jsx)("i", { className: tp.jk }),
-                                                                      (0, i.jsx)(et.E, {
-                                                                          variant: "text-xs/normal",
-                                                                          color: "text-muted",
-                                                                          children: eg.intl.format(eg.t.zRl6XR, {
-                                                                              count: r.approximate_member_count,
-                                                                          }),
+                                                                  }),
+                                                              ],
+                                                          }),
+                                                      null != n.approximate_member_count &&
+                                                          (0, i.jsxs)("div", {
+                                                              className: tp.Tb,
+                                                              children: [
+                                                                  (0, i.jsx)("i", { className: tp.jk }),
+                                                                  (0, i.jsx)(et.E, {
+                                                                      variant: "text-xs/normal",
+                                                                      color: "text-muted",
+                                                                      children: eg.intl.format(eg.t.zRl6XR, {
+                                                                          count: n.approximate_member_count,
                                                                       }),
-                                                                  ],
-                                                              }),
-                                                      ],
-                                                  })
-                                                : null,
-                                        ],
-                                    }),
-                                ],
-                            }),
-                            (0, i.jsx)(h.$, {
-                                variant: "secondary",
-                                text: s ? eg.intl.string(eg.t.cEnaWx) : eg.intl.string(eg.t.XpeFYr),
-                                onClick: o,
-                                fullWidth: !0,
-                            }),
-                        ],
-                    }),
-                ],
+                                                                  }),
+                                                              ],
+                                                          }),
+                                                  ],
+                                              })
+                                            : null,
+                                    ],
+                                }),
+                            ],
+                        }),
+                        (0, i.jsx)(h.$, {
+                            variant: "secondary",
+                            text: l ? eg.intl.string(eg.t.cEnaWx) : eg.intl.string(eg.t.XpeFYr),
+                            onClick: s,
+                            fullWidth: !0,
+                        }),
+                    ],
+                }),
             }),
         ],
     });
@@ -1594,60 +1581,57 @@ function nl(e) {
             canStartAuthorization: s,
             startAuthorization: c,
             connectionApp: o,
-            invite: u,
         } = q(),
-        m = (0, d.bG)([J.default], () => J.default.getCurrentUser()),
-        x = a.useCallback(() => {
+        u = (0, d.bG)([J.default], () => J.default.getCurrentUser()),
+        m = a.useCallback(() => {
             t(O.GameProfileTrackActionActions.LinkAccount), c({ analyticsLocations: n });
         }, [t, c, n]);
-    if (!l || null == o || !s || r || null == m) return null;
-    let g = u?.guild != null ? tA.Ay.getGuildSplashURL({ id: u.guild.id, splash: u.guild.splash }) : null;
-    return (0, i.jsxs)("div", {
-        className: nn.uW,
-        children: [
-            (0, i.jsx)(en.D, {
-                className: nn.Gf,
-                variant: "heading-sm/semibold",
-                color: "text-strong",
-                children: eg.intl.string(eg.t["VDAhr+"]),
-            }),
-            (0, i.jsxs)("div", {
-                className: nn.kL,
-                children: [
-                    null != g
-                        ? (0, i.jsx)("img", { className: nn.ll, src: g, alt: "", draggable: !1 })
-                        : (0, i.jsx)("div", { className: nn.sB, children: (0, i.jsx)(nt.default, { application: o }) }),
-                    (0, i.jsxs)("div", {
-                        className: nn.hQ,
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: nn.FS,
-                                children: [
-                                    (0, i.jsx)(en.D, {
-                                        variant: "heading-md/semibold",
-                                        color: "text-default",
-                                        children: eg.intl.formatToPlainString(eg.t.hUbQT2, { gameName: o.name }),
-                                    }),
-                                    (0, i.jsx)(et.E, {
-                                        variant: "text-sm/medium",
-                                        color: "text-muted",
-                                        children: eg.intl.string(eg.t["JKqu+4"]),
-                                    }),
-                                ],
-                            }),
-                            (0, i.jsx)(h.$, {
-                                variant: "secondary",
-                                icon: ne.A,
-                                text: eg.intl.string(eg.t.jynBQ5),
-                                onClick: x,
-                                fullWidth: !0,
-                            }),
-                        ],
-                    }),
-                ],
-            }),
-        ],
-    });
+    return l && null != o && s && !r && null != u
+        ? (0, i.jsxs)("div", {
+              className: nn.uW,
+              children: [
+                  (0, i.jsx)(en.D, {
+                      className: nn.Gf,
+                      variant: "heading-sm/semibold",
+                      color: "text-strong",
+                      children: eg.intl.string(eg.t["VDAhr+"]),
+                  }),
+                  (0, i.jsxs)("div", {
+                      className: nn.kL,
+                      children: [
+                          (0, i.jsx)("div", { className: nn.sB, children: (0, i.jsx)(nt.default, { application: o }) }),
+                          (0, i.jsxs)("div", {
+                              className: nn.hQ,
+                              children: [
+                                  (0, i.jsxs)("div", {
+                                      className: nn.FS,
+                                      children: [
+                                          (0, i.jsx)(en.D, {
+                                              variant: "heading-md/semibold",
+                                              color: "text-default",
+                                              children: eg.intl.formatToPlainString(eg.t.hUbQT2, { gameName: o.name }),
+                                          }),
+                                          (0, i.jsx)(et.E, {
+                                              variant: "text-sm/medium",
+                                              color: "text-muted",
+                                              children: eg.intl.string(eg.t["JKqu+4"]),
+                                          }),
+                                      ],
+                                  }),
+                                  (0, i.jsx)(h.$, {
+                                      variant: "secondary",
+                                      icon: ne.A,
+                                      text: eg.intl.string(eg.t.jynBQ5),
+                                      onClick: m,
+                                      fullWidth: !0,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
+              ],
+          })
+        : null;
 }
 var ni = n(80687),
     na = n(775602),
