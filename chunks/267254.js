@@ -24,6 +24,5 @@ _.exports = {
     yF: "divider__92059",
     qr: "footer__92059",
     hU: "deauthorizeButton__92059",
-    Rd: "headingCard__92059",
     p$: "emptyState__92059",
 };

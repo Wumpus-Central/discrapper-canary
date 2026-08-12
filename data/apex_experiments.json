@@ -3881,22 +3881,6 @@
     }
   },
   {
-    "name": "2026-05-user-settings-redesign-4d",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-valorant-social-sdk-all-regions",
     "kind": "user",
     "defaultConfig": null,

@@ -207,14 +207,6 @@
     flex-shrink: 0
 }
 
-.headingCard__92059 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    margin-bottom: var(--space-40);
-    padding: var(--space-20)
-}
-
 .emptyState__92059 {
     min-height: 200px
 }
