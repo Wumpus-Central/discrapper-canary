@@ -11,6 +11,7 @@ _.exports = {
     Lw: "overlay__57752",
     _h: "overlayAvatar__57752 overlay__57752",
     $A: "overlayGuildIcon__57752 overlay__57752",
+    j9: "overlayPersonalWidgetField__57752 overlay__57752",
     rn: "overlayBanner__57752 overlay__57752",
     bK: "toolsContainer__57752",
     mu: "zoomControls__57752",

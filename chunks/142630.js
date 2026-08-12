@@ -556,7 +556,6 @@ function K(e) {
                                                               className: (function (e) {
                                                                   switch (e) {
                                                                       case v.HL.GUILD_ICON:
-                                                                      case v.HL.PERSONAL_WIDGET_FIELD:
                                                                           return B.$A;
                                                                       case v.HL.BANNER:
                                                                       case v.HL.GUILD_BANNER:
@@ -568,6 +567,8 @@ function K(e) {
                                                                       case v.HL.AVATAR:
                                                                       case v.HL.AVATAR_DECORATION:
                                                                           return B._h;
+                                                                      case v.HL.PERSONAL_WIDGET_FIELD:
+                                                                          return B.j9;
                                                                   }
                                                               })(K),
                                                               style: {
