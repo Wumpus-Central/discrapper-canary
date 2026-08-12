@@ -132,7 +132,7 @@
 .card_c19a92 {
     background: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     box-sizing: border-box;
     display: flex;
     flex: 0 0 400px;
@@ -157,7 +157,8 @@
 }
 
 .nitroCard_c19a92 {
-    overflow: visible
+    overflow: visible;
+    z-index: 1
 }
 
 .cardContent_c19a92 {
@@ -194,7 +195,9 @@
 .trialDivider_c19a92 {
     align-items: center;
     display: flex;
-    gap: var(--space-12)
+    gap: var(--space-12);
+    height: 0;
+    overflow: visible
 }
 
 .trialDivider_c19a92:before {
@@ -230,7 +233,7 @@
     margin-top: auto;
     margin-inline: calc(var(--space-24)*-1);
     overflow: visible;
-    padding: var(--space-16) var(--space-20) var(--space-20)
+    padding: var(--space-20)
 }
 
 .monthlyOnly_c19a92 {
@@ -267,9 +270,9 @@
 }
 
 .withPremiumGroup_c19a92 .wumpus_c19a92 {
-    inset-inline-end: -96px;
-    top: -48px;
-    width: 275px
+    inset-inline-end: -90px;
+    top: -50px;
+    width: 262px
 }
 
 .wumpus_c19a92 img {
@@ -311,11 +314,11 @@
         order: 1
     }
 
-    .cards_c19a92.withPremiumGroup_c19a92 .premiumGroupCardOrder_c19a92 {
+    .cards_c19a92.withPremiumGroup_c19a92 .tier0Order_c19a92 {
         order: 2
     }
 
-    .cards_c19a92.withPremiumGroup_c19a92 .tier0Order_c19a92 {
+    .cards_c19a92.withPremiumGroup_c19a92 .premiumGroupCardOrder_c19a92 {
         order: 3
     }
 }
@@ -327,7 +330,7 @@
 .premiumCardHover_c19a92:hover {
     position: relative;
     transform: scale(1.045) translateZ(0);
-    z-index: 1
+    z-index: 2
 }
 
 .premiumCardsContainer_c19a92 {

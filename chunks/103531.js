@@ -3262,7 +3262,7 @@ function nf(e) {
                         variant: "display-md",
                         color: n ? "text-strong" : "text-overlay-light",
                         className: ng.JJ,
-                        children: s ? ex.intl.string(ex.t.lG6a5x) : ex.intl.string(ex.t.tUbSDK),
+                        children: s ? ex.intl.string(ex.t.lG6a5x) : ex.intl.string(ex.t["t9uG/o"]),
                     }),
                 }),
                 (0, c.jsx)(el.B, {
