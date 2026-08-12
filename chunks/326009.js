@@ -138,7 +138,6 @@ function C(e) {
                 (0, i.jsx)(A.Ay, {
                     tabIndex: 0,
                     onChange: y,
-                    maxFileSizeBytes: 0xa00000,
                     multiple: !1,
                     "aria-label": m.intl.string(m.t["MsUY/S"]),
                 }),
