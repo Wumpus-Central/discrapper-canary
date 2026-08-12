@@ -292,6 +292,10 @@ function w(e) {
                                     : e.payment_sources.map(m.A.createFromCheckoutContext)));
                         return r.checkoutPaymentSources;
                     },
+                    checkoutSelectedPaymentSource: () => {
+                        let { get: e, paymentSourceId: t } = i();
+                        return e("checkoutPaymentSources").find((e) => e.id === t) ?? null;
+                    },
                     hasFiatCheckoutPaymentSources: () =>
                         i()
                             .get("checkoutPaymentSources")
