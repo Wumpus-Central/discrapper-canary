@@ -1,30 +1,28 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => m });
 var i = n(439372),
     r = n(183636),
-    s = n(927813),
-    a = n(723702),
-    o = n(38405),
-    l = n(340124),
-    u = n(859703),
-    c = n(24001),
-    d = n(302654),
-    _ = n(945810);
-let h = { questFetchJitterMs: 5 * s.A.Millis.SECOND, questHomeHeroJitterMs: 5 * s.A.Millis.SECOND },
-    f = (0, _.mj)({
+    a = n(927813),
+    s = n(723702),
+    l = n(38405),
+    o = n(352774),
+    d = n(859703),
+    c = n(945810);
+let u = { questFetchJitterMs: 5 * a.A.Millis.SECOND, questHomeHeroJitterMs: 5 * a.A.Millis.SECOND },
+    _ = (0, c.mj)({
         name: "2026-06-quest-fetch-reconnect-jitter",
         kind: "user",
-        defaultConfig: h,
+        defaultConfig: u,
         variations: {
-            1: { questFetchJitterMs: 60 * s.A.Millis.SECOND, questHomeHeroJitterMs: 60 * s.A.Millis.SECOND },
+            1: { questFetchJitterMs: 60 * a.A.Millis.SECOND, questHomeHeroJitterMs: 60 * a.A.Millis.SECOND },
         },
     });
-var p = n(971276);
-let E = s.A.Millis.DAY,
-    m = 30 * s.A.Millis.MINUTE,
-    g = 5 * s.A.Millis.MINUTE,
-    A = 12 * s.A.Millis.HOUR,
-    I = 5 * s.A.Millis.MINUTE;
+var E = n(971276);
+let A = a.A.Millis.DAY,
+    h = 30 * a.A.Millis.MINUTE,
+    I = 5 * a.A.Millis.MINUTE,
+    f = 12 * a.A.Millis.HOUR,
+    p = 5 * a.A.Millis.MINUTE;
 class T extends i.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
@@ -35,25 +33,23 @@ class T extends i.A {
     hasHandledConnectionOpen = !1;
     _fetch(e) {
         if (
-            !(0, p.s)() ||
-            u.A.isFetchingCurrentQuests ||
-            (o.A.addBreadcrumb({
+            (0, E.s)() &&
+            !d.A.isFetchingCurrentQuests &&
+            (l.A.addBreadcrumb({
                 category: "quests.fetch",
                 message: "QuestFetchManager._fetch triggered",
                 data: {
                     callerSource: e,
-                    storeSize: u.A.quests.size,
-                    lastFetchedCurrentQuests: u.A.lastFetchedCurrentQuests,
-                    msSinceLastFetch: Date.now() - u.A.lastFetchedCurrentQuests,
-                    isFetchingCurrentQuests: u.A.isFetchingCurrentQuests,
+                    storeSize: d.A.quests.size,
+                    lastFetchedCurrentQuests: d.A.lastFetchedCurrentQuests,
+                    msSinceLastFetch: Date.now() - d.A.lastFetchedCurrentQuests,
+                    isFetchingCurrentQuests: d.A.isFetchingCurrentQuests,
                 },
             }),
-            (0, l.N1)(),
-            (0, a.isMac)() && "focused" !== r.A.getState())
+            (0, o.N1)(),
+            (0, s.isMac)() && "focused" !== r.A.getState())
         )
             return;
-        let { enableNewRequestBehavior: t } = d.A.getConfig({ location: "QuestFetchManager" });
-        t || (0, l.r8)(c.p9.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     handleQuestsFetchCurrentQuestsBegin = () => {
         this.lastFetchAttemptedAt = Date.now();
@@ -63,36 +59,36 @@ class T extends i.A {
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.recurringFetchTimerId = window.setInterval(() => {
-                Date.now() - this.lastFetchAttemptedAt > E && this._fetch("post_connect_recurring");
-            }, m));
-        let e = (0, p.s)(),
+                Date.now() - this.lastFetchAttemptedAt > A && this._fetch("post_connect_recurring");
+            }, h));
+        let e = (0, E.s)(),
             t = this.hasHandledConnectionOpen;
         this.hasHandledConnectionOpen = !0;
         let { questFetchJitterMs: n, questHomeHeroJitterMs: i } =
                 t && e
                     ? (function (e) {
                           let { location: t } = e;
-                          return f.getConfig({ location: t });
+                          return _.getConfig({ location: t });
                       })({ location: "QuestFetchManager" })
-                    : h,
+                    : u,
             r = Math.floor(Math.random() * n);
         if (
             ((this.initialFetchTimerId = window.setTimeout(() => {
-                Date.now() - u.A.lastFetchedCurrentQuests <= I || this._fetch("post_connect_initial");
+                Date.now() - d.A.lastFetchedCurrentQuests <= p || this._fetch("post_connect_initial");
             }, r)),
             e)
         ) {
             let e = r + Math.floor(Math.random() * i);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
-                    (0, l.Yf)();
+                    (0, o.Yf)();
                 } catch (e) {}
             }, e);
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + A > Date.now() ||
-            u.A.lastFetchedCurrentQuests + A > Date.now() ||
+        this.instantiatedAt + f > Date.now() ||
+            d.A.lastFetchedCurrentQuests + f > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {
@@ -100,7 +96,7 @@ class T extends i.A {
         !("localization" in n.proto) ||
             !t ||
             i ||
-            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= g ||
+            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= I ||
             ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
     };
     handleStartSession = () => {
@@ -124,4 +120,4 @@ class T extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let S = new T();
+let m = new T();

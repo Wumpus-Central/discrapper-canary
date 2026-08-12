@@ -273,37 +273,6 @@
     }
   },
   {
-    "name": "2025-10-ad-request-behavior-experiment",
-    "kind": "user",
-    "defaultConfig": {
-      "enableNewRequestBehavior": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableNewRequestBehavior": false
-      },
-      "2": {
-        "enableNewRequestBehavior": true
-      },
-      "3": {
-        "enableNewRequestBehavior": false
-      },
-      "4": {
-        "enableNewRequestBehavior": true
-      },
-      "5": {
-        "enableNewRequestBehavior": true
-      },
-      "6": {
-        "enableNewRequestBehavior": true
-      }
-    }
-  },
-  {
     "name": "2025-10-collectibles-custom-cursors",
     "kind": "user",
     "defaultConfig": {

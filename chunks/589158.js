@@ -25,8 +25,8 @@ var i,
     O = n(235986),
     R = n(386639),
     L = (((i = L || {}).SINGLE_AVATAR = "1"), (i.MULTIPLE_AVATAR = "2"), i);
-let y = { [f._3.SIZE_32]: R.dT, [f._3.SIZE_40]: R.Jb };
-class D extends a.Component {
+let D = { [f._3.SIZE_32]: R.dT, [f._3.SIZE_40]: R.Jb };
+class y extends a.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
     static Types = L;
@@ -38,9 +38,9 @@ class D extends a.Component {
                   children: [
                       (0, r.jsxs)(O.A, {
                           children: [
-                              (0, r.jsx)("div", { className: l()(R.RH, y[t], R.hC) }),
-                              (0, r.jsx)("div", { className: l()(R.RH, y[t], R.hC) }),
-                              (0, r.jsx)("div", { className: l()(R.RH, y[t]) }),
+                              (0, r.jsx)("div", { className: l()(R.RH, D[t], R.hC) }),
+                              (0, r.jsx)("div", { className: l()(R.RH, D[t], R.hC) }),
+                              (0, r.jsx)("div", { className: l()(R.RH, D[t]) }),
                           ],
                       }),
                       (0, r.jsx)(O.A, { grow: 1, className: R.eC, style: { maxWidth: this.placeholderMaxWidth } }),
@@ -49,7 +49,7 @@ class D extends a.Component {
             : (0, r.jsxs)(O.A, {
                   className: l()(R.qf, !a && R.lN, n),
                   children: [
-                      (0, r.jsx)("div", { className: l()(R.RH, y[t], i) }),
+                      (0, r.jsx)("div", { className: l()(R.RH, D[t], i) }),
                       (0, r.jsx)(O.A, {
                           grow: 1,
                           className: l()(R.gM, i),
@@ -89,7 +89,7 @@ function j(e) {
 var W = n(967144),
     Y = n(859703),
     K = n(24001),
-    $ = n(201274),
+    $ = n(514547),
     z = n(854627),
     q = n(240248),
     Z = n(427262),
@@ -103,15 +103,15 @@ let et = (0, v.Fe)({
             n.e("10887"),
             n.e("75459"),
             n.e("43300"),
-            n.e("35062"),
+            n.e("73470"),
             n.e("77004"),
             n.e("32886"),
             n.e("99432"),
             n.e("497"),
             n.e("60955"),
             n.e("11310"),
-            n.e("53930"),
             n.e("13823"),
+            n.e("53930"),
             n.e("32191"),
             n.e("92583"),
             n.e("44502"),
@@ -123,7 +123,7 @@ let et = (0, v.Fe)({
             n.e("32606"),
             n.e("85350"),
             n.e("8563"),
-            n.e("73"),
+            n.e("39038"),
             n.e("24265"),
             n.e("62875"),
             n.e("55602"),
@@ -336,7 +336,7 @@ let en = a.memo(function (e) {
                 isVR: O,
                 premiumSince: R,
                 channel: L,
-                guildId: y,
+                guildId: D,
                 className: v,
                 nameplate: M,
                 hideClanTag: P = !1,
@@ -363,24 +363,24 @@ let en = a.memo(function (e) {
             [e_, eE] = a.useState(!1),
             [eA, eh] = a.useState(!1),
             [eI, ef] = a.useState(null),
-            { voiceChannel: ep } = (0, g.Ay)({ userId: er, guildId: y }),
+            { voiceChannel: ep } = (0, g.Ay)({ userId: er, guildId: D }),
             {
                 avatarDecorationSrc: eT,
                 avatarSrc: em,
                 eventHandlers: eg,
-            } = (0, z.A)({ userId: er, size: f._3.SIZE_32, animateOnHover: !(t || e_), guildId: y }),
+            } = (0, z.A)({ userId: er, size: f._3.SIZE_32, animateOnHover: !(t || e_), guildId: D }),
             { onFocus: eS, ...eN } = en ?? {},
-            eC = (0, W.gn)(y, er, i ?? null),
+            eC = (0, W.gn)(D, er, i ?? null),
             [eO, eR] = a.useState(!1);
         a.useEffect(() => {
             t && eR(!1);
         }, [t]);
         let eL = (0, $.YW)(T),
-            ey = (0, o.bG)([Y.A], () => Y.A.getQuestPreviewOverride(K.uF.MEMBERS_LIST), []),
-            eD = null != ey,
-            ev = eD ? ey : eL,
+            eD = (0, o.bG)([Y.A], () => Y.A.getQuestPreviewOverride(K.uF.MEMBERS_LIST), []),
+            ey = null != eD,
+            ev = ey ? eD : eL,
             eb = (0, $.Yl)(eL, m, er),
-            eM = (eD || eb) && t && !eO,
+            eM = (ey || eb) && t && !eO,
             eP = a.useCallback(() => {
                 eE(!0);
             }, []),
@@ -411,7 +411,7 @@ let en = a.memo(function (e) {
                 [ev, eu, m, A, ed],
             );
         return null == h
-            ? (0, r.jsx)(D, { avatarSize: f._3.SIZE_32, className: ee.qf })
+            ? (0, r.jsx)(y, { avatarSize: f._3.SIZE_32, className: ee.qf })
             : (0, r.jsx)(p.Y, {
                   targetElementRef: eu,
                   renderPopout: ek,
@@ -446,7 +446,7 @@ let en = a.memo(function (e) {
                                             colorStrings: eC,
                                             hideClanTag: P,
                                             user: h,
-                                            guildId: y,
+                                            guildId: D,
                                             isHovering: e_,
                                         }),
                                     })
@@ -461,7 +461,7 @@ let en = a.memo(function (e) {
                                                 colorStrings: eC,
                                                 hideClanTag: P,
                                                 user: h,
-                                                guildId: y,
+                                                guildId: D,
                                                 isHovering: e_,
                                             }),
                                         }),
