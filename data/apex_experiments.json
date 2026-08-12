@@ -4114,22 +4114,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-06-clips-settings-redesign",
-    "defaultConfig": {
-      "enableRedesign": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableRedesign": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-06-content-classification-embedded-activity-filter",
     "defaultConfig": {
       "enabled": false

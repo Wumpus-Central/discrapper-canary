@@ -1,55 +1,53 @@
 "use strict";
 n.d(t, {
-    CN: () => q,
-    Cx: () => el,
+    CN: () => $,
+    Cx: () => ea,
     Fv: () => m,
     GU: () => w,
-    Gy: () => J,
+    Gy: () => X,
     LX: () => p,
-    Me: () => er,
+    Me: () => en,
     Mu: () => M,
     Ot: () => S,
     P4: () => g,
-    QK: () => eu,
-    RC: () => et,
-    SC: () => Z,
+    QK: () => ed,
+    RC: () => J,
+    SC: () => z,
     T2: () => j,
-    UY: () => ed,
-    U_: () => X,
+    UY: () => el,
+    U_: () => q,
     V0: () => L,
     VP: () => k,
     Vi: () => C,
-    Y2: () => z,
+    Y2: () => K,
     YM: () => B,
-    _1: () => ei,
-    _S: () => eo,
+    _1: () => et,
+    _S: () => es,
     cM: () => x,
     dV: () => V,
-    gC: () => Q,
+    gC: () => Z,
     iJ: () => H,
-    k9: () => ee,
+    k9: () => Q,
     kd: () => R,
     l_: () => D,
-    mO: () => ec,
-    mY: () => ea,
-    nQ: () => e_,
+    mO: () => eo,
+    mY: () => ei,
+    nQ: () => ec,
     nm: () => b,
     nx: () => O,
     on: () => T,
-    qh: () => Y,
-    rb: () => eE,
-    rv: () => $,
+    rb: () => eu,
+    rv: () => Y,
     s3: () => U,
     sc: () => y,
     sz: () => N,
-    tS: () => es,
+    tS: () => er,
     td: () => G,
     ut: () => F,
     vZ: () => P,
-    wN: () => W,
-    yz: () => en,
+    yz: () => ee,
     zj: () => v,
-    zq: () => K,
+    zq: () => W,
 });
 var i,
     r,
@@ -97,21 +95,19 @@ let S = "alt+c",
     H = 10;
 f.A.Millis.DAY;
 let j = 20,
-    W = 1,
-    Y = 50,
-    K = 10,
-    $ = 100,
-    z = 75,
-    q = 0x3c0000000,
-    Z = ".autoclip-cache",
-    X = 0;
-var Q =
+    W = 10,
+    Y = 100,
+    K = 75,
+    $ = 0x3c0000000,
+    z = ".autoclip-cache",
+    q = 0;
+var Z =
         (((l = {}).ALL = ":all"),
         (l.APPLICATION = ":application"),
         (l.VOICE = ":voice"),
         (l.SOUNDBOARD = ":soundboard"),
         l),
-    J =
+    X =
         (((o = {}).MANUAL = "manual"),
         (o.DISTRIBUTED = "distributed"),
         (o.SHOUTING = "shouting"),
@@ -120,13 +116,13 @@ var Q =
         (o.SPEAKING = "speaking"),
         (o.SOUNDBOARD = "soundboard"),
         o),
-    ee =
+    Q =
         (((d = {}).UNKNOWN = "unknown"),
         (d.BELOW_MINIMUM = "below_minimum"),
         (d.MEETS_MINIMUM = "meets_minimum"),
         (d.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         d),
-    et =
+    J =
         (((c = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (c.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (c.MODULE_NOT_LOADED = "module_not_loaded"),
@@ -134,8 +130,8 @@ var Q =
         (c.BRIDGE_SHUTDOWN = "bridge_shutdown"),
         (c.RECORDING_NOT_READY = "recording_not_ready"),
         c),
-    en = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
-function ei(e) {
+    ee = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
+function et(e) {
     if (e?.bounds != null) return e.bounds;
     let t = (function (e) {
         switch (e) {
@@ -149,16 +145,16 @@ function ei(e) {
     })(e?.preset);
     return null != t ? { aspectRatio: t } : null;
 }
-var er = (((_ = {}).TEXT = "text"), _);
-let ea = { text: "#D53FAE" },
-    es = 5,
-    el = 1,
-    eo = { x: 0.5, y: 0.5 };
-var ed = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
-let ec = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    eu = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
-var e_ = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
-    eE =
+var en = (((_ = {}).TEXT = "text"), _);
+let ei = { text: "#D53FAE" },
+    er = 5,
+    ea = 1,
+    es = { x: 0.5, y: 0.5 };
+var el = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
+let eo = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
+    ed = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
+var ec = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
+    eu =
         (((h = {}).UNCLASSIFIED = "unclassified"),
         (h.KILL = "kill"),
         (h.MULTIKILL = "multikill"),
