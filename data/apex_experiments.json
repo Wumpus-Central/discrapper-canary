@@ -5783,22 +5783,6 @@
     }
   },
   {
-    "name": "2026-08-gsh-subs-activity-bar",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-08-hide-gift-shop-upsell",
     "kind": "user",
     "defaultConfig": {
