@@ -1,26 +1,26 @@
-s.d(e, { A: () => u });
-var a = s(477900);
-s(582128);
-var o = s(503698),
-    i = s.n(o),
-    r = s(834730),
-    n = s(309326),
-    l = s(337322),
-    d = s(120932);
+a.d(e, { A: () => u });
+var s = a(477900);
+a(582128);
+var i = a(503698),
+    r = a.n(i);
+if (88245 != a.j) var l = a(834730);
+var n = a(309326),
+    o = a(337322),
+    d = a(120932);
 function u(t) {
     let { powerup: e } = t,
-        s = (0, l.A)(e);
-    return (0, a.jsx)("div", {
+        a = (0, o.A)(e);
+    return (0, s.jsx)("div", {
         className: d.I1,
-        children: s.map((t) => {
-            let { Icon: e, className: s } = (0, n.a)(t.perkIcon, !1);
-            return (0, a.jsxs)(
+        children: a.map((t) => {
+            let { Icon: e, className: a } = (0, n.a)(t.perkIcon, !1);
+            return (0, s.jsxs)(
                 "div",
                 {
                     className: d.Ab,
                     children: [
-                        (0, a.jsx)(e, { color: "currentColor", className: i()(d.kf, s) }),
-                        (0, a.jsx)(r.E, {
+                        (0, s.jsx)(e, { color: "currentColor", className: r()(d.kf, a) }),
+                        (0, s.jsx)(l.E, {
                             className: d.uL,
                             color: "text-default",
                             variant: "text-sm/medium",
