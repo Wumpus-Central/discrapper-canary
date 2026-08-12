@@ -4733,7 +4733,8 @@
     "kind": "user",
     "defaultConfig": {
       "enabled": false,
-      "showPresetName": false
+      "showPresetName": false,
+      "includeLightModeThemes": false
     },
     "variations": {
       "0": {
@@ -4742,11 +4743,13 @@
       },
       "1": {
         "enabled": true,
-        "showPresetName": true
+        "showPresetName": true,
+        "includeLightModeThemes": false
       },
       "2": {
         "enabled": true,
-        "showPresetName": false
+        "showPresetName": false,
+        "includeLightModeThemes": true
       }
     }
   },
