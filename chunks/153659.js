@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { L: () => l });
+n.d(t, { L: () => a });
 var i = n(477900);
 n(582128);
-var r = n(661531),
-    a = n(996682),
+var l = n(661531),
+    r = n(996682),
     s = n(27989);
-function l(e) {
-    let { size: t = "md", width: n, height: l, color: o = r.A.colors.ICON_STRONG, colorClass: d = "", ...c } = e,
+function a(e) {
+    let { size: t = "md", width: n, height: a, color: o = l.A.colors.ICON_STRONG, colorClass: d = "", ...c } = e,
         u = (0, s.J)(t),
-        _ = u?.width ?? n,
-        E = u?.height ?? l;
+        h = u?.width ?? n,
+        A = u?.height ?? a;
     return (0, i.jsxs)("svg", {
-        ...(0, a.A)(c),
+        ...(0, r.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: E,
+        width: h,
+        height: A,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

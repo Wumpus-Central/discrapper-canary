@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => C });
 var i = n(477900),
-    r = n(582128),
+    l = n(582128),
     a = n(435558),
     s = n.n(a),
-    l = n(17928),
+    r = n(17928),
     o = n(97808),
     d = n(778712),
     c = n(834730),
     u = n(7807),
-    _ = n(661531),
-    E = n(565645),
-    A = n(287809),
-    h = n(562153),
-    I = n(231236);
-function f(e) {
-    let { avatarURL: t, avatarLabel: n, text: r, leading: a } = e;
+    h = n(661531),
+    m = n(565645),
+    p = n(287809),
+    g = n(562153),
+    f = n(231236);
+function A(e) {
+    let { avatarURL: t, avatarLabel: n, text: l, leading: a } = e;
     return (0, i.jsxs)("div", {
-        className: I.AB,
+        className: f.AB,
         children: [
             (0, i.jsx)(o.eu, { "aria-label": n, size: d._3.SIZE_24, src: t }),
             (0, i.jsxs)(c.E, {
-                className: I.PW,
+                className: f.PW,
                 color: "text-overlay-light",
                 variant: "text-sm/normal",
-                children: [a, r],
+                children: [a, l],
             }),
         ],
     });
 }
-function p(e) {
-    let { user: t, guildId: n, channelId: r } = e,
-        a = (0, h.tx)(n, r, t);
-    return null == t ? null : (0, i.jsx)(f, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
+function x(e) {
+    let { user: t, guildId: n, channelId: l } = e,
+        a = (0, g.tx)(n, l, t);
+    return null == t ? null : (0, i.jsx)(A, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
 }
-function T(e) {
-    let { soundboard: t, user: n, guildId: r } = e;
+function v(e) {
+    let { soundboard: t, user: n, guildId: l } = e;
     if (null == n) return null;
     let a =
         null != t.emojiId || null != t.emojiName
-            ? (0, i.jsx)(E.A, {
+            ? (0, i.jsx)(m.A, {
                   emojiId: t.emojiId ?? null,
                   emojiName: t.emojiName ?? null,
                   animated: t.emojiAnimated ?? !1,
                   alt: t.name,
                   size: "reaction",
               })
-            : (0, i.jsx)(u.J, { size: "refresh_sm", color: _.A.colors.ICON_DEFAULT });
-    return (0, i.jsx)(f, { avatarURL: n.getAvatarURL(r, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
+            : (0, i.jsx)(u.J, { size: "refresh_sm", color: h.A.colors.ICON_DEFAULT });
+    return (0, i.jsx)(A, { avatarURL: n.getAvatarURL(l, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
 }
-let m = r.memo(function (e) {
-    let { speakingUserIds: t, activeSoundboards: n, userIds: r, guildId: a, channelId: o } = e,
-        d = (0, l.cf)([A.default], () => s().pick(A.default.getUsers(), r));
+let C = l.memo(function (e) {
+    let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
+        d = (0, r.cf)([p.default], () => s().pick(p.default.getUsers(), l));
     return (0, i.jsxs)("div", {
-        className: I.zr,
+        className: f.zr,
         children: [
             t.map((e) => {
                 let t = d[e];
-                return (0, i.jsx)(p, { user: t, guildId: a, channelId: o }, e);
+                return (0, i.jsx)(x, { user: t, guildId: a, channelId: o }, e);
             }),
             n.map((e) => {
                 let t = d[e.userId];
                 return (0, i.jsx)(
-                    T,
+                    v,
                     { soundboard: e, user: t, guildId: a, channelId: o },
                     `${e.soundboardId}:${e.userId}`,
                 );

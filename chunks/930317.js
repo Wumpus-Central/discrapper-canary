@@ -1,152 +1,151 @@
-"use strict";
-n.d(t, { d: () => u });
-var i = n(477900),
+n.d(t, { d: () => d });
+var l = n(477900),
     r = n(582128),
     a = n(66455),
-    s = n(607470),
-    l = n(609174),
-    o = n(367974),
-    d = n(77729),
-    c = n(336279);
-let u = r.forwardRef((e, t) => {
+    i = n(607470),
+    s = n(609174),
+    u = n(367974),
+    c = n(77729),
+    o = n(336279);
+let d = r.forwardRef((e, t) => {
     let { isStatic: n = !1, children: r, ...a } = e;
-    return n ? (0, i.jsx)(_, { ref: t, children: r }) : (0, i.jsx)(E, { ref: t, ...a, children: r });
+    return n ? (0, l.jsx)(f, { ref: t, children: r }) : (0, l.jsx)(p, { ref: t, ...a, children: r });
 });
-u.displayName = "ClipThumbnail";
-let _ = r.forwardRef((e, t) => {
+d.displayName = "ClipThumbnail";
+let f = r.forwardRef((e, t) => {
     let { children: n } = e,
-        a = (0, l.Y_)();
+        a = (0, s.Y_)();
     return (
         r.useImperativeHandle(t, () => ({ releaseSource() {}, seek() {} }), []),
-        (0, i.jsxs)("div", {
-            className: c.Q,
-            children: [(0, i.jsx)("img", { alt: "", src: a.thumbnail, className: c.f, loading: "lazy" }), n],
+        (0, l.jsxs)("div", {
+            className: o.Q,
+            children: [(0, l.jsx)("img", { alt: "", src: a.thumbnail, className: o.f, loading: "lazy" }), n],
         })
     );
 });
-_.displayName = "ClipStaticThumbnail";
-let E = r.forwardRef((e, t) => {
-    let { isPlaying: n = !1, scrubOnHover: u = !1, preload: _ = "metadata", onProgressChange: E, children: A } = e,
-        h = (0, l.Y_)(),
-        I = r.useRef(null),
-        f = (0, a.A)(h.editMetadata?.start ?? 0),
-        p = (0, r.useMemo)(
+f.displayName = "ClipStaticThumbnail";
+let p = r.forwardRef((e, t) => {
+    let { isPlaying: n = !1, scrubOnHover: d = !1, preload: f = "metadata", onProgressChange: p, children: m } = e,
+        v = (0, s.Y_)(),
+        h = r.useRef(null),
+        C = (0, a.A)(v.editMetadata?.start ?? 0),
+        x = (0, r.useMemo)(
             () =>
-                null == h || null == d.A.clips.getClipProtocolURLFromPath
+                null == v || null == c.A.clips.getClipProtocolURLFromPath
                     ? null
-                    : d.A.clips.getClipProtocolURLFromPath(h.filepath),
-            [h],
+                    : c.A.clips.getClipProtocolURLFromPath(v.filepath),
+            [v],
         ),
-        T = 0 === h.length,
-        m = r.useCallback(
+        y = 0 === v.length,
+        g = r.useCallback(
             (e) => {
-                let t = I.current;
+                let t = h.current;
                 if (null == t) return;
-                let n = h.editMetadata?.start ?? 0,
-                    i = h.editMetadata?.end ?? t.duration;
-                t.currentTime = Math.max(0, f.current + ((i - n) * e) / 100);
+                let n = v.editMetadata?.start ?? 0,
+                    l = v.editMetadata?.end ?? t.duration;
+                t.currentTime = Math.max(0, C.current + ((l - n) * e) / 100);
             },
-            [I, f, h],
+            [h, C, v],
         );
     r.useImperativeHandle(
         t,
         () => ({
             releaseSource() {
-                (0, o.A)(I.current);
+                (0, u.A)(h.current);
             },
             seek(e) {
-                m(e);
+                g(e);
             },
         }),
-        [m],
+        [g],
     );
-    let g = r.useCallback(
+    let k = r.useCallback(
             (e) => {
-                if (!u || null == I.current) return;
-                let t = I.current.getBoundingClientRect();
-                m(((e.clientX - t.left) / t.width) * 100);
+                if (!d || null == h.current) return;
+                let t = h.current.getBoundingClientRect();
+                g(((e.clientX - t.left) / t.width) * 100);
             },
-            [I, u, m],
+            [h, d, g],
         ),
-        S = r.useRef(null),
-        N = r.useRef(n);
+        b = r.useRef(null),
+        j = r.useRef(n);
     return (
         r.useEffect(() => {
-            if (((N.current = n), T)) return;
-            let e = I.current;
+            if (((j.current = n), y)) return;
+            let e = h.current;
             if (null != e)
                 if (n) {
                     if (!e.paused) return;
-                    e.currentTime = f.current;
+                    e.currentTime = C.current;
                     let t = e.play();
-                    (S.current = t), t.catch(() => {});
+                    (b.current = t), t.catch(() => {});
                 } else {
-                    let t = S.current;
-                    (S.current = null), null != t ? t.then(() => N.current || e.pause()).catch(() => {}) : e.pause();
+                    let t = b.current;
+                    (b.current = null), null != t ? t.then(() => j.current || e.pause()).catch(() => {}) : e.pause();
                 }
-        }, [n, I, T, f]),
+        }, [n, h, y, C]),
         r.useEffect(() => {
-            if (T || null == p) return;
-            let e = I.current;
+            if (y || null == x) return;
+            let e = h.current;
             if (null != e)
                 return () => {
-                    (0, o.A)(e);
+                    (0, u.A)(e);
                 };
-        }, [p, I, T]),
+        }, [x, h, y]),
         r.useEffect(() => {
-            let e = I?.current;
-            if (null == e || T || null == E) return;
+            let e = h?.current;
+            if (null == e || y || null == p) return;
             let t = null;
             function n() {
-                if (null == e || null == E) return;
+                if (null == e || null == p) return;
                 if (e.paused || e.ended) {
-                    (t = null), E(0);
+                    (t = null), p(0);
                     return;
                 }
-                let i = h.editMetadata?.start ?? 0,
-                    r = h.editMetadata?.end ?? e.duration,
-                    a = ((e.currentTime - i) / (r - i)) * 100;
-                E(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n));
+                let l = v.editMetadata?.start ?? 0,
+                    r = v.editMetadata?.end ?? e.duration,
+                    a = ((e.currentTime - l) / (r - l)) * 100;
+                p(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n));
             }
-            function i() {
+            function l() {
                 null == t && (t = requestAnimationFrame(n));
             }
             function r() {
-                null != E && null != t && (cancelAnimationFrame(t), (t = null), E(0));
+                null != p && null != t && (cancelAnimationFrame(t), (t = null), p(0));
             }
             return (
-                e.addEventListener("play", i),
+                e.addEventListener("play", l),
                 e.addEventListener("pause", r),
                 e.addEventListener("ended", r),
-                e.paused || i(),
+                e.paused || l(),
                 () => {
-                    null != t && (cancelAnimationFrame(t), E(0)),
-                        e.removeEventListener("play", i),
+                    null != t && (cancelAnimationFrame(t), p(0)),
+                        e.removeEventListener("play", l),
                         e.removeEventListener("pause", r),
                         e.removeEventListener("ended", r);
                 }
             );
-        }, [I, T, h.editMetadata, E]),
-        (0, i.jsxs)("div", {
-            className: c.Q,
-            onMouseMove: g,
+        }, [h, y, v.editMetadata, p]),
+        (0, l.jsxs)("div", {
+            className: o.Q,
+            onMouseMove: k,
             children: [
-                T
-                    ? (0, i.jsx)("img", { alt: "", src: h.thumbnail, className: c.f, loading: "lazy" })
-                    : null != p
-                      ? (0, i.jsx)(s.A, {
-                            preload: _,
-                            poster: h.thumbnail,
+                y
+                    ? (0, l.jsx)("img", { alt: "", src: v.thumbnail, className: o.f, loading: "lazy" })
+                    : null != x
+                      ? (0, l.jsx)(i.A, {
+                            preload: f,
+                            poster: v.thumbnail,
                             muted: !0,
-                            src: p,
+                            src: x,
                             loop: !0,
-                            className: c.f,
-                            ref: I,
+                            className: o.f,
+                            ref: h,
                         })
                       : null,
-                A,
+                m,
             ],
         })
     );
 });
-E.displayName = "ClipDynamicThumbnail";
+p.displayName = "ClipDynamicThumbnail";
