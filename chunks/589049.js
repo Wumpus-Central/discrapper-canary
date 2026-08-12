@@ -4,36 +4,37 @@ var n = l(477900),
     i = l(503698),
     s = l.n(i),
     r = l(834730),
-    c = l(343032),
-    o = l(713608),
+    o = l(343032),
+    c = l(713608),
     u = l(17928),
     d = l(661531),
     m = l(459192),
+    f = l(7807),
     h = l(565645),
-    f = l(287809),
-    x = l(562153),
-    v = l(372684),
+    x = l(287809),
+    v = l(562153),
     p = l(260612),
-    j = l(953727),
-    g = l(16590),
+    g = l(953727),
+    j = l(696016),
+    C = l(16590),
     b = l(375708),
-    C = l(427445);
-function y(e) {
+    y = l(427445);
+function N(e) {
     let { icon: t, title: l, body: a, position: i, compact: r } = e;
     return (0, n.jsx)(m.u, {
         title: l,
         body: a,
         position: "top",
         children: (0, n.jsx)("div", {
-            className: s()(C.H, { [C.c]: r }),
+            className: s()(y.H, { [y.c]: r }),
             style: { left: `${i}%` },
             children: (0, n.jsx)(t, { size: "refresh_sm", color: d.A.colors.ICON_DEFAULT }),
         }),
     });
 }
-let N = {
-    [v.Gy.LAUGHTER]: { icon: c.i, title: g.default.bTC23D },
-    [v.Gy.SHOUTING]: {
+let E = {
+    [j.Gy.LAUGHTER]: { icon: o.i, title: C.default.bTC23D },
+    [j.Gy.SHOUTING]: {
         icon: function (e) {
             let {
                     size: t = "md",
@@ -43,13 +44,13 @@ let N = {
                     colorClass: s = "",
                     ...r
                 } = e,
-                c = (0, p.J)(t),
-                o = c?.width ?? l,
-                u = c?.height ?? a,
+                o = (0, p.J)(t),
+                c = o?.width ?? l,
+                u = o?.height ?? a,
                 m = "string" == typeof i ? i : i.css;
             return (0, n.jsxs)("svg", {
-                ...(0, j.A)(r),
-                width: o,
+                ...(0, g.A)(r),
+                width: c,
                 height: u,
                 viewBox: "0 0 16 16",
                 fill: "none",
@@ -70,58 +71,60 @@ let N = {
                 ],
             });
         },
-        title: g.default["3gqpuo"],
+        title: C.default["3gqpuo"],
     },
 };
-function E(e, t, l, a) {
-    let { icon: i, title: s } = N[e];
+function k(e, t, l, a) {
+    let { icon: i, title: s } = E[e];
     return (0, n.jsx)(
-        y,
-        { icon: i, title: b.intl.string(s), body: b.intl.string(g.default["ry+jxm"]), position: l, compact: a },
+        N,
+        { icon: i, title: b.intl.string(s), body: b.intl.string(C.default["ry+jxm"]), position: l, compact: a },
         t,
     );
 }
-function k(e) {
+function w(e) {
     let { signal: t, guildId: l, position: a, compact: i } = e,
-        r = (0, u.bG)([f.default], () => f.default.getUser(t.userId)),
-        c = (0, x.tx)(l, null, r);
-    return (0, n.jsx)(m.u, {
-        title: t.name,
-        body: c,
-        position: "top",
-        children: (0, n.jsx)("div", {
-            className: s()(C.H, { [C.c]: i }),
-            style: { left: `${a}%` },
-            children: (0, n.jsx)(h.A, {
-                emojiId: t.emojiId ?? null,
-                emojiName: t.emojiName ?? null,
-                animated: t.emojiAnimated,
-                size: "reaction",
-            }),
-        }),
-    });
+        r = (0, u.bG)([x.default], () => x.default.getUser(t.userId)),
+        o = (0, v.tx)(l, null, r);
+    return null == t.emojiId && null == t.emojiName
+        ? (0, n.jsx)(N, { icon: f.J, title: t.name, body: o, position: a, compact: i })
+        : (0, n.jsx)(m.u, {
+              title: t.name,
+              body: o,
+              position: "top",
+              children: (0, n.jsx)("div", {
+                  className: s()(y.H, { [y.c]: i }),
+                  style: { left: `${a}%` },
+                  children: (0, n.jsx)(h.A, {
+                      emojiId: t.emojiId ?? null,
+                      emojiName: t.emojiName ?? null,
+                      animated: t.emojiAnimated,
+                      size: "reaction",
+                  }),
+              }),
+          });
 }
-let w = a.memo(function (e) {
+let A = a.memo(function (e) {
     let { clip: t, videoLength: l, compact: i = !1 } = e,
         s = t.audioEvents,
         r = null != s,
-        c = a.useMemo(
+        o = a.useMemo(
             () =>
                 r
                     ? t.timeline.filter((e) => {
                           var t;
-                          return (t = e.signal.type) !== v.Gy.LAUGHTER && t !== v.Gy.SHOUTING;
+                          return (t = e.signal.type) !== j.Gy.LAUGHTER && t !== j.Gy.SHOUTING;
                       })
                     : (function (e) {
                           let t = e
-                                  .filter((e) => e.signal.type === v.Gy.LAUGHTER && e.signal.confidence > 0.8)
+                                  .filter((e) => e.signal.type === j.Gy.LAUGHTER && e.signal.confidence > 0.8)
                                   .sort((e, t) => e.timestamp - t.timestamp),
                               l = new Set(),
                               n = 0;
                           for (let e = 1; e <= t.length; e++)
                               (e < t.length && t[e].timestamp - t[e - 1].timestamp < 2500) ||
                                   (e - n >= 2 && l.add(t[e - 1]), (n = e));
-                          return e.filter((e) => e.signal.type !== v.Gy.LAUGHTER || l.has(e));
+                          return e.filter((e) => e.signal.type !== j.Gy.LAUGHTER || l.has(e));
                       })(t.timeline),
             [t.timeline, r],
         );
@@ -134,42 +137,43 @@ let w = a.memo(function (e) {
         ...(r
             ? s.map(function (e, t) {
                   let l = u(e.peakMs);
-                  return null == l ? null : E(e.type, `audio-${e.peakMs}-${e.type}-${t}`, l, i);
+                  return null == l ? null : k(e.type, `audio-${e.peakMs}-${e.type}-${t}`, l, i);
               })
             : []),
-        ...c.map(function (e) {
+        ...o.map(function (e) {
             if (e.signal.hiddenFromTimeline) return null;
             let l = u(e.timestamp);
             if (null == l) return null;
             let a = `${e.timestamp}-${e.signal.type}`;
             switch (e.signal.type) {
-                case v.Gy.LAUGHTER:
-                    return E(v.Gy.LAUGHTER, a, l, i);
-                case v.Gy.SHOUTING:
-                    return E(v.Gy.SHOUTING, a, l, i);
-                case v.Gy.GAME_EVENT:
+                case j.Gy.LAUGHTER:
+                    return k(j.Gy.LAUGHTER, a, l, i);
+                case j.Gy.SHOUTING:
+                    return k(j.Gy.SHOUTING, a, l, i);
+                case j.Gy.GAME_EVENT:
                     return (0, n.jsx)(
-                        y,
+                        N,
                         {
-                            icon: o.q,
+                            icon: c.q,
                             title: e.signal.title ?? "",
-                            body: b.intl.string(g.default["347DBb"]),
+                            body: b.intl.string(C.default["347DBb"]),
                             position: l,
                             compact: i,
                         },
                         a,
                     );
-                case v.Gy.SOUNDBOARD:
-                    return (0, n.jsx)(k, { signal: e.signal, guildId: t.guildId, position: l, compact: i }, a);
+                case j.Gy.SOUNDBOARD:
+                    if (!e.signal.playing) return null;
+                    return (0, n.jsx)(w, { signal: e.signal, guildId: t.guildId, position: l, compact: i }, a);
                 default:
                     return null;
             }
         }),
     ];
 });
-var A = l(200853);
+var R = l(200853);
 let L = a.memo(function (e) {
-    let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: c = !1, compact: o = !1 } = e,
+    let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: o = !1, compact: c = !1 } = e,
         { timeNotches: u, subNotches: d } = a.useMemo(() => {
             let e;
             if (null == t || t <= 0) return { timeNotches: [], subNotches: [] };
@@ -206,18 +210,18 @@ let L = a.memo(function (e) {
             return { timeNotches: l, subNotches: a };
         }, [t]);
     return (0, n.jsx)("div", {
-        className: s()(A.ZX, { [A.dZ]: c, [A.oE]: o }),
+        className: s()(R.ZX, { [R.dZ]: o, [R.oE]: c }),
         onMouseDown: i,
         children: (0, n.jsxs)("div", {
-            className: A.QY,
+            className: R.QY,
             children: [
                 d.map((e, t) =>
                     (0, n.jsx)(
                         "div",
                         {
-                            className: A.MJ,
+                            className: R.MJ,
                             style: { left: `${e.position}%` },
-                            children: (0, n.jsx)("div", { className: A.p }),
+                            children: (0, n.jsx)("div", { className: R.p }),
                         },
                         `sub-${t}`,
                     ),
@@ -226,14 +230,14 @@ let L = a.memo(function (e) {
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: A.Cv,
+                            className: R.Cv,
                             style: { left: `${e.position}%` },
                             children: [
-                                (0, n.jsx)("div", { className: A.d9 }),
+                                (0, n.jsx)("div", { className: R.d9 }),
                                 (0, n.jsxs)(r.E, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    className: A.Mz,
+                                    className: R.Mz,
                                     children: [Math.round(e.time), "s"],
                                 }),
                             ],
@@ -241,7 +245,7 @@ let L = a.memo(function (e) {
                         t,
                     ),
                 ),
-                (0, n.jsx)(w, { clip: l, videoLength: t, compact: o }),
+                (0, n.jsx)(A, { clip: l, videoLength: t, compact: c }),
             ],
         }),
     });

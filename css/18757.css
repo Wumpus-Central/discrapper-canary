@@ -100,29 +100,25 @@
     user-select: none
 }
 
-.soundboardEmoji__2bf8a {
-    height: 24px;
-    width: 24px
-}
-
 .speakingIndicator__2bf8a {
-    align-items: center;
-    display: flex;
     flex-direction: row;
-    gap: var(--space-4);
     position: relative
 }
 
+.speakingIndicator__2bf8a,
 .speakingIndicatorText__2bf8a {
     align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.speakingIndicatorText__2bf8a {
     background-color: rgba(19, 19, 24, .8);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-border) var(--shadow-high);
     box-sizing: border-box;
-    display: flex;
     flex-shrink: 1;
-    gap: 8px;
     height: 24px;
     justify-content: center;
     max-width: 100%;
