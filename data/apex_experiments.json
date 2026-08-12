@@ -368,25 +368,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2025-10-friendship-anniversary-gifting",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2025-10-go-live-auto-quality",
     "kind": "user",
     "defaultConfig": null,

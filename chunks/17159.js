@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => g });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -10,7 +10,7 @@ var r = n(192308),
     d = n(219271),
     c = n(287809),
     u = n(354670),
-    _ = n(428262),
+    _ = n(158045),
     E = n(562465),
     A = n(277984),
     h = n(295405),
@@ -27,9 +27,8 @@ async function f() {
     }
 }
 var p = n(869968),
-    T = n(945960),
-    m = n(70730);
-class g extends s.A {
+    T = n(945960);
+class m extends s.A {
     _premiumPaymentModalCloseResolve = null;
     _premiumPaymentModalCloseReject = null;
     _initialize() {
@@ -39,7 +38,7 @@ class g extends s.A {
               a.h.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
               a.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
               a.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              a.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
+              a.h.subscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities));
     }
     _terminate() {
         __OVERLAY__
@@ -48,7 +47,7 @@ class g extends s.A {
               a.h.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
               a.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
               a.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              a.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
+              a.h.unsubscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities));
     }
     handleMessageLengthUpsell(e) {
         let { channel: t, content: a } = e;
@@ -69,9 +68,8 @@ class g extends s.A {
         let e = c.default.getCurrentUser();
         null != e && e.verified && !(0, _.TW)(e) && p.A.shouldFetchCheckoutRecovery() && (await f());
     };
-    _maybeFetchUserAffinities = () => {
-        let { enabled: e } = m.u.getConfig({ location: "PremiumManager" });
-        e && (0, d.u)();
+    _fetchUserAffinities = () => {
+        (0, d.u)();
     };
     _handlePremiumPaymentModalOpen = (e) => {
         (0, o.A)({
@@ -117,4 +115,4 @@ class g extends s.A {
         });
     }
 }
-let S = new g();
+let g = new m();

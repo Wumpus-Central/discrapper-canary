@@ -1,37 +1,35 @@
 "use strict";
-n.d(t, { Ay: () => V, ZD: () => S, hb: () => y }), n(321073);
-var i = n(735438),
+n.d(t, { Ay: () => F, ZD: () => g, hb: () => S }), n(321073);
+var i = n(435558),
     r = n.n(i),
-    s = n(17928),
-    a = n(228366),
-    o = n(736056),
-    l = n(710195),
-    u = n(427358),
+    a = n(17928),
+    s = n(228366),
+    l = n(736056),
+    o = n(710195),
+    d = n(427358),
     c = n(885386),
-    d = n(617617),
+    u = n(617617),
     _ = n(153488),
-    h = n(994500),
-    f = n(70730);
-function p(e) {
-    let { enabled: t } = f.u.getConfig(e);
-    return { enabled: t };
+    E = n(994500);
+function A(e) {
+    return { enabled: !0 };
 }
-var E = n(689739),
-    m = n(620750),
-    g = n(194537),
-    A = n(721441);
-function I(e, t, n) {
+var h = n(689739),
+    I = n(620750),
+    f = n(194537),
+    p = n(721441);
+function T(e, t, n) {
     let i = {};
     for (let r in e) {
-        let s = e[r];
-        t - s <= n && (i[r] = s);
+        let a = e[r];
+        t - a <= n && (i[r] = a);
     }
     return i;
 }
-var T = n(652215);
-let S = 5,
-    y = 6048e5;
-function C() {
+var m = n(652215);
+let g = 5,
+    S = 6048e5;
+function N() {
     return {
         messageGiftIntentLastShownMap: {},
         lastShownFriendsListGiftIntents: [],
@@ -39,16 +37,16 @@ function C() {
         lastKnownGiftIntentDismissedAtMs: 0,
     };
 }
-let N = C(),
-    v = [],
+let C = N(),
+    O = [],
     R = new Set(),
-    O = new Set(),
-    b = {},
-    D = null,
-    L = null,
-    w = null;
+    L = new Set(),
+    D = {},
+    y = null,
+    v = null,
+    b = null;
 function M() {
-    return w ?? Date.now();
+    return b ?? Date.now();
 }
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -69,58 +67,58 @@ function P() {
                     null != e && e > 0.7 && i.add(n), null != e && e > 0.5 && r.add(n);
                 }
             return { highestAffinity: i, highAffinity: r };
-        })(v, (e) => u.A.getUserAffinity(e)?.dmProbability, e);
-    (R = t), (O = n);
+        })(O, (e) => d.A.getUserAffinity(e)?.dmProbability, e);
+    (R = t), (L = n);
 }
-function x() {
-    if (null != D) return void G(D);
-    if ((k(), !_.A.hasConsented(T.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
-    for (let e of h.A.getFriendIDs()) {
-        let t = h.A.getSince(e),
-            n = u.A.getUserAffinity(e);
-        if (h.A.isFriend(e) && null != n && n.dmProbability > 0 && null != t) {
+function U() {
+    if (null != y) return void x(y);
+    if ((w(), !_.A.hasConsented(m.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
+    for (let e of E.A.getFriendIDs()) {
+        let t = E.A.getSince(e),
+            n = d.A.getUserAffinity(e);
+        if (E.A.isFriend(e) && null != n && n.dmProbability > 0 && null != t) {
             let n = new Date(t);
             (function (e) {
                 let t = new Date(),
                     n = t.getFullYear();
                 for (let i of [-1, 0, 1]) {
-                    let r = (0, E.default)(e, n + i);
-                    if (!(0, m.default)(r, e) && 7 >= Math.abs((0, g.A)(t, r))) return !0;
+                    let r = (0, h.default)(e, n + i);
+                    if (!(0, I.default)(r, e) && 7 >= Math.abs((0, f.A)(t, r))) return !0;
                 }
                 return !1;
-            })(n) && (v.push(e), (b[e] = { friendsSince: n }));
+            })(n) && (O.push(e), (D[e] = { friendsSince: n }));
         }
     }
-    if (0 === v.length) return;
-    let { enabled: e } = p({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
-    e ? (v.sort((e, t) => u.A.compareByDmProbability(e, t)), P()) : k();
+    if (0 === O.length) return;
+    let { enabled: e } = A({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
+    e ? (O.sort((e, t) => d.A.compareByDmProbability(e, t)), P()) : w();
 }
-function k() {
-    (v.length = 0), (R = new Set()), (O = new Set()), (b = {});
-}
-function U(e) {
-    null == N.messageGiftIntentLastShownMap[e] && (N.messageGiftIntentLastShownMap[e] = M());
+function w() {
+    (O.length = 0), (R = new Set()), (L = new Set()), (D = {});
 }
 function G(e) {
-    k();
-    let { enabled: t } = p({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
+    null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = M());
+}
+function x(e) {
+    w();
+    let { enabled: t } = A({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t || !c.oz.getSetting()) return;
-    D = e;
-    let n = h.A.getFriendIDs().filter((e) => !h.A.isIgnored(e)),
+    y = e;
+    let n = E.A.getFriendIDs().filter((e) => !E.A.isIgnored(e)),
         i = new Set(n),
-        s = null != L && L.length === e && L.every((e) => i.has(e)) ? L : r().sampleSize(n, e);
-    (L = s),
-        s.forEach((e) => {
-            let t = h.A.getSince(e);
+        a = null != v && v.length === e && v.every((e) => i.has(e)) ? v : r().sampleSize(n, e);
+    (v = a),
+        a.forEach((e) => {
+            let t = E.A.getSince(e);
             if (null != t) {
                 let n = new Date(t);
-                v.push(e), (b[e] = { friendsSince: n });
+                O.push(e), (D[e] = { friendsSince: n });
             }
         }),
-        v.sort((e, t) => u.A.compareByDmProbability(e, t)),
+        O.sort((e, t) => d.A.compareByDmProbability(e, t)),
         P(!0);
 }
-class F extends s.Ay.PersistedStore {
+class k extends a.Ay.PersistedStore {
     static displayName = "PremiumGiftingIntentStore";
     static persistKey = "PremiumGiftingIntentStore";
     static migrations = [
@@ -160,100 +158,100 @@ class F extends s.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        (N = C()),
+        (C = N()),
             null != e &&
-                ((N.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
-                (N.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
-                (N.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap }),
-                (N.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
-            this.syncWith([h.A, u.A, _.A, o.A, l.A, d.A], x),
-            (N.messageGiftIntentLastShownMap = I(N.messageGiftIntentLastShownMap, M(), 12096e5));
+                ((C.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
+                (C.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
+                (C.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap }),
+                (C.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
+            this.syncWith([E.A, d.A, _.A, l.A, o.A, u.A], U),
+            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, M(), 12096e5));
     }
     getState() {
-        return N;
+        return C;
     }
     getFriendAnniversaries() {
-        return v;
+        return O;
     }
     canShowFriendsTabBadge() {
-        return Array.from(O).some((e) => !N.lastShownFriendsListGiftIntents.includes(e));
+        return Array.from(L).some((e) => !C.lastShownFriendsListGiftIntents.includes(e));
     }
     getFriendAnniversaryYears(e) {
         var t;
-        let n = b[e];
-        return null == n ? 0 : ((t = n.friendsSince), Math.round((0, A.A)(new Date(), t) / 12));
+        let n = D[e];
+        return null == n ? 0 : ((t = n.friendsSince), Math.round((0, p.A)(new Date(), t) / 12));
     }
     isGiftIntentMessageInCooldown(e) {
-        return null != N.messageGiftIntentLastShownMap[e];
+        return null != C.messageGiftIntentLastShownMap[e];
     }
     getDevToolTotalFriendAnniversaries() {
-        return D;
+        return y;
     }
     getDevToolCurrentDate() {
-        return w;
+        return b;
     }
     getHighestAffinityFriendAnniversaries() {
         return Array.from(R);
     }
     getHighAffinityFriendAnniversaries() {
-        return Array.from(O);
+        return Array.from(L);
     }
     getMessageGiftIntentLastShownMap() {
-        return N.messageGiftIntentLastShownMap;
+        return C.messageGiftIntentLastShownMap;
     }
     getLastKnownGiftIntentDismissedAtMs() {
-        return N.lastKnownGiftIntentDismissedAtMs;
+        return C.lastKnownGiftIntentDismissedAtMs;
     }
 }
-let V = new F(a.h, {
+let F = new k(s.h, {
     CONNECTION_OPEN: function () {
-        k();
+        w();
     },
     LOGOUT: function () {
-        (N = C()), k();
+        (C = N()), w();
     },
     MESSAGE_GIFT_INTENT_SHOWN: function (e) {
         let { recipientUserId: t } = e;
-        U(t);
+        G(t);
     },
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: function () {
-        N.lastShownFriendsListGiftIntents = Array.from(v);
+        C.lastShownFriendsListGiftIntents = Array.from(O);
     },
     GIFT_INTENT_FLOW_PURCHASED_GIFT: function (e) {
         let { recipientUserId: t } = e;
-        U(t);
+        G(t);
     },
     GIFT_INTENT_DISMISSALS_FETCH_SUCCESS: function (e) {
         let { dismissals: t, settingsTimestampMs: n } = e,
-            i = { ...N.messageGiftIntentLastShownMap };
+            i = { ...C.messageGiftIntentLastShownMap };
         for (let { targetId: e, dismissedAtMs: n } of t) {
             let t = i[e];
             i[e] = null == t ? n : Math.max(t, n);
         }
-        (N.messageGiftIntentLastShownMap = I(i, M(), 1296e6)), (N.lastKnownGiftIntentDismissedAtMs = n);
+        (C.messageGiftIntentLastShownMap = T(i, M(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n);
     },
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
-        N.lastShownFriendsListGiftIntents = [];
+        C.lastShownFriendsListGiftIntents = [];
     },
     DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: function () {
-        N.messageGiftIntentLastShownMap = {};
+        C.messageGiftIntentLastShownMap = {};
     },
     DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: function (e) {
         let { total: t } = e;
         if (null == t) {
-            (D = null), (L = null), x();
+            (y = null), (v = null), U();
             return;
         }
-        G(t);
+        x(t);
     },
     DEV_TOOLS_RESAMPLE_FRIEND_ANNIVERSARIES: function () {
-        return null != D && ((L = null), G(D), !0);
+        return null != y && ((v = null), x(y), !0);
     },
     DEV_TOOLS_SET_CURRENT_DATE: function (e) {
         let { date: t } = e;
-        w = t;
+        b = t;
     },
     DEV_TOOLS_RESET_CURRENT_DATE: function () {
-        w = null;
+        b = null;
     },
 });
