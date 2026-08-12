@@ -613,7 +613,8 @@ let tW = (0, eQ.Fe)({
                 n.e("61298"),
                 n.e("45807"),
                 n.e("26572"),
-                n.e("39737"),
+                n.e("65640"),
+                n.e("87356"),
                 n.e("72712"),
                 n.e("85391"),
                 n.e("56356"),
@@ -2003,7 +2004,7 @@ function nf(e) {
             gradientColor: "pink",
             graphic: {
                 type: "image",
-                src: "https://cdn.discordapp.com/assets/content/89fae27b507d71982d8ba38286e78d3ca4b35e6c3e5e7a78263552a656f6f5a6.svg",
+                src: "https://cdn.discordapp.com/assets/content/912562ba9ec7f9f728ce5b336c9bed5f5195dcab1451d12b0e592b1a7389200c.svg",
             },
             actions: [
                 {
