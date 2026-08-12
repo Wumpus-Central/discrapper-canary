@@ -1368,7 +1368,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 591383, Version Hash: ed0c97f9980baa593b7f88ca2fb8b55c81bc87ec`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 591456, Version Hash: f993177237a45efc6c3083dce4e0306ffc13e533`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -3604,7 +3604,7 @@ let ry = (0, nX.Fe)({
                 n.e("75091"),
                 n.e("49362"),
                 n.e("94848"),
-                n.e("39524"),
+                n.e("5558"),
                 n.e("65253"),
                 n.e("25499"),
                 n.e("30477"),
@@ -4040,7 +4040,7 @@ let ry = (0, nX.Fe)({
                 n.e("7755"),
                 n.e("93720"),
                 n.e("54658"),
-                n.e("91337"),
+                n.e("63579"),
                 n.e("32026"),
                 n.e("69987"),
                 n.e("43184"),
@@ -18236,7 +18236,7 @@ let gq = "isHideDevBanner",
                     className: ta()(gz.Wz, gz.mr),
                     children: [
                         (0, O.jsx)(g$, { className: gz.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "591383" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "591456" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -27466,7 +27466,7 @@ class RF extends t8.A {
             (0, tB.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("39524"),
+                        n.e("5558"),
                         n.e("68255"),
                         n.e("69178"),
                         n.e("89588"),
@@ -38930,7 +38930,7 @@ let wo = (0, tV.Fe)({
             n.e("75091"),
             n.e("49362"),
             n.e("94848"),
-            n.e("39524"),
+            n.e("5558"),
             n.e("65253"),
             n.e("25499"),
             n.e("30477"),
@@ -39585,7 +39585,7 @@ let wo = (0, tV.Fe)({
             n.e("93720"),
             n.e("54658"),
             n.e("49409"),
-            n.e("91337"),
+            n.e("63579"),
             n.e("32026"),
             n.e("47214"),
             n.e("33049"),
