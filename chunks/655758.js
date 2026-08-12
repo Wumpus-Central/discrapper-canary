@@ -1762,7 +1762,7 @@ var ik = n(281445),
     iO = n(554146),
     iP = n(933832),
     iD = n(624479),
-    iU = n(780907),
+    iU = n(183208),
     iG = n(131607),
     iw = n(569926),
     iH = n(95035),
@@ -6683,7 +6683,8 @@ function cu(e) {
     function x() {
         let { autoJoin: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             n = null == m && a?.guild != null ? oa.DY(a.guild) : m;
-        (0, oi.g)({ guild: n, isMember: null != m, analyticsLocations: u }) === oi.W.PROCEED &&
+        (0, oi.g)({ guildId: a?.guild?.id ?? null, guild: n, isMember: null != m, analyticsLocations: u }) ===
+            oi.W.PROCEED &&
             r7.Ay.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: t,
                 context: i("Invite Button Embed", t),

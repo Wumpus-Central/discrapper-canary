@@ -1,7 +1,7 @@
 l.d(i, { default: () => W });
 var t = l(477900),
-    s = l(582128),
-    n = l(562708),
+    n = l(582128),
+    s = l(562708),
     a = l(189213),
     r = l(224640),
     d = l(289873),
@@ -39,15 +39,15 @@ var t = l(477900),
     q = l(78853);
 function w(e) {
     let { className: i } = e,
-        { analyticsLocations: l, sourceAnalyticsLocations: n } = (0, p.Ay)(g.A.PREMIUM_UPSELL_TOOLTIP);
+        { analyticsLocations: l, sourceAnalyticsLocations: s } = (0, p.Ay)(g.A.PREMIUM_UPSELL_TOOLTIP);
     return (
-        s.useEffect(() => {
+        n.useEffect(() => {
             L.default.track(U.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: V.e.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: U.liQ.NATIVE_INVITE_MODAL },
-                location_stack: n,
+                location_stack: s,
             });
-        }, [n]),
+        }, [s]),
         (0, t.jsxs)(D.D, {
             onClick: () =>
                 (0, S.A)({
@@ -69,9 +69,9 @@ function w(e) {
 }
 function G(e) {
     let { transitionState: i, inviteCode: l } = e,
-        { analyticsLocations: s } = (0, p.Ay)(g.A.INVITE_MODAL);
+        { analyticsLocations: n } = (0, p.Ay)(g.A.INVITE_MODAL);
     return (0, t.jsx)(p.f5, {
-        value: s,
+        value: n,
         children: (0, t.jsx)(a.Modal, {
             "aria-label": z.intl.string(z.t.u9zxnX),
             title: z.intl.string(z.t.u9zxnX),
@@ -91,11 +91,11 @@ function W(e) {
     (0, _.bG)([j.default], () => j.default.getCurrentUser()?.premiumType);
     let k = (0, _.bG)([j.default], () => j.default.getCurrentUser()),
         { invite: D, error: M, submitting: O, invite_instance_id: S } = (0, _.cf)([R.A], () => R.A.getProps());
-    s.useEffect(() => {
+    n.useEffect(() => {
         null != D && null != D.guild && (0, f.dR)(D.approximate_member_count ?? 0, D.code, D.guild.id);
     }, [D, D?.approximate_member_count, D?.code, D?.guild?.id]);
     let V = (0, f.uE)();
-    s.useEffect(() => {
+    n.useEffect(() => {
         !__OVERLAY__ &&
             P.isPlatformEmbedded &&
             (document.hasFocus() || ((0, P.isWindows)() ? C.Ay.minimize() : C.Ay.restore(), C.Ay.focus()));
@@ -142,7 +142,7 @@ function W(e) {
     else if (null != H) (i = H.name), (l = y.Ay.getGuildSplashURL({ id: H.id, splash: H.splash }));
     else if (((null == (i = K.name) || "" === i) && null != Y && (i = Y.username), null == i))
         throw Error("no name for group DM invite");
-    let J = (0, h.Sn)();
+    let J = null != H && (0, h.Sn)();
     return (
         (a = B
             ? z.intl.string(z.t["e/6Ogt"])
@@ -159,7 +159,7 @@ function W(e) {
                 onClose: () => (Z(), Promise.resolve()),
                 trackingProps: {
                     impression: {
-                        impressionName: n.ImpressionNames.INVITE_ACCEPT,
+                        impressionName: s.ImpressionNames.INVITE_ACCEPT,
                         impressionProperties: { guild_id: H?.id, invite_code: D.code },
                     },
                 },
