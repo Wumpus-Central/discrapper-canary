@@ -494,9 +494,8 @@
 
 .scroller_ef3116 {
     flex: 0 1 auto;
-    padding: 12px 0 0;
-    padding-bottom: calc(var(--space-xs, 8px) + 16px);
-    padding-top: 0;
+    padding-bottom: calc(var(--space-xs, 8px) + 16px) !important;
+    padding: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
