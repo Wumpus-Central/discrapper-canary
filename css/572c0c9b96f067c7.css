@@ -74,7 +74,8 @@
 
 .headerContainer__1ef77 {
     gap: 8px;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: var(--space-8)
 }
 
 .headerContainer__1ef77,

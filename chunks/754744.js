@@ -73,8 +73,8 @@ var y = n(435558),
     H = n(155718),
     w = n(47167),
     W = n(411153),
-    K = n(95701),
-    Y = n(889227),
+    Y = n(95701),
+    K = n(889227),
     z = n(734057),
     J = n(994500),
     Q = n(652215);
@@ -104,7 +104,7 @@ function ee(e, t) {
     let n = z.A.getChannel(e);
     if (null != n) return n;
     let l = t.threads?.find((t) => t.id === e);
-    return null != l ? (0, K.UE)(l, l.guild_id) : null;
+    return null != l ? (0, Y.UE)(l, l.guild_id) : null;
 }
 function et(e, t) {
     let n = ee(e, t);
@@ -167,7 +167,7 @@ function el(e, t) {
                                     t = new Map();
                                 return (
                                     e.forEach((e) => {
-                                        t.set(e.id, new Y.A(e));
+                                        t.set(e.id, new K.A(e));
                                     }),
                                     t
                                 );
@@ -253,7 +253,7 @@ function el(e, t) {
                                             (u.targetType === Q.GaG.CHANNEL ||
                                                 u.targetType === Q.GaG.CHANNEL_OVERWRITE) &&
                                                 null != s &&
-                                                (0, K.tr)(s.oldValue) &&
+                                                (0, Y.tr)(s.oldValue) &&
                                                 (E = `#${E}`),
                                             null != E && (n[u.targetType] = { ...n[u.targetType], [u.targetId]: E })),
                                             (l = 0),
@@ -717,7 +717,7 @@ var ej = n(863610),
     eH = n(177068),
     ew = n(736130),
     eW = (((r = {}).MESSAGES = "messages"), (r.LINKS = "links"), (r.MEDIA = "media"), (r.ALL_COUNTS = "all_counts"), r);
-function eK(e, t, n) {
+function eY(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = JSON.stringify(l);
@@ -725,13 +725,13 @@ function eK(e, t, n) {
         ? `guild_${t}_search_tab_${n}_for_${e}_with_additonal_${a}`
         : `guild_${t}_search_${n}_for_${e}_with_additonal_${a}`;
 }
-let eY = { searchFetcher: null, searchTabFetcher: null, result: null, messageCount: -1, lastMessage: null },
+let eK = { searchFetcher: null, searchTabFetcher: null, result: null, messageCount: -1, lastMessage: null },
     ez = (0, ey.h)(() => new Map());
 function eJ(e, t) {
     (0, eB.r)(() => {
         ez.setState((n) => {
             let l = n.get(e);
-            return null == l ? n.set(e, { ...eY, ...t }) : n.set(e, { ...l, ...t }), n;
+            return null == l ? n.set(e, { ...eK, ...t }) : n.set(e, { ...l, ...t }), n;
         });
     });
 }
@@ -769,7 +769,7 @@ function eq(e, t, n) {
     }
 }
 function eZ(e, t, n, l) {
-    let r = i.useMemo(() => eK(e, t, n, l, !0), [e, t, n, l]),
+    let r = i.useMemo(() => eY(e, t, n, l, !0), [e, t, n, l]),
         a = eQ(r),
         s = (0, L.Ay)(r);
     return { key: r, previousKey: s, state: a };
@@ -1123,8 +1123,8 @@ let tm = i.memo(function (e) {
                       className: tO.N1,
                       children: [
                           (0, a.jsx)(eE.E, {
-                              variant: "eyebrow",
-                              color: "text-default",
+                              variant: "text-md/medium",
+                              color: "text-strong",
                               children: j.intl.string(j.t.ZCq2nC),
                           }),
                           (0, a.jsxs)(f.D, {
@@ -1528,7 +1528,7 @@ function tW(e) {
         [d, A] = i.useState(c?.details.additionalSearchQuery ?? {}),
         g = (function (e, t, n, l) {
             let { addtionalQuery: r, shouldDispatch: a = !1 } = l,
-                s = i.useMemo(() => eK(e, t, n, r), [e, t, n, r]),
+                s = i.useMemo(() => eY(e, t, n, r), [e, t, n, r]),
                 E = eQ(s),
                 u = (0, L.Ay)(s),
                 [o, c] = i.useState({});
@@ -1579,7 +1579,7 @@ function tW(e) {
                     }
                     return () => {};
                 }, [e, t, E, s, n, r, u, a]),
-                E ?? eY
+                E ?? eK
             );
         })(t, n, "messages", { addtionalQuery: d, shouldDispatch: !0 }),
         T = d?.offset ?? 0,
@@ -1715,8 +1715,8 @@ function tW(e) {
               ],
           });
 }
-var tK = n(649852),
-    tY = n.n(tK),
+var tY = n(649852),
+    tK = n.n(tY),
     tz = n(270003),
     tJ = n(892547),
     tQ = n(640708),
@@ -1870,7 +1870,7 @@ function t1(e) {
         g = i.useMemo(() => (null != o ? to.A.generateGuildPermissionSpec(o) : null), [o]),
         [T, I] = i.useState(""),
         [N, G] = i.useState(""),
-        S = i.useMemo(() => tY()(G, 300), []),
+        S = i.useMemo(() => tK()(G, 300), []),
         m = i.useCallback(
             (e) => {
                 I(e), S(e);
