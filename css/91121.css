@@ -441,7 +441,7 @@
 
 .streamTooltipContent__38ccf {
     align-items: center;
-    background-color: var(--background-base-low);
+    background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
     box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
     box-sizing: border-box;
