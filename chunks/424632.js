@@ -27,8 +27,8 @@ async function o(e) {
         {
             sourceX: m,
             sourceY: A,
-            sourceWidth: d,
-            sourceHeight: w,
+            sourceWidth: E,
+            sourceHeight: d,
         } = (0, n.R7)({
             image: a,
             cropDimensions: o,
@@ -37,7 +37,7 @@ async function o(e) {
             imageRotation: c,
             flipHorizontal: u,
         }),
-        E = await t.arrayBuffer(),
+        w = await t.arrayBuffer(),
         _ = new Worker(new URL("/assets/" + r.u("24962"), r.b)),
         p = new Promise((e, r) => {
             _.onmessage = (a) => {
@@ -64,22 +64,22 @@ async function o(e) {
             };
         }),
         b = "image/webp" === t.type ? "webp" : "gif",
-        y = Math.max(0, Math.round(m)),
-        g = Math.max(0, Math.round(A)),
-        M = Math.round(d),
-        H = Math.round(w),
-        D = a.naturalWidth - y,
-        I = a.naturalHeight - g,
-        P = Math.min(M, D),
-        L = Math.min(H, I);
+        g = Math.max(0, Math.round(m)),
+        y = Math.max(0, Math.round(A)),
+        M = Math.round(E),
+        H = Math.round(d),
+        I = a.naturalWidth - g,
+        L = a.naturalHeight - y,
+        D = Math.min(M, I),
+        P = Math.min(H, L);
     return (
         _.postMessage({
             type: i.lA.CROP_ANIMATED_IMAGE_START,
-            data: new Uint8Array(E),
-            x: y,
-            y: g,
-            width: P,
-            height: L,
+            data: new Uint8Array(w),
+            x: g,
+            y: y,
+            width: D,
+            height: P,
             imageRotation: 0 | c,
             flipHorizontal: u,
             resizeWidth: s,
@@ -118,6 +118,7 @@ function u(e, t, r) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
         case i.HL.GUILD_ICON:
+        case i.HL.PERSONAL_WIDGET_FIELD:
             return { width: t, height: r };
         case i.HL.BANNER:
             let a = i.pj;
@@ -133,6 +134,8 @@ function u(e, t, r) {
             return c(i.Uw, l, t, r);
         case i.HL.HOME_HEADER:
             return c(i.ny, i.eJ, t, r);
+        case i.HL.PERSONAL_WIDGET_COVER:
+            return c(i.ge, i.sW, t, r);
     }
 }
 function s(e, t, r) {
@@ -150,6 +153,7 @@ function f(e, t, r, a) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
         case i.HL.GUILD_ICON:
+        case i.HL.PERSONAL_WIDGET_FIELD:
             let n = Math.min(t, r);
             return { width: n, height: n };
         case i.HL.BANNER:
@@ -167,5 +171,8 @@ function f(e, t, r, a) {
         case i.HL.HOME_HEADER:
             let u = Math.min(t, i.Ip);
             return { width: u, height: u * (1 / i.ny) };
+        case i.HL.PERSONAL_WIDGET_COVER:
+            let s = Math.min(t, i.Ip);
+            return { width: s, height: Math.min(s * (1 / i.ge), a) };
     }
 }

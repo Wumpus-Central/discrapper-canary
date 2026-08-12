@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Y: () => a, f: () => s });
+n.d(t, { Y: () => s, f: () => a });
 var i,
     r = n(339984),
-    s =
+    a =
         (((i = {}).USER_DEFAULT_PROFILE_AVATAR = "USER_DEFAULT_PROFILE_AVATAR"),
         (i.USER_DEFAULT_PROFILE_BANNER = "USER_DEFAULT_PROFILE_BANNER"),
         (i.USER_GUILD_PROFILE_AVATAR = "USER_GUILD_PROFILE_AVATAR"),
@@ -14,7 +14,7 @@ var i,
         (i.EMOJI = "EMOJI"),
         (i.STICKER = "STICKER"),
         i);
-function a(e, t) {
+function s(e, t) {
     switch (e) {
         case r.HL.AVATAR:
             return null != t ? "USER_GUILD_PROFILE_AVATAR" : "USER_DEFAULT_PROFILE_AVATAR";
@@ -26,6 +26,8 @@ function a(e, t) {
         case r.HL.HOME_HEADER:
         case r.HL.AVATAR_DECORATION:
         case r.HL.GUILD_ICON:
+        case r.HL.PERSONAL_WIDGET_COVER:
+        case r.HL.PERSONAL_WIDGET_FIELD:
             return null;
     }
 }
