@@ -4,4 +4,5 @@ _.exports = {
     r9: "disabled_b29b5a",
     tB: "backdrop_b29b5a",
     zs: "plantImage_b29b5a",
+    eA: "wiggle_b29b5a",
 };
