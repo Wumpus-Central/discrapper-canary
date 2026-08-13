@@ -1,0 +1,18 @@
+.sidebarScrollable__53543 {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: var(--custom-layout-sidebar-width)
+}
+
+.sidebarScrollable__53543+.content__53543 {
+    margin-inline-start: var(--custom-layout-sidebar-width);
+    max-width: 468px
+}
+
+.scroller__53543 {
+    background-color: var(--background-base-low);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto
+}
