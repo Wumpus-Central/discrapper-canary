@@ -822,7 +822,9 @@
 }
 
 .betaTag_bbb935 {
-    display: inline-block
+    display: inline-block;
+    margin-inline-start: 8px;
+    vertical-align: middle
 }
 
 .twoColumnFormSection_bbb935 {
