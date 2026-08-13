@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: O,
-            analyticsObject: R,
+            analyticsLocations: R,
+            analyticsObject: O,
             analyticsLocation: L,
             analyticsSourceLocation: D,
             confirmationFooter: y,
@@ -51,8 +51,8 @@ function S(e) {
         } = e,
         $ = r()("payment-modal"),
         z = (0, f.mH)(U),
-        q = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
-        Z = q?.rewardSkuIds[0] ?? null,
+        Z = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
+        q = Z?.rewardSkuIds[0] ?? null,
         X = !1;
     function Q() {
         X ||
@@ -135,7 +135,7 @@ function S(e) {
         n.e("18315"),
         n.e("17776"),
         n.e("78969"),
-        n.e("77770"),
+        n.e("70201"),
         n.e("61275"),
         n.e("49557"),
         n.e("30072"),
@@ -206,6 +206,7 @@ function S(e) {
         n.e("62931"),
         n.e("45959"),
         n.e("58529"),
+        n.e("83488"),
         n.e("81987"),
         n.e("58038"),
         n.e("71202"),
@@ -271,6 +272,7 @@ function S(e) {
         n.e("6723"),
         n.e("9729"),
         n.e("74016"),
+        n.e("36926"),
         n.e("21856"),
         n.e("55726"),
         n.e("74907"),
@@ -281,7 +283,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: z ?? null, initialPaymentSourceId: Y },
                 forwardedPaymentModalProps: {
-                    analyticsObject: R,
+                    analyticsObject: O,
                     initialPlanId: t,
                     startingStepOverride: K,
                     analyticsLocation: L,
@@ -308,14 +310,14 @@ function S(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != Z && q.endDate >= new Date())
+                                    e && null != q && Z.endDate >= new Date())
                                 ) {
-                                    await (0, u.RE)(Z);
-                                    let e = _.A.getProduct(Z);
+                                    await (0, u.RE)(q);
+                                    let e = _.A.getProduct(q);
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: O ?? [],
+                                            analyticsLocations: R ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -323,7 +325,7 @@ function S(e) {
                             }
                         })(e, ee),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: D, analyticsLocations: O },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: D, analyticsLocations: R },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

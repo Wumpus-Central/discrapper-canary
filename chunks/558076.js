@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C, i: () => c });
+n.d(t, { A: () => O, i: () => c });
 var i = n(17928),
     r = n(228366),
     a = n(280450),
@@ -17,18 +17,27 @@ let d = new Map(),
     f = {},
     p = new Map(),
     T = !1,
-    m = {};
-function g() {
+    m = !1,
+    g = !1,
+    S = {};
+function N() {
     let e = l.Ay.getVoiceChannelId();
     null != e && (p.delete(e), (f[e] = f[e] ?? !0));
 }
-function S(e) {
+function C(e) {
     let { roomId: t } = e;
-    delete m[t];
+    delete S[t];
 }
-class N extends i.Ay.Store {
-    initialize() {
-        this.waitFor(a.default, s.A, l.Ay), this.syncWith([l.Ay], g);
+class R extends i.Ay.PersistedStore {
+    static displayName = "GuildRoomStore";
+    static persistKey = "GuildRoomStore";
+    initialize(e) {
+        this.waitFor(a.default, s.A, l.Ay),
+            this.syncWith([l.Ay], N),
+            (T = (m = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1));
+    }
+    getState() {
+        return { videoOverlayVisibility: T, rememberVideoOverlayVisibility: m };
     }
     getRoom(e) {
         return E[e] ?? c;
@@ -49,13 +58,19 @@ class N extends i.Ay.Store {
         return f[e] ?? !0;
     }
     getPendingNote(e) {
-        return m[e] ?? null;
+        return S[e] ?? null;
     }
     getNotes(e) {
         return this.getRoomObjects(e).get(o.N.NOTE) ?? u;
     }
+    getVideoOverlayVisibility() {
+        return T;
+    }
+    getRememberVideoOverlayVisibility() {
+        return m;
+    }
 }
-let C = new N(r.h, {
+let O = new R(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, objects: r, ...a } = t;
@@ -74,8 +89,8 @@ let C = new N(r.h, {
         let i = new Map(A[n]);
         i.delete(t),
             (A[n] = i),
-            T && t === a.default.getId() && ((f[n] = !0), (T = !1)),
-            t === a.default.getId() && delete m[n];
+            g && t === a.default.getId() && ((f[n] = !0), (g = !1)),
+            t === a.default.getId() && (delete S[n], m || (T = !1));
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
@@ -111,7 +126,7 @@ let C = new N(r.h, {
     },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t, clearLayout: n } = e;
-        (f[t] = !f[t]), n && (T = !0);
+        (f[t] = !f[t]), n && (g = !0);
     },
     GUILD_ROOM_LOCAL_UPDATE: function (e) {
         let { roomId: t, background: n, position: i, statusId: r, statusText: s } = e;
@@ -133,14 +148,22 @@ let C = new N(r.h, {
     },
     GUILD_ROOM_PENDING_NOTE_START: function (e) {
         let { roomId: t } = e;
-        m[t] = { position: null };
+        S[t] = { position: null };
     },
     GUILD_ROOM_PENDING_NOTE_PLACE: function (e) {
         let { roomId: t, position: n } = e,
-            i = m[t];
+            i = S[t];
         if (null == i) return !1;
-        m[t] = { ...i, position: n };
+        S[t] = { ...i, position: n };
     },
-    GUILD_ROOM_PENDING_NOTE_DELETE: S,
-    GUILD_ROOM_NOTE_CREATE_COMPLETE: S,
+    GUILD_ROOM_PENDING_NOTE_DELETE: C,
+    GUILD_ROOM_NOTE_CREATE_COMPLETE: C,
+    GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function (e) {
+        let { value: t } = e;
+        T = t;
+    },
+    GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function (e) {
+        let { rememberVideoOverlayVisibility: t } = e;
+        m = t;
+    },
 });

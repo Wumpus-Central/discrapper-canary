@@ -286,6 +286,55 @@
     text-decoration: underline
 }
 
+.pricing__36f5b {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.priceRow__36f5b {
+    align-items: baseline;
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.priceRow__36f5b>:last-child {
+    flex-shrink: 0
+}
+
+.container_a87199 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.quantityRow_a87199 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.quantityCopy_a87199 {
+    flex: 1;
+    min-width: 0
+}
+
+.stepper_a87199 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-6)
+}
+
+.quantityValue_a87199 {
+    display: flex;
+    justify-content: center;
+    min-width: var(--space-32)
+}
+
 .planOption_b13085 {
     align-items: center;
     color: var(--interactive-text-default);
@@ -296,10 +345,6 @@
 
 .planOneTimeCost_b13085 {
     margin-top: 8px
-}
-
-.planOptionQuantity_b13085 {
-    display: flex
 }
 
 .selectionBox_b13085 {
@@ -532,6 +577,12 @@
 
 .compactSelectGiftTitle_d947e6 {
     margin-top: 16px
+}
+
+.bulkGiftPlanSelection_d947e6 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
 }
 
 .container__65536 {

@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(515718),
     N = n(851023),
     C = n(215497),
-    O = n(375708),
-    R = n(16590),
+    R = n(375708),
+    O = n(16590),
     L = n(468360);
 let D = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function y(e) {
@@ -47,12 +47,12 @@ function y(e) {
                             className: L.tags,
                             children: [
                                 null != t && "" !== t
-                                    ? (0, i.jsx)("span", { className: L.altTag, children: O.intl.string(O.t.QEW81z) })
+                                    ? (0, i.jsx)("span", { className: L.altTag, children: R.intl.string(R.t.QEW81z) })
                                     : null,
                                 o && n
                                     ? (0, i.jsx)("span", {
                                           className: L.altTag,
-                                          children: O.intl.string(O.t["F+x38C"]),
+                                          children: R.intl.string(R.t["F+x38C"]),
                                       })
                                     : null,
                             ],
@@ -111,11 +111,11 @@ function v(e) {
                     shouldHideMediaOptions: !0,
                 });
         }, [c]),
-        f = t?.name != null ? t.name : O.intl.string(O.t.lduvqL),
+        f = t?.name != null ? t.name : R.intl.string(R.t.lduvqL),
         p =
             null != n && "" !== n
-                ? O.intl.formatToPlainString(O.t["8TRAzR"], { filename: f, alt: n })
-                : O.intl.formatToPlainString(O.t.lXoOEZ, { filename: f });
+                ? R.intl.formatToPlainString(R.t["8TRAzR"], { filename: f, alt: n })
+                : R.intl.formatToPlainString(R.t.lXoOEZ, { filename: f });
     return (0, i.jsx)("div", {
         onMouseEnter: d,
         className: s()(L.mediaContainer, { [L.imageSmall]: A }),
@@ -217,7 +217,7 @@ function M(e) {
                 children: (0, i.jsx)("div", {
                     className: L.tags,
                     children: t.spoiler
-                        ? (0, i.jsx)("span", { className: L.altTag, children: O.intl.string(O.t["F+x38C"]) })
+                        ? (0, i.jsx)("span", { className: L.altTag, children: R.intl.string(R.t["F+x38C"]) })
                         : null,
                 }),
             });
@@ -249,12 +249,13 @@ function P(e) {
                       n.e("47899"),
                       n.e("94373"),
                       n.e("57860"),
-                      n.e("21035"),
+                      n.e("52123"),
                       n.e("21398"),
                       n.e("81277"),
                       n.e("75842"),
                       n.e("83952"),
                       n.e("58337"),
+                      n.e("36926"),
                       n.e("20287"),
                       n.e("3930"),
                       n.e("3663"),
@@ -268,7 +269,6 @@ function P(e) {
                       n.e("38090"),
                       n.e("1962"),
                       n.e("1922"),
-                      n.e("36926"),
                       n.e("37715"),
                       n.e("74049"),
                       n.e("80559"),
@@ -303,7 +303,7 @@ function P(e) {
                 T
                     ? (0, i.jsx)(N.A, {
                           className: s()({ [L.action]: y }),
-                          tooltip: D ? O.intl.string(O.t.MYgdY2) : O.intl.string(O.t.cuurzA),
+                          tooltip: D ? R.intl.string(R.t.MYgdY2) : R.intl.string(R.t.cuurzA),
                           onClick: () => h.A.update(t, o.id, a, { spoiler: !o.spoiler }),
                           children: o.spoiler
                               ? (0, i.jsx)(c.G, {
@@ -321,7 +321,7 @@ function P(e) {
                 T
                     ? (0, i.jsx)(N.A, {
                           className: s()({ [L.action]: y }),
-                          tooltip: D ? O.intl.string(R.default.V8YlF7) : O.intl.string(O.t.Y8ujqr),
+                          tooltip: D ? R.intl.string(O.default.V8YlF7) : R.intl.string(R.t.Y8ujqr),
                           onClick: P,
                           children: (0, i.jsx)(_.R, {
                               size: "xs",
@@ -332,7 +332,7 @@ function P(e) {
                     : null,
                 (0, i.jsx)(N.A, {
                     className: s()({ [L.action]: y }),
-                    tooltip: D ? O.intl.string(O.t.MskAXa) : O.intl.string(O.t.vN7REz),
+                    tooltip: D ? R.intl.string(R.t.MskAXa) : R.intl.string(R.t.vN7REz),
                     onClick: b,
                     dangerous: !0,
                     children: (0, i.jsx)(E.u, {

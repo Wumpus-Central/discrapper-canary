@@ -70,7 +70,7 @@ let T = (0, c.Fe)({
             n.e("18315"),
             n.e("17776"),
             n.e("78969"),
-            n.e("77770"),
+            n.e("70201"),
             n.e("61275"),
             n.e("49557"),
             n.e("30072"),
@@ -174,7 +174,7 @@ let T = (0, c.Fe)({
             n.e("65420"),
             n.e("3056"),
             n.e("62329"),
-            n.e("91121"),
+            n.e("12822"),
             n.e("74725"),
             n.e("78015"),
             n.e("22570"),
@@ -233,6 +233,7 @@ let T = (0, c.Fe)({
             n.e("62931"),
             n.e("45959"),
             n.e("58529"),
+            n.e("83488"),
             n.e("81987"),
             n.e("58038"),
             n.e("71202"),
@@ -419,9 +420,9 @@ function m(e) {
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
-            dialogClassName: O,
+            dialogClassName: R,
         } = e,
-        { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
         [L, D] = r.useState(!1),
         [y, v] = [
             (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
@@ -480,7 +481,7 @@ function m(e) {
         ),
         k = (0, A.Sc)();
     return (0, i.jsx)(d.f5, {
-        value: R,
+        value: O,
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
@@ -491,7 +492,7 @@ function m(e) {
             onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(T, {
-                    dialogClassName: O,
+                    dialogClassName: R,
                     isScheduledMessagesEnabled: k,
                     tab: y,
                     setTab: v,

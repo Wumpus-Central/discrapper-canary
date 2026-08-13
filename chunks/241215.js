@@ -1,101 +1,119 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => _ });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
     s = n(939249),
     r = n(367513),
-    o = n(313961),
-    c = n(267102),
-    d = n(699707),
-    u = n(461782),
-    h = n(734057),
-    p = n(309010),
-    m = n(625494),
-    A = n(920639),
-    f = n(889426),
-    x = n(652215),
-    g = n(804362);
-let C = function (e) {
-    let { channelId: t, popoutType: n, width: C, height: y } = e,
-        j = (0, c.Us)(),
-        v = (0, a.bG)([o.A], () => o.A.getSelectedParticipant(t)),
-        E = (0, a.bG)([h.A], () => h.A.getChannel(t)),
-        N = (0, a.bG)([p.Ay], () => null != E && p.Ay.getVoiceChannelId() === E.id),
+    o = n(401843),
+    c = n(198052),
+    d = n(643501),
+    u = n(652896),
+    h = n(279250),
+    p = n(267102),
+    m = n(874739),
+    f = n(616356),
+    A = n(734057),
+    x = n(71393),
+    g = n(576705),
+    C = n(309010),
+    y = n(977997),
+    j = n(625494),
+    I = n(446243),
+    v = n(889426),
+    E = n(652215),
+    N = n(806931),
+    b = n(804362);
+let _ = function (e) {
+    let { channelId: t, popoutType: n, width: _, height: T, idle: R, onClose: S } = e,
+        L = (0, p.Us)(),
+        O = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
+        P = (0, a.bG)([A.A], () => A.A.getChannel(t)),
+        w = (0, a.bG)([x.A], () => x.A.getGuild(P?.getGuildId())),
+        M = (0, a.bG)([C.Ay], () => null != P && C.Ay.getVoiceChannelId() === P.id),
         {
-            participants: I,
-            layout: b,
-            participantsOpen: T,
-        } = (0, a.cf)([o.A], () => {
-            let e = null != E ? o.A.getLayout(E.id, j) : x.DUB.NORMAL;
+            participants: D,
+            filteredParticipants: U,
+            participantsVersion: V,
+            mode: k,
+            layout: G,
+            participantsOpen: B,
+        } = (0, a.cf)([c.A], () => {
+            let e = null != P ? c.A.getLayout(P.id, L) : E.DUB.NORMAL;
             return {
-                participants: o.A.getParticipants(t),
-                layout: j === x.BRT.POPOUT && e !== x.DUB.FULL_SCREEN ? x.DUB.NO_CHAT : e,
-                participantsOpen: o.A.getParticipantsOpen(t),
+                participants: c.A.getParticipants(t),
+                filteredParticipants: c.A.getFilteredParticipants(t),
+                participantsVersion: c.A.getParticipantsVersion(t),
+                mode: c.A.getMode(t),
+                layout: L === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
+                participantsOpen: c.A.getParticipantsOpen(t),
             };
         }),
-        _ = (0, a.yK)([o.A], () => [...o.A.getStreamParticipants(t), ...o.A.getVideoParticipants(t)]);
-    if (
-        ((0, l.useEffect)(() => {
-            if (null != v && null != E)
-                return (
-                    m._.subscribe(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE, e),
-                    () => {
-                        m._.unsubscribe(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE, e);
-                    }
-                );
-            function e() {
-                null != E &&
-                    (r.A.selectParticipant(E.id, null),
-                    (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
-            }
-        }, [v, E, t]),
-        null == v || null == E)
-    )
-        return null;
-    function R(e, n) {
-        null != E &&
-            (n.preventDefault(),
-            n.stopPropagation(),
-            v?.id === e.id
-                ? (r.A.selectParticipant(E.id, null),
-                  (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }))
-                : r.A.selectParticipant(E.id, e.id));
-    }
-    return (0, i.jsx)(s.D, {
-        style: { width: C, height: y },
-        className: g.L,
-        onClick: function () {
-            null != E &&
-                (r.A.selectParticipant(E.id, null),
-                (0, A.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
-        },
-        children: (0, i.jsx)(u.Ay, {
-            timeout: 2e3,
-            children: (e) =>
-                (0, i.jsx)(d.A, {
-                    onSelectParticipant: R,
-                    selectedParticipant: v,
-                    popoutType: n,
-                    channel: E,
-                    width: C,
-                    height: y,
-                    inCall: N,
-                    participants: I,
-                    layout: b,
-                    filteredParticipants: _,
-                    idle: e.idle,
-                    showParticipants: T,
-                    onContextMenuParticipant: (e, n, i, l) =>
-                        (0, f.A)({
-                            participant: e,
-                            event: n,
-                            minimalContextMenu: i,
-                            entrypoint: l,
-                            channelId: t,
-                            appContext: j,
-                            location: "GuildRoomVideoOverlay",
-                        }),
-                }),
-        }),
-    });
+        F = (0, a.bG)([d.default], () => d.default.getAwaitingRemoteSessionInfo());
+    return ((0, l.useEffect)(() => {
+        if (null != P)
+            return (
+                j._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                () => {
+                    j._.unsubscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                }
+            );
+        function e() {
+            null != P && (null != O ? r.A.selectParticipant(P.id, null) : (0, I.UV)(!1, t));
+        }
+    }, [O, P, t]),
+    null == P)
+        ? null
+        : (0, i.jsx)(s.D, {
+              style: { width: _, height: T },
+              className: b.Lw,
+              onClick: function () {
+                  null != P && (r.A.selectParticipant(P.id, null), S());
+              },
+              tabIndex: -1,
+              "aria-hidden": !0,
+              children: (0, i.jsx)(m.A, {
+                  inCall: M,
+                  channel: P,
+                  hasConnectPermission: !0,
+                  guild: w,
+                  participants: D,
+                  filteredParticipants: U,
+                  participantsVersion: V,
+                  selectedParticipant: M && k === E._Of.VIDEO ? O : null,
+                  layout: G,
+                  idle: R,
+                  mode: k,
+                  onSelectParticipant: function (e, t) {
+                      if (null != P) {
+                          if (
+                              (t.preventDefault(),
+                              t.stopPropagation(),
+                              (0, N.Ay)(e) &&
+                                  (0, h.eo)(P, y.A, x.A, g.A, d.default)[0] &&
+                                  0 ===
+                                      f.A.getAllActiveStreams().filter(
+                                          (t) => (0, u._z)(t) === e.id && t.state !== E.XYD.ENDED,
+                                      ).length)
+                          )
+                              return void (0, o.A9)((0, u.Iy)(e.id), { forceMultiple: t.shiftKey });
+                          O?.id === e.id ? r.A.selectParticipant(P.id, null) : r.A.selectParticipant(P.id, e.id);
+                      }
+                  },
+                  onContextMenuParticipant: function (e, n, i, l) {
+                      (0, v.A)({
+                          participant: e,
+                          event: n,
+                          minimalContextMenu: i,
+                          entrypoint: l,
+                          channelId: t,
+                          appContext: L,
+                          location: "GuildRoomVideoOverlay",
+                      });
+                  },
+                  showParticipants: B,
+                  popoutType: n,
+                  awaitingRemoteSessionInfo: F,
+                  callContainerDimensions: { width: _, height: T },
+              }),
+          });
 };

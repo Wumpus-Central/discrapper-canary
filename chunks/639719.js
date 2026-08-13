@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { default: () => m });
-var i = n(477900),
-    r = n(582128),
-    a = n(562708),
-    s = n(509434),
-    l = n(702841),
-    o = n(772707),
-    d = n(331322),
-    c = n(834730),
-    u = n(404778),
-    _ = n(803306),
-    E = n(139286),
-    A = n(870570),
-    h = n(652215),
-    I = n(375708),
-    f = n(323744),
-    p = n(546);
-function T(e) {
-    let { text: t } = e;
+e.d(s, { default: () => g });
+var i = e(477900),
+    n = e(582128),
+    r = e(562708),
+    a = e(509434),
+    l = e(702841),
+    c = e(772707),
+    o = e(331322),
+    u = e(834730),
+    m = e(404778),
+    x = e(803306),
+    d = e(139286),
+    p = e(870570),
+    E = e(652215),
+    j = e(375708),
+    h = e(323744),
+    A = e(546);
+function S(t) {
+    let { text: s } = t;
     return (0, i.jsxs)("li", {
-        className: f.nf,
-        children: [t, " ", (0, i.jsx)(s.I, { size: "sm", color: "currentColor" })],
+        className: h.nf,
+        children: [s, " ", (0, i.jsx)(a.I, { size: "sm", color: "currentColor" })],
     });
 }
-function m(e) {
-    let { transitionState: t } = e,
-        n = (0, l.bG)([A.A], () => A.A.getAction()),
-        [s, m] = r.useState(!1);
-    async function g() {
-        return m(!0), n === h.a3B.AGREEMENTS && m(await (0, _.acceptAgreements)()), null;
+function g(t) {
+    let { transitionState: s } = t,
+        e = (0, l.bG)([p.A], () => p.A.getAction()),
+        [a, g] = n.useState(!1);
+    async function f() {
+        return g(!0), e === E.a3B.AGREEMENTS && g(await (0, x.acceptAgreements)()), null;
     }
     return (
-        (0, E.A)(
+        (0, d.A)(
             {
-                type: a.ImpressionTypes.VIEW,
-                name: a.ImpressionNames.USER_AGREEMENTS,
-                properties: { required_action: n },
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.USER_AGREEMENTS,
+                properties: { required_action: e },
             },
             {},
             [],
         ),
-        (0, i.jsx)(o.k, {
-            graphic: { src: p.A, type: "image" },
+        (0, i.jsx)(c.k, {
+            graphic: { src: A.A, type: "image" },
             gradientColor: "blue",
             dismissable: !1,
-            title: I.intl.string(I.t["7glvXu"]),
-            subtitle: I.intl.string(I.t["+USXQE"]),
-            actions: [{ variant: "primary", text: I.intl.string(I.t["+TBKL1"]), onClick: g, loading: s }],
-            transitionState: t,
-            onClose: h.js$,
-            children: (0, i.jsxs)(d.B, {
+            title: j.intl.string(j.t["7glvXu"]),
+            subtitle: j.intl.string(j.t["+USXQE"]),
+            actions: [{ variant: "primary", text: j.intl.string(j.t["+TBKL1"]), onClick: f, loading: a }],
+            transitionState: s,
+            onClose: E.js$,
+            children: (0, i.jsxs)(o.B, {
                 gap: 20,
                 children: [
-                    n === h.a3B.AGREEMENTS
-                        ? (0, i.jsx)(c.E, {
+                    e === E.a3B.AGREEMENTS
+                        ? (0, i.jsx)(u.E, {
                               variant: "text-md/normal",
-                              className: f.h_,
-                              children: I.intl.format(I.t.CN0Hvb, { url: h.X7G.TERMS_SUMMARY }),
+                              className: h.h_,
+                              children: j.intl.format(j.t.CN0Hvb, { url: E.X7G.TERMS_SUMMARY }),
                           })
                         : null,
                     (0, i.jsx)("div", {
-                        className: f.kL,
+                        className: h.kL,
                         children: (0, i.jsxs)("ul", {
-                            className: f.yJ,
+                            className: h.yJ,
                             children: [
-                                (0, i.jsx)(T, { text: I.intl.format(I.t.iw0hFi, { url: h.X7G.TERMS }) }),
-                                (0, i.jsx)(u.c, {}),
-                                (0, i.jsx)(T, { text: I.intl.format(I.t["36klnD"], { url: h.X7G.PAID_TERMS }) }),
-                                (0, i.jsx)(u.c, {}),
-                                (0, i.jsx)(T, { text: I.intl.format(I.t.TquFBF, { url: h.X7G.PRIVACY }) }),
-                                (0, i.jsx)(u.c, {}),
-                                (0, i.jsx)(T, { text: I.intl.format(I.t.ia96Tb, { url: h.X7G.GUIDELINES }) }),
+                                (0, i.jsx)(S, { text: j.intl.format(j.t.iw0hFi, { url: E.X7G.TERMS }) }),
+                                (0, i.jsx)(m.c, {}),
+                                (0, i.jsx)(S, { text: j.intl.format(j.t["36klnD"], { url: E.X7G.PAID_TERMS }) }),
+                                (0, i.jsx)(m.c, {}),
+                                (0, i.jsx)(S, { text: j.intl.format(j.t.TquFBF, { url: E.X7G.PRIVACY }) }),
+                                (0, i.jsx)(m.c, {}),
+                                (0, i.jsx)(S, { text: j.intl.format(j.t.ia96Tb, { url: E.X7G.GUIDELINES }) }),
                             ],
                         }),
                     }),

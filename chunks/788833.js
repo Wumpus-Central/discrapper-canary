@@ -89,7 +89,7 @@ function o(e) {
                 n.e("69190"),
                 n.e("18315"),
                 n.e("17776"),
-                n.e("77770"),
+                n.e("70201"),
                 n.e("61275"),
                 n.e("30072"),
                 n.e("18629"),
@@ -163,6 +163,7 @@ function o(e) {
                 n.e("62931"),
                 n.e("45959"),
                 n.e("58529"),
+                n.e("83488"),
                 n.e("81987"),
                 n.e("58038"),
                 n.e("71202"),
@@ -232,6 +233,7 @@ function o(e) {
                 n.e("6723"),
                 n.e("9729"),
                 n.e("74016"),
+                n.e("36926"),
                 n.e("21856"),
                 n.e("55726"),
                 n.e("74907"),
@@ -294,8 +296,8 @@ function h(e) {
         S = (0, a.tA)({ isGift: !0, giftRecipient: t }),
         N = T && null != t,
         C = m && null == t,
-        O = N || C,
-        R = S && null != t;
+        R = N || C,
+        O = S && null != t;
     return {
         openGiftModal: i.useCallback(() => {
             null != f
@@ -310,7 +312,7 @@ function h(e) {
                       giftMessage: I,
                   })
                 : g
-                  ? R
+                  ? O
                       ? o({
                             giftRecipient: t,
                             analyticsLocations: n,
@@ -341,7 +343,7 @@ function h(e) {
                             giftMessage: I,
                             giftingOrigin: A.vQ.GUILD_CHANNEL,
                         })
-                      : R && null != t
+                      : O && null != t
                         ? o({
                               giftRecipient: t,
                               analyticsLocations: n,
@@ -358,8 +360,8 @@ function h(e) {
                               analyticsObject: c ?? s,
                               giftMessage: I,
                           });
-        }, [g, N, C, R, t, n, h, s, l, c, I, f]),
-        shouldShowWishlistModal: R,
-        shouldShowGiftSelectionModal: O,
+        }, [g, N, C, O, t, n, h, s, l, c, I, f]),
+        shouldShowWishlistModal: O,
+        shouldShowGiftSelectionModal: R,
     };
 }

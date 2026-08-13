@@ -1,51 +1,42 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(439372),
     r = n(280450),
-    a = n(734057),
-    s = n(446243),
-    l = n(558076),
-    o = n(360729);
-let d = null,
-    c = null;
-class u extends i.A {
+    a = n(446243),
+    s = n(558076),
+    l = n(360729);
+let o = null,
+    d = null;
+class c extends i.A {
     actions = {
         VOICE_STATE_UPDATES: (e) => this.handleVoiceStateUpdates(e),
-        EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: (e) => this.handleEmbeddedActivityLaunchSuccess(e),
         CONNECTION_RESUMED: () => this.handleConnectionResumed(),
     };
     isExperimentEnabled(e, t) {
-        return o.A.getCurrentConfig({ guildId: e, location: t }).enabled;
+        return l.A.getCurrentConfig({ guildId: e, location: t }).enabled;
     }
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         for (let e of t) {
-            let { userId: t, guildId: n, channelId: i, sessionId: a, oldChannelId: o } = e;
+            let { userId: t, guildId: n, channelId: i, sessionId: l, oldChannelId: c } = e;
             if (t !== r.default.getId()) {
-                null != o && o !== i && (0, s.WQ)(t, o);
+                null != c && c !== i && (0, a.WQ)(t, c);
                 continue;
             }
-            if (a === r.default.getSessionId() && i !== d) {
+            if (l === r.default.getSessionId() && i !== o) {
                 if (
-                    (null != d && null != c && this.isExperimentEnabled(c, "VOICE_STATE_UPDATE") && (0, s.x2)(c, d),
+                    (null != o && null != d && this.isExperimentEnabled(d, "VOICE_STATE_UPDATE") && (0, a.x2)(d, o),
                     null != i && null != n)
                 ) {
-                    let e = l.A.getPendingPosition();
-                    this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, s.tB)(n, i, e);
+                    let e = s.A.getPendingPosition();
+                    this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, a.tB)(n, i, e);
                 }
-                (d = i), (c = n);
+                (o = i), (d = n);
             }
         }
     }
     handleConnectionResumed() {
-        null == d || null == c || (this.isExperimentEnabled(c, "CONNECTION_RESUMED") && (0, s.z5)(c, d));
-    }
-    handleEmbeddedActivityLaunchSuccess(e) {
-        if (null == e.channelId) return;
-        let t = a.A.getChannel(e.channelId);
-        null == t ||
-            !this.isExperimentEnabled(t.guild_id, "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS") ||
-            (l.A.isVisible(e.channelId) && (0, s.zD)(e.channelId, !0));
+        null == o || null == d || (this.isExperimentEnabled(d, "CONNECTION_RESUMED") && (0, a.z5)(d, o));
     }
 }
-let _ = new u();
+let u = new c();

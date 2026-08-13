@@ -3923,13 +3923,13 @@
   {
     "name": "2026-06-bulk-nitro-gifting",
     "kind": "user",
-    "defaultConfig": false,
+    "defaultConfig": 0,
     "variations": {
       "0": {
         "enabled": false,
         "variant": 0
       },
-      "1": true
+      "1": 1
     }
   },
   {

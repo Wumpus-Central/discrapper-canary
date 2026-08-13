@@ -1,19 +1,22 @@
 "use strict";
 n.d(t, {
-    Xh: () => N,
-    Dr: () => O,
-    Ys: () => T,
-    HW: () => L,
-    x2: () => I,
-    zK: () => D,
-    z5: () => v,
-    zD: () => g,
-    WT: () => R,
-    tB: () => b,
-    yF: () => y,
-    WQ: () => f,
-    AQ: () => p,
-    TJ: () => m,
+    Xh: () => C,
+    Ys: () => m,
+    HW: () => D,
+    zK: () => y,
+    c6: () => P,
+    tB: () => w,
+    WQ: () => p,
+    AQ: () => T,
+    Dr: () => L,
+    z5: () => b,
+    zD: () => S,
+    x2: () => f,
+    Ft: () => U,
+    WT: () => O,
+    UV: () => M,
+    yF: () => v,
+    TJ: () => g,
 });
 var i = n(517846),
     r = n(636537),
@@ -25,12 +28,13 @@ var i = n(517846),
     c = n(558076),
     u = n(872772),
     _ = n(996512),
-    E = n(652215);
-let A = { x: 0, y: 0 };
-async function h(e, t, n) {
+    E = n(360729),
+    A = n(652215);
+let h = { x: 0, y: 0 };
+async function I(e, t, n) {
     try {
-        let d = n ?? A,
-            c = await r.Bo.post({ url: E.Rsh.GUILD_ROOM_CONNECT(e, t), body: { position: d }, rejectWithError: !0 }),
+        let d = n ?? h,
+            c = await r.Bo.post({ url: A.Rsh.GUILD_ROOM_CONNECT(e, t), body: { position: d }, rejectWithError: !0 }),
             u = (0, _.S)(c.body);
         if ((a.h.dispatch({ type: "GUILD_ROOM_CONNECT", room: u, guildId: e, pendingPosition: d }), t !== e)) {
             (0, o.E2)({ guildId: e, channelId: t }), (0, s.hs)(i.w.GUILD_ROOM_JOINED);
@@ -49,14 +53,14 @@ async function h(e, t, n) {
         throw (a.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t }), n);
     }
 }
-function I(e, t) {
+function f(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: l.default.getId(), roomId: t }),
         t !== e && (0, o.e6)({ guildId: e, channelId: t });
 }
-function f(e, t) {
+function p(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
-async function p(e, t, n) {
+async function T(e, t, n) {
     let i = c.A.getRoom(t),
         s = c.A.getRoomUsers(t),
         d = c.A.getRoomObjects(t);
@@ -67,7 +71,7 @@ async function p(e, t, n) {
             n?.user_status_id != null && (i.statusId = n.user_status_id),
             n?.user_status_text != null && (i.statusText = n.user_status_text),
             a.h.dispatch(i);
-        let s = await r.Bo.post({ url: E.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
+        let s = await r.Bo.post({ url: A.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
             d = (0, _.S)(s.body);
         if (
             e !== t &&
@@ -114,59 +118,72 @@ async function p(e, t, n) {
         );
     }
 }
-function T() {
+function m() {
     a.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
 }
-function m(e) {
+function g(e) {
     a.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position: e });
 }
-function g(e, t) {
-    a.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e, clearLayout: t });
+function S(e) {
+    a.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e });
 }
-async function S(e, t, n) {
-    return await r.Bo.post({ url: E.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
-}
-async function N(e, t, n, i) {
-    return await r.Bo.post({ url: E.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
+async function N(e, t, n) {
+    return await r.Bo.post({ url: A.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
 }
 async function C(e, t, n, i) {
-    return await r.Bo.del({ url: E.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
+    return await r.Bo.post({ url: A.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
 }
-function R(e) {
+async function R(e, t, n, i) {
+    return await r.Bo.del({ url: A.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
+}
+function O(e) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_START", roomId: e });
 }
-function O(e, t) {
+function L(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId: e, position: t });
 }
-function L(e) {
+function D(e) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId: e });
 }
-async function D(e, t, n, i) {
-    L(t);
+async function y(e, t, n, i) {
+    D(t);
     try {
-        await S(e, t, { object_type: u.N.NOTE, content: n, position: i }),
+        await N(e, t, { object_type: u.N.NOTE, content: n, position: i }),
             t !== e && (0, o.Ql)({ interactionType: "note_created", guildId: e, channelId: t }),
             a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
     } catch (e) {
         throw (a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t }), e);
     }
 }
-async function y(e, t, n) {
-    await C(e, t, n, { object_type: u.N.NOTE }),
+async function v(e, t, n) {
+    await R(e, t, n, { object_type: u.N.NOTE }),
         t !== e && (0, o.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
-async function v(e, t) {
+async function b(e, t) {
     try {
-        let n = await r.Bo.get({ url: E.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
+        let n = await r.Bo.get({ url: A.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
             i = (0, _.S)(n.body);
         a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
     } catch (e) {
         (0, d.b)({ silent: !0 });
     }
 }
-async function b(e, t, n) {
+function M(e, t) {
+    let n = c.A.getVideoOverlayVisibility();
+    a.h.dispatch({ type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value: e }),
+        e !== n && (0, o.n0)({ interactionType: e ? "video_overlay_opened" : "video_overlay_closed", channelId: t });
+}
+function P(e, t, n) {
+    E.A.getCurrentConfig({ guildId: t, location: "maybeSetGuildRoomVideoOverlay" }, { autoTrackExposure: !1 })
+        .enabled && M(e, n);
+}
+function U(e) {
+    a.h.dispatch({ type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility: e }),
+        (0, o.iY)({ rememberVideoOverlayVisibility: e });
+}
+async function w(e, t, n) {
     try {
-        await h(e, t, n);
+        await I(e, t, n);
     } catch (e) {
         (0, d.b)();
     }

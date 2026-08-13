@@ -12,4 +12,5 @@ e.exports = {
     iX: "customGiftMessageWrapper_d947e6",
     pt: "customGiftMessage_d947e6",
     KW: "compactSendGiftToUser_d947e6",
+    SL: "bulkGiftPlanSelection_d947e6",
 };
