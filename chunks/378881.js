@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593017, Version Hash: f16578f5ee83b77cc2d7412d0fec931e61e2d469`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593040, Version Hash: 964ed8e1294c892170236971a886d2c94c251adb`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20790,7 +20790,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593017" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593040" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -38709,7 +38709,7 @@ function Uo() {
         eu.useEffect(() => {
             e &&
                 (Us ||
-                    !(0, B.isDesktop)() ||
+                    !((0, B.isDesktop)() || (0, B.isWeb)()) ||
                     ((Us = !0),
                     Math.random() >= t ||
                         ((0, Ur.IN)(Ul, { reportAllChanges: !0 }),
@@ -40881,7 +40881,7 @@ class w0 extends eu.PureComponent {
                     ],
                 }),
                 (0, R.jsx)(De, {}),
-                (0, B.isDesktop)() && (0, R.jsx)(Uo, {}),
+                ((0, B.isDesktop)() || (0, B.isWeb)()) && (0, R.jsx)(Uo, {}),
             ],
         });
     }

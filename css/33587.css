@@ -120,9 +120,11 @@
 }
 
 .list__45744 {
-    height: 260px;
-    padding: 0;
-    width: 100%
+    block-size: 260px;
+    inline-size: calc(100% + 8px);
+    margin-inline: -4px;
+    padding-block: 4px;
+    padding-inline: 4px
 }
 
 .footer__45744 {
