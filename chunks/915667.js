@@ -1,50 +1,51 @@
-a.d(t, { A: () => l });
-var i = a(477900);
-if ((a(582128), 21552 == a.j)) var r = a(192308);
-var n = a(568065);
-function l(e, t) {
-    (0, r.openModalLazy)(
+l.d(t, { A: () => r });
+var n = l(477900);
+l(582128);
+var i = l(192308),
+    s = l(568065);
+function r(e, t) {
+    (0, i.openModalLazy)(
         async () => {
             switch (t.type) {
-                case n.o9.LEVEL: {
-                    let { default: r } = await Promise.all([
-                        a.e("47426"),
-                        a.e("43036"),
-                        a.e("34654"),
-                        a.e("22455"),
-                        a.e("48317"),
-                        a.e("53584"),
-                        a.e("69149"),
-                        a.e("34598"),
-                        a.e("50186"),
-                        a.e("2988"),
-                    ]).then(a.bind(a, 787367));
-                    return (a) => (0, i.jsx)(r, { guildId: e, powerup: t, ...a });
+                case s.o9.LEVEL: {
+                    let { default: i } = await Promise.all([
+                        l.e("47426"),
+                        l.e("43036"),
+                        l.e("34654"),
+                        l.e("22455"),
+                        l.e("48317"),
+                        l.e("53584"),
+                        l.e("69149"),
+                        l.e("34598"),
+                        l.e("50186"),
+                        l.e("2988"),
+                    ]).then(l.bind(l, 787367));
+                    return (l) => (0, n.jsx)(i, { guildId: e, powerup: t, ...l });
                 }
-                case n.o9.PERK: {
-                    let { default: r } = await Promise.all([
-                        a.e("52123"),
-                        a.e("21398"),
-                        a.e("202"),
-                        a.e("9454"),
-                        a.e("32424"),
-                        a.e("61268"),
-                        a.e("3930"),
-                        a.e("3663"),
-                        a.e("66147"),
-                        a.e("38090"),
-                        a.e("42749"),
-                        a.e("22455"),
-                        a.e("42935"),
-                        a.e("91977"),
-                        a.e("14530"),
-                        a.e("69149"),
-                        a.e("77224"),
-                    ]).then(a.bind(a, 373627));
-                    return (a) => (0, i.jsx)(r, { guildId: e, powerup: t, ...a });
+                case s.o9.PERK: {
+                    let { default: i } = await Promise.all([
+                        l.e("52123"),
+                        l.e("21398"),
+                        l.e("202"),
+                        l.e("9454"),
+                        l.e("32424"),
+                        l.e("61268"),
+                        l.e("3930"),
+                        l.e("3663"),
+                        l.e("66147"),
+                        l.e("38090"),
+                        l.e("42749"),
+                        l.e("22455"),
+                        l.e("42935"),
+                        l.e("91977"),
+                        l.e("14530"),
+                        l.e("69149"),
+                        l.e("77224"),
+                    ]).then(l.bind(l, 373627));
+                    return (l) => (0, n.jsx)(i, { guildId: e, powerup: t, ...l });
                 }
             }
         },
-        { modalKey: n.Fq },
+        { modalKey: s.Fq },
     );
 }
