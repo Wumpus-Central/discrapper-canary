@@ -32,7 +32,7 @@ let I = (0, c.mj)({
     kind: "user",
     name: "2026-07-expressive-modal-v2",
     defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
+    variations: { 1: { enabled: !0 }, 2: { enabled: !0 } },
 });
 var f = n(40449);
 function p(e) {
@@ -61,7 +61,7 @@ function T(e) {
                 n.e("51593"),
                 n.e("12211"),
                 n.e("34696"),
-                n.e("96144"),
+                n.e("10994"),
                 n.e("607"),
                 n.e("84794"),
                 n.e("69464"),
@@ -144,7 +144,7 @@ let m = {
         I.getConfig({ location: r }).enabled
             ? (0, a.openModalLazy)(
                   async () => {
-                      let { default: e } = await Promise.all([n.e("63452"), n.e("22153")]).then(n.bind(n, 808400));
+                      let { default: e } = await Promise.all([n.e("63452"), n.e("81415")]).then(n.bind(n, 488026));
                       return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                   },
                   { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },

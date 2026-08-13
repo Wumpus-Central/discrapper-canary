@@ -1,5 +1,6 @@
-t.d(s, { E: () => u });
-function u(p) {
-    let { proxyURL: s, url: t } = p;
-    return null != s && "" !== s ? s : t;
+"use strict";
+function i(e) {
+    let { proxyURL: t, url: n } = e;
+    return null != t && "" !== t ? t : n;
 }
+n.d(t, { E: () => i });

@@ -1,81 +1,82 @@
+"use strict";
 n.d(t, { l: () => u });
-var r = n(477900),
-    i = n(582128),
-    s = n(776310),
-    o = n(17928),
+var i = n(477900),
+    r = n(582128),
+    a = n(776310),
+    s = n(17928),
     l = n(309010),
-    a = n(21161),
-    c = n(536283),
-    d = n(517220);
+    o = n(21161),
+    d = n(536283),
+    c = n(517220);
 function u(e) {
     let { children: t } = e,
-        [n, u] = i.useState(null),
-        [h, f] = i.useState(null),
-        g = i.useRef(void 0),
-        p = i.useRef(new Set()),
-        [m, A] = i.useState(!1),
-        v = (0, o.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
-        y = i.useCallback((e) => {
-            p.current.delete(e), A(p.current.size > 0);
+        [n, u] = r.useState(null),
+        [_, E] = r.useState(null),
+        A = r.useRef(void 0),
+        h = r.useRef(new Set()),
+        [I, f] = r.useState(!1),
+        p = (0, s.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
+        T = r.useCallback((e) => {
+            h.current.delete(e), f(h.current.size > 0);
         }, []),
-        x = i.useCallback((e) => (p.current.add(e), A(!0), () => y(e)), [y]),
-        w = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+        m = r.useCallback((e) => (h.current.add(e), f(!0), () => T(e)), [T]),
+        g = r.useCallback((e, t) => {
+            for (let n of h.current) n(e, t);
         }, []);
-    i.useEffect(() => {
-        h?.clearConfetti();
-    }, [h, v]);
-    let E = i.useCallback((e) => {
-            window.clearTimeout(g.current),
-                (g.current = window.setTimeout(() => {
+    r.useEffect(() => {
+        _?.clearConfetti();
+    }, [_, p]);
+    let S = r.useCallback((e) => {
+            window.clearTimeout(A.current),
+                (A.current = window.setTimeout(() => {
                     (e.width = 0), (e.height = 0);
                 }, 1e4));
         }, []),
-        C = i.useCallback((e) => {
-            window.clearTimeout(g.current);
+        N = r.useCallback((e) => {
+            window.clearTimeout(A.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
                 let { width: e, height: n } = t.getBoundingClientRect();
                 (t.width = e * window.devicePixelRatio), (t.height = n * window.devicePixelRatio);
             }
         }, []),
-        N = i.useCallback(
+        C = r.useCallback(
             (e) => {
-                E(e.canvas);
+                S(e.canvas);
             },
-            [E],
+            [S],
         );
     return (
-        i.useEffect(() => {
-            let e = h?.getCanvas();
+        r.useEffect(() => {
+            let e = _?.getCanvas();
             if (null == e) return;
-            let t = new ResizeObserver(() => E(e));
+            let t = new ResizeObserver(() => S(e));
             return (
                 t.observe(e),
                 () => {
-                    t.disconnect(), window.clearTimeout(g.current);
+                    t.disconnect(), window.clearTimeout(A.current);
                 }
             );
-        }, [h, E]),
-        (0, r.jsxs)(r.Fragment, {
+        }, [_, S]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(a.k, {
-                    confettiCanvas: h,
+                (0, i.jsx)(o.k, {
+                    confettiCanvas: _,
                     spriteCanvas: n,
-                    baseConfig: c.Mw,
-                    addClickListener: x,
-                    removeClickListener: y,
+                    baseConfig: d.Mw,
+                    addClickListener: m,
+                    removeClickListener: T,
                     children: t,
                 }),
-                (0, r.jsx)(s.Fk, {
-                    ref: f,
-                    className: d.J,
-                    environment: c.XA,
-                    onClick: m ? w : void 0,
-                    onBeforeRender: C,
-                    onAfterRender: N,
+                (0, i.jsx)(a.Fk, {
+                    ref: E,
+                    className: c.J,
+                    environment: d.XA,
+                    onClick: I ? g : void 0,
+                    onBeforeRender: N,
+                    onAfterRender: C,
                 }),
-                (0, r.jsx)(s.K_, { ref: u, colors: c._t, sprites: c.uI, spriteWidth: c.wn, spriteHeight: c.wn }),
+                (0, i.jsx)(a.K_, { ref: u, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
             ],
         })
     );

@@ -1,10 +1,11 @@
-i.d(t, { A: () => s }), i(938796);
-var l = i(315069);
+"use strict";
+n.d(t, { A: () => s }), n(938796);
+var i = n(315069);
 function r(e) {
     return { id: e.id, filename: e.filename, size: e.size, width: e.width, height: e.height, mimeType: e.mime_type };
 }
-var n = i(889227);
-class s extends l.A {
+var a = n(889227);
+class s extends i.A {
     id;
     applicationId;
     skuId;
@@ -48,7 +49,7 @@ class s extends l.A {
                     ? e.carousel_items.map((e) => ({ assetId: e.asset_id, youtubeVideoId: e.youtube_video_id }))
                     : null,
             assets: null != e.assets ? e.assets.map(r) : null,
-            staffNotes: null != t ? { content: t.content, user: null != t.user ? new n.A(t.user) : null } : null,
+            staffNotes: null != t ? { content: t.content, user: null != t.user ? new a.A(t.user) : null } : null,
             guild:
                 null != e.guild
                     ? {
