@@ -43,7 +43,10 @@ let h = r.memo(function (e) {
                       },
                       className: s()(A.mA, R && A.Em),
                       onBlur: function (e) {
-                          null == L.current || L.current.contains(e.relatedTarget) || (L.current.scrollTop = 0);
+                          null == L.current ||
+                              L.current.contains(e.relatedTarget) ||
+                              (null == L.current.querySelector('[aria-expanded="true"][aria-controls]') &&
+                                  (L.current.scrollTop = 0));
                       },
                       children: (0, i.jsx)(u.A, {
                           userId: t,
