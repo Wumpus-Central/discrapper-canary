@@ -655,14 +655,14 @@ let eJ = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             ],
         });
     });
-var eQ = n(682577),
+var eQ = n(53466),
     e0 = n(834730),
     e1 = n(717421),
     e2 = n(442433),
     e3 = n(230135),
     e9 = n(228366);
 let e7 = {};
-class e8 extends u.Ay.PersistedStore {
+class e5 extends u.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
@@ -675,7 +675,7 @@ class e8 extends u.Ay.PersistedStore {
         return e7[e];
     }
 }
-let e5 = new e8(e9.h, {
+let e6 = new e5(e9.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
         e7 = { ...e7, [t]: n };
@@ -684,7 +684,7 @@ let e5 = new e8(e9.h, {
         e7 = {};
     },
 });
-var e6 = n(147925),
+var e8 = n(147925),
     e4 = n(363487),
     te = n(568065);
 function tt(e) {
@@ -754,10 +754,10 @@ let tl = r.forwardRef((e, t) => {
                                               maxBoostCount: l,
                                           }),
                                 }),
-                                (0, s.jsx)(e6.A, {
+                                (0, s.jsx)(e8.A, {
                                     width: 12,
                                     height: 12,
-                                    direction: e6.A.Directions.RIGHT,
+                                    direction: e8.A.Directions.RIGHT,
                                     className: ew()(tn.Qq, tn.ue),
                                 }),
                             ],
@@ -775,7 +775,7 @@ function ti(e) {
         o = r.useCallback(() => {
             (0, eY.A)(t.id, Q.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        d = (0, u.bG)([e5], () => e5.getCountForGuild(t.id) ?? 0);
+        d = (0, u.bG)([e6], () => e6.getCountForGuild(t.id) ?? 0);
     r.useEffect(() => {
         d !== t.premiumSubscriberCount && (0, e3.u)(t.id, t.premiumSubscriberCount);
     }, [t.id, d, t.premiumSubscriberCount]);
@@ -1084,7 +1084,7 @@ let t2 = J(
                 : null
             : (0, s.jsx)("div", { style: { height: 16 } });
     }),
-    t8 = r.memo(function (e) {
+    t5 = r.memo(function (e) {
         let { channel: t } = e,
             n = (0, tq.Ay)(t);
         return (0, s.jsx)("li", {
@@ -1095,8 +1095,8 @@ let t2 = J(
             }),
         });
     });
-var t5 = n(728321),
-    t6 = n(244083);
+var t6 = n(728321),
+    t8 = n(244083);
 let t4 = { origin: { x: -36, y: 7 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } };
 var ne = n(808240);
 let nt = r.memo(function (e) {
@@ -1142,9 +1142,9 @@ let nt = r.memo(function (e) {
                 channel: e.record,
                 position: e.position,
                 disableManageChannels: o,
-                children: (0, s.jsx)(t5.A, {
+                children: (0, s.jsx)(t6.A, {
                     inlineSpecs: t4,
-                    arrowAlignment: t6.oN.TOP,
+                    arrowAlignment: t8.oN.TOP,
                     tutorialId: "organize-by-topic",
                     position: "right",
                 }),
@@ -1311,7 +1311,7 @@ function nN(e) {
     let p = (0, s.jsx)(nc.R, { size: "xs", className: ef.gE, "aria-hidden": !0, color: "currentColor" });
     return (
         l &&
-            (p = (0, s.jsx)(t5.A, {
+            (p = (0, s.jsx)(t6.A, {
                 childRef: f,
                 tutorialId: "instant-invite",
                 position: "left",
@@ -1739,10 +1739,10 @@ var n2 = n(297264),
     n3 = n(5373),
     n9 = n(65995),
     n7 = n(408619);
-function n8(e, t) {
+function n5(e, t) {
     return (0, s.jsx)(e0.E, { variant: "text-xs/bold", color: "text-default", children: e }, t);
 }
-let n5 = r.memo(function (e) {
+let n6 = r.memo(function (e) {
     let { guild: t } = e,
         n = (0, u.bG)([tR.h], () => tR.h.getNewMemberActions(t.id), [t.id]),
         l = (0, u.bG)([n9.A], () => n9.A.getCompletedActions(t.id)),
@@ -1781,16 +1781,16 @@ let n5 = r.memo(function (e) {
                                         color: "text-muted",
                                         className: n7.Cv,
                                         children: eg.intl.format(eg.t.eqZ1lW, {
-                                            numberHook: n8,
+                                            numberHook: n5,
                                             total: a.toString(),
                                             completed: i.toString(),
                                         }),
                                     }),
-                                    (0, s.jsx)(e6.A, {
+                                    (0, s.jsx)(e8.A, {
                                         className: n7.UE,
                                         width: 16,
                                         height: 16,
-                                        direction: e6.A.Directions.RIGHT,
+                                        direction: e8.A.Directions.RIGHT,
                                     }),
                                 ],
                             }),
@@ -1811,12 +1811,12 @@ let n5 = r.memo(function (e) {
         ],
     });
 });
-var n6 = n(581925);
+var n8 = n(581925);
 function n4(e) {
     let { guild: t, selected: n } = e;
     return (0, s.jsx)(ed.G, {
         id: `official-messages-page-${t.id}`,
-        renderIcon: (e) => (0, s.jsx)(n6.L, { size: "md", color: "currentColor", className: e }),
+        renderIcon: (e) => (0, s.jsx)(n8.L, { size: "md", color: "currentColor", className: e }),
         text: eg.intl.string(eg.t.xHEzFh),
         selected: n,
         onClick: function () {
@@ -2433,9 +2433,9 @@ let l3 = function (e) {
 };
 var l9 = n(824865),
     l7 = n(378570),
-    l8 = n(790535),
-    l5 = n(113783),
-    l6 = n(96566),
+    l5 = n(790535),
+    l6 = n(113783),
+    l8 = n(96566),
     l4 = n(280450),
     ie = n(312006),
     it = n(505543),
@@ -2506,7 +2506,7 @@ function ip(e) {
         C = (0, u.bG)([O.A], () => !O.A.can(B.xBc.CONNECT, t)),
         E = (0, is.H)(t),
         x = (0, u.bG)([lE.A], () => lE.A.hasVideo(t.id)),
-        N = (0, l6.qT)(t.id) && t.isGuildStageVoice(),
+        N = (0, l8.qT)(t.id) && t.isGuildStageVoice(),
         _ = (function (e) {
             let { channel: t, locked: n, video: l, selected: i } = e;
             return (
@@ -2578,7 +2578,7 @@ class iE extends nI {
             s = e.getGuildId();
         null != s && (0, lK.V)(s) && (0, lF.Ze)(s),
             l && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-            t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, l8.av)(e),
+            t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, l5.av)(e),
             __OVERLAY__ || (0, l7.iN)(e.id, i ? { source: l9.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
     };
     handleClickChat = () => {
@@ -2783,10 +2783,10 @@ function iN(e) {
             })(t, !0).moderator),
             !n && l ? 1 : 0),
         p = (0, u.bG)([nf.A], () => nf.A.getStageInstanceByChannel(r.id), [r.id]),
-        C = (0, l5.zy)(r.id, tA.ip.AUDIENCE),
+        C = (0, l6.zy)(r.id, tA.ip.AUDIENCE),
         { isSubscriptionGated: E, needSubscriptionToAccess: x } = (0, lf.A)(r.id),
         N = (0, u.bG)([V.Ay], () => V.Ay.isFavorite(i.id, r.id)),
-        _ = (0, l6.xn)(r.id),
+        _ = (0, l8.xn)(r.id),
         S = ip({
             channel: r,
             isChannelSelected: !1,
@@ -3572,9 +3572,9 @@ function i7(e) {
               channelItemRef: b,
           });
 }
-var i8 = n(900797),
-    i5 = n(636585),
-    i6 = n(531685),
+var i5 = n(900797),
+    i6 = n(636585),
+    i8 = n(531685),
     i4 =
         (((i = {}).HIDDEN = "hidden"),
         (i.UNREAD = "unread"),
@@ -3805,7 +3805,7 @@ function sC(e) {
                 className: sf.pM,
                 children: eg.intl.format(eg.t["fDlr+F"], { count: d.length }),
             }),
-            (0, s.jsx)(i5.A, {
+            (0, s.jsx)(i6.A, {
                 guildId: t.id,
                 className: sf.J$,
                 users: d.slice(0, 4),
@@ -3819,7 +3819,7 @@ function sC(e) {
 function sE(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: i, jumpToChannel: a } = e,
         { bottomBar: o, topBar: d } = (0, u.cf)([sm], () => sm.getUnreadStateForGuildId(n.id)),
-        c = (0, u.bG)([i6.A], () => i6.A.isFocused()),
+        c = (0, u.bG)([i8.A], () => i8.A.isFocused()),
         { mode: h, mentionCount: A, targetChannelId: g } = "bottom" === t ? o : d,
         m = h === i4.HIDDEN,
         f = (0, e1.z)(
@@ -3858,7 +3858,7 @@ function sE(e) {
                                           height: 14,
                                           width: 14,
                                       })
-                                    : (0, s.jsx)(i8.t, {
+                                    : (0, s.jsx)(i5.t, {
                                           size: "custom",
                                           color: "currentColor",
                                           className: sf.z_,
@@ -3916,7 +3916,7 @@ function sS(e) {
 let sI = r.forwardRef(function (e, t) {
     let { guildId: n, guildChannels: l, guildChannelsVersion: i, ...r } = e,
         a = (0, sx.W)(n, l, i, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
-        o = (0, u.bG)([i6.A], () => i6.A.isFocused());
+        o = (0, u.bG)([i8.A], () => i8.A.isFocused());
     return (0, s.jsx)(sN.A, { ref: t, ...r, isUnread: s_, isMentioned: sS, items: a, animate: o });
 });
 var sb = n(81466);
@@ -3943,7 +3943,7 @@ function sG(e) {
                 n.e("55513"),
                 n.e("47626"),
                 n.e("56373"),
-                n.e("48263"),
+                n.e("70644"),
                 n.e("49347"),
                 n.e("64287"),
                 n.e("53934"),
@@ -4128,7 +4128,7 @@ var s$ = n(290863),
     s3 = n(46054),
     s9 = n(500216),
     s7 = n(742715);
-function s8(e) {
+function s5(e) {
     let { channel: t, connected: n, hovered: l, subtitle: i, onClick: a } = e,
         o = (0, s2.G)((0, s1.l)(t)),
         { enableHangoutWindow: d } = (0, eT.Dm)({ guildId: t.guild_id, location: "VoiceChannelStatus" }),
@@ -4171,7 +4171,7 @@ function s8(e) {
             ? (0, s.jsx)(tB.A, { children: i })
             : null;
 }
-class s5 extends nI {
+class s6 extends nI {
     state = { shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = r.createRef();
     channelItemRef = r.createRef();
@@ -4276,7 +4276,7 @@ class s5 extends nI {
         let { channel: e, connected: t } = this.props,
             n = iR(this.props.subtitle)?.subtitle,
             { hovered: l } = this.state;
-        return (0, s.jsx)(s8, {
+        return (0, s.jsx)(s5, {
             onClick: this.handleVoiceStatusClick,
             channel: e,
             connected: t,
@@ -4451,7 +4451,7 @@ class s5 extends nI {
             A && (j = c(j)),
             h && (j = o(d(j))),
             g &&
-                (j = (0, s.jsx)(t5.A, {
+                (j = (0, s.jsx)(t6.A, {
                     childRef: this.ref,
                     tutorialId: "voice-conversations",
                     position: "right",
@@ -4462,7 +4462,7 @@ class s5 extends nI {
         );
     }
 }
-let s6 = J((0, lB.F)(s5));
+let s8 = J((0, lB.F)(s6));
 function s4(e) {
     let {
             guild: t,
@@ -4524,7 +4524,7 @@ function s4(e) {
             enableActivities: !0,
         }),
         T = I && null == M;
-    return (0, s.jsx)(s6, {
+    return (0, s.jsx)(s8, {
         channelName: p,
         embeddedApps: m,
         nonEmbeddedActivityNames: f,
@@ -4937,7 +4937,7 @@ class rt extends r.PureComponent {
                 case tH.n.GUILD_VIBEGRATIONS:
                     return (0, s.jsx)(sL, { guild: l, selected: a === eu.VV.VIBEGRATIONS }, tH.n.GUILD_VIBEGRATIONS);
                 case tH.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
-                    return (0, s.jsx)(n5, { guild: l });
+                    return (0, s.jsx)(n6, { guild: l });
                 case tH.n.CHANNELS_AND_ROLES:
                     return (0, s.jsx)(
                         nQ,
@@ -5061,7 +5061,7 @@ class rt extends r.PureComponent {
                 return (0, s.jsx)(iI, { channel: x, guild: l, position: C.position, selected: a === C.id }, N);
             case B.rbe.GUILD_CATEGORY:
                 if (t !== c.voiceChannelsSectionNumber) return null;
-                return (0, s.jsx)(t8, { channel: x }, `readonly-${x.id}`);
+                return (0, s.jsx)(t5, { channel: x }, `readonly-${x.id}`);
             case B.rbe.PUBLIC_THREAD:
             case B.rbe.PRIVATE_THREAD:
             case B.rbe.ANNOUNCEMENT_THREAD:

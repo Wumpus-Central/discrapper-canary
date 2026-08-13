@@ -6,7 +6,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(435558),
     o = n.n(l),
-    d = n(461376),
+    d = n(53466),
     c = n(621466),
     u = n(452027),
     _ = n(259678),
@@ -104,11 +104,11 @@ class T extends r.PureComponent {
                 barStyles: S,
                 fillStyles: N,
                 mini: C,
-                hideBubble: O,
-                defaultValue: R,
+                hideBubble: R,
+                defaultValue: O,
                 orientation: L,
-                onValueRender: y,
-                renderMarker: D,
+                onValueRender: D,
+                renderMarker: y,
                 getAriaValueText: v,
                 barClassName: b,
                 grabberClassName: M,
@@ -128,7 +128,7 @@ class T extends r.PureComponent {
                 null != a && null != r
                     ? a.map((e, t) => {
                           let n = r[t],
-                              a = null != R && R === n,
+                              a = null != O && O === n,
                               l = this.renderMark(n);
                           return (0, i.jsx)(
                               "div",
@@ -140,8 +140,8 @@ class T extends r.PureComponent {
                                   }),
                                   style: { left: `${e}%` },
                                   children:
-                                      null != D
-                                          ? D(n)
+                                      null != y
+                                          ? y(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("div", { className: I.markValue, children: l }),
@@ -155,7 +155,7 @@ class T extends r.PureComponent {
                           );
                       })
                     : null,
-            j = null != y ? y(e) : `${V.toFixed(0)}%`,
+            j = null != D ? D(e) : `${V.toFixed(0)}%`,
             W = v?.(e) ?? void 0;
         return (0, i.jsx)(u.D, {
             ...F,
@@ -215,7 +215,7 @@ class T extends r.PureComponent {
                                     (0, i.jsx)("div", {
                                         className: I.track,
                                         children: (0, i.jsx)(E.m, {
-                                            __unsupportedReactNodeAsText: O || p ? null : j,
+                                            __unsupportedReactNodeAsText: R || p ? null : j,
                                             forceOpen: t || (n && h.Ay.keyboardModeEnabled),
                                             positionKey: B,
                                             children: (0, i.jsx)("div", {

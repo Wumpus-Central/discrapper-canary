@@ -685,8 +685,8 @@ function e6(e) {
         ],
     });
 }
-var e7 = n(702841),
-    e5 = n(912592),
+var e5 = n(702841),
+    e7 = n(912592),
     e4 = n(890856),
     e9 = n(761508),
     te = n(910425),
@@ -897,7 +897,7 @@ function tT(e) {
 var tk = n(435558),
     tF = n.n(tk),
     tG = n(749314),
-    tU = n(682577),
+    tU = n(53466),
     tw = n(311283),
     tP = n(717421),
     tK = n(933832),
@@ -1005,8 +1005,8 @@ var t3 = n(350527),
     t2 = n(218152),
     t8 = n(970278),
     t6 = n(747926),
-    t7 = n(935208),
-    t5 = n(37411),
+    t5 = n(935208),
+    t7 = n(37411),
     t4 = n(159574);
 function t9(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
@@ -1017,19 +1017,19 @@ function t9(e) {
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return t7.default.compare(n, t.oldestReadMessageId) > 0;
+                        return t5.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
                         return ee.A.getChannel(t);
                     })
                     .filter(ey.Vq)
-                    .sort((e, t) => t7.default.compare(e.id, t.id))
+                    .sort((e, t) => t5.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         a = r.useCallback((e, t) => {
-            (0, t6.JA)(e, t, t5.H9.INBOX);
+            (0, t6.JA)(e, t, t7.H9.INBOX);
         }, []);
     return (
         r.useEffect(() => {
@@ -1130,7 +1130,7 @@ let nI = r.memo(function e(t) {
         I = (0, nh.Ay)(l),
         _ = (0, N.bG)(
             [ee.A],
-            () => l.hasFlag(eK.pr7.HAS_THREAD) && ee.A.getChannel(t7.default.castMessageIdAsChannelId(l.id)),
+            () => l.hasFlag(eK.pr7.HAS_THREAD) && ee.A.getChannel(t5.default.castMessageIdAsChannelId(l.id)),
         ),
         M = l.type === eK.lAJ.THREAD_STARTER_MESSAGE && g.state === nd.a.LOADED && null != x,
         b = !M && void 0 === n,
@@ -1464,13 +1464,13 @@ function n$(e, t) {
             .toArray()
             .filter(
                 (t) =>
-                    t7.default.compare(t.id, e.oldestReadMessageId) > 0 &&
-                    0 >= t7.default.compare(t.id, e.newestUnreadMessageId),
+                    t5.default.compare(t.id, e.oldestReadMessageId) > 0 &&
+                    0 >= t5.default.compare(t.id, e.newestUnreadMessageId),
             );
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && n) return e;
     let a = null != s.getAfter(e.oldestReadMessageId) || l[0]?.id === e.oldestUnreadMessageId,
         i = l[l.length - 1],
-        r = t7.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
+        r = t5.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
     return {
         ...e,
         messages: l,
@@ -1527,13 +1527,13 @@ function nQ(e, t, n, s) {
     if (null == a) {
         let e = et.A.getGuild(l.guild_id);
         if (null == e || null == e.joinedAt) return;
-        a = t7.default.fromTimestamp(e.joinedAt.getTime());
+        a = t5.default.fromTimestamp(e.joinedAt.getTime());
     }
     let i = es.Ay.getOldestUnreadMessageId(s),
         r = es.Ay.lastMessageId(s),
         d = es.Ay.getMentionCount(s),
         c = d > 0 || l.isPrivate();
-    if (null == r || t7.default.compare(a, r) >= 0) return;
+    if (null == r || t5.default.compare(a, r) >= 0) return;
     let o = {
         guildId: n,
         channelId: s,
@@ -1553,13 +1553,13 @@ function nQ(e, t, n, s) {
             if (s.isPrivate()) return 1;
             if (es.Ay.getMentionCount(t) > 0) return es.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
-                let e = t7.default.extractTimestamp(n);
+                let e = t5.default.extractTimestamp(n);
                 if (Date.now() - e > n1) return 8;
                 if (Date.now() - e > n0) return 6;
             }
             if (s.isThread()) {
                 let e = (0, nP.l)(s);
-                return e === t5.CP.ALL_MESSAGES ? 4 : e === t5.CP.NO_MESSAGES ? 7 : 5;
+                return e === t7.CP.ALL_MESSAGES ? 4 : e === t7.CP.NO_MESSAGES ? 7 : 5;
             }
             {
                 let n = nY.Ay.getChannelMessageNotifications(e, t),
@@ -1615,7 +1615,7 @@ function n6(e) {
         }),
     });
 }
-function n7(e) {
+function n5(e) {
     let { channel: t, channelRecord: n, gotoChannel: s } = e,
         l = ef.hH.useSetting(),
         a = 0 === t.messages.length || nt()(t.messages[0].timestamp).isSame(nt()(), "day"),
@@ -1634,7 +1634,7 @@ function n7(e) {
     let u = o[o.length - 1];
     return (
         null != u &&
-            0 > t7.default.compare(u.id, t.newestUnreadMessageId) &&
+            0 > t5.default.compare(u.id, t.newestUnreadMessageId) &&
             r.push(
                 (0, i.jsx)(
                     "div",
@@ -1653,7 +1653,7 @@ function n7(e) {
         (0, i.jsx)("div", { className: n3.DZ, children: r })
     );
 }
-let n5 = r.memo(function (e) {
+let n7 = r.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             s = r.useRef(null),
             [[l, a], d] = r.useState([0, 0]),
@@ -1761,7 +1761,7 @@ let n5 = r.memo(function (e) {
                     collapsed: t.collapsed,
                     children:
                         "messages" === t.type
-                            ? (0, i.jsx)(n7, { channel: t, channelRecord: a, gotoChannel: d })
+                            ? (0, i.jsx)(n5, { channel: t, channelRecord: a, gotoChannel: d })
                             : "forum" === t.type
                               ? (0, i.jsx)(t9, { channel: t, channelRecord: a, deleteChannel: s })
                               : null,
@@ -1932,7 +1932,7 @@ function ss(e) {
     ),
     0 === S.length)
         ? (0, i.jsx)(tM, {
-              Icon: e5.K,
+              Icon: e7.K,
               header: ei.intl.string(ei.t["6XMM+D"]),
               tip: tj().os?.family === "OS X" ? ei.intl.string(ei.t.w9uDOW) : ei.intl.string(ei.t.BiUJC6),
           })
@@ -1992,7 +1992,7 @@ function ss(e) {
                                                     )),
                                           o.push(
                                               (0, i.jsx)(
-                                                  n5,
+                                                  n7,
                                                   {
                                                       channel: e,
                                                       markChannelRead: s,
@@ -2021,7 +2021,7 @@ function sl(e) {
     return (0, i.jsxs)("div", {
         className: st.d$,
         children: [
-            (0, i.jsx)("div", { className: st.cm, children: (0, i.jsx)(e5.K, { size: "md", color: "currentColor" }) }),
+            (0, i.jsx)("div", { className: st.cm, children: (0, i.jsx)(e7.K, { size: "md", color: "currentColor" }) }),
             (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)(y.D, {
@@ -2051,7 +2051,7 @@ function sl(e) {
 }
 function sa() {
     return (0, i.jsx)(tM, {
-        Icon: e5.K,
+        Icon: e7.K,
         disableStars: !0,
         header: ei.intl.string(ei.t["KG/ynf"]),
         tip: ei.intl.string(ei.t.cvcKzX),
@@ -2065,14 +2065,14 @@ function sd(e) {
     let { tab: t, setTab: n, closePopout: s } = e,
         l = (0, ep.jv)("RecentsPopout"),
         a = (0, te.Sc)(),
-        r = (0, e7.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
+        r = (0, e5.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
     return (0, i.jsxs)("div", {
         className: sr.wx,
         children: [
             (0, i.jsxs)("div", {
                 className: sr.qd,
                 children: [
-                    (0, i.jsx)(e5.K, { size: "md", color: "currentColor", className: sr.yH }),
+                    (0, i.jsx)(e7.K, { size: "md", color: "currentColor", className: sr.yH }),
                     (0, i.jsx)(y.D, {
                         className: sr.Hi,
                         variant: "text-lg/semibold",

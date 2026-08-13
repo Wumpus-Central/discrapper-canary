@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(53466),
     o = n(113325),
     d = n(259678),
     c = n(707554),
@@ -28,26 +28,26 @@ function A(e) {
             trackingProps: N,
             children: C,
         } = e,
-        O = r.useId(),
-        R = r.useMemo(() => ({ id: O, headingId: `heading-${O}`, onClose: g, dismissable: T }), [T, O, g]),
+        R = r.useId(),
+        O = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: g, dismissable: T }), [T, R, g]),
         L = (0, _.kS)(t, n),
-        y = r.useRef(null);
+        D = r.useRef(null);
     return (0, i.jsx)(u.V.Provider, {
-        value: R,
+        value: O,
         children: (0, i.jsx)(o.lG, {
-            id: O,
+            id: R,
             role: f,
             "aria-label": p,
-            "aria-labelledby": null != p ? void 0 : R.headingId,
+            "aria-labelledby": null != p ? void 0 : O.headingId,
             returnRef: I,
             trackingProps: N,
             trackingComponentName: "Modal",
             children: (0, i.jsx)(d.xp, {
-                containerRef: y,
+                containerRef: D,
                 children: (0, i.jsx)(c.F, {
                     forceLevel: 1,
                     children: (0, i.jsxs)("div", {
-                        ref: y,
+                        ref: D,
                         className: s()(E.outerContainer, { [E.fullScreenOnMobile]: h }),
                         children: [
                             S,

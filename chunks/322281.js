@@ -75,7 +75,7 @@ var z = s(554146),
     ee = s(131168),
     et = s(482589),
     es = s(511484),
-    ei = s(159265),
+    ei = s(53466),
     en = s(661531),
     ea = s(717421),
     el = s(331322),
@@ -281,7 +281,7 @@ function e3(e) {
             return (s) => (0, c.jsx)(e, { ...s, startingScreen: t });
         });
 }
-function e5(e) {
+function e8(e) {
     let { user: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, eZ.A)({ userId: t.id, size: eK._3.SIZE_24 });
     return (0, c.jsx)(
@@ -290,7 +290,7 @@ function e5(e) {
         t.id,
     );
 }
-function e8(e) {
+function e5(e) {
     let { slotIndex: t } = e;
     return (0, c.jsx)("div", { className: e6.p, children: t });
 }
@@ -302,10 +302,10 @@ function e9(e) {
             let e = [];
             for (let s = 0; s < e0.Z; s++)
                 if (t?.[s] !== void 0) {
-                    let i = (0, c.jsx)(e5, { user: t[s] }, t[s].id);
+                    let i = (0, c.jsx)(e8, { user: t[s] }, t[s].id);
                     e.push(i);
                 } else {
-                    let t = (0, c.jsx)(e8, { slotIndex: s + 1 }, s);
+                    let t = (0, c.jsx)(e5, { slotIndex: s + 1 }, s);
                     e.push(t);
                 }
             return e;
@@ -1545,8 +1545,8 @@ let t3 = function () {
         ],
     });
 };
-var t5 = s(325499),
-    t8 = s(562708),
+var t8 = s(325499),
+    t5 = s(562708),
     t9 = s(885574),
     t4 = s(43990),
     se = s(993077),
@@ -1621,8 +1621,8 @@ function sd(e) {
 function su(e) {
     let { glowing: t = !1 } = e;
     (0, st.A)({
-        type: t8.ImpressionTypes.VIEW,
-        name: t8.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+        type: t5.ImpressionTypes.VIEW,
+        name: t5.ImpressionNames.PERK_DISCOVERABILITY_CARD,
         properties: { name: si.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
     });
     let { analyticsLocations: i } = (0, j.Ay)(A.A.CROISSANT_PREMIUM_HERO_CARD),
@@ -1768,7 +1768,7 @@ function sy() {
         a = (0, sj.Zk)({ location: "useHardwarePartnerPerkCards" }),
         l = (0, sj.S9)({ location: "useHardwarePartnerPerkCards" }),
         r = null === (0, sE.N)(),
-        d = (0, t5.b)("useHardwarePartnerPerkCards"),
+        d = (0, t8.b)("useHardwarePartnerPerkCards"),
         { currentDate: u, nDaysInMonth: m } = (0, o.useMemo)(() => {
             let e = new Date();
             return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
@@ -1873,7 +1873,7 @@ var sD = s(166634);
 let sM = "xgpp";
 function sO(e) {
     let { glowingSectionId: t, glowingPerkId: s } = e,
-        i = (0, t5.b)("premium_subscriber_home_rewards"),
+        i = (0, t8.b)("premium_subscriber_home_rewards"),
         { callOfDutyCard: n, expiredCallOfDutyCard: a, logitechCard: l, steelseriesCard: r } = sy();
     if (!i) return null;
     let o = null != n || null != a || null != l || null != r;
@@ -2160,8 +2160,8 @@ var s1 = s(462887),
     s7 = s(259065),
     s6 = s(206835),
     s3 = s(591179),
-    s5 = s(462463),
-    s8 = s(878784),
+    s8 = s(462463),
+    s5 = s(878784),
     s9 = s(425713),
     s4 = s(696292),
     ie = s(192444),
@@ -2350,9 +2350,9 @@ function iL() {
         { analyticsLocations: i } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
         n = (0, s3.X)("useWhatsNewPerkCards"),
         { callOfDutyCard: a, expiredCallOfDutyCard: l, logitechCard: r, steelseriesCard: d } = sy(),
-        m = (0, t5.b)("premium_subscriber_home_rewards"),
+        m = (0, t8.b)("premium_subscriber_home_rewards"),
         { showEaPremiumMarketing: x } = (0, iE.z$)("useWhatsNewPerkCards"),
-        f = (0, s5.A)({ analyticsLocations: i }),
+        f = (0, s8.A)({ analyticsLocations: i }),
         p = (0, o.useCallback)(() => {
             (0, ey.openUserSettings)(eS.X.PROFILE_PANEL, { analyticsLocations: i }, () =>
                 (0, s7.L)({ analyticsLocations: i }),
@@ -2369,18 +2369,18 @@ function iL() {
         b = (function (e) {
             let { fractionalState: t } = (0, eP.A)(),
                 s = t === tF.xc.FP_ONLY,
-                i = (0, s8.$F)(),
-                n = (0, s8.Xb)(),
-                a = i?.status === s8.Wo.UPCOMING || s,
+                i = (0, s5.$F)(),
+                n = (0, s5.Xb)(),
+                a = i?.status === s5.Wo.UPCOMING || s,
                 l = (0, s9.N)(i?.id),
                 r = (function () {
-                    let e = (0, s8.$F)(),
+                    let e = (0, s5.$F)(),
                         t = (0, iv.P)(),
-                        s = (0, s8.Xb)();
+                        s = (0, s5.Xb)();
                     if (null == e || null == t || null == s) return null;
                     let i = ti()(),
                         n = ti()(s),
-                        a = e.status === s8.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
+                        a = e.status === s5.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
                         l = t.tenureReqNumMonths,
                         r = n.clone().add(a, "months"),
                         c = n.clone().add(l, "months").diff(r);
@@ -2395,7 +2395,7 @@ function iL() {
                 null == i
                     ? s && (t = (0, i_.T)(tF.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
                     : (t =
-                          i.status === s8.Wo.UPCOMING
+                          i.status === s5.Wo.UPCOMING
                               ? ex.intl.formatToPlainString(ex.t.a1eKDi, { days: d?.days ?? 0 })
                               : ((function (e, t) {
                                     if (null != e && null != t) {
@@ -2552,7 +2552,7 @@ function iV(e) {
         s = (function () {
             let e = (0, s2.DP)(),
                 t = (0, s3.X)("useFavoritesPerkCards"),
-                s = (0, s8.Lh)(),
+                s = (0, s5.Lh)(),
                 i = (0, s9.N)(s)?.standard ?? null,
                 { analyticsLocations: n } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
                 a = (0, s6.A)({ scrollPosition: ik._F.TRY_IT_OUT, analyticsLocations: n }),
@@ -2571,7 +2571,7 @@ function iV(e) {
                 m = (0, o.useCallback)(() => {
                     (0, ey.openUserSettings)(eS.X.SOUNDBOARD_CATEGORY, { analyticsLocations: n });
                 }, [n]),
-                g = (0, s5.A)({ analyticsLocations: n }),
+                g = (0, s8.A)({ analyticsLocations: n }),
                 x = (0, o.useCallback)(() => {
                     (0, ey.openUserSettings)(eS.X.PROFILE_PANEL, { analyticsLocations: n }, () =>
                         (0, s7.L)({ analyticsLocations: n }),
@@ -3013,7 +3013,7 @@ let i7 = (0, w.mj)({
 var i6 = s(860839);
 let i3 =
     "https://cdn.discordapp.com/assets/content/dfb187cfa9d267774f50c4f67cb7628658cefc11db41c6a04c08fc5aadc9dbcc.png";
-function i5(e) {
+function i8(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
@@ -3025,7 +3025,7 @@ function i5(e) {
         role: n ?? "img",
     });
 }
-var i8 = s(783420),
+var i5 = s(783420),
     i9 = s(204413),
     i4 = s(245383),
     ne = s(824069),
@@ -3149,7 +3149,7 @@ function np(e) {
     let { skuId: t, selectedPlanId: s, subscribeButtonProps: i } = e,
         n = null == s || !0 === i.disabled,
         a = null == s ? "secondary" : i.variant;
-    return (0, c.jsx)(i8.A, {
+    return (0, c.jsx)(i5.A, {
         subscriptionTier: t,
         initialPlanId: s,
         shouldDisallowPlanSelection: !0,
@@ -3359,7 +3359,7 @@ function nh(e) {
                   (0, c.jsx)("div", {
                       className: nf.kX,
                       "aria-hidden": !0,
-                      children: (0, c.jsx)(i5, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
+                      children: (0, c.jsx)(i8, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
                   b,
               ],
@@ -3382,7 +3382,7 @@ function nN(e) {
                   premiumGroupProductName: (0, ih.DP)(),
               })
             : ex.intl.string(ex.t["2pG5Ga"]),
-        p = (0, c.jsx)(i8.A, {
+        p = (0, c.jsx)(i5.A, {
             subscriptionTier: tF.pe.TIER_2,
             initialPlanId: tF.gD.PREMIUM_GROUP_MONTH,
             children: (e) => {
@@ -3891,7 +3891,7 @@ function nW(e) {
     });
 }
 let nK = o.memo(function (e) {
-        let t = (0, t5.b)("premium_marketing_bento"),
+        let t = (0, t8.b)("premium_marketing_bento"),
             { whatsNewBoxes: s } = (0, nV.Ay)(t);
         return (0, c.jsx)(nW, {
             boxLayout: s,
@@ -4081,8 +4081,8 @@ let n3 = o.memo(
         });
     }),
 );
-var n5 = s(820081),
-    n8 = s(140735),
+var n8 = s(820081),
+    n5 = s(140735),
     n9 = s(401432),
     n4 = s(580630),
     ae = s(795269),
@@ -4095,14 +4095,14 @@ function aa(e) {
     return t
         ? (0, c.jsxs)(c.Fragment, {
               children: [
-                  (0, c.jsx)(n5.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
+                  (0, c.jsx)(n8.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
               ],
           })
         : (0, c.jsxs)(c.Fragment, {
               children: [
                   (0, c.jsx)(n9.a, { size: "xs", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t.l4qZrp) }),
+                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t.l4qZrp) }),
               ],
           });
 }
@@ -4212,7 +4212,7 @@ let ad = function (e) {
             p = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_0),
             h = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_2),
             N = (function () {
-                let e = (0, t5.b)("premium_marketing_comparison"),
+                let e = (0, t8.b)("premium_marketing_comparison"),
                     t = [
                         {
                             id: 10,
@@ -4655,7 +4655,7 @@ let af = () => {
     });
 };
 var ap = s(862482),
-    ah = s(528464),
+    ah = s(412260),
     aN = s(662367),
     aA = s(374403),
     aj = s(396375),

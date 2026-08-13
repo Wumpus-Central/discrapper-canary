@@ -3,7 +3,7 @@ var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(682577),
+    a = n(53466),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -13,13 +13,13 @@ let m = new d.E([], x.$G.QUEST_BAR_RENDERED, { location: "quest bar rendered" })
 var C = n(186111),
     p = n(859703),
     f = n(24001),
-    E = n(514547),
+    E = n(309593),
     h = n(971276),
     g = n(851936),
     _ = n(792620),
     j = n(557637),
     A = n(73473),
-    R = n(764336),
+    R = n(201805),
     S = n(617986),
     v = n(939249),
     T = n(834730),
@@ -858,7 +858,7 @@ var eV = n(889137),
     eD = n(743368),
     eG = n(921853),
     eW = n(607470),
-    eH = n(352774),
+    eH = n(396813),
     e$ = n(405670),
     ez = n(192444),
     eK = n(112142),
@@ -870,10 +870,10 @@ var eV = n(889137),
     e1 = n(442734),
     e2 = n(139384),
     e3 = n(114046),
-    e7 = n(695366),
-    e6 = n(274670),
-    e4 = n(144779),
-    e9 = n(30370),
+    e6 = n(695366),
+    e7 = n(274670),
+    e9 = n(144779),
+    e4 = n(30370),
     e5 = n(178540),
     e8 = n(104886),
     te = n(18437),
@@ -889,8 +889,8 @@ function tl(e) {
         className: tr.Z0,
         onClick: () => {
             (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e6.r)({
-                      type: e4.F.CLICK_INTERNAL,
+                ? (0, e7.r)({
+                      type: e9.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -935,8 +935,8 @@ function tc(e) {
             questId: t.id,
             beforeRequest: () => {
                 (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e6.r)({
-                          type: e4.F.CLICK_INTERNAL,
+                    ? (0, e7.r)({
+                          type: e9.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -970,7 +970,7 @@ function tc(e) {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
                                   if (e.type === e3._.EXPIRED_CREDENTIAL) {
-                                      let r = e9.A.getAccount(e.connected_account_id, e.connected_account_type),
+                                      let r = e4.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, F.IG)(e),
                                           i = (0, F.$J)(e);
                                       return (0, s.jsx)(
@@ -1015,7 +1015,7 @@ function tc(e) {
             (0, s.jsxs)("div", {
                 className: to.oK,
                 children: [
-                    (0, s.jsx)(e7.E, {
+                    (0, s.jsx)(e6.E, {
                         size: "custom",
                         color: "currentColor",
                         className: 0 === d.length ? to.pH : to.JA,
@@ -1121,7 +1121,7 @@ function tf(e) {
             (0, s.jsxs)("div", {
                 className: tp.wx,
                 children: [
-                    (0, s.jsx)(e7.E, {
+                    (0, s.jsx)(e6.E, {
                         size: "custom",
                         color: "currentColor",
                         className: tp.Kk,

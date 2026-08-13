@@ -6,7 +6,7 @@ var i,
     s = n(503698),
     l = n.n(s),
     o = n(333007),
-    d = n(461376),
+    d = n(53466),
     c = n(607399),
     u = n(621466),
     _ = n(844222),
@@ -94,8 +94,8 @@ let N = (e) => {
         });
     },
     C = { scale: 0.95, opacity: 0 },
-    O = { scale: 1, opacity: 0 },
-    R = { scale: 1, opacity: 1 };
+    R = { scale: 1, opacity: 0 },
+    O = { scale: 1, opacity: 1 };
 function L(e) {
     let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...s } = e,
         { reducedMotion: l } = a.useContext(_.C);
@@ -104,9 +104,9 @@ function L(e) {
         {
             keys: (e) => (e ? "tooltip" : "empty"),
             config: h,
-            from: l.enabled ? O : C,
-            enter: R,
-            leave: l.enabled ? O : C,
+            from: l.enabled ? R : C,
+            enter: O,
+            leave: l.enabled ? R : C,
             onRest: n,
         },
         "animate-always",

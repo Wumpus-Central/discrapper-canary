@@ -1,13 +1,13 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => g });
 var r = n(477900),
     l = n(582128),
     i = n(717421),
-    s = n(17928),
-    u = n(287809),
+    u = n(17928),
+    s = n(287809),
     a = n(801365),
     o = n(503698),
     c = n.n(o),
-    d = n(461376),
+    d = n(53466),
     E = n(939249),
     f = n(834730),
     _ = n(613373),
@@ -21,25 +21,25 @@ let v = { duration: 250 },
         let {
                 currentPx: t,
                 indicator: n,
-                isAnimated: s,
-                quest: u,
+                isAnimated: u,
+                quest: s,
                 sourceQuestContent: a,
                 expansionSpring: o,
                 onClick: S,
                 onMouseEnter: A,
-                onMouseLeave: g,
+                onMouseLeave: h,
             } = e,
-            { label: h, targetSec: I, leftPx: T, rightPx: D, index: R } = n,
-            x = u.userStatus?.completedAt != null,
+            { label: g, targetSec: I, leftPx: T, rightPx: D, index: R } = n,
+            x = s.userStatus?.completedAt != null,
             [L, O] = l.useState(!1),
             P = T - 4,
-            N = t >= P ? Math.min(1, (t - P) / (D - P)) : 0,
-            b = 0 === R && !x,
-            { fill: k } = (0, i.z)({
-                fill: 100 * N,
+            k = t >= P ? Math.min(1, (t - P) / (D - P)) : 0,
+            N = 0 === R && !x,
+            { fill: b } = (0, i.z)({
+                fill: 100 * k,
                 config: v,
                 onRest: () => {
-                    N <= 0 && O(!1);
+                    k <= 0 && O(!1);
                 },
                 onStart: () => {
                     O(!0);
@@ -55,11 +55,11 @@ let v = { duration: 250 },
                   }
                 : void 0;
         return (0, r.jsxs)(d.animated.div, {
-            className: c()(C.ck, { [C.a]: b && L, [C.C9]: !b && L }),
+            className: c()(C.ck, { [C.a]: N && L, [C.C9]: !N && L }),
             style: {
-                left: s ? o.to((e) => T - e) : T,
-                "--custom-indicator-size": s ? o.to((e) => `${26 + 2 * e}px`) : "26px",
-                "--custom-indicator-fill": k.to((e) => e),
+                left: u ? o.to((e) => T - e) : T,
+                "--custom-indicator-size": u ? o.to((e) => `${26 + 2 * e}px`) : "26px",
+                "--custom-indicator-fill": b.to((e) => e),
             },
             onMouseDown: y,
             children: [
@@ -69,10 +69,10 @@ let v = { duration: 250 },
                     onClick: V,
                     onMouseDown: y,
                     onMouseEnter: A,
-                    onMouseLeave: g,
+                    onMouseLeave: h,
                     children: (0, r.jsx)(p.A, {
                         fullWidth: !0,
-                        quest: u,
+                        quest: s,
                         questContent: m.uF.VIDEO_MODAL,
                         sourceQuestContent: a,
                         autoplay: !1,
@@ -81,21 +81,21 @@ let v = { duration: 250 },
                 (0, r.jsxs)("div", {
                     className: C.Ru,
                     role: "tooltip",
-                    "aria-label": null != h ? `${(0, _.rB)(I)} - ${h}` : (0, _.rB)(I),
+                    "aria-label": null != g ? `${(0, _.rB)(I)} - ${g}` : (0, _.rB)(I),
                     children: [
                         (0, r.jsx)(f.E, {
                             variant: "text-xs/normal",
                             color: "text-overlay-light",
                             children: (0, _.rB)(I),
                         }),
-                        null != h &&
+                        null != g &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("span", { className: C.AE, "aria-hidden": "true" }),
                                     (0, r.jsx)(f.E, {
                                         variant: "text-xs/normal",
                                         color: "text-overlay-light",
-                                        children: h,
+                                        children: g,
                                     }),
                                 ],
                             }),
@@ -104,21 +104,21 @@ let v = { duration: 250 },
             ],
         });
     },
-    g = { tension: 500, friction: 30, clamp: !0 };
-function h(e) {
+    h = { tension: 500, friction: 30, clamp: !0 };
+function g(e) {
     let { targetSec: t, quest: n, sourceQuestContent: o, questConfig: c, clickable: d = !1 } = e,
-        E = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        E = (0, u.bG)([s.default], () => s.default.getCurrentUser()),
         f = l.useMemo(() => c?.features.includes(S.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [c?.features]),
         [_, m] = l.useState(null),
         p = l.useRef(null),
         [{ expansion: C }, v] = (0, i.z)(() => ({
             expansion: 0,
-            config: g,
+            config: h,
             onRest: () => {
                 null == p.current && m(null);
             },
         })),
-        h = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 (p.current = e), null != e ? (m(e), v({ expansion: 4 })) : v({ expansion: 0 });
             },
@@ -128,24 +128,24 @@ function h(e) {
         T = l.useMemo(() => (f ? (0, a.mq)(c, E) : void 0), [c, f, E]),
         D = l.useCallback(
             (e, l, i) => {
-                let s = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
+                let u = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
                 return (0, r.jsx)(
                     A,
                     {
                         currentPx: l,
-                        indicator: s,
+                        indicator: u,
                         isAnimated: _ === e.index,
                         expansionSpring: C,
                         quest: n,
                         sourceQuestContent: o,
-                        onMouseEnter: () => h(e.index),
-                        onMouseLeave: () => h(null),
+                        onMouseEnter: () => g(e.index),
+                        onMouseLeave: () => g(null),
                         onClick: i,
                     },
                     `indicator-${e.index}`,
                 );
             },
-            [t, T, _, C, n, o, h],
+            [t, T, _, C, n, o, g],
         );
     if (f) return { indicators: I, animatingIndex: _, expansionSpring: C, hoverExpansionPx: 4, renderIndicator: D };
 }

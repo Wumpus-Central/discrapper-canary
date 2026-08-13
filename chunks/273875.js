@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(53466),
     o = n(113325),
     d = n(315629),
     c = n(17928),
@@ -28,11 +28,11 @@ function S(e) {
             position: S = "top",
             align: N,
             alignmentStrategy: C = "trigger-center",
-            caretConfig: O,
-            hasVideo: R = !1,
+            caretConfig: R,
+            hasVideo: O = !1,
             gradientColor: L,
-            gradientOffsetBottom: y = 0.4,
-            onPositionChange: D,
+            gradientOffsetBottom: D = 0.4,
+            onPositionChange: y,
             onNudgeChange: v,
             scrollBehavior: b = "sticky",
             modal: M = !1,
@@ -47,24 +47,24 @@ function S(e) {
         { ref: H, width: j, height: W } = (0, _.Ay)(),
         Y = (0, c.bG)([E.A], () => E.A.getLayers()),
         K = Y[Y.length - 1] ?? "base",
-        $ = r.useRef(D);
+        $ = r.useRef(y);
     r.useEffect(() => {
-        $.current = D;
-    }, [D]);
+        $.current = y;
+    }, [y]);
     let z = r.useCallback((e) => {
             null != e && e !== V.current && ((V.current = e), F(e), $.current?.(e));
         }, []),
-        q = r.useMemo(
+        Z = r.useMemo(
             () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === K,
             [n, K],
         );
     r.useEffect(() => {
-        q && a ? x(!0) : q || x(!1);
-    }, [q, a]),
+        Z && a ? x(!0) : Z || x(!1);
+    }, [Z, a]),
         r.useEffect(() => {
             z(S);
         }, [S, z]);
-    let Z = (function (e) {
+    let q = (function (e) {
             let { shouldShow: t, caretPosition: n, onExitComplete: i } = e,
                 { reducedMotion: a } = r.useContext(h.C),
                 { config: s, ...l } = (function (e, t) {
@@ -145,9 +145,9 @@ function S(e) {
                         default:
                             return 0;
                     }
-                })(O?.align ?? "center", k, j, W);
-        }, [C, O, k, j, W]),
-        J = r.useMemo(() => ({ position: k, caretConfig: O ?? { align: "center" } }), [k, O]);
+                })(R?.align ?? "center", k, j, W);
+        }, [C, R, k, j, W]),
+        J = r.useMemo(() => ({ position: k, caretConfig: R ?? { align: "center" } }), [k, R]);
     return (0, i.jsx)(u.$, {
         targetElementRef: n,
         shouldShow: G,
@@ -170,14 +170,14 @@ function S(e) {
             return (
                 z(r),
                 a !== B.current && ((B.current = a), v?.(a)),
-                Z((e, r) => {
+                q((e, r) => {
                     if (!r) return null;
                     let u = (0, i.jsx)(o.lG, {
                         ...c,
                         setDialogRef: n,
                         modal: M,
                         className: s()(null != L ? T.popoverContentWithGradient : T.popover, {
-                            [T["popover--video"]]: R,
+                            [T["popover--video"]]: O,
                         }),
                         returnRef: P,
                         children: (0, i.jsx)(m.Provider, { value: J, children: t }),
@@ -195,7 +195,7 @@ function S(e) {
                         children:
                             null != L
                                 ? (0, i.jsx)(d.h, {
-                                      offsetBottom: y,
+                                      offsetBottom: D,
                                       color: L,
                                       className: T.popoverGradientWrapper,
                                       children: u,

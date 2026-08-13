@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => w, h: () => D });
+n.d(t, { A: () => w, h: () => y });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(284009),
     o = n.n(l),
-    d = n(461376),
+    d = n(53466),
     c = n(17928),
     u = n(269115),
     _ = n(395899),
@@ -22,12 +22,12 @@ var i = n(477900),
     S = n(68935),
     N = n(375708),
     C = n(11224);
-function O(e) {
+function R(e) {
     return e.preventDefault();
 }
-let R = { tension: 1100, friction: 40 },
+let O = { tension: 1100, friction: 40 },
     L = { tension: 1600, friction: 60 };
-function y(e, t) {
+function D(e, t) {
     return r.cloneElement(e, {
         "data-type": "sticker",
         "data-id": t.id,
@@ -35,7 +35,7 @@ function y(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function D(e) {
+function y(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return N.intl.formatToPlainString(N.t.rk6pOw, { stickerName: t });
 }
@@ -88,9 +88,9 @@ function b(e) {
         I = r.useRef(null),
         p = r.useRef(null),
         [T, m] = r.useState(!0),
-        [g, O] = r.useState(!1),
-        R = r.useRef(!1);
-    R.current = t && c;
+        [g, R] = r.useState(!1),
+        O = r.useRef(!1);
+    O.current = t && c;
     let L = null == l ? (0, S.zg)(s) : l;
     return (o()(null != L, `Unable to determine sticker asset URL. Sticker ID: ${s.id}`),
     r.useEffect(() => {
@@ -112,10 +112,10 @@ function b(e) {
                             t || m(!1);
                         },
                         onError: () => {
-                            t || (m(!1), O(!0), h?.());
+                            t || (m(!1), R(!0), h?.());
                         },
                     })),
-                    R.current && p.current.setState(!0));
+                    O.current && p.current.setState(!0));
             })(),
             () => {
                 p.current?.drop(), (p.current = null), (t = !0);
@@ -131,7 +131,7 @@ function b(e) {
         : (0, i.jsx)("div", {
               role: "img",
               className: u,
-              "aria-label": g ? N.intl.string(N.t.yEvsK9) : D(s),
+              "aria-label": g ? N.intl.string(N.t.yEvsK9) : y(s),
               ref: E,
               children: (0, i.jsx)(v, {
                   hasError: g,
@@ -139,7 +139,7 @@ function b(e) {
                   maskAsset: _,
                   size: a,
                   withLoadingIndicator: A,
-                  children: y((0, i.jsx)("canvas", { className: C.ex, ref: I }), s),
+                  children: D((0, i.jsx)("canvas", { className: C.ex, ref: I }), s),
               }),
           });
 }
@@ -161,7 +161,7 @@ let M = (e) => {
             m = r.useRef(null),
             g = r.useRef(null),
             N = E ?? (0, S.zg)(n, { isPreview: !t || !A || !a, size: l }),
-            R = r.useCallback(() => {
+            O = r.useCallback(() => {
                 f(!1);
             }, []),
             L = r.useCallback(() => {
@@ -192,15 +192,15 @@ let M = (e) => {
                           maskAsset: d,
                           size: l,
                           withLoadingIndicator: _,
-                          children: y(
+                          children: D(
                               (0, i.jsx)("img", {
                                   className: C.r3,
-                                  alt: D(n),
+                                  alt: y(n),
                                   src: N,
                                   draggable: !1,
                                   onError: L,
-                                  onLoad: R,
-                                  onContextMenu: O,
+                                  onLoad: O,
+                                  onContextMenu: R,
                                   ref: g,
                               }),
                               n,
@@ -222,7 +222,7 @@ let M = (e) => {
             _ = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
             f = r.useRef(null),
             T = { transform: `scale(${_ ? 1 : 1 / n})`, opacity: 0 },
-            m = (0, A.p)(s, { ref: f, from: T, enter: { transform: "scale(1)", opacity: 1 }, leave: T, config: R }),
+            m = (0, A.p)(s, { ref: f, from: T, enter: { transform: "scale(1)", opacity: 1 }, leave: T, config: O }),
             g = r.useRef(null),
             S = (0, h.z)(
                 { ref: g, transform: s || _ ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: L },

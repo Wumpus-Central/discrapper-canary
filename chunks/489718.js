@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(735518),
     s = n(400274),
-    l = n(560952),
+    l = n(53466),
     o = n(60339),
     d = n(661531),
     c = n(717421),
@@ -22,8 +22,8 @@ let I = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     S = [0, 0.1, 0.4, 0.6, 0.9, 1],
     N = [0, 0.1, 0.9, 1],
     C = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    O = [0, 0.3, 0.5, 0.8, 0.9, 1];
-function R() {}
+    R = [0, 0.3, 0.5, 0.8, 0.9, 1];
+function O() {}
 function L(e) {
     let t,
         {
@@ -42,7 +42,7 @@ function L(e) {
         x = r.useRef(null),
         k = r.useRef(null),
         F = w ?? k,
-        V = (0, o.H)({ isSelected: n, onChange: v ?? R, isDisabled: L }),
+        V = (0, o.H)({ isSelected: n, onChange: v ?? O, isDisabled: L }),
         {
             inputProps: B,
             labelProps: H,
@@ -52,8 +52,8 @@ function L(e) {
         K = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         $ = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         z = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT).spring(),
-        q = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_ACTIVE).spring(),
-        Z = (0, u.r)(d.A.colors.SWITCH_BORDER_DEFAULT).spring(),
+        Z = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_ACTIVE).spring(),
+        q = (0, u.r)(d.A.colors.SWITCH_BORDER_DEFAULT).spring(),
         X = (0, u.r)(d.A.colors.SWITCH_BORDER_SELECTED_DEFAULT).spring(),
         Q = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_HOVER).spring(),
         J = (0, u.r)(d.A.colors.SWITCH_BACKGROUND_SELECTED_HOVER).spring(),
@@ -67,13 +67,13 @@ function L(e) {
             {
                 config: { duration: G.enabled ? 200 : 300 },
                 opacity: L ? 0.5 : 1,
-                state: j ? (n ? O[O.length - 2] : C[1]) : +!!n,
+                state: j ? (n ? R[R.length - 2] : C[1]) : +!!n,
             },
             "animate-always",
         );
     function eo(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
-        return n ? es.to({ range: O, output: t }) : es.to({ range: C, output: e });
+        return n ? es.to({ range: R, output: t }) : es.to({ range: C, output: e });
     }
     let ed = (0, i.jsx)(l.animated.div, {
         ...(D ? {} : W),
@@ -83,11 +83,11 @@ function L(e) {
         "data-mana-component": "switch",
         style: {
             opacity: el,
-            backgroundColor: es.to({ range: N, output: [Y ? Q : K, $, q, Y ? J : z], extrapolate: "clamp" }),
+            backgroundColor: es.to({ range: N, output: [Y ? Q : K, $, Z, Y ? J : z], extrapolate: "clamp" }),
             border: "1px solid",
             borderColor: es.to({
                 range: N,
-                output: [Y ? ee : Z, Y ? ee : Z, Y ? et : X, Y ? et : X],
+                output: [Y ? ee : q, Y ? ee : q, Y ? et : X, Y ? et : X],
                 extrapolate: "clamp",
             }),
         },

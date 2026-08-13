@@ -1,38 +1,38 @@
-a.d(e, { A: () => k });
+a.d(s, { A: () => v });
 var r = a(477900),
     t = a(582128),
     i = a(503698),
     l = a.n(i),
-    n = a(461376),
-    o = a(717421),
-    c = a(834730),
+    n = a(53466),
+    c = a(717421),
+    o = a(834730),
     d = a(398025),
     h = a(419367),
     m = a(375708),
     u = a(740769);
-let k = t.forwardRef(function (s, e) {
+let v = t.forwardRef(function (e, s) {
     let {
             percentComplete: a,
             size: i = 42,
-            style: k = "default",
-            overlayText: p,
+            style: v = "default",
+            overlayText: k,
             overlayTextVariant: x = "text-lg/medium",
-            children: v,
+            children: p,
             useAltStyle: f = !1,
-        } = s,
-        { strokeWidth: g } = "small" === k ? { strokeWidth: 3 } : { strokeWidth: 4 },
+        } = e,
+        { strokeWidth: g } = "small" === v ? { strokeWidth: 3 } : { strokeWidth: 4 },
         N = i / 2,
         j = i / 2 - g / 2,
         y = 2 * Math.PI * j,
         b = y - a * y,
         w = t.useMemo(() => ({ strokeDasharray: `${y} ${y}`, strokeDashoffset: b }), [y, b]),
-        { progressTextAnimation: W } = (0, o.z)({ progressTextAnimation: +(null != p && 1 !== a), config: h.N }),
+        { progressTextAnimation: W } = (0, c.z)({ progressTextAnimation: +(null != k && 1 !== a), config: h.N }),
         q = Math.round(100 * a),
         M = t.useMemo(() => (f ? "rgba(123, 194, 112, 1)" : "var(--status-positive)"), [f]),
-        B = t.useMemo(() => (f ? "rgba(108, 111, 124, 0.24)" : "var(--background-mod-strong)"), [f]);
+        A = t.useMemo(() => (f ? "rgba(108, 111, 124, 0.24)" : "var(--background-mod-strong)"), [f]);
     return (0, r.jsxs)("div", {
         className: u.A7,
-        ref: e,
+        ref: s,
         style: { width: i, height: i, padding: g + 2 },
         role: "progressbar",
         "aria-valuenow": q,
@@ -43,13 +43,13 @@ let k = t.forwardRef(function (s, e) {
             (0, r.jsxs)("div", {
                 className: u.vW,
                 children: [
-                    v,
+                    p,
                     (0, r.jsxs)(n.animated.div, {
                         style: { opacity: (0, d.a)(W), inset: g },
                         className: l()(u.rD, u.qk),
                         children: [
                             (0, r.jsx)("div", { className: l()(u.rD, u.LU) }),
-                            (0, r.jsx)(c.E, { variant: x, color: "text-strong", className: u.l_, children: p }),
+                            (0, r.jsx)(o.E, { variant: x, color: "text-strong", className: u.l_, children: k }),
                         ],
                     }),
                 ],
@@ -66,7 +66,7 @@ let k = t.forwardRef(function (s, e) {
                             r: j,
                             cx: N,
                             cy: N,
-                            stroke: B,
+                            stroke: A,
                         }),
                     (0, r.jsx)("circle", {
                         className: u.qB,
@@ -75,7 +75,7 @@ let k = t.forwardRef(function (s, e) {
                         r: j,
                         cx: N,
                         cy: N,
-                        stroke: B,
+                        stroke: A,
                     }),
                     (0, r.jsx)("circle", {
                         className: l()(u.qB, { [u.ee]: f }),

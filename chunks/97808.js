@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Js: () => M, Rb: () => O, d9: () => D, eu: () => v });
+n.d(t, { Js: () => M, Rb: () => R, d9: () => y, eu: () => v });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(53466),
     o = n(939249),
     d = n(866665),
     c = n(717421),
@@ -33,15 +33,15 @@ function C(e) {
         u = s.size - l - s.offset;
     return (0, i.jsx)("rect", { x: c, y: u, width: o, height: l, fill: "transparent", "aria-hidden": !0, ...a });
 }
-function O(e, t, n) {
+function R(e, t, n) {
     let { isTyping: i, isMobile: r, isVR: a } = n,
         s = (0, _.i0)(e.status, t, { isTyping: i, isMobile: r, isVR: a }),
         l = (i ? e.size - (s.width / 2 + e.status / 2) : e.size - s.width) - e.offset;
     return { ...s, x: l, y: e.size - s.height - e.offset };
 }
-function R(e, t, n, r) {
+function O(e, t, n, r) {
     let { isMobile: a, isTyping: s, isVR: l } = r,
-        o = O(t, n, { isMobile: a, isTyping: s, isVR: l }),
+        o = R(t, n, { isMobile: a, isTyping: s, isVR: l }),
         d = (0, _.yi)(n, e),
         c = n === f.clD.ONLINE && l;
     if (!(a || c)) {
@@ -78,7 +78,7 @@ function L(e) {
         ...(0, _.v)({ status: t, size: s.status, isMobile: a, isTyping: i, topOffset: 2, leftOffset: 6 }),
     };
 }
-function y(e) {
+function D(e) {
     let {
             children: t,
             size: n,
@@ -93,11 +93,11 @@ function y(e) {
             ariaLabel: S,
             ariaHidden: N,
             status: C,
-            isMobile: O = !1,
-            isVR: R = !1,
+            isMobile: R = !1,
+            isVR: O = !1,
             isTyping: L = !1,
-            avatarDecoration: y,
-            typingOffset: D,
+            avatarDecoration: D,
+            typingOffset: y,
             specs: v,
         } = e,
         b = { width: (0, T.FT)(n), height: (0, T.FT)(n) },
@@ -113,7 +113,7 @@ function y(e) {
                                 status: (0, I.MU)(t, { isMobile: n, isVR: i }),
                             })
                           : e;
-                  })(S, C, O, R),
+                  })(S, C, R, O),
         P = v.size * p.Xq,
         U = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -226,14 +226,14 @@ function y(e) {
                     return A.hW.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
-        })(C, n, O, L, R);
-    (0, h.HZ)(null != y ? U : null);
+        })(C, n, R, L, O);
+    (0, h.HZ)(null != D ? U : null);
     let w =
-        null != y &&
+        null != D &&
         (0, i.jsx)("svg", {
-            width: P + D,
+            width: P + y,
             height: P,
-            viewBox: `0 0 ${P + D} ${P}`,
+            viewBox: `0 0 ${P + y} ${P}`,
             className: g.DX,
             "aria-hidden": !0,
             children: (0, i.jsx)("foreignObject", {
@@ -242,7 +242,7 @@ function y(e) {
                 width: P,
                 height: P,
                 mask: null != U ? `url(#${U})` : void 0,
-                children: (0, i.jsx)("img", { className: g.M, src: y, alt: " ", "aria-hidden": !0 }),
+                children: (0, i.jsx)("img", { className: g.M, src: D, alt: " ", "aria-hidden": !0 }),
             }),
         });
     return null != r || null != a
@@ -272,7 +272,7 @@ function y(e) {
               children: [t, w],
           });
 }
-let D = r.forwardRef((e, t) => {
+let y = r.forwardRef((e, t) => {
     let { src: n, isSpeaking: r, className: a, voiceDb: l = -1 / 0, speakingStylesConfig: o } = e,
         d = (0, E.v)({ isSpeaking: r, voiceDb: l, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...o });
     return (0, i.jsxs)(
@@ -431,7 +431,7 @@ function v(e) {
     return (
         (0, h.HZ)(V),
         (0, h.HZ)(B),
-        (0, i.jsx)(y, {
+        (0, i.jsx)(D, {
             ...e,
             ariaLabel: M,
             ariaHidden: b,
@@ -452,7 +452,7 @@ function v(e) {
                         width: G.size,
                         height: G.size,
                         mask: `url(#${V})`,
-                        children: (0, i.jsx)(D, {
+                        children: (0, i.jsx)(y, {
                             ref: p,
                             src: t,
                             isSpeaking: m,
@@ -461,7 +461,7 @@ function v(e) {
                             className: P,
                         }),
                     }),
-                    null != w && null != v ? R(v, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
+                    null != w && null != v ? O(v, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
                     null != w
                         ? (0, i.jsx)(d.m, {
                               text: C ? (0, I.MU)(w) : null,
@@ -472,7 +472,7 @@ function v(e) {
                               children: (0, i.jsxs)("g", {
                                   children: [
                                       (0, i.jsx)("rect", {
-                                          ...O(G, w, { isMobile: l, isTyping: c, isVR: o }),
+                                          ...R(G, w, { isMobile: l, isTyping: c, isVR: o }),
                                           fill: F,
                                           mask: `url(#${(0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o })})`,
                                           className: g.Hs,
@@ -507,7 +507,7 @@ function b(e) {
             voiceDb: f,
             speakingStylesConfig: p,
             size: m,
-            src: O,
+            src: R,
             status: v,
             statusColor: b,
             statusTooltip: M = !1,
@@ -529,8 +529,8 @@ function b(e) {
             avatarCutoutWidth: K,
             avatarCutoutHeight: $,
             avatarCutoutRadius: z,
-            fill: q,
-            ...Z
+            fill: Z,
+            ...q
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
         X = (0, T.FT)(m),
         Q = (0, T.Kj)(m),
@@ -547,7 +547,7 @@ function b(e) {
             N() ? "animate-always" : "animate-never",
             [k, v],
         );
-    return (0, i.jsx)(y, {
+    return (0, i.jsx)(D, {
         ...e,
         ariaLabel: G,
         ariaHidden: w,
@@ -576,15 +576,15 @@ function b(e) {
                     width: X,
                     height: X,
                     mask: `url(#${V})`,
-                    children: (0, i.jsx)(D, {
-                        src: O,
+                    children: (0, i.jsx)(y, {
+                        src: R,
                         isSpeaking: h,
                         voiceDb: f,
                         className: x,
                         speakingStylesConfig: p,
                     }),
                 }),
-                null != U && R(U, Q, v, { isMobile: o, isTyping: E, isVR: !1 }),
+                null != U && O(U, Q, v, { isMobile: o, isTyping: E, isVR: !1 }),
                 (0, i.jsx)(d.m, {
                     text: M ? (0, I.MU)(v) : null,
                     ariaHidden: !0,
@@ -606,8 +606,8 @@ function b(e) {
                                 viewBox: `0 0 ${J} ${ee}`,
                                 className: M ? g.Oi : void 0,
                                 children: [
-                                    (0, _.pF)(Z, Q.status, B),
-                                    (0, i.jsx)(l.animated.rect, { fill: q, width: J, height: ee, mask: `url(#${B})` }),
+                                    (0, _.pF)(q, Q.status, B),
+                                    (0, i.jsx)(l.animated.rect, { fill: Z, width: J, height: ee, mask: `url(#${B})` }),
                                     (0, i.jsx)(u.C, {
                                         ref: A,
                                         location: "Avatar",
@@ -626,7 +626,7 @@ function b(e) {
         }),
     });
 }
-D.displayName = "AvatarImg";
+y.displayName = "AvatarImg";
 let M = r.memo(function (e) {
     var t, n;
     let { statusColor: a, status: s, ...l } = e,

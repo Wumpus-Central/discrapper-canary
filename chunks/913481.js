@@ -1,7 +1,7 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => N });
 var i = n(477900),
     l = n(582128),
-    a = n(461376),
+    a = n(53466),
     s = n(17928),
     r = n(717421),
     o = n(775602),
@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(360729),
     p = n(967388),
     m = n(781137),
-    A = n(950075),
-    f = n(996752),
+    f = n(950075),
+    A = n(996752),
     x = n(662731),
     g = n(375708),
     C = n(241986);
@@ -20,7 +20,7 @@ let y = { x: 50, y: 50 };
 function j(e) {
     return Math.min(100, Math.max(0, e));
 }
-function v(e) {
+function I(e) {
     let { channelId: t, roomWidth: n, onPlace: s } = e,
         o = (0, l.useRef)(null),
         c = (0, l.useRef)(y),
@@ -65,20 +65,20 @@ function v(e) {
         })
     );
 }
-function E(e) {
+function v(e) {
     let { channelId: t, roomWidth: n, containerRef: s, pointerRef: o, onPlace: c } = e,
-        u = (0, f.F)(n).numericAvatarSize / 2,
+        u = (0, A.F)(n).numericAvatarSize / 2,
         [h, p] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u, config: { clamp: !0, tension: 300 } })),
-        A = (0, l.useRef)(!1);
+        f = (0, l.useRef)(!1);
     return (
         (0, l.useEffect)(() => {
             let e = s.current;
             if (null != e && o.current.hasValue) {
                 let t = e.getBoundingClientRect();
-                p({ x: o.current.x - t.left, y: o.current.y - t.top, immediate: !0 }), (A.current = !0);
+                p({ x: o.current.x - t.left, y: o.current.y - t.top, immediate: !0 }), (f.current = !0);
             }
             function n(e) {
-                p({ x: e.offsetX, y: e.offsetY, immediate: !A.current }), (A.current = !0);
+                p({ x: e.offsetX, y: e.offsetY, immediate: !f.current }), (f.current = !0);
             }
             function i(t) {
                 t.stopPropagation(),
@@ -105,7 +105,7 @@ function E(e) {
         })
     );
 }
-function N(e) {
+function E(e) {
     let { channelId: t, roomWidth: n, containerRef: a, pointerRef: r } = e,
         c = (0, s.bG)([o.Ay], () => o.Ay.keyboardModeEnabled),
         u = (0, l.useRef)(!1),
@@ -116,10 +116,10 @@ function N(e) {
             [t],
         );
     return c
-        ? (0, i.jsx)(v, { channelId: t, roomWidth: n, onPlace: h })
-        : (0, i.jsx)(E, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r, onPlace: h });
+        ? (0, i.jsx)(I, { channelId: t, roomWidth: n, onPlace: h })
+        : (0, i.jsx)(v, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r, onPlace: h });
 }
-function I(e) {
+function N(e) {
     let { channelId: t, roomWidth: n } = e,
         a = (0, l.useRef)(null),
         r = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
@@ -136,16 +136,16 @@ function I(e) {
     }, []);
     let { interactionsEnabled: m } = h.A.useExperiment({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
     if (!m || (0 === d.length && null == o)) return null;
-    let f = null != o && null == o.position;
+    let A = null != o && null == o.position;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            f &&
+            A &&
                 (0, i.jsx)("div", {
                     ref: a,
                     className: C.kL,
-                    children: (0, i.jsx)(N, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r }),
+                    children: (0, i.jsx)(E, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r }),
                 }),
-            o?.position != null && (0, i.jsx)(A.A, { channelId: t, position: o.position, roomWidth: n }),
+            o?.position != null && (0, i.jsx)(f.A, { channelId: t, position: o.position, roomWidth: n }),
             d.length > 0 &&
                 (0, i.jsx)("div", {
                     role: "list",

@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(53466),
     o = n(508382),
     d = n(834730),
     c = n(850132);
@@ -84,24 +84,24 @@ function f(e) {
             positionKey: N,
         } = e,
         { isRichTooltip: C } = (0, _.w6)(),
-        [O, R] = r.useState(u?.ownerDocument);
+        [R, O] = r.useState(u?.ownerDocument);
     if (
         (r.useLayoutEffect(() => {
             var e, t;
-            R(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
+            O(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
         }, [E, u, a]),
         !n)
     )
         return null;
     let L = (0, o.Pv)(p, T),
-        y = u ?? a.current;
+        D = u ?? a.current;
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
         spacing: m,
         placement: L,
-        reference: y,
-        ownerDocument: O,
+        reference: D,
+        ownerDocument: R,
         autoUpdate: null != N,
         renderLayer: (e) => {
             let { placement: t, shift: n } = e,

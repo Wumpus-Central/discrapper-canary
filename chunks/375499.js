@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => R, B: () => C });
+n.d(t, { A: () => O, B: () => C });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(461376),
+    l = n(53466),
     o = n(17928),
     d = n(554146),
     c = n(939249),
@@ -22,7 +22,7 @@ var i = n(477900),
     S = n(375708),
     N = n(112412);
 let C = { tension: 800, friction: 24 };
-function O(e) {
+function R(e) {
     let {
             className: t,
             renderButtonContents: n,
@@ -36,10 +36,10 @@ function O(e) {
             ref: m,
             ...S
         } = e,
-        [O, R] = r.useState(!1),
-        [L, y] = r.useState(50),
-        D = O || a,
-        v = (0, T.t)(N, "emojiButton", D ? "Hovered" : "Normal"),
+        [R, O] = r.useState(!1),
+        [L, D] = r.useState(50),
+        y = R || a,
+        v = (0, T.t)(N, "emojiButton", y ? "Hovered" : "Normal"),
         b = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 18;
             return {
@@ -49,13 +49,13 @@ function O(e) {
             };
         })(L, p),
         M = r.useCallback(() => {
-            if (D) return;
+            if (y) return;
             let e = Math.floor(77 * Math.random());
-            R(!0), y(e), (0, f.K)(g.EmojiInteractionPoint.EmojiButtonMouseEntered);
-        }, [D, R, y]),
+            O(!0), D(e), (0, f.K)(g.EmojiInteractionPoint.EmojiButtonMouseEntered);
+        }, [y, O, D]),
         P = r.useCallback(() => {
-            R(!1);
-        }, [R]),
+            O(!1);
+        }, [O]),
         U = r.useCallback(() => (0, f.K)(g.EmojiInteractionPoint.EmojiButtonFocused), []),
         w = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion);
     return (0, i.jsx)(c.D, {
@@ -79,7 +79,7 @@ function O(e) {
                 ? n()
                 : (0, i.jsx)(u.c, {
                       config: C,
-                      to: { value: +!!D },
+                      to: { value: +!!y },
                       children: (e) => {
                           let { value: t } = e;
                           return (0, i.jsxs)(l.animated.div, {
@@ -87,13 +87,13 @@ function O(e) {
                               style: { ...b, transform: t.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: s()(N.sprite, N.spriteColored, D ? N.active : N.inactive),
+                                      className: s()(N.sprite, N.spriteColored, y ? N.active : N.inactive),
                                   }),
                                   (0, i.jsx)("div", {
                                       className: s()(
                                           N.sprite,
                                           N.spriteGreyscale,
-                                          D ? N.inactive : N.active,
+                                          y ? N.inactive : N.active,
                                           { [N.reducedMotion]: w },
                                           I,
                                       ),
@@ -104,7 +104,7 @@ function O(e) {
                   }),
     });
 }
-function R(e) {
+function O(e) {
     let {
             "aria-label": t = S.intl.string(S.t.lPHwuQ),
             tooltipText: a,
@@ -116,18 +116,18 @@ function R(e) {
             canShowNUXPremiumTooltip: g = !1,
             ...C
         } = e,
-        R = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        O = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
         L = (0, p.k0)(),
-        [y, D] = (0, I.kn)(L ? [d.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        v = g && y === d.M.TRIAL_NUX_EMOJI_BUTTON,
+        [D, y] = (0, I.kn)(L ? [d.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        v = g && D === d.M.TRIAL_NUX_EMOJI_BUTTON,
         b = !l && v,
         M = r.useRef(null),
         P = f ?? M;
     function U() {
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(R, {
             ref: P,
             onMouseLeave: () => {
-                v && D(m.i.USER_DISMISS);
+                v && y(m.i.USER_DISMISS);
             },
             onClick: (e) => {
                 c?.(e);
@@ -146,10 +146,10 @@ function R(e) {
                 targetElementRef: P,
                 body: S.intl.format(S.t["/7R4q4"], {}),
                 asset: (0, i.jsx)(E.a, {
-                    className: s()(N.premiumUnlockAnimation, { [N.reducedMotion]: R }),
+                    className: s()(N.premiumUnlockAnimation, { [N.reducedMotion]: O }),
                     loop: !1,
-                    shouldAnimate: !R,
-                    pauseAtFrame: R ? 149 : void 0,
+                    shouldAnimate: !O,
+                    pauseAtFrame: O ? 149 : void 0,
                     importData: () => n.e("31838").then(n.t.bind(n, 650125, 19)),
                 }),
                 position: "top",

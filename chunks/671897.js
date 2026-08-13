@@ -4,7 +4,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(682577),
+    l = n(53466),
     o = n(621466),
     d = n(17928),
     c = n(661531),
@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(980707),
     N = n(477782),
     C = n(365199),
-    O = n(268791),
-    R = n(315710),
+    R = n(268791),
+    O = n(315710),
     L = n(297264),
     D = n(775602),
     y = n(174459),
@@ -141,8 +141,8 @@ let Y = r.forwardRef(function (e, t) {
 var K = n(91034),
     $ = n(710434),
     z = n(634156),
-    q = n(652215),
-    Z = n(445563);
+    Z = n(652215),
+    q = n(445563);
 let X = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
     Q = X[0],
     J = X[X.length - 1];
@@ -155,8 +155,8 @@ function ee(e) {
             hideCaptionBtn: S = !1,
             hideTranscriptBtn: N = !1,
             hideSkipButtons: C = !1,
-            hideFullScreenBtn: O = !1,
-            hidePlaybackSpeedBtn: R = !1,
+            hideFullScreenBtn: R = !1,
+            hidePlaybackSpeedBtn: O = !1,
             size: L,
             downloadUrl: b,
             downloadContentType: M,
@@ -191,17 +191,17 @@ function ee(e) {
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
         eN = r.useRef(null),
-        [eC, eO] = r.useState(1),
-        eR = r.useCallback(
+        [eC, eR] = r.useState(1),
+        eO = r.useCallback(
             (e) => {
-                eO(e), null != eA.current && (eA.current.playbackRate = e);
+                eR(e), null != eA.current && (eA.current.playbackRate = e);
             },
             [eA],
         ),
         eL = r.useCallback(() => {
             if (null == b) return;
             let e = M?.split("/");
-            y.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            y.default.track(Z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
@@ -248,13 +248,13 @@ function ee(e) {
                         e.stopPropagation(), S || J();
                         break;
                     case u.TJ.FULLSCREEN:
-                        e.stopPropagation(), O || ee();
+                        e.stopPropagation(), R || ee();
                         break;
                     case u.TJ.MUTE:
                         e.stopPropagation(), ey();
                 }
         },
-        [J, ee, X, en, er, ey, S, O, e_],
+        [J, ee, X, en, er, ey, S, R, e_],
     );
     r.useEffect(() => {
         U && null != eN.current && eN.current.focus();
@@ -305,8 +305,8 @@ function ee(e) {
                                     animationTime: n,
                                     visible: a,
                                     onClick: en,
-                                    ariaLabel: k.intl.string(Z.default["dRVF+Z"]),
-                                    tooltipLabel: k.intl.string(Z.default["dRVF+Z"]),
+                                    ariaLabel: k.intl.string(q.default["dRVF+Z"]),
+                                    tooltipLabel: k.intl.string(q.default["dRVF+Z"]),
                                     shortcut: u.TJ.SEEK_BACK,
                                     buttonSize: H[L],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
@@ -317,8 +317,8 @@ function ee(e) {
                                     visible: a,
                                     onClick: er,
                                     disabled: !g,
-                                    ariaLabel: g ? k.intl.string(Z.default.yV2FLL) : k.intl.string(Z.default.YWbiPw),
-                                    tooltipLabel: g ? k.intl.string(Z.default.yV2FLL) : k.intl.string(Z.default.YWbiPw),
+                                    ariaLabel: g ? k.intl.string(q.default.yV2FLL) : k.intl.string(q.default.YWbiPw),
+                                    tooltipLabel: g ? k.intl.string(q.default.yV2FLL) : k.intl.string(q.default.YWbiPw),
                                     tooltipDelayMs: 1500 * !!g,
                                     shortcut: u.TJ.SEEK_FORWARD,
                                     buttonSize: H[L],
@@ -380,9 +380,9 @@ function ee(e) {
                                     },
                                     fillStyles: { backgroundColor: c.A.colors.WHITE.css },
                                     orientation: "horizontal",
-                                    "aria-label": k.intl.string(Z.default.XiLvuG),
+                                    "aria-label": k.intl.string(q.default.XiLvuG),
                                     getAriaValueText: (e) =>
-                                        k.intl.formatToPlainString(Z.default["5L6uDs"], {
+                                        k.intl.formatToPlainString(q.default["5L6uDs"], {
                                             percent: Math.round(100 * e),
                                         }),
                                 }),
@@ -416,7 +416,7 @@ function ee(e) {
                                     _.push({
                                         id: "transcript",
                                         iconComponent: T.u,
-                                        label: k.intl.string(Z.default["6EjGUv"]),
+                                        label: k.intl.string(q.default["6EjGUv"]),
                                         onClick: s,
                                         active: i && a !== u.Q6.ENDED,
                                         disabled: a === u.Q6.ENDED,
@@ -426,7 +426,7 @@ function ee(e) {
                                     _.push({
                                         id: "caption",
                                         iconComponent: K.I,
-                                        label: k.intl.string(Z.default["0DbPcL"]),
+                                        label: k.intl.string(q.default["0DbPcL"]),
                                         onClick: l,
                                         active: r,
                                         shortcut: u.TJ.CAPTION,
@@ -459,23 +459,23 @@ function ee(e) {
                         visible: a,
                         size: L,
                     }),
-                    !R &&
+                    !O &&
                         (0, i.jsx)(ei, {
                             playbackRate: eC,
-                            onPlaybackRateChange: eR,
+                            onPlaybackRateChange: eO,
                             animSpring: n,
                             visible: a,
                             size: L,
                             handleControlBarPendingInteraction: el,
                         }),
-                    !O &&
+                    !R &&
                         (0, i.jsx)(Y, {
                             iconComponent: eE ? f.z : p.T,
                             animationTime: n,
                             visible: a,
                             onClick: ee,
-                            ariaLabel: k.intl.string(Z.default.z9Cnzv),
-                            tooltipLabel: k.intl.string(Z.default.z9Cnzv),
+                            ariaLabel: k.intl.string(q.default.z9Cnzv),
+                            tooltipLabel: k.intl.string(q.default.z9Cnzv),
                             shortcut: u.TJ.FULLSCREEN,
                             buttonSize: H[L],
                             "data-testid": "discord-web-video-player-fullscreen-btn",
@@ -585,7 +585,7 @@ function ei(e) {
             handleControlBarPendingInteraction: o,
         } = e,
         d = r.useRef(null),
-        c = k.intl.string(Z.default.ZwPhbB),
+        c = k.intl.string(q.default.ZwPhbB),
         { activeLayer: u } = (0, v.X$)();
     return (0, i.jsx)(g.Y, {
         targetElementRef: d,
@@ -600,7 +600,7 @@ function ei(e) {
         children: (e) =>
             (0, i.jsx)(Y, {
                 ref: d,
-                iconComponent: O.$,
+                iconComponent: R.$,
                 animationTime: a,
                 visible: s,
                 ariaLabel: c,
@@ -615,7 +615,7 @@ function er(e) {
     let { playbackRate: t, onPlaybackRateChange: n, label: a } = e,
         s = r.useRef(null);
     return (
-        (0, R.tj)(s),
+        (0, O.tj)(s),
         (0, i.jsxs)("div", {
             ref: s,
             className: F.qp,

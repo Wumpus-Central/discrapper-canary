@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(765548),
     h = n(650583),
     I = n(565164),
-    f = n(461376),
+    f = n(53466),
     p = n(851613);
 let T = r.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: r } = e;
@@ -43,11 +43,11 @@ let g = (e) => {
         { startPx: I, endPx: T, leftIndicatorIndex: g, rightIndicatorIndex: S } = t,
         N = T - I,
         C = a.to((e) => Math.min(Math.max(0, e - I), N)),
-        O = null != n && null != c && g === n,
-        R = !O && null != n && null != c && S === n,
-        L = O || R,
-        y = o && null != d ? Math.min(Math.max(0, d - I), N) : null,
-        { progressToPlayheadBarTransform: D, glowWidth: v } = (function (e) {
+        R = null != n && null != c && g === n,
+        O = !R && null != n && null != c && S === n,
+        L = R || O,
+        D = o && null != d ? Math.min(Math.max(0, d - I), N) : null,
+        { progressToPlayheadBarTransform: y, glowWidth: v } = (function (e) {
             let {
                 segmentWidth: t,
                 dragFillWidth: n,
@@ -74,13 +74,13 @@ let g = (e) => {
                     : { progressToPlayheadBarTransform: a.to((e) => `translateX(-${t - Number(e)}px)`), glowWidth: a };
         })({
             segmentWidth: N,
-            dragFillWidth: y,
-            shrinkEnd: R,
+            dragFillWidth: D,
+            shrinkEnd: O,
             isAnimating: L,
             fillWidthAnimated: C,
             expansionSpring: c,
         }),
-        b = null != y ? (y <= 0 ? 0 : 1) : C.to((e) => (e <= 0 ? 0 : 1)),
+        b = null != D ? (D <= 0 ? 0 : 1) : C.to((e) => (e <= 0 ? 0 : 1)),
         M = l !== m.Q6.ENDED,
         P = Math.max(0, (E ?? 0) - I),
         U = { borderRadius: `${A}px` },
@@ -94,7 +94,7 @@ let g = (e) => {
     return (0, i.jsxs)(f.animated.div, {
         className: s()(p.Td, h),
         style: {
-            left: O ? c.to((e) => I + e) : I,
+            left: R ? c.to((e) => I + e) : I,
             width: L ? c.to((e) => N - e) : N,
             "--custom-r-left": a.to((e) => (0 === I || e >= I ? "99px" : "0px")),
             "--custom-r-right": a.to((e) => (T >= u || e >= T ? "99px" : "0px")),
@@ -106,7 +106,7 @@ let g = (e) => {
                 children: [
                     (0, i.jsxs)(f.animated.div, {
                         className: p._I,
-                        style: { left: O ? c.to((e) => -(I + e)) : -I },
+                        style: { left: R ? c.to((e) => -(I + e)) : -I },
                         children: [
                             w?.map((e) =>
                                 (0, i.jsx)(
@@ -123,7 +123,7 @@ let g = (e) => {
                                 (0, i.jsx)("div", { className: p.YK, style: { width: `${P}px`, opacity: 1, ...U } }),
                         ],
                     }),
-                    (0, i.jsx)(f.animated.div, { className: p.wx, style: { transform: D, opacity: b } }),
+                    (0, i.jsx)(f.animated.div, { className: p.wx, style: { transform: y, opacity: b } }),
                 ],
             }),
             M && (0, i.jsx)(f.animated.div, { className: p.fk, style: { width: v, opacity: b } }),
@@ -141,13 +141,13 @@ function N(e) {
             backgroundColor: f,
             playerState: m,
             preloadedBuffers: N,
-            durationSec: O,
-            maxSeekableTime: R,
+            durationSec: R,
+            maxSeekableTime: O,
             progressClassName: L,
-            timelineHeightPx: y = 4,
-            segmentBorderRadius: D,
+            timelineHeightPx: D = 4,
+            segmentBorderRadius: y,
             hoverTimelineHeightPx: v,
-            initialTimelineHeightPx: b = y,
+            initialTimelineHeightPx: b = D,
             persistPlayhead: M = !0,
             onClick: P,
             onScrubBack: U,
@@ -167,8 +167,8 @@ function N(e) {
             handleMouseMove: K,
             handleKeyDown: $,
             hoveredAtX: z,
-            maxSeekableX: q,
-            isHovering: Z,
+            maxSeekableX: Z,
+            isHovering: q,
             isDragging: X,
             dragX: Q,
             isHoverBeyondMax: J,
@@ -190,10 +190,10 @@ function N(e) {
                 [p, T] = r.useState(null),
                 [m, g] = r.useState(!1),
                 [S, N] = r.useState(!1),
-                [C, O] = r.useState(null),
-                [R, L] = r.useState(!1),
-                { i18n: y } = (0, _.G9)(),
-                D = r.useMemo(() => {
+                [C, R] = r.useState(null),
+                [O, L] = r.useState(!1),
+                { i18n: D } = (0, _.G9)(),
+                y = r.useMemo(() => {
                     let e = { role: "progressbar", "aria-label": "Progress Bar" };
                     return (
                         null != d &&
@@ -201,10 +201,10 @@ function N(e) {
                             ((e["aria-valuenow"] = d),
                             (e["aria-valuemin"] = 0),
                             (e["aria-valuemax"] = 100),
-                            (e["aria-label"] = y.PERCENT_COMPLETE(Math.round(d)))),
+                            (e["aria-label"] = D.PERCENT_COMPLETE(Math.round(d)))),
                         e
                     );
-                }, [d, y]),
+                }, [d, D]),
                 v = r.useMemo(() => (null == I || null == i ? null : (0, l.DX)(i, s, I)), [I, i, s]),
                 b = (0, A.A)((e) => {
                     f(e.contentRect);
@@ -265,14 +265,14 @@ function N(e) {
                                     n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
                                     r = null != i ? (i / s) * t.width : null,
                                     a = null != r ? Math.min(n, r) : n;
-                                L(null != r && n > r), T(n), O(a), G(e.clientX, t);
+                                L(null != r && n > r), T(n), R(a), G(e.clientX, t);
                             } else G(e.clientX, t);
                         }
                         function d(e) {
                             (U.current = !1),
                                 (w.current = null),
                                 N(!1),
-                                O(null),
+                                R(null),
                                 c?.(!1),
                                 L(!1),
                                 null != M.current &&
@@ -284,7 +284,7 @@ function N(e) {
                             ((U.current = !0),
                             N(!0),
                             c?.(!0),
-                            O(Math.max(0, Math.min(e.clientX - t.left, t.width))),
+                            R(Math.max(0, Math.min(e.clientX - t.left, t.width))),
                             G(e.clientX, t),
                             window.addEventListener("mousemove", r),
                             window.addEventListener("mouseup", d),
@@ -298,22 +298,22 @@ function N(e) {
                     isHovering: m,
                     isDragging: S,
                     dragX: C,
-                    isHoverBeyondMax: R,
+                    isHoverBeyondMax: O,
                     handleClick: function () {},
-                    ariaProps: D,
+                    ariaProps: y,
                 }
             );
         })({
             onScrubBack: U,
             onScrubForward: w,
-            maxSeekableTime: R,
+            maxSeekableTime: O,
             interactionEnabled: c,
-            durationSec: O,
+            durationSec: R,
             percent: n,
             onClick: P,
             onDragStateChange: G,
         }),
-        ei = r.useMemo(() => (null == z || null == j ? null : (0, l.hc)(z, j, O)), [z, j, O]),
+        ei = r.useMemo(() => (null == z || null == j ? null : (0, l.hc)(z, j, R)), [z, j, R]),
         er = r.useMemo(() => (null == ei ? null : (0, l.rB)(ei)), [ei]),
         ea = r.useMemo(() => (null == k || null == ei ? null : (0, I.B8)(k, ei)), [k, ei]),
         es = r.useMemo(() => {
@@ -330,7 +330,7 @@ function N(e) {
         e_ = r.useRef(null),
         eE = r.useRef(null);
     r.useEffect(() => {
-        if (!a || null == V || O <= 0 || el <= 0) return;
+        if (!a || null == V || R <= 0 || el <= 0) return;
         (e_.current = eu.current ?? V()), (eE.current = performance.now());
         let e = 0;
         return (
@@ -352,26 +352,26 @@ function N(e) {
                     Number.isFinite(r) &&
                     ((e_.current = r),
                     (eu.current = r),
-                    ed({ playbackPxSpring: Math.min(Math.max(0, (r / O) * el), el), immediate: !0 })),
+                    ed({ playbackPxSpring: Math.min(Math.max(0, (r / R) * el), el), immediate: !0 })),
                     (e = requestAnimationFrame(t));
             })),
             () => {
                 cancelAnimationFrame(e), (e_.current = null), (eE.current = null);
             }
         );
-    }, [a, V, O, el, ed]);
-    let eA = a && null != V && O > 0;
+    }, [a, V, R, el, ed]);
+    let eA = a && null != V && R > 0;
     r.useEffect(() => {
         let e;
         if (!eA) {
-            if (null != V && O > 0 && el > 0) {
+            if (null != V && R > 0 && el > 0) {
                 let t = V();
-                null != t && Number.isFinite(t) && ((eu.current = t), (e = Math.min(Math.max(0, (t / O) * el), el)));
+                null != t && Number.isFinite(t) && ((eu.current = t), (e = Math.min(Math.max(0, (t / R) * el), el)));
             }
             null == e && (e = null == es || Number.isNaN(es) ? 0 : es), ed({ playbackPxSpring: e, immediate: !0 });
         }
-    }, [es, eA, ed, V, O, el]);
-    let eh = O > 1,
+    }, [es, eA, ed, V, R, el]);
+    let eh = R > 1,
         eI = x?.indicators,
         ef = r.useMemo(() => {
             let e;
@@ -381,7 +381,7 @@ function N(e) {
                       let n = Math.max(
                           0,
                           Math.min(
-                              (0, l.DX)(t.timeSec, O, j) -
+                              (0, l.DX)(t.timeSec, R, j) -
                                   ("start" === t.align ? 0 : "end" === t.align ? t.widthPx : t.widthPx / 2),
                               e - t.widthPx,
                           ),
@@ -389,7 +389,7 @@ function N(e) {
                       return { leftPx: n, rightPx: n + t.widthPx, gapPx: t.gapPx, index: t.index, source: t };
                   }))
                 : void 0;
-        }, [eI, O, j, eh]),
+        }, [eI, R, j, eh]),
         ep = r.useMemo(
             () =>
                 (function (e, t) {
@@ -430,7 +430,7 @@ function N(e) {
         ref: H,
         "data-testid": B,
         style: {
-            "--custom-timeline-height": `${null != v && Z ? v : y}px`,
+            "--custom-timeline-height": `${null != v && q ? v : D}px`,
             "--custom-initial-timeline-height": `${b}px`,
         },
         children: (0, i.jsxs)(d.D, {
@@ -464,8 +464,8 @@ function N(e) {
                                     expansionSpring: x?.expansionSpring,
                                     timelineWidth: el,
                                     preloadedBuffers: N,
-                                    maxSeekableX: q,
-                                    segmentBorderRadius: D,
+                                    maxSeekableX: Z,
+                                    segmentBorderRadius: y,
                                     progressClassName: L,
                                 },
                                 t,
@@ -481,7 +481,7 @@ function N(e) {
                         ),
                     ),
                 (0, i.jsx)(C, {
-                    isHovering: Z,
+                    isHovering: q,
                     hoveredAtX: z,
                     hoveredTimeSec: ei,
                     formattedTime: er,
@@ -490,7 +490,7 @@ function N(e) {
                     scrubPreviewCue: ea,
                     timelineWidthPx: el,
                 }),
-                (Z || M) &&
+                (q || M) &&
                     c &&
                     null != es &&
                     !em(X && null != Q ? Q : es) &&

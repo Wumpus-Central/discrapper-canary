@@ -11,7 +11,7 @@ var n = i(477900),
     g = i(152298),
     m = i(403581),
     x = i(783420),
-    f = i(682577),
+    f = i(53466),
     h = i(866323),
     p = i(765178),
     I = i(834730),
@@ -106,8 +106,8 @@ function N() {
 }
 var T = i(631670),
     w = i(159001),
-    k = i(933725),
-    y = i(625494),
+    y = i(933725),
+    k = i(625494),
     R = i(56348),
     O = i(207803),
     _ = i(183555),
@@ -205,7 +205,7 @@ function V(e) {
                     if (Object.keys(i).length > 0) {
                         let { primaryGuildId: t } = i;
                         if (void 0 !== t) {
-                            let i = await (0, k.m)(t, null !== t);
+                            let i = await (0, y.m)(t, null !== t);
                             (e = e && (i?.ok ?? !1)), i?.ok && (0, T.fw)();
                         }
                     }
@@ -239,9 +239,9 @@ function V(e) {
                     }, 2500));
             }
             return (
-                y._.subscribe(F.jej.EMPHASIZE_NOTICE, t),
+                k._.subscribe(F.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    y._.unsubscribe(F.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
+                    k._.unsubscribe(F.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
                 }
             );
         }, []),

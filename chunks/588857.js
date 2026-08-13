@@ -12,7 +12,7 @@ var i,
     m = n.n(h),
     g = n(812729),
     p = n.n(g),
-    f = n(682577),
+    f = n(53466),
     x = n(866323),
     A = n(939249),
     E = n(834730),
@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(816578),
     eo = n(110234),
-    ed = n(749983),
+    ed = n(626822),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -1127,8 +1127,8 @@ var e0 = n(417098),
     e4 = n(377802),
     e6 = n(348858),
     e8 = n(523875),
-    e7 = n(416696),
-    e9 = n(621956),
+    e9 = n(416696),
+    e7 = n(621956),
     te = n(446080),
     tt = n(922016),
     tn = n(615675),
@@ -1145,7 +1145,7 @@ var e0 = n(417098),
     tm = n(47167),
     tg = n(713654),
     tp = n(572164),
-    tf = n(693117),
+    tf = n(539572),
     tx = n(980707),
     tA = n(477782),
     tE = n(650338),
@@ -1554,7 +1554,7 @@ function tQ(e) {
         Component: x,
         events: { onMouseEnter: A, onMouseLeave: E },
         play: S,
-    } = (0, e7.c)(g ? "disable" : "enable");
+    } = (0, e9.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tX(i);
     return (0, r.jsx)(tt.Y, {
@@ -1617,7 +1617,7 @@ function tJ(e) {
     let {
             Component: p,
             events: { onClick: f, onMouseEnter: x, onMouseLeave: A },
-        } = (0, e9.E)(),
+        } = (0, e7.E)(),
         E = tX(i),
         S = (0, y.bG)([t_.A, k.default], () => t_.A.isUserPlayingSounds(k.default.getId()), []) ? "green" : void 0;
     return (0, r.jsx)(tt.Y, {
@@ -1921,8 +1921,8 @@ function t6(e) {
     });
 }
 var t8 = n(534890),
-    t7 = n(364522),
-    t9 = n(994500),
+    t9 = n(364522),
+    t7 = n(994500),
     ne = n(996439);
 function nt(e, t) {
     return null == e ? null : e.isDM() ? (t.getUser(e.getRecipientId()) ?? null) : null;
@@ -2213,7 +2213,7 @@ function nG(e) {
         I = f === n?.id,
         v = eg.intl.string(nM.default.tYPfF2),
         j = (0, y.bG)([D.A], () => (n?.isThread() && null != n.parent_id ? D.A.getChannel(n.parent_id) : null), [n]),
-        T = (0, y.bG)([eu.default, t9.A], () => (null != j ? (0, tm.m1)(j, eu.default, t9.A) : null), [j]),
+        T = (0, y.bG)([eu.default, t7.A], () => (null != j ? (0, tm.m1)(j, eu.default, t7.A) : null), [j]),
         C = c.useMemo(() => {
             var e, t;
             return (
@@ -2222,7 +2222,7 @@ function nG(e) {
                 null == e
                     ? null
                     : e.isDM() && null != t
-                      ? t9.A.isFriend(t.id)
+                      ? t7.A.isFriend(t.id)
                           ? { tab: nE.x.FRIENDS, targetId: t.id }
                           : null
                       : (0, nx.ke)(e.type)
@@ -2461,10 +2461,10 @@ let nJ = c.memo(function (e) {
             user: I,
             guild: v,
             channel: j,
-        } = (0, y.cf)([D.A, tG.A, eu.default, t9.A], () => {
+        } = (0, y.cf)([D.A, tG.A, eu.default, t7.A], () => {
             let e = D.A.getChannel(t) ?? null;
             if (null == e) return { label: eg.intl.string(eg.t.zLZPmk), user: null, guild: null, channel: null };
-            let n = (0, tm.m1)(e, eu.default, t9.A);
+            let n = (0, tm.m1)(e, eu.default, t7.A);
             return { label: n, user: nt(e, eu.default), guild: nn(e, tG.A), channel: e };
         }, [t]);
     c.useEffect(() => {
@@ -2729,8 +2729,8 @@ function n8(e) {
           })
         : null;
 }
-var n7 = n(173738);
-function n9(e) {
+var n9 = n(173738);
+function n7(e) {
     let { dragStart: t, dragging: n } = e,
         [i, s] = (0, y.bG)([o.A], () => o.A.getSessionEntries(), [], ne.D),
         l = (0, y.bG)([o.A], () => o.A.getSelectedChannelId()),
@@ -2784,8 +2784,8 @@ function n9(e) {
     }, [A, E]);
     let S = (0, y.bG)([eu.default], () => nt(u, eu.default)),
         I = (0, y.bG)(
-            [eu.default, t9.A],
-            () => (null == u ? eg.intl.string(nM.default.uhJexs) : (0, tm.m1)(u, eu.default, t9.A)),
+            [eu.default, t7.A],
+            () => (null == u ? eg.intl.string(nM.default.uhJexs) : (0, tm.m1)(u, eu.default, t7.A)),
             [u],
         ),
         v = (0, y.bG)([D.A], () => {
@@ -2797,15 +2797,15 @@ function n9(e) {
         j = null != l && !(d && l === m);
     return v
         ? (0, r.jsxs)("div", {
-              className: n7.kL,
+              className: n9.kL,
               children: [
                   (0, r.jsx)("nav", {
-                      className: n7.pz,
+                      className: n9.pz,
                       "aria-label": eg.intl.string(nM.default["2yFtJ1"]),
                       onMouseDown: (e) => {
                           0 === e.button && t(eT.P.MOVE, e.clientX, e.clientY);
                       },
-                      children: (0, r.jsxs)(t7.d_, {
+                      children: (0, r.jsxs)(t9.d_, {
                           children: [
                               null != m
                                   ? (0, r.jsxs)(r.Fragment, {
@@ -2819,7 +2819,7 @@ function n9(e) {
                                                 },
                                                 `tiv-${m}`,
                                             ),
-                                            g.length > 0 ? (0, r.jsx)("hr", { className: n7.mF }) : null,
+                                            g.length > 0 ? (0, r.jsx)("hr", { className: n9.mF }) : null,
                                         ],
                                     })
                                   : null,
@@ -2831,7 +2831,7 @@ function n9(e) {
                   }),
                   j
                       ? (0, r.jsxs)("div", {
-                            className: n7.oM,
+                            className: n9.oM,
                             children: [
                                 (0, r.jsx)(nG, { channel: u, user: S, guild: h, title: I, dragStart: t, dragging: n }),
                                 (0, r.jsx)(n8, { selectedChannelId: l }),
@@ -2844,7 +2844,7 @@ function n9(e) {
 }
 let ie = c.memo(function (e) {
     let { locked: t, dragStart: n, dragging: i } = e;
-    return t ? null : (0, r.jsx)(n9, { dragStart: n, dragging: i });
+    return t ? null : (0, r.jsx)(n7, { dragStart: n, dragging: i });
 });
 var it = n(428689),
     ii = n(175203),
