@@ -5395,12 +5395,12 @@ function rl(e) {
                 G = (0, tb.N)("useGuildActionRows"),
                 [j] = (0, eo.kn)(I && G && !b ? [en.M.EMPTY_GAME_SERVER_TAB] : [], void 0, !0);
             return (
-                f && p.push(tH.n.GUILD_SPACE),
                 C && p.push(tH.n.GUILD_HUB_HEADER_OPTIONS),
                 !g && d && A && null != c && c.length > 0
                     ? p.push(tH.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
                     : e.premiumProgressBarEnabled && _ > 0 && p.push(tH.n.GUILD_PREMIUM_PROGRESS_BAR),
                 !C && d && p.push(tH.n.GUILD_HOME),
+                f && p.push(tH.n.GUILD_SPACE),
                 i && p.push(tH.n.GUILD_SCHEDULED_EVENTS),
                 !C && E && p.push(tH.n.CHANNELS_AND_ROLES),
                 r && p.push(tH.n.GUILD_ROLE_SUBSCRIPTIONS),
