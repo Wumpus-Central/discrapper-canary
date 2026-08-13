@@ -17,6 +17,11 @@
     z-index: var(--custom-user-profile-bottom-layer-z-index)
 }
 
+.userInfo_b4a4b2 {
+    padding: 0 var(--space-16);
+    text-align: center
+}
+
 .backdrop_f8afe2 {
     align-items: center;
     background: var(--background-gradient-highest, var(--chat-background-default));

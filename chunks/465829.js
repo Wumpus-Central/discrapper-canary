@@ -95,10 +95,19 @@ function C() {
     return (0, i.jsx)("div", { "aria-hidden": "true", className: T.SC });
 }
 function R(e) {
-    let { user: t, usernameIcon: n, onClickUsername: r, pronouns: s, primaryGuild: o, trailing: _, onClose: E } = e,
-        A = null != s && s.length > 0,
-        h = (0, u.r)(t),
-        m = t.isProvisional
+    let {
+            user: t,
+            usernameIcon: n,
+            onClickUsername: r,
+            pronouns: s,
+            primaryGuild: o,
+            contextGuildId: _,
+            trailing: E,
+            onClose: A,
+        } = e,
+        h = null != s && s.length > 0,
+        m = (0, u.r)(t),
+        g = t.isProvisional
             ? null
             : (0, i.jsx)(c.A, {
                   user: t,
@@ -110,10 +119,10 @@ function R(e) {
                   hideBotTag: !0,
               });
     return (0, i.jsxs)("div", {
-        className: a()(T.AK, { [T.j6]: A, [T.w2]: null != h }),
+        className: a()(T.AK, { [T.j6]: h, [T.w2]: null != m }),
         children: [
-            null != m && null != r ? (0, i.jsx)(l.D, { onClick: r, className: T.vk, children: m }) : m,
-            A &&
+            null != g && null != r ? (0, i.jsx)(l.D, { onClick: r, className: T.vk, children: g }) : g,
+            h &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(C, {}),
@@ -125,8 +134,8 @@ function R(e) {
                         }),
                     ],
                 }),
-            (0, i.jsx)(I.Ay, { primaryGuild: o, userId: t.id, onClose: E, className: T.Mp }),
-            _,
+            (0, i.jsx)(I.Ay, { primaryGuild: o, userId: t.id, contextGuildId: _, onClose: A, className: T.Mp }),
+            E,
         ],
     });
 }
@@ -143,8 +152,9 @@ function O(e) {
         usernameIcon: c,
         pronouns: u,
         primaryGuild: _,
-        trailing: E,
-        onClose: A,
+        contextGuildId: E,
+        trailing: A,
+        onClose: h,
     } = e;
     return (0, i.jsxs)("div", {
         className: r,
@@ -163,9 +173,10 @@ function O(e) {
                 usernameIcon: c,
                 pronouns: u,
                 primaryGuild: _,
+                contextGuildId: E,
                 onClickUsername: a,
-                onClose: A,
-                trailing: E,
+                onClose: h,
+                trailing: A,
             }),
         ],
     });

@@ -1836,6 +1836,10 @@
     vertical-align: baseline
 }
 
+.user-profile-embed .displayNameRow__26b1f {
+    justify-content: center
+}
+
 .displayNameTrailing__26b1f {
     align-items: center;
     align-self: flex-start;
@@ -1873,6 +1877,7 @@
     user-select: text
 }
 
+.user-profile-embed .usernameAndPronounsRow__26b1f,
 .user-profile-popout .usernameAndPronounsRow__26b1f,
 .user-profile-sidebar .usernameAndPronounsRow__26b1f {
     row-gap: 2px
@@ -1894,6 +1899,10 @@
 
 .usernameAndPronounsRow__26b1f.isBot__26b1f {
     margin-block-start: 8px
+}
+
+.user-profile-embed .usernameAndPronounsRow__26b1f {
+    justify-content: center
 }
 
 .userTag__26b1f {}
