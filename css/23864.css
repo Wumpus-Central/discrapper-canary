@@ -294,6 +294,10 @@
     padding-bottom: 75px
 }
 
+.card_a2332b.withGiftBanner_a2332b:has([data-panel-banner]) {
+    padding-bottom: var(--space-24)
+}
+
 .card_a2332b.giftSelectionModalContext_a2332b .cardTitle_a2332b {
     font-size: 30px;
     line-height: 25px
