@@ -14,6 +14,8 @@ e.exports = {
     W2: "treatmentContent__101ad",
     HQ: "treatmentAContent__101ad",
     y3: "treatmentAArtContainer__101ad",
+    Xx: "churnArtContainer__101ad",
+    GW: "churnContentColumn__101ad",
     ap: "reverseTrialContainer__101ad",
     rG: "reverseTrialTextContainer__101ad",
     Hk: "reverseTrialArtContainer__101ad",
