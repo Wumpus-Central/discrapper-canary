@@ -106,10 +106,10 @@ function C(e, t, n) {
     return { id: `CUSTOM:${e ?? "any"}:${t ?? "any"}:${n ?? "any"}`, label: `${l} / ${a} / ${r}` };
 }
 let O = "Localized";
-function h(e) {
+function R(e) {
     return "object" == typeof e && null != e && "string" == typeof e.default && "object" == typeof e.localizations;
 }
-let R = (0, N.D)(() => ({
+let h = (0, N.D)(() => ({
     selected: null,
     componentRowsByType: null,
     availableLocales: [],
@@ -117,9 +117,9 @@ let R = (0, N.D)(() => ({
     localeOverride: null,
 }));
 function v(e) {
-    let t = R.useField("componentRowsByType"),
-        n = R.useField("userStateByType"),
-        o = R.useField("localeOverride");
+    let t = h.useField("componentRowsByType"),
+        n = h.useField("userStateByType"),
+        o = h.useField("localeOverride");
     return i.useMemo(
         () =>
             (function (e, t, n, o) {
@@ -151,7 +151,7 @@ function v(e) {
                           }
                           if ("object" == typeof t && null != t)
                               for (let [o, l] of Object.entries(t)) {
-                                  if (o.endsWith(O) && h(l)) {
+                                  if (o.endsWith(O) && R(l)) {
                                       let e = o.slice(0, -O.length),
                                           a = l.localizations[n] ?? ("" !== l.default ? l.default : null);
                                       null != a && e in t && (t[e] = a);
@@ -189,13 +189,13 @@ function M(e) {
 function B(e) {
     let t,
         { componentType: n } = e,
-        o = R.useField("selected"),
-        l = R.useField("componentRowsByType"),
-        a = R.useField("userStateByType"),
-        r = R.useField("localeOverride"),
-        d = R.useField("availableLocales"),
+        o = h.useField("selected"),
+        l = h.useField("componentRowsByType"),
+        a = h.useField("userStateByType"),
+        r = h.useField("localeOverride"),
+        d = h.useField("availableLocales"),
         s =
-            ((t = R.useField("componentRowsByType")),
+            ((t = h.useField("componentRowsByType")),
             i.useMemo(() => {
                 let e = t?.get(n) ?? [],
                     o = new Map();
@@ -244,8 +244,8 @@ function B(e) {
                             let o;
                             return (
                                 (t = e === L ? null : e),
-                                (o = new Map(R.getState().userStateByType)),
-                                void (null == t ? o.delete(n) : o.set(n, t), R.setState({ userStateByType: o }))
+                                (o = new Map(h.getState().userStateByType)),
+                                void (null == t ? o.delete(n) : o.set(n, t), h.setState({ userStateByType: o }))
                             );
                         },
                         options: f,
@@ -258,7 +258,7 @@ function B(e) {
                     value: r ?? L,
                     onSelectionChange: (e) => {
                         var t;
-                        return (t = e === L ? null : e), void R.setState({ localeOverride: t });
+                        return (t = e === L ? null : e), void h.setState({ localeOverride: t });
                     },
                     options: c,
                     formatOption: M,
@@ -453,7 +453,7 @@ let $ = "playground-billing-settings-banner",
                 o,
                 l = v(u.C.BILLING_SETTINGS_BANNER),
                 a = l?.properties.oneofKind === "billingSettingsBanner" ? l.properties.billingSettingsBanner : null,
-                r = R.useField("selected"),
+                r = h.useField("selected"),
                 [d] = i.useState(() => new Date(Date.now() + 6048e5)),
                 s = r?.endDate ?? d,
                 c = W.A.createFromServer(
@@ -576,6 +576,7 @@ var q = n(959129),
         (r.VALENTINES_GIFTING_2026_FULL_HP_SKU_ID = "1464006538304684063"),
         (r.WORLD_CUP_GIFTING_2026_AROUND_THE_WORLD_SKU_ID = "1509955522797768794"),
         (r.WORLD_CUP_GIFTING_2026_GOAL_SKU_ID = "1509962431290675280"),
+        (r.SUMMER_2026_GOGO_FAKE_SKU_ID = "1533205265724211200"),
         r),
     X = n(67948),
     ee = n(228366),
@@ -614,8 +615,8 @@ var ey = n(823901);
 function eS() {}
 let eC = "playground-gift-reminder-nagbar";
 var eO = n(670474),
-    eh = n(371764);
-let eR = {
+    eR = n(371764);
+let eh = {
     name: "Marketing Page Banner",
     id: "marketing-page-banner",
     component: function (e) {
@@ -644,7 +645,7 @@ let eR = {
                 null != l ? { ...l, ...n } : { helpArticleId: "", buttonVariant: eO.F.UNSPECIFIED, ...n });
         return (0, p.jsx)("div", {
             className: j.MT,
-            children: (0, p.jsx)(eh.x, {
+            children: (0, p.jsx)(eR.x, {
                 componentId: "playground-marketing-page-banner",
                 promotionBannerMarketingComponentFields: a,
             }),
@@ -885,7 +886,7 @@ let e1 = "playground-premium-tab-tooltip";
 n(321073);
 var e3 = n(896170),
     e6 = n(783878),
-    e7 = n(562465);
+    e7 = n(636537);
 async function e8() {
     return (await e7.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: l, end_date: a } = e;
@@ -939,7 +940,7 @@ let ta = {
             tl("Premium Surfaces", [
                 H,
                 Z,
-                eR,
+                eh,
                 {
                     name: "Nagbar",
                     id: "nagbar",
@@ -1782,7 +1783,7 @@ let ta = {
             );
         },
         HeaderControl: function () {
-            let e = R.useField("selected"),
+            let e = h.useField("selected"),
                 [t, n] = i.useState([]),
                 o = i.useRef(null);
             i.useEffect(() => {
@@ -1813,7 +1814,7 @@ let ta = {
                           customMatchSorter: a,
                           onSelectionChange: function (e) {
                               if (((o.current = e), null == e))
-                                  return void R.setState({
+                                  return void h.setState({
                                       selected: null,
                                       componentRowsByType: null,
                                       availableLocales: [],
@@ -1836,7 +1837,7 @@ let ta = {
                                                               }
                                                               if ("object" == typeof t && null != t)
                                                                   for (let [o, l] of Object.entries(t)) {
-                                                                      if (o.endsWith(O) && h(l)) {
+                                                                      if (o.endsWith(O) && R(l)) {
                                                                           for (let e of Object.keys(l.localizations))
                                                                               n.add(e);
                                                                           continue;
@@ -1844,7 +1845,7 @@ let ta = {
                                                                       e(l, n);
                                                                   }
                                                           })(t.properties, n);
-                                                  R.setState({
+                                                  h.setState({
                                                       selected: e,
                                                       componentRowsByType: t,
                                                       availableLocales: [...n].sort(),
