@@ -397,7 +397,7 @@ function eg(e) {
                                 skuId: e,
                                 isShoppableItem:
                                     null != t &&
-                                    t.isAvailable() &&
+                                    t.isAvailable?.() === !0 &&
                                     t.tenantMetadata?.collectibles?.sourceType === V.SHOP,
                                 productType: t?.tenantMetadata?.collectibles?.type,
                             };
