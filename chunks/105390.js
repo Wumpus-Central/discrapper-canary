@@ -112,5 +112,3 @@ function y(e) {
                   children: (0, r.jsx)(a.E, { variant: "eyebrow", className: j.md, children: i }),
               });
 }
-ildren: n;
-})})}

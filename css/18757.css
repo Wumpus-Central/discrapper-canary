@@ -170,6 +170,7 @@
 }
 
 .displayVideo__38295 {
+    border: 1px solid var(--border-normal);
     border-radius: var(--radius-sm);
     cursor: pointer;
     max-height: 100%;
@@ -208,6 +209,7 @@
     aspect-ratio: auto;
     height: 100%;
     max-width: 100%;
+    overflow: hidden;
     width: 100%
 }
 

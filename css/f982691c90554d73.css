@@ -10,10 +10,6 @@
     gap: var(--space-12)
 }
 
-.removeButton__3f4c5 {
-    margin-top: var(--space-20)
-}
-
 .colorPicker__3f4c5 {
     align-items: center;
     display: flex;
@@ -118,7 +114,7 @@
 }
 
 .editorPane__51bac {
-    background: var(--background-base-low);
+    background: var(--background-base-lowest);
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -129,26 +125,22 @@
 }
 
 .editorPane__51bac>img {
-    filter: blur(10px);
+    filter: blur(100px);
     height: 100%;
-    -webkit-mask-image: linear-gradient(180deg, #000, transparent);
-    mask-image: linear-gradient(180deg, #000, transparent);
-    -o-object-fit: cover;
-    object-fit: cover;
-    opacity: .1;
-    transform: scale(1.2);
+    opacity: .2;
+    transform: scale(.6) translateY(-15%);
     width: 100%;
     z-index: -1
 }
 
 .cropOverlay__51bac,
 .editorPane__51bac>img {
-    inset: 0;
     pointer-events: none;
     position: absolute
 }
 
 .cropOverlay__51bac {
+    inset: 0;
     overflow: hidden;
     z-index: 2
 }
@@ -180,8 +172,7 @@
     flex-direction: column;
     min-height: 0;
     overflow: hidden;
-    padding-bottom: var(--space-16);
-    padding-top: var(--space-24)
+    padding-bottom: var(--space-16)
 }
 
 .editorContent__51bac {
@@ -257,7 +248,7 @@
 
 .track__1d62b {
     align-items: center;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     bottom: 0;
     cursor: grab;
     display: flex;
@@ -337,7 +328,7 @@
 
 .timelineCard__5d537 {
     border: 1px solid var(--border-normal);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     inset: 0;
     pointer-events: none;
     position: absolute
@@ -345,11 +336,12 @@
 
 .timelineWrapper__5d537 {
     align-items: center;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     box-sizing: border-box;
     display: flex;
     flex: 1;
     flex-direction: column;
+    max-height: 276px;
     min-height: 0;
     overflow-x: hidden;
     overflow-y: auto;
@@ -363,8 +355,9 @@
 
 .timelineHeader__5d537 {
     align-items: center;
-    background-color: var(--background-mod-muted);
-    border-radius: 12px 12px 0 0;
+    background-color: var(--background-mod-subtle);
+    border-block-end: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     box-sizing: border-box;
     display: flex;
     flex-shrink: 0;
@@ -384,7 +377,8 @@
 }
 
 .tracksOuter__5d537 {
-    flex-shrink: 0
+    flex-shrink: 0;
+    padding-inline: 1px
 }
 
 .tracksOuter__5d537,
@@ -490,6 +484,21 @@
     border-end-end-radius: 8px;
     border-start-end-radius: 8px;
     inset-inline-end: 0
+}
+
+.dragHandleCorner__5d537 {
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    fill: var(--brand-500)
+}
+
+.dragHandleCornerLeft__5d537 {
+    inset-inline-end: -8px
+}
+
+.dragHandleCornerRight__5d537 {
+    inset-inline-start: -8px
 }
 
 .dragBox__5d537 {
