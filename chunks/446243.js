@@ -1,38 +1,40 @@
 "use strict";
 n.d(t, {
-    Xh: () => g,
-    Dr: () => C,
-    z5: () => y,
-    HW: () => O,
-    zK: () => R,
-    x2: () => h,
-    zD: () => T,
-    WT: () => N,
-    tB: () => D,
-    WQ: () => I,
-    yF: () => L,
-    AQ: () => v,
-    TJ: () => p,
+    Xh: () => N,
+    Dr: () => O,
+    Ys: () => T,
+    HW: () => L,
+    x2: () => I,
+    zK: () => D,
+    z5: () => v,
+    zD: () => g,
+    WT: () => R,
+    tB: () => b,
+    yF: () => y,
+    WQ: () => f,
+    AQ: () => p,
+    TJ: () => m,
 });
 var i = n(517846),
-    r = n(562465),
+    r = n(636537),
     a = n(228366),
     s = n(27620),
     l = n(280450),
     o = n(920639),
-    d = n(558076),
-    c = n(872772),
-    u = n(996512),
-    _ = n(652215);
-let E = { x: 0, y: 0 };
-async function A(e, t, n) {
+    d = n(538638),
+    c = n(558076),
+    u = n(872772),
+    _ = n(996512),
+    E = n(652215);
+let A = { x: 0, y: 0 };
+async function h(e, t, n) {
     try {
-        let d = n ?? E,
-            c = await r.Bo.post({ url: _.Rsh.GUILD_ROOM_CONNECT(e, t), body: { position: d }, rejectWithError: !0 }),
-            A = (0, u.S)(c.body);
-        if ((a.h.dispatch({ type: "GUILD_ROOM_CONNECT", room: A, guildId: e, pendingPosition: d }), t !== e)) {
+        let d = n ?? A,
+            c = await r.Bo.post({ url: E.Rsh.GUILD_ROOM_CONNECT(e, t), body: { position: d }, rejectWithError: !0 }),
+            u = (0, _.S)(c.body);
+        if ((a.h.dispatch({ type: "GUILD_ROOM_CONNECT", room: u, guildId: e, pendingPosition: d }), t !== e)) {
             (0, o.E2)({ guildId: e, channelId: t }), (0, s.hs)(i.w.GUILD_ROOM_JOINED);
-            let r = A.users.get(l.default.getId());
+            let r = u.users.get(l.default.getId());
             if (null != r) {
                 for (let e of [
                     { updateType: "position", updateReason: "default", position: r.position },
@@ -44,20 +46,20 @@ async function A(e, t, n) {
             }
         }
     } catch (n) {
-        a.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t });
+        throw (a.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t }), n);
     }
 }
-function h(e, t) {
+function I(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: l.default.getId(), roomId: t }),
         t !== e && (0, o.e6)({ guildId: e, channelId: t });
 }
-function I(e, t) {
+function f(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
-async function f(e, t, n) {
-    let i = d.A.getRoom(t),
-        s = d.A.getRoomUsers(t),
-        c = d.A.getRoomObjects(t);
+async function p(e, t, n) {
+    let i = c.A.getRoom(t),
+        s = c.A.getRoomUsers(t),
+        d = c.A.getRoomObjects(t);
     try {
         let i = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId: t };
         n?.background != null && (i.background = n.background),
@@ -65,8 +67,8 @@ async function f(e, t, n) {
             n?.user_status_id != null && (i.statusId = n.user_status_id),
             n?.user_status_text != null && (i.statusText = n.user_status_text),
             a.h.dispatch(i);
-        let s = await r.Bo.post({ url: _.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
-            d = (0, u.S)(s.body);
+        let s = await r.Bo.post({ url: E.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
+            d = (0, _.S)(s.body);
         if (
             e !== t &&
             (n?.user_position != null &&
@@ -100,65 +102,72 @@ async function f(e, t, n) {
                 });
         }
     } catch (t) {
-        a.h.dispatch({
-            type: "GUILD_ROOM_UPDATE_FAILURE",
-            originalRoom: i,
-            originalRoomUsers: s,
-            originalRoomObjects: c,
-            guildId: e,
-        });
+        throw (
+            (a.h.dispatch({
+                type: "GUILD_ROOM_UPDATE_FAILURE",
+                originalRoom: i,
+                originalRoomUsers: s,
+                originalRoomObjects: d,
+                guildId: e,
+            }),
+            t)
+        );
     }
 }
-function p(e) {
+function T() {
+    a.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
+}
+function m(e) {
     a.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position: e });
 }
-function T(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e, clearLayout: t });
 }
-async function m(e, t, n) {
-    return await r.Bo.post({ url: _.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
+async function S(e, t, n) {
+    return await r.Bo.post({ url: E.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
 }
-async function g(e, t, n, i) {
-    return await r.Bo.post({ url: _.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
+async function N(e, t, n, i) {
+    return await r.Bo.post({ url: E.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
 }
-async function S(e, t, n, i) {
-    return await r.Bo.del({ url: _.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
+async function C(e, t, n, i) {
+    return await r.Bo.del({ url: E.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
 }
-function N(e) {
+function R(e) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_START", roomId: e });
 }
-function C(e, t) {
+function O(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId: e, position: t });
 }
-function O(e) {
+function L(e) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId: e });
 }
-async function R(e, t, n, i) {
-    O(t);
+async function D(e, t, n, i) {
+    L(t);
     try {
-        await m(e, t, { object_type: c.N.NOTE, content: n, position: i }),
+        await S(e, t, { object_type: u.N.NOTE, content: n, position: i }),
             t !== e && (0, o.Ql)({ interactionType: "note_created", guildId: e, channelId: t }),
             a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
     } catch (e) {
-        a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
+        throw (a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t }), e);
     }
 }
-async function L(e, t, n) {
-    await S(e, t, n, { object_type: c.N.NOTE }),
+async function y(e, t, n) {
+    await C(e, t, n, { object_type: u.N.NOTE }),
         t !== e && (0, o.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
-async function y(e, t) {
-    let n = await r.Bo.get({ url: _.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
-        i = (0, u.S)(n.body);
-    a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
-}
-async function D(e, t, n) {
+async function v(e, t) {
     try {
-        await A(e, t, n);
-    } catch (e) {}
+        let n = await r.Bo.get({ url: E.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
+            i = (0, _.S)(n.body);
+        a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
+    } catch (e) {
+        (0, d.b)({ silent: !0 });
+    }
 }
-async function v(e, t, n) {
+async function b(e, t, n) {
     try {
-        await f(e, t, n);
-    } catch (e) {}
+        await h(e, t, n);
+    } catch (e) {
+        (0, d.b)();
+    }
 }

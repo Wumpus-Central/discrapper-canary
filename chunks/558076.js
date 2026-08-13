@@ -106,6 +106,9 @@ let C = new N(r.h, {
         let { position: t } = e;
         I = t;
     },
+    GUILD_ROOM_LOCAL_POSITION_CLEARED: function () {
+        I = null;
+    },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t, clearLayout: n } = e;
         (f[t] = !f[t]), n && (T = !0);

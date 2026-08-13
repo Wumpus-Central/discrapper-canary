@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => x });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -9,50 +9,51 @@ var i = n(477900),
     d = n(138617),
     u = n(7584),
     h = n(446243),
-    p = n(662731),
-    m = n(375708),
-    A = n(696034);
-function f(e) {
-    let { channel: t, position: n, setEditorRef: f } = e,
-        x = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
-        [g, C] = (0, l.useState)(""),
-        [y, j] = (0, l.useState)(""),
+    p = n(538638),
+    m = n(662731),
+    A = n(375708),
+    f = n(696034);
+function x(e) {
+    let { channel: t, position: n, setEditorRef: x } = e,
+        g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
+        [C, y] = (0, l.useState)(""),
+        [j, I] = (0, l.useState)(""),
         [v, E] = (0, l.useState)((0, c.x7)("")),
-        [N, I] = (0, l.useState)(x),
+        [N, b] = (0, l.useState)(g),
         T = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
-        className: A.kL,
+        className: f.kL,
         children: (0, i.jsx)(d.Ay, {
-            className: A.Kf,
-            innerClassName: A.Kf,
+            className: f.Kf,
+            innerClassName: f.Kf,
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                j(t), E(n), C(u.Ay.translateInlineEmojiToSurrogates(t));
+                I(t), E(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
             },
-            placeholder: m.intl.string(p.default.IAcEEn),
+            placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,
-            textValue: y,
+            textValue: j,
             richValue: v,
             type: o.oU.GUILD_ROOM,
             onFocus: () => {
-                I(!0);
+                b(!0);
             },
             onBlur: () => {
-                I(!1);
+                b(!1);
             },
             focused: N,
             onSubmit: function () {
                 let e = t.guild_id;
-                return 0 === g.trim().length || null == e
+                return 0 === C.trim().length || null == e
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
                     : T.current
                       ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
                       : ((T.current = !0),
-                        (0, h.zK)(e, t.id, g, n),
+                        (0, h.zK)(e, t.id, C, n).catch((e) => (0, p.b)()),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },
-            setEditorRef: f,
+            setEditorRef: x,
             disableThemedBackground: !0,
             showValueWhenDisabled: !0,
         }),

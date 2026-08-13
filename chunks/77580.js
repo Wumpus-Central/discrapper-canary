@@ -1,4 +1,4 @@
-i.d(e, { default: () => C });
+i.d(e, { default: () => y });
 var a = i(477900),
     n = i(582128),
     s = i(503698),
@@ -10,58 +10,59 @@ var a = i(477900),
     u = i(17928),
     m = i(734057),
     g = i(446243),
-    k = i(558076),
-    p = i(189998),
-    h = i(662731),
-    b = i(375708),
-    x = i(996621);
-function C(t) {
+    k = i(538638),
+    p = i(558076),
+    h = i(189998),
+    b = i(662731),
+    x = i(375708),
+    C = i(996621);
+function y(t) {
     let { channelId: e, transitionState: i, onClose: s } = t,
-        C = (0, u.bG)([k.A], () => k.A.getRoom(e)?.background ?? r.I.DEFAULT),
-        [y, j] = (0, n.useState)(C),
-        N = (0, n.useMemo)(
+        y = (0, u.bG)([p.A], () => p.A.getRoom(e)?.background ?? r.I.DEFAULT),
+        [j, N] = (0, n.useState)(y),
+        f = (0, n.useMemo)(
             () =>
-                Object.entries(p.iX).map((t) => {
+                Object.entries(h.iX).map((t) => {
                     let [e, i] = t;
                     return { ...i, key: e };
                 }),
             [],
         ),
-        f = C === y;
+        v = y === j;
     return (0, a.jsx)(c.Modal, {
         transitionState: i,
-        title: b.intl.string(h.default.kmzWUc),
-        subtitle: b.intl.string(h.default["Rqmi9/"]),
+        title: x.intl.string(b.default.kmzWUc),
+        subtitle: x.intl.string(b.default["Rqmi9/"]),
         actions: [
-            { text: b.intl.string(b.t["ETE/oC"]), onClick: s, variant: "secondary" },
+            { text: x.intl.string(x.t["ETE/oC"]), onClick: s, variant: "secondary" },
             {
-                text: b.intl.string(b.t["1Qm822"]),
+                text: x.intl.string(x.t["1Qm822"]),
                 variant: "primary",
                 type: "submit",
                 onClick: function () {
                     let t = m.A.getChannel(e)?.guild_id;
-                    null == t || f || ((0, g.AQ)(t, e, { background: y }), s());
+                    null == t || v || ((0, g.AQ)(t, e, { background: j }).catch((t) => (0, k.b)()), s());
                 },
-                disabled: f,
+                disabled: v,
             },
         ],
         onClose: s,
         children: (0, a.jsx)("div", {
-            className: x.Qs,
-            children: N.map((t) =>
+            className: C.Qs,
+            children: f.map((t) =>
                 (0, a.jsxs)(
                     o.D,
                     {
                         onClick: () => {
-                            j(Number(t.key));
+                            N(Number(t.key));
                         },
-                        className: l()(x.eh, { [x.wH]: y.toString() === t.key }),
+                        className: l()(C.eh, { [C.wH]: j.toString() === t.key }),
                         children: [
                             (0, a.jsx)("img", {
                                 src: t.background,
                                 alt: t.getName(),
                                 style: { aspectRatio: t.aspectRatio },
-                                className: x.Sl,
+                                className: C.Sl,
                             }),
                             (0, a.jsx)(d.E, { variant: "text-sm/semibold", children: t.getName() }),
                         ],
