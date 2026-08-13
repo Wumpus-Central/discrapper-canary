@@ -483,6 +483,7 @@ function ef(e) {
                 }),
             null == _ &&
                 null == d &&
+                em.checkChangesToRender(l) &&
                 (0, a.jsx)("div", {
                     className: eU.Xy,
                     children: (0, a.jsx)("div", {
