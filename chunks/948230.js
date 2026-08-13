@@ -5,27 +5,27 @@ i.d(e, {
     U1: () => I,
     Zq: () => P,
     dm: () => h,
-    gA: () => u,
+    gA: () => T,
     hF: () => d,
-    oB: () => T,
+    oB: () => u,
     ti: () => C,
     xx: () => S,
 });
-var r = i(562465),
+var r = i(636537),
     _ = i(228366),
     E = i(625180),
     n = i(91242),
-    o = i(927899),
-    a = i(972786),
+    a = i(927899),
+    o = i(972786),
     c = i(652215),
     l = i(165610);
 function p(t, e) {
     _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: t, integrationStatus: e });
 }
 function s(t, e, i) {
-    (0, o.Z0)(t, {
+    (0, a.Z0)(t, {
         location: "publish",
-        code: o.xA.PUBLISH_FAILED,
+        code: a.xA.PUBLISH_FAILED,
         message: `publish${i ? "-preview" : ""} failed`,
         details: `HTTP ${e}`,
         isPreview: i,
@@ -36,7 +36,7 @@ function R(t) {
         for (let e of n.A.getAllFrames()) (0, l.x1)(e) && e.applicationId === t && E.A.refreshProxyTicket(e.id);
 }
 async function d() {
-    if (a.A.getProjectsFetchState()?.type !== "loading") {
+    if (o.A.getProjectsFetchState()?.type !== "loading") {
         _.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
         try {
             let { body: t } = await r.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECTS, rejectWithError: !0 });
@@ -49,8 +49,7 @@ async function d() {
 async function I(t, e) {
     let i = await r.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
     return (
-        i.ok &&
-            e?.aborted !== !0 &&
+        e?.aborted !== !0 &&
             (_.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body.project }),
             p(t, {
                 bot_permissions_changed: i.body.bot_permissions_changed,
@@ -60,47 +59,55 @@ async function I(t, e) {
         i
     );
 }
-async function u(t) {
+async function T(t) {
     let { body: e } = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECTS, body: t, rejectWithError: !1 });
     return _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: e }), e.id;
 }
-async function T(t, e) {
+async function u(t, e) {
     let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: { name: e }, rejectWithError: !1 });
-    return i.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+    return _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
 }
 async function A(t, e) {
     let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
-    return i.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+    return _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
 }
 async function S(t) {
     let e = await r.Bo.del({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
-    return e.ok && _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e;
+    return _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e;
 }
 function h(t, e) {
     _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: t, projectId: e });
 }
 async function O(t) {
-    let e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH(t), rejectWithError: !1 });
-    if (!e.ok) return s(t, e.status, !1), e;
+    let e;
+    try {
+        e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH(t), rejectWithError: !1 });
+    } catch (e) {
+        throw (s(t, e.status, !1), e);
+    }
     let { application: i, project: E } = e.body;
     return (
         _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: E }),
         _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i, isHydrated: !0 }),
         R(i.id),
-        (0, o.qs)(t, { isPreview: !1 }),
+        (0, a.qs)(t, { isPreview: !1 }),
         e
     );
 }
 async function C(t) {
-    let e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
-    if (!e.ok) return s(t, e.status, !0), e;
-    let { application: i, bot_permissions_changed: E, integration_installed: n, project: a } = e.body;
+    let e;
+    try {
+        e = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(t), rejectWithError: !1 });
+    } catch (e) {
+        throw (s(t, e.status, !0), e);
+    }
+    let { application: i, bot_permissions_changed: E, integration_installed: n, project: o } = e.body;
     return (
-        _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: a }),
+        _.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: o }),
         _.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i, isHydrated: !0 }),
         p(t, { bot_permissions_changed: E, integration_installed: n, preview_ready: !0 }),
         n && !E && R(i.id),
-        (0, o.qs)(t, { isPreview: !0 }),
+        (0, a.qs)(t, { isPreview: !0 }),
         e
     );
 }

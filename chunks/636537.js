@@ -89,18 +89,18 @@ class h extends Error {
     text;
     headers;
     retryAfter;
-    constructor({ method: e, url: t, ok: n, status: i, body: r, text: a, headers: s, retryAfter: l }, ...o) {
-        const d = t.replace(/\d+/g, "xxx");
-        super(`${e.toUpperCase()} ${d} [${i}]`, ...o),
+    constructor({ method: e, url: t, status: n, body: i, text: r, headers: a, retryAfter: s }, ...l) {
+        const o = t.replace(/\d+/g, "xxx");
+        super(`${e.toUpperCase()} ${o} [${n}]`, ...l),
             (this.name = "HTTPResponseError"),
             (this.method = e),
             (this.url = t),
-            (this.ok = n),
-            (this.status = i),
-            (this.body = r),
-            (this.text = a),
-            (this.headers = s),
-            (this.retryAfter = l);
+            (this.ok = !1),
+            (this.status = n),
+            (this.body = i),
+            (this.text = r),
+            (this.headers = a),
+            (this.retryAfter = s);
     }
 }
 function I(e, t) {
@@ -200,7 +200,6 @@ function f(e, t, n, i, s) {
                                   new h({
                                       method: e,
                                       url: t.url,
-                                      ok: a.ok,
                                       status: a.status,
                                       body: a.body,
                                       text: a.text,

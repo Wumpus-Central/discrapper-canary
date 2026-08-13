@@ -20,7 +20,7 @@ let E = {
                 rejectWithError: !0,
                 failImmediatelyWhenRateLimited: !0,
             });
-            if (i.ok && i.body?.username != null)
+            if (i.body?.username != null)
                 return r.h.dispatch({
                     type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS",
                     suggestion: i.body,

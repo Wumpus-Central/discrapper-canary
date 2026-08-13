@@ -23,22 +23,11 @@ function o(e, t, n, i) {
     r.h.dispatch({ type: "INTERACTION_FAILURE", nonce: e, errorMessage: n, errorCode: t, status: i });
 }
 async function d(e, t) {
-    let n = await i.Bo.get({
-        url: a.Rsh.MESSAGE_INTERACTION_DATA(e, t),
-        oldFormErrors: !0,
-        rejectWithError: (0, i.fT)(),
-    });
-    if (!n.ok) return null;
-    {
-        let i = n.body;
-        return (
-            r.h.dispatch({
-                type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS",
-                channelId: e,
-                messageId: t,
-                interactionData: i,
-            }),
-            i
-        );
-    }
+    let n = (
+        await i.Bo.get({ url: a.Rsh.MESSAGE_INTERACTION_DATA(e, t), oldFormErrors: !0, rejectWithError: (0, i.fT)() })
+    ).body;
+    return (
+        r.h.dispatch({ type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: e, messageId: t, interactionData: n }),
+        n
+    );
 }

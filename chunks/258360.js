@@ -15,16 +15,16 @@ var a = n(477900),
     p = n(723702),
     S = n(19575),
     T = n(820066),
-    y = n(562465),
+    y = n(636537),
     x = n(691540),
     C = n(857250),
     h = n(97483),
     A = n(152367),
     j = n(192308),
     D = n(869388),
-    k = n(147087),
-    E = n(773669),
-    _ = n(186306),
+    E = n(147087),
+    _ = n(773669),
+    k = n(186306),
     M = n(323350),
     N = n(652215),
     P = n(375708),
@@ -52,7 +52,7 @@ function O(t) {
         }, [v, O]),
         [G, K] = (0, f.A)({ text: e, target: R, onHeightUpdate: X }),
         V = (function (t) {
-            let e = (0, k.b)(),
+            let e = (0, E.b)(),
                 l = (0, s.bG)([D.A], () => D.A.getTransforms()),
                 { selection: c } = t,
                 u =
@@ -62,7 +62,7 @@ function O(t) {
                 d = r.useCallback(
                     (e) => {
                         i.rL.focus(t),
-                            _.o.withSingleEntry(t, () => {
+                            k.o.withSingleEntry(t, () => {
                                 t.deleteFragment(), t.insertText(e);
                             });
                     },
@@ -79,8 +79,7 @@ function O(t) {
                                         body: { content: t },
                                         rejectWithError: (0, y.fT)(),
                                     });
-                                    n.ok &&
-                                        n.body &&
+                                    n.body &&
                                         (e(n.body.content),
                                         (0, x.P0)((0, C.o)(P.intl.string(P.t.mxQpUY), h.Ck.SUCCESS)));
                                 } finally {
@@ -98,7 +97,7 @@ function O(t) {
                 })(u, d),
                 f = (function (t, e) {
                     let [l, i] = r.useState(!1),
-                        c = (0, s.bG)([E.default], () => E.default.locale),
+                        c = (0, s.bG)([_.default], () => _.default.locale),
                         u = r.useCallback(
                             async (n, a) => {
                                 if (l) return;
@@ -114,8 +113,7 @@ function O(t) {
                                         body: { content: t, locale: r },
                                         rejectWithError: (0, y.fT)(),
                                     });
-                                    n.ok &&
-                                        n.body &&
+                                    n.body &&
                                         (e(n.body.content),
                                         (0, x.P0)(
                                             (0, C.o)(
@@ -175,8 +173,7 @@ function O(t) {
                                             body: { content: e, prompt: t.prompt },
                                             rejectWithError: (0, y.fT)(),
                                         });
-                                        a.ok &&
-                                            a.body &&
+                                        a.body &&
                                             (n(a.body.content),
                                             (0, x.P0)(
                                                 (0, C.o)(

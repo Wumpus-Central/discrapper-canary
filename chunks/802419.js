@@ -15,7 +15,7 @@ var i = l(477900),
     _ = l(587895),
     g = l(240248),
     S = l(555337),
-    L = l(562465),
+    L = l(636537),
     N = l(228366);
 let f = null,
     E = null,
@@ -63,7 +63,7 @@ async function m(t) {
     N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
     try {
         let e = await L.Bo.get({ url: v.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: (0, L.fT)() });
-        if (e.ok && e.body?.application_ids) {
+        if (e.body?.application_ids) {
             let l = e.body.application_ids.map((t) => String(t));
             return (
                 N.h.dispatch({

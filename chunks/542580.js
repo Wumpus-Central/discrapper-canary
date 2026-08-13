@@ -29,11 +29,12 @@ function S(e, t) {
 async function _(e, t, n) {
     let I = [];
     try {
-        let i = await T.Bo.get({
-            url: l.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
-            rejectWithError: (0, T.fT)(),
-        });
-        i.ok && (I = i.body.permissions);
+        I = (
+            await T.Bo.get({
+                url: l.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
+                rejectWithError: (0, T.fT)(),
+            })
+        ).body.permissions;
     } catch (T) {
         if (404 !== T.status)
             return void i.h.dispatch({
@@ -79,12 +80,11 @@ async function u(e) {
                   })(E, r, T, l)
                 : r,
         _ = await I.yL(t, E, n, S);
-    _.ok &&
-        i.h.dispatch({
-            type: "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE",
-            applicationId: t,
-            commandId: n,
-            guildId: E,
-            permissions: _.body.permissions,
-        });
+    i.h.dispatch({
+        type: "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE",
+        applicationId: t,
+        commandId: n,
+        guildId: E,
+        permissions: _.body.permissions,
+    });
 }

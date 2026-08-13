@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { m: () => l });
-var i = n(562465),
+var i = n(636537),
     r = n(228366),
     a = n(287809),
     s = n(652215);
@@ -11,9 +11,7 @@ async function l(e, t) {
             body: { identity_guild_id: e, identity_enabled: t },
             rejectWithError: !1,
         });
-        return (
-            n.ok && r.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...a.default.getCurrentUser(), ...n.body } }), n
-        );
+        return r.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...a.default.getCurrentUser(), ...n.body } }), n;
     } catch (e) {
         return e;
     }

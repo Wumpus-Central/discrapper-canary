@@ -16,7 +16,7 @@ function s(n) {
                 if (null == n) return { success: !1 };
                 try {
                     let c = await e.A.authorize(n, { location: u ?? "Account Linking" });
-                    if (c.ok && c.body?.url != null) return { success: !0, url: c.body.url };
+                    if (c.body?.url != null) return { success: !0, url: c.body.url };
                     return { success: !1 };
                 } catch (n) {
                     return { success: !1 };

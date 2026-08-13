@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { $r: () => p, AN: () => m, BX: () => _, fr: () => u, w6: () => E });
 var i = n(636537),
-    r = n(756954),
+    r = n(534573),
     a = n(927813),
     s = n(998218),
     l = n(652215);
@@ -49,12 +49,13 @@ function p(e) {
     return e.attachments.some(h) || e.embeds.some(f);
 }
 async function T(e) {
-    let t = await i.Bo.post({
-        url: l.Rsh.ATTACHMENTS_REFRESH_URLS,
-        body: { attachment_urls: [e] },
-        rejectWithError: (0, i.fT)(),
-    });
-    return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
+    return (
+        await i.Bo.post({
+            url: l.Rsh.ATTACHMENTS_REFRESH_URLS,
+            body: { attachment_urls: [e] },
+            rejectWithError: (0, i.fT)(),
+        })
+    ).body.refreshed_urls[0].refreshed;
 }
 async function m(e) {
     let t = s.A.toURLSafe(e);

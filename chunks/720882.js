@@ -166,8 +166,8 @@ var eK = n(110384),
     e2 = n(892340),
     e1 = n(715757),
     e6 = n(967198),
-    e5 = n(287809),
-    e3 = n(628691),
+    e3 = n(287809),
+    e5 = n(628691),
     e9 = n(49999),
     e4 = n(221314),
     te = n(663417),
@@ -177,7 +177,7 @@ var eK = n(110384),
     tl = n(54570),
     ta = n(8880),
     tr = n(163328),
-    ts = n(562465),
+    ts = n(636537),
     to = n(37646),
     tc = n(228366),
     td = n(147087),
@@ -303,8 +303,8 @@ function tP(e) {
             favoriteableName: t2,
             itemHref: t1,
             itemSrc: t6,
-            itemSafeSrc: t5,
-            itemTextContent: t3,
+            itemSafeSrc: t3,
+            itemTextContent: t5,
             canReport: t9,
             onHeightUpdate: t4,
             onSelect: ne,
@@ -537,8 +537,7 @@ function tP(e) {
                                         body: { content: e.content, locale: r },
                                         rejectWithError: (0, ts.fT)(),
                                     });
-                                    t.ok &&
-                                        t.body &&
+                                    t.body &&
                                         (tc.h.dispatch({
                                             type: "MESSAGE_UPDATE",
                                             message: { id: e.id, channel_id: e.channel_id, content: t.body.content },
@@ -726,11 +725,11 @@ function tP(e) {
                 n = e.interactionMetadata?.authorizing_integration_owners[tE.b.USER_INSTALL],
                 i = e.interactionMetadata?.authorizing_integration_owners[tE.b.GUILD_INSTALL],
                 r = e.interactionMetadata?.user.id,
-                o = (0, x.bG)([e5.default], () => e5.default.getUser(n)),
+                o = (0, x.bG)([e3.default], () => e3.default.getUser(n)),
                 c = (0, x.bG)([tT.A], () => tT.A.getGuild(i)),
                 d = tG.A.getChannel(e.channel_id),
                 u = d?.getGuildId(),
-                A = (0, x.bG)([e5.default], () => e5.default.getUser(r));
+                A = (0, x.bG)([e3.default], () => e3.default.getUser(r));
             if (
                 (a.useEffect(() => {
                     null == o && null != n && (0, tx.getUser)(n);
@@ -875,7 +874,7 @@ function tP(e) {
         nN =
             ((tF = (0, x.bG)([e6.A], () => e6.A.getGuildId())),
             (tq = (0, e1.Qo)(tF)),
-            (0, e3.ul)(t$)
+            (0, e5.ul)(t$)
                 ? (0, l.jsx)(s.Dr, {
                       id: "report",
                       label: tq ? I.intl.string(I.t.n5EBAJ) : I.intl.string(I.t.GwbdGe),
@@ -887,8 +886,8 @@ function tP(e) {
                 : null),
         nR =
             ((tz = (0, x.bG)([eQ.Ay], () => eQ.Ay.get("iar_testing"))),
-            (tH = (0, x.bG)([e5.default], () => e5.default.getCurrentUser())),
-            (0, e3.ul)(t$) && null != tH && tH.isStaff() && tz
+            (tH = (0, x.bG)([e3.default], () => e3.default.getCurrentUser())),
+            (0, e5.ul)(t$) && null != tH && tH.isStaff() && tz
                 ? (0, l.jsx)(s.Dr, {
                       id: "staff-test-message-report",
                       label: "[STAFF] Test Message Report",
@@ -1030,7 +1029,7 @@ function tP(e) {
                 })
             );
         })(t0, tY.getGuildId()),
-        nP = (0, p.A)(t5, t$, {
+        nP = (0, p.A)(t3, t$, {
             shouldHideMediaOptions: nl,
             contentType: tQ?.contentType,
             originalContentType: tQ?.originalContentType,
@@ -1091,7 +1090,7 @@ function tP(e) {
                       action: tZ,
                   })
                 : null),
-        nq = (0, f.A)(t1 ?? t6, t3, t$, { shouldHideMediaOptions: nl }),
+        nq = (0, f.A)(t1 ?? t6, t5, t$, { shouldHideMediaOptions: nl }),
         nz = (0, A.A)({ id: t$.id, label: I.intl.string(I.t.zBoHlf), shiftId: `${t$.channel_id}-${t$.id}` }),
         nH = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: r } = e,

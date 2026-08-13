@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { Eg: () => _, mk: () => E, pr: () => u, sy: () => h }), n(938796);
 var i = n(665260),
-    r = n(562465),
+    r = n(636537),
     a = n(228366),
     s = n(723444),
     l = n(292348),
@@ -33,7 +33,6 @@ async function u(e) {
             },
             rejectWithError: !0,
         });
-        if (!_.ok) throw Error("Failed to create scheduled message");
         return (
             a.h.dispatch({
                 type: "SCHEDULED_MESSAGES_CREATE_SUCCESS",
@@ -59,7 +58,6 @@ async function _(e) {
                 body: { scheduled_timestamp: n, content: e, flags: c },
                 rejectWithError: !0,
             });
-        if (!u.ok) throw Error("Failed to update scheduled message");
         a.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: (0, o.Lg)(u.body) });
     } catch (n) {
         o.dx.error("Failed to update scheduled message", n);
@@ -72,9 +70,8 @@ async function _(e) {
 async function E(e) {
     a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_START", scheduledMessageId: e });
     try {
-        if (!(await r.Bo.del({ url: d.Rsh.SCHEDULED_MESSAGE(e), rejectWithError: !0 })).ok)
-            throw Error("Failed to delete scheduled message");
-        a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: e });
+        await r.Bo.del({ url: d.Rsh.SCHEDULED_MESSAGE(e), rejectWithError: !0 }),
+            a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: e });
     } catch (n) {
         o.dx.error("Failed to cancel scheduled message", n);
         let t = n.body?.message ?? n.message;
@@ -84,9 +81,7 @@ async function E(e) {
     }
 }
 async function A() {
-    let e = await r.Bo.get({ url: d.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 });
-    if (!e.ok) throw Error("Failed to fetch scheduled messages");
-    return e.body.map(o.Lg);
+    return (await r.Bo.get({ url: d.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(o.Lg);
 }
 async function h() {
     a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
