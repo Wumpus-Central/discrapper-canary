@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(351906),
     p = n(997101),
     m = n(120700),
-    h = n(936477),
-    C = n(87725),
+    C = n(936477),
+    h = n(87725),
     f = n(652215),
     E = n(327105),
     S = n(375708),
@@ -19,17 +19,17 @@ var l = n(477900),
 let A = new Set([m.C.ORB_CHECKOUT]);
 function P(e) {
     let { onGiftCardRedeemed: t } = e,
-        n = (0, C.t4)((e) => e.unifiedCheckoutFlow);
-    return null != n && A.has(n) ? null : (0, l.jsx)(h.Z4, { className: y.K, onComplete: t });
+        n = (0, h.t4)((e) => e.unifiedCheckoutFlow);
+    return null != n && A.has(n) ? null : (0, l.jsx)(C.Z4, { className: y.K, onComplete: t });
 }
 function I(e) {
     let { onPaymentSourceAdd: t } = e,
-        n = (0, C.t4)((e) => e.unifiedCheckoutFlow),
+        n = (0, h.t4)((e) => e.unifiedCheckoutFlow),
         {
             isGift: i,
             checkoutPaymentSources: r,
             checkoutStoreCountry: a,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             isGift: e.isGift,
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             checkoutStoreCountry: e.get("checkoutStoreCountry"),
@@ -38,7 +38,7 @@ function I(e) {
         o = a === p.d.BR,
         u = r.some((e) => e.type === f.hes.PIX);
     return s && o && !u && null != t
-        ? (0, l.jsx)(h.y, {
+        ? (0, l.jsx)(C.y, {
               className: y.K,
               text: S.intl.string(E.default.JPRQ9L),
               onClick: () => t({ linkWalletEnabled: !1 }),
@@ -57,7 +57,7 @@ function N(e) {
             label: c,
             additionalPaymentSourceDropdownProps: p,
             disabled: m,
-            location: h,
+            location: C,
             onPaymentSourceAdd: f,
             subscriptionPaymentSourceId: E,
             hideCurrencySelect: y,
@@ -71,30 +71,21 @@ function N(e) {
                             setPaymentSourceId: t,
                             orderRecord: n,
                             isOrderSyncing: l,
-                            orderSyncError: r,
-                            setOrderSyncError: a,
-                        } = (0, C.t4)((e) => ({
+                            orderSyncError: i,
+                        } = (0, h.t4)((e) => ({
                             paymentSourceId: e.paymentSourceId,
                             setPaymentSourceId: e.setPaymentSourceId,
                             orderRecord: e.orderRecord,
                             isOrderSyncing: e.isOrderSyncing,
                             orderSyncError: e.orderSyncError,
-                            setOrderSyncError: e.setOrderSyncError,
                         })),
-                        s = null != n;
-                    return (
-                        (0, i.useEffect)(() => {
-                            if (null == n || null == r) return;
-                            let e = n.billingFacetRecord;
-                            t(null != e ? e.paymentSourceId : null), a(null);
-                        }, [n, r, t, a]),
-                        {
-                            paymentSourceId: e,
-                            setPaymentSourceId: t,
-                            isOrderSyncing: !!s && l,
-                            orderSyncError: s ? r : null,
-                        }
-                    );
+                        r = null != n;
+                    return {
+                        paymentSourceId: e,
+                        setPaymentSourceId: t,
+                        isOrderSyncing: !!r && l,
+                        orderSyncError: r ? i : null,
+                    };
                 })(),
                 { setPaymentSourceId: l, paymentSourceId: r } = i.useMemo(
                     () => ({
@@ -125,8 +116,8 @@ function N(e) {
                 {
                     isCheckoutDataLoading: p,
                     checkoutPaymentSources: m,
-                    hasCheckoutContextLoaded: h,
-                } = (0, C.t4)((e) => ({
+                    hasCheckoutContextLoaded: C,
+                } = (0, h.t4)((e) => ({
                     isCheckoutDataLoading: e.get("isCheckoutDataLoading"),
                     checkoutPaymentSources: e.get("checkoutPaymentSources"),
                     hasCheckoutContextLoaded: e.get("hasCheckoutContextLoaded"),
@@ -148,7 +139,7 @@ function N(e) {
                     paymentSourceId: t,
                     setPaymentSourceId: n,
                     location: l ?? "BaseStatefulPaymentSourceSelector",
-                    isReady: h,
+                    isReady: C,
                     subscriptionPaymentSourceId: r,
                 });
             !(function (e) {
@@ -220,7 +211,7 @@ function N(e) {
         })({
             paymentSourceId: b,
             setPaymentSourceId: N,
-            location: h,
+            location: C,
             subscriptionPaymentSourceId: E,
             pendingGiftCardWalletSelection: R,
             setPendingGiftCardWalletSelection: j,
@@ -230,7 +221,7 @@ function N(e) {
             setCurrency: G,
             expressCheckoutSubmitting: F,
             isOrderLocked: B,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
