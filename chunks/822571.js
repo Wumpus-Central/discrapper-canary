@@ -1,10 +1,13 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => c });
 var i = n(65412),
     r = n(638504),
-    a = n(862706),
-    s = n(315069);
-class l extends s.A {
+    a = n(181370),
+    s = n.n(a),
+    l = n(862706),
+    o = n(315069),
+    d = n(927813);
+class c extends o.A {
     id;
     componentType;
     properties;
@@ -15,22 +18,22 @@ class l extends s.A {
     effectiveEndDate;
     static createFromServer(e, t) {
         let n = new TextDecoder("utf-8", { ignoreBOM: !0 }),
-            s = null != e.start_date ? new Date(e.start_date) : null,
-            o = null != e.end_date ? new Date(e.end_date) : null,
-            d = t?.start_date != null ? new Date(t.start_date) : null,
-            c = t?.end_date != null ? new Date(t.end_date) : null;
-        return new l({
+            a = null != e.start_date ? new Date(e.start_date) : null,
+            s = null != e.end_date ? new Date(e.end_date) : null,
+            o = t?.startDate ?? null,
+            d = t?.endDate ?? null;
+        return new c({
             id: e.id,
             componentType: e.component_type,
-            properties: a.m.fromBinary((0, i.A)(e.properties), {
+            properties: l.m.fromBinary((0, i.A)(e.properties), {
                 readUnknownField: !0,
                 readerFactory: (e) => new r.V(e, n),
             }),
             promotionId: e.promotion_id,
-            startDate: s,
-            endDate: o,
-            effectiveStartDate: s ?? d,
-            effectiveEndDate: o ?? c,
+            startDate: a,
+            endDate: s,
+            effectiveStartDate: a ?? o,
+            effectiveEndDate: s ?? d,
         });
     }
     constructor(e) {
@@ -46,5 +49,11 @@ class l extends s.A {
     }
     get isTimed() {
         return null != this.startDate || null != this.endDate;
+    }
+    isIncludedInRollout(e, t) {
+        if (!this.isTimed || null == this.effectiveStartDate) return !0;
+        let n =
+            1e4 * Math.min(1, Math.max(0, ((t.getTime() - this.effectiveStartDate.getTime()) / d.A.Millis.HOUR) * 0.2));
+        return s().v3(`${this.promotionId}:${e}`) % 1e4 < n;
     }
 }
