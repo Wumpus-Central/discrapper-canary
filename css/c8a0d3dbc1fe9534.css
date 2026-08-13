@@ -33,6 +33,7 @@
 }
 
 .dismissButton_f7e2d7 {
+    cursor: pointer;
     display: flex;
     flex-shrink: 0;
     height: 16px;
