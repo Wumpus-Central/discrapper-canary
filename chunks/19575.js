@@ -83,6 +83,9 @@ var i,
         (i.NOTIFICATIONS_REMOVE_NOTIFICATIONS = "DISCORD_NOTIFICATIONS_REMOVE_NOTIFICATIONS"),
         (i.NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS = "DISCORD_NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS"),
         (i.NOTIFICATIONS_RECEIVED_RESPONSE = "DISCORD_NOTIFICATIONS_RECEIVED_RESPONSE"),
+        (i.NTP_CLOCK_START = "DISCORD_NTP_CLOCK_START"),
+        (i.NTP_CLOCK_GET_SYNC_INFO = "DISCORD_NTP_CLOCK_GET_SYNC_INFO"),
+        (i.NTP_CLOCK_SYNCED = "DISCORD_NTP_CLOCK_SYNCED"),
         (i.REQUEST_OPEN_EXTERNAL_URL = "DISCORD_REQUEST_OPEN_EXTERNAL_URL"),
         (i.OPEN_EXTERNAL_URL = "DISCORD_OPEN_EXTERNAL_URL"),
         (i.POWER_MONITOR_RESUME = "DISCORD_POWER_MONITOR_RESUME"),
@@ -168,8 +171,8 @@ var i,
         (i.WINDOW_SET_FRAME_RATE = "DISCORD_WINDOW_SET_FRAME_RATE"),
         (i.GET_MOUSE_COORDINATES = "DISCORD_GET_MOUSE_COORDINATES"),
         i),
-    u = n(562465),
-    _ = n(118356),
+    u = n(636537),
+    _ = n(941426),
     E = n(506774),
     A = n(56562),
     h = n(223273),
@@ -182,19 +185,19 @@ let g = window.DiscordNative,
     S = new Set(["jpg", "jpeg", "jfif", "png"]),
     N = new Set(["webp", "avif"]),
     C = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
-    O = null,
     R = null,
+    O = null,
     L = null,
     D = {},
     y = !1,
     v = {};
 null != g &&
-    ((O = g.app
+    ((R = g.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
     (L = g.app.getModuleVersions()),
-    (R = g.app.getBuildNumber()));
+    (O = g.app.getBuildNumber()));
 let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -472,10 +475,10 @@ let $ = {
             return g.app.getReleaseChannel();
         },
         get version() {
-            return O;
+            return R;
         },
         get buildNumber() {
-            return R;
+            return O;
         },
         get moduleVersions() {
             return L;
@@ -1029,7 +1032,7 @@ let $ = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
-            let n = [...(O ?? [0, 0, 0])];
+            let n = [...(R ?? [0, 0, 0])];
             n.push(this.moduleVersions?.[e] ?? 0);
             let i = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())
