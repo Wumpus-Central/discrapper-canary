@@ -52,5 +52,8 @@ function f(e) {
               noImage: s,
               previewText: d ? void 0 : A.intl.string(A.t.pgUTZC),
           })
-        : (0, i.jsx)("div", { className: n, children: (0, i.jsx)("img", { src: m, alt: "", className: h.Sl }) });
+        : (0, i.jsx)("div", {
+              className: n,
+              children: (0, i.jsx)("img", { src: m, alt: "", className: h.Sl, draggable: !1 }),
+          });
 }

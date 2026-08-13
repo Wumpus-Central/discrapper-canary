@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     f1: "userContainer__38ccf",
     r3: "dim__38ccf",
     R3: "avatarWrapper__38ccf",
@@ -17,4 +17,5 @@ a.exports = {
     J: "streamPreviewAsset__38ccf",
     y6: "streamPreviewImage__38ccf",
     ae: "streamPreviewEyeOverlay__38ccf",
+    sM: "clickablePopout__38ccf",
 };

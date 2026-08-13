@@ -2886,6 +2886,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
+    gap: 10px;
     justify-content: center
 }
 
@@ -2893,7 +2894,6 @@
     background-position: 50%;
     background-repeat: no-repeat;
     height: 60%;
-    margin-bottom: 10px;
     width: 80%
 }
 

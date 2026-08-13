@@ -92,56 +92,64 @@ function er(e) {
             return (0, i.jsx)(u.N, {
                 theme: g,
                 children: (e) =>
-                    (0, i.jsxs)("div", {
-                        ref: a,
+                    (0, i.jsx)(h.D, {
+                        tag: "div",
+                        "aria-label": el.intl.formatToPlainString(ei.default.hZobvN, { username: t }),
+                        className: ea.sM,
                         onMouseEnter: j,
                         onMouseLeave: I,
-                        className: s()(ea.Ne, e),
-                        children: [
-                            (0, i.jsxs)(h.D, {
-                                tag: "div",
-                                "aria-label": el.intl.string(el.t["7Xq/nV"]),
-                                className: ea.J,
-                                style: { aspectRatio: E },
-                                onClick: () => {
-                                    T(), l();
-                                },
-                                children: [
-                                    (0, i.jsx)(L.A, { stream: n, className: ea.y6, noText: !0 }),
-                                    (0, i.jsx)("div", {
-                                        className: ea.ae,
-                                        "aria-hidden": !0,
-                                        children: (0, i.jsx)(p.b, { size: "sm", color: m.A.colors.WHITE }),
-                                    }),
-                                ],
-                            }),
-                            (0, i.jsxs)(A.B, {
-                                direction: "vertical",
-                                gap: 4,
-                                className: ea._v,
-                                children: [
-                                    (0, i.jsx)(f.E, {
-                                        variant: "text-md/medium",
-                                        color: "text-strong",
-                                        lineClamp: 1,
-                                        children: t,
-                                    }),
-                                    (0, i.jsxs)(A.B, {
-                                        direction: "horizontal",
-                                        align: "center",
-                                        gap: 4,
-                                        children: [
-                                            (0, i.jsx)(x.U, { size: "xs", color: m.A.colors.TEXT_FEEDBACK_POSITIVE }),
-                                            (0, i.jsx)(f.E, {
-                                                variant: "text-sm/normal",
-                                                color: "text-feedback-positive",
-                                                children: el.intl.string(ei.default["2Ll0vk"]),
-                                            }),
-                                        ],
-                                    }),
-                                ],
-                            }),
-                        ],
+                        onFocus: j,
+                        onBlur: I,
+                        onClick: () => {
+                            T(), l();
+                        },
+                        children: (0, i.jsxs)("div", {
+                            ref: a,
+                            className: s()(ea.Ne, e),
+                            children: [
+                                (0, i.jsxs)("div", {
+                                    className: ea.J,
+                                    style: { aspectRatio: E },
+                                    children: [
+                                        (0, i.jsx)(L.A, { stream: n, className: ea.y6, noText: !0 }),
+                                        (0, i.jsx)("div", {
+                                            className: ea.ae,
+                                            "aria-hidden": !0,
+                                            children: (0, i.jsx)(p.b, { size: "sm", color: m.A.colors.WHITE }),
+                                        }),
+                                    ],
+                                }),
+                                (0, i.jsxs)(A.B, {
+                                    direction: "vertical",
+                                    gap: 4,
+                                    className: ea._v,
+                                    children: [
+                                        (0, i.jsx)(f.E, {
+                                            variant: "text-md/medium",
+                                            color: "text-strong",
+                                            lineClamp: 1,
+                                            children: t,
+                                        }),
+                                        (0, i.jsxs)(A.B, {
+                                            direction: "horizontal",
+                                            align: "center",
+                                            gap: 4,
+                                            children: [
+                                                (0, i.jsx)(x.U, {
+                                                    size: "xs",
+                                                    color: m.A.colors.TEXT_FEEDBACK_POSITIVE,
+                                                }),
+                                                (0, i.jsx)(f.E, {
+                                                    variant: "text-sm/normal",
+                                                    color: "text-feedback-positive",
+                                                    children: el.intl.string(ei.default["2Ll0vk"]),
+                                                }),
+                                            ],
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
                     }),
             });
         },

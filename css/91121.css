@@ -458,7 +458,6 @@
 
 .streamPreviewAsset__38ccf {
     border-radius: var(--radius-sm);
-    cursor: pointer;
     flex-shrink: 0;
     height: 45px;
     max-width: 80px;
@@ -486,9 +485,13 @@
     transition: opacity .12s ease-out
 }
 
-.streamPreviewAsset__38ccf:focus-visible .streamPreviewEyeOverlay__38ccf,
-.streamPreviewAsset__38ccf:hover .streamPreviewEyeOverlay__38ccf {
+.clickablePopout__38ccf:focus-visible .streamPreviewEyeOverlay__38ccf,
+.clickablePopout__38ccf:hover .streamPreviewEyeOverlay__38ccf {
     opacity: 1
+}
+
+.clickablePopout__38ccf {
+    cursor: pointer
 }
 
 .container__2aff1 {
