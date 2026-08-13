@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { Ay: () => T, Gc: () => I.Gc, Vg: () => f });
-var i = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    s = n(435558),
-    l = n(17928),
-    o = n(793943),
-    d = n(476931),
-    c = n(875317),
-    u = n(363195),
-    _ = n(885386),
-    E = n(141343),
-    A = n(467135),
-    h = n(147248),
-    I = n(153469);
-let f = "data-client-themes";
-function p(e) {
-    return { clientThemesCSS: e, clientThemesClassName: a()(I.Gc, I.hK) };
+o.d(t, { Ay: () => g, Gc: () => T.Gc, Vg: () => A });
+var r = o(582128),
+    l = o(503698),
+    s = o.n(l),
+    n = o(435558),
+    a = o(17928),
+    c = o(793943),
+    i = o(476931),
+    u = o(875317),
+    m = o(363195),
+    h = o(885386),
+    E = o(141343),
+    d = o(467135),
+    _ = o(147248),
+    T = o(153469);
+let A = "data-client-themes";
+function O(e) {
+    return { clientThemesCSS: e, clientThemesClassName: s()(T.Gc, T.hK) };
 }
-function T() {
+function g() {
     let e,
-        t = (0, l.bG)([u.A], () => u.A.theme),
-        n = (0, c.Q)(),
-        r = i.useMemo(() => {
-            if (null == n) return null;
-            if ("custom" === n.type) {
-                let e = n.customUserThemeSettings,
-                    i = e.colors[0];
-                return null == i ? null : (0, I.dY)([...(0, d.kI)(i, t)], e.gradientAngle ?? 0, e.baseMix ?? d.BC, t);
+        t = (0, a.bG)([m.A], () => m.A.theme),
+        o = (0, u.Q)(),
+        l = r.useMemo(() => {
+            if (null == o) return null;
+            if ("custom" === o.type) {
+                let e = o.customUserThemeSettings,
+                    r = e.colors[0];
+                return null == r ? null : (0, T.dY)([...(0, i.kI)(r, t)], e.gradientAngle ?? 0, e.baseMix ?? i.BC, t);
             }
-            let e = (0, d.oE)(n.preset, t);
-            return (0, I.dY)(
+            let e = (0, i.oE)(o.preset, t);
+            return (0, T.dY)(
                 e.colors.map((e) => {
                     let { hex: t } = e;
                     return t;
@@ -39,66 +38,66 @@ function T() {
                 e.baseMix,
                 t,
             );
-        }, [n, t]),
-        f = i.useMemo(() => (null == n ? "" : a()(I.Gc, I.hK)), [n]),
-        T =
-            ((e = (0, l.bG)([h.A], () => h.A.gradientPreset)),
-            i.useMemo(() => {
+        }, [o, t]),
+        A = r.useMemo(() => (null == o ? "" : s()(T.Gc, T.hK)), [o]),
+        g =
+            ((e = (0, a.bG)([_.A], () => _.A.gradientPreset)),
+            r.useMemo(() => {
                 if (null == e) return null;
-                let t = h.A.getLinearGradient();
-                return null == t ? null : (0, I.hm)(e, t);
+                let t = _.A.getLinearGradient();
+                return null == t ? null : (0, T.hm)(e, t);
             }, [e])),
-        m = (function () {
-            let e = (0, l.bG)([u.A], () => u.A.theme),
-                { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: a } = (0, A.ko)(),
-                o = _.eh.useSetting().customUserThemeSettings,
-                d = i.useRef(void 0);
+        M = (function () {
+            let e = (0, a.bG)([m.A], () => m.A.theme),
+                { colors: t, chassisMixAmount: o, gradientAngle: l, setAll: s } = (0, d.ko)(),
+                c = h.eh.useSetting().customUserThemeSettings,
+                i = r.useRef(void 0);
             return (
-                i.useEffect(() => {
-                    (0, s.isEqual)(o, d.current) ||
-                        ((d.current = o),
-                        a({
-                            colors: o?.colors ?? [],
-                            gradientAngle: o?.gradientAngle ?? 0,
-                            chassisMixAmount: o?.baseMix ?? A.kJ,
+                r.useEffect(() => {
+                    (0, n.isEqual)(c, i.current) ||
+                        ((i.current = c),
+                        s({
+                            colors: c?.colors ?? [],
+                            gradientAngle: c?.gradientAngle ?? 0,
+                            chassisMixAmount: c?.baseMix ?? d.kJ,
                         }));
-                }, [o, a]),
-                i.useMemo(() => (0 === t.length ? null : (0, I.dY)(t, r, n, e)), [t, n, r, e])
+                }, [c, s]),
+                r.useMemo(() => (0 === t.length ? null : (0, T.dY)(t, l, o, e)), [t, o, l, e])
             );
         })(),
-        g = (0, o.fy)((e) => e.activePanel === o.HP.CUSTOM_THEME),
-        S = (0, o.fy)((e) => e.activePanel === o.HP.CLIENT_THEMES);
+        b = (0, c.fy)((e) => e.activePanel === c.HP.CUSTOM_THEME),
+        R = (0, c.fy)((e) => e.activePanel === c.HP.CLIENT_THEMES);
     return (function (e) {
         let {
                 guildCSS: t,
-                guildClassName: n,
-                customThemeColorCSS: i,
-                backgroundGradientCSS: r,
-                isCustomThemePreviewActive: a,
-                isClientThemesEditorPreviewActive: s,
-                isPerModeThemingActive: l,
-                isNitroLocked: o,
+                guildClassName: o,
+                customThemeColorCSS: r,
+                backgroundGradientCSS: l,
+                isCustomThemePreviewActive: s,
+                isClientThemesEditorPreviewActive: n,
+                isPerModeThemingActive: a,
+                isNitroLocked: c,
             } = e,
-            d = l && !o;
-        return a && !d && null != i
-            ? p(i)
-            : s && !d && null != r
-              ? { clientThemesCSS: r, clientThemesClassName: I.Gc }
+            i = a && !c;
+        return s && !i && null != r
+            ? O(r)
+            : n && !i && null != l
+              ? { clientThemesCSS: l, clientThemesClassName: T.Gc }
               : null != t
-                ? { clientThemesCSS: t, clientThemesClassName: n }
-                : null == i || l
-                  ? null == r
+                ? { clientThemesCSS: t, clientThemesClassName: o }
+                : null == r || a
+                  ? null == l
                       ? { clientThemesCSS: "", clientThemesClassName: "" }
-                      : { clientThemesCSS: r, clientThemesClassName: I.Gc }
-                  : p(i);
+                      : { clientThemesCSS: l, clientThemesClassName: T.Gc }
+                  : O(r);
     })({
-        guildCSS: r,
-        guildClassName: f,
-        customThemeColorCSS: m,
-        backgroundGradientCSS: T,
-        isCustomThemePreviewActive: g,
-        isClientThemesEditorPreviewActive: S,
+        guildCSS: l,
+        guildClassName: A,
+        customThemeColorCSS: M,
+        backgroundGradientCSS: g,
+        isCustomThemePreviewActive: b,
+        isClientThemesEditorPreviewActive: R,
         isPerModeThemingActive: (0, E.V)(),
-        isNitroLocked: (0, l.bG)([h.A], () => h.A.isPreview),
+        isNitroLocked: (0, a.bG)([_.A], () => _.A.isPreview),
     });
 }
