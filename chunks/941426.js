@@ -1,6 +1,8 @@
 "use strict";
-n.d(t, { $o: () => s, Vy: () => c, gZ: () => d, si: () => o });
-var i = n(631159);
+function i(e) {
+    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+}
+n.d(t, { Vy: () => c, $o: () => s, gZ: () => d, si: () => o });
 let r = `
 font-weight: bold;
 color: purple;
@@ -37,7 +39,7 @@ class c {
         var e = this;
         return function (t) {
             for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) r[s - 1] = arguments[s];
-            (0, i.G)(t, ...r), a(e.name, "log", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "log", t, ...r);
+            i(t, ...r), a(e.name, "log", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "log", t, ...r);
         };
     })();
     verboseDangerously = (() => {
@@ -51,28 +53,28 @@ class c {
         var e = this;
         return function (t) {
             for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) r[s - 1] = arguments[s];
-            (0, i.G)(t, ...r), a(e.name, "debug", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "debug", t, ...r);
+            i(t, ...r), a(e.name, "debug", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "debug", t, ...r);
         };
     })();
     info = (() => {
         var e = this;
         return function (t) {
             for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) r[s - 1] = arguments[s];
-            (0, i.G)(t, ...r), a(e.name, "info", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "info", t, ...r);
+            i(t, ...r), a(e.name, "info", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "info", t, ...r);
         };
     })();
     warn = (() => {
         var e = this;
         return function (t) {
             for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) r[s - 1] = arguments[s];
-            (0, i.G)(t, ...r), a(e.name, "warn", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "warn", t, ...r);
+            i(t, ...r), a(e.name, "warn", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "warn", t, ...r);
         };
     })();
     error = (() => {
         var e = this;
         return function (t) {
             for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) r[s - 1] = arguments[s];
-            (0, i.G)(t, ...r), a(e.name, "error", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "error", t, ...r);
+            i(t, ...r), a(e.name, "error", t, ...r), e.nativeLoggerEnabled && l?.(e.name, "error", t, ...r);
         };
     })();
     trace = (() => {

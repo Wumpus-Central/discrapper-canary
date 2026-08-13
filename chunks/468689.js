@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(562708),
     r = n(765178),
-    a = n(562465),
+    a = n(636537),
     s = n(228366),
     l = n(398590),
     o = n(77257),
@@ -22,7 +22,7 @@ var i = n(562708),
     S = n(652215),
     N = n(375708);
 let C = new c.A("GuildSettingsActionCreators"),
-    O = {
+    R = {
         init(e, t, n, i) {
             s.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
@@ -253,7 +253,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("988"),
                 n.e("54540"),
                 n.e("32744"),
-                n.e("21035"),
+                n.e("52123"),
                 n.e("26738"),
                 n.e("41295"),
                 n.e("69960"),
@@ -281,7 +281,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("76279"),
                 n.e("51962"),
                 n.e("35459"),
-                n.e("2861"),
+                n.e("47623"),
                 n.e("63933"),
                 n.e("42083"),
                 n.e("20182"),
@@ -805,7 +805,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 T.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
                     t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                O.init(e, t, i, r),
+                R.init(e, t, i, r),
                 I.A.closeGuildSidebar(e),
                 (0, l.id)(S.zgK.GUILD_SETTINGS);
         },
@@ -893,8 +893,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                     features: T,
                     systemChannelFlags: m,
                     preferredLocale: N,
-                    rulesChannelId: O,
-                    safetyAlertsChannelId: R,
+                    rulesChannelId: R,
+                    safetyAlertsChannelId: O,
                     ownerConfiguredContentLevel: L,
                     discoverySplash: D,
                     publicUpdatesChannelId: y,
@@ -921,11 +921,11 @@ let C = new c.A("GuildSettingsActionCreators"),
                     default_message_notifications: f,
                     explicit_content_filter: p,
                     system_channel_flags: m,
-                    rules_channel_id: O,
+                    rules_channel_id: R,
                     owner_configured_content_level: L,
                     discovery_splash: D,
                     public_updates_channel_id: y,
-                    safety_alerts_channel_id: R,
+                    safety_alerts_channel_id: O,
                     ...(null != v ? { premium_progress_bar_enabled: v } : null),
                     profile: null != b ? { tag: b.tag } : b,
                     moderator_reporting_enabled: M,
@@ -997,7 +997,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         deleteGuild: (e) =>
             a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then(() => {
-                O.close();
+                R.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -1010,7 +1010,7 @@ let C = new c.A("GuildSettingsActionCreators"),
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                O.close(),
+                R.close(),
                 t && n && (0, h.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
@@ -1066,7 +1066,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await O.migratePinPermission(e)), i && (await O.migrateSlowmodePermission(e));
+            n && (await R.migratePinPermission(e)), i && (await R.migrateSlowmodePermission(e));
         },
     },
-    R = O;
+    O = R;

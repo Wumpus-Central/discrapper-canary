@@ -28,8 +28,8 @@ let N = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
 var C = n(12351),
-    O = n(915089),
-    R = n(734057),
+    R = n(915089),
+    O = n(734057),
     L = n(458294),
     D = n(71393),
     y = n(290863),
@@ -164,22 +164,22 @@ class $ extends r.Component {
         });
     }
 }
-let z = E.Ay.connectStores([v.Ay, R.A], (e) => {
+let z = E.Ay.connectStores([v.Ay, O.A], (e) => {
         let { channel: t } = e;
         return {
             unread: v.Ay.hasUnread(t.id),
             mentions: v.Ay.getMentionCount(t.id),
             isMentionLowImportance: v.Ay.getIsMentionLowImportance(t.id),
-            category: R.A.getChannel(t.parent_id),
+            category: O.A.getChannel(t.parent_id),
         };
     })($),
-    q = E.Ay.connectStores([M.Ay], (e) => {
+    Z = E.Ay.connectStores([M.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: M.Ay.getVoiceStates(t.guild_id)[t.id] };
     })($),
-    Z = E.Ay.connectStores([L.default], (e) => {
+    q = E.Ay.connectStores([L.default], (e) => {
         let { guild: t } = e;
         return { unread: L.default.hasUnread(t.id) };
     })(G.OS),
@@ -192,9 +192,9 @@ let z = E.Ay.connectStores([v.Ay, R.A], (e) => {
             { mentions: v.Ay.getMentionCount(t.id), status: n }
         );
     })(G.nG),
-    Q = E.Ay.connectStores([R.A, v.Ay, y.A], (e) => {
+    Q = E.Ay.connectStores([O.A, v.Ay, y.A], (e) => {
         let { user: t } = e,
-            n = R.A.getDMFromUserId(t.id);
+            n = O.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? v.Ay.getMentionCount(n) : 0,
             status: y.A.getStatus(t.id),
@@ -211,7 +211,7 @@ function J(e, t, n) {
 class ee extends r.PureComponent {
     scrollerRef = r.createRef();
     inputRef = r.createRef();
-    _listId = (0, O.Ld)();
+    _listId = (0, R.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         g.A.disable(), g.A.enableTemp(m.w);
@@ -433,7 +433,7 @@ class ee extends r.PureComponent {
                         n.e("988"),
                         n.e("54540"),
                         n.e("32744"),
-                        n.e("21035"),
+                        n.e("52123"),
                         n.e("26738"),
                         n.e("41295"),
                         n.e("69960"),
@@ -460,7 +460,7 @@ class ee extends r.PureComponent {
                         n.e("76279"),
                         n.e("51962"),
                         n.e("35459"),
-                        n.e("2861"),
+                        n.e("47623"),
                         n.e("63933"),
                         n.e("42083"),
                         n.e("20182"),
@@ -1127,7 +1127,7 @@ class ee extends r.PureComponent {
                 );
             case S.rD.VOICE_CHANNEL:
                 return (0, i.jsx)(
-                    q,
+                    Z,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1142,7 +1142,7 @@ class ee extends r.PureComponent {
                 );
             case S.rD.GUILD:
                 return (0, i.jsx)(
-                    Z,
+                    q,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
