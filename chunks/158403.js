@@ -1,12 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => I, Dp: () => h });
+n.d(t, { Ay: () => f, Dp: () => I });
 var i = n(582128),
     r = n(17928),
-    a = n(183636),
-    s = n(927813),
-    l = n(352774),
-    o = n(859703);
-let d = (0, n(945810).mj)({
+    a = n(107195),
+    s = n(183636),
+    l = n(927813),
+    o = n(396813),
+    d = n(859703);
+let c = (0, n(945810).mj)({
     name: "2026-07-ad-recheck-interval-experiment",
     kind: "user",
     defaultConfig: { enableFastAdRecheck: !1 },
@@ -18,33 +19,33 @@ let d = (0, n(945810).mj)({
         5: { enableFastAdRecheck: !0 },
     },
 });
-var c = n(971276),
-    u = n(710969);
-let _ = 10 * s.A.Millis.MINUTE,
-    E = 30 * s.A.Millis.SECOND;
-function A(e, t, n) {
-    if (!(!(0, c.s)() || (null != e && e.fetchedAt + e.ttlMillis >= Date.now()))) {
-        if ("focused" !== a.A.getState()) {
-            null != e && (0, l.Fr)(t, e.ttlMillis);
+var u = n(971276),
+    _ = n(710969);
+let E = 10 * l.A.Millis.MINUTE,
+    A = 30 * l.A.Millis.SECOND;
+function h(e, t, n) {
+    if (!(!(0, u.s)() || (null != e && e.fetchedAt + e.ttlMillis >= Date.now()))) {
+        if ("focused" !== s.A.getState()) {
+            null != e && (0, o.Fr)(t, e.ttlMillis);
             return;
         }
-        o.A.isFetchingQuestToDeliverByPlacement(t) || (o.A.canRefreshAd(t) && ((0, l.N1)(), (0, l.r8)(t, n)));
+        d.A.isFetchingQuestToDeliverByPlacement(t) || (d.A.canRefreshAd(t) && ((0, o.N1)(), (0, o.r8)(t, n)));
     }
 }
-function h(e) {
-    return (0, r.bG)([o.A], () => o.A.questAdDecisionByPlacement.get(e) ?? null, [e]);
-}
 function I(e) {
+    return (0, r.bG)([d.A], () => d.A.questAdDecisionByPlacement.get(e) ?? null, [e]);
+}
+function f(e) {
     !(function (e) {
         let t = (0, i.useRef)(null),
-            n = h(e),
-            { enableFastAdRecheck: r } = d.useConfig({ location: "useQuestForAdPlacement" });
+            n = I(e),
+            { enableFastAdRecheck: r } = c.useConfig({ location: "useQuestForAdPlacement" });
         (0, i.useEffect)(() => {
             null != t.current && clearInterval(t.current);
-            let i = r ? E : _;
-            A(n, e, "questBar-open"),
+            let i = r ? A : E;
+            h(n, e, "questBar-open"),
                 (t.current = setInterval(() => {
-                    A(o.A.questAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
+                    h(d.A.questAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
                 }, i));
             let a = t.current;
             return () => {
@@ -52,7 +53,8 @@ function I(e) {
             };
         }, [n, e, r]);
     })(e);
-    let t = h(e),
-        n = (0, r.bG)([o.A], () => (t?.questId != null ? (o.A.quests.get(t.questId) ?? null) : null));
-    return null == n || (0, u.Ic)(n) ? null : n;
+    let t = I(e),
+        n = (0, a.Yz)(t?.creative),
+        s = (0, r.bG)([d.A], () => (null != n ? (d.A.quests.get(n) ?? null) : null));
+    return null == s || (0, _.Ic)(s) ? null : s;
 }
