@@ -15290,7 +15290,7 @@ function Ty(e) {
                             description: t.getBannerAltText(),
                             originalAsset: void 0,
                         }),
-                        themeColors: t.themeColors,
+                        themeColors: t.themeColorsLegacy,
                         avatarDecorationSkuId: t.avatarDecorationSkuId,
                         displayNameStyles: t.displayNameStyles,
                     };

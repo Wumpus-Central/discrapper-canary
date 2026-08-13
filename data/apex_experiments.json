@@ -4702,7 +4702,7 @@
     "defaultConfig": {
       "enabled": false,
       "showPresetName": false,
-      "includeLightModeThemes": false
+      "clientThemeAdaptedColorsEnabled": false
     },
     "variations": {
       "0": {
@@ -4712,12 +4712,12 @@
       "1": {
         "enabled": true,
         "showPresetName": true,
-        "includeLightModeThemes": false
+        "clientThemeAdaptedColorsEnabled": false
       },
       "2": {
         "enabled": true,
         "showPresetName": false,
-        "includeLightModeThemes": true
+        "clientThemeAdaptedColorsEnabled": true
       }
     }
   },
