@@ -14,9 +14,9 @@ var s,
     A = n(857250),
     E = n(97483),
     x = n(834730),
-    O = n(821609),
-    g = n(939249),
-    m = n(780964),
+    g = n(821609),
+    m = n(939249),
+    O = n(780964),
     h = n(766075),
     b = n(975571),
     j = n(544231),
@@ -30,12 +30,12 @@ let I = function (t) {
 };
 var F = n(652215),
     U = n(375708),
-    N = n(123268);
-let k = function (t) {
+    k = n(123268);
+let y = function (t) {
     let { onClose: e, channelId: n } = t,
         [s, r] = l.useState(!1),
         a = l.useCallback(() => {
-            (0, h.openUserSettings)(m.X.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING), e();
+            (0, h.openUserSettings)(O.X.DM_SAFETY_ALERTS_SETTING), e();
         }, [e]),
         o = l.useCallback(() => {
             s ||
@@ -49,7 +49,7 @@ let k = function (t) {
                     }));
         }, [n, e, s]);
     return (0, i.jsxs)(I, {
-        style: N.T1,
+        style: k.T1,
         children: [
             (0, i.jsx)(x.E, {
                 variant: "text-md/normal",
@@ -58,14 +58,14 @@ let k = function (t) {
             }),
             (0, i.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(O.$, { onClick: a, fullWidth: !0, text: U.intl.string(U.t.qpWnyC) }),
+                    (0, i.jsx)(g.$, { onClick: a, fullWidth: !0, text: U.intl.string(U.t.qpWnyC) }),
                     (0, i.jsx)(x.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        className: N._B,
+                        className: k._B,
                         children: U.intl.format(U.t["2uYViD"], {
                             reportFalsePositiveHook: (t, e) =>
-                                (0, i.jsx)(g.D, { className: N.l_, tag: "span", onClick: o, children: t }, e),
+                                (0, i.jsx)(m.D, { className: k.l_, tag: "span", onClick: o, children: t }, e),
                         }),
                     }),
                 ],
@@ -73,7 +73,7 @@ let k = function (t) {
         ],
     });
 };
-var y = n(17928),
+var N = n(17928),
     Y = n(661531),
     f = n(320448),
     v = n(192308),
@@ -104,13 +104,13 @@ function Z(t) {
                     (0, i.jsx)(x.E, { variant: "text-xs/medium", color: "text-default", children: n }),
                 ],
             }),
-            (0, i.jsx)(O.$, { size: "sm", variant: l, text: s, onClick: r, disabled: a }),
+            (0, i.jsx)(g.$, { size: "sm", variant: l, text: s, onClick: r, disabled: a }),
         ],
     });
 }
 function H(t) {
     let { title: e, subTitle: n, onPress: s } = t;
-    return (0, i.jsxs)(g.D, {
+    return (0, i.jsxs)(m.D, {
         className: R()(q.$l, q.lx),
         onClick: s,
         children: [
@@ -133,21 +133,21 @@ let J = function (t) {
         c = (0, B.z)(),
         S = (0, z.W)(s),
         _ = null != (0, d.e)(s),
-        A = (0, y.bG)([w.A], () => w.A.isIgnored(e), [e]),
-        E = (0, y.bG)([w.A], () => w.A.isBlocked(e), [e]),
+        A = (0, N.bG)([w.A], () => w.A.isIgnored(e), [e]),
+        E = (0, N.bG)([w.A], () => w.A.isBlocked(e), [e]),
         x = l.useCallback(
             (t) => {
                 (0, u._$)({ channelId: s, warningId: r, senderId: e, warningType: a, cta: t, isNudgeWarning: _ });
             },
             [s, r, e, a, _],
         ),
-        O = l.useCallback(() => {
+        g = l.useCallback(() => {
             (0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
         }, [x]),
-        g = l.useCallback(() => {
+        m = l.useCallback(() => {
             P.A.unblockUser(e, { location: G.Ht }), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK);
         }, [e, x]),
-        m = l.useCallback(() => {
+        O = l.useCallback(() => {
             (0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
         }, [x]),
         h = l.useMemo(
@@ -172,15 +172,15 @@ let J = function (t) {
                     variant: "primary",
                     onPress: () => {
                         E
-                            ? (g(), D.A.showUnblockSuccessToast(e, s))
+                            ? (m(), D.A.showUnblockSuccessToast(e, s))
                             : (0, v.openModalLazy)(async () => {
                                   let { default: t } = await n.e("84938").then(n.bind(n, 371185));
                                   return (n) => {
                                       let { transitionState: l, onClose: r } = n;
                                       return (0, i.jsx)(t, {
                                           transitionState: l,
-                                          onBlock: O,
-                                          onBlockAndReport: m,
+                                          onBlock: g,
+                                          onBlockAndReport: O,
                                           onCancel: () => {
                                               r?.(), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CANCEL);
                                           },
@@ -202,7 +202,7 @@ let J = function (t) {
                     },
                 },
             ],
-            [A, E, x, g, O, m, e, s, S],
+            [A, E, x, m, g, O, e, s, S],
         ),
         b = l.useMemo(() => {
             let t = {
@@ -303,8 +303,8 @@ var tt = n(785592),
 let tn = (t) => {
     let { onClose: e, channelId: n, warningId: s, warningType: _, otherUserId: A, transitionState: E } = t,
         x = null != (0, d.e)(n),
-        [O, g] = l.useState("ACTIONS"),
-        m = l.useCallback(
+        [g, m] = l.useState("ACTIONS"),
+        O = l.useCallback(
             (t) => {
                 (0, u._$)({ channelId: n, warningId: s, warningType: _, senderId: A, cta: t, isNudgeWarning: x });
             },
@@ -315,16 +315,16 @@ let tn = (t) => {
             return (0, i.jsx)(a.Q, { onClick: n, text: e, variant: "secondary", textVariant: "text-sm/normal" });
         }, []),
         b = l.useCallback(() => {
-            switch (O) {
+            switch (g) {
                 case "SAFETY_TIPS":
                 case "ABOUT_SAFETY_ALERTS":
-                    return (0, i.jsx)(h, { text: U.intl.string(U.t["13/7kX"]), onClick: () => g("ACTIONS") });
+                    return (0, i.jsx)(h, { text: U.intl.string(U.t["13/7kX"]), onClick: () => m("ACTIONS") });
                 default:
                     return null;
             }
-        }, [O, h]),
+        }, [g, h]),
         j = l.useCallback(() => {
-            switch (O) {
+            switch (g) {
                 case "SAFETY_TIPS":
                     return U.intl.string(U.t.EtNxi6);
                 case "ABOUT_SAFETY_ALERTS":
@@ -332,12 +332,12 @@ let tn = (t) => {
                 default:
                     return U.intl.string(U.t.MAhAp6);
             }
-        }, [O]),
+        }, [g]),
         C = l.useCallback(
             (t) => {
-                g(t);
+                m(t);
             },
-            [g],
+            [m],
         );
     return (0, i.jsxs)(r.EO, {
         "data-migration-pending": !0,
@@ -355,7 +355,7 @@ let tn = (t) => {
             }),
             (0, i.jsx)(T.Ip, {
                 children: (0, i.jsxs)(c.t, {
-                    activeSlide: O,
+                    activeSlide: g,
                     width: 440,
                     children: [
                         (0, i.jsx)(c.q, {
@@ -370,10 +370,10 @@ let tn = (t) => {
                         }),
                         (0, i.jsx)(c.q, {
                             id: "ABOUT_SAFETY_ALERTS",
-                            children: (0, i.jsx)(k, {
+                            children: (0, i.jsx)(y, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), m(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    e(), O(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
                                 },
                             }),
                         }),
@@ -388,7 +388,7 @@ let tn = (t) => {
                     (0, i.jsx)(h, {
                         text: U.intl.string(U.t.cpT0Cq),
                         onClick: () => {
-                            e(), m(u.Wm.USER_SAFETY_TOOLS_DISMISS);
+                            e(), O(u.Wm.USER_SAFETY_TOOLS_DISMISS);
                         },
                     }),
                     b(),

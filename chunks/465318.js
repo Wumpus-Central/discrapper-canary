@@ -1,5 +1,6 @@
-n.d(t, { A: () => r });
-let r = (0, n(945810).mj)({
+"use strict";
+n.d(t, { A: () => i });
+let i = (0, n(945810).mj)({
     name: "2026-07-personal-widget",
     kind: "user",
     defaultConfig: { enabled: !1, showCreateEntrypoint: !1 },

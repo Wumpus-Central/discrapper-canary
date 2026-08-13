@@ -1,31 +1,32 @@
-n.d(t, { Fy: () => E, Vv: () => d, Xx: () => h, i4: () => c, oZ: () => s, ry: () => r });
+"use strict";
+n.d(t, { Fy: () => l, Vv: () => d, Xx: () => c, i4: () => u, oZ: () => o, ry: () => s });
 var i = n(636537),
-    l = n(228366),
+    r = n(228366),
     a = n(652215);
-function r(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    l.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
+    r.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
 }
-async function E(e) {
-    l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+async function l(e) {
+    r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
     try {
         let t = await i.Bo.get({ url: a.Rsh.GUILD_WELCOME_SCREEN(e), oldFormErrors: !0, rejectWithError: !0 });
-        return l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
+        return r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
     } catch (e) {
-        l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+        r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
     }
 }
-function s() {
-    l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+function o() {
+    r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 }
 function d() {
-    l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+    r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 }
-function h(e) {
-    l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
+function c(e) {
+    r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
 }
-async function c(e, t) {
-    l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+async function u(e, t) {
+    r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
     try {
         let n = await i.Bo.patch({
             url: a.Rsh.GUILD_WELCOME_SCREEN(e),
@@ -33,8 +34,8 @@ async function c(e, t) {
             oldFormErrors: !0,
             rejectWithError: !0,
         });
-        l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
+        r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
     } catch (e) {
-        l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+        r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
     }
 }

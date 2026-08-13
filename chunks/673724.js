@@ -1,19 +1,19 @@
 n.d(t, {
     CA: () => r,
-    Hz: () => l,
+    Hz: () => s,
     S8: () => c,
     a7: () => i,
-    aM: () => s,
+    aM: () => l,
     hk: () => d,
     sj: () => a,
     wF: () => u,
     wV: () => o,
 });
-let l = "Untitled App";
+let s = "Untitled App";
 function i(e) {
     return Math.floor(100 * e);
 }
-function s(e) {
+function l(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
 function a(e) {
@@ -62,6 +62,8 @@ let c = {
                 label: "Nemotron 3 Super 120B",
                 provider: "workers-ai",
             },
+            { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
+            { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         ],
         subagent: [
             { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
@@ -71,6 +73,8 @@ let c = {
                 label: "Nemotron 3 Super 120B",
                 provider: "workers-ai",
             },
+            { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
+            { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
             { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
         ],
         thinking: c.thinking,
