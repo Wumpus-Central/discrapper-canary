@@ -50,12 +50,15 @@ let S = {
                 Date.now() - e.createdAt < 864e5 ||
                 u.Ay.keyboardNavigationExplainerModalSeen ||
                 0 !== m ||
-                (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("73989"), n.e("63309"), n.e("75805")]).then(
-                        n.bind(n, 645905),
-                    );
-                    return (t) => (0, i.jsx)(e, { ...t });
-                });
+                (0, r.openModalLazy)(
+                    async () => {
+                        let { default: e } = await Promise.all([n.e("73989"), n.e("63309"), n.e("75805")]).then(
+                            n.bind(n, 645905),
+                        );
+                        return (t) => (0, i.jsx)(e, { ...t });
+                    },
+                    { modalKey: "keyboard-navigation-explainer" },
+                );
     },
     handleSystemPrefersReducedMotionChanged(e) {
         a.h.wait(() => {
