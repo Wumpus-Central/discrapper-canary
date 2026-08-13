@@ -22,7 +22,7 @@ var P = n(202541),
     I = n(594387),
     g = n(375708),
     _ = n(732280),
-    v = n(361597),
+    v = n(92886),
     T = n(815545),
     x = n(344159),
     N = n(45938),
@@ -32,7 +32,7 @@ var P = n(202541),
     M = n(216641),
     O = n(222707),
     L = n(559778),
-    k = n(319668);
+    k = n(377058);
 function w(e) {
     let {
             handlePaymentSourceAdd: t,
@@ -110,7 +110,7 @@ function W(e) {
             isPremium: eo,
             isPremiumGroupPurchase: eu,
         } = (0, d.i)(),
-        ec = i.useMemo(() => er || null != n, [er, n]),
+        ec = i.useMemo(() => er && null != n, [er, n]),
         {
             discriminatedInvoicePreview: ed,
             subscriptionPeriodEnd: ep,
@@ -396,7 +396,7 @@ function W(e) {
                   isPremiumGroupPurchase: eu,
                   guildId: eA,
               }),
-        e1 = (0, l.jsx)(U.P, {
+        e2 = (0, l.jsx)(U.P, {
             activeSubscription: et,
             isTrial: ec,
             plan: k,
@@ -405,7 +405,7 @@ function W(e) {
             discriminatedInvoicePreview: ed,
             fractionalPremiumInfo: eP,
         }),
-        e2 =
+        e1 =
             ed.type === c.u$.PREMIUM_WITH_TRIAL
                 ? (0, B.ib)(ed.invoicePreview.currency)
                 : (0, a.kw)({ subscriptionInvoiceRecord: ed.invoicePreview });
@@ -414,8 +414,8 @@ function W(e) {
         purchaseItemContent: e0,
         subscriptionDetailsContent: eX,
         invoiceSummaryContent: eJ,
-        legalContent: e1,
-        invoiceTotalDueValue: e2,
+        legalContent: e2,
+        invoiceTotalDueValue: e1,
         invoiceTotalDueLabel: J ? g.intl.string(Y.default.Zxav97) : g.intl.string(Y.default.R0cZsM),
     });
 }
