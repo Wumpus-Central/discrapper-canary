@@ -1,4 +1,4 @@
-e.d(i, { A: () => y });
+e.d(i, { A: () => g });
 var t = e(477900);
 e(582128);
 var c = e(17928),
@@ -12,22 +12,23 @@ var c = e(17928),
     u = e(143413),
     p = e(145530),
     E = e(652215),
-    g = e(375708);
-function y(n, i) {
+    y = e(375708);
+function g(n, i) {
     let e = (0, c.bG)([A.default], () => A.default.getCurrentUser()),
-        y = (0, l.Id)(i),
+        g = (0, l.Id)(i),
         D = (0, c.bG)([d.A], () => d.A.can(E.xBc.MANAGE_MESSAGES, i), [i]),
         { firstMessage: f } = (0, c.bG)([s.A], () => s.A.getMessage(i.id), [i.id]),
-        M = D || (null != e && n.canDeleteOwnMessage(e.id));
+        _ = D || (null != e && n.canDeleteOwnMessage(e.id));
     return n.state === E.cmJ.SENDING ||
-        !M ||
+        !_ ||
+        (n.type === E.lAJ.AUTO_MODERATION_ACTION && !D) ||
         E.MRS.UNDELETABLE.has(n.type) ||
-        !y ||
+        !g ||
         (i.isModeratorReportChannel() && (n.id === f?.id || (0, u.A)(n)))
         ? null
         : (0, t.jsx)(r.Dr, {
               id: "delete",
-              label: g.intl.string(g.t.xwMqD7),
+              label: y.intl.string(y.t.xwMqD7),
               action: function (e) {
                   n.state === E.cmJ.SEND_FAILED
                       ? o.A.deleteMessage(i.id, n.id, !0)
