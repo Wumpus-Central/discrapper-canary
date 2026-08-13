@@ -206,8 +206,7 @@
 .customizationContainer_cba592 {
     display: grid;
     gap: 8px;
-    grid-template-columns: auto 1fr;
-    margin-bottom: var(--space-16)
+    grid-template-columns: auto 1fr
 }
 
 .iconSelector_cba592 {
