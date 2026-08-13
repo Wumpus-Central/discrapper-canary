@@ -576,7 +576,7 @@ let eZ = (0, a.sN)(o.X.APPEARANCE_ZOOM, {
 n(321073);
 var e$ = n(650809),
     e0 = n(477782),
-    e1 = n(562465),
+    e1 = n(636537),
     e2 = n(228366),
     e3 = n(74396),
     e5 = n(93055),
@@ -857,7 +857,7 @@ var tH = n(452027),
     tW = n(976860),
     tZ = n(16236),
     tq = n(635233),
-    tQ = n(551289),
+    tQ = n(749884),
     tJ = n(449817);
 let t$ = eS.A.getArticleURL(A.MVz.FAVORITES_GUILD);
 function t0() {
@@ -892,7 +892,7 @@ let t1 = (0, a.E2)(o.X.CHAT_FAVORITES_TOGGLE, {
         useSearchTerms: () => [j.intl.string(tJ.default.OT1NK5)],
         Component: function () {
             let { hasAccess: e } = (0, e5.TW)("FavoritesGuildVisibilitySetting"),
-                t = (0, tQ.dM)();
+                t = (0, tQ.A)(!1);
             return e
                 ? (0, c.jsx)(tK.d, {
                       checked: t,
@@ -1944,7 +1944,7 @@ function iW() {
     return { runningGame: t ?? void 0, runningGameApplication: n ?? void 0 };
 }
 var iZ = n(769015),
-    iq = n(749983),
+    iq = n(626822),
     iQ = n(935671),
     iJ = n(868886);
 function i$(e) {
@@ -15156,7 +15156,7 @@ function Tg(e) {
     let t = null == e ? Tc : Tc.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
-var Tm = n(764336),
+var Tm = n(201805),
     TA = n(461893);
 function Th(e) {
     let { preset: t, onShuffle: n } = e,

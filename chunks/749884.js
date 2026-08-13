@@ -1,26 +1,43 @@
 "use strict";
-n.d(t, { A: () => _, J: () => u });
+n.d(t, { A: () => u, J: () => c });
 var i = n(17928),
     r = n(967198),
     a = n(181079),
-    s = n(676168),
-    l = n(93055),
-    o = n(5180),
-    d = n(551289);
-function c(e, t, n) {
-    let { isExperimentEnabled: i, isFreemium: r, hasAccess: a, isIntroPopoverShown: s } = n;
-    return !!i && (!!(s || (0, o.ai)(t.getGuildId())) || (!!a && (0, d.n_)(r, e)));
+    s = n(93055),
+    l = n(5180),
+    o = n(771959);
+function d(e, t, n) {
+    let { isExperimentEnabled: i, isFreemium: r, hasAccess: a, isIntroPopoverShown: s, keepWhileViewing: d } = n;
+    return (
+        !!i &&
+        (!!(d && (0, l.ai)(t.getGuildId())) ||
+            (!!a && !1 !== e.favoriteGuildVisibleSetting && (!!e.favoriteGuildEnabled || (r && (s || (0, o.zW)())))))
+    );
+}
+function c() {
+    let { isExperimentEnabled: e, isFreemium: t, hasAccess: n } = (0, s.ad)();
+    return d(a.A, r.A, {
+        isExperimentEnabled: e,
+        isFreemium: t,
+        hasAccess: n,
+        isIntroPopoverShown: (0, o.UW)(),
+        keepWhileViewing: !0,
+    });
 }
 function u() {
-    let { isExperimentEnabled: e, isFreemium: t, hasAccess: n } = (0, l.ad)();
-    return c(a.A, r.A, { isExperimentEnabled: e, isFreemium: t, hasAccess: n, isIntroPopoverShown: (0, s.UW)() });
-}
-function _(e) {
-    let { isExperimentEnabled: t, isFreemium: n, hasAccess: o } = (0, l.TW)(e),
-        d = (0, s.DA)();
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        { isExperimentEnabled: t, isFreemium: n, hasAccess: l } = (0, s.TW)(),
+        c = (0, o.DA)();
     return (0, i.bG)(
         [a.A, r.A],
-        () => c(a.A, r.A, { isExperimentEnabled: t, isFreemium: n, hasAccess: o, isIntroPopoverShown: d }),
-        [t, n, o, d],
+        () =>
+            d(a.A, r.A, {
+                isExperimentEnabled: t,
+                isFreemium: n,
+                hasAccess: l,
+                isIntroPopoverShown: c,
+                keepWhileViewing: e,
+            }),
+        [t, n, l, c, e],
     );
 }

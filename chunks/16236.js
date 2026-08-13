@@ -4,12 +4,12 @@ n.d(t, {
     S_: () => B,
     w6: () => j,
     od: () => W,
-    JD: () => q,
+    JD: () => Z,
     zN: () => z,
     tV: () => X,
     _2: () => $,
     kG: () => Q,
-    uM: () => Z,
+    uM: () => q,
     nR: () => Y,
     i_: () => H,
 });
@@ -33,10 +33,10 @@ var i = n(435558),
     m = n(93055),
     g = n(5180),
     S = n(635233),
-    N = n(551289),
+    N = n(771959),
     C = n(928424),
-    O = n(691540),
-    R = n(857250),
+    R = n(691540),
+    O = n(857250),
     L = n(97483),
     D = n(375708),
     y = n(349828),
@@ -116,7 +116,7 @@ function F(e, t, n) {
 async function V(e, t, n) {
     let i = e.filter((e) => !p.A.isFavorite(e));
     if (0 === i.length) return;
-    let r = !(0, N.Yz)();
+    let r = !p.A.favoriteGuildEnabled;
     await u.wc.updateAsync(
         "favorites",
         (e) => {
@@ -158,7 +158,7 @@ async function V(e, t, n) {
         u.Sb.FREQUENT_USER_ACTION,
         x,
     ),
-        i.some((e) => p.A.isFavorite(e)) && (0, O.P0)((0, R.o)(D.intl.string(D.t["4tSWQg"]), L.Ck.FAVORITE));
+        i.some((e) => p.A.isFavorite(e)) && (0, R.P0)((0, O.o)(D.intl.string(D.t["4tSWQg"]), L.Ck.FAVORITE));
 }
 async function B(e) {
     let { channelIds: t, parentId: n, source: i } = e;
@@ -259,7 +259,7 @@ function z(e) {
             x,
         );
 }
-function q(e, t) {
+function Z(e, t) {
     u.wc.updateAsync(
         "favorites",
         (n) => {
@@ -269,7 +269,7 @@ function q(e, t) {
         x,
     );
 }
-function Z() {
+function q() {
     for (let e of (u.wc.updateAsync(
         "favorites",
         (e) => {
@@ -280,6 +280,7 @@ function Z() {
     ),
     (0, o.Ab)(),
     (0, d._0)(),
+    (0, N.mj)(),
     T.dt))
         (0, u.xB)(e);
 }
