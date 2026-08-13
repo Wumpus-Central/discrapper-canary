@@ -1,93 +1,112 @@
 "use strict";
-n.d(t, { A: () => D, N: () => R });
+n.d(t, { A: () => y, N: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(17928),
-    o = n(750943),
-    d = n(691540),
-    c = n(857250),
-    u = n(97483),
-    _ = n(192308),
-    E = n(259678),
-    A = n(289873),
-    h = n(775602),
-    I = n(946274),
+    l = n(750943),
+    o = n(691540),
+    d = n(857250),
+    c = n(97483),
+    u = n(192308),
+    _ = n(259678),
+    E = n(289873),
+    A = n(693875),
+    h = n(946274),
+    I = n(885386),
     f = n(515718),
     p = n(38405),
     T = n(958805),
     m = n(486020),
-    g = n(652215),
-    S = n(375708),
-    N = n(902391);
-function C(e, t) {
-    let n = (0, l.bG)([h.Ay], () => h.Ay.useReducedMotion);
-    return null == t
-        ? null
-        : "localDataUri" in t
-          ? t.localDataUri
-          : (function (e, t) {
-                let { animated: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                    i = window.GLOBAL_ENV.CDN_HOST ?? g.f34,
-                    r = `https://${i}/widget-assets/${e}/${t}`,
-                    a = m.QB ? "webp" : n ? "gif" : "png";
-                return `${r}?format=${a}&animated=${n}`;
-            })(e, t.fileId, { animated: t.isAnimated && !n });
+    g = n(652215);
+function S(e, t) {
+    let { animated: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = window.GLOBAL_ENV.CDN_HOST ?? g.f34,
+        r = `https://${i}/widget-assets/${e}/${t}`,
+        a = m.QB ? "webp" : n ? "gif" : "png";
+    return `${r}?format=${a}&animated=${n}`;
 }
-function R(e) {
-    let { className: t, userId: n, image: r } = e,
-        a = C(n, r) ?? void 0;
-    return "localDataUri" in r
-        ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)("img", { className: N.Sl, alt: "", src: a }) })
-        : (0, i.jsx)("div", {
-              className: t,
-              children: (0, i.jsx)("img", { className: N.Sl, alt: "", src: a, width: r.width, height: r.height }),
-          });
+var N = n(375708),
+    C = n(902391);
+function R(e, t, n) {
+    let i = I.kt.useSetting(),
+        [a, s] = r.useState(!1),
+        l = r.useCallback(() => s(!0), []),
+        o = r.useCallback(() => s(!1), []),
+        d = n && null != t && !("localDataUri" in t) && t.isAnimated && !i;
+    return (r.useEffect(() => {
+        !d || null == t || "localDataUri" in t || (new Image().src = S(e, t.fileId, { animated: !0 }));
+    }, [d, e, t]),
+    null == t)
+        ? { src: void 0, showGifTag: !1, onMouseMove: l, onMouseLeave: o }
+        : "localDataUri" in t
+          ? { src: t.localDataUri, showGifTag: !1, onMouseMove: l, onMouseLeave: o }
+          : {
+                src: S(e, t.fileId, { animated: n && t.isAnimated && (i || a) }),
+                showGifTag: d,
+                onMouseMove: l,
+                onMouseLeave: o,
+            };
 }
 function O(e) {
-    let { canEdit: t } = e;
-    return (0, i.jsx)("div", {
-        className: N.qf,
-        children: t ? (0, i.jsx)(o.X, { className: N.Dm, size: "md" }) : null,
-    });
+    let { className: t, userId: n, image: r, canAnimate: a = !0 } = e,
+        { src: l, showGifTag: o, onMouseMove: d, onMouseLeave: c } = R(n, r, a);
+    return "localDataUri" in r
+        ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)("img", { className: C.Sl, alt: "", src: l }) })
+        : (0, i.jsxs)("div", {
+              className: s()(C.ZS, t),
+              onMouseMove: d,
+              onMouseLeave: c,
+              children: [
+                  (0, i.jsx)("img", { className: C.Sl, alt: "", src: l, width: r.width, height: r.height }),
+                  o ? (0, i.jsx)(A.A, { className: C.pH }) : null,
+              ],
+          });
 }
 function L(e) {
+    let { canEdit: t } = e;
+    return (0, i.jsx)("div", {
+        className: C.qf,
+        children: t ? (0, i.jsx)(l.X, { className: C.Dm, size: "md" }) : null,
+    });
+}
+function D(e) {
     let {
             className: t,
             userId: a,
             image: l,
-            previewUri: o,
-            uploadType: h,
-            onImageUploadStarted: m,
-            onImageUploadCompleted: g,
+            previewUri: I,
+            uploadType: m,
+            canAnimate: g,
+            onImageUploadStarted: S,
+            onImageUploadCompleted: O,
         } = e,
-        R = r.useRef(0),
-        L = r.useCallback(
+        D = r.useRef(0),
+        y = r.useCallback(
             async (e, t) => {
-                R.current = R.current + 1;
-                let n = R.current;
-                m?.(e);
+                D.current = D.current + 1;
+                let n = D.current;
+                S?.(e);
                 try {
                     let i = await T.A.uploadWidgetAsset(t);
-                    if (R.current !== n) return;
-                    g({ filename: i, localDataUri: e });
+                    if (D.current !== n) return;
+                    O({ filename: i, localDataUri: e });
                 } catch (e) {
-                    if (R.current !== n) return;
-                    (0, d.P0)((0, c.o)(S.intl.string(S.t.F4Neqh), u.Ck.FAILURE)), p.A.captureException(e), g(null);
+                    if (D.current !== n) return;
+                    (0, o.P0)((0, d.o)(N.intl.string(N.t.F4Neqh), c.Ck.FAILURE)), p.A.captureException(e), O(null);
                 }
             },
-            [m, g],
+            [S, O],
         ),
-        D = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 var t, n;
                 let i,
                     { imageUri: r, file: a } = e,
                     s = (0, f.aU)(r);
                 s.size > 0xa00000
-                    ? (0, d.P0)((0, c.o)(S.intl.string(S.t.YbdEFK), u.Ck.FAILURE))
-                    : L(
+                    ? (0, o.P0)((0, d.o)(N.intl.string(N.t.YbdEFK), c.Ck.FAILURE))
+                    : y(
                           r,
                           new File(
                               [s],
@@ -99,11 +118,11 @@ function L(e) {
                           ),
                       );
             },
-            [L],
+            [y],
         ),
-        y = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
-                (0, _.openModalLazy)(
+                (0, u.openModalLazy)(
                     async () => {
                         let { default: r } = await Promise.all([
                             n.e("14520"),
@@ -125,39 +144,43 @@ function L(e) {
                             n.e("74571"),
                             n.e("27967"),
                         ]).then(n.bind(n, 142630));
-                        return (n) => (0, i.jsx)(r, { ...n, file: t, imageUri: e, uploadType: h, onCrop: D });
+                        return (n) => (0, i.jsx)(r, { ...n, file: t, imageUri: e, uploadType: m, onCrop: v });
                     },
                     { stackingBehavior: "stack" },
                 );
             },
-            [D, h],
+            [v, m],
         ),
-        v = C(a, l),
-        b = o ?? v;
-    return (0, i.jsx)(E.vN, {
+        { src: M, showGifTag: P, onMouseMove: U, onMouseLeave: w } = R(a, l, g),
+        G = I ?? M;
+    return (0, i.jsx)(_.vN, {
         within: !0,
         children: (0, i.jsxs)("div", {
-            className: s()(N.kL, t),
+            className: s()(C.kL, t),
+            onMouseMove: U,
+            onMouseLeave: w,
             children: [
-                null != b ? (0, i.jsx)("img", { alt: "", src: b, className: N.Sl }) : (0, i.jsx)(O, { canEdit: !0 }),
-                null != o
+                null != G ? (0, i.jsx)("img", { alt: "", src: G, className: C.Sl }) : (0, i.jsx)(L, { canEdit: !0 }),
+                null != I
                     ? (0, i.jsx)("div", {
-                          className: N.ob,
-                          children: (0, i.jsx)(A.y, { type: A.t.SPINNING_CIRCLE_SIMPLE }),
+                          className: C.ob,
+                          children: (0, i.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE }),
                       })
-                    : null,
-                (0, i.jsx)(I.Ay, {
+                    : P
+                      ? (0, i.jsx)(A.A, { className: C.pH })
+                      : null,
+                (0, i.jsx)(h.Ay, {
                     tabIndex: 0,
-                    onChange: y,
+                    onChange: b,
                     multiple: !1,
-                    "aria-label": S.intl.string(S.t["MsUY/S"]),
+                    "aria-label": N.intl.string(N.t["MsUY/S"]),
                     title: "",
                 }),
             ],
         }),
     });
 }
-function D(e) {
+function y(e) {
     let {
         className: t,
         canEdit: n,
@@ -165,20 +188,22 @@ function D(e) {
         image: a,
         previewUri: s,
         uploadType: l,
-        onImageUploadStarted: o,
-        onImageUploadCompleted: d,
+        canAnimate: o = !0,
+        onImageUploadStarted: d,
+        onImageUploadCompleted: c,
     } = e;
     return n
-        ? (0, i.jsx)(L, {
+        ? (0, i.jsx)(D, {
               className: t,
               userId: r,
               image: a,
               previewUri: s,
               uploadType: l,
-              onImageUploadStarted: o,
-              onImageUploadCompleted: d,
+              canAnimate: o,
+              onImageUploadStarted: d,
+              onImageUploadCompleted: c,
           })
         : null == a
-          ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)(O, { canEdit: !1 }) })
-          : (0, i.jsx)(R, { className: t, userId: r, image: a });
+          ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)(L, { canEdit: !1 }) })
+          : (0, i.jsx)(O, { className: t, userId: r, image: a, canAnimate: o });
 }

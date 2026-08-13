@@ -1,4 +1,5 @@
 .container_f6d5bd {
+    container-type: inline-size;
     cursor: pointer;
     overflow: hidden;
     position: relative
@@ -6,6 +7,35 @@
 
 .container_f6d5bd:hover {
     background: var(--interactive-background-hover)
+}
+
+.container_f6d5bd:hover .gifTag_f6d5bd {
+    opacity: 0
+}
+
+.imageContainer_f6d5bd {
+    container-type: inline-size;
+    position: relative
+}
+
+.imageContainer_f6d5bd:hover .gifTag_f6d5bd {
+    opacity: 0
+}
+
+.gifTag_f6d5bd {
+    inset-inline-start: var(--space-8);
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    top: var(--space-8);
+    z-index: 1
+}
+
+@container (width < 56px) {
+    .gifTag_f6d5bd {
+        inset-inline-start: var(--space-4);
+        top: var(--space-4)
+    }
 }
 
 .image_f6d5bd {

@@ -1,5 +1,7 @@
-e.exports = {
+d.exports = {
     kL: "container_f6d5bd",
+    pH: "gifTag_f6d5bd",
+    ZS: "imageContainer_f6d5bd",
     Sl: "image_f6d5bd",
     qf: "placeholder_f6d5bd",
     ob: "uploading_f6d5bd",

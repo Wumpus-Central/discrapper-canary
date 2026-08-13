@@ -129,7 +129,9 @@ function j(e) {
                   (0, i.jsx)(B, { header: t }),
                   (0, i.jsx)("div", {
                       className: V.SS,
-                      children: a.map((e, t) => (0, i.jsx)(x.N, { className: V.Bi, userId: r, image: e }, t)),
+                      children: a.map((e, t) =>
+                          (0, i.jsx)(x.N, { className: V.Bi, userId: r, image: e, canAnimate: !1 }, t),
+                      ),
                   }),
               ],
           });
