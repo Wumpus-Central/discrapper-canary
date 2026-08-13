@@ -3,7 +3,7 @@ var t = l(582128),
     a = l(688810),
     r = l(252732),
     i = l(339984);
-let s = [{ name: "gif", extensions: ["gif"] }];
+let s = [{ name: "gif, webp", extensions: ["gif", "webp"] }];
 function u(e) {
     let { uploadType: n, guildId: l, isPremiumTryItOut: i = !1, returnRef: s, filters: u } = e,
         { newestAnalyticsLocation: o } = (0, a.Ay)();
