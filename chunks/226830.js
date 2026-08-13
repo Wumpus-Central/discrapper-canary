@@ -9,8 +9,8 @@ var i,
     d = t(331322),
     u = t(821609),
     m = t(462887),
-    x = t(315629),
-    p = t(834730),
+    x = t(834730),
+    p = t(315629),
     h = t(939249),
     g = t(403581),
     j = t(736653),
@@ -56,12 +56,12 @@ function G() {
             (0, n.jsxs)("div", {
                 className: k.V_,
                 children: [
-                    (0, n.jsx)(p.E, {
+                    (0, n.jsx)(x.E, {
                         variant: "text-md/bold",
                         color: "text-overlay-light",
                         children: S.intl.string(S.t.OEtqpm),
                     }),
-                    (0, n.jsx)(p.E, {
+                    (0, n.jsx)(x.E, {
                         variant: "text-md/medium",
                         color: "text-overlay-light",
                         children: S.intl.formatToPlainString(S.t["2h5M+X"], { availableCount: e.length }),
@@ -99,7 +99,7 @@ let Z = function (e) {
     let { isGift: r = !1, discountOffer: t, priceOptions: i, isApplicationHome: l = !1 } = e,
         a = (0, o.bG)([Y.A], () => Y.A.get(z.gD.PREMIUM_GROUP_MONTH)),
         u = (0, H.N1)(z.gD.PREMIUM_GROUP_MONTH),
-        x = (0, m.q)((0, j.Ay)());
+        p = (0, m.q)((0, j.Ay)());
     if (null == a) return (0, n.jsx)(V.y, { type: V.y.Type.PULSING_ELLIPSIS, className: $.xB });
     let h = (0, R.sS)(a, i, !1, r),
         g = z.WT.MONTH;
@@ -129,7 +129,7 @@ let Z = function (e) {
                                         discountInterval: e,
                                     }),
                                 }),
-                                (0, n.jsx)(p.E, {
+                                (0, n.jsx)(x.E, {
                                     variant: l ? "text-sm/medium" : "text-xs/medium",
                                     color: "text-muted",
                                     children: S.intl.format(W.default["4b2ByP"], { regularPrice: h }),
@@ -152,13 +152,13 @@ let Z = function (e) {
         children: [
             (0, n.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(p.E, {
+                    (0, n.jsx)(x.E, {
                         variant: "heading-xxl/extrabold",
-                        color: x ? "text-strong" : "text-overlay-light",
+                        color: p ? "text-strong" : "text-overlay-light",
                         tag: "span",
                         children: h,
                     }),
-                    (0, n.jsxs)(p.E, {
+                    (0, n.jsxs)(x.E, {
                         variant: "text-xs/medium",
                         tag: "span",
                         color: "text-muted",
@@ -208,30 +208,30 @@ function ea(e) {
             isApplicationHome: d = !1,
             useShortTitle: u = !1,
         } = e,
-        p = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-        h = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
-        g = (0, B.V)(),
-        f = g?.subscription_trial?.sku_id,
-        N = p?.hasActiveTrial ? h?.premiumType : null,
-        v = (0, F.Lj)(N, f),
-        R = null != v,
-        A = (0, m.q)((0, j.Ay)()),
-        E = u ? S.intl.string(S.t.tUbSDK) : S.intl.string(S.t["t9uG/o"]),
-        y = (0, n.jsxs)(el, {
+        x = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+        p = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
+        h = (0, B.V)(),
+        g = h?.subscription_trial?.sku_id,
+        f = x?.hasActiveTrial ? p?.premiumType : null,
+        N = (0, F.Lj)(f, g),
+        v = null != N,
+        R = (0, m.q)((0, j.Ay)()),
+        A = u ? S.intl.string(S.t.tUbSDK) : S.intl.string(S.t["t9uG/o"]),
+        E = (0, n.jsxs)(el, {
             footer: r,
             children: [
-                R && (0, n.jsx)(K.R, { text: v, className: er.pill }),
+                v && (0, n.jsx)(K.R, { text: N, className: er.pill }),
                 (0, n.jsx)(c.D, {
                     variant: "display-md",
-                    color: A ? "text-strong" : "text-overlay-light",
+                    color: R ? "text-strong" : "text-overlay-light",
                     className: er.cardTitle,
-                    children: E,
+                    children: A,
                 }),
                 (0, n.jsx)(Q.A, {
                     isGift: l,
                     premiumTier: z.PremiumTypes.TIER_0,
                     offerType: z.Vk.PREMIUM_TRIAL,
-                    offerTierMatchesCard: f === z.pe.TIER_0,
+                    offerTierMatchesCard: g === z.pe.TIER_0,
                     showYearlyPrice: t,
                     priceOptions: a,
                     enablePremiumBrandRefresh: !0,
@@ -243,10 +243,8 @@ function ea(e) {
                 (0, n.jsx)(X.nH, { enablePremiumBrandRefresh: !0, isApplicationHome: d }),
             ],
         }),
-        _ = s()(er.card, er.tier0, i, { [er.pillMargin]: !d && R });
-    return l
-        ? (0, n.jsx)(x.h, { color: "nitro-green", className: _, children: y })
-        : (0, n.jsx)("div", { className: _, children: y });
+        y = s()(er.card, er.tier0, i, { [er.pillMargin]: !d && v });
+    return (0, n.jsx)("div", { className: y, children: E });
 }
 var es =
     (((i = {}).IN_CARD = "inCard"),
@@ -273,12 +271,12 @@ function ec(e) {
                   (0, n.jsxs)("div", {
                       className: er.annualDiscountBannerText,
                       children: [
-                          (0, n.jsx)(p.E, {
+                          (0, n.jsx)(x.E, {
                               variant: a ? "text-sm/semibold" : "text-md/semibold",
                               color: "text-overlay-light",
                               children: S.intl.format(S.t["TCFNZ/"], { discountedPrice: s }),
                           }),
-                          (0, n.jsx)(p.E, {
+                          (0, n.jsx)(x.E, {
                               variant: a ? "text-xs/normal" : "text-sm/normal",
                               children: S.intl.format(S.t.aUTlph, { regularPrice: c }),
                           }),
@@ -297,7 +295,7 @@ function eo(e) {
             isGift: a = !1,
             isModal: d = !1,
             priceOptions: u,
-            showPromotionalGiftBanner: p = !1,
+            showPromotionalGiftBanner: x = !1,
             wumpusPosition: h = "inCard",
             isApplicationHome: g = !1,
             showWumpus: f = !0,
@@ -320,7 +318,7 @@ function eo(e) {
         Y = !a && k && I && O === z.Vk.PREMIUM_DISCOUNT,
         W = (0, F.rm)(k, P, a ? null : b, y, _),
         q = (0, U.Sq)() && !a && null == O,
-        $ = null != r || p ? (0, n.jsxs)(n.Fragment, { children: [r, p && (0, n.jsx)(G, {})] }) : null,
+        $ = null != r || x ? (0, n.jsxs)(n.Fragment, { children: [r, x && (0, n.jsx)(G, {})] }) : null,
         Z = d && !a,
         ee = (0, n.jsxs)(el, {
             footer: $,
@@ -394,10 +392,10 @@ function eo(e) {
                 Z && (0, n.jsx)(J.K, {}),
             ],
         }),
-        ea = s()(er.card, l, { [er.withGiftBanner]: p });
+        ea = s()(er.card, l, { [er.withGiftBanner]: x });
     return L
         ? (0, n.jsx)("div", { className: ea, children: ee })
-        : (0, n.jsx)(x.h, { color: "nitro-pink", className: ea, children: ee });
+        : (0, n.jsx)(p.h, { color: "nitro-pink", className: ea, children: ee });
 }
 function ed(e) {
     let { className: r, ctaButton: t, isApplicationHome: i, priceOptions: l } = e,
@@ -427,7 +425,7 @@ function ed(e) {
             ],
         });
     return null != o
-        ? (0, n.jsx)(x.h, { color: "nitro-pink", className: s()(er.card, r), children: d })
+        ? (0, n.jsx)(p.h, { color: "nitro-pink", className: s()(er.card, r), children: d })
         : (0, n.jsx)("div", { className: s()(er.card, er.borderGradient, r), children: d });
 }
 function eu(e) {
