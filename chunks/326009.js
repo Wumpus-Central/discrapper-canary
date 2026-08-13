@@ -140,6 +140,7 @@ function C(e) {
                     onChange: y,
                     multiple: !1,
                     "aria-label": m.intl.string(m.t["MsUY/S"]),
+                    title: "",
                 }),
             ],
         }),

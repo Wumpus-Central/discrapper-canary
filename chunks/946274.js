@@ -67,6 +67,7 @@ class c extends r.PureComponent {
             "aria-label": s,
             "aria-hidden": l,
             filters: d,
+            title: c,
         } = this.props;
         return (0, i.jsx)(a.A, {
             ref: this._ref,
@@ -79,6 +80,7 @@ class c extends r.PureComponent {
             tabIndex: r,
             "aria-label": s,
             "aria-hidden": l,
+            title: c,
         });
     }
 }
