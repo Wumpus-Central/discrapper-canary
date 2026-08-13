@@ -4,13 +4,13 @@ n.d(t, {
     Ar: () => ee,
     DQ: () => B,
     E: () => eY,
-    F1: () => eq,
+    F1: () => eZ,
     GY: () => eb,
     Ip: () => en,
     Ju: () => eT,
     KJ: () => eu,
     KP: () => $,
-    NS: () => Z,
+    NS: () => q,
     PZ: () => J,
     Q0: () => ed,
     Qd: () => W,
@@ -20,7 +20,7 @@ n.d(t, {
     Tz: () => F,
     X9: () => e$,
     Y2: () => w,
-    YW: () => eO,
+    YW: () => eR,
     ak: () => ti,
     eF: () => G,
     fL: () => K,
@@ -32,8 +32,8 @@ n.d(t, {
     nx: () => eh,
     oJ: () => eB,
     oP: () => td,
-    tI: () => q,
-    te: () => tO,
+    tI: () => Z,
+    te: () => tR,
     uK: () => tN,
     wL: () => tl,
 }),
@@ -67,8 +67,8 @@ var i,
     S,
     N,
     C,
-    O,
     R,
+    O,
     L,
     D = n(852015),
     y = n(144367),
@@ -155,13 +155,13 @@ var i,
         (h[(h.FRIENDS_AND_SMALL_GUILDS = 2)] = "FRIENDS_AND_SMALL_GUILDS"),
         (h[(h.FRIENDS_AND_ALL_GUILDS = 3)] = "FRIENDS_AND_ALL_GUILDS"),
         h),
-    z = (((I = {})[(I.UNSPECIFIED = 0)] = "UNSPECIFIED"), (I[(I.FANTASY_SPORTS = 1)] = "FANTASY_SPORTS"), I),
-    q =
+    z = (((I = {})[(I.UNSPECIFIED = 0)] = "UNSPECIFIED"), (I[(I.REAL_MONEY_GAMING = 1)] = "REAL_MONEY_GAMING"), I),
+    Z =
         (((f = {})[(f.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (f[(f.PERSONAL = 1)] = "PERSONAL"),
         (f[(f.GUILD = 2)] = "GUILD"),
         f),
-    Z =
+    q =
         (((p = {})[(p.UNSET_UI_DENSITY = 0)] = "UNSET_UI_DENSITY"),
         (p[(p.COMPACT = 1)] = "COMPACT"),
         (p[(p.COZY = 2)] = "COZY"),
@@ -218,18 +218,18 @@ var i,
         (C[(C.CATEGORY = 2)] = "CATEGORY"),
         C),
     ei =
-        (((O = {})[(O.UNSET_SAFETY_SETTINGS_PRESET = 0)] = "UNSET_SAFETY_SETTINGS_PRESET"),
-        (O[(O.BALANCED = 1)] = "BALANCED"),
-        (O[(O.STRICT = 2)] = "STRICT"),
-        (O[(O.RELAXED = 3)] = "RELAXED"),
-        (O[(O.CUSTOM = 4)] = "CUSTOM"),
-        O),
-    er =
-        (((R = {})[(R.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (R[(R.ALL = 1)] = "ALL"),
-        (R[(R.BOOKMARKS = 2)] = "BOOKMARKS"),
-        (R[(R.REMINDERS = 3)] = "REMINDERS"),
+        (((R = {})[(R.UNSET_SAFETY_SETTINGS_PRESET = 0)] = "UNSET_SAFETY_SETTINGS_PRESET"),
+        (R[(R.BALANCED = 1)] = "BALANCED"),
+        (R[(R.STRICT = 2)] = "STRICT"),
+        (R[(R.RELAXED = 3)] = "RELAXED"),
+        (R[(R.CUSTOM = 4)] = "CUSTOM"),
         R),
+    er =
+        (((O = {})[(O.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (O[(O.ALL = 1)] = "ALL"),
+        (O[(O.BOOKMARKS = 2)] = "BOOKMARKS"),
+        (O[(O.REMINDERS = 3)] = "REMINDERS"),
+        O),
     ea =
         (((L = {})[(L.VOICE = 0)] = "VOICE"),
         (L[(L.STREAM = 1)] = "STREAM"),
@@ -245,13 +245,13 @@ class es extends b.G {
             { no: 1, name: "versions", kind: "message", T: () => U.u },
             { no: 2, name: "inbox", kind: "message", T: () => ed },
             { no: 3, name: "guilds", kind: "message", T: () => eu },
-            { no: 4, name: "user_content", kind: "message", T: () => eO },
+            { no: 4, name: "user_content", kind: "message", T: () => eR },
             { no: 5, name: "voice_and_video", kind: "message", T: () => eb },
             { no: 6, name: "text_and_images", kind: "message", T: () => eB },
             { no: 7, name: "notifications", kind: "message", T: () => ej },
             { no: 8, name: "privacy", kind: "message", T: () => eY },
             { no: 9, name: "debug", kind: "message", T: () => e$ },
-            { no: 10, name: "game_library", kind: "message", T: () => eq },
+            { no: 10, name: "game_library", kind: "message", T: () => eZ },
             { no: 11, name: "status", kind: "message", T: () => eX },
             { no: 12, name: "localization", kind: "message", T: () => e1 },
             { no: 13, name: "appearance", kind: "message", T: () => e5 },
@@ -267,7 +267,7 @@ class es extends b.G {
             { no: 23, name: "applications", kind: "message", T: () => tP },
             { no: 24, name: "ads", kind: "message", T: () => tB },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
-            { no: 26, name: "app_version_settings", kind: "message", T: () => tq },
+            { no: 26, name: "app_version_settings", kind: "message", T: () => tZ },
         ]);
     }
     create(e) {
@@ -294,7 +294,7 @@ class es extends b.G {
                     r.guilds = eu.internalBinaryRead(e, e.uint32(), n, r.guilds);
                     break;
                 case 4:
-                    r.userContent = eO.internalBinaryRead(e, e.uint32(), n, r.userContent);
+                    r.userContent = eR.internalBinaryRead(e, e.uint32(), n, r.userContent);
                     break;
                 case 5:
                     r.voiceAndVideo = eb.internalBinaryRead(e, e.uint32(), n, r.voiceAndVideo);
@@ -312,7 +312,7 @@ class es extends b.G {
                     r.debug = e$.internalBinaryRead(e, e.uint32(), n, r.debug);
                     break;
                 case 10:
-                    r.gameLibrary = eq.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
+                    r.gameLibrary = eZ.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
                     break;
                 case 11:
                     r.status = eX.internalBinaryRead(e, e.uint32(), n, r.status);
@@ -360,7 +360,7 @@ class es extends b.G {
                     r.inAppFeedbackSettings = t$.internalBinaryRead(e, e.uint32(), n, r.inAppFeedbackSettings);
                     break;
                 case 26:
-                    r.appVersionSettings = tq.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
+                    r.appVersionSettings = tZ.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -376,13 +376,13 @@ class es extends b.G {
         e.versions && U.u.internalBinaryWrite(e.versions, t.tag(1, D.O0.LengthDelimited).fork(), n).join(),
             e.inbox && ed.internalBinaryWrite(e.inbox, t.tag(2, D.O0.LengthDelimited).fork(), n).join(),
             e.guilds && eu.internalBinaryWrite(e.guilds, t.tag(3, D.O0.LengthDelimited).fork(), n).join(),
-            e.userContent && eO.internalBinaryWrite(e.userContent, t.tag(4, D.O0.LengthDelimited).fork(), n).join(),
+            e.userContent && eR.internalBinaryWrite(e.userContent, t.tag(4, D.O0.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && eb.internalBinaryWrite(e.voiceAndVideo, t.tag(5, D.O0.LengthDelimited).fork(), n).join(),
             e.textAndImages && eB.internalBinaryWrite(e.textAndImages, t.tag(6, D.O0.LengthDelimited).fork(), n).join(),
             e.notifications && ej.internalBinaryWrite(e.notifications, t.tag(7, D.O0.LengthDelimited).fork(), n).join(),
             e.privacy && eY.internalBinaryWrite(e.privacy, t.tag(8, D.O0.LengthDelimited).fork(), n).join(),
             e.debug && e$.internalBinaryWrite(e.debug, t.tag(9, D.O0.LengthDelimited).fork(), n).join(),
-            e.gameLibrary && eq.internalBinaryWrite(e.gameLibrary, t.tag(10, D.O0.LengthDelimited).fork(), n).join(),
+            e.gameLibrary && eZ.internalBinaryWrite(e.gameLibrary, t.tag(10, D.O0.LengthDelimited).fork(), n).join(),
             e.status && eX.internalBinaryWrite(e.status, t.tag(11, D.O0.LengthDelimited).fork(), n).join(),
             e.localization && e1.internalBinaryWrite(e.localization, t.tag(12, D.O0.LengthDelimited).fork(), n).join(),
             e.appearance && e5.internalBinaryWrite(e.appearance, t.tag(13, D.O0.LengthDelimited).fork(), n).join(),
@@ -403,7 +403,7 @@ class es extends b.G {
             e.inAppFeedbackSettings &&
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, D.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
-                tq.internalBinaryWrite(e.appVersionSettings, t.tag(26, D.O0.LengthDelimited).fork(), n).join();
+                tZ.internalBinaryWrite(e.appVersionSettings, t.tag(26, D.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -615,7 +615,7 @@ class eA extends b.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    q,
+                    Z,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -1131,8 +1131,8 @@ class eC extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eO = new eC();
-class eR extends b.G {
+let eR = new eC();
+class eO extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterAsset", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
@@ -1176,7 +1176,7 @@ class eR extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eL = new eR();
+let eL = new eO();
 class eD extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterBackgroundBlur", [
@@ -2677,8 +2677,8 @@ class ez extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eq = new ez();
-class eZ extends b.G {
+let eZ = new ez();
+class eq extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => M.hU },
@@ -2739,7 +2739,7 @@ class eZ extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eX = new eZ();
+let eX = new eq();
 class eQ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
@@ -2925,7 +2925,7 @@ class e4 extends b.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_users.v1.LaunchPadMode", ee],
             },
-            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", Z] },
+            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", q] },
             {
                 no: 13,
                 name: "swipe_right_to_left_mode",
@@ -2938,7 +2938,7 @@ class e4 extends b.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    q,
+                    Z,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -3885,8 +3885,8 @@ class tC extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let tO = new tC();
-class tR extends b.G {
+let tR = new tC();
+class tO extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.SafetySettings", [
             {
@@ -3896,7 +3896,7 @@ class tR extends b.G {
                 T: () => ["discord_protos.discord_users.v1.SafetySettingsPresetType", ei],
             },
             { no: 2, name: "ignore_profile_speedbump_disabled", kind: "scalar", T: 8 },
-            { no: 3, name: "spending_limit_settings", kind: "message", T: () => tO },
+            { no: 3, name: "spending_limit_settings", kind: "message", T: () => tR },
         ]);
     }
     create(e) {
@@ -3920,7 +3920,7 @@ class tR extends b.G {
                     r.ignoreProfileSpeedbumpDisabled = e.bool();
                     break;
                 case 3:
-                    r.spendingLimitSettings = tO.internalBinaryRead(e, e.uint32(), n, r.spendingLimitSettings);
+                    r.spendingLimitSettings = tR.internalBinaryRead(e, e.uint32(), n, r.spendingLimitSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3936,12 +3936,12 @@ class tR extends b.G {
         0 !== e.safetySettingsPreset && t.tag(1, D.O0.Varint).int32(e.safetySettingsPreset),
             !1 !== e.ignoreProfileSpeedbumpDisabled && t.tag(2, D.O0.Varint).bool(e.ignoreProfileSpeedbumpDisabled),
             e.spendingLimitSettings &&
-                tO.internalBinaryWrite(e.spendingLimitSettings, t.tag(3, D.O0.LengthDelimited).fork(), n).join();
+                tR.internalBinaryWrite(e.spendingLimitSettings, t.tag(3, D.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let tL = new tR();
+let tL = new tO();
 class tD extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ForLaterSettings", [
@@ -4441,4 +4441,4 @@ class tz extends b.G {
         return !1 !== i && (!0 == i ? D.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let tq = new tz();
+let tZ = new tz();
