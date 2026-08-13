@@ -14332,6 +14332,7 @@
   "uV2AkA": "Added by $[{username}](usernameHook) on {linkedAtDate, date, medium}",
   "xPrJ+q": "Added by **{username}** on {linkedAtDate, date, medium}",
   "EyygeM": "Added on {linkedAtDate, date, medium}",
+  "SU2mY/": "Relaunch **{name}** to send messages.",
   "EvDn1D": "Connect your account to **{name}** to send messages.",
   "DA9v5F": "Currently linked to **{channelName}**.",
   "LLWaxQ": "Remove channel link",

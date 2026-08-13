@@ -288,88 +288,91 @@ class ep extends i.PureComponent {
                 guildJoinRequest: j,
                 showLinkedLobbyApplicationLoadingIndicator: b,
                 requiredLinkedLobbyApplication: N,
-                pendingGameProfileReturn: v,
-                guild: M,
+                shouldRelaunchLinkedLobbyApplication: v,
+                pendingGameProfileReturn: M,
+                guild: R,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: R, shouldShowLurkerModeSuccessPopout: D } = this.state,
-            L = { theme: d, useReducedMotion: _ };
-        if (e && !p && null != v)
-            null != v.gameIconUrl && (L.imageSrc = v.gameIconUrl),
-                (L.message = w.intl.format(w.t["qxH/YE"], { gameName: v.gameName })),
-                (L.buttonText = w.intl.string(w.t.DjifDP)),
-                (L.buttonIcon = h.r),
-                (L.buttonVariant = "primary"),
-                (L.onButtonClick = v.onReturnToGameProfile);
+            { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
+            k = { theme: d, useReducedMotion: _ };
+        if (e && !p && null != M)
+            null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
+                (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
+                (k.buttonText = w.intl.string(w.t.DjifDP)),
+                (k.buttonIcon = h.r),
+                (k.buttonVariant = "primary"),
+                (k.onButtonClick = M.onReturnToGameProfile);
         else if (e && !p) {
-            if (((L.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
+            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
                 let e = 1e3 * Math.floor(A / 1e3);
-                L.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
+                k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
             }
-            (L.buttonText = w.intl.string(w.t["3aOv+h"])),
-                (L.onButtonClick = this.handleFollowAnnouncement),
+            (k.buttonText = w.intl.string(w.t["3aOv+h"])),
+                (k.onButtonClick = this.handleFollowAnnouncement),
                 t &&
-                    ((L.onSecondaryButtonClick = this.handleJoinServer),
-                    (L.secondaryButtonText = w.intl.string(w.t.RLch70)));
+                    ((k.onSecondaryButtonClick = this.handleJoinServer),
+                    (k.secondaryButtonText = w.intl.string(w.t.RLch70)));
         } else if (n)
-            (L.message = w.intl.string(w.t["Eg3/c9"])),
-                (L.buttonText = w.intl.string(w.t.fiNVin)),
-                (L.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount);
+            (k.message = w.intl.string(w.t["Eg3/c9"])),
+                (k.buttonText = w.intl.string(w.t.fiNVin)),
+                (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (C)
             switch (j?.applicationStatus) {
                 case T.B5.SUBMITTED:
-                    (L.message = w.intl.string(w.t["5iLvSx"])),
-                        (L.subtitle = w.intl.string(w.t.FdsK4h)),
-                        (L.buttonText = w.intl.string(w.t.mqtdmQ)),
-                        (L.onButtonClick = this.handleCancelApplication);
+                    (k.message = w.intl.string(w.t["5iLvSx"])),
+                        (k.subtitle = w.intl.string(w.t.FdsK4h)),
+                        (k.buttonText = w.intl.string(w.t.mqtdmQ)),
+                        (k.onButtonClick = this.handleCancelApplication);
                     break;
                 case T.B5.REJECTED:
-                    (L.message = w.intl.string(w.t.lk30cY)),
-                        (L.buttonText = w.intl.string(w.t["8RrsHr"])),
-                        (L.onButtonClick = this.handleViewApplicationRejection);
+                    (k.message = w.intl.string(w.t.lk30cY)),
+                        (k.buttonText = w.intl.string(w.t["8RrsHr"])),
+                        (k.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (L.message = w.intl.string(w.t.rEBKvg)),
-                        (L.buttonText = w.intl.string(w.t["r8/DT+"])),
-                        (L.buttonVariant = "primary"),
-                        (L.onButtonClick = this.handleShowMemberVerification);
+                    (k.message = w.intl.string(w.t.rEBKvg)),
+                        (k.buttonText = w.intl.string(w.t["r8/DT+"])),
+                        (k.buttonVariant = "primary"),
+                        (k.onButtonClick = this.handleShowMemberVerification);
             }
         else
-            null != M && null != S && x
-                ? ((L.message = w.intl.format(w.t.HbivnU, { roleName: `@${S.name}` })),
+            null != R && null != S && x
+                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${S.name}` })),
                   null === S.tags.guild_connections &&
-                      ((L.buttonText = w.intl.string(w.t["6Ge2LG"])), (L.onButtonClick = () => (0, E.b)(S, M.id))))
+                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(S, R.id))))
                 : b || null == N
                   ? i && !I
-                      ? ((L.message = w.intl.string(w.t["2dThMM"])),
-                        (L.buttonText = w.intl.string(w.t["50gfOv"])),
-                        (L.onButtonClick = this.handleVerifyPhone))
+                      ? ((k.message = w.intl.string(w.t["2dThMM"])),
+                        (k.buttonText = w.intl.string(w.t["50gfOv"])),
+                        (k.onButtonClick = this.handleVerifyPhone))
                       : s
-                        ? ((L.message = w.intl.string(w.t.FkGPS5)),
-                          (L.buttonText = w.intl.string(w.t.lm1UKt)),
-                          (L.onButtonClick = this.handleResendVerification))
+                        ? ((k.message = w.intl.string(w.t.FkGPS5)),
+                          (k.buttonText = w.intl.string(w.t.lm1UKt)),
+                          (k.onButtonClick = this.handleResendVerification))
                         : a
-                          ? ((L.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: y.$8o.MEMBER_AGE })),
-                            (L.countdown = r))
+                          ? ((k.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: y.$8o.MEMBER_AGE })),
+                            (k.countdown = r))
                           : o &&
-                            ((L.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
-                            (L.countdown = c))
-                  : ((L.imageSrc = N.getIconURL(eh.iu.SMALL) ?? void 0),
-                    (L.message = w.intl.format(w.t.EvDn1D, { name: N.name })),
-                    null != N.connectionEntrypointUrl &&
-                        ((L.buttonText = w.intl.string(w.t.S0W8Z5)),
-                        (L.onButtonClick = () => {
-                            window.open(N.connectionEntrypointUrl, "_blank");
-                        })));
+                            ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
+                            (k.countdown = c))
+                  : ((k.imageSrc = N.getIconURL(eh.iu.SMALL) ?? void 0),
+                    v
+                        ? (k.message = w.intl.format(w.t["SU2mY/"], { name: N.name }))
+                        : ((k.message = w.intl.format(w.t.EvDn1D, { name: N.name })),
+                          null != N.connectionEntrypointUrl &&
+                              ((k.buttonText = w.intl.string(w.t.S0W8Z5)),
+                              (k.onButtonClick = () => {
+                                  window.open(N.connectionEntrypointUrl, "_blank");
+                              }))));
         return (0, l.jsx)(m.Y, {
             targetElementRef: this.textAreaContainerRef,
             position: "top",
             align: "left",
-            shouldShow: D,
+            shouldShow: L,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, l.jsx)(eu.A, {
-                    ...L,
+                    ...k,
                     children: (0, l.jsxs)("div", {
                         ref: this.textAreaContainerRef,
                         children: [
@@ -378,7 +381,7 @@ class ep extends i.PureComponent {
                                 ? (0, l.jsx)(m.Y, {
                                       targetElementRef: this.upsellTargetRef,
                                       renderPopout: this.renderLurkerModeUpsellPopout,
-                                      shouldShow: R,
+                                      shouldShow: D,
                                       position: "top",
                                       children: (e) =>
                                           (0, l.jsx)(g.D, {
@@ -411,8 +414,12 @@ function eA(e) {
         A = (0, r.bG)([J], () => J.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(y.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
-        { showLinkedLobbyApplicationLoadingIndicator: E, requiredLinkedLobbyApplication: b } = (0, ed.A)(t.linkedLobby),
-        N = (function (e) {
+        {
+            showLinkedLobbyApplicationLoadingIndicator: E,
+            requiredLinkedLobbyApplication: b,
+            shouldRelaunchLinkedLobbyApplication: N,
+        } = (0, ed.A)(t.linkedLobby),
+        v = (function (e) {
             let { channelId: t } = e,
                 n = (0, r.bG)([j.A], () => {
                     let e = j.A.getPendingReturn();
@@ -435,7 +442,7 @@ function eA(e) {
             let o = s?.getIconURL(y.eQT) ?? void 0;
             return { gameId: s.id, gameName: a, gameIconUrl: o, onReturnToGameProfile: l };
         })({ channelId: t.id }),
-        v = {
+        D = {
             ...o,
             guild: a,
             isLurking: u,
@@ -451,9 +458,10 @@ function eA(e) {
             guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: b,
+            shouldRelaunchLinkedLobbyApplication: N,
             useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
-            pendingGameProfileReturn: N,
+            pendingGameProfileReturn: v,
         };
-    return (0, l.jsx)(ep, { ...v, channel: t, children: n });
+    return (0, l.jsx)(ep, { ...D, channel: t, children: n });
 }

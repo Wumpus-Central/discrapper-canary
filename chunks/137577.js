@@ -12,7 +12,8 @@ function c(e) {
             applicationOAuth2Token: o.default.getNewestTokenForApplication(t),
         })),
         d = (0, i.bG)([a.A], () => a.A.getApplication(t)),
-        u = (0, i.bG)([a.A], () => a.A.getApplication(d?.parentId));
+        u = (0, i.bG)([a.A], () => a.A.getApplication(d?.parentId)),
+        h = (0, i.bG)([o.default], () => o.default.getNewestTokenForApplication(d?.parentId));
     (0, l.useEffect)(() => {
         null != t && n === o.FetchState.NOT_FETCHED && r.A.fetch();
     }, [n, t]),
@@ -26,9 +27,12 @@ function c(e) {
                 n === o.FetchState.FETCHED &&
                 s.Ay.fetchApplications([d.parentId], !1);
         }, [d, n, u]);
-    let h = null != d && (null == d.parentId || null != u);
+    let m = null != d && (null == d.parentId || null != u),
+        g = null == c && null != d && m,
+        p = g && null != u && null != h;
     return {
-        showLinkedLobbyApplicationLoadingIndicator: null != t && (n !== o.FetchState.FETCHED || null == d || !h),
-        requiredLinkedLobbyApplication: null == c && null != d && h ? (u ?? d) : null,
+        showLinkedLobbyApplicationLoadingIndicator: null != t && (n !== o.FetchState.FETCHED || null == d || !m),
+        requiredLinkedLobbyApplication: g ? (p ? d : (u ?? d)) : null,
+        shouldRelaunchLinkedLobbyApplication: p,
     };
 }

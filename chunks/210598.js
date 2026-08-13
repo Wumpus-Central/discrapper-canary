@@ -34,7 +34,8 @@ function p(e) {
     }
 }
 function T(e) {
-    if (null != e && "file_id" in e) return { fileId: e.file_id, width: e.width, height: e.height };
+    if (null != e && "file_id" in e)
+        return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
 function m(e) {
     let t = T(e.image);
@@ -72,7 +73,9 @@ function g(e) {
 }
 function S(e) {
     if (null != e)
-        return "localDataUri" in e ? { filename: e.filename } : { file_id: e.fileId, width: e.width, height: e.height };
+        return "localDataUri" in e
+            ? { filename: e.filename }
+            : { file_id: e.fileId, width: e.width, height: e.height, is_animated: e.isAnimated };
 }
 function N(e) {
     switch (e.type) {
