@@ -30,5 +30,11 @@ function E(e) {
     };
     return E
         ? (0, i.jsx)(o.A, { ...p })
-        : (0, i.jsx)(l.m, { targetElementRef: I, text: f, delay: A, children: (0, i.jsx)(o.A, { ...p }) });
+        : (0, i.jsx)(l.m, {
+              targetElementRef: I,
+              text: f,
+              delay: A,
+              ariaHidden: !0,
+              children: (0, i.jsx)(o.A, { ...p }),
+          });
 }

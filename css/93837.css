@@ -396,6 +396,28 @@ html:not(.chat-input) .inputInner_b1f01d {
     border-radius: var(--radius-lg)
 }
 
+.expandCollapseButton_ab8609 {
+    align-items: center;
+    background: var(--custom-status-bubble-background);
+    color: var(--text-default);
+    display: flex;
+    height: var(--space-24);
+    inset-block-end: calc(var(--space-12)*-1);
+    inset-inline-end: var(--space-8);
+    justify-content: center;
+    margin-inline: auto;
+    position: absolute;
+    width: var(--space-24)
+}
+
+.expandCollapseButtonFocusRing_ab8609 {
+    border-radius: var(--radius-round)
+}
+
+.collapseIcon_ab8609 {
+    transform: rotate(180deg)
+}
+
 .statusText_ab8609 {
     color: var(--text-default)
 }

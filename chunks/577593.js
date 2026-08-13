@@ -1,4 +1,4 @@
-i.r(s), i.d(s, { default: () => sm });
+i.r(s), i.d(s, { default: () => sI });
 var l = i(477900),
     n = i(582128),
     t = i(287809),
@@ -12,8 +12,8 @@ var l = i(477900),
     A = i(231723),
     h = i(982168),
     j = i(793574),
-    m = i(688810),
-    I = i(915089),
+    I = i(688810),
+    m = i(915089),
     p = i(562153),
     g = i(183555),
     f = i(999291),
@@ -175,8 +175,8 @@ function ej(e) {
         ],
     });
 }
-var em = i(652215),
-    eI = i(289873),
+var eI = i(652215),
+    em = i(289873),
     ep = i(349288),
     eg = i(517164),
     ef = i(290863),
@@ -198,19 +198,19 @@ function e_(e) {
         x = s.id === i.id,
         A = (0, M.bG)([eN.A, ef.A], () => {
             let e = x ? eN.A.getStatus() : ef.A.getStatus(s.id);
-            return e === em.clD.OFFLINE || e === em.clD.INVISIBLE;
+            return e === eI.clD.OFFLINE || e === eI.clD.INVISIBLE;
         }),
         h = (0, M.bG)([W.A], () => W.A.getUserProfile(s.id)?.private === !0),
         j = d.length > 0 || null != a,
-        m = !h && null == a && null == o && null != c,
-        I = !A && (j || m),
+        I = !h && null == a && null == o && null != c,
+        m = !A && (j || I),
         p = r.length > 0;
-    return I || p || !u
+    return m || p || !u
         ? (0, l.jsxs)(B.Ip, {
               className: eP.XG,
               fade: !0,
               children: [
-                  I
+                  m
                       ? (0, l.jsx)(el.A, {
                             "aria-label": X.intl.string(X.t.J6STd9),
                             children: (0, l.jsxs)("ul", {
@@ -239,7 +239,7 @@ function e_(e) {
                                             `live-${n}`,
                                         ),
                                     ),
-                                    m &&
+                                    I &&
                                         (0, l.jsx)("li", {
                                             children: (0, l.jsx)(eC.A, {
                                                 user: s,
@@ -261,7 +261,7 @@ function e_(e) {
                                           (0, l.jsx)(
                                               ep.Anchor,
                                               {
-                                                  href: ev.A.getArticleURL(em.MVz.ACTIVITY_STATUS_SETTINGS),
+                                                  href: ev.A.getArticleURL(eI.MVz.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               s,
@@ -283,7 +283,7 @@ function e_(e) {
                       : null,
               ],
           })
-        : (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(eI.y, {}) });
+        : (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(em.y, {}) });
 }
 var eb = i(695366),
     eR = i(661531),
@@ -363,7 +363,7 @@ var ew = i(163126),
 function eK(e) {
     let { user: s, guildId: i, channelId: t, onClose: d } = e,
         { mutualFriends: r } = (0, eY.A)(s),
-        { analyticsLocations: a } = (0, m.Ay)(),
+        { analyticsLocations: a } = (0, I.Ay)(),
         { context: c, trackUserProfileAction: o } = (0, g.NJ)(),
         u = (0, ew.A)();
     return (
@@ -375,7 +375,7 @@ function eK(e) {
             fade: !0,
             children:
                 null == r
-                    ? (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(eI.y, {}) })
+                    ? (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(em.y, {}) })
                     : 0 === r.length
                       ? (0, l.jsxs)("div", {
                             className: eL.Ie,
@@ -423,7 +423,7 @@ function eq(e) {
         fade: !0,
         children:
             null == t && d
-                ? (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(eI.y, {}) })
+                ? (0, l.jsx)("div", { className: eL.Ie, children: (0, l.jsx)(em.y, {}) })
                 : (null != t || d) && t?.length !== 0
                   ? t?.map((e) => {
                         let { guild: t, nick: d } = e;
@@ -559,15 +559,15 @@ function e7(e) {
             onClose: z,
             sourceAnalyticsLocations: V = [],
         } = e,
-        w = t === em.ME ? void 0 : t,
+        w = t === eI.ME ? void 0 : t,
         Y = (0, f.Ay)(s.id, w),
         H = p.Ay.getName(w, r, s),
         W = Y?.guildId ?? w,
         K = n.useCallback(() => {
             (0, D.A)({ user: s, guildId: W, alt: H });
         }, [H, W, s]),
-        J = (0, I.GV)(),
-        { analyticsLocations: Q } = (0, m.Ay)([...V, j.A.USER_PROFILE_MODAL]),
+        J = (0, m.GV)(),
+        { analyticsLocations: Q } = (0, I.Ay)([...V, j.A.USER_PROFILE_MODAL]),
         Z = (0, g.pb)({
             layout: "MODAL",
             userId: s.id,
@@ -587,7 +587,7 @@ function e7(e) {
             ];
         })(s),
         $ = (0, N.A)({ user: s, guildId: d, channelId: r, displayProfile: Y, onClose: z });
-    return (0, l.jsx)(m.f5, {
+    return (0, l.jsx)(I.f5, {
         value: Q,
         children: (0, l.jsx)(g.of, {
             value: Z,
@@ -632,6 +632,8 @@ function e7(e) {
                                                 }),
                                                 (0, l.jsx)(U.A, {
                                                     user: s,
+                                                    guildId: w,
+                                                    channelId: r,
                                                     themeType: e9.d.MODAL,
                                                     hasEntered: G === A.ip.ENTERED,
                                                     onCloseProfile: z,
@@ -716,15 +718,15 @@ function se(e) {
             onClose: h,
             sourceAnalyticsLocations: N = [],
         } = e,
-        v = i === em.ME ? void 0 : i,
+        v = i === eI.ME ? void 0 : i,
         O = (0, f.Ay)(s.id, v),
         P = p.Ay.getName(v, t, s),
         L = O?.guildId ?? v,
         _ = n.useCallback(() => {
             (0, D.A)({ user: s, guildId: L, alt: P });
         }, [P, L, s]),
-        R = (0, I.GV)(),
-        { analyticsLocations: U } = (0, m.Ay)([...N, j.A.USER_PROFILE_MODAL]),
+        R = (0, m.GV)(),
+        { analyticsLocations: U } = (0, I.Ay)([...N, j.A.USER_PROFILE_MODAL]),
         M = (0, g.pb)({
             layout: "MODAL",
             userId: s.id,
@@ -736,7 +738,7 @@ function se(e) {
         }),
         G = n.useRef(null),
         z = (0, e8.M)(G);
-    return (0, l.jsx)(m.f5, {
+    return (0, l.jsx)(I.f5, {
         value: U,
         children: (0, l.jsx)(g.of, {
             value: M,
@@ -802,7 +804,7 @@ function se(e) {
                                                     className: e$.$H,
                                                     type: "top",
                                                     selectedItem: eu.RP.BOT_INFO,
-                                                    onItemSelect: em.tEg,
+                                                    onItemSelect: eI.tEg,
                                                     children: (0, l.jsx)(
                                                         k.V.Item,
                                                         {
@@ -875,9 +877,9 @@ function sh(e) {
             onHide: u,
             sourceAnalyticsLocations: x = [],
         } = e,
-        A = i === em.ME ? void 0 : i,
+        A = i === eI.ME ? void 0 : i,
         h = (0, M.bG)([sd.A], () => sd.A.isBlocked(s.id)),
-        { analyticsLocations: I } = (0, m.Ay)([...x, h ? j.A.BLOCKED_PROFILE_MODAL : j.A.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: m } = (0, I.Ay)([...x, h ? j.A.BLOCKED_PROFILE_MODAL : j.A.IGNORED_PROFILE_MODAL]),
         N = (0, g.pb)({ layout: "MODAL_V2", userId: s.id, guildId: A, channelId: n, messageId: t, roleId: d }),
         v = [
             { icon: sl.y, description: X.intl.string(X.t.kcuWva) },
@@ -886,8 +888,8 @@ function sh(e) {
         E = (0, f.Ay)(s.id, A),
         S = p.Ay.getName(E?.guildId, n, s),
         y = X.intl.formatToPlainString(X.t.KRe1Fk, { name: S });
-    return (0, l.jsx)(m.f5, {
-        value: I,
+    return (0, l.jsx)(I.f5, {
+        value: m,
         children: (0, l.jsx)(g.of, {
             value: N,
             openedAt: a,
@@ -954,7 +956,7 @@ function sh(e) {
                                                 u(),
                                                     (0, sr.Wn)({
                                                         action: h ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-                                                        analyticsLocations: I,
+                                                        analyticsLocations: m,
                                                         ...N,
                                                     });
                                             },
@@ -965,7 +967,7 @@ function sh(e) {
                                                 u(),
                                                     (0, sr.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                        analyticsLocations: I,
+                                                        analyticsLocations: m,
                                                         ...N,
                                                     });
                                             },
@@ -980,8 +982,8 @@ function sh(e) {
         }),
     });
 }
-var sj = i(546689);
-function sm(e) {
+var sj = i(502067);
+function sI(e) {
     let { hideRestrictedProfile: s, ...i } = e,
         { user: o } = i,
         [u, x] = (0, c.A)(o.id);

@@ -182,11 +182,13 @@
     pointer-events: none
 }
 
-.entryContainer_fca8d7:has(.entryImageContainer_fca8d7:hover) .entryButtonContainer_fca8d7 {
+.entryContainer_fca8d7:has(.entryImageContainer_fca8d7:focus-within) .entryButtonContainer_fca8d7:not(:focus-within),
+.entryContainer_fca8d7:has(.entryImageContainer_fca8d7:hover) .entryButtonContainer_fca8d7:not(:focus-within) {
     opacity: 0;
     pointer-events: none
 }
 
+.entryImageContainer_fca8d7:focus-within :is(.removeImageButton_fca8d7),
 .entryImageContainer_fca8d7:hover :is(.removeImageButton_fca8d7) {
     opacity: 1
 }

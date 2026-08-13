@@ -18,8 +18,8 @@ var h = n(132500),
     T = n(790634),
     y = n(498740),
     A = n(15328);
-let v = (0, h.A)(),
-    S = (0, h.A)(),
+let S = (0, h.A)(),
+    v = (0, h.A)(),
     j = (0, h.A)();
 class w extends r.Component {
     static contextType = c.cK;
@@ -43,7 +43,7 @@ class w extends r.Component {
             r = this.context?.errorId;
         return (
             null != r && l.push(r),
-            null != n ? l.push(v) : (null != t && l.push(j), null != e && l.push(S)),
+            null != n ? l.push(S) : (null != t && l.push(j), null != e && l.push(v)),
             l.length > 0 ? l.join(" ") : void 0
         );
     };
@@ -107,7 +107,7 @@ class w extends r.Component {
         return null == t
             ? null
             : (0, l.jsx)(p.E, {
-                  id: v,
+                  id: S,
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
                   className: T.gJ,
@@ -128,29 +128,29 @@ class w extends r.Component {
                 className: h,
                 id: c,
                 rows: p,
-                flex: v,
+                flex: S,
                 autosize: w,
                 required: N,
                 onInvalid: D,
                 inputRef: O,
             } = this.props,
             C = w ? f.y : "textarea",
-            P = this.hasError(),
-            E = this.props["aria-labelledby"] ?? this.context?.titleId,
+            E = this.hasError(),
+            P = this.props["aria-labelledby"] ?? this.context?.titleId,
             b = this.getAriaDescribedBy();
         return (0, l.jsxs)("div", {
-            className: a()(y.I6, { [T.Uu]: v }),
+            className: a()(y.I6, { [T.Uu]: S }),
             children: [
                 (0, l.jsxs)("div", {
-                    className: a()(T.b4, { [T.Uu]: v }),
+                    className: a()(T.b4, { [T.Uu]: S }),
                     children: [
                         (0, l.jsx)(g.vN, {
                             children: (0, l.jsx)(C, {
                                 type: "text",
-                                className: a()(y.hF, T.Tg, A.qD, h, { [y.z3]: P, [y.r9]: t, [T.Xl]: d }),
-                                "aria-labelledby": E,
+                                className: a()(y.hF, T.Tg, A.qD, h, { [y.z3]: E, [y.r9]: t, [T.Xl]: d }),
+                                "aria-labelledby": P,
                                 "aria-describedby": b,
-                                "aria-invalid": P,
+                                "aria-invalid": E,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: c,
                                 disabled: t,
@@ -171,7 +171,7 @@ class w extends r.Component {
                             }),
                         }),
                         null != i &&
-                            (0, l.jsx)(m.A, { id: S, children: x.intl.format(x.t["bmQU//"], { minLength: i }) }),
+                            (0, l.jsx)(m.A, { id: v, children: x.intl.format(x.t["bmQU//"], { minLength: i }) }),
                         null != s &&
                             (0, l.jsx)(m.A, { id: j, children: x.intl.format(x.t["+DFxLc"], { maxLength: s }) }),
                         this.renderCharacterCount(),
@@ -203,8 +203,8 @@ var N = n(922016),
     D = n(939249),
     O = n(285796),
     C = n(565645),
-    P = n(765671),
-    E = n(964486),
+    E = n(765671),
+    P = n(964486),
     b = n(793574),
     R = n(688810),
     U = n(375499),
@@ -214,8 +214,8 @@ var N = n(922016),
     L = n(989349),
     k = n.n(L),
     H = n(885386),
-    F = n(284009),
-    Y = n.n(F),
+    Y = n(284009),
+    F = n.n(Y),
     $ = n(927813),
     z = n(403918),
     B = n(652215);
@@ -228,7 +228,7 @@ function J(t) {
         ? x.intl.formatToPlainString(x.t["+3jw2j"], { time: x.intl.data.formatTime(e, { format: "short" }) })
         : x.intl.formatToPlainString(x.t["/Avy4C"], { time: x.intl.data.formatTime(e, { format: "short" }) });
 }
-function Q(t) {
+function V(t) {
     switch (t) {
         case z.yt.TODAY:
             return J($.A.Millis.DAY);
@@ -244,14 +244,14 @@ function Q(t) {
             (0, G.xb)(t);
     }
 }
-function V(t) {
+function X(t) {
     let e = Date.now() + t;
     return (0, q.ro)(new Date(), new Date(e))
         ? x.intl.data.formatTime(e, { format: "short" })
         : x.intl.formatToPlainString(x.t.DN91Jz, { time: x.intl.data.formatTime(e, { format: "short" }) });
 }
-var X = n(685396),
-    Z = n(231723),
+var Z = n(685396),
+    Q = n(231723),
     W = n(480335),
     tt = n(208971),
     te = n(999291),
@@ -271,7 +271,7 @@ function tc(t) {
         u = (0, tt.G)(n),
         d =
             (null != n && "" !== n) || null != r
-                ? x.intl.formatToPlainString(x.t.UpF5Qa, { emoji: r?.name ?? "", status: u })
+                ? x.intl.formatToPlainString(x.t.SMkS7x, { emoji: r?.name ?? "", text: u })
                 : x.intl.formatToPlainString(x.t.IKBvFl, { placeholder: a ?? "" });
     return (0, l.jsx)("div", {
         role: "img",
@@ -302,7 +302,7 @@ function tc(t) {
                             previewText: n,
                             previewEmoji: r,
                             placeholderText: a,
-                            hasEntered: s === Z.ip.ENTERED,
+                            hasEntered: s === Q.ip.ENTERED,
                         }),
                     ],
                 }),
@@ -328,10 +328,10 @@ function tf(t) {
     let { transitionState: e, onClose: n, sourceAnalyticsLocations: i = [], prompt: h = null } = t,
         { analyticsLocations: c } = (0, R.Ay)(i, b.A.CUSTOM_STATUS_MODAL),
         g = (0, u.bG)([_.default], () => _.default.getCurrentUser() ?? null),
-        f = (0, X.K)(),
-        [T, y] = r.useState(f?.state ?? ""),
-        [A, v] = r.useState(f?.emoji ?? null),
-        [S, j] = r.useState(
+        m = (0, Z.K)(),
+        [f, T] = r.useState(m?.state ?? ""),
+        [y, A] = r.useState(m?.emoji ?? null),
+        [S, v] = r.useState(
             (function () {
                 let t = H.G2.getSetting();
                 if (null == t || "" === t.expiresAtMs) return z.yt.TODAY;
@@ -346,13 +346,13 @@ function tf(t) {
                 return K.find((t) => r <= t) ?? z.yt.TODAY;
             })(),
         ),
+        j = r.useRef(null),
         L = r.useRef(null),
-        F = r.useRef(null),
-        q = r.useRef(null),
-        J = null != h ? h.label() : x.intl.string(x.t.xod367),
-        [Z, W] = r.useState(J),
-        { ref: tt, width: te } = (0, P.Ay)(J);
-    function tn() {
+        Y = r.useRef(null),
+        q = null != h ? h.label() : x.intl.string(x.t.xod367),
+        [J, Q] = r.useState(q),
+        { ref: W, width: tt } = (0, E.Ay)(q);
+    function te() {
         S !== tp &&
             (!(function (t) {
                 let {
@@ -375,7 +375,7 @@ function tf(t) {
                                       .add(
                                           l === z.yt.TODAY
                                               ? $.A.Millis.DAY
-                                              : (Y()("number" == typeof l, "Invalid custom status clear timeout"), l),
+                                              : (F()("number" == typeof l, "Invalid custom status clear timeout"), l),
                                           "ms",
                                       )
                                       .toDate()
@@ -394,46 +394,46 @@ function tf(t) {
                         prompt_type: a?.value,
                         location_stack: s,
                     });
-            })({ text: T, emojiInfo: A, clearAfter: S, prompt: h, analyticsLocations: c }),
+            })({ text: f, emojiInfo: y, clearAfter: S, prompt: h, analyticsLocations: c }),
             n());
     }
     r.useEffect(() => {
-        let t = q.current;
-        if (null == te || null == t) return;
-        let e = te - 78;
-        t.textContent = J;
+        let t = Y.current;
+        if (null == tt || null == t) return;
+        let e = tt - 78;
+        t.textContent = q;
         let n = t.getBoundingClientRect().width;
-        if (n <= e) W(J);
+        if (n <= e) Q(q);
         else {
-            let t = n / J.length,
+            let t = n / q.length,
                 l = Math.floor((e - 3 * t) / t);
-            W(`${J.substring(0, l)}...`);
+            Q(`${q.substring(0, l)}...`);
         }
-    }, [te, J]),
+    }, [tt, q]),
         r.useEffect(() => {
             I.default.track(B.HAw.OPEN_MODAL, { type: b.A.CUSTOM_STATUS_MODAL, location_stack: c });
         }, [c]),
-        (0, E.Ay)(() => {
-            L.current?.focus(), L.current?.setSelection(T.length, T.length);
+        (0, P.Ay)(() => {
+            j.current?.focus(), j.current?.setSelection(f.length, f.length);
         }),
-        (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) });
-    let tl = x.intl.string(x.t.rp0ahn),
-        tr = "custom-status-input";
+        (0, s.$)({ currentLength: f.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) });
+    let tn = x.intl.string(x.t.rp0ahn),
+        tl = "custom-status-input";
     return (0, l.jsxs)(o.Modal, {
         title: x.intl.string(x.t.Zx4jzN),
         actionBarInput: (0, l.jsx)("div", {
             className: tm.l3,
             children: (0, l.jsx)(d.Te, {
                 "aria-label": x.intl.formatToPlainString(x.t.NFJUPa, {
-                    value: S === tp ? x.intl.string(x.t.E45wvP) : Q(S),
+                    value: S === tp ? x.intl.string(x.t.E45wvP) : V(S),
                 }),
                 maxVisibleItems: z.SX.length + 1,
                 value: S,
                 options: [
                     { value: tp, key: tp, label: x.intl.string(x.t.E45wvP), disabled: !0 },
-                    ...z.SX.map((t) => ({ value: t, key: t, label: Q(t) })),
+                    ...z.SX.map((t) => ({ value: t, key: t, label: V(t) })),
                 ],
-                onChange: (t) => j(t),
+                onChange: (t) => v(t),
                 optionClassName: tm.Pl,
                 renderOptionLabel: (t) => {
                     let { value: e, label: n, disabled: r } = t;
@@ -445,13 +445,13 @@ function tf(t) {
                                 : (function (t) {
                                       switch (t) {
                                           case z.yt.TODAY:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 24 })} (${V($.A.Millis.DAY)})`;
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 24 })} (${X($.A.Millis.DAY)})`;
                                           case z.yt.HOURS_4:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 4 })} (${V(4 * $.A.Millis.HOUR)})`;
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 4 })} (${X(4 * $.A.Millis.HOUR)})`;
                                           case z.yt.HOURS_1:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 1 })} (${V($.A.Millis.HOUR)})`;
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 1 })} (${X($.A.Millis.HOUR)})`;
                                           case z.yt.MINUTES_30:
-                                              return `${x.intl.formatToPlainString(x.t.TS3eJb, { minutes: 30 })} (${V(30 * $.A.Millis.MINUTE)})`;
+                                              return `${x.intl.formatToPlainString(x.t.TS3eJb, { minutes: 30 })} (${X(30 * $.A.Millis.MINUTE)})`;
                                           case z.yt.DONT_CLEAR:
                                               return x.intl.string(x.t.bRn8cq);
                                           default:
@@ -470,41 +470,38 @@ function tf(t) {
             await n();
         },
         transitionState: e,
-        actions: [{ text: x.intl.string(x.t["R3BPH+"]), variant: "primary", onClick: tn }],
+        actions: [{ text: x.intl.string(x.t["R3BPH+"]), variant: "primary", onClick: te }],
         children: [
             null != g &&
-                (0, l.jsxs)("div", {
+                (0, l.jsx)("div", {
                     className: tm.q5,
-                    children: [
-                        (0, l.jsx)(m.A, { children: x.intl.formatToPlainString(x.t.IKBvFl, { placeholder: J ?? "" }) }),
-                        (0, l.jsx)(tc, {
-                            user: g,
-                            previewText: T,
-                            previewEmoji: A,
-                            placeHolderText: J,
-                            transitionState: e,
-                        }),
-                    ],
+                    children: (0, l.jsx)(tc, {
+                        user: g,
+                        previewText: f,
+                        previewEmoji: y,
+                        placeHolderText: q,
+                        transitionState: e,
+                    }),
                 }),
             (0, l.jsxs)("div", {
                 className: tm.eH,
                 children: [
                     (0, l.jsx)(p.E, {
                         tag: "label",
-                        htmlFor: tr,
+                        htmlFor: tl,
                         variant: "heading-md/semibold",
                         className: tm.wW,
-                        children: tl,
+                        children: tn,
                     }),
                     (0, l.jsxs)("div", {
                         className: tm.Kf,
-                        ref: tt,
+                        ref: W,
                         children: [
-                            (0, l.jsx)("span", { ref: q, className: tm._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", { ref: Y, className: tm._D, "aria-hidden": "true" }),
                             (0, l.jsx)("div", {
                                 className: tm.S0,
                                 children: (0, l.jsx)(N.Y, {
-                                    targetElementRef: F,
+                                    targetElementRef: L,
                                     renderPopout: function (t) {
                                         let { closePopout: e } = t;
                                         return (0, l.jsx)(M.A, {
@@ -512,7 +509,7 @@ function tf(t) {
                                             onSelectEmoji: (t) => {
                                                 let { emoji: n, willClose: l } = t;
                                                 null == n ||
-                                                    v(
+                                                    A(
                                                         null != n.id
                                                             ? { id: n.id, name: n.name, animated: n.animated }
                                                             : {
@@ -534,26 +531,26 @@ function tf(t) {
                                         let { isShown: n } = e;
                                         return (0, l.jsx)(U.A, {
                                             ...t,
-                                            ref: F,
+                                            ref: L,
                                             active: n,
                                             "aria-label":
-                                                null != A
+                                                null != y
                                                     ? x.intl.formatToPlainString(x.t["urEr+I"], {
-                                                          currentValue: A.name,
+                                                          currentValue: y.name,
                                                       })
                                                     : x.intl.string(x.t.psHnw8),
                                             className: tm.Z8,
                                             spriteSize: 24,
                                             tabIndex: 0,
                                             renderButtonContents:
-                                                null == A
+                                                null == y
                                                     ? null
                                                     : () =>
                                                           (0, l.jsx)(C.A, {
                                                               className: tm.Zg,
-                                                              emojiId: A.id,
-                                                              emojiName: A.name,
-                                                              animated: !!A.animated,
+                                                              emojiId: y.id,
+                                                              emojiName: y.name,
+                                                              animated: !!y.animated,
                                                           }),
                                         });
                                     },
@@ -561,27 +558,27 @@ function tf(t) {
                             }),
                             (0, l.jsx)(w, {
                                 autosize: !0,
-                                value: T,
+                                value: f,
                                 maxLength: z.hp,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
-                                placeholder: Z,
+                                placeholder: J,
                                 onChange: function (t) {
-                                    y(t);
+                                    T(t);
                                 },
                                 onKeyDown: function (t) {
-                                    "Enter" === t.key && (t.preventDefault(), t.shiftKey || tn());
+                                    "Enter" === t.key && (t.preventDefault(), t.shiftKey || te());
                                 },
                                 className: tm.hF,
-                                inputRef: L,
-                                id: tr,
+                                inputRef: j,
+                                id: tl,
                             }),
-                            (T.length > 0 || null != A) &&
+                            (f.length > 0 || null != y) &&
                                 (0, l.jsx)(D.D, {
                                     "aria-label": x.intl.string(x.t.wfYTHe),
                                     className: tm.mt,
                                     onClick: function () {
-                                        y(""), v(null);
+                                        T(""), A(null);
                                     },
                                     children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tm.hj }),
                                 }),

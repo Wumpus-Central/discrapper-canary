@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container_ab8609",
     LL: "editable_ab8609",
     zf: "hoisted_ab8609",
@@ -11,6 +11,9 @@ e.exports = {
     p$: "compactExpanded_ab8609",
     mj: "referenceMeasurement_ab8609",
     hN: "ring_ab8609",
+    uJ: "expandCollapseButton_ab8609",
+    o5: "expandCollapseButtonFocusRing_ab8609",
+    DE: "collapseIcon_ab8609",
     qS: "statusText_ab8609",
     H0: "statusEmoji_ab8609",
     ch: "addStatusPrompt_ab8609",
