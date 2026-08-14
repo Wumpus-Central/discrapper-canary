@@ -5393,7 +5393,7 @@ let oJ = (0, a.zZ)(o.X.GIFTING_BADGE_CATEGORY, {
         Component: () => (0, c.jsx)(oQ, {}),
     });
 var o0 = n(264779),
-    o1 = n(528464),
+    o1 = n(412260),
     o2 = n(555393),
     o3 = n(725807),
     o5 = n(212168),
@@ -15231,7 +15231,7 @@ function Tf(e) {
 }
 var TI = n(511484),
     T_ = n(811611),
-    TN = n(515718),
+    TN = n(206697),
     TC = n(507553);
 function Tb(e, t) {
     let n = TC.A.useField("scrollPosition"),
@@ -15345,21 +15345,7 @@ function TR(e) {
     Tb(x, eI._F.TRY_IT_OUT);
     let { analyticsLocations: T, sourceAnalyticsLocations: p } = (0, eL.Ay)(tv.A.USER_SETTINGS_TRY_OUT_PREMIUM);
     function f(e) {
-        e &&
-            (d?.imageUri.startsWith("https:") === !0
-                ? fetch(d.imageUri)
-                      .then((e) => e.blob())
-                      .then((e) => (0, TN.We)(e))
-                      .then((e) => {
-                          (0, xu.p)({ avatar: u, themeColors: o, banner: { ...d, imageUri: e } });
-                      })
-                      .catch(() => {
-                          (0, xu.p)({ avatar: u, themeColors: o });
-                      })
-                : null != d
-                  ? (0, xu.p)({ avatar: u, themeColors: o, banner: d })
-                  : (0, xu.p)({ avatar: u, themeColors: o }),
-            e7.default.track(A.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: h }));
+        e && ((0, TN.T)(), e7.default.track(A.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: h }));
     }
     g.useEffect(() => {
         n &&
