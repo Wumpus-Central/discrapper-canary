@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593401, Version Hash: de40697ec70b745d9b862c093dd5d8d56d4ae73a`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593462, Version Hash: d4d6053b304bc1e3009325b639b23bc22fcb45e3`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -19344,18 +19344,20 @@ function gj(e) {
     let { targetElementRef: t, dismissPopover: i, children: r } = e,
         a = (0, m6.Y)({ location: "nitro_tab_popover" }),
         { analyticsLocations: s } = (0, a7.Ay)(),
-        l = (0, gB.A)();
+        l = (0, gB.A)(),
+        o = (0, el.bG)([mX.A], () => mX.A.getPremiumTypeSubscription()),
+        d = null != o && (0, mQ.Nc)(o);
     if (a && null == l) return r;
-    let o = a
+    let c = a
             ? tT.intl.string(gu.default.luFmt7)
             : tT.intl.format(gu.default["c+NBSl"], { premiumGroupProductName: (0, gF.DP)() }),
-        d = a
+        u = a
             ? tT.intl.format(gu.default.QnXCe6, { pricePerPerson: l })
             : tT.intl.format(gu.default.MuUV5u, { premiumGroupProductName: (0, gF.DP)(), totalSeats: gF.aw }),
-        c = (0, R.jsx)(i0.A, {
+        _ = (0, R.jsx)(i0.A, {
             targetElementRef: t,
-            title: o,
-            body: d,
+            title: c,
+            body: u,
             graphic: { type: "image", src: gH },
             badge: { type: "beta", variant: "expressive" },
             gradientColor: "nitro-pink",
@@ -19384,12 +19386,13 @@ function gj(e) {
                                       return (t) => (0, R.jsx)(e, { ...t });
                                   });
                     },
+                    disabled: a && d,
                     ...(a ? { icon: rr.t, iconPosition: "start" } : {}),
                 },
             ],
             onRequestClose: () => i(n8.i.USER_DISMISS),
         });
-    return (0, R.jsxs)(R.Fragment, { children: [(0, R.jsx)("div", { children: r }), c] });
+    return (0, R.jsxs)(R.Fragment, { children: [(0, R.jsx)("div", { children: r }), _] });
 }
 var gW = n(421438);
 function gY(e) {
@@ -20795,7 +20798,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593401" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593462" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -31112,7 +31115,7 @@ let yx = (0, nX.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("69960"),
-                n.e("87143"),
+                n.e("51580"),
                 n.e("12822"),
                 n.e("20624"),
                 n.e("53913"),
@@ -32315,7 +32318,7 @@ let yx = (0, nX.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("69960"),
-                n.e("87143"),
+                n.e("51580"),
                 n.e("12822"),
                 n.e("20624"),
                 n.e("53913"),

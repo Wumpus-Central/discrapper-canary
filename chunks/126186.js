@@ -1,4 +1,4 @@
-t.d(r, { jP: () => eE, Rf: () => ej, oK: () => eN, r6: () => ev, MR: () => eg });
+t.d(r, { jP: () => eA, Rf: () => ej, oK: () => eN, r6: () => ev, MR: () => eg });
 var i,
     n = t(477900),
     l = t(582128),
@@ -19,13 +19,13 @@ var i,
     v = t(688810),
     C = t(287809),
     T = t(166403),
-    E = t(158045),
-    R = t(580630),
-    A = t(526292),
+    A = t(158045),
+    E = t(580630),
+    R = t(526292),
     y = t(877624),
     _ = t(978656),
-    P = t(508770),
-    b = t(406810),
+    b = t(508770),
+    P = t(406810),
     I = t(951305),
     M = t(421108),
     S = t(807098),
@@ -110,7 +110,7 @@ function H(e) {
         children: (0, n.jsx)(O, {
             image: null != r ? (0, n.jsx)("img", { className: L.L8, alt: "", src: r }) : void 0,
             badge:
-                null != t ? (0, n.jsx)(P.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: b.O }) : void 0,
+                null != t ? (0, n.jsx)(b.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: P.O }) : void 0,
             title: (0, n.jsx)(x.E, { variant: "text-md/medium", color: "text-default", children: i }),
             body: (0, n.jsx)(x.E, { variant: "text-sm/medium", color: "text-muted", children: l }),
         }),
@@ -142,7 +142,7 @@ let en = new X.A("PremiumGroupPrice.tsx"),
             h = (0, m.q)((0, j.Ay)());
         if (null == u) return el;
         try {
-            r = (0, E.sS)(u, l, !1, t, !1);
+            r = (0, A.sS)(u, l, !1, t, !1);
         } catch {
             return en.warn(`No price available for plan ${u.id} in currency ${l?.currency ?? "unknown"}`), el;
         }
@@ -206,7 +206,7 @@ let en = new X.A("PremiumGroupPrice.tsx"),
                             variant: "text-xs/medium",
                             tag: "span",
                             color: "text-muted",
-                            children: ["/", (0, E.FJ)(g)],
+                            children: ["/", (0, A.FJ)(g)],
                         }),
                     ],
                 }),
@@ -259,17 +259,17 @@ function eg(e) {
         f = x?.hasActiveTrial ? p?.premiumType : null,
         N = (0, q.Lj)(f, g),
         v = null != N,
-        E = (0, m.q)((0, j.Ay)()),
-        R = u ? w.intl.string(w.t.tUbSDK) : w.intl.string(w.t["t9uG/o"]),
-        A = (0, n.jsxs)(eh, {
+        A = (0, m.q)((0, j.Ay)()),
+        E = u ? w.intl.string(w.t.tUbSDK) : w.intl.string(w.t["t9uG/o"]),
+        R = (0, n.jsxs)(eh, {
             footer: r,
             children: [
                 v && (0, n.jsx)(J.R, { text: N, className: eu.pill }),
                 (0, n.jsx)(o.D, {
                     variant: "display-md",
-                    color: E ? "text-strong" : "text-overlay-light",
+                    color: A ? "text-strong" : "text-overlay-light",
                     className: eu.cardTitle,
-                    children: R,
+                    children: E,
                 }),
                 (0, n.jsx)(ec.A, {
                     isGift: l,
@@ -288,7 +288,7 @@ function eg(e) {
             ],
         }),
         y = s()(eu.card, eu.tier0, i, { [eu.pillMargin]: !d && v });
-    return (0, n.jsx)("div", { className: y, children: A });
+    return (0, n.jsx)("div", { className: y, children: R });
 }
 var ej =
     (((i = {}).IN_CARD = "inCard"),
@@ -301,8 +301,8 @@ function ef(e) {
         s = (0, $.N1)(ee.gD.PREMIUM_YEAR_TIER_2),
         o = l.useMemo(() => {
             try {
-                let e = (0, E.y8)(ee.gD.PREMIUM_YEAR_TIER_2, !1, i, t);
-                return (0, R.$g)(e.amount, e.currency);
+                let e = (0, A.y8)(ee.gD.PREMIUM_YEAR_TIER_2, !1, i, t);
+                return (0, E.$g)(e.amount, e.currency);
             } catch {
                 return null;
             }
@@ -346,21 +346,21 @@ function eN(e) {
             showPill: N = !0,
             narrowLayout: v = !1,
         } = e,
-        E = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-        R = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
+        A = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+        E = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
         y = (0, V.V)(),
         _ = y?.subscription_trial?.sku_id,
-        P = E?.hasActiveTrial ? R?.premiumType : null,
-        b = E?.planIdFromItems === ee.gD.PREMIUM_YEAR_TIER_2,
+        b = A?.hasActiveTrial ? E?.premiumType : null,
+        P = A?.planIdFromItems === ee.gD.PREMIUM_YEAR_TIER_2,
         I = (0, F.O)(),
         M = (0, F.p)(),
-        S = (0, A.k5)(),
-        k = null != _ || null != P ? ee.Vk.PREMIUM_TRIAL : null != I || S ? ee.Vk.PREMIUM_DISCOUNT : null,
+        S = (0, R.k5)(),
+        k = null != _ || null != b ? ee.Vk.PREMIUM_TRIAL : null != I || S ? ee.Vk.PREMIUM_DISCOUNT : null,
         G = (0, m.q)((0, j.Ay)()),
         B = null != M && !a,
         D = !a && null != I && (0, $.hm)(I),
-        O = !a && S && b && k === ee.Vk.PREMIUM_DISCOUNT,
-        L = (0, q.rm)(S, P, a ? null : I, y, _),
+        O = !a && S && P && k === ee.Vk.PREMIUM_DISCOUNT,
+        L = (0, q.rm)(S, b, a ? null : I, y, _),
         H = (0, Y.Sq)() && !a && null == k,
         K = null != r || x ? (0, n.jsxs)(n.Fragment, { children: [r, x && (0, n.jsx)(U, {})] }) : null,
         z = d && !a,
@@ -512,45 +512,50 @@ function eC(e) {
 function eT(e) {
     let { isReducedMotion: r, className: t } = e,
         i = (0, F.p)(),
-        l =
-            null != i
-                ? w.intl.format(er.default["7j70dP"], {
-                      percent: i.discount?.amount,
-                      premiumGroupProductName: (0, ed.DP)(),
-                  })
-                : w.intl.string(w.t["2pG5Ga"]),
-        a = (0, n.jsx)(u.$, {
+        l = null != i,
+        a = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+        o = null != a && (0, A.Nc)(a),
+        m = l
+            ? w.intl.format(er.default["7j70dP"], {
+                  percent: i.discount?.amount,
+                  premiumGroupProductName: (0, ed.DP)(),
+              })
+            : w.intl.string(w.t["2pG5Ga"]),
+        x = (0, n.jsx)(u.$, {
             size: "md",
             fullWidth: !0,
             icon: g.t,
-            text: l,
+            text: m,
             variant: null != i ? "expressive" : "secondary",
+            disabled: o,
         }),
-        o = (0, n.jsx)(d.B, {
+        p = (0, n.jsx)(d.B, {
             direction: "vertical",
             gap: 0,
             className: s()(eu.tierCardStack, { [eu.premiumCardHover]: !r }),
             children: (0, n.jsx)(ev, {
                 className: s()(eu.applicationHomeCard, eu.narrow),
-                ctaButton: a,
+                ctaButton: x,
                 isApplicationHome: !0,
             }),
         });
-    return (0, n.jsx)(z.A, {
-        subscriptionTier: ee.pe.TIER_2,
-        initialPlanId: ee.gD.PREMIUM_GROUP_MONTH,
-        children: (e) => {
-            let { onClick: r } = e;
-            return (0, n.jsx)(d.B, {
-                direction: "vertical",
-                gap: 0,
-                className: s()(eu.tierCardStack, t),
-                children: (0, n.jsx)(h.D, { onClick: r, className: eu.tierCardStack, children: o }),
-            });
-        },
+    return (0, n.jsx)(d.B, {
+        direction: "vertical",
+        gap: 0,
+        className: s()(eu.tierCardStack, t),
+        children: o
+            ? p
+            : (0, n.jsx)(z.A, {
+                  subscriptionTier: ee.pe.TIER_2,
+                  initialPlanId: ee.gD.PREMIUM_GROUP_MONTH,
+                  children: (e) => {
+                      let { onClick: r } = e;
+                      return (0, n.jsx)(h.D, { onClick: r, className: eu.tierCardStack, children: p });
+                  },
+              }),
     });
 }
-function eE(e) {
+function eA(e) {
     let { innerRef: r, className: t } = e,
         { analyticsLocations: i } = (0, v.Ay)(N.A.PREMIUM_MARKETING_TIER_CARD),
         l = (0, es.pw)(r),
