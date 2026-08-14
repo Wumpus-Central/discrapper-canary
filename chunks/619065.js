@@ -102,7 +102,7 @@ function C(e, t) {
     let n = N.get(e);
     null != n && (n.delete(t), 0 === n.size && N.delete(e));
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         a = m.peek(e);
     if (null == a) return;
@@ -125,7 +125,7 @@ function O(e, t, n, i) {
                 message: (0, l.rh)(e),
             });
 }
-function R(e, t, n, i) {
+function O(e, t, n, i) {
     t.message = i;
     let r = null != t.conversationId ? e.conversationMetadataById.get(t.conversationId) : null;
     if (r?.hydratedMessages == null) return;
@@ -141,10 +141,13 @@ function L(e) {
     let c = l.messageMetadataByMessageId.get(i);
     if (c?.message == null || !(0, o.vp)(e)) return !1;
     let u = d.default.getId() === r,
-        _ = "MESSAGE_REACTION_ADD" === t ? c.message.addReaction(a, u, e.colors, s) : c.message.removeReaction(a, u, s);
-    return R(l, c, i, _), !0;
+        _ =
+            "MESSAGE_REACTION_ADD" === t
+                ? c.message.addReaction(a, u, { colors: e.colors, reactionType: s })
+                : c.message.removeReaction(a, u, s);
+    return O(l, c, i, _), !0;
 }
-function D() {
+function y() {
     let e = !1;
     return (
         m.forEach((t) => {
@@ -155,14 +158,14 @@ function D() {
                 if (n.message.blocked !== r || n.message.ignored !== a) {
                     e = !0;
                     let s = n.message.set("blocked", r).set("ignored", a);
-                    R(t, n, i, s);
+                    O(t, n, i, s);
                 }
             });
         }),
         e
     );
 }
-function y(e, t) {
+function D(e, t) {
     let n = m.peek(e);
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t);
@@ -250,7 +253,7 @@ let P = new M(s.h, {
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, messageReferences: r, fullyHydrated: a } = e;
-        C(n, a ? "full" : "preview"), O(t, n, i, a, r);
+        C(n, a ? "full" : "preview"), R(t, n, i, a, r);
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
         let { conversationId: t, full: n } = e;
@@ -371,7 +374,7 @@ let P = new M(s.h, {
             };
         })(n, u, _);
         for (let e of ((g.reachedOldest = E), (g.reachedNewest = I), null != _ ? Object.assign(_, g) : m.set(n, g), i))
-            null != e.messages && O(n, e.id, e.messages, d);
+            null != e.messages && R(n, e.id, e.messages, d);
         return !0;
     },
     CONVERSATIONS_FETCH_FAILURE: function (e) {
@@ -427,7 +430,7 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(i);
         if (a?.message == null) return !1;
         let s = (0, l.IU)(a.message, t);
-        return R(r, a, i, s), !0;
+        return O(r, a, i, s), !0;
     },
     MESSAGE_REACTION_ADD: L,
     MESSAGE_REACTION_REMOVE: L,
@@ -438,7 +441,7 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.addReactionBatch(i, d.default.getId());
-        return R(r, a, n, s), !0;
+        return O(r, a, n, s), !0;
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { channelId: t, messageId: n } = e,
@@ -447,7 +450,7 @@ let P = new M(s.h, {
         let r = i.messageMetadataByMessageId.get(n);
         if (r?.message == null) return !1;
         let a = r.message.set("reactions", []);
-        return R(i, r, n, a), !0;
+        return O(i, r, n, a), !0;
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
@@ -456,21 +459,21 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.removeReactionsForEmoji(i);
-        return R(r, a, n, s), !0;
+        return O(r, a, n, s), !0;
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
-        return y(t, n);
+        return D(t, n);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
             i = !1;
-        for (let e of n) y(t, e) && (i = !0);
+        for (let e of n) D(t, e) && (i = !0);
         return i;
     },
-    RELATIONSHIP_ADD: D,
-    RELATIONSHIP_UPDATE: D,
-    RELATIONSHIP_REMOVE: D,
+    RELATIONSHIP_ADD: y,
+    RELATIONSHIP_UPDATE: y,
+    RELATIONSHIP_REMOVE: y,
     LOGOUT: function () {
         m.reset(), g.clear(), N.clear();
     },

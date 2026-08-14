@@ -166,47 +166,54 @@ let E = class extends c {
     }
     addReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.v.NORMAL,
-            r = -1,
-            a = this.reactions.map((a, s) => {
-                if ((0, o.i6)(a.emoji, e))
-                    if (((r = s), i === l.v.BURST)) {
-                        if (t && a.me_burst) return a;
-                        let e = a.burst_count + 1,
-                            i = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
-                        a = {
-                            ...a,
-                            me_burst: !!t || a.me_burst,
-                            burst_count: e,
-                            count_details: { ...a.count_details, burst: e },
-                            burst_colors: i,
-                        };
-                    } else if (i === l.v.VOTE) {
-                        let e = a.count_details?.vote ?? 0,
-                            n = t && a.me_vote ? e : e + 1;
-                        a = { ...a, count_details: { ...a.count_details, vote: n }, me_vote: !!t || a.me_vote };
-                    } else {
-                        if (t && a.me) return a;
-                        let e = a.count + 1;
-                        a = { ...a, count: e, count_details: { ...a.count_details, normal: e }, me: !!t || a.me };
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { colors: i = [], reactionType: r = l.v.NORMAL, isDMChannel: a = !1 } = n,
+            s = -1,
+            d = this.reactions.map((n, d) => {
+                if ((0, o.i6)(n.emoji, e)) {
+                    if (((s = d), a && !t)) {
+                        let e = n.count - !!n.me >= 1,
+                            t = n.burst_count - !!n.me_burst >= 1,
+                            i = (n.count_details?.vote ?? 0) - !!n.me_vote >= 1;
+                        if ((r === l.v.NORMAL && e) || (r === l.v.BURST && t) || (r === l.v.VOTE && i)) return n;
                     }
-                return a;
+                    if (r === l.v.BURST) {
+                        if (t && n.me_burst) return n;
+                        let e = n.burst_count + 1,
+                            r = null != n.burst_colors && n.burst_colors.length > 0 ? n.burst_colors : i;
+                        n = {
+                            ...n,
+                            me_burst: !!t || n.me_burst,
+                            burst_count: e,
+                            count_details: { ...n.count_details, burst: e },
+                            burst_colors: r,
+                        };
+                    } else if (r === l.v.VOTE) {
+                        let e = n.count_details?.vote ?? 0,
+                            i = t && n.me_vote ? e : e + 1;
+                        n = { ...n, count_details: { ...n.count_details, vote: i }, me_vote: !!t || n.me_vote };
+                    } else {
+                        if (t && n.me) return n;
+                        let e = n.count + 1;
+                        n = { ...n, count: e, count_details: { ...n.count_details, normal: e }, me: !!t || n.me };
+                    }
+                }
+                return n;
             });
         return (
-            -1 === r &&
-                (i === l.v.BURST
-                    ? a.push({
+            -1 === s &&
+                (r === l.v.BURST
+                    ? d.push({
                           emoji: e,
                           me: !1,
                           me_burst: t,
                           count: 0,
                           count_details: { burst: 1, normal: 0 },
                           burst_count: 1,
-                          burst_colors: n,
+                          burst_colors: i,
                       })
-                    : i === l.v.VOTE
-                      ? a.push({
+                    : r === l.v.VOTE
+                      ? d.push({
                             emoji: e,
                             me: !1,
                             me_burst: !1,
@@ -216,7 +223,7 @@ let E = class extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })
-                      : a.push({
+                      : d.push({
                             emoji: e,
                             me: t,
                             me_burst: !1,
@@ -225,13 +232,13 @@ let E = class extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })),
-            this.set("reactions", a)
+            this.set("reactions", d)
         );
     }
     addReactionBatch(e, t) {
         return e.reduce((e, n) => {
             let { users: i, emoji: r, reactionType: a } = n;
-            return i.reduce((e, n) => e.addReaction(r, n === t, [], a), e);
+            return i.reduce((e, n) => e.addReaction(r, n === t, { reactionType: a }), e);
         }, this);
     }
     removeReaction(e) {

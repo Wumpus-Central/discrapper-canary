@@ -1,194 +1,194 @@
 "use strict";
-n.d(t, { A: () => T }), n(321073), n(938796);
+n.d(t, { A: () => g }), n(321073), n(938796);
 var i = n(665260),
     r = n(17928),
-    s = n(228366),
-    a = n(734057),
-    o = n(696451),
-    l = n(71393),
-    u = n(994500),
+    a = n(228366),
+    s = n(734057),
+    l = n(696451),
+    o = n(71393),
+    d = n(994500),
     c = n(287809),
-    d = n(320095),
+    u = n(320095),
     _ = n(652215);
-let h = {};
-function f(e, t) {
-    let n = a.A.getChannel(e)?.getGuildId();
+let E = {};
+function A(e, t) {
+    let n = s.A.getChannel(e)?.getGuildId();
     if (null == n) return null;
-    let i = h[n];
+    let i = E[n];
     if (null == i) return null;
     let r = i.messages[t];
     return null == r ? null : { guildId: n, message: r };
 }
-function p(e, t) {
-    let n = h[e];
-    null != n && (h = { ...h, [e]: { ...n, ...t(n) } });
+function h(e, t) {
+    let n = E[e];
+    null != n && (E = { ...E, [e]: { ...n, ...t(n) } });
 }
-function E(e, t) {
-    p(e, (e) => ({ ids: [t.id, ...e.ids], messages: { ...e.messages, [t.id]: t } }));
+function I(e, t) {
+    h(e, (e) => ({ ids: [t.id, ...e.ids], messages: { ...e.messages, [t.id]: t } }));
 }
-function m(e, t) {
-    p(e, (e) => ({ messages: { ...e.messages, [t.id]: t } }));
+function f(e, t) {
+    h(e, (e) => ({ messages: { ...e.messages, [t.id]: t } }));
 }
-function g(e) {
+function p(e) {
     let { channel: t } = e,
         n = t.guild_id;
     if (null == n) return !1;
-    let i = h[n];
+    let i = E[n];
     if (null == i) return !1;
     let r = [],
-        s = { ...i.messages };
-    for (let e of i.ids) i.messages[e]?.channel_id === t.id ? delete s[e] : r.push(e);
+        a = { ...i.messages };
+    for (let e of i.ids) i.messages[e]?.channel_id === t.id ? delete a[e] : r.push(e);
     if (r.length === i.ids.length) return !1;
-    p(n, () => ({ ids: r, messages: s }));
+    h(n, () => ({ ids: r, messages: a }));
 }
-function A() {
+function T() {
     let e = {},
         t = !1;
-    for (let n of Object.keys(h)) {
-        let i = h[n],
+    for (let n of Object.keys(E)) {
+        let i = E[n],
             r = null;
         for (let e of i.ids) {
             let t = i.messages[e];
             if (null == t) continue;
-            let n = u.A.isBlockedForMessage(t),
-                s = u.A.isIgnoredForMessage(t);
-            (t.blocked !== n || t.ignored !== s) &&
-                (null == r && (r = { ...i.messages }), (r[e] = t.merge({ blocked: n, ignored: s })));
+            let n = d.A.isBlockedForMessage(t),
+                a = d.A.isIgnoredForMessage(t);
+            (t.blocked !== n || t.ignored !== a) &&
+                (null == r && (r = { ...i.messages }), (r[e] = t.merge({ blocked: n, ignored: a })));
         }
         null == r ? (e[n] = i) : ((e[n] = { ...i, messages: r }), (t = !0));
     }
     if (!t) return !1;
-    h = e;
+    E = e;
 }
-class I extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "GuildOfficialMessagesStore";
     initialize() {
-        this.waitFor(a.A, o.Ay, l.A, u.A, c.default);
+        this.waitFor(s.A, l.Ay, o.A, d.A, c.default);
     }
     getState(e) {
-        return h[e];
+        return E[e];
     }
     getMessage(e, t) {
-        return h[e]?.messages[t];
+        return E[e]?.messages[t];
     }
     getMessages(e) {
-        let t = h[e];
+        let t = E[e];
         return null == t ? [] : t.ids.map((e) => t.messages[e]).filter((e) => null != e);
     }
     isLoading(e) {
-        return h[e]?.loading ?? !1;
+        return E[e]?.loading ?? !1;
     }
     isLoaded(e) {
-        return h[e]?.loaded ?? !1;
+        return E[e]?.loaded ?? !1;
     }
     hasMore(e) {
-        return h[e]?.hasMore ?? !1;
+        return E[e]?.hasMore ?? !1;
     }
 }
-let T = new I(s.h, {
+let g = new m(a.h, {
     CONNECTION_OPEN: function () {
-        h = {};
+        E = {};
     },
     LOAD_OFFICIAL_MESSAGES: function (e) {
         let { guildId: t, before: n } = e,
-            i = h[t];
+            i = E[t];
         if (i?.loading === !0) return !1;
         if (null != n) {
             if (null == i) return !1;
-            h = { ...h, [t]: { ...i, loading: !0 } };
-        } else h = { ...h, [t]: { ids: [], messages: {}, hasMore: !1, loading: !0, loaded: !1, error: !1 } };
+            E = { ...E, [t]: { ...i, loading: !0 } };
+        } else E = { ...E, [t]: { ids: [], messages: {}, hasMore: !1, loading: !0, loaded: !1, error: !1 } };
     },
     LOAD_OFFICIAL_MESSAGES_SUCCESS: function (e) {
         let { guildId: t, messages: n, hasMore: i, before: r } = e;
-        if (null == h[t]) return !1;
-        p(t, (e) => {
+        if (null == E[t]) return !1;
+        h(t, (e) => {
             let t = null != r ? [...e.ids] : [],
-                s = null != r ? { ...e.messages } : {};
+                a = null != r ? { ...e.messages } : {};
             for (let e of n) {
-                let n = (0, d.rh)(e);
-                null == s[n.id] && t.push(n.id), (s[n.id] = n);
+                let n = (0, u.rh)(e);
+                null == a[n.id] && t.push(n.id), (a[n.id] = n);
             }
-            return { ids: t, messages: s, hasMore: i, loading: !1, loaded: !0, error: !1 };
+            return { ids: t, messages: a, hasMore: i, loading: !1, loaded: !0, error: !1 };
         });
     },
     LOAD_OFFICIAL_MESSAGES_FAILURE: function (e) {
         let { guildId: t, before: n } = e;
-        if (null == h[t]) return !1;
-        null != n ? p(t, () => ({ loading: !1 })) : p(t, () => ({ loading: !1, error: !0 }));
+        if (null == E[t]) return !1;
+        null != n ? h(t, () => ({ loading: !1 })) : h(t, () => ({ loading: !1, error: !0 }));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        if (null == h[t.id]) return !1;
-        let n = { ...h };
-        delete n[t.id], (h = n);
+        if (null == E[t.id]) return !1;
+        let n = { ...E };
+        delete n[t.id], (E = n);
     },
-    CHANNEL_DELETE: g,
-    THREAD_DELETE: g,
+    CHANNEL_DELETE: p,
+    THREAD_DELETE: p,
     MESSAGE_CREATE: function (e) {
-        let { message: t, guildId: n, optimistic: r, isPushNotification: s } = e;
-        if (r || s || null == n || !(0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL)) return !1;
-        let a = h[n];
-        if (null == a || null != a.messages[t.id]) return !1;
-        E(n, (0, d.rh)(t));
+        let { message: t, guildId: n, optimistic: r, isPushNotification: a } = e;
+        if (r || a || null == n || !(0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL)) return !1;
+        let s = E[n];
+        if (null == s || null != s.messages[t.id]) return !1;
+        I(n, (0, u.rh)(t));
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
         if (null == t.id) return !1;
-        let n = a.A.getChannel(t.channel_id),
+        let n = s.A.getChannel(t.channel_id),
             r = n?.getGuildId();
         if (null == r) return !1;
-        let s = h[r];
-        if (null == s) return !1;
-        let o = s.messages[t.id];
-        if (null == t.author) return null != o && void m(r, (0, d.IU)(o, t));
-        let l = (0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL);
-        if (l && null == o) return void E(r, (0, d.rh)(t));
-        if (!l && null != o) {
+        let a = E[r];
+        if (null == a) return !1;
+        let l = a.messages[t.id];
+        if (null == t.author) return null != l && void f(r, (0, u.IU)(l, t));
+        let o = (0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL);
+        if (o && null == l) return void I(r, (0, u.rh)(t));
+        if (!o && null != l) {
             let e = t.id;
-            p(r, (t) => {
+            h(r, (t) => {
                 let n = { ...t.messages };
                 return delete n[e], { ids: t.ids.filter((t) => t !== e), messages: n };
             });
             return;
         }
-        return !!l && null != o && void m(r, (0, d.IU)(o, t));
+        return !!o && null != l && void f(r, (0, u.IU)(l, t));
     },
     MESSAGE_REACTION_ADD: function (e) {
-        let { channelId: t, messageId: n, userId: i, emoji: r, optimistic: s, reactionType: a, colors: o } = e,
-            l = c.default.getCurrentUser()?.id === i;
-        if (s && !l) return !1;
-        let u = f(t, n);
-        if (null == u) return !1;
-        let d = u.message.addReaction(r, l, o, a);
-        m(u.guildId, d);
+        let { channelId: t, messageId: n, userId: i, emoji: r, optimistic: a, reactionType: s, colors: l } = e,
+            o = c.default.getCurrentUser()?.id === i;
+        if (a && !o) return !1;
+        let d = A(t, n);
+        if (null == d) return !1;
+        let u = d.message.addReaction(r, o, { colors: l, reactionType: s });
+        f(d.guildId, u);
     },
     MESSAGE_REACTION_REMOVE: function (e) {
-        let { channelId: t, messageId: n, userId: i, emoji: r, optimistic: s, reactionType: a } = e,
-            o = c.default.getCurrentUser()?.id === i;
-        if (s && !o) return !1;
-        let l = f(t, n);
-        if (null == l) return !1;
-        let u = l.message.removeReaction(r, o, a);
-        m(l.guildId, u);
+        let { channelId: t, messageId: n, userId: i, emoji: r, optimistic: a, reactionType: s } = e,
+            l = c.default.getCurrentUser()?.id === i;
+        if (a && !l) return !1;
+        let o = A(t, n);
+        if (null == o) return !1;
+        let d = o.message.removeReaction(r, l, s);
+        f(o.guildId, d);
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { channelId: t, messageId: n } = e,
-            i = f(t, n);
+            i = A(t, n);
         if (null == i) return !1;
         let r = i.message.set("reactions", []);
-        m(i.guildId, r);
+        f(i.guildId, r);
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
-            r = f(t, n);
+            r = A(t, n);
         if (null == r) return !1;
-        let s = r.message.removeReactionsForEmoji(i);
-        m(r.guildId, s);
+        let a = r.message.removeReactionsForEmoji(i);
+        f(r.guildId, a);
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, guildId: n } = e;
-        if (null == n || h[n]?.messages[t] == null) return !1;
-        p(n, (e) => {
+        if (null == n || E[n]?.messages[t] == null) return !1;
+        h(n, (e) => {
             let n = { ...e.messages };
             return delete n[t], { ids: e.ids.filter((e) => e !== t), messages: n };
         });
@@ -196,16 +196,16 @@ let T = new I(s.h, {
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, guildId: n } = e;
         if (null == n) return !1;
-        let i = h[n];
+        let i = E[n];
         if (null == i) return !1;
         let r = new Set(t),
-            s = i.ids.filter((e) => !r.has(e));
-        if (s.length === i.ids.length) return !1;
-        let a = { ...i.messages };
-        for (let e of i.ids) r.has(e) && delete a[e];
-        p(n, () => ({ ids: s, messages: a }));
+            a = i.ids.filter((e) => !r.has(e));
+        if (a.length === i.ids.length) return !1;
+        let s = { ...i.messages };
+        for (let e of i.ids) r.has(e) && delete s[e];
+        h(n, () => ({ ids: a, messages: s }));
     },
-    RELATIONSHIP_ADD: A,
-    RELATIONSHIP_REMOVE: A,
-    RELATIONSHIP_UPDATE: A,
+    RELATIONSHIP_ADD: T,
+    RELATIONSHIP_REMOVE: T,
+    RELATIONSHIP_UPDATE: T,
 });

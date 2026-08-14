@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => Z }), n(938796), n(321073), n(142703);
+n.d(t, { A: () => q }), n(938796), n(321073), n(142703);
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -67,7 +67,7 @@ async function B(e, t, n) {
         } catch {}
     x.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
     let a = d.A.getOrCreate(e);
-    d.A.commit(a.receivePushNotification(t, n)), q.emitChange();
+    d.A.commit(a.receivePushNotification(t, n)), Z.emitChange();
 }
 function H(e) {
     if (e.media_mention?.message_id == null) return;
@@ -127,9 +127,12 @@ function K(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = d.A.get(n);
     if (null == l || !(0, g.vp)(e)) return !1;
-    let o = C.default.getId() === r;
+    let o = R.A.getBasicChannel(n)?.type === w.rbe.DM,
+        c = C.default.getId() === r;
     (l = l.update(i, (n) =>
-        "MESSAGE_REACTION_ADD" === t ? n.addReaction(a, o, e.colors, s) : n.removeReaction(a, o, s),
+        "MESSAGE_REACTION_ADD" === t
+            ? n.addReaction(a, c, { colors: e.colors, reactionType: s, isDMChannel: o })
+            : n.removeReaction(a, c, s),
     )),
         d.A.commit(l);
 }
@@ -232,7 +235,7 @@ class z extends s.Ay.Store {
         return k;
     }
 }
-let q = new z(l.h, {
+let Z = new z(l.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -502,4 +505,4 @@ let q = new z(l.h, {
             null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
         },
     }),
-    Z = q;
+    q = Z;
