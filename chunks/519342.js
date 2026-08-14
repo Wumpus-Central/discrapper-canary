@@ -18,37 +18,37 @@ var i = n(477900),
     C = n(778712),
     y = n(26430),
     j = n(22231),
-    I = n(401843),
-    v = n(717558),
-    E = n(793574),
-    N = n(198052),
-    b = n(85448),
-    _ = n(614881),
-    T = n(480890),
-    R = n(450149),
-    S = n(607407),
-    L = n(597098),
-    O = n(267102),
-    P = n(421773),
-    w = n(326567),
-    M = n(363195),
-    D = n(51082),
-    U = n(616356),
-    V = n(734057),
-    k = n(309010),
-    G = n(287809),
-    B = n(977997),
-    F = n(531685),
-    z = n(562153),
-    H = n(446243),
-    W = n(920639),
-    $ = n(538638),
-    Y = n(558076),
-    K = n(360729),
-    q = n(996752),
-    X = n(610274),
-    Z = n(655413),
-    Q = n(884863),
+    I = n(717558),
+    v = n(793574),
+    E = n(198052),
+    N = n(85448),
+    b = n(614881),
+    _ = n(480890),
+    T = n(450149),
+    R = n(607407),
+    S = n(597098),
+    L = n(267102),
+    O = n(421773),
+    P = n(326567),
+    w = n(363195),
+    M = n(51082),
+    D = n(616356),
+    U = n(734057),
+    V = n(309010),
+    k = n(287809),
+    G = n(977997),
+    B = n(531685),
+    F = n(562153),
+    z = n(446243),
+    H = n(920639),
+    W = n(538638),
+    $ = n(558076),
+    Y = n(360729),
+    K = n(996752),
+    q = n(610274),
+    X = n(655413),
+    Z = n(884863),
+    Q = n(809369),
     J = n(189998),
     ee = n(806931),
     et = n(190460),
@@ -59,25 +59,25 @@ let ea = 16 / 9;
 function es(e) {
     let { title: t, stream: n, shouldShow: a = !0, children: r } = e,
         o = l.useRef(null),
-        g = (0, c.bG)([M.A], () => M.A.theme),
-        { isHovered: C, setIsHovered: y, onMouseEnter: j, onMouseLeave: v } = (0, P.A)(100, 100),
-        [E, N] = l.useState(ea),
-        { previewUrl: b } = (0, R.A)(n.guildId, n.channelId, n.ownerId);
+        g = (0, c.bG)([w.A], () => w.A.theme),
+        { isHovered: C, setIsHovered: y, onMouseEnter: j, onMouseLeave: I } = (0, O.A)(100, 100),
+        [v, E] = l.useState(ea),
+        { previewUrl: N } = (0, T.A)(n.guildId, n.channelId, n.ownerId);
     l.useEffect(() => {
-        if (null == b) return;
+        if (null == N) return;
         let e = new Image();
         return (
             (e.onload = () => {
-                0 !== e.naturalWidth && 0 !== e.naturalHeight && N(e.naturalWidth / e.naturalHeight);
+                0 !== e.naturalWidth && 0 !== e.naturalHeight && E(e.naturalWidth / e.naturalHeight);
             }),
-            (e.src = b),
+            (e.src = N),
             () => {
                 e.onload = null;
             }
         );
-    }, [b]);
-    let _ = l.useCallback(() => {
-        (0, I.A9)(n);
+    }, [N]);
+    let b = l.useCallback(() => {
+        (0, Q.k)(n);
     }, [n]);
     return (0, i.jsx)(d.Y, {
         targetElementRef: o,
@@ -96,11 +96,11 @@ function es(e) {
                         "aria-label": ei.intl.formatToPlainString(en.default.hZobvN, { username: t }),
                         className: el.sM,
                         onMouseEnter: j,
-                        onMouseLeave: v,
+                        onMouseLeave: I,
                         onFocus: j,
-                        onBlur: v,
+                        onBlur: I,
                         onClick: () => {
-                            _(), l();
+                            b(), l();
                         },
                         children: (0, i.jsxs)("div", {
                             ref: a,
@@ -108,9 +108,9 @@ function es(e) {
                             children: [
                                 (0, i.jsxs)("div", {
                                     className: el.J,
-                                    style: { aspectRatio: E },
+                                    style: { aspectRatio: v },
                                     children: [
-                                        (0, i.jsx)(S.A, { stream: n, className: el.y6, noText: !0 }),
+                                        (0, i.jsx)(R.A, { stream: n, className: el.y6, noText: !0 }),
                                         (0, i.jsx)("div", {
                                             className: el.ae,
                                             "aria-hidden": !0,
@@ -153,7 +153,7 @@ function es(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)("div", { ref: o, onMouseEnter: j, onMouseLeave: v, onFocus: j, onBlur: v, ...e, children: r }),
+            (0, i.jsx)("div", { ref: o, onMouseEnter: j, onMouseLeave: I, onFocus: j, onBlur: I, ...e, children: r }),
     });
 }
 function er(e) {
@@ -167,17 +167,17 @@ function er(e) {
             avatarSize: f,
             posturesEnabled: A,
         } = e,
-        I = (0, O.Us)(),
-        R = (0, c.bG)([G.default], () => G.default.getUser(t)),
-        S = (0, c.bG)([G.default], () => G.default.getCurrentUser()?.id === t),
-        [P, M] = l.useState(!1),
-        K = (0, c.bG)([V.A], () => V.A.getChannel(n)?.guild_id),
-        q = (0, c.bG)([B.A], () => B.A.getVoiceState(K, t)),
-        ea = (0, c.bG)([U.A], () => U.A.getStreamForUser(t, K)),
-        er = (0, v.A)({ userId: t }),
-        eo = (0, c.bG)([F.A], () => F.A.isFocused()),
-        ec = (0, z.tx)(K, n, R),
-        ed = (0, c.bG)([Y.A], () => Y.A.getRoom(n)?.background ?? o.I.DEFAULT),
+        T = (0, L.Us)(),
+        R = (0, c.bG)([k.default], () => k.default.getUser(t)),
+        O = (0, c.bG)([k.default], () => k.default.getCurrentUser()?.id === t),
+        [w, Y] = l.useState(!1),
+        K = (0, c.bG)([U.A], () => U.A.getChannel(n)?.guild_id),
+        Q = (0, c.bG)([G.A], () => G.A.getVoiceState(K, t)),
+        ea = (0, c.bG)([D.A], () => D.A.getStreamForUser(t, K)),
+        er = (0, I.A)({ userId: t }),
+        eo = (0, c.bG)([B.A], () => B.A.isFocused()),
+        ec = (0, F.tx)(K, n, R),
+        ed = (0, c.bG)([$.A], () => $.A.getRoom(n)?.background ?? o.I.DEFAULT),
         { seats: eu } = J.iX[ed],
         eh = eu.find((e) => e.position.x === a && e.position.y === d),
         [ep, em] = l.useState(!1),
@@ -188,33 +188,33 @@ function er(e) {
             onRest: () => em(!1),
             onStart: () => em(!0),
         }),
-        eA = (0, c.bG)([k.Ay], () => k.Ay.getVoiceChannelId() === n),
-        ex = (0, c.bG)([N.A], () => {
-            let e = N.A.getParticipant(n, t);
+        eA = (0, c.bG)([V.Ay], () => V.Ay.getVoiceChannelId() === n),
+        ex = (0, c.bG)([E.A], () => {
+            let e = E.A.getParticipant(n, t);
             return (0, ee.Xw)(e) ? e : null;
         }),
-        eg = (0, D.y9)(ex ?? void 0),
+        eg = (0, M.y9)(ex ?? void 0),
         eC = eA && eg && null != ex,
         ey = l.useCallback(() => {
             null != K &&
-                ((0, W.EB)({ guildId: K, channelId: n, interactionType: "clicked" }),
-                eC && (P || !S || !A) && (0, H.UV)(!0, n));
-        }, [K, n, P, eC, S, A]),
+                ((0, H.EB)({ guildId: K, channelId: n, interactionType: "clicked" }),
+                eC && (w || !O || !A) && (0, z.UV)(!0, n));
+        }, [K, n, w, eC, O, A]),
         ej = l.useCallback(
             (e) => {
-                let t = V.A.getChannel(n);
+                let t = U.A.getChannel(n);
                 if (null != K && null != R && null != t)
-                    return (0, w.r)(e, R, t, { context: I }, (e, t) =>
-                        (0, T.s)(e, E.A.GUILD_ROOM, { tileType: ee.qs.USER, targetUserId: R.id })(t),
+                    return (0, P.r)(e, R, t, { context: T }, (e, t) =>
+                        (0, _.s)(e, v.A.GUILD_ROOM, { tileType: ee.qs.USER, targetUserId: R.id })(t),
                     );
             },
-            [K, R, n, I],
+            [K, R, n, T],
         ),
         eI = l.useCallback(() => {
-            null != K && (0, W.EB)({ guildId: K, channelId: n, interactionType: "hovered" });
+            null != K && (0, H.EB)({ guildId: K, channelId: n, interactionType: "hovered" });
         }, [K, n]);
     if (null == R || null == K) return null;
-    let ev = A ? X.x.find((e) => e.id === u) : null,
+    let ev = A ? q.x.find((e) => e.id === u) : null,
         eE =
             null != eh
                 ? ei.intl.formatToPlainString(ev?.userLabel ?? en.default["4bL+KW"], {
@@ -222,23 +222,23 @@ function er(e) {
                       seatLabel: eh.getLabel(),
                   })
                 : ec,
-        eN = q?.isVoiceDeafened()
+        eN = Q?.isVoiceDeafened()
             ? ei.intl.formatToPlainString(ei.t["9hDjai"], { username: eE })
-            : q?.isVoiceMuted()
+            : Q?.isVoiceMuted()
               ? ei.intl.formatToPlainString(ei.t.Hd1oVG, { username: eE })
               : eE,
         eb = (0, C.Kj)(f),
         e_ = eb.status + 2 * eb.offset,
         eT = ev?.src,
-        eR = (0, L.kr)(Math.ceil(p * et.Xq) * (0, L.mZ)()),
+        eR = (0, S.kr)(Math.ceil(p * et.Xq) * (0, S.mZ)()),
         eS = null != eT ? `${eT}?width=${eR}&height=${eR}` : null,
         eL = eC
-            ? (0, i.jsx)(_.A, {
+            ? (0, i.jsx)(b.A, {
                   userId: R.id,
                   participant: ex,
                   size: f,
-                  muted: q?.isVoiceMuted() ?? !1,
-                  deafen: q?.isVoiceDeafened() ?? !1,
+                  muted: Q?.isVoiceMuted() ?? !1,
+                  deafen: Q?.isVoiceDeafened() ?? !1,
                   speaking: er,
                   ringing: !1,
                   className: eh?.dim ? el.r3 : void 0,
@@ -257,17 +257,17 @@ function er(e) {
                                 })
                           : void 0,
                   children: (0, i.jsx)("div", {
-                      className: s()(el.gP, { [el.Kf]: P }),
+                      className: s()(el.gP, { [el.Kf]: w }),
                       "aria-hidden": !0,
                       children: (0, i.jsx)(y._, { size: "md", color: "currentColor" }),
                   }),
               })
-            : (0, i.jsx)(b.Ay, {
+            : (0, i.jsx)(N.Ay, {
                   userId: R.id,
                   src: R.getAvatarURL(K, p, er && eo),
                   size: f,
-                  muted: q?.isVoiceMuted() ?? !1,
-                  deafen: q?.isVoiceDeafened() ?? !1,
+                  muted: Q?.isVoiceMuted() ?? !1,
+                  deafen: Q?.isVoiceDeafened() ?? !1,
                   speaking: er,
                   ringing: !1,
                   className: eh?.dim ? el.r3 : void 0,
@@ -289,7 +289,7 @@ function er(e) {
         eO = {
             left: ef.x.to((e) => `calc(${e}% - ${p / 2}px)`),
             top: ef.y.to((e) => `calc(${e}% - ${p / 2}px)`),
-            zIndex: P ? 1e6 : 1e3 * Math.round(d) + Math.round(a),
+            zIndex: w ? 1e6 : 1e3 * Math.round(d) + Math.round(a),
         };
     if (!A) {
         let e = (0, i.jsx)(h.D, {
@@ -316,25 +316,25 @@ function er(e) {
             onContextMenu: ej,
             children: eP,
         }),
-        eM = ep && S ? 500 : 100;
+        eM = ep && O ? 500 : 100;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.animated.div, {
                 role: "listitem",
                 className: el.f1,
                 style: eO,
-                children: S
-                    ? (0, i.jsxs)(Q.T, {
-                          isOpen: P,
-                          onOpenChange: M,
+                children: O
+                    ? (0, i.jsxs)(Z.T, {
+                          isOpen: w,
+                          onOpenChange: Y,
                           children: [
-                              (0, i.jsx)(Q.T.Trigger, {
+                              (0, i.jsx)(Z.T.Trigger, {
                                   children: (e) => {
                                       let { ref: t, onClick: n, ...l } = e,
                                           a = (0, i.jsx)(h.D, {
                                               ...l,
                                               "aria-label": eN,
-                                              className: s()(el.KI, el.hZ, { [el.Zu]: P }),
+                                              className: s()(el.KI, el.hZ, { [el.Zu]: w }),
                                               innerRef: (e) => {
                                                   t.current = e;
                                               },
@@ -346,26 +346,26 @@ function er(e) {
                                               children: eL,
                                           });
                                       return null != ea
-                                          ? (0, i.jsx)(es, { title: ec, stream: ea, shouldShow: !P, children: a })
-                                          : (0, i.jsx)(Z.A, { name: ec, shouldShow: !P, delay: eM, children: a });
+                                          ? (0, i.jsx)(es, { title: ec, stream: ea, shouldShow: !w, children: a })
+                                          : (0, i.jsx)(X.A, { name: ec, shouldShow: !w, delay: eM, children: a });
                                   },
                               }),
-                              (0, i.jsx)(Q.T.Popup, {
+                              (0, i.jsx)(Z.T.Popup, {
                                   "aria-label": ei.intl.string(en.default.LTAf2V),
-                                  children: X.x.map((e) => {
+                                  children: q.x.map((e) => {
                                       let t = e.icon;
                                       return (0, i.jsx)(
-                                          Q.T.Item,
+                                          Z.T.Item,
                                           {
                                               text: ei.intl.string(e.label),
                                               icon: t,
                                               selected: u === e.id,
                                               onClick: () => {
                                                   let t = u === e.id;
-                                                  (0, H.AQ)(K, n, {
+                                                  (0, z.AQ)(K, n, {
                                                       user_status_id: t ? 0 : e.id,
                                                       user_status_text: t ? "" : ei.intl.string(e.label),
-                                                  }).catch((e) => (0, $.b)());
+                                                  }).catch((e) => (0, W.b)());
                                               },
                                               clearButtonAriaLabel: ei.intl.string(ei.t.VkKicb),
                                           },
@@ -377,15 +377,15 @@ function er(e) {
                       })
                     : null != ea
                       ? (0, i.jsx)(es, { title: ec, stream: ea, children: ew })
-                      : (0, i.jsx)(Z.A, { name: ec, delay: eM, children: ew }),
+                      : (0, i.jsx)(X.A, { name: ec, delay: eM, children: ew }),
             }),
-            (S || null != ev) &&
+            (O || null != ev) &&
                 (0, i.jsx)(r.animated.div, {
-                    className: s()(el.v7, { [el.Zu]: P }),
+                    className: s()(el.v7, { [el.Zu]: w }),
                     style: { ...eO, width: p, height: p },
                     "aria-hidden": !0,
                     children:
-                        S &&
+                        O &&
                         (0, i.jsx)("div", {
                             className: s()(el.qS, el.Gk),
                             children: (0, i.jsx)(j.R, { size: "xxs", color: "currentColor" }),
@@ -396,7 +396,7 @@ function er(e) {
 }
 function eo(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
-        { posturesEnabled: r } = K.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
+        { posturesEnabled: r } = Y.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
     return (0, i.jsx)("div", {
         className: el.Gh,
         role: "list",
@@ -422,9 +422,9 @@ function eo(e) {
 }
 function ec(e) {
     let { channelId: t, roomWidth: n } = e,
-        l = (0, c.bG)([V.A], () => V.A.getChannel(t)?.guild_id),
-        a = (0, c.bG)([Y.A], () => Y.A.getRoomUsers(t)),
-        { numericAvatarSize: s, avatarSize: r } = (0, q.F)(n);
+        l = (0, c.bG)([U.A], () => U.A.getChannel(t)?.guild_id),
+        a = (0, c.bG)([$.A], () => $.A.getRoomUsers(t)),
+        { numericAvatarSize: s, avatarSize: r } = (0, K.F)(n);
     return 0 === a.size || null == l
         ? null
         : (0, i.jsx)(eo, { channelId: t, guildId: l, users: a, numericAvatarSize: s, avatarSize: r });
