@@ -23,4 +23,5 @@ var i,
         (i.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
         (i.GAME_PROFILE = "GAME_PROFILE"),
         (i.GAME_SERVER_SHARE = "GAME_SERVER_SHARE"),
+        (i.USER_PROFILE = "USER_PROFILE"),
         i);

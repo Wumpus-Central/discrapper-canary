@@ -1,0 +1,9 @@
+.backdrop_f8afe2 {
+    align-items: center;
+    background: var(--background-gradient-highest, var(--chat-background-default));
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    padding: var(--space-24) 0;
+    width: 100%
+}

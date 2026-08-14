@@ -48,6 +48,7 @@ function _(e) {
                 case l.I.EXPERIMENT:
                 case l.I.GAME_PROFILE:
                 case l.I.GAME_SERVER_SHARE:
+                case l.I.USER_PROFILE:
                 case l.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:

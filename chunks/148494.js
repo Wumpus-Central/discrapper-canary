@@ -3,7 +3,7 @@ n.d(t, { A: () => ez }), n(801541), n(938796);
 var i = n(889137),
     r = n(696292),
     a = n(665260),
-    s = n(562465),
+    s = n(636537),
     l = n(765178),
     o = n(228366),
     d = n(155718),
@@ -22,8 +22,8 @@ var i = n(889137),
     S = n(626584),
     N = n(390248),
     C = n(885918),
-    O = n(617710),
-    R = n(607399),
+    R = n(617710),
+    O = n(607399),
     L = n(309010),
     D = n(967198),
     y = n(174459),
@@ -31,7 +31,7 @@ var i = n(889137),
 function b(e, t) {
     y.default.track(v.HAw.APP_DIRECTORY_PROFILE_EMBED_SENT, {
         application_id: e,
-        device_platform: R.Fr ? "mobile_web" : "desktop_web",
+        device_platform: O.Fr ? "mobile_web" : "desktop_web",
         guild_id: D.A.getGuildId(),
         channel_id: L.Ay.getChannelId(),
         section: t,
@@ -72,8 +72,8 @@ var W = n(521427),
     K = n(69114),
     $ = n(322683),
     z = n(734057),
-    q = n(498642),
-    Z = n(544180);
+    Z = n(498642),
+    q = n(544180);
 let X = new S.A("MessageRoundtripTrackerStore");
 function Q(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
@@ -93,15 +93,15 @@ function J(e) {
         channel_id: t.id,
         channel_type: t.type,
         guild_id: t.guild_id,
-        guild_size: q.A.getMemberCount(t.guild_id),
-        mobile_network_type: Z.A.getType(),
+        guild_size: Z.A.getMemberCount(t.guild_id),
+        mobile_network_type: q.A.getType(),
         num_attachments: e.attachmentCount,
         ...(null != r && { mobile_signal_strength_level: r }),
     });
 }
 class ee extends Y.Ay.Store {
     initialize() {
-        this.waitFor(z.A, q.A, Z.A);
+        this.waitFor(z.A, Z.A, q.A);
     }
     pendingMessages = new Map();
     recordMessageSendAttempt(e, t) {
@@ -171,8 +171,8 @@ n(580745);
 var eS = n(71393),
     eN = n(299091),
     eC = n(232835),
-    eO = n(576705),
-    eR = n(290863),
+    eR = n(576705),
+    eO = n(290863),
     eL = n(568548),
     eD = n(101392),
     ey = n(287809),
@@ -226,7 +226,7 @@ function eY(e) {
             let i = em.A.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 (e = v.G2g.STREAM), (t.destination_user_id = i.ownerId);
-                let n = (0, M.Ee)(i, eR.A);
+                let n = (0, M.Ee)(i, eO.A);
                 t.application_id = null != n ? n.id : null;
             }
         }
@@ -537,7 +537,7 @@ let eK = {
                     fetchKey: I,
                 } = e,
                 p = z.A.getChannel(t),
-                T = O.A.isConnectedOrOverlay(),
+                T = R.A.isConnectedOrOverlay(),
                 m = Date.now();
             if (null != p && p.type === v.rbe.GUILD_STORE) return !1;
             if (
@@ -610,7 +610,7 @@ let eK = {
                                     limit: r,
                                     jump: a,
                                     forICYMI: E,
-                                    isStale: !T || O.A.lastTimeConnectedChanged() >= m,
+                                    isStale: !T || R.A.lastTimeConnectedChanged() >= m,
                                     truncate: _,
                                     avoidInitialScroll: A,
                                 }),
@@ -641,7 +641,7 @@ let eK = {
                 eT.A.addLocalMessages(e, u.messages.length),
                 !a.completed && u.messages.length > 0)
             ) {
-                let a = u.messages.length >= r && u.connectionId === O.A.lastTimeConnectedChanged();
+                let a = u.messages.length >= r && u.connectionId === R.A.lastTimeConnectedChanged();
                 V.A.recordChannelFetchedLocal(e, t, n, i, r, u.messages),
                     o.h.dispatch({
                         type: "LOCAL_MESSAGES_LOADED",
@@ -863,7 +863,7 @@ ${a}`),
             return (
                 e.some((e) => e.animated) && !eP.Ay.canUseAnimatedEmojis(t)
                     ? ((i = eV.intl.string(eV.t.msFJy8)), (r = "INVALID_ANIMATED_EMOJI_BODY"))
-                    : eO.A.canWithPartialContext(v.xBc.USE_EXTERNAL_EMOJIS, { channelId: n })
+                    : eR.A.canWithPartialContext(v.xBc.USE_EXTERNAL_EMOJIS, { channelId: n })
                       ? ((i = eV.intl.string(eV.t.FzugNl)), (r = "INVALID_EXTERNAL_EMOJI_BODY_UPGRADE"))
                       : ((i = eV.intl.string(eV.t["Q87rI/"])), (r = "INVALID_EXTERNAL_EMOJI_BODY")),
                 { errorMessage: i, errorMessageName: r }
@@ -886,8 +886,8 @@ ${a}`),
                     location: h,
                     inviteAnalyticsMetadata: f,
                     stickerIds: S,
-                    messageReference: O,
-                    allowedMentions: R,
+                    messageReference: R,
+                    allowedMentions: O,
                     poll: L,
                     sharedCustomTheme: D,
                     contentInventoryEntry: M,
@@ -899,11 +899,11 @@ ${a}`),
                     mediaMention: Y,
                 } = n,
                 K = n.flags ?? 0,
-                [$, q] = (0, ef.Ay)(l);
-            $ && ((l = q), (K = (0, a.UI)(K, v.pr7.SUPPRESS_NOTIFICATIONS)));
-            let Z = z.A.getChannel(e),
-                X = eS.A.getGuild(Z?.guild_id);
-            (0, W.Zv)(X, Z, "_sendMessage") && (K = (0, a.UI)(K, v.pr7.IS_GUILD_OFFICIAL));
+                [$, Z] = (0, ef.Ay)(l);
+            $ && ((l = Z), (K = (0, a.UI)(K, v.pr7.SUPPRESS_NOTIFICATIONS)));
+            let q = z.A.getChannel(e),
+                X = eS.A.getGuild(q?.guild_id);
+            (0, W.Zv)(X, q, "_sendMessage") && (K = (0, a.UI)(K, v.pr7.IS_GUILD_OFFICIAL));
             let Q = !1,
                 J = n.messageReference?.type === v.SH7.FORWARD;
             if (
@@ -920,15 +920,15 @@ ${a}`),
             )
                 if (null == k || !(k.length > 0)) return Promise.resolve();
                 else Q = !0;
-            let ee = null != O ? v.lAJ.REPLY : v.lAJ.DEFAULT,
+            let ee = null != R ? v.lAJ.REPLY : v.lAJ.DEFAULT,
                 es = n.nonce ?? (0, er.m)(),
                 ec = (0, ei.Ay)({
                     channelId: e,
                     content: l,
                     tts: E,
                     type: ee,
-                    messageReference: O,
-                    allowedMentions: R,
+                    messageReference: R,
+                    allowedMentions: O,
                     flags: 0 !== K ? K : void 0,
                     nonce: es,
                     poll: (0, ed.G8)(L),
@@ -954,8 +954,8 @@ ${a}`),
                     content: l,
                     nonce: es,
                     tts: E,
-                    message_reference: O,
-                    allowed_mentions: R,
+                    message_reference: R,
+                    allowed_mentions: O,
                     flags: K,
                     analyticsLocation: h,
                 },
@@ -1020,13 +1020,13 @@ ${a}`),
                     u.Ay.enqueue(
                         eu,
                         (A) => {
-                            let R = Date.now() - s;
+                            let O = Date.now() - s;
                             if (A.ok) {
                                 var D, x, F, V, B, j, W;
                                 let a;
                                 en.donateSentMessage(l, e),
                                     e$.receiveMessage(e, A.body, !0, {
-                                        sendAnalytics: { duration: R, queueSize: d },
+                                        sendAnalytics: { duration: O, queueSize: d },
                                         poll: L,
                                     }),
                                     null != n.alsoForwardToChannelId &&
@@ -1180,6 +1180,7 @@ ${a}`),
                                                         break;
                                                     case m.I.COLLECTIBLES_SHOP:
                                                     case m.I.GAME_SERVER_SHARE:
+                                                    case m.I.USER_PROFILE:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);
@@ -1262,7 +1263,7 @@ ${a}`),
                                         messageId: A.body.id,
                                         attachments: A.body.attachments ?? [],
                                         attachmentsToUpload: k ?? [],
-                                        messageReference: O,
+                                        messageReference: R,
                                     }),
                                     null != i &&
                                         o.h.dispatch({
