@@ -380,6 +380,7 @@ function el(e) {
         skipEnrollmentCheck: c = !1,
     } = e;
     if ((0, F.K$)(t)) return void e_(t);
+    if (y.A.isQuestAccessSuspended && t.userStatus?.completedAt == null) return void ei();
     let u = (0, r.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, B.Ic)(t)) {
         y.A.isEnrolling(t.id) ||
@@ -510,7 +511,7 @@ function e_(e) {
             n.e("76729"),
             n.e("24766"),
             n.e("95429"),
-            n.e("80501"),
+            n.e("65037"),
             n.e("48370"),
             n.e("46485"),
         ]).then(n.bind(n, 518420));
