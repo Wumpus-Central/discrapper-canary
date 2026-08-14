@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(280450),
-    a = n(977997),
-    s = n(643501);
-function l() {
-    return (0, i.bG)([r.default, a.A, s.default], () => {
-        let e = r.default.getId(),
-            t = s.default.getRemoteSessionId();
-        return a.A.getVoiceStateForSession(e, t) ?? void 0;
+a.d(e, { A: () => d });
+var s = a(17928),
+    i = a(280450),
+    l = a(977997),
+    h = a(643501);
+function d() {
+    return (0, s.bG)([i.default, l.A, h.default], () => {
+        let t = i.default.getId(),
+            e = h.default.getRemoteSessionId();
+        return l.A.getVoiceStateForSession(t, e) ?? void 0;
     }, []);
 }
