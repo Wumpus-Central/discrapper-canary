@@ -1,0 +1,4 @@
+n.r(o), n.d(o, { default: () => t });
+let t = JSON.parse(
+    '{"B9PPxE":["This content is currently being hidden."],"Y9ZOp8":["This content is currently being shown."],"pmIitA":["Real Money Gaming"],"foQaI1":["Manage Sponsored Content"],"z/MfaY":["Discord allows you to control seeing Sponsored Content associated with certain topics. If you hide a topic below, then you will see no Sponsored Content from the topic. Discord\u2019s Ad Policy will control certain content you see regardless of these selections. ",[8,"$link",["Learn more"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Manage Sponsored Content"],"OkmBx0":["Topics"],"tLA5Ft":["Manage how we personalize Sponsored Content and control the ad topics you see."],"i8WB+Y":["Sponsored Content Preferences"],"XUj46U":["Sponsored Content"]}',
+);
