@@ -1,19 +1,20 @@
-a.d(t, { A: () => c });
-var n = a(17928),
-    d = a(228366);
-let p = !1,
-    r = !1;
-class s extends n.Ay.Store {
+"use strict";
+n.d(t, { A: () => o });
+var i = n(17928),
+    r = n(228366);
+let a = !1,
+    s = !1;
+class l extends i.Ay.Store {
     static displayName = "SoundboardOverlayStore";
     get keepOpen() {
-        return r;
+        return s;
     }
     get enabled() {
-        return p;
+        return a;
     }
 }
-let c = new s(d.h, {
+let o = new l(r.h, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
-        (p = e.enabled), e.enabled && (r = e.keepOpen ?? !1);
+        (a = e.enabled), e.enabled && (s = e.keepOpen ?? !1);
     },
 });
