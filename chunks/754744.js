@@ -2175,6 +2175,8 @@ function nI(e) {
             ...s,
             tag: t,
             "aria-label": n,
+            "aria-disabled": l,
+            tabIndex: !0 === l ? -1 : 0,
             className: E()(ng.YB, { [ng.aA]: l }),
             onClick: l ? void 0 : i,
             children: (0, a.jsx)("div", { className: ng.MU, children: r }),
