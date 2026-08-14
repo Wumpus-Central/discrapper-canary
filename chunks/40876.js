@@ -317,6 +317,11 @@ let r = {
         actions: ["OVERLAY_SET_NOTIFICATION_DISABLED_SETTING", "OVERLAY_MOUNTED", "OVERLAY_NOTIFICATION_EVENT"],
         inlineRequire: () => n(772162).A,
     },
+    OverlaySmoketestLaunchManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(587237).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     OverlayStateTrackingManager: {
         actions: ["OVERLAY_TRACK_STATE_CHANGED", "RUNNING_GAMES_CHANGE"],
         inlineRequire: () => n(284227).A,

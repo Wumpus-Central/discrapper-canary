@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { b: () => _, o: () => u });
+n.d(t, { b: () => A, o: () => E });
 var i = n(477900);
 n(582128);
 var r = n(156828),
@@ -9,9 +9,12 @@ var r = n(156828),
     o = n(38502),
     d = n(644434),
     c = n(392164);
-async function u() {
+let u = { defaultWidth: 1280, defaultHeight: 720, focusable: !0 },
+    _ = { outOfProcessOverlay: !0, focusable: !1 };
+async function E() {
+    let { windowed: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, s.Vz)(d.G, o.A.getDefaultLayout(d.G, 4), 4);
-    let e = (0, r.Fe)({
+    let t = (0, r.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("76165"),
@@ -664,9 +667,9 @@ async function u() {
                 n.e("4098"),
                 n.e("21455"),
                 n.e("34268"),
-                n.e("20402"),
                 n.e("755"),
                 n.e("40985"),
+                n.e("60989"),
                 n.e("6809"),
                 n.e("42191"),
                 n.e("55552"),
@@ -778,7 +781,6 @@ async function u() {
                 n.e("66601"),
                 n.e("51162"),
                 n.e("39721"),
-                n.e("86726"),
                 n.e("52694"),
                 n.e("32482"),
                 n.e("32274"),
@@ -792,13 +794,14 @@ async function u() {
                 n.e("14248"),
                 n.e("15086"),
                 n.e("9856"),
+                n.e("86726"),
                 n.e("33049"),
                 n.e("66204"),
+                n.e("23331"),
                 n.e("35846"),
                 n.e("25592"),
                 n.e("42455"),
                 n.e("92837"),
-                n.e("89282"),
                 n.e("24553"),
                 n.e("4727"),
                 n.e("2669"),
@@ -817,12 +820,9 @@ async function u() {
         webpackId: 888250,
         name: "AppOverlay",
     });
-    await l.open(c.f, (t) => (0, i.jsx)(e, { withTitleBar: !1, windowKey: t }), {
-        outOfProcessOverlay: !0,
-        focusable: !1,
-    });
+    await l.open(c.f, (e) => (0, i.jsx)(t, { withTitleBar: !1, windowKey: e }), e ? u : _);
 }
-function _(e, t) {
+function A(e, t) {
     let r = (0, a.modalContextFromAppContext)(t);
     (0, a.openModalLazy)(
         async () => {
