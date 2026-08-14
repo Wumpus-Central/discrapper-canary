@@ -1,13 +1,16 @@
 "use strict";
-n.r(t), n.d(t, { default: () => a, getAttachmentImageLadderConfig: () => r });
-let i = (0, n(945810).mj)({
-    name: "2026-07-attachment-image-ladder",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-function r(e) {
+n.r(t), n.d(t, { default: () => l, getAttachmentImageLadderConfig: () => s });
+var i = n(945810);
+n(459830);
+let r = { enabled: !1, maxUpscale: 1.1, minSnapDownDpr: 2 },
+    a = (0, i.mj)({
+        name: "2026-07-attachment-image-ladder",
+        kind: "user",
+        defaultConfig: r,
+        variations: { 0: r, 1: { ...r, enabled: !0 } },
+    });
+function s(e) {
     let { location: t } = e;
-    return i.getConfig({ location: t });
+    return a.getConfig({ location: t });
 }
-let a = i;
+let l = a;

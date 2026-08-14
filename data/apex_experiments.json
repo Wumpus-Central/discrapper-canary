@@ -4740,9 +4740,7 @@
   {
     "name": "2026-07-attachment-image-ladder",
     "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
+    "defaultConfig": null,
     "variations": {
       "0": {
         "enabled": false,
