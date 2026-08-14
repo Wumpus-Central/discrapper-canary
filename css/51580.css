@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    transform: translate(-50%, -50%) scale(.8)
+    transform: translate(-50%, -50%) scale(.8);
+    z-index: 200000
 }
 
 .full-motion .container__52fde {
