@@ -1,4 +1,4 @@
-n.d(t, { Zt: () => eA, yo: () => eI });
+n.d(t, { Zt: () => eI, yo: () => e_ });
 var i,
     l,
     r,
@@ -9,15 +9,15 @@ var i,
     c = n(980707),
     d = n(477782),
     E = n(793574),
-    m = n(688810);
-let f = (0, n(945810).mj)({
+    f = n(688810);
+let m = (0, n(945810).mj)({
     name: "2026-07-shop-this-look",
     kind: "user",
     defaultConfig: { shopThisLookEnabled: !1 },
     variations: { 0: { shopThisLookEnabled: !1 }, 1: { shopThisLookEnabled: !0 } },
 });
 function x(e) {
-    return f.useConfig({ location: e }).shopThisLookEnabled;
+    return m.useConfig({ location: e }).shopThisLookEnabled;
 }
 var R = n(17928),
     p = n(540737),
@@ -242,28 +242,29 @@ let ed = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
 });
 var eE = n(280450),
-    em = n(183555),
-    ef = n(939496),
-    ex = n(993401),
-    eR = n(518477),
-    ep = n(12624);
-function eg(e) {
+    ef = n(183555),
+    em = n(254384),
+    ex = n(939496),
+    eR = n(993401),
+    ep = n(518477),
+    eg = n(12624);
+function eA(e) {
     var t;
     let n,
         {
             user: i,
             guildId: l,
             viewProfileItem: r,
-            appContext: f,
+            appContext: m,
             popoutTargetRef: I,
             shouldShow: _,
             onRequestOpen: N,
             onRequestClose: v,
             children: S,
         } = e,
-        { themeType: M } = (0, ef.E)(),
-        { trackUserProfileAction: P } = (0, em.NJ)(),
-        { analyticsLocations: k, newestAnalyticsLocation: D } = (0, m.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
+        { themeType: M } = (0, ex.E)(),
+        { trackUserProfileAction: P } = (0, ef.NJ)(),
+        { analyticsLocations: k, newestAnalyticsLocation: D } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
         y = x("UserProfileOverflowMenuButton");
     (t = i.id),
         (n = h(t, l)),
@@ -271,7 +272,7 @@ function eg(e) {
             y && 0 !== n.length && (0, p.tu)({ skuIds: n });
         }, [y, n]);
     let L = {
-            action: eR.pt.PRESS_OPTIONS,
+            action: ep.pt.PRESS_OPTIONS,
             icon: o.j,
             tooltipText: U.intl.string(U.t["UKOtz+"]),
             "aria-label": U.intl.string(U.t["UKOtz+"]),
@@ -285,7 +286,7 @@ function eg(e) {
             user: i,
             guildId: l,
             location: D,
-            appContext: f,
+            appContext: m,
             onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
             onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
             onUnblock: () => P({ action: "UNBLOCK", analyticsLocations: k }),
@@ -294,7 +295,7 @@ function eg(e) {
             user: i,
             guildId: l,
             location: D,
-            appContext: f,
+            appContext: m,
             onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
             onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
             onUnignore: () => P({ action: "UNIGNORE", analyticsLocations: k }),
@@ -315,7 +316,7 @@ function eg(e) {
             user: i,
             guildId: l,
             location: D,
-            appContext: f,
+            appContext: m,
             color: "danger",
             onAction: () => P({ action: "REPORT", analyticsLocations: k }),
         }),
@@ -335,7 +336,7 @@ function eg(e) {
             user: i,
             guildId: l,
             location: D,
-            appContext: f,
+            appContext: m,
             color: "danger",
             onAction: () => P({ action: "REPORT", analyticsLocations: k }),
         }),
@@ -352,11 +353,11 @@ function eg(e) {
                 E = a.useCallback(() => {
                     (0, es.C)(t.id), i?.();
                 }, [t.id, i]),
-                m = a.useCallback(() => {
+                f = a.useCallback(() => {
                     let e = t.getAvatarURL(n, O.XAf, !0);
                     en()(null != e, "cannot copy null avatar URL"), (0, es.C)(e), i?.();
                 }, [t, n, i]),
-                f = a.useCallback(() => {
+                m = a.useCallback(() => {
                     en()(null != c, "cannot copy null banner URL"), (0, es.C)(c), i?.();
                 }, [c, i]);
             return !__OVERLAY__ && r && es.p5 && null != t.id
@@ -370,13 +371,13 @@ function eg(e) {
                                   (0, s.jsx)(d.Dr, {
                                       id: "copy-user-avatar-link",
                                       label: U.intl.string(U.t.gERDvM),
-                                      action: m,
+                                      action: f,
                                   }),
                               null != c &&
                                   (0, s.jsx)(d.Dr, {
                                       id: "copy-user-banner-link",
                                       label: U.intl.string(U.t.hsNv0R),
-                                      action: f,
+                                      action: m,
                                   }),
                           ],
                       })
@@ -386,7 +387,7 @@ function eg(e) {
         X = (function (e, t, n) {
             let i = x("UserProfileOverflowMenu"),
                 l = h(e.id, t),
-                { analyticsLocations: r } = (0, m.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
+                { analyticsLocations: r } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
                 a = (0, R.bG)(
                     [F.A],
                     () =>
@@ -451,10 +452,10 @@ function eg(e) {
                   })
                 : null;
         })(i, l, M),
-        Y = [[r, X, G], [H, K, q, Q], [B]];
+        Y = [[r, X, (0, em.A)({ user: i, location: "UserProfileOverflowMenuButton" }), G], [H, K, q, Q], [B]];
     return Y.every((e) => e.every((e) => null == e))
         ? null
-        : (0, s.jsx)(m.f5, {
+        : (0, s.jsx)(f.f5, {
               value: k,
               children: (0, s.jsx)(u.Y, {
                   targetElementRef: I,
@@ -478,13 +479,13 @@ function eg(e) {
               }),
           });
 }
-function eA(e) {
-    let t = a.useRef(null);
-    return (0, s.jsx)(eg, { ...e, popoutTargetRef: t, children: (e) => (0, s.jsx)(ex.q3, { buttonRef: t, ...e }) });
-}
 function eI(e) {
+    let t = a.useRef(null);
+    return (0, s.jsx)(eA, { ...e, popoutTargetRef: t, children: (e) => (0, s.jsx)(eR.q3, { buttonRef: t, ...e }) });
+}
+function e_(e) {
     let t = a.useRef(null),
-        { themeType: n } = (0, ef.E)(),
+        { themeType: n } = (0, ex.E)(),
         i = n === y.d.POPOUT,
         l = n === y.d.SIDEBAR,
         r = x("UserProfileMarketing"),
@@ -497,20 +498,20 @@ function eI(e) {
             d(!0), o && (C(b.RED_DOT_DISMISSED, n), u(D.i.TAKE_ACTION));
         }, [o, u, n]);
     return (0, s.jsxs)("div", {
-        className: ep.g2,
+        className: eg.g2,
         children: [
             (0, s.jsx)("div", {
-                className: o ? ep.t8 : void 0,
-                children: (0, s.jsx)(eg, {
+                className: o ? eg.t8 : void 0,
+                children: (0, s.jsx)(eA, {
                     ...e,
                     popoutTargetRef: t,
                     shouldShow: i ? c : void 0,
                     onRequestOpen: E,
                     onRequestClose: () => d(!1),
-                    children: (e) => (0, s.jsx)(ex.br, { buttonRef: t, ...e }),
+                    children: (e) => (0, s.jsx)(eR.br, { buttonRef: t, ...e }),
                 }),
             }),
-            o && (0, s.jsx)("div", { className: ep.Vx, "aria-hidden": !0 }),
+            o && (0, s.jsx)("div", { className: eg.Vx, "aria-hidden": !0 }),
             (0, s.jsx)(G, {
                 user: e.user,
                 guildId: e.guildId,

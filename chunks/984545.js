@@ -1,17 +1,17 @@
-i.d(t, { A: () => v });
+i.d(t, { A: () => B });
 var e = i(477900),
     l = i(582128),
     o = i(17928),
-    a = i(922016),
-    r = i(980707),
+    r = i(922016),
+    a = i(980707),
     c = i(477782),
     d = i(365199),
     s = i(793574),
     u = i(688810),
     p = i(173936),
     A = i(735991),
-    g = i(287809),
-    f = i(957565),
+    f = i(287809),
+    g = i(957565),
     m = i(342384),
     I = i(20015),
     P = i(652215),
@@ -27,31 +27,32 @@ let E = "useReportAppItemModal";
 var R = i(50268),
     j = i(239211),
     M = i(399476),
-    S = i(183555),
-    U = i(321191),
+    U = i(183555),
+    v = i(321191),
+    S = i(254384),
     k = i(993401);
-function v(n) {
-    let { user: t, guildId: i, viewProfileItem: v } = n,
+function B(n) {
+    let { user: t, guildId: i, viewProfileItem: B } = n,
         D = l.useRef(null),
-        { trackUserProfileAction: L } = (0, S.NJ)(),
-        { analyticsLocations: B, newestAnalyticsLocation: w } = (0, u.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
-        G = (0, o.bG)([U.A], () => U.A.getUserProfile(t.id)),
-        K = G?.application,
-        V = (0, j.A)({
+        { trackUserProfileAction: L } = (0, U.NJ)(),
+        { analyticsLocations: w, newestAnalyticsLocation: G } = (0, u.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        K = (0, o.bG)([v.A], () => v.A.getUserProfile(t.id)),
+        V = K?.application,
+        W = (0, j.A)({
             user: t,
             guildId: i,
-            location: w,
-            onBlock: () => L({ action: "BLOCK", analyticsLocations: B }),
-            onUnblock: () => L({ action: "UNBLOCK", analyticsLocations: B }),
+            location: G,
+            onBlock: () => L({ action: "BLOCK", analyticsLocations: w }),
+            onUnblock: () => L({ action: "UNBLOCK", analyticsLocations: w }),
         }),
-        W = (0, M.A)({
+        q = (0, M.A)({
             user: t,
             guildId: i,
-            location: w,
-            onIgnore: () => L({ action: "IGNORE", analyticsLocations: B }),
-            onUnignore: () => L({ action: "UNIGNORE", analyticsLocations: B }),
+            location: G,
+            onIgnore: () => L({ action: "IGNORE", analyticsLocations: w }),
+            onUnignore: () => L({ action: "UNIGNORE", analyticsLocations: w }),
         }),
-        q = (function (n) {
+        T = (function (n) {
             let { applicationId: t, ...i } = n;
             return null == t
                 ? null
@@ -106,66 +107,64 @@ function v(n) {
                           })(t, i),
                   });
         })({
-            applicationId: K?.id,
+            applicationId: V?.id,
             user: t,
             guildId: i,
-            onSubmit: () => L({ action: "REPORT", analyticsLocations: B }),
+            onSubmit: () => L({ action: "REPORT", analyticsLocations: w }),
             color: "danger",
         }),
-        T = (0, R.A)({
-            id: K?.id,
+        Y = (0, R.A)({
+            id: V?.id,
             label: y.intl.string(y.t["+NP/b2"]),
-            onSuccess: () => L({ action: "COPY_APP_ID", analyticsLocations: B }),
+            onSuccess: () => L({ action: "COPY_APP_ID", analyticsLocations: w }),
         }),
-        Y = [
-            [v],
-            [W, V, q],
-            [
-                (function (n) {
-                    let { application: t, label: i, onSuccess: l, showIconFirst: o } = n;
-                    if (__OVERLAY__ || !f.p5 || null == t) return null;
-                    let a = g.default.getCurrentUser(),
-                        r = (0, A.EF)(t),
-                        d = `copy-app-link-${t.id}`;
-                    return (0, e.jsx)(
-                        c.Dr,
-                        {
-                            id: d,
-                            label: i,
-                            action: function () {
-                                if (null == t) return;
-                                let n = (0, I.n)(t, P.gfo.EMBEDDED)
-                                    ? (0, m.W)({ applicationId: t.id, referrerId: a?.id })
-                                    : (0, m.V)({ id: t.id, ...r });
-                                null != n && (0, f.C)(n, l);
-                            },
-                            icon: o ? void 0 : p.q,
-                            iconLeft: o ? p.q : void 0,
-                            leadingAccessory: { type: "icon", icon: p.q },
-                        },
-                        d,
-                    );
-                })({
-                    application: K,
-                    label: y.intl.string(y.t.WqhZss),
-                    onSuccess: () => L({ action: "COPY_APP_LINK", analyticsLocations: B }),
-                }),
-                T,
-            ],
+        F = (function (n) {
+            let { application: t, label: i, onSuccess: l, showIconFirst: o } = n;
+            if (__OVERLAY__ || !g.p5 || null == t) return null;
+            let r = f.default.getCurrentUser(),
+                a = (0, A.EF)(t),
+                d = `copy-app-link-${t.id}`;
+            return (0, e.jsx)(
+                c.Dr,
+                {
+                    id: d,
+                    label: i,
+                    action: function () {
+                        if (null == t) return;
+                        let n = (0, I.n)(t, P.gfo.EMBEDDED)
+                            ? (0, m.W)({ applicationId: t.id, referrerId: r?.id })
+                            : (0, m.V)({ id: t.id, ...a });
+                        null != n && (0, g.C)(n, l);
+                    },
+                    icon: o ? void 0 : p.q,
+                    iconLeft: o ? p.q : void 0,
+                    leadingAccessory: { type: "icon", icon: p.q },
+                },
+                d,
+            );
+        })({
+            application: V,
+            label: y.intl.string(y.t.WqhZss),
+            onSuccess: () => L({ action: "COPY_APP_LINK", analyticsLocations: w }),
+        }),
+        X = [
+            [B, (0, S.A)({ user: t, location: "BotUserProfileOverflowMenuBannerButton" })],
+            [q, W, T],
+            [F, Y],
         ];
-    return Y.every((n) => n.every((n) => null == n))
+    return X.every((n) => n.every((n) => null == n))
         ? null
-        : (0, e.jsx)(a.Y, {
+        : (0, e.jsx)(r.Y, {
               targetElementRef: D,
               renderPopout: (n) => {
                   let { closePopout: t } = n;
-                  return (0, e.jsx)(r.W, {
+                  return (0, e.jsx)(a.W, {
                       "data-menu-migrated": !0,
                       navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": y.intl.string(y.t.AXIHpV),
-                      children: Y.map((n, t) => (0, e.jsx)(c.rX, { children: n.map((n) => n) }, t)),
+                      children: X.map((n, t) => (0, e.jsx)(c.rX, { children: n.map((n) => n) }, t)),
                   });
               },
               children: (n) =>

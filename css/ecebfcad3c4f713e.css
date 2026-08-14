@@ -1,0 +1,27 @@
+.preview__900fd {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    height: 100%;
+    padding-inline-start: var(--space-16);
+    position: relative
+}
+
+.preview__900fd:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.names__900fd {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
