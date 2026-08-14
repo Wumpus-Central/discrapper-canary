@@ -63,7 +63,7 @@ function v(e) {
         P = null != R["aria-labelledby"],
         U = s.useId(),
         w = R["aria-labelledby"] ?? U,
-        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: P }), [w, P]);
+        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: P, transitionState: t }), [w, P, t]);
     return (0, a.jsx)(N.CP.Provider, {
         value: G,
         children: (0, a.jsx)(m.l, {

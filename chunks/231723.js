@@ -12,4 +12,4 @@ var i,
 let s = 300,
     l = "default",
     o = "popout",
-    d = r.createContext({ headerId: void 0, headerIdIsManaged: !1 });
+    d = r.createContext({ headerId: void 0, headerIdIsManaged: !1, transitionState: void 0 });

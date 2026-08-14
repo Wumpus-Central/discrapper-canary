@@ -618,14 +618,9 @@ var eN = i(702841),
     eG = i(49999);
 function eM() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        [t, i] = l.useState(!1);
-    l.useEffect(() => {
-        let e = setTimeout(() => i(!0), 250);
-        return () => clearTimeout(e);
-    }, []);
-    let n = eR.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [s, r] = (0, eP.kn)(e && t && n ? [e_.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
-    return [s === e_.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, r];
+        t = eR.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
+        [i, n] = (0, eP.kn)(e && t ? [e_.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+    return [i === e_.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
 function eU(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
