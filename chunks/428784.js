@@ -7,9 +7,12 @@ function s(e) {
     return r.useCallback(
         (t) => {
             (0, a.L3)(t, async () => {
-                let { default: t } = await Promise.all([n.e("46652"), n.e("57729"), n.e("68590"), n.e("8113")]).then(
-                    n.bind(n, 806280),
-                );
+                let { default: t } = await Promise.all([
+                    n.e("146652"),
+                    n.e("57729"),
+                    n.e("968590"),
+                    n.e("208113"),
+                ]).then(n.bind(n, 806280));
                 return (n) => (0, i.jsx)(t, { ...n, navId: e });
             });
         },

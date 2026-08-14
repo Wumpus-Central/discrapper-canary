@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(477900);
-n(582128);
-var r = n(109112),
-    a = n(744700),
-    s = n(569926);
-function l(e) {
-    let { game: t, iconClassName: n, allowFetch: l = !0 } = e,
-        { id: o, icon: d } = t,
-        c = (0, a.A)(o, d, { size: 32 }),
-        { data: u } = (0, s.I)(l && null == c ? o : void 0),
-        _ = c ?? u?.getIconURL(32);
-    return null != _
-        ? (0, i.jsx)("img", { alt: "", className: n, height: 32, loading: "lazy", src: _, width: 32 })
-        : (0, i.jsx)(r._, { className: n, size: "md" });
+i.d(a, { A: () => l });
+var t = i(477900);
+i(582128);
+var d = i(109112),
+    e = i(744700),
+    c = i(569926);
+function l(s) {
+    let { game: a, iconClassName: i, allowFetch: l = !0 } = s,
+        { id: n, icon: h } = a,
+        r = (0, e.A)(n, h, { size: 32 }),
+        { data: u } = (0, c.I)(l && null == r ? n : void 0),
+        p = r ?? u?.getIconURL(32);
+    return null != p
+        ? (0, t.jsx)("img", { alt: "", className: i, height: 32, loading: "lazy", src: p, width: 32 })
+        : (0, t.jsx)(d._, { className: i, size: "md" });
 }

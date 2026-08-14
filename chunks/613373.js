@@ -1,51 +1,50 @@
-"use strict";
 n.d(t, {
-    nY: () => d.nY,
-    OH: () => d.OH,
-    zZ: () => r.A,
-    DQ: () => l.A,
+    nY: () => o.nY,
+    OH: () => o.OH,
+    zZ: () => l.A,
+    DQ: () => u.A,
     uI: () => a.Ay,
-    lx: () => d.lx,
-    Yr: () => E,
-    KP: () => d.KP,
-    C1: () => f.A,
-    pK: () => d.pK,
-    _4: () => _,
-    O7: () => I.O7,
-    xx: () => s.xx,
-    P8: () => A.A,
-    A7: () => I.A7,
-    Ft: () => i.default,
-    Kb: () => d.Kb,
-    KI: () => u,
-    rB: () => p.rB,
-    B8: () => s.B8,
-    zj: () => d.zj,
-    bq: () => I.bq,
-    Ce: () => h.C,
+    lx: () => o.lx,
+    Yr: () => f,
+    KP: () => o.KP,
+    C1: () => x.A,
+    pK: () => o.pK,
+    _4: () => m,
+    O7: () => v.O7,
+    xx: () => i.xx,
+    P8: () => h.A,
+    A7: () => v.A7,
+    Ft: () => r.default,
+    Kb: () => o.Kb,
+    KI: () => d,
+    rB: () => g.rB,
+    B8: () => i.B8,
+    zj: () => o.zj,
+    bq: () => v.bq,
+    Ce: () => p.C,
 });
-var i = n(664111),
-    r = n(671897),
+var r = n(664111),
+    l = n(671897),
     a = n(275664),
-    s = n(565164);
+    i = n(565164);
 n(408121);
-var l = n(931853);
+var u = n(931853);
 n(91034), n(710434), n(634156);
-var o = n(876230),
-    d = n(831056),
+var s = n(876230),
+    o = n(831056),
     c = n(582128);
-let u = 4e3,
-    _ = 2e3;
-function E(e) {
-    let { getCurrentVideoTime: t, onAnalytics: n, emitIntervalMs: i, minSegmentDurationMs: r } = e,
-        [a, s] = c.useState(null),
-        [l, d] = c.useState(!1),
-        [u, _] = c.useState(!1),
-        [E, A] = c.useState(!1),
-        h = (0, c.useRef)(null),
-        I = (0, c.useRef)(Date.now()),
-        f = (0, c.useRef)(!1),
-        p = (0, c.useCallback)(
+let d = 4e3,
+    m = 2e3;
+function f(e) {
+    let { getCurrentVideoTime: t, onAnalytics: n, emitIntervalMs: r, minSegmentDurationMs: l } = e,
+        [a, i] = c.useState(null),
+        [u, o] = c.useState(!1),
+        [d, m] = c.useState(!1),
+        [f, h] = c.useState(!1),
+        p = (0, c.useRef)(null),
+        v = (0, c.useRef)(Date.now()),
+        x = (0, c.useRef)(!1),
+        g = (0, c.useCallback)(
             (e) => {
                 e.segmentEndSec < e.segmentStartSec ||
                     n({
@@ -59,80 +58,80 @@ function E(e) {
             },
             [n],
         ),
-        T = (0, c.useCallback)(() => {
+        E = (0, c.useCallback)(() => {
             let e = t();
-            if (null != e && u && E) {
+            if (null != e && d && f) {
                 let t = Date.now();
-                s({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (f.current = !0);
+                i({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (x.current = !0);
             }
-        }, [t, u, E]),
-        m = (0, c.useCallback)(() => {
+        }, [t, d, f]),
+        b = (0, c.useCallback)(() => {
             let e = t();
             if (null == e || null == a) return;
             let n = Date.now();
-            n - I.current < i ||
-                e - a.segmentStartSec < r / 1e3 ||
-                (p({ ...a, endTimeMs: n, segmentEndSec: e }),
-                s({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
-                (I.current = n));
-        }, [a, p, i, r, t]);
+            n - v.current < r ||
+                e - a.segmentStartSec < l / 1e3 ||
+                (g({ ...a, endTimeMs: n, segmentEndSec: e }),
+                i({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
+                (v.current = n));
+        }, [a, g, r, l, t]);
     (0, c.useEffect)(() => {
-        (u && E) || (s(null), (f.current = !1));
-    }, [u, E]),
+        (d && f) || (i(null), (x.current = !1));
+    }, [d, f]),
         (0, c.useEffect)(() => {
-            if (l && u && E)
-                f.current || T(),
-                    (h.current = window.setInterval(() => {
-                        m();
+            if (u && d && f)
+                x.current || E(),
+                    (p.current = window.setInterval(() => {
+                        b();
                     }, 200));
             else {
                 let e = t();
                 if (null != a && null != e) {
                     let t = Date.now();
-                    e - a.segmentStartSec > 0.2 && p({ ...a, endTimeMs: t, segmentEndSec: e });
+                    e - a.segmentStartSec > 0.2 && g({ ...a, endTimeMs: t, segmentEndSec: e });
                 }
-                s(null), (f.current = !1), null != h.current && (clearInterval(h.current), (h.current = null));
+                i(null), (x.current = !1), null != p.current && (clearInterval(p.current), (p.current = null));
             }
             return () => {
-                null != h.current && (clearInterval(h.current), (h.current = null));
+                null != p.current && (clearInterval(p.current), (p.current = null));
             };
-        }, [l, u, E, a, m, p, T, t]);
-    let g = (0, c.useCallback)(() => {
+        }, [u, d, f, a, b, g, E, t]);
+    let S = (0, c.useCallback)(() => {
             let e = t();
             if (null != a && null != e) {
                 let t = Date.now();
-                e - a.segmentStartSec > 0.2 && p({ ...a, endTimeMs: t, segmentEndSec: e }), s(null), (f.current = !1);
+                e - a.segmentStartSec > 0.2 && g({ ...a, endTimeMs: t, segmentEndSec: e }), i(null), (x.current = !1);
             }
-        }, [a, p, t]),
-        S = (0, c.useRef)(g);
-    S.current = g;
-    let N = (0, c.useCallback)((e, t) => {
+        }, [a, g, t]),
+        C = (0, c.useRef)(S);
+    C.current = S;
+    let y = (0, c.useCallback)((e, t) => {
             switch (e) {
-                case o.Q6.PLAYING:
-                    d(!0);
+                case s.Q6.PLAYING:
+                    o(!0);
                     break;
-                case o.Q6.PAUSED:
-                case o.Q6.ENDED:
-                    S.current(), d(!1);
+                case s.Q6.PAUSED:
+                case s.Q6.ENDED:
+                    C.current(), o(!1);
             }
         }, []),
-        C = (0, c.useCallback)((e) => {
-            _(!0);
+        w = (0, c.useCallback)((e) => {
+            m(!0);
         }, []);
     return {
-        handlePlayerStateChange: N,
-        handleLoadEnd: C,
+        handlePlayerStateChange: y,
+        handleLoadEnd: w,
         handleFirstFrame: (0, c.useCallback)((e) => {
-            A(!0);
+            h(!0);
         }, []),
         handleSeek: (0, c.useCallback)(() => {
-            S.current();
+            C.current();
         }, []),
     };
 }
-var A = n(23590),
-    h = n(984212),
-    I = n(739416),
-    f = n(920228),
-    p = n(61491);
+var h = n(23590),
+    p = n(984212),
+    v = n(739416),
+    x = n(920228),
+    g = n(61491);
 n(645577);

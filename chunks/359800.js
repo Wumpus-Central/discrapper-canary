@@ -1,4 +1,4 @@
-n.d(t, { z: () => g });
+n.d(t, { z: () => m });
 var i = n(477900),
     r = n(582128),
     l = n(192308),
@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(311350),
     d = n(375708);
 let f = "in-game-auth-check-modal";
-function g(e, t) {
-    let { showInGameModal: g = !0, showToastOnSuccess: m = !0 } =
+function m(e, t) {
+    let { showInGameModal: m = !0, showToastOnSuccess: g = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         [E, A] = r.useState(!1),
         C = r.useCallback(
@@ -20,10 +20,10 @@ function g(e, t) {
                 let a = e(...r);
                 return (
                     a === u._.RPC &&
-                        g &&
+                        m &&
                         (0, l.openModalLazy)(
                             async () => {
-                                let { default: e } = await n.e("30724").then(n.bind(n, 272047));
+                                let { default: e } = await n.e("630724").then(n.bind(n, 272047));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             },
                             { modalKey: f },
@@ -31,7 +31,7 @@ function g(e, t) {
                     a
                 );
             },
-            [e, A, g],
+            [e, A, m],
         ),
         _ = (0, o.Ay)(t);
     return (
@@ -46,7 +46,7 @@ function g(e, t) {
                 }
                 (0, l.closeModal)(f),
                     A(!1),
-                    m &&
+                    g &&
                         ("visible" === document.visibilityState
                             ? e()
                             : document.addEventListener("visibilitychange", function t() {
@@ -54,7 +54,7 @@ function g(e, t) {
                                       (e(), document.removeEventListener("visibilitychange", t));
                               }));
             }
-        }, [E, t, _, m]),
+        }, [E, t, _, g]),
         C
     );
 }

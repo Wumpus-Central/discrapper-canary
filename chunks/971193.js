@@ -342,7 +342,7 @@ function eQ() {
             (s = n.__P) &&
                 ((r = []),
                 ((a = eq({}, o)).__v = o.__v + 1),
-                e8(
+                e4(
                     s,
                     o,
                     a,
@@ -403,7 +403,7 @@ function eZ(e, t, n, r, a, o, i, s, l, c) {
                     }
                     p = null;
                 }
-            e8(e, h, (p = p || eV), a, o, i, s, l, c),
+            e4(e, h, (p = p || eV), a, o, i, s, l, c),
                 (f = h.__e),
                 (d = h.ref) && p.ref != d && (y || (y = []), p.ref && y.push(p.ref, null, h), y.push(d, h.__c || f, h)),
                 null != f
@@ -497,7 +497,7 @@ function e1(e, t, n, r, a) {
             (t = t.toLowerCase() in e ? t.toLowerCase().slice(2) : t.slice(2)),
             e.l || (e.l = {}),
             (e.l[t + o] = n),
-            n ? r || e.addEventListener(t, o ? e4 : e2, o) : e.removeEventListener(t, o ? e4 : e2, o);
+            n ? r || e.addEventListener(t, o ? e8 : e2, o) : e.removeEventListener(t, o ? e8 : e2, o);
     else if ("dangerouslySetInnerHTML" !== t) {
         if (a) t = t.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
         else if (
@@ -521,10 +521,10 @@ function e1(e, t, n, r, a) {
 function e2(e) {
     return this.l[e.type + !1](eO.event ? eO.event(e) : e);
 }
-function e4(e) {
+function e8(e) {
     return this.l[e.type + !0](eO.event ? eO.event(e) : e);
 }
-function e8(e, t, n, r, a, o, i, s, l) {
+function e4(e, t, n, r, a, o, i, s, l) {
     var c,
         u,
         d,
@@ -754,7 +754,7 @@ function e7(e, t, n) {
     eO.__ && eO.__(e, t),
         (a = (r = "function" == typeof n) ? null : (n && n.__k) || t.__k),
         (o = []),
-        e8(
+        e4(
             t,
             (e = ((!r && n) || t).__k = eH(eW, null, [e])),
             a || eV,
@@ -955,8 +955,8 @@ var th = n(997117),
     t0 = n.n(tX),
     t1 = n(582617),
     t2 = n.n(t1),
-    t4 = n(954785),
-    t8 = n.n(t4),
+    t8 = n(954785),
+    t4 = n.n(t8),
     t3 = n(291056),
     t6 = n.n(t3),
     t5 = n(431700),
@@ -1283,19 +1283,19 @@ var th = n(997117),
     nd = "en-US",
     np = {
         ar: function () {
-            return n.e("67553").then(n.bind(n, 539576));
+            return n.e("267553").then(n.bind(n, 539576));
         },
         "cs-CZ": function () {
-            return n.e("86528").then(n.bind(n, 252707));
+            return n.e("186528").then(n.bind(n, 252707));
         },
         "da-DK": function () {
             return n.e("76701").then(n.bind(n, 449132));
         },
         "de-DE": function () {
-            return n.e("53387").then(n.bind(n, 220454));
+            return n.e("753387").then(n.bind(n, 220454));
         },
         "el-GR": function () {
-            return n.e("63959").then(n.bind(n, 328426));
+            return n.e("763959").then(n.bind(n, 328426));
         },
         "en-US": function () {
             return Promise.resolve().then(function () {
@@ -1303,64 +1303,64 @@ var th = n(997117),
             });
         },
         "es-ES": function () {
-            return n.e("10489").then(n.bind(n, 892672));
+            return n.e("310489").then(n.bind(n, 892672));
         },
         "fi-FI": function () {
-            return n.e("77795").then(n.bind(n, 990830));
+            return n.e("677795").then(n.bind(n, 990830));
         },
         "fr-FR": function () {
-            return n.e("73761").then(n.bind(n, 609867));
+            return n.e("873761").then(n.bind(n, 609867));
         },
         "hr-HR": function () {
-            return n.e("81009").then(n.bind(n, 174536));
+            return n.e("481009").then(n.bind(n, 174536));
         },
         "hu-HU": function () {
-            return n.e("8043").then(n.bind(n, 408070));
+            return n.e("108043").then(n.bind(n, 408070));
         },
         "it-IT": function () {
-            return n.e("56115").then(n.bind(n, 409150));
+            return n.e("456115").then(n.bind(n, 409150));
         },
         "ja-JP": function () {
-            return n.e("46782").then(n.bind(n, 111181));
+            return n.e("646782").then(n.bind(n, 111181));
         },
         "ko-KR": function () {
-            return n.e("99028").then(n.bind(n, 332159));
+            return n.e("299028").then(n.bind(n, 332159));
         },
         "nl-NL": function () {
-            return n.e("96365").then(n.bind(n, 415580));
+            return n.e("196365").then(n.bind(n, 415580));
         },
         "no-NO": function () {
             return n.e("45915").then(n.bind(n, 206998));
         },
         "pl-PL": function () {
-            return n.e("97557").then(n.bind(n, 416276));
+            return n.e("797557").then(n.bind(n, 416276));
         },
         "pt-BR": function () {
             return n.e("77785").then(n.bind(n, 406656));
         },
         "pt-PT": function () {
-            return n.e("86229").then(n.bind(n, 856244));
+            return n.e("886229").then(n.bind(n, 856244));
         },
         "ro-RO": function () {
-            return n.e("5459").then(n.bind(n, 361086));
+            return n.e("105459").then(n.bind(n, 361086));
         },
         "ru-RU": function () {
-            return n.e("93107").then(n.bind(n, 898046));
+            return n.e("693107").then(n.bind(n, 898046));
         },
         "sk-SK": function () {
-            return n.e("23509").then(n.bind(n, 880596));
+            return n.e("123509").then(n.bind(n, 880596));
         },
         "sl-SI": function () {
-            return n.e("54814").then(n.bind(n, 281805));
+            return n.e("354814").then(n.bind(n, 281805));
         },
         "sv-SE": function () {
-            return n.e("72872").then(n.bind(n, 282779));
+            return n.e("272872").then(n.bind(n, 282779));
         },
         "zh-CN": function () {
-            return n.e("79304").then(n.bind(n, 805083));
+            return n.e("379304").then(n.bind(n, 805083));
         },
         "zh-TW": function () {
-            return n.e("46216").then(n.bind(n, 600347));
+            return n.e("946216").then(n.bind(n, 600347));
         },
     };
 function nh(e, t) {
@@ -1984,7 +1984,7 @@ function n2(e) {
         n = n$(nT++, 9);
     return (n.c = e), t ? (null == n.__ && ((n.__ = !0), t.sub(nB)), t.props.value) : e.__;
 }
-function n4() {
+function n8() {
     for (var e; (e = nU.shift()); )
         if (e.__P && e.__H)
             try {
@@ -2021,12 +2021,12 @@ function n4() {
                         function (e) {
                             var t,
                                 n = function () {
-                                    clearTimeout(r), n8 && cancelAnimationFrame(t), setTimeout(e);
+                                    clearTimeout(r), n4 && cancelAnimationFrame(t), setTimeout(e);
                                 },
                                 r = setTimeout(n, 100);
-                            n8 && (t = requestAnimationFrame(n));
+                            n4 && (t = requestAnimationFrame(n));
                         }
-                    )(n4)),
+                    )(n8)),
             t.__H.__.forEach(function (e) {
                 e.i && (e.__H = e.i), e.__V !== nq && (e.__ = e.__V), (e.i = void 0), (e.__V = nq);
             })),
@@ -2065,7 +2065,7 @@ function n4() {
             (n.__H = void 0),
             t && eO.__e(t, n.__v));
     });
-var n8 = "function" == typeof requestAnimationFrame;
+var n4 = "function" == typeof requestAnimationFrame;
 function n3(e) {
     var t = nB,
         n = e.__c;
@@ -3312,8 +3312,8 @@ var rY,
     r0 = "hidden",
     r1 = "data-cse",
     r2 = "data-info",
-    r4 = "data-uid",
-    r8 = ["accel", "pulse", "star", "nyce"],
+    r8 = "data-uid",
+    r4 = ["accel", "pulse", "star", "nyce"],
     r3 = {
         visa: "VISA",
         mc: "MasterCard",
@@ -4659,10 +4659,10 @@ function a2(e) {
         ),
     );
 }
-function a4(e) {
+function a8(e) {
     return eH(aV, eC({}, e, { type: "email", autoCapitalize: "off" }));
 }
-function a8(e) {
+function a4(e) {
     return eH(aV, eC({}, e, { type: "tel" }));
 }
 function a3(e, t) {
@@ -4847,7 +4847,7 @@ function on(e) {
                                     name: "emailAddress",
                                     i18n: s,
                                 },
-                                eH(a4, {
+                                eH(a8, {
                                     name: b("shopperEmail"),
                                     value: f.shopperEmail,
                                     classNameModifiers: ["shopperEmail"],
@@ -4868,7 +4868,7 @@ function on(e) {
                                     name: "telephoneNumber",
                                     i18n: s,
                                 },
-                                eH(a8, {
+                                eH(a4, {
                                     name: b("telephoneNumber"),
                                     value: f.telephoneNumber,
                                     classNameModifiers: ["telephoneNumber"],
@@ -5834,7 +5834,7 @@ function o2(e, t, n) {
         void 0,
     );
 }
-function o4(e) {
+function o8(e) {
     var t,
         n = e.backgroundUrl,
         r = void 0 === n ? "" : n,
@@ -5884,11 +5884,11 @@ function o4(e) {
               )
     );
 }
-var o8 = ["filterable", "toggleButtonRef"];
+var o4 = ["filterable", "toggleButtonRef"];
 function o3(e) {
     var t = e.filterable,
         n = e.toggleButtonRef,
-        r = P(e, o8);
+        r = P(e, o4);
     return t
         ? eH("div", eC({}, r, { ref: n }))
         : eH("button", eC({ id: r.id, "aria-describedby": r.ariaDescribedBy, type: "button" }, r, { ref: n }));
@@ -5943,7 +5943,7 @@ function o6(e) {
                   null,
                   !s &&
                       a.icon &&
-                      eH(o4, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
+                      eH(o8, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
                   eH("input", {
                       value: c,
                       "aria-autocomplete": "list",
@@ -5972,7 +5972,7 @@ function o6(e) {
             : eH(
                   eW,
                   null,
-                  a.icon && eH(o4, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
+                  a.icon && eH(o8, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
                   eH("span", { className: "adyen-checkout__dropdown__button__text" }, l),
                   a.secondaryText &&
                       eH("span", { className: "adyen-checkout__dropdown__button__secondary-text" }, a.secondaryText),
@@ -6005,7 +6005,7 @@ var o5 = ["item", "active", "selected"],
                 role: "option",
                 id: "listItem-".concat(t.id),
             },
-            t.icon && eH(o4, { className: "adyen-checkout__dropdown__element__icon", alt: t.name, src: t.icon }),
+            t.icon && eH(o8, { className: "adyen-checkout__dropdown__element__icon", alt: t.name, src: t.icon }),
             eH("span", { className: "adyen-checkout__dropdown__element__text" }, t.name),
             t.secondaryText &&
                 eH("span", { className: "adyen-checkout__dropdown__element__secondary-text" }, t.secondaryText),
@@ -7692,7 +7692,7 @@ var i1 = function () {
         return eH("p", { className: "adyen-checkout-form-instruction" }, ro().i18n.get("form.instruction"));
     },
     i2 = ["companyDetails", "personalDetails", "bankAccount", "billingAddress", "deliveryAddress"];
-function i4(e, t) {
+function i8(e, t) {
     var n = d()(e);
     if (h()) {
         var r = h()(e);
@@ -7704,18 +7704,18 @@ function i4(e, t) {
     }
     return n;
 }
-function i8(e) {
+function i4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             a = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? B()((n = i4(Object(a), !0))).call(n, function (t) {
+            ? B()((n = i8(Object(a), !0))).call(n, function (t) {
                   M(e, t, a[t]);
               })
             : v()
               ? b()(e, v()(a))
-              : B()((r = i4(Object(a)))).call(r, function (t) {
+              : B()((r = i8(Object(a)))).call(r, function (t) {
                     k()(e, t, m()(a, t));
                 });
     }
@@ -7764,7 +7764,7 @@ function i6(e) {
                 return !v[e];
             }),
         C = "editable" === a.deliveryAddress && "hidden" !== a.billingAddress,
-        w = ei(nY(i8(i8({}, e.data), _ && { consentCheckbox: !1 })), 2),
+        w = ei(nY(i4(i4({}, e.data), _ && { consentCheckbox: !1 })), 2),
         N = w[0],
         x = w[1],
         A = ei(nY({}), 2),
@@ -7784,7 +7784,7 @@ function i6(e) {
             B()(iS).call(iS, function (e) {
                 b[e].current && b[e].current.showValidation();
             }),
-            F(i8({}, _ && { consentCheckbox: N.consentCheckbox ? null : i3 }));
+            F(i4({}, _ && { consentCheckbox: N.consentCheckbox ? null : i3 }));
     }),
         (i.current.setStatus = V);
     var z = iX(U);
@@ -7835,10 +7835,10 @@ function i6(e) {
                           {},
                       )
                     : null,
-                B = i8(
-                    i8(
-                        i8(
-                            i8(i8(i8({}, "object" === S(x) && x), "object" === S(A) && A), "object" === S(F) && F),
+                B = i4(
+                    i4(
+                        i4(
+                            i4(i4(i4({}, "object" === S(x) && x), "object" === S(A) && A), "object" === S(F) && F),
                             "object" === S(E) && E,
                         ),
                         "object" === S(T) && T,
@@ -7883,13 +7883,13 @@ function i6(e) {
     var W = function (e) {
         return function (t) {
             x(function (n) {
-                return i8(i8({}, n), {}, M({}, e, t.data));
+                return i4(i4({}, n), {}, M({}, e, t.data));
             }),
                 I(function (n) {
-                    return i8(i8({}, n), {}, M({}, e, t.isValid));
+                    return i4(i4({}, n), {}, M({}, e, t.isValid));
                 }),
                 F(function (n) {
-                    return i8(i8({}, n), {}, M({}, e, t.errors));
+                    return i4(i4({}, n), {}, M({}, e, t.errors));
                 });
         };
     };
@@ -7945,7 +7945,7 @@ function i6(e) {
                     name: "separateDeliveryAddress",
                     onChange: function () {
                         g(function (e) {
-                            return i8(i8({}, e), {}, { deliveryAddress: !v.deliveryAddress });
+                            return i4(i4({}, e), {}, { deliveryAddress: !v.deliveryAddress });
                         });
                     },
                 }),
@@ -7968,13 +7968,13 @@ function i6(e) {
                 onChange: function (e) {
                     var t = e.target.checked;
                     x(function (e) {
-                        return i8(i8({}, e), {}, { consentCheckbox: t });
+                        return i4(i4({}, e), {}, { consentCheckbox: t });
                     }),
                         I(function (e) {
-                            return i8(i8({}, e), {}, { consentCheckbox: t });
+                            return i4(i4({}, e), {}, { consentCheckbox: t });
                         }),
                         F(function (e) {
-                            return i8(i8({}, e), {}, { consentCheckbox: !t });
+                            return i4(i4({}, e), {}, { consentCheckbox: !t });
                         });
                 },
                 i18n: o,
@@ -9813,7 +9813,7 @@ function sX(e) {
             onClick: a,
             value: n,
         },
-        !!r && eH(o4, { className: "adyen-checkout__issuer-button-img", alt: t, src: r }),
+        !!r && eH(o8, { className: "adyen-checkout__issuer-button-img", alt: t, src: r }),
         eH("span", { className: "adyen-checkout__issuer-button-text" }, t),
     );
 }
@@ -9863,13 +9863,13 @@ var s2 = function (e) {
     var t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
-        t = new (t8())(e);
+        t = new (t4())(e);
     } catch (e) {
         return !1;
     }
     return (n && "http:" === t.protocol) || "https:" === t.protocol;
 };
-function s4(e) {
+function s8(e) {
     var t = e.message,
         n = e.urls,
         r = "string" == typeof t,
@@ -9900,7 +9900,7 @@ function s4(e) {
           )
         : null;
 }
-var s8 = ["items", "placeholder", "issuer", "highlightedIds"];
+var s4 = ["items", "placeholder", "issuer", "highlightedIds"];
 function s3(e, t) {
     var n = d()(e);
     if (h()) {
@@ -9946,7 +9946,7 @@ function le(e) {
         o = e.issuer,
         i = e.highlightedIds,
         s = void 0 === i ? [] : i,
-        l = P(e, s8),
+        l = P(e, s4),
         c = ro().i18n,
         u = aB({ schema: s5, defaultData: { issuer: o }, rules: s7 }),
         d = u.handleChangeFor,
@@ -10050,7 +10050,7 @@ function le(e) {
             eH(
                 "div",
                 { className: "adyen-checkout__issuer-list__termsAndConditions" },
-                eH(s4, { message: c.get(l.termsAndConditions.translationKey), urls: l.termsAndConditions.urls }),
+                eH(s8, { message: c.get(l.termsAndConditions.translationKey), urls: l.termsAndConditions.urls }),
             ),
         l.showPayButton &&
             l.payButton({ status: C, label: s6({ issuer: h.issuer, items: H()((n = [])).call(n, es(r), es(I)) }, c) }),
@@ -11747,7 +11747,7 @@ function l2() {
         }),
     )).apply(this, arguments);
 }
-function l4(e, t, n) {
+function l8(e, t, n) {
     var r = this;
     return new (W())(function (a, o) {
         var i = iY(e, r.encryptedAttrName);
@@ -11756,7 +11756,7 @@ function l4(e, t, n) {
             {
                 fieldType: i,
                 extraFieldData: iY(e, r2),
-                uid: iY(e, r4),
+                uid: iY(e, r8),
                 cvcPolicy: t,
                 holderEl: e,
                 expiryDatePolicy: n,
@@ -11840,7 +11840,7 @@ function l4(e, t, n) {
         r.state.securedFields[i] = s;
     });
 }
-var l8 = {
+var l4 = {
         __IS_ANDROID: "u" > typeof navigator && /(android)/i.test(navigator.userAgent),
         __IS_IE:
             "u" > typeof navigator &&
@@ -11910,13 +11910,13 @@ var l8 = {
         (e.style.cursor = "pointer"), iQ(e, "touchend", this.touchendListener), (this.state.registerFieldForIos = !0);
     },
     l7 = function () {
-        if (l8.__IS_IOS) {
+        if (l4.__IS_IOS) {
             var e = i$(document, "body");
             (e.style.cursor = "auto"), iZ(e, "touchend", this.touchendListener);
         }
     },
     l9 = function () {
-        l8.__IS_IOS && iZ(document, "touchstart", this.touchstartListener);
+        l4.__IS_IOS && iZ(document, "touchstart", this.touchstartListener);
     },
     ce = function (e, t, n) {
         return (function (e) {
@@ -12013,7 +12013,7 @@ var l8 = {
         a ? this.setFocusOnFrame(a, !1) : o && (r = o) && (r.focus(), r.blur(), r.focus());
     },
     cn = function (e) {
-        (l8.__IS_FIREFOX || (l8.__IS_IE && l8.__IS_IE <= 11)) && this.handleShiftTab(e);
+        (l4.__IS_FIREFOX || (l4.__IS_IE && l4.__IS_IE <= 11)) && this.handleShiftTab(e);
     };
 function cr(e, t) {
     var n = d()(e);
@@ -12289,7 +12289,7 @@ function cf(e, t) {
     var i = o.fieldType;
     o.focus
         ? n.currentFocusObject !== i &&
-          ((n.currentFocusObject = i), l8.__IS_IOS && !n.registerFieldForIos && this.handleIOSTouchEvents())
+          ((n.currentFocusObject = i), l4.__IS_IOS && !n.registerFieldForIos && this.handleIOSTouchEvents())
         : n.currentFocusObject === i && (n.currentFocusObject = null),
         (o.currentFocusObject = n.currentFocusObject),
         a.onFocus(o);
@@ -12429,7 +12429,7 @@ var c_ = function () {
                 (r.createSecuredFields = lJ),
                 (r.createNonCardSecuredFields = lX),
                 (r.createCardSecuredFields = l1),
-                (r.setupSecuredField = l4),
+                (r.setupSecuredField = l8),
                 (r.postMessageToAllIframes = sr(cc, a)),
                 (r.setFocusOnFrame = sr(cl, a)),
                 (r.handleFocus = sr(cf, a)),
@@ -12459,7 +12459,7 @@ var c_ = function () {
                         var e = this.createSecuredFields();
                         (this.state.numIframes = this.state.originalNumIframes = e),
                             (this.state.isKCP = !!this.props.isKCP),
-                            l8.__IS_IOS &&
+                            l4.__IS_IOS &&
                                 this.config.shouldDisableIOSArrowKeys &&
                                 ((this.hasGenuineTouchEvents = !1),
                                 iQ(document, "touchstart", this.touchstartListener));
@@ -13390,7 +13390,7 @@ function cJ(e, t, n) {
                         ed()(f).call(
                             f,
                             function (e, t) {
-                                return e || q()(r8).call(r8, t.brand);
+                                return e || q()(r4).call(r4, t.brand);
                             },
                             !1,
                         )),
@@ -13448,14 +13448,14 @@ var cX = "holderName",
     c0 = "socialSecurityNumber",
     c1 = [rM, rT, rL],
     c2 = [cX, rM, rT, rL],
-    c4 = [rM, rT, rL, cX],
-    c8 = ["taxNumber", rV],
-    c3 = H()(c1).call(c1, c8),
-    c6 = H()(c2).call(c2, c8),
-    c5 = H()(c4).call(c4, c8),
+    c8 = [rM, rT, rL, cX],
+    c4 = ["taxNumber", rV],
+    c3 = H()(c1).call(c1, c4),
+    c6 = H()(c2).call(c2, c4),
+    c5 = H()(c8).call(c8, c4),
     c7 = H()(c1).call(c1, [c0]),
     c9 = H()(c2).call(c2, [c0]),
-    ue = H()(c4).call(c4, [c0]),
+    ue = H()(c8).call(c8, [c0]),
     ut = function (e, t) {
         return t({ type: "card" === e ? "nocard" : e || "nocard", extension: "svg" })(e);
     },
@@ -13607,7 +13607,7 @@ function us(e) {
         "span",
         (M((t = {}), r1, e.encryptedFieldType),
         M(t, r2, e["data-info"]),
-        M(t, r4, e.uniqueId),
+        M(t, r8, e.uniqueId),
         M(t, "className", e.className),
         t),
         e.children,
@@ -13929,7 +13929,7 @@ var uf = function (e) {
             expiryYear: h,
         }),
         o && eH(uh, { amount: l, brand: t.brand, installmentOptions: u, onChange: i, type: s ? "amount" : "months" }),
-        f && eH(s4, { message: f.message.replace("%{linkText}", "%#".concat(f.linkText, "%#")), urls: [f.link] }),
+        f && eH(s8, { message: f.message.replace("%{linkText}", "%#".concat(f.linkText, "%#")), urls: [f.link] }),
     );
 };
 function um(e) {
@@ -14152,7 +14152,7 @@ var ub = function (e) {
                   return eH(
                       "span",
                       { key: t, className: "adyen-checkout__card__brands__brand-wrapper" },
-                      eH(o4, { src: e.icon, alt: ur(t) }),
+                      eH(o8, { src: e.icon, alt: ur(t) }),
                   );
               }),
           )
@@ -14182,7 +14182,7 @@ function u_(e) {
             null == n
                 ? void 0
                 : L()(n).call(n, function (e) {
-                      return !(null != r8 && q()(r8).call(r8, e.name));
+                      return !(null != r4 && q()(r4).call(r4, e.name));
                   });
     return eH(
         "div",
@@ -14260,7 +14260,7 @@ function uk(e) {
                 dir: "ltr",
                 name: "kcpTaxNumberOrDOB",
             },
-            eH(a8, {
+            eH(a4, {
                 name: "kcpTaxNumberOrDOB",
                 className: "adyen-checkout__card__kcp-taxNumber__input ".concat(ui["adyen-checkout__input"]),
                 placeholder: n.get("creditCard.taxNumber.placeholder"),
@@ -14522,7 +14522,7 @@ var ux = function (e) {
                 iOSFocusedField: H,
                 onAddressLookup: A,
             }),
-        z && eH(s4, { message: z.message.replace("%{linkText}", "%#".concat(z.linkText, "%#")), urls: [z.link] }),
+        z && eH(s8, { message: z.message.replace("%{linkText}", "%#".concat(z.linkText, "%#")), urls: [z.link] }),
     );
 };
 function uP(e, t) {
@@ -14693,7 +14693,7 @@ var uO = function (e) {
                     l = c1,
                     c = t.hasHolderName && t.holderNameRequired;
                 if (
-                    (c && (l = t.positionHolderNameOnTop ? c2 : c4),
+                    (c && (l = t.positionHolderNameOnTop ? c2 : c8),
                     n && ((l = c3), c && (l = t.positionHolderNameOnTop ? c6 : c5)),
                     r && ((l = c7), c && (l = t.positionHolderNameOnTop ? c9 : ue)),
                     o)
@@ -14708,7 +14708,7 @@ var uO = function (e) {
                             return q()(s).call(s, e);
                         })),
                         (l = H()(c1).call(c1, p)),
-                        c && (l = t.positionHolderNameOnTop ? H()(c2).call(c2, p) : H()(c4).call(c4, p));
+                        c && (l = t.positionHolderNameOnTop ? H()(c2).call(c2, p) : H()(c8).call(c8, p));
                 }
                 return l;
             })(
@@ -14727,7 +14727,7 @@ var uO = function (e) {
         e2 = function (e) {
             eK("billingAddress", e.data), ez("billingAddress", e.isValid), eG("billingAddress", e.errors);
         },
-        e4 =
+        e8 =
             ((r = e0()),
             function () {
                 k.current ||
@@ -14827,7 +14827,7 @@ var uO = function (e) {
                             k.current = !1;
                         }));
             }),
-        e8 = n0(
+        e4 = n0(
             function () {
                 return cJ(
                     e,
@@ -14852,7 +14852,7 @@ var uO = function (e) {
             null != v && v.current && v.current.showValidation();
     }),
         (b.current.processBinLookupResponse = function (e, t) {
-            e8.processBinLookup(e, t);
+            e4.processBinLookup(e, t);
         }),
         (b.current.setStatus = N),
         nZ(function () {
@@ -15067,7 +15067,7 @@ var uO = function (e) {
                                     (E.encryptedCardNumber &&
                                         t.valid.encryptedCardNumber &&
                                         "handleOnBrand" === n.event)) &&
-                                e4(),
+                                e8(),
                                 B(uE(uE({}, T), t.data)),
                                 R(uE(uE({}, A), t.errors)),
                                 O(uE(uE({}, E), t.valid)),
@@ -15146,7 +15146,7 @@ var uO = function (e) {
                                         formValid: ej,
                                         expiryDatePolicy: Z,
                                         dualBrandSelectElements: el,
-                                        extensions: e8,
+                                        extensions: e4,
                                         selectedBrandValue: ep,
                                         showKCP: eZ,
                                         showBrazilianSSN: eJ,
@@ -16296,7 +16296,7 @@ var u2 = (function (e) {
     }
     return I(r);
 })(ts(Error));
-function u4(e, t) {
+function u8(e, t) {
     var n = d()(e);
     if (h()) {
         var r = h()(e);
@@ -16308,18 +16308,18 @@ function u4(e, t) {
     }
     return n;
 }
-function u8(e) {
+function u4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             a = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? B()((n = u4(Object(a), !0))).call(n, function (t) {
+            ? B()((n = u8(Object(a), !0))).call(n, function (t) {
                   M(e, t, a[t]);
               })
             : v()
               ? b()(e, v()(a))
-              : B()((r = u4(Object(a)))).call(r, function (t) {
+              : B()((r = u8(Object(a)))).call(r, function (t) {
                     k()(e, t, m()(a, t));
                 });
     }
@@ -16572,7 +16572,7 @@ var u5 = (function () {
                                                     })),
                                                     (e.next = 5),
                                                     r.checkout(
-                                                        u8(
+                                                        u4(
                                                             {
                                                                 srcDigitalCardId: t.srcDigitalCardId,
                                                                 srcCorrelationId: t.srcCorrelationId,
@@ -16808,8 +16808,8 @@ var u5 = (function () {
                                                                     (a = em()(t).call(t, function (e, t) {
                                                                         return (
                                                                             uz(e) &&
-                                                                            u8(
-                                                                                u8({}, e.value),
+                                                                            u4(
+                                                                                u4({}, e.value),
                                                                                 {},
                                                                                 { scheme: n.sdks[t].schemeName },
                                                                             )
@@ -17446,10 +17446,10 @@ var ds = {
                     }),
                 ),
             },
-            eH(o4, { className: "adyen_checkout-ctp__brand-logo", src: o, alt: "Logo of Click to Pay" }),
-            eH(o4, { className: "adyen_checkout-ctp__brand-pipe", src: i, alt: "" }),
+            eH(o8, { className: "adyen_checkout-ctp__brand-logo", src: o, alt: "Logo of Click to Pay" }),
+            eH(o8, { className: "adyen_checkout-ctp__brand-pipe", src: i, alt: "" }),
             em()(a).call(a, function (e) {
-                return eH(o4, {
+                return eH(o8, {
                     key: e,
                     className: tr()("adyen_checkout-ctp__brand-scheme", "adyen_checkout-ctp__brand-scheme-".concat(e)),
                     src: r()(e),
@@ -17629,7 +17629,7 @@ var dy = function (e) {
                 return eH(
                     eW,
                     null,
-                    eH(o4, {
+                    eH(o8, {
                         className: "adyen-checkout__ctp-modal-header-image",
                         src: i({ imageFolder: "components/" })("ctp_landscape"),
                         alt: "",
@@ -17684,7 +17684,7 @@ var dy = function (e) {
                     "aria-label": a.get("ctp.aria.infoModalButton"),
                     type: "button",
                 },
-                eH(o4, { height: "15", src: o, ariaHidden: !0 }),
+                eH(o8, { height: "15", src: o, ariaHidden: !0 }),
             ),
             eH(dy, { isOpen: t, onClose: i, focusAfterClose: r.current }),
         );
@@ -17867,7 +17867,7 @@ var d_ = function (e) {
             eH(
                 "div",
                 { className: "adyen-checkout-ctp__card-list-single-card" },
-                eH(o4, { src: t.artUri || a()(t.scheme), height: 24, className: "adyen-checkout-ctp__card-image" }),
+                eH(o8, { src: t.artUri || a()(t.scheme), height: 24, className: "adyen-checkout-ctp__card-image" }),
                 eH(
                     "span",
                     { className: tr()({ "adyen-checkout-ctp__card-list-single-card-expired": t.isExpired }) },
@@ -18089,7 +18089,7 @@ var dx = function (e) {
         return eH(
             eW,
             null,
-            eH(o4, {
+            eH(o8, {
                 className: "adyen-checkout-ctp__loading-image",
                 src: rO()({ extension: "gif", imageFolder: "components/" })("ctp_loader"),
                 alt: "",
@@ -19860,7 +19860,7 @@ function d1(e) {
     return eH(
         "div",
         { className: "adyen-checkout__campaign-container" },
-        eH(o4, {
+        eH(o8, {
             className: "adyen-checkout__campaign-background-image",
             style: { backgroundImage: "linear-gradient(0, #000, #0003), url(".concat(c, ")") },
             backgroundUrl: c,
@@ -19895,7 +19895,7 @@ function d2(e) {
     );
 }
 M(d0, "type", "bcmc"), M(d0, "defaultProps", dX(dX({}, dD.defaultProps), {}, { brands: ["bcmc", "maestro", "visa"] }));
-var d4 = function (e) {
+var d8 = function (e) {
     var t = e.options,
         n = void 0 === t ? [] : t,
         r = e.name,
@@ -19932,7 +19932,7 @@ var d4 = function (e) {
         }),
     );
 };
-function d8(e, t) {
+function d4(e, t) {
     var n = d()(e);
     if (h()) {
         var r = h()(e);
@@ -19950,12 +19950,12 @@ function d3(e) {
             r,
             a = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? B()((n = d8(Object(a), !0))).call(n, function (t) {
+            ? B()((n = d4(Object(a), !0))).call(n, function (t) {
                   M(e, t, a[t]);
               })
             : v()
               ? b()(e, v()(a))
-              : B()((r = d8(Object(a)))).call(r, function (t) {
+              : B()((r = d4(Object(a)))).call(r, function (t) {
                     k()(e, t, m()(a, t));
                 });
     }
@@ -20000,7 +20000,7 @@ function d6(e) {
             ? eH(
                   "div",
                   { className: "adyen-checkout__adyen-giving" },
-                  eH(o4, {
+                  eH(o8, {
                       className: "adyen-checkout__status__icon adyen-checkout__status__icon--error",
                       src: l({ imageFolder: "components/" })("error"),
                       alt: s.get("error.message.unknown"),
@@ -20011,7 +20011,7 @@ function d6(e) {
               ? eH(
                     "div",
                     { className: "adyen-checkout__adyen-giving" },
-                    eH(o4, {
+                    eH(o8, {
                         className: "adyen-checkout__status__icon adyen-checkout__status__icon--success",
                         src: l({ imageFolder: "components/" })("heart"),
                         alt: s.get("thanksForYourSupport"),
@@ -20028,7 +20028,7 @@ function d6(e) {
                         eH(
                             "div",
                             { className: "adyen-checkout__amounts" },
-                            eH(d4, {
+                            eH(d8, {
                                 options: em()((t = eh()(n))).call(t, function (e) {
                                     return {
                                         value: e,
@@ -20049,7 +20049,7 @@ function d6(e) {
                             }),
                         ),
                         i &&
-                            eH(s4, {
+                            eH(s8, {
                                 message: i.message.replace("%{linkText}", "%#".concat(i.linkText, "%#")),
                                 urls: [i.link],
                             }),
@@ -22026,7 +22026,7 @@ function p2(e) {
     }
     return e;
 }
-function p4(e) {
+function p8(e) {
     var t,
         n = e.onInit,
         r = e.onApprove,
@@ -22094,7 +22094,7 @@ function p4(e) {
         )
     );
 }
-var p8 = ["onApprove", "onCancel", "onChange", "onError", "onSubmit"];
+var p4 = ["onApprove", "onCancel", "onChange", "onError", "onSubmit"];
 function p3(e, t) {
     var n = d()(e);
     if (h()) {
@@ -22130,7 +22130,7 @@ function p5(e) {
         r = e.onChange,
         a = e.onError,
         o = e.onSubmit,
-        i = P(e, p8),
+        i = P(e, p4),
         s = ei(nY("pending"), 2),
         l = s[0],
         c = s[1];
@@ -22182,7 +22182,7 @@ function p5(e) {
                       eH(nV, null),
                   )
                 : eH(
-                      p4,
+                      p8,
                       eC({}, i, {
                           onCancel: n,
                           onChange: r,
@@ -23678,7 +23678,7 @@ var hP = (function () {
                               ? eH(
                                     "div",
                                     { className: "adyen-checkout__threeds2-challenge-error" },
-                                    eH(o4, {
+                                    eH(o8, {
                                         className: "adyen-checkout__status__icon adyen-checkout__status__icon--error",
                                         src: o({ imageFolder: "components/" })("error"),
                                         alt: "",
@@ -24334,7 +24334,7 @@ function h2(e, t, n) {
         { paymentData: e },
     );
 }
-function h4(e, t) {
+function h8(e, t) {
     var n = d()(e);
     if (h()) {
         var r = h()(e);
@@ -24346,18 +24346,18 @@ function h4(e, t) {
     }
     return n;
 }
-function h8(e) {
+function h4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             a = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? B()((n = h4(Object(a), !0))).call(n, function (t) {
+            ? B()((n = h8(Object(a), !0))).call(n, function (t) {
                   M(e, t, a[t]);
               })
             : v()
               ? b()(e, v()(a))
-              : B()((r = h4(Object(a)))).call(r, function (t) {
+              : B()((r = h8(Object(a)))).call(r, function (t) {
                     k()(e, t, m()(a, t));
                 });
     }
@@ -24368,9 +24368,9 @@ var h3 = function (e) {
             case "refused":
             case "error":
             case "cancelled":
-                return { type: "error", props: h8(h8({}, e), {}, { message: "error.subtitle.refused" }) };
+                return { type: "error", props: h4(h4({}, e), {}, { message: "error.subtitle.refused" }) };
             case "unknown":
-                return { type: "error", props: h8(h8({}, e), {}, { message: "error.message.unknown" }) };
+                return { type: "error", props: h4(h4({}, e), {}, { message: "error.message.unknown" }) };
             case "pending":
             case "received":
                 return { type: e.resultCode.toLowerCase(), props: e };
@@ -25214,7 +25214,7 @@ function fp(e) {
             eH(
                 ay,
                 { label: r.get("shopperEmail"), errorMessage: !!d.shopperEmail, name: "dragonpay-shopperEmail" },
-                eH(a4, {
+                eH(a8, {
                     name: "dragonpay-shopperEmail",
                     autoCorrect: "off",
                     value: c.shopperEmail,
@@ -25644,7 +25644,7 @@ function fS(e) {
                     errorMessage: t && t.errorMessage ? o.get(t.errorMessage) : !!t,
                     name: "shopperEmail",
                 },
-                eH(a4, { name: "shopperEmail", autoCorrect: "off", spellCheck: !1, value: n, onInput: r, onBlur: a }),
+                eH(a8, { name: "shopperEmail", autoCorrect: "off", spellCheck: !1, value: n, onInput: r, onBlur: a }),
             ),
     );
 }
@@ -26913,7 +26913,7 @@ function f2(e) {
     return e;
 }
 M(f0, "type", "vipps"), M(f0, "defaultProps", { type: f0.type, showPayButton: !0, name: "Vipps" });
-var f4 = (function () {
+var f8 = (function () {
     eP(n, lc);
     var e,
         t =
@@ -26950,7 +26950,7 @@ var f4 = (function () {
         n
     );
 })();
-function f8(e, t) {
+function f4(e, t) {
     var n = d()(e);
     if (h()) {
         var r = h()(e);
@@ -26968,18 +26968,18 @@ function f3(e) {
             r,
             a = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? B()((n = f8(Object(a), !0))).call(n, function (t) {
+            ? B()((n = f4(Object(a), !0))).call(n, function (t) {
                   M(e, t, a[t]);
               })
             : v()
               ? b()(e, v()(a))
-              : B()((r = f8(Object(a)))).call(r, function (t) {
+              : B()((r = f4(Object(a)))).call(r, function (t) {
                     k()(e, t, m()(a, t));
                 });
     }
     return e;
 }
-M(f4, "type", "payu_IN_cashcard");
+M(f8, "type", "payu_IN_cashcard");
 var f6 = (function () {
     eP(n, lc);
     var e,
@@ -27193,7 +27193,7 @@ var mr = function (e) {
                     },
                 ),
             },
-            eH(o4, {
+            eH(o8, {
                 className: "adyen-checkout__payment-method__image ".concat(ma["adyen-checkout__payment-method__image"]),
                 src: t,
                 alt: n,
@@ -27494,7 +27494,7 @@ var mr = function (e) {
                                     eH(mc, {
                                         activeBrand: u,
                                         brands: a.brands,
-                                        excludedUIBrands: r8,
+                                        excludedUIBrands: r4,
                                         isPaymentMethodSelected: o,
                                         isCompactView: a.props.showBrandsUnderCardNumber,
                                     }),
@@ -27801,7 +27801,7 @@ var mv = function (e) {
             eH(
                 "div",
                 { className: "adyen-checkout__status adyen-checkout__status--success" },
-                eH(o4, {
+                eH(o8, {
                     height: "88",
                     className: "adyen-checkout__status__icon",
                     src: r({ extension: "gif", imageFolder: "components/" })("success"),
@@ -27821,7 +27821,7 @@ var mv = function (e) {
             eH(
                 "div",
                 { className: "adyen-checkout__status adyen-checkout__status--error" },
-                eH(o4, {
+                eH(o8, {
                     className: "adyen-checkout__status__icon",
                     src: r({ extension: "gif", imageFolder: "components/" })("error"),
                     alt: n.get(t || "error.message.unknown"),
@@ -29261,7 +29261,7 @@ function m2(e, t) {
     }
     return n;
 }
-function m4(e) {
+function m8(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -29278,7 +29278,7 @@ function m4(e) {
     }
     return e;
 }
-function m8(e) {
+function m4(e) {
     var t,
         n = this,
         r = ro(),
@@ -29321,7 +29321,7 @@ function m8(e) {
                     .catch(function (e) {
                         var t = e.message,
                             n = P(e, m1);
-                        return { type: "network-error", props: m4(m4({}, t && { message: a.get(t) }), n) };
+                        return { type: "network-error", props: m8(m8({}, t && { message: a.get(t) }), n) };
                     })
                     .then(function (t) {
                         switch (t.type) {
@@ -29496,7 +29496,7 @@ function m6(e) {
     }
     return e;
 }
-m8.defaultProps = {
+m4.defaultProps = {
     countdownTime: 15,
     onError: function () {},
     onComplete: function () {},
@@ -29596,7 +29596,7 @@ var m5 = (function () {
                               eH(
                                   sa,
                                   { srPanel: this.props.modules.srPanel },
-                                  eH(m8, {
+                                  eH(m4, {
                                       ref: function (t) {
                                           e.componentRef = t;
                                       },
@@ -29810,7 +29810,7 @@ var yn = (function () {
                               eH(
                                   sa,
                                   { srPanel: this.props.modules.srPanel },
-                                  eH(m8, {
+                                  eH(m4, {
                                       ref: function (t) {
                                           e.componentRef = t;
                                       },
@@ -30538,7 +30538,7 @@ function yw(e) {
                     name: "emailAddress",
                     i18n: o,
                 },
-                eH(a4, {
+                eH(a8, {
                     value: u.shopperEmail,
                     name: "shopperEmail",
                     className: "adyen-checkout__bacs-input--shopper-email",
@@ -31705,10 +31705,10 @@ function y2(e) {
           )
         : null;
 }
-var y4 = (((r = {}).Vpa = "vpa"), (r.QrCode = "qrCode"), r),
-    y8 = {
-        ButtonId: { VPA: "upi-button-".concat(y4.Vpa), QR: "upi-button-".concat(y4.QrCode) },
-        AreaId: { VPA: "upi-area-".concat(y4.Vpa), QR: "upi-area-".concat(y4.QrCode) },
+var y8 = (((r = {}).Vpa = "vpa"), (r.QrCode = "qrCode"), r),
+    y4 = {
+        ButtonId: { VPA: "upi-button-".concat(y8.Vpa), QR: "upi-button-".concat(y8.QrCode) },
+        AreaId: { VPA: "upi-area-".concat(y8.Vpa), QR: "upi-area-".concat(y8.QrCode) },
     };
 function y3(e) {
     var t = e.defaultMode,
@@ -31754,26 +31754,26 @@ function y3(e) {
             options: [
                 {
                     label: dC() ? "VPA" : "Virtual Payment Address",
-                    value: y4.Vpa,
-                    htmlProps: { id: y8.ButtonId.VPA, "aria-expanded": m === y4.Vpa, "aria-controls": y8.AreaId.VPA },
+                    value: y8.Vpa,
+                    htmlProps: { id: y4.ButtonId.VPA, "aria-expanded": m === y8.Vpa, "aria-controls": y4.AreaId.VPA },
                 },
                 {
                     label: "QR Code",
-                    value: y4.QrCode,
-                    htmlProps: { id: y8.ButtonId.QR, "aria-expanded": m === y4.QrCode, "aria-controls": y8.AreaId.QR },
+                    value: y8.QrCode,
+                    htmlProps: { id: y4.ButtonId.QR, "aria-expanded": m === y8.QrCode, "aria-controls": y4.AreaId.QR },
                 },
             ],
         }),
-        m === y4.Vpa
+        m === y8.Vpa
             ? eH(
                   "div",
-                  { id: y8.AreaId.VPA, "aria-labelledby": y8.ButtonId.VPA, role: "region" },
+                  { id: y4.AreaId.VPA, "aria-labelledby": y4.ButtonId.VPA, role: "region" },
                   eH(y1, { disabled: "loading" === p, onChange: n, onSetInputHandlers: v }),
                   o && a({ label: i.get("continue"), status: p }),
               )
             : eH(
                   "div",
-                  { id: y8.AreaId.QR, "aria-labelledby": y8.ButtonId.QR, role: "region" },
+                  { id: y4.AreaId.QR, "aria-labelledby": y4.ButtonId.QR, role: "region" },
                   o && a({ label: i.get("generateQRCode"), icon: s({ imageFolder: "components/" })("qr"), status: p }),
               ),
     );
@@ -31820,7 +31820,7 @@ var y5 = (((a = y5 || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
             return (
                 M(ew((r = t.call.apply(t, H()((e = [this])).call(e, o)))), "useQrCodeVariant", void 0),
                 M(ew(r), "onUpdateMode", function (e) {
-                    e === y4.QrCode
+                    e === y8.QrCode
                         ? ((r.useQrCodeVariant = !0), r.setState({ data: {}, valid: {}, errors: {}, isValid: !0 }))
                         : (r.useQrCodeVariant = !1);
                 }),
@@ -31892,7 +31892,7 @@ var y5 = (((a = y5 || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
                                     ),
                                 );
                             case "await":
-                                return eH(m8, {
+                                return eH(m4, {
                                     ref: function (e) {
                                         t.componentRef = e;
                                     },
@@ -31970,7 +31970,7 @@ function ve(e) {
     }
     return e;
 }
-M(y7, "type", "upi"), M(y7, "defaultProps", { defaultMode: y4.Vpa });
+M(y7, "type", "upi"), M(y7, "defaultProps", { defaultMode: y8.Vpa });
 var vt = (function () {
     eP(n, lc);
     var e,
@@ -32562,7 +32562,7 @@ var vg = {
         onlineBanking_PL: yQ,
         onlineBanking_SK: vs,
         paybybank: vu,
-        payu_IN_cashcard: f4,
+        payu_IN_cashcard: f8,
         payu_IN_nb: f6,
         wallet_IN: vt,
         dragonpay_ebanking: fy,
@@ -33752,7 +33752,7 @@ function v2(e, t) {
     }
     return n;
 }
-function v4(e) {
+function v8(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -33769,7 +33769,7 @@ function v4(e) {
     }
     return e;
 }
-var v8 = (function () {
+var v4 = (function () {
     function e(t) {
         var n,
             r,
@@ -33820,7 +33820,7 @@ var v8 = (function () {
                         console.warn(
                             "WARNING: you are setting installmentOptions directly in the top level configuration object. They should be set via the 'paymentMethodsConfiguration' object or directly on the 'card' component.",
                         ),
-                    (l.options = v4(v4({}, l.options), e));
+                    (l.options = v8(v8({}, l.options), e));
             }),
             (this.create = j()((n = this.create)).call(n, this)),
             (this.createFromAction = j()((r = this.createFromAction)).call(r, this)),
@@ -33888,8 +33888,8 @@ var v8 = (function () {
                                       o = P(t, v1);
                                   return (
                                       e.setOptions(
-                                          v4(
-                                              v4({}, o),
+                                          v8(
+                                              v8({}, o),
                                               {},
                                               {
                                                   amount: e.options.order ? e.options.order.remainingAmount : n,
@@ -33953,7 +33953,7 @@ var v8 = (function () {
                                 n = vI[e.type];
                             if (n && "function" == typeof n) return n(e, t);
                             throw Error("Invalid Action");
-                        })(e, v4(v4(v4({}, vK(this.options)), n), this.getPropsForComponent(t)));
+                        })(e, v8(v8(v8({}, vK(this.options)), n), this.getPropsForComponent(t)));
                     }
                     return this.handleCreateError();
                 },
@@ -33961,8 +33961,8 @@ var v8 = (function () {
             {
                 key: "getPropsForComponent",
                 value: function (e) {
-                    return v4(
-                        v4(
+                    return v8(
+                        v8(
                             {
                                 paymentMethods: this.paymentMethodsResponse.paymentMethods,
                                 storedPaymentMethods: this.paymentMethodsResponse.storedPaymentMethods,
@@ -33996,7 +33996,7 @@ var v8 = (function () {
                             o = r
                                 ? v_(t.type, this.options.paymentMethodsConfiguration, !!t.storedPaymentMethodId)
                                 : {},
-                            i = new e(v4(v4(v4(v4({}, vK(this.options)), a), o), t));
+                            i = new e(v8(v8(v8(v8({}, vK(this.options)), a), o), t));
                         return t.isDropin || this.components.push(i), i;
                     }
                     if ("string" == typeof e && vg[e])
@@ -34006,13 +34006,13 @@ var v8 = (function () {
                                 console.warn(
                                     "WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored.",
                                 ),
-                            this.handleCreate(vg[e], v4({ type: e }, t))
+                            this.handleCreate(vg[e], v8({ type: e }, t))
                         );
                     if ("string" == typeof e && this.paymentMethodsResponse.has(e))
-                        return this.handleCreate(vg.redirect, v4({ type: e }, t));
+                        return this.handleCreate(vg.redirect, v8({ type: e }, t));
                     if ("object" === S(e) && "string" == typeof e.type) {
                         var s = v_(e.type, this.options.paymentMethodsConfiguration, !!e.storedPaymentMethodId);
-                        return this.handleCreate(e.type, v4(v4(v4({}, e), t), s));
+                        return this.handleCreate(e.type, v8(v8(v8({}, e), t), s));
                     }
                     return this.handleCreateError(e);
                 },
@@ -34049,7 +34049,7 @@ var v8 = (function () {
                 value: function () {
                     this.modules ||
                         (this.modules = J()({
-                            risk: new rF(v4(v4({}, this.options), {}, { loadingContext: this.loadingContext })),
+                            risk: new rF(v8(v8({}, this.options), {}, { loadingContext: this.loadingContext })),
                             analytics: new vq({
                                 loadingContext: this.loadingContext,
                                 clientKey: this.options.clientKey,
@@ -34078,7 +34078,7 @@ function v6() {
                 for (;;)
                     switch ((e.prev = e.next)) {
                         case 0:
-                            return (n = new v8(t)), (e.next = 3), n.initialize();
+                            return (n = new v4(t)), (e.next = 3), n.initialize();
                         case 3:
                             return e.abrupt("return", e.sent);
                         case 4:
@@ -34089,7 +34089,7 @@ function v6() {
         }),
     )).apply(this, arguments);
 }
-M(v8, "version", {
+M(v4, "version", {
     version: "5.51.0",
     revision: "7d67e7b",
     branch: "HEAD",

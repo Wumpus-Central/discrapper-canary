@@ -38,7 +38,7 @@ async function o(e) {
             flipHorizontal: u,
         }),
         w = await t.arrayBuffer(),
-        _ = new Worker(new URL("/assets/" + r.u("24962"), r.b)),
+        _ = new Worker(new URL("/assets/" + r.u("724962"), r.b)),
         p = new Promise((e, r) => {
             _.onmessage = (a) => {
                 let { data: n } = a;

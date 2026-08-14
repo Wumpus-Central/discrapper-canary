@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(477900);
 n(582128);
 var r = n(953727);
-function a(e) {
-    let { width: t = 24, height: n = 24, ...a } = e;
+function s(e) {
+    let { width: t = 24, height: n = 24, ...s } = e;
     return (0, i.jsxs)("svg", {
-        ...(0, r.A)(a),
+        ...(0, r.A)(s),
         height: n,
         width: t,
         viewBox: "0 0 24 24",

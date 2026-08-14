@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { i: () => i });
-let i = (0, n(353640).v)()((e) => ({
+r.d(e, { i: () => i });
+let i = (0, r(196765).v)()((t) => ({
     overrideApplicationId: null,
-    setOverrideApplicationId: (t) => e({ overrideApplicationId: t }),
+    setOverrideApplicationId: (e) => t({ overrideApplicationId: e }),
     showSelfActivity: !1,
-    setShowSelfActivity: (t) => e({ showSelfActivity: t }),
+    setShowSelfActivity: (e) => t({ showSelfActivity: e }),
     recommendationApplicationIds: null,
-    setRecommendationApplicationIds: (t) => e({ recommendationApplicationIds: null != t ? t.split(",") : null }),
+    setRecommendationApplicationIds: (e) => t({ recommendationApplicationIds: null != e ? e.split(",") : null }),
     overrideNitroEligibilityForSocialLayerStorefront: !1,
-    setOverrideNitroEligibilityForSocialLayerStorefront: (t) =>
-        e({ overrideNitroEligibilityForSocialLayerStorefront: t }),
+    setOverrideNitroEligibilityForSocialLayerStorefront: (e) =>
+        t({ overrideNitroEligibilityForSocialLayerStorefront: e }),
     isNitroEligibleForSocialLayerStorefront: !1,
-    setIsNitroEligibleForSocialLayerStorefront: (t) => e({ isNitroEligibleForSocialLayerStorefront: t }),
+    setIsNitroEligibleForSocialLayerStorefront: (e) => t({ isNitroEligibleForSocialLayerStorefront: e }),
 }));

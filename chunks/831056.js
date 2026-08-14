@@ -1,110 +1,109 @@
-"use strict";
-n.d(t, { KP: () => A, Kb: () => I, OH: () => g, lx: () => p, nY: () => E, pK: () => f, zj: () => h });
-var i = n(477900),
-    r = n(582128),
+n.d(t, { KP: () => h, Kb: () => v, OH: () => S, lx: () => g, nY: () => f, pK: () => x, zj: () => p });
+var r = n(477900),
+    l = n(582128),
     a = n(503698),
-    s = n.n(a),
-    l = n(297264),
-    o = n(939249),
-    d = n(661531),
+    i = n.n(a),
+    u = n(297264),
+    s = n(939249),
+    o = n(661531),
     c = n(445563),
-    u = n(375708),
-    _ = n(668534);
-function E(e) {
+    d = n(375708),
+    m = n(668534);
+function f(e) {
     let { url: t } = e;
-    return null == t ? null : (0, i.jsx)("img", { src: t, alt: "", className: _.bU });
+    return null == t ? null : (0, r.jsx)("img", { src: t, alt: "", className: m.bU });
 }
-function A() {
-    return (0, i.jsx)("div", { className: _.MM, "data-testid": "discord-web-video-player-end-screen" });
+function h() {
+    return (0, r.jsx)("div", { className: m.MM, "data-testid": "discord-web-video-player-end-screen" });
 }
-function h(e) {
+function p(e) {
     let { orientation: t, children: n } = e;
-    return (0, i.jsx)("div", { className: s()(_.Pb, { [_.II]: "portrait" === t }), children: n });
+    return (0, r.jsx)("div", { className: i()(m.Pb, { [m.II]: "portrait" === t }), children: n });
 }
-function I(e) {
-    let { url: t, orientation: n, ref: r } = e;
+function v(e) {
+    let { url: t, orientation: n, ref: l } = e;
     return null == t
         ? null
-        : (0, i.jsx)("img", {
-              ref: r,
+        : (0, r.jsx)("img", {
+              ref: l,
               src: t,
-              alt: u.intl.string(c.default.E527vj),
-              className: s()(_.C, { [_.TW]: "portrait" === n }),
+              alt: d.intl.string(c.default.E527vj),
+              className: i()(m.C, { [m.TW]: "portrait" === n }),
           });
 }
-function f(e) {
+function x(e) {
     let { url: t, ref: n } = e;
     return null == t
         ? null
-        : (0, i.jsx)("img", { ref: n, src: t, alt: u.intl.string(c.default.E527vj), className: _.xc });
-}
-function p(e) {
-    let { title: t, subtitle: n, ctaBtnLabel: r, onCTAClick: a, orientation: l, ctaIcon: o } = e;
-    return (0, i.jsxs)("div", {
-        className: s()(_.pP, { [_.iC]: "portrait" === l }),
-        children: [(0, i.jsx)(T, { title: t, subtitle: n }), (0, i.jsx)(m, { label: r, icon: o, onClick: a })],
-    });
-}
-function T(e) {
-    let { title: t, subtitle: n } = e;
-    return (0, i.jsxs)("div", {
-        className: _.PH,
-        children: [
-            (0, i.jsx)(l.D, { variant: "heading-md/semibold", className: _.m5, children: t }),
-            (0, i.jsx)(l.D, { variant: "heading-sm/normal", className: _.s$, children: n }),
-        ],
-    });
-}
-function m(e) {
-    let { label: t, icon: n, onClick: a, className: c } = e,
-        [u, E] = r.useState(!1);
-    function A() {
-        E(!0);
-    }
-    function h() {
-        E(!1);
-    }
-    return (0, i.jsxs)(o.D, {
-        className: s()(_.uU, _.iM, c),
-        onMouseEnter: A,
-        onMouseLeave: h,
-        onFocus: A,
-        onBlur: h,
-        onClick: a,
-        children: [
-            (0, i.jsx)(l.D, { variant: "heading-md/semibold", className: _.ce, children: t }),
-            null != n && (0, i.jsx)(n, { size: "md", color: u ? d.A.colors.WHITE : "#B5BAC1", className: _.J5 }),
-        ],
-    });
+        : (0, r.jsx)("img", { ref: n, src: t, alt: d.intl.string(c.default.E527vj), className: m.xc });
 }
 function g(e) {
-    let { title: t, subtitle: n, icon: a, onClick: d, className: c, divider: u } = e,
-        [E, A] = r.useState(!1);
+    let { title: t, subtitle: n, ctaBtnLabel: l, onCTAClick: a, orientation: u, ctaIcon: s } = e;
+    return (0, r.jsxs)("div", {
+        className: i()(m.pP, { [m.iC]: "portrait" === u }),
+        children: [(0, r.jsx)(E, { title: t, subtitle: n }), (0, r.jsx)(b, { label: l, icon: s, onClick: a })],
+    });
+}
+function E(e) {
+    let { title: t, subtitle: n } = e;
+    return (0, r.jsxs)("div", {
+        className: m.PH,
+        children: [
+            (0, r.jsx)(u.D, { variant: "heading-md/semibold", className: m.m5, children: t }),
+            (0, r.jsx)(u.D, { variant: "heading-sm/normal", className: m.s$, children: n }),
+        ],
+    });
+}
+function b(e) {
+    let { label: t, icon: n, onClick: a, className: c } = e,
+        [d, f] = l.useState(!1);
     function h() {
-        A(!0);
+        f(!0);
     }
-    function I() {
-        A(!1);
+    function p() {
+        f(!1);
     }
-    return (0, i.jsx)(o.D, {
-        className: s()(_.Mr, _.iM, c),
+    return (0, r.jsxs)(s.D, {
+        className: i()(m.uU, m.iM, c),
         onMouseEnter: h,
-        onMouseLeave: I,
+        onMouseLeave: p,
         onFocus: h,
-        onBlur: I,
-        onClick: d,
-        children: (0, i.jsxs)("div", {
-            className: _.ee,
+        onBlur: p,
+        onClick: a,
+        children: [
+            (0, r.jsx)(u.D, { variant: "heading-md/semibold", className: m.ce, children: t }),
+            null != n && (0, r.jsx)(n, { size: "md", color: d ? o.A.colors.WHITE : "#B5BAC1", className: m.J5 }),
+        ],
+    });
+}
+function S(e) {
+    let { title: t, subtitle: n, icon: a, onClick: o, className: c, divider: d } = e,
+        [f, h] = l.useState(!1);
+    function p() {
+        h(!0);
+    }
+    function v() {
+        h(!1);
+    }
+    return (0, r.jsx)(s.D, {
+        className: i()(m.Mr, m.iM, c),
+        onMouseEnter: p,
+        onMouseLeave: v,
+        onFocus: p,
+        onBlur: v,
+        onClick: o,
+        children: (0, r.jsxs)("div", {
+            className: m.ee,
             children: [
-                (0, i.jsxs)("div", {
-                    className: _.XU,
+                (0, r.jsxs)("div", {
+                    className: m.XU,
                     children: [
-                        (0, i.jsx)(l.D, { variant: "heading-md/semibold", className: _.Zr, children: t }),
-                        (0, i.jsx)(l.D, { variant: "heading-sm/normal", className: _.Hk, children: n }),
+                        (0, r.jsx)(u.D, { variant: "heading-md/semibold", className: m.Zr, children: t }),
+                        (0, r.jsx)(u.D, { variant: "heading-sm/normal", className: m.Hk, children: n }),
                     ],
                 }),
-                u,
-                (0, i.jsx)(a, { size: "md", color: E ? "#FFFFFF" : "#B5BAC1", className: _.J5 }),
+                d,
+                (0, r.jsx)(a, { size: "md", color: f ? "#FFFFFF" : "#B5BAC1", className: m.J5 }),
             ],
         }),
     });

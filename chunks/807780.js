@@ -38,7 +38,7 @@ var O = t(3026),
     P = t(47167),
     U = t(499211),
     k = t(35275),
-    B = t(929481),
+    B = t(166444),
     V = t(46054),
     F = t(454058),
     q = t(976860),
@@ -174,18 +174,18 @@ function ep(e) {
         onContextMenu: function (e) {
             (0, H.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("26132"),
-                    t.e("38730"),
-                    t.e("12255"),
-                    t.e("40959"),
-                    t.e("30997"),
-                    t.e("79995"),
-                    t.e("91377"),
+                    t.e("926132"),
+                    t.e("238730"),
+                    t.e("412255"),
+                    t.e("63340"),
+                    t.e("430997"),
+                    t.e("379995"),
+                    t.e("591377"),
                     t.e("35723"),
-                    t.e("66378"),
-                    t.e("32100"),
-                    t.e("15398"),
-                    t.e("15675"),
+                    t.e("566378"),
+                    t.e("732100"),
+                    t.e("515398"),
+                    t.e("715675"),
                 ]).then(t.bind(t, 740438));
                 return (t) => (0, l.jsx)(e, { ...t, channel: i, guild: n });
             });
@@ -316,55 +316,55 @@ let ej = i.memo(function () {
                             d.isGuildVocal()
                                 ? (0, H.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("26132"),
-                                          t.e("46652"),
-                                          t.e("93190"),
-                                          t.e("38730"),
-                                          t.e("47502"),
-                                          t.e("43266"),
-                                          t.e("9004"),
-                                          t.e("12255"),
-                                          t.e("40959"),
-                                          t.e("30997"),
-                                          t.e("79995"),
-                                          t.e("87048"),
-                                          t.e("44058"),
-                                          t.e("91377"),
+                                          t.e("926132"),
+                                          t.e("146652"),
+                                          t.e("893190"),
+                                          t.e("238730"),
+                                          t.e("947502"),
+                                          t.e("343266"),
+                                          t.e("309004"),
+                                          t.e("412255"),
+                                          t.e("63340"),
+                                          t.e("430997"),
+                                          t.e("379995"),
+                                          t.e("187048"),
+                                          t.e("544058"),
+                                          t.e("591377"),
                                           t.e("35723"),
-                                          t.e("66378"),
-                                          t.e("56372"),
+                                          t.e("566378"),
+                                          t.e("256372"),
                                           t.e("29542"),
-                                          t.e("19690"),
-                                          t.e("26792"),
-                                          t.e("48804"),
-                                          t.e("18663"),
-                                          t.e("99990"),
-                                          t.e("99854"),
+                                          t.e("419690"),
+                                          t.e("426792"),
+                                          t.e("248804"),
+                                          t.e("318663"),
+                                          t.e("599990"),
+                                          t.e("599854"),
                                       ]).then(t.bind(t, 119357));
                                       return (n) => (0, l.jsx)(e, { ...n, channel: d, guild: u });
                                   })
                                 : (0, H.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("26132"),
-                                          t.e("46652"),
-                                          t.e("93190"),
-                                          t.e("38730"),
-                                          t.e("47502"),
-                                          t.e("43266"),
-                                          t.e("9004"),
-                                          t.e("12255"),
-                                          t.e("40959"),
-                                          t.e("30997"),
-                                          t.e("79995"),
-                                          t.e("87048"),
-                                          t.e("44058"),
+                                          t.e("926132"),
+                                          t.e("146652"),
+                                          t.e("893190"),
+                                          t.e("238730"),
+                                          t.e("947502"),
+                                          t.e("343266"),
+                                          t.e("309004"),
+                                          t.e("412255"),
+                                          t.e("63340"),
+                                          t.e("430997"),
+                                          t.e("379995"),
+                                          t.e("187048"),
+                                          t.e("544058"),
                                           t.e("65200"),
-                                          t.e("91377"),
+                                          t.e("591377"),
                                           t.e("35723"),
-                                          t.e("66378"),
-                                          t.e("56372"),
+                                          t.e("566378"),
+                                          t.e("256372"),
                                           t.e("29542"),
-                                          t.e("48804"),
+                                          t.e("248804"),
                                           t.e("25173"),
                                       ]).then(t.bind(t, 468916));
                                       return (n) => (0, l.jsx)(e, { ...n, channel: d, guild: u });
@@ -522,9 +522,12 @@ function eS(e) {
         C = i.useCallback(() => a(""), [a]),
         j = i.useCallback(() => {
             (0, g.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e("36865"), t.e("7775"), t.e("58608"), t.e("28034")]).then(
-                    t.bind(t, 333369),
-                );
+                let { default: e } = await Promise.all([
+                    t.e("436865"),
+                    t.e("507775"),
+                    t.e("358608"),
+                    t.e("528034"),
+                ]).then(t.bind(t, 333369));
                 return (t) => (0, l.jsx)(e, { ...t, channelType: null, guildId: n });
             });
         }, [n]),
@@ -591,19 +594,19 @@ var ey = t(202776),
     e0 = t(669953),
     e1 = t(817818),
     e4 = t(591552),
-    e6 = t(961973),
-    e5 = t(435558),
-    e9 = t.n(e5),
-    e8 = t(665260),
-    e2 = t(355097);
-function e7(e) {
+    e5 = t(961973),
+    e6 = t(435558),
+    e2 = t.n(e6),
+    e9 = t(665260),
+    e8 = t(355097);
+function e3(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
-let e3 = {};
+let e7 = {};
 function ne(e) {
-    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e3, [e]);
+    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e7, [e]);
     return (
-        i.useEffect(() => (e7(e), () => e7(e)), [e]),
+        i.useEffect(() => (e3(e), () => e3(e)), [e]),
         i.useEffect(() => {
             null != n && 0 !== Object.keys(n).length && e0.A.updateOnboardingResponses(e);
         }, [e, n]),
@@ -616,8 +619,8 @@ function ne(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => l.includes(e.id));
-                                (i = e9().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e9().difference(t?.roleIds ?? [], n.roleIds ?? []));
+                                (i = e2().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e2().difference(t?.roleIds ?? [], n.roleIds ?? []));
                             } else if (t) (i = n.roleIds ?? []), (s = []);
                             else {
                                 let t = e.options.filter((e) => l.includes(e.id)),
@@ -630,7 +633,7 @@ function ne(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(eJ.Vq);
-                                (i = []), (s = e9().difference(r, d));
+                                (i = []), (s = e2().difference(r, d));
                             }
                             return { addedRoleIds: i, removedRoleIds: s };
                         })(n, t, l, i),
@@ -640,8 +643,8 @@ function ne(e) {
                                 r = [];
                             if (t.singleSelect && i) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                (a = e9().difference(l.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e9().difference(e?.channelIds ?? [], l.channelIds ?? []));
+                                (a = e2().difference(l.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e2().difference(e?.channelIds ?? [], l.channelIds ?? []));
                             } else if (i) (a = l.channelIds ?? []), (r = []);
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -654,7 +657,7 @@ function ne(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(eJ.Vq);
-                                (a = []), (r = e9().difference(i, d));
+                                (a = []), (r = e2().difference(i, d));
                             }
                             return (
                                 (0, $.cE)(n) && a.push(...e4.A.getDefaultChannelIds(n)),
@@ -663,11 +666,11 @@ function ne(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e8.lA)(l, e2.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e9.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e8.lA)(l, e2.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e9.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e0.A.selectOption(e, n.id, t.id, l),
@@ -825,8 +828,8 @@ function nC(e) {
         [s, d] = i.useState(null),
         [o, u] = i.useState(new Set()),
         x = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e6.a)(x),
-        C = (0, e6.vV)(x),
+        m = (0, e5.a)(x),
+        C = (0, e5.vV)(x),
         A = (0, r.yK)([e4.A], () => e4.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: N } = (0, nn.W)({
             guild: t,
@@ -919,8 +922,8 @@ function ng(e) {
         [s, d] = i.useState(null),
         [o, u] = i.useState(new Set()),
         x = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e6.a)(x),
-        C = (0, e6.vV)(x),
+        m = (0, e5.a)(x),
+        C = (0, e5.vV)(x),
         A = (0, r.yK)([e4.A], () => e4.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: N } = (0, nn.W)({
             guild: t,

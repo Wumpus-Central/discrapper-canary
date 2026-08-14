@@ -17,15 +17,15 @@ var n = l(477900),
     f = l(280450),
     j = l(174459),
     p = l(504049),
-    V = l(587426),
-    v = l(134413),
+    v = l(587426),
+    V = l(134413),
     A = l(652215),
     M = l(375708),
     L = l(835291);
 function b(e) {
     let { guildId: t } = e,
-        b = (0, v.vA)(t),
-        { selectedUserIds: D, clearSelection: R } = (0, V.A)(t),
+        b = (0, V.vA)(t),
+        { selectedUserIds: D, clearSelection: R } = (0, v.A)(t),
         E = D.size > 0;
     function N(e, t, l, n) {
         h.A.startBulkBan(e, t, l, n);
@@ -50,7 +50,7 @@ function b(e) {
                 (0, n.jsx)(m.Q, { text: M.intl.string(M.t.yW6ZdE), onClick: S }),
             ],
         }),
-        I = (0, n.jsxs)("span", {
+        y = (0, n.jsxs)("span", {
             className: L.UD,
             children: [
                 (0, n.jsx)(H.w, { size: "custom", color: "currentColor", width: 20, height: 20 }),
@@ -78,7 +78,7 @@ function b(e) {
                                   location: "MemberSafetyPageActionNotice",
                               }),
                                   (0, d.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([l.e("87407"), l.e("2504")]).then(
+                                      let { default: e } = await Promise.all([l.e("687407"), l.e("802504")]).then(
                                           l.bind(l, 333179),
                                       );
                                       return (l) =>
@@ -91,7 +91,7 @@ function b(e) {
                                           });
                                   });
                           },
-                          onSaveText: I,
+                          onSaveText: y,
                           onSaveButtonColor: r.XD.RED,
                           message: Z,
                       }),

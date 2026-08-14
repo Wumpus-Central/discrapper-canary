@@ -34,7 +34,7 @@ class c extends e.PureComponent {
         (0, u.A)({ problem: r, stream: t, feedback: "", streamApplication: i, analyticsData: e, location: "Stream" }),
             s(),
             (0, a.openModalLazy)(async () => {
-                let { default: t } = await n.e("37836").then(n.bind(n, 845671));
+                let { default: t } = await n.e("137836").then(n.bind(n, 845671));
                 return (i) => (0, l.jsx)(t, { body: d.intl.string(d.t.mMTVnv), ...i });
             });
     };

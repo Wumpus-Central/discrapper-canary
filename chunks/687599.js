@@ -10,4 +10,4 @@ var i,
         (i[(i.ACCEPT_HAM_CONFIRMATION_PROMPT = 4)] = "ACCEPT_HAM_CONFIRMATION_PROMPT"),
         (i[(i.DISMISS_HAM_CONFIRMATION_PROMPT = 5)] = "DISMISS_HAM_CONFIRMATION_PROMPT"),
         i),
-    r = 21552 == n.j ? (((s = {}).REQUESTS = "REQUESTS"), (s.SPAM = "SPAM"), s) : null;
+    r = 221552 == n.j ? (((s = {}).REQUESTS = "REQUESTS"), (s.SPAM = "SPAM"), s) : null;

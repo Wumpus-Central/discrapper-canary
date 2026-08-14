@@ -11,27 +11,27 @@ var i = n(477900),
     h = n(43990),
     p = n(285796),
     m = n(192308),
-    A = n(231723),
-    f = n(825484),
+    f = n(231723),
+    A = n(825484),
     x = n(821609),
     g = n(283973),
     C = n(834730),
     y = n(789645),
     j = n(964486),
-    v = n(648027),
-    E = n(855446),
+    I = n(648027),
+    v = n(855446),
     N = n(793574),
-    I = n(688810),
-    T = n(975412),
-    b = n(392054),
-    _ = n(826673),
+    E = n(688810),
+    b = n(975412),
+    _ = n(392054),
+    T = n(826673),
     R = n(757293),
     S = n(174459),
-    P = n(272812),
-    L = n(652215),
-    O = n(375708),
-    w = n(361595),
-    M = n(867010);
+    L = n(272812),
+    O = n(652215),
+    P = n(375708),
+    M = n(361595),
+    w = n(867010);
 function D(e) {
     let {
         channel: t,
@@ -45,45 +45,45 @@ function D(e) {
     return l < 250
         ? (0, i.jsx)(U, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
-          ? (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
-          : (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
+          ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+          : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(I.f5, {
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(E.f5, {
         value: a,
-        children: (0, i.jsxs)(P.A, {
-            className: w.zr,
+        children: (0, i.jsxs)(L.A, {
+            className: M.zr,
             children: [
                 (0, i.jsx)(c.m, {
                     asContainer: !0,
-                    text: O.intl.string(O.t.qJvTKQ),
+                    text: P.intl.string(P.t.qJvTKQ),
                     children: (0, i.jsx)(d.D, {
                         onClick: () => {
-                            (0, T.A)({
+                            (0, b.A)({
                                 context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                                 openInPopout: n,
                                 analyticsLocation: r,
                             });
                         },
-                        className: w.F1,
+                        className: M.F1,
                         children: (0, i.jsx)("div", {
-                            className: w.zc,
+                            className: M.zc,
                             children: (0, i.jsx)(u.k, { size: "custom", color: "currentColor", width: 40, height: 40 }),
                         }),
                     }),
                 }),
                 (0, i.jsx)(h.N, {
-                    theme: L.NJ8.DARK,
+                    theme: O.NJ8.DARK,
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
-                            className: s()(e, w.lg),
+                            className: s()(e, M.lg),
                             children: (0, i.jsx)(p.a, {
                                 size: "md",
                                 color: "currentColor",
-                                className: w.yP,
+                                className: M.yP,
                                 secondaryColor: o.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
                             }),
                         }),
@@ -92,63 +92,63 @@ function U(e) {
         }),
     });
 }
-function k(e) {
+function V(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
-        S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("27574"),
-                    n.e("21149"),
-                    n.e("59957"),
-                    n.e("28136"),
-                    n.e("16084"),
+                    n.e("827574"),
+                    n.e("121149"),
+                    n.e("159957"),
+                    n.e("728136"),
+                    n.e("216084"),
                     n.e("22547"),
                 ]).then(n.bind(n, 1310));
-                return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: L.PE1.ACTIVITY_ENTRY_POINT_TILE });
+                return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
-            { contextKey: r ? A.KX : A.SY },
+            { contextKey: r ? f.KX : f.SY },
         );
     }
     function C() {
-        (0, T.A)({
+        (0, b.A)({
             context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
             openInPopout: r,
             analyticsLocation: d,
         });
     }
-    return (0, i.jsx)(I.f5, {
+    return (0, i.jsx)(E.f5, {
         value: c,
         children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
-            theme: L.NJ8.MIDNIGHT,
+            theme: O.NJ8.MIDNIGHT,
             children: (e) =>
-                (0, i.jsxs)(P.A, {
-                    className: s()(w.zr, w.co, e),
+                (0, i.jsxs)(L.A, {
+                    className: s()(M.zr, M.co, e),
                     children: [
-                        (0, i.jsx)("img", { src: M, className: w.Qw, alt: "" }),
-                        (0, i.jsxs)(f.e, {
+                        (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
+                        (0, i.jsxs)(A.e, {
                             justify: "center",
                             align: "center",
                             children: [
                                 (0, i.jsx)(x.$, {
                                     variant: "secondary",
                                     icon: g.R,
-                                    text: O.intl.string(O.t["EE+P0H"]),
+                                    text: P.intl.string(P.t["EE+P0H"]),
                                     onClick: p,
                                 }),
                                 o &&
                                     (0, i.jsx)(x.$, {
                                         variant: "secondary",
                                         icon: u.k,
-                                        text: O.intl.string(O.t.qnFavR),
+                                        text: P.intl.string(P.t.qnFavR),
                                         onClick: C,
                                     }),
                             ],
@@ -158,71 +158,71 @@ function k(e) {
         }),
     });
 }
-function V(e) {
+function k(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, j.Ay)(() => {
-        S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
     });
-    let u = (0, v.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
+    let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: h } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(I.f5, {
+    return (0, i.jsx)(E.f5, {
         value: h,
-        children: (0, i.jsxs)(P.A, {
-            className: w.zr,
+        children: (0, i.jsxs)(L.A, {
+            className: M.zr,
             children: [
                 o > 300
                     ? (0, i.jsx)(C.E, {
-                          className: w.R_,
+                          className: M.R_,
                           variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
-                          children: O.intl.string(O.t["7BKMcG"]),
+                          children: P.intl.string(P.t["7BKMcG"]),
                       })
                     : null,
                 (0, i.jsx)("div", {
-                    className: s()(w.Di, { [w.qy]: o <= 300 }),
+                    className: s()(M.Di, { [M.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
-                            E.C,
+                            v.C,
                             {
                                 context: p,
                                 activityItem: e,
-                                aspectRatio: E.C.AspectRatio.SIXTEEN_BY_NINE,
-                                animatedDivClass: w.KU,
-                                commandOrigin: b.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                aspectRatio: v.C.AspectRatio.SIXTEEN_BY_NINE,
+                                animatedDivClass: M.KU,
+                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
                     ),
                 }),
                 (0, i.jsxs)(d.D, {
-                    className: w.HI,
+                    className: M.HI,
                     onClick: function () {
-                        S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(R.A, {}),
-                        (0, i.jsx)(C.E, { variant: "text-sm/medium", children: O.intl.string(O.t["5E9SB9"]) }),
+                        (0, i.jsx)(C.E, { variant: "text-sm/medium", children: P.intl.string(P.t["5E9SB9"]) }),
                     ],
                 }),
                 (0, i.jsx)(d.D, {
-                    className: w.cG,
+                    className: M.cG,
                     onClick: function () {
-                        S.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,
                         }),
                             a();
                     },
-                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: w.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

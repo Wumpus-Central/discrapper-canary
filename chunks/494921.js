@@ -1,82 +1,81 @@
-"use strict";
-n.d(t, { openUploadError: () => m, D: () => T });
-var i = n(477900);
+n.d(e, { openUploadError: () => k, D: () => M });
+var o = n(477900);
 n(582128);
-var r = n(192308),
-    a = n(189213),
-    s = n(523527),
-    l = n(17928),
-    o = n(967198),
-    d = n(676279),
-    c = n(453771),
-    u = n(975571),
-    _ = n(831318),
-    E = n(652215),
+var i = n(192308),
+    c = n(189213),
+    a = n(523527),
+    r = n(17928),
+    s = n(967198),
+    l = n(676279),
+    d = n(453771),
+    p = n(975571),
+    b = n(831318),
+    f = n(652215),
     A = n(375708);
-let h = function (e) {
-    let { handleLearnMore: t, kestrelBeta: n, kestrelGA: r, effectiveMaxSize: a, ...s } = e,
-        h = (0, l.bG)([o.A], () => o.A.getGuildId()),
-        I = (0, c.Iu)({
-            guildId: h,
-            maxSize: a,
-            hideLearnMore: !0 === r,
+let u = function (t) {
+    let { handleLearnMore: e, kestrelBeta: n, kestrelGA: i, effectiveMaxSize: c, ...a } = t,
+        u = (0, r.bG)([s.A], () => s.A.getGuildId()),
+        _ = (0, d.Iu)({
+            guildId: u,
+            maxSize: c,
+            hideLearnMore: !0 === i,
             onClick: () => {
-                window.open(u.A.getArticleURL(E.MVz.NITRO_FAQ), "_blank");
+                window.open(p.A.getArticleURL(f.MVz.NITRO_FAQ), "_blank");
             },
         }),
-        f = (0, d.TM)()
+        O = (0, l.TM)()
             ? "https://cdn.discordapp.com/assets/content/951fb14c4f181e23caa1730b070ffd1b04bf13850e686221fc596c3d7fd7b234.mov"
             : "https://cdn.discordapp.com/assets/content/cedc17f03dee621e55eb1b301c68372f08ac64f32ce656ac5b9cbc0fc0d149f0.webm";
-    return (0, i.jsx)(_.A, {
+    return (0, o.jsx)(b.A, {
         title: A.intl.string(A.t["9C+41g"]),
-        subtitle: I,
-        graphic: { type: "video", src: f, loop: !0, loopAt: 2.1 },
+        subtitle: _,
+        graphic: { type: "video", src: O, loop: !0, loopAt: 2.1 },
         secondaryCTA: A.intl.string(A.t.ZnqyZ2),
-        onSecondaryClick: t,
+        onSecondaryClick: e,
         badgeType: !0 === n ? "beta" : null,
-        ...s,
+        ...a,
     });
 };
-var I = n(976860),
-    f = n(174459);
-function p(e) {
+var _ = n(976860),
+    O = n(174459);
+function L(t) {
     let {
-        title: t,
+        title: e,
         help: n,
-        showPremiumUpsell: r,
-        kestrelBeta: l,
-        kestrelGA: o,
-        effectiveMaxSize: d,
-        transitionState: c,
-        onClose: u,
-    } = e;
-    if (r)
-        return (0, i.jsx)(h, {
-            transitionState: c,
-            onClose: u,
+        showPremiumUpsell: i,
+        kestrelBeta: r,
+        kestrelGA: s,
+        effectiveMaxSize: l,
+        transitionState: d,
+        onClose: p,
+    } = t;
+    if (i)
+        return (0, o.jsx)(u, {
+            transitionState: d,
+            onClose: p,
             handleLearnMore: function () {
-                (0, s.A)(),
-                    u(),
-                    f.default.track(E.HAw.PREMIUM_PROMOTION_OPENED, {
-                        location_section: E.JJy.FILE_UPLOAD_UPSELL_MODAL,
-                        location_object: E.ZSU.NAVIGATION_LINK,
+                (0, a.A)(),
+                    p(),
+                    O.default.track(f.HAw.PREMIUM_PROMOTION_OPENED, {
+                        location_section: f.JJy.FILE_UPLOAD_UPSELL_MODAL,
+                        location_object: f.ZSU.NAVIGATION_LINK,
                     }),
-                    (0, I.pX)(E.BVt.APPLICATION_STORE);
+                    (0, _.pX)(f.BVt.APPLICATION_STORE);
             },
-            kestrelBeta: l,
-            kestrelGA: o,
-            effectiveMaxSize: d,
+            kestrelBeta: r,
+            kestrelGA: s,
+            effectiveMaxSize: l,
         });
-    let _ = !0 === l ? A.intl.string(A.t.bRYgjH) : t;
-    return (0, i.jsx)(a.Modal, {
-        title: _,
+    let b = !0 === r ? A.intl.string(A.t.bRYgjH) : e;
+    return (0, o.jsx)(c.Modal, {
+        title: b,
         subtitle: n,
-        transitionState: c,
-        actions: [{ text: A.intl.string(A.t["NX+WJN"]), onClick: u, variant: "primary" }],
-        onClose: u,
+        transitionState: d,
+        actions: [{ text: A.intl.string(A.t["NX+WJN"]), onClick: p, variant: "primary" }],
+        onClose: p,
     });
 }
-let T = "UPLOAD_ERROR_MODAL_KEY";
-function m(e) {
-    (0, r.openModal)((t) => (0, i.jsx)(p, { ...t, ...e }), { modalKey: T });
+let M = "UPLOAD_ERROR_MODAL_KEY";
+function k(t) {
+    (0, i.openModal)((e) => (0, o.jsx)(L, { ...e, ...t }), { modalKey: M });
 }

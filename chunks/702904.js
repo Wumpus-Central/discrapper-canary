@@ -25,7 +25,9 @@ function o() {
         });
     function e() {
         (0, r.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("39981"), n.e("44602"), n.e("25280")]).then(n.bind(n, 987482));
+            let { default: e } = await Promise.all([n.e("773708"), n.e("944602"), n.e("825280")]).then(
+                n.bind(n, 987482),
+            );
             return (t) => (0, i.jsx)(e, { source: "Screenshare Unavailable", ...t });
         });
     }

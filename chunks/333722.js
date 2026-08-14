@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { s: () => E, A: () => A });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(104510),
-    l = n(957485),
-    o = n(926268),
-    d = n(297264),
-    c = n(834730),
-    u = n(375708),
-    _ = n(179869);
-let E = [
-    { icon: s._, getText: () => u.intl.string(u.t.TZigSO) },
+i.d(t, { s: () => g, A: () => T });
+var s = i(477900);
+i(582128);
+var n = i(503698),
+    r = i.n(n),
+    a = i(104510),
+    l = i(957485),
+    o = i(926268),
+    c = i(297264),
+    d = i(834730),
+    u = i(375708),
+    m = i(179869);
+let g = [
+    { icon: a._, getText: () => u.intl.string(u.t.TZigSO) },
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, i.jsx)("img", { className: a()(t, _.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
+            return (0, s.jsx)("img", { className: r()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
         },
         getText: () => u.intl.string(u.t.hjQuV2),
     },
     { icon: l.i, getText: () => u.intl.string(u.t["2RUcaM"]) },
     { icon: o.C, getText: () => u.intl.string(u.t.bJoZKV) },
 ];
-function A(e) {
+function T(e) {
     let { className: t } = e;
-    return (0, i.jsxs)("div", {
-        className: a()(_.iE, t),
+    return (0, s.jsxs)("div", {
+        className: r()(m.iE, t),
         children: [
-            (0, i.jsx)(d.D, { className: _.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
-            (0, i.jsx)("div", {
-                className: _.kR,
-                children: E.map((e, t) => {
-                    let n = e.icon;
-                    return (0, i.jsxs)(
+            (0, s.jsx)(c.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
+            (0, s.jsx)("div", {
+                className: m.kR,
+                children: g.map((e, t) => {
+                    let i = e.icon;
+                    return (0, s.jsxs)(
                         "div",
                         {
-                            className: _.Nr,
+                            className: m.Nr,
                             children: [
-                                (0, i.jsx)(n, { className: _.Kk }),
-                                (0, i.jsx)(c.E, {
-                                    className: _.h_,
+                                (0, s.jsx)(i, { className: m.Kk }),
+                                (0, s.jsx)(d.E, {
+                                    className: m.h_,
                                     color: "text-muted",
                                     variant: "text-md/medium",
                                     children: e.getText(),

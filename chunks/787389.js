@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => f });
 var i = n(582128),
     r = n(17928),
-    a = n(522305),
-    s = n(627363),
-    l = n(113854),
-    o = n(91242),
-    d = n(207371),
-    c = n(933958),
-    u = n(748975),
-    _ = n(165610);
-function E(e) {
-    let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: E, runAfterLaunchAttempt: A } = e,
-        { data: h } = (0, s.YY)(t),
-        I = (0, r.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
-        f = (0, r.bG)([o.A], () => o.A.getMainFrame()),
-        p = (0, d.x)(h);
+    s = n(522305),
+    o = n(627363),
+    a = n(625180),
+    l = n(91242),
+    u = n(207371),
+    d = n(933958),
+    c = n(748975),
+    C = n(165610);
+function f(e) {
+    let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: f, runAfterLaunchAttempt: E } = e,
+        { data: m } = (0, o.YY)(t),
+        p = (0, r.bG)([d.Ay], () => d.Ay.getCurrentEmbeddedActivity()),
+        A = (0, r.bG)([l.A], () => l.A.getMainFrame()),
+        T = (0, u.x)(m);
     return i.useCallback(async () => {
-        if (null == t || null == h) return;
-        let e = null != I && I.applicationId === t;
-        if (null != f && f.applicationId === t)
-            return void l.A.updateFrameLayoutMode({ frameId: f.id, layoutMode: _.y0.FOCUSED });
+        if (null == t || null == m) return;
+        let e = null != p && p.applicationId === t;
+        if (null != A && A.applicationId === t)
+            return void a.A.updateFrameLayoutMode({ frameId: A.id, layoutMode: C.y0.FOCUSED });
         if (e) {
-            let e = I.location;
-            (0, u.A)("guild_id" in e ? e.guild_id : null, e);
+            let e = p.location;
+            (0, c.A)("guild_id" in e ? e.guild_id : null, e);
             return;
         }
-        E?.();
+        f?.();
         try {
-            p
-                ? await l.A.launchFrame({ applicationId: t, surface: _.sd })
-                : h?.bot?.id != null && (await (0, a.Q)({ appId: t, botId: h?.bot?.id, analyticsLocations: n ?? [] }));
+            T
+                ? await a.A.launchFrame({ applicationId: t, surface: C.sd })
+                : m?.bot?.id != null && (await (0, s.Q)({ appId: t, botId: m?.bot?.id, analyticsLocations: n ?? [] }));
         } catch (e) {}
-        A?.();
-    }, [n, h, t, p, I, f, A, E]);
+        E?.();
+    }, [n, m, t, T, p, A, E, f]);
 }

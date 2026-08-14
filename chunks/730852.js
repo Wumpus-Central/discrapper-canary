@@ -8,7 +8,7 @@ var i = n(228366),
     o = n(976860),
     d = n(288254),
     c = n(734057),
-    u = n(186295),
+    u = n(626822),
     _ = n(132500),
     E = n(192308),
     A = n(890615),
@@ -69,12 +69,35 @@ let P = {
                           let e = (0, b.Pd)(o, v.A, L.A);
                           if (e && o.isGuildStageVoice() && (0, f.xn)(o.id))
                               return (0, E.openModalLazy)(async () => {
-                                  let { default: e } = await n.e("43568").then(n.bind(n, 717523));
+                                  let { default: e } = await Promise.all([
+                                      n.e("578648"),
+                                      n.e("135085"),
+                                      n.e("424199"),
+                                      n.e("454048"),
+                                      n.e("543039"),
+                                      n.e("721690"),
+                                      n.e("295366"),
+                                      n.e("844695"),
+                                      n.e("155314"),
+                                      n.e("988077"),
+                                      n.e("832817"),
+                                      n.e("338835"),
+                                      n.e("60898"),
+                                      n.e("901555"),
+                                      n.e("558724"),
+                                      n.e("829177"),
+                                      n.e("232551"),
+                                      n.e("904723"),
+                                      n.e("313681"),
+                                      n.e("34472"),
+                                      n.e("588940"),
+                                      n.e("643568"),
+                                  ]).then(n.bind(n, 717523));
                                   return (t) => e({ channel: o, ...t });
                               });
                           if (e)
                               return (0, E.openModalLazy)(async () => {
-                                  let { default: e } = await n.e("54207").then(n.bind(n, 361698));
+                                  let { default: e } = await n.e("354207").then(n.bind(n, 361698));
                                   return (t) => e(t);
                               });
                           if (!(0, A.A)(o, D.A)) return;

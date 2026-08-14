@@ -1,5 +1,4 @@
-"use strict";
-function i(e) {
+function r(e) {
     return {
         width: `${e.w}px`,
         height: `${e.h}px`,
@@ -8,4 +7,4 @@ function i(e) {
         backgroundRepeat: "no-repeat",
     };
 }
-n.d(t, { u: () => i }), n(582128);
+n.d(t, { u: () => r }), n(582128);

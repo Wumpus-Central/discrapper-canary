@@ -2220,7 +2220,7 @@ function nN(e) {
                     text: j.intl.string(j.t["3glT6Z"]),
                     onClick: () => {
                         (0, t4.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("10788"), n.e("40243")]).then(
+                            let { default: e } = await Promise.all([n.e("710788"), n.e("140243")]).then(
                                 n.bind(n, 547166),
                             );
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
@@ -2238,7 +2238,7 @@ function nN(e) {
                 text: j.intl.string(j.t["5MBJ5M"]),
                 onClick: () => {
                     (0, t4.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("87407"), n.e("2504")]).then(n.bind(n, 333179));
+                        let { default: e } = await Promise.all([n.e("687407"), n.e("802504")]).then(n.bind(n, 333179));
                         return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                     });
                 },

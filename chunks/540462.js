@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(730852),
     I = n(401843),
     v = n(817281),
-    E = n(820284),
-    N = n(765671),
+    N = n(820284),
+    E = n(765671),
     b = n(475743),
     _ = n(646865),
     T = n(10716),
@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(47294),
     O = n(793574),
     P = n(95561),
-    w = n(688810),
-    M = n(139286),
+    M = n(688810),
+    w = n(139286),
     D = n(587895),
     U = n(235986),
     V = n(558845),
@@ -74,8 +74,8 @@ var i = n(477900),
     ej = n(174459),
     eI = n(871237),
     ev = n(625494),
-    eE = n(723702),
-    eN = n(19575),
+    eN = n(723702),
+    eE = n(19575),
     eb = n(475815),
     e_ = n(198052),
     eT = n(520698),
@@ -84,8 +84,8 @@ var i = n(477900),
     eL = n(681281),
     eO = n(587837),
     eP = n(675853),
-    ew = n(384059),
-    eM = n(480890),
+    eM = n(384059),
+    ew = n(480890),
     eD = n(806931),
     eU = n(652215),
     eV = n(375708),
@@ -129,7 +129,7 @@ function ez(e) {
                           direction: h,
                           className: ek.jZ,
                           onClick: () => {
-                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.CHAT, p), r();
+                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.CHAT, p), r();
                           },
                       }),
                   })
@@ -160,7 +160,7 @@ class eH extends l.PureComponent {
     componentWillUnmount() {
         this._videoBackgroundTooltipTimeout.stop(),
             this.currentDocument.removeEventListener(eb.Wb, this.handleFullScreenChange),
-            (this.inPopout && (0, eE.isMac)()) || this.maybeLeaveFullScreen();
+            (this.inPopout && (0, eN.isMac)()) || this.maybeLeaveFullScreen();
     }
     componentDidUpdate(e) {
         let { participantsOpen: t, inCall: n, mode: i, layout: l } = this.props,
@@ -174,10 +174,10 @@ class eH extends l.PureComponent {
             e.inCall && !n && this.inPopout && g.h.wait(() => this.handleClosePopout());
     }
     get nativePopoutSupported() {
-        return eE.isPlatformEmbedded && eN.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
+        return eN.isPlatformEmbedded && eE.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
     }
     get popoutSupported() {
-        return !eE.isPlatformEmbedded || this.nativePopoutSupported;
+        return !eN.isPlatformEmbedded || this.nativePopoutSupported;
     }
     get popoutOpen() {
         let { popoutWindow: e } = this.props;
@@ -255,7 +255,7 @@ class eH extends l.PureComponent {
         this.props.layout === eU.DUB.FULL_SCREEN && this.handleFullScreen();
     };
     trackCallTileContextMenuImpression = (e, t) => {
-        (0, M.x)({
+        (0, w.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
@@ -267,7 +267,7 @@ class eH extends l.PureComponent {
     };
     getCallTileMenuActionHandler = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eD.GK.CONTEXT_MENU;
-        return (0, eM.s)(e, O.A.CHANNEL_CALL, {
+        return (0, ew.s)(e, O.A.CHANNEL_CALL, {
             entrypoint: i,
             tileType: n,
             targetUserId: t.type !== eD.lp.ACTIVITY ? t.user.id : void 0,
@@ -284,11 +284,11 @@ class eH extends l.PureComponent {
                         t,
                         async () => {
                             let { default: t } = await Promise.all([
-                                n.e("89673"),
-                                n.e("45996"),
-                                n.e("29422"),
+                                n.e("189673"),
+                                n.e("245996"),
+                                n.e("529422"),
                                 n.e("58315"),
-                                n.e("66692"),
+                                n.e("766692"),
                             ]).then(n.bind(n, 796175));
                             return (n) =>
                                 (0, i.jsx)(t, {
@@ -314,7 +314,7 @@ class eH extends l.PureComponent {
                 if (null != u) {
                     if (l)
                         return (0, X.r)(t, u, s, d, (e, t) =>
-                            (0, eM.Y)({
+                            (0, ew.Y)({
                                 menuItemProps: t,
                                 menuName: e,
                                 entrypoint: eD.GK.THREE_DOT,
@@ -329,35 +329,35 @@ class eH extends l.PureComponent {
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("97422"),
-                                        n.e("97705"),
-                                        n.e("26132"),
-                                        n.e("46652"),
-                                        n.e("93190"),
-                                        n.e("91763"),
-                                        n.e("8757"),
-                                        n.e("38730"),
-                                        n.e("85968"),
-                                        n.e("89673"),
-                                        n.e("29787"),
-                                        n.e("82073"),
-                                        n.e("97558"),
-                                        n.e("91994"),
-                                        n.e("76665"),
-                                        n.e("76273"),
-                                        n.e("47502"),
-                                        n.e("45996"),
-                                        n.e("23427"),
-                                        n.e("29422"),
-                                        n.e("7059"),
-                                        n.e("72883"),
+                                        n.e("158696"),
+                                        n.e("397705"),
+                                        n.e("926132"),
+                                        n.e("146652"),
+                                        n.e("893190"),
+                                        n.e("391763"),
+                                        n.e("708757"),
+                                        n.e("585968"),
+                                        n.e("189673"),
+                                        n.e("238730"),
+                                        n.e("229787"),
+                                        n.e("882073"),
+                                        n.e("797558"),
+                                        n.e("691994"),
+                                        n.e("576665"),
+                                        n.e("776273"),
+                                        n.e("947502"),
+                                        n.e("245996"),
+                                        n.e("823427"),
+                                        n.e("529422"),
+                                        n.e("172883"),
+                                        n.e("307059"),
                                         n.e("21106"),
-                                        n.e("87048"),
-                                        n.e("90434"),
-                                        n.e("98199"),
+                                        n.e("187048"),
+                                        n.e("690434"),
+                                        n.e("298199"),
                                         n.e("17244"),
-                                        n.e("64464"),
-                                        n.e("39778"),
+                                        n.e("864464"),
+                                        n.e("439778"),
                                     ]).then(n.bind(n, 385913));
                                     return (n) =>
                                         (0, i.jsx)(t, {
@@ -381,27 +381,27 @@ class eH extends l.PureComponent {
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("97422"),
-                                        n.e("97705"),
-                                        n.e("26132"),
-                                        n.e("46652"),
-                                        n.e("93190"),
-                                        n.e("8757"),
-                                        n.e("85968"),
-                                        n.e("89673"),
-                                        n.e("29787"),
-                                        n.e("82073"),
-                                        n.e("97558"),
-                                        n.e("91994"),
-                                        n.e("76665"),
-                                        n.e("76273"),
-                                        n.e("24198"),
-                                        n.e("45996"),
-                                        n.e("23427"),
-                                        n.e("29422"),
-                                        n.e("7059"),
-                                        n.e("72883"),
-                                        n.e("28864"),
+                                        n.e("158696"),
+                                        n.e("397705"),
+                                        n.e("926132"),
+                                        n.e("146652"),
+                                        n.e("893190"),
+                                        n.e("708757"),
+                                        n.e("585968"),
+                                        n.e("189673"),
+                                        n.e("229787"),
+                                        n.e("882073"),
+                                        n.e("797558"),
+                                        n.e("691994"),
+                                        n.e("576665"),
+                                        n.e("776273"),
+                                        n.e("624198"),
+                                        n.e("245996"),
+                                        n.e("823427"),
+                                        n.e("529422"),
+                                        n.e("172883"),
+                                        n.e("307059"),
+                                        n.e("528864"),
                                     ]).then(n.bind(n, 778595));
                                     return (n) =>
                                         (0, i.jsx)(t, {
@@ -431,32 +431,32 @@ class eH extends l.PureComponent {
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("97705"),
-                                            n.e("26132"),
-                                            n.e("46652"),
-                                            n.e("93190"),
-                                            n.e("8757"),
-                                            n.e("85968"),
-                                            n.e("89673"),
-                                            n.e("29787"),
-                                            n.e("82073"),
-                                            n.e("97558"),
-                                            n.e("91994"),
-                                            n.e("76665"),
-                                            n.e("24198"),
-                                            n.e("45996"),
-                                            n.e("23427"),
-                                            n.e("49145"),
-                                            n.e("29422"),
-                                            n.e("7059"),
-                                            n.e("43116"),
-                                            n.e("70314"),
+                                            n.e("397705"),
+                                            n.e("926132"),
+                                            n.e("146652"),
+                                            n.e("893190"),
+                                            n.e("708757"),
+                                            n.e("585968"),
+                                            n.e("189673"),
+                                            n.e("229787"),
+                                            n.e("882073"),
+                                            n.e("797558"),
+                                            n.e("691994"),
+                                            n.e("576665"),
+                                            n.e("624198"),
+                                            n.e("245996"),
+                                            n.e("823427"),
+                                            n.e("449145"),
+                                            n.e("529422"),
+                                            n.e("307059"),
+                                            n.e("343116"),
+                                            n.e("470314"),
                                             n.e("70515"),
-                                            n.e("4524"),
-                                            n.e("54148"),
-                                            n.e("66939"),
-                                            n.e("17334"),
-                                            n.e("84841"),
+                                            n.e("404524"),
+                                            n.e("654148"),
+                                            n.e("666939"),
+                                            n.e("717334"),
+                                            n.e("184841"),
                                         ]).then(n.bind(n, 107632));
                                         return (n) =>
                                             (0, i.jsx)(t, {
@@ -506,7 +506,7 @@ class eH extends l.PureComponent {
         null == t || (0, _.f)() ? n() : (0, L.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
-        (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eU.MLl.CHANNEL_CALL_POPOUT, e);
+        (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eU.MLl.CHANNEL_CALL_POPOUT, e);
     };
     handleClosePopout = () => {
         Y.close(eU.MLl.CHANNEL_CALL_POPOUT);
@@ -577,10 +577,10 @@ class eH extends l.PureComponent {
                           popoutOpen: this.popoutOpen,
                           className: ek.iq,
                           onOpenPopout: () => {
-                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.POPOUT, !0), this.handleOpenPopout();
+                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.POPOUT, !0), this.handleOpenPopout();
                           },
                           onClosePopout: () => {
-                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.POPOUT, !1), this.handleClosePopout();
+                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.POPOUT, !1), this.handleClosePopout();
                           },
                       })
                     : null,
@@ -591,9 +591,9 @@ class eH extends l.PureComponent {
                           guestWindow: e,
                           className: ek.iq,
                           onClick: () => {
-                              (0, ew.X)(
+                              (0, eM.X)(
                                   O.A.VOICE_CONTROL_TRAY,
-                                  ew.O.FULL_SCREEN,
+                                  eM.O.FULL_SCREEN,
                                   this.props.layout !== eU.DUB.FULL_SCREEN,
                               ),
                                   this.handleFullScreen();
@@ -669,8 +669,8 @@ class eH extends l.PureComponent {
             I = l && s === eU._Of.VIDEO,
             v = (A?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
-        let E = !l || !(this.popoutOpen && !this.inPopout),
-            N = !m && l && !y && e.idle,
+        let N = !l || !(this.popoutOpen && !this.inPopout),
+            E = !m && l && !y && e.idle,
             b = g
                 ? (0, i.jsx)(W.A, { channelId: u.id, popoutType: t, idle: e.idle })
                 : (0, i.jsx)(J.A, {
@@ -704,8 +704,8 @@ class eH extends l.PureComponent {
             screenMessage: this.screenMessage,
             disableGradients: !l || y,
             hideControls: C,
-            idle: N,
-            children: E && b,
+            idle: E,
+            children: N && b,
         });
     }
     render() {
@@ -771,9 +771,9 @@ class eH extends l.PureComponent {
 }
 let eW = function (e) {
     let { channel: t, renderExternalHeader: n, maxHeight: a, canPopout: s = !0, popoutType: r } = e,
-        { width: o = 0, ref: c } = (0, N.Ay)(),
-        { width: h = 0, height: p = 0, ref: g } = (0, N.Ay)(),
-        { ref: C } = (0, N.Ay)(),
+        { width: o = 0, ref: c } = (0, E.Ay)(),
+        { width: h = 0, height: p = 0, ref: g } = (0, E.Ay)(),
+        { ref: C } = (0, E.Ay)(),
         y = (0, $.Us)(),
         j = (0, G.A)(),
         I = (0, d.bG)([eg.Ay], () => (j?.channelId ?? eg.Ay.getVoiceChannelId()) === t.id),
@@ -782,7 +782,7 @@ let eW = function (e) {
             filteredParticipants: R,
             participantsVersion: L,
             mode: P,
-            layout: M,
+            layout: w,
             participantsOpen: D,
             chatOpen: U,
             selectedParticipant: B,
@@ -832,7 +832,7 @@ let eW = function (e) {
     }, [el, ea]);
     let es = (0, d.bG)([S.Ay], () => S.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         er = (0, V.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: eo } = (0, w.Ay)(O.A.CHANNEL_CALL),
+        { analyticsLocations: eo } = (0, M.Ay)(O.A.CHANNEL_CALL),
         ec = S.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: ed } = H.A.useExperiment({ guildId: t.guild_id, location: "ChannelCall" }),
         eu = (0, d.bG)([z.A], () => z.A.isVisible(t.id)),
@@ -841,9 +841,9 @@ let eW = function (e) {
             return null != e && null == e.position;
         }),
         { theme: eC } = (0, x.wR)();
-    return (0, i.jsx)(w.f5, {
+    return (0, i.jsx)(M.f5, {
         value: eo,
-        children: (0, i.jsx)(E.A, {
+        children: (0, i.jsx)(N.A, {
             page: eU.liQ.CHANNEL_CALL,
             children: (0, i.jsx)(eR.qh, {
                 children: (0, i.jsxs)(eP.CB, {
@@ -863,7 +863,7 @@ let eW = function (e) {
                             participants: _,
                             filteredParticipants: R,
                             participantsVersion: L,
-                            layout: M,
+                            layout: w,
                             chatOpen: U,
                             maxSidebarWidth: o - 550,
                             currentUserId: q,

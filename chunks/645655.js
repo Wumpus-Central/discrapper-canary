@@ -1,23 +1,23 @@
-l.d(t, { A: () => r });
-var a = l(627968),
-    n = l(192308),
-    i = l(315240);
-function r(e, t) {
-    let { clips: r, onBeforeDelete: s, onAfterDelete: o } = t;
+l.d(t, { A: () => s });
+var n = l(477900),
+    a = l(192308),
+    i = l(539572);
+function s(e, t) {
+    let { clips: s, onBeforeDelete: r, onAfterDelete: c } = t;
     if (e?.shiftKey) {
-        s?.(), r.forEach((e) => (0, i.oH)(e)), o?.();
+        r?.(), s.forEach((e) => (0, i.oH)(e)), c?.();
         return;
     }
-    (0, n.openModalLazy)(
+    (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await l.e("13367").then(l.bind(l, 223818));
+            let { default: e } = await l.e("913367").then(l.bind(l, 223818));
             return (t) =>
-                (0, a.jsx)(e, {
-                    clips: r,
+                (0, n.jsx)(e, {
+                    clips: s,
                     ...t,
-                    onBeforeDelete: s,
+                    onBeforeDelete: r,
                     onAfterDelete: async () => {
-                        await t.onClose(), o?.();
+                        await t.onClose(), c?.();
                     },
                 });
         },

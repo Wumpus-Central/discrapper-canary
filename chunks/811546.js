@@ -10,7 +10,7 @@ function r(t, e) {
     let r = s.A.getGuild(t);
     l.A.getGuildProductFetchState(e) === l.e.FETCHED && l.A.getGuildProduct(e)?.published !== !0 && null != r
         ? (0, a.openModalLazy)(async () => {
-              let { default: t } = await u.e("57968").then(u.bind(u, 558067));
+              let { default: t } = await u.e("257968").then(u.bind(u, 558067));
               return (e) => (0, d.jsx)(t, { ...e });
           })
         : r?.features.has(n.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)

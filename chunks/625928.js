@@ -1,130 +1,130 @@
 "use strict";
-n.d(t, { A: () => b });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(14877),
+n.d(t, { A: () => O });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(14877),
     o = n(17928),
-    d = n(866665),
+    u = n(866665),
     c = n(403581),
-    u = n(834730),
-    _ = n(140735),
-    E = n(793574),
-    A = n(688810),
-    h = n(135621),
-    I = n(287809),
-    f = n(428262),
-    p = n(192308),
-    T = n(939249),
-    m = n(404374),
-    g = n(734057),
-    S = n(309010),
-    N = n(174459),
-    C = n(652215),
-    O = n(375708),
-    R = n(820051);
-function L() {
-    (0, p.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("35257"), n.e("66920")]).then(n.bind(n, 220763));
-        return (t) => (0, i.jsx)(e, { ...t });
+    d = n(834730),
+    h = n(140735),
+    m = n(793574),
+    f = n(688810),
+    p = n(135621),
+    g = n(287809),
+    x = n(158045),
+    A = n(192308),
+    C = n(939249),
+    E = n(404374),
+    I = n(734057),
+    y = n(309010),
+    v = n(174459),
+    S = n(652215),
+    N = n(375708),
+    _ = n(820051);
+function T() {
+    (0, A.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
+        return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function y(e) {
+function j(e) {
     let { className: t, iconOnly: n } = e,
-        a = (0, o.bG)([S.Ay, g.A], () => {
-            let e = g.A.getChannel(S.Ay.getChannelId());
-            return e?.isPrivate() ? C.liQ.DM_CHANNEL : C.liQ.GUILD_CHANNEL;
+        s = (0, o.bG)([y.Ay, I.A], () => {
+            let e = I.A.getChannel(y.Ay.getChannelId());
+            return e?.isPrivate() ? S.liQ.DM_CHANNEL : S.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: l } = (0, A.Ay)(E.A.PREMIUM_UPSELL);
+        { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
-        r.useEffect(() => {
-            N.default.track(C.HAw.PREMIUM_UPSELL_VIEWED, {
+        i.useEffect(() => {
+            v.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: a, location_section: C.JJy.CHANNEL_TEXT_AREA },
-                location_stack: l,
+                location: { location_page: s, location_section: S.JJy.CHANNEL_TEXT_AREA },
+                location_stack: a,
             });
-        }, [a, l]),
+        }, [s, a]),
         n
-            ? (0, i.jsx)(T.D, {
-                  className: R.e7,
-                  onClick: () => L(),
-                  children: (0, i.jsx)(d.m, {
-                      text: O.intl.string(O.t["+eFIjX"]),
+            ? (0, l.jsx)(C.D, {
+                  className: _.e7,
+                  onClick: () => T(),
+                  children: (0, l.jsx)(u.m, {
+                      text: N.intl.string(N.t["+eFIjX"]),
                       position: "top",
-                      children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: R.M2 }),
+                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: _.M2 }),
                   }),
               })
-            : (0, i.jsxs)("div", {
-                  className: s()(R.zr, t),
+            : (0, l.jsxs)("div", {
+                  className: r()(_.zr, t),
                   children: [
-                      (0, i.jsx)(c.t, { size: "md", className: R.M2, color: m.k0.PREMIUM_TIER_2 }),
-                      (0, i.jsx)(u.E, {
-                          className: R.Qq,
+                      (0, l.jsx)(c.t, { size: "md", className: _.M2, color: E.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(d.E, {
+                          className: _.Qq,
                           variant: "text-sm/normal",
-                          children: O.intl.format(O.t.BNAIBU, { onLearnMore: L }),
+                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: T }),
                       }),
                   ],
               })
     );
 }
-var D = n(263582),
-    v = n(835547);
-function b(e) {
-    let { type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a, className: p } = e,
-        T = (0, o.bG)([I.default], () => f.Ay.canUseIncreasedMessageLength(I.default.getCurrentUser())),
-        m = (0, h.A)(),
-        g = r ?? m,
-        S = a ?? r ?? m / 10,
-        N = n.length,
-        R = null != t.upsellLongMessages && (N ?? 0) > C.uvi && T,
-        L = null != t.upsellLongMessages && !T,
-        b = g - N,
-        M = b > S;
-    (0, l.$)({ currentLength: N, maxLength: g, message: O.intl.string(O.t.c2Jqed) });
-    let P =
-            0 === b
-                ? O.intl.string(O.t.tU6YQ7)
-                : b > 0
-                  ? O.intl.formatToPlainString(O.t.qH8uFW, { count: b })
-                  : O.intl.string(O.t.YSRIqa),
-        { analyticsLocations: U } = (0, A.Ay)(E.A.CHARACTER_COUNT),
-        { isVisible: w } = (0, D.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a });
-    if (!w) return null;
-    let G = b >= 0;
-    return (0, i.jsx)(A.f5, {
-        value: U,
-        children: (0, i.jsxs)("div", {
-            className: s()(p, v.Dq),
+var b = n(263582),
+    R = n(835547);
+function O(e) {
+    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: A } = e,
+        C = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        E = (0, p.A)(),
+        I = i ?? E,
+        y = s ?? i ?? E / 10,
+        v = n.length,
+        _ = null != t.upsellLongMessages && (v ?? 0) > S.uvi && C,
+        T = null != t.upsellLongMessages && !C,
+        O = I - v,
+        M = O > y;
+    (0, a.$)({ currentLength: v, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
+    let w =
+            0 === O
+                ? N.intl.string(N.t.tU6YQ7)
+                : O > 0
+                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: O })
+                  : N.intl.string(N.t.YSRIqa),
+        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { isVisible: k } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
+    if (!k) return null;
+    let P = O >= 0;
+    return (0, l.jsx)(f.f5, {
+        value: L,
+        children: (0, l.jsxs)("div", {
+            className: r()(A, R.Dq),
             children: [
-                (0, i.jsxs)("div", {
-                    className: v.SW,
+                (0, l.jsxs)("div", {
+                    className: R.SW,
                     children: [
-                        R && G
-                            ? (0, i.jsx)(d.m, {
-                                  text: O.intl.formatToPlainString(O.t.vcvHa0, { maxLength: g }),
+                        _ && P
+                            ? (0, l.jsx)(u.m, {
+                                  text: N.intl.formatToPlainString(N.t.vcvHa0, { maxLength: I }),
                                   position: "top",
-                                  children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: v.y }),
+                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: R.y }),
                               })
                             : null,
                         M
                             ? null
-                            : (0, i.jsx)(d.m, {
-                                  text: P,
+                            : (0, l.jsx)(u.m, {
+                                  text: w,
                                   position: "top",
-                                  children: (0, i.jsx)(u.E, {
+                                  children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
-                                      color: G ? "text-default" : "text-feedback-critical",
-                                      children: b,
+                                      color: P ? "text-default" : "text-feedback-critical",
+                                      children: O,
                                   }),
                               }),
                     ],
                 }),
-                (0, i.jsx)(_.A, { "aria-live": "polite", children: O.intl.format(O.t.qH8uFW, { count: b }) }),
-                L && !M
-                    ? (0, i.jsx)(y, { className: v.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: O }) }),
+                T && !M
+                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
                     : null,
             ],
         }),

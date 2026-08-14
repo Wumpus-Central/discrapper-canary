@@ -1,88 +1,87 @@
-"use strict";
-n.d(t, { Ay: () => L, Jz: () => D });
+n.d(t, { Ay: () => f, Jz: () => g });
 var i = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
+var l = n(503698),
+    r = n.n(l),
     s = n(284009),
-    l = n.n(s),
-    o = n(17928),
-    d = n(417098),
-    c = n(736653),
+    a = n.n(s),
+    E = n(17928);
+if (221552 == n.j) var o = n(417098);
+var c = n(736653),
     u = n(573648),
     _ = n(619006),
-    E = n(145643),
-    A = n(826673),
-    h = n(468689),
+    A = n(145643),
+    T = n(826673),
+    d = n(468689),
     I = n(773669),
-    f = n(317525),
-    p = n(71393),
-    T = n(967198),
-    m = n(177141),
-    g = n(488926),
-    S = n(652215),
-    N = n(49999),
-    C = n(230451),
-    R = n(375708),
-    O = n(789167);
-function L(e) {
-    let { markAsDismissed: t, recurringDismiss: n, platformType: r, noticeType: s } = e,
-        _ = T.A.getGuildId(),
-        E = (0, c.DP)(),
-        A = (0, o.bG)([I.default], () => I.default.locale);
-    l()(null != _, "Guild Id must be defined");
-    let f = u.A.get(r),
-        p = f.migrationData?.deprecationDate?.toLocaleDateString(A, { month: "long", day: "numeric", year: "numeric" });
-    return (0, i.jsxs)(d.$T, {
-        color: d.Hv.WARNING,
+    N = n(317525),
+    R = n(71393),
+    S = n(967198),
+    O = n(177141),
+    C = n(488926),
+    D = n(652215),
+    m = n(49999),
+    p = n(230451),
+    P = n(375708),
+    M = n(789167);
+function f(e) {
+    let { markAsDismissed: t, recurringDismiss: n, platformType: l, noticeType: s } = e,
+        _ = S.A.getGuildId(),
+        A = (0, c.DP)(),
+        T = (0, E.bG)([I.default], () => I.default.locale);
+    a()(null != _, "Guild Id must be defined");
+    let N = u.A.get(l),
+        R = N.migrationData?.deprecationDate?.toLocaleDateString(T, { month: "long", day: "numeric", year: "numeric" });
+    return (0, i.jsxs)(o.$T, {
+        color: o.Hv.WARNING,
         children: [
-            (0, i.jsx)(d.PM, { onClick: () => n(N.i.USER_DISMISS), noticeType: s }),
+            (0, i.jsx)(o.PM, { onClick: () => n(m.i.USER_DISMISS), noticeType: s }),
             (0, i.jsx)("img", {
-                src: "light" === E ? f?.icon.blackSVG : f?.icon.whiteSVG,
-                alt: f?.name,
-                className: a()(O.tV, O.Y5),
+                src: "light" === A ? N?.icon.blackSVG : N?.icon.whiteSVG,
+                alt: N?.name,
+                className: r()(M.tV, M.Y5),
             }),
-            R.intl.format(C.default.iMCLA5, { connectionName: f?.name, date: p }),
-            (0, i.jsx)(d.Z_, {
+            P.intl.format(p.default.iMCLA5, { connectionName: N?.name, date: R }),
+            (0, i.jsx)(o.Z_, {
                 onClick: () => {
-                    t(N.i.TAKE_ACTION), h.A.open(_, S.BEX.ROLES);
+                    t(m.i.TAKE_ACTION), d.A.open(_, D.BEX.ROLES);
                 },
                 noticeType: s,
-                className: O.NS,
-                children: R.intl.string(C.default.kxlybP),
+                className: M.NS,
+                children: P.intl.string(p.default.kxlybP),
             }),
-            (0, i.jsx)(d.zr, {
+            (0, i.jsx)(o.zr, {
                 onClick: () => {
-                    n(N.i.USER_DISMISS);
+                    n(m.i.USER_DISMISS);
                 },
-                className: O.go,
-                children: R.intl.string(C.default["8qJAeT"]),
+                className: M.go,
+                children: P.intl.string(p.default["8qJAeT"]),
             }),
         ],
     });
 }
-function D(e) {
+function g(e) {
     var t;
     let n,
-        { currentUser: i, selectedGuildId: r, platformTypes: a, dismissibleContent: s, noticeType: l } = e,
-        o = u.A.get(a[0]);
+        { currentUser: i, selectedGuildId: l, platformTypes: r, dismissibleContent: s, noticeType: a } = e,
+        E = u.A.get(r[0]);
     if (
-        !o.migrationData?.getMigrationExperimentEnabled("guildRoleDeprecationNoticePredicate") ||
-        m.Ay.isNoticeDismissed(l) ||
-        (0, A.k8)(s)
+        !E.migrationData?.getMigrationExperimentEnabled("guildRoleDeprecationNoticePredicate") ||
+        O.Ay.isNoticeDismissed(a) ||
+        (0, T.k8)(s)
     )
         return !1;
-    let d = null != r ? p.A.getGuild(r) : null;
+    let o = null != l ? R.A.getGuild(l) : null;
     return (
-        null != d &&
-        !!(0, g.$3)({ permission: S.xBc.ADMINISTRATOR, user: i, context: d }) &&
-        ((t = f.A.getSortedRoles(d.id).filter((e) => null === e.tags.guild_connections)),
+        null != o &&
+        !!(0, C.$3)({ permission: D.xBc.ADMINISTRATOR, user: i, context: o }) &&
+        ((t = N.A.getSortedRoles(o.id).filter((e) => null === e.tags.guild_connections)),
         t.forEach((e) => {
-            null == E.A.getGuildRoleConnectionsConfiguration(e.id) && (0, _.os)(e.guildId, e.id);
+            null == A.A.getGuildRoleConnectionsConfiguration(e.id) && (0, _.os)(e.guildId, e.id);
         }),
         !!(
-            null != (n = t.map((e) => E.A.getGuildRoleConnectionsConfiguration(e.id))) &&
-            n.some((e) => e?.some((e) => e.some((e) => a.some((t) => t === e.connectionType))))
+            null != (n = t.map((e) => A.A.getGuildRoleConnectionsConfiguration(e.id))) &&
+            n.some((e) => e?.some((e) => e.some((e) => r.some((t) => t === e.connectionType))))
         ))
     );
 }

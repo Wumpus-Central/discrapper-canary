@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => a, h: () => r });
-var i = n(477900);
-function r(e) {
-    let { size: t, horizontal: n = !1 } = e,
-        r = n ? t : 1,
-        a = n ? 1 : t;
-    return (0, i.jsx)("span", { style: { display: "block", width: r, minWidth: r, height: a, minHeight: a } });
+t.d(s, { A: () => h, h: () => e });
+var p = t(477900);
+function e(i) {
+    let { size: s, horizontal: t = !1 } = i,
+        e = t ? s : 1,
+        h = t ? 1 : s;
+    return (0, p.jsx)("span", { style: { display: "block", width: e, minWidth: e, height: h, minHeight: h } });
 }
-n(582128);
-let a = r;
+t(582128);
+let h = e;

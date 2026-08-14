@@ -16,7 +16,7 @@ var i = n(702841),
     y = n.n(p),
     h = n(827343),
     T = n(730852),
-    I = n(293246),
+    I = n(626822),
     S = n(469802),
     b = n(350701),
     G = n(857253),
@@ -97,22 +97,22 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("97509"),
-                                          n.e("25146"),
-                                          n.e("95429"),
-                                          n.e("39713"),
-                                          n.e("48370"),
-                                          n.e("24227"),
+                                          n.e("176729"),
+                                          n.e("125146"),
+                                          n.e("595429"),
+                                          n.e("865037"),
+                                          n.e("748370"),
+                                          n.e("924227"),
                                       ]).then(n.bind(n, 832910));
                                       return (n) => (0, l.jsx)(t, { ...n, channel: e });
                                   })
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("76279"),
-                                          n.e("47661"),
-                                          n.e("71210"),
-                                          n.e("38035"),
+                                          n.e("676279"),
+                                          n.e("147661"),
+                                          n.e("571210"),
+                                          n.e("538035"),
                                       ]).then(n.bind(n, 14860));
                                       return (n) => (0, l.jsx)(t, { ...n, platform: i.type, channel: e });
                                   });

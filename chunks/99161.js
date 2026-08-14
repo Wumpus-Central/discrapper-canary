@@ -39,7 +39,7 @@ t.d(e, {
                       } = i;
                       (0, a.openModalLazy)(
                           async () => {
-                              let { default: i } = await Promise.all([t.e("97403"), t.e("62754")]).then(
+                              let { default: i } = await Promise.all([t.e("997403"), t.e("262754")]).then(
                                   t.bind(t, 424185),
                               );
                               return (t) =>
@@ -120,7 +120,7 @@ t.d(e, {
         },
     openSocialLayerStorefrontAnnouncementModal: () => p,
 });
-var n = t(627968),
+var n = t(477900),
     a = t(192308),
     o = t(391048),
     l = t(636099),
@@ -132,7 +132,9 @@ var u = t(652215);
 function p() {
     (0, a.openModalLazy)(
         async () => {
-            let { default: i } = await Promise.all([t.e("63229"), t.e("47799"), t.e("1218")]).then(t.bind(t, 839225));
+            let { default: i } = await Promise.all([t.e("515973"), t.e("847799"), t.e("701218")]).then(
+                t.bind(t, 839225),
+            );
             return (e) => (0, n.jsx)(i, { ...e });
         },
         { modalKey: "slayer-storefront-announcement-modal" },

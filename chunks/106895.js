@@ -16,7 +16,7 @@ let m = function (t) {
             () => (
                 u(),
                 (0, l.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([i.e("21060"), i.e("93154")]).then(i.bind(i, 428185));
+                    let { default: t } = await Promise.all([i.e("421060"), i.e("193154")]).then(i.bind(i, 428185));
                     return (i) => (0, n.jsx)(t, { ...i, channelId: a.id, application: m });
                 })
             ),

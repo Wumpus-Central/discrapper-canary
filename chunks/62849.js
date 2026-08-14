@@ -89,7 +89,7 @@ function M(e) {
             onContextMenu: function (e) {
                 let r = A.A.getChannel(n);
                 (0, s.L3)(e, async () => {
-                    let { default: e } = await Promise.all([t.e("43266"), t.e("4391")]).then(t.bind(t, 254106));
+                    let { default: e } = await Promise.all([t.e("343266"), t.e("404391")]).then(t.bind(t, 254106));
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: h });
                 });

@@ -3,8 +3,8 @@ t(321073), t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65
 var i,
     l,
     s,
-    d = t(941426),
-    u =
+    u = t(941426),
+    d =
         (((i = {})[(i.INITIALIZE = 0)] = "INITIALIZE"),
         (i[(i.RTC_TRANSFORM = 1)] = "RTC_TRANSFORM"),
         (i[(i.SET_KEY_RATCHET = 2)] = "SET_KEY_RATCHET"),
@@ -41,30 +41,30 @@ let C = parseInt(y().version ?? "0", 10),
         ("Safari" === y().name && C >= 11) ||
         ("Opera" === y().name && C >= 60) ||
         y().name;
-let S = new d.Vy("LibDaveManager"),
+let S = new u.Vy("LibDaveManager"),
     E = null,
     R = {
         onRuntimeInitialized: () => {
             S.info("DAVE loaded");
         },
     },
-    m = new d.Vy("EncryptionWorker");
-(0, d.$o)(d.gZ);
+    m = new u.Vy("EncryptionWorker");
+(0, u.$o)(u.gZ);
 let b = "uninitialized",
     h = new Map(),
     A = new Map(),
     w = [];
 function O(e) {
     let { data: r } = e;
-    if ("initialized" !== b && r.type !== u.INITIALIZE) return void w.push(e);
+    if ("initialized" !== b && r.type !== d.INITIALIZE) return void w.push(e);
     switch (r.type) {
-        case u.INITIALIZE:
+        case d.INITIALIZE:
             P();
             break;
-        case u.RTC_TRANSFORM:
+        case d.RTC_TRANSFORM:
             g(r);
             break;
-        case u.SET_KEY_RATCHET:
+        case d.SET_KEY_RATCHET:
             !(function (e) {
                 let { userId: r, operation: t, protocolVersion: a, keyRatchet: o } = e,
                     i = A.get(r);
@@ -90,7 +90,7 @@ function O(e) {
                 }
             })(r);
             break;
-        case u.UPDATE_SSRC:
+        case d.UPDATE_SSRC:
             !(function (e) {
                 let { userId: r, audioSsrc: t, videoSsrcs: n } = e,
                     a = [t, ...n],
@@ -102,13 +102,13 @@ function O(e) {
                 (o.audioSSRC = t), (o.videoSSRCs = n);
             })(r);
             break;
-        case u.UPDATE_CODECS:
+        case d.UPDATE_CODECS:
             !(function (e) {
                 let { audioCodec: r, videoCodec: t } = e;
                 (a = D(r)), (o = D(t));
             })(r);
             break;
-        case u.DESTROY_USER:
+        case d.DESTROY_USER:
             !(function (e) {
                 let { userId: r } = e,
                     t = A.get(r);
@@ -128,7 +128,7 @@ async function P() {
         (n = await (null != E
             ? E
             : (E = new Promise((e, r) => {
-                  Promise.all([t.e("95625"), t.e("74086"), t.e("63197"), t.e("18269"), t.e("16566")])
+                  Promise.all([t.e("95625"), t.e("174086"), t.e("563197"), t.e("218269"), t.e("116566")])
                       .then(t.bind(t, 22389))
                       .then((t) => {
                           let { DaveModuleFactory: n } = t;
@@ -165,34 +165,34 @@ function v(e, r) {
         if (null == l) return void m.warn("no userId found for ssrc", i);
         let s = A.get(l);
         if (null == s) return void m.warn("no user found for userId", l);
-        let d = s.cryptor;
-        if (null == d) {
+        let u = s.cryptor;
+        if (null == u) {
             1 !== A.size && m.warn("no cryptor found for userId", l);
             return;
         }
-        if (d instanceof n.Encryptor)
+        if (u instanceof n.Encryptor)
             t = (function (e, r, t) {
                 if (0 === e.data.byteLength) return e;
                 let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
                     l = i === n.MediaType.Audio ? a : o;
                 t.AssignSsrcToCodec(r, l);
                 let s = t.GetMaxCiphertextByteSize(i, e.data.byteLength),
-                    d = n._malloc(s);
+                    u = n._malloc(s);
                 try {
                     let a = new Uint8Array(e.data);
-                    n.HEAPU8.set(a, d);
-                    let o = t.Encrypt(i, r, d, e.data.byteLength, s);
+                    n.HEAPU8.set(a, u);
+                    let o = t.Encrypt(i, r, u, e.data.byteLength, s);
                     if (0 === o) return null;
-                    let l = n.HEAPU8.subarray(d, d + o),
-                        u = new Uint8Array(o);
-                    u.set(l), (e.data = u.buffer);
+                    let l = n.HEAPU8.subarray(u, u + o),
+                        d = new Uint8Array(o);
+                    d.set(l), (e.data = d.buffer);
                 } finally {
-                    n._free(d);
+                    n._free(u);
                 }
                 return e;
-            })(e, i, d);
+            })(e, i, u);
         else {
-            if (!(d instanceof n.Decryptor)) return void m.warn("unsupported cryptor type", d);
+            if (!(u instanceof n.Decryptor)) return void m.warn("unsupported cryptor type", u);
             t = (function (e, r) {
                 if (0 === e.data.byteLength) return e;
                 let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -204,12 +204,12 @@ function v(e, r) {
                     let l = r.Decrypt(t, o, e.data.byteLength, a);
                     if (0 === l) return null;
                     let s = n.HEAPU8.subarray(o, o + l),
-                        d = new Uint8Array(l);
-                    return d.set(s), (e.data = d.buffer), e;
+                        u = new Uint8Array(l);
+                    return u.set(s), (e.data = u.buffer), e;
                 } finally {
                     n._free(o);
                 }
-            })(e, d);
+            })(e, u);
         }
         if (null == t) return;
         r.enqueue(t);
@@ -239,5 +239,5 @@ function D(e) {
     O(e);
 }),
     (self.onrtctransform = (e) => {
-        g({ type: u.RTC_TRANSFORM, readable: e.transformer.readable, writable: e.transformer.writable });
+        g({ type: d.RTC_TRANSFORM, readable: e.transformer.readable, writable: e.transformer.writable });
     });

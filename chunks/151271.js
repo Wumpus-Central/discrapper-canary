@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { RQ: () => m, Ri: () => E, U: () => p, bf: () => d, ed: () => h, r$: () => f, v8: () => _ });
-var i = n(296489),
-    r = n.n(i),
-    s = n(499867),
-    a = n(265690),
-    o = n(121894),
-    l = n(698279);
+r.d(t, { RQ: () => I, Ri: () => f, U: () => g, bf: () => d, ed: () => m, r$: () => p, v8: () => h });
+var s = r(277057),
+    n = r.n(s),
+    l = r(537812),
+    i = r(882035),
+    a = r(121894),
+    o = r(698279);
 let u = Object.freeze({
         activeView: null,
         lastActiveView: null,
@@ -15,53 +14,53 @@ let u = Object.freeze({
         isSearchSuggestion: !1,
         pickerId: (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-            return r()(e);
+            return n()(e);
         })(),
         isNitroLockedSectionVisible: !1,
         areOnlyNitroLockedSectionsVisible: !1,
     }),
-    c = (0, a.h)()(
-        (0, s.Zr)((e, t) => u, {
+    c = (0, i.h)()(
+        (0, l.Zr)((e, t) => u, {
             name: "expression-picker-last-active-view",
             partialize: (e) => ({ lastActiveView: e.lastActiveView }),
         }),
     );
-function d(e, t, n) {
-    (0, o.r)(() =>
-        c.setState({ activeView: e, activeViewType: t, activeChannelId: n, lastActiveView: c.getState().activeView }),
+function d(e, t, r) {
+    (0, a.r)(() =>
+        c.setState({ activeView: e, activeViewType: t, activeChannelId: r, lastActiveView: c.getState().activeView }),
     );
 }
-function _(e, t) {
-    let n = c.getState();
-    (void 0 !== e && e !== n.activeViewType) ||
-        (void 0 !== t && t !== n.activeChannelId) ||
-        (null !== n.activeView &&
-            (0, o.r)(() =>
+function h(e, t) {
+    let r = c.getState();
+    (void 0 !== e && e !== r.activeViewType) ||
+        (void 0 !== t && t !== r.activeChannelId) ||
+        (null !== r.activeView &&
+            (0, a.r)(() =>
                 c.setState({
                     activeView: null,
                     activeViewType: null,
                     activeChannelId: null,
-                    lastActiveView: n.activeView,
+                    lastActiveView: r.activeView,
                 }),
             ));
 }
-function h(e, t) {
-    let n = c.getState();
-    null == n.activeView
-        ? d(n.lastActiveView ?? l.kx.EMOJI, e, t)
-        : n.activeViewType !== e || n.activeChannelId !== t
-          ? d(n.activeView, e, t)
-          : _();
+function m(e, t) {
+    let r = c.getState();
+    null == r.activeView
+        ? d(r.lastActiveView ?? o.kx.EMOJI, e, t)
+        : r.activeViewType !== e || r.activeChannelId !== t
+          ? d(r.activeView, e, t)
+          : h();
 }
-function f(e, t, n) {
-    let i = c.getState();
-    i.activeView === e && i.activeViewType === t && i.activeChannelId === n ? _() : d(e, t, n);
+function p(e, t, r) {
+    let s = c.getState();
+    s.activeView === e && s.activeViewType === t && s.activeChannelId === r ? h() : d(e, t, r);
 }
-function p(e) {
-    (0, o.r)(() => c.setState({ activeView: e, lastActiveView: c.getState().activeView }));
+function g(e) {
+    (0, a.r)(() => c.setState({ activeView: e, lastActiveView: c.getState().activeView }));
 }
-function E(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (0, o.r)(() => c.setState({ searchQuery: e, isSearchSuggestion: t }));
+    (0, a.r)(() => c.setState({ searchQuery: e, isSearchSuggestion: t }));
 }
-let m = c;
+let I = c;

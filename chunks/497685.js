@@ -1,193 +1,192 @@
-"use strict";
-n.d(t, {
-    $P: () => L,
+r.d(t, {
+    $P: () => x,
     H9: () => C,
-    Qh: () => N,
-    Se: () => y,
-    Tr: () => k,
-    V$: () => b,
-    Z4: () => P,
-    _E: () => D,
-    g4: () => v,
-    k8: () => M,
-    wg: () => x,
-    xo: () => U,
+    Qh: () => v,
+    Se: () => T,
+    Tr: () => U,
+    V$: () => G,
+    Z4: () => j,
+    _E: () => F,
+    g4: () => N,
+    k8: () => D,
+    wg: () => b,
+    xo: () => P,
 });
-var i = n(435558),
-    r = n.n(i),
-    a = n(132500),
-    s = n(562465),
-    l = n(803805),
-    o = n(228366),
-    d = n(95561),
-    c = n(336807),
-    u = n(202803),
-    _ = n(773669),
-    E = n(594061),
-    A = n(821102),
-    h = n(174459),
-    I = n(11187),
-    f = n(998218),
-    p = n(157559),
-    T = n(652215),
-    m = n(355097),
-    g = n(375708);
+var s = r(435558),
+    n = r.n(s),
+    l = r(132500),
+    i = r(636537),
+    a = r(803805),
+    o = r(228366),
+    u = r(95561),
+    c = r(336807),
+    d = r(202803),
+    h = r(773669),
+    m = r(594061),
+    p = r(821102),
+    g = r(174459),
+    f = r(11187),
+    I = r(998218),
+    R = r(157559),
+    E = r(652215),
+    _ = r(355097),
+    y = r(375708);
 let S = /-/g;
-function N(e) {
+function v(e) {
     let t = null != e ? { [e]: 1 } : {};
-    d.Ay.trackWithMetadata(T.HAw.SEARCH_STARTED, {
-        search_type: T.I4_.GIF,
-        load_id: A.A.getAnalyticsID(),
+    u.Ay.trackWithMetadata(E.HAw.SEARCH_STARTED, {
+        search_type: E.I4_.GIF,
+        load_id: p.A.getAnalyticsID(),
         num_modifiers: Object.keys(t).length,
         modifiers: t,
         gif_provider: c.jQ,
     });
 }
 function C(e, t) {
-    let { startTime: n, ...i } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        r = { offset: 0, limit: null, totalResults: e.length },
-        a = (0, I.QL)(A.A.getAnalyticsID(), t, { ...r, ...i, results: e.length }),
-        s = null == n ? {} : { load_duration_ms: Date.now() - n };
-    d.Ay.trackWithMetadata(T.HAw.SEARCH_RESULT_VIEWED, { ...a, ...s, gif_provider: c.jQ });
+    let { startTime: r, ...s } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        n = { offset: 0, limit: null, totalResults: e.length },
+        l = (0, f.QL)(p.A.getAnalyticsID(), t, { ...n, ...s, results: e.length }),
+        i = null == r ? {} : { load_duration_ms: Date.now() - r };
+    u.Ay.trackWithMetadata(E.HAw.SEARCH_RESULT_VIEWED, { ...l, ...i, gif_provider: c.jQ });
 }
-function R(e, t, n) {
-    let i = Date.now();
-    N(t),
-        s.Bo.get({
-            url: T.Rsh.GIFS_SEARCH,
-            query: { q: e, media_format: A.A.getSelectedFormat(), locale: _.default.locale, limit: n },
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        }).then(
-            (r) => {
-                let a = r.body;
-                C(a, t, { startTime: i, limit: n }),
-                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: a });
-            },
-            () => o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
-        );
-}
-let O = r().debounce(R, 250);
-function L(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0;
-    "" === e ? y() : (o.h.dispatch({ type: "GIF_PICKER_QUERY", query: e }), n ? R(e, t, i) : O(e, t, i));
-}
-function D(e) {
-    "" !== e &&
-        null != e &&
-        s.Bo.get({
-            url: T.Rsh.GIFS_SUGGEST,
-            query: { q: e, limit: 5, locale: _.default.locale },
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        }).then((t) => {
-            let n = t.body;
-            o.h.dispatch({ type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: e, items: n });
-        });
-}
-function y() {
-    o.h.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
-}
-function v(e) {
-    let { type: t, index: n, offset: i, limit: r, results: a, totalResults: l, query: o, gifId: c } = e,
-        u = (0, I.QL)(A.A.getAnalyticsID(), t, { offset: i, limit: r, results: a, totalResults: l });
-    d.Ay.trackWithMetadata(T.HAw.SEARCH_RESULT_SELECTED, { ...u, index_num: n, source_object: "GIF Picker", query: o }),
-        null != c &&
-            s.Bo.post({ url: T.Rsh.GIFS_SELECT, body: { id: c, q: o }, oldFormErrors: !0, rejectWithError: !0 });
-}
-function b() {
-    let e = (0, a.A)().replace(S, "");
-    d.Ay.trackWithMetadata(T.HAw.SEARCH_OPENED, { search_type: T.I4_.GIF, load_id: e }),
-        o.h.wait(() => {
-            o.h.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: e });
-        });
-}
-function M() {
-    s.Bo.get({
-        url: T.Rsh.GIFS_TRENDING,
-        query: { locale: _.default.locale, media_format: A.A.getSelectedFormat() },
-        oldFormErrors: !0,
-        rejectWithError: !0,
-    }).then((e) => {
-        let { body: t } = e,
-            { categories: n, gifs: i } = t;
-        o.h.dispatch({ type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: n, trendingGIFPreview: i[0] });
-    });
-}
-function P(e) {
-    let t = Date.now();
-    N(T.dD.TRENDING_GIFS),
-        s.Bo.get({
-            url: T.Rsh.GIFS_TRENDING_GIFS,
-            query: { media_format: A.A.getSelectedFormat(), locale: _.default.locale, limit: e },
+function A(e, t, r) {
+    let s = Date.now();
+    v(t),
+        i.Bo.get({
+            url: E.Rsh.GIFS_SEARCH,
+            query: { q: e, media_format: p.A.getSelectedFormat(), locale: h.default.locale, limit: r },
             oldFormErrors: !0,
             rejectWithError: !0,
         }).then(
             (n) => {
-                let { body: i } = n;
-                C(i, T.dD.TRENDING_GIFS, { startTime: t, limit: e }),
-                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: i });
+                let l = n.body;
+                C(l, t, { startTime: s, limit: r }),
+                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: l });
+            },
+            () => o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
+        );
+}
+let w = n().debounce(A, 250);
+function x(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        s = arguments.length > 3 ? arguments[3] : void 0;
+    "" === e ? T() : (o.h.dispatch({ type: "GIF_PICKER_QUERY", query: e }), r ? A(e, t, s) : w(e, t, s));
+}
+function F(e) {
+    "" !== e &&
+        null != e &&
+        i.Bo.get({
+            url: E.Rsh.GIFS_SUGGEST,
+            query: { q: e, limit: 5, locale: h.default.locale },
+            oldFormErrors: !0,
+            rejectWithError: !0,
+        }).then((t) => {
+            let r = t.body;
+            o.h.dispatch({ type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: e, items: r });
+        });
+}
+function T() {
+    o.h.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
+}
+function N(e) {
+    let { type: t, index: r, offset: s, limit: n, results: l, totalResults: a, query: o, gifId: c } = e,
+        d = (0, f.QL)(p.A.getAnalyticsID(), t, { offset: s, limit: n, results: l, totalResults: a });
+    u.Ay.trackWithMetadata(E.HAw.SEARCH_RESULT_SELECTED, { ...d, index_num: r, source_object: "GIF Picker", query: o }),
+        null != c &&
+            i.Bo.post({ url: E.Rsh.GIFS_SELECT, body: { id: c, q: o }, oldFormErrors: !0, rejectWithError: !0 });
+}
+function G() {
+    let e = (0, l.A)().replace(S, "");
+    u.Ay.trackWithMetadata(E.HAw.SEARCH_OPENED, { search_type: E.I4_.GIF, load_id: e }),
+        o.h.wait(() => {
+            o.h.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: e });
+        });
+}
+function D() {
+    i.Bo.get({
+        url: E.Rsh.GIFS_TRENDING,
+        query: { locale: h.default.locale, media_format: p.A.getSelectedFormat() },
+        oldFormErrors: !0,
+        rejectWithError: !0,
+    }).then((e) => {
+        let { body: t } = e,
+            { categories: r, gifs: s } = t;
+        o.h.dispatch({ type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: r, trendingGIFPreview: s[0] });
+    });
+}
+function j(e) {
+    let t = Date.now();
+    v(E.dD.TRENDING_GIFS),
+        i.Bo.get({
+            url: E.Rsh.GIFS_TRENDING_GIFS,
+            query: { media_format: p.A.getSelectedFormat(), locale: h.default.locale, limit: e },
+            oldFormErrors: !0,
+            rejectWithError: !0,
+        }).then(
+            (r) => {
+                let { body: s } = r;
+                C(s, E.dD.TRENDING_GIFS, { startTime: t, limit: e }),
+                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: s });
             },
             () => {
                 o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
             },
         );
 }
-function U(e) {
-    let t = f.A.toURLSafe(e);
-    return null == t ? e : (0, u.fr)(t) ? (0, u.w6)(t).toString() : e;
+function P(e) {
+    let t = I.A.toURLSafe(e);
+    return null == t ? e : (0, d.fr)(t) ? (0, d.w6)(t).toString() : e;
 }
-function w(e) {
-    let t = f.A.toURLSafe(e.src);
-    return null != t && ((0, u.BX)(t) || (0, u.fr)(t));
+function k(e) {
+    let t = I.A.toURLSafe(e.src);
+    return null != t && ((0, d.BX)(t) || (0, d.fr)(t));
 }
-let G = /\.(webp|avif|gif)(\?|$)/i;
-function x(e) {
-    E.bW.updateAsync(
+let L = /\.(webp|avif|gif)(\?|$)/i;
+function b(e) {
+    m.bW.updateAsync(
         "favoriteGifs",
         (t) => {
-            var n;
-            let i = r().max(Object.values(t.gifs).map((e) => e.order)) ?? 0,
-                a =
+            var r;
+            let s = n().max(Object.values(t.gifs).map((e) => e.order)) ?? 0,
+                l =
                     (/\.(mp4|webm)(\?|$)/i.test(e.src) && null != e.gifSrc && "" !== e.gifSrc && e.gifSrc !== e.src) ||
-                    (w(e) && null != e.gifSrc)
+                    (k(e) && null != e.gifSrc)
                         ? e.gifSrc
                         : e.src,
-                s = (n =
-                    w(e) && G.test(a)
+                i = (r =
+                    k(e) && L.test(l)
                         ? (function (e) {
-                              let t = f.A.toURLSafe(e);
+                              let t = I.A.toURLSafe(e);
                               if (null == t) return e;
-                              let n = t.pathname.toLowerCase(),
-                                  i = n.endsWith(".webp"),
-                                  r = n.endsWith(".avif"),
-                                  a = n.endsWith(".gif");
-                              return i || r || a
-                                  ? ((r || a) && t.searchParams.set("format", "webp"),
+                              let r = t.pathname.toLowerCase(),
+                                  s = r.endsWith(".webp"),
+                                  n = r.endsWith(".avif"),
+                                  l = r.endsWith(".gif");
+                              return s || n || l
+                                  ? ((n || l) && t.searchParams.set("format", "webp"),
                                     t.searchParams.set("animated", "true"),
                                     t.toString())
                                   : e;
-                          })(a)
-                        : a).startsWith("//")
-                    ? `https:${n}`
-                    : n,
-                o = G.test(s) ? l.TL.IMAGE : e.format;
-            if (((t.gifs[U(e.url)] = { ...e, src: s, format: o, order: i + 1 }), l.uz.toBinary(t).length > 762880))
-                return p.A.show({ title: g.intl.string(g.t["+XYXtZ"]), body: g.intl.string(g.t.YSDH9n) }), !1;
-            let d = r().size(t.gifs);
-            d > 2 && (t.hideTooltip = !0), h.default.track(T.HAw.GIF_FAVORITED, { total_num_favorited: d });
+                          })(l)
+                        : l).startsWith("//")
+                    ? `https:${r}`
+                    : r,
+                o = L.test(i) ? a.TL.IMAGE : e.format;
+            if (((t.gifs[P(e.url)] = { ...e, src: i, format: o, order: s + 1 }), a.uz.toBinary(t).length > 762880))
+                return R.A.show({ title: y.intl.string(y.t["+XYXtZ"]), body: y.intl.string(y.t.YSDH9n) }), !1;
+            let u = n().size(t.gifs);
+            u > 2 && (t.hideTooltip = !0), g.default.track(E.HAw.GIF_FAVORITED, { total_num_favorited: u });
         },
-        m.Sb.INFREQUENT_USER_ACTION,
+        _.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function k(e) {
-    E.bW.updateAsync(
+function U(e) {
+    m.bW.updateAsync(
         "favoriteGifs",
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)],
-                h.default.track(T.HAw.GIF_UNFAVORITED, { total_num_favorited: r().size(t.gifs) });
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)],
+                g.default.track(E.HAw.GIF_UNFAVORITED, { total_num_favorited: n().size(t.gifs) });
         },
-        m.Sb.INFREQUENT_USER_ACTION,
+        _.Sb.INFREQUENT_USER_ACTION,
     );
 }

@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, { A: () => c });
-var i = n(477900),
-    r = n(582128),
-    a = n(435558),
-    s = n(104142),
-    l = n(194486),
+var l = n(477900),
+    i = n(582128),
+    s = n(435558),
+    r = n(104142),
+    a = n(194486),
     o = n(762450);
-async function d(e) {
-    let { animationType: t, animationId: n, url: i, shouldResize: r } = e,
-        o = s.Bf[t] ?? s.Bf[l.B.BASIC],
-        d = JSON.parse(JSON.stringify(null != n && n < o.length ? o[n] : (0, a.sample)(o)));
-    return (d.assets[0].p = r ? await (0, s.tm)(i) : i), d;
+async function u(e) {
+    let { animationType: t, animationId: n, url: l, shouldResize: i } = e,
+        o = r.Bf[t] ?? r.Bf[a.B.BASIC],
+        u = JSON.parse(JSON.stringify(null != n && n < o.length ? o[n] : (0, s.sample)(o)));
+    return (u.assets[0].p = i ? await (0, r.tm)(l) : l), u;
 }
 function c(e) {
-    let { containerDimensions: t, effect: a, onComplete: s } = e,
-        c = r.useRef(null);
+    let { containerDimensions: t, effect: s, onComplete: r } = e,
+        c = i.useRef(null);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e;
             return (
                 !(async function () {
                     if (null != c.current) {
-                        let t = await d(a),
-                            { default: i } = await n.e("96382").then(n.t.bind(n, 883885, 23));
+                        let t = await u(s),
+                            { default: l } = await n.e("996382").then(n.t.bind(n, 883885, 23));
                         null != c.current &&
-                            ((e = i.loadAnimation({
+                            ((e = l.loadAnimation({
                                 container: c.current,
                                 renderer: "svg",
                                 loop: !1,
@@ -32,15 +32,15 @@ function c(e) {
                                 animationData: t,
                                 rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
                             })),
-                            a.animationType === l.B.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener("complete", () => s?.(a.id)));
+                            s.animationType === a.B.PREMIUM && e.setSpeed(0.8),
+                            e.addEventListener("complete", () => r?.(s.id)));
                     }
                 })(),
                 () => {
                     e?.destroy();
                 }
             );
-        }, [s, a]),
-        (0, i.jsx)("div", { className: o.Q, style: { height: t.height, width: t.width }, ref: c })
+        }, [r, s]),
+        (0, l.jsx)("div", { className: o.Q, style: { height: t.height, width: t.width }, ref: c })
     );
 }

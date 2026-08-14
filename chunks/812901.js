@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => r, G: () => d });
-var i,
-    r = (((i = {}).WithinAppContent = "within-app-content"), (i.AboveAppContent = "above-app-content"), i);
-let a = { "within-app-content": 1, "above-app-content": 1002 };
+l.d(t, { A: () => a, G: () => c });
+var n,
+    a = (((n = {}).WithinAppContent = "within-app-content"), (n.AboveAppContent = "above-app-content"), n);
+let i = { "within-app-content": 1, "above-app-content": 1002 };
 class s {
     _pool = null;
     setPool(e) {
@@ -13,7 +12,7 @@ class s {
         return this._pool;
     }
 }
-class l extends s {
+class r extends s {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
@@ -24,8 +23,8 @@ class l extends s {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, n) {
-        this.placed.set(e, { target: t, level: n }), this.position(e, t, n), this.ensureTicking();
+    place(e, t, l) {
+        this.placed.set(e, { target: t, level: l }), this.position(e, t, l), this.ensureTicking();
     }
     unplace(e) {
         this.placed.delete(e), (e.style.display = "none");
@@ -33,16 +32,16 @@ class l extends s {
     ensureTicking() {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
-    position(e, t, n) {
-        let i = t.getBoundingClientRect();
+    position(e, t, l) {
+        let n = t.getBoundingClientRect();
         (e.style.display = "block"),
-            (e.style.zIndex = String(a[n])),
-            (e.style.transform = `translate(${i.left}px, ${i.top}px)`),
-            (e.style.width = `${i.width}px`),
-            (e.style.height = `${i.height}px`);
+            (e.style.zIndex = String(i[l])),
+            (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
+            (e.style.width = `${n.width}px`),
+            (e.style.height = `${n.height}px`);
     }
     tick = () => {
-        for (let [e, { target: t, level: n }] of this.placed) this.position(e, t, n);
+        for (let [e, { target: t, level: l }] of this.placed) this.position(e, t, l);
         this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
     };
 }
@@ -54,13 +53,13 @@ class o extends s {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, n) {
+    place(e, t, l) {
         e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block");
     }
     unplace(e) {
         e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none");
     }
 }
-function d() {
-    return "function" == typeof Element.prototype.moveBefore ? new o() : new l();
+function c() {
+    return "function" == typeof Element.prototype.moveBefore ? new o() : new r();
 }

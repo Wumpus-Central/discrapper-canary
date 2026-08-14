@@ -1,67 +1,66 @@
-"use strict";
-n.d(t, { A: () => T, x: () => p });
-var i = n(582128),
-    r = n(812729),
-    a = n.n(r),
-    s = n(277057),
-    l = n.n(s),
-    o = n(562708),
-    d = n(228366),
-    c = n(964486),
-    u = n(734057),
-    _ = n(309010),
-    E = n(967198),
-    A = n(174459),
-    h = n(95561),
-    I = n(686757);
-let f = (0, o.trackMaker)({
-    analyticEventConfigs: A.AnalyticEventConfigs,
-    dispatcher: d.h,
+t.d(n, { A: () => C, x: () => A });
+var i = t(582128),
+    l = t(812729),
+    r = t.n(l),
+    a = t(277057),
+    u = t.n(a),
+    d = t(562708),
+    s = t(228366),
+    c = t(964486),
+    o = t(734057),
+    p = t(309010),
+    h = t(967198),
+    f = t(174459),
+    g = t(95561),
+    k = t(686757);
+let v = (0, d.trackMaker)({
+    analyticEventConfigs: f.AnalyticEventConfigs,
+    dispatcher: s.h,
     TRACK_ACTION_NAME: "TRACK",
 });
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        { name: i, type: r, properties: a } = e;
-    if (e.type === o.ImpressionTypes.MODAL && null == e.name && (0, I.uJ)().some((e) => e._stackContext?.isSlide))
+function A(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        { name: i, type: l, properties: r } = e;
+    if (e.type === d.ImpressionTypes.MODAL && null == e.name && (0, k.uJ)().some((e) => e._stackContext?.isSlide))
         return;
-    n || (0, I.Vm)(e);
-    let s = a?.guild_id ?? E.A.getGuildId(),
-        l = a?.channel_id ?? _.Ay.getChannelId(s),
-        d = (0, A.expandEventProperties)({
-            impression_type: r,
-            location: (0, I.g$)(),
-            ...(0, h.H$)(s),
-            ...(0, h.dI)(u.A.getChannel(l)),
-            ...a,
+    t || (0, k.Vm)(e);
+    let a = r?.guild_id ?? h.A.getGuildId(),
+        u = r?.channel_id ?? p.Ay.getChannelId(a),
+        s = (0, f.expandEventProperties)({
+            impression_type: l,
+            location: (0, k.g$)(),
+            ...(0, g.H$)(a),
+            ...(0, g.dI)(o.A.getChannel(u)),
+            ...r,
         });
-    t ? (0, I.eE)(null, null) : (null != i && null != r && ((0, A.debugLogEvent)(i, d), f(i, d)), (0, I.eE)(i, d));
+    n ? (0, k.eE)(null, null) : (null != i && null != l && ((0, f.debugLogEvent)(i, s), v(i, s)), (0, k.eE)(i, s));
 }
-function T(e) {
-    let t =
+function C(e) {
+    let n =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : { disableTrack: !1, trackOnInitialLoad: !1 },
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        r = i.useRef(void 0),
-        s = i.useRef(void 0);
-    function o() {
-        let i = !a()(r.current, e);
-        i && (r.current = e);
-        let o = !a()(s.current, n);
-        if ((o && (s.current = n), !i && !o)) return;
-        let d = { ...e, sequenceId: l()("impression_") };
+        t = arguments.length > 2 ? arguments[2] : void 0,
+        l = i.useRef(void 0),
+        a = i.useRef(void 0);
+    function d() {
+        let i = !r()(l.current, e);
+        i && (l.current = e);
+        let d = !r()(a.current, t);
+        if ((d && (a.current = t), !i && !d)) return;
+        let s = { ...e, sequenceId: u()("impression_") };
         return (
-            p(d, t.disableTrack),
+            A(s, n.disableTrack),
             () => {
-                null != d && (0, I.u5)(d);
+                null != s && (0, k.u5)(s);
             }
         );
     }
     (0, c.Ay)(() => {
-        if (t.trackOnInitialLoad) return o();
+        if (n.trackOnInitialLoad) return d();
     }),
         i.useEffect(() => {
-            if (!t.trackOnInitialLoad) return o();
+            if (!n.trackOnInitialLoad) return d();
         });
 }

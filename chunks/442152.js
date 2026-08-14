@@ -1,98 +1,98 @@
 "use strict";
 n.d(t, { A: () => t1 });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(435558),
-    o = n.n(l),
-    d = n(607399),
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(435558),
+    o = n.n(a),
+    u = n(607399),
     c = n(621466),
-    u = n(17928),
-    _ = n(554146),
-    E = n(192308),
-    A = n(939249),
-    h = n(315710),
-    I = n(812993),
-    f = n(817281),
-    p = n(820284),
-    T = n(761929),
-    m = n(95561),
-    g = n(131607),
-    S = n(267889),
-    N = n(813703),
-    C = n(750506),
-    R = n(267102),
-    O = n(926972),
-    L = n(484036),
-    D = n(256449),
-    y = n(750385),
-    v = n(649852),
-    b = n.n(v),
+    d = n(17928),
+    h = n(554146),
+    m = n(192308),
+    f = n(939249),
+    p = n(315710),
+    g = n(812993),
+    x = n(817281),
+    A = n(820284),
+    C = n(761929),
+    E = n(95561),
+    I = n(131607),
+    y = n(267889),
+    v = n(813703),
+    S = n(750506),
+    N = n(267102),
+    _ = n(926972),
+    T = n(484036),
+    j = n(256449),
+    b = n(750385),
+    R = n(649852),
+    O = n.n(R),
     M = n(462180),
-    P = n(319060),
-    U = n(289873),
-    w = n(212245),
-    G = n(793574),
-    x = n(688810),
-    k = n(850992),
-    F = n(151271),
+    w = n(319060),
+    L = n(289873),
+    k = n(212245),
+    P = n(793574),
+    D = n(688810),
+    U = n(850992),
+    G = n(151271),
     V = n(887695),
-    B = n(87719),
+    F = n(87719),
     H = n(732280),
-    j = n(885386),
+    B = n(885386),
     W = n(287809),
-    Y = n(174459),
-    K = n(240248),
-    $ = n(196765),
-    z = n(121894);
-let Z = Object.freeze({ showPremiumUpsell: !1 }),
-    q = (0, $.v)((e) => Z);
-function X(e) {
-    (0, z.r)(() => q.setState({ showPremiumUpsell: e }));
+    K = n(174459),
+    z = n(240248),
+    Z = n(196765),
+    Y = n(121894);
+let q = Object.freeze({ showPremiumUpsell: !1 }),
+    J = (0, Z.v)((e) => q);
+function $(e) {
+    (0, Y.r)(() => J.setState({ showPremiumUpsell: e }));
 }
-var Q = n(361670),
-    J = n(891090),
+var X = n(361670),
+    Q = n(891090),
     ee = n(194004),
     et = n(788413),
     en = n(60587),
-    ei = n(27232),
-    er = n(406810),
-    ea = n(866665),
-    es = n(797285),
-    el = n(724511),
+    el = n(27232),
+    ei = n(406810),
+    es = n(866665),
+    er = n(797285),
+    ea = n(724511),
     eo = n(802019),
-    ed = n(71393),
+    eu = n(71393),
     ec = n(68935),
-    eu = n(148355),
-    e_ = n(652215),
-    eE = n(698279),
-    eA = n(375708),
-    eh = n(402942);
-let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
-    ef = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
-    ep = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
-    eT = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    em = (0, K.xI)(P.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    eg = (0, K.xI)(P.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    eS = [eI, eI, eI, eI],
-    eN = (ef + ep) * 2 + eI,
-    eC = em + 2 * eg,
-    eR = (e) => {
+    ed = n(148355),
+    eh = n(652215),
+    em = n(698279),
+    ef = n(375708),
+    ep = n(402942);
+let eg = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+    ex = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
+    eA = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
+    eC = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
+    eE = (0, z.xI)(w.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    eI = (0, z.xI)(w.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    ey = [eg, eg, eg, eg],
+    ev = (ex + eA) * 2 + eg,
+    eS = eE + 2 * eI,
+    eN = (e) => {
         let { stickersListRef: t, channel: n } = e,
-            a = r.useRef(null),
-            [l, o] = r.useState(!0),
-            d = k.bM.useStore((e) => e.activeCategoryIndex),
-            c = (0, D.pD)(n),
+            s = i.useRef(null),
+            [a, o] = i.useState(!0),
+            u = U.bM.useStore((e) => e.activeCategoryIndex),
+            c = (0, j.pD)(n),
             {
-                firstStandardStickerCategoryIndex: u,
-                firstStandardStickerCategoryOffsetTop: _,
-                guildCategoryCount: E,
-                hasFirstPartyStickerPacks: h,
-            } = r.useMemo(() => {
+                firstStandardStickerCategoryIndex: d,
+                firstStandardStickerCategoryOffsetTop: h,
+                guildCategoryCount: m,
+                hasFirstPartyStickerPacks: p,
+            } = i.useMemo(() => {
                 let e = c.filter((e) => e.type === ee.Z2.GUILD).length,
                     t = e + +(c[0]?.type === ee.Z2.RECENT) + +(c[0]?.type === ee.Z2.FAVORITE),
-                    n = t * (ef + ep) - ep + eC;
+                    n = t * (ex + eA) - eA + eS;
                 return {
                     firstStandardStickerCategoryIndex: t + 1,
                     firstStandardStickerCategoryOffsetTop: n,
@@ -100,529 +100,529 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                     hasFirstPartyStickerPacks: null != c.find((e) => e.type === ee.Z2.PACK),
                 };
             }, [c]);
-        r.useLayoutEffect(() => {
-            o(E >= 7);
-        }, [E]);
+        i.useLayoutEffect(() => {
+            o(m >= 7);
+        }, [m]);
         let {
-                renderCategoryListItem: I,
-                rowHeight: f,
-                onScroll: p,
+                renderCategoryListItem: g,
+                rowHeight: x,
+                onScroll: A,
             } = (function (e) {
                 let {
                         activeIndex: t,
                         stickerPickerCategories: n,
-                        categoryListRef: a,
-                        firstStandardStickerCategoryOffsetTop: l,
+                        categoryListRef: s,
+                        firstStandardStickerCategoryOffsetTop: a,
                         setShouldRenderShortcut: o,
                     } = e,
-                    d = (0, w.p)(),
-                    c = (0, F.RQ)((e) => "" !== e.searchQuery),
-                    u = r.useCallback(
-                        (e, a, l) => {
+                    u = (0, k.p)(),
+                    c = (0, G.RQ)((e) => "" !== e.searchQuery),
+                    d = i.useCallback(
+                        (e, s, a) => {
                             let o,
-                                u = n[0]?.type === ee.Z2.FAVORITE,
-                                _ = +!!u,
-                                E = n[_]?.type === ee.Z2.RECENT,
-                                h = n.length;
-                            if (0 === a && u)
-                                return (0, i.jsx)(
+                                d = n[0]?.type === ee.Z2.FAVORITE,
+                                h = +!!d,
+                                m = n[h]?.type === ee.Z2.RECENT,
+                                p = n.length;
+                            if (0 === s && d)
+                                return (0, l.jsx)(
                                     "div",
                                     {
                                         role: "listitem",
-                                        "aria-setsize": h,
-                                        "aria-posinset": a,
-                                        children: (0, i.jsx)(A.D, {
-                                            "aria-label": eA.intl.string(eA.t.y3LQCG),
-                                            className: s()(eh._0, eh.dC, { [eh.k1]: !c && 0 === t, [eh.ls]: !E }),
-                                            onClick: l,
-                                            children: (0, i.jsx)(ei.G, {
+                                        "aria-setsize": p,
+                                        "aria-posinset": s,
+                                        children: (0, l.jsx)(f.D, {
+                                            "aria-label": ef.intl.string(ef.t.y3LQCG),
+                                            className: r()(ep._0, ep.dC, { [ep.k1]: !c && 0 === t, [ep.ls]: !m }),
+                                            onClick: a,
+                                            children: (0, l.jsx)(el.G, {
                                                 size: "custom",
                                                 color: "currentColor",
-                                                className: eh.AB,
-                                                height: eT,
-                                                width: eT,
+                                                className: ep.AB,
+                                                height: eC,
+                                                width: eC,
                                             }),
                                         }),
                                     },
                                     "favorites",
                                 );
-                            if (a === _ && E)
-                                return (0, i.jsx)(
+                            if (s === h && m)
+                                return (0, l.jsx)(
                                     "div",
                                     {
                                         role: "listitem",
-                                        "aria-setsize": h,
-                                        "aria-posinset": a,
-                                        children: (0, i.jsx)(A.D, {
-                                            "aria-label": eA.intl.string(eA.t.RxAmVC),
-                                            className: s()(eh._0, eh.dC, eh.ls, { [eh.k1]: !c && t === _ }),
-                                            onClick: l,
-                                            children: (0, i.jsx)(er.O, {
+                                        "aria-setsize": p,
+                                        "aria-posinset": s,
+                                        children: (0, l.jsx)(f.D, {
+                                            "aria-label": ef.intl.string(ef.t.RxAmVC),
+                                            className: r()(ep._0, ep.dC, ep.ls, { [ep.k1]: !c && t === h }),
+                                            onClick: a,
+                                            children: (0, l.jsx)(ei.O, {
                                                 size: "custom",
                                                 color: "currentColor",
-                                                className: eh.AB,
-                                                height: eT,
-                                                width: eT,
+                                                className: ep.AB,
+                                                height: eC,
+                                                width: eC,
                                             }),
                                         }),
                                     },
                                     "recent",
                                 );
-                            let I = t === a,
-                                f = n[a],
-                                p = n[a + 1],
-                                T = null != p && f.type === ee.Z2.GUILD && p.type !== ee.Z2.GUILD,
-                                m = f.type === ee.Z2.PACK,
-                                g = "",
-                                S = null;
-                            if (f.type === ee.Z2.GUILD || f.type === ee.Z2.EMPTY_GUILD_UPSELL) {
-                                let e = ed.A.getGuild(f.id);
+                            let g = t === s,
+                                x = n[s],
+                                A = n[s + 1],
+                                C = null != A && x.type === ee.Z2.GUILD && A.type !== ee.Z2.GUILD,
+                                E = x.type === ee.Z2.PACK,
+                                I = "",
+                                y = null;
+                            if (x.type === ee.Z2.GUILD || x.type === ee.Z2.EMPTY_GUILD_UPSELL) {
+                                let e = eu.A.getGuild(x.id);
                                 null != e &&
-                                    ((o = e.id), (g = e.name), (S = (0, i.jsx)(el.A, { guild: e, isSelected: I })));
-                            } else if (m) {
-                                let e = y.A.getStickerPack(f.id);
+                                    ((o = e.id), (I = e.name), (y = (0, l.jsx)(ea.A, { guild: e, isSelected: g })));
+                            } else if (E) {
+                                let e = b.A.getStickerPack(x.id);
                                 null != e &&
-                                    ((g = e.name),
-                                    (S = (0, i.jsx)(eu.A, {
-                                        disableAnimation: !I || c,
-                                        size: ef,
+                                    ((I = e.name),
+                                    (y = (0, l.jsx)(ed.A, {
+                                        disableAnimation: !g || c,
+                                        size: ex,
                                         sticker: (0, ec.Id)(e),
                                     })));
                             }
-                            return (0, i.jsxs)(
-                                r.Fragment,
+                            return (0, l.jsxs)(
+                                i.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(ea.m, {
+                                        (0, l.jsx)(es.m, {
                                             position: "right",
-                                            text: g,
-                                            children: (0, i.jsx)("div", {
+                                            text: I,
+                                            children: (0, l.jsx)("div", {
                                                 role: "listitem",
-                                                "aria-setsize": h,
-                                                "aria-posinset": a,
-                                                children: (0, i.jsx)(A.D, {
-                                                    "aria-label": g,
-                                                    className: s()(eh._0, { [eh.ND]: m, [eh.Ms]: !c && I && m }),
+                                                "aria-setsize": p,
+                                                "aria-posinset": s,
+                                                children: (0, l.jsx)(f.D, {
+                                                    "aria-label": I,
+                                                    className: r()(ep._0, { [ep.ND]: E, [ep.Ms]: !c && g && E }),
                                                     onClick: () => {
-                                                        f.type === ee.Z2.PACK &&
-                                                            Y.default.track(
-                                                                e_.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED,
+                                                        x.type === ee.Z2.PACK &&
+                                                            K.default.track(
+                                                                eh.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED,
                                                                 {
-                                                                    location: d?.location,
-                                                                    tab: eE.kx.STICKER,
-                                                                    sticker_pack_id: f.id,
+                                                                    location: u?.location,
+                                                                    tab: em.kx.STICKER,
+                                                                    sticker_pack_id: x.id,
                                                                     guild_id: o,
                                                                 },
                                                             ),
-                                                            l();
+                                                            a();
                                                     },
-                                                    children: S,
+                                                    children: y,
                                                 }),
                                             }),
                                         }),
-                                        T ? (0, i.jsx)("hr", { className: eh.ny }, "separator") : null,
+                                        C ? (0, l.jsx)("hr", { className: ep.ny }, "separator") : null,
                                     ],
                                 },
-                                f.id,
+                                x.id,
                             );
                         },
-                        [t, d, c, n],
+                        [t, u, c, n],
                     ),
-                    _ = r.useCallback((e, t) => (t ? eN : 0), []);
+                    h = i.useCallback((e, t) => (t ? ev : 0), []);
                 return {
-                    getScrollOffsetForIndex: _,
-                    renderCategoryListItem: u,
-                    rowHeight: r.useCallback(
+                    getScrollOffsetForIndex: h,
+                    renderCategoryListItem: d,
+                    rowHeight: i.useCallback(
                         (e, t) => {
-                            let i = n[t],
-                                r = n[t + 1];
-                            return ef + (null != r && i.type === ee.Z2.GUILD && r.type !== ee.Z2.GUILD ? eC : ep);
+                            let l = n[t],
+                                i = n[t + 1];
+                            return ex + (null != i && l.type === ee.Z2.GUILD && i.type !== ee.Z2.GUILD ? eS : eA);
                         },
                         [n],
                     ),
-                    onScroll: r.useCallback(
+                    onScroll: i.useCallback(
                         (e) => {
-                            let t = a.current?.getListDimensions();
-                            null == t || o(e + t.height - em < l);
+                            let t = s.current?.getListDimensions();
+                            null == t || o(e + t.height - eE < a);
                         },
-                        [l, a, o],
+                        [a, s, o],
                     ),
                 };
             })({
-                activeIndex: d,
+                activeIndex: u,
                 stickerPickerCategories: c,
-                categoryListRef: a,
-                firstStandardStickerCategoryOffsetTop: _,
+                categoryListRef: s,
+                firstStandardStickerCategoryOffsetTop: h,
                 setShouldRenderShortcut: o,
             }),
-            T = r.useCallback(
+            C = i.useCallback(
                 (e) => {
-                    e(u), a.current?.scrollTo(_);
+                    e(d), s.current?.scrollTo(h);
                 },
-                [u, _],
+                [d, h],
             );
-        return (0, i.jsx)(eo.A, {
-            className: eh.jv,
-            categoryListRef: a,
+        return (0, l.jsx)(eo.A, {
+            className: ep.jv,
+            categoryListRef: s,
             expressionsListRef: t,
-            store: k.bM,
-            listPadding: eS,
-            onScroll: p,
-            renderCategoryListItem: I,
+            store: U.bM,
+            listPadding: ey,
+            onScroll: A,
+            renderCategoryListItem: g,
             rowCount: c.length,
             categories: c,
-            categoryHeight: f,
+            categoryHeight: x,
             children: (e) =>
-                h &&
-                l &&
-                (0, i.jsx)(A.D, {
-                    className: s()(eh.Fe, { [eh.Q6]: !l }),
-                    onClick: () => T(e),
-                    children: (0, i.jsx)(es.t, { size: "md", color: "currentColor" }),
+                p &&
+                a &&
+                (0, l.jsx)(f.D, {
+                    className: r()(ep.Fe, { [ep.Q6]: !a }),
+                    onClick: () => C(e),
+                    children: (0, l.jsx)(er.t, { size: "md", color: "currentColor" }),
                 }),
         });
     };
-var eO = n(297264),
-    eL = n(834730),
-    eD = n(724651),
-    ey = n(811611),
-    ev = n(821609),
-    eb = n(403581);
+var e_ = n(297264),
+    eT = n(834730),
+    ej = n(724651),
+    eb = n(811611),
+    eR = n(821609),
+    eO = n(403581);
 function eM(e) {
-    let { analyticsSection: t, buttonText: r } = e;
-    return (0, i.jsx)(ev.$, {
+    let { analyticsSection: t, buttonText: i } = e;
+    return (0, l.jsx)(eR.$, {
         variant: "expressive",
-        icon: eb.t,
-        text: r ?? eA.intl.string(eA.t["8Sh5fg"]),
+        icon: eO.t,
+        text: i ?? ef.intl.string(ef.t["8Sh5fg"]),
         onClick: () => {
             var e;
             return (
                 (e = { section: t }),
-                void (Y.default.track(e_.HAw.OPEN_MODAL, {
-                    type: e_.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+                void (K.default.track(eh.HAw.OPEN_MODAL, {
+                    type: eh.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
                     location: e,
                 }),
-                (0, E.openModalLazy)(async () => {
+                (0, m.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("40981"),
-                        n.e("21675"),
-                        n.e("71202"),
-                        n.e("53274"),
+                        n.e("840981"),
+                        n.e("621675"),
+                        n.e("171202"),
+                        n.e("353274"),
                     ]).then(n.bind(n, 397313));
-                    return (t) => (0, i.jsx)(e, { ...t });
+                    return (t) => (0, l.jsx)(e, { ...t });
                 }))
             );
         },
     });
 }
-var eP = n(823894),
-    eU = n(202541),
-    ew = n(997300);
-function eG(e) {
+var ew = n(823894),
+    eL = n(202541),
+    ek = n(997300);
+function eP(e) {
     let { className: t, onClose: n } = e;
-    (0, D.XQ)();
-    let { analyticsLocations: a } = (0, x.Ay)(G.A.EMPTY_STATE),
-        l = (0, u.yK)([y.A], () => eP.vX.map((e) => y.A.getStickerById(e)));
-    r.useEffect(() => {
-        Y.default.track(e_.HAw.PREMIUM_UPSELL_VIEWED, {
-            type: eU.e.EMPTY_STICKER_PICKER_UPSELL,
-            source: { section: e_.JJy.EMPTY_STICKER_PICKER_UPSELL },
-            location_stack: a,
+    (0, j.XQ)();
+    let { analyticsLocations: s } = (0, D.Ay)(P.A.EMPTY_STATE),
+        a = (0, d.yK)([b.A], () => ew.vX.map((e) => b.A.getStickerById(e)));
+    i.useEffect(() => {
+        K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
+            type: eL.e.EMPTY_STICKER_PICKER_UPSELL,
+            source: { section: eh.JJy.EMPTY_STICKER_PICKER_UPSELL },
+            location_stack: s,
         });
-    }, [a]);
+    }, [s]);
     let o = (0, H.V)(),
-        d = (0, eD.O)(),
-        c = null != o || null != d;
-    return (0, i.jsxs)("div", {
-        className: s()(ew.p$, t, { [ew.Hz]: c }),
+        u = (0, ej.O)(),
+        c = null != o || null != u;
+    return (0, l.jsxs)("div", {
+        className: r()(ek.p$, t, { [ek.Hz]: c }),
         children: [
             c
-                ? (0, i.jsx)(ey.Ay, {
-                      discountOffer: d,
+                ? (0, l.jsx)(eb.Ay, {
+                      discountOffer: u,
                       trialOffer: o,
                       onClose: n,
-                      type: eU.e.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: o?.subscriptionTrial?.skuId ?? eU.pe.TIER_2,
-                      children: eA.intl.string(eA.t.FnNud4),
+                      type: eL.e.EMPTY_STICKER_PICKER_UPSELL,
+                      subscriptionTier: o?.subscriptionTrial?.skuId ?? eL.pe.TIER_2,
+                      children: ef.intl.string(ef.t.FnNud4),
                   })
-                : (0, i.jsxs)(i.Fragment, {
+                : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, i.jsx)(eO.D, {
-                              className: ew.wx,
+                          (0, l.jsx)(e_.D, {
+                              className: ek.wx,
                               variant: "heading-xl/semibold",
-                              children: eA.intl.string(eA.t.HEm04J),
+                              children: ef.intl.string(ef.t.HEm04J),
                           }),
-                          (0, i.jsx)(eL.E, {
-                              className: ew.VA,
+                          (0, l.jsx)(eT.E, {
+                              className: ek.VA,
                               color: "text-default",
                               variant: "text-md/normal",
-                              children: eA.intl.string(eA.t.FnNud4),
+                              children: ef.intl.string(ef.t.FnNud4),
                           }),
-                          (0, i.jsx)("div", {
-                              className: ew.l1,
-                              children: l
+                          (0, l.jsx)("div", {
+                              className: ek.l1,
+                              children: a
                                   .filter((e) => null != e)
-                                  .map((e) => (0, i.jsx)(eu.A, { sticker: e, className: ew.yI, size: 80 }, e?.id)),
+                                  .map((e) => (0, l.jsx)(ed.A, { sticker: e, className: ek.yI, size: 80 }, e?.id)),
                           }),
                       ],
                   }),
-            !c && (0, i.jsx)(eM, { analyticsSection: e_.JJy.EXPRESSION_PICKER }),
+            !c && (0, l.jsx)(eM, { analyticsSection: eh.JJy.EXPRESSION_PICKER }),
         ],
     });
 }
-var ex = n(404778),
-    ek = n(537652),
-    eF = n(962125),
+var eD = n(404778),
+    eU = n(537652),
+    eG = n(962125),
     eV = n(286509),
-    eB = n(631576),
+    eF = n(631576),
     eH = n(369163),
-    ej = n(123292),
+    eB = n(123292),
     eW = n(631305),
-    eY = n(468689),
-    eK = n(931991),
-    e$ = n(473145),
-    ez = n(625633),
-    eZ = n(758114);
-let eq = function (e) {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: l, setTrackedUpsellViewed: o } = e,
-        { location: d } = (0, w.p)(),
-        { analyticsLocations: c } = (0, x.Ay)(),
-        _ = (0, u.bG)([ed.A], () => ed.A.getGuild(n)),
-        { canManageAllExpressions: E } = (0, eK.nr)(_),
-        A = null != _ && 0 === (0, e$.aG)(_.premiumTier) && !_.features.has(e_.GuildFeatures.MORE_STICKERS);
-    return (r.useEffect(() => {
-        E &&
-            A &&
-            l &&
-            ((0, m.zV)(e_.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
-                location: d,
-                guild_id: _?.id,
-                channel_id: a?.id,
+    eK = n(468689),
+    ez = n(931991),
+    eZ = n(473145),
+    eY = n(625633),
+    eq = n(758114);
+let eJ = function (e) {
+    let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
+        { location: u } = (0, k.p)(),
+        { analyticsLocations: c } = (0, D.Ay)(),
+        h = (0, d.bG)([eu.A], () => eu.A.getGuild(n)),
+        { canManageAllExpressions: m } = (0, ez.nr)(h),
+        f = null != h && 0 === (0, eZ.aG)(h.premiumTier) && !h.features.has(eh.GuildFeatures.MORE_STICKERS);
+    return (i.useEffect(() => {
+        m &&
+            f &&
+            a &&
+            ((0, E.zV)(eh.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                location: u,
+                guild_id: h?.id,
+                channel_id: s?.id,
                 type: "Expression Picker Inline Sticker Upsell",
                 location_stack: c,
             }),
             o(!0));
-    }, [A, _, a, d, l, o, c, E]),
-    null != _ && E)
-        ? A
-            ? (0, i.jsxs)("div", {
-                  className: s()(eZ.UX, t),
+    }, [f, h, s, u, a, o, c, m]),
+    null != h && m)
+        ? f
+            ? (0, l.jsxs)("div", {
+                  className: r()(eq.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, i.jsx)(eH.v, { size: "md", color: "currentColor", className: eZ.Kk }),
-                      (0, i.jsx)(eL.E, {
+                      (0, l.jsx)(eH.v, { size: "md", color: "currentColor", className: eq.Kk }),
+                      (0, l.jsx)(eT.E, {
                           color: "interactive-text-default",
-                          className: eZ.rf,
+                          className: eq.rf,
                           variant: "text-sm/normal",
-                          children: eA.intl.format(eA.t.AXWla1, { count: (0, e$.aG)(e_.TVA.TIER_1) }),
+                          children: ef.intl.format(ef.t.AXWla1, { count: (0, eZ.aG)(eh.TVA.TIER_1) }),
                       }),
-                      (0, i.jsx)(ej.Q, {
+                      (0, l.jsx)(eB.Q, {
                           variant: "primary",
-                          text: eA.intl.string(eA.t["Gb+BJD"]),
+                          text: ef.intl.string(ef.t["Gb+BJD"]),
                           onClick: function () {
-                              null != _ &&
+                              null != h &&
                                   (0, eW.A)({
                                       analyticsLocations: c,
-                                      analyticsSourceLocation: d,
-                                      guild: _,
-                                      perks: (0, ez.q5)(),
+                                      analyticsSourceLocation: u,
+                                      guild: h,
+                                      perks: (0, eY.q5)(),
                                   });
                           },
                       }),
                   ],
               })
-            : (0, i.jsxs)("div", {
-                  className: s()(eZ.UX, t),
+            : (0, l.jsxs)("div", {
+                  className: r()(eq.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, i.jsx)(es.t, {
+                      (0, l.jsx)(er.t, {
                           size: "custom",
                           color: "currentColor",
-                          className: eZ.Kk,
+                          className: eq.Kk,
                           width: 20,
                           height: 20,
                       }),
-                      (0, i.jsx)(eL.E, {
+                      (0, l.jsx)(eT.E, {
                           color: "interactive-text-default",
-                          className: eZ.rf,
+                          className: eq.rf,
                           variant: "text-sm/normal",
-                          children: eA.intl.string(eA.t.S83wgh),
+                          children: ef.intl.string(ef.t.S83wgh),
                       }),
-                      (0, i.jsx)(ej.Q, {
+                      (0, l.jsx)(eB.Q, {
                           variant: "primary",
-                          text: eA.intl.string(eA.t.bwNjug),
+                          text: ef.intl.string(ef.t.bwNjug),
                           onClick: function () {
-                              (0, F.v8)(), eY.A.open(n, e_.BEX.STICKERS, d);
+                              (0, G.v8)(), eK.A.open(n, eh.BEX.STICKERS, u);
                           },
                       }),
                   ],
               })
         : null;
 };
-var eX = n(307301),
-    eQ = n(182922),
-    eJ = n(493397);
-let e0 = (0, K.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    e1 = (0, K.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    e2 = r.memo(function (e) {
+var e$ = n(307301),
+    eX = n(182922),
+    eQ = n(493397);
+let e0 = (0, z.xI)(w.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    e1 = (0, z.xI)(w.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    e2 = i.memo(function (e) {
         let { stickersGrid: t } = e,
-            n = k.bM.useStore((e) => e.inspectedExpressionPosition),
-            a = r.useMemo(() => {
-                let { rowIndex: e, columnIndex: i } = n,
-                    r = t[e]?.[i];
-                if (null == r) return null;
-                switch (r.type) {
+            n = U.bM.useStore((e) => e.inspectedExpressionPosition),
+            s = i.useMemo(() => {
+                let { rowIndex: e, columnIndex: l } = n,
+                    i = t[e]?.[l];
+                if (null == i) return null;
+                switch (i.type) {
                     case ee.op.CREATE_STICKER:
-                        return { guild_id: r.guild_id, name: r.name };
+                        return { guild_id: i.guild_id, name: i.name };
                     case ee.op.STICKER:
-                        return r.sticker;
+                        return i.sticker;
                     default:
                         return null;
                 }
             }, [t, n]);
-        if (null == a) return null;
-        let { graphic: s, title: l } = (function (e) {
+        if (null == s) return null;
+        let { graphic: r, title: a } = (function (e) {
                 let t = null,
                     n = null;
                 if ((!(0, ec.FD)(e) && !(0, ec.Xw)(e)) || (0, ec.Xw)(e)) {
-                    let r = ed.A.getGuild(e.guild_id);
-                    null != r &&
-                        ((t = eA.intl.format(eA.t.cZOkbs, { source: r.name })), (n = (0, i.jsx)(el.A, { guild: r })));
+                    let i = eu.A.getGuild(e.guild_id);
+                    null != i &&
+                        ((t = ef.intl.format(ef.t.cZOkbs, { source: i.name })), (n = (0, l.jsx)(ea.A, { guild: i })));
                 } else if ((0, ec.FD)(e)) {
-                    let r = y.A.getStickerPack(e.pack_id);
-                    null != r &&
-                        ((t = eA.intl.format(eA.t.cZOkbs, { source: r.name })),
-                        (n = (0, i.jsx)(eu.A, { size: e1, sticker: (0, ec.Id)(r), disableAnimation: !0 })));
+                    let i = b.A.getStickerPack(e.pack_id);
+                    null != i &&
+                        ((t = ef.intl.format(ef.t.cZOkbs, { source: i.name })),
+                        (n = (0, l.jsx)(ed.A, { size: e1, sticker: (0, ec.Id)(i), disableAnimation: !0 })));
                 }
                 return { title: t, graphic: n };
-            })(a),
+            })(s),
             o =
-                (0, ec.FD)(a) || (0, ec.Xw)(a)
-                    ? (0, i.jsx)(eu.A, { isInteracting: !0, size: e0, sticker: a, disableAnimation: !0 })
-                    : (0, i.jsx)("div", {
-                          className: eJ.P,
-                          children: (0, i.jsx)(eX.j, { size: "md", color: "currentColor", className: eJ.K }),
+                (0, ec.FD)(s) || (0, ec.Xw)(s)
+                    ? (0, l.jsx)(ed.A, { isInteracting: !0, size: e0, sticker: s, disableAnimation: !0 })
+                    : (0, l.jsx)("div", {
+                          className: eQ.P,
+                          children: (0, l.jsx)(e$.j, { size: "md", color: "currentColor", className: eQ.K }),
                       });
-        return (0, i.jsx)(eQ.A, {
+        return (0, l.jsx)(eX.A, {
             graphicPrimary: o,
-            graphicSecondary: s,
-            titlePrimary: a.name,
-            titleSecondary: (0, ec.FD)(a) || (0, ec.Xw)(a) ? l : null,
+            graphicSecondary: r,
+            titlePrimary: s.name,
+            titleSecondary: (0, ec.FD)(s) || (0, ec.Xw)(s) ? a : null,
         });
     });
 var e3 = n(140735),
-    e4 = n(442433),
-    e5 = n(304072),
-    e6 = n(194261),
-    e7 = n(312503);
-let e8 = function (e) {
+    e5 = n(442433),
+    e7 = n(304072),
+    e8 = n(194261),
+    e6 = n(312503);
+let e4 = function (e) {
     let { size: t } = e;
-    return (0, i.jsx)("div", {
-        className: e7.G,
+    return (0, l.jsx)("div", {
+        className: e6.G,
         style: { width: t, height: t },
-        children: (0, i.jsx)(e6.X, { size: "xxs", color: "currentColor", className: e7.I }),
+        children: (0, l.jsx)(e8.X, { size: "xxs", color: "currentColor", className: e6.I }),
     });
 };
 var e9 = n(815480);
-let te = r.memo(function (e) {
+let te = i.memo(function (e) {
     let {
             isDisplayingIndividualStickers: t = !1,
-            preferAnimation: a = !0,
+            preferAnimation: s = !0,
             getStickerItemProps: o,
-            getStickerRowProps: d,
+            getStickerRowProps: u,
             gutterWidth: c,
-            inspectedStickerPosition: u,
-            isScrolling: _,
-            isUsingKeyboardNavigation: h,
-            onInspect: I,
-            onSelect: f,
-            rowIndex: p,
-            stickerClassName: T,
-            stickerDescriptors: m,
-            stickerPadding: g,
-            stickerSize: S,
-            ownedStickerPacks: N,
-            enlargeOnInteraction: C = !1,
-            channel: R,
-            currentUser: O,
-            checkSendability: L = !0,
+            inspectedStickerPosition: d,
+            isScrolling: h,
+            isUsingKeyboardNavigation: p,
+            onInspect: g,
+            onSelect: x,
+            rowIndex: A,
+            stickerClassName: C,
+            stickerDescriptors: E,
+            stickerPadding: I,
+            stickerSize: y,
+            ownedStickerPacks: v,
+            enlargeOnInteraction: S = !1,
+            channel: N,
+            currentUser: _,
+            checkSendability: T = !0,
         } = e,
-        { location: D } = (0, w.p)(),
-        y = S + 2 * g,
-        v = r.useMemo(
+        { location: j } = (0, k.p)(),
+        b = y + 2 * I,
+        R = i.useMemo(
             () => ({
                 gridColumnGap: c,
-                gridTemplateColumns: `repeat(auto-fill, ${y}px)`,
-                height: y,
-                paddingRight: t ? void 0 : y,
+                gridTemplateColumns: `repeat(auto-fill, ${b}px)`,
+                height: b,
+                paddingRight: t ? void 0 : b,
             }),
-            [t, c, y],
+            [t, c, b],
         ),
-        b = r.useMemo(() => ({ width: S, height: S, padding: g }), [g, S]),
-        [M, P] = (0, e5.A)(null, 300);
-    return (0, i.jsx)("div", {
+        O = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
+        [M, w] = (0, e7.A)(null, 300);
+    return (0, l.jsx)("div", {
         className: e9.nM,
-        style: v,
-        ...d?.(p),
-        children: m.map((e) => {
-            let d = e.visibleRowIndex === u?.rowIndex && e.columnIndex === u?.columnIndex,
-                c = e.type === ee.op.STICKER && C && d,
-                m = (0, l.throttle)(() => {
-                    _?.current === !0 || h?.current === !0 || d || I?.(e);
+        style: R,
+        ...u?.(A),
+        children: E.map((e) => {
+            let u = e.visibleRowIndex === d?.rowIndex && e.columnIndex === d?.columnIndex,
+                c = e.type === ee.op.STICKER && S && u,
+                E = (0, a.throttle)(() => {
+                    h?.current === !0 || p?.current === !0 || u || g?.(e);
                 }, 250),
-                { ref: g, tabIndex: y, onFocus: v, ...U } = o?.(e.columnIndex, p) ?? {};
+                { ref: I, tabIndex: b, onFocus: R, ...L } = o?.(e.columnIndex, A) ?? {};
             switch (e.type) {
                 case ee.op.CREATE_STICKER:
-                    return (0, i.jsx)(
+                    return (0, l.jsx)(
                         "div",
                         {
-                            ...U,
-                            children: (0, i.jsxs)(A.D, {
+                            ...L,
+                            children: (0, l.jsxs)(f.D, {
                                 "aria-label": e.name,
-                                className: s()(e9.wP, T, { [e9.Kj]: d }),
-                                innerRef: g,
-                                tabIndex: y,
-                                onFocus: v ?? m,
-                                onMouseMove: m,
+                                className: r()(e9.wP, C, { [e9.Kj]: u }),
+                                innerRef: I,
+                                tabIndex: b,
+                                onFocus: R ?? E,
+                                onMouseMove: E,
                                 onClick: function () {
                                     e.type === ee.op.CREATE_STICKER &&
-                                        (Y.default.track(e_.HAw.OPEN_MODAL, {
-                                            type: e_.JJy.CREATE_STICKER_MODAL,
-                                            location: D,
+                                        (K.default.track(eh.HAw.OPEN_MODAL, {
+                                            type: eh.JJy.CREATE_STICKER_MODAL,
+                                            location: j,
                                         }),
-                                        (0, E.openModalLazy)(async () => {
+                                        (0, m.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("47899"),
-                                                n.e("95921"),
-                                                n.e("75091"),
-                                                n.e("56963"),
-                                                n.e("8891"),
-                                                n.e("83952"),
+                                                n.e("547899"),
+                                                n.e("782906"),
+                                                n.e("375091"),
+                                                n.e("656963"),
+                                                n.e("408891"),
+                                                n.e("883952"),
                                                 n.e("66580"),
+                                                n.e("480436"),
                                                 n.e("50342"),
-                                                n.e("80436"),
-                                                n.e("20643"),
+                                                n.e("420643"),
                                                 n.e("98913"),
-                                                n.e("29143"),
+                                                n.e("429143"),
                                             ]).then(n.bind(n, 445002));
-                                            return (n) => (0, i.jsx)(t, { guildId: e.guild_id, ...n });
+                                            return (n) => (0, l.jsx)(t, { guildId: e.guild_id, ...n });
                                         }));
                                 },
-                                style: b,
+                                style: O,
                                 children: [
-                                    !C && (0, i.jsx)("div", { className: e9.fw }),
-                                    (0, i.jsx)("div", {
+                                    !S && (0, l.jsx)("div", { className: e9.fw }),
+                                    (0, l.jsx)("div", {
                                         className: e9.P0,
-                                        children: (0, i.jsx)(eX.j, {
+                                        children: (0, l.jsx)(e$.j, {
                                             size: "md",
                                             color: "currentColor",
                                             className: e9.Kk,
                                         }),
                                     }),
-                                    (0, i.jsx)(eL.E, {
+                                    (0, l.jsx)(eT.E, {
                                         color: "interactive-text-active",
                                         variant: "text-xs/normal",
-                                        children: eA.intl.string(eA.t["+nEuqr"]),
+                                        children: ef.intl.string(ef.t["+nEuqr"]),
                                     }),
                                 ],
                             }),
@@ -630,56 +630,56 @@ let te = r.memo(function (e) {
                         e.guild_id,
                     );
                 case ee.op.STICKER: {
-                    let l = t && null != N && (0, ec.FD)(e.sticker) && !N.has(e.sticker.pack_id);
-                    return (0, r.createElement)(
+                    let a = t && null != v && (0, ec.FD)(e.sticker) && !v.has(e.sticker.pack_id);
+                    return (0, i.createElement)(
                         "div",
-                        { ...U, key: e.sticker.id },
-                        (0, i.jsxs)(A.D, {
-                            className: s()(e9.yI, T, { [e9.PV]: d, [e9.TV]: M === e.sticker.id }),
-                            innerRef: g,
-                            tabIndex: y,
-                            onFocus: v ?? m,
-                            onMouseMove: m,
+                        { ...L, key: e.sticker.id },
+                        (0, l.jsxs)(f.D, {
+                            className: r()(e9.yI, C, { [e9.PV]: u, [e9.TV]: M === e.sticker.id }),
+                            innerRef: I,
+                            tabIndex: b,
+                            onFocus: R ?? E,
+                            onMouseMove: E,
                             onClick: function (t) {
-                                if (_?.current === !0 || h?.current === !0) return;
+                                if (h?.current === !0 || p?.current === !0) return;
                                 let n = t.altKey;
-                                n && e.type === ee.op.STICKER && !(0, ec.o1)(e.sticker.id) && P(e.sticker.id),
-                                    f?.(e, n);
+                                n && e.type === ee.op.STICKER && !(0, ec.o1)(e.sticker.id) && w(e.sticker.id),
+                                    x?.(e, n);
                             },
                             onContextMenu: function (e) {
-                                (0, e4.L3)(e, async () => {
-                                    let { default: e } = await Promise.all([n.e("4774"), n.e("46132")]).then(
+                                (0, e5.L3)(e, async () => {
+                                    let { default: e } = await Promise.all([n.e("904774"), n.e("446132")]).then(
                                         n.bind(n, 233503),
                                     );
-                                    return (t) => (0, i.jsx)(e, { ...t });
+                                    return (t) => (0, l.jsx)(e, { ...t });
                                 });
                             },
-                            style: b,
+                            style: O,
                             "data-type": en.g.STICKER,
                             "data-id": e.sticker.id,
                             "data-name": e.sticker.name,
                             "data-format-type": e.sticker.format_type,
                             children: [
-                                (0, i.jsx)(e3.A, { children: (0, eu.h)(e.sticker) }),
-                                (0, i.jsxs)("div", {
+                                (0, l.jsx)(e3.A, { children: (0, ed.h)(e.sticker) }),
+                                (0, l.jsxs)("div", {
                                     "aria-hidden": !0,
                                     children: [
-                                        !C && (0, i.jsx)("div", { className: e9.fw }),
-                                        (0, i.jsx)(eu.A, {
-                                            className: s()(e9.SI, {
+                                        !S && (0, l.jsx)("div", { className: e9.fw }),
+                                        (0, l.jsx)(ed.A, {
+                                            className: r()(e9.SI, {
                                                 [e9.ot]:
-                                                    C && !d && null != u && -1 !== u.rowIndex && -1 !== u.columnIndex,
+                                                    S && !u && null != d && -1 !== d.rowIndex && -1 !== d.columnIndex,
                                                 [e9.Q$]: c,
-                                                [e9.No]: L && !(0, Q.G7)(e.sticker, O, R),
+                                                [e9.No]: T && !(0, X.G7)(e.sticker, _, N),
                                             }),
-                                            disableAnimation: !d && !a,
-                                            enlargeOnInteraction: C,
-                                            isInteracting: d,
-                                            maskAsset: d,
+                                            disableAnimation: !u && !s,
+                                            enlargeOnInteraction: S,
+                                            isInteracting: u,
+                                            maskAsset: u,
                                             sticker: e.sticker,
-                                            size: S,
+                                            size: y,
                                         }),
-                                        l ? (0, i.jsx)(e8, { size: 20 }) : null,
+                                        a ? (0, l.jsx)(e4, { size: 20 }) : null,
                                     ],
                                 }),
                             ],
@@ -692,200 +692,200 @@ let te = r.memo(function (e) {
 });
 var tt = n(22234),
     tn = n(911385);
-let ti = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    tr = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-    ta = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
-    ts = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-    tl = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    to = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-    td = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    tc = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-    tu = (0, K.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-    t_ = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    tE = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    tA = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    th = [ta, tl, to, td],
-    tI = [ts, tl, to, td],
-    tf = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
-    tp = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"];
-function tT(e) {
+let tl = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    ti = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+    ts = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+    tr = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
+    ta = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    to = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+    tu = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    tc = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+    td = (0, z.xI)(w.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+    th = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    tm = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    tf = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    tp = [ts, ta, to, tu],
+    tg = [tr, ta, to, tu],
+    tx = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
+    tA = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"];
+function tC(e) {
     let { onSuggestionClick: t } = e;
-    return (0, i.jsx)("div", {
+    return (0, l.jsx)("div", {
         className: tt.yB,
-        children: tp.map((e) =>
-            (0, i.jsx)(
-                A.D,
+        children: tA.map((e) =>
+            (0, l.jsx)(
+                f.D,
                 {
                     className: tt.x_,
                     onClick: () => t(e),
-                    children: (0, i.jsx)(eL.E, { variant: "text-sm/normal", color: "text-default", children: e }),
+                    children: (0, l.jsx)(eT.E, { variant: "text-sm/normal", color: "text-default", children: e }),
                 },
                 e,
             ),
         ),
     });
 }
-let tm = r.forwardRef(function (e, t) {
+let tE = i.forwardRef(function (e, t) {
         let {
                 collapsedStickersCategories: n,
-                gridWidth: a,
-                filteredStickers: s,
-                getStickerItemProps: l,
+                gridWidth: s,
+                filteredStickers: r,
+                getStickerItemProps: a,
                 getStickerRowProps: o,
-                gutterWidth: d,
+                gutterWidth: u,
                 stickerPadding: c,
-                isUsingKeyboardNavigation: _,
-                onSelectSticker: E,
-                rowCount: A,
-                rowCountBySection: h,
-                stickersCategories: I,
-                stickersGrid: f,
-                channel: p,
+                isUsingKeyboardNavigation: h,
+                onSelectSticker: m,
+                rowCount: f,
+                rowCountBySection: p,
+                stickersCategories: g,
+                stickersGrid: x,
+                channel: A,
             } = e,
-            T = t_ + 2 * c,
-            m = r.useRef(!1),
-            g = r.useRef(null),
-            [S, N] = k.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
-            { analyticsLocations: C } = (0, x.Ay)(G.A.STICKER_PICKER),
-            R = (0, F.RQ)((e) => e.searchQuery),
-            O = (0, u.bG)([y.A], () => y.A.getPremiumPacks()),
+            C = th + 2 * c,
+            E = i.useRef(!1),
+            I = i.useRef(null),
+            [y, v] = U.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
+            { analyticsLocations: S } = (0, D.Ay)(P.A.STICKER_PICKER),
+            N = (0, G.RQ)((e) => e.searchQuery),
+            _ = (0, d.bG)([b.A], () => b.A.getPremiumPacks()),
             {
-                renderRow: L,
-                renderSection: D,
-                renderSectionFooter: v,
-                sectionFooterHeight: b,
-                renderSectionHeader: P,
-                sectionHeaderHeight: U,
+                renderRow: T,
+                renderSection: j,
+                renderSectionFooter: R,
+                sectionFooterHeight: O,
+                renderSectionHeader: w,
+                sectionHeaderHeight: L,
             } = (function (e) {
                 let {
                         collapsedStickersCategories: t,
                         gridWidth: n,
-                        stickerPadding: a,
-                        onSelectSticker: s,
-                        getStickerItemProps: l,
+                        stickerPadding: s,
+                        onSelectSticker: r,
+                        getStickerItemProps: a,
                         getStickerRowProps: o,
-                        gutterWidth: d,
+                        gutterWidth: u,
                         inspectedStickerPosition: c,
-                        isScrolling: _,
-                        isUsingKeyboardNavigation: E,
-                        stickersGrid: A,
-                        stickersCategories: h,
-                        filteredStickers: I,
-                        ownedStickerPacks: f,
-                        channel: p,
+                        isScrolling: h,
+                        isUsingKeyboardNavigation: m,
+                        stickersGrid: f,
+                        stickersCategories: p,
+                        filteredStickers: g,
+                        ownedStickerPacks: x,
+                        channel: A,
                     } = e,
-                    T = (0, w.p)(),
-                    m = (0, u.bG)([W.default], () => W.default.getCurrentUser()),
-                    { handleStickerInspect: g, handleSelect: S } = (function (e) {
-                        let { onSelectSticker: t, channel: n, currentUser: i } = e,
-                            a = (0, w.p)(),
-                            s = (0, F.RQ)((e) => e.searchQuery);
+                    C = (0, k.p)(),
+                    E = (0, d.bG)([W.default], () => W.default.getCurrentUser()),
+                    { handleStickerInspect: I, handleSelect: y } = (function (e) {
+                        let { onSelectSticker: t, channel: n, currentUser: l } = e,
+                            s = (0, k.p)(),
+                            r = (0, G.RQ)((e) => e.searchQuery);
                         return {
-                            handleStickerInspect: r.useCallback((e) => {
-                                let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: i } = e;
-                                k.bM.setActiveCategoryIndex(i),
-                                    k.bM.setInspectedExpressionPosition(n, t, en.t.MOUSE_EVENT),
-                                    e.type === ee.op.STICKER && k.bM.setSearchPlaceholder(e.sticker.name);
+                            handleStickerInspect: i.useCallback((e) => {
+                                let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: l } = e;
+                                U.bM.setActiveCategoryIndex(l),
+                                    U.bM.setInspectedExpressionPosition(n, t, en.t.MOUSE_EVENT),
+                                    e.type === ee.op.STICKER && U.bM.setSearchPlaceholder(e.sticker.name);
                             }, []),
-                            handleSelect: r.useCallback(
-                                (e, r) => {
+                            handleSelect: i.useCallback(
+                                (e, i) => {
                                     if (e.type !== ee.op.STICKER) return;
-                                    let { sticker: l } = e;
-                                    if (null == l) return;
+                                    let { sticker: a } = e;
+                                    if (null == a) return;
                                     let o = {
-                                        ...a.location,
+                                        ...s.location,
                                         object:
-                                            "" === s ? e_.ZSU.STICKER_PICKER_VIEW_ALL : e_.ZSU.STICKER_SEARCH_VIEW_ALL,
+                                            "" === r ? eh.ZSU.STICKER_PICKER_VIEW_ALL : eh.ZSU.STICKER_SEARCH_VIEW_ALL,
                                     };
-                                    if (null != l && !(0, Q.G7)(l, i, n)) {
-                                        let e = (0, ec.Xw)(l);
-                                        (0, Q.W$)(l, i, n) === Q.Ux.SENDABLE_WITH_PREMIUM && X(!0),
-                                            e && Q.Ux.SENDABLE_WITH_BOOSTED_GUILD;
+                                    if (null != a && !(0, X.G7)(a, l, n)) {
+                                        let e = (0, ec.Xw)(a);
+                                        (0, X.W$)(a, l, n) === X.Ux.SENDABLE_WITH_PREMIUM && $(!0),
+                                            e && X.Ux.SENDABLE_WITH_BOOSTED_GUILD;
                                         return;
                                     }
-                                    r
-                                        ? (0, ec.o1)(l.id)
-                                            ? (0, eB.vr)(l.id)
-                                            : ((0, J.Dt)({ sticker: l, location: { ...o, object: e_.ZSU.STICKER } }),
-                                              (0, eB.uK)(l.id))
+                                    i
+                                        ? (0, ec.o1)(a.id)
+                                            ? (0, eF.vr)(a.id)
+                                            : ((0, Q.Dt)({ sticker: a, location: { ...o, object: eh.ZSU.STICKER } }),
+                                              (0, eF.uK)(a.id))
                                         : t(e);
                                 },
-                                [a.location, s, i, n, t],
+                                [s.location, r, l, n, t],
                             ),
                         };
-                    })({ onSelectSticker: s, channel: p, currentUser: m }),
-                    [N, C] = r.useState(!1),
-                    R = r.useCallback((e) => {
-                        j.tP.updateSetting(Array.from(e));
+                    })({ onSelectSticker: r, channel: A, currentUser: E }),
+                    [v, S] = i.useState(!1),
+                    N = i.useCallback((e) => {
+                        B.tP.updateSetting(Array.from(e));
                     }, []),
-                    O = r.useCallback(
+                    _ = i.useCallback(
                         (e) => {
-                            let t = A[e];
+                            let t = f[e];
                             return null != t
-                                ? (0, i.jsx)(
+                                ? (0, l.jsx)(
                                       te,
                                       {
-                                          getStickerItemProps: l,
+                                          getStickerItemProps: a,
                                           getStickerRowProps: o,
-                                          gutterWidth: d,
+                                          gutterWidth: u,
                                           inspectedStickerPosition: c,
-                                          isScrolling: _,
-                                          isUsingKeyboardNavigation: E,
-                                          onInspect: g,
-                                          onSelect: S,
+                                          isScrolling: h,
+                                          isUsingKeyboardNavigation: m,
+                                          onInspect: I,
+                                          onSelect: y,
                                           rowIndex: e,
                                           stickerClassName: tt.yI,
                                           stickerDescriptors: t,
-                                          stickerSize: n > ti ? t_ : tE,
-                                          stickerPadding: a,
-                                          preferAnimation: n <= tr,
-                                          ownedStickerPacks: f,
+                                          stickerSize: n > tl ? th : tm,
+                                          stickerPadding: s,
+                                          preferAnimation: n <= ti,
+                                          ownedStickerPacks: x,
                                           isDisplayingIndividualStickers: !0,
-                                          channel: p,
-                                          currentUser: m,
+                                          channel: A,
+                                          currentUser: E,
                                       },
                                       e,
                                   )
                                 : null;
                         },
-                        [A, l, o, d, c, _, E, g, S, n, a, f, p, m],
+                        [f, a, o, u, c, h, m, I, y, n, s, x, A, E],
                     ),
-                    L = r.useCallback((e, t) => (0, i.jsx)("div", { children: t }, e), []),
-                    D = r.useCallback(
+                    T = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+                    j = i.useCallback(
                         function (e) {
                             let { isStickerPack: n = !0 } =
                                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                                i = new Set(t),
-                                r = t.has(e);
-                            r ? i.delete(e) : i.add(e),
-                                Y.default.track(e_.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                                    location: T?.location,
-                                    tab: eE.kx.STICKER,
-                                    collapsed: !r,
+                                l = new Set(t),
+                                i = t.has(e);
+                            i ? l.delete(e) : l.add(e),
+                                K.default.track(eh.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                                    location: C?.location,
+                                    tab: em.kx.STICKER,
+                                    collapsed: !i,
                                     sticker_pack_id: n ? e : null,
                                 }),
-                                R(i);
+                                N(l);
                         },
-                        [T, t, R],
+                        [C, t, N],
                     ),
-                    v = r.useCallback(
+                    R = i.useCallback(
                         (e) => {
-                            let n = h[e];
-                            if (null != I) {
-                                let { sendable: t, sendableWithPremium: n } = I;
+                            let n = p[e];
+                            if (null != g) {
+                                let { sendable: t, sendableWithPremium: n } = g;
                                 if (0 === e && t.length > 0) return null;
-                                let r = t.length > 0 && n.length > 0;
-                                return (0, i.jsxs)(i.Fragment, {
+                                let i = t.length > 0 && n.length > 0;
+                                return (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        r
-                                            ? (0, i.jsx)("div", { className: tt.yF, children: (0, i.jsx)(ex.c, {}) })
+                                        i
+                                            ? (0, l.jsx)("div", { className: tt.yF, children: (0, l.jsx)(eD.c, {}) })
                                             : null,
-                                        (0, i.jsx)(
+                                        (0, l.jsx)(
                                             eV.A,
                                             {
                                                 className: tt.jH,
-                                                "aria-label": eA.intl.string(eA.t.wbfJFh),
-                                                children: eA.intl.string(eA.t["05Z/0l"]),
+                                                "aria-label": ef.intl.string(ef.t.wbfJFh),
+                                                children: ef.intl.string(ef.t["05Z/0l"]),
                                             },
                                             "stickers-you-might-like-header",
                                         ),
@@ -894,71 +894,71 @@ let tm = r.forwardRef(function (e, t) {
                             }
                             switch (n.type) {
                                 case ee.Z2.FAVORITE:
-                                    return (0, i.jsx)(
+                                    return (0, l.jsx)(
                                         eV.A,
                                         {
                                             className: tt.jH,
-                                            "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
+                                            "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: n.name,
                                             }),
-                                            icon: (0, i.jsx)(ei.G, { size: "xs", color: "currentColor" }),
+                                            icon: (0, l.jsx)(el.G, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
-                                            onClick: () => D(n.id, { isStickerPack: !1 }),
+                                            onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,
                                         },
                                         `header-${n.id}`,
                                     );
                                 case ee.Z2.RECENT:
-                                    return (0, i.jsx)(
+                                    return (0, l.jsx)(
                                         eV.A,
                                         {
                                             className: tt.jH,
-                                            "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
+                                            "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: n.name,
                                             }),
-                                            icon: (0, i.jsx)(er.O, { size: "xs", color: "currentColor" }),
+                                            icon: (0, l.jsx)(ei.O, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
-                                            onClick: () => D(n.id, { isStickerPack: !1 }),
+                                            onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,
                                         },
                                         `header-${n.id}`,
                                     );
                                 case ee.Z2.GUILD:
                                 case ee.Z2.EMPTY_GUILD_UPSELL: {
-                                    let e = ed.A.getGuild(n.id);
+                                    let e = eu.A.getGuild(n.id);
                                     if (null == e) return null;
-                                    return (0, i.jsx)(
+                                    return (0, l.jsx)(
                                         eV.A,
                                         {
                                             className: tt.jH,
-                                            "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
+                                            "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: e.name,
                                             }),
-                                            icon: (0, i.jsx)(el.A, { guild: e, height: 16, width: 16 }),
+                                            icon: (0, l.jsx)(ea.A, { guild: e, height: 16, width: 16 }),
                                             isCollapsed: t.has(e.id),
-                                            onClick: () => D(e.id),
+                                            onClick: () => j(e.id),
                                             children: e.name,
                                         },
                                         `h${e.id}`,
                                     );
                                 }
                                 case ee.Z2.PACK: {
-                                    let e = y.A.getStickerPack(n.id);
+                                    let e = b.A.getStickerPack(n.id);
                                     if (null == e) return null;
-                                    return (0, i.jsx)(
+                                    return (0, l.jsx)(
                                         eV.A,
                                         {
                                             className: tt.jH,
-                                            "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
+                                            "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: e.name,
                                             }),
-                                            icon: (0, i.jsx)(eu.A, {
+                                            icon: (0, l.jsx)(ed.A, {
                                                 disableAnimation: !0,
                                                 size: 12,
                                                 sticker: (0, ec.Id)(e),
                                             }),
                                             isCollapsed: t.has(e.id),
-                                            onClick: () => D(e.id),
+                                            onClick: () => j(e.id),
                                             children: e.name,
                                         },
                                         `h${e.id}`,
@@ -966,634 +966,634 @@ let tm = r.forwardRef(function (e, t) {
                                 }
                             }
                         },
-                        [t, h, D, I],
+                        [t, p, j, g],
                     ),
-                    b = r.useCallback(
+                    O = i.useCallback(
                         (e) => {
-                            if (null != I) {
-                                let { sendable: t, sendableWithPremium: n } = I;
-                                return 0 === e && t.length > 0 ? 0 : tu + (t.length > 0 && n.length > 0 ? tc : 0);
+                            if (null != g) {
+                                let { sendable: t, sendableWithPremium: n } = g;
+                                return 0 === e && t.length > 0 ? 0 : td + (t.length > 0 && n.length > 0 ? tc : 0);
                             }
-                            return tu;
+                            return td;
                         },
-                        [I],
+                        [g],
                     );
                 return {
-                    renderRow: O,
-                    renderSection: L,
-                    renderSectionHeader: v,
-                    sectionHeaderHeight: b,
-                    renderSectionFooter: r.useCallback(
+                    renderRow: _,
+                    renderSection: T,
+                    renderSectionHeader: R,
+                    sectionHeaderHeight: O,
+                    renderSectionFooter: i.useCallback(
                         (e) => {
-                            let n = h[e],
-                                r = t.has(n.id);
-                            return n.type !== ee.Z2.EMPTY_GUILD_UPSELL || null != I || r
+                            let n = p[e],
+                                i = t.has(n.id);
+                            return n.type !== ee.Z2.EMPTY_GUILD_UPSELL || null != g || i
                                 ? null
-                                : (0, i.jsx)(
-                                      eq,
+                                : (0, l.jsx)(
+                                      eJ,
                                       {
                                           className: tt.Ij,
                                           guildId: n.id,
-                                          channel: p,
-                                          shouldTrackUpsellViewed: !N,
-                                          setTrackedUpsellViewed: C,
+                                          channel: A,
+                                          shouldTrackUpsellViewed: !v,
+                                          setTrackedUpsellViewed: S,
                                       },
                                       `sticker-picker-empty-guild-inline-upsell-${n.id}`,
                                   );
                         },
-                        [h, t, I, p, N],
+                        [p, t, g, A, v],
                     ),
-                    sectionFooterHeight: r.useCallback(
+                    sectionFooterHeight: i.useCallback(
                         (e) => {
-                            let n = h[e],
-                                i = t.has(n.id);
-                            return n.type !== ee.Z2.EMPTY_GUILD_UPSELL || i ? 0 : tf;
+                            let n = p[e],
+                                l = t.has(n.id);
+                            return n.type !== ee.Z2.EMPTY_GUILD_UPSELL || l ? 0 : tx;
                         },
-                        [h, t],
+                        [p, t],
                     ),
                 };
             })({
                 collapsedStickersCategories: n,
-                gridWidth: a,
+                gridWidth: s,
                 stickerPadding: c,
-                stickersCategories: I,
-                stickersGrid: f,
-                isScrolling: m,
-                isUsingKeyboardNavigation: _,
-                onSelectSticker: E,
-                getStickerItemProps: l,
+                stickersCategories: g,
+                stickersGrid: x,
+                isScrolling: E,
+                isUsingKeyboardNavigation: h,
+                onSelectSticker: m,
+                getStickerItemProps: a,
                 getStickerRowProps: o,
-                gutterWidth: d,
-                inspectedStickerPosition: N,
-                filteredStickers: s,
-                ownedStickerPacks: r.useMemo(() => new Set(O.map((e) => e.id)), [O]),
-                channel: p,
+                gutterWidth: u,
+                inspectedStickerPosition: v,
+                filteredStickers: r,
+                ownedStickerPacks: i.useMemo(() => new Set(_.map((e) => e.id)), [_]),
+                channel: A,
             }),
-            B = (0, V.Fk)({
-                activeCategoryIndex: S,
-                isScrolling: m,
-                listRef: g,
-                onActiveCategoryIndexChange: k.bM.setActiveCategoryIndex,
+            F = (0, V.Fk)({
+                activeCategoryIndex: y,
+                isScrolling: E,
+                listRef: I,
+                onActiveCategoryIndexChange: U.bM.setActiveCategoryIndex,
                 scrollOffset: 20,
-                searchQuery: R,
+                searchQuery: N,
             });
         return (
-            (0, V.FV)({ searchQuery: R, activeCategoryIndex: S, listRef: g }),
-            r.useImperativeHandle(
+            (0, V.FV)({ searchQuery: N, activeCategoryIndex: y, listRef: I }),
+            i.useImperativeHandle(
                 t,
                 () => ({
                     scrollTo: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.scrollTo(...t);
+                        return I.current?.scrollTo(...t);
                     },
-                    getRowDescriptors: () => g.current?.getRowDescriptors() ?? [],
-                    getSectionDescriptors: () => g.current?.getSectionDescriptors() ?? [],
+                    getRowDescriptors: () => I.current?.getRowDescriptors() ?? [],
+                    getSectionDescriptors: () => I.current?.getSectionDescriptors() ?? [],
                     scrollToSectionTop: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.scrollToSectionTop(...t);
+                        return I.current?.scrollToSectionTop(...t);
                     },
                     scrollRowIntoView: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.scrollRowIntoView(...t);
+                        return I.current?.scrollRowIntoView(...t);
                     },
                     getScrollerNode: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.getScrollerNode(...t);
+                        return I.current?.getScrollerNode(...t);
                     },
                     scrollIntoViewNode: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.scrollIntoViewNode(...t);
+                        return I.current?.scrollIntoViewNode(...t);
                     },
                     getListDimensions: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return g.current?.getListDimensions(...t) ?? { height: -1, totalHeight: -1 };
+                        return I.current?.getListDimensions(...t) ?? { height: -1, totalHeight: -1 };
                     },
                 }),
                 [],
             ),
-            (0, i.jsx)(x.f5, {
-                value: C,
-                children: (0, i.jsxs)("div", {
+            (0, l.jsx)(D.f5, {
+                value: S,
+                children: (0, l.jsxs)("div", {
                     className: tt.iE,
                     children: [
-                        null != s && 0 === s.sendable.length && 0 === s.sendableWithPremium.length
-                            ? (0, i.jsx)(ek.A, {
-                                  message: eA.intl.string(eA.t["zc+LQd"]),
+                        null != r && 0 === r.sendable.length && 0 === r.sendableWithPremium.length
+                            ? (0, l.jsx)(eU.A, {
+                                  message: ef.intl.string(ef.t["zc+LQd"]),
                                   className: tt.__invalid_noSearchResultsContainer,
                                   noResultsImageURL: tn,
-                                  suggestions: (0, i.jsx)(tT, { onSuggestionClick: (e) => (0, F.Ri)(e, !0) }),
+                                  suggestions: (0, l.jsx)(tC, { onSuggestionClick: (e) => (0, G.Ri)(e, !0) }),
                               })
-                            : (0, i.jsx)(eF.A, {
+                            : (0, l.jsx)(eG.A, {
                                   role: "none presentation",
-                                  listPadding: null != s ? tI : th,
-                                  onScroll: B,
-                                  renderRow: L,
-                                  renderSection: null == s ? D : void 0,
-                                  renderSectionHeader: P,
-                                  renderSectionFooter: v,
-                                  rowCount: A,
-                                  rowCountBySection: h,
-                                  rowHeight: a > ti ? T + tA : tE + 2 * c + tA,
-                                  sectionHeaderHeight: U,
-                                  sectionFooterHeight: b,
+                                  listPadding: null != r ? tg : tp,
+                                  onScroll: F,
+                                  renderRow: T,
+                                  renderSection: null == r ? j : void 0,
+                                  renderSectionHeader: w,
+                                  renderSectionFooter: R,
+                                  rowCount: f,
+                                  rowCountBySection: p,
+                                  rowHeight: s > tl ? C + tf : tm + 2 * c + tf,
+                                  sectionHeaderHeight: L,
+                                  sectionFooterHeight: O,
                                   stickyHeaders: !0,
-                                  ref: g,
+                                  ref: I,
                               }),
-                        (0, i.jsx)(e2, { stickersGrid: f }),
+                        (0, l.jsx)(e2, { stickersGrid: x }),
                     ],
                 }),
             })
         );
     }),
-    tg = (0, n(945810).mj)({
+    tI = (0, n(945810).mj)({
         name: "2026-02-sticker-padding",
         kind: "user",
         defaultConfig: { padding: 2 },
         variations: { 1: { padding: 1 } },
     });
-var tS = n(602034),
-    tN = n(892547),
-    tC = n(447285);
-let tR = r.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: a, channel: s } = e,
-        l = (0, D.ZO)(s),
-        o = r.useRef(null),
-        { searchQuery: d, isSearchSuggestion: c } = (0, F.RQ)(
+var ty = n(602034),
+    tv = n(892547),
+    tS = n(447285);
+let tN = i.forwardRef(function (e, t) {
+    let { onKeyDown: n, stickersListRef: s, channel: r } = e,
+        a = (0, j.ZO)(r),
+        o = i.useRef(null),
+        { searchQuery: u, isSearchSuggestion: c } = (0, G.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
             M.x,
         ),
-        u = k.bM.useStore((e) => e.searchPlaceholder),
-        [_, E] = k.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], M.x),
-        A = r.useCallback(
+        d = U.bM.useStore((e) => e.searchPlaceholder),
+        [h, m] = U.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], M.x),
+        f = i.useCallback(
             (e) => {
-                k.bM.setActiveCategoryIndex("" === e ? 0 : -1),
-                    k.bM.setInspectedExpressionPosition(0, 0),
-                    k.bM.setSearchPlaceholder(null),
-                    (0, F.Ri)(e),
-                    a.current?.scrollTo(0);
+                U.bM.setActiveCategoryIndex("" === e ? 0 : -1),
+                    U.bM.setInspectedExpressionPosition(0, 0),
+                    U.bM.setSearchPlaceholder(null),
+                    (0, G.Ri)(e),
+                    s.current?.scrollTo(0);
             },
-            [a],
+            [s],
         ),
-        h = r.useCallback(() => {
-            A("");
-        }, [A]);
+        p = i.useCallback(() => {
+            f("");
+        }, [f]);
     return (
-        r.useImperativeHandle(t, () => ({ focus: () => o.current?.focus() })),
-        r.useLayoutEffect(() => {
+        i.useImperativeHandle(t, () => ({ focus: () => o.current?.focus() })),
+        i.useLayoutEffect(() => {
             c && o.current?.focus();
         }, [c]),
-        (0, i.jsx)("div", {
-            className: tC.i,
-            children: (0, i.jsx)(tN.I, {
-                autoFocus: l,
-                disabled: !l,
-                query: d,
+        (0, l.jsx)("div", {
+            className: tS.i,
+            children: (0, l.jsx)(tv.I, {
+                autoFocus: a,
+                disabled: !a,
+                query: u,
                 ref: o,
-                placeholder: u ?? (l ? eA.intl.string(eA.t.dt5h1C) : eA.intl.string(eA.t["Pck/4U"])),
-                onClear: h,
+                placeholder: d ?? (a ? ef.intl.string(ef.t.dt5h1C) : ef.intl.string(ef.t["Pck/4U"])),
+                onClear: p,
                 onKeyDown: n,
-                onChange: A,
+                onChange: f,
                 inputProps: {
                     "aria-haspopup": "grid",
-                    "aria-controls": eP.lq,
+                    "aria-controls": ew.lq,
                     "aria-expanded": !0,
-                    ...(E ? { "aria-activedescendant": (0, tS.Aq)(eP.lq, _.columnIndex, _.rowIndex) } : void 0),
+                    ...(m ? { "aria-activedescendant": (0, ty.Aq)(ew.lq, h.columnIndex, h.rowIndex) } : void 0),
                 },
             }),
         })
     );
 });
 n(321073);
-var tO = n(237116),
-    tL = n(789645),
-    tD = n(964486),
-    ty = n(158045),
-    tv = n(274157),
-    tb = n(939383);
+var t_ = n(237116),
+    tT = n(789645),
+    tj = n(964486),
+    tb = n(158045),
+    tR = n(274157),
+    tO = n(939383);
 function tM() {
-    return X(!1);
+    return $(!1);
 }
-function tP(e) {
+function tw(e) {
     let { onLearnMore: t } = e,
-        { analyticsLocations: n } = (0, x.Ay)(G.A.PREMIUM_UPSELL);
-    (0, r.useEffect)(() => {
-        Y.default.track(e_.HAw.PREMIUM_UPSELL_VIEWED, {
-            location_section: e_.JJy.STICKER_PICKER_UPSELL,
-            type: eU.e.STICKER_PICKER_UPSELL,
+        { analyticsLocations: n } = (0, D.Ay)(P.A.PREMIUM_UPSELL);
+    (0, i.useEffect)(() => {
+        K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
+            location_section: eh.JJy.STICKER_PICKER_UPSELL,
+            type: eL.e.STICKER_PICKER_UPSELL,
             location_stack: n,
         });
     }, [n]);
-    let a = (0, r.useRef)(null);
-    (0, tD.Ay)(() => {
-        a.current?.focus();
+    let s = (0, i.useRef)(null);
+    (0, tj.Ay)(() => {
+        s.current?.focus();
     });
-    let l = (0, H.V)(),
-        o = (0, eD.O)(),
-        d = l?.subscriptionTrial?.skuId === eU.pe.TIER_0,
-        c = null != l || null != o;
-    return (0, i.jsxs)("div", {
-        ref: a,
+    let a = (0, H.V)(),
+        o = (0, ej.O)(),
+        u = a?.subscriptionTrial?.skuId === eL.pe.TIER_0,
+        c = null != a || null != o;
+    return (0, l.jsxs)("div", {
+        ref: s,
         tabIndex: -1,
-        "aria-label": eA.intl.string(eA.t.jJG1pl),
-        className: s()(tv.VL, { [tv.Hz]: c }),
+        "aria-label": ef.intl.string(ef.t.jJG1pl),
+        className: r()(tR.VL, { [tR.Hz]: c }),
         children: [
             c
-                ? (0, i.jsx)(ey.Ay, {
-                      trialOffer: l,
+                ? (0, l.jsx)(eb.Ay, {
+                      trialOffer: a,
                       discountOffer: o,
                       onClose: tM,
-                      type: eU.e.STICKER_PICKER_UPSELL,
-                      subscriptionTier: l?.subscriptionTrial?.skuId ?? eU.pe.TIER_2,
-                      children: d
-                          ? eA.intl.format(eA.t.MAGagw, {
-                                planName: (0, ty.RH)(eU.gD.PREMIUM_MONTH_TIER_0),
+                      type: eL.e.STICKER_PICKER_UPSELL,
+                      subscriptionTier: a?.subscriptionTrial?.skuId ?? eL.pe.TIER_2,
+                      children: u
+                          ? ef.intl.format(ef.t.MAGagw, {
+                                planName: (0, tb.RH)(eL.gD.PREMIUM_MONTH_TIER_0),
                                 onClick: t,
                             })
-                          : eA.intl.format(eA.t.jt7JX6, { onClick: t }),
+                          : ef.intl.format(ef.t.jt7JX6, { onClick: t }),
                   })
-                : (0, i.jsxs)(i.Fragment, {
+                : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, i.jsx)("img", { className: tv.Tn, src: tb, alt: eA.intl.string(eA.t.do7AoM) }),
-                          (0, i.jsx)(eL.E, {
-                              className: tv.ex,
+                          (0, l.jsx)("img", { className: tR.Tn, src: tO, alt: ef.intl.string(ef.t.do7AoM) }),
+                          (0, l.jsx)(eT.E, {
+                              className: tR.ex,
                               color: "text-strong",
                               variant: "text-lg/semibold",
-                              children: eA.intl.string(eA.t.jJG1pl),
+                              children: ef.intl.string(ef.t.jJG1pl),
                           }),
-                          (0, i.jsx)(eL.E, {
-                              className: tv.GR,
+                          (0, l.jsx)(eT.E, {
+                              className: tR.GR,
                               variant: "text-md/normal",
-                              children: eA.intl.format(eA.t.jt7JX6, { onClick: t }),
+                              children: ef.intl.format(ef.t.jt7JX6, { onClick: t }),
                           }),
                       ],
                   }),
-            !c && (0, i.jsx)(eM, { analyticsSection: e_.JJy.EXPRESSION_PICKER }),
-            (0, i.jsx)(A.D, {
-                className: tv.kz,
+            !c && (0, l.jsx)(eM, { analyticsSection: eh.JJy.EXPRESSION_PICKER }),
+            (0, l.jsx)(f.D, {
+                className: tR.kz,
                 onClick: tM,
-                "aria-label": eA.intl.string(eA.t.cpT0Cq),
-                children: (0, i.jsx)(tL.P, { size: "md", color: "currentColor" }),
+                "aria-label": ef.intl.string(ef.t.cpT0Cq),
+                children: (0, l.jsx)(tT.P, { size: "md", color: "currentColor" }),
             }),
         ],
     });
 }
-var tU = n(156418);
-let tw = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    tx = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    tk = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    tF = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-    tV = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    tB = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    tH = b()(J.Qz, 200),
-    tj = b()(J.HA, 200),
-    tW = r.forwardRef(function (e, t) {
-        let { containerWidth: a, channel: s, onSelectSticker: l, closePopout: o } = e,
-            d = tg.useConfig({ location: "StickerPicker" }).padding,
-            { location: c } = (0, w.p)(),
-            { analyticsLocations: _ } = (0, x.Ay)(G.A.STICKER_PICKER),
-            A = (0, H.V)()?.subscriptionTrial != null,
-            h = r.useRef(null),
-            I = r.useRef(null),
-            f = r.useRef(null),
-            p = q((e) => e.showPremiumUpsell),
-            [T, m] = (0, F.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
-            g = r.useRef("");
-        r.useImperativeHandle(t, () => ({ onPickerOpen: eh }));
-        let S = (0, D.pD)(s),
-            N = 0 === S.filter((e) => e.type !== ee.Z2.EMPTY_GUILD_UPSELL).length,
-            C = (0, V.oV)({
-                gridWrapperRef: h,
-                containerWidth: a,
-                showingEmptyState: N,
-                listPaddingLeft: tG,
+var tL = n(156418);
+let tk = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    tP = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    tD = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    tU = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    tG = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    tV = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    tF = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    tH = O()(Q.Qz, 200),
+    tB = O()(Q.HA, 200),
+    tW = i.forwardRef(function (e, t) {
+        let { containerWidth: s, channel: r, onSelectSticker: a, closePopout: o } = e,
+            u = tI.useConfig({ location: "StickerPicker" }).padding,
+            { location: c } = (0, k.p)(),
+            { analyticsLocations: h } = (0, D.Ay)(P.A.STICKER_PICKER),
+            f = (0, H.V)()?.subscriptionTrial != null,
+            p = i.useRef(null),
+            g = i.useRef(null),
+            x = i.useRef(null),
+            A = J((e) => e.showPremiumUpsell),
+            [C, E] = (0, G.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
+            I = i.useRef("");
+        i.useImperativeHandle(t, () => ({ onPickerOpen: ep }));
+        let y = (0, j.pD)(r),
+            v = 0 === y.filter((e) => e.type !== ee.Z2.EMPTY_GUILD_UPSELL).length,
+            S = (0, V.oV)({
+                gridWrapperRef: p,
+                containerWidth: s,
+                showingEmptyState: v,
+                listPaddingLeft: tP,
                 listScrollbarWidth: 8,
             }),
-            R = j.tP.useSetting(),
-            O = r.useMemo(() => new Set(R), [R]),
-            L = (0, u.bG)([W.default], () => W.default.getCurrentUser()),
-            v = r.useMemo(
+            N = B.tP.useSetting(),
+            _ = i.useMemo(() => new Set(N), [N]),
+            T = (0, d.bG)([W.default], () => W.default.getCurrentUser()),
+            R = i.useMemo(
                 () =>
                     (function (e, t, n) {
                         if ("" === e) return null;
-                        let i = [],
-                            r = [];
+                        let l = [],
+                            i = [];
                         return (
-                            tO.Ay.queryStickers([e], !0)
+                            t_.Ay.queryStickers([e], !0)
                                 .map((e) => {
                                     let { sticker: t } = e;
                                     return t;
                                 })
                                 .forEach((e) => {
-                                    let a = (0, Q.W$)(e, t, n);
-                                    a === Q.Ux.SENDABLE ? i.push(e) : a === Q.Ux.SENDABLE_WITH_PREMIUM && r.push(e);
+                                    let s = (0, X.W$)(e, t, n);
+                                    s === X.Ux.SENDABLE ? l.push(e) : s === X.Ux.SENDABLE_WITH_PREMIUM && i.push(e);
                                 }),
-                            { sendable: i, sendableWithPremium: r }
+                            { sendable: l, sendableWithPremium: i }
                         );
-                    })(T, L, s),
-                [T, L, s],
+                    })(C, T, r),
+                [C, T, r],
             ),
-            b = (0, D.Gc)(),
-            P = (0, D.UT)(),
-            U = (0, u.cf)([y.A], () => y.A.getAllGuildStickers()),
-            { sendable: K = [], sendableWithPremium: $ = [] } = v ?? {},
-            z = K.length + $.length,
-            Z = r.useCallback(
+            O = (0, j.Gc)(),
+            w = (0, j.UT)(),
+            L = (0, d.cf)([b.A], () => b.A.getAllGuildStickers()),
+            { sendable: z = [], sendableWithPremium: Z = [] } = R ?? {},
+            Y = z.length + Z.length,
+            q = i.useCallback(
                 (e) => {
-                    "" === T ? (0, J.ry)(e) : (0, J.nQ)(e, T, z), l(e.sticker, ee.D6.STICKER_PICKER);
+                    "" === C ? (0, Q.ry)(e) : (0, Q.nQ)(e, C, Y), a(e.sticker, ee.D6.STICKER_PICKER);
                 },
-                [l, T, z],
+                [a, C, Y],
             ),
-            ei = null != C && C > tw,
+            el = null != S && S > tk,
             {
-                rowCount: er,
-                rowCountBySection: ea,
-                stickersGrid: es,
-                gutterWidth: el,
+                rowCount: ei,
+                rowCountBySection: es,
+                stickersGrid: er,
+                gutterWidth: ea,
                 columnCounts: eo,
-            } = (0, D._c)({
-                filteredStickers: v,
-                stickersCategories: S,
-                collapsedStickersCategories: O,
-                listWidth: C,
-                listPaddingRight: tx,
-                stickerNodeMargin: ei ? tk : tF,
-                stickerNodeWidth: ei ? tV + 2 * d : tB + 2 * d,
+            } = (0, j._c)({
+                filteredStickers: R,
+                stickersCategories: y,
+                collapsedStickersCategories: _,
+                listWidth: S,
+                listPaddingRight: tD,
+                stickerNodeMargin: el ? tU : tG,
+                stickerNodeWidth: el ? tV + 2 * u : tF + 2 * u,
             }),
             {
-                getItemProps: ed,
+                getItemProps: eu,
                 getRowProps: ec,
-                gridContainerProps: eu,
-                handleGridContainerKeyDown: eE,
-                isUsingKeyboardNavigation: eA,
+                gridContainerProps: ed,
+                handleGridContainerKeyDown: em,
+                isUsingKeyboardNavigation: ef,
             } = (function (e) {
                 let {
                         columnCounts: t,
                         stickersGrid: n,
-                        stickersListRef: i,
-                        store: a,
-                        gridNavigatorId: s,
-                        setInspectedStickerPosition: l,
+                        stickersListRef: l,
+                        store: s,
+                        gridNavigatorId: r,
+                        setInspectedStickerPosition: a,
                         onGridItemSelect: o,
                     } = e,
-                    d = (0, w.p)(),
-                    c = r.useCallback(
+                    u = (0, k.p)(),
+                    c = i.useCallback(
                         (e) => {
-                            o(e, d);
+                            o(e, u);
                         },
-                        [o, d],
+                        [o, u],
                     ),
-                    u = r.useCallback(
+                    d = i.useCallback(
                         (e, t) => {
-                            l(e, t, en.t.GRID_NAVIGATOR_EVENT);
+                            a(e, t, en.t.GRID_NAVIGATOR_EVENT);
                         },
-                        [l],
+                        [a],
                     ),
                     {
-                        gridDispatch: _,
-                        getItemProps: E,
-                        getRowProps: A,
-                        gridContainerProps: h,
-                        handleGridContainerKeyDown: I,
-                        isUsingKeyboardNavigation: f,
+                        gridDispatch: h,
+                        getItemProps: m,
+                        getRowProps: f,
+                        gridContainerProps: p,
+                        handleGridContainerKeyDown: g,
+                        isUsingKeyboardNavigation: x,
                     } = (0, V.Ff)({
                         columnCounts: t,
-                        gridNavigatorId: s,
+                        gridNavigatorId: r,
                         itemGrid: n,
-                        itemList: i,
+                        itemList: l,
                         onGridNavigatorItemSelect: c,
-                        onGridNavigatorPositionChange: u,
+                        onGridNavigatorPositionChange: d,
                     });
                 return (
-                    r.useEffect(
+                    i.useEffect(
                         () =>
-                            a.subscribe(
+                            s.subscribe(
                                 (e) => e.inspectedExpressionPosition,
                                 (e) => {
                                     if (null == e) return;
-                                    let { columnIndex: t, rowIndex: n, source: i } = e;
-                                    i !== en.t.GRID_NAVIGATOR_EVENT &&
-                                        _({ type: et.n.SET_FOCUSED_POSITION, x: t, y: n });
+                                    let { columnIndex: t, rowIndex: n, source: l } = e;
+                                    l !== en.t.GRID_NAVIGATOR_EVENT &&
+                                        h({ type: et.n.SET_FOCUSED_POSITION, x: t, y: n });
                                 },
                             ),
-                        [_, a],
+                        [h, s],
                     ),
                     {
-                        getItemProps: E,
-                        getRowProps: A,
-                        gridContainerProps: h,
-                        handleGridContainerKeyDown: I,
-                        isUsingKeyboardNavigation: f,
+                        getItemProps: m,
+                        getRowProps: f,
+                        gridContainerProps: p,
+                        handleGridContainerKeyDown: g,
+                        isUsingKeyboardNavigation: x,
                     }
                 );
             })({
                 columnCounts: eo,
-                stickersListRef: I,
-                stickersGrid: es,
-                onGridItemSelect: r.useCallback(
+                stickersListRef: g,
+                stickersGrid: er,
+                onGridItemSelect: i.useCallback(
                     (e, t) => {
-                        let { location: r } = t;
+                        let { location: i } = t;
                         switch (e.type) {
                             case ee.op.CREATE_STICKER:
-                                Y.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
-                                    (0, E.openModalLazy)(async () => {
+                                K.default.track(eh.HAw.OPEN_MODAL, { type: eh.JJy.CREATE_STICKER_MODAL, location: c }),
+                                    (0, m.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("47899"),
-                                            n.e("95921"),
-                                            n.e("75091"),
-                                            n.e("56963"),
-                                            n.e("8891"),
-                                            n.e("83952"),
+                                            n.e("547899"),
+                                            n.e("782906"),
+                                            n.e("375091"),
+                                            n.e("656963"),
+                                            n.e("408891"),
+                                            n.e("883952"),
                                             n.e("66580"),
+                                            n.e("480436"),
                                             n.e("50342"),
-                                            n.e("80436"),
-                                            n.e("20643"),
+                                            n.e("420643"),
                                             n.e("98913"),
-                                            n.e("29143"),
+                                            n.e("429143"),
                                         ]).then(n.bind(n, 445002));
-                                        return (n) => (0, i.jsx)(t, { guildId: e.guild_id, ...n });
+                                        return (n) => (0, l.jsx)(t, { guildId: e.guild_id, ...n });
                                     });
                                 break;
                             case ee.op.STICKER: {
                                 if (null == e.sticker) break;
-                                let t = (0, Q.W$)(e.sticker, L, s);
-                                t === Q.Ux.SENDABLE ? Z(e) : t === Q.Ux.SENDABLE_WITH_PREMIUM && X(!0);
+                                let t = (0, X.W$)(e.sticker, T, r);
+                                t === X.Ux.SENDABLE ? q(e) : t === X.Ux.SENDABLE_WITH_PREMIUM && $(!0);
                             }
                         }
                     },
-                    [c, L, s, Z],
+                    [c, T, r, q],
                 ),
-                store: k.bM,
-                setInspectedStickerPosition: k.bM.setInspectedExpressionPosition,
-                gridNavigatorId: eP.lq,
+                store: U.bM,
+                setInspectedStickerPosition: U.bM.setInspectedExpressionPosition,
+                gridNavigatorId: ew.lq,
             });
-        function eh() {
-            let e = s.getGuildId(),
+        function ep() {
+            let e = r.getGuildId(),
                 t = [];
-            null !== e && (t = y.A.getStickersByGuildId(e) ?? []);
+            null !== e && (t = b.A.getStickersByGuildId(e) ?? []);
             let n = 0;
-            null != U &&
-                [...U.values()].forEach((e) => {
+            null != L &&
+                [...L.values()].forEach((e) => {
                     n += e.length;
                 }),
-                (0, J.p4)({
-                    containerWidth: a,
-                    favoriteStickers: b,
-                    frequentlyUsedStickers: P,
+                (0, Q.p4)({
+                    containerWidth: s,
+                    favoriteStickers: O,
+                    frequentlyUsedStickers: w,
                     guildStickers: t,
                     stickersTotal: n,
                 });
         }
-        r.useEffect(() => k.bM.resetStoreState, []),
-            r.useEffect(() => {
-                "" === g.current && "" !== T && (0, J.Fg)(), (g.current = T);
-            }, [T]),
-            r.useEffect(() => {
-                0 === z ? tH(T) : tj(T, z, m);
-            }, [T, z, m]),
-            r.useLayoutEffect(() => {
-                f.current?.focus();
+        i.useEffect(() => U.bM.resetStoreState, []),
+            i.useEffect(() => {
+                "" === I.current && "" !== C && (0, Q.Fg)(), (I.current = C);
+            }, [C]),
+            i.useEffect(() => {
+                0 === Y ? tH(C) : tB(C, Y, E);
+            }, [C, Y, E]),
+            i.useLayoutEffect(() => {
+                x.current?.focus();
             }, []);
-        let eI = r.useCallback(() => {
+        let eg = i.useCallback(() => {
             o(),
-                Y.default.track(e_.HAw.PREMIUM_PROMOTION_OPENED, { location_section: e_.JJy.STICKER_PICKER_UPSELL }),
-                (0, B.e)();
+                K.default.track(eh.HAw.PREMIUM_PROMOTION_OPENED, { location_section: eh.JJy.STICKER_PICKER_UPSELL }),
+                (0, F.e)();
         }, [o]);
-        return (0, i.jsxs)(x.f5, {
-            value: _,
+        return (0, l.jsxs)(D.f5, {
+            value: h,
             children: [
-                !(A && N) &&
-                    (0, i.jsx)("div", {
-                        className: tU.wx,
-                        children: (0, i.jsx)(tR, { ref: f, onKeyDown: eE, stickersListRef: I, channel: s }),
+                !(f && v) &&
+                    (0, l.jsx)("div", {
+                        className: tL.wx,
+                        children: (0, l.jsx)(tN, { ref: x, onKeyDown: em, stickersListRef: g, channel: r }),
                     }),
-                N
-                    ? (0, i.jsx)(eG, { className: tU.p$, onClose: o })
-                    : (0, i.jsxs)(i.Fragment, {
+                v
+                    ? (0, l.jsx)(eP, { className: tL.p$, onClose: o })
+                    : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)("div", {
-                                  ref: h,
-                                  className: tU.AD,
-                                  id: eP.lq,
-                                  ...eu,
+                              (0, l.jsx)("div", {
+                                  ref: p,
+                                  className: tL.AD,
+                                  id: ew.lq,
+                                  ...ed,
                                   children:
-                                      null != C
-                                          ? (0, i.jsx)(tm, {
-                                                ref: I,
-                                                collapsedStickersCategories: O,
-                                                filteredStickers: v,
-                                                getStickerItemProps: ed,
+                                      null != S
+                                          ? (0, l.jsx)(tE, {
+                                                ref: g,
+                                                collapsedStickersCategories: _,
+                                                filteredStickers: R,
+                                                getStickerItemProps: eu,
                                                 getStickerRowProps: ec,
-                                                gridWidth: C,
-                                                gutterWidth: el,
-                                                stickerPadding: d,
-                                                isUsingKeyboardNavigation: eA,
-                                                onSelectSticker: Z,
-                                                rowCount: er,
-                                                rowCountBySection: ea,
-                                                stickersCategories: S,
-                                                stickersGrid: es,
-                                                channel: s,
+                                                gridWidth: S,
+                                                gutterWidth: ea,
+                                                stickerPadding: u,
+                                                isUsingKeyboardNavigation: ef,
+                                                onSelectSticker: q,
+                                                rowCount: ei,
+                                                rowCountBySection: es,
+                                                stickersCategories: y,
+                                                stickersGrid: er,
+                                                channel: r,
                                             })
                                           : null,
                               }),
-                              (0, i.jsx)(eR, { stickersListRef: I, channel: s }),
+                              (0, l.jsx)(eN, { stickersListRef: g, channel: r }),
                           ],
                       }),
-                p && (0, i.jsx)(tP, { onLearnMore: eI }),
+                A && (0, l.jsx)(tw, { onLearnMore: eg }),
             ],
         });
     }),
-    tY = r.forwardRef(function (e, t) {
+    tK = i.forwardRef(function (e, t) {
         return (
-            (0, D.XQ)(),
-            (0, i.jsx)("div", {
-                className: tU.iE,
-                id: eP.GX,
-                "aria-labelledby": eP.LD,
+            (0, j.XQ)(),
+            (0, l.jsx)("div", {
+                className: tL.iE,
+                id: ew.GX,
+                "aria-labelledby": ew.LD,
                 role: "tabpanel",
-                children: e.isLoading ? (0, i.jsx)(U.y, { className: tU.Mz }) : (0, i.jsx)(tW, { ...e, ref: t }),
+                children: e.isLoading ? (0, l.jsx)(L.y, { className: tL.Mz }) : (0, l.jsx)(tW, { ...e, ref: t }),
             })
         );
     });
-var tK = n(742023),
-    t$ = n(712687),
-    tz = n(625494),
-    tZ = n(49999),
-    tq = n(732139),
-    tX = n(307731),
-    tQ = n(521352);
-let tJ = 498 + tq.as.MEDIUM,
-    t0 = r.memo(function (e) {
-        let { isActive: t, className: n, viewType: r, autoFocus: a = !1, "aria-controls": l, ...o } = e;
-        return (0, i.jsx)(A.D, {
+var tz = n(742023),
+    tZ = n(712687),
+    tY = n(625494),
+    tq = n(49999),
+    tJ = n(732139),
+    t$ = n(307731),
+    tX = n(521352);
+let tQ = 498 + tJ.as.MEDIUM,
+    t0 = i.memo(function (e) {
+        let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": a, ...o } = e;
+        return (0, l.jsx)(f.D, {
             role: "tab",
-            autoFocus: a,
-            "aria-controls": t ? l : void 0,
+            autoFocus: s,
+            "aria-controls": t ? a : void 0,
             ...o,
             onClick: () => {
-                m.Ay.trackWithMetadata(e_.HAw.EXPRESSION_PICKER_TAB_CLICKED, { tab: r, badged: !1 }), (0, F.U)(r);
+                E.Ay.trackWithMetadata(eh.HAw.EXPRESSION_PICKER_TAB_CLICKED, { tab: i, badged: !1 }), (0, G.U)(i);
             },
             "aria-current": t ? "page" : void 0,
-            className: s()(n, tQ.oi, tQ.pc, { [tQ.Mv]: t }),
+            className: r()(n, tX.oi, tX.pc, { [tX.Mv]: t }),
         });
     }),
-    t1 = r.memo(function (e) {
+    t1 = i.memo(function (e) {
         let {
                 positionTargetRef: t,
                 hideGifFavorites: n,
-                onSelectGIF: a,
-                onSelectEmoji: l,
-                onSelectSticker: A,
-                onSelectSound: v,
-                channel: b,
+                onSelectGIF: s,
+                onSelectEmoji: a,
+                onSelectSticker: f,
+                onSelectSound: R,
+                channel: O,
                 type: M,
-                position: P,
-                align: U,
-                positionLayerClassName: w,
-                closeOnModalOuterClick: G = !1,
-                parentModalKey: x,
+                position: w,
+                align: L,
+                positionLayerClassName: k,
+                closeOnModalOuterClick: P = !1,
+                parentModalKey: D,
             } = e,
-            k = r.useRef(null),
-            V = r.useRef(!1),
-            B = r.useRef(null),
-            H = r.useRef(null),
-            { drawerWidth: j, handleDrawerResizeHandleMouseDown: W } = (function (e) {
-                let { positionContainerRef: t, drawerRef: n, orientation: i } = e,
-                    a = (0, u.bG)([tK.Ay], () => tK.Ay.expressionPickerWidth),
-                    [s, l] = r.useState(window.innerWidth),
-                    [d, c] = r.useState(a ?? eE.wp.MIN),
-                    _ = r.useMemo(() => {
-                        switch (d) {
-                            case eE.wp.MIN:
+            U = i.useRef(null),
+            V = i.useRef(!1),
+            F = i.useRef(null),
+            H = i.useRef(null),
+            { drawerWidth: B, handleDrawerResizeHandleMouseDown: W } = (function (e) {
+                let { positionContainerRef: t, drawerRef: n, orientation: l } = e,
+                    s = (0, d.bG)([tz.Ay], () => tz.Ay.expressionPickerWidth),
+                    [r, a] = i.useState(window.innerWidth),
+                    [u, c] = i.useState(s ?? em.wp.MIN),
+                    h = i.useMemo(() => {
+                        switch (u) {
+                            case em.wp.MIN:
                                 return 498;
-                            case eE.wp.MAX:
+                            case em.wp.MAX:
                                 return null;
                             default:
-                                return d;
+                                return u;
                         }
-                    }, [d]),
-                    E = r.useCallback(
+                    }, [u]),
+                    m = i.useCallback(
                         (e) => {
-                            let t = e >= s ? eE.wp.MAX : e <= 498 ? eE.wp.MIN : e;
+                            let t = e >= r ? em.wp.MAX : e <= 498 ? em.wp.MIN : e;
                             null == t && null != n.current && (n.current.style.width = ""),
-                                f.Ay.updatedUnsyncedSettings({ expressionPickerWidth: t }),
+                                x.Ay.updatedUnsyncedSettings({ expressionPickerWidth: t }),
                                 c(t);
                         },
-                        [n, s],
+                        [n, r],
                     ),
-                    A = (0, T.A)({
-                        initialElementDimension: _,
-                        maxDimension: s,
+                    f = (0, C.A)({
+                        initialElementDimension: h,
+                        maxDimension: r,
                         minDimension: 498,
                         resizableDomNodeRef: n,
-                        onElementResize: E,
-                        orientation: i,
+                        onElementResize: m,
+                        orientation: l,
                     });
                 return (
-                    r.useEffect(() => {
+                    i.useEffect(() => {
                         let e = o().debounce(() => {
-                            null != t.current && l(t.current.offsetWidth);
+                            null != t.current && a(t.current.offsetWidth);
                         }, 500);
                         return (
                             window.addEventListener("resize", e),
@@ -1602,40 +1602,40 @@ let tJ = 498 + tq.as.MEDIUM,
                             }
                         );
                     }, [t]),
-                    r.useLayoutEffect(() => {
-                        null != t.current && l(t.current.offsetWidth);
+                    i.useLayoutEffect(() => {
+                        null != t.current && a(t.current.offsetWidth);
                     }, [t]),
                     {
-                        drawerWidth: _,
-                        handleDrawerResizeHandleMouseDown: r.useCallback(
+                        drawerWidth: h,
+                        handleDrawerResizeHandleMouseDown: i.useCallback(
                             (e) => {
-                                e.stopPropagation(), null != t.current && l(t.current.offsetWidth), A(e);
+                                e.stopPropagation(), null != t.current && a(t.current.offsetWidth), f(e);
                             },
-                            [t, A],
+                            [t, f],
                         ),
                     }
                 );
             })({
-                positionContainerRef: k,
+                positionContainerRef: U,
                 drawerRef: H,
-                orientation: "left" === U ? T.R.HORIZONTAL_RIGHT : T.R.HORIZONTAL_LEFT,
+                orientation: "left" === L ? C.R.HORIZONTAL_RIGHT : C.R.HORIZONTAL_LEFT,
             }),
-            Y = (0, F.RQ)((e) => e.activeView),
-            K = (0, D.ZO)(b),
-            { renderWindow: $, windowDispatch: z } = r.useContext(R.Ay),
-            Z = (0, u.bG)([y.A], () => !y.A.hasLoadedStickerPacks),
-            q = (0, O.tj)({ location: "expression_picker" }),
-            X = (0, u.bG)([t$.A], () => t$.A.isOpen()),
-            Q = null != x,
-            J = (0, E.useIsModalAtTop)(x ?? ""),
-            ee = M.gifs?.allowSending && !d.Fr && null != a,
-            et = M.stickers?.allowSending && null != A,
+            K = (0, G.RQ)((e) => e.activeView),
+            z = (0, j.ZO)(O),
+            { renderWindow: Z, windowDispatch: Y } = i.useContext(N.Ay),
+            q = (0, d.bG)([b.A], () => !b.A.hasLoadedStickerPacks),
+            J = (0, _.tj)({ location: "expression_picker" }),
+            $ = (0, d.bG)([tZ.A], () => tZ.A.isOpen()),
+            X = null != D,
+            Q = (0, m.useIsModalAtTop)(D ?? ""),
+            ee = M.gifs?.allowSending && !u.Fr && null != s,
+            et = M.stickers?.allowSending && null != f,
             en = !M.expressionPicker?.onlyEmojis && (ee || et),
-            ei = r.useCallback(
+            el = i.useCallback(
                 (e) => {
-                    if ((!Q && (0, E.hasAnyModalOpen)()) || (Q && !(J && G)) || X || e.defaultPrevented) return;
+                    if ((!X && (0, m.hasAnyModalOpen)()) || (X && !(Q && P)) || $ || e.defaultPrevented) return;
                     let { target: t } = e;
-                    if ((0, c.vq)(t) && null != t.closest("." + eE.VQ)) return;
+                    if ((0, c.vq)(t) && null != t.closest("." + em.VQ)) return;
                     for (; (0, c.vq)(t); ) {
                         if (
                             t === H.current ||
@@ -1646,152 +1646,152 @@ let tJ = 498 + tq.as.MEDIUM,
                             return;
                         t = t.parentNode;
                     }
-                    (0, F.v8)();
+                    (0, G.v8)();
                     let n = (0, c.BF)(e)?.activeElement;
-                    (null == n || "BODY" === n.tagName) && tz._.dispatchToLastSubscribed(e_.jej.TEXTAREA_FOCUS);
+                    (null == n || "BODY" === n.tagName) && tY._.dispatchToLastSubscribed(eh.jej.TEXTAREA_FOCUS);
                 },
-                [G, J, Q, X],
+                [P, Q, X, $],
             ),
-            er = r.useCallback(() => {
-                (0, F.v8)();
+            ei = i.useCallback(() => {
+                (0, G.v8)();
             }, []);
-        r.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             function e() {
-                Y === eE.kx.GIF && (0, F.v8)();
+                K === em.kx.GIF && (0, G.v8)();
             }
             return (
-                $.addEventListener("mousedown", ei),
-                $.addEventListener("contextmenu", ei),
-                z.subscribe(e_.jej.POPOUT_CLOSE, er),
-                tz._.subscribe(e_.jej.CLOSE_GIF_PICKER, e),
+                Z.addEventListener("mousedown", el),
+                Z.addEventListener("contextmenu", el),
+                Y.subscribe(eh.jej.POPOUT_CLOSE, ei),
+                tY._.subscribe(eh.jej.CLOSE_GIF_PICKER, e),
                 () => {
-                    $.removeEventListener("mousedown", ei),
-                        $.removeEventListener("contextmenu", ei),
-                        z.unsubscribe(e_.jej.POPOUT_CLOSE, er),
-                        tz._.unsubscribe(e_.jej.CLOSE_GIF_PICKER, e);
+                    Z.removeEventListener("mousedown", el),
+                        Z.removeEventListener("contextmenu", el),
+                        Y.unsubscribe(eh.jej.POPOUT_CLOSE, ei),
+                        tY._.unsubscribe(eh.jej.CLOSE_GIF_PICKER, e);
                 }
             );
-        }, [Y, er, ei, $, z]),
-            (0, h.tj)(k);
-        let [ea, es] = (0, g.kn)(q ? [_.M.SOUNDMOJI_BADGE] : [], void 0, !1),
-            [el, eo] = r.useState(!1);
-        r.useEffect(() => {
-            Y === eE.kx.SOUNDBOARD && eo(!0);
-        }, [Y]),
-            r.useEffect(
+        }, [K, ei, el, Z, Y]),
+            (0, p.tj)(U);
+        let [es, er] = (0, I.kn)(J ? [h.M.SOUNDMOJI_BADGE] : [], void 0, !1),
+            [ea, eo] = i.useState(!1);
+        i.useEffect(() => {
+            K === em.kx.SOUNDBOARD && eo(!0);
+        }, [K]),
+            i.useEffect(
                 () => () => {
-                    el && es(tZ.i.TAKE_ACTION);
+                    ea && er(tq.i.TAKE_ACTION);
                 },
-                [el, es],
+                [ea, er],
             ),
-            r.useEffect(() => {
-                (0, F.Ri)("");
+            i.useEffect(() => {
+                (0, G.Ri)("");
             }, []),
-            r.useEffect(() => {
-                ((!Q && (0, E.hasAnyModalOpen)()) || (Q && !J)) && (0, F.v8)();
-            }, [J, Q]),
-            r.useEffect(() => {
+            i.useEffect(() => {
+                ((!X && (0, m.hasAnyModalOpen)()) || (X && !Q)) && (0, G.v8)();
+            }, [Q, X]),
+            i.useEffect(() => {
                 null != H.current &&
                     !V.current &&
-                    (Y === eE.kx.EMOJI
-                        ? B?.current?.onPickerOpen != null && (B?.current?.onPickerOpen(), (V.current = !0))
-                        : Y === eE.kx.STICKER
-                          ? B?.current?.onPickerOpen == null || Z || (B?.current?.onPickerOpen(), (V.current = !0))
-                          : (m.Ay.trackWithMetadata(e_.HAw.EXPRESSION_PICKER_OPENED, {
+                    (K === em.kx.EMOJI
+                        ? F?.current?.onPickerOpen != null && (F?.current?.onPickerOpen(), (V.current = !0))
+                        : K === em.kx.STICKER
+                          ? F?.current?.onPickerOpen == null || q || (F?.current?.onPickerOpen(), (V.current = !0))
+                          : (E.Ay.trackWithMetadata(eh.HAw.EXPRESSION_PICKER_OPENED, {
                                 width: H.current.offsetWidth,
-                                tab: Y,
+                                tab: K,
                                 badged: !1,
                             }),
                             (V.current = !0)));
             });
-        let ed = r.useCallback((e, t) => v?.(e, "emoji_picker", t), [v]),
-            ec = r.useCallback((e, t) => v?.(e, "soundboard_picker", t), [v]),
-            eu = M.soundmoji?.allowSending === !0 && null != v,
-            eh = "left" === U ? "right" : "left",
-            eI = null != w ? w : "left" === U ? tQ.sj : tQ.Jg,
-            ef = ee
-                ? (0, i.jsx)(t0, {
-                      id: tq.g9,
-                      "aria-controls": tq.ni,
-                      "aria-selected": Y === eE.kx.GIF,
-                      isActive: Y === eE.kx.GIF,
-                      viewType: eE.kx.GIF,
-                      children: eA.intl.string(eA.t["6gUTsS"]),
+        let eu = i.useCallback((e, t) => R?.(e, "emoji_picker", t), [R]),
+            ec = i.useCallback((e, t) => R?.(e, "soundboard_picker", t), [R]),
+            ed = M.soundmoji?.allowSending === !0 && null != R,
+            ep = "left" === L ? "right" : "left",
+            eg = null != k ? k : "left" === L ? tX.sj : tX.Jg,
+            ex = ee
+                ? (0, l.jsx)(t0, {
+                      id: tJ.g9,
+                      "aria-controls": tJ.ni,
+                      "aria-selected": K === em.kx.GIF,
+                      isActive: K === em.kx.GIF,
+                      viewType: em.kx.GIF,
+                      children: ef.intl.string(ef.t["6gUTsS"]),
                   })
                 : null,
-            ep = et
-                ? (0, i.jsx)(t0, {
-                      id: eP.LD,
-                      "aria-controls": eP.GX,
-                      "aria-selected": Y === eE.kx.STICKER,
-                      isActive: Y === eE.kx.STICKER,
-                      autoFocus: !K,
-                      viewType: eE.kx.STICKER,
-                      children: (0, i.jsx)("div", { className: tQ.dG, children: eA.intl.string(eA.t.nf1s3u) }),
+            eA = et
+                ? (0, l.jsx)(t0, {
+                      id: ew.LD,
+                      "aria-controls": ew.GX,
+                      "aria-selected": K === em.kx.STICKER,
+                      isActive: K === em.kx.STICKER,
+                      autoFocus: !z,
+                      viewType: em.kx.STICKER,
+                      children: (0, l.jsx)("div", { className: tX.dG, children: ef.intl.string(ef.t.nf1s3u) }),
                   })
                 : null,
-            eT = (0, i.jsx)(t0, {
-                id: tq.k1,
-                "aria-controls": tq.Do,
-                "aria-selected": Y === eE.kx.EMOJI,
-                isActive: Y === eE.kx.EMOJI,
-                viewType: eE.kx.EMOJI,
-                children: eA.intl.string(eA.t.Xu3wE3),
+            eC = (0, l.jsx)(t0, {
+                id: tJ.k1,
+                "aria-controls": tJ.Do,
+                "aria-selected": K === em.kx.EMOJI,
+                isActive: K === em.kx.EMOJI,
+                viewType: em.kx.EMOJI,
+                children: ef.intl.string(ef.t.Xu3wE3),
             });
-        return (0, i.jsx)(p.A, {
-            section: e_.JJy.EXPRESSION_PICKER,
-            children: (0, i.jsx)(C.nE, {
-                className: s()(tQ.T8, eI),
+        return (0, l.jsx)(A.A, {
+            section: eh.JJy.EXPRESSION_PICKER,
+            children: (0, l.jsx)(S.nE, {
+                className: r()(tX.T8, eg),
                 targetRef: t,
-                position: P,
-                align: U,
+                position: w,
+                align: L,
                 spacing: 8,
                 autoInvert: !0,
                 clickTrap: !0,
                 children: (e) => {
                     let { isPositioned: t } = e;
-                    return (0, i.jsx)("section", {
-                        className: s()(tQ.V6, { [tQ.D0]: !en }),
-                        ref: k,
+                    return (0, l.jsx)("section", {
+                        className: r()(tX.V6, { [tX.D0]: !en }),
+                        ref: U,
                         role: "dialog",
-                        "aria-label": eA.intl.string(eA.t.Utlwvi),
+                        "aria-label": ef.intl.string(ef.t.Utlwvi),
                         children: t
-                            ? (0, i.jsxs)("div", {
-                                  className: tQ.jP,
-                                  style: { width: null == j ? void 0 : j, [U]: 0 },
+                            ? (0, l.jsxs)("div", {
+                                  className: tX.jP,
+                                  style: { width: null == B ? void 0 : B, [L]: 0 },
                                   ref: H,
                                   children: [
-                                      (0, i.jsx)("div", { className: tQ.Di, onMouseDown: W, style: { [eh]: -2 } }),
-                                      (0, i.jsxs)("div", {
-                                          className: tQ.FG,
+                                      (0, l.jsx)("div", { className: tX.Di, onMouseDown: W, style: { [ep]: -2 } }),
+                                      (0, l.jsxs)("div", {
+                                          className: tX.FG,
                                           children: [
                                               en
-                                                  ? (0, i.jsx)("nav", {
-                                                        className: tQ.C$,
-                                                        children: (0, i.jsxs)("div", {
-                                                            className: tQ.CT,
+                                                  ? (0, l.jsx)("nav", {
+                                                        className: tX.C$,
+                                                        children: (0, l.jsxs)("div", {
+                                                            className: tX.CT,
                                                             role: "tablist",
-                                                            "aria-label": eA.intl.string(eA.t["2j4Vgd"]),
+                                                            "aria-label": ef.intl.string(ef.t["2j4Vgd"]),
                                                             children: [
-                                                                ef,
-                                                                ep,
-                                                                eT,
-                                                                q &&
-                                                                    eu &&
-                                                                    (0, i.jsx)(t0, {
-                                                                        id: tq.N6,
-                                                                        "aria-controls": tq.AA,
-                                                                        "aria-selected": Y === eE.kx.SOUNDBOARD,
-                                                                        isActive: Y === eE.kx.SOUNDBOARD,
-                                                                        viewType: eE.kx.SOUNDBOARD,
-                                                                        children: (0, i.jsxs)("div", {
-                                                                            className: tQ.sd,
+                                                                ex,
+                                                                eA,
+                                                                eC,
+                                                                J &&
+                                                                    ed &&
+                                                                    (0, l.jsx)(t0, {
+                                                                        id: tJ.N6,
+                                                                        "aria-controls": tJ.AA,
+                                                                        "aria-selected": K === em.kx.SOUNDBOARD,
+                                                                        isActive: K === em.kx.SOUNDBOARD,
+                                                                        viewType: em.kx.SOUNDBOARD,
+                                                                        children: (0, l.jsxs)("div", {
+                                                                            className: tX.sd,
                                                                             children: [
-                                                                                eA.intl.string(eA.t.EHlAMc),
-                                                                                null != ea &&
-                                                                                    (0, i.jsx)(I.Lp, {
-                                                                                        text: eA.intl.string(
-                                                                                            eA.t.y2b7CA,
+                                                                                ef.intl.string(ef.t.EHlAMc),
+                                                                                null != es &&
+                                                                                    (0, l.jsx)(g.Lp, {
+                                                                                        text: ef.intl.string(
+                                                                                            ef.t.y2b7CA,
                                                                                         ),
                                                                                     }),
                                                                             ],
@@ -1801,58 +1801,58 @@ let tJ = 498 + tq.as.MEDIUM,
                                                         }),
                                                     })
                                                   : null,
-                                              Y === eE.kx.STICKER && et
-                                                  ? (0, i.jsx)(tY, {
-                                                        isLoading: Z,
-                                                        channel: b,
-                                                        containerWidth: j,
-                                                        onSelectSticker: A,
-                                                        closePopout: er,
+                                              K === em.kx.STICKER && et
+                                                  ? (0, l.jsx)(tK, {
+                                                        isLoading: q,
+                                                        channel: O,
+                                                        containerWidth: B,
+                                                        onSelectSticker: f,
+                                                        closePopout: ei,
                                                         ref: (e) => {
-                                                            B.current = e;
+                                                            F.current = e;
                                                         },
                                                     })
                                                   : null,
-                                              Y === eE.kx.GIF && ee
-                                                  ? (0, i.jsx)(N.A, {
-                                                        onSelectGIF: a,
+                                              K === em.kx.GIF && ee
+                                                  ? (0, l.jsx)(v.A, {
+                                                        onSelectGIF: s,
                                                         hideFavorites: n,
                                                         persistSearch: !0,
                                                     })
                                                   : null,
-                                              Y === eE.kx.EMOJI || M.expressionPicker?.onlyEmojis === !0
-                                                  ? (0, i.jsx)(S.A, {
+                                              K === em.kx.EMOJI || M.expressionPicker?.onlyEmojis === !0
+                                                  ? (0, l.jsx)(y.A, {
                                                         hasTabWrapper: !0,
                                                         persistSearch: !0,
-                                                        channel: b,
-                                                        containerWidth: j,
-                                                        emojiSize: null != j && j < tJ ? tq.as.MEDIUM : tq.as.LARGE,
+                                                        channel: O,
+                                                        containerWidth: B,
+                                                        emojiSize: null != B && B < tQ ? tJ.as.MEDIUM : tJ.as.LARGE,
                                                         pickerIntention:
                                                             M.expressionPicker?.emojiIntention ??
-                                                            tX.EmojiIntention.CHAT,
-                                                        showAddEmojiButton: null == b || null != b.guild_id,
-                                                        closePopout: er,
-                                                        onSelectEmoji: l,
-                                                        onSelectSoundmoji: ed,
+                                                            t$.EmojiIntention.CHAT,
+                                                        showAddEmojiButton: null == O || null != O.guild_id,
+                                                        closePopout: ei,
+                                                        onSelectEmoji: a,
+                                                        onSelectSoundmoji: eu,
                                                         ref: (e) => {
-                                                            B.current = e;
+                                                            F.current = e;
                                                         },
                                                         shouldShowSoundmojiInEmojiPicker:
                                                             M.soundmoji?.allowSending === !0,
                                                     })
                                                   : null,
-                                              Y === eE.kx.SOUNDBOARD
-                                                  ? (0, i.jsx)("div", {
-                                                        className: tQ.z,
-                                                        children: (0, i.jsx)(L.A, {
-                                                            guildId: b.guild_id,
-                                                            channel: b,
-                                                            containerWidth: j,
-                                                            onClose: er,
+                                              K === em.kx.SOUNDBOARD
+                                                  ? (0, l.jsx)("div", {
+                                                        className: tX.z,
+                                                        children: (0, l.jsx)(T.A, {
+                                                            guildId: O.guild_id,
+                                                            channel: O,
+                                                            containerWidth: B,
+                                                            onClose: ei,
                                                             onSelect: ec,
                                                             analyticsSource: "expression-picker",
                                                             renderHeader: (e) =>
-                                                                (0, i.jsx)("div", { className: tQ.BG, children: e }),
+                                                                (0, l.jsx)("div", { className: tX.BG, children: e }),
                                                             inExpressionPicker: !0,
                                                             shouldValidateSelectedSound: !0,
                                                         }),

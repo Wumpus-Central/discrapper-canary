@@ -37,7 +37,7 @@ function M(e) {
     let u = l.useCallback(
         (e) => {
             (0, p.L3)(e, async () => {
-                let { default: e } = await n.e("15687").then(n.bind(n, 646938));
+                let { default: e } = await n.e("715687").then(n.bind(n, 646938));
                 return (t) => (0, i.jsx)(e, { ...t, id: s, label: w.intl.string(w.t.oJ1Muw) });
             });
         },

@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { L: () => u, j: () => a }), n(899898);
-var i = n(621466);
-let r = { root: null, rootMargin: "0px", threshold: 0.5 };
-class a {
+i.d(t, { L: () => u, j: () => r }), i(899898);
+var s = i(621466);
+let n = { root: null, rootMargin: "0px", threshold: 0.5 };
+class r {
     _observer;
     _options;
     _nodes = new WeakMap();
     _components = new WeakMap();
     _visibleComponents = new WeakSet();
-    constructor(e = r) {
+    constructor(e = n) {
         (this._options = e),
             null != window.IntersectionObserver &&
                 (this._observer = new window.IntersectionObserver(this._handleEntries, e));
@@ -18,21 +17,21 @@ class a {
             let t;
             if (null != e.isIntersecting) t = e.isIntersecting;
             else {
-                let { threshold: n } = this._options;
+                let { threshold: i } = this._options;
                 t =
-                    null == n
+                    null == i
                         ? e.intersectionRatio > 0
-                        : Array.isArray(n)
-                          ? n.some((t) => e.intersectionRatio > t)
-                          : e.intersectionRatio > n;
+                        : Array.isArray(i)
+                          ? i.some((t) => e.intersectionRatio > t)
+                          : e.intersectionRatio > i;
             }
-            let n = this._nodes.get(e.target);
-            if (null != n) {
+            let i = this._nodes.get(e.target);
+            if (null != i) {
                 let e = !1;
                 t
-                    ? this._visibleComponents.has(n) || (this._visibleComponents.add(n), (e = !0))
-                    : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)),
-                    e && n.forceUpdate();
+                    ? this._visibleComponents.has(i) || (this._visibleComponents.add(i), (e = !0))
+                    : this._visibleComponents.has(i) && (this._visibleComponents.delete(i), (e = !0)),
+                    e && i.forceUpdate();
             }
         });
     };
@@ -40,41 +39,41 @@ class a {
         return null == this._observer || this._visibleComponents.has(e);
     }
     observe(e, t) {
-        let n = this._observer;
-        if (null == n) return;
+        let i = this._observer;
+        if (null == i) return;
         this.unobserve(e);
-        let r = t.current;
-        (0, i.vq)(r, HTMLElement) && (this._nodes.set(r, e), this._components.set(e, r), n.observe(r));
+        let n = t.current;
+        (0, s.vq)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), i.observe(n));
     }
     unobserve(e) {
         let t = this._observer;
         if (null == t) return;
-        let n = this._components.get(e);
-        null != n &&
-            (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
+        let i = this._components.get(e);
+        null != i &&
+            (this._nodes.delete(i), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(i));
     }
 }
-var s = n(582128),
-    l = n(132500);
+var a = i(582128),
+    l = i(132500);
 let o = (0, l.A)(),
-    d = new Map(),
-    c = new Map();
-class u extends s.Component {
+    c = new Map(),
+    d = new Map();
+class u extends a.Component {
     elementId;
     isVisible = !1;
     static defaultProps = {
         active: !0,
-        children: s.createElement("span"),
+        children: a.createElement("span"),
         root: null,
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, 5e-324],
     };
     constructor(e) {
         super(e);
-        const { root: t, rootMargin: n, threshold: i } = e;
-        t ? (d.has(t) ? (this.elementId = d.get(t) || "") : d.set(t, (0, l.A)())) : (this.elementId = o);
-        const r = this.getVisibilityObserverId();
-        c.has(r) || c.set(r, new a({ root: t, rootMargin: n, threshold: i }));
+        const { root: t, rootMargin: i, threshold: s } = e;
+        t ? (c.has(t) ? (this.elementId = c.get(t) || "") : c.set(t, (0, l.A)())) : (this.elementId = o);
+        const n = this.getVisibilityObserverId();
+        d.has(n) || d.set(n, new r({ root: t, rootMargin: i, threshold: s }));
     }
     componentDidMount() {
         if (this.props.active) {
@@ -86,12 +85,12 @@ class u extends s.Component {
     }
     componentDidUpdate(e) {
         let t = this.getVisibilityObserver(),
-            n = t.isVisible(this);
-        this.props.active && n !== this.isVisible && this.props.onChange(n),
+            i = t.isVisible(this);
+        this.props.active && i !== this.isVisible && this.props.onChange(i),
             !e.active && this.props.active
                 ? t.observe(this, this.props.innerRef)
                 : e.active && !this.props.active && t.unobserve(this),
-            (this.isVisible = n);
+            (this.isVisible = i);
     }
     componentWillUnmount() {
         this.getVisibilityObserver().unobserve(this);
@@ -102,11 +101,11 @@ class u extends s.Component {
     }
     getVisibilityObserver() {
         let e = this.getVisibilityObserverId(),
-            t = c.get(e);
+            t = d.get(e);
         if (!t) throw Error(`Visibility sensor with id ${e} not found.`);
         return t;
     }
     render() {
-        return s.Children.only(this.props.children);
+        return a.Children.only(this.props.children);
     }
 }

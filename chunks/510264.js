@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { Q: () => E, A: () => A });
-var i = n(562465),
+var i = n(636537),
     r = n(439372),
     a = n(477900);
 n(582128);
@@ -15,7 +15,7 @@ let d = "dmSettingsUpsellLastShown",
             null == t || i - t > 6048e5
                 ? (s.w.set(d, i),
                   (0, l.openModalLazy)(async () => {
-                      let { default: t } = await Promise.all([n.e("84665"), n.e("73084"), n.e("62684")]).then(
+                      let { default: t } = await Promise.all([n.e("684665"), n.e("273084"), n.e("962684")]).then(
                           n.bind(n, 228855),
                       );
                       return (n) => (0, a.jsx)(t, { ...n, guildId: e });

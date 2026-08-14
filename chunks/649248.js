@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(256693),
-    r = n(580954),
-    a = n(812901);
-let s = { [a.A.WithinAppContent]: 0, [a.A.AboveAppContent]: 1 };
-class l {
-    strategy = (0, a.G)();
+l.d(t, { A: () => o });
+var n = l(256693),
+    a = l(580954),
+    i = l(812901);
+let s = { [i.A.WithinAppContent]: 0, [i.A.AboveAppContent]: 1 };
+class r {
+    strategy = (0, i.G)();
     entries = new Map();
     entryListeners = new Set();
     targets = new Map();
@@ -39,33 +38,33 @@ class l {
     emitEntryChange() {
         for (let e of this.entryListeners) e();
     }
-    registerFrameTarget(e, t, n) {
-        let i = this.targets.get(e);
-        null == i && ((i = new Map()), this.targets.set(e, i)),
-            i.set(t, { target: t, level: n, seq: this.attachSeq++ }),
+    registerFrameTarget(e, t, l) {
+        let n = this.targets.get(e);
+        null == n && ((n = new Map()), this.targets.set(e, n)),
+            n.set(t, { target: t, level: l, seq: this.attachSeq++ }),
             this.reconcile(e);
     }
     removeFrameTarget(e, t) {
-        let n = this.targets.get(e);
-        null != n && n.delete(t) && this.reconcile(e);
+        let l = this.targets.get(e);
+        null != l && l.delete(t) && this.reconcile(e);
     }
     reconcile(e) {
         let t = this.entries.get(e);
         if (null == t) return;
-        let n = this.pickWinner(e);
-        if (null == n) {
+        let l = this.pickWinner(e);
+        if (null == l) {
             this.strategy.unplace(t.container), this.background(e);
             return;
         }
-        this.cancelBackground(e), this.strategy.place(t.container, n.target, n.level);
+        this.cancelBackground(e), this.strategy.place(t.container, l.target, l.level);
     }
     pickWinner(e) {
         let t = this.targets.get(e);
         if (null == t) return null;
-        let n = null;
+        let l = null;
         for (let e of t.values())
-            (null == n || s[e.level] > s[n.level] || (s[e.level] === s[n.level] && e.seq > n.seq)) && (n = e);
-        return n;
+            (null == l || s[e.level] > s[l.level] || (s[e.level] === s[l.level] && e.seq > l.seq)) && (l = e);
+        return l;
     }
     background(e) {
         if (!this.backgrounded.has(e))
@@ -86,7 +85,7 @@ class l {
         null != t && (clearTimeout(t), this.backgrounded.delete(e));
     }
     evict(e) {
-        (this.cancelBackground(e), (0, i.fS)(e)) ? (0, i.aQ)(e) : (0, r.A)().leaveFrame(e);
+        (this.cancelBackground(e), (0, n.fS)(e)) ? (0, n.aQ)(e) : (0, a.A)().leaveFrame(e);
     }
 }
-let o = new l();
+let o = new r();

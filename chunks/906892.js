@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { $W: () => s, BK: () => a, bW: () => r });
-let { Layer: i, LayerContainer: r, LayerProvider: a, layerContext: s } = (0, n(365912).Ay)("DiscordVideoPlayer");
+n.d(t, { $W: () => i, BK: () => a, bW: () => l });
+let { Layer: r, LayerContainer: l, LayerProvider: a, layerContext: i } = (0, n(365912).Ay)("DiscordVideoPlayer");

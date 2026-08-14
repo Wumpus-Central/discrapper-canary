@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { E: () => o });
-var i = n(477900);
-n(582128);
-let r =
+c.d(e, { E: () => n });
+var r = c(477900);
+c(582128);
+let t =
     "https://cdn.discordapp.com/assets/content/03622d5cf6122c0557116bfd66c48955caf9a146c3dc6dcbd53c94fe0fe58a3a.riv";
-var a = n(502377),
-    s = n(799226);
-let l = {
+var d = c(502377),
+    o = c(799226);
+let i = {
     Game_Server_Hosting_Main: { reducedMotion: "boolean" },
     c_chara_5: {},
     hytale_gameplay: { reducedMotion: "boolean" },
@@ -15,19 +14,19 @@ let l = {
     c_chara_2: {},
     c_chara_3: {},
 };
-function o(e) {
-    let { artboard: t = "Game_Server_Hosting_Main", stateMachine: n, ...o } = e,
-        { status: d, buffer: c } = (0, s.CE)(r),
-        u = (0, s.m2)(r);
-    return d === s.BW.Loading
+function n(a) {
+    let { artboard: e = "Game_Server_Hosting_Main", stateMachine: c, ...n } = a,
+        { status: _, buffer: s } = (0, o.CE)(t),
+        h = (0, o.m2)(t);
+    return _ === o.BW.Loading
         ? null
-        : (0, i.jsx)(a.w, {
-              ...(u ? { key: "override" } : {}),
-              buffer: c,
-              artboard: t,
-              stateMachine: n,
-              artboardProperties: l,
-              ...o,
+        : (0, r.jsx)(d.w, {
+              ...(h ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: c,
+              artboardProperties: i,
+              ...n,
           });
 }
-o.riveSrc = r;
+n.riveSrc = t;

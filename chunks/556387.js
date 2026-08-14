@@ -42,8 +42,8 @@ var n = t(477900),
     K = t(427262),
     B = t(582904),
     Y = t(375708),
-    $ = t(303373),
-    q = t(85277);
+    q = t(303373),
+    $ = t(85277);
 let H = "VoiceInviteSuggestionsPopover";
 function W(e) {
     let { channel: i, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: p } = e,
@@ -71,11 +71,11 @@ function W(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, c.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    t.e("27574"),
-                    t.e("21149"),
-                    t.e("59957"),
-                    t.e("28136"),
-                    t.e("16084"),
+                    t.e("827574"),
+                    t.e("121149"),
+                    t.e("159957"),
+                    t.e("728136"),
+                    t.e("216084"),
                     t.e("22547"),
                 ]).then(t.bind(t, 1310));
                 return (t) => (0, n.jsx)(l, { ...t, guild: e, channel: i, source: f.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -89,33 +89,33 @@ function W(e) {
             tabIndex: -1,
             ref: I,
             "aria-label": Y.intl.string(Y.t.o53CL2),
-            className: $.oO,
+            className: q.oO,
             children: (0, n.jsxs)("div", {
-                className: $.vW,
+                className: q.vW,
                 children: [
                     S &&
                         (0, n.jsx)(m.E, {
                             variant: "text-sm/medium",
                             color: "text-muted",
-                            className: $.DD,
+                            className: q.DD,
                             children: Y.intl.string(Y.t["EE+P0H"]),
                         }),
                     (0, n.jsxs)("ul", {
-                        className: $.p_,
+                        className: q.p_,
                         children: [
                             x.map((e) => (0, n.jsx)(Z, { channel: i, user: e, ringingEnabled: S }, e.id)),
                             (0, n.jsxs)(g.D, {
                                 tag: "li",
                                 onClick: E,
-                                className: a()($.nM, $.vk),
+                                className: a()(q.nM, q.vk),
                                 children: [
                                     (0, n.jsx)("div", {
-                                        className: $.R4,
-                                        children: (0, n.jsx)(h.n, { size: "custom", className: $.Kk }),
+                                        className: q.R4,
+                                        children: (0, n.jsx)(h.n, { size: "custom", className: q.Kk }),
                                     }),
                                     (0, n.jsx)(m.E, {
                                         variant: "text-sm/medium",
-                                        className: $.UU,
+                                        className: q.UU,
                                         lineClamp: 1,
                                         children: Y.intl.string(Y.t.NOP3Ry),
                                     }),
@@ -216,13 +216,13 @@ function Z(e) {
     return (0, n.jsxs)(g.D, {
         innerRef: d,
         tag: "li",
-        className: a()($.nM, { [$.vk]: !en }),
+        className: a()(q.nM, { [q.vk]: !en }),
         "aria-disabled": en,
         onClick: es,
         "aria-label": eo,
         children: [
             (0, n.jsx)(v.eu, {
-                className: $.my,
+                className: q.my,
                 "aria-label": eu,
                 size: I._3.SIZE_24,
                 src: er,
@@ -232,17 +232,17 @@ function Z(e) {
                 ...ed,
             }),
             (0, n.jsxs)("div", {
-                className: $.VW,
+                className: q.VW,
                 children: [
-                    (0, n.jsx)(m.E, { variant: "text-sm/medium", className: $.UU, lineClamp: 1, children: eu }),
+                    (0, n.jsx)(m.E, { variant: "text-sm/medium", className: q.UU, lineClamp: 1, children: eu }),
                     (em || eA) &&
                         (0, n.jsxs)("div", {
-                            className: $.J2,
+                            className: q.J2,
                             children: [
                                 em
-                                    ? (0, n.jsx)(R.A, { size: "custom", color: et, channel: ee, className: $.RI })
+                                    ? (0, n.jsx)(R.A, { size: "custom", color: et, channel: ee, className: q.RI })
                                     : null != Q
-                                      ? (0, n.jsx)(b.A, { icon: Q, className: $.RI })
+                                      ? (0, n.jsx)(b.A, { icon: Q, className: q.RI })
                                       : null,
                                 (0, n.jsx)(m.E, {
                                     variant: "text-xs/medium",
@@ -255,30 +255,30 @@ function Z(e) {
                 ],
             }),
             "sending" === A &&
-                (0, n.jsx)("div", { className: $.r$, children: (0, n.jsx)(x.n, { dotRadius: 2, themed: !0 }) }),
+                (0, n.jsx)("div", { className: q.r$, children: (0, n.jsx)(x.n, { dotRadius: 2, themed: !0 }) }),
             "success" === A &&
                 (0, n.jsx)(m.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: $.h5,
+                    className: q.h5,
                     lineClamp: 1,
                     children: Y.intl.string(Y.t["8BEiNn"]),
                 }),
             null == A &&
                 !s &&
                 (0, n.jsx)("div", {
-                    className: $.SB,
-                    children: (0, n.jsx)(S.R, { color: "currentColor", size: "sm", className: $.Kk }),
+                    className: q.SB,
+                    children: (0, n.jsx)(S.R, { color: "currentColor", size: "sm", className: q.Kk }),
                 }),
             s &&
                 !M &&
                 (0, n.jsx)(_.m, {
                     text: O,
                     children: (0, n.jsx)(g.D, {
-                        className: a()($.D9, q.button, q.secondary, { [$.r9]: w }),
+                        className: a()(q.D9, $.button, $.secondary, { [q.r9]: w }),
                         onClick: el,
                         "aria-disabled": w,
-                        children: (0, n.jsx)(T, { size: "xxs", color: G, className: $.Kk }),
+                        children: (0, n.jsx)(T, { size: "xxs", color: G, className: q.Kk }),
                     }),
                 }),
         ],

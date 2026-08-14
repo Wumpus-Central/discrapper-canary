@@ -21,7 +21,7 @@ function u(e) {
                 label: c.intl.string(c.t.bt75uw),
                 action: () => {
                     (0, r.openModalLazy)(async () => {
-                        let { default: e } = await a.e("50267").then(a.bind(a, 428726));
+                        let { default: e } = await a.e("550267").then(a.bind(a, 428726));
                         return (t) => (0, n.jsx)(e, { credential: u, ...t });
                     });
                 },

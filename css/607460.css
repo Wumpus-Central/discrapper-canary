@@ -1,0 +1,187 @@
+.chat_f02135 {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 0;
+    min-width: 0;
+    position: relative
+}
+
+.chat_f02135:before {
+    box-shadow: var(--elevation-low);
+    content: "";
+    display: none;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    inset-inline: 0;
+    pointer-events: none;
+    z-index: 1
+}
+
+.qualityIndicator__30845 {
+    align-items: center;
+    display: flex
+}
+
+.qualityIndicatorHighlightWrapper__30845 {
+    background-color: var(--primary-400);
+    border-radius: 16px;
+    display: flex;
+    padding: 4px
+}
+
+.clickable__30845 {
+    cursor: pointer
+}
+
+.qualityIndicatorFullQuality__30845 {
+    color: var(--white)
+}
+
+.qualityIndicatorLowQuality__30845 {
+    color: var(--primary-300)
+}
+
+.premiumStreamIcon__30845 {
+    color: var(--white);
+    height: 14px;
+    margin-inline-end: 4px;
+    width: 14px
+}
+
+.premiumStreamIconLarge__30845 {
+    color: var(--white);
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.qualityResolution__30845 {
+    margin-inline-end: 4px
+}
+
+.qualityIndicatorBadge__30845 {
+    text-transform: none
+}
+
+.qualityIndicatorBadgePremium__30845 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color)
+}
+
+.streamQualityIndicator__30845 {
+    align-items: center;
+    display: flex;
+    overflow: hidden
+}
+
+.streamGiftingPopout__30845 {
+    background-color: var(--brand-500);
+    border-radius: 8px;
+    margin-top: 6px;
+    padding: 16px 16px 12px;
+    position: relative;
+    width: 280px
+}
+
+.streamGiftingPopout__30845:after {
+    border-block-color: transparent var(--brand-500);
+    border-inline-color: transparent;
+    border-style: solid;
+    border-width: 8px;
+    bottom: 100%;
+    content: "";
+    inset-inline-start: 50%;
+    margin-top: 6px;
+    margin-inline-start: -8px;
+    position: absolute
+}
+
+.streamGiftingPopoutHeader__30845 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.streamGiftingPopoutCTA__30845 {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.streamGiftingPopoutButton__30845 {
+    display: flex;
+    justify-content: space-between
+}
+
+.streamGiftingPopoutButtonText__30845 {
+    color: var(--brand-500)
+}
+
+.streamGiftingPopoutText__30845 {
+    margin-top: 4px;
+    text-align: center
+}
+
+.liveIndicator__30845 {
+    overflow: hidden;
+    position: relative
+}
+
+.liveQualityIndicator__30845 {
+    margin-inline-end: 4px
+}
+
+.giftIcon__30845,
+.giftIconBrand__30845 {
+    height: 16px;
+    width: 16px
+}
+
+.giftIcon__30845 {
+    color: var(--white);
+    margin-inline: 4px
+}
+
+.giftIconBrand__30845 {
+    color: var(--brand-500);
+    margin-inline-end: 4px
+}
+
+.giftButton__30845 {
+    align-items: center;
+    display: flex
+}
+
+.upsellPage_d204dc {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+.upsellContainer_d204dc {
+    background-color: var(--background-base-lower);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px
+}
+
+.upsellImage_d204dc {
+    height: 163px;
+    width: 201px
+}
+
+.upsellContent_d204dc {
+    display: flex;
+    flex-direction: column;
+    width: 357px
+}
+
+.bodyText_d204dc {
+    margin-bottom: auto;
+    margin-top: 8px
+}

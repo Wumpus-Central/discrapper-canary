@@ -47,20 +47,20 @@ var h = n(582128),
     p = n(972347),
     T = n(738239),
     m = n.n(T),
-    g = n(118356),
+    g = n(941426),
     S = n(904986),
     N = n(459838),
     C = n(70909);
-let O = {},
-    R = null;
+let R = {},
+    O = null;
 function L(e) {
-    let t = O[e] ?? 0;
-    0 === t && R?.(e, !0), (O[e] = t + 1);
+    let t = R[e] ?? 0;
+    0 === t && O?.(e, !0), (R[e] = t + 1);
 }
-function D(e) {
-    O[e]--, 0 === O[e] && R?.(e, !1);
+function y(e) {
+    R[e]--, 0 === R[e] && O?.(e, !1);
 }
-var y = n(143236),
+var D = n(143236),
     v = n(737005),
     b = n.n(v),
     M = n(731854);
@@ -175,7 +175,7 @@ class W {
 var Y = n(818348);
 let K = new g.Vy("Output"),
     $ = new j();
-class z extends y.EventEmitter {
+class z extends D.EventEmitter {
     stream;
     context;
     sourceId;
@@ -268,7 +268,7 @@ class z extends y.EventEmitter {
                 try {
                     let t = await (i ??
                         (i = (async () => {
-                            let { default: e } = await n.e("64920").then(n.t.bind(n, 259047, 23)),
+                            let { default: e } = await n.e("364920").then(n.t.bind(n, 259047, 23)),
                                 t = new e({
                                     params: {
                                         logProcessStats: !1,
@@ -372,13 +372,13 @@ class z extends y.EventEmitter {
     }
 }
 n(142703);
-var q = n(434933),
-    Z = n.n(q),
+var Z = n(434933),
+    q = n.n(Z),
     X = n(811315),
     Q = n.n(X),
     J = n(201327);
 let ee = new j();
-class et extends y.EventEmitter {
+class et extends D.EventEmitter {
     stream = new MediaStream();
     sourceId = M.qe;
     streamId = null;
@@ -1152,7 +1152,7 @@ class eI extends S.A {
     }
     recalculatePrioritySpeakers() {
         (this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter((e) => this.canHavePriority.has(e)))),
-            Z()(this.outputs, (e, t) => {
+            q()(this.outputs, (e, t) => {
                 e.volume = this.computeLocalVolume(t);
             });
     }
@@ -1258,7 +1258,7 @@ var eN =
     (o.INACTIVE = "inactive"),
     o);
 let eC = "UDP/TLS/RTP/SAVPF";
-function eO(e) {
+function eR(e) {
     switch (e) {
         case "recvonly":
             return "sendonly";
@@ -1270,7 +1270,7 @@ function eO(e) {
             return "inactive";
     }
 }
-function eR(e, t, n) {
+function eO(e, t, n) {
     let i = `${e}-${t}`,
         r = `${n}${i}`;
     return [
@@ -1306,7 +1306,7 @@ function eL(e) {
         media: e,
     });
 }
-function eD(e) {
+function ey(e) {
     let {
         mid: t,
         type: n,
@@ -1409,7 +1409,7 @@ function eD(e) {
     }
     return h;
 }
-function ey(e, t, n, i, r) {
+function eD(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
     if (null == a) return null;
     let s = t.find((e) => RegExp(`^apt=${a.payload}`).test(e.config)),
@@ -1428,7 +1428,7 @@ function ev(e, t) {
             switch ((e.outboundStreams.push({ type: r, direction: o, mid: d }), r)) {
                 case "audio":
                     [M.UK.OPUS].forEach((t, n) => {
-                        let i = ey(a, l, r, t, n);
+                        let i = eD(a, l, r, t, n);
                         null != i && e.codecs.push(i);
                     }),
                         "sendrecv" === o &&
@@ -1438,7 +1438,7 @@ function ev(e, t) {
                 case "video":
                     (t ? [M.UK.H265, M.UK.H264, M.UK.VP8, M.UK.VP9] : [M.UK.H264, M.UK.VP8, M.UK.VP9]).forEach(
                         (t, n) => {
-                            let i = ey(a, l, r, t, n);
+                            let i = eD(a, l, r, t, n);
                             null != i && e.codecs.push(i);
                         },
                     ),
@@ -1479,7 +1479,7 @@ function eP(e) {
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eU extends y.EventEmitter {
+class eU extends D.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1555,7 +1555,7 @@ class eU extends y.EventEmitter {
             return [i, n, r, a === i || s === i ? this.direction : eN.INACTIVE, l];
         });
         if ("Firefox" !== A().name) return this.connected ? t : [];
-        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eO(e.direction), `${e.type}_outbound_${t}`]);
+        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eR(e.direction), `${e.type}_outbound_${t}`]);
         if ("answer" !== e) return n.concat(t);
         {
             let e = n.length - t.length;
@@ -1565,7 +1565,7 @@ class eU extends y.EventEmitter {
                 .slice(0, n.length)
                 .map((e, t) => {
                     let [n, i, r, a, s] = e;
-                    return [n, i, r, eO(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
+                    return [n, i, r, eR(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
@@ -1602,7 +1602,7 @@ class eU extends y.EventEmitter {
                     let [i, u, A, h, I] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
-                            eD({
+                            ey({
                                 mid: I,
                                 type: A,
                                 setup: e,
@@ -1611,7 +1611,7 @@ class eU extends y.EventEmitter {
                                 codec: "audio" === A ? r : l,
                                 payload: "audio" === A ? a : o,
                                 bitrate: "audio" === A ? s : d,
-                                ssrcs: eR(u, i, "audio" === A ? "a" : "v"),
+                                ssrcs: eO(u, i, "audio" === A ? "a" : "v"),
                                 extensions: _,
                             }),
                         );
@@ -1625,11 +1625,11 @@ class eU extends y.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eR(n, t, "a");
+                            return eO(n, t, "a");
                         });
                 if (
                     (E.push(
-                        eD({
+                        ey({
                             mid: "audio",
                             type: "audio",
                             setup: e,
@@ -1651,10 +1651,10 @@ class eU extends y.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eR(n, t, "v");
+                            return eO(n, t, "v");
                         });
                     E.push(
-                        eD({
+                        ey({
                             mid: "video",
                             type: "video",
                             setup: e,
@@ -1689,7 +1689,7 @@ class eU extends y.EventEmitter {
     }
 }
 let ew = new g.Vy("PeerConnection");
-class eG extends y.EventEmitter {
+class eG extends D.EventEmitter {
     bitrate;
     pc;
     stream = null;
@@ -2006,8 +2006,8 @@ class eY extends p.A {
 let eK = new g.Vy("LibDaveManager"),
     e$ = null,
     ez = null,
-    eq = null,
-    eZ = {
+    eZ = null,
+    eq = {
         onRuntimeInitialized: () => {
             eK.info("DAVE loaded");
         },
@@ -2321,7 +2321,7 @@ class e0 extends eI {
                         -1 !== c &&
                         ((l = o.pop()), d.splice(c, 1), this.assignedStreams.set(r, l)),
                     null == l && (l = { ssrc: -1, cname: "" }),
-                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eO(s), mid: r }
+                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eR(s), mid: r }
                 );
             }),
             remainingAudioStreams: t,
@@ -2371,10 +2371,10 @@ class e0 extends eI {
                         let t,
                             { ssrc: u, cname: I, type: f, direction: p, mid: T } = e;
                         "" !== I
-                            ? (t = eR(I, u, "audio" === f ? "a" : "v"))
+                            ? (t = eO(I, u, "audio" === f ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
-                                eD({
+                                ey({
                                     mid: T,
                                     type: f,
                                     setup: h,
@@ -2658,7 +2658,7 @@ class e2 extends eI {
 }
 let e3 = n.p + "worklet.8d84a64a97f8451a.js",
     e4 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e5 extends y.EventEmitter {
+class e5 extends D.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2753,7 +2753,7 @@ class e5 extends y.EventEmitter {
         });
     };
 }
-class e6 extends y.EventEmitter {
+class e6 extends D.EventEmitter {
     id;
     stream;
     pool;
@@ -2827,13 +2827,13 @@ function tt(e) {
                 L(t),
                 (e.srcObject = (0, J.yL)(t)),
                 () => {
-                    D(t), (e.srcObject = null), e.load();
+                    y(t), (e.srcObject = null), e.load();
                 }
             );
     }, [t]),
         h.useEffect(
             () => (
-                n ? (l.current?.pause(), D(t)) : l.current?.play().catch(() => {}),
+                n ? (l.current?.pause(), y(t)) : l.current?.play().catch(() => {}),
                 () => {
                     n && L(t);
                 }
@@ -2928,7 +2928,7 @@ class tr extends p.A {
             this.on("newListener", this.handleNewListener),
             this.on("removeListener", this.handleRemoveListener),
             (function (e) {
-                R = e ?? null;
+                O = e ?? null;
             })(this.handleActiveSinksChange),
             (0, C.A)(this);
     }
@@ -3271,11 +3271,17 @@ class tr extends p.A {
                           (null != e$
                               ? e$
                               : (e$ = new Promise((e, t) => {
-                                    Promise.all([n.e("95625"), n.e("74086"), n.e("63197"), n.e("18269"), n.e("16566")])
+                                    Promise.all([
+                                        n.e("95625"),
+                                        n.e("174086"),
+                                        n.e("563197"),
+                                        n.e("218269"),
+                                        n.e("116566"),
+                                    ])
                                         .then(n.bind(n, 22389))
                                         .then((n) => {
                                             let { DaveModuleFactory: i } = n;
-                                            i(eZ)
+                                            i(eq)
                                                 .then((t) => {
                                                     eK.info("Successfully initialized DAVE"), (ez = t), e(t);
                                                 })
@@ -3292,7 +3298,7 @@ class tr extends p.A {
                                   (this.dave = t),
                                       (this.transientKeys = (function () {
                                           if (null == ez) throw Error("DAVE module not loaded");
-                                          return null == eq && (eq = new ez.TransientKeys()), eq;
+                                          return null == eZ && (eZ = new ez.TransientKeys()), eZ;
                                       })()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
                                       ti.info(

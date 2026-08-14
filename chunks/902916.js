@@ -1,4 +1,4 @@
-r.d(t, { _: () => u }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+r.d(t, { _: () => s }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 var a = r(582128),
     n = r(626584);
 r(323874), r(14289), r(35956), r(321073);
@@ -11,14 +11,14 @@ function o(e, t, r) {
 async function l() {
     if (null != i) return i;
     try {
-        let e = (await r.e("37971").then(r.bind(r, 543198))).default;
+        let e = (await r.e("437971").then(r.bind(r, 543198))).default;
         return (i = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(14927), r.b).href : e) }));
     } catch (t) {
         let e = Error("WebP module failed to load. Ensure webp_wasm.js and webp_wasm.wasm are built and available.");
         throw ((e.cause = t), e);
     }
 }
-async function c(e) {
+async function h(e) {
     if (!(e instanceof Uint8Array)) throw Error("webpData must be a Uint8Array");
     if (0 === e.length) throw Error("webpData cannot be empty");
     let t = await l(),
@@ -48,7 +48,7 @@ async function c(e) {
             n = t.HEAPU32[(e >> 2) + 4];
         t._free(e);
         let l = [],
-            c = r * a * 4;
+            h = r * a * 4;
         for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i); ) {
             let e = t._malloc(4);
             if (0 === e) throw Error("Failed to allocate 4 bytes for frame buffer pointer - out of WASM memory");
@@ -60,55 +60,55 @@ async function c(e) {
                 t._free(e), t._free(n);
                 break;
             }
-            let h = t.HEAPU32[e >> 2],
-                s = t.HEAP32[n >> 2],
-                u = new Uint8Array(t.HEAPU8.buffer, h, c).slice();
-            l.push({ data: u, timestamp: s, width: r, height: a }), t._free(e), t._free(n);
+            let c = t.HEAPU32[e >> 2],
+                u = t.HEAP32[n >> 2],
+                s = new Uint8Array(t.HEAPU8.buffer, c, h).slice();
+            l.push({ data: s, timestamp: u, width: r, height: a }), t._free(e), t._free(n);
         }
         return { frames: l, width: r, height: a, frameCount: n };
     } finally {
         t._WebPAnimDecoderDelete(i), t._free(r), t._free(a);
     }
 }
-async function h(e) {
+async function c(e) {
     if (!(e instanceof Uint8Array) || 0 === e.length) return !1;
     try {
-        let { frameCount: t } = await c(e);
+        let { frameCount: t } = await h(e);
         return t > 1;
     } catch {
         return !1;
     }
 }
-let s = new n.A("useAnimatedImageCheck");
-function u(e) {
+let u = new n.A("useAnimatedImageCheck");
+function s(e) {
     let t = e?.type === "image/gif",
         n = e?.type === "image/webp",
         [i, o] = a.useState(!1),
-        [c, u] = a.useState(null),
-        f = n && c !== e;
+        [h, s] = a.useState(null),
+        f = n && h !== e;
     a.useEffect(() => {
         let a = !1;
         return (
             t
-                ? (r.e("47580").then(r.bind(r, 844183)), o(!1), u(e))
+                ? (r.e("447580").then(r.bind(r, 844183)), o(!1), s(e))
                 : n && null != e
                   ? (async function () {
                         try {
                             let t = await e.arrayBuffer(),
                                 r = new Uint8Array(t),
-                                n = await h(r);
-                            a || (o(n), n && l(), u(e));
+                                n = await c(r);
+                            a || (o(n), n && l(), s(e));
                         } catch (t) {
-                            a || (s.error("Error checking WebP animation", t), o(!1), u(e));
+                            a || (u.error("Error checking WebP animation", t), o(!1), s(e));
                         }
                     })()
-                  : (o(!1), u(e)),
+                  : (o(!1), s(e)),
             () => {
                 a = !0;
             }
         );
     }, [e, t, n]);
-    let A = i && c === e,
-        m = t || A;
-    return { isGIF: t, isWebP: n, isAnimatedWebPFile: A, isCheckingAnimation: f, isEditableAnimatedImage: m };
+    let m = i && h === e,
+        A = t || m;
+    return { isGIF: t, isWebP: n, isAnimatedWebPFile: m, isCheckingAnimation: f, isEditableAnimatedImage: A };
 }

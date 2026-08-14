@@ -1,0 +1,12 @@
+.container__8677f {
+    align-items: center;
+    color: var(--text-feedback-positive);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.strikethrough__8677f {
+    align-self: end;
+    text-decoration: line-through
+}

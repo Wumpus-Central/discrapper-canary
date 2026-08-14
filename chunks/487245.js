@@ -25,8 +25,8 @@ var i,
     R = n(450232),
     O = n(973654),
     L = n(363195),
-    D = n(742023),
-    y = n(885386),
+    y = n(742023),
+    D = n(885386),
     v = n(830543),
     b = n(174459),
     M = n(823459),
@@ -84,7 +84,7 @@ function Z() {
 function q(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
-        c = y.eh.useSetting().customUserThemeSettings,
+        c = D.eh.useSetting().customUserThemeSettings,
         { shouldShowNewBadge: u, markNewBadgeAsDismissed: _ } =
             ((t = (0, V.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE)),
             a.useEffect(() => {
@@ -254,9 +254,9 @@ function eu(e) {
         [N, C] = a.useState(-1),
         R = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        D = (0, g.GV)(),
-        y = L && u ? D : void 0,
-        b = L ? D : void 0;
+        y = (0, g.GV)(),
+        D = L && u ? y : void 0,
+        b = L ? y : void 0;
     function U(e, t) {
         var n;
         if (
@@ -279,7 +279,7 @@ function eu(e) {
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                L && (0, r.jsx)(A.A, { id: D, children: $.intl.string($.t.JIZSqz) }),
+                L && (0, r.jsx)(A.A, { id: y, children: $.intl.string($.t.JIZSqz) }),
                 (0, r.jsx)(q, {
                     size: i,
                     isDisabled: t,
@@ -303,7 +303,7 @@ function eu(e) {
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
                             showLockedBadge: !1,
-                            ariaDescribedBy: y,
+                            ariaDescribedBy: D,
                         },
                         e.id,
                     ),
@@ -313,7 +313,7 @@ function eu(e) {
                     let e = X.ag[c.ju.EASTER_EGG];
                     if (null == e) return null;
                     async function t() {
-                        let { default: e } = await n.e("3408").then(n.t.bind(n, 707827, 19));
+                        let { default: e } = await n.e("103408").then(n.t.bind(n, 707827, 19));
                         return e;
                     }
                     return (0, r.jsxs)("div", {
@@ -324,7 +324,7 @@ function eu(e) {
                                 preset: e,
                                 isSelected: _ === c.ju.EASTER_EGG,
                                 onSelect: () => U(e),
-                                ariaDescribedBy: y,
+                                ariaDescribedBy: D,
                             }),
                             (0, r.jsx)(E.a, { importData: t, shouldAnimate: !R, className: ei._7 }),
                         ],
@@ -338,10 +338,10 @@ function e_(e) {
     let { size: t, systemSelectorFirst: n, hideSystemSelector: i = !1 } = e,
         { delay: s } = a.useContext(es),
         { analyticsLocations: l } = (0, T.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-        [o, c, u] = (0, d.yK)([L.A, D.Ay, P.A], () => [
+        [o, c, u] = (0, d.yK)([L.A, y.Ay, P.A], () => [
             L.A.theme,
-            null == P.A.gradientPreset && null == y.eh.getSetting().customUserThemeSettings,
-            D.Ay.useSystemTheme === ee.Q_.ON,
+            null == P.A.gradientPreset && null == D.eh.getSetting().customUserThemeSettings,
+            y.Ay.useSystemTheme === ee.Q_.ON,
         ]);
     function _(e) {
         (0, M.Py)(),

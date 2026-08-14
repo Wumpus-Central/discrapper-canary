@@ -6,7 +6,7 @@ var n = s(477900),
     o = s(452027),
     r = s(212245),
     c = s(287809),
-    d = s(428262),
+    d = s(158045),
     u = s(285918),
     m = s(912630),
     x = s(965162),
@@ -139,7 +139,7 @@ function Y(e) {
         onClick: () => c(t),
         onContextMenu: (e) =>
             (0, y.L3)(e, async () => {
-                let { default: e } = await s.e("22305").then(s.bind(s, 5752));
+                let { default: e } = await s.e("422305").then(s.bind(s, 5752));
                 return (s) => (0, n.jsx)(e, { ...s, backgroundOption: t, optionIsInUse: o });
             }),
         children: [
@@ -223,17 +223,29 @@ function X(e) {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        s.e("73193"),
-                        s.e("97250"),
+                        s.e("773193"),
+                        s.e("821581"),
+                        s.e("731278"),
                         s.e("22089"),
-                        s.e("40851"),
-                        s.e("29666"),
+                        s.e("454048"),
+                        s.e("863232"),
+                        s.e("599666"),
+                        s.e("300699"),
+                        s.e("349619"),
+                        s.e("221825"),
+                        s.e("844695"),
+                        s.e("50015"),
+                        s.e("901555"),
+                        s.e("199999"),
+                        s.e("790244"),
+                        s.e("133902"),
+                        s.e("229666"),
                         s.e("93513"),
-                        s.e("47011"),
-                        s.e("79149"),
+                        s.e("647011"),
+                        s.e("779149"),
                         s.e("90017"),
-                        s.e("99150"),
-                        s.e("60987"),
+                        s.e("199150"),
+                        s.e("760987"),
                     ]).then(s.bind(s, 902550));
                     return (s) =>
                         (0, n.jsx)(e, {
@@ -405,9 +417,26 @@ function es(e) {
                           onUpsellClick: function () {
                               (0, a.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      s.e("41509"),
-                                      s.e("66901"),
-                                      s.e("40716"),
+                                      s.e("135085"),
+                                      s.e("225091"),
+                                      s.e("869729"),
+                                      s.e("819522"),
+                                      s.e("454048"),
+                                      s.e("599666"),
+                                      s.e("300699"),
+                                      s.e("349619"),
+                                      s.e("740428"),
+                                      s.e("398125"),
+                                      s.e("221825"),
+                                      s.e("276640"),
+                                      s.e("431011"),
+                                      s.e("832817"),
+                                      s.e("338835"),
+                                      s.e("901555"),
+                                      s.e("799657"),
+                                      s.e("562168"),
+                                      s.e("766901"),
+                                      s.e("840716"),
                                   ]).then(s.bind(s, 629959));
                                   return (s) =>
                                       (0, n.jsx)(e, {

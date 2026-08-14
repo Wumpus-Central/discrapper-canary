@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(297264),
     p = n(821609),
     g = n(509434);
-if (/^(14256|21552)$/.test(n.j)) var h = n(141628);
-if (/^(14256|21552)$/.test(n.j)) var f = n(815021);
+if (/^(221552|614256)$/.test(n.j)) var h = n(141628);
+if (/^(221552|614256)$/.test(n.j)) var f = n(815021);
 var A = n(289873),
     x = n(17928),
     E = n(689175),
@@ -25,11 +25,11 @@ var A = n(289873),
     N = n(633075),
     b = n(321191),
     y = n(735321),
-    T = n(975732),
-    D = n(384377),
+    D = n(975732),
+    T = n(384377),
     R = n(605694),
     k = n(246356),
-    w = n(561794),
+    w = n(594832),
     O = n(862772),
     L = n(310209),
     M = n(280450),
@@ -97,7 +97,7 @@ function ef(e) {
         {
             priceComponent: b,
             extendedHeight: y,
-            displayPrice: T,
+            displayPrice: D,
         } = (function (e) {
             let { sku: t, priceSetAssignmentPurchaseType: n } = e,
                 {
@@ -177,7 +177,7 @@ function ef(e) {
                         displayPrice: o,
                     };
         })({ sku: s, priceSetAssignmentPurchaseType: o ? eo.lid.DEFAULT : eo.lid.GIFT }),
-        D = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     f?.(),
@@ -206,7 +206,7 @@ function ef(e) {
         );
     return (0, l.jsx)(Z.vN, {
         children: (0, l.jsxs)(X.s, {
-            onClick: D,
+            onClick: T,
             className: r()(ed.Nr, { [ed.Zl]: !C, [ed.BN]: v, [ed.YF]: I }),
             ref: E,
             "aria-label": s.name,
@@ -252,7 +252,7 @@ function ef(e) {
                         variant: "primary",
                         onClick: R,
                         text:
-                            ((t = T),
+                            ((t = D),
                             (n = o),
                             null != t
                                 ? n
@@ -348,7 +348,7 @@ function ey(e) {
         }),
     });
 }
-function eT(e) {
+function eD(e) {
     let { application: t } = e;
     if (null == t) return null;
     let n = t.getIconURL(eS.iu.SMALL);
@@ -362,7 +362,7 @@ function eT(e) {
         ],
     });
 }
-function eD(e) {
+function eT(e) {
     let { user: t, isGift: n } = e,
         i = ec.intl.string(ec.t.kv4lSp),
         s = ec.intl.string(ec.t.vzZoSF);
@@ -499,11 +499,11 @@ function eL(e) {
                     h && f({ analyticsLocations: A });
                 }, [A, h, f]),
                 E = i.useCallback(() => {
-                    s(), (0, T.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: A });
+                    s(), (0, D.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: A });
                     let e = new N.R({ applicationId: n });
                     (0, y.Y5)(e),
                         (0, _.un)({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                        setTimeout(() => (0, D.XA)(ej.jM.WIDGET_ADDED), 700);
+                        setTimeout(() => (0, T.XA)(ej.jM.WIDGET_ADDED), 700);
                 }, [A, n, t, s]);
             return r && !u && p && null != d
                 ? !g && h
@@ -586,8 +586,8 @@ function eL(e) {
                                   E,
                               ],
                           })
-                        : (0, l.jsx)(eT, { application: k }),
-                    (0, l.jsx)(eD, { user: m, isGift: !f }),
+                        : (0, l.jsx)(eD, { application: k }),
+                    (0, l.jsx)(eT, { user: m, isGift: !f }),
                 ],
             }),
             (0, l.jsxs)(c.B, {
@@ -662,7 +662,7 @@ function eM(e) {
                 className: e_.wx,
                 direction: "vertical",
                 gap: 12,
-                children: [(0, l.jsx)(eT, { application: m }), (0, l.jsx)(eD, { user: u, isGift: !d })],
+                children: [(0, l.jsx)(eD, { application: m }), (0, l.jsx)(eT, { user: u, isGift: !d })],
             }),
             E
                 ? (0, l.jsx)(A.y, { className: e_.kc })

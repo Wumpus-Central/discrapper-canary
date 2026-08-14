@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(938796), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => O }), n(938796), n(321073), n(323874), n(14289), n(35956);
 var i = n(435558),
     r = n.n(i),
     a = n(132500),
@@ -156,7 +156,7 @@ class C {
                 : this._subscribed || this.subscribe());
     }
 }
-class O extends l.A {
+class R extends l.A {
     _worker;
     actions = {
         LOGOUT: () => this._handleLogout(),
@@ -194,7 +194,7 @@ class O extends l.A {
     }
     rebootWebworker() {
         null != this._worker && (this._worker.terminate(), (this._worker = null)),
-            (this._worker = new Worker(new URL("/assets/" + n.u("67470"), n.b)));
+            (this._worker = new Worker(new URL("/assets/" + n.u("167470"), n.b)));
     }
     updateUsers(e, t) {
         let { _worker: n } = this;
@@ -445,4 +445,4 @@ class O extends l.A {
             this.updateUsers(i, "guild_scheduled_event_users_fetch_success");
     };
 }
-let R = new O();
+let O = new R();

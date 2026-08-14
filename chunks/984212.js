@@ -1,5 +1,4 @@
-"use strict";
-function i(e) {
+n.d(t, { C: () => r });
+function r(e) {
     return null != e.text;
 }
-n.d(t, { C: () => i });

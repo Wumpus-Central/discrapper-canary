@@ -1,4 +1,4 @@
-t.d(e, { Ay: () => Y, Kc: () => Q, Wr: () => X }), t(321073);
+t.d(s, { Ay: () => Y, Kc: () => Q, Wr: () => X }), t(321073);
 var i = t(477900),
     n = t(582128),
     l = t(503698),
@@ -45,16 +45,17 @@ var i = t(477900),
     B = t(375708),
     F = t(79362);
 let W = (0, y.Fe)({
-    createPromise: () => Promise.all([t.e("30366"), t.e("28966")]).then(t.bind(t, 217356)),
+    createPromise: () =>
+        Promise.all([t.e("730366"), t.e("482815"), t.e("170653"), t.e("528966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
 });
-function X(s) {
-    let { children: e, collapsed: t = !1, className: n } = s;
-    return (0, i.jsx)("div", { className: r()(n, F.p_, t ? F.GT : F.m3), role: "group", children: e });
+function X(e) {
+    let { children: s, collapsed: t = !1, className: n } = e;
+    return (0, i.jsx)("div", { className: r()(n, F.p_, t ? F.GT : F.m3), role: "group", children: s });
 }
-function Q(s) {
+function Q(e) {
     let {
-        className: e,
+        className: s,
         mute: t,
         localMute: n,
         localVideoDisabled: l,
@@ -78,16 +79,16 @@ function Q(s) {
         user: X,
         disconnected: Q,
         isHovered: Y,
-    } = s;
+    } = e;
     if (f || v) return null;
     let $ = [],
-        ss = (function (s) {
-            let { iconClassName: e, mute: t, localMute: n, serverMute: l, deaf: a, serverDeaf: c } = s,
+        ee = (function (e) {
+            let { iconClassName: s, mute: t, localMute: n, serverMute: l, deaf: a, serverDeaf: c } = e,
                 o = [];
             if (t) {
-                let s;
-                s = l || n ? S.O : I.z;
-                let t = (0, i.jsx)(s, { className: r()(F.Kk, e, { [F.DU]: l }), color: "currentColor" });
+                let e;
+                e = l || n ? S.O : I.z;
+                let t = (0, i.jsx)(e, { className: r()(F.Kk, s, { [F.DU]: l }), color: "currentColor" });
                 o.push(
                     (0, i.jsx)(
                         u.m,
@@ -104,8 +105,8 @@ function Q(s) {
                 );
             }
             if (c || a) {
-                let s = c ? L.T : E.c,
-                    t = (0, i.jsx)(s, { className: r()(F.Kk, e, { [F.DU]: c }), color: "currentColor" });
+                let e = c ? L.T : E.c,
+                    t = (0, i.jsx)(e, { className: r()(F.Kk, s, { [F.DU]: c }), color: "currentColor" });
                 o.push(
                     (0, i.jsx)(
                         u.m,
@@ -195,8 +196,8 @@ function Q(s) {
                     {
                         text: B.intl.string(B.t.ygslb0),
                         children: (0, i.jsx)(j.D, {
-                            onClick: (s) => {
-                                s.stopPropagation(), C.A.stopRinging(W, [X.id]);
+                            onClick: (e) => {
+                                e.stopPropagation(), C.A.stopRinging(W, [X.id]);
                             },
                             children: (0, i.jsx)(o.z, {
                                 size: "sm",
@@ -208,13 +209,13 @@ function Q(s) {
                     "ring",
                 ),
             );
-    let se = null != z && !(0, O.n)(z, Z.gfo.EMBEDDED);
-    return 0 !== $.length || 0 !== ss.length || se || y
+    let es = null != z && !(0, O.n)(z, Z.gfo.EMBEDDED);
+    return 0 !== $.length || 0 !== ee.length || es || y
         ? (0, i.jsxs)("div", {
-              className: r()(F.Pt, e),
+              className: r()(F.Pt, s),
               children: [
-                  (0, i.jsxs)("div", { className: F.RL, children: [ss, $] }),
-                  se && !y
+                  (0, i.jsxs)("div", { className: F.RL, children: [ee, $] }),
+                  es && !y
                       ? (0, i.jsx)("div", {
                             className: F.RL,
                             children: (0, i.jsx)(
@@ -228,8 +229,8 @@ function Q(s) {
           })
         : null;
 }
-let Y = function (s) {
-    let e,
+let Y = function (e) {
+    let s,
         t,
         l,
         a,
@@ -242,7 +243,7 @@ let Y = function (s) {
             isOverlay: g = !1,
             ref: h,
             ...N
-        } = s,
+        } = e,
         {
             onClick: j,
             onKeyDown: S,
@@ -264,38 +265,38 @@ let Y = function (s) {
             flipped: Y,
             className: q,
             overlap: $,
-            "aria-label": ss,
-            ringing: se,
-            user: st,
+            "aria-label": ee,
+            ringing: es,
+            user: et,
         } = N,
-        si = (0, D.A)({ userId: st.id, guildId: H }),
-        sn = (0, K.a)({ displayNameStyles: si }),
-        sl = (0, T.A)(st.id),
-        sr = (0, b.v)({
+        ei = (0, D.A)({ userId: et.id, guildId: H }),
+        en = (0, K.a)({ displayNameStyles: ei }),
+        el = (0, T.A)(et.id),
+        er = (0, b.v)({
             isSpeaking: k,
-            voiceDb: sl,
+            voiceDb: el,
             ...($ ? { spreadDirection: b.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
         }),
-        [sa, sc] = n.useState(!1),
-        so = (() => {
-            if (null != ss) return ss;
-            let s = J ?? st.username,
-                e = null;
+        [ea, ec] = n.useState(!1),
+        eo = (() => {
+            if (null != ee) return ee;
+            let e = J ?? et.username,
+                s = null;
             return (w
-                ? (e = B.intl.string(B.t.btxSdB))
+                ? (s = B.intl.string(B.t.btxSdB))
                 : V
-                  ? (e = B.intl.string(B.t.NjmiOL))
+                  ? (s = B.intl.string(B.t.NjmiOL))
                   : y
-                    ? (e = B.intl.string(B.t.Q8Uzof))
+                    ? (s = B.intl.string(B.t.Q8Uzof))
                     : M
-                      ? (e = B.intl.string(B.t.uLddbQ))
-                      : R && (e = B.intl.string(B.t.tjtv3P)),
-            null != e)
-                ? B.intl.formatToPlainString(B.t["1+MVBP"], { userName: s, status: e })
-                : s;
+                      ? (s = B.intl.string(B.t.uLddbQ))
+                      : R && (s = B.intl.string(B.t.tjtv3P)),
+            null != s)
+                ? B.intl.formatToPlainString(B.t["1+MVBP"], { userName: e, status: s })
+                : e;
         })(),
-        sd = (0, d.bG)([z.A], () => z.A.getProgressForUserId(st.id), [st.id]),
-        su = (0, P.Uk)("VoiceUser") && null != sd;
+        ed = (0, d.bG)([z.A], () => z.A.getProgressForUserId(et.id), [et.id]),
+        eu = (0, P.Uk)("VoiceUser") && null != ed;
     return (0, i.jsx)(f.s, {
         ref: h,
         className: r()(q, {
@@ -307,26 +308,26 @@ let Y = function (s) {
             [F.p8]: m === Z.OSZ.LARGE,
             [F.r9]: !x && A,
         }),
-        onClick: function (s) {
-            j?.(s, st);
+        onClick: function (e) {
+            j?.(e, et);
         },
-        onDoubleClick: function (s) {
-            I?.(s, st);
+        onDoubleClick: function (e) {
+            I?.(e, et);
         },
-        onContextMenu: function (s) {
-            L?.(s, st);
+        onContextMenu: function (e) {
+            L?.(e, et);
         },
-        onMouseLeave: function (s) {
-            E?.(s, st), sc(!1);
+        onMouseLeave: function (e) {
+            E?.(e, et), ec(!1);
         },
-        onMouseDown: function (s) {
-            C?.(s, st);
+        onMouseDown: function (e) {
+            C?.(e, et);
         },
         onMouseEnter: function () {
-            sc(!0);
+            ec(!0);
         },
         onKeyDown: S,
-        "aria-label": so,
+        "aria-label": eo,
         focusProps: { offset: { right: 4 } },
         children: (0, i.jsxs)("div", {
             className: r()(F.Qs, { [F.zq]: Y }),
@@ -337,34 +338,34 @@ let Y = function (s) {
                           children: (0, i.jsx)("div", { className: r()(F.G, { [F.g4]: !R && !M && k }) }),
                       })
                     : null,
-                ((e = r()(F.my, { [F.Jb]: m === Z.OSZ.LARGE, [F.dT]: m === Z.OSZ.SMALL, [F.DF]: se })),
-                (t = { backgroundImage: `url(${st.getAvatarURL(H, m === Z.OSZ.LARGE ? 38 : 24)})`, ...sr }),
-                se
+                ((s = r()(F.my, { [F.Jb]: m === Z.OSZ.LARGE, [F.dT]: m === Z.OSZ.SMALL, [F.DF]: es })),
+                (t = { backgroundImage: `url(${et.getAvatarURL(H, m === Z.OSZ.LARGE ? 38 : 24)})`, ...er }),
+                es
                     ? (0, i.jsx)(v.Ay, {
                           size: m === Z.OSZ.LARGE ? p._3.SIZE_40 : p._3.SIZE_24,
                           ringing: !0,
-                          src: st.getAvatarURL(H, m === Z.OSZ.LARGE ? 40 : 24),
-                          className: r()(c, e),
+                          src: et.getAvatarURL(H, m === Z.OSZ.LARGE ? 40 : 24),
+                          className: r()(c, s),
                       })
-                    : su
+                    : eu
                       ? (0, i.jsx)(G.A, {
-                            userId: st.id,
+                            userId: et.id,
                             wrapperClassName: c,
-                            children: (0, i.jsx)("div", { className: e, style: t }),
+                            children: (0, i.jsx)("div", { className: s, style: t }),
                         })
-                      : (0, i.jsx)("div", { className: r()(c, e), style: t })),
+                      : (0, i.jsx)("div", { className: r()(c, s), style: t })),
                 ((l = (0, i.jsxs)("div", {
-                    className: r()(o, F.Xh, sn, { [F.Pi]: !R && !M && k, [F.DF]: se }),
+                    className: r()(o, F.Xh, en, { [F.Pi]: !R && !M && k, [F.DF]: es }),
                     children: [
-                        J ?? U.Ay.getName(st),
+                        J ?? U.Ay.getName(et),
                         X
                             ? (0, i.jsxs)("span", { className: F.IW, children: ["\xa0", B.intl.string(B.t["pFO/Ph"])] })
                             : "",
                     ],
                 })),
                 (a = {
-                    primaryGuild: st.primaryGuild,
-                    userId: st.id,
+                    primaryGuild: et.primaryGuild,
+                    userId: et.id,
                     contextGuildId: H,
                     isOverlay: g,
                     disableTooltip: !0,
@@ -372,15 +373,15 @@ let Y = function (s) {
                     profileViewedAnalytics: { source: g ? Z.JJy.OVERLAY : Z.ThZ.VOICE_PANEL },
                 }),
                 !O || g ? (0, i.jsx)(W, { ...a, children: l }) : null),
-                (0, i.jsx)(Q, { disabled: A, ...N, isHovered: sa }),
+                (0, i.jsx)(Q, { disabled: A, ...N, isHovered: ea }),
             ],
         }),
     });
 };
-function q(s) {
-    let { application: e, game: t, iconClassName: l, guildId: c, channelId: o, userId: d } = s,
+function q(e) {
+    let { application: s, game: t, iconClassName: l, guildId: c, channelId: o, userId: d } = e,
         [m, x] = n.useState(!1),
-        A = (0, a.K)((s) => x(s));
+        A = (0, a.K)((e) => x(e));
     return (
         n.useEffect(() => {
             m &&
@@ -389,20 +390,20 @@ function q(s) {
                     guild_id: c,
                     user_id: d,
                 });
-        }, [e.id, o, c, d, m]),
+        }, [s.id, o, c, d, m]),
         (0, i.jsx)(u.m, {
-            text: B.intl.formatToPlainString(B.t.Sq9xJ7, { game: e.name }),
-            "aria-label": B.intl.formatToPlainString(B.t.Sq9xJ7, { game: e.name }),
+            text: B.intl.formatToPlainString(B.t.Sq9xJ7, { game: s.name }),
+            "aria-label": B.intl.formatToPlainString(B.t.Sq9xJ7, { game: s.name }),
             children: (0, i.jsx)(M.A, {
                 ref: A,
                 className: r()(F.Kk, F.n8, l),
-                game: t ?? e,
+                game: t ?? s,
                 size: M.M.XSMALL,
                 onMouseEnter: function () {
                     k.Ay.trackWithMetadata(Z.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                         channel_id: o,
                         guild_id: c,
-                        game_name: e.name,
+                        game_name: s.name,
                         user_id: d,
                     });
                 },

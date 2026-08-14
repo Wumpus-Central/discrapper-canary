@@ -1,12 +1,12 @@
-t.d(r, { YX: () => l, Ym: () => o, tu: () => c });
+t.d(r, { YX: () => i, Ym: () => o, tu: () => l });
 var n = t(477900);
 t(582128);
 var a = t(192308);
 let o = "1529541762920615998",
-    l = "Turbo Shop Drop";
-function c() {
+    i = "Turbo Shop Drop";
+function l() {
     (0, a.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([t.e("93137"), t.e("19443")]).then(t.bind(t, 55934));
+        let { default: e } = await Promise.all([t.e("393137"), t.e("819443")]).then(t.bind(t, 55934));
         return (r) => (0, n.jsx)(e, { ...r });
     });
 }

@@ -9,7 +9,7 @@ async function a({
     resizeWidth: f = null,
     resizeHeight: c = null,
 }) {
-    return (await t.e("47580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, o, i, n, l, s, f, c);
+    return (await t.e("447580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, o, i, n, l, s, f, c);
 }
 t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162), t(323874), t(14289), t(35956), t(321073);
 let o = null,
@@ -43,7 +43,7 @@ function l(e, r, t) {
 async function s() {
     if (null != o) return o;
     try {
-        let e = (await t.e("37971").then(t.bind(t, 543198))).default;
+        let e = (await t.e("437971").then(t.bind(t, 543198))).default;
         return (o = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(t(14927), t.b).href : e) }));
     } catch (r) {
         let e = Error("WebP module failed to load. Ensure webp_wasm.js and webp_wasm.wasm are built and available.");

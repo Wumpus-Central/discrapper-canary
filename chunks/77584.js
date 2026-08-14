@@ -40,7 +40,9 @@ class h extends s.A {
 let I = new h(() =>
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("89913"), n.e("36724")]).then(n.bind(n, 531519));
+            let { default: e } = await Promise.all([n.e("454048"), n.e("689913"), n.e("136724")]).then(
+                n.bind(n, 531519),
+            );
             return (t) => (0, i.jsx)(e, { ...t });
         },
         { modalKey: c.r, onCloseRequest: u.FXj },

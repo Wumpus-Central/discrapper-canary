@@ -1,58 +1,57 @@
-"use strict";
-n.d(t, { d: () => A });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(53466),
-    o = n(717421),
-    d = n(834730),
-    c = n(465794),
-    u = n(202541),
-    _ = n(650583),
-    E = n(402986);
-function A(e) {
+e.d(i, { d: () => m });
+var s = e(477900),
+    n = e(582128),
+    a = e(503698),
+    o = e.n(a),
+    r = e(53466),
+    l = e(717421),
+    d = e(834730),
+    c = e(465794),
+    p = e(202541),
+    u = e(650583),
+    h = e(402986);
+function m(t) {
     let {
-            showUpsell: t,
-            text: n,
+            showUpsell: i,
+            text: e,
             textVariant: a,
-            button: A,
-            buttonAnalyticsObject: h,
-            className: I,
-            onSubscribeModalClose: f,
-            position: p = "floating",
-            useUpdatedStyling: T = !1,
-            leadingAction: m,
-        } = e,
-        [g, S] = r.useState(t);
-    t && !g && S(!0);
-    let N = (0, o.z)({
-        transform: t ? "translateY(0%)" : "translateY(120%)",
-        opacity: +!!t,
+            button: m,
+            buttonAnalyticsObject: b,
+            className: x,
+            onSubscribeModalClose: v,
+            position: y = "floating",
+            useUpdatedStyling: f = !1,
+            leadingAction: g,
+        } = t,
+        [k, j] = n.useState(i);
+    i && !k && j(!0);
+    let w = (0, l.z)({
+        transform: i ? "translateY(0%)" : "translateY(120%)",
+        opacity: +!!i,
         config: { tension: 120, friction: 14 },
         onRest: () => {
-            t || S(!1);
+            i || j(!1);
         },
     });
-    return (0, i.jsxs)(l.animated.div, {
-        style: { ...N, visibility: g ? "visible" : "hidden" },
-        onKeyDown: (e) => {
-            (e.key === _.dh.ENTER || e.key === _.dh.SPACE) && e.stopPropagation();
+    return (0, s.jsxs)(r.animated.div, {
+        style: { ...w, visibility: k ? "visible" : "hidden" },
+        onKeyDown: (t) => {
+            (t.key === u.dh.ENTER || t.key === u.dh.SPACE) && t.stopPropagation();
         },
-        className: s()(E.Zj, T && E.ww, { [E.tO]: "floating" === p, [E.Kx]: "inline" === p }, I),
+        className: o()(h.Zj, f && h.ww, { [h.tO]: "floating" === y, [h.Kx]: "inline" === y }, x),
         children: [
-            (0, i.jsx)(d.E, { variant: a ?? "text-sm/medium", color: "text-strong", className: E.tD, children: n }),
-            null != m && (0, i.jsx)("div", { className: E.Zv, children: m }),
-            "string" == typeof A
-                ? (0, i.jsx)(c.A, {
+            (0, s.jsx)(d.E, { variant: a ?? "text-sm/medium", color: "text-strong", className: h.tD, children: e }),
+            null != g && (0, s.jsx)("div", { className: h.Zv, children: g }),
+            "string" == typeof m
+                ? (0, s.jsx)(c.A, {
                       size: "sm",
-                      subscriptionTier: u.pe.TIER_2,
-                      buttonTextOverride: A,
-                      premiumModalAnalyticsLocation: h,
-                      tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: f,
+                      subscriptionTier: p.pe.TIER_2,
+                      buttonTextOverride: m,
+                      premiumModalAnalyticsLocation: b,
+                      tabIndex: i ? 0 : -1,
+                      onSubscribeModalClose: v,
                   })
-                : A,
+                : m,
         ],
     });
 }

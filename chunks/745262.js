@@ -1,6 +1,5 @@
-"use strict";
-function i() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    for (let e of t) if (null != e && e) return e;
+i.d(t, { G: () => n });
+function n() {
+    for (var r = arguments.length, t = Array(r), i = 0; i < r; i++) t[i] = arguments[i];
+    for (let r of t) if (null != r && r) return r;
 }
-n.d(t, { G: () => i });

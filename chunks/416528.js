@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(360729),
     I = n(51082),
     v = n(275731),
-    E = n(289552),
-    N = n(246356),
+    N = n(289552),
+    E = n(246356),
     b = n(977851),
     _ = n(204651),
     T = n(772475),
@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(485296),
     O = n(198052),
     P = n(546871),
-    w = n(195007),
-    M = n(806931),
+    M = n(195007),
+    w = n(806931),
     D = n(375708),
     U = n(662731),
     V = n(622073);
@@ -41,7 +41,7 @@ function k(e) {
             let e = Date.now();
             return s()(L.A.getSpeakers())
                 .map((e) => O.A.getParticipant(t, e))
-                .filter((e) => null != e && e.type === M.lp.USER && e.speaking && !(0, I.Ay)(e))
+                .filter((e) => null != e && e.type === w.lp.USER && e.speaking && !(0, I.Ay)(e))
                 .sortBy((t) => -L.A.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -107,7 +107,7 @@ function G(e) {
                         label: D.intl.string(D.t["ZrN+DT"]),
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("35454"), n.e("44605")]).then(
+                                let { default: e } = await Promise.all([n.e("635454"), n.e("244605")]).then(
                                     n.bind(n, 77580),
                                 );
                                 return (n) => (0, i.jsx)(e, { ...n, channelId: t.id });
@@ -119,14 +119,14 @@ function G(e) {
                 ),
             ),
         o &&
-            (z?.type === M.lp.STREAM
+            (z?.type === w.lp.STREAM
                 ? q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "stream-participants"))
-                : z?.type === M.lp.ACTIVITY &&
+                : z?.type === w.lp.ACTIVITY &&
                   null != s &&
                   q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "activity-participants"))),
         F && q.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
         q.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
-        z?.type === M.lp.STREAM &&
+        z?.type === w.lp.STREAM &&
             (q.push((0, i.jsx)(v.A, { className: V.x6, participant: z }, "warning")),
             q.push(
                 (0, i.jsx)(
@@ -135,7 +135,7 @@ function G(e) {
                     "live-indicator",
                 ),
             )),
-        z?.type === M.lp.USER && q.push((0, i.jsx)(E.A, { className: V.x6, userId: z.id }, "video-warning")),
+        z?.type === w.lp.USER && q.push((0, i.jsx)(N.A, { className: V.x6, userId: z.id }, "video-warning")),
         F &&
             q.push(
                 (0, i.jsx)(
@@ -143,7 +143,7 @@ function G(e) {
                     {
                         targetElementRef: L,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(N.A, { children: (0, i.jsx)(w.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(T.A, {

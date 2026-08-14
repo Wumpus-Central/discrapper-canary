@@ -1,4 +1,4 @@
-t.d(n, { A: () => S });
+t.d(n, { A: () => b });
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -15,37 +15,37 @@ var l = t(477900),
     E = t(813564),
     p = t(674168),
     g = t(987933),
-    x = t(333216),
-    f = t(173660),
-    I = t(293246),
+    f = t(484036),
+    x = t(173660),
+    I = t(626822),
     T = t(607567),
     v = t(246356),
     _ = t(204651),
     j = t(376086),
     N = t(375708);
-function S(e) {
-    let { channel: n, themeable: S, whichPopoutIsOpen: b, setWhichPopoutIsOpen: O, idle: y } = e,
+function b(e) {
+    let { channel: n, themeable: b, whichPopoutIsOpen: S, setWhichPopoutIsOpen: O, idle: y } = e,
         { parentAnalyticsLocation: R } = (0, u.Ay)(),
         {
             Component: M,
             play: L,
             events: { onMouseEnter: D, onMouseLeave: P },
         } = (0, r.E)(),
-        k = n.getGuildId(),
-        { mute: G, suppress: U } = (0, f.A)(n),
-        V = (0, s.bG)([I.Ay], () => I.Ay.isDeaf()),
-        B = G || U || V,
+        G = n.getGuildId(),
+        { mute: k, suppress: V } = (0, x.A)(n),
+        U = (0, s.bG)([I.Ay], () => I.Ay.isDeaf()),
+        B = k || V || U,
         H = (0, E.VE)({ isSoundboardButtonDisabled: B }),
         [w, Y] = (0, m.DP)(H),
         { analyticsLocations: K } = (0, u.Ay)(),
         { isHovered: F, setIsHovered: X, onMouseEnter: z, onMouseLeave: J } = (0, h.A)(200, 300);
     function W(e) {
-        null != k &&
+        null != G &&
             (0, c.L3)(e, async () => {
-                let { default: e } = await t.e("11562").then(t.bind(t, 666801));
+                let { default: e } = await t.e("811562").then(t.bind(t, 666801));
                 return (n) =>
                     (0, l.jsx)(e, {
-                        guildId: k,
+                        guildId: G,
                         sourceAnalyticsLocations: K,
                         ...n,
                         onInteraction: (0, A.s)("SoundboardContextMenu", R),
@@ -53,16 +53,16 @@ function S(e) {
             });
     }
     function q() {
-        L(), null != b && z(), O?.(j.P.SOUNDBOARD);
+        L(), null != S && z(), O?.(j.P.SOUNDBOARD);
     }
     function Q() {
-        (0, d.X)(R, d.O.SOUNDBOARD), b === j.P.SOUNDBOARD ? (O?.(void 0), J()) : q();
+        (0, d.X)(R, d.O.SOUNDBOARD), S === j.P.SOUNDBOARD ? (O?.(void 0), J()) : q();
     }
     let $ = i.useCallback(() => {
-            null == b && O?.(j.P.SOUNDBOARD);
-        }, [b, O]),
+            null == S && O?.(j.P.SOUNDBOARD);
+        }, [S, O]),
         Z = i.useRef(null),
-        ee = i.useMemo(() => (F && (b === j.P.SOUNDBOARD || null == b)) || b === j.P.SOUNDBOARD, [F, b]),
+        ee = i.useMemo(() => (F && (S === j.P.SOUNDBOARD || null == S)) || S === j.P.SOUNDBOARD, [F, S]),
         { enabled: en } = (0, C.H)("SoundboardButton"),
         { usersInChannel: et } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
@@ -70,11 +70,11 @@ function S(e) {
         [el, ei] = i.useState(!1);
     return (
         i.useEffect(() => {
-            let e = et >= 2 && !B && null == b;
+            let e = et >= 2 && !B && null == S;
             if (y || !e) return void ei(!1);
             let n = setTimeout(() => ei(!0), 300);
             return () => clearTimeout(n);
-        }, [y, B, et, b]),
+        }, [y, B, et, S]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(o.Y, {
@@ -97,8 +97,8 @@ function S(e) {
                                       onMouseEnter: z,
                                       onMouseLeave: J,
                                       onMouseDown: $,
-                                      children: (0, l.jsx)(x.A, {
-                                          guildId: k,
+                                      children: (0, l.jsx)(f.A, {
+                                          guildId: G,
                                           channel: n,
                                           onClose: t,
                                           gridNotice:
@@ -113,12 +113,12 @@ function S(e) {
                         (0, l.jsx)(_.l, {
                             ref: Z,
                             isTrayButton: !0,
-                            themeable: S,
-                            label: G
+                            themeable: b,
+                            label: k
                                 ? N.intl.string(N.t["Ox4/zU"])
-                                : U
+                                : V
                                   ? N.intl.string(N.t["+YBKYI"])
-                                  : V
+                                  : U
                                     ? N.intl.string(N.t.X1lQli)
                                     : N.intl.string(N.t["6EJvHt"]),
                             iconComponent: M,
@@ -129,10 +129,10 @@ function S(e) {
                                 D(), "focus" !== e.type && z();
                             },
                             onMouseLeave: () => {
-                                null == b && (J(), P());
+                                null == S && (J(), P());
                             },
-                            isActive: F || b === j.P.SOUNDBOARD,
-                            color: F || b === j.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: F || S === j.P.SOUNDBOARD,
+                            color: F || S === j.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
                 en &&

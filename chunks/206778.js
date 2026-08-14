@@ -666,8 +666,8 @@ let eU = i.memo(function (e) {
                                               e,
                                               async () => {
                                                   let { default: e } = await Promise.all([
-                                                      t.e("4524"),
-                                                      t.e("32660"),
+                                                      t.e("404524"),
+                                                      t.e("332660"),
                                                   ]).then(t.bind(t, 772063));
                                                   return (l) => (0, n.jsx)(e, { ...l, guild: g, user: x });
                                               },
@@ -862,7 +862,7 @@ function e5(e) {
         },
     });
 }
-function e8(e) {
+function e4(e) {
     var l;
     let { guildId: t, currentTab: s, onTabSelect: r } = e,
         [a, c] = i.useState(0),
@@ -945,7 +945,7 @@ function e8(e) {
         })
     );
 }
-var e4 = t(754744),
+var e8 = t(754744),
     e6 = t(138298);
 function e2(e) {
     let { guildId: l } = e,
@@ -962,7 +962,7 @@ function e2(e) {
               children: (0, n.jsx)("div", {
                   className: e0.__invalid_sidebarContainer,
                   style: { width: ed.da6 },
-                  children: (0, n.jsx)(e4.default, {
+                  children: (0, n.jsx)(e8.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -1041,7 +1041,7 @@ function lu(e) {
             children: [
                 (0, n.jsx)(b.A.Icon, { icon: c.n, "aria-hidden": !0 }),
                 (0, n.jsx)(b.A.Title, { children: a }),
-                i && (0, n.jsx)(e8, { guildId: l.id, currentTab: t, onTabSelect: s }),
+                i && (0, n.jsx)(e4, { guildId: l.id, currentTab: t, onTabSelect: s }),
             ],
         })
     );

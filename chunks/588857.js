@@ -180,9 +180,12 @@ function ex(e, t) {
         (0, F.YX)(em.uss.GO_LIVE, { type: F.Z5.GO_LIVE, value: F.IP.SETTINGS_OPENED, userId: e.user.id }),
             i.stopPropagation(),
             (0, l.L3)(i, async () => {
-                let { default: i } = await Promise.all([n.e("89673"), n.e("45996"), n.e("58315"), n.e("61361")]).then(
-                    n.bind(n, 663912),
-                );
+                let { default: i } = await Promise.all([
+                    n.e("189673"),
+                    n.e("245996"),
+                    n.e("58315"),
+                    n.e("761361"),
+                ]).then(n.bind(n, 663912));
                 return (n) => (0, r.jsx)(i, { ...n, stream: e.stream, exitFullscreen: () => {}, appContext: t });
             });
     };
@@ -1124,8 +1127,8 @@ var e0 = n(417098),
     e2 = n(734066),
     e5 = n(200542),
     e3 = n(351906),
-    e4 = n(377802),
-    e6 = n(348858),
+    e6 = n(377802),
+    e4 = n(348858),
     e8 = n(523875),
     e9 = n(416696),
     e7 = n(621956),
@@ -1392,7 +1395,7 @@ function tK(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e6.I)(a ? "undeafen" : "deafen"),
+        } = (0, e4.I)(a ? "undeafen" : "deafen"),
         m = l ? tn.T : o;
     function g() {
         (0, tc.A)(l, em.JJy.OVERLAY),
@@ -1612,7 +1615,7 @@ function t$(e) {
         null != a &&
             ((0, F.YX)(em.uss.QUICK_ACTIONS, { type: F.Z5.SOUNDBOARD, value: F.IP.SETTINGS_OPENED }),
             (0, l.L3)(e, async () => {
-                let { default: e } = await n.e("11562").then(n.bind(n, 666801));
+                let { default: e } = await n.e("811562").then(n.bind(n, 666801));
                 return (t) => (0, r.jsx)(e, { sourceAnalyticsLocations: m, guildId: a, ...t });
             }));
     }
@@ -1698,7 +1701,7 @@ function t0(e) {
     let {
             Component: h,
             events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, e4.O)(),
+        } = (0, e6.O)(),
         p = tW(n),
         f = (0, tP.qZ)(),
         x = s ? h : ti._;
@@ -1857,14 +1860,14 @@ function t3(e) {
         })
     );
 }
-var t4 = n(145973);
-let t6 = c.memo(function () {
+var t6 = n(145973);
+let t4 = c.memo(function () {
     let e = (0, y.bG)([e3.A], () => e3.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
     return e && t
         ? (0, r.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t4.$X,
+              className: t6.$X,
               children: [
                   (0, r.jsx)(E.E, {
                       tag: "span",
@@ -1873,7 +1876,7 @@ let t6 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
-                      className: t4.lI,
+                      className: t6.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1890,14 +1893,14 @@ function t8(e) {
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
-        className: m()({ [t4.KE]: !0, [t4.xt]: t }),
+        className: m()({ [t6.KE]: !0, [t6.xt]: t }),
         children: [
-            (0, r.jsx)(t6, {}),
+            (0, r.jsx)(t4, {}),
             (0, r.jsxs)("div", {
-                className: t4.Pm,
+                className: t6.Pm,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: t4.qi,
+                        className: t6.qi,
                         children: [
                             (0, r.jsx)(tq, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tK, { voiceChannel: l, locked: t }),
@@ -1905,7 +1908,7 @@ function t8(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: t4.qi,
+                        className: t6.qi,
                         children: [
                             (0, r.jsx)(tJ, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(t$, { voiceChannel: l, locked: t }),
@@ -1913,12 +1916,12 @@ function t8(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: m()(t4.qi, a && t4.SV),
+                        className: m()(t6.qi, a && t6.SV),
                         children: (0, r.jsx)(t0, { voiceChannel: l, locked: t }),
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t4.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t6.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -2527,12 +2530,12 @@ let n$ = c.memo(function (e) {
                         if (t.isMultiUserDM())
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("26132"),
-                                    n.e("46652"),
-                                    n.e("38730"),
-                                    n.e("81609"),
-                                    n.e("53416"),
-                                    n.e("77927"),
+                                    n.e("926132"),
+                                    n.e("146652"),
+                                    n.e("238730"),
+                                    n.e("581609"),
+                                    n.e("153416"),
+                                    n.e("777927"),
                                 ]).then(n.bind(n, 320442));
                                 return (n) =>
                                     (0, r.jsx)(e, { ...n, channel: t, selected: !1, widgetType: em.uss.TEXT_CHAT_V3 });
@@ -2540,35 +2543,35 @@ let n$ = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("97422"),
-                                    n.e("97705"),
-                                    n.e("26132"),
-                                    n.e("46652"),
-                                    n.e("93190"),
-                                    n.e("8757"),
-                                    n.e("38730"),
-                                    n.e("85968"),
-                                    n.e("89673"),
-                                    n.e("29787"),
-                                    n.e("82073"),
-                                    n.e("97558"),
-                                    n.e("91994"),
-                                    n.e("76665"),
-                                    n.e("76273"),
-                                    n.e("45996"),
-                                    n.e("792"),
-                                    n.e("92822"),
-                                    n.e("23427"),
-                                    n.e("29422"),
-                                    n.e("9291"),
-                                    n.e("7059"),
-                                    n.e("72883"),
-                                    n.e("81609"),
-                                    n.e("98199"),
-                                    n.e("64464"),
-                                    n.e("96443"),
-                                    n.e("23490"),
-                                    n.e("95049"),
+                                    n.e("158696"),
+                                    n.e("397705"),
+                                    n.e("926132"),
+                                    n.e("146652"),
+                                    n.e("893190"),
+                                    n.e("708757"),
+                                    n.e("585968"),
+                                    n.e("189673"),
+                                    n.e("238730"),
+                                    n.e("229787"),
+                                    n.e("882073"),
+                                    n.e("797558"),
+                                    n.e("691994"),
+                                    n.e("576665"),
+                                    n.e("776273"),
+                                    n.e("245996"),
+                                    n.e("700792"),
+                                    n.e("592822"),
+                                    n.e("823427"),
+                                    n.e("529422"),
+                                    n.e("172883"),
+                                    n.e("309291"),
+                                    n.e("307059"),
+                                    n.e("581609"),
+                                    n.e("298199"),
+                                    n.e("864464"),
+                                    n.e("296443"),
+                                    n.e("123490"),
+                                    n.e("895049"),
                                 ]).then(n.bind(n, 92016));
                                 return (n) =>
                                     (0, r.jsx)(e, {
@@ -2582,12 +2585,12 @@ let n$ = c.memo(function (e) {
                         if (t.isModeratorReportChannel())
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("26132"),
-                                    n.e("46652"),
-                                    n.e("38730"),
-                                    n.e("43266"),
-                                    n.e("81609"),
-                                    n.e("56985"),
+                                    n.e("926132"),
+                                    n.e("146652"),
+                                    n.e("238730"),
+                                    n.e("343266"),
+                                    n.e("581609"),
+                                    n.e("256985"),
                                 ]).then(n.bind(n, 95616));
                                 return (n) => (0, r.jsx)(e, { ...n, channel: t, widgetType: em.uss.TEXT_CHAT_V3 });
                             });
@@ -2595,18 +2598,18 @@ let n$ = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("147"),
-                                    n.e("26132"),
-                                    n.e("46652"),
-                                    n.e("38730"),
-                                    n.e("43266"),
-                                    n.e("9004"),
-                                    n.e("44058"),
-                                    n.e("81609"),
-                                    n.e("94138"),
-                                    n.e("58262"),
-                                    n.e("18663"),
-                                    n.e("21905"),
+                                    n.e("253424"),
+                                    n.e("926132"),
+                                    n.e("146652"),
+                                    n.e("238730"),
+                                    n.e("343266"),
+                                    n.e("309004"),
+                                    n.e("544058"),
+                                    n.e("581609"),
+                                    n.e("694138"),
+                                    n.e("958262"),
+                                    n.e("318663"),
+                                    n.e("221905"),
                                 ]).then(n.bind(n, 769192));
                                 return (n) =>
                                     (0, r.jsx)(e, { ...n, channel: t, guild: i, widgetType: em.uss.TEXT_CHAT_V3 });
@@ -2616,17 +2619,17 @@ let n$ = c.memo(function (e) {
                         null != i &&
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("26132"),
-                                    n.e("46652"),
-                                    n.e("93190"),
-                                    n.e("38730"),
-                                    n.e("43266"),
-                                    n.e("9004"),
-                                    n.e("44058"),
-                                    n.e("91377"),
-                                    n.e("81609"),
-                                    n.e("56372"),
-                                    n.e("54036"),
+                                    n.e("926132"),
+                                    n.e("146652"),
+                                    n.e("893190"),
+                                    n.e("238730"),
+                                    n.e("343266"),
+                                    n.e("309004"),
+                                    n.e("544058"),
+                                    n.e("591377"),
+                                    n.e("581609"),
+                                    n.e("256372"),
+                                    n.e("354036"),
                                 ]).then(n.bind(n, 813407));
                                 return (n) =>
                                     (0, r.jsx)(e, { ...n, channel: t, guild: i, widgetType: em.uss.TEXT_CHAT_V3 });
@@ -2681,8 +2684,8 @@ var n0 = n(148494),
     n2 = n(355622),
     n5 = n(232835),
     n3 = n(576705),
-    n4 = n(625494),
-    n6 = n(973196),
+    n6 = n(625494),
+    n4 = n(973196),
     n8 = n(905816);
 function n9(e) {
     let t,
@@ -2704,7 +2707,7 @@ function n9(e) {
                 })(d, tG.A),
             [d],
         ),
-        m = (0, n6.A)();
+        m = (0, n4.A)();
     return ((t = d?.id ?? null),
     (n = c.useRef(new Set())),
     (i = (0, y.bG)([n5.A], () => (null != t ? n5.A.getMessages(t) : null), [t])),
@@ -2717,7 +2720,7 @@ function n9(e) {
     c.useEffect(() => {
         if (null == o || m) return;
         let e = u.requestAnimationFrame(() => {
-            n4._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n6._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => u.cancelAnimationFrame(e);
     }, [o, u, m]),
@@ -2881,21 +2884,21 @@ let io = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("97705"),
-                                n.e("26132"),
-                                n.e("46652"),
-                                n.e("93190"),
-                                n.e("8757"),
-                                n.e("85968"),
-                                n.e("89673"),
-                                n.e("82073"),
-                                n.e("97558"),
-                                n.e("91994"),
-                                n.e("49145"),
-                                n.e("70314"),
-                                n.e("4524"),
-                                n.e("54148"),
-                                n.e("58980"),
+                                n.e("397705"),
+                                n.e("926132"),
+                                n.e("146652"),
+                                n.e("893190"),
+                                n.e("708757"),
+                                n.e("585968"),
+                                n.e("189673"),
+                                n.e("882073"),
+                                n.e("797558"),
+                                n.e("691994"),
+                                n.e("449145"),
+                                n.e("470314"),
+                                n.e("404524"),
+                                n.e("654148"),
+                                n.e("658980"),
                             ]).then(n.bind(n, 535503));
                             return (n) =>
                                 (0, r.jsx)(e, {
@@ -3166,10 +3169,10 @@ let ib = c.memo(function (e) {
                                 (0, e_.cv)(e) &&
                                     (0, l.L3)(t, async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("792"),
-                                            n.e("92822"),
-                                            n.e("55630"),
-                                            n.e("78238"),
+                                            n.e("700792"),
+                                            n.e("592822"),
+                                            n.e("955630"),
+                                            n.e("478238"),
                                         ]).then(n.bind(n, 662554));
                                         return (n) => (0, r.jsx)(t, { ...n, widget: e });
                                     });
@@ -3204,7 +3207,7 @@ let ib = c.memo(function (e) {
                         (0, r.jsx)(ig.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
-                                    let { default: e } = await n.e("34901").then(n.bind(n, 51444));
+                                    let { default: e } = await n.e("234901").then(n.bind(n, 51444));
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             },
@@ -3225,7 +3228,7 @@ let ib = c.memo(function (e) {
                         (0, r.jsx)(ig.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
-                                    let { default: e } = await n.e("49170").then(n.bind(n, 508457));
+                                    let { default: e } = await n.e("249170").then(n.bind(n, 508457));
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             },
@@ -3284,9 +3287,10 @@ let ib = c.memo(function (e) {
                                   onClick: (t) => {
                                       (0, e_.dO)(e) &&
                                           (0, l.L3)(t, async () => {
-                                              let { default: t } = await Promise.all([n.e("55630"), n.e("21289")]).then(
-                                                  n.bind(n, 543824),
-                                              );
+                                              let { default: t } = await Promise.all([
+                                                  n.e("955630"),
+                                                  n.e("421289"),
+                                              ]).then(n.bind(n, 543824));
                                               return (n) => (0, r.jsx)(t, { ...n, widget: e });
                                           });
                                   },
@@ -3316,7 +3320,7 @@ let ib = c.memo(function (e) {
                         (0, r.jsx)(ig.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
-                                    let { default: e } = await n.e("51607").then(n.bind(n, 98109));
+                                    let { default: e } = await n.e("751607").then(n.bind(n, 98109));
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             },

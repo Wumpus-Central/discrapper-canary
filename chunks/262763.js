@@ -27,8 +27,8 @@ let T = {
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
             bypassBlockedWarningModal: C,
-            bypassGuildIdCheck: O = !1,
-            transitionExtras: R,
+            bypassGuildIdCheck: R = !1,
+            transitionExtras: O,
         } = e;
         t.isThread() &&
             (await u.A.unarchiveThreadIfNecessary(t.id),
@@ -42,7 +42,7 @@ let T = {
             ? !N && !g && (0, I.H)(t)
                 ? new Promise((e) => {
                       (0, r.openModalLazy)(async () => {
-                          let { default: r } = await n.e("12963").then(n.bind(n, 24814));
+                          let { default: r } = await n.e("412963").then(n.bind(n, 24814));
                           return (n) =>
                               (0, i.jsx)(r, {
                                   channel: t,
@@ -71,23 +71,26 @@ let T = {
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
                           (0, l.pX)(f.BVt.CHANNEL(i, e.id), n);
-                      })(t, O, R),
+                      })(t, R, O),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(
                       async () => {
                           let { default: r } = await Promise.all([
-                              n.e("14131"),
-                              n.e("94149"),
-                              n.e("82770"),
+                              n.e("786798"),
+                              n.e("580930"),
+                              n.e("594149"),
+                              n.e("282770"),
                               n.e("96587"),
-                              n.e("81647"),
+                              n.e("454048"),
+                              n.e("481647"),
+                              n.e("418943"),
                               n.e("24922"),
-                              n.e("42234"),
-                              n.e("65617"),
-                              n.e("20577"),
-                              n.e("83792"),
-                              n.e("10117"),
+                              n.e("565617"),
+                              n.e("342234"),
+                              n.e("420577"),
+                              n.e("383792"),
+                              n.e("910117"),
                           ]).then(n.bind(n, 525828));
                           return (n) => {
                               let { onClose: a, transitionState: s } = n;

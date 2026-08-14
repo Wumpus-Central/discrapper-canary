@@ -35,7 +35,7 @@ function C(e) {
                 null != I &&
                     (async () => {
                         let [{ default: i }, s] = await Promise.all([
-                            n.e("96382").then(n.t.bind(n, 883885, 23)),
+                            n.e("996382").then(n.t.bind(n, 883885, 23)),
                             (0, a.M)(t) ? I.dark() : I.light(),
                         ]);
                         l ||

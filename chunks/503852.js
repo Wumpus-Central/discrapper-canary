@@ -4,7 +4,7 @@ var s,
     r = a(174459),
     l = a(652215),
     n =
-        88245 != a.j
+        588245 != a.j
             ? (((s = {}).DETAIL = "Boost Perk Shop Details"), (s.DEACTIVATE = "Boost Perk Shop Disable"), s)
             : null;
 function o(t, e, a) {

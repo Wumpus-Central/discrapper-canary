@@ -34,8 +34,8 @@ var i = n(477900),
     S = n(297264),
     N = n(885574),
     C = n(933832),
-    O = n(708988),
-    R = n(228366),
+    R = n(708988),
+    O = n(228366),
     L = n(830215),
     y = n(803306),
     D = n(736653),
@@ -58,8 +58,8 @@ var i = n(477900),
     K = n(889227),
     $ = n(280450),
     z = n(30370),
-    q = n(287809),
-    Z = n(486020),
+    Z = n(287809),
+    q = n(486020),
     X = n(488926),
     Q = n(998218),
     J = n(123677),
@@ -181,8 +181,8 @@ var eg = n(214947),
     eS = n(845798),
     eN = n(687966),
     eC = n(625903),
-    eO = n(975571),
-    eR = n(504138);
+    eR = n(975571),
+    eO = n(504138);
 function eL(e) {
     let t,
         { application: n, accountScopes: r } = e,
@@ -192,9 +192,9 @@ function eL(e) {
         ? ((t = s
               ? en.intl.format(en.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: eg.$,
@@ -210,9 +210,9 @@ function eL(e) {
           ((t = s
               ? en.intl.format(en.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: eg.$,
@@ -226,9 +226,9 @@ function eL(e) {
     0 === a.length)
         ? null
         : (0, i.jsxs)("div", {
-              className: eR.b9,
+              className: eO.b9,
               children: [
-                  null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eR.a9, children: t }) : null,
+                  null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eO.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
                       return (0, i.jsx)(ey, { icon: n, text: r }, t);
@@ -239,10 +239,10 @@ function eL(e) {
 function ey(e) {
     let { icon: t, text: n } = e;
     return (0, i.jsxs)("div", {
-        className: eR.f_,
+        className: eO.f_,
         children: [
-            (0, i.jsx)(t, { className: eR.u7, color: "currentColor" }),
-            (0, i.jsx)(g.E, { variant: "text-md/normal", className: eR.u0, children: n }),
+            (0, i.jsx)(t, { className: eO.u7, color: "currentColor" }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", className: eO.u0, children: n }),
         ],
     });
 }
@@ -427,11 +427,11 @@ var eH = n(665260),
     eK = n(566615),
     e$ = n(778712),
     ez = n(212451);
-function eq(e) {
+function eZ(e) {
     let { user: t, application: n, bot: a, accountScopes: s, showLogout: l, location: o, scopes: d } = e,
         c = (0, eK.i)(),
-        u = Z.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
-        _ = Z.Ay.getUserAvatarURL(t),
+        u = q.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
+        _ = q.Ay.getUserAvatarURL(t),
         E = r.useMemo(
             () =>
                 d.some((e) => (0, es.RM)(e))
@@ -537,7 +537,7 @@ function eq(e) {
         ],
     });
 }
-var eZ = n(321987),
+var eq = n(321987),
     eX = n(595244);
 function eQ(e) {
     let { selectedGuildId: t, selectedChannelId: n, onChannelChange: a, error: s } = e,
@@ -580,13 +580,251 @@ var eJ = n(613057),
 let e1 = (0, F.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("47292"),
-            n.e("97270"),
-            n.e("71133"),
-            n.e("78050"),
-            n.e("80262"),
-            n.e("56385"),
-            n.e("91220"),
+            n.e("547292"),
+            n.e("239816"),
+            n.e("98818"),
+            n.e("794246"),
+            n.e("365110"),
+            n.e("130706"),
+            n.e("421223"),
+            n.e("190914"),
+            n.e("597569"),
+            n.e("387419"),
+            n.e("701348"),
+            n.e("478909"),
+            n.e("44153"),
+            n.e("395914"),
+            n.e("72032"),
+            n.e("225091"),
+            n.e("986760"),
+            n.e("68454"),
+            n.e("79998"),
+            n.e("290093"),
+            n.e("909403"),
+            n.e("259135"),
+            n.e("294128"),
+            n.e("517223"),
+            n.e("305689"),
+            n.e("195553"),
+            n.e("708397"),
+            n.e("712975"),
+            n.e("167672"),
+            n.e("33444"),
+            n.e("771612"),
+            n.e("114508"),
+            n.e("361361"),
+            n.e("263177"),
+            n.e("292428"),
+            n.e("67482"),
+            n.e("578648"),
+            n.e("135085"),
+            n.e("800961"),
+            n.e("757638"),
+            n.e("821581"),
+            n.e("168752"),
+            n.e("984137"),
+            n.e("352403"),
+            n.e("918448"),
+            n.e("869729"),
+            n.e("433757"),
+            n.e("909852"),
+            n.e("246697"),
+            n.e("78477"),
+            n.e("933439"),
+            n.e("508484"),
+            n.e("284169"),
+            n.e("867477"),
+            n.e("748968"),
+            n.e("243767"),
+            n.e("663369"),
+            n.e("205528"),
+            n.e("4820"),
+            n.e("599467"),
+            n.e("580930"),
+            n.e("661238"),
+            n.e("304670"),
+            n.e("912249"),
+            n.e("207117"),
+            n.e("559804"),
+            n.e("811245"),
+            n.e("841272"),
+            n.e("373243"),
+            n.e("325933"),
+            n.e("576921"),
+            n.e("130826"),
+            n.e("380906"),
+            n.e("200283"),
+            n.e("727486"),
+            n.e("200010"),
+            n.e("503143"),
+            n.e("102523"),
+            n.e("930192"),
+            n.e("522128"),
+            n.e("502199"),
+            n.e("693020"),
+            n.e("758186"),
+            n.e("79863"),
+            n.e("988744"),
+            n.e("46259"),
+            n.e("609023"),
+            n.e("982034"),
+            n.e("476984"),
+            n.e("451566"),
+            n.e("574965"),
+            n.e("300450"),
+            n.e("161756"),
+            n.e("864031"),
+            n.e("495522"),
+            n.e("512157"),
+            n.e("472866"),
+            n.e("799453"),
+            n.e("886148"),
+            n.e("182277"),
+            n.e("267232"),
+            n.e("424199"),
+            n.e("342551"),
+            n.e("964367"),
+            n.e("819273"),
+            n.e("645499"),
+            n.e("454048"),
+            n.e("397270"),
+            n.e("188941"),
+            n.e("599666"),
+            n.e("300699"),
+            n.e("349619"),
+            n.e("543039"),
+            n.e("253729"),
+            n.e("161379"),
+            n.e("264236"),
+            n.e("740428"),
+            n.e("234236"),
+            n.e("398125"),
+            n.e("221825"),
+            n.e("721690"),
+            n.e("593600"),
+            n.e("276640"),
+            n.e("418401"),
+            n.e("28154"),
+            n.e("948804"),
+            n.e("431011"),
+            n.e("295366"),
+            n.e("844695"),
+            n.e("155314"),
+            n.e("988077"),
+            n.e("482815"),
+            n.e("170653"),
+            n.e("832817"),
+            n.e("338835"),
+            n.e("50015"),
+            n.e("60898"),
+            n.e("611523"),
+            n.e("901555"),
+            n.e("558724"),
+            n.e("829177"),
+            n.e("199999"),
+            n.e("232551"),
+            n.e("631644"),
+            n.e("904723"),
+            n.e("936320"),
+            n.e("466322"),
+            n.e("190889"),
+            n.e("27773"),
+            n.e("313681"),
+            n.e("418943"),
+            n.e("784103"),
+            n.e("958428"),
+            n.e("317225"),
+            n.e("444376"),
+            n.e("430920"),
+            n.e("809915"),
+            n.e("53374"),
+            n.e("710638"),
+            n.e("235344"),
+            n.e("781300"),
+            n.e("631825"),
+            n.e("770697"),
+            n.e("696443"),
+            n.e("318546"),
+            n.e("620320"),
+            n.e("916209"),
+            n.e("123216"),
+            n.e("799657"),
+            n.e("252574"),
+            n.e("183776"),
+            n.e("747017"),
+            n.e("831145"),
+            n.e("894747"),
+            n.e("146248"),
+            n.e("790244"),
+            n.e("126780"),
+            n.e("847555"),
+            n.e("417286"),
+            n.e("499941"),
+            n.e("761935"),
+            n.e("592731"),
+            n.e("858821"),
+            n.e("346102"),
+            n.e("34472"),
+            n.e("511527"),
+            n.e("515168"),
+            n.e("147786"),
+            n.e("763070"),
+            n.e("564615"),
+            n.e("193158"),
+            n.e("955184"),
+            n.e("502018"),
+            n.e("757598"),
+            n.e("787079"),
+            n.e("601469"),
+            n.e("61129"),
+            n.e("115754"),
+            n.e("314805"),
+            n.e("851130"),
+            n.e("173547"),
+            n.e("621624"),
+            n.e("599141"),
+            n.e("499593"),
+            n.e("962075"),
+            n.e("560658"),
+            n.e("809964"),
+            n.e("434691"),
+            n.e("225990"),
+            n.e("539620"),
+            n.e("636126"),
+            n.e("133902"),
+            n.e("562168"),
+            n.e("463095"),
+            n.e("831219"),
+            n.e("437370"),
+            n.e("222380"),
+            n.e("632744"),
+            n.e("290191"),
+            n.e("165595"),
+            n.e("858514"),
+            n.e("344265"),
+            n.e("588940"),
+            n.e("371133"),
+            n.e("776750"),
+            n.e("784041"),
+            n.e("428296"),
+            n.e("869546"),
+            n.e("455924"),
+            n.e("88160"),
+            n.e("59413"),
+            n.e("917512"),
+            n.e("87306"),
+            n.e("219795"),
+            n.e("444795"),
+            n.e("637721"),
+            n.e("110004"),
+            n.e("123353"),
+            n.e("836545"),
+            n.e("231578"),
+            n.e("177104"),
+            n.e("678050"),
+            n.e("780262"),
+            n.e("556385"),
+            n.e("291220"),
             n.e("58405"),
         ]).then(n.bind(n, 991054)),
     webpackId: 991054,
@@ -674,10 +912,10 @@ function e2() {
                               (0, i.jsx)(m.y, {}),
                           ],
                       })),
-            (0, i.jsx)(eZ.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: e0.ah, children: e }) })
+            (0, i.jsx)(eq.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: e0.ah, children: e }) })
         );
     }
-    return (0, i.jsx)(eZ.$, {
+    return (0, i.jsx)(eq.$, {
         removeChildWrapper: !0,
         children: (0, i.jsx)(e3, {
             transitionState: h.i.ENTERED,
@@ -719,7 +957,7 @@ function e3(e) {
                       ],
                   })
                 : null;
-    return (0, i.jsx)(eZ.f, {
+    return (0, i.jsx)(eq.f, {
         ...e,
         onClose: () => Promise.resolve(e.onClose?.()),
         size: E,
@@ -733,12 +971,12 @@ function e3(e) {
 function e4(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
-        l = (0, I.bG)([$.default, q.default], () => (null != $.default.getId() ? q.default.getCurrentUser() : null)),
+        l = (0, I.bG)([$.default, Z.default], () => (null != $.default.getId() ? Z.default.getCurrentUser() : null)),
         o = (0, D.Ay)(),
         d = v.A.get(n),
         c = null != d ? ((0, T.q)(o) ? d.icon.lightSVG : d.icon.darkSVG) : null,
-        u = null != s ? Z.Ay.getApplicationIconURL({ id: s.id, icon: s.icon }) : null,
-        _ = null != l ? Z.Ay.getUserAvatarURL(l) : null,
+        u = null != s ? q.Ay.getApplicationIconURL({ id: s.id, icon: s.icon }) : null,
+        _ = null != l ? q.Ay.getUserAvatarURL(l) : null,
         E = s?.name ?? "";
     return (
         r.useEffect(() => {
@@ -797,7 +1035,7 @@ function e4(e) {
         })
     );
 }
-function e6(e) {
+function e5(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -834,7 +1072,7 @@ function e6(e) {
         ],
     });
 }
-function e5() {
+function e6() {
     return (0, i.jsx)("div", { className: e0.g4, children: (0, i.jsx)(m.y, { className: e0.u1 }) });
 }
 function e7(e) {
@@ -862,7 +1100,7 @@ function e7(e) {
             showLogout: V = !1,
             isTrustedName: H = !1,
             isEmbeddedFlow: W = !1,
-            callback: Z,
+            callback: q,
             callbackWithoutPost: ee,
             onClose: eo,
             disclosures: ed,
@@ -880,7 +1118,7 @@ function e7(e) {
         [ep, em] = r.useState(null),
         [eg, eS] = r.useState(null),
         [eN, eC] = r.useState(!1),
-        [eO, eR] = r.useState(!1),
+        [eR, eO] = r.useState(!1),
         ey = eI?.guilds,
         [eD, ev] = r.useState(U ?? null),
         [eb, eM] = r.useState(x ?? null),
@@ -888,7 +1126,7 @@ function e7(e) {
         eG = (0, I.bG)([z.A], () => (null == e_ ? null : (z.A.getAccounts().find((e) => e.type === e_) ?? null)), [e_]),
         ex = null == e_ || null != eG,
         eF = r.useMemo(() => (eI?.user != null ? new K.A(eI.user) : null), [eI?.user]),
-        eV = (0, I.bG)([q.default], () => q.default.getCurrentUser()?.nsfwAllowed),
+        eV = (0, I.bG)([Z.default], () => Z.default.getCurrentUser()?.nsfwAllowed),
         eH = (0, G.A)(eI?.application ?? null),
         ej = r.useMemo(() => ey?.find((e) => e.id === eD), [ey, eD]),
         [eW, eY] = r.useState(null),
@@ -897,24 +1135,24 @@ function e7(e) {
     r.useEffect(() => {
         eK && P.Ay.fetchApplication(A).then((e) => ez(Y.Ay.createFromServer(e)));
     }, [A, eK]);
-    let eZ = r.useMemo(
+    let eq = r.useMemo(
             () => (null == eW ? null : e$?.integrationTypesConfig?.[eW]?.oauth2InstallParams),
             [e$?.integrationTypesConfig, eW],
         ),
         { requestedScopes: eJ, accountScopes: e2 } = r.useMemo(() => {
-            let e = eK ? eZ?.scopes : D,
+            let e = eK ? eq?.scopes : D,
                 t = (0, J.e)(e ?? []),
                 n = es.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
-        }, [eZ?.scopes, D, eK]),
-        e3 = r.useMemo(() => (eK ? E.iu(eZ?.permissions ?? 0) : M) ?? X.x3, [eZ?.permissions, M, eK]),
+        }, [eq?.scopes, D, eK]),
+        e3 = r.useMemo(() => (eK ? E.iu(eq?.permissions ?? 0) : M) ?? X.x3, [eq?.permissions, M, eK]),
         e7 = r.useRef(!1),
         [e8, e9] = r.useState(ed ?? []),
         [te, tt] = r.useState(null != ed && ed.length > 0);
     (0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
         null != e
-            ? R.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
+            ? O.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
             : (0, y.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
@@ -963,8 +1201,8 @@ function e7(e) {
                         guildId: eW === u.b.GUILD_INSTALL && null != eD ? eD : void 0,
                         channelId: eW === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e8)), null != Z))
-                        Z({ application: eI?.application, location: n.location, guild: ej, scopes: eJ, canceled: t }),
+                    if ((e && (await (0, w.Yx)(A, e8)), null != q))
+                        q({ application: eI?.application, location: n.location, guild: ej, scopes: eJ, canceled: t }),
                             eo?.();
                     else if (null != n.location) {
                         let e = Q.A.toURLSafe(n.location)?.pathname;
@@ -981,7 +1219,7 @@ function e7(e) {
                         eC(!1);
                 }
             },
-            [ee, Z, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, eD, eW, e_, eb, e8],
+            [ee, q, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, eD, eW, e_, eb, e8],
         ),
         tr = r.useRef(!1),
         ta = r.useCallback(async () => {
@@ -1079,7 +1317,7 @@ function e7(e) {
                     : ta();
         }, [te, ta, eJ, e3, eW, eI, eg]);
     let to = r.useCallback((e) => {
-            e && eR(!0);
+            e && eO(!0);
         }, []),
         td = (0, o.K)(to);
     if (eg instanceof Error)
@@ -1111,7 +1349,7 @@ function e7(e) {
         tI = !1;
     switch (ep) {
         case null:
-            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
+            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
         case "CONNECT_ACCOUNT":
             (t = (0, i.jsx)(e4, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
@@ -1120,7 +1358,7 @@ function e7(e) {
                 (tu = !0);
             break;
         case "SELECT_INSTALL_TYPE":
-            if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
+            if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             (t = (0, i.jsx)(e1, {
                 application: e$,
                 onSelect: function (e) {
@@ -1134,7 +1372,7 @@ function e7(e) {
             break;
         case "AUTHORIZE_SCOPES":
             if (null == eI || null == eF || null == eW)
-                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
+                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             let tf = null == eg || eg instanceof Error ? {} : eg,
                 tp = ey?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tT = eW === u.b.GUILD_INSTALL && eJ.includes(_.F.WEBHOOK_INCOMING),
@@ -1145,7 +1383,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e6, {
+                        (0, i.jsx)(e5, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,
@@ -1186,7 +1424,7 @@ function e7(e) {
                 (tu = !0);
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
-            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
+            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             (t = (0, i.jsx)(ek, {
                 application: eI.application,
                 permissions: e3,
@@ -1221,7 +1459,7 @@ function e7(e) {
         (tA &&
             null != eI &&
             null != eF &&
-            (c = (0, i.jsx)(eq, {
+            (c = (0, i.jsx)(eZ, {
                 user: eF,
                 application: eI.application,
                 bot: eI.bot,
@@ -1238,10 +1476,10 @@ function e7(e) {
             ),
             "SELECT_INSTALL_TYPE" !== ep))
     ) {
-        let e = "CONNECT_ACCOUNT" !== ep && !eO;
+        let e = "CONNECT_ACCOUNT" !== ep && !eR;
         tg.push(
             e
-                ? { disabled: !0, loading: eN, text: en.intl.string(en.t.N22i9F), icon: O.M }
+                ? { disabled: !0, loading: eN, text: en.intl.string(en.t.N22i9F), icon: R.M }
                 : {
                       onClick: null != a ? () => em(a) : () => ti(!0),
                       loading: eN,
@@ -1279,7 +1517,7 @@ function e8(e, t) {
             let t = a?.get("error_description") ?? a?.get("error") ?? en.intl.string(en.t.mqn873);
             return (
                 Array.isArray(t) && (t = t[0]),
-                (0, i.jsx)(eZ.f, { ...e, children: (0, i.jsx)(eX.gz, { message: t, onClose: e.onClose }) })
+                (0, i.jsx)(eq.f, { ...e, children: (0, i.jsx)(eX.gz, { message: t, onClose: e.onClose }) })
             );
         });
     } else window.open(t.location, "_blank")?.focus();

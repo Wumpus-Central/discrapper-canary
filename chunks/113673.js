@@ -3,7 +3,7 @@ n.r(t),
     n.d(t, {
         repairApplication: () => G,
         updateApplication: () => w,
-        playApplication: () => R,
+        playApplication: () => O,
         installApplication: () => U,
         performDefaultLibraryApplicationAction: () => x,
     });
@@ -19,7 +19,7 @@ var i = n(92077),
     _ = n(297264),
     E = n(192308),
     A = n(54827),
-    h = n(780907),
+    h = n(183208),
     I = n(587895),
     f = n(235986),
     p = n(465797),
@@ -38,7 +38,7 @@ class C extends a.PureComponent {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 { libraryApplication: i, analyticsParams: r } = e.props;
-            e.onClose(), R(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n });
+            e.onClose(), O(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n });
         };
     })();
     handleChooseDownload = () => {
@@ -171,11 +171,11 @@ class C extends a.PureComponent {
         });
     }
 }
-let O = o.Ay.connectStores([p.A, I.A], (e) => {
+let R = o.Ay.connectStores([p.A, I.A], (e) => {
     let { libraryApplication: t, branchId: n } = e;
     return { cloudSyncState: p.A.getState(t.id, n), application: I.A.getApplication(t.id) };
 })(C);
-async function R(e, t, n) {
+async function O(e, t, n) {
     let i = I.A.getApplication(e);
     if (null == i) return;
     let { cloudSync: a = !0, cloudSyncForceHash: s = null, analyticsParams: l } = n;
@@ -184,7 +184,7 @@ async function R(e, t, n) {
         try {
             await A.O(t.id, e, s);
         } catch (n) {
-            (0, E.openModal)((n) => (0, r.jsx)(O, { libraryApplication: t, analyticsParams: l, branchId: e, ...n }));
+            (0, E.openModal)((n) => (0, r.jsx)(R, { libraryApplication: t, analyticsParams: l, branchId: e, ...n }));
             return;
         }
     }
@@ -210,9 +210,13 @@ function P(e, t, a, s, l) {
         d = null != e.eulaId && !b.A.hasAcceptedEULA(e.eulaId);
     null == o || d
         ? (0, E.openModalLazy)(async () => {
-              let { default: i } = await Promise.all([n.e("10200"), n.e("52753"), n.e("90345")]).then(
-                  n.bind(n, 353904),
-              );
+              let { default: i } = await Promise.all([
+                  n.e("380906"),
+                  n.e("253729"),
+                  n.e("234236"),
+                  n.e("652753"),
+                  n.e("790345"),
+              ]).then(n.bind(n, 353904));
               return (n) => (0, r.jsx)(i, { ...n, applicationId: e.id, branchId: t, analyticsLocation: l });
           })
         : (0, i.oc)({
@@ -244,7 +248,7 @@ function x(e, t) {
         { analyticsParams: i } = t;
     switch (n) {
         case m.Hf6.PLAY:
-            return R(e.id, e, { analyticsParams: i });
+            return O(e.id, e, { analyticsParams: i });
         case m.Hf6.INSTALL:
             return U(e.id, e.branchId, i.source);
         case m.Hf6.UPDATE:

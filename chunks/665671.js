@@ -1,5 +1,5 @@
 n.d(t, { A: () => p });
-var a = n(627968),
+var a = n(477900),
     l = n(192308),
     s = n(691540),
     i = n(857250),
@@ -12,10 +12,10 @@ async function p() {
         let { ticket: e, challenge: t } = await d.startRegisterWebAuthnCredential();
         (0, l.openModalLazy)(async () => {
             let { RegisterWebAuthnCredentialModal: l } = await Promise.all([
-                n.e("69734"),
+                n.e("989230"),
                 n.e("82721"),
-                n.e("4736"),
-                n.e("40114"),
+                n.e("104736"),
+                n.e("840114"),
             ]).then(n.bind(n, 328009));
             return (n) => (0, a.jsx)(l, { ...n, ticket: e, challenge: t });
         });

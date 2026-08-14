@@ -1,0 +1,54 @@
+.verificationRoleCard__866a0 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-24)
+}
+
+.verificationRoleHeader__866a0 {
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.verificationRoleContent__866a0,
+.verificationRoleHeader__866a0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.verificationRoleContent__866a0 {
+    gap: var(--space-16)
+}
+
+.verificationRoleTitleRow__866a0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.verificationRoleDivider__866a0 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 0 var(--space-16)
+}
+
+.verificationRoleDetails__866a0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-12) var(--space-16)
+}
+
+.verificationRoleAssigned__866a0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.verificationRoleStats__866a0 {
+    flex-shrink: 0
+}

@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(477900);
-n(582128);
-var r = n(661531),
-    a = n(812993),
-    s = n(375708);
-function l(e) {
-    let { className: t, color: n = r.A.unsafe_rawColors.BRAND_500.css, ...l } = e;
-    return (0, i.jsx)(a.Lp, { ...l, text: s.intl.string(s.t.oW0eUd), color: n, className: t });
+r.d(t, { A: () => n });
+var a = r(477900);
+r(582128);
+var c = r(661531),
+    e = r(812993),
+    i = r(375708);
+function n(s) {
+    let { className: t, color: r = c.A.unsafe_rawColors.BRAND_500.css, ...n } = s;
+    return (0, a.jsx)(e.Lp, { ...n, text: i.intl.string(i.t.oW0eUd), color: r, className: t });
 }

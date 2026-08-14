@@ -1,142 +1,141 @@
-"use strict";
-n.d(t, { A: () => p });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(933832),
-    l = n(789645),
-    o = n(834730),
-    d = n(297264),
-    c = n(116891),
-    u = n(652215),
-    _ = n(202541),
-    E = n(375708),
-    A = n(456996);
+i.d(t, { A: () => _ });
+var s = i(477900);
+i(582128);
+var n = i(503698),
+    r = i.n(n),
+    a = i(933832),
+    l = i(789645),
+    o = i(834730),
+    c = i(297264),
+    d = i(116891),
+    u = i(652215),
+    m = i(202541),
+    g = i(375708),
+    T = i(456996);
 let h = [
     {
-        getPerkLabel: () => E.intl.string(E.t.tIiwuj),
-        getTier0Value: () => _.TG[u.TVA.NONE].limits.emoji,
-        getTier1Value: () => _.TG[u.TVA.TIER_1].limits.emoji,
-        getTier2Value: () => _.TG[u.TVA.TIER_2].limits.emoji,
-        getTier3Value: () => _.TG[u.TVA.TIER_3].limits.emoji,
+        getPerkLabel: () => g.intl.string(g.t.tIiwuj),
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.emoji,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.emoji,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.emoji,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.emoji,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t["3iccet"]),
-        getTier0Value: () => _.TG[u.TVA.NONE].limits.stickers,
-        getTier1Value: () => _.TG[u.TVA.TIER_1].limits.stickers,
-        getTier2Value: () => _.TG[u.TVA.TIER_2].limits.stickers,
-        getTier3Value: () => _.TG[u.TVA.TIER_3].limits.stickers,
+        getPerkLabel: () => g.intl.string(g.t["3iccet"]),
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.stickers,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.stickers,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.stickers,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.stickers,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t["+smCv9"]),
-        getTier0Value: () => _.TG[u.TVA.NONE].limits.soundboardSounds,
-        getTier1Value: () => _.TG[u.TVA.TIER_1].limits.soundboardSounds,
-        getTier2Value: () => _.TG[u.TVA.TIER_2].limits.soundboardSounds,
-        getTier3Value: () => _.TG[u.TVA.TIER_3].limits.soundboardSounds,
+        getPerkLabel: () => g.intl.string(g.t["+smCv9"]),
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.soundboardSounds,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.soundboardSounds,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.soundboardSounds,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.soundboardSounds,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.SMYauD),
+        getPerkLabel: () => g.intl.string(g.t.SMYauD),
         getTier0Value: () =>
-            E.intl.formatToPlainString(E.t.zZ6Rdi, {
-                resolution: _.TG[u.TVA.NONE].limits.screenShareQualityResolution,
-                framerate: _.TG[u.TVA.NONE].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: m.TG[u.TVA.NONE].limits.screenShareQualityResolution,
+                framerate: m.TG[u.TVA.NONE].limits.screenShareQualityFramerate,
             }),
         getTier1Value: () =>
-            E.intl.formatToPlainString(E.t.zZ6Rdi, {
-                resolution: _.TG[u.TVA.TIER_1].limits.screenShareQualityResolution,
-                framerate: _.TG[u.TVA.TIER_1].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: m.TG[u.TVA.TIER_1].limits.screenShareQualityResolution,
+                framerate: m.TG[u.TVA.TIER_1].limits.screenShareQualityFramerate,
             }),
         getTier2Value: () =>
-            E.intl.formatToPlainString(E.t.zZ6Rdi, {
-                resolution: (0, c.eT)("GuildBoostingMarketingPerksTable"),
-                framerate: _.TG[u.TVA.TIER_2].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: (0, d.eT)("GuildBoostingMarketingPerksTable"),
+                framerate: m.TG[u.TVA.TIER_2].limits.screenShareQualityFramerate,
             }),
         getTier3Value: () =>
-            E.intl.formatToPlainString(E.t.zZ6Rdi, {
-                resolution: (0, c.eT)("GuildBoostingMarketingPerksTable"),
-                framerate: _.TG[u.TVA.TIER_3].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: (0, d.eT)("GuildBoostingMarketingPerksTable"),
+                framerate: m.TG[u.TVA.TIER_3].limits.screenShareQualityFramerate,
             }),
     },
     {
-        getPerkLabel: () => E.intl.string(E.t["/79IDj"]),
-        getTier0Value: () => E.intl.formatToPlainString(E.t.w1gmLt, { bitrate: _.TG[u.TVA.NONE].limits.bitrate / 1e3 }),
+        getPerkLabel: () => g.intl.string(g.t["/79IDj"]),
+        getTier0Value: () => g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.NONE].limits.bitrate / 1e3 }),
         getTier1Value: () =>
-            E.intl.formatToPlainString(E.t.w1gmLt, { bitrate: _.TG[u.TVA.TIER_1].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_1].limits.bitrate / 1e3 }),
         getTier2Value: () =>
-            E.intl.formatToPlainString(E.t.w1gmLt, { bitrate: _.TG[u.TVA.TIER_2].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_2].limits.bitrate / 1e3 }),
         getTier3Value: () =>
-            E.intl.formatToPlainString(E.t.w1gmLt, { bitrate: _.TG[u.TVA.TIER_3].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_3].limits.bitrate / 1e3 }),
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.R1U2xC),
+        getPerkLabel: () => g.intl.string(g.t.R1U2xC),
         getTier0Value: () =>
-            E.intl.formatToPlainString(E.t.pIn7Af, { size: _.TG[u.TVA.NONE].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.NONE].limits.fileSize / 1048576 }),
         getTier1Value: () =>
-            E.intl.formatToPlainString(E.t.pIn7Af, { size: _.TG[u.TVA.TIER_1].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_1].limits.fileSize / 1048576 }),
         getTier2Value: () =>
-            E.intl.formatToPlainString(E.t.pIn7Af, { size: _.TG[u.TVA.TIER_2].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_2].limits.fileSize / 1048576 }),
         getTier3Value: () =>
-            E.intl.formatToPlainString(E.t.pIn7Af, { size: _.TG[u.TVA.TIER_3].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_3].limits.fileSize / 1048576 }),
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.f6vfso),
-        getTier0Value: () => _.TG[u.TVA.NONE].limits.stageVideoUsers,
-        getTier1Value: () => _.TG[u.TVA.TIER_1].limits.stageVideoUsers,
-        getTier2Value: () => _.TG[u.TVA.TIER_2].limits.stageVideoUsers,
-        getTier3Value: () => _.TG[u.TVA.TIER_3].limits.stageVideoUsers,
+        getPerkLabel: () => g.intl.string(g.t.f6vfso),
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.stageVideoUsers,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.stageVideoUsers,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.stageVideoUsers,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.stageVideoUsers,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.qDqUME),
+        getPerkLabel: () => g.intl.string(g.t.qDqUME),
         getTier0Value: () => !1,
         getTier1Value: () => !0,
         getTier2Value: () => !0,
         getTier3Value: () => !0,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.uwqgbu),
+        getPerkLabel: () => g.intl.string(g.t.uwqgbu),
         getTier0Value: () => !1,
         getTier1Value: () => !0,
         getTier2Value: () => !0,
         getTier3Value: () => !0,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.zxsDxc),
+        getPerkLabel: () => g.intl.string(g.t.zxsDxc),
         getTier0Value: () => !1,
         getTier1Value: () => !1,
-        getTier2Value: () => E.intl.string(E.t["2TNS3n"]),
-        getTier3Value: () => E.intl.string(E.t["l+S46U"]),
+        getTier2Value: () => g.intl.string(g.t["2TNS3n"]),
+        getTier3Value: () => g.intl.string(g.t["l+S46U"]),
     },
     {
-        getPerkLabel: () => E.intl.string(E.t["bHa+Ee"]),
+        getPerkLabel: () => g.intl.string(g.t["bHa+Ee"]),
         getTier0Value: () => !1,
         getTier1Value: () => !1,
         getTier2Value: () => !0,
         getTier3Value: () => !0,
     },
     {
-        getPerkLabel: () => E.intl.string(E.t.QV6MZQ),
+        getPerkLabel: () => g.intl.string(g.t.QV6MZQ),
         getTier0Value: () => !1,
         getTier1Value: () => !1,
         getTier2Value: () => !1,
         getTier3Value: () => !0,
     },
 ];
-function I(e) {
-    let { value: t, isBoosted: n = !1 } = e;
+function E(e) {
+    let { value: t, isBoosted: i = !1 } = e;
     return "boolean" == typeof t
         ? t
-            ? (0, i.jsx)(s.A, { size: "md", color: "currentColor", className: A.oE })
-            : (0, i.jsx)(l.P, { size: "md", color: "currentColor", className: A.i3 })
-        : (0, i.jsx)(o.E, {
-              color: n ? "text-strong" : "text-muted",
-              variant: n ? "text-md/bold" : "text-md/medium",
+            ? (0, s.jsx)(a.A, { size: "md", color: "currentColor", className: T.oE })
+            : (0, s.jsx)(l.P, { size: "md", color: "currentColor", className: T.i3 })
+        : (0, s.jsx)(o.E, {
+              color: i ? "text-strong" : "text-muted",
+              variant: i ? "text-md/bold" : "text-md/medium",
               children: t,
           });
 }
-function f(e) {
+function p(e) {
     let { currentTier: t } = e,
-        n = (function (e) {
+        i = (function (e) {
             switch (e) {
                 case u.TVA.NONE:
                 case u.TVA.TIER_1:
@@ -148,111 +147,111 @@ function f(e) {
                     return null;
             }
         })(t);
-    return null == n
+    return null == i
         ? null
-        : (0, i.jsx)("div", {
-              className: a()(A.ER, { [A.GH]: n === u.TVA.TIER_2, [A.z5]: n === u.TVA.TIER_3 }),
-              children: (0, i.jsx)(o.E, {
-                  className: A.uQ,
+        : (0, s.jsx)("div", {
+              className: r()(T.ER, { [T.GH]: i === u.TVA.TIER_2, [T.z5]: i === u.TVA.TIER_3 }),
+              children: (0, s.jsx)(o.E, {
+                  className: T.uQ,
                   color: "text-overlay-light",
                   variant: "text-xs/bold",
-                  children: t === u.TVA.TIER_3 ? E.intl.string(E.t.d849Up) : E.intl.string(E.t.dZeX1z),
+                  children: t === u.TVA.TIER_3 ? g.intl.string(g.t.d849Up) : g.intl.string(g.t.dZeX1z),
               }),
           });
 }
-function p(e) {
-    let { className: t, guild: n, hideHeading: r = !1, hideTier0: s = !1 } = e;
-    return (0, i.jsxs)("div", {
-        className: a()(A.iE, t),
+function _(e) {
+    let { className: t, guild: i, hideHeading: n = !1, hideTier0: a = !1 } = e;
+    return (0, s.jsxs)("div", {
+        className: r()(T.iE, t),
         children: [
-            !r &&
-                (0, i.jsx)(d.D, {
-                    className: A.R_,
+            !n &&
+                (0, s.jsx)(c.D, {
+                    className: T.R_,
                     variant: "heading-xxl/semibold",
-                    children: E.intl.string(E.t["9GGb9k"]),
+                    children: g.intl.string(g.t["9GGb9k"]),
                 }),
-            (0, i.jsxs)("div", {
-                className: A.wY,
+            (0, s.jsxs)("div", {
+                className: T.wY,
                 children: [
-                    null != n && (0, i.jsx)(f, { currentTier: n.premiumTier }),
-                    (0, i.jsxs)("div", {
-                        className: A.tp,
+                    null != i && (0, s.jsx)(p, { currentTier: i.premiumTier }),
+                    (0, s.jsxs)("div", {
+                        className: T.tp,
                         children: [
-                            (0, i.jsxs)("div", {
-                                className: a()(A.nM, A.U1),
+                            (0, s.jsxs)("div", {
+                                className: r()(T.nM, T.U1),
                                 children: [
-                                    (0, i.jsx)("div", {
-                                        className: a()(A.Hn, A.DV),
-                                        children: (0, i.jsx)(d.D, {
+                                    (0, s.jsx)("div", {
+                                        className: r()(T.Hn, T.DV),
+                                        children: (0, s.jsx)(c.D, {
                                             color: "text-default",
                                             variant: "heading-lg/semibold",
-                                            children: E.intl.string(E.t.F5MY0k),
+                                            children: g.intl.string(g.t.F5MY0k),
                                         }),
                                     }),
-                                    !s &&
-                                        (0, i.jsxs)("div", {
-                                            className: a()(A.Hn, A.pU),
+                                    !a &&
+                                        (0, s.jsxs)("div", {
+                                            className: r()(T.Hn, T.pU),
                                             children: [
-                                                (0, i.jsx)(d.D, {
+                                                (0, s.jsx)(c.D, {
                                                     color: "text-default",
                                                     variant: "heading-lg/semibold",
-                                                    children: E.intl.string(E.t.mx8j2m),
+                                                    children: g.intl.string(g.t.mx8j2m),
                                                 }),
-                                                (0, i.jsx)(o.E, {
+                                                (0, s.jsx)(o.E, {
                                                     color: "text-muted",
                                                     variant: "text-sm/medium",
-                                                    children: E.intl.format(E.t["pob/cL"], {
+                                                    children: g.intl.format(g.t["pob/cL"], {
                                                         subscriptions: u.M2T[u.TVA.NONE],
                                                     }),
                                                 }),
                                             ],
                                         }),
-                                    (0, i.jsxs)("div", {
-                                        className: a()(A.Hn, A.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(T.Hn, T.pU),
                                         children: [
-                                            (0, i.jsx)(d.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
-                                                children: E.intl.string(E.t.nzXtaS),
+                                                children: g.intl.string(g.t.nzXtaS),
                                             }),
-                                            (0, i.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
-                                                children: E.intl.format(E.t["pob/cL"], {
+                                                children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_1],
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsxs)("div", {
-                                        className: a()(A.Hn, A.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(T.Hn, T.pU),
                                         children: [
-                                            (0, i.jsx)(d.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
-                                                children: E.intl.string(E.t["h33/uW"]),
+                                                children: g.intl.string(g.t["h33/uW"]),
                                             }),
-                                            (0, i.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
-                                                children: E.intl.format(E.t["pob/cL"], {
+                                                children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_2],
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsxs)("div", {
-                                        className: a()(A.Hn, A.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(T.Hn, T.pU),
                                         children: [
-                                            (0, i.jsx)(d.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
-                                                children: E.intl.string(E.t.BfF6ED),
+                                                children: g.intl.string(g.t.BfF6ED),
                                             }),
-                                            (0, i.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
-                                                children: E.intl.format(E.t["pob/cL"], {
+                                                children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_3],
                                                 }),
                                             }),
@@ -261,35 +260,35 @@ function p(e) {
                                 ],
                             }),
                             h.map((e, t) =>
-                                (0, i.jsxs)(
+                                (0, s.jsxs)(
                                     "div",
                                     {
-                                        className: a()(A.nM, { [A.fW]: t === h.length - 1 }),
+                                        className: r()(T.nM, { [T.fW]: t === h.length - 1 }),
                                         children: [
-                                            (0, i.jsx)("div", {
-                                                className: a()(A.Hn, A.DV),
-                                                children: (0, i.jsx)(o.E, {
+                                            (0, s.jsx)("div", {
+                                                className: r()(T.Hn, T.DV),
+                                                children: (0, s.jsx)(o.E, {
                                                     color: "text-muted",
                                                     variant: "text-md/medium",
                                                     children: e.getPerkLabel(),
                                                 }),
                                             }),
-                                            !s &&
-                                                (0, i.jsx)("div", {
-                                                    className: a()(A.Hn, A.pU),
-                                                    children: (0, i.jsx)(I, { value: e.getTier0Value() }),
+                                            !a &&
+                                                (0, s.jsx)("div", {
+                                                    className: r()(T.Hn, T.pU),
+                                                    children: (0, s.jsx)(E, { value: e.getTier0Value() }),
                                                 }),
-                                            (0, i.jsx)("div", {
-                                                className: a()(A.Hn, A.pU),
-                                                children: (0, i.jsx)(I, { value: e.getTier1Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier1Value(), isBoosted: !0 }),
                                             }),
-                                            (0, i.jsx)("div", {
-                                                className: a()(A.Hn, A.pU),
-                                                children: (0, i.jsx)(I, { value: e.getTier2Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier2Value(), isBoosted: !0 }),
                                             }),
-                                            (0, i.jsx)("div", {
-                                                className: a()(A.Hn, A.pU),
-                                                children: (0, i.jsx)(I, { value: e.getTier3Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier3Value(), isBoosted: !0 }),
                                             }),
                                         ],
                                     },

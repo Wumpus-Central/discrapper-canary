@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { n: () => a, r: () => s });
+n.d(t, { n: () => l, r: () => r });
 var i,
-    r,
-    a =
+    s,
+    l =
         (((i = {}).GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar"),
         (i.GUILD_SCHEDULED_EVENTS = "guild-scheduled-events"),
         (i.GUILD_HUB_HEADER_OPTIONS = "guild-hub-header-options"),
@@ -24,12 +23,13 @@ var i,
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
         i),
-    s =
-        (((r = {}).SPACER = "spacer"),
-        (r.GUILD_PROGRESS = "guild-progress"),
-        (r.MFA_WARNING = "mfa-warning"),
-        (r.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
-        (r.GAME_CLAIM = "game-claim"),
-        (r.APPLICATION_ACCOUNT_LINK = "application-account-link"),
-        (r.FAVORITES_SUGGESTIONS = "favorites-suggestions"),
-        r);
+    r =
+        (((s = {}).SPACER = "spacer"),
+        (s.GUILD_PROGRESS = "guild-progress"),
+        (s.MFA_WARNING = "mfa-warning"),
+        (s.LIVE_CHANNEL_NOTICE = "live-channel-notice"),
+        (s.GAME_CLAIM = "game-claim"),
+        (s.APPLICATION_ACCOUNT_LINK = "application-account-link"),
+        (s.FAVORITES_SUGGESTIONS = "favorites-suggestions"),
+        s);
+/^(221552|614256)$/.test(n.j);

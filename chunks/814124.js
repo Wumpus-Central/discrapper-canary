@@ -8,13 +8,13 @@ var n = l(477900),
     r = l(349288),
     p = l(821609),
     d = l(417098),
-    u = l(793574),
-    _ = l(688810),
+    _ = l(793574),
+    u = l(688810),
     A = l(812095),
     h = l(288106),
     C = l(174459),
-    E = l(975571),
-    m = l(440938),
+    m = l(975571),
+    E = l(440938),
     x = l(80151),
     I = l(151115),
     k = l(758836),
@@ -36,11 +36,11 @@ function g(e) {
             hideCta: R,
             onDismiss: j,
         } = e,
-        { analyticsLocations: y } = (0, _.Ay)(u.A.COLLECTIBLES_SHOP_NAGBAR),
-        M = a.useMemo(() => (null == k ? null : E.A.getArticleURL(k)), [k]),
+        { analyticsLocations: y } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
+        M = a.useMemo(() => (null == k ? null : m.A.getArticleURL(k)), [k]),
         f = (0, I.sj)(i),
         B = b[l] ?? T.Hk,
-        P = (0, m.uM)(),
+        P = (0, E.uM)(),
         G = a.useCallback(() => {
             C.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: P?.sessionId,
@@ -51,7 +51,7 @@ function g(e) {
                 cta_name: "help center article link",
             });
         }, [t, P]);
-    return (0, n.jsx)(_.f5, {
+    return (0, n.jsx)(u.f5, {
         value: y,
         children: (0, n.jsx)(c.N, {
             theme: L.NJ8.DARKER,
@@ -117,10 +117,10 @@ function g(e) {
     });
 }
 let v =
-    21552 == l.j
+    221552 == l.j
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
-                  i = (0, m.uM)(),
+                  i = (0, E.uM)(),
                   s = (0, x.A)(),
                   c = s?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
                   o = s?.tenantMetadata?.collectibles?.reward?.flavor,

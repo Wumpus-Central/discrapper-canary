@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => r });
-var i = n(582128);
+var l = n(582128);
 function r(e, t, n) {
-    let r = i.useRef(e);
+    let r = l.useRef(e);
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             function e(e) {
                 null == r.current ||
                     r.current.contains(e.target) ||

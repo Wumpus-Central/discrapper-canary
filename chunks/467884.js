@@ -566,14 +566,14 @@ function eg(e) {
             (e) => {
                 eb &&
                     (0, k.L3)(e, async () => {
-                        let { default: e } = await l.e("97249").then(l.bind(l, 10680));
+                        let { default: e } = await l.e("897249").then(l.bind(l, 10680));
                         return (t) => (0, n.jsx)(e, { ...t, skuId: r });
                     });
             },
             [eb, r],
         ),
-        e9 = a.useMemo(() => [...eN, T.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON], [eN]),
-        e8 = a.useCallback(
+        e8 = a.useMemo(() => [...eN, T.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON], [eN]),
+        e9 = a.useCallback(
             (e) => {
                 e.stopPropagation(),
                     null != eM &&
@@ -584,20 +584,20 @@ function eg(e) {
                             onComplete: () => {
                                 null != eM &&
                                     null != eo &&
-                                    (0, J.n)({ sku: eo, application: eM, analyticsLocations: e9 });
+                                    (0, J.n)({ sku: eo, application: eM, analyticsLocations: e8 });
                             },
-                            analyticsLocations: e9,
+                            analyticsLocations: e8,
                         }));
             },
-            [eo, eM, r, eW, e9],
+            [eo, eM, r, eW, e8],
         ),
         e2 = a.useCallback(
             (e) => {
                 e.stopPropagation(),
                     null != eo &&
-                        (eW(ec.bB.BUY_BUTTON), (0, Q.a)(eo, { isGift: !1 }, { analyticsLocations: e9, guildId: ex }));
+                        (eW(ec.bB.BUY_BUTTON), (0, Q.a)(eo, { isGift: !1 }, { analyticsLocations: e8, guildId: ex }));
             },
-            [eo, ex, eW, e9],
+            [eo, ex, eW, e8],
         ),
         e7 = eo?.exclusive === !0 && 2 !== i,
         e5 = a.useMemo(
@@ -606,7 +606,7 @@ function eg(e) {
                     ? (0, n.jsx)(f.$, {
                           variant: "primary",
                           onMouseDown: eJ,
-                          onClick: e8,
+                          onClick: e9,
                           "aria-label": eu.intl.formatToPlainString(eu.t.yi41qQ, { orbPrice: eP }),
                           text: eu.intl.format(eu.t.JC15qj, {
                               orbPrice: eP,
@@ -622,7 +622,7 @@ function eg(e) {
                           text: null != eH ? eu.intl.format(eu.t.Xp5WTn, { price: eH }) : eu.intl.string(eu.t.boqtTA),
                           fullWidth: !0,
                       }),
-            [eI, e8, e2, eJ, eP, eH],
+            [eI, e9, e2, eJ, eP, eH],
         );
     if (null == eo) return null;
     let e6 = (0, F.fq)(eo),

@@ -1,11 +1,11 @@
-t.d(e, { $: () => i });
-var s = t(477900);
+t.d(r, { $: () => o });
+var n = t(477900);
 t(582128);
-var n = t(192308);
-function i(a) {
-    let { orbsAmount: e } = a;
-    (0, n.openModalLazy)(async () => {
-        let { default: a } = await Promise.all([t.e("93137"), t.e("20094")]).then(t.bind(t, 743597));
-        return (t) => (0, s.jsx)(a, { orbsAmount: e, ...t });
+var a = t(192308);
+function o(e) {
+    let { orbsAmount: r } = e;
+    (0, a.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([t.e("393137"), t.e("720094")]).then(t.bind(t, 743597));
+        return (t) => (0, n.jsx)(e, { orbsAmount: r, ...t });
     });
 }

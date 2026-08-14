@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(582128),
-    r = n(575593),
-    a = n(702841),
-    s = n(174459),
-    l = n(590180),
+n.d(t, { A: () => c });
+var r = n(582128),
+    a = n(575593),
+    l = n(702841),
+    i = n(174459),
+    u = n(590180),
     o = n(993408),
-    d = n(652215),
-    c = n(202541);
-let u = {
-        [r.R.AVATAR_DECORATION]: c.Ae.AVATAR_DECORATION,
-        [r.R.PROFILE_EFFECT]: c.Ae.PROFILE_EFFECT,
-        [r.R.PROFILE_FRAME]: void 0,
-        [r.R.NAMEPLATE]: void 0,
-        [r.R.NONE]: void 0,
-        [r.R.BUNDLE]: void 0,
-        [r.R.VARIANTS_GROUP]: void 0,
-        [r.R.EXTERNAL_SKU]: void 0,
+    s = n(652215),
+    A = n(202541);
+let d = {
+        [a.R.AVATAR_DECORATION]: A.Ae.AVATAR_DECORATION,
+        [a.R.PROFILE_EFFECT]: A.Ae.PROFILE_EFFECT,
+        [a.R.PROFILE_FRAME]: void 0,
+        [a.R.NAMEPLATE]: void 0,
+        [a.R.NONE]: void 0,
+        [a.R.BUNDLE]: void 0,
+        [a.R.VARIANTS_GROUP]: void 0,
+        [a.R.EXTERNAL_SKU]: void 0,
     },
-    _ = function (e) {
-        let t = (0, a.bG)([l.A], () => l.A.products);
-        return (0, i.useCallback)(
+    c = function (e) {
+        let t = (0, l.bG)([u.A], () => u.A.products);
+        return (0, r.useCallback)(
             (n) => {
-                let { type: i, skuId: r } = n,
-                    a = t.get(r);
-                s.default.track(d.HAw.PREMIUM_FEATURE_TRY_OUT, {
-                    feature_name: u[i],
-                    feature_tier: (0, o.G0)(a) ? c.tz.FREE : c.tz.PREMIUM_STANDARD,
-                    feature_selection: a?.name,
+                let { type: r, skuId: a } = n,
+                    l = t.get(a);
+                i.default.track(s.HAw.PREMIUM_FEATURE_TRY_OUT, {
+                    feature_name: d[r],
+                    feature_tier: (0, o.G0)(l) ? A.tz.FREE : A.tz.PREMIUM_STANDARD,
+                    feature_selection: l?.name,
                     location_stack: e,
                 });
             },

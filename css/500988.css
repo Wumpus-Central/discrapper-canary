@@ -1,0 +1,22 @@
+.spacing_fd14e0 {
+    margin-bottom: 20px
+}
+
+.spacingTop_fd14e0 {
+    margin-top: 20px
+}
+
+.message_fd14e0 {
+    background-color: var(--background-base-low);
+    border-radius: 3px;
+    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high);
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    pointer-events: none;
+    position: relative
+}
+
+.closeButton_fd14e0 {
+    justify-content: flex-end
+}

@@ -15,11 +15,11 @@ let o = {
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
                     let { default: A } = await Promise.all([
-                        t.e("83018"),
-                        t.e("12211"),
-                        t.e("607"),
-                        t.e("12755"),
-                        t.e("86637"),
+                        t.e("383018"),
+                        t.e("503752"),
+                        t.e("600607"),
+                        t.e("512755"),
+                        t.e("909018"),
                     ]).then(t.bind(t, 466702));
                     return (t) => (0, _.jsx)(A, { classificationId: e, ...t });
                 },
@@ -30,9 +30,12 @@ let o = {
             (0, a.openModalLazy)(
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                    let { default: A } = await Promise.all([t.e("12211"), t.e("607"), t.e("84794"), t.e("99487")]).then(
-                        t.bind(t, 595746),
-                    );
+                    let { default: A } = await Promise.all([
+                        t.e("503752"),
+                        t.e("600607"),
+                        t.e("384794"),
+                        t.e("699487"),
+                    ]).then(t.bind(t, 595746));
                     return (t) =>
                         (0, _.jsx)(A, {
                             classificationId: e,

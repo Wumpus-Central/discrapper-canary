@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { X$: () => s, pT: () => l });
-var i = n(477900),
-    r = n(582128);
-let a = r.createContext(null);
-function s() {
-    let e = r.useContext(a);
+n.d(t, { X$: () => i, pT: () => u });
+var r = n(477900),
+    l = n(582128);
+let a = l.createContext(null);
+function i() {
+    let e = l.useContext(a);
     if (null == e) throw Error("useDiscordVideoPlayerContext must be used within a DiscordVideoPlayerContextProvider");
     return e;
 }
-function l(e) {
-    let { children: t, activeLayer: n, isFullscreen: s, isActive: l, isControlBarExpanded: o, videoRef: d } = e,
-        c = r.useMemo(
-            () => ({ activeLayer: n, isFullscreen: s, isActive: l, isControlBarExpanded: o, videoRef: d }),
-            [n, s, l, o, d],
+function u(e) {
+    let { children: t, activeLayer: n, isFullscreen: i, isActive: u, isControlBarExpanded: s, videoRef: o } = e,
+        c = l.useMemo(
+            () => ({ activeLayer: n, isFullscreen: i, isActive: u, isControlBarExpanded: s, videoRef: o }),
+            [n, i, u, s, o],
         );
-    return (0, i.jsx)(a.Provider, { value: c, children: t });
+    return (0, r.jsx)(a.Provider, { value: c, children: t });
 }

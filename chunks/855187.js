@@ -1,63 +1,65 @@
-"use strict";
-n.d(t, { A: () => h });
-var i = n(477900);
-n(582128);
-var r = n(17928),
-    a = n(638495),
-    s = n(192308),
-    l = n(477782),
-    o = n(635739),
-    d = n(39623),
-    c = n(952572),
-    u = n(280450),
-    _ = n(626822),
-    E = n(731854),
-    A = n(375708);
-function h(e, t) {
-    let h = (0, a.k)(),
+l.d(a, { A: () => v });
+var t = l(477900);
+l(582128);
+var i = l(17928),
+    n = l(638495),
+    c = l(192308),
+    o = l(477782),
+    d = l(635739),
+    r = l(39623),
+    s = l(952572),
+    u = l(280450),
+    A = l(626822),
+    p = l(731854),
+    h = l(375708);
+function v(e, a) {
+    let v = (0, n.k)(),
         {
-            videoEnabled: I,
+            videoEnabled: b,
             hasVideoDevice: f,
-            videoSupported: p,
-        } = (0, r.cf)([_.Ay], () => ({
-            videoEnabled: _.Ay.isVideoEnabled(),
-            hasVideoDevice: _.Ay.isVideoAvailable(),
-            videoSupported: _.Ay.supports(E.O5.VIDEO),
+            videoSupported: y,
+        } = (0, i.cf)([A.Ay], () => ({
+            videoEnabled: A.Ay.isVideoEnabled(),
+            hasVideoDevice: A.Ay.isVideoAvailable(),
+            videoSupported: A.Ay.supports(p.O5.VIDEO),
         })),
-        T = (0, r.bG)([u.default], () => u.default.getId() === e),
-        m = (0, c.A)();
-    return p && (!I || m) && T && f
-        ? (0, i.jsx)(l.Dr, {
+        g = (0, i.bG)([u.default], () => u.default.getId() === e),
+        M = (0, s.A)();
+    return y && (!b || M) && g && f
+        ? (0, t.jsx)(o.Dr, {
               id: "change-video-background",
-              label: I ? A.intl.string(A.t.mZKxHb) : A.intl.string(A.t["vkV93/"]),
+              label: b ? h.intl.string(h.t.mZKxHb) : h.intl.string(h.t["vkV93/"]),
               action: function () {
-                  (0, s.openModalLazy)(
+                  (0, c.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("11895"),
-                              n.e("37393"),
-                              n.e("38096"),
-                              n.e("42903"),
-                              n.e("58751"),
-                              n.e("28367"),
-                              n.e("58337"),
-                              n.e("20287"),
-                              n.e("20683"),
-                              n.e("6809"),
-                              n.e("80436"),
-                              n.e("97162"),
-                              n.e("59778"),
-                              n.e("95782"),
-                              n.e("85160"),
-                              n.e("10534"),
-                          ]).then(n.bind(n, 308229));
-                          return (t) => (0, i.jsx)(e, { ...t, videoEnabled: I });
+                              l.e("411895"),
+                              l.e("37393"),
+                              l.e("238096"),
+                              l.e("242903"),
+                              l.e("758751"),
+                              l.e("428367"),
+                              l.e("264236"),
+                              l.e("631644"),
+                              l.e("809915"),
+                              l.e("858337"),
+                              l.e("220287"),
+                              l.e("820683"),
+                              l.e("706809"),
+                              l.e("480436"),
+                              l.e("597162"),
+                              l.e("59778"),
+                              l.e("195782"),
+                              l.e("485160"),
+                              l.e("410534"),
+                          ]).then(l.bind(l, 308229));
+                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: b });
                       },
-                      { modalKey: "camera-preview", contextKey: null != t ? (0, s.modalContextFromAppContext)(t) : h },
+                      { modalKey: "camera-preview", contextKey: null != a ? (0, c.modalContextFromAppContext)(a) : v },
                   );
               },
-              icon: I ? o.f : d.b,
-              leadingAccessory: { type: "icon", icon: I ? o.f : d.b },
+              icon: b ? d.f : r.b,
+              leadingAccessory: { type: "icon", icon: b ? d.f : r.b },
           })
         : null;
 }

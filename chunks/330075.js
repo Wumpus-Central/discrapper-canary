@@ -1,4 +1,4 @@
-n.d(t, { i: () => C });
+n.d(t, { i: () => I });
 var i = n(477900);
 n(582128);
 var l = n(702841),
@@ -17,12 +17,12 @@ var l = n(702841),
     x = n(825596),
     f = n(703543),
     E = n(652215);
-function C(e) {
+function I(e) {
     let {
             guildProductListing: t,
-            guildId: C,
-            location: _,
-            shouldShowFullDescriptionButton: I = !0,
+            guildId: I,
+            location: C,
+            shouldShowFullDescriptionButton: _ = !0,
             hideRoleTag: v = !1,
             lineClamp: N = 1,
             cardWidth: j,
@@ -31,26 +31,26 @@ function C(e) {
             descriptionTextVariant: y = "text-sm/normal",
             showOpaqueBackground: b = !1,
         } = e,
-        R = (0, l.bG)([d.A], () => d.A.getGuild(C), [C]),
-        L = (0, l.bG)([c.A], () => c.A.getRole(C, t?.role_id ?? E.dJq)),
+        R = (0, l.bG)([d.A], () => d.A.getGuild(I), [I]),
+        L = (0, l.bG)([c.A], () => c.A.getRole(I, t?.role_id ?? E.dJq)),
         M = (0, a.R)(t, 600),
         k = (0, A.z)(t),
         O = (0, m.BB)(R),
-        { shouldHideGuildPurchaseEntryPoints: P } = (0, o.MH)(C),
+        { shouldHideGuildPurchaseEntryPoints: P } = (0, o.MH)(I),
         D = (0, A.X)(t),
-        U = (0, f.A)({ guildId: C, guildProductListingId: t.id, sourceAnalyticsLocations: _ });
+        U = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
     if (null == R || P) return null;
     function G() {
         var e;
         return (
-            (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: _ }),
+            (e = { guildId: I, guildProductListingId: t.id, analyticsLocation: C }),
             void (0, r.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("3650"),
-                    n.e("35778"),
+                    n.e("903650"),
+                    n.e("835778"),
                     n.e("47812"),
-                    n.e("13583"),
-                    n.e("51234"),
+                    n.e("813583"),
+                    n.e("951234"),
                 ]).then(n.bind(n, 516889));
                 return (n) => (0, i.jsx)(t, { ...e, ...n });
             })
@@ -58,7 +58,7 @@ function C(e) {
     }
     let w = (0, i.jsx)(x.i, {
         product: t,
-        guildId: C,
+        guildId: I,
         showEditProduct: O,
         showUnpublishProduct: !1,
         showCopyLink: !0,
@@ -76,13 +76,13 @@ function C(e) {
             !(function (e) {
                 let { listing: t } = e;
                 (0, r.openModalLazy)(async () => {
-                    let { default: e } = await n.e("74624").then(n.bind(n, 144835));
+                    let { default: e } = await n.e("674624").then(n.bind(n, 144835));
                     return (n) => (0, i.jsx)(e, { listing: t, ...n });
                 });
             })({ listing: t });
         },
         onCopyProductLink: function () {
-            (0, u.C)((0, h.KW)(C, t.id));
+            (0, u.C)((0, h.KW)(I, t.id));
         },
         onTestDownload: () => {},
     });
@@ -96,7 +96,7 @@ function C(e) {
             role: L,
             ctaComponent: (0, i.jsx)(s.$, { ...U }),
             productType: k,
-            shouldShowFullDescriptionButton: I,
+            shouldShowFullDescriptionButton: _,
             onShowFullDescription: G,
             onTapCard: G,
             actionMenu: w,

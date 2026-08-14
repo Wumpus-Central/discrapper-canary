@@ -56,7 +56,7 @@ function I(e) {
             null != a &&
                 null != l &&
                 (0, d.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([t.e("93388"), t.e("8939")]).then(t.bind(t, 181094));
+                    let { default: e } = await Promise.all([t.e("493388"), t.e("608939")]).then(t.bind(t, 181094));
                     return (t) => (0, n.jsx)(e, { ...t, channel: a, guild: l });
                 });
         }, [a, l]),

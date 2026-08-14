@@ -410,9 +410,12 @@ function ef(e) {
         U = s.useCallback(() => {
             let e = Object.keys(_);
             return (0, d.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("98574"), n.e("99925"), n.e("92513"), n.e("52532")]).then(
-                    n.bind(n, 192991),
-                );
+                let { default: t } = await Promise.all([
+                    n.e("598574"),
+                    n.e("999925"),
+                    n.e("692513"),
+                    n.e("52532"),
+                ]).then(n.bind(n, 192991));
                 return (n) =>
                     (0, l.jsx)(t, {
                         editPermissions: D,
@@ -430,9 +433,12 @@ function ef(e) {
         B = s.useCallback(() => {
             let e = Object.keys(P);
             return (0, d.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("98574"), n.e("99925"), n.e("92513"), n.e("52532")]).then(
-                    n.bind(n, 192991),
-                );
+                let { default: t } = await Promise.all([
+                    n.e("598574"),
+                    n.e("999925"),
+                    n.e("692513"),
+                    n.e("52532"),
+                ]).then(n.bind(n, 192991));
                 return (n) =>
                     (0, l.jsx)(t, {
                         editPermissions: D,
@@ -450,7 +456,7 @@ function ef(e) {
         H = s.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
-                    let { default: e } = await n.e("29384").then(n.bind(n, 519387)),
+                    let { default: e } = await n.e("529384").then(n.bind(n, 519387)),
                         t = L.defaultMemberPermissions;
                     return (
                         o.aI(t, A.Cq) && (t = O.xBc.ADMINISTRATOR),

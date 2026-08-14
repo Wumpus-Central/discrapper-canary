@@ -1,17 +1,17 @@
-i.d(t, { O: () => _, i: () => n });
-var l = i(627968),
-    s = i(192308),
-    r = i(834730),
-    d = i(375708);
-function _(e) {
-    let { body: t, ...d } = e;
-    (0, s.openModalLazy)(async () => {
-        let { VoidConfirmModal: e } = await Promise.all([i.e("4823"), i.e("88017")]).then(i.bind(i, 844616));
+i.d(e, { O: () => d, i: () => u });
+var n = i(477900),
+    r = i(192308),
+    s = i(834730),
+    l = i(375708);
+function d(t) {
+    let { body: e, ...l } = t;
+    (0, r.openModalLazy)(async () => {
+        let { VoidConfirmModal: t } = await Promise.all([i.e("304823"), i.e("977260")]).then(i.bind(i, 397927));
         return (i) =>
-            (0, l.jsx)(e, { ...i, ...d, children: (0, l.jsx)(r.E, { variant: "text-md/normal", children: t }) });
+            (0, n.jsx)(t, { ...i, ...l, children: (0, n.jsx)(s.E, { variant: "text-md/normal", children: e }) });
     });
 }
-function n(e) {
-    let { message: t } = e;
-    _({ header: d.intl.string(d.t.OjbtDm), confirmText: d.intl.string(d.t.BddRzS), body: t });
+function u(t) {
+    let { message: e } = t;
+    d({ header: l.intl.string(l.t.OjbtDm), confirmText: l.intl.string(l.t.BddRzS), body: e });
 }

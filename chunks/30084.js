@@ -1,12 +1,12 @@
-n.d(t, { D: () => s });
-var a = n(627968),
+n.d(t, { D: () => i });
+var a = n(477900),
     r = n(192308),
     l = n(174459),
-    i = n(652215);
-function s(e) {
-    let { analyticsLocations: t, displayProfile: s, location: d } = e;
+    s = n(652215);
+function i(e) {
+    let { analyticsLocations: t, displayProfile: i, location: d } = e;
     null == d && (d = t[t.length - 1]),
-        l.default.track(i.HAw.OPEN_MODAL, {
+        l.default.track(s.HAw.OPEN_MODAL, {
             type: "Tiered Tenure Badge Details",
             location_stack: t,
             location: d,
@@ -14,14 +14,14 @@ function s(e) {
         }),
         (0, r.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("63252"),
-                n.e("49092"),
+                n.e("257727"),
+                n.e("260364"),
                 n.e("77333"),
-                n.e("42489"),
-                n.e("13052"),
-                n.e("65836"),
-                n.e("77641"),
+                n.e("142489"),
+                n.e("313052"),
+                n.e("165836"),
+                n.e("277641"),
             ]).then(n.bind(n, 384048));
-            return (t) => (0, a.jsx)(e, { ...t, displayProfile: s });
+            return (t) => (0, a.jsx)(e, { ...t, displayProfile: i });
         });
 }

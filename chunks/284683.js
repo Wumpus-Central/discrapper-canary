@@ -3,7 +3,7 @@ var i,
     l,
     r = n(375708),
     s =
-        88245 != n.j
+        588245 != n.j
             ? (((i = {})[(i.NAME = 1)] = "NAME"),
               (i[(i.PRICE_ASC = 2)] = "PRICE_ASC"),
               (i[(i.PRICE_DESC = 3)] = "PRICE_DESC"),

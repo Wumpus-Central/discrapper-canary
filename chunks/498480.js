@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, {
-    Wp: () => O,
-    pj: () => y,
-    cq: () => N,
-    Jr: () => b,
-    hU: () => P,
-    as: () => x,
-    e_: () => v,
+i.d(t, {
+    Wp: () => b,
+    pj: () => C,
+    cq: () => S,
+    Jr: () => V,
+    hU: () => M,
+    as: () => L,
+    e_: () => G,
     hE: () => U,
-    jL: () => D,
-    K: () => S,
-    tT: () => C,
-    dk: () => M,
-    z9: () => g,
-    Kz: () => G,
-    Ce: () => w,
+    jL: () => j,
+    K: () => x,
+    tT: () => I,
+    dk: () => y,
+    z9: () => v,
+    Kz: () => O,
+    Ce: () => P,
     KH: () => R,
-    QK: () => L,
+    QK: () => N,
 });
-var i = n(390544),
-    r = n(562465),
-    a = n(228366),
-    s = n(773669),
-    l = n(287809),
-    o = n(174459),
-    d = n(371794),
-    c = n(814201),
-    u = n(281445);
-let _ = [
+var s = i(390544),
+    n = i(636537),
+    r = i(228366),
+    a = i(773669),
+    l = i(287809),
+    o = i(174459),
+    c = i(371794),
+    d = i(814201),
+    u = i(281445);
+let m = [
     {
         id: "1",
         name: "GameServer #1",
@@ -59,29 +58,29 @@ let _ = [
         ],
     },
 ];
-function E(e, t) {
+function g(e, t) {
     return {
         id: e,
         name: t,
         provider: u.X.SHOCKBYTE,
-        plans: _,
-        baseCost: Math.min(..._.map((e) => e.cost)),
+        plans: m,
+        baseCost: Math.min(...m.map((e) => e.cost)),
         gameId: "1",
     };
 }
-let A = [
-        E("1", "GameServer Test #1"),
-        E("2", "GameServer Test #2"),
-        E("3", "GameServer Test #3"),
-        E("4", "GameServer Test #4"),
-        E("5", "GameServer Test #5"),
-        E("6", "GameServer Test #6"),
-        E("7", "GameServer Test #7"),
-        E("8", "GameServer Test #8"),
-        E("9", "GameServer Test #9"),
-        E("10", "GameServer Test #10"),
-        E("11", "GameServer Test #11"),
-        E("12", "GameServer Test #12"),
+let T = [
+        g("1", "GameServer Test #1"),
+        g("2", "GameServer Test #2"),
+        g("3", "GameServer Test #3"),
+        g("4", "GameServer Test #4"),
+        g("5", "GameServer Test #5"),
+        g("6", "GameServer Test #6"),
+        g("7", "GameServer Test #7"),
+        g("8", "GameServer Test #8"),
+        g("9", "GameServer Test #9"),
+        g("10", "GameServer Test #10"),
+        g("11", "GameServer Test #11"),
+        g("12", "GameServer Test #12"),
     ],
     h = [
         {
@@ -91,11 +90,11 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "1",
@@ -107,11 +106,11 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "2",
@@ -123,11 +122,11 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "3",
@@ -139,11 +138,11 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "4",
@@ -155,11 +154,11 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "5",
@@ -171,187 +170,187 @@ let A = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: _[1].id,
-            planName: _[1].name,
+            planId: m[1].id,
+            planName: m[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
-            status: i.M.ONLINE,
+            status: s.M.ONLINE,
             serverIP: "127.0.0.1",
             gameServerPanelUrl: "https://google.com",
             entitlementId: "6",
         },
     ];
-var I = n(24641);
-function f(e) {
+var E = i(24641);
+function p(e) {
     let t = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({ title: e.title, description: e.description }));
                 return { id: e.id, name: e.name, cost: e.tenant_metadata.boost_price, specifications: t };
             })
             .sort((e, t) => t.cost - e.cost),
-        n = t.length > 0 ? Math.min(...t.map((e) => e.cost)) : 0;
+        i = t.length > 0 ? Math.min(...t.map((e) => e.cost)) : 0;
     return {
         id: e.id,
         name: e.name,
         gameId: e.tenant_metadata?.guild_monetization?.game_server?.game_application_id ?? "",
         provider: e.tenant_metadata?.guild_monetization?.game_server?.provider,
         plans: t,
-        baseCost: n,
+        baseCost: i,
         disabled: e.tenant_metadata?.guild_monetization?.game_server?.disabled,
         early_access: e.tenant_metadata?.guild_monetization?.game_server?.early_access,
         can_market: e.tenant_metadata?.guild_monetization?.game_server?.can_market,
     };
 }
-function p(e) {
+function _(e) {
     return { id: e.id, name: e.name, countryCode: e.country_code, pingUrl: e.ping_url, enabled: e.enabled };
 }
-var T = n(628049),
-    m = n(652215);
-function g(e) {
+var f = i(628049),
+    A = i(652215);
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t)
         return void setTimeout(() => {
-            a.h.dispatch({
+            r.h.dispatch({
                 type: "GAME_SERVER_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: A.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: T.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5e3);
-    let n = l.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, d.aP)({
-        url: m.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(T.q4),
+    let i = l.default.getCurrentUser()?.isStaff() ?? !1;
+    return (0, c.aP)({
+        url: A.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
         query: {
-            locale: s.default.locale,
+            locale: a.default.locale,
             guild_id: e,
-            include_unpublished_products: n,
-            include_unpublished_collection: n,
+            include_unpublished_products: i,
+            include_unpublished_collection: i,
         },
         oldFormErrors: !0,
-        rejectWithError: (0, r.fT)(),
+        rejectWithError: (0, n.fT)(),
         retries: 2,
     }).then((t) => {
-        let n = t.body.products.reduce((e, t) => {
-            let n = f(t);
-            return (e[n.id] = n), e;
+        let i = t.body.products.reduce((e, t) => {
+            let i = p(t);
+            return (e[i.id] = i), e;
         }, {});
-        a.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: n });
+        r.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: i });
     });
 }
-function S() {
+function x() {
     let e = l.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, d.aP)({
-        url: m.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(T.q4),
-        query: { locale: s.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
+    return (0, c.aP)({
+        url: A.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
+        query: { locale: a.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
         oldFormErrors: !0,
-        rejectWithError: (0, r.fT)(),
+        rejectWithError: (0, n.fT)(),
         retries: 2,
     }).then((e) => {
         let t = e.body.products.reduce((e, t) => {
-            let n = f(t);
-            return (e[n.id] = n), e;
+            let i = p(t);
+            return (e[i.id] = i), e;
         }, {});
-        a.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
+        r.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
     });
 }
-function N(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 ? arguments[2] : void 0;
+        i = arguments.length > 2 ? arguments[2] : void 0;
     return t
         ? (setTimeout(() => {
-              a.h.dispatch({
+              r.h.dispatch({
                   type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
                   instances: h.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
           }, 5e3),
           Promise.resolve())
-        : r.Bo.get({ url: m.Rsh.GAME_SERVERS(e), rejectWithError: !0, retries: 2, signal: n }).then((t) => {
+        : n.Bo.get({ url: A.Rsh.GAME_SERVERS(e), rejectWithError: !0, retries: 2, signal: i }).then((t) => {
               if (null != t.body) {
-                  let n = t.body.reduce((e, t) => ((e[t.id] = (0, I.A)(t)), e), {});
-                  a.h.dispatch({ type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS", guildId: e, instances: n });
+                  let i = t.body.reduce((e, t) => ((e[t.id] = (0, E.A)(t)), e), {});
+                  r.h.dispatch({ type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS", guildId: e, instances: i });
               }
           });
 }
-function C(e, t) {
-    return (0, d.aP)({
-        url: m.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
-        query: { locale: s.default.locale },
+function I(e, t) {
+    return (0, c.aP)({
+        url: A.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
+        query: { locale: a.default.locale },
         rejectWithError: !0,
         retries: 3,
-    }).then((n) => {
-        if (null != n.body) {
-            let i = n.body.tenant_metadata?.guild_monetization?.game_server?.instructions.pc ?? [];
-            a.h.dispatch({
+    }).then((i) => {
+        if (null != i.body) {
+            let s = i.body.tenant_metadata?.guild_monetization?.game_server?.instructions.pc ?? [];
+            r.h.dispatch({
                 type: "GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS",
                 guildId: e,
                 skuId: t,
-                instructions: i,
+                instructions: s,
             });
         }
     });
 }
-function O(e, t) {
+function b(e, t) {
     e &&
-        o.default.track(m.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+        o.default.track(A.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: l.default.getCurrentUser()?.id,
             provider: t,
         });
 }
 function R() {
-    a.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
+    r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
-function L(e, t) {
-    a.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
+function N(e, t) {
+    r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function D(e, t, n, i) {
-    return r.Bo.post({
-        url: m.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        body: { game_server_name: n, game_server_region: i },
+function j(e, t, i, s) {
+    return n.Bo.post({
+        url: A.Rsh.GUILD_POWERUP_TOGGLE(e, t),
+        body: { game_server_name: i, game_server_region: s },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function y(e, t, n, i) {
-    return r.Bo.patch({
-        url: m.Rsh.GUILD_POWERUP_UPDATE(e, t),
-        body: { game_server_name: i, sku_id: n },
+function C(e, t, i, s) {
+    return n.Bo.patch({
+        url: A.Rsh.GUILD_POWERUP_UPDATE(e, t),
+        body: { game_server_name: s, sku_id: i },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function v(e, t, n) {
-    return r.Bo.del({
-        url: m.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        query: { entitlement_id: n },
+function G(e, t, i) {
+    return n.Bo.del({
+        url: A.Rsh.GUILD_POWERUP_TOGGLE(e, t),
+        query: { entitlement_id: i },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function b(e) {
-    return r.Bo.get({ url: m.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
+function V(e) {
+    return n.Bo.get({ url: A.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
-            a.h.dispatch({
+            r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(p).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.map(_).sort((e, t) => e.name.localeCompare(t.name)),
             });
         },
     );
 }
-function M() {
-    return r.Bo.get({ url: m.Rsh.GAME_SERVER_MY_REGIONS, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
+function y() {
+    return n.Bo.get({ url: A.Rsh.GAME_SERVER_MY_REGIONS, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
-            a.h.dispatch({
+            r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.regions.map(p).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.regions.map(_).sort((e, t) => e.name.localeCompare(t.name)),
                 creationDisabled: !0 === e.body.creation_disabled,
             });
         },
     );
 }
-function P() {
-    return r.Bo.get({ url: m.Rsh.GAME_SERVERS_ME, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then((e) => {
+function M() {
+    return n.Bo.get({ url: A.Rsh.GAME_SERVERS_ME, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then((e) => {
         let t = e.body;
-        a.h.dispatch({
+        r.h.dispatch({
             type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
             gameServers: t.game_servers ?? [],
             maxServers: t.max_game_servers,
@@ -359,44 +358,44 @@ function P() {
     });
 }
 function U(e) {
-    let t = c.A.getGameServers().find((t) => t.subscription_id === e);
+    let t = d.A.getGameServers().find((t) => t.subscription_id === e);
     null != t &&
-        a.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: i.M.STARTING } });
+        r.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: s.M.STARTING } });
 }
-function w(e, t) {
-    let n = c.A.getGameServers().find((t) => t.subscription_id === e);
-    return null == n
+function P(e, t) {
+    let i = d.A.getGameServers().find((t) => t.subscription_id === e);
+    return null == i
         ? Promise.resolve()
-        : (a.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...n, name: t } }),
-          r.Bo.patch({ url: m.Rsh.GAME_SERVER_ME(n.id), body: { name: t }, rejectWithError: !0 })
+        : (r.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...i, name: t } }),
+          n.Bo.patch({ url: A.Rsh.GAME_SERVER_ME(i.id), body: { name: t }, rejectWithError: !0 })
               .then(() => {
-                  P().catch(() => {});
+                  M().catch(() => {});
               })
               .catch((e) => {
-                  throw (P().catch(() => {}), e);
+                  throw (M().catch(() => {}), e);
               }));
 }
-function G(e) {
-    let t = c.A.getGameServers().find((t) => t.id === e);
+function O(e) {
+    let t = d.A.getGameServers().find((t) => t.id === e);
     return (
         null != t &&
-            a.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: i.M.STARTING } }),
-        r.Bo.post({ url: m.Rsh.GAME_SERVER_ME_WAKE(e), rejectWithError: !0 })
+            r.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: s.M.STARTING } }),
+        n.Bo.post({ url: A.Rsh.GAME_SERVER_ME_WAKE(e), rejectWithError: !0 })
             .then((e) => {
                 let t = e.body;
-                a.h.dispatch({
+                r.h.dispatch({
                     type: "GAME_SERVER_UPDATE",
                     guildId: void 0,
-                    gameServer: t.status === i.M.SLEEPING ? { ...t, status: i.M.STARTING } : t,
+                    gameServer: t.status === s.M.SLEEPING ? { ...t, status: s.M.STARTING } : t,
                 });
             })
             .catch((e) => {
-                throw (P().catch(() => {}), e);
+                throw (M().catch(() => {}), e);
             })
     );
 }
-function x(e, t) {
-    return r.Bo.post({ url: m.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
-        a.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, I.A)(t.body) });
+function L(e, t) {
+    return n.Bo.post({ url: A.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
+        r.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, E.A)(t.body) });
     });
 }

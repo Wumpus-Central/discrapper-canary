@@ -20,7 +20,7 @@ function h(t, n) {
         t.isManaged() &&
             ((o = u.intl.formatToPlainString(u.t.hVGjEW, { name: e })), (h = u.intl.format(u.t.IK1Qvs, { name: e }))),
             (0, l.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([a.e("56852"), a.e("37803")]).then(a.bind(a, 148166));
+                let { default: t } = await Promise.all([a.e("556852"), a.e("137803")]).then(a.bind(a, 148166));
                 return (n) => (0, i.jsx)(t, { title: o, body: h, onSubmit: p, ...n });
             });
     }, [t, n]);

@@ -168,11 +168,11 @@ function Z(e) {
                 null != ei &&
                     (0, g.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("27574"),
-                            n.e("21149"),
-                            n.e("59957"),
-                            n.e("28136"),
-                            n.e("16084"),
+                            n.e("827574"),
+                            n.e("121149"),
+                            n.e("159957"),
+                            n.e("728136"),
+                            n.e("216084"),
                             n.e("36624"),
                             n.e("22547"),
                         ]).then(n.bind(n, 1310));
@@ -205,7 +205,7 @@ function Z(e) {
                 action: W.AG.DOWNLOAD,
             }),
                 (0, g.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("39981"), n.e("44602"), n.e("25280")]).then(
+                    let { default: e } = await Promise.all([n.e("773708"), n.e("944602"), n.e("825280")]).then(
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -223,7 +223,7 @@ function Z(e) {
                         action: W.AG.ADD_APP,
                     }),
                     (0, g.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("36728"), n.e("66003")]).then(n.bind(n, 258942));
+                        let { default: e } = await Promise.all([n.e("436728"), n.e("566003")]).then(n.bind(n, 258942));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 guildId: ei.id ?? "",
@@ -385,7 +385,7 @@ function Z(e) {
                         style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl:
-                                "https://cdn.discordapp.com/assets/content/4c6d9cf3ddf3b92b4cdc14d3f240caf669e515496180922dff9b608e4d42555d.svg",
+                                "https://cdn.discordapp.com/assets/content/bc3217e772906510d881b75ebefea754b9c3ba903ddf6f994e46e5c5a85770a3.svg",
                             header: $.intl.string($.t["6Qbqxw"]),
                             completed: eg,
                             onClick: eS,

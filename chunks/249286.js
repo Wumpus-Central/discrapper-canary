@@ -1,98 +1,99 @@
-n.d(t, { A: () => f });
-var l = n(582128),
-    u = n(17928),
-    i = n(192308),
-    o = n(688810),
-    r = n(987144),
-    s = n(71393),
-    a = n(403362),
-    c = n(645619),
-    d = n(864310),
-    p = n(568065),
-    A = n(181940),
-    b = n(477900),
-    E = n(652215);
-function h(e, t, l) {
-    l && (0, i.closeAllModals)(),
+l.d(t, { A: () => E });
+var n = l(582128),
+    u = l(17928),
+    o = l(192308),
+    r = l(688810),
+    i = l(987144),
+    s = l(71393),
+    a = l(403362),
+    d = l(645619),
+    c = l(864310),
+    p = l(568065),
+    b = l(181940),
+    A = l(477900),
+    h = l(652215);
+function f(e, t, n) {
+    n && (0, o.closeAllModals)(),
         null != t &&
-            (0, i.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([
-                    n.e("28744"),
-                    n.e("90540"),
-                    n.e("34654"),
-                    n.e("64827"),
-                    n.e("84569"),
-                    n.e("22455"),
-                    n.e("48317"),
-                    n.e("6350"),
-                    n.e("69149"),
-                    n.e("49379"),
-                    n.e("45046"),
-                    n.e("35016"),
-                    n.e("80565"),
-                    n.e("957"),
-                    n.e("50186"),
-                    n.e("42592"),
-                ]).then(n.bind(n, 843214));
-                return (n) => (0, b.jsx)(l, { guildId: e, powerup: t, ...n });
+            (0, o.openModalLazy)(async () => {
+                let { default: n } = await Promise.all([
+                    l.e("697106"),
+                    l.e("558295"),
+                    l.e("334654"),
+                    l.e("454048"),
+                    l.e("364827"),
+                    l.e("784569"),
+                    l.e("322455"),
+                    l.e("770698"),
+                    l.e("706350"),
+                    l.e("652038"),
+                    l.e("669149"),
+                    l.e("51763"),
+                    l.e("135016"),
+                    l.e("980565"),
+                    l.e("200957"),
+                    l.e("50186"),
+                    l.e("542592"),
+                ]).then(l.bind(l, 843214));
+                return (l) => (0, A.jsx)(n, { guildId: e, powerup: t, ...l });
             });
 }
-function f(e, t) {
-    let { skipActivateModal: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { analyticsLocations: i } = (0, o.Ay)(),
-        { onToggle: b, isLoading: f, error: L } = (0, A.A)(e, t),
+function E(e, t) {
+    let { skipActivateModal: l } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { analyticsLocations: o } = (0, r.Ay)(),
+        { onToggle: A, isLoading: E, error: g } = (0, b.A)(e, t),
         P = (0, u.bG)([s.A], () => s.A.getGuild(e)),
-        g = (function (e, t) {
-            let n = (0, u.bG)([s.A], () => s.A.getGuild(e)),
-                i = (0, u.bG)([c.A], () => c.A.getStateForGuild(e)),
-                { spent: o } = (0, d.A)(e),
-                r = l.useMemo(() => {
-                    if (null == t || t.type !== p.o9.LEVEL || null == i) return [];
+        m = (function (e, t) {
+            let l = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+                o = (0, u.bG)([d.A], () => d.A.getStateForGuild(e)),
+                { spent: r } = (0, c.A)(e),
+                i = n.useMemo(() => {
+                    if (null == t || t.type !== p.o9.LEVEL || null == o) return [];
                     let e = p.y7[t.skuId];
                     return null == e
                         ? []
                         : Object.entries(p.wr)
                               .filter((t) => {
-                                  let [n, l] = t;
-                                  return l === e && null != i.unlockedPowerups[n];
+                                  let [l, n] = t;
+                                  return n === e && null != o.unlockedPowerups[l];
                               })
                               .map((e) => {
                                   let [t] = e;
-                                  return i.allPowerups[t];
+                                  return o.allPowerups[t];
                               })
                               .filter(a.Vq);
-                }, [t, i]),
-                A = r?.reduce((e, t) => e + t.cost, 0);
-            return Math.max((n?.premiumSubscriberCount ?? 0) - o + (A ?? 0), 0);
+                }, [t, o]),
+                b = i?.reduce((e, t) => e + t.cost, 0);
+            return Math.max((l?.premiumSubscriberCount ?? 0) - r + (b ?? 0), 0);
         })(e, t);
     return {
-        onActivate: l.useCallback(
+        onActivate: n.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    { shouldCloseAllModals: l = !0 } = e;
+                    { shouldCloseAllModals: n = !0 } = e;
                 if (null != P && null != t)
-                    return g < t.cost
-                        ? void (0, r.g)({
+                    return m < t.cost
+                        ? void (0, i.g)({
                               analyticsLocation: {
-                                  page: E.liQ.GUILD_POWERUPS_OVERVIEW,
-                                  section: E.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                                  page: h.liQ.GUILD_POWERUPS_OVERVIEW,
+                                  section: h.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - g,
-                              analyticsLocations: i,
+                              numberOfBoostsToAdd: t.cost - m,
+                              analyticsLocations: o,
                               guild: P,
                               intent: t.type === p.o9.LEVEL ? p.Pn.LEVEL : p.Pn.PERK,
                               onSubscribeComplete: () =>
-                                  b(!0)?.then(() => {
-                                      n || h(P.id, t, l);
+                                  A(!0)?.then(() => {
+                                      l || f(P.id, t, n);
                                   }),
                           })
-                        : b(!0)?.then(() => {
-                              n || h(P.id, t, l);
+                        : A(!0)?.then(() => {
+                              l || f(P.id, t, n);
                           });
             },
-            [b, t, g, i, P, n],
+            [A, t, m, o, P, l],
         ),
-        isLoading: f,
-        error: L,
+        isLoading: E,
+        error: g,
     };
 }

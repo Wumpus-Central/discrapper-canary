@@ -1,0 +1,26 @@
+.container__18169 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    overflow: clip
+}
+
+.wordmark__18169 {
+    color: var(--text-strong);
+    width: 67px
+}
+
+.info__18169 {
+    max-width: 391px;
+    min-width: 0
+}
+
+.buttonContainer__18169 {
+    margin-top: var(--space-12)
+}
+
+.asset__18169 {
+    flex-shrink: 0;
+    height: 138px;
+    width: 138px
+}

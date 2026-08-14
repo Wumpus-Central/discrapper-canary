@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { Ay: () => c, Bu: () => d, OJ: () => o, XY: () => l });
-var i = n(582128),
-    r = n(876230),
+n.d(t, { Ay: () => c, Bu: () => o, OJ: () => s, XY: () => u });
+var r = n(582128),
+    l = n(876230),
     a = n(614269),
-    s = n(53200);
-let l = 8e5,
-    o = 20,
-    d = 30;
+    i = n(53200);
+let u = 8e5,
+    s = 20,
+    o = 30;
 function c(e, t) {
-    let { src: n, initialTimeSec: c = 0, onError: u, onHlsInstance: _, crossOrigin: E = "anonymous" } = t,
-        A = i.useRef(null),
-        [h, I] = i.useState(null),
-        f = i.useRef(c);
-    f.current = c;
-    let p = i.useRef(u),
-        T = i.useRef(_),
-        m = i.useRef(E);
-    (m.current = E),
-        i.useEffect(() => {
-            p.current = u;
-        }, [u]),
-        i.useEffect(() => {
-            T.current = _;
-        }, [_]);
-    let [g, S] = i.useState(!1),
-        N = !g && a.u.isHlsUrl(n) && (0, s.Ap)();
+    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
+        h = r.useRef(null),
+        [p, v] = r.useState(null),
+        x = r.useRef(c);
+    x.current = c;
+    let g = r.useRef(d),
+        E = r.useRef(m),
+        b = r.useRef(f);
+    (b.current = f),
+        r.useEffect(() => {
+            g.current = d;
+        }, [d]),
+        r.useEffect(() => {
+            E.current = m;
+        }, [m]);
+    let [S, C] = r.useState(!1),
+        y = !S && a.u.isHlsUrl(n) && (0, i.Ap)();
     return (
-        i.useEffect(() => {
-            if (!N || null == n || null == e.current) return;
+        r.useEffect(() => {
+            if (!y || null == n || null == e.current) return;
             let t = e.current,
-                i = !1,
+                r = !1,
                 a = null,
                 c = null;
             return (
-                (0, s.E)().then((e) => {
-                    if (i) return;
-                    if (!e.isSupported()) return void S(!0);
-                    let s = (a = new e({
-                        backBufferLength: o,
-                        maxBufferLength: d,
-                        startPosition: f.current,
+                (0, i.E)().then((e) => {
+                    if (r) return;
+                    if (!e.isSupported()) return void C(!0);
+                    let i = (a = new e({
+                        backBufferLength: s,
+                        maxBufferLength: o,
+                        startPosition: x.current,
                         startFragPrefetch: !0,
                         startLevel: -1,
                         xhrSetup: (e) => {
-                            e.withCredentials = "use-credentials" === m.current;
+                            e.withCredentials = "use-credentials" === b.current;
                         },
                         fetchSetup: (e, t) => (
                             (t.credentials = (function (e) {
@@ -54,74 +53,74 @@ function c(e, t) {
                                     case null:
                                         return "same-origin";
                                 }
-                            })(m.current)),
+                            })(b.current)),
                             new Request(e.url, t)
                         ),
                     }));
-                    (A.current = s), I(s), T.current?.(s);
-                    let u = 0;
+                    (h.current = i), v(i), E.current?.(i);
+                    let d = 0;
                     (c = () => {
-                        s.mainForwardBufferInfo?.len === 0 &&
-                            s.trigger(e.Events.BUFFER_FLUSHING, {
+                        i.mainForwardBufferInfo?.len === 0 &&
+                            i.trigger(e.Events.BUFFER_FLUSHING, {
                                 startOffset: t.currentTime,
                                 endOffset: 1 / 0,
                                 type: "video",
                             });
                     }),
-                        s.on(e.Events.FRAG_LOADING, function () {
-                            s.config.minAutoBitrate !== l && (s.config.minAutoBitrate = l);
+                        i.on(e.Events.FRAG_LOADING, function () {
+                            i.config.minAutoBitrate !== u && (i.config.minAutoBitrate = u);
                         }),
-                        s.on(e.Events.ERROR, function (t, n) {
+                        i.on(e.Events.ERROR, function (t, n) {
                             if (
-                                (p.current?.(
+                                (g.current?.(
                                     (function (e, t) {
                                         switch (t) {
                                             case e.ErrorTypes.NETWORK_ERROR:
-                                                return r.SB.HLS_NETWORK_ERROR;
+                                                return l.SB.HLS_NETWORK_ERROR;
                                             case e.ErrorTypes.MEDIA_ERROR:
-                                                return r.SB.HLS_MEDIA_ERROR;
+                                                return l.SB.HLS_MEDIA_ERROR;
                                             case e.ErrorTypes.MUX_ERROR:
-                                                return r.SB.HLS_MUX_ERROR;
+                                                return l.SB.HLS_MUX_ERROR;
                                             case e.ErrorTypes.KEY_SYSTEM_ERROR:
-                                                return r.SB.HLS_KEY_SYSTEM_ERROR;
+                                                return l.SB.HLS_KEY_SYSTEM_ERROR;
                                             default:
-                                                return r.SB.HLS_OTHER_ERROR;
+                                                return l.SB.HLS_OTHER_ERROR;
                                         }
                                     })(e, n.type),
                                     { errorDetails: n.details, fatal: n.fatal },
                                 ),
                                 n.fatal)
                             ) {
-                                if (u >= 3) {
-                                    s.destroy(), (A.current = null), I(null), T.current?.(null);
+                                if (d >= 3) {
+                                    i.destroy(), (h.current = null), v(null), E.current?.(null);
                                     return;
                                 }
-                                switch ((u++, n.type)) {
+                                switch ((d++, n.type)) {
                                     case e.ErrorTypes.NETWORK_ERROR:
-                                        s.startLoad();
+                                        i.startLoad();
                                         break;
                                     case e.ErrorTypes.MEDIA_ERROR:
-                                        s.recoverMediaError();
+                                        i.recoverMediaError();
                                         break;
                                     default:
-                                        s.destroy(), (A.current = null), T.current?.(null);
+                                        i.destroy(), (h.current = null), E.current?.(null);
                                 }
                             }
                         }),
                         t.addEventListener("seeking", c),
-                        s.loadSource(n),
-                        s.attachMedia(t);
+                        i.loadSource(n),
+                        i.attachMedia(t);
                 }),
                 () => {
-                    (i = !0),
+                    (r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
-                            (A.current === a && (a.destroy(), (A.current = null), I(null), T.current?.(null)),
+                            (h.current === a && (a.destroy(), (h.current = null), v(null), E.current?.(null)),
                             t.removeAttribute("src"),
                             t.load());
                 }
             );
-        }, [N, n, e]),
-        { isHlsActive: N, hlsRef: A, hls: h }
+        }, [y, n, e]),
+        { isHlsActive: y, hlsRef: h, hls: p }
     );
 }

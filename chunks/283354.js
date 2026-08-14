@@ -43,7 +43,7 @@ function D(t) {
                                   label: I.intl.string(I.t.XnuOvN),
                                   action: function () {
                                       (0, a.openModalLazy)(async () => {
-                                          let { default: t } = await Promise.all([n.e("11895"), n.e("88869")]).then(
+                                          let { default: t } = await Promise.all([n.e("411895"), n.e("988869")]).then(
                                               n.bind(n, 201700),
                                           );
                                           return (n) => (0, r.jsx)(t, { ...n, entry: e });

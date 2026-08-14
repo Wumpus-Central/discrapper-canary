@@ -1,49 +1,49 @@
-let n = (e) => new Promise((t) => setTimeout(t, e)),
-    o = () => Promise.resolve();
+let r = (e) => new Promise((t) => setTimeout(t, e)),
+    _ = () => Promise.resolve();
 async function i(e) {
-    let { createPromise: t, webpackId: i, name: a } = e,
-        u = 500,
-        c = 0;
+    let { createPromise: t, webpackId: i, name: o } = e,
+        c = 500,
+        u = 0;
     for (;;)
         try {
-            return performance.mark("importWithRetry:start", { detail: { webpackId: i, name: a } }), await t();
+            return performance.mark("importWithRetry:start", { detail: { webpackId: i, name: o } }), await t();
         } catch (e) {
-            if ((console.log(e), i in r.c))
+            if ((console.log(e), i in n.c))
                 throw (
                     (console.log(
                         "Module was found in webpack cache so it has loaded from the network and webpack will not retry",
                     ),
                     e)
                 );
-            if (c >= 50) throw e;
-            await n(u), await o(), (u = Math.min(5e3, 2 * u)), c++;
+            if (u >= 50) throw e;
+            await r(c), await _(), (c = Math.min(5e3, 2 * c)), u++;
         }
 }
-function a(e) {
+function o(e) {
     console.warn(`[libdiscore] ${e}`);
 }
-async function u() {
+async function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-        o = null,
+        _ = null,
         i = e;
     for (;;)
         try {
-            await Promise.resolve().then(r.bind(r, 5426));
+            await Promise.resolve().then(n.bind(n, 5426));
             return;
         } catch (e) {
             if (e instanceof ReferenceError || e instanceof WebAssembly.CompileError) {
-                var u;
+                var c;
                 throw (
-                    ((u = !0),
-                    (window._libdiscoreUnsupportedBrowser = u),
-                    a(`Unsupported browser, skipping libdiscore, error: [${e.name}] ${e.message}`),
+                    ((c = !0),
+                    (window._libdiscoreUnsupportedBrowser = c),
+                    o(`Unsupported browser, skipping libdiscore, error: [${e.name}] ${e.message}`),
                     e)
                 );
             }
-            if (((o = e), delete r.c[5426], 0 == --i)) throw o;
-            a(`Failed to import libdiscore-wasm, retrying... (${i} attempts left), ${o.name}: ${o.message}`),
-                await n(t);
+            if (((_ = e), delete n.c[5426], 0 == --i)) throw _;
+            o(`Failed to import libdiscore-wasm, retrying... (${i} attempts left), ${_.name}: ${_.message}`),
+                await r(t);
         }
 }
 __OVERLAY__ ||
@@ -54,8 +54,8 @@ __OVERLAY__ ||
             var t;
             let e = (async () => {
                 var e;
-                await u(),
-                    (e = await i({ createPromise: () => r.e("14575").then(r.bind(r, 811059)), webpackId: 811059 })),
+                await c(),
+                    (e = await i({ createPromise: () => n.e("914575").then(n.bind(n, 811059)), webpackId: 811059 })),
                     (window._libdiscoreWasm = e);
             })();
             return (t = e), (window._libdiscoreInitPromise = t), e;

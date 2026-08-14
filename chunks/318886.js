@@ -250,7 +250,7 @@ function eB(e) {
         { analyticsLocations: h } = (0, k.Ay)(),
         m = r.useCallback(() => {
             (0, ek.openModalLazy)(async () => {
-                let { default: e } = await n.e("22540").then(n.bind(n, 530951));
+                let { default: e } = await n.e("422540").then(n.bind(n, 530951));
                 return (t) => (0, i.jsx)(e, { ...t, isReminder: c, limit: o, analyticsLocations: h });
             });
         }, [o, c, h]);
@@ -649,7 +649,7 @@ function e6(e) {
                           icon: r ? _.R : M.R,
                           onClick: (e) =>
                               (0, D.L3)(e, async () => {
-                                  let { MessageReminderEditMenu: e } = await n.e("75133").then(n.bind(n, 195404));
+                                  let { MessageReminderEditMenu: e } = await n.e("275133").then(n.bind(n, 195404));
                                   return (n) =>
                                       (0, i.jsx)(e, {
                                           ...n,
@@ -685,11 +685,11 @@ function e6(e) {
         ],
     });
 }
-var e5 = n(702841),
+var e4 = n(702841),
     e7 = n(912592),
-    e4 = n(890856),
+    e5 = n(890856),
     e9 = n(761508),
-    te = n(910425),
+    te = n(566908),
     tt = n(214947),
     tn = n(711950),
     ts = n(322387),
@@ -1005,9 +1005,9 @@ var t3 = n(350527),
     t2 = n(218152),
     t8 = n(970278),
     t6 = n(747926),
-    t5 = n(935208),
+    t4 = n(935208),
     t7 = n(37411),
-    t4 = n(159574);
+    t5 = n(159574);
 function t9(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, N.yK)(
@@ -1017,14 +1017,14 @@ function t9(e) {
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return t5.default.compare(n, t.oldestReadMessageId) > 0;
+                        return t4.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
                         return ee.A.getChannel(t);
                     })
                     .filter(ey.Vq)
-                    .sort((e, t) => t5.default.compare(e.id, t.id))
+                    .sort((e, t) => t4.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
@@ -1052,11 +1052,11 @@ function t9(e) {
                 });
         }),
         (0, i.jsx)("div", {
-            className: t4.k,
+            className: t5.k,
             children: l.map((e) =>
                 (0, i.jsx)(
                     t2.Cp,
-                    { channel: n, children: (0, i.jsx)(t3.Ay, { className: t4.u, threadId: e.id, goToThread: a }) },
+                    { channel: n, children: (0, i.jsx)(t3.Ay, { className: t5.u, threadId: e.id, goToThread: a }) },
                     e.id,
                 ),
             ),
@@ -1079,7 +1079,7 @@ var ne = n(989349),
     nm = n(467073),
     ng = n(491182),
     nx = n(860227),
-    nA = n(655758),
+    nA = n(844659),
     nf = n(375199),
     nj = n(824556),
     nN = n(715628),
@@ -1130,7 +1130,7 @@ let nI = r.memo(function e(t) {
         I = (0, nh.Ay)(l),
         _ = (0, N.bG)(
             [ee.A],
-            () => l.hasFlag(eK.pr7.HAS_THREAD) && ee.A.getChannel(t5.default.castMessageIdAsChannelId(l.id)),
+            () => l.hasFlag(eK.pr7.HAS_THREAD) && ee.A.getChannel(t4.default.castMessageIdAsChannelId(l.id)),
         ),
         M = l.type === eK.lAJ.THREAD_STARTER_MESSAGE && g.state === nd.a.LOADED && null != x,
         b = !M && void 0 === n,
@@ -1464,13 +1464,13 @@ function n$(e, t) {
             .toArray()
             .filter(
                 (t) =>
-                    t5.default.compare(t.id, e.oldestReadMessageId) > 0 &&
-                    0 >= t5.default.compare(t.id, e.newestUnreadMessageId),
+                    t4.default.compare(t.id, e.oldestReadMessageId) > 0 &&
+                    0 >= t4.default.compare(t.id, e.newestUnreadMessageId),
             );
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && n) return e;
     let a = null != s.getAfter(e.oldestReadMessageId) || l[0]?.id === e.oldestUnreadMessageId,
         i = l[l.length - 1],
-        r = t5.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
+        r = t4.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
     return {
         ...e,
         messages: l,
@@ -1527,13 +1527,13 @@ function nQ(e, t, n, s) {
     if (null == a) {
         let e = et.A.getGuild(l.guild_id);
         if (null == e || null == e.joinedAt) return;
-        a = t5.default.fromTimestamp(e.joinedAt.getTime());
+        a = t4.default.fromTimestamp(e.joinedAt.getTime());
     }
     let i = es.Ay.getOldestUnreadMessageId(s),
         r = es.Ay.lastMessageId(s),
         d = es.Ay.getMentionCount(s),
         c = d > 0 || l.isPrivate();
-    if (null == r || t5.default.compare(a, r) >= 0) return;
+    if (null == r || t4.default.compare(a, r) >= 0) return;
     let o = {
         guildId: n,
         channelId: s,
@@ -1553,7 +1553,7 @@ function nQ(e, t, n, s) {
             if (s.isPrivate()) return 1;
             if (es.Ay.getMentionCount(t) > 0) return es.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
-                let e = t5.default.extractTimestamp(n);
+                let e = t4.default.extractTimestamp(n);
                 if (Date.now() - e > n1) return 8;
                 if (Date.now() - e > n0) return 6;
             }
@@ -1615,7 +1615,7 @@ function n6(e) {
         }),
     });
 }
-function n5(e) {
+function n4(e) {
     let { channel: t, channelRecord: n, gotoChannel: s } = e,
         l = ef.hH.useSetting(),
         a = 0 === t.messages.length || nt()(t.messages[0].timestamp).isSame(nt()(), "day"),
@@ -1634,7 +1634,7 @@ function n5(e) {
     let u = o[o.length - 1];
     return (
         null != u &&
-            0 > t5.default.compare(u.id, t.newestUnreadMessageId) &&
+            0 > t4.default.compare(u.id, t.newestUnreadMessageId) &&
             r.push(
                 (0, i.jsx)(
                     "div",
@@ -1690,10 +1690,10 @@ let n7 = r.memo(function (e) {
             ref: s,
             style: h,
             "data-unread-channel-id": t.channelId,
-            children: (0, i.jsx)(n4, { ...e }),
+            children: (0, i.jsx)(n5, { ...e }),
         });
     }),
-    n4 = r.memo(function (e) {
+    n5 = r.memo(function (e) {
         let { channel: t, onJump: n, deleteChannel: s, toggle: l } = e,
             a = (0, N.bG)([ee.A], () => ee.A.getChannel(t.channelId));
         if (
@@ -1761,7 +1761,7 @@ let n7 = r.memo(function (e) {
                     collapsed: t.collapsed,
                     children:
                         "messages" === t.type
-                            ? (0, i.jsx)(n5, { channel: t, channelRecord: a, gotoChannel: d })
+                            ? (0, i.jsx)(n4, { channel: t, channelRecord: a, gotoChannel: d })
                             : "forum" === t.type
                               ? (0, i.jsx)(t9, { channel: t, channelRecord: a, deleteChannel: s })
                               : null,
@@ -2065,7 +2065,7 @@ function sd(e) {
     let { tab: t, setTab: n, closePopout: s } = e,
         l = (0, ep.jv)("RecentsPopout"),
         a = (0, te.Sc)(),
-        r = (0, e5.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
+        r = (0, e4.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
     return (0, i.jsxs)("div", {
         className: sr.wx,
         children: [
@@ -2079,7 +2079,7 @@ function sd(e) {
                         color: "interactive-text-active",
                         children: ei.intl.string(ei.t.GSmTKJ),
                     }),
-                    (0, i.jsxs)(e4.s, {
+                    (0, i.jsxs)(e5.s, {
                         className: sr.ne,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },

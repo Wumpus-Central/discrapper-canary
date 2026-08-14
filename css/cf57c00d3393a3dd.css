@@ -1,0 +1,16 @@
+.container_a592e1 {
+    border-top: 1px solid var(--app-frame-border);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%
+}
+
+.dragRegion_a592e1 {
+    display: none;
+    height: 60px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}

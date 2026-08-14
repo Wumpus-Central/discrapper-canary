@@ -1,0 +1,16 @@
+e.exports = {
+    H1: "splashContainer__0bef9",
+    ZC: "splashContainerHorizontal__0bef9",
+    ED: "priceOs__0bef9",
+    iD: "platform__0bef9",
+    LJ: "exclusiveRegular__0bef9",
+    V9: "exclusivePlaying__0bef9",
+    NB: "splashPlaceholder__0bef9",
+    ZI: "splashVideo__0bef9",
+    pL: "tileBuyButton__0bef9",
+    Ek: "tilePrice__0bef9",
+    ae: "tilePriceWithVisibleBuyButton__0bef9 tilePrice__0bef9",
+    A$: "socialLayerStorefrontCardContainer__0bef9",
+    iZ: "socialLayerStorefrontCardBackgroundImage__0bef9",
+    O7: "socialLayerStorefrontCardImage__0bef9",
+};

@@ -23,12 +23,12 @@ function b(t) {
                 (0, s.openModalLazy)(
                     async () => {
                         let { default: t } = await Promise.all([
-                            i.e("49747"),
-                            i.e("72712"),
-                            i.e("89545"),
-                            i.e("11493"),
+                            i.e("243414"),
+                            i.e("677523"),
+                            i.e("989545"),
+                            i.e("311493"),
                             i.e("84704"),
-                            i.e("86197"),
+                            i.e("286197"),
                         ]).then(i.bind(i, 615715));
                         return (e) => (0, n.jsx)(t, { reason: u.d.USER_SETTINGS_UPDATE, ...e });
                     },
@@ -66,7 +66,7 @@ function b(t) {
             align: "center",
             gap: "md",
             children: [
-                (0, n.jsx)(h.A, { Icon: c.u }),
+                (0, n.jsx)(h.A, { icon: c.u }),
                 (0, n.jsx)(o.B, {
                     direction: "vertical",
                     gap: 4,

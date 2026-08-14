@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(477900);
-n(582128);
-var r = n(900797),
-    a = n(847374),
-    s = n(921853),
-    l = n(320448),
-    o = n(197060);
-let d = { UP: o.hv, RIGHT: o.kL, DOWN: o.Gb, LEFT: o.PI };
-function c(e) {
+s.d(r, { A: () => u });
+var e = s(477900);
+s(582128);
+var c = s(900797),
+    o = s(847374),
+    i = s(921853),
+    a = s(320448),
+    l = s(197060);
+let h = { UP: l.hv, RIGHT: l.kL, DOWN: l.Gb, LEFT: l.PI };
+function n(t) {
     let {
-            direction: t = d.DOWN,
-            width: n = 24,
-            height: o = 24,
-            color: c = "currentColor",
+            direction: r = h.DOWN,
+            width: s = 24,
+            height: l = 24,
+            color: n = "currentColor",
             className: u,
-            foreground: _,
-            expanded: E,
-            ...A
-        } = e,
-        h = t;
-    !0 === E ? (h = d.DOWN) : !1 === E && (h = d.RIGHT);
-    let I = { [d.UP]: r.t, [d.DOWN]: a.a, [d.LEFT]: s.n, [d.RIGHT]: l._ }[h];
-    return (0, i.jsx)(I, {
-        ...A,
+            foreground: p,
+            expanded: d,
+            ...k
+        } = t,
+        C = r;
+    !0 === d ? (C = h.DOWN) : !1 === d && (C = h.RIGHT);
+    let D = { [h.UP]: c.t, [h.DOWN]: o.a, [h.LEFT]: i.n, [h.RIGHT]: a._ }[C];
+    return (0, e.jsx)(D, {
+        ...k,
         className: u,
         size: "custom",
-        width: n,
-        height: o,
-        color: c ?? "currentColor",
-        colorClass: _,
+        width: s,
+        height: l,
+        color: n ?? "currentColor",
+        colorClass: p,
     });
 }
-c.Directions = d;
-let u = c;
+n.Directions = h;
+let u = n;

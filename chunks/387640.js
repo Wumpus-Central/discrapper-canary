@@ -257,9 +257,11 @@ let ev = function () {
                         text: en.intl.string(en.t.hvVgAZ),
                         onClick: () => {
                             (0, u.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([i.e("99709"), i.e("3370"), i.e("69595")]).then(
-                                    i.bind(i, 526710),
-                                );
+                                let { default: e } = await Promise.all([
+                                    i.e("499709"),
+                                    i.e("403370"),
+                                    i.e("569595"),
+                                ]).then(i.bind(i, 526710));
                                 return (t) => (0, a.jsx)(e, { ...t });
                             });
                         },

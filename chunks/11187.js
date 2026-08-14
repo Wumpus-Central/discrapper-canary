@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { QL: () => s, mW: () => a });
-var i = n(336807),
-    r = n(652215);
-function a(e) {
-    if (e.providerName !== i.v7) return;
+r.d(t, { QL: () => i, mW: () => l });
+var s = r(336807),
+    n = r(652215);
+function l(e) {
+    if (e.providerName !== s.v7) return;
     let { thumbnail: t } = e;
     if (null != t) return t.proxyURL ?? t.url ?? t.uri;
 }
-function s(e, t, n) {
-    let i = null != t ? { [t]: 1 } : {},
-        { offset: a, limit: s, results: l, totalResults: o } = n ?? {};
+function i(e, t, r) {
+    let s = null != t ? { [t]: 1 } : {},
+        { offset: l, limit: i, results: a, totalResults: o } = r ?? {};
     return {
-        search_type: r.I4_.GIF,
+        search_type: n.I4_.GIF,
         load_id: e,
-        limit: s,
-        offset: a,
-        page: null != s && null != a ? Math.floor(a / s) + 1 : 1,
+        limit: i,
+        offset: l,
+        page: null != i && null != l ? Math.floor(l / i) + 1 : 1,
         total_results: o,
-        page_results: null != l ? l : null,
-        num_modifiers: Object.keys(i).length,
-        modifiers: i,
+        page_results: null != a ? a : null,
+        num_modifiers: Object.keys(s).length,
+        modifiers: s,
     };
 }

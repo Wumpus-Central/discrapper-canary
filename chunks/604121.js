@@ -22,7 +22,7 @@ class o extends a.Component {
             shouldAnimate: l,
         } = this.props;
         null != this.animation && this.animation.destroy();
-        let [o, { default: d }] = await Promise.all([e(), n.e("96382").then(n.t.bind(n, 883885, 23))]);
+        let [o, { default: d }] = await Promise.all([e(), n.e("996382").then(n.t.bind(n, 883885, 23))]);
         if (null == this.animationRef.current) return;
         let c =
             "object" == typeof o && null != o && "default" in o && "string" == typeof o.default

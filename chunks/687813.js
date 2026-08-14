@@ -77,9 +77,9 @@ for (var y = 256; y < 280; ++y) k[y] = 7;
 for (var y = 280; y < 288; ++y) k[y] = 8;
 for (var M = new f(32), y = 0; y < 32; ++y) M[y] = 5;
 var C = x(k, 9, 0),
-    S = 88245 != e.j ? x(k, 9, 1) : null,
+    S = 588245 != e.j ? x(k, 9, 1) : null,
     A = x(M, 5, 0),
-    z = 88245 != e.j ? x(M, 5, 1) : null,
+    z = 588245 != e.j ? x(M, 5, 1) : null,
     T = function (r) {
         for (var n = r[0], e = 1; e < r.length; ++e) r[e] > n && (n = r[e]);
         return n;

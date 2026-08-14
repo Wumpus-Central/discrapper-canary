@@ -4,10 +4,10 @@ var i = n(477900),
     s = n(284009),
     a = n.n(s),
     r = n(17928);
-if (21552 == n.j) var o = n(939249);
-if (21552 == n.j) var c = n(834730);
-if (21552 == n.j) var d = n(696986);
-if (21552 == n.j) var u = n(297264);
+if (221552 == n.j) var o = n(939249);
+if (221552 == n.j) var c = n(834730);
+if (221552 == n.j) var d = n(696986);
+if (221552 == n.j) var u = n(297264);
 var m = n(241524),
     h = n(289397),
     g = n(607470),
@@ -16,9 +16,9 @@ var m = n(241524),
     x = n(885386),
     f = n(696451),
     E = n(287809),
-    C = n(792831),
-    _ = n(427262),
-    I = n(218394),
+    I = n(792831),
+    C = n(427262),
+    _ = n(218394),
     v = n(386952),
     N = n(381969),
     j = n(920814),
@@ -33,14 +33,14 @@ function b(e) {
         children: [
             (0, i.jsx)(c.E, { variant: "text-sm/medium", color: "text-strong", children: S.intl.string(S.t.J4cw1q) }),
             (0, i.jsx)(d.h, { size: 4, horizontal: !0 }),
-            (0, i.jsx)(C.A, { direction: C.A.Directions.RIGHT, className: y.wY }),
+            (0, i.jsx)(I.A, { direction: I.A.Directions.RIGHT, className: y.wY }),
         ],
     });
 }
 function R(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         l = x.kt.useSetting(),
-        s = (0, I.j)() && l,
+        s = (0, _.j)() && l,
         [a, r] = (0, A.A)(t, s),
         o = s
             ? (0, i.jsx)(g.A, {
@@ -69,19 +69,19 @@ function L(e) {
             let e = E.default.getCurrentUser();
             a()(null != e, "user cannot be null");
             let t = f.Ay.getMember(s, e.id);
-            return { nickname: t?.nick ?? _.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
+            return { nickname: t?.nick ?? C.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
         }, [s]),
         { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
-        C = (n?.description?.trim().length ?? 0) > 0,
-        [I, L] = l.useState(1),
+        I = (n?.description?.trim().length ?? 0) > 0,
+        [_, L] = l.useState(1),
         M = (0, m.A)("(max-width: 1439px)"),
         { selectedTab: k, isPhantomPreview: O } = (0, N.k)(),
         P = k === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
-        D = C
+        D = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: M || 2 === I ? 2 : 3,
+                          lineClamp: M || 2 === _ ? 2 : 3,
                           children: (0, i.jsx)(c.E, {
                               variant: "text-sm/normal",
                               color: "text-default",

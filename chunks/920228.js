@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(582128);
-function r(e) {
-    let { videoRef: t, enabled: n, onPipPause: r, onHiddenPause: a } = e,
-        s = i.useRef(r),
-        l = i.useRef(a),
-        o = i.useRef(!1);
-    i.useEffect(() => {
-        (s.current = r), (l.current = a);
-    }, [r, a]),
-        i.useEffect(() => {
+n.d(t, { A: () => l });
+var r = n(582128);
+function l(e) {
+    let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: a } = e,
+        i = r.useRef(l),
+        u = r.useRef(a),
+        s = r.useRef(!1);
+    r.useEffect(() => {
+        (i.current = l), (u.current = a);
+    }, [l, a]),
+        r.useEffect(() => {
             if (!n) return;
             let e = t.current;
             if (null != e)
                 return (
-                    e.addEventListener("enterpictureinpicture", i),
-                    e.addEventListener("play", r),
+                    e.addEventListener("enterpictureinpicture", r),
+                    e.addEventListener("play", l),
                     e.addEventListener("pause", a),
                     () => {
-                        e.removeEventListener("enterpictureinpicture", i),
-                            e.removeEventListener("play", r),
+                        e.removeEventListener("enterpictureinpicture", r),
+                            e.removeEventListener("play", l),
                             e.removeEventListener("pause", a);
                     }
                 );
-            function i() {
-                o.current || s.current();
-            }
             function r() {
+                s.current || i.current();
+            }
+            function l() {
                 document.pictureInPictureElement === e
-                    ? s.current()
+                    ? i.current()
                     : "hidden" === document.visibilityState
-                      ? l.current()
-                      : (o.current = !1);
+                      ? u.current()
+                      : (s.current = !1);
             }
             function a() {
-                o.current = !0;
+                s.current = !0;
             }
         }, [t, n]);
 }

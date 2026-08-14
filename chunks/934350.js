@@ -191,13 +191,13 @@ var W = class {
     }
 };
 function G() {
-    return i || (i = Promise.all([d.e("55205"), d.e("84344")]).then(d.bind(d, 878635))), i;
+    return i || (i = Promise.all([d.e("655205"), d.e("684344")]).then(d.bind(d, 878635))), i;
 }
 function p() {
     G(),
         e ||
             (e = (async () =>
-                (await Promise.all([d.e("55205"), d.e("82992")]).then(d.bind(d, 206547))).loadOpenVidu())());
+                (await Promise.all([d.e("655205"), d.e("782992")]).then(d.bind(d, 206547))).loadOpenVidu())());
 }
 var N = class {
         constructor(l, t) {

@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { u: () => i });
-class i {
+n.d(t, { u: () => r });
+class r {
     static isHlsUrl(e) {
         return null != e && e.split("?")[0].endsWith(".m3u8");
     }

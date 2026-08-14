@@ -128,7 +128,7 @@ function M(e) {
                 (e) =>
                     (0, a.jsx)(R.P, {
                         ...e,
-                        src: () => n.e("78611").then(n.t.bind(n, 433886, 19)),
+                        src: () => n.e("278611").then(n.t.bind(n, 433886, 19)),
                         ref: r,
                         initialAnimation: s.current,
                         markers: E,
@@ -168,7 +168,7 @@ function T(e) {
                 (e) =>
                     (0, a.jsx)(R.P, {
                         ...e,
-                        src: () => n.e("45492").then(n.t.bind(n, 653727, 19)),
+                        src: () => n.e("245492").then(n.t.bind(n, 653727, 19)),
                         ref: r,
                         initialAnimation: s.current,
                         markers: k,

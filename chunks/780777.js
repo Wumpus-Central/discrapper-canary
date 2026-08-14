@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(477900),
-    r = n(582128);
-class a extends r.Component {
+i.d(t, { A: () => r });
+var a = i(477900),
+    n = i(582128);
+class s extends n.Component {
     _input = null;
     static defaultProps = { multiple: !1, disabled: !1, tabIndex: 0 };
     activateUploadDialogue = () => {
@@ -18,13 +17,13 @@ class a extends r.Component {
         e.currentTarget.value = null;
     };
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: r, "aria-label": a, "aria-hidden": s, id: l } = this.props,
+        let { disabled: e, tabIndex: t, className: i, name: n, "aria-label": s, "aria-hidden": l, id: r } = this.props,
             o = "";
         return (
             this.props.filters &&
                 (o = this.props.filters.map((e) => e.extensions.map((e) => `.${e}`).join(",")).join(",")),
-            (0, i.jsx)("input", {
-                id: l,
+            (0, a.jsx)("input", {
+                id: r,
                 style: {
                     position: "absolute",
                     top: 0,
@@ -35,7 +34,7 @@ class a extends r.Component {
                     cursor: e ? "not-allowed" : "pointer",
                     fontSize: 0,
                 },
-                className: n || "file-input",
+                className: i || "file-input",
                 disabled: e,
                 type: "file",
                 tabIndex: t,
@@ -44,9 +43,9 @@ class a extends r.Component {
                 onClick: this.props.onClick,
                 multiple: this.props.multiple,
                 accept: o,
-                name: r,
-                "aria-label": a,
-                "aria-hidden": s || void 0,
+                name: n,
+                "aria-label": s,
+                "aria-hidden": l || void 0,
                 ref: (e) => {
                     this._input = e;
                 },
@@ -55,8 +54,8 @@ class a extends r.Component {
         );
     }
 }
-class s extends r.Component {
-    _ref = r.createRef();
+class l extends n.Component {
+    _ref = n.createRef();
     constructor(e) {
         super(e), (this.setRef = this.setRef.bind(this));
     }
@@ -67,7 +66,7 @@ class s extends r.Component {
         this._ref = e;
     }
     render() {
-        return (0, i.jsx)(a, { ref: this.setRef, ...this.props });
+        return (0, a.jsx)(s, { ref: this.setRef, ...this.props });
     }
 }
-let l = s;
+let r = l;

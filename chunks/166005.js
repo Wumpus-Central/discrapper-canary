@@ -219,7 +219,7 @@ function Q(e, l, n) {
 function U() {
     return i.useCallback((e, l) => {
         (0, p.L3)(e, async () => {
-            let { default: e } = await n.e("15687").then(n.bind(n, 646938));
+            let { default: e } = await n.e("715687").then(n.bind(n, 646938));
             return (n) => (0, t.jsx)(e, { ...n, id: l, label: H.intl.string(H.t.sMsaLg) });
         });
     }, []);

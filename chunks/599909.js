@@ -141,7 +141,7 @@ function z() {
         e
             ? (0, B.A)({ source: "favorites_empty_sidebar" })
             : (0, T.openModalLazy)(async () => {
-                  let { default: e } = await n.e("7476").then(n.bind(n, 777023));
+                  let { default: e } = await n.e("307476").then(n.bind(n, 777023));
                   return (t) => (0, l.jsx)(e, { ...t, source: "favorites_empty_sidebar" });
               });
     }, []);

@@ -47,14 +47,14 @@ function I(e) {
 }
 var S = n(263967);
 let C = "role_subscriptions_eligibility_modal";
-function _(e) {
+function v(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
     return (0, i.jsx)(r.$, {
         variant: "expressive",
         onClick: function () {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("82544"), n.e("19631"), n.e("18266")]).then(
+                    let { default: e } = await Promise.all([n.e("982544"), n.e("419631"), n.e("818266")]).then(
                         n.bind(n, 258118),
                     );
                     return (n) =>
@@ -75,7 +75,7 @@ function _(e) {
         icon: a.E,
     });
 }
-function v(e) {
+function _(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -150,8 +150,8 @@ function T(e) {
     return o
         ? c
             ? (0, i.jsx)(I, { ...n })
-            : (0, i.jsx)(v, { guild: t, checkboxText: d })
-        : (0, i.jsx)(_, {
+            : (0, i.jsx)(_, { guild: t, checkboxText: d })
+        : (0, i.jsx)(v, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,

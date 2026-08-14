@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(429913),
-    r = n(569926),
-    a = n(582128),
-    s = n(227309),
-    l = n(871633);
-function o(e) {
-    let { applicationId: t, gameId: n } = e,
-        o = (0, i.h)(null == n ? t : void 0),
-        d = (function (e) {
-            let { applicationId: t, gameId: n } = e,
-                s = (0, i.h)(null == n ? t : void 0),
-                l = null == n && null != t && null == s,
-                o = a.useMemo(() => (null != n ? n : null == s ? null : s.getCanonicalGameId()), [n, s]),
-                { data: d, isLoading: c } = (0, r.I)(o);
-            return { gameId: o, gameRecord: d ?? null, isLoading: l || c };
-        })({ applicationId: t, gameId: null != o && (0, l.bB)(o) ? s.aX : n }),
-        c = null != d.gameRecord && (0, l.Zb)(d.gameRecord),
-        { data: u, isLoading: _ } = (0, r.I)(c ? s.aX : void 0);
-    return c ? { gameId: s.aX, gameRecord: u ?? null, isLoading: _ } : d;
+l.d(e, { A: () => r });
+var t = l(429913),
+    a = l(569926),
+    o = l(582128),
+    u = l(227309),
+    i = l(871633);
+function r(n) {
+    let { applicationId: e, gameId: l } = n,
+        r = (0, t.h)(null == l ? e : void 0),
+        d = (function (n) {
+            let { applicationId: e, gameId: l } = n,
+                u = (0, t.h)(null == l ? e : void 0),
+                i = null == l && null != e && null == u,
+                r = o.useMemo(() => (null != l ? l : null == u ? null : u.getCanonicalGameId()), [l, u]),
+                { data: d, isLoading: c } = (0, a.I)(r);
+            return { gameId: r, gameRecord: d ?? null, isLoading: i || c };
+        })({ applicationId: e, gameId: null != r && (0, i.bB)(r) ? u.aX : l }),
+        c = null != d.gameRecord && (0, i.Zb)(d.gameRecord),
+        { data: s, isLoading: f } = (0, a.I)(c ? u.aX : void 0);
+    return c ? { gameId: u.aX, gameRecord: s ?? null, isLoading: f } : d;
 }

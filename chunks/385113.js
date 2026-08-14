@@ -1,89 +1,88 @@
-"use strict";
-n.d(t, { A: () => m, e: () => a });
-var i,
-    r = n(17928),
-    s = n(228366),
-    a =
-        (((i = {}).NOT_FETCHED = "NOT_FETCHED"),
-        (i.FETCHING = "FETCHING"),
-        (i.SUCCESS = "SUCCESS"),
-        (i.FAILURE = "FAILURE"),
-        i);
-let o = [],
-    l = {},
-    u = {},
+i.d(t, { A: () => R, e: () => r });
+var E,
+    s = i(17928),
+    n = i(228366),
+    r =
+        (((E = {}).NOT_FETCHED = "NOT_FETCHED"),
+        (E.FETCHING = "FETCHING"),
+        (E.SUCCESS = "SUCCESS"),
+        (E.FAILURE = "FAILURE"),
+        E);
+let l = [],
+    a = {},
+    _ = {},
+    S = "NOT_FETCHED",
+    A = [],
     c = "NOT_FETCHED",
-    d = [],
-    _ = "NOT_FETCHED",
-    h = [];
-function f(e) {
+    o = [];
+function T(e) {
     if (0 !== Object.keys(e).length) {
-        for (let [t, n] of Object.entries(e)) {
-            let e = new Set(n.map((e) => e.config_id)),
-                i = l[t]?.filter((t) => !e.has(t.config_id)) ?? [];
-            l[t] = [...i, ...n];
+        for (let [t, i] of Object.entries(e)) {
+            let e = new Set(i.map((e) => e.config_id)),
+                E = a[t]?.filter((t) => !e.has(t.config_id)) ?? [];
+            a[t] = [...E, ...i];
         }
-        (l = { ...l }), (u = { ...u, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
+        (a = { ...a }), (_ = { ..._, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-function p() {
-    (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (h = []);
+function I() {
+    (a = {}), (_ = {}), (S = "NOT_FETCHED"), (A = []), (c = "NOT_FETCHED"), (o = []);
 }
-class E extends r.Ay.Store {
+class d extends s.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
-        return l[e]?.[0] ?? void 0;
+        return a[e]?.[0] ?? void 0;
     }
     getConfigs(e) {
-        return l[e] ?? o;
+        return a[e] ?? l;
     }
     getFetchState(e) {
-        return u[e] ?? "NOT_FETCHED";
+        return _[e] ?? "NOT_FETCHED";
     }
     getFeaturedFetchState() {
-        return c;
+        return S;
     }
     getDeveloperFetchState() {
-        return _;
+        return c;
     }
     getAllConfigsByApplication() {
-        return l;
+        return a;
     }
     getFeaturedApplicationIds() {
-        return d;
+        return A;
     }
     getDeveloperApplicationIds() {
-        return h;
+        return o;
     }
 }
-let m = new E(s.h, {
-    LOGOUT: p,
-    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: p,
+let R = new d(n.h, {
+    LOGOUT: I,
+    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: I,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
-        c = "FETCHING";
+        S = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (c = "SUCCESS"), (d = Object.keys(e.configs)), f(e.configs);
+        (S = "SUCCESS"), (A = Object.keys(e.configs)), T(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
-        c = "FAILURE";
+        S = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
-        _ = "FETCHING";
+        c = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (_ = "SUCCESS"), (h = Object.keys(e.configs)), f(e.configs);
+        (c = "SUCCESS"), (o = Object.keys(e.configs)), T(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
-        _ = "FAILURE";
+        c = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_FETCH_START: function (e) {
-        u = { ...u, [e.applicationId]: "FETCHING" };
+        _ = { ..._, [e.applicationId]: "FETCHING" };
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        f({ [e.applicationId]: e.configs });
+        T({ [e.applicationId]: e.configs });
     },
     APPLICATION_WIDGET_CONFIG_FETCH_FAILURE: function (e) {
-        u = { ...u, [e.applicationId]: "FAILURE" };
+        _ = { ..._, [e.applicationId]: "FAILURE" };
     },
 });

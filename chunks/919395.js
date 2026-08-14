@@ -1,120 +1,119 @@
-"use strict";
-n.d(t, {
-    Ac: () => m,
-    B0: () => c,
-    CP: () => A,
-    N2: () => _,
-    Tu: () => I,
-    WU: () => g,
-    Xf: () => E,
-    a4: () => u,
-    lw: () => f,
-    nZ: () => h,
-    rv: () => d,
-    us: () => p,
-    z5: () => T,
+r.d(n, {
+    Ac: () => P,
+    B0: () => g,
+    CP: () => c,
+    N2: () => d,
+    Tu: () => y,
+    WU: () => v,
+    Xf: () => p,
+    a4: () => f,
+    lw: () => m,
+    nZ: () => A,
+    rv: () => s,
+    us: () => N,
+    z5: () => b,
 }),
-    n(321073),
-    n(582128);
-var i = n(17928),
-    r = n(765178),
-    a = n(836602),
-    s = n(321191),
-    l = n(696451),
-    o = n(375708);
-function d(e, t) {
-    let n = (0, i.bG)([l.Ay], () => (void 0 === t ? null : l.Ay.getMember(t, e.id))),
-        { pendingNameplate: r, pendingErrors: s } = (0, i.cf)([a.A], () => ({
-            pendingNameplate: a.A.getPendingChanges(t).pendingNameplate,
-            pendingErrors: a.A.getErrors(t).nameplate,
+    r(321073),
+    r(582128);
+var t = r(17928),
+    l = r(765178),
+    i = r(836602),
+    a = r(321191),
+    u = r(696451),
+    o = r(375708);
+function s(e, n) {
+    let r = (0, t.bG)([u.Ay], () => (void 0 === n ? null : u.Ay.getMember(n, e.id))),
+        { pendingNameplate: l, pendingErrors: a } = (0, t.cf)([i.A], () => ({
+            pendingNameplate: i.A.getPendingChanges(n).pendingNameplate,
+            pendingErrors: i.A.getErrors(n).nameplate,
         }));
     return {
         userNameplate: e.nameplate,
-        guildNameplate: n?.collectibles?.nameplate,
-        pendingNameplate: r,
-        pendingErrors: s,
+        guildNameplate: r?.collectibles?.nameplate,
+        pendingNameplate: l,
+        pendingErrors: a,
     };
 }
-function c(e, t) {
-    let n = (0, i.bG)([l.Ay], () => (void 0 === t || null == e ? null : l.Ay.getMember(t, e.id))),
+function g(e, n) {
+    let r = (0, t.bG)([u.Ay], () => (void 0 === n || null == e ? null : u.Ay.getMember(n, e.id))),
         {
-            pendingDisplayNameStyles: r,
-            tryItOutDisplayNameStyles: s,
+            pendingDisplayNameStyles: l,
+            tryItOutDisplayNameStyles: a,
             pendingErrors: o,
-        } = (0, i.cf)([a.A], () => ({
-            pendingDisplayNameStyles: a.A.getPendingChanges(t).pendingDisplayNameStyles,
-            tryItOutDisplayNameStyles: a.A.getTryItOutChanges().tryItOutDisplayNameStyles,
-            pendingErrors: a.A.getErrors(t).displayNameStyles,
+        } = (0, t.cf)([i.A], () => ({
+            pendingDisplayNameStyles: i.A.getPendingChanges(n).pendingDisplayNameStyles,
+            tryItOutDisplayNameStyles: i.A.getTryItOutChanges().tryItOutDisplayNameStyles,
+            pendingErrors: i.A.getErrors(n).displayNameStyles,
         }));
     return {
         userDisplayNameStyles: e?.displayNameStyles,
-        guildDisplayNameStyles: n?.displayNameStyles,
-        pendingDisplayNameStyles: r,
-        tryItOutDisplayNameStyles: s,
+        guildDisplayNameStyles: r?.displayNameStyles,
+        pendingDisplayNameStyles: l,
+        tryItOutDisplayNameStyles: a,
         pendingErrors: o,
     };
 }
-function u(e) {
-    let { user: t, guildId: n } = e,
-        r = (0, i.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
-    return null != n ? r?.avatarDecoration : t.avatarDecoration;
-}
-function _(e) {
-    let { user: t, guildId: n } = e;
-    return (0, i.bG)([s.A], () =>
-        null == n ? s.A.getUserProfile(t.id)?.profileEffect : s.A.getGuildMemberProfile(t.id, n)?.profileEffect,
-    );
-}
-function E(e) {
-    let { user: t, guildId: n } = e;
-    return (0, i.bG)([s.A], () =>
-        null == n ? s.A.getUserProfile(t.id)?.profileFrame : s.A.getGuildMemberProfile(t.id, n)?.profileFrame,
-    );
-}
-function A(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingAvatarDecoration: a.A.getPendingChanges(e).pendingAvatarDecoration,
-        errors: a.A.getErrors(e).avatarDecoration,
-    }));
-}
-function h(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingProfileEffect: a.A.getPendingChanges(e).pendingProfileEffect,
-        errors: a.A.getErrors(e).profileEffect,
-    }));
-}
-function I(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingProfileFrame: a.A.getPendingChanges(e).pendingProfileFrame,
-        errors: a.A.getErrors(e).profileFrame,
-    }));
-}
 function f(e) {
-    let { userValue: t, guildValue: n, pendingValue: i, guildId: r } = e;
-    return "" === i || null === i
-        ? null != r
-            ? t
-            : null
-        : "" !== i && null != i
-          ? i
-          : null != r && "" !== n && null != n
-            ? n
-            : t;
+    let { user: n, guildId: r } = e,
+        l = (0, t.bG)([u.Ay], () => (null != r ? u.Ay.getMember(r, n.id) : null));
+    return null != r ? l?.avatarDecoration : n.avatarDecoration;
+}
+function d(e) {
+    let { user: n, guildId: r } = e;
+    return (0, t.bG)([a.A], () =>
+        null == r ? a.A.getUserProfile(n.id)?.profileEffect : a.A.getGuildMemberProfile(n.id, r)?.profileEffect,
+    );
 }
 function p(e) {
-    let { pendingValue: t, userValue: n, guildValue: i, guildId: r } = e;
-    if (void 0 !== t) return f({ userValue: n, guildValue: i, pendingValue: t, guildId: r }) ?? null;
+    let { user: n, guildId: r } = e;
+    return (0, t.bG)([a.A], () =>
+        null == r ? a.A.getUserProfile(n.id)?.profileFrame : a.A.getGuildMemberProfile(n.id, r)?.profileFrame,
+    );
 }
-function T(e, t) {
-    return void 0 === e ? null != t : null != e;
+function c(e) {
+    return (0, t.cf)([i.A], () => ({
+        pendingAvatarDecoration: i.A.getPendingChanges(e).pendingAvatarDecoration,
+        errors: i.A.getErrors(e).avatarDecoration,
+    }));
 }
-function m(e, t) {
-    return void 0 === e ? null != t : null != e;
+function A(e) {
+    return (0, t.cf)([i.A], () => ({
+        pendingProfileEffect: i.A.getPendingChanges(e).pendingProfileEffect,
+        errors: i.A.getErrors(e).profileEffect,
+    }));
 }
-function g(e) {
+function y(e) {
+    return (0, t.cf)([i.A], () => ({
+        pendingProfileFrame: i.A.getPendingChanges(e).pendingProfileFrame,
+        errors: i.A.getErrors(e).profileFrame,
+    }));
+}
+function m(e) {
+    let { userValue: n, guildValue: r, pendingValue: t, guildId: l } = e;
+    return "" === t || null === t
+        ? null != l
+            ? n
+            : null
+        : "" !== t && null != t
+          ? t
+          : null != l && "" !== r && null != r
+            ? r
+            : n;
+}
+function N(e) {
+    let { pendingValue: n, userValue: r, guildValue: t, guildId: l } = e;
+    if (void 0 !== n) return m({ userValue: r, guildValue: t, pendingValue: n, guildId: l }) ?? null;
+}
+function b(e, n) {
+    return void 0 === e ? null != n : null != e;
+}
+function P(e, n) {
+    return void 0 === e ? null != n : null != e;
+}
+function v(e) {
     "set" === e
-        ? r.O.announce(o.intl.string(o.t.dyU5c5))
+        ? l.O.announce(o.intl.string(o.t.dyU5c5))
         : "remove" === e
-          ? r.O.announce(o.intl.string(o.t["f1+oNk"]))
-          : r.O.announce(o.intl.string(o.t["/b5nqj"]));
+          ? l.O.announce(o.intl.string(o.t["f1+oNk"]))
+          : l.O.announce(o.intl.string(o.t["/b5nqj"]));
 }

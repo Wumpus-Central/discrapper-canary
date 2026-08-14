@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { jP: () => y, bK: () => b });
+n.d(t, { jP: () => D, bK: () => b });
 var r,
     a = n(435558),
     s = n.n(a),
@@ -34,13 +34,13 @@ var E = n(550642),
     R = n(652215);
 let O = new d.A("CloudUpload.tsx"),
     L = new Set([429]);
-class D extends Error {
+class y extends Error {
     kind;
     phase;
     messageShort;
     constructor(e, t = {}) {
         const { cause: n, response: i } = t,
-            r = D.getErrorKind(n ?? Error(`${i?.text ?? "Unknown error"}`), i),
+            r = y.getErrorKind(n ?? Error(`${i?.text ?? "Unknown error"}`), i),
             a = "server_error" === r || "client_error" === r ? `${e}:${r}:status_${i?.status ?? 0}` : `${e}:${r}`;
         super(a, { cause: n }),
             (this.name = "ResumableUploadError"),
@@ -61,16 +61,16 @@ class D extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.oh) throw new D(e, { response: t });
-            if (t instanceof Error) throw new D(e, { cause: t });
-            throw new D(e, { cause: Error(String(t)) });
+            if (t instanceof o.oh) throw new y(e, { response: t });
+            if (t instanceof Error) throw new y(e, { cause: t });
+            throw new y(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
         return "server_error" === this.kind || "network_error" === this.kind || "client_error" === this.kind;
     }
 }
-var y =
+var D =
     (((r = {}).NOT_STARTED = "NOT_STARTED"),
     (r.STARTED = "STARTED"),
     (r.UPLOADING = "UPLOADING"),
@@ -232,14 +232,14 @@ class b extends S.Ay {
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : D.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : y.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof o.oh && 308 === e.status) {
                     let t = this.parseRangeHeader(e.headers.range ?? "");
                     return null != t ? t[1] + 1 : 0;
                 }
-                return D.rejectionHandler("status_check")(e);
+                return y.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
@@ -259,8 +259,8 @@ class b extends S.Ay {
         e.onRequestProgress = s().throttle(this.createResumeAwareProgressFn(t), 50);
         let n = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(D.rejectionHandler("upload"));
-        if (200 !== n.status && 201 !== n.status) throw new D("upload", { response: n });
+            .catch(y.rejectionHandler("upload"));
+        if (200 !== n.status && 201 !== n.status) throw new y("upload", { response: n });
         return n;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -293,7 +293,7 @@ class b extends S.Ay {
                 }
                 return await this.startOrResumeUpload(l, o);
             } catch (e) {
-                if (e instanceof D && e.canRetry()) {
+                if (e instanceof y && e.canRetry()) {
                     O.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
                         await T.A.awaitOnline();
@@ -482,7 +482,7 @@ class b extends S.Ay {
         let l = performance.now(),
             o = { compressTimeMs: 0 };
         try {
-            let s = await Promise.all([n.e("96904"), n.e("64715")]).then(n.bind(n, 989707));
+            let s = await Promise.all([n.e("896904"), n.e("787096")]).then(n.bind(n, 989707));
             if (((a = s.ConversionFailureReason), (r = await s.maybeConvertToWebP(e)), t())) return null;
             if (r.success && null != r.convertedBlob)
                 O.log(
@@ -580,10 +580,10 @@ class b extends S.Ay {
                 rejectWithError: !0,
             });
         } catch (e) {
-            if (e instanceof o.oh) throw new D("upload", { response: e });
+            if (e instanceof o.oh) throw new y("upload", { response: e });
             throw e;
         }
-        if (e.body?.attachments?.[0] == null) throw new D("upload", { response: e });
+        if (e.body?.attachments?.[0] == null) throw new y("upload", { response: e });
         this.setResponseUrl(e.body.attachments[0].upload_url),
             this.setUploadedFilename(e.body.attachments[0].upload_filename);
     }

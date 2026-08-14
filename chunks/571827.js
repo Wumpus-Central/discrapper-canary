@@ -35,9 +35,10 @@ function m(t) {
                                   return u.intl.format(u.t["aFR/EI"], {
                                       onClick: () => {
                                           (0, i.openModalLazy)(async () => {
-                                              let { default: t } = await Promise.all([l.e("93513"), l.e("64864")]).then(
-                                                  l.bind(l, 393027),
-                                              );
+                                              let { default: t } = await Promise.all([
+                                                  l.e("93513"),
+                                                  l.e("764864"),
+                                              ]).then(l.bind(l, 393027));
                                               return (e) =>
                                                   (0, n.jsx)(t, {
                                                       premiumUpsellType: x,
@@ -53,9 +54,10 @@ function m(t) {
                                   return u.intl.format(u.t.eWNONM, {
                                       onClick: () => {
                                           (0, i.openModalLazy)(async () => {
-                                              let { default: t } = await Promise.all([l.e("93513"), l.e("64864")]).then(
-                                                  l.bind(l, 393027),
-                                              );
+                                              let { default: t } = await Promise.all([
+                                                  l.e("93513"),
+                                                  l.e("764864"),
+                                              ]).then(l.bind(l, 393027));
                                               return (e) =>
                                                   (0, n.jsx)(t, {
                                                       premiumUpsellType: x,
@@ -71,9 +73,10 @@ function m(t) {
                                   return u.intl.format(u.t.G6b8TF, {
                                       onClick: () => {
                                           (0, i.openModalLazy)(async () => {
-                                              let { default: t } = await Promise.all([l.e("93513"), l.e("64864")]).then(
-                                                  l.bind(l, 393027),
-                                              );
+                                              let { default: t } = await Promise.all([
+                                                  l.e("93513"),
+                                                  l.e("764864"),
+                                              ]).then(l.bind(l, 393027));
                                               return (e) =>
                                                   (0, n.jsx)(t, {
                                                       premiumUpsellType: x,

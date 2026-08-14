@@ -90,7 +90,7 @@ let K = r.forwardRef(function (e, l) {
         L = r.useCallback(
             (e) => {
                 (0, C.L3)(e, async () => {
-                    let { default: e } = await s.e("15687").then(s.bind(s, 646938));
+                    let { default: e } = await s.e("715687").then(s.bind(s, 646938));
                     return (l) => (0, n.jsx)(e, { ...l, id: d.id, label: W.intl.string(W.t.sMsaLg) });
                 });
             },

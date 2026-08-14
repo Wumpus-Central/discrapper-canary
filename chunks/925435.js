@@ -308,12 +308,12 @@ function J(n) {
                   ? () => {
                         (0, v.openModalLazy)(async () => {
                             let { SubscriptionDetailsModal: n } = await Promise.all([
-                                i.e("73432"),
+                                i.e("540496"),
                                 i.e("39086"),
-                                i.e("17104"),
-                                i.e("17989"),
-                                i.e("80830"),
-                                i.e("64850"),
+                                i.e("294723"),
+                                i.e("817989"),
+                                i.e("480830"),
+                                i.e("564850"),
                             ]).then(i.bind(i, 168393));
                             return (i) =>
                                 (0, l.jsx)(n, { appId: e, subscriptionType: u, skuId: a.skuId, guildId: r, ...i });
@@ -362,12 +362,12 @@ function X(n) {
                         : () => {
                               (0, v.openModalLazy)(async () => {
                                   let { ItemDetailsModal: n } = await Promise.all([
-                                      i.e("73432"),
+                                      i.e("540496"),
                                       i.e("39086"),
-                                      i.e("17104"),
-                                      i.e("17989"),
-                                      i.e("80830"),
-                                      i.e("70104"),
+                                      i.e("294723"),
+                                      i.e("817989"),
+                                      i.e("480830"),
+                                      i.e("170104"),
                                   ]).then(i.bind(i, 963179));
                                   return (i) => (0, l.jsx)(n, { appId: t, skuId: e, ...i });
                               });

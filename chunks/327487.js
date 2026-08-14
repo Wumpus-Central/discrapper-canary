@@ -490,7 +490,7 @@ function C(l) {
     );
 }
 async function x() {
-    let { OpenViduRecordingProvider: l } = await Promise.all([d.e("55205"), d.e("84344")]).then(d.bind(d, 878635));
+    let { OpenViduRecordingProvider: l } = await Promise.all([d.e("655205"), d.e("684344")]).then(d.bind(d, 878635));
     return new l();
 }
 async function g(l) {
@@ -529,7 +529,7 @@ async function D(l) {
     }
 }
 async function j(l) {
-    let { loadDeepsightSession: t } = await d.e("34370").then(d.bind(d, 307289));
+    let { loadDeepsightSession: t } = await d.e("234370").then(d.bind(d, 307289));
     return t({ ds: l.ds, storage: l.storage });
 }
 let U = (l) => !0 === l.onDeviceFaceResultsSubmissionEnabled;

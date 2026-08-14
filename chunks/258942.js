@@ -28,7 +28,7 @@ function D(t) {
             subtitle: f.intl.string(f.t.pgwlD7),
             transitionState: D,
             size: "sm",
-            graphic: { type: "lottie", lottie: () => i.e("95947").then(i.t.bind(i, 604902, 19)), aspectRatio: "6/4" },
+            graphic: { type: "lottie", lottie: () => i.e("995947").then(i.t.bind(i, 604902, 19)), aspectRatio: "6/4" },
             onClose: E,
             actions: [
                 {

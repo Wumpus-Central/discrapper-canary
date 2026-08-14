@@ -6,11 +6,11 @@ function i(e) {
     let { guildId: a, userId: i, anaylticsLocations: s, modReportId: l } = e;
     (0, d.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            t.e("95921"),
-            t.e("8891"),
-            t.e("91671"),
-            t.e("70314"),
-            t.e("85256"),
+            t.e("782906"),
+            t.e("408891"),
+            t.e("691671"),
+            t.e("470314"),
+            t.e("985256"),
         ]).then(t.bind(t, 631963));
         return (t) => (0, n.jsx)(e, { guildId: a, userId: i, anaylticsLocations: s, modReportId: l, ...t });
     });
@@ -18,7 +18,7 @@ function i(e) {
 function s(e) {
     let { guildId: a, userId: i, anaylticsLocations: s } = e;
     (0, d.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([t.e("54752"), t.e("70314"), t.e("95067"), t.e("31815")]).then(
+        let { default: e } = await Promise.all([t.e("154752"), t.e("470314"), t.e("695067"), t.e("831815")]).then(
             t.bind(t, 21754),
         );
         return (t) => (0, n.jsx)(e, { guildId: a, userId: i, anaylticsLocations: s, ...t });

@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(582128),
-    r = n(508425),
+n.d(t, { A: () => u });
+var l = n(582128),
+    s = n(508425),
     a = n(602853),
-    s = n(661531),
-    l = n(750656);
-function o() {
-    let e = (0, a.r)(s.A.colors.TEXT_DEFAULT).int();
-    return i.useMemo(
+    r = n(661531),
+    o = n(750656);
+function u() {
+    let e = (0, a.r)(r.A.colors.TEXT_DEFAULT).int();
+    return l.useMemo(
         () => ({
-            [r.z.SOLID]: [e],
-            [r.z.GRADIENT]: [...l.Wf["0"].colors],
-            [r.z.GLOW]: [...l.Wf["0"].colors],
-            [r.z.GUMMY]: [...l.lU["0"]],
-            [r.z.PRISM]: [...l.NU["0"]],
-            [r.z.TOON]: [0xf42098],
-            [r.z.NEON]: [6888941],
-            [r.z.POP]: [1036166],
-            [r.z.TEST_1]: [e],
-            [r.z.TEST_2]: [e],
-            [r.z.TEST_3]: [e],
-            [r.z.TEST_4]: [e],
+            [s.z.SOLID]: [e],
+            [s.z.GRADIENT]: [...o.Wf["0"].colors],
+            [s.z.GLOW]: [...o.Wf["0"].colors],
+            [s.z.GUMMY]: [...o.lU["0"]],
+            [s.z.PRISM]: [...o.NU["0"]],
+            [s.z.TOON]: [0xf42098],
+            [s.z.NEON]: [6888941],
+            [s.z.POP]: [1036166],
+            [s.z.TEST_1]: [e],
+            [s.z.TEST_2]: [e],
+            [s.z.TEST_3]: [e],
+            [s.z.TEST_4]: [e],
         }),
         [e],
     );

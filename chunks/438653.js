@@ -53,7 +53,7 @@ function D(n) {
     if (!t)
         return w(u.t, () =>
             (0, c.openModalLazy)(async () => {
-                let { default: n } = await Promise.all([l.e("90797"), l.e("7476")]).then(l.bind(l, 777023));
+                let { default: n } = await Promise.all([l.e("390797"), l.e("307476")]).then(l.bind(l, 777023));
                 return (e) => (0, i.jsx)(n, { ...e, source: "channel_context_menu" });
             }),
         );
@@ -108,7 +108,7 @@ function F(n) {
               action: () =>
                   n.type === x.rbe.GUILD_CATEGORY
                       ? (0, c.openModalLazy)(async () => {
-                            let { default: e } = await l.e("92085").then(l.bind(l, 703476));
+                            let { default: e } = await l.e("992085").then(l.bind(l, 703476));
                             return (l) =>
                                 (0, i.jsx)(e, {
                                     ...l,

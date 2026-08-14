@@ -5,7 +5,7 @@ var n = r(582128),
     c = r(435558),
     i = r(403362),
     l = r(379078);
-let f = new Worker(new URL("/assets/" + r.u("85220"), r.b));
+let f = new Worker(new URL("/assets/" + r.u("585220"), r.b));
 function a(e, t, r, u) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         d = n.useRef(null),

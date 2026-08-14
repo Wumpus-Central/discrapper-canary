@@ -78,7 +78,7 @@ let s = {
         timeoutMs: 1e4,
         disabledMessage: "TRI will be disabled for this session.",
     },
-    n = () => d.e("82997").then(d.bind(d, 971956));
+    n = () => d.e("782997").then(d.bind(d, 971956));
 var Z = class l {
     constructor() {
         (this._isStarted = !1), (this._lazySdk = a.getInstance().create(n, s));

@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { M: () => r });
-var i,
-    r =
-        (((i = {}).STARTING = "starting"),
-        (i.STARTUP_FAILED = "startup_failed"),
-        (i.MISSING_STOCK = "missing_stock"),
-        (i.SLEEPING = "sleeping"),
-        (i.OFFLINE = "offline"),
-        (i.ONLINE = "online"),
-        (i.DELETED = "deleted"),
-        (i.PROVIDER_ERRORED = "provider_errored"),
-        i);
+i.d(t, { M: () => n });
+var s,
+    n =
+        (((s = {}).STARTING = "starting"),
+        (s.STARTUP_FAILED = "startup_failed"),
+        (s.MISSING_STOCK = "missing_stock"),
+        (s.SLEEPING = "sleeping"),
+        (s.OFFLINE = "offline"),
+        (s.ONLINE = "online"),
+        (s.DELETED = "deleted"),
+        (s.PROVIDER_ERRORED = "provider_errored"),
+        s);

@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(477900),
-    r = n(582128),
-    a = n(132500),
-    s = n(174459),
-    l = n(583613),
-    o = n(652215);
-class d extends r.Component {
-    static Pages = o.liQ;
-    static Sections = o.JJy;
-    static Objects = o.ZSU;
-    static ObjectTypes = o.AnalyticsObjectTypes;
+o.d(e, { A: () => d });
+var s = o(477900),
+    n = o(582128),
+    r = o(132500),
+    i = o(174459),
+    l = o(583613),
+    a = o(652215);
+class d extends n.Component {
+    static Pages = a.liQ;
+    static Sections = a.JJy;
+    static Objects = a.ZSU;
+    static ObjectTypes = a.AnalyticsObjectTypes;
     static defaultProps = { root: !1 };
     _loadId = null;
     _loadDate = this.props.root ? Date.now() : null;
-    constructor(e) {
-        super(e), null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, a.A)());
+    constructor(t) {
+        super(t), null != t.loadId ? (this._loadId = t.loadId) : t.root && (this._loadId = (0, r.A)());
     }
-    getLocation = (0, l.L_)((e, t, n, i) => {
-        let r = {};
+    getLocation = (0, l.L_)((t, e, o, s) => {
+        let n = {};
         return (
-            null != e && (r.page = e),
-            null != t && (r.section = t),
-            null != n && (r.object = n),
-            null != i && (r.objectType = i),
-            r
+            null != t && (n.page = t),
+            null != e && (n.section = e),
+            null != o && (n.object = o),
+            null != s && (n.objectType = s),
+            n
         );
     });
-    mergeLocation = (0, l.L_)((e, t) => ({ ...e, ...t }));
-    getContext = (0, l.L_)((e, t, n) => ({ location: e, loadDate: t, loadId: n }));
-    renderProvider(e) {
-        let { section: t, page: n, object: r, objectType: a, children: l } = this.props,
-            o = this.mergeLocation(e.location, this.getLocation(n, t, r, a)),
-            d = this.getContext(o, this._loadDate ?? e.loadDate, this._loadId ?? e.loadId);
-        return (0, i.jsx)(s.AnalyticsContext.Provider, { value: d, children: l });
+    mergeLocation = (0, l.L_)((t, e) => ({ ...t, ...e }));
+    getContext = (0, l.L_)((t, e, o) => ({ location: t, loadDate: e, loadId: o }));
+    renderProvider(t) {
+        let { section: e, page: o, object: n, objectType: r, children: l } = this.props,
+            a = this.mergeLocation(t.location, this.getLocation(o, e, n, r)),
+            d = this.getContext(a, this._loadDate ?? t.loadDate, this._loadId ?? t.loadId);
+        return (0, s.jsx)(i.AnalyticsContext.Provider, { value: d, children: l });
     }
     render() {
-        let { context: e } = this.props;
-        return null != e
-            ? this.renderProvider(e)
-            : (0, i.jsx)(s.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
+        let { context: t } = this.props;
+        return null != t
+            ? this.renderProvider(t)
+            : (0, s.jsx)(i.AnalyticsContext.Consumer, { children: (t) => this.renderProvider(t) });
     }
 }

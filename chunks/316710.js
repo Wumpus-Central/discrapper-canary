@@ -56,7 +56,7 @@ function b(e, t, l) {
         let l = N
             ? () => {
                   (0, d.openModalLazy)(async () => {
-                      let { default: e } = await n.e("54915").then(n.bind(n, 360494));
+                      let { default: e } = await n.e("154915").then(n.bind(n, 360494));
                       return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: I });
                   });
               }

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { U: () => l });
-var i = n(477900);
-n(582128);
-var r = n(661531),
-    a = n(996682),
-    s = n(27989);
-function l(e) {
+t.d(h, { U: () => c });
+var a = t(477900);
+t(582128);
+var i = t(661531),
+    e = t(996682),
+    r = t(27989);
+function c(s) {
     let {
-            size: t = "md",
-            width: n,
-            height: l,
-            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
-            ...c
-        } = e,
-        u = (0, s.J)(t),
-        _ = u?.width ?? n,
-        E = u?.height ?? l;
-    return (0, i.jsx)("svg", {
-        ...(0, a.A)(c),
+            size: h = "md",
+            width: t,
+            height: c,
+            color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: n = "",
+            ...p
+        } = s,
+        l = (0, r.J)(h),
+        o = l?.width ?? t,
+        w = l?.height ?? c;
+    return (0, a.jsx)("svg", {
+        ...(0, e.A)(p),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: E,
+        width: o,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+        children: (0, a.jsx)("path", {
+            fill: "string" == typeof d ? d : d.css,
             d: "M4 3a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H4ZM6 20a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2H6Z",
-            className: d,
+            className: n,
         }),
     });
 }

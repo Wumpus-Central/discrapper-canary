@@ -72,11 +72,11 @@ function k(e) {
             null != F &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("27574"),
-                        t.e("21149"),
-                        t.e("59957"),
-                        t.e("28136"),
-                        t.e("16084"),
+                        t.e("827574"),
+                        t.e("121149"),
+                        t.e("159957"),
+                        t.e("728136"),
+                        t.e("216084"),
                         t.e("22547"),
                     ]).then(t.bind(t, 1310));
                     return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });

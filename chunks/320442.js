@@ -38,12 +38,12 @@ let b = (0, c.A)(
                               (0, d.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       i.e("41295"),
-                                      i.e("75091"),
-                                      i.e("91922"),
+                                      i.e("375091"),
+                                      i.e("694848"),
                                       i.e("71845"),
                                       i.e("66580"),
-                                      i.e("99108"),
-                                      i.e("32305"),
+                                      i.e("399108"),
+                                      i.e("232305"),
                                   ]).then(i.bind(i, 409352));
                                   return (i) => (0, l.jsx)(e, { channelId: n.id, ...i });
                               }),

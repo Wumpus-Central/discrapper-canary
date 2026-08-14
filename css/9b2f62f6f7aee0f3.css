@@ -1,0 +1,74 @@
+.icon__828af {
+    height: 24px;
+    margin-bottom: 4px;
+    width: 24px
+}
+
+.shopIcon__828af {}
+
+.presetDecorationImg__828af {
+    height: 64px;
+    width: 64px
+}
+
+.decorationGridItem__828af {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px;
+    color: var(--text-strong);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: box-shadow .15s ease-out
+}
+
+.selected__828af {
+    box-shadow: inset 0 0 0 2px var(--brand-500);
+    opacity: 1
+}
+
+.list__828af {
+    inset-inline-start: -12px;
+    max-height: 420px;
+    padding-bottom: 16px
+}
+
+.headings__828af {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.spinner_bcd779 {
+    align-self: center;
+    margin: 8px
+}
+
+.modal_bcd779 {
+    border-radius: var(--radius-sm)
+}
+
+.modalHeader_bcd779 {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.modalCloseButton_bcd779 {
+    margin-inline-end: -8px;
+    padding: 0
+}
+
+.modalContent_bcd779 {
+    display: flex
+}
+
+.modalPreview_bcd779 {
+    margin-top: 24px
+}
+
+.modalFooter_bcd779 {
+    gap: var(--space-8)
+}

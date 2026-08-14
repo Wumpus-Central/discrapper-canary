@@ -1,27 +1,26 @@
-"use strict";
-n.d(t, { D: () => d, c: () => o });
-var i = n(636537),
-    r = n(228366),
-    a = n(395671),
-    s = n(889227),
-    l = n(652215);
-async function o(e) {
-    let t = (
-        await i.Bo.get({
-            url: l.Rsh.GUILD_INTEGRATIONS(e),
+t.d(r, { D: () => s, c: () => E });
+var n = t(636537),
+    i = t(228366),
+    l = t(395671),
+    o = t(889227),
+    a = t(652215);
+async function E(e) {
+    let r = (
+        await n.Bo.get({
+            url: a.Rsh.GUILD_INTEGRATIONS(e),
             query: { include_applications: !0, include_role_connections_metadata: !0 },
             oldFormErrors: !0,
-            rejectWithError: (0, i.fT)(),
+            rejectWithError: (0, n.fT)(),
         })
     ).body.map((e) => ({
         ...e,
-        application: "application" in e && null != e.application ? a.kJ.createFromServer(e.application) : void 0,
-        user: "user" in e && null != e.user ? new s.A(e.user) : void 0,
+        application: "application" in e && null != e.application ? l.kJ.createFromServer(e.application) : void 0,
+        user: "user" in e && null != e.user ? new o.A(e.user) : void 0,
     }));
-    return r.h.dispatch({ type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId: e, integrations: t }), t;
+    return i.h.dispatch({ type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId: e, integrations: r }), r;
 }
-function d(e) {
-    return i.Bo.get({ url: l.Rsh.GUILD_WIDGET(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
-        r.h.dispatch({ type: "GUILD_SETTINGS_SET_WIDGET", enabled: e.body.enabled, channelId: e.body.channel_id });
+function s(e) {
+    return n.Bo.get({ url: a.Rsh.GUILD_WIDGET(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+        i.h.dispatch({ type: "GUILD_SETTINGS_SET_WIDGET", enabled: e.body.enabled, channelId: e.body.channel_id });
     });
 }

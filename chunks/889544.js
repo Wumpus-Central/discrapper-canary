@@ -68,7 +68,7 @@ function p(t, e, i, n) {
 }
 i(393431), i(532706), i(42231), i(232424), i(949626), i(767709), i(65162);
 let v = (0, i(795521).u)(async () => {
-    let t = await Promise.all([i.e("63197"), i.e("45082")]).then(i.bind(i, 145025)),
+    let t = await Promise.all([i.e("563197"), i.e("545082")]).then(i.bind(i, 145025)),
         e = await t.default();
     (a = e.cwrap("lottie_create", "number", ["string"])),
         (s = e._lottie_destroy),

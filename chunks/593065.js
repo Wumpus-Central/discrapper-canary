@@ -22,11 +22,11 @@ var i = n(477900),
     S = n(485947),
     N = n(915089),
     C = n(840251),
-    O = n(688151);
-let R = new C.E([], O.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
+    R = n(688151);
+let O = new C.E([], R.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
 var L = n(611924),
-    D = n(277370),
-    y = n(380335),
+    y = n(277370),
+    D = n(380335),
     v = n(309199),
     b = n(157550),
     M = n(922016),
@@ -52,10 +52,10 @@ function V(e) {
                     (0, x.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
                             n.e("73216"),
-                            n.e("22649"),
-                            n.e("44780"),
-                            n.e("66031"),
-                            n.e("64828"),
+                            n.e("422649"),
+                            n.e("844780"),
+                            n.e("766031"),
+                            n.e("564828"),
                         ]).then(n.bind(n, 378455));
                         return (t) => (0, i.jsx)(e, { ...t });
                     });
@@ -101,7 +101,7 @@ var H = n(97469),
     K = n(715069),
     $ = n(652215),
     z = n(862279);
-let q = r.memo(function () {
+let Z = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
@@ -131,7 +131,7 @@ let q = r.memo(function () {
         ],
     });
 });
-class Z extends r.Component {
+class q extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -224,7 +224,7 @@ class Z extends r.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === r.length
-              ? (0, i.jsx)(q, {}, "no-private-channels")
+              ? (0, i.jsx)(Z, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
@@ -241,7 +241,7 @@ class Z extends r.Component {
                               className: z.$s,
                               children: [
                                   (0, i.jsx)(B, { className: `${z.U2} ${z.Mj}`, iconClassName: z.Br }),
-                                  (0, i.jsx)(D.Ay, {
+                                  (0, i.jsx)(y.Ay, {
                                       tooltip: F.intl.string(F.t.bA875g),
                                       tooltipPosition: "top",
                                       className: z.U2,
@@ -308,11 +308,11 @@ let X = function (e) {
         u = r.Children.count(s),
         _ = j.A.getMutablePrivateChannels(),
         E = (0, v.uX)(_),
-        h = (0, d.yK)([Y.A, y.A, b.A], () => {
+        h = (0, d.yK)([Y.A, D.A, b.A], () => {
             let e = Y.A.getPrivateChannelIds();
-            return (0, v.eh)(e, [y.A, b.A]);
+            return (0, v.eh)(e, [D.A, b.A]);
         });
-    (0, L.P)(R);
+    (0, L.P)(O);
     let { analyticsLocations: p } = (0, T.Ay)(f.A.CONTACTS_LIST),
         m = (0, H.NC)(),
         { keyboardModeEnabled: g, version: S } = (0, d.cf)([I.Ay, j.A], () => ({
@@ -320,10 +320,10 @@ let X = function (e) {
             version: null != n ? `${n}:${j.A.getPrivateChannelsVersion()}` : j.A.getPrivateChannelsVersion(),
         })),
         C = r.useRef(null),
-        O = c ?? C,
-        D = r.useCallback(
+        R = c ?? C,
+        y = r.useCallback(
             (e) => {
-                let t = O.current,
+                let t = R.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -334,21 +334,21 @@ let X = function (e) {
                         },
                     });
             },
-            [O],
+            [R],
         ),
         M = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = O.current;
+                    let t = R.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [O],
+            [R],
         ),
         P = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = O.current;
+                    let t = R.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -356,7 +356,7 @@ let X = function (e) {
                         },
                     });
                 }),
-            [O],
+            [R],
         ),
         U = (0, N.GV)(),
         w = (0, o.Ay)({
@@ -365,18 +365,18 @@ let X = function (e) {
             scrollToStart: M,
             scrollToEnd: P,
             defaultFocused: (u + 1).toString(),
-            setFocus: D,
+            setFocus: y,
         });
     return (0, i.jsx)(T.f5, {
         value: p,
         children: (0, i.jsx)(l.hD, {
             navigator: w,
-            children: (0, i.jsx)(Z, {
+            children: (0, i.jsx)(q, {
                 ...e,
                 density: t,
                 channels: E,
                 privateChannelIds: h,
-                listRef: O,
+                listRef: R,
                 theme: m ?? a,
                 version: S,
             }),

@@ -80,7 +80,7 @@ class D extends s.PureComponent {
                     A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
                         t(),
                         (0, o.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([l.e("70824"), l.e("28907")]).then(
+                            let { default: e } = await Promise.all([l.e("370824"), l.e("628907")]).then(
                                 l.bind(l, 209674),
                             );
                             return (t) => (0, n.jsx)(e, { ...t });

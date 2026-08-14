@@ -22,7 +22,7 @@ function h(e) {
         (0, d.$b)(t, a, i?.value ?? null, o),
             o ||
                 (0, s.openModalLazy)(async () => {
-                    let { default: e } = await l.e("37836").then(l.bind(l, 845671));
+                    let { default: e } = await l.e("137836").then(l.bind(l, 845671));
                     return (t) => (0, n.jsx)(e, { body: c.intl.string(c.t["d9+vQ8"]), ...t });
                 });
     }, []);

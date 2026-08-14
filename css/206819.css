@@ -1,0 +1,97 @@
+.popoutContainer_e2f0c6 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-faint, hsla(240, 4%, 61%, .04));
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 180px
+}
+
+.streamPreviewWrapper_e2f0c6 {
+    align-items: center;
+    aspect-ratio: 16/9;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative
+}
+
+.streamPreview_e2f0c6 {
+    height: 100%;
+    width: 100%
+}
+
+.streamPreviewLiveIndicator_e2f0c6 {
+    inset-inline-end: var(--space-4);
+    position: absolute;
+    top: var(--space-4);
+    z-index: 1
+}
+
+.popoutHeader_e2f0c6 {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between;
+    padding: var(--space-8) var(--space-12)
+}
+
+.popoutHeaderTimestamp_e2f0c6 {
+    flex-shrink: 0
+}
+
+.channelName_e2f0c6 {
+    align-items: center;
+    color: var(--text-feedback-positive);
+    display: flex;
+    gap: var(--space-4)
+}
+
+.channelName_e2f0c6,
+.channelNameTextFade_e2f0c6 {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden
+}
+
+.channelNameTextFade_e2f0c6 {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--space-16)), transparent 100%);
+    mask-image: linear-gradient(to right, #000 calc(100% - var(--space-16)), transparent 100%)
+}
+
+.channelNameText_e2f0c6 {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap
+}
+
+.popoutContent_e2f0c6 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.voiceChannelBadge_f25a6e {
+    color: var(--text-status-online);
+    cursor: pointer;
+    display: inline-block;
+    height: calc(1rem + 4px);
+    margin-inline-start: .25rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    text-indent: 0;
+    top: 1px;
+    vertical-align: top;
+    width: calc(1rem + 4px)
+}
+
+.voiceChannelBadgeWrapper_f25a6e {
+    display: inline
+}

@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { A: () => o, P: () => a });
-var i = n(32731),
-    r = n(520606),
-    s = n(652215);
-function a(e) {
-    return e instanceof o;
+r.d(e, { A: () => a, P: () => l });
+var i = r(32731),
+    n = r(520606),
+    s = r(652215);
+function l(t) {
+    return t instanceof a;
 }
-class o extends r.A {
+class a extends n.A {
     sku;
-    constructor(e) {
-        super(e), (this.skuProductLine = s.EZt.PREMIUM), (this.sku = e.sku);
+    constructor(t) {
+        super(t), (this.skuProductLine = s.EZt.PREMIUM), (this.sku = t.sku);
     }
-    static fromServer(e) {
-        let t = i.A.createFromServer(e.sku);
-        if (null == t) throw Error("SKU not found");
-        return new o({ ...e, sku: t });
+    static fromServer(t) {
+        let e = i.A.createFromServer(t.sku);
+        if (null == e) throw Error("SKU not found");
+        return new a({ ...t, sku: e });
     }
-    static fromSKU(e) {
-        return null == e ? null : new o({ sku_id: e.id, sku_product_line: s.EZt.PREMIUM, sku_name: e.name, sku: e });
+    static fromSKU(t) {
+        return null == t ? null : new a({ sku_id: t.id, sku_product_line: s.EZt.PREMIUM, sku_name: t.name, sku: t });
     }
 }

@@ -98,7 +98,7 @@ var B = t(147925),
     Q = t(736653),
     X = t(132500),
     K = t(602674);
-let Z = new Worker(new URL("/assets/" + t.u("58777"), t.b)),
+let Z = new Worker(new URL("/assets/" + t.u("658777"), t.b)),
     $ = (0, K.v)();
 async function ee(e) {
     if (null == $) throw Error("Failed to create audio context");

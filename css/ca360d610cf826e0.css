@@ -1,0 +1,17 @@
+.header_bfd183 {
+    margin-bottom: 4px
+}
+
+.list_bfd183 {
+    gap: 2px
+}
+
+.list_bfd183,
+.row_bfd183 {
+    display: flex
+}
+
+.row_bfd183 {
+    align-items: center;
+    gap: 4px
+}

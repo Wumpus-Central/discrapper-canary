@@ -3,7 +3,7 @@ var i = n(477900),
     a = n(582128),
     l = n(132500),
     r = n(17928),
-    s = n(562465),
+    s = n(636537),
     o = n(843282),
     u = n(189213),
     d = n(834730),
@@ -139,8 +139,8 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "09ca2c0bdb31b9ad359052e42b0e63493f486916" !== e.body.hash) {
-                let e = new Date("1786070537465"),
+            if (null != e.body && "bf675c8efbd94cf0f8f3d03a3a0ece63079ae2c1" !== e.body.hash) {
+                let e = new Date("1786748141834"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eA(n.hours);
@@ -196,7 +196,7 @@ function F(e) {
                 ? (eL && window.open(a.body.permalink_url, "_blank"),
                   z(),
                   (0, c.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("85773"), n.e("76587")]).then(n.bind(n, 369323));
+                      let { default: e } = await Promise.all([n.e("185773"), n.e("876587")]).then(n.bind(n, 369323));
                       return (t) => (0, i.jsx)(e, { ...t, asanaTask: a.body });
                   }))
                 : e_(!0);

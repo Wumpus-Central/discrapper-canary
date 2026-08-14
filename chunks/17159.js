@@ -11,7 +11,7 @@ var r = n(192308),
     c = n(287809),
     u = n(354670),
     _ = n(158045),
-    E = n(562465),
+    E = n(636537),
     A = n(277984),
     h = n(295405),
     I = n(652215);
@@ -52,7 +52,7 @@ class m extends s.A {
     handleMessageLengthUpsell(e) {
         let { channel: t, content: a } = e;
         (0, r.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("35257"), n.e("76725")]).then(n.bind(n, 798612));
+            let { default: e } = await Promise.all([n.e("235257"), n.e("276725")]).then(n.bind(n, 798612));
             return (n) => (0, i.jsx)(e, { channel: t, content: a, ...n });
         });
     }

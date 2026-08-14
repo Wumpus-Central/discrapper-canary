@@ -15,7 +15,7 @@ let u = (0, t(945810).mj)({
 var c = t(652215),
     h = t(375708),
     p = t(779464);
-let m = s.lazy(() => Promise.all([t.e("7549"), t.e("27719"), t.e("38506"), t.e("72756")]).then(t.bind(t, 532255)));
+let m = s.lazy(() => Promise.all([t.e("707549"), t.e("927719"), t.e("138506"), t.e("672756")]).then(t.bind(t, 532255)));
 function f(e, n) {
     let {
             hideSimpleEmbedContent: f,

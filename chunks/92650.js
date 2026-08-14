@@ -91,7 +91,7 @@ function C(e) {
                         let { channelId: t, onConfirm: l, onCancel: i } = e;
                         u.default.track(A.HAw.OPEN_MODAL, { type: p.PY, channel_id: t }),
                             (0, g.openModalLazy)(async () => {
-                                let { default: e } = await n.e("61841").then(n.bind(n, 987176));
+                                let { default: e } = await n.e("661841").then(n.bind(n, 987176));
                                 return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
                             });
                     })({

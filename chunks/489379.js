@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { A: () => u, c: () => l });
-var i = n(17928),
-    r = n(765379),
-    s = n(714114),
-    a = n(290863),
-    o = n(977997);
-function l(e) {
-    let { activity: t, voiceChannelId: n, voiceStateForSession: i } = e;
-    return (0, r.A)(t) && i?.channelId === n;
+i.d(t, { A: () => _, c: () => a });
+var E = i(17928),
+    s = i(765379),
+    n = i(714114),
+    r = i(290863),
+    l = i(977997);
+function a(e) {
+    let { activity: t, voiceChannelId: i, voiceStateForSession: E } = e;
+    return (0, s.A)(t) && E?.channelId === i;
 }
-function u(e) {
-    let { userId: t, guildId: n } = e,
-        { voiceState: r, voiceChannel: u } = (0, s.Ay)({ userId: t, guildId: n }),
-        c = u?.id;
+function _(e) {
+    let { userId: t, guildId: i } = e,
+        { voiceState: s, voiceChannel: _ } = (0, n.Ay)({ userId: t, guildId: i }),
+        S = _?.id;
     return {
-        voiceState: r,
-        voiceChannel: u,
-        voiceActivity: (0, i.bG)([a.A, o.A], () => {
-            if (null != t && null != c)
+        voiceState: s,
+        voiceChannel: _,
+        voiceActivity: (0, E.bG)([r.A, l.A], () => {
+            if (null != t && null != S)
                 return (
-                    a.A.findActivity(t, (e) =>
-                        l({
+                    r.A.findActivity(t, (e) =>
+                        a({
                             activity: e,
-                            voiceChannelId: c,
-                            voiceStateForSession: o.A.getVoiceStateForSession(t, e.session_id),
+                            voiceChannelId: S,
+                            voiceStateForSession: l.A.getVoiceStateForSession(t, e.session_id),
                         }),
                     ) ?? void 0
                 );

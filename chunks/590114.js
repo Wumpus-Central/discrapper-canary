@@ -572,7 +572,7 @@ class tC extends l.PureComponent {
         (0, J.L3)(
             t,
             async () => {
-                let { default: t } = await Promise.all([n.e("15687"), n.e("45794")]).then(n.bind(n, 451897));
+                let { default: t } = await Promise.all([n.e("715687"), n.e("645794")]).then(n.bind(n, 451897));
                 return (n) =>
                     (0, i.jsx)(t, {
                         ...n,
@@ -1249,7 +1249,7 @@ class ei extends l.PureComponent {
                           rowProps: {
                               onContextMenu: (t, e) => {
                                   J.L3(t, async () => {
-                                      let { default: t } = await Promise.all([n.e("15687"), n.e("45794")]).then(
+                                      let { default: t } = await Promise.all([n.e("715687"), n.e("645794")]).then(
                                           n.bind(n, 451897),
                                       );
                                       return (n) =>

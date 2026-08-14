@@ -561,7 +561,7 @@ class eK extends l.PureComponent {
                             {
                                 onClick: () =>
                                     (0, D.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e("85355"), n.e("90052")]).then(
+                                        let { default: e } = await Promise.all([n.e("885355"), n.e("390052")]).then(
                                             n.bind(n, 653682),
                                         );
                                         return (t) => (0, i.jsx)(e, { ...t, guildId: l });

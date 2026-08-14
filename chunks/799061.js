@@ -77,7 +77,7 @@ async function C(e) {
         !0
     );
 }
-async function O(e) {
+async function R(e) {
     let { application: t, applicationId: i, channel: r, user: a, onConfirmActivityLaunchChecksAlertOpen: s } = e;
     if (null == a.nsfwAllowed) {
         let e = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
@@ -91,7 +91,7 @@ async function O(e) {
                                 s = null != (0, _.Ay)({ application: t, channelId: i }) ? c.KX : c.SY;
                             (0, u.openModalLazy)(
                                 async () => {
-                                    let { ActivityAgeGateModal: e } = await n.e("75710").then(n.bind(n, 89805));
+                                    let { ActivityAgeGateModal: e } = await n.e("675710").then(n.bind(n, 89805));
                                     return (n) =>
                                         (0, d.jsx)(e, {
                                             ...n,
@@ -111,7 +111,7 @@ async function O(e) {
     }
     return !0;
 }
-async function R(e) {
+async function O(e) {
     let { application: t, applicationId: i, channel: r, onConfirmActivityLaunchChecksAlertOpen: a } = e,
         l = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
     return (
@@ -122,7 +122,7 @@ async function R(e) {
                     (function (e) {
                         let { application: t, onConfirm: i, onCancel: r } = e;
                         (0, u.openModalLazy)(async () => {
-                            let { default: e } = await n.e("38435").then(n.bind(n, 130574));
+                            let { default: e } = await n.e("738435").then(n.bind(n, 130574));
                             return (n) => (0, d.jsx)(e, { application: t, onConfirm: i, onCancel: r, ...n });
                         }),
                             Promise.resolve();
@@ -137,7 +137,7 @@ async function L(e) {
             shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
             onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen,
         })) &&
-        !!(await O(e)) &&
-        !!(await R(e))
+        !!(await R(e)) &&
+        !!(await O(e))
     );
 }

@@ -1,0 +1,20 @@
+.container__7970d {
+    position: relative
+}
+
+.avatar__7970d,
+.avatarIconContainer__7970d {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.avatarIconContainer__7970d {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-round);
+    bottom: -8px;
+    inset-inline-end: -8px;
+    overflow: hidden;
+    padding: var(--space-4);
+    position: absolute
+}

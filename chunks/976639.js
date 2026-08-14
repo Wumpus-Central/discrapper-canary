@@ -42,9 +42,13 @@ class T extends s.A {
             let e = E.h.getNewMemberActions(l)?.length ?? 0;
             if (0 === e) return;
             (0, a.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("23241"), n.e("41678"), n.e("63893")]).then(
-                    n.bind(n, 455796),
-                );
+                let { default: t } = await Promise.all([
+                    n.e("123241"),
+                    n.e("645499"),
+                    n.e("858514"),
+                    n.e("741678"),
+                    n.e("663893"),
+                ]).then(n.bind(n, 455796));
                 return (n) => (0, i.jsx)(t, { ...n, initialPercent: (e - 1) / e, numActions: e });
             });
         }

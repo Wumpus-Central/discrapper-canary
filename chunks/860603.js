@@ -73,7 +73,7 @@ function $(e) {
             null != r &&
                 a() &&
                 (0, E.openModalLazy)(async () => {
-                    let { default: e } = await n.e("15946").then(n.bind(n, 326993));
+                    let { default: e } = await n.e("615946").then(n.bind(n, 326993));
                     return (n) =>
                         (0, l.jsx)(e, {
                             applicationIcon: t,
@@ -88,7 +88,7 @@ function $(e) {
         u = s.useCallback(
             (e) => {
                 (0, Q.L3)(e, async () => {
-                    let { default: e } = await n.e("15687").then(n.bind(n, 646938));
+                    let { default: e } = await n.e("715687").then(n.bind(n, 646938));
                     return (t) => (0, l.jsx)(e, { ...t, id: r.id, label: Z.intl.string(Z.t.oJ1Muw) });
                 });
             },
@@ -537,7 +537,7 @@ function eU(e) {
     );
 }
 var eB = n(935399),
-    eH = n(562465),
+    eH = n(636537),
     ez = n(451988),
     eV = n(783878),
     eK = n(765178),
@@ -1682,7 +1682,7 @@ function tL(e) {
         c = s.useCallback(
             () =>
                 (0, E.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("68327"), n.e("73380")]).then(n.bind(n, 106895));
+                    let { default: e } = await Promise.all([n.e("468327"), n.e("673380")]).then(n.bind(n, 106895));
                     return (n) => (0, l.jsx)(e, { ...n, channel: t, application: i });
                 }),
             [i, t],

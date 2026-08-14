@@ -84,7 +84,7 @@ let W = function (e, t) {
 var B = n(49491),
     H = n(429913),
     z = n(832163),
-    X = n(561794),
+    X = n(594832),
     K = n(862772),
     J = n(287809);
 let $ = a.createContext(void 0);
@@ -125,7 +125,7 @@ function ep(e, t, n) {
 }
 var ej = n(60465),
     ev = n(158390),
-    eE = n(562465),
+    eE = n(636537),
     eI = n(228366),
     eN = n(927813),
     eb = n(371794),
@@ -712,8 +712,8 @@ function e8(e) {
           });
 }
 var e2 = n(998445),
-    e4 = n(274997),
-    e6 = n(80500),
+    e6 = n(274997),
+    e4 = n(80500),
     e5 = n(319745),
     e3 = n(488225),
     e9 = n(967492),
@@ -739,14 +739,14 @@ function ti(e) {
                     };
                 case U.V.TWITTER:
                     return {
-                        icon: (0, i.jsx)(e4.p, { ...t }),
+                        icon: (0, i.jsx)(e6.p, { ...t }),
                         action: O.GameProfileTrackActionActions.XLink,
                         title: eg.intl.string(eg.t.INic4y),
                     };
                 case U.V.YOUTUBE:
                     return {
                         action: O.GameProfileTrackActionActions.YouTubeLink,
-                        icon: (0, i.jsx)(e6.C, { ...t }),
+                        icon: (0, i.jsx)(e4.C, { ...t }),
                         title: eg.intl.string(eg.t.lNmxbE),
                     };
                 case U.V.FACEBOOK:
@@ -1170,14 +1170,14 @@ function t1(e) {
                     (c?.(O.GameProfileTrackActionActions.Feedback),
                     (0, f.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("98064"),
-                            n.e("22876"),
-                            n.e("21072"),
-                            n.e("8891"),
-                            n.e("33771"),
-                            n.e("46039"),
+                            n.e("782906"),
+                            n.e("622876"),
+                            n.e("821072"),
+                            n.e("408891"),
+                            n.e("733771"),
+                            n.e("946039"),
                             n.e("55266"),
-                            n.e("27495"),
+                            n.e("627495"),
                         ]).then(n.bind(n, 651930));
                         return (n) => (0, i.jsx)(e, { ...n, detected: { gameId: t } });
                     }));
@@ -1479,11 +1479,11 @@ function t2(e) {
         ],
     });
 }
-function t4(e) {
+function t6(e) {
     let { show: t } = e;
     return (0, i.jsx)("div", { className: s()(t8.nI, t8.Jn, t && t8.hD) });
 }
-let t6 = a.forwardRef(function (e, t) {
+let t4 = a.forwardRef(function (e, t) {
     let { game: n } = e,
         [l] = a.useState(() => Math.random()),
         r = a.useMemo(() => {
@@ -2447,8 +2447,8 @@ function n8(e) {
 }
 n(667532);
 var n2 = n(853022);
-let n4 = new Set(["1402418703554842694", "356877880938070016"]),
-    n6 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
+let n6 = new Set(["1402418703554842694", "356877880938070016"]),
+    n4 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
 var n5 = n(349361),
     n3 = n(924895),
     n9 = n(422688),
@@ -2540,9 +2540,9 @@ function li(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== U.V.EPICGAMES || !!n4.has(l)) &&
+                            (e.category !== U.V.EPICGAMES || !!n6.has(l)) &&
                             (e.category !== U.V.STEAM || r !== u.Y.RETIRED_ABANDONED) &&
-                            n6.includes(e.category),
+                            n4.includes(e.category),
                     ) ?? [];
                 null == t ||
                     r === u.Y.RETIRED_ABANDONED ||
@@ -2586,7 +2586,7 @@ let lr = function (e) {
             (function (e) {
                 let { game: t, websiteButtons: l, trackAction: a } = e;
                 (0, f.openModalLazy)(async () => {
-                    let { default: e } = await n.e("76758").then(n.bind(n, 459477));
+                    let { default: e } = await n.e("176758").then(n.bind(n, 459477));
                     return (n) => (0, i.jsx)(e, { game: t, websiteButtons: l, trackAction: a, ...n });
                 });
             })({ game: t, websiteButtons: c, trackAction: l }),
@@ -2905,9 +2905,9 @@ let lh = function (e) {
                               obscured: Q,
                               onClose: em,
                               children: [
-                                  (0, i.jsx)(t6, { game: F, ref: ev }),
+                                  (0, i.jsx)(t4, { game: F, ref: ev }),
                                   (0, i.jsx)(t2, { game: F, show: ef, trackAction: ec }),
-                                  (0, i.jsx)(t4, { show: ef }),
+                                  (0, i.jsx)(t6, { show: ef }),
                                   (0, i.jsxs)(A.Ch, {
                                       ref: ex,
                                       onScroll: eE,

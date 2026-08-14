@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { Ay: () => h, ed: () => _, gv: () => u, u1: () => E });
-var i,
-    r = n(477900);
-n(582128);
-var a = n(503698),
-    s = n.n(a),
-    l = n(661531),
-    o = n(812993),
-    d = n(375708),
-    c = n(785231),
-    u = (((i = {}).RED = "RED"), (i.GRAY = "GRAY"), i);
-let _ = { LARGE: c.Kp, SMALL: c.qx },
-    E = { [o.EG.ROUND]: c.qG, [o.EG.ROUND_LEFT]: c.HZ, [o.EG.ROUND_RIGHT]: c.q5, [o.EG.SQUARE]: "" };
-function A(e) {
-    let { className: t, style: n, shape: i = o.EG.ROUND, look: a = "RED", size: u = _.LARGE, count: A } = e,
-        h = null != A && A > 1 ? d.intl.format(d.t.hOnBrr, { count: A }) : d.intl.string(d.t.dI3q4h);
-    return "RED" === a
-        ? (0, r.jsx)(o.Lp, {
-              text: h,
-              className: s()(t, c.VD, u),
-              color: l.A.unsafe_rawColors.RED_400.css,
-              shape: E[i],
-              style: n,
+t.d(r, { Ay: () => v, ed: () => c, gv: () => u, u1: () => h });
+var C,
+    l = t(477900);
+t(582128);
+var s = t(503698),
+    n = t.n(s),
+    a = t(661531),
+    i = t(812993),
+    o = t(375708),
+    d = t(785231),
+    u = (((C = {}).RED = "RED"), (C.GRAY = "GRAY"), C);
+let c = { LARGE: d.Kp, SMALL: d.qx },
+    h = { [i.EG.ROUND]: d.qG, [i.EG.ROUND_LEFT]: d.HZ, [i.EG.ROUND_RIGHT]: d.q5, [i.EG.SQUARE]: "" };
+function L(e) {
+    let { className: r, style: t, shape: C = i.EG.ROUND, look: s = "RED", size: u = c.LARGE, count: L } = e,
+        v = null != L && L > 1 ? o.intl.format(o.t.hOnBrr, { count: L }) : o.intl.string(o.t.dI3q4h);
+    return "RED" === s
+        ? (0, l.jsx)(i.Lp, {
+              text: v,
+              className: n()(r, d.VD, u),
+              color: a.A.unsafe_rawColors.RED_400.css,
+              shape: h[C],
+              style: t,
           })
-        : (0, r.jsx)(o.Lp, { text: h, className: s()(t, c.VD, u, c.Oh), disableColor: !0, shape: E[i], style: n });
+        : (0, l.jsx)(i.Lp, { text: v, className: n()(r, d.VD, u, d.Oh), disableColor: !0, shape: h[C], style: t });
 }
-(A.Looks = u), (A.Sizes = _);
-let h = A;
+(L.Looks = u), (L.Sizes = c);
+let v = L;

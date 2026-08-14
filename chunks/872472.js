@@ -1,64 +1,63 @@
-"use strict";
-n.d(t, { A: () => h }), n(321073);
-var i = n(575593),
-    r = n(898461),
-    s = n(474012),
-    a = n(837015),
-    o = n(203632),
-    l = n(892118),
-    u = n(32731),
-    c = n(520606),
-    d = n(652215);
-function _(e) {
-    switch (e.type) {
+r.d(e, { A: () => I }), r(321073);
+var i = r(575593),
+    n = r(898461),
+    s = r(474012),
+    l = r(837015),
+    a = r(203632),
+    u = r(892118),
+    o = r(32731),
+    d = r(520606),
+    c = r(652215);
+function S(t) {
+    switch (t.type) {
         case i.R.AVATAR_DECORATION:
-            return r.A.fromServer(e);
+            return n.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
-            return o.Ay.fromServer(e);
+            return a.Ay.fromServer(t);
         case i.R.NAMEPLATE:
-            return a.A.fromServer(e);
+            return l.A.fromServer(t);
         case i.R.PROFILE_FRAME:
-            return l.A.fromServer(e);
+            return u.A.fromServer(t);
         default:
             return null;
     }
 }
-class h extends c.A {
+class I extends d.A {
     collectiblesItem;
     bundleItems;
-    constructor(e) {
-        if ((super(e), (this.skuProductLine = d.EZt.COLLECTIBLES), null != e.bundle_items)) {
-            const t = [];
-            for (const n of e.bundle_items) {
-                const e = _(n);
-                null != e && t.push(e);
+    constructor(t) {
+        if ((super(t), (this.skuProductLine = c.EZt.COLLECTIBLES), null != t.bundle_items)) {
+            const e = [];
+            for (const r of t.bundle_items) {
+                const t = S(r);
+                null != t && e.push(t);
             }
-            if (0 === t.length) throw Error("Bundle has no valid items");
-            this.bundleItems = t;
-        } else if (null != e.collectibles_item) {
-            const t = _(e.collectibles_item);
-            if (null == t) throw Error("Collectibles item not found");
-            this.collectiblesItem = t;
-        } else if (!e.skipValidation)
+            if (0 === e.length) throw Error("Bundle has no valid items");
+            this.bundleItems = e;
+        } else if (null != t.collectibles_item) {
+            const e = S(t.collectibles_item);
+            if (null == e) throw Error("Collectibles item not found");
+            this.collectiblesItem = e;
+        } else if (!t.skipValidation)
             throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
-    static fromServer(e) {
-        return new h({ ...e, sku: null != e.sku ? u.A.createFromServer(e.sku) : void 0 });
+    static fromServer(t) {
+        return new I({ ...t, sku: null != t.sku ? o.A.createFromServer(t.sku) : void 0 });
     }
-    static fromSKU(e) {
-        let t = (0, s.T)(e);
-        if (null == t) return null;
-        let n = new h({
-            sku_id: e.id,
-            sku_product_line: d.EZt.COLLECTIBLES,
-            sku_name: e.name,
-            sku: e,
+    static fromSKU(t) {
+        let e = (0, s.T)(t);
+        if (null == e) return null;
+        let r = new I({
+            sku_id: t.id,
+            sku_product_line: c.EZt.COLLECTIBLES,
+            sku_name: t.name,
+            sku: t,
             skipValidation: !0,
         });
         return (
-            (n.collectiblesItem = "single" === t.type ? t.item : void 0),
-            (n.bundleItems = "bundle" === t.type ? t.items : void 0),
-            n
+            (r.collectiblesItem = "single" === e.type ? e.item : void 0),
+            (r.bundleItems = "bundle" === e.type ? e.items : void 0),
+            r
         );
     }
 }

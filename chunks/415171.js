@@ -1,7 +1,8 @@
-r.d(t, { tb: () => o });
-var n = r(234097),
-    i = r(916784),
-    o = (function () {
+"use strict";
+n.d(t, { tb: () => a });
+var r = n(234097),
+    i = n(916784),
+    a = (function () {
         function e(e) {
             if (0 == arguments.length)
                 throw TypeError("Failed to construct 'ResizeObserver': 1 argument required, but only 0 present.");
@@ -9,7 +10,7 @@ var n = r(234097),
                 throw TypeError(
                     "Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function.",
                 );
-            n.J.connect(this, e);
+            r.J.connect(this, e);
         }
         return (
             (e.prototype.observe = function (e, t) {
@@ -21,7 +22,7 @@ var n = r(234097),
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                n.J.observe(this, e, t);
+                r.J.observe(this, e, t);
             }),
             (e.prototype.unobserve = function (e) {
                 if (0 == arguments.length)
@@ -32,10 +33,10 @@ var n = r(234097),
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                n.J.unobserve(this, e);
+                r.J.unobserve(this, e);
             }),
             (e.prototype.disconnect = function () {
-                n.J.disconnect(this);
+                r.J.disconnect(this);
             }),
             (e.toString = function () {
                 return "function ResizeObserver () { [polyfill code] }";
@@ -43,4 +44,4 @@ var n = r(234097),
             e
         );
     })();
-r(522816), r(162563);
+n(522816), n(162563);

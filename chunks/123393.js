@@ -48,7 +48,7 @@ function R(e, l, R, y) {
                 null != l &&
                 null != R &&
                 (0, c.openModalLazy)(async () => {
-                    let { default: u } = await n.e("70685").then(n.bind(n, 867276));
+                    let { default: u } = await n.e("970685").then(n.bind(n, 867276));
                     return (n) =>
                         (0, t.jsx)(u, { modalProps: n, guildId: e, userId: l, guildJoinRequestId: R, onError: w });
                 });

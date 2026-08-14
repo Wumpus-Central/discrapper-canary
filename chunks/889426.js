@@ -1,5 +1,5 @@
-n.d(t, { A: () => A });
-var i = n(627968),
+n.d(t, { A: () => f });
+var i = n(477900),
     l = n(562708),
     a = n(442433),
     s = n(793574),
@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(326567),
     d = n(280450),
     u = n(734057),
-    p = n(287809),
-    h = n(806931);
+    h = n(287809),
+    p = n(806931);
 function m(e, t, n) {
     let i = d.default.getId();
     (0, r.x)({
@@ -18,59 +18,59 @@ function m(e, t, n) {
         properties: { location: n, is_tile_owner: e.user.id === i, tile_type: t },
     });
 }
-function A(e) {
+function f(e) {
     let {
             participant: t,
             event: l,
             minimalContextMenu: r,
             entrypoint: d,
-            channelId: A,
-            appContext: x,
-            location: g,
+            channelId: f,
+            appContext: A,
+            location: x,
         } = e,
-        f = u.A.getChannel(A);
-    if (null != f && t.type !== h.lp.ACTIVITY && t.type !== h.lp.HIDDEN_STREAM)
+        g = u.A.getChannel(f);
+    if (null != g && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
         switch (t.type) {
-            case h.lp.STREAM:
-                m(t, h.qs.STREAM, g),
+            case p.lp.STREAM:
+                m(t, p.qs.STREAM, x),
                     (0, a.L3)(
                         l,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("89673"),
-                                n.e("45996"),
-                                n.e("29422"),
+                                n.e("189673"),
+                                n.e("245996"),
+                                n.e("529422"),
                                 n.e("58315"),
-                                n.e("66692"),
+                                n.e("766692"),
                             ]).then(n.bind(n, 796175));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
                                     stream: t.stream,
                                     exitFullscreen: () => {},
-                                    appContext: x,
+                                    appContext: A,
                                     minimal: r,
                                     onInteraction: () =>
                                         (0, o.s)("StreamContextMenu", s.A.GUILD_ROOM, {
                                             entrypoint: d,
-                                            tileType: h.qs.STREAM,
+                                            tileType: p.qs.STREAM,
                                             targetUserId: t.user.id,
                                         }),
                                 });
                         },
-                        { context: x },
+                        { context: A },
                     );
                 return;
-            case h.lp.USER:
-                let C = p.default.getUser(t.id);
+            case p.lp.USER:
+                let C = h.default.getUser(t.id);
                 if (null == C) return;
-                if ((m(t, h.qs.USER, g), r))
-                    return (0, c.r)(l, t.user, f, { context: x }, (e, n) =>
+                if ((m(t, p.qs.USER, x), r))
+                    return (0, c.r)(l, t.user, g, { context: A }, (e, n) =>
                         (0, o.Y)({
                             menuItemProps: n,
                             menuName: e,
-                            entrypoint: d ?? h.GK.THREE_DOT,
-                            tileType: h.qs.USER,
+                            entrypoint: d ?? p.GK.THREE_DOT,
+                            tileType: p.qs.USER,
                             targetUserId: t.user.id,
                             location: s.A.GUILD_ROOM,
                         }),
@@ -79,32 +79,32 @@ function A(e) {
                     l,
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("94881"),
-                            n.e("26132"),
-                            n.e("46652"),
-                            n.e("93190"),
-                            n.e("8757"),
-                            n.e("85968"),
-                            n.e("89673"),
-                            n.e("29787"),
-                            n.e("82073"),
-                            n.e("97558"),
-                            n.e("91994"),
-                            n.e("76665"),
-                            n.e("24198"),
-                            n.e("45996"),
-                            n.e("23427"),
-                            n.e("49145"),
-                            n.e("29422"),
-                            n.e("7059"),
-                            n.e("43116"),
-                            n.e("70314"),
+                            n.e("397705"),
+                            n.e("926132"),
+                            n.e("146652"),
+                            n.e("893190"),
+                            n.e("708757"),
+                            n.e("585968"),
+                            n.e("189673"),
+                            n.e("229787"),
+                            n.e("882073"),
+                            n.e("797558"),
+                            n.e("691994"),
+                            n.e("576665"),
+                            n.e("624198"),
+                            n.e("245996"),
+                            n.e("823427"),
+                            n.e("449145"),
+                            n.e("529422"),
+                            n.e("307059"),
+                            n.e("343116"),
+                            n.e("470314"),
                             n.e("70515"),
-                            n.e("4524"),
-                            n.e("54148"),
-                            n.e("66939"),
-                            n.e("17334"),
-                            n.e("84841"),
+                            n.e("404524"),
+                            n.e("654148"),
+                            n.e("666939"),
+                            n.e("717334"),
+                            n.e("184841"),
                         ]).then(n.bind(n, 107632));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -113,18 +113,18 @@ function A(e) {
                                 showChannelCallItems: !0,
                                 showChatItems: !1,
                                 user: C,
-                                channel: f,
-                                guildId: f.guild_id,
+                                channel: g,
+                                guildId: g.guild_id,
                                 showModalItems: !0,
                                 onInteraction: () =>
                                     (0, o.s)("GuildChannelUserContextMenu", s.A.GUILD_ROOM, {
                                         entrypoint: d,
-                                        tileType: h.qs.USER,
+                                        tileType: p.qs.USER,
                                         targetUserId: t.user.id,
                                     }),
                             });
                     },
-                    { context: x },
+                    { context: A },
                 );
         }
 }

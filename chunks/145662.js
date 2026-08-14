@@ -1,90 +1,91 @@
-a.d(e, { default: () => g });
+a.d(t, { default: () => g });
 var s = a(477900),
     n = a(582128),
     i = a(554146),
     l = a(772707),
     r = a(192308),
     c = a(228366),
-    d = a(367727),
-    u = a(780964),
+    u = a(367727),
+    d = a(780964),
     o = a(766075),
     N = a(174459),
     _ = a(899847),
-    A = a(695515),
-    S = a(191627),
-    f = a(652215),
+    f = a(695515),
+    A = a(191627),
+    S = a(652215),
     p = a(49999),
     E = a(602339),
-    b = a(375708);
-let R = "modal",
+    R = a(375708);
+let b = "modal",
     C = i.M.PARENTAL_CONSENT_GRACE_WARNING;
-function g(t) {
-    let { daysRemaining: e, transitionState: i, onClose: g } = t;
-    (0, b.useSyncMessages)(E.messagesLoader);
+function g(e) {
+    let { daysRemaining: t, transitionState: i, onClose: g } = e;
+    (0, R.useSyncMessages)(E.messagesLoader);
     let k = n.useRef(!1),
         T = n.useCallback(
-            () => !k.current && ((k.current = !0), (0, d.uh)(C, { dismissAction: p.i.USER_DISMISS }), !0),
+            () => !k.current && ((k.current = !0), (0, u.uh)(C, { dismissAction: p.i.USER_DISMISS }), !0),
             [],
         );
     n.useEffect(() => {
-        N.default.track(f.HAw.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, { surface_type: R, days_remaining: e }),
+        N.default.track(S.HAw.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, { surface_type: b, days_remaining: t }),
             c.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_MODAL_SHOWN" });
     }, []);
     let m = n.useCallback(
             () => (
                 T() &&
-                    N.default.track(f.HAw.PARENTAL_CONSENT_WARNING_SURFACE_DISMISSED, {
-                        surface_type: R,
-                        days_remaining: e,
+                    N.default.track(S.HAw.PARENTAL_CONSENT_WARNING_SURFACE_DISMISSED, {
+                        surface_type: b,
+                        days_remaining: t,
                     }),
                 g()
             ),
-            [e, g, T],
+            [t, g, T],
         ),
         y = n.useCallback(() => {
             if (
                 (T(),
                 g(),
-                Object.values(A.A.getLinkedUsers()).some(
-                    (t) => t.link_status === S.Ef.PENDING && t.link_type === S.QM.PARENT,
+                Object.values(f.A.getLinkedUsers()).some(
+                    (e) => e.link_status === A.Ef.PENDING && e.link_type === A.QM.PARENT,
                 ))
             ) {
-                _.Ay.selectTab(S.u9.REQUESTS), (0, o.openUserSettings)(u.X.FAMILY_CENTER_PANEL);
+                _.Ay.selectTab(A.u9.REQUESTS), (0, o.openUserSettings)(d.X.FAMILY_CENTER_PANEL);
                 return;
             }
             (0, r.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([
-                    a.e("76729"),
-                    a.e("43518"),
+                let { default: e } = await Promise.all([
+                    a.e("176729"),
+                    a.e("343518"),
                     a.e("52574"),
-                    a.e("95429"),
-                    a.e("39713"),
-                    a.e("43549"),
-                    a.e("54630"),
-                    a.e("48370"),
-                    a.e("89419"),
+                    a.e("595429"),
+                    a.e("865037"),
+                    a.e("170653"),
+                    a.e("143549"),
+                    a.e("154630"),
+                    a.e("748370"),
+                    a.e("689419"),
                     a.e("94570"),
                 ]).then(a.bind(a, 414833));
-                return (e) => (0, s.jsx)(t, { ...e });
+                return (t) => (0, s.jsx)(e, { ...t });
             });
         }, [g, T]),
-        h = 0 === e,
-        I = h ? b.intl.string(E.default.Zo5YZD) : b.intl.formatToPlainString(E.default.b4sYUn, { count: e }),
-        L = h ? b.intl.string(E.default.CRZBSY) : b.intl.formatToPlainString(E.default.mQcGGY, { count: e });
+        h = 0 === t,
+        I = h ? R.intl.string(E.default.Zo5YZD) : R.intl.formatToPlainString(E.default.b4sYUn, { count: t }),
+        L = h ? R.intl.string(E.default.CRZBSY) : R.intl.formatToPlainString(E.default.mQcGGY, { count: t });
     return (0, s.jsx)(l.k, {
         transitionState: i,
         onClose: m,
         size: "md",
         graphic: {
             type: "image",
-            src: "https://cdn.discordapp.com/assets/content/29c21d5b5fa36b3b4d34d6b61f356260d61a6602220f121b7b9bd43cc2270bd5.svg",
+            src: "https://cdn.discordapp.com/assets/content/f476cb6f746195eb40948b6e306ee343417b7b78be15a0e4f7930f8efdb3d0d4.svg",
             aspectRatio: "16/9",
         },
         title: I,
         subtitle: L,
         actions: [
-            { variant: "primary", text: b.intl.string(E.default.Kp7sjX), onClick: y },
-            { variant: "secondary", text: b.intl.string(E.default.hST5o8), onClick: m },
+            { variant: "primary", text: R.intl.string(E.default.Kp7sjX), onClick: y },
+            { variant: "secondary", text: R.intl.string(E.default.hST5o8), onClick: m },
         ],
     });
 }

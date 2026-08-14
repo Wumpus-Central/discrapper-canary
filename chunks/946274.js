@@ -1,87 +1,88 @@
-"use strict";
-n.d(t, { Ay: () => u, JF: () => d, gA: () => o });
-var i = n(477900),
-    r = n(582128),
-    a = n(780777),
-    s = n(693591),
-    l = n(375708);
+i.d(t, { Ay: () => d, JF: () => p, gA: () => o });
+var a = i(477900),
+    n = i(582128),
+    s = i(780777),
+    l = i(693591),
+    r = i(375708);
 function o() {
-    return [{ name: l.intl.string(l.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
+    return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }
-function d(e, t, n) {
+function p(e, t, i) {
     if (null != e) {
-        let i = new FileReader();
-        (i.onload = (i) => {
-            "string" == typeof i.target?.result &&
-                ((i) => {
-                    if (e.type === s.a.MP4) return t(i, e);
-                    let r = new Image();
-                    (r.src = i),
-                        (r.onload = () => {
-                            t(i, e);
+        let a = new FileReader();
+        (a.onload = (a) => {
+            "string" == typeof a.target?.result &&
+                ((a) => {
+                    if (e.type === l.a.MP4) return t(a, e);
+                    let n = new Image();
+                    (n.src = a),
+                        (n.onload = () => {
+                            t(a, e);
                         }),
-                        (r.onerror = () => {
-                            n();
+                        (n.onerror = () => {
+                            i();
                         });
-                })(i.target.result);
+                })(a.target.result);
         }),
-            i.readAsDataURL(e);
+            a.readAsDataURL(e);
     }
 }
-class c extends r.PureComponent {
-    _ref = r.createRef();
+class h extends n.PureComponent {
+    _ref = n.createRef();
     _isMounted = !1;
     static defaultProps = { multiple: !0, tabIndex: -1, maxFileSizeBytes: 1 / 0 };
     componentDidMount() {
         this._isMounted = !0;
     }
     handleFileChange = (e) => {
-        let { onFileSizeError: t, maxFileSizeBytes: n } = this.props;
+        let { onFileSizeError: t, maxFileSizeBytes: i } = this.props;
         if ((e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files))
-            for (let i = 0; i < e.currentTarget.files.length; i++) {
-                let r = e.currentTarget.files[i];
-                if (r.size > n) {
-                    t?.(n, r.size);
+            for (let a = 0; a < e.currentTarget.files.length; a++) {
+                let n = e.currentTarget.files[a];
+                if (n.size > i) {
+                    t?.(i, n.size);
                     continue;
                 }
-                d(r, this.handleFileRead, this.handleFileError);
+                p(n, this.handleFileRead, this.handleFileError);
             }
     };
     activateUploadDialogue() {
         this._ref.current?.activateUploadDialogue();
     }
     handleFileRead = (e, t) => {
-        let { onChange: n } = this.props;
-        this._isMounted && n(e, t);
+        let { onChange: i } = this.props;
+        this._isMounted && i(e, t);
     };
     handleFileError = async () => {
-        let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 494921));
-        e({ title: l.intl.string(l.t["0egKg3"]), help: l.intl.string(l.t["7PnXqu"]) });
+        let { openUploadError: e } = await Promise.all([i.e("454048"), i.e("599666"), i.e("300699")]).then(
+            i.bind(i, 494921),
+        );
+        e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };
     render() {
         let {
             multiple: e,
             disabled: t,
-            className: n,
-            tabIndex: r,
-            "aria-label": s,
-            "aria-hidden": l,
-            filters: d,
-            title: c,
+            className: i,
+            tabIndex: n,
+            "aria-label": l,
+            "aria-hidden": r,
+            filters: p,
+            title: h,
         } = this.props;
-        return (0, i.jsx)(a.A, {
+        return (0, a.jsx)(s.A, {
             ref: this._ref,
             onClick: this.props.onClick,
             onChange: this.handleFileChange,
-            filters: d ?? o(),
+            filters: p ?? o(),
             multiple: e,
             disabled: t,
-            className: n,
-            tabIndex: r,
-            "aria-label": s,
-            "aria-hidden": l,
-            title: c,
+            className: i,
+            tabIndex: n,
+            "aria-label": l,
+            "aria-hidden": r,
+            title: h,
         });
     }
 }
-let u = c;
+let d = h;

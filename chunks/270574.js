@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => d, v: () => l.nu });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(709066),
-    l = n(705751),
-    o = n(931531);
-let d = function (e) {
+i.d(t, { A: () => _, v: () => l.nu });
+var E = i(477900);
+i(582128);
+var s = i(503698),
+    n = i.n(s),
+    r = i(709066),
+    l = i(705751),
+    a = i(931531);
+let _ = function (e) {
     let {
         name: t,
-        discriminator: n,
-        invertBotTagColor: r,
+        discriminator: i,
+        invertBotTagColor: s,
         nameColor: l,
-        className: d,
-        botType: c,
-        usernameClass: u,
-        discriminatorClass: _,
-        botClass: E,
-        botVerified: A = !1,
-        style: h,
-        useRemSizes: I = !1,
-        usernameIcon: f,
-        guildTag: p,
+        className: _,
+        botType: S,
+        usernameClass: A,
+        discriminatorClass: c,
+        botClass: o,
+        botVerified: T = !1,
+        style: I,
+        useRemSizes: d = !1,
+        usernameIcon: R,
+        guildTag: N,
     } = e;
-    return (0, i.jsxs)("div", {
-        className: a()(d, o.oM),
-        style: h,
+    return (0, E.jsxs)("div", {
+        className: n()(_, a.oM),
+        style: I,
         children: [
-            (0, i.jsxs)("span", {
-                className: a()(o.Xh, u),
+            (0, E.jsxs)("span", {
+                className: n()(a.Xh, A),
                 style: null != l ? { color: l } : void 0,
-                children: [f, t],
+                children: [R, t],
             }),
-            p,
-            null != n ? (0, i.jsxs)("span", { className: _ ?? void 0, children: ["#", n] }) : null,
-            null != c
-                ? (0, i.jsx)(s.A, { type: c, invertColor: r, className: a()(E, o.Od), verified: A, useRemSizes: I })
+            N,
+            null != i ? (0, E.jsxs)("span", { className: c ?? void 0, children: ["#", i] }) : null,
+            null != S
+                ? (0, E.jsx)(r.A, { type: S, invertColor: s, className: n()(o, a.Od), verified: T, useRemSizes: d })
                 : null,
         ],
     });

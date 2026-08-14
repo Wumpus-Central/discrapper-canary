@@ -1,45 +1,44 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(228366),
-    a = n(628049);
-let s = [],
-    l = a.qL;
+i.d(t, { A: () => u });
+var s = i(17928),
+    n = i(228366),
+    r = i(628049);
+let a = [],
+    l = r.qL;
 function o(e, t) {
     return null != e.subscription_id || t?.subscription_id == null ? e : { ...e, subscription_id: t.subscription_id };
 }
-function d(e) {
-    let { guildId: t, gameServer: n } = e;
+function c(e) {
+    let { guildId: t, gameServer: i } = e;
     null != t ||
-        (s = -1 === s.findIndex((e) => e.id === n.id) ? [...s, n] : s.map((e) => (e.id === n.id ? o(n, e) : e)));
+        (a = -1 === a.findIndex((e) => e.id === i.id) ? [...a, i] : a.map((e) => (e.id === i.id ? o(i, e) : e)));
 }
-class c extends i.Ay.Store {
+class d extends s.Ay.Store {
     static displayName = "OwnedGameServersStore";
     getGameServers() {
-        return s;
+        return a;
     }
     getMaxServers() {
         return l;
     }
 }
-let u = new c(r.h, {
+let u = new d(n.h, {
     LOGOUT: function () {
-        (s = []), (l = a.qL);
+        (a = []), (l = r.qL);
     },
     GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function (e) {
-        let { gameServers: t, maxServers: n } = e;
-        (s = t.map((e) =>
+        let { gameServers: t, maxServers: i } = e;
+        (a = t.map((e) =>
             o(
                 e,
-                s.find((t) => t.id === e.id),
+                a.find((t) => t.id === e.id),
             ),
         )),
-            (l = n ?? a.qL);
+            (l = i ?? r.qL);
     },
-    GAME_SERVER_CREATE: d,
-    GAME_SERVER_UPDATE: d,
+    GAME_SERVER_CREATE: c,
+    GAME_SERVER_UPDATE: c,
     GAME_SERVER_DELETE: function (e) {
-        let { guildId: t, gameServerId: n } = e;
-        null == t && (s = s.filter((e) => e.id !== n));
+        let { guildId: t, gameServerId: i } = e;
+        null == t && (a = a.filter((e) => e.id !== i));
     },
 });

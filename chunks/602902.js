@@ -1,82 +1,81 @@
-"use strict";
-n.d(t, { K: () => A }), n(321073);
-var i = n(477900);
-n(582128);
-var r = n(192308),
-    a = n(294454),
-    s = n(118517),
-    l = n(734057),
-    o = n(31717),
-    d = n(232835),
-    c = n(518960),
-    u = n(539572),
-    _ = n(589553),
-    E = n(696016);
-async function A(e, t) {
-    let { channelId: A, analyticsLocations: h, messageReference: I } = t,
-        f = l.A.getChannel(A);
-    if (null != f) {
-        if (null != I) {
-            let e = d.A.getMessage(I.channel_id, I.message_id);
-            null != e && (0, s.Yf)({ message: e, channel: f, shouldMention: !1, showMentionToggle: !1 });
+a.d(n, { K: () => A }), a(321073);
+var t = a(477900);
+a(582128);
+var l = a(192308),
+    s = a(294454),
+    i = a(118517),
+    c = a(734057),
+    r = a(31717),
+    o = a(232835),
+    h = a(518960),
+    p = a(539572),
+    u = a(589553),
+    d = a(696016);
+async function A(e, n) {
+    let { channelId: A, analyticsLocations: g, messageReference: C } = n,
+        y = c.A.getChannel(A);
+    if (null != y) {
+        if (null != C) {
+            let e = o.A.getMessage(C.channel_id, C.message_id);
+            null != e && (0, i.Yf)({ message: e, channel: y, shouldMention: !1, showMentionToggle: !1 });
         }
         try {
-            let t = [],
-                n = [];
-            for (let i of e) {
-                let e = await (0, u.VO)(i, { analyticsLocations: h }),
-                    r = (0, _.A)(i, i.type === E.nQ.SCREENSHOT ? "jpeg" : "mp4");
-                switch (i.type) {
-                    case E.nQ.CLIP:
-                    case E.nQ.VOICE_CLIP:
-                        t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i });
+            let n = [],
+                a = [];
+            for (let t of e) {
+                let e = await (0, p.VO)(t, { analyticsLocations: g }),
+                    l = (0, u.A)(t, t.type === d.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                switch (t.type) {
+                    case d.nQ.CLIP:
+                    case d.nQ.VOICE_CLIP:
+                        n.push(new File([e], l, { type: "video/mp4" })), a.push({ clip: t });
                         break;
-                    case E.nQ.SCREENSHOT:
-                        t.push(new File([e], r, { type: "image/jpeg" })), n.push({});
+                    case d.nQ.SCREENSHOT:
+                        n.push(new File([e], l, { type: "image/jpeg" })), a.push({});
                         break;
                     default:
-                        i.type;
+                        t.type;
                 }
             }
-            (0, c.R)(t, f, o.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), r.closeAllModals();
+            (0, h.R)(n, y, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }), l.closeAllModals();
         } catch (e) {
-            throw (E.nx.error(e), e);
+            throw (d.nx.error(e), e);
         }
     } else
-        (0, r.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
-                let { default: t } = await Promise.all([
-                    n.e("71053"),
-                    n.e("65584"),
-                    n.e("1248"),
-                    n.e("94149"),
-                    n.e("14131"),
-                    n.e("73883"),
-                    n.e("73216"),
-                    n.e("13750"),
-                    n.e("81647"),
-                    n.e("76602"),
-                    n.e("40402"),
-                    n.e("67861"),
-                    n.e("1518"),
-                    n.e("77084"),
-                    n.e("23354"),
-                    n.e("44780"),
-                    n.e("79630"),
-                    n.e("36946"),
-                    n.e("65617"),
-                    n.e("92639"),
-                    n.e("90480"),
-                    n.e("40963"),
-                    n.e("66031"),
-                    n.e("94317"),
-                    n.e("44385"),
-                    n.e("23601"),
-                    n.e("95008"),
-                    n.e("92871"),
-                ]).then(n.bind(n, 243258));
-                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: h });
+                let { default: n } = await Promise.all([
+                    a.e("471053"),
+                    a.e("965584"),
+                    a.e("1248"),
+                    a.e("594149"),
+                    a.e("786798"),
+                    a.e("773883"),
+                    a.e("73216"),
+                    a.e("613750"),
+                    a.e("481647"),
+                    a.e("776602"),
+                    a.e("140402"),
+                    a.e("577084"),
+                    a.e("67861"),
+                    a.e("401518"),
+                    a.e("323354"),
+                    a.e("844780"),
+                    a.e("979630"),
+                    a.e("236946"),
+                    a.e("565617"),
+                    a.e("692639"),
+                    a.e("890480"),
+                    a.e("440963"),
+                    a.e("766031"),
+                    a.e("394317"),
+                    a.e("744385"),
+                    a.e("523601"),
+                    a.e("895008"),
+                    a.e("92871"),
+                ]).then(a.bind(a, 243258));
+                return (a) => (0, t.jsx)(n, { ...a, clips: e, analyticsLocations: g });
             },
-            { stackingBehavior: "stack", modalKey: a.aU },
+            { stackingBehavior: "stack", modalKey: s.aU },
         );
 }

@@ -1,0 +1,15 @@
+e.exports = {
+    yu: "metadata__353fe",
+    kP: "libraryLink__353fe",
+    dy: "libraryIcon__353fe",
+    El: "legacySeasonalGiftEmbedWrapper__353fe",
+    gB: "customGiftEmbedWrapper__353fe",
+    by: "giftEmbedWrapperHorizontal__353fe",
+    gc: "legacySeasonalGiftEmbedBox__353fe",
+    Ei: "legacySeasonalGiftEmbedBoxHorizontal__353fe",
+    ww: "customGiftEmbedBox__353fe",
+    wy: "customGiftEmbedBoxHorizontal__353fe",
+    nr: "headerIcon__353fe",
+    mp: "collectiblesEmbedWrapper__353fe",
+    UQ: "collectiblesAcceptButton__353fe",
+};

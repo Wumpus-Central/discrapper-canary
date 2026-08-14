@@ -1,4 +1,4 @@
-t.d(n, { A: () => x });
+t.d(n, { A: () => f });
 var l = t(477900);
 t(582128);
 var i = t(17928),
@@ -16,12 +16,12 @@ var i = t(17928),
     E = t(47868),
     p = t(375708),
     g = t(822125);
-function x(e) {
-    let { channelId: n, showDismiss: x = !0 } = e,
-        f = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
+function f(e) {
+    let { channelId: n, showDismiss: f = !0 } = e,
+        x = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
         I = (0, h.RO)(n),
         T = null != (0, h.Qs)(n),
-        { canManageGuildEvent: v } = (0, o.nr)(f),
+        { canManageGuildEvent: v } = (0, o.nr)(x),
         _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
         j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             _,
@@ -43,19 +43,20 @@ function x(e) {
                               v(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
-                                            t.e("78638"),
-                                            t.e("25296"),
-                                            t.e("1922"),
-                                            t.e("48263"),
-                                            t.e("49347"),
-                                            t.e("68248"),
+                                            t.e("942725"),
+                                            t.e("166509"),
+                                            t.e("725296"),
+                                            t.e("901922"),
+                                            t.e("970644"),
+                                            t.e("449347"),
+                                            t.e("468248"),
                                             t.e("69772"),
                                         ]).then(t.bind(t, 914119));
                                         return (t) => (0, l.jsx)(n, { ...t, event: e });
                                     })
                                   : (0, d.uR)({ eventId: e.id });
                           },
-                          onDismiss: x
+                          onDismiss: f
                               ? () => {
                                     var n;
                                     return (n = e.id), void (0, m.Nt)(n);

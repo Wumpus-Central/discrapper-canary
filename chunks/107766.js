@@ -7,13 +7,13 @@ function l(e, n) {
     (0, d.openModalLazy)(
         async () => {
             let { default: d } = await Promise.all([
-                t.e("63117"),
-                t.e("80262"),
-                t.e("31997"),
-                t.e("2669"),
-                t.e("89913"),
-                t.e("10023"),
-                t.e("90078"),
+                t.e("463117"),
+                t.e("780262"),
+                t.e("531997"),
+                t.e("689913"),
+                t.e("202669"),
+                t.e("310023"),
+                t.e("890078"),
             ]).then(t.bind(t, 904685));
             return (t) => (0, a.jsx)(d, { ...t, userId: e, linkCode: n });
         },

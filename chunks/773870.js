@@ -5,7 +5,7 @@ var i = n(439372),
     a = n(287809),
     s = n(977997),
     l = n(572164),
-    o = n(430795),
+    o = n(539572),
     d = n(915725),
     c = n(974293),
     u = n(240899),
@@ -33,7 +33,7 @@ class f extends i.A {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
                     isEnabled: () => (0, c.$i)("Clip signal handler registration") && d.Ay.getEnableAutoclipping(),
-                    importHandler: () => n.e("53725").then(n.bind(n, 691148)),
+                    importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
@@ -41,7 +41,7 @@ class f extends i.A {
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() &&
                         _.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
-                    importHandler: () => n.e("78045").then(n.bind(n, 359788)),
+                    importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
@@ -49,7 +49,7 @@ class f extends i.A {
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() &&
                         A.A.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
-                    importHandler: () => n.e("33196").then(n.bind(n, 551367)),
+                    importHandler: () => n.e("533196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
@@ -58,7 +58,7 @@ class f extends i.A {
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() &&
                         E.A.getConfig({ location: "Clip signal handler registration" }).enableLeagueEvents,
-                    importHandler: () => n.e("18549").then(n.bind(n, 877588)),
+                    importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
@@ -67,7 +67,7 @@ class f extends i.A {
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() &&
                         u.A.getConfig({ location: "Clip signal handler registration" }).enableCs2Gsi,
-                    importHandler: () => n.e("60838").then(n.bind(n, 525509)),
+                    importHandler: () => Promise.all([n.e("847555"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
             ]))
                 switch (e.type) {

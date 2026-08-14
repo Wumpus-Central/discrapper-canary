@@ -1,6 +1,6 @@
 "use strict";
 n.r(t),
-    n.d(t, { enable: () => O, isNotSupported: () => N, trackToggleSelfDeaf: () => L, trackToggleSelfMute: () => R });
+    n.d(t, { enable: () => R, isNotSupported: () => N, trackToggleSelfDeaf: () => L, trackToggleSelfMute: () => O });
 var i = n(477900);
 n(582128);
 var r = n(862482),
@@ -10,7 +10,7 @@ var r = n(862482),
     o = n(228366),
     d = n(626584),
     c = n(734057),
-    u = n(293246),
+    u = n(626822),
     _ = n(309010),
     E = n(532624),
     A = n(531685),
@@ -23,7 +23,7 @@ var r = n(862482),
 let g = new d.A("AudioActionCreators");
 function S() {
     (0, a.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("39981"), n.e("44602"), n.e("25280")]).then(n.bind(n, 987482));
+        let { default: e } = await Promise.all([n.e("773708"), n.e("944602"), n.e("825280")]).then(n.bind(n, 987482));
         return (t) => (0, i.jsx)(e, { source: "Unsupported Browser", ...t });
     });
 }
@@ -47,7 +47,7 @@ function N() {
 function C(e) {
     h.default.track(p.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
 }
-function O() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return N()
         ? Promise.resolve(!1)
@@ -77,7 +77,7 @@ function O() {
               )
               .then(() => !0));
 }
-function R(e) {
+function O(e) {
     let { usedKeybind: t = !1, location: n } = e,
         i = E.Ay.getKeybindForAction(p.hCu.TOGGLE_MUTE, !1, !0),
         r = _.Ay.getVoiceChannelId(),

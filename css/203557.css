@@ -1,0 +1,29 @@
+.wrapper__748d7 {
+    display: flex;
+    gap: 4px
+}
+
+:root {
+    --custom-app-message-embed-base-info-gap: 4px;
+    --custom-app-message-embed-base-info-top: calc(var(--custom-app-message-embed-base-info-gap) - 2px)
+}
+
+.description__1f7ec {
+    margin-top: var(--custom-app-message-embed-base-info-top)
+}
+
+.description__1f7ec strong {
+    font-weight: 500
+}
+
+.tagline__1f7ec {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    padding-top: var(--custom-app-message-embed-base-info-gap)
+}
+
+.tag__1f7ec:not(:first-of-type):before {
+    content: "∙";
+    padding: 0 3px
+}

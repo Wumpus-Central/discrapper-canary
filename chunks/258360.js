@@ -220,9 +220,10 @@ function O(t) {
                                       label: P.intl.string(P.t.IcDoaD),
                                       action: () => {
                                           (0, j.openModalLazy)(async () => {
-                                              let { default: t } = await Promise.all([n.e("94232"), n.e("54191")]).then(
-                                                  n.bind(n, 665906),
-                                              );
+                                              let { default: t } = await Promise.all([
+                                                  n.e("194232"),
+                                                  n.e("54191"),
+                                              ]).then(n.bind(n, 665906));
                                               return (e) => (0, a.jsx)(t, { ...e });
                                           });
                                       },

@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { T_: () => I, oS: () => f, Ay: () => p }), n(321073);
-var i,
-    r = n(582128),
-    a = n(284009),
-    s = n.n(a),
-    l = (((i = {})[(i.GAME_PROFILE_DISABLED = 1)] = "GAME_PROFILE_DISABLED"), i),
-    o = n(665260),
-    d = n(501592),
-    c = n(311043),
-    u = n(174459),
-    _ = n(738250),
-    E = n(652215);
-function A(e) {
-    return o.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED);
+l.d(e, { T_: () => I, oS: () => h, Ay: () => A }), l(321073);
+var t,
+    a = l(582128),
+    o = l(284009),
+    u = l.n(o),
+    i = (((t = {})[(t.GAME_PROFILE_DISABLED = 1)] = "GAME_PROFILE_DISABLED"), t),
+    r = l(665260),
+    d = l(501592),
+    c = l(311043),
+    s = l(174459),
+    f = l(738250),
+    g = l(652215);
+function m(n) {
+    return r.Lt(n.gameFlags, i.GAME_PROFILE_DISABLED);
 }
-function h(e) {
-    if (null == e) return ["no match"];
-    let t = [];
-    return A(e) && t.push("profile disabled"), (0, d.K)(e.contentClassification) && t.push("nsfw"), t;
+function p(n) {
+    if (null == n) return ["no match"];
+    let e = [];
+    return m(n) && e.push("profile disabled"), (0, d.K)(n.contentClassification) && e.push("nsfw"), e;
 }
-function I(e) {
-    return 0 === h(e).length;
+function I(n) {
+    return 0 === p(n).length;
 }
-function f(e) {
-    return I(c.A.getGame(e));
+function h(n) {
+    return I(c.A.getGame(n));
 }
-let p = function (e) {
-    let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: a = !0 } = e,
-        l = r.useRef(!1),
-        { gameId: o, gameRecord: d, isLoading: c } = (0, _.A)({ applicationId: t, gameId: n }),
-        I = null != d && !A(d);
+let A = function (n) {
+    let { applicationId: e = "", gameId: l, source: t, trackEntryPointImpression: o = !0 } = n,
+        i = a.useRef(!1),
+        { gameId: r, gameRecord: d, isLoading: c } = (0, f.A)({ applicationId: e, gameId: l }),
+        I = null != d && !m(d);
     return (
-        r.useEffect(() => {
-            l.current ||
-                !a ||
+        a.useEffect(() => {
+            i.current ||
+                !o ||
                 c ||
                 null == d ||
-                (s()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source."),
-                (function (e, t) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                        i = arguments.length > 3 ? arguments[3] : void 0;
-                    u.default.track(E.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
-                        game_profile_available: e,
-                        application_id: t,
-                        rejection_reason: n,
-                        source: i,
+                (u()(null != t, "Cannot track a Game Profile Entry Point Impressions without a source."),
+                (function (n, e) {
+                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+                        t = arguments.length > 3 ? arguments[3] : void 0;
+                    s.default.track(g.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+                        game_profile_available: n,
+                        application_id: e,
+                        rejection_reason: l,
+                        source: t,
                     });
-                })(I, d.id, h(d), i),
-                (l.current = !0));
-        }, [d, I, c, i, a]),
-        { shouldOpenGameProfile: I, gameId: o }
+                })(I, d.id, p(d), t),
+                (i.current = !0));
+        }, [d, I, c, t, o]),
+        { shouldOpenGameProfile: I, gameId: r }
     );
 };

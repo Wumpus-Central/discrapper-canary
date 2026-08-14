@@ -1,4 +1,4 @@
-l.d(t, { mf: () => y, bv: () => C });
+l.d(t, { mf: () => j, bv: () => C });
 var n = l(477900),
     a = l(582128),
     s = l(17928),
@@ -19,15 +19,15 @@ var n = l(477900),
     h = l(275695),
     I = l(375708);
 let [A, C] = (0, m.A)();
-function j(e) {
+function y(e) {
     return e?.plans[Math.ceil((e?.plans.length - 1) / 2)]?.id;
 }
-function y(e) {
+function j(e) {
     let t,
         m,
         {
             guildId: C,
-            initialGameServerInstance: y,
+            initialGameServerInstance: j,
             initialGameServerGame: G,
             stepConfig: P = S.ZN,
             children: N,
@@ -35,8 +35,8 @@ function y(e) {
             analyticsLocation: w,
         } = e;
     a.useEffect(() => {
-        (0, b.z9)(C), (0, d.Xd)(C, !0), null == y && (0, b.cq)(C);
-    }, [C, y]);
+        (0, b.z9)(C), (0, d.Xd)(C, !0), null == j && (0, b.cq)(C);
+    }, [C, j]);
     let O = (0, s.bG)([g.A], () => g.A.getStateForGuild(C)),
         E = (0, s.bG)([o.A], () => o.A.getGuild(C)),
         { analyticsLocations: M } = (0, i.Ay)(w),
@@ -45,16 +45,16 @@ function y(e) {
         z = P.steps[L],
         [B, H] = a.useState(G?.id);
     a.useEffect(() => {
-        if (null != B || y?.entitlementId == null) return;
-        let e = O?.entitlements?.[y.entitlementId]?.sku?.product_id;
+        if (null != B || j?.entitlementId == null) return;
+        let e = O?.entitlements?.[j.entitlementId]?.sku?.product_id;
         null != e && H(e);
-    }, [O?.entitlements, y?.entitlementId, B]);
+    }, [O?.entitlements, j?.entitlementId, B]);
     let [J, X] = a.useState(void 0),
         q = a.useMemo(() => {
             if (null != B) return Object.values(O?.catalog ?? {}).find((e) => e.id === B);
         }, [O?.catalog, B]),
-        [F, K] = a.useState(y),
-        [R, W] = a.useState(j(G) ?? y?.planId),
+        [F, K] = a.useState(j),
+        [R, W] = a.useState(y(G) ?? j?.planId),
         Y =
             ((t = (0, s.bG)([g.A], () => g.A.getStateForGuild(C)?.entitlements)),
             (m = q?.plans.find((e) => e.id === R)?.cost ?? 0),
@@ -69,13 +69,13 @@ function y(e) {
         ),
         V = a.useCallback(
             (e, t) => {
-                Q(void 0), H(e?.id), W(t ?? j(e));
+                Q(void 0), H(e?.id), W(t ?? y(e));
             },
             [Q],
         ),
         [Z, D] = a.useState(),
-        [U, $] = a.useState(y?.name ?? ""),
-        [ee, et] = a.useState(y?.regionId ?? ""),
+        [U, $] = a.useState(j?.name ?? ""),
+        [ee, et] = a.useState(j?.regionId ?? ""),
         [el, en] = a.useState(!1),
         ea = a.useRef(!1),
         es = a.useCallback(() => {
@@ -96,13 +96,13 @@ function y(e) {
                                 (t = null == F ? "created" : "updated"),
                                 (0, v.openModalLazy)(async () => {
                                     let { default: a } = await Promise.all([
-                                        l.e("97106"),
-                                        l.e("64827"),
-                                        l.e("84569"),
-                                        l.e("22455"),
-                                        l.e("957"),
-                                        l.e("20969"),
-                                        l.e("13634"),
+                                        l.e("697106"),
+                                        l.e("364827"),
+                                        l.e("784569"),
+                                        l.e("322455"),
+                                        l.e("200957"),
+                                        l.e("720969"),
+                                        l.e("413634"),
                                     ]).then(l.bind(l, 483225));
                                     return (l) => (0, n.jsx)(a, { gameServerGame: q, guildId: e, status: t, ...l });
                                 }));

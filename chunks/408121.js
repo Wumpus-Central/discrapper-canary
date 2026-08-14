@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { X: () => A });
-var i = n(477900),
-    r = n(582128),
+n.d(t, { X: () => h });
+var r = n(477900),
+    l = n(582128),
     a = n(297264),
-    s = n(939249),
-    l = n(789645),
-    o = n(259678),
-    d = n(364522),
+    i = n(939249),
+    u = n(789645),
+    s = n(259678),
+    o = n(364522),
     c = n(289873),
-    u = n(445563),
-    _ = n(375708),
-    E = n(668534);
-function A(e) {
-    let { text: t, isLoading: n = !1, onClose: A } = e,
-        h = r.useMemo(
+    d = n(445563),
+    m = n(375708),
+    f = n(668534);
+function h(e) {
+    let { text: t, isLoading: n = !1, onClose: h } = e,
+        p = l.useMemo(
             () =>
                 (t ?? "")
                     .split("\n")
@@ -21,39 +20,39 @@ function A(e) {
                     .filter((e) => e.length > 0),
             [t],
         );
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)("div", {
-                className: E.Mm,
+            (0, r.jsxs)("div", {
+                className: f.Mm,
                 children: [
-                    (0, i.jsx)(a.D, {
+                    (0, r.jsx)(a.D, {
                         variant: "heading-md/semibold",
                         color: "currentColor",
-                        children: _.intl.string(u.default["VZkd/n"]),
+                        children: m.intl.string(d.default["VZkd/n"]),
                     }),
-                    (0, i.jsx)(s.D, {
-                        onClick: A,
-                        className: E.GI,
-                        "aria-label": _.intl.string(u.default["6/dkHh"]),
-                        children: (0, i.jsx)(l.P, { color: "currentColor" }),
+                    (0, r.jsx)(i.D, {
+                        onClick: h,
+                        className: f.GI,
+                        "aria-label": m.intl.string(d.default["6/dkHh"]),
+                        children: (0, r.jsx)(u.P, { color: "currentColor" }),
                     }),
                 ],
             }),
-            (0, i.jsx)(o.vN, {
-                children: (0, i.jsx)(d.Ar, {
-                    className: E.j5,
+            (0, r.jsx)(s.vN, {
+                children: (0, r.jsx)(o.Ar, {
+                    className: f.j5,
                     fade: !0,
-                    children: (0, i.jsx)("div", {
-                        className: E.FN,
+                    children: (0, r.jsx)("div", {
+                        className: f.FN,
                         children: n
-                            ? (0, i.jsx)("div", {
-                                  className: E.Cw,
-                                  children: (0, i.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES }),
+                            ? (0, r.jsx)("div", {
+                                  className: f.Cw,
+                                  children: (0, r.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES }),
                               })
-                            : (0, i.jsx)(a.D, {
+                            : (0, r.jsx)(a.D, {
                                   variant: "heading-md/normal",
                                   color: "text-muted",
-                                  children: h.map((e, t) => (0, i.jsx)("p", { children: e }, t)),
+                                  children: p.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
                               }),
                     }),
                 }),

@@ -1,83 +1,82 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => N });
 var i = n(477900),
-    r = n(582128),
-    a = n(877624),
-    s = n(554146),
-    l = n(349288),
+    l = n(582128),
+    c = n(877624),
+    r = n(554146),
+    s = n(349288),
     o = n(367727),
-    d = n(174459),
-    c = n(549996),
-    u = n(498470),
-    _ = n(637706),
+    a = n(174459),
+    _ = n(549996),
+    A = n(498470),
+    T = n(637706),
     E = n(788883),
-    A = n(635995),
-    h = n(652215),
-    I = n(49999);
-function f() {
-    let e = (0, c.c)(a.C.NAGBAR),
+    I = n(635995),
+    u = n(652215),
+    R = n(49999);
+function N() {
+    let e = (0, _.c)(c.C.NAGBAR),
         t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
         n = e?.id,
-        f = e?.promotionId,
-        p = r.useCallback(
+        N = e?.promotionId,
+        d = l.useCallback(
             (e) => {
-                null != f &&
-                    (0, o.qr)(s.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, f, { dismissAction: e, forceTrack: !0 });
+                null != N &&
+                    (0, o.qr)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, N, { dismissAction: e, forceTrack: !0 });
             },
-            [f],
+            [N],
         ),
-        T = r.useCallback(() => {
-            d.default.track(h.HAw.APP_NOTICE_CLOSED, { notice_type: h.kqX.PREMIUM_MARKETING_NAGBAR }),
-                p(I.i.USER_DISMISS);
-        }, [p]),
-        m = r.useRef(null);
+        O = l.useCallback(() => {
+            a.default.track(u.HAw.APP_NOTICE_CLOSED, { notice_type: u.kqX.PREMIUM_MARKETING_NAGBAR }),
+                d(R.i.USER_DISMISS);
+        }, [d]),
+        p = l.useRef(null);
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             null == t ||
-                null == f ||
-                (m.current !== f &&
-                    ((m.current = f), (0, o.Wx)(s.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: f })));
-        }, [t, f]),
-        null == t || null == n || null == f)
+                null == N ||
+                (p.current !== N &&
+                    ((p.current = N), (0, o.Wx)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: N })));
+        }, [t, N]),
+        null == t || null == n || null == N)
     )
         return null;
-    let g = (0, u.h)({
+    let M = (0, A.h)({
             buttonAction: t.ctaAction,
             deeplinkSection: t.deeplinkSection,
             applicationId: t.navigableStorefrontApplicationId?.value,
             onClose: () => {
-                p(I.i.TAKE_ACTION);
+                d(R.i.TAKE_ACTION);
             },
         }),
-        S = (0, _.C)(t.helpArticle, "");
+        P = (0, T.C)(t.helpArticle, "");
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(E.A, {
-                componentType: a.C.NAGBAR,
+                componentType: c.C.NAGBAR,
                 componentId: n,
-                promotionId: f,
-                dismissibleContent: s.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
+                promotionId: N,
+                dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
             }),
-            (0, i.jsxs)(A.T0, {
-                onClick: T,
+            (0, i.jsxs)(I.T0, {
+                onClick: O,
                 children: [
-                    (0, i.jsxs)(A.In, {
+                    (0, i.jsxs)(I.In, {
                         children: [
                             t.body,
-                            null != S &&
+                            null != P &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: ["\xa0", (0, i.jsx)(l.Anchor, { href: S.url, children: S.linkText })],
+                                    children: ["\xa0", (0, i.jsx)(s.Anchor, { href: P.url, children: P.linkText })],
                                 }),
                         ],
                     }),
                     "" !== t.ctaLabel &&
-                        (0, i.jsx)(A.fY, {
+                        (0, i.jsx)(I.fY, {
                             text: t.ctaLabel,
                             onClick: function () {
-                                d.default.track(h.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                                    notice_type: h.kqX.PREMIUM_MARKETING_NAGBAR,
+                                a.default.track(u.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                                    notice_type: u.kqX.PREMIUM_MARKETING_NAGBAR,
                                 }),
-                                    g();
+                                    M();
                             },
                         }),
                 ],

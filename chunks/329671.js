@@ -20,7 +20,7 @@ function x(t) {
         }, [g, j, k]),
         y = n.useCallback(() => {
             (0, r.openModalLazy)(async () => {
-                let { default: t } = await i.e("3956").then(i.bind(i, 703551));
+                let { default: t } = await i.e("303956").then(i.bind(i, 703551));
                 return (a) => (0, e.jsx)(t, { ...a });
             });
         }, []);

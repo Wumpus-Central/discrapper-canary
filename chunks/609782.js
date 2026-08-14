@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { ie: () => l, w0: () => a });
-var i = n(70283);
-let r = {
+i.d(t, { ie: () => u, w0: () => n });
+var r = i(70283);
+let l = {
     staff: 22,
     staff_hidden: 22,
     staff_personal: 22,
@@ -38,13 +37,13 @@ let r = {
     april_fools_2026: 15,
     orb_profile_badge: 16,
 };
-function a(e) {
-    let t = r[e];
+function n(e) {
+    let t = l[e];
     if (null != t) return t;
-    let n = i.$[e.toUpperCase()];
-    return "number" == typeof n ? n : void 0;
+    let i = r.$[e.toUpperCase()];
+    return "number" == typeof i ? i : void 0;
 }
-let s = new Set(Object.values(r));
-function l(e) {
-    return s.has(e);
+let a = new Set(Object.values(l));
+function u(e) {
+    return a.has(e);
 }

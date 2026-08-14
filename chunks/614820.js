@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     O: () =>
         function e(t) {
@@ -6,9 +5,9 @@ n.d(t, {
                 ? t
                 : t instanceof Array
                   ? t.map(e).join("")
-                  : i.isValidElement(t)
+                  : l.isValidElement(t)
                     ? e(t.props.children)
                     : void 0;
         },
 });
-var i = n(582128);
+var l = n(582128);

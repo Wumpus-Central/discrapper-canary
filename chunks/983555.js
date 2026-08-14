@@ -22,8 +22,8 @@ var i = n(607399),
     S = n(842241),
     N = n(376943),
     C = n(741231),
-    O = n(971276),
-    R = n(216934),
+    R = n(971276),
+    O = n(216934),
     L = n(976860),
     y = n(832163),
     D = n(788995),
@@ -130,7 +130,7 @@ function $(e) {
                           channel_id: G.Ay.getChannelId(),
                       }),
                       n
-                          .e("38042")
+                          .e("138042")
                           .then(n.bind(n, 837057))
                           .then((e) => {
                               let { transitionToGlobalDiscovery: t } = e,
@@ -204,7 +204,7 @@ function $(e) {
             e?.preventDefault();
             let [t, i] = T.code.split("-");
             return (
-                Promise.all([n.e("21574"), n.e("49607")])
+                Promise.all([n.e("521574"), n.e("749607")])
                     .then(n.bind(n, 811546))
                     .then((e) => {
                         let { openGuildProductLink: n } = e;
@@ -219,7 +219,7 @@ function $(e) {
             let [t, i] = T.code.split("-");
             return (
                 n
-                    .e("31445")
+                    .e("831445")
                     .then(n.bind(n, 44724))
                     .then((e) => {
                         let { navigateToSocialLayerStorefrontWithGuildPreview: n } = e;
@@ -236,7 +236,7 @@ function $(e) {
             if (null != r)
                 return (
                     n
-                        .e("31445")
+                        .e("831445")
                         .then(n.bind(n, 44724))
                         .then((e) => {
                             let { default: n } = e;
@@ -245,7 +245,7 @@ function $(e) {
                     !0
                 );
         };
-    if (null != T && T.type === f.I.QUESTS_EMBED && (0, O.s)())
+    if (null != T && T.type === f.I.QUESTS_EMBED && (0, R.s)())
         return (e) => {
             e?.preventDefault();
             let { search: t } = V.A.toURLSafe(T.url) ?? {};
@@ -253,7 +253,7 @@ function $(e) {
                 let e = new URLSearchParams(t);
                 e.get("sort"), e.get("filter");
             }
-            return (0, R.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0;
+            return (0, O.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0;
         };
     if (null != T && T.type === f.I.GAME_PROFILE)
         return (e) => {
@@ -292,7 +292,7 @@ function $(e) {
             } else a && (s = e[4]);
             return (
                 n
-                    .e("38042")
+                    .e("138042")
                     .then(n.bind(n, 837057))
                     .then((e) => {
                         let { transitionToGlobalDiscovery: t } = e,
@@ -364,7 +364,7 @@ function $(e) {
         return (e) => (e?.preventDefault(), t(i, r, a), !0);
     }
     return U && b?.startsWith("/discovery/quests")
-        ? (e) => (e?.preventDefault(), (0, R.m)({ fromContent: r.u.QUEST_BADGE }), !0)
+        ? (e) => (e?.preventDefault(), (0, O.m)({ fromContent: r.u.QUEST_BADGE }), !0)
         : U && b?.startsWith("/quest-home")
           ? (e) => (e?.preventDefault(), (0, L.pX)(H.BVt.QUEST_HOME + (M ?? "")), !0)
           : U && b?.startsWith("/quest-preview")
@@ -377,7 +377,7 @@ function $(e) {
               ? (e) => (
                     e?.preventDefault(),
                     n
-                        .e("38042")
+                        .e("138042")
                         .then(n.bind(n, 837057))
                         .then((e) => {
                             let { transitionToGlobalDiscovery: t } = e,

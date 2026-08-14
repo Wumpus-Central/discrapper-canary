@@ -501,7 +501,7 @@ var eD = l(82293),
     ew = l(921853),
     eV = l(477155),
     eF = l(320448),
-    eB = l(712905),
+    eB = l(935286),
     eH = l(228366),
     eY = l(725951),
     ez = l(625494),
@@ -718,8 +718,8 @@ var e$ = l(619517),
     eJ = l(615300),
     e0 = l(456412),
     e1 = l(133296),
-    e7 = l(689175),
-    e8 = l(532197),
+    e8 = l(689175),
+    e7 = l(532197),
     e9 = l(651183);
 let e2 = { CENTER: e9.Hu, LEFT: e9.Vl };
 class e5 extends i.PureComponent {
@@ -747,7 +747,7 @@ class e5 extends i.PureComponent {
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: a, align: r } = this.props,
             o = l ? e9.XA : e9.BU;
-        return (0, s.jsx)(e7.Gt, {
+        return (0, s.jsx)(e8.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: n()(o, a, r),
             ref: this.handleSetScrollerRef,
@@ -774,7 +774,7 @@ class e3 extends i.PureComponent {
         return (0, s.jsx)(eO.D, {
             className: n()(e9.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e8.A, { className: e9.UE, direction: e8.A.Directions.LEFT }),
+            children: (0, s.jsx)(e7.A, { className: e9.UE, direction: e7.A.Directions.LEFT }),
         });
     }
 }
@@ -789,7 +789,7 @@ class e6 extends i.PureComponent {
         return (0, s.jsx)(eO.D, {
             className: n()(e9.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e8.A, { className: e9.UE, direction: e8.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e7.A, { className: e9.UE, direction: e7.A.Directions.RIGHT }),
         });
     }
 }
@@ -1554,14 +1554,14 @@ function t0(e) {
                       children: [
                           a.map((e, t) => (0, s.jsx)(t1, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
-                              ? (0, s.jsx)(t7, {
+                              ? (0, s.jsx)(t8, {
                                     icon: tW.o,
                                     url: t.terms_of_service_url,
                                     children: U.intl.string(U.t.s7STcY),
                                 })
                               : null,
                           null != t.privacy_policy_url
-                              ? (0, s.jsx)(t7, {
+                              ? (0, s.jsx)(t8, {
                                     icon: tK.X,
                                     url: t.privacy_policy_url,
                                     children: U.intl.string(U.t.kH3JR5),
@@ -1578,9 +1578,9 @@ function t1(e) {
         i = (0, tq.Ay)(),
         a = tQ.A.getByUrl(t),
         n = (0, tX.M)(i) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
-    return (0, s.jsx)(t7, { icon: void 0 === n ? tZ.q : void 0, imageSrc: n, url: t, children: l });
+    return (0, s.jsx)(t8, { icon: void 0 === n ? tZ.q : void 0, imageSrc: n, url: t, children: l });
 }
-function t7(e) {
+function t8(e) {
     let { icon: t, imageSrc: l, iconColor: i, url: a, children: r } = e,
         o = k(),
         c = null;
@@ -1598,12 +1598,12 @@ function t7(e) {
         children: d,
     });
 }
-var t8 = l(449054),
+var t7 = l(449054),
     t9 = l(900002),
     t2 = l(950305),
     t5 = l(573435),
     t3 = l(714991),
-    t6 = l(597098),
+    t6 = l(776231),
     t4 = l(149790),
     le = l(575504),
     lt = l(937495),
@@ -1706,7 +1706,7 @@ function la(e) {
                     if (null != e) {
                         O(L.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: L.liQ.APPLICATION_DIRECTORY };
-                        await (0, t8.Z2)(e, l);
+                        await (0, t7.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -2043,8 +2043,8 @@ var lM = l(607399),
     lJ = l(50268),
     l0 = l(207371),
     l1 = l(928658),
-    l7 = l(395671),
-    l8 = l(957565),
+    l8 = l(395671),
+    l7 = l(957565),
     l9 = l(692848),
     l2 = l(848194);
 let l5 = "start_application_install",
@@ -2172,13 +2172,13 @@ let st = i.forwardRef(function (e, t) {
         o = i.useCallback(() => {
             var e;
             O(L.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l8.C)(
+                (0, l7.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${L.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lU.P0)((0, lw.o)(U.intl.string(U.t["L/PwZf"]), lV.Ck.SUCCESS)),
                 );
         }, [l.id]),
         d = i.useCallback(() => {
-            let e = l7.Ay.createFromServer(l);
+            let e = l8.Ay.createFromServer(l);
             (0, l1.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
         u = (0, lJ.A)({
@@ -2263,7 +2263,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l4, { application: l, size: a, contentWidth: "normal", variant: x }),
-                    l8.p5
+                    l7.p5
                         ? (0, s.jsx)(eU.K, {
                               variant: "secondary",
                               size: a,
@@ -2280,7 +2280,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l4, { application: l, size: a, contentWidth: "small", variant: x }),
-                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l7.p5, e), size: a }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2288,7 +2288,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l4, { application: l, size: a, contentWidth: "icon", variant: x }),
-                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l7.p5, e), size: a }),
                 ],
             }),
         ],
@@ -2585,12 +2585,12 @@ function sj(e) {
                     return void (0, sc.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("73432"),
+                                l.e("540496"),
                                 l.e("39086"),
-                                l.e("17104"),
-                                l.e("17989"),
-                                l.e("80830"),
-                                l.e("70104"),
+                                l.e("294723"),
+                                l.e("817989"),
+                                l.e("480830"),
+                                l.e("170104"),
                             ]).then(l.bind(l, 963179));
                             return (l) => (0, s.jsx)(e, { appId: t, skuId: a, ...l });
                         },
@@ -2614,12 +2614,12 @@ function sj(e) {
                         void (0, sc.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: i } = await Promise.all([
-                                    l.e("73432"),
+                                    l.e("540496"),
                                     l.e("39086"),
-                                    l.e("17104"),
-                                    l.e("17989"),
-                                    l.e("80830"),
-                                    l.e("64850"),
+                                    l.e("294723"),
+                                    l.e("817989"),
+                                    l.e("480830"),
+                                    l.e("564850"),
                                 ]).then(l.bind(l, 168393));
                                 return (l) =>
                                     (0, s.jsx)(i, { appId: t, subscriptionType: e, skuId: a, guildId: void 0, ...l });

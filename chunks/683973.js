@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { k: () => l });
-var i = n(582128),
-    r = n(17928),
-    a = n(594061),
-    s = n(617617);
-function l() {
+r.d(t, { k: () => a });
+var s = r(582128),
+    n = r(17928),
+    l = r(594061),
+    i = r(617617);
+function a() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return (
-        i.useEffect(() => {
-            e && a.bW.loadIfNecessary();
+        s.useEffect(() => {
+            e && l.bW.loadIfNecessary();
         }, [e]),
-        (0, r.bG)([s.A], () => s.A.frecencyWithoutFetchingLatest)
+        (0, n.bG)([i.A], () => i.A.frecencyWithoutFetchingLatest)
     );
 }

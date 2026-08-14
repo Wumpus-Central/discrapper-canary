@@ -198,22 +198,22 @@ let eP = function (e) {
                                 e,
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("97422"),
-                                        n.e("97705"),
-                                        n.e("26132"),
-                                        n.e("46652"),
-                                        n.e("93190"),
-                                        n.e("8757"),
-                                        n.e("85968"),
-                                        n.e("89673"),
-                                        n.e("29787"),
-                                        n.e("82073"),
-                                        n.e("97558"),
-                                        n.e("91994"),
-                                        n.e("76665"),
-                                        n.e("76273"),
-                                        n.e("24198"),
-                                        n.e("32418"),
+                                        n.e("158696"),
+                                        n.e("397705"),
+                                        n.e("926132"),
+                                        n.e("146652"),
+                                        n.e("893190"),
+                                        n.e("708757"),
+                                        n.e("585968"),
+                                        n.e("189673"),
+                                        n.e("229787"),
+                                        n.e("882073"),
+                                        n.e("797558"),
+                                        n.e("691994"),
+                                        n.e("576665"),
+                                        n.e("776273"),
+                                        n.e("624198"),
+                                        n.e("532418"),
                                     ]).then(n.bind(n, 668569));
                                     return (t) => (0, s.jsx)(e, { ...t, user: c });
                                 },
@@ -259,11 +259,11 @@ var eB = n(707539),
     e9 = n(521981),
     e1 = n(308334),
     e3 = n(302031),
-    e4 = n(885386),
-    e8 = n(576705),
-    e2 = n(652215),
-    e6 = n(838541),
-    e5 = n(716098),
+    e8 = n(885386),
+    e4 = n(576705),
+    e6 = n(652215),
+    e5 = n(838541),
+    e2 = n(716098),
     te = n(742715);
 let tt = l.memo(function (e) {
     let { channel: t } = e,
@@ -276,8 +276,8 @@ let tt = l.memo(function (e) {
             }),
             [r],
         ),
-        u = (0, o.bG)([e8.A], () => e8.A.can(e2.xBc.MANAGE_MESSAGES, t)),
-        h = e4.gs.useSetting(),
+        u = (0, o.bG)([e4.A], () => e4.A.can(e6.xBc.MANAGE_MESSAGES, t)),
+        h = e8.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -288,7 +288,7 @@ let tt = l.memo(function (e) {
         g = null;
     if (i)
         g = (0, s.jsx)(A.E, {
-            className: e5.G4,
+            className: e2.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: B.intl.string(B.t.BZHld2),
@@ -296,37 +296,37 @@ let tt = l.memo(function (e) {
     else if (n)
         if (null != r && c)
             g = (0, s.jsx)(A.E, {
-                className: e5.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["WPe+xL"]),
             });
         else if (null != r && d)
             g = (0, s.jsx)(A.E, {
-                className: e5.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e1.o)(r, m, c, d, a()(e5.BK, te.tZ), {
-                leadingIconClass: e5.AF,
-                trailingIconClass: e5.AF,
-                iconSize: e6.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e1.o)(r, m, c, d, a()(e2.BK, te.tZ), {
+                leadingIconClass: e2.AF,
+                trailingIconClass: e2.AF,
+                iconSize: e5.eJ,
             });
             g =
                 null != t
-                    ? (0, s.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", className: e5.BK, children: t })
+                    ? (0, s.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", className: e2.BK, children: t })
                     : (0, s.jsx)(A.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e5.G4,
+                          className: e2.G4,
                           children: e,
                       });
         } else
             g = (0, s.jsx)(A.E, {
-                className: e5.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["0KfDxM"]),
@@ -334,7 +334,7 @@ let tt = l.memo(function (e) {
     else g = null;
     return (0, s.jsx)(e3.Bs.Provider, {
         value: (0, e7.A)(h, u),
-        children: (0, s.jsx)(e0.M, { className: e5.JY, children: g }),
+        children: (0, s.jsx)(e0.M, { className: e2.JY, children: g }),
     });
 });
 var tn = n(202241);
@@ -520,13 +520,13 @@ function tc(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 V.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: O.fe, hasSingleMessageRequest: a }),
-                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e6.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: l.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e6.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tr, { active: e, user: i, channel: l, isRestricted: r }),
@@ -609,13 +609,13 @@ function tg(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 V.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: O.fe, hasSingleMessageRequest: a }),
-                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e6.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: l.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e6.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tm, { active: e, user: i, channel: l }),
@@ -661,7 +661,7 @@ function tE() {
             b(d.map((e) => e.channel.id));
         }, [d, b]);
     (0, I.Ay)(() => {
-        eu.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
+        eu.default.track(e6.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
             es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = l.useCallback(
@@ -885,7 +885,7 @@ function tp(e) {
         l = (0, o.bG)([O.Ay], () => O.Ay.getSidebarState(O.fe)),
         i = (0, o.bG)([eo.A], () => eo.A.getChannel(l?.channelId));
     if (null == l || l.type !== el.PE.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
-    let a = t - e2.ItT;
+    let a = t - e6.ItT;
     return (0, s.jsx)(_.A, {
         sidebarType: _.X.MessageRequestSidebar,
         maxWidth: a,
@@ -960,9 +960,9 @@ let tI = (0, b.A)(function (e) {
     let { width: t } = e,
         n = (0, ef.W)();
     (0, I.Ay)(() => {
-        C.I(e2.BVt.MESSAGE_REQUESTS),
+        C.I(e6.BVt.MESSAGE_REQUESTS),
             (0, ei.d0)("message-requests"),
-            eu.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            eu.default.track(e6.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
     });
     let i = (0, o.bG)([ea.A], () => ea.A.theme),

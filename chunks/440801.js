@@ -43,7 +43,7 @@ function g(e) {
                     lang: n,
                     className: i()(x.kw, "hljs"),
                     children: (0, l.jsx)(u.c2, {
-                        createPromise: () => Promise.all([t.e("18449"), t.e("75134")]).then(t.bind(t, 981776)),
+                        createPromise: () => Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 981776)),
                         webpackId: 981776,
                         renderFallback: a,
                         render: (e) => {

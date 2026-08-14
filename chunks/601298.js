@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { X: () => a });
-var i = n(403362),
-    r = n(469054);
-function a(e) {
+n.d(t, { X: () => l });
+var r = n(403362),
+    a = n(469054);
+function l(e) {
     let {
-        assetOrigin: t = r.E.NEW_ASSET,
+        assetOrigin: t = a.E.NEW_ASSET,
         imageUri: n,
-        staticImageUri: a,
-        description: s,
-        originalAsset: l,
+        staticImageUri: l,
+        description: i,
+        originalAsset: u,
         originalMd5: o,
     } = e;
     switch (t) {
-        case r.E.NEW_ASSET:
+        case a.E.NEW_ASSET:
             return {
                 assetOrigin: t,
                 imageUri: n,
-                staticImageUri: a,
-                description: s,
+                staticImageUri: l,
+                description: i,
                 originalAsset: void 0,
                 originalMd5: o,
             };
-        case r.E.EDITED_ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, staticImageUri: a, description: s, originalAsset: l, originalMd5: o };
-        case r.E.ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, description: void 0, originalAsset: l };
+        case a.E.EDITED_ARCHIVED_ASSET:
+            return { assetOrigin: t, imageUri: n, staticImageUri: l, description: i, originalAsset: u, originalMd5: o };
+        case a.E.ARCHIVED_ASSET:
+            return { assetOrigin: t, imageUri: n, description: void 0, originalAsset: u };
         default:
-            (0, i.xb)(t);
+            (0, r.xb)(t);
     }
 }

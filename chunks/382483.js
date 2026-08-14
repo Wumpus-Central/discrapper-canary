@@ -1,87 +1,86 @@
-"use strict";
-n.d(t, { Wq: () => A, i$: () => f, un: () => m });
-var i = n(158390),
-    r = n(51906),
-    a = n(562465),
-    s = n(228366),
-    l = n(927813),
-    o = n(38405),
-    d = n(385113),
-    c = n(652215);
-let u = new r.Zy(),
-    _ = new i.A(l.A.Millis.SECOND, l.A.Millis.MINUTE, !0);
-async function E() {
-    s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START" });
+i.d(t, { Wq: () => T, i$: () => R, un: () => P });
+var E = i(158390),
+    s = i(51906),
+    n = i(636537),
+    r = i(228366),
+    l = i(927813),
+    a = i(38405),
+    _ = i(385113),
+    S = i(652215);
+let A = new s.Zy(),
+    c = new E.A(l.A.Millis.SECOND, l.A.Millis.MINUTE, !0);
+async function o() {
+    r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START" });
     try {
-        let e = await a.Bo.get({ url: c.Rsh.WIDGET_CONFIGS_FEATURED, rejectWithError: !0 });
-        s.h.dispatch({
+        let e = await n.Bo.get({ url: S.Rsh.WIDGET_CONFIGS_FEATURED, rejectWithError: !0 });
+        r.h.dispatch({
             type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS",
             applications: e.body.applications,
             configs: e.body.configs,
         }),
-            _.succeed();
+            c.succeed();
     } catch (e) {
         throw (
-            (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }),
-            _.pending ||
-                _.fail(() => {
-                    u.one(void 0, E).catch(() => {});
+            (r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }),
+            c.pending ||
+                c.fail(() => {
+                    A.one(void 0, o).catch(() => {});
                 }),
-            o.A.captureException(e),
+            a.A.captureException(e),
             e)
         );
     }
 }
-function A() {
+function T() {
     let { force: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    if (e) _.succeed();
-    else if (d.A.getFeaturedFetchState() === d.e.SUCCESS || _.pending) return Promise.resolve();
-    return u.one(void 0, E, { force: e });
+    if (e) c.succeed();
+    else if (_.A.getFeaturedFetchState() === _.e.SUCCESS || c.pending) return Promise.resolve();
+    return A.one(void 0, o, { force: e });
 }
-async function h() {
-    s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START" });
+async function I() {
+    r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START" });
     try {
-        let e = await a.Bo.get({ url: c.Rsh.WIDGET_CONFIGS_DEVELOPER, rejectWithError: !0 });
-        s.h.dispatch({
+        let e = await n.Bo.get({ url: S.Rsh.WIDGET_CONFIGS_DEVELOPER, rejectWithError: !0 });
+        r.h.dispatch({
             type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS",
             applications: e.body.applications,
             configs: e.body.configs,
         });
     } catch (e) {
-        throw (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" }), o.A.captureException(e), e);
+        throw (r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" }), a.A.captureException(e), e);
     }
 }
-s.h.subscribe("LOGOUT", () => _.succeed());
-let I = new r.Zy();
-function f() {
+r.h.subscribe("LOGOUT", () => c.succeed());
+let d = new s.Zy();
+function R() {
     let { force: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return e || d.A.getDeveloperFetchState() !== d.e.SUCCESS ? I.one(void 0, h, { force: e }) : Promise.resolve();
+    return e || _.A.getDeveloperFetchState() !== _.e.SUCCESS ? d.one(void 0, I, { force: e }) : Promise.resolve();
 }
-async function p(e) {
-    s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId: e });
+async function N(e) {
+    r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId: e });
     try {
-        let t = (await a.Bo.get({ url: c.Rsh.APPLICATION_WIDGET_CONFIGS(e), rejectWithError: !0 })).body;
-        s.h.dispatch({
+        let t = (await n.Bo.get({ url: S.Rsh.APPLICATION_WIDGET_CONFIGS(e), rejectWithError: !0 })).body;
+        r.h.dispatch({
             type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS",
             applicationId: e,
             applications: (function (e) {
                 let t = new Map();
-                for (let n of e) null != n.application && t.set(n.application.id, n.application);
+                for (let i of e) null != i.application && t.set(i.application.id, i.application);
                 return Array.from(t.values());
             })(t),
             configs: t,
         });
     } catch (t) {
         throw (
-            (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
-            o.A.captureException(t),
+            (r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
+            a.A.captureException(t),
             t)
         );
     }
 }
-let T = new r.Zy();
-function m(e) {
+let u = new s.Zy();
+function P(e) {
     let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = d.A.getFetchState(e);
-    return t || n !== d.e.SUCCESS ? T.one(e, () => p(e), { force: t }) : Promise.resolve();
+        i = _.A.getFetchState(e);
+    return t || i !== _.e.SUCCESS ? u.one(e, () => N(e), { force: t }) : Promise.resolve();
 }

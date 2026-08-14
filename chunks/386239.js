@@ -1,114 +1,113 @@
-"use strict";
-let i;
-n.d(t, { F: () => C, Q4: () => R, W9: () => N });
-var r = n(284009),
-    a = n.n(r),
-    s = n(723702),
-    l = n(534979);
-let o = new Map(),
-    d = new Map(),
-    c = new Set();
+let r;
+l.d(t, { F: () => q, Q4: () => M, W9: () => k });
+var n = l(284009),
+    s = l.n(n),
+    a = l(723702),
+    c = l(875538);
+let i = new Map(),
+    o = new Map(),
+    h = new Set();
 function u(e) {
-    let t = o.get(e);
+    let t = i.get(e);
     if (null != t) return t;
-    if (!(e in l.pb)) {
+    if (!(e in c.pb)) {
         let t = Promise.resolve(null);
-        return o.set(e, t), t;
+        return i.set(e, t), t;
     }
     return (
-        (t = (null == i && (i = (0, l.A)()), i)
-            .then((t) => t.loadGrammar(l.pb[e]))
+        (t = (null == r && (r = (0, c.A)()), r)
+            .then((t) => t.loadGrammar(c.pb[e]))
             .then((t) => {
-                for (let n of (d.set(e, t), c)) n(e);
+                for (let l of (o.set(e, t), h)) l(e);
                 return t;
             })),
-        o.set(e, t),
+        i.set(e, t),
         t
     );
 }
-var _ = n(19575),
-    E = n(652215);
-let A = "discord_arborium",
-    h = null;
-async function I() {
-    return await _.Ay.ensureModule(A), (h = _.Ay.requireModule(A));
+var p = l(19575),
+    m = l(652215);
+let f = "discord_arborium",
+    d = null;
+async function g() {
+    return await p.Ay.ensureModule(f), (d = p.Ay.requireModule(f));
 }
-function f(e, t) {
+function b(e, t) {
     return e.availableLanguages().includes(t)
         ? {
               backend: "native",
-              highlightToHtml(n) {
-                  let { html: i, missingInjections: r } = e.highlightToHtml(t, n);
-                  return { html: i, missingInjections: r };
+              highlightToHtml(l) {
+                  let { html: r, missingInjections: n } = e.highlightToHtml(t, l);
+                  return { html: r, missingInjections: n };
               },
           }
         : null;
 }
-function p(e) {
-    return e && s.isPlatformEmbedded;
+function j(e) {
+    return e && a.isPlatformEmbedded;
 }
-function T(e) {
+function y(e) {
     return {
         backend: "wasm",
         highlightToHtml(t) {
-            let n = e.createSession();
+            let l = e.createSession();
             try {
-                n.setText(t);
-                let { html: e, missingInjections: i } = n.highlightToHtml();
-                return { html: e, missingInjections: i };
+                l.setText(t);
+                let { html: e, missingInjections: r } = l.highlightToHtml();
+                return { html: e, missingInjections: r };
             } finally {
-                n.free();
+                l.free();
             }
         },
     };
 }
-let m = new Map();
-async function g(e) {
+let x = new Map();
+async function v(e) {
     let t = await u(e);
-    return null != t ? T(t) : null;
+    return null != t ? y(t) : null;
 }
-async function S(e) {
+async function w(e) {
     let t;
     try {
-        let n = await I();
-        (t = f(n, e)), a()(null != t, "fallback to the WASM highlighter");
+        let l = await g();
+        (t = b(l, e)), s()(null != t, "fallback to the WASM highlighter");
     } catch {
-        t = await g(e);
+        t = await v(e);
     }
     return t;
 }
-function N(e, t) {
-    let n = p(t),
-        i = `${n ? "n" : "w"}:${e}`,
-        r = m.get(i);
+function k(e, t) {
+    let l = j(t),
+        r = `${l ? "n" : "w"}:${e}`,
+        n = x.get(r);
     return (
-        null == r &&
-            ((r = (r = n ? S(e) : g(e)).catch((e) => {
-                throw (m.delete(i), e);
+        null == n &&
+            ((n = (n = l ? w(e) : v(e)).catch((e) => {
+                throw (x.delete(r), e);
             })),
-            m.set(i, r)),
-        r
+            x.set(r, n)),
+        n
     );
 }
-function C(e, t) {
-    let n;
-    if (p(t)) {
+function q(e, t) {
+    let l;
+    if (j(t)) {
         let t = (function () {
-            if (null == h)
+            if (null == d)
                 try {
-                    h = _.Ay.requireModule(A);
+                    d = p.Ay.requireModule(f);
                 } catch {
-                    return I().catch(E.tEg), null;
+                    return g().catch(m.tEg), null;
                 }
-            return h;
+            return d;
         })();
         if (null != t) {
-            let n = f(t, e);
-            if (null != n) return n;
+            let l = b(t, e);
+            if (null != l) return l;
         }
     }
-    return null != (n = d.has(e) ? (d.get(e) ?? null) : (u(e), null)) ? T(n) : null;
+    return null != (l = o.has(e) ? (o.get(e) ?? null) : (u(e), null)) ? y(l) : null;
 }
-function R(e) {
-    return c.add(e), () => c.delete(e);
+function M(e) {
+    return h.add(e), () => h.delete(e);
 }

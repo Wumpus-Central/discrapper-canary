@@ -278,7 +278,7 @@ function ed(e) {
         onRevokeInvite: function () {
             c && null != r
                 ? (0, b.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("68327"), n.e("73380")]).then(n.bind(n, 106895));
+                      let { default: e } = await Promise.all([n.e("468327"), n.e("673380")]).then(n.bind(n, 106895));
                       return (t) => (0, i.jsx)(e, { ...t, channel: l, application: r });
                   })
                 : S.A.show({ title: V.intl.string(V.t.JmUENg), body: V.intl.string(V.t.SrvsML) });

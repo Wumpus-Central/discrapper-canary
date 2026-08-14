@@ -2,14 +2,14 @@ async function i(l) {
     switch (l) {
         case "avatar-3d":
             return (
-                await Promise.all([d.e("50711"), d.e("23450"), d.e("18112")]).then(d.bind(d, 244321))
+                await Promise.all([d.e("850711"), d.e("623450"), d.e("218112")]).then(d.bind(d, 244321))
             ).createProvider();
         case "avatar-2d":
             return (
-                await Promise.all([d.e("50711"), d.e("40862"), d.e("18112")]).then(d.bind(d, 599533))
+                await Promise.all([d.e("850711"), d.e("240862"), d.e("218112")]).then(d.bind(d, 599533))
             ).createProvider();
         case "privacy-lens":
-            return (await d.e("3028").then(d.bind(d, 98143))).createProvider();
+            return (await d.e("703028").then(d.bind(d, 98143))).createProvider();
         default:
             throw Error(`Unknown avatar variant: ${String(l)}`);
     }

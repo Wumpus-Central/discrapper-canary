@@ -20,7 +20,7 @@ function _(t) {
         h = a.useCallback(() => {
             _(),
                 (0, o.openModalLazy)(async () => {
-                    let { default: t } = await i.e("956").then(i.bind(i, 253463));
+                    let { default: t } = await i.e("500956").then(i.bind(i, 253463));
                     return (e) => (0, n.jsx)(t, { ...e });
                 });
         }, [_]),
