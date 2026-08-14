@@ -2,7 +2,7 @@
 n.d(t, { A: () => m });
 var i = n(284009),
     r = n.n(i),
-    a = n(791332),
+    a = n(478676),
     s = n.n(a);
 let l = /\n{2,}$/,
     o = /(?:^|\n)( *)$/,
@@ -34,25 +34,26 @@ let l = /\n{2,}$/,
             let i = e[2],
                 a = i.length > 1,
                 s = a ? Math.min(1e9, Math.max(1, +i)) : void 0,
-                o = e[0].replace(f, "").replace(l, "\n"),
-                d = u.exec(o),
-                c = null != d ? d[0].length : 0,
-                A = null != d ? d[1].length : 0,
-                h = ` {${A},${A + 1}}`,
-                I = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", h), "gm"),
-                p = RegExp("^ {1," + c + "}", "gm"),
-                T = o.match(I);
-            r()(null != T, "markup list items can not be parsed.");
-            let m = !1;
+                o = f.test(e[0]),
+                d = e[0].replace(f, "").replace(l, "\n"),
+                c = u.exec(d),
+                A = null != c ? c[0].length : 0,
+                h = null != c ? c[1].length : 0,
+                I = ` {${h},${h + 1}}`,
+                p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", I), "gm"),
+                T = RegExp("^ {1," + A + "}", "gm"),
+                m = d.match(p);
+            r()(null != m, "markup list items can not be parsed.");
+            let g = !1;
             return {
                 ordered: a,
                 start: s,
-                items: T.map((e, i) => {
+                items: m.map((e, i) => {
                     let r,
-                        a = e.replace(u, "").replace(p, ""),
-                        s = i === T.length - 1,
-                        l = -1 !== a.indexOf("\n\n") || (s && m);
-                    m = l;
+                        a = e.replace(u, "").replace(T, ""),
+                        s = i === m.length - 1,
+                        l = -1 !== a.indexOf("\n\n") || (s && g);
+                    g = l;
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;
@@ -66,6 +67,7 @@ let l = /\n{2,}$/,
                     );
                     return (n.inline = o), (n._list = d), (n._listLevel = c), _;
                 }),
+                consumedLeadingNewline: o,
             };
         },
     };
