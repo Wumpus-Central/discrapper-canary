@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, { Ay: () => R, W1: () => C }), n(323874), n(14289), n(35956);
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
     a = n(635377),
     s = n.n(a);
 n(228785);
-var l = n(791332),
+var l = n(478676),
     o = n.n(l),
     d = n(833291),
     c = n(403362),
@@ -93,9 +93,13 @@ let R = {
     match(e, t, n) {
         if (!t.allowLinks || -1 === e.indexOf("](")) return null;
         let i = 0,
-            r = 0;
+            r = 0,
+            a = 0;
         for (let t = 0; t < e.length; t++) {
             let n = e[t];
+            if (i >= 2) {
+                if (++a > 100) return null;
+            } else a = 0;
             if (")" === n) {
                 r = 0;
                 continue;
