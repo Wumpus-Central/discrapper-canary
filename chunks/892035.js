@@ -1,53 +1,48 @@
-n.d(t, { z$: () => u, ix: () => h });
+n.d(t, { z$: () => c, ix: () => u });
 var i = n(17928),
-    l = n(287809),
-    r = n(772427);
-let s = (0, n(945810).mj)({
+    l = n(287809);
+let r = (0, n(945810).mj)({
     name: "2026-04-profile-frames-ea-marketing",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var a = n(32206),
-    o = n(482947),
-    d = n(13875);
-function c(e) {
+var s = n(32206),
+    a = n(482947),
+    o = n(13875);
+function d(e) {
     let {
             canViewProfileFramesInCollectiblesShop: t,
             isEarlyAccess: n,
             isFramesEAMarketingEnabled: i,
-            isFrameGiftingEnabled: l,
-            hasPaidTier2: r,
+            hasPaidTier2: l,
         } = e,
-        s = t && !n;
+        r = t && !n;
     return {
-        isAnnouncementEligible: s || (n && i),
+        isAnnouncementEligible: r || (n && i),
         isEarlyAccess: n,
-        showGiftingMarketing: s && l,
-        showEaPremiumMarketing: n && i && r,
-        showEaNonPremiumMarketing: n && i && !r,
+        showGiftingMarketing: r,
+        showEaPremiumMarketing: n && i && l,
+        showEaNonPremiumMarketing: n && i && !l,
     };
 }
-function u(e) {
-    let t = (0, d.sk)(e),
-        n = (0, d.Do)(e),
-        a = s.useConfig({ location: e }).enabled;
-    return c({
+function c(e) {
+    let t = (0, o.sk)(e),
+        n = (0, o.Do)(e);
+    return d({
         canViewProfileFramesInCollectiblesShop: t,
         isEarlyAccess: n,
-        isFramesEAMarketingEnabled: a,
-        isFrameGiftingEnabled: (0, r.rV)(e),
-        hasPaidTier2: (0, i.bG)([l.default], () => (0, d.M)(l.default.getCurrentUser())),
+        isFramesEAMarketingEnabled: r.useConfig({ location: e }).enabled,
+        hasPaidTier2: (0, i.bG)([l.default], () => (0, o.M)(l.default.getCurrentUser())),
     });
 }
-function h(e) {
-    let t = a.A.getConfig({ location: e }).enableProfileFrames,
-        { bucket: n } = o.A.getConfig({ location: e });
-    return c({
-        canViewProfileFramesInCollectiblesShop: t && n !== o.H.CONTROL,
-        isEarlyAccess: t && n === o.H.PAID_PREMIUM_SUBSCRIBERS_ONLY,
-        isFramesEAMarketingEnabled: s.getConfig({ location: e }).enabled,
-        isFrameGiftingEnabled: (0, r.QW)(e),
-        hasPaidTier2: (0, d.M)(l.default.getCurrentUser()),
+function u(e) {
+    let t = s.A.getConfig({ location: e }).enableProfileFrames,
+        { bucket: n } = a.A.getConfig({ location: e });
+    return d({
+        canViewProfileFramesInCollectiblesShop: t && n !== a.H.CONTROL,
+        isEarlyAccess: t && n === a.H.PAID_PREMIUM_SUBSCRIBERS_ONLY,
+        isFramesEAMarketingEnabled: r.getConfig({ location: e }).enabled,
+        hasPaidTier2: (0, o.M)(l.default.getCurrentUser()),
     });
 }
