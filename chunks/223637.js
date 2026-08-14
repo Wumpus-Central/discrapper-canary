@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => a });
-var i = n(791332),
+n.d(t, { A: () => s });
+var i = n(478676),
     r = n.n(i);
-let s = /\n$/,
-    a = {
+let a = /\n$/,
+    s = {
         ...r().defaultRules.heading,
         requiredFirstCharacters: [" ", "#"],
         match: (e, t, n) =>
-            t.allowHeading && (null == n || "" === n || null != n.match(s))
-                ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)([^\n]+?)#*\s*(?:\n|$)/)(e, t, n)
+            t.allowHeading && (null == n || "" === n || null != n.match(a))
+                ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n)
                 : null,
     };
