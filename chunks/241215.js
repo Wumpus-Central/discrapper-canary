@@ -58,9 +58,9 @@ let _ = function (e) {
                 }
             );
         function e() {
-            null != P && (null != O ? r.A.selectParticipant(P.id, null) : (0, I.UV)(!1, t));
+            null != P && (0, I.UV)(!1, t);
         }
-    }, [O, P, t]),
+    }, [P, t]),
     null == P)
         ? null
         : (0, i.jsx)(s.D, {
