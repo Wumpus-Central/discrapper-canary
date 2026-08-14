@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(241326),
     p = n(46054),
     m = n(734057),
-    A = n(287809),
-    f = n(562153),
+    f = n(287809),
+    A = n(562153),
     x = n(446243),
     g = n(920639),
     C = n(538638),
@@ -23,16 +23,16 @@ var i = n(477900),
 function E(e) {
     let { channelId: t, note: n, roomWidth: E } = e,
         [N, b] = (0, l.useState)(!1),
-        T = (0, l.useRef)(null),
-        _ = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
+        _ = (0, l.useRef)(null),
+        T = (0, a.bG)([f.default], () => f.default.getUser(n.createdBy)),
         R = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
-        S = (0, f.tx)(R, t, _);
-    return null == _ || null == R
+        S = (0, A.tx)(R, t, T);
+    return null == T || null == R
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.D, {
-                      innerRef: T,
+                      innerRef: _,
                       role: "listitem",
                       "aria-label": I.intl.formatToPlainString(j.default.w5Latp, { userName: S }),
                       className: v.kL,
@@ -48,7 +48,7 @@ function E(e) {
                           b(!1);
                       },
                       closeOnClickOutside: !0,
-                      targetElementRef: T,
+                      targetElementRef: _,
                       children: [
                           (0, i.jsxs)("div", {
                               className: v.oO,
@@ -61,10 +61,15 @@ function E(e) {
                                               children: [
                                                   (0, i.jsx)(c.eu, {
                                                       "aria-label": S,
-                                                      src: _.getAvatarURL(R, 24),
+                                                      src: T.getAvatarURL(R, 24),
                                                       size: d._3.SIZE_24,
+                                                      className: v.my,
                                                   }),
-                                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: S }),
+                                                  (0, i.jsx)(u.E, {
+                                                      variant: "text-md/normal",
+                                                      lineClamp: 1,
+                                                      children: S,
+                                                  }),
                                               ],
                                           }),
                                           (0, i.jsx)(o.D, {

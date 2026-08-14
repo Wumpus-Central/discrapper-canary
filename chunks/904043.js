@@ -4,6 +4,7 @@ _.exports = {
     oO: "popover__52fde",
     wx: "header__52fde",
     kQ: "user__52fde",
+    my: "avatar__52fde",
     Kk: "icon__52fde",
     Qs: "content__52fde",
 };

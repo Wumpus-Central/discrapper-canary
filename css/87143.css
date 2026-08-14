@@ -42,7 +42,13 @@
 
 .user__52fde {
     display: flex;
-    gap: var(--space-xs)
+    gap: var(--space-xs);
+    min-width: 0
+}
+
+.avatar__52fde,
+.icon__52fde {
+    flex-shrink: 0
 }
 
 .icon__52fde {
@@ -102,6 +108,16 @@ html:not(.keyboard-mode) .container__3d96b {
     outline: none;
     position: absolute;
     transform: translate(-50%, -50%)
+}
+
+.ghostNote__3d96b {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(.8)
+}
+
+.ghostNote__3d96b,
+.notesListInert__3d96b {
+    pointer-events: none
 }
 
 .plant_b29b5a {

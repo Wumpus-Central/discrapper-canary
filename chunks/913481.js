@@ -1,45 +1,47 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => _ });
 var i = n(477900),
     l = n(582128),
-    a = n(53466),
-    s = n(17928),
-    r = n(717421),
-    o = n(775602),
-    c = n(734057),
-    d = n(446243),
-    u = n(558076),
-    h = n(360729),
-    p = n(967388),
-    m = n(781137),
-    f = n(950075),
-    A = n(996752),
-    x = n(662731),
-    g = n(375708),
-    C = n(241986);
-let y = { x: 50, y: 50 };
-function j(e) {
+    a = n(503698),
+    s = n.n(a),
+    r = n(53466),
+    o = n(17928),
+    c = n(717421),
+    d = n(775602),
+    u = n(734057),
+    h = n(446243),
+    p = n(558076),
+    m = n(360729),
+    f = n(967388),
+    A = n(781137),
+    x = n(950075),
+    g = n(996752),
+    C = n(662731),
+    y = n(375708),
+    j = n(241986);
+let I = { x: 50, y: 50 };
+function v(e) {
     return Math.min(100, Math.max(0, e));
 }
-function I(e) {
-    let { channelId: t, roomWidth: n, onPlace: s } = e,
-        o = (0, l.useRef)(null),
-        c = (0, l.useRef)(y),
-        [u, h] = (0, r.z)(() => ({ x: y.x, y: y.y, config: { clamp: !0, tension: 300 } }));
+function E(e) {
+    let { channelId: t, roomWidth: n, onPlace: a } = e,
+        s = (0, l.useRef)(null),
+        o = (0, l.useRef)(I),
+        [d, u] = (0, c.z)(() => ({ x: I.x, y: I.y, config: { clamp: !0, tension: 300 } }));
     function p(e, t) {
-        let n = { x: j(c.current.x + e), y: j(c.current.y + t) };
-        (c.current = n), h({ x: n.x, y: n.y });
+        let n = { x: v(o.current.x + e), y: v(o.current.y + t) };
+        (o.current = n), u({ x: n.x, y: n.y });
     }
     return (
         (0, l.useEffect)(() => {
-            o.current?.focus();
+            s.current?.focus();
         }, []),
-        (0, i.jsx)(a.animated.div, {
-            ref: o,
+        (0, i.jsx)(r.animated.div, {
+            ref: s,
             role: "application",
             tabIndex: -1,
-            "aria-label": g.intl.string(x.default.xyO7AD),
-            className: C.GZ,
-            style: { left: u.x.to((e) => `${e}%`), top: u.y.to((e) => `${e}%`) },
+            "aria-label": y.intl.string(C.default.xyO7AD),
+            className: j.GZ,
+            style: { left: d.x.to((e) => `${e}%`), top: d.y.to((e) => `${e}%`) },
             onKeyDown: function (e) {
                 switch (e.key) {
                     case "ArrowUp":
@@ -55,37 +57,37 @@ function I(e) {
                         e.preventDefault(), p(2, 0);
                         break;
                     case "Enter":
-                        e.preventDefault(), s(c.current);
+                        e.preventDefault(), a(o.current);
                         break;
                     case "Escape":
-                        e.preventDefault(), (0, d.HW)(t);
+                        e.preventDefault(), (0, h.HW)(t);
                 }
             },
-            children: (0, i.jsx)(m.A, { roomWidth: n }),
+            children: (0, i.jsx)(A.A, { roomWidth: n }),
         })
     );
 }
-function v(e) {
-    let { channelId: t, roomWidth: n, containerRef: s, pointerRef: o, onPlace: c } = e,
-        u = (0, A.F)(n).numericAvatarSize / 2,
-        [h, p] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u, config: { clamp: !0, tension: 300 } })),
-        f = (0, l.useRef)(!1);
+function N(e) {
+    let { channelId: t, roomWidth: n, containerRef: a, pointerRef: s, onPlace: o } = e,
+        d = (0, g.F)(n).numericAvatarSize / 2,
+        [u, p] = (0, c.z)(() => ({ x: -1 * d, y: -1 * d, config: { clamp: !0, tension: 300 } })),
+        m = (0, l.useRef)(!1);
     return (
         (0, l.useEffect)(() => {
-            let e = s.current;
-            if (null != e && o.current.hasValue) {
+            let e = a.current;
+            if (null != e && s.current.hasValue) {
                 let t = e.getBoundingClientRect();
-                p({ x: o.current.x - t.left, y: o.current.y - t.top, immediate: !0 }), (f.current = !0);
+                p({ x: s.current.x - t.left, y: s.current.y - t.top, immediate: !0 }), (m.current = !0);
             }
             function n(e) {
-                p({ x: e.offsetX, y: e.offsetY, immediate: !f.current }), (f.current = !0);
+                p({ x: e.offsetX, y: e.offsetY, immediate: !m.current }), (m.current = !0);
             }
             function i(t) {
                 t.stopPropagation(),
-                    c({ x: (100 * t.offsetX) / (e?.clientWidth ?? 1), y: (100 * t.offsetY) / (e?.clientHeight ?? 1) });
+                    o({ x: (100 * t.offsetX) / (e?.clientWidth ?? 1), y: (100 * t.offsetY) / (e?.clientHeight ?? 1) });
             }
             function l(e) {
-                "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, d.HW)(t));
+                "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, h.HW)(t));
             }
             return (
                 e?.addEventListener("mousemove", n),
@@ -97,34 +99,35 @@ function v(e) {
                         document.removeEventListener("keydown", l);
                 }
             );
-        }, [s, o, t, p, c]),
-        (0, i.jsx)(a.animated.div, {
-            className: C.Dy,
-            style: { left: h.x.to((e) => e - u / 2), top: h.y.to((e) => e - u / 2) },
-            children: (0, i.jsx)(m.A, { roomWidth: n }),
+        }, [a, s, t, p, o]),
+        (0, i.jsx)(r.animated.div, {
+            className: j.Dy,
+            style: { left: u.x.to((e) => e - d / 2), top: u.y.to((e) => e - d / 2) },
+            children: (0, i.jsx)(A.A, { roomWidth: n }),
         })
     );
 }
-function E(e) {
-    let { channelId: t, roomWidth: n, containerRef: a, pointerRef: r } = e,
-        c = (0, s.bG)([o.Ay], () => o.Ay.keyboardModeEnabled),
-        u = (0, l.useRef)(!1),
-        h = (0, l.useCallback)(
+function b(e) {
+    let { channelId: t, roomWidth: n, containerRef: a, pointerRef: s } = e,
+        r = (0, o.bG)([d.Ay], () => d.Ay.keyboardModeEnabled),
+        c = (0, l.useRef)(!1),
+        u = (0, l.useCallback)(
             (e) => {
-                u.current || ((u.current = !0), (0, d.Dr)(t, e));
+                c.current || ((c.current = !0), (0, h.Dr)(t, e));
             },
             [t],
         );
-    return c
-        ? (0, i.jsx)(I, { channelId: t, roomWidth: n, onPlace: h })
-        : (0, i.jsx)(v, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r, onPlace: h });
+    return r
+        ? (0, i.jsx)(E, { channelId: t, roomWidth: n, onPlace: u })
+        : (0, i.jsx)(N, { channelId: t, roomWidth: n, containerRef: a, pointerRef: s, onPlace: u });
 }
-function N(e) {
+function _(e) {
     let { channelId: t, roomWidth: n } = e,
         a = (0, l.useRef)(null),
         r = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
-        o = (0, s.bG)([u.A], () => u.A.getPendingNote(t)),
-        d = (0, s.bG)([u.A], () => u.A.getNotes(t));
+        c = (0, o.bG)([p.A], () => p.A.getPendingNote(t)),
+        d = (0, o.bG)([p.A], () => p.A.getCreatingNotes(t)),
+        h = (0, o.bG)([p.A], () => p.A.getNotes(t));
     (0, l.useEffect)(() => {
         function e(e) {
             r.current = { x: e.clientX, y: e.clientY, hasValue: !0 };
@@ -134,23 +137,35 @@ function N(e) {
             () => document.removeEventListener("mousemove", e)
         );
     }, []);
-    let { interactionsEnabled: m } = h.A.useExperiment({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
-    if (!m || (0 === d.length && null == o)) return null;
-    let A = null != o && null == o.position;
+    let { interactionsEnabled: g } = m.A.useExperiment({ guildId: u.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+    if (!g || (0 === h.length && null == c && 0 === d.length)) return null;
+    let I = null != c && null == c.position;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            A &&
+            I &&
                 (0, i.jsx)("div", {
                     ref: a,
-                    className: C.kL,
-                    children: (0, i.jsx)(E, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r }),
+                    className: j.kL,
+                    children: (0, i.jsx)(b, { channelId: t, roomWidth: n, containerRef: a, pointerRef: r }),
                 }),
-            o?.position != null && (0, i.jsx)(f.A, { channelId: t, position: o.position, roomWidth: n }),
-            d.length > 0 &&
+            c?.position != null && (0, i.jsx)(x.A, { channelId: t, position: c.position, roomWidth: n }),
+            d.map((e) =>
+                (0, i.jsx)(
+                    "div",
+                    {
+                        className: j.wD,
+                        style: { left: `${e.position.x}%`, top: `${e.position.y}%` },
+                        children: (0, i.jsx)(A.A, { roomWidth: n }),
+                    },
+                    e.localId,
+                ),
+            ),
+            h.length > 0 &&
                 (0, i.jsx)("div", {
                     role: "list",
-                    "aria-label": g.intl.string(x.default.zzZaRe),
-                    children: d.map((e) => (0, i.jsx)(p.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
+                    "aria-label": y.intl.string(C.default.zzZaRe),
+                    className: s()({ [j.IU]: I }),
+                    children: h.map((e) => (0, i.jsx)(f.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
                 }),
         ],
     });
