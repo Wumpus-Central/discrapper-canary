@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593078, Version Hash: 1296e8bf00490724fb635ef052032ecdb91a99a6`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593168, Version Hash: 2ce8e5c52428599ee40f0655dcfb0fbbc63b4e9d`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -3375,7 +3375,7 @@ let ry = (0, nX.Fe)({
                 n.e("26441"),
                 n.e("50643"),
                 n.e("72781"),
-                n.e("80511"),
+                n.e("77355"),
                 n.e("330"),
                 n.e("92515"),
                 n.e("47906"),
@@ -4029,7 +4029,7 @@ let ry = (0, nX.Fe)({
                 n.e("22455"),
                 n.e("82969"),
                 n.e("68031"),
-                n.e("41990"),
+                n.e("47430"),
                 n.e("95118"),
                 n.e("97162"),
                 n.e("71203"),
@@ -4122,7 +4122,7 @@ let ry = (0, nX.Fe)({
                 n.e("93720"),
                 n.e("54658"),
                 n.e("53400"),
-                n.e("18640"),
+                n.e("45622"),
                 n.e("69987"),
                 n.e("43184"),
                 n.e("60025"),
@@ -20790,7 +20790,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593078" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593168" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -22280,7 +22280,7 @@ function RN(e) {
                                     p.onMouseLeave();
                                 },
                                 onContextMenu: (e) => {
-                                    s(e);
+                                    t || s(e);
                                 },
                                 size: rx.$n.Sizes.MEDIUM,
                                 "aria-pressed": n,
@@ -30638,6 +30638,7 @@ let D8 = {
     [G.hCu.TOGGLE_CAMERA]: {
         onTrigger: () =>
             (function () {
+                if (!eM.Ay.supports(nC.O5.VIDEO)) return;
                 let e = eM.Ay.isVideoEnabled(),
                     t = Object.values(eM.Ay.getVideoDevices())[0],
                     n = t?.disabled ?? !0,
@@ -41159,7 +41160,7 @@ let Gm = (0, tV.Fe)({
             n.e("26441"),
             n.e("50643"),
             n.e("72781"),
-            n.e("80511"),
+            n.e("77355"),
             n.e("330"),
             n.e("81301"),
             n.e("92515"),
@@ -42025,7 +42026,7 @@ let Gm = (0, tV.Fe)({
             n.e("82969"),
             n.e("68031"),
             n.e("21879"),
-            n.e("41990"),
+            n.e("47430"),
             n.e("95118"),
             n.e("39808"),
             n.e("97162"),
@@ -42162,7 +42163,7 @@ let Gm = (0, tV.Fe)({
             n.e("93720"),
             n.e("54658"),
             n.e("53400"),
-            n.e("18640"),
+            n.e("45622"),
             n.e("47214"),
             n.e("33049"),
             n.e("69987"),
@@ -44900,7 +44901,10 @@ var kD = n(812729),
 class kb extends t8.A {
     callbackActions = {
         [ev.dv.VIDEO]: () => {
-            eM.Ay.isVideoEnabled() ? ng.A.setVideoEnabled(!1) : (0, C2.A)(() => ng.A.setVideoEnabled(!0), G.BRT.APP);
+            eM.Ay.supports(nC.O5.VIDEO) &&
+                (eM.Ay.isVideoEnabled()
+                    ? ng.A.setVideoEnabled(!1)
+                    : (0, C2.A)(() => ng.A.setVideoEnabled(!0), G.BRT.APP));
         },
         [ev.dv.MUTE]: () => ng.A.toggleSelfMute({ location: "Thumbar" }),
         [ev.dv.DEAFEN]: () => ng.A.toggleSelfDeaf({ location: "Thumbar" }),
@@ -44953,30 +44957,33 @@ class kb extends t8.A {
         if (null == e) return void this.setThumbarButtons([]);
         let t = eM.Ay.isSelfMute(),
             n = eM.Ay.isSelfDeaf(),
-            i = eM.Ay.isVideoEnabled(),
-            r = eM.Ay.isVideoAvailable(),
-            a = rh.A.getChannel(e),
-            s = null == a || (0, CX.r)(a),
-            { reachedLimit: l, limit: o } = null != a ? (0, Cq.M)(a) : { reachedLimit: void 0, limit: void 0 },
-            d = (0, kv.Q)({
-                enabled: i,
+            i = eM.Ay.supports(nC.O5.VIDEO),
+            r = eM.Ay.isVideoEnabled(),
+            a = eM.Ay.isVideoAvailable(),
+            s = rh.A.getChannel(e),
+            l = null == s || (0, CX.r)(s),
+            { reachedLimit: o, limit: d } = null != s ? (0, Cq.M)(s) : { reachedLimit: void 0, limit: void 0 },
+            c = (0, kv.Q)({
+                enabled: r,
                 join: !1,
-                channel: a,
-                cameraUnavailable: !r,
-                hasPermission: s,
-                channelLimit: o,
-                channelLimitReached: l,
-            });
-        this.setThumbarButtons([
-            { name: ev.dv.VIDEO, active: !i, tooltip: d, flags: r ? [] : ["disabled"] },
-            { name: ev.dv.MUTE, active: t, tooltip: t ? tT.intl.string(tT.t.YqAjXy) : tT.intl.string(tT.t.w4m945) },
-            {
-                name: ev.dv.DEAFEN,
-                active: n,
-                tooltip: n ? tT.intl.string(tT.t["2US872"]) : tT.intl.string(tT.t.wjcRFX),
-            },
-            { name: ev.dv.DISCONNECT, active: !0, tooltip: tT.intl.string(tT.t["6vrfgt"]) },
-        ]);
+                channel: s,
+                cameraUnavailable: !a,
+                hasPermission: l,
+                channelLimit: d,
+                channelLimitReached: o,
+            }),
+            u = [];
+        i && u.push({ name: ev.dv.VIDEO, active: !r, tooltip: c, flags: a ? [] : ["disabled"] }),
+            u.push(
+                { name: ev.dv.MUTE, active: t, tooltip: t ? tT.intl.string(tT.t.YqAjXy) : tT.intl.string(tT.t.w4m945) },
+                {
+                    name: ev.dv.DEAFEN,
+                    active: n,
+                    tooltip: n ? tT.intl.string(tT.t["2US872"]) : tT.intl.string(tT.t.wjcRFX),
+                },
+                { name: ev.dv.DISCONNECT, active: !0, tooltip: tT.intl.string(tT.t["6vrfgt"]) },
+            ),
+            this.setThumbarButtons(u);
     }, 100);
     setThumbarButtons(e) {
         ky()(this.prevButtons, e) || ((this.prevButtons = e), eU.Ay.setThumbarButtons(e));

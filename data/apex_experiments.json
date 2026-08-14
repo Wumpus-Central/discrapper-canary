@@ -5883,6 +5883,25 @@
     }
   },
   {
+    "name": "2026-08-video-guard",
+    "kind": "user",
+    "defaultConfig": {
+      "videoEnabled": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "videoEnabled": false
+      },
+      "2": {
+        "videoEnabled": false
+      }
+    }
+  },
+  {
     "name": "2026-08-vq-remaining-time-truncation",
     "kind": "user",
     "defaultConfig": {

@@ -6,7 +6,7 @@ var i,
     s = n(214958),
     l = n.n(s),
     o = n(972347),
-    d = n(118356),
+    d = n(941426),
     c = n(459838),
     u = n(70909);
 n(321073);
@@ -27,7 +27,7 @@ let C = [
     { name: "H264", encode: !0, decode: !0 },
     { name: "VP8", encode: !0, decode: !0 },
 ];
-function O(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = t.concat(C),
         r = [];
@@ -45,7 +45,7 @@ function O(e, t) {
     }
     return r;
 }
-function R(e) {
+function O(e) {
     let t = [],
         n = e.has(N.fd.SIGNAL_AV1_ENCODE),
         i = e.has(N.fd.SIGNAL_AV1_DECODE);
@@ -543,9 +543,9 @@ class H extends g.A {
             (this.logger = new d.Vy(`Connection(${e})`)),
             this.logger.enableNativeLogger(!0);
     }
-    static create(e, t, n) {
-        let i = new H(e, t, !0);
-        return i.initialize(n), i;
+    static create(e, t, n, i) {
+        let r = new H(e, t, i);
+        return r.initialize(n), r;
     }
     static createReplay(e, t) {
         let n = new H(e, "0", !0),
@@ -557,24 +557,26 @@ class H extends g.A {
                 n.on(c.yq.Stats, n.handleStats),
                     n.conn.setOnVideoCallback(n.handleVideo),
                     i.getCodecCapabilities((t) => {
-                        let i = R(n.experimentFlags);
+                        let i = O(n.experimentFlags);
                         (n.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
-                            ...(function (e, t) {
-                                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                return O(L(e), t, n);
-                            })(t, i).map((e, t) => {
-                                let n = 101 + 2 * t;
-                                return {
-                                    type: "video",
-                                    name: e.name,
-                                    priority: t + 1,
-                                    payloadType: n,
-                                    rtxPayloadType: n + 1,
-                                    encode: e.encode,
-                                    decode: e.decode,
-                                };
-                            }),
+                            ...(n.videoSupported
+                                ? (function (e, t) {
+                                      let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                      return R(L(e), t, n);
+                                  })(t, i).map((e, t) => {
+                                      let n = 101 + 2 * t;
+                                      return {
+                                          type: "video",
+                                          name: e.name,
+                                          priority: t + 1,
+                                          payloadType: n,
+                                          rtxPayloadType: n + 1,
+                                          encode: e.encode,
+                                          decode: e.decode,
+                                      };
+                                  })
+                                : []),
                         ]),
                             n.setCodecs(N.UK.OPUS, N.UK.H264, e),
                             n.conn.startReplay();
@@ -622,24 +624,26 @@ class H extends g.A {
                     n.getCodecCapabilities((i) => {
                         (this.onVideoCodecsCallbackAt = performance.now()),
                             this.logger.info(`Available engine codecs: ${JSON.stringify(i)}`);
-                        let r = R(this.experimentFlags);
+                        let r = O(this.experimentFlags);
                         this.logger.info(`Experimental codecs: ${JSON.stringify(r)}`);
                         let o = L(i),
                             d = this.lastOverrideCodecDenylist.length > 0;
                         this.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
-                            ...O(o, r, d).map((e, t) => {
-                                let n = 101 + 2 * t;
-                                return {
-                                    type: "video",
-                                    name: e.name,
-                                    priority: t + 1,
-                                    payloadType: n,
-                                    rtxPayloadType: n + 1,
-                                    encode: e.encode,
-                                    decode: e.decode,
-                                };
-                            }),
+                            ...(this.videoSupported
+                                ? R(o, r, d).map((e, t) => {
+                                      let n = 101 + 2 * t;
+                                      return {
+                                          type: "video",
+                                          name: e.name,
+                                          priority: t + 1,
+                                          payloadType: n,
+                                          rtxPayloadType: n + 1,
+                                          encode: e.encode,
+                                          decode: e.decode,
+                                      };
+                                  })
+                                : []),
                         ];
                         let u = new Map(o.map((e) => [e.name, e.encode]));
                         (this.initialCodecs = this.codecs.map((e) => ({
@@ -1750,9 +1754,9 @@ n(667532);
 var K = n(477900),
     $ = n(582128),
     z = n(503698),
-    q = n.n(z);
-let Z = new d.Vy("DirectVideo");
-Z.enableNativeLogger(!0);
+    Z = n.n(z);
+let q = new d.Vy("DirectVideo");
+q.enableNativeLogger(!0);
 class X {
     refcount;
     stream;
@@ -1818,14 +1822,14 @@ function ee(e) {
                             }
                         }),
                         n.addEventListener("canplaythrough", function () {
-                            Z.info(
+                            q.info(
                                 `handleReady for ${_.current.streamId}, have onReady callback = ${null != _.current.onReady}`,
                             ),
                                 _.current.onReady?.();
                         }),
-                        Z.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
+                        q.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
                         n.readyState > 3 &&
-                            Z.error(`video element for ${_.current.streamId} was ready before attached`),
+                            q.error(`video element for ${_.current.streamId} was ready before attached`),
                         e.appendChild(n),
                         t.disconnect(),
                         t.observe(n),
@@ -1842,7 +1846,7 @@ function ee(e) {
                     else {
                         let t;
                         return (
-                            Z.info(`attaching srcObject for ${n}`),
+                            q.info(`attaching srcObject for ${n}`),
                             null == (t = Q.get(n))
                                 ? ((t = new X(n)), (0, y.lE)().addDirectVideoOutputSink(n), Q.set(n, t))
                                 : t.addref(),
@@ -1853,7 +1857,7 @@ function ee(e) {
                         );
                     }
             }, [i, n]),
-            (0, K.jsx)("div", { className: q()("media-engine-video", l), ref: d, ...o })
+            (0, K.jsx)("div", { className: Z()("media-engine-video", l), ref: d, ...o })
         );
     })(e, ee.onContainerResized);
 }
@@ -2056,7 +2060,7 @@ class ea extends o.A {
     }
     connect(e, t, n) {
         (0, y.$b)(k.EXPERIMENT_CONFIG) || (n.experiments = void 0);
-        let i = H.create(e, t, n);
+        let i = H.create(e, t, n, (n.videoSupported ?? !0) && this.supports(N.O5.VIDEO));
         return (
             i.on(c.yq.Destroy, (e) => {
                 this.connections.delete(e),

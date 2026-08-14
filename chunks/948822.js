@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => _ });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,49 +11,51 @@ var i = n(477900),
     h = n(279250),
     p = n(880144),
     m = n(702904),
-    A = n(471993),
-    x = n(734057),
-    f = n(71393),
-    g = n(293246),
-    y = n(576705),
-    C = n(309010),
+    f = n(471993),
+    A = n(734057),
+    x = n(71393),
+    g = n(626822),
+    C = n(576705),
+    y = n(309010),
     j = n(920639),
-    v = n(82715),
+    I = n(82715),
+    v = n(731854),
     E = n(375708),
     N = n(660443),
-    I = n(726123);
-function b(e) {
+    b = n(726123);
+function _(e) {
     let { channelId: t, center: n, iconSize: a } = e,
-        b = (0, r.bG)([x.A], () => x.A.getChannel(t)),
-        T = b?.guild_id,
-        _ = (0, r.bG)([C.Ay], () => C.Ay.getVoiceChannelId() === t),
-        R = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
-        S = (0, r.bG)([f.A, y.A], () => null != b && (0, h.vz)(b, f.A, y.A, !0)),
-        { analyticsLocations: L } = (0, u.Ay)(d.A.GUILD_ROOM),
+        _ = (0, r.bG)([A.A], () => A.A.getChannel(t)),
+        T = _?.guild_id,
+        R = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
+        S = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
+        L = (0, r.bG)([x.A, C.A], () => null != _ && (0, h.vz)(_, x.A, C.A, !0)),
+        { analyticsLocations: O } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
-        w = l.useRef(null),
-        O = l.useCallback(() => {
+        w = (0, r.bG)([g.Ay], () => g.Ay.supports(v.O5.VIDEO)),
+        M = l.useRef(null),
+        D = l.useCallback(() => {
             if (null != T) {
-                if (!R) return void (0, m.A)();
-                (0, A.A)(T, t, L), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
+                if (!S) return void (0, m.A)();
+                (0, f.A)(T, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
             }
-        }, [T, R, t, L]);
-    return null != b && null != T && S && _
+        }, [T, S, t, O]);
+    return null != _ && null != T && L && R && w
         ? (0, i.jsxs)(c.D, {
               "aria-label": E.intl.string(E.t.fjBNo1),
-              className: I.XI,
-              onClick: O,
-              focusProps: { ringTarget: w },
+              className: b.XI,
+              onClick: D,
+              focusProps: { ringTarget: M },
               children: [
-                  (0, i.jsx)(v.A, { className: s()(I.ys, N.zq) }),
+                  (0, i.jsx)(I.A, { className: s()(b.ys, N.zq) }),
                   (0, i.jsx)("div", {
-                      className: I.F$,
+                      className: b.F$,
                       style: { left: `${n.x}%`, top: `${n.y}%` },
                       children: (0, i.jsx)("div", {
                           className: N.zq,
-                          ref: w,
+                          ref: M,
                           children: (0, i.jsx)(P, {
-                              className: I.Kk,
+                              className: b.Kk,
                               color: "currentColor",
                               size: "custom",
                               width: a,

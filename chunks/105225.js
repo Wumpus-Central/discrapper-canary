@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => eS, SZ: () => eT, rP: () => ev });
+t.d(n, { Ay: () => eO, SZ: () => ev, rP: () => e_ });
 var l = t(477900),
     i = t(582128),
     s = t(503698),
@@ -32,8 +32,8 @@ var l = t(477900),
     L = t(880144),
     D = t(338771),
     P = t(558076),
-    k = t(360729),
-    G = t(508654),
+    G = t(360729),
+    k = t(508654),
     V = t(984624),
     U = t(394412),
     B = t(267102),
@@ -71,14 +71,15 @@ var l = t(477900),
     eg = t(652215),
     ef = t(806931),
     ex = t(49999),
-    eI = t(475752);
-function eT(e, n) {
+    eI = t(731854),
+    eT = t(475752);
+function ev(e, n) {
     ei.Ay.isVideoEnabled() !== e && ((0, b.X)(I.A.VOICE_CONTROL_TRAY, b.O.CAMERA, e), e ? (0, ep.A)(t, n) : t());
     function t() {
         return C.A.setVideoEnabled(e);
     }
 }
-function ev(e) {
+function e_(e) {
     let { channel: n, currentUser: t, exitFullScreen: s, canGoLive: a, hasPermission: r, disabled: o } = e,
         { parentAnalyticsLocation: c, analyticsLocations: m } = (0, T.Ay)(),
         h = (0, B.Us)(),
@@ -93,6 +94,7 @@ function ev(e) {
         }, [f, n.id, a, s, m]),
         I = (0, H.k0)(),
         [v, _] = i.useState(!1);
+    if (!(0, u.bG)([ei.Ay], () => ei.Ay.supports(eI.O5.VIDEO))) return null;
     function j() {
         ((0, b.X)(c, b.O.STREAM, !0), a) ? x() : (0, eC.A)();
     }
@@ -135,7 +137,7 @@ function ev(e) {
                                 handleGoLive: x,
                                 appContext: h,
                                 onClose: i,
-                                onInteraction: eb("ManageStreamsMenu"),
+                                onInteraction: eS("ManageStreamsMenu"),
                             }),
                         });
                     },
@@ -155,7 +157,7 @@ function ev(e) {
                                     ...i,
                                     centerButton: !0,
                                     disabled: o || !r,
-                                    className: eI.uH,
+                                    className: eT.uH,
                                     hasPermission: r,
                                     streamActive: null != E,
                                     isSelfStream: !0,
@@ -178,17 +180,17 @@ function ev(e) {
         ],
     });
 }
-function e_(e) {
+function ej(e) {
     let { channel: n, idle: t, whichPopoutIsOpen: i, setWhichPopoutIsOpen: s } = e,
         a = n.getGuildId();
     return (0, x.A)(a, n.id)
         ? (0, l.jsx)("div", {
-              className: eI.UD,
+              className: eT.UD,
               children: (0, l.jsx)(ed.K, { channel: n, idle: t, whichPopoutIsOpen: i, setWhichPopoutIsOpen: s }),
           })
         : null;
 }
-let ej = i.memo(function (e) {
+let eN = i.memo(function (e) {
     let { currentUser: n, onDisconnectCall: t, channel: s, connectedEmbeddedActivity: a } = e,
         { parentAnalyticsLocation: r } = (0, T.Ay)(),
         o = (0, u.bG)([v.A], () => v.A.getSelectedParticipant(s.id)),
@@ -210,9 +212,9 @@ let ej = i.memo(function (e) {
             }),
         ),
         N = (0, u.bG)([P.A], () => P.A.isVisible(s.id)),
-        { enabled: S } = k.A.useExperiment({ guildId: s.guild_id, location: "CenterControlTray" }),
+        { enabled: S } = G.A.useExperiment({ guildId: s.guild_id, location: "CenterControlTray" }),
         O = j && N && S,
-        y = (0, G.Qs)(s.id),
+        y = (0, k.Qs)(s.id),
         R = i.useRef(null),
         L = i.useCallback(
             () =>
@@ -255,7 +257,7 @@ let ej = i.memo(function (e) {
                 handleGoLive: eg.FXj,
                 hideSelfOptions: !0,
                 onClose: t,
-                onInteraction: eb("ManageStreamsMenu"),
+                onInteraction: eS("ManageStreamsMenu"),
             });
         },
         position: "top",
@@ -313,7 +315,7 @@ let ej = i.memo(function (e) {
         },
     });
 });
-function eN(e) {
+function eb(e) {
     let { channel: n, cameraUnavailable: t, hasCameraPermission: s, currentUser: a } = e,
         r = (0, B.Us)(),
         { parentAnalyticsLocation: o } = (0, T.Ay)(),
@@ -332,7 +334,7 @@ function eN(e) {
             return e?.ringing.includes(a.id) === !0;
         });
     return (0, l.jsxs)("div", {
-        className: eI.iE,
+        className: eT.iE,
         children: [
             (0, l.jsx)(en.A, {
                 enabled: !0,
@@ -345,18 +347,18 @@ function eN(e) {
                 cameraUnavailable: t,
                 hasPermission: s,
                 onCameraUnavailable: m,
-                className: eI.uH,
+                className: eT.uH,
                 onChange: A,
             }),
-            (0, l.jsx)(W.A, { centerButton: !0, color: "join", channel: n, className: eI.uH }),
-            h ? (0, l.jsx)(z.A, { color: "disconnect", channel: n, className: eI.uH, isTrayButton: !1 }) : null,
+            (0, l.jsx)(W.A, { centerButton: !0, color: "join", channel: n, className: eT.uH }),
+            h ? (0, l.jsx)(z.A, { color: "disconnect", channel: n, className: eT.uH, isTrayButton: !1 }) : null,
         ],
     });
 }
-function eb(e) {
+function eS(e) {
     return (0, S.s)(e, I.A.VOICE_CONTROL_TRAY, { entrypoint: ef.GK.CARET });
 }
-let eS = function (e) {
+let eO = function (e) {
     let { channel: n, className: t, onDisconnectCall: s, exitFullScreen: r, idleProps: c } = e,
         d = (0, X.Bx)(),
         m = i.useRef(null),
@@ -370,7 +372,7 @@ let eS = function (e) {
         { suppress: b, selfMute: S, mute: O } = (0, eu.A)(n),
         { canGoLive: M } = (0, u.cf)([ei.Ay], () => ({ canGoLive: (0, L.A)(ei.Ay) })),
         D = (0, R.A)(),
-        G = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
+        k = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
         V = null != D,
         H = (0, u.bG)([es.Ay], () => (D?.channelId ?? es.Ay.getVoiceChannelId()) === n.id),
         w = (0, u.bG)([f.Ay], () => f.Ay.getCurrentEmbeddedActivity()),
@@ -381,27 +383,27 @@ let eS = function (e) {
         ee = i.useRef(null),
         et = (0, B.Us)(),
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
-        { interactionsEnabled: ed } = k.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
+        { interactionsEnabled: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
     return H
         ? (0, l.jsx)(T.f5, {
               value: W,
               children: (0, l.jsxs)(g.A, {
                   section: eg.JJy.VOICE_CONTROL_TRAY,
                   children: [
-                      (0, l.jsx)("div", { className: eI.rt, children: (0, l.jsx)(U.A, { channelId: n.id }) }),
+                      (0, l.jsx)("div", { className: eT.rt, children: (0, l.jsx)(U.A, { channelId: n.id }) }),
                       (0, l.jsxs)("div", {
                           ref: m,
-                          className: a()(eI.iE, t),
+                          className: a()(eT.iE, t),
                           children: [
                               (0, l.jsxs)("div", {
-                                  className: eI.qi,
+                                  className: eT.qi,
                                   children: [
                                       (0, l.jsx)(A.Y, {
                                           targetElementRef: Q,
                                           renderPopout: (e) => {
                                               let { closePopout: n } = e,
                                                   t = (0, l.jsx)(_.A, {
-                                                      onInteraction: eb("AudioDeviceMenu"),
+                                                      onInteraction: eS("AudioDeviceMenu"),
                                                       onClose: n,
                                                       maybeRenderPTTCheckbox: !0,
                                                       renderInputProfiles: !0,
@@ -432,7 +434,7 @@ let eS = function (e) {
                                                   serverMute: O,
                                                   suppress: b,
                                                   popoutOpen: i,
-                                                  awaitingRemote: G,
+                                                  awaitingRemote: k,
                                                   onClick: () => (0, N.A)(O, b, eg.JJy.VOICE_CONTROL_TRAY),
                                               });
                                           },
@@ -446,7 +448,7 @@ let eS = function (e) {
                                                       children: (0, l.jsx)(j.A, {
                                                           onClose: n,
                                                           minimal: !0,
-                                                          onInteraction: eb("VideoDeviceMenu"),
+                                                          onInteraction: eS("VideoDeviceMenu"),
                                                           appContext: et,
                                                       }),
                                                   });
@@ -464,12 +466,12 @@ let eS = function (e) {
                                                       hasPermission: v,
                                                       enabled: x,
                                                       cameraUnavailable: p,
-                                                      onChange: eT,
+                                                      onChange: ev,
                                                       onCameraUnavailable: eh.A,
                                                       channelLimitReached: K,
                                                       channelLimit: z,
                                                       popoutOpen: i,
-                                                      onPopoutClick: t,
+                                                      onPopoutClick: p ? null : t,
                                                   });
                                               },
                                           }),
@@ -477,10 +479,10 @@ let eS = function (e) {
                               }),
                               d < X.vs.MINIMAL
                                   ? (0, l.jsxs)("div", {
-                                        className: eI.qi,
+                                        className: eT.qi,
                                         children: [
                                             !V &&
-                                                (0, l.jsx)(ev, {
+                                                (0, l.jsx)(e_, {
                                                     channel: n,
                                                     currentUser: E,
                                                     exitFullScreen: r,
@@ -488,7 +490,7 @@ let eS = function (e) {
                                                     hasPermission: v,
                                                 }),
                                             !V &&
-                                                (0, l.jsx)(e_, {
+                                                (0, l.jsx)(ej, {
                                                     channel: n,
                                                     idle: c?.idle ?? !0,
                                                     whichPopoutIsOpen: h,
@@ -512,7 +514,7 @@ let eS = function (e) {
                                         ],
                                     })
                                   : null,
-                              (0, l.jsx)(ej, {
+                              (0, l.jsx)(eN, {
                                   connectedEmbeddedActivity: w,
                                   currentUser: E,
                                   channel: n,
@@ -525,6 +527,6 @@ let eS = function (e) {
           })
         : (0, l.jsx)(T.f5, {
               value: W,
-              children: (0, l.jsx)(eN, { channel: n, cameraUnavailable: p, hasCameraPermission: v, currentUser: E }),
+              children: (0, l.jsx)(eb, { channel: n, cameraUnavailable: p, hasCameraPermission: v, currentUser: E }),
           });
 };

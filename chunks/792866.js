@@ -1,22 +1,23 @@
-a.d(i, { default: () => e });
+a.d(i, { default: () => r });
 var n = a(477900);
 a(582128);
-var s = a(189213);
-function e(t) {
-    let { transitionState: i, header: a, body: e, confirmText: r, onClose: o, onConfirm: c } = t;
-    return (0, n.jsx)(s.Modal, {
+var e = a(189213);
+function r(t) {
+    let { transitionState: i, header: a, body: r, confirmText: s, onClose: c, onConfirm: o, children: u } = t;
+    return (0, n.jsx)(e.Modal, {
         title: a,
-        subtitle: e,
+        subtitle: r,
         transitionState: i,
-        onClose: o,
+        onClose: c,
         actions: [
             {
-                text: r,
+                text: s,
                 onClick: function () {
-                    o(), c?.();
+                    c(), o?.();
                 },
                 variant: "primary",
             },
         ],
+        children: u,
     });
 }

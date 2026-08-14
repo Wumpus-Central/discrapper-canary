@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -11,19 +11,25 @@ var r = n(17928),
     c = n(952572),
     u = n(280450),
     _ = n(626822),
-    E = n(375708);
-function A(e, t) {
-    let A = (0, a.k)(),
-        { videoEnabled: h, hasVideoDevice: I } = (0, r.cf)([_.Ay], () => ({
+    E = n(731854),
+    A = n(375708);
+function h(e, t) {
+    let h = (0, a.k)(),
+        {
+            videoEnabled: I,
+            hasVideoDevice: f,
+            videoSupported: p,
+        } = (0, r.cf)([_.Ay], () => ({
             videoEnabled: _.Ay.isVideoEnabled(),
             hasVideoDevice: _.Ay.isVideoAvailable(),
+            videoSupported: _.Ay.supports(E.O5.VIDEO),
         })),
-        f = (0, r.bG)([u.default], () => u.default.getId() === e),
-        p = (0, c.A)();
-    return (!h || p) && f && I
+        T = (0, r.bG)([u.default], () => u.default.getId() === e),
+        m = (0, c.A)();
+    return p && (!I || m) && T && f
         ? (0, i.jsx)(l.Dr, {
               id: "change-video-background",
-              label: h ? E.intl.string(E.t.mZKxHb) : E.intl.string(E.t["vkV93/"]),
+              label: I ? A.intl.string(A.t.mZKxHb) : A.intl.string(A.t["vkV93/"]),
               action: function () {
                   (0, s.openModalLazy)(
                       async () => {
@@ -45,13 +51,13 @@ function A(e, t) {
                               n.e("85160"),
                               n.e("10534"),
                           ]).then(n.bind(n, 308229));
-                          return (t) => (0, i.jsx)(e, { ...t, videoEnabled: h });
+                          return (t) => (0, i.jsx)(e, { ...t, videoEnabled: I });
                       },
-                      { modalKey: "camera-preview", contextKey: null != t ? (0, s.modalContextFromAppContext)(t) : A },
+                      { modalKey: "camera-preview", contextKey: null != t ? (0, s.modalContextFromAppContext)(t) : h },
                   );
               },
-              icon: h ? o.f : d.b,
-              leadingAccessory: { type: "icon", icon: h ? o.f : d.b },
+              icon: I ? o.f : d.b,
+              leadingAccessory: { type: "icon", icon: I ? o.f : d.b },
           })
         : null;
 }
