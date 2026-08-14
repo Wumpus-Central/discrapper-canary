@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593657, Version Hash: 1b823b255b08e4a8d07725fa8c5610c1c80d67c8`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593812, Version Hash: 9c778eb4176b6407a9cb08b4c3b781b1941b7bac`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -2472,7 +2472,7 @@ let ir = (0, nX.Fe)({
                 n.e("60488"),
                 n.e("83084"),
                 n.e("60870"),
-                n.e("70152"),
+                n.e("75951"),
                 n.e("36862"),
                 n.e("72570"),
             ]).then(n.bind(n, 744209)),
@@ -2676,7 +2676,7 @@ let ir = (0, nX.Fe)({
                 n.e("60488"),
                 n.e("83084"),
                 n.e("55227"),
-                n.e("70152"),
+                n.e("75951"),
                 n.e("34486"),
                 n.e("36862"),
                 n.e("90237"),
@@ -20773,7 +20773,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593657" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593812" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -28817,7 +28817,7 @@ function LI() {
                                         t = O1.Ay.isPremiumExactly(eP.default.getCurrentUser(), dn.PremiumTypes.TIER_2);
                                     x.default.track(G.HAw.FAVORITES_GUILD_VIEWED, {
                                         source: (0, O3.Kg)(),
-                                        total_favorites: O2.A.getFavoritesCount(),
+                                        total_favorites: O2.A.getFavoritesCountAgainstLimit(),
                                         is_xp_enabled: e,
                                         is_premium_tier_2: t,
                                     });
@@ -29127,7 +29127,7 @@ let LS = (0, nX.Fe)({
                 n.e("60488"),
                 n.e("83084"),
                 n.e("55227"),
-                n.e("70152"),
+                n.e("75951"),
                 n.e("34486"),
                 n.e("36862"),
                 n.e("90237"),
@@ -41534,7 +41534,7 @@ let Gm = (0, tV.Fe)({
             n.e("68201"),
             n.e("95429"),
             n.e("26692"),
-            n.e("80501"),
+            n.e("65037"),
             n.e("62052"),
             n.e("26275"),
             n.e("3376"),
@@ -43314,7 +43314,7 @@ let xk = (0, nX.Fe)({
                 n.e("43582"),
                 n.e("45351"),
                 n.e("95429"),
-                n.e("80501"),
+                n.e("65037"),
                 n.e("8955"),
                 n.e("10471"),
                 n.e("60235"),

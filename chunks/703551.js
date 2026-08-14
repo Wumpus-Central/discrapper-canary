@@ -2,8 +2,8 @@ i.d(n, { default: () => d });
 var e = i(477900),
     a = i(582128),
     s = i(189213),
-    o = i(95477),
-    r = i(16236),
+    r = i(95477),
+    o = i(16236),
     l = i(5180),
     u = i(349828),
     c = i(375708);
@@ -12,7 +12,7 @@ function d(t) {
         [d, p] = a.useState("");
     return (0, e.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(), (0, r.od)(d, "modal"), n();
+            t.preventDefault(), (0, o.od)(d), n();
         },
         children: (0, e.jsx)(s.Modal, {
             title: c.intl.string(c.t["ISN+NM"]),
@@ -28,7 +28,7 @@ function d(t) {
             ],
             transitionState: i,
             onClose: n,
-            children: (0, e.jsx)(o.k, {
+            children: (0, e.jsx)(r.k, {
                 label: c.intl.string(c.t.OCAkGP),
                 value: d,
                 onChange: p,
