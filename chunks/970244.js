@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    CI: () => L,
-    V0: () => m,
-    XM: () => N,
-    c_: () => T,
-    e0: () => R,
-    kb: () => g,
+    CI: () => D,
+    V0: () => g,
+    XM: () => C,
+    c_: () => m,
+    e0: () => L,
+    kb: () => S,
     s: () => O,
-    tu: () => C,
-    xP: () => S,
+    tu: () => R,
+    xP: () => N,
 }),
     n(938796),
     n(321073);
@@ -25,36 +25,37 @@ var i = n(477900),
     E = n(113367),
     A = n(195880),
     h = n(151282),
-    I = n(896455),
-    f = n(23395),
-    p = n(375708);
-function T(e) {
-    let t = p.intl.formatToPlainString(p.t["CvHu/j"], { timestamp: new Date(e).valueOf() });
+    I = n(566908),
+    f = n(896455),
+    p = n(23395),
+    T = n(375708);
+function m(e) {
+    let t = T.intl.formatToPlainString(T.t["CvHu/j"], { timestamp: new Date(e).valueOf() });
     (0, E.Dc)({ message: t, icon: s.Ck.CLOCK });
 }
-function m(e) {
-    (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.PsJmUe, { error: e }), s.Ck.FAILURE));
+function g(e) {
+    (0, l.P0)((0, o.o)(T.intl.formatToPlainString(T.t.PsJmUe, { error: e }), s.Ck.FAILURE));
 }
-function g() {
-    (0, E.Dc)({ message: p.intl.string(p.t.MXsMRk), icon: s.Ck.CLOCK });
+function S() {
+    (0, E.Dc)({ message: T.intl.string(T.t.MXsMRk), icon: s.Ck.CLOCK });
 }
-function S(e) {
-    (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.slM6In, { error: e }), s.Ck.FAILURE));
-}
-async function N(e) {
-    let { scheduledMessageId: t, content: n, flags: i } = e;
-    try {
-        await (0, h.Eg)({ scheduledMessageId: t, content: n, flags: i }), g();
-    } catch (e) {
-        S(e.message);
-    }
+function N(e) {
+    (0, l.P0)((0, o.o)(T.intl.formatToPlainString(T.t.slM6In, { error: e }), s.Ck.FAILURE));
 }
 async function C(e) {
+    let { scheduledMessageId: t, content: n, flags: i } = e;
     try {
-        await (0, h.mk)(e), (0, E.Dc)({ message: p.intl.string(p.t["JF/LWn"]), icon: s.Ck.CLOCK });
+        await (0, h.Eg)({ scheduledMessageId: t, content: n, flags: i }), S();
+    } catch (e) {
+        N(e.message);
+    }
+}
+async function R(e) {
+    try {
+        await (0, h.mk)(e), (0, E.Dc)({ message: T.intl.string(T.t["JF/LWn"]), icon: s.Ck.CLOCK });
     } catch (e) {
         var t;
-        (t = e.message), (0, l.P0)((0, o.o)(p.intl.formatToPlainString(p.t.sUvyW3, { error: t }), s.Ck.FAILURE));
+        (t = e.message), (0, l.P0)((0, o.o)(T.intl.formatToPlainString(T.t.sUvyW3, { error: t }), s.Ck.FAILURE));
     }
 }
 function O(e) {
@@ -63,9 +64,9 @@ function O(e) {
         r = a()().add(1, "day").startOf("day").set("hours", 13),
         s = a()().startOf("isoWeek").add(1, "week").set("hours", 9),
         l = [
-            { display: p.intl.string(p.t.tjIn9i), value: n },
-            { display: p.intl.string(p.t.EMRZyS), value: r },
-            { display: p.intl.string(p.t["+P5MmK"]), value: s },
+            { display: T.intl.string(T.t.tjIn9i), value: n },
+            { display: T.intl.string(T.t.EMRZyS), value: r },
+            { display: T.intl.string(T.t["+P5MmK"]), value: s },
         ].map((e) =>
             (0, i.jsx)(
                 d.Dr,
@@ -84,7 +85,7 @@ function O(e) {
                     (0, i.jsx)(d.bX, {}),
                     (0, i.jsx)(
                         d.Dr,
-                        { id: "custom-time", label: p.intl.string(p.t.stHooC), action: () => R({ channel: t }) },
+                        { id: "custom-time", label: T.intl.string(T.t.stHooC), action: () => L({ channel: t }) },
                         "custom-time",
                     ),
                 ],
@@ -93,10 +94,10 @@ function O(e) {
         l
     );
 }
-function R(e) {
-    let { channel: t, defaultValue: r = a()().startOf("hour").add(1, "hour"), content: s } = e,
-        l =
-            null != s
+function L(e) {
+    let { channel: t, defaultValue: r = (0, I.US)(), content: a } = e,
+        s =
+            null != a
                 ? (e) =>
                       (function (e) {
                           let { channel: t, content: n, scheduledTimestamp: i } = e;
@@ -106,29 +107,29 @@ function R(e) {
                               messageSendData: { channelId: t.id, content: n, nonce: (0, A.m)(), tts: !1 },
                           })
                               .then(() => {
-                                  T(i);
+                                  m(i);
                               })
                               .catch((e) => {
-                                  m(e.message);
+                                  g(e.message);
                               });
-                      })({ channel: t, content: s, scheduledTimestamp: e })
+                      })({ channel: t, content: a, scheduledTimestamp: e })
                 : void 0;
     (0, c.openModalLazy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 896455));
-            return (n) => (0, i.jsx)(e, { ...n, channel: t, defaultValue: r, onSubmit: l });
+            return (n) => (0, i.jsx)(e, { ...n, channel: t, defaultValue: r, onSubmit: s });
         },
-        { modalKey: I.t },
+        { modalKey: f.t },
     );
 }
-function L(e) {
+function D(e) {
     let { scheduledMessage: t } = e;
     (0, c.openModalLazy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 23395));
             return (n) => (0, i.jsx)(e, { ...n, scheduledMessage: t });
         },
-        { modalKey: f.B },
+        { modalKey: p.B },
     );
 }
 new _.A("Scheduled Messages");
