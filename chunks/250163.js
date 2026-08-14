@@ -1,4 +1,4 @@
-n.d(t, { G: () => Y });
+n.d(t, { G: () => K });
 var i = n(477900),
     l = n(17928),
     s = n(97808),
@@ -8,134 +8,139 @@ var i = n(477900),
     c = n(19575),
     d = n(999291),
     u = n(718019),
-    m = n(465829),
-    h = n(582128),
-    g = n(317097),
-    p = n(661531),
-    A = n(602853),
-    x = n(654107),
-    f = n(450373),
-    E = n(885386),
-    _ = n(531685),
-    I = n(486020),
-    C = n(837529),
-    v = n(686189),
-    N = n(714719),
-    j = n(859161);
-function T(e) {
+    m = n(413492),
+    h = n(465829),
+    g = n(582128),
+    p = n(317097),
+    A = n(661531),
+    x = n(602853),
+    f = n(654107),
+    E = n(450373),
+    I = n(885386),
+    C = n(531685),
+    _ = n(486020),
+    v = n(837529),
+    N = n(686189),
+    j = n(714719),
+    T = n(859161);
+function S(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: r, avatarSize: o } = e,
-        [c, d] = h.useState(!1),
-        u = (0, l.bG)([_.A], () => _.A.isFocused()),
-        m = E.kt.getSetting(),
-        T = (0, C.Nx)(),
-        { bannerSrc: S, status: y } = (0, v.A)({ displayProfile: n ?? null, size: 480, canAnimate: m ? u : c }),
-        b = T ? null : (S ?? null),
-        R = (0, A.r)(p.A.unsafe_rawColors.PRIMARY_800).hex(),
+        [c, d] = g.useState(!1),
+        u = (0, l.bG)([C.A], () => C.A.isFocused()),
+        m = I.kt.getSetting(),
+        h = (0, v.Nx)(),
+        { bannerSrc: S, status: y } = (0, N.A)({ displayProfile: n ?? null, size: 480, canAnimate: m ? u : c }),
+        b = h ? null : (S ?? null),
+        R = (0, x.r)(A.A.unsafe_rawColors.PRIMARY_800).hex(),
         L = null != n ? n.guildId : s,
         M = t.getAvatarURL(L ?? void 0, (0, a.FT)(o)),
-        k = (0, g.LX)((0, x.Ay)(M, R, !1)),
-        O = (0, f.A)(n?.primaryColor ?? k).hex,
-        P = { align: "center", insetBottom: 0, radius: (0, j.A)(o) };
-    return (0, i.jsx)(N.A, {
+        k = (0, p.LX)((0, f.Ay)(M, R, !1)),
+        O = (0, E.A)(n?.primaryColor ?? k).hex,
+        P = { align: "center", insetBottom: 0, radius: (0, T.A)(o) };
+    return (0, i.jsx)(j.A, {
         bannerSrc: b,
-        backgroundColor: y === v.D.COMPLETE || T ? O : p.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !m && (0, I.o4)(b),
+        backgroundColor: y === N.D.COMPLETE || h ? O : A.A.unsafe_rawColors.PRIMARY_800.css,
+        showGifTag: !m && (0, _.o4)(b),
         height: r,
         cutout: P,
         onInteractionStart: () => d(!0),
         onInteractionEnd: () => d(!1),
     });
 }
-var S = n(503698),
-    y = n.n(S),
-    b = n(140735),
-    R = n(707554),
-    L = n(915089),
-    M = n(946356),
-    k = n(996988),
-    O = n(990585);
-function P(e) {
+var y = n(503698),
+    b = n.n(y),
+    R = n(140735),
+    L = n(707554),
+    M = n(915089),
+    k = n(946356),
+    O = n(996988),
+    P = n(990585);
+function D(e) {
     let { user: t, displayProfile: n, size: l, headingText: s, className: a, style: r, children: o } = e,
-        c = (0, L.GV)();
-    return (0, i.jsx)(M.A, {
+        c = (0, M.GV)();
+    return (0, i.jsx)(k.A, {
         user: t,
         displayProfile: n,
-        themeType: k.d.EMBED,
-        className: O[l],
+        themeType: O.d.EMBED,
+        className: P[l],
         style: r,
         children: (0, i.jsxs)("article", {
             "aria-labelledby": c,
-            className: y()(O.article, a),
+            className: b()(P.article, a),
             children: [
-                (0, i.jsx)(b.A, { children: (0, i.jsx)(R.H, { id: c, children: s }) }),
-                (0, i.jsx)(R.F, { children: o }),
+                (0, i.jsx)(R.A, { children: (0, i.jsx)(L.H, { id: c, children: s }) }),
+                (0, i.jsx)(L.F, { children: o }),
             ],
         }),
     });
 }
-var D = n(821609),
-    U = n(975732),
-    G = n(375708),
-    w = n(899248);
-function H(e) {
+var U = n(821609),
+    G = n(975732),
+    w = n(375708),
+    H = n(899248);
+function V(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
-        className: w.k,
-        children: (0, i.jsx)(D.$, {
+        className: H.k,
+        children: (0, i.jsx)(U.$, {
             variant: "primary",
             size: "md",
             fullWidth: !0,
-            text: G.intl.string(G.t.iXAna6),
+            text: w.intl.string(w.t.iXAna6),
             onClick: function () {
-                (0, U.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
+                (0, G.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
             },
         }),
     });
 }
-var V = n(21280);
+var B = n(21280);
 let F = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
-    B = a._3.SIZE_96,
-    z = {
+    z = a._3.SIZE_96,
+    J = {
         "--custom-user-profile-banner-height": "120px",
-        "--custom-user-profile-avatar-size": `${((0, a.Kj))(B).size}px`,
+        "--custom-user-profile-avatar-size": `${((0, a.Kj))(z).size}px`,
     };
-function J(e) {
+function Y(e) {
     let { user: t, displayProfile: n, guildId: l, channelId: s } = e,
         { avatarProps: a, eventHandlers: r } = (0, u.V)({
             user: t,
             displayProfile: n,
             guildId: l,
             channelId: s,
-            avatarSize: B,
+            avatarSize: z,
         });
-    return (0, i.jsx)("div", { className: V.H, children: (0, i.jsx)(F, { ...a, ...r }) });
+    return (0, i.jsx)("div", { className: B.H, children: (0, i.jsx)(F, { ...a, ...r }) });
 }
-function Y(e) {
+function K(e) {
     let { userId: t, guildId: n, channelId: s } = e,
         a = (0, l.bG)([r.default], () => r.default.getUser(t)),
         c = (0, d._c)(t, n),
         u = null != c ? c.guildId : n,
-        h = o.Ay.useName(u, s, a);
+        g = o.Ay.useName(u, s, a);
     return null == a
         ? null
-        : (0, i.jsxs)(P, {
+        : (0, i.jsxs)(D, {
               user: a,
               displayProfile: c,
               size: "sm",
-              style: z,
-              headingText: G.intl.formatToPlainString(G.t["8yRya1"], { name: h }),
+              style: J,
+              headingText: w.intl.formatToPlainString(w.t["8yRya1"], { name: g }),
               children: [
-                  (0, i.jsx)(T, { user: a, displayProfile: c, guildId: n, bannerHeight: 120, avatarSize: B }),
-                  (0, i.jsx)(J, { user: a, displayProfile: c, guildId: n, channelId: s }),
-                  (0, i.jsx)(m.Ay, {
+                  (0, i.jsx)(S, { user: a, displayProfile: c, guildId: n, bannerHeight: 120, avatarSize: z }),
+                  (0, i.jsx)(Y, { user: a, displayProfile: c, guildId: n, channelId: s }),
+                  (0, i.jsx)(h.Ay, {
                       user: a,
                       guildId: u ?? void 0,
                       contextGuildId: n ?? void 0,
-                      displayName: h,
+                      displayName: g,
                       pronouns: c?.pronouns,
-                      className: V.e,
+                      className: B.eF,
                   }),
-                  (0, i.jsx)(H, { userId: t, guildId: n, channelId: s }),
+                  (0, i.jsx)("div", {
+                      className: B.jp,
+                      children: (0, i.jsx)(m.A, { displayProfile: c, themeType: O.d.EMBED }),
+                  }),
+                  (0, i.jsx)(V, { userId: t, guildId: n, channelId: s }),
               ],
           });
 }
