@@ -1432,7 +1432,7 @@ var td = n(570002),
     tc = n(897260);
 function tg() {
     let e = (0, ti.V)();
-    return e?.subscription_trial?.sku_id === tu.pe.TIER_2 ? e : null;
+    return e?.subscriptionTrial?.skuId === tu.pe.TIER_2 ? e : null;
 }
 function tm() {
     let e = (0, td.A)(eq.intl.string(eq.t.pj0XBN));
@@ -1442,10 +1442,10 @@ function tf(e) {
     let { trialOffer: l, onSubscribeSuccess: n } = e,
         i = to(),
         r = (0, B.FY)({
-            intervalType: l.subscription_trial?.interval,
-            intervalCount: l.subscription_trial?.interval_count,
+            intervalType: l.subscriptionTrial?.interval,
+            intervalCount: l.subscriptionTrial?.intervalCount,
         }),
-        a = (0, tr.ux)(l.expires_at);
+        a = (0, tr.ux)(l.expiresAt?.toISOString());
     return (0, t.jsxs)("div", {
         className: tc.nH,
         children: [

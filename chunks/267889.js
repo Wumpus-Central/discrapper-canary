@@ -245,7 +245,7 @@ function ey(e) {
         i = et.intl.string(et.t.eikz43),
         r = (0, eC.V)(),
         s = (0, eN.O)(),
-        l = r?.subscription_trial != null || null != s,
+        l = r?.subscriptionTrial != null || null != s,
         d = { object: J.ZSU.BUTTON_CTA, section: J.JJy.SUPER_REACTION_PICKER };
     return (0, a.jsxs)("div", {
         className: eD.iE,
@@ -274,7 +274,7 @@ function ey(e) {
                     l
                         ? (0, a.jsx)(eO.Ay, {
                               type: eL.e.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: r?.subscription_trial?.sku_id ?? eL.pe.TIER_2,
+                              subscriptionTier: r?.subscriptionTrial?.skuId ?? eL.pe.TIER_2,
                               headingText: et.intl.string(et.t.Wfl5zp),
                               analyticsLocationObject: d,
                               discountOffer: s,

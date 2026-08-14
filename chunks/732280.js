@@ -6,7 +6,7 @@ var i = n(702841),
     s = n(378135),
     l = n(202541);
 function o(e, t) {
-    return null == t || null == e || t.has(e.trial_id) ? e : null;
+    return null == t || null == e || t.has(e.trialId) ? e : null;
 }
 function d(e) {
     let t, n, d, c, u, _, E, A;
@@ -18,7 +18,7 @@ function d(e) {
         (u = (0, s.k)(l.Tt)),
         (_ = (0, s.k)(l.Dw)),
         (E = (0, s.k)(l.yo)),
-        (A = (0, i.bG)([a.A], () => (void 0 === e ? null : a.A.getRelevantUserTrialOffer(e)))),
+        (A = (0, i.bG)([a.A], () => (void 0 === e ? null : (a.A.getRelevantUserTrialOffer(e) ?? null)))),
         o(_, void 0) ??
             o(A, void 0) ??
             o(E, void 0) ??

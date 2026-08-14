@@ -1047,7 +1047,7 @@ let nl = r.memo(function () {
                     return;
                 let n = {};
                 null != t && (n.guild_id = t),
-                    _?.trial_id != null && (n.trial_id = _.trial_id),
+                    _?.trialId != null && (n.trial_id = _.trialId),
                     (e = { notice_type: a.type, ...n }),
                     ee.default.track(ei.HAw.APP_NOTICE_VIEWED, e);
             }

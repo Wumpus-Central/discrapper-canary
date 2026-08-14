@@ -20,22 +20,22 @@ let d = function (t) {
             color: v,
             ...D
         } = t,
-        _ = (0, n.Ay)(),
-        { buttonText: b, marketingSubscriptionTierSkuId: x } = (0, p.s)({
+        b = (0, n.Ay)(),
+        { buttonText: x, marketingSubscriptionTierSkuId: N } = (0, p.s)({
             hasActivePromotion: d,
             subscriptionTier: r,
             useShorterCTA: h,
             isPersistentCTA: l,
         }),
-        N = (0, a.V)(),
-        w = N?.subscription_trial,
-        C = null != w && x === w.sku_id,
-        O = v ?? ((0, e.M)(_) ? o.XD.BRAND_INVERTED : o.XD.BRAND);
+        w = (0, a.V)(),
+        C = w?.subscriptionTrial,
+        O = null != C && N === C.skuId,
+        R = v ?? ((0, e.M)(b) ? o.XD.BRAND_INVERTED : o.XD.BRAND);
     return (0, s.jsx)(c.A, {
-        color: O,
-        textOptions: { textOverride: b, textClassName: C ? u.A : void 0, ...i },
+        color: R,
+        textOptions: { textOverride: x, textClassName: O ? u.A : void 0, ...i },
         onlyShineOnHover: !0,
-        subscriptionTier: x,
+        subscriptionTier: N,
         showGradient: A,
         confirmationFooter: k,
         ...D,

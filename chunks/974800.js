@@ -10,12 +10,12 @@ var i = s(477900),
     u = s(462887),
     E = s(297264),
     m = s(939249),
-    _ = s(285796),
+    T = s(285796),
     A = s(707554),
-    h = s(364522),
-    T = s(817281),
-    x = s(82495),
-    I = s(775602),
+    _ = s(364522),
+    h = s(817281),
+    I = s(82495),
+    x = s(775602),
     f = s(793574),
     S = s(688810),
     N = s(793943),
@@ -23,8 +23,8 @@ var i = s(477900),
     v = s(732280),
     j = s(792656),
     P = s(400669),
-    y = s(450232),
-    C = s(973654),
+    C = s(450232),
+    y = s(973654),
     M = s(780964),
     D = s(141343),
     R = s(766075),
@@ -113,14 +113,14 @@ function ee() {
 var et = s(487245),
     es = s(385803),
     ei = s(49999),
-    en = s(594570);
+    en = s(372189);
 function er() {
     return (0, i.jsx)("div", {
         className: en.nV,
         children: (0, i.jsxs)("div", {
             className: en.mR,
             children: [
-                (0, i.jsx)(y.A, { className: en.PC, size: "md" }),
+                (0, i.jsx)(C.A, { className: en.PC, size: "md" }),
                 (0, i.jsx)(E.D, {
                     variant: "heading-md/bold",
                     color: "text-overlay-light",
@@ -141,7 +141,7 @@ function ea(e) {
                 onClick: function () {
                     null != t && t(ei.i.DISMISS), s(W.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, O.D)();
                 },
-                children: (0, i.jsx)(_.a, { size: "md", color: "currentColor", className: en.P0 }),
+                children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: en.P0 }),
             }),
             (0, i.jsx)(E.D, { variant: "heading-lg/extrabold", children: q.intl.string(q.t["xSR+a/"]) }),
         ],
@@ -154,14 +154,10 @@ function el(e) {
         l = (0, D.V)(),
         o = (0, v.V)(),
         E = (0, L.FY)({
-            intervalType: o?.subscription_trial?.interval,
-            intervalCount: o?.subscription_trial?.interval_count,
+            intervalType: o?.subscriptionTrial?.interval,
+            intervalCount: o?.subscriptionTrial?.intervalCount,
         }),
-        m = a
-            ? q.intl.string(q.t.IJI7yk)
-            : o?.subscription_trial?.sku_id === z.pe.TIER_2
-              ? E
-              : q.intl.string(q.t.mr4K7D);
+        m = a ? q.intl.string(q.t.IJI7yk) : o?.subscriptionTrial?.skuId === z.pe.TIER_2 ? E : q.intl.string(q.t.mr4K7D);
     return (0, i.jsx)(j.A, {
         subscriptionTier: z.pe.TIER_2,
         defaultTextOverride: m,
@@ -171,15 +167,15 @@ function el(e) {
                 if (l) {
                     let e = (0, u.M)(r.theme) ? X.Fc.DARK : X.Fc.LIGHT;
                     (0, et.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
-                        (0, C.NA)({ [e]: r.theme }),
-                        (0, C.qX)(e, { backgroundGradientPresetId: r.id }),
+                        (0, y.NA)({ [e]: r.theme }),
+                        (0, y.qX)(e, { backgroundGradientPresetId: r.id }),
                         (0, w.S8)(),
                         (0, O.D)();
                     return;
                 }
                 (0, et.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
-                    (0, T.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
-                    (0, C.XG)();
+                    (0, h.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
+                    (0, y.XG)();
             }
         },
         fullWidth: !0,
@@ -195,7 +191,7 @@ function ec(e) {
             { no: q.t["3D5yo/"], "sv-SE": q.t["3D5yo/"], uk: q.t["3D5yo/"], de: q.t["3D5yo/"] },
             q.t["dqH+qr"],
         ),
-        _ = (0, l.YW)({ isPreview: r, isCoachmark: s, forceShowCloseButton: a })
+        T = (0, l.YW)({ isPreview: r, isCoachmark: s, forceShowCloseButton: a })
             .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => q.intl.string(q.t.cpT0Cq))
             .with({ isPreview: !0 }, () => m)
             .otherwise(() => q.intl.string(q.t.Olc2K3)),
@@ -231,7 +227,7 @@ function ec(e) {
                         s || (0, R.openUserSettings)(M.X.APPEARANCE_THEME_CATEGORY);
                 },
                 variant: "secondary",
-                text: _,
+                text: T,
             }),
         ],
     });
@@ -240,9 +236,9 @@ function ed(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: s, iconSize: r = es.ni.SIZE_60 } = e,
         { analyticsLocations: l } = (0, S.Ay)(f.A.CLIENT_THEMES_EDITOR),
         d = (0, c.bG)([k.A], () => k.A.hasLayers()),
-        { isPreview: o, shouldEditorAnimate: u } = (0, c.cf)([G.A, I.Ay], () => ({
+        { isPreview: o, shouldEditorAnimate: u } = (0, c.cf)([G.A, x.Ay], () => ({
             isPreview: G.A.isPreview,
-            shouldEditorAnimate: s && !I.Ay.useReducedMotion,
+            shouldEditorAnimate: s && !x.Ay.useReducedMotion,
         })),
         E = (0, N.fy)().activePanel === N.HP.CLIENT_THEMES,
         m = Y();
@@ -254,7 +250,7 @@ function ed(e) {
                     location_stack: l,
                 });
         }, [o, l]);
-    let _ = (() => {
+    let T = (() => {
             let e = (0, c.bG)([G.A], () => G.A.gradientPreset),
                 t = (0, c.bG)([V.Ay], () => V.Ay.useSystemTheme === X.Q_.ON),
                 [s, i] = (0, n.useState)(t);
@@ -263,14 +259,14 @@ function ed(e) {
                     null == e && i(t);
                 }, [e, t]),
                 (0, n.useCallback)(() => {
-                    null == e || ((0, w.S8)(), (0, C.XG)(), s && (0, C.k7)(X.Q_.ON));
+                    null == e || ((0, w.S8)(), (0, y.XG)(), s && (0, y.k7)(X.Q_.ON));
                 }, [e, s])
             );
         })(),
-        T = (0, x.A)(null, o ? _ : W.tEg);
+        h = (0, I.A)(null, o ? T : W.tEg);
     n.useEffect(() => {
-        if (o && !E) return _;
-    }, [o, E, _]);
+        if (o && !E) return T;
+    }, [o, E, T]);
     let p = n.useMemo(
         () => ({
             "--custom-client-themes-editor-content-width": `${3 * r + 48}px`,
@@ -283,7 +279,7 @@ function ed(e) {
         : (0, i.jsx)(S.f5, {
               value: l,
               children: (0, i.jsx)("div", {
-                  ref: T,
+                  ref: h,
                   "data-app-right-panel": !0,
                   className: a()(en.HS, u ? en.hP : null),
                   style: p,
@@ -291,7 +287,7 @@ function ed(e) {
                       children: [
                           s ? (0, i.jsx)(er, {}) : (0, i.jsx)(ea, { markAsDismissed: t }),
                           (0, i.jsx)(ee, {}),
-                          (0, i.jsx)(h.Ip, {
+                          (0, i.jsx)(_.Ip, {
                               className: en.sV,
                               children: (0, i.jsxs)(et.Ay, {
                                   type: et.v0.EDITOR,

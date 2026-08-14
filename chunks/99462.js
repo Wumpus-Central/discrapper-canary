@@ -1,4 +1,4 @@
-n.d(t, { Fu: () => u, GZ: () => _, __: () => T, rn: () => A });
+n.d(t, { Fu: () => _, GZ: () => u, __: () => T, rn: () => A });
 var i = n(496431),
     l = n(773669),
     r = n(975571),
@@ -7,7 +7,7 @@ var i = n(496431),
     E = n(202541),
     o = n(652215),
     c = n(375708);
-function _(e, t, n, i) {
+function u(e, t, n, i) {
     switch (e) {
         case E.pe.TIER_0:
             return t.days > 0
@@ -29,20 +29,20 @@ function _(e, t, n, i) {
             throw Error(`Unsupported subscription tier: ${e}`);
     }
 }
-function u(e) {
-    let t = e.expires_at,
-        n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3),
-        l = e?.subscription_trial?.sku_id;
+function _(e) {
+    let t = e.expiresAt,
+        n = (0, i.A)(null != t ? t.getTime() : 0, 1e3),
+        l = e?.subscriptionTrial?.skuId;
     return null == t || null == l
         ? null
-        : _(
+        : u(
               l,
               n,
               (0, s.re)({
-                  intervalType: e.subscription_trial?.interval,
-                  intervalCount: e.subscription_trial?.interval_count,
+                  intervalType: e.subscriptionTrial?.interval,
+                  intervalCount: e.subscriptionTrial?.intervalCount,
               }),
-              r.A.getArticleURL(e.trial_id === E.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
+              r.A.getArticleURL(e.trialId === E.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
           );
 }
 function A(e, t, n) {

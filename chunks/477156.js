@@ -23,12 +23,12 @@ var i = s(477900),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    N = s(293246),
+    N = s(626822),
     I = s(763827),
     O = s(287809),
     R = s(157257),
     M = s(723702),
-    T = s(428262),
+    T = s(158045),
     L = s(997630),
     U = s(725792),
     b = s(905552),
@@ -202,7 +202,7 @@ var ep = s(830012);
 s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
 var em = s(344390),
     ej = s(742459),
-    eg = s(780907);
+    eg = s(183208);
 async function ev() {
     let e = _.Ay.getRunningGames();
     return (
@@ -1579,8 +1579,8 @@ function e7() {
         ],
     });
 }
-var e9 = s(505312),
-    e8 = s(922016),
+var e8 = s(505312),
+    e9 = s(922016),
     e6 = s(408278),
     te = s(403581),
     tt = s(980707),
@@ -1852,8 +1852,8 @@ function tS(e) {
 function tC(e) {
     let { align: t = "left" } = e,
         s = l.useRef(null),
-        r = (0, e9.w)();
-    return (0, i.jsx)(e8.Y, {
+        r = (0, e8.w)();
+    return (0, i.jsx)(e9.Y, {
         targetElementRef: s,
         position: "top",
         align: t,
@@ -1893,10 +1893,10 @@ function ty(e) {
 var tE = s(862482),
     t_ = s(194261),
     tw = s(404374),
-    tN = s(422936),
+    tN = s(724651),
     tI = s(732280),
     tO = s(725807),
-    tR = s(410516),
+    tR = s(511484),
     tM = s(400669),
     tT = s(909536),
     tL = s(202541),
@@ -1907,14 +1907,14 @@ function tb(e) {
         l = (0, tT.St)("hd_streaming_upsell_ribbon"),
         r = (0, tI.V)(),
         n = (0, tN.O)(),
-        a = r?.subscription_trial?.sku_id === tL.pe.TIER_2 || (0, tR.U9)(n, tL.pe.TIER_2),
+        a = r?.subscriptionTrial?.skuId === tL.pe.TIER_2 || (0, tR.U9)(n, tL.pe.TIER_2),
         c = ec.intl.string(ea.default["+f+cqk"]);
     return (
         a &&
             (null != r
                 ? (c = (0, T.FY)({
-                      intervalType: r?.subscription_trial?.interval,
-                      intervalCount: r?.subscription_trial?.interval_count,
+                      intervalType: r?.subscriptionTrial?.interval,
+                      intervalCount: r?.subscriptionTrial?.intervalCount,
                   }))
                 : null != n && (c = ec.intl.formatToPlainString(ec.t.bkQ4bH, { percent: n.discount.amount }))),
         (0, i.jsxs)("div", {

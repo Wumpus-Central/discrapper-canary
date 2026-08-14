@@ -1,22 +1,21 @@
 "use strict";
-n.d(t, { QQ: () => u, Us: () => c, qD: () => d });
+n.d(t, { QQ: () => o, Us: () => d, qD: () => c });
 var i = n(17928),
     r = n(287809),
-    s = n(166403),
-    a = n(354670),
-    o = n(378135),
-    l = n(788868);
-function u() {
-    let e = (0, i.bG)([s.A], () => s.A.getPremiumTypeSubscription());
+    a = n(166403),
+    s = n(354670),
+    l = n(202541);
+function o() {
+    let e = (0, i.bG)([a.A], () => a.A.getPremiumTypeSubscription());
     return !!e?.hasActiveTrial;
 }
-function c() {
-    let e = (0, i.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
+function d() {
+    let e = (0, i.bG)([a.A], () => a.A.getPremiumTypeSubscription()),
         t = (0, i.bG)([r.default], () => r.default.getCurrentUser());
     return e?.hasActiveTrial ? t?.premiumType : null;
 }
-function d() {
-    return l.MB.map((e) => a.A.getUserTrialOffer(e))
-        .filter((e) => null != e && !(0, o.P)(e))
+function c() {
+    return l.MB.map((e) => s.A.getUserTrialOffer(e))
+        .filter((e) => null != e && !e.hasExpired())
         .shift();
 }

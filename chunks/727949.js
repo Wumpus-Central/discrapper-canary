@@ -28,8 +28,8 @@ function I() {
 function f(e) {
     let { trialOffer: t } = e;
     if (null == t) return !1;
-    let n = void 0 !== t.referrer_id,
-        i = void 0 === t.redeemed_at,
+    let n = null != t.referrerId,
+        i = !t.isRedeemed(),
         r = new Date(o.default.extractTimestamp(t.id)),
         a = new Date();
     return n && i && a >= r;

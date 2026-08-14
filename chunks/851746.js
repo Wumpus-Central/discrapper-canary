@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => y });
 var i = n(448761),
     r = n(17928),
-    s = n(228366),
-    a = n(287809),
-    o = n(326084),
-    l = n(652215);
-let u = null,
+    a = n(228366),
+    s = n(287809),
+    l = n(326084),
+    o = n(652215);
+let d = null,
     c = new Set(),
-    d = new Map(),
+    u = new Map(),
     _ = !1,
-    h = new Set(),
-    f = new Set(),
-    p = new Map(),
-    E = 0,
-    m = null,
-    g = [],
-    A = !1,
+    E = new Set(),
+    A = new Set(),
+    h = new Map(),
     I = 0,
+    f = null,
+    p = [],
     T = !1,
+    m = 0,
+    g = !1,
     S = !1,
-    y = null,
+    N = null,
     C = null;
-function N() {
+function R() {
     return !0;
 }
-function v(e) {
+function O(e) {
     let { messages: t } = e;
-    t.forEach((e) => R(e));
+    t.forEach((e) => L(e));
 }
-function R(e) {
+function L(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    !f.has(t) && !h.has(t) && (h.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+    !A.has(t) && !E.has(t) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
 }
-class O extends r.Ay.Store {
+class D extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(a.default), this.syncWith([a.default], N);
+        this.waitFor(s.default), this.syncWith([s.default], R);
     }
     checkAndFetchReferralsRemaining() {
-        null == u && !_ && E < 6 && (null == m || m < Date.now()) && (0, o.xM)();
+        null == d && !_ && I < 6 && (null == f || f < Date.now()) && (0, l.xM)();
     }
     getReferralsRemaining() {
         let { bypassFetch: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return e || this.checkAndFetchReferralsRemaining(), u;
+        return e || this.checkAndFetchReferralsRemaining(), d;
     }
     getSentUserIds() {
         return this.checkAndFetchReferralsRemaining(), Array.from(c.values());
@@ -53,47 +53,47 @@ class O extends r.Ay.Store {
         return _;
     }
     getRelevantUserTrialOffer(e) {
-        return p.get(e);
+        return h.get(e);
     }
     isResolving(e) {
-        return h.has(e);
+        return E.has(e);
     }
     getEligibleUsers() {
-        return g;
+        return p;
     }
     getFetchingEligibleUsers() {
-        return A;
+        return T;
     }
     getNextIndexOfEligibleUsers() {
-        return I;
+        return m;
     }
     getIsEligibleToSendReferrals() {
-        return T;
+        return g;
     }
     getHasEligibleFriends() {
         return S;
     }
     getRefreshAt() {
-        return y;
+        return N;
     }
     getAllRelevantReferralTrialOffers() {
-        return Array.from(p.values());
+        return Array.from(h.values());
     }
     getRecipientStatus() {
-        return d;
+        return u;
     }
     getReminderStateId() {
         return C;
     }
 }
-let b = new O(s.h, {
+let y = new D(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
-        (_ || (0, o.xM)(), !h.has(t)) && (h.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+        (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
     },
     BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
         let {} = e;
-        (y = null), (_ = !0);
+        (N = null), (_ = !0);
     },
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
         let {
@@ -101,65 +101,65 @@ let b = new O(s.h, {
             sent_user_ids: n,
             refresh_at: i,
             recipient_status: r,
-            has_eligible_friends: s,
-            reminder_state_id: a,
+            has_eligible_friends: a,
+            reminder_state_id: s,
         } = e;
-        (T = !0), (S = s), (_ = !1), (u = t), (c = new Set(n)), (y = i), (d = r), (C = a), (E = 0), (m = null);
+        (g = !0), (S = a), (_ = !1), (d = t), (c = new Set(n)), (N = i), (u = r), (C = s), (I = 0), (f = null);
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        (T = !1), (S = !1), (y = null), (_ = !1);
-        let t = (E += 1) <= 3 ? 1e3 * Math.pow(2, E) : 8e3 * Math.pow(4, E - 3);
-        m = Date.now() + Math.min(3e5, t);
+        (g = !1), (S = !1), (N = null), (_ = !1);
+        let t = (I += 1) <= 3 ? 1e3 * Math.pow(2, I) : 8e3 * Math.pow(4, I - 3);
+        f = Date.now() + Math.min(3e5, t);
     },
     BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        (0, o.xM)(), p.set(t.id, t), c.add(t.user_id);
+        (0, l.xM)(), h.set(t.id, t), c.add(t.userId);
     },
     CREATE_REFERRALS_SUCCESS: function (e) {
         let { userTrialOffers: t } = e;
-        for (let e of ((0, o.xM)(), t)) p.set(e.id, e), c.add(e.user_id);
+        for (let e of ((0, l.xM)(), t)) h.set(e.id, e), c.add(e.userId);
     },
     BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        null != t && (h.delete(t.id), f.add(t.id), p.set(t.id, t));
+        null != t && (E.delete(t.id), A.add(t.id), h.set(t.id, t));
     },
     BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
         let { userTrialOfferId: t } = e;
-        h.delete(t), f.add(t);
+        E.delete(t), A.add(t);
     },
     REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
-        A = !0;
+        T = !0;
     },
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
         let { users: t, nextIndex: n } = e;
-        (A = !1), (g = t), (I = n);
+        (T = !1), (p = t), (m = n);
     },
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
-        A = !1;
+        T = !1;
     },
-    LOAD_MESSAGES_SUCCESS: v,
+    LOAD_MESSAGES_SUCCESS: O,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        R(t);
+        L(t);
     },
-    LOAD_MESSAGES_AROUND_SUCCESS: v,
+    LOAD_MESSAGES_AROUND_SUCCESS: O,
     LOGOUT: function () {
-        (u = null),
+        (d = null),
             (c = new Set()),
             (_ = !1),
-            (h = new Set()),
-            (f = new Set()),
-            (p = new Map()),
-            (E = 0),
-            (m = null),
-            (g = []),
-            (A = !1),
+            (E = new Set()),
+            (A = new Set()),
+            (h = new Map()),
             (I = 0),
+            (f = null),
+            (p = []),
             (T = !1),
+            (m = 0),
+            (g = !1),
             (S = !1),
-            (y = null),
-            (d = new Map()),
+            (N = null),
+            (u = new Map()),
             (C = null);
     },
 });

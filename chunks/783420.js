@@ -26,15 +26,15 @@ function f(e) {
             giftMessage: S,
             confirmationFooter: N,
             isGift: C,
-            initialPlanId: O = null,
-            shouldDisallowPlanSelection: R = !1,
+            initialPlanId: R = null,
+            shouldDisallowPlanSelection: O = !1,
             children: L,
         } = e,
         D = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
         y = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         { analyticsLocations: v } = (0, s.Ay)(),
         b = (0, A.V)(),
-        M = !C && null != b && null != f && h.TP[b.trial_id].skus.includes(f);
+        M = !C && null != b && null != f && h.TP[b.trialId].skus.includes(f);
     return L({
         onClick: function (e) {
             if ((e.preventDefault(), null == D))
@@ -69,12 +69,12 @@ function f(e) {
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            let r = M ? b.subscription_trial?.id : null,
+            let r = M ? b.subscriptionTrial?.id : null,
                 s = I.AnalyticsObjectTypes.BUY;
             null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT);
             let _ = {
                 isGift: C,
-                initialPlanId: O,
+                initialPlanId: R,
                 subscriptionTier: f,
                 analyticsLocations: v,
                 analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },
@@ -85,7 +85,7 @@ function f(e) {
                 giftMessage: S,
                 confirmationFooter: N,
             };
-            R && null != O ? (0, o.A)({ ..._, initialPlanId: O, shouldDisallowPlanSelection: !0 }) : (0, o.A)(_);
+            O && null != R ? (0, o.A)({ ..._, initialPlanId: R, shouldDisallowPlanSelection: !0 }) : (0, o.A)(_);
         },
     });
 }

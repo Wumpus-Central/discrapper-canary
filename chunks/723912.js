@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593571, Version Hash: 79cf4504e3aa12f4a63f020940a5c5b19a269893`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593574, Version Hash: 2542d55ccebc1b531c532886e60c4e18f47d0bdd`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -19751,8 +19751,8 @@ function So(e) {
                 });
             break;
         case "reverse_trial": {
-            let e = I?.trial_id === dn.Tt,
-                n = h ?? (I?.expires_at != null ? gg()(I?.expires_at) : null);
+            let e = I?.trialId === dn.Tt,
+                n = h ?? (I?.expiresAt != null ? gg()(I?.expiresAt) : null);
             if (null != n) return (0, R.jsx)(Ss, { endsAt: n, variant: e ? "followup" : "initial", children: t });
             break;
         }
@@ -19866,7 +19866,7 @@ function Su(e) {
             showAfterTimestamp: eo.valueOf(),
             cooldownDurationMs: 0,
         }),
-        eA = I?.trial_id === dn.Dw,
+        eA = I?.trialId === dn.Dw,
         eh = (0, m5.TF)({ location: "NitroTabButton" }),
         eI = (0, gp.q)(_, eh === m5.Iz.NITRO_TAB_POPOVER),
         ef = iJ.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
@@ -19980,7 +19980,7 @@ function Su(e) {
         (t = (0, R.jsx)(gc.MA, {
             isTabSelected: a,
             badgeCopy: tT.intl.string(tT.t.OS9KPu),
-            offerExpiresAt: !0 === e ? I?.expires_at : null,
+            offerExpiresAt: !0 === e ? (I?.expiresAt?.toISOString() ?? null) : null,
         })),
             (n = 4);
     } else
@@ -20035,7 +20035,7 @@ function Su(e) {
                         : ((t = (0, R.jsx)(gc.Ag, { trialOffer: I, isTabSelected: a, badgeStyle: ea })),
                           (n = 4),
                           (eB = er === m1.F.POPOVER && eG === iJ.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                          (eH = er === m1.F.TOOLTIP && null == I.expires_at));
+                          (eH = er === m1.F.TOOLTIP && null == I.expiresAt));
     let eX = Sl.NONE;
     ey === iJ.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
         ? (eX = Sl.MARKETING_MOMENT_POPOVER)
@@ -20061,7 +20061,7 @@ function Su(e) {
                             ? (eX = Sl.TOOLTIP)
                             : eY && 3 === n
                               ? (eX = Sl.ANNUAL_DISCOUNT)
-                              : T || I?.trial_id === dn.Tt
+                              : T || I?.trialId === dn.Tt
                                 ? (eX = Sl.REVERSE_TRIAL)
                                 : D
                                   ? (eX = Sl.ORBS_MULTIPLIER)
@@ -20772,7 +20772,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593571" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593574" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -32975,7 +32975,7 @@ class y2 extends t8.A {
             if (null != t.marketingComponents) {
                 if (null != t.trialId) {
                     let e = yz.A.getUserTrialOffer(t.trialId);
-                    if (null == e || (null != e.expires_at && Date.parse(e.expires_at) < Date.now())) continue;
+                    if (null == e || e.hasExpired()) continue;
                 }
                 for (let e of (n.set(t.id, t), t.marketingComponents))
                     e.componentType === mB.C.ANNOUNCEMENT_MODAL && i.push(e);
@@ -42739,7 +42739,7 @@ var xi = n(526162),
 function xl() {
     let e = (0, el.bG)([eP.default], () => mQ.Ay.isPremium(eP.default.getCurrentUser())),
         t = (0, gs.V)(),
-        n = t?.subscription_trial?.sku_id === dn.pe.TIER_2;
+        n = t?.subscriptionTrial?.skuId === dn.pe.TIER_2;
     return (0, R.jsx)(xe.A, {
         size: rx.$n.Sizes.MEDIUM,
         textOptions: {
@@ -42747,8 +42747,8 @@ function xl() {
                 ? tT.intl.string(tT.t.IJI7yk)
                 : n
                   ? (0, mQ.FY)({
-                        intervalType: t?.subscription_trial?.interval,
-                        intervalCount: t?.subscription_trial?.interval_count,
+                        intervalType: t?.subscriptionTrial?.interval,
+                        intervalCount: t?.subscriptionTrial?.intervalCount,
                     })
                   : tT.intl.string(tT.t.mr4K7D),
         },

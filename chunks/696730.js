@@ -21,8 +21,8 @@ n(25827);
 var P = n(202541),
     I = n(594387),
     g = n(375708),
-    _ = n(732280),
-    v = n(92886),
+    v = n(732280),
+    _ = n(92886),
     T = n(815545),
     x = n(344159),
     N = n(45938),
@@ -154,8 +154,8 @@ function W(e) {
                             preventInvoiceFetch: g,
                         } = (0, C.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
-                            universalInvoiceRequestParams: _,
-                            checkoutInvoiceRequestParams: v,
+                            universalInvoiceRequestParams: v,
+                            checkoutInvoiceRequestParams: _,
                             renewalInvoiceRequestParams: T,
                         } = (0, C.jq)({
                             items: I,
@@ -169,10 +169,10 @@ function W(e) {
                                 y
                                     ? {
                                           type: "premium_one_time_gift_purchase_invoice",
-                                          params: { ..._, skuId: s, subscriptionPlanId: t, quantity: E },
+                                          params: { ...v, skuId: s, subscriptionPlanId: t, quantity: E },
                                       }
-                                    : { type: "subscription_checkout_invoice", params: v },
-                            [_, v, y, t, s, E],
+                                    : { type: "subscription_checkout_invoice", params: _ },
+                            [v, _, y, t, s, E],
                         ),
                         N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: T }), [T, y]);
                     i.useEffect(() => {
@@ -224,8 +224,8 @@ function W(e) {
         eI = i.useMemo(() => (0, b.Tm)({ skuId: X, isPremium: eo, defaultPlanId: ee }), [X, ee, eo]),
         { paymentSources: eg } = (0, u.j)(),
         {
-            hasEntitlements: e_,
-            paymentSourceType: ev,
+            hasEntitlements: ev,
+            paymentSourceType: e_,
             isPrepaid: eT,
             paymentSourceOptionalWarningCopy: ex,
         } = (function (e) {
@@ -261,10 +261,10 @@ function W(e) {
             isTrial: ec,
             hideCurrencySelect: eb,
             disabled: eh,
-            hasEntitlements: e_,
+            hasEntitlements: ev,
         }),
-        ej = (0, _.V)($),
-        { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, v.O8)(),
+        ej = (0, v.V)($),
+        { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, _.O8)(),
         ek = (0, O.pt)({
             fractionalPremiumInfo: eP,
             selectedPlanId: t,
@@ -359,7 +359,7 @@ function W(e) {
     if (null == ed && null != Q) return (0, l.jsx)(o.T_, { ...eQ, legalContent: null });
     if (null == ed || ed.type === c.u$.LOADING)
         return (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eG });
-    let e$ = null != ej ? ej.subscription_trial : void 0,
+    let e$ = null != ej ? ej.subscriptionTrial : void 0,
         eJ =
             ed.type === c.u$.PREMIUM_WITH_TRIAL
                 ? null
@@ -401,7 +401,7 @@ function W(e) {
             isTrial: ec,
             plan: k,
             isGift: J,
-            paymentSourceType: ev,
+            paymentSourceType: e_,
             discriminatedInvoicePreview: ed,
             fractionalPremiumInfo: eP,
         }),

@@ -23,10 +23,10 @@ var i,
     E = t(580630),
     R = t(526292),
     y = t(877624),
-    _ = t(978656),
-    b = t(508770),
-    P = t(406810),
-    I = t(951305),
+    b = t(978656),
+    P = t(508770),
+    I = t(406810),
+    _ = t(951305),
     M = t(421108),
     S = t(807098),
     k = t(412260),
@@ -49,7 +49,7 @@ function O(e) {
 var w = t(375708),
     L = t(197350);
 function U() {
-    let { claimableRewards: e } = (0, I.Pv)(),
+    let { claimableRewards: e } = (0, _.Pv)(),
         r = (0, c.bG)([k.A], () => {
             let e = k.A.getMarketingComponentByType(y.C.GIFT_PLAN_SELECTION_CARD_BANNER);
             return null == e || "giftPlanSelectionCardBanner" !== e.properties.properties.oneofKind
@@ -58,7 +58,7 @@ function U() {
         }),
         t = (0, S.T)(r?.bannerAsset),
         i = (0, S.T)(r?.avatarAsset),
-        l = r?.assetVariant === _.Y.LARGE_TILTED,
+        l = r?.assetVariant === b.Y.LARGE_TILTED,
         a = (0, c.bG)([k.A], () => k.A.getGiftPromotion()),
         o = (0, M.dA)(a?.endDate),
         { enabled: d } = G.E.useConfig({ location: "PremiumBrandRefreshGiftPromotionElement" });
@@ -110,7 +110,7 @@ function H(e) {
         children: (0, n.jsx)(O, {
             image: null != r ? (0, n.jsx)("img", { className: L.L8, alt: "", src: r }) : void 0,
             badge:
-                null != t ? (0, n.jsx)(b.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: P.O }) : void 0,
+                null != t ? (0, n.jsx)(P.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: I.O }) : void 0,
             title: (0, n.jsx)(x.E, { variant: "text-md/medium", color: "text-default", children: i }),
             body: (0, n.jsx)(x.E, { variant: "text-sm/medium", color: "text-muted", children: l }),
         }),
@@ -255,7 +255,7 @@ function eg(e) {
         x = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
         p = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
         h = (0, V.V)(),
-        g = h?.subscription_trial?.sku_id,
+        g = h?.subscriptionTrial?.skuId,
         f = x?.hasActiveTrial ? p?.premiumType : null,
         N = (0, q.Lj)(f, g),
         v = null != N,
@@ -349,18 +349,18 @@ function eN(e) {
         A = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
         E = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
         y = (0, V.V)(),
-        _ = y?.subscription_trial?.sku_id,
-        b = A?.hasActiveTrial ? E?.premiumType : null,
-        P = A?.planIdFromItems === ee.gD.PREMIUM_YEAR_TIER_2,
-        I = (0, F.O)(),
+        b = y?.subscriptionTrial?.skuId,
+        P = A?.hasActiveTrial ? E?.premiumType : null,
+        I = A?.planIdFromItems === ee.gD.PREMIUM_YEAR_TIER_2,
+        _ = (0, F.O)(),
         M = (0, F.p)(),
         S = (0, R.k5)(),
-        k = null != _ || null != b ? ee.Vk.PREMIUM_TRIAL : null != I || S ? ee.Vk.PREMIUM_DISCOUNT : null,
+        k = null != b || null != P ? ee.Vk.PREMIUM_TRIAL : null != _ || S ? ee.Vk.PREMIUM_DISCOUNT : null,
         G = (0, m.q)((0, j.Ay)()),
         B = null != M && !a,
-        D = !a && null != I && (0, $.hm)(I),
-        O = !a && S && P && k === ee.Vk.PREMIUM_DISCOUNT,
-        L = (0, q.rm)(S, b, a ? null : I, y, _),
+        D = !a && null != _ && (0, $.hm)(_),
+        O = !a && S && I && k === ee.Vk.PREMIUM_DISCOUNT,
+        L = (0, q.rm)(S, P, a ? null : _, y, b),
         H = (0, Y.Sq)() && !a && null == k,
         K = null != r || x ? (0, n.jsxs)(n.Fragment, { children: [r, x && (0, n.jsx)(U, {})] }) : null,
         z = d && !a,
@@ -413,7 +413,7 @@ function eN(e) {
                     isGift: a,
                     premiumTier: ee.PremiumTypes.TIER_2,
                     offerType: k,
-                    offerTierMatchesCard: _ === ee.pe.TIER_2 || (0, $.U9)(I, ee.pe.TIER_2),
+                    offerTierMatchesCard: b === ee.pe.TIER_2 || (0, $.U9)(_, ee.pe.TIER_2),
                     showYearlyPrice: t && !D,
                     priceOptions: u,
                     enablePremiumBrandRefresh: !0,
@@ -422,7 +422,7 @@ function eN(e) {
                     headerClassName: eu.priceHeader,
                 }),
                 D
-                    ? (0, n.jsx)(ef, { discountOffer: I, priceOptions: u, isGift: a, narrowLayout: v })
+                    ? (0, n.jsx)(ef, { discountOffer: _, priceOptions: u, isGift: a, narrowLayout: v })
                     : (0, n.jsx)("hr", { className: eu.divider }),
                 (0, n.jsx)(es.ZP, {
                     featureSet: i,

@@ -1177,9 +1177,9 @@ function tE(e) {
     }
 }
 function tA(e, t) {
-    if (null != e && null != e.subscription_trial && e.subscription_trial.sku_id === t) {
-        let t = e.subscription_trial;
-        return tE({ intervalType: t.interval, intervalCount: t.interval_count });
+    if (null != e && null != e.subscriptionTrial && e.subscriptionTrial.skuId === t) {
+        let t = e.subscriptionTrial;
+        return tE({ intervalType: t.interval, intervalCount: t.intervalCount });
     }
     return null;
 }
@@ -1310,8 +1310,8 @@ function tP() {
 function tU(e) {
     var t;
     let n = N.Eg;
-    if (null != (t = e) && "trial_id" in t)
-        switch (e.trial_id) {
+    if (null != (t = e) && "trialId" in t)
+        switch (e.trialId) {
             case N.Tt:
                 return N.h7;
             case N.yo:

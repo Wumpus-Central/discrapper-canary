@@ -1,21 +1,22 @@
 "use strict";
-n.d(t, { P7: () => h, aK: () => c, kZ: () => E, o: () => d, xM: () => f, xm: () => p }), n(321073);
+n.d(t, { P7: () => A, aK: () => u, kZ: () => f, o: () => _, xM: () => h, xm: () => I }), n(321073);
 var i,
     r,
-    s = n(636537),
-    a = n(228366);
-n(493336);
-var o = n(889227);
+    a = n(636537),
+    s = n(228366);
+n(148494);
+var l = n(959165),
+    o = n(889227);
 n(309010);
-var l = n(38405),
-    u = n(652215),
-    c =
+var d = n(38405),
+    c = n(652215),
+    u =
         (((i = {})[(i.REDEEMED = 1)] = "REDEEMED"),
         (i[(i.PENDING = 2)] = "PENDING"),
         (i[(i.CONVERTED = 3)] = "CONVERTED"),
         i),
-    d = (((r = {})[(r.SUCCESS = 1)] = "SUCCESS"), (r[(r.FAIL = 2)] = "FAIL"), r);
-let _ = new (class {
+    _ = (((r = {})[(r.SUCCESS = 1)] = "SUCCESS"), (r[(r.FAIL = 2)] = "FAIL"), r);
+let E = new (class {
     cache;
     expiration;
     constructor() {
@@ -34,24 +35,24 @@ let _ = new (class {
         this.expiration < Date.now() && this.cache.clear();
     }
 })();
-async function h(e, t, n) {
+async function A(e, t, n) {
     let i = JSON.stringify({ index: e, searchQuery: t });
-    if (_.has(i)) return _.get(i);
-    let { users: r, next_index: a } = (
-            await s.Bo.post({
-                url: u.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
+    if (E.has(i)) return E.get(i);
+    let { users: r, next_index: s } = (
+            await a.Bo.post({
+                url: c.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
                 body: { index: e, limit: n ?? 10, search_query: t },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
         ).body,
-        l = { users: r.map((e) => new o.A(e)), nextIndex: a };
-    return _.set(i, l), l;
+        l = { users: r.map((e) => new o.A(e)), nextIndex: s };
+    return E.set(i, l), l;
 }
-function f() {
+function h() {
     return (
-        a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
-        s.Bo.get({ url: u.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
+        s.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
+        a.Bo.get({ url: c.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
             (e) => {
                 let t = new Map();
                 if (null != e.body && null != e.body.recipient_status)
@@ -59,7 +60,7 @@ function f() {
                         let i = e.body.recipient_status[n];
                         t.set(n, i);
                     }
-                a.h.dispatch({
+                s.h.dispatch({
                     type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
                     referrals_remaining:
                         null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
@@ -71,32 +72,33 @@ function f() {
                 });
             },
             (e) => {
-                e?.status !== 404 && a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+                e?.status !== 404 && s.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
             },
         )
     );
 }
-async function p(e) {
+async function I(e) {
     let t = [],
         n = new Map();
     for (let i of e)
         try {
-            let e =
-                (await s.Bo.post({ url: u.Rsh.CREATE_REFERRAL(i), oldFormErrors: !0, rejectWithError: !0 })).body ??
-                null;
-            null != e && t.push(e), n.set(i, 1);
+            let e = await a.Bo.post({ url: c.Rsh.CREATE_REFERRAL(i), oldFormErrors: !0, rejectWithError: !0 }),
+                r = null != e.body ? l.A.createFromServer(e.body) : null;
+            null != r && t.push(r), n.set(i, 1);
         } catch (e) {
-            l.A.captureException(e), n.set(i, 2);
+            d.A.captureException(e), n.set(i, 2);
         }
-    return a.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
+    return s.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
 }
-async function E(e) {
+async function f(e) {
     try {
-        let t =
-            (await s.Bo.get({ url: u.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }))
-                .body ?? null;
-        return a.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: t }), { userTrialOffer: t };
+        let t = await a.Bo.get({ url: c.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }),
+            n = null != t.body ? l.A.createFromServer(t.body) : null;
+        return (
+            s.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: n ?? void 0 }),
+            { userTrialOffer: n }
+        );
     } catch (t) {
-        a.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: e });
+        s.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: e });
     }
 }

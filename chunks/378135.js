@@ -5,32 +5,32 @@ var i = n(582128),
     a = n(451988),
     s = n(287809),
     l = n(354670),
-    o = n(428262);
+    o = n(158045);
 function d(e) {
-    return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
+    return e?.hasExpired() ?? !1;
 }
 function c(e) {
     let t = (0, r.bG)([l.A], () => l.A.getUserTrialOffer(e)),
-        [n, c] = i.useState(d(t)),
-        u =
+        [n, d] = i.useState(t?.hasExpired() ?? !1),
+        c =
             !(0, r.bG)([s.default], () => (0, o.TW)(s.default.getCurrentUser())) ||
             l.A.canFractionalPremiumUserUseOffer();
     return (
         i.useEffect(() => {
-            if (null != t && null != t.expires_at) {
+            if (null != t && null != t.expiresAt) {
                 let e = new a.Ep();
                 return (
                     !(function i() {
                         if (null == t) return;
-                        let r = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
+                        let r = null != t.expiresAt ? t.expiresAt.getTime() - Date.now() : 0;
                         e?.start(r, () => {
-                            !n && d(t) ? c(!0) : i();
+                            !n && t.hasExpired() ? d(!0) : i();
                         });
                     })(),
                     () => e.stop()
                 );
             }
         }, [n, t]),
-        !n && u ? t : null
+        !n && c ? t : null
     );
 }

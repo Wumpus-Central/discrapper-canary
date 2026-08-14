@@ -22,8 +22,8 @@ var i,
     S = n(87719),
     N = n(732280),
     C = n(811611),
-    O = n(450232),
-    R = n(973654),
+    R = n(450232),
+    O = n(973654),
     L = n(363195),
     D = n(742023),
     y = n(885386),
@@ -46,7 +46,7 @@ var i,
     K = n(693227),
     $ = n(375708),
     z = n(804203);
-function q() {
+function Z() {
     return (0, r.jsxs)("svg", {
         className: z.JR,
         width: "68",
@@ -81,7 +81,7 @@ function q() {
         ],
     });
 }
-function Z(e) {
+function q(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = y.eh.useSetting().customUserThemeSettings,
@@ -141,7 +141,7 @@ function Z(e) {
                 style: T,
                 ariaDescribedBy: o,
                 children: [
-                    !E && !p && (0, r.jsx)(q, {}),
+                    !E && !p && (0, r.jsx)(Z, {}),
                     (0, r.jsx)("div", { className: z.JU }),
                     (0, r.jsx)(U.B, { color: m, className: z.vL }),
                 ],
@@ -191,13 +191,13 @@ function eo(e) {
         className: ei.DD,
         children: [
             (0, r.jsx)(_.D, { "aria-label": c, className: l()(ei.Qw, a), variant: d, children: c }),
-            (0, r.jsx)(O.A, { className: l()(ei.PC, s), size: "xs" }),
+            (0, r.jsx)(R.A, { className: l()(ei.PC, s), size: "xs" }),
         ],
     });
 }
 function ed(e) {
     let { type: t, isPreview: n, isCoachmark: i } = e;
-    if ((0, N.V)()?.subscription_trial?.sku_id === J.pe.TIER_2 && n) return null;
+    if ((0, N.V)()?.subscriptionTrial?.skuId === J.pe.TIER_2 && n) return null;
     let a = (0, o.YW)({ type: t, isPreview: n, isCoachmark: i })
         .with({ type: "EDITOR", isPreview: !0 }, () => $.intl.format($.t.G8yQXi, { onPremiumClick: S.e }))
         .with({ type: "EDITOR", isCoachmark: !0 }, () => $.intl.string($.t.jmZiNu))
@@ -217,7 +217,7 @@ function ec(e) {
         } = e,
         { type: u } = a.useContext(es),
         [_] = (0, d.yK)([P.A], () => [P.A.isPreview]),
-        E = (0, N.V)()?.subscription_trial?.sku_id === J.pe.TIER_2;
+        E = (0, N.V)()?.subscriptionTrial?.skuId === J.pe.TIER_2;
     return "EDITOR" === u && _ && E
         ? (0, r.jsx)(C.Ay, {
               type: J.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
@@ -252,7 +252,7 @@ function eu(e) {
         [u, _] = (0, d.yK)([P.A], () => [P.A.isPreview, P.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
-        O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        R = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
         D = (0, g.GV)(),
         y = L && u ? D : void 0,
@@ -263,9 +263,9 @@ function eu(e) {
             ((0, M.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, O.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
                 : u
-                  ? (0, R.GQ)(e.theme)
+                  ? (0, O.GQ)(e.theme)
                   : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
             null != t)
         ) {
@@ -280,7 +280,7 @@ function eu(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: D, children: $.intl.string($.t.JIZSqz) }),
-                (0, r.jsx)(Z, {
+                (0, r.jsx)(q, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: b,
@@ -326,7 +326,7 @@ function eu(e) {
                                 onSelect: () => U(e),
                                 ariaDescribedBy: y,
                             }),
-                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !O, className: ei._7 }),
+                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !R, className: ei._7 }),
                         ],
                     });
                 })(),

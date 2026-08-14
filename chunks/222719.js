@@ -26,10 +26,10 @@ function P(e) {
             offerTierMatchesCard: l,
             offerType: a,
             showYearlyPrice: P,
-            priceOptions: _,
-            textVariant: j,
-            className: v,
-            isApplicationHome: R,
+            priceOptions: j,
+            textVariant: v,
+            className: R,
+            isApplicationHome: _,
             enablePremiumBrandRefresh: M,
             headerClassName: N,
             headingVariant: S = "heading-md/normal",
@@ -47,8 +47,8 @@ function P(e) {
         F = n === p.PremiumTypes.TIER_0 ? p.gD.PREMIUM_MONTH_TIER_0 : p.gD.PREMIUM_MONTH_TIER_2,
         H = (0, f.N1)(F),
         Z = null != D && (0, f.YJ)(D) === F,
-        B = w?.subscription_trial;
-    if (!R && !t && null != k && n === k && null != C && null != C.planIdFromItems) {
+        B = w?.subscriptionTrial;
+    if (!_ && !t && null != k && n === k && null != C && null != C.planIdFromItems) {
         let e = null != C.trialEndsAt ? s()(C?.trialEndsAt).diff(s()(), "d") : 0,
             t = p.hd[C.planIdFromItems],
             n = g.Ay.formatPriceString(g.Ay.getDefaultPrice(t.id), t.interval),
@@ -76,7 +76,7 @@ function P(e) {
                           }),
         });
     }
-    if (!R && !t && l) {
+    if (!_ && !t && l) {
         let e = g.Ay.formatPriceString(
             g.Ay.getDefaultPrice(n === p.PremiumTypes.TIER_0 ? p.gD.PREMIUM_MONTH_TIER_0 : p.gD.PREMIUM_MONTH_TIER_2),
             p.WT.MONTH,
@@ -87,10 +87,10 @@ function P(e) {
                 color: y,
                 className: i()(A.K, N),
                 children: E.intl.format(E.t["9vyovu"], {
-                    planName: (0, g.RH)(p.En[B?.sku_id ?? p.pe.NONE] ?? p.gD.PREMIUM_MONTH_TIER_2),
+                    planName: (0, g.RH)(p.En[B?.skuId ?? p.pe.NONE] ?? p.gD.PREMIUM_MONTH_TIER_2),
                     duration: (0, g.re)({
                         intervalType: B?.interval ?? p.WT.DAY,
-                        intervalCount: B?.interval_count ?? 30,
+                        intervalCount: B?.intervalCount ?? 30,
                         capitalize: !1,
                     }),
                     price: e,
@@ -113,21 +113,21 @@ function P(e) {
             (0, r.jsx)(h.A, {
                 subscriptionTier: O,
                 isGift: t,
-                className: null != v ? v : A.q,
-                priceOptions: _,
-                variant: j,
-                isApplicationHome: R,
+                className: null != R ? R : A.q,
+                priceOptions: j,
+                variant: v,
+                isApplicationHome: _,
                 enablePremiumBrandRefresh: M,
             }),
             P &&
                 (0, r.jsx)(h.A, {
                     subscriptionTier: O,
                     interval: p.WT.YEAR,
-                    className: null != v ? v : A.q,
+                    className: null != R ? R : A.q,
                     isGift: t,
-                    priceOptions: _,
-                    variant: j,
-                    isApplicationHome: R,
+                    priceOptions: j,
+                    variant: v,
+                    isApplicationHome: _,
                     enablePremiumBrandRefresh: M,
                 }),
         ],

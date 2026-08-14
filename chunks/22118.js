@@ -14,14 +14,14 @@ var l = s(477900),
     h = s(160946),
     j = s(287809),
     _ = s(166403),
-    g = s(428262),
+    g = s(158045),
     f = s(960851),
     A = s(89366),
-    E = s(422936),
+    E = s(724651),
     C = s(732280),
     T = s(331322),
-    N = s(508770),
-    I = s(834730),
+    I = s(508770),
+    N = s(834730),
     R = s(441574),
     v = s(862990),
     y = s(427262),
@@ -78,17 +78,17 @@ function D(e) {
                 className: w.wx,
                 children: [
                     (0, l.jsx)(d.D, { variant: "display-md", className: w.Ss, children: (0, L.DP)() }),
-                    (0, l.jsx)(N.E, { type: "beta", variant: "expressive" }),
+                    (0, l.jsx)(I.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
-            (0, l.jsx)(I.E, { variant: "text-md/medium", className: w.m_, color: "text-default", children: i }),
-            (0, l.jsx)(I.E, { variant: "text-md/medium", color: "text-default", children: a }),
+            (0, l.jsx)(N.E, { variant: "text-md/medium", className: w.m_, color: "text-default", children: i }),
+            (0, l.jsx)(N.E, { variant: "text-md/medium", color: "text-default", children: a }),
         ],
     });
 }
 var G = s(194509),
     U = s(396375),
-    F = s(410516),
+    F = s(511484),
     B = s(774774),
     k = s(231265),
     H = s(933832),
@@ -102,7 +102,7 @@ var G = s(194509),
     q = s(702253);
 function J(e) {
     let { text: t, badge: s, variant: n } = e;
-    return (0, l.jsxs)(I.E, {
+    return (0, l.jsxs)(N.E, {
         color: "text-default",
         variant: null != n ? n : "text-sm/normal",
         children: [t, " ", s],
@@ -110,7 +110,7 @@ function J(e) {
 }
 function Q(e) {
     let { text: t, variant: s } = e;
-    return (0, l.jsx)(I.E, { color: "text-strong", variant: null != s ? s : "text-md/semibold", children: t });
+    return (0, l.jsx)(N.E, { color: "text-strong", variant: null != s ? s : "text-md/semibold", children: t });
 }
 function X(e) {
     let { includes: t } = e;
@@ -198,8 +198,8 @@ let ei = function (e) {
         i,
         T,
         {
-            className: N,
-            hideCTAs: I = !1,
+            className: I,
+            hideCTAs: N = !1,
             headingOverride: R,
             hidePill: v = !1,
             selectedPlanColumnClassName: y,
@@ -214,7 +214,7 @@ let ei = function (e) {
         H = null != k && k.isPremiumWithPremiumGroup(),
         V = (0, g.YE)(k, Y.PremiumTypes.TIER_2),
         Z = (0, C.V)(),
-        ei = Z?.subscription_trial?.sku_id,
+        ei = Z?.subscriptionTrial?.skuId,
         er = (0, A.Us)(),
         ea = (0, E.O)(),
         eo = (0, F.YJ)(ea),
@@ -412,7 +412,7 @@ let ei = function (e) {
         column1: (0, l.jsx)(es, { premiumType: Y.PremiumTypes.TIER_0, isPremiumGroup: H }),
         column2: (0, l.jsx)(es, { premiumType: Y.PremiumTypes.TIER_2, isPremiumGroup: H }),
     };
-    I
+    N
         ? ep.push({
               label: null,
               column1: null,
@@ -489,7 +489,7 @@ let ei = function (e) {
     return (0, l.jsx)(m.f5, {
         value: b,
         children: (0, l.jsxs)("div", {
-            className: r()(q.zr, N),
+            className: r()(q.zr, I),
             "data-testid": "v2-marketing-page-comparison-table",
             children: [
                 (0, l.jsx)(d.D, {

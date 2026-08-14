@@ -98,36 +98,35 @@ function h(e, t) {
 }
 function L(e, t) {
     let {
-            subscriptionTrial: n,
-            subscriptionPlan: s,
-            isPrepaidPaymentSource: r = !1,
-            includeTaxLineItem: i = !0,
-            excludeDiscountsAndAdjustments: a,
+            subscriptionPlan: n,
+            isPrepaidPaymentSource: s = !1,
+            includeTaxLineItem: r = !0,
+            excludeDiscountsAndAdjustments: i,
         } = t,
         {
-            basePlanInvoiceItem: l,
-            guildSubscriptionInvoiceItem: c,
-            guildSubscriptionPlan: o,
-            guildSubscriptionAmount: d,
-            guildBoostItemLabel: p,
-        } = (0, u.wt)(e, { isPrepaidPaymentSource: r });
-    if (null == l) return { lineItems: [], primaryLineItem: null };
+            basePlanInvoiceItem: a,
+            guildSubscriptionInvoiceItem: l,
+            guildSubscriptionPlan: c,
+            guildSubscriptionAmount: o,
+            guildBoostItemLabel: d,
+        } = (0, u.wt)(e, { isPrepaidPaymentSource: s });
+    if (null == a) return { lineItems: [], primaryLineItem: null };
     let {
-        lineItems: f,
-        primaryLineItem: x,
-        entitlementDiscount: v,
-    } = h(l, {
-        subscriptionPlan: s,
-        subscriptionTrial: n,
-        isPrepaidPaymentSource: r,
+        lineItems: p,
+        primaryLineItem: f,
+        entitlementDiscount: x,
+    } = h(a, {
+        subscriptionPlan: n,
+        subscriptionTrial: null,
+        isPrepaidPaymentSource: s,
         currency: e.currency,
         invoiceAdjustmentDisplayItems: [],
-        excludeDiscountsAndAdjustments: a,
+        excludeDiscountsAndAdjustments: i,
     });
     return (
-        0 !== d && null != c && null != o && null != p && f.push({ id: c.id, label: p, amount: d }),
-        i && f.push({ id: "tax", label: m.intl.string(m.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
-        { lineItems: f, primaryLineItem: x, entitlementDiscount: v }
+        0 !== o && null != l && null != c && null != d && p.push({ id: l.id, label: d, amount: o }),
+        r && p.push({ id: "tax", label: m.intl.string(m.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
+        { lineItems: p, primaryLineItem: f, entitlementDiscount: x }
     );
 }
 function I(e, t) {
@@ -160,7 +159,7 @@ function T(e, t) {
 function E(e) {
     if (null == e)
         return { isMultiPeriodTrial: !1, intervalCount: null, trial: null, multiPeriodTrialRenewalDate: null };
-    let t = "interval_count" in e ? e.interval_count : e.intervalCount;
+    let t = e.intervalCount;
     if (!(t > 1)) return { isMultiPeriodTrial: !1, intervalCount: t, trial: e, multiPeriodTrialRenewalDate: null };
     let n = (function (e, t) {
         let { intervalType: n, intervalCount: s } = t,

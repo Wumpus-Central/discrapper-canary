@@ -32,18 +32,18 @@ let T = function (e) {
             })(n),
         ),
         m = (0, E.V)(),
-        g = (0, a.A)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0),
+        g = (0, a.A)(null != m && null != m.expiresAt ? m.expiresAt.getTime() : 0),
         S =
             null == m ||
-            m.subscription_trial?.sku_id !== n ||
-            null == m.expires_at ||
+            m.subscriptionTrial?.skuId !== n ||
+            null == m.expiresAt ||
             Object.values(g).every((e) => 0 === e);
     if (
         ((0, o.A)(
             {
                 type: r.ImpressionTypes.VIEW,
                 name: r.ImpressionNames.TRIAL_NOTICE,
-                properties: { trial_id: m?.trial_id },
+                properties: { trial_id: m?.trialId },
             },
             { disableTrack: S },
         ),
@@ -52,13 +52,13 @@ let T = function (e) {
         return null;
     let N = n === I.pe.TIER_2 ? f.kqX.PREMIUM_TIER_2_TRIAL_ENDING : f.kqX.PREMIUM_TIER_0_TRIAL_ENDING,
         C = (0, _.re)({
-            intervalType: m.subscription_trial?.interval,
-            intervalCount: m.subscription_trial?.interval_count,
+            intervalType: m.subscriptionTrial?.interval,
+            intervalCount: m.subscriptionTrial?.intervalCount,
         }),
-        R = u.A.getArticleURL(m.trial_id === I.yo ? f.MVz.NITRO_TRIAL_FOR_ALL : f.MVz.PREMIUM_TRIAL);
+        R = u.A.getArticleURL(m.trialId === I.yo ? f.MVz.NITRO_TRIAL_FOR_ALL : f.MVz.PREMIUM_TRIAL);
     return (0, i.jsxs)(A.T0, {
         onClick: () => {
-            t(), c.default.track(f.HAw.APP_NOTICE_CLOSED, { notice_type: N, trial_id: m.trial_id });
+            t(), c.default.track(f.HAw.APP_NOTICE_CLOSED, { notice_type: N, trial_id: m.trialId });
         },
         children: [
             (0, i.jsx)(A.In, { children: (0, h.GZ)(n, g, C, R) }),
@@ -66,7 +66,7 @@ let T = function (e) {
                 onClick: function () {
                     null != m &&
                         ((0, d.A)({
-                            trialId: m.trial_id,
+                            trialId: m.trialId,
                             subscriptionTier: n,
                             analyticsLocations: T,
                             analyticsObject: {
@@ -75,7 +75,7 @@ let T = function (e) {
                                 object: f.ZSU.BUTTON_CTA,
                             },
                         }),
-                        c.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: N, trial_id: m.trial_id }));
+                        c.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: N, trial_id: m.trialId }));
                 },
                 text: (function (e) {
                     switch (e) {

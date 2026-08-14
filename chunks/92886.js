@@ -5,7 +5,7 @@ n.d(t, {
     $p: () => eN,
     cD: () => eI,
     O8: () => eS,
-    Ct: () => e_,
+    Ct: () => ev,
     RO: () => ey,
 });
 var l,
@@ -29,8 +29,8 @@ var l,
     P = n(793574),
     I = n(688810),
     g = n(906199),
-    _ = n(361158),
-    v = n(976860),
+    v = n(361158),
+    _ = n(976860),
     T = n(839534),
     x = n(403689),
     N = n(652215),
@@ -42,10 +42,10 @@ let j = function (e) {
         { isHidden: l } = x.A.useConfig({ location: "CollectiblesGiftPremiumPlanSelectUpsell" });
     function r() {
         t(),
-            (0, v.pX)(N.BVt.COLLECTIBLES_SHOP),
+            (0, _.pX)(N.BVt.COLLECTIBLES_SHOP),
             (0, T.Cz)({ analyticsSource: P.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
             (0, A.jH)(),
-            (0, _.dF)(g.Zt);
+            (0, v.dF)(g.Zt);
     }
     return l
         ? null
@@ -241,11 +241,11 @@ function eE(e, t) {
 }
 function eS() {
     let { userTrialOffer: e } = (0, h.i)(),
-        t = e?.subscription_trial,
+        t = e?.subscriptionTrial,
         { daysCount: n, copy: l } = r.useMemo(
             () =>
                 t?.interval === K.WT.DAY
-                    ? t?.interval_count > 7
+                    ? t?.intervalCount > 7
                         ? { daysCount: 14, copy: b.intl.string(b.t.Z1V2cs) }
                         : { daysCount: 7, copy: b.intl.string(b.t.MI1rHs) }
                     : { daysCount: 30, copy: b.intl.string(b.t["+S5lrV"]) },
@@ -272,8 +272,8 @@ function ey(e) {
             isGift: P,
             giftRecipient: I,
             selectedGiftStyle: g,
-            customGiftMessage: _,
-            setCustomGiftMessage: v,
+            customGiftMessage: v,
+            setCustomGiftMessage: _,
             claimableRewards: T,
             setSelectedGiftingPromotionReward: x,
         } = (0, M.Pv)(),
@@ -282,8 +282,8 @@ function ey(e) {
         R = (0, L.tA)({ giftRecipient: I, isGift: P });
     s()(void 0 !== m, "should not be undefined");
     let [j, O] = (0, o.yK)([k.A], () => [null != m ? k.A.get(m.planId) : null, null != t ? k.A.get(t) : null]),
-        U = E?.subscription_trial,
-        G = E?.trial_id === K.Dw,
+        U = E?.subscriptionTrial,
+        G = E?.trialId === K.Dw,
         F = (0, er.Sq)() && !G,
         B = O ?? N,
         H = n ?? p;
@@ -329,8 +329,8 @@ function ey(e) {
         radioGroupProps: $,
         isGift: P,
         giftRecipient: I,
-        customGiftMessage: _,
-        setCustomGiftMessage: v,
+        customGiftMessage: v,
+        setCustomGiftMessage: _,
         selectedGiftStyle: g,
         isEligibleForBOGOPromotion: F,
         isEligibleForTrial: S,
@@ -489,16 +489,16 @@ function eg(e) {
         );
     return (0, i.jsx)("div", { ref: l, ...s, children: m });
 }
-function e_(e, t) {
+function ev(e, t) {
     let { subscriptionPeriodEnd: n, trialPeriodCopy: l } = t,
-        i = e?.trial_id === K.Dw;
+        i = e?.trialId === K.Dw;
     return null == n
         ? null
         : i
           ? b.intl.format(b.t.nG95hA, { endDate: n })
           : b.intl.format(b.t.s4E7kb, { trialEnd: n, trialPeriod: l });
 }
-function ev(e) {
+function e_(e) {
     let { shouldShowHRKEuroWarning: t, selectedPlanPrice: n } = e;
     return t && null != n
         ? (0, i.jsx)(m.A, {
@@ -539,7 +539,7 @@ function ex(e) {
                     intervalType: t.interval,
                     isPrepaid: l,
                 }),
-            ev({ shouldShowHRKEuroWarning: r, selectedPlanPrice: n }),
+            e_({ shouldShowHRKEuroWarning: r, selectedPlanPrice: n }),
             !a && s && (0, i.jsx)(eT, {}),
         ],
     });
@@ -567,8 +567,8 @@ function eN(e) {
             isEligibleForTrial: P,
             giftRecipient: I,
             customGiftMessage: g,
-            setCustomGiftMessage: _,
-            selectedGiftStyle: v,
+            setCustomGiftMessage: v,
+            selectedGiftStyle: _,
             isPlansEligibleForDiscount: T,
             discountedPlanRegularPrice: x,
             hasSeenCollectiblesInSkuSelect: N,
@@ -618,8 +618,8 @@ function eN(e) {
         return (0, i.jsx)(eP, {
             giftRecipient: I,
             customGiftMessage: g,
-            setCustomGiftMessage: _,
-            selectedGiftStyle: v,
+            setCustomGiftMessage: v,
+            selectedGiftStyle: _,
             hasSeenCollectiblesInSkuSelect: N,
             isPrepaid: M,
             canContinue: H,
@@ -630,7 +630,7 @@ function eN(e) {
             handleClose: c,
             showTotal: o,
             switchPlanSelectComponent: ee(),
-            warningComponent: ev({ shouldShowHRKEuroWarning: D, selectedPlanPrice: U }),
+            warningComponent: e_({ shouldShowHRKEuroWarning: D, selectedPlanPrice: U }),
         });
     let el = !(P && et && !$),
         ei = ef(E, { isEligibleForBOGOPromotion: S });
@@ -668,7 +668,7 @@ function eN(e) {
                                 (0, i.jsx)(p.E, {
                                     variant: "text-sm/normal",
                                     className: eC.Tz,
-                                    children: e_(e, { subscriptionPeriodEnd: s, trialPeriodCopy: V }),
+                                    children: ev(e, { subscriptionPeriodEnd: s, trialPeriodCopy: V }),
                                 }),
                                 (0, i.jsx)("hr", { className: eC.RA }),
                             ],

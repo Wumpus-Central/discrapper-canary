@@ -8,7 +8,7 @@ var i = t(582128),
     c = t(202541);
 function d() {
     let e = (0, o.k)(c.Dw),
-        r = (0, n.bG)([s.A], () => s.A.getReferrer(e?.trial_id)),
+        r = (0, n.bG)([s.A], () => s.A.getReferrer(e?.trialId)),
         t = (0, n.bG)([a.A], () => null == r || a.A.isBlockedOrIgnored(r.id));
     return i.useMemo(() => (t || null == r ? null : new l.A(r)), [r, t]);
 }

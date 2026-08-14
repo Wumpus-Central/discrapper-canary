@@ -4,11 +4,11 @@ var i = n(477900);
 n(582128);
 var r = n(403581),
     a = n(772707),
-    s = n(428262),
-    l = n(422936),
+    s = n(158045),
+    l = n(724651),
     o = n(732280),
     d = n(783420),
-    c = n(410516),
+    c = n(511484),
     u = n(202541),
     _ = n(375708);
 let E = function (e) {
@@ -28,15 +28,15 @@ let E = function (e) {
         } = e,
         N = (0, o.V)(),
         C = (0, l.O)(),
-        O = !g && (N?.subscription_trial?.sku_id === m || (0, c.U9)(C, m)) && null == h,
-        R = _.intl.string(_.t.pj0XBN);
-    O &&
+        R = !g && (N?.subscriptionTrial?.skuId === m || (0, c.U9)(C, m)) && null == h,
+        O = _.intl.string(_.t.pj0XBN);
+    R &&
         (null != N
-            ? (R = (0, s.FY)({
-                  intervalType: N?.subscription_trial?.interval,
-                  intervalCount: N?.subscription_trial?.interval_count,
+            ? (O = (0, s.FY)({
+                  intervalType: N?.subscriptionTrial?.interval,
+                  intervalCount: N?.subscriptionTrial?.intervalCount,
               }))
-            : null != C && (R = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: C.discount.amount })));
+            : null != C && (O = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: C.discount.amount })));
     let L = "beta" === T ? "beta" : null != N ? "free_trial" : T;
     return (0, i.jsx)(d.A, {
         subscriptionTier: m,
@@ -52,7 +52,7 @@ let E = function (e) {
                 actions: [
                     { text: p, variant: "secondary", size: "md", onClick: f },
                     {
-                        text: R,
+                        text: O,
                         variant: "expressive",
                         size: "md",
                         onClick: async (e) => {

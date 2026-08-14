@@ -6,7 +6,7 @@ var i = n(284009),
     a = n(155718),
     s = n(71804),
     l = n(97352),
-    o = n(428262),
+    o = n(158045),
     d = n(580630),
     c = n(874638),
     u = n(202541),
@@ -93,9 +93,7 @@ function m(e, t) {
     let { subscriptionTrial: n, subscriptionPlan: i, overrideAmount: s, isPrepaidPaymentSource: c, currency: u } = t,
         _ = i ?? l.A.get(e.subscriptionPlanId);
     r()(null != _, "Missing subscriptionPlan");
-    let E = (function (e) {
-            if (null != e) return "interval_count" in e ? e.interval_count : e.intervalCount;
-        })(n),
+    let E = n?.intervalCount,
         A = f(e, _, c, (0, o.re)({ intervalType: n?.interval, intervalCount: E })),
         h = null != s ? s : e.amount,
         I = (0, d.$g)(h, u),

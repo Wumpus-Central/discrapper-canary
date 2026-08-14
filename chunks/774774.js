@@ -7,7 +7,7 @@ var a = n(503698),
     s = n.n(a),
     l = n(661531),
     o = n(834730),
-    d = n(410516),
+    d = n(511484),
     c = n(349563),
     u = n(202541),
     _ = n(375708),
@@ -99,7 +99,7 @@ function p(e, t, n, i, r) {
         return e ? _.intl.string(_.t.EyjDRE) : _.intl.formatToPlainString(_.t.iiLbvu, { percent: n.discount.amount });
     if (r === u.pe.TIER_2) {
         let e = _.intl.string(_.t.IBYG5U);
-        return i?.trial_id === u.Dw && (e = _.intl.string(_.t.gtNqJQ)), e;
+        return i?.trialId === u.Dw && (e = _.intl.string(_.t.gtNqJQ)), e;
     }
     return t === u.PremiumTypes.TIER_2 ? _.intl.string(_.t.qYKftX) : e ? _.intl.string(_.t.EyjDRE) : null;
 }
