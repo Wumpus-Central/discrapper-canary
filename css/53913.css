@@ -206,28 +206,11 @@
     top: 0
 }
 
-.streamTooltipContent__38ccf {
-    align-items: center;
-    background-color: var(--background-surface-high);
-    border-radius: var(--radius-sm);
-    box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
-    box-sizing: border-box;
-    display: flex;
-    gap: var(--space-8);
-    max-width: 240px;
-    padding: var(--space-8) var(--space-12)
-}
-
-.streamTooltipTitle__38ccf {
-    flex: 1;
-    min-width: 0
-}
-
 .streamPreviewAsset__38ccf {
     border-radius: var(--radius-sm);
     flex-shrink: 0;
-    height: 45px;
-    max-width: 80px;
+    height: 48px;
+    max-width: 85px;
     min-width: 32px;
     overflow: hidden;
     position: relative

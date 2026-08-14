@@ -12,8 +12,6 @@ e.exports = {
     Zu: "isStatusMenuOpen__38ccf",
     Gh: "userList__38ccf",
     Sl: "streamingBadge__38ccf",
-    Ne: "streamTooltipContent__38ccf",
-    _v: "streamTooltipTitle__38ccf",
     J: "streamPreviewAsset__38ccf",
     y6: "streamPreviewImage__38ccf",
     ae: "streamPreviewEyeOverlay__38ccf",

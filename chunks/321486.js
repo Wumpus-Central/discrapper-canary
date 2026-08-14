@@ -1,123 +1,152 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => L });
 var i = n(477900),
     l = n(582128),
-    a = n(17928),
-    s = n(194981),
-    r = n(939249),
-    o = n(821609),
-    c = n(280336),
-    d = n(331322),
-    u = n(97808),
-    h = n(778712),
-    p = n(834730),
-    m = n(748562),
-    f = n(661531),
-    A = n(140735),
-    x = n(747556),
-    g = n(255434),
-    C = n(402216),
-    y = n(607407),
-    j = n(287809),
-    I = n(562153),
-    v = n(809369),
-    E = n(662731),
+    a = n(53466),
+    s = n(17928),
+    r = n(866323),
+    o = n(97808),
+    c = n(778712),
+    d = n(939249),
+    u = n(821609),
+    h = n(408278),
+    p = n(881636),
+    m = n(402216),
+    f = n(652896),
+    A = n(607407),
+    x = n(287809),
+    g = n(927813),
+    C = n(562153),
+    y = n(218394),
+    j = n(360627),
+    I = n(809369),
+    v = n(662731),
     N = n(375708),
-    b = n(948559);
-function _(e) {
-    let { stream: t, fit: n, tooltipSpacing: _, liveCount: T, containerWidthPx: R } = e,
-        S = (0, a.bG)([j.default], () => j.default.getUser(t.ownerId)),
-        L = I.Ay.useName(t.guildId, t.channelId, S),
-        O = R / 225,
-        P = N.intl.string(N.t["7Xq/nV"]),
-        w = l.useCallback(() => (0, v.k)(t), [t]),
-        M = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
-        {
-            tooltipId: D,
-            isVisible: U,
-            targetElementRef: V,
-            trigger: k,
-        } = (0, s.D)({
-            children: (0, i.jsxs)(r.D, {
-                tag: "div",
-                "aria-label": P,
-                className: b.VH,
-                style: M,
-                onClick: w,
-                children: [
-                    (0, i.jsx)(y.A, { stream: t, className: b.oz, noText: !0 }),
-                    (0, i.jsx)("div", {
-                        className: b.d3,
-                        style: { transform: `translate(-50%, -50%) scale(${O})` },
-                        children: (0, i.jsx)(o.$, {
-                            text: P,
-                            variant: "overlay-secondary",
-                            tabIndex: -1,
-                            "aria-hidden": !0,
-                        }),
-                    }),
-                    (0, i.jsx)(C.Ay, {
-                        size: C.Ay.Sizes.SMALL,
-                        className: b.Ok,
-                        style: { transform: `scale(${O})` },
-                        count: T,
-                    }),
-                ],
-            }),
-        }),
-        G = (0, c.j)({ shouldShow: U }),
-        B = (0, i.jsxs)(d.B, {
-            direction: "horizontal",
-            align: "center",
-            gap: 8,
-            fullWidth: !1,
-            padding: { top: 8, right: 12, bottom: 8, left: 12 },
-            className: b.rv,
-            children: [
-                (0, i.jsx)(u.eu, { src: S?.getAvatarURL(t.guildId, 96), size: h._3.SIZE_48, "aria-hidden": !0 }),
-                (0, i.jsxs)(d.B, {
-                    gap: 0,
-                    fullWidth: !1,
-                    className: b.x8,
+    E = n(948559);
+let b = 10 * g.A.Millis.SECOND,
+    _ = { tension: 220, friction: 30, clamp: !0 },
+    T = { x: "100%" },
+    R = { x: "0%" },
+    S = { x: "-100%" };
+function L(e) {
+    let { streams: t, fit: n, tooltipSpacing: g, containerWidthPx: L } = e,
+        [O, P] = l.useState({ streamKey: null, sequence: 0 }),
+        [w, M] = l.useState(!1),
+        [D, U] = l.useState(!1),
+        V = Math.max(
+            0,
+            t.findIndex((e) => (0, f._z)(e) === O.streamKey),
+        ),
+        k = t[V],
+        G = t[(V + 1) % t.length],
+        B = t.length > 1,
+        F = D ? G : k,
+        z = (0, s.bG)([x.default], () => x.default.getUser(F.ownerId), [F]),
+        H = C.Ay.useName(F.guildId, F.channelId, z),
+        W = (0, y.j)(),
+        $ = L / 225,
+        Y = N.intl.string(N.t["7Xq/nV"]),
+        K = N.intl.string(v.default["t+GPi4"]),
+        q = l.useCallback(() => {
+            let e = (0, f._z)(G);
+            P((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
+        }, [G]);
+    l.useEffect(() => {
+        if (!B || !W || w) return;
+        let e = setTimeout(q, b);
+        return () => clearTimeout(e);
+    }, [B, W, w, q]);
+    let X = l.useCallback(() => (0, I.k)(k), [k]),
+        Z = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
+        Q = (0, r.p)(k, {
+            keys: () => `${O.sequence}:${(0, f._z)(k)}`,
+            initial: R,
+            from: T,
+            enter: R,
+            leave: S,
+            config: _,
+        });
+    function J() {
+        M(!0);
+    }
+    function ee() {
+        M(!1), U(!1);
+    }
+    return (0, i.jsxs)("div", {
+        className: E.VH,
+        style: Z,
+        onMouseEnter: J,
+        onMouseLeave: ee,
+        onFocus: J,
+        onBlur: ee,
+        children: [
+            (0, i.jsx)(j.A, {
+                title: H,
+                image: (0, i.jsx)(o.eu, { src: z?.getAvatarURL(F.guildId, 96), size: c._3.SIZE_48, "aria-hidden": !0 }),
+                forceOpen: D,
+                spacing: g,
+                children: (0, i.jsxs)(d.D, {
+                    tag: "div",
+                    "aria-label": Y,
+                    className: E.KR,
+                    onClick: X,
                     children: [
-                        (0, i.jsx)(p.E, { variant: "text-sm/medium", lineClamp: 1, children: L }),
-                        (0, i.jsxs)(d.B, {
-                            direction: "horizontal",
-                            align: "center",
-                            gap: 4,
-                            fullWidth: !1,
-                            children: [
-                                (0, i.jsx)(m.U, { size: "xs", color: f.A.colors.TEXT_FEEDBACK_POSITIVE }),
-                                (0, i.jsx)(p.E, {
-                                    variant: "text-sm/normal",
-                                    color: "text-feedback-positive",
-                                    children: N.intl.string(E.default["2Ll0vk"]),
+                        (0, i.jsx)("div", {
+                            className: E.vd,
+                            children: Q((e, t) =>
+                                (0, i.jsx)(a.animated.div, {
+                                    className: E.G8,
+                                    style: e,
+                                    children: (0, i.jsx)(A.A, { stream: t, className: E.oz, noText: !0 }),
                                 }),
-                            ],
+                            ),
+                        }),
+                        (0, i.jsx)(m.Ay, {
+                            size: m.Ay.Sizes.SMALL,
+                            className: E.Ok,
+                            style: { transform: `scale(${$})` },
+                            count: t.length,
                         }),
                     ],
                 }),
-            ],
-        });
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            k,
-            (0, i.jsx)(A.A, { id: D, children: B }),
-            G((e, t) =>
-                t
-                    ? (0, i.jsx)(x.Bc, {
-                          isRichTooltip: !0,
-                          children: (0, i.jsx)(g.R, {
-                              isVisible: U,
-                              targetElementRef: V,
-                              id: D,
-                              content: B,
-                              position: "top",
-                              spacing: _,
-                              animationStyle: e,
-                          }),
-                      })
-                    : null,
-            ),
+            }),
+            (0, i.jsx)("div", {
+                className: E.y,
+                children: (0, i.jsxs)("div", {
+                    className: E.ne,
+                    style: { transform: `scale(${$})` },
+                    children: [
+                        (0, i.jsx)("div", {
+                            className: E.kx,
+                            children: (0, i.jsx)(u.$, {
+                                text: Y,
+                                variant: "overlay-secondary",
+                                size: "sm",
+                                tabIndex: -1,
+                                "aria-hidden": !0,
+                            }),
+                        }),
+                        B
+                            ? (0, i.jsx)("div", {
+                                  className: E.ch,
+                                  children: (0, i.jsx)("div", {
+                                      className: E.iI,
+                                      onMouseEnter: () => U(!0),
+                                      onMouseLeave: () => U(!1),
+                                      onFocus: () => U(!0),
+                                      onBlur: () => U(!1),
+                                      children: (0, i.jsx)(h.K, {
+                                          icon: p.u,
+                                          variant: "overlay-secondary",
+                                          size: "sm",
+                                          "aria-label": K,
+                                          onClick: q,
+                                      }),
+                                  }),
+                              })
+                            : null,
+                    ],
+                }),
+            }),
         ],
     });
 }
