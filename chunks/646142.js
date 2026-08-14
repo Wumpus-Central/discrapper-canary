@@ -1589,47 +1589,76 @@ function tk(e) {
     let { user: l, mode: n } = e,
         r = i.useRef(null),
         a = i.useRef(null),
-        { goToPremiumTryItOut: s } = (0, lD.pA)(),
-        o = (function () {
-            let { analyticsLocations: e } = (0, I.Ay)();
+        s = i.useRef(null),
+        o = i.useRef(!1),
+        { initialTarget: d, navigate: u } = (0, lD.pA)(),
+        c = (function (e) {
+            let { analyticsLocations: l } = (0, I.Ay)();
             return i.useCallback(() => {
-                (0, nd.L)({ analyticsLocations: e, isPremiumTryItOut: !0, stackingBehavior: "stack" });
-            }, [e]);
-        })(),
-        d = (0, ns._)({ isPremiumTryItOut: !0, returnRef: r }),
-        u = (0, ns.P)({ isPremiumTryItOut: !0, returnRef: a }),
-        c = "edit" === n;
-    return (0, t.jsxs)("div", {
-        className: tP.T,
-        children: [
-            (0, t.jsx)(nI, {
-                heading: eH.intl.string(eH.t.NEzEws),
-                children: (0, t.jsx)(tI, { user: l, onClick: c ? o : s, "aria-haspopup": c ? "dialog" : void 0 }),
-            }),
-            (0, t.jsx)(nI, {
-                heading: eH.intl.string(eH.t.DMeO2X),
-                children: c ? (0, t.jsx)(tE, { user: l }) : (0, t.jsx)(tC, { user: l, onClick: s }),
-            }),
-            (0, t.jsx)(nI, {
-                heading: eH.intl.string(eH.t.Vgdusv),
-                children: (0, t.jsx)(tj, {
-                    userId: l.id,
-                    buttonRef: a,
-                    onClick: c ? u : s,
-                    "aria-haspopup": c ? "dialog" : void 0,
+                (0, nd.L)({ analyticsLocations: l, isPremiumTryItOut: !0, stackingBehavior: "stack", returnRef: e });
+            }, [l, e]);
+        })(r),
+        g = (0, ns._)({ isPremiumTryItOut: !0, returnRef: a }),
+        m = (0, ns.P)({ isPremiumTryItOut: !0, returnRef: s }),
+        f = "edit" === n;
+    return (
+        i.useEffect(() => {
+            if (f && !o.current) {
+                switch (d) {
+                    case "display-name-styles":
+                        c();
+                        break;
+                    case "banner":
+                        m();
+                        break;
+                    case "avatar":
+                        g();
+                        break;
+                    default:
+                        return;
+                }
+                o.current = !0;
+            }
+        }, [d, f, c, g, m]),
+        (0, t.jsxs)("div", {
+            className: tP.T,
+            children: [
+                (0, t.jsx)(nI, {
+                    heading: eH.intl.string(eH.t.NEzEws),
+                    children: (0, t.jsx)(tI, {
+                        user: l,
+                        buttonRef: r,
+                        onClick: f ? c : () => u({ id: "premiumTryItOut", initialTarget: "display-name-styles" }),
+                        "aria-haspopup": "dialog",
+                    }),
                 }),
-            }),
-            (0, t.jsx)(nI, {
-                heading: eH.intl.string(eH.t.Dt3ZUr),
-                children: (0, t.jsx)(tb, {
-                    user: l,
-                    buttonRef: r,
-                    onClick: c ? d : s,
-                    "aria-haspopup": c ? "dialog" : void 0,
+                (0, t.jsx)(nI, {
+                    heading: eH.intl.string(eH.t.DMeO2X),
+                    children: f
+                        ? (0, t.jsx)(tE, { user: l })
+                        : (0, t.jsx)(tC, { user: l, onClick: () => u({ id: "premiumTryItOut" }) }),
                 }),
-            }),
-        ],
-    });
+                (0, t.jsx)(nI, {
+                    heading: eH.intl.string(eH.t.Vgdusv),
+                    children: (0, t.jsx)(tj, {
+                        userId: l.id,
+                        buttonRef: s,
+                        onClick: f ? m : () => u({ id: "premiumTryItOut", initialTarget: "banner" }),
+                        "aria-haspopup": "dialog",
+                    }),
+                }),
+                (0, t.jsx)(nI, {
+                    heading: eH.intl.string(eH.t.Dt3ZUr),
+                    children: (0, t.jsx)(tb, {
+                        user: l,
+                        buttonRef: a,
+                        onClick: f ? g : () => u({ id: "premiumTryItOut", initialTarget: "avatar" }),
+                        "aria-haspopup": "dialog",
+                    }),
+                }),
+            ],
+        })
+    );
 }
 var tT = n(847374),
     tS = n(111159),
@@ -2216,7 +2245,7 @@ let iu = "premium-try-it-out-description";
 function ic(e) {
     let { user: l } = e,
         n = ts(),
-        { goToPremiumTryItOut: i } = (0, lD.pA)();
+        { navigate: i } = (0, lD.pA)();
     return (
         tQ(),
         (0, t.jsxs)("div", {
@@ -2239,7 +2268,7 @@ function ic(e) {
                             size: "sm",
                             icon: lz.b,
                             text: eH.intl.string(eH.t.PxUx8e),
-                            onClick: i,
+                            onClick: () => i({ id: "premiumTryItOut" }),
                             fullWidth: !0,
                         }),
                     ],
@@ -2563,7 +2592,7 @@ function iS(e) {
         { selectedPanel: x, readyPanel: h, handlePanelTransitionComplete: v, goBack: A } = (0, lD.pA)(),
         b = i.useRef(null);
     return (i.useEffect(() => {
-        if (null == h || "premiumTryItOut" !== h) return;
+        if (null == h || "premiumTryItOut" !== h.id || null != h.initialTarget) return;
         let e = requestAnimationFrame(() => b.current?.focus());
         return () => cancelAnimationFrame(e);
     }, [h]),
@@ -2581,8 +2610,8 @@ function iS(e) {
                           children: (0, t.jsx)(f.H, { id: iP, children: eH.intl.string(eH.t["L+ch00"]) }),
                       }),
                       (0, t.jsxs)(ix, {
-                          activeSlide: x,
-                          direction: "premiumTryItOut" === x ? "forwards" : "backwards",
+                          activeSlide: x.id,
+                          direction: "premiumTryItOut" === x.id ? "forwards" : "backwards",
                           onTransitionComplete: v,
                           children: [
                               (0, t.jsx)(ip, {
