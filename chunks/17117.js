@@ -1,5 +1,12 @@
 a.exports = {
     DA: "composer_ffba0c",
+    pV: "composerDragOver_ffba0c",
+    VA: "composerRow_ffba0c",
+    lN: "composerAttachments_ffba0c",
+    Rk: "attachmentSpinner_ffba0c",
+    o1: "attachmentRemoveButton_ffba0c",
+    nY: "composerFileInput_ffba0c",
+    Y0: "composerAttachButton_ffba0c",
     jp: "composerInput_ffba0c",
     fF: "composerSend_ffba0c",
     MT: "composerSendSeparator_ffba0c",

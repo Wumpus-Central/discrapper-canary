@@ -31,20 +31,27 @@ let N = new Map(),
     y = null,
     v = [],
     b = 0;
-function M(e, t, n, i, r) {
-    let a = i ?? `m${++b}`;
+function M(e, t) {
+    let {
+            ts: n,
+            id: i,
+            userId: r,
+            attachments: a,
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        s = i ?? `m${++b}`;
     return {
-        id: a,
-        render_id: a,
+        id: s,
+        render_id: s,
         role: e,
         content: t,
         ...(null != r ? { user_id: r } : {}),
         steps: [],
         created_at: null != n ? Date.parse(n) : Date.now(),
+        attachments: a,
     };
 }
 function P(e) {
-    let t = M(e.role, e.content, e.ts, e.id, e.user_id);
+    let t = M(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments });
     return null != e.kind && (t.kind = e.kind), null != e.proposal && (t.proposal = e.proposal), t;
 }
 function U(e, t) {
@@ -185,16 +192,16 @@ let F = new k(r.h, {
         N.set(t, n.map(P)), G(t);
     },
     VIBEGRATIONS_CHAT_MESSAGE_APPEND: function (e) {
-        let { projectId: t, content: n, id: i, optimisticId: r, userId: a, timestamp: s } = e,
-            l = N.get(t) ?? [];
-        if (l.some((e) => e.id === i)) return !1;
-        let o = null == r ? -1 : l.findIndex((e) => e.id === r),
-            d = o < 0 ? void 0 : l[o].render_id,
-            c = o < 0 ? l : [...l.slice(0, o), ...l.slice(o + 1)],
-            u = M("user", n, s, i, a);
-        null != d && (u.render_id = d);
-        let _ = c[c.length - 1];
-        _?.role !== "assistant" || S(_) ? N.set(t, [...c, u, M("assistant", "")]) : N.set(t, [...c.slice(0, -1), u, _]),
+        let { projectId: t, content: n, id: i, optimisticId: r, userId: a, timestamp: s, attachments: l } = e,
+            o = N.get(t) ?? [];
+        if (o.some((e) => e.id === i)) return !1;
+        let d = null == r ? -1 : o.findIndex((e) => e.id === r),
+            c = d < 0 ? void 0 : o[d].render_id,
+            u = d < 0 ? o : [...o.slice(0, d), ...o.slice(d + 1)],
+            _ = M("user", n, { ts: s, id: i, userId: a, attachments: l });
+        null != c && (_.render_id = c);
+        let E = u[u.length - 1];
+        E?.role !== "assistant" || S(E) ? N.set(t, [...u, _, M("assistant", "")]) : N.set(t, [...u.slice(0, -1), _, E]),
             G(t);
     },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
