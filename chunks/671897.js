@@ -192,13 +192,16 @@ function ee(e) {
         })),
         eN = r.useRef(null),
         [eC, eR] = r.useState(1),
-        eO = r.useCallback(
+        [eO, eL] = r.useState(G),
+        [eD, ey] = r.useState(x);
+    (G !== eO || x !== eD) && (eL(G), ey(x), eI(x ? 0 : G));
+    let ev = r.useCallback(
             (e) => {
                 eR(e), null != eA.current && (eA.current.playbackRate = e);
             },
             [eA],
         ),
-        eL = r.useCallback(() => {
+        eb = r.useCallback(() => {
             if (null == b) return;
             let e = M?.split("/");
             y.default.track(Z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
@@ -207,26 +210,26 @@ function ee(e) {
             }),
                 window.open(b, "_blank");
         }, [b, M]),
-        eD = r.useCallback(
+        eM = r.useCallback(
             (e) => {
                 null != eA.current && (e !== eA.current.volume && (eA.current.volume = e), e !== eh && eI(e));
             },
             [eA, eh],
         ),
-        ey = r.useCallback(() => {
+        eP = r.useCallback(() => {
             if (null != eA.current)
                 if (0 === eh) {
                     let e = 0 === G ? 0.3 : G;
-                    eD(e), ed(!1), eo(e);
-                } else eo(eh), eD(0), ed(!0);
-        }, [eA, eh, eD, G, ed, eo]);
-    function ev() {
+                    eM(e), ed(!1), eo(e);
+                } else eo(eh), eM(0), ed(!0);
+        }, [eA, eh, eM, G, ed, eo]);
+    function eU() {
         ep(!0), ec(!0);
     }
-    function eb() {
+    function ew() {
         ep(!1), ec(!1);
     }
-    let eM = r.useCallback(
+    let eG = r.useCallback(
         (e) => {
             if (!(e.metaKey || ((0, o.vq)(e.target) && (0, o.Cw)(e.target))))
                 switch (e.key) {
@@ -251,22 +254,22 @@ function ee(e) {
                         e.stopPropagation(), R || ee();
                         break;
                     case u.TJ.MUTE:
-                        e.stopPropagation(), ey();
+                        e.stopPropagation(), eP();
                 }
         },
-        [J, ee, X, en, er, ey, S, R, e_],
+        [J, ee, X, en, er, eP, S, R, e_],
     );
     r.useEffect(() => {
         U && null != eN.current && eN.current.focus();
     }, [U]),
         r.useEffect(
             () => (
-                null != w && (w.current = eM),
+                null != w && (w.current = eG),
                 () => {
                     null != w && (w.current = null);
                 }
             ),
-            [eM, w],
+            [eG, w],
         ),
         r.useEffect(
             () => (
@@ -277,20 +280,20 @@ function ee(e) {
             ),
             [ea, eT, ef, eS, eu, eg],
         );
-    let eP = 0 === eh ? A._ : eh < 0.5 ? h.S : I.H,
-        eU = k.intl.string(0 === eh ? k.t.YqAjXy : k.t.w4m945),
-        { icon: ew, label: eG } = B[t];
+    let ex = 0 === eh ? A._ : eh < 0.5 ? h.S : I.H,
+        ek = k.intl.string(0 === eh ? k.t.YqAjXy : k.t.w4m945),
+        { icon: eF, label: eV } = B[t];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
                 className: F.X3,
                 children: [
                     (0, i.jsx)(Y, {
-                        iconComponent: ew,
+                        iconComponent: eF,
                         animationTime: n,
                         visible: a,
-                        ariaLabel: eG,
-                        tooltipLabel: eG,
+                        ariaLabel: eV,
+                        tooltipLabel: eV,
                         shortcut: u.TJ.PLAYBACK,
                         onClick: X,
                         ref: eN,
@@ -335,20 +338,20 @@ function ee(e) {
                 },
                 children: [
                     (0, i.jsxs)("div", {
-                        onMouseEnter: ev,
-                        onMouseLeave: eb,
-                        onFocus: ev,
-                        onBlur: eb,
+                        onMouseEnter: eU,
+                        onMouseLeave: ew,
+                        onFocus: eU,
+                        onBlur: ew,
                         className: F.RD,
                         "data-testid": "discord-web-video-player-volume-control",
                         children: [
                             (0, i.jsx)(Y, {
-                                iconComponent: eP,
+                                iconComponent: ex,
                                 animationTime: n,
                                 visible: a,
-                                onClick: ey,
-                                ariaLabel: eU,
-                                tooltipLabel: eU,
+                                onClick: eP,
+                                ariaLabel: ek,
+                                tooltipLabel: ek,
                                 shortcut: u.TJ.MUTE,
                                 buttonSize: H[L],
                                 "data-testid": "discord-web-video-player-volume-btn",
@@ -370,13 +373,13 @@ function ee(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: function (e) {
-                                        eD(e),
+                                        eM(e),
                                             eo(e),
                                             eT && (em(!1), el(!1)),
                                             x && e > 0 ? ed(!1) : x || 0 !== e || ed(!0);
                                     },
                                     asValueChanges: function (e) {
-                                        eD(e), eT || (em(!0), el(!0));
+                                        eM(e), eT || (em(!0), el(!0));
                                     },
                                     fillStyles: { backgroundColor: c.A.colors.WHITE.css },
                                     orientation: "horizontal",
@@ -452,7 +455,7 @@ function ee(e) {
                             handleTranscriptBtnClick: Q,
                             handleCaptionBtnClick: J,
                             downloadUrl: b,
-                            handleDownloadButtonClick: eL,
+                            handleDownloadButtonClick: eb,
                             extraButtons: P,
                         }),
                         animSpring: n,
@@ -462,7 +465,7 @@ function ee(e) {
                     !O &&
                         (0, i.jsx)(ei, {
                             playbackRate: eC,
-                            onPlaybackRateChange: eO,
+                            onPlaybackRateChange: ev,
                             animSpring: n,
                             visible: a,
                             size: L,
