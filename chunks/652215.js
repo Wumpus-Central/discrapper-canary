@@ -3726,6 +3726,7 @@ var rb =
         (ew.FOREGROUND_SERVICE = "foreground_service"),
         (ew.IOS_METRIC_KIT_PAYLOAD_RECEIVED = "ios_metric_kit_payload_received"),
         (ew.ANDROID_JANK_STATS = "android_jank_stats"),
+        (ew.ANDROID_JANK_SESSION = "android_jank_session"),
         (ew.IOS_JANK_STATS = "ios_jank_stats"),
         (ew.APP_JS_STALLED = "app_js_stalled"),
         (ew.LIBDISCORE_LOADED = "libdiscore_loaded"),
