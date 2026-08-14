@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593516, Version Hash: e29a02222e3781f1ee1cdb380af831c19dc93414`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593545, Version Hash: ef2ae4dd379a9533df02e43b2df98bb575ef766c`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20799,7 +20799,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593516" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593545" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -24118,7 +24118,7 @@ let RW = (0, tV.Fe)({
                 n.e("50614"),
                 n.e("4220"),
                 n.e("15214"),
-                n.e("2613"),
+                n.e("25459"),
                 n.e("78559"),
                 n.e("68201"),
                 n.e("29666"),
@@ -24129,8 +24129,8 @@ let RW = (0, tV.Fe)({
                 n.e("68464"),
                 n.e("3853"),
                 n.e("93756"),
-            ]).then(n.bind(n, 559254)),
-        webpackId: 559254,
+            ]).then(n.bind(n, 683383)),
+        webpackId: 683383,
         name: "GuildSpacePage",
     }),
     RQ = (0, tV.Fe)({
