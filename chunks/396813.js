@@ -45,41 +45,42 @@ var i,
     d = n(314329),
     c = n(274670),
     u = n(144779),
-    _ = n(881615),
-    E = n(824427),
-    A = n(888548),
-    h = n(69114),
-    I = n(633965),
-    f = n(463347),
-    p = n(310829),
-    T = n(383394),
-    m = n(544180),
-    g = n(711014),
-    S = n(174459),
-    N = n(927813),
-    C = n(38405),
-    R = n(499785),
-    O = n(789999),
-    L = n(322683),
-    D = n(652215);
-function y(e) {
+    _ = n(107195),
+    E = n(881615),
+    A = n(824427),
+    h = n(888548),
+    I = n(69114),
+    f = n(633965),
+    p = n(463347),
+    T = n(310829),
+    m = n(383394),
+    g = n(544180),
+    S = n(711014),
+    N = n(174459),
+    C = n(927813),
+    R = n(38405),
+    O = n(499785),
+    L = n(789999),
+    D = n(322683),
+    y = n(652215);
+function v(e) {
     if (Math.random() > 0.1) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        n = (0, L.O)();
-    S.default.track(D.HAw.EARNED_DECISION_ROUNDTRIP, {
-        ...(0, h.A)(),
+        n = (0, D.O)();
+    N.default.track(y.HAw.EARNED_DECISION_ROUNDTRIP, {
+        ...(0, I.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: t,
-        mobile_network_type: m.A.getType(),
+        mobile_network_type: g.A.getType(),
         ...(null != n && { mobile_signal_strength_level: n }),
         caller_source: e.callerSource,
         request_id: e.requestId,
         fetched_at: e.fetchedAt,
-        is_foregrounded: (0, O.R)(),
+        is_foregrounded: (0, L.R)(),
     });
 }
-class v {
+class b {
     pendingRequests = new Map();
     recordEarnedRequestAttempt(e, t) {
         let n = {
@@ -94,31 +95,30 @@ class v {
         this.pendingRequests.set(e, n),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (y(t), this.pendingRequests.delete(e));
+                null != t && (v(t), this.pendingRequests.delete(e));
             }, 3e4);
     }
     recordEarnedRequestApiResponse(e, t) {
         let { wasSuccessful: n, requestId: i = null, fetchedAt: r = null } = t,
             a = this.pendingRequests.get(e);
         null != a &&
-            (y({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }),
+            (v({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, requestId: i, fetchedAt: r }),
             this.pendingRequests.delete(e));
     }
 }
-let b = new v();
-var M = n(260364),
-    P = n(107195),
+let M = new b();
+var P = n(260364),
     U = n(859703);
 function w(e, t, n) {
     if (Math.random() > 0.1) return;
     let i = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        r = (0, L.O)();
-    S.default.track(D.HAw.QUEST_DECISION_ROUNDTRIP, {
-        ...(0, h.A)(),
+        r = (0, D.O)();
+    N.default.track(y.HAw.QUEST_DECISION_ROUNDTRIP, {
+        ...(0, I.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: i,
-        mobile_network_type: m.A.getType(),
+        mobile_network_type: g.A.getType(),
         ...(null != r && { mobile_signal_strength_level: r }),
         caller_source: e.callerSource,
         ad_request_id: e.adRequestId,
@@ -126,7 +126,7 @@ function w(e, t, n) {
         previous_ad_request_id: e.previousAdDecision?.adDecisionData?.decision_id ?? null,
         previous_fetched_at: e.previousAdDecision?.fetchedAt ?? null,
         transition_case: t,
-        is_foregrounded: (0, O.R)(),
+        is_foregrounded: (0, L.R)(),
     });
 }
 class G {
@@ -151,41 +151,31 @@ class G {
             }, 3e4);
     }
     recordQuestRequestApiResponse(e, t) {
-        let { wasSuccessful: n, adRequestId: i = null, currentCreative: r = null, currentFetchedAt: s = null } = t,
+        let { wasSuccessful: n, adRequestId: i = null, currentQuestId: r = null, currentFetchedAt: s = null } = t,
             l = this.pendingRequests.get(e);
         if (null != l) {
-            let t = (function (e, t) {
-                function n(e) {
-                    if (null == e) return "null";
-                    if (null == e.creative) return "no_serve";
-                    switch (e.creative.type) {
-                        case a.p.QUEST:
-                            return "quest";
-                        case a.p.BOUNTY:
-                            return "bounty";
-                        case a.p.QUEST_HOME_HERO:
-                            return "quest_home_hero";
+            let t =
+                    null !== s
+                        ? {
+                              creative: null != r ? { type: a.p.QUEST, questId: r } : null,
+                              fetchedAt: s,
+                              ttlMillis: 0,
+                              adDecisionData: null != i ? { decision_id: i } : void 0,
+                          }
+                        : null,
+                o = (function (e, t) {
+                    function n(e) {
+                        return null == e ? "null" : null == (0, _.Yz)(e.creative) ? "no_serve" : "quest";
                     }
-                }
-                let i = n(e),
-                    r = n(t);
-                return i === r && "null" !== i && "no_serve" !== i
-                    ? (0, P.K2)(e?.creative) === (0, P.K2)(t?.creative)
-                        ? `same_${i}`
-                        : `different_${i}`
-                    : `${i}_to_${r}`;
-            })(
-                l.previousAdDecision,
-                null !== s
-                    ? {
-                          creative: r,
-                          fetchedAt: s,
-                          ttlMillis: 0,
-                          adDecisionData: null != i ? { decision_id: i } : void 0,
-                      }
-                    : null,
-            );
-            w({ ...l, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, t, s),
+                    let i = n(e),
+                        r = n(t);
+                    return "quest" !== i || "quest" !== r
+                        ? `${i}_to_${r}`
+                        : (0, _.Yz)(e?.creative) === (0, _.Yz)(t?.creative)
+                          ? "same_quest"
+                          : "different_quest";
+                })(l.previousAdDecision, t);
+            w({ ...l, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, o, s),
                 this.pendingRequests.delete(e);
         }
     }
@@ -253,7 +243,7 @@ async function X(e) {
     try {
         let n = (
             await s.Bo.post({
-                url: D.Rsh.QUEST_ON_CONSOLE_START(e),
+                url: y.Rsh.QUEST_ON_CONSOLE_START(e),
                 query: t ? { preview: t } : void 0,
                 failImmediatelyWhenRateLimited: !0,
                 rejectWithError: !1,
@@ -284,17 +274,17 @@ async function X(e) {
     return { errorHints: [] };
 }
 async function Q(e) {
-    await s.Bo.post({ url: D.Rsh.QUEST_ON_CONSOLE_STOP(e), rejectWithError: !1 });
+    await s.Bo.post({ url: y.Rsh.QUEST_ON_CONSOLE_STOP(e), rejectWithError: !1 });
 }
 async function J() {
-    await s.Bo.del({ url: D.Rsh.QUESTS_RESET_RECENT_QUEST_COMPLETIONS, rejectWithError: !1 });
+    await s.Bo.del({ url: y.Rsh.QUESTS_RESET_RECENT_QUEST_COMPLETIONS, rejectWithError: !1 });
 }
 async function ee() {
     if (U.A.isFetchingCurrentQuests) return;
     let e = [...U.A.quests.keys()];
     l.h.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
     try {
-        let t = await s.Bo.get({ url: D.Rsh.QUESTS_CURRENT_QUESTS, rejectWithError: !1 }),
+        let t = await s.Bo.get({ url: y.Rsh.QUESTS_CURRENT_QUESTS, rejectWithError: !1 }),
             n = t.body.quests,
             i = n.filter((e) => (0, z.s2)(e)).map((e) => (0, z.rO)(e)),
             r = t.body.quest_enrollment_blocked_until,
@@ -306,7 +296,7 @@ async function ee() {
             _ = o.map((e) => e.id),
             E = c.filter((e) => !_.includes(e)),
             A = e.filter((e) => !_.includes(e));
-        C.A.addBreadcrumb({
+        R.A.addBreadcrumb({
             category: "quests.fetch",
             message: "fetchCurrentQuests completed",
             data: {
@@ -342,8 +332,8 @@ async function et(e) {
         executableFingerprint: d,
     } = e;
     try {
-        let e = await R.A.post({
-            url: D.Rsh.QUESTS_HEARTBEAT(t),
+        let e = await O.A.post({
+            url: y.Rsh.QUESTS_HEARTBEAT(t),
             body: { stream_key: n, application_id: i, terminal: a, executable_path: s, executable_fingerprint: d },
             trackedActionData: {
                 event: r.NetworkActionNames.QUEST_HEARTBEAT,
@@ -397,13 +387,13 @@ async function ei(e, t) {
                   sourceQuestContent: t.sourceQuestContent,
               });
     }
-    if ((e === Z.Fw && (0, p.u)(), U.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
+    if ((e === Z.Fw && (0, T.u)(), U.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
     l.h.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
     try {
         let n = (0, $.L4)(t.questContent),
             i = (0, $.Gp)(t.questContent, e),
             r = await s.Bo.post({
-                url: D.Rsh.QUESTS_ENROLL(e),
+                url: y.Rsh.QUESTS_ENROLL(e),
                 body: {
                     location: t.questContent,
                     ...(0, $.Kc)(e, t.questContent),
@@ -420,7 +410,7 @@ async function ei(e, t) {
         var n;
         return (
             l.h.dispatch({ type: "QUESTS_ENROLL_FAILURE", questId: e }),
-            (n = t) instanceof A.CaptchaCancelError ||
+            (n = t) instanceof h.CaptchaCancelError ||
             (null != n &&
                 "object" == typeof n &&
                 ((400 === n.status && n.body?.captcha_key != null) ||
@@ -438,7 +428,7 @@ async function er(e, t, n) {
             let i = (0, $.L4)(n),
                 r = (0, $.Gp)(n, e),
                 a = await s.Bo.post({
-                    url: D.Rsh.QUESTS_CLAIM_REWARD(e),
+                    url: y.Rsh.QUESTS_CLAIM_REWARD(e),
                     body: {
                         platform: t,
                         location: n,
@@ -464,7 +454,7 @@ async function ea(e) {
     if (!U.A.isFetchingRewardCode(e)) {
         l.h.dispatch({ type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId: e });
         try {
-            let t = await s.Bo.get({ url: D.Rsh.QUESTS_REWARD_CODE(e), rejectWithError: !1 });
+            let t = await s.Bo.get({ url: y.Rsh.QUESTS_REWARD_CODE(e), rejectWithError: !1 });
             l.h.dispatch({ type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: e, rewardCode: (0, z.Rd)(t.body) });
         } catch (t) {
             throw (l.h.dispatch({ type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: new o.A(t), questId: e }), t);
@@ -479,7 +469,7 @@ async function es(e, t) {
         try {
             let n = (0, $.Gp)(t, e),
                 i = await s.Bo.post({
-                    url: D.Rsh.QUESTS_DISMISS_CONTENT(e, t),
+                    url: y.Rsh.QUESTS_DISMISS_CONTENT(e, t),
                     body: { ...(0, $.Kc)(e, t), traffic_metadata_sealed: null != n ? n : null },
                     rejectWithError: !1,
                 });
@@ -495,7 +485,7 @@ function el(e) {
 async function eo(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
-        let n = await s.Bo.post({ url: D.Rsh.QUESTS_PREVIEW_COMPLETE(e), body: { percent: t }, rejectWithError: !1 });
+        let n = await s.Bo.post({ url: y.Rsh.QUESTS_PREVIEW_COMPLETE(e), body: { percent: t }, rejectWithError: !1 });
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: (0, z.tp)(n.body) });
     } catch (t) {
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: new o.A(t), questId: e });
@@ -503,7 +493,7 @@ async function eo(e) {
 }
 async function ed(e) {
     try {
-        let t = await s.Bo.del({ url: D.Rsh.QUESTS_PREVIEW_STATUS(e), body: {}, rejectWithError: !1 });
+        let t = await s.Bo.del({ url: y.Rsh.QUESTS_PREVIEW_STATUS(e), body: {}, rejectWithError: !1 });
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: (0, z.tp)(t.body) });
     } catch (t) {
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: new o.A(t), questId: e });
@@ -512,7 +502,7 @@ async function ed(e) {
 async function ec(e) {
     try {
         l.h.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
-        let t = await s.Bo.del({ url: D.Rsh.QUESTS_PREVIEW_DISMISSIBILITY(e), body: {}, rejectWithError: !1 });
+        let t = await s.Bo.del({ url: y.Rsh.QUESTS_PREVIEW_DISMISSIBILITY(e), body: {}, rejectWithError: !1 });
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: (0, z.tp)(t.body) });
     } catch (t) {
         l.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: new o.A(t), questId: e });
@@ -528,7 +518,7 @@ async function eE() {
     if (!U.A.isFetchingClaimedQuests) {
         l.h.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
         try {
-            let e = (await s.Bo.get({ url: D.Rsh.QUESTS_CLAIMED_QUESTS, rejectWithError: !1 })).body.quests.map((e) =>
+            let e = (await s.Bo.get({ url: y.Rsh.QUESTS_CLAIMED_QUESTS, rejectWithError: !1 })).body.quests.map((e) =>
                 (0, z.S)(e),
             );
             l.h.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS", quests: e });
@@ -549,90 +539,92 @@ async function eI(e, t) {
         l.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e });
     try {
         let i,
-            r = await (0, E.Ht)(),
-            o = await (0, _.sN)(),
+            r = await (0, A.Ht)(),
+            o = await (0, E.sN)(),
             c = Y.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }),
-            u = (0, I.pc)(),
-            A = null != u ? u() : [],
-            p = g.Ay.getGuildsTree(),
-            N = A.filter((e) => {
-                if ((0, f.tZ)(e)) return !1;
-                let t = p.getNode(e);
-                return t?.parentId == null || T.A.isFolderExpanded(t.parentId);
-            }).slice(0, 50),
-            C = c.enabled ? N : void 0,
-            R = new URLSearchParams({ placement: String(e) });
-        r?.uuid != null && R.append("client_heartbeat_session_id", r.uuid),
-            null != o.uuid && R.append("client_ad_session_id", o.uuid),
-            null != C && C.forEach((e) => R.append("visible_guild_ids", e));
-        let O = (
+            u = (0, f.pc)(),
+            h = null != u ? u() : [],
+            T = S.Ay.getGuildsTree(),
+            C = h
+                .filter((e) => {
+                    if ((0, p.tZ)(e)) return !1;
+                    let t = T.getNode(e);
+                    return t?.parentId == null || m.A.isFolderExpanded(t.parentId);
+                })
+                .slice(0, 50),
+            R = c.enabled ? C : void 0,
+            O = new URLSearchParams({ placement: String(e) });
+        r?.uuid != null && O.append("client_heartbeat_session_id", r.uuid),
+            null != o.uuid && O.append("client_ad_session_id", o.uuid),
+            null != R && R.forEach((e) => O.append("visible_guild_ids", e));
+        let L = (
                 await s.Bo.get({
-                    url: `${D.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${R.toString()}`,
+                    url: `${y.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${O.toString()}`,
                     rejectWithError: !1,
-                    context: { connection_type: m.A.getType() },
+                    context: { connection_type: g.A.getType() },
                 })
             ).body,
-            L =
-                O.creative?.creative_type !== a.p.BOUNTY ||
+            D =
+                L.creative?.creative_type !== a.p.BOUNTY ||
                 W.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled
-                    ? O.creative
+                    ? L.creative
                     : null,
-            y = null;
-        if (null != L)
-            switch (L.creative_type) {
+            v = null;
+        if (null != D)
+            switch (D.creative_type) {
                 case a.p.QUEST:
-                    (i = (0, z.Yn)(L.creative_content)), (y = { type: a.p.QUEST, questId: i.id });
+                    (i = (0, z.Yn)(D.creative_content)), (v = { type: a.p.QUEST, questId: i.id });
                     break;
                 case a.p.BOUNTY:
-                    let v = (0, d.t)(L.creative_content);
-                    y = { type: a.p.BOUNTY, bounty: v };
+                    let b = (0, d.t)(D.creative_content);
+                    v = { type: a.p.BOUNTY, bounty: b };
             }
         else {
-            let e = O.quest;
-            null != e && ((i = (0, z.Yn)(e)), (y = { type: a.p.QUEST, questId: i.id }));
+            let e = L.quest;
+            null != e && ((i = (0, z.Yn)(e)), (v = { type: a.p.QUEST, questId: i.id }));
         }
         if (
             (l.h.dispatch({
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
                 quest: i,
-                creative: y,
+                creative: v,
                 adDecisionData: {
-                    ad_id: O.ad_identifiers?.ad_id,
-                    adset_id: O.ad_identifiers?.adset_id,
-                    ad_set_id: O.ad_identifiers?.ad_set_id,
-                    campaign_id: O.ad_identifiers?.campaign_id,
-                    creative_id: O.ad_identifiers?.creative_id,
-                    creative_type: O.ad_identifiers?.creative_type,
-                    decision_id: O.request_id,
-                    is_targeted: null != O.ad_identifiers,
+                    ad_id: L.ad_identifiers?.ad_id,
+                    adset_id: L.ad_identifiers?.adset_id,
+                    ad_set_id: L.ad_identifiers?.ad_set_id,
+                    campaign_id: L.ad_identifiers?.campaign_id,
+                    creative_id: L.ad_identifiers?.creative_id,
+                    creative_type: L.ad_identifiers?.creative_type,
+                    decision_id: L.request_id,
+                    is_targeted: null != L.ad_identifiers,
                 },
-                metadataSealed: O.metadata_sealed,
-                trafficMetadataSealed: O.traffic_metadata_sealed,
-                adContext: O.ad_context,
-                responseTtlSeconds: O.response_ttl_seconds,
+                metadataSealed: L.metadata_sealed,
+                trafficMetadataSealed: L.traffic_metadata_sealed,
+                adContext: L.ad_context,
+                responseTtlSeconds: L.response_ttl_seconds,
                 placement: e,
                 fetchedAt: n,
             }),
             x.recordQuestRequestApiResponse("/quests/decision", {
                 wasSuccessful: !0,
-                adRequestId: String(O.request_id),
-                currentCreative: y,
+                adRequestId: String(L.request_id),
+                currentQuestId: (0, _.Yz)(v),
                 currentFetchedAt: n,
             }),
             null == i)
         )
             return;
-        e === V.p9.DESKTOP_ACCOUNT_PANEL_AREA && M.A.startTracking(i.id),
-            S.default.track(D.HAw.QUEST_DECISION_RECEIVED, {
-                ...(0, h.A)(),
+        e === V.p9.DESKTOP_ACCOUNT_PANEL_AREA && P.A.startTracking(i.id),
+            N.default.track(y.HAw.QUEST_DECISION_RECEIVED, {
+                ...(0, I.A)(),
                 quest_id: i.id,
                 caller_source: t,
-                ad_request_id: String(O.request_id),
+                ad_request_id: String(L.request_id),
             });
     } catch (i) {
         x.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1, currentFetchedAt: n }),
-            S.default.track(D.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
-                ...(0, h.A)(),
+            N.default.track(y.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
+                ...(0, I.A)(),
                 reason: i?.message ?? null,
                 api_error: new o.A(i).getAnyErrorMessage(),
                 caller_source: t,
@@ -657,12 +649,12 @@ async function ep(e, t, n) {
         });
     if (0 === r.length) return;
     let a = Date.now();
-    b.recordEarnedRequestAttempt(t, n),
+    M.recordEarnedRequestAttempt(t, n),
         l.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: t });
     try {
-        let e = await (0, E.Ht)(),
+        let e = await (0, A.Ht)(),
             n = r.join(","),
-            i = await s.Bo.get({ url: D.Rsh.QUEST_EARNED_DECISION(n, t, e?.uuid), rejectWithError: !1 }),
+            i = await s.Bo.get({ url: y.Rsh.QUEST_EARNED_DECISION(n, t, e?.uuid), rejectWithError: !1 }),
             o = i.body.quests,
             d = i.body.response_ttl_seconds,
             c = new Map(
@@ -678,19 +670,19 @@ async function ep(e, t, n) {
             fetchedAt: a,
             responseTtlSeconds: d,
         }),
-            b.recordEarnedRequestApiResponse(t, {
+            M.recordEarnedRequestApiResponse(t, {
                 wasSuccessful: !0,
                 requestId: i.body.request_id ?? null,
                 fetchedAt: a,
             });
     } catch (e) {
-        b.recordEarnedRequestApiResponse(t, { wasSuccessful: !1, fetchedAt: a }),
+        M.recordEarnedRequestApiResponse(t, { wasSuccessful: !1, fetchedAt: a }),
             l.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: new o.A(e), content: t });
     }
 }
 async function eT(e, t) {
-    await R.A.post({
-        url: D.Rsh.QUESTS_VIDEO_PROGRESS(e),
+    await O.A.post({
+        url: y.Rsh.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
         trackedActionData: {
             event: r.NetworkActionNames.QUEST_VIDEO_PROGRESS,
@@ -712,21 +704,21 @@ async function em(e) {
     }
 }
 async function eg(e) {
-    let t = await s.Bo.get({ url: D.Rsh.QUEST(e), rejectWithError: !1 });
+    let t = await s.Bo.get({ url: y.Rsh.QUEST(e), rejectWithError: !1 });
     return (0, z.Yn)(t.body);
 }
 async function eS(e) {
     if (!U.A.isFetchingQuestPreview(e)) {
         l.h.dispatch({ type: "QUESTS_FETCH_PREVIEW_BEGIN", questId: e });
         try {
-            let t = await s.Bo.get({ url: D.Rsh.QUEST_PREVIEW(e), rejectWithError: !1 });
+            let t = await s.Bo.get({ url: y.Rsh.QUEST_PREVIEW(e), rejectWithError: !1 });
             l.h.dispatch({ type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: e, quest: (0, z.rO)(t.body) });
         } catch (t) {
             throw (l.h.dispatch({ type: "QUESTS_FETCH_PREVIEW_FAILURE", error: new o.A(t), questId: e }), t);
         }
     }
 }
-let eN = 5 * N.A.Millis.MINUTE;
+let eN = 5 * C.A.Millis.MINUTE;
 async function eC() {
     let e = V.p9.QUEST_HOME_BANNER_DESKTOP;
     if (U.A.isFetchingQuestToDeliverByPlacement(e)) return;
@@ -735,16 +727,16 @@ async function eC() {
     let n = Date.now();
     l.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: e });
     try {
-        let t = await (0, E.Ht)(),
-            i = await (0, _.sN)(),
+        let t = await (0, A.Ht)(),
+            i = await (0, E.sN)(),
             r = new URLSearchParams({ placement: String(e), num_decisions_requested: "1" });
         t?.uuid != null && r.append("client_heartbeat_session_id", t.uuid),
             null != i.uuid && r.append("client_ad_session_id", i.uuid);
         let o = (
                 await s.Bo.get({
-                    url: `${D.Rsh.QUESTS_GET_DECISIONS}?${r.toString()}`,
+                    url: `${y.Rsh.QUESTS_GET_DECISIONS}?${r.toString()}`,
                     rejectWithError: !1,
-                    context: { connection_type: m.A.getType() },
+                    context: { connection_type: g.A.getType() },
                 })
             ).body,
             d = o.decisions?.[0] ?? null,
@@ -781,7 +773,7 @@ async function eR(e) {
     try {
         let i = new URLSearchParams();
         i.append("ad_creative_ids", e);
-        let r = (await s.Bo.get({ url: `${D.Rsh.QUESTS_CREATIVE_PREVIEW}?${i.toString()}`, rejectWithError: !1 })).body,
+        let r = (await s.Bo.get({ url: `${y.Rsh.QUESTS_CREATIVE_PREVIEW}?${i.toString()}`, rejectWithError: !1 })).body,
             o = r.decisions?.[0] ?? null,
             d = o?.creative ?? null,
             c = null;
