@@ -1,50 +1,57 @@
 "use strict";
-n.d(t, { Ay: () => m, H5: () => u, rL: () => c });
-var i = n(158390),
-    r = n(17928),
-    a = n(228366),
-    s = n(287809),
-    l = n(927813),
-    o = n(682618),
-    d = n(609782);
-function c(e) {
+n.d(t, { Ay: () => p, H5: () => E, rL: () => _ });
+var i = n(635377),
+    r = n.n(i),
+    a = n(158390),
+    s = n(17928),
+    l = n(228366),
+    o = n(287809),
+    d = n(927813),
+    c = n(682618),
+    u = n(609782);
+function _(e) {
     return e?.requirements[0]?.threshold ?? 0;
 }
-function u(e) {
+function E(e) {
     if (null != e) return (null != e.current_tier ? e.tier_obtained_at?.[e.current_tier] : void 0) ?? e.obtained_at;
 }
-let _ = l.A.Millis.HOUR,
-    E = new Map(),
-    A = new Set(),
-    h = new Set(),
-    I = new Map(),
-    f = new Map(),
-    p = new Map();
-class T extends r.Ay.Store {
+let A = d.A.Millis.HOUR,
+    h = new (r())({ max: 50 });
+function I() {
+    return {
+        badges: new Map(),
+        catalogFetched: !1,
+        fetchError: !1,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+    };
+}
+class f extends s.Ay.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(o.default);
     }
     static displayName = "BadgeDirectoryStore";
     getBadges(e) {
-        let t = e ?? s.default.getCurrentUser()?.id;
+        let t = e ?? o.default.getCurrentUser()?.id;
         if (null == t) return [];
-        let n = E.get(t);
-        return null != n ? Array.from(n.values()) : [];
+        let n = h.get(t);
+        return null != n ? Array.from(n.badges.values()) : [];
     }
     hasCatalogFor(e) {
-        return A.has(e);
+        return h.peek(e)?.catalogFetched ?? !1;
     }
     isCatalogStaleFor(e) {
-        let t = I.get(e);
-        return null == t || Date.now() - t >= _;
+        let t = h.peek(e)?.fetchedAt;
+        return null == t || Date.now() - t >= A;
     }
     hasCatalogFetchErrorFor(e) {
-        let t = e ?? s.default.getCurrentUser()?.id;
-        return null != t && h.has(t);
+        let t = e ?? o.default.getCurrentUser()?.id;
+        return null != t && (h.peek(t)?.fetchError ?? !1);
     }
     getBadgeById(e, t) {
-        let n = t ?? s.default.getCurrentUser()?.id;
-        return null != n ? E.get(n)?.get(e) : void 0;
+        let n = t ?? o.default.getCurrentUser()?.id;
+        return null != n ? h.get(n)?.badges.get(e) : void 0;
     }
     getSingleRequirementProgress(e, t) {
         let n = this.getBadgeById(e, t)?.progress;
@@ -55,7 +62,7 @@ class T extends r.Ay.Store {
         if (n?.current_tier != null) return n.tiers.find((e) => e.key === n.current_tier);
     }
     getObtainedAt(e, t) {
-        return u(this.getBadgeById(e, t));
+        return E(this.getBadgeById(e, t));
     }
     getNextTier(e, t) {
         let n = this.getBadgeById(e, t);
@@ -66,48 +73,49 @@ class T extends r.Ay.Store {
         return n?.threshold == null ? 0 : Math.max(0, n.threshold - n.current);
     }
 }
-let m = new T(a.h, {
+let p = new f(l.h, {
     BADGE_DIRECTORY_FETCH_START: function (e) {
-        let { userId: t } = e;
-        (h = new Set(h)).delete(t);
+        let { userId: t } = e,
+            n = h.get(t);
+        null != n && (n.fetchError = !1);
     },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n } = e,
-            i = new Map(E);
-        i.set(t, new Map(n.map((e) => [e.badge_id, e]))),
-            (E = i),
-            (A = new Set(A).add(t)),
-            (h = new Set(h)).delete(t),
-            (I = new Map(I).set(t, Date.now()));
+            i = h.peek(t) ?? I();
+        (i.badges = new Map(n.map((e) => [e.badge_id, e]))),
+            (i.catalogFetched = !0),
+            (i.fetchError = !1),
+            (i.fetchedAt = Date.now()),
+            h.set(t, i);
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
-        let { userId: t } = e;
-        h = new Set(h).add(t);
+        let { userId: t } = e,
+            n = h.peek(t) ?? I();
+        (n.fetchError = !0), h.set(t, n);
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
-            i = new Map(E),
-            r = new Map(i.get(t) ?? new Map());
-        r.set(n.badge_id, n), i.set(t, r), (E = i);
+            i = h.peek(t) ?? I();
+        i.badges.set(n.badge_id, n), h.set(t, i);
     },
     USER_PROFILE_FETCH_SUCCESS: function (e) {
         let { userProfile: t } = e,
-            n = t.user.id;
-        if (A.has(n)) {
-            let e = (t.badges ?? []).filter((e) => null != (0, d.w0)(e.id)).length,
-                r = 0;
-            for (let e of E.get(n)?.values() ?? []) e.owned && r++;
-            if (e !== r) {
-                let e = p.get(n) ?? 0;
+            n = t.user.id,
+            i = h.get(n);
+        if (null != i && i.catalogFetched)
+            if (
+                (t.badges ?? []).filter((e) => null != (0, u.w0)(e.id)).length !==
+                Array.from(i.badges.values()).filter((e) => e.owned).length
+            ) {
+                let e = i.driftFetchGateUntil ?? 0;
                 if (Date.now() >= e) {
-                    let e = f.get(n) ?? new i.A(l.A.Millis.MINUTE, _, !0);
-                    f.set(n, e), p.set(n, Date.now() + e.fail()), (0, o.RS)(n);
+                    let e = i.driftBackoff ?? new a.A(d.A.Millis.MINUTE, A, !0);
+                    (i.driftBackoff = e), (i.driftFetchGateUntil = Date.now() + e.fail()), (0, c.RS)(n);
                 }
-            } else f.get(n)?.succeed(), p.delete(n);
-        }
+            } else i.driftBackoff?.succeed(), (i.driftFetchGateUntil = null);
         return !1;
     },
     LOGOUT: function () {
-        (E = new Map()), (A = new Set()), (h = new Set()), (I = new Map()), f.clear(), p.clear();
+        h.reset();
     },
 });
