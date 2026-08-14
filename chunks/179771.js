@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F: () => r, _: () => s });
+n.d(t, { F: () => r, _: () => a });
 var i,
     r =
         (((i = {}).IDENTIFY = "identify"),
@@ -51,8 +51,9 @@ var i,
         (i.LOBBIES_WRITE = "lobbies.write"),
         (i.APPLICATION_IDENTITIES_WRITE = "application_identities.write"),
         (i.MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE = "managed_platform.application_identities.write"),
+        (i.VIBEGRATIONS_PROJECTS = "vibegrations.projects"),
         i);
-let s = {
+let a = {
     PUBLIC: new Set([
         "applications.builds.read",
         "applications.builds.upload",
@@ -103,6 +104,7 @@ let s = {
         "relationships.write",
         "sdk.social_layer",
         "sdk.social_layer_presence",
+        "vibegrations.projects",
         "voice",
     ]),
     TEAM_USER: new Set([
@@ -245,6 +247,7 @@ let s = {
         "rpc.voice.write",
         "sdk.social_layer",
         "sdk.social_layer_presence",
+        "vibegrations.projects",
         "voice",
         "webhook.incoming",
     ]),
