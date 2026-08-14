@@ -2956,17 +2956,6 @@
     }
   },
   {
-    "name": "2026-04-riot-social-sdk-migration",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
     "name": "2026-04-safety-flows",
     "kind": "user",
     "defaultConfig": {
@@ -3071,17 +3060,6 @@
       },
       "1": {
         "performanceAnalyticsEnabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-04-valorant-social-sdk",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
       }
     }
   },
@@ -3670,28 +3648,6 @@
     }
   },
   {
-    "name": "2026-05-riot-social-sdk-migration-all-regions",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
-    "name": "2026-05-riot-social-sdk-migration-us--canada",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
     "name": "2026-05-screenshare-picker-wgc",
     "kind": "user",
     "defaultConfig": {
@@ -3822,28 +3778,6 @@
     }
   },
   {
-    "name": "2026-05-valorant-social-sdk-all-regions",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
-    "name": "2026-05-valorant-social-sdk-us--canada",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-06-age-verification-incode",
     "defaultConfig": {
@@ -3900,11 +3834,16 @@
   {
     "name": "2026-06-battlenet-social-sdk-migration",
     "kind": "user",
-    "defaultConfig": null,
+    "defaultConfig": {
+      "enabled": false
+    },
     "variations": {
       "0": {
         "enabled": false,
         "variant": 0
+      },
+      "1": {
+        "enabled": true
       }
     }
   },

@@ -1,31 +1,8 @@
 "use strict";
-n.d(t, { Cl: () => d, MQ: () => u, NX: () => c });
-var i = n(945810);
-let r = { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    a = { enabled: !1 },
-    s = (0, i.mj)({ name: "2026-04-riot-social-sdk-migration", kind: "user", defaultConfig: a, variations: r }),
-    l = (0, i.mj)({
-        name: "2026-05-riot-social-sdk-migration-us--canada",
-        kind: "user",
-        defaultConfig: a,
-        variations: r,
-    }),
-    o = (0, i.mj)({
-        name: "2026-05-riot-social-sdk-migration-all-regions",
-        kind: "user",
-        defaultConfig: a,
-        variations: r,
-    });
-function d(e) {
-    let t = s.useConfig(e),
-        n = l.useConfig(e),
-        i = o.useConfig(e);
-    return t.enabled || n.enabled || i.enabled;
-}
-function c(e) {
-    let t = s.getConfig(e),
-        n = l.getConfig(e),
-        i = o.getConfig(e);
-    return t.enabled || n.enabled || i.enabled;
-}
-let u = (0, i.mj)({ name: "2026-06-battlenet-social-sdk-migration", kind: "user", defaultConfig: a, variations: r });
+n.d(t, { M: () => i });
+let i = (0, n(945810).mj)({
+    name: "2026-06-battlenet-social-sdk-migration",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});

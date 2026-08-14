@@ -6,7 +6,7 @@ var i = n(435558),
     s = n(472636),
     l = n(998218),
     o = n(652215),
-    d = n(360308);
+    d = n(534952);
 let c = [
         {
             type: o.fg2.TWITCH,
@@ -62,8 +62,7 @@ let c = [
             enabled: !0,
             migrationData: {
                 replacedBy: d.ApplicationIdentityAppIds.BATTLENET,
-                getMigrationExperimentEnabled: (e) => s.MQ.getConfig({ location: e }).enabled,
-                useMigrationExperimentEnabled: (e) => s.MQ.useConfig({ location: e }).enabled,
+                getMigrationExperimentEnabled: (e) => s.M.getConfig({ location: e }).enabled,
                 helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
                 deprecationDate: new Date("2026-09-22Z-07:00"),
             },
@@ -134,8 +133,7 @@ let c = [
             enabled: !0,
             migrationData: {
                 replacedBy: d.ApplicationIdentityAppIds.RIOT_GAMES,
-                getMigrationExperimentEnabled: (e) => (0, s.NX)({ location: e }),
-                useMigrationExperimentEnabled: (e) => (0, s.Cl)({ location: e }),
+                getMigrationExperimentEnabled: () => !0,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
@@ -356,8 +354,7 @@ let c = [
             enabled: !0,
             migrationData: {
                 replacedBy: d.ApplicationIdentityAppIds.RIOT_GAMES,
-                getMigrationExperimentEnabled: (e) => (0, s.NX)({ location: e }),
-                useMigrationExperimentEnabled: (e) => (0, s.Cl)({ location: e }),
+                getMigrationExperimentEnabled: () => !0,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
