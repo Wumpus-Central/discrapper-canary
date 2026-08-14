@@ -102,20 +102,20 @@ var p = n(602034),
     S = n(289873),
     N = n(955572),
     C = n(775602);
-let O = (0, n(945810).mj)({
+let R = (0, n(945810).mj)({
     name: "2025-11-mana-context-menu",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function R(e) {
-    return O.useConfig({ location: e }).enabled;
+function O(e) {
+    return R.useConfig({ location: e }).enabled;
 }
 var L = n(477782),
     D = n(900283),
     y = n(979383);
 function v() {
-    let e = R("MenuSeparator");
+    let e = O("MenuSeparator");
     return (0, r.jsx)("div", {
         role: "separator",
         className: y.separator,
@@ -161,7 +161,7 @@ function V(e) {
 var B = n(745396),
     H = n(379261);
 function j(e) {
-    return R("MenuLabel") ? (0, r.jsx)(H.r, { children: e.children }) : e.children;
+    return O("MenuLabel") ? (0, r.jsx)(H.r, { children: e.children }) : e.children;
 }
 var W = n(844222),
     Y = n(545442),
@@ -213,7 +213,7 @@ function z(e) {
             return (0, r.jsx)("div", { className: y.guildTagAccessory, children: t.element });
     }
 }
-function q(e) {
+function Z(e) {
     let { indicator: t } = e,
         { type: n, icon: i, color: a = "currentColor", className: s, ...o } = t;
     return (0, r.jsx)("div", {
@@ -221,7 +221,7 @@ function q(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(y.icon, s) }),
     });
 }
-var Z = n(537624);
+var q = n(537624);
 function X(e) {
     let {
             color: t = "default",
@@ -244,14 +244,14 @@ function X(e) {
             onClose: g,
             onFocus: N,
             className: C,
-            focusedClassName: O,
+            focusedClassName: R,
             dontCloseOnActionIfHoldingShiftKey: L,
             dontCloseOnAction: v,
             iconProps: b,
         } = e,
         { onSelect: P, onInteraction: U } = a.useContext(D.x),
         H = a.useRef(null),
-        W = R("MenuItem"),
+        W = O("MenuItem"),
         Y = a.useCallback(
             (e) => {
                 if ((U?.({ type: D.Q.DEFAULT }), null == m)) return !1;
@@ -268,7 +268,7 @@ function X(e) {
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(y.item, y.labelContainer, Z.nM, M[t], C, { [y.disabled]: f, [y.focused]: p, [O ?? ""]: p }),
+            className: l()(y.item, y.labelContainer, q.nM, M[t], C, { [y.disabled]: f, [y.focused]: p, [R ?? ""]: p }),
             onClick: f ? void 0 : Y,
             "aria-disabled": f,
             ...T,
@@ -316,7 +316,7 @@ function X(e) {
                         children: (0, r.jsx)(S.y, { type: S.y.Type.PULSING_ELLIPSIS }),
                     }),
                 W
-                    ? null != c && (0, r.jsx)(q, { indicator: c })
+                    ? null != c && (0, r.jsx)(Z, { indicator: c })
                     : (0, B.O)(s)
                       ? s
                       : null != s &&
@@ -401,7 +401,7 @@ function et(e) {
                 children: (0, r.jsx)(g.Ip, { className: l()(y.scroller, y.scrollerWithScrollbar), children: d() }),
             }),
         }),
-        h = R("MenuSubmenuItem"),
+        h = O("MenuSubmenuItem"),
         [I, f] = a.useState(!1);
     return (0, r.jsx)(T.Ow, {
         open: I || s,
@@ -478,7 +478,7 @@ function er(e) {
             focusedClassName: f,
         } = e,
         { onInteraction: p } = a.useContext(D.x),
-        T = R("MenuCheckboxItem"),
+        T = O("MenuCheckboxItem"),
         m = a.useRef(null);
     a.useEffect(() => {
         E && V(m);
@@ -544,7 +544,7 @@ function es(e) {
             action: h,
         } = e,
         { onInteraction: I } = a.useContext(D.x),
-        f = R("MenuRadioItem"),
+        f = O("MenuRadioItem"),
         p = a.useRef(null);
     a.useEffect(() => {
         E && V(p);
@@ -906,7 +906,7 @@ function eA(e) {
         })(h),
         S = a.useRef([]);
     d()(S.current, I) || (S.current = I);
-    let O = R("Menu"),
+    let R = O("Menu"),
         b = h.find((e) => null != e.key)?.key,
         M = (function (e) {
             let {
@@ -940,10 +940,10 @@ function eA(e) {
                 })),
                 C = a.useCallback(
                     (e) => {
-                        var n, i, a;
+                        var n, i;
                         if (!d.current) return;
                         e.key === c.D$.ESCAPE && null != l && (e.stopPropagation(), e.preventDefault(), l());
-                        let s = (function (e) {
+                        let a = (function (e) {
                             switch (e.key) {
                                 case c.D$.ENTER:
                                 case c.D$.SPACE:
@@ -958,39 +958,47 @@ function eA(e) {
                                     return c.X2.NAVIGATE_OUT;
                             }
                         })(e);
-                        switch (s) {
+                        switch (a) {
                             case c.X2.NAVIGATE_UP:
                             case c.X2.NAVIGATE_DOWN:
                             case c.X2.NAVIGATE_IN:
                             case c.X2.NAVIGATE_OUT:
-                                let o;
+                                let s;
                                 if (
-                                    ("textarea" === (o = (n = e.target).tagName.toLowerCase()) ||
-                                        ("input" === o
+                                    ("textarea" === (s = (n = e.target).tagName.toLowerCase()) ||
+                                        ("input" === s
                                             ? ["text", "search", "email", "url", "tel", "password"].includes(n.type)
                                             : n.isContentEditable)) &&
-                                    (s === c.X2.NAVIGATE_IN || s === c.X2.NAVIGATE_OUT)
+                                    (a === c.X2.NAVIGATE_IN || a === c.X2.NAVIGATE_OUT)
                                 )
                                     return;
-                                e.preventDefault(), e.stopPropagation(), g(!0), A({ type: s });
+                                e.preventDefault(), e.stopPropagation(), g(!0), A({ type: a });
                                 return;
                             case c.X2.SELECT_FOCUSED_ITEM:
                                 if (e.repeat || e.target.tabIndex >= 0) return;
-                                if ((e.preventDefault(), e.stopPropagation(), g(!1), A({ type: s }), null != r))
+                                if ((e.preventDefault(), e.stopPropagation(), g(!1), A({ type: a }), null != r))
                                     return void r(h);
-                                let u =
-                                    ((i = e.target.ownerDocument ?? document),
-                                    (a = null != h ? `${(0, p.M4)(t, h.join("--"))}` : t),
-                                    i.getElementById(a));
-                                u?.click();
+                                let o = e.target.ownerDocument ?? document,
+                                    u = ((i = null != h ? `${(0, p.M4)(t, h.join("--"))}` : t), o.getElementById(i));
+                                u?.dispatchEvent(
+                                    new MouseEvent("click", {
+                                        bubbles: !0,
+                                        cancelable: !0,
+                                        shiftKey: e.shiftKey,
+                                        ctrlKey: e.ctrlKey,
+                                        metaKey: e.metaKey,
+                                        altKey: e.altKey,
+                                        view: o.defaultView ?? window,
+                                    }),
+                                );
                         }
                     },
                     [A, t, h, r, l],
                 ),
-                O = a.useCallback(() => {
+                R = a.useCallback(() => {
                     I || T(!0);
                 }, [I]),
-                R = a.useCallback(
+                O = a.useCallback(
                     (e) => {
                         e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && T(!1);
                     },
@@ -1006,12 +1014,12 @@ function eA(e) {
                         id: t,
                         tabIndex: -1,
                         onKeyDown: C,
-                        onFocus: O,
-                        onBlur: R,
+                        onFocus: R,
+                        onBlur: O,
                         onMouseLeave: L,
                         "aria-activedescendant": h.length > 0 ? (0, p.M4)(t, h.join("--")) : void 0,
                     }),
-                    [t, C, O, R, L, h],
+                    [t, C, R, O, L, h],
                 ),
                 v = a.useCallback(
                     (e) => {
@@ -1076,8 +1084,8 @@ function eA(e) {
         children: (0, r.jsx)("div", {
             className: l()(y.menu, y[n], s),
             style: {
-                "--custom-menu-viewport-padding": O ? "48px" : "16px",
-                "--custom-menu-flexible-min-width": O ? "144px" : "188px",
+                "--custom-menu-viewport-padding": R ? "48px" : "16px",
+                "--custom-menu-flexible-min-width": R ? "144px" : "188px",
             },
             ...M.getContainerProps(),
             ref: P,

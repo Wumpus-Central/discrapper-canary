@@ -16,7 +16,18 @@ class o extends r.Component {
                 null == t ||
                 null == this.ref ||
                 (e.key !== l.dh.SPACE && e.key !== l.dh.ENTER) ||
-                (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()),
+                (null == n && e.preventDefault(),
+                this.ref.dispatchEvent(
+                    new MouseEvent("click", {
+                        bubbles: !0,
+                        cancelable: !0,
+                        shiftKey: e.shiftKey,
+                        ctrlKey: e.ctrlKey,
+                        metaKey: e.metaKey,
+                        altKey: e.altKey,
+                        view: this.ref.ownerDocument?.defaultView ?? window,
+                    }),
+                )),
             null != i && i(e));
     };
     setRef = (e) => {
