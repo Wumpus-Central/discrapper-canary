@@ -21,8 +21,8 @@ var n = s(562708),
     E = s(811611),
     C = s(807098),
     T = s(637706),
-    N = s(412260),
-    I = s(852218),
+    I = s(412260),
+    N = s(852218),
     R = s(375708),
     v = s(900488);
 function y(e) {
@@ -33,9 +33,9 @@ function y(e) {
     (0, g.A)({
         type: n.ImpressionTypes.VIEW,
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: i.C.BILLING_SETTINGS_BANNER, component_id: t.id },
+        properties: { component_type: i.C.BILLING_SETTINGS_BANNER, component_id: t.id, promotion_id: t.promotionId },
     });
-    let L = (0, r.bG)([N.A], () => N.A.getPromotionByTypeAndId(I.pt.MARKETING_MOMENT, t.promotionId)?.endDate),
+    let L = (0, r.bG)([I.A], () => I.A.getPromotionByTypeAndId(N.pt.MARKETING_MOMENT, t.promotionId)?.endDate),
         O = t.properties.properties,
         P = "billingSettingsBanner" === O.oneofKind ? O.billingSettingsBanner : null,
         S = (0, T.a)(P?.body ?? ""),

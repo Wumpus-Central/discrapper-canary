@@ -647,6 +647,7 @@ let eh = {
             className: j.MT,
             children: (0, p.jsx)(eR.x, {
                 componentId: "playground-marketing-page-banner",
+                promotionId: "playground-marketing-page-banner-promotion",
                 promotionBannerMarketingComponentFields: a,
             }),
         });
@@ -1152,6 +1153,7 @@ let ta = {
                     component: function (e) {
                         let t = (0, p.jsx)(eD.A, {
                             componentId: "playground-premium-tab-badge",
+                            promotionId: "playground-premium-tab-badge-promotion",
                             badgeCopy: e.badgeCopy,
                             acknowledgedBadgeCopy: e.acknowledgedBadgeCopy,
                             isDismissed: e.isDismissed,
@@ -1267,7 +1269,11 @@ let ta = {
                         let s = (0, tt.c)(u.C.SHOP_NAGBAR),
                             c =
                                 s?.properties.properties.oneofKind === "shopNagbar"
-                                    ? { shopNagbar: s.properties.properties.shopNagbar, componentId: s.id }
+                                    ? {
+                                          shopNagbar: s.properties.properties.shopNagbar,
+                                          componentId: s.id,
+                                          promotionId: s.promotionId,
+                                      }
                                     : null;
                         return (0, p.jsx)("div", {
                             className: j.MT,
@@ -1276,6 +1282,7 @@ let ta = {
                                 (0, p.jsx)(te.A, {
                                     shopNagbar: c.shopNagbar,
                                     componentId: c.componentId,
+                                    promotionId: c.promotionId,
                                     tab: tn.G2.HOME,
                                     onDismiss: () => {},
                                 }),

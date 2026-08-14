@@ -1448,7 +1448,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593574, Version Hash: 2542d55ccebc1b531c532886e60c4e18f47d0bdd`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 593657, Version Hash: 1b823b255b08e4a8d07725fa8c5610c1c80d67c8`,
 ),
     y.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -19960,6 +19960,7 @@ function Su(e) {
     if (null != eC && "premiumTab" === eC.properties.properties.oneofKind)
         (t = (0, R.jsx)(gA.A, {
             componentId: eC.id,
+            promotionId: eC.promotionId,
             badgeCopy: eC.properties.properties.premiumTab.badgeLabel,
             acknowledgedBadgeCopy: eC.properties.properties.premiumTab.acknowledgedBadgeLabel,
             isDismissed: eq,
@@ -20772,7 +20773,7 @@ let Ne = "isHideDevBanner",
                     className: ta()(S9.Wz, S9.mr),
                     children: [
                         (0, R.jsx)(S8, { className: S9.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593574" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "593657" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -23600,11 +23601,11 @@ let RW = (0, tV.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("76011"),
-                n.e("59564"),
+                n.e("44154"),
                 n.e("4374"),
                 n.e("79888"),
                 n.e("85311"),
-                n.e("48478"),
+                n.e("15391"),
                 n.e("30615"),
             ]).then(n.bind(n, 524917)),
         webpackId: 524917,
@@ -26947,7 +26948,7 @@ let RW = (0, tV.Fe)({
     }),
     On = (0, tV.Fe)({
         createPromise: () =>
-            Promise.all([n.e("59564"), n.e("4374"), n.e("79888"), n.e("48478"), n.e("73092")]).then(n.bind(n, 135109)),
+            Promise.all([n.e("44154"), n.e("4374"), n.e("79888"), n.e("15391"), n.e("73092")]).then(n.bind(n, 135109)),
         webpackId: 135109,
         name: "VibegrationsChannel",
         renderLoader: nQ.l3,

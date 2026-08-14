@@ -15,6 +15,6 @@ function d(e) {
         g = d?.promotionId,
         [_, A] = (0, a.Cc)(null != E && null != g ? r.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, g ?? "", c.m.NOTICE_BAR, !0);
     return null != d && null != E && null != _
-        ? (0, s.jsx)(o.A, { shopNagbar: E, componentId: d.id, tab: t, onDismiss: A })
+        ? (0, s.jsx)(o.A, { shopNagbar: E, componentId: d.id, promotionId: d.promotionId, tab: t, onDismiss: A })
         : (0, s.jsx)(u.A, { tab: t, handleTransition: n });
 }

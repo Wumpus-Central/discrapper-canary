@@ -1,9 +1,9 @@
 i.d(s, { A: () => k, e: () => G }), i(321073);
 var l = i(477900),
     n = i(582128),
-    d = i(503698),
-    r = i.n(d),
-    o = i(877624),
+    o = i(503698),
+    d = i.n(o),
+    r = i(877624),
     t = i(17928),
     u = i(554146),
     _ = i(661531),
@@ -11,12 +11,12 @@ var l = i(477900),
     c = i(404374),
     p = i(826673),
     A = i(367727),
-    M = i(131607),
-    T = i(960851),
-    I = i(552736),
+    I = i(131607),
+    M = i(960851),
+    T = i(552736),
     E = i(724651),
-    O = i(732280),
-    m = i(549996),
+    m = i(732280),
+    O = i(549996),
     B = i(603488),
     g = i(964661),
     b = i(374403),
@@ -28,13 +28,13 @@ var l = i(477900),
 function G() {
     let e,
         s = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        i = (0, O.V)(),
-        d = (0, E.O)(),
-        r = (0, T.cg)(),
-        _ = null != (0, I.A)(),
-        a = r || _,
+        i = (0, m.V)(),
+        o = (0, E.O)(),
+        d = (0, M.cg)(),
+        _ = null != (0, T.A)(),
+        a = d || _,
         c = i?.trialId === h.Dw,
-        j = (0, m.c)(o.C.PREMIUM_TAB),
+        j = (0, O.c)(r.C.PREMIUM_TAB),
         G = j?.properties.properties.oneofKind === "premiumTab" ? j.properties.properties.premiumTab : null,
         k = (0, b.Q)(),
         x = j?.promotionId ?? "",
@@ -44,6 +44,7 @@ function G() {
             N && null != j && null != G
                 ? (0, l.jsx)(g.A, {
                       componentId: j.id,
+                      promotionId: j.promotionId,
                       badgeCopy: G.badgeLabel,
                       acknowledgedBadgeCopy: G.acknowledgedBadgeLabel,
                       isDismissed: S,
@@ -51,7 +52,7 @@ function G() {
                 : null,
         C = [];
     a && C.push(u.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [U, v] = (0, M.kn)(C, void 0, !0);
+    let [U, v] = (0, I.kn)(C, void 0, !0);
     return (
         n.useEffect(() => {
             !0 === s &&
@@ -64,23 +65,23 @@ function G() {
             ? (e = w)
             : a
               ? (e = (0, l.jsx)(B.A, {}))
-              : null != d
-                ? (e = (0, l.jsx)(f.fY, { isTabSelected: s, userDiscount: d, includesAmountOff: !1 }))
+              : null != o
+                ? (e = (0, l.jsx)(f.fY, { isTabSelected: s, userDiscount: o, includesAmountOff: !1 }))
                 : null == i || c || (e = (0, l.jsx)(f.Ag, { isTabSelected: s, trialOffer: i })),
         e
     );
 }
 function k(e) {
     let { decoration: s, label: i, isSelected: n } = e,
-        d = (0, T.cg)(),
-        o =
+        o = (0, M.cg)(),
+        r =
             G(n) ??
             s ??
             (0, l.jsx)(a.t, { size: "sm", color: n ? _.A.unsafe_rawColors.WHITE.css : c.k0.PREMIUM_TIER_2 });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)("div", { className: r()(j.gj, { [j.wH]: n && !d }), children: [i, o] }),
-            (0, l.jsx)("div", { className: r()(j.Tp, { [j._I]: !d && n }) }),
+            (0, l.jsxs)("div", { className: d()(j.gj, { [j.wH]: n && !o }), children: [i, r] }),
+            (0, l.jsx)("div", { className: d()(j.Tp, { [j._I]: !o && n }) }),
         ],
     });
 }

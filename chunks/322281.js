@@ -1310,6 +1310,7 @@ function tY(e) {
         "marketingPageBanner" === N.properties.properties.oneofKind &&
         (T = (0, c.jsx)(ez.x, {
             componentId: N.id,
+            promotionId: N.promotionId,
             promotionBannerMarketingComponentFields: N.properties.properties.marketingPageBanner,
         }));
     let R = T;
@@ -4073,6 +4074,7 @@ let n3 = o.memo(
                                         "marketingPageBanner" === h.properties.properties.oneofKind &&
                                         (0, c.jsx)(ez.x, {
                                             componentId: h.id,
+                                            promotionId: h.promotionId,
                                             promotionBannerMarketingComponentFields:
                                                 h.properties.properties.marketingPageBanner,
                                         }),
