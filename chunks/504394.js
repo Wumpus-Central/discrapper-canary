@@ -1,9 +1,9 @@
-t.d(l, { A: () => Q, M: () => K }), t(938796);
+t.d(l, { A: () => Z, M: () => K }), t(938796);
 var n = t(477900),
     i = t(582128),
     s = t(503698),
-    a = t.n(s),
-    r = t(821418),
+    r = t.n(s),
+    a = t(821418),
     u = t(665260),
     c = t(17928),
     o = t(778712),
@@ -14,8 +14,8 @@ var n = t(477900),
     h = t(573435),
     j = t(769015),
     p = t(714991),
-    _ = t(625903),
-    f = t(95477),
+    f = t(625903),
+    _ = t(95477),
     v = t(539895),
     A = t(844330),
     E = t(885386),
@@ -54,8 +54,8 @@ function P() {
             nickname: l,
             dmsAllowed: t,
             showActivity: s,
-            setNickname: a,
-            setDmsAllowed: r,
+            setNickname: r,
+            setDmsAllowed: a,
             setShowActivity: u,
             guildId: c,
             inviteCode: o,
@@ -65,7 +65,7 @@ function P() {
             S.default.track(T.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, { guild_id: c, invite_code: o });
         }, [c, o]);
     return (0, n.jsxs)(A.A, {
-        icon: (0, n.jsx)(_.Z, { size: "refresh_sm" }),
+        icon: (0, n.jsx)(f.Z, { size: "refresh_sm" }),
         title: C.intl.string(C.t["A5wHQ/"]),
         subtitle: C.intl.string(C.t.UKCSEd),
         onOpen: d,
@@ -76,17 +76,17 @@ function P() {
                     children: [
                         (0, n.jsx)(F, {
                             label: C.intl.string(C.t.me1lRk),
-                            children: (0, n.jsx)(f.k, {
+                            children: (0, n.jsx)(_.k, {
                                 placeholder: C.intl.string(C.t["09Q8yp"]),
                                 maxLength: T.d0r,
                                 value: l,
-                                onChange: a,
+                                onChange: r,
                             }),
                         }),
                         (0, n.jsx)(k, {}),
                     ],
                 }),
-            (0, n.jsx)(I, { label: C.intl.string(C.t["/2ed37"]), checked: t, onChange: r }),
+            (0, n.jsx)(I, { label: C.intl.string(C.t["/2ed37"]), checked: t, onChange: a }),
             (0, n.jsx)(k, {}),
             e && (0, n.jsx)(I, { label: C.intl.string(C.t.bN4m1G), checked: s, onChange: u }),
         ],
@@ -131,7 +131,11 @@ function O(e) {
               })
             : null;
 }
-let Q = function (e) {
+function Q(e) {
+    let { showInviteSettings: l = !1, currentUser: t } = e;
+    return l && null != t ? (0, n.jsx)(P, {}) : (0, n.jsx)(g.xt, { user: t });
+}
+let Z = function (e) {
     let l,
         t,
         i,
@@ -139,8 +143,8 @@ let Q = function (e) {
             invite: s,
             disableUser: h = !1,
             error: j,
-            flatActivityCount: _ = !1,
-            isRegister: f = !1,
+            flatActivityCount: f = !1,
+            isRegister: _ = !1,
             inUnclaimedFlow: v = !1,
             showInvitedByHeader: A = !0,
             className: E,
@@ -157,21 +161,21 @@ let Q = function (e) {
                 (null != s.approximate_member_count && s.approximate_member_count > 100) ||
                 (null != b && b.features.has(T.GuildFeatures.COMMUNITY))
             ) && null != F,
-        K = null,
-        Q = (0, u.Lt)(s.flags ?? 0, r.Q.IS_GUEST_INVITE),
+        P = null,
+        K = (0, u.Lt)(s.flags ?? 0, a.Q.IS_GUEST_INVITE),
         Z = !1;
     if (null != b)
         A &&
-            ((K =
+            ((P =
                 null == F
                     ? C.intl.string(C.t["3rE1P8"])
                     : C.intl.formatToPlainString(C.t["5u47va"], { username: U.Ay.getFormattedName(F) })),
             s.target_type === B.yV.STREAM &&
                 null != s.target_user &&
-                (K = C.intl.formatToPlainString(C.t.x2L32Q, { username: U.Ay.getFormattedName(s.target_user) })),
+                (P = C.intl.formatToPlainString(C.t.x2L32Q, { username: U.Ay.getFormattedName(s.target_user) })),
             s.target_type === B.yV.EMBEDDED_APPLICATION &&
                 null != s.target_application &&
-                (K =
+                (P =
                     null != F
                         ? C.intl.formatToPlainString(C.t.UW1Cav, { username: U.Ay.getFormattedName(F) })
                         : C.intl.string(C.t.ENSuN3))),
@@ -201,10 +205,10 @@ let Q = function (e) {
         if (null == F) throw Error("no inviter in group DM invite");
         let e = U.Ay.getFormattedName(F);
         null != y && "" !== y
-            ? ((K = C.intl.formatToPlainString(C.t["5u47va"], { username: e })),
+            ? ((P = C.intl.formatToPlainString(C.t["5u47va"], { username: e })),
               (t = y),
               null != S.icon && (l = (0, n.jsx)(g.F4, { channel: S, size: o._3.SIZE_32 })))
-            : ((K = C.intl.string(C.t.OsdY8B)), (t = e));
+            : ((P = C.intl.string(C.t.OsdY8B)), (t = e));
     } else if (null != F) {
         let e = U.Ay.getFormattedName(F, !0);
         (t = C.intl.formatToPlainString(C.t["4aF92R"], { username: e })),
@@ -214,7 +218,7 @@ let Q = function (e) {
                     ? null
                     : (0, n.jsx)(g.tK, {
                           className: G.b$,
-                          children: f
+                          children: _
                               ? C.intl.format(C.t["6r4JiR"], { username: e })
                               : C.intl.format(C.t.Quj7HX, { username: e }),
                       }));
@@ -222,7 +226,7 @@ let Q = function (e) {
     return (0, n.jsxs)(d.B, {
         direction: "vertical",
         gap: 8,
-        className: a()(G.kL, E),
+        className: r()(G.kL, E),
         justify: "center",
         align: "center",
         children: [
@@ -236,7 +240,7 @@ let Q = function (e) {
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          null != K ? (0, n.jsx)(g.tK, { children: K }) : null,
+                          null != P ? (0, n.jsx)(g.tK, { children: P }) : null,
                           (0, n.jsxs)(g.hE, {
                               className: G.DD,
                               children: [
@@ -263,11 +267,11 @@ let Q = function (e) {
                                 : (0, n.jsx)(g.R1, {
                                       online: s.approximate_presence_count,
                                       total: s.approximate_member_count,
-                                      flat: _,
+                                      flat: f,
                                   }),
                     }),
                     (0, n.jsx)(z.A, { guild: b, roles: s.roles, className: G.Ei }),
-                    v || Q || null == N ? (0, n.jsx)(g.xt, { user: N }) : (0, n.jsx)(P, {}),
+                    null == b ? null : (0, n.jsx)(Q, { currentUser: N, showInviteSettings: !v && !K }),
                 ],
             }),
         ],
