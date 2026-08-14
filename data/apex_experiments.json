@@ -4950,22 +4950,6 @@
     }
   },
   {
-    "name": "2026-07-collectibles-promotion-endpoint-reference",
-    "kind": "user",
-    "defaultConfig": {
-      "useEndpoint": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "useEndpoint": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-07-create-gdm-title",
     "defaultConfig": {
