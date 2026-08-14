@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__3782a",
+    r3: "dialog__3782a",
     Qs: "content__3782a",
     b: "closeButton__3782a",
     hQ: "contentContainer__3782a",
