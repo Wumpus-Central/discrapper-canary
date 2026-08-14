@@ -1,7 +1,8 @@
-n.d(t, { A: () => i });
-var a = n(661531),
+"use strict";
+n.d(t, { A: () => l });
+var i = n(661531),
     r = n(202541);
-let l = r.Ac.PREMIUM_TENURE_1_MONTH,
+let a = r.Ac.PREMIUM_TENURE_1_MONTH,
     s = {
         [r.Ac.PREMIUM_TENURE_1_MONTH]: {
             start: "EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START",
@@ -36,7 +37,7 @@ let l = r.Ac.PREMIUM_TENURE_1_MONTH,
             end: "EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END",
         },
     };
-function i(e) {
-    let t = s[e ?? l] ?? s[l];
-    return { type: "custom", start: a.A.colors[t.start], end: a.A.colors[t.end] };
+function l(e) {
+    let t = s[e ?? a] ?? s[a];
+    return { type: "custom", start: i.A.colors[t.start], end: i.A.colors[t.end] };
 }

@@ -1,10 +1,11 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(984083),
-    l = n(617710),
-    r = n(366811),
+    r = n(617710),
+    a = n(366811),
     s = n(976860);
 n(652215);
-class a {
+class l {
     unlistenHistory;
     unlistenKeyboardChange;
     rewrites = new Set();
@@ -15,19 +16,19 @@ class a {
     initialize() {
         this.cleanup(), (this.unlistenHistory = (0, s.JK)().listen(this.handleRouteChange));
         let { pathname: e } = (0, s.JK)().location;
-        r.A.getState().resetPath(e),
-            (this.unlistenKeyboardChange = r.A.subscribe(this.handleKeybindRouteChange)),
-            l.A.addChangeListener(this.handleConnectionChange);
+        a.A.getState().resetPath(e),
+            (this.unlistenKeyboardChange = a.A.subscribe(this.handleKeybindRouteChange)),
+            r.A.addChangeListener(this.handleConnectionChange);
     }
     handleConnectionChange = () => {
-        let e = l.A.isConnected(),
+        let e = r.A.isConnected(),
             t = e && !this.connected;
         (this.connected = e),
             t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, s.JK)().location, "REPLACE"));
     };
     handleRouteChange = (e, t) => {
         if ("POP" !== t && this.executeRouteRewrites(e, t)) return;
-        let n = r.A.getState();
+        let n = a.A.getState();
         for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
             try {
                 i(e, t);
@@ -39,15 +40,15 @@ class a {
     executeRouteRewrites(e, t) {
         if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
             for (let n of this.rewrites) {
-                let l = (0, s.JK)().location.pathname,
-                    r = n(e, t);
-                if (null != r)
+                let r = (0, s.JK)().location.pathname,
+                    a = n(e, t);
+                if (null != a)
                     return (
                         (0, i.Z)({
                             message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
-                            data: { replacePath: r.path, previousPath: l },
+                            data: { replacePath: a.path, previousPath: r },
                         }),
-                        (0, s.bG)(r.path, r.state),
+                        (0, s.bG)(a.path, a.state),
                         !0
                     );
             }
@@ -60,7 +61,7 @@ class a {
     };
     flushRoute = () => {
         clearTimeout(this.timer);
-        let e = r.A.getState();
+        let e = a.A.getState();
         null != e.path && (0, s.pX)(e.path);
     };
     cleanup() {
@@ -68,7 +69,7 @@ class a {
             (this.unlistenHistory = void 0),
             this.unlistenKeyboardChange?.(),
             (this.unlistenKeyboardChange = void 0),
-            l.A.removeChangeListener(this.handleConnectionChange);
+            r.A.removeChangeListener(this.handleConnectionChange);
     }
     addRouteChangeListener(e) {
         return (
@@ -94,4 +95,4 @@ class a {
         return (0, s.JK)();
     }
 }
-let o = new a();
+let o = new l();

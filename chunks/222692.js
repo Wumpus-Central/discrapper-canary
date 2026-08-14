@@ -1,14 +1,15 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(477900);
 n(582128);
 var r = n(192308),
-    l = n(625075),
+    a = n(625075),
     s = n(626822),
-    a = n(731854),
+    l = n(731854),
     o = n(375708);
-function c(e) {
-    l.k.getConfig({ location: "handleCameraUnavailable" }).videoEnabled &&
-        (s.Ay.supports(a.O5.VIDEO)
+function d(e) {
+    a.k.getConfig({ location: "handleCameraUnavailable" }).videoEnabled &&
+        (s.Ay.supports(l.O5.VIDEO)
             ? (0, r.openModalLazy)(async () => {
                   let { default: t } = await n.e("11487").then(n.bind(n, 792866));
                   return (n) =>
@@ -22,9 +23,9 @@ function c(e) {
               })
             : (0, r.openModalLazy)(async () => {
                   let { default: t } = await n.e("11487").then(n.bind(n, 792866));
-                  return (l) =>
+                  return (a) =>
                       (0, i.jsx)(t, {
-                          ...l,
+                          ...a,
                           header: o.intl.string(o.t.XLw6FF),
                           body: o.intl.string(o.t.wVjKGi),
                           confirmText: o.intl.string(o.t["BK8LK+"]),

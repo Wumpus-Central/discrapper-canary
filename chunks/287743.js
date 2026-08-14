@@ -1,9 +1,10 @@
-e.d(n, { A: () => r });
-var l = e(573648);
-function r(t) {
-    if (null == t || !t.startsWith("h:")) return null;
-    let [n] = t.slice(2).split(",");
-    if (null == n || 0 === n.length) return null;
-    let e = l.A.get(n);
-    return null != e && e.enabled ? e : null;
+"use strict";
+n.d(t, { A: () => r });
+var i = n(573648);
+function r(e) {
+    if (null == e || !e.startsWith("h:")) return null;
+    let [t] = e.slice(2).split(",");
+    if (null == t || 0 === t.length) return null;
+    let n = i.A.get(t);
+    return null != n && n.enabled ? n : null;
 }
