@@ -26391,6 +26391,7 @@
   "KcdDyT": "End of the main column",
   "O9RvHQ": "Position {positionNumber} of {positionCount} in the side column",
   "fWef0G": "End of the side column",
+  "EN+0gW": "Edit Banner",
   "KcOpCm": "Edit Server Hub",
   "HmFYc5": "Your changes couldn't be saved. Try again.",
   "DwFqrb": "{count, plural,one {# Boost}other {# Boosts}",
@@ -26402,6 +26403,7 @@
   "Lx0P8k": "Free",
   "yul+0g": "Publish",
   "pDzipI": "Server Hub published. Everyone in the server can see it now.",
+  "CunK+J": "Remove banner",
   "hmNYxk": "Remove {widgetName}",
   "NV85DR": "Reorder {widgetName}"
 }

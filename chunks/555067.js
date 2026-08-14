@@ -1,20 +1,20 @@
 n.r(t),
     n.d(t, {
-        transformAppliedForumTagChange: () => er,
-        transformAvailableForumTagChange: () => ea,
-        getStringForPermission: () => ee,
-        getSimpleAuditLogTitleContextFromChange: () => J,
-        getChangeTitle: () => q,
-        getStringForRemovedChannelFlag: () => $,
-        checkChangesToRender: () => H,
-        getSimpleAuditLogTitleFromChange: () => K,
-        ACTION_FILTER_ITEMS: () => w,
-        shouldNotRenderChangeDetail: () => V,
-        getStringForAddedChannelFlag: () => Z,
-        getSimpleAuditLogChangeDetails: () => Q,
-        getChangeStrings: () => y,
-        findChangeByKey: () => W,
-        transformLogs: () => et,
+        transformAppliedForumTagChange: () => ea,
+        transformAvailableForumTagChange: () => ei,
+        getStringForPermission: () => et,
+        getSimpleAuditLogTitleContextFromChange: () => Q,
+        getChangeTitle: () => Z,
+        getStringForRemovedChannelFlag: () => ee,
+        checkChangesToRender: () => w,
+        getSimpleAuditLogTitleFromChange: () => z,
+        ACTION_FILTER_ITEMS: () => W,
+        shouldNotRenderChangeDetail: () => H,
+        getStringForAddedChannelFlag: () => $,
+        getSimpleAuditLogChangeDetails: () => q,
+        getChangeStrings: () => B,
+        findChangeByKey: () => Y,
+        transformLogs: () => en,
     }),
     n(321073);
 var l,
@@ -50,432 +50,433 @@ var l,
     M = n(58703),
     x = n(735547),
     U = n(935208),
-    f = n(523599),
-    p = n(652215),
-    k = n(746080),
-    F = n(243277),
-    P = n(988794),
-    j = n(375708);
-let v = new T.A("AuditLogUtils"),
-    X = [d.pJ.DAYS, d.pJ.HOURS, d.pJ.MINUTES, d.pJ.SECONDS];
-function b() {
-    return { [p.gGk.REASON]: () => j.t["2IW3C5"] };
+    f = n(427262),
+    p = n(523599),
+    k = n(652215),
+    F = n(746080),
+    P = n(243277),
+    j = n(988794),
+    v = n(375708);
+let X = new T.A("AuditLogUtils"),
+    b = [d.pJ.DAYS, d.pJ.HOURS, d.pJ.MINUTES, d.pJ.SECONDS];
+function y() {
+    return { [k.gGk.REASON]: () => v.t["2IW3C5"] };
 }
-function y(e) {
+function B(e) {
     switch (e.targetType) {
-        case p.GaG.GUILD:
+        case k.GaG.GUILD:
             return {
-                [p.gGk.NAME]: () => j.t.CkDiNH,
-                [p.gGk.DESCRIPTION]: eo(j.t.RP3Ey3, j.t.QAVj1Y),
-                [p.gGk.ICON_HASH]: () => j.t.iLZ8Q9,
-                [p.gGk.SPLASH_HASH]: () => j.t["4VV6dn"],
-                [p.gGk.DISCOVERY_SPLASH_HASH]: () => j.t["2pds6p"],
-                [p.gGk.BANNER_HASH]: eo(j.t.Cxq4zO, j.t["H7eE/9"]),
-                [p.gGk.OWNER_ID]: () => j.t["8ltsLT"],
-                [p.gGk.REGION]: () => j.t.X9r5Kf,
-                [p.gGk.PREFERRED_LOCALE]: () => j.t.UnXuDS,
-                [p.gGk.AFK_CHANNEL_ID]: eo(j.t.ClBuA4, j.t["ms+xtL"]),
-                [p.gGk.AFK_TIMEOUT]: () => j.t.q21fHa,
-                [p.gGk.SYSTEM_CHANNEL_ID]: eo(j.t.H1VXaa, j.t.XhtmxJ),
-                [p.gGk.RULES_CHANNEL_ID]: eo(j.t.OI6MG2, j.t.lik3tI),
-                [p.gGk.PUBLIC_UPDATES_CHANNEL_ID]: eo(j.t.YxBKrY, j.t.Ehsnij),
-                [p.gGk.MFA_LEVEL]: ed({ [p.EkJ.NONE]: j.t.voaCCQ, [p.EkJ.ELEVATED]: j.t.pRNVwz }),
-                [p.gGk.WIDGET_ENABLED]: e_(j.t.ADIty8, j.t.nf58VY),
-                [p.gGk.WIDGET_CHANNEL_ID]: eo(j.t["6SBsDc"], j.t.deQ5wO),
-                [p.gGk.VERIFICATION_LEVEL]: ed({
-                    [p.PvD.NONE]: j.t.W27rsc,
-                    [p.PvD.LOW]: j.t["V8P+Pw"],
-                    [p.PvD.MEDIUM]: j.t.ERQFau,
-                    [p.PvD.HIGH]: j.t["83fN0j"],
-                    [p.PvD.VERY_HIGH]: j.t.PnkQJE,
+                [k.gGk.NAME]: () => v.t.CkDiNH,
+                [k.gGk.DESCRIPTION]: ec(v.t.RP3Ey3, v.t.QAVj1Y),
+                [k.gGk.ICON_HASH]: () => v.t.iLZ8Q9,
+                [k.gGk.SPLASH_HASH]: () => v.t["4VV6dn"],
+                [k.gGk.DISCOVERY_SPLASH_HASH]: () => v.t["2pds6p"],
+                [k.gGk.BANNER_HASH]: ec(v.t.Cxq4zO, v.t["H7eE/9"]),
+                [k.gGk.OWNER_ID]: () => v.t["8ltsLT"],
+                [k.gGk.REGION]: () => v.t.X9r5Kf,
+                [k.gGk.PREFERRED_LOCALE]: () => v.t.UnXuDS,
+                [k.gGk.AFK_CHANNEL_ID]: ec(v.t.ClBuA4, v.t["ms+xtL"]),
+                [k.gGk.AFK_TIMEOUT]: () => v.t.q21fHa,
+                [k.gGk.SYSTEM_CHANNEL_ID]: ec(v.t.H1VXaa, v.t.XhtmxJ),
+                [k.gGk.RULES_CHANNEL_ID]: ec(v.t.OI6MG2, v.t.lik3tI),
+                [k.gGk.PUBLIC_UPDATES_CHANNEL_ID]: ec(v.t.YxBKrY, v.t.Ehsnij),
+                [k.gGk.MFA_LEVEL]: eA({ [k.EkJ.NONE]: v.t.voaCCQ, [k.EkJ.ELEVATED]: v.t.pRNVwz }),
+                [k.gGk.WIDGET_ENABLED]: ed(v.t.ADIty8, v.t.nf58VY),
+                [k.gGk.WIDGET_CHANNEL_ID]: ec(v.t["6SBsDc"], v.t.deQ5wO),
+                [k.gGk.VERIFICATION_LEVEL]: eA({
+                    [k.PvD.NONE]: v.t.W27rsc,
+                    [k.PvD.LOW]: v.t["V8P+Pw"],
+                    [k.PvD.MEDIUM]: v.t.ERQFau,
+                    [k.PvD.HIGH]: v.t["83fN0j"],
+                    [k.PvD.VERY_HIGH]: v.t.PnkQJE,
                 }),
-                [p.gGk.DEFAULT_MESSAGE_NOTIFICATIONS]: ed({
-                    [p.orn.ALL_MESSAGES]: j.t.LDi76A,
-                    [p.orn.ONLY_MENTIONS]: j.t["6K83ba"],
+                [k.gGk.DEFAULT_MESSAGE_NOTIFICATIONS]: eA({
+                    [k.orn.ALL_MESSAGES]: v.t.LDi76A,
+                    [k.orn.ONLY_MENTIONS]: v.t["6K83ba"],
                 }),
-                [p.gGk.VANITY_URL_CODE]: eo(j.t.Zplsov, j.t.u6cArh),
-                [p.gGk.EXPLICIT_CONTENT_FILTER]: ed({
-                    [p.gh6.DISABLED]: j.t.fmOeL3,
-                    [p.gh6.MEMBERS_WITHOUT_ROLES]: j.t["4FghYw"],
-                    [p.gh6.ALL_MEMBERS]: j.t.olyrSm,
+                [k.gGk.VANITY_URL_CODE]: ec(v.t.Zplsov, v.t.u6cArh),
+                [k.gGk.EXPLICIT_CONTENT_FILTER]: eA({
+                    [k.gh6.DISABLED]: v.t.fmOeL3,
+                    [k.gh6.MEMBERS_WITHOUT_ROLES]: v.t["4FghYw"],
+                    [k.gh6.ALL_MEMBERS]: v.t.olyrSm,
                 }),
-                [p.gGk.PREMIUM_PROGRESS_BAR_ENABLED]: e_(j.t.rBT0sn, j.t["gc+te5"]),
-                [p.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => j.t.YbouFH,
-                [p.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: () => j.t.g3DMjB,
-                [p.gGk.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: () => j.t["+fQAel"],
-                [p.gGk.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: () => j.t.E1fc4v,
-                [p.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: () => j.t.XbwtSA,
-                ...b(),
+                [k.gGk.PREMIUM_PROGRESS_BAR_ENABLED]: ed(v.t.rBT0sn, v.t["gc+te5"]),
+                [k.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => v.t.YbouFH,
+                [k.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: () => v.t.g3DMjB,
+                [k.gGk.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: () => v.t["+fQAel"],
+                [k.gGk.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: () => v.t.E1fc4v,
+                [k.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: () => v.t.XbwtSA,
+                ...y(),
             };
-        case p.GaG.CHANNEL:
-        case p.GaG.CHANNEL_OVERWRITE:
+        case k.GaG.CHANNEL:
+        case k.GaG.CHANNEL_OVERWRITE:
             return {
-                [p.gGk.NAME]: eu(j.t.f8Rh0U, j.t.ebD4Qp),
-                [p.gGk.POSITION]: eu(j.t.isS8te, j.t.t5uBis),
-                [p.gGk.TOPIC]: ec(j.t.esQcxn, j.t["m+veAn"], j.t["ws/1FA"]),
-                [p.gGk.BITRATE]: eu(j.t.fw81ak, j.t.MFNlgZ),
-                [p.gGk.RTC_REGION_OVERRIDE]: ec(j.t["6kajxx"], j.t.eGOlmU, j.t["0JMZdz"]),
-                [p.gGk.USER_LIMIT]: eu(j.t.wk5t7p, j.t.XgjCEh),
-                [p.gGk.RATE_LIMIT_PER_USER]: eu(j.t["7lirhF"], j.t.j4CCJR),
-                [p.gGk.PERMISSIONS_RESET]: () => j.t["+vSBFY"],
-                [p.gGk.PERMISSIONS_GRANTED]: () => j.t.EKLJv8,
-                [p.gGk.PERMISSIONS_DENIED]: () => j.t.U3rO5X,
-                [p.gGk.REASON]: () => j.t["2IW3C5"],
-                [p.gGk.NSFW]: e_(j.t.H8Ri2Y, j.t.WW6cJw),
-                [p.gGk.TYPE]: eu(j.t.Vn5zn2, j.t.aq4uWI),
-                [p.gGk.VIDEO_QUALITY_MODE]: eu(j.t.e68fAU, j.t.djbES0),
-                [p.gGk.DEFAULT_AUTO_ARCHIVE_DURATION]: eu(j.t.nYz2mg, j.t.oczvRI),
-                [p.gGk.DEFAULT_THREAD_RATE_LIMIT_PER_USER]: ec(j.t.tOJ8h7, j.t.WaSgzk, j.t["lj+A4u"]),
-                [p.gGk.FLAGS]: () => j.t.ImCQko,
-                [p.gGk.AVAILABLE_TAG_ADD]: () => j.t.H86QQU,
-                [p.gGk.AVAILABLE_TAG_EDIT]: () => j.t.YtUzls,
-                [p.gGk.AVAILABLE_TAG_DELETE]: () => j.t["8QOseg"],
-                [p.gGk.LINKED_LOBBY]: eo(j.t["+/3TkD"], j.t["5kDYS3"]),
+                [k.gGk.NAME]: eo(v.t.f8Rh0U, v.t.ebD4Qp),
+                [k.gGk.POSITION]: eo(v.t.isS8te, v.t.t5uBis),
+                [k.gGk.TOPIC]: e_(v.t.esQcxn, v.t["m+veAn"], v.t["ws/1FA"]),
+                [k.gGk.BITRATE]: eo(v.t.fw81ak, v.t.MFNlgZ),
+                [k.gGk.RTC_REGION_OVERRIDE]: e_(v.t["6kajxx"], v.t.eGOlmU, v.t["0JMZdz"]),
+                [k.gGk.USER_LIMIT]: eo(v.t.wk5t7p, v.t.XgjCEh),
+                [k.gGk.RATE_LIMIT_PER_USER]: eo(v.t["7lirhF"], v.t.j4CCJR),
+                [k.gGk.PERMISSIONS_RESET]: () => v.t["+vSBFY"],
+                [k.gGk.PERMISSIONS_GRANTED]: () => v.t.EKLJv8,
+                [k.gGk.PERMISSIONS_DENIED]: () => v.t.U3rO5X,
+                [k.gGk.REASON]: () => v.t["2IW3C5"],
+                [k.gGk.NSFW]: ed(v.t.H8Ri2Y, v.t.WW6cJw),
+                [k.gGk.TYPE]: eo(v.t.Vn5zn2, v.t.aq4uWI),
+                [k.gGk.VIDEO_QUALITY_MODE]: eo(v.t.e68fAU, v.t.djbES0),
+                [k.gGk.DEFAULT_AUTO_ARCHIVE_DURATION]: eo(v.t.nYz2mg, v.t.oczvRI),
+                [k.gGk.DEFAULT_THREAD_RATE_LIMIT_PER_USER]: e_(v.t.tOJ8h7, v.t.WaSgzk, v.t["lj+A4u"]),
+                [k.gGk.FLAGS]: () => v.t.ImCQko,
+                [k.gGk.AVAILABLE_TAG_ADD]: () => v.t.H86QQU,
+                [k.gGk.AVAILABLE_TAG_EDIT]: () => v.t.YtUzls,
+                [k.gGk.AVAILABLE_TAG_DELETE]: () => v.t["8QOseg"],
+                [k.gGk.LINKED_LOBBY]: ec(v.t["+/3TkD"], v.t["5kDYS3"]),
             };
-        case p.GaG.USER:
+        case k.GaG.USER:
             return {
-                [p.gGk.NICK]: ec(j.t.qXDsHv, j.t["m+qury"], j.t.DvLvjF),
-                [p.gGk.DEAF]: e_(j.t.mArLlW, j.t.ddvVYG),
-                [p.gGk.MUTE]: e_(j.t["bxs/lS"], j.t.FjecQM),
-                [p.gGk.ROLES_REMOVE]: () => j.t["+2SDWV"],
-                [p.gGk.ROLES_ADD]: () => j.t["B3/3IJ"],
-                [p.gGk.PRUNE_DELETE_DAYS]: () => j.t["+Cvc+D"],
-                [p.gGk.COMMUNICATION_DISABLED_UNTIL]: ec(j.t.LXTQr5, j.t.LXTQr5, j.t.ULSdnE),
-                [p.gGk.BYPASSES_VERIFICATION]: e_(j.t.NBPBui, j.t.zATost),
-                [p.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => j.t.YbouFH,
-                ...b(),
+                [k.gGk.NICK]: e_(v.t.qXDsHv, v.t["m+qury"], v.t.DvLvjF),
+                [k.gGk.DEAF]: ed(v.t.mArLlW, v.t.ddvVYG),
+                [k.gGk.MUTE]: ed(v.t["bxs/lS"], v.t.FjecQM),
+                [k.gGk.ROLES_REMOVE]: () => v.t["+2SDWV"],
+                [k.gGk.ROLES_ADD]: () => v.t["B3/3IJ"],
+                [k.gGk.PRUNE_DELETE_DAYS]: () => v.t["+Cvc+D"],
+                [k.gGk.COMMUNICATION_DISABLED_UNTIL]: e_(v.t.LXTQr5, v.t.LXTQr5, v.t.ULSdnE),
+                [k.gGk.BYPASSES_VERIFICATION]: ed(v.t.NBPBui, v.t.zATost),
+                [k.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => v.t.YbouFH,
+                ...y(),
             };
-        case p.GaG.ROLE:
+        case k.GaG.ROLE:
             return {
-                [p.gGk.NAME]: eu(j.t.QBmlaD, j.t["Lfs4r+"]),
-                [p.gGk.DESCRIPTION]: eu(j.t.XeYKWJ, j.t.PSfeIj),
-                [p.gGk.PERMISSIONS_GRANTED]: () => j.t["9i/DvE"],
-                [p.gGk.PERMISSIONS_DENIED]: () => j.t.pa1ZVh,
-                [p.gGk.COLOR]: eA({ "#000000": j.t.TK6E1H }, j.t["2FQFiw"]),
-                [p.gGk.COLORS]: (e) => (null == e.newValue.secondary_color ? j.t.U44ttm : j.t["WnSwL/"]),
-                [p.gGk.HOIST]: e_(j.t.gWfe24, j.t["+tb8kN"]),
-                [p.gGk.MENTIONABLE]: e_(j.t.LL8VFF, j.t.Z7xzmC),
-                [p.gGk.ICON_HASH]: () => j.t["iEE79/"],
-                [p.gGk.UNICODE_EMOJI]: () => j.t.KiLMM0,
-                ...b(),
+                [k.gGk.NAME]: eo(v.t.QBmlaD, v.t["Lfs4r+"]),
+                [k.gGk.DESCRIPTION]: eo(v.t.XeYKWJ, v.t.PSfeIj),
+                [k.gGk.PERMISSIONS_GRANTED]: () => v.t["9i/DvE"],
+                [k.gGk.PERMISSIONS_DENIED]: () => v.t.pa1ZVh,
+                [k.gGk.COLOR]: eg({ "#000000": v.t.TK6E1H }, v.t["2FQFiw"]),
+                [k.gGk.COLORS]: (e) => (null == e.newValue.secondary_color ? v.t.U44ttm : v.t["WnSwL/"]),
+                [k.gGk.HOIST]: ed(v.t.gWfe24, v.t["+tb8kN"]),
+                [k.gGk.MENTIONABLE]: ed(v.t.LL8VFF, v.t.Z7xzmC),
+                [k.gGk.ICON_HASH]: () => v.t["iEE79/"],
+                [k.gGk.UNICODE_EMOJI]: () => v.t.KiLMM0,
+                ...y(),
             };
-        case p.GaG.ONBOARDING_PROMPT:
+        case k.GaG.ONBOARDING_PROMPT:
             return {
-                ...b(),
-                [p.gGk.TITLE]: eu(j.t["sNpuy/"], j.t["3Ukc/g"]),
-                [p.gGk.DESCRIPTION]: eu(j.t.PP1q0x, j.t.z7pYLg),
-                [p.gGk.OPTIONS]: () => j.t["3G5C9+"],
-                [p.gGk.SINGLE_SELECT]: e_(j.t.v4WnR3, j.t["6Qg3uC"]),
-                [p.gGk.REQUIRED]: e_(j.t["0MPAM6"], j.t.pwsXir),
+                ...y(),
+                [k.gGk.TITLE]: eo(v.t["sNpuy/"], v.t["3Ukc/g"]),
+                [k.gGk.DESCRIPTION]: eo(v.t.PP1q0x, v.t.z7pYLg),
+                [k.gGk.OPTIONS]: () => v.t["3G5C9+"],
+                [k.gGk.SINGLE_SELECT]: ed(v.t.v4WnR3, v.t["6Qg3uC"]),
+                [k.gGk.REQUIRED]: ed(v.t["0MPAM6"], v.t.pwsXir),
             };
-        case p.GaG.GUILD_ONBOARDING:
+        case k.GaG.GUILD_ONBOARDING:
             return {
-                ...b(),
-                [p.gGk.DEFAULT_CHANNEL_IDS]: () => j.t["8M+D2s"],
-                [p.gGk.ENABLE_DEFAULT_CHANNELS]: e_(j.t["EYd/ls"], j.t["36OZeQ"]),
-                [p.gGk.ENABLE_ONBOARDING_PROMPTS]: e_(j.t.V3u8PV, j.t["r66lc/"]),
-                [p.gGk.ENABLED]: e_(j.t.SODVIs, j.t.u8HY5U),
+                ...y(),
+                [k.gGk.DEFAULT_CHANNEL_IDS]: () => v.t["8M+D2s"],
+                [k.gGk.ENABLE_DEFAULT_CHANNELS]: ed(v.t["EYd/ls"], v.t["36OZeQ"]),
+                [k.gGk.ENABLE_ONBOARDING_PROMPTS]: ed(v.t.V3u8PV, v.t["r66lc/"]),
+                [k.gGk.ENABLED]: ed(v.t.SODVIs, v.t.u8HY5U),
             };
-        case p.GaG.HOME_SETTINGS:
+        case k.GaG.HOME_SETTINGS:
             return {
-                ...b(),
-                [p.gGk.WELCOME_MESSAGE]: () => j.t.dKQ1xd,
-                [p.gGk.NEW_MEMBER_ACTIONS]: () => j.t.jDUIno,
-                [p.gGk.RESOURCE_CHANNELS]: () => j.t.SIX0mr,
+                ...y(),
+                [k.gGk.WELCOME_MESSAGE]: () => v.t.dKQ1xd,
+                [k.gGk.NEW_MEMBER_ACTIONS]: () => v.t.jDUIno,
+                [k.gGk.RESOURCE_CHANNELS]: () => v.t.SIX0mr,
             };
-        case p.GaG.INVITE:
+        case k.GaG.INVITE:
             return {
-                [p.gGk.CODE]: () => j.t.rrRHgb,
-                [p.gGk.CHANNEL_ID]: () => j.t.Q1vd5q,
-                [p.gGk.MAX_USES]: eA({ 0: j.t.Yx8LNm }, j.t["3ygnwU"]),
-                [p.gGk.MAX_AGE]: eA({ [j.intl.string(j.t.PqEzn8)]: j.t.uWrLvw }, j.t["Q+5kcO"]),
-                [p.gGk.TEMPORARY]: e_(j.t.MWp6H7, j.t.omiqTH),
-                [p.gGk.FLAGS]: ed({ [u.Q.IS_GUEST_INVITE]: j.t.XYZMbL }),
-                [p.gGk.ROLE_IDS]: () => j.t.gb1Owj,
-                ...b(),
+                [k.gGk.CODE]: () => v.t.rrRHgb,
+                [k.gGk.CHANNEL_ID]: () => v.t.Q1vd5q,
+                [k.gGk.MAX_USES]: eg({ 0: v.t.Yx8LNm }, v.t["3ygnwU"]),
+                [k.gGk.MAX_AGE]: eg({ [v.intl.string(v.t.PqEzn8)]: v.t.uWrLvw }, v.t["Q+5kcO"]),
+                [k.gGk.TEMPORARY]: ed(v.t.MWp6H7, v.t.omiqTH),
+                [k.gGk.FLAGS]: eA({ [u.Q.IS_GUEST_INVITE]: v.t.XYZMbL }),
+                [k.gGk.ROLE_IDS]: () => v.t.gb1Owj,
+                ...y(),
             };
-        case p.GaG.WEBHOOK:
+        case k.GaG.WEBHOOK:
             return {
-                [p.gGk.CHANNEL_ID]: eu(j.t.jhPprR, j.t.ar4qYO),
-                [p.gGk.NAME]: eu(j.t.ZVGrzU, j.t.tywdZR),
-                [p.gGk.AVATAR_HASH]: () => j.t.KB52Uj,
-                [p.gGk.REASON]: () => j.t["2IW3C5"],
+                [k.gGk.CHANNEL_ID]: eo(v.t.jhPprR, v.t.ar4qYO),
+                [k.gGk.NAME]: eo(v.t.ZVGrzU, v.t.tywdZR),
+                [k.gGk.AVATAR_HASH]: () => v.t.KB52Uj,
+                [k.gGk.REASON]: () => v.t["2IW3C5"],
             };
-        case p.GaG.EMOJI:
-            return { [p.gGk.NAME]: eu(j.t.ahU1o5, j.t["wxs+vZ"]), ...b() };
-        case p.GaG.STICKER:
+        case k.GaG.EMOJI:
+            return { [k.gGk.NAME]: eo(v.t.ahU1o5, v.t["wxs+vZ"]), ...y() };
+        case k.GaG.STICKER:
             return {
-                [p.gGk.NAME]: eu(j.t.cdl0Yo, j.t.o3W2ly),
-                [p.gGk.TAGS]: eu(j.t["zwL+S2"], j.t["VYfKA+"]),
-                [p.gGk.DESCRIPTION]: eu(j.t.XeYKWJ, j.t.PSfeIj),
-                ...b(),
+                [k.gGk.NAME]: eo(v.t.cdl0Yo, v.t.o3W2ly),
+                [k.gGk.TAGS]: eo(v.t["zwL+S2"], v.t["VYfKA+"]),
+                [k.gGk.DESCRIPTION]: eo(v.t.XeYKWJ, v.t.PSfeIj),
+                ...y(),
             };
-        case p.GaG.INTEGRATION:
+        case k.GaG.INTEGRATION:
             return {
-                [p.gGk.ENABLE_EMOTICONS]: e_(j.t.FI0m5x, j.t.olpKC6),
-                [p.gGk.EXPIRE_BEHAVIOR]: ed({ 0: j.t["1Bb1+u"], 1: j.t.vjlW6m }),
-                [p.gGk.EXPIRE_GRACE_PERIOD]: () => j.t.iovXMa,
-                ...b(),
+                [k.gGk.ENABLE_EMOTICONS]: ed(v.t.FI0m5x, v.t.olpKC6),
+                [k.gGk.EXPIRE_BEHAVIOR]: eA({ 0: v.t["1Bb1+u"], 1: v.t.vjlW6m }),
+                [k.gGk.EXPIRE_GRACE_PERIOD]: () => v.t.iovXMa,
+                ...y(),
             };
-        case p.GaG.STAGE_INSTANCE:
+        case k.GaG.STAGE_INSTANCE:
             return {
-                [p.gGk.TOPIC]: eu(j.t["m+veAn"], j.t.esQcxn),
-                [p.gGk.PRIVACY_LEVEL]: ed({ [P.dD.GUILD_ONLY]: j.t["EC+CDt"], [P.dD.PUBLIC]: j.t["pK/WG0"] }),
-                ...b(),
+                [k.gGk.TOPIC]: eo(v.t["m+veAn"], v.t.esQcxn),
+                [k.gGk.PRIVACY_LEVEL]: eA({ [j.dD.GUILD_ONLY]: v.t["EC+CDt"], [j.dD.PUBLIC]: v.t["pK/WG0"] }),
+                ...y(),
             };
-        case p.GaG.GUILD_SCHEDULED_EVENT:
+        case k.GaG.GUILD_SCHEDULED_EVENT:
             return {
-                [p.gGk.NAME]: () => j.t["21EXHW"],
-                [p.gGk.DESCRIPTION]: () => j.t.Vm1ofw,
-                [p.gGk.PRIVACY_LEVEL]: ed({ [P.dD.GUILD_ONLY]: j.t["EC+CDt"], [P.dD.PUBLIC]: j.t["pK/WG0"] }),
-                [p.gGk.STATUS]: ed({
-                    [P.XG.SCHEDULED]: j.t.hXKDgq,
-                    [P.XG.ACTIVE]: j.t.lRX1nz,
-                    [P.XG.COMPLETED]: j.t["/eFIhq"],
-                    [P.XG.CANCELED]: j.t.NWIYhj,
+                [k.gGk.NAME]: () => v.t["21EXHW"],
+                [k.gGk.DESCRIPTION]: () => v.t.Vm1ofw,
+                [k.gGk.PRIVACY_LEVEL]: eA({ [j.dD.GUILD_ONLY]: v.t["EC+CDt"], [j.dD.PUBLIC]: v.t["pK/WG0"] }),
+                [k.gGk.STATUS]: eA({
+                    [j.XG.SCHEDULED]: v.t.hXKDgq,
+                    [j.XG.ACTIVE]: v.t.lRX1nz,
+                    [j.XG.COMPLETED]: v.t["/eFIhq"],
+                    [j.XG.CANCELED]: v.t.NWIYhj,
                 }),
-                [p.gGk.ENTITY_TYPE]: ed({
-                    [P.Ps.NONE]: j.t["6sO3Ss"],
-                    [P.Ps.STAGE_INSTANCE]: j.t["Wo+s1y"],
-                    [P.Ps.VOICE]: j.t.XCVaIL,
-                    [P.Ps.EXTERNAL]: j.t.IvhAj2,
+                [k.gGk.ENTITY_TYPE]: eA({
+                    [j.Ps.NONE]: v.t["6sO3Ss"],
+                    [j.Ps.STAGE_INSTANCE]: v.t["Wo+s1y"],
+                    [j.Ps.VOICE]: v.t.XCVaIL,
+                    [j.Ps.EXTERNAL]: v.t.IvhAj2,
                 }),
-                [p.gGk.CHANNEL_ID]: eo(j.t.yJBIcX, j.t["+PqSsi"]),
-                [p.gGk.LOCATION]: eo(j.t.GaMBHy, j.t.PsICk0),
-                [p.gGk.IMAGE_HASH]: eo(j.t.S3vcRK, j.t.KQu47I),
-                ...b(),
+                [k.gGk.CHANNEL_ID]: ec(v.t.yJBIcX, v.t["+PqSsi"]),
+                [k.gGk.LOCATION]: ec(v.t.GaMBHy, v.t.PsICk0),
+                [k.gGk.IMAGE_HASH]: ec(v.t.S3vcRK, v.t.KQu47I),
+                ...y(),
             };
-        case p.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
+        case k.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
             return {
-                [p.gGk.SCHEDULED_START_TIME]: eo(j.t.zMIYVg, j.t.fzF8Gd),
-                [p.gGk.SCHEDULED_END_TIME]: eo(j.t.vONSQA, j.t.IlIti3),
-                [p.gGk.IS_CANCELED]: (e) => {
+                [k.gGk.SCHEDULED_START_TIME]: ec(v.t.zMIYVg, v.t.fzF8Gd),
+                [k.gGk.SCHEDULED_END_TIME]: ec(v.t.vONSQA, v.t.IlIti3),
+                [k.gGk.IS_CANCELED]: (e) => {
                     if (null != e.oldValue || !0 === e.newValue) {
-                        if (!e.oldValue && e.newValue) return j.t["7RkicW"];
-                        else if (e.oldValue && !e.newValue) return j.t.dRNTWW;
+                        if (!e.oldValue && e.newValue) return v.t["7RkicW"];
+                        else if (e.oldValue && !e.newValue) return v.t.dRNTWW;
                     }
                 },
-                ...b(),
+                ...y(),
             };
-        case p.GaG.THREAD:
+        case k.GaG.THREAD:
             return {
-                [p.gGk.NAME]: eu(j.t.tUKRzX, j.t.kPCHON),
-                [p.gGk.ARCHIVED]: e_(j.t.jDi9FK, j.t.F6dvbT),
-                [p.gGk.LOCKED]: e_(j.t.JSy1QW, j.t.C7Jgo8),
-                [p.gGk.INVITABLE]: e_(j.t.dxNUs9, j.t.biJvYG),
-                [p.gGk.AUTO_ARCHIVE_DURATION]: eu(j.t.LuaG3y, j.t["18d9qr"]),
-                [p.gGk.RATE_LIMIT_PER_USER]: eu(j.t["7lirhF"], j.t.j4CCJR),
-                [p.gGk.FLAGS]: () => j.t.sSAQtj,
-                [p.gGk.AVAILABLE_TAG_ADD]: () => j.t.H86QQU,
-                [p.gGk.AVAILABLE_TAG_DELETE]: () => j.t["8QOseg"],
-                ...b(),
+                [k.gGk.NAME]: eo(v.t.tUKRzX, v.t.kPCHON),
+                [k.gGk.ARCHIVED]: ed(v.t.jDi9FK, v.t.F6dvbT),
+                [k.gGk.LOCKED]: ed(v.t.JSy1QW, v.t.C7Jgo8),
+                [k.gGk.INVITABLE]: ed(v.t.dxNUs9, v.t.biJvYG),
+                [k.gGk.AUTO_ARCHIVE_DURATION]: eo(v.t.LuaG3y, v.t["18d9qr"]),
+                [k.gGk.RATE_LIMIT_PER_USER]: eo(v.t["7lirhF"], v.t.j4CCJR),
+                [k.gGk.FLAGS]: () => v.t.sSAQtj,
+                [k.gGk.AVAILABLE_TAG_ADD]: () => v.t.H86QQU,
+                [k.gGk.AVAILABLE_TAG_DELETE]: () => v.t["8QOseg"],
+                ...y(),
             };
-        case p.GaG.APPLICATION_COMMAND:
+        case k.GaG.APPLICATION_COMMAND:
             var t;
             let n;
             return (
                 (t = e.changes),
-                (n = { ...b() }),
+                (n = { ...y() }),
                 t?.forEach((e) => {
                     e.newValue
                         ? e.newValue.permission
-                            ? (n[e.key] = () => j.t["JH+89C"])
-                            : (n[e.key] = () => j.t.HUrFDu)
-                        : (n[e.key] = () => j.t.vynxnV);
+                            ? (n[e.key] = () => v.t["JH+89C"])
+                            : (n[e.key] = () => v.t.HUrFDu)
+                        : (n[e.key] = () => v.t.vynxnV);
                 }),
                 n
             );
-        case p.GaG.AUTO_MODERATION_RULE:
+        case k.GaG.AUTO_MODERATION_RULE:
             return {
-                [p.gGk.NAME]: () => j.t.XwxAJT,
-                [p.gGk.AUTO_MODERATION_TRIGGER_TYPE]: () => j.t.fx0pyl,
-                [p.gGk.AUTO_MODERATION_EVENT_TYPE]: () => j.t["46Y+L5"],
-                [p.gGk.AUTO_MODERATION_ACTIONS]: () => j.t["8efxfv"],
-                [p.gGk.AUTO_MODERATION_ENABLED]: (e) => (!0 === (e.newValue ?? e.oldValue) ? j.t.fCmxC2 : j.t.Wrg9Jn),
-                [p.gGk.AUTO_MODERATION_EXEMPT_ROLES]: () => j.t.TRb7Nx,
-                [p.gGk.AUTO_MODERATION_EXEMPT_CHANNELS]: () => j.t.mzitLE,
-                [p.gGk.AUTO_MODERATION_TRIGGER_METADATA]: () => j.t["h/lM65"],
-                [p.gGk.AUTO_MODERATION_ADD_KEYWORDS]: () => j.t["9V2yaC"],
-                [p.gGk.AUTO_MODERATION_REMOVE_KEYWORDS]: () => j.t["4Qe9ny"],
-                [p.gGk.AUTO_MODERATION_ADD_REGEX_PATTERNS]: () => j.t.GyZtxp,
-                [p.gGk.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: () => j.t.OQDadc,
-                [p.gGk.AUTO_MODERATION_ADD_ALLOW_LIST]: () => j.t["FvvR+K"],
-                [p.gGk.AUTO_MODERATION_REMOVE_ALLOW_LIST]: () => j.t.p5nSvy,
-                ...b(),
+                [k.gGk.NAME]: () => v.t.XwxAJT,
+                [k.gGk.AUTO_MODERATION_TRIGGER_TYPE]: () => v.t.fx0pyl,
+                [k.gGk.AUTO_MODERATION_EVENT_TYPE]: () => v.t["46Y+L5"],
+                [k.gGk.AUTO_MODERATION_ACTIONS]: () => v.t["8efxfv"],
+                [k.gGk.AUTO_MODERATION_ENABLED]: (e) => (!0 === (e.newValue ?? e.oldValue) ? v.t.fCmxC2 : v.t.Wrg9Jn),
+                [k.gGk.AUTO_MODERATION_EXEMPT_ROLES]: () => v.t.TRb7Nx,
+                [k.gGk.AUTO_MODERATION_EXEMPT_CHANNELS]: () => v.t.mzitLE,
+                [k.gGk.AUTO_MODERATION_TRIGGER_METADATA]: () => v.t["h/lM65"],
+                [k.gGk.AUTO_MODERATION_ADD_KEYWORDS]: () => v.t["9V2yaC"],
+                [k.gGk.AUTO_MODERATION_REMOVE_KEYWORDS]: () => v.t["4Qe9ny"],
+                [k.gGk.AUTO_MODERATION_ADD_REGEX_PATTERNS]: () => v.t.GyZtxp,
+                [k.gGk.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: () => v.t.OQDadc,
+                [k.gGk.AUTO_MODERATION_ADD_ALLOW_LIST]: () => v.t["FvvR+K"],
+                [k.gGk.AUTO_MODERATION_REMOVE_ALLOW_LIST]: () => v.t.p5nSvy,
+                ...y(),
             };
-        case p.GaG.GUILD_SOUNDBOARD:
+        case k.GaG.GUILD_SOUNDBOARD:
             return {
-                [p.gGk.NAME]: eu(j.t.VOtRSO, j.t.OK7B8E),
-                [p.gGk.VOLUME]: eu(j.t.igrDB9, j.t.L5lDFJ),
-                [p.gGk.EMOJI_NAME]: ec(j.t.IIanaY, j.t["z4w4U/"], j.t.V8TfyU),
-                [p.gGk.EMOJI_ID]: ec(j.t.ainxMB, j.t["2NPsYu"], j.t["8crtns"]),
-                ...b(),
+                [k.gGk.NAME]: eo(v.t.VOtRSO, v.t.OK7B8E),
+                [k.gGk.VOLUME]: eo(v.t.igrDB9, v.t.L5lDFJ),
+                [k.gGk.EMOJI_NAME]: e_(v.t.IIanaY, v.t["z4w4U/"], v.t.V8TfyU),
+                [k.gGk.EMOJI_ID]: e_(v.t.ainxMB, v.t["2NPsYu"], v.t["8crtns"]),
+                ...y(),
             };
-        case p.GaG.VOICE_CHANNEL_STATUS:
-            return { [p.gGk.STATUS]: () => j.t.HyCSnI, ...b() };
-        case p.GaG.GUILD_MEMBER_VERIFICATION:
+        case k.GaG.VOICE_CHANNEL_STATUS:
+            return { [k.gGk.STATUS]: () => v.t.HyCSnI, ...y() };
+        case k.GaG.GUILD_MEMBER_VERIFICATION:
             return {
-                [p.gGk.VERIFICATION_ENABLED]: (e) => (!0 === e.newValue ? j.t.fnkzDY : j.t.WYT6ka),
-                [p.gGk.MANUAL_APPROVAL_ENABLED]: (e) => (!0 === e.newValue ? j.t.jzSvVd : j.t.WxyOtj),
-                ...b(),
+                [k.gGk.VERIFICATION_ENABLED]: (e) => (!0 === e.newValue ? v.t.fnkzDY : v.t.WYT6ka),
+                [k.gGk.MANUAL_APPROVAL_ENABLED]: (e) => (!0 === e.newValue ? v.t.jzSvVd : v.t.WxyOtj),
+                ...y(),
             };
-        case p.GaG.GUILD_PROFILE:
+        case k.GaG.GUILD_PROFILE:
             return {
-                [p.gGk.DESCRIPTION]: () => j.t.nsUZKY,
-                [p.gGk.BRAND_COLOR_PRIMARY]: () => j.t.qe9mgN,
-                [p.gGk.CUSTOM_BANNER_HASH]: () => j.t["04b5KC"],
-                [p.gGk.TRAITS]: () => j.t.dEy9WO,
-                [p.gGk.GAME_APPLICATION_IDS]: () => j.t["8BOT3x"],
-                [p.gGk.VISIBILITY]: () => j.t.bCl1Ep,
-                [p.gGk.SERVER_TAG]: eo(j.t.ix1dnX, j.t["4LKpKb"]),
+                [k.gGk.DESCRIPTION]: () => v.t.nsUZKY,
+                [k.gGk.BRAND_COLOR_PRIMARY]: () => v.t.qe9mgN,
+                [k.gGk.CUSTOM_BANNER_HASH]: () => v.t["04b5KC"],
+                [k.gGk.TRAITS]: () => v.t.dEy9WO,
+                [k.gGk.GAME_APPLICATION_IDS]: () => v.t["8BOT3x"],
+                [k.gGk.VISIBILITY]: () => v.t.bCl1Ep,
+                [k.gGk.SERVER_TAG]: ec(v.t.ix1dnX, v.t["4LKpKb"]),
             };
         default:
-            return b();
+            return y();
     }
 }
-let B = {
-    [p.GaG.CHANNEL]: { [p.gGk.ID]: !0, [p.gGk.PERMISSION_OVERWRITES]: !0 },
-    [p.GaG.CHANNEL_OVERWRITE]: { [p.gGk.TYPE]: !0, [p.gGk.ID]: !0, [p.gGk.PERMISSION_OVERWRITES]: !0 },
-    [p.GaG.INVITE]: { [p.gGk.INVITER_ID]: !0, [p.gGk.USES]: !0 },
-    [p.GaG.WEBHOOK]: { [p.gGk.TYPE]: !0, [p.gGk.APPLICATION_ID]: !0 },
-    [p.GaG.INTEGRATION]: { [p.gGk.TYPE]: !0, [p.gGk.NAME]: !0 },
-    [p.GaG.THREAD]: { [p.gGk.ID]: !0, [p.gGk.TYPE]: !0 },
-    [p.GaG.STICKER]: {
-        [p.gGk.ID]: !0,
-        [p.gGk.TYPE]: !0,
-        [p.gGk.ASSET]: !0,
-        [p.gGk.FORMAT_TYPE]: !0,
-        [p.gGk.AVAILABLE]: !0,
-        [p.gGk.GUILD_ID]: !0,
+let V = {
+    [k.GaG.CHANNEL]: { [k.gGk.ID]: !0, [k.gGk.PERMISSION_OVERWRITES]: !0 },
+    [k.GaG.CHANNEL_OVERWRITE]: { [k.gGk.TYPE]: !0, [k.gGk.ID]: !0, [k.gGk.PERMISSION_OVERWRITES]: !0 },
+    [k.GaG.INVITE]: { [k.gGk.INVITER_ID]: !0, [k.gGk.USES]: !0 },
+    [k.GaG.WEBHOOK]: { [k.gGk.TYPE]: !0, [k.gGk.APPLICATION_ID]: !0 },
+    [k.GaG.INTEGRATION]: { [k.gGk.TYPE]: !0, [k.gGk.NAME]: !0 },
+    [k.GaG.THREAD]: { [k.gGk.ID]: !0, [k.gGk.TYPE]: !0 },
+    [k.GaG.STICKER]: {
+        [k.gGk.ID]: !0,
+        [k.gGk.TYPE]: !0,
+        [k.gGk.ASSET]: !0,
+        [k.gGk.FORMAT_TYPE]: !0,
+        [k.gGk.AVAILABLE]: !0,
+        [k.gGk.GUILD_ID]: !0,
     },
-    [p.GaG.GUILD_HOME]: { [p.gGk.ENTITY_TYPE]: !0 },
-    [p.GaG.GUILD_ONBOARDING]: { [p.gGk.PROMPTS]: !0 },
-    [p.GaG.GUILD_SOUNDBOARD]: { [p.gGk.ID]: !0, [p.gGk.SOUND_ID]: !0 },
+    [k.GaG.GUILD_HOME]: { [k.gGk.ENTITY_TYPE]: !0 },
+    [k.GaG.GUILD_ONBOARDING]: { [k.gGk.PROMPTS]: !0 },
+    [k.GaG.GUILD_SOUNDBOARD]: { [k.gGk.ID]: !0, [k.gGk.SOUND_ID]: !0 },
 };
-function V(e, t) {
+function H(e, t) {
     if (
-        e.actionType === p.RWi.DELETE &&
-        e.action !== p.F_X.MEMBER_BAN_ADD &&
-        e.action !== p.F_X.MEMBER_KICK &&
-        e.action !== p.F_X.MEMBER_PRUNE
+        e.actionType === k.RWi.DELETE &&
+        e.action !== k.F_X.MEMBER_BAN_ADD &&
+        e.action !== k.F_X.MEMBER_KICK &&
+        e.action !== k.F_X.MEMBER_PRUNE
     )
-        return t.key !== p.gGk.REASON;
-    let n = B[e.targetType];
+        return t.key !== k.gGk.REASON;
+    let n = V[e.targetType];
     return null != n && !0 === n[t.key];
 }
-function H(e) {
+function w(e) {
     let { changes: t } = e;
-    return null != t && t.some((t) => !V(e, t));
+    return null != t && t.some((t) => !H(e, t));
 }
-let w = () => [
-    { value: p.F_X.ALL, label: j.intl.string(j.t.QxEVcv), valueLabel: j.intl.string(j.t.an9Ry3) },
-    { value: p.F_X.GUILD_UPDATE, label: j.intl.string(j.t["5INZa3"]) },
-    { value: p.F_X.CHANNEL_CREATE, label: j.intl.string(j.t["2uh4vJ"]) },
-    { value: p.F_X.CHANNEL_UPDATE, label: j.intl.string(j.t.mGsBLV) },
-    { value: p.F_X.CHANNEL_DELETE, label: j.intl.string(j.t.hCHzAr) },
-    { value: p.F_X.CHANNEL_OVERWRITE_CREATE, label: j.intl.string(j.t["8TnAMP"]) },
-    { value: p.F_X.CHANNEL_OVERWRITE_UPDATE, label: j.intl.string(j.t.Jqx0Bi) },
-    { value: p.F_X.CHANNEL_OVERWRITE_DELETE, label: j.intl.string(j.t.gBXOr4) },
-    { value: p.F_X.MEMBER_KICK, label: j.intl.string(j.t["Q1/hN8"]) },
-    { value: p.F_X.MEMBER_PRUNE, label: j.intl.string(j.t.tOTTja) },
-    { value: p.F_X.MEMBER_BAN_ADD, label: j.intl.string(j.t["NfPn+e"]) },
-    { value: p.F_X.MEMBER_BAN_REMOVE, label: j.intl.string(j.t.XCsGfI) },
-    { value: p.F_X.MEMBER_UPDATE, label: j.intl.string(j.t["F/jmNJ"]) },
-    { value: p.F_X.MEMBER_ROLE_UPDATE, label: j.intl.string(j.t.zAveSI) },
-    { value: p.F_X.MEMBER_MOVE, label: j.intl.string(j.t.QshteR) },
-    { value: p.F_X.MEMBER_DISCONNECT, label: j.intl.string(j.t.Z45os7) },
-    { value: p.F_X.BOT_ADD, label: j.intl.string(j.t.vuH24Z) },
-    { value: p.F_X.THREAD_CREATE, label: j.intl.string(j.t["+zl0DG"]) },
-    { value: p.F_X.THREAD_UPDATE, label: j.intl.string(j.t.rbIry3) },
-    { value: p.F_X.THREAD_DELETE, label: j.intl.string(j.t.hFjNEA) },
-    { value: p.F_X.ROLE_CREATE, label: j.intl.string(j.t.AbxKtv) },
-    { value: p.F_X.ROLE_UPDATE, label: j.intl.string(j.t.t3Z6sU) },
-    { value: p.F_X.ROLE_DELETE, label: j.intl.string(j.t.YsFpa4) },
-    { value: p.F_X.ONBOARDING_PROMPT_CREATE, label: j.intl.string(j.t.ZV9tqc) },
-    { value: p.F_X.ONBOARDING_PROMPT_UPDATE, label: j.intl.string(j.t.PcOdvX) },
-    { value: p.F_X.ONBOARDING_PROMPT_DELETE, label: j.intl.string(j.t["+r33Na"]) },
-    { value: p.F_X.ONBOARDING_CREATE, label: j.intl.string(j.t.uDADde) },
-    { value: p.F_X.ONBOARDING_UPDATE, label: j.intl.string(j.t.J1H1wg) },
-    { value: p.F_X.HOME_SETTINGS_CREATE, label: j.intl.string(j.t.Di4cvI) },
-    { value: p.F_X.HOME_SETTINGS_UPDATE, label: j.intl.string(j.t.tzyrJH) },
-    { value: p.F_X.INVITE_CREATE, label: j.intl.string(j.t["0BNJdX"]) },
-    { value: p.F_X.INVITE_UPDATE, label: j.intl.string(j.t["o++obV"]) },
-    { value: p.F_X.INVITE_DELETE, label: j.intl.string(j.t.iP40Az) },
-    { value: p.F_X.WEBHOOK_CREATE, label: j.intl.string(j.t["tBF4+S"]) },
-    { value: p.F_X.WEBHOOK_UPDATE, label: j.intl.string(j.t.eV3McO) },
-    { value: p.F_X.WEBHOOK_DELETE, label: j.intl.string(j.t.AAL3K1) },
-    { value: p.F_X.EMOJI_CREATE, label: j.intl.string(j.t.RuWm0V) },
-    { value: p.F_X.EMOJI_UPDATE, label: j.intl.string(j.t.WzdUY7) },
-    { value: p.F_X.EMOJI_DELETE, label: j.intl.string(j.t.c3dK2L) },
-    { value: p.F_X.MESSAGE_DELETE, label: j.intl.string(j.t.daTfXh) },
-    { value: p.F_X.MESSAGE_BULK_DELETE, label: j.intl.string(j.t.nrBxeh) },
-    { value: p.F_X.MESSAGE_PIN, label: j.intl.string(j.t.MUldyN) },
-    { value: p.F_X.MESSAGE_UNPIN, label: j.intl.string(j.t.n4zKhA) },
-    { value: p.F_X.INTEGRATION_CREATE, label: j.intl.string(j.t.deNm8x) },
-    { value: p.F_X.INTEGRATION_UPDATE, label: j.intl.string(j.t.HT7Sfg) },
-    { value: p.F_X.INTEGRATION_DELETE, label: j.intl.string(j.t["+kJ09q"]) },
-    { value: p.F_X.STICKER_CREATE, label: j.intl.string(j.t["3DzNjU"]) },
-    { value: p.F_X.STICKER_UPDATE, label: j.intl.string(j.t.tdhW5b) },
-    { value: p.F_X.STICKER_DELETE, label: j.intl.string(j.t["+ZhGOk"]) },
-    { value: p.F_X.STAGE_INSTANCE_CREATE, label: j.intl.string(j.t.sPbjA6) },
-    { value: p.F_X.STAGE_INSTANCE_UPDATE, label: j.intl.string(j.t.cW9LfJ) },
-    { value: p.F_X.STAGE_INSTANCE_DELETE, label: j.intl.string(j.t["U1r+yD"]) },
-    { value: p.F_X.GUILD_SCHEDULED_EVENT_CREATE, label: j.intl.string(j.t.H81Zyy) },
-    { value: p.F_X.GUILD_SCHEDULED_EVENT_UPDATE, label: j.intl.string(j.t["FM69l+"]) },
-    { value: p.F_X.GUILD_SCHEDULED_EVENT_DELETE, label: j.intl.string(j.t.Rq28Bh) },
-    { value: p.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE, label: j.intl.string(j.t.iPdFOt) },
-    { value: p.F_X.AUTO_MODERATION_BLOCK_MESSAGE, label: j.intl.string(j.t.gNq5z6) },
-    { value: p.F_X.AUTO_MODERATION_RULE_CREATE, label: j.intl.string(j.t.f72Zqb) },
-    { value: p.F_X.AUTO_MODERATION_RULE_UPDATE, label: j.intl.string(j.t.XeqIiv) },
-    { value: p.F_X.AUTO_MODERATION_RULE_DELETE, label: j.intl.string(j.t.syAApU) },
-    { value: p.F_X.GUILD_HOME_FEATURE_ITEM, label: j.intl.string(j.t.lhG5KN) },
-    { value: p.F_X.GUILD_HOME_REMOVE_ITEM, label: j.intl.string(j.t.lRPRwS) },
-    { value: p.F_X.SOUNDBOARD_SOUND_CREATE, label: j.intl.string(j.t.yoRi5r) },
-    { value: p.F_X.SOUNDBOARD_SOUND_UPDATE, label: j.intl.string(j.t.uKlG0Z) },
-    { value: p.F_X.SOUNDBOARD_SOUND_DELETE, label: j.intl.string(j.t.gq0iCT) },
-    { value: p.F_X.VOICE_CHANNEL_STATUS_CREATE, label: j.intl.string(j.t.rGr0YM) },
-    { value: p.F_X.VOICE_CHANNEL_STATUS_DELETE, label: j.intl.string(j.t.V9PEQ4) },
+let W = () => [
+    { value: k.F_X.ALL, label: v.intl.string(v.t.QxEVcv), valueLabel: v.intl.string(v.t.an9Ry3) },
+    { value: k.F_X.GUILD_UPDATE, label: v.intl.string(v.t["5INZa3"]) },
+    { value: k.F_X.CHANNEL_CREATE, label: v.intl.string(v.t["2uh4vJ"]) },
+    { value: k.F_X.CHANNEL_UPDATE, label: v.intl.string(v.t.mGsBLV) },
+    { value: k.F_X.CHANNEL_DELETE, label: v.intl.string(v.t.hCHzAr) },
+    { value: k.F_X.CHANNEL_OVERWRITE_CREATE, label: v.intl.string(v.t["8TnAMP"]) },
+    { value: k.F_X.CHANNEL_OVERWRITE_UPDATE, label: v.intl.string(v.t.Jqx0Bi) },
+    { value: k.F_X.CHANNEL_OVERWRITE_DELETE, label: v.intl.string(v.t.gBXOr4) },
+    { value: k.F_X.MEMBER_KICK, label: v.intl.string(v.t["Q1/hN8"]) },
+    { value: k.F_X.MEMBER_PRUNE, label: v.intl.string(v.t.tOTTja) },
+    { value: k.F_X.MEMBER_BAN_ADD, label: v.intl.string(v.t["NfPn+e"]) },
+    { value: k.F_X.MEMBER_BAN_REMOVE, label: v.intl.string(v.t.XCsGfI) },
+    { value: k.F_X.MEMBER_UPDATE, label: v.intl.string(v.t["F/jmNJ"]) },
+    { value: k.F_X.MEMBER_ROLE_UPDATE, label: v.intl.string(v.t.zAveSI) },
+    { value: k.F_X.MEMBER_MOVE, label: v.intl.string(v.t.QshteR) },
+    { value: k.F_X.MEMBER_DISCONNECT, label: v.intl.string(v.t.Z45os7) },
+    { value: k.F_X.BOT_ADD, label: v.intl.string(v.t.vuH24Z) },
+    { value: k.F_X.THREAD_CREATE, label: v.intl.string(v.t["+zl0DG"]) },
+    { value: k.F_X.THREAD_UPDATE, label: v.intl.string(v.t.rbIry3) },
+    { value: k.F_X.THREAD_DELETE, label: v.intl.string(v.t.hFjNEA) },
+    { value: k.F_X.ROLE_CREATE, label: v.intl.string(v.t.AbxKtv) },
+    { value: k.F_X.ROLE_UPDATE, label: v.intl.string(v.t.t3Z6sU) },
+    { value: k.F_X.ROLE_DELETE, label: v.intl.string(v.t.YsFpa4) },
+    { value: k.F_X.ONBOARDING_PROMPT_CREATE, label: v.intl.string(v.t.ZV9tqc) },
+    { value: k.F_X.ONBOARDING_PROMPT_UPDATE, label: v.intl.string(v.t.PcOdvX) },
+    { value: k.F_X.ONBOARDING_PROMPT_DELETE, label: v.intl.string(v.t["+r33Na"]) },
+    { value: k.F_X.ONBOARDING_CREATE, label: v.intl.string(v.t.uDADde) },
+    { value: k.F_X.ONBOARDING_UPDATE, label: v.intl.string(v.t.J1H1wg) },
+    { value: k.F_X.HOME_SETTINGS_CREATE, label: v.intl.string(v.t.Di4cvI) },
+    { value: k.F_X.HOME_SETTINGS_UPDATE, label: v.intl.string(v.t.tzyrJH) },
+    { value: k.F_X.INVITE_CREATE, label: v.intl.string(v.t["0BNJdX"]) },
+    { value: k.F_X.INVITE_UPDATE, label: v.intl.string(v.t["o++obV"]) },
+    { value: k.F_X.INVITE_DELETE, label: v.intl.string(v.t.iP40Az) },
+    { value: k.F_X.WEBHOOK_CREATE, label: v.intl.string(v.t["tBF4+S"]) },
+    { value: k.F_X.WEBHOOK_UPDATE, label: v.intl.string(v.t.eV3McO) },
+    { value: k.F_X.WEBHOOK_DELETE, label: v.intl.string(v.t.AAL3K1) },
+    { value: k.F_X.EMOJI_CREATE, label: v.intl.string(v.t.RuWm0V) },
+    { value: k.F_X.EMOJI_UPDATE, label: v.intl.string(v.t.WzdUY7) },
+    { value: k.F_X.EMOJI_DELETE, label: v.intl.string(v.t.c3dK2L) },
+    { value: k.F_X.MESSAGE_DELETE, label: v.intl.string(v.t.daTfXh) },
+    { value: k.F_X.MESSAGE_BULK_DELETE, label: v.intl.string(v.t.nrBxeh) },
+    { value: k.F_X.MESSAGE_PIN, label: v.intl.string(v.t.MUldyN) },
+    { value: k.F_X.MESSAGE_UNPIN, label: v.intl.string(v.t.n4zKhA) },
+    { value: k.F_X.INTEGRATION_CREATE, label: v.intl.string(v.t.deNm8x) },
+    { value: k.F_X.INTEGRATION_UPDATE, label: v.intl.string(v.t.HT7Sfg) },
+    { value: k.F_X.INTEGRATION_DELETE, label: v.intl.string(v.t["+kJ09q"]) },
+    { value: k.F_X.STICKER_CREATE, label: v.intl.string(v.t["3DzNjU"]) },
+    { value: k.F_X.STICKER_UPDATE, label: v.intl.string(v.t.tdhW5b) },
+    { value: k.F_X.STICKER_DELETE, label: v.intl.string(v.t["+ZhGOk"]) },
+    { value: k.F_X.STAGE_INSTANCE_CREATE, label: v.intl.string(v.t.sPbjA6) },
+    { value: k.F_X.STAGE_INSTANCE_UPDATE, label: v.intl.string(v.t.cW9LfJ) },
+    { value: k.F_X.STAGE_INSTANCE_DELETE, label: v.intl.string(v.t["U1r+yD"]) },
+    { value: k.F_X.GUILD_SCHEDULED_EVENT_CREATE, label: v.intl.string(v.t.H81Zyy) },
+    { value: k.F_X.GUILD_SCHEDULED_EVENT_UPDATE, label: v.intl.string(v.t["FM69l+"]) },
+    { value: k.F_X.GUILD_SCHEDULED_EVENT_DELETE, label: v.intl.string(v.t.Rq28Bh) },
+    { value: k.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE, label: v.intl.string(v.t.iPdFOt) },
+    { value: k.F_X.AUTO_MODERATION_BLOCK_MESSAGE, label: v.intl.string(v.t.gNq5z6) },
+    { value: k.F_X.AUTO_MODERATION_RULE_CREATE, label: v.intl.string(v.t.f72Zqb) },
+    { value: k.F_X.AUTO_MODERATION_RULE_UPDATE, label: v.intl.string(v.t.XeqIiv) },
+    { value: k.F_X.AUTO_MODERATION_RULE_DELETE, label: v.intl.string(v.t.syAApU) },
+    { value: k.F_X.GUILD_HOME_FEATURE_ITEM, label: v.intl.string(v.t.lhG5KN) },
+    { value: k.F_X.GUILD_HOME_REMOVE_ITEM, label: v.intl.string(v.t.lRPRwS) },
+    { value: k.F_X.SOUNDBOARD_SOUND_CREATE, label: v.intl.string(v.t.yoRi5r) },
+    { value: k.F_X.SOUNDBOARD_SOUND_UPDATE, label: v.intl.string(v.t.uKlG0Z) },
+    { value: k.F_X.SOUNDBOARD_SOUND_DELETE, label: v.intl.string(v.t.gq0iCT) },
+    { value: k.F_X.VOICE_CHANNEL_STATUS_CREATE, label: v.intl.string(v.t.rGr0YM) },
+    { value: k.F_X.VOICE_CHANNEL_STATUS_DELETE, label: v.intl.string(v.t.V9PEQ4) },
 ];
-function W(e, t) {
+function Y(e, t) {
     return null != t.changes ? t.changes.find((t) => t.key === e) : null;
 }
-function Y(e, t) {
+function K(e, t) {
     return null != t.changes ? t.changes.filter((t) => t.key === e) : [];
 }
-function K(e) {
-    let t = w().find((t) => t.value === e.action);
-    return null != W(p.gGk.COMMUNICATION_DISABLED_UNTIL, e) ? j.intl.string(j.t.z3wbj8) : (t?.label ?? null);
+function z(e) {
+    let t = W().find((t) => t.value === e.action);
+    return null != Y(k.gGk.COMMUNICATION_DISABLED_UNTIL, e) ? v.intl.string(v.t.z3wbj8) : (t?.label ?? null);
 }
-let z = {
-    [d.pJ.SECONDS]: (e) => j.intl.formatToPlainString(j.t.geSp4K, { seconds: e }),
-    [d.pJ.MINUTES]: (e) => j.intl.formatToPlainString(j.t.iXLF9W, { minutes: e }),
-    [d.pJ.HOURS]: (e) => j.intl.formatToPlainString(j.t.xCjYxK, { hours: e }),
-    [d.pJ.DAYS]: (e) => j.intl.formatToPlainString(j.t["k2UNz+"], { days: e }),
+let J = {
+    [d.pJ.SECONDS]: (e) => v.intl.formatToPlainString(v.t.geSp4K, { seconds: e }),
+    [d.pJ.MINUTES]: (e) => v.intl.formatToPlainString(v.t.iXLF9W, { minutes: e }),
+    [d.pJ.HOURS]: (e) => v.intl.formatToPlainString(v.t.xCjYxK, { hours: e }),
+    [d.pJ.DAYS]: (e) => v.intl.formatToPlainString(v.t["k2UNz+"], { days: e }),
 };
-function J(e) {
-    let t = W(p.gGk.COMMUNICATION_DISABLED_UNTIL, e),
-        n = Y(p.gGk.ROLES_ADD, e).length > 0,
-        l = Y(p.gGk.ROLES_REMOVE, e).length > 0;
+function Q(e) {
+    let t = Y(k.gGk.COMMUNICATION_DISABLED_UNTIL, e),
+        n = K(k.gGk.ROLES_ADD, e).length > 0,
+        l = K(k.gGk.ROLES_REMOVE, e).length > 0;
     if (null != t) {
         if (t?.newValue != null) {
             let n = new Date(t?.newValue).getTime() - U.default.extractTimestamp(e.id),
                 l = Math.round(n / 1e3 / 60),
-                r = (0, d.$l)(l, X);
+                r = (0, d.$l)(l, b);
             if (null == r.unit || null == r.time) return null;
-            if (r.unit in z) {
+            if (r.unit in J) {
                 let e = r.unit,
                     t = r.unit === d.pJ.SECONDS ? Math.round(n / 1e3) : r.time;
-                return z[e](t);
+                return J[e](t);
             }
-        } else if (t?.oldValue != null) return j.intl.string(j.t.MA1ltr);
-    } else if (n && l) return j.intl.string(j.t.RdMMew);
-    else if (n) return j.intl.string(j.t["4GQqs8"]);
-    else if (l) return j.intl.string(j.t["8mQ6x0"]);
+        } else if (t?.oldValue != null) return v.intl.string(v.t.MA1ltr);
+    } else if (n && l) return v.intl.string(v.t.RdMMew);
+    else if (n) return v.intl.string(v.t["4GQqs8"]);
+    else if (l) return v.intl.string(v.t["8mQ6x0"]);
     return null;
 }
-function Q(e) {
-    let t = Y(p.gGk.ROLES_ADD, e),
-        n = Y(p.gGk.ROLES_REMOVE, e),
+function q(e) {
+    let t = K(k.gGk.ROLES_ADD, e),
+        n = K(k.gGk.ROLES_REMOVE, e),
         l = t
             ?.map((e) => {
                 let { newValue: t } = e;
@@ -499,496 +500,496 @@ function Q(e) {
             })
             .join(", ");
     return t.length > 0 && n.length > 0
-        ? j.intl.formatToPlainString(j.t.tZw1EW, { roleNamesAdded: l, roleNamesRemoved: r })
+        ? v.intl.formatToPlainString(v.t.tZw1EW, { roleNamesAdded: l, roleNamesRemoved: r })
         : t.length > 0
-          ? j.intl.formatToPlainString(j.t["/mTqt5"], { roleNames: l })
+          ? v.intl.formatToPlainString(v.t["/mTqt5"], { roleNames: l })
           : n.length > 0
-            ? j.intl.formatToPlainString(j.t.Wk4pAJ, { roleNames: r })
+            ? v.intl.formatToPlainString(v.t.Wk4pAJ, { roleNames: r })
             : null;
 }
-function q(e) {
+function Z(e) {
     switch (e.action) {
-        case p.F_X.GUILD_UPDATE:
-            return j.t.LjZO31;
-        case p.F_X.CHANNEL_CREATE:
-            let t = null != e.changes ? e.changes.find((e) => e.key === p.gGk.TYPE) : null;
+        case k.F_X.GUILD_UPDATE:
+            return v.t.LjZO31;
+        case k.F_X.CHANNEL_CREATE:
+            let t = null != e.changes ? e.changes.find((e) => e.key === k.gGk.TYPE) : null;
             if (null == t) throw Error("[AuditLog] Could not find type change for channel create");
             switch (t.newValue) {
-                case p.rbe.GUILD_STAGE_VOICE:
-                    return j.t["OKp4+o"];
-                case p.rbe.GUILD_VOICE:
-                    return j.t.NPOy4G;
-                case p.rbe.GUILD_CATEGORY:
-                    return j.t.T3KIjz;
-                case p.rbe.GUILD_FORUM:
-                    return j.t.VvNgHX;
-                case p.rbe.GUILD_MEDIA:
-                    return j.t["4NWSxa"];
-                case p.rbe.GUILD_ANNOUNCEMENT:
-                    return j.t.eYP6UV;
+                case k.rbe.GUILD_STAGE_VOICE:
+                    return v.t["OKp4+o"];
+                case k.rbe.GUILD_VOICE:
+                    return v.t.NPOy4G;
+                case k.rbe.GUILD_CATEGORY:
+                    return v.t.T3KIjz;
+                case k.rbe.GUILD_FORUM:
+                    return v.t.VvNgHX;
+                case k.rbe.GUILD_MEDIA:
+                    return v.t["4NWSxa"];
+                case k.rbe.GUILD_ANNOUNCEMENT:
+                    return v.t.eYP6UV;
                 default:
-                    return j.t.wrYNG2;
+                    return v.t.wrYNG2;
             }
-        case p.F_X.CHANNEL_UPDATE:
-            return j.t.nTYk6B;
-        case p.F_X.CHANNEL_DELETE:
-            return j.t.ynfvkm;
-        case p.F_X.CHANNEL_OVERWRITE_CREATE:
-            return j.t.l5Cu1a;
-        case p.F_X.CHANNEL_OVERWRITE_UPDATE:
-            return j.t.uhtbNU;
-        case p.F_X.CHANNEL_OVERWRITE_DELETE:
-            return j.t["HASt/3"];
-        case p.F_X.MEMBER_KICK:
-            return j.t.B5hDZX;
-        case p.F_X.MEMBER_PRUNE:
-            return j.t.qKOZTP;
-        case p.F_X.MEMBER_BAN_ADD:
-            return j.t["XklUm/"];
-        case p.F_X.MEMBER_BAN_REMOVE:
-            return j.t.o3Y6HD;
-        case p.F_X.MEMBER_UPDATE:
-            return j.t.pznhLN;
-        case p.F_X.MEMBER_ROLE_UPDATE:
-            return j.t.Vngfia;
-        case p.F_X.MEMBER_MOVE:
-            return j.t.Yt6NkU;
-        case p.F_X.MEMBER_DISCONNECT:
-            return j.t.K4eCZw;
-        case p.F_X.BOT_ADD:
-            return j.t.fWvX0G;
-        case p.F_X.ROLE_CREATE:
-            return j.t.UTLTx6;
-        case p.F_X.ROLE_UPDATE:
-            return j.t.NRbN18;
-        case p.F_X.ROLE_DELETE:
-            return j.t["4s63tb"];
-        case p.F_X.INVITE_CREATE:
-            return j.t.YHOXWy;
-        case p.F_X.INVITE_UPDATE:
-            return j.t.ja3kGS;
-        case p.F_X.INVITE_DELETE:
-            return j.t["3n/iWk"];
-        case p.F_X.WEBHOOK_CREATE:
-            return j.t.MhYhil;
-        case p.F_X.WEBHOOK_UPDATE:
-            return j.t["6GTlWB"];
-        case p.F_X.WEBHOOK_DELETE:
-            return j.t.in0VjZ;
-        case p.F_X.EMOJI_CREATE:
-            return j.t["7vekRO"];
-        case p.F_X.EMOJI_UPDATE:
-            return j.t.IsCKfh;
-        case p.F_X.EMOJI_DELETE:
-            return j.t.JnUaVG;
-        case p.F_X.STICKER_CREATE:
-            return j.t.DRZifq;
-        case p.F_X.STICKER_UPDATE:
-            return j.t.bhujGc;
-        case p.F_X.STICKER_DELETE:
-            return j.t.rGEP9U;
-        case p.F_X.MESSAGE_DELETE:
-            return j.t["HPkD+M"];
-        case p.F_X.MESSAGE_BULK_DELETE:
-            return j.t["3RIvLE"];
-        case p.F_X.MESSAGE_PIN:
-            return j.t.Yna7E7;
-        case p.F_X.MESSAGE_UNPIN:
-            return j.t.NCxXUW;
-        case p.F_X.INTEGRATION_CREATE:
-            return j.t.HYvCb3;
-        case p.F_X.INTEGRATION_UPDATE:
-            return j.t.ibCCOS;
-        case p.F_X.INTEGRATION_DELETE:
-            return j.t["8zScWY"];
-        case p.F_X.STAGE_INSTANCE_CREATE:
-            return j.t["n7x/DF"];
-        case p.F_X.STAGE_INSTANCE_UPDATE:
-            return j.t["0hQYU4"];
-        case p.F_X.STAGE_INSTANCE_DELETE:
-            if (null != e.userId) return j.t["Oi/in9"];
-            return j.t["7ZIFm9"];
-        case p.F_X.GUILD_SCHEDULED_EVENT_CREATE:
-            return j.t.S7k52p;
-        case p.F_X.GUILD_SCHEDULED_EVENT_UPDATE:
-            return j.t.ebTK11;
-        case p.F_X.GUILD_SCHEDULED_EVENT_DELETE:
-            return j.t["/ARPKQ"];
-        case p.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
-        case p.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
-            return j.t["8qCI36"];
-        case p.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
-            return j.t.zYb2da;
-        case p.F_X.THREAD_CREATE:
-            let n = null != e.changes ? e.changes.find((e) => e.key === p.gGk.TYPE) : null;
+        case k.F_X.CHANNEL_UPDATE:
+            return v.t.nTYk6B;
+        case k.F_X.CHANNEL_DELETE:
+            return v.t.ynfvkm;
+        case k.F_X.CHANNEL_OVERWRITE_CREATE:
+            return v.t.l5Cu1a;
+        case k.F_X.CHANNEL_OVERWRITE_UPDATE:
+            return v.t.uhtbNU;
+        case k.F_X.CHANNEL_OVERWRITE_DELETE:
+            return v.t["HASt/3"];
+        case k.F_X.MEMBER_KICK:
+            return v.t.B5hDZX;
+        case k.F_X.MEMBER_PRUNE:
+            return v.t.qKOZTP;
+        case k.F_X.MEMBER_BAN_ADD:
+            return v.t["XklUm/"];
+        case k.F_X.MEMBER_BAN_REMOVE:
+            return v.t.o3Y6HD;
+        case k.F_X.MEMBER_UPDATE:
+            return v.t.pznhLN;
+        case k.F_X.MEMBER_ROLE_UPDATE:
+            return v.t.Vngfia;
+        case k.F_X.MEMBER_MOVE:
+            return v.t.Yt6NkU;
+        case k.F_X.MEMBER_DISCONNECT:
+            return v.t.K4eCZw;
+        case k.F_X.BOT_ADD:
+            return v.t.fWvX0G;
+        case k.F_X.ROLE_CREATE:
+            return v.t.UTLTx6;
+        case k.F_X.ROLE_UPDATE:
+            return v.t.NRbN18;
+        case k.F_X.ROLE_DELETE:
+            return v.t["4s63tb"];
+        case k.F_X.INVITE_CREATE:
+            return v.t.YHOXWy;
+        case k.F_X.INVITE_UPDATE:
+            return v.t.ja3kGS;
+        case k.F_X.INVITE_DELETE:
+            return v.t["3n/iWk"];
+        case k.F_X.WEBHOOK_CREATE:
+            return v.t.MhYhil;
+        case k.F_X.WEBHOOK_UPDATE:
+            return v.t["6GTlWB"];
+        case k.F_X.WEBHOOK_DELETE:
+            return v.t.in0VjZ;
+        case k.F_X.EMOJI_CREATE:
+            return v.t["7vekRO"];
+        case k.F_X.EMOJI_UPDATE:
+            return v.t.IsCKfh;
+        case k.F_X.EMOJI_DELETE:
+            return v.t.JnUaVG;
+        case k.F_X.STICKER_CREATE:
+            return v.t.DRZifq;
+        case k.F_X.STICKER_UPDATE:
+            return v.t.bhujGc;
+        case k.F_X.STICKER_DELETE:
+            return v.t.rGEP9U;
+        case k.F_X.MESSAGE_DELETE:
+            return v.t["HPkD+M"];
+        case k.F_X.MESSAGE_BULK_DELETE:
+            return v.t["3RIvLE"];
+        case k.F_X.MESSAGE_PIN:
+            return v.t.Yna7E7;
+        case k.F_X.MESSAGE_UNPIN:
+            return v.t.NCxXUW;
+        case k.F_X.INTEGRATION_CREATE:
+            return v.t.HYvCb3;
+        case k.F_X.INTEGRATION_UPDATE:
+            return v.t.ibCCOS;
+        case k.F_X.INTEGRATION_DELETE:
+            return v.t["8zScWY"];
+        case k.F_X.STAGE_INSTANCE_CREATE:
+            return v.t["n7x/DF"];
+        case k.F_X.STAGE_INSTANCE_UPDATE:
+            return v.t["0hQYU4"];
+        case k.F_X.STAGE_INSTANCE_DELETE:
+            if (null != e.userId) return v.t["Oi/in9"];
+            return v.t["7ZIFm9"];
+        case k.F_X.GUILD_SCHEDULED_EVENT_CREATE:
+            return v.t.S7k52p;
+        case k.F_X.GUILD_SCHEDULED_EVENT_UPDATE:
+            return v.t.ebTK11;
+        case k.F_X.GUILD_SCHEDULED_EVENT_DELETE:
+            return v.t["/ARPKQ"];
+        case k.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+        case k.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+            return v.t["8qCI36"];
+        case k.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+            return v.t.zYb2da;
+        case k.F_X.THREAD_CREATE:
+            let n = null != e.changes ? e.changes.find((e) => e.key === k.gGk.TYPE) : null;
             if (null == n) throw Error("[AuditLog] Could not find type change for thread create");
             switch (n.newValue) {
-                case p.rbe.PRIVATE_THREAD:
-                    return j.t.Br0y5w;
-                case p.rbe.ANNOUNCEMENT_THREAD:
-                    return j.t["6uaMmO"];
+                case k.rbe.PRIVATE_THREAD:
+                    return v.t.Br0y5w;
+                case k.rbe.ANNOUNCEMENT_THREAD:
+                    return v.t["6uaMmO"];
                 default:
-                    return j.t["2cxQ7G"];
+                    return v.t["2cxQ7G"];
             }
-        case p.F_X.THREAD_UPDATE:
-            return j.t.PSsy4t;
-        case p.F_X.THREAD_DELETE:
-            return j.t.s3Khn8;
-        case p.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE:
-            return j.t.uzCqBm;
-        case p.F_X.AUTO_MODERATION_BLOCK_MESSAGE:
-            return j.t.NqWv2K;
-        case p.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL:
-            if (e.options?.auto_moderation_rule_trigger_type === F.uh.USER_PROFILE.toString()) return j.t.YQsjej;
-            return j.t.SD0PwJ;
-        case p.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-            return j.t.Vk4TwX;
-        case p.F_X.AUTO_MODERATION_QUARANTINE_USER:
-            return j.t["/W5u5o"];
-        case p.F_X.CREATOR_MONETIZATION_REQUEST_CREATED:
-            return j.t.ONvWyr;
-        case p.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-            return j.t["ryGLk+"];
-        case p.F_X.AUTO_MODERATION_RULE_CREATE:
-            return j.t["NKljj+"];
-        case p.F_X.AUTO_MODERATION_RULE_UPDATE:
-            return j.t["3wEA9u"];
-        case p.F_X.AUTO_MODERATION_RULE_DELETE:
-            return j.t.umua3n;
-        case p.F_X.ONBOARDING_PROMPT_CREATE:
-            return j.t["/8A1g2"];
-        case p.F_X.ONBOARDING_PROMPT_UPDATE:
-            return j.t.ArIrWI;
-        case p.F_X.ONBOARDING_PROMPT_DELETE:
-            return j.t.IuBTao;
-        case p.F_X.ONBOARDING_CREATE:
-            return j.t["wDaq3/"];
-        case p.F_X.ONBOARDING_UPDATE:
-            return j.t["yONu/l"];
-        case p.F_X.HOME_SETTINGS_CREATE:
-            return j.t.dSdCjG;
-        case p.F_X.HOME_SETTINGS_UPDATE:
-            return j.t.XHE8qv;
-        case p.F_X.GUILD_HOME_FEATURE_ITEM:
-            let l = null != e.changes ? e.changes.find((e) => e.key === p.gGk.ENTITY_TYPE) : null;
-            if (null == l) return j.t["UZ+U3A"];
+        case k.F_X.THREAD_UPDATE:
+            return v.t.PSsy4t;
+        case k.F_X.THREAD_DELETE:
+            return v.t.s3Khn8;
+        case k.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE:
+            return v.t.uzCqBm;
+        case k.F_X.AUTO_MODERATION_BLOCK_MESSAGE:
+            return v.t.NqWv2K;
+        case k.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL:
+            if (e.options?.auto_moderation_rule_trigger_type === P.uh.USER_PROFILE.toString()) return v.t.YQsjej;
+            return v.t.SD0PwJ;
+        case k.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+            return v.t.Vk4TwX;
+        case k.F_X.AUTO_MODERATION_QUARANTINE_USER:
+            return v.t["/W5u5o"];
+        case k.F_X.CREATOR_MONETIZATION_REQUEST_CREATED:
+            return v.t.ONvWyr;
+        case k.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+            return v.t["ryGLk+"];
+        case k.F_X.AUTO_MODERATION_RULE_CREATE:
+            return v.t["NKljj+"];
+        case k.F_X.AUTO_MODERATION_RULE_UPDATE:
+            return v.t["3wEA9u"];
+        case k.F_X.AUTO_MODERATION_RULE_DELETE:
+            return v.t.umua3n;
+        case k.F_X.ONBOARDING_PROMPT_CREATE:
+            return v.t["/8A1g2"];
+        case k.F_X.ONBOARDING_PROMPT_UPDATE:
+            return v.t.ArIrWI;
+        case k.F_X.ONBOARDING_PROMPT_DELETE:
+            return v.t.IuBTao;
+        case k.F_X.ONBOARDING_CREATE:
+            return v.t["wDaq3/"];
+        case k.F_X.ONBOARDING_UPDATE:
+            return v.t["yONu/l"];
+        case k.F_X.HOME_SETTINGS_CREATE:
+            return v.t.dSdCjG;
+        case k.F_X.HOME_SETTINGS_UPDATE:
+            return v.t.XHE8qv;
+        case k.F_X.GUILD_HOME_FEATURE_ITEM:
+            let l = null != e.changes ? e.changes.find((e) => e.key === k.gGk.ENTITY_TYPE) : null;
+            if (null == l) return v.t["UZ+U3A"];
             switch (l.newValue) {
                 case E.MESSAGE:
-                    return j.t["PyEa+J"];
+                    return v.t["PyEa+J"];
                 case E.FORUM_POST:
-                    return j.t.hCuAb1;
+                    return v.t.hCuAb1;
                 default:
-                    return j.t["UZ+U3A"];
+                    return v.t["UZ+U3A"];
             }
-        case p.F_X.GUILD_HOME_REMOVE_ITEM:
-            return j.t.kPReun;
-        case p.F_X.SOUNDBOARD_SOUND_CREATE:
-            return j.t["0PD83V"];
-        case p.F_X.SOUNDBOARD_SOUND_UPDATE:
-            return j.t.CM8n1w;
-        case p.F_X.SOUNDBOARD_SOUND_DELETE:
-            return j.t["kVz4/0"];
-        case p.F_X.VOICE_CHANNEL_STATUS_CREATE:
-            return j.t.MWjnU7;
-        case p.F_X.VOICE_CHANNEL_STATUS_DELETE:
-            return j.t.aS8Krq;
-        case p.F_X.GUILD_MEMBER_VERIFICATION_UPDATE:
-            return j.t["NUKUb+"];
-        case p.F_X.GUILD_PROFILE_UPDATE:
-            return j.t.Ed6hF1;
-        case p.F_X.GUILD_MIGRATE_PIN_PERMISSION:
-            return j.t["3Ne7MA"];
-        case p.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION:
-            return j.t["naflH+"];
+        case k.F_X.GUILD_HOME_REMOVE_ITEM:
+            return v.t.kPReun;
+        case k.F_X.SOUNDBOARD_SOUND_CREATE:
+            return v.t["0PD83V"];
+        case k.F_X.SOUNDBOARD_SOUND_UPDATE:
+            return v.t.CM8n1w;
+        case k.F_X.SOUNDBOARD_SOUND_DELETE:
+            return v.t["kVz4/0"];
+        case k.F_X.VOICE_CHANNEL_STATUS_CREATE:
+            return v.t.MWjnU7;
+        case k.F_X.VOICE_CHANNEL_STATUS_DELETE:
+            return v.t.aS8Krq;
+        case k.F_X.GUILD_MEMBER_VERIFICATION_UPDATE:
+            return v.t["NUKUb+"];
+        case k.F_X.GUILD_PROFILE_UPDATE:
+            return v.t.Ed6hF1;
+        case k.F_X.GUILD_MIGRATE_PIN_PERMISSION:
+            return v.t["3Ne7MA"];
+        case k.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION:
+            return v.t["naflH+"];
         default:
             return null;
     }
 }
-function Z(e) {
-    switch (e) {
-        case k.lx.GUILD_FEED_REMOVED:
-            return j.intl.string(j.t["5G8ZD4"]);
-        case k.lx.ACTIVE_CHANNELS_REMOVED:
-            return j.intl.string(j.t["4YLtzC"]);
-        case k.lx.PINNED:
-            return j.intl.string(j.t["1QLRYb"]);
-    }
-    return null;
-}
 function $(e) {
     switch (e) {
-        case k.lx.GUILD_FEED_REMOVED:
-            return j.intl.string(j.t.S5kuWQ);
-        case k.lx.ACTIVE_CHANNELS_REMOVED:
-            return j.intl.string(j.t["8qpgcz"]);
-        case k.lx.PINNED:
-            return j.intl.string(j.t.CMweGA);
+        case F.lx.GUILD_FEED_REMOVED:
+            return v.intl.string(v.t["5G8ZD4"]);
+        case F.lx.ACTIVE_CHANNELS_REMOVED:
+            return v.intl.string(v.t["4YLtzC"]);
+        case F.lx.PINNED:
+            return v.intl.string(v.t["1QLRYb"]);
     }
     return null;
 }
-function ee(e, t) {
+function ee(e) {
     switch (e) {
-        case p.xBc.CREATE_INSTANT_INVITE:
-            return j.intl.string(j.t.zJrgTG);
-        case p.xBc.KICK_MEMBERS:
-            return j.intl.string(j.t.pBNv6i);
-        case p.xBc.BAN_MEMBERS:
-            return j.intl.string(j.t.oTBA7N);
-        case p.xBc.ADMINISTRATOR:
-            return j.intl.string(j.t.PGvZqX);
-        case p.xBc.MANAGE_CHANNELS:
-            if (t.targetType === p.GaG.CHANNEL || t.targetType === p.GaG.CHANNEL_OVERWRITE)
-                return j.intl.string(j.t.nAw15L);
-            return j.intl.string(j.t["9qLtWs"]);
-        case p.xBc.MANAGE_GUILD:
-            return j.intl.string(j.t.QZRcfO);
-        case p.xBc.VIEW_GUILD_ANALYTICS:
-            return j.intl.string(j.t["rQJBE/"]);
-        case p.xBc.VIEW_CREATOR_MONETIZATION_ANALYTICS:
-            return j.intl.string(j.t["0lTLTv"]);
-        case p.xBc.CHANGE_NICKNAME:
-            return j.intl.string(j.t.dilOF6);
-        case p.xBc.MANAGE_NICKNAMES:
-            return j.intl.string(j.t["t+Ct5x"]);
-        case p.xBc.MANAGE_ROLES:
-            return j.intl.string(j.t["C8d+oG"]);
-        case p.xBc.MANAGE_WEBHOOKS:
-            return j.intl.string(j.t["/ADKmM"]);
-        case p.xBc.CREATE_GUILD_EXPRESSIONS:
-            return j.intl.string(j.t.HarVuP);
-        case p.xBc.MANAGE_GUILD_EXPRESSIONS:
-            return j.intl.string(j.t.bbuXIn);
-        case p.xBc.VIEW_AUDIT_LOG:
-            return j.intl.string(j.t.fZgLpA);
-        case p.xBc.VIEW_CHANNEL:
-            if (t.targetType === p.GaG.CHANNEL || t.targetType === p.GaG.CHANNEL_OVERWRITE)
-                return j.intl.string(j.t["W/A4Qp"]);
-            return j.intl.string(j.t.uV83yi);
-        case p.xBc.SEND_MESSAGES:
-            return j.intl.string(j.t.T32rkC);
-        case p.xBc.SEND_TTS_MESSAGES:
-            return j.intl.string(j.t.Mg7bku);
-        case p.xBc.USE_APPLICATION_COMMANDS:
-            return j.intl.string(j.t.shbR1a);
-        case p.xBc.MANAGE_MESSAGES:
-            return j.intl.string(j.t["6lU9xM"]);
-        case p.xBc.EMBED_LINKS:
-            return j.intl.string(j.t["969dEL"]);
-        case p.xBc.ATTACH_FILES:
-            return j.intl.string(j.t["3AS4UM"]);
-        case p.xBc.READ_MESSAGE_HISTORY:
-            return j.intl.string(j.t.l9ufaR);
-        case p.xBc.MENTION_EVERYONE:
-            return j.intl.string(j.t.Y78KGC);
-        case p.xBc.USE_EXTERNAL_EMOJIS:
-            return j.intl.string(j.t.BpBGZU);
-        case p.xBc.USE_EXTERNAL_STICKERS:
-            return j.intl.string(j.t["UeRs+b"]);
-        case p.xBc.ADD_REACTIONS:
-            return j.intl.string(j.t.yEoJAr);
-        case p.xBc.CONNECT:
-            return j.intl.string(j.t.S0W8Z5);
-        case p.xBc.SPEAK:
-            return j.intl.string(j.t["8w1tIR"]);
-        case p.xBc.MUTE_MEMBERS:
-            return j.intl.string(j.t["8EI30/"]);
-        case p.xBc.DEAFEN_MEMBERS:
-            return j.intl.string(j.t["9L47Fr"]);
-        case p.xBc.MOVE_MEMBERS:
-            return j.intl.string(j.t.YtjJPQ);
-        case p.xBc.USE_VAD:
-            return j.intl.string(j.t["08zAV7"]);
-        case p.xBc.PRIORITY_SPEAKER:
-            return j.intl.string(j.t.BVK71i);
-        case p.xBc.STREAM:
-            return j.intl.string(j.t.FlNoSV);
-        case p.xBc.USE_SOUNDBOARD:
-            return j.intl.string(j.t.Bco7NG);
-        case p.xBc.USE_EXTERNAL_SOUNDS:
-            return j.intl.string(j.t.pwaVJ6);
-        case p.xBc.REQUEST_TO_SPEAK:
-            return j.intl.string(j.t["5kicT2"]);
-        case p.xBc.USE_EMBEDDED_ACTIVITIES:
-            return j.intl.string(j.t.rLSGeh);
-        case p.xBc.CREATE_EVENTS:
-            return j.intl.string(j.t.qyjZua);
-        case p.xBc.MANAGE_EVENTS:
-            return j.intl.string(j.t.HIgA5a);
-        case p.xBc.CREATE_PUBLIC_THREADS:
-            return j.intl.string(j.t["25rKnX"]);
-        case p.xBc.CREATE_PRIVATE_THREADS:
-            return j.intl.string(j.t.QwbTSa);
-        case p.xBc.SEND_MESSAGES_IN_THREADS:
-            return j.intl.string(j.t.fTE74g);
-        case p.xBc.MANAGE_THREADS:
-            return j.intl.string(j.t.kEqgr7);
-        case p.xBc.MODERATE_MEMBERS:
-            return j.intl.string(j.t["+RL6pz"]);
-        case p.xBc.SET_VOICE_CHANNEL_STATUS:
-            return j.intl.string(j.t.VBwkUf);
-        case p.xBc.SEND_POLLS:
-            return j.intl.string(j.t.UMQ7Ww);
-        case p.xBc.SEND_VOICE_MESSAGES:
-            return j.intl.string(j.t.WlWSBT);
-        case p.xBc.USE_EXTERNAL_APPS:
-            return j.intl.string(j.t.TtA5rK);
-        case p.xBc.PIN_MESSAGES:
-            return j.intl.string(j.t.Y5BI39);
-        case p.xBc.BYPASS_SLOWMODE:
-            return j.intl.string(j.t.kqcjeV);
-        case p.xBc.MANAGE_OFFICIAL_MESSAGES:
-            return j.intl.string(j.t.Aj9ruN);
+        case F.lx.GUILD_FEED_REMOVED:
+            return v.intl.string(v.t.S5kuWQ);
+        case F.lx.ACTIVE_CHANNELS_REMOVED:
+            return v.intl.string(v.t["8qpgcz"]);
+        case F.lx.PINNED:
+            return v.intl.string(v.t.CMweGA);
     }
     return null;
 }
 function et(e, t) {
+    switch (e) {
+        case k.xBc.CREATE_INSTANT_INVITE:
+            return v.intl.string(v.t.zJrgTG);
+        case k.xBc.KICK_MEMBERS:
+            return v.intl.string(v.t.pBNv6i);
+        case k.xBc.BAN_MEMBERS:
+            return v.intl.string(v.t.oTBA7N);
+        case k.xBc.ADMINISTRATOR:
+            return v.intl.string(v.t.PGvZqX);
+        case k.xBc.MANAGE_CHANNELS:
+            if (t.targetType === k.GaG.CHANNEL || t.targetType === k.GaG.CHANNEL_OVERWRITE)
+                return v.intl.string(v.t.nAw15L);
+            return v.intl.string(v.t["9qLtWs"]);
+        case k.xBc.MANAGE_GUILD:
+            return v.intl.string(v.t.QZRcfO);
+        case k.xBc.VIEW_GUILD_ANALYTICS:
+            return v.intl.string(v.t["rQJBE/"]);
+        case k.xBc.VIEW_CREATOR_MONETIZATION_ANALYTICS:
+            return v.intl.string(v.t["0lTLTv"]);
+        case k.xBc.CHANGE_NICKNAME:
+            return v.intl.string(v.t.dilOF6);
+        case k.xBc.MANAGE_NICKNAMES:
+            return v.intl.string(v.t["t+Ct5x"]);
+        case k.xBc.MANAGE_ROLES:
+            return v.intl.string(v.t["C8d+oG"]);
+        case k.xBc.MANAGE_WEBHOOKS:
+            return v.intl.string(v.t["/ADKmM"]);
+        case k.xBc.CREATE_GUILD_EXPRESSIONS:
+            return v.intl.string(v.t.HarVuP);
+        case k.xBc.MANAGE_GUILD_EXPRESSIONS:
+            return v.intl.string(v.t.bbuXIn);
+        case k.xBc.VIEW_AUDIT_LOG:
+            return v.intl.string(v.t.fZgLpA);
+        case k.xBc.VIEW_CHANNEL:
+            if (t.targetType === k.GaG.CHANNEL || t.targetType === k.GaG.CHANNEL_OVERWRITE)
+                return v.intl.string(v.t["W/A4Qp"]);
+            return v.intl.string(v.t.uV83yi);
+        case k.xBc.SEND_MESSAGES:
+            return v.intl.string(v.t.T32rkC);
+        case k.xBc.SEND_TTS_MESSAGES:
+            return v.intl.string(v.t.Mg7bku);
+        case k.xBc.USE_APPLICATION_COMMANDS:
+            return v.intl.string(v.t.shbR1a);
+        case k.xBc.MANAGE_MESSAGES:
+            return v.intl.string(v.t["6lU9xM"]);
+        case k.xBc.EMBED_LINKS:
+            return v.intl.string(v.t["969dEL"]);
+        case k.xBc.ATTACH_FILES:
+            return v.intl.string(v.t["3AS4UM"]);
+        case k.xBc.READ_MESSAGE_HISTORY:
+            return v.intl.string(v.t.l9ufaR);
+        case k.xBc.MENTION_EVERYONE:
+            return v.intl.string(v.t.Y78KGC);
+        case k.xBc.USE_EXTERNAL_EMOJIS:
+            return v.intl.string(v.t.BpBGZU);
+        case k.xBc.USE_EXTERNAL_STICKERS:
+            return v.intl.string(v.t["UeRs+b"]);
+        case k.xBc.ADD_REACTIONS:
+            return v.intl.string(v.t.yEoJAr);
+        case k.xBc.CONNECT:
+            return v.intl.string(v.t.S0W8Z5);
+        case k.xBc.SPEAK:
+            return v.intl.string(v.t["8w1tIR"]);
+        case k.xBc.MUTE_MEMBERS:
+            return v.intl.string(v.t["8EI30/"]);
+        case k.xBc.DEAFEN_MEMBERS:
+            return v.intl.string(v.t["9L47Fr"]);
+        case k.xBc.MOVE_MEMBERS:
+            return v.intl.string(v.t.YtjJPQ);
+        case k.xBc.USE_VAD:
+            return v.intl.string(v.t["08zAV7"]);
+        case k.xBc.PRIORITY_SPEAKER:
+            return v.intl.string(v.t.BVK71i);
+        case k.xBc.STREAM:
+            return v.intl.string(v.t.FlNoSV);
+        case k.xBc.USE_SOUNDBOARD:
+            return v.intl.string(v.t.Bco7NG);
+        case k.xBc.USE_EXTERNAL_SOUNDS:
+            return v.intl.string(v.t.pwaVJ6);
+        case k.xBc.REQUEST_TO_SPEAK:
+            return v.intl.string(v.t["5kicT2"]);
+        case k.xBc.USE_EMBEDDED_ACTIVITIES:
+            return v.intl.string(v.t.rLSGeh);
+        case k.xBc.CREATE_EVENTS:
+            return v.intl.string(v.t.qyjZua);
+        case k.xBc.MANAGE_EVENTS:
+            return v.intl.string(v.t.HIgA5a);
+        case k.xBc.CREATE_PUBLIC_THREADS:
+            return v.intl.string(v.t["25rKnX"]);
+        case k.xBc.CREATE_PRIVATE_THREADS:
+            return v.intl.string(v.t.QwbTSa);
+        case k.xBc.SEND_MESSAGES_IN_THREADS:
+            return v.intl.string(v.t.fTE74g);
+        case k.xBc.MANAGE_THREADS:
+            return v.intl.string(v.t.kEqgr7);
+        case k.xBc.MODERATE_MEMBERS:
+            return v.intl.string(v.t["+RL6pz"]);
+        case k.xBc.SET_VOICE_CHANNEL_STATUS:
+            return v.intl.string(v.t.VBwkUf);
+        case k.xBc.SEND_POLLS:
+            return v.intl.string(v.t.UMQ7Ww);
+        case k.xBc.SEND_VOICE_MESSAGES:
+            return v.intl.string(v.t.WlWSBT);
+        case k.xBc.USE_EXTERNAL_APPS:
+            return v.intl.string(v.t.TtA5rK);
+        case k.xBc.PIN_MESSAGES:
+            return v.intl.string(v.t.Y5BI39);
+        case k.xBc.BYPASS_SLOWMODE:
+            return v.intl.string(v.t.kqcjeV);
+        case k.xBc.MANAGE_OFFICIAL_MESSAGES:
+            return v.intl.string(v.t.Aj9ruN);
+    }
+    return null;
+}
+function en(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
             let l = (function (e, t) {
                     switch (e.targetType) {
-                        case p.GaG.GUILD:
-                        case p.GaG.GUILD_HOME:
-                        case p.GaG.GUILD_PROFILE:
+                        case k.GaG.GUILD:
+                        case k.GaG.GUILD_HOME:
+                        case k.GaG.GUILD_PROFILE:
                             return t;
-                        case p.GaG.CHANNEL:
-                        case p.GaG.CHANNEL_OVERWRITE:
-                            return es(
+                        case k.GaG.CHANNEL:
+                        case k.GaG.CHANNEL_OVERWRITE:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
+                                k.gGk.NAME,
                                 (e) => D.A.getChannel(e),
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
-                        case p.GaG.USER:
-                            return es(
+                        case k.GaG.USER:
+                            return eE(
                                 e,
-                                p.gGk.NICK,
+                                k.gGk.NICK,
                                 (e) => C.default.getUser(e),
                                 (e) => e,
                             );
-                        case p.GaG.ROLE:
-                            return es(
+                        case k.GaG.ROLE:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
+                                k.gGk.NAME,
                                 (e) => h.A.getRole(t.id, e),
                                 (e) => e.name,
                             );
-                        case p.GaG.ONBOARDING_PROMPT:
-                            let n = es(
+                        case k.GaG.ONBOARDING_PROMPT:
+                            let n = eE(
                                 e,
-                                p.gGk.ID,
+                                k.gGk.ID,
                                 (e) => G.A.getOnboardingPrompt(e),
                                 (e) => e.title,
                             );
-                            return null == n || "" === n ? j.intl.string(j.t.ZNQyiR) : n;
-                        case p.GaG.GUILD_ONBOARDING:
-                        case p.GaG.GUILD_MEMBER_VERIFICATION:
+                            return null == n || "" === n ? v.intl.string(v.t.ZNQyiR) : n;
+                        case k.GaG.GUILD_ONBOARDING:
+                        case k.GaG.GUILD_MEMBER_VERIFICATION:
                             return t;
-                        case p.GaG.INVITE:
-                            return es(e, p.gGk.CODE, p.FXj);
-                        case p.GaG.INTEGRATION:
-                            return es(
+                        case k.GaG.INVITE:
+                            return eE(e, k.gGk.CODE, k.FXj);
+                        case k.GaG.INTEGRATION:
+                            return eE(
                                 e,
-                                p.gGk.TYPE,
-                                (e) => f.A.integrations.find((t) => t.id === e),
+                                k.gGk.TYPE,
+                                (e) => p.A.integrations.find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.WEBHOOK:
-                            return es(
+                        case k.GaG.WEBHOOK:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
-                                (e) => f.A.webhooks.find((t) => t.id === e),
+                                k.gGk.NAME,
+                                (e) => p.A.webhooks.find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.EMOJI:
-                            return es(
+                        case k.GaG.EMOJI:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
+                                k.gGk.NAME,
                                 (e) => I.Ay.getGuildEmoji(t.id).find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.STICKER:
-                            return es(
+                        case k.GaG.STICKER:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
+                                k.gGk.NAME,
                                 (e) => m.A.getStickerById(e),
                                 (e) => e.name,
                             );
-                        case p.GaG.STAGE_INSTANCE:
-                            return es(
+                        case k.GaG.STAGE_INSTANCE:
+                            return eE(
                                 e,
-                                p.gGk.TOPIC,
+                                k.gGk.TOPIC,
                                 (e) => Object.values(S.A.getStageInstancesByGuild(t.id))?.find((t) => t.id === e),
                                 (e) => e.topic,
                             );
-                        case p.GaG.GUILD_SCHEDULED_EVENT:
-                        case p.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                            return es(
+                        case k.GaG.GUILD_SCHEDULED_EVENT:
+                        case k.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
-                                (e) => f.A.guildScheduledEvents.find((t) => t.id === e),
+                                k.gGk.NAME,
+                                (e) => p.A.guildScheduledEvents.find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.THREAD:
-                            return es(
+                        case k.GaG.THREAD:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
-                                (e) => f.A.threads.find((t) => t.id === e),
+                                k.gGk.NAME,
+                                (e) => p.A.threads.find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.APPLICATION_COMMAND:
+                        case k.GaG.APPLICATION_COMMAND:
                             if (e.targetId === e.options.application_id) {
-                                let t = f.A.integrations.find((t) => t.application?.id === e.targetId);
+                                let t = p.A.integrations.find((t) => t.application?.id === e.targetId);
                                 if (null != t) return t.name;
                                 return e.targetId;
                             }
-                            return es(
+                            return eE(
                                 e,
-                                p.gGk.NAME,
-                                (e) => f.A.applicationCommands.find((t) => t.id === e),
+                                k.gGk.NAME,
+                                (e) => p.A.applicationCommands.find((t) => t.id === e),
                                 (e) => {
                                     let t =
                                         null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
                                     return e.type === A.kc.CHAT ? `/\u2060${t}` : t;
                                 },
                             );
-                        case p.GaG.AUTO_MODERATION_RULE:
-                            return es(
+                        case k.GaG.AUTO_MODERATION_RULE:
+                            return eE(
                                 e,
-                                p.gGk.NAME,
-                                (e) => f.A.automodRules.find((t) => t.id === e),
+                                k.gGk.NAME,
+                                (e) => p.A.automodRules.find((t) => t.id === e),
                                 (e) => e.name,
                             );
-                        case p.GaG.GUILD_SOUNDBOARD:
-                            return es(e, p.gGk.NAME, p.FXj);
-                        case p.GaG.HOME_SETTINGS:
-                            return es(
+                        case k.GaG.GUILD_SOUNDBOARD:
+                            return eE(e, k.gGk.NAME, k.FXj);
+                        case k.GaG.HOME_SETTINGS:
+                            return eE(
                                 e,
-                                p.gGk.GUILD_ID,
+                                k.gGk.GUILD_ID,
                                 (e) => O.h.getSettings(e),
-                                () => j.intl.string(j.t.VbpLyU),
+                                () => v.intl.string(v.t.VbpLyU),
                                 t.id,
                             );
-                        case p.GaG.VOICE_CHANNEL_STATUS:
-                            return es(
+                        case k.GaG.VOICE_CHANNEL_STATUS:
+                            return eE(
                                 e,
-                                p.gGk.STATUS,
+                                k.gGk.STATUS,
                                 (e) => D.A.getChannel(e),
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
                         default:
-                            return v.warn("Unknown targetType for log", e), null;
+                            return X.warn("Unknown targetType for log", e), null;
                     }
                 })(e, t),
                 r = C.default.getUser(e.userId);
             if (
                 null != l ||
                 [
-                    p.F_X.MEMBER_PRUNE,
-                    p.F_X.MEMBER_DISCONNECT,
-                    p.F_X.MEMBER_MOVE,
-                    p.F_X.CREATOR_MONETIZATION_REQUEST_CREATED,
-                    p.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED,
+                    k.F_X.MEMBER_PRUNE,
+                    k.F_X.MEMBER_DISCONNECT,
+                    k.F_X.MEMBER_MOVE,
+                    k.F_X.CREATOR_MONETIZATION_REQUEST_CREATED,
+                    k.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED,
                 ].includes(e.action)
             ) {
                 if (
@@ -999,19 +1000,19 @@ function et(e, t) {
                             if (null != e.options) {
                                 let t = { ...e.options };
                                 switch (e.options.type) {
-                                    case p.AO_.USER:
-                                        t.subtarget = eE(
+                                    case k.AO_.USER:
+                                        t.subtarget = eu(
                                             e.options.id,
                                             (e) => C.default.getUser(e),
-                                            (e) => e.tag,
+                                            (e) => f.Ay.getUserTag(e),
                                         );
                                         break;
-                                    case p.AO_.ROLE:
-                                        t.subtarget = eE(e.options.role_name, p.FXj);
+                                    case k.AO_.ROLE:
+                                        t.subtarget = eu(e.options.role_name, k.FXj);
                                 }
                                 if (
                                     (null != e.options.channel_id &&
-                                        (t.channel = es(
+                                        (t.channel = eE(
                                             e,
                                             "",
                                             (e) => D.A.getChannel(e),
@@ -1023,7 +1024,7 @@ function et(e, t) {
                                         (t.count = e.options.members_removed),
                                     null != e.options.event_exception_id)
                                 ) {
-                                    let n = f.A.guildScheduledEvents.find((t) => t.id === e.targetId),
+                                    let n = p.A.guildScheduledEvents.find((t) => t.id === e.targetId),
                                         l = n?.guild_scheduled_event_exceptions.find(
                                             (t) => t.event_exception_id === e.options.event_exception_id,
                                         );
@@ -1041,27 +1042,27 @@ function et(e, t) {
                     let n = [];
                     e.changes.forEach((l) => {
                         let r = (function (e, t, n) {
-                            if (t.action === p.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+                            if (t.action === k.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE) {
                                 let t = e.newValue || e.oldValue;
                                 switch (t.type) {
-                                    case p.g0g.ROLE:
-                                        e.subtarget = eE(
+                                    case k.g0g.ROLE:
+                                        e.subtarget = eu(
                                             t.id,
                                             (e) => h.A.getRole(n.id, e),
                                             (e) => e.name,
                                         );
                                         break;
-                                    case p.g0g.USER:
-                                        e.subtarget = eE(
+                                    case k.g0g.USER:
+                                        e.subtarget = eu(
                                             t.id,
                                             (e) => C.default.getUser(e),
-                                            (e) => e.tag,
+                                            (e) => f.Ay.getUserTag(e),
                                         );
                                         break;
-                                    case p.g0g.CHANNEL:
+                                    case k.g0g.CHANNEL:
                                         t.id === a()(n.id).subtract(1).toString()
-                                            ? (e.subtarget = j.intl.string(j.t.MSYhgh))
-                                            : (e.subtarget = eE(
+                                            ? (e.subtarget = v.intl.string(v.t.MSYhgh))
+                                            : (e.subtarget = eu(
                                                   t.id,
                                                   (e) => D.A.getChannel(e),
                                                   (e) => (0, g.m1)(e, C.default, L.A, !0),
@@ -1070,62 +1071,62 @@ function et(e, t) {
                                 return e;
                             }
                             switch (e.key) {
-                                case p.gGk.OWNER_ID:
-                                    return ei(e, (e) => C.default.getUser(e));
-                                case p.gGk.CHANNEL_ID:
-                                case p.gGk.AFK_CHANNEL_ID:
-                                case p.gGk.SYSTEM_CHANNEL_ID:
-                                case p.gGk.RULES_CHANNEL_ID:
-                                case p.gGk.PUBLIC_UPDATES_CHANNEL_ID:
-                                    return ei(
+                                case k.gGk.OWNER_ID:
+                                    return es(e, (e) => C.default.getUser(e));
+                                case k.gGk.CHANNEL_ID:
+                                case k.gGk.AFK_CHANNEL_ID:
+                                case k.gGk.SYSTEM_CHANNEL_ID:
+                                case k.gGk.RULES_CHANNEL_ID:
+                                case k.gGk.PUBLIC_UPDATES_CHANNEL_ID:
+                                    return es(
                                         e,
                                         (e) => D.A.getChannel(e),
                                         (e) => (0, g.m1)(e, C.default, L.A, !0),
                                     );
-                                case p.gGk.AFK_TIMEOUT:
-                                    return ei(e, (e) => e / 60);
-                                case p.gGk.BITRATE:
-                                    return ei(e, (e) => e / 1e3);
-                                case p.gGk.COLOR:
-                                    return ei(e, (e) => (0, c.Hl)(e).toUpperCase());
-                                case p.gGk.THEME_COLORS:
-                                    return ei(
+                                case k.gGk.AFK_TIMEOUT:
+                                    return es(e, (e) => e / 60);
+                                case k.gGk.BITRATE:
+                                    return es(e, (e) => e / 1e3);
+                                case k.gGk.COLOR:
+                                    return es(e, (e) => (0, c.Hl)(e).toUpperCase());
+                                case k.gGk.THEME_COLORS:
+                                    return es(
                                         e,
                                         (e) => `${(0, c.Hl)(e[0]).toUpperCase()}, ${(0, c.Hl)(e[1]).toUpperCase()}`,
                                     );
-                                case p.gGk.MAX_AGE:
-                                    return ei(e, (e) => {
+                                case k.gGk.MAX_AGE:
+                                    return es(e, (e) => {
                                         let t = x.Ay.getMaxAgeOptionByValue(e);
                                         return null !== t ? t.label : e;
                                     });
-                                case p.gGk.PERMISSIONS: {
+                                case k.gGk.PERMISSIONS: {
                                     let t = [],
-                                        { added: n, removed: l } = en(e.oldValue, e.newValue);
+                                        { added: n, removed: l } = el(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let e = new R.QO(p.gGk.PERMISSIONS_GRANTED, null, n);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_GRANTED, null, n);
                                         t.push(e);
                                     }
                                     if (l.length > 0) {
-                                        let e = new R.QO(p.gGk.PERMISSIONS_DENIED, null, l);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_DENIED, null, l);
                                         t.push(e);
                                     }
                                     return t;
                                 }
-                                case p.gGk.PERMISSIONS_GRANTED:
-                                case p.gGk.PERMISSIONS_DENIED: {
+                                case k.gGk.PERMISSIONS_GRANTED:
+                                case k.gGk.PERMISSIONS_DENIED: {
                                     let t = [],
-                                        { added: n, removed: l } = en(e.oldValue, e.newValue);
+                                        { added: n, removed: l } = el(e.oldValue, e.newValue);
                                     if (n.length > 0) {
                                         let l = new R.QO(e.key, null, n);
                                         t.push(l);
                                     }
                                     if (l.length > 0) {
-                                        let e = new R.QO(p.gGk.PERMISSIONS_RESET, l, l);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_RESET, l, l);
                                         t.push(e);
                                     }
                                     return t;
                                 }
-                                case p.gGk.FLAGS: {
+                                case k.gGk.FLAGS: {
                                     let t = [],
                                         { added: n, removed: l } = (function (e, t) {
                                             let n = "number" == typeof e ? e : 0,
@@ -1134,8 +1135,8 @@ function et(e, t) {
                                                 a = _.VL(n, l),
                                                 i = [],
                                                 s = [];
-                                            for (let e in k.lx) {
-                                                let t = k.lx[e];
+                                            for (let e in F.lx) {
+                                                let t = F.lx[e];
                                                 _.Lt(r, t) && i.push(t), _.Lt(a, t) && s.push(t);
                                             }
                                             return { added: i, removed: s };
@@ -1150,30 +1151,30 @@ function et(e, t) {
                                     }
                                     return t;
                                 }
-                                case p.gGk.PREFERRED_LOCALE:
-                                    return ei(e, (e) => {
-                                        let t = (0, j.getAvailableLocales)().find((t) => t.value === e);
+                                case k.gGk.PREFERRED_LOCALE:
+                                    return es(e, (e) => {
+                                        let t = (0, v.getAvailableLocales)().find((t) => t.value === e);
                                         return null != t ? t.name : null;
                                     });
-                                case p.gGk.VIDEO_QUALITY_MODE:
-                                    return ei(e, (e) =>
-                                        e === p.K3c.FULL ? j.intl.string(j.t["7jOoJE"]) : j.intl.string(j.t.jjKYpu),
+                                case k.gGk.VIDEO_QUALITY_MODE:
+                                    return es(e, (e) =>
+                                        e === k.K3c.FULL ? v.intl.string(v.t["7jOoJE"]) : v.intl.string(v.t.jjKYpu),
                                     );
-                                case p.gGk.SYSTEM_CHANNEL_FLAGS:
+                                case k.gGk.SYSTEM_CHANNEL_FLAGS:
                                     let l, r;
                                     return (
                                         (l = {
-                                            [p.ogj.SUPPRESS_JOIN_NOTIFICATIONS]:
-                                                p.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                                            [p.ogj.SUPPRESS_PREMIUM_SUBSCRIPTIONS]:
-                                                p.gGk.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                                            [p.ogj.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]:
-                                                p.gGk.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                                            [p.ogj.SUPPRESS_JOIN_NOTIFICATION_REPLIES]:
-                                                p.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES,
+                                            [k.ogj.SUPPRESS_JOIN_NOTIFICATIONS]:
+                                                k.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
+                                            [k.ogj.SUPPRESS_PREMIUM_SUBSCRIPTIONS]:
+                                                k.gGk.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
+                                            [k.ogj.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]:
+                                                k.gGk.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
+                                            [k.ogj.SUPPRESS_JOIN_NOTIFICATION_REPLIES]:
+                                                k.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES,
                                         }),
                                         (r = []),
-                                        Object.values(p.ogj).forEach((t) => {
+                                        Object.values(k.ogj).forEach((t) => {
                                             let n = (e.oldValue & t) === t,
                                                 a = (e.newValue & t) === t;
                                             if (n === a) return;
@@ -1182,48 +1183,48 @@ function et(e, t) {
                                         }),
                                         r
                                     );
-                                case p.gGk.AUTO_MODERATION_ACTIONS:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return ei(
+                                case k.gGk.AUTO_MODERATION_ACTIONS:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE)
+                                        return es(
                                             e,
                                             (e) => e.map((e) => e.type),
                                             (e) => e.map(N.PZ).join(", "),
                                         );
                                     break;
-                                case p.gGk.AUTO_MODERATION_EVENT_TYPE:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return ei(e, N.X3);
+                                case k.gGk.AUTO_MODERATION_EVENT_TYPE:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE) return es(e, N.X3);
                                     break;
-                                case p.gGk.AUTO_MODERATION_TRIGGER_TYPE:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return ei(e, N.nl);
+                                case k.gGk.AUTO_MODERATION_TRIGGER_TYPE:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE) return es(e, N.nl);
                                     break;
-                                case p.gGk.AUTO_MODERATION_TRIGGER_METADATA:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return ei(e, (e) =>
+                                case k.gGk.AUTO_MODERATION_TRIGGER_METADATA:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE)
+                                        return es(e, (e) =>
                                             null != e && "object" == typeof e
                                                 ? null != e.keyword_filter && Array.isArray(e.keyword_filter)
-                                                    ? j.intl.formatToMarkdownString(j.t.y91UXV, {
+                                                    ? v.intl.formatToMarkdownString(v.t.y91UXV, {
                                                           newValue: e.keyword_filter.map((e) => `'${e}'`).join(", "),
                                                       })
                                                     : JSON.stringify(e)
                                                 : e,
                                         );
                                     break;
-                                case p.gGk.AUTO_MODERATION_ADD_KEYWORDS:
-                                case p.gGk.AUTO_MODERATION_REMOVE_KEYWORDS:
-                                case p.gGk.AUTO_MODERATION_ADD_REGEX_PATTERNS:
-                                case p.gGk.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
-                                case p.gGk.AUTO_MODERATION_ADD_ALLOW_LIST:
-                                case p.gGk.AUTO_MODERATION_REMOVE_ALLOW_LIST:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return ei(e, (e) =>
+                                case k.gGk.AUTO_MODERATION_ADD_KEYWORDS:
+                                case k.gGk.AUTO_MODERATION_REMOVE_KEYWORDS:
+                                case k.gGk.AUTO_MODERATION_ADD_REGEX_PATTERNS:
+                                case k.gGk.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
+                                case k.gGk.AUTO_MODERATION_ADD_ALLOW_LIST:
+                                case k.gGk.AUTO_MODERATION_REMOVE_ALLOW_LIST:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE)
+                                        return es(e, (e) =>
                                             null != e && Array.isArray(e)
                                                 ? e.map((e) => `'${e}'`).join(", ")
                                                 : JSON.stringify(e),
                                         );
                                     break;
-                                case p.gGk.AUTO_MODERATION_EXEMPT_CHANNELS:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return ei(
+                                case k.gGk.AUTO_MODERATION_EXEMPT_CHANNELS:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE)
+                                        return es(
                                             e,
                                             (e) =>
                                                 e
@@ -1231,12 +1232,12 @@ function et(e, t) {
                                                     .filter((e) => null != e)
                                                     .map((e) => (0, g.m1)(e, C.default, L.A, !0)),
                                             (e) =>
-                                                null != e && e.length > 0 ? e.join(", ") : j.intl.string(j.t["K/EdV8"]),
+                                                null != e && e.length > 0 ? e.join(", ") : v.intl.string(v.t["K/EdV8"]),
                                         );
                                     break;
-                                case p.gGk.AUTO_MODERATION_EXEMPT_ROLES:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return ei(
+                                case k.gGk.AUTO_MODERATION_EXEMPT_ROLES:
+                                    if (t.targetType === k.GaG.AUTO_MODERATION_RULE)
+                                        return es(
                                             e,
                                             (e) =>
                                                 e
@@ -1244,25 +1245,25 @@ function et(e, t) {
                                                     .filter((e) => null != e)
                                                     .map((e) => e.name),
                                             (e) =>
-                                                null != e && e.length > 0 ? e.join(", ") : j.intl.string(j.t["K/EdV8"]),
+                                                null != e && e.length > 0 ? e.join(", ") : v.intl.string(v.t["K/EdV8"]),
                                         );
                                     break;
-                                case p.gGk.ROLE_IDS:
-                                    if (t.targetType === p.GaG.INVITE)
-                                        return ei(e, (e) =>
+                                case k.gGk.ROLE_IDS:
+                                    if (t.targetType === k.GaG.INVITE)
+                                        return es(e, (e) =>
                                             e
                                                 .map((e) => h.A.getRole(n.id, e))
                                                 .filter((e) => null != e)
                                                 .map((e) => ({ id: e.id, name: e.name })),
                                         );
                                     break;
-                                case p.gGk.AVAILABLE_TAGS:
-                                    return ea(e);
-                                case p.gGk.APPLIED_TAGS:
-                                    return er(e, t);
-                                case p.gGk.SCHEDULED_START_TIME:
-                                case p.gGk.SCHEDULED_END_TIME:
-                                    return ei(e, (e) => (0, M.i$)(s()(new Date(e)), "LLLL"));
+                                case k.gGk.AVAILABLE_TAGS:
+                                    return ei(e);
+                                case k.gGk.APPLIED_TAGS:
+                                    return ea(e, t);
+                                case k.gGk.SCHEDULED_START_TIME:
+                                case k.gGk.SCHEDULED_END_TIME:
+                                    return es(e, (e) => (0, M.i$)(s()(new Date(e)), "LLLL"));
                             }
                             return e;
                         })(l, e, t);
@@ -1276,20 +1277,20 @@ function et(e, t) {
         n
     );
 }
-function en(e, t) {
+function el(e, t) {
     let n = o.iu("string" == typeof e ? e : 0),
         l = o.iu("string" == typeof t ? t : 0),
         r = o.TF(l, n),
         a = o.TF(n, l),
         i = [],
         s = [];
-    for (let e in p.xBc) {
-        let t = p.xBc[e];
+    for (let e in k.xBc) {
+        let t = k.xBc[e];
         o.zy(r, t) && i.push(t), o.zy(a, t) && s.push(t);
     }
     return { added: i, removed: s };
 }
-function el(e) {
+function er(e) {
     return null == e
         ? null
         : {
@@ -1300,7 +1301,7 @@ function el(e) {
               moderated: e.moderated,
           };
 }
-function er(e, t) {
+function ea(e, t) {
     let n = Array.isArray(e.oldValue) ? e.oldValue : [],
         l = Array.isArray(e.newValue) ? e.newValue : [],
         r = D.A.getChannel(t.targetId),
@@ -1317,15 +1318,15 @@ function er(e, t) {
         _ = [];
     for (let e of o) {
         let t = s[e] ?? { id: e, name: e };
-        _.push(new R.QO(p.gGk.AVAILABLE_TAG_ADD, null, t));
+        _.push(new R.QO(k.gGk.AVAILABLE_TAG_ADD, null, t));
     }
     for (let e of c) {
         let t = s[e] ?? { id: e, name: e };
-        _.push(new R.QO(p.gGk.AVAILABLE_TAG_DELETE, null, t));
+        _.push(new R.QO(k.gGk.AVAILABLE_TAG_DELETE, null, t));
     }
     return _.length > 0 ? _ : e;
 }
-function ea(e) {
+function ei(e) {
     let { oldValue: t, newValue: n } = e,
         l = Array.isArray(t) ? t : [],
         r = Array.isArray(n) ? n : [];
@@ -1341,20 +1342,20 @@ function ea(e) {
         }),
         l.length < r.length)
     ) {
-        for (let e in i) if (null == a[e]) return new R.QO(p.gGk.AVAILABLE_TAG_ADD, null, el(i[e]));
+        for (let e in i) if (null == a[e]) return new R.QO(k.gGk.AVAILABLE_TAG_ADD, null, er(i[e]));
     }
     if (l.length > r.length) {
-        for (let e in a) if (null == i[e]) return new R.QO(p.gGk.AVAILABLE_TAG_DELETE, null, el(a[e]));
+        for (let e in a) if (null == i[e]) return new R.QO(k.gGk.AVAILABLE_TAG_DELETE, null, er(a[e]));
     }
     for (let e in a) {
         let t = a[e],
             n = i[e];
         if (n?.name !== t.name || n?.emoji_id !== t.emoji_id || n?.emoji_name !== t.emoji_name)
-            return new R.QO(p.gGk.AVAILABLE_TAG_EDIT, el(t), el(n));
+            return new R.QO(k.gGk.AVAILABLE_TAG_EDIT, er(t), er(n));
     }
     return e;
 }
-function ei(e, t, n) {
+function es(e, t, n) {
     let l = e.newValue,
         r = e.oldValue;
     return (
@@ -1363,11 +1364,11 @@ function ei(e, t, n) {
         new R.QO(e.key, r || e.oldValue, l || e.newValue)
     );
 }
-function es(e, t, n, l, r) {
+function eE(e, t, n, l, r) {
     let a = null,
         i = n((r = r ?? e.targetId));
     if ((null != i && null != l && (a = l(i)), null == a)) {
-        let t = f.A.deletedTargets[e.targetType];
+        let t = p.A.deletedTargets[e.targetType];
         null != t && null != t[r] && (a = t[r]);
     }
     if (null == a && null != e.changes) {
@@ -1376,26 +1377,26 @@ function es(e, t, n, l, r) {
     }
     return a ?? r;
 }
-function eE(e, t, n) {
+function eu(e, t, n) {
     let l = e,
         r = t(e);
     return null != r && null != n && (l = n(r)), l;
 }
-function eu(e, t) {
+function eo(e, t) {
     return (n) => (null == n.oldValue ? e : t);
 }
-function eo(e, t) {
+function ec(e, t) {
     return (n) => (null == n.newValue ? e : t);
 }
-function ec(e, t, n, l) {
+function e_(e, t, n, l) {
     return (r) => (null != r.newValue && null != r.oldValue ? e : null != r.newValue ? t : null != r.oldValue ? n : l);
 }
-function e_(e, t) {
+function ed(e, t) {
     return (n) => (n.newValue ? e : t);
 }
-function ed(e) {
+function eA(e) {
     return (t) => e[t.newValue];
 }
-function eA(e, t) {
+function eg(e, t) {
     return (n) => e[n.newValue] ?? t;
 }
