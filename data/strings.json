@@ -3723,6 +3723,8 @@
   "C2rTrm": "View Shop",
   "msyp90": "View Your Badges",
   "UqnlQF": "Your badges",
+  "qPHr0x": "Badge moved, from position {from} to position {to}",
+  "21W3EN": "Badge {position}, {badgeName}",
   "AdyOTw": "{badge_names}{overflow_count, plural,=0 {}other {, and # more}",
   "XMDvpN": "Hide Badges",
   "QVHyhK": "You don't have any badges you can hide yet.",
