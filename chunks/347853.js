@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => l, D: () => o });
+n.d(t, { A: () => r, D: () => o });
 var i = n(477900);
 n(582128);
-var r = n(192308),
+var l = n(192308),
     a = n(228366),
     s = n(573879);
-function l() {
-    (0, r.openModalLazy)(
+function r() {
+    (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e("59402"), n.e("61227"), n.e("79582"), n.e("28386")]).then(
                 n.bind(n, 623161),
@@ -22,7 +21,7 @@ function l() {
     );
 }
 function o() {
-    (0, r.openModalLazy)(
+    (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("56356"),
@@ -40,7 +39,7 @@ function o() {
                 n.e("75080"),
                 n.e("1490"),
             ]).then(n.bind(n, 365225));
-            return (t) => (0, i.jsx)(e, { ...t, onBackPressed: l });
+            return (t) => (0, i.jsx)(e, { ...t, onBackPressed: r });
         },
         {
             onCloseCallback: () => {

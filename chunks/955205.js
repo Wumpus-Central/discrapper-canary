@@ -1,8 +1,7 @@
-"use strict";
-r.d(t, { A: () => l });
+r.d(t, { A: () => s });
 var n = r(582128);
-function a(e, t) {
-    return (a =
+function i(e, t) {
+    return (i =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
@@ -12,13 +11,13 @@ var o = function (e) {
         var t = document.createElement("script");
         (t.async = !0), (t.defer = !0), (t.src = e), document.head && document.head.appendChild(t);
     },
-    i = /(http|https):\/\/(www)?.+\/recaptcha/,
-    s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
-    l = (function (e) {
+    a = /(http|https):\/\/(www)?.+\/recaptcha/,
+    c = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
+    s = (function (e) {
         function t() {
-            for (var t, r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
+            for (var t, r = arguments.length, i = Array(r), c = 0; c < r; c++) i[c] = arguments[c];
             return (
-                ((t = e.call.apply(e, [this].concat(a)) || this).container = void 0),
+                ((t = e.call.apply(e, [this].concat(i)) || this).container = void 0),
                 (t.timer = void 0),
                 (t.state = {
                     instanceKey: Date.now(),
@@ -33,7 +32,7 @@ var o = function (e) {
                 (t._inject = function () {
                     t.props.inject &&
                         !Array.from(document.scripts).reduce(function (e, t) {
-                            return e || i.test(t.src);
+                            return e || a.test(t.src);
                         }, !1) &&
                         o(
                             "https://recaptcha.net/recaptcha/api.js?render=explicit" +
@@ -152,14 +151,14 @@ var o = function (e) {
         return (
             (t.prototype = Object.create(e.prototype)),
             (t.prototype.constructor = t),
-            a(t, e),
+            i(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 var r = "invisible" === e.size;
                 return r !== t.invisible ? { invisible: r } : null;
             }),
             (t.prototype.componentDidUpdate = function (e) {
                 var t = this;
-                s.reduce(function (r, n) {
+                c.reduce(function (r, n) {
                     return t.props[n] !== e[n] ? [].concat(r, [n]) : r;
                 }, []).length > 0 &&
                     this.setState({ instanceKey: Date.now(), rendered: !1 }, function () {
@@ -169,7 +168,7 @@ var o = function (e) {
             t
         );
     })(n.Component);
-l.defaultProps = {
+s.defaultProps = {
     id: "",
     className: "g-recaptcha",
     theme: "light",

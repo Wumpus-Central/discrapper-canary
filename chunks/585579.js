@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { E: () => _ });
-var i = n(477900),
+n.d(t, { E: () => f });
+var l = n(477900),
     r = n(582128),
     a = n(405433),
-    s = n(821609),
-    l = n(688810),
-    o = n(609174),
-    d = n(721610),
-    c = n(602902),
-    u = n(375708);
-function _(e) {
+    i = n(821609),
+    s = n(688810),
+    u = n(609174),
+    c = n(721610),
+    o = n(602902),
+    d = n(375708);
+function f(e) {
     let { variant: t = "primary" } = e,
-        n = (0, o.Y_)(),
-        { analyticsLocations: _ } = (0, l.Ay)(),
-        { onSelectClip: E } = r.useContext(d.$),
-        A = r.useCallback(
+        n = (0, u.Y_)(),
+        { analyticsLocations: f } = (0, s.Ay)(),
+        { onSelectClip: p } = r.useContext(c.$),
+        m = r.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), null != E) ? E(n) : (0, c.K)([n], { analyticsLocations: _ });
+                (e.stopPropagation(), e.preventDefault(), null != p) ? p(n) : (0, o.K)([n], { analyticsLocations: f });
             },
-            [n, _, E],
+            [n, f, p],
         );
-    return (0, i.jsx)(s.$, {
-        onClick: A,
+    return (0, l.jsx)(i.$, {
+        onClick: m,
         icon: a.l,
         variant: t,
         size: "sm",
-        text: u.intl.string(u.t.RDE0Sc),
+        text: d.intl.string(d.t.RDE0Sc),
         fullWidth: !0,
     });
 }
