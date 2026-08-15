@@ -523,6 +523,7 @@ let r = {
             "CATEGORY_EXPAND",
             "CATEGORY_COLLAPSE_ALL",
             "CATEGORY_EXPAND_ALL",
+            "LOGOUT",
         ],
         inlineRequire: () => n(789105).A,
     },

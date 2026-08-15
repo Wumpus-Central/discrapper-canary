@@ -1,37 +1,42 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => A });
 var i = n(439372),
     r = n(16236),
-    a = n(5180);
-function s(e) {
+    a = n(117600),
+    s = n(5180);
+function l(e) {
     let {
         channel: { id: t },
     } = e;
     (0, r.i_)(t, { trackAnalytics: !1 });
 }
-function l(e) {
+function o(e) {
     let { id: t } = e;
     (0, r._2)(!0, t);
 }
-function o(e) {
+function d(e) {
     let { id: t } = e;
     (0, r._2)(!1, t);
 }
-function d(e) {
-    let { guildId: t } = e;
-    (0, a.ai)(t) && (0, r._2)(!0);
-}
 function c(e) {
     let { guildId: t } = e;
-    (0, a.ai)(t) && (0, r._2)(!1);
+    (0, s.ai)(t) && (0, r._2)(!0);
 }
-class u extends i.A {
+function u(e) {
+    let { guildId: t } = e;
+    (0, s.ai)(t) && (0, r._2)(!1);
+}
+function _() {
+    (0, a.CU)(a.E9);
+}
+class E extends i.A {
     actions = {
-        CHANNEL_DELETE: s,
-        CATEGORY_COLLAPSE: l,
-        CATEGORY_EXPAND: o,
-        CATEGORY_COLLAPSE_ALL: d,
-        CATEGORY_EXPAND_ALL: c,
+        CHANNEL_DELETE: l,
+        CATEGORY_COLLAPSE: o,
+        CATEGORY_EXPAND: d,
+        CATEGORY_COLLAPSE_ALL: c,
+        CATEGORY_EXPAND_ALL: u,
+        LOGOUT: _,
     };
 }
-let _ = new u();
+let A = new E();
