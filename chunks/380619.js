@@ -1,56 +1,58 @@
 "use strict";
-n.d(t, { kz: () => A, gc: () => f, JW: () => _, Mq: () => h, K5: () => I, MD: () => T, px: () => E, x: () => p });
-var i = n(582128),
-    r = n(877624),
-    a = n(17928),
-    s = n(554146),
-    l = n(841702),
+n.d(t, { kz: () => p, gc: () => A, JW: () => m, Mq: () => g, K5: () => x, MD: () => E, px: () => f, x: () => C });
+var l = n(582128),
+    i = n(877624),
+    s = n(17928),
+    r = n(554146),
+    a = n(841702),
     o = n(826673),
-    d = n(412260);
+    u = n(412260);
 let c = (0, n(945810).mj)({
     name: "2026-04-gift-promotion-reminder",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var u = n(202541);
-function _() {
-    let [e, t] = i.useState(),
-        n = (0, a.yK)([d.A], () => d.A.getGiftPromotionRewardSkuIds()),
-        { purchases: r, hasPreviouslyFetched: s, fetchPurchasesError: o } = (0, l.Wg)(),
-        c = i.useRef(!1);
+var d = n(753261),
+    h = n(202541);
+function m() {
+    let [e, t] = l.useState(),
+        n = (0, s.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
+        { purchases: i, hasPreviouslyFetched: r, fetchPurchasesError: o } = (0, a.Wg)(),
+        c = l.useRef(!1);
     return (
-        i.useEffect(() => {
-            s &&
+        l.useEffect(() => {
+            r &&
                 !c.current &&
                 n.length > 0 &&
-                (t(null == o ? n.filter((e) => null == r.get(e)) : []), (c.current = !0));
-        }, [n, r, s, o]),
+                (t(null == o ? n.filter((e) => null == i.get(e)) : []), (c.current = !0));
+        }, [n, i, r, o]),
         e
     );
 }
-function E(e, t, n) {
-    let i = h(e),
-        r = null != n && n.length >= 1;
-    return t && i && r;
+function f(e, t, n) {
+    let l = g(e),
+        i = null != n && n.length >= 1,
+        { enabled: s } = d.E.useConfig({ location: "useShouldShowSelectFreeSkuStep" });
+    return t && l && i && !s;
 }
-function A(e, t, n) {
-    let i = h(e);
-    return null != n && 1 === n.length && i && t;
+function p(e, t, n) {
+    let l = g(e);
+    return null != n && 1 === n.length && l && t;
 }
-function h(e) {
-    return [u.gD.PREMIUM_YEAR_TIER_2, u.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
+function g(e) {
+    return [h.gD.PREMIUM_YEAR_TIER_2, h.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
 }
-function I(e, t) {
+function x(e, t) {
     if (null == e) return;
-    let { reverse: n = !1, colorStops: i, defaultAngle: r = 78.98 } = t ?? {},
-        a = Array.isArray(e) ? e : e.gradient,
-        s = Array.isArray(e) || null == e.angle ? r : e.angle;
-    n && (s = (s + 180) % 360);
-    let l = null != i ? a.map((e, t) => `${e} ${i[t]}%`).join(", ") : a.join(", ");
-    return { background: `linear-gradient(${s}deg, ${l})` };
+    let { reverse: n = !1, colorStops: l, defaultAngle: i = 78.98 } = t ?? {},
+        s = Array.isArray(e) ? e : e.gradient,
+        r = Array.isArray(e) || null == e.angle ? i : e.angle;
+    n && (r = (r + 180) % 360);
+    let a = null != l ? s.map((e, t) => `${e} ${l[t]}%`).join(", ") : s.join(", ");
+    return { background: `linear-gradient(${r}deg, ${a})` };
 }
-function f(e) {
+function A(e) {
     if (null != e)
         return {
             backgroundImage: `url(${e})`,
@@ -59,12 +61,12 @@ function f(e) {
             backgroundRepeat: "no-repeat",
         };
 }
-function p(e, t) {
+function C(e, t) {
     if (null != e && null != t) {
         let n = t.background,
-            i = e.backgroundImage;
+            l = e.backgroundImage;
         return (
-            (e.backgroundImage = `${i}, ${n}`),
+            (e.backgroundImage = `${l}, ${n}`),
             (e.backgroundColor = "lightgray"),
             (e.backgroundRepeat = "no-repeat, no-repeat"),
             null == e.backgroundSize && (e.backgroundSize = "auto 110%, auto"),
@@ -74,13 +76,13 @@ function p(e, t) {
     }
     return null != e ? e : null != t ? t : {};
 }
-function T() {
+function E() {
     let { enabled: e } = c.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
-    if (!e || null == d.A.getMarketingComponentByType(r.C.GIFT_REMINDER_NAGBAR)) return !1;
-    let t = d.A.getGiftPromotion()?.id;
+    if (!e || null == u.A.getMarketingComponentByType(i.C.GIFT_REMINDER_NAGBAR)) return !1;
+    let t = u.A.getGiftPromotion()?.id;
     return (
         null != t &&
-        !!(0, o.u$)(s.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, t).isDismissed &&
-        !(0, o.u$)(s.M.GIFTING_PROMOTION_REMINDER, t).isDismissed
+        !!(0, o.u$)(r.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, t).isDismissed &&
+        !(0, o.u$)(r.M.GIFTING_PROMOTION_REMINDER, t).isDismissed
     );
 }

@@ -1,5 +1,6 @@
-t.d(r, { E: () => i });
-let i = (0, t(945810).mj)({
+"use strict";
+n.d(t, { E: () => l });
+let l = (0, n(945810).mj)({
     name: "2026-08-premium-gifting-gogo-promotion",
     kind: "user",
     defaultConfig: { enabled: !1 },
