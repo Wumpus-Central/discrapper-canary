@@ -1,125 +1,139 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
+    a = n(626584),
     s = n(174459),
-    a = n(787925),
+    l = n(787925),
     o = n(256787),
-    l = n(652215);
-let u = {
-    numberOfDCsShownToday: 0,
-    dailyCapPeriodStart: null,
-    dismissibleContentSeenDuringSession: new Set(),
-    dailyCapOverridden: !1,
-    newUserMinAgeRequiredOverridden: !1,
-    renderedAtTimestamps: new Map(),
-    lastDismissed: null,
-    seenForGuildId: new Map(),
-};
-function c(e, t) {
-    let n = u.seenForGuildId.get(t);
+    d = n(652215);
+let c = new a.A("DCF"),
+    u = !1,
+    _ = {
+        numberOfDCsShownToday: 0,
+        dailyCapPeriodStart: null,
+        dismissibleContentSeenDuringSession: new Set(),
+        dailyCapOverridden: !1,
+        newUserMinAgeRequiredOverridden: !1,
+        renderedAtTimestamps: new Map(),
+        lastDismissed: null,
+        seenForGuildId: new Map(),
+    };
+function E(e, t) {
+    let n = _.seenForGuildId.get(t);
     return null != n && n.has(e);
 }
-class d extends i.Ay.PersistedStore {
+class A extends i.Ay.PersistedStore {
     static displayName = "DismissibleContentFrameworkStore";
     static persistKey = "DismissibleContentFrameworkStore";
     static migrations = [(e) => ({ ...e })];
     initialize(e) {
         null != e &&
-            ((u.numberOfDCsShownToday = e.numberOfDCsShownToday ?? 0),
-            (u.dailyCapPeriodStart = e.dailyCapPeriodStart),
-            (u.dailyCapOverridden = e.dailyCapOverridden ?? !1),
-            (u.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1)),
-            (u.dismissibleContentSeenDuringSession = new Set()),
-            (u.seenForGuildId = new Map()),
-            (u.lastDismissed = null);
+            ((_.numberOfDCsShownToday = e.numberOfDCsShownToday ?? 0),
+            (_.dailyCapPeriodStart = e.dailyCapPeriodStart),
+            (_.dailyCapOverridden = e.dailyCapOverridden ?? !1),
+            (_.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1)),
+            (_.dismissibleContentSeenDuringSession = new Set()),
+            (_.seenForGuildId = new Map()),
+            (_.lastDismissed = null);
     }
     getState() {
-        return u;
+        return _;
     }
     get dailyCapOverridden() {
-        return u.dailyCapOverridden;
+        return _.dailyCapOverridden;
     }
     get newUserMinAgeRequiredOverridden() {
-        return u.newUserMinAgeRequiredOverridden;
+        return _.newUserMinAgeRequiredOverridden;
     }
     get lastDismissed() {
-        return u.lastDismissed;
+        return _.lastDismissed;
     }
     getRenderedAtTimestamp(e) {
-        return u.renderedAtTimestamps.get(e);
+        return _.renderedAtTimestamps.get(e);
     }
     hasUserHitDCCap(e, t) {
-        if (null != e && (a.C.has(e) || u.dailyCapOverridden)) return !1;
+        if (null != e && (l.C.has(e) || _.dailyCapOverridden)) return !1;
         if (null != e) {
             let n = null != t && (0, o.vf)(e);
-            if ((n && null != t && c(e, t)) || (!n && u.dismissibleContentSeenDuringSession.has(e))) return !1;
+            if ((n && null != t && E(e, t)) || (!n && _.dismissibleContentSeenDuringSession.has(e))) return !1;
         }
         let n = new Date();
+        n.setHours(0, 0, 0, 0),
+            null != _.dailyCapPeriodStart &&
+                _.dailyCapPeriodStart < n.getTime() &&
+                ((_.numberOfDCsShownToday = 0), (_.dailyCapPeriodStart = null), (u = !1));
+        let i = _.numberOfDCsShownToday >= 3;
         return (
-            n.setHours(0, 0, 0, 0),
-            null != u.dailyCapPeriodStart &&
-                u.dailyCapPeriodStart < n.getTime() &&
-                ((u.numberOfDCsShownToday = 0), (u.dailyCapPeriodStart = null)),
-            u.numberOfDCsShownToday >= 3
+            i &&
+                !u &&
+                ((u = !0),
+                c.info("Daily cap in effect, suppressing fatigable content until tomorrow", {
+                    shown_dcs: _.numberOfDCsShownToday,
+                })),
+            i
         );
     }
 }
-let _ = new d(r.h, {
+let h = new A(r.h, {
     LOGOUT: function () {
-        u = {
-            ...u,
-            dismissibleContentSeenDuringSession: new Set(),
-            renderedAtTimestamps: new Map(),
-            seenForGuildId: new Map(),
-        };
+        (u = !1),
+            (_ = {
+                ..._,
+                dismissibleContentSeenDuringSession: new Set(),
+                renderedAtTimestamps: new Map(),
+                seenForGuildId: new Map(),
+            });
     },
     DCF_DAILY_CAP_OVERRIDE: function (e) {
         let { value: t } = e;
-        u.dailyCapOverridden = t;
+        _.dailyCapOverridden = t;
     },
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: function (e) {
         let { value: t } = e;
-        u.newUserMinAgeRequiredOverridden = t;
+        _.newUserMinAgeRequiredOverridden = t;
     },
     DCF_HANDLE_DC_SHOWN: function (e) {
         let { dismissibleContent: t, guildId: n } = e,
             i = new Date();
-        if ((u.renderedAtTimestamps.set(t, i.getTime()), a.C.has(t) || u.dailyCapOverridden)) return;
+        if ((_.renderedAtTimestamps.set(t, i.getTime()), l.C.has(t) || _.dailyCapOverridden)) return;
         let r = (0, o.vf)(t) && null != n;
-        if (!(!r && u.dismissibleContentSeenDuringSession.has(t))) {
-            if (!(r && c(t, n))) {
+        if (!(!r && _.dismissibleContentSeenDuringSession.has(t))) {
+            if (!(r && E(t, n))) {
                 if (r) {
-                    let e = u.seenForGuildId.get(n) ?? new Set();
-                    e.add(t), u.seenForGuildId.set(n, e);
-                } else u.dismissibleContentSeenDuringSession.add(t);
-                if (null == u.dailyCapPeriodStart) {
+                    let e = _.seenForGuildId.get(n) ?? new Set();
+                    e.add(t), _.seenForGuildId.set(n, e);
+                } else _.dismissibleContentSeenDuringSession.add(t);
+                if (null == _.dailyCapPeriodStart) {
                     let e = new Date();
-                    e.setHours(0, 0, 0, 0), (u.dailyCapPeriodStart = e.getTime());
+                    e.setHours(0, 0, 0, 0), (_.dailyCapPeriodStart = e.getTime());
                 }
-                (u.numberOfDCsShownToday += 1),
-                    u.numberOfDCsShownToday > 3 &&
-                        s.default.track(l.HAw.DCF_CAP_EXCEEDED, {
+                (_.numberOfDCsShownToday += 1),
+                    3 === _.numberOfDCsShownToday &&
+                        c.info("Daily cap reached", { dismissible_content: t, shown_dcs: _.numberOfDCsShownToday }),
+                    _.numberOfDCsShownToday > 3 &&
+                        s.default.track(d.HAw.DCF_CAP_EXCEEDED, {
                             cap_type: "daily_cap",
                             dismissible_content: t,
-                            shown_dcs: u.numberOfDCsShownToday,
+                            shown_dcs: _.numberOfDCsShownToday,
                         });
             }
         }
     },
     DCF_HANDLE_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;
-        (u.lastDismissed = { content: t, guildId: n }), u.renderedAtTimestamps.delete(t);
+        (_.lastDismissed = { content: t, guildId: n }), _.renderedAtTimestamps.delete(t);
     },
     DCF_OVERRIDE_LAST_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;
-        u.lastDismissed = null != t ? { content: t, guildId: n } : null;
+        _.lastDismissed = null != t ? { content: t, guildId: n } : null;
     },
     DCF_RESET: function () {
-        (u.dailyCapPeriodStart = null),
-            (u.numberOfDCsShownToday = 0),
-            (u.dismissibleContentSeenDuringSession = new Set()),
-            (u.seenForGuildId = new Map()),
-            (u.lastDismissed = null);
+        (u = !1),
+            (_.dailyCapPeriodStart = null),
+            (_.numberOfDCsShownToday = 0),
+            (_.dismissibleContentSeenDuringSession = new Set()),
+            (_.seenForGuildId = new Map()),
+            (_.lastDismissed = null);
     },
 });
