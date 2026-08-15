@@ -3011,12 +3011,14 @@ function lV(e) {
                 : e.properties.properties.giftReminderNagbar;
         }),
         V = (0, j.g)(m, A),
-        K = N && null != U && null != H && B,
-        q = { selectedPlan: T, selectedSkuId: S, step: x };
-    if (null == T) throw new h.v({ message: "Expected plan to be selected", extraSentryInformation: q });
-    if (null == S) throw new h.v({ message: "Expected selectedSkuId", extraSentryInformation: q });
-    if (null == x) throw new h.v({ message: "Step should be set", extraSentryInformation: q });
-    let Z = o.useCallback(() => {
+        K = null != _ ? _.orbsReward : null,
+        q = null != K && K > 0,
+        Z = N && !q && null != U && null != H && B,
+        z = { selectedPlan: T, selectedSkuId: S, step: x };
+    if (null == T) throw new h.v({ message: "Expected plan to be selected", extraSentryInformation: z });
+    if (null == S) throw new h.v({ message: "Expected selectedSkuId", extraSentryInformation: z });
+    if (null == x) throw new h.v({ message: "Step should be set", extraSentryInformation: z });
+    let Q = o.useCallback(() => {
         i(), a?.();
     }, [i, a]);
     (0, ee.Ay)(() => {
@@ -3027,8 +3029,7 @@ function lV(e) {
                 subscription_id: y?.id,
             });
     });
-    let z = null != _ ? _.orbsReward : null,
-        Q = (0, lv.A)();
+    let $ = (0, lv.A)();
     o.useEffect(() => {
         function e() {
             if (P)
@@ -3068,9 +3069,9 @@ function lV(e) {
                     }),
                         lk._.dispatch(eG.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             else
-                null != z && z > 0
-                    ? (0, lN.$)({ orbsAmount: z })
-                    : lO(N, S) && (Q?.id === lb.Ym || Q?.name?.includes(lb.YX)) && (0, lb.tu)();
+                null != K && K > 0
+                    ? (0, lN.$)({ orbsAmount: K })
+                    : lO(N, S) && ($?.id === lb.Ym || $?.name?.includes(lb.YX)) && (0, lb.tu)();
         }
         return (
             lk._.subscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -3078,7 +3079,7 @@ function lV(e) {
                 lk._.unsubscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [P, y, z, Q, N, S, E]),
+    }, [P, y, K, $, N, S, E]),
         o.useEffect(() => {
             !N || null == b || null == R || M || O || (0, lw.Ik)(b) || L({ onSubscriptionConfirmation: a });
         }, [L, N, b, R, M, O, a]),
@@ -3088,9 +3089,9 @@ function lV(e) {
                 null != Y &&
                 (0, lT.qr)(lg.M.GIFTING_PROMOTION_REMINDER, Y, { dismissAction: lW.i.INDIRECT_ACTION });
         }, [W, Y, F]);
-    let $ = null != p ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != u) t = u(T, Z, y);
-    else if (N) t = (0, l.jsx)(lL.fw, { planId: T.id, onClose: Z });
+    let J = null != p ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != u) t = u(T, Q, y);
+    else if (N) t = (0, l.jsx)(lL.fw, { planId: T.id, onClose: Q });
     else {
         let e =
             I === T.id
@@ -3102,11 +3103,11 @@ function lV(e) {
                   };
         t = (0, l.jsx)(lL.Ay, {
             planId: T.id,
-            onClose: Z,
+            onClose: Q,
             paymentSourceType: V,
             hideClose: null != G,
             startingFractionalPremiumEndsAt: v,
-            customCTAType: $,
+            customCTAType: J,
             ...e,
         });
     }
@@ -3114,7 +3115,7 @@ function lV(e) {
         children: [
             (0, l.jsxs)(eY.dZ, { children: [(0, l.jsx)(nG.A, {}), t] }),
             null != G && G,
-            K && null != U && (0, l.jsx)(lY, { rewardSkuId: U, onClose: Z, onRewardModalClose: D }),
+            Z && null != U && (0, l.jsx)(lY, { rewardSkuId: U, onClose: Q, onRewardModalClose: D }),
         ],
     });
 }
