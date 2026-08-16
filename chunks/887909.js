@@ -37,8 +37,8 @@ var i = n(477900),
     R = n(708988),
     O = n(228366),
     L = n(830215),
-    y = n(803306),
-    D = n(736653),
+    D = n(803306),
+    y = n(736653),
     v = n(573648),
     b = n(95561),
     M = n(269815),
@@ -231,12 +231,12 @@ function eL(e) {
                   null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eO.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
-                      return (0, i.jsx)(ey, { icon: n, text: r }, t);
+                      return (0, i.jsx)(eD, { icon: n, text: r }, t);
                   }),
               ],
           });
 }
-function ey(e) {
+function eD(e) {
     let { icon: t, text: n } = e;
     return (0, i.jsxs)("div", {
         className: eO.f_,
@@ -246,7 +246,7 @@ function ey(e) {
         ],
     });
 }
-var eD = n(285796),
+var ey = n(285796),
     ev = n(628284),
     eb = n(444927),
     eM = n(629546);
@@ -260,7 +260,7 @@ function eP(e) {
         "aria-label": l,
         children: [
             !0 === r
-                ? (0, i.jsx)(eD.a, {
+                ? (0, i.jsx)(ey.a, {
                       size: "md",
                       color: "currentColor",
                       className: s()(eM.Kk, eM.RC),
@@ -737,9 +737,10 @@ let e1 = (0, F.Fe)({
             n.e("444376"),
             n.e("430920"),
             n.e("809915"),
+            n.e("486726"),
             n.e("53374"),
             n.e("710638"),
-            n.e("235344"),
+            n.e("570474"),
             n.e("781300"),
             n.e("631825"),
             n.e("770697"),
@@ -790,6 +791,7 @@ let e1 = (0, F.Fe)({
             n.e("434691"),
             n.e("225990"),
             n.e("539620"),
+            n.e("764615"),
             n.e("636126"),
             n.e("133902"),
             n.e("562168"),
@@ -972,7 +974,7 @@ function e4(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, Z.default], () => (null != $.default.getId() ? Z.default.getCurrentUser() : null)),
-        o = (0, D.Ay)(),
+        o = (0, y.Ay)(),
         d = v.A.get(n),
         c = null != d ? ((0, T.q)(o) ? d.icon.lightSVG : d.icon.darkSVG) : null,
         u = null != s ? q.Ay.getApplicationIconURL({ id: s.id, icon: s.icon }) : null,
@@ -1037,7 +1039,7 @@ function e4(e) {
 }
 function e5(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
-        s = (0, D.Ay)(),
+        s = (0, y.Ay)(),
         l = v.A.get(t),
         o = null != l ? ((0, T.q)(s) ? l.icon.lightSVG : l.icon.darkSVG) : null;
     return (0, i.jsxs)("div", {
@@ -1091,7 +1093,7 @@ function e7(e) {
             nonce: S,
             prompt: N,
             authorizations: C,
-            scopes: D,
+            scopes: y,
             permissions: M,
             guildId: U,
             channelId: x,
@@ -1119,8 +1121,8 @@ function e7(e) {
         [eg, eS] = r.useState(null),
         [eN, eC] = r.useState(!1),
         [eR, eO] = r.useState(!1),
-        ey = eI?.guilds,
-        [eD, ev] = r.useState(U ?? null),
+        eD = eI?.guilds,
+        [ey, ev] = r.useState(U ?? null),
         [eb, eM] = r.useState(x ?? null),
         [eP, ew] = r.useState(X.x3),
         eG = (0, I.bG)([z.A], () => (null == e_ ? null : (z.A.getAccounts().find((e) => e.type === e_) ?? null)), [e_]),
@@ -1128,9 +1130,9 @@ function e7(e) {
         eF = r.useMemo(() => (eI?.user != null ? new K.A(eI.user) : null), [eI?.user]),
         eV = (0, I.bG)([Z.default], () => Z.default.getCurrentUser()?.nsfwAllowed),
         eH = (0, G.A)(eI?.application ?? null),
-        ej = r.useMemo(() => ey?.find((e) => e.id === eD), [ey, eD]),
+        ej = r.useMemo(() => eD?.find((e) => e.id === ey), [eD, ey]),
         [eW, eY] = r.useState(null),
-        eK = r.useMemo(() => null == eE && null == k && (D?.length ?? 0) === 0 && null == f, [eE, D?.length, f, k]),
+        eK = r.useMemo(() => null == eE && null == k && (y?.length ?? 0) === 0 && null == f, [eE, y?.length, f, k]),
         [e$, ez] = r.useState(null);
     r.useEffect(() => {
         eK && P.Ay.fetchApplication(A).then((e) => ez(Y.Ay.createFromServer(e)));
@@ -1140,11 +1142,11 @@ function e7(e) {
             [e$?.integrationTypesConfig, eW],
         ),
         { requestedScopes: eJ, accountScopes: e2 } = r.useMemo(() => {
-            let e = eK ? eq?.scopes : D,
+            let e = eK ? eq?.scopes : y,
                 t = (0, J.e)(e ?? []),
                 n = es.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
-        }, [eq?.scopes, D, eK]),
+        }, [eq?.scopes, y, eK]),
         e3 = r.useMemo(() => (eK ? E.iu(eq?.permissions ?? 0) : M) ?? X.x3, [eq?.permissions, M, eK]),
         e7 = r.useRef(!1),
         [e8, e9] = r.useState(ed ?? []),
@@ -1153,7 +1155,7 @@ function e7(e) {
         let e = $.default.getAnalyticsToken();
         null != e
             ? O.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
-            : (0, y.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
+            : (0, D.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
             if (!e7.current && null == ed) {
@@ -1198,7 +1200,7 @@ function e7(e) {
                         integrationType: eW,
                         connectedAccountProvider: e_,
                         permissions: E.TF(e3, eP),
-                        guildId: eW === u.b.GUILD_INSTALL && null != eD ? eD : void 0,
+                        guildId: eW === u.b.GUILD_INSTALL && null != ey ? ey : void 0,
                         channelId: eW === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                     });
                     if ((e && (await (0, w.Yx)(A, e8)), null != q))
@@ -1219,7 +1221,7 @@ function e7(e) {
                         eC(!1);
                 }
             },
-            [ee, q, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, eD, eW, e_, eb, e8],
+            [ee, q, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, ey, eW, e_, eb, e8],
         ),
         tr = r.useRef(!1),
         ta = r.useCallback(async () => {
@@ -1374,7 +1376,7 @@ function e7(e) {
             if (null == eI || null == eF || null == eW)
                 return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             let tf = null == eg || eg instanceof Error ? {} : eg,
-                tp = ey?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                tp = eD?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tT = eW === u.b.GUILD_INSTALL && eJ.includes(_.F.WEBHOOK_INCOMING),
                 tm =
                     tT ||
@@ -1402,17 +1404,17 @@ function e7(e) {
                     tm
                         ? (0, i.jsx)(eB, {
                               error: (tf[_.F.BOT] ?? tf[_.F.APPLICATIONS_COMMANDS] ?? [])[0],
-                              selectedGuildId: eD,
+                              selectedGuildId: ey,
                               onGuildChange: ev,
                               guilds: tp ?? [],
-                              disabled: "" !== eD && null != eD && !0 === F,
+                              disabled: "" !== ey && null != ey && !0 === F,
                           })
                         : null,
                     tT
                         ? (0, i.jsx)(eQ, {
                               error: (tf[_.F.WEBHOOK_INCOMING] ?? [])[0],
                               selectedChannelId: eb,
-                              selectedGuildId: eD,
+                              selectedGuildId: ey,
                               onChannelChange: eM,
                           })
                         : null,

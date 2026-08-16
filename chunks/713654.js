@@ -1,4 +1,4 @@
-t.d(e, { Bq: () => z, _U: () => ll, gU: () => $ });
+t.d(e, { Bq: () => $, _U: () => le, gU: () => ll });
 var s = t(138134),
     a = t(622629),
     i = t(922288),
@@ -23,8 +23,8 @@ var s = t(138134),
     T = t(107086),
     Z = t(532590),
     M = t(597050),
-    R = t(191023),
-    C = t(434831),
+    C = t(191023),
+    R = t(434831),
     _ = t(56059),
     L = t(194261),
     j = t(808107),
@@ -41,181 +41,186 @@ var s = t(138134),
     J = t(855473),
     S = t(740426),
     k = t(51758),
-    P = t(696451),
-    X = t(71393),
-    Y = t(287809),
-    Q = t(148719),
-    K = t(746080),
-    W = t(652215),
-    q = t(375708);
-function z(l, e, t, s) {
+    P = t(681466),
+    X = t(696451),
+    Y = t(71393),
+    Q = t(287809),
+    K = t(148719),
+    W = t(746080),
+    q = t(652215),
+    z = t(375708);
+function $(l, e, t, s) {
     if (null == l) return null;
-    if (l.id === e?.rulesChannelId) return q.intl.string(q.t["/7EhaT"]);
+    if (l.id === e?.rulesChannelId) return z.intl.string(z.t["/7EhaT"]);
     let a = l.isNSFW();
     switch (l.type) {
-        case W.rbe.GUILD_TEXT:
-            if (null != l.linkedLobby) return q.intl.string(q.t.Lt3PAK);
-            if (s) return q.intl.string(q.t.LKpYbi);
-            if (a) return q.intl.string(q.t.vvASTb);
-            if (l.isSpoilerChannel()) return q.intl.string(q.t["8QsJXA"]);
-            if ((0, Q.A)(l)) return q.intl.string(q.t.jQ1plj);
-            return q.intl.string(q.t.t1yj0N);
-        case W.rbe.GUILD_FORUM:
-            let i = l.isMediaChannel(),
-                r = l.isGameInvitesChannel();
-            if (a) return i ? q.intl.string(q.t["pZ/fYa"]) : q.intl.string(q.t.ibmpPi);
-            if (l.isSpoilerChannel()) return q.intl.string(q.t.TDGaxd);
-            if ((0, Q.A)(l)) {
-                if (r) return q.intl.string(q.t.AwjsC9);
-                return i ? q.intl.string(q.t.gfVCfL) : q.intl.string(q.t.UbLM3J);
+        case q.rbe.GUILD_TEXT:
+            let i = (0, P.a)(l, "getChannelIconTooltipText");
+            if (null != i) return i;
+            if (null != l.linkedLobby) return z.intl.string(z.t.Lt3PAK);
+            if (s) return z.intl.string(z.t.LKpYbi);
+            if (a) return z.intl.string(z.t.vvASTb);
+            if (l.isSpoilerChannel()) return z.intl.string(z.t["8QsJXA"]);
+            if ((0, K.A)(l)) return z.intl.string(z.t.jQ1plj);
+            return z.intl.string(z.t.t1yj0N);
+        case q.rbe.GUILD_FORUM:
+            let r = l.isMediaChannel(),
+                n = l.isGameInvitesChannel();
+            if (a) return r ? z.intl.string(z.t["pZ/fYa"]) : z.intl.string(z.t.ibmpPi);
+            if (l.isSpoilerChannel()) return z.intl.string(z.t.TDGaxd);
+            if ((0, K.A)(l)) {
+                if (n) return z.intl.string(z.t.AwjsC9);
+                return r ? z.intl.string(z.t.gfVCfL) : z.intl.string(z.t.UbLM3J);
             }
-            if (r) return q.intl.string(q.t.BW4VHV);
-            return i ? q.intl.string(q.t.seKITE) : q.intl.string(q.t["0sDXdm"]);
-        case W.rbe.GUILD_MEDIA:
-            if (a) return q.intl.string(q.t["pZ/fYa"]);
-            if (l.isSpoilerChannel()) return q.intl.string(q.t.vjYxox);
-            if ((0, Q.A)(l)) return q.intl.string(q.t.gfVCfL);
-            return q.intl.string(q.t.seKITE);
-        case W.rbe.GUILD_STAGE_VOICE:
-            if (t) return q.intl.string(q.t.ZjZB3r);
-            if ((0, Q.A)(l)) return q.intl.string(q.t["7pRuCQ"]);
-            return q.intl.string(q.t.eJFSiN);
-        case W.rbe.GUILD_VOICE:
-            if (t) return q.intl.string(q.t.xY8Wth);
-            if (a) return q.intl.string(q.t.ajeTKN);
-            if (l.isSpoilerChannel()) return q.intl.string(q.t.hGmOlP);
-            if ((0, Q.A)(l)) return q.intl.string(q.t.qaY8Dm);
-            return q.intl.string(q.t["0kBmow"]);
-        case W.rbe.GUILD_ANNOUNCEMENT:
-            if (a) return q.intl.string(q.t.eRc6o9);
-            if (l.isSpoilerChannel()) return q.intl.string(q.t["7F1TCC"]);
-            if ((0, Q.A)(l)) return q.intl.string(q.t.EHLQwl);
-            return q.intl.string(q.t.GtDRi2);
-        case W.rbe.GUILD_STORE:
-            return q.intl.string(q.t.Ea4NDL);
-        case W.rbe.DM:
-            return q.intl.string(q.t.jN2DfZ);
-        case W.rbe.GROUP_DM:
-            return q.intl.string(q.t["e5y+gm"]);
-        case W.rbe.GUILD_DIRECTORY:
-            return q.intl.string(q.t.IzZTIe);
-        case W.rbe.PUBLIC_THREAD:
-            return q.intl.string(q.t["7Xm5QI"]);
-        case W.rbe.PRIVATE_THREAD:
-            return q.intl.string(q.t.F1zyvU);
+            if (n) return z.intl.string(z.t.BW4VHV);
+            return r ? z.intl.string(z.t.seKITE) : z.intl.string(z.t["0sDXdm"]);
+        case q.rbe.GUILD_MEDIA:
+            if (a) return z.intl.string(z.t["pZ/fYa"]);
+            if (l.isSpoilerChannel()) return z.intl.string(z.t.vjYxox);
+            if ((0, K.A)(l)) return z.intl.string(z.t.gfVCfL);
+            return z.intl.string(z.t.seKITE);
+        case q.rbe.GUILD_STAGE_VOICE:
+            if (t) return z.intl.string(z.t.ZjZB3r);
+            if ((0, K.A)(l)) return z.intl.string(z.t["7pRuCQ"]);
+            return z.intl.string(z.t.eJFSiN);
+        case q.rbe.GUILD_VOICE:
+            if (t) return z.intl.string(z.t.xY8Wth);
+            if (a) return z.intl.string(z.t.ajeTKN);
+            if (l.isSpoilerChannel()) return z.intl.string(z.t.hGmOlP);
+            if ((0, K.A)(l)) return z.intl.string(z.t.qaY8Dm);
+            return z.intl.string(z.t["0kBmow"]);
+        case q.rbe.GUILD_ANNOUNCEMENT:
+            if (a) return z.intl.string(z.t.eRc6o9);
+            if (l.isSpoilerChannel()) return z.intl.string(z.t["7F1TCC"]);
+            if ((0, K.A)(l)) return z.intl.string(z.t.EHLQwl);
+            return z.intl.string(z.t.GtDRi2);
+        case q.rbe.GUILD_STORE:
+            return z.intl.string(z.t.Ea4NDL);
+        case q.rbe.DM:
+            return z.intl.string(z.t.jN2DfZ);
+        case q.rbe.GROUP_DM:
+            return z.intl.string(z.t["e5y+gm"]);
+        case q.rbe.GUILD_DIRECTORY:
+            return z.intl.string(z.t.IzZTIe);
+        case q.rbe.PUBLIC_THREAD:
+            return z.intl.string(z.t["7Xm5QI"]);
+        case q.rbe.PRIVATE_THREAD:
+            return z.intl.string(z.t.F1zyvU);
         default:
             return null;
     }
 }
-function $(l, e) {
+function ll(l, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: q = !1, video: z = !1, stream: $ = !1, hasActiveThreads: ll = !1, textFocused: le = !1 } = t;
+        { locked: z = !1, video: $ = !1, stream: ll = !1, hasActiveThreads: le = !1, textFocused: lt = !1 } = t;
     if (null == l) return null;
-    null == e && (e = X.A.getGuild(l.getGuildId()));
-    let lt = (0, k.V)(e?.id, [X.A, Y.default, P.Ay]);
+    null == e && (e = Y.A.getGuild(l.getGuildId()));
+    let ls = (0, k.V)(e?.id, [Y.A, Q.default, X.Ay]);
     if (l.isModeratorReportChannel()) return s.i;
     if (l?.id === e?.rulesChannelId) return a.B;
-    let ls = l.isNSFW();
+    let la = l.isNSFW();
     switch (l.type) {
-        case W.rbe.GUILD_ANNOUNCEMENT:
-            if (ll)
-                if (ls) return i.M;
+        case q.rbe.GUILD_ANNOUNCEMENT:
+            if (le)
+                if (la) return i.M;
                 else if (l.isSpoilerChannel()) return r.u;
-                else if ((0, Q.A)(l)) return n.X;
+                else if ((0, K.A)(l)) return n.X;
                 else return c.k;
-            if (ls) return i.M;
+            if (la) return i.M;
             if (l.isSpoilerChannel()) return r.u;
-            if ((0, Q.A)(l)) return n.X;
+            if ((0, K.A)(l)) return n.X;
             return c.k;
-        case W.rbe.GUILD_STORE:
+        case q.rbe.GUILD_STORE:
             return h.g;
-        case W.rbe.DM:
-        case W.rbe.GROUP_DM:
+        case q.rbe.DM:
+        case q.rbe.GROUP_DM:
             return d.X;
-        case W.rbe.PRIVATE_THREAD:
+        case q.rbe.PRIVATE_THREAD:
             return o.t;
-        case W.rbe.MEDIA_THREAD:
+        case q.rbe.MEDIA_THREAD:
             return v.x;
-        case W.rbe.ANNOUNCEMENT_THREAD:
-        case W.rbe.PUBLIC_THREAD:
-            if (ls) return f.m;
+        case q.rbe.ANNOUNCEMENT_THREAD:
+        case q.rbe.PUBLIC_THREAD:
+            if (la) return f.m;
             if (l.isForumPost()) return g.o;
             return u.y;
-        case W.rbe.GUILD_TEXT:
+        case q.rbe.GUILD_TEXT:
+            let li = (0, P.A)(l, "getChannelIconComponent");
+            if (null != li) return li;
             if (null != l.linkedLobby) return w.x;
-            if (ls) return p.r;
+            if (la) return p.r;
             if (l.isSpoilerChannel()) return A.n;
-            if ((0, Q.A)(l)) return x.I;
+            if ((0, K.A)(l)) return x.I;
             return m.N;
-        case W.rbe.GUILD_FORUM:
-            let la = l.isMediaChannel(),
-                li = l.isGameInvitesChannel();
-            if (ls) return la ? N.D : I.f;
+        case q.rbe.GUILD_FORUM:
+            let lr = l.isMediaChannel(),
+                ln = l.isGameInvitesChannel();
+            if (la) return lr ? N.D : I.f;
             if (l.isSpoilerChannel()) return E.H;
-            if ((0, Q.A)(l)) {
-                if (li) return T.s;
-                return la ? Z.c : M.Q;
-            } else if (la) return R.x;
-            else if (li) return C.t;
+            if ((0, K.A)(l)) {
+                if (ln) return T.s;
+                return lr ? Z.c : M.Q;
+            } else if (lr) return C.x;
+            else if (ln) return R.t;
             else return _.b;
-        case W.rbe.GUILD_MEDIA:
-            if (ls) return N.D;
+        case q.rbe.GUILD_MEDIA:
+            if (la) return N.D;
             if (l.isSpoilerChannel()) return E.H;
-            if ((0, Q.A)(l)) return Z.c;
-            else return R.x;
-        case W.rbe.GUILD_STAGE_VOICE:
-            if (lt) return (0, Q.A)(l) ? L.X : j.D;
-            if (q) return L.X;
-            if ((0, Q.A)(l)) return j.D;
+            if ((0, K.A)(l)) return Z.c;
+            else return C.x;
+        case q.rbe.GUILD_STAGE_VOICE:
+            if (ls) return (0, K.A)(l) ? L.X : j.D;
+            if (z) return L.X;
+            if ((0, K.A)(l)) return j.D;
             else return D.q;
-        case W.rbe.GUILD_VOICE:
-            if (le) return g.o;
-            if (ls) return V.O;
+        case q.rbe.GUILD_VOICE:
+            if (lt) return g.o;
+            if (la) return V.O;
             if (l.isSpoilerChannel()) return U.P;
-            if ($) return y.F;
-            if (lt)
-                if ((0, Q.A)(l)) return L.X;
-                else return z ? O.k : H.t;
-            if (q) return L.X;
-            if ((0, Q.A)(l)) return z ? O.k : H.t;
-            else return z ? b.n : G.H;
-        case W.rbe.GUILD_DIRECTORY:
+            if (ll) return y.F;
+            if (ls)
+                if ((0, K.A)(l)) return L.X;
+                else return $ ? O.k : H.t;
+            if (z) return L.X;
+            if ((0, K.A)(l)) return $ ? O.k : H.t;
+            else return $ ? b.n : G.H;
+        case q.rbe.GUILD_DIRECTORY:
             return B.P;
-        case W.rbe.GUILD_CATEGORY:
+        case q.rbe.GUILD_CATEGORY:
             return F.s;
         default:
-            if (K.aQ.has(l.id)) {
-                if (l.id === K.T4.GUILD_HOME || l.id === K.T4.SERVER_GUIDE) return J.Z;
-                else if (l.id === K.T4.CHANNEL_BROWSER || l.id === K.T4.CUSTOMIZE_COMMUNITY) return S.k;
+            if (W.aQ.has(l.id)) {
+                if (l.id === W.T4.GUILD_HOME || l.id === W.T4.SERVER_GUIDE) return J.Z;
+                else if (l.id === W.T4.CHANNEL_BROWSER || l.id === W.T4.CUSTOMIZE_COMMUNITY) return S.k;
             }
             return null;
     }
 }
-function ll(l) {
+function le(l) {
     switch (l) {
-        case W.rbe.GUILD_ANNOUNCEMENT:
+        case q.rbe.GUILD_ANNOUNCEMENT:
             return c.k;
-        case W.rbe.GUILD_STORE:
+        case q.rbe.GUILD_STORE:
             return h.g;
-        case W.rbe.DM:
-        case W.rbe.GROUP_DM:
+        case q.rbe.DM:
+        case q.rbe.GROUP_DM:
             return d.X;
-        case W.rbe.PRIVATE_THREAD:
+        case q.rbe.PRIVATE_THREAD:
             return o.t;
-        case W.rbe.ANNOUNCEMENT_THREAD:
-        case W.rbe.PUBLIC_THREAD:
+        case q.rbe.ANNOUNCEMENT_THREAD:
+        case q.rbe.PUBLIC_THREAD:
             return u.y;
-        case W.rbe.GUILD_TEXT:
+        case q.rbe.GUILD_TEXT:
             return m.N;
-        case W.rbe.GUILD_FORUM:
+        case q.rbe.GUILD_FORUM:
             return _.b;
-        case W.rbe.GUILD_MEDIA:
-            return R.x;
-        case W.rbe.GUILD_STAGE_VOICE:
+        case q.rbe.GUILD_MEDIA:
+            return C.x;
+        case q.rbe.GUILD_STAGE_VOICE:
             return D.q;
-        case W.rbe.GUILD_VOICE:
+        case q.rbe.GUILD_VOICE:
             return G.H;
-        case W.rbe.GUILD_CATEGORY:
+        case q.rbe.GUILD_CATEGORY:
             return F.s;
         default:
             return null;

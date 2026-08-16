@@ -27,7 +27,7 @@ function C(e) {
 let R = new Map(),
     O = null,
     L = !1;
-async function y() {
+async function D() {
     try {
         return (
             await Promise.all([
@@ -198,9 +198,10 @@ async function y() {
                 n.e("444376"),
                 n.e("430920"),
                 n.e("809915"),
+                n.e("486726"),
                 n.e("53374"),
                 n.e("710638"),
-                n.e("235344"),
+                n.e("570474"),
                 n.e("781300"),
                 n.e("631825"),
                 n.e("770697"),
@@ -251,6 +252,7 @@ async function y() {
                 n.e("434691"),
                 n.e("225990"),
                 n.e("539620"),
+                n.e("764615"),
                 n.e("577084"),
                 n.e("636126"),
                 n.e("133902"),
@@ -317,7 +319,7 @@ async function y() {
         return E.A.captureException(e), null;
     }
 }
-function D(e) {
+function y(e) {
     let { channelId: t, guildId: n, messageId: i } = e;
     if (!p.default.isAnyOverlayRendering() || null == o.A.getChannel(t) || d.A.isReady(t)) return;
     let r = R.get(t);
@@ -328,7 +330,7 @@ function D(e) {
     R.set(t, s);
 }
 async function v(e) {
-    let t = await y();
+    let t = await D();
     if (!(null == t || m.A.isInputLocked(T.A.getTargetPID())))
         for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
@@ -340,7 +342,7 @@ function b() {
         let t = o.A.getChannel(e);
         null != t &&
             (0, l.pQ)(t.type) &&
-            ((O = e), D({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
+            ((O = e), y({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
 function M(e) {
@@ -364,11 +366,11 @@ function M(e) {
 function P(e) {
     let { channelId: t, lastMessageId: n } = e,
         i = o.A.getChannel(t);
-    D({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
+    y({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
 }
 function U(e) {
     let { channelId: t, guildId: n, messageId: i, source: r } = e;
-    r !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), v(t)), D({ channelId: t, guildId: n, messageId: i });
+    r !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), v(t)), y({ channelId: t, guildId: n, messageId: i });
 }
 function w(e) {
     let { channelId: t } = e,
@@ -378,7 +380,7 @@ function w(e) {
             let e = A.A.getSelectedChannelId();
             if ((null == e && (L = !1), null == e || e === t)) return;
             let n = o.A.getChannel(e);
-            D({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
+            y({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
         }, 0);
 }
 function G() {
@@ -391,7 +393,7 @@ function x(e) {
     let n = A.A.getSelectedChannelId();
     if (null == n) return;
     let i = o.A.getChannel(n);
-    D({ channelId: n, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: null });
+    y({ channelId: n, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: null });
 }
 function k(e) {
     let t = o.A.getChannel(e);
@@ -414,7 +416,7 @@ async function V(e) {
         null != e && i.A.ackTextChatChannel(e);
         return;
     }
-    let t = await y();
+    let t = await D();
     if (null == t || !p.default.isAnyOverlayRendering()) return;
     let n = A.A.getSelectedChannelId();
     if (null != n && t.hasNotificationForChannel(n)) return;

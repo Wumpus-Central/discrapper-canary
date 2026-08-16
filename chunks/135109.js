@@ -1,36 +1,36 @@
-l.r(i), l.d(i, { default: () => M });
+l.r(i), l.d(i, { default: () => U });
 var a = l(477900),
     n = l(582128),
     t = l(17928),
-    d = l(834730),
-    r = l(47167),
-    s = l(726249),
-    c = l(742589),
+    d = l(47167),
+    r = l(726249),
+    s = l(742589),
+    c = l(131047),
     u = l(71393),
     o = l(683180),
     h = l(866665),
-    x = l(408278),
+    A = l(408278),
     p = l(663417),
-    A = l(811893),
-    m = l(789645),
-    I = l(47294),
-    g = l(16961),
-    f = l(625180),
-    N = l(91242),
-    C = l(580954),
-    v = l(672929),
-    j = l(228366),
-    y = l(494126),
-    T = l(5867);
-async function _(e) {
-    null == N.A.getFrame(e) ||
-        ((await (0, y.refreshProxyTicket)(e)) &&
-            ((0, y.promoteFrame)(e),
-            (0, y.updateFramePanelMode)(e, T.Gd.ACTIVITY_POPOUT_WINDOW),
-            j.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
+    x = l(811893),
+    I = l(70688),
+    g = l(47294),
+    m = l(16961),
+    C = l(625180),
+    f = l(91242),
+    N = l(580954),
+    T = l(672929),
+    y = l(228366),
+    _ = l(494126),
+    j = l(5867);
+async function b(e) {
+    null == f.A.getFrame(e) ||
+        ((await (0, _.refreshProxyTicket)(e)) &&
+            ((0, _.promoteFrame)(e),
+            (0, _.updateFramePanelMode)(e, j.Gd.ACTIVITY_POPOUT_WINDOW),
+            y.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
 }
-var P = l(574172),
-    b = l(869146),
+var v = l(574172),
+    P = l(869146),
     k = l(976860),
     O = l(808728),
     E = l(576705),
@@ -38,24 +38,24 @@ var P = l(574172),
     V = l(165610),
     H = l(818085),
     B = l(375708);
-function L(e) {
+function D(e) {
     let { applicationId: i, surface: l, guildId: t } = e,
-        d = (0, v.A)(i, l),
-        r = (0, g.G)(),
+        d = (0, T.A)(i, l),
+        r = (0, m.G)(),
         s = (0, V.x1)(d) && d.data.proxyTicketRefreshing,
         c = n.useCallback(() => {
-            null == d || s || f.A.refreshProxyTicket(d.id);
+            null == d || s || C.A.refreshProxyTicket(d.id);
         }, [d, s]),
         u = n.useCallback(() => {
-            null != d && (0, I.A)({ onConfirm: () => _(d.id) });
+            null != d && (0, g.A)({ onConfirm: () => b(d.id) });
         }, [d]),
         o = n.useCallback(() => {
             let e = d?.id;
             null != e &&
-                b.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT) &&
-                N.A.getMainFrame()?.id === e &&
-                (0, P.close)(F.MLl.ACTIVITY_POPOUT),
-                (0, C.A)().leaveFrame(e),
+                P.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT) &&
+                f.A.getMainFrame()?.id === e &&
+                (0, v.close)(F.MLl.ACTIVITY_POPOUT),
+                (0, N.A)().leaveFrame(e),
                 (0, k.pX)(
                     (function (e, i) {
                         if (null == e) return F.BVt.FRIENDS;
@@ -70,16 +70,16 @@ function L(e) {
                 );
         }, [d?.id, t, l]);
     if (!(0, V.x1)(d)) return null;
-    let j = B.intl.string(H.default.xKexN1),
-        y = B.intl.string(H.default["6g22y7"]),
-        T = B.intl.string(H.default.Ea0Wrr);
+    let y = B.intl.string(H.default.xKexN1),
+        _ = B.intl.string(H.default["6g22y7"]),
+        j = B.intl.string(H.default.Ea0Wrr);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(h.m, {
-                text: j,
+                text: y,
                 ariaHidden: !0,
-                children: (0, a.jsx)(x.K, {
-                    "aria-label": j,
+                children: (0, a.jsx)(A.K, {
+                    "aria-label": y,
                     icon: p.f,
                     variant: "icon-only",
                     size: "sm",
@@ -89,11 +89,11 @@ function L(e) {
             }),
             r
                 ? (0, a.jsx)(h.m, {
-                      text: y,
+                      text: _,
                       ariaHidden: !0,
-                      children: (0, a.jsx)(x.K, {
-                          "aria-label": y,
-                          icon: A.t,
+                      children: (0, a.jsx)(A.K, {
+                          "aria-label": _,
+                          icon: x.t,
                           variant: "icon-only",
                           size: "sm",
                           onClick: u,
@@ -101,58 +101,55 @@ function L(e) {
                   })
                 : null,
             (0, a.jsx)(h.m, {
-                text: T,
+                text: j,
                 ariaHidden: !0,
-                children: (0, a.jsx)(x.K, { "aria-label": T, icon: m.P, variant: "icon-only", size: "sm", onClick: o }),
+                children: (0, a.jsx)(A.K, { "aria-label": j, icon: I.o, variant: "icon-only", size: "sm", onClick: o }),
             }),
         ],
     });
 }
 var W = l(142882),
-    w = l(957907),
-    D = l(448922);
-function M(e) {
+    L = l(957907),
+    w = l(448922),
+    M = l(354919);
+function U(e) {
     let { channel: i } = e,
         l = (0, o.B9)(i.topic),
-        h = (0, w.A)(i),
-        x = (0, r.Ay)(i),
+        h = (0, L.A)(i),
+        A = (0, d.Ay)(i),
         p = (0, t.bG)([u.A], () => u.A.getGuild(i.guild_id), [i.guild_id]),
-        A = n.useMemo(() => ({ type: V.U4.APP_CHANNEL, channelId: i.id, guildId: i.guild_id ?? void 0 }), [i]);
+        x = n.useMemo(() => ({ type: V.U4.APP_CHANNEL, channelId: i.id, guildId: i.guild_id ?? void 0 }), [i]);
     return null == l
         ? null
         : (0, a.jsxs)("div", {
-              className: D.kL,
+              "data-has-border": !0,
+              className: M.TE,
               children: [
-                  (0, a.jsx)(s.HI, { location: p?.name, subsection: x ?? void 0 }),
+                  (0, a.jsx)(r.HI, { location: p?.name, subsection: A ?? void 0 }),
                   (0, a.jsx)("div", {
-                      className: D.N1,
+                      className: M.SC,
                       children: (0, a.jsx)(
-                          c.A,
+                          s.A,
                           {
                               guildId: i.guild_id,
                               channelId: i.id,
                               channelType: i.type,
                               hideSearch: !0,
-                              toolbar: (0, a.jsx)(L, { applicationId: l, surface: A, guildId: i.guild_id }),
-                              className: D.wx,
-                              "aria-label": x ?? void 0,
-                              children: (0, a.jsx)(d.E, {
-                                  variant: "text-md/semibold",
-                                  color: "text-default",
-                                  className: D.Bv,
-                                  children: x,
-                              }),
+                              toolbar: (0, a.jsx)(D, { applicationId: l, surface: x, guildId: i.guild_id }),
+                              className: M.DD,
+                              "aria-label": B.intl.string(B.t.BIYAqa),
+                              children: (0, c.zF)({ channel: i, channelName: A, guild: p }),
                           },
                           `header-${i.id}`,
                       ),
                   }),
                   (0, a.jsx)("div", {
-                      className: D.Ix,
+                      className: w.I,
                       "data-vibegrations-channel": !0,
                       children: (0, a.jsx)(W.A, {
                           projectId: h?.id ?? null,
                           applicationId: l,
-                          surface: A,
+                          surface: x,
                           chatOpen: !1,
                           previewReady: !0,
                       }),
