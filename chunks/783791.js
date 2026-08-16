@@ -17,7 +17,7 @@ var i = n(17928),
     f = n(746080),
     p = n(818085),
     T = n(375708);
-let m = "message1",
+let m = "bit_message1",
     g = new Set(["reply", "plan_proposed", "terminal_error"]);
 function S(e) {
     return !0 === e.finished || "" !== e.content || null != e.proposal || e.steps.some((e) => g.has(e.kind));
@@ -93,7 +93,7 @@ function G(e) {
                     s.A.isCurrentUserInRestrictedHours()
                 )
                     return;
-                let i = !c.A.isSoundDisabled(m),
+                let i = !c.A.isSoundDisabled("message1"),
                     r = _.A.getGuildId(),
                     g = null != r && h.A.getSelectedProjectId(r) === e ? r : null,
                     S = null != g && u.Ay.getChannelId() === f.VV.VIBEGRATIONS && A.A.isWindowFocused(),
