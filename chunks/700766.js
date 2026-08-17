@@ -10,4 +10,5 @@ a.exports = {
     kG: "stepDisclosureToggle__30c5c",
     Ue: "stepChevron__30c5c",
     yJ: "stepDetail__30c5c",
+    IN: "turnIdeasOffer__30c5c",
 };

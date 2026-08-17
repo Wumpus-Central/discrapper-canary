@@ -52,7 +52,12 @@ function M(e, t) {
 }
 function P(e) {
     let t = M(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments });
-    return null != e.kind && (t.kind = e.kind), null != e.proposal && (t.proposal = e.proposal), t;
+    return (
+        null != e.kind && (t.kind = e.kind),
+        null != e.proposal && (t.proposal = e.proposal),
+        null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
+        t
+    );
 }
 function U(e, t) {
     let n = N.get(e);
