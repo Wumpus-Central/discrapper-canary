@@ -17,4 +17,5 @@ e.exports = {
     Ue: "stepChevron__30c5c",
     yJ: "stepDetail__30c5c",
     IN: "turnIdeasOffer__30c5c",
+    y8: "stepScreenshots__30c5c",
 };
