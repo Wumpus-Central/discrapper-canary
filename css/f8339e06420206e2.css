@@ -140,6 +140,46 @@
     width: 100%
 }
 
+.gogoGiftCard_a45ed3 {
+    align-items: center;
+    background: var(--background-base-low);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space-24) var(--space-40);
+    overflow: clip;
+    padding: var(--space-32);
+    width: 100%
+}
+
+.gogoGiftImage_a45ed3 {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 232px
+}
+
+.gogoGiftInfo_a45ed3 {
+    align-items: flex-start;
+    flex: 1 1 240px;
+    gap: var(--space-16);
+    min-width: 0
+}
+
+.gogoGiftInfo_a45ed3,
+.gogoGiftText_a45ed3 {
+    display: flex;
+    flex-direction: column
+}
+
+.gogoGiftText_a45ed3 {
+    gap: var(--space-8)
+}
+
 .giftButtonCTA_a45ed3 {
     font-size: 14px;
     font-weight: 700
