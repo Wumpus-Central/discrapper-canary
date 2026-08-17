@@ -30,8 +30,8 @@ let O = (0, n(240921).Ay)({
     variations: { 1: { mode: "standard" }, 2: { mode: "low_latency" } },
 });
 var L = n(626584),
-    D = n(655087),
-    y = n(680725),
+    y = n(655087),
+    D = n(680725),
     v = n(487329),
     b = n(451988),
     M =
@@ -248,7 +248,7 @@ let $ = "2026-03-surface-direct-renderer",
 var Z = n(53857),
     q = n(734057),
     X = n(71393),
-    Q = n(626822),
+    Q = n(453028),
     J = n(763827),
     ee = n(412780),
     et = n(873985),
@@ -373,7 +373,7 @@ function eL(e) {
         decode: e.decode,
     }));
 }
-function eD(e) {
+function ey(e) {
     return e?.map((e) => ({
         type: e.type,
         rid: e.rid,
@@ -389,7 +389,7 @@ function eD(e) {
                 : void 0,
     }));
 }
-function ey(e) {
+function eD(e) {
     return (
         e?.map((e) => {
             var t;
@@ -568,7 +568,7 @@ class eb extends p.A {
                         this.handleHeartbeatAck(i);
                         break;
                     case 12:
-                        this.emit("video", i.user_id, i.audio_ssrc, i.video_ssrc, ey(i.streams));
+                        this.emit("video", i.user_id, i.audio_ssrc, i.video_ssrc, eD(i.streams));
                         break;
                     case 11:
                         this.emit("client-connect", i.user_ids);
@@ -700,7 +700,7 @@ class eb extends p.A {
         let t = (0, m.tB)() - this.connectionStartTime;
         this.logger.info(`[READY] took ${t} ms`),
             this.serverVersion >= 6 && this.send(16, {}),
-            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, ey(e.streams), e.experiments);
+            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, eD(e.streams), e.experiments);
     }
     supportsSfuUpdate() {
         return this.serverVersion >= 10;
@@ -835,7 +835,7 @@ class eb extends p.A {
                 token: a,
                 max_dave_protocol_version: s,
                 video: l,
-                streams: eD(o),
+                streams: ey(o),
             });
     }
     expeditedHeartbeat(e) {
@@ -904,7 +904,7 @@ class eb extends p.A {
         this.send(5, { speaking: this.serverVersion <= 3 ? !!e : e, delay: t, ssrc: n });
     }
     video(e, t, n, i) {
-        this.send(12, { audio_ssrc: e, video_ssrc: t, rtx_ssrc: n, streams: eD(i) });
+        this.send(12, { audio_ssrc: e, video_ssrc: t, rtx_ssrc: n, streams: ey(i) });
     }
     mediaSinkWants(e) {
         this.serverVersion >= 5 && this.send(15, e);
@@ -1759,8 +1759,8 @@ class e5 extends p.A {
                 totalPausesDuration: R,
                 totalFreezesDuration: O,
                 totalFramesDuration: L,
-                totalDecodeTime: D,
-                keyframes: y,
+                totalDecodeTime: y,
+                keyframes: D,
                 passthroughCount: v,
                 cryptorSuccessCount: b,
                 cryptorFailureCount: M,
@@ -1786,7 +1786,7 @@ class e5 extends p.A {
                   (u.receiver_total_frames_duration = L),
                   (u.receiver_pause_count = N),
                   (u.receiver_total_pauses_duration = R),
-                  (u.total_decode_time_ms = D),
+                  (u.total_decode_time_ms = y),
                   (u.frames_dropped_network = A),
                   (0, es.isWeb)() || (u.frames_dropped_render = E)),
             {
@@ -1803,7 +1803,7 @@ class e5 extends p.A {
                 num_nacks: m,
                 num_plis: g,
                 qp_sum: S,
-                num_keyframes: y,
+                num_keyframes: D,
                 cryptor_passthrough_count: v,
                 cryptor_success_count: b,
                 cryptor_failure_count: M,
@@ -3313,7 +3313,7 @@ class tu extends p.A {
                                 ...t,
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats("sender", this.userId),
-                                device_performance_class: (0, y.A)(),
+                                device_performance_class: (0, D.A)(),
                             });
                     });
                     let t = e.getCameraDurationStats();
@@ -3411,7 +3411,7 @@ class tu extends p.A {
                     voice_input_volume: a.inputVolume,
                     encryption_mode: this._encryptionMode,
                     channel_count: this.channelIds.size,
-                    device_performance_class: (0, y.A)(),
+                    device_performance_class: (0, D.A)(),
                     num_fast_udp_reconnects:
                         null != this._connection ? this._connection?.getNumFastUdpReconnects() : null,
                     parent_media_session_id: this.parentMediaSessionId,
@@ -4025,6 +4025,7 @@ class tu extends p.A {
             participant_type: this.getVoiceParticipantType(),
             join_voice_id: this.joinVoiceId,
             is_camera_enabled: Q.Ay.getMediaEngine().getVideoInputDeviceId() !== B.qe && e.context === B.x.DEFAULT,
+            video_supported: Q.Ay.supports(B.O5.VIDEO),
             ...this.stateHistory.getVoiceConnectionSuccessStats(),
         });
         let s = performance.now();
@@ -4056,7 +4057,7 @@ class tu extends p.A {
     _handleMediaSessionId(e) {
         (this._mediaSessionId = e),
             this.logger.info(`Setting media-session-id: ${e} for rtc-connection-id: ${this.getRTCConnectionId()}`);
-        let t = D.A.getRawThermalState();
+        let t = y.A.getRawThermalState();
         ei.default.track(eh.HAw.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
