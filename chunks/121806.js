@@ -5,12 +5,12 @@ l.d(t, {
     KD: () => Q,
     Ky: () => K,
     TT: () => B,
-    _2: () => V,
+    _2: () => J,
     dY: () => ee,
     ps: () => $,
     u2: () => q,
     vj: () => G,
-    wf: () => J,
+    wf: () => V,
 }),
     l(321073),
     l(667532);
@@ -258,17 +258,17 @@ function B(e) {
 function Q(e) {
     switch (e) {
         case j.intl.string(j.t.ZNR2fi):
-            return f.q;
+            return f.LinkIcon;
         case j.intl.string(j.t["20uQR3"]):
             return g.J;
         case j.intl.string(j.t.L4lxyE):
             return h.Y;
         case j.intl.string(j.t["AV/v6i"]):
-            return d.o;
+            return d.FileIcon;
         case j.intl.string(j.t.XM9XGP):
-            return E.n;
+            return E.VideoIcon;
         case j.intl.string(j.t.TNLcpx):
-            return L.x;
+            return L.ImageIcon;
         case j.intl.string(j.t.F8Wf0e):
             return R.J;
         case j.intl.string(j.t.PJgX2h):
@@ -399,9 +399,9 @@ function K() {
 function z(e) {
     switch (e) {
         case j.intl.string(j.t.tPZo4p):
-            return A.n;
+            return A.UserIcon;
         case j.intl.string(j.t.JL7sRS):
-            return _.C;
+            return _.RobotIcon;
         case j.intl.string(j.t.WjkIKU):
             return b.X;
     }
@@ -565,10 +565,10 @@ function G(e, t) {
         return { allPrefilledSearchFilters: t, totalFilters: o, prefilledSearchFilters: c, eligibleFilterTokens: u };
     }, [e, l, r, a, u]);
 }
-function J(e, t) {
+function V(e, t) {
     return e === t || (0, a.isEqual)(e, t);
 }
-function V(e, t) {
+function J(e, t) {
     if (e.length !== t.length) return !1;
     let l = new Map();
     for (let t of e) {

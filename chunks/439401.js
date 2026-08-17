@@ -1,6 +1,6 @@
 r.d(t, { A: () => R });
-var s = r(477900),
-    n = r(582128),
+var n = r(477900),
+    s = r(582128),
     l = r(503698),
     i = r.n(l),
     a = r(27232),
@@ -14,12 +14,12 @@ var s = r(477900),
     g = r(650583),
     f = r(375708),
     I = r(680720);
-let R = n.memo(function (e) {
+let R = s.memo(function (e) {
     let { width: t, height: r, src: l, gifSrc: R, url: E, format: _, className: y } = e,
-        [S, v] = n.useState(!1),
+        [S, v] = s.useState(!1),
         C = (0, h.km)((0, d.xo)(E)),
         A = C ? f.intl.string(f.t["5/NS74"]) : f.intl.string(f.t.nIH0v8),
-        w = C ? a.G : o.y;
+        w = C ? a.StarIcon : o.y;
     function x(e) {
         e.preventDefault(),
             e.stopPropagation(),
@@ -30,16 +30,16 @@ let R = n.memo(function (e) {
                   m._.dispatch(p.jej.FAVORITE_GIF));
     }
     return (
-        n.useEffect(() => {
+        s.useEffect(() => {
             if (!S) return;
             let e = setTimeout(() => {
                 v(!1);
             }, 500);
             return () => clearTimeout(e);
         }, [S]),
-        (0, s.jsx)(u.m, {
+        (0, n.jsx)(u.m, {
             text: A,
-            children: (0, s.jsx)(c.D, {
+            children: (0, n.jsx)(c.D, {
                 "aria-label": A,
                 ignoreKeyPress: !0,
                 className: i()(y, I.jj, { [I.wH]: C, [I.TV]: S }),
@@ -49,7 +49,7 @@ let R = n.memo(function (e) {
                     (e.key === g.dh.ENTER || e.key === g.dh.SPACE) && x(e);
                 },
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, s.jsx)(w, {
+                children: (0, n.jsx)(w, {
                     color: "currentColor",
                     className: I.Kk,
                     size: "custom",

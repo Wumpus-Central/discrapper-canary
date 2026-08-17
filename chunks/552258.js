@@ -1,4 +1,4 @@
-e.d(i, { default: () => T });
+e.d(i, { default: () => I });
 var t = e(477900),
     s = e(582128),
     r = e(562708),
@@ -7,8 +7,8 @@ var t = e(477900),
     d = e(730852),
     c = e(964486),
     l = e(734057),
-    u = e(994500),
-    o = e(287809),
+    o = e(994500),
+    u = e(287809),
     N = e(174459),
     A = e(549022),
     g = e(212758),
@@ -17,22 +17,22 @@ var t = e(477900),
     C = e(652215),
     f = e(375708),
     p = e(834391);
-function T(n) {
-    let { channelId: i, userId: e, transitionState: T, onClose: h } = n,
-        I = s.useRef(!1),
-        L = (0, _.bG)([u.A], () => u.A.isBlocked(e)),
+function I(n) {
+    let { channelId: i, userId: e, transitionState: I, onClose: T } = n,
+        h = s.useRef(!1),
+        L = (0, _.bG)([o.A], () => o.A.isBlocked(e)),
         m = (0, _.bG)([l.A], () => l.A.getChannel(i));
     if (
         ((0, c.l0)(() => {
-            I.current || (0, A.$Y)(e);
+            h.current || (0, A.$Y)(e);
         }),
-        null == o.default.getUser(e))
+        null == u.default.getUser(e))
     )
         return null;
     let D = [
             { icon: (0, E.I)([e], m?.guild_id), text: (0, E.T)([e], 1, m?.guild_id, i), className: p.n },
             {
-                icon: (0, t.jsx)("div", { className: p.K, children: (0, t.jsx)(a.i, {}) }),
+                icon: (0, t.jsx)("div", { className: p.K, children: (0, t.jsx)(a.WarningIcon, {}) }),
                 text: f.intl.string(f.t["+4O9nX"]),
                 className: p.n,
             },
@@ -43,8 +43,8 @@ function T(n) {
         descriptionText: k,
         infoRows: D,
         onDismissAndStay: function () {
-            (I.current = !0),
-                h(),
+            (h.current = !0),
+                T(),
                 (0, A.$Y)(e),
                 N.default.track(C.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: O.Qi.CLICK_TO_STAY,
@@ -55,8 +55,8 @@ function T(n) {
                 });
         },
         onDismissAndLeave: function () {
-            (I.current = !0),
-                h(),
+            (h.current = !0),
+                T(),
                 d.default.disconnect(),
                 N.default.track(C.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: O.Qi.CLICK_TO_LEAVE,
@@ -68,8 +68,8 @@ function T(n) {
         },
         leaveButtonText: f.intl.string(f.t["Hi1/aQ"]),
         stayButtonText: f.intl.string(f.t["Z+/hfb"]),
-        transitionState: T,
-        onClose: h,
+        transitionState: I,
+        onClose: T,
         impression: {
             impressionName: r.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {

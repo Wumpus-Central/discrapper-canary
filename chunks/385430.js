@@ -12,8 +12,8 @@ var t = n(477900),
     p = n(731738),
     x = n(661531),
     f = n(297264),
-    _ = n(834730),
-    h = n(349288),
+    h = n(834730),
+    _ = n(349288),
     E = n(231483),
     g = n(320448),
     j = n(17928),
@@ -22,8 +22,8 @@ var t = n(477900),
     v = n(174459),
     L = n(67521),
     C = n(739010),
-    k = n(207913),
-    I = n(335891),
+    I = n(207913),
+    k = n(335891),
     T = n(985481),
     U = n(259960),
     y = n(26095),
@@ -51,7 +51,7 @@ function H(i) {
         ? null
         : (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)(_.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["O2nYk+"]) }),
+                  (0, t.jsx)(h.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["O2nYk+"]) }),
                   (0, t.jsxs)("ul", {
                       className: G.nq,
                       children: [
@@ -61,7 +61,7 @@ function H(i) {
                                     "li",
                                     {
                                         className: G.DJ,
-                                        children: (0, t.jsx)(_.E, {
+                                        children: (0, t.jsx)(h.E, {
                                             tag: "span",
                                             variant: "heading-md/normal",
                                             color: "text-default",
@@ -86,7 +86,7 @@ function R(i) {
                 "li",
                 {
                     className: G.DJ,
-                    children: (0, t.jsx)(_.E, {
+                    children: (0, t.jsx)(h.E, {
                         tag: "span",
                         variant: "heading-md/normal",
                         color: "text-default",
@@ -100,18 +100,18 @@ function R(i) {
 }
 function F(i) {
     let { classificationTypeText: e, policyExplainerLink: n } = i;
-    return (0, t.jsxs)(h.Anchor, {
+    return (0, t.jsxs)(_.Anchor, {
         href: n,
         className: G.F8,
         useDefaultUnderlineStyles: !1,
         children: [
             (0, t.jsx)("div", {
                 className: G.yi,
-                children: (0, t.jsx)(E.l, { size: "md", color: x.A.colors.BORDER_FOCUS }),
+                children: (0, t.jsx)(E.ShieldIcon, { size: "md", color: x.A.colors.BORDER_FOCUS }),
             }),
             (0, t.jsx)("div", {
                 className: G.wC,
-                children: (0, t.jsx)(_.E, {
+                children: (0, t.jsx)(h.E, {
                     variant: "text-md/normal",
                     children: S.intl.format(S.t.zxUdpj, { classificationDescription: e }),
                 }),
@@ -124,16 +124,16 @@ function F(i) {
     });
 }
 function K() {
-    return (0, t.jsx)(_.E, { variant: "text-md/normal", color: "text-muted", children: S.intl.string(S.t["I2H0/E"]) });
+    return (0, t.jsx)(h.E, { variant: "text-md/normal", color: "text-muted", children: S.intl.string(S.t["I2H0/E"]) });
 }
 function B(i) {
-    return (0, t.jsx)(_.E, {
+    return (0, t.jsx)(h.E, {
         variant: "text-md/normal",
         color: "text-muted",
         children: S.intl.format(S.t.IFxUaT, {
             letUsKnowHook: (e, n) =>
                 (0, t.jsx)(
-                    h.Anchor,
+                    _.Anchor,
                     { href: i.isAppealEligible ? void 0 : i.appealLink, onClick: i.letUsKnowClick, children: e },
                     n,
                 ),
@@ -162,8 +162,8 @@ function Y(i) {
     } = i;
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(_.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["977iei"]) }),
-            (0, t.jsx)(_.E, {
+            (0, t.jsx)(h.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["977iei"]) }),
+            (0, t.jsx)(h.E, {
                 className: G.t8,
                 variant: "text-sm/normal",
                 children: S.intl.format(S.t["1Z/+aA"], { tosLink: e, communityGuidelinesLink: n }),
@@ -182,16 +182,16 @@ let M = (i) => {
             isDsaEligible: u,
             violationType: x,
         } = (0, T.LJ)(e),
-        f = (0, j.bG)([k.A], () => k.A.getAppealEligibility()),
-        _ = (0, I.K)(),
-        h = null != c && null != c.flagged_content && c.flagged_content.length > 0,
+        f = (0, j.bG)([I.A], () => I.A.getAppealEligibility()),
+        h = (0, k.K)(),
+        _ = null != c && null != c.flagged_content && c.flagged_content.length > 0,
         E = (0, U.v)(),
         g = !!c?.is_coppa && f.includes(C.RH.AGE_VERIFY_ELIGIBLE),
         N = !!c?.is_coppa && f.includes(C.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
         S = {
-            accountStanding: _,
+            accountStanding: h,
             classificationId: e,
-            hasFlaggedContent: h,
+            hasFlaggedContent: _,
             isDsaEligible: u,
             source: n,
             violationType: x,
@@ -249,10 +249,10 @@ let M = (i) => {
                                     onLetUsKnowClick: function () {
                                         v.default.track(D.HAw.SAFETY_HUB_ACTION, {
                                             action: w.ZU.ClickLetUsKnow,
-                                            account_standing: _.state,
+                                            account_standing: h.state,
                                             classification_ids: [Number(e)],
                                             source: n,
-                                            is_violative_content_shown: h,
+                                            is_violative_content_shown: _,
                                             is_dsa_eligible: u,
                                             violation_type: x,
                                         }),

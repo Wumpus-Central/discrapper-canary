@@ -16,9 +16,9 @@ var i = n(477900),
     x = n(696986),
     f = n(834730),
     E = n(442433),
-    C = n(628677),
-    _ = n(580630),
-    I = n(571654),
+    I = n(628677),
+    C = n(580630),
+    _ = n(571654),
     v = n(661531),
     N = n(175841),
     j = n(375708),
@@ -45,12 +45,12 @@ function S(e) {
     });
 }
 function y() {
-    return (0, i.jsx)(S, { label: j.intl.string(j.t["I+02Gs"]), backgroundColor: "#207B8D", icon: N.B });
+    return (0, i.jsx)(S, { label: j.intl.string(j.t["I+02Gs"]), backgroundColor: "#207B8D", icon: N.SparklesIcon });
 }
 function b() {
     return (0, i.jsx)(S, {
         label: j.intl.string(j.t.TgsPaP),
-        icon: c.R,
+        icon: c.PencilIcon,
         iconColor: v.A.unsafe_rawColors.PRIMARY_330.css,
     });
 }
@@ -71,7 +71,7 @@ function M(e) {
         onTestDownload: x,
         onReportProduct: f,
         closePopout: E,
-        onSelect: C,
+        onSelect: I,
     } = e;
     return (0, i.jsx)("div", {
         className: L.li,
@@ -80,7 +80,7 @@ function M(e) {
             navId: "guild-product-context",
             onClose: E,
             "aria-label": j.intl.string(j.t.Z146dM),
-            onSelect: C,
+            onSelect: I,
             children: [
                 (0, i.jsxs)(o.rX, {
                     children: [
@@ -88,24 +88,24 @@ function M(e) {
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-edit",
                                 label: j.intl.string(j.t.EEfce4),
-                                icon: c.R,
-                                leadingAccessory: { type: "icon", icon: c.R },
+                                icon: c.PencilIcon,
+                                leadingAccessory: { type: "icon", icon: c.PencilIcon },
                                 action: h,
                             }),
                         l &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-copy-link",
                                 label: j.intl.string(j.t.XR26uj),
-                                icon: d.q,
-                                leadingAccessory: { type: "icon", icon: d.q },
+                                icon: d.LinkIcon,
+                                leadingAccessory: { type: "icon", icon: d.LinkIcon },
                                 action: A,
                             }),
                         s &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-test-download",
                                 label: j.intl.string(j.t.aXoI6U),
-                                icon: u.s,
-                                leadingAccessory: { type: "icon", icon: u.s },
+                                icon: u.DownloadIcon,
+                                leadingAccessory: { type: "icon", icon: u.DownloadIcon },
                                 action: x,
                             }),
                     ],
@@ -158,13 +158,13 @@ function k(e) {
             onTestDownload: f,
             onReportProduct: E,
         } = e,
-        C = l.useRef(null);
+        I = l.useRef(null);
     return (0, i.jsx)("div", {
         onClick: function (e) {
             e.stopPropagation();
         },
         children: (0, i.jsx)(m.Y, {
-            targetElementRef: C,
+            targetElementRef: I,
             position: "right",
             align: "top",
             spacing: -8,
@@ -191,7 +191,7 @@ function k(e) {
                 let { isShown: l } = n;
                 return (0, i.jsx)(h.D, {
                     ...e,
-                    innerRef: C,
+                    innerRef: I,
                     "aria-label": j.intl.formatToPlainString(j.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
@@ -218,9 +218,9 @@ function O(e) {
             onTestDownload: c,
             disabled: d = !1,
         } = e,
-        u = (0, C.R)(t, 600),
-        m = null !== t.price_tier ? (0, _.$g)(t.price_tier, R.Yr.USD) : void 0,
-        h = (0, I.z)(t);
+        u = (0, I.R)(t, 600),
+        m = null !== t.price_tier ? (0, C.$g)(t.price_tier, R.Yr.USD) : void 0,
+        h = (0, _.z)(t);
     return (0, i.jsxs)(p.s, {
         tag: "article",
         className: a()(L.gc, L.Um, { [L.r9]: d }),

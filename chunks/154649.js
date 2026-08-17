@@ -1,4 +1,4 @@
-l.d(i, { default: () => I });
+l.d(i, { default: () => v });
 var a = l(477900),
     e = l(582128),
     s = l(189213),
@@ -18,23 +18,23 @@ var a = l(477900),
     E = l(144977),
     j = l(628049),
     A = l(652215),
-    N = l(746080),
-    b = l(275695),
-    C = l(375708),
-    _ = l(116570);
-function v(t) {
+    C = l(746080),
+    N = l(275695),
+    b = l(375708),
+    I = l(116570);
+function _(t) {
     let { guild: i, onClick: l } = t,
         e = (0, n.bG)([g.A], () => g.A.getMemberCount(i.id));
     return (0, a.jsxs)(d.D, {
-        className: _._S,
+        className: I._S,
         onClick: l,
         children: [
-            (0, a.jsx)(x.Ay, { className: _.$f, guild: i, size: x.Ay.Sizes.MEDIUM, active: !0 }),
+            (0, a.jsx)(x.Ay, { className: I.$f, guild: i, size: x.Ay.Sizes.MEDIUM, active: !0 }),
             (0, a.jsxs)("div", {
-                className: _.OA,
+                className: I.OA,
                 children: [
                     (0, a.jsx)(c.E, {
-                        className: _.J5,
+                        className: I.J5,
                         variant: "text-md/medium",
                         color: "text-subtle",
                         children: i.name,
@@ -43,14 +43,14 @@ function v(t) {
                         (0, a.jsx)(c.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: C.intl.formatToPlainString(C.t.zRl6XR, { count: e }),
+                            children: b.intl.formatToPlainString(b.t.zRl6XR, { count: e }),
                         }),
                 ],
             }),
         ],
     });
 }
-function I(t) {
+function v(t) {
     let { gameName: i, gameApplicationId: l, onClose: n, transitionState: d } = t,
         x = (0, p.EX)("game_server_modal"),
         g = e.useCallback(
@@ -59,7 +59,7 @@ function I(t) {
                 if (
                     ((0, S.gU)({ guildId: t.id, gameApplicationId: l }),
                     await n(),
-                    (0, f.pX)(A.BVt.CHANNEL(t.id, N.VV.GUILD_BOOSTS)),
+                    (0, f.pX)(A.BVt.CHANNEL(t.id, C.VV.GUILD_BOOSTS)),
                     null != l)
                 ) {
                     let { catalog: t } = h.A.getGlobalCatalogState();
@@ -75,30 +75,30 @@ function I(t) {
             },
             [n, l],
         );
-    async function I() {
+    async function v() {
         await n();
     }
     return (0, a.jsxs)(s.Modal, {
         transitionState: d,
-        onClose: I,
-        title: C.intl.formatToPlainString(b.default.hPiVx3, { gameName: i }),
-        subtitle: C.intl.formatToPlainString(b.default.fUFylB, { gameName: i }),
+        onClose: v,
+        title: b.intl.formatToPlainString(N.default.hPiVx3, { gameName: i }),
+        subtitle: b.intl.formatToPlainString(N.default.fUFylB, { gameName: i }),
         actions: [],
         children: [
             (0, a.jsxs)("div", {
-                className: _.fA,
+                className: I.fA,
                 children: [
-                    (0, a.jsx)(c.E, { variant: "text-sm/semibold", children: C.intl.string(b.default["4MInNs"]) }),
+                    (0, a.jsx)(c.E, { variant: "text-sm/semibold", children: b.intl.string(N.default["4MInNs"]) }),
                     (0, a.jsx)(o.m, {
                         position: "top",
-                        text: C.intl.string(b.default.OdTfpx),
-                        children: (0, a.jsx)(r.m, { size: "xs", className: _.G }),
+                        text: b.intl.string(N.default.OdTfpx),
+                        children: (0, a.jsx)(r.CircleInformationIcon, { size: "xs", className: I.G }),
                     }),
                 ],
             }),
             (0, a.jsx)(u.Ip, {
-                className: _.OW,
-                children: x.map((t) => (0, a.jsx)(v, { guild: t, onClick: () => g(t) }, t.id)),
+                className: I.OW,
+                children: x.map((t) => (0, a.jsx)(_, { guild: t, onClick: () => g(t) }, t.id)),
             }),
         ],
     });

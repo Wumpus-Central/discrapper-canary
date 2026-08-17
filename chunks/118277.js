@@ -44,7 +44,7 @@ function E(e) {
                               })
                             : (0, i.jsx)("img", { alt: "", src: a, className: c.Kk }),
                 }),
-                (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: c.qS }),
+                (0, i.jsx)(o.VideoIcon, { size: "md", color: "currentColor", className: c.qS }),
             ],
         })
     );

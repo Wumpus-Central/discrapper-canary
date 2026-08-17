@@ -4,20 +4,20 @@ e(582128);
 var a = e(691540),
     l = e(857250),
     s = e(97483),
-    r = e(503698),
-    o = e.n(r),
+    o = e(503698),
+    r = e.n(o),
     c = e(231483),
-    u = e(661531),
-    d = e(834730),
+    d = e(661531),
+    u = e(834730),
     I = e(813933),
     E = e(871645);
 function _(t) {
     let { text: n } = t;
     return (0, i.jsxs)("div", {
-        className: o()(E.oR, I.o),
+        className: r()(E.oR, I.o),
         children: [
-            (0, i.jsx)(c.l, { color: u.A.colors.TEXT_BRAND }),
-            (0, i.jsx)(d.E, {
+            (0, i.jsx)(c.ShieldIcon, { color: d.A.colors.TEXT_BRAND }),
+            (0, i.jsx)(u.E, {
                 className: E.__invalid_content,
                 color: "text-strong",
                 variant: "text-md/normal",

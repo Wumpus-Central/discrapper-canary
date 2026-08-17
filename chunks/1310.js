@@ -351,7 +351,7 @@ var eO = n(747007),
     eq = n(714114),
     eQ = n(864436),
     eW = n(835072),
-    ez = n(313961),
+    ez = n(198052),
     eY = n(85448),
     e$ = n(571694),
     eJ = n(10862),
@@ -387,14 +387,14 @@ function e1(e) {
           });
 }
 var e2 = n(486020),
-    e3 = n(240248),
-    e4 = n(427262),
+    e4 = n(240248),
+    e3 = n(427262),
     e7 = n(806931),
     e6 = n(399436);
 function e8(e, t) {
     if (null != e) return { suggestionData: Y.getSelectedInviteMetadata(e), source: t };
 }
-let e9 = d.memo(
+let e5 = d.memo(
     function (e) {
         let t,
             {
@@ -480,7 +480,7 @@ let e9 = d.memo(
                               },
                           )));
             }, [l, i, n, a, s, r]),
-            O = e4.Ay.getName(n),
+            O = e3.Ay.getName(n),
             D = null != n ? P.A.getNickname(n.id) : null,
             L = null != i ? (0, et.m1)(i, eA.default, P.A) : null,
             k = null != n ? n.getAvatarURL(i?.guild_id, 32) : null,
@@ -492,10 +492,10 @@ let e9 = d.memo(
             K = C !== F.clD.OFFLINE ? C : void 0,
             q = k ?? B ?? H,
             Q = O ?? L ?? void 0,
-            W = null != _ && null == _.icon ? (0, e3.oN)(_.name) : null,
+            W = null != _ && null == _.icon ? (0, e4.oN)(_.name) : null,
             z = null != q && null != Q;
         null != n && (t = D ?? O);
-        let Y = e4.Ay.getUserTag(n, { decoration: "never" }),
+        let Y = e3.Ay.getUserTag(n, { decoration: "never" }),
             $ = null != t || null != i,
             J = (0, u.jsx)(eB.$, {
                 id: S,
@@ -609,7 +609,7 @@ let e9 = d.memo(
         e.inviteKey === t.inviteKey &&
         e.ringingEnabled === t.ringingEnabled,
 );
-var e5 = n(746080),
+var e9 = n(746080),
     te = n(666420);
 let { INVITE_OPTIONS_FOREVER: tt, INVITE_OPTIONS_7_DAYS: tn, INVITE_OPTIONS_UNLIMITED: ti } = O.Ay;
 class tl extends d.PureComponent {
@@ -890,14 +890,14 @@ class tl extends d.PureComponent {
             case O.OK.GROUP_DM:
             case O.OK.CHANNEL:
                 return (0, u.jsx)(
-                    e9,
+                    e5,
                     { row: g, channel: g.item, inviteKey: c, location: a, source: s, guildId: d.id },
                     h,
                 );
             case O.OK.DM:
             case O.OK.FRIEND:
                 return (0, u.jsx)(
-                    e9,
+                    e5,
                     {
                         row: g,
                         user: g.item,
@@ -995,7 +995,10 @@ class tl extends d.PureComponent {
                                 onClick: this.openSettings,
                                 className: te.or,
                                 "aria-label": eR.intl.string(eR.t.Yx4IiC),
-                                children: (0, u.jsx)(M.Z, { size: "sm", color: v.A.unsafe_rawColors.PRIMARY_400.css }),
+                                children: (0, u.jsx)(M.SettingsIcon, {
+                                    size: "sm",
+                                    color: v.A.unsafe_rawColors.PRIMARY_400.css,
+                                }),
                             }),
                         }),
                     ],
@@ -1072,7 +1075,7 @@ let ts = d.forwardRef(function (e, t) {
         S = (0, x.bG)([ep.Ay, D.A, ec.Ay, L.A], () => {
             if (null != l) return l;
             let e = ep.Ay.getChannelId(),
-                t = null == e || (0, e5.jq)(e) ? void 0 : D.A.getChannel(e);
+                t = null == e || (0, e9.jq)(e) ? void 0 : D.A.getChannel(e);
             return (
                 t?.isThread() && (t = D.A.getChannel(t.parent_id)),
                 t?.guild_id === a.id && null != t && L.A.can(F.xBc.VIEW_CHANNEL, t)

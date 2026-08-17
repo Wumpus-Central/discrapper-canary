@@ -1,35 +1,35 @@
-c.d(t, { c: () => h });
+c.d(t, { c: () => d });
 var e = c(477900),
     i = c(582128),
     n = c(503698),
-    l = c.n(n),
-    r = c(628284),
-    o = c(624479),
+    o = c.n(n),
+    l = c(628284),
+    r = c(624479),
     a = c(939249),
     u = c(866665),
-    T = c(661531),
-    p = c(957565),
+    p = c(661531),
+    C = c(957565),
     E = c(375708),
-    d = c(407649);
-function h(s) {
-    let { chunks: t, className: c, onCopy: n, ...h } = s,
-        k = i.useMemo(() => t?.join(" "), [t]),
-        [C, x] = i.useState(!1),
+    T = c(407649);
+function d(s) {
+    let { chunks: t, className: c, onCopy: n, ...d } = s,
+        h = i.useMemo(() => t?.join(" "), [t]),
+        [k, x] = i.useState(!1),
         A = i.useCallback(() => {
-            (0, p.C)(k, () => {
+            (0, C.C)(h, () => {
                 x(!0), n?.();
             });
-        }, [n, k]),
-        _ = C ? r.y : o.T;
+        }, [n, h]),
+        _ = k ? l.y : r.CopyIcon;
     return (0, e.jsx)(a.D, {
-        className: l()(d.k, c),
+        className: o()(T.k, c),
         onClick: A,
         children: (0, e.jsx)(u.m, {
-            text: C ? E.intl.string(E.t.t5VZ88) : E.intl.string(E.t.OpuAlK),
+            text: k ? E.intl.string(E.t.t5VZ88) : E.intl.string(E.t.OpuAlK),
             children: (0, e.jsx)(_, {
-                ...h,
+                ...d,
                 size: "xxs",
-                color: C ? T.A.colors.TEXT_FEEDBACK_POSITIVE : T.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                color: k ? p.A.colors.TEXT_FEEDBACK_POSITIVE : p.A.colors.INTERACTIVE_TEXT_DEFAULT,
             }),
         }),
     });

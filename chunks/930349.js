@@ -1,4 +1,4 @@
-l.d(n, { V: () => I, Y: () => b });
+l.d(n, { A: () => A, Y: () => b });
 var t = l(477900),
     a = l(582128),
     r = l(503698),
@@ -10,15 +10,15 @@ var t = l(477900),
     c = l(245604),
     g = l(661531),
     v = l(866665),
-    h = l(713517),
-    f = l(375708),
+    f = l(713517),
+    h = l(375708),
     p = l(582120);
 function m() {
     return (0, t.jsx)("div", { className: p.overlay });
 }
 let b = a.forwardRef(function (e, n) {
     let { variant: l, disabled: a = !1, isInteracting: r = !1, children: d, deleteButton: c, hasError: g = !1 } = e,
-        h = c?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
+        f = c?.type === "remove" ? h.intl.string(h.t.N86XcP) : h.intl.string(h.t.wgIPss);
     return (0, t.jsxs)("div", {
         ref: n,
         className: i()(p.tile, p[l], { [p.disabled]: a, [p.isInteracting]: r, [p.hasError]: g }),
@@ -29,11 +29,11 @@ let b = a.forwardRef(function (e, n) {
                 (0, t.jsx)("div", {
                     className: i()(p.deleteButtonWrapper, { [p.resetButton]: "reset" === c.type }),
                     children: (0, t.jsx)(v.m, {
-                        text: h,
+                        text: f,
                         ariaHidden: !0,
                         children: (0, t.jsx)(s.K, {
                             "aria-label": c.accessibleLabel,
-                            icon: "remove" === c.type ? u.u : o.m,
+                            icon: "remove" === c.type ? u.TrashIcon : o.RetryIcon,
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: c.onClick,
@@ -43,7 +43,7 @@ let b = a.forwardRef(function (e, n) {
         ],
     });
 });
-function I(e) {
+function A(e) {
     let {
             variant: n,
             onClick: l,
@@ -52,23 +52,23 @@ function I(e) {
             renderPreview: u,
             showOverlayOnHover: o = !1,
             disabled: v = !1,
-            buttonRef: I,
-            affordance: A,
-            errorMessageId: x,
-            ...C
+            buttonRef: A,
+            affordance: I,
+            errorMessageId: C,
+            ...x
         } = e,
-        k = "add" === A,
+        k = "add" === I,
         y = a.useRef(null),
-        { isHoveringOrFocusing: N } = (0, h.A)(y),
+        { isHoveringOrFocusing: N } = (0, f.A)(y),
         j = N && !v,
         E = a.useRef(null),
-        w = I ?? E,
+        w = A ?? E,
         P =
-            null != A && "add" !== A
+            null != I && "add" !== I
                 ? {
-                      ...A,
+                      ...I,
                       onClick: () => {
-                          A.onClick(), w.current?.focus();
+                          I.onClick(), w.current?.focus();
                       },
                   }
                 : void 0;
@@ -78,18 +78,18 @@ function I(e) {
         disabled: v,
         isInteracting: j,
         deleteButton: P,
-        hasError: null != x,
+        hasError: null != C,
         children: (0, t.jsxs)(d.D, {
             innerRef: w,
             className: p.tileButton,
-            "aria-label": f.intl.formatToPlainString(f.t["E+mIJ+"], { label: r, value: s }),
+            "aria-label": h.intl.formatToPlainString(h.t["E+mIJ+"], { label: r, value: s }),
             onClick: v ? void 0 : l,
             "aria-disabled": v,
-            "aria-invalid": null != x || void 0,
-            "aria-describedby": x,
-            "aria-errormessage": x,
+            "aria-invalid": null != C || void 0,
+            "aria-describedby": C,
+            "aria-errormessage": C,
             tabIndex: v ? -1 : 0,
-            ...C,
+            ...x,
             children: [
                 (0, t.jsx)("div", { className: p.content, children: u(j) }),
                 o && !v && (0, t.jsx)(m, {}),

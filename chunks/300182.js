@@ -13,7 +13,7 @@ let s = function (e) {
         children: (0, r.jsx)(a.K, {
             "aria-label": o.intl.string(o.t["JCFN/y"]),
             variant: "primary",
-            icon: i.o,
+            icon: i.GiftIcon,
             size: "md",
             onClick: t,
         }),

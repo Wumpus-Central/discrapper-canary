@@ -11,7 +11,7 @@ function u(e) {
         className: t,
         gradientColor: n = "default",
         children: i,
-        Icon: s = a.g,
+        Icon: s = a.TagIcon,
         iconSize: u = "xs",
         customGraphic: c,
     } = e;
@@ -33,7 +33,7 @@ function u(e) {
     });
 }
 function c(e) {
-    let { text: t, gradientColor: n, Icon: i = a.g, iconSize: c, customGraphic: d, className: p } = e;
+    let { text: t, gradientColor: n, Icon: i = a.TagIcon, iconSize: c, customGraphic: d, className: p } = e;
     return (0, l.jsx)(u, {
         className: r()(o.Cu, p),
         gradientColor: n,

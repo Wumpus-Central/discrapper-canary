@@ -36,7 +36,7 @@ var E = n(503698),
     R = n(616356),
     M = n(734057),
     U = n(71393),
-    K = n(626822),
+    K = n(453028),
     G = n(532624),
     F = n(184809),
     B = n(625494),
@@ -127,7 +127,7 @@ function es(e) {
                               (0, r.jsxs)("div", {
                                   className: ei.bS,
                                   children: [
-                                      (0, r.jsx)(q.X, {}),
+                                      (0, r.jsx)(q.BellIcon, {}),
                                       (0, r.jsx)(Y.E, {
                                           variant: "text-md/medium",
                                           color: "interactive-text-default",
@@ -138,7 +138,7 @@ function es(e) {
                               (0, r.jsxs)("div", {
                                   className: ei.bS,
                                   children: [
-                                      (0, r.jsx)(Q.n, {}),
+                                      (0, r.jsx)(Q.VideoIcon, {}),
                                       (0, r.jsx)(Y.E, {
                                           variant: "text-md/medium",
                                           color: "interactive-text-default",
@@ -396,13 +396,13 @@ let eX = i.memo(function (e) {
                           (0, r.jsx)(J, {
                               "data-testid": "overlay-report-button",
                               onClick: () => (0, eP.b)(k.A.OVERLAY, em.BRT.OVERLAY),
-                              IconComponent: O.i,
+                              IconComponent: O.FlagIcon,
                           }),
                           (0, r.jsx)(J, {
                               "data-testid": "overlay-close-button",
                               keybind: t,
                               onClick: n,
-                              IconComponent: _.d,
+                              IconComponent: _.XLargeIcon,
                           }),
                       ],
                   }),

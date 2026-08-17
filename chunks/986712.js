@@ -21,8 +21,8 @@ var e = l(477900),
     v = l(316770),
     f = l(435558),
     O = l(3026),
-    E = l(834730),
-    I = l(778712),
+    I = l(834730),
+    E = l(778712),
     L = l(562153),
     y = l(996988),
     S = l(413697);
@@ -84,7 +84,7 @@ function b(i) {
                               a && n === r
                                   ? (0, e.jsx)("div", {
                                         className: S.mB,
-                                        children: (0, e.jsx)(E.E, {
+                                        children: (0, e.jsx)(I.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
                                             children: (0, e.jsx)(O.A, { children: d > 99 ? ">99" : `+${d}` }),
@@ -94,7 +94,7 @@ function b(i) {
                                         text: L.Ay.getName(l.guild_id, l.id, s),
                                         children: (0, e.jsx)("img", {
                                             className: S.my,
-                                            src: s.getAvatarURL(l.guild_id, (0, I.FT)(I._3.SIZE_80)),
+                                            src: s.getAvatarURL(l.guild_id, (0, E.FT)(E._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
@@ -152,7 +152,7 @@ function Y(i) {
                       color: "text-subtle",
                       className: Q.Qq,
                   }),
-                  (0, e.jsx)(M.R, {
+                  (0, e.jsx)(M.PencilIcon, {
                       color: "currentColor",
                       size: "xxs",
                       className: a()(Q.rD, null != A ? Q.R : void 0),
@@ -169,14 +169,14 @@ var $ = l(70963),
     J = l(250318);
 function X(i) {
     let { user: t, currentUser: l, voiceChannel: s, className: f, onClose: O } = i,
-        { themeType: E } = (0, C.E)(),
-        { analyticsLocations: I } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        { themeType: I } = (0, C.E)(),
+        { analyticsLocations: E } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, p.A)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: s.id,
             user: t,
-            analyticsLocations: I,
+            analyticsLocations: E,
         }),
         S = (0, j.A)({ userId: t.id, onAction: L }),
         D = (0, d.bG)([g.A], () => g.A.getGuild(s.guild_id)),
@@ -196,7 +196,7 @@ function X(i) {
               ? B.intl.string(B.t.QygGCN)
               : B.intl.string(B.t.msxteM);
     return (0, e.jsx)(h.f5, {
-        value: I,
+        value: E,
         children: (0, e.jsxs)(N.A, {
             ref: S,
             className: a()(J.Nr, f),
@@ -209,7 +209,10 @@ function X(i) {
                     tags: (function () {
                         if (t.id !== l.id) return null;
                         let i = s.isDM() || s.isGroupDM() ? B.intl.string(B.t["+DsWbX"]) : B.intl.string(B.t.xOVEjc);
-                        return (0, e.jsx)(o.m, { text: i, children: (0, e.jsx)(r.m, { size: "xxs" }) });
+                        return (0, e.jsx)(o.m, {
+                            text: i,
+                            children: (0, e.jsx)(r.CircleInformationIcon, { size: "xxs" }),
+                        });
                     })(),
                     contextMenu: (0, e.jsx)(q.A, { display: "voice", user: t, onClose: O }),
                 }),
@@ -225,14 +228,14 @@ function X(i) {
                                 children: [
                                     (0, e.jsx)(v.A, { channel: s, guild: D, onAction: L, onClose: O }),
                                     s.isGuildVoice() && (0, e.jsx)(Y, { voiceChannel: s, onAction: L, onClose: O }),
-                                    E === y.d.MODAL_V2 && P(),
+                                    I === y.d.MODAL_V2 && P(),
                                 ],
                             }),
-                            E === y.d.MODAL && P(),
+                            I === y.d.MODAL && P(),
                         ],
                     }),
                 }),
-                E !== y.d.MODAL && E !== y.d.MODAL_V2 && P(),
+                I !== y.d.MODAL && I !== y.d.MODAL_V2 && P(),
             ],
         }),
     });

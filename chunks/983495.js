@@ -28,9 +28,9 @@ var l = n(477900),
     L = n(922016),
     b = n(403777),
     M = n(462887),
-    _ = n(267889),
-    w = n(363195),
-    I = n(403362),
+    I = n(267889),
+    _ = n(363195),
+    w = n(403362),
     $ = n(427262),
     O = n(448613),
     U = n(8925),
@@ -54,7 +54,7 @@ function B(e) {
         } = e,
         { resetInteraction: f, setInteractionToast: h } = (0, P.Pq)(),
         { theme: m } = (0, V.E)(),
-        A = (0, o.bG)([w.A], () => w.A.theme),
+        A = (0, o.bG)([_.A], () => _.A.theme),
         x = (0, M.M)(A) ? !(0, M.M)(m) : (0, M.M)(m),
         S = r.useRef(null);
     async function g(e) {
@@ -91,7 +91,7 @@ ${a}`
                         : `${U.c5}${u}*
 ${a}`;
                 default:
-                    (0, I.xb)(l);
+                    (0, w.xb)(l);
             }
         })({ emoji: e, username: $.Ay.getName(t), sourceType: i, sourceDetails: s });
         h(null);
@@ -122,7 +122,7 @@ ${a}`;
                 }
             );
         }, [d, f]),
-        (0, l.jsx)(_.A, {
+        (0, l.jsx)(I.A, {
             headerClassName: x ? Y.X : void 0,
             guildId: n ?? void 0,
             closePopout: F.tE,
@@ -200,7 +200,7 @@ ${t}`
                         : `${U.c5}${o}*
 ${t}`;
                 default:
-                    (0, I.xb)(l);
+                    (0, w.xb)(l);
             }
         })({ input: e, username: $.Ay.getName(t), sourceType: s, sourceDetails: o });
         A(null);
@@ -242,7 +242,7 @@ ${t}`;
                             case k.dS.STATUS:
                                 return H.t.g9BTCM;
                             default:
-                                (0, I.xb)(e);
+                                (0, w.xb)(e);
                         }
                     })(s),
                     { username: C.Ay.getName(n, a, t) },
@@ -372,7 +372,7 @@ function eu(e) {
                             })({ analyticsLocations: u, stackingBehavior: g === et.d.MODAL_V2 ? "stack" : void 0 }),
                             s?.();
                     },
-                    children: (0, l.jsx)(er.R, { size: "xs", colorClass: eo.Kk }),
+                    children: (0, l.jsx)(er.PencilIcon, { size: "xs", colorClass: eo.Kk }),
                 }),
             }),
             (0, l.jsx)(el.m, {
@@ -387,7 +387,7 @@ function eu(e) {
                     onClick: function () {
                         d({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), es.G2.updateSetting(void 0);
                     },
-                    children: (0, l.jsx)(ea.u, { size: "xs", colorClass: eo.Kk }),
+                    children: (0, l.jsx)(ea.TrashIcon, { size: "xs", colorClass: eo.Kk }),
                 }),
             }),
         ],
@@ -493,9 +493,9 @@ let ef = r.forwardRef(function (e, t) {
             { trackUserProfileAction: L } = (0, N.NJ)(),
             b = 1.25 * (null != n),
             M = 36 + b,
-            _ = 144 + b,
+            I = 144 + b,
+            _ = r.useRef(null),
             w = r.useRef(null),
-            I = r.useRef(null),
             $ = r.useRef(null),
             O = (0, p.GV)(),
             U = r.useRef(M),
@@ -507,12 +507,12 @@ let ef = r.forwardRef(function (e, t) {
             [q, K] = r.useState(!1),
             W = j && F,
             X = d === et.d.MODAL || d === et.d.MODAL_V2,
-            J = r.useCallback((e) => (X ? e : Math.min(e, _)), [_, X]),
+            J = r.useCallback((e) => (X ? e : Math.min(e, I)), [I, X]),
             Z = (0, o.bG)([S.Ay], () => S.Ay.useReducedMotion),
             [ee] = r.useState(() => new u.Ep());
         r.useEffect(() => () => ee.stop(), [ee]),
             r.useEffect(() => {
-                C?.onInteractionPopoutTargetRefChange(w);
+                C?.onInteractionPopoutTargetRefChange(_);
             }, [C]);
         let [en, el] = (0, A.z)(() => ({ maxHeight: `${U.current}px`, config: { clamp: !0, duration: 150 } }));
         function er(e) {
@@ -524,8 +524,8 @@ let ef = r.forwardRef(function (e, t) {
                 Z ? B(!e) : ee.start(e ? 300 : 150, () => B(!e)));
         }
         r.useLayoutEffect(() => {
-            if ((G(!0), null == I.current || null == $.current || !W)) return;
-            let e = I.current.getBoundingClientRect().height,
+            if ((G(!0), null == w.current || null == $.current || !W)) return;
+            let e = w.current.getBoundingClientRect().height,
                 t = $.current.getBoundingClientRect().height,
                 n = J(t);
             z(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${Y ? Math.min(U.current, M) : n}px` });
@@ -547,7 +547,7 @@ let ef = r.forwardRef(function (e, t) {
                     : null,
             eo = null == ei || "" === a ? es : ei,
             eu = (0, l.jsxs)("div", { className: ec.Qs, children: [ea, eo] }),
-            ef = (0, l.jsxs)("div", { ref: I, className: i()(ec.Qs, ec.mj), children: [ea, eo] }),
+            ef = (0, l.jsxs)("div", { ref: w, className: i()(ec.Qs, ec.mj), children: [ea, eo] }),
             eh = (0, l.jsxs)("div", { ref: $, className: i()(ec.Qs, ec.m2, ec.mj), children: [ea, eo] }),
             em = H.intl.string(q ? H.t.fFaN1b : H.t.xPkLPy),
             eA = Q
@@ -589,7 +589,7 @@ let ef = r.forwardRef(function (e, t) {
                   children: [
                       eS,
                       (0, l.jsxs)("div", {
-                          ref: w,
+                          ref: _,
                           className: i()(ec.kL, E),
                           onMouseEnter: () => {
                               L({ action: "HOVER_CUSTOM_STATUS" }), er(!0);
@@ -605,13 +605,13 @@ let ef = r.forwardRef(function (e, t) {
                   children: [
                       eS,
                       (0, l.jsxs)("div", {
-                          ref: w,
+                          ref: _,
                           className: i()(ec.kL, E),
                           onFocus: () => {
                               y(!0);
                           },
                           onBlur: (e) => {
-                              w.current?.contains(e.relatedTarget) || y(!1);
+                              _.current?.contains(e.relatedTarget) || y(!1);
                           },
                           onMouseEnter: () => {
                               L({ action: "HOVER_CUSTOM_STATUS" }), y(!0), er(!0);

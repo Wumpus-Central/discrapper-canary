@@ -306,12 +306,12 @@ function w(e) {
                           tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => p.A.update(t, o.id, s, { spoiler: !o.spoiler }),
                           children: o.spoiler
-                              ? (0, l.jsx)(c.G, {
+                              ? (0, l.jsx)(c.EyeSlashIcon, {
                                     size: "md",
                                     color: "currentColor",
                                     className: r()({ [T.actionBarIcon]: b }),
                                 })
-                              : (0, l.jsx)(d.b, {
+                              : (0, l.jsx)(d.EyeIcon, {
                                     size: "xs",
                                     color: "currentColor",
                                     className: r()({ [T.actionBarIcon]: b }),
@@ -323,7 +323,7 @@ function w(e) {
                           className: r()({ [T.action]: b }),
                           tooltip: j ? N.intl.string(_.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
                           onClick: w,
-                          children: (0, l.jsx)(h.R, {
+                          children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
                               className: r()({ [T.actionBarIcon]: b }),
@@ -335,7 +335,7 @@ function w(e) {
                     tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
                     onClick: O,
                     dangerous: !0,
-                    children: (0, l.jsx)(m.u, {
+                    children: (0, l.jsx)(m.TrashIcon, {
                         size: "md",
                         color: "currentColor",
                         className: r()({ [T.actionBarIcon]: b }),

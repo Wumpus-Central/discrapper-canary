@@ -107,7 +107,7 @@ ${c}`
             },
             [i, _, n, a],
         ),
-        P = t.useMemo(
+        I = t.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -115,7 +115,7 @@ ${c}`
                     onClick: () => {
                         (0, C.C)(_, () => (0, r.P0)((0, s.o)(N.intl.string(N.t["L/PwZf"]), o.Ck.SUCCESS)));
                     },
-                    icon: c.q,
+                    icon: c.LinkIcon,
                 },
             ],
             [_],
@@ -126,6 +126,6 @@ ${c}`
         source: a,
         customPreview: (0, l.jsx)(j, { server: n }),
         customSendHandler: E,
-        additionalActions: P,
+        additionalActions: I,
     });
 }

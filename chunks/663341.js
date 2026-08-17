@@ -1,30 +1,30 @@
-t.d(h, { p: () => r });
+t.d(h, { PlusLargeIcon: () => c });
 var i = t(477900);
 t(582128);
 var a = t(661531),
     e = t(996682),
-    p = t(27989);
-function r(s) {
+    r = t(27989);
+function c(s) {
     let {
             size: h = "md",
             width: t,
-            height: r,
-            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: c,
+            color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
-            ...n
+            ...l
         } = s,
-        l = (0, p.J)(h),
-        o = l?.width ?? t,
-        w = l?.height ?? r;
+        o = (0, r.J)(h),
+        p = o?.width ?? t,
+        w = o?.height ?? c;
     return (0, i.jsx)("svg", {
-        ...(0, e.A)(n),
+        ...(0, e.A)(l),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o,
+        width: p,
         height: w,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof c ? c : c.css,
+            fill: "string" == typeof n ? n : n.css,
             d: "M13 3a1 1 0 1 0-2 0v8H3a1 1 0 1 0 0 2h8v8a1 1 0 0 0 2 0v-8h8a1 1 0 0 0 0-2h-8V3Z",
             className: d,
         }),

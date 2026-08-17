@@ -86,6 +86,6 @@ function d(e) {
     return (0, l.jsxs)("div", {
         className: c.XO,
         onClick: (e) => e.stopPropagation(),
-        children: [(0, l.jsx)(s.b, { size: "xs", color: "currentColor", className: c.Kk }), t, d],
+        children: [(0, l.jsx)(s.EyeIcon, { size: "xs", color: "currentColor", className: c.Kk }), t, d],
     });
 }

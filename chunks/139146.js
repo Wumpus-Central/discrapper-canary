@@ -70,20 +70,20 @@ function y(e) {
             tooltipConfig: T = {},
         } = e,
         R = E[p],
-        { reducedMotion: b } = r.useContext(u.C),
-        _ = r.useRef(null),
+        { reducedMotion: _ } = r.useContext(u.C),
+        b = r.useRef(null),
         [w, N] = r.useState(!1),
         j = g && !w,
-        k = j ? c.C : o.y,
+        k = j ? c.HeartIcon : o.y,
         L = i()(C.normalIconColor, j && C.wishlistedOrAnimating);
     r.useEffect(() => {
         N(!1);
     }, [t]);
     let D = r.useCallback(
             (e) => {
-                e.stopPropagation(), a || (g || b.enabled ? g && w && N(!1) : N(!0), x());
+                e.stopPropagation(), a || (g || _.enabled ? g && w && N(!1) : N(!0), x());
             },
-            [a, g, b.enabled, w, x],
+            [a, g, _.enabled, w, x],
         ),
         P = !a && !g && !w,
         O = r.useCallback(
@@ -107,13 +107,13 @@ function y(e) {
                 },
                 s,
             ),
-            innerRef: _,
+            innerRef: b,
             onClick: D,
             "aria-label": e,
             "aria-pressed": g,
             "aria-busy": A,
             "aria-disabled": a,
-            children: b.enabled
+            children: _.enabled
                 ? (0, l.jsx)(k, { colorClass: void 0 ?? L, size: R })
                 : (0, l.jsxs)("div", {
                       className: i()(C.iconContainer, P && C.canAnimate),
@@ -125,7 +125,7 @@ function y(e) {
                           (0, l.jsx)("span", {
                               className: i()(C.animationOverlay, w && C.clickAnimation),
                               onAnimationEnd: O,
-                              children: (0, l.jsx)(c.C, { size: R }),
+                              children: (0, l.jsx)(c.HeartIcon, { size: R }),
                           }),
                       ],
                   }),

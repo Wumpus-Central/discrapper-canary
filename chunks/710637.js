@@ -260,8 +260,8 @@ var L = i(793574),
     T = i(573435),
     G = i(976860),
     P = i(329551),
-    U = i(413339),
-    V = i(952572),
+    V = i(413339),
+    U = i(952572),
     S = i(151476),
     F = i(704877),
     X = i(222692),
@@ -271,7 +271,7 @@ var L = i(793574),
     H = i(164891),
     W = i(260509),
     $ = i(71393),
-    K = i(626822),
+    K = i(453028),
     J = i(287809),
     Q = i(531685),
     Z = i(174459),
@@ -325,7 +325,7 @@ function eN(e) {
                     id: "join-video",
                     action: c,
                     label: e_.intl.string(e_.t["YbjQQ/"]),
-                    leadingAccessory: { type: "icon", icon: ep.n },
+                    leadingAccessory: { type: "icon", icon: ep.VideoIcon },
                 }),
                 o,
                 r,
@@ -425,8 +425,8 @@ function eT(e) {
         ),
         [w, G] = (0, d.yK)([K.Ay], () => [K.Ay.supports(eC.O5.VIDEO), Object.keys(K.Ay.getVideoDevices()).length]),
         P = (0, d.bG)([ee.A], () => ee.A.getVideoParticipants(a.id).length > 0),
-        U = (0, d.bG)([J.default], () => J.default.getUser(c)),
-        V = (0, em.tx)(U),
+        V = (0, d.bG)([J.default], () => J.default.getUser(c)),
+        U = (0, em.tx)(V),
         S = P && w && G > 0,
         F = s.useCallback((e) => {
             null != e.top && null != e.left && E.move(e.left, e.top);
@@ -457,8 +457,8 @@ function eT(e) {
             [z],
         ),
         s.useEffect(() => {
-            null == U && (0, ea.getUser)(c);
-        }, [c, U]);
+            null == V && (0, ea.getUser)(c);
+        }, [c, V]);
     let B = (0, eo.gU)(a);
     return (0, l.jsx)(k.f5, {
         value: u,
@@ -479,19 +479,19 @@ function eT(e) {
                             (0, l.jsxs)("div", {
                                 className: ek.wx,
                                 children: [
-                                    null != U &&
+                                    null != V &&
                                         (0, l.jsx)(ei.eu, {
                                             className: ek.gX,
                                             "aria-label": "user",
-                                            src: U?.getAvatarURL(a.guild_id, 80, !1, !1),
+                                            src: V?.getAvatarURL(a.guild_id, 80, !1, !1),
                                             size: g._3.SIZE_80,
                                         }),
                                     (0, l.jsx)(en.D, {
                                         variant: "heading-lg/semibold",
                                         className: o()(ek.gX, ek.DD),
                                         children:
-                                            null != U
-                                                ? e_.intl.format(e_.t.M3F6cv, { username: V })
+                                            null != V
+                                                ? e_.intl.format(e_.t.M3F6cv, { username: U })
                                                 : e_.intl.string(e_.t["3rE1P8"]),
                                     }),
                                     (0, l.jsxs)("div", {
@@ -620,8 +620,8 @@ function eT(e) {
 }
 var eG = i(329072),
     eP = i(480890),
-    eU = i(806931),
-    eV = i(149941),
+    eV = i(806931),
+    eU = i(149941),
     eS = i(124243);
 let eF = { width: 232, height: 315 },
     eX = { width: 232, height: 267 };
@@ -629,13 +629,13 @@ function ez(e) {
     let { header: t } = e,
         i = K.Ay.getCameraComponent(),
         n = (0, d.bG)([K.Ay], () => K.Ay.getVideoDeviceId()),
-        a = (0, V.A)();
+        a = (0, U.A)();
     return (
         s.useEffect(() => {
             let e = J.default.getCurrentUser();
             if (a && null != e) {
                 let t = (0, P.i)(e);
-                (0, U.S1)(t, n, { track: !1 }).catch(C.tEg);
+                (0, V.S1)(t, n, { track: !1 }).catch(C.tEg);
             }
         }, [a, n]),
         (0, l.jsxs)("div", {
@@ -682,7 +682,7 @@ function eB(e) {
                         let { closePopout: t } = e;
                         return (0, l.jsx)(eG.A, {
                             onClose: t,
-                            onInteraction: (0, eP.s)("VideoDeviceMenu", a, { entrypoint: eU.GK.CARET }),
+                            onInteraction: (0, eP.s)("VideoDeviceMenu", a, { entrypoint: eV.GK.CARET }),
                         });
                     },
                     position: "top",
@@ -750,17 +750,17 @@ function eY(e) {
         }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]);
-    let U = O === C._Of.VIDEO && b && y > 0,
-        { enabled: V } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
+    let V = O === C._Of.VIDEO && b && y > 0,
+        { enabled: U } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
         S =
-            O === C._Of.VOICE || (V && a.type === C.rbe.GUILD_VOICE)
+            O === C._Of.VOICE || (U && a.type === C.rbe.GUILD_VOICE)
                 ? e_.intl.string(e_.t.Js8cK3)
                 : e_.intl.string(e_.t.KcnWCO),
         F = (0, l.jsxs)(l.Fragment, {
             children: [
                 null != v && null == j
                     ? (0, l.jsx)("div", {
-                          className: o()(eS.Kk, eV.iE, eV.hs),
+                          className: o()(eS.Kk, eU.iE, eU.hs),
                           children: (0, l.jsx)(T.Ay, {
                               className: eS.dK,
                               mask: T.hW.AVATAR_DEFAULT,
@@ -798,7 +798,7 @@ function eY(e) {
                 }),
             ],
         }),
-        X = U ? eF : eX,
+        X = V ? eF : eX,
         z = (0, d.bG)([Q.A], () => Q.A.windowSize());
     return (0, l.jsx)(k.f5, {
         value: c,
@@ -823,8 +823,8 @@ function eY(e) {
                         },
                         children: [
                             u ? (0, l.jsx)(ez, { header: F }) : (0, l.jsx)("div", { className: eS.Rh, children: F }),
-                            (0, l.jsx)(eB, { canVideo: U, channel: a, numVideoDevices: y }),
-                            U && !u
+                            (0, l.jsx)(eB, { canVideo: V, channel: a, numVideoDevices: y }),
+                            V && !u
                                 ? (0, l.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
                                       className: eS.jc,

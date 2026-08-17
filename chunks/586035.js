@@ -1,7 +1,7 @@
 i.d(e, { A: () => K });
 var s = i(477900),
-    a = i(582128),
-    n = i(189213),
+    n = i(582128),
+    a = i(189213),
     l = i(815021),
     r = i(935462),
     c = i(834730),
@@ -21,65 +21,65 @@ var s = i(477900),
     A = i(743368),
     y = i(866665),
     E = i(736653),
-    M = i(291749),
-    _ = i(590202),
-    k = i(971649),
-    T = i(651892),
-    L = i(901406),
-    w = i(814793),
-    I = i(557637),
+    k = i(291749),
+    M = i(590202),
+    _ = i(971649),
+    L = i(651892),
+    T = i(901406),
+    I = i(814793),
+    w = i(557637),
     W = i(918338),
-    b = i(764336),
+    b = i(201805),
     D = i(491145),
     P = i(190107),
     R = i(818348),
     O = i(375708),
     S = i(871517);
 function q(t) {
-    let { quest: e, sourceQuestContent: i, onLoadComplete: n, preCtaClick: l } = t,
+    let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
         r = (0, E.Ay)(),
         o = (0, g.M)(r) ? R.NJ.DARK : R.NJ.LIGHT,
-        d = (0, k.wW)(),
-        u = (0, k.go)(),
-        x = (0, w.E0)(e.config);
+        d = (0, _.wW)(),
+        u = (0, _.go)(),
+        x = (0, I.E0)(e.config);
     async function f() {
         await l?.(),
-            (0, L.pu)(e, {
+            (0, T.pu)(e, {
                 content: m.uF.REWARD_MODAL,
-                ctaContent: _.Cy.OPEN_GAME_LINK,
+                ctaContent: M.Cy.OPEN_GAME_LINK,
                 impressionId: d(),
                 sourceQuestContent: i,
             });
     }
-    let q = a.useMemo(() => {
+    let q = n.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, w.pv)(e.config) !== h.Z.GAMEPLAY ||
+                : (0, I.pv)(e.config) !== h.Z.GAMEPLAY ||
                     e.config.features.includes(P.Li.NON_GAMING_PLAY_QUEST) ||
-                    (0, w.ui)(e)
+                    (0, I.ui)(e)
                   ? O.intl.string(O.t.y8Xf3k)
                   : O.intl.string(O.t["wirwN+"]);
         }, [e]),
         z = (0, D.A)(e, { impressionId: u, sourceQuestContent: i }, l) ?? {
-            ctaText: (0, T.wr)(e),
+            ctaText: (0, L.wr)(e),
             ctaVariant: "primary",
             onClickCta: f,
             title: O.intl.format(O.t.EAYZAr, { questName: e.config.messages.questName }),
             subtitle: q,
             ctaIconPosition: "end",
         },
-        { isLoading: G } = (0, I.zT)();
-    a.useEffect(() => {
-        G || n();
-    }, [G, n]);
+        { isLoading: G } = (0, w.zT)();
+    n.useEffect(() => {
+        G || a();
+    }, [G, a]);
     let Y = (0, b.Lk)({
         isShareable: x,
         questId: e.id,
-        trackingCtx: a.useMemo(
+        trackingCtx: n.useMemo(
             () => ({
                 content: m.uF.REWARD_MODAL,
-                ctaContent: _.Cy.REWARD_MODAL_COPY_LINK,
+                ctaContent: M.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: u,
                 sourceQuestContent: i,
             }),
@@ -89,7 +89,7 @@ function q(t) {
     return (0, s.jsxs)("div", {
         className: S.kL,
         children: [
-            (0, s.jsx)(I._M, {
+            (0, s.jsx)(w._M, {
                 id: "hero-display",
                 children: (t) =>
                     (0, s.jsx)(W.A, {
@@ -102,14 +102,14 @@ function q(t) {
             }),
             (0, s.jsx)("div", {
                 className: S.Lt,
-                children: (0, s.jsx)(I._M, {
+                children: (0, s.jsx)(w._M, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, s.jsx)("img", {
                             ref: t,
                             className: S.a$,
                             alt: O.intl.formatToPlainString(O.t.rtm15P, { name: e.config.messages.gameTitle }),
-                            src: (0, M.tW)(e, M.fY.LOGO_TYPE, o).url,
+                            src: (0, k.tW)(e, k.fY.LOGO_TYPE, o).url,
                         }),
                 }),
             }),
@@ -128,14 +128,14 @@ function q(t) {
                             (0, s.jsx)(c.E, { variant: "text-sm/medium", color: "text-subtle", children: z.subtitle }),
                         ],
                     }),
-                    (0, s.jsx)(I._M, {
+                    (0, s.jsx)(w._M, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, s.jsx)("img", {
                                 ref: t,
                                 className: S.rw,
                                 alt: O.intl.formatToPlainString(O.t.rtm15P, { name: e.config.messages.gameTitle }),
-                                src: (0, M.tW)(e, M.fY.GAME_TILE, o).url,
+                                src: (0, k.tW)(e, k.fY.GAME_TILE, o).url,
                             }),
                     }),
                 ],
@@ -152,7 +152,7 @@ function q(t) {
                             (0, s.jsx)(y.m, {
                                 text: O.intl.string(O.t.WmfZHZ),
                                 children: (0, s.jsx)(N.K, {
-                                    icon: C.q,
+                                    icon: C.LinkIcon,
                                     onClick: Y,
                                     "aria-label": O.intl.string(O.t.WmfZHZ),
                                     variant: "secondary",
@@ -174,7 +174,7 @@ function q(t) {
 }
 function z(t) {
     let { quest: e, location: i } = t;
-    return (0, s.jsx)(I.y5, {
+    return (0, s.jsx)(w.y5, {
         source: i,
         adCreativeId: e.id,
         adCreativeType: f.p.QUEST,
@@ -185,7 +185,7 @@ function z(t) {
 var G = i(317551);
 function Y(t) {
     let { onClose: e, transitionState: i } = t;
-    return (0, s.jsx)(n.Modal, {
+    return (0, s.jsx)(a.Modal, {
         size: "md",
         title: O.intl.string(O.t.Hd3D8W),
         actions: [{ variant: "primary", text: O.intl.string(O.t.cpT0Cq), onClick: e }],
@@ -202,7 +202,7 @@ function K(t) {
     let {
             quest: e,
             sourceQuestContent: i,
-            transitionState: n,
+            transitionState: a,
             onClose: c,
             rewardContent: f,
             isRewardContentLoading: h,
@@ -210,16 +210,16 @@ function K(t) {
             location: j,
         } = t,
         v = m.uF.REWARD_MODAL,
-        [N, C] = a.useState(!0),
+        [N, C] = n.useState(!0),
         p = e.config.features.some((t) => P.Tz.has(t)),
-        A = a.useCallback(async () => {
+        A = n.useCallback(async () => {
             if (p) {
                 c(), (0, o.closeAllModals)();
                 return;
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (c(), (0, o.closeAllModals)());
         }, [e.config.ctaConfig?.link, c, p]);
-    if (g) return (0, s.jsx)(Y, { onClose: c, transitionState: n });
+    if (g) return (0, s.jsx)(Y, { onClose: c, transitionState: a });
     let y = h || N;
     return (0, s.jsx)(u.R, {
         questOrQuests: e,
@@ -228,7 +228,7 @@ function K(t) {
         children: (t) =>
             (0, s.jsxs)(r.EO, {
                 "data-migration-pending": !0,
-                transitionState: n,
+                transitionState: a,
                 size: r.rI.DYNAMIC,
                 className: G.yl,
                 "aria-label": y ? O.intl.string(O.t.ZTNur7) : void 0,

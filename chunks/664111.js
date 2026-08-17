@@ -25,12 +25,12 @@ var r = n(477900),
     N = n(906892),
     R = n(565164),
     T = n(275664),
-    L = n(408121),
-    M = n(984212),
-    P = n(739416),
+    P = n(408121),
+    L = n(984212),
+    M = n(739416),
     j = n(931853),
-    k = n(90721),
-    D = n(920228),
+    D = n(90721),
+    k = n(920228),
     I = n(838541),
     B = n(375708),
     F = n(668534);
@@ -83,12 +83,12 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 hideSkipButtons: eN,
                 compactTimeDisplay: eR = !1,
                 hidePlaybackSpeedBtn: eT = !1,
-                getPlaybackBlockedMessage: eL,
-                progressClassName: eM,
-                pauseOnLostVisibility: eP = !1,
+                getPlaybackBlockedMessage: eP,
+                progressClassName: eL,
+                pauseOnLostVisibility: eM = !1,
                 persistTimeline: ej = !1,
-                persistPlayhead: ek = !0,
-                autoFocus: eD = !1,
+                persistPlayhead: eD = !0,
+                autoFocus: ek = !1,
                 autoHideVolumeSlider: eI = !1,
                 timelineIndicatorConfig: eB,
                 scrubPreviewVttUrl: eF,
@@ -104,9 +104,9 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 playerRef: eH,
             } = e,
             eZ = O ?? Q,
-            ez = eL ?? j.u,
-            { focused: eX, focusedChanged: eW } = (0, P.A7)(),
-            { visible: eJ, visibleChanged: eq, targetRef: e0 } = (0, P.O7)(),
+            ez = eP ?? j.u,
+            { focused: eX, focusedChanged: eW } = (0, M.A7)(),
+            { visible: eJ, visibleChanged: eq, targetRef: e0 } = (0, M.O7)(),
             [e1, e2] = l.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
             [e6, e4] = l.useState(!1),
             [e8, e3] = l.useState(!1),
@@ -134,9 +134,9 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             [ty, tw] = l.useState(a || G),
             [tA, tN] = l.useState(el),
             [tR, tT] = l.useState(ea),
-            [tL, tM] = l.useState(!eI),
-            [tP, tj] = l.useState(!1),
-            [tk, tD] = l.useState(!1),
+            [tP, tL] = l.useState(!eI),
+            [tM, tj] = l.useState(!1),
+            [tD, tk] = l.useState(!1),
             [tI, tB] = l.useState(!1),
             tF = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
             t_ = (0, l.useRef)(null),
@@ -147,7 +147,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             tV = l.useRef(null),
             tG = (0, R.z5)(ty, tV, eF, e_),
             tY = l.useCallback(() => t_.current?.currentTime ?? null, []);
-        (0, k.A)({ videoRef: t_, canvasRef: tU, enabled: ty && eO && !tF, canvasWidth: 32, canvasHeight: 18 });
+        (0, D.A)({ videoRef: t_, canvasRef: tU, enabled: ty && eO && !tF, canvasWidth: 32, canvasHeight: 18 });
         let tH = l.useCallback(
                 (e, t) => {
                     z?.(e, t);
@@ -190,7 +190,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             [ee],
         );
         l.useEffect(() => {
-            if (!eP) return;
+            if (!eM) return;
             let e = null != n && (n === d.ip.HIDDEN || n === d.ip.EXITING || n === d.ip.EXITED),
                 t = null != n && eq && !eJ,
                 r = eW && !eX;
@@ -198,10 +198,10 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 let n = e || t ? c.KB.VISIBILITY : c.KB.FOCUS;
                 tQ(n), t7(c.Q6.PAUSED, n);
             }
-        }, [eP, n, eX, eW, eJ, eq, e1, t7]),
-            (0, D.A)({
+        }, [eM, n, eX, eW, eJ, eq, e1, t7]),
+            (0, k.A)({
                 videoRef: t_,
-                enabled: eP,
+                enabled: eM,
                 onPipPause: () => {
                     tQ(c.KB.PICTURE_IN_PICTURE), t7(c.Q6.PAUSED, c.KB.PICTURE_IN_PICTURE);
                 },
@@ -319,7 +319,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             if (((e.mode = "hidden"), null != e.cues))
                 for (let t = 0; t < e.cues.length; t++) {
                     let n = e.cues[t];
-                    (0, M.C)(n) &&
+                    (0, L.C)(n) &&
                         ((n.id = `cue-${t}`),
                         (n.onenter = () => {
                             tq(n);
@@ -372,12 +372,12 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             [{ captionHeightSpring: nE }, nb] = (0, m.z)(() => ({ from: { captionHeightSpring: 0 }, config: _ }));
         l.useEffect(
             () => (
-                nb({ captionHeightSpring: tk && null != tJ ? (ng.current?.clientHeight ?? 0) : 0, immediate: tF }),
+                nb({ captionHeightSpring: tD && null != tJ ? (ng.current?.clientHeight ?? 0) : 0, immediate: tF }),
                 () => {
                     nE.stop();
                 }
             ),
-            [tk, nb, tF, tJ, nE],
+            [tD, nb, tF, tJ, nE],
         ),
             l.useEffect(
                 () => (
@@ -582,7 +582,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                     },
                                     children: ev(),
                                 }),
-                            tP &&
+                            tM &&
                                 e1 !== c.Q6.ENDED &&
                                 null != J &&
                                 (0, r.jsxs)(r.Fragment, {
@@ -600,7 +600,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                             style: {
                                                 marginBottom: (0, u.to)([nv, nE], (e, t) => `${e * t9[t8] + t}px`),
                                             },
-                                            children: (0, r.jsx)(L.X, {
+                                            children: (0, r.jsx)(P.X, {
                                                 text: J,
                                                 onClose: function () {
                                                     tj(!1);
@@ -626,12 +626,12 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                     style: { "--custom-play-pause-pop-ms": "1000ms" },
                                     children:
                                         e1 === c.Q6.PLAYING
-                                            ? (0, r.jsx)(p.u, { className: F.PK })
-                                            : (0, r.jsx)(v.E, { className: F.PK }),
+                                            ? (0, r.jsx)(p.PlayIcon, { className: F.PK })
+                                            : (0, r.jsx)(v.PauseIcon, { className: F.PK }),
                                 },
                                 e1,
                             ),
-                            tk &&
+                            tD &&
                                 null != tJ &&
                                 !nS &&
                                 (0, r.jsx)(u.animated.div, {
@@ -685,8 +685,8 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                     durationSec: t0 > 0 ? t0 : +!t2,
                                                     isFullyVisible: na && tg,
                                                     maxSeekableTime: null != X && t4 > 0 ? t4 : void 0,
-                                                    progressClassName: eM,
-                                                    persistPlayhead: ek,
+                                                    progressClassName: eL,
+                                                    persistPlayhead: eD,
                                                     onClick: np,
                                                     onScrubBack: ns,
                                                     onScrubForward: no,
@@ -763,18 +763,18 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                 downloadUrl: eC,
                                                 downloadContentType: ey,
                                                 extraButtons: ew,
-                                                autoFocus: eD,
+                                                autoFocus: ek,
                                                 keyDownHandlerRef: ny,
                                                 volume: tA,
                                                 muted: tR,
-                                                transcriptEnabled: tP,
-                                                captionEnabled: tk,
+                                                transcriptEnabled: tM,
+                                                captionEnabled: tD,
                                                 handlePlaybackBtnClick: nd,
                                                 handleTranscriptBtnClick: function () {
-                                                    tj(!tP);
+                                                    tj(!tM);
                                                 },
                                                 handleCaptionBtnClick: function () {
-                                                    tD(!tk);
+                                                    tk(!tD);
                                                 },
                                                 handleFullScreenBtnClick: function () {
                                                     let e = !tI,
@@ -803,7 +803,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                     tT(e), er?.(e);
                                                 },
                                                 onVolumeExpandedChange: function (e) {
-                                                    tM(e);
+                                                    tL(e);
                                                 },
                                             }),
                                         }),
@@ -818,14 +818,18 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                         controlBarAnimationSpring: nv,
                                         videoRef: t_,
                                         isActive: ty,
-                                        isVolumeExpanded: tL,
+                                        isVolumeExpanded: tP,
                                     }),
                                 }),
                             !ty &&
                                 (0, r.jsx)("div", {
                                     className: F.mF,
                                     ref: tn,
-                                    children: (0, r.jsx)(p.u, { size: "xs", color: "currentColor", className: F.z_ }),
+                                    children: (0, r.jsx)(p.PlayIcon, {
+                                        size: "xs",
+                                        color: "currentColor",
+                                        className: F.z_,
+                                    }),
                                 }),
                             (0, r.jsx)(N.bW, {}),
                             (0, r.jsx)(s.P, {}),

@@ -1006,7 +1006,7 @@ function tE(e) {
             n = th.g;
             break;
         case td.l.REPORT_TO_MOD_DELETED_MESSAGE:
-            n = tg.u;
+            n = tg.TrashIcon;
             break;
         case td.l.REPORT_TO_MOD_CLOSED_REPORT:
             n = tp.U;
@@ -1315,7 +1315,7 @@ function t1(e) {
                                 size: "sm",
                                 variant: "expressive",
                                 text: x(),
-                                icon: tF.o,
+                                icon: tF.GiftIcon,
                                 "aria-label": x(),
                                 onClick: function (e) {
                                     e.stopPropagation();
@@ -1342,7 +1342,7 @@ function t5(e) {
     return (0, s.jsx)(_.A, {
         contentClassName: t3.o9,
         iconContainerClassName: t3.zc,
-        iconNode: (0, s.jsx)(tw.X, { colorClass: t3.Kk }),
+        iconNode: (0, s.jsx)(tw.BellIcon, { colorClass: t3.Kk }),
         children: (0, s.jsx)(t1, {
             giftIntentType: t,
             recipientUser: n,
@@ -1361,7 +1361,7 @@ function t8(e) {
     return (0, s.jsx)(_.A, {
         contentClassName: t7.o9,
         iconContainerClassName: t7.zc,
-        iconNode: (0, s.jsx)(tw.X, { colorClass: t7.Kk }),
+        iconNode: (0, s.jsx)(tw.BellIcon, { colorClass: t7.Kk }),
         children: (0, s.jsxs)("div", {
             className: t7.kL,
             children: [
@@ -1564,11 +1564,15 @@ function nH(e) {
 function nV(e) {
     switch (e) {
         case nr.G.DELETE_USER_MESSAGE:
-            return (0, s.jsx)(tg.u, { size: "xs", color: "currentColor", className: nR.yr });
+            return (0, s.jsx)(tg.TrashIcon, { size: "xs", color: "currentColor", className: nR.yr });
         case nr.G.SET_COMPLETED:
-            return (0, s.jsx)(nt.A, { size: "xs", color: "currentColor", className: eg()(nR.yr, nR.r0) });
+            return (0, s.jsx)(nt.CheckmarkLargeIcon, {
+                size: "xs",
+                color: "currentColor",
+                className: eg()(nR.yr, nR.r0),
+            });
         case nr.G.SUBMIT_FEEDBACK:
-            return (0, s.jsx)(nn.i, { size: "xs", color: "currentColor", className: nR.yr });
+            return (0, s.jsx)(nn.FlagIcon, { size: "xs", color: "currentColor", className: nR.yr });
         default:
             return null;
     }
@@ -1833,7 +1837,7 @@ function nJ(e) {
                                 (0, s.jsxs)("div", {
                                     className: nR.AX,
                                     children: [
-                                        (0, s.jsx)(nl.l, {
+                                        (0, s.jsx)(nl.ShieldIcon, {
                                             size: "xs",
                                             color: eA.A.unsafe_rawColors.BRAND_500.css,
                                             className: nR.Dq,
@@ -2132,7 +2136,7 @@ function n7(e) {
                       (0, s.jsxs)("div", {
                           className: n2.AX,
                           children: [
-                              (0, s.jsx)(nl.l, {
+                              (0, s.jsx)(nl.ShieldIcon, {
                                   size: "xs",
                                   color: eA.A.unsafe_rawColors.BRAND_500.css,
                                   className: n2.Dq,
@@ -2375,7 +2379,7 @@ function iu(e) {
         l = (0, k.Ay)(t),
         a = n(l);
     return (0, s.jsx)(_.A, {
-        iconNode: (0, s.jsx)(ic.R, { size: "xs", color: "currentColor" }),
+        iconNode: (0, s.jsx)(ic.PencilIcon, { size: "xs", color: "currentColor" }),
         timestamp: t.timestamp,
         compact: i,
         children: y.intl.format(y.t["4wLp25"], {
@@ -2412,7 +2416,7 @@ function ip(e) {
         helpdeskArticle: "#",
     });
     return (0, s.jsx)(_.A, {
-        iconNode: (0, s.jsx)(im.f, { size: "sm", color: eA.A.colors.STATUS_POSITIVE }),
+        iconNode: (0, s.jsx)(im.RefreshIcon, { size: "sm", color: eA.A.colors.STATUS_POSITIVE }),
         timestamp: t.timestamp,
         compact: i,
         contentClassName: ig.H,
@@ -2426,7 +2430,7 @@ function iA(e) {
         o = (0, c.bG)([tk.A], () => tk.A.getChannel(t.channel_id)?.isGroupDM() ?? !1);
     return (0, s.jsx)(_.A, {
         compact: i,
-        iconNode: (0, s.jsx)(ic.R, { size: "xs", color: "currentColor" }),
+        iconNode: (0, s.jsx)(ic.PencilIcon, { size: "xs", color: "currentColor" }),
         timestamp: t.timestamp,
         children: o
             ? y.intl.format("" === t.content ? y.t.AI1ZZr : y.t.geP3rU, {
@@ -2689,7 +2693,7 @@ function iG(e) {
         : (0, s.jsx)(_.A, {
               contentClassName: iM.FG,
               iconContainerClassName: iM.zc,
-              iconNode: (0, s.jsx)(tw.X, { colorClass: iM.Kk }),
+              iconNode: (0, s.jsx)(tw.BellIcon, { colorClass: iM.Kk }),
               children: (0, s.jsx)(iU, { boostingPrompt: t, guild: l }),
           });
 }
@@ -2880,7 +2884,7 @@ function iQ(e) {
         helpdeskArticle: e0.A.getArticleURL(D.MVz.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, s.jsx)(_.A, {
-        iconNode: (0, s.jsx)(iX._, { size: "sm" }),
+        iconNode: (0, s.jsx)(iX.GameControllerIcon, { size: "sm" }),
         compact: l,
         contentClassName: iq.Qs,
         children: (0, s.jsx)("div", { children: c }),

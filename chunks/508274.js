@@ -1,8 +1,8 @@
-n.d(l, { VN: () => S, fy: () => $, nJ: () => L, sk: () => T });
+n.d(l, { VN: () => S, fy: () => A, nJ: () => L, sk: () => T });
 var t = n(477900),
-    s = n(582128),
-    r = n(503698),
-    i = n.n(r),
+    r = n(582128),
+    s = n(503698),
+    i = n.n(s),
     o = n(837381),
     a = n(887129),
     c = n(741918),
@@ -20,18 +20,18 @@ var t = n(477900),
     C = n(652215),
     v = n(375708),
     I = n(298261);
-let N = s.lazy(() =>
+let N = r.lazy(() =>
         Promise.all([n.e("851921"), n.e("869047"), n.e("593279"), n.e("936920"), n.e("787680")]).then(
             n.bind(n, 148259),
         ),
     ),
     y = () => Promise.resolve();
-function A(e) {
+function $(e) {
     let {
             color: l,
             listItemId: n,
-            isDefault: s = !1,
-            isCustom: r = !1,
+            isDefault: r = !1,
+            isCustom: s = !1,
             isSelected: a = !1,
             disabled: c = !1,
             style: p = {},
@@ -42,28 +42,28 @@ function A(e) {
             gradientDegrees: N = 180,
         } = e,
         y = (0, o.rm)(n ?? `color-${l}`),
-        A = {};
-    A =
+        $ = {};
+    $ =
         x && null != j && j.length > 0
             ? { background: (0, k.r)(j, N) }
             : { backgroundColor: null != l ? (0, d.Hl)(l) : p.backgroundColor };
-    let $ = x ? j?.[0] : l,
+    let A = x ? j?.[0] : l,
         L = !1;
     return (
-        r && !a ? (L = !0) : (r || a) && (L = (0, d.OK)($ ?? C.TGz) > 0.2),
+        s && !a ? (L = !0) : (s || a) && (L = (0, d.OK)(A ?? C.TGz) > 0.2),
         (0, t.jsx)(h.vN, {
             offset: -2,
             children: (0, t.jsxs)("button", {
                 type: "button",
-                className: i()(I.iH, { [I.r9]: c, [I.Ay]: s, [I.Ie]: r, [I.dw]: null == l && !x, [I.hb]: x }),
+                className: i()(I.iH, { [I.r9]: c, [I.Ay]: r, [I.Ie]: s, [I.dw]: null == l && !x, [I.hb]: x }),
                 disabled: c,
                 onClick: () => m?.(x ? j : l),
-                style: { ...p, ...A },
-                "aria-label": f ?? (x ? v.intl.string(v.t.XpWmJz) : A.backgroundColor),
+                style: { ...p, ...$ },
+                "aria-label": f ?? (x ? v.intl.string(v.t.XpWmJz) : $.backgroundColor),
                 ...y,
                 children: [
-                    r
-                        ? (0, t.jsx)(g.R, {
+                    s
+                        ? (0, t.jsx)(g.PencilIcon, {
                               size: "custom",
                               className: I.M2,
                               width: 14,
@@ -74,8 +74,8 @@ function A(e) {
                     (function () {
                         let e = 16,
                             l = 16;
-                        if (((r || s) && ((e = "38%"), (l = "auto")), a))
-                            return (0, t.jsx)(u.A, {
+                        if (((s || r) && ((e = "38%"), (l = "auto")), a))
+                            return (0, t.jsx)(u.CheckmarkLargeIcon, {
                                 size: "custom",
                                 width: e,
                                 height: l,
@@ -87,37 +87,37 @@ function A(e) {
         })
     );
 }
-class $ extends s.PureComponent {
+class A extends r.PureComponent {
     render() {
-        let { color: e, onChange: l, value: n, disabled: s, allowBlackCustomColor: r } = this.props;
-        return (0, t.jsx)(A, {
+        let { color: e, onChange: l, value: n, disabled: r, allowBlackCustomColor: s } = this.props;
+        return (0, t.jsx)($, {
             isDefault: !0,
             listItemId: "default",
             color: e,
-            isSelected: e === n || (0 === n && !r),
+            isSelected: e === n || (0 === n && !s),
             onClick: l,
-            disabled: s,
+            disabled: r,
         });
     }
 }
-class L extends s.PureComponent {
+class L extends r.PureComponent {
     render() {
-        let { customColor: e, value: l, disabled: n, "aria-label": s, presets: r } = this.props;
-        return (0, t.jsx)(A, {
+        let { customColor: e, value: l, disabled: n, "aria-label": r, presets: s } = this.props;
+        return (0, t.jsx)($, {
             isCustom: !0,
             listItemId: "custom",
             color: e,
-            isSelected: l === e && !r.includes(e),
+            isSelected: l === e && !s.includes(e),
             disabled: n,
-            "aria-label": s,
+            "aria-label": r,
         });
     }
 }
-let S = s.memo(function (e) {
+let S = r.memo(function (e) {
     var l;
     let {
             value: n,
-            eagerUpdate: r = !1,
+            eagerUpdate: s = !1,
             onChange: o,
             onClose: a,
             suggestedColors: c,
@@ -129,10 +129,10 @@ let S = s.memo(function (e) {
         } = e,
         C = (0, j.A)(),
         y = null == (l = n) ? null : "string" == typeof l ? ((0, d.qt)(l) ? (0, d.LX)(l) : null) : l,
-        A = y ?? 0,
-        $ = (0, d.Hl)(A),
-        L = (0, d.tf)(A),
-        [S, T] = s.useState({ current: A, pending: { hex: $, hsl: L }, input: $ });
+        $ = y ?? 0,
+        A = (0, d.Hl)($),
+        L = (0, d.tf)($),
+        [S, T] = r.useState({ current: $, pending: { hex: A, hsl: L }, input: A });
     function H(e) {
         let l = "#" === e[0] ? e : `#${e}`;
         if (!(0, d.qt)(l)) return void T((e) => ({ ...e, input: l }));
@@ -147,25 +147,25 @@ let S = s.memo(function (e) {
                 H(e);
             } catch {}
     }
-    s.useEffect(() => {
+    r.useEffect(() => {
         if (null == y || y === S.current) return;
         let e = (0, d.Hl)(y),
             l = (0, d.tf)(y);
         T({ current: y, pending: { hex: e, hsl: l }, input: e });
     }, [y, S]),
-        s.useEffect(() => a, [a]);
-    let w = s.useCallback(
+        r.useEffect(() => a, [a]);
+    let P = r.useCallback(
             (e) => {
-                T((l) => ({ ...l, pending: e, input: e.hex })), r && o((0, d.LX)(e.hex));
+                T((l) => ({ ...l, pending: e, input: e.hex })), s && o((0, d.LX)(e.hex));
             },
-            [r, o],
+            [s, o],
         ),
-        D = (0, t.jsxs)(t.Fragment, {
+        w = (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, t.jsx)(s.Suspense, {
+                (0, t.jsx)(r.Suspense, {
                     fallback: null,
                     children: (0, t.jsx)(N, {
-                        onChange: w,
+                        onChange: P,
                         onChangeComplete: (e) => {
                             let { hex: l } = e;
                             o((0, d.LX)(l));
@@ -202,15 +202,15 @@ let S = s.memo(function (e) {
                 h,
             ],
         }),
-        E = b ?? f.l;
-    return (0, t.jsx)(E, { "aria-label": v.intl.string(v.t.WTqQ5e), className: i()(I.zi, k), children: D });
+        D = b ?? f.l;
+    return (0, t.jsx)(D, { "aria-label": v.intl.string(v.t.WTqQ5e), className: i()(I.zi, k), children: w });
 });
 function T(e) {
     let {
             className: l,
             defaultColor: n,
-            customColor: s,
-            colors: r,
+            customColor: r,
+            colors: s,
             value: d,
             gradientColors: u,
             disabled: h,
@@ -233,7 +233,7 @@ function T(e) {
                       let l = e.colors.join("-"),
                           n = u?.join("-") === l;
                       return (0, t.jsx)(
-                          A,
+                          $,
                           {
                               listItemId: `gradient-${l}`,
                               gradientColors: e.colors,
@@ -250,7 +250,7 @@ function T(e) {
                   })
                 : e.map((e) =>
                       (0, t.jsx)(
-                          A,
+                          $,
                           {
                               listItemId: `preset-${e}`,
                               color: e,
@@ -264,8 +264,8 @@ function T(e) {
                   ),
         });
     }
-    let $ = r.slice(0, r.length / 2),
-        L = r.slice(r.length / 2, r.length),
+    let A = s.slice(0, s.length / 2),
+        L = s.slice(s.length / 2, s.length),
         S = (0, a.Ay)({
             id: "color-picker",
             isEnabled: !0,
@@ -298,12 +298,12 @@ function T(e) {
                                     }),
                                     (0, t.jsx)("div", {
                                         className: i()(I.BQ, x),
-                                        children: m({ value: d, customColor: s, disabled: h, presets: r }),
+                                        children: m({ value: d, customColor: r, disabled: h, presets: s }),
                                     }),
                                 ],
                             }),
                         b && null != f && (0, t.jsx)("div", { children: f() }),
-                        (0, t.jsxs)("div", { children: [N($), N(L)] }),
+                        (0, t.jsxs)("div", { children: [N(A), N(L)] }),
                     ],
                 });
             },

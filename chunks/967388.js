@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -20,9 +20,9 @@ var i = n(477900),
     j = n(662731),
     I = n(375708),
     v = n(904043);
-function E(e) {
-    let { channelId: t, note: n, roomWidth: E } = e,
-        [N, b] = (0, l.useState)(!1),
+function N(e) {
+    let { channelId: t, note: n, roomWidth: N } = e,
+        [E, b] = (0, l.useState)(!1),
         _ = (0, l.useRef)(null),
         T = (0, a.bG)([f.default], () => f.default.getUser(n.createdBy)),
         R = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
@@ -37,13 +37,13 @@ function E(e) {
                       "aria-label": I.intl.formatToPlainString(j.default.w5Latp, { userName: S }),
                       className: v.kL,
                       onClick: () => {
-                          N || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), b(!N);
+                          E || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), b(!E);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
-                      children: (0, i.jsx)(y.A, { roomWidth: E }),
+                      children: (0, i.jsx)(y.A, { roomWidth: N }),
                   }),
                   (0, i.jsxs)(s.x, {
-                      shouldShow: N,
+                      shouldShow: E,
                       onRequestClose: () => {
                           b(!1);
                       },
@@ -77,7 +77,7 @@ function E(e) {
                                                   null != R && (0, x.yF)(R, t, n.objectId).catch((e) => (0, C.b)());
                                               },
                                               className: v.Kk,
-                                              children: (0, i.jsx)(h.u, { size: "sm", color: "currentColor" }),
+                                              children: (0, i.jsx)(h.TrashIcon, { size: "sm", color: "currentColor" }),
                                           }),
                                       ],
                                   }),

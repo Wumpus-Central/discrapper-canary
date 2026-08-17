@@ -21,7 +21,7 @@ function f(e) {
         );
     return (0, l.jsx)(i.$, {
         onClick: m,
-        icon: a.l,
+        icon: a.ShareIcon,
         variant: t,
         size: "sm",
         text: d.intl.string(d.t.RDE0Sc),

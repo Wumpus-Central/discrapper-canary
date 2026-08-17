@@ -27,8 +27,8 @@ let O = (0, i(945810).mj)({
     variations: { 1: { enabled: !0 } },
 });
 var v = i(40449),
-    P = i(375708);
-let T = function (t) {
+    I = i(375708);
+let P = function (t) {
     let { onClose: e, classificationId: i, onGoogleWalletSelect: n } = t,
         { methods: r, loading: a } = (0, h.cf)([x.A], () => ({ methods: x.A.methods, loading: x.A.loading })),
         { initiateAgeVerification: o } = (0, R.nn)({
@@ -66,8 +66,8 @@ let T = function (t) {
                             let { title: i, description: n } = e;
                             return {
                                 id: t,
-                                title: P.intl.string(i),
-                                description: P.intl.string(n),
+                                title: I.intl.string(i),
+                                description: I.intl.string(n),
                                 onClick: async (e) => {
                                     (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, t), await o(t);
                                 },
@@ -81,8 +81,8 @@ let T = function (t) {
                             ...t,
                             {
                                 id: v.VF.GOOGLE_WALLET,
-                                title: P.intl.string(e.title),
-                                description: P.intl.string(e.description),
+                                title: I.intl.string(e.title),
+                                description: I.intl.string(e.description),
                                 onClick: (t) => {
                                     p.A.increment({ name: S.K.GOOGLE_WALLET_METHOD_SELECTED }),
                                         (0, f.St)(t, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, v.VF.GOOGLE_WALLET),
@@ -97,7 +97,7 @@ let T = function (t) {
         }
     );
 };
-var I = i(652215),
+var T = i(652215),
     C = i(239093),
     M = i(516761),
     W = i(861608),
@@ -107,7 +107,7 @@ function b(t) {
     return (0, m.W$)()
         ? (0, n.jsx)(o.E, {
               variant: "text-xs/medium",
-              children: P.intl.format(M.default.htWh1G, {
+              children: I.intl.format(M.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
                       g.A.openUrl(C.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
@@ -118,7 +118,7 @@ function b(t) {
           ? (0, n.jsx)(s.Q, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: P.intl.string(P.t["2jxGer"]),
+                text: I.intl.string(I.t["2jxGer"]),
                 onClick: () => {
                     (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LOG_OUT), (0, _.k)("age_verification_get_started_modal");
                 },
@@ -129,7 +129,7 @@ let j = function (t) {
     let { transitionState: e, entryPoint: i, onClose: s, onComplete: _, dismissable: S, classificationId: h } = t,
         p = l.useMemo(() => (0, r.A)(), []),
         x = (0, m.W$)(),
-        { loading: O, ageVerificationMethods: v } = T({
+        { loading: O, ageVerificationMethods: v } = P({
             onClose: () => {
                 _?.(), s();
             },
@@ -149,7 +149,7 @@ let j = function (t) {
             subtitle: (0, R.mK)(
                 i,
                 () => {
-                    g.A.openUrl(A.A.getArticleURL(I.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    g.A.openUrl(A.A.getArticleURL(T.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
                 },
                 x,
@@ -167,11 +167,11 @@ let j = function (t) {
                         align: "center",
                         className: W.W,
                         children: [
-                            (0, n.jsx)(c.m, { size: "lg", color: "currentColor" }),
+                            (0, n.jsx)(c.CircleInformationIcon, { size: "lg", color: "currentColor" }),
                             (0, n.jsx)(o.E, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: P.intl.string(M.default.ar3a3q),
+                                children: I.intl.string(M.default.ar3a3q),
                             }),
                         ],
                     }),
@@ -184,12 +184,12 @@ let j = function (t) {
                                   (0, n.jsx)(o.E, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
-                                      children: P.intl.string(M.default.cR6336),
+                                      children: I.intl.string(M.default.cR6336),
                                   }),
                                   (0, n.jsx)(d.$, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: P.intl.string(M.default.hDvmYP),
+                                      text: I.intl.string(M.default.hDvmYP),
                                       onClick: () => {
                                           (0, L.DJ)();
                                       },

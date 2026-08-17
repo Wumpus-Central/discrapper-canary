@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => M });
 var l = n(477900),
     i = n(582128),
     a = n(17928),
@@ -157,7 +157,7 @@ function I(e) {
                     n = e?.icon != null ? ((0, _.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
                 if (null != n) return (0, l.jsx)("img", { src: n, alt: s, width: 40, height: 40 });
             }
-            return (0, l.jsx)(N.q, { size: "custom", width: 40, height: 40, color: "currentColor" });
+            return (0, l.jsx)(N.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
         }, [t.provider_id, o, s]);
     return (0, l.jsx)(C, {
         displayName: s,
@@ -169,13 +169,13 @@ function I(e) {
         onConnect: g,
     });
 }
-var M = n(539916);
-function b(e) {
+var k = n(539916);
+function M(e) {
     let { connection: t, guildId: n, location: i } = e;
     switch (t.connection_type) {
-        case M.wZ.APPLICATION:
+        case k.wZ.APPLICATION:
             return (0, l.jsx)(v, { connection: t, guildId: n, location: i });
-        case M.wZ.PROVIDER_CONNECTED_ACCOUNT:
+        case k.wZ.PROVIDER_CONNECTED_ACCOUNT:
             return (0, l.jsx)(I, { connection: t, guildId: n, location: i });
         default:
             return t.connection_type, null;

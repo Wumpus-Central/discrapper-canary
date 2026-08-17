@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(505930),
     u = n(866665),
     c = n(609174),
-    o = n(430795),
+    o = n(539572),
     d = n(16590),
     f = n(375708);
 function p() {
@@ -24,7 +24,7 @@ function p() {
             position: "top",
             children: (0, l.jsx)(a.K, {
                 onClick: t,
-                icon: e.isFavorite ? i.G : s.y,
+                icon: e.isFavorite ? i.StarIcon : s.y,
                 "aria-label": f.intl.string(f.t.k8fFjp),
                 variant: "overlay-secondary",
                 size: "sm",

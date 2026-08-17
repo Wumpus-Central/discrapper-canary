@@ -1,21 +1,21 @@
-s.d(a, { J: () => c });
+s.d(a, { UploadIcon: () => h });
 var e = s(477900);
 s(582128);
 var t = s(661531),
     i = s(996682),
-    h = s(27989);
-function c(l) {
+    c = s(27989);
+function h(l) {
     let {
             size: a = "md",
             width: s,
-            height: c,
+            height: h,
             color: n = t.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
             ...o
         } = l,
-        r = (0, h.J)(a),
+        r = (0, c.J)(a),
         v = r?.width ?? s,
-        w = r?.height ?? c;
+        w = r?.height ?? h;
     return (0, e.jsx)("svg", {
         ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",

@@ -1,4 +1,4 @@
-n.d(l, { A: () => I });
+n.d(l, { A: () => b });
 var s = n(477900),
     t = n(582128),
     a = n(503698),
@@ -17,59 +17,59 @@ var s = n(477900),
     N = n(287809),
     f = n(562153),
     v = n(427262),
-    b = n(186444);
-function I(e) {
+    I = n(186444);
+function b(e) {
     var l, n;
     let a,
-        { guildId: I, welcomeMessage: p, className: C } = e,
-        E = (0, r.bG)([A.A], () => A.A.getGuild(I)),
+        { guildId: b, welcomeMessage: C, className: p } = e,
+        E = (0, r.bG)([A.A], () => A.A.getGuild(b)),
         G = (0, r.bG)([h.Ay], () => h.Ay.useReducedMotion),
-        M = (0, r.bG)([N.default], () => N.default.getUser(p?.authorIds[0])),
+        M = (0, r.bG)([N.default], () => N.default.getUser(C?.authorIds[0])),
         y = t.useMemo(() => (null != E && null != M && (0, g.c)(E, M) ? M : null), [E, M]),
         L = (0, r.bG)([N.default], () => N.default.getCurrentUser()),
-        _ = t.useMemo(() => p?.authorIds ?? [], [p]);
+        _ = t.useMemo(() => C?.authorIds ?? [], [C]);
     t.useEffect(() => {
-        x.A.requestMembersById(I, _);
-    }, [I, _]),
+        x.A.requestMembersById(b, _);
+    }, [b, _]),
         t.useEffect(() => {
-            null != y && (0, j.A)(y.id, y.getAvatarURL(I, 48), { guildId: I });
-        }, [y, I]);
-    let k = f.Ay.useName(I, null, y),
+            null != y && (0, j.A)(y.id, y.getAvatarURL(b, 48), { guildId: b });
+        }, [y, b]);
+    let k = f.Ay.useName(b, null, y),
         U = (0, v.tx)(L);
-    if (null == y || null == L || null == p) return null;
+    if (null == y || null == L || null == C) return null;
     let R = null != E && E.ownerId === y.id;
     return (0, s.jsxs)(c.Z, {
-        className: i()(b.fr, C),
+        className: i()(I.fr, p),
         children: [
-            (0, s.jsx)("div", { className: b.oJ }),
+            (0, s.jsx)("div", { className: I.oJ }),
             G
                 ? (0, s.jsx)(d.eu, {
-                      src: y.getAvatarURL(I, 48),
+                      src: y.getAvatarURL(b, 48),
                       size: u._3.SIZE_48,
-                      className: b.my,
+                      className: I.my,
                       "aria-label": y.username,
                   })
                 : (0, s.jsx)(d.Js, {
-                      src: y.getAvatarURL(I, 48),
+                      src: y.getAvatarURL(b, 48),
                       size: u._3.SIZE_48,
-                      className: b.my,
+                      className: I.my,
                       "aria-label": y.username,
                   }),
-            (0, s.jsx)("div", { className: b.uh }),
+            (0, s.jsx)("div", { className: I.uh }),
             (0, s.jsxs)("div", {
-                className: b.H0,
+                className: I.H0,
                 children: [
                     (0, s.jsxs)("div", {
-                        className: b.HO,
+                        className: I.HO,
                         children: [
                             (0, s.jsx)(o.E, { variant: "text-sm/semibold", color: "text-strong", children: k }),
-                            R ? (0, s.jsx)(m.p, { size: "xxs", color: "currentColor", className: b.Dd }) : null,
+                            R ? (0, s.jsx)(m.CrownIcon, { size: "xxs", color: "currentColor", className: I.Dd }) : null,
                         ],
                     }),
                     (0, s.jsx)(o.E, {
                         variant: "text-md/medium",
                         children:
-                            ((l = p?.message),
+                            ((l = C?.message),
                             (n = U ?? L.username),
                             (a = l.split(/\[@username\]/g)),
                             (0, s.jsx)("span", {

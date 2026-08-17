@@ -6,53 +6,53 @@ var l = t(477900),
     i = t(408278),
     c = t(834040),
     o = t(95477),
-    d = t(307301),
-    h = t(375708),
-    u = t(331896);
+    u = t(307301),
+    d = t(375708),
+    h = t(331896);
 function m(e) {
     return "" === e || "-" === e;
 }
 function p(e) {
     let { value: a, onChange: t, className: r, minValue: p, maxValue: x } = e,
-        [E, C] = n.useState(a),
-        v = m(E) || (null != p && E <= p),
-        j = m(E) || (null != x && E >= x);
-    function g(e) {
-        t(m(e) ? (p ?? 0) : e), C(e);
+        [C, E] = n.useState(a),
+        g = m(C) || (null != p && C <= p),
+        v = m(C) || (null != x && C >= x);
+    function f(e) {
+        t(m(e) ? (p ?? 0) : e), E(e);
     }
     return (0, l.jsxs)("div", {
-        className: s()(u.o, r),
+        className: s()(h.o, r),
         children: [
             (0, l.jsx)(i.K, {
                 variant: "icon-only",
                 size: "sm",
-                icon: c.Q,
+                icon: c.MinusIcon,
                 onClick: function (e) {
-                    e.stopPropagation(), v || g(E - 1);
+                    e.stopPropagation(), g || f(C - 1);
                 },
-                "aria-label": h.intl.string(h.t["k+ohJm"]),
-                disabled: v,
+                "aria-label": d.intl.string(d.t["k+ohJm"]),
+                disabled: g,
             }),
             (0, l.jsx)("div", {
-                className: u.U,
+                className: h.U,
                 children: (0, l.jsx)(o.k, {
-                    value: `${E}`,
+                    value: `${C}`,
                     onChange: function (e) {
-                        if (m(e)) return g(e);
+                        if (m(e)) return f(e);
                         let a = parseInt(e);
-                        if (!isNaN(a)) return null != x && a >= x ? g(x) : null != p && a <= p ? g(p) : g(a);
+                        if (!isNaN(a)) return null != x && a >= x ? f(x) : null != p && a <= p ? f(p) : f(a);
                     },
                 }),
             }),
             (0, l.jsx)(i.K, {
                 size: "sm",
                 variant: "icon-only",
-                icon: d.j,
+                icon: u.j,
                 onClick: function (e) {
-                    e.stopPropagation(), j || g(E + 1);
+                    e.stopPropagation(), v || f(C + 1);
                 },
-                "aria-label": h.intl.string(h.t.w8Sc4B),
-                disabled: j,
+                "aria-label": d.intl.string(d.t.w8Sc4B),
+                disabled: v,
             }),
         ],
     });

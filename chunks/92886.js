@@ -72,7 +72,7 @@ let j = function (e) {
 };
 var M = n(951305),
     O = n(222707),
-    L = n(561794),
+    L = n(594832),
     k = n(97352),
     w = n(45938),
     U = n(975571),
@@ -143,7 +143,7 @@ function el(e) {
                             (0, i.jsx)(Z.K, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: z.Q,
+                                icon: z.MinusIcon,
                                 onClick: () => l(n - 1),
                                 "aria-label": b.intl.string(b.t["k+ohJm"]),
                                 disabled: n <= f.y0,
@@ -161,7 +161,7 @@ function el(e) {
                             (0, i.jsx)(Z.K, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: Q.p,
+                                icon: Q.PlusLargeIcon,
                                 onClick: () => l(n + 1),
                                 "aria-label": b.intl.string(b.t.w8Sc4B),
                                 disabled: n >= 50,

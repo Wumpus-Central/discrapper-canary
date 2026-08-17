@@ -33,7 +33,12 @@ function f(e) {
                   (0, l.jsx)(
                       E.A,
                       {
-                          icon: (0, l.jsx)(r.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+                          icon: (0, l.jsx)(r.CalendarIcon, {
+                              size: "custom",
+                              color: "currentColor",
+                              height: 20,
+                              width: 20,
+                          }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
                           title: p.intl.formatToPlainString(v(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
                           description: p.intl.formatToPlainString(p.t.PTebCR, {

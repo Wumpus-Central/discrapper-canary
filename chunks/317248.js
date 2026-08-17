@@ -28,15 +28,15 @@ var i = n(477900),
     A = n(176634),
     L = n(101555),
     N = n(386976),
-    B = n(32523),
-    I = n(287809),
+    I = n(32523),
+    B = n(287809),
     R = n(486020),
     P = n(58703),
     M = n(723702);
 n(321073);
-var z = n(562708),
-    D = n(77138),
-    T = n(363195),
+var T = n(562708),
+    z = n(77138),
+    D = n(363195),
     V = n(499785),
     W = n(652215),
     $ = n(375708);
@@ -53,7 +53,7 @@ async function U(e, t, n) {
         { name: "name", value: e.name },
         { name: "priority", value: `${e.priority}` },
         { name: "override_platform_information", value: `${t.overridePlatformInformation}` },
-        { name: "theme", value: T.A.theme },
+        { name: "theme", value: D.A.theme },
     ];
     "" !== e.description && i.push({ name: "description", value: e.description }),
         "" !== e.url && i.push({ name: "external_url", value: e.url }),
@@ -75,14 +75,14 @@ async function U(e, t, n) {
             i.push({ name: "client_build_number", value: t.clientBuildNumber }),
             i.push({ name: "release_channel", value: window.GLOBAL_ENV.RELEASE_CHANNEL }),
             i.push({ name: "locale", value: t.locale })),
-        (0, D.a)(W.Umv.WEB_APP);
+        (0, z.a)(W.Umv.WEB_APP);
     try {
         return await V.A.post({
             url: W.Rsh.BUG_REPORTS,
             attachments: n,
             fields: i,
             trackedActionData: {
-                event: z.NetworkActionNames.BUG_REPORT_SUBMIT,
+                event: T.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: { priority: e.priority, asana_inbox_id: a },
             },
             rejectWithError: !1,
@@ -98,9 +98,9 @@ let Y = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map
     value: e,
 }));
 function F(e) {
-    let { transitionState: t, onClose: z } = e,
+    let { transitionState: t, onClose: T } = e,
+        z = a.useRef(null),
         D = a.useRef(null),
-        T = a.useRef(null),
         [V, W] = a.useState(!1),
         [F, Z] = a.useState(""),
         [X, J] = a.useState(""),
@@ -139,22 +139,22 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "bf675c8efbd94cf0f8f3d03a3a0ece63079ae2c1" !== e.body.hash) {
-                let e = new Date("1786748141834"),
+            if (null != e.body && "1c39e7c1cfd04b249b7fe2da4d2d2ae80398df55" !== e.body.hash) {
+                let e = new Date("1786948039260"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eA(n.hours);
             }
         });
     }, []);
-    let eL = (0, r.bG)([I.default], () => {
-            let e = I.default.getCurrentUser();
+    let eL = (0, r.bG)([B.default], () => {
+            let e = B.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
         eN = (0, r.bG)([E.A], () => E.A.getCurrentBuildOverride().overrides?.discord_web),
-        { overridesInfo: eB } = (0, B.hI)(),
-        { overridesInfo: eI } = (0, N.op)(),
-        eR = Object.entries({ ...eB, ...eI }).map((e) => {
+        { overridesInfo: eI } = (0, I.hI)(),
+        { overridesInfo: eB } = (0, N.op)(),
+        eR = Object.entries({ ...eI, ...eB }).map((e) => {
             let [t, { variantId: n }] = e;
             return { experimentId: t, variantId: n };
         });
@@ -194,7 +194,7 @@ function F(e) {
         eE(!1),
             null != a && a.ok
                 ? (eL && window.open(a.body.permalink_url, "_blank"),
-                  z(),
+                  T(),
                   (0, c.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("185773"), n.e("876587")]).then(n.bind(n, 369323));
                       return (t) => (0, i.jsx)(e, { ...t, asanaTask: a.body });
@@ -209,7 +209,7 @@ function F(e) {
             eL && e();
         }, [eL]),
         a.useEffect(() => {
-            en.length > 0 && T.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+            en.length > 0 && D.current?.scrollIntoView({ behavior: "smooth", block: "end" });
         }, [en]),
         (0, A.A)({
             onPasteFiles: a.useCallback((e) => {
@@ -233,7 +233,7 @@ function F(e) {
             "aria-label": $.intl.string($.t.mCCdwi),
             title: $.intl.string($.t["5LqopY"]),
             actions: [
-                { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: z, autoFocus: !1 },
+                { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: T, autoFocus: !1 },
                 {
                     variant: "primary",
                     text: eL ? "Submit and Open Report" : "Submit Report",
@@ -242,7 +242,7 @@ function F(e) {
                     autoFocus: !1,
                 },
             ],
-            onClose: z,
+            onClose: T,
             children: (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsxs)(m.B, {
@@ -487,14 +487,14 @@ function F(e) {
                                 variant: "secondary",
                                 text: $.intl.string($.t.HVxmOD),
                                 onClick: function () {
-                                    D.current?.activateUploadDialogue();
+                                    z.current?.activateUploadDialogue();
                                 },
                                 fullWidth: !0,
                             }),
                             (0, i.jsx)("div", {
                                 className: G.Fg,
                                 children: (0, i.jsx)(k.A, {
-                                    ref: D,
+                                    ref: z,
                                     onChange: function (e) {
                                         e.currentTarget?.files?.[0] != null &&
                                             ei([
@@ -517,7 +517,7 @@ function F(e) {
                                 ? (0, i.jsx)(y.D, {
                                       label: "Preview",
                                       children: (0, i.jsx)("div", {
-                                          ref: T,
+                                          ref: D,
                                           className: G.ZO,
                                           children:
                                               en.length > 0 &&
@@ -547,7 +547,7 @@ function F(e) {
                                                                                       );
                                                                                   },
                                                                                   dangerous: !0,
-                                                                                  children: (0, i.jsx)(S.u, {
+                                                                                  children: (0, i.jsx)(S.TrashIcon, {
                                                                                       size: "md",
                                                                                       color: "currentColor",
                                                                                   }),

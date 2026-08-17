@@ -1,34 +1,34 @@
 l.d(a, { A: () => v });
 var t = l(477900);
 l(582128);
-var i = l(17928),
-    n = l(638495),
+var n = l(17928),
+    i = l(638495),
     c = l(192308),
     o = l(477782),
     d = l(635739),
     r = l(39623),
     s = l(952572),
     u = l(280450),
-    A = l(626822),
+    A = l(453028),
     p = l(731854),
     h = l(375708);
 function v(e, a) {
-    let v = (0, n.k)(),
+    let v = (0, i.k)(),
         {
-            videoEnabled: b,
+            videoEnabled: y,
             hasVideoDevice: f,
-            videoSupported: y,
-        } = (0, i.cf)([A.Ay], () => ({
+            videoSupported: b,
+        } = (0, n.cf)([A.Ay], () => ({
             videoEnabled: A.Ay.isVideoEnabled(),
             hasVideoDevice: A.Ay.isVideoAvailable(),
             videoSupported: A.Ay.supports(p.O5.VIDEO),
         })),
-        g = (0, i.bG)([u.default], () => u.default.getId() === e),
+        g = (0, n.bG)([u.default], () => u.default.getId() === e),
         M = (0, s.A)();
-    return y && (!b || M) && g && f
+    return b && (!y || M) && g && f
         ? (0, t.jsx)(o.Dr, {
               id: "change-video-background",
-              label: b ? h.intl.string(h.t.mZKxHb) : h.intl.string(h.t["vkV93/"]),
+              label: y ? h.intl.string(h.t.mZKxHb) : h.intl.string(h.t["vkV93/"]),
               action: function () {
                   (0, c.openModalLazy)(
                       async () => {
@@ -53,13 +53,13 @@ function v(e, a) {
                               l.e("485160"),
                               l.e("410534"),
                           ]).then(l.bind(l, 308229));
-                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: b });
+                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: y });
                       },
                       { modalKey: "camera-preview", contextKey: null != a ? (0, c.modalContextFromAppContext)(a) : v },
                   );
               },
-              icon: b ? d.f : r.b,
-              leadingAccessory: { type: "icon", icon: b ? d.f : r.b },
+              icon: y ? d.f : r.EyeIcon,
+              leadingAccessory: { type: "icon", icon: y ? d.f : r.EyeIcon },
           })
         : null;
 }

@@ -4,8 +4,8 @@ var r = s(477900),
     i = s(503698),
     l = s.n(i),
     a = s(323889),
-    u = s(621466),
-    o = s(17928),
+    o = s(621466),
+    u = s(17928),
     c = s(939249),
     d = s(834730),
     m = s(885574),
@@ -23,11 +23,11 @@ var r = s(477900),
     h = s(801365),
     j = s(557637),
     y = s(415441),
-    v = s(734736),
-    M = s(617986),
-    q = s(139384),
-    w = s(190107),
-    I = s(375708),
+    I = s(734736),
+    v = s(617986),
+    M = s(139384),
+    q = s(190107),
+    w = s(375708),
     L = s(142325);
 let S = function (e) {
     let t,
@@ -45,12 +45,12 @@ let S = function (e) {
         } = e,
         V = (0, N.Ut)(),
         Y = (0, g.go)(),
-        z = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
-        B = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
+        z = (0, u.bG)([C.Ay], () => C.Ay.useReducedMotion),
+        B = (0, u.bG)([E.default], () => E.default.getCurrentUser()),
         G = n.useMemo(
             () =>
                 (0, h.ks)(i.config) && i.userStatus?.claimedAt != null
-                    ? I.intl.formatToPlainString(I.t["nLXlh+"], {
+                    ? w.intl.formatToPlainString(w.t["nLXlh+"], {
                           orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, h._Z)(i.config) ?? 0,
                       })
                     : (0, h.mq)(i.config, B),
@@ -60,7 +60,7 @@ let S = function (e) {
         K = n.useMemo(() => (0, x.tW)(i, x.fY.REWARD_IMAGE), [i]),
         O = n.useCallback(
             (t) => {
-                (0, u.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                (0, o.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     (0, R.E5)(R.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_tile")
                         ? (0, A.r)({
                               type: T.F.CLICK_INTERNAL,
@@ -79,7 +79,7 @@ let S = function (e) {
                               questContentCTA: p.Cy.REWARD_LEARN_MORE,
                               sourceQuestContent: W,
                           }),
-                    (0, M.mA)({ fromContent: e.questContent, questId: i.id }),
+                    (0, v.mA)({ fromContent: e.questContent, questId: i.id }),
                     e.onClick?.(t);
             },
             [V, i.id, e, W, Y],
@@ -100,12 +100,12 @@ let S = function (e) {
                     (F.current = S);
             }
         }, [S, H, z]),
-        (0, q.A)(X, w.rE.QUEST_HOME_DESKTOP),
+        (0, M.A)(X, q.rE.QUEST_HOME_DESKTOP),
         Z)
     )
         t = (0, r.jsx)(j._M, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, r.jsx)(v.A, { ref: e, className: L.eB }),
+            children: (e) => (0, r.jsx)(I.A, { ref: e, className: L.eB }),
         });
     else if (k)
         t = (0, r.jsx)(y.N, {
@@ -116,7 +116,7 @@ let S = function (e) {
                           asset: K,
                           assetId: "QuestRewardTile_rewardTileStatic",
                           className: L.XM,
-                          alt: I.intl.string(I.t.UMclVN),
+                          alt: w.intl.string(w.t.UMclVN),
                       }
                     : void 0,
             videoAsset: { asset: H, assetId: "QuestRewardTile_rewardTileAnimated", className: l()(L.eB, L.WY) },
@@ -129,7 +129,7 @@ let S = function (e) {
             children: (t) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        null != s && (0, r.jsx)("img", { alt: I.intl.string(I.t.UMclVN), className: L.XM, src: s }),
+                        null != s && (0, r.jsx)("img", { alt: w.intl.string(w.t.UMclVN), className: L.XM, src: s }),
                         (0, r.jsx)(_.A, {
                             ref: (e) => {
                                 (t.current = e), (X.current = e);
@@ -166,12 +166,12 @@ let S = function (e) {
                           variant: "text-xs/normal",
                           className: L.n_,
                           style: { fontSize: Q },
-                          children: I.intl.format(I.t.DYAleT, {}),
+                          children: w.intl.format(w.t.DYAleT, {}),
                       }),
                   "icon" === b &&
                       (0, r.jsx)("div", {
                           className: L.n_,
-                          children: (0, r.jsx)(m.m, { size: "xxs", color: f.A.colors.WHITE.css }),
+                          children: (0, r.jsx)(m.CircleInformationIcon, { size: "xxs", color: f.A.colors.WHITE.css }),
                       }),
               ],
           });

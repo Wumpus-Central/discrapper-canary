@@ -23,7 +23,7 @@ function h(i) {
                   }
                 : {
                       label: l ? d.intl.string(d.t["3wFtNJ"]) : d.intl.string(d.t.ilhtIa),
-                      icon: s ? void 0 : a.o,
+                      icon: s ? void 0 : a.GiftIcon,
                       isPromptingPurchase: !0,
                   },
         [c, l, s],

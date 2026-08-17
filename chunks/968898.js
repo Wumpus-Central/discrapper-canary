@@ -114,7 +114,7 @@ function M(e) {
         children: (0, i.jsx)(u.D, {
             className: y.x6,
             onClick: t,
-            children: (0, i.jsx)(h.Z, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+            children: (0, i.jsx)(h.SettingsIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
         }),
     });
 }

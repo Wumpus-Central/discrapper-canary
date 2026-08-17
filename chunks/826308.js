@@ -1,29 +1,29 @@
-l.d(n, { A: () => h });
+l.d(e, { A: () => p });
 var o = l(477900),
     t = l(582128),
-    c = l(284009),
-    a = l.n(c),
+    a = l(284009),
+    c = l.n(a),
     s = l(477782),
     i = l(7689),
     d = l(174459),
     r = l(723702),
     u = l(652215),
-    p = l(375708);
-function h(e) {
-    let n = t.useCallback(() => {
-        a()(null != e, "text cannot be null"),
+    g = l(375708);
+function p(n) {
+    let e = t.useCallback(() => {
+        c()(null != n, "text cannot be null"),
             d.default.track(u.HAw.MESSAGE_MENU_GOOGLE_SEARCHED),
-            window.open(`https://www.google.com/search?q=${encodeURIComponent(e)}`, "_blank");
-    }, [e]);
-    return r.isPlatformEmbedded && null != e && e?.length !== 0
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(n)}`, "_blank");
+    }, [n]);
+    return r.isPlatformEmbedded && null != n && n?.length !== 0
         ? [
               (0, o.jsx)(
                   s.Dr,
                   {
                       id: "search-google",
-                      label: p.intl.string(p.t["Rd/Mko"]),
-                      leadingAccessory: { type: "icon", icon: i.$ },
-                      action: n,
+                      label: g.intl.string(g.t["Rd/Mko"]),
+                      leadingAccessory: { type: "icon", icon: i.MagnifyingGlassIcon },
+                      action: e,
                   },
                   "search-google",
               ),

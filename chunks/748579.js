@@ -1,6 +1,6 @@
-a.r(t), a.d(t, { default: () => N });
-var s = a(477900),
-    n = a(582128),
+a.r(t), a.d(t, { default: () => y });
+var n = a(477900),
+    s = a(582128),
     i = a(503698),
     r = a.n(i),
     l = a(562708),
@@ -18,95 +18,95 @@ var s = a(477900),
     x = a(652215),
     v = a(375708),
     T = a(312094);
-function N(e) {
+function y(e) {
     let { levelUpData: t } = e,
-        [a, i] = n.useState(!1),
-        [N, y] = n.useState(!1),
-        [b, j] = n.useState(!1),
+        [a, i] = s.useState(!1),
+        [y, N] = s.useState(!1),
+        [b, j] = s.useState(!1),
         k = (0, f.Xb)(),
-        R = n.useRef(null),
-        A = n.useRef(null),
-        { currentBadge: U, prevBadge: I, levelUpVideoSrc: L } = t,
-        w = n.useCallback(() => {
-            let e = 700 * (U.id !== g.Ac.PREMIUM_TENURE_1_MONTH);
+        R = s.useRef(null),
+        A = s.useRef(null),
+        { currentBadge: I, prevBadge: U, levelUpVideoSrc: L } = t,
+        P = s.useCallback(() => {
+            let e = 700 * (I.id !== g.Ac.PREMIUM_TENURE_1_MONTH);
             (A.current.currentTime = 0),
                 setTimeout(() => {
                     j(!0), A.current.play();
                 }, e);
-        }, [U.id]);
-    n.useEffect(() => {
-        a && w();
-    }, [a, w]),
+        }, [I.id]);
+    s.useEffect(() => {
+        a && P();
+    }, [a, P]),
         (0, m.A)(
             {
                 type: l.ImpressionTypes.POPOUT,
                 name: l.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
-                properties: { new_badge_id: U.id },
+                properties: { new_badge_id: I.id },
             },
             { trackOnInitialLoad: !0 },
         ),
-        n.useEffect(() => {
+        s.useEffect(() => {
             null != A.current && A.current.load();
         }, []);
-    let C = n.useCallback(() => {
-            y(!1),
+    let w = s.useCallback(() => {
+            N(!1),
                 j(!1),
-                w(),
+                P(),
                 (R.current.style.display = "none"),
                 R.current.offsetWidth,
                 (R.current.style.display = ""),
-                p.default.track(x.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: U.id });
-        }, [U.id, w]),
-        D = {
+                p.default.track(x.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: I.id });
+        }, [I.id, P]),
+        C = {
             "--custom-old-badge-color": `linear-gradient(to right, ${t.prevBadgeTextGradient ?? "transparent"})`,
             "--custom-new-badge-color": `linear-gradient(to right, ${t.currentBadgeTextGradient})`,
         };
-    return (0, s.jsxs)("div", {
-        className: r()(T.Qs, { [T.v6]: N, [T.Kc]: a, [T.A4]: b }),
-        style: D,
+    return (0, n.jsxs)("div", {
+        className: r()(T.Qs, { [T.v6]: y, [T.Kc]: a, [T.A4]: b }),
+        style: C,
         ref: R,
         children: [
-            (0, s.jsx)(E.A, {
+            (0, n.jsx)(E.A, {
                 ref: A,
                 className: T.Ki,
                 src: L,
                 playsInline: !0,
                 onLoadedData: () => i(!0),
-                onEnded: () => y(!0),
+                onEnded: () => N(!0),
             }),
-            (0, s.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: T.FS,
                 children: [
-                    (0, s.jsx)(h.A, { width: 60, height: 15 }),
-                    null != I &&
-                        (0, s.jsx)(d.E, {
+                    (0, n.jsx)(h.A, { width: 60, height: 15 }),
+                    null != U &&
+                        (0, n.jsx)(d.E, {
                             variant: "display-md",
                             className: r()(T.Vv, T.km),
-                            children: v.intl.string(I.nameUnformatted),
+                            children: v.intl.string(U.nameUnformatted),
                         }),
-                    (0, s.jsx)(d.E, {
+                    (0, n.jsx)(d.E, {
                         variant: "display-md",
                         className: r()(T.Vv, T.Hl),
-                        children: v.intl.string(U.nameUnformatted),
+                        children: v.intl.string(I.nameUnformatted),
                     }),
                     null != k &&
-                        (0, s.jsx)(d.E, {
+                        (0, n.jsx)(d.E, {
                             variant: "text-xs/medium",
                             className: T.SD,
                             children: v.intl.formatToPlainString(v.t["f/OGgM"], {
-                                timeFrame: (0, _.T)(U.id, U.tenureReqNumMonths),
+                                timeFrame: (0, _.T)(I.id, I.tenureReqNumMonths),
                                 date: k,
                             }),
                         }),
-                    (0, s.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: T.uu,
-                        children: (0, s.jsx)(c.m, {
+                        children: (0, n.jsx)(c.m, {
                             text: v.intl.string(v.t.hsvh0i),
-                            children: (0, s.jsx)(u.K, {
-                                icon: o.u,
+                            children: (0, n.jsx)(u.K, {
+                                icon: o.PlayIcon,
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: C,
+                                onClick: w,
                                 "aria-label": v.intl.string(v.t.hsvh0i),
                             }),
                         }),

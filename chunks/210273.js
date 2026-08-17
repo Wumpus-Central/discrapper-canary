@@ -24,13 +24,13 @@ function h(e) {
         case T.TP.STREAM:
             return l.F;
         case T.TP.UPLOAD:
-            return o.J;
+            return o.UploadIcon;
         case T.TP.CUSTOM_ROLE_ICON:
             return c.i;
         case T.TP.CUSTOMIZATION:
             return d.s;
         case T.TP.VANITY:
-            return u.G;
+            return u.StarIcon;
         case T.TP.STAGE_VIDEO:
             return m.q;
         case T.TP.STICKER:

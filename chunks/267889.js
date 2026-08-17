@@ -339,11 +339,11 @@ let eq = r.memo(function (e) {
         l = (function (e) {
             switch (e) {
                 case eY.R2.RECENT:
-                    return eD.O;
+                    return eD.ClockIcon;
                 case eY.R2.FAVORITES:
-                    return eU.G;
+                    return eU.StarIcon;
                 case eY.R2.TOP_GUILD_EMOJI:
-                    return eG.O;
+                    return eG.TrophyIcon;
                 case eY.R2.PEOPLE:
                     return ew.n;
                 case eY.R2.NATURE:
@@ -351,15 +351,15 @@ let eq = r.memo(function (e) {
                 case eY.R2.FOOD:
                     return eF.i;
                 case eY.R2.ACTIVITY:
-                    return eH._;
+                    return eH.GameControllerIcon;
                 case eY.R2.TRAVEL:
                     return eB.h;
                 case eY.R2.OBJECTS:
                     return eW.D;
                 case eY.R2.SYMBOLS:
-                    return eK.C;
+                    return eK.HeartIcon;
                 case eY.R2.FLAGS:
-                    return ez.i;
+                    return ez.FlagIcon;
                 case eY.R2.PREMIUM_UPSELL:
                     return eE.t;
                 case eY.R2.SOUNDMOJI:
@@ -617,7 +617,7 @@ let tm = function (e) {
         color: "text-default",
         className: th.iE,
         children: [
-            (0, s.jsx)(eK.C, { size: "md", color: "currentColor", className: th.Kk }),
+            (0, s.jsx)(eK.HeartIcon, { size: "md", color: "currentColor", className: th.Kk }),
             (0, s.jsx)("div", {
                 className: th.Qs,
                 children: (0, s.jsx)(z.E, { variant: "text-xs/normal", children: et.intl.string(et.t.xdRf69) }),
@@ -1217,7 +1217,7 @@ let nS = eO().memoize(
                 c
                     ? (0, s.jsx)("div", {
                           className: nv.iD,
-                          children: (0, s.jsx)(nE.X, { size: "xs", color: "currentColor", className: nv.fi }),
+                          children: (0, s.jsx)(nE.LockIcon, { size: "xs", color: "currentColor", className: nv.fi }),
                       })
                     : null,
             ],

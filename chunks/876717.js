@@ -1,12 +1,12 @@
-t.d(n, { default: () => f }), t(667532);
+t.d(i, { default: () => E }), t(667532);
 var e = t(477900),
     s = t(582128),
     l = t(628284),
     a = t(885574),
     d = t(778712),
-    _ = t(308528),
-    c = t(954376),
-    r = t(734057),
+    c = t(308528),
+    r = t(954376),
+    _ = t(734057),
     o = t(174459),
     u = t(105600),
     g = t(212758),
@@ -14,101 +14,104 @@ var e = t(477900),
     m = t(64175),
     N = t(652215),
     A = t(375708),
-    E = t(406022);
-function f(i) {
-    var n, t;
-    let f,
+    f = t(406022);
+function E(n) {
+    var i, t;
+    let E,
         x,
-        { channelId: k, blockedUserIds: D, ignoredUserIds: M = [], transitionState: T, onClose: C } = i;
+        { channelId: k, blockedUserIds: C, ignoredUserIds: D = [], transitionState: I, onClose: M } = n;
     return (
         s.useEffect(() => {
             o.default.track(N.HAw.GDM_BLOCKED_USER_WARNING_VIEWED, {
                 channel_id: k,
                 warning_medium: m.W_.MODAL,
-                blocked_user_ids: D,
-                ignored_user_ids: M,
+                blocked_user_ids: C,
+                ignored_user_ids: D,
             });
-        }, [k, D, M]),
+        }, [k, C, D]),
         (0, e.jsx)(g.A, {
             headerText: A.intl.string(A.t["mwJJ+f"]),
             descriptionText:
-                ((n = D.length),
-                (t = M.length),
-                (f = n > 0),
+                ((i = C.length),
+                (t = D.length),
+                (E = i > 0),
                 (x = t > 0),
-                f && x
+                E && x
                     ? A.intl.string(A.t["0dP7Fk"])
-                    : f
-                      ? A.intl.formatToPlainString(A.t.OpIG9d, { n: n })
+                    : E
+                      ? A.intl.formatToPlainString(A.t.OpIG9d, { n: i })
                       : x
                         ? A.intl.formatToPlainString(A.t["D+V4jI"], { n: t })
                         : null),
-            infoRows: (function (i) {
-                let { channelId: n, blockedUserIds: t, ignoredUserIds: s } = i,
-                    _ = r.A.getChannel(n),
+            infoRows: (function (n) {
+                let { channelId: i, blockedUserIds: t, ignoredUserIds: s } = n,
+                    c = _.A.getChannel(i),
                     o = t.length > 0,
                     u = s.length > 0,
                     g = [
                         {
-                            icon: (0, e.jsx)("div", { className: E.Kk, children: (0, e.jsx)(l.y, {}) }),
+                            icon: (0, e.jsx)("div", { className: f.Kk, children: (0, e.jsx)(l.y, {}) }),
                             text: A.intl.string(A.t.RIMw54),
-                            className: E.nM,
+                            className: f.nM,
                         },
                         {
-                            icon: (0, e.jsx)("div", { className: E.Kk, children: (0, e.jsx)(a.m, {}) }),
+                            icon: (0, e.jsx)("div", {
+                                className: f.Kk,
+                                children: (0, e.jsx)(a.CircleInformationIcon, {}),
+                            }),
                             text: A.intl.string(A.t.bejNWN),
-                            className: E.nM,
+                            className: f.nM,
                         },
                     ];
                 if (o && u) {
-                    let i = [...t, ...s],
-                        l = i.slice(0, 2);
+                    let n = [...t, ...s],
+                        l = n.slice(0, 2);
                     g.unshift({
                         icon: (0, e.jsx)("div", {
-                            className: E.Kk,
-                            children: (0, e.jsx)(c.A, { recipients: l, size: d._3.SIZE_32 }),
+                            className: f.Kk,
+                            children: (0, e.jsx)(r.A, { recipients: l, size: d._3.SIZE_32 }),
                         }),
-                        text: (0, h.T)(l, i.length, _?.guild_id, n),
-                        className: E.nM,
+                        text: (0, h.T)(l, n.length, c?.guild_id, i),
+                        className: f.nM,
                     });
                 } else {
-                    let i = o ? [...t].slice(0, 2) : [...s].slice(0, 2),
+                    let n = o ? [...t].slice(0, 2) : [...s].slice(0, 2),
                         l = o ? t.length : s.length;
                     g.unshift({
-                        icon: (0, e.jsx)("div", { className: E.Kk, children: (0, h.I)(i, _?.guild_id) }),
-                        text: (0, h.T)(i, l, _?.guild_id, n),
-                        className: E.nM,
+                        icon: (0, e.jsx)("div", { className: f.Kk, children: (0, h.I)(n, c?.guild_id) }),
+                        text: (0, h.T)(n, l, c?.guild_id, i),
+                        className: f.nM,
                     });
                 }
                 return g;
-            })({ channelId: k, blockedUserIds: D, ignoredUserIds: M }),
+            })({ channelId: k, blockedUserIds: C, ignoredUserIds: D }),
             onDismissAndStay: function () {
-                C(),
+                M(),
                     (0, u.U)(k),
                     o.default.track(N.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: m.Qi.CLICK_TO_STAY,
                         channel_id: k,
                         warning_medium: m.W_.MODAL,
-                        blocked_user_ids: D,
-                        ignored_user_ids: M,
+                        blocked_user_ids: C,
+                        ignored_user_ids: D,
                     });
             },
             onDismissAndLeave: function () {
-                C(),
+                M(),
                     (0, u.U)(k),
-                    _.A.closePrivateChannel(k, !0, !0),
+                    c.A.closePrivateChannel(k, !0, !0),
                     o.default.track(N.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: m.Qi.CLICK_TO_LEAVE,
                         channel_id: k,
                         warning_medium: m.W_.MODAL,
-                        blocked_user_ids: D,
-                        ignored_user_ids: M,
+                        blocked_user_ids: C,
+                        ignored_user_ids: D,
                     });
             },
             leaveButtonText: A.intl.string(A.t["Hi1/aQ"]),
             stayButtonText: A.intl.string(A.t.SW3lpH),
-            transitionState: T,
-            onClose: C,
+            transitionState: I,
+            onClose: M,
         })
     );
 }

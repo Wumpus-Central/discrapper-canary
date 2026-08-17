@@ -24,8 +24,8 @@ function u(e, n) {
                           contextualGuildId: u ?? void 0,
                           contextualChannelId: t?.id,
                       }),
-                  icon: a.i,
-                  leadingAccessory: { type: "icon", icon: a.i },
+                  icon: a.FlagIcon,
+                  leadingAccessory: { type: "icon", icon: a.FlagIcon },
               }),
           });
 }

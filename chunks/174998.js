@@ -1,4 +1,4 @@
-n.d(e, { A: () => V, M: () => H });
+n.d(e, { A: () => V, M: () => F });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -7,9 +7,9 @@ var i = n(477900),
     d = n(778492),
     o = n(276293),
     c = n(56059),
-    u = n(834730),
-    E = n(297264),
-    I = n(933832),
+    I = n(834730),
+    u = n(297264),
+    E = n(933832),
     N = n(821609),
     S = n(404778),
     m = n(95561),
@@ -20,7 +20,7 @@ var i = n(477900),
     A = n(518009),
     D = n(408278),
     f = n(477155),
-    O = n(712905),
+    O = n(935286),
     G = n(717421),
     p = n(375708),
     x = n(809609);
@@ -30,25 +30,25 @@ function L(t) {
     return (0, i.jsxs)("div", {
         className: n,
         children: [
-            (0, i.jsx)(u.E, {
+            (0, i.jsx)(I.E, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: p.intl.format(l, {
                     testimonialHook: (t, e) =>
-                        (0, i.jsx)(u.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
+                        (0, i.jsx)(I.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
                 }),
             }),
             (0, i.jsxs)("div", {
                 className: x.f1,
                 children: [
                     (0, i.jsx)(h.eu, { src: s, size: T._3.SIZE_16, "aria-hidden": !0 }),
-                    (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", children: r }),
+                    (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-default", children: r }),
                 ],
             }),
         ],
     });
 }
-function j(t) {
+function C(t) {
     let { testimonials: e } = t,
         [[n, s], r] = l.useState([0, "right"]),
         a = l.useCallback(() => {
@@ -64,7 +64,7 @@ function j(t) {
             });
         }, [r, e.length]),
         o = e[n],
-        c = l.useCallback((t, e, n, l) => (0, i.jsx)(C, { item: e, state: n, cleanup: l, direction: s }, t), [s]);
+        c = l.useCallback((t, e, n, l) => (0, i.jsx)(j, { item: e, state: n, cleanup: l, direction: s }, t), [s]);
     return (0, i.jsxs)("div", {
         className: x.FD,
         children: [
@@ -72,7 +72,7 @@ function j(t) {
                 className: x.nI,
                 children: (0, i.jsx)(A.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: x.wV, "aria-hidden": !0, children: "\u201C" }),
+            (0, i.jsx)(I.E, { variant: "text-lg/bold", className: x.wV, "aria-hidden": !0, children: "\u201C" }),
             (0, i.jsxs)("div", {
                 className: x.Jv,
                 children: [
@@ -95,7 +95,7 @@ function j(t) {
         ],
     });
 }
-function C(t) {
+function j(t) {
     let { item: e, state: n, cleanup: l, direction: s } = t,
         [r] = (0, G.z)(
             () => {
@@ -129,8 +129,8 @@ var R = n(283012),
     M = n(527678),
     w = n(400812),
     B = n(652215),
-    F = n(767106);
-function H(t) {
+    k = n(767106);
+function F(t) {
     let { isTooltip: e = !1 } = t,
         n = [
             {
@@ -154,37 +154,37 @@ function H(t) {
         ];
     e && n.pop();
     let l = e
-            ? (0, i.jsx)(u.E, {
+            ? (0, i.jsx)(I.E, {
                   variant: "text-sm/semibold",
                   color: "text-strong",
                   children: p.intl.string(p.t.nTI2mQ),
               })
-            : (0, i.jsx)(E.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
+            : (0, i.jsx)(u.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
         s = e
-            ? (0, i.jsx)(u.E, { variant: "text-xxs/normal", children: p.intl.format(p.t.hGwDPV, {}) })
-            : (0, i.jsx)(u.E, { variant: "text-xs/normal", children: p.intl.format(p.t["8XLD3r"], {}) });
+            ? (0, i.jsx)(I.E, { variant: "text-xxs/normal", children: p.intl.format(p.t.hGwDPV, {}) })
+            : (0, i.jsx)(I.E, { variant: "text-xs/normal", children: p.intl.format(p.t["8XLD3r"], {}) });
     return (0, i.jsxs)("div", {
-        className: r()(F.SI, F.f5, { [F.YL]: e }),
+        className: r()(k.SI, k.f5, { [k.YL]: e }),
         children: [
             l,
             (0, i.jsx)("div", {
-                className: F.Pf,
+                className: k.Pf,
                 children: n.map((t, e) => {
                     let { emoji: n, emojiDescription: l, title: s, selected: a } = t;
                     return (0, i.jsxs)(
                         "div",
                         {
-                            className: r()(F.CQ, { [F.wH]: a }),
+                            className: r()(k.CQ, { [k.wH]: a }),
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": l, children: n }),
-                                (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
+                                (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
                                 a &&
                                     (0, i.jsx)("div", {
-                                        className: F.ct,
-                                        children: (0, i.jsx)(I.A, {
+                                        className: k.ct,
+                                        children: (0, i.jsx)(E.CheckmarkLargeIcon, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: F.AI,
+                                            className: k.AI,
                                         }),
                                     }),
                             ],
@@ -197,7 +197,7 @@ function H(t) {
         ],
     });
 }
-function k() {
+function H() {
     let t = [
         {
             message: p.t.FUUXXk,
@@ -224,7 +224,7 @@ function k() {
             adminTitle: p.intl.string(p.t["uvM+xc"]),
         },
     ];
-    return (0, i.jsx)(j, { testimonials: t });
+    return (0, i.jsx)(C, { testimonials: t });
 }
 function V() {
     let t = (0, a.bG)([y.A], () => y.A.getGuildId()),
@@ -233,31 +233,31 @@ function V() {
     return null == t || null == e || null == n
         ? null
         : (0, i.jsxs)("div", {
-              className: F.Zj,
+              className: k.Zj,
               children: [
                   (0, i.jsxs)("div", {
-                      className: F.$P,
+                      className: k.$P,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: F.tU,
+                              className: k.tU,
                               children: [
                                   (0, i.jsx)(_.Mm, {}),
-                                  (0, i.jsx)(_.j5, { guild: e, mainIslandClassName: F.$h, balloonDogClassName: F.Sb }),
+                                  (0, i.jsx)(_.j5, { guild: e, mainIslandClassName: k.$h, balloonDogClassName: k.Sb }),
                                   (0, i.jsx)(_.RA, {}),
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: F.KF,
+                              className: k.KF,
                               children: [
-                                  (0, i.jsx)(E.D, {
+                                  (0, i.jsx)(u.D, {
                                       variant: "heading-xl/semibold",
                                       children: p.intl.string(p.t.GnKOAx),
                                   }),
-                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: p.intl.string(p.t.SJRFJj) }),
+                                  (0, i.jsx)(I.E, { variant: "text-md/normal", children: p.intl.string(p.t.SJRFJj) }),
                               ],
                           }),
                           (0, i.jsx)("div", {
-                              className: F.JO,
+                              className: k.JO,
                               children: (0, i.jsx)(N.$, {
                                   variant: "primary",
                                   text: p.intl.string(p.t.RzWDqY),
@@ -275,23 +275,23 @@ function V() {
                       ],
                   }),
                   (0, i.jsx)(S.c, {}),
-                  (0, i.jsx)(k, {}),
+                  (0, i.jsx)(H, {}),
                   (0, i.jsx)(S.c, {}),
                   (0, i.jsxs)("div", {
-                      className: F.a7,
+                      className: k.a7,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: F.fP,
+                              className: k.fP,
                               children: [
-                                  (0, i.jsx)(H, {}),
+                                  (0, i.jsx)(F, {}),
                                   (0, i.jsxs)("div", {
-                                      className: F.Ru,
+                                      className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(E.D, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.Z7kqKZ),
                                           }),
-                                          (0, i.jsx)(u.E, {
+                                          (0, i.jsx)(I.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t.di3UC5),
                                           }),
@@ -300,23 +300,23 @@ function V() {
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: F.fP,
+                              className: k.fP,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: F.Ru,
+                                      className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(E.D, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.O4jYEh),
                                           }),
-                                          (0, i.jsx)(u.E, {
+                                          (0, i.jsx)(I.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t["l/l/Gw"]),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: r()(F.SI, F.f5),
+                                      className: r()(k.SI, k.f5),
                                       children: [
                                           (0, i.jsx)(v.A, {
                                               guildId: t,
@@ -341,17 +341,17 @@ function V() {
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: F.fP,
+                              className: k.fP,
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: r()(F.SI, F.f5),
+                                      className: r()(k.SI, k.f5),
                                       children: [
                                           {
                                               channelIcon: () =>
                                                   (0, i.jsx)(d.k, {
                                                       size: "xs",
                                                       color: "currentColor",
-                                                      className: F.p,
+                                                      className: k.p,
                                                   }),
                                               channel: p.intl.string(p.t.MXJozL),
                                               selected: !0,
@@ -361,7 +361,7 @@ function V() {
                                                   (0, i.jsx)(o.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: F.p,
+                                                      className: k.p,
                                                   }),
                                               channel: p.intl.string(p.t.Pkj0f6),
                                               selected: !0,
@@ -371,7 +371,7 @@ function V() {
                                                   (0, i.jsx)(o.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: F.p,
+                                                      className: k.p,
                                                   }),
                                               channel: p.intl.string(p.t["imVD+u"]),
                                               selected: !1,
@@ -381,7 +381,7 @@ function V() {
                                                   (0, i.jsx)(c.b, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: F.p,
+                                                      className: k.p,
                                                   }),
                                               channel: p.intl.string(p.t["Pj/Wpt"]),
                                               selected: !0,
@@ -391,13 +391,13 @@ function V() {
                                           return (0, i.jsxs)(
                                               "div",
                                               {
-                                                  className: r()(F.CQ, F.p9, { [F.wH]: s }),
+                                                  className: r()(k.CQ, k.p9, { [k.wH]: s }),
                                                   children: [
                                                       (0, i.jsxs)("div", {
-                                                          className: F.Ix,
+                                                          className: k.Ix,
                                                           children: [
                                                               n(),
-                                                              (0, i.jsx)(u.E, {
+                                                              (0, i.jsx)(I.E, {
                                                                   variant: "text-md/medium",
                                                                   color: "text-strong",
                                                                   children: l,
@@ -405,13 +405,13 @@ function V() {
                                                           ],
                                                       }),
                                                       (0, i.jsx)("div", {
-                                                          className: r()(F.kv, { [F.wH]: s }),
+                                                          className: r()(k.kv, { [k.wH]: s }),
                                                           children:
                                                               s &&
-                                                              (0, i.jsx)(I.A, {
+                                                              (0, i.jsx)(E.CheckmarkLargeIcon, {
                                                                   size: "md",
                                                                   color: "currentColor",
-                                                                  className: F.AI,
+                                                                  className: k.AI,
                                                               }),
                                                       }),
                                                   ],
@@ -421,13 +421,13 @@ function V() {
                                       }),
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: F.Ru,
+                                      className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(E.D, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t["3T9aHG"]),
                                           }),
-                                          (0, i.jsx)(u.E, {
+                                          (0, i.jsx)(I.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t.dA7Cag),
                                           }),

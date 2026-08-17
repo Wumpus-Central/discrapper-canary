@@ -1,24 +1,24 @@
-e.d(n, { A: () => h });
-var i = e(477900);
-e(582128);
-var r = e(17928),
-    l = e(477782),
-    a = e(177953),
-    d = e(950305),
-    s = e(147087),
-    o = e(867455),
-    u = e(780057),
-    c = e(375708);
+n.d(e, { A: () => h });
+var i = n(477900);
+n(582128);
+var r = n(17928),
+    l = n(477782),
+    a = n(177953),
+    d = n(950305),
+    s = n(147087),
+    o = n(867455),
+    u = n(780057),
+    c = n(375708);
 function h(t) {
-    let n = (0, r.bG)([u.A], () => u.A.isInProgress());
+    let e = (0, r.bG)([u.A], () => u.A.isInProgress());
     return (0, s.b)() && t.isThread()
         ? (0, i.jsx)(l.Dr, {
               id: "summarize-thread",
-              label: n ? c.intl.string(c.t.oKECxB) : c.intl.string(c.t.EXfguE),
-              disabled: n,
-              loading: n,
+              label: e ? c.intl.string(c.t.oKECxB) : c.intl.string(c.t.EXfguE),
+              disabled: e,
+              loading: e,
               action: () => o.A.summarizeThread(t),
-              children: n
+              children: e
                   ? null
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
@@ -33,8 +33,8 @@ function h(t) {
                                 id: "summarize_thread_for_me",
                                 label: c.intl.string(c.t["HOe+Hq"]),
                                 action: () => o.A.summarizeThread(t),
-                                icon: d.n,
-                                leadingAccessory: { type: "icon", icon: d.n },
+                                icon: d.UserIcon,
+                                leadingAccessory: { type: "icon", icon: d.UserIcon },
                             }),
                         ],
                     }),

@@ -40,13 +40,13 @@ let g = r.memo(function (e) {
                   (function (e) {
                       switch (e) {
                           case p.Ck.SUCCESS:
-                              return (0, i.jsx)(s.A, {
+                              return (0, i.jsx)(s.CheckmarkLargeIcon, {
                                   size: "md",
                                   className: T.Kk,
                                   color: h.A.colors.STATUS_POSITIVE.css,
                               });
                           case p.Ck.FAILURE:
-                              return (0, i.jsx)(l.d, {
+                              return (0, i.jsx)(l.XLargeIcon, {
                                   size: "md",
                                   className: T.Kk,
                                   color: h.A.colors.ICON_FEEDBACK_CRITICAL.css,
@@ -58,19 +58,19 @@ let g = r.memo(function (e) {
                                   color: h.A.colors.TEXT_STRONG.css,
                               });
                           case p.Ck.LINK:
-                              return (0, i.jsx)(d.q, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
+                              return (0, i.jsx)(d.LinkIcon, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           case p.Ck.FORWARD:
                               return (0, i.jsx)(f.A, { className: T.Kk, color: h.A.colors.STATUS_POSITIVE.css });
                           case p.Ck.INVITE:
                               return (0, i.jsx)(c.u, { className: T.Kk, color: h.A.colors.TEXT_BRAND.css });
                           case p.Ck.BOOKMARK:
-                              return (0, i.jsx)(u.c, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
+                              return (0, i.jsx)(u.BookmarkIcon, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           case p.Ck.CLOCK:
-                              return (0, i.jsx)(_.O, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
+                              return (0, i.jsx)(_.ClockIcon, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           case p.Ck.AI:
                               return (0, i.jsx)(E.D, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           case p.Ck.FAVORITE:
-                              return (0, i.jsx)(A.G, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
+                              return (0, i.jsx)(A.StarIcon, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           default:
                               return null;
                       }

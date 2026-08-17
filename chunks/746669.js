@@ -292,7 +292,7 @@ var ep =
     eI = n(763754),
     ej = n(20851),
     e_ = n(986687),
-    eC = n(428262),
+    eC = n(158045),
     eT = n(780898),
     eO = n(907609);
 function ek(e) {
@@ -672,7 +672,11 @@ let e0 = (e) => {
         position: "top",
         asContainer: !0,
         text: K.intl.formatToPlainString(K.t.cNtuKF, { offerName: t.displayName }),
-        children: (0, r.jsx)(eJ.E, { type: { text: K.intl.string(K.t["nb5PC/"]) }, variant: "expressive", icon: eQ.g }),
+        children: (0, r.jsx)(eJ.E, {
+            type: { text: K.intl.string(K.t["nb5PC/"]) },
+            variant: "expressive",
+            icon: eQ.TagIcon,
+        }),
     });
 };
 var e1 = n(609225);
@@ -698,9 +702,9 @@ function e2(e) {
 }
 var e7 = n(462887),
     e8 = n(821609),
-    e6 = n(318254),
+    e5 = n(318254),
     e9 = n(825484),
-    e5 = n(331322),
+    e6 = n(331322),
     e3 = n(736653),
     e4 = n(44120),
     te = n(465794),
@@ -724,7 +728,11 @@ function to(e) {
                   children: [
                       (0, r.jsx)("span", {
                           className: tc.P0,
-                          children: (0, r.jsx)(ta.m, { size: "md", color: "currentColor", className: tc.G }),
+                          children: (0, r.jsx)(ta.CircleInformationIcon, {
+                              size: "md",
+                              color: "currentColor",
+                              className: tc.G,
+                          }),
                       }),
                       (0, r.jsx)(w.E, { variant: "text-md/semibold", children: K.intl.string(K.t.BEjTij) }),
                   ],
@@ -1051,7 +1059,7 @@ function tG(e) {
                         isProductDisabled: P,
                         onTrackClick: x,
                     }),
-            (0, r.jsx)(e5.B, {
+            (0, r.jsx)(e6.B, {
                 direction: "vertical",
                 gap: 8,
                 children:
@@ -1145,7 +1153,7 @@ function tG(e) {
                                                                     text: K.intl.format(K.t.JC15qj, {
                                                                         orbPrice: e.amount,
                                                                         orbIconHook: () =>
-                                                                            (0, r.jsx)(e6.C, {
+                                                                            (0, r.jsx)(e5.C, {
                                                                                 className: tU.fN,
                                                                                 size: "sm",
                                                                                 color: "currentColor",
@@ -1409,7 +1417,7 @@ function t7(e) {
                         (0, r.jsx)(tV.K, {
                             "aria-label": K.intl.string(K.t.cpT0Cq),
                             onClick: k,
-                            icon: tz.d,
+                            icon: tz.XLargeIcon,
                             variant: "overlay-secondary",
                             size: "sm",
                         }),
@@ -1420,7 +1428,7 @@ function t7(e) {
     );
 }
 var t8 = n(118342);
-let t6 = (0, u.FT)(u._3.SIZE_152),
+let t5 = (0, u.FT)(u._3.SIZE_152),
     t9 = function (e) {
         let {
                 transitionState: t,
@@ -1503,8 +1511,8 @@ let t6 = (0, u.FT)(u._3.SIZE_152),
                 pendingChanges: z,
                 pendingAvatarSrc:
                     void 0 !== z.pendingAvatar
-                        ? (0, E.sv)((0, v.V7)({ userId: V.id, image: z.pendingAvatar, size: t6 }), null, V, {
-                              size: t6,
+                        ? (0, E.sv)((0, v.V7)({ userId: V.id, image: z.pendingAvatar, size: t5 }), null, V, {
+                              size: t5,
                           })
                         : void 0,
             },

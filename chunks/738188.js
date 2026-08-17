@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { i: () => l });
+n.d(t, { WarningIcon: () => l });
 var i = n(477900);
 n(582128);
 var r = n(661531),

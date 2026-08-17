@@ -140,7 +140,7 @@ let en = s.memo(function (e) {
         return null != t && t && null == n
             ? (0, i.jsx)(c.m, {
                   __unsupportedReactNodeAsText: l ?? Q.intl.string(Q.t.pclUFJ),
-                  children: (0, i.jsx)(d.p, {
+                  children: (0, i.jsx)(d.CrownIcon, {
                       size: "md",
                       color: "currentColor",
                       className: ee.Dd,

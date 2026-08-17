@@ -64,8 +64,8 @@ let T = function (e) {
             isFullScreen: T = !1,
             showTextContent: R = !0,
         } = e,
-        b = (0, i.yK)([A.default], () => n.map((e) => A.default.getUser(e)).filter(C.Vq) ?? []),
-        _ = null != t ? (0, v.Fe)(new Date(t)) : null;
+        _ = (0, i.yK)([A.default], () => n.map((e) => A.default.getUser(e)).filter(C.Vq) ?? []),
+        b = null != t ? (0, v.Fe)(new Date(t)) : null;
     return (0, l.jsxs)("div", {
         className: s()(x.oK, { [x.pd]: p === a.Q6.PLAYING && !g, [x.aS]: T }, h),
         children: [
@@ -94,35 +94,35 @@ let T = function (e) {
                                 ],
                             }),
                             R &&
-                                (null != r || null != _) &&
+                                (null != r || null != b) &&
                                 (0, l.jsxs)("div", {
                                     className: x.yu,
                                     children: [
-                                        (0, l.jsx)(S, { applicationId: r, hasTrailingDate: null != _ }),
-                                        null != _ &&
+                                        (0, l.jsx)(S, { applicationId: r, hasTrailingDate: null != b }),
+                                        null != b &&
                                             (0, l.jsx)(o.E, {
                                                 className: x.BR,
                                                 variant: "text-sm/normal",
                                                 color: "text-overlay-light",
-                                                children: _,
+                                                children: b,
                                             }),
                                     ],
                                 }),
                         ],
                     }),
-                    b.length > 0 &&
+                    _.length > 0 &&
                         (0, l.jsxs)("div", {
                             className: x.HD,
                             role: "group",
                             "aria-label": y.intl.string(y.t.WTozwe),
                             children: [
-                                b
-                                    .slice(0, 4)
-                                    .map((e) => (0, l.jsx)(I.A, { layerContext: m, user: e, guildId: f }, e.id)),
-                                b.length > 4 &&
+                                _.slice(0, 4).map((e) =>
+                                    (0, l.jsx)(I.A, { layerContext: m, user: e, guildId: f }, e.id),
+                                ),
+                                _.length > 4 &&
                                     (0, l.jsx)(E.w, {
                                         layerContext: m,
-                                        participants: b,
+                                        participants: _,
                                         maxVisibleParticipants: 4,
                                         guildId: f,
                                     }),

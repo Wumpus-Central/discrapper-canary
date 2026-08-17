@@ -18,8 +18,8 @@ var l,
     x = n(352527),
     E = n(267102),
     S = n(969632),
-    _ = n(566908),
-    I = n(406704),
+    I = n(566908),
+    _ = n(406704),
     j = n(885386),
     y = n(951260),
     b = n(629016),
@@ -44,8 +44,8 @@ var l,
     z = n(780057),
     W = n(747926),
     $ = n(174459),
-    q = n(453771),
-    J = n(408018);
+    J = n(453771),
+    q = n(408018);
 n(321073);
 var Z = n(661531),
     Y = n(81369),
@@ -102,15 +102,15 @@ function ef(e) {
         (0, W.Tv)(t, void 0, "Plus Button");
     }
     function E() {
-        $.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, J.x7)("/"));
+        $.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, q.x7)("/"));
     }
     function S() {
         $.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), F.R(H.s4.TEXT, p, void 0, t.id);
     }
-    function _() {
+    function I() {
         g();
     }
-    function I() {
+    function _() {
         (0, B.Dr)(L.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: eg.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
@@ -126,7 +126,7 @@ function ef(e) {
             l = "",
             i = h.match(eA);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
-            (0, R.R)([(0, q.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
+            (0, R.R)([(0, J.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
             T._.dispatchToLastSubscribed(eu.jej.CLEAR_TEXT),
             "" !== l && T._.dispatchToLastSubscribed(eu.jej.INSERT_TEXT, { plainText: l });
     }
@@ -176,7 +176,7 @@ function ef(e) {
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
                                 badge: null != e.badgeVal && e.badgeVal > 0 ? { text: e.badgeVal.toString() } : void 0,
-                                action: _,
+                                action: I,
                             },
                             "clips",
                         );
@@ -188,7 +188,7 @@ function ef(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: I,
+                                action: _,
                             },
                             "poll",
                         );
@@ -341,8 +341,8 @@ function ef(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: eh.intl.string(eh.t["HOe+Hq"]),
-                                                      iconLeft: O.n,
-                                                      leadingAccessory: { type: "icon", icon: O.n },
+                                                      iconLeft: O.UserIcon,
+                                                      leadingAccessory: { type: "icon", icon: O.UserIcon },
                                                       action: () => K.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
@@ -386,7 +386,7 @@ let eE = s.memo(function (e) {
         ),
         { onShareClick: W } = (0, x.A)(l.id),
         $ = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
-        [q, J] = s.useState(null),
+        [J, q] = s.useState(null),
         em = (0, p.sw)() && (V || $),
         eg = l.isPrivate(),
         ep = (0, o.bG)([N.A], () => eg || (N.A.can(eu.xBc.ATTACH_FILES, l) && N.A.can(eu.xBc.SEND_MESSAGES, l)));
@@ -442,7 +442,7 @@ let eE = s.memo(function (e) {
             },
             { modalKey: eC.nm },
         ),
-            J(null);
+            q(null);
     }
     s.useEffect(() => {
         let e = (e) => {
@@ -456,11 +456,11 @@ let eE = s.memo(function (e) {
             }
         );
     });
-    let eE = (0, I.n)(l),
-        eS = (0, I.Tb)(l),
-        e_ = !j.D_.useSetting() && !(0, M.isAndroidWeb)() && null != window.ResizeObserver,
-        eI = (0, S.I7)(l ?? void 0),
-        ej = (0, _.Sc)(),
+    let eE = (0, _.n)(l),
+        eS = (0, _.Tb)(l),
+        eI = !j.D_.useSetting() && !(0, M.isAndroidWeb)() && null != window.ResizeObserver,
+        e_ = (0, S.I7)(l ?? void 0),
+        ej = (0, I.Sc)(),
         ey = (0, g.b)(),
         eb = (function (e) {
             let {
@@ -529,7 +529,7 @@ let eE = s.memo(function (e) {
                             (0, er.A)(e, eu.jUm.SYNC) &&
                             g.push({
                                 type: "INVITE_TO_WATCH",
-                                icon: ei.b,
+                                icon: ei.EyeIcon,
                                 display: eh.intl.formatToPlainString(eh.t["EvCP/g"], {
                                     channel: (0, eo.m1)(a, ed.default, ec.A, !0),
                                     name: null != e ? e.name : "",
@@ -546,38 +546,38 @@ let eE = s.memo(function (e) {
         })({
             canAttachFiles: ep,
             canStartThreads: eE || eS,
-            useSlate: e_,
+            useSlate: eI,
             hasClips: em,
             canUseApplicationCommands: !P,
             channel: l,
             activities: z,
             newClipsCount: K?.length ?? 0,
-            canPostPolls: eI,
+            canPostPolls: e_,
             appContext: w,
             canSendScheduledMessages: ej,
             canSummarizeThreads: ey,
             isAppsButtonEnabled: !G || U,
         });
     if (0 === eb.length) return null;
-    let eN = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: ex.dW }),
+    let eN = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: ex.dW }),
         ev = (0, i.jsx)(u.Y, {
             targetElementRef: H,
-            shouldShow: null != q,
+            shouldShow: null != J,
             animation: u.Y.Animation.NONE,
             align: "left",
             position: "top",
-            positionKey: q ?? "null",
+            positionKey: J ?? "null",
             onRequestOpen: () => {
-                J("attachMenu");
+                q("attachMenu");
             },
             onRequestClose: () => {
-                (0, c.hasAnyModalOpen)() || J(null);
+                (0, c.hasAnyModalOpen)() || q(null);
             },
             renderPopout: (e) => {
-                if ("attachMenu" === q)
+                if ("attachMenu" === J)
                     return (0, i.jsx)(ef, {
                         ...e,
-                        onClose: () => J(null),
+                        onClose: () => q(null),
                         options: eb,
                         channel: l,
                         onFileUpload: () => F.current?.activateUploadDialogue(),

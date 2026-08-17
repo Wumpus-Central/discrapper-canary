@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(377058),
     p = n(38785),
     m = n(848584),
-    C = n(241989),
-    h = n(87725),
+    h = n(241989),
+    C = n(87725),
     f = n(993408),
     E = n(80151),
     S = n(629042),
@@ -20,8 +20,8 @@ var l = n(477900),
     P = n(287809),
     I = n(486020),
     g = n(158045),
-    _ = n(580630),
-    v = n(240248),
+    v = n(580630),
+    _ = n(240248),
     T = n(951305),
     x = n(1076),
     N = n(284009),
@@ -66,9 +66,9 @@ function Z(e) {
             giftRecipient: a,
             ...s
         } = e,
-        o = (0, l.jsx)(C.WH, { sku: t, product: n }),
+        o = (0, l.jsx)(h.WH, { sku: t, product: n }),
         u = V(t);
-    return (0, l.jsx)(C.f7, {
+    return (0, l.jsx)(h.f7, {
         description: r,
         price: i,
         graphic: o,
@@ -105,7 +105,7 @@ function $(e) {
                           if (l === f.D0.NITRO)
                               return { PriceIcon: a.t, priceTooltip: F.intl.string(Y.default.YUNJJa) };
                           if (l === f.D0.THIRDPARTY)
-                              return { PriceIcon: s.g, priceTooltip: F.intl.string(W.default.DePOcS) };
+                              return { PriceIcon: s.TagIcon, priceTooltip: F.intl.string(W.default.DePOcS) };
                       }
                       return {};
                   })(n)
@@ -118,7 +118,7 @@ function J(e) {
             unifiedCheckoutFlow: n,
             checkoutInvoicePreview: r,
             paymentSourceType: a,
-        } = (0, h.t4)((e) => {
+        } = (0, C.t4)((e) => {
             let t = e.get("checkoutSelectedPaymentSource");
             return {
                 unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -126,14 +126,14 @@ function J(e) {
                 paymentSourceType: null != t ? t.type : null,
             };
         }),
-        { isGift: s, giftRecipient: C } = (0, T.Pv)(),
+        { isGift: s, giftRecipient: h } = (0, T.Pv)(),
         {
             sku: f,
             application: P,
             eligiblePaymentGateways: I,
             disabled: g,
         } = (function () {
-            let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
+            let { selectedSkuId: e, purchaseState: t } = (0, C.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
@@ -232,7 +232,7 @@ function J(e) {
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
-                                priceText: (0, _.$g)(i, n.currency),
+                                priceText: (0, v.$g)(i, n.currency),
                                 discount: e,
                             }
                         );
@@ -246,7 +246,7 @@ function J(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: et, sku: f, application: P, giftRecipient: C }),
+                (t = { priceText: et, sku: f, application: P, giftRecipient: h }),
                 e === c.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(z, { ...t })
                     : e === c.C.GUILD_PRODUCT_CHECKOUT
@@ -255,8 +255,8 @@ function J(e) {
                         ? (0, l.jsx)($, { ...t })
                         : (0, l.jsx)(Z, { ...t })
             );
-        }, [n, f, P, C, et]),
-        ei = i.useMemo(() => (null != r ? (0, _.$g)(r.total, r.currency) : void 0), [r]),
+        }, [n, f, P, h, et]),
+        ei = i.useMemo(() => (null != r ? (0, v.$g)(r.total, r.currency) : void 0), [r]),
         er = (0, E.A)(),
         { setCollectedModalOverrideTitle: ea, setCollectedModalGradientColor: es } = (0, x.z)(),
         eo = n === c.C.COLLECTIBLES_CHECKOUT && null != X ? (0, S.L0)(X, er) : null,
@@ -282,7 +282,7 @@ function J(e) {
                             t = e?.tenantMetadata?.collectibles?.reward?.checkout?.offerNotice,
                             n = e?.tenantMetadata?.collectibles?.reward?.flavor,
                             i = t?.text;
-                        return (0, v.uJ)(i)
+                        return (0, _.uJ)(i)
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, y.sj)(t?.icon),
@@ -320,6 +320,6 @@ function J(e) {
     });
 }
 function X(e) {
-    let { isCheckoutDataLoading: t } = (0, h.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
+    let { isCheckoutDataLoading: t } = (0, C.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
     return t ? (0, l.jsx)(p.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(J, { ...e });
 }

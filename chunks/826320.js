@@ -160,7 +160,7 @@ function V() {
             (0, l.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, l.jsx)(R.o, { size: "xs", color: j.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(R.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: O.D_ }),
                 ],
             }),

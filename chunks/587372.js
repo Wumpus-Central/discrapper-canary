@@ -285,9 +285,9 @@ var eb = n(32880),
 function eO() {
     let e = c.useMemo(
         () => [
-            { Icon: eb.s, label: el.intl.string(es.default.GJNQYz) },
+            { Icon: eb.DownloadIcon, label: el.intl.string(es.default.GJNQYz) },
             { Icon: e_.k, label: el.intl.string(es.default.pTinR2) },
-            { Icon: eN.l, label: el.intl.string(es.default.s0N1nM) },
+            { Icon: eN.ShieldIcon, label: el.intl.string(es.default.s0N1nM) },
             { Icon: eA.Q, label: el.intl.string(es.default.NzrGEi) },
         ],
         [],
@@ -424,7 +424,7 @@ function e2(e) {
     return (0, o.jsx)(eV, {
         color: eU.SECONDARY,
         size: ez.SIZE_24,
-        icon: (0, o.jsx)(e1.Z, { size: "custom", width: 14, height: 14, color: "currentColor" }),
+        icon: (0, o.jsx)(e1.SettingsIcon, { size: "custom", width: 14, height: 14, color: "currentColor" }),
         onClick: l,
         disabled: !s,
         tooltip: el.intl.string(es.default["feUiM/"]),
@@ -533,8 +533,8 @@ let tn = c.memo(function (e) {
                             n.e("67861"),
                             n.e("401518"),
                             n.e("323354"),
-                            n.e("368062"),
                             n.e("844780"),
+                            n.e("368062"),
                             n.e("236946"),
                             n.e("692639"),
                             n.e("890480"),
@@ -772,13 +772,13 @@ let tn = c.memo(function (e) {
                                                                   onClick: p,
                                                                   "aria-label": el.intl.string(el.t.OpuAlK),
                                                                   children: v
-                                                                      ? (0, o.jsx)(eK.A, {
+                                                                      ? (0, o.jsx)(eK.CheckmarkLargeIcon, {
                                                                             size: "custom",
                                                                             width: 16,
                                                                             height: 16,
                                                                             color: "currentColor",
                                                                         })
-                                                                      : (0, o.jsx)(eY.T, {
+                                                                      : (0, o.jsx)(eY.CopyIcon, {
                                                                             size: "custom",
                                                                             width: 16,
                                                                             height: 16,
@@ -1550,7 +1550,7 @@ function nx() {
                                     },
                                     label: el.intl.string(el.t.hY8Ft1),
                                 }),
-                                (0, o.jsx)(t8.E, { type: { text: el.intl.string(el.t["nb5PC/"]) }, icon: t9.g }),
+                                (0, o.jsx)(t8.E, { type: { text: el.intl.string(el.t["nb5PC/"]) }, icon: t9.TagIcon }),
                             ],
                         }),
                     f.map((e) => (0, o.jsx)(nE, { filter: e, trackFilterAction: p }, e)),
@@ -2349,7 +2349,7 @@ let sn = function (e) {
                         children: (0, o.jsx)(eH.D, {
                             onClick: () => (0, n7.A)(se.A.getArticleURL(e5.MVz.DATA_USED_FOR_RECOMMENDED)),
                             className: st.s,
-                            children: (0, o.jsx)(n6.m, { size: "sm" }),
+                            children: (0, o.jsx)(n6.CircleInformationIcon, { size: "sm" }),
                         }),
                     }),
             ],
@@ -2900,7 +2900,7 @@ let sL = c.memo(function (e) {
                                                     position: "top",
                                                     children: (0, o.jsx)("span", {
                                                         className: sI.ZB,
-                                                        children: (0, o.jsx)(sf.c, { size: "xs" }),
+                                                        children: (0, o.jsx)(sf.CircleQuestionIcon, { size: "xs" }),
                                                     }),
                                                 }),
                                             ],

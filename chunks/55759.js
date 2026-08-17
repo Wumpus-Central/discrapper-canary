@@ -823,8 +823,8 @@ function eu(e) {
                                         style: { "--custom-play-pause-pop-ms": "1000ms" },
                                         children:
                                             eh === Y.Q6.PLAYING
-                                                ? (0, r.jsx)(v.u, { className: J.PK })
-                                                : (0, r.jsx)(A.E, { className: J.PK }),
+                                                ? (0, r.jsx)(v.PlayIcon, { className: J.PK })
+                                                : (0, r.jsx)(A.PauseIcon, { className: J.PK }),
                                     },
                                     eh,
                                 ),

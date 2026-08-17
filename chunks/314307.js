@@ -14,7 +14,7 @@ var i = n(503698),
     g = n(840748);
 function p(e) {
     let { locked: t = !1, channelType: n } = e,
-        i = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? a.o : t ? r.I : o.N;
+        i = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? a.ChatIcon : t ? r.I : o.N;
     return (0, l.jsx)("div", {
         className: s()(g.qk, g.tP),
         children: (0, l.jsx)(i, { color: c.A.colors.ICON_STRONG, size: "custom", width: 42, height: 42 }),

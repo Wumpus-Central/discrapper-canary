@@ -1,4 +1,4 @@
-n.d(t, { x: () => a });
+n.d(t, { LightbulbIcon: () => a });
 var i = n(477900);
 n(582128);
 var l = n(661531),

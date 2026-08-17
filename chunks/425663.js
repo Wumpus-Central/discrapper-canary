@@ -2,8 +2,8 @@ n.r(t), n.d(t, { default: () => el });
 var a = n(477900),
     l = n(582128),
     i = n(503698),
-    s = n.n(i),
-    o = n(289873),
+    o = n.n(i),
+    s = n(289873),
     r = n(17928),
     c = n(944791),
     d = n(976860),
@@ -15,8 +15,8 @@ var a = n(477900),
     L = n(661531),
     x = n(926268),
     S = n(885574),
-    m = n(834730),
-    f = n(793574),
+    f = n(834730),
+    m = n(793574),
     I = n(688810),
     g = n(742589),
     _ = n(617986),
@@ -42,10 +42,10 @@ var a = n(477900),
     z = n(375708),
     G = n(744512);
 function Y(e) {
-    let { shops: t, currentApplicationId: n, onClose: l, onMouseEnter: i, onMouseLeave: s } = e;
+    let { shops: t, currentApplicationId: n, onClose: l, onMouseEnter: i, onMouseLeave: o } = e;
     return (0, a.jsx)("div", {
         onMouseEnter: i,
-        onMouseLeave: s,
+        onMouseLeave: o,
         children: (0, a.jsx)(R.W, {
             "data-menu-migrated": !0,
             navId: "slayer-storefront-shop-dropdown",
@@ -79,7 +79,7 @@ function X(e) {
     let t,
         n,
         i,
-        { selectedApplicationId: o, className: c } = e,
+        { selectedApplicationId: s, className: c } = e,
         d = l.useRef(null),
         { isHovered: p, setIsHovered: C, onMouseEnter: E, onMouseLeave: L, cancelTimers: x } = (0, U.A)(100, 100),
         S =
@@ -99,7 +99,7 @@ function X(e) {
                     }),
                 [t, i],
             )),
-        f = (0, r.bG)([H.A], () => H.A.getApplication(o)),
+        m = (0, r.bG)([H.A], () => H.A.getApplication(s)),
         I = l.useCallback(
             (e) => {
                 x(), C(e);
@@ -109,13 +109,13 @@ function X(e) {
         g = l.useCallback(() => {
             I(!p);
         }, [p, I]);
-    if (null == f)
+    if (null == m)
         return (0, a.jsxs)("div", {
-            className: s()(G.hZ, G.qf, c),
+            className: o()(G.hZ, G.qf, c),
             "aria-hidden": "true",
             children: [(0, a.jsx)("span", { className: G.wm }), (0, a.jsx)(y.a, { size: "xs", color: "currentColor" })],
         });
-    let _ = null != f.icon ? w.Ay.getApplicationIconURL({ id: f.id, icon: f.icon, size: 32 }) : null;
+    let _ = null != m.icon ? w.Ay.getApplicationIconURL({ id: m.id, icon: m.icon, size: 32 }) : null;
     return (0, a.jsx)(B.Y, {
         targetElementRef: d,
         shouldShow: p,
@@ -126,7 +126,7 @@ function X(e) {
         onRequestClose: () => I(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, a.jsx)(Y, { shops: S, currentApplicationId: o, onClose: t, onMouseEnter: E, onMouseLeave: L });
+            return (0, a.jsx)(Y, { shops: S, currentApplicationId: s, onClose: t, onMouseEnter: E, onMouseLeave: L });
         },
         children: (e) => {
             let t = p ? P.t : y.a;
@@ -135,13 +135,13 @@ function X(e) {
                 innerRef: d,
                 onClick: g,
                 onMouseLeave: L,
-                className: s()(G.hZ, c),
-                "aria-label": f.name,
+                className: o()(G.hZ, c),
+                "aria-label": m.name,
                 "aria-haspopup": "menu",
                 "aria-expanded": p,
                 children: [
                     null != _ && (0, a.jsx)("img", { className: G.wm, src: _, alt: "" }),
-                    (0, a.jsx)(m.E, { variant: "text-md/medium", color: "text-default", children: f.name }),
+                    (0, a.jsx)(f.E, { variant: "text-md/medium", color: "text-default", children: m.name }),
                     (0, a.jsx)(t, { size: "xs", color: "currentColor" }),
                 ],
             });
@@ -173,11 +173,11 @@ function K() {
                 (0, j.openUserProfileModal)({
                     userId: e.id,
                     tabSection: W.RP.WISHLIST,
-                    sourceAnalyticsLocations: [f.A.SOCIAL_LAYER_STOREFRONT],
+                    sourceAnalyticsLocations: [m.A.SOCIAL_LAYER_STOREFRONT],
                 });
         }, [e]);
     return (0, a.jsx)(J, {
-        content: (0, a.jsx)(x.C, { size: "xs", color: "currentColor" }),
+        content: (0, a.jsx)(x.HeartIcon, { size: "xs", color: "currentColor" }),
         onClick: t,
         ariaLabel: z.intl.string(z.t["7lZ31J"]),
     });
@@ -210,7 +210,7 @@ function ee() {
                 window.open(T.A.getArticleURL(V.MVz.SOCIAL_LAYER_STOREFRONT), "_blank", "noopener,noreferrer");
         }, [e, t]);
     return (0, a.jsx)(J, {
-        content: (0, a.jsx)(S.m, { size: "xs", color: "currentColor" }),
+        content: (0, a.jsx)(S.CircleInformationIcon, { size: "xs", color: "currentColor" }),
         onClick: n,
         ariaLabel: z.intl.string(z.t.hvVgAZ),
     });
@@ -243,8 +243,8 @@ function et(e) {
                                           );
                                       },
                                       wrapperClassName: Z.oB,
-                                      className: s()(Z.xT, { [Z.ys]: n === l }),
-                                      children: (0, a.jsx)(m.E, { variant: "text-sm/medium", children: e.title }),
+                                      className: o()(Z.xT, { [Z.ys]: n === l }),
+                                      children: (0, a.jsx)(f.E, { variant: "text-sm/medium", children: e.title }),
                                   },
                                   `${e.title}-${l}`,
                               ),
@@ -272,7 +272,7 @@ function el(e) {
     let x = l.useCallback((e, t) => (0, a.jsx)(et, { storefront: t, selectedPageIndex: e }), []),
         S = l.useCallback((e, n, a) => en.BV.COLLECTIBLES_SHOP_GAME_SHOP(t, e, n, a), [t]);
     return null == t || "success" !== A.state
-        ? (0, a.jsx)("div", { className: s()(ea.u1, ea.kL), children: (0, a.jsx)(o.y, {}) })
+        ? (0, a.jsx)("div", { className: o()(ea.u1, ea.kL), children: (0, a.jsx)(s.y, {}) })
         : (0, a.jsx)(p.SocialLayerStorefrontInnerWrapper, {
               applicationId: t,
               guildId: C,

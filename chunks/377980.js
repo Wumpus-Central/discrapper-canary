@@ -98,7 +98,7 @@ function S(e) {
         S = s?.(),
         C = c?.(),
         A = o?.(),
-        O = d?.();
+        I = d?.();
     return (0, r.jsx)(h, {
         children: (0, r.jsx)(f.D, {
             label: b,
@@ -111,7 +111,7 @@ function S(e) {
                 justify: "end",
                 gap: "md",
                 children: [
-                    null != O && (0, r.jsx)(k, { decoration: O }),
+                    null != I && (0, r.jsx)(k, { decoration: I }),
                     (0, r.jsx)(g.$, {
                         onClick: function () {
                             m();
@@ -131,10 +131,10 @@ function S(e) {
 }
 var C = t(881636),
     A = t(272053),
-    O = t(176524),
-    R = t(199966);
-function I(e) {
-    let { accessibleDirectory: n } = (0, R._)(),
+    I = t(176524),
+    O = t(199966);
+function R(e) {
+    let { accessibleDirectory: n } = (0, O._)(),
         t = n.entry(e);
     return {
         parentPanelNode: t?.parentPanelKey != null ? n.get(t.parentPanelKey) : void 0,
@@ -199,7 +199,7 @@ function z(e) {
         { destinationKey: t, useTrailingDecoration: l, useTitle: i, useSubtitle: s } = n,
         a = l?.(),
         c = s?.(),
-        { parentPanelNode: o, parentSidebarItemNode: u } = I(t),
+        { parentPanelNode: o, parentSidebarItemNode: u } = R(t),
         d = i?.(),
         x = o?.useTitle?.(),
         j = d ?? x,
@@ -211,7 +211,7 @@ function z(e) {
         "aria-label": x,
         title: j,
         description: c,
-        leadingElement: null != m && (0, r.jsx)(O.A, { icon: m }),
+        leadingElement: null != m && (0, r.jsx)(I.A, { icon: m }),
         trailingElement: (0, r.jsxs)("div", {
             className: F.M,
             children: [null != a && (0, r.jsx)(P, { decoration: a }), (0, r.jsx)(C.u, {})],
@@ -364,9 +364,9 @@ function Y(e) {
         S = o(),
         C = u?.(),
         A = d?.(),
-        O = c?.(),
-        R = U({ persistentBadge: v?.(), dismissibleBadges: b?.() }),
-        I = T?.(),
+        I = c?.(),
+        O = U({ persistentBadge: v?.(), dismissibleBadges: b?.() }),
+        R = T?.(),
         B = E(n);
     return (0, r.jsx)(h, {
         children: (0, r.jsx)(W.A, {
@@ -377,7 +377,7 @@ function Y(e) {
             value: k,
             minValue: s,
             maxValue: a,
-            defaultValue: O,
+            defaultValue: I,
             onValueRender: j,
             asValueChanges: m,
             onValueChange: function (e) {
@@ -388,15 +388,15 @@ function Y(e) {
             onMarkerRender: g,
             stickToMarkers: p,
             layout: y,
-            badge: R,
-            helperText: I,
+            badge: O,
+            helperText: R,
         }),
     });
 }
 function $(e) {
     let { decoration: n } = e;
     if (n.type === p.$d.ICON)
-        return (0, r.jsx)(O.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
+        return (0, r.jsx)(I.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
 function H(e) {
     let { decoration: n } = e;
@@ -662,7 +662,7 @@ function ev(e) {
                 onMouseLeave: a,
                 onFocus: s,
                 onBlur: a,
-                children: (0, r.jsx)(eg.m, { size: "xs", color: "currentColor" }),
+                children: (0, r.jsx)(eg.CircleInformationIcon, { size: "xs", color: "currentColor" }),
             }),
             (0, r.jsx)(ep.A, {
                 ...j,
@@ -758,9 +758,9 @@ function eC(e) {
     });
 }
 var eA = t(683071),
-    eO = t(964486),
-    eR = t(35218);
-function eI(e) {
+    eI = t(964486),
+    eO = t(35218);
+function eR(e) {
     let { button: n } = e,
         [t, i] = l.useState(!1);
     async function s() {
@@ -783,7 +783,7 @@ function eI(e) {
 function eB(e) {
     let { notice: n } = e,
         { noticeType: t, title: l, text: i, button: s, iconAlign: a } = n;
-    (0, eO.Ay)(() => {
+    (0, eI.Ay)(() => {
         n.trackView?.();
     });
     let c = (0, r.jsxs)(x.B, {
@@ -802,7 +802,7 @@ function eB(e) {
             align: "center",
             justify: "space-between",
             gap: "xs",
-            children: [c, null != s && (0, r.jsx)(eI, { button: s })],
+            children: [c, null != s && (0, r.jsx)(eR, { button: s })],
         }),
     });
 }
@@ -822,7 +822,7 @@ function e_(e) {
 }
 function eD(e) {
     let { notice: n } = e;
-    return (0, r.jsx)("div", { className: eR.E, children: (0, r.jsx)(e_, { notice: n }) });
+    return (0, r.jsx)("div", { className: eO.E, children: (0, r.jsx)(e_, { notice: n }) });
 }
 let ew = l.memo(function (e) {
     let { node: n } = e,
@@ -968,7 +968,7 @@ function eU(e) {
 function eV(e) {
     let { decoration: n } = e;
     if (n.type === p.Xy.ICON)
-        return (0, r.jsx)(O.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
+        return (0, r.jsx)(I.A, { icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
 function eX(e) {
     let { decoration: n } = e;
@@ -986,7 +986,7 @@ function eW(e) {
         o = i?.(),
         u = s?.(),
         d = n.layout[0].key,
-        { parentPanelNode: j } = I(d),
+        { parentPanelNode: j } = R(d),
         h = j?.useTitle?.(),
         m = a ?? h;
     return null == j || null == m

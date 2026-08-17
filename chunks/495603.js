@@ -1,35 +1,35 @@
-i.d(l, { default: () => c });
+i.d(l, { default: () => u });
 var e = i(477900),
-    t = i(582128),
-    s = i(980707),
+    s = i(582128),
+    t = i(980707),
     r = i(477782),
-    u = i(241326),
-    a = i(442433),
-    d = i(50268),
-    o = i(375708);
-function c(n) {
-    let { id: l, role: i, handleDeletePermission: c } = n,
-        p = (0, d.A)({ id: l, label: null == i ? o.intl.string(o.t["/AXYnE"]) : o.intl.string(o.t.sMsaLg) });
+    a = i(241326),
+    o = i(442433),
+    c = i(50268),
+    d = i(375708);
+function u(n) {
+    let { id: l, role: i, handleDeletePermission: u } = n,
+        p = (0, c.A)({ id: l, label: null == i ? d.intl.string(d.t["/AXYnE"]) : d.intl.string(d.t.sMsaLg) });
     return (
-        t.useEffect(() => {
-            null == c && null == p && (0, a.Z_)();
-        }, [p, c]),
-        (0, e.jsxs)(s.W, {
+        s.useEffect(() => {
+            null == u && null == p && (0, o.Z_)();
+        }, [p, u]),
+        (0, e.jsxs)(t.W, {
             "data-menu-migrated": !0,
             navId: null == i ? "member-permissions-menu" : "role-permissions-menu",
-            "aria-label": null == i ? o.intl.string(o.t.pJMipx) : o.intl.string(o.t.ltedOh),
-            onClose: a.Z_,
+            "aria-label": null == i ? d.intl.string(d.t.pJMipx) : d.intl.string(d.t.ltedOh),
+            onClose: o.Z_,
             onSelect: void 0,
             children: [
-                null != c &&
+                null != u &&
                     (0, e.jsx)(r.rX, {
                         children: (0, e.jsx)(r.Dr, {
                             id: "remove-permission",
                             color: "danger",
-                            label: null == i ? o.intl.string(o.t.hXfRwD) : o.intl.string(o.t["T+3Adg"]),
-                            icon: u.u,
-                            leadingAccessory: { type: "icon", icon: u.u },
-                            action: c,
+                            label: null == i ? d.intl.string(d.t.hXfRwD) : d.intl.string(d.t["T+3Adg"]),
+                            icon: a.TrashIcon,
+                            leadingAccessory: { type: "icon", icon: a.TrashIcon },
+                            action: u,
                         }),
                     }),
                 null != p && (0, e.jsx)(r.rX, { children: p }),

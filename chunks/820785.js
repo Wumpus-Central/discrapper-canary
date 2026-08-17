@@ -3,8 +3,8 @@ n.d(t, {
     N_: () => Z,
     vw: () => z,
     lg: () => W,
-    nG: () => B,
-    c3: () => F,
+    nG: () => F,
+    c3: () => B,
     OS: () => H,
     Y9: () => Y,
     IH: () => K,
@@ -169,7 +169,7 @@ class H extends l.Component {
         });
     }
 }
-class F extends l.Component {
+class B extends l.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
@@ -245,7 +245,7 @@ class F extends l.Component {
         });
     }
 }
-class B extends l.Component {
+class F extends l.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
@@ -435,10 +435,11 @@ class Z extends l.Component {
         else {
             let l = (0, G.vu)(n.path);
             null == l || void 0 === l.messageId
-                ? ((e = L.intl.string(L.t.qbSCqj)), (t = (0, i.jsx)(d.q, { size: "xs", color: "currentColor" })))
+                ? ((e = L.intl.string(L.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
                 : (0, G.r9)(l)
                   ? ((e = L.intl.string(L.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
-                  : ((e = L.intl.string(L.t.jQRwp4)), (t = (0, i.jsx)(u.X, { size: "xs", color: "currentColor" })));
+                  : ((e = L.intl.string(L.t.jQRwp4)),
+                    (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));
         }
         return (0, i.jsxs)("div", {
             className: V.xr,
@@ -490,7 +491,7 @@ class z extends l.Component {
                 break;
             case I.t1.SETTINGS:
                 (e = n.label ?? L.intl.string(L.t["3D5yo/"])),
-                    (t = (0, i.jsx)(C.Z, { size: "xs", color: "currentColor" }));
+                    (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.PLAYGROUND:
                 if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {
@@ -499,7 +500,7 @@ class z extends l.Component {
                 } else t = (0, i.jsx)(_.H, { size: "xs", color: "currentColor" });
                 break;
             default:
-                (e = n.id), (t = (0, i.jsx)(d.q, { size: "xs", color: "currentColor" }));
+                (e = n.id), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" }));
         }
         return (0, i.jsxs)("div", {
             className: V.xr,

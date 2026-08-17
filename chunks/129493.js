@@ -11,8 +11,8 @@ var i = n(477900),
     u = n(632738),
     m = n(349435),
     _ = n(665909),
-    g = n(503698),
-    h = n.n(g),
+    h = n(503698),
+    g = n.n(h),
     p = n(231483),
     E = n(661531),
     f = n(691540),
@@ -27,9 +27,9 @@ var i = n(477900),
     v = n(871645);
 function k() {
     return (0, i.jsxs)("div", {
-        className: h()(v.oR, b.oR),
+        className: g()(v.oR, b.oR),
         children: [
-            (0, i.jsx)(p.l, { color: E.A.colors.TEXT_BRAND }),
+            (0, i.jsx)(p.ShieldIcon, { color: E.A.colors.TEXT_BRAND }),
             (0, i.jsx)(d.E, {
                 className: v.__invalid_content,
                 color: "text-strong",
@@ -60,7 +60,7 @@ function D(e) {
                 className: b.NC,
                 children: [
                     (0, i.jsx)(N.D, {
-                        className: h()([b.eH, r ? b.QT : b.LM, { [b.r9]: r }]),
+                        className: g()([b.eH, r ? b.QT : b.LM, { [b.r9]: r }]),
                         onClick: () => o(m.fy.UPVOTE, _.Wm.FEEDBACK_UPVOTE),
                         "aria-label": T.intl.string(T.t["2GrOCN"]),
                         children: (0, i.jsx)(O.A, {
@@ -69,7 +69,7 @@ function D(e) {
                         }),
                     }),
                     (0, i.jsx)(N.D, {
-                        className: h()([b.eH, c ? b.QT : b.LM, { [b.r9]: c }]),
+                        className: g()([b.eH, c ? b.QT : b.LM, { [b.r9]: c }]),
                         onClick: () => o(m.fy.DOWNVOTE, _.Wm.FEEDBACK_DOWNVOTE),
                         "aria-label": T.intl.string(T.t.COp9BO),
                         children: (0, i.jsx)(A.A, {
@@ -88,25 +88,25 @@ function V(e) {
     let {
             transitionState: t,
             onClose: n,
-            channelId: g,
-            warningId: h,
+            channelId: h,
+            warningId: g,
             senderId: p,
             description: E,
             safetyTipRows: f,
             actionRows: j,
             learnMore: y,
         } = e,
-        N = (0, r.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(g, h));
+        N = (0, r.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(h, g));
     return (
         s.useEffect(() => {
             (0, _.mO)(W.HAw.SAFETY_WARNING_MODAL_VIEWED, {
-                channelId: g,
-                warningId: h,
+                channelId: h,
+                warningId: g,
                 senderId: p,
                 warningType: N?.type,
             }),
                 o.A.increment({ name: a.K.SAFETY_WARNING_MODAL_VIEW });
-        }, [g, h, p, N]),
+        }, [h, g, p, N]),
         (0, i.jsx)(l.k, {
             onClose: n,
             transitionState: t,
@@ -130,7 +130,7 @@ function V(e) {
                             (0, i.jsx)(u.Y0, { children: j }),
                         ],
                     }),
-                    (0, i.jsx)(D, { channelId: g, warningId: h, senderId: p, safetyWarning: N }),
+                    (0, i.jsx)(D, { channelId: h, warningId: g, senderId: p, safetyWarning: N }),
                 ],
             }),
         })

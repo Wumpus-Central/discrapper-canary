@@ -71,7 +71,7 @@ function q() {
         (0, w.l0)(() => (0, H.pr)()),
         (0, c.jsx)(T.$, {
             text: j.intl.string(j.t.SKNnqq),
-            icon: e ? X.E : Y.u,
+            icon: e ? X.PauseIcon : Y.PlayIcon,
             size: "sm",
             onClick: function () {
                 if (e) {
@@ -1242,7 +1242,7 @@ let nM = (0, a.AK)(o.X.APPEARANCE_THEME_ACCESSIBLITY_NAVIGATOR, {
     ],
     nF = (0, a.i4)(o.X.APPEARANCE_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t["iHH+ky"]),
-        icon: e$.B,
+        icon: e$.PaintPaletteIcon,
         useMenu: function () {
             let e,
                 t,
@@ -1416,7 +1416,7 @@ function iu(e) {
                     }),
                     (0, c.jsx)("div", {
                         className: io.nr,
-                        children: (0, c.jsx)(nq.O, {
+                        children: (0, c.jsx)(nq.TrophyIcon, {
                             size: "custom",
                             color: nK.A.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
@@ -1756,7 +1756,7 @@ function iy(e) {
         children: [
             (0, c.jsx)("div", {
                 className: ig.w1,
-                children: (0, c.jsx)(nq.O, { size: "md", color: nK.A.unsafe_rawColors.ORANGE_345.css }),
+                children: (0, c.jsx)(nq.TrophyIcon, { size: "md", color: nK.A.unsafe_rawColors.ORANGE_345.css }),
             }),
             (0, c.jsxs)("div", {
                 className: ig.qL,
@@ -1944,7 +1944,7 @@ function iW() {
     return { runningGame: t ?? void 0, runningGameApplication: n ?? void 0 };
 }
 var iZ = n(769015),
-    iq = n(626822),
+    iq = n(453028),
     iQ = n(935671),
     iJ = n(868886);
 function i$(e) {
@@ -2352,7 +2352,7 @@ let lb = g.memo(function (e) {
                         (0, c.jsx)(i5.K, {
                             variant: "icon-only",
                             onClick: a,
-                            icon: i6.u,
+                            icon: i6.TrashIcon,
                             "aria-label": j.intl.string(j.t.qEHmmB),
                         }),
                     (0, c.jsx)(i4.m, {
@@ -4000,7 +4000,7 @@ function r4(e) {
                     i(!n);
                 },
                 text: j.intl.string(j.t.uOe0Az),
-                children: (0, c.jsx)(r$.R, { size: "md", color: "currentColor", className: r6.Wo }),
+                children: (0, c.jsx)(r$.PencilIcon, { size: "md", color: "currentColor", className: r6.Wo }),
             }),
     });
 }
@@ -4065,7 +4065,7 @@ function r7(e) {
                         (0, c.jsx)(r5.dT, {
                             onClick: () => i(null),
                             text: j.intl.string(j.t.jmtcGA),
-                            children: (0, c.jsx)(i6.u, {
+                            children: (0, c.jsx)(i6.TrashIcon, {
                                 size: "md",
                                 color: nK.A.unsafe_rawColors.RED_400.css,
                                 className: r6.Wo,
@@ -4568,7 +4568,7 @@ let aY = (0, a.zZ)(o.X.VOICE_CATEGORY, {
     aK = (0, a.i4)(o.X.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t.B1fFpf),
         usePredicate: () => iq.Ay.isSupported(),
-        icon: sa.c,
+        icon: sa.MicrophoneIcon,
         useMenu: so.A,
         buildLayout: () => [aH],
     }),
@@ -5190,7 +5190,7 @@ class oC extends g.PureComponent {
                                   (0, c.jsxs)(E.D, {
                                       variant: "heading-lg/semibold",
                                       children: [
-                                          (0, c.jsx)(a2.X, { size: "sm", className: of.hz }),
+                                          (0, c.jsx)(a2.LockIcon, { size: "sm", className: of.hz }),
                                           " ",
                                           j.intl.string(j.t.W26xGQ),
                                       ],
@@ -5365,7 +5365,7 @@ function o2(e) {
         className: o$.NG,
         children: (0, c.jsx)(T.$, {
             variant: "primary",
-            icon: oF.o,
+            icon: oF.GiftIcon,
             text: j.intl.string(oJ.default.DZnomS),
             onClick: l,
         }),
@@ -6230,7 +6230,7 @@ let uW = (0, a.zZ)(o.X.REDEEM_GIFT_CATEGORY, {
     }),
     uQ = (0, a.i4)(o.X.GIFT_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t["jcSP+g"]),
-        icon: oF.o,
+        icon: oF.GiftIcon,
         usePersistentBadge: function () {
             let e = (0, oY.IO)().length;
             return g.useMemo(() => ({ badgeType: d.Xi.COUNT, count: e }), [e]);
@@ -6344,8 +6344,8 @@ function dh(e) {
                       id: "manage-subscription",
                       label: j.intl.string(j.t.obRG6Y),
                       action: () => (0, t9.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL),
-                      iconLeft: dg.x,
-                      leadingAccessory: { type: "icon", icon: dg.x },
+                      iconLeft: dg.LightbulbIcon,
+                      leadingAccessory: { type: "icon", icon: dg.LightbulbIcon },
                   })
                 : null,
         [a, s],
@@ -6613,7 +6613,10 @@ function dC(e) {
                         "aria-label": j.intl.string(j.t.PdRCRg),
                         className: d_.Mj,
                         ...e,
-                        children: (0, c.jsx)(dd.j, { size: "xs", color: nK.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                        children: (0, c.jsx)(dd.MoreHorizontalIcon, {
+                            size: "xs",
+                            color: nK.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                        }),
                     }),
             }),
         ],
@@ -6926,7 +6929,10 @@ function dG(e) {
                             "aria-label": j.intl.string(j.t["UKOtz+"]),
                             className: dR.Mj,
                             ...e,
-                            children: (0, c.jsx)(dd.j, { size: "xs", color: nK.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                            children: (0, c.jsx)(dd.MoreHorizontalIcon, {
+                                size: "xs",
+                                color: nK.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                            }),
                         }),
                 }),
         ],
@@ -7546,13 +7552,13 @@ let cI = g.memo(function (e) {
                                                   onClick: E,
                                                   "aria-label": j.intl.string(j.t.OpuAlK),
                                                   children: S
-                                                      ? (0, c.jsx)(cs.A, {
+                                                      ? (0, c.jsx)(cs.CheckmarkLargeIcon, {
                                                             size: "custom",
                                                             width: 16,
                                                             height: 16,
                                                             color: "currentColor",
                                                         })
-                                                      : (0, c.jsx)(cr.T, {
+                                                      : (0, c.jsx)(cr.CopyIcon, {
                                                             size: "custom",
                                                             width: 16,
                                                             height: 16,
@@ -7825,7 +7831,11 @@ function cJ(e) {
                     i &&
                         (0, c.jsx)(i4.m, {
                             text: l,
-                            children: (0, c.jsx)(cP.m, { size: "xs", color: "currentColor", className: cQ.Mo }),
+                            children: (0, c.jsx)(cP.CircleInformationIcon, {
+                                size: "xs",
+                                color: "currentColor",
+                                className: cQ.Mo,
+                            }),
                         }),
                 ],
             }),
@@ -8383,7 +8393,7 @@ function gf(e) {
                               })
                             : (0, c.jsxs)("span", {
                                   className: gp.yW,
-                                  children: [(0, c.jsx)(gr.n, { size: "xs" }), j.intl.string(j.t["6anEVv"])],
+                                  children: [(0, c.jsx)(gr.UserIcon, { size: "xs" }), j.intl.string(j.t["6anEVv"])],
                               }),
                     }),
                     (0, c.jsx)(gI, { invoicePreview: y, subscriptionPlan: o }),
@@ -8752,7 +8762,7 @@ function gw(e) {
         } = e,
         o = (0, ga.A)(t, 100),
         u = (0, gE.PJ)(r.flags),
-        d = u ? gs.R : gr.n,
+        d = u ? gs.R : gr.UserIcon,
         g = u ? j.intl.string(j.t["46YF2D"]) : j.intl.string(j.t.fFyGiA),
         A = n.metadata?.application_subscription_guild_id,
         h = (0, m.bG)([lc.A], () => (u && null != A ? lc.A.getGuild(A) : void 0), [A, u]),
@@ -9774,7 +9784,7 @@ class mk extends g.Component {
                   text: "Generate Public Link",
                   children: (0, c.jsx)(i5.K, {
                       variant: "secondary",
-                      icon: mb.q,
+                      icon: mb.LinkIcon,
                       "aria-label": "Generate Public Link",
                       onClick: this.handleLinkGeneration,
                   }),
@@ -10601,7 +10611,10 @@ function AN(e) {
                                     t.title,
                                     " ",
                                     ux.p5 &&
-                                        (0, c.jsx)(t8.D, { onClick: p, children: (0, c.jsx)(mb.q, { size: "xs" }) }),
+                                        (0, c.jsx)(t8.D, {
+                                            onClick: p,
+                                            children: (0, c.jsx)(mb.LinkIcon, { size: "xs" }),
+                                        }),
                                 ],
                             }),
                             (0, c.jsx)(z.E, { color: "text-muted", variant: "text-sm/normal", children: n }),
@@ -11651,7 +11664,7 @@ function hF() {
                                             (0, c.jsxs)("div", {
                                                 className: hw.sQ,
                                                 children: [
-                                                    (0, c.jsx)(oF.o, {
+                                                    (0, c.jsx)(oF.GiftIcon, {
                                                         size: d ? "md" : "sm",
                                                         color: nK.A.colors.ICON_STRONG,
                                                     }),
@@ -12426,7 +12439,7 @@ let Ei = (0, a.zZ)(o.X.CONNECTIONS_CATEGORY, {
     }),
     Er = (0, a.i4)(o.X.CONNECTED_APPS_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t.lrVuZO),
-        icon: mb.q,
+        icon: mb.LinkIcon,
         buildLayout: () => [Es],
     });
 var Ea = n(625657),
@@ -13814,7 +13827,7 @@ function Sy(e) {
                                                       });
                                               });
                                       },
-                                      children: (0, c.jsx)(SI.i, {
+                                      children: (0, c.jsx)(SI.FlagIcon, {
                                           size: "md",
                                           color: "currentColor",
                                           className: SN.Lj,
@@ -13827,13 +13840,13 @@ function Sy(e) {
                         let { detectable: e } = o,
                             t =
                                 e && u
-                                    ? (0, c.jsx)(ST.b, {
+                                    ? (0, c.jsx)(ST.EyeIcon, {
                                           size: "md",
                                           color: "currentColor",
                                           className: SN.Lj,
                                           colorClass: SN.GS,
                                       })
-                                    : (0, c.jsx)(Sf.G, {
+                                    : (0, c.jsx)(Sf.EyeSlashIcon, {
                                           size: "md",
                                           color: "currentColor",
                                           className: u ? SN.$V : SN.zN,
@@ -14076,7 +14089,7 @@ let Sw = (0, a.E2)(o.X.REGISTERED_GAMES_CURRENT_GAME_SETTING, {
     }),
     Sz = (0, a.i4)(o.X.REGISTERED_GAMES_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t.AVDyEj),
-        icon: Sh._,
+        icon: Sh.GameControllerIcon,
         usePredicate: nA.Pi,
         buildLayout: () => [SB],
     }),
@@ -14645,7 +14658,7 @@ function xX(e) {
                             className: xz.nf,
                             "aria-label": j.intl.string(j.t.Qp04hK),
                             focusProps: { ringTarget: d },
-                            children: (0, c.jsx)(r$.R, {
+                            children: (0, c.jsx)(r$.PencilIcon, {
                                 size: "custom",
                                 className: xz.BW,
                                 width: 14,
@@ -16118,7 +16131,7 @@ function Tu() {
                                       lineClamp: 1,
                                       children: j.intl.string(j.t.Ip9nBS),
                                   }),
-                                  (0, c.jsx)(r$.R, { size: "xxs", color: "currentColor" }),
+                                  (0, c.jsx)(r$.PencilIcon, { size: "xxs", color: "currentColor" }),
                               ],
                           }),
                       ],
@@ -16948,13 +16961,13 @@ let fI = (0, a.zZ)(o.X.BACKUP_CODES_CATEGORY, {
                                       children: (0, c.jsx)(T.$, {
                                           text: j.intl.string(j.t["OO+Nib"]),
                                           variant: "secondary",
-                                          icon: fm.s,
+                                          icon: fm.DownloadIcon,
                                       }),
                                   }),
                                   (0, c.jsx)(T.$, {
                                       text: j.intl.string(j.t["3x962E"]),
                                       variant: "secondary",
-                                      icon: fA.f,
+                                      icon: fA.RefreshIcon,
                                       onClick: fT,
                                   }),
                               ],
@@ -17067,7 +17080,7 @@ function fD(e) {
                 ],
             }),
             (0, c.jsx)(i5.K, {
-                icon: dd.j,
+                icon: dd.MoreHorizontalIcon,
                 variant: "icon-only",
                 size: "sm",
                 "aria-label": j.intl.string(j.t["+nrTbK"]),
@@ -17226,7 +17239,7 @@ let f$ = (0, a.E2)(o.X.FAMILY_CENTER_SETTING, {
                 ? null
                 : {
                       type: d.Xy.ICON,
-                      icon: fH.i,
+                      icon: fH.WarningIcon,
                       color: nK.A.colors.ICON_FEEDBACK_WARNING,
                       backgroundColor: nK.A.colors.BACKGROUND_FEEDBACK_WARNING,
                   };
@@ -17303,7 +17316,7 @@ let f7 = (0, a.Tf)(o.X.ACCOUNT_DELETE_SETTING, {
     }),
     In = (0, a.i4)(o.X.ACCOUNT_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t["ldCE/p"]),
-        icon: gr.n,
+        icon: gr.UserIcon,
         buildLayout: () => [It],
     });
 var Ii = n(176781),
@@ -17487,7 +17500,7 @@ let Ij = (0, a.E2)(o.X.CLIPS_KEYBIND, {
                                     position: "top",
                                     ariaHidden: !0,
                                     children: (0, c.jsx)(i5.K, {
-                                        icon: Iy.m,
+                                        icon: Iy.RetryIcon,
                                         size: "sm",
                                         variant: "secondary",
                                         disabled: t,
@@ -18039,7 +18052,7 @@ function _A(e) {
                         }),
                     ],
                 }),
-                (0, c.jsx)(t8.D, { onClick: r, className: _m.Qz, children: (0, c.jsx)(i6.u, { size: "xs" }) }),
+                (0, c.jsx)(t8.D, { onClick: r, className: _m.Qz, children: (0, c.jsx)(i6.TrashIcon, { size: "xs" }) }),
             ],
         })
     );
@@ -18657,7 +18670,10 @@ function Nh(e) {
     return (0, c.jsxs)("div", {
         className: NA.wx,
         children: [
-            (0, c.jsx)("div", { className: NA.zc, children: i ? (0, c.jsx)(Nc.K, {}) : (0, c.jsx)(Sf.G, {}) }),
+            (0, c.jsx)("div", {
+                className: NA.zc,
+                children: i ? (0, c.jsx)(Nc.K, {}) : (0, c.jsx)(Sf.EyeSlashIcon, {}),
+            }),
             (0, c.jsxs)("div", {
                 className: NA.Qq,
                 children: [
@@ -19424,7 +19440,7 @@ let CN = {
     }),
     CR = (0, a.i4)(o.X.NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => j.intl.string(j.t.HcoRu0),
-        icon: Nz.X,
+        icon: Nz.BellIcon,
         buildLayout: () => [CD],
     }),
     CP = (0, a.WI)(o.X.USER_SECTION, {
@@ -19464,7 +19480,7 @@ var CX = n(70688),
 let CH = (0, a.i4)(o.X.LOGOUT_SIDEBAR_ITEM, {
         variant: "destructive",
         useTitle: () => j.intl.string(j.t["2jxGer"]),
-        icon: CX.o,
+        icon: CX.DoorExitIcon,
         onClick: () => {
             (0, nW.A)({
                 title: j.intl.string(j.t["2jxGer"]),

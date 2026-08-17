@@ -42,8 +42,8 @@ var r = n(192308),
     E = n(376728),
     y = n(274670),
     g = n(144779),
-    _ = n(167189),
-    A = n(833291),
+    A = n(167189),
+    _ = n(833291),
     I = n(976860),
     h = n(280450),
     S = n(299091),
@@ -67,15 +67,15 @@ var r = n(192308),
     V = n(710969),
     z = n(901406),
     H = n(814793),
-    $ = n(753386),
-    G = n(448967),
+    G = n(753386),
+    $ = n(448967),
     F = n(190107),
     Y = n(652215),
     K = n(216934);
 async function B(e) {
     try {
-        let t = (0, A.br)(e);
-        if (null == t || t.type !== _.I.INVITE) return !1;
+        let t = (0, _.br)(e);
+        if (null == t || t.type !== A.I.INVITE) return !1;
         let n = S.A.getInvite(t.code);
         if (null == n) {
             let { invite: e } = await E.Ay.resolveInvite(t.code, "Markdown Link");
@@ -602,7 +602,7 @@ function ea(e) {
             subtitle: U.intl.string(U.t.FIYcpC),
             choices: k()(t.slice(0, 4)).concat(t[4]),
         });
-    n.log(`Showing survey ${i.id}`), (0, G.m)({ questId: e.id, survey: i });
+    n.log(`Showing survey ${i.id}`), (0, $.m)({ questId: e.id, survey: i });
 }
 function es() {
     return Promise.all([
@@ -680,14 +680,14 @@ function el(e) {
         (y === q.sy.AUTO_ENABLE_CAPTIONS && g && !C
             ? m(!0)
             : y === q.sy.AUTO_UNMUTE && (b.Ay.getState().setMuted(!1), 0 === p && b.Ay.getState().setVolume(0.3)));
-    let _ = performance.now();
+    let A = performance.now();
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await es();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
-                    openStartClockTime: _,
+                    openStartClockTime: A,
                     questId: t.id,
                     autoplay: l,
                     videoSessionId: d,
@@ -695,9 +695,9 @@ function el(e) {
                 });
         },
         {
-            modalKey: (0, $.cZ)(t.id),
+            modalKey: (0, G.cZ)(t.id),
             backdropStyle: u.F.IMMERSIVE,
-            onCloseCallback: () => (0, $.vm)({ questId: t.id, sourceQuestContent: a, videoSessionId: d }),
+            onCloseCallback: () => (0, G.vm)({ questId: t.id, sourceQuestContent: a, videoSessionId: d }),
         },
     );
 }
@@ -827,7 +827,8 @@ async function ef(e, t) {
 }
 function ep(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if ((0, H.vA)(e)) return e.config.features.includes(F.Li.CLOUD_GAMING_ACTIVITY) ? (t ? void 0 : c.h) : d._;
+    if ((0, H.vA)(e))
+        return e.config.features.includes(F.Li.CLOUD_GAMING_ACTIVITY) ? (t ? void 0 : c.h) : d.GameControllerIcon;
 }
 function eC(e) {
     let t = (0, z.bg)(e);

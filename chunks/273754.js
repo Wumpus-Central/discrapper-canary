@@ -1059,7 +1059,7 @@ function t0(e) {
         children: (0, l.jsxs)("div", {
             className: tQ.Qs,
             children: [
-                (0, l.jsx)(tX.j, { size: "md", className: r()({ [tQ.su]: a }) }),
+                (0, l.jsx)(tX.DiceIcon, { size: "md", className: r()({ [tQ.su]: a }) }),
                 (0, l.jsx)(e0.E, { color: "text-default", variant: "text-sm/normal", children: o }),
             ],
         }),

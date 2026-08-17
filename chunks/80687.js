@@ -11,7 +11,7 @@ function o(e) {
     return (0, a.jsx)(s.S, {
         ...o,
         "aria-label": t ?? (n ? c.PAUSE_BUTTON_LABEL : c.PLAY_BUTTON_LABEL),
-        icon: n ? r.E : l.u,
+        icon: n ? r.PauseIcon : l.PlayIcon,
         variant: "overlay-secondary",
         fullWidth: !1,
         rounded: !0,

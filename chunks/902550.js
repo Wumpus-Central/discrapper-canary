@@ -17,9 +17,9 @@ var n = a(477900),
     E = a(688810),
     C = a(753838),
     p = a(946274),
-    j = a(702211),
-    R = a(699576),
-    T = a(469054),
+    T = a(702211),
+    j = a(699576),
+    R = a(469054),
     N = a(866665),
     v = a(259678),
     y = a(241326),
@@ -160,7 +160,7 @@ function ee(e) {
                         "aria-label": C,
                         onClick: (e) => s(e, a, c, u, C),
                         className: Q.G5,
-                        children: (0, n.jsx)(y.u, { size: "xs", color: "currentColor", className: Q.fy }),
+                        children: (0, n.jsx)(y.TrashIcon, { size: "xs", color: "currentColor", className: Q.fy }),
                     }),
                 }),
             }),
@@ -175,9 +175,9 @@ function et(e) {
         x = l.useRef(t.length),
         E = l.useRef(null),
         [C, p] = l.useState(!1),
-        [j, R] = l.useState(!1),
-        T = t.length,
-        N = Math.max(6 - T, 0),
+        [T, j] = l.useState(!1),
+        R = t.length,
+        N = Math.max(6 - R, 0),
         v = (0, f.k)(),
         y = l.useCallback(
             async (e) => {
@@ -265,7 +265,7 @@ function et(e) {
                 (E.current = c >= 0 ? A.current[c] : m.current),
                     e.shiftKey
                         ? J(r)
-                        : (R(!0),
+                        : (j(!0),
                           (0, g.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([a.e("816741"), a.e("48944")]).then(
                                   a.bind(a, 555251),
@@ -280,7 +280,7 @@ function et(e) {
                                       onClose: async () => {
                                           await a(),
                                               requestAnimationFrame(() => {
-                                                  R(!1);
+                                                  j(!1);
                                               });
                                       },
                                       ...l,
@@ -292,20 +292,20 @@ function et(e) {
         );
     return (
         l.useEffect(() => {
-            j ||
+            T ||
                 (t.length < x.current &&
                     null != E.current &&
                     requestAnimationFrame(() => {
                         E.current?.focus();
                     }),
                 (x.current = t.length));
-        }, [t.length, j]),
+        }, [t.length, T]),
         (0, n.jsx)("div", {
             className: s()(Q.AU, o),
             children: (0, n.jsxs)("div", {
                 className: Q.mE,
                 children: [
-                    T > 0 &&
+                    R > 0 &&
                         (0, n.jsx)("ul", {
                             "aria-label": B.intl.string(B.t.lsU63N),
                             className: Q.xL,
@@ -335,7 +335,7 @@ function et(e) {
                             children: [
                                 (0, n.jsxs)(h.A, {
                                     children: [
-                                        0 === T &&
+                                        0 === R &&
                                             (0, n.jsxs)(n.Fragment, { children: [B.intl.string(B.t.x0DsRS), " "] }),
                                         B.intl.format(B.t["8W2HO3"], { numberOfEmptyAvatarSlots: N }),
                                     ],
@@ -448,7 +448,7 @@ function ef(e) {
                 ? B.intl.formatToPlainString(B.t.u3L3TX, { levelName: r })
                 : B.intl.formatToPlainString(B.t["r/v25U"], { levelName: r });
         })({ guildFeature: c, guild: A }),
-        j = null != A && null != c;
+        T = null != A && null != c;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(o.D, {
@@ -460,7 +460,7 @@ function ef(e) {
                 children: [
                     x,
                     (0, n.jsxs)("div", {
-                        className: s()(eh.q3, { [eh.j5]: j }),
+                        className: s()(eh.q3, { [eh.j5]: T }),
                         children: [
                             (0, n.jsxs)("div", {
                                 className: eh.Mn,
@@ -483,7 +483,7 @@ function ef(e) {
                                     g && (0, n.jsx)(h.A, { children: `, ${B.intl.string(B.t["5AFxuK"])}` }),
                                 ],
                             }),
-                            j &&
+                            T &&
                                 (0, n.jsx)("div", {
                                     className: eh.x9,
                                     "aria-hidden": !0,
@@ -581,12 +581,12 @@ function eE(e) {
         w = (0, f.k)(),
         H = d === Y.HL.AVATAR || d === Y.HL.BANNER,
         M = !ec.Ay.canUseAnimatedAvatar(L) && d === Y.HL.AVATAR,
-        k = (0, j.b)(!H),
+        k = (0, T.b)(!H),
         { analyticsLocations: U } = (0, E.Ay)(p, x.A.SELECT_IMAGE_MODAL),
         D = l.useCallback(
             (e) => {
                 let {
-                    assetOrigin: t = T.E.NEW_ASSET,
+                    assetOrigin: t = R.E.NEW_ASSET,
                     imageUri: a,
                     staticImageUri: n = a,
                     file: l,
@@ -795,7 +795,7 @@ function eE(e) {
                     ],
                 }),
                 q && (0, n.jsx)(ea, { onComplete: D, returnRef: F }),
-                z && (0, n.jsx)(R.A, { uploadType: d, showUpsell: !0, position: "inline", className: eh.Lu }),
+                z && (0, n.jsx)(j.A, { uploadType: d, showUpsell: !0, position: "inline", className: eh.Lu }),
             ],
         }),
     });

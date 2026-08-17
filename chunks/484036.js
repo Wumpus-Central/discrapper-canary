@@ -478,9 +478,9 @@ function ek(e) {
 function eP(e, t, n, i, s) {
     switch (e.categoryInfo.type) {
         case eo.Cx.FAVORITES:
-            return (0, l.jsx)(ek, { icon: A.G, onClick: t, isSelected: n, listItemProps: i }, e.key);
+            return (0, l.jsx)(ek, { icon: A.StarIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
         case eo.Cx.FREQUENTLY_USED:
-            return (0, l.jsx)(ek, { icon: C.O, onClick: t, isSelected: n, listItemProps: i }, e.key);
+            return (0, l.jsx)(ek, { icon: C.ClockIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
         case eo.Cx.GUILD:
             return (0, l.jsx)(
                 y.D,
@@ -597,7 +597,7 @@ function e1(e) {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(ez.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: e0.Zg })
-                    : (0, l.jsx)(eV.x, { size: "md", color: "currentColor", className: e0.Zg }),
+                    : (0, l.jsx)(eV.ImageIcon, { size: "md", color: "currentColor", className: e0.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(O.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
@@ -771,9 +771,17 @@ function ts(e) {
                             (function () {
                                 switch (t.type) {
                                     case eo.Cx.FAVORITES:
-                                        return (0, l.jsx)(A.G, { size: "xs", color: "currentColor", className: tt.nr });
+                                        return (0, l.jsx)(A.StarIcon, {
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: tt.nr,
+                                        });
                                     case eo.Cx.FREQUENTLY_USED:
-                                        return (0, l.jsx)(C.O, { size: "xs", color: "currentColor", className: tt.nr });
+                                        return (0, l.jsx)(C.ClockIcon, {
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: tt.nr,
+                                        });
                                     case eo.Cx.GUILD:
                                         return (0, l.jsx)(O.A, { guild: t.guild, height: 16, width: 16 });
                                     case eo.Cx.DEFAULTS:
@@ -785,7 +793,11 @@ function ts(e) {
                                             className: tt.nr,
                                         });
                                     case eo.Cx.SEARCH:
-                                        return (0, l.jsx)(I.$, { size: "md", color: "currentColor", className: tt.nr });
+                                        return (0, l.jsx)(I.MagnifyingGlassIcon, {
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: tt.nr,
+                                        });
                                 }
                             })(),
                             (0, l.jsx)(v.D, {

@@ -195,7 +195,7 @@ function $() {
                           (0, i.jsxs)("div", {
                               className: w.UW,
                               children: [
-                                  (0, i.jsx)(m.m, { size: "sm" }),
+                                  (0, i.jsx)(m.CircleInformationIcon, { size: "sm" }),
                                   (0, i.jsx)(r.E, {
                                       variant: "text-sm/medium",
                                       children: S.intl.string(U.default["5DjxXm"]),

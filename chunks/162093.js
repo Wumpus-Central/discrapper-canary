@@ -585,7 +585,11 @@ let tD = function (t) {
                               }),
                               (0, l.jsx)(u.m, {
                                   text: W.intl.formatToPlainString(W.t.FYyR4o, { activeTrialUserLimit: z ?? 0 }),
-                                  children: (0, l.jsx)(x.m, { size: "xs", color: "currentColor", className: tT.Xz }),
+                                  children: (0, l.jsx)(x.CircleInformationIcon, {
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: tT.Xz,
+                                  }),
                               }),
                           ],
                       }),

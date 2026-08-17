@@ -1,37 +1,37 @@
-t.d(e, { default: () => p });
-var i = t(477900);
-t(582128);
-var a = t(980707),
-    l = t(477782),
-    c = t(442433),
-    s = t(50268),
-    r = t(173936),
-    o = t(957565),
-    d = t(886393),
-    h = t(375708);
+i.d(e, { default: () => p });
+var t = i(477900);
+i(582128);
+var a = i(980707),
+    l = i(477782),
+    c = i(442433),
+    s = i(50268),
+    r = i(173936),
+    o = i(957565),
+    d = i(886393),
+    h = i(375708);
 function p(n) {
-    let { channel: e, channelId: t, originalLink: p, messageId: u, onSelect: g } = n,
-        k =
+    let { channel: e, channelId: i, originalLink: p, messageId: u, onSelect: k } = n,
+        g =
             null != e
                 ? (0, d.A)(e, u, p)
-                : (0, i.jsx)(l.Dr, {
+                : (0, t.jsx)(l.Dr, {
                       id: "channel-copy-link",
                       label: h.intl.string(h.t.WqhZss),
-                      leadingAccessory: { type: "icon", icon: r.q },
+                      leadingAccessory: { type: "icon", icon: r.LinkIcon },
                       action: () => {
                           (0, o.C)(p ?? "");
                       },
                   }),
-        b = (0, s.A)({ id: t, label: h.intl.string(h.t.gFHI3k) });
-    return (0, i.jsxs)(a.W, {
+        b = (0, s.A)({ id: i, label: h.intl.string(h.t.gFHI3k) });
+    return (0, t.jsxs)(a.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-mention-context",
         onClose: c.Z_,
-        onSelect: g,
+        onSelect: k,
         "aria-label": h.intl.string(h.t.feGACE),
         children: [
-            (0, i.jsx)(l.rX, { children: k }, "channel-mention-actions"),
-            (0, i.jsx)(l.rX, { children: b }, "developer-actions"),
+            (0, t.jsx)(l.rX, { children: g }, "channel-mention-actions"),
+            (0, t.jsx)(l.rX, { children: b }, "developer-actions"),
         ],
     });
 }

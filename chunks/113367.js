@@ -48,7 +48,7 @@ function m(e) {
         }, [m]);
     let g = null != n && (a || !m) ? n : null,
         S = null != g ? g.message : f.intl.formatToPlainString(f.t.yBmFPA, { count: A }),
-        C = null != g ? (g.icon === d.Ck.CLOCK ? c.O : u.c) : c.O;
+        C = null != g ? (g.icon === d.Ck.CLOCK ? c.ClockIcon : u.BookmarkIcon) : c.ClockIcon;
     return (0, i.jsx)(_.u, {
         anchorRef: t,
         asContainer: !0,

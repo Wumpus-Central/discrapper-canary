@@ -1,54 +1,54 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(194261),
+n.d(t, { A: () => d });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(194261),
     o = n(573435),
-    d = n(260509),
+    u = n(260509),
     c = n(830861);
-let u = function (e) {
+let d = function (e) {
     let {
             className: t,
             guild: n,
-            isSelected: a = !0,
-            width: u = 32,
-            height: _ = 32,
-            shouldAnimate: E = !0,
-            isLocked: A = !1,
+            isSelected: s = !0,
+            width: d = 32,
+            height: h = 32,
+            shouldAnimate: m = !0,
+            isLocked: f = !1,
         } = e,
-        [h, I] = r.useState(!1),
-        f = (0, d.Iv)(n, 32, E && a);
-    function p() {
-        return I(!0);
+        [p, g] = i.useState(!1),
+        x = (0, u.Iv)(n, 32, m && s);
+    function A() {
+        return g(!0);
     }
-    function T() {
-        return I(!1);
+    function C() {
+        return g(!1);
     }
-    return (0, i.jsxs)("div", {
-        onFocus: p,
-        onBlur: T,
-        onMouseOver: p,
-        onMouseLeave: T,
+    return (0, l.jsxs)("div", {
+        onFocus: A,
+        onBlur: C,
+        onMouseOver: A,
+        onMouseLeave: C,
         children: [
-            (0, i.jsx)(o.Ay, {
-                className: s()(c.dK, t),
-                mask: a || h ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
-                width: u,
-                height: _,
+            (0, l.jsx)(o.Ay, {
+                className: r()(c.dK, t),
+                mask: s || p ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+                width: d,
+                height: h,
                 children:
-                    null == f
-                        ? (0, i.jsx)("div", {
-                              className: s()(c.$f, c.Gc),
-                              children: (0, i.jsx)("div", { className: c.Hj, children: (0, d.Rb)(n) }),
+                    null == x
+                        ? (0, l.jsx)("div", {
+                              className: r()(c.$f, c.Gc),
+                              children: (0, l.jsx)("div", { className: c.Hj, children: (0, u.Rb)(n) }),
                           })
-                        : (0, i.jsx)("img", { alt: n.name, src: f, className: c.$f }),
+                        : (0, l.jsx)("img", { alt: n.name, src: x, className: c.$f }),
             }),
-            A
-                ? (0, i.jsx)("div", {
+            f
+                ? (0, l.jsx)("div", {
                       className: c.bg,
-                      children: (0, i.jsx)(l.X, {
+                      children: (0, l.jsx)(a.LockIcon, {
                           size: "custom",
                           color: "currentColor",
                           width: 10,

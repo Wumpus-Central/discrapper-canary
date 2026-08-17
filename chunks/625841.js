@@ -16,7 +16,7 @@ var n = i(477900),
     x = i(363195),
     h = i(934729),
     C = i(347481),
-    b = i(293246),
+    b = i(453028),
     I = i(74848),
     A = i(106713),
     O = i(731854),
@@ -41,7 +41,7 @@ function N(e) {
         } = {
             [O.oh.AUDIO_INPUT]: {
                 setDevice: v.A.setInputDevice,
-                IconComponent: d.c,
+                IconComponent: d.MicrophoneIcon,
                 getCanSetDevice: (e) => e.supports(O.O5.AUDIO_INPUT_DEVICE),
                 getWarningMessage: () =>
                     S.intl.format(S.t["1iK6UW"], { onDownloadClick: () => (0, h._)("Help Text Input Devices") }),
@@ -64,9 +64,9 @@ function N(e) {
                 getLocation: (e) => `${e}.SingleSelectVideoDevices`,
             },
         }[t],
-        { analyticsLocations: P } = (0, D.Ay)(),
-        L = (0, a.bG)([x.A], () => x.A.theme),
-        M = E(l),
+        { analyticsLocations: M } = (0, D.Ay)(),
+        P = (0, a.bG)([x.A], () => x.A.theme),
+        L = E(l),
         W = (0, I.tR)(t),
         K = s.useMemo(() => W.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [W]),
         { id: G } = (0, I.x5)(t),
@@ -75,9 +75,9 @@ function N(e) {
         z = (0, n.jsx)(m.p, { messageType: m.Y.WARNING, children: y() }),
         F = s.useCallback(
             (e) => {
-                (U?.(e) ?? !0) && V(e, { location: M, analyticsLocations: P });
+                (U?.(e) ?? !0) && V(e, { location: L, analyticsLocations: M });
             },
-            [M, P, U, V],
+            [L, M, U, V],
         );
     function R(e) {
         let s,
@@ -89,7 +89,7 @@ function N(e) {
         null != p && ((u = p.prefix), (s = p.subName));
         let m = C.A.getCertifiedDeviceName(c, u);
         if (C.A.isCertified(c)) {
-            let e = (0, r.q)(L) ? i(961392) : i(848672);
+            let e = (0, r.q)(P) ? i(961392) : i(848672);
             l = (0, n.jsx)("img", { src: e, alt: S.intl.string(S.t.smSKsj) });
         }
         let v = $ ? (0, I.d4)(K[c], t) : k;

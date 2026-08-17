@@ -1,54 +1,54 @@
-n.r(t), n.d(t, { default: () => B });
-var o = n(477900),
-    i = n(582128),
-    s = n(837381),
-    r = n(17928),
-    l = n(912592),
-    c = n(782603),
-    u = n(862328),
-    a = n(67811),
-    d = n(941971),
-    h = n(900848),
-    p = n(938483),
-    g = n(309010),
-    x = n(851109),
-    C = n(394953),
-    f = n(355216),
-    A = n(625864),
-    j = n(866665),
-    b = n(375708);
-function E(e) {
-    let { children: t } = e,
-        { notificationCenterVariant: n } = (0, x.X8)({ location: "NotificationsInboxTooltip" }),
-        i = n === x.U5.LEGACY ? b.intl.string(b.t.GSmTKJ) : b.intl.string(b.t.HcoRu0);
-    return (0, o.jsx)(j.m, { spacing: 12, position: "right", text: i, children: (0, o.jsx)("div", { children: t }) });
+t.r(n), t.d(n, { default: () => m });
+var o = t(477900),
+    i = t(582128),
+    s = t(837381),
+    r = t(17928),
+    l = t(912592),
+    c = t(782603),
+    u = t(862328),
+    a = t(67811),
+    d = t(941971),
+    h = t(900848),
+    p = t(938483),
+    g = t(309010),
+    x = t(851109),
+    C = t(394953),
+    f = t(355216),
+    A = t(625864),
+    I = t(866665),
+    b = t(375708);
+function j(e) {
+    let { children: n } = e,
+        { notificationCenterVariant: t } = (0, x.X8)({ location: "NotificationsInboxTooltip" }),
+        i = t === x.U5.LEGACY ? b.intl.string(b.t.GSmTKJ) : b.intl.string(b.t.HcoRu0);
+    return (0, o.jsx)(I.m, { spacing: 12, position: "right", text: i, children: (0, o.jsx)("div", { children: n }) });
 }
-n(445368);
-var U = n(652215),
-    I = n(350845);
-function m(e) {
-    let { onClick: t, selectedOverride: n = !1, popoutProps: p, ref: A } = e,
-        j = (0, s.Vd)("notifications-inbox"),
-        [b, m] = i.useState(!1),
-        B = (0, C.lI)(),
-        N = n || B,
+t(445368);
+var E = t(652215),
+    U = t(350845);
+function B(e) {
+    let { onClick: n, selectedOverride: t = !1, popoutProps: p, ref: A } = e,
+        I = (0, s.Vd)("notifications-inbox"),
+        [b, B] = i.useState(!1),
+        m = (0, C.lI)(),
+        N = t || m,
         { notificationCenterVariant: k } = (0, x.X8)({ location: "NotificationsInboxButtonInner" }),
         {
             badge: v,
             badgeDimensions: R,
             unreadChannelsCount: G,
         } = (function (e) {
-            let { notificationCenterVariant: t } = (0, x.X8)({ location: "NotificationsInboxButtonInner" }),
-                { unreadChannelIds: n } = (0, C.U4)(),
+            let { notificationCenterVariant: n } = (0, x.X8)({ location: "NotificationsInboxButtonInner" }),
+                { unreadChannelIds: t } = (0, C.U4)(),
                 { badge: o, dimensions: i } = (0, f.ux)({ isSelected: e });
-            return t === x.U5.LEGACY
+            return n === x.U5.LEGACY
                 ? { badge: null, unreadChannelsCount: 0, badgeDimensions: { height: 13, width: 13 } }
-                : { badge: o, unreadChannelsCount: n.length, badgeDimensions: i };
+                : { badge: o, unreadChannelsCount: t.length, badgeDimensions: i };
         })(N),
-        L = k === x.U5.LEGACY ? l.K : c.X,
+        L = k === x.U5.LEGACY ? l.InboxIcon : c.BellIcon,
         P = (0, r.bG)([g.Ay], () => g.Ay.getChannelId()),
         S = i.useMemo(() => {
-            if (k === x.U5.SIDEBAR) return U.BVt.CHANNEL(U.gNP, P);
+            if (k === x.U5.SIDEBAR) return E.BVt.CHANNEL(E.gNP, P);
         }, [k, P]);
     return (0, o.jsxs)(h.c, {
         ref: A,
@@ -60,23 +60,23 @@ function m(e) {
                 unread: G > 0,
                 disabled: k === x.U5.LEGACY,
             }),
-            (0, o.jsx)(E, {
+            (0, o.jsx)(j, {
                 children: (0, o.jsx)(u.Q, {
                     selected: N || b,
                     lowerBadge: v,
                     lowerBadgeSize: R,
                     children: (0, o.jsx)(a.j, {
-                        ...j,
+                        ...I,
                         ...p,
-                        onClick: t,
+                        onClick: n,
                         to: S,
                         selected: N || b,
-                        onMouseEnter: () => m(!0),
-                        onMouseLeave: () => m(!1),
+                        onMouseEnter: () => B(!0),
+                        onMouseLeave: () => B(!1),
                         children: (0, o.jsx)(L, {
                             size: "custom",
                             color: "currentColor",
-                            className: I.iZ,
+                            className: U.iZ,
                             width: 20,
                             height: 20,
                         }),
@@ -86,39 +86,39 @@ function m(e) {
         ],
     });
 }
-function B() {
+function m() {
     let e = i.useRef(null),
-        { notificationCenterVariant: t } = (0, x.X8)({ location: "NotificationsInboxButton" }),
-        n = (0, f.HN)();
-    return t === x.U5.SIDEBAR
-        ? (0, o.jsx)(m, { onClick: n })
-        : t === x.U5.POPOUT
+        { notificationCenterVariant: n } = (0, x.X8)({ location: "NotificationsInboxButton" }),
+        t = (0, f.HN)();
+    return n === x.U5.SIDEBAR
+        ? (0, o.jsx)(B, { onClick: t })
+        : n === x.U5.POPOUT
           ? (0, o.jsx)(A.A, {
                 targetElementRef: e,
                 popoutPosition: "right",
                 popoutAlign: "bottom",
-                children: (t, i, s) =>
-                    (0, o.jsx)(m, {
+                children: (n, i, s) =>
+                    (0, o.jsx)(B, {
                         ref: e,
                         selectedOverride: i,
                         onClick: () => {
-                            n(), t();
+                            t(), n();
                         },
                         popoutProps: s,
                     }),
             })
-          : t === x.U5.LEGACY
+          : n === x.U5.LEGACY
             ? (0, o.jsx)(p.U, {
                   spacing: 0,
                   targetElementRef: e,
                   popoutPosition: "right",
                   popoutAlign: "top",
-                  children: (t, i, s) =>
-                      (0, o.jsx)(m, {
+                  children: (n, i, s) =>
+                      (0, o.jsx)(B, {
                           ref: e,
                           selectedOverride: i,
                           onClick: () => {
-                              n(), t();
+                              t(), n();
                           },
                           popoutProps: s,
                       }),

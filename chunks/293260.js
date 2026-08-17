@@ -36,8 +36,8 @@ function A(l) {
         ? (0, a.jsx)(o.Dr, {
               id: "guild-connection-roles",
               label: h.intl.string(h.t.ghtnss),
-              icon: c.q,
-              leadingAccessory: { type: "icon", icon: c.q },
+              icon: c.LinkIcon,
+              leadingAccessory: { type: "icon", icon: c.LinkIcon },
               action: () => v(l.id),
           })
         : null;

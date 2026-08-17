@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { Playground: () => en, PlaygroundStore: () => Z }), n(323874), n(14289), n(35956);
+n.r(t), n.d(t, { Playground: () => en, PlaygroundStore: () => q }), n(323874), n(14289), n(35956);
 var i = n(477900),
     r = n(582128),
     a = n(625903),
@@ -22,11 +22,11 @@ var i = n(477900),
     S = n(58736),
     N = n(856488),
     C = n(269880),
-    O = n(25044),
-    R = n(957565),
+    R = n(25044),
+    O = n(957565),
     L = n(331322),
-    D = n(892547),
-    y = n(834730),
+    y = n(892547),
+    D = n(834730),
     v = n(761508);
 function b(e) {
     let { groups: t, selectedStory: n, onStorySelect: a } = e,
@@ -42,7 +42,7 @@ function b(e) {
         children: [
             (0, i.jsx)(L.B, {
                 style: { marginBottom: "var(--space-12)" },
-                children: (0, i.jsx)(D.I, {
+                children: (0, i.jsx)(y.I, {
                     size: "sm",
                     query: s,
                     onChange: l,
@@ -52,7 +52,7 @@ function b(e) {
                 }),
             }),
             0 === o.length
-                ? (0, i.jsx)(y.E, { variant: "text-sm/normal", color: "text-muted", children: "No results" })
+                ? (0, i.jsx)(D.E, { variant: "text-sm/normal", color: "text-muted", children: "No results" })
                 : (0, i.jsx)(v.V, {
                       selectedItem: n,
                       orientation: "vertical",
@@ -164,7 +164,7 @@ function B(e) {
                                   (0, i.jsxs)("div", {
                                       className: V.fJ,
                                       children: [
-                                          (0, i.jsx)(y.E, {
+                                          (0, i.jsx)(D.E, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
                                               tag: "label",
@@ -253,7 +253,7 @@ function Y(e, t) {
 }
 function K(e) {
     let { story: t, controlsLayout: n } = e,
-        a = Z.useField("controlOverrides"),
+        a = q.useField("controlOverrides"),
         s = t.useDefaultOverrides?.() ?? null,
         l = r.useMemo(() => JSON.stringify(s), [s]),
         [o, d] = r.useState(() => `${t.id}:${l}`),
@@ -261,7 +261,7 @@ function K(e) {
         _ = `${t.id}:${l}`;
     o !== _ && (d(_), u(W(t, a, s))),
         r.useLayoutEffect(() => {
-            Z.setState({ currentProps: c, currentDefaults: s, controlOverrides: null });
+            q.setState({ currentProps: c, currentDefaults: s, controlOverrides: null });
         }, [_]);
     let E = t.component,
         A = "hidden" !== n && (null != t.controls || null != t.ControlsExtension);
@@ -282,7 +282,7 @@ function K(e) {
                                 controls: t.controls,
                                 props: c,
                                 onPropsChange: function (e) {
-                                    u(e), Z.setState({ currentProps: e });
+                                    u(e), q.setState({ currentProps: e });
                                 },
                             }),
                     ],
@@ -292,8 +292,8 @@ function K(e) {
 }
 var $ = n(97483),
     z = n(818348),
-    q = n(375708);
-let Z = (0, g.D)(() => ({
+    Z = n(375708);
+let q = (0, g.D)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
@@ -304,8 +304,8 @@ let Z = (0, g.D)(() => ({
 function X() {
     let e = (0, C.A)(),
         t = (0, N.A)(),
-        n = (0, O.A)(),
-        a = Z.useField("controlsLayout"),
+        n = (0, R.A)(),
+        a = q.useField("controlsLayout"),
         s = r.useMemo(
             () =>
                 (0, i.jsxs)(
@@ -317,21 +317,21 @@ function X() {
                                 id: "controls-right",
                                 group: "controls-layout",
                                 label: "Right Side",
-                                action: () => Z.setState({ controlsLayout: "right" }),
+                                action: () => q.setState({ controlsLayout: "right" }),
                                 checked: "right" === a,
                             }),
                             (0, i.jsx)(E.iD, {
                                 id: "controls-bottom",
                                 group: "controls-layout",
                                 label: "Bottom",
-                                action: () => Z.setState({ controlsLayout: "bottom" }),
+                                action: () => q.setState({ controlsLayout: "bottom" }),
                                 checked: "bottom" === a,
                             }),
                             (0, i.jsx)(E.iD, {
                                 id: "controls-hidden",
                                 group: "controls-layout",
                                 label: "Hidden",
-                                action: () => Z.setState({ controlsLayout: "hidden" }),
+                                action: () => q.setState({ controlsLayout: "hidden" }),
                                 checked: "hidden" === a,
                             }),
                         ],
@@ -349,12 +349,12 @@ function X() {
         children: [
             (0, i.jsx)(E.Dr, {
                 id: "appearance",
-                label: q.intl.string(q.t["iHH+ky"]),
+                label: Z.intl.string(Z.t["iHH+ky"]),
                 children: [...e.filter((e) => null != e), s],
             }),
             (0, i.jsx)(E.Dr, {
                 id: "accessibility",
-                label: q.intl.string(q.t.G0neg7),
+                label: Z.intl.string(Z.t.G0neg7),
                 children: t.filter((e) => null != e),
             }),
             (0, i.jsx)(E.Dr, { id: "experiments", label: "Experiments", children: n.filter((e) => null != e) }),
@@ -373,7 +373,7 @@ function Q() {
         children: (t) =>
             (0, i.jsx)(f.K, {
                 size: "sm",
-                icon: a.Z,
+                icon: a.SettingsIcon,
                 "aria-label": "Settings",
                 variant: "icon-only",
                 ...t,
@@ -392,14 +392,14 @@ function J(e, t, n, i, r) {
     return `${a}?${o.toString()}`;
 }
 function ee(e) {
-    (0, R.C)(e, () =>
+    (0, O.C)(e, () =>
         (0, I.P0)({ id: "playground-link-copied", message: "Copied playground link", type: $.Ck.SUCCESS }),
     );
 }
 function et(e) {
     let { collection: t, story: n } = e,
-        a = Z.useField("currentProps"),
-        o = Z.useField("currentDefaults"),
+        a = q.useField("currentProps"),
+        o = q.useField("currentDefaults"),
         d = r.useRef(null),
         c = r.useMemo(() => null != n && Object.keys(Y(n, a, o)).length > 0, [n, a, o]),
         u = r.useCallback(() => ee(J(t, n, !0, a, o)), [t, n, a, o]),
@@ -414,7 +414,7 @@ function et(e) {
                       size: "sm",
                       "aria-label": "Copy link with configuration",
                       variant: "icon-only",
-                      icon: s.T,
+                      icon: s.CopyIcon,
                       onClick: u,
                   }),
                   (0, i.jsx)(h.Y, {
@@ -462,13 +462,19 @@ function et(e) {
                   }),
               ],
           })
-        : (0, i.jsx)(f.K, { size: "sm", "aria-label": "Copy Link", variant: "icon-only", icon: s.T, onClick: u });
+        : (0, i.jsx)(f.K, {
+              size: "sm",
+              "aria-label": "Copy Link",
+              variant: "icon-only",
+              icon: s.CopyIcon,
+              onClick: u,
+          });
 }
 function en(e) {
     let { configs: t } = e,
-        n = Z.useField("selectedCollection"),
-        a = Z.useField("selectedStory"),
-        s = Z.useField("controlsLayout"),
+        n = q.useField("selectedCollection"),
+        a = q.useField("selectedStory"),
+        s = q.useField("controlsLayout"),
         l = r.useMemo(() => t.flatMap((e) => e.collections), [t]),
         {
             collection: _,
@@ -505,7 +511,7 @@ function en(e) {
                                         var t;
                                         return (
                                             (t = e.id),
-                                            void Z.setState({
+                                            void q.setState({
                                                 selectedCollection: t,
                                                 selectedStory: null,
                                                 controlOverrides: null,
@@ -554,7 +560,7 @@ function en(e) {
                                     (0, i.jsx)(f.K, {
                                         size: "sm",
                                         icon: o.P,
-                                        "aria-label": q.intl.string(q.t.cpT0Cq),
+                                        "aria-label": Z.intl.string(Z.t.cpT0Cq),
                                         variant: "icon-only",
                                         onClick: m.jH,
                                     }),
@@ -576,7 +582,7 @@ function en(e) {
                                               groups: _.groups,
                                               selectedStory: a,
                                               onStorySelect: function (e) {
-                                                  Z.setState({
+                                                  q.setState({
                                                       selectedStory: e,
                                                       controlOverrides: null,
                                                       currentProps: null,

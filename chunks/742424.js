@@ -883,7 +883,12 @@ function tq(e) {
                     s = i
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, l.jsx)(eb.i, { size: "custom", width: 13, height: 13, className: tB.vb }),
+                                  (0, l.jsx)(eb.WarningIcon, {
+                                      size: "custom",
+                                      width: 13,
+                                      height: 13,
+                                      className: tB.vb,
+                                  }),
                                   eu.intl.string(eu.t.d6DpXI),
                               ],
                           })
@@ -1936,10 +1941,14 @@ let nm = [...t3.n, ed.Yq],
                     : null,
             X = [
                 null == J && ((0, v.A)(p, eW.jUm.JOIN) || (0, S.A)(p))
-                    ? (0, l.jsx)(_.A, { activity: p, user: h, variant: "primary", size: "md", icon: t7._ }, "join")
+                    ? (0, l.jsx)(
+                          _.A,
+                          { activity: p, user: h, variant: "primary", size: "md", icon: t7.GameControllerIcon },
+                          "join",
+                      )
                     : null,
                 (0, t6.A)(p)
-                    ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t8.b }, "watch")
+                    ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t8.EyeIcon }, "watch")
                     : null,
                 J,
             ].filter(O.Vq);

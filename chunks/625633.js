@@ -1,4 +1,4 @@
-n.d(t, { DU: () => L, QR: () => w, q5: () => U, $_: () => g, Lp: () => I, Pf: () => T });
+n.d(t, { DU: () => I, QR: () => w, q5: () => U, $_: () => g, Lp: () => L, Pf: () => T });
 var i = n(661531),
     r = n(477262),
     s = n(391242),
@@ -64,7 +64,11 @@ function p(e) {
     };
 }
 function M() {
-    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css, icon: c.G, description: P.intl.string(P.t["ThRK/u"]) };
+    return {
+        color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
+        icon: c.StarIcon,
+        description: P.intl.string(P.t["ThRK/u"]),
+    };
 }
 function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : P.intl.string(P.t.SQV8g6);
@@ -108,7 +112,7 @@ function T() {
         C(),
     ];
 }
-function L() {
+function I() {
     return [
         M(),
         { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: s.O, description: P.intl.string(P.t.AU0zcQ) },
@@ -116,7 +120,7 @@ function L() {
         C(),
     ];
 }
-function I() {
+function L() {
     return [
         { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: P.intl.string(P.t.iGuEFe) },
         A(),

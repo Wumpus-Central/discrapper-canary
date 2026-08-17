@@ -40,7 +40,7 @@ function d(e) {
         position: "top",
         children: (0, l.jsx)(a.K, {
             onClick: m,
-            icon: i.u,
+            icon: i.TrashIcon,
             "aria-label": o.intl.string(o.t.oyYWHE),
             variant: f,
             size: "sm",

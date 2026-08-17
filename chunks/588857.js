@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(816578),
     eo = n(110234),
-    ed = n(626822),
+    ed = n(453028),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -268,7 +268,10 @@ function eA(e) {
                                         children: (0, r.jsx)(A.D, {
                                             className: ep.IF,
                                             onClick: ex(n, s),
-                                            children: (0, r.jsx)(q.j, { size: "sm", color: "currentColor" }),
+                                            children: (0, r.jsx)(q.MoreHorizontalIcon, {
+                                                size: "sm",
+                                                color: "currentColor",
+                                            }),
                                         }),
                                     }),
                                 ],
@@ -1127,8 +1130,8 @@ var e0 = n(417098),
     e2 = n(734066),
     e5 = n(200542),
     e3 = n(351906),
-    e6 = n(377802),
-    e4 = n(348858),
+    e4 = n(377802),
+    e6 = n(348858),
     e8 = n(523875),
     e9 = n(416696),
     e7 = n(621956),
@@ -1395,7 +1398,7 @@ function tK(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e4.I)(a ? "undeafen" : "deafen"),
+        } = (0, e6.I)(a ? "undeafen" : "deafen"),
         m = l ? tn.T : o;
     function g() {
         (0, tc.A)(l, em.JJy.OVERLAY),
@@ -1701,7 +1704,7 @@ function t0(e) {
     let {
             Component: h,
             events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, e6.O)(),
+        } = (0, e4.O)(),
         p = tW(n),
         f = (0, tP.qZ)(),
         x = s ? h : ti._;
@@ -1860,14 +1863,14 @@ function t3(e) {
         })
     );
 }
-var t6 = n(145973);
-let t4 = c.memo(function () {
+var t4 = n(145973);
+let t6 = c.memo(function () {
     let e = (0, y.bG)([e3.A], () => e3.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
     return e && t
         ? (0, r.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t6.$X,
+              className: t4.$X,
               children: [
                   (0, r.jsx)(E.E, {
                       tag: "span",
@@ -1876,7 +1879,7 @@ let t4 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
-                      className: t6.lI,
+                      className: t4.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1893,14 +1896,14 @@ function t8(e) {
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
-        className: m()({ [t6.KE]: !0, [t6.xt]: t }),
+        className: m()({ [t4.KE]: !0, [t4.xt]: t }),
         children: [
-            (0, r.jsx)(t4, {}),
+            (0, r.jsx)(t6, {}),
             (0, r.jsxs)("div", {
-                className: t6.Pm,
+                className: t4.Pm,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: t6.qi,
+                        className: t4.qi,
                         children: [
                             (0, r.jsx)(tq, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tK, { voiceChannel: l, locked: t }),
@@ -1908,7 +1911,7 @@ function t8(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: t6.qi,
+                        className: t4.qi,
                         children: [
                             (0, r.jsx)(tJ, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(t$, { voiceChannel: l, locked: t }),
@@ -1916,12 +1919,12 @@ function t8(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: m()(t6.qi, a && t6.SV),
+                        className: m()(t4.qi, a && t4.SV),
                         children: (0, r.jsx)(t0, { voiceChannel: l, locked: t }),
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t6.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t4.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -2000,7 +2003,8 @@ let nN = c.memo(function (e) {
             mentionCount: o,
             isMentionLowImportance: d,
         });
-    if (null == i) return (0, r.jsx)(t9.o, { size: nw(l, "default"), color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+    if (null == i)
+        return (0, r.jsx)(t9.ChatIcon, { size: nw(l, "default"), color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
     {
         if (null == t) return (0, r.jsx)(tw.Ay, { guild: i, size: nw(l, "guild"), active: !0, showTooltip: !1 });
         let e = 40 === l ? ny.Q.MEDIUM_40 : ny.Q.TINY_24;
@@ -2091,7 +2095,7 @@ function nL(e) {
                 });
         }, []),
         h = eg.intl.string(eg.t.h850Ss),
-        m = l || a !== em.orn.ALL_MESSAGES ? na.a : no.X;
+        m = l || a !== em.orn.ALL_MESSAGES ? na.BellSlashIcon : no.BellIcon;
     return s && null != t
         ? (0, r.jsx)(tt.Y, {
               targetElementRef: n,
@@ -2492,7 +2496,7 @@ let n$ = c.memo(function (e) {
                 let e = j?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === s && !e) {
                     let e = (0, tg.gU)(j, v);
-                    e ??= t9.o;
+                    e ??= t9.ChatIcon;
                     let t = a && !u && g,
                         n = { boxShadow: "none" },
                         i = h.rgba({ opacity: 0.85 }),
@@ -2646,7 +2650,7 @@ let n$ = c.memo(function (e) {
         M = (() => {
             if (null == j || N) return null;
             let e = (0, tg.gU)(j, v);
-            return (e ??= t9.o), (0, r.jsx)(e, { size: "sm", color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+            return (e ??= t9.ChatIcon), (0, r.jsx)(e, { size: "sm", color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == j
         ? (0, r.jsx)("div", { className: nQ.R })
@@ -2684,8 +2688,8 @@ var n0 = n(148494),
     n2 = n(355622),
     n5 = n(232835),
     n3 = n(576705),
-    n6 = n(625494),
-    n4 = n(973196),
+    n4 = n(625494),
+    n6 = n(973196),
     n8 = n(905816);
 function n9(e) {
     let t,
@@ -2707,7 +2711,7 @@ function n9(e) {
                 })(d, tG.A),
             [d],
         ),
-        m = (0, n4.A)();
+        m = (0, n6.A)();
     return ((t = d?.id ?? null),
     (n = c.useRef(new Set())),
     (i = (0, y.bG)([n5.A], () => (null != t ? n5.A.getMessages(t) : null), [t])),
@@ -2720,7 +2724,7 @@ function n9(e) {
     c.useEffect(() => {
         if (null == o || m) return;
         let e = u.requestAnimationFrame(() => {
-            n6._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n4._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => u.cancelAnimationFrame(e);
     }, [o, u, m]),
@@ -2845,7 +2849,7 @@ function ie(e) {
                       : null,
               ],
           })
-        : (0, r.jsx)(V.g, { emptyText: eg.intl.string(nk.default["xpv/t5"]), icon: t9.o });
+        : (0, r.jsx)(V.g, { emptyText: eg.intl.string(nk.default["xpv/t5"]), icon: t9.ChatIcon });
 }
 let it = c.memo(function (e) {
     let { locked: t, dragStart: n, dragging: i } = e;
@@ -2993,7 +2997,11 @@ let io = c.memo(function (e) {
             : u
               ? (0, r.jsx)("div", {
                     ref: h,
-                    children: (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t.aTiM42), icon: ii.n, absolute: !0 }),
+                    children: (0, r.jsx)(V.g, {
+                        emptyText: eg.intl.string(eg.t.aTiM42),
+                        icon: ii.VideoIcon,
+                        absolute: !0,
+                    }),
                 })
               : null;
     }),
@@ -3139,7 +3147,7 @@ let ib = c.memo(function (e) {
             : i
               ? t
                   ? null
-                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t.O1Nbjq), icon: no.X, absolute: !0 })
+                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t.O1Nbjq), icon: no.BellIcon, absolute: !0 })
               : null;
     }),
     iw = {

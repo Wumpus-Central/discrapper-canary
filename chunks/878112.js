@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => E });
 var r = n(477900),
     i = n(582128),
     s = n(575593),
@@ -8,79 +8,79 @@ var r = n(477900),
     u = n(408278),
     c = n(688810),
     d = n(44120),
-    C = n(174459),
-    p = n(440938),
+    p = n(174459),
+    g = n(440938),
     I = n(238184),
-    x = n(766172),
-    g = n(758836),
-    f = n(652215),
-    A = n(202541),
-    k = n(375708);
-let m = function (e) {
+    _ = n(766172),
+    C = n(758836),
+    A = n(652215),
+    f = n(202541),
+    m = n(375708);
+let E = function (e) {
     let {
             product: t,
             primary: n,
-            selectedVariantIndex: m,
-            returnRef: v,
-            onSuccess: _,
-            tooltipDelay: h,
-            fullWidth: E = !1,
-            fullWidthLabel: R,
-            giftRecipient: y,
-            giftingOrigin: j = A.vQ.SHOP_PAGE,
-            onTrackClick: T,
+            selectedVariantIndex: E,
+            returnRef: h,
+            onSuccess: v,
+            tooltipDelay: x,
+            fullWidth: R = !1,
+            fullWidthLabel: k,
+            giftRecipient: b,
+            giftingOrigin: y = f.vQ.SHOP_PAGE,
+            onTrackClick: S,
         } = e,
-        { analyticsLocations: b } = (0, c.Ay)(),
-        P = i.useRef(null),
-        L = (0, p.uM)(),
-        S = (0, I.A)();
-    function O(e) {
+        { analyticsLocations: L } = (0, c.Ay)(),
+        O = i.useRef(null),
+        T = (0, g.uM)(),
+        j = (0, I.A)();
+    function P(e) {
         e.stopPropagation(),
-            C.default.track(f.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: L?.sessionId,
+            p.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: T?.sessionId,
                 sku_id: t.skuId,
-                page_section: L?.pageSection,
-                page_category: L?.pageCategory,
+                page_section: T?.pageSection,
+                page_category: T?.pageCategory,
                 tile_type: s.R[t.type],
-                tile_position: String(L?.tilePosition),
+                tile_position: String(T?.tilePosition),
                 cta_name: "gift button",
-                page_type: S ?? "home",
+                page_type: j ?? "home",
             }),
-            T?.(g.sH.SEND_AS_GIFT),
+            S?.(C.sH.SEND_AS_GIFT),
             (0, d.A)({
-                skuId: (0, x.Y)({ product: t, selectedVariantIndex: m }),
+                skuId: (0, _.Y)({ product: t, selectedVariantIndex: E }),
                 isGift: !0,
-                giftRecipient: y,
-                giftingOrigin: j,
-                analyticsLocations: b,
-                discoverySessionId: L?.sessionId,
-                returnRef: v,
+                giftRecipient: b,
+                giftingOrigin: y,
+                analyticsLocations: L,
+                discoverySessionId: T?.sessionId,
+                returnRef: h,
                 onClose:
-                    null != _
+                    null != v
                         ? (e) => {
-                              e && _();
+                              e && v();
                           }
                         : void 0,
             });
     }
-    return E
+    return R
         ? (0, r.jsx)(l.$, {
               variant: n ? "primary" : "secondary",
-              icon: a.o,
-              onClick: O,
-              text: R ?? k.intl.string(k.t.gmnzqM),
+              icon: a.GiftIcon,
+              onClick: P,
+              text: k ?? m.intl.string(m.t.gmnzqM),
               fullWidth: !0,
           })
         : (0, r.jsx)(o.m, {
-              text: k.intl.string(k.t["JCFN/y"]),
-              delay: h,
+              text: m.intl.string(m.t["JCFN/y"]),
+              delay: x,
               children: (0, r.jsx)(u.K, {
-                  "aria-label": k.intl.string(k.t["JCFN/y"]),
-                  buttonRef: P,
+                  "aria-label": m.intl.string(m.t["JCFN/y"]),
+                  buttonRef: O,
                   variant: n ? "primary" : "secondary",
-                  icon: a.o,
+                  icon: a.GiftIcon,
                   size: "md",
-                  onClick: O,
+                  onClick: P,
               }),
           });
 };

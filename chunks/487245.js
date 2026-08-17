@@ -143,7 +143,7 @@ function q(e) {
                 children: [
                     !E && !p && (0, r.jsx)(Z, {}),
                     (0, r.jsx)("div", { className: z.JU }),
-                    (0, r.jsx)(U.B, { color: m, className: z.vL }),
+                    (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
                 ],
             }),
             u &&

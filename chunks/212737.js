@@ -12,8 +12,8 @@ var s,
     A = i(803306),
     g = i(718213),
     R = i(793574),
-    p = i(688810),
-    h = i(994500),
+    h = i(688810),
+    p = i(994500),
     f = i(174459),
     E = i(975571),
     S = i(427262),
@@ -65,7 +65,7 @@ function G(t) {
                 variant: "secondary",
                 size: "sm",
                 text: O.intl.string(O.t["g33r/P"]),
-                icon: N.o,
+                icon: N.ChatIcon,
                 onClick: () => {
                     var t;
                     return (t = e.id), void ((0, F.default)(), w.A.openPrivateChannel({ recipientIds: t }), s());
@@ -114,9 +114,9 @@ function U(t) {
     let { transitionState: e, onClose: i, onShare: s } = t,
         r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),
         A = (0, c.bG)([C.A], () => C.A.getHasEligibleFriends()),
-        [R, p] = a.useState(new Map()),
-        [h, f] = a.useState(""),
-        x = (0, g.A)(h, 400),
+        [R, h] = a.useState(new Map()),
+        [p, f] = a.useState(""),
+        x = (0, g.A)(p, 400),
         {
             eligibleUsers: v,
             fetchUsers: b,
@@ -163,7 +163,7 @@ function U(t) {
                           e.forEach((t) => {
                               null != t && i.set(t.id, t);
                           }),
-                              p(i);
+                              h(i);
                       },
                       children: (0, n.jsx)("div", {
                           className: T.c,
@@ -208,7 +208,7 @@ function U(t) {
                           users: Array.from(e.values()),
                           isUserSelected: (t) => R.has(t.id),
                           onSelectionChange: (t, e) => {
-                              p((i) => {
+                              h((i) => {
                                   let s = new Map(i);
                                   return e ? s.set(t.id, t) : s.delete(t.id), s;
                               });
@@ -233,14 +233,14 @@ function H(t) {
         { transitionState: i, onClose: s, onShare: r } = t,
         d = (0, c.bG)([C.A], () => C.A.getRecipientStatus()),
         [m, g] = a.useState(new Map()),
-        [R, p] = a.useState(new Map()),
+        [R, h] = a.useState(new Map()),
         [f, E] = a.useState(!1);
     return (
         a.useEffect(() => {
             !(async function () {
                 let t = new Map();
                 for (let [e, i] of d) {
-                    if (h.A.isBlockedOrIgnored(e)) continue;
+                    if (p.A.isBlockedOrIgnored(e)) continue;
                     let s = await (0, A.getUser)(e);
                     (s.referralStatus = i), t.set(s.id, s);
                 }
@@ -274,7 +274,7 @@ function H(t) {
                 isUserSelected: (t) => R.has(t.id),
                 isUserDisabled: (t) => t.referralStatus === x.aK.REDEEMED,
                 onSelectionChange: (t, e) => {
-                    p((i) => {
+                    h((i) => {
                         let s = new Map(i);
                         return e ? s.set(t.id, t) : s.delete(t.id), s;
                     });
@@ -294,7 +294,7 @@ let Q = function (t) {
         r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),
         [l, o] = a.useState(s),
         [d, u] = a.useState([]),
-        { analyticsLocations: A } = (0, p.Ay)([R.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+        { analyticsLocations: A } = (0, h.Ay)([R.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     async function g(t) {
         f.default.track(L.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: A });
         let e = await (0, x.xm)(Object.values(t).map((t) => t.id));

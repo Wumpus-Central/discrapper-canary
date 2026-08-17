@@ -15,7 +15,7 @@ var l = n(477900),
     A = n(49353),
     f = n(742715);
 function C(e) {
-    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: _, animation: I } = e;
+    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: _ } = e;
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
@@ -32,11 +32,11 @@ function C(e) {
                 t = h.A.theme,
                 l = !1;
             return (
-                null != I &&
+                null != _ &&
                     (async () => {
                         let [{ default: i }, s] = await Promise.all([
                             n.e("996382").then(n.t.bind(n, 883885, 23)),
-                            (0, a.M)(t) ? I.dark() : I.light(),
+                            (0, a.M)(t) ? _.dark() : _.light(),
                         ]);
                         l ||
                             null == b.current ||
@@ -52,7 +52,7 @@ function C(e) {
                     (l = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [I]),
+        }, [_]),
         (0, l.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
@@ -62,7 +62,7 @@ function C(e) {
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != I && (0, l.jsx)("div", { className: A.lY, ref: b }),
+                            null != _ && (0, l.jsx)("div", { className: A.lY, ref: b }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -71,7 +71,7 @@ function C(e) {
                                         id: "content-warning-popout-label",
                                         className: f.PT,
                                         variant: "text-sm/normal",
-                                        children: _.body,
+                                        children: I.body,
                                     }),
                                     (0, l.jsxs)("div", {
                                         className: A._o,
@@ -119,16 +119,16 @@ function C(e) {
                             }),
                         ],
                     }),
-                    null != _.footer && "" !== _.footer
+                    null != I.footer && "" !== I.footer
                         ? (0, l.jsxs)("div", {
                               className: A.qr,
                               children: [
-                                  (0, l.jsx)(d.m, {
+                                  (0, l.jsx)(d.CircleInformationIcon, {
                                       size: "xs",
                                       color: s.A.unsafe_rawColors.PRIMARY_400.css,
                                       className: A.Kk,
                                   }),
-                                  (0, l.jsx)(o.E, { variant: "text-sm/normal", children: _.footer }),
+                                  (0, l.jsx)(o.E, { variant: "text-sm/normal", children: I.footer }),
                               ],
                           })
                         : null,

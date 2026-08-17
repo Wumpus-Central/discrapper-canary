@@ -1,13 +1,13 @@
 s.d(e, { default: () => T });
 var i = s(477900),
-    a = s(582128),
-    n = s(503698),
-    l = s.n(n),
+    n = s(582128),
+    a = s(503698),
+    l = s.n(a),
     r = s(390544),
     d = s(224640),
     c = s(20742),
-    u = s(17928),
-    o = s(116833),
+    o = s(17928),
+    u = s(116833),
     m = s(289873),
     p = s(834730),
     x = s(821609),
@@ -23,14 +23,14 @@ var i = s(477900),
     I = s(375708),
     C = s(264098);
 function T(t) {
-    let { guildId: e, instance: s, onClose: n, transitionState: T } = t,
-        _ = (0, u.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
-    a.useEffect(() => {
+    let { guildId: e, instance: s, onClose: a, transitionState: T } = t,
+        _ = (0, o.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
+    n.useEffect(() => {
         null == _ && (0, N.tT)(e, s.planId);
     }, [e, s.planId, _]);
     let b = (0, f.A)(s),
         { handleCopyServerIp: M, animateCopyIcon: k } = (0, E.A)(e, s.id, A.A.GAME_SERVER_INSTRUCTIONS_MODAL, b ?? ""),
-        G = a.useMemo(() => {
+        G = n.useMemo(() => {
             switch (s.status) {
                 case r.M.STARTING:
                     return I.intl.string(v.default.ud4hxY);
@@ -44,14 +44,14 @@ function T(t) {
         size: "md",
         paddingSize: "lg",
         transitionState: T,
-        onClose: n,
+        onClose: a,
         "aria-label": s.name,
         children: [
             (0, i.jsx)(c.rQ, {
                 gradientColor: "purple",
                 graphic: {
                     type: "dynamic",
-                    component: o.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                    component: u.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
                     props: { gameId: s.gameId },
                 },
                 alignCenter: !0,
@@ -109,7 +109,7 @@ function T(t) {
                                           variant: k ? "active" : "primary",
                                           text: k ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
                                           onClick: M,
-                                          icon: h.T,
+                                          icon: h.CopyIcon,
                                       }),
                                   ],
                               }),

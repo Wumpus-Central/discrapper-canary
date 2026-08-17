@@ -295,7 +295,7 @@ function e$(e) {
                 case "invite_to_activity":
                     return ej.D;
                 case "send_game_invite_message":
-                    return ek.l;
+                    return ek.SendMessageIcon;
                 case "join":
                 case "joining":
                 case "joined":
@@ -851,7 +851,7 @@ let tn = r.memo((e) => {
                                           "aria-label": eB.intl.string(eB.t.MMlhsr),
                                           size: "sm",
                                           variant: "secondary",
-                                          icon: V.A,
+                                          icon: V.CheckmarkLargeIcon,
                                           onClick: M,
                                           disabled: R,
                                       }),
@@ -1841,7 +1841,7 @@ function t5(e) {
                                                 return (0, i.jsxs)("div", {
                                                     className: t1.nU,
                                                     children: [
-                                                        (0, i.jsx)(tV._, {
+                                                        (0, i.jsx)(tV.GameControllerIcon, {
                                                             size: "xxs",
                                                             color: "currentColor",
                                                             className: t1.Wo,
@@ -2253,15 +2253,15 @@ function nG(e) {
     let { icon: t, ...n } = e;
     switch (t) {
         case "image":
-            return (0, i.jsx)(nE.x, { ...n });
+            return (0, i.jsx)(nE.ImageIcon, { ...n });
         case "video":
-            return (0, i.jsx)(nA.n, { ...n });
+            return (0, i.jsx)(nA.VideoIcon, { ...n });
         case "audio":
             return (0, i.jsx)(nf.T, { ...n });
         case "attachment":
             return (0, i.jsx)(np.P, { ...n });
         case "link":
-            return (0, i.jsx)(nS.q, { ...n });
+            return (0, i.jsx)(nS.LinkIcon, { ...n });
         case "sticker":
             return (0, i.jsx)(nN.t, { ...n });
         case "call-active":
@@ -3480,7 +3480,11 @@ function li(e) {
                         ? (0, i.jsxs)("div", {
                               className: n7.z2,
                               children: [
-                                  (0, i.jsx)(tV._, { size: "xxs", color: "currentColor", className: n7.AE }),
+                                  (0, i.jsx)(tV.GameControllerIcon, {
+                                      size: "xxs",
+                                      color: "currentColor",
+                                      className: n7.AE,
+                                  }),
                                   (0, i.jsx)(S.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
                           })

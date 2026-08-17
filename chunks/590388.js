@@ -13,19 +13,19 @@ var E = n(442433),
     h = n(363487),
     A = n(123917),
     _ = n(981381),
-    f = n(144977),
-    S = n(628049),
+    S = n(144977),
+    f = n(628049),
     I = n(275695),
     C = n(375708),
     m = n(409205);
-let p = { steps: { [S.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+let p = { steps: { [f.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
 function v(e) {
     let { guildId: t, instance: n } = e,
-        S = l.useRef(null),
+        f = l.useRef(null),
         v = (0, _.A)(n.providerType, n.gameServerPanelUrl);
     return (0, h.A)(t)
         ? (0, i.jsx)(r.Y, {
-              targetElementRef: S,
+              targetElementRef: f,
               align: "top",
               position: "right",
               animationPosition: "bottom",
@@ -45,8 +45,8 @@ function v(e) {
                               null != v &&
                                   (0, i.jsx)(a.Dr, {
                                       id: "get-support",
-                                      icon: o.o,
-                                      leadingAccessory: { type: "icon", icon: o.o },
+                                      icon: o.ChatIcon,
+                                      leadingAccessory: { type: "icon", icon: o.ChatIcon },
                                       label: C.intl.string(I.default.bBkeMs),
                                       action: () => {
                                           (0, A.h)({ href: v });
@@ -54,11 +54,11 @@ function v(e) {
                                   }),
                               (0, i.jsx)(a.Dr, {
                                   id: "settings",
-                                  icon: d.Z,
-                                  leadingAccessory: { type: "icon", icon: d.Z },
+                                  icon: d.SettingsIcon,
+                                  leadingAccessory: { type: "icon", icon: d.SettingsIcon },
                                   label: C.intl.string(I.default["feUiM/"]),
                                   action: () => {
-                                      (0, f.A)({
+                                      (0, S.A)({
                                           guildId: t,
                                           stepConfig: p,
                                           initialGameServerInstance: n,
@@ -75,8 +75,8 @@ function v(e) {
                       "aria-label": C.intl.string(C.t["UKOtz+"]),
                       className: m.v,
                       ...e,
-                      innerRef: S,
-                      children: (0, i.jsx)(c.j, { color: "currentColor", size: "sm" }),
+                      innerRef: f,
+                      children: (0, i.jsx)(c.MoreHorizontalIcon, { color: "currentColor", size: "sm" }),
                   }),
           })
         : null;

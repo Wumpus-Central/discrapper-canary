@@ -167,7 +167,7 @@ let k = {
         backgroundLightColor: n.A.unsafe_rawColors.BRAND_500.css,
     },
     [L._.COMMUNITY]: {
-        IconComponent: E.f,
+        IconComponent: E.HomeIcon,
         foregroundDarkColor: n.A.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
@@ -177,7 +177,7 @@ let k = {
         sizeAdjustment: 2,
     },
     [L._.DISCOVERABLE]: {
-        IconComponent: _.L,
+        IconComponent: _.GlobeEarthIcon,
         foregroundDarkColor: n.A.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: n.A.unsafe_rawColors.WHITE.css,

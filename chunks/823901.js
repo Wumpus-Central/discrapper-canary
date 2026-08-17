@@ -30,7 +30,13 @@ function u(e) {
                       onClick: () => t(A.i.USER_DISMISS),
                       noticeType: T.kqX.GIFTING_PROMOTION_REMINDER,
                   }),
-                  (0, i.jsx)(s.o, { size: "custom", width: 20, height: 20, color: "currentColor", className: I.ez }),
+                  (0, i.jsx)(s.GiftIcon, {
+                      size: "custom",
+                      width: 20,
+                      height: 20,
+                      color: "currentColor",
+                      className: I.ez,
+                  }),
                   R.body,
                   (0, i.jsx)(r.Z_, {
                       onClick: () => {

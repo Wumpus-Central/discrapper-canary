@@ -4,8 +4,8 @@ e(582128);
 var l = e(691540),
     a = e(857250),
     c = e(97483),
-    r = e(477782),
-    o = e(173936),
+    o = e(477782),
+    r = e(173936),
     s = e(93688),
     u = e(509434),
     d = e(803316),
@@ -19,18 +19,18 @@ var l = e(691540),
     b = e(179581),
     w = e(652215),
     C = e(375708);
-let _ = /^(tel|sms|mailto):([^?;]+)/,
-    k = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
+let k = /^(tel|sms|mailto):([^?;]+)/,
+    _ = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
     E = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
     N = /^\/emojis\/\d+\./;
 function j(t, n, e, j) {
-    let A = (0, p.A)(e?.getChannelId()),
-        I = h.Q_.useSetting();
+    let I = (0, p.A)(e?.getChannelId()),
+        A = h.Q_.useSetting();
     if (
         !v.isPlatformEmbedded ||
         null == t ||
         "" === t ||
-        (!I &&
+        (!A &&
             (function (t) {
                 try {
                     return N.test(new URL(t).pathname);
@@ -38,7 +38,7 @@ function j(t, n, e, j) {
                     return !1;
                 }
             })(t)) ||
-        A ||
+        I ||
         j?.shouldHideMediaOptions === !0 ||
         !(0, d.fW)(t)
     )
@@ -56,12 +56,12 @@ function j(t, n, e, j) {
             (0, g.h)({ href: l, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e);
     }
     let P = [],
-        U = t.match(_);
+        U = t.match(k);
     if (null != U) {
         let t = C.intl.string("mailto" === U[1] ? C.t.ZYLVKo : C.t["3zozoR"]);
         P.push(
             (0, i.jsx)(
-                r.Dr,
+                o.Dr,
                 {
                     id: "copy-native-contact",
                     label: t,
@@ -75,7 +75,7 @@ function j(t, n, e, j) {
             "tel" === U[1] &&
                 P.push(
                     (0, i.jsx)(
-                        r.Dr,
+                        o.Dr,
                         { id: "native-send-sms", label: C.intl.string(C.t["+wbjMW"]), action: (t) => D(t, !0) },
                         "native-send-sms",
                     ),
@@ -84,7 +84,7 @@ function j(t, n, e, j) {
     let M = (function (t) {
             try {
                 let n = new URL(t);
-                return "cdn.discordapp.com" === n.hostname && k.test(n.pathname);
+                return "cdn.discordapp.com" === n.hostname && _.test(n.pathname);
             } catch {
                 return !1;
             }
@@ -102,11 +102,11 @@ function j(t, n, e, j) {
         S = M ? C.t.w8ldGK : O ? C.t.q5FbIB : C.t.wuRE8M;
     return [
         (0, i.jsx)(
-            r.Dr,
+            o.Dr,
             {
                 id: "copy-native-link",
                 label: C.intl.string(R),
-                leadingAccessory: { type: "icon", icon: o.q },
+                leadingAccessory: { type: "icon", icon: r.LinkIcon },
                 action: function () {
                     null != t && x(t);
                 },
@@ -115,7 +115,7 @@ function j(t, n, e, j) {
         ),
         ...P,
         (0, i.jsx)(
-            r.Dr,
+            o.Dr,
             {
                 id: "open-native-link",
                 label: C.intl.string(S),

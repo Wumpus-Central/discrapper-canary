@@ -4,8 +4,8 @@ var l = a(477900),
     r = a(503698),
     n = a.n(r),
     t = a(512750),
-    d = a(17928),
-    o = a(935462),
+    o = a(17928),
+    d = a(935462),
     c = a(315629),
     m = a(297264),
     u = a(279449),
@@ -21,9 +21,9 @@ var l = a(477900),
     k = a(328006),
     y = a(334840),
     w = a(48736),
-    _ = a(741561),
-    b = a(319756),
-    I = a(203656),
+    I = a(741561),
+    _ = a(319756),
+    b = a(203656),
     A = a(525104),
     E = a(176201),
     G = a(178758),
@@ -48,7 +48,7 @@ function M() {
         children: [
             (0, l.jsx)("div", {
                 className: D.zC,
-                children: (0, l.jsx)(b.V, {
+                children: (0, l.jsx)(_.V, {
                     avatar: k.A,
                     username: "Cherry",
                     usernameStyle: a,
@@ -78,15 +78,15 @@ function T(e) {
         children: [
             (0, l.jsx)("div", {
                 className: D.zC,
-                children: (0, l.jsx)(b.V, {
+                children: (0, l.jsx)(_.V, {
                     avatar: y.A,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
                     message: S.intl.string(S.t["6OSasb"]),
-                    decorations: (0, l.jsx)(I.M, { guildId: s, tag: "GGEZ", badge: a }),
+                    decorations: (0, l.jsx)(b.M, { guildId: s, tag: "GGEZ", badge: a }),
                 }),
             }),
-            (0, l.jsx)(_.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: t }),
+            (0, l.jsx)(I.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: t }),
         ],
     });
 }
@@ -114,14 +114,14 @@ var U = a(438874),
     Z = a(933337);
 function Y(e) {
     let { guildId: s, powerup: a, isActive: r, onError: n } = e,
-        { onActivate: t, isLoading: d, error: o } = (0, W.A)(s, a),
+        { onActivate: t, isLoading: o, error: d } = (0, W.A)(s, a),
         { isLoading: c, error: m } = (0, Q.A)(s, a),
         u = (0, Z.A)(s, a),
         { disabled: x, reason: h } = (0, J.A)(s, a, r);
     i.useEffect(() => {
-        n?.(o ?? m);
-    }, [o, m, n]);
-    let j = d || c;
+        n?.(d ?? m);
+    }, [d, m, n]);
+    let j = o || c;
     return r
         ? (0, l.jsx)(q.u, {
               body: S.intl.formatToPlainString(B.default["5HQUzD"], { boostCount: a.cost }),
@@ -170,7 +170,7 @@ function ee(e) {
 var es = a(439156),
     ea = a(873477);
 function el(e) {
-    let { className: s, guildId: a, powerup: i, expressiveCta: r, onClose: d, onError: o } = e,
+    let { className: s, guildId: a, powerup: i, expressiveCta: r, onClose: o, onError: d } = e,
         { showToggleButton: c, showConfigureButton: m, isPowerupActive: u } = (0, U.A)(a, i);
     if (i.skuId === t.d0)
         return (0, l.jsx)("div", {
@@ -182,12 +182,12 @@ function el(e) {
                         !u &&
                         (0, l.jsx)("div", {
                             className: ea.PV,
-                            children: (0, l.jsx)(ee, { guildId: a, onPreviewOpen: d }),
+                            children: (0, l.jsx)(ee, { guildId: a, onPreviewOpen: o }),
                         }),
                     c &&
                         (0, l.jsx)("div", {
                             className: ea.PV,
-                            children: (0, l.jsx)(Y, { guildId: a, powerup: i, isActive: u, onError: o }),
+                            children: (0, l.jsx)(Y, { guildId: a, powerup: i, isActive: u, onError: d }),
                         }),
                     m && (0, l.jsx)(F.GU, { className: ea.PV, guildId: a, powerup: i }),
                 ],
@@ -197,7 +197,7 @@ function el(e) {
     return (0, l.jsxs)("div", {
         className: n()(ea.kL, s),
         children: [
-            c && (0, l.jsx)(es.A, { guildId: a, powerup: i, onError: o, grow: x, compact: !x, expressiveCta: r }),
+            c && (0, l.jsx)(es.A, { guildId: a, powerup: i, onError: d, grow: x, compact: !x, expressiveCta: r }),
             m && (0, l.jsx)(F.GU, { guildId: a, powerup: i }),
         ],
     });
@@ -206,7 +206,7 @@ var ei = a(111159),
     er = a(533148),
     en = a(927573),
     et = a(121873);
-function ed() {
+function eo() {
     let [e, s] = i.useState("");
     return (0, l.jsxs)("div", {
         className: et.kL,
@@ -284,7 +284,7 @@ function ed() {
         ],
     });
 }
-var eo = a(568065),
+var ed = a(568065),
     ec = a(606926);
 function em(e) {
     let { guildId: s, powerup: a, ...r } = e,
@@ -296,33 +296,33 @@ function em(e) {
                 case t.aN:
                     return (0, l.jsx)(M, {});
                 case t.FB:
-                    return (0, l.jsx)(ed, {});
+                    return (0, l.jsx)(eo, {});
                 default:
                     return;
             }
         }, [a, s]);
     (0, g.Z)(s, a, g.q.DETAIL);
     let w = (0, p.A)(s),
-        _ = "refresh_expressive_cta" === (0, N.D)("GuildPowerupPerkModal"),
-        b = eo.wr[a.skuId],
-        I = null != b ? eo.a8[b] : null,
-        A = (0, d.bG)([v.A], () => v.A.getStateForGuild(s)),
-        E = null != I ? A?.allPowerups[I] : null;
+        I = "refresh_expressive_cta" === (0, N.D)("GuildPowerupPerkModal"),
+        _ = ed.wr[a.skuId],
+        b = null != _ ? ed.a8[_] : null,
+        A = (0, o.bG)([v.A], () => v.A.getStateForGuild(s)),
+        E = null != b ? A?.allPowerups[b] : null;
     return a.skuId === t.d0
-        ? (0, l.jsx)(o.EO, {
+        ? (0, l.jsx)(d.EO, {
               "data-migration-pending": !0,
               className: n()(ec.yl, ec._v),
-              size: o.rI.DYNAMIC,
+              size: d.rI.DYNAMIC,
               ...r,
               parentComponent: "GuildPowerupPerkModal",
-              children: (0, l.jsx)(o.$m, {
+              children: (0, l.jsx)(d.$m, {
                   "data-migration-pending": !0,
                   className: n()(ec.aH, { [ec.GR]: !w }),
                   scrollbarType: "none",
                   children: (0, l.jsxs)("div", {
                       className: ec.lR,
                       children: [
-                          (0, l.jsx)(o.s_, {
+                          (0, l.jsx)(d.s_, {
                               "data-migration-pending": !0,
                               className: n()(ec.VN, ec.$W),
                               onClick: r.onClose,
@@ -374,7 +374,7 @@ function em(e) {
                                   className: ec.oe,
                                   guildId: s,
                                   powerup: a,
-                                  expressiveCta: _,
+                                  expressiveCta: I,
                                   onClose: r.onClose,
                                   onError: k,
                               }),
@@ -382,14 +382,14 @@ function em(e) {
                   }),
               }),
           })
-        : (0, l.jsxs)(o.EO, {
+        : (0, l.jsxs)(d.EO, {
               "data-migration-pending": !0,
               className: ec.yl,
-              size: o.rI.DYNAMIC,
+              size: d.rI.DYNAMIC,
               ...r,
               parentComponent: "GuildPowerupPerkModal",
               children: [
-                  (0, l.jsxs)(o.$m, {
+                  (0, l.jsxs)(d.$m, {
                       "data-migration-pending": !0,
                       className: ec._F,
                       scrollbarType: "none",
@@ -415,7 +415,10 @@ function em(e) {
                                               (0, l.jsxs)("div", {
                                                   className: ec.sh,
                                                   children: [
-                                                      (0, l.jsx)(j.m, { size: "xs", color: x.A.colors.TEXT_MUTED }),
+                                                      (0, l.jsx)(j.CircleInformationIcon, {
+                                                          size: "xs",
+                                                          color: x.A.colors.TEXT_MUTED,
+                                                      }),
                                                       (0, l.jsx)(h.E, {
                                                           variant: "text-sm/medium",
                                                           color: "text-muted",
@@ -446,7 +449,7 @@ function em(e) {
                                                   className: ec.qr,
                                                   guildId: s,
                                                   powerup: a,
-                                                  expressiveCta: _,
+                                                  expressiveCta: I,
                                                   onClose: r.onClose,
                                                   onError: k,
                                               }),
@@ -457,7 +460,7 @@ function em(e) {
                           null != y && (0, l.jsx)("div", { className: ec._9, children: y }),
                       ],
                   }),
-                  (0, l.jsx)(o.s_, { "data-migration-pending": !0, className: ec.VN, onClick: r.onClose }),
+                  (0, l.jsx)(d.s_, { "data-migration-pending": !0, className: ec.VN, onClick: r.onClose }),
               ],
           });
 }

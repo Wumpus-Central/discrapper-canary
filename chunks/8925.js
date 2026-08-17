@@ -1,4 +1,4 @@
-n.d(e, { Ay: () => I, ME: () => h, c5: () => x });
+n.d(e, { Ay: () => p, ME: () => h, c5: () => x });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -17,31 +17,31 @@ var i = n(477900),
     R = n(992760);
 let h = 2700,
     x = "> -# *",
-    b = {
+    I = {
         [f.dS.AVATAR]: () => g.intl.string(g.t["fEUP/i"]),
         [f.dS.STATUS]: () => g.intl.string(g.t.TKdBC8),
         [f.dS.ACTIVITY]: () => g.intl.string(g.t.bSe71F),
     },
-    p = {
+    b = {
         [f.dS.AVATAR]: () => g.intl.string(g.t.xvN0fV),
         [f.dS.STATUS]: () => g.intl.string(g.t["C/vzS7"]),
         [f.dS.ACTIVITY]: () => g.intl.string(g.t.ObfsSj),
     };
-function I(t) {
+function p(t) {
     let {
             user: e,
             sourceType: n,
             isVisible: a,
             isExpandable: h,
             interactionSourceId: x,
-            targetRef: I,
+            targetRef: p,
             onAction: k,
             renderMoreButtonPopout: m,
         } = t,
         E = l.useRef(null),
         P = (0, s.bG)([A.default], () => A.default.getId() === e.id),
         U = (0, T.A)(e.id),
-        { onInteraction: _, onInteractionPopoutTargetRefChange: j } = (0, C.Pq)();
+        { onInteraction: _, onInteractionPopoutTargetRefChange: V } = (0, C.Pq)();
     return e.bot || P || !U
         ? null
         : (0, i.jsxs)(S.Ay, {
@@ -61,7 +61,7 @@ function I(t) {
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
                           onClick: function () {
-                              j(I),
+                              V(p),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REACT_AVATAR" })
                                       : n === f.dS.STATUS
@@ -70,7 +70,7 @@ function I(t) {
                                   _?.({ interactionType: f.AQ.REACT, interactionSource: n, interactionSourceId: x });
                           },
                           className: R.x6,
-                          "aria-label": b[n](),
+                          "aria-label": I[n](),
                           "aria-haspopup": "dialog",
                           children: (0, i.jsx)(o.n, { size: "xs", className: R.Kk }),
                       }),
@@ -83,7 +83,7 @@ function I(t) {
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
                           onClick: function () {
-                              j(I),
+                              V(p),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REPLY_AVATAR" })
                                       : n === f.dS.STATUS
@@ -92,7 +92,7 @@ function I(t) {
                                   _?.({ interactionType: f.AQ.REPLY, interactionSource: n, interactionSourceId: x });
                           },
                           className: R.x6,
-                          "aria-label": p[n](),
+                          "aria-label": b[n](),
                           "aria-haspopup": "dialog",
                           children: (0, i.jsx)(c.W, { size: "xs", className: R.Kk }),
                       }),
@@ -108,11 +108,11 @@ function I(t) {
                               ref: E,
                               ...t,
                               onClick: function () {
-                                  j(E), t.onClick?.();
+                                  V(E), t.onClick?.();
                               },
                               className: R.x6,
                               "aria-label": g.intl.string(g.t["UKOtz+"]),
-                              children: (0, i.jsx)(d.j, { size: "xs", className: R.Kk }),
+                              children: (0, i.jsx)(d.MoreHorizontalIcon, { size: "xs", className: R.Kk }),
                           }),
                       }),
                   ),

@@ -24,14 +24,14 @@ var i = n(477900),
     S = n(47167),
     A = n(713654),
     I = n(915089),
-    k = n(159273),
+    k = n(236285),
     y = n(201275),
     M = n(657048),
     T = n(95701),
     w = n(34457),
     B = n(769765),
-    z = n(317525),
-    L = n(71393),
+    L = n(317525),
+    z = n(71393),
     D = n(994500),
     O = n(287809),
     G = n(147925),
@@ -84,7 +84,7 @@ function X(e) {
                     }),
                     (0, i.jsx)("div", {
                         className: V.Ew,
-                        children: (0, i.jsx)(x.A, {
+                        children: (0, i.jsx)(x.CheckmarkLargeIcon, {
                             size: "md",
                             color: "currentColor",
                             className: V.pc,
@@ -262,7 +262,7 @@ function en(e) {
 }
 function ei(e) {
     let { guild: t, onSelect: n } = e,
-        s = (0, o.bG)([z.A], () => z.A.getSortedRoles(t.id)),
+        s = (0, o.bG)([L.A], () => L.A.getSortedRoles(t.id)),
         r = (0, o.bG)([B.A], () => B.A.getCategories(t.id)),
         a = l.useMemo(
             () =>
@@ -303,7 +303,7 @@ function ei(e) {
 }
 function el(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
-        s = (0, o.bG)([L.A], () => L.A.getGuild(n));
+        s = (0, o.bG)([z.A], () => z.A.getGuild(n));
     return null == s
         ? null
         : (0, i.jsxs)(i.Fragment, {

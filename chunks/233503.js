@@ -1,64 +1,64 @@
-l.d(e, { default: () => C });
-var i = l(477900),
-    n = l(582128),
-    a = l(477782),
-    r = l(173936),
-    s = l(980707),
-    u = l(442433),
-    d = l(50268),
-    c = l(253925),
-    o = l(68935),
-    g = l(885386),
-    p = l(957565),
-    b = l(690521),
-    m = l(60587),
-    A = l(375708);
-function C(t) {
-    let { target: e, onSelect: l } = t,
-        C = e.getAttribute("data-type"),
-        f = e.getAttribute("data-id"),
-        h = e.getAttribute("data-name"),
-        k = e.getAttribute("data-surrogates"),
-        x = "true" === e.getAttribute("data-animated"),
-        y = e.getAttribute("data-format-type"),
-        I = C === m.g.EMOJI,
-        E = C === m.g.STICKER,
+n.d(e, { default: () => A });
+var i = n(477900),
+    l = n(582128),
+    a = n(477782),
+    r = n(173936),
+    s = n(980707),
+    u = n(442433),
+    d = n(50268),
+    c = n(253925),
+    o = n(68935),
+    g = n(885386),
+    p = n(957565),
+    b = n(690521),
+    k = n(60587),
+    m = n(375708);
+function A(t) {
+    let { target: e, onSelect: n } = t,
+        A = e.getAttribute("data-type"),
+        C = e.getAttribute("data-id"),
+        I = e.getAttribute("data-name"),
+        f = e.getAttribute("data-surrogates"),
+        h = "true" === e.getAttribute("data-animated"),
+        x = e.getAttribute("data-format-type"),
+        y = A === k.g.EMOJI,
+        E = A === k.g.STICKER,
         S = g.Q_.useSetting(),
-        _ = (0, c.A)({ type: C, id: f, name: h, isInExpressionPicker: !0 }),
+        _ = (0, c.A)({ type: A, id: C, name: I, isInExpressionPicker: !0 }),
         j =
-            null != k
-                ? (0, i.jsx)(a.Dr, { id: "copy", label: A.intl.string(A.t.ad58UB), action: () => (0, p.C)(k) })
+            null != f
+                ? (0, i.jsx)(a.Dr, { id: "copy", label: m.intl.string(m.t.ad58UB), action: () => (0, p.C)(f) })
                 : null,
         v = (0, d.A)({
-            id: f,
-            shiftId: C === m.g.EMOJI ? `<${x ? "a" : ""}:${h?.split("~")[0]}:${f}>` : void 0,
-            label: C === m.g.STICKER ? A.intl.string(A.t.SJ3249) : A.intl.string(A.t.Ap2oVy),
+            id: C,
+            shiftId: A === k.g.EMOJI ? `<${h ? "a" : ""}:${I?.split("~")[0]}:${C}>` : void 0,
+            label: A === k.g.STICKER ? m.intl.string(m.t.SJ3249) : m.intl.string(m.t.Ap2oVy),
         }),
-        J = n.useCallback(() => {
-            if (null != f && null != h) {
-                if (I) (0, p.C)((0, b.Ez)({ id: f, name: h, animated: x }));
-                else if (E && null != y) {
-                    let t = (0, o.zg)({ id: f, name: h, format_type: Number(y) });
+        J = l.useCallback(() => {
+            if (null != C && null != I) {
+                if (y) (0, p.C)((0, b.Ez)({ id: C, name: I, animated: h }));
+                else if (E && null != x) {
+                    let t = (0, o.zg)({ id: C, name: I, format_type: Number(x) });
                     null != t && (0, p.C)(t);
                 }
             }
-        }, [f, h, x, I, E, y]),
+        }, [C, I, h, y, E, x]),
         $ =
-            null != f && null != h && ((I && null == k) || (E && null != y))
+            null != C && null != I && ((y && null == f) || (E && null != x))
                 ? (0, i.jsx)(a.Dr, {
                       id: "copy-image-link",
-                      label: A.intl.string(E ? A.t.B1ubHx : A.t.cIoudn),
+                      label: m.intl.string(E ? m.t.B1ubHx : m.t.cIoudn),
                       action: J,
-                      icon: r.q,
-                      leadingAccessory: { type: "icon", icon: r.q },
+                      icon: r.LinkIcon,
+                      leadingAccessory: { type: "icon", icon: r.LinkIcon },
                   })
                 : null;
     return (0, i.jsx)(s.W, {
         "data-menu-migrated": !0,
         navId: "expression-picker",
         onClose: u.Z_,
-        "aria-label": A.intl.string(A.t.XoasSC),
-        onSelect: l,
+        "aria-label": m.intl.string(m.t.XoasSC),
+        onSelect: n,
         className: "context-menu",
         children: (0, i.jsxs)(a.rX, { children: [_, p.p5 && S ? (j ?? v) : null, p.p5 && S ? $ : null] }),
     });

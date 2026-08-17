@@ -47,8 +47,8 @@ var T = t(945096),
     k = t(84540),
     w = t(652215),
     F = t(836602),
-    O = t(696451),
-    P = t(427262),
+    P = t(696451),
+    O = t(427262),
     R = t(403581),
     Y = t(661531),
     G = t(48736),
@@ -88,7 +88,7 @@ function ee(e) {
         ...r,
         children: [
             s.map((e, s) => (0, a.jsx)("div", { className: Q._4, style: { background: (0, B.Hl)(e) } }, s)),
-            t && (0, a.jsx)(q.A, { className: Q.z6, size: "md", color: "currentColor" }),
+            t && (0, a.jsx)(q.CheckmarkLargeIcon, { className: Q.z6, size: "md", color: "currentColor" }),
         ],
     });
 }
@@ -245,7 +245,7 @@ function eo(e) {
                                                                 ...e,
                                                                 className: er.Vz,
                                                                 "aria-label": x,
-                                                                children: (0, a.jsx)(Z.R, {
+                                                                children: (0, a.jsx)(Z.PencilIcon, {
                                                                     size: "custom",
                                                                     width: 18,
                                                                     height: 18,
@@ -528,7 +528,7 @@ function ev(e) {
                         (0, a.jsxs)("div", {
                             className: ej.Lb,
                             children: [
-                                (0, a.jsx)(e_.m, { size: "lg" }),
+                                (0, a.jsx)(e_.CircleInformationIcon, { size: "lg" }),
                                 (0, a.jsx)(eI.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -616,8 +616,8 @@ function ew(e) {
     return (0, a.jsx)(u.jl, { "data-migration-pending": !0, className: ek.qr, children: i || r ? o : c });
 }
 var eF = t(366010),
-    eO = t(43990),
-    eP = t(629584),
+    eP = t(43990),
+    eO = t(629584),
     eR = t(943255),
     eY = t(575181),
     eG = t(736653),
@@ -683,7 +683,7 @@ function e1(e) {
                     forceUserTheme: !0,
                     children: (0, a.jsx)("div", { className: e0.b8, style: { backgroundImage: `url(${g})` } }),
                 }),
-            (0, a.jsx)(eO.N, {
+            (0, a.jsx)(eP.N, {
                 theme: f,
                 children: (e) =>
                     (0, a.jsxs)("div", {
@@ -755,7 +755,7 @@ function e1(e) {
 function e8(e) {
     let { darkPreview: s, onToggleTheme: t } = e,
         l = s ? w.NJ8.DARK : w.NJ8.LIGHT;
-    return (0, a.jsx)(eP.I, {
+    return (0, a.jsx)(eO.I, {
         className: e0.xr,
         optionClassName: e0.$C,
         options: [
@@ -795,10 +795,10 @@ function e9(e) {
         } = e,
         R = (0, c.bG)([g.default], () => g.default.getCurrentUser()),
         Y =
-            ((s = P.Ay.useName(R)),
-            (0, c.bG)([F.A, O.Ay], () => {
+            ((s = O.Ay.useName(R)),
+            (0, c.bG)([F.A, P.Ay], () => {
                 let e = F.A.getPendingChanges(_);
-                return null != _ ? (e.pendingNickname ?? O.Ay.getNick(_, R?.id)) : e.pendingGlobalName;
+                return null != _ ? (e.pendingNickname ?? P.Ay.getNick(_, R?.id)) : e.pendingGlobalName;
             }, [_, R]) ??
                 s ??
                 ""),

@@ -58,7 +58,7 @@ function v(e) {
                           children: [
                               (0, i.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
                               (0, i.jsx)("div", { className: E.Lw }),
-                              (0, i.jsx)(u.R, {
+                              (0, i.jsx)(u.PencilIcon, {
                                   size: "custom",
                                   className: E.QY,
                                   width: 20,

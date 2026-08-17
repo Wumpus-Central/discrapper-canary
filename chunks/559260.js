@@ -1046,7 +1046,7 @@ function tU(e) {
             (0, l.jsx)(e4.K, {
                 variant: "secondary",
                 size: "md",
-                icon: e3.Q,
+                icon: e3.MinusIcon,
                 onClick: () => {
                     c && !(s <= i) && d(s - 1);
                 },
@@ -1667,7 +1667,7 @@ function t4(e) {
             }),
             t ? (0, l.jsx)(t2.A, { icon: tz.n, iconClassName: t1.zO, description: F.intl.string(F.t.Z9b2x2) }) : null,
             (0, l.jsx)(t2.A, { icon: tQ.F, iconClassName: t1.Kg, description: F.intl.string(F.t["8dqG5E"]) }),
-            (0, l.jsx)(t2.A, { icon: t$.J, iconClassName: t1.$z, description: F.intl.string(F.t.cBorIy) }),
+            (0, l.jsx)(t2.A, { icon: t$.UploadIcon, iconClassName: t1.$z, description: F.intl.string(F.t.cBorIy) }),
         ],
     });
 }
@@ -3432,7 +3432,7 @@ function iE(e) {
                 (0, l.jsxs)("div", {
                     className: ih.gO,
                     children: [
-                        (0, l.jsx)(iu.O, { size: "xs", color: "currentColor" }),
+                        (0, l.jsx)(iu.ClockIcon, { size: "xs", color: "currentColor" }),
                         (0, l.jsx)(E.E, { variant: "text-md/medium", color: "text-default", children: i }),
                     ],
                 }),
@@ -4024,7 +4024,7 @@ function iO(e) {
         : (0, l.jsx)(ij.A, {
               className: iM.z,
               iconSize: ij.A.Sizes.SMALL,
-              icon: iR.o,
+              icon: iR.GiftIcon,
               color: null == t ? ij.A.Colors.PRIMARY : ij.A.Colors.SECONDARY,
               children: t,
           });

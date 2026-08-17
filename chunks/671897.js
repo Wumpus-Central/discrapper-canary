@@ -25,12 +25,12 @@ var r = n(477900),
     N = n(315710),
     R = n(297264),
     T = n(775602),
-    L = n(174459),
-    M = n(683574),
-    P = n(61491),
+    P = n(174459),
+    L = n(683574),
+    M = n(61491),
     j = n(113494),
-    k = n(782134),
-    D = n(417270),
+    D = n(782134),
+    k = n(417270),
     I = n(939249),
     B = n(834730),
     F = n(866665),
@@ -38,9 +38,9 @@ var r = n(477900),
     U = n(668534);
 let K = "-:--",
     O = {
-        [d.Q6.PLAYING]: { icon: j.E, label: _.intl.string(_.t.ZcgDJX) },
-        [d.Q6.PAUSED]: { icon: k.u, label: _.intl.string(_.t.RscU7I) },
-        [d.Q6.ENDED]: { icon: D.m, label: _.intl.string(_.t.hsvh0i) },
+        [d.Q6.PLAYING]: { icon: j.PauseIcon, label: _.intl.string(_.t.ZcgDJX) },
+        [d.Q6.PAUSED]: { icon: D.PlayIcon, label: _.intl.string(_.t.RscU7I) },
+        [d.Q6.ENDED]: { icon: k.RetryIcon, label: _.intl.string(_.t.hsvh0i) },
     },
     $ = { [d.oA.MD]: d.n4.MD, [d.oA.LG]: d.n4.LG },
     Q = { [d.n4.MD]: "md", [d.n4.LG]: "lg" };
@@ -49,7 +49,7 @@ function V(e) {
         [n, a] = l.useState(null),
         [u, s] = l.useState(null),
         [o, c] = l.useState(!1),
-        { videoRef: d } = (0, M.X$)();
+        { videoRef: d } = (0, L.X$)();
     l.useEffect(() => {
         let e = d.current;
         function t() {
@@ -68,8 +68,8 @@ function V(e) {
             );
     }, [d]);
     let m = Number.isFinite(n) && Number.isFinite(u) ? Math.max(0, u - n) : null,
-        f = o ? (null != m ? `-${(0, P.rB)(m)}` : K) : Number.isFinite(n) ? (0, P.rB)(n) : K,
-        h = Number.isFinite(u) ? (0, P.rB)(u) : K;
+        f = o ? (null != m ? `-${(0, M.rB)(m)}` : K) : Number.isFinite(n) ? (0, M.rB)(n) : K,
+        h = Number.isFinite(u) ? (0, M.rB)(u) : K;
     return (0, r.jsxs)(I.D, {
         className: i()(U.d$, U.jk),
         "data-testid": "discord-web-video-player-duration",
@@ -157,10 +157,10 @@ function ee(e) {
             hideFullScreenBtn: A = !1,
             hidePlaybackSpeedBtn: N = !1,
             size: R,
-            downloadUrl: P,
+            downloadUrl: M,
             downloadContentType: j,
-            extraButtons: k,
-            autoFocus: D = !1,
+            extraButtons: D,
+            autoFocus: k = !1,
             keyDownHandlerRef: I,
             volume: B,
             muted: F,
@@ -181,7 +181,7 @@ function ee(e) {
         } = e,
         ed = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
         em = (0, o.bG)([T.Ay], () => T.Ay.keyboardModeEnabled),
-        { isFullscreen: ef, videoRef: eh } = (0, M.X$)(),
+        { isFullscreen: ef, videoRef: eh } = (0, L.X$)(),
         [ep, ev] = l.useState(F ? 0 : B),
         [ex, eg] = l.useState(!1),
         [eE, eb] = l.useState(!1),
@@ -192,37 +192,37 @@ function ee(e) {
         ey = l.useRef(null),
         [ew, eA] = l.useState(1),
         [eN, eR] = l.useState(B),
-        [eT, eL] = l.useState(F);
-    (B !== eN || F !== eT) && (eR(B), eL(F), ev(F ? 0 : B));
-    let eM = l.useCallback(
+        [eT, eP] = l.useState(F);
+    (B !== eN || F !== eT) && (eR(B), eP(F), ev(F ? 0 : B));
+    let eL = l.useCallback(
             (e) => {
                 eA(e), null != eh.current && (eh.current.playbackRate = e);
             },
             [eh],
         ),
-        eP = l.useCallback(() => {
-            if (null == P) return;
+        eM = l.useCallback(() => {
+            if (null == M) return;
             let e = j?.split("/");
-            L.default.track(z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            P.default.track(z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
-                window.open(P, "_blank");
-        }, [P, j]),
+                window.open(M, "_blank");
+        }, [M, j]),
         ej = l.useCallback(
             (e) => {
                 null != eh.current && (e !== eh.current.volume && (eh.current.volume = e), e !== ep && ev(e));
             },
             [eh, ep],
         ),
-        ek = l.useCallback(() => {
+        eD = l.useCallback(() => {
             if (null != eh.current)
                 if (0 === ep) {
                     let e = 0 === B ? 0.3 : B;
                     ej(e), eo(!1), es(e);
                 } else es(ep), ej(0), eo(!0);
         }, [eh, ep, ej, B, eo, es]);
-    function eD() {
+    function ek() {
         eg(!0), ec(!0);
     }
     function eI() {
@@ -253,14 +253,14 @@ function ee(e) {
                         e.stopPropagation(), A || ee();
                         break;
                     case d.TJ.MUTE:
-                        e.stopPropagation(), ek();
+                        e.stopPropagation(), eD();
                 }
         },
-        [q, ee, W, en, el, ek, C, A, em],
+        [q, ee, W, en, el, eD, C, A, em],
     );
     l.useEffect(() => {
-        D && null != ey.current && ey.current.focus();
-    }, [D]),
+        k && null != ey.current && ey.current.focus();
+    }, [k]),
         l.useEffect(
             () => (
                 null != I && (I.current = eB),
@@ -337,9 +337,9 @@ function ee(e) {
                 },
                 children: [
                     (0, r.jsxs)("div", {
-                        onMouseEnter: eD,
+                        onMouseEnter: ek,
                         onMouseLeave: eI,
-                        onFocus: eD,
+                        onFocus: ek,
                         onBlur: eI,
                         className: U.RD,
                         "data-testid": "discord-web-video-player-volume-control",
@@ -348,7 +348,7 @@ function ee(e) {
                                 iconComponent: eF,
                                 animationTime: n,
                                 visible: a,
-                                onClick: ek,
+                                onClick: eD,
                                 ariaLabel: e_,
                                 tooltipLabel: e_,
                                 shortcut: d.TJ.MUTE,
@@ -398,7 +398,7 @@ function ee(e) {
                 className: i()(U.X3, U.ST),
                 children: [
                     (0, r.jsx)(et, {
-                        canCollapse: null != k && k.length > 0,
+                        canCollapse: null != D && D.length > 0,
                         buttons: (function (e) {
                             let {
                                     hideTranscriptBtn: t = !1,
@@ -437,7 +437,7 @@ function ee(e) {
                                 null != s &&
                                     m.push({
                                         id: "download",
-                                        iconComponent: b.s,
+                                        iconComponent: b.DownloadIcon,
                                         label: _.intl.string(_.t["1WjMbC"]),
                                         onClick: o,
                                         "data-testid": "discord-web-video-player-download-btn",
@@ -453,9 +453,9 @@ function ee(e) {
                             playerState: t,
                             handleTranscriptBtnClick: J,
                             handleCaptionBtnClick: q,
-                            downloadUrl: P,
-                            handleDownloadButtonClick: eP,
-                            extraButtons: k,
+                            downloadUrl: M,
+                            handleDownloadButtonClick: eM,
+                            extraButtons: D,
                         }),
                         animSpring: n,
                         visible: a,
@@ -464,7 +464,7 @@ function ee(e) {
                     !N &&
                         (0, r.jsx)(er, {
                             playbackRate: ew,
-                            onPlaybackRateChange: eM,
+                            onPlaybackRateChange: eL,
                             animSpring: n,
                             visible: a,
                             size: R,
@@ -520,7 +520,7 @@ function en(e) {
     let { buttons: t, animSpring: n, visible: a, size: i } = e,
         u = l.useRef(null),
         s = _.intl.string(_.t.PdRCRg),
-        { activeLayer: o } = (0, M.X$)();
+        { activeLayer: o } = (0, L.X$)();
     return (0, r.jsx)(S.Y, {
         targetElementRef: u,
         position: "top",
@@ -566,7 +566,7 @@ function en(e) {
         children: (e) =>
             (0, r.jsx)(G, {
                 ref: u,
-                iconComponent: w.j,
+                iconComponent: w.MoreHorizontalIcon,
                 animationTime: n,
                 visible: a,
                 ariaLabel: s,
@@ -588,7 +588,7 @@ function er(e) {
         } = e,
         o = l.useRef(null),
         c = _.intl.string(X.default.ZwPhbB),
-        { activeLayer: d } = (0, M.X$)();
+        { activeLayer: d } = (0, L.X$)();
     return (0, r.jsx)(S.Y, {
         targetElementRef: o,
         layerContext: d,

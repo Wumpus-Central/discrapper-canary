@@ -32,8 +32,8 @@ function v(t) {
             canSave: P,
             isSubmitting: w,
             renewalDate: F,
-            monthlySpend: D,
-            save: G,
+            monthlySpend: I,
+            save: D,
         } = (function (t) {
             let l = C.fD.useControlledSetting(t),
                 n = (0, x.bG)([p.A], () => p.A.getSpendingLimit()),
@@ -78,9 +78,9 @@ function v(t) {
                 save: E,
             };
         })(v);
-    async function I() {
+    async function G() {
         try {
-            await G(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n();
+            await D(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n();
         } catch {
             (0, d.P0)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
         }
@@ -91,13 +91,13 @@ function v(t) {
                 ? {
                       variant: "critical-primary",
                       text: S.intl.string(b.default.JZDGJ8),
-                      onClick: I,
+                      onClick: G,
                       disabled: w,
                       loading: w,
                   }
-                : { text: S.intl.string(S.t["R3BPH+"]), onClick: I, disabled: !P || w, loading: w },
+                : { text: S.intl.string(S.t["R3BPH+"]), onClick: G, disabled: !P || w, loading: w },
         ],
-        T = null != D && D > 0 ? (0, f.$g)(D, A) : null;
+        T = null != I && I > 0 ? (0, f.$g)(I, A) : null;
     return (0, a.jsx)(o.Modal, {
         transitionState: l,
         onClose: n,
@@ -133,7 +133,7 @@ function v(t) {
                             gap: 6,
                             align: "start",
                             children: [
-                                (0, a.jsx)(u.i, { size: "sm", color: s.A.colors.ICON_FEEDBACK_WARNING }),
+                                (0, a.jsx)(u.WarningIcon, { size: "sm", color: s.A.colors.ICON_FEEDBACK_WARNING }),
                                 (0, a.jsx)(r.E, {
                                     variant: "text-sm/normal",
                                     className: j.i,

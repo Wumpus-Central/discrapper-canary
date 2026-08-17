@@ -39,9 +39,9 @@ var L = s(477654),
     W = s(349288),
     q = s(922016),
     D = s(980707),
-    z = s(477782),
-    $ = s(408278),
-    G = s(625903),
+    G = s(477782),
+    z = s(408278),
+    $ = s(625903),
     Q = s(112173),
     U = s(93055),
     B = s(975571),
@@ -254,18 +254,18 @@ function en(e) {
                         "aria-label": X.intl.string(X.t.fb59v0),
                         onSelect: () => a(null),
                         children: (0, l.jsxs)(
-                            z.rX,
+                            G.rX,
                             {
                                 label: X.intl.string(X.t["/tMwrA"]),
                                 children: [
-                                    (0, l.jsx)(z.iD, {
+                                    (0, l.jsx)(G.iD, {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
                                         label: X.intl.string(X.t.jRkYAh),
                                         checked: !u,
                                         action: () => d(!1),
                                     }),
-                                    (0, l.jsx)(z.iD, {
+                                    (0, l.jsx)(G.iD, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
                                         label: X.intl.string(X.t["lWpJ/t"]),
@@ -279,11 +279,11 @@ function en(e) {
                     });
                 },
                 children: (e) =>
-                    (0, l.jsx)($.K, {
+                    (0, l.jsx)(z.K, {
                         ...e,
                         buttonRef: o,
                         variant: "secondary",
-                        icon: G.Z,
+                        icon: $.SettingsIcon,
                         onClick: () => {
                             a(n ? null : "settings");
                         },
@@ -336,12 +336,12 @@ function ea(e) {
                 "aria-label": X.intl.string(X.t.utp2hS),
                 onSelect: () => a(null),
                 children: (0, l.jsx)(
-                    z.rX,
+                    G.rX,
                     {
                         children: c.map((e) => {
                             let { label: s, value: r } = e;
                             return (0, l.jsx)(
-                                z.iD,
+                                G.iD,
                                 {
                                     group: "sort-by",
                                     id: `sort-by-option-${r}`,
@@ -610,7 +610,7 @@ let eE = [],
                 },
                 [I, s.isSearching, t, C, a],
             ),
-            z = r.useCallback(
+            G = r.useCallback(
                 (e, l) => {
                     let r = g.A.getChannel(e.channel_id),
                         n = null != r ? r.getGuildId() : null,
@@ -634,13 +634,13 @@ let eE = [],
                 },
                 [s, t, a, d],
             ),
-            $ = r.useCallback(
+            z = r.useCallback(
                 (e) => {
                     (0, k.kq)({ searchContext: t, searchRequestAnalyticsId: a, newPageIndex: e }), E(e);
                 },
                 [E, t, a],
             ),
-            G = w > V.T_y,
+            $ = w > V.T_y,
             Q = (0, i.yK)([_.A], () => {
                 if (0 !== s.offset) return eE;
                 let e = d.length;
@@ -704,7 +704,7 @@ let eE = [],
                             search: s,
                             searchContext: t,
                             renderEmbeds: n,
-                            onClick: z,
+                            onClick: G,
                             onScrollTo: F,
                             onBlockedResultsClick: b,
                             searchRequestAnalyticsId: a,
@@ -713,10 +713,10 @@ let eE = [],
                     ],
                 }),
                 (0, l.jsx)(eI, { searchContext: t, isFeedbackVisible: f, dismissFeedbackEntrypoint: A }),
-                G &&
+                $ &&
                     (0, l.jsx)(ec.A, {
                         className: eS.cu,
-                        onPageChange: $,
+                        onPageChange: z,
                         offset: s.offset,
                         totalCount: w,
                         pageSize: V.T_y,

@@ -21,7 +21,7 @@ function m() {
         className: g.w,
         role: "alert",
         children: [
-            (0, l.jsx)(o.i, { size: "md", color: "text-feedback-critical", "aria-hidden": !0 }),
+            (0, l.jsx)(o.WarningIcon, { size: "md", color: "text-feedback-critical", "aria-hidden": !0 }),
             (0, l.jsx)(s.E, { variant: "text-sm/normal", color: "text-muted", children: f.intl.string(f.t.F8FvUy) }),
         ],
     });
@@ -31,27 +31,27 @@ function E(e) {
     return { heading: e.heading ?? "" };
 }
 var v = i(17928),
-    p = i(331322),
-    A = i(452027),
-    I = i(260598),
+    I = i(331322),
+    p = i(452027),
+    A = i(260598),
     _ = i(825484),
-    S = i(866665),
-    j = i(408278),
-    C = i(241326),
+    C = i(866665),
+    S = i(408278),
+    j = i(241326),
     y = i(683071),
     N = i(2553),
     b = i(405810),
     D = i(967198),
     R = i(488428),
-    k = i(776231),
-    T = i(486020),
+    T = i(776231),
+    k = i(486020),
     w = i(652215);
 function G(e, t, i) {
-    let n = T.QB ? "webp" : "jpg",
+    let n = k.QB ? "webp" : "jpg",
         { CDN_HOST: l, API_ENDPOINT: a } = window.GLOBAL_ENV,
         r = w.Rsh.GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(e, t, i, n),
         s = null != l ? `https://${l}${r}` : location.protocol + a + r,
-        c = { size: (0, k.kr)(500 * (0, k.mZ)()) };
+        c = { size: (0, T.kr)(500 * (0, T.mZ)()) };
     return "jpg" === n && (c.quality = "lossless"), (s += `?${R.stringify(c)}`);
 }
 var U = i(983283),
@@ -103,9 +103,9 @@ let Z = {
                 [g, h] = a.useState(s.text ?? ""),
                 [m, x] = a.useState(s.image),
                 [E, R] = a.useState(null),
-                k = (0, v.bG)([D.A], () => D.A.getGuildId()),
-                T = void 0 !== m ? m : null != s.image_hash && null != k ? G(k, t.id, s.image_hash) : null;
-            return (0, l.jsxs)(p.B, {
+                T = (0, v.bG)([D.A], () => D.A.getGuildId()),
+                k = void 0 !== m ? m : null != s.image_hash && null != T ? G(T, t.id, s.image_hash) : null;
+            return (0, l.jsxs)(I.B, {
                 gap: 16,
                 children: [
                     (0, l.jsx)(c.k, {
@@ -117,16 +117,16 @@ let Z = {
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
-                    (0, l.jsx)(A.D, {
+                    (0, l.jsx)(p.D, {
                         label: f.intl.string(f.t.X4IxWL),
-                        children: (0, l.jsxs)(p.B, {
+                        children: (0, l.jsxs)(I.B, {
                             gap: 16,
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
                             className: L.B,
                             children: [
-                                (0, l.jsxs)(p.B, {
+                                (0, l.jsxs)(I.B, {
                                     gap: 8,
                                     direction: "horizontal",
                                     children: [
@@ -139,13 +139,13 @@ let Z = {
                                             maxFileSizeBytes: 0xa00000,
                                             onFileSizeError: () => (0, N.A)(0xa00000),
                                         }),
-                                        null != T &&
-                                            (0, l.jsx)(S.m, {
+                                        null != k &&
+                                            (0, l.jsx)(C.m, {
                                                 text: f.intl.string(f.t.N86XcP),
                                                 ariaHidden: !0,
-                                                children: (0, l.jsx)(j.K, {
+                                                children: (0, l.jsx)(S.K, {
                                                     variant: "critical-secondary",
-                                                    icon: C.u,
+                                                    icon: j.TrashIcon,
                                                     onClick: function () {
                                                         R(null), x(null);
                                                     },
@@ -154,11 +154,11 @@ let Z = {
                                             }),
                                     ],
                                 }),
-                                null != T && (0, l.jsx)("img", { className: L.V, src: T, alt: "" }),
+                                null != k && (0, l.jsx)("img", { className: L.V, src: k, alt: "" }),
                             ],
                         }),
                     }),
-                    (0, l.jsx)(I.f, {
+                    (0, l.jsx)(A.f, {
                         label: f.intl.string(f.t.COGMNC),
                         value: g,
                         onChange: function (e) {

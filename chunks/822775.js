@@ -1,90 +1,90 @@
-e.d(i, { A: () => E });
-var n = e(477900),
-    l = e(582128),
-    r = e(17928),
-    s = e(22231),
-    a = e(922016),
-    d = e(980707),
-    o = e(477782),
-    u = e(267102),
-    c = e(474397),
-    p = e(206835),
-    b = e(280450),
-    A = e(71393),
-    f = e(207803),
-    g = e(183555),
-    h = e(61881),
-    R = e(993401),
-    v = e(652215),
-    x = e(375708);
+n.d(i, { A: () => E });
+var e = n(477900),
+    l = n(582128),
+    r = n(17928),
+    s = n(22231),
+    a = n(922016),
+    o = n(980707),
+    d = n(477782),
+    u = n(267102),
+    c = n(474397),
+    p = n(206835),
+    b = n(280450),
+    A = n(71393),
+    I = n(207803),
+    f = n(183555),
+    g = n(61881),
+    h = n(993401),
+    v = n(652215),
+    x = n(375708);
 function E(t) {
-    let { user: i, guildId: e, fullWidth: E, appContext: I, onClose: F } = t,
+    let { user: i, guildId: n, fullWidth: E, appContext: F, onClose: R } = t,
         k = (0, r.bG)([b.default], () => b.default.getId() === i.id),
-        D = (0, r.bG)([A.A], () => (null != e ? A.A.getGuild(e) : null)),
-        C = (0, r.bG)([h.A], () => h.A.hasUnsavedChanges()),
-        j = (0, u.Us)() === v.BRT.OVERLAY,
-        m = (0, p.A)({ guild: D }),
-        _ = (0, p.A)({}),
-        { trackUserProfileAction: G } = (0, g.NJ)(),
-        L = l.useRef(null);
+        D = (0, r.bG)([A.A], () => (null != n ? A.A.getGuild(n) : null)),
+        C = (0, r.bG)([g.A], () => g.A.hasUnsavedChanges()),
+        P = (0, u.Us)() === v.BRT.OVERLAY,
+        j = (0, p.A)({ guild: D }),
+        m = (0, p.A)({}),
+        { trackUserProfileAction: _ } = (0, f.NJ)(),
+        G = l.useRef(null);
     return k
         ? null == D
-            ? (0, n.jsx)(R.FD, {
+            ? (0, e.jsx)(h.FD, {
                   action: "EDIT_PROFILE",
                   text: x.intl.string(x.t.s5vZlQ),
-                  icon: s.R,
+                  icon: s.PencilIcon,
                   autoFocus: !0,
                   fullWidth: E,
                   variant: "primary",
                   onClick: () => {
-                      C ? (0, f.VQ)() : (F?.(), _(), (0, c.A)(I));
+                      C ? (0, I.VQ)() : (R?.(), m(), (0, c.A)(F));
                   },
-                  disabled: j,
+                  disabled: P,
               })
-            : (0, n.jsx)(a.Y, {
-                  targetElementRef: L,
+            : (0, e.jsx)(a.Y, {
+                  targetElementRef: G,
                   renderPopout: (t) => {
                       let { closePopout: i } = t;
-                      return (0, n.jsxs)(d.W, {
+                      return (0, e.jsxs)(o.W, {
                           "data-menu-needs-review": !0,
                           onSelect: void 0,
                           navId: "edit-profile-popout",
                           onClose: i,
                           "aria-label": x.intl.string(x.t.AXIHpV),
                           children: [
-                              (0, n.jsx)(o.Dr, {
+                              (0, e.jsx)(d.Dr, {
                                   id: "edit-server-profile",
                                   label: x.intl.string(x.t["PKQB/H"]),
                                   subtext: x.intl.string(x.t.VYHWKJ),
                                   action: () => {
-                                      G({ action: "EDIT_GUILD_PROFILE" }), F?.(), m(), (0, c.A)(I);
+                                      _({ action: "EDIT_GUILD_PROFILE" }), R?.(), j(), (0, c.A)(F);
                                   },
                               }),
-                              (0, n.jsx)(o.Dr, {
+                              (0, e.jsx)(d.Dr, {
                                   id: "edit-main-profile",
                                   label: x.intl.string(x.t.HmFaFB),
                                   subtext: x.intl.string(x.t["+EERMk"]),
                                   action: () => {
-                                      G({ action: "EDIT_PROFILE" }), F?.(), _(), (0, c.A)(I);
+                                      _({ action: "EDIT_PROFILE" }), R?.(), m(), (0, c.A)(F);
                                   },
                               }),
                           ],
                       });
                   },
                   children: (t) => {
-                      let { onClick: i, ...e } = t;
-                      return (0, n.jsx)(R.FD, {
-                          buttonRef: L,
+                      let { onClick: i, ...n } = t;
+                      return (0, e.jsx)(h.FD, {
+                          buttonRef: G,
                           text: x.intl.string(x.t.s5vZlQ),
-                          icon: s.R,
+                          icon: s.PencilIcon,
                           autoFocus: !0,
                           fullWidth: E,
                           variant: "primary",
                           onClick: () => {
-                              C ? (0, f.VQ)() : i?.();
+                              C ? (0, I.VQ)() : i?.();
                           },
-                          ...e,
-                          disabled: j,
+                          ...n,
+                          disabled: P,
                       });
                   },
               })

@@ -8,14 +8,14 @@ var e = t(477900),
     s = t(554375),
     u = t(212245),
     d = t(822123),
-    y = t(159273),
+    y = t(236285),
     g = t(7584),
     p = t(60587),
     A = t(631576),
     E = t(891090),
-    b = t(256449),
-    I = t(750385),
-    S = t(68935),
+    I = t(256449),
+    S = t(750385),
+    b = t(68935),
     f = t(652215),
     C = t(375708);
 function v(i) {
@@ -25,8 +25,8 @@ function j(i) {
     let { type: n, id: t, name: j, isInExpressionPicker: J = !1 } = i,
         { location: K } = (0, u.p)(),
         h = l.useMemo(() => ({ ...K, section: J ? f.JJy.EXPRESSION_PICKER : f.JJy.CONTEXT_MENU }), [K, J]),
-        k = (0, b.ln)(),
-        m = (0, o.bG)([I.A], () => (n === p.g.STICKER && null != t ? I.A.getStickerById(t) : null)),
+        k = (0, I.ln)(),
+        m = (0, o.bG)([S.A], () => (n === p.g.STICKER && null != t ? S.A.getStickerById(t) : null)),
         D = null != m && k.includes(m.id),
         N = (0, o.bG)([y.Ay], () => {
             if (n === p.g.EMOJI) {
@@ -36,7 +36,7 @@ function j(i) {
         }),
         O = (0, d.O7)(null, N);
     return null != m && n === p.g.STICKER
-        ? (0, S.Xw)(m) && !(0, S.Y4)(m)
+        ? (0, b.Xw)(m) && !(0, b.Y4)(m)
             ? null
             : D
               ? (0, e.jsx)(c.Dr, {
@@ -51,7 +51,7 @@ function j(i) {
                         (0, E.Dt)({ sticker: m, location: { ...h, object: f.ZSU.STICKER } }), (0, A.uK)(m?.id);
                     },
                     label: C.intl.string(C.t.kWmiPW),
-                    leadingAccessory: { type: "icon", icon: a.G },
+                    leadingAccessory: { type: "icon", icon: a.StarIcon },
                 })
         : null != N && n === p.g.EMOJI
           ? O
@@ -67,7 +67,7 @@ function j(i) {
                         (0, d.C5)({ emoji: N, location: { ...h, object: f.ZSU.EMOJI } }), (0, s.V4)(N);
                     },
                     label: C.intl.string(C.t.nNsr67),
-                    leadingAccessory: { type: "icon", icon: a.G },
+                    leadingAccessory: { type: "icon", icon: a.StarIcon },
                 })
           : void 0;
 }

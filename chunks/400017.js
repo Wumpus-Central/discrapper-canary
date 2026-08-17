@@ -1,31 +1,31 @@
 t.d(n, { default: () => C });
-var s = t(477900),
-    c = t(980707),
-    e = t(477782),
-    o = t(691540),
+var c = t(477900),
+    o = t(980707),
+    s = t(477782),
+    e = t(691540),
     r = t(857250),
     a = t(97483),
     l = t(173936),
     d = t(442433),
-    p = t(957565),
-    k = t(375708);
+    k = t(957565),
+    p = t(375708);
 function C(i) {
     let { link: n } = i;
-    return (0, s.jsx)(c.W, {
+    return (0, c.jsx)(o.W, {
         navId: "gif-picker",
         onClose: d.Z_,
-        "aria-label": k.intl.string(k.t.XoasSC),
+        "aria-label": p.intl.string(p.t.XoasSC),
         onSelect: void 0,
-        children: (0, s.jsx)(e.Dr, {
+        children: (0, c.jsx)(s.Dr, {
             id: "gif-picker-copy-link",
-            label: k.intl.string(k.t.WqhZss),
+            label: p.intl.string(p.t.WqhZss),
             action: () => {
-                (0, p.C)(n, () => {
-                    (0, o.P0)((0, r.o)(k.intl.string(k.t["+5kSoW"]), a.Ck.SUCCESS));
+                (0, k.C)(n, () => {
+                    (0, e.P0)((0, r.o)(p.intl.string(p.t["+5kSoW"]), a.Ck.SUCCESS));
                 });
             },
-            icon: l.q,
-            leadingAccessory: { type: "icon", icon: l.q },
+            icon: l.LinkIcon,
+            leadingAccessory: { type: "icon", icon: l.LinkIcon },
         }),
     });
 }

@@ -18,40 +18,40 @@ var a,
     N = n(73392),
     S = n(386467),
     j = n(534400),
-    y = n(176201),
-    I = n(676608),
+    I = n(176201),
+    y = n(676608),
     G = n(342296),
-    f = n(317525),
-    C = n(486020),
+    C = n(317525),
+    f = n(486020),
     b = n(834730),
     E = n(687966),
     R = n(429913),
-    _ = n(375408);
-let k = i.memo(function (l) {
+    k = n(375408);
+let w = i.memo(function (l) {
     let { message: e, channel: n } = l,
         a = n?.linkedLobby,
         i = (0, R.h)(a?.application_id),
         r = e.additionalName;
     if (null == a || null == r || "" === r) return null;
-    let t = i?.icon != null ? C.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }) : void 0;
+    let t = i?.icon != null ? f.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }) : void 0;
     return (0, s.jsx)("span", {
-        className: _.kL,
+        className: k.kL,
         children: (0, s.jsxs)(b.E, {
             tag: "span",
             variant: "text-xs/semibold",
             color: "text-default",
             lineClamp: 1,
-            className: _.Qq,
+            className: k.Qq,
             children: [
                 null != t
-                    ? (0, s.jsx)("img", { src: t, alt: "", width: 16, height: 16, className: _.qS })
-                    : (0, s.jsx)(E._, { size: "custom", width: 16, height: 16, className: _.qS }),
-                (0, s.jsx)("span", { className: _.em, children: r }),
+                    ? (0, s.jsx)("img", { src: t, alt: "", width: 16, height: 16, className: k.qS })
+                    : (0, s.jsx)(E.GameControllerIcon, { size: "custom", width: 16, height: 16, className: k.qS }),
+                (0, s.jsx)("span", { className: k.em, children: r }),
             ],
         }),
     });
 });
-var w = n(109054),
+var _ = n(109054),
     M = n(560936),
     D = n(743981),
     T = n(281867),
@@ -65,7 +65,7 @@ function F(l) {
             compact: b = !1,
             withMentionPrefix: E = !1,
             showPopout: R = !1,
-            hideGuildTag: _ = !1,
+            hideGuildTag: k = !1,
             hideSystemTag: z = !1,
             className: F,
             onClick: q,
@@ -85,14 +85,14 @@ function F(l) {
         le = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
         ln = "username" === le,
         la = (0, N.a)({ displayNameStyles: ll }),
-        ls = (0, o.bG)([f.A], () =>
-            null == e.guildId || null == e.colorRoleId ? null : f.A.getRole(e.guildId, e.colorRoleId),
+        ls = (0, o.bG)([C.A], () =>
+            null == e.guildId || null == e.colorRoleId ? null : C.A.getRole(e.guildId, e.colorRoleId),
         ),
-        li = (0, I.jV)(O ?? H, ls),
-        lr = (0, w.A)(n),
+        li = (0, y.jV)(O ?? H, ls),
+        lr = (0, _.A)(n),
         lt = i.useContext(d.C),
         lu = lt?.animate || R,
-        lo = li && (0, y.kz)(e),
+        lo = li && (0, I.kz)(e),
         ld = ln && lo,
         lc = a?.isPrivate() && null != ll;
     (0, M.A)({ shouldSubscribe: lc || ld, subscribeToGroupId: W, authorId: n.author.id });
@@ -130,7 +130,7 @@ function F(l) {
         },
         lx = i.useMemo(
             () =>
-                _
+                k
                     ? null
                     : (0, s.jsx)(j.Cw, {
                           primaryGuild: e.primaryGuild,
@@ -139,7 +139,7 @@ function F(l) {
                           className: T.s4,
                           badgeSize: b ? D.Sl.SIZE_12 : void 0,
                       }),
-            [b, e.primaryGuild, H, n.author.id, _],
+            [b, e.primaryGuild, H, n.author.id, k],
         ),
         lg = r ?? n.author,
         lv =
@@ -155,7 +155,7 @@ function F(l) {
                       position: u.Fr ? "window_center" : "right",
                       avatarUrl:
                           null != e.guildMemberAvatar && null != H
-                              ? (0, C.s7)({ guildId: H, userId: lg.id, avatar: e.guildMemberAvatar, size: 80 })
+                              ? (0, f.s7)({ guildId: H, userId: lg.id, avatar: e.guildMemberAvatar, size: 80 })
                               : void 0,
                       onRequestClose: P,
                       clickTrap: R,
@@ -188,7 +188,7 @@ function F(l) {
                 ? (0, s.jsx)(h.W, { color: K, colors: lo ? X : null, name: $, className: T.m4, hoverOverride: lu })
                 : null,
             lv,
-            (0, s.jsx)(k, { message: n, channel: a }),
+            (0, s.jsx)(w, { message: n, channel: a }),
             null != lS ? lS : null,
             null == lN || z || b ? null : lN,
         ],

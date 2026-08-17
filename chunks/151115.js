@@ -1,11 +1,11 @@
-t.d(r, { KD: () => c, lx: () => l, sj: () => i });
-var n = t(278416),
-    a = t(403581),
-    o = t(288106);
+n.d(r, { KD: () => c, lx: () => l, sj: () => i });
+var t = n(278416),
+    a = n(403581),
+    o = n(288106);
 function i(e) {
     switch (e) {
         case o.cR.TAG:
-            return n.g;
+            return t.TagIcon;
         case o.cR.NITRO:
             return a.t;
         default:

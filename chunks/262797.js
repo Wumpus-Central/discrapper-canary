@@ -10,27 +10,27 @@ var e = n(477900),
     x = n(834730),
     u = n(192308),
     m = n(640238),
-    E = n(717398),
-    I = n(628284),
+    I = n(717398),
+    E = n(628284),
     N = n(738188),
     g = n(754302),
     A = n(375708);
 function j() {
     return (0, e.jsxs)(g.q, {
         children: [
-            (0, e.jsx)(g.B, { title: A.intl.string(A.t.fjFJFV), description: A.intl.string(A.t["8SIMPz"]), icon: I.y }),
-            (0, e.jsx)(g.B, { title: A.intl.string(A.t.QCrmqS), description: A.intl.string(A.t.TKDMoN), icon: I.y }),
+            (0, e.jsx)(g.B, { title: A.intl.string(A.t.fjFJFV), description: A.intl.string(A.t["8SIMPz"]), icon: E.y }),
+            (0, e.jsx)(g.B, { title: A.intl.string(A.t.QCrmqS), description: A.intl.string(A.t.TKDMoN), icon: E.y }),
             (0, e.jsx)(g.B, {
                 title: A.intl.string(A.t["lkm/a8"]),
                 description: A.intl.string(A.t["8j3qaC"]),
-                icon: N.i,
+                icon: N.WarningIcon,
             }),
         ],
     });
 }
 var h = n(381689),
-    _ = n(632738),
-    f = n(994500),
+    f = n(632738),
+    _ = n(994500),
     C = n(174459),
     R = n(975571),
     T = n(562153),
@@ -39,8 +39,8 @@ var h = n(381689),
     v = n(652215),
     S = n(678705);
 function k(t) {
-    let { user: i, onBlock: n, onIgnore: s, location: r, disallowIgnore: m, guildId: E, channelId: I } = t,
-        N = (0, l.bG)([f.A], () => f.A.isIgnored(i.id));
+    let { user: i, onBlock: n, onIgnore: s, location: r, disallowIgnore: m, guildId: I, channelId: E } = t,
+        N = (0, l.bG)([_.A], () => _.A.isIgnored(i.id));
     return (0, e.jsxs)("div", {
         className: S.kL,
         children: [
@@ -63,7 +63,7 @@ function k(t) {
                             (0, e.jsx)(d.D, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
-                                children: A.intl.format(A.t.CIbzHR, { username: T.Ay.getName(E, I, i) }),
+                                children: A.intl.format(A.t.CIbzHR, { username: T.Ay.getName(I, E, i) }),
                             }),
                             (0, e.jsx)(x.E, {
                                 variant: "text-md/medium",
@@ -80,9 +80,9 @@ function k(t) {
                 : (0, e.jsxs)("div", {
                       className: S.l_,
                       children: [
-                          (0, e.jsx)(_.Y0, {
+                          (0, e.jsx)(f.Y0, {
                               title: A.intl.string(A.t["+BJTcB"]),
-                              children: (0, e.jsx)(_.PQ, {
+                              children: (0, e.jsx)(f.PQ, {
                                   title: A.intl.string(A.t.hC8tcc),
                                   description: A.intl.string(A.t.If89rE),
                                   titleVariant: "text-md/medium",
@@ -98,8 +98,8 @@ function k(t) {
                                               (0, e.jsx)(O.default, {
                                                   ...t,
                                                   user: i,
-                                                  guildId: E,
-                                                  channelId: I,
+                                                  guildId: I,
+                                                  channelId: E,
                                                   onIgnore: s,
                                                   onBlock: n,
                                                   location: r,
@@ -147,7 +147,7 @@ function M(t) {
             },
             onConfirm: () => {
                 n?.(),
-                    E.A.blockUser(i.id, { location: c }).then(() => {
+                    I.A.blockUser(i.id, { location: c }).then(() => {
                         C.default.track(v.HAw.BLOCK_USER_CONFIRMED), h.A.showBlockSuccessToast(i.id, x ?? void 0);
                     });
             },

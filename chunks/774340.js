@@ -21,11 +21,11 @@ var t = a(477900),
     b = a(289704),
     p = a(192308),
     S = a(297264),
-    _ = a(821609),
-    G = a(104510),
-    R = a(793574),
-    C = a(688810),
-    I = a(987144),
+    G = a(821609),
+    C = a(104510),
+    I = a(793574),
+    R = a(688810),
+    _ = a(987144),
     y = a(828162),
     M = a(366010),
     k = a(736653),
@@ -113,11 +113,11 @@ function O(e) {
     let { guildId: s } = e,
         i = (0, x.A)(s),
         n = l.useRef(null),
-        { analyticsLocations: c } = (0, C.Ay)(R.A.GAME_SERVER_PAGE),
+        { analyticsLocations: c } = (0, R.Ay)(I.A.GAME_SERVER_PAGE),
         r = l.useCallback(() => {
             let e = j.A.getGuild(s);
             null != e &&
-                (0, I.g)({
+                (0, _.g)({
                     analyticsLocation: { page: B.liQ.GAME_SERVERS, section: B.JJy.GAME_SERVERS_EMPTY_STATE },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: c,
@@ -125,7 +125,7 @@ function O(e) {
                 });
         }, [s, c]),
         o = l.useCallback(() => {
-            (0, y.A)(s, R.A.GAME_SERVER_PAGE, w.W5);
+            (0, y.A)(s, I.A.GAME_SERVER_PAGE, w.W5);
         }, [s]),
         m = l.useCallback(() => {
             (0, p.openModalLazy)(async () => {
@@ -161,12 +161,12 @@ function O(e) {
                         children: i
                             ? (0, t.jsxs)(t.Fragment, {
                                   children: [
-                                      (0, t.jsx)(_.$, {
+                                      (0, t.jsx)(G.$, {
                                           variant: "expressive",
                                           text: z.intl.string(z.t.LhlgY9),
                                           onClick: o,
                                       }),
-                                      (0, t.jsx)(_.$, {
+                                      (0, t.jsx)(G.$, {
                                           variant: "secondary",
                                           text: z.intl.string(q.default.fxIXv4),
                                           onClick: m,
@@ -175,13 +175,13 @@ function O(e) {
                               })
                             : (0, t.jsxs)(t.Fragment, {
                                   children: [
-                                      (0, t.jsx)(_.$, {
+                                      (0, t.jsx)(G.$, {
                                           variant: "expressive",
-                                          icon: G._,
+                                          icon: C._,
                                           text: z.intl.string(q.default["968/QC"]),
                                           onClick: r,
                                       }),
-                                      (0, t.jsx)(_.$, {
+                                      (0, t.jsx)(G.$, {
                                           variant: "secondary",
                                           text: z.intl.string(q.default.fxIXv4),
                                           onClick: m,
@@ -255,12 +255,12 @@ function Z(e) {
                                                         guildId: s,
                                                         stepConfig: Q,
                                                         initialGameServerGame: e,
-                                                        analyticsLocation: R.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                        analyticsLocation: I.A.GAME_SERVER_PAGE_SIDEBAR,
                                                     }),
                                                 imageClassName: K.Sl,
                                                 titleClassName: K.DD,
                                                 variant: u || e.disabled ? X.e.DISABLED : X.e.CLICKABLE,
-                                                location: R.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                location: I.A.GAME_SERVER_PAGE_SIDEBAR,
                                             }),
                                         },
                                         `sidebar-game-${l}-${e.id}`,
@@ -273,7 +273,7 @@ function Z(e) {
                                             variant: X.e.VIEWABLE,
                                             imageClassName: K.Sl,
                                             titleClassName: K.DD,
-                                            location: R.A.GAME_SERVER_PAGE_SIDEBAR,
+                                            location: I.A.GAME_SERVER_PAGE_SIDEBAR,
                                         },
                                         `sidebar-game-${l}-${e.id}`,
                                     ),
@@ -325,16 +325,16 @@ function el(e) {
         l.useEffect(() => {
             S && ((0, v.cq)(b), m.Ay.getDetectableGames());
         }, [b, S]);
-    let _ = (0, x.A)(b),
-        G = (0, E.N)("GameServerPage"),
-        R = (0, n.bG)([N.A], () => N.A.getStateForGuild(b)),
-        C = l.useMemo(() => {
-            if (!R?.hasFetchedInstances) return;
-            let e = Object.values(R.instances ?? {});
+    let G = (0, x.A)(b),
+        C = (0, E.N)("GameServerPage"),
+        I = (0, n.bG)([N.A], () => N.A.getStateForGuild(b)),
+        R = l.useMemo(() => {
+            if (!I?.hasFetchedInstances) return;
+            let e = Object.values(I.instances ?? {});
             return 0 === e.length
                 ? null
                 : e.map((e, s) => (0, t.jsx)(U.Ay, { guildId: b, instance: e }, `${e.gameId}-${s}`));
-        }, [R?.instances, R?.hasFetchedInstances, b]);
+        }, [I?.instances, I?.hasFetchedInstances, b]);
     return (0, t.jsxs)("div", {
         className: et.kL,
         children: [
@@ -342,7 +342,7 @@ function el(e) {
                 className: et.KE,
                 toolbar: (0, t.jsx)("div", {}),
                 children: [
-                    (0, t.jsx)(u.Ay.Icon, { icon: i._, "aria-label": "" }),
+                    (0, t.jsx)(u.Ay.Icon, { icon: i.GameControllerIcon, "aria-label": "" }),
                     (0, t.jsx)(u.Ay.Title, { children: z.intl.string(q.default.vCzwM7) }),
                     (0, t.jsx)(c.Lp, { disableColor: !0, text: z.intl.string(z.t.oW0eUd), className: et.qS }),
                     (0, t.jsx)(u.Ay.Divider, { className: et.yF }),
@@ -358,12 +358,12 @@ function el(e) {
             (0, t.jsxs)("div", {
                 className: et.hQ,
                 children: [
-                    S && !R?.hasFetchedInstances
+                    S && !I?.hasFetchedInstances
                         ? (0, t.jsx)("div", {
                               className: et.dc,
                               children: (0, t.jsx)(r.y, { type: r.t.SPINNING_CIRCLE }),
                           })
-                        : null == C
+                        : null == R
                           ? (0, t.jsx)(O, { guildId: b })
                           : (0, t.jsxs)("div", {
                                 className: et.nd,
@@ -377,11 +377,11 @@ function el(e) {
                                             }),
                                         }),
                                     (0, t.jsx)(o.Ip, {
-                                        children: (0, t.jsx)("div", { className: et.Y_, children: C }),
+                                        children: (0, t.jsx)("div", { className: et.Y_, children: R }),
                                     }),
                                 ],
                             }),
-                    (_ || G) && (0, t.jsx)(Z, { guildId: b, isAdmin: _ ?? !1 }),
+                    (G || C) && (0, t.jsx)(Z, { guildId: b, isAdmin: G ?? !1 }),
                 ],
             }),
         ],

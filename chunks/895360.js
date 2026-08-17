@@ -15,7 +15,7 @@ function p() {
     return (0, l.jsxs)("div", {
         className: s()(m.oR, h.o),
         children: [
-            (0, l.jsx)(i.A, { size: "custom", className: h.K, color: a.A.colors.STATUS_POSITIVE.css }),
+            (0, l.jsx)(i.CheckmarkLargeIcon, { size: "custom", className: h.K, color: a.A.colors.STATUS_POSITIVE.css }),
             (0, l.jsx)(u.E, {
                 color: "text-strong",
                 variant: "text-sm/semibold",

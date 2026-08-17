@@ -18,8 +18,8 @@ var s = n(477900),
     y = n.n(g),
     A = n(96337),
     x = n(404778),
-    w = n(305866),
-    I = n(892547),
+    I = n(305866),
+    w = n(892547),
     C = n(317097),
     v = n(259678),
     S = n(933832),
@@ -64,7 +64,7 @@ class L extends r.PureComponent {
                                 className: k.Gf,
                                 grow: 0,
                                 shrink: 0,
-                                children: (0, s.jsx)(S.A, { size: "md", color: l }),
+                                children: (0, s.jsx)(S.CheckmarkLargeIcon, { size: "md", color: l }),
                             }),
                     ],
                 }),
@@ -93,7 +93,7 @@ function R(e) {
 class D extends r.PureComponent {
     static defaultProps = { autoFocus: !0 };
     render() {
-        return (0, s.jsx)(I.I, { ...this.props, size: "sm" });
+        return (0, s.jsx)(w.I, { ...this.props, size: "sm" });
     }
 }
 class F extends r.PureComponent {
@@ -103,7 +103,7 @@ class F extends r.PureComponent {
     static Empty = R;
     render() {
         let { className: e, children: t } = this.props;
-        return (0, s.jsx)(w.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
+        return (0, s.jsx)(I.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
     }
 }
 var M = n(364522),
@@ -247,8 +247,8 @@ function J(e) {
             maxLength: y,
             spellCheck: A,
             autoComplete: x,
-            autoCapitalize: w,
-            autoCorrect: I,
+            autoCapitalize: I,
+            autoCorrect: w,
             onChange: C,
             inputClassName: v,
         } = e,
@@ -280,8 +280,8 @@ function J(e) {
                             C(e, t);
                         },
                         autoComplete: x,
-                        autoCapitalize: w,
-                        autoCorrect: I,
+                        autoCapitalize: I,
+                        autoCorrect: w,
                         autoFocus: g,
                         maxLength: y,
                         spellCheck: A,

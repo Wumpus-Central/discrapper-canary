@@ -23,15 +23,15 @@ var l = n(477900),
     y = n(300167);
 function E(e) {
     let { guildId: t, option: n, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
-        M = (0, u.M)((0, j.Ay)()),
-        [b, k] = i.useState(!1),
-        R = b && !w,
+        k = (0, u.M)((0, j.Ay)()),
+        [M, b] = i.useState(!1),
+        R = M && !w,
         D = i.useRef(null),
         { reducedMotion: O } = i.useContext(d.C),
         T = (0, s.bG)([v.Ay], () => n.emoji?.id != null && (v.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
-        H = (0, _.A)(t, 1e3),
-        K = null == H || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => H[e])),
-        L = I && !a && n.isUnseen,
+        L = (0, _.A)(t, 1e3),
+        H = null == L || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => L[e])),
+        K = I && !a && n.isUnseen,
         B = (0, m.z)(
             { transform: a || O.enabled ? "scale(1)" : "scale(0.7)", opacity: +!!a, config: { duration: 150 } },
             "animate-always",
@@ -41,7 +41,7 @@ function E(e) {
         P = (0, m.z)(
             {
                 from: { color: G.spring() },
-                color: U.spring({ opacity: M ? 0.5 : 0.25 }),
+                color: U.spring({ opacity: k ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500,
             },
@@ -63,7 +63,7 @@ function E(e) {
         if (R)
             return (
                 (D.current = setTimeout(() => {
-                    k(!1), (D.current = null);
+                    b(!1), (D.current = null);
                 }, 3e3)),
                 () => {
                     null != D.current && clearTimeout(D.current);
@@ -71,14 +71,14 @@ function E(e) {
             );
     }, [R]);
     let Z = r()(y.RH, { [y.wH]: a, [y.Vq]: z }),
-        V = L ? { borderColor: P.color } : {};
+        V = K ? { borderColor: P.color } : {};
     return (0, l.jsx)(o.animated.div, {
         style: V,
         className: Z,
         children: (0, l.jsxs)(g.D, {
             className: y.AP,
             onClick: function () {
-                k(!a), E(!a);
+                b(!a), E(!a);
             },
             onMouseDown: () => S(!0),
             onMouseUp: () => S(!1),
@@ -108,7 +108,7 @@ function E(e) {
                 (0, l.jsx)(o.animated.div, {
                     className: y.oE,
                     style: B,
-                    children: (0, l.jsx)(f.A, {
+                    children: (0, l.jsx)(f.CheckmarkLargeIcon, {
                         size: "custom",
                         width: 10,
                         height: 10,
@@ -117,7 +117,7 @@ function E(e) {
                 }),
                 W(
                     (e, t) =>
-                        K > 0 &&
+                        H > 0 &&
                         t &&
                         (0, l.jsx)(o.animated.div, {
                             className: y.Kl,
@@ -125,11 +125,11 @@ function E(e) {
                             children: (0, l.jsx)(x.E, {
                                 variant: "text-xs/normal",
                                 color: "text-overlay-light",
-                                children: N.intl.format(N.t.EgKsZA, { memberCount: K }),
+                                children: N.intl.format(N.t.EgKsZA, { memberCount: H }),
                             }),
                         }),
                 ),
-                L &&
+                K &&
                     (0, l.jsx)(A.Lp, {
                         color: c.A.unsafe_rawColors.BRAND_260.css,
                         text: N.intl.string(N.t.y2b7CA),

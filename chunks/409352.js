@@ -6,7 +6,7 @@ var i = t(477900),
     l = t(435558),
     o = t.n(l),
     c = t(17928),
-    d = t(562465),
+    d = t(636537),
     h = t(189213),
     m = t(778712),
     x = t(834730),
@@ -61,8 +61,8 @@ var I = t(331322),
     b = t(262295),
     L = t(576470),
     P = t(235986),
-    B = t(363195),
-    T = t(671759),
+    T = t(363195),
+    B = t(671759),
     G = t(889227),
     X = t(734057),
     z = t(351906),
@@ -134,7 +134,7 @@ class V extends n.PureComponent {
         let { channelId: e } = this.props;
         d.Bo.get({ url: H.Rsh.INSTANT_INVITES(e), retries: 3, oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
             let s = e.body.map(
-                (e) => new T.A({ ...e, maxUses: e.max_uses, maxAge: e.max_age, createdAt: e.created_at }),
+                (e) => new B.A({ ...e, maxUses: e.max_uses, maxAge: e.max_age, createdAt: e.created_at }),
             );
             this.setState({ loading: !1, invites: s });
         }),
@@ -208,7 +208,7 @@ class V extends n.PureComponent {
                                                     size: "sm",
                                                     "aria-label": W.intl.string(W.t.N86XcP),
                                                     variant: "critical-secondary",
-                                                    icon: k.u,
+                                                    icon: k.TrashIcon,
                                                     onClick: () => this.handleRevoke(e),
                                                 }),
                                             ],
@@ -269,8 +269,8 @@ class V extends n.PureComponent {
         e?.();
     };
 }
-let Y = c.Ay.connectStores([z.A, B.A], () => ({
+let Y = c.Ay.connectStores([z.A, T.A], () => ({
     hideDiscriminators: z.A.hidePersonalInformation,
     hideInviteCodes: z.A.hideInstantInvites,
-    theme: B.A.theme,
+    theme: T.A.theme,
 }))(V);

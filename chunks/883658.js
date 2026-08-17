@@ -27,8 +27,8 @@ var a,
     g = l(228366),
     E = l(830382),
     S = l(73825),
-    j = l(626797),
-    C = l(951305),
+    C = l(626797),
+    j = l(951305),
     T = l(491057),
     I = l(424171),
     A = l(97352),
@@ -93,7 +93,7 @@ function M(e) {
         } = e,
         h = `${a}-${n}-${c}`;
     return (0, s.jsx)(
-        j.M,
+        C.M,
         {
             stepConfigs: d,
             applicationId: l,
@@ -104,7 +104,7 @@ function M(e) {
             excludeSubscriptionPlansBySKU: p,
             overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
             children: (0, s.jsx)(T.Qt, {
-                children: (0, s.jsx)(C.dX, {
+                children: (0, s.jsx)(j.dX, {
                     isGift: n,
                     children: (0, s.jsx)(
                         I.q,
@@ -345,8 +345,8 @@ var Z = l(488428),
     eg = l(162093),
     eE = l(4630),
     eS = l(482132),
-    ej = l(532794),
-    eC = l(216678),
+    eC = l(532794),
+    ej = l(216678),
     eT = l(194509),
     eI = l(511484),
     eA = l(794400),
@@ -430,8 +430,8 @@ let eL = {
                     [b, h] = u.useState(""),
                     [x, v] = u.useState({ plan_id: ek.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
                     g = "true" !== x.gift && null != i,
-                    [E, j] = u.useState(r.length > 0 ? r[0].value : null),
-                    { analyticsLocations: C } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
+                    [E, C] = u.useState(r.length > 0 ? r[0].value : null),
+                    { analyticsLocations: j } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                     [T, I] = u.useState(""),
                     [A, P] = u.useState(N.dJq),
                     { balance: _, isFetching: R, error: k } = (0, eP.W)(),
@@ -440,7 +440,7 @@ let eL = {
                     [w, B] = u.useState(""),
                     [$, W] = u.useState(N.dJq);
                 return (0, s.jsx)(p.f5, {
-                    value: C,
+                    value: j,
                     children: (0, s.jsx)(el.Ip, {
                         className: U.XG,
                         children: (0, s.jsxs)(ea.B, {
@@ -495,7 +495,7 @@ let eL = {
                                         (0, s.jsx)(G.$, {
                                             variant: "primary",
                                             text: "Select Plan",
-                                            onClick: () => (0, ej.A)({ subscriptionTier: l, analyticsLocations: C }),
+                                            onClick: () => (0, eC.A)({ subscriptionTier: l, analyticsLocations: j }),
                                         }),
                                     ],
                                 }),
@@ -666,7 +666,7 @@ let eL = {
                                             label: "Premium Server Subscription For",
                                             value: E,
                                             options: r,
-                                            onSelectionChange: j,
+                                            onSelectionChange: C,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -746,10 +746,10 @@ let eL = {
                                                     variant: "primary",
                                                     text: "Open Premium Apps Payment Modal for SKU",
                                                     onClick: () =>
-                                                        (0, eC.q)({
+                                                        (0, ej.q)({
                                                             applicationId: w,
                                                             skuId: $,
-                                                            analyticsLocations: C,
+                                                            analyticsLocations: j,
                                                             checkoutFlow: em.CL.PREMIUM_APPS_OTP_CHECKOUT,
                                                         }),
                                                 }),
@@ -859,13 +859,13 @@ let eL = {
                                                     };
                                                     return await Promise.resolve((a) => {
                                                         let { onClose: i, transitionState: r } = a;
-                                                        return (0, s.jsx)(j.M, {
+                                                        return (0, s.jsx)(C.M, {
                                                             activeSubscription: null,
                                                             stepConfigs: n,
                                                             skuIDs: [],
                                                             errorHandlingBehavior: l,
                                                             onErrorReported: t,
-                                                            children: (0, s.jsx)(C.dX, {
+                                                            children: (0, s.jsx)(j.dX, {
                                                                 isGift: !1,
                                                                 children: (0, s.jsx)(I.q, {
                                                                     transitionState: r,
@@ -1430,8 +1430,8 @@ let tv = {
 var tg = l(624716),
     tE = l(872725);
 let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progress", controls: {} },
-    tj = { name: "Tab Tooltip", component: tg.A, id: "tab-tooltip", controls: {} },
-    tC = {
+    tC = { name: "Tab Tooltip", component: tg.A, id: "tab-tooltip", controls: {} },
+    tj = {
         title: "Nitro Components",
         stories: [
             {
@@ -1679,7 +1679,7 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                                 props: { src: g, alt: E, ...e },
                             };
                         }, [a, g, E, r, o, d, c]),
-                        j = {
+                        C = {
                             title: t,
                             body: l,
                             graphic: S,
@@ -1710,12 +1710,12 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                                 children: [
                                     (0, s.jsx)(tf.L, {
                                         targetElementRef: x,
-                                        ...j,
+                                        ...C,
                                         children: (0, s.jsx)(G.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(tf.L, {
                                         targetElementRef: f,
-                                        ...j,
+                                        ...C,
                                         children: (0, s.jsx)(G.$, { buttonRef: f, variant: "primary", text: "Right" }),
                                     }),
                                 ],
@@ -1798,7 +1798,7 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                     },
                 },
             },
-            tj,
+            tC,
         ],
     };
 var tT = l(691540),
@@ -2122,7 +2122,7 @@ let t0 = {
     id: "deep-link-test",
     component: function (e) {
         let { deepLinkUrl: t } = e;
-        return (0, s.jsx)(j.M, {
+        return (0, s.jsx)(C.M, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
@@ -2858,7 +2858,7 @@ let lS = {
         {
             name: "Order SKU",
             component: function () {
-                return (0, s.jsx)(j.M, {
+                return (0, s.jsx)(C.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2872,7 +2872,7 @@ let lS = {
             name: "Payment Request",
             component: function (e) {
                 let { paymentRequestWallet: t } = e;
-                return (0, s.jsx)(j.M, {
+                return (0, s.jsx)(C.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2922,7 +2922,7 @@ let lS = {
                         paymentRequestWallets: a ? ["googlePay", "applePay"] : [],
                         paymentSourceTypeRestrictions: l ? [tX.he.CARD.valueOf()] : null,
                     };
-                return (0, s.jsx)(j.M, {
+                return (0, s.jsx)(C.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2954,7 +2954,7 @@ let lS = {
             name: "Stripe Components",
             id: "stripe-components",
             component: function () {
-                return (0, s.jsx)(j.M, {
+                return (0, s.jsx)(C.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -3021,8 +3021,8 @@ let lS = {
         },
     ],
 };
-var lj = l(503698),
-    lC = l.n(lj),
+var lC = l(503698),
+    lj = l.n(lC),
     lT = l(683071),
     lI = l(942340),
     lA = l(211528),
@@ -3045,7 +3045,7 @@ function lO(e) {
                 size: "sm",
                 "aria-label": "Copy Link",
                 variant: "icon-only",
-                icon: lM.T,
+                icon: lM.CopyIcon,
                 onClick: () => (0, lD.C)(l),
             }),
         ],
@@ -3053,7 +3053,7 @@ function lO(e) {
 }
 function lL(e) {
     let { children: t, stepConfigs: l, bodyClassName: a } = e;
-    return (0, s.jsx)(j.M, {
+    return (0, s.jsx)(C.M, {
         stepConfigs: l,
         skuIDs: [],
         activeSubscription: null,
@@ -3087,7 +3087,7 @@ function lG() {
 }
 function lH(e) {
     let [t, l] = u.useState(0);
-    return (0, s.jsx)(j.M, {
+    return (0, s.jsx)(C.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
@@ -3159,7 +3159,7 @@ function l$(e) {
                           (0, s.jsx)(lL, {
                               stepConfigs: [lB],
                               children: (0, s.jsx)("div", {
-                                  className: lC()(lw.o6, "joined-payment-address-elements" === d ? lw.fF : lw.u1),
+                                  className: lj()(lw.o6, "joined-payment-address-elements" === d ? lw.fF : lw.u1),
                                   children: (0, s.jsxs)(lm.Elements, {
                                       stripe: p,
                                       options: f,
@@ -3412,8 +3412,8 @@ let l8 = {
                     item2Amount: g,
                     item2FormatWithoutRate: E,
                     hasDiscount: S,
-                    discountLabel: j,
-                    discountAmount: C,
+                    discountLabel: C,
+                    discountAmount: j,
                 } = e,
                 T = p
                     ? [
@@ -3437,7 +3437,7 @@ let l8 = {
                                     },
                                 ]
                               : []),
-                          ...(S ? [{ id: 3, label: j, amount: C }] : []),
+                          ...(S ? [{ id: 3, label: C, amount: j }] : []),
                       ]
                     : [];
             return (0, s.jsx)("div", {
@@ -3508,14 +3508,14 @@ let l8 = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     },
-    l7 = { "nitro-wheel": r.t, gift: lQ.o, orbs: i.C },
+    l7 = { "nitro-wheel": r.t, gift: lQ.GiftIcon, orbs: i.C },
     l4 = lX.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     l9 = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? l0.g : void 0;
+                i = a ? l0.TagIcon : void 0;
             return (0, s.jsxs)(ea.B, {
                 gap: 16,
                 align: "center",
@@ -4060,7 +4060,7 @@ let ap = ["Revenue Storybook", "Revenue Playground"],
         id: "nitro",
         name: "Nitro",
         groups: [
-            tC,
+            tj,
             { title: "Marketing Home", stories: [tN] },
             tw,
             {
@@ -4623,6 +4623,6 @@ let ap = ["Revenue Storybook", "Revenue Playground"],
             },
         ],
         tags: ap,
-        IconComponent: o.n,
+        IconComponent: o.UserIcon,
     },
     ay = { playgroundBaseUrl: "revenue", collections: [am, ab, ah, ax] };

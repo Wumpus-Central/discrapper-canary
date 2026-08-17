@@ -37,8 +37,8 @@ var i = n(477900),
     R = n(708988),
     O = n(228366),
     L = n(830215),
-    D = n(803306),
-    y = n(736653),
+    y = n(803306),
+    D = n(736653),
     v = n(573648),
     b = n(95561),
     M = n(269815),
@@ -108,9 +108,11 @@ function eT(e) {
     return (0, i.jsxs)("div", {
         className: ep.B_,
         children: [
-            null != t ? (0, i.jsx)(em, { icon: ec.q, text: en.intl.format(en.t["5k5OKD"], { origin: t }) }) : null,
+            null != t
+                ? (0, i.jsx)(em, { icon: ec.LinkIcon, text: en.intl.format(en.t["5k5OKD"], { origin: t }) })
+                : null,
             (0, i.jsx)(em, {
-                icon: eu.X,
+                icon: eu.LockIcon,
                 text: (function (e) {
                     let t = (0, G.t)(e);
                     if (null != e.privacy_policy_url && null != e.terms_of_service_url) {
@@ -143,18 +145,21 @@ function eT(e) {
                 })(n),
             }),
             null != d ? (0, i.jsx)(em, { icon: e_.w, text: en.intl.string(en.t["8qui3M"]) }) : null,
-            (0, i.jsx)(em, { icon: eE.O, text: en.intl.formatToPlainString(en.t["+1bjc8"], { date: c }) }),
+            (0, i.jsx)(em, { icon: eE.ClockIcon, text: en.intl.formatToPlainString(en.t["+1bjc8"], { date: c }) }),
             r.includes(_.F.BOT) && null != s
-                ? (0, i.jsx)(em, { icon: eA.C, text: en.intl.formatToPlainString(en.t.UHGHSP, { guildCount: s }) })
+                ? (0, i.jsx)(em, {
+                      icon: eA.RobotIcon,
+                      text: en.intl.formatToPlainString(en.t.UHGHSP, { guildCount: s }),
+                  })
                 : null,
-            (0, i.jsx)(em, { icon: eh.l, text: u }),
+            (0, i.jsx)(em, { icon: eh.ShieldIcon, text: u }),
             null != o
                 ? o.map((e) => {
                       let t = (0, w.wI)(e),
                           n = (function (e) {
                               switch (e) {
                                   case w.yW.IP_LOCATION:
-                                      return eo.L;
+                                      return eo.GlobeEarthIcon;
                                   case w.yW.DISPLAYS_ADVERTISEMENTS:
                                       return ed.J;
                                   default:
@@ -203,8 +208,11 @@ function eL(e) {
                       : en.intl.formatToPlainString(en.t.WNKzo9, { maxFriends: et.$4X }),
               },
               { icon: eS.S, text: s ? en.intl.string(en.t.daY6xj) : en.intl.string(en.t.j7peBh) },
-              { icon: eN._, text: s ? en.intl.string(en.t["/bdaNN"]) : en.intl.string(en.t["feD3+i"]) },
-              { icon: eC.Z, text: s ? en.intl.string(en.t.mSqazC) : en.intl.string(en.t.YFFVM1) },
+              {
+                  icon: eN.GameControllerIcon,
+                  text: s ? en.intl.string(en.t["/bdaNN"]) : en.intl.string(en.t["feD3+i"]),
+              },
+              { icon: eC.SettingsIcon, text: s ? en.intl.string(en.t.mSqazC) : en.intl.string(en.t.YFFVM1) },
           ))
         : r.includes(_.F.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = s
@@ -220,8 +228,11 @@ function eL(e) {
                       ? en.intl.formatToPlainString(en.t.z9peav, { maxFriends: et.$4X })
                       : en.intl.formatToPlainString(en.t.WNKzo9, { maxFriends: et.$4X }),
               },
-              { icon: eN._, text: s ? en.intl.string(en.t["/bdaNN"]) : en.intl.string(en.t["feD3+i"]) },
-              { icon: eC.Z, text: s ? en.intl.string(en.t.mSqazC) : en.intl.string(en.t.YFFVM1) },
+              {
+                  icon: eN.GameControllerIcon,
+                  text: s ? en.intl.string(en.t["/bdaNN"]) : en.intl.string(en.t["feD3+i"]),
+              },
+              { icon: eC.SettingsIcon, text: s ? en.intl.string(en.t.mSqazC) : en.intl.string(en.t.YFFVM1) },
           )),
     0 === a.length)
         ? null
@@ -231,12 +242,12 @@ function eL(e) {
                   null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eO.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
-                      return (0, i.jsx)(eD, { icon: n, text: r }, t);
+                      return (0, i.jsx)(ey, { icon: n, text: r }, t);
                   }),
               ],
           });
 }
-function eD(e) {
+function ey(e) {
     let { icon: t, text: n } = e;
     return (0, i.jsxs)("div", {
         className: eO.f_,
@@ -246,7 +257,7 @@ function eD(e) {
         ],
     });
 }
-var ey = n(285796),
+var eD = n(285796),
     ev = n(628284),
     eb = n(444927),
     eM = n(629546);
@@ -260,7 +271,7 @@ function eP(e) {
         "aria-label": l,
         children: [
             !0 === r
-                ? (0, i.jsx)(ey.a, {
+                ? (0, i.jsx)(eD.a, {
                       size: "md",
                       color: "currentColor",
                       className: s()(eM.Kk, eM.RC),
@@ -974,7 +985,7 @@ function e4(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, Z.default], () => (null != $.default.getId() ? Z.default.getCurrentUser() : null)),
-        o = (0, y.Ay)(),
+        o = (0, D.Ay)(),
         d = v.A.get(n),
         c = null != d ? ((0, T.q)(o) ? d.icon.lightSVG : d.icon.darkSVG) : null,
         u = null != s ? q.Ay.getApplicationIconURL({ id: s.id, icon: s.icon }) : null,
@@ -996,7 +1007,7 @@ function e4(e) {
                                 null != u
                                     ? (0, i.jsx)("img", { src: u, alt: E, className: e0.gO })
                                     : (0, i.jsx)("div", { className: e0.gO }),
-                                (0, i.jsx)(A.j, { size: "md", color: "currentColor" }),
+                                (0, i.jsx)(A.MoreHorizontalIcon, { size: "md", color: "currentColor" }),
                                 null != _ && (0, i.jsx)("img", { src: _, alt: "", className: e0.eh }),
                             ],
                         }),
@@ -1026,7 +1037,7 @@ function e4(e) {
                 (0, i.jsxs)("div", {
                     className: e0.sT,
                     children: [
-                        (0, i.jsx)(N.m, { size: "sm", color: "currentColor", className: e0.Vi }),
+                        (0, i.jsx)(N.CircleInformationIcon, { size: "sm", color: "currentColor", className: e0.Vi }),
                         (0, i.jsx)(g.E, {
                             variant: "text-sm/normal",
                             children: en.intl.format(en.t["8psEFX"], { platformName: a, applicationName: E }),
@@ -1039,7 +1050,7 @@ function e4(e) {
 }
 function e5(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
-        s = (0, y.Ay)(),
+        s = (0, D.Ay)(),
         l = v.A.get(t),
         o = null != l ? ((0, T.q)(s) ? l.icon.lightSVG : l.icon.darkSVG) : null;
     return (0, i.jsxs)("div", {
@@ -1063,7 +1074,7 @@ function e5(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(C.A, { size: "sm", color: "status-positive" }),
+                    (0, i.jsx)(C.CheckmarkLargeIcon, { size: "sm", color: "status-positive" }),
                 ],
             }),
             (0, i.jsx)(g.E, {
@@ -1093,7 +1104,7 @@ function e7(e) {
             nonce: S,
             prompt: N,
             authorizations: C,
-            scopes: y,
+            scopes: D,
             permissions: M,
             guildId: U,
             channelId: x,
@@ -1121,8 +1132,8 @@ function e7(e) {
         [eg, eS] = r.useState(null),
         [eN, eC] = r.useState(!1),
         [eR, eO] = r.useState(!1),
-        eD = eI?.guilds,
-        [ey, ev] = r.useState(U ?? null),
+        ey = eI?.guilds,
+        [eD, ev] = r.useState(U ?? null),
         [eb, eM] = r.useState(x ?? null),
         [eP, ew] = r.useState(X.x3),
         eG = (0, I.bG)([z.A], () => (null == e_ ? null : (z.A.getAccounts().find((e) => e.type === e_) ?? null)), [e_]),
@@ -1130,9 +1141,9 @@ function e7(e) {
         eF = r.useMemo(() => (eI?.user != null ? new K.A(eI.user) : null), [eI?.user]),
         eV = (0, I.bG)([Z.default], () => Z.default.getCurrentUser()?.nsfwAllowed),
         eH = (0, G.A)(eI?.application ?? null),
-        ej = r.useMemo(() => eD?.find((e) => e.id === ey), [eD, ey]),
+        ej = r.useMemo(() => ey?.find((e) => e.id === eD), [ey, eD]),
         [eW, eY] = r.useState(null),
-        eK = r.useMemo(() => null == eE && null == k && (y?.length ?? 0) === 0 && null == f, [eE, y?.length, f, k]),
+        eK = r.useMemo(() => null == eE && null == k && (D?.length ?? 0) === 0 && null == f, [eE, D?.length, f, k]),
         [e$, ez] = r.useState(null);
     r.useEffect(() => {
         eK && P.Ay.fetchApplication(A).then((e) => ez(Y.Ay.createFromServer(e)));
@@ -1142,11 +1153,11 @@ function e7(e) {
             [e$?.integrationTypesConfig, eW],
         ),
         { requestedScopes: eJ, accountScopes: e2 } = r.useMemo(() => {
-            let e = eK ? eq?.scopes : y,
+            let e = eK ? eq?.scopes : D,
                 t = (0, J.e)(e ?? []),
                 n = es.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
-        }, [eq?.scopes, y, eK]),
+        }, [eq?.scopes, D, eK]),
         e3 = r.useMemo(() => (eK ? E.iu(eq?.permissions ?? 0) : M) ?? X.x3, [eq?.permissions, M, eK]),
         e7 = r.useRef(!1),
         [e8, e9] = r.useState(ed ?? []),
@@ -1155,7 +1166,7 @@ function e7(e) {
         let e = $.default.getAnalyticsToken();
         null != e
             ? O.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
-            : (0, D.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
+            : (0, y.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
             if (!e7.current && null == ed) {
@@ -1200,7 +1211,7 @@ function e7(e) {
                         integrationType: eW,
                         connectedAccountProvider: e_,
                         permissions: E.TF(e3, eP),
-                        guildId: eW === u.b.GUILD_INSTALL && null != ey ? ey : void 0,
+                        guildId: eW === u.b.GUILD_INSTALL && null != eD ? eD : void 0,
                         channelId: eW === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                     });
                     if ((e && (await (0, w.Yx)(A, e8)), null != q))
@@ -1221,7 +1232,7 @@ function e7(e) {
                         eC(!1);
                 }
             },
-            [ee, q, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, ey, eW, e_, eb, e8],
+            [ee, q, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, eD, eW, e_, eb, e8],
         ),
         tr = r.useRef(!1),
         ta = r.useCallback(async () => {
@@ -1376,7 +1387,7 @@ function e7(e) {
             if (null == eI || null == eF || null == eW)
                 return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             let tf = null == eg || eg instanceof Error ? {} : eg,
-                tp = eD?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                tp = ey?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tT = eW === u.b.GUILD_INSTALL && eJ.includes(_.F.WEBHOOK_INCOMING),
                 tm =
                     tT ||
@@ -1404,17 +1415,17 @@ function e7(e) {
                     tm
                         ? (0, i.jsx)(eB, {
                               error: (tf[_.F.BOT] ?? tf[_.F.APPLICATIONS_COMMANDS] ?? [])[0],
-                              selectedGuildId: ey,
+                              selectedGuildId: eD,
                               onGuildChange: ev,
                               guilds: tp ?? [],
-                              disabled: "" !== ey && null != ey && !0 === F,
+                              disabled: "" !== eD && null != eD && !0 === F,
                           })
                         : null,
                     tT
                         ? (0, i.jsx)(eQ, {
                               error: (tf[_.F.WEBHOOK_INCOMING] ?? [])[0],
                               selectedChannelId: eb,
-                              selectedGuildId: ey,
+                              selectedGuildId: eD,
                               onChannelChange: eM,
                           })
                         : null,

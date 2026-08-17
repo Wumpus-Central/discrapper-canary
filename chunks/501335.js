@@ -23,8 +23,8 @@ var n = e(477900),
     b = e(95477),
     K = e(452027),
     F = e(821609),
-    j = e(66834),
-    I = e(262828),
+    I = e(66834),
+    j = e(262828),
     N = e(915089),
     X = e(722888),
     T = e(132500),
@@ -35,8 +35,8 @@ var n = e(477900),
     Z = e(95701),
     L = e(31717),
     S = e(652215),
-    G = e(375708),
-    O = e(221794),
+    O = e(375708),
+    G = e(221794),
     R = e(790634);
 let B = (0, T.A)(),
     y = (0, Z.createChannelRecord)({ id: "1", type: S.rbe.DM });
@@ -79,7 +79,7 @@ function E(A) {
     function F(A, t, e) {
         o(t), V(e);
     }
-    let j = r.useMemo(
+    let I = r.useMemo(
         () => ({
             analyticsName: "simple",
             autocomplete: { alwaysUseLayer: !0, small: !0 },
@@ -103,8 +103,8 @@ function E(A) {
                 "aria-labelledby": x,
                 "aria-errormessage": A?.errorMessageId,
                 "aria-invalid": A?.errorMessageId != null,
-                className: O.T,
-                innerClassName: a()(e, O.n),
+                className: G.T,
+                innerClassName: a()(e, G.n),
                 maxCharacterCount: s,
                 onChange: F,
                 placeholder: g,
@@ -112,7 +112,7 @@ function E(A) {
                 channel: y,
                 textValue: c,
                 richValue: U,
-                type: j,
+                type: I,
                 onBlur: () => {
                     v.current = !1;
                 },
@@ -131,7 +131,7 @@ function E(A) {
                             text: c,
                             maxLength: s,
                         }),
-                    null != s && (0, n.jsx)(P.A, { id: B, children: G.intl.format(G.t["+DFxLc"], { maxLength: s }) }),
+                    null != s && (0, n.jsx)(P.A, { id: B, children: O.intl.format(O.t["+DFxLc"], { maxLength: s }) }),
                 ],
             }),
     });
@@ -192,7 +192,7 @@ class Am {
         let e = this.target.getMaxAttachmentsCount();
         if (this.uploads.length >= e)
             throw (
-                (At.O.announce(G.intl.formatToPlainString(G.t["0QDZ4J"], { maxAttachmentsCount: e })),
+                (At.O.announce(O.intl.formatToPlainString(O.t["0QDZ4J"], { maxAttachmentsCount: e })),
                 Error("Too many attachments"))
             );
         A.target = Aa.m.GUILD_PRODUCT_ATTACHMENT;
@@ -204,8 +204,8 @@ class Am {
                     l = (0, Aq.kt)(r),
                     a = A.file?.name;
                 null != a
-                    ? At.O.announce(G.intl.formatToPlainString(G.t["+YVkfX"], { filename: a, reason: l }))
-                    : At.O.announce(G.intl.formatToPlainString(G.t.mBkf6Z, { reason: l })),
+                    ? At.O.announce(O.intl.formatToPlainString(O.t["+YVkfX"], { filename: a, reason: l }))
+                    : At.O.announce(O.intl.formatToPlainString(O.t.mBkf6Z, { reason: l })),
                     t((A) => ({ ...A, [n.id]: r }));
             }),
             n.on("progress", (A, e) => {
@@ -355,8 +355,8 @@ var AU = e(500770),
     Ab = e(939249),
     AK = e(789645),
     AF = e(626034),
-    Aj = e(65593),
-    AI = e(703007),
+    AI = e(65593),
+    Aj = e(703007),
     AN = e(698638);
 e(634654);
 var AX = e(650857);
@@ -385,7 +385,7 @@ function AW(A) {
                     null != l &&
                     (0, n.jsx)(Ab.D, {
                         onClick: i,
-                        "aria-label": G.intl.formatToPlainString(G.t["1o5hyW"], { attachment: g }),
+                        "aria-label": O.intl.formatToPlainString(O.t["1o5hyW"], { attachment: g }),
                         "aria-hidden": !1,
                         className: AX.G5,
                         children: (0, n.jsx)(AK.P, {
@@ -422,18 +422,18 @@ function AP(A) {
         (0, n.jsxs)("div", {
             className: AX.kL,
             children: [
-                (0, n.jsx)(Aj.A, {
+                (0, n.jsx)(AI.A, {
                     className: AX.x4,
-                    title: G.intl.string(G.t["5eTk2g"]),
-                    description: G.intl.string(G.t.Ecxoxl),
+                    title: O.intl.string(O.t["5eTk2g"]),
+                    description: O.intl.string(O.t.Ecxoxl),
                     icons: AN.ir,
                     onDrop: u,
                 }),
-                (0, n.jsxs)(AI.A, {
+                (0, n.jsxs)(Aj.A, {
                     className: AX.zd,
                     innerClassName: AX._3,
                     disabled: !l,
-                    "aria-label": G.intl.string(G.t["23LeCD"]),
+                    "aria-label": O.intl.string(O.t["23LeCD"]),
                     "aria-describedby": AT,
                     multiple: !0,
                     onChange: function (A) {
@@ -444,7 +444,7 @@ function AP(A) {
                         (0, n.jsx)(m.E, {
                             variant: "text-sm/medium",
                             color: "text-overlay-light",
-                            children: G.intl.string(G.t["23LeCD"]),
+                            children: O.intl.string(O.t["23LeCD"]),
                         }),
                     ],
                 }),
@@ -454,8 +454,8 @@ function AP(A) {
                     color: "text-muted",
                     variant: "text-xs/normal",
                     children: a
-                        ? G.intl.formatToPlainString(G.t.lvU6sr, { fileUploadLimit: "1 GB" })
-                        : G.intl.formatToPlainString(G.t.DOXzIU, { fileUploadLimit: "1 GB" }),
+                        ? O.intl.formatToPlainString(O.t.lvU6sr, { fileUploadLimit: "1 GB" })
+                        : O.intl.formatToPlainString(O.t.DOXzIU, { fileUploadLimit: "1 GB" }),
                 }),
                 e.length > 0 &&
                     (0, n.jsxs)(n.Fragment, {
@@ -463,7 +463,7 @@ function AP(A) {
                             (0, n.jsx)("div", { className: AX.me }),
                             (0, n.jsx)("ul", {
                                 className: AX.$W,
-                                "aria-label": G.intl.string(G.t.YZ6cTW),
+                                "aria-label": O.intl.string(O.t.YZ6cTW),
                                 children: e.map((A) =>
                                     (0, n.jsx)(
                                         "li",
@@ -497,7 +497,7 @@ function Az(A, t) {
         body:
             "string" == typeof t
                 ? t
-                : G.intl.format(t, {
+                : O.intl.format(t, {
                       highlightHook: (A) =>
                           (0, n.jsx)(m.E, {
                               variant: "text-md/normal",
@@ -507,15 +507,15 @@ function Az(A, t) {
                           }),
                       ...e,
                   }),
-        cta: G.intl.string(G.t["NX+WJN"]),
+        cta: O.intl.string(O.t["NX+WJN"]),
         onConfirm: () => {},
     });
 }
 var AZ = e(785007),
     AL = e(259678),
     AS = e(750943),
-    AG = e(22231),
-    AO = e(241326),
+    AO = e(22231),
+    AG = e(241326),
     AR = e(946274),
     AB = e(783182);
 let Ay = "custom-image",
@@ -544,8 +544,8 @@ function AY(A) {
             imageName: l,
             savedImageName: i,
             onChange: s,
-            uploadButtonLabel: o = G.intl.string(G.t["MsUY/S"]),
-            radioGroupAriaLabel: d = G.intl.string(G.t["0Q0UJq"]),
+            uploadButtonLabel: o = O.intl.string(O.t["MsUY/S"]),
+            radioGroupAriaLabel: d = O.intl.string(O.t["0Q0UJq"]),
             disabled: u = !1,
         } = A,
         g = l === Ay,
@@ -556,7 +556,7 @@ function AY(A) {
     r.useEffect(() => {
         i !== Ay && (c(null), p(null));
     }, [i]);
-    let U = null != C ? G.intl.formatToPlainString(G.t["Kw+5YX"], { filename: C }) : G.intl.string(G.t.SNPvSv),
+    let U = null != C ? O.intl.formatToPlainString(O.t["Kw+5YX"], { filename: C }) : O.intl.string(O.t.SNPvSv),
         { ref: V, ...v } = (0, AZ._u)({ orientation: "horizontal", isDisabled: u });
     return (
         r.useEffect(() => {
@@ -595,26 +595,34 @@ function AY(A) {
                         children: [
                             (0, n.jsx)(AV.m, {
                                 asContainer: !0,
-                                text: G.intl.string(G.t.AQYXMO),
+                                text: O.intl.string(O.t.AQYXMO),
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
                                     onClick: function () {
                                         return f.current?.activateUploadDialogue();
                                     },
-                                    "aria-label": G.intl.formatToPlainString(G.t.Qc9Lg6, { filename: C }),
-                                    children: (0, n.jsx)(AG.R, { size: "xs", color: "currentColor", className: AB.IZ }),
+                                    "aria-label": O.intl.formatToPlainString(O.t.Qc9Lg6, { filename: C }),
+                                    children: (0, n.jsx)(AO.PencilIcon, {
+                                        size: "xs",
+                                        color: "currentColor",
+                                        className: AB.IZ,
+                                    }),
                                 }),
                             }),
                             (0, n.jsx)(AV.m, {
                                 asContainer: !0,
-                                text: G.intl.string(G.t.WxqWU0),
+                                text: O.intl.string(O.t.WxqWU0),
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
                                     onClick: function () {
                                         l === Ay && s(t[0].data, t[0].name), c(null), p(null);
                                     },
-                                    "aria-label": G.intl.formatToPlainString(G.t.Z43V9S, { filename: C }),
-                                    children: (0, n.jsx)(AO.u, { size: "md", color: "currentColor", className: AB.fy }),
+                                    "aria-label": O.intl.formatToPlainString(O.t.Z43V9S, { filename: C }),
+                                    children: (0, n.jsx)(AG.TrashIcon, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: AB.fy,
+                                    }),
                                 }),
                             }),
                         ],
@@ -665,19 +673,19 @@ function Aw(A) {
                                 (0, n.jsx)(v.D, {
                                     variant: "text-sm/semibold",
                                     color: "text-strong",
-                                    children: l ? G.intl.string(G.t.Vaaagc) : G.intl.string(G.t.oI8aQf),
+                                    children: l ? O.intl.string(O.t.Vaaagc) : O.intl.string(O.t.oI8aQf),
                                 }),
                                 (0, n.jsx)(m.E, {
                                     id: o,
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: l ? G.intl.string(G.t["0r6pbG"]) : G.intl.string(G.t["8MMHYG"]),
+                                    children: l ? O.intl.string(O.t["0r6pbG"]) : O.intl.string(O.t["8MMHYG"]),
                                 }),
                             ],
                         }),
                         (0, n.jsx)(F.$, {
-                            text: l ? G.intl.string(G.t.DlJOvl) : G.intl.string(G.t.X7YGXE),
-                            icon: l ? AE.G : AD.B,
+                            text: l ? O.intl.string(O.t.DlJOvl) : O.intl.string(O.t.X7YGXE),
+                            icon: l ? AE.EyeSlashIcon : AD.SparklesIcon,
                             iconPosition: "end",
                             variant: l ? "critical-primary" : "expressive",
                             "aria-describedby": o,
@@ -723,13 +731,13 @@ function A4(A) {
                     return e((t) => (s()(null != t, "newRoleParams should be defined"), { ...t, name: A }));
                 },
                 id: A8,
-                placeholder: G.intl.string(G.t.oNauug),
+                placeholder: O.intl.string(O.t.oNauug),
                 maxLength: S.fHV,
             }),
             (0, n.jsxs)("div", {
                 className: A5.P4,
                 children: [
-                    (0, n.jsx)(P.A, { children: G.intl.format(G.t["Vlq/pH"], { color: (0, AM.Hl)(i) }) }),
+                    (0, n.jsx)(P.A, { children: O.intl.format(O.t["Vlq/pH"], { color: (0, AM.Hl)(i) }) }),
                     (0, n.jsx)(A9.Y, {
                         targetElementRef: l,
                         renderPopout: (A) => (0, n.jsx)(A6.VN, { ...A, value: i, onChange: o }),
@@ -739,7 +747,7 @@ function A4(A) {
                                 variant: "secondary",
                                 icon: A7.d,
                                 buttonRef: l,
-                                "aria-label": G.intl.string(G.t.QLgdlS),
+                                "aria-label": O.intl.string(O.t.QLgdlS),
                             }),
                     }),
                 ],
@@ -770,7 +778,7 @@ function tn(A) {
             (0, n.jsx)(m.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: G.intl.format(G.t.i2x5aY, {
+                children: O.intl.format(O.t.i2x5aY, {
                     roleName: t,
                     emphasisHook: function (A) {
                         return (0, n.jsx)(m.E, {
@@ -789,21 +797,21 @@ function tn(A) {
                 children: [
                     (0, n.jsx)(A$.N, { size: "sm", color: "currentColor" }),
                     (0, n.jsx)(C.h, { horizontal: !0, size: 8 }),
-                    G.intl.string(G.t.KWx4HY),
+                    O.intl.string(O.t.KWx4HY),
                 ],
             }),
-            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t.hNHNph) }),
+            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: O.intl.string(O.t.hNHNph) }),
             (0, n.jsxs)(v.D, {
                 className: tA.wV,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
-                    (0, n.jsx)(AO.u, { size: "sm", color: "currentColor" }),
+                    (0, n.jsx)(AG.TrashIcon, { size: "sm", color: "currentColor" }),
                     (0, n.jsx)(C.h, { horizontal: !0, size: 8 }),
-                    G.intl.string(G.t.WIPKAb),
+                    O.intl.string(O.t.WIPKAb),
                 ],
             }),
-            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t["40shJX"]) }),
+            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: O.intl.string(O.t["40shJX"]) }),
         ],
     });
 }
@@ -812,13 +820,13 @@ function tr(A) {
         u = (0, o.bG)([M.A], () => (null != i ? M.A.getRole(l, i) : void 0));
     return null === t
         ? (0, n.jsx)(K.D, {
-              label: G.intl.string(G.t.ovXIrP),
-              description: G.intl.string(G.t["H7coX+"]),
+              label: O.intl.string(O.t.ovXIrP),
+              description: O.intl.string(O.t["H7coX+"]),
               children: (0, n.jsxs)(A0.M, {
                   children: [
                       (0, n.jsx)(tt, { role: u, onRemove: void 0 }),
                       (0, n.jsx)(F.$, {
-                          text: G.intl.string(G.t.KkRpFi),
+                          text: O.intl.string(O.t.KkRpFi),
                           icon: A1.e,
                           iconPosition: "end",
                           variant: "secondary",
@@ -831,8 +839,8 @@ function tr(A) {
           })
         : null != i
           ? (0, n.jsx)(K.D, {
-                label: G.intl.string(G.t.zIg9tw),
-                description: G.intl.string(G.t.OfuEkP),
+                label: O.intl.string(O.t.zIg9tw),
+                description: O.intl.string(O.t.OfuEkP),
                 errorMessage: d,
                 children: (0, n.jsx)(tt, {
                     role: u,
@@ -845,10 +853,10 @@ function tr(A) {
                                     let { default: A } = await e.e("844252").then(e.bind(e, 790743));
                                     return (e) =>
                                         (0, n.jsx)(A, {
-                                            title: G.intl.string(G.t.Y3Hi3R),
+                                            title: O.intl.string(O.t.Y3Hi3R),
                                             body: (0, n.jsx)(tn, { roleName: r }),
-                                            cta: G.intl.string(G.t.VawZVx),
-                                            closeLabel: G.intl.string(G.t["6y+3Bw"]),
+                                            cta: O.intl.string(O.t.VawZVx),
+                                            closeLabel: O.intl.string(O.t["6y+3Bw"]),
                                             onConfirm: t,
                                             ...e,
                                         });
@@ -860,7 +868,7 @@ function tr(A) {
           : (s()(null != t, "newRoleParams cannot be null at this point"),
             (0, n.jsx)(K.D, {
                 required: !0,
-                label: G.intl.string(G.t.xZvFpA),
+                label: O.intl.string(O.t.xZvFpA),
                 errorMessage: d,
                 children: (0, n.jsx)(A4, { newRoleParams: t, setNewRoleParams: r }),
             }));
@@ -908,7 +916,7 @@ function tq(A) {
         label: a,
         errorMessage: i,
         value: e,
-        placeholder: G.intl.string(G.t.aI4J5H),
+        placeholder: O.intl.string(O.t.aI4J5H),
         maxOptionsVisible: 5,
         options: o,
         onSelectionChange: l,
@@ -922,7 +930,7 @@ function tc(A) {
         N = (0, o.bG)([Ag.A], () => (null == p ? null : Ag.A.getGuildProduct(p)), [p]),
         X = (0, o.bG)([Ag.A], () => Ag.A.getGuildProductsForGuild(t, { publishedOnly: !0 }).length, [t]),
         T = N?.published === !0,
-        { application: W } = (0, I.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
+        { application: W } = (0, j.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
         P = Ah["0"],
         Q = w.kt.useSetting(),
         z = (0, $.j)(),
@@ -935,9 +943,9 @@ function tc(A) {
         ),
         { shouldRestrictUpdatingCreatorMonetizationSettings: L } = (0, D.nq)(t);
     r.useEffect(() => {
-        L && (i(), Az(G.intl.string(G.t.OLf3xn), G.t["90LBVr"]));
+        L && (i(), Az(O.intl.string(O.t.OLf3xn), O.t["90LBVr"]));
     }, [L, i]);
-    let [O, R] = r.useState(N?.name ?? ""),
+    let [G, R] = r.useState(N?.name ?? ""),
         [B, y] = r.useState(N?.description ?? ""),
         [k, Y] = r.useState(N?.price_tier ?? void 0),
         [H, AA] = r.useState(Z),
@@ -959,29 +967,29 @@ function tc(A) {
         Ax = null != Ad && !Av,
         Ab = N?.role_id ?? null,
         [AK, AF] = r.useState(),
-        Aj = null != AK || null != Ab,
-        AI = (0, o.bG)([M.A], () => (null != Ab && null !== AK ? M.A.getRole(t, Ab) : (AK ?? void 0)), [AK, Ab, t]),
+        AI = null != AK || null != Ab,
+        Aj = (0, o.bG)([M.A], () => (null != Ab && null !== AK ? M.A.getRole(t, Ab) : (AK ?? void 0)), [AK, Ab, t]),
         AN = "";
     function AX() {
         Ao(!1), AC();
     }
-    Aj && As
-        ? (AN = G.intl.string(G.t.ih4QMU))
-        : Aj
-          ? (AN = G.intl.string(G.t.o9xphc))
-          : As && (AN = G.intl.string(G.t.DWYJua));
+    AI && As
+        ? (AN = O.intl.string(O.t.ih4QMU))
+        : AI
+          ? (AN = O.intl.string(O.t.o9xphc))
+          : As && (AN = O.intl.string(O.t.DWYJua));
     let [AT, AW] = r.useState(),
         {
             changes: AZ,
             hasUnsavedChanges: AL,
             canSaveForDraft: AS,
-            canSaveForPublished: AG,
-            canPublishOrUnpublish: AO,
+            canSaveForPublished: AO,
+            canPublishOrUnpublish: AG,
         } = r.useMemo(
             () =>
                 (0, Aq.EY)({
                     guildProductListing: N,
-                    name: O,
+                    name: G,
                     priceTier: k,
                     description: B,
                     image: H,
@@ -991,7 +999,7 @@ function tc(A) {
                     hasSavedAttachments: Af,
                     hasUnsavedAttachmentChanges: Am,
                 }),
-            [N, O, k, B, H, At, An, AK, Af, Am],
+            [N, G, k, B, H, At, An, AK, Af, Am],
         ),
         AR = r.useMemo(
             () =>
@@ -1012,15 +1020,15 @@ function tc(A) {
                                           variant: "text-md/medium",
                                           children:
                                               "draft" === AT
-                                                  ? G.intl.string(G.t["3Rv4MB"])
+                                                  ? O.intl.string(O.t["3Rv4MB"])
                                                   : "update_publish" === AT
-                                                    ? G.intl.string(G.t["8fPiB3"])
-                                                    : G.intl.string(G.t["3LUFnI"]),
+                                                    ? O.intl.string(O.t["8fPiB3"])
+                                                    : O.intl.string(O.t["3LUFnI"]),
                                       }),
                                   ],
                               }),
                               onReset: () => AW(void 0),
-                              onResetText: G.intl.string(G.t.T6QuWe),
+                              onResetText: O.intl.string(O.t.T6QuWe),
                           }),
                       }),
             [AV, AL, AT],
@@ -1028,10 +1036,10 @@ function tc(A) {
         AB = r.useCallback(() => {
             AL
                 ? AQ({
-                      title: G.intl.string(G.t.FVDhIW),
-                      body: G.intl.string(G.t.Hgdhwb),
-                      cta: G.intl.string(G.t["h0bti/"]),
-                      closeLabel: G.intl.string(G.t["+WYo0m"]),
+                      title: O.intl.string(O.t.FVDhIW),
+                      body: O.intl.string(O.t.Hgdhwb),
+                      cta: O.intl.string(O.t["h0bti/"]),
+                      closeLabel: O.intl.string(O.t["+WYo0m"]),
                       onConfirm: () => {
                           i();
                       },
@@ -1045,7 +1053,7 @@ function tc(A) {
         if ((Ar(!1), null != n)) {
             if ((null != A.name && R(n.name), null != A.description && y(n.description), null != AK)) {
                 let A = n.role_id;
-                s()(null != A, "Cannot update role without role ID"), await j.A.updateRole(t, A, AK);
+                s()(null != A, "Cannot update role without role ID"), await I.A.updateRole(t, A, AK);
             }
             AF(void 0), f(n.id), "published" in A && !0 === A.published && i();
         }
@@ -1058,13 +1066,13 @@ function tc(A) {
                 (function (A, t, r) {
                     switch (A.code) {
                         case S.t02.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-                            Az(G.intl.string(G.t["04e8bO"]), G.t.uVN1Y5);
+                            Az(O.intl.string(O.t["04e8bO"]), O.t.uVN1Y5);
                             break;
                         case S.t02.TWO_FA_NOT_ENABLED:
-                            Az(G.intl.string(G.t["/yBjZy"]), G.t.kZ6Tgg);
+                            Az(O.intl.string(O.t["/yBjZy"]), O.t.kZ6Tgg);
                             break;
                         case S.t02.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-                            Az(G.intl.string(G.t.MeXDxg), G.t["5q146K"]);
+                            Az(O.intl.string(O.t.MeXDxg), O.t["5q146K"]);
                             break;
                         case S.t02.MONETIZATION_TERMS_NOT_ACCEPTED:
                             (0, V.openModalLazy)(async () => {
@@ -1078,20 +1086,20 @@ function tc(A) {
                             });
                             break;
                         case S.t02.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-                            Az(G.intl.string(G.t["4hWo0C"]), G.t.Zkhwex);
+                            Az(O.intl.string(O.t["4hWo0C"]), O.t.Zkhwex);
                             break;
                         case S.t02.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
                             let l, a;
                             null != r
-                                ? ((l = G.t.j2VMk6), (a = { url: S.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(r) }))
-                                : (l = G.t.ZVV1gg),
-                                Az(G.intl.string(G.t["+CT/gV"]), l, a);
+                                ? ((l = O.t.j2VMk6), (a = { url: S.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(r) }))
+                                : (l = O.t.ZVV1gg),
+                                Az(O.intl.string(O.t["+CT/gV"]), l, a);
                             break;
                         default:
                             let i =
                                 A.getFirstFieldErrorMessage(["published"]) ??
                                 (A.hasFieldErrors?.() ? void 0 : A.message);
-                            null != i && Az(G.intl.string(G.t.bvWf8T), i);
+                            null != i && Az(O.intl.string(O.t.bvWf8T), i);
                     }
                 })(AV, t, W?.team?.id);
         }, [AV, t, W]),
@@ -1119,12 +1127,12 @@ function tc(A) {
                                 id: ts,
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                children: G.intl.string(G.t.DnNl1T),
+                                children: O.intl.string(O.t.DnNl1T),
                             }),
                             (0, n.jsx)(m.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: G.intl.string(G.t["Tu7f+f"]),
+                                children: O.intl.string(O.t["Tu7f+f"]),
                             }),
                         ],
                     }),
@@ -1146,42 +1154,42 @@ function tc(A) {
                             ref: Ak,
                             children: [
                                 (0, n.jsx)(b.k, {
-                                    label: G.intl.string(G.t.Hsk7xT),
+                                    label: O.intl.string(O.t.Hsk7xT),
                                     error: AV?.getFirstFieldErrorMessage("name"),
-                                    value: O,
+                                    value: G,
                                     onChange: R,
                                     id: to,
                                     maxLength: 100,
-                                    placeholder: G.intl.string(G.t["/BiYSO"]),
+                                    placeholder: O.intl.string(O.t["/BiYSO"]),
                                     required: !0,
                                 }),
                                 (0, n.jsx)(E, {
-                                    label: G.intl.string(G.t.QdKLyW),
+                                    label: O.intl.string(O.t.QdKLyW),
                                     errorMessage: AV?.getFirstFieldErrorMessage("description") ?? void 0,
                                     id: td,
                                     className: ti.kj,
                                     value: B,
                                     onChange: y,
                                     maxLength: 1500,
-                                    placeholder: G.intl.string(G.t.BFwyum),
+                                    placeholder: O.intl.string(O.t.BFwyum),
                                     showCharacterCount: B.length > 0,
                                     parentModalKey: tl.DG,
                                     required: !0,
                                 }),
                                 (0, n.jsx)(tq, {
-                                    label: G.intl.string(G.t["CAY/vh"]),
+                                    label: O.intl.string(O.t["CAY/vh"]),
                                     errorMessage: AV?.getFirstFieldErrorMessage("price_tier") ?? void 0,
                                     guildId: t,
                                     selectedPriceTier: k,
                                     setPriceTier: Y,
                                 }),
                                 (0, n.jsx)(K.D, {
-                                    label: G.intl.string(G.t.sqXj60),
+                                    label: O.intl.string(O.t.sqXj60),
                                     errorMessage: AV?.getFirstFieldErrorMessage("image") ?? void 0,
-                                    description: G.intl.string(G.t.yOU4Vm),
+                                    description: O.intl.string(O.t.yOU4Vm),
                                     children: (0, n.jsx)(AY, {
                                         presetImages: Ah,
-                                        radioGroupAriaLabel: G.intl.string(G.t.fKzQj0),
+                                        radioGroupAriaLabel: O.intl.string(O.t.fKzQj0),
                                         image: H,
                                         imageName: At,
                                         savedImageName: N?.image_asset?.filename,
@@ -1195,7 +1203,7 @@ function tc(A) {
                                 }),
                                 As
                                     ? (0, n.jsx)(K.D, {
-                                          label: G.intl.string(G.t.zLrtkN),
+                                          label: O.intl.string(O.t.zLrtkN),
                                           errorMessage: AV?.getFirstFieldErrorMessage("attachments") ?? void 0,
                                           children: (0, n.jsx)(AP, {
                                               onFileAdded: function () {
@@ -1204,7 +1212,7 @@ function tc(A) {
                                           }),
                                       })
                                     : null,
-                                Aj
+                                AI
                                     ? (0, n.jsx)(tr, {
                                           error: AV?.getFirstFieldErrorMessage(Aq.a) ?? void 0,
                                           newRoleParams: AK,
@@ -1223,15 +1231,15 @@ function tc(A) {
                             className: ti.mA,
                             children: [
                                 (0, n.jsx)(Aw, {
-                                    disabled: !AO || (!T && X >= 50),
+                                    disabled: !AG || (!T && X >= 50),
                                     disabledTooltip: T
-                                        ? G.intl.string(G.t["0NQ00t"])
+                                        ? O.intl.string(O.t["0NQ00t"])
                                         : X >= 50
-                                          ? G.intl.format(G.t.IqWPVt, { maxProducts: 50 })
-                                          : G.intl.string(G.t["Ax89/c"]),
+                                          ? O.intl.format(O.t.IqWPVt, { maxProducts: 50 })
+                                          : O.intl.string(O.t["Ax89/c"]),
                                     published: T,
                                     onClick: function () {
-                                        s()(AO, "Attempting to publish/unpublish when not allowed"),
+                                        s()(AG, "Attempting to publish/unpublish when not allowed"),
                                             AW(T ? "unpublish" : "publish"),
                                             Ay({ ...AZ, published: !T });
                                     },
@@ -1242,23 +1250,23 @@ function tc(A) {
                                     variant: "text-xs/bold",
                                     color: "text-default",
                                     className: ti.B9,
-                                    children: G.intl.string(G.t["6I7nQT"]),
+                                    children: O.intl.string(O.t["6I7nQT"]),
                                 }),
                                 (0, n.jsx)(C.h, { size: 4 }),
                                 (0, n.jsx)(m.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: G.intl.string(G.t.Oq4dfU),
+                                    children: O.intl.string(O.t.Oq4dfU),
                                 }),
                                 (0, n.jsx)(C.h, { size: 16 }),
                                 (0, n.jsx)(AU.A, {
                                     imageUrl: H,
-                                    name: "" === O ? G.intl.string(G.t.EmqIwl) : O,
-                                    description: "" === B ? G.intl.string(G.t["11NA2L"]) : B,
+                                    name: "" === G ? O.intl.string(O.t.EmqIwl) : G,
+                                    description: "" === B ? O.intl.string(O.t["11NA2L"]) : B,
                                     formattedPrice: Ai,
-                                    role: AI,
+                                    role: Aj,
                                     productType: AN,
-                                    ctaComponent: (0, n.jsx)(F.$, { text: G.intl.string(G.t.xUi3BL) }),
+                                    ctaComponent: (0, n.jsx)(F.$, { text: O.intl.string(O.t.xUi3BL) }),
                                     cardWidth: 340,
                                     thumbnailHeight: 190,
                                 }),
@@ -1276,8 +1284,8 @@ function tc(A) {
                             className: ti.mx,
                             children: [
                                 (0, n.jsx)(tu, {
-                                    text: G.intl.string(G.t.YzGIVF),
-                                    value: Aj,
+                                    text: O.intl.string(O.t.YzGIVF),
+                                    value: AI,
                                     onChange: function (A) {
                                         A ? AF({ name: "", color: S.TGz }) : AF(void 0);
                                     },
@@ -1285,16 +1293,16 @@ function tc(A) {
                                     disabled: null != Ab,
                                 }),
                                 (0, n.jsx)(tu, {
-                                    text: G.intl.string(G.t.C6wP2Q),
+                                    text: O.intl.string(O.t.C6wP2Q),
                                     value: As,
                                     onChange: function (A) {
                                         A
                                             ? Ao(!0)
                                             : Am
                                               ? (0, q.A)({
-                                                    title: G.intl.string(G.t["2WihyY"]),
-                                                    subtitle: G.intl.string(G.t.ixRBLh),
-                                                    confirmText: G.intl.string(G.t.N86XcP),
+                                                    title: O.intl.string(O.t["2WihyY"]),
+                                                    subtitle: O.intl.string(O.t.ixRBLh),
+                                                    confirmText: O.intl.string(O.t.N86XcP),
                                                     onConfirm: AX,
                                                 })
                                               : AX();
@@ -1308,12 +1316,12 @@ function tc(A) {
                             children: T
                                 ? (0, n.jsx)(F.$, {
                                       variant: "secondary",
-                                      text: G.intl.string(G.t.XYBEaV),
-                                      disabled: !AG,
+                                      text: O.intl.string(O.t.XYBEaV),
+                                      disabled: !AO,
                                       loading: Ax,
                                       onClick: function () {
                                           s()(
-                                              AG,
+                                              AO,
                                               "cannot save changes for published product without adding all fields",
                                           ),
                                               AW("update_publish"),
@@ -1322,7 +1330,7 @@ function tc(A) {
                                   })
                                 : (0, n.jsx)(F.$, {
                                       variant: "secondary",
-                                      text: G.intl.string(G.t.ZCjwob),
+                                      text: O.intl.string(O.t.ZCjwob),
                                       disabled: !AS,
                                       loading: Ax,
                                       onClick: function () {

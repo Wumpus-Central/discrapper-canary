@@ -154,8 +154,8 @@ function eg(e) {
             align: "center",
             children: [
                 n
-                    ? (0, i.jsx)(ee.m, { size: "refresh_sm", color: "var(--text-default)" })
-                    : (0, i.jsx)(et.i, { size: "refresh_sm", color: "var(--text-default)" }),
+                    ? (0, i.jsx)(ee.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
+                    : (0, i.jsx)(et.WarningIcon, { size: "refresh_sm", color: "var(--text-default)" }),
                 (0, i.jsx)(g.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(eo, {}) }),
             ],
         }),
@@ -851,7 +851,7 @@ function tn(e) {
             (0, i.jsx)(e9.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
-                    children: (0, i.jsx)(e1.C, {
+                    children: (0, i.jsx)(e1.CalendarIcon, {
                         size: "custom",
                         color: "currentColor",
                         height: 30,

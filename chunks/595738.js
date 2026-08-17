@@ -4,8 +4,8 @@ n(582128);
 var e = n(503698),
     a = n.n(e),
     i = n(297264),
-    t = n(933832),
-    c = n(834730),
+    c = n(933832),
+    t = n(834730),
     d = n(789645),
     o = n(376092),
     h = n(21021);
@@ -34,8 +34,12 @@ function x(s) {
                                       {
                                           className: h.EK,
                                           children: [
-                                              (0, r.jsx)(t.A, { size: "xs", color: "currentColor", className: h.z6 }),
-                                              (0, r.jsx)(c.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
+                                              (0, r.jsx)(c.CheckmarkLargeIcon, {
+                                                  size: "xs",
+                                                  color: "currentColor",
+                                                  className: h.z6,
+                                              }),
+                                              (0, r.jsx)(t.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
                                           ],
                                       },
                                       s.toString(),
@@ -60,7 +64,7 @@ function x(s) {
                                           className: h.EK,
                                           children: [
                                               (0, r.jsx)(d.P, { size: "xs", color: "currentColor", className: h.$A }),
-                                              (0, r.jsx)(c.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
+                                              (0, r.jsx)(t.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
                                           ],
                                       },
                                       s.toString(),

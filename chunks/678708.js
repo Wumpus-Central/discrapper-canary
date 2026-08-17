@@ -1,23 +1,23 @@
-t.d(e, { s: () => n });
+t.d(e, { FolderIcon: () => r });
 var s = t(477900);
 t(582128);
 var a = t(661531),
     i = t(996682),
-    r = t(27989);
-function n(l) {
+    n = t(27989);
+function r(l) {
     let {
             size: e = "md",
             width: t,
-            height: n,
+            height: r,
             color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: h = "",
-            ...d
+            ...o
         } = l,
-        o = (0, r.J)(e),
-        v = o?.width ?? t,
-        f = o?.height ?? n;
+        d = (0, n.J)(e),
+        v = d?.width ?? t,
+        f = d?.height ?? r;
     return (0, s.jsx)("svg", {
-        ...(0, i.A)(d),
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: v,
         height: f,

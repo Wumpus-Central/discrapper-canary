@@ -1,6 +1,6 @@
 s.d(t, { A: () => x });
-var i = s(477900),
-    n = s(582128),
+var n = s(477900),
+    i = s(582128),
     l = s(17928),
     r = s(885574),
     a = s(661531),
@@ -9,26 +9,26 @@ var i = s(477900),
     m = s(801365),
     d = s(52093),
     g = s(190107),
-    u = s(375708),
-    f = s(457182);
+    f = s(375708),
+    u = s(457182);
 function h() {
-    let e = n.useCallback(() => {}, []);
-    return (0, i.jsxs)("div", {
-        className: f.Jj,
+    let e = i.useCallback(() => {}, []);
+    return (0, n.jsxs)("div", {
+        className: u.Jj,
         children: [
-            (0, i.jsx)(r.m, { size: "sm", color: a.A.colors.TEXT_LINK, className: f.qf }),
-            (0, i.jsxs)("div", {
-                className: f.e4,
+            (0, n.jsx)(r.CircleInformationIcon, { size: "sm", color: a.A.colors.TEXT_LINK, className: u.qf }),
+            (0, n.jsxs)("div", {
+                className: u.e4,
                 children: [
-                    (0, i.jsx)(o.E, {
+                    (0, n.jsx)(o.E, {
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: u.intl.string(u.t["+pgFbW"]),
+                        children: f.intl.string(f.t["+pgFbW"]),
                     }),
-                    (0, i.jsx)(o.E, {
+                    (0, n.jsx)(o.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: u.intl.format(u.t.Uk4lV5, { onLearnMore: e }),
+                        children: f.intl.format(f.t.Uk4lV5, { onLearnMore: e }),
                     }),
                 ],
             }),
@@ -38,54 +38,54 @@ function h() {
 let x = function (e) {
     let { quest: t, hasAlreadyLinked: s, onClickGameTitle: r, selectedAuthMethod: a } = e,
         o = t.config.taskConfigV2.tasks.ACHIEVEMENT_IN_GAME,
-        f = t.userStatus?.completedAt != null,
+        u = t.userStatus?.completedAt != null,
         x = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
-        p = n.useMemo(
+        p = i.useMemo(
             () => [
                 {
                     renderContent: () => {
                         let e = t.config.messages.gameTitle;
                         if (!0 === s)
-                            return (0, i.jsx)(d.L5, {
-                                children: u.intl.formatToPlainString(u.t.C45G4B, { gameTitle: e }),
+                            return (0, n.jsx)(d.L5, {
+                                children: f.intl.formatToPlainString(f.t.C45G4B, { gameTitle: e }),
                             });
-                        let n = a === g.qh.WEB,
+                        let i = a === g.qh.WEB,
                             l =
                                 null == r
-                                    ? u.intl.formatToPlainString(n ? u.t.j3155Y : u.t.tNmoIp, { gameTitle: e })
-                                    : u.intl.format(n ? u.t["4+3zP/"] : u.t.vDLUD3, {
+                                    ? f.intl.formatToPlainString(i ? f.t.j3155Y : f.t.tNmoIp, { gameTitle: e })
+                                    : f.intl.format(i ? f.t["4+3zP/"] : f.t.vDLUD3, {
                                           gameTitle: e,
                                           onClickGameTitle: r,
                                       });
-                        return (0, i.jsx)(d.L5, { children: l });
+                        return (0, n.jsx)(d.L5, { children: l });
                     },
-                    isComplete: (s ?? !1) || f,
+                    isComplete: (s ?? !1) || u,
                 },
                 {
                     renderContent: () =>
-                        (0, i.jsx)(d.L5, {
+                        (0, n.jsx)(d.L5, {
                             children:
-                                !0 !== s || f || null == r
-                                    ? u.intl.formatToPlainString(u.t.nP1hFd, {
+                                !0 !== s || u || null == r
+                                    ? f.intl.formatToPlainString(f.t.nP1hFd, {
                                           objective: o?.messages.taskDescription ?? "",
                                           gameTitle: t.config.messages.gameTitle,
                                           rewardName: (0, m.mq)(t.config, x),
                                       })
-                                    : u.intl.format(u.t.GLZnbq, {
+                                    : f.intl.format(f.t.GLZnbq, {
                                           objective: o?.messages.taskDescription ?? "",
                                           gameTitle: t.config.messages.gameTitle,
                                           rewardName: (0, m.mq)(t.config, x),
                                           onClickGameTitle: r,
                                       }),
                         }),
-                    isComplete: f,
+                    isComplete: u,
                 },
             ],
-            [a, s, f, t.config, o, r, x],
+            [a, s, u, t.config, o, r, x],
         );
-    return (0, i.jsx)(d.Ay, {
-        heading: u.intl.string(u.t.dc9w4N),
+    return (0, n.jsx)(d.Ay, {
+        heading: f.intl.string(f.t.dc9w4N),
         steps: p,
-        children: !0 === s && !f && (0, i.jsx)(h, {}),
+        children: !0 === s && !u && (0, n.jsx)(h, {}),
     });
 };

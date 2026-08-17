@@ -16,18 +16,18 @@ var i,
     N = a(289873),
     _ = a(830215),
     v = a(442433),
-    j = a(889227),
-    U = a(280450),
+    U = a(889227),
+    j = a(280450),
     E = a(351906),
     g = a(287809),
-    T = a(174459),
-    f = a(427262),
-    I = a(429707),
+    I = a(174459),
+    T = a(427262),
+    f = a(429707),
     p = a(274303),
-    O = a(994125),
-    S = a(573879),
-    D = a(652215),
-    M = a(375708),
+    M = a(994125),
+    O = a(573879),
+    S = a(652215),
+    D = a(375708),
     b = a(643090),
     L =
         (((i = {})[(i.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
@@ -40,15 +40,15 @@ function k(e) {
             currentUser: s,
             hidePrivateData: l,
             isAuthenticated: N,
-        } = (0, c.cf)([g.default, E.A, U.default], () => ({
+        } = (0, c.cf)([g.default, E.A, j.default], () => ({
             currentUser: g.default.getCurrentUser(),
             hidePrivateData: E.A.hidePersonalInformation,
-            isAuthenticated: U.default.isAuthenticated(),
+            isAuthenticated: j.default.isAuthenticated(),
         })),
-        O = new j.A(a),
-        L = N && s?.id === O.id,
+        M = new U.A(a),
+        L = N && s?.id === M.id,
         k = a.tokenStatus === p.U.INVALID,
-        y = l || O.hasUniqueUsername() ? null : `#${O.discriminator}`,
+        y = l || M.hasUniqueUsername() ? null : `#${M.discriminator}`,
         R = null;
     return (
         L
@@ -56,21 +56,21 @@ function k(e) {
                   variant: "text-sm/semibold",
                   className: b.dx,
                   color: "text-feedback-positive",
-                  children: M.intl.string(M.t.seV8yt),
+                  children: D.intl.string(D.t.seV8yt),
               }))
             : k &&
               (R = (0, n.jsx)(u.E, {
                   variant: "text-sm/semibold",
                   className: b.dx,
                   color: "text-feedback-critical",
-                  children: M.intl.string(M.t.tYX2ps),
+                  children: D.intl.string(D.t.tYX2ps),
               })),
         (0, n.jsx)("div", {
             className: b.KJ,
             children: (0, n.jsxs)("div", {
                 className: b.yS,
                 children: [
-                    (0, n.jsx)(m.eu, { src: O.getAvatarURL(void 0, 40), size: x._3.SIZE_40, "aria-label": a.username }),
+                    (0, n.jsx)(m.eu, { src: M.getAvatarURL(void 0, 40), size: x._3.SIZE_40, "aria-label": a.username }),
                     (0, n.jsxs)("div", {
                         className: r()(b.K_, { [b.zU]: !L }),
                         children: [
@@ -81,7 +81,7 @@ function k(e) {
                                         variant: "text-md/semibold",
                                         color: "text-strong",
                                         lineClamp: 1,
-                                        children: f.Ay.getUserTag(O, {
+                                        children: T.Ay.getUserTag(M, {
                                             mode: "username",
                                             identifiable: l ? "never" : "always",
                                         }),
@@ -98,41 +98,41 @@ function k(e) {
                             !L &&
                                 (0, n.jsx)(A.$, {
                                     variant: "secondary",
-                                    text: k ? M.intl.string(M.t["DSN+hw"]) : t,
+                                    text: k ? D.intl.string(D.t["DSN+hw"]) : t,
                                     onClick: function () {
                                         k
                                             ? i(0, a.id)
-                                            : (T.default.track(D.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                                  location: { section: D.JJy.MANAGE_ACCOUNTS_MODAL },
+                                            : (I.default.track(S.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                                  location: { section: S.JJy.MANAGE_ACCOUNTS_MODAL },
                                               }),
-                                              I.Mx(a.id, void 0, S.WX.MULTI_ACCOUNTS_LIST),
+                                              f.Mx(a.id, void 0, O.WX.MULTI_ACCOUNTS_LIST),
                                               i(1, a.id));
                                     },
                                 }),
                             (0, n.jsx)(h.K, {
-                                icon: C.j,
+                                icon: C.MoreHorizontalIcon,
                                 onClick: function (e) {
                                     (0, v.jA)(e, (e) => {
                                         let { onSelect: t } = e;
                                         return (0, n.jsx)(d.W, {
                                             "data-menu-migrated-auto": !0,
-                                            "aria-label": M.intl.string(M.t["41qiDU"]),
+                                            "aria-label": D.intl.string(D.t["41qiDU"]),
                                             navId: "manage-multi-account",
                                             onClose: v.Z_,
                                             onSelect: t,
                                             children: (0, n.jsx)(o.Dr, {
                                                 id: "remove-account",
-                                                label: M.intl.string(M.t.lSLMaU),
+                                                label: D.intl.string(D.t.lSLMaU),
                                                 action: () => {
                                                     let e;
                                                     _.A.logout("multi_accounts_list", null, a.id).finally(() => {
-                                                        I.At(a.id);
+                                                        f.At(a.id);
                                                     }),
                                                         (e = {}),
                                                         null != s
-                                                            ? (e.section = D.JJy.MANAGE_ACCOUNTS_MODAL)
-                                                            : (e.page = D.S3d.LOGIN),
-                                                        T.default.track(D.HAw.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                            ? (e.section = S.JJy.MANAGE_ACCOUNTS_MODAL)
+                                                            : (e.page = S.S3d.LOGIN),
+                                                        I.default.track(S.HAw.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         i(2, a.id),
@@ -143,7 +143,7 @@ function k(e) {
                                         });
                                     });
                                 },
-                                "aria-label": M.intl.string(M.t.PdRCRg),
+                                "aria-label": D.intl.string(D.t.PdRCRg),
                                 variant: "icon-only",
                             }),
                         ],
@@ -155,7 +155,7 @@ function k(e) {
 }
 function y(e) {
     let { actionText: t, onAction: a } = e,
-        { isLoading: i, multiAccountUsers: l } = (0, O.K)();
+        { isLoading: i, multiAccountUsers: l } = (0, M.K)();
     return (0, n.jsx)("div", {
         className: b.p_,
         children: i

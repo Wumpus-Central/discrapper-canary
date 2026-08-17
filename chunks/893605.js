@@ -28,8 +28,8 @@ var i = n(477900),
     M = n(47167),
     O = n(713654),
     y = n(585510),
-    T = n(610136),
-    I = n(594061),
+    I = n(610136),
+    T = n(594061),
     k = n(95701),
     R = n(734057),
     w = n(769765),
@@ -571,7 +571,7 @@ function ex(e) {
 }
 function ej(e) {
     let { guildId: t } = e,
-        n = (0, u.bG)([T.A], () => T.A.getGuildAlertSettings()[t]);
+        n = (0, u.bG)([I.A], () => I.A.getGuildAlertSettings()[t]);
     return (0, i.jsxs)(x.B, {
         gap: 24,
         children: [
@@ -580,12 +580,12 @@ function ej(e) {
                 label: X.intl.string(X.t.u6dc5B),
                 description: X.intl.string(X.t.z8Td48),
                 onChange: (e) =>
-                    (0, I.TG)(
+                    (0, T.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertNag = !e;
                         },
-                        I.Sb.INFREQUENT_USER_ACTION,
+                        T.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
             (0, i.jsx)(j.d, {
@@ -593,12 +593,12 @@ function ej(e) {
                 label: X.intl.string(X.t.P8MG6q),
                 description: X.intl.string(X.t.PyxXs8),
                 onChange: (e) =>
-                    (0, I.TG)(
+                    (0, T.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertPush = !e;
                         },
-                        I.Sb.INFREQUENT_USER_ACTION,
+                        T.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
         ],
@@ -703,7 +703,7 @@ function eO(e) {
                 children: [
                     (0, i.jsxs)("div", {
                         className: eM.Vg,
-                        children: [(0, i.jsx)(ey, { unreadSetting: r }), (0, i.jsx)(eT, { notificationSetting: a })],
+                        children: [(0, i.jsx)(ey, { unreadSetting: r }), (0, i.jsx)(eI, { notificationSetting: a })],
                     }),
                     (0, i.jsxs)("div", {
                         className: eM.Vg,
@@ -822,7 +822,7 @@ function eO(e) {
                                             t &&
                                                 (0, i.jsx)(_.m, {
                                                     text: X.intl.string(X.t.idXSbI),
-                                                    children: (0, i.jsx)(eE.m, {
+                                                    children: (0, i.jsx)(eE.CircleInformationIcon, {
                                                         size: "custom",
                                                         width: 20,
                                                         height: 20,
@@ -888,7 +888,7 @@ function ey(e) {
         })
     );
 }
-function eT(e) {
+function eI(e) {
     return (0, i.jsxs)("div", {
         className: eM.G5,
         children: [
@@ -927,13 +927,13 @@ function eT(e) {
         ],
     });
 }
-var eI = n(151491);
+var eT = n(151491);
 function ek(e) {
     return (0, i.jsx)("div", {
-        className: eI.bV,
+        className: eT.bV,
         children: (0, i.jsx)(E.D, {
             variant: "text-xs/bold",
-            className: eI.l_,
+            className: eT.l_,
             color: "text-muted",
             children: e.title,
         }),
@@ -941,7 +941,7 @@ function ek(e) {
 }
 function eR(e) {
     return (0, i.jsx)("div", {
-        className: eI.yV,
+        className: eT.yV,
         children: (0, i.jsx)(b.E, { variant: "text-sm/normal", color: "text-subtle", children: e.description }),
     });
 }
@@ -950,7 +950,7 @@ function ew(e) {
         children: [
             null != e.title && (0, i.jsx)(ek, { title: e.title }),
             (0, i.jsx)("div", {
-                className: en()(eI.f5, { [eI.ou]: !0 !== e.noPadding, [eI._9]: !0 !== e.noContainer }),
+                className: en()(eT.f5, { [eT.ou]: !0 !== e.noPadding, [eT._9]: !0 !== e.noContainer }),
                 children: e.children,
             }),
         ],
@@ -1063,7 +1063,7 @@ function eY(e) {
 function eH(e) {
     let { guildId: t } = e,
         n = (0, y._g)(t),
-        l = (0, u.bG)([T.A], () => T.A.getGuildAlertSettings()[t]);
+        l = (0, u.bG)([I.A], () => I.A.getGuildAlertSettings()[t]);
     if (n)
         return (0, i.jsxs)("div", {
             className: $.YK,
@@ -1079,12 +1079,12 @@ function eH(e) {
                                 description: X.intl.string(X.t.z8Td48),
                                 checked: !l?.disableRaidAlertNag,
                                 onChange: (e) =>
-                                    (0, I.TG)(
+                                    (0, T.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertNag = !e;
                                         },
-                                        I.Sb.INFREQUENT_USER_ACTION,
+                                        T.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                             (0, i.jsx)(j.d, {
@@ -1092,12 +1092,12 @@ function eH(e) {
                                 description: X.intl.string(X.t.PyxXs8),
                                 checked: !l?.disableRaidAlertPush,
                                 onChange: (e) =>
-                                    (0, I.TG)(
+                                    (0, T.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertPush = !e;
                                         },
-                                        I.Sb.INFREQUENT_USER_ACTION,
+                                        T.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                         ],

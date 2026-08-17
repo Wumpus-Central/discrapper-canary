@@ -27,16 +27,16 @@ function b(e) {
         b = (0, V.vA)(t),
         { selectedUserIds: D, clearSelection: R } = (0, v.A)(t),
         E = D.size > 0;
-    function N(e, t, l, n) {
+    function S(e, t, l, n) {
         h.A.startBulkBan(e, t, l, n);
     }
-    let S = i.useCallback(() => {
+    let N = i.useCallback(() => {
             R();
         }, [R]),
         Z = (0, n.jsxs)("span", {
             className: L.zC,
             children: [
-                (0, n.jsx)(o.n, {
+                (0, n.jsx)(o.UserIcon, {
                     size: "custom",
                     width: 24,
                     height: 24,
@@ -47,10 +47,10 @@ function b(e) {
                     color: "text-default",
                     children: M.intl.format(M.t.TstoSZ, { count: D.size }),
                 }),
-                (0, n.jsx)(m.Q, { text: M.intl.string(M.t.yW6ZdE), onClick: S }),
+                (0, n.jsx)(m.Q, { text: M.intl.string(M.t.yW6ZdE), onClick: N }),
             ],
         }),
-        y = (0, n.jsxs)("span", {
+        I = (0, n.jsxs)("span", {
             className: L.UD,
             children: [
                 (0, n.jsx)(H.w, { size: "custom", color: "currentColor", width: 20, height: 20 }),
@@ -87,11 +87,11 @@ function b(e) {
                                               guildId: t,
                                               canBulkBan: b,
                                               userIds: D,
-                                              onBanMultiple: N,
+                                              onBanMultiple: S,
                                           });
                                   });
                           },
-                          onSaveText: y,
+                          onSaveText: I,
                           onSaveButtonColor: r.XD.RED,
                           message: Z,
                       }),

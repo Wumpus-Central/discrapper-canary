@@ -5,8 +5,8 @@ var i = n(477900),
     r = n.n(s),
     a = n(834730),
     u = n(289873),
-    d = n(429913),
-    o = n(561794),
+    o = n(429913),
+    d = n(594832),
     c = n(862772),
     I = n(310209),
     g = n(174459),
@@ -39,11 +39,11 @@ function F(e) {
             guildId: r,
             showIcons: a,
             channelId: u,
-            userIdsForGifting: d,
+            userIdsForGifting: o,
             userIdsForRecommendation: c,
             spec: I = y,
         } = e,
-        [g, p] = l.useState(m().uniq(d)),
+        [g, p] = l.useState(m().uniq(o)),
         [h, S] = l.useState(!1),
         [f, b] = l.useState(m().uniq(c)),
         { analyticsLocations: F } = (0, v.Ay)(
@@ -58,10 +58,10 @@ function F(e) {
     }, [c]),
         l.useEffect(() => {
             p((e) => {
-                let t = m().uniq(d);
+                let t = m().uniq(o);
                 return (0, _.v)(e, t) ? e : t;
             });
-        }, [d]);
+        }, [o]);
     let G = (0, x.bG)([A.default], () => (1 === g.length ? A.default.getUser(g[0]) : void 0), [g]),
         M = (0, x.yK)([A.default], () => f.map((e) => A.default.getUser(e)).filter(O.Vq), [f]),
         P = l.useCallback(() => {
@@ -98,7 +98,7 @@ function F(e) {
         onHoverOrFocusChange: S,
         children: [
             (0, i.jsx)(j.A, { spec: I, onClick: w, isHoveringOrFocusing: h, label: B, icon: U }),
-            a && n === o.uS.WISHLIST && M.length > 0
+            a && n === d.uS.WISHLIST && M.length > 0
                 ? (0, i.jsx)(R.X, { spec: I, users: M, guildId: r ?? void 0, channelId: u ?? void 0 })
                 : null,
         ],
@@ -110,21 +110,29 @@ var G = n(278416),
     w = n(262427),
     B = n(986820);
 function U(e) {
-    let { className: t, Icon: n = G.g, iconSize: l = "xxs", gradientColor: s = "green", text: u, tooltip: d, ...o } = e;
+    let {
+        className: t,
+        Icon: n = G.TagIcon,
+        iconSize: l = "xxs",
+        gradientColor: s = "green",
+        text: u,
+        tooltip: o,
+        ...d
+    } = e;
     function c() {
         return (0, i.jsx)(w.A, {
             className: r()(B.K, t, { [B.e]: null == u }),
             Icon: n,
             iconSize: l,
             gradientColor: s,
-            ...o,
+            ...d,
             children: null != u && (0, i.jsx)(a.E, { variant: "text-sm/bold", color: "currentColor", children: u }),
         });
     }
-    return null != d && "object" == typeof d
-        ? (0, i.jsx)(M.u, { assetSize: 48, asContainer: !0, element: "div", ...d, children: c() })
-        : null != d && "string" == typeof d
-          ? (0, i.jsx)(P.m, { text: d, asContainer: !0, tag: "div", children: c() })
+    return null != o && "object" == typeof o
+        ? (0, i.jsx)(M.u, { assetSize: 48, asContainer: !0, element: "div", ...o, children: c() })
+        : null != o && "string" == typeof o
+          ? (0, i.jsx)(P.m, { text: o, asContainer: !0, tag: "div", children: c() })
           : c();
 }
 var W = n(652215),
@@ -140,7 +148,7 @@ function D(e) {
             numWishlistItems: _ = 2,
             cardSpec: T,
         } = e,
-        v = (0, d.h)(n),
+        v = (0, o.h)(n),
         E = (0, h.A)(v?.id),
         C = l.useMemo(() => (E?.id != null ? [E.id] : []), [E]),
         {
@@ -166,7 +174,7 @@ function D(e) {
                     F,
                     {
                         sku: t,
-                        source: n.length > 0 ? o.uS.WISHLIST : o.uS.POPULAR,
+                        source: n.length > 0 ? d.uS.WISHLIST : d.uS.POPULAR,
                         application: E,
                         showIcons: e,
                         guildId: m,

@@ -1,4 +1,4 @@
-s.d(e, { $b: () => g, QB: () => E, _k: () => _, bh: () => x }), s(582128);
+s.d(e, { $b: () => E, QB: () => g, _k: () => _, bh: () => x }), s(582128);
 var n = s(661531),
     i = s(628284),
     r = s(695366),
@@ -11,7 +11,7 @@ var n = s(661531),
     N = s(259960),
     m = s(239093),
     h = s(375708);
-function E() {
+function g() {
     return {
         [d.PN.ALL_GOOD]: {
             title: h.t.uaKrRi,
@@ -53,7 +53,7 @@ function E() {
         },
     };
 }
-function g() {
+function E() {
     let t = (0, u.K)();
     if (!(0, N.v)()) return h.intl.string(h.t.ZTNur7);
     switch (t.state) {
@@ -101,12 +101,12 @@ let I = {
         [d.PN.LIMITED]: {
             color: n.A.colors.ICON_FEEDBACK_WARNING,
             backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_WARNING,
-            Icon: l.i,
+            Icon: l.WarningIcon,
         },
         [d.PN.VERY_LIMITED]: {
             color: n.A.unsafe_rawColors.ORANGE_345,
             backgroundColor: n.A.unsafe_rawColors.OPACITY_ORANGE_12,
-            Icon: l.i,
+            Icon: l.WarningIcon,
         },
         [d.PN.AT_RISK]: {
             color: n.A.colors.ICON_FEEDBACK_CRITICAL,
@@ -115,7 +115,7 @@ let I = {
         },
         [d.PN.SUSPENDED]: { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: a.a },
     },
-    A = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: c.c };
+    A = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: c.CircleQuestionIcon };
 function _() {
     let t = (0, u.K)();
     return (0, N.v)() ? I[t.state] : A;

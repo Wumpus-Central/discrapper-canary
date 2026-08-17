@@ -2,9 +2,9 @@ n.d(e, { L: () => D, o: () => I });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
-    s = n.n(i),
-    a = n(989349),
-    c = n.n(a),
+    a = n.n(i),
+    s = n(989349),
+    c = n.n(s),
     u = n(661531),
     o = n(834730),
     d = n(81466),
@@ -22,18 +22,18 @@ var l = n(477900),
 function I(t) {
     let e,
         { timeData: n, status: l, eventType: r, isCanceled: i } = t,
-        { startDateTimeString: s, endDateTimeString: a, currentOrPastEvent: c, upcomingEvent: u, diffMinutes: o } = n;
+        { startDateTimeString: a, endDateTimeString: s, currentOrPastEvent: c, upcomingEvent: u, diffMinutes: o } = n;
     if (5 == (e = l === v.XG.CANCELED || i ? 5 : l === v.XG.ACTIVE ? 3 : v.lV.has(l) ? 4 : c ? 2 : +!!u))
-        return `${s}, ${j.intl.string(j.t.fyBVRm)}`;
+        return `${a}, ${j.intl.string(j.t.fyBVRm)}`;
     let d = r === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]),
-        m = s;
-    switch ((null != a && "" !== a && (m = j.intl.formatToPlainString(j.t.tXbu7I, { start: s, end: a })), e)) {
+        m = a;
+    switch ((null != s && "" !== s && (m = j.intl.formatToPlainString(j.t.tXbu7I, { start: a, end: s })), e)) {
         case 1:
             return o > 0 ? j.intl.formatToPlainString(j.t.PQlCWk, { minutes: o }) : j.intl.string(j.t.WINqKV);
         case 2:
             return j.intl.string(j.t.WINqKV);
         case 3:
-            return null != a && "" !== a ? j.intl.formatToPlainString(j.t.tXbu7I, { start: d, end: a }) : d;
+            return null != s && "" !== s ? j.intl.formatToPlainString(j.t.tXbu7I, { start: d, end: s }) : d;
         default:
             return m;
     }
@@ -48,12 +48,12 @@ function C() {
 function L(t) {
     let { children: e, className: n, tooltipText: r } = t;
     return (0, l.jsx)("div", {
-        className: s()(T.cd, n),
+        className: a()(T.cd, n),
         children: (0, l.jsx)(g.m, {
             position: "right",
             text: r,
             shouldShow: null != r,
-            children: (0, l.jsx)("div", { className: s()(T.cd, n), children: e }),
+            children: (0, l.jsx)("div", { className: a()(T.cd, n), children: e }),
         }),
     });
 }
@@ -69,7 +69,7 @@ function p(t) {
             startTime: e,
             status: n,
             eventType: i,
-            className: a,
+            className: s,
             liveText: x,
             textVariant: g = "text-sm/semibold",
             isNew: N,
@@ -117,8 +117,8 @@ function p(t) {
         {
             Icon: W,
             iconColor: H,
-            textColor: O,
-            tooltipText: Y,
+            textColor: Y,
+            tooltipText: O,
         } = r.useMemo(
             () =>
                 (function (t) {
@@ -128,22 +128,22 @@ function p(t) {
                             textBrand: l,
                             textPositive: r,
                             textDanger: i,
-                            endDateTimeString: s,
-                            startDateTimeString: a,
+                            endDateTimeString: a,
+                            startDateTimeString: s,
                         } = t,
-                        c = d.C,
+                        c = d.CalendarIcon,
                         u = l,
                         o = "text-default";
                     switch (n) {
                         case 3:
-                            (u = r), (o = null != s ? void 0 : "text-feedback-positive");
+                            (u = r), (o = null != a ? void 0 : "text-feedback-positive");
                             break;
                         case 4:
-                            c = m.O;
+                            c = m.ClockIcon;
                             break;
                         case 2:
                         case 1:
-                            (o = "text-brand"), (e = a);
+                            (o = "text-brand"), (e = s);
                             break;
                         case 5:
                             u = i;
@@ -191,8 +191,8 @@ function p(t) {
         })((0, A.z7)(n, I), n);
     }
     return (0, l.jsxs)(L, {
-        className: s()(a, { [T.AD]: null != B }),
-        tooltipText: Y,
+        className: a()(s, { [T.AD]: null != B }),
+        tooltipText: O,
         children: [
             N && n === v.XG.SCHEDULED
                 ? (0, l.jsx)(C, {})
@@ -200,7 +200,7 @@ function p(t) {
             (0, l.jsxs)("div", {
                 className: T.Zy,
                 children: [
-                    (0, l.jsx)(o.E, { color: O, variant: g, children: z }),
+                    (0, l.jsx)(o.E, { color: Y, variant: g, children: z }),
                     null != B && (0, l.jsx)(o.E, { color: "text-default", variant: "text-xs/normal", children: B }),
                 ],
             }),

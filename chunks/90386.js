@@ -1,5 +1,5 @@
 n.d(t, { I: () => h, T: () => k });
-var r = n(627968),
+var r = n(477900),
     s = n(97808),
     a = n(778712),
     i = n(950305),
@@ -8,13 +8,13 @@ var r = n(627968),
     c = n(287809),
     u = n(562153),
     m = n(375708),
-    d = n(131678);
+    d = n(406022);
 function h(e, t) {
     if (1 === e.length) {
         let n = c.default.getUser(e[0]);
         return null != n
             ? (0, r.jsx)(s.eu, { src: n.getAvatarURL(t, 32), size: a._3.SIZE_32, "aria-hidden": !0 })
-            : (0, r.jsx)(i.n, {});
+            : (0, r.jsx)(i.UserIcon, {});
     }
     return (0, r.jsx)(l.A, { recipients: e, size: a._3.SIZE_32 });
 }

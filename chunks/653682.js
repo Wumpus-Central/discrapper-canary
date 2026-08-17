@@ -21,7 +21,7 @@ let f = "/assets/8b9e0ddc76afa526.png",
     C = "/assets/6011f35d14cdcf7f.png",
     P = "/assets/52a68ae4cbfadd1b.png";
 var b = e(493822);
-function y(t) {
+function I(t) {
     let { user: a, tagId: e, title: s, messageCount: i, reactionCount: r, activeAgo: l, tags: c, attachment: o } = t,
         { name: d, avatarSrc: m } = a;
     return (0, n.jsxs)("div", {
@@ -73,7 +73,10 @@ function y(t) {
                                 color: "text-default",
                                 variant: "text-xs/medium",
                                 className: b.Hu,
-                                children: [(0, n.jsx)(j.o, { size: "xs", color: "currentColor", className: b.Kk }), i],
+                                children: [
+                                    (0, n.jsx)(j.ChatIcon, { size: "xs", color: "currentColor", className: b.Kk }),
+                                    i,
+                                ],
                             }),
                             r > 0 &&
                                 (0, n.jsxs)(n.Fragment, {
@@ -110,7 +113,7 @@ function y(t) {
         ],
     });
 }
-function I(t) {
+function y(t) {
     let { author: a, content: e } = t,
         { name: s, isOP: i, avatarSrc: r } = a;
     return (0, n.jsxs)("div", {
@@ -148,14 +151,14 @@ function k(t) {
         children: (0, n.jsxs)("div", {
             className: b.VH,
             children: [
-                (0, n.jsx)(j.o, { size: "md", color: "currentColor", className: b.DD }),
+                (0, n.jsx)(j.ChatIcon, { size: "md", color: "currentColor", className: b.DD }),
                 (0, n.jsx)(v.D, { color: "text-strong", variant: "heading-lg/semibold", className: b.wx, children: a }),
                 (0, n.jsx)("div", {
                     className: b.zC,
                     children: e.map((t, a) =>
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(I, { ...t }, a),
+                                (0, n.jsx)(y, { ...t }, a),
                                 0 === a &&
                                     (0, n.jsxs)("div", {
                                         children: [
@@ -182,7 +185,10 @@ function k(t) {
                                                         variant: "text-xs/medium",
                                                         className: b.CQ,
                                                         children: [
-                                                            (0, n.jsx)(N.X, { size: "xs", color: "currentColor" }),
+                                                            (0, n.jsx)(N.BellIcon, {
+                                                                size: "xs",
+                                                                color: "currentColor",
+                                                            }),
                                                             p.intl.string(p.t["3aOv+h"]),
                                                         ],
                                                     }),
@@ -403,7 +409,7 @@ function E(t) {
                         }),
                         (0, n.jsx)("div", {
                             className: b.Yl,
-                            children: c.map((t, a) => (0, n.jsx)(y, { ...t, tags: l }, a)),
+                            children: c.map((t, a) => (0, n.jsx)(I, { ...t, tags: l }, a)),
                         }),
                     ],
                 }),
@@ -466,14 +472,14 @@ function M(t) {
                     j(T.i.PRIMARY);
             },
         });
-    let y = p.intl.string(p.t["6S6WCQ"]);
+    let I = p.intl.string(p.t["6S6WCQ"]);
     return (0, n.jsxs)(i.d, {
         transitionState: v,
         size: "xxl",
         onClose: async () => await j(),
-        "aria-label": y,
+        "aria-label": I,
         children: [
-            (0, n.jsx)(r.rQ, { title: y, subtitle: p.intl.string(p.t.I2BA8K) }),
+            (0, n.jsx)(r.rQ, { title: I, subtitle: p.intl.string(p.t.I2BA8K) }),
             (0, n.jsxs)(l.c, {
                 children: [
                     (0, n.jsx)(m.V, {

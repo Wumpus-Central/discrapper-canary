@@ -1,35 +1,35 @@
-i.d(t, { default: () => ea });
-var l = i(477900),
-    a = i(582128),
-    s = i(503698),
-    n = i.n(s),
-    r = i(281445),
-    d = i(224640),
-    c = i(17928),
-    o = i(843282),
-    u = i(866665),
-    m = i(834730),
-    x = i(408278),
-    h = i(789645),
-    v = i(297264),
-    g = i(290136),
-    j = i(95477),
-    p = i(821609),
-    b = i(287809),
-    f = i(975571),
-    N = i(123917),
-    E = i(158045),
-    C = i(498480),
-    A = i(42957),
-    S = i(814201),
-    P = i(73825),
-    k = i(793574),
-    U = i(529427),
-    w = i(97352),
-    z = i(192308);
-async function L(e) {
+t.d(i, { default: () => ea });
+var l = t(477900),
+    a = t(582128),
+    s = t(503698),
+    n = t.n(s),
+    r = t(281445),
+    d = t(224640),
+    c = t(17928),
+    o = t(843282),
+    u = t(866665),
+    m = t(834730),
+    x = t(408278),
+    h = t(789645),
+    v = t(297264),
+    g = t(290136),
+    j = t(95477),
+    p = t(821609),
+    b = t(287809),
+    f = t(975571),
+    N = t(123917),
+    E = t(158045),
+    C = t(498480),
+    A = t(42957),
+    S = t(814201),
+    P = t(73825),
+    k = t(793574),
+    U = t(529427),
+    w = t(97352),
+    I = t(192308);
+async function z(e) {
     let {
-            skuId: t,
+            skuId: i,
             gameName: a,
             gameId: s,
             serverName: n = "",
@@ -41,15 +41,15 @@ async function L(e) {
             onBack: m,
         } = e,
         x = null != d,
-        h = w.A.getForSKU(t)[0]?.id;
+        h = w.A.getForSKU(i)[0]?.id;
     if (null == h) {
-        let e = await (0, P.ur)(t);
+        let e = await (0, P.ur)(i);
         h = e[0]?.id;
     }
-    x && (await Promise.all(o.filter((e) => e !== t).map((e) => (0, P.ur)(e))));
+    x && (await Promise.all(o.filter((e) => e !== i).map((e) => (0, P.ur)(e))));
     let v = o.flatMap((e) => w.A.getForSKU(e).map((e) => e.id));
     return U.UnifiedCheckoutFlowManagerSingletons[U.CL.GAME_SERVER_SUBSCRIPTION_CHECKOUT].get().openCheckoutModal({
-        checkoutConfiguration: { skuId: t, activeSubscription: d ?? null },
+        checkoutConfiguration: { skuId: i, activeSubscription: d ?? null },
         forwardedPaymentModalProps: { initialPlanId: h, planGroup: v, skipConfirm: !0 },
         unifiedCheckoutProviderProps: { analyticsLocations: [k.A.GAME_SERVER_SETUP_MODAL] },
         tenantParams: {
@@ -64,12 +64,12 @@ async function L(e) {
         checkoutHandlers: {
             onComplete: () => {
                 var e;
-                let t = x && c && null != d ? d.id : null;
-                null != t && (0, C.hE)(t),
+                let i = x && c && null != d ? d.id : null;
+                null != i && (0, C.hE)(i),
                     (0, C.hU)()
                         .catch(() => {})
                         .then(() => {
-                            null != t && (0, C.hE)(t);
+                            null != i && (0, C.hE)(i);
                         }),
                     (e = {
                         gameId: s,
@@ -79,51 +79,57 @@ async function L(e) {
                         isDowngrade: x && !c,
                         renewalDate: d?.currentPeriodEnd,
                     }),
-                    (0, z.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([i.e("644504"), i.e("489541")]).then(i.bind(i, 978084));
-                        return (i) => (0, l.jsx)(t, { ...i, ...e });
+                    (0, I.openModalLazy)(async () => {
+                        let { default: i } = await Promise.all([t.e("644504"), t.e("489541")]).then(t.bind(t, 978084));
+                        return (t) => (0, l.jsx)(i, { ...t, ...e });
                     });
             },
         },
         modalAPIOptions: { modalKey: "game-server-subscription-payment-modal" },
     });
 }
-var M = i(349085),
-    V = i(749351),
-    y = i(115815),
-    R = i(231513),
-    G = i(885574),
-    I = i(275695),
-    D = i(375708),
-    O = i(89625);
+var L = t(349085),
+    M = t(749351),
+    V = t(115815),
+    y = t(231513),
+    R = t(885574),
+    G = t(275695),
+    D = t(375708),
+    O = t(89625);
 function T(e) {
-    let { gameName: t, text: i } = e;
+    let { gameName: i, text: t } = e;
     return (0, l.jsxs)("div", {
         className: O.lm,
         children: [
-            (0, l.jsx)(G.m, { className: O.Kk, size: "custom", width: 24, height: 24, color: "currentColor" }),
+            (0, l.jsx)(R.CircleInformationIcon, {
+                className: O.Kk,
+                size: "custom",
+                width: 24,
+                height: 24,
+                color: "currentColor",
+            }),
             (0, l.jsx)(m.E, {
                 className: O.Qq,
                 variant: "text-sm/medium",
                 color: "text-default",
                 tag: "p",
-                children: i ?? D.intl.format(I.default.uVpJYf, { gameName: t }),
+                children: t ?? D.intl.format(G.default.uVpJYf, { gameName: i }),
             }),
         ],
     });
 }
-var _ = i(403581),
-    K = i(939249),
-    W = i(532794),
-    F = i(580630),
-    H = i(202541),
-    Z = i(634876);
+var _ = t(403581),
+    K = t(939249),
+    W = t(532794),
+    F = t(580630),
+    H = t(202541),
+    Z = t(634876);
 function B(e) {
-    let { nitroPriceAmount: t, priceCurrency: i } = e,
+    let { nitroPriceAmount: i, priceCurrency: t } = e,
         s = a.useCallback(() => {
             (0, W.A)({ subscriptionTier: H.pe.TIER_2, analyticsLocations: [k.A.GAME_SERVER_PAGE] });
         }, []),
-        n = (0, F.RS)(t, i);
+        n = (0, F.RS)(i, t);
     return (0, l.jsxs)("div", {
         className: Z.kL,
         children: [
@@ -139,48 +145,48 @@ function B(e) {
         ],
     });
 }
-var Y = i(721425),
-    q = i(451341);
-function J(e) {
-    let { gameName: t, coverUrl: i, plan: a } = e;
+var Q = t(721425),
+    Y = t(451341);
+function q(e) {
+    let { gameName: i, coverUrl: t, plan: a } = e;
     return (0, l.jsxs)("div", {
-        className: q.Nr,
+        className: Y.Nr,
         children: [
             (0, l.jsxs)("div", {
-                className: q.ys,
+                className: Y.ys,
                 "aria-hidden": !0,
                 children: [
-                    null != i && (0, l.jsx)("img", { className: q.Fc, src: i, alt: "" }),
-                    (0, l.jsx)("div", { className: q.ex }),
+                    null != t && (0, l.jsx)("img", { className: Y.Fc, src: t, alt: "" }),
+                    (0, l.jsx)("div", { className: Y.ex }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: q.wx,
+                className: Y.wx,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: q.Vs,
+                        className: Y.Vs,
                         children: [
-                            null != i
-                                ? (0, l.jsx)("img", { className: q.uP, src: i, alt: "" })
+                            null != t
+                                ? (0, l.jsx)("img", { className: Y.uP, src: t, alt: "" })
                                 : (0, l.jsx)("div", {
-                                      className: q.Vj,
+                                      className: Y.Vj,
                                       children: (0, l.jsx)(m.E, {
                                           variant: "text-xs/semibold",
                                           color: "text-muted",
-                                          children: t,
+                                          children: i,
                                       }),
                                   }),
-                            (0, l.jsx)("div", { className: q.tw, "aria-hidden": !0 }),
+                            (0, l.jsx)("div", { className: Y.tw, "aria-hidden": !0 }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
-                        className: q.i8,
+                        className: Y.i8,
                         children: [
                             (0, l.jsx)(m.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-default",
                                 tag: "div",
-                                children: t,
+                                children: i,
                             }),
                             (0, l.jsx)(m.E, {
                                 variant: "text-xs/medium",
@@ -193,10 +199,10 @@ function J(e) {
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: q.M1,
+                className: Y.M1,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: q.zu,
+                        className: Y.zu,
                         children: [
                             (0, l.jsx)(m.E, {
                                 variant: "text-sm/semibold",
@@ -208,16 +214,16 @@ function J(e) {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 tag: "div",
-                                children: D.intl.string(I.default.i5lFSU),
+                                children: D.intl.string(G.default.i5lFSU),
                             }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: q.Wc }),
+                    (0, l.jsx)("div", { className: Y.Wc }),
                     (0, l.jsxs)("div", {
-                        className: q.zu,
+                        className: Y.zu,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: q.mi,
+                                className: Y.mi,
                                 children: [
                                     (0, l.jsx)(m.E, {
                                         variant: "text-sm/semibold",
@@ -237,13 +243,13 @@ function J(e) {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 tag: "div",
-                                children: D.intl.string(I.default["3+gt2d"]),
+                                children: D.intl.string(G.default["3+gt2d"]),
                             }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: q.Wc }),
+                    (0, l.jsx)("div", { className: Y.Wc }),
                     (0, l.jsxs)("div", {
-                        className: q.zu,
+                        className: Y.zu,
                         children: [
                             (0, l.jsx)(m.E, {
                                 variant: "text-sm/semibold",
@@ -255,36 +261,36 @@ function J(e) {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 tag: "div",
-                                children: D.intl.string(I.default["jlz/q6"]),
+                                children: D.intl.string(G.default["jlz/q6"]),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: q.UK, children: (0, l.jsx)(Y.X, {}) }),
+            (0, l.jsx)("div", { className: Y.UK, children: (0, l.jsx)(Q.X, {}) }),
         ],
     });
 }
-var X = i(199781),
-    Q = i(628049),
-    $ = i(652215),
-    ee = i(727298);
-let et = [];
-function ei(e) {
-    let { region: t, disabled: i } = e,
-        { pingText: a, pingCircleStyle: s } = (0, y.b)(t.pingUrl);
+var J = t(199781),
+    X = t(628049),
+    $ = t(652215),
+    ee = t(727298);
+let ei = [];
+function et(e) {
+    let { region: i, disabled: t } = e,
+        { pingText: a, pingCircleStyle: s } = (0, V.b)(i.pingUrl);
     return (0, l.jsxs)("div", {
         className: ee.wV,
         children: [
-            (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", tag: "span", children: t.name }),
-            !0 === i
+            (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", tag: "span", children: i.name }),
+            !0 === t
                 ? (0, l.jsx)(m.E, {
                       variant: "text-xs/medium",
                       color: "text-subtle",
                       tag: "span",
-                      children: D.intl.string(I.default.aCyHe2),
+                      children: D.intl.string(G.default.aCyHe2),
                   })
-                : "" !== t.pingUrl
+                : "" !== i.pingUrl
                   ? (0, l.jsxs)("div", {
                         className: ee.$T,
                         children: [
@@ -302,36 +308,36 @@ function ei(e) {
     });
 }
 function el(e) {
-    let { plan: t, canUseShopDiscount: i } = e;
+    let { plan: i, canUseShopDiscount: t } = e;
     return (0, l.jsxs)("div", {
         className: ee.wV,
         children: [
-            (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", tag: "span", children: t.name }),
+            (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", tag: "span", children: i.name }),
             (0, l.jsx)(m.E, {
                 variant: "text-xs/medium",
                 color: "text-subtle",
                 tag: "span",
-                children: i && null != t.nitroPriceLabel ? t.nitroPriceLabel : t.standardPriceLabel,
+                children: t && null != i.nitroPriceLabel ? i.nitroPriceLabel : i.standardPriceLabel,
             }),
         ],
     });
 }
 function ea(e) {
     let {
-            gameName: t,
-            gameId: i,
+            gameName: i,
+            gameId: t,
             coverUrl: s,
-            plans: n = et,
+            plans: n = ei,
             initialPlanId: P,
             initialRegionId: k,
             initialRegionName: U,
             initialServerName: w,
-            activeSubscription: z,
-            onViewServer: y,
-            ...G
+            activeSubscription: I,
+            onViewServer: V,
+            ...R
         } = e,
-        O = null != z,
-        _ = (0, M.A)(i, "cover") ?? s;
+        O = null != I,
+        _ = (0, L.A)(t, "cover") ?? s;
     a.useEffect(() => {
         (0, C.dk)();
     }, []);
@@ -340,12 +346,12 @@ function ea(e) {
         F = (0, c.bG)([A.A], () => A.A.isCreationDisabled()),
         H = (0, c.bG)([S.A], () => S.A.getGameServers().length),
         Z = (0, c.bG)([S.A], () => S.A.getMaxServers()),
-        Y = !O && H >= Z,
-        [q, ea] = a.useState(w ?? ""),
+        Q = !O && H >= Z,
+        [Y, ea] = a.useState(w ?? ""),
         [es, en] = a.useState(k),
         [er, ed] = a.useState(P ?? n[0]?.id),
         ec = (0, c.bG)([b.default], () => E.Ay.canUseShopDiscounts(b.default.getCurrentUser())),
-        { isValid: eo, errors: eu } = (0, V.u)(q),
+        { isValid: eo, errors: eu } = (0, M.u)(Y),
         em = n.find((e) => e.id === er) ?? n[0],
         ex =
             !ec &&
@@ -357,75 +363,75 @@ function ea(e) {
         ev = null != em ? n.findIndex((e) => e.id === em.id) : -1,
         eg = eh >= 0 && ev > eh,
         ej = O && null != em && em.id !== P,
-        ep = O && q.trim().length > 0 && eo && q.trim() !== (w ?? "").trim(),
+        ep = O && Y.trim().length > 0 && eo && Y.trim() !== (w ?? "").trim(),
         eb = O
             ? ej
                 ? eh >= 0 && ev >= 0 && ev < eh
-                    ? D.intl.string(I.default.UGbET9)
-                    : D.intl.string(I.default.yUWVlo)
+                    ? D.intl.string(G.default.UGbET9)
+                    : D.intl.string(G.default.yUWVlo)
                 : D.intl.string(D.t["R3BPH+"])
             : D.intl.string(D.t["3PatSz"]),
         ef = a.useMemo(
             () =>
                 [...K]
-                    .sort((e, t) => (0, R.A)(e, t, W))
+                    .sort((e, i) => (0, y.A)(e, i, W))
                     .map((e) => ({ value: e, label: e.name, disabled: !0 !== e.enabled })),
             [K, W],
         ),
         eN = a.useMemo(() => n.map((e) => ({ value: e, label: e.name })), [n]),
-        eE = O ? (ej && !F) || ep : !F && !Y && q.trim().length > 0 && eo && null != es,
+        eE = O ? (ej && !F) || ep : !F && !Q && Y.trim().length > 0 && eo && null != es,
         eC = a.useCallback(() => {
-            (0, X.S)({
-                gameName: t,
-                gameId: i,
+            (0, J.S)({
+                gameName: i,
+                gameId: t,
                 coverUrl: s,
                 plans: n,
-                activeSubscription: z,
+                activeSubscription: I,
                 initialPlanId: er,
                 initialRegionId: es,
                 initialRegionName: U,
-                initialServerName: q,
-                onViewServer: y,
+                initialServerName: Y,
+                onViewServer: V,
             });
-        }, [t, i, s, n, z, er, es, U, q, y]),
+        }, [i, t, s, n, I, er, es, U, Y, V]),
         eA = a.useCallback(() => {
             if (null != em) {
                 if (O) {
-                    if (!eE || null == z) return;
-                    ep && (0, C.Ce)(z.id, q.trim()),
+                    if (!eE || null == I) return;
+                    ep && (0, C.Ce)(I.id, Y.trim()),
                         ej &&
-                            L({
+                            z({
                                 skuId: em.id,
-                                gameName: t,
-                                gameId: i,
-                                activeSubscription: z,
+                                gameName: i,
+                                gameId: t,
+                                activeSubscription: I,
                                 isPlanUpgrade: eg,
                                 planGroup: n.map((e) => e.id),
-                                onViewServer: y,
+                                onViewServer: V,
                                 onBack: eC,
                             }),
-                        G.onClose();
+                        R.onClose();
                     return;
                 }
                 eE &&
                     null != es &&
-                    (L({
+                    (z({
                         skuId: em.id,
-                        gameName: t,
-                        gameId: i,
-                        serverName: q,
+                        gameName: i,
+                        gameId: t,
+                        serverName: Y,
                         regionId: es,
-                        onViewServer: y,
+                        onViewServer: V,
                         onBack: eC,
                     }),
-                    G.onClose());
+                    R.onClose());
             }
-        }, [O, eg, ej, ep, z, eE, em, n, es, t, i, q, G, eC, y]),
-        eS = Q.eh[r.X.SHOCKBYTE] ?? "";
+        }, [O, eg, ej, ep, I, eE, em, n, es, i, t, Y, R, eC, V]),
+        eS = X.eh[r.X.SHOCKBYTE] ?? "";
     return (0, l.jsxs)(d.d, {
-        ...G,
+        ...R,
         size: "lg",
-        "aria-label": D.intl.string(I.default.RLGW9z),
+        "aria-label": D.intl.string(G.default.RLGW9z),
         children: [
             (0, l.jsx)("div", {
                 className: ee.b,
@@ -433,7 +439,7 @@ function ea(e) {
                     size: "sm",
                     variant: "icon-only",
                     icon: h.P,
-                    onClick: G.onClose,
+                    onClick: R.onClose,
                     "aria-label": D.intl.string(D.t.cpT0Cq),
                 }),
             }),
@@ -443,12 +449,12 @@ function ea(e) {
                     (0, l.jsx)(v.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: D.intl.string(I.default.RLGW9z),
+                        children: D.intl.string(G.default.RLGW9z),
                     }),
-                    Y &&
+                    Q &&
                         (0, l.jsx)(T, {
-                            gameName: t,
-                            text: D.intl.formatToPlainString(I.default["Yi+FzV"], { maxInstances: Z }),
+                            gameName: i,
+                            text: D.intl.formatToPlainString(G.default["Yi+FzV"], { maxInstances: Z }),
                         }),
                     (0, l.jsxs)("div", {
                         className: ee.nM,
@@ -465,15 +471,15 @@ function ea(e) {
                                                     (0, l.jsx)(v.D, {
                                                         variant: "heading-sm/semibold",
                                                         color: "text-muted",
-                                                        children: D.intl.string(I.default.rOMEZd),
+                                                        children: D.intl.string(G.default.rOMEZd),
                                                     }),
                                                     (0, l.jsx)(u.m, {
                                                         position: "top",
-                                                        text: D.intl.string(I.default.THJY1n),
+                                                        text: D.intl.string(G.default.THJY1n),
                                                         children: (0, l.jsx)("span", {
                                                             className: ee.WV,
                                                             tabIndex: 0,
-                                                            children: (0, l.jsx)(g.c, {
+                                                            children: (0, l.jsx)(g.CircleQuestionIcon, {
                                                                 size: "custom",
                                                                 width: 14,
                                                                 height: 14,
@@ -483,12 +489,12 @@ function ea(e) {
                                                 ],
                                             }),
                                             (0, l.jsx)(j.k, {
-                                                value: q,
+                                                value: Y,
                                                 onChange: ea,
-                                                maxLength: Q.XF,
+                                                maxLength: X.XF,
                                                 error: eu.name,
-                                                disabled: Y,
-                                                placeholder: D.intl.string(I.default.ElVYr3),
+                                                disabled: Q,
+                                                placeholder: D.intl.string(G.default.ElVYr3),
                                             }),
                                         ],
                                     }),
@@ -501,15 +507,15 @@ function ea(e) {
                                                     (0, l.jsx)(v.D, {
                                                         variant: "heading-sm/semibold",
                                                         color: "text-muted",
-                                                        children: D.intl.string(I.default.nB5OZ4),
+                                                        children: D.intl.string(G.default.nB5OZ4),
                                                     }),
                                                     (0, l.jsx)(u.m, {
                                                         position: "top",
-                                                        text: D.intl.string(I.default["61N+P6"]),
+                                                        text: D.intl.string(G.default["61N+P6"]),
                                                         children: (0, l.jsx)("span", {
                                                             className: ee.WV,
                                                             tabIndex: 0,
-                                                            children: (0, l.jsx)(g.c, {
+                                                            children: (0, l.jsx)(g.CircleQuestionIcon, {
                                                                 size: "custom",
                                                                 width: 14,
                                                                 height: 14,
@@ -525,13 +531,13 @@ function ea(e) {
                                                       isSelected: (e) => e.id === es,
                                                       options: ef,
                                                       select: (e) => en(e.id),
-                                                      isDisabled: Y,
-                                                      placeholder: D.intl.string(I.default["k+RTIm"]),
+                                                      isDisabled: Q,
+                                                      placeholder: D.intl.string(G.default["k+RTIm"]),
                                                       renderOptionLabel: (e) =>
-                                                          (0, l.jsx)(ei, { region: e.value, disabled: e.disabled }),
+                                                          (0, l.jsx)(et, { region: e.value, disabled: e.disabled }),
                                                       renderOptionValue: (e) =>
                                                           null != e[0]
-                                                              ? (0, l.jsx)(ei, {
+                                                              ? (0, l.jsx)(et, {
                                                                     region: e[0].value,
                                                                     disabled: e[0].disabled,
                                                                 })
@@ -549,15 +555,15 @@ function ea(e) {
                                                     (0, l.jsx)(v.D, {
                                                         variant: "heading-sm/semibold",
                                                         color: "text-muted",
-                                                        children: D.intl.string(I.default.I143Ml),
+                                                        children: D.intl.string(G.default.I143Ml),
                                                     }),
                                                     (0, l.jsx)(u.m, {
                                                         position: "top",
-                                                        text: D.intl.string(I.default["/wD5IM"]),
+                                                        text: D.intl.string(G.default["/wD5IM"]),
                                                         children: (0, l.jsx)("span", {
                                                             className: ee.WV,
                                                             tabIndex: 0,
-                                                            children: (0, l.jsx)(g.c, {
+                                                            children: (0, l.jsx)(g.CircleQuestionIcon, {
                                                                 size: "custom",
                                                                 width: 14,
                                                                 height: 14,
@@ -571,8 +577,8 @@ function ea(e) {
                                                 isSelected: (e) => e.id === er,
                                                 options: eN,
                                                 select: (e) => ed(e.id),
-                                                isDisabled: Y,
-                                                placeholder: D.intl.string(I.default.JdMW0i),
+                                                isDisabled: Q,
+                                                placeholder: D.intl.string(G.default.JdMW0i),
                                                 renderOptionLabel: (e) =>
                                                     (0, l.jsx)(el, { plan: e.value, canUseShopDiscount: ec }),
                                                 renderOptionValue: (e) =>
@@ -592,7 +598,7 @@ function ea(e) {
                                     }),
                                 ],
                             }),
-                            null != em && (0, l.jsx)(J, { gameName: t, coverUrl: _, plan: em }),
+                            null != em && (0, l.jsx)(q, { gameName: i, coverUrl: _, plan: em }),
                         ],
                     }),
                     (0, l.jsx)(m.E, {
@@ -600,14 +606,14 @@ function ea(e) {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         tag: "p",
-                        children: D.intl.format(I.default["2zdDw5"], {
+                        children: D.intl.format(G.default["2zdDw5"], {
                             cta: eb,
-                            provider: D.intl.string(I.default.z5lesv),
+                            provider: D.intl.string(G.default.z5lesv),
                             termsOfServiceUrl: () => (0, N.h)({ href: eS }),
                             helpCenterUrl: f.A.getArticleURL($.MVz.GAME_SERVER_HOSTING),
                         }),
                     }),
-                    F && (0, l.jsx)(T, { gameName: t }),
+                    F && (0, l.jsx)(T, { gameName: i }),
                 ],
             }),
             (0, l.jsx)("div", {

@@ -15,11 +15,11 @@ var n = s(477900),
     T = s(363195),
     h = s(106799),
     x = s(287809),
-    N = s(352774),
+    N = s(396813),
     E = s(859703),
     g = s(24001),
     j = s(3738),
-    _ = s(514547),
+    _ = s(309593),
     f = s(291749),
     P = s(590202),
     F = s(651892),
@@ -40,10 +40,10 @@ function W(t) {
             t.stopPropagation();
         }, []),
         U = (0, b.D)({ quest: s, questContent: g.uF.ACTIVITY_PANEL, sourceQuestContent: g.uF.ACTIVITY_PANEL }),
-        q = s.userStatus?.enrolledAt != null,
-        z = s.userStatus?.completedAt != null,
-        D = (0, _.fc)(s),
-        H = i.useCallback(async () => {
+        z = s.userStatus?.enrolledAt != null,
+        H = s.userStatus?.completedAt != null,
+        q = (0, _.fc)(s),
+        D = i.useCallback(async () => {
             let { type: t } = await (0, N.Oy)(s.id, {
                 questContent: g.uF.ACTIVITY_PANEL,
                 questContentCTA: P.Cy.ACCEPT_QUEST,
@@ -71,7 +71,7 @@ function W(t) {
         J = (0, L.mH)(s.config, M),
         $ = (0, j.mU)({
             quest: s,
-            taskDetails: D,
+            taskDetails: q,
             location: p.rE.ACTIVITY_PANEL,
             sourceQuestContent: g.uF.ACTIVITY_PANEL,
             gameProfileSource: I.GameProfileSources.QuestActivityPanel,
@@ -92,7 +92,7 @@ function W(t) {
             size: "sm",
             fullWidth: !0,
             text: tn,
-            onClick: H,
+            onClick: D,
             loading: Q,
             icon: (0, V.Oz)(s),
         }),
@@ -116,7 +116,7 @@ function W(t) {
                 (0, n.jsx)(u.D, {
                     ...t,
                     "aria-label": w.intl.string(w.t.DEoVWZ),
-                    children: (0, n.jsx)(d.j, { size: "md", color: "currentColor", className: y.Bx }),
+                    children: (0, n.jsx)(d.MoreHorizontalIcon, { size: "md", color: "currentColor", className: y.Bx }),
                 }),
         });
     return (0, n.jsx)("div", {
@@ -164,12 +164,12 @@ function W(t) {
                 (0, n.jsxs)("div", {
                     className: y.uz,
                     children: [
-                        !q &&
+                        !z &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [tl, (0, n.jsx)("div", { className: y.AF, children: ti })],
                             }),
-                        q &&
-                            !z &&
+                        z &&
+                            !H &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     tl,
@@ -180,13 +180,13 @@ function W(t) {
                                             size: "sm",
                                             fullWidth: !0,
                                             text: tn,
-                                            onClick: H,
+                                            onClick: D,
                                             loading: Q,
                                         }),
                                     }),
                                 ],
                             }),
-                        z &&
+                        H &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     tl,

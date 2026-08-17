@@ -47,8 +47,8 @@ var v = t(585510),
     H = t(355097),
     w = t(138134),
     Y = t(865116),
-    W = t(928658),
-    F = t(811893),
+    F = t(928658),
+    W = t(811893),
     V = t(837057),
     J = t(310419),
     Q = t(468689),
@@ -257,8 +257,8 @@ function en(e) {
                                             },
                                         });
                                     },
-                                    trailingIndicator: { type: "icon", icon: F.t },
-                                    icon: F.t,
+                                    trailingIndicator: { type: "icon", icon: W.t },
+                                    icon: W.t,
                                     label: f.intl.string(f.t.AKcFUj),
                                 },
                                 t,
@@ -572,8 +572,8 @@ function en(e) {
                 ? (0, n.jsx)(o.Dr, {
                       id: "staff-test-guild-report",
                       label: "[STAFF] Test Guild Report",
-                      action: () => (0, W.RV)(eu, "web_guild_context_menu"),
-                      icon: w.i,
+                      action: () => (0, F.RV)(eu, "web_guild_context_menu"),
+                      icon: w.FlagIcon,
                       color: "danger",
                   })
                 : null);

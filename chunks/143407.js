@@ -5,8 +5,8 @@ var i = t(477900),
     a = t.n(l),
     r = t(390544),
     d = t(554146),
-    u = t(821609);
-if (221552 == t.j) var c = t(509434);
+    c = t(821609);
+if (221552 == t.j) var u = t(509434);
 if (221552 == t.j) var o = t(297264);
 if (221552 == t.j) var m = t(834730);
 if (221552 == t.j) var x = t(939249);
@@ -14,17 +14,17 @@ if (221552 == t.j) var f = t(933832);
 if (221552 == t.j) var j = t(624479);
 if (221552 == t.j) var g = t(289873);
 if (221552 == t.j) var v = t(866665);
-if (221552 == t.j) var E = t(290136);
+if (221552 == t.j) var I = t(290136);
 var h = t(793574),
-    I = t(131607),
+    E = t(131607),
     C = t(569926),
     N = t(363487),
     M = t(403362),
     S = t(123917),
     T = t(498480),
     A = t(907878),
-    R = t(614393),
-    p = t(770681),
+    p = t(614393),
+    R = t(770681),
     k = t(590388),
     _ = t(685743),
     y = t(349085),
@@ -45,7 +45,7 @@ function V(e) {
                     a(!1);
                 });
         }, [n, t.id]);
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(c.$, {
         fullWidth: !0,
         text: U.intl.string(L.default.TMzy7d),
         variant: "secondary",
@@ -54,24 +54,24 @@ function V(e) {
     });
 }
 function w(e) {
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(c.$, {
         fullWidth: !0,
         text: U.intl.string(L.default.tkbVdf),
         variant: "secondary",
-        icon: c.I,
+        icon: u.I,
         iconPosition: "end",
         ...e,
     });
 }
 function K(e) {
-    return (0, i.jsx)(u.$, { fullWidth: !0, text: U.intl.string(L.default["fQCcM/"]), variant: "primary", ...e });
+    return (0, i.jsx)(c.$, { fullWidth: !0, text: U.intl.string(L.default["fQCcM/"]), variant: "primary", ...e });
 }
 function Z(e) {
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(c.$, {
         fullWidth: !0,
         text: U.intl.string(L.default.gWMqnI),
         variant: "primary",
-        icon: c.I,
+        icon: u.I,
         iconPosition: "end",
         ...e,
     });
@@ -85,7 +85,7 @@ function $(e) {
                     l(!1);
                 });
         }, [n]);
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(c.$, {
         fullWidth: !0,
         text: U.intl.string(L.default.BLEx3k),
         variant: "secondary",
@@ -96,7 +96,7 @@ function $(e) {
 function z(e) {
     let { instance: n } = e,
         t = (0, P.A)(n.providerType, n.gameServerPanelUrl);
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(c.$, {
         fullWidth: !0,
         text: U.intl.string(L.default.bBkeMs),
         variant: "secondary",
@@ -108,8 +108,8 @@ function z(e) {
 function W(e) {
     let { guildId: n, instance: t } = e,
         l = (0, O.A)(t),
-        [u, c] = (0, I.kn)([d.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        T = u !== d.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        [c, u] = (0, E.kn)([d.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        T = c !== d.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
         { data: W } = (0, C.I)(t.gameId),
         B = (0, P.A)(t.providerType, t.gameServerPanelUrl),
         Y = s.useCallback(() => {
@@ -119,14 +119,14 @@ function W(e) {
                     : (0, G.A)({
                           provider: t.providerType,
                           onAccept: () => {
-                              c(D.i.TAKE_ACTION), (0, b.A)(n, t);
+                              u(D.i.TAKE_ACTION), (0, b.A)(n, t);
                           },
                       });
-        }, [t, T, c, n, W?.name]),
+        }, [t, T, u, n, W?.name]),
         { handleCopyServerIp: q, animateCopyIcon: H } = (0, _.A)(n, t.id, h.A.GAME_SERVER_GAME, l ?? ""),
         X = (0, y.A)(t.gameId, "cover"),
-        J = (0, N.A)(n),
-        Q = s.useCallback(() => {
+        Q = (0, N.A)(n),
+        J = s.useCallback(() => {
             (0, A.f7)(n, t.id), (0, S.h)({ href: t.gameServerPanelUrl ?? "" });
         }, [t.gameServerPanelUrl, n, t.id]),
         ee = s.useMemo(() => {
@@ -135,7 +135,7 @@ function W(e) {
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(V, { guildId: n, instance: t }),
-                            J && (0, i.jsx)(w, { onClick: Q, disabled: null == t.gameServerPanelUrl }),
+                            Q && (0, i.jsx)(w, { onClick: J, disabled: null == t.gameServerPanelUrl }),
                         ],
                     });
                 case r.M.OFFLINE:
@@ -144,20 +144,20 @@ function W(e) {
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(K, { onClick: Y }),
-                            J && (0, i.jsx)(w, { onClick: Q, disabled: null == t.gameServerPanelUrl }),
+                            Q && (0, i.jsx)(w, { onClick: J, disabled: null == t.gameServerPanelUrl }),
                         ],
                     });
                 case r.M.STARTUP_FAILED:
                 case r.M.MISSING_STOCK:
-                    return J ? (0, i.jsx)(Z, { onClick: Q }) : (0, i.jsx)(K, { onClick: Y, disabled: !0 });
+                    return Q ? (0, i.jsx)(Z, { onClick: J }) : (0, i.jsx)(K, { onClick: Y, disabled: !0 });
                 case r.M.DELETED:
-                    return J
-                        ? (0, i.jsx)(w, { onClick: Q, disabled: null == t.gameServerPanelUrl })
+                    return Q
+                        ? (0, i.jsx)(w, { onClick: J, disabled: null == t.gameServerPanelUrl })
                         : (0, i.jsx)(K, { onClick: Y, disabled: !0 });
                 case r.M.PROVIDER_ERRORED:
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            J && null != B
+                            Q && null != B
                                 ? (0, i.jsx)(z, { guildId: n, instance: t })
                                 : (0, i.jsx)(K, { onClick: Y, disabled: !0 }),
                             (0, i.jsx)($, { guildId: n, instance: t }),
@@ -166,7 +166,7 @@ function W(e) {
                 default:
                     return null;
             }
-        }, [t, Y, J, Q, n, B]),
+        }, [t, Y, Q, J, n, B]),
         en = s.useMemo(() => {
             if (null == t.gameConfig) return null;
             let e = [t.gameConfig.type, t.gameConfig.version].filter(M.Vq).join(" ");
@@ -178,16 +178,16 @@ function W(e) {
                     if (null == t.gameServerPanelUrl) return U.intl.string(L.default["1A3US2"]);
                     return null;
                 case r.M.STARTUP_FAILED:
-                    return U.intl.string(J ? L.default.Mdoc98 : L.default.osZiRl);
+                    return U.intl.string(Q ? L.default.Mdoc98 : L.default.osZiRl);
                 case r.M.MISSING_STOCK:
-                    return U.intl.string(J ? L.default.YCakvM : L.default.osZiRl);
+                    return U.intl.string(Q ? L.default.YCakvM : L.default.osZiRl);
                 case r.M.PROVIDER_ERRORED:
-                    return U.intl.string(J ? L.default.NRyCeY : L.default.osZiRl);
+                    return U.intl.string(Q ? L.default.NRyCeY : L.default.osZiRl);
                 default:
                     return null;
             }
-        }, [t.status, t.gameServerPanelUrl, J]);
-    return (0, i.jsxs)(p.A, {
+        }, [t.status, t.gameServerPanelUrl, Q]);
+    return (0, i.jsxs)(R.A, {
         actions: ee,
         children: [
             (0, i.jsxs)("div", {
@@ -253,8 +253,10 @@ function W(e) {
                                                                     "aria-label": U.intl.string(U.t.OpuAlK),
                                                                     onClick: q,
                                                                     children: H
-                                                                        ? (0, i.jsx)(f.A, { size: "sm" })
-                                                                        : (0, i.jsx)(j.T, { size: "sm" }),
+                                                                        ? (0, i.jsx)(f.CheckmarkLargeIcon, {
+                                                                              size: "sm",
+                                                                          })
+                                                                        : (0, i.jsx)(j.CopyIcon, { size: "sm" }),
                                                                 }),
                                                             ],
                                                         })
@@ -265,7 +267,7 @@ function W(e) {
                                                                 (0, G.A)({
                                                                     provider: t.providerType,
                                                                     onAccept: () => {
-                                                                        c(D.i.TAKE_ACTION), q();
+                                                                        u(D.i.TAKE_ACTION), q();
                                                                     },
                                                                 });
                                                             },
@@ -325,7 +327,7 @@ function W(e) {
                                                     (0, i.jsx)(v.m, {
                                                         position: "top",
                                                         text: et,
-                                                        children: (0, i.jsx)(E.c, {
+                                                        children: (0, i.jsx)(I.CircleQuestionIcon, {
                                                             className: F.statusTooltipIcon,
                                                             size: "xs",
                                                         }),
@@ -353,12 +355,12 @@ function W(e) {
                     }),
                 ],
             }),
-            J &&
+            Q &&
                 (0, i.jsx)("div", {
                     className: F.overflowMenu,
                     children: (0, i.jsx)(k.A, { guildId: n, instance: t }),
                 }),
-            (0, i.jsx)("div", { className: F.imageBackground, children: (0, i.jsx)(R.T, { imageUrl: X ?? "" }) }),
+            (0, i.jsx)("div", { className: F.imageBackground, children: (0, i.jsx)(p.T, { imageUrl: X ?? "" }) }),
         ],
     });
 }

@@ -11,7 +11,7 @@ function l(e) {
     return (0, i.jsx)(s.S, {
         ...l,
         "aria-label": n ?? o.CLOSE_BUTTON_LABEL,
-        icon: r.d,
+        icon: r.XLargeIcon,
         variant: t,
         text: void 0,
         fullWidth: !1,

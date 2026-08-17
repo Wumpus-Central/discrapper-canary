@@ -12,8 +12,8 @@ var i,
     g = n(270003),
     h = n(225419),
     x = n(503698),
-    A = n.n(x),
-    p = n(785007),
+    p = n.n(x),
+    A = n(785007),
     f = n(789645),
     b = n(933832),
     j = n(88187),
@@ -21,16 +21,16 @@ var i,
     E = n(375708),
     C = n(701328),
     v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let T = Object.keys(v);
-function I(e) {
+let I = Object.keys(v);
+function T(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
-        { ref: o, ...c } = (0, p._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
+        { ref: o, ...c } = (0, A._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
-        className: A()(C.Os, { [C.r9]: s }),
+        className: p()(C.Os, { [C.r9]: s }),
         ref: o,
         id: a,
         ...c,
-        children: T.map((e) =>
+        children: I.map((e) =>
             (0, l.jsx)(
                 S,
                 {
@@ -56,30 +56,30 @@ function S(e) {
             (i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg);
             break;
         case "ALLOW":
-            (i = E.intl.string(E.t.RzDfSk)), (t = b.A), (n = C.cw);
+            (i = E.intl.string(E.t.RzDfSk)), (t = b.CheckmarkLargeIcon), (n = C.cw);
             break;
         default:
             (i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le);
     }
     let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
-        d = (0, p.Gx)({ isSelected: r, label: c });
+        d = (0, A.Gx)({ isSelected: r, label: c });
     return (0, l.jsx)(N.D, {
-        className: A()(C.AS, n, { [C.wH]: r }),
+        className: p()(C.AS, n, { [C.wH]: r }),
         onClick: () => a(s),
         ...d,
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
     });
 }
-I.Types = v;
+T.Types = v;
 var y = n(452027);
-function O(e) {
+function k(e) {
     let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
     return (0, l.jsx)(y.D, {
         ...a,
         disabled: i,
         layout: "horizontal",
         children: (e) =>
-            (0, l.jsx)(I, {
+            (0, l.jsx)(T, {
                 value: t,
                 onChange: n,
                 disabled: i,
@@ -89,8 +89,8 @@ function O(e) {
             }),
     });
 }
-I.Types, (O.Types = I.Types);
-var k = n(165049);
+T.Types, (k.Types = T.Types);
+var O = n(165049);
 class L extends s.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
@@ -109,7 +109,7 @@ class L extends s.PureComponent {
             text: e,
             position: "top",
             children: (0, l.jsx)("span", {
-                children: (0, l.jsx)(o.K, { size: "sm", color: "currentColor", className: k.Kk }),
+                children: (0, l.jsx)(o.K, { size: "sm", color: "currentColor", className: O.Kk }),
             }),
         });
     }
@@ -117,18 +117,18 @@ class L extends s.PureComponent {
         let { title: n, description: i, flag: s } = e,
             { permissions: a, locked: r, permissionRender: g } = this.props,
             x = g?.(s),
-            A = !!(r || x),
-            p = "string" == typeof x && "" !== x ? o.K : void 0,
+            p = !!(r || x),
+            A = "string" == typeof x && "" !== x ? o.K : void 0,
             f =
                 null == a
                     ? (0, l.jsx)(
-                          O,
+                          k,
                           {
                               label: n,
                               permissionName: n,
                               description: (0, h.Nk)(i),
-                              icon: p,
-                              disabled: A,
+                              icon: A,
+                              disabled: p,
                               value: this.getOverwriteValue(s),
                               onChange: (e) => this.handleChange(s, e),
                           },
@@ -139,8 +139,8 @@ class L extends s.PureComponent {
                           {
                               label: n,
                               description: (0, h.Nk)(i),
-                              icon: p,
-                              disabled: A,
+                              icon: A,
+                              disabled: p,
                               checked: this.getPermissionValue(s, a),
                               onChange: (e) => this.handleChange(s, e),
                           },

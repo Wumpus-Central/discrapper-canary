@@ -1,9 +1,9 @@
-t.d(e, { Premium3PRewardsModalEntry: () => k });
+t.d(e, { Premium3PRewardsModalEntry: () => C });
 var i = t(477900);
 t(582128);
 var r = t(325499),
-    a = t(289873),
-    n = t(189213),
+    n = t(289873),
+    a = t(189213),
     l = t(975571),
     d = t(792656),
     c = t(962644),
@@ -24,7 +24,10 @@ function f() {
                 (0, i.jsxs)("div", {
                     className: p.JN,
                     children: [
-                        (0, i.jsx)("div", { className: p.MC, children: (0, i.jsx)(h.X, { size: "refresh_sm" }) }),
+                        (0, i.jsx)("div", {
+                            className: p.MC,
+                            children: (0, i.jsx)(h.LockIcon, { size: "refresh_sm" }),
+                        }),
                         (0, i.jsxs)("div", {
                             className: p.yO,
                             children: [
@@ -60,17 +63,17 @@ function f() {
 var v = t(294219),
     N = t(202541),
     g = t(652215);
-function w(s) {
+function k(s) {
     let { transitionState: e, onClose: t, partnerIds: h } = s,
         m = (0, v.G)(h, { isLockedCardView: !0 }),
         { promotionsLoaded: b } = (0, o.y7)(),
         p = (0, r.b)("Premium3PRewardsLockedModal");
-    if (!1 === b) return (0, i.jsx)(a.y, {});
-    let w = l.A.getArticleURL(g.MVz.NITRO_2_POINT_0),
-        C = p ? f : null;
-    return (0, i.jsxs)(n.Modal, {
+    if (!1 === b) return (0, i.jsx)(n.y, {});
+    let k = l.A.getArticleURL(g.MVz.NITRO_2_POINT_0),
+        w = p ? f : null;
+    return (0, i.jsxs)(a.Modal, {
         title: x.intl.string(x.t.NG1e6l),
-        subtitle: x.intl.format(j.default.zS4GBR, { termsLink: w }),
+        subtitle: x.intl.format(j.default.zS4GBR, { termsLink: k }),
         actions: [],
         preview: (0, i.jsx)(d.A, {
             subscriptionTier: N.pe.TIER_2,
@@ -84,14 +87,14 @@ function w(s) {
         }),
         transitionState: e,
         onClose: t,
-        children: [null != C && (0, i.jsx)(C, {}), (0, i.jsx)(u._, { partnerIds: m })],
+        children: [null != w && (0, i.jsx)(w, {}), (0, i.jsx)(u._, { partnerIds: m })],
     });
 }
-var C = t(161319);
-function k(s) {
-    let { transitionState: e, onClose: t, partnerIds: a, isLocked: n } = s,
+var w = t(161319);
+function C(s) {
+    let { transitionState: e, onClose: t, partnerIds: n, isLocked: a } = s,
         l = (0, r.b)("NitroRewards3PRewardsModalEntry");
-    return n && l
-        ? (0, i.jsx)(w, { transitionState: e, onClose: t, partnerIds: a })
-        : (0, i.jsx)(C.w, { transitionState: e, onClose: t, partnerIds: a, isLocked: n });
+    return a && l
+        ? (0, i.jsx)(k, { transitionState: e, onClose: t, partnerIds: n })
+        : (0, i.jsx)(w.w, { transitionState: e, onClose: t, partnerIds: n, isLocked: a });
 }

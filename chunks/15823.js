@@ -21,11 +21,11 @@ var i = t(477900),
     G = t(403362);
 t(422653);
 var b = t(935208),
-    N = t(285059),
-    j = t(770666),
-    k = t(508654),
-    y = t(857071),
-    I = t(518769),
+    I = t(285059),
+    N = t(770666),
+    j = t(508654),
+    k = t(857071),
+    y = t(518769),
     _ = t(446600),
     S = t(734057),
     D = t(576705),
@@ -57,12 +57,12 @@ function K(e) {
         } = n,
         x = (0, O.G3)(n),
         E = (0, s.bG)([T.Ay], () => T.Ay.isInterestedInEventRecurrence(d, x), [d, x]),
-        C = (0, s.bG)([y.A], () => y.A.isLurking(c), [c]),
+        C = (0, s.bG)([k.A], () => k.A.isLurking(c), [c]),
         f = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(u), [u]),
         G = (0, s.bG)([v.A], () => v.A.getGuild(c), [c]),
         b = (0, s.bG)([S.A], () => S.A.getChannel(u), [u]),
-        N = (0, s.bG)([M.default], () => M.default.getUser(o), [o]),
-        { speakers: j } = (function (e) {
+        I = (0, s.bG)([M.default], () => M.default.getUser(o), [o]),
+        { speakers: N } = (function (e) {
             let {
                     id: n,
                     data: { guild: t, instance: i, speakers: a, participantCount: l },
@@ -70,7 +70,7 @@ function K(e) {
                 } = e,
                 d = (0, s.bG)([v.A, S.A], () => v.A.getGuild(S.A.getChannel(n)?.getGuildId()), [n]),
                 c = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(n), [n]),
-                u = (0, P.E5)(n, I.ip.SPEAKER),
+                u = (0, P.E5)(n, y.ip.SPEAKER),
                 o = (0, P.zy)(n),
                 g = null != c ? u : a,
                 A = (null != c ? o : l) - g.length;
@@ -80,10 +80,10 @@ function K(e) {
             data: { guild: null, instance: f, speakers: [], participantCount: 0 },
             context: { guildId: c, instance: f },
         }),
-        k = (0, s.bG)([L.A], () => L.A.getChannelId()),
+        j = (0, s.bG)([L.A], () => L.A.getChannelId()),
         K = (0, T.Fd)(n),
-        H = k === u && null != k && K,
-        J = j.filter((e) => e.type === I.wY.VOICE),
+        H = j === u && null != j && K,
+        J = N.filter((e) => e.type === y.wY.VOICE),
         Q = J.length,
         $ = (0, s.bG)([D.A], () => D.A.can(F.xBc.CONNECT, b), [b]),
         W = (0, B.Ay)(n),
@@ -93,7 +93,7 @@ function K(e) {
     return (0, i.jsx)(V.A, {
         guild: G,
         channel: b,
-        creator: N,
+        creator: I,
         name: g,
         entityType: m,
         description: A ?? void 0,
@@ -136,7 +136,7 @@ function X(e) {
             (0, i.jsx)(Q.A, {
                 children: (0, i.jsx)("div", {
                     className: W.n1,
-                    children: (0, i.jsx)(u.C, {
+                    children: (0, i.jsx)(u.CalendarIcon, {
                         size: "custom",
                         color: "currentColor",
                         height: 40,
@@ -177,19 +177,19 @@ var Y = t(823508),
     ee = t(790782),
     en = t(8607);
 function et(e) {
-    let { transitionState: n, onClose: l, guildId: y } = e,
-        I = (0, x.GV)(),
-        _ = (0, s.bG)([v.A], () => v.A.getGuild(y)),
-        S = (0, j.A)(_?.id),
-        D = (0, k.Ay)(y),
-        L = a.useRef(C.Ay.ackMessageId(y, ee.P.GUILD_EVENT)),
+    let { transitionState: n, onClose: l, guildId: k } = e,
+        y = (0, x.GV)(),
+        _ = (0, s.bG)([v.A], () => v.A.getGuild(k)),
+        S = (0, N.A)(_?.id),
+        D = (0, j.Ay)(k),
+        L = a.useRef(C.Ay.ackMessageId(k, ee.P.GUILD_EVENT)),
         M = (0, Y.A)();
     return (
         a.useEffect(() => {
-            D.forEach((e) => N.A.getGuildEventUserCounts(y, e.id, [])), N.A.getGuildEventsForCurrentUser(y);
-        }, [D, y]),
+            D.forEach((e) => I.A.getGuildEventUserCounts(k, e.id, [])), I.A.getGuildEventsForCurrentUser(k);
+        }, [D, k]),
         (0, p.Ay)(() => {
-            f.default.track(F.HAw.OPEN_MODAL, { type: Z.BV, guild_id: y, guild_events_count: D.length });
+            f.default.track(F.HAw.OPEN_MODAL, { type: Z.BV, guild_id: k, guild_events_count: D.length });
         }),
         a.useEffect(() => {
             r()(D)
@@ -197,16 +197,16 @@ function et(e) {
                 .filter(G.Vq)
                 .uniq()
                 .forEach((e) => {
-                    E.A.requestMember(y, e);
+                    E.A.requestMember(k, e);
                 });
-        }, [y, D]),
+        }, [k, D]),
         a.useEffect(() => {
-            null != y && (0, h.hK)(y, ee.P.GUILD_EVENT);
-        }, [y]),
+            null != k && (0, h.hK)(k, ee.P.GUILD_EVENT);
+        }, [k]),
         (0, i.jsxs)(d.EO, {
             size: d.rI.MEDIUM,
             transitionState: n,
-            "aria-labelledby": I,
+            "aria-labelledby": y,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
@@ -214,9 +214,9 @@ function et(e) {
                     className: en.wx,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(u.C, { size: "md", color: "currentColor", className: en.Kk }),
+                        (0, i.jsx)(u.CalendarIcon, { size: "md", color: "currentColor", className: en.Kk }),
                         (0, i.jsx)(o.D, {
-                            id: I,
+                            id: y,
                             variant: "heading-md/semibold",
                             children:
                                 D.length > 0
@@ -255,7 +255,7 @@ function et(e) {
                                                     t.e("454450"),
                                                     t.e("560423"),
                                                 ]).then(t.bind(t, 729398));
-                                                return (n) => (0, i.jsx)(e, { ...n, guildId: y });
+                                                return (n) => (0, i.jsx)(e, { ...n, guildId: k });
                                             }, M);
                                         },
                                         text: $.intl.string($.t["60lJ0C"]),
@@ -286,7 +286,7 @@ function et(e) {
                                       e.id,
                                   ),
                               )
-                            : (0, i.jsx)(X, { guildId: y, onClose: l }),
+                            : (0, i.jsx)(X, { guildId: k, onClose: l }),
                 }),
             ],
         })

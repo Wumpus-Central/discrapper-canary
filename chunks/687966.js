@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { _: () => l });
+n.d(t, { GameControllerIcon: () => l });
 var i = n(477900);
 n(582128);
 var r = n(661531),

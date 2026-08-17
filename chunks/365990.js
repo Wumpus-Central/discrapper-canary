@@ -113,7 +113,7 @@ function D(e) {
                 actions: [
                     {
                         text: k.intl.string(L.default.DZnomS),
-                        icon: f.o,
+                        icon: f.GiftIcon,
                         onClick: () => {
                             c(), n?.(), s(w.i.TAKE_ACTION);
                         },
@@ -156,7 +156,7 @@ function Z(e) {
         onClick: s,
         children: (0, l.jsx)("div", {
             className: W.zc,
-            children: n ? (0, l.jsx)(m.a, { className: W.Hl, importData: r }) : (0, l.jsx)(f.o, {}),
+            children: n ? (0, l.jsx)(m.a, { className: W.Hl, importData: r }) : (0, l.jsx)(f.GiftIcon, {}),
         }),
     });
 }

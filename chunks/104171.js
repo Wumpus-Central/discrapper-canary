@@ -1,4 +1,4 @@
-s.d(r, { Ay: () => U, DN: () => _, mt: () => I }), s(321073);
+s.d(r, { Ay: () => A, DN: () => I, mt: () => _ }), s(321073);
 var t = s(477900),
     n = s(582128),
     l = s(503698),
@@ -12,10 +12,10 @@ var t = s(477900),
     f = s(287809),
     m = s(3451),
     p = s(250296);
-let _ = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
-    I = "user-icon";
+let I = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
+    _ = "user-icon";
 function g(e, r) {
-    if (e === I) return `user-icon-${r}`;
+    if (e === _) return `user-icon-${r}`;
     let s = e instanceof o.A ? e : null != e ? e.user : null;
     return null != s ? s.id : `user-${r}`;
 }
@@ -26,27 +26,27 @@ function S(e) {
     return (0, t.jsx)("div", { className: i()(p.In, p.iq), children: e });
 }
 function E() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.SIZE_24;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.SIZE_24;
     switch (e) {
-        case _.SIZE_16:
+        case I.SIZE_16:
             return p.nc;
-        case _.SIZE_24:
+        case I.SIZE_24:
             return p.q1;
-        case _.SIZE_32:
+        case I.SIZE_32:
             return p.Hb;
-        case _.SIZE_56:
+        case I.SIZE_56:
             return p.dl;
         default:
             return p.q1;
     }
 }
-class A extends n.PureComponent {
+class U extends n.PureComponent {
     static defaultProps = {
         max: 10,
         renderMoreUsers: x,
         renderIcon: !1,
         showDefaultAvatarsForNullUsers: !1,
-        size: _.SIZE_24,
+        size: I.SIZE_24,
     };
     state = { popoutUserId: null };
     _ref = n.createRef();
@@ -61,26 +61,26 @@ class A extends n.PureComponent {
                     r = m.A.DEFAULT_AVATARS[e];
                 return (0, t.jsx)("img", { src: r, alt: "", className: p.my });
             }
-        if (e === I) {
+        if (e === _) {
             let e = (function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.SIZE_24;
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.SIZE_24;
                 switch (e) {
-                    case _.SIZE_16:
+                    case I.SIZE_16:
                         return 10;
-                    case _.SIZE_24:
+                    case I.SIZE_24:
                         return 15;
-                    case _.SIZE_32:
+                    case I.SIZE_32:
                         return 20;
-                    case _.SIZE_56:
+                    case I.SIZE_56:
                         return 35;
                     default:
                         return 10;
                 }
             })(d);
-            n = (0, t.jsx)(u.n, { size: "custom", color: "currentColor", width: e, height: e });
+            n = (0, t.jsx)(u.UserIcon, { size: "custom", color: "currentColor", width: e, height: e });
         } else n = (0, t.jsx)("img", { src: e.getAvatarURL(c, d), alt: e.username, className: p.my });
         let o = (0, t.jsx)("div", { className: p.WK, children: n }, g(e, s));
-        return l && e !== I
+        return l && e !== _
             ? (0, t.jsx)(
                   a.D,
                   {
@@ -190,4 +190,4 @@ class A extends n.PureComponent {
         });
     }
 }
-let U = A;
+let A = U;

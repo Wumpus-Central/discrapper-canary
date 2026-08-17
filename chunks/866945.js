@@ -27,7 +27,7 @@ function C(e) {
     return (0, i.jsxs)("div", {
         className: s()(g.I, _),
         children: [
-            (0, i.jsx)(a.m, { size: "md" }),
+            (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
             (0, i.jsx)(o.E, {
                 variant: "text-sm/medium",
                 color: "interactive-text-active",

@@ -23,8 +23,8 @@ function j(e) {
             );
         },
         children: t
-            ? (0, l.jsx)(c.A, { size: "xs", color: "currentColor" })
-            : (0, l.jsx)(d.T, { size: "xs", color: "currentColor" }),
+            ? (0, l.jsx)(c.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
+            : (0, l.jsx)(d.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
 function g(e) {

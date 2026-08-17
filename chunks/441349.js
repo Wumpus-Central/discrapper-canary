@@ -23,9 +23,9 @@ function f(e) {
         { disabled: y, errorMessage: L, required: V = !1 } = A,
         D = { hasError: null != L && "" !== L },
         {
-            refs: P,
-            floatingStyles: k,
-            isOpen: I,
+            refs: I,
+            floatingStyles: P,
+            isOpen: k,
             setIsOpen: O,
             context: R,
             getFloatingProps: F,
@@ -48,7 +48,7 @@ function f(e) {
             (0, l.jsx)(b.F, {
                 className: "minute" === _ ? E.XF : E.LF,
                 validation: D,
-                ref: P.setReference,
+                ref: I.setReference,
                 ...B(),
                 children: (0, l.jsxs)(t.lr, {
                     id: e.controlId,
@@ -76,18 +76,18 @@ function f(e) {
                                 }),
                                 (0, l.jsx)(d.$, {
                                     className: E.B7,
-                                    onClick: () => O(!I),
+                                    onClick: () => O(!k),
                                     "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                    children: (0, l.jsx)(N.C, { size: "sm", color: "currentColor" }),
+                                    children: (0, l.jsx)(N.CalendarIcon, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        I &&
+                        k &&
                             T &&
                             (0, l.jsx)("div", {
                                 ...F(),
-                                ref: P.setFloating,
-                                style: k,
+                                ref: I.setFloating,
+                                style: P,
                                 className: E.oO,
                                 children: (0, l.jsx)(i.n1, {
                                     contain: !0,

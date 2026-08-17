@@ -17,19 +17,19 @@ var E = n(775121),
     y = n(700331),
     A = n(454290),
     x = n(836781),
-    h = n(17928),
-    S = n(778712),
-    I = n(346055),
+    I = n(17928),
+    h = n(778712),
+    S = n(346055),
     b = n(789645),
-    T = n(966327),
-    M = n(386467),
-    j = n(606049),
-    N = n(943220),
-    k = n(734057),
+    M = n(966327),
+    k = n(386467),
+    T = n(606049),
+    j = n(943220),
+    N = n(734057),
     O = n(192308),
     v = n(866665),
-    _ = n(408278),
-    D = n(92259),
+    D = n(408278),
+    _ = n(92259),
     P = n(218429),
     R = n(292801),
     L = n(691540),
@@ -38,13 +38,13 @@ var E = n(775121),
     U = n(32880),
     W = n(811893),
     G = n(980707),
-    q = n(477782),
-    X = n(624479),
-    B = n(173936),
-    F = n(922016),
-    z = n(365199),
-    K = n(50268),
-    H = n(843626),
+    X = n(477782),
+    q = n(624479),
+    z = n(173936),
+    B = n(922016),
+    F = n(365199),
+    H = n(50268),
+    K = n(843626),
     Y = n(294454),
     Z = n(803316),
     J = n(465856),
@@ -67,7 +67,7 @@ function ec(e) {
         text: t,
         position: "bottom",
         asContainer: !0,
-        children: (0, i.jsx)(_.K, { variant: "icon-only", "aria-label": t, size: "sm", ...n }),
+        children: (0, i.jsx)(D.K, { variant: "icon-only", "aria-label": t, size: "sm", ...n }),
     });
 }
 function ed() {
@@ -77,7 +77,7 @@ function ed() {
             y.l.markActionPerformed(e ? y.N.ZOOM_OUT_BUTTON_PRESSED : y.N.ZOOM_IN_BUTTON_PRESSED), t(!e);
         },
         tooltipText: e ? er.intl.string(er.t.vOFof8) : er.intl.string(er.t.Kt4gZ6),
-        icon: e ? D.V : P.r,
+        icon: e ? _.V : P.r,
     });
 }
 function eu(e) {
@@ -101,7 +101,7 @@ function eu(e) {
                 });
             }
         }, [n, a]);
-    return null != n && null != a && (0, H.p)(n)
+    return null != n && null != a && (0, K.p)(n)
         ? (0, i.jsx)(ec, { onClick: r, tooltipText: er.intl.string(er.t.I3ltXO), icon: R.t })
         : null;
 }
@@ -140,7 +140,7 @@ function em(e) {
         onClick: m,
         tooltipText: er.intl.string("VIDEO" === t.type ? er.t.JVuuz3 : er.t["S/xNKV"]),
         loading: n,
-        icon: U.s,
+        icon: U.DownloadIcon,
     });
 }
 function ep(e) {
@@ -161,7 +161,7 @@ function ep(e) {
 function ef(e) {
     let { item: t, canCopyImage: n, canCopyLink: l, onClose: a, onSelect: r, src: s } = e,
         o = t.sourceMetadata?.identifier?.type === "attachment" ? t.sourceMetadata.identifier.attachmentId : null,
-        c = (0, K.A)({ id: o, label: er.intl.string(er.t.nwg3lR) }),
+        c = (0, H.A)({ id: o, label: er.intl.string(er.t.nwg3lR) }),
         d = (function (e) {
             let { alt: t, sourceMetadata: n, width: l, height: a } = e,
                 r = eE(er.intl.string(er.t.ILJuBq), "name", { subtextLineClamp: 1 }),
@@ -171,7 +171,7 @@ function ef(e) {
             let c = (0, J.A)(n.identifier),
                 d = (0, ee.Xq)(n.identifier.size / 1e3);
             return (0, i.jsxs)(
-                q.Dr,
+                X.Dr,
                 {
                     id: "media-viewer-details",
                     label: er.intl.string(er.t.sqBLa9),
@@ -198,28 +198,28 @@ function ef(e) {
                         (0, L.P0)((0, w.o)(er.intl.string(er.t.PTPbjx), V.Ck.FAILURE));
                 }
             }
-            return (0, i.jsxs)(q.rX, {
+            return (0, i.jsxs)(X.rX, {
                 children: [
                     n &&
                         (0, i.jsx)(
-                            q.Dr,
+                            X.Dr,
                             {
                                 label: er.intl.string(er.t.tvUqWn),
                                 id: "media-viewer-copy-image",
-                                icon: X.T,
-                                leadingAccessory: { type: "icon", icon: X.T },
+                                icon: q.CopyIcon,
+                                leadingAccessory: { type: "icon", icon: q.CopyIcon },
                                 action: r,
                             },
                             "media-viewer-copy-image",
                         ),
                     l &&
                         (0, i.jsx)(
-                            q.Dr,
+                            X.Dr,
                             {
                                 id: "media-viewer-copy-link",
                                 label: er.intl.string(er.t["92CPQ+"]),
-                                icon: B.q,
-                                leadingAccessory: { type: "icon", icon: B.q },
+                                icon: z.LinkIcon,
+                                leadingAccessory: { type: "icon", icon: z.LinkIcon },
                                 action: function () {
                                     y.l.markActionPerformed(y.N.COPY_LINK_PRESSED);
                                     let e = (0, Z.XW)(a, t.contentType, t.originalContentType);
@@ -256,7 +256,7 @@ function eE(e, t, n) {
             (0, L.P0)({ message: er.intl.string(er.t.mGZ66D), type: V.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
         );
     }, []);
-    return (l) => (null != l ? (0, i.jsx)(q.Dr, { action: () => a(l), label: e, subtext: l, id: t, ...n }, t) : null);
+    return (l) => (null != l ? (0, i.jsx)(X.Dr, { action: () => a(l), label: e, subtext: l, id: t, ...n }, t) : null);
 }
 function eg(e) {
     let { item: t } = e,
@@ -271,14 +271,14 @@ function eg(e) {
         p = o && c && d && m,
         f = (0, Z.fW)(u);
     return s || p || f || t.sourceMetadata?.identifier?.type === "attachment"
-        ? (0, i.jsx)(F.Y, {
+        ? (0, i.jsx)(B.Y, {
               targetElementRef: n,
               shouldShow: a,
               align: "left",
               position: "top",
               spacing: 18,
               onRequestClose: () => r(!1),
-              animation: F.Y.Animation.NONE,
+              animation: B.Y.Animation.NONE,
               renderPopout: () =>
                   (0, i.jsx)(ef, { item: t, canCopyImage: p, canCopyLink: f, onClose: () => r(!1), src: u }),
               children: (e) => {
@@ -289,7 +289,7 @@ function eg(e) {
                       onClick: () => {
                           y.l.markActionPerformed(y.N.MORE_BUTTON_PRESSED), r(!a);
                       },
-                      icon: z.j,
+                      icon: F.MoreHorizontalIcon,
                   });
               },
           })
@@ -297,7 +297,7 @@ function eg(e) {
 }
 let eC = l.memo(function (e) {
     let { item: t, hideMediaOptions: n } = e,
-        a = (0, h.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
+        a = (0, I.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
         s = l.useRef(null),
         o = l.useCallback(() => {
             !a && s.current?.contains(document.activeElement) && document.activeElement.blur();
@@ -329,28 +329,28 @@ let eC = l.memo(function (e) {
     );
 });
 var ey = n(597351),
-    eA = n(529859);
+    eA = n(752240);
 let ex = l.memo(function (e) {
     let { message: t } = e,
-        n = (0, h.bG)([k.A], () => k.A.getChannel(t.channel_id));
+        n = (0, I.bG)([N.A], () => N.A.getChannel(t.channel_id));
     return null == n
         ? null
         : (0, i.jsx)(el.Ay, {
               children: (e) =>
-                  (0, i.jsxs)(M.A.Provider, {
+                  (0, i.jsxs)(k.A.Provider, {
                       value: n.guild_id,
                       children: [
-                          (0, i.jsx)(T.A, { user: t.author, size: S._3.SIZE_40, className: r()(eA.Du, e) }),
+                          (0, i.jsx)(M.A, { user: t.author, size: h._3.SIZE_40, className: r()(eA.Du, e) }),
                           (0, i.jsxs)("div", {
                               className: r()(eA.cy, e),
                               children: [
-                                  (0, i.jsx)(I.M, {
+                                  (0, i.jsx)(S.M, {
                                       children: (0, i.jsx)("div", {
                                           className: eA.mG,
-                                          children: (0, i.jsx)(N.A, { className: eA.fh, message: t, channel: n }),
+                                          children: (0, i.jsx)(j.A, { className: eA.fh, message: t, channel: n }),
                                       }),
                                   }),
-                                  (0, i.jsx)(j.A, {
+                                  (0, i.jsx)(T.A, {
                                       timestamp: t.timestamp,
                                       className: eA.vE,
                                       tooltipPosition: "bottom",
@@ -361,7 +361,7 @@ let ex = l.memo(function (e) {
                   }),
           });
 });
-function eh(e) {
+function eI(e) {
     let { item: t, hideMediaOptions: n, onClose: l } = e,
         a = t.sourceMetadata?.message;
     return (0, i.jsxs)("div", {
@@ -382,8 +382,8 @@ function eh(e) {
         ],
     });
 }
-var eS = n(228970);
-function eI(e, t) {
+var eh = n(228970);
+function eS(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || g.Ay.useReducedMotion ? e.set(t) : e.start(t);
 }
@@ -393,14 +393,14 @@ function eb(e) {
             onIndexChange: n,
             items: a,
             startingIndex: u,
-            enabledContentHarmTypeFlags: h,
-            shouldHideMediaOptions: S = !1,
-            transitionState: I,
+            enabledContentHarmTypeFlags: I,
+            shouldHideMediaOptions: h = !1,
+            transitionState: S,
             ...b
         } = e,
-        [T, M] = l.useState(u ?? 0),
-        [j, N] = l.useState(!1),
-        [k, O] = (0, o.z)(() => ({
+        [M, k] = l.useState(u ?? 0),
+        [T, j] = l.useState(!1),
+        [N, O] = (0, o.z)(() => ({
             scale: g.Ay.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
@@ -416,27 +416,27 @@ function eb(e) {
                 }
             );
     }, [t]);
-    let _ = l.useRef(null);
+    let D = l.useRef(null);
     l.useEffect(() => {
-        if (I !== _.current)
-            switch (((_.current = I), I)) {
+        if (S !== D.current)
+            switch (((D.current = S), S)) {
                 case c.ip.ENTERING:
-                    eI(k.scale, 1);
+                    eS(N.scale, 1);
                     break;
                 case c.ip.EXITING:
-                    g.Ay.useReducedMotion || (eI(k.x, 0), eI(k.y, 0), eI(k.scale, 0.9));
+                    g.Ay.useReducedMotion || (eS(N.x, 0), eS(N.y, 0), eS(N.scale, 0.9));
             }
-    }, [I, k]),
-        I === c.ip.HIDDEN && j && (N(!1), k.x.set(0), k.y.set(0), k.scale.set(1)),
+    }, [S, N]),
+        S === c.ip.HIDDEN && T && (j(!1), N.x.set(0), N.y.set(0), N.scale.set(1)),
         l.useEffect(() => {
             function e() {
-                E.A.disable(), I === c.ip.ENTERED ? E.A.enableTemp(p) : E.A.enableTemp(f);
+                E.A.disable(), S === c.ip.ENTERED ? E.A.enableTemp(p) : E.A.enableTemp(f);
             }
             function t() {
                 E.A.disableTemp();
             }
-            I === c.ip.ENTERED && (E.A.disable(), E.A.enableTemp(p)),
-                I === c.ip.HIDDEN && (E.A.disable(), E.A.enableTemp(f));
+            S === c.ip.ENTERED && (E.A.disable(), E.A.enableTemp(p)),
+                S === c.ip.HIDDEN && (E.A.disable(), E.A.enableTemp(f));
             let n = v.current?.ownerDocument?.defaultView;
             return (
                 n?.addEventListener("focus", e),
@@ -445,30 +445,30 @@ function eb(e) {
                     n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), E.A.disableTemp();
                 }
             );
-        }, [I]);
-    let D = l.useCallback(
+        }, [S]);
+    let _ = l.useCallback(
             (e) => {
-                M(e), n?.(e), y.l.markActionPerformed(y.N.SELECTED_ITEM_CHANGE);
+                k(e), n?.(e), y.l.markActionPerformed(y.N.SELECTED_ITEM_CHANGE);
             },
             [n],
         ),
         P = l.useMemo(
             () => ({
-                scale: k.scale,
-                x: k.x,
-                y: k.y,
+                scale: N.scale,
+                x: N.x,
+                y: N.y,
                 setScale(e, t) {
-                    eI(k.scale, e, t?.immediate);
+                    eS(N.scale, e, t?.immediate);
                 },
                 setOffset(e, t, n) {
-                    eI(k.x, e, n?.immediate), eI(k.y, t, n?.immediate);
+                    eS(N.x, e, n?.immediate), eS(N.y, t, n?.immediate);
                 },
-                zoomed: j,
+                zoomed: T,
                 setZoomed(e) {
-                    N(e), eI(k.scale, e ? 2.5 : 1), e || (eI(k.x, 0), eI(k.y, 0));
+                    j(e), eS(N.scale, e ? 2.5 : 1), e || (eS(N.x, 0), eS(N.y, 0));
                 },
             }),
-            [j, k],
+            [T, N],
         );
     return (0, i.jsx)(d.N, {
         theme: m.NJ8.MIDNIGHT,
@@ -476,8 +476,8 @@ function eb(e) {
             (0, i.jsx)(s.EO, {
                 "data-migration-pending": !0,
                 hideShadow: !0,
-                className: r()(eS.O, e),
-                transitionState: I,
+                className: r()(eh.O, e),
+                transitionState: S,
                 ...b,
                 size: s.rI.DYNAMIC,
                 animation: s.WM.SUBTLE,
@@ -488,14 +488,14 @@ function eb(e) {
                 children: (0, i.jsxs)(A.f.Provider, {
                     value: P,
                     children: [
-                        (0, i.jsx)(eh, { item: a[T], hideMediaOptions: S, onClose: t }),
+                        (0, i.jsx)(eI, { item: a[M], hideMediaOptions: h, onClose: t }),
                         (0, i.jsx)("div", { style: { display: "none" }, ref: v }),
                         (0, i.jsx)(x.A, {
                             items: a,
-                            startIndex: T,
-                            onIndexChange: D,
-                            enabledContentHarmTypeFlags: h,
-                            shouldHideMediaOptions: S,
+                            startIndex: M,
+                            onIndexChange: _,
+                            enabledContentHarmTypeFlags: I,
+                            shouldHideMediaOptions: h,
                         }),
                     ],
                 }),

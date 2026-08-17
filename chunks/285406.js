@@ -19,7 +19,7 @@ var i = n(17928),
 let E = [
         {
             key: "JOIN_SERVERS",
-            renderIcon: (e) => (0, l.jsx)(s.Q, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, l.jsx)(s.CompassIcon, { size: "md", color: "currentColor", className: e }),
             getName: () => C.intl.string(C.t.K50GHd),
             handler: (e, t) => (0, u.uh)(e.id, t.id),
         },

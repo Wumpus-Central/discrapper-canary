@@ -1,4 +1,4 @@
-i.d(e, { A: () => q });
+i.d(e, { A: () => J });
 var l = i(477900),
     t = i(582128),
     s = i(503698),
@@ -20,8 +20,8 @@ let v = (0, i(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var E = i(587895),
-    I = i(429913),
+var I = i(587895),
+    E = i(429913),
     g = i(403362);
 let L = {
     LEAGUE_OF_LEGENDS: "1402418696126992445",
@@ -71,7 +71,7 @@ function U(a) {
 function F(a) {
     let { applicationId: e, size: i = "default" } = a,
         { trackUserProfileAction: s } = (0, G.NJ)(),
-        n = (0, I.h)(e),
+        n = (0, E.h)(e),
         { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: d, fetched: o } = (0, j.RD)(n),
         { analyticsLocations: m } = (0, N.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
         u = t.useCallback(() => {
@@ -101,7 +101,7 @@ function F(a) {
 }
 function w(a) {
     let { applicationId: e } = a,
-        i = (0, I.h)(e),
+        i = (0, E.h)(e),
         { hasAlreadyLinked: t, fetched: s } = (0, j.RD)(i);
     return null == i
         ? null
@@ -115,7 +115,7 @@ function w(a) {
                   : (0, l.jsx)("div", { className: O.bg }),
           });
 }
-i(157992);
+i(600253);
 var W = i(29854);
 function y(a) {
     let { className: e } = a;
@@ -198,10 +198,10 @@ let $ = {
     },
     [r.x.APPLICATION]: {
         placeholder: (a) => ({ variant: "application-widget", applicationId: a.applicationId }),
-        icon: (a) => E.A.getApplication(a.applicationId)?.getIconURL(16),
+        icon: (a) => I.A.getApplication(a.applicationId)?.getIconURL(16),
         getAriaLabel: (a) =>
             S.intl.formatToPlainString(S.t.KfGahB, {
-                applicationName: E.A.getApplication(a.applicationId)?.name ?? "",
+                applicationName: I.A.getApplication(a.applicationId)?.name ?? "",
             }),
     },
     [r.x.PERSONAL]: {
@@ -216,14 +216,14 @@ let $ = {
         getAriaLabel: () => S.intl.string(S.t["7AVpta"]),
     },
 };
-function q(a) {
+function J(a) {
     let {
             widget: e,
             onAddWidget: i,
             size: s = "default",
             loading: c = !1,
             trackUserProfileEditAction: d,
-            isHighlighted: E = !1,
+            isHighlighted: I = !1,
             hideApplicationWidgetStatus: L = !1,
         } = a,
         { placeholder: R, getAriaLabel: T, icon: D, getTitle: P, isNew: C } = $[e.type],
@@ -231,11 +231,11 @@ function q(a) {
         G = v.useConfig({ location: A.A.USER_PROFILE_APPLICATION_WIDGET }).enabled,
         O = e.type === r.x.APPLICATION,
         U = O ? e.applicationId : void 0,
-        W = (0, I.h)(U),
+        W = (0, E.h)(U),
         { hasAlreadyLinked: B, canStartAuthorization: V, startAuthorization: M } = (0, j.RD)(W),
         z = O && !B && V,
         { analyticsLocations: Q } = (0, N.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
-        q = t.useCallback(() => {
+        J = t.useCallback(() => {
             !c &&
                 ((0, h.Y5)(e),
                 d({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
@@ -243,16 +243,16 @@ function q(a) {
                 i?.(),
                 z && M({ analyticsLocations: Q }));
         }, [c, z, e, d, i, M, Q]),
-        J = t.useMemo(() => R(e), [e, R]),
+        q = t.useMemo(() => R(e), [e, R]),
         Z = D?.(e),
-        aa = z && !G ? o.q : m.U,
-        ae = E || C?.();
+        aa = z && !G ? o.LinkIcon : m.U,
+        ae = I || C?.();
     return (0, l.jsxs)("div", {
         className: H.LG,
         children: [
             (0, l.jsxs)(u.D, {
                 className: n()(H.PH, b && H.PG, c && H.Lq),
-                onClick: q,
+                onClick: J,
                 "aria-label":
                     z && null != W ? S.intl.formatToPlainString(S.t.ATS0FK, { applicationName: W.name }) : T(e),
                 "aria-busy": c,
@@ -316,8 +316,8 @@ function q(a) {
                             }),
                             G &&
                                 !L &&
-                                "application-widget" === J.variant &&
-                                (0, l.jsx)(w, { applicationId: J.applicationId }),
+                                "application-widget" === q.variant &&
+                                (0, l.jsx)(w, { applicationId: q.applicationId }),
                         ],
                     }),
                 ],

@@ -82,7 +82,7 @@ function B(e) {
             return (0, i.jsx)(U.Ay.Icon, {
                 ref: a,
                 onClick: s,
-                icon: P.j,
+                icon: P.MoreHorizontalIcon,
                 selected: l,
                 className: t,
                 iconClassName: n,

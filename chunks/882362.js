@@ -45,8 +45,8 @@ var l = n(477900),
     W = n(176360),
     Y = n(696451),
     J = n(317525),
-    X = n(71393),
-    Q = n(576705),
+    Q = n(71393),
+    X = n(576705),
     q = n(287809);
 function $(e) {
     let { width: t = 18, height: n = 18, color: i = "currentColor", foreground: s, background: a, className: r } = e;
@@ -151,7 +151,12 @@ function eS(e) {
                       );
               },
               className: A()(ey.X2, { [ey.ho]: a }),
-              children: (0, l.jsx)(eA.j, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+              children: (0, l.jsx)(eA.MoreHorizontalIcon, {
+                  size: "custom",
+                  color: "currentColor",
+                  width: 20,
+                  height: 20,
+              }),
           })
         : null;
 }
@@ -245,15 +250,15 @@ let eJ = s.Ay.connectStores([W.A, e_.A], () => {
         },
     };
 })(ec.A);
-function eX(e) {
+function eQ(e) {
     let { overwrite: t } = e,
         n = (0, s.bG)([W.A], () => W.A.channel),
-        i = (0, s.bG)([X.A], () => (null != n ? X.A.getGuild(n.getGuildId()) : null)),
+        i = (0, s.bG)([Q.A], () => (null != n ? Q.A.getGuild(n.getGuildId()) : null)),
         a = (0, s.bG)([J.A], () => (null != i && null != t && t.type === k.r2.ROLE ? J.A.getRole(i.id, t.id) : void 0));
     if (null == n || null == i || null == t) return null;
     let { guild_id: r, id: o } = n;
     function d() {
-        if (null == X.A.getGuild(r)) return "";
+        if (null == Q.A.getGuild(r)) return "";
         let e = t.type === k.r2.MEMBER ? q.default.getUser(t.id) : void 0,
             n = e?.username ?? "";
         return null != a ? a.name : n;
@@ -269,7 +274,7 @@ function eX(e) {
             case "DENY":
                 s = eo.WQ(s, e);
         }
-        if (Q.A.can(e, n, { [t.id]: { ...t, allow: i, deny: s } })) (0, D.LA)(n, t.id, i, s);
+        if (X.A.can(e, n, { [t.id]: { ...t, allow: i, deny: s } })) (0, D.LA)(n, t.id, i, s);
         else {
             var a;
             let e;
@@ -280,7 +285,7 @@ function eX(e) {
                     break;
                 }
                 case k.r2.ROLE: {
-                    let l = X.A.getGuild(n.getGuildId());
+                    let l = Q.A.getGuild(n.getGuildId());
                     if (null != l) {
                         let n = J.A.getRole(l.id, t.id);
                         null != n && (e = n.name);
@@ -303,10 +308,10 @@ function eX(e) {
     }
     function u(e) {
         if (null == n) return !1;
-        let t = Q.A.can(eB.xBc.ADMINISTRATOR, i) || Q.A.can(eB.xBc.MANAGE_ROLES, n, void 0, void 0, !0);
+        let t = X.A.can(eB.xBc.ADMINISTRATOR, i) || X.A.can(eB.xBc.MANAGE_ROLES, n, void 0, void 0, !0);
         return n.isGuildStageVoice() && z.Zq.has(e)
             ? eH.intl.string(eH.t.bTS5lf)
-            : !((!eo.aI(e, eB.xBc.MANAGE_ROLES) || t) && (null == e || Q.A.can(e, i) || t)) &&
+            : !((!eo.aI(e, eB.xBc.MANAGE_ROLES) || t) && (null == e || X.A.can(e, i) || t)) &&
                   eH.intl.string(eH.t.nOtPMM);
     }
     let h = t.id === r,
@@ -349,7 +354,7 @@ function eX(e) {
         ],
     });
 }
-function eQ(e) {
+function eX(e) {
     let { guildId: t, channelId: n, user: i } = e,
         s = i.getAvatarURL(t, 32),
         r = eU.Ay.getNickname(t, n, i),
@@ -454,7 +459,7 @@ function e$(e) {
                                 })
                             );
                         }
-                        if (i instanceof eO.A) return (0, l.jsx)(eQ, { guildId: t.id, channelId: n.id, user: i });
+                        if (i instanceof eO.A) return (0, l.jsx)(eX, { guildId: t.id, channelId: n.id, user: i });
                     },
                     maxVisibleItems: 7,
                 }),
@@ -467,8 +472,8 @@ function eK() {
         t = i.useRef(null),
         { channel: r, permissionOverwrites: o, selectedOverwriteId: d } = (0, s.cf)([W.A], () => W.A),
         c = r?.getGuildId(),
-        { guild: u, sortedGuildRoles: h } = (0, s.cf)([X.A, J.A], () => {
-            let e = null != c ? X.A.getGuild(c) : void 0,
+        { guild: u, sortedGuildRoles: h } = (0, s.cf)([Q.A, J.A], () => {
+            let e = null != c ? Q.A.getGuild(c) : void 0,
                 t = null != e ? J.A.getSortedRoles(e.id) : void 0;
             return { guild: e, sortedGuildRoles: t };
         }, [c]),
@@ -646,14 +651,14 @@ function eK() {
 function e0() {
     let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, s.cf)([W.A], () => W.A);
     if (
-        null == (0, s.bG)([X.A], () => (null != e ? X.A.getGuild(e.getGuildId()) : null)) ||
+        null == (0, s.bG)([Q.A], () => (null != e ? Q.A.getGuild(e.getGuildId()) : null)) ||
         null == e ||
         null == t ||
         null == n
     )
         return null;
     let i = t[n];
-    return (0, l.jsxs)(eR.Ay, { className: eW.kL, children: [(0, l.jsx)(eK, {}), (0, l.jsx)(eX, { overwrite: i })] });
+    return (0, l.jsxs)(eR.Ay, { className: eW.kL, children: [(0, l.jsx)(eK, {}), (0, l.jsx)(eQ, { overwrite: i })] });
 }
 var e2 = n(407753);
 function e5() {
@@ -939,7 +944,7 @@ function ts(e) {
 }
 function ta(e) {
     let { guild: t, channel: i, isPrivateGuildChannel: a, roles: r, members: o } = e,
-        d = (0, s.bG)([Q.A], () => Q.A.can(tn.xB.ADMINISTRATOR, t)),
+        d = (0, s.bG)([X.A], () => X.A.can(tn.xB.ADMINISTRATOR, t)),
         c = K.MJ(tn.xB.VIEW_CHANNEL, t),
         u = K.MJ(tn.xB.ADMINISTRATOR, t);
     async function h() {
@@ -978,7 +983,7 @@ function ta(e) {
             children: [
                 (0, l.jsx)(e4, {
                     description: g.subtitle,
-                    icon: (0, l.jsx)(I.X, {
+                    icon: (0, l.jsx)(I.LockIcon, {
                         size: "custom",
                         color: "currentColor",
                         className: tl.Ie,
@@ -1063,7 +1068,7 @@ function tr(e) {
         ],
     });
 }
-let to = s.Ay.connectStores([W.A, Q.A, Y.Ay, X.A, J.A], () => {
+let to = s.Ay.connectStores([W.A, X.A, Y.Ay, Q.A, J.A], () => {
     let e,
         t = W.A.channel,
         n = W.A.category,
@@ -1072,7 +1077,7 @@ let to = s.Ay.connectStores([W.A, Q.A, Y.Ay, X.A, J.A], () => {
         s = {},
         a = !1;
     if (null != t) {
-        e = X.A.getGuild(t.getGuildId());
+        e = Q.A.getGuild(t.getGuildId());
         let n = Y.Ay.getMemberIds(e?.id);
         if (null != e) {
             let r = J.A.getSortedRoles(e.id);
@@ -1086,7 +1091,7 @@ let to = s.Ay.connectStores([W.A, Q.A, Y.Ay, X.A, J.A], () => {
         }
     }
     return {
-        canSyncChannel: null != n && Q.A.can(tn.xB.MANAGE_ROLES, n),
+        canSyncChannel: null != n && X.A.can(tn.xB.MANAGE_ROLES, n),
         category: n,
         channel: t,
         filteredMembers: i,
@@ -1120,7 +1125,7 @@ let to = s.Ay.connectStores([W.A, Q.A, Y.Ay, X.A, J.A], () => {
                     ? h
                         ? (0, l.jsx)(te, {
                               canSync: !1,
-                              icon: w.f,
+                              icon: w.RefreshIcon,
                               noticeText: eH.intl.format(eH.t.ETJqLl, { categoryName: i.name }),
                           })
                         : (0, l.jsx)(te, {
@@ -1173,7 +1178,7 @@ var td = n(526132),
 function tb(e) {
     let { refToScroller: t } = e,
         n = (0, s.bG)([e_.A], () => e_.A.getChannel(), []),
-        i = (0, s.bG)([X.A], () => (null != n ? X.A.getGuild(n.getGuildId()) : null), [n]),
+        i = (0, s.bG)([Q.A], () => (null != n ? Q.A.getGuild(n.getGuildId()) : null), [n]),
         {
             section: a,
             sectionId: r,
@@ -1200,7 +1205,7 @@ function tb(e) {
 function tN() {
     let { channel: e, submitting: t } = (0, s.cf)([e_.A], () => e_.A.getProps()),
         n = (0, s.bG)([tm.A], () => tm.A.editedWebhook),
-        i = (0, s.bG)([X.A], () => (null != e ? X.A.getGuild(e.getGuildId()) : null), [e]);
+        i = (0, s.bG)([Q.A], () => (null != e ? Q.A.getGuild(e.getGuildId()) : null), [e]);
     return (0, l.jsx)(ec.A, {
         submitting: t,
         onReset: function () {
@@ -1215,12 +1220,12 @@ var tv = n(886235),
     tE = n(351906);
 function ty() {
     let e = (0, s.bG)([tE.A], () => tE.A.hideInstantInvites),
-        { channel: t, guild: n } = (0, s.cf)([e_.A, X.A], () => {
+        { channel: t, guild: n } = (0, s.cf)([e_.A, Q.A], () => {
             let { channel: e } = e_.A.getProps(),
-                t = null != e ? X.A.getGuild(e.getGuildId()) : null;
+                t = null != e ? Q.A.getGuild(e.getGuildId()) : null;
             return { channel: e, guild: t };
         }, []),
-        i = (0, s.bG)([Q.A], () => null != t && Q.A.can(eB.xBc.CREATE_INSTANT_INVITE, t), [t]),
+        i = (0, s.bG)([X.A], () => null != t && X.A.can(eB.xBc.CREATE_INSTANT_INVITE, t), [t]),
         { invites: a, loading: r } = (0, s.cf)([e_.A], () => e_.A.getInvites(), []);
     return (0, l.jsx)(tv.A, { invites: a, loading: r, guild: n, channel: t, canCreateInvites: i, hide: e });
 }
@@ -1248,8 +1253,8 @@ var tS = n(371444),
     tW = n(408018),
     tY = n(273754),
     tJ = n(375499),
-    tX = n(267889),
-    tQ = n(770335),
+    tQ = n(267889),
+    tX = n(770335),
     tq = n(7584),
     t$ = n(422844),
     tK = n(307301),
@@ -1261,7 +1266,7 @@ n(253913);
 var t7 = n(184887);
 function t3(e) {
     let { channel: t } = e,
-        a = (0, s.bG)([Q.A], () => Q.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
+        a = (0, s.bG)([X.A], () => X.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
         o = t.availableTags.length > 0,
         c = i.useCallback(() => {
@@ -1789,7 +1794,7 @@ function nb(e) {
         r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(tX.A, {
+                return (0, l.jsx)(tQ.A, {
                     channel: n,
                     guildId: s,
                     pickerIntention: nm.EmojiIntention.NO_CUSTOM_EMOJI,
@@ -1797,7 +1802,7 @@ function nb(e) {
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: l } = e;
-                        null != n && n.type === tQ.i.UNICODE && t(n.surrogates), l && i();
+                        null != n && n.type === tX.i.UNICODE && t(n.surrogates), l && i();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: nf,
@@ -2404,7 +2409,7 @@ class nN extends i.PureComponent {
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
             { channel: n } = this.props;
-        return (0, l.jsx)(tX.A, {
+        return (0, l.jsx)(tQ.A, {
             guildId: n?.guild_id,
             closePopout: t,
             onSelectEmoji: (e) => {
@@ -2562,12 +2567,12 @@ function nv() {
         r = (0, s.bG)([tx.A], () => tx.A.getChannel(t?.parent_id ?? null)),
         o = (0, s.bG)([ni.A], () => ni.A.getRegions(t?.getGuildId() ?? null)),
         d = (0, s.bG)([th.A], () => th.A.theme),
-        c = (0, s.bG)([X.A], () => X.A.getGuild(t?.getGuildId())),
+        c = (0, s.bG)([Q.A], () => Q.A.getGuild(t?.getGuildId())),
         u = (0, tu.NI)(t),
         h = (0, tu.H_)(t),
-        { canManageChannels: g, canSendMessages: x } = (0, s.cf)([Q.A], () => ({
-            canManageChannels: Q.A.can(eB.xBc.MANAGE_CHANNELS, t),
-            canSendMessages: Q.A.can(eB.xBc.SEND_MESSAGES, t),
+        { canManageChannels: g, canSendMessages: x } = (0, s.cf)([X.A], () => ({
+            canManageChannels: X.A.can(eB.xBc.MANAGE_CHANNELS, t),
+            canSendMessages: X.A.can(eB.xBc.SEND_MESSAGES, t),
         })),
         p = (0, m.Ay)(t),
         A = nl.default.getId(),
@@ -2749,7 +2754,7 @@ class nS extends i.PureComponent {
                               },
                               label: C,
                               ariaLabel: C,
-                              icon: (0, l.jsx)(r.u, { size: "xs", color: "currentColor" }),
+                              icon: (0, l.jsx)(r.TrashIcon, { size: "xs", color: "currentColor" }),
                               variant: "destructive",
                               predicate: () => o && !t.isModeratorReportChannel(),
                           },
@@ -2779,11 +2784,11 @@ function nT() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g,
-        } = (0, s.cf)([Q.A], () => ({
-            canManageChannels: Q.A.can(eB.xBc.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && Q.A.can(eB.xBc.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && Q.A.can(eB.xBc.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, td.n)(e, Q.A),
+        } = (0, s.cf)([X.A], () => ({
+            canManageChannels: X.A.can(eB.xBc.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && X.A.can(eB.xBc.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && X.A.can(eB.xBc.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, td.n)(e, X.A),
         })),
         m = (0, s.bG)([tx.A], () => tx.A.getChannel(e?.parent_id));
     return (0, l.jsx)(nS, {

@@ -18,9 +18,9 @@ var A = n(736653),
     g = n(295972),
     C = n(36149),
     F = n(979555),
-    v = n(200432),
-    T = n(844887),
-    h = n(217870),
+    h = n(200432),
+    v = n(844887),
+    T = n(217870),
     k = n(569668),
     R = n(731738),
     b = n(807393),
@@ -118,7 +118,7 @@ let B = function (e) {
         [R, b] = r.useState({ sessionToken: n, interviewId: a, consentId: i });
     r.useEffect(() => {
         let e = U(l, s);
-        0 !== e.length && (0, h.ZU)((0, h.Dz)({ pipelines: e })).catch(() => {});
+        0 !== e.length && (0, T.ZU)((0, T.Dz)({ pipelines: e })).catch(() => {});
     }, []),
         r.useEffect(() => {
             b((e) =>
@@ -245,7 +245,7 @@ let B = function (e) {
                                 allowsIdFallback: a,
                             }),
                 g = !1;
-            function h(e) {
+            function T(e) {
                 f.current || P(e), C(!1), I({ type: "FALLBACK_AVAILABLE" });
             }
             return (
@@ -268,7 +268,7 @@ let B = function (e) {
                                 encryption: { mgf1: "sha256" },
                                 wasm: { pipelines: E.wasmPipelines },
                             }),
-                            O(p) || (await (0, T.T7)({ token: R.sessionToken }), O(p)))
+                            O(p) || (await (0, v.T7)({ token: R.sessionToken }), O(p)))
                         )
                             return;
                         let r = u.current;
@@ -276,7 +276,7 @@ let B = function (e) {
                         function e() {
                             null != r &&
                                 ("incode-selfie" === E.tag &&
-                                    (i = (0, v.Ns)((e) => {
+                                    (i = (0, h.Ns)((e) => {
                                         "screenOpened" === e.code && e.screen?.endsWith("Exhausted") && (g = !0);
                                     })),
                                 (d.current = M(E.tag, {
@@ -285,19 +285,19 @@ let B = function (e) {
                                     signal: p,
                                     onFinish: () => {
                                         E.allowsIdFallback && g && !f.current
-                                            ? h("selfie_error_triggered_fallback")
+                                            ? T("selfie_error_triggered_fallback")
                                             : E.requiresManualFinish || E.allowsIdFallback
                                               ? (C(!0),
                                                 (async () => {
                                                     try {
-                                                        let e = await (0, T.uR)(void 0, p);
+                                                        let e = await (0, v.uR)(void 0, p);
                                                         if (O(p)) return;
                                                         let t =
                                                             e?.action === "rejected" ||
                                                             e?.scoreStatus === "FAIL" ||
                                                             e?.scoreStatus === "MANUAL_FAIL";
                                                         if (E.allowsIdFallback && !f.current && t)
-                                                            return void h("result_gate_triggered_fallback");
+                                                            return void T("result_gate_triggered_fallback");
                                                         C(!1), I({ type: "CAPTURE_COMPLETED" });
                                                     } catch {
                                                         if (O(p)) return;
@@ -310,7 +310,7 @@ let B = function (e) {
                                     },
                                     onError: () => {
                                         E.allowsIdFallback && R.interviewId.length > 0
-                                            ? h("selfie_error_triggered_fallback")
+                                            ? T("selfie_error_triggered_fallback")
                                             : (P(E.captureFailureReason), I({ type: "CAPTURE_FAILED" }));
                                     },
                                 })),
@@ -362,12 +362,12 @@ var q = n(793163),
     G = n(792675),
     W = n(700129);
 let Q = function (e) {
-    let { onClose: t, onComplete: n, onCancel: a, hideFooter: F, onDeviceIdCapture: v, transitionState: T } = e,
-        h = !0 === e.pickerMode ? null : e.initialSession,
+    let { onClose: t, onComplete: n, onCancel: a, hideFooter: F, onDeviceIdCapture: h, transitionState: v } = e,
+        T = !0 === e.pickerMode ? null : e.initialSession,
         k = !0 === e.pickerMode ? null : e.initialMethod,
         R = r.useRef(!1),
         [b, L] = r.useState(k),
-        [N, D] = r.useState(h),
+        [N, D] = r.useState(T),
         [S, x] = r.useState(!1),
         V = r.useCallback(async (e) => {
             L(e), x(!1), D(null);
@@ -401,7 +401,7 @@ let Q = function (e) {
             consentId: N?.consentId ?? "",
             interviewId: N?.interviewId ?? "",
             flow: b ?? void 0,
-            onDeviceIdCapture: v,
+            onDeviceIdCapture: h,
             enabled: null != b && null != N,
             webviewHost: M,
         });
@@ -432,7 +432,7 @@ let Q = function (e) {
         (et
             ? (ea = (0, i.jsx)(u.$, {
                   variant: "secondary",
-                  icon: d.f,
+                  icon: d.RefreshIcon,
                   text: w.intl.string(w.t["/nicWo"]),
                   onClick: en,
               }))
@@ -440,7 +440,7 @@ let Q = function (e) {
               (ea = (0, i.jsx)(f.Q, { variant: "secondary", text: w.intl.string(w.t["4gTnU0"]), onClick: er }))),
     null == b)
         ? (0, i.jsx)(s.k, {
-              transitionState: T,
+              transitionState: v,
               onClose: t,
               gradientColor: "blue",
               graphic: { type: "image", src: W.A },
@@ -472,7 +472,7 @@ let Q = function (e) {
           })
         : (0, i.jsx)(q.A, {
               parentComponent: "IncodeAgeVerificationModal",
-              transitionState: T,
+              transitionState: v,
               onBackToStart: t,
               footerRightSlot: ea,
               hideFooter: F,

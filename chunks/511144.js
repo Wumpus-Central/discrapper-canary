@@ -1,4 +1,4 @@
-e.d(n, { G: () => V, default: () => F });
+e.d(n, { G: () => F, default: () => V });
 var i,
     s = e(477900),
     a = e(582128),
@@ -73,7 +73,7 @@ function O(t) {
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        i(V.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        i(F.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
                 }),
                 (0, s.jsx)(m.$, {
@@ -81,7 +81,7 @@ function O(t) {
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        i(V.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        i(F.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS);
                     },
                 }),
             ],
@@ -102,7 +102,7 @@ function R(t) {
 }
 var f = e(889229),
     p = e(327337);
-function C(t) {
+function I(t) {
     let {} = t,
         n = (0, p.RU)();
     return (0, s.jsx)(S, {
@@ -114,7 +114,7 @@ function C(t) {
         }),
     });
 }
-var I = e(285796),
+var C = e(285796),
     N = e(138134),
     k = e(534890),
     L = e(717398),
@@ -168,7 +168,7 @@ function D(t) {
                     text: d ? j.intl.string(j.t.XyHpKH) : j.intl.string(j.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
-                    icon: I.a,
+                    icon: C.a,
                     onClick: () => {
                         d
                             ? (x(!1),
@@ -186,7 +186,7 @@ function D(t) {
                     text: i ? j.intl.string(j.t.QvwOJ6) : j.intl.string(j.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
-                    icon: N.i,
+                    icon: N.FlagIcon,
                     onClick: v,
                     loading: E,
                     disabled: i,
@@ -195,7 +195,7 @@ function D(t) {
                     text: R,
                     variant: "secondary",
                     fullWidth: !0,
-                    icon: k.o,
+                    icon: k.ChatIcon,
                     onClick: () => {
                         0 === O
                             ? ((0, K.A)(p.x7), l(o.Wm.USER_TAKEOVER_MODAL_CTL))
@@ -209,12 +209,12 @@ function D(t) {
     });
 }
 var b = e(620387),
-    V =
+    F =
         (((i = {})[(i.INTRO = 0)] = "INTRO"),
         (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
         (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
         i);
-let F = (t) => {
+let V = (t) => {
     let { warningId: n, warningType: e, senderId: i, modalProps: x, channelId: u } = t,
         [m, A] = a.useState(0),
         h = a.useMemo(
@@ -259,7 +259,7 @@ let F = (t) => {
                         }),
                         (0, s.jsx)(l.q, {
                             id: 1,
-                            children: (0, s.jsx)(C, { warningId: n, senderId: i, trackAnalyticsEvent: E }),
+                            children: (0, s.jsx)(I, { warningId: n, senderId: i, trackAnalyticsEvent: E }),
                         }),
                         (0, s.jsx)(l.q, {
                             id: 2,

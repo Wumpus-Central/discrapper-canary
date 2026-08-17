@@ -21,7 +21,7 @@ var l = n(477900),
     I = n(375708),
     y = n(929041);
 let v = function () {
-    return (0, l.jsx)(E.o, {
+    return (0, l.jsx)(E.ChatIcon, {
         size: "md",
         color: "currentColor",
         className: y.K,
@@ -83,7 +83,7 @@ function ef(e) {
     return (0, l.jsx)(o.D, {
         className: em.wp,
         onClick: n,
-        children: (0, l.jsx)(ee.q, { size: "sm", color: "currentColor" }),
+        children: (0, l.jsx)(ee.LinkIcon, { size: "sm", color: "currentColor" }),
     });
 }
 function ep(e) {
@@ -205,8 +205,8 @@ function ej(e) {
             );
         },
         children: n
-            ? (0, l.jsx)(u.A, { size: "xs", color: "currentColor" })
-            : (0, l.jsx)(c.T, { size: "xs", color: "currentColor" }),
+            ? (0, l.jsx)(u.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
+            : (0, l.jsx)(c.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
 let eb = {

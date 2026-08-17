@@ -2,12 +2,12 @@ t.d(e, { Bq: () => $, _U: () => le, gU: () => ll });
 var s = t(138134),
     a = t(622629),
     i = t(922288),
-    r = t(986226),
-    n = t(669281),
+    n = t(986226),
+    r = t(669281),
     c = t(778492),
     h = t(278416),
-    d = t(935063),
-    o = t(425557),
+    o = t(935063),
+    d = t(425557),
     v = t(176781),
     f = t(948428),
     g = t(534890),
@@ -15,10 +15,10 @@ var s = t(138134),
     w = t(24825),
     p = t(11779),
     A = t(446057),
-    x = t(770880),
+    I = t(770880),
     m = t(276293),
-    N = t(87221),
-    I = t(781481),
+    x = t(87221),
+    N = t(781481),
     E = t(760911),
     T = t(107086),
     Z = t(532590),
@@ -35,15 +35,15 @@ var s = t(138134),
     O = t(844972),
     H = t(146151),
     b = t(428689),
-    G = t(983851),
-    B = t(101277),
-    F = t(678708),
+    F = t(983851),
+    G = t(101277),
+    B = t(678708),
     J = t(855473),
     S = t(740426),
     k = t(51758),
     P = t(681466),
-    X = t(696451),
-    Y = t(71393),
+    Y = t(696451),
+    X = t(71393),
     Q = t(287809),
     K = t(148719),
     W = t(746080),
@@ -64,16 +64,16 @@ function $(l, e, t, s) {
             if ((0, K.A)(l)) return z.intl.string(z.t.jQ1plj);
             return z.intl.string(z.t.t1yj0N);
         case q.rbe.GUILD_FORUM:
-            let r = l.isMediaChannel(),
-                n = l.isGameInvitesChannel();
-            if (a) return r ? z.intl.string(z.t["pZ/fYa"]) : z.intl.string(z.t.ibmpPi);
+            let n = l.isMediaChannel(),
+                r = l.isGameInvitesChannel();
+            if (a) return n ? z.intl.string(z.t["pZ/fYa"]) : z.intl.string(z.t.ibmpPi);
             if (l.isSpoilerChannel()) return z.intl.string(z.t.TDGaxd);
             if ((0, K.A)(l)) {
-                if (n) return z.intl.string(z.t.AwjsC9);
-                return r ? z.intl.string(z.t.gfVCfL) : z.intl.string(z.t.UbLM3J);
+                if (r) return z.intl.string(z.t.AwjsC9);
+                return n ? z.intl.string(z.t.gfVCfL) : z.intl.string(z.t.UbLM3J);
             }
-            if (n) return z.intl.string(z.t.BW4VHV);
-            return r ? z.intl.string(z.t.seKITE) : z.intl.string(z.t["0sDXdm"]);
+            if (r) return z.intl.string(z.t.BW4VHV);
+            return n ? z.intl.string(z.t.seKITE) : z.intl.string(z.t["0sDXdm"]);
         case q.rbe.GUILD_MEDIA:
             if (a) return z.intl.string(z.t["pZ/fYa"]);
             if (l.isSpoilerChannel()) return z.intl.string(z.t.vjYxox);
@@ -114,35 +114,35 @@ function ll(l, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { locked: z = !1, video: $ = !1, stream: ll = !1, hasActiveThreads: le = !1, textFocused: lt = !1 } = t;
     if (null == l) return null;
-    null == e && (e = Y.A.getGuild(l.getGuildId()));
-    let ls = (0, k.V)(e?.id, [Y.A, Q.default, X.Ay]);
-    if (l.isModeratorReportChannel()) return s.i;
+    null == e && (e = X.A.getGuild(l.getGuildId()));
+    let ls = (0, k.V)(e?.id, [X.A, Q.default, Y.Ay]);
+    if (l.isModeratorReportChannel()) return s.FlagIcon;
     if (l?.id === e?.rulesChannelId) return a.B;
     let la = l.isNSFW();
     switch (l.type) {
         case q.rbe.GUILD_ANNOUNCEMENT:
             if (le)
                 if (la) return i.M;
-                else if (l.isSpoilerChannel()) return r.u;
-                else if ((0, K.A)(l)) return n.X;
+                else if (l.isSpoilerChannel()) return n.u;
+                else if ((0, K.A)(l)) return r.X;
                 else return c.k;
             if (la) return i.M;
-            if (l.isSpoilerChannel()) return r.u;
-            if ((0, K.A)(l)) return n.X;
+            if (l.isSpoilerChannel()) return n.u;
+            if ((0, K.A)(l)) return r.X;
             return c.k;
         case q.rbe.GUILD_STORE:
-            return h.g;
+            return h.TagIcon;
         case q.rbe.DM:
         case q.rbe.GROUP_DM:
-            return d.X;
+            return o.X;
         case q.rbe.PRIVATE_THREAD:
-            return o.t;
+            return d.t;
         case q.rbe.MEDIA_THREAD:
             return v.x;
         case q.rbe.ANNOUNCEMENT_THREAD:
         case q.rbe.PUBLIC_THREAD:
             if (la) return f.m;
-            if (l.isForumPost()) return g.o;
+            if (l.isForumPost()) return g.ChatIcon;
             return u.y;
         case q.rbe.GUILD_TEXT:
             let li = (0, P.A)(l, "getChannelIconComponent");
@@ -150,44 +150,44 @@ function ll(l, e) {
             if (null != l.linkedLobby) return w.x;
             if (la) return p.r;
             if (l.isSpoilerChannel()) return A.n;
-            if ((0, K.A)(l)) return x.I;
+            if ((0, K.A)(l)) return I.I;
             return m.N;
         case q.rbe.GUILD_FORUM:
-            let lr = l.isMediaChannel(),
-                ln = l.isGameInvitesChannel();
-            if (la) return lr ? N.D : I.f;
+            let ln = l.isMediaChannel(),
+                lr = l.isGameInvitesChannel();
+            if (la) return ln ? x.D : N.f;
             if (l.isSpoilerChannel()) return E.H;
             if ((0, K.A)(l)) {
-                if (ln) return T.s;
-                return lr ? Z.c : M.Q;
-            } else if (lr) return C.x;
-            else if (ln) return R.t;
+                if (lr) return T.s;
+                return ln ? Z.c : M.Q;
+            } else if (ln) return C.ImageIcon;
+            else if (lr) return R.t;
             else return _.b;
         case q.rbe.GUILD_MEDIA:
-            if (la) return N.D;
+            if (la) return x.D;
             if (l.isSpoilerChannel()) return E.H;
             if ((0, K.A)(l)) return Z.c;
-            else return C.x;
+            else return C.ImageIcon;
         case q.rbe.GUILD_STAGE_VOICE:
-            if (ls) return (0, K.A)(l) ? L.X : j.D;
-            if (z) return L.X;
+            if (ls) return (0, K.A)(l) ? L.LockIcon : j.D;
+            if (z) return L.LockIcon;
             if ((0, K.A)(l)) return j.D;
             else return D.q;
         case q.rbe.GUILD_VOICE:
-            if (lt) return g.o;
+            if (lt) return g.ChatIcon;
             if (la) return V.O;
             if (l.isSpoilerChannel()) return U.P;
             if (ll) return y.F;
             if (ls)
-                if ((0, K.A)(l)) return L.X;
+                if ((0, K.A)(l)) return L.LockIcon;
                 else return $ ? O.k : H.t;
-            if (z) return L.X;
+            if (z) return L.LockIcon;
             if ((0, K.A)(l)) return $ ? O.k : H.t;
-            else return $ ? b.n : G.H;
+            else return $ ? b.VideoIcon : F.H;
         case q.rbe.GUILD_DIRECTORY:
-            return B.P;
+            return G.P;
         case q.rbe.GUILD_CATEGORY:
-            return F.s;
+            return B.FolderIcon;
         default:
             if (W.aQ.has(l.id)) {
                 if (l.id === W.T4.GUILD_HOME || l.id === W.T4.SERVER_GUIDE) return J.Z;
@@ -201,12 +201,12 @@ function le(l) {
         case q.rbe.GUILD_ANNOUNCEMENT:
             return c.k;
         case q.rbe.GUILD_STORE:
-            return h.g;
+            return h.TagIcon;
         case q.rbe.DM:
         case q.rbe.GROUP_DM:
-            return d.X;
+            return o.X;
         case q.rbe.PRIVATE_THREAD:
-            return o.t;
+            return d.t;
         case q.rbe.ANNOUNCEMENT_THREAD:
         case q.rbe.PUBLIC_THREAD:
             return u.y;
@@ -215,13 +215,13 @@ function le(l) {
         case q.rbe.GUILD_FORUM:
             return _.b;
         case q.rbe.GUILD_MEDIA:
-            return C.x;
+            return C.ImageIcon;
         case q.rbe.GUILD_STAGE_VOICE:
             return D.q;
         case q.rbe.GUILD_VOICE:
-            return G.H;
+            return F.H;
         case q.rbe.GUILD_CATEGORY:
-            return F.s;
+            return B.FolderIcon;
         default:
             return null;
     }

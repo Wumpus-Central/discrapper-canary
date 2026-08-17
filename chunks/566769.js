@@ -14,11 +14,11 @@ function m(e) {
         r = i.useMemo(() => {
             switch (t) {
                 case o.TO.BLUR:
-                    return d.x;
+                    return d.ImageIcon;
                 case o.TO.BLOCK:
                     return c.K;
                 case o.TO.SHOW:
-                    return u.b;
+                    return u.EyeIcon;
                 default:
                     return null;
             }

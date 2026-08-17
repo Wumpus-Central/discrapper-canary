@@ -53,8 +53,8 @@ var z = n(56494),
     $ = n(26909),
     Y = n(993748),
     X = n(927813),
-    q = n(60809),
-    K = n(482030),
+    K = n(60809),
+    q = n(482030),
     Q = n(922016),
     Z = n(112173),
     J = n(980707),
@@ -64,7 +64,7 @@ var z = n(56494),
 function el(e) {
     let { sortOrder: t, onSortOptionClick: n, closePopout: l } = e;
     return (0, r.jsx)("div", {
-        className: v()(q.Wx, en.k),
+        className: v()(K.Wx, en.k),
         children: (0, r.jsx)(J.W, {
             "data-menu-migrated": !0,
             navId: "command-list-sort",
@@ -80,18 +80,18 @@ function el(e) {
                         group: "sort-by",
                         label: et.intl.string(et.t.SzxiqK),
                         action: () => {
-                            n(q.Ug.POPULAR), l();
+                            n(K.Ug.POPULAR), l();
                         },
-                        checked: t === q.Ug.POPULAR,
+                        checked: t === K.Ug.POPULAR,
                     }),
                     (0, r.jsx)(ee.iD, {
                         id: "sort-by-alphabetical",
                         group: "sort-by",
                         label: et.intl.string(et.t.m8xsti),
                         action: () => {
-                            n(q.Ug.ALPHABETICAL), l();
+                            n(K.Ug.ALPHABETICAL), l();
                         },
-                        checked: t === q.Ug.ALPHABETICAL,
+                        checked: t === K.Ug.ALPHABETICAL,
                     }),
                 ],
             }),
@@ -103,10 +103,10 @@ function ei(e) {
         { sortOrder: n, onSortOptionClick: l } = e,
         i = o.useRef(null);
     switch (n) {
-        case q.Ug.POPULAR:
+        case K.Ug.POPULAR:
             t = et.intl.string(et.t.SzxiqK);
             break;
-        case q.Ug.ALPHABETICAL:
+        case K.Ug.ALPHABETICAL:
             t = et.intl.string(et.t.m8xsti);
     }
     return (0, r.jsx)(Q.Y, {
@@ -154,7 +154,7 @@ function eu(e) {
                     V._.dispatch(es.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id }));
         }, [t, n, l, i]),
         a = (n.options?.length ?? 0) > 0,
-        c = o.useMemo(() => (0, K.SD)(n.displayDescription, void 0), [n.displayDescription]),
+        c = o.useMemo(() => (0, q.SD)(n.displayDescription, void 0), [n.displayDescription]),
         d = o.useMemo(
             () =>
                 (0, r.jsxs)("div", {
@@ -260,7 +260,7 @@ function ep(e) {
         variant: "secondary",
         "aria-label": et.intl.formatToPlainString(et.t.UXw6W2, { commandName: n.untranslatedName }),
         text: et.intl.string(et.t.TXNS7S),
-        icon: S.l,
+        icon: S.SendMessageIcon,
         iconPosition: "end",
         size: "md",
     });
@@ -315,7 +315,7 @@ function eA(e) {
             canSort: f,
         } = (function (e) {
             let { sectionId: t, commandsByActiveSection: n } = e,
-                [l, i] = o.useState(q.Ug.ALPHABETICAL),
+                [l, i] = o.useState(K.Ug.ALPHABETICAL),
                 s = o.useMemo(() => n.find((e) => e.section.id === t)?.data ?? [], [n, t]),
                 { popularSortedCommands: a, canSort: r } = (function (e) {
                     let { alphabeticalSortedCommands: t } = e;
@@ -352,14 +352,14 @@ function eA(e) {
                 Y.Di(t, { dontRefetchMs: X.A.Millis.DAY });
             }, [t]),
                 o.useLayoutEffect(() => {
-                    r && i(q.Ug.POPULAR);
+                    r && i(K.Ug.POPULAR);
                 }, [r]);
             let c = s;
             switch (l) {
-                case q.Ug.POPULAR:
+                case K.Ug.POPULAR:
                     c = a;
                     break;
-                case q.Ug.ALPHABETICAL:
+                case K.Ug.ALPHABETICAL:
                     c = s;
             }
             return { sortOrder: l, setSortOrder: i, commands: c, canSort: r };
@@ -456,23 +456,23 @@ var eT = n(691540),
     e$ = n(692848),
     eY = n(442433),
     eX = n(700210),
-    eq = n(885386);
-function eK(e) {
+    eK = n(885386);
+function eq(e) {
     let { application: t } = e,
         n = eB.A.getGuildId() ?? void 0;
     return (0, eX.A)({
         application: t,
         guildId: n,
         onItemClick: function () {
-            (0, eO.closeModal)(q.gS), (0, B.k)(_.Se.DISMISSED);
+            (0, eO.closeModal)(K.gS), (0, B.k)(_.Se.DISMISSED);
         },
     });
 }
 function eQ(e) {
     let { application: t, onSelect: n } = e,
-        l = eq.Q_.useSetting(),
+        l = eK.Q_.useSetting(),
         i = (0, ew.A)({ id: t.id, label: et.intl.string(et.t["+NP/b2"]) }),
-        s = eK({ application: t });
+        s = eq({ application: t });
     return (0, r.jsxs)(J.W, {
         "data-menu-migrated-auto": !0,
         navId: "activity-shelf-item-context",
@@ -502,7 +502,7 @@ function eJ(e) {
         },
         N = eF.default.getCurrentUser(),
         E = (0, ew.A)({ id: t.id, label: et.intl.string(et.t["+NP/b2"]) }),
-        g = eK({ application: t }),
+        g = eq({ application: t }),
         C = (0, eH.n)(t, es.gfo.EMBEDDED),
         _ = "channel" === l.type ? l.channel : void 0;
     return (0, r.jsxs)("div", {
@@ -519,7 +519,7 @@ function eJ(e) {
                 },
                 className: v()(eZ.v, i),
                 "aria-label": et.intl.string(et.t.WqhZss),
-                children: (0, r.jsx)(eR.q, { size: "sm", color: e_.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                children: (0, r.jsx)(eR.LinkIcon, { size: "sm", color: e_.A.colors.INTERACTIVE_TEXT_ACTIVE }),
             }),
             (0, r.jsx)(Q.Y, {
                 targetElementRef: a,
@@ -527,7 +527,7 @@ function eJ(e) {
                     let { closePopout: l } = e;
                     return (0, r.jsxs)(J.W, {
                         "data-menu-needs-review": !0,
-                        className: q.qp,
+                        className: K.qp,
                         navId: "app-details-more-menu",
                         onClose: l,
                         "aria-label": et.intl.string(et.t.AXIHpV),
@@ -828,7 +828,10 @@ function eJ(e) {
                         onClick: e.onClick,
                         className: v()(eZ.v, i),
                         "aria-label": et.intl.string(et.t["UKOtz+"]),
-                        children: (0, r.jsx)(eM.j, { size: "sm", color: e_.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                        children: (0, r.jsx)(eM.MoreHorizontalIcon, {
+                            size: "sm",
+                            color: e_.A.colors.INTERACTIVE_TEXT_ACTIVE,
+                        }),
                     }),
             }),
         ],
@@ -1030,7 +1033,7 @@ function tI(e) {
             onActivityItemSelected: N,
             buttonVariant: E,
             buttonText: g,
-        } = (0, K.dn)({
+        } = (0, q.dn)({
             context: t,
             application: n,
             location: D.Oh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -1475,9 +1478,9 @@ var tw = n(724002),
     t$ = n(795816),
     tY = n(648027),
     tX = n(170148);
-function tq() {
+function tK() {
     let e = (0, tX.z)(),
-        t = eq.Q_.getSetting(),
+        t = eK.Q_.getSetting(),
         n = (0, A.bG)([te.A], () => te.A.getFetchState(), []);
     return (
         o.useEffect(() => {
@@ -1486,7 +1489,7 @@ function tq() {
         null
     );
 }
-let tK = (0, n(945810).mj)({
+let tq = (0, n(945810).mj)({
     kind: "user",
     name: "2025-01-allow-nonstaff-to-preview-app-collections",
     defaultConfig: { enabled: !1 },
@@ -1580,7 +1583,7 @@ let na = { commandTypes: [M.kc.CHAT, M.kc.PRIMARY_ENTRY_POINT] },
     nr = { placeholderCount: 0, limit: ea.Hi, includeFrecency: !0 };
 var no = n(917012);
 function nc() {
-    return eq.Q_.useSetting();
+    return eK.Q_.useSetting();
 }
 var nd = n(696292),
     nu = n(136722),
@@ -1744,7 +1747,7 @@ function nM(e) {
             showsPromoted: d,
         } = e,
         { iconURL: u, name: m, description: p } = o.useMemo(() => (0, I.X2)(t, { fakeAppIconURL: tU }), [t]),
-        h = o.useMemo(() => (null == p ? null : (0, K.SD)(p)), [p]),
+        h = o.useMemo(() => (null == p ? null : (0, q.SD)(p)), [p]),
         A = (0, ej.Ay)(u, ""),
         [f, x] = o.useState(!1),
         N = o.useCallback(() => {
@@ -2003,7 +2006,7 @@ function nF(e) {
             activityAction: x,
             buttonVariant: N,
             buttonText: E,
-        } = (0, K.dn)({
+        } = (0, q.dn)({
             context: t,
             application: n,
             location: l,
@@ -2110,7 +2113,7 @@ var nz = n(902527),
 function nX(e) {
     let { searchQuery: t, textContent: n, type: l } = e;
     return (
-        (0, K.Ch)(l, t),
+        (0, q.Ch)(l, t),
         o.useEffect(() => {
             n$.O.announce(n, "polite");
         }, [n]),
@@ -2120,18 +2123,18 @@ function nX(e) {
         })
     );
 }
-var nq = n(455301),
-    nK = (((a = nK || {})[(a.VIEW_MORE = 0)] = "VIEW_MORE"), (a[(a.VIEW_LESS = 1)] = "VIEW_LESS"), a);
+var nK = n(455301),
+    nq = (((a = nq || {})[(a.VIEW_MORE = 0)] = "VIEW_MORE"), (a[(a.VIEW_LESS = 1)] = "VIEW_LESS"), a);
 function nQ(e) {
     let { title: t, buttonType: n, onClickViewButton: l } = e;
     return (0, r.jsxs)("div", {
-        className: nq.wx,
+        className: nK.wx,
         children: [
             (0, r.jsx)(T.E, { variant: "text-md/medium", color: "text-strong", children: t }),
             null != n &&
                 null != l &&
                 (0, r.jsx)(b.D, {
-                    className: nq.Vc,
+                    className: nK.Vc,
                     onClick: l,
                     "aria-label": et.intl.formatToPlainString(et.t["bj/2kV"], { title: t }),
                     children: (0, r.jsx)(T.E, {
@@ -2143,14 +2146,14 @@ function nQ(e) {
         ],
     });
 }
-(nQ.buttonTypes = nK),
+(nQ.buttonTypes = nq),
     (nQ.Loading = function () {
         let e = o.useMemo(() => ({ width: `${10 + 20 * Math.random()}%` }), []);
         return (0, r.jsx)("div", {
-            className: nq.uH,
+            className: nK.uH,
             style: e,
             children: (0, r.jsx)(T.E, {
-                className: nq.R,
+                className: nK.R,
                 variant: "text-md/medium",
                 color: "text-strong",
                 children: "_",
@@ -2261,7 +2264,7 @@ function li(e) {
         { iconURL: c, name: d, description: u } = o.useMemo(() => (0, I.X2)(n, { fakeAppIconURL: tU }), [n]),
         m = o.useMemo(() => {
             let e = t?.displayDescription ?? u;
-            return null == e ? null : (0, K.SD)(e, void 0);
+            return null == e ? null : (0, q.SD)(e, void 0);
         }, [u, t?.displayDescription]),
         { trackSearchResultsItemImpressionRef: p } = ln({
             applicationId: n.id,
@@ -3260,7 +3263,7 @@ function lv(e) {
 }
 function lP(e) {
     let { context: t, onEmptyState: n } = e;
-    tq();
+    tK();
     let l = (0, tY.A)({ guildId: "channel" === t.type ? t.channel?.getGuildId() : void 0 }),
         i = nb.LARGE_BANNER,
         { trackSectionImpressionRef: s } = (0, nz.A)({
@@ -3421,7 +3424,7 @@ function lT(e) {
                 { context: l, entrypoint: i } = e,
                 s =
                     ((t = (0, A.bG)([tJ.default], () => tJ.default.onlyShowPreviewAppCollections)),
-                    (n = tK.getConfig({ location: "App Launcher Home (Web)" }).enabled),
+                    (n = tq.getConfig({ location: "App Launcher Home (Web)" }).enabled),
                     t ? tw.W.PREVIEW : n ? tw.W.NON_STAFF_PREVIEW : tw.W.ACTIVE);
             o.useEffect(() => {
                 (0, Y.An)({ surface: l_, activeState: s });
@@ -3444,7 +3447,7 @@ function lT(e) {
         })({ context: t, entrypoint: n }),
         c = (function (e) {
             let { context: t, recommendationsSections: n } = e;
-            tq();
+            tK();
             let l = (0, tY.A)({ guildId: "channel" === t.type ? t.channel?.getGuildId() : void 0 });
             return o.useMemo(() => {
                 if (!n.some((e) => (0, tz.Lt)(e.flags, tW.APPENDS_REMAINING_ACTIVITIES))) return lE;
@@ -3692,8 +3695,8 @@ function lM(e) {
     });
 }
 var lk = n(46128);
-let lU = { width: 500, height: q.$V },
-    lH = { height: q.$V },
+let lU = { width: 500, height: K.$V },
+    lH = { height: K.$V },
     lD = o.memo(
         o.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: i } = e,

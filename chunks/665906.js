@@ -28,7 +28,7 @@ function p(t) {
                 className: x.cm,
                 children: [
                     (0, a.jsx)(s.K, {
-                        icon: o.R,
+                        icon: o.PencilIcon,
                         onClick: function () {
                             (0, l.openModalLazy)(async () => {
                                 let { default: t } = await Promise.all([
@@ -44,7 +44,7 @@ function p(t) {
                         variant: "secondary",
                     }),
                     (0, a.jsx)(s.K, {
-                        icon: d.u,
+                        icon: d.TrashIcon,
                         onClick: function () {
                             (0, u.Is)(n.id);
                         },

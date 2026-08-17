@@ -24,22 +24,22 @@ var a = t(477900),
     f = t(139286),
     S = t(363195),
     L = t(174459),
-    y = t(562465),
+    y = t(636537),
     A = t(228366),
     D = t(652215);
-async function R(e) {
+async function b(e) {
     let s = (await y.Bo.get({ url: D.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e), rejectWithError: (0, y.fT)() }))
         .body;
     null != s.templates &&
         A.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES", templates: s.templates, guildId: e });
 }
-var b = t(74399),
+var R = t(74399),
     U = t(739455),
     k = t(317097),
     O = t(770880),
     G = t(146151),
-    w = t(808107),
-    P = t(597050),
+    P = t(808107),
+    w = t(597050),
     M = t(532590),
     H = t(669281),
     W = t(580630),
@@ -86,9 +86,9 @@ function F(e) {
                 case D.rbe.GUILD_VOICE:
                     return G.t;
                 case D.rbe.GUILD_STAGE_VOICE:
-                    return w.D;
+                    return P.D;
                 case D.rbe.GUILD_FORUM:
-                    return P.Q;
+                    return w.Q;
                 case D.rbe.GUILD_MEDIA:
                     return M.c;
                 case D.rbe.GUILD_ANNOUNCEMENT:
@@ -313,8 +313,8 @@ function ea(e) {
             addNewEditStateFromScratch: d,
             priceTiers: m,
         } = e,
-        h = (0, c.bG)([b.A], () => b.A.getTemplates(i)),
-        [j, { loading: p, error: S }] = (0, C.A)(R),
+        h = (0, c.bG)([R.A], () => R.A.getTemplates(i)),
+        [j, { loading: p, error: S }] = (0, C.A)(b),
         y = l.useRef("voluntarily_exit");
     l.useEffect(() => {
         (null == h || 0 === h.length) && j(i);
@@ -328,7 +328,7 @@ function ea(e) {
         }, [s, i, y]);
     let [U, k] = l.useState(0),
         [O, G] = l.useState(!1),
-        w = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 (y.current = "template_selected"),
                     A.h.dispatch({
@@ -341,7 +341,7 @@ function ea(e) {
             },
             [i, r, t],
         ),
-        P = l.useCallback(() => {
+        w = l.useCallback(() => {
             O ? G(!1) : t();
         }, [O, t]);
     return (
@@ -358,7 +358,7 @@ function ea(e) {
             parentComponent: "GuildRoleSubscriptionsTierTemplateModal",
             children: [
                 (0, a.jsx)(x.D, {
-                    onClick: P,
+                    onClick: w,
                     className: J.b,
                     children: (0, a.jsx)(_.P, { size: "xxs", color: "currentColor" }),
                 }),
@@ -418,7 +418,7 @@ function ea(e) {
                                         (y.current = "create_from_scratch"), d(), t();
                                     },
                                     variant: "secondary",
-                                    icon: T.R,
+                                    icon: T.PencilIcon,
                                     text: B.intl.string(B.t.a3ycUX),
                                 }),
                             ],
@@ -430,7 +430,7 @@ function ea(e) {
                             priceTiers: m,
                             showPriceReselection: O,
                             setShowPriceReselection: G,
-                            handleCreateTierFromTemplate: w,
+                            handleCreateTierFromTemplate: P,
                         }),
                     ],
                 }),

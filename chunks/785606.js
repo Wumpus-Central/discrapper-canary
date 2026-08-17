@@ -1,8 +1,8 @@
 s.d(t, { default: () => L }), s(321073);
 var i = s(477900),
     a = s(582128),
-    l = s(189213),
-    n = s(772707),
+    n = s(189213),
+    l = s(772707),
     r = s(17928),
     u = s(95477),
     c = s(821609),
@@ -19,8 +19,8 @@ var i = s(477900),
     N = s.n(I),
     x = s(778712),
     b = s(97808),
-    E = s(297264),
-    C = s(834730),
+    C = s(297264),
+    E = s(834730),
     M = s(534890),
     v = s(308528),
     P = s(854627),
@@ -30,24 +30,24 @@ var i = s(477900),
     A = s(805893);
 function R(e) {
     let { recipient: t, isSuccess: s, onClose: a } = e,
-        { avatarSrc: l, eventHandlers: n } = (0, P.A)({ userId: t?.id, size: x._3.SIZE_56 }),
+        { avatarSrc: n, eventHandlers: l } = (0, P.A)({ userId: t?.id, size: x._3.SIZE_56 }),
         r = g.Ay.getName(t),
         u = !s;
     return (0, i.jsxs)("div", {
         className: N()(A.nM, { [A.z3]: u }),
         children: [
-            (0, i.jsx)(b.eu, { src: l, "aria-label": r, size: x._3.SIZE_32, ...n }),
+            (0, i.jsx)(b.eu, { src: n, "aria-label": r, size: x._3.SIZE_32, ...l }),
             (0, i.jsxs)("div", {
                 className: A.Qs,
                 children: [
-                    (0, i.jsx)(E.D, {
+                    (0, i.jsx)(C.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
                         className: A.QC,
                         children: r,
                     }),
                     u &&
-                        (0, i.jsx)(C.E, {
+                        (0, i.jsx)(E.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
                             className: A.kc,
@@ -60,7 +60,7 @@ function R(e) {
                     variant: "secondary",
                     size: "sm",
                     text: y.intl.string(y.t["g33r/P"]),
-                    icon: M.o,
+                    icon: M.ChatIcon,
                     onClick: () => {
                         var e;
                         return (e = t.id), void ((0, k.default)(), v.A.openPrivateChannel({ recipientIds: e }), a());
@@ -73,20 +73,20 @@ var U = s(88001),
     w = s(652215),
     D = s(120191);
 function T(e) {
-    let { onInvite: t, onClose: s, subscriptionId: n, ...o } = e,
+    let { onInvite: t, onClose: s, subscriptionId: l, ...o } = e,
         [f, m] = a.useState([]),
         [I, N] = a.useState(""),
         x = (0, d.A)(I, 400),
         b = (0, r.bG)([S.A], () => S.A.getNumAvailableInvites()),
         {
-            eligibleUsers: E,
-            getNextRows: C,
+            eligibleUsers: C,
+            getNextRows: E,
             hasError: M,
             isFetching: v,
         } = ((e) => {
             let { subscriptionId: t, searchQuery: s } = e,
-                [i, l] = a.useState([]),
-                [n, r] = a.useState(0),
+                [i, n] = a.useState([]),
+                [l, r] = a.useState(0),
                 [u, c] = a.useState(!1),
                 [d, o] = a.useState(!1);
             async function f(e) {
@@ -94,7 +94,7 @@ function T(e) {
                     try {
                         c(!0), o(!1);
                         let i = await (0, _.EQ)(t, e, s);
-                        l((t) => (0 === e ? i.users : [...t, ...i.users])), r(i.nextIndex);
+                        n((t) => (0 === e ? i.users : [...t, ...i.users])), r(i.nextIndex);
                     } catch (e) {
                         o(!0);
                     } finally {
@@ -105,9 +105,9 @@ function T(e) {
                 (0, a.useEffect)(() => {
                     r(0), f(0);
                 }, [t, s]),
-                { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(n) }
+                { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(l) }
             );
-        })({ subscriptionId: n, searchQuery: x }),
+        })({ subscriptionId: l, searchQuery: x }),
         [P, k] = a.useState(!1),
         A = a.useCallback(
             (e) => {
@@ -117,7 +117,7 @@ function T(e) {
         ),
         R = a.useMemo(() => f.map((e) => ({ id: e.id, label: g.Ay.getName(e) })), [f]);
     return M
-        ? (0, i.jsx)(l.Modal, {
+        ? (0, i.jsx)(n.Modal, {
               size: "sm",
               title: y.intl.string(j.default["54lM5y"]),
               subtitle: y.intl.string(j.default.zrtwpV),
@@ -125,8 +125,8 @@ function T(e) {
               actions: [],
               ...o,
           })
-        : 0 !== E.length || v || 0 !== x.length
-          ? (0, i.jsx)(l.Modal, {
+        : 0 !== C.length || v || 0 !== x.length
+          ? (0, i.jsx)(n.Modal, {
                 size: "md",
                 title: y.intl.string(j.default["Um/7BM"]),
                 subtitle: y.intl.format(j.default.qSWXaf, {
@@ -162,14 +162,14 @@ function T(e) {
                 }),
                 ...o,
                 children: (0, i.jsx)(h.A, {
-                    users: E,
+                    users: C,
                     isUserSelected: (e) => f.some((t) => t.id === e.id),
                     onSelectionChange: (e, t) => {
                         m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N("");
                     },
                     isUserDisabled: (e) => (f.length >= b && !f.some((t) => t.id === e.id)) || !e.eligible,
                     isFetching: v,
-                    onFetchMore: C,
+                    onFetchMore: E,
                     searchQuery: x,
                     emptySearchContent: {
                         header: y.intl.string(j.default.gaamNe),
@@ -186,7 +186,7 @@ function T(e) {
                     },
                 }),
             })
-          : (0, i.jsx)(l.Modal, {
+          : (0, i.jsx)(n.Modal, {
                 size: "sm",
                 title: y.intl.string(j.default.ONaJLH),
                 subtitle: y.intl.format(j.default["0LHbPc"], { helpCenterLink: U.TE }),
@@ -197,7 +197,7 @@ function T(e) {
 }
 function z(e) {
     let { onClose: t, inviteUsersResult: s, ...a } = e;
-    return (0, i.jsx)(n.k, {
+    return (0, i.jsx)(l.k, {
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/824b13be7b78cc0e651ea50dbb8e459044a59c44a6c15678761d9ef2739c7fc8.png",
@@ -221,8 +221,8 @@ function z(e) {
     });
 }
 let L = function (e) {
-    let { subscription: t, isFromPurchaseFlow: s = !1, ...l } = e,
-        [n, r] = a.useState([]);
+    let { subscription: t, isFromPurchaseFlow: s = !1, ...n } = e,
+        [l, r] = a.useState([]);
     (0, o.Ay)(() => {
         p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_MODAL_VIEWED, {
             source: s ? "purchase_flow" : "subscription_card",
@@ -240,19 +240,19 @@ let L = function (e) {
                 c(2);
             return;
         }
-        let { invitedUsers: l, ineligibleUsers: n } = a;
-        p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, { successful_user_ids: l, failed_user_ids: n }),
+        let { invitedUsers: n, ineligibleUsers: l } = a;
+        p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, { successful_user_ids: n, failed_user_ids: l }),
             r([
-                ...l.map((e) => ({ user: s.get(e), isSuccess: !0 })),
-                ...n.map((e) => ({ user: s.get(e), isSuccess: !1 })),
+                ...n.map((e) => ({ user: s.get(e), isSuccess: !0 })),
+                ...l.map((e) => ({ user: s.get(e), isSuccess: !1 })),
             ]),
             c(2);
     }
     switch (u) {
         case 1:
-            return (0, i.jsx)(T, { ...l, onInvite: d, subscriptionId: t.id });
+            return (0, i.jsx)(T, { ...n, onInvite: d, subscriptionId: t.id });
         case 2:
-            return (0, i.jsx)(z, { ...l, inviteUsersResult: n });
+            return (0, i.jsx)(z, { ...n, inviteUsersResult: l });
         default:
             return;
     }

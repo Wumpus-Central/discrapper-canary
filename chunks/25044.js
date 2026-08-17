@@ -61,7 +61,7 @@ function m(e) {
                                 id: "clear-override",
                                 label: "Clear Override",
                                 color: "danger",
-                                icon: c.u,
+                                icon: c.TrashIcon,
                                 action: () => (0, E.t$)(a, t, null),
                             }),
                     ],

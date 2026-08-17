@@ -1,30 +1,30 @@
-t.d(n, { default: () => r });
+t.d(n, { default: () => l });
 var a = t(477900);
 t(582128);
-var i = t(980707),
-    d = t(477782),
-    o = t(192308),
-    s = t(346411),
-    c = t(442433),
-    l = t(818348);
-let r = function (e) {
-    return (0, a.jsx)(i.W, {
+var c = t(980707),
+    o = t(477782),
+    i = t(192308),
+    r = t(346411),
+    d = t(442433),
+    s = t(818348);
+let l = function (e) {
+    return (0, a.jsx)(c.W, {
         "data-menu-migrated": !0,
-        onClose: c.Z_,
+        onClose: d.Z_,
         navId: "staff-only-entry-debug",
         "aria-label": "staff only content inventory debug",
-        onSelect: l.tE,
-        children: (0, a.jsx)(d.Dr, {
+        onSelect: s.tE,
+        children: (0, a.jsx)(o.Dr, {
             id: "test",
             label: "Debug (Staff-Only)",
             action: () => {
-                (0, o.openModalLazy)(async () => {
+                (0, i.openModalLazy)(async () => {
                     let { default: n } = await t.e("194022").then(t.bind(t, 924037));
                     return (t) => (0, a.jsx)(n, { ...t, ...e });
                 });
             },
-            icon: s.P,
-            leadingAccessory: { type: "icon", icon: s.P },
+            icon: r.WrenchIcon,
+            leadingAccessory: { type: "icon", icon: r.WrenchIcon },
         }),
     });
 };

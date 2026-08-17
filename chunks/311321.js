@@ -22,7 +22,7 @@ function p(n) {
                   children: [(0, l.jsx)(a.R, { ...m, color: "currentColor" }), o.intl.string(o.t.XIhSoj)],
               })
             : (0, l.jsxs)(l.Fragment, {
-                  children: [(0, l.jsx)(u.n, { ...m, color: "currentColor" }), o.intl.string(o.t.dxfZph)],
+                  children: [(0, l.jsx)(u.UserIcon, { ...m, color: "currentColor" }), o.intl.string(o.t.dxfZph)],
               }),
     });
 }

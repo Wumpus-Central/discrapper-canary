@@ -327,7 +327,7 @@ class O extends s.PureComponent {
                     ? (0, n.jsxs)("div", {
                           className: G.BA,
                           children: [
-                              t ? (0, n.jsx)(f.G, { size: "xs", color: "currentColor", className: G.$2 }) : null,
+                              t ? (0, n.jsx)(f.StarIcon, { size: "xs", color: "currentColor", className: G.$2 }) : null,
                               (0, n.jsx)("div", { className: G.i6, children: e }),
                           ],
                       })

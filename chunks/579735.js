@@ -4,7 +4,7 @@ var l = i(477900),
     s = i(224640),
     a = i(943457),
     r = i(424912),
-    d = i(860689),
+    d = i(149790),
     c = i(208882);
 i(321073);
 var o = i(17928),
@@ -88,7 +88,14 @@ function M(t) {
             (0, l.jsx)(O.A, {
                 entry: s,
                 targetElementRef: a,
-                children: (t) => (0, l.jsx)(f.j, { ref: a, size: "md", color: "currentColor", ...t, className: k.IQ }),
+                children: (t) =>
+                    (0, l.jsx)(f.MoreHorizontalIcon, {
+                        ref: a,
+                        size: "md",
+                        color: "currentColor",
+                        ...t,
+                        className: k.IQ,
+                    }),
             }),
         ],
     });
@@ -187,8 +194,8 @@ var R = i(260598),
     Y = i(123292),
     W = i(181658),
     P = i(946116),
-    X = i(554645);
-function Z(t) {
+    z = i(554645);
+function X(t) {
     let {
             directoryChannelId: e,
             description: i,
@@ -214,7 +221,7 @@ function Z(t) {
             (0, l.jsx)(A.rQ, { title: b.intl.string(b.t["5bQcoa"]), subtitle: b.intl.string(b.t.Ie60Wc) }),
             (0, l.jsx)(E.c, {
                 children: (0, l.jsxs)("div", {
-                    className: X.S,
+                    className: z.S,
                     children: [
                         (0, l.jsx)(R.f, {
                             label: b.intl.string(b.t.FFFAGt),
@@ -256,14 +263,14 @@ function Z(t) {
         ],
     });
 }
-var w = i(284009),
-    z = i.n(w),
+var Z = i(284009),
+    w = i.n(Z),
     J = i(976860),
     Q = i(417956);
 function K(t) {
     let { directoryGuildName: e, guildToAdd: i, isExistingGuildFlow: n, onClose: s } = t;
     return (
-        z()(null != i, "Missing guild in Hub add guild confirmation"),
+        w()(null != i, "Missing guild in Hub add guild confirmation"),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(E.c, {
@@ -443,7 +450,7 @@ function td(t) {
             });
             break;
         case P.m8.CUSTOMIZE_EXISTING_GUILD:
-            H = (0, l.jsx)(Z, {
+            H = (0, l.jsx)(X, {
                 directoryChannelId: e,
                 description: f,
                 onDescriptionChange: y,

@@ -10,7 +10,7 @@ let o = function (e) {
     return (0, l.jsxs)("div", {
         className: s.k,
         children: [
-            (0, l.jsx)(i.m, {
+            (0, l.jsx)(i.CircleInformationIcon, {
                 size: "custom",
                 className: s.K,
                 width: 20,

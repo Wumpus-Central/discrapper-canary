@@ -11,8 +11,8 @@ var t = l(477900),
     m = l(140735),
     h = l(408278),
     g = l(22231),
-    x = l(750943),
-    p = l(123292),
+    p = l(750943),
+    x = l(123292),
     j = l(297264),
     v = l(95477),
     A = l(783878),
@@ -31,24 +31,24 @@ var t = l(477900),
     w = l(71393),
     R = l(994500),
     G = l(287809),
-    _ = l(486020),
-    L = l(403362),
-    P = l(488926),
-    H = l(199940),
-    U = l(132514),
+    P = l(486020),
+    _ = l(403362),
+    L = l(488926),
+    U = l(199940),
+    H = l(132514),
     V = l(721228),
     O = l(652215),
-    J = l(307731),
-    W = l(375708),
-    B = l(689466);
+    W = l(307731),
+    B = l(375708),
+    J = l(689466);
 function Y(e, n) {
     switch (e) {
         case M.NewMemberActionTypes.VIEW:
-            return P.MJ(O.xBc.VIEW_CHANNEL, n);
+            return L.MJ(O.xBc.VIEW_CHANNEL, n);
         case M.NewMemberActionTypes.CHAT:
             if (O.kvI.GUILD_THREADS_ONLY.has(n.type))
-                return P.MJ(O.xBc.SEND_MESSAGES_IN_THREADS, n) || P.MJ(O.xBc.SEND_MESSAGES, n);
-            return P.MJ(O.xBc.SEND_MESSAGES, n);
+                return L.MJ(O.xBc.SEND_MESSAGES_IN_THREADS, n) || L.MJ(O.xBc.SEND_MESSAGES, n);
+            return L.MJ(O.xBc.SEND_MESSAGES, n);
         default:
             return !1;
     }
@@ -61,7 +61,7 @@ function z(e) {
         l = k.A.getChannel(e.channelId);
     return (
         (null == e.title || e.title.length < M.oc) &&
-            n.title.push(W.intl.formatToPlainString(W.t.iu6AGk, { minLength: M.oc })),
+            n.title.push(B.intl.formatToPlainString(B.t.iu6AGk, { minLength: M.oc })),
         null == e.actionType ||
             null == l ||
             Y(e.actionType, l) ||
@@ -69,11 +69,11 @@ function z(e) {
                 (function (e) {
                     switch (e) {
                         case M.NewMemberActionTypes.VIEW:
-                            return W.intl.string(W.t.lD7FOX);
+                            return B.intl.string(B.t.lD7FOX);
                         case M.NewMemberActionTypes.CHAT:
-                            return W.intl.string(W.t.fIF2Uy);
+                            return B.intl.string(B.t.fIF2Uy);
                         default:
-                            (0, L.xb)(e);
+                            (0, _.xb)(e);
                     }
                 })(e.actionType),
             ),
@@ -81,47 +81,47 @@ function z(e) {
     );
 }
 function X(e) {
-    let { transitionState: n, onClose: l, guildId: L, action: P, onSave: X, onDelete: q } = e,
+    let { transitionState: n, onClose: l, guildId: _, action: L, onSave: X, onDelete: q } = e,
         Q = i.useRef(null),
         Z = i.useRef(null),
-        K = null == P || null == k.A.getChannel(P.channelId) ? null : P.channelId,
+        K = null == L || null == k.A.getChannel(L.channelId) ? null : L.channelId,
         [$, ee] = i.useState(K),
         en = (0, s.bG)([k.A], () => k.A.getChannel($)),
         el = en?.isMediaChannel() === !0,
         et = i.useMemo(
             () => [
-                { value: M.NewMemberActionTypes.VIEW, name: W.intl.string(W.t.jfieRw) },
+                { value: M.NewMemberActionTypes.VIEW, name: B.intl.string(B.t.jfieRw) },
                 {
                     value: M.NewMemberActionTypes.CHAT,
                     name:
                         en?.type === O.rbe.GUILD_FORUM
                             ? el
-                                ? W.intl.string(W.t["1EgDpA"])
-                                : W.intl.string(W.t.x5Di7M)
-                            : W.intl.string(W.t["R+dC4C"]),
+                                ? B.intl.string(B.t["1EgDpA"])
+                                : B.intl.string(B.t.x5Di7M)
+                            : B.intl.string(B.t["R+dC4C"]),
                 },
             ],
             [en?.type, el],
         ),
         [ei, ea] = i.useState(F()),
-        [es, eo] = i.useState(P?.title ?? ""),
-        ec = (0, s.bG)([U.A], () => {
-            let e = U.A.getSettings();
+        [es, eo] = i.useState(L?.title ?? ""),
+        ec = (0, s.bG)([H.A], () => {
+            let e = H.A.getSettings();
             if (null == e.newMemberActions) return new Set();
             let n = new Set(e.newMemberActions.map((e) => e.channelId));
             return null != K && n.delete(K), n;
         }),
-        [er, ed] = i.useState(null == P ? null : (et.find((e) => e.value === P.actionType)?.value ?? null)),
+        [er, ed] = i.useState(null == L ? null : (et.find((e) => e.value === L.actionType)?.value ?? null)),
         [eu, em] = i.useState(!1),
-        [eh, eg] = i.useState(P?.emoji ?? null),
-        ex = (0, s.bG)([U.A], () => U.A.getNewMemberAction(P?.channelId)?.icon),
-        ep = P?.channelId,
-        ej = (0, s.bG)([U.A], () => U.A.getPendingDataForChannel(ep), [ep]),
+        [eh, eg] = i.useState(L?.emoji ?? null),
+        ep = (0, s.bG)([H.A], () => H.A.getNewMemberAction(L?.channelId)?.icon),
+        ex = L?.channelId,
+        ej = (0, s.bG)([H.A], () => H.A.getPendingDataForChannel(ex), [ex]),
         [ev, eA] = i.useState(
             null != ej && null != ej.iconData
                 ? ej.iconData
-                : null != ex && null != $
-                  ? _.Ay.getNewMemberActionIconURL({ channelId: $, icon: ex })
+                : null != ep && null != $
+                  ? P.Ay.getNewMemberActionIconURL({ channelId: $, icon: ep })
                   : null,
         ),
         eb = (0, S.Ay)(eh),
@@ -130,11 +130,11 @@ function X(e) {
         eN = Object.values(ei).flat().length > 0,
         eS = i.useCallback(() => {
             if (null == $ || null == er || es.length <= 0) return;
-            let e = void 0 !== ep && $ !== ep,
+            let e = void 0 !== ex && $ !== ex,
                 n = void 0 !== ej,
                 t = null != eh || void 0 !== ev,
                 i = { icon: ev ?? null, emoji: eh };
-            (e || (n && t)) && (n && (0, H.Rp)(ep), (0, H.J4)($, i));
+            (e || (n && t)) && (n && (0, U.Rp)(ex), (0, U.J4)($, i));
             let a = eh !== eb,
                 s = ev !== ey;
             X(
@@ -144,13 +144,13 @@ function X(e) {
                     description: "",
                     actionType: er,
                     emoji: null != eh ? eh : null,
-                    icon: ex ?? null,
+                    icon: ep ?? null,
                 },
                 i,
                 (a || s) && !e,
             ),
                 l();
-        }, [X, l, es, er, $, eh, ex, ev, eb, ey, ep, ej]),
+        }, [X, l, es, er, $, eh, ep, ev, eb, ey, ex, ej]),
         ef = i.useCallback(() => {
             q?.(), l();
         }, [q, l]),
@@ -201,10 +201,10 @@ function X(e) {
         ),
         eE = i.useMemo(
             () =>
-                D.Ay.getSelectableChannels(L)
+                D.Ay.getSelectableChannels(_)
                     .filter((e) => !ec.has(e.channel.id) && (0, M.Rc)(e.channel))
                     .map((e) => {
-                        let n = w.A.getGuild(L),
+                        let n = w.A.getGuild(_),
                             l = (0, T.gU)(e.channel, n);
                         return {
                             id: e.channel.id,
@@ -213,7 +213,7 @@ function X(e) {
                             leading: l ?? void 0,
                         };
                     }),
-            [L, ec],
+            [_, ec],
         ),
         ek = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -228,46 +228,46 @@ function X(e) {
         ),
         eR = i.useId(),
         eG = i.useId(),
-        e_ = i.useMemo(
+        eP = i.useMemo(
             () => [
-                { text: W.intl.string(W.t["ETE/oC"]), onClick: l, variant: "secondary" },
-                { text: W.intl.string(W.t["R3BPH+"]), variant: "primary", onClick: eS, disabled: eC || eN },
+                { text: B.intl.string(B.t["ETE/oC"]), onClick: l, variant: "secondary" },
+                { text: B.intl.string(B.t["R3BPH+"]), variant: "primary", onClick: eS, disabled: eC || eN },
             ],
             [eS, eN, eC, l],
         );
     return (0, t.jsxs)(a.Modal, {
-        title: W.intl.string(W.t.ncTLSo),
+        title: B.intl.string(B.t.ncTLSo),
         transitionState: n,
         onClose: l,
-        actions: e_,
+        actions: eP,
         actionBarInput:
-            null != P ? (0, t.jsx)(p.Q, { text: W.intl.string(W.t.N86XcP), onClick: ef, variant: "critical" }) : void 0,
+            null != L ? (0, t.jsx)(x.Q, { text: B.intl.string(B.t.N86XcP), onClick: ef, variant: "critical" }) : void 0,
         children: [
             (0, t.jsxs)("div", {
-                className: B.eH,
+                className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: [W.intl.string(W.t["j+fhOY"]), (0, t.jsx)(V.A, {})],
+                        children: [B.intl.string(B.t["j+fhOY"]), (0, t.jsx)(V.A, {})],
                     }),
                     (0, t.jsx)(v.k, {
                         value: es,
                         error: (es?.length ?? 0) > 0 ? ei.title.join(", ") : null,
                         onChange: eT,
-                        placeholder: W.intl.string(W.t.oN1Sm2),
+                        placeholder: B.intl.string(B.t.oN1Sm2),
                         maxLength: M.kh,
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: B.me }),
+            (0, t.jsx)("div", { className: J.me }),
             (0, t.jsxs)("div", {
-                className: B.eH,
+                className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: [W.intl.string(W.t.jVDc5W), (0, t.jsx)(V.A, {})],
+                        children: [B.intl.string(B.t.jVDc5W), (0, t.jsx)(V.A, {})],
                     }),
                     (0, t.jsx)(A.Z, {
                         selectionMode: "single",
@@ -278,13 +278,13 @@ function X(e) {
                     (0, t.jsx)(b.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: W.intl.string(W.t.cypQPz),
+                        children: B.intl.string(B.t.cypQPz),
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: B.me }),
+            (0, t.jsx)("div", { className: J.me }),
             (0, t.jsxs)("div", {
-                className: B.kE,
+                className: J.kE,
                 children: [
                     (0, t.jsxs)("div", {
                         children: [
@@ -292,17 +292,17 @@ function X(e) {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 id: eR,
-                                children: W.intl.string(W.t.gs5rQm),
+                                children: B.intl.string(B.t.gs5rQm),
                             }),
                             (0, t.jsx)(b.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: W.intl.string(W.t.LjsoiT),
+                                children: B.intl.string(B.t.LjsoiT),
                             }),
                         ],
                     }),
                     (0, t.jsxs)("div", {
-                        className: B.um,
+                        className: J.um,
                         children: [
                             (0, t.jsx)(y.Y, {
                                 position: "bottom",
@@ -310,13 +310,13 @@ function X(e) {
                                     let { closePopout: n } = e;
                                     return (0, t.jsxs)(o.W, {
                                         navId: "set-image-for-action",
-                                        "aria-label": W.intl.string(W.t.DEoVWZ),
+                                        "aria-label": B.intl.string(B.t.DEoVWZ),
                                         onClose: n,
                                         onSelect: () => !1,
                                         children: [
                                             (0, t.jsx)(c.Dr, {
                                                 id: "emoji",
-                                                label: W.intl.string(W.t["amsyN+"]),
+                                                label: B.intl.string(B.t["amsyN+"]),
                                                 leadingAccessory: { type: "icon", icon: r.n },
                                                 action: () => {
                                                     em(!0);
@@ -324,8 +324,8 @@ function X(e) {
                                             }),
                                             (0, t.jsx)(c.Dr, {
                                                 id: "upload",
-                                                label: W.intl.string(W.t["2YKkdd"]),
-                                                leadingAccessory: { type: "icon", icon: d.J },
+                                                label: B.intl.string(B.t["2YKkdd"]),
+                                                leadingAccessory: { type: "icon", icon: d.UploadIcon },
                                                 action: () => {
                                                     Q.current?.activateUploadDialogue();
                                                 },
@@ -334,8 +334,8 @@ function X(e) {
                                                 ? (0, t.jsx)(c.Dr, {
                                                       id: "clear",
                                                       color: "danger",
-                                                      label: W.intl.string(W.t.ZCLmoR),
-                                                      leadingAccessory: { type: "icon", icon: u.u },
+                                                      label: B.intl.string(B.t.ZCLmoR),
+                                                      leadingAccessory: { type: "icon", icon: u.TrashIcon },
                                                       action: () => {
                                                           ek(null), Z.current?.focus();
                                                       },
@@ -351,16 +351,16 @@ function X(e) {
                                         (n = null != eD || null != eh),
                                         (0, t.jsx)(t.Fragment, {
                                             children: (0, t.jsxs)("div", {
-                                                className: n ? B.bu : void 0,
+                                                className: n ? J.bu : void 0,
                                                 onClick: e.onClick,
                                                 children: [
                                                     null != eD &&
                                                         (0, t.jsxs)("div", {
-                                                            className: B.VU,
+                                                            className: J.VU,
                                                             children: [
                                                                 (0, t.jsx)(m.A, {
                                                                     id: eG,
-                                                                    children: W.intl.formatToPlainString(W.t.uA3dAs, {
+                                                                    children: B.intl.formatToPlainString(B.t.uA3dAs, {
                                                                         name: eD,
                                                                     }),
                                                                 }),
@@ -375,12 +375,12 @@ function X(e) {
                                                         }),
                                                     null != eh &&
                                                         (0, t.jsxs)("div", {
-                                                            className: B.VU,
+                                                            className: J.VU,
                                                             children: [
                                                                 (0, t.jsx)(m.A, {
                                                                     id: eG,
-                                                                    children: W.intl.formatToPlainString(
-                                                                        W.t["8bCGTO"],
+                                                                    children: B.intl.formatToPlainString(
+                                                                        B.t["8bCGTO"],
                                                                         { name: eh.name },
                                                                     ),
                                                                 }),
@@ -394,17 +394,17 @@ function X(e) {
                                                             ],
                                                         }),
                                                     (0, t.jsx)("div", {
-                                                        className: B.r9,
+                                                        className: J.r9,
                                                         children: (0, t.jsx)(h.K, {
                                                             ...e,
                                                             buttonRef: Z,
                                                             "aria-label": n
-                                                                ? W.intl.string(W.t.bt75uw)
-                                                                : W.intl.string(W.t.XqMe3N),
+                                                                ? B.intl.string(B.t.bt75uw)
+                                                                : B.intl.string(B.t.XqMe3N),
                                                             "aria-describedby": `${eR} ${eG}`,
                                                             "aria-haspopup": "menu",
                                                             variant: n ? "overlay-secondary" : "secondary",
-                                                            icon: n ? g.R : x.X,
+                                                            icon: n ? g.PencilIcon : p.X,
                                                             size: n ? "sm" : "md",
                                                             onClick: (n) => {
                                                                 n.stopPropagation(), e.onClick();
@@ -418,7 +418,7 @@ function X(e) {
                                 },
                             }),
                             (0, t.jsx)("div", {
-                                className: B.uJ,
+                                className: J.uJ,
                                 children: (0, t.jsx)(E.Ay, {
                                     ref: Q,
                                     "aria-hidden": !0,
@@ -464,7 +464,7 @@ function X(e) {
                                                     ),
                                                         t && n();
                                             }),
-                                        pickerIntention: J.EmojiIntention.COMMUNITY_CONTENT,
+                                        pickerIntention: W.EmojiIntention.COMMUNITY_CONTENT,
                                         channel: en,
                                     });
                                 },
@@ -477,14 +477,14 @@ function X(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: B.me }),
+            (0, t.jsx)("div", { className: J.me }),
             (0, t.jsxs)("div", {
-                className: B.eH,
+                className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: [W.intl.string(W.t.MIMVLa), (0, t.jsx)(V.A, {})],
+                        children: [B.intl.string(B.t.MIMVLa), (0, t.jsx)(V.A, {})],
                     }),
                     (0, t.jsx)(C.z, {
                         value: er,

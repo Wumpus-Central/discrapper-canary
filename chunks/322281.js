@@ -1608,7 +1608,7 @@ function sd(e) {
                 (0, c.jsxs)("div", {
                     className: so.ed,
                     children: [
-                        (0, c.jsx)(t9.m, { size: "xs", color: "var(--text-subtle)" }),
+                        (0, c.jsx)(t9.CircleInformationIcon, { size: "xs", color: "var(--text-subtle)" }),
                         (0, c.jsx)(ec.E, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
@@ -2189,7 +2189,7 @@ let ic = function () {
                         (0, c.jsxs)("div", {
                             className: ir.Pf,
                             children: [
-                                (0, c.jsx)(ii.C, { size: "sm", color: en.A.colors.TEXT_DEFAULT }),
+                                (0, c.jsx)(ii.CalendarIcon, { size: "sm", color: en.A.colors.TEXT_DEFAULT }),
                                 (0, c.jsx)(ec.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
@@ -3736,7 +3736,7 @@ function nH() {
         s = [
             { icon: nM.B, text: ex.intl.string(sc.default.MUypiB) },
             { icon: nO.h, text: ex.intl.string(sc.default.ec5Rdd) },
-            { icon: nL.o, text: ex.intl.string(sc.default["9t2CzW"]), tooltip: sc.default.AyECej },
+            { icon: nL.GiftIcon, text: ex.intl.string(sc.default["9t2CzW"]), tooltip: sc.default.AyECej },
             { icon: nk.o, text: ex.intl.string(sc.default.R7YJAY) },
         ];
     return (0, c.jsx)(W.L, {
@@ -3796,10 +3796,13 @@ function nH() {
                                                                             children: (0, c.jsx)(nU.m, {
                                                                                 text: ex.intl.string(i),
                                                                                 position: "top",
-                                                                                children: (0, c.jsx)(t9.m, {
-                                                                                    size: "xxs",
-                                                                                    color: "var(--icon-default)",
-                                                                                }),
+                                                                                children: (0, c.jsx)(
+                                                                                    t9.CircleInformationIcon,
+                                                                                    {
+                                                                                        size: "xxs",
+                                                                                        color: "var(--icon-default)",
+                                                                                    },
+                                                                                ),
                                                                             }),
                                                                         }),
                                                                 ],

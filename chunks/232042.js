@@ -1,236 +1,236 @@
 "use strict";
-n.d(t, { A: () => v });
-var i = n(477900);
+n.d(t, { A: () => R });
+var l = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(983851),
-    l = n(194261),
+var i = n(503698),
+    s = n.n(i),
+    r = n(983851),
+    a = n(194261),
     o = n(512474),
-    d = n(445567),
+    u = n(445567),
     c = n(451394),
-    u = n(163328),
-    _ = n(276293),
-    E = n(11779),
-    A = n(446057),
-    h = n(778492),
-    I = n(922288),
-    f = n(986226),
-    p = n(56059),
-    T = n(781481),
-    m = n(760911),
-    g = n(534890),
-    S = n(855473),
-    N = n(740426),
-    C = n(191023),
-    O = n(87221),
-    R = n(173936),
-    L = n(936755),
-    y = n(375708),
-    D = n(353137);
-let v = function (e) {
+    d = n(163328),
+    h = n(276293),
+    m = n(11779),
+    f = n(446057),
+    p = n(778492),
+    g = n(922288),
+    x = n(986226),
+    A = n(56059),
+    C = n(781481),
+    E = n(760911),
+    I = n(534890),
+    y = n(855473),
+    v = n(740426),
+    S = n(191023),
+    N = n(87221),
+    _ = n(173936),
+    T = n(936755),
+    j = n(375708),
+    b = n(353137);
+let R = function (e) {
     let { iconType: t, children: n } = e,
-        r = null;
+        i = null;
     switch (t) {
         case "voice":
-            r = (0, i.jsx)(s.H, {
+            i = (0, l.jsx)(r.H, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.BVZqJl),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.BVZqJl),
             });
             break;
         case "voice-locked":
-            r = (0, i.jsx)(l.X, {
+            i = (0, l.jsx)(a.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.aa0FYn),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.aa0FYn),
             });
             break;
         case "voice-nsfw":
-            r = (0, i.jsx)(o.O, {
+            i = (0, l.jsx)(o.O, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.ajeTKN),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.ajeTKN),
             });
             break;
         case "voice-spoiler":
-            r = (0, i.jsx)(d.P, {
+            i = (0, l.jsx)(u.P, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.hGmOlP),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.hGmOlP),
             });
             break;
         case "stage":
-            r = (0, i.jsx)(c.q, {
+            i = (0, l.jsx)(c.q, {
                 size: "lg",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.EErMzA),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.EErMzA),
             });
             break;
         case "stage-locked":
-            r = (0, i.jsx)(l.X, {
+            i = (0, l.jsx)(a.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.pKZ4I8),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.pKZ4I8),
             });
             break;
         case "thread":
-            r = (0, i.jsx)(u.y, {
+            i = (0, l.jsx)(d.y, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t["7Xm5QI"]),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t["7Xm5QI"]),
             });
             break;
         case "text":
-            r = (0, i.jsx)(_.N, {
+            i = (0, l.jsx)(h.N, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.t1yj0N),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.t1yj0N),
             });
             break;
         case "text-nsfw":
-            r = (0, i.jsx)(E.r, {
+            i = (0, l.jsx)(m.r, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.vvASTb),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.vvASTb),
             });
             break;
         case "text-spoiler":
-            r = (0, i.jsx)(A.n, {
+            i = (0, l.jsx)(f.n, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t["8QsJXA"]),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t["8QsJXA"]),
             });
             break;
         case "announcement":
-            r = (0, i.jsx)(h.k, {
+            i = (0, l.jsx)(p.k, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.GtDRi2),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.GtDRi2),
             });
             break;
         case "announcement-nsfw":
-            r = (0, i.jsx)(I.M, {
+            i = (0, l.jsx)(g.M, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.eRc6o9),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.eRc6o9),
             });
             break;
         case "announcement-spoiler":
-            r = (0, i.jsx)(f.u, {
+            i = (0, l.jsx)(x.u, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t["7F1TCC"]),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t["7F1TCC"]),
             });
             break;
         case "forum":
-            r = (0, i.jsx)(p.b, {
+            i = (0, l.jsx)(A.b, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.GbryDd),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.GbryDd),
             });
             break;
         case "forum-nsfw":
-            r = (0, i.jsx)(T.f, {
+            i = (0, l.jsx)(C.f, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.ibmpPi),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.ibmpPi),
             });
             break;
         case "forum-spoiler":
-            r = (0, i.jsx)(m.H, {
+            i = (0, l.jsx)(E.H, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.TDGaxd),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.TDGaxd),
             });
             break;
         case "post":
-            r = (0, i.jsx)(g.o, {
+            i = (0, l.jsx)(I.ChatIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.Y4REmB),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.Y4REmB),
             });
             break;
         case "home":
         case "guide":
-            r = (0, i.jsx)(S.Z, {
+            i = (0, l.jsx)(y.Z, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.VbpLyU),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.VbpLyU),
             });
             break;
         case "browse":
         case "customize":
-            r = (0, i.jsx)(N.k, {
+            i = (0, l.jsx)(v.k, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.et6wav),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.et6wav),
             });
             break;
         case "message":
-            r = (0, i.jsx)(g.o, {
+            i = (0, l.jsx)(I.ChatIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.BAB0yK),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.BAB0yK),
             });
             break;
         case "locked":
-            r = (0, i.jsx)(l.X, {
+            i = (0, l.jsx)(a.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t["/YzI63"]),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t["/YzI63"]),
             });
             break;
         case "media":
-            r = (0, i.jsx)(C.x, {
+            i = (0, l.jsx)(S.ImageIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.seKITE),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.seKITE),
             });
             break;
         case "media-nsfw":
-            r = (0, i.jsx)(O.D, {
+            i = (0, l.jsx)(N.D, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t["pZ/fYa"]),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t["pZ/fYa"]),
             });
             break;
         case "linked-roles":
-            r = (0, i.jsx)(R.q, {
+            i = (0, l.jsx)(_.LinkIcon, {
                 size: "md",
                 color: "currentColor",
-                className: D.Kk,
-                "aria-label": y.intl.string(y.t.ghtnss),
+                className: b.Kk,
+                "aria-label": j.intl.string(j.t.ghtnss),
             });
     }
-    return (0, i.jsxs)("span", {
-        className: a()("channelWithIcon", { [D.bV]: "text" === t || "text-nsfw" === t || "text-spoiler" === t }),
+    return (0, l.jsxs)("span", {
+        className: s()("channelWithIcon", { [b.bV]: "text" === t || "text-nsfw" === t || "text-spoiler" === t }),
         children: [
-            (0, i.jsx)(L.A, { children: r }),
-            null != n && "" !== n ? (0, i.jsx)("span", { className: D.UU, children: n }) : null,
+            (0, l.jsx)(T.A, { children: i }),
+            null != n && "" !== n ? (0, l.jsx)("span", { className: b.UU, children: n }) : null,
         ],
     });
 };

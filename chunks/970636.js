@@ -29,7 +29,7 @@ function I(e) {
         T = a ? () => _() : () => s(!e.enabled, p),
         { Component: m, play: g, events: S } = (0, l.K)(f || n ? "disable" : "enable");
     r.useEffect(() => () => g(), [n, g]);
-    let N = f ? o.n : p === E.BRT.POPOUT ? (n ? o.n : d.O) : m;
+    let N = f ? o.VideoIcon : p === E.BRT.POPOUT ? (n ? o.VideoIcon : d.O) : m;
     return (0, i.jsx)(i.Fragment, {
         children: h({
             onClick: T,

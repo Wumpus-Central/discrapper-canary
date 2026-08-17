@@ -82,7 +82,7 @@ function j(e) {
                                 e.stopPropagation(), x();
                             },
                             "aria-label": S,
-                            icon: p.o,
+                            icon: p.GiftIcon,
                         }),
                     }),
                 }),

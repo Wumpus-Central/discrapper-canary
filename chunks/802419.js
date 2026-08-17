@@ -19,34 +19,34 @@ var i = l(477900),
     N = l(228366);
 let f = null,
     E = null,
-    T = !1;
-class C extends o.Ay.Store {
+    C = !1;
+class T extends o.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
         return f === t ? E : null;
     }
     isFetching(t) {
-        return f === t && T;
+        return f === t && C;
     }
     hasCachedData(t) {
         return f === t && null !== E;
     }
 }
-let O = new C(N.h, {
+let O = new T(N.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (f = e), (T = !0), (E = []);
+        (f = e), (C = !0), (E = []);
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        f === e && ((E = l), (T = !1));
+        f === e && ((E = l), (C = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        f === e && ((E = []), (T = !1));
+        f === e && ((E = []), (C = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (f = null), (E = null), (T = !1);
+        (f = null), (E = null), (C = !1);
     },
 });
 var v = l(652215);
@@ -86,50 +86,50 @@ async function m(t) {
         return N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE", guildId: t }), [];
     }
 }
-var x = l(923121),
-    G = l(539916),
+var G = l(923121),
+    x = l(539916),
     D = l(375708),
     y = l(32258);
 function b(t) {
     let { transitionState: e, onClose: l, connection: L, index: N } = t,
         f = (0, A.Ay)(),
         E = null != L && null != N,
-        T = S.A.getGuildId(),
-        C = (0, o.bG)([O], () => O.getAllowedApplicationIds(T) ?? [], [T]);
+        C = S.A.getGuildId(),
+        T = (0, o.bG)([O], () => O.getAllowedApplicationIds(C) ?? [], [C]);
     n.useEffect(() => {
-        null != T && m(T);
-    }, [T]),
+        null != C && m(C);
+    }, [C]),
         n.useEffect(() => {
-            for (let t of C)
+            for (let t of T)
                 null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
-        }, [C]);
+        }, [T]);
     let v = (0, o.yK)([_.A], () => {
             let t = [];
-            for (let e of C) {
+            for (let e of T) {
                 let l = _.A.getApplication(e);
                 null != l && t.push(l);
             }
             return t;
-        }, [C]),
-        [b, P] = n.useState(() => (null != L ? (0, G.Sq)(L) : void 0)),
+        }, [T]),
+        [b, P] = n.useState(() => (null != L ? (0, x.Sq)(L) : void 0)),
         [j, F] = n.useState(L?.description ?? ""),
         [U, R] = n.useState([]),
         W = n.useMemo(() => {
             let t = [];
-            for (let e of I.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
+            for (let e of I.A.filter((t) => t.enabled && !x.tb.has(t.type))) {
                 let l = "light" === f ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
             for (let e of v) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
-            for (let e of C)
+            for (let e of T)
                 null == _.A.getApplication(e) &&
                     _.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return t.sort((t, e) => t.label.localeCompare(e.label)), t;
-        }, [v, C, f]),
+        }, [v, T, f]),
         B = n.useCallback(() => {
             if (null == b || "" === b) return void R(["Please select a connection"]);
-            let t = (0, G.vK)(b);
+            let t = (0, x.vK)(b);
             if (null == t) return void R(["Invalid connection selected"]);
             let e = j.trim(),
                 i = {
@@ -138,15 +138,15 @@ function b(t) {
                     ...(null != t.applicationId && { application_id: t.applicationId }),
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
-                n = (0, G.Ii)(i);
-            n.length > 0 ? R(n) : (E ? (0, x.yM)(N, i) : (0, x.sF)(i), l());
+                n = (0, x.Ii)(i);
+            n.length > 0 ? R(n) : (E ? (0, G.yM)(N, i) : (0, G.sF)(i), l());
         }, [b, j, E, N, l]),
         k = n.useCallback(
             (t) => ({
                 id: t.value,
                 value: t.value,
                 label: t.label,
-                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : s._,
+                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : s.GameControllerIcon,
             }),
             [],
         );
@@ -230,7 +230,7 @@ function b(t) {
                             value: j,
                             onChange: F,
                             placeholder: D.intl.string(D.t["28bQNf"]),
-                            maxLength: G.sd,
+                            maxLength: x.sd,
                         }),
                     ],
                 }),

@@ -21,7 +21,7 @@ var i = n(477900),
     C = n(77138),
     N = n(229659),
     T = n(885386),
-    v = n(626822),
+    v = n(453028),
     M = n(174459),
     y = n(975571),
     D = n(917592),
@@ -142,7 +142,7 @@ let L = function (e) {
                                 L &&
                                     v.Ay.supports(O.O5.DIAGNOSTICS) &&
                                     (0, i.jsx)(f.$, {
-                                        icon: A.Q,
+                                        icon: A.BugIcon,
                                         text: x.intl.string(x.t.KBoWg9),
                                         variant: "secondary",
                                         size: "sm",
@@ -150,7 +150,7 @@ let L = function (e) {
                                         onClick: s,
                                     }),
                                 (0, i.jsx)(f.$, {
-                                    icon: "success" === t ? E.y : I.J,
+                                    icon: "success" === t ? E.y : I.UploadIcon,
                                     text: "success" === t ? x.intl.string(x.t.i4jeWR) : x.intl.string(x.t.EbwFfR),
                                     variant: "secondary",
                                     size: "sm",
@@ -167,7 +167,7 @@ let L = function (e) {
                 type: p.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(m.X, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(m.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(g.E, { variant: "text-xs/medium", color: "text-feedback-positive", children: h }),
                 ],
             }),
@@ -216,7 +216,7 @@ function W(e) {
                         (0, i.jsx)("div", {
                             className: a ? w.Dx : w.t6,
                             children: (0, i.jsx)(f.$, {
-                                icon: b.T,
+                                icon: b.CopyIcon,
                                 text: x.intl.string(x.t.OpuAlK),
                                 variant: "secondary",
                                 size: "sm",
@@ -241,7 +241,7 @@ function W(e) {
                 type: p.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(m.X, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(m.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(g.E, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",

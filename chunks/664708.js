@@ -70,7 +70,7 @@ function V(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
 }
-function W(e) {
+function B(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
@@ -81,9 +81,9 @@ function W(e) {
             containerWidth: I,
         } = e,
         j = n.id,
-        W = (0, T.QZ)(o),
+        B = (0, T.QZ)(o),
         Z = null != I && I < 460,
-        z = W.slice(0, Z ? 2 : 3),
+        z = B.slice(0, Z ? 2 : 3),
         K = (0, m.bG)([N.A], () => N.A.getMessage(a, r), [a, r]),
         q = (0, m.bG)([k.A], () => k.A.getChannel(a), [a]),
         Y = (0, m.bG)([k.A], () => k.A.getChannel(j), [j]),
@@ -153,7 +153,7 @@ function W(e) {
                     ),
                 ),
             }),
-            (0, i.jsx)(B, {}),
+            (0, i.jsx)(W, {}),
             (0, i.jsx)(g.Y, {
                 layerContext: X,
                 targetElementRef: et,
@@ -213,7 +213,7 @@ function W(e) {
                 !Z &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(B, {}),
+                        (0, i.jsx)(W, {}),
                         (0, i.jsx)(x.D, {
                             className: H.jC,
                             tag: "span",
@@ -233,7 +233,7 @@ function W(e) {
         ],
     });
 }
-function B() {
+function W() {
     return (0, i.jsx)("div", { className: H.yF });
 }
 var Z = n(555115),
@@ -360,7 +360,7 @@ function ei(e) {
                           surrogate: r.surrogate,
                           className: ee.Zg,
                       })
-                    : (0, i.jsx)(K.o, {
+                    : (0, i.jsx)(K.ChatIcon, {
                           colorClass: ee.Or,
                           color: q.A.colors.ICON_OVERLAY_LIGHT,
                           size: "custom",
@@ -550,7 +550,7 @@ function ev(e) {
                         null != m &&
                         null != A &&
                         null != x &&
-                        (0, i.jsx)(W, {
+                        (0, i.jsx)(B, {
                             controlBarAnimationSpring: n,
                             attachment: h,
                             channelId: A,

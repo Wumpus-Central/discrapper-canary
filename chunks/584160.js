@@ -20,20 +20,20 @@ function d(e) {
             headerBadgeIcon: h,
             headerBadgeVariant: C,
         } = e,
-        A = o.intl.string(o.t.q9EGps);
-    n === r.pn.ADD_PAYMENT_STEPS && (A = o.intl.string(o.t.CpOiEO));
+        f = o.intl.string(o.t.q9EGps);
+    n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
     let E = { headerBadgeText: m, headerBadgeIcon: h, headerBadgeVariant: C };
     "beta" === p
         ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "default"))
         : "trial" === p
-          ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.g))
+          ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.TagIcon))
           : "promo" === p && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
-    let f = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
+    let S = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
     return null == t
-        ? { title: A, gradientColor: void 0, ...f, ...E }
+        ? { title: f, gradientColor: void 0, ...S, ...E }
         : t === a.pe.TIER_0 || t === a.pe.TIER_1
-          ? { title: A, gradientColor: "nitro-green", ...f, ...E }
+          ? { title: f, gradientColor: "nitro-green", ...S, ...E }
           : t === a.pe.TIER_2
-            ? { title: A, gradientColor: "nitro-pink", ...f, ...E }
-            : { title: A, ...f, ...E };
+            ? { title: f, gradientColor: "nitro-pink", ...S, ...E }
+            : { title: f, ...S, ...E };
 }

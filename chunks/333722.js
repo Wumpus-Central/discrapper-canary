@@ -20,7 +20,7 @@ let g = [
         getText: () => u.intl.string(u.t.hjQuV2),
     },
     { icon: l.i, getText: () => u.intl.string(u.t["2RUcaM"]) },
-    { icon: o.C, getText: () => u.intl.string(u.t.bJoZKV) },
+    { icon: o.HeartIcon, getText: () => u.intl.string(u.t.bJoZKV) },
 ];
 function T(e) {
     let { className: t } = e;

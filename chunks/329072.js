@@ -1,56 +1,56 @@
-t.d(n, { A: () => f });
+t.d(n, { A: () => U });
 var i = t(477900);
 t(582128);
 var r = t(284009),
     c = t.n(r),
     s = t(17928),
     d = t(980707),
-    a = t(477782),
-    o = t(820284),
+    o = t(477782),
+    a = t(820284),
     l = t(688810),
     u = t(270816),
     p = t(287809),
     A = t(855187),
-    h = t(625903),
-    v = t(474397),
-    b = t(780964),
-    g = t(766075),
+    g = t(625903),
+    h = t(474397),
+    v = t(780964),
+    b = t(766075),
     C = t(652215),
-    T = t(375708),
-    U = t(731854);
-function f(e) {
-    let { onClose: n, onSelect: t, minimal: r = !1, appContext: f, onInteraction: x } = e,
-        { analyticsLocations: j } = (0, l.Ay)(),
-        y = (0, s.bG)([p.default], () => {
+    S = t(375708),
+    T = t(731854);
+function U(e) {
+    let { onClose: n, onSelect: t, minimal: r = !1, appContext: U, onInteraction: f } = e,
+        { analyticsLocations: x } = (0, l.Ay)(),
+        I = (0, s.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
             return c()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
-        E = (0, u.H)({ deviceType: U.oh.VIDEO_INPUT, analyticsLocations: j, asSubmenu: r }),
-        O = (0, A.A)(y.id, f),
-        S = (function (e) {
+        j = (0, u.H)({ deviceType: T.oh.VIDEO_INPUT, analyticsLocations: x, asSubmenu: r }),
+        y = (0, A.A)(I.id, U),
+        E = (function (e) {
             let { analyticsLocations: n } = (0, l.Ay)();
-            return (0, i.jsx)(a.Dr, {
+            return (0, i.jsx)(o.Dr, {
                 id: "video-settings",
-                label: T.intl.string(T.t.LKzQSF),
+                label: S.intl.string(S.t.LKzQSF),
                 action: () => {
-                    (0, g.openUserSettings)(b.X.CAMERA_CATEGORY, { analyticsLocations: n }),
-                        (0, v.A)(e, e === C.BRT.POPOUT);
+                    (0, b.openUserSettings)(v.X.CAMERA_CATEGORY, { analyticsLocations: n }),
+                        (0, h.A)(e, e === C.BRT.POPOUT);
                 },
-                icon: h.Z,
-                leadingAccessory: { type: "icon", icon: h.Z },
+                icon: g.SettingsIcon,
+                leadingAccessory: { type: "icon", icon: g.SettingsIcon },
             });
-        })(f);
-    return (0, i.jsx)(o.A, {
+        })(U);
+    return (0, i.jsx)(a.A, {
         object: C.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(d.W, {
             "data-menu-migrated": !0,
             onClose: n,
             navId: "video-device-context",
             variant: "fixed",
-            "aria-label": T.intl.string(T.t.F122Gz),
+            "aria-label": S.intl.string(S.t.F122Gz),
             onSelect: t,
-            onInteraction: x,
-            children: [E, (0, i.jsxs)(a.rX, { children: [O, r ? S : null] })],
+            onInteraction: f,
+            children: [j, (0, i.jsxs)(o.rX, { children: [y, r ? E : null] })],
         }),
     });
 }

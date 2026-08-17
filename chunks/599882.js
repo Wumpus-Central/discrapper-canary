@@ -19,15 +19,15 @@ var s = n(477900),
     N = n(366010),
     v = n(5180),
     C = n(789645),
-    A = n(922016),
-    I = n(499373),
+    I = n(922016),
+    A = n(499373),
     y = n(976860),
     k = n(93055),
     M = n(652215),
     E = n(449817),
     S = n(375708);
-let L = i.lazy(() => Promise.all([n.e("732100"), n.e("879948")]).then(n.bind(n, 329671)));
-function R(e) {
+let R = i.lazy(() => Promise.all([n.e("732100"), n.e("879948")]).then(n.bind(n, 329671)));
+function L(e) {
     let { className: t } = e,
         {
             isPreview: n,
@@ -45,7 +45,7 @@ function R(e) {
             let { closePopout: t } = e;
             return (0, s.jsx)(i.Suspense, {
                 fallback: null,
-                children: (0, s.jsx)(L, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
+                children: (0, s.jsx)(R, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
             });
         }, []);
     return n
@@ -60,7 +60,7 @@ function R(e) {
                   children: (0, s.jsx)(C.P, { color: "currentColor", size: "refresh_sm" }),
               }),
           })
-        : (0, s.jsx)(A.Y, {
+        : (0, s.jsx)(I.Y, {
               targetElementRef: l,
               position: "bottom",
               align: "left",
@@ -78,7 +78,7 @@ function R(e) {
                           className: t,
                           "aria-label": a,
                           ...e,
-                          children: (0, s.jsx)(I.T, { color: "currentColor", size: "refresh_sm" }),
+                          children: (0, s.jsx)(A.T, { color: "currentColor", size: "refresh_sm" }),
                       }),
                   });
               },
@@ -86,10 +86,10 @@ function R(e) {
 }
 var D = n(454938),
     P = n(855687),
-    O = n(259678),
-    w = n(657718),
-    z = n(85277),
-    B = n(48525);
+    B = n(259678),
+    O = n(657718),
+    w = n(85277),
+    z = n(48525);
 function F(e) {
     let {
             role: t = "button",
@@ -109,7 +109,7 @@ function F(e) {
         } = e,
         b = i.useRef(null),
         g = m ?? b,
-        N = (0, s.jsx)(w.a, {
+        N = (0, s.jsx)(O.a, {
             icon: o,
             iconOpticalOffsetMargin: c,
             iconPosition: "start",
@@ -117,18 +117,18 @@ function F(e) {
             ref: g,
             disabled: h,
         });
-    return (0, s.jsx)(O.vN, {
+    return (0, s.jsx)(B.vN, {
         ...d,
         children: (0, s.jsx)("button", {
             role: t,
             type: n,
             "aria-pressed": u,
-            className: r()(z.button, B.button, z[a], B[l], { [B.pressed]: u }),
+            className: r()(w.button, z.button, w[a], z[l], { [z.pressed]: u }),
             "aria-label": x,
             disabled: h,
             ref: g,
             ...p,
-            children: (0, s.jsx)("div", { className: z.buttonChildrenWrapper, children: N }),
+            children: (0, s.jsx)("div", { className: w.buttonChildrenWrapper, children: N }),
         }),
     });
 }
@@ -154,7 +154,7 @@ function q() {
         text: r,
         asContainer: !0,
         children: (0, s.jsx)(F, {
-            icon: a ? T.c : G.c,
+            icon: a ? T.BookmarkIcon : G.c,
             pressed: a,
             variant: "tertiary",
             size: "sm",
@@ -249,7 +249,7 @@ function er(e) {
                     children: (0, s.jsxs)("div", {
                         className: ei.Pl,
                         children: [
-                            (0, s.jsx)(u.L, {
+                            (0, s.jsx)(u.GlobeEarthIcon, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 12,
@@ -274,7 +274,7 @@ function er(e) {
           });
 }
 function el() {
-    return (0, s.jsx)(m.G, { size: "custom", color: "currentColor", className: ei.PA, height: 20, width: 20 });
+    return (0, s.jsx)(m.StarIcon, { size: "custom", color: "currentColor", className: ei.PA, height: 20, width: 20 });
 }
 function eo(e) {
     let { guild: t } = e;
@@ -331,7 +331,7 @@ function ec(e) {
                       onClick: r,
                       children: g,
                   }),
-            (0, v.ai)(a.id) && (0, s.jsx)(R, { className: ei.sq }),
+            (0, v.ai)(a.id) && (0, s.jsx)(L, { className: ei.sq }),
             !(0, v.ai)(a.id) &&
                 a.id !== M.gNP &&
                 (0, s.jsx)(d.m, {
@@ -374,19 +374,19 @@ let ed = i.memo(function (e) {
             children: N,
             headerClassName: v,
             communityInfoVisible: C,
-            hasSubheader: A,
+            hasSubheader: I,
         } = e,
-        I = f.features.has(M.GuildFeatures.ANIMATED_BANNER),
+        A = f.features.has(M.GuildFeatures.ANIMATED_BANNER),
         y = (0, D.A)(f),
         k = !y && (0, en.A)(f),
         E = !y && C,
-        S = (0, et.VI)(p) && I && !m,
-        [L, R] = i.useState(!1),
+        S = (0, et.VI)(p) && A && !m,
+        [R, L] = i.useState(!1),
         P = i.useRef(!1),
-        O = i.useRef(null),
-        w = t ?? O,
-        z = i.useRef(void 0),
-        B = Z.kt.getSetting(),
+        B = i.useRef(null),
+        O = t ?? B,
+        w = i.useRef(void 0),
+        z = Z.kt.getSetting(),
         F = (0, c.bG)([J.A], () => J.A.theme);
     function T() {
         let { renderBanner: t, guildBanner: n } = e;
@@ -394,17 +394,17 @@ let ed = i.memo(function (e) {
     }
     return (
         i.useEffect(() => {
-            if (S && n && !P.current && B)
+            if (S && n && !P.current && z)
                 return (
-                    R(!0),
-                    (z.current = setTimeout(() => {
-                        R(!1);
+                    L(!0),
+                    (w.current = setTimeout(() => {
+                        L(!1);
                     }, 5e3)),
                     () => {
-                        clearTimeout(z.current);
+                        clearTimeout(w.current);
                     }
                 );
-        }, [S, n, B]),
+        }, [S, n, z]),
         i.useEffect(() => {
             P.current = n;
         }, [n]),
@@ -416,13 +416,13 @@ let ed = i.memo(function (e) {
                         (0, s.jsxs)("div", {
                             "data-has-banner": T(),
                             "data-banner-visible": n,
-                            ref: w,
+                            ref: O,
                             className: r()(l, {
                                 [ei.kL]: !0,
                                 [ei.r9]: T(),
                                 [ei.Pi]: n,
                                 [e]: !1,
-                                [ei.Iv]: E || (A && k),
+                                [ei.Iv]: E || (I && k),
                             }),
                             onMouseDown: x,
                             onContextMenu: u,
@@ -447,12 +447,12 @@ let ed = i.memo(function (e) {
                                                 guild: f,
                                                 controller: a,
                                                 hasBanner: null != p,
-                                                hasSubheader: A ?? !1,
+                                                hasSubheader: I ?? !1,
                                             }),
                                     ],
                                 }),
                                 null != p
-                                    ? (0, s.jsx)(ea, { guild: f, controller: a, guildBanner: p, animate: L })
+                                    ? (0, s.jsx)(ea, { guild: f, controller: a, guildBanner: p, animate: R })
                                     : null,
                                 (0, s.jsx)(eu, { controller: a }),
                             ],
@@ -461,9 +461,9 @@ let ed = i.memo(function (e) {
                             ? (0, s.jsx)("div", {
                                   className: ei.rt,
                                   onMouseEnter: () => {
-                                      R(!0), clearTimeout(z.current);
+                                      L(!0), clearTimeout(w.current);
                                   },
-                                  onMouseLeave: () => R(!1),
+                                  onMouseLeave: () => L(!1),
                                   style: { height: g },
                               })
                             : null,

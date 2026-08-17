@@ -137,7 +137,7 @@ function z(e) {
                             null != t && (0, i.jsx)(U, { path: r }),
                         ],
                     }),
-                    (0, i.jsx)(H, { icon: w.d, onClick: n, label: K.intl.string(K.t.cpT0Cq) }),
+                    (0, i.jsx)(H, { icon: w.XLargeIcon, onClick: n, label: K.intl.string(K.t.cpT0Cq) }),
                 ],
             }),
     });
@@ -154,8 +154,8 @@ let V = s.memo(function (e) {
     });
 });
 n(321073);
-var Y = n(837381),
-    X = n(741918),
+var X = n(837381),
+    Y = n(741918),
     Z = n(689175),
     q = n(928039),
     $ = n(131607),
@@ -206,7 +206,7 @@ function eh(e) {
         g = c?.() ?? h;
     return (
         el()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, i.jsx)(Y.tG, {
+        (0, i.jsx)(X.tG, {
             id: o,
             children: (e) =>
                 (0, i.jsx)("div", {
@@ -551,7 +551,7 @@ function ey(e) {
               dismissibleBadge: f,
               children: x,
           })
-        : (0, i.jsx)(Y.tG, {
+        : (0, i.jsx)(X.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
                   (0, i.jsx)(eA, {
@@ -660,7 +660,7 @@ function ej(e) {
             );
         }, [n.layout]),
         p = (0, k.NC)(),
-        A = (0, q.A)("settings-sidebar", u, { orientation: X.Gl.VERTICAL, defaultFocused: t }),
+        A = (0, q.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
         [S, j] = s.useState(!1),
         C = s.useCallback(() => {
             let e = u.current?.getScrollerNode();
@@ -690,7 +690,7 @@ function ej(e) {
                                         (0, i.jsx)("div", {
                                             className: eS.hg,
                                             children: (0, i.jsx)(E.K, {
-                                                icon: w.d,
+                                                icon: w.XLargeIcon,
                                                 onClick: r,
                                                 variant: "icon-only",
                                                 size: "sm",
@@ -713,9 +713,9 @@ function ej(e) {
                             (0, i.jsx)("nav", {
                                 className: eS.C$,
                                 "aria-label": K.intl.string(K.t.MqTGqz),
-                                children: (0, i.jsx)(Y.hD, {
+                                children: (0, i.jsx)(X.hD, {
                                     navigator: A,
-                                    children: (0, i.jsx)(Y.PR, {
+                                    children: (0, i.jsx)(X.PR, {
                                         children: (e) => {
                                             let { ref: t, ...n } = e;
                                             return (0, i.jsxs)(Z.Ch, {
@@ -936,8 +936,8 @@ var eM = n(280450),
     eH = n(975571),
     ez = n(481613),
     eV = n.n(ez),
-    eY = n(77729),
-    eX = n(521502),
+    eX = n(77729),
+    eY = n(521502),
     eZ = n(915089),
     eq = n(206845),
     e$ = n(19575),
@@ -945,16 +945,16 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "593516",
-        s = "e29a02222e3781f1ee1cdb380af831c19dc93414".substring(0, 7),
-        r = eY.A?.app.getVersion(),
-        l = eY.A?.app.getBuildNumber(),
-        c = eY.A?.app.getAppArch(),
-        o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
+        n = "594240",
+        s = "1c39e7c1cfd04b249b7fe2da4d2d2ae80398df55".substring(0, 7),
+        r = eX.A?.app.getVersion(),
+        l = eX.A?.app.getBuildNumber(),
+        c = eX.A?.app.getAppArch(),
+        o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
         u = (function () {
             let e = eV()?.os?.toString();
-            if (null == e || null == eY.A) return null;
-            let t = eY.A.os.release,
+            if (null == e || null == eX.A) return null;
+            let t = eX.A.os.release,
                 [n, i, s] = e$.Ay.parsedOSRelease;
             return (
                 e.includes("Windows 10") && void 0 !== s && s >= 22e3 && (e = e.replace("Windows 10", "Windows 11")),
@@ -1117,9 +1117,9 @@ function e2() {
 var e5 = n(402651),
     e9 = n(669067),
     e7 = n(830543),
-    e3 = n(376513);
+    e4 = n(376513);
 let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e4 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+    e3 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
         l = e_.A.useField("query"),
@@ -1147,7 +1147,7 @@ function e6(e) {
               sidebarFooter: e2,
               onViewChange: function (e) {
                   e8.has(e) || (0, e9._)(e);
-                  let t = e4.get(e);
+                  let t = e3.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
@@ -1185,14 +1185,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e3.P,
+            className: e4.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e3.t,
+        className: e4.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

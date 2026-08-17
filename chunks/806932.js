@@ -69,7 +69,7 @@ function T(e) {
                 u &&
                     (0, i.jsx)("div", {
                         className: C.RK,
-                        children: (0, i.jsx)(v.X, { className: C.AA, color: "currentColor" }),
+                        children: (0, i.jsx)(v.LockIcon, { className: C.AA, color: "currentColor" }),
                     }),
             ],
         }),

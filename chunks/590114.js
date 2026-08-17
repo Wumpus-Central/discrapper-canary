@@ -2,8 +2,8 @@ n.r(e), n.d(e, { default: () => eF });
 var i = n(477900),
     l = n(582128),
     s = n(806163),
-    r = n(820284),
-    a = n(549711),
+    a = n(820284),
+    r = n(549711),
     o = n(726249),
     c = n(210714),
     d = n(503698),
@@ -133,7 +133,7 @@ let G = (0, k.S)() || !1,
     H = l.memo(function (t) {
         let { currentRoute: e, renderToolbar: n } = t,
             s = l.useContext(U.AnalyticsContext),
-            r = G || e === w.BVt.APPLICATION_LIBRARY_SETTINGS;
+            a = G || e === w.BVt.APPLICATION_LIBRARY_SETTINGS;
         return (0, i.jsxs)(B.A, {
             className: V.$,
             toolbar: n?.(),
@@ -158,7 +158,7 @@ let G = (0, k.S)() || !1,
                     },
                     children: [
                         (0, i.jsx)(M.V.Item, { id: w.BVt.APPLICATION_LIBRARY, children: v.intl.string(v.t.p7ARTB) }),
-                        r
+                        a
                             ? (0, i.jsx)(M.V.Item, {
                                   id: w.BVt.APPLICATION_LIBRARY_SETTINGS,
                                   children: v.intl.string(v.t["3D5yo/"]),
@@ -186,16 +186,16 @@ var K = n(451988),
     ti = n(565787),
     tl = n(95635),
     ts = n(32880),
-    tr = n(465797),
-    ta = n(953727);
+    ta = n(465797),
+    tr = n(953727);
 let to = function (t) {
-    let { id: e, startColor: n, stopColor: l, color: s, stop: r } = t;
+    let { id: e, startColor: n, stopColor: l, color: s, stop: a } = t;
     return (0, i.jsxs)("linearGradient", {
         id: e,
         children: [
             (0, i.jsx)("stop", { offset: "0", stopColor: n }),
-            (0, i.jsx)("stop", { offset: r, stopColor: l }),
-            (0, i.jsx)("stop", { offset: r, stopColor: s }),
+            (0, i.jsx)("stop", { offset: a, stopColor: l }),
+            (0, i.jsx)("stop", { offset: a, stopColor: s }),
             (0, i.jsx)("stop", { offset: "1", stopColor: s }),
         ],
     });
@@ -204,9 +204,9 @@ function tc(t) {
     return `CloudDone-${t}`;
 }
 let td = (0, ti.k)(function (t) {
-        let { width: e = 24, height: n = 24, color: l = "currentColor", foreground: s, ...r } = t;
+        let { width: e = 24, height: n = 24, color: l = "currentColor", foreground: s, ...a } = t;
         return (0, i.jsx)("svg", {
-            ...(0, ta.A)(r),
+            ...(0, tr.A)(a),
             width: e,
             height: n,
             viewBox: "0 0 24 24",
@@ -225,12 +225,12 @@ let td = (0, ti.k)(function (t) {
         });
     }),
     th = (0, ti.k)(function (t) {
-        let { width: e = 24, height: n = 24, color: l = "currentColor", foreground: s, gradientConfig: r, ...a } = t,
+        let { width: e = 24, height: n = 24, color: l = "currentColor", foreground: s, gradientConfig: a, ...r } = t,
             o = null;
         return (
-            null != r && (o = (0, i.jsx)(to, { ...r, color: l, id: tc(r.id) })),
+            null != a && (o = (0, i.jsx)(to, { ...a, color: l, id: tc(a.id) })),
             (0, i.jsxs)("svg", {
-                ...(0, ta.A)(a),
+                ...(0, tr.A)(r),
                 width: e,
                 height: n,
                 viewBox: "0 0 24 24",
@@ -238,7 +238,7 @@ let td = (0, ti.k)(function (t) {
                     (0, i.jsx)("defs", { children: o }),
                     (0, i.jsx)("path", { d: "M0 0h24v24H0z", fill: "none" }),
                     (0, i.jsx)("path", {
-                        fill: null != r ? `url(#${tc(r.id)})` : l,
+                        fill: null != a ? `url(#${tc(a.id)})` : l,
                         className: s,
                         d: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM10 17l-3.5-3.5 1.41-1.41L10 14.17 15.18 9l1.41 1.41L10 17z",
                     }),
@@ -251,8 +251,8 @@ let td = (0, ti.k)(function (t) {
         [w.VX0.DONE]: td,
         [w.VX0.PLANNING]: td,
         [w.VX0.PREPARING]: td,
-        [w.VX0.PUSHING]: tl.J,
-        [w.VX0.PULLING]: ts.s,
+        [w.VX0.PUSHING]: tl.UploadIcon,
+        [w.VX0.PULLING]: ts.DownloadIcon,
         [w.VX0.CONFLICT]: td,
         [w.VX0.ERROR]: td,
     });
@@ -315,13 +315,13 @@ class tA extends l.PureComponent {
             l = null == t ? { type: w.VX0.DONE } : t,
             s = this.getIsRecentlySynced();
         (tu.has(l.type) || s) && (e.id, this.getStop(l, s));
-        let r = s ? th : tp[l.type];
-        return (0, i.jsx)(X.m, { text: this.getTooltip(l, s), children: (0, i.jsx)(r, { className: n }) });
+        let a = s ? th : tp[l.type];
+        return (0, i.jsx)(X.m, { text: this.getTooltip(l, s), children: (0, i.jsx)(a, { className: n }) });
     }
 }
-let tm = y.Ay.connectStores([tr.A], (t) => {
+let tm = y.Ay.connectStores([ta.A], (t) => {
     let { libraryApplication: e } = t;
-    return { cloudSyncState: tr.A.getState(e.id, e.branchId) };
+    return { cloudSyncState: ta.A.getState(e.id, e.branchId) };
 })(tA);
 var tg = n(545197);
 let tx = (0, tn.xI)(F.A.GAME_LIST_ROW_MIN_HEIGHT),
@@ -329,8 +329,8 @@ let tx = (0, tn.xI)(F.A.GAME_LIST_ROW_MIN_HEIGHT),
     ty = Object.freeze({ [w.DpB.PLATFORM]: "Platform", [w.DpB.LAST_PLAYED]: "Last Played", [w.DpB.NAME]: "Name" });
 function tI(t) {
     let { flag: e, icon: n, item: l, tooltip: s } = t,
-        r = l.libraryApplication.hasFlag(e);
-    return (0, i.jsx)(X.m, { text: s, children: (0, i.jsx)(n, { className: h()(tg.up, { [tg.R]: !r }) }) });
+        a = l.libraryApplication.hasFlag(e);
+    return (0, i.jsx)(X.m, { text: s, children: (0, i.jsx)(n, { className: h()(tg.up, { [tg.R]: !a }) }) });
 }
 let tN = [
     {
@@ -405,9 +405,9 @@ let tN = [
         renderHeader: () => null,
         cellClassName: tg.AT,
         render(t, e, n) {
-            var s, r;
+            var s, a;
             if (null == e) throw Error("No cell props defined.");
-            let a = t.key === e.activeRowKey;
+            let r = t.key === e.activeRowKey;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     (0, i.jsxs)("div", {
@@ -416,7 +416,7 @@ let tN = [
                             (0, i.jsx)(tI, {
                                 flag: w.hM6.PRIVATE,
                                 item: t,
-                                icon: W.G,
+                                icon: W.EyeSlashIcon,
                                 tooltip: v.intl.string(v.t.NozAop),
                             }),
                             (0, i.jsx)(tI, {
@@ -435,12 +435,12 @@ let tN = [
                         ? (0, i.jsx)(Q.A, {
                               analyticsListSort:
                                   ((s = e.sortKey),
-                                  (r = e.sortDirection),
-                                  `${ty[s]} ${r === w.tSW.ASCENDING ? "ASC" : "DESC"}`),
+                                  (a = e.sortDirection),
+                                  `${ty[s]} ${a === w.tSW.ASCENDING ? "ASC" : "DESC"}`),
                               analyticsListIndex: n,
                               source: w.ThZ.APPLICATION_LIBRARY,
                               libraryApplication: t.libraryApplication,
-                              playButtonVariant: a ? "primary" : "secondary",
+                              playButtonVariant: r ? "primary" : "secondary",
                               size: "sm",
                               hideProgress: null != t.defaultAction,
                               onDropdownOpen: () => null != e && e.setActiveRowKey(t),
@@ -458,8 +458,8 @@ function tT(t) {
             activeRowKey: n,
             highlightedApplicationKey: l,
             onMouseEnter: s,
-            onMouseLeave: r,
-            onContextMenu: a,
+            onMouseLeave: a,
+            onContextMenu: r,
             setRef: o,
             ...c
         } = t,
@@ -471,8 +471,8 @@ function tT(t) {
             o(t, e.key);
         },
         onMouseEnter: () => s(e),
-        onMouseLeave: r,
-        onContextMenu: (t) => a(t, e),
+        onMouseLeave: a,
+        onContextMenu: (t) => r(t, e),
         children: (0, i.jsx)("div", { ...c }),
     });
 }
@@ -613,8 +613,8 @@ class tC extends l.PureComponent {
               }));
     }
     render() {
-        let { sortKey: t, sortDirection: e, applicationViewItems: n, activeRowKey: s, stickyHeader: r } = this.props,
-            { overflowMenuRowKey: a, highlightedApplicationKey: o } = this.state;
+        let { sortKey: t, sortDirection: e, applicationViewItems: n, activeRowKey: s, stickyHeader: a } = this.props,
+            { overflowMenuRowKey: r, highlightedApplicationKey: o } = this.state;
         return (0, i.jsxs)(l.Fragment, {
             children: [
                 n.length > 0
@@ -624,16 +624,16 @@ class tC extends l.PureComponent {
                           sortData: !1,
                           rowComponent: tT,
                           className: tg.tp,
-                          headerClassName: r ? tg.ln : tg.wx,
+                          headerClassName: a ? tg.ln : tg.wx,
                           headerCellClassName: tg.e4,
                           sortedHeaderCellClassName: tg.dm,
                           bodyCellClassName: tg.hC,
                           rowClassName: tg.G9,
                           sortKey: t,
                           sortDirection: e,
-                          stickyHeader: r,
+                          stickyHeader: a,
                           rowProps: {
-                              activeRowKey: a ?? s,
+                              activeRowKey: r ?? s,
                               highlightedApplicationKey: o,
                               onMouseEnter: this.handleRowMouseEnter,
                               onMouseLeave: this.handleRowMouseLeave,
@@ -641,7 +641,7 @@ class tC extends l.PureComponent {
                               setRef: this.setRowRef,
                           },
                           cellProps: {
-                              activeRowKey: a ?? s,
+                              activeRowKey: r ?? s,
                               onContextMenu: this.handleApplicationContextMenu,
                               setActiveRowKey: this.setActiveRowKey,
                               clearActiveRowKey: this.clearActiveRowKey,
@@ -660,8 +660,8 @@ function tR(t) {
     let e = l.useContext(U.AnalyticsContext),
         n = (0, s.zy)(),
         {
-            applicationViewItems: r,
-            filterQuery: a,
+            applicationViewItems: a,
+            filterQuery: r,
             fetched: o,
         } = (0, y.cf)([S.A], () => ({
             applicationViewItems: S.A.sortedFilteredLibraryApplicationViewItems,
@@ -683,8 +683,8 @@ function tR(t) {
         ...t,
         analyticsContext: e,
         location: n,
-        applicationViewItems: r,
-        filterQuery: a,
+        applicationViewItems: a,
+        filterQuery: r,
         fetched: o,
         sortKey: c,
         sortDirection: d,
@@ -755,8 +755,8 @@ class tQ extends l.PureComponent {
         let {
             data: l,
             updateInterval: s,
-            color: r,
-            numUpdatesToShow: a,
+            color: a,
+            numUpdatesToShow: r,
             lineWidth: o,
             animate: c,
             gradientStopColor: d,
@@ -765,16 +765,16 @@ class tQ extends l.PureComponent {
         let h = Math.max(Math.min((t - this.dataChangedAt) / s, 1), 0),
             u = i.getContext("2d"),
             p = this.maxValue;
-        (u.strokeStyle = r), (u.lineWidth = o);
+        (u.strokeStyle = a), (u.lineWidth = o);
         let A = i.height - u.lineWidth,
             m = u.createLinearGradient(0, 0, 0, A);
         if (null != d) m.addColorStop(0, d);
         else {
-            let { r: t, g: e, b: n } = tY.E2(r);
+            let { r: t, g: e, b: n } = tY.E2(a);
             m.addColorStop(0, `rgba(${t}, ${e}, ${n}, 0)`);
         }
         m.addColorStop(1, this.fillColor), (u.fillStyle = m);
-        let g = l.length >= a ? a : l.length;
+        let g = l.length >= r ? r : l.length;
         u.setTransform(1, 0, 0, -1, 0, i.height),
             u.clearRect(0, 0, i.width, i.height),
             u.translate(0, 0.5 * u.lineWidth);
@@ -804,10 +804,10 @@ class tQ extends l.PureComponent {
 }
 var tq = n(670843);
 let t$ = function (t) {
-    let { title: e, className: n, color: l, animate: s, getHistoricalTotalBytes: r } = t;
+    let { title: e, className: n, color: l, animate: s, getHistoricalTotalBytes: a } = t;
     return (0, i.jsx)(tW.A, {
-        getHistoricalTotalBytes: r,
-        children: function (t, r, a) {
+        getHistoricalTotalBytes: a,
+        children: function (t, a, r) {
             var o;
             return (0, i.jsx)("div", {
                 className: h()(tq.dm, n),
@@ -822,7 +822,7 @@ let t$ = function (t) {
                                 (0, i.jsx)("div", {
                                     className: tq.TS,
                                     children:
-                                        (o = (t[t.length - 1] / r) * 1e3) > 1e3
+                                        (o = (t[t.length - 1] / a) * 1e3) > 1e3
                                             ? v.intl.formatToPlainString(v.t["WU+gTX"], { size: Math.round(o / 1e3) })
                                             : v.intl.formatToPlainString(v.t.wnF6TH, { size: Math.round(o) }),
                                 }),
@@ -834,9 +834,9 @@ let t$ = function (t) {
                                 data: t,
                                 maxValue: Math.max(Math.max.apply(null, t), 1e3),
                                 className: tq.CD,
-                                updateInterval: r,
+                                updateInterval: a,
                                 color: l,
-                                numUpdatesToShow: a,
+                                numUpdatesToShow: r,
                                 animate: s,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
@@ -904,39 +904,39 @@ let t2 = {
 };
 function t6(t, e, n, i, l) {
     let s = t2[e],
-        r = null != s ? Object.keys(s) : [],
-        { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
-    if (null != s && null != a) {
-        let t = s[a];
+        a = null != s ? Object.keys(s) : [],
+        { unit: r, time: o } = (0, tt.$l)(null != t ? t / 60 : null, a);
+    if (null != s && null != r) {
+        let t = s[r];
         return null != t ? t(n, i, l, o) : null;
     }
     return null;
 }
 function t3(t) {
-    let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: r } = t,
-        a = t4(s, n),
+    let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: a } = t,
+        r = t4(s, n),
         o = t4(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
-            return v.intl.formatToPlainString(v.t.uNjCXZ, { percent: i, progress: o, total: a });
+            return v.intl.formatToPlainString(v.t.uNjCXZ, { percent: i, progress: o, total: r });
         case w.OQC.PLANNING:
             return v.intl.formatToPlainString(v.t.sfuCUb, { percent: i });
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t6(r, e, i, o, a);
+            return t6(a, e, i, o, r);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
-            return v.intl.formatToPlainString(v.t.vjxhWo, { percent: i, progress: o, total: a });
+            return v.intl.formatToPlainString(v.t.vjxhWo, { percent: i, progress: o, total: r });
         case w.OQC.VERIFYING:
-            return v.intl.formatToPlainString(v.t.bbilvq, { percent: i, progress: o, total: a });
+            return v.intl.formatToPlainString(v.t.bbilvq, { percent: i, progress: o, total: r });
         case w.OQC.POST_INSTALL_SCRIPTS:
-            return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: a });
+            return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: r });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t6(r, e, i, o, a);
-            return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: a });
+            if (e === w.WTw.REPAIRING) return t6(a, e, i, o, r);
+            return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: r });
     }
     throw Error("Invalid Dispatch stage");
 }
@@ -1006,12 +1006,12 @@ class t7 extends l.PureComponent {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
                 let n = t4(l, s),
-                    r = t4(i, s),
-                    a = Math.floor((e = te.uA(i, l)));
+                    a = t4(i, s),
+                    r = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
-                        ? v.intl.formatToPlainString(v.t.vjxhWo, { percent: a, progress: r, total: n })
-                        : v.intl.formatToPlainString(v.t.voT3Bi, { percent: a, progress: r, total: n });
+                        ? v.intl.formatToPlainString(v.t.vjxhWo, { percent: r, progress: a, total: n })
+                        : v.intl.formatToPlainString(v.t.voT3Bi, { percent: r, progress: a, total: n });
             }
         }
         return (
@@ -1034,7 +1034,7 @@ class t7 extends l.PureComponent {
         if (null == n || null == i) return null;
         let l = te.uA(n, i),
             s = Math.floor(l),
-            r =
+            a =
                 0 === n && 1 === i
                     ? v.intl.string(v.t["+pfsFX"])
                     : v.intl.formatToPlainString(v.t["+feX8S"], {
@@ -1043,7 +1043,7 @@ class t7 extends l.PureComponent {
                           total: (0, tz.Xq)(i),
                       });
         return this.renderBody({
-            message: r,
+            message: a,
             foregroundColor: (0, t_.q)(e)
                 ? tw.A.unsafe_rawColors.PRIMARY_300.css
                 : tw.A.unsafe_rawColors.PRIMARY_500.css,
@@ -1055,14 +1055,14 @@ class t7 extends l.PureComponent {
             item: { state: n },
         } = this.props;
         if (null == n) return null;
-        let { stage: i, progress: l, total: s, type: r, readerProgress: a } = n;
+        let { stage: i, progress: l, total: s, type: a, readerProgress: r } = n;
         if (null == l || null == s || null == i) return null;
         let o = te.uA(l, s),
-            c = te.uA(a ?? 0, s),
+            c = te.uA(r ?? 0, s),
             d = (t[t.length - 1] / e) * 1e3,
             h = s - l,
             u = t3({
-                type: r,
+                type: a,
                 stage: i,
                 percent: Math.floor(o),
                 progress: l,
@@ -1084,10 +1084,10 @@ class t7 extends l.PureComponent {
         let { total: e, progress: n, stage: i, type: l } = t;
         if (null == e || null == n || null == i) return null;
         let s = te.uA(n, e),
-            r = Math.floor(s);
+            a = Math.floor(s);
         return this.renderBody({
             percent: s,
-            message: t3({ type: l, stage: i, percent: r, progress: n, total: e }),
+            message: t3({ type: l, stage: i, percent: a, progress: n, total: e }),
             foregroundColor: tw.A.unsafe_rawColors.BLUE_345.css,
         });
     }
@@ -1115,10 +1115,10 @@ class t7 extends l.PureComponent {
     }
 }
 function t9() {
-    return (0, i.jsx)(t5, { icon: tb.u, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
+    return (0, i.jsx)(t5, { icon: tb.PlayIcon, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
 }
 function t8() {
-    return (0, i.jsx)(t5, { icon: tD.E, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
+    return (0, i.jsx)(t5, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
 }
 let et = (t) => {
         let { item: e } = t;
@@ -1213,7 +1213,7 @@ class ei extends l.PureComponent {
         this.isTallerThanHalfViewport !== n && ((this.isTallerThanHalfViewport = n), e(n));
     }, 1e3);
     render() {
-        let { applications: t, paused: e, isFocused: l, theme: s, analyticsContext: r } = this.props;
+        let { applications: t, paused: e, isFocused: l, theme: s, analyticsContext: a } = this.props;
         return 0 === t.length
             ? null
             : (0, i.jsxs)("div", {
@@ -1257,7 +1257,7 @@ class ei extends l.PureComponent {
                                               ...n,
                                               applicationId: e.applicationId,
                                               branchId: e.branchId,
-                                              analyticsContext: r,
+                                              analyticsContext: a,
                                           });
                                   });
                               },
@@ -1270,18 +1270,18 @@ class ei extends l.PureComponent {
 }
 function el(t, e, n, i) {
     return t.reduce((t, l, s) => {
-        let { applicationId: r, branchId: a } = l,
-            o = n.getApplication(r),
-            c = i.getState(r, a);
+        let { applicationId: a, branchId: r } = l,
+            o = n.getApplication(a),
+            c = i.getState(a, r);
         return (
             null != o &&
                 t.push({
-                    key: `${r}:${a}`,
-                    applicationId: r,
-                    branchId: a,
+                    key: `${a}:${r}`,
+                    applicationId: a,
+                    branchId: r,
                     state: c,
                     application: o,
-                    libraryApplication: tH.A.getLibraryApplication(r, a),
+                    libraryApplication: tH.A.getLibraryApplication(a, r),
                     finished: e,
                     index: s,
                 }),
@@ -1297,8 +1297,8 @@ let es = (0, tk.A)(
         theme: tG.A.theme,
     }))((0, tU.A)(ei)),
 );
-var er = n(613057),
-    ea = n(739022);
+var ea = n(613057),
+    er = n(739022);
 class eo extends l.PureComponent {
     _scrollerRef = l.createRef();
     _scrollToOnMount;
@@ -1306,7 +1306,7 @@ class eo extends l.PureComponent {
     state = { includeUpdatesInScroller: !1 };
     componentDidMount() {
         A.I(w.BVt.APPLICATION_LIBRARY),
-            (0, x.h)(er.XK.LIBRARY),
+            (0, x.h)(ea.XK.LIBRARY),
             p.h.wait(() => (0, m.r)()),
             (0, g.X)(),
             null != this._scrollToOnMount &&
@@ -1328,7 +1328,7 @@ class eo extends l.PureComponent {
     render() {
         let { includeUpdatesInScroller: t } = this.state,
             e = (0, i.jsx)("div", {
-                children: (0, i.jsx)(r.A, {
+                children: (0, i.jsx)(a.A, {
                     section: w.JJy.LIBRARY_INSTALL_MODULE,
                     children: (0, i.jsx)(es, {
                         onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange,
@@ -1340,11 +1340,11 @@ class eo extends l.PureComponent {
                 (0, i.jsx)(H, { currentRoute: w.BVt.APPLICATION_LIBRARY, renderToolbar: this.renderToolbar }),
                 t ? null : e,
                 (0, i.jsxs)(u.Gt, {
-                    className: h()(ea.k, ea.X),
+                    className: h()(er.k, er.X),
                     ref: this._scrollerRef,
                     children: [
                         t ? e : null,
-                        (0, i.jsx)(r.A, {
+                        (0, i.jsx)(a.A, {
                             section: w.JJy.LIBRARY_APPLICATION_LIST,
                             children: (0, i.jsx)(tR, { stickyHeader: !t, scrollToRow: this.scrollToRow }),
                         }),
@@ -1379,8 +1379,8 @@ let ew = Math.ceil(2 * Math.PI * 20),
             n,
             l,
             s,
-            { total: r, used: a } = t,
-            o = Math.max(0, Math.min(1, a / r)),
+            { total: a, used: r } = t,
+            o = Math.max(0, Math.min(1, r / a)),
             c = `${Math.floor(100 * o)}%`;
         return (0, i.jsx)(X.m, {
             text: v.intl.formatToPlainString(v.t["2eoRMh"], { used: c }),
@@ -1461,11 +1461,11 @@ class eM extends l.PureComponent {
     renderViewing() {
         let t,
             e,
-            { path: n, label: l, editingPath: s, isDefault: r, metadata: a } = this.props;
+            { path: n, label: l, editingPath: s, isDefault: a, metadata: r } = this.props;
         return (
-            null != a &&
-                ((t = null != a.availableKB ? (0, tz.Xq)(a.availableKB, { useKibibytes: !0 }) : null),
-                (e = null != a.totalKB ? (0, tz.Xq)(a.totalKB, { useKibibytes: !0 }) : null)),
+            null != r &&
+                ((t = null != r.availableKB ? (0, tz.Xq)(r.availableKB, { useKibibytes: !0 }) : null),
+                (e = null != r.totalKB ? (0, tz.Xq)(r.totalKB, { useKibibytes: !0 }) : null)),
             (0, i.jsxs)(q.A, {
                 className: eb.ce,
                 align: q.A.Align.CENTER,
@@ -1483,12 +1483,12 @@ class eM extends l.PureComponent {
                                         variant: "heading-md/semibold",
                                         children: null != l ? l : ev.A.getLabelFromPath(n),
                                     }),
-                                    r
+                                    a
                                         ? (0, i.jsx)("span", { className: eb.Zn, children: v.intl.string(v.t.bBvAEH) })
                                         : null,
                                 ],
                             }),
-                            null != a && null != t && null != e
+                            null != r && null != t && null != e
                                 ? (0, i.jsx)(eP.A, {
                                       className: eb.fw,
                                       hoverText: v.intl.formatToPlainString(v.t["Fxo9e+"], { available: t, total: e }),
@@ -1614,12 +1614,12 @@ class eB extends l.PureComponent {
                 label: v.intl.string(v.t.aLszkC),
                 children: [
                     t.map((t) => {
-                        let { path: s, label: r } = t;
+                        let { path: s, label: a } = t;
                         return (0, i.jsx)(
                             eM,
                             {
                                 path: s,
-                                label: r,
+                                label: a,
                                 metadata: e[s],
                                 isDefault: n === s,
                                 editingPath: l,
@@ -1766,18 +1766,18 @@ var eH = n(675605);
 function eK() {
     return (0, i.jsxs)(s.dO, {
         children: [
-            (0, i.jsx)(a.A, {
+            (0, i.jsx)(r.A, {
                 path: w.BVt.APPLICATION_LIBRARY_SETTINGS,
                 exact: !0,
-                children: (0, i.jsxs)(r.A, {
+                children: (0, i.jsxs)(a.A, {
                     page: w.liQ.LIBRARY_SETTINGS,
                     root: !0,
                     children: [(0, i.jsx)(o.HI, { subsection: v.intl.string(v.t["3D5yo/"]) }), (0, i.jsx)(eG, {})],
                 }),
             }),
-            (0, i.jsx)(a.A, {
+            (0, i.jsx)(r.A, {
                 path: w.BVt.APPLICATION_LIBRARY,
-                children: (0, i.jsxs)(r.A, {
+                children: (0, i.jsxs)(a.A, {
                     page: w.liQ.LIBRARY,
                     root: !0,
                     children: [(0, i.jsx)(o.HI, { subsection: v.intl.string(v.t.p7ARTB) }), (0, i.jsx)(eo, {})],

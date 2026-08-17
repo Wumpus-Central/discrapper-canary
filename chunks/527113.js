@@ -125,7 +125,7 @@ function E(e) {
     let { value: t, isBoosted: i = !1 } = e;
     return "boolean" == typeof t
         ? t
-            ? (0, s.jsx)(a.A, { size: "md", color: "currentColor", className: T.oE })
+            ? (0, s.jsx)(a.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: T.oE })
             : (0, s.jsx)(l.P, { size: "md", color: "currentColor", className: T.i3 })
         : (0, s.jsx)(o.E, {
               color: i ? "text-strong" : "text-muted",

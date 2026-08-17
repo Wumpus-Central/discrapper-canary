@@ -17,8 +17,8 @@ var r = n(477900),
 function D(t) {
     let { entry: e, onSelect: D, closePopout: A, hideEditButton: T = !1 } = t,
         { isEntryAdmin: y, canEdit: p, canRemove: S } = (0, C.A)(e),
-        Y = (0, d.A)({ id: e.guildId, label: I.intl.string(I.t["94lLD7"]), onSuccess: A });
-    function g() {
+        g = (0, d.A)({ id: e.guildId, label: I.intl.string(I.t["94lLD7"]), onSuccess: A });
+    function Y() {
         h.ZM(e.channelId, e.guildId);
     }
     function f() {
@@ -26,7 +26,7 @@ function D(t) {
     }
     return (
         i.useEffect(() => {
-            p || S || null != Y || (0, _.Z_)();
+            p || S || null != g || (0, _.Z_)();
         }),
         (0, r.jsxs)(l.W, {
             "data-menu-migrated": !0,
@@ -50,7 +50,7 @@ function D(t) {
                                       }),
                                           f();
                                   },
-                                  leadingAccessory: { type: "icon", icon: E.R },
+                                  leadingAccessory: { type: "icon", icon: E.PencilIcon },
                               })
                             : null,
                         S
@@ -62,12 +62,12 @@ function D(t) {
                                           title: I.intl.string(I.t.KUxYWH),
                                           subtitle: I.intl.format(I.t["/5y0uV"], { guildName: e.name }),
                                           confirmText: I.intl.string(I.t.N86XcP),
-                                          onConfirm: g,
+                                          onConfirm: Y,
                                       }),
                                           f();
                                   },
                                   color: "danger",
-                                  leadingAccessory: { type: "icon", icon: R.u },
+                                  leadingAccessory: { type: "icon", icon: R.TrashIcon },
                               })
                             : null,
                         y
@@ -78,13 +78,13 @@ function D(t) {
                                   action: function () {
                                       null != e && ((0, u.sJ)(e), f());
                                   },
-                                  icon: s.i,
-                                  leadingAccessory: { type: "icon", icon: s.i },
+                                  icon: s.FlagIcon,
+                                  leadingAccessory: { type: "icon", icon: s.FlagIcon },
                                   color: "danger",
                               }),
                     ],
                 }),
-                (0, r.jsx)(o.rX, { children: Y }),
+                (0, r.jsx)(o.rX, { children: g }),
             ],
         })
     );

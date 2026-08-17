@@ -1,49 +1,49 @@
 "use strict";
-n.d(t, { A: () => A });
-var i = n(477900),
-    r = n(582128),
-    a = n(17928),
-    s = n(338854),
-    l = n(406810),
+n.d(t, { A: () => f });
+var l = n(477900),
+    i = n(582128),
+    s = n(17928),
+    r = n(338854),
+    a = n(406810),
     o = n(475743),
-    d = n(421108),
+    u = n(421108),
     c = n(807098),
-    u = n(528464),
-    _ = n(49999),
-    E = n(375708);
-function A(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: A, coachmarkConfig: h, children: I } = e,
-        f = (0, c.T)(h?.asset),
-        p = (0, a.bG)([u.A], () => u.A.getGiftPromotion()),
-        T = (0, d.dA)(p?.endDate),
-        m = null != T,
-        g = (0, o.Ay)(m),
-        S = r.useRef(null);
-    r.useEffect(() => {
-        !0 !== g || m || (t(), A(_.i.AUTO_DISMISS));
-    }, [g, m, t, A]);
-    let N = {
-        text: E.intl.string(E.t.RzWDqY),
+    d = n(412260),
+    h = n(49999),
+    m = n(375708);
+function f(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: f, coachmarkConfig: p, children: g } = e,
+        x = (0, c.T)(p?.asset),
+        A = (0, s.bG)([d.A], () => d.A.getGiftPromotion()),
+        C = (0, u.dA)(A?.endDate),
+        E = null != C,
+        I = (0, o.Ay)(E),
+        y = i.useRef(null);
+    i.useEffect(() => {
+        !0 !== I || E || (t(), f(h.i.AUTO_DISMISS));
+    }, [I, E, t, f]);
+    let v = {
+        text: m.intl.string(m.t.RzWDqY),
         onClick: () => {
-            n(), t(), A(_.i.TAKE_ACTION);
+            n(), t(), f(h.i.TAKE_ACTION);
         },
     };
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: S, children: I }),
-            (0, i.jsx)(s.H, {
-                targetElementRef: S,
+            (0, l.jsx)("div", { ref: y, children: g }),
+            (0, l.jsx)(r.H, {
+                targetElementRef: y,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                title: h?.header ?? "",
-                body: h?.body ?? "",
-                assetUrl: f ?? "",
-                badge: null != T ? { type: { text: T.toUpperCase() }, variant: "brand", icon: l.O } : void 0,
-                action: N,
+                title: p?.header ?? "",
+                body: p?.body ?? "",
+                assetUrl: x ?? "",
+                badge: null != C ? { type: { text: C.toUpperCase() }, variant: "brand", icon: a.ClockIcon } : void 0,
+                action: v,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    t(), A(_.i.USER_DISMISS);
+                    t(), f(h.i.USER_DISMISS);
                 },
             }),
         ],

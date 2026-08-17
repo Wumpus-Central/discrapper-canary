@@ -134,7 +134,7 @@ function eo(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: r()(en.vG, en.my),
-                        children: (0, i.jsx)(J.n, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
+                        children: (0, i.jsx)(J.UserIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
                     }),
                     (0, i.jsx)(g.E, {
                         className: en.Xh,

@@ -91,7 +91,7 @@ function P(e) {
         children: (0, i.jsxs)("div", {
             className: s()(v.Mj, l),
             children: [
-                (0, i.jsx)(h.b, { size: "xs", color: "currentColor", className: v.N0 }),
+                (0, i.jsx)(h.EyeIcon, { size: "xs", color: "currentColor", className: v.N0 }),
                 (0, i.jsx)("span", { "aria-hidden": "true", children: t.length }),
             ],
         }),

@@ -733,7 +733,7 @@ function ti(e) {
             switch (e.category) {
                 case U.V.OFFICIAL:
                     return {
-                        icon: (0, i.jsx)(e2.L, { ...t }),
+                        icon: (0, i.jsx)(e2.GlobeEarthIcon, { ...t }),
                         action: O.GameProfileTrackActionActions.WebsiteLink,
                         title: eg.intl.string(eg.t.fOUKvg),
                     };
@@ -1202,7 +1202,7 @@ function t1(e) {
                             addLabel: eg.intl.string(eg.t.fgmitg),
                             removeLabel: eg.intl.string(eg.t.TSGNQY),
                             menuId: "game-profile-add-favorite-game",
-                            icon: tU.C,
+                            icon: tU.HeartIcon,
                         },
                         {
                             type: tV.x.PLAYED_GAMES,
@@ -1378,7 +1378,7 @@ function t1(e) {
                             ...e,
                             ref: u,
                             children: (0, i.jsx)(h.$, {
-                                icon: tC.p,
+                                icon: tC.PlusLargeIcon,
                                 variant: "overlay-secondary",
                                 size: "sm",
                                 text: eg.intl.string(eg.t.sidPSo),
@@ -1401,7 +1401,7 @@ function t1(e) {
             (0, i.jsx)(x.m, {
                 text: eg.intl.string(eg.t.WqhZss),
                 children: (0, i.jsx)(ty.K, {
-                    icon: tL.q,
+                    icon: tL.LinkIcon,
                     variant: "overlay-secondary",
                     size: "sm",
                     "aria-label": eg.intl.string(eg.t.WqhZss),
@@ -1435,7 +1435,7 @@ function t1(e) {
                                 ...e,
                                 ref: o,
                                 children: (0, i.jsx)(ty.K, {
-                                    icon: tG.j,
+                                    icon: tG.MoreHorizontalIcon,
                                     variant: "overlay-secondary",
                                     size: "sm",
                                     "aria-label": eg.intl.string(eg.t["UKOtz+"]),
@@ -1515,7 +1515,7 @@ function t3(e) {
     return (0, i.jsxs)("div", {
         className: t8.Qc,
         children: [
-            (0, i.jsx)(tv.O, { size: "xxs", color: "currentColor", "aria-hidden": "true" }),
+            (0, i.jsx)(tv.TrophyIcon, { size: "xxs", color: "currentColor", "aria-hidden": "true" }),
             (0, i.jsx)(et.E, {
                 variant: "text-xs/bold",
                 color: "none",

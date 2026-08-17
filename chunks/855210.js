@@ -1,4 +1,4 @@
-i.d(t, { default: () => I });
+i.d(t, { default: () => D });
 var l = i(477900),
     s = i(582128),
     r = i(70283),
@@ -115,7 +115,7 @@ function E(e) {
         ],
     });
 }
-function B(e) {
+function I(e) {
     let { simulatedProgress: t, currentTier: i, newTier: s, nextTier: r, giftsToNextTier: c } = e,
         o = null != r && null != c && c > 0;
     return (0, l.jsxs)("div", {
@@ -143,7 +143,7 @@ function B(e) {
         ],
     });
 }
-function D(e) {
+function B(e) {
     let { currentProgress: t } = e,
         i = (0, o.bG)([x.Ay], () => x.Ay.getBadgeById(r.$.GIFTING)?.tiers);
     if (null == i) return null;
@@ -155,7 +155,7 @@ function D(e) {
         u = (0, y.cz)(i, n),
         m = 1 === u;
     return c && null != a
-        ? (0, l.jsx)(B, { simulatedProgress: n, currentTier: s, newTier: a, nextTier: d, giftsToNextTier: u })
+        ? (0, l.jsx)(I, { simulatedProgress: n, currentTier: s, newTier: a, nextTier: d, giftsToNextTier: u })
         : m
           ? (0, l.jsx)(E, {
                 title: N.intl.formatToPlainString(T.default.KjdBPz, { nextTier: d?.name ?? "" }),
@@ -175,7 +175,7 @@ function D(e) {
                 nextTier: d ?? void 0,
             });
 }
-function I(e) {
+function D(e) {
     let { transitionState: t, onClose: i, currentProgress: r } = e,
         { analyticsLocations: n } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
         { openGiftModal: a } = (0, j.$)({
@@ -199,8 +199,8 @@ function I(e) {
         title: void 0,
         actions: [
             { variant: "secondary", text: N.intl.string(T.default["sa/cfM"]), onClick: o },
-            { variant: "primary", text: N.intl.string(T.default.g86YiI), icon: d.o, onClick: x },
+            { variant: "primary", text: N.intl.string(T.default.g86YiI), icon: d.GiftIcon, onClick: x },
         ],
-        children: (0, l.jsx)(D, { currentProgress: r }),
+        children: (0, l.jsx)(B, { currentProgress: r }),
     });
 }

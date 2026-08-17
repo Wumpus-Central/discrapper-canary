@@ -1,4 +1,4 @@
-n.d(e, { y: () => k });
+n.d(e, { y: () => N });
 var r = n(477900),
     l = n(582128),
     s = n(503698),
@@ -112,15 +112,15 @@ function j(t) {
                 }
             })(e.kind),
         });
-    return (0, r.jsx)(N, { badge: e, selected: n, onClick: l, radioProps: s });
+    return (0, r.jsx)(k, { badge: e, selected: n, onClick: l, radioProps: s });
 }
-function N(t) {
+function k(t) {
     let { badge: e, locked: n = !1, preview: l = !1, selected: s = !1, onClick: c, radioProps: d } = t,
         u = i()(O.Uh, { [O.fT]: s, [p.av]: n, [p.WZ]: l }),
         g = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(E.J, { badge: e.kind, width: x.Sl.SIZE_32, height: x.Sl.SIZE_32, className: p.n2 }),
-                n && !l && (0, r.jsx)("div", { className: p.py, children: (0, r.jsx)(a.X, { size: "md" }) }),
+                n && !l && (0, r.jsx)("div", { className: p.py, children: (0, r.jsx)(a.LockIcon, { size: "md" }) }),
             ],
         });
     if (l) return (0, r.jsx)("div", { className: u, children: g });
@@ -141,18 +141,18 @@ function N(t) {
     }
     return (0, r.jsx)(b.D, { ...d, className: u, onClick: c, children: g });
 }
-function k(t) {
+function N(t) {
     let { badgeCollection: e, handleBoostUpsellClick: n, selectedBadge: s, onBadgeClicked: a, headingId: o } = t,
         [m, x] = l.useState(!1),
         E = l.useId(),
-        k = (0, u._u)({ orientation: "horizontal", isDisabled: !1, labelledBy: o }),
+        N = (0, u._u)({ orientation: "horizontal", isDisabled: !1, labelledBy: o }),
         I = !m && e.lockedBadges.length > 0;
     return (0, r.jsxs)("div", {
         className: p.zr,
         children: [
             (0, r.jsx)(g.A, { id: E, children: h.intl.string(h.t["5AQGuZ"]) }),
             (0, r.jsx)("div", {
-                ...k,
+                ...N,
                 "aria-describedby": E,
                 className: O.p3,
                 children: e.unlockedBadges.map((t) =>
@@ -165,7 +165,7 @@ function k(t) {
                     children: e.lockedBadges.map((t) =>
                         (0, r.jsx)(
                             "li",
-                            { children: (0, r.jsx)(N, { locked: !0, badge: t, onClick: () => n?.() }) },
+                            { children: (0, r.jsx)(k, { locked: !0, badge: t, onClick: () => n?.() }) },
                             t.kind,
                         ),
                     ),
@@ -178,7 +178,7 @@ function k(t) {
                             className: O.p3,
                             children: e.lockedBadges
                                 .slice(0, 5)
-                                .map((t) => (0, r.jsx)(N, { locked: !0, preview: !0, badge: t }, t.kind)),
+                                .map((t) => (0, r.jsx)(k, { locked: !0, preview: !0, badge: t }, t.kind)),
                         }),
                         (0, r.jsxs)(b.D, {
                             className: i()(p.ZN, p.n7),

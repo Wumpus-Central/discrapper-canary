@@ -1,4 +1,4 @@
-n.d(t, { s: () => u });
+n.d(t, { DownloadIcon: () => u });
 var r = n(477900);
 n(582128);
 var l = n(661531),

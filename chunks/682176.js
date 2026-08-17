@@ -1,4 +1,4 @@
-i.d(t, { A: () => f }), i(938796), i(321073);
+i.d(t, { A: () => P }), i(938796), i(321073);
 var a = i(477900),
     l = i(582128),
     n = i(503698),
@@ -22,20 +22,20 @@ var a = i(477900),
     b = i(16590),
     y = i(375708),
     A = i(237610);
-let P = (0, p.Fe)({
+let I = (0, p.Fe)({
     createPromise: () => Promise.resolve().then(i.bind(i, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, a.jsx)("div", { className: A.Lq }),
 });
-function f(e) {
+function P(e) {
     let {
             attachment: t,
             posterUrl: i,
             className: n,
             autoPlay: p,
-            src: f,
-            fillContainer: I = !1,
+            src: P,
+            fillContainer: f = !1,
             minWidth: x = 500,
             maxWidth: E = 1 / 0,
             maxHeight: T = 1 / 0,
@@ -97,7 +97,7 @@ function f(e) {
                 eu &&
                     e.push({
                         id: "timeline-comments",
-                        iconComponent: h.o,
+                        iconComponent: h.ChatIcon,
                         label: y.intl.string(b.default.XfP4bO),
                         active: en,
                         onClick: () => eo((e) => !e),
@@ -111,13 +111,13 @@ function f(e) {
             () =>
                 ev
                     ? {
-                          contentId: f.split("?")[0],
-                          videoStreamType: m.u.isHlsUrl(f) ? "hls" : "mp4",
+                          contentId: P.split("?")[0],
+                          videoStreamType: m.u.isHlsUrl(P) ? "hls" : "mp4",
                           contentType: "clips",
                           title: t.title,
                       }
                     : void 0,
-            [ev, f, t.title],
+            [ev, P, t.title],
         ),
         eC = l.useMemo(
             () =>
@@ -162,12 +162,12 @@ function f(e) {
         ),
         eM = (0, w.T)(t.clip_events_timeline ?? []);
     return (0, a.jsx)("div", {
-        className: o()(A.kL, { [A.HA]: I }, n),
+        className: o()(A.kL, { [A.HA]: f }, n),
         onClick: (e) => e.stopPropagation(),
         onContextMenu: O,
-        style: I ? void 0 : { width: X, height: z },
-        children: (0, a.jsx)(P, {
-            src: f,
+        style: f ? void 0 : { width: X, height: z },
+        children: (0, a.jsx)(I, {
+            src: P,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
             extraButtons: em,
@@ -192,7 +192,7 @@ function f(e) {
             onClick: H,
             onPlayerStateChange: ed,
             withVideoHalo: !0,
-            objectFit: I ? "cover" : void 0,
+            objectFit: f ? "cover" : void 0,
             muxContentMetadata: eg,
             hideFullScreenBtn: !D,
             hideSkipButtons: !0,

@@ -28,10 +28,10 @@ var l = e(477900),
     T = e(375708);
 let L = "YYYYMMDDTHHmmss",
     R = "YYYY-MM-DDTHH:mm:ss",
-    C = /RRULE:.*/;
-var k = e(173936),
-    N = e(486503),
-    I = e(885386),
+    k = /RRULE:.*/;
+var C = e(173936),
+    I = e(486503),
+    N = e(885386),
     X = e(957565),
     M = e(691012),
     Y = e(691540),
@@ -42,11 +42,11 @@ var k = e(173936),
     H = e(834730),
     U = e(931991),
     Z = e(496092),
-    q = e(722260),
-    J = e(823508),
-    V = e(24661),
-    W = e(138134),
-    $ = e(928658),
+    J = e(722260),
+    V = e(823508),
+    W = e(24661),
+    $ = e(138134),
+    q = e(928658),
     K = e(857071),
     z = e(280450),
     O = e(508654);
@@ -67,7 +67,7 @@ function tt(t) {
                 a = null != e,
                 { canManageGuildEvent: s } = (0, U.nr)(r ?? i),
                 u = (0, b.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(n)),
-                o = (0, q.A)(e, u?.id),
+                o = (0, J.A)(e, u?.id),
                 c = null != u && s(u);
             return a && o?.is_canceled && c
                 ? (0, l.jsx)(d.Dr, {
@@ -96,7 +96,7 @@ function tt(t) {
                 a = null != e,
                 { canManageGuildEvent: s } = (0, U.nr)(r ?? i),
                 [u, o] = (0, b.yK)([j.Ay], () => [j.Ay.isActive(n), j.Ay.getGuildScheduledEvent(n)]),
-                c = (0, q.A)(e, o?.id),
+                c = (0, J.A)(e, o?.id),
                 g = null != o && s(o),
                 f = o?.recurrence_rule != null && !a,
                 m = (0, D.nh)(n, e);
@@ -154,8 +154,8 @@ function tt(t) {
                 { canManageGuildEvent: u } = (0, U.nr)(r ?? i),
                 o = (0, b.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(n)),
                 c = u(o),
-                g = (0, J.A)(),
-                f = (0, q.A)(a, o?.id),
+                g = (0, V.A)(),
+                f = (0, J.A)(a, o?.id),
                 m = (0, D.nh)(n, a);
             if (!c || null == m || null == o) return null;
             let h = null != o.recurrence_rule && !s;
@@ -237,7 +237,7 @@ function tt(t) {
                     }),
             });
         })({ guildEventId: o, guild: tn, channel: tt, recurrenceId: g, isRecurrenceItem: tl }),
-        tu = (0, V.A)(o, tn, tt),
+        tu = (0, W.A)(o, tn, tt),
         to = (function (t, n, i) {
             let { canManageGuildEvent: r } = (0, U.nr)(i ?? n),
                 a = (0, b.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(t), [t]),
@@ -296,8 +296,8 @@ function tt(t) {
             });
         })(o, tn.id, g),
         tg = (function (t, n) {
-            let e = I.Q_.useSetting(),
-                { tidaWebformEnabled: r } = N.A.useExperiment(
+            let e = N.Q_.useSetting(),
+                { tidaWebformEnabled: r } = I.A.useExperiment(
                     { location: "useCopyEventImageLinkItem" },
                     { autoTrackExposure: !1 },
                 ),
@@ -312,7 +312,7 @@ function tt(t) {
                       id: "copy-event-image-link",
                       label: T.intl.string(T.t["8xHmxo"]),
                       action: o,
-                      icon: k.q,
+                      icon: C.LinkIcon,
                   })
                 : null;
         })(o, tr),
@@ -324,9 +324,9 @@ function tt(t) {
                       id: "report-event",
                       label: T.intl.string(T.t.IBA5wX),
                       action: function () {
-                          if (null != n) return (0, $.uA)(n);
+                          if (null != n) return (0, q.uA)(n);
                       },
-                      icon: W.i,
+                      icon: $.FlagIcon,
                       color: "danger",
                   })),
         tm = (0, u.A)({ id: o, label: T.intl.string(T.t.WZwPO4) }),
@@ -348,20 +348,20 @@ function tt(t) {
                         })
                       : T.intl.string(T.t.VSgOVg);
             let g = f()(u.scheduled_start_time),
-                k = null != u.scheduled_end_time ? f()(u.scheduled_end_time) : g,
-                N =
+                C = null != u.scheduled_end_time ? f()(u.scheduled_end_time) : g,
+                I =
                     null != u.description && "" !== u.description
                         ? A.Ay.unparse(u.description, e?.id ?? S.dJq, !0)
                         : "",
-                I = (0, G.Sn)(u.recurrence_rule),
-                X = null != I ? (0, _.X7)(I) : null,
+                N = (0, G.Sn)(u.recurrence_rule),
+                X = null != N ? (0, _.X7)(N) : null,
                 { startTime: M, endTime: Y } = s,
                 P = f()(M) ?? g,
                 Q = f()(Y ?? M) ?? g;
             function B() {
                 if (null == u) return;
                 let t = c()();
-                t.createEvent({ start: g, end: k, summary: u.name, description: N, location: r, repeating: X }),
+                t.createEvent({ start: g, end: C, summary: u.name, description: I, location: r, repeating: X }),
                     E.isPlatformEmbedded
                         ? h.A.fileManager.saveWithDialog(t.toString(), "discord-event.ics")
                         : window.open(t.toURL(), "_blank");
@@ -379,11 +379,11 @@ function tt(t) {
                             let t = X?.toString(),
                                 n = {
                                     text: u.name,
-                                    dates: `${g.format(L)}/${k.format(L)}`,
-                                    details: N,
+                                    dates: `${g.format(L)}/${C.format(L)}`,
+                                    details: I,
                                     action: "TEMPLATE",
                                     location: r,
-                                    recur: null != t ? C.exec(t)?.[0] : void 0,
+                                    recur: null != t ? k.exec(t)?.[0] : void 0,
                                 },
                                 e = `https://calendar.google.com/calendar/render?${(0, m.stringify)(n)}`;
                             window.open(e, "_blank");
@@ -395,7 +395,7 @@ function tt(t) {
                         label: T.intl.string(T.t.odzaCd),
                         action: function () {
                             if (null == u) return;
-                            let t = { v: 60, title: u.name, st: P.format(L), et: Q.format(L), desc: N, in_loc: r },
+                            let t = { v: 60, title: u.name, st: P.format(L), et: Q.format(L), desc: I, in_loc: r },
                                 n = `https://calendar.yahoo.com/?${(0, m.stringify)(t)}`;
                             window.open(n, "_blank");
                         },
@@ -411,7 +411,7 @@ function tt(t) {
                                     startdt: P.format(R),
                                     enddt: Q.format(R),
                                     subject: u.name,
-                                    body: N,
+                                    body: I,
                                     location: r,
                                     allday: !1,
                                 },
@@ -439,7 +439,7 @@ function tt(t) {
                     }),
                     [i, n, a],
                 ),
-                c = (0, q.A)(i, n);
+                c = (0, J.A)(i, n);
             if (r || c?.is_canceled) return null;
             function g() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

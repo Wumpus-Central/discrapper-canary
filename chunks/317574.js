@@ -1,62 +1,62 @@
-i.d(e, { P: () => y });
+i.d(t, { P: () => A });
 var n = i(477900),
     l = i(582128),
     a = i(503698),
     r = i.n(a),
     s = i(297264),
-    d = i(866665),
-    c = i(408278),
+    c = i(866665),
+    d = i(408278),
     u = i(22231),
     o = i(241326),
-    g = i(451395),
-    m = i(189213),
-    f = i(192308),
-    h = i(487692),
+    f = i(451395),
+    g = i(189213),
+    h = i(192308),
+    m = i(521810),
     x = i(983283),
-    v = i(375708),
-    E = i(870985);
-function j(t) {
-    let { title: e, disabled: i = !1, dragHandleRef: l, canEdit: a = !1, onEdit: r, onRemove: m } = t;
+    E = i(375708),
+    v = i(870985);
+function I(e) {
+    let { title: t, disabled: i = !1, dragHandleRef: l, canEdit: a = !1, onEdit: r, onRemove: g } = e;
     return (0, n.jsxs)("div", {
-        className: E.wx,
+        className: v.wx,
         children: [
             null != l &&
                 (0, n.jsx)("div", {
-                    className: E.BU,
-                    children: (0, n.jsx)(g.jV, {
+                    className: v.BU,
+                    children: (0, n.jsx)(f.jV, {
                         buttonRef: l,
-                        "aria-label": v.intl.formatToPlainString(x.default.NV85DR, { widgetName: e }),
+                        "aria-label": E.intl.formatToPlainString(x.default.NV85DR, { widgetName: t }),
                     }),
                 }),
-            (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: E.DD, children: e }),
+            (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: v.DD, children: t }),
             (0, n.jsxs)("div", {
-                className: E.o1,
+                className: v.o1,
                 children: [
                     a &&
-                        (0, n.jsx)(d.m, {
-                            text: v.intl.string(v.t.bt75uw),
-                            children: (0, n.jsx)(c.K, {
+                        (0, n.jsx)(c.m, {
+                            text: E.intl.string(E.t.bt75uw),
+                            children: (0, n.jsx)(d.K, {
                                 variant: "secondary",
                                 size: "sm",
-                                icon: u.R,
-                                "aria-label": v.intl.string(v.t.bt75uw),
+                                icon: u.PencilIcon,
+                                "aria-label": E.intl.string(E.t.bt75uw),
                                 disabled: i,
                                 onClick: r,
                             }),
                         }),
-                    null != m &&
-                        (0, n.jsx)(d.m, {
-                            text: v.intl.string(v.t.Mm07Yc),
-                            children: (0, n.jsx)(c.K, {
+                    null != g &&
+                        (0, n.jsx)(c.m, {
+                            text: E.intl.string(E.t.Mm07Yc),
+                            children: (0, n.jsx)(d.K, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                icon: o.u,
+                                icon: o.TrashIcon,
                                 "aria-label":
-                                    null == e
-                                        ? v.intl.string(v.t.Mm07Yc)
-                                        : v.intl.formatToPlainString(x.default.hmNYxk, { widgetName: e }),
+                                    null == t
+                                        ? E.intl.string(E.t.Mm07Yc)
+                                        : E.intl.formatToPlainString(x.default.hmNYxk, { widgetName: t }),
                                 disabled: i,
-                                onClick: m,
+                                onClick: g,
                             }),
                         }),
                 ],
@@ -64,61 +64,61 @@ function j(t) {
         ],
     });
 }
-function p(t) {
-    let { title: e } = t;
+function p(e) {
+    let { title: t } = e;
     return (0, n.jsx)("div", {
-        className: E.wx,
-        children: (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: E.DD, children: e }),
+        className: v.wx,
+        children: (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: v.DD, children: t }),
     });
 }
-function y(t) {
+function A(e) {
     let {
-            widget: e,
+            widget: t,
             guildSpaceMode: i,
             hydration: a,
             onRemove: s,
-            onCommitConfig: d,
-            dragHandleRef: c,
+            onCommitConfig: c,
+            dragHandleRef: d,
             disabled: u = !1,
-        } = t,
-        o = h.m[e.type],
-        g = l.useCallback(() => {
+        } = e,
+        o = m.m[t.type],
+        f = l.useCallback(() => {
             o?.Edit != null &&
-                null != d &&
-                (function (t) {
-                    let { widget: e, Edit: i, onCommit: l } = t,
-                        a = (t) =>
-                            (0, n.jsx)(m.Modal, {
-                                title: e.default_title ?? void 0,
+                null != c &&
+                (function (e) {
+                    let { widget: t, Edit: i, onCommit: l } = e,
+                        a = (e) =>
+                            (0, n.jsx)(g.Modal, {
+                                title: t.default_title ?? void 0,
                                 actions: [],
-                                ...t,
+                                ...e,
                                 children: (0, n.jsx)(i, {
-                                    widget: e,
-                                    commit: function (e) {
-                                        l(e), t.onClose();
+                                    widget: t,
+                                    commit: function (t) {
+                                        l(t), e.onClose();
                                     },
                                     cancel: function () {
-                                        t.onClose();
+                                        e.onClose();
                                     },
                                 }),
                             });
-                    (0, f.openModalLazy)(() => Promise.resolve(a), { modalKey: "guild-space-widget-edit" });
-                })({ widget: e, Edit: o.Edit, onCommit: d });
-        }, [e, o, d]),
-        x = o?.useTitle?.(e) ?? e.default_title ?? "";
+                    (0, h.openModalLazy)(() => Promise.resolve(a), { modalKey: "guild-space-widget-edit" });
+                })({ widget: t, Edit: o.Edit, onCommit: c });
+        }, [t, o, c]),
+        x = o?.useTitle?.(t) ?? t.default_title ?? "";
     if (null == o) return null;
-    let { View: v, Edit: y } = o,
-        I = "edit" === i,
-        _ = null != y && null != d;
+    let { View: E, Edit: A } = o,
+        _ = "edit" === i,
+        C = null != A && null != c;
     return (0, n.jsxs)("div", {
-        className: r()(E.kL, { [E.Dy]: I }),
+        className: r()(v.kL, { [v.Dy]: _ }),
         children: [
-            I
-                ? (0, n.jsx)(j, { title: x, disabled: u, dragHandleRef: c, canEdit: _, onEdit: g, onRemove: s })
+            _
+                ? (0, n.jsx)(I, { title: x, disabled: u, dragHandleRef: d, canEdit: C, onEdit: f, onRemove: s })
                 : (0, n.jsx)(p, { title: x }),
             (0, n.jsx)("div", {
-                className: E.rf,
-                children: (0, n.jsx)(v, { widget: e, hydration: a, guildSpaceMode: i }),
+                className: v.rf,
+                children: (0, n.jsx)(E, { widget: t, hydration: a, guildSpaceMode: i }),
             }),
         ],
     });

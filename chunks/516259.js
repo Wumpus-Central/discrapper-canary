@@ -1,4 +1,4 @@
-s.d(t, { default: () => f }), s(321073);
+s.d(t, { default: () => C }), s(321073);
 var i = s(477900),
     n = s(582128),
     o = s(562708),
@@ -45,7 +45,7 @@ function y(e) {
                             className: x.o1,
                             children: [
                                 (0, i.jsx)(p.A, {
-                                    icon: l.A,
+                                    icon: l.CheckmarkLargeIcon,
                                     actionType: p.A.ActionTypes.ACCEPT,
                                     tooltip: k.intl.string(k.t.Zcibdf),
                                     onClick: r,
@@ -65,7 +65,7 @@ function y(e) {
         }),
     });
 }
-function f(e) {
+function C(e) {
     let { transitionState: t, onClose: s } = e,
         { rows: l } = (0, r.cf)([A.Ay], () => A.Ay.getState()),
         c = l.filter(N.m3P.PENDING_IGNORED),

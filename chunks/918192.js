@@ -1,36 +1,36 @@
-n.d(s, { Bw: () => E, ld: () => b });
-var e = n(477900);
-n(582128);
-var r = n(17928),
-    l = n(661531),
-    i = n(428678),
-    a = n(834730),
-    c = n(939249),
-    o = n(952270),
-    d = n(831544),
-    x = n(778712),
-    m = n(364522),
-    u = n(442433),
-    j = n(85448),
-    h = n(994500),
-    f = n(427262),
-    g = n(312006),
-    v = n(366098),
-    k = n(375708),
-    p = n(935047);
+s.d(n, { Bw: () => E, ld: () => b });
+var e = s(477900);
+s(582128);
+var r = s(17928),
+    l = s(661531),
+    i = s(428678),
+    a = s(834730),
+    c = s(939249),
+    o = s(952270),
+    d = s(831544),
+    x = s(778712),
+    m = s(364522),
+    u = s(442433),
+    j = s(85448),
+    h = s(994500),
+    f = s(427262),
+    g = s(312006),
+    v = s(366098),
+    k = s(375708),
+    p = s(935047);
 function E(t) {
-    let { channelId: s } = t;
-    return (0, e.jsx)(N, { channelId: s });
+    let { channelId: n } = t;
+    return (0, e.jsx)(N, { channelId: n });
 }
 function N(t) {
-    let { channelId: s } = t,
-        n = (0, v.D3)(s),
-        r = (0, v.Xk)(s);
-    if (0 === n && 0 === r) return null;
+    let { channelId: n } = t,
+        s = (0, v.D3)(n),
+        r = (0, v.Xk)(n);
+    if (0 === s && 0 === r) return null;
     function d(t) {
-        (0, u.jA)(t, (t) => (0, e.jsx)(A, { ...t, channelId: s }), { position: "left", align: "bottom" });
+        (0, u.jA)(t, (t) => (0, e.jsx)(A, { ...t, channelId: n }), { position: "left", align: "bottom" });
     }
-    return n > 0 && r > 0
+    return s > 0 && r > 0
         ? (0, e.jsxs)("div", {
               className: p.jC,
               children: [
@@ -47,7 +47,7 @@ function N(t) {
           ? (0, e.jsxs)("div", {
                 className: p.jC,
                 children: [
-                    (0, e.jsx)(o.G, { size: "lg" }),
+                    (0, e.jsx)(o.EyeSlashIcon, { size: "lg" }),
                     (0, e.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-default",
@@ -63,26 +63,26 @@ function N(t) {
                     (0, e.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-default",
-                        children: k.intl.format(k.t["6Tcdt7"], { number: n }),
+                        children: k.intl.format(k.t["6Tcdt7"], { number: s }),
                     }),
                     (0, e.jsx)(c.D, { className: p.R5, onClick: d, children: k.intl.string(k.t.rUEjBe) }),
                 ],
             });
 }
 function b(t) {
-    let { user: s, showStatus: n, speaker: l, channelId: i } = t,
-        c = (0, r.bG)([g.Ay], () => g.Ay.isModerator(s.id, i)),
-        o = (0, r.bG)([h.A], () => h.A.isBlocked(s.id)),
+    let { user: n, showStatus: s, speaker: l, channelId: i } = t,
+        c = (0, r.bG)([g.Ay], () => g.Ay.isModerator(n.id, i)),
+        o = (0, r.bG)([h.A], () => h.A.isBlocked(n.id)),
         m = null;
     return (
-        n && (m = l ? k.intl.string(k.t.LqMmG2) : c ? k.intl.string(k.t.GMZqSi) : k.intl.string(k.t.suRApw)),
+        s && (m = l ? k.intl.string(k.t.LqMmG2) : c ? k.intl.string(k.t.GMZqSi) : k.intl.string(k.t.suRApw)),
         (0, e.jsxs)("div", {
             className: p.kQ,
             children: [
                 (0, e.jsx)(
                     j.Ay,
                     {
-                        src: s.getAvatarURL(null, 32),
+                        src: n.getAvatarURL(null, 32),
                         size: x._3.SIZE_32,
                         muted: !1,
                         deafen: !1,
@@ -90,11 +90,15 @@ function b(t) {
                         ringing: !1,
                         renderIcon: l
                             ? function () {
-                                  return (0, e.jsx)(d.c, { size: "md", color: "currentColor", className: p.Kk });
+                                  return (0, e.jsx)(d.MicrophoneIcon, {
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: p.Kk,
+                                  });
                               }
                             : null,
                     },
-                    s.id,
+                    n.id,
                 ),
                 (0, e.jsxs)("div", {
                     className: p.eF,
@@ -103,13 +107,13 @@ function b(t) {
                             className: p.Xh,
                             children: [
                                 (0, e.jsx)(a.E, {
-                                    variant: n ? "text-md/normal" : "text-sm/normal",
-                                    children: f.Ay.getName(s),
+                                    variant: s ? "text-md/normal" : "text-sm/normal",
+                                    children: f.Ay.getName(n),
                                 }),
                                 (0, e.jsx)(a.E, {
-                                    variant: n ? "text-md/normal" : "text-sm/normal",
+                                    variant: s ? "text-md/normal" : "text-sm/normal",
                                     color: "text-subtle",
-                                    children: `#${s.discriminator}`,
+                                    children: `#${n.discriminator}`,
                                 }),
                             ],
                         }),
@@ -135,14 +139,14 @@ function b(t) {
     );
 }
 function A(t) {
-    let { channelId: s } = t,
-        n = (0, v.mT)(s),
-        r = (0, v.Iv)(s);
+    let { channelId: n } = t,
+        s = (0, v.mT)(n),
+        r = (0, v.Iv)(n);
     return (0, e.jsx)(m.Ip, {
         className: p.kL,
-        children: [...n, ...r].map((t) => {
-            let { user: n } = t;
-            return (0, e.jsx)(b, { user: n, channelId: s }, n.id);
+        children: [...s, ...r].map((t) => {
+            let { user: s } = t;
+            return (0, e.jsx)(b, { user: s, channelId: n }, s.id);
         }),
     });
 }

@@ -18,7 +18,7 @@ function h(e) {
             (0, u.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
                 (0, a.A)(e, e === d.BRT.POPOUT);
         },
-        icon: s.Z,
-        leadingAccessory: { type: "icon", icon: s.Z },
+        icon: s.SettingsIcon,
+        leadingAccessory: { type: "icon", icon: s.SettingsIcon },
     });
 }

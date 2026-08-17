@@ -1,4 +1,4 @@
-l.d(e, { Q: () => h });
+l.d(e, { CompassIcon: () => h });
 var i = l(477900);
 l(582128);
 var t = l(661531),
@@ -11,13 +11,13 @@ function h(s) {
             height: h,
             color: c = t.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: n = "",
-            ...p
+            ...o
         } = s,
-        o = (0, d.J)(e),
-        r = o?.width ?? l,
-        w = o?.height ?? h;
+        p = (0, d.J)(e),
+        r = p?.width ?? l,
+        w = p?.height ?? h;
     return (0, i.jsxs)("svg", {
-        ...(0, a.A)(p),
+        ...(0, a.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: r,
         height: w,

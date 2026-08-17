@@ -1776,7 +1776,7 @@ let ta = {
             ]),
         ],
         tags: ["Marketing", "Premium", "Nitro"],
-        IconComponent: d.B,
+        IconComponent: d.SparklesIcon,
         Provider: function (e) {
             let { children: t } = e;
             return (

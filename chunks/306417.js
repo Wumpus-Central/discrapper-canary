@@ -193,6 +193,13 @@ function B(e) {
         className: r()(b.kv, { [b.H7]: t }, i),
         style: { width: n, height: n },
         "aria-hidden": !0,
-        children: t && (0, s.jsx)(h.A, { size: "custom", width: a, height: a, color: o.A.unsafe_rawColors.WHITE.css }),
+        children:
+            t &&
+            (0, s.jsx)(h.CheckmarkLargeIcon, {
+                size: "custom",
+                width: a,
+                height: a,
+                color: o.A.unsafe_rawColors.WHITE.css,
+            }),
     });
 }

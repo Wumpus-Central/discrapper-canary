@@ -884,7 +884,7 @@ class e8 extends l.PureComponent {
     renderRefundActions(e) {
         let { locale: t, payment: n } = this.props;
         if (e.includes("SKU_TYPE")) return null;
-        let l = e.includes("PURCHASE_DATE") ? et.P : en.A;
+        let l = e.includes("PURCHASE_DATE") ? et.P : en.CheckmarkLargeIcon;
         return (0, i.jsxs)("div", {
             className: eS.My,
             children: [
@@ -998,7 +998,7 @@ class e8 extends l.PureComponent {
             E = s.isGift
                 ? (0, i.jsx)(Q.m, {
                       text: N.intl.string(N.t.QddTpm),
-                      children: (0, i.jsx)(es.o, { size: "md", color: "currentColor", className: eS.ez }),
+                      children: (0, i.jsx)(es.GiftIcon, { size: "md", color: "currentColor", className: eS.ez }),
                   })
                 : null;
         return n

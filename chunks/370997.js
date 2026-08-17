@@ -1,4 +1,4 @@
-l.d(t, { d1: () => ev, Ay: () => eT, iU: () => eC }), l(321073);
+l.d(t, { d1: () => ef, Ay: () => eT, iU: () => eC }), l(321073);
 var n = l(477900),
     i = l(582128),
     s = l(503698),
@@ -16,9 +16,9 @@ var n = l(477900),
     N = l(998445),
     A = l(11023),
     g = l(192308),
-    v = l(349288),
-    f = l(509434),
-    I = l(656513),
+    f = l(349288),
+    I = l(509434),
+    v = l(656513),
     C = l(939249),
     T = l(297264),
     _ = l(847374),
@@ -29,9 +29,9 @@ var n = l(477900),
     P = l(892547),
     R = l(289873),
     D = l(331322),
-    U = l(933958),
-    k = l(869003),
-    G = l(224750),
+    G = l(933958),
+    U = l(869003),
+    k = l(224750),
     O = l(875444),
     F = l(62447),
     L = l(235986),
@@ -47,8 +47,8 @@ var n = l(477900),
     q = l(935208),
     Q = l(773669),
     Z = l(363195),
-    $ = l(780964),
-    H = l(766075),
+    H = l(780964),
+    $ = l(766075),
     J = l(546385),
     ee = l(333748);
 function et(e) {
@@ -125,7 +125,7 @@ let ep = function (e) {
                 className: ed.a,
                 "aria-label": ec.intl.string(ec.t["UKOtz+"]),
                 ...e,
-                children: (0, n.jsx)(en.j, { size: "xs", color: E.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                children: (0, n.jsx)(en.MoreHorizontalIcon, { size: "xs", color: E.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             }),
     });
 };
@@ -138,7 +138,7 @@ function eA(e) {
     return (0, n.jsxs)("div", {
         className: r()(ex.GC, t),
         children: [
-            (0, n.jsx)(h.m, { size: "md", color: "currentColor", className: ex.QW }),
+            (0, n.jsx)(h.CircleInformationIcon, { size: "md", color: "currentColor", className: ex.QW }),
             (0, n.jsx)(j.E, { color: "text-default", variant: "text-sm/medium", children: l }),
         ],
     });
@@ -148,15 +148,15 @@ function eg(e) {
     return i.useMemo(() => {
         switch (t) {
             case p.mo.IP_LOCATION:
-                return (0, n.jsx)(N.L, { size: "md", color: "currentColor", className: ex.PR });
+                return (0, n.jsx)(N.GlobeEarthIcon, { size: "md", color: "currentColor", className: ex.PR });
             case p.mo.DISPLAYS_ADVERTISEMENTS:
                 return (0, n.jsx)(A.J, { className: ex.PR });
             default:
-                return (0, n.jsx)(h.m, { className: ex.PR });
+                return (0, n.jsx)(h.CircleInformationIcon, { className: ex.PR });
         }
     }, [t]);
 }
-function ev(e, t, l) {
+function ef(e, t, l) {
     let i = ec.intl.string(ec.t["DT39A+"]),
         s = ec.intl.formatToPlainString(ec.t.QWGvxA, { applicationName: e.name }),
         r = null;
@@ -189,14 +189,14 @@ function ev(e, t, l) {
         )
     );
 }
-function ef(e) {
+function eI(e) {
     let { application: t, isVisible: l } = e;
     return null != t.terms_of_service_url || null != t.privacy_policy_url
         ? (0, n.jsxs)("div", {
               className: ex.vi,
               children: [
                   null != t.terms_of_service_url
-                      ? (0, n.jsxs)(v.Anchor, {
+                      ? (0, n.jsxs)(f.Anchor, {
                             onClick: function () {
                                 null != t.terms_of_service_url &&
                                     (0, W.h)({ href: t.terms_of_service_url, shouldConfirm: !0 });
@@ -209,7 +209,7 @@ function ef(e) {
                                     color: "text-link",
                                     children: ec.intl.string(ec.t["lx+Gec"]),
                                 }),
-                                (0, n.jsx)(f.I, { size: "sm", className: ex.X6, color: "var(--text-link)" }),
+                                (0, n.jsx)(I.I, { size: "sm", className: ex.X6, color: "var(--text-link)" }),
                             ],
                         })
                       : null,
@@ -218,7 +218,7 @@ function ef(e) {
                             className: ex.Fb,
                             children: [
                                 null != t.terms_of_service_url ? (0, n.jsx)("div", { className: ex.yF }) : null,
-                                (0, n.jsxs)(v.Anchor, {
+                                (0, n.jsxs)(f.Anchor, {
                                     onClick: function () {
                                         null != t.privacy_policy_url &&
                                             (0, W.h)({ href: t.privacy_policy_url, shouldConfirm: !0 });
@@ -231,7 +231,7 @@ function ef(e) {
                                             color: "text-link",
                                             children: ec.intl.string(ec.t.okSwq9),
                                         }),
-                                        (0, n.jsx)(f.I, { size: "sm", className: ex.X6, color: "var(--text-link)" }),
+                                        (0, n.jsx)(I.I, { size: "sm", className: ex.X6, color: "var(--text-link)" }),
                                     ],
                                 }),
                             ],
@@ -241,7 +241,7 @@ function ef(e) {
           })
         : null;
 }
-function eI(e) {
+function ev(e) {
     let t,
         l,
         s,
@@ -258,7 +258,7 @@ function eI(e) {
             id: A,
         } = e,
         g = i.useMemo(() => B.Ay.createFromServer(u), [u]),
-        [v, f] = i.useState(!1),
+        [f, I] = i.useState(!1),
         [P, R] = i.useState(!1),
         D = i.useMemo(() => {
             if (null != u.description && "" !== u.description)
@@ -269,8 +269,8 @@ function eI(e) {
                     children: (0, z.parseBioReact)(u.description),
                 });
         }, [u.description]),
-        U = et(u.id),
-        k = (0, F.A)(u);
+        G = et(u.id),
+        U = (0, F.A)(u);
     return (0, n.jsx)("div", {
         className: ex.Zy,
         children: (0, n.jsx)(S.F, {
@@ -312,19 +312,19 @@ function eI(e) {
                     ((a = null != u.description && "" !== u.description),
                     (o = null != u.terms_of_service_url || null != u.privacy_policy_url),
                     a || o
-                        ? (0, n.jsx)(I.N, {
+                        ? (0, n.jsx)(v.N, {
                               className: ex.Nm,
-                              isExpanded: v,
+                              isExpanded: f,
                               collapsibleContent: (0, n.jsxs)("div", {
                                   className: ex.vo,
-                                  children: [a && D, o && (0, n.jsx)(ef, { application: u, isVisible: v })],
+                                  children: [a && D, o && (0, n.jsx)(eI, { application: u, isVisible: f })],
                               }),
                               children: (e) => {
                                   let { onClick: t } = e;
                                   return (0, n.jsxs)(C.D, {
                                       className: ex.gF,
                                       onClick: (e) => {
-                                          f(!v), t(e);
+                                          I(!f), t(e);
                                       },
                                       children: [
                                           (0, n.jsx)(T.D, {
@@ -332,7 +332,7 @@ function eI(e) {
                                               color: "text-strong",
                                               children: ec.intl.string(ec.t.fcYgiY),
                                           }),
-                                          v
+                                          f
                                               ? (0, n.jsx)(_.a, {
                                                     size: "md",
                                                     color: E.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -352,7 +352,7 @@ function eI(e) {
                             e.push(...(0, X.rY)(t, c)),
                                 t === d.F.APPLICATIONS_COMMANDS && e.push(ec.intl.string(ec.t.Ls2XRq));
                         if (e.length > 0 || (null != h && h.length > 0))
-                            return (0, n.jsx)(I.N, {
+                            return (0, n.jsx)(v.N, {
                                 className: ex.Nm,
                                 isExpanded: P,
                                 collapsibleContent: (0, n.jsxs)("ul", {
@@ -372,7 +372,7 @@ function eI(e) {
                                             ),
                                         ),
                                         h?.map((t, l) => {
-                                            let i = (0, G.wI)(t);
+                                            let i = (0, k.wI)(t);
                                             return null != i
                                                 ? (0, n.jsxs)(
                                                       "li",
@@ -433,17 +433,17 @@ function eI(e) {
                     (0, n.jsxs)("div", {
                         className: ex.qr,
                         children: [
-                            k
+                            U
                                 ? (0, n.jsx)(eA, {
                                       className: ex.UW,
                                       text: ec.intl.format(ec.t.j4B7EW, { applicationName: u.name }),
                                   })
-                                : U
+                                : G
                                   ? (0, n.jsx)(eA, {
                                         className: ex.UW,
                                         text: ec.intl.format(ec.t.jUhnwb, {
                                             applicationName: u.name,
-                                            onConnectionPress: () => (0, H.openUserSettings)($.X.CONNECTIONS_CATEGORY),
+                                            onConnectionPress: () => (0, $.openUserSettings)(H.X.CONNECTIONS_CATEGORY),
                                         }),
                                     })
                                   : null,
@@ -453,7 +453,7 @@ function eI(e) {
                                     variant: "critical-secondary",
                                     size: "sm",
                                     text: ec.intl.string(ec.t.xUqheM),
-                                    onClick: () => ev(u, c, x),
+                                    onClick: () => ef(u, c, x),
                                 }),
                             }),
                         ],
@@ -470,7 +470,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                 appAuthTokens: w.default.getNewestTokensForNonChildrenApplications(),
             })),
             l = (0, m.bG)([Q.default], () => Q.default.locale),
-            s = (0, m.bG)([U.Ay], () => U.Ay.getSelfEmbeddedActivities()),
+            s = (0, m.bG)([G.Ay], () => G.Ay.getSelfEmbeddedActivities()),
             r = (0, m.bG)([Y.A, K.Ay], () => Y.A.getChannel(K.Ay.getChannelId())),
             a = r?.getGuildId(),
             c = eC((e) => e.searchQuery);
@@ -520,7 +520,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                                       h(),
                                       N.sort((e, t) => Number(t.id) - Number(e.id)).map((e) =>
                                           (0, n.jsx)(
-                                              eI,
+                                              ev,
                                               {
                                                   locale: l,
                                                   onDelete: () =>
@@ -529,7 +529,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                                                           M.A.delete(t);
                                                           let n = s.get(l.id);
                                                           null != n &&
-                                                              k.A.leaveActivity({
+                                                              U.A.leaveActivity({
                                                                   location: n.location,
                                                                   applicationId: l.id,
                                                                   showFeedback: !1,

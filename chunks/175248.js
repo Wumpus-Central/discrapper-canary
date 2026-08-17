@@ -46,7 +46,7 @@ function g(e) {
                 (0, r.jsxs)("div", {
                     className: E.d,
                     children: [
-                        (0, r.jsx)(a.m, { size: "xs", color: "currentColor", className: E.q }),
+                        (0, r.jsx)(a.CircleInformationIcon, { size: "xs", color: "currentColor", className: E.q }),
                         (0, r.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-default",

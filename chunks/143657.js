@@ -15,8 +15,8 @@ var l,
     C = n(821609),
     b = n(307301),
     p = n(579872),
-    R = n(139286),
-    A = n(723702),
+    A = n(139286),
+    R = n(723702),
     j = n(969632);
 n(323874), n(14289), n(35956);
 var w = n(744593),
@@ -159,8 +159,8 @@ function eo(e) {
                 { emoji: a, isLoadingMedia: r, hasUpload: null != o, upload: o, mediaUrl: s, mediaFilename: u }
             );
         })({ channelId: t, localCreationAnswerId: n, image: l }),
-        R = C || null != g,
-        A = i.useCallback(() => {
+        A = C || null != g,
+        R = i.useCallback(() => {
             o(s);
         }, [o, s]),
         w = i.useMemo(
@@ -194,9 +194,9 @@ function eo(e) {
         x = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, a.jsx)(er, { onSelect: t, onEditMedia: u, onDeleteMedia: A, closePopout: t });
+                return (0, a.jsx)(er, { onSelect: t, onEditMedia: u, onDeleteMedia: R, closePopout: t });
             },
-            [A, u],
+            [R, u],
         ),
         k = h
             ? (0, a.jsx)(G.y, { className: ea.EC })
@@ -209,7 +209,7 @@ function eo(e) {
                   emojiClassName: F()(ea.$_, ea.qZ),
                   fallback: (0, a.jsx)(z.n, { size: "sm", color: "currentColor", className: ea.vr }),
               }),
-        S = F()(el.VQ, ea.GB, { [ea.ZV]: R });
+        S = F()(el.VQ, ea.GB, { [ea.ZV]: A });
     return (0, a.jsx)(B.Y, {
         targetElementRef: m,
         renderPopout: E,
@@ -231,14 +231,14 @@ function eo(e) {
                         innerRef: d,
                         ...o,
                         className: S,
-                        onClick: R && !c ? l : u,
+                        onClick: A && !c ? l : u,
                         "aria-label": w,
                         "aria-controls": t ?? i,
                         "aria-expanded": n || r,
                         children: [
                             k,
-                            R &&
-                                (0, a.jsx)(V.R, {
+                            A &&
+                                (0, a.jsx)(V.PencilIcon, {
                                     size: "md",
                                     color: "currentColor",
                                     className: ea.IZ,
@@ -270,10 +270,10 @@ function es(e) {
         } = e,
         b = i.useRef(null),
         p = i.useRef(null),
-        R = i.useRef(null);
+        A = i.useRef(null);
     i.useImperativeHandle(h, () => ({
         focusDeleteButton: () => p.current?.focus(),
-        focusInput: () => R.current?.focus(),
+        focusInput: () => A.current?.focus(),
     }));
     let [w, E] = i.useState(!1),
         k = i.useCallback(() => {
@@ -287,11 +287,11 @@ function es(e) {
                     case "enter":
                         r &&
                             (e.preventDefault(),
-                            ((0, j.ND)(n) || "macos" !== (0, A.getOS)() ? t : a) ? (e.stopPropagation(), f()) : d()),
+                            ((0, j.ND)(n) || "macos" !== (0, R.getOS)() ? t : a) ? (e.stopPropagation(), f()) : d()),
                             C.current[l + 1]?.focusInput();
                         break;
                     case "e":
-                        ("macos" === (0, A.getOS)() ? a : t) && (e.preventDefault(), e.stopPropagation(), k());
+                        ("macos" === (0, R.getOS)() ? a : t) && (e.preventDefault(), e.stopPropagation(), k());
                 }
             },
             [d, n, C, l, r, f, k],
@@ -315,7 +315,7 @@ function es(e) {
             trailing: u
                 ? {
                       "aria-label": _.intl.formatToPlainString(_.t["22fjEc"], { answerNumber: l + 1 }),
-                      icon: X.u,
+                      icon: X.TrashIcon,
                       onClick: () => m(l),
                       buttonRef: p,
                   }
@@ -326,7 +326,7 @@ function es(e) {
             onChange: (e) => o({ text: e, index: l, localCreationAnswerId: n.localCreationAnswerId }),
             onKeyDown: I,
             maxLength: x.dv,
-            inputRef: R,
+            inputRef: A,
         }),
     });
 }
@@ -380,7 +380,7 @@ function ef(e) {
     var t;
     let n,
         { channel: l, transitionState: s, onClose: c, initialQuestion: S, initialAnswers: N, initialDuration: P } = e;
-    (0, R.A)({ type: ec.z.MODAL, name: r.I.POLL_EDITOR_VIEWED });
+    (0, A.A)({ type: ec.z.MODAL, name: r.I.POLL_EDITOR_VIEWED });
     let Y = i.useRef(null),
         F = i.useRef([]),
         M = i.useRef(null),
@@ -416,8 +416,8 @@ function ef(e) {
                 [g, h] = i.useState({}),
                 [C, b] = i.useState(!1),
                 p = r.filter((e) => (0, j.ND)(e)),
-                R = r.filter((e) => (0, j.VD)(e)),
-                A = s.length > 0 && p.length >= x.FW && 0 === R.length,
+                A = r.filter((e) => (0, j.VD)(e)),
+                R = s.length > 0 && p.length >= x.FW && 0 === A.length,
                 [S, { error: N, loading: P }] = (0, E.A)(T.A.createPoll),
                 U = r.length < x.Lu,
                 K = r.length > x.FW,
@@ -544,7 +544,7 @@ function ef(e) {
                 setAllowMultiSelect: m,
                 duration: d,
                 setDuration: f,
-                canPost: A,
+                canPost: R,
                 canAddMoreAnswers: U,
                 canRemoveMoreAnswers: K,
                 handleQuestionChange: Y,
@@ -633,7 +633,7 @@ function ef(e) {
     let ep = i.useCallback(() => {
             s === m.ip.ENTERED && el();
         }, [el, s]),
-        eR =
+        eA =
             ((t = { disabled: ei, onSubmit: ep }),
             (n = i.useRef(t)),
             i.useEffect(() => {
@@ -644,11 +644,11 @@ function ef(e) {
                     l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
                     { disabled: a = !1, onSubmit: i } = n.current;
                 "enter" === e.key.toLowerCase() &&
-                    ("macos" === (0, A.getOS)() ? l : t) &&
+                    ("macos" === (0, R.getOS)() ? l : t) &&
                     !a &&
                     (e.preventDefault(), i());
             }, [])),
-        eA = i.useMemo(
+        eR = i.useMemo(
             () => [{ variant: "primary", onClick: ep, submitting: ei, text: _.intl.string(_.t.JOj8Zk), autoFocus: !1 }],
             [ep, ei],
         );
@@ -656,11 +656,11 @@ function ef(e) {
         transitionState: s,
         onClose: c,
         title: _.intl.string(_.t["GD/8X8"]),
-        actions: eA,
+        actions: eR,
         actionBarInput: (0, a.jsx)(d.S, { checked: G, onChange: (e) => z(e), label: _.intl.string(_.t["Ux+iQU"]) }),
         children: (0, a.jsxs)("div", {
             className: eu.Qs,
-            onKeyDown: eR,
+            onKeyDown: eA,
             children: [
                 null != en && (0, a.jsx)(f.w, { type: "critical", children: en.getAnyErrorMessage() }),
                 (0, a.jsx)(em, { question: q, onChange: V, error: ea?.question, inputRef: Y }),

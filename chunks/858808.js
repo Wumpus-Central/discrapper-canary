@@ -19,7 +19,7 @@ function u(e) {
             ariaHidden: !0,
             children: (0, n.jsx)(r.K, {
                 "aria-label": x,
-                icon: a.u,
+                icon: a.TrashIcon,
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {

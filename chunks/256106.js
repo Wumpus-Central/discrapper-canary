@@ -412,7 +412,7 @@ function ev(e) {
                     children: (0, i.jsxs)("div", {
                         className: eG.rx,
                         children: [
-                            (0, i.jsx)(ep.X, { size: "xs", color: "currentColor" }),
+                            (0, i.jsx)(ep.LockIcon, { size: "xs", color: "currentColor" }),
                             (0, i.jsx)("span", { children: es.intl.string(es.t["c+7oa7"]) }),
                         ],
                     }),
@@ -915,7 +915,7 @@ function tJ(e) {
         ...e,
     });
 }
-var t0 = n(626822),
+var t0 = n(453028),
     t1 = n(763827),
     t2 = n(67480),
     t5 = n(147964),

@@ -25,9 +25,9 @@ let I = (e) => {
             if (null != t) return t;
             switch (e) {
                 case "warn":
-                    return o.i;
+                    return o.WarningIcon;
                 case "info":
-                    return d.m;
+                    return d.CircleInformationIcon;
                 case "danger":
                     return c.E;
                 case "positive":

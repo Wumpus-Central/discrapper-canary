@@ -31,10 +31,10 @@ var _ = n(87719),
     m = n(174459),
     v = n(515718),
     p = n(38405),
-    S = n(396813),
-    y = n(859703),
+    I = n(396813),
+    S = n(859703),
     h = n(24001),
-    I = n(104886),
+    y = n(104886),
     Q = n(309593),
     b = n(291749),
     x = n(971276),
@@ -63,7 +63,7 @@ function G(e) {
         f = (0, U.go)();
     return i.useCallback(() => {
         null != t &&
-            ((0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "quest_claim_reward")
+            ((0, y.E5)(y.kI.STEP_2_CLICKED_INTERNAL, "quest_claim_reward")
                 ? (0, A.r)({
                       type: E.F.CLICK_INTERNAL,
                       adCreativeType: l.p.QUEST,
@@ -102,7 +102,7 @@ function K(e) {
     let { useReducedMotion: t, className: n } = e,
         [l, u] = (0, a.z)(() => ({})),
         c = i.useRef(!1),
-        d = (0, s.animated)(o.f);
+        d = (0, s.animated)(o.RefreshIcon);
     return {
         render: () => (0, r.jsx)(d, { className: n, style: t ? void 0 : l, color: "currentColor", size: "xs" }),
         startAnimation: function (e) {
@@ -129,7 +129,7 @@ let W = (e, t, n) => {
             let i = r.target;
             if (i?.tagName?.toLowerCase() !== "a") return;
             let o = i.getAttribute("href") === s ? R.Cy.HOW_TO_HELP_ARTICLE_XBOX : R.Cy.HOW_TO_HELP_ARTICLE_PLAYSTATION;
-            (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "quest_how_to_help_article")
+            (0, y.E5)(y.kI.STEP_2_CLICKED_INTERNAL, "quest_how_to_help_article")
                 ? (0, A.r)({
                       type: E.F.CLICK_INTERNAL,
                       adCreativeType: l.p.QUEST,
@@ -184,7 +184,7 @@ function X(e) {
                         tooltipText: null,
                         onClick: async () => {
                             if ((0, q.K$)(t)) {
-                                await (0, S.Oy)(t.id, {
+                                await (0, I.Oy)(t.id, {
                                     questContent: r,
                                     questContentCTA: i,
                                     questContentPosition: s,
@@ -196,7 +196,7 @@ function X(e) {
                             }
                             a ||
                                 _ ||
-                                (0, S.Oy)(t.id, {
+                                (0, I.Oy)(t.id, {
                                     questContent: r,
                                     questContentCTA: i,
                                     questContentPosition: s,
@@ -213,7 +213,7 @@ function X(e) {
                                           questContentRowIndex: l,
                                       })
                                     : _ &&
-                                      (await (0, S.Oy)(t.id, {
+                                      (await (0, I.Oy)(t.id, {
                                           questContent: r,
                                           questContentCTA: i,
                                           questContentPosition: s,
@@ -287,14 +287,14 @@ function X(e) {
 }
 function Y() {
     let e = (0, L.Ay)(h.p9.DESKTOP_ACCOUNT_PANEL_AREA);
-    return (0, u.bG)([y.A], () => y.A.getQuestPreviewOverride(h.uF.QUEST_BAR_V2), []) ?? e;
+    return (0, u.bG)([S.A], () => S.A.getQuestPreviewOverride(h.uF.QUEST_BAR_V2), []) ?? e;
 }
 function $(e) {
     let { quest: t } = e,
         n = (0, x.s)(),
         r = (0, Q.LS)(t),
         { premiumSubscription: i } = (0, u.cf)([T.A], () => ({ premiumSubscription: T.A.getPremiumSubscription() })),
-        s = (0, u.bG)([y.A], () => null != y.A.getQuestPreviewOverride(h.uF.QUEST_BAR_V2), []);
+        s = (0, u.bG)([S.A], () => null != S.A.getQuestPreviewOverride(h.uF.QUEST_BAR_V2), []);
     if (null == t) return { isQuestBarVisible: !1, reason: "quest_is_null" };
     let l = t.userStatus?.claimedAt != null;
     if (s && !l) return { isQuestBarVisible: !0, reason: "quest_bar_visible" };
@@ -313,9 +313,9 @@ function $(e) {
 }
 function J() {
     let { isQuestBarVisible: e } = $({ quest: Y() }),
-        { lastFetchedCurrentQuests: t, lastFetchedQuestToDeliver: n } = (0, u.cf)([y.A], () => ({
-            lastFetchedCurrentQuests: y.A.lastFetchedCurrentQuests,
-            lastFetchedQuestToDeliver: y.A.lastFetchedQuestToDeliver,
+        { lastFetchedCurrentQuests: t, lastFetchedQuestToDeliver: n } = (0, u.cf)([S.A], () => ({
+            lastFetchedCurrentQuests: S.A.lastFetchedCurrentQuests,
+            lastFetchedQuestToDeliver: S.A.lastFetchedQuestToDeliver,
         }));
     return { isQuestBarEmpty: !e, hasLoadedQuestBar: 0 !== t && 0 !== n };
 }
@@ -332,7 +332,7 @@ function ee(e) {
     );
 }
 function et() {
-    let e = (0, u.bG)([y.A], () => y.A.getQuestHomeHero()),
+    let e = (0, u.bG)([S.A], () => S.A.getQuestHomeHero()),
         [t, n] = i.useState(() => Date.now()),
         r = null != e ? Date.parse(e.endsAt) : null,
         s = null != e;
@@ -349,12 +349,12 @@ function en(e) {
     let [t, n] = i.useState(!0),
         [r, s] = i.useState(!1),
         [a, o] = i.useState(!1),
-        c = (0, u.bG)([y.A], () => y.A.isFetchingQuestHomeHero()),
+        c = (0, u.bG)([S.A], () => S.A.isFetchingQuestHomeHero()),
         d = et();
     i.useEffect(() => {
         !(async function () {
             try {
-                null != e ? await (0, S.IV)(e) : await (0, S.Yf)();
+                null != e ? await (0, I.IV)(e) : await (0, I.Yf)();
             } catch (e) {
                 o(!0);
             } finally {

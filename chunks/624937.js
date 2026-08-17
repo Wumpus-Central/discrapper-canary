@@ -2,7 +2,7 @@ n.d(e, { default: () => H });
 var i = n(477900),
     s = n(582128),
     l = n(24001),
-    r = n(201274),
+    r = n(309593),
     o = n(717200);
 n(321073);
 var a = n(323889),
@@ -325,7 +325,7 @@ function B(t) {
                     ? { text: Y.intl.string(Y.t.E4kW5O), onClick: U }
                     : v
                       ? K
-                          ? { text: Y.intl.string(Y.t.nPThNb), onClick: V, loading: z, icon: g.f }
+                          ? { text: Y.intl.string(Y.t.nPThNb), onClick: V, loading: z, icon: g.RefreshIcon }
                           : {
                                 text: Y.intl.string(Y.t.S0W8Z5),
                                 onClick: () => {

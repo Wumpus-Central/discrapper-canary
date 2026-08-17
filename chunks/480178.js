@@ -1,12 +1,12 @@
-s.r(t), s.d(t, { default: () => iM });
+s.r(t), s.d(t, { default: () => iy });
 var e = s(477900),
     l = s(582128),
     r = s(503698),
     n = s.n(r),
     d = s(562708),
     a = s(17928),
-    C = s(661531),
-    o = s(289873),
+    o = s(661531),
+    C = s(289873),
     c = s(696986),
     u = s(565787),
     x = s(364522),
@@ -17,7 +17,7 @@ var e = s(477900),
     m = s(736653),
     L = s(953727);
 function _(i) {
-    let { width: t = 255, height: s = 178, color: l = C.A.unsafe_rawColors.WHITE.css, ...r } = i,
+    let { width: t = 255, height: s = 178, color: l = o.A.unsafe_rawColors.WHITE.css, ...r } = i,
         n = (0, m.Ay)(),
         d = (0, p.q)(n);
     return (0, e.jsx)("svg", {
@@ -77,7 +77,7 @@ function _(i) {
     });
 }
 function f(i) {
-    let { width: t = 160, height: s = 210, color: l = C.A.unsafe_rawColors.WHITE.css, ...r } = i,
+    let { width: t = 160, height: s = 210, color: l = o.A.unsafe_rawColors.WHITE.css, ...r } = i,
         n = (0, m.Ay)(),
         d = (0, p.q)(n);
     return (0, e.jsx)("svg", {
@@ -141,8 +141,8 @@ var I = s(742589),
     A = s(722888),
     T = s(683271),
     R = s(558060),
-    N = s(381969),
-    S = s(920814),
+    S = s(381969),
+    N = s(920814),
     b = s(435558),
     w = s.n(b),
     U = s(793574),
@@ -156,7 +156,7 @@ function G(i) {
         { listingsLoaded: r } = (0, V.bb)(t),
         d = (0, V.fZ)(t),
         a = l.useRef(null),
-        { sortOption: C } = (0, R.R)(),
+        { sortOption: o } = (0, R.R)(),
         c = l.useMemo(
             () =>
                 (function (i, t) {
@@ -178,8 +178,8 @@ function G(i) {
                             return i;
                     }
                     return w().orderBy(i, [s], [e]);
-                })(d, C),
-            [d, C],
+                })(d, o),
+            [d, o],
         );
     return r
         ? (0, e.jsx)("ul", {
@@ -229,12 +229,12 @@ function G(i) {
                   ),
               ),
           })
-        : (0, e.jsx)(o.y, {});
+        : (0, e.jsx)(C.y, {});
 }
 var B = s(300233),
     O = s(599941),
-    M = s(915869),
-    y = s(700206),
+    y = s(915869),
+    M = s(700206),
     H = s(815332),
     Z = s(456540),
     z = s(217530),
@@ -244,8 +244,8 @@ var B = s(300233),
 function $(i) {
     let { guildId: t } = i,
         s = (0, O.uk)(t)[0],
-        { editStateIds: l } = M.d0(s?.id ?? null, t),
-        { activeSubscription: r } = (0, y.A)(s?.id);
+        { editStateIds: l } = y.d0(s?.id ?? null, t),
+        { activeSubscription: r } = (0, M.A)(s?.id);
     return (0, e.jsxs)("div", {
         className: F.k,
         children: [
@@ -284,8 +284,8 @@ var Q = s(702841),
     ir = s(775602),
     id = s(289397),
     ia = s(440293),
-    iC = s(976860),
-    io = s(305015);
+    io = s(976860),
+    iC = s(305015);
 function ic(i) {
     let { width: t = 24, height: s = 24, color: l = "currentColor", ...r } = i;
     return (0, e.jsx)("svg", {
@@ -315,13 +315,13 @@ function ig(i) {
         selected: r,
         disabled: d = !1,
         onClick: a,
-        onPreviewDismiss: o,
+        onPreviewDismiss: C,
         isNew: u = !1,
     } = i;
     return (0, e.jsxs)(J.s, {
         onClick: d ? void 0 : a,
         "aria-disabled": d,
-        className: n()(ij.Mf, { [ij.wH]: r, [ij.ac]: d, [ij.VH]: !r && null != o }),
+        className: n()(ij.Mf, { [ij.wH]: r, [ij.ac]: d, [ij.VH]: !r && null != C }),
         "aria-label": s,
         children: [
             (0, e.jsx)("div", { className: ij.zc, children: t }),
@@ -342,14 +342,14 @@ function ig(i) {
             }),
             u &&
                 (0, e.jsx)(ii.Lp, {
-                    color: C.A.unsafe_rawColors.BRAND_260.css,
+                    color: o.A.unsafe_rawColors.BRAND_260.css,
                     className: ij.Ad,
                     text: k.intl.string(k.t.y2b7CA),
                 }),
-            null != o &&
+            null != C &&
                 (0, e.jsx)(it.D, {
                     className: ij.EP,
-                    onClick: o,
+                    onClick: C,
                     "aria-label": k.intl.string(k.t.WAI6xu),
                     children: (0, e.jsx)(is.a, { size: "xs", color: "currentColor" }),
                 }),
@@ -359,24 +359,24 @@ function ig(i) {
 function ip(i) {
     let { guild: t } = i,
         s = (0, ia.w)(t.id),
-        { selectedTab: l, setSelectedTab: r, categoryTabs: n, handlePreviewDismiss: d } = (0, N.k)(),
+        { selectedTab: l, setSelectedTab: r, categoryTabs: n, handlePreviewDismiss: d } = (0, S.k)(),
         a = "false" === Y.w.get(ix.Db, "false"),
-        C = (0, Q.bG)([ir.Ay], () => ir.Ay.useReducedMotion),
-        o = n.map((i) => {
+        o = (0, Q.bG)([ir.Ay], () => ir.Ay.useReducedMotion),
+        C = n.map((i) => {
             switch (i) {
-                case S.B.GUILD_PRODUCTS:
+                case N.B.GUILD_PRODUCTS:
                     return (0, e.jsx)(
                         ig,
                         {
-                            icon: (0, e.jsx)(io.A, { width: 20, height: 20 }),
+                            icon: (0, e.jsx)(iC.A, { width: 20, height: 20 }),
                             title: k.intl.string(k.t.odvTUp),
                             body: k.intl.string(k.t["0JFpRW"]),
-                            selected: l === S.B.GUILD_PRODUCTS,
-                            onClick: () => r(S.B.GUILD_PRODUCTS),
+                            selected: l === N.B.GUILD_PRODUCTS,
+                            onClick: () => r(N.B.GUILD_PRODUCTS),
                         },
                         i,
                     );
-                case S.B.GUILD_ROLE_SUBSCRIPTIONS:
+                case N.B.GUILD_ROLE_SUBSCRIPTIONS:
                     return (0, e.jsx)(
                         ig,
                         {
@@ -385,32 +385,37 @@ function ip(i) {
                             body: s
                                 ? k.intl.string(k.t["jqz+ly"])
                                 : k.intl.format(k.t.ycs4oO, {
-                                      openRoleSubPage: () => (0, iC.pX)(q.BVt.CHANNEL(t.id, ih.VV.ROLE_SUBSCRIPTIONS)),
+                                      openRoleSubPage: () => (0, io.pX)(q.BVt.CHANNEL(t.id, ih.VV.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !s,
-                            selected: l === S.B.GUILD_ROLE_SUBSCRIPTIONS,
-                            onClick: () => r(S.B.GUILD_ROLE_SUBSCRIPTIONS),
+                            selected: l === N.B.GUILD_ROLE_SUBSCRIPTIONS,
+                            onClick: () => r(N.B.GUILD_ROLE_SUBSCRIPTIONS),
                         },
                         i,
                     );
-                case S.B.GUILD_PRODUCTS_PREVIEW:
+                case N.B.GUILD_PRODUCTS_PREVIEW:
                     return (0, e.jsx)(
                         ig,
                         {
                             icon: a
                                 ? (0, e.jsx)("img", {
-                                      src: C
+                                      src: o
                                           ? (0, id.n)("server_products/storefront/question-mark.png")
                                           : (0, id.n)("server_products/storefront/question-mark.gif"),
                                       className: ij.kz,
                                       alt: "",
                                   })
-                                : (0, e.jsx)(ie.o, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+                                : (0, e.jsx)(ie.GiftIcon, {
+                                      size: "custom",
+                                      color: "currentColor",
+                                      width: 20,
+                                      height: 20,
+                                  }),
                             title: k.intl.string(k.t.odvTUp),
                             body: k.intl.string(k.t["827i8I"]),
-                            selected: l === S.B.GUILD_PRODUCTS_PREVIEW,
+                            selected: l === N.B.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                r(S.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true");
+                                r(N.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true");
                             },
                             onPreviewDismiss: d,
                             isNew: a,
@@ -429,8 +434,8 @@ function ip(i) {
             (0, e.jsxs)("div", {
                 className: ij.uW,
                 children: [
-                    (0, e.jsx)("div", { className: ij.vR, children: o }),
-                    l === S.B.GUILD_PRODUCTS && (0, e.jsx)(iu.default, {}),
+                    (0, e.jsx)("div", { className: ij.vR, children: C }),
+                    l === N.B.GUILD_PRODUCTS && (0, e.jsx)(iu.default, {}),
                 ],
             }),
         ],
@@ -478,11 +483,11 @@ function iR() {
         ],
     });
 }
-function iN() {
+function iS() {
     return (0, e.jsxs)("div", {
         className: iT.od,
         children: [
-            (0, e.jsx)(im.m, { size: "md", color: "currentColor", className: iT.ZC }),
+            (0, e.jsx)(im.CircleInformationIcon, { size: "md", color: "currentColor", className: iT.ZC }),
             (0, e.jsx)(K.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
@@ -491,7 +496,7 @@ function iN() {
         ],
     });
 }
-function iS(i) {
+function iN(i) {
     let { guildId: t } = i;
     return (0, e.jsxs)("div", {
         className: iT.Bh,
@@ -500,7 +505,7 @@ function iS(i) {
                 className: iT.gp,
                 children: [(0, e.jsx)(iR, {}), (0, e.jsx)(iA.A, { guildId: t, showCTA: !0 })],
             }),
-            (0, e.jsx)(iN, {}),
+            (0, e.jsx)(iS, {}),
         ],
     });
 }
@@ -508,26 +513,26 @@ var ib = s(821609),
     iw = s(952270),
     iU = s(913758);
 function iV() {
-    let { selectedTab: i, isPhantomPreview: t, handlePreviewDismiss: s } = (0, N.k)();
+    let { selectedTab: i, isPhantomPreview: t, handlePreviewDismiss: s } = (0, S.k)();
     return t
         ? (0, e.jsxs)(e.Fragment, {
               children: [
                   (0, e.jsxs)("div", {
                       className: iU.ZF,
                       children: [
-                          (0, e.jsx)(iw.G, { size: "xs", color: "currentColor" }),
+                          (0, e.jsx)(iw.EyeSlashIcon, { size: "xs", color: "currentColor" }),
                           (0, e.jsx)(K.E, {
                               variant: "text-sm/normal",
                               className: iU.cP,
                               children:
-                                  i === S.B.GUILD_PRODUCTS_PREVIEW
+                                  i === N.B.GUILD_PRODUCTS_PREVIEW
                                       ? k.intl.string(k.t.F4Z0nV)
                                       : k.intl.string(k.t.pzTFpM),
                           }),
                       ],
                   }),
                   (0, e.jsx)(ib.$, {
-                      text: i === S.B.GUILD_PRODUCTS_PREVIEW ? k.intl.string(k.t.YF35pV) : k.intl.string(k.t.r30bky),
+                      text: i === N.B.GUILD_PRODUCTS_PREVIEW ? k.intl.string(k.t.YF35pV) : k.intl.string(k.t.r30bky),
                       size: "sm",
                       variant: "secondary",
                       onClick: s,
@@ -545,10 +550,10 @@ function iB(i) {
     let { guildId: t, productId: s } = i,
         { loaded: l, subscriptionsSettings: r } = (0, A.G)(t),
         n = (0, a.bG)([v.A], () => v.A.getGuild(t)),
-        { selectedTab: d, isPhantomPreview: C, categoryTabs: u } = (0, N.k)(),
+        { selectedTab: d, isPhantomPreview: o, categoryTabs: u } = (0, S.k)(),
         x = !l || null == r;
-    return null == n || (!C && x)
-        ? (0, e.jsx)(o.y, {})
+    return null == n || (!o && x)
+        ? (0, e.jsx)(C.y, {})
         : (0, e.jsx)(R.default, {
               defaultSortOption: r?.store_page_guild_products_default_sort ?? E.p$.NAME,
               children: (0, e.jsxs)("div", {
@@ -561,9 +566,9 @@ function iB(i) {
                           className: iP.v_,
                           children: [
                               (0, e.jsx)(c.h, { size: 32 }),
-                              C && (0, e.jsx)(iS, { guildId: t }),
-                              d === S.B.GUILD_PRODUCTS && (0, e.jsx)(G, { guildId: t, productId: s }),
-                              d === S.B.GUILD_ROLE_SUBSCRIPTIONS && (0, e.jsx)(X, { guildId: t }),
+                              o && (0, e.jsx)(iN, { guildId: t }),
+                              d === N.B.GUILD_PRODUCTS && (0, e.jsx)(G, { guildId: t, productId: s }),
+                              d === N.B.GUILD_ROLE_SUBSCRIPTIONS && (0, e.jsx)(X, { guildId: t }),
                           ],
                       }),
                   ],
@@ -575,15 +580,15 @@ function iO(i) {
         r = (0, a.bG)([g.A], () => g.A.isConnected()),
         c = (0, a.bG)([v.A], () => v.A.getGuild(t)),
         { shouldHideGuildPurchaseEntryPoints: p, restrictionsLoading: m } = (0, j.MH)(t),
-        { selectedTab: L, isPhantomPreview: A, categoryTabs: R } = (0, N.k)(),
-        S = r && (null == c || (0 === R.length && !A) || (p && !m));
+        { selectedTab: L, isPhantomPreview: A, categoryTabs: R } = (0, S.k)(),
+        N = r && (null == c || (0 === R.length && !A) || (p && !m));
     return (
         l.useEffect(() => {
-            S && (0, T.B)(t, ih.VV.GUILD_SHOP);
-        }, [t, S]),
+            N && (0, T.B)(t, ih.VV.GUILD_SHOP);
+        }, [t, N]),
         (0, h.A)(
             { type: ik.z.PAGE, name: d.ImpressionNames.GUILD_SHOP_PAGE, properties: { product_id: s, tab: L } },
-            { disableTrack: S },
+            { disableTrack: N },
         ),
         (0, e.jsxs)("div", {
             "data-has-border": !0,
@@ -594,7 +599,7 @@ function iO(i) {
                         (0, e.jsx)(I.A.Icon, {
                             icon: (0, u.k)(iE.h),
                             "aria-hidden": !0,
-                            color: C.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
+                            color: o.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
                         (0, e.jsx)(I.A.Title, { children: k.intl.string(k.t.al5EXL) }),
                         (0, e.jsx)(iV, {}),
@@ -602,7 +607,7 @@ function iO(i) {
                 }),
                 (0, e.jsx)(x.d_, {
                     className: iP.Qs,
-                    children: r ? (0, e.jsx)(iB, { guildId: t, productId: s }) : (0, e.jsx)(o.y, {}),
+                    children: r ? (0, e.jsx)(iB, { guildId: t, productId: s }) : (0, e.jsx)(C.y, {}),
                 }),
                 (0, e.jsx)(f, { className: iP.Dv }),
                 (0, e.jsx)(_, { className: iP.xC }),
@@ -610,11 +615,11 @@ function iO(i) {
         })
     );
 }
-function iM(i) {
+function iy(i) {
     let { guildId: t, productId: s, initialTab: l } = i;
     return (
-        null == l && null != s && (l = S.B.GUILD_PRODUCTS),
-        (0, e.jsx)(N.A, {
+        null == l && null != s && (l = N.B.GUILD_PRODUCTS),
+        (0, e.jsx)(S.A, {
             initialTab: l,
             guildId: t,
             children: (0, e.jsx)(iO, { initialTab: l, productId: s, guildId: t }),

@@ -3,10 +3,10 @@ var i = s(477900),
     n = s(582128),
     r = s(189213),
     l = s(834730),
-    a = s(664121),
-    c = s(998445),
-    u = s(950305),
-    o = s(687966),
+    c = s(664121),
+    a = s(998445),
+    o = s(950305),
+    u = s(687966),
     d = s(885386),
     m = s(975571),
     g = s(24001),
@@ -16,8 +16,8 @@ var i = s(477900),
     f = s(375708),
     E = s(485870);
 function S(t) {
-    let { transitionState: e, onClose: s, questContent: a, quest: c, returnRef: u } = t,
-        o = d.H1.useSetting(),
+    let { transitionState: e, onClose: s, questContent: c, quest: a, returnRef: o } = t,
+        u = d.H1.useSetting(),
         S = (function (t) {
             switch (t) {
                 case g.uF.QUEST_BAR:
@@ -30,29 +30,29 @@ function S(t) {
                 default:
                     return;
             }
-        })(a),
-        _ = n.useMemo(
+        })(c),
+        p = n.useMemo(
             () =>
                 (0, x.JM)({
                     isTargetedDisclosure: null != S,
-                    isContextualDisclosure: o,
-                    gamePublisher: c.config.messages.gamePublisher,
-                    gameTitle: c.config.messages.gameTitle,
-                    cosponsorName: c.config.cosponsorMetadata?.name,
-                    isVideoQuest: (0, h.vv)(c),
+                    isContextualDisclosure: u,
+                    gamePublisher: a.config.messages.gamePublisher,
+                    gameTitle: a.config.messages.gameTitle,
+                    cosponsorName: a.config.cosponsorMetadata?.name,
+                    isVideoQuest: (0, h.vv)(a),
                 }),
-            [c, S, o],
+            [a, S, u],
         );
     return (0, i.jsxs)(r.Modal, {
         size: "sm",
         transitionState: e,
         onClose: s,
-        returnRef: u,
+        returnRef: o,
         title: f.intl.string(f.t.GcsZKJ),
         actions: [{ onClick: () => s(), text: f.intl.string(f.t.cpT0Cq) }],
         children: [
-            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: E.gt, children: _ }),
-            (0, i.jsx)(j, { targetedTraits: S, isContextualDisclosure: o }),
+            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: E.gt, children: p }),
+            (0, i.jsx)(j, { targetedTraits: S, isContextualDisclosure: u }),
             (0, i.jsx)(l.E, {
                 variant: "text-xs/medium",
                 color: "text-muted",
@@ -69,19 +69,19 @@ function j(t) {
     if (s)
         return (0, i.jsx)("ul", {
             className: E.OK,
-            children: (0, i.jsx)(_, { icon: a.R, children: f.intl.string(f.t["2bL0wT"]) }),
+            children: (0, i.jsx)(p, { icon: c.R, children: f.intl.string(f.t["2bL0wT"]) }),
         });
     let { location: n, age: r, activity: l } = e;
     return (0, i.jsxs)("ul", {
         className: E.OK,
         children: [
-            n && (0, i.jsx)(_, { icon: c.L, children: f.intl.string(f.t.xQSdPv) }),
-            r && (0, i.jsx)(_, { icon: u.n, children: f.intl.string(f.t.mYt7hQ) }),
-            l && (0, i.jsx)(_, { icon: o._, children: f.intl.string(f.t.XAsWxQ) }),
+            n && (0, i.jsx)(p, { icon: a.GlobeEarthIcon, children: f.intl.string(f.t.xQSdPv) }),
+            r && (0, i.jsx)(p, { icon: o.UserIcon, children: f.intl.string(f.t.mYt7hQ) }),
+            l && (0, i.jsx)(p, { icon: u.GameControllerIcon, children: f.intl.string(f.t.XAsWxQ) }),
         ],
     });
 }
-function _(t) {
+function p(t) {
     let { icon: e, children: s } = t;
     return (0, i.jsxs)(l.E, {
         variant: "text-sm/medium",

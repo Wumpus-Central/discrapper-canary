@@ -31,7 +31,7 @@ var C = l(975732),
     _ = l(980707),
     j = l(146919),
     G = l(375708);
-function R(e) {
+function T(e) {
     let { shops: t, onClose: l } = e,
         a = (0, j.yB)("CollectiblesGameShopsContextMenu");
     return (0, n.jsx)("div", {
@@ -58,7 +58,7 @@ function R(e) {
         }),
     });
 }
-var T = l(278416),
+var R = l(278416),
     v = l(758836);
 let k = [
     { tab: v.G2.OFFER_ELIGIBLE, labelKey: G.t.hY8Ft1 },
@@ -71,7 +71,7 @@ let k = [
     { tab: v.G2.CATALOG, labelKey: G.t.xFcotU },
 ];
 function F(e) {
-    return e === v.G2.OFFER_ELIGIBLE ? T.g : void 0;
+    return e === v.G2.OFFER_ELIGIBLE ? R.TagIcon : void 0;
 }
 function M(e) {
     let { canViewProfileFrames: t, collabsFilterEnabled: l, hasActivePromotion: n } = e;
@@ -181,9 +181,9 @@ function z(e) {
         j = (0, n.jsx)(o.D, {
             className: U.qc,
             onClick: g,
-            children: (0, n.jsx)(B.$, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT }),
+            children: (0, n.jsx)(B.MagnifyingGlassIcon, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        R = (0, n.jsx)($.I, {
+        T = (0, n.jsx)($.I, {
             size: "sm",
             ref: C,
             onKeyDown: S,
@@ -193,13 +193,13 @@ function z(e) {
             onBlur: y,
             placeholder: "en-US" === E ? G.intl.string(G.t.arz34K) : G.intl.string(G.t["hIt/Nm"]),
         }),
-        T = { "--custom-search-bar-width": `${v.rr}px`, "--custom-search-bar-icon-width": `${v.Dy}px` };
+        R = { "--custom-search-bar-width": `${v.rr}px`, "--custom-search-bar-icon-width": `${v.Dy}px` };
     return _
-        ? (0, n.jsx)("div", { style: T, children: j })
+        ? (0, n.jsx)("div", { style: R, children: j })
         : (0, n.jsx)("div", {
               className: I()(U.ON, { [U.Nz]: h }),
-              style: T,
-              children: (0, n.jsx)(o.D, { ignoreKeyPress: !0, onClick: x, children: R }),
+              style: R,
+              children: (0, n.jsx)(o.D, { ignoreKeyPress: !0, onClick: x, children: T }),
           });
 }
 var K = l(3666),
@@ -530,7 +530,7 @@ function eg(e) {
         })({ location: "collectibles_shop_header_bar" }),
         _ = (0, g.sk)("CollectiblesShopHeaderBar"),
         j = (0, A.z)("CollectiblesShopHeaderBar"),
-        T = null != (0, x.A)(),
+        R = null != (0, x.A)(),
         { searchQuery: k } = (0, L.v)(),
         B = a.useRef(null),
         [$, P] = a.useState(!1);
@@ -645,7 +645,7 @@ function eg(e) {
                         })({
                             canViewProfileFrames: _,
                             collabsFilterEnabled: j,
-                            hasActivePromotion: T,
+                            hasActivePromotion: R,
                             onTabSelect: l,
                             onClose: t,
                         });
@@ -662,7 +662,7 @@ function eg(e) {
                         submenuOnly: !0,
                         renderSubmenu: (e) => {
                             let { onClose: t } = e;
-                            return (0, n.jsx)(R, { shops: U, onClose: t });
+                            return (0, n.jsx)(T, { shops: U, onClose: t });
                         },
                         renderOverflowContent: (e) => {
                             let { onClose: t } = e;
@@ -694,7 +694,7 @@ function eg(e) {
                     }),
                 e
             );
-        }, [l, U, _, j, T, I, K, q]),
+        }, [l, U, _, j, R, I, K, q]),
         W = t === v.G2.ORBS ? D.liQ.SHOP_ORBS_TAB : D.liQ.COLLECTIBLES_SHOP,
         Y = a.useCallback(() => {
             (0, h.Y)({ pageType: W, sectionType: D.JJy.ORBS_BALANCE_MENU, ctaObject: D.ZSU.CTA_TO_QUEST_HOME }),
@@ -721,7 +721,7 @@ function eg(e) {
                         className: eA.ij,
                         onClick: J,
                         "aria-label": G.intl.string(G.t["7lZ31J"]),
-                        children: (0, n.jsx)(i.C, { size: "xs", color: "currentColor" }),
+                        children: (0, n.jsx)(i.HeartIcon, { size: "xs", color: "currentColor" }),
                     }),
                     (0, n.jsx)(f.SS, {
                         analyticsPage: W,

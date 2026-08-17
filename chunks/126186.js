@@ -23,8 +23,8 @@ var i,
     E = t(580630),
     R = t(526292),
     y = t(877624),
-    b = t(978656),
-    P = t(508770),
+    P = t(978656),
+    b = t(508770),
     I = t(406810),
     _ = t(951305),
     M = t(421108),
@@ -33,7 +33,7 @@ var i,
     G = t(753261),
     B = t(380619),
     D = t(80435);
-function O(e) {
+function w(e) {
     let { title: r, body: t, image: i, badge: l, className: a } = e;
     return (0, n.jsxs)("div", {
         className: s()(D.kL, a),
@@ -46,7 +46,7 @@ function O(e) {
         ],
     });
 }
-var w = t(375708),
+var O = t(375708),
     L = t(197350);
 function U() {
     let { claimableRewards: e } = (0, _.Pv)(),
@@ -58,7 +58,7 @@ function U() {
         }),
         t = (0, S.T)(r?.bannerAsset),
         i = (0, S.T)(r?.avatarAsset),
-        l = r?.assetVariant === b.Y.LARGE_TILTED,
+        l = r?.assetVariant === P.Y.LARGE_TILTED,
         a = (0, c.bG)([k.A], () => k.A.getGiftPromotion()),
         o = (0, M.dA)(a?.endDate),
         { enabled: d } = G.E.useConfig({ location: "PremiumBrandRefreshGiftPromotionElement" });
@@ -81,12 +81,12 @@ function U() {
                     (0, n.jsx)(x.E, {
                         variant: "text-md/bold",
                         color: "text-overlay-light",
-                        children: w.intl.string(w.t.OEtqpm),
+                        children: O.intl.string(O.t.OEtqpm),
                     }),
                     (0, n.jsx)(x.E, {
                         variant: "text-md/medium",
                         color: "text-overlay-light",
-                        children: w.intl.formatToPlainString(w.t["2h5M+X"], { availableCount: e.length }),
+                        children: O.intl.formatToPlainString(O.t["2h5M+X"], { availableCount: e.length }),
                     }),
                 ],
             }),
@@ -107,10 +107,12 @@ function H(e) {
     return (0, n.jsx)("div", {
         className: L.KE,
         "data-panel-banner": "true",
-        children: (0, n.jsx)(O, {
+        children: (0, n.jsx)(w, {
             image: null != r ? (0, n.jsx)("img", { className: L.L8, alt: "", src: r }) : void 0,
             badge:
-                null != t ? (0, n.jsx)(P.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: I.O }) : void 0,
+                null != t
+                    ? (0, n.jsx)(b.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: I.ClockIcon })
+                    : void 0,
             title: (0, n.jsx)(x.E, { variant: "text-md/medium", color: "text-default", children: i }),
             body: (0, n.jsx)(x.E, { variant: "text-sm/medium", color: "text-muted", children: l }),
         }),
@@ -168,7 +170,7 @@ let en = new X.A("PremiumGroupPrice.tsx"),
                                     (0, n.jsx)(o.D, {
                                         variant: a ? "heading-md/semibold" : "heading-sm/semibold",
                                         color: "text-strong",
-                                        children: w.intl.format(er.default.rCpGVA, {
+                                        children: O.intl.format(er.default.rCpGVA, {
                                             discountedPrice: p,
                                             discountInterval: e,
                                         }),
@@ -176,12 +178,12 @@ let en = new X.A("PremiumGroupPrice.tsx"),
                                     (0, n.jsx)(x.E, {
                                         variant: a ? "text-sm/medium" : "text-xs/medium",
                                         color: "text-muted",
-                                        children: w.intl.format(er.default["4b2ByP"], { regularPrice: r }),
+                                        children: O.intl.format(er.default["4b2ByP"], { regularPrice: r }),
                                     }),
                                 ],
                             }),
                             (0, n.jsx)(J.R, {
-                                text: w.intl.formatToPlainString(er.default.GEwdVw, {
+                                text: O.intl.formatToPlainString(er.default.GEwdVw, {
                                     percent: i.discount.amount,
                                     discountOfferAmount: i.discount.amount,
                                 }),
@@ -213,7 +215,7 @@ let en = new X.A("PremiumGroupPrice.tsx"),
                 (0, n.jsx)(o.D, {
                     variant: "heading-md/semibold",
                     color: "text-muted",
-                    children: w.intl.string(er.default["R+dzZw"]),
+                    children: O.intl.string(er.default["R+dzZw"]),
                 }),
                 (0, n.jsx)("hr", { className: et.yF }),
             ],
@@ -260,7 +262,7 @@ function eg(e) {
         N = (0, q.Lj)(f, g),
         v = null != N,
         A = (0, m.q)((0, j.Ay)()),
-        E = u ? w.intl.string(w.t.tUbSDK) : w.intl.string(w.t["t9uG/o"]),
+        E = u ? O.intl.string(O.t.tUbSDK) : O.intl.string(O.t["t9uG/o"]),
         R = (0, n.jsxs)(eh, {
             footer: r,
             children: [
@@ -318,15 +320,15 @@ function ef(e) {
                           (0, n.jsx)(x.E, {
                               variant: a ? "text-sm/semibold" : "text-md/semibold",
                               color: "text-overlay-light",
-                              children: w.intl.format(w.t["TCFNZ/"], { discountedPrice: s }),
+                              children: O.intl.format(O.t["TCFNZ/"], { discountedPrice: s }),
                           }),
                           (0, n.jsx)(x.E, {
                               variant: a ? "text-xs/normal" : "text-sm/normal",
-                              children: w.intl.format(w.t.aUTlph, { regularPrice: o }),
+                              children: O.intl.format(O.t.aUTlph, { regularPrice: o }),
                           }),
                       ],
                   }),
-                  (0, n.jsx)(J.R, { text: w.intl.formatToPlainString(w.t.v5WSns, { percent: r.discount.amount }) }),
+                  (0, n.jsx)(J.R, { text: O.intl.formatToPlainString(O.t.v5WSns, { percent: r.discount.amount }) }),
               ],
           });
 }
@@ -349,18 +351,18 @@ function eN(e) {
         A = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
         E = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
         y = (0, V.V)(),
-        b = y?.subscriptionTrial?.skuId,
-        P = A?.hasActiveTrial ? E?.premiumType : null,
+        P = y?.subscriptionTrial?.skuId,
+        b = A?.hasActiveTrial ? E?.premiumType : null,
         I = A?.planIdFromItems === ee.gD.PREMIUM_YEAR_TIER_2,
         _ = (0, F.O)(),
         M = (0, F.p)(),
         S = (0, R.k5)(),
-        k = null != b || null != P ? ee.Vk.PREMIUM_TRIAL : null != _ || S ? ee.Vk.PREMIUM_DISCOUNT : null,
+        k = null != P || null != b ? ee.Vk.PREMIUM_TRIAL : null != _ || S ? ee.Vk.PREMIUM_DISCOUNT : null,
         G = (0, m.q)((0, j.Ay)()),
         B = null != M && !a,
         D = !a && null != _ && (0, $.hm)(_),
-        O = !a && S && I && k === ee.Vk.PREMIUM_DISCOUNT,
-        L = (0, q.rm)(S, P, a ? null : _, y, b),
+        w = !a && S && I && k === ee.Vk.PREMIUM_DISCOUNT,
+        L = (0, q.rm)(S, b, a ? null : _, y, P),
         H = (0, Y.Sq)() && !a && null == k,
         K = null != r || x ? (0, n.jsxs)(n.Fragment, { children: [r, x && (0, n.jsx)(U, {})] }) : null,
         z = d && !a,
@@ -369,7 +371,7 @@ function eN(e) {
             children: [
                 f &&
                     !B &&
-                    !O &&
+                    !w &&
                     (0, n.jsx)(function () {
                         return (0, n.jsxs)(n.Fragment, {
                             children: [
@@ -399,21 +401,21 @@ function eN(e) {
                         text:
                             L ??
                             (H
-                                ? w.intl.formatToPlainString(w.t["4SEnCZ"], { months: 1 })
-                                : w.intl.string(w.t["6bEcYr"])),
+                                ? O.intl.formatToPlainString(O.t["4SEnCZ"], { months: 1 })
+                                : O.intl.string(O.t["6bEcYr"])),
                         className: eu.pill,
                     }),
                 (0, n.jsx)(o.D, {
                     variant: "display-md",
                     color: G ? "text-strong" : "text-overlay-light",
                     className: eu.cardTitle,
-                    children: w.intl.string(w.t.lG6a5x),
+                    children: O.intl.string(O.t.lG6a5x),
                 }),
                 (0, n.jsx)(ec.A, {
                     isGift: a,
                     premiumTier: ee.PremiumTypes.TIER_2,
                     offerType: k,
-                    offerTierMatchesCard: b === ee.pe.TIER_2 || (0, $.U9)(_, ee.pe.TIER_2),
+                    offerTierMatchesCard: P === ee.pe.TIER_2 || (0, $.U9)(_, ee.pe.TIER_2),
                     showYearlyPrice: t && !D,
                     priceOptions: u,
                     enablePremiumBrandRefresh: !0,
@@ -455,10 +457,10 @@ function ev(e) {
                             variant: "display-md",
                             color: a ? "text-strong" : "text-overlay-light",
                             className: eu.cardTitle,
-                            children: w.intl.string(er.default.eSKiXk),
+                            children: O.intl.string(er.default.eSKiXk),
                         }),
                         (0, n.jsx)(J.R, {
-                            text: w.intl.string(w.t.oW0eUd),
+                            text: O.intl.string(O.t.oW0eUd),
                             className: eu.betaPill,
                             disableGradient: null != c,
                         }),
@@ -516,11 +518,11 @@ function eT(e) {
         a = (0, c.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
         o = null != a && (0, A.Nc)(a),
         m = l
-            ? w.intl.format(er.default["7j70dP"], {
+            ? O.intl.format(er.default["7j70dP"], {
                   percent: i.discount?.amount,
                   premiumGroupProductName: (0, ed.DP)(),
               })
-            : w.intl.string(w.t["2pG5Ga"]),
+            : O.intl.string(O.t["2pG5Ga"]),
         x = (0, n.jsx)(u.$, {
             size: "md",
             fullWidth: !0,
@@ -570,7 +572,7 @@ function eA(e) {
                     variant: "display-md",
                     color: "text-strong",
                     className: eu.premiumCardsHeader,
-                    children: w.intl.string(w.t.vLz3Zs),
+                    children: O.intl.string(O.t.vLz3Zs),
                 }),
                 (0, n.jsxs)("div", {
                     ref: l,

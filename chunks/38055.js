@@ -29,8 +29,8 @@ function A(e) {
                 (0, l.jsx)(a.Dr, {
                     id: "about",
                     label: x.intl.string(x.t.pWLGnF),
-                    leadingAccessory: { type: "icon", icon: o.m },
-                    icon: o.m,
+                    leadingAccessory: { type: "icon", icon: o.CircleInformationIcon },
+                    icon: o.CircleInformationIcon,
                     action: () => {
                         (0, u.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
@@ -48,7 +48,7 @@ function A(e) {
                     id: "hide",
                     label: x.intl.string(x.t.AhNYuY),
                     checked: i,
-                    leadingAccessory: { type: "icon", icon: c.G },
+                    leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
                         (0, f.Il)(), t?.();
                     },
@@ -77,7 +77,7 @@ let C = function () {
                     e.stopPropagation(), t.onClick(e);
                 },
                 style: { width: "12px", height: "12px", display: "flex" },
-                children: (0, l.jsx)(m.Z, { size: "xxs" }),
+                children: (0, l.jsx)(m.SettingsIcon, { size: "xxs" }),
             }),
     });
 };

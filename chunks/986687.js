@@ -99,7 +99,13 @@ function E(e) {
                         className: s()(_.my, _.vk),
                         children: [
                             O,
-                            (0, l.jsx)(C.R, { size: "custom", className: _.QY, width: 20, height: 20, color: "white" }),
+                            (0, l.jsx)(C.PencilIcon, {
+                                size: "custom",
+                                className: _.QY,
+                                width: 20,
+                                height: 20,
+                                color: "white",
+                            }),
                         ],
                     }),
             })
@@ -112,8 +118,8 @@ function E(e) {
                 ],
             });
 }
-var R = a(297264),
-    L = a(702211),
+var L = a(297264),
+    R = a(702211),
     F = a(915614),
     G = a(996988),
     M = a(461273);
@@ -131,8 +137,8 @@ function Y(e) {
         } = e,
         { newestAnalyticsLocation: c } = (0, N.Ay)(),
         m = n || a?.canUsePremiumProfileCustomization || !1,
-        g = m ? C.R : I.t,
-        p = (0, L.b)(m);
+        g = m ? C.PencilIcon : I.t,
+        p = (0, R.b)(m);
     return (0, l.jsx)(F.A, {
         user: i,
         displayProfile: a,
@@ -152,7 +158,7 @@ function Y(e) {
                 className: M.v,
                 children: [
                     (0, l.jsx)(g, { size: "xs", color: "white" }),
-                    (0, l.jsx)(R.D, {
+                    (0, l.jsx)(L.D, {
                         variant: "text-sm/medium",
                         color: "text-overlay-light",
                         children: m || p ? S.intl.string(S.t.N0bC3P) : S.intl.string(S.t.O1sT5v),
@@ -266,8 +272,8 @@ function er(e) {
             pendingPrimaryGuildId: V,
             className: _,
             avatarClassName: z,
-            containerClassName: R,
-            isTryItOut: L = !1,
+            containerClassName: L,
+            isTryItOut: R = !1,
             disabledInputs: F = !1,
             hideCustomStatus: M = !1,
             hideBioSection: Z = !1,
@@ -329,7 +335,7 @@ function er(e) {
                             canUsePremiumCustomization: r,
                             pendingBanner: A,
                             pendingAccentColor: P,
-                            isTryItOut: L,
+                            isTryItOut: R,
                             disabledInputs: F,
                             onUpsellClick: () => n?.({ object: ea.ZSU.EDIT_PROFILE_BANNER }),
                         }),
@@ -344,7 +350,7 @@ function er(e) {
                             previewPrimaryColor: ec,
                             className: z,
                             disabledInputs: F,
-                            isTryItOut: L,
+                            isTryItOut: R,
                             onUpsellClick: () => n?.({ object: ea.ZSU.AVATAR }),
                         }),
                         !M && (0, l.jsx)(y.A, { user: i, themeType: G.d.POPOUT, disableToolbar: F }),
@@ -372,10 +378,10 @@ function er(e) {
             ],
         });
     return J
-        ? (0, l.jsx)("div", { className: s()(el.i1, R), children: em })
+        ? (0, l.jsx)("div", { className: s()(el.i1, L), children: em })
         : (0, l.jsx)("div", {
               role: "img",
-              className: s()(el.i1, R),
+              className: s()(el.i1, L),
               "aria-label": S.intl.string(S.t.ayozFl),
               children: (0, l.jsx)(o.M, { children: em }),
           });

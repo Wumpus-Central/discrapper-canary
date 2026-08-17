@@ -1,4 +1,4 @@
-n.d(t, { E: () => J, A: () => Z }), n(321073);
+n.d(t, { E: () => q, A: () => Z }), n(321073);
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -18,8 +18,8 @@ var l = n(477900),
     x = n(95561),
     E = n(435558),
     S = n.n(E),
-    _ = n(855687),
-    I = n(143413),
+    I = n(855687),
+    _ = n(143413),
     j = n(280450),
     y = n(734057),
     b = n(808728),
@@ -49,8 +49,8 @@ var U = n(363487),
     z = n(314307),
     W = n(936649),
     $ = n(375708),
-    q = n(613431);
-function J(e) {
+    J = n(613431);
+function q(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: c, onClick: d } = e,
         [g, p] = i.useState(!1),
         A = (0, o.A)(c);
@@ -59,19 +59,23 @@ function J(e) {
             null != A && c !== A && (p(!0), setTimeout(() => p(!1), 1e3));
         }, [c, A]),
         (0, l.jsxs)(u.D, {
-            className: a()(t, q.Nr, { [q.so]: c }),
+            className: a()(t, J.Nr, { [J.so]: c }),
             onClick: d,
             children: [
-                s ?? (0, l.jsx)("img", { className: q.Kk, src: n, alt: "" }),
+                s ?? (0, l.jsx)("img", { className: J.Kk, src: n, alt: "" }),
                 (0, l.jsx)(h.E, {
                     color: "text-strong",
-                    className: a()(q.t$, q.MY),
+                    className: a()(J.t$, J.MY),
                     variant: "text-sm/normal",
                     children: r,
                 }),
                 c
-                    ? (0, l.jsx)(m.A, { size: "md", color: "currentColor", className: a()(q.AI, { [q.i0]: g }) })
-                    : (0, l.jsx)(H.A, { className: q.UE, direction: H.A.Directions.RIGHT }),
+                    ? (0, l.jsx)(m.CheckmarkLargeIcon, {
+                          size: "md",
+                          color: "currentColor",
+                          className: a()(J.AI, { [J.i0]: g }),
+                      })
+                    : (0, l.jsx)(H.A, { className: J.UE, direction: H.A.Directions.RIGHT }),
             ],
         })
     );
@@ -102,7 +106,7 @@ function Z(e) {
         } = (0, c.cf)(
             [R.A],
             () => ({
-                canInvite: (0, _.K)(R.A, ei, el),
+                canInvite: (0, I.K)(R.A, ei, el),
                 canManageGuild: null != ei && R.A.can(L.xBc.MANAGE_GUILD, ei),
                 canMessage: null != el && R.A.can(L.xBc.SEND_MESSAGES, el),
                 canCreateChannel: null != ei && R.A.can(L.xBc.MANAGE_CHANNELS, ei),
@@ -133,7 +137,7 @@ function Z(e) {
                 (0, c.bG)([M.A], () =>
                     S().some(t, (e) => {
                         let t = M.A.getMessages(e.id).toArray();
-                        return S().some(t, (e) => e.author.id === m && !(0, I.A)(e));
+                        return S().some(t, (e) => e.author.id === m && !(0, _.A)(e));
                     }),
                 )),
             guildPersonalized:
@@ -240,8 +244,8 @@ function Z(e) {
                     null != ei && (0, w.A)(ei.id, C.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA);
             }, [ei]),
         }),
-        e_ = !(ed || eu || eh || em || eg),
-        { titleAnimatedStyle: eI, opacities: ej } =
+        eI = !(ed || eu || eh || em || eg),
+        { titleAnimatedStyle: e_, opacities: ej } =
             ((ee = (0, f.A)(() => new r.A.Value(0))),
             (et = (0, f.A)(() => new r.A.Value(0))),
             (en = (0, f.A)(() => [
@@ -265,7 +269,7 @@ function Z(e) {
                 ]).start();
             }, [et, ee, en]),
             {
-                titleAnimatedStyle: e_
+                titleAnimatedStyle: eI
                     ? {
                           transform: [
                               { translateY: ee.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
@@ -296,9 +300,9 @@ function Z(e) {
                 (0, l.jsx)(
                     r.A.div,
                     {
-                        className: q.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
-                        children: (0, l.jsx)(J, {
+                        className: J.cW,
+                        style: eI ? { opacity: ej[ev.length] } : {},
+                        children: (0, l.jsx)(q, {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: $.intl.string($.t.q9n0Ta),
                             completed: eu,
@@ -313,9 +317,9 @@ function Z(e) {
                 (0, l.jsx)(
                     r.A.div,
                     {
-                        className: q.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
-                        children: (0, l.jsx)(J, {
+                        className: J.cW,
+                        style: eI ? { opacity: ej[ev.length] } : {},
+                        children: (0, l.jsx)(q, {
                             iconUrl: "/assets/428a003b3c729aa6.svg",
                             header: $.intl.string($.t.c5kxPh),
                             completed: em,
@@ -330,9 +334,9 @@ function Z(e) {
                 (0, l.jsx)(
                     r.A.div,
                     {
-                        className: q.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
-                        children: (0, l.jsx)(J, {
+                        className: J.cW,
+                        style: eI ? { opacity: ej[ev.length] } : {},
+                        children: (0, l.jsx)(q, {
                             iconUrl: "/assets/2ed198e767bd5423.svg",
                             header: $.intl.string($.t["SoP7+l"]),
                             completed: eh,
@@ -347,9 +351,9 @@ function Z(e) {
                 (0, l.jsx)(
                     r.A.div,
                     {
-                        className: q.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
-                        children: (0, l.jsx)(J, {
+                        className: J.cW,
+                        style: eI ? { opacity: ej[ev.length] } : {},
+                        children: (0, l.jsx)(q, {
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             header: $.intl.string($.t.pGVNI9),
                             completed: ed,
@@ -363,9 +367,9 @@ function Z(e) {
             (0, l.jsx)(
                 r.A.div,
                 {
-                    className: q.cW,
-                    style: e_ ? { opacity: ej[ev.length] } : {},
-                    children: (0, l.jsx)(J, {
+                    className: J.cW,
+                    style: eI ? { opacity: ej[ev.length] } : {},
+                    children: (0, l.jsx)(q, {
                         iconUrl: p,
                         header: $.intl.string($.t.IhHDEO),
                         completed: eN,
@@ -381,9 +385,9 @@ function Z(e) {
                 (0, l.jsx)(
                     r.A.div,
                     {
-                        className: q.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
-                        children: (0, l.jsx)(J, {
+                        className: J.cW,
+                        style: eI ? { opacity: ej[ev.length] } : {},
+                        children: (0, l.jsx)(q, {
                             iconUrl:
                                 "https://cdn.discordapp.com/assets/content/bc3217e772906510d881b75ebefea754b9c3ba903ddf6f994e46e5c5a85770a3.svg",
                             header: $.intl.string($.t["6Qbqxw"]),
@@ -400,21 +404,21 @@ function Z(e) {
     return (0, l.jsx)(z.Ay, {
         channelId: el.id,
         children: (0, l.jsx)("div", {
-            className: q.kL,
+            className: J.kL,
             children: (0, l.jsxs)("div", {
-                className: q.vW,
+                className: J.vW,
                 children: [
                     (0, l.jsxs)(r.A.div, {
-                        style: eI,
+                        style: e_,
                         children: [
                             (0, l.jsx)(A.D, {
-                                className: q.ud,
+                                className: J.ud,
                                 variant: "heading-xxl/medium",
                                 children: $.intl.format($.t.rkHVKf, { guildName: ei.name }),
                             }),
                             (0, l.jsxs)(h.E, {
                                 color: "text-default",
-                                className: a()({ [q.VA]: !0, [q.lg]: 0 === ev.length }),
+                                className: a()({ [J.VA]: !0, [J.lg]: 0 === ev.length }),
                                 variant: "text-sm/normal",
                                 children: [eT, " ", ev.length > 0 ? $.intl.format($.t.UOtD32, { guideURL: eM }) : null],
                             }),

@@ -56,7 +56,7 @@ function A(e) {
                         onClick: f ? void 0 : n,
                         children: [
                             (0, i.jsx)(o.E, { variant: "text-md/normal", children: t?.format(A) }),
-                            (0, i.jsx)(d.C, { size: "sm" }),
+                            (0, i.jsx)(d.CalendarIcon, { size: "sm" }),
                         ],
                     }),
             });

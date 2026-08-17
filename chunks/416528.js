@@ -103,7 +103,7 @@ function G(e) {
                 (0, i.jsx)(
                     _.A,
                     {
-                        iconComponent: c.B,
+                        iconComponent: c.PaintPaletteIcon,
                         label: D.intl.string(D.t["ZrN+DT"]),
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {

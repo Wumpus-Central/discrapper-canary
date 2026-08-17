@@ -10,15 +10,15 @@ var e = n(477900),
     x = n(778712),
     u = n(952270),
     m = n(297264),
-    E = n(834730),
-    I = n(192308),
+    I = n(834730),
+    E = n(192308),
     N = n(717398),
     g = n(754302),
     A = n(632738),
     j = n(174459),
     h = n(975571),
-    _ = n(562153),
-    f = n(262797),
+    f = n(562153),
+    _ = n(262797),
     C = n(235627),
     R = n(652215),
     T = n(375708),
@@ -31,7 +31,7 @@ function p() {
             (0, e.jsx)(g.B, {
                 title: T.intl.string(T.t["4ycGE0"]),
                 description: T.intl.string(T.t["5yfN+o"]),
-                icon: c.m,
+                icon: c.CircleInformationIcon,
             }),
         ],
     });
@@ -71,7 +71,7 @@ function v(t) {
                                         src: i.getAvatarURL(void 0, 64),
                                         "aria-hidden": !0,
                                     }),
-                                    (0, e.jsx)("div", { className: O.Kk, children: (0, e.jsx)(u.G, {}) }),
+                                    (0, e.jsx)("div", { className: O.Kk, children: (0, e.jsx)(u.EyeSlashIcon, {}) }),
                                 ],
                             }),
                             (0, e.jsxs)("div", {
@@ -79,9 +79,9 @@ function v(t) {
                                     (0, e.jsx)(m.D, {
                                         variant: "heading-xl/bold",
                                         color: "text-strong",
-                                        children: T.intl.format(T.t["WrQD/Y"], { username: _.Ay.getName(n, a, i) }),
+                                        children: T.intl.format(T.t["WrQD/Y"], { username: f.Ay.getName(n, a, i) }),
                                     }),
-                                    (0, e.jsx)(E.E, {
+                                    (0, e.jsx)(I.E, {
                                         variant: "text-md/medium",
                                         color: "text-default",
                                         children: T.intl.string(T.t.JKL1u1),
@@ -107,9 +107,9 @@ function v(t) {
                                             action: C.p.GOTO_BLOCK,
                                             location: v,
                                         }),
-                                            (0, I.closeAllModals)(),
-                                            (0, I.openModal)((t) =>
-                                                (0, e.jsx)(f.default, {
+                                            (0, E.closeAllModals)(),
+                                            (0, E.openModal)((t) =>
+                                                (0, e.jsx)(_.default, {
                                                     ...t,
                                                     user: i,
                                                     guildId: n,
@@ -122,7 +122,7 @@ function v(t) {
                                     },
                                 }),
                             }),
-                            (0, e.jsx)(E.E, {
+                            (0, e.jsx)(I.E, {
                                 variant: "text-sm/medium",
                                 className: O.FV,
                                 children: T.intl.format(T.t.Hjvqr6, {

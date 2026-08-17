@@ -1,4 +1,4 @@
-s.d(i, { A: () => o });
+s.d(i, { A: () => d });
 var a = s(477900);
 s(582128);
 var e = s(17928),
@@ -7,22 +7,22 @@ var e = s(17928),
     c = s(428678),
     l = s(952270),
     u = s(994500),
-    d = s(597761);
-function o(t) {
-    let { user: i, guildId: s, iconColor: o } = t,
+    o = s(597761);
+function d(t) {
+    let { user: i, guildId: s, iconColor: d } = t,
         m = (0, e.bG)([u.A], () => u.A.isBlocked(i.id));
     return (0, a.jsxs)("div", {
-        className: d.kL,
+        className: o.kL,
         children: [
             (0, a.jsx)(r.eu, {
-                className: d.my,
+                className: o.my,
                 size: n._3.SIZE_56,
                 src: i.getAvatarURL(s, 64),
                 "aria-label": i.username,
             }),
             (0, a.jsx)("div", {
-                className: d.mI,
-                children: m ? (0, a.jsx)(c.K, { color: o }) : (0, a.jsx)(l.G, { color: o }),
+                className: o.mI,
+                children: m ? (0, a.jsx)(c.K, { color: d }) : (0, a.jsx)(l.EyeSlashIcon, { color: d }),
             }),
         ],
     });

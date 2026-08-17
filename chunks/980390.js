@@ -1656,7 +1656,7 @@ function no(e, t) {
                           case tO.uh.DEFAULT_KEYWORD_LIST:
                               return nl.Z;
                       }
-                  })(e) ?? ns.q,
+                  })(e) ?? ns.LinkIcon,
           };
 }
 n(142703);
@@ -3948,7 +3948,7 @@ function lT(e) {
         children: [
             t ?? "-",
             " ",
-            (0, p.jsx)(lx.n, { size: "md", color: "currentColor", className: lf.S9, "aria-hidden": !0 }),
+            (0, p.jsx)(lx.UserIcon, { size: "md", color: "currentColor", className: lf.S9, "aria-hidden": !0 }),
         ],
     });
 }
@@ -4180,7 +4180,7 @@ let lq = lI({
         renderHeader() {
             let e = (0, p.jsx)(tV.m, {
                 text: el.intl.string(el.t.q3PkL5),
-                children: (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: lW.EU }),
+                children: (0, p.jsx)(lL.CircleInformationIcon, { size: "xs", color: "currentColor", className: lW.EU }),
             });
             return (0, p.jsxs)(lC, { children: [el.intl.string(el.t.VodAGZ), e] });
         },
@@ -4249,7 +4249,11 @@ let lq = lI({
                 renderHeader() {
                     let e = (0, p.jsx)(tV.m, {
                         text: el.intl.string(el.t.cIGvZI),
-                        children: (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: lW.Cg }),
+                        children: (0, p.jsx)(lL.CircleInformationIcon, {
+                            size: "xs",
+                            color: "currentColor",
+                            className: lW.Cg,
+                        }),
                     });
                     return (0, p.jsxs)(lC, { children: [el.intl.string(el.t.oypxxw), e] });
                 },
@@ -4361,7 +4365,11 @@ let l3 = function (e) {
                             null != s &&
                                 (0, p.jsx)(tV.m, {
                                     text: s,
-                                    children: (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: l1.F6 }),
+                                    children: (0, p.jsx)(lL.CircleInformationIcon, {
+                                        size: "xs",
+                                        color: "currentColor",
+                                        className: l1.F6,
+                                    }),
                                 }),
                             null != n
                                 ? (0, p.jsx)(G.E, { variant: "text-xs/normal", className: l1.$B, children: n })
@@ -4395,7 +4403,7 @@ function l6(e) {
                     null != s &&
                         (0, p.jsx)(tV.m, {
                             text: s,
-                            children: (0, p.jsx)(lL.m, {
+                            children: (0, p.jsx)(lL.CircleInformationIcon, {
                                 size: "xs",
                                 color: "currentColor",
                                 className: l5.__invalid_labelTooltipIcon,
@@ -5025,21 +5033,21 @@ function sY(e) {
         children: [
             t ?? "-",
             " ",
-            (0, p.jsx)(lx.n, { size: "md", color: "currentColor", className: sw.BK, "aria-hidden": !0 }),
+            (0, p.jsx)(lx.UserIcon, { size: "md", color: "currentColor", className: sw.BK, "aria-hidden": !0 }),
         ],
     });
 }
 function sW() {
     let e = (0, p.jsx)(tV.m, {
         text: el.intl.string(el.t.q3PkL5),
-        children: (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: sw.EU }),
+        children: (0, p.jsx)(lL.CircleInformationIcon, { size: "xs", color: "currentColor", className: sw.EU }),
     });
     return (0, p.jsxs)(p.Fragment, { children: [el.intl.string(el.t["/MWnxs"]), " ", e] });
 }
 function sK() {
     let e = (0, p.jsx)(tV.m, {
         text: el.intl.string(el.t.cIGvZI),
-        children: (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: sw.Cg }),
+        children: (0, p.jsx)(lL.CircleInformationIcon, { size: "xs", color: "currentColor", className: sw.Cg }),
     });
     return (0, p.jsxs)(p.Fragment, { children: [el.intl.string(el.t.oypxxw), " ", e] });
 }
@@ -5367,7 +5375,7 @@ function s2(e) {
                                           children: [
                                               a.subscribers ?? "-",
                                               " ",
-                                              (0, p.jsx)(lx.n, {
+                                              (0, p.jsx)(lx.UserIcon, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: s$.D9,
@@ -6179,7 +6187,7 @@ function rH(e) {
                 onClick: () => {
                     a(), d();
                 },
-                icon: v.u,
+                icon: v.TrashIcon,
             }),
         j.push({
             text: null == n ? el.intl.string(el.t.OYkgVk) : el.intl.string(el.t["R3BPH+"]),
@@ -6365,7 +6373,11 @@ function r$(e) {
                             onClick: d,
                             "aria-label": el.intl.string(el.t.Eoo8h6),
                             "aria-disabled": u,
-                            children: (0, p.jsx)(rt.R, { size: "xs", color: "currentColor", className: rZ.a2 }),
+                            children: (0, p.jsx)(rt.PencilIcon, {
+                                size: "xs",
+                                color: "currentColor",
+                                className: rZ.a2,
+                            }),
                         }),
                 }),
             ],
@@ -6520,7 +6532,7 @@ function r7(e) {
                 className: r9.G5,
                 children: (0, p.jsx)(r5.K, {
                     variant: "secondary",
-                    icon: v.u,
+                    icon: v.TrashIcon,
                     onClick: () => n(t),
                     "aria-label": el.intl.string(el.t.dVS92c),
                     disabled: i,
@@ -6849,7 +6861,7 @@ function ap(e) {
     }
     let d = t === ei.TGz,
         c = d ? s : t,
-        u = (0, p.jsx)(ag.A, { size: "custom", width: 32, height: 24, color: aN(t) }),
+        u = (0, p.jsx)(ag.CheckmarkLargeIcon, { size: "custom", width: 32, height: 24, color: aN(t) }),
         { ref: m, ...g } = (0, am._u)({ orientation: "horizontal", isDisabled: i }),
         x = (0, am.Gx)({ isSelected: d, label: el.intl.formatToPlainString(el.t.ZC69mL, { colorHex: ei.TpD }) }),
         h = (0, am.Gx)({
@@ -7225,7 +7237,11 @@ function aD(e) {
                                   return x(!0);
                               },
                               "aria-label": el.intl.string(el.t["2qPbmO"]),
-                              children: (0, p.jsx)(rt.R, { size: "xs", color: "currentColor", className: aG.rD }),
+                              children: (0, p.jsx)(rt.PencilIcon, {
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: aG.rD,
+                              }),
                           }),
                 ],
             }),
@@ -7624,7 +7640,7 @@ function oa(e) {
                                   children: (0, p.jsx)(r5.K, {
                                       size: "sm",
                                       variant: "secondary",
-                                      icon: rt.R,
+                                      icon: rt.PencilIcon,
                                       onClick: () => i(n, t),
                                       "aria-label": el.intl.string(el.t.FOYn8U),
                                   }),
@@ -7635,7 +7651,7 @@ function oa(e) {
                             children: (0, p.jsx)(r5.K, {
                                 size: "sm",
                                 variant: "critical-secondary",
-                                icon: v.u,
+                                icon: v.TrashIcon,
                                 onClick: function () {
                                     (0, aH.ak)(t, n.id).catch((e) => {
                                         let { status: t } = e;
@@ -9142,7 +9158,7 @@ function dl(e) {
                 children: (0, p.jsx)(V.d, {
                     label: el.intl.string(el.t.hJsAPo),
                     description: el.intl.string(el.t.hn65ET),
-                    icon: lx.n,
+                    icon: lx.UserIcon,
                     checked: g,
                     onChange: (e) => x(e),
                     disabled: A,
@@ -10083,7 +10099,13 @@ let ca = function (e) {
                       text: r,
                       position: "top",
                       "aria-label": "string" == typeof r ? r : t,
-                      children: (e) => (0, p.jsx)(lL.m, { size: "xs", color: "currentColor", className: cr.G, ...e }),
+                      children: (e) =>
+                          (0, p.jsx)(lL.CircleInformationIcon, {
+                              size: "xs",
+                              color: "currentColor",
+                              className: cr.G,
+                              ...e,
+                          }),
                   })
                 : null;
     return (0, p.jsxs)("div", {
@@ -10483,7 +10505,7 @@ let cv = (e) => {
                                                 role: "img",
                                                 "aria-label": el.intl.string(el.t.kPJlTh),
                                                 className: cp.BP,
-                                                children: (0, p.jsx)(lL.m, {
+                                                children: (0, p.jsx)(lL.CircleInformationIcon, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                     className: cp.G,
@@ -10494,7 +10516,7 @@ let cv = (e) => {
                                 }),
                             },
                             {
-                                icon: lL.m,
+                                icon: lL.CircleInformationIcon,
                                 color: ed.A.unsafe_rawColors.RED_360.css,
                                 header: el.intl.string(el.t.W2kLJC),
                                 body: el.intl.string(el.t.hyNkHz),
@@ -11006,14 +11028,14 @@ function cw(e) {
         className: k()(t, cP.TV),
         children: [
             n
-                ? (0, p.jsx)(ag.A, {
+                ? (0, p.jsx)(ag.CheckmarkLargeIcon, {
                       size: "custom",
                       color: "currentColor",
                       width: 24,
                       height: 24,
                       className: k()(cP.nu, { [cP.i0]: r }),
                   })
-                : (0, p.jsx)(rt.R, {
+                : (0, p.jsx)(rt.PencilIcon, {
                       size: "custom",
                       color: "currentColor",
                       width: 24,
@@ -11155,7 +11177,7 @@ function cV(e) {
                 }),
                 (0, p.jsx)(r5.K, {
                     variant: "icon-only",
-                    icon: v.u,
+                    icon: v.TrashIcon,
                     "aria-label": el.intl.string(el.t.JYBc3K),
                     onClick: h,
                 }),
@@ -12128,7 +12150,7 @@ function c7() {
                                                                                       leading: u,
                                                                                       trailing: s
                                                                                           ? {
-                                                                                                icon: v.u,
+                                                                                                icon: v.TrashIcon,
                                                                                                 "aria-label":
                                                                                                     el.intl.string(
                                                                                                         el.t.N86XcP,
@@ -13251,7 +13273,7 @@ let u7 = R.memo(function () {
                                           size: "sm",
                                           variant: "secondary",
                                           text: el.intl.string(el.t.zA9d1J),
-                                          icon: uK.X,
+                                          icon: uK.LockIcon,
                                           onClick: ei.tEg,
                                       }),
                             }),
@@ -13374,7 +13396,7 @@ function mr(e) {
                         (0, p.jsxs)("div", {
                             className: ms.n,
                             children: [
-                                (0, p.jsx)(lL.m, {
+                                (0, p.jsx)(lL.CircleInformationIcon, {
                                     size: "sm",
                                     color: ed.A.colors.WHITE.css,
                                     secondaryColor: ed.A.colors.BACKGROUND_MOD_MUTED.css,
@@ -13390,7 +13412,7 @@ function mr(e) {
                         (0, p.jsxs)("div", {
                             className: ms.n,
                             children: [
-                                (0, p.jsx)(lL.m, {
+                                (0, p.jsx)(lL.CircleInformationIcon, {
                                     size: "sm",
                                     color: ed.A.colors.WHITE.css,
                                     secondaryColor: ed.A.colors.BACKGROUND_MOD_MUTED.css,
@@ -13756,7 +13778,7 @@ function mv(e) {
                               className: mS.ut,
                               children: (0, p.jsx)(r5.K, {
                                   size: "sm",
-                                  icon: v.u,
+                                  icon: v.TrashIcon,
                                   variant: "icon-only",
                                   onClick: () => (0, uU.ME)(t, n.id),
                                   "aria-label": el.intl.string(el.t["Ku+86R"]),
@@ -13855,7 +13877,7 @@ function mv(e) {
                                       className: mS.ut,
                                       children: (0, p.jsx)(r5.K, {
                                           size: "sm",
-                                          icon: v.u,
+                                          icon: v.TrashIcon,
                                           variant: "icon-only",
                                           onClick: () => (0, uU.ME)(t, n.id),
                                           "aria-label": el.intl.string(el.t["Ku+86R"]),
@@ -14173,7 +14195,7 @@ function mD(e) {
                               size: "sm",
                               variant: "secondary",
                               text: el.intl.string(el.t.zA9d1J),
-                              icon: uK.X,
+                              icon: uK.LockIcon,
                               iconPosition: "start",
                               onClick: () => l(t.id),
                           }),
@@ -14229,7 +14251,11 @@ function mO(e) {
                               className: mL.AC,
                               onClick: () => d(!0),
                               children: [
-                                  (0, p.jsx)(ag.A, { size: "xxs", color: "currentColor", className: mL.AI }),
+                                  (0, p.jsx)(ag.CheckmarkLargeIcon, {
+                                      size: "xxs",
+                                      color: "currentColor",
+                                      className: mL.AI,
+                                  }),
                                   (0, p.jsx)(G.E, {
                                       className: mL.fx,
                                       variant: "text-xs/medium",
@@ -14497,7 +14523,7 @@ let mB = function (e) {
                         (0, p.jsx)(tV.m, {
                             text: el.intl.string(el.t.bt75uw),
                             children: (0, p.jsx)(r5.K, {
-                                icon: rt.R,
+                                icon: rt.PencilIcon,
                                 size: "sm",
                                 variant: "primary",
                                 onClick: _,
@@ -14919,7 +14945,7 @@ let m0 = function (e) {
                               (0, p.jsx)(tV.m, {
                                   text: el.intl.string(el.t.bt75uw),
                                   children: (0, p.jsx)(r5.K, {
-                                      icon: rt.R,
+                                      icon: rt.PencilIcon,
                                       size: "sm",
                                       variant: "primary",
                                       onClick: I,
@@ -15061,7 +15087,11 @@ let m0 = function (e) {
                                           className: mF.iC,
                                           onClick: a,
                                           children: [
-                                              (0, p.jsx)(ag.A, { size: "md", color: "currentColor", className: mF.An }),
+                                              (0, p.jsx)(ag.CheckmarkLargeIcon, {
+                                                  size: "md",
+                                                  color: "currentColor",
+                                                  className: mF.An,
+                                              }),
                                               (0, p.jsx)(G.E, {
                                                   variant: "text-xs/semibold",
                                                   color: "text-brand",
@@ -15116,7 +15146,7 @@ let m8 = { authorIds: [], message: "" },
                           children: (0, p.jsxs)("div", {
                               className: k()(mF.Md, mF.Tu),
                               children: [
-                                  (0, p.jsx)(rt.R, { size: "md", color: "currentColor" }),
+                                  (0, p.jsx)(rt.PencilIcon, { size: "md", color: "currentColor" }),
                                   (0, p.jsx)(mn.A, { children: el.intl.string(el.t.bt75uw) }),
                               ],
                           }),
@@ -15337,7 +15367,12 @@ function gr(e) {
                         children:
                             null != f.icon
                                 ? (0, p.jsx)("img", { src: f.icon, alt: "", width: 40, height: 40 })
-                                : (0, p.jsx)(gi._, { size: "custom", width: 40, height: 40, color: "currentColor" }),
+                                : (0, p.jsx)(gi.GameControllerIcon, {
+                                      size: "custom",
+                                      width: 40,
+                                      height: 40,
+                                      color: "currentColor",
+                                  }),
                     }),
                     (0, p.jsxs)("div", {
                         className: gs.P_,
@@ -15364,7 +15399,7 @@ function gr(e) {
                             className: gs.r9,
                             onClick: x,
                             "aria-label": el.intl.string(el.t.bt75uw),
-                            children: (0, p.jsx)(rt.R, { size: "xs", color: "currentColor" }),
+                            children: (0, p.jsx)(rt.PencilIcon, { size: "xs", color: "currentColor" }),
                         }),
                     }),
                     (0, p.jsx)(tV.m, {
@@ -15373,7 +15408,7 @@ function gr(e) {
                             className: gs.DT,
                             onClick: g,
                             "aria-label": el.intl.string(el.t.N86XcP),
-                            children: (0, p.jsx)(v.u, { size: "xs", color: "currentColor" }),
+                            children: (0, p.jsx)(v.TrashIcon, { size: "xs", color: "currentColor" }),
                         }),
                     }),
                 ],
@@ -15536,7 +15571,7 @@ function gj(e) {
         case "good":
             t = (0, p.jsxs)(p.Fragment, {
                 children: [
-                    (0, p.jsx)(ag.A, { size: "xs", color: "currentColor", className: gE.AI }),
+                    (0, p.jsx)(ag.CheckmarkLargeIcon, { size: "xs", color: "currentColor", className: gE.AI }),
                     (0, p.jsx)(G.E, {
                         variant: "text-xs/semibold",
                         color: "status-positive",
@@ -15733,7 +15768,7 @@ function gS(e) {
     return (0, p.jsx)(gj, {
         title: el.intl.string(el.t.oL60eW),
         description: o,
-        icon: (0, p.jsx)(ns.q, { size: "md", color: "currentColor", className: gE.p }),
+        icon: (0, p.jsx)(ns.LinkIcon, { size: "md", color: "currentColor", className: gE.p }),
         hasStarted: r,
         status: a,
         onEdit: n,
@@ -17633,7 +17668,7 @@ function x_(e) {
                                   });
                               },
                               "aria-label": el.intl.string(el.t.PdRCRg),
-                              children: (0, p.jsx)(xj.j, { size: "md", color: "currentColor" }),
+                              children: (0, p.jsx)(xj.MoreHorizontalIcon, { size: "md", color: "currentColor" }),
                           })
                         : null,
                 ],
@@ -18912,7 +18947,7 @@ function hO(e) {
         text: n,
         children: (0, p.jsx)("div", {
             className: t,
-            children: (0, p.jsx)(uK.X, { size: "custom", color: "currentColor", width: i, height: l }),
+            children: (0, p.jsx)(uK.LockIcon, { size: "custom", color: "currentColor", width: i, height: l }),
         }),
     });
 }
@@ -19655,7 +19690,7 @@ function h6(e) {
                     },
                     children: [
                         (0, p.jsx)(G.E, { variant: "text-md/normal", color: "none", children: a }),
-                        (0, p.jsx)(lx.n, {
+                        (0, p.jsx)(lx.UserIcon, {
                             size: "custom",
                             color: "currentColor",
                             className: h0.MV,
@@ -19673,7 +19708,7 @@ function h6(e) {
                         children: (0, p.jsx)(r5.K, {
                             variant: "secondary",
                             "aria-label": j ? el.intl.string(el.t["HO/oXl"]) : el.intl.string(el.t.bt75uw),
-                            icon: j ? hq.b : rt.R,
+                            icon: j ? hq.EyeIcon : rt.PencilIcon,
                             onClick: L,
                         }),
                     }),
@@ -19683,7 +19718,7 @@ function h6(e) {
                         children: (0, p.jsx)(r5.K, {
                             variant: "secondary",
                             "aria-label": el.intl.string(el.t["UKOtz+"]),
-                            icon: xj.j,
+                            icon: xj.MoreHorizontalIcon,
                             onClick: b,
                             disabled: !y,
                         }),
@@ -20993,7 +21028,12 @@ function jx(e) {
             children: [
                 (0, p.jsx)("span", {
                     className: jm.z1,
-                    children: (0, p.jsx)(jo.B, { size: "custom", width: 20, height: 20, className: jm.$k }),
+                    children: (0, p.jsx)(jo.PaintPaletteIcon, {
+                        size: "custom",
+                        width: 20,
+                        height: 20,
+                        className: jm.$k,
+                    }),
                 }),
                 t && (0, p.jsx)(jd.wH, { className: jm.$R, testId: "selected-indicator" }),
             ],
@@ -21582,7 +21622,7 @@ function jq(e) {
         children: [
             E
                 ? (0, p.jsx)(rS.A, { emojiId: c, emojiName: u, className: jB.Zg })
-                : (0, p.jsx)(j_.x, { size: "md", color: "currentColor", className: jB.Zg }),
+                : (0, p.jsx)(j_.ImageIcon, { size: "md", color: "currentColor", className: jB.Zg }),
             (0, p.jsx)(eM.D, {
                 onClick: () => {
                     j || l(t);
@@ -21633,7 +21673,11 @@ function jq(e) {
                                       });
                               },
                               "aria-label": el.intl.string(el.t.bt75uw),
-                              children: (0, p.jsx)(rt.R, { size: "xs", color: "currentColor", className: jB.J4 }),
+                              children: (0, p.jsx)(rt.PencilIcon, {
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: jB.J4,
+                              }),
                           }),
                           (0, p.jsx)(eM.D, {
                               className: jB.QR,
@@ -21734,7 +21778,7 @@ let fe = function (e) {
                                               });
                                           },
                                           "aria-label": el.intl.string(el.t.bt75uw),
-                                          children: (0, p.jsx)(rt.R, {
+                                          children: (0, p.jsx)(rt.PencilIcon, {
                                               size: "xs",
                                               color: "currentColor",
                                               className: j8.Kk,
@@ -21856,7 +21900,13 @@ class fc extends R.Component {
                         children: (0, p.jsx)(e0.animated.div, {
                             className: i,
                             style: { top: u, transform: t.scale.interpolate((e) => `scale(${e})`) },
-                            children: g && (0, p.jsx)(ag.A, { size: "md", color: "currentColor", className: fs.zw }),
+                            children:
+                                g &&
+                                (0, p.jsx)(ag.CheckmarkLargeIcon, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: fs.zw,
+                                }),
                         }),
                     }),
             },
@@ -22608,7 +22658,7 @@ function fz(e) {
                 variant: "text-md/normal",
                 children: el.intl.format(el.t.t2Wbo1, { required: t, decorator: "" }),
             }),
-            (0, p.jsx)(uK.X, { size: "md", color: "currentColor", className: fx.Qe }),
+            (0, p.jsx)(uK.LockIcon, { size: "md", color: "currentColor", className: fx.Qe }),
         ],
     });
 }
@@ -23351,7 +23401,7 @@ function NE(e) {
                 (0, p.jsx)(Nl.J, { badge: t, width: 32, height: 32 }),
                 (0, p.jsx)("div", {
                     className: Ns.i0,
-                    children: (0, p.jsx)(Na.f, { size: "custom", width: 12, height: 12 }),
+                    children: (0, p.jsx)(Na.RefreshIcon, { size: "custom", width: 12, height: 12 }),
                 }),
             ],
         }),
@@ -25973,7 +26023,7 @@ function AM(e) {
                     id: AD.J.INVITE,
                     title: el.intl.string(el.t["HQVS/L"]),
                     body: el.intl.string(el.t.KzXzFa),
-                    icon: uK.X,
+                    icon: uK.LockIcon,
                     enabled: !e,
                     ineligibleText: el.intl.string(el.t.LIZgwJ),
                 },
@@ -25989,7 +26039,7 @@ function AM(e) {
                     id: AD.J.DISCOVERABLE,
                     title: el.intl.string(el.t.lhOHL3),
                     body: el.intl.string(el.t.pqQylS),
-                    icon: AG.L,
+                    icon: AG.GlobeEarthIcon,
                     enabled: n,
                     ineligibleText: l ? el.intl.string(el.t.iBpXPg) : el.intl.string(el.t["5TQ+eE"]),
                 },
@@ -26616,7 +26666,13 @@ function A6(e) {
                     children: [
                         c,
                         (0, p.jsx)("div", { className: A3.Lw }),
-                        (0, p.jsx)(rt.R, { size: "custom", className: A3.QY, width: 20, height: 20, color: "white" }),
+                        (0, p.jsx)(rt.PencilIcon, {
+                            size: "custom",
+                            className: A3.QY,
+                            width: 20,
+                            height: 20,
+                            color: "white",
+                        }),
                         (0, p.jsx)(EP.Ay, {
                             ref: r,
                             multiple: !1,
@@ -27645,7 +27701,7 @@ let { getSectionDefinition: IO } = {
                         },
                         label: el.intl.string(el.t.l3hWP6),
                         ariaLabel: el.intl.string(el.t.l3hWP6),
-                        icon: (0, p.jsx)(v.u, { size: "xs", color: "currentColor" }),
+                        icon: (0, p.jsx)(v.TrashIcon, { size: "xs", color: "currentColor" }),
                         variant: "destructive",
                         predicate: () => t.isOwnerWithRequiredMfaLevel,
                     };

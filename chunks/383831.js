@@ -18,7 +18,7 @@ function c(e) {
         onClick: function () {
             (0, l.X)(_, l.O.LEAVE_ACTIVITY), a.A.leaveActivity({ location: t, applicationId: n, showFeedback: !0 });
         },
-        iconComponent: r.o,
+        iconComponent: r.DoorExitIcon,
         label: d.intl.string(d.t["R/FK4A"]),
     });
 }

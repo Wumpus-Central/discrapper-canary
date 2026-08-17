@@ -1,5 +1,5 @@
-r.d(t, { A: () => _, V: () => M });
-var n,
+r.d(n, { A: () => _, V: () => M });
+var t,
     i = r(477900);
 r(582128);
 var s = r(349288),
@@ -17,7 +17,7 @@ var s = r(349288),
     A = r(418208),
     v = r(652215),
     T = r(375708);
-function m() {
+function g() {
     return (0, f.yM)()
         ? T.intl.format(T.t.iWGjcg, {
               hook: (e) =>
@@ -44,41 +44,41 @@ function m() {
                   }),
           });
 }
-function g(e) {
-    let { className: t } = e,
+function m(e) {
+    let { className: n } = e,
         r = (0, f.yM)();
     return (0, i.jsx)("div", {
-        className: t,
-        children: (0, i.jsx)(l.w, { type: r ? "info" : "warning", children: (0, i.jsx)(m, {}) }),
+        className: n,
+        children: (0, i.jsx)(l.w, { type: r ? "info" : "warning", children: (0, i.jsx)(g, {}) }),
     });
 }
 function y(e) {
-    let { className: t } = e,
+    let { className: n } = e,
         r = (0, f.yM)();
     return (0, i.jsx)("div", {
-        className: t,
+        className: n,
         children: (0, i.jsxs)(a.B, {
             direction: "horizontal",
             gap: 4,
             align: "center",
             children: [
                 r
-                    ? (0, i.jsx)(o.m, { size: "refresh_sm", color: "var(--text-default)" })
-                    : (0, i.jsx)(c.i, { size: "refresh_sm", color: "var(--text-default)" }),
-                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(m, {}) }),
+                    ? (0, i.jsx)(o.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
+                    : (0, i.jsx)(c.WarningIcon, { size: "refresh_sm", color: "var(--text-default)" }),
+                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(g, {}) }),
             ],
         }),
     });
 }
-var M = (((n = {})[(n.TOP = 0)] = "TOP"), (n[(n.BOTTOM = 1)] = "BOTTOM"), n);
+var M = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
 function _(e) {
-    let { className: t, noBackground: r, divider: n, channelId: s } = e;
+    let { className: n, noBackground: r, divider: t, channelId: s } = e;
     if (!(0, A.Vv)(s ?? void 0)) return null;
-    let l = Array.isArray(n) ? n : null != n ? [n] : [];
+    let l = Array.isArray(t) ? t : null != t ? [t] : [];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             l.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
-            (0, i.jsx)("div", { className: t, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(g, {}) }),
+            (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(m, {}) }),
             l?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
         ],
     });

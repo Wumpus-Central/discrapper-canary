@@ -31,7 +31,7 @@ function p(e) {
             return "";
     }
 }
-function V(e) {
+function v(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i } = e,
         C = i.raidDetectedAt ?? i.dmSpamDetectedAt;
     return (0, n.jsxs)("div", {
@@ -40,7 +40,7 @@ function V(e) {
             (0, n.jsxs)("div", {
                 className: j.iD,
                 children: [
-                    (0, n.jsx)(r.l, { size: "md", className: j.F_, color: a.A.unsafe_rawColors.RED_345.css }),
+                    (0, n.jsx)(r.ShieldIcon, { size: "md", className: j.F_, color: a.A.unsafe_rawColors.RED_345.css }),
                     (0, n.jsxs)("div", {
                         className: j.Tm,
                         children: [
@@ -76,7 +76,7 @@ function V(e) {
         ],
     });
 }
-function v(e) {
+function V(e) {
     let { onHandleEnableLockdown: t, incidentData: l, guildName: i } = e;
     return (0, n.jsxs)("div", {
         className: j.hD,
@@ -84,7 +84,11 @@ function v(e) {
             (0, n.jsxs)("div", {
                 className: j.iD,
                 children: [
-                    (0, n.jsx)(r.l, { size: "md", className: j.F_, color: a.A.unsafe_rawColors.BRAND_360.css }),
+                    (0, n.jsx)(r.ShieldIcon, {
+                        size: "md",
+                        className: j.F_,
+                        color: a.A.unsafe_rawColors.BRAND_360.css,
+                    }),
                     (0, n.jsxs)("div", {
                         className: j.Tm,
                         children: [
@@ -111,7 +115,11 @@ function A(e) {
             (0, n.jsxs)("div", {
                 className: j.iD,
                 children: [
-                    (0, n.jsx)(r.l, { size: "md", className: j.F_, color: a.A.unsafe_rawColors.BRAND_360.css }),
+                    (0, n.jsx)(r.ShieldIcon, {
+                        size: "md",
+                        className: j.F_,
+                        color: a.A.unsafe_rawColors.BRAND_360.css,
+                    }),
                     (0, n.jsxs)("div", {
                         className: j.Tm,
                         children: [
@@ -163,9 +171,9 @@ function M(e) {
     if (null == t || null == l) return null;
     switch (o) {
         case 1:
-            return (0, n.jsx)(V, { onHandleEnableLockdown: r, onHandleReportFalseAlarm: d, incidentData: l });
+            return (0, n.jsx)(v, { onHandleEnableLockdown: r, onHandleReportFalseAlarm: d, incidentData: l });
         case 2:
-            return (0, n.jsx)(v, { onHandleEnableLockdown: r, incidentData: l, guildName: t.name });
+            return (0, n.jsx)(V, { onHandleEnableLockdown: r, incidentData: l, guildName: t.name });
         case 3:
             return (0, n.jsx)(A, {
                 onHandleEnableLockdown: r,

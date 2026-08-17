@@ -5,8 +5,8 @@ var s,
     a = n(503698),
     r = n.n(a),
     o = n(17928),
-    u = n(554146),
-    c = n(459192),
+    c = n(554146),
+    u = n(459192),
     d = n(815021),
     m = n(821609),
     h = n(834730),
@@ -27,12 +27,12 @@ var s,
     b = n(792656),
     k = n(757036),
     y = n(400669),
-    R = n(973654),
-    O = n(363195),
-    I = n(780964),
+    I = n(973654),
+    R = n(363195),
+    O = n(780964),
     H = n(843010),
-    J = n(766075),
-    D = n(909536),
+    D = n(766075),
+    J = n(909536),
     U = n(174459),
     L = n(467135),
     P = n(823459),
@@ -52,11 +52,11 @@ function z(e) {
             null != t.backgroundGradientPresetId &&
             t.backgroundGradientPresetId in K.ag &&
             K.ag[t.backgroundGradientPresetId].theme !== e;
-    (0, R.GQ)(e), n && (0, P.S8)();
+    (0, I.GQ)(e), n && (0, P.S8)();
 }
 function Q() {
-    let e = X(O.A.theme);
-    e !== O.A.theme && z(e);
+    let e = X(R.A.theme);
+    e !== R.A.theme && z(e);
 }
 function Y(e, t, n) {
     0 === e.length && n([t]), Q();
@@ -88,8 +88,8 @@ var q = n(738419),
     ea = n(939249),
     er = n(834040),
     eo = n(499373),
-    eu = n(971745),
-    ec = n(693227),
+    ec = n(971745),
+    eu = n(693227),
     ed = n(375708),
     em = n(946979);
 let eh = (0, et.Fe)({
@@ -113,18 +113,18 @@ function ex(e) {
         style: o,
         children: t.map((e, t) => {
             let o = a[t],
-                u = t === n;
+                c = t === n;
             return (0, l.jsxs)(
                 i.Fragment,
                 {
                     children: [
                         (0, l.jsx)(ea.D, {
-                            className: r()(em.pX, { [em.wH]: u }),
+                            className: r()(em.pX, { [em.wH]: c }),
                             style: { left: `${o}%`, backgroundColor: e },
                             onClick: () => s(t),
                             children: (0, l.jsx)("div", { className: em.Px }),
                         }),
-                        u && (0, l.jsx)("div", { className: em.gQ, style: { left: `${o}%` } }),
+                        c && (0, l.jsx)("div", { className: em.gQ, style: { left: `${o}%` } }),
                     ],
                 },
                 t,
@@ -139,31 +139,31 @@ function eg(e) {
 }
 function ef(e) {
     let { value: t, onChange: n, className: s, colors: a, setColors: o } = e,
-        u = (0, eu.A)(),
-        [c, d] = i.useState(0),
+        c = (0, ec.A)(),
+        [u, d] = i.useState(0),
         [h, g] = i.useState(t);
     function f(e) {
         let t,
             s = (t = e.trim()).startsWith("#") ? t : t.length > 0 ? `#${t}` : t;
         if ((g(s), (0, en.qt)(s) && ((0, q.CE)(), n(s), a.length > 0))) {
             let e = [...a];
-            (e[c] = s), o(e);
+            (e[u] = s), o(e);
         }
     }
     i.useEffect(() => {
-        if (a.length > 0 && c < a.length) {
-            let e = a[c];
+        if (a.length > 0 && u < a.length) {
+            let e = a[u];
             (0, en.qt)(e) && (g(e), n(e));
         }
-        c >= a.length && d(0);
-    }, [c, a, n]);
+        u >= a.length && d(0);
+    }, [u, a, n]);
     let T = i.useCallback((e) => {
         g(e.hex);
     }, []);
     async function E() {
-        if (null != u)
+        if (null != c)
             try {
-                let { sRGBHex: e } = await u.open();
+                let { sRGBHex: e } = await c.open();
                 (0, q.AL)(), f(e);
             } catch {}
     }
@@ -174,7 +174,7 @@ function ef(e) {
             j &&
                 (0, l.jsx)(ex, {
                     colors: a,
-                    selectedIndex: c,
+                    selectedIndex: u,
                     onColorSelect: function (e) {
                         d(e), (0, q.mx)();
                     },
@@ -184,7 +184,7 @@ function ef(e) {
                 onChangeComplete: function (e) {
                     if (((0, q.VE)(), n(e.hex), a.length > 0)) {
                         let t = [...a];
-                        (t[c] = e.hex), o(t);
+                        (t[u] = e.hex), o(t);
                     }
                 },
                 color: h,
@@ -204,15 +204,15 @@ function ef(e) {
                     (0, l.jsxs)("div", {
                         className: em.hE,
                         children: [
-                            null != u &&
+                            null != c &&
                                 (0, l.jsx)(x.m, {
-                                    text: ed.intl.string(ec.default["NCFz+N"]),
+                                    text: ed.intl.string(eu.default["NCFz+N"]),
                                     children: (0, l.jsx)(el.K, {
                                         variant: "icon-only",
                                         size: "sm",
                                         onClick: E,
                                         icon: es.d,
-                                        "aria-label": ed.intl.string(ec.default["NCFz+N"]),
+                                        "aria-label": ed.intl.string(eu.default["NCFz+N"]),
                                     }),
                                 }),
                             j &&
@@ -226,10 +226,10 @@ function ef(e) {
                                                 if (a.length > 1) {
                                                     (0, q.f1)();
                                                     let t = a.filter((t, n) => n !== e);
-                                                    o(t), c >= t.length ? d(t.length - 1) : c > e && d(c - 1);
+                                                    o(t), u >= t.length ? d(t.length - 1) : u > e && d(u - 1);
                                                 }
-                                            })(c),
-                                        icon: er.Q,
+                                            })(u),
+                                        icon: er.MinusIcon,
                                         "aria-label": ed.intl.string(ed.t.N86XcP),
                                     }),
                                 }),
@@ -257,7 +257,7 @@ function ef(e) {
                         o(n), d(n.length - 1);
                     },
                     icon: eo.T,
-                    text: ed.intl.string(ec.default.JUQcdT),
+                    text: ed.intl.string(eu.default.JUQcdT),
                     fullWidth: !0,
                 }),
         ],
@@ -270,8 +270,8 @@ function eS() {
     return (0, l.jsx)(x.m, {
         text: ed.intl.string(ed.t.RDE0Sc),
         children: (0, l.jsx)(el.K, {
-            "aria-label": ed.intl.string(ec.default.zgFs8C),
-            icon: eE.l,
+            "aria-label": ed.intl.string(eu.default.zgFs8C),
+            icon: eE.ShareIcon,
             variant: "icon-only",
             onClick: () => {
                 (0, eT.openModalLazy)(
@@ -480,8 +480,8 @@ function eS() {
                             n.e("290191"),
                             n.e("844780"),
                             n.e("236946"),
-                            n.e("565617"),
                             n.e("692639"),
+                            n.e("565617"),
                             n.e("890480"),
                             n.e("440963"),
                             n.e("766031"),
@@ -508,7 +508,7 @@ function eM(e, t) {
     return e === t ? eN.HE : void 0;
 }
 function e_() {
-    let e = (0, o.bG)([O.A], () => O.A.theme),
+    let e = (0, o.bG)([R.A], () => R.A.theme),
         t = (0, ep.M)(e) ? W.NJ.DARK : W.NJ.LIGHT,
         n = [
             {
@@ -516,16 +516,16 @@ function e_() {
                 value: W.NJ.DARK,
                 icon: eA.Z,
                 className: eM(t, W.NJ.DARK),
-                tooltip: ed.intl.string(ec.default["Dk+OWY"]),
-                tooltipAriaLabel: ed.intl.string(ec.default["Dk+OWY"]),
+                tooltip: ed.intl.string(eu.default["Dk+OWY"]),
+                tooltipAriaLabel: ed.intl.string(eu.default["Dk+OWY"]),
             },
             {
                 name: "",
                 value: W.NJ.LIGHT,
                 icon: eC.F,
                 className: eM(t, W.NJ.LIGHT),
-                tooltip: ed.intl.string(ec.default["5vlJkY"]),
-                tooltipAriaLabel: ed.intl.string(ec.default["5vlJkY"]),
+                tooltip: ed.intl.string(eu.default["5vlJkY"]),
+                tooltipAriaLabel: ed.intl.string(eu.default["5vlJkY"]),
             },
         ];
     return (0, l.jsx)(ev.I, {
@@ -543,8 +543,8 @@ function e_() {
 var eb = n(652215),
     ek = n(49999),
     ey = n(202541),
-    eR = n(487745);
-function eO(e) {
+    eI = n(487745);
+function eR(e) {
     let [t, n] = i.useState(0),
         [s, l] = i.useState(!1),
         a = i.useRef(e);
@@ -555,10 +555,10 @@ function eO(e) {
         { key: t, handleInternalChange: i.useCallback((e) => (l(!0), e), []) }
     );
 }
-function eI(e) {
+function eO(e) {
     let { markAsDismissed: t } = e;
     return (0, l.jsx)("div", {
-        className: eR.b,
+        className: eI.b,
         children: (0, l.jsx)(d.J, {
             size: "sm",
             onClick: () => {
@@ -569,93 +569,93 @@ function eI(e) {
 }
 function eH() {
     return (0, l.jsxs)("div", {
-        className: eR.N1,
+        className: eI.N1,
         children: [
-            (0, l.jsx)(h.E, { variant: "text-md/bold", children: ed.intl.string(ec.default.AsmU85) }),
+            (0, l.jsx)(h.E, { variant: "text-md/bold", children: ed.intl.string(eu.default.AsmU85) }),
             (0, l.jsx)(x.m, {
                 text: ed.intl.string(ed.t["5AFxuK"]),
-                children: (0, l.jsx)(g.t, { size: "custom", height: 20, width: 20, colorClass: eR.oU }),
+                children: (0, l.jsx)(g.t, { size: "custom", height: 20, width: 20, colorClass: eI.oU }),
             }),
-            (0, l.jsx)(eI, {}),
+            (0, l.jsx)(eO, {}),
         ],
     });
 }
-function eJ(e) {
-    let { markAsDismissed: t, isCoachmark: n } = e;
-    return (0, _.HX)(u.M.CUSTOM_THEME_COACHMARK)
-        ? n
-            ? (0, l.jsx)(eD, { markAsDismissed: t })
-            : (0, l.jsx)(eH, {})
-        : (0, l.jsx)(eD, { markAsDismissed: () => (0, _.Dr)(u.M.CUSTOM_THEME_COACHMARK) });
-}
 function eD(e) {
+    let { markAsDismissed: t, isCoachmark: n } = e;
+    return (0, _.HX)(c.M.CUSTOM_THEME_COACHMARK)
+        ? n
+            ? (0, l.jsx)(eJ, { markAsDismissed: t })
+            : (0, l.jsx)(eH, {})
+        : (0, l.jsx)(eJ, { markAsDismissed: () => (0, _.Dr)(c.M.CUSTOM_THEME_COACHMARK) });
+}
+function eJ(e) {
     let { markAsDismissed: t } = e,
         n = (0, k.L)(ey.PremiumTypes.TIER_2);
     return (0, l.jsxs)("div", {
-        className: eR.CG,
+        className: eI.CG,
         children: [
             (0, l.jsxs)("div", {
-                className: eR.dI,
+                className: eI.dI,
                 children: [
                     (0, l.jsx)(f.D, {
                         variant: "heading-lg/extrabold",
-                        children: ed.intl.string(ec.default["23QUzv"]),
+                        children: ed.intl.string(eu.default["23QUzv"]),
                     }),
-                    (0, l.jsx)(eI, { markAsDismissed: t }),
+                    (0, l.jsx)(eO, { markAsDismissed: t }),
                 ],
             }),
             (0, l.jsx)(h.E, {
-                className: eR.VA,
+                className: eI.VA,
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: ed.intl.string(n ? ec.default.TRCE4g : ec.default["UV/Vtv"]),
+                children: ed.intl.string(n ? eu.default.TRCE4g : eu.default["UV/Vtv"]),
             }),
         ],
     });
 }
 function eU(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: s, handleInternalChange: a } = eO(t),
-        [o, u] = i.useState(`${Math.round(t)}\xb0`);
+        { key: s, handleInternalChange: a } = eR(t),
+        [o, c] = i.useState(`${Math.round(t)}\xb0`);
     return (
         i.useEffect(() => {
-            u(`${Math.round(t)}\xb0`);
+            c(`${Math.round(t)}\xb0`);
         }, [t]),
         (0, l.jsxs)("div", {
-            className: r()(eR.xJ, eR.Gz),
+            className: r()(eI.xJ, eI.Gz),
             children: [
                 (0, l.jsxs)("div", {
-                    className: eR.Vt,
+                    className: eI.Vt,
                     children: [
-                        (0, l.jsx)(h.E, { variant: "text-md/medium", children: ed.intl.string(ec.default.dZkwgx) }),
+                        (0, l.jsx)(h.E, { variant: "text-md/medium", children: ed.intl.string(eu.default.dZkwgx) }),
                         (0, l.jsx)("input", {
                             type: "text",
                             value: o,
                             onChange: (e) =>
                                 (function (e) {
                                     let t = e.replace(/\xb0/g, "").trim();
-                                    if ("" === t) return void u("");
+                                    if ("" === t) return void c("");
                                     let s = parseInt(t, 10);
                                     if (isNaN(s)) return;
                                     let l = Math.max(0, Math.min(360, s));
-                                    u(`${l}\xb0`), (0, q.l6)(), n(l);
+                                    c(`${l}\xb0`), (0, q.l6)(), n(l);
                                 })(e.target.value),
                             placeholder: "0\xb0",
-                            className: eR.A9,
+                            className: eI.A9,
                         }),
                     ],
                 }),
                 (0, l.jsxs)("div", {
-                    className: eR.Zp,
+                    className: eI.Zp,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: eR.p1,
+                            className: eI.p1,
                             children: [
-                                (0, l.jsx)("div", { className: eR.uu }),
-                                (0, l.jsx)("div", { className: eR.uu }),
-                                (0, l.jsx)("div", { className: eR.VD }),
-                                (0, l.jsx)("div", { className: eR.uu }),
-                                (0, l.jsx)("div", { className: eR.uu }),
+                                (0, l.jsx)("div", { className: eI.uu }),
+                                (0, l.jsx)("div", { className: eI.uu }),
+                                (0, l.jsx)("div", { className: eI.VD }),
+                                (0, l.jsx)("div", { className: eI.uu }),
+                                (0, l.jsx)("div", { className: eI.uu }),
                             ],
                         }),
                         (0, l.jsx)(
@@ -687,19 +687,19 @@ function eU(e) {
 }
 function eL(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: s, handleInternalChange: a } = eO(t),
+        { key: s, handleInternalChange: a } = eR(t),
         [r, o] = i.useState(`${Math.round(t)}%`);
     return (
         i.useEffect(() => {
             o(`${Math.round(t)}%`);
         }, [t]),
         (0, l.jsxs)("div", {
-            className: eR.xJ,
+            className: eI.xJ,
             children: [
                 (0, l.jsxs)("div", {
-                    className: eR.Vt,
+                    className: eI.Vt,
                     children: [
-                        (0, l.jsx)(h.E, { variant: "text-md/medium", children: ed.intl.string(ec.default.xlXkaL) }),
+                        (0, l.jsx)(h.E, { variant: "text-md/medium", children: ed.intl.string(eu.default.xlXkaL) }),
                         (0, l.jsx)("input", {
                             type: "text",
                             value: r,
@@ -713,7 +713,7 @@ function eL(e) {
                                     o(`${l}%`), (0, q.Cq)(), n(l);
                                 })(e.target.value),
                             placeholder: `${L.kJ}%`,
-                            className: eR.A9,
+                            className: eI.A9,
                         }),
                     ],
                 }),
@@ -740,7 +740,7 @@ function eP(e) {
     let { isCoachmark: t, isMobile: n } = e,
         [s, a] = i.useState(!1),
         r = i.useRef(!1),
-        [o, u] = i.useState(!1),
+        [o, c] = i.useState(!1),
         d = i.useRef(null),
         h = i.useRef(null),
         x = i.useCallback(() => {
@@ -778,26 +778,26 @@ function eP(e) {
             buttonRef: h,
             variant: "secondary",
             onClick: x,
-            onMouseEnter: () => u(!0),
-            onMouseLeave: () => u(!1),
+            onMouseEnter: () => c(!0),
+            onMouseLeave: () => c(!1),
             icon: n
-                ? { type: "icon", asset: E.j }
+                ? { type: "icon", asset: E.DiceIcon }
                 : {
                       type: "rive",
                       asset: j.m,
                       riveProps: { dataBinding: { fill: S.A.colors.ICON_STRONG }, eventTargetRef: h },
                   },
-            text: ed.intl.string(ec.default.c9MBEH),
+            text: ed.intl.string(eu.default.c9MBEH),
             fullWidth: !0,
         });
     }
     return n
         ? A()
-        : (0, l.jsx)(c.u, {
-              title: ed.intl.string(ec.default.NJ9m8Y),
-              body: ed.intl.string(ec.default["6pabtR"]),
+        : (0, l.jsx)(u.u, {
+              title: ed.intl.string(eu.default.NJ9m8Y),
+              body: ed.intl.string(eu.default["6pabtR"]),
               position: "left",
-              asset: T ? (0, l.jsx)(E.j, {}) : void 0,
+              asset: T ? (0, l.jsx)(E.DiceIcon, {}) : void 0,
               forceOpen: s,
               onTooltipShow: g,
               onTooltipHide: f,
@@ -808,7 +808,7 @@ function eP(e) {
 function eG(e) {
     let { onApply: t, disabled: n, fullWidth: s } = e;
     return (0, l.jsx)(x.m, {
-        text: ed.intl.string(ec.default.SFyHIP),
+        text: ed.intl.string(eu.default.SFyHIP),
         shouldShow: n,
         children: (0, l.jsx)(m.$, {
             variant: "primary",
@@ -825,7 +825,7 @@ function eV(e) {
     return (
         (0, q.wb)(s, v.A.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, l.jsx)("div", {
-            className: eR.M0,
+            className: eI.M0,
             children: s
                 ? (0, l.jsx)(eG, { disabled: !n, onApply: t, fullWidth: !0 })
                 : (0, l.jsx)(b.A, {
@@ -843,20 +843,20 @@ function eV(e) {
 function e$(e) {
     let { onSaveTheme: t, canApply: n, metadata: s } = e,
         i = (0, k.L)(ey.PremiumTypes.TIER_2),
-        a = (0, D.St)("custom_themes_editor_footer"),
+        a = (0, J.St)("custom_themes_editor_footer"),
         o = s?.from === M.xv.SHARE_MESSAGE;
-    function c() {
+    function u() {
         (0, P.S8)(),
             (0, q.uk)(),
-            (0, _.Dr)(u.M.CUSTOM_THEME_COACHMARK),
+            (0, _.Dr)(c.M.CUSTOM_THEME_COACHMARK),
             s?.from === M.xv.SETTING
-                ? ((0, J.openUserSettings)(I.X.APPEARANCE_THEME_CATEGORY), (0, M.Jp)())
+                ? ((0, D.openUserSettings)(O.X.APPEARANCE_THEME_CATEGORY), (0, M.Jp)())
                 : s?.from === M.xv.CLIENT_THEMES_EDITOR
                   ? (0, M.nf)(M.HP.CLIENT_THEMES)
                   : (0, M.Jp)();
     }
     (0, q.wb)(i, v.A.CUSTOM_THEMES_EDITOR);
-    let d = r()(eR.xQ, { [eR.NI]: !i }),
+    let d = r()(eI.xQ, { [eI.NI]: !i }),
         h = (0, l.jsx)(b.A, {
             subscriptionTier: ey.pe.TIER_2,
             defaultTextOverride: ed.intl.string(ed.t.pj0XBN),
@@ -872,7 +872,7 @@ function e$(e) {
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(eS, {}),
-                      (0, l.jsx)(m.$, { variant: "secondary", onClick: c, text: ed.intl.string(ed.t["13/7kX"]) }),
+                      (0, l.jsx)(m.$, { variant: "secondary", onClick: u, text: ed.intl.string(ed.t["13/7kX"]) }),
                       (0, l.jsx)(eG, {
                           disabled: !n,
                           onApply: () => {
@@ -885,11 +885,11 @@ function e$(e) {
                   children: [
                       a
                           ? (0, l.jsxs)("div", {
-                                className: eR.rV,
+                                className: eI.rV,
                                 children: [
                                     (0, l.jsx)(y.l, {
                                         size: "md",
-                                        className: eR.Tf,
+                                        className: eI.Tf,
                                         location: v.A.PREMIUM_WISHLIST_CUSTOM_THEMES_EDITOR,
                                     }),
                                     h,
@@ -898,7 +898,7 @@ function e$(e) {
                           : h,
                       (0, l.jsx)(m.$, {
                           variant: "secondary",
-                          onClick: c,
+                          onClick: u,
                           text: o ? ed.intl.string(ed.t["13/7kX"]) : ed.intl.string(ed.t.Olc2K3),
                           fullWidth: !0,
                       }),
@@ -909,7 +909,7 @@ function e$(e) {
 function ew(e) {
     let { metadata: t, markAsDismissed: n, isCoachmark: s, isMobile: a } = e,
         r = (function () {
-            let [e] = i.useState(() => O.A.theme);
+            let [e] = i.useState(() => R.A.theme);
             return i.useCallback(
                 (t) => {
                     let {
@@ -919,24 +919,24 @@ function ew(e) {
                         resetBaseTheme: i,
                     } = B(t, e);
                     L.ko.getState().setAll({ colors: n, gradientAngle: s, chassisMixAmount: l }),
-                        "reset_button" === t ? z(X(i ?? O.A.theme)) : (0, R.XG)();
+                        "reset_button" === t ? z(X(i ?? R.A.theme)) : (0, I.XG)();
                     let a = $.eh.getSetting().backgroundGradientPresetId;
                     null != a && (0, P.bc)(a);
                 },
                 [e],
             );
         })(),
-        c = (function () {
+        u = (function () {
             let { colors: e, chassisMixAmount: t, gradientAngle: n } = (0, L.ko)(),
-                s = (0, o.bG)([O.A], () => O.A.theme),
-                [l] = i.useState(() => O.A.theme),
+                s = (0, o.bG)([R.A], () => R.A.theme),
+                [l] = i.useState(() => R.A.theme),
                 {
                     resetColors: a,
                     resetGradientAngle: r,
-                    resetChassisMixAmount: u,
-                    resetBaseTheme: c,
+                    resetChassisMixAmount: c,
+                    resetBaseTheme: u,
                 } = B("reset_button", l);
-            return JSON.stringify(e) === JSON.stringify(a) && t === u && n === r && s === c;
+            return JSON.stringify(e) === JSON.stringify(a) && t === c && n === r && s === u;
         })(),
         d = i.useRef(!1),
         {
@@ -948,21 +948,21 @@ function ew(e) {
             setGradientAngle: j,
         } = (0, L.ko)(),
         [S, b] = i.useState(x[0] ?? L.OT),
-        k = (0, o.bG)([O.A], () => O.A.theme),
-        y = (0, _.HX)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: I } = (0, N.Ay)(v.A.CUSTOM_THEMES_EDITOR),
-        J = (0, o.bG)([w.A], () => w.A.getSavedCustomTheme());
-    async function D() {
+        k = (0, o.bG)([R.A], () => R.A.theme),
+        y = (0, _.HX)(c.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: O } = (0, N.Ay)(v.A.CUSTOM_THEMES_EDITOR),
+        D = (0, o.bG)([w.A], () => w.A.getSavedCustomTheme());
+    async function J() {
         (d.current = !0),
             await (0, C.u_)({
                 theme: X(k),
                 customUserThemeSettings: { colors: x, gradientColorStops: [], gradientAngle: f, baseMix: g },
             }),
-            (0, q.Yl)(x, g, f, k, I),
+            (0, q.Yl)(x, g, f, k, O),
             n?.(ek.i.TAKE_ACTION),
-            y || (0, _.Dr)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+            y || (0, _.Dr)(c.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
             (0, M.Jp)(),
-            (0, R.XG)();
+            (0, I.XG)();
     }
     let U = x.length > 0;
     i.useEffect(
@@ -975,47 +975,47 @@ function ew(e) {
         V = X(k);
     return (
         i.useEffect(() => {
-            G ? (0, R.XG)() : k !== V && z(V);
+            G ? (0, I.XG)() : k !== V && z(V);
         }, [G, k, V]),
         (0, p.Ay)(() => {
             if (!s) {
                 let e = (x?.length ?? 0) > 0,
-                    t = null != J;
+                    t = null != D;
                 !e && t
                     ? (L.ko
                           .getState()
-                          .setAll({ colors: J.colors, gradientAngle: J.gradient_angle, chassisMixAmount: J.base_mix }),
-                      z(J.base_theme))
+                          .setAll({ colors: D.colors, gradientAngle: D.gradient_angle, chassisMixAmount: D.base_mix }),
+                      z(D.base_theme))
                     : Y(x, S, T);
             }
         }),
         (0, l.jsxs)("div", {
-            className: a ? eR.AA : eR.kL,
+            className: a ? eI.AA : eI.kL,
             "data-app-right-panel": !a,
             children: [
                 (0, l.jsx)(A.Ip, {
                     children: (0, l.jsxs)("div", {
-                        className: eR.sV,
+                        className: eI.sV,
                         children: [
-                            (0, l.jsx)(eJ, { markAsDismissed: n, isCoachmark: s }),
+                            (0, l.jsx)(eD, { markAsDismissed: n, isCoachmark: s }),
                             (0, l.jsxs)("div", {
-                                className: eR.uW,
+                                className: eI.uW,
                                 children: [
                                     (0, l.jsx)(h.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-subtle",
-                                        children: ed.intl.string(ec.default.o2NfLF),
+                                        children: ed.intl.string(eu.default.o2NfLF),
                                     }),
                                     (0, l.jsx)(e_, {}),
                                 ],
                             }),
                             (0, l.jsxs)("div", {
-                                className: eR.uW,
+                                className: eI.uW,
                                 children: [
                                     (0, l.jsx)(h.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-subtle",
-                                        children: ed.intl.string(ec.default.uSL2Gy),
+                                        children: ed.intl.string(eu.default.uSL2Gy),
                                     }),
                                     (0, l.jsx)(ef, {
                                         onChange: (e) => {
@@ -1028,12 +1028,12 @@ function ew(e) {
                                 ],
                             }),
                             (0, l.jsxs)("div", {
-                                className: eR.uW,
+                                className: eI.uW,
                                 children: [
                                     (0, l.jsx)(h.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-subtle",
-                                        children: ed.intl.string(ec.default.F1t0c8),
+                                        children: ed.intl.string(eu.default.F1t0c8),
                                     }),
                                     x.length > 1 && (0, l.jsx)(eU, { gradientAngle: f, setGradientAngle: j }),
                                     (0, l.jsx)(eL, {
@@ -1045,7 +1045,7 @@ function ew(e) {
                                 ],
                             }),
                             (0, l.jsxs)("div", {
-                                className: eR.WA,
+                                className: eI.WA,
                                 children: [
                                     (0, l.jsx)(eP, { isCoachmark: s, isMobile: a }),
                                     (0, l.jsx)(m.$, {
@@ -1053,7 +1053,7 @@ function ew(e) {
                                         onClick: function () {
                                             r(F.RESET_BUTTON), (0, q.G_)();
                                         },
-                                        disabled: c,
+                                        disabled: u,
                                         text: ed.intl.string(ed.t.yBZMsQ),
                                         fullWidth: !0,
                                     }),
@@ -1063,8 +1063,8 @@ function ew(e) {
                     }),
                 }),
                 s
-                    ? (0, l.jsx)(eV, { onSaveTheme: D, canApply: U })
-                    : (0, l.jsx)(e$, { onSaveTheme: D, canApply: U, metadata: t }),
+                    ? (0, l.jsx)(eV, { onSaveTheme: J, canApply: U })
+                    : (0, l.jsx)(e$, { onSaveTheme: J, canApply: U, metadata: t }),
             ],
         })
     );

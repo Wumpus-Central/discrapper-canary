@@ -1,4 +1,4 @@
-n.d(t, { o: () => a });
+n.d(t, { DoorExitIcon: () => a });
 var i = n(477900);
 n(582128);
 var s = n(661531),

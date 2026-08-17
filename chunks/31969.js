@@ -10,7 +10,7 @@ var i = l(582128),
     u = l(430825),
     h = l(375708);
 let f = "{value}",
-    p = { ORBS: a.C, TAG: r.g };
+    p = { ORBS: a.C, TAG: r.TagIcon };
 function S(e) {
     return null != e ? p[e] : void 0;
 }

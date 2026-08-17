@@ -1,7 +1,7 @@
 e.d(n, { default: () => q });
 var i = e(477900),
-    s = e(582128),
-    o = e(935462),
+    o = e(582128),
+    s = e(935462),
     r = e(430690),
     l = e(670404),
     a = e(333748),
@@ -9,15 +9,15 @@ var i = e(477900),
     d = e(652215),
     h = e(544105);
 function g(t) {
-    let { authToken: n, onContinue: e, onError: s, onClose: o } = t;
+    let { authToken: n, onContinue: e, onError: o, onClose: s } = t;
     return (0, i.jsx)(c.W, {
         platformType: d.fg2.XBOX,
         clientId: a.i.XBOX_APPLICATION_ID,
         scopes: h.sS,
         authToken: n,
         onContinue: e,
-        onError: s,
-        onClose: o,
+        onError: o,
+        onClose: s,
     });
 }
 var x = e(478474),
@@ -33,20 +33,20 @@ function f(t) {
 }
 var u = e(983851),
     j = e(500060),
-    p = e(177953),
-    b = e(687966),
-    m = e(975571),
+    m = e(177953),
+    p = e(687966),
+    b = e(975571),
     N = e(505134);
 function X(t) {
     let { onContinue: n, onClose: e } = t,
-        o = m.A.getArticleURL(d.MVz.XBOX_CONNECTION),
-        r = C.intl.format(C.t.CIc3IN, { helpdeskArticleUrl: o }),
-        l = s.useMemo(
+        s = b.A.getArticleURL(d.MVz.XBOX_CONNECTION),
+        r = C.intl.format(C.t.CIc3IN, { helpdeskArticleUrl: s }),
+        l = o.useMemo(
             () => [
                 { label: C.intl.string(C.t.ihQXsb), icon: u.H },
                 { label: C.intl.string(C.t.Xt1n4P), icon: j.o },
-                { label: C.intl.string(C.t.xqVY3p), icon: p.n },
-                { label: C.intl.string(C.t.iQsKVW), icon: b._ },
+                { label: C.intl.string(C.t.xqVY3p), icon: m.n },
+                { label: C.intl.string(C.t.iQsKVW), icon: p.GameControllerIcon },
             ],
             [],
         );
@@ -71,8 +71,8 @@ function O(t) {
     let {
             isWaitingForConnection: n,
             onWaitingForConnection: e,
-            expectedCallbackState: s,
-            onAuthToken: o,
+            expectedCallbackState: o,
+            onAuthToken: s,
             onError: r,
             onClose: l,
         } = t,
@@ -95,8 +95,8 @@ function O(t) {
         platformType: d.fg2.XBOX,
         isWaitingForConnection: n,
         onWaitingForConnection: e,
-        expectedCallbackState: s,
-        onAuthToken: o,
+        expectedCallbackState: o,
+        onAuthToken: s,
         onError: r,
         onClose: l,
         img: a,
@@ -107,12 +107,12 @@ function O(t) {
 var A = e(297264),
     v = e(834730),
     T = e(349288),
-    k = e(573648),
-    I = e(414121),
+    I = e(573648),
+    k = e(414121),
     y = e(162185),
     S = e(533927),
     R = e(326513);
-function _() {
+function w() {
     return (0, i.jsxs)("div", {
         className: S.rV,
         children: [
@@ -125,7 +125,7 @@ function _() {
                         children: [
                             (0, i.jsx)("div", {
                                 className: S.YD,
-                                children: (0, i.jsx)("img", { src: k.A.get(d.fg2.XBOX).icon.whiteSVG, alt: "" }),
+                                children: (0, i.jsx)("img", { src: I.A.get(d.fg2.XBOX).icon.whiteSVG, alt: "" }),
                             }),
                             C.intl.string(C.t["12Kx2v"]),
                         ],
@@ -140,30 +140,30 @@ function _() {
                         variant: "text-sm/medium",
                         color: "text-default",
                         children: (0, i.jsx)(T.Anchor, {
-                            href: m.A.getArticleURL(d.MVz.XBOX_CONNECTION),
+                            href: b.A.getArticleURL(d.MVz.XBOX_CONNECTION),
                             children: C.intl.string(C.t.hvVgAZ),
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(I.Ay, { className: S.C9, text: h.EY, size: 90 }),
+            (0, i.jsx)(k.Ay, { className: S.C9, text: h.EY, size: 90 }),
         ],
     });
 }
-function w(t) {
+function _(t) {
     let { onClose: n } = t;
     return (0, i.jsx)(y.b, {
         img: (0, i.jsx)("img", { src: R.A, width: "124", height: "160", alt: "" }),
         title: C.intl.string(C.t["7QsHmh"]),
         body: C.intl.string(C.t.byYNPX),
-        content: (0, i.jsx)(_, {}),
+        content: (0, i.jsx)(w, {}),
         onClose: n,
     });
 }
 var B = e(52643),
     W = e(952052);
 function q(t) {
-    let { transitionState: n, onClose: e, analyticsLocation: s } = t,
+    let { transitionState: n, onClose: e, analyticsLocation: o } = t,
         {
             slide: a,
             gotoNext: c,
@@ -172,8 +172,8 @@ function q(t) {
             handleAuthToken: C,
             expectedCallbackState: u,
             callbackData: j,
-        } = (0, l.m)(s, d.fg2.XBOX);
-    return (0, i.jsx)(o.EO, {
+        } = (0, l.m)(o, d.fg2.XBOX);
+    return (0, i.jsx)(s.EO, {
         "data-migration-pending": !0,
         className: W.yl,
         transitionState: n,
@@ -209,7 +209,7 @@ function q(t) {
                     children: (0, i.jsx)(g, { authToken: j, onContinue: c, onError: h, onClose: e }),
                 }),
                 (0, i.jsx)(r.q, { id: B.N.ERROR, children: (0, i.jsx)(f, { onContinue: c, onClose: e }) }),
-                (0, i.jsx)(r.q, { id: B.N.SUCCESS, children: (0, i.jsx)(w, { onClose: e }) }),
+                (0, i.jsx)(r.q, { id: B.N.SUCCESS, children: (0, i.jsx)(_, { onClose: e }) }),
             ],
         }),
     });

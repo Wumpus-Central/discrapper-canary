@@ -1,9 +1,9 @@
 a.d(n, { default: () => g });
 var i = a(477900);
 a(582128);
-var e = a(284009),
-    c = a.n(e),
-    d = a(189213),
+var c = a(284009),
+    d = a.n(c),
+    e = a(189213),
     l = a(17928),
     s = a(32880),
     u = a(871109),
@@ -11,41 +11,48 @@ var e = a(284009),
     r = a(821609),
     h = a(882863);
 function m(t) {
-    let { guildId: n, productId: a, attachmentId: e, ...c } = t,
-        { isLoading: d, downloadAttachment: l } = (0, h.A)(n, a);
+    let { guildId: n, productId: a, attachmentId: c, ...d } = t,
+        { isLoading: e, downloadAttachment: l } = (0, h.A)(n, a);
     return (0, i.jsx)(r.$, {
-        ...c,
-        loading: d,
+        ...d,
+        loading: e,
         onClick: function () {
-            l(e);
+            l(c);
         },
     });
 }
 var p = a(375708),
     j = a(288925);
 function x(t) {
-    let { attachment: n, guildId: a, productId: e } = t;
+    let { attachment: n, guildId: a, productId: c } = t;
     return (0, i.jsxs)("li", {
         className: j.k,
         children: [
             (0, i.jsx)(o.A, { attachment: n }),
-            (0, i.jsx)(m, { className: j.i, icon: s.s, text: void 0, guildId: a, productId: e, attachmentId: n.id }),
+            (0, i.jsx)(m, {
+                className: j.i,
+                icon: s.DownloadIcon,
+                text: void 0,
+                guildId: a,
+                productId: c,
+                attachmentId: n.id,
+            }),
         ],
     });
 }
 function g(t) {
-    let { guildId: n, productId: a, onClose: e, transitionState: s } = t,
+    let { guildId: n, productId: a, onClose: c, transitionState: s } = t,
         o = (0, l.bG)([u.A], () => u.A.getGuildProduct(a));
-    c()(null != o, "guildProductListing cannot be null");
+    d()(null != o, "guildProductListing cannot be null");
     let r = o.attachments ?? [];
-    return (0, i.jsx)(d.Modal, {
+    return (0, i.jsx)(e.Modal, {
         size: "md",
         transitionState: s,
         "aria-label": p.intl.string(p.t["3jaCac"]),
         title: o.name,
         subtitle: p.intl.format(p.t["6dOuaP"], { count: o.attachments_count }),
         actions: [],
-        onClose: e,
+        onClose: c,
         children: (0, i.jsx)("ul", {
             children: r.map((t) => (0, i.jsx)(x, { guildId: n, productId: o.id, attachment: t }, t.id)),
         }),

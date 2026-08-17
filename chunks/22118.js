@@ -117,7 +117,12 @@ function X(e) {
     return t
         ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(H.A, { size: "md", color: "currentColor", className: q.$8, "aria-hidden": !0 }),
+                  (0, l.jsx)(H.CheckmarkLargeIcon, {
+                      size: "md",
+                      color: "currentColor",
+                      className: q.$8,
+                      "aria-hidden": !0,
+                  }),
                   (0, l.jsx)(V.A, { children: P.intl.string(P.t["tq+6t/"]) }),
               ],
           })

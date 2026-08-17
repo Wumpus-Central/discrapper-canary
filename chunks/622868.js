@@ -83,7 +83,7 @@ function et(e) {
         : (0, t.jsxs)("div", {
               className: el.wL,
               children: [
-                  (0, t.jsx)(_.A, { size: "md", color: "currentColor", className: el.D$ }),
+                  (0, t.jsx)(_.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: el.D$ }),
                   (0, t.jsx)(M.E, { variant: "text-xs/medium", color: "text-strong", children: n }),
               ],
           });
@@ -428,7 +428,7 @@ function eb(e) {
 }
 var eE = l(9842),
     ey = l(657048),
-    e_ = l(910425),
+    e_ = l(566908),
     eM = l(873298),
     eS = l(339350),
     eR = l(625494),

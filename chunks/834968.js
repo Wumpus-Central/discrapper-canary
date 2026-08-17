@@ -15,7 +15,7 @@ function c(e) {
                 case o.Ik.BUILT_IN:
                     return r.k;
                 case o.Ik.FRECENCY:
-                    return a.O;
+                    return a.ClockIcon;
                 default:
                     return;
             }

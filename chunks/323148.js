@@ -31,8 +31,8 @@ var a = t(477900),
     X = t(346017),
     D = t(652215),
     M = t(202541),
-    P = t(594387),
-    I = t(375708),
+    I = t(594387),
+    P = t(375708),
     T = t(136948);
 function z(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;
@@ -90,7 +90,7 @@ function K(e) {
             transitionState: s,
             onClose: t,
             size: "md",
-            "aria-label": I.intl.string(P.default.cRLw2a),
+            "aria-label": P.intl.string(I.default.cRLw2a),
             children: (0, a.jsx)(f.N, {
                 theme: "dark",
                 children: (e) =>
@@ -125,7 +125,7 @@ function K(e) {
                                 children: (0, a.jsx)(x.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: I.intl.format(P.default["70kyQr"], {
+                                    children: P.intl.format(I.default["70kyQr"], {
                                         learnMoreLink: y.A.getArticleURL(D.MVz.XBOX_GAME_PASS_PERKS),
                                     }),
                                 }),
@@ -135,8 +135,8 @@ function K(e) {
                                 children: [
                                     (0, a.jsx)(z, {
                                         icon: (0, a.jsx)(j.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                        title: I.intl.string(P.default["+tdDeK"]),
-                                        description: I.intl.format(P.default.ZYc6Hv, { orbAmount: W, days: V }),
+                                        title: P.intl.string(I.default["+tdDeK"]),
+                                        description: P.intl.format(I.default.ZYc6Hv, { orbAmount: W, days: V }),
                                         footer:
                                             null != u
                                                 ? (0, a.jsx)("div", {
@@ -155,16 +155,16 @@ function K(e) {
                                     }),
                                     (0, a.jsx)(z, {
                                         icon: (0, a.jsx)(b.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                        title: I.intl.string(P.default["++kzl5"]),
-                                        description: I.intl.format(P.default.kc3Kvs, { multiplier: "1.2" }),
+                                        title: P.intl.string(I.default["++kzl5"]),
+                                        description: P.intl.format(I.default.kc3Kvs, { multiplier: "1.2" }),
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/023eccf9a31b5e91537568fd5cf492e2e86beb668c90ffd86b013a674ae61f99.png",
                                         thumbnailImageClassName: T.$T,
                                     }),
                                     (0, a.jsx)(z, {
-                                        icon: (0, a.jsx)(N.g, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                        title: I.intl.string(P.default["a+PtZt"]),
-                                        description: I.intl.format(P.default.WgkpKK, {
+                                        icon: (0, a.jsx)(N.TagIcon, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                        title: P.intl.string(I.default["a+PtZt"]),
+                                        description: P.intl.format(I.default.WgkpKK, {
                                             onClick: () => {
                                                 (0, v.Cz)({
                                                     analyticsLocations: l,
@@ -183,7 +183,7 @@ function K(e) {
                                 className: T.qr,
                                 children: (0, a.jsx)(_.A, {
                                     fullWidth: !0,
-                                    defaultTextOverride: I.intl.string(P.default["4CdlUW"]),
+                                    defaultTextOverride: P.intl.string(I.default["4CdlUW"]),
                                     subscriptionTier: M.pe.TIER_2,
                                 }),
                             }),

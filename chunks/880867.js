@@ -1,4 +1,4 @@
-l.d(t, { default: () => I });
+l.d(t, { default: () => _ });
 var i = l(477900),
     a = l(582128),
     n = l(691540),
@@ -13,8 +13,8 @@ var i = l(477900),
     h = l(223863),
     p = l(734057),
     x = l(957565),
-    f = l(403362),
-    k = l(97808),
+    k = l(403362),
+    f = l(97808),
     S = l(778712),
     v = l(834730),
     g = l(427262),
@@ -22,7 +22,7 @@ var i = l(477900),
     E = l(999291),
     w = l(718019),
     y = l(918709);
-let j = A.Ay.getEnableHardwareAcceleration() ? k.Js : k.eu,
+let j = A.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     P = S._3.SIZE_40;
 function b(e) {
     let { user: t } = e,
@@ -44,20 +44,20 @@ function b(e) {
         ],
     });
 }
-var U = l(652215),
-    V = l(381941),
-    _ = l(375708);
-function I(e) {
-    let { user: t, source: l, onClose: k, ...S } = e,
-        v = `${location.protocol}//${location.host}${U.BVt.USERS(t.id)}`,
+var I = l(652215),
+    U = l(381941),
+    V = l(375708);
+function _(e) {
+    let { user: t, source: l, onClose: f, ...S } = e,
+        v = `${location.protocol}//${location.host}${I.BVt.USERS(t.id)}`,
         g = a.useCallback(
             async (e, t, l) => {
                 let { withMessage: i, transitionToDestination: a, closeAfterSend: c } = t;
                 l(!0);
                 try {
-                    let t = (await Promise.all(e.map(h.pk))).filter(f.Vq);
+                    let t = (await Promise.all(e.map(h.pk))).filter(k.Vq);
                     if (0 === t.length) return void l(!1);
-                    c && k();
+                    c && f();
                     let u =
                         null != i && "" !== i
                             ? `${v}
@@ -67,39 +67,39 @@ ${i}`
                     for (let e of t) {
                         let t = p.A.getChannel(e);
                         null != t &&
-                            (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: V.Hx.USER_PROFILE }));
+                            (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: U.Hx.USER_PROFILE }));
                     }
-                    (0, n.P0)((0, s.o)(_.intl.string(_.t.kwmYkt), o.Ck.SUCCESS)),
+                    (0, n.P0)((0, s.o)(V.intl.string(V.t.kwmYkt), o.Ck.SUCCESS)),
                         a &&
                             null != t[0] &&
                             ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, r.closeAllModals)());
                 } catch (e) {
-                    (0, n.P0)((0, s.o)(_.intl.string(_.t.iufib1), o.Ck.FAILURE));
+                    (0, n.P0)((0, s.o)(V.intl.string(V.t.iufib1), o.Ck.FAILURE));
                 } finally {
                     l(!1);
                 }
             },
-            [k, v],
+            [f, v],
         ),
         A = a.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
-                    "aria-label": _.intl.string(_.t.WqhZss),
+                    "aria-label": V.intl.string(V.t.WqhZss),
                     onClick: () => {
-                        (0, x.C)(v, () => (0, n.P0)((0, s.o)(_.intl.string(_.t["L/PwZf"]), o.Ck.SUCCESS)));
+                        (0, x.C)(v, () => (0, n.P0)((0, s.o)(V.intl.string(V.t["L/PwZf"]), o.Ck.SUCCESS)));
                     },
-                    icon: c.q,
+                    icon: c.LinkIcon,
                 },
             ],
             [v],
         );
     return (0, i.jsx)(u.ForwardModal, {
         ...S,
-        onClose: k,
+        onClose: f,
         source: l,
-        customTitle: _.intl.string(_.t["sFN1/M"]),
+        customTitle: V.intl.string(V.t["sFN1/M"]),
         customPreview: (0, i.jsx)(b, { user: t }),
         customSendHandler: g,
         additionalActions: A,

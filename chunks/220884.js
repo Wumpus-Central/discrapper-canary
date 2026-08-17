@@ -42,7 +42,7 @@ function p(e) {
                 [l, t, n, r],
             );
         })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: p }),
-        y = T ? s.G : a.y,
+        y = T ? s.StarIcon : a.y,
         C = (0, u.r)(o.A.colors.ICON_FEEDBACK_WARNING),
         v = (0, u.r)(o.A.colors.ICON_DEFAULT),
         R =

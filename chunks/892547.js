@@ -36,7 +36,7 @@ function l(e) {
         autoComplete: h,
         "aria-label": p,
         inputRef: T,
-        leading: a.$,
+        leading: a.MagnifyingGlassIcon,
         onClear: l,
         clearable: null != l,
         size: c,

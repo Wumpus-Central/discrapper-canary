@@ -23,10 +23,10 @@ var r = n(503698),
     S = n(271195),
     N = n(204651),
     C = n(383831),
-    O = n(128286),
-    R = n(80051),
+    R = n(128286),
+    O = n(80051),
     L = n(970636),
-    y = n(293246),
+    y = n(453028),
     D = n(646865),
     v = n(795816),
     b = n(104171),
@@ -55,7 +55,7 @@ function F(e) {
             onJumpToChannel: o,
             idle: d,
             selectedParticipant: N,
-            embeddedActivity: R,
+            embeddedActivity: O,
         } = e,
         b = (0, f.Us)() === P.BRT.POPOUT,
         w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
@@ -123,7 +123,7 @@ function F(e) {
                         children: [
                             b || (0, D.f)()
                                 ? null
-                                : (0, i.jsx)(O.A, {
+                                : (0, i.jsx)(R.A, {
                                       className: G.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: function () {
@@ -137,7 +137,7 @@ function F(e) {
                                       },
                                       onClosePopout: U.FX,
                                   }),
-                            (0, i.jsx)(C.A, { applicationId: n, location: R.location, className: G.BD }),
+                            (0, i.jsx)(C.A, { applicationId: n, location: O.location, className: G.BD }),
                         ],
                     }),
                 ],
@@ -193,7 +193,7 @@ function V(e) {
 }
 function B(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: r } = e;
-    return r ? (0, i.jsx)(R.A, { channelId: t, isParticipantsOpen: n, className: G.N9 }) : null;
+    return r ? (0, i.jsx)(O.A, { channelId: t, isParticipantsOpen: n, className: G.N9 }) : null;
 }
 function H(e) {
     let {
@@ -219,7 +219,7 @@ function H(e) {
         children: (0, i.jsxs)("div", {
             className: a()(x.K1, G.eA, { [G.eo]: s }),
             children: [
-                !s && (0, i.jsx)(d.j, { size: "xxs", color: "currentColor", className: G.ro }),
+                !s && (0, i.jsx)(d.MoreHorizontalIcon, { size: "xxs", color: "currentColor", className: G.ro }),
                 s &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [

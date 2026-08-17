@@ -6,7 +6,7 @@ var i = n(503698),
     c = n(278416),
     l = n(866665),
     o = n(240248),
-    u = n(561794),
+    u = n(594832),
     a = n(524214);
 function d(e) {
     let { spec: t, icon: n, tooltipText: i } = e,
@@ -20,7 +20,7 @@ function d(e) {
 }
 function h(e) {
     let { spec: t, icon: n, tooltipText: i } = e,
-        s = n ?? c.g;
+        s = n ?? c.TagIcon;
     return (0, r.jsx)(d, {
         spec: t,
         icon: (0, r.jsx)("div", {

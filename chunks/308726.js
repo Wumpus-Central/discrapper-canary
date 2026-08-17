@@ -70,8 +70,8 @@ var F = i(474397),
     H = i(976860),
     J = i(219271),
     B = i(580763),
-    z = i(616356),
-    $ = i(734057),
+    $ = i(616356),
+    z = i(734057),
     X = i(290863),
     W = i(994500),
     q = i(287809),
@@ -111,7 +111,7 @@ function ts(t) {
                     });
                 else {
                     let t = await S.A.getOrEnsurePrivateChannel(u.id),
-                        e = $.A.getChannel(t) ?? null;
+                        e = z.A.getChannel(t) ?? null;
                     r()(null != e, "Send channel must be defined"),
                         (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
                         (0, F.A)(tn.BRT.OVERLAY, !0),
@@ -147,7 +147,7 @@ function ts(t) {
     async function O() {
         if (null == u) return;
         let t = await S.A.getOrEnsurePrivateChannel(u.id),
-            e = $.A.getChannel(t) ?? null;
+            e = z.A.getChannel(t) ?? null;
         r()(null != e, "Send channel must be defined"),
             (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
             (0, F.A)(tn.BRT.OVERLAY, !0),
@@ -155,7 +155,7 @@ function ts(t) {
     }
     let b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === m ? (E ? d.o : A.B) : T ? f.D : p.l),
+        (e = "sent" === m ? (E ? d.ChatIcon : A.B) : T ? f.D : p.SendMessageIcon),
         (0, n.jsx)(y.m, {
             text: b,
             "aria-label": b,
@@ -212,7 +212,7 @@ function to(t) {
 function tu(t) {
     let { entry: e, currentUserActivity: i, idx: l, variant: a } = t,
         r = (0, c.bG)([q.default], () => q.default.getUser(e.author_id)),
-        s = (0, c.bG)([z.A], () => (null != r ? z.A.getAnyStreamForUser(r.id) : null), [r]),
+        s = (0, c.bG)([$.A], () => (null != r ? $.A.getAnyStreamForUser(r.id) : null), [r]),
         {
             isMobileOnline: o,
             isVROnline: u,

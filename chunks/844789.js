@@ -22,7 +22,7 @@ var l,
     A = n(565645);
 n(938796);
 var E = n(17928),
-    y = n(562465),
+    y = n(636537),
     S = n(192308),
     T = n(228366),
     L = n(163437),
@@ -415,7 +415,7 @@ function ef(e) {
         renderIcon: function (e, t) {
             let n = W.A.getChannel(e?.value);
             if (null == n) return null;
-            let l = n.type === U.rbe.GUILD_CATEGORY ? K.s : (0, Y.gU)(n);
+            let l = n.type === U.rbe.GUILD_CATEGORY ? K.FolderIcon : (0, Y.gU)(n);
             return null != l ? (0, i.jsx)(l, { size: "custom", color: "currentColor", width: t, height: t }) : null;
         },
         renderOptionLabel: function (e) {
@@ -561,7 +561,7 @@ function eV(e) {
                         tooltip: D.intl.string(D.t.N86XcP),
                         onClick: () => n(t.id),
                         dangerous: !0,
-                        children: (0, i.jsx)(ey.u, { size: "xs", color: "currentColor", className: eB.gE }),
+                        children: (0, i.jsx)(ey.TrashIcon, { size: "xs", color: "currentColor", className: eB.gE }),
                     }),
                 }),
             ],
@@ -787,7 +787,7 @@ function e5(e) {
                     (t = (0, i.jsxs)("div", {
                         className: ex.Ly,
                         children: [
-                            (0, i.jsx)(eq.n, { size: "sm", color: "currentColor", className: ex.jh }),
+                            (0, i.jsx)(eq.UserIcon, { size: "sm", color: "currentColor", className: ex.jh }),
                             (0, i.jsx)("span", { className: ex.NT, children: l }),
                         ],
                     }));
@@ -1066,14 +1066,14 @@ function tI(e) {
                             (0, i.jsxs)("div", {
                                 className: tN.dJ,
                                 children: [
-                                    (0, i.jsx)(to.o, { color: eI.A.colors.BLACK, size: "xs" }),
+                                    (0, i.jsx)(to.ChatIcon, { color: eI.A.colors.BLACK, size: "xs" }),
                                     (0, i.jsx)(eA.E, { variant: "text-sm/medium", className: tN.KA, children: h }),
                                 ],
                             }),
                             (0, i.jsxs)("div", {
                                 className: tN.dJ,
                                 children: [
-                                    (0, i.jsx)(tu.c, { color: eI.A.colors.BLACK, size: "xs" }),
+                                    (0, i.jsx)(tu.MicrophoneIcon, { color: eI.A.colors.BLACK, size: "xs" }),
                                     (0, i.jsx)(eA.E, { variant: "text-sm/medium", className: tN.KA, children: x }),
                                 ],
                             }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { eW: () => O, em: () => N, oi: () => C, wN: () => S });
+n.d(t, { eW: () => R, em: () => N, oi: () => C, wN: () => S });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -37,34 +37,34 @@ function C(e) {
             activeEvent: l,
             activity: o,
         } = e;
-    if (l) t = E.C;
+    if (l) t = E.CalendarIcon;
     else if (s) t = A.q;
     else if (r) t = h.k;
-    else if (i) t = I.n;
+    else if (i) t = I.VideoIcon;
     else if (n) t = f.H;
     else {
         if (!o) return null;
         t = p.k;
     }
-    return R({ icon: t, isCurrentUserConnected: a });
+    return O({ icon: t, isCurrentUserConnected: a });
 }
-function O(e) {
+function R(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
                 case T.B5.SUBMITTED:
-                    return [void 0, l.O];
+                    return [void 0, l.ClockIcon];
                 case T.B5.REJECTED:
                     return [s.A.unsafe_rawColors.RED_400.css, o.P];
                 case T.B5.APPROVED:
-                    return [s.A.unsafe_rawColors.GREEN_360.css, d.A];
+                    return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
                 default:
-                    return [void 0, c.R];
+                    return [void 0, c.PencilIcon];
             }
         })(t);
-    return R({ icon: i, color: n });
+    return O({ icon: i, color: n });
 }
-function R(e) {
+function O(e) {
     let { icon: t, color: n, isCurrentUserConnected: r } = e;
     return (0, i.jsx)(u.fk, {
         icon: t,

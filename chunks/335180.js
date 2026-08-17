@@ -1,6 +1,6 @@
 i.d(t, {
     Bj: () => ed,
-    IA: () => eT,
+    IA: () => eI,
     L: () => el,
     NU: () => eu,
     O7: () => ea,
@@ -8,7 +8,7 @@ i.d(t, {
     Ub: () => eO,
     Zm: () => eC,
     c5: () => eo,
-    cL: () => eI,
+    cL: () => eT,
     g4: () => eA,
     hc: () => eD,
     l3: () => e_,
@@ -30,8 +30,8 @@ if (221552 == i.j) var S = i(687966);
 if (221552 == i.j) var A = i(836480);
 if (221552 == i.j) var c = i(332837);
 if (221552 == i.j) var o = i(34188);
-if (221552 == i.j) var T = i(231483);
-if (221552 == i.j) var I = i(104510);
+if (221552 == i.j) var I = i(231483);
+if (221552 == i.j) var T = i(104510);
 if (221552 == i.j) var d = i(740426);
 if (221552 == i.j) var R = i(305866);
 if (221552 == i.j) var N = i(912592);
@@ -44,8 +44,8 @@ var h = i(846930),
     j = i(431237),
     L = i(668451),
     v = i(655165),
-    U = i(321501),
-    x = i(696620),
+    x = i(321501),
+    U = i(696620),
     m = i(668079),
     f = i(512780),
     M = i(154098),
@@ -169,13 +169,13 @@ function B() {
             (0, E.jsx)("div", {
                 className: M.O4,
                 children: (0, E.jsxs)("div", {
-                    className: x.kL,
+                    className: U.kL,
                     children: [
                         (0, E.jsxs)("div", {
-                            className: n()(m.a, U.kL, j.CC),
+                            className: n()(m.a, x.kL, j.CC),
                             children: [
                                 (0, E.jsxs)("div", {
-                                    className: U.TK,
+                                    className: x.TK,
                                     children: [
                                         (0, E.jsx)(F, { width: "90%", height: 24 }),
                                         (0, E.jsx)(F, { width: "80%", height: 24 }),
@@ -192,7 +192,7 @@ function B() {
                             ],
                         }),
                         (0, E.jsx)("div", {
-                            className: x.yk,
+                            className: U.yk,
                             children: Array.from({ length: 3 }).map((e, t) =>
                                 (0, E.jsxs)(
                                     "div",
@@ -268,7 +268,7 @@ function Y(e) {
         }),
     });
 }
-function K(e) {
+function k(e) {
     let { tileCount: t = 8 } = e;
     return (0, E.jsx)("div", {
         className: G.MJ,
@@ -281,7 +281,7 @@ function K(e) {
         }),
     });
 }
-function k(e) {
+function K(e) {
     let { rowCount: t = 8 } = e,
         i = ["55%", "32%", "44%", "28%", "50%", "36%", "42%", "30%", "46%", "34%"];
     return (0, E.jsx)("div", {
@@ -300,7 +300,10 @@ function Q() {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.cw57ar),
-        children: [(0, E.jsx)(W, { icon: S._, title: C.intl.string(C.t.cw57ar) }), (0, E.jsx)(Y, { cardCount: 9 })],
+        children: [
+            (0, E.jsx)(W, { icon: S.GameControllerIcon, title: C.intl.string(C.t.cw57ar) }),
+            (0, E.jsx)(Y, { cardCount: 9 }),
+        ],
     });
 }
 function J() {
@@ -309,7 +312,7 @@ function J() {
         className: j.MY,
         role: "status",
         "aria-label": e,
-        children: [(0, E.jsx)(W, { icon: A.Q, title: e }), (0, E.jsx)(K, { tileCount: 9 })],
+        children: [(0, E.jsx)(W, { icon: A.CompassIcon, title: e }), (0, E.jsx)(k, { tileCount: 9 })],
     });
 }
 function $() {
@@ -318,7 +321,7 @@ function $() {
         role: "status",
         "aria-label": C.intl.string(C.t.Ym2Ri6),
         children: [
-            (0, E.jsx)(W, { icon: c.f, title: C.intl.string(C.t.Ym2Ri6) }),
+            (0, E.jsx)(W, { icon: c.HomeIcon, title: C.intl.string(C.t.Ym2Ri6) }),
             (0, E.jsx)("div", {
                 className: G.MJ,
                 children: (0, E.jsxs)("div", {
@@ -351,7 +354,7 @@ function q() {
         className: j.MY,
         role: "status",
         "aria-label": e,
-        children: [(0, E.jsx)(W, { icon: T.l, title: e }), (0, E.jsx)(k, { rowCount: 8 })],
+        children: [(0, E.jsx)(W, { icon: I.ShieldIcon, title: e }), (0, E.jsx)(K, { rowCount: 8 })],
     });
 }
 function z() {
@@ -359,7 +362,7 @@ function z() {
         className: j.MY,
         role: "status",
         "aria-label": "Powerups",
-        children: [(0, E.jsx)(W, { icon: I._, title: "Powerups" }), (0, E.jsx)(Y, { cardCount: 6 })],
+        children: [(0, E.jsx)(W, { icon: T._, title: "Powerups" }), (0, E.jsx)(Y, { cardCount: 6 })],
     });
 }
 function X() {
@@ -367,7 +370,7 @@ function X() {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.h9mGOP),
-        children: [(0, E.jsx)(W, { icon: d.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(k, { rowCount: 6 })],
+        children: [(0, E.jsx)(W, { icon: d.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(K, { rowCount: 6 })],
     });
 }
 function ee() {
@@ -376,7 +379,7 @@ function ee() {
         role: "status",
         "aria-label": "Game Server",
         children: [
-            (0, E.jsx)(W, { icon: S._, title: "Game Server" }),
+            (0, E.jsx)(W, { icon: S.GameControllerIcon, title: "Game Server" }),
             (0, E.jsx)("div", {
                 className: G.MJ,
                 children: (0, E.jsxs)("div", {
@@ -462,7 +465,7 @@ function ei(e) {
                         (0, E.jsxs)("div", {
                             className: L.qd,
                             children: [
-                                (0, E.jsx)(N.K, { size: "md", color: "icon-default", className: L.yH }),
+                                (0, E.jsx)(N.InboxIcon, { size: "md", color: "icon-default", className: L.yH }),
                                 (0, E.jsx)(u.D, {
                                     className: L.Hi,
                                     variant: "text-lg/semibold",
@@ -601,10 +604,10 @@ function ec() {
 function eo() {
     return (0, E.jsx)(B, {});
 }
-function eT() {
+function eI() {
     return (0, E.jsx)(eE, {});
 }
-function eI() {
+function eT() {
     return (0, E.jsx)(Q, {});
 }
 function ed() {

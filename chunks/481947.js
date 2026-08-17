@@ -17,10 +17,10 @@ var i = t(477900),
     j = t(939249),
     p = t(778712),
     f = t(890856),
-    S = t(666654),
-    I = t(83107),
-    L = t(615675),
-    E = t(990836),
+    I = t(666654),
+    S = t(83107),
+    E = t(615675),
+    L = t(990836),
     C = t(387755),
     _ = t(440594),
     k = t(95561),
@@ -28,8 +28,8 @@ var i = t(477900),
     T = t(863089),
     v = t(85448),
     b = t(556525),
-    R = t(402216),
-    y = t(268218),
+    y = t(402216),
+    R = t(268218),
     D = t(609425),
     K = t(73392),
     M = t(769015),
@@ -44,7 +44,7 @@ var i = t(477900),
     J = t(544105),
     B = t(375708),
     F = t(79362);
-let W = (0, y.Fe)({
+let W = (0, R.Fe)({
     createPromise: () =>
         Promise.all([t.e("730366"), t.e("482815"), t.e("170653"), t.e("528966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
@@ -67,7 +67,7 @@ function Q(e) {
         isStreaming: T,
         disabled: v,
         isWatching: b,
-        ringing: y,
+        ringing: R,
         iconClassName: D,
         embeddedApplication: K,
         otherClientSessionType: M,
@@ -87,7 +87,7 @@ function Q(e) {
                 o = [];
             if (t) {
                 let e;
-                e = l || n ? S.O : I.z;
+                e = l || n ? I.O : S.z;
                 let t = (0, i.jsx)(e, { className: r()(F.Kk, s, { [F.DU]: l }), color: "currentColor" });
                 o.push(
                     (0, i.jsx)(
@@ -105,7 +105,7 @@ function Q(e) {
                 );
             }
             if (c || a) {
-                let e = c ? L.T : E.c,
+                let e = c ? E.T : L.c,
                     t = (0, i.jsx)(e, { className: r()(F.Kk, s, { [F.DU]: c }), color: "currentColor" });
                 o.push(
                     (0, i.jsx)(
@@ -139,7 +139,11 @@ function Q(e) {
                       u.m,
                       {
                           text: B.intl.string(B.t.FlNoSV),
-                          children: (0, i.jsx)(x.n, { size: "md", color: "currentColor", className: r()(F.Kk, D) }),
+                          children: (0, i.jsx)(x.VideoIcon, {
+                              size: "md",
+                              color: "currentColor",
+                              className: r()(F.Kk, D),
+                          }),
                       },
                       "video",
                   ),
@@ -181,13 +185,13 @@ function Q(e) {
                     u.m,
                     {
                         text: B.intl.string(B.t["JH1SJ+"]),
-                        children: (0, i.jsx)(N.b, { size: "xs", color: "currentColor", className: r()(F.Kk, D) }),
+                        children: (0, i.jsx)(N.EyeIcon, { size: "xs", color: "currentColor", className: r()(F.Kk, D) }),
                     },
                     "watch",
                 ),
             ),
-        T && $.push((0, i.jsx)(R.Ay, { size: R.Ay.Sizes.SMALL }, "stream")),
-        y &&
+        T && $.push((0, i.jsx)(y.Ay, { size: y.Ay.Sizes.SMALL }, "stream")),
+        R &&
             null != W &&
             Y &&
             $.push(
@@ -210,12 +214,12 @@ function Q(e) {
                 ),
             );
     let es = null != z && !(0, O.n)(z, Z.gfo.EMBEDDED);
-    return 0 !== $.length || 0 !== ee.length || es || y
+    return 0 !== $.length || 0 !== ee.length || es || R
         ? (0, i.jsxs)("div", {
               className: r()(F.Pt, s),
               children: [
                   (0, i.jsxs)("div", { className: F.RL, children: [ee, $] }),
-                  es && !y
+                  es && !R
                       ? (0, i.jsx)("div", {
                             className: F.RL,
                             children: (0, i.jsx)(
@@ -246,16 +250,16 @@ let Y = function (e) {
         } = e,
         {
             onClick: j,
-            onKeyDown: S,
-            onDoubleClick: I,
-            onContextMenu: L,
-            onMouseLeave: E,
+            onKeyDown: I,
+            onDoubleClick: S,
+            onContextMenu: E,
+            onMouseLeave: L,
             onMouseDown: C,
             priority: _,
             speaking: k = !1,
             collapsed: O,
-            mute: R,
-            localMute: y,
+            mute: y,
+            localMute: R,
             serverMute: M,
             deaf: V,
             serverDeaf: w,
@@ -286,11 +290,11 @@ let Y = function (e) {
                 ? (s = B.intl.string(B.t.btxSdB))
                 : V
                   ? (s = B.intl.string(B.t.NjmiOL))
-                  : y
+                  : R
                     ? (s = B.intl.string(B.t.Q8Uzof))
                     : M
                       ? (s = B.intl.string(B.t.uLddbQ))
-                      : R && (s = B.intl.string(B.t.tjtv3P)),
+                      : y && (s = B.intl.string(B.t.tjtv3P)),
             null != s)
                 ? B.intl.formatToPlainString(B.t["1+MVBP"], { userName: e, status: s })
                 : e;
@@ -312,13 +316,13 @@ let Y = function (e) {
             j?.(e, et);
         },
         onDoubleClick: function (e) {
-            I?.(e, et);
+            S?.(e, et);
         },
         onContextMenu: function (e) {
-            L?.(e, et);
+            E?.(e, et);
         },
         onMouseLeave: function (e) {
-            E?.(e, et), ec(!1);
+            L?.(e, et), ec(!1);
         },
         onMouseDown: function (e) {
             C?.(e, et);
@@ -326,7 +330,7 @@ let Y = function (e) {
         onMouseEnter: function () {
             ec(!0);
         },
-        onKeyDown: S,
+        onKeyDown: I,
         "aria-label": eo,
         focusProps: { offset: { right: 4 } },
         children: (0, i.jsxs)("div", {
@@ -335,7 +339,7 @@ let Y = function (e) {
                 _ && !O
                     ? (0, i.jsx)(u.m, {
                           text: B.intl.string(B.t.BVK71i),
-                          children: (0, i.jsx)("div", { className: r()(F.G, { [F.g4]: !R && !M && k }) }),
+                          children: (0, i.jsx)("div", { className: r()(F.G, { [F.g4]: !y && !M && k }) }),
                       })
                     : null,
                 ((s = r()(F.my, { [F.Jb]: m === Z.OSZ.LARGE, [F.dT]: m === Z.OSZ.SMALL, [F.DF]: es })),
@@ -355,7 +359,7 @@ let Y = function (e) {
                         })
                       : (0, i.jsx)("div", { className: r()(c, s), style: t })),
                 ((l = (0, i.jsxs)("div", {
-                    className: r()(o, F.Xh, en, { [F.Pi]: !R && !M && k, [F.DF]: es }),
+                    className: r()(o, F.Xh, en, { [F.Pi]: !y && !M && k, [F.DF]: es }),
                     children: [
                         J ?? U.Ay.getName(et),
                         X

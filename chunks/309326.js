@@ -1,35 +1,35 @@
-e.d(s, { a: () => A });
-var a = e(503698),
-    r = e.n(a),
+e.d(a, { a: () => p });
+var s = e(503698),
+    r = e.n(s),
     n = e(933832),
     I = e(460905),
-    t = e(597601),
-    T = e(391242),
-    o = e(477262),
-    u = e(95635),
-    k = e(27232),
+    o = e(597601),
+    t = e(391242),
+    T = e(477262),
+    k = e(95635),
+    u = e(27232),
     N = e(183623),
     l = e(797285),
     m = e(957485),
     K = e(451394),
     O = e(7807),
     P = e(473145),
-    i = e(915143);
-function A(c, s) {
-    if (s) return { Icon: n.A, className: i.YR };
+    i = e(890271);
+function p(c, a) {
+    if (a) return { Icon: n.CheckmarkLargeIcon, className: i.YR };
     switch (c) {
         case P.TP.EMOJI:
             return { Icon: I.n, className: r()(i.Kk, i.Zg) };
         case P.TP.AUDIO:
-            return { Icon: t.L, className: r()(i.Kk, i.z7) };
+            return { Icon: o.L, className: r()(i.Kk, i.z7) };
         case P.TP.ANIMATED:
-            return { Icon: T.O, className: r()(i.Kk, i.CS) };
+            return { Icon: t.O, className: r()(i.Kk, i.CS) };
         case P.TP.CUSTOMIZATION:
-            return { Icon: o.s, className: r()(i.Kk, i.wk) };
+            return { Icon: T.s, className: r()(i.Kk, i.wk) };
         case P.TP.UPLOAD:
-            return { Icon: u.J, className: r()(i.Kk, i.Se) };
+            return { Icon: k.UploadIcon, className: r()(i.Kk, i.Se) };
         case P.TP.VANITY:
-            return { Icon: k.G, className: r()(i.Kk, i.w4) };
+            return { Icon: u.StarIcon, className: r()(i.Kk, i.w4) };
         case P.TP.STREAM:
             return { Icon: N.F, className: r()(i.Kk, i.Td) };
         case P.TP.STICKER:

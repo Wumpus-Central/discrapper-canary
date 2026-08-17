@@ -30,14 +30,14 @@ function w(i) {
                 (0, a.jsx)(t.Dr, {
                     id: "hangout-window-change-image",
                     label: p.intl.string(h.default.XJ4UpB),
-                    leadingAccessory: { type: "icon", icon: c.R },
+                    leadingAccessory: { type: "icon", icon: c.PencilIcon },
                     action: w,
                 }),
                 (0, a.jsx)(t.Dr, {
                     id: "hangout-window-remove-image",
                     color: "danger",
                     label: p.intl.string(h.default.XV4qT6),
-                    leadingAccessory: { type: "icon", icon: o.u },
+                    leadingAccessory: { type: "icon", icon: o.TrashIcon },
                     action: b,
                 }),
             ],

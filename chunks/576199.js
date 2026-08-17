@@ -2,8 +2,8 @@ n.d(t, { A: () => C });
 var r = n(477900),
     l = n(582128),
     i = n(691540),
-    s = n(857250),
-    u = n(97483),
+    u = n(857250),
+    s = n(97483),
     a = n(866665),
     o = n(408278),
     c = n(173936),
@@ -19,7 +19,7 @@ function C(e) {
         { quest: n, sourceQuestContent: C } = l.useContext(p.a),
         v = (0, f.go)(),
         A = (0, m.E0)(n.config),
-        g = l.useCallback(() => {
+        h = l.useCallback(() => {
             A &&
                 ((0, _.Xm)(n.id, {
                     content: d.uF.VIDEO_MODAL,
@@ -27,7 +27,7 @@ function C(e) {
                     impressionId: v,
                     sourceQuestContent: C,
                 }),
-                (0, i.P0)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
+                (0, i.P0)((0, u.o)(S.intl.string(S.t["+5kSoW"]), s.Ck.SUCCESS)));
         }, [v, A, n.id, C]);
     return A
         ? (0, r.jsx)("div", {
@@ -38,9 +38,9 @@ function C(e) {
                   text: S.intl.string(S.t.WmfZHZ),
                   children: (0, r.jsx)(o.K, {
                       variant: "overlay-secondary",
-                      icon: c.q,
+                      icon: c.LinkIcon,
                       "aria-label": S.intl.string(S.t.RDE0Sc),
-                      onClick: g,
+                      onClick: h,
                   }),
               }),
           })

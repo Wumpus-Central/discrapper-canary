@@ -34,8 +34,8 @@ var s = n(477900),
     j = n(814793),
     b = n(73473),
     P = n(646764),
-    G = n(398025),
-    Q = n(617986),
+    Q = n(398025),
+    G = n(617986),
     O = n(630037),
     D = n(190107),
     K = n(652215),
@@ -116,7 +116,7 @@ function z(e) {
                   trackGuildAndChannelMetadata: !0,
                   sourceQuestContent: g.uF.MEMBERS_LIST,
               }),
-            (0, Q.mA)({ fromContent: g.uF.MEMBERS_LIST, questId: t.id });
+            (0, G.mA)({ fromContent: g.uF.MEMBERS_LIST, questId: t.id });
     }
     function e_() {
         (0, j.Ll)(z, $) && null != $
@@ -250,7 +250,7 @@ function z(e) {
                                                       trackGuildAndChannelMetadata: !0,
                                                       sourceQuestContent: g.uF.MEMBERS_LIST,
                                                   }),
-                                            (0, Q.Zc)(t, {
+                                            (0, G.Zc)(t, {
                                                 content: g.uF.MEMBERS_LIST,
                                                 ctaContent: v.Cy.OPEN_DISCLOSURE,
                                                 sourceQuestContent: g.uF.MEMBERS_LIST,
@@ -265,7 +265,7 @@ function z(e) {
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
                                         }),
-                                        (0, s.jsx)(I.c, {
+                                        (0, s.jsx)(I.CircleQuestionIcon, {
                                             size: "custom",
                                             className: U.$y,
                                             width: W,
@@ -285,7 +285,7 @@ function z(e) {
                                         (e, t) =>
                                             t &&
                                             (0, s.jsx)(i.animated.div, {
-                                                style: { opacity: (0, G.a)(e.opacity), scale: (0, G.a)(e.scale) },
+                                                style: { opacity: (0, Q.a)(e.opacity), scale: (0, Q.a)(e.scale) },
                                                 className: U.ae,
                                             }),
                                     ),

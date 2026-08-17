@@ -33,7 +33,7 @@ let u = function (e) {
             _(() => {
                 j(), x?.(e);
             }),
-        icon: i.o,
+        icon: i.GiftIcon,
         ...p,
         text: g,
     });

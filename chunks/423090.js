@@ -1,26 +1,26 @@
-s.d(l, { M: () => d, v: () => x });
-var e = s(477900);
-s(582128);
-var i = s(855522),
-    r = s(950305),
-    n = s(664121),
-    a = s(834730),
-    o = s(661531),
-    c = s(242197);
-function d(t) {
-    let { type: l } = t;
+l.d(t, { M: () => d, v: () => x });
+var e = l(477900);
+l(582128);
+var i = l(855522),
+    n = l(950305),
+    r = l(664121),
+    a = l(834730),
+    o = l(661531),
+    c = l(242197);
+function d(s) {
+    let { type: t } = s;
     return (0, e.jsx)(x, {
         icon:
-            "user" === l
-                ? (0, e.jsx)(r.n, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT })
-                : (0, e.jsx)(n.R, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
-        text: "user" === l ? i.A.Messages.STOREFRONT_USER_SUBSCRIPTION : i.A.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
+            "user" === t
+                ? (0, e.jsx)(n.UserIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT })
+                : (0, e.jsx)(r.R, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+        text: "user" === t ? i.A.Messages.STOREFRONT_USER_SUBSCRIPTION : i.A.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
     });
 }
-function x(t) {
-    let { icon: l, text: s } = t;
+function x(s) {
+    let { icon: t, text: l } = s;
     return (0, e.jsxs)("div", {
         className: c.k,
-        children: [l, (0, e.jsx)(a.E, { color: "text-strong", variant: "text-sm/medium", children: s })],
+        children: [t, (0, e.jsx)(a.E, { color: "text-strong", variant: "text-sm/medium", children: l })],
     });
 }

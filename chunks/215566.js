@@ -1,10 +1,10 @@
 t.d(n, { A: () => d });
-var r = t(627968),
+var r = t(477900),
     l = t(508770),
     i = t(738188),
     s = t(661531),
     a = t(812993),
-    c = t(757418);
+    c = t(107384);
 function o(e) {
     let { badge: n } = e;
     return n.customBadge;
@@ -21,7 +21,7 @@ let d = function (e) {
         case c.Xi.COUNT:
             return (0, r.jsx)(u, { badge: n });
         case c.Xi.WARNING:
-            return (0, r.jsx)(i.i, { size: "xs", color: s.A.colors.ICON_FEEDBACK_WARNING });
+            return (0, r.jsx)(i.WarningIcon, { size: "xs", color: s.A.colors.ICON_FEEDBACK_WARNING });
         case c.Xi.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(o, { badge: n });
     }

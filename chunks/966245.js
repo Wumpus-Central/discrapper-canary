@@ -316,7 +316,7 @@ function ex(e) {
                                 (0, i.jsx)(Q.Dr, {
                                     id: "download",
                                     label: ec.intl.string(ec.t["1WjMbC"]),
-                                    icon: ee.s,
+                                    icon: ee.DownloadIcon,
                                     action: () => {
                                         o.current?.click(), l();
                                     },
@@ -339,7 +339,7 @@ function ex(e) {
                             ...e,
                             className: ed.IQ,
                             "aria-label": ec.intl.string(ec.t["UKOtz+"]),
-                            children: (0, i.jsx)(et.j, { ref: a, size: "sm", color: "currentColor" }),
+                            children: (0, i.jsx)(et.MoreHorizontalIcon, { ref: a, size: "sm", color: "currentColor" }),
                         }),
                     }),
             }),
@@ -348,7 +348,7 @@ function ex(e) {
                 href: l,
                 download: r,
                 className: ed.op,
-                children: (0, i.jsx)(ee.s, { size: "sm", color: "currentColor" }),
+                children: (0, i.jsx)(ee.DownloadIcon, { size: "sm", color: "currentColor" }),
             }),
         ],
     });
@@ -696,7 +696,7 @@ function eY(e) {
                             children: f,
                         }),
                         (0, i.jsx)(e_.A, { height: 4, width: 4, "aria-hidden": "true", className: eZ.Om }),
-                        (0, i.jsx)(eS.o, { size: "xxs", color: "currentColor", className: eZ.Kk }),
+                        (0, i.jsx)(eS.ChatIcon, { size: "xxs", color: "currentColor", className: eZ.Kk }),
                         (0, i.jsx)(h.E, {
                             className: eZ.U9,
                             color: "interactive-text-default",
@@ -1280,7 +1280,7 @@ let tx = s.memo(function (e) {
                 n !== t && M(!1);
             }
         }, [n, O, M]);
-    let ei = O ? e$.E : eX.u,
+    let ei = O ? e$.PauseIcon : eX.PlayIcon,
         es = O ? ec.intl.string(ec.t["3XohGn"]) : ec.intl.string(ec.t.AlHqHT),
         er = ec.intl.formatToPlainString(ec.t.LgCPMt, { playbackRate: y }),
         ea = `${y.toString().replace(/^0/, "")}X`;

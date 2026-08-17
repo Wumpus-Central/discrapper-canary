@@ -1,7 +1,7 @@
 i.d(s, { default: () => D });
 var e = i(477900),
-    r = i(582128),
-    n = i(772707),
+    n = i(582128),
+    r = i(772707),
     a = i(554146),
     l = i(152367),
     c = i(834730),
@@ -10,20 +10,20 @@ var e = i(477900),
     m = i(826673),
     u = i(837057),
     x = i(749314),
-    C = i(174459),
-    p = i(310419),
-    A = i(652215),
+    p = i(174459),
+    A = i(310419),
+    C = i(652215),
     h = i(49999),
     N = i(488995),
     f = i(375708),
     j = i(976811);
 function D(t) {
-    let { guildId: s, transitionState: D, onClose: E, analyticsType: S = a.M.APP_DIRECTORY_UPSELL_MODAL } = t;
+    let { guildId: s, transitionState: D, onClose: E, analyticsType: I = a.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
-        r.useEffect(() => {
-            C.default.track(A.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: a.M[S], guild_id: s });
-        }, [s, S]),
-        (0, e.jsx)(n.k, {
+        n.useEffect(() => {
+            p.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: a.M[I], guild_id: s });
+        }, [s, I]),
+        (0, e.jsx)(r.k, {
             title: f.intl.string(f.t["2tv5YG"]),
             subtitle: f.intl.string(f.t.pgwlD7),
             transitionState: D,
@@ -35,7 +35,7 @@ function D(t) {
                     variant: "secondary",
                     text: f.intl.string(f.t.L5eIZ2),
                     onClick: function () {
-                        E(), (0, m.Dr)(S, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s });
+                        E(), (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s });
                     },
                 },
                 {
@@ -43,12 +43,12 @@ function D(t) {
                     text: f.intl.string(f.t["5e8Mrp"]),
                     onClick: function () {
                         E(),
-                            (0, m.Dr)(S, { forceTrack: !0, dismissAction: h.i.PRIMARY, guildId: s }),
+                            (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.PRIMARY, guildId: s }),
                             (0, u.transitionToGlobalDiscovery)({
                                 tab: N.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: s,
-                                    entrypoint: { name: p.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                    entrypoint: { name: A.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
                                 },
                             });
                     },
@@ -72,7 +72,7 @@ function D(t) {
                     (0, e.jsxs)("li", {
                         className: j.Aw,
                         children: [
-                            (0, e.jsx)(o.C, { color: "currentColor", className: j.EQ }),
+                            (0, e.jsx)(o.RobotIcon, { color: "currentColor", className: j.EQ }),
                             (0, e.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-default",

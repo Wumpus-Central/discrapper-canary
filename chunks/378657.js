@@ -561,7 +561,7 @@ function eU(e) {
                     onClick: () => {
                         l(ed.i.USER_DISMISS);
                     },
-                    icon: eD.d,
+                    icon: eD.XLargeIcon,
                 }),
             }),
             (0, n.jsx)(eO.E, { color: w.A.colors.TEXT_FEEDBACK_WARNING, className: eV.Kk }),

@@ -2,9 +2,9 @@ i.d(n, { A: () => C });
 var l = i(477900),
     t = i(582128),
     o = i(284009),
-    a = i.n(o),
-    r = i(477782),
-    c = i(885574),
+    c = i.n(o),
+    a = i(477782),
+    r = i(885574),
     s = i(473935),
     d = i(173936),
     u = i(50268),
@@ -13,50 +13,50 @@ var l = i(477900),
     v = i(486020),
     g = i(957565),
     b = i(486503),
-    A = i(652215),
-    k = i(375708);
+    k = i(652215),
+    A = i(375708);
 function C(e) {
     let { showIcons: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = p.Q_.useSetting(),
         { tidaWebformEnabled: o } = b.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
-        C = (0, u.A)({ id: e.id, label: k.intl.string(k.t["94lLD7"]) }),
+        C = (0, u.A)({ id: e.id, label: A.intl.string(A.t["94lLD7"]) }),
+        L = t.useCallback(() => {
+            let n = (0, y.Iv)(e, k.XAf, !0);
+            c()(null != n, "cannot copy null icon URL"), (0, g.C)(n);
+        }, [e]),
         h = t.useCallback(() => {
-            let n = (0, y.Iv)(e, A.XAf, !0);
-            a()(null != n, "cannot copy null icon URL"), (0, g.C)(n);
-        }, [e]),
-        f = t.useCallback(() => {
             let n = v.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
-            a()(null != n, "cannot copy null banner URL"), (0, g.C)(n);
+            c()(null != n, "cannot copy null banner URL"), (0, g.C)(n);
         }, [e]),
-        x = t.useCallback(() => {
+        I = t.useCallback(() => {
             (0, g.C)(e.id);
         }, [e.id]);
     return !__OVERLAY__ && i && g.p5 && null != e.id
         ? o
-            ? (0, l.jsxs)(r.Dr, {
+            ? (0, l.jsxs)(a.Dr, {
                   id: "copy-server-info",
-                  label: k.intl.string(k.t["rka/KS"]),
-                  leadingAccessory: n ? { type: "icon", icon: c.m } : void 0,
+                  label: A.intl.string(A.t["rka/KS"]),
+                  leadingAccessory: n ? { type: "icon", icon: r.CircleInformationIcon } : void 0,
                   children: [
-                      (0, l.jsx)(r.Dr, {
+                      (0, l.jsx)(a.Dr, {
                           id: "copy-server-id",
-                          label: k.intl.string(k.t["94lLD7"]),
-                          action: x,
+                          label: A.intl.string(A.t["94lLD7"]),
+                          action: I,
                           leadingAccessory: n ? { type: "icon", icon: s.L } : void 0,
                       }),
                       null != e.icon &&
-                          (0, l.jsx)(r.Dr, {
+                          (0, l.jsx)(a.Dr, {
                               id: "copy-server-icon-link",
-                              label: k.intl.string(k.t["7H30wR"]),
-                              action: h,
-                              leadingAccessory: n ? { type: "icon", icon: d.q } : void 0,
+                              label: A.intl.string(A.t["7H30wR"]),
+                              action: L,
+                              leadingAccessory: n ? { type: "icon", icon: d.LinkIcon } : void 0,
                           }),
                       null != e.banner &&
-                          (0, l.jsx)(r.Dr, {
+                          (0, l.jsx)(a.Dr, {
                               id: "copy-server-banner-link",
-                              label: k.intl.string(k.t["2FoUnk"]),
-                              action: f,
-                              leadingAccessory: n ? { type: "icon", icon: d.q } : void 0,
+                              label: A.intl.string(A.t["2FoUnk"]),
+                              action: h,
+                              leadingAccessory: n ? { type: "icon", icon: d.LinkIcon } : void 0,
                           }),
                   ],
               })

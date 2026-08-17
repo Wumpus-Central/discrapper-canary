@@ -1,15 +1,15 @@
-i.d(s, { g: () => d });
+i.d(s, { TagIcon: () => d });
 var l = i(477900);
 i(582128);
-var t = i(661531),
-    a = i(996682),
+var a = i(661531),
+    t = i(996682),
     h = i(27989);
 function d(e) {
     let {
             size: s = "md",
             width: i,
             height: d,
-            color: n = t.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
             ...o
         } = e,
@@ -17,7 +17,7 @@ function d(e) {
         r = p?.width ?? i,
         w = p?.height ?? d;
     return (0, l.jsx)("svg", {
-        ...(0, a.A)(o),
+        ...(0, t.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: r,
         height: w,

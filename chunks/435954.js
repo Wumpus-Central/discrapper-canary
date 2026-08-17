@@ -61,15 +61,15 @@ let w = n.memo(function (e) {
 });
 var k = l(957565),
     N = l(975571),
-    y = l(723702),
-    A = l(435558),
-    E = l.n(A),
-    L = l(280450),
+    L = l(723702),
+    y = l(435558),
+    A = l.n(y),
+    E = l(280450),
     B = l(986238),
     O = l(652215),
     _ = l(375708),
     M = l(364604);
-function T(e) {
+function I(e) {
     let { url: t } = e,
         [l, i] = n.useState(!1),
         a = n.useRef(void 0),
@@ -86,14 +86,14 @@ function T(e) {
                   className: u()(M.S, l ? M.pG : null),
                   onClick: s,
                   children: [
-                      (0, r.jsx)(h.q, { size: "md", color: "currentColor", className: M.n7 }),
+                      (0, r.jsx)(h.LinkIcon, { size: "md", color: "currentColor", className: M.n7 }),
                       l ? _.intl.string(_.t.GmrIJY) : _.intl.string(_.t.iVzBOh),
                   ],
               })
             : null
     );
 }
-function H(e) {
+function T(e) {
     let {
         subHead: t,
         buildDetails: l,
@@ -116,7 +116,7 @@ function H(e) {
         ],
     });
 }
-let I = function (e) {
+let H = function (e) {
     let { loading: t = !1, currentOverrides: l, linkMeta: i, url: a, applyBuildOverride: s, clearBuildOverride: d } = e,
         [o, c] = n.useState(!1),
         C = n.useCallback(() => {
@@ -143,9 +143,13 @@ let I = function (e) {
                         className: M.Pl,
                         href: N.A.getArticleURL(O.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
-                        children: (0, r.jsx)(p.m, { size: "xs", color: "currentColor", className: M.G }),
+                        children: (0, r.jsx)(p.CircleInformationIcon, {
+                            size: "xs",
+                            color: "currentColor",
+                            className: M.G,
+                        }),
                     }),
-                    t ? null : (0, r.jsx)(T, { url: a }),
+                    t ? null : (0, r.jsx)(I, { url: a }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -177,7 +181,7 @@ let I = function (e) {
                                       submitting: d,
                                   } = e,
                                   o = ["discord_web"];
-                              y.isPlatformEmbedded || o.push("discord_marketing", "discord_developers");
+                              L.isPlatformEmbedded || o.push("discord_marketing", "discord_developers");
                               let u = (function (e, t) {
                                   if (null == e || null == t) return { valid: !1, reason: _.intl.string(_.t.d34xi4) };
                                   let {
@@ -188,7 +192,7 @@ let I = function (e) {
                                           targetBuildOverride: a,
                                       } = e,
                                       s = Object.keys(a);
-                                  if (0 === E().intersection(s, t).length)
+                                  if (0 === A().intersection(s, t).length)
                                       return {
                                           valid: !1,
                                           reason: _.intl.formatToPlainString(_.t.wySUzv, {
@@ -218,7 +222,7 @@ let I = function (e) {
                                   let d = null != r ? new Date(r).getTime() : null;
                                   return null != d && d < Date.now()
                                       ? { valid: !1, reason: _.intl.string(_.t["8eRE6S"]) }
-                                      : n.length > 0 && !n.includes(L.default.getId())
+                                      : n.length > 0 && !n.includes(E.default.getId())
                                         ? { valid: !1, reason: _.intl.string(_.t.qZgV0a) }
                                         : { valid: !0 };
                               })(i, o);
@@ -226,7 +230,7 @@ let I = function (e) {
                                   var c;
                                   return (
                                       (c = u.reason),
-                                      H({
+                                      T({
                                           subHead: _.intl.string(_.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
@@ -251,7 +255,7 @@ let I = function (e) {
                                       : g.id !== n.discord_web.id || g.type !== n.discord_web.type)
                                       ? ((l = _.intl.string(_.t.nOunHC)), (t = a), (r = "primary"))
                                       : ((l = _.intl.string(_.t.tX4xrt)), (t = s), (r = "critical-primary")),
-                                  H({
+                                  T({
                                       subHead: _.intl.string("branch" === g.type ? _.t.p9TwTG : _.t.RCYGot),
                                       buildDetails: g.id,
                                       buttonClick: function () {
@@ -311,7 +315,7 @@ let P = n.memo(function (e) {
             [o, a],
         );
     return null != u
-        ? (0, r.jsx)(I, {
+        ? (0, r.jsx)(H, {
               loading: c,
               linkMeta: a.override,
               currentOverrides: l.overrides,

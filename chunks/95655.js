@@ -90,7 +90,7 @@ let T = i.memo(function (e) {
                             facepileSizeOverride: o._3.SIZE_24,
                         }),
                         (0, t.jsx)(d.E, { variant: "text-md/medium", color: "text-strong", children: r ?? "" }),
-                        (0, t.jsx)(u.R, { className: p.IZ, size: "xs", color: "currentColor" }),
+                        (0, t.jsx)(u.PencilIcon, { className: p.IZ, size: "xs", color: "currentColor" }),
                     ],
                 }),
             }),

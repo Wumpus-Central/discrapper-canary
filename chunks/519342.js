@@ -82,7 +82,7 @@ function ee(e) {
                     (0, i.jsx)("div", {
                         className: Q.ae,
                         "aria-hidden": !0,
-                        children: (0, i.jsx)(d.b, { size: "sm", color: u.A.colors.WHITE }),
+                        children: (0, i.jsx)(d.EyeIcon, { size: "sm", color: u.A.colors.WHITE }),
                     }),
                 ],
             }),

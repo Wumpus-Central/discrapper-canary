@@ -1,11 +1,11 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => _ });
 var i = n(477900);
 n(582128);
 var l = n(503698),
     s = n.n(l),
     a = n(194261),
     r = n(834730),
-    o = n(712905),
+    o = n(935286),
     c = n(939249),
     d = n(297264),
     u = n(346055),
@@ -17,7 +17,7 @@ var l = n(503698),
     x = n(411342),
     f = n(375708),
     E = n(694875);
-function C(e) {
+function I(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: l, children: o } = e;
     return (0, i.jsxs)("div", {
         className: s()(E.v0, l),
@@ -27,7 +27,12 @@ function C(e) {
                 (0, i.jsxs)("div", {
                     className: E.su,
                     children: [
-                        (0, i.jsx)(a.X, { size: "xs", className: E.hz, color: "currentColor", "aria-hidden": !0 }),
+                        (0, i.jsx)(a.LockIcon, {
+                            size: "xs",
+                            className: E.hz,
+                            color: "currentColor",
+                            "aria-hidden": !0,
+                        }),
                         (0, i.jsx)(r.E, {
                             variant: "text-sm/normal",
                             color: "text-overlay-light",
@@ -40,7 +45,7 @@ function C(e) {
         ],
     });
 }
-function _(e) {
+function C(e) {
     let { onShowFullDescription: t, variant: n } = e,
         l = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -62,7 +67,7 @@ function _(e) {
               children: l,
           });
 }
-function I(e) {
+function _(e) {
     let {
             imageUrl: t,
             name: n,
@@ -71,7 +76,7 @@ function I(e) {
             role: o,
             ctaComponent: c,
             shouldShowFullDescriptionButton: A = !0,
-            onShowFullDescription: I,
+            onShowFullDescription: _,
             productType: v,
             onTapCard: N,
             actionMenu: j,
@@ -87,7 +92,7 @@ function I(e) {
         O = (0, g.Ld)(),
         P = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C, {
+                (0, i.jsx)(I, {
                     showDraftBadge: k,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: L } }),
@@ -113,7 +118,7 @@ function I(e) {
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(_, { onShowFullDescription: I, variant: M }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: _, variant: M }),
                                 S || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {

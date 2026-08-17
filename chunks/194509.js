@@ -12,10 +12,10 @@ var i = n(503698),
     p = n(485140),
     b = n(202541),
     m = n(652215),
-    C = n(375708),
-    f = n(646132);
+    f = n(375708),
+    C = n(646132);
 function N(e) {
-    return e === b.pe.TIER_0 ? C.intl.string(C.t.rk4Uu8) : C.intl.string(C.t.Ve9Ge6);
+    return e === b.pe.TIER_0 ? f.intl.string(f.t.rk4Uu8) : f.intl.string(f.t.Ve9Ge6);
 }
 let T = function (e) {
     let {
@@ -23,7 +23,7 @@ let T = function (e) {
             textOptions: n,
             color: i,
             look: b,
-            hideIcon: C,
+            hideIcon: f,
             subscriptionTier: T,
             premiumModalAnalyticsLocation: y,
             giftMessage: A,
@@ -43,17 +43,17 @@ let T = function (e) {
         _ = (0, p.Y)();
     return (0, r.jsxs)(l.$n, {
         "data-migration-pending": !0,
-        innerClassName: f.Nq,
+        innerClassName: C.Nq,
         color: i ?? ((0, a.M)(h) ? l.XD.WHITE : l.XD.BRAND),
         look: b ?? l.pR.OUTLINED,
-        className: s()(t, f.xP),
+        className: s()(t, C.xP),
         onClick: (e) =>
             _(() => {
                 O(), g?.(e);
             }),
         children: [
-            !C && (0, r.jsx)(o.o, { size: "md", color: "currentColor", className: f.ez }),
-            (0, r.jsx)("span", { className: s()(f._d, n?.textClassName), children: n?.textOverride ?? j }),
+            !f && (0, r.jsx)(o.GiftIcon, { size: "md", color: "currentColor", className: C.ez }),
+            (0, r.jsx)("span", { className: s()(C._d, n?.textClassName), children: n?.textOverride ?? j }),
         ],
     });
 };

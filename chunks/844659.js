@@ -184,7 +184,7 @@ function es(e) {
                     className: ei.dS,
                     color: "none",
                     lineClamp: 1,
-                    children: [(0, l.jsx)(_.Q, { size: "xxs", color: "currentColor" }), a],
+                    children: [(0, l.jsx)(_.CompassIcon, { size: "xxs", color: "currentColor" }), a],
                 }),
         ],
     });
@@ -213,10 +213,15 @@ function ea(e) {
                 });
             if (r.some((e) => (0, b.CZ)(e) === C.m.GLOBAL))
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [(0, l.jsx)(v.Y, { size: "xxs", color: "currentColor" }), W.intl.string(W.t.TsWCdW)],
+                    children: [
+                        (0, l.jsx)(v.FireIcon, { size: "xxs", color: "currentColor" }),
+                        W.intl.string(W.t.TsWCdW),
+                    ],
                 });
             let e = i > 0 ? W.intl.format(W.t.z8EAJW, { count: i }) : W.intl.string(W.t.RjceQU);
-            return (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(N.n, { size: "xxs", color: "currentColor" }), e] });
+            return (0, l.jsxs)(l.Fragment, {
+                children: [(0, l.jsx)(N.UserIcon, { size: "xxs", color: "currentColor" }), e],
+            });
         }, [r, o, a, i]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -551,7 +556,7 @@ function e$(e) {
             ? E
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(N.n, { size: "custom", width: 12, height: 12 }),
+                          (0, l.jsx)(N.UserIcon, { size: "custom", width: 12, height: 12 }),
                           " ",
                           W.intl.string(W.t.wnifjC),
                       ],
@@ -645,7 +650,7 @@ function e0(e) {
                     eF.p5 &&
                         (0, l.jsx)(ey.K, {
                             "aria-label": W.intl.string(W.t.WqhZss),
-                            icon: () => (0, l.jsx)(eb.q, { size: "xs" }),
+                            icon: () => (0, l.jsx)(eb.LinkIcon, { size: "xs" }),
                             size: "sm",
                             onClick: () => {
                                 (0, eF.C)(s, () => {
@@ -1440,7 +1445,7 @@ function n1(e) {
         },
         className: n0.L,
         children: [
-            (0, l.jsx)(n$.m, { size: "xs", color: "currentColor" }),
+            (0, l.jsx)(n$.CircleInformationIcon, { size: "xs", color: "currentColor" }),
             (0, l.jsx)(p.E, { variant: "text-xs/normal", className: n0.m, children: W.intl.string(W.t["2aXnfa"]) }),
         ],
     });
@@ -1740,7 +1745,7 @@ function iM(e) {
                                               type: {
                                                   text: W.intl.formatToPlainString(W.t.ehZXlZ, { rank: i.l30Rank }),
                                               },
-                                              icon: iT.O,
+                                              icon: iT.TrophyIcon,
                                           }),
                                       }),
                               ],
@@ -1949,8 +1954,8 @@ function i$(e) {
                                                         "aria-label": W.intl.string(W.t.OpuAlK),
                                                         onClick: A,
                                                         children: f
-                                                            ? (0, l.jsx)(iP.A, { size: "sm" })
-                                                            : (0, l.jsx)(iD.T, { size: "sm" }),
+                                                            ? (0, l.jsx)(iP.CheckmarkLargeIcon, { size: "sm" })
+                                                            : (0, l.jsx)(iD.CopyIcon, { size: "sm" }),
                                                     }),
                                                 ],
                                             })
@@ -2767,7 +2772,10 @@ function sh(e) {
                           (0, l.jsxs)("div", {
                               className: sm.U1,
                               children: [
-                                  (0, l.jsx)(sc.i, { className: sm.QW, color: nU.A.colors.ICON_FEEDBACK_CRITICAL }),
+                                  (0, l.jsx)(sc.WarningIcon, {
+                                      className: sm.QW,
+                                      color: nU.A.colors.ICON_FEEDBACK_CRITICAL,
+                                  }),
                                   (0, l.jsx)(p.E, {
                                       variant: "text-md/semibold",
                                       children: W.intl.string(W.t["4CxGXi"]),
@@ -2849,7 +2857,7 @@ function sI(e) {
     let { iconType: t } = e,
         n = {
             default: (0, l.jsx)(e6.k, { size: "xs", color: nU.A.colors.TEXT_LINK.css }),
-            danger: (0, l.jsx)(sc.i, { color: nU.A.colors.ICON_FEEDBACK_CRITICAL }),
+            danger: (0, l.jsx)(sc.WarningIcon, { color: nU.A.colors.ICON_FEEDBACK_CRITICAL }),
         };
     return null != t && t in n ? (0, l.jsx)("div", { className: sA.Kk, children: n[t] }) : null;
 }
@@ -3850,7 +3858,7 @@ let a1 = s.memo(function (e) {
                 case K.$pd.LISTENING:
                     return { text: W.intl.formatToPlainString(W.t["2l8yka"], { count: n }), Icon: z.T };
                 default:
-                    return { text: W.intl.formatToPlainString(W.t.yJj035, { count: n }), Icon: J._ };
+                    return { text: W.intl.formatToPlainString(W.t.yJj035, { count: n }), Icon: J.GameControllerIcon };
             }
         })({ activity: v, activityUsersCount: U }),
         Y = [
@@ -5674,7 +5682,7 @@ function oM(e) {
             (a = (0, l.jsx)(tV.m, {
                 asContainer: !0,
                 text: W.intl.string(W.t["/FeTK6"]),
-                children: (0, l.jsx)(n$.m, { size: "md", color: "currentColor", className: ld.G }),
+                children: (0, l.jsx)(n$.CircleInformationIcon, { size: "md", color: "currentColor", className: ld.G }),
             })),
         b
             ? ((i = (0, l.jsx)(i3.A.Channel, { channel: N })),
@@ -6217,7 +6225,7 @@ function o3(e) {
             (0, l.jsxs)("div", {
                 className: o2.qr,
                 children: [
-                    (0, l.jsx)(oW.G, { size: "custom", color: "currentColor", className: o2.Dq }),
+                    (0, l.jsx)(oW.EyeSlashIcon, { size: "custom", color: "currentColor", className: o2.Dq }),
                     (0, l.jsx)(p.E, {
                         variant: "text-sm/medium",
                         color: "currentColor",
@@ -6663,7 +6671,7 @@ function cg(e) {
             (0, l.jsxs)("div", {
                 className: ch.qr,
                 children: [
-                    (0, l.jsx)(oW.G, { size: "custom", color: "currentColor", className: ch.Dq }),
+                    (0, l.jsx)(oW.EyeSlashIcon, { size: "custom", color: "currentColor", className: ch.Dq }),
                     (0, l.jsx)(p.E, {
                         variant: "text-sm/medium",
                         color: "currentColor",
@@ -6892,7 +6900,7 @@ function cR(e) {
             (0, l.jsxs)("div", {
                 className: cb.Fj,
                 children: [
-                    (0, l.jsx)(n$.m, { size: "sm", color: nU.A.colors.TEXT_MUTED }),
+                    (0, l.jsx)(n$.CircleInformationIcon, { size: "sm", color: nU.A.colors.TEXT_MUTED }),
                     (0, l.jsx)(p.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",

@@ -507,7 +507,7 @@ var e3 = n(95701),
     e6 = n(734057),
     e7 = n(184989),
     e8 = n(71393),
-    e9 = n(626822),
+    e9 = n(453028),
     te = n(576705),
     tt = n(290863),
     tn = n(994500),
@@ -736,8 +736,8 @@ let t0 = a.memo(function (e) {
                         n.e("371964"),
                         n.e("498552"),
                         n.e("486672"),
-                        n.e("338601"),
                         n.e("236946"),
+                        n.e("338601"),
                         n.e("944727"),
                         n.e("6565"),
                         n.e("314304"),
@@ -870,12 +870,16 @@ let t0 = a.memo(function (e) {
                     : (0, r.jsx)(tO.A, {
                           tooltipText: Z.intl.string(Z.t["R/FK4A"]),
                           onClick: Y(A.applicationId, A.location),
-                          icon: tI.o,
+                          icon: tI.DoorExitIcon,
                       }),
             ec =
                 null == I
                     ? null
-                    : (0, r.jsx)(tO.A, { tooltipText: Z.intl.string(Z.t["R/FK4A"]), onClick: K(I.id), icon: tI.o }),
+                    : (0, r.jsx)(tO.A, {
+                          tooltipText: Z.intl.string(Z.t["R/FK4A"]),
+                          onClick: K(I.id),
+                          icon: tI.DoorExitIcon,
+                      }),
             eu =
                 !C || R
                     ? null
@@ -956,7 +960,7 @@ function t2(e) {
                 className: tQ.IF,
                 children: [
                     (0, r.jsx)("div", { className: tQ.uD, children: (0, r.jsx)("div", { className: tQ.Z9 }) }),
-                    (0, r.jsx)(tO.A, { ref: c, tooltipText: t, onClick: T, icon: tf._ }),
+                    (0, r.jsx)(tO.A, { ref: c, tooltipText: t, onClick: T, icon: tf.GameControllerIcon }),
                     f === o && (0, r.jsx)(tS.a, { top: 2, right: 2, alert: !0 }),
                 ],
             }),
@@ -1083,7 +1087,7 @@ function no(e) {
         className: ns.f9,
         children: [
             (0, r.jsx)(ej.A, { className: ns.Gt, game: t, pid: n?.pid, ref: a }),
-            i ? (0, r.jsx)(t5.n, { size: "md", color: "currentColor", className: ns.it }) : null,
+            i ? (0, r.jsx)(t5.VideoIcon, { size: "md", color: "currentColor", className: ns.it }) : null,
         ],
     });
 }

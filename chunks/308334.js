@@ -10,26 +10,26 @@ var s = l(477900),
     h = l(642846),
     m = l(922016),
     d = l(939249),
-    C = l(176781),
-    g = l(834730),
-    x = l(531142),
-    p = l(191023),
+    g = l(176781),
+    C = l(834730),
+    p = l(531142),
+    x = l(191023),
     A = l(812282),
     N = l(633018),
     f = l(831544),
     E = l(793574),
-    j = l(688810),
-    M = l(613373),
+    M = l(688810),
+    j = l(613373),
     S = l(584669);
 l(321073);
 let v = String.raw`(?:\d{2,}:)?\d{2}:\d{2}\.\d{3}`,
-    _ = new RegExp(String.raw`^\s*(${v})\s*-->\s*(${v})`);
-function L(e) {
+    I = new RegExp(String.raw`^\s*(${v})\s*-->\s*(${v})`);
+function _(e) {
     let t = 0;
     for (let l of e.split(":")) t = 60 * t + parseFloat(l);
     return t;
 }
-let I = [];
+let L = [];
 var P = l(386283);
 let R = { innerRef: null, onMouseEnter: () => {}, onMouseLeave: () => {} };
 function D(e) {
@@ -59,13 +59,13 @@ function O(e) {
                                         let t = [],
                                             l = e.split(/\r?\n/);
                                         for (let e = 0; e < l.length; e++) {
-                                            let s = l[e].match(_);
+                                            let s = l[e].match(I);
                                             if (null == s) continue;
                                             let n = [];
                                             for (let t = e + 1; t < l.length && l[t].trim().length > 0; t++)
                                                 n.push(l[t].trim());
-                                            let a = (0, M.xx)(n.join("\n"));
-                                            null != a && t.push({ startSec: L(s[1]), endSec: L(s[2]), ...a });
+                                            let a = (0, j.xx)(n.join("\n"));
+                                            null != a && t.push({ startSec: _(s[1]), endSec: _(s[2]), ...a });
                                         }
                                         return t.sort((e, t) => e.startSec - t.startSec), t;
                                     })(l),
@@ -75,26 +75,26 @@ function O(e) {
                         () => n.abort()
                     );
                 }, [e, t, l?.url]),
-                null != l && l.url === t ? l.cues : I
+                null != l && l.url === t ? l.cues : L
             );
         })(i, t),
-        u = (0, M.B8)(c, l / 1e3),
+        u = (0, j.B8)(c, l / 1e3),
         h = u?.imageUrl,
-        [d, C] = n.useState(null);
+        [d, g] = n.useState(null);
     n.useEffect(() => {
         if (null == h) return;
         let e = new Image();
         return (
-            (e.onload = () => C(h)),
+            (e.onload = () => g(h)),
             (e.src = h),
             () => {
                 e.onload = null;
             }
         );
     }, [h]);
-    let g = n.useCallback(() => o(!0), []),
-        x = n.useCallback(() => o(!1), []),
-        p = n.useCallback(
+    let C = n.useCallback(() => o(!0), []),
+        p = n.useCallback(() => o(!1), []),
+        x = n.useCallback(
             (e) => {
                 let { setPopoutRef: t } = e;
                 return null == u || u.w <= 0 || u.h <= 0
@@ -103,11 +103,11 @@ function O(e) {
             },
             [u],
         ),
-        A = { innerRef: r, onMouseEnter: g, onMouseLeave: x },
+        A = { innerRef: r, onMouseEnter: C, onMouseLeave: p },
         N = null != u && u.w > 0 && u.h > 0 && d === u.imageUrl;
     return (0, s.jsx)(m.Y, {
         targetElementRef: r,
-        renderPopout: p,
+        renderPopout: x,
         animationPosition: "bottom",
         shouldShow: i && N,
         position: "top",
@@ -169,58 +169,64 @@ function ee(e, t, l, n, a, i) {
         u,
         h,
         m = (0, T.A)(e),
-        { trailingIconClass: d, leadingIconClass: C, iconSize: g } = i,
-        x = null == t || "" === t || (Array.isArray(t) && 0 === t.length),
+        { trailingIconClass: d, leadingIconClass: g, iconSize: C } = i,
+        p = null == t || "" === t || (Array.isArray(t) && 0 === t.length),
         E = (0, b.o6)(m).length > 0,
-        j = null != m.interaction,
-        M = m.hasFlag(X.pr7.IS_VOICE_MESSAGE),
+        M = null != m.interaction,
+        j = m.hasFlag(X.pr7.IS_VOICE_MESSAGE),
         S = m.isPoll(),
         v = m.type === X.lAJ.POLL_RESULT;
     return (
-        (0, w.A)(e) && (h = (0, s.jsx)(y.A, { size: "custom", className: C, width: g, height: g })),
+        (0, w.A)(e) && (h = (0, s.jsx)(y.A, { size: "custom", className: g, width: C, height: C })),
         l
             ? (o = Y.intl.string(Y.t.XAkOo2))
             : n
               ? (o = Y.intl.string(Y.t["G7p6v/"]))
               : m.type === X.lAJ.CHANNEL_PINNED_MESSAGE
                 ? (o = Y.intl.string(Y.t.sCfDDl))
-                : x
+                : p
                   ? S
                       ? (c = (0, s.jsx)("div", { className: r()(q.Io, Q.PT), children: m?.poll?.question?.text }))
                       : v
                         ? (o = (0, U.Il)(m))
                         : E
                           ? (o = Y.intl.string(Y.t.kHdYCW))
-                          : j
+                          : M
                             ? (o = Y.intl.string(Y.t["E+6SSY"]))
-                            : M
+                            : j
                               ? (o = Y.intl.string(Y.t.XC3A52))
                               : m.hasFlag(X.pr7.IS_COMPONENTS_V2)
                                 ? (o = Y.intl.string(Y.t.Xxat6S))
                                 : ((o = Y.intl.string(Y.t["6hGo0c"])),
-                                  (u = (0, s.jsx)(p.x, {
+                                  (u = (0, s.jsx)(x.ImageIcon, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: d,
-                                      width: g,
-                                      height: g,
+                                      width: C,
+                                      height: C,
                                   })))
                   : (c = (0, s.jsx)(B.Ay, { message: m, content: t, className: a, compact: !0 })),
         E
-            ? (u = (0, s.jsx)(A.s, { size: "custom", color: "currentColor", className: d, width: g, height: g }))
-            : j
-              ? (u = (0, s.jsx)(N.k, { size: "custom", color: "currentColor", className: d, width: g, height: g }))
-              : M
-                ? (u = (0, s.jsx)(f.c, {
+            ? (u = (0, s.jsx)(A.s, { size: "custom", color: "currentColor", className: d, width: C, height: C }))
+            : M
+              ? (u = (0, s.jsx)(N.k, { size: "custom", color: "currentColor", className: d, width: C, height: C }))
+              : j
+                ? (u = (0, s.jsx)(f.MicrophoneIcon, {
                       size: "custom",
                       color: "currentColor",
                       className: d,
-                      width: (19 / 24) * g,
-                      height: g,
+                      width: (19 / 24) * C,
+                      height: C,
                   }))
                 : (m.attachments.length > 0 || m.embeds.length > 0) &&
                   !v &&
-                  (u = (0, s.jsx)(p.x, { size: "custom", color: "currentColor", className: d, width: g, height: g })),
+                  (u = (0, s.jsx)(x.ImageIcon, {
+                      size: "custom",
+                      color: "currentColor",
+                      className: d,
+                      width: C,
+                      height: C,
+                  })),
         { contentPlaceholder: o, renderedContent: c, trailingIcon: u, leadingIcon: h }
     );
 }
@@ -230,31 +236,31 @@ function et(e) {
             repliedAuthor: l,
             baseAuthor: a,
             baseMessage: i,
-            referencedMessage: p,
+            referencedMessage: x,
             renderPopout: A,
             isReplySpineClickable: N,
             showReplySpine: f,
         } = e,
-        [M, S] = n.useState(!1),
-        v = n.useMemo(() => (null != A && p.state === J.a.LOADED ? (e) => A(e, p.message) : void 0), [p, A]),
-        _ = n.useCallback(() => S((e) => !e), []),
-        L = (function (e, t, l) {
+        [j, S] = n.useState(!1),
+        v = n.useMemo(() => (null != A && x.state === J.a.LOADED ? (e) => A(e, x.message) : void 0), [x, A]),
+        I = n.useCallback(() => S((e) => !e), []),
+        _ = (function (e, t, l) {
             let {
                     referencedMessage: a,
                     channel: i,
                     compact: o,
                     isReplyAuthorBlocked: d,
-                    repliedAuthor: C,
-                    showAvatarPopout: g,
-                    onClickAvatar: x,
-                    onContextMenu: p,
+                    repliedAuthor: g,
+                    showAvatarPopout: C,
+                    onClickAvatar: p,
+                    onContextMenu: x,
                     onPopoutRequestClose: A,
                 } = e,
-                { analyticsLocations: N } = (0, j.Ay)(E.A.AVATAR),
+                { analyticsLocations: N } = (0, M.Ay)(E.A.AVATAR),
                 f = n.useRef(null);
             if (o || a.state !== J.a.LOADED || d)
                 return l === X.lAJ.CONTEXT_MENU_COMMAND
-                    ? (0, s.jsx)("div", { className: q.Do, children: (0, s.jsx)(c.o, { size: "xs" }) })
+                    ? (0, s.jsx)("div", { className: q.Do, children: (0, s.jsx)(c.ChatIcon, { size: "xs" }) })
                     : (0, s.jsx)("div", { className: q.Cz, children: (0, s.jsx)(Z, { className: q.UE }) });
             if (
                 a.message.type === X.lAJ.USER_JOIN ||
@@ -266,7 +272,7 @@ function et(e) {
                 return (0, s.jsx)(u.q, { size: "md", color: "currentColor", className: q.Cw });
             if (a.message.type === X.lAJ.POLL_RESULT)
                 return (0, s.jsx)(h.Y, { className: q.Vs, width: K.eJ, height: K.eJ, size: "custom" });
-            function M() {
+            function j() {
                 var e, t;
                 return a.state !== J.a.LOADED
                     ? null
@@ -275,30 +281,30 @@ function et(e) {
                       (0, s.jsx)("img", {
                           alt: "",
                           src:
-                              C?.guildMemberAvatar != null && null != t
-                                  ? (0, z.s7)({ guildId: t, userId: e.id, avatar: C.guildMemberAvatar })
+                              g?.guildMemberAvatar != null && null != t
+                                  ? (0, z.s7)({ guildId: t, userId: e.id, avatar: g.guildMemberAvatar })
                                   : e.getAvatarURL(t, 16),
-                          onClick: x,
-                          onContextMenu: p,
-                          className: r()({ [q.mf]: !0, [q.vk]: null != x }),
+                          onClick: p,
+                          onContextMenu: x,
+                          className: r()({ [q.mf]: !0, [q.vk]: null != p }),
                           ref: f,
                       }));
             }
-            return null != t && null != g
-                ? (0, s.jsx)(j.f5, {
+            return null != t && null != C
+                ? (0, s.jsx)(M.f5, {
                       value: N,
                       children: (0, s.jsx)(m.Y, {
                           targetElementRef: f,
                           renderPopout: t,
-                          shouldShow: g,
+                          shouldShow: C,
                           position: "right",
                           onRequestClose: A,
-                          children: M,
+                          children: j,
                       }),
                   })
-                : (0, s.jsx)(j.f5, { value: N, children: M() });
+                : (0, s.jsx)(M.f5, { value: N, children: j() });
         })(e, v, i.type),
-        I = (function (e, t) {
+        L = (function (e, t) {
             let {
                     baseMessage: l,
                     channel: n,
@@ -362,14 +368,14 @@ function et(e) {
                                         className: q.wl,
                                         children: [
                                             e.isClip &&
-                                                (0, s.jsx)(C.x, { size: "xs", color: "currentColor", className: q.te }),
-                                            (0, s.jsx)(g.E, {
+                                                (0, s.jsx)(g.x, { size: "xs", color: "currentColor", className: q.te }),
+                                            (0, s.jsx)(C.E, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-default",
                                                 className: q.CD,
                                                 children: e.title ?? Y.intl.string(Y.t.Cyxddp),
                                             }),
-                                            (0, s.jsxs)(g.E, {
+                                            (0, s.jsxs)(C.E, {
                                                 ref: a,
                                                 variant: "text-sm/normal",
                                                 color: "text-link",
@@ -384,7 +390,7 @@ function et(e) {
                     let {
                         contentPlaceholder: u,
                         renderedContent: m,
-                        trailingIcon: p,
+                        trailingIcon: x,
                         leadingIcon: A,
                     } = ee(i.message, a, o, c, q.Io, {
                         trailingIconClass: q.$4,
@@ -399,11 +405,11 @@ function et(e) {
                                 onClick: h,
                                 onMouseEnter: l,
                                 onMouseLeave: l,
-                                children: (0, s.jsx)(x.R, {
+                                children: (0, s.jsx)(p.R, {
                                     children: m ?? (0, s.jsx)("span", { className: q.MK, children: u }),
                                 }),
                             }),
-                            p,
+                            x,
                         ],
                     });
                 }
@@ -421,7 +427,7 @@ function et(e) {
                 default:
                     (0, V.xb)(i);
             }
-        })(e, M, _),
+        })(e, j, I),
         R = n.useMemo(() => (e.compact ? (0, H.A)((0, G.i$)(o()(), "LT")) : null), [e.compact]);
     null != l && null != a && (t = Y.intl.formatToPlainString(Y.t.RhbQ2K, { author: a?.nick, repliedAuthor: l?.nick }));
     let O = i.type === X.lAJ.CONTEXT_MENU_COMMAND;
@@ -435,13 +441,13 @@ function et(e) {
                 (0, s.jsx)(d.D, {
                     tag: "div",
                     "aria-label": Y.intl.string(Y.t.dpjpOp),
-                    className: r()(q.Uo, { [q.xe]: M }),
+                    className: r()(q.Uo, { [q.xe]: j }),
                     onClick: e.onClickReply,
-                    onMouseEnter: _,
-                    onMouseLeave: _,
+                    onMouseEnter: I,
+                    onMouseLeave: I,
                 }),
+            _,
             L,
-            I,
             P,
         ],
     });

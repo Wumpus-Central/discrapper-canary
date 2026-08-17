@@ -34,7 +34,7 @@ function m(e) {
         ? (0, s.jsx)(r.D, {
               className: h.qc,
               onClick: C,
-              children: (0, s.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
+              children: (0, s.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
           })
         : (0, s.jsx)("div", {
               className: n()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),

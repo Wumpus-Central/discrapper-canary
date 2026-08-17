@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(97808),
     h = n(778712),
     x = n(866665),
-    A = n(194261),
-    p = n(442433),
+    p = n(194261),
+    A = n(442433),
     f = n(392054),
     b = n(168186),
     j = n(47167),
@@ -21,12 +21,12 @@ var i = n(477900),
     E = n(201275),
     C = n(657048),
     v = n(734057),
-    T = n(696451),
-    I = n(317525),
+    I = n(696451),
+    T = n(317525),
     S = n(994500),
     y = n(351906),
-    O = n(287809),
-    k = n(427262),
+    k = n(287809),
+    O = n(427262),
     L = n(652215),
     w = n(375708),
     R = n(487763);
@@ -36,7 +36,7 @@ function M(e) {
     o()(d, "No lockTooltipText provided while isLocked=true");
     let u = l.useCallback(
         (e) => {
-            (0, p.L3)(e, async () => {
+            (0, A.L3)(e, async () => {
                 let { default: e } = await n.e("715687").then(n.bind(n, 646938));
                 return (t) => (0, i.jsx)(e, { ...t, id: s, label: w.intl.string(w.t.oJ1Muw) });
             });
@@ -59,17 +59,17 @@ function _(e) {
             icon: g,
             name: h,
             categoryName: x,
-        } = (0, c.cf)([v.A, O.default, S.A], () => {
+        } = (0, c.cf)([v.A, k.default, S.A], () => {
             if (m === n) return { name: w.intl.string(w.t["7YqSGx"]), icon: d.N };
             let e = v.A.getChannel(n),
                 i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
             return {
                 icon: null != e ? (0, N.gU)(e, t) : null,
-                name: null != e ? (0, j.m1)(e, O.default, S.A) : void 0,
-                categoryName: null != i ? (0, j.m1)(i, O.default, S.A) : void 0,
+                name: null != e ? (0, j.m1)(e, k.default, S.A) : void 0,
+                categoryName: null != i ? (0, j.m1)(i, k.default, S.A) : void 0,
             };
         }, [m, t, n]),
-        A = l.useCallback(
+        p = l.useCallback(
             (e) => {
                 n !== m && o(e);
             },
@@ -78,7 +78,7 @@ function _(e) {
     return null == g || null == h
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: A,
+              onContextMenu: p,
               className: R.Cv,
               children: [
                   (0, i.jsx)(g, {
@@ -98,13 +98,13 @@ function _(e) {
 }
 function P(e) {
     let { guild: t, id: s, isLocked: r, lockTooltipText: o } = e,
-        d = (0, c.bG)([I.A], () => I.A.getRole(t.id, s)),
+        d = (0, c.bG)([T.A], () => T.A.getRole(t.id, s)),
         g = (0, E.$7)({ guildId: t.id, roleId: s, size: 24 }),
         h = l.useCallback(
             (e) => {
                 null != t &&
                     null != d &&
-                    (0, p.L3)(e, async () => {
+                    (0, A.L3)(e, async () => {
                         let { default: e } = await n.e("41072").then(n.bind(n, 165747));
                         return (n) => (0, i.jsx)(e, { ...n, guild: t, role: d });
                     });
@@ -138,8 +138,8 @@ function P(e) {
 }
 function G(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: a } = e,
-        r = (0, c.bG)([O.default], () => O.default.getUser(n)),
-        o = (0, c.bG)([T.Ay], () => T.Ay.getMember(t.id, n)?.nick, [t.id, n]),
+        r = (0, c.bG)([k.default], () => k.default.getUser(n)),
+        o = (0, c.bG)([I.Ay], () => I.Ay.getMember(t.id, n)?.nick, [t.id, n]),
         d = (0, c.bG)([y.A], () => y.A.hidePersonalInformation);
     return null == r
         ? null
@@ -161,7 +161,7 @@ function G(e) {
                   }),
                   d
                       ? null
-                      : (0, i.jsx)(u.E, { className: R.Tc, variant: "text-sm/normal", children: k.Ay.getUserTag(r) }),
+                      : (0, i.jsx)(u.E, { className: R.Tc, variant: "text-sm/normal", children: O.Ay.getUserTag(r) }),
                   l ? (0, i.jsx)(W, { tooltipText: s }) : null,
               ],
           });
@@ -172,7 +172,7 @@ function W(e) {
         text: t,
         children: (0, i.jsx)("div", {
             className: R.hz,
-            children: (0, i.jsx)(A.X, { size: "xs", color: "currentColor" }),
+            children: (0, i.jsx)(p.LockIcon, { size: "xs", color: "currentColor" }),
         }),
     });
 }

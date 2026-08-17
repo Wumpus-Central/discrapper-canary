@@ -20,8 +20,8 @@ var i = r(477900),
     C = r(866665),
     T = r(939249),
     D = r(831453),
-    y = r(775602),
-    I = r(793574),
+    I = r(775602),
+    y = r(793574),
     w = r(688810),
     _ = r(925895),
     G = r(702211),
@@ -175,9 +175,9 @@ function K(e) {
         [ef, ep] = n.useState(0),
         [ex, eR] = n.useState(!1),
         [eC, eT] = n.useState("x"),
-        eD = (0, g.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
-        { analyticsLocations: ey } = (0, w.Ay)(I.A.IMAGE_CROPPING_MODAL),
-        { isGIF: eI, isCheckingAnimation: ew, isEditableAnimatedImage: e_ } = (0, H._)(t),
+        eD = (0, g.bG)([I.Ay], () => I.Ay.keyboardModeEnabled),
+        { analyticsLocations: eI } = (0, w.Ay)(y.A.IMAGE_CROPPING_MODAL),
+        { isGIF: ey, isCheckingAnimation: ew, isEditableAnimatedImage: e_ } = (0, H._)(t),
         eG = eE || em || ew,
         eb = null != eo && ea.right > 0,
         eN = null != eo && ea.top > 0,
@@ -194,15 +194,15 @@ function K(e) {
         ek = ev > 0 ? Math.round(((ea.top - el.y) / ev) * 100) : 0,
         eB = ev > 0 ? Math.round(((ea.top + el.y) / ev) * 100) : 0;
     n.useEffect(() => {
-        eI &&
+        ey &&
             $ &&
             L.default.track(M.HAw.OPEN_MODAL, {
                 type: M.JJy.CROP_GIF_MODAL,
                 location: { page: Q },
-                location_stack: ey,
+                location_stack: eI,
                 upload_type: K,
             });
-    }, [$, Q, eI, ey, K]);
+    }, [$, Q, ey, eI, K]);
     let eP = n.useCallback(
             (e, t, r, i) => {
                 (X.current = (0, O.F3)(e, t, r)),
@@ -422,7 +422,7 @@ function K(e) {
     let e5 = K === v.HL.AVATAR || K === v.HL.BANNER,
         e3 = (0, G.b)(!e5);
     return (0, i.jsx)(w.f5, {
-        value: ey,
+        value: eI,
         children: (0, i.jsxs)(u.Modal, {
             title: k.intl.string(k.t.DxAYCF),
             size: "md",
@@ -453,7 +453,7 @@ function K(e) {
                         type: K,
                         analyticsPage: Q,
                         analyticsSection: M.JJy.CROP_GIF_MODAL,
-                        isGIF: eI,
+                        isGIF: ey,
                         banner: r,
                     }),
                 (0, i.jsxs)("div", {
@@ -606,7 +606,7 @@ function K(e) {
                                         (0, i.jsxs)("div", {
                                             className: B.mu,
                                             children: [
-                                                (0, i.jsx)(x.x, {
+                                                (0, i.jsx)(x.ImageIcon, {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                     className: B.HQ,
@@ -631,7 +631,11 @@ function K(e) {
                                                     },
                                                     ef,
                                                 ),
-                                                (0, i.jsx)(x.x, { size: "md", color: "currentColor", className: B.HQ }),
+                                                (0, i.jsx)(x.ImageIcon, {
+                                                    size: "md",
+                                                    color: "currentColor",
+                                                    className: B.HQ,
+                                                }),
                                             ],
                                         }),
                                         (0, i.jsx)(C.m, {

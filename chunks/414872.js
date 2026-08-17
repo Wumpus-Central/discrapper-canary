@@ -80,7 +80,7 @@ let y = function (e) {
                     (0, l.jsx)("div", { className: C.Mq }),
                     (0, l.jsx)("div", {
                         className: C._Y,
-                        children: (0, l.jsx)(c.X, { size: "xs", color: i ? "black" : "white" }),
+                        children: (0, l.jsx)(c.LockIcon, { size: "xs", color: i ? "black" : "white" }),
                     }),
                     (0, l.jsx)("div", { className: C.Ss }),
                 ],

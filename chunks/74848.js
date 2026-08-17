@@ -10,7 +10,7 @@ var s = i(582128),
     g = i(597601),
     u = i(444927),
     v = i(475743),
-    I = i(293246),
+    I = i(453028),
     h = i(403362),
     A = i(723702),
     D = i(835498),
@@ -65,7 +65,7 @@ function T(e, t) {
     }
     switch (t) {
         case f.oh.AUDIO_INPUT:
-            return o.c;
+            return o.MicrophoneIcon;
         case f.oh.AUDIO_OUTPUT:
             return g.L;
         case f.oh.VIDEO_INPUT:

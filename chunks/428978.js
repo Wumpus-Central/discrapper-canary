@@ -1,16 +1,16 @@
 n.d(e, { Zq: () => p, jD: () => f }), n(321073);
 var l = n(477900),
     i = n(582128),
-    s = n(451988),
-    r = n(405433),
+    r = n(451988),
+    s = n(405433),
     a = n(933832),
     u = n(173936),
     c = n(782603),
     d = n(408278),
     o = n(365199),
     m = n(964486),
-    g = n(625142),
-    h = n(988794),
+    h = n(625142),
+    g = n(988794),
     v = n(375708);
 function p(t) {
     let {
@@ -21,50 +21,50 @@ function p(t) {
             isChannelPublic: o = !0,
             entityType: p,
             onJoinClick: f,
-            onRsvpClick: A,
+            onRsvpClick: C,
             onStartClick: E,
             onInviteClick: y,
-            onEndClick: C,
+            onEndClick: A,
             onJoinGuildClick: _,
             isJoined: x = !1,
-            channel: b,
+            channel: k,
         } = t,
-        j = void 0 !== f,
-        k = (function (t) {
+        I = void 0 !== f,
+        b = (function (t) {
             let { onInviteClick: e, canInvite: n, isChannelPublic: l, channel: c } = t,
-                d = new s.Ep(),
-                [o, h] = i.useState(!1);
+                d = new r.Ep(),
+                [o, g] = i.useState(!1);
             return ((0, m.Ay)(() => () => {
                 d.stop();
             }),
             null == e)
                 ? null
-                : (0, g.y)(n ?? !1, l ?? !1, c)
+                : (0, h.y)(n ?? !1, l ?? !1, c)
                   ? {
                         variant: "secondary",
-                        icon: r.l,
+                        icon: s.ShareIcon,
                         onClick: e,
                         text: v.intl.string(v.t.RDE0Sc),
                         "aria-label": v.intl.string(v.t.Ej3B3Y),
                     }
                   : {
                         variant: "secondary",
-                        icon: o ? a.A : u.q,
+                        icon: o ? a.CheckmarkLargeIcon : u.LinkIcon,
                         onClick: function (t) {
                             e?.(t, () => {
-                                h(!0), d.start(1e3, () => h(!1));
+                                g(!0), d.start(1e3, () => g(!1));
                             });
                         },
                         disabled: o,
                         text: o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
                         "aria-label": o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
                     };
-        })({ onInviteClick: y, canInvite: d, isChannelPublic: o, channel: b }),
+        })({ onInviteClick: y, canInvite: d, isChannelPublic: o, channel: k }),
         D = [];
     if (
-        (null != k && D.push(k),
+        (null != b && D.push(b),
         e &&
-            p !== h.Ps.EXTERNAL &&
+            p !== g.Ps.EXTERNAL &&
             D.push({
                 variant: "active",
                 size: "sm",
@@ -78,30 +78,35 @@ function p(t) {
                               ? v.intl.string(v.t.nxUtoQ)
                               : v.intl.string(v.t.ZYO5OK)
                         : v.intl.string(v.t.TVBCKZ);
-                })({ isJoined: x, canJoin: j, isVoiceChannel: p === h.Ps.VOICE }),
-                disabled: !j,
+                })({ isJoined: x, canJoin: I, isVoiceChannel: p === g.Ps.VOICE }),
+                disabled: !I,
             }),
         n && null != _ && D.push({ variant: "active", size: "sm", text: v.intl.string(v.t["2BP08E"]), onClick: _ }),
-        !n && !e && null != A)
+        !n && !e && null != C)
     ) {
         let t = l && !n;
         D.push({
             variant: t ? "active" : "secondary",
             size: "sm",
-            icon: t ? a.A : c.X,
+            icon: t ? a.CheckmarkLargeIcon : c.BellIcon,
             text: v.intl.string(v.t.DlcqlU),
-            onClick: A,
+            onClick: C,
             disabled: n,
             "aria-pressed": t,
         });
     }
     return (
         e || null == E || D.push({ variant: "primary", size: "sm", onClick: E, text: v.intl.string(v.t.I0v0Qv) }),
-        e && null != C && D.push({ variant: "secondary", size: "sm", onClick: C, text: v.intl.string(v.t.qaYzPA) }),
+        e && null != A && D.push({ variant: "secondary", size: "sm", onClick: A, text: v.intl.string(v.t.qaYzPA) }),
         D
     );
 }
 function f(t) {
     let { onClick: e } = t;
-    return (0, l.jsx)(d.K, { icon: o.j, variant: "secondary", "aria-label": v.intl.string(v.t.bt75uw), onClick: e });
+    return (0, l.jsx)(d.K, {
+        icon: o.MoreHorizontalIcon,
+        variant: "secondary",
+        "aria-label": v.intl.string(v.t.bt75uw),
+        onClick: e,
+    });
 }

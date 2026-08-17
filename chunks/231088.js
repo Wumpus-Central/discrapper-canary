@@ -6,8 +6,8 @@ var n = i(477900),
     a = i(621466),
     o = i(219869),
     d = i(17928),
-    u = i(866665),
-    c = i(695366),
+    c = i(866665),
+    u = i(695366),
     g = i(738188),
     m = i(834730),
     x = i(939249),
@@ -16,8 +16,8 @@ var n = i(477900),
 function p(e) {
     let { value: t, onCommit: i, disabled: n = !1 } = e,
         [s, r] = l.useState("idle"),
-        [o, u] = l.useState(t),
-        c = "editing" === s && !n,
+        [o, c] = l.useState(t),
+        u = "editing" === s && !n,
         g = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         m = l.useRef(null),
         x = l.useRef(null),
@@ -25,7 +25,7 @@ function p(e) {
         p = l.useRef(!1),
         I = l.useRef(!0),
         j = l.useCallback(() => {
-            (I.current = !1), u(t), r("editing");
+            (I.current = !1), c(t), r("editing");
         }, [t]),
         A = l.useRef(o);
     l.useLayoutEffect(() => {
@@ -41,41 +41,41 @@ function p(e) {
         "done" === s && (p.current && m.current?.focus({ preventScroll: !0 }), (p.current = !1));
     }, [s]),
         l.useEffect(() => {
-            c &&
+            u &&
                 (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
                 h.current?.focus({ preventScroll: !0 }));
-        }, [c, g]);
+        }, [u, g]);
     let S = l.useCallback(
             (e) => {
-                !c || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
+                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
             },
-            [c, v],
+            [u, v],
         ),
         C = l.useCallback(
             (e) => {
-                c && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), E());
+                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), E());
             },
-            [c, E],
+            [u, E],
         ),
         b = l.useCallback(() => {
             (p.current = !0), v();
         }, [v]),
-        N = l.useCallback(() => {
+        T = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
-        T = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), N())
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
                     : (e.preventDefault(), b());
             },
-            [b, N],
+            [b, T],
         );
     return {
-        isEditing: c,
+        isEditing: u,
         committedValue: t,
         editedValue: o,
-        setEditedValue: u,
+        setEditedValue: c,
         editButtonRef: m,
         wrapperRef: x,
         inputRef: h,
@@ -83,8 +83,8 @@ function p(e) {
         handleCommit: v,
         handleCancel: E,
         handleInputCommit: b,
-        handleInputCancel: N,
-        onInputKeyDown: T,
+        handleInputCancel: T,
+        onInputKeyDown: N,
         onBlur: S,
         onContainerKeyDown: C,
     };
@@ -95,12 +95,12 @@ function I(e) {
             className: h.L7,
             children: (0, n.jsx)(o.T, { ...i, size: "sm", variant: "input-accessory" }),
         });
-    return null == t ? l : (0, n.jsx)(u.m, { text: t, ariaHidden: !0, children: l });
+    return null == t ? l : (0, n.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
 }
 function j(e) {
     let { id: t, message: i, type: l } = e,
         s = "error" === l,
-        r = s ? c.E : g.i;
+        r = s ? u.E : g.WarningIcon;
     return (0, n.jsxs)(m.E, {
         id: t,
         variant: "text-xs/normal",
@@ -117,8 +117,8 @@ function A(e) {
             input: a,
             editButtonRef: o,
             editButtonAriaLabel: d,
-            onStartEditing: u,
-            variant: c = "default",
+            onStartEditing: c,
+            variant: u = "default",
             trailing: g,
             previewErrorMessage: f,
             previewWarningMessage: p,
@@ -128,12 +128,12 @@ function A(e) {
             onKeyDown: S,
             disabled: C = !1,
             growWidth: b = !1,
-            removeVerticalPadding: N = !1,
+            removeVerticalPadding: T = !1,
         } = e,
-        T = l.useRef(null),
+        N = l.useRef(null),
         w = l.useId(),
-        k = l.useId(),
-        y = null == i,
+        y = l.useId(),
+        k = null == i,
         R = null != f,
         O = null != p && !R,
         _ = R ? "error" : O ? "warning" : null,
@@ -143,14 +143,14 @@ function A(e) {
         [G, M] = l.useState(!1);
     G || t === D || M(!0);
     let U = [];
-    y && U.push(w), P && "compact" !== c && U.push(k);
-    let F = U.length > 0 ? U.join(" ") : void 0,
-        W = (0, n.jsxs)("div", {
-            ref: T,
+    k && U.push(w), P && "compact" !== u && U.push(y);
+    let W = U.length > 0 ? U.join(" ") : void 0,
+        F = (0, n.jsxs)("div", {
+            ref: N,
             className: r()(h.LL, { [h.JD]: R, [h.xe]: O, [h.r9]: C }),
-            onClick: C ? void 0 : u,
+            onClick: C ? void 0 : c,
             children: [
-                y
+                k
                     ? (0, n.jsx)(m.E, {
                           id: w,
                           variant: "text-sm/normal",
@@ -163,19 +163,19 @@ function A(e) {
                     (0, n.jsx)(x.D, {
                         innerRef: o,
                         "aria-label": d,
-                        "aria-describedby": F,
+                        "aria-describedby": W,
                         "aria-expanded": !1,
                         onClick: (e) => {
-                            e.stopPropagation(), u();
+                            e.stopPropagation(), c();
                         },
-                        focusProps: { ringTarget: T },
+                        focusProps: { ringTarget: N },
                     }),
                 null != g && (0, n.jsx)("div", { className: h.lD, children: (0, n.jsx)(I, { ...g }) }),
             ],
         });
     return (0, n.jsx)("div", {
         ref: v,
-        className: r()(h.kL, { [h.oE]: "compact" === c, [h.c1]: "multiline" === c, [h.CP]: b, [h.WK]: N }, A),
+        className: r()(h.kL, { [h.oE]: "compact" === u, [h.c1]: "multiline" === u, [h.CP]: b, [h.WK]: T }, A),
         onBlur: E,
         onKeyDown: S,
         children: (0, n.jsx)(
@@ -186,8 +186,8 @@ function A(e) {
                     ? a
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)("div", { className: h.VH, children: W }),
-                              P && "compact" !== c && (0, n.jsx)(j, { id: k, message: L, type: _ }),
+                              (0, n.jsx)("div", { className: h.VH, children: F }),
+                              P && "compact" !== u && (0, n.jsx)(j, { id: y, message: L, type: _ }),
                           ],
                       }),
             },

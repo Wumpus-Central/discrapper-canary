@@ -1,8 +1,8 @@
 n.d(a, { default: () => j });
 var i = n(477900),
-    t = n(582128),
-    s = n(503698),
-    l = n.n(s),
+    s = n(582128),
+    t = n(503698),
+    l = n.n(t),
     r = n(935462),
     d = n(192308),
     c = n(825484),
@@ -17,27 +17,27 @@ var i = n(477900),
     k = n(468963),
     C = n(486128);
 let j = function (e) {
-    let { onClose: a, onComplete: n, transitionState: s, webviewUrl: j } = e,
+    let { onClose: a, onComplete: n, transitionState: t, webviewUrl: j } = e,
         v = (0, h.W$)(),
-        [b, w] = t.useState(0),
-        E = t.useCallback(() => {
+        [b, w] = s.useState(0),
+        E = s.useCallback(() => {
             n(), a();
         }, [n, a]),
-        W = t.useCallback(() => {
+        W = s.useCallback(() => {
             (0, d.hasModalOpen)(f.SW) && E();
         }, [E]);
     (0, m.dZ)(W);
-    let M = t.useCallback(
+    let M = s.useCallback(
             (e) => {
                 v && "" !== j && e?.data?.eventType === "Verification.Result" && E();
             },
             [j, E, v],
         ),
-        y = t.useCallback(() => {
+        y = s.useCallback(() => {
             w(b + 1);
         }, [b]);
     return (
-        t.useEffect(
+        s.useEffect(
             () => (
                 window.addEventListener("message", M),
                 () => {
@@ -48,7 +48,7 @@ let j = function (e) {
         ),
         (0, i.jsxs)(r.EO, {
             "data-migration-pending": !0,
-            transitionState: s,
+            transitionState: t,
             className: l()(C.zr, k.rh),
             parentComponent: "AgeVerificationExpressiveModal",
             size: r.rI.MEDIUM,
@@ -78,7 +78,7 @@ let j = function (e) {
                             (0, i.jsx)(o.$, {
                                 fullWidth: !0,
                                 variant: "secondary",
-                                icon: p.f,
+                                icon: p.RefreshIcon,
                                 text: x.intl.string(g.default["0vTx7j"]),
                                 onClick: y,
                             }),

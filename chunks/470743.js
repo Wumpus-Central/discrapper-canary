@@ -1,26 +1,26 @@
-s.d(n, { A: () => A });
-var t = s(477900);
-s(582128);
-var e = s(477782),
-    c = s(625903),
-    o = s(688810),
-    a = s(523527),
-    r = s(267102),
-    d = s(780964),
-    p = s(766075),
-    u = s(652215),
-    l = s(375708);
-function A() {
-    let i = (0, r.Us)(),
-        { analyticsLocations: n } = (0, o.Ay)();
-    return (0, t.jsx)(e.Dr, {
+t.d(i, { A: () => g });
+var s = t(477900);
+t(582128);
+var e = t(477782),
+    c = t(625903),
+    o = t(688810),
+    a = t(523527),
+    r = t(267102),
+    d = t(780964),
+    p = t(766075),
+    u = t(652215),
+    l = t(375708);
+function g() {
+    let n = (0, r.Us)(),
+        { analyticsLocations: i } = (0, o.Ay)();
+    return (0, s.jsx)(e.Dr, {
         id: "voice-and-video-settings",
         label: l.intl.string(l.t.dsXapM),
         action: function () {
-            (0, a.A)(null, i === u.BRT.POPOUT),
-                (0, p.openUserSettings)(d.X.VOICE_AND_VIDEO_PANEL, { analyticsLocations: n });
+            (0, a.A)(null, n === u.BRT.POPOUT),
+                (0, p.openUserSettings)(d.X.VOICE_AND_VIDEO_PANEL, { analyticsLocations: i });
         },
-        icon: c.Z,
-        leadingAccessory: { type: "icon", icon: c.Z },
+        icon: c.SettingsIcon,
+        leadingAccessory: { type: "icon", icon: c.SettingsIcon },
     });
 }

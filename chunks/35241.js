@@ -1,8 +1,8 @@
 n.d(t, { A: () => R });
 var r = n(477900),
     i = n(582128),
-    l = n(922016),
-    o = n(980707),
+    o = n(922016),
+    l = n(980707),
     a = n(477782),
     s = n(365199),
     u = n(793574),
@@ -28,11 +28,11 @@ function R(e) {
         ];
     return O.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(l.Y, {
+        : (0, r.jsx)(o.Y, {
               targetElementRef: R,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(o.W, {
+                  return (0, r.jsx)(l.W, {
                       "data-menu-migrated-auto": !0,
                       navId: "non-user-bot-profile-overflow-menu",
                       onSelect: void 0,
@@ -45,7 +45,7 @@ function R(e) {
                   (0, r.jsx)(h.br, {
                       buttonRef: R,
                       action: "PRESS_OPTIONS",
-                      icon: s.j,
+                      icon: s.MoreHorizontalIcon,
                       tooltipText: E.intl.string(E.t["UKOtz+"]),
                       ...e,
                   }),

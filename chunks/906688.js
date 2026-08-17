@@ -40,13 +40,13 @@ function g(e) {
         children: [
             (0, i.jsx)("div", {
                 className: h.r5,
-                children: (0, i.jsx)(a.O, { size: "custom", color: n ? p : S.trophy, width: N, height: N }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? p : S.trophy, width: N, height: N }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: h.dq,
                     style: f,
-                    children: (0, i.jsx)(o.X, { size: "custom", color: S.locked, ...m }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: S.locked, ...m }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&

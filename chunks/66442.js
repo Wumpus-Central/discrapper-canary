@@ -1,4 +1,4 @@
-n.d(t, { X: () => I, default: () => w });
+n.d(t, { X: () => E, default: () => w });
 var a = n(477900),
     i = n(582128),
     l = n(503698),
@@ -21,8 +21,8 @@ var a = n(477900),
     D = n(396787),
     C = n(652215),
     j = n(375708),
-    E = n(330157);
-function I(e) {
+    I = n(330157);
+function E(e) {
     let {
             channel: t,
             previewIcon: n,
@@ -37,22 +37,22 @@ function I(e) {
         { analyticsLocations: y } = (0, v.Ay)(o, p.A.GROUP_DM_ICON_EDITOR),
         f = c ? 32 : 64;
     return (0, a.jsxs)("div", {
-        className: s()(E.r2, m),
+        className: s()(I.r2, m),
         children: [
             (0, a.jsxs)(r.D, {
-                className: s()(E.zc, { [E.ud]: c }),
+                className: s()(I.zc, { [I.ud]: c }),
                 "aria-label": j.intl.string(j.t["0qPSMV"]),
                 onClick: () => (0, D.F5)(i, y),
                 children: [
                     null != A
-                        ? (0, a.jsx)("img", { src: A, alt: "", className: E.Dp })
+                        ? (0, a.jsx)("img", { src: A, alt: "", className: I.Dp })
                         : (0, a.jsx)("div", {
-                              className: E.Pz,
+                              className: I.Pz,
                               children: (0, a.jsx)(d.n, { size: "custom", width: f, height: f, color: "currentColor" }),
                           }),
                     (0, a.jsx)("div", {
-                        className: E.qc,
-                        children: (0, a.jsx)(u.R, { color: "currentColor", size: c ? "xs" : "refresh_sm" }),
+                        className: I.qc,
+                        children: (0, a.jsx)(u.PencilIcon, { color: "currentColor", size: c ? "xs" : "refresh_sm" }),
                     }),
                 ],
             }),
@@ -85,19 +85,19 @@ let w = function (e) {
         x = (0, y.e5)(u),
         [w, T] = i.useState(h ?? ""),
         [b, k] = i.useState(void 0),
-        R = void 0 !== b,
-        { analyticsLocations: N } = (0, v.Ay)(d, p.A.GROUP_DM_EDIT_MODAL),
+        N = void 0 !== b,
+        { analyticsLocations: R } = (0, v.Ay)(d, p.A.GROUP_DM_EDIT_MODAL),
         M = {
             channel_id: t,
             channel_type: u?.type,
             location: d,
-            location_stack: N,
+            location_stack: R,
             old_name_set: "" !== h,
             old_icon_set: u?.icon != null,
         };
     return (i.useEffect(() => {
-        s(w !== h || R);
-    }, [w, h, R, s]),
+        s(w !== h || N);
+    }, [w, h, N, s]),
     (0, A.Ay)(
         () => (
             g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...M, action: "opened" }),
@@ -109,7 +109,7 @@ let w = function (e) {
     null == u)
         ? null
         : (0, a.jsx)(v.f5, {
-              value: N,
+              value: R,
               children: (0, a.jsx)("form", {
                   onSubmit: function (e) {
                       e.preventDefault();
@@ -139,20 +139,20 @@ let w = function (e) {
                               text: j.intl.string(j.t["R3BPH+"]),
                               variant: "primary",
                               type: "submit",
-                              disabled: w === h && !R,
+                              disabled: w === h && !N,
                           },
                       ],
                       onClose: () => Promise.resolve(r()),
                       transitionState: l,
                       children: (0, a.jsxs)("div", {
-                          className: E.jE,
+                          className: I.jE,
                           children: [
-                              (0, a.jsx)(I, {
+                              (0, a.jsx)(E, {
                                   channel: u,
                                   previewIcon: b,
                                   onIconChange: (e) => k(e.imageUri),
                                   onIconRemove: () => k(null),
-                                  analyticsLocations: N,
+                                  analyticsLocations: R,
                               }),
                               (0, a.jsx)(m.k, {
                                   "aria-label": j.intl.string(j.t.GEGW3P),

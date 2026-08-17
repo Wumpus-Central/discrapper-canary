@@ -18,9 +18,9 @@ var i = n(477900),
     E = n(95477),
     _ = n(155718),
     A = n(47167),
-    f = n(333369),
-    C = n(568185),
-    I = n(219444),
+    I = n(333369),
+    f = n(568185),
+    C = n(219444),
     j = n(62357),
     k = n(95701),
     y = n(769765),
@@ -42,7 +42,7 @@ function T(t) {
         [Z, q] = l.useState(!1),
         J = (0, a.bG)([D.A], () => D.A.getGuild(e), [e]),
         K = (0, j.R)(e),
-        Q = (0, I.V)(J),
+        Q = (0, C.V)(J),
         Y = l.useMemo(
             () =>
                 (function (t) {
@@ -77,7 +77,7 @@ function T(t) {
                         }),
                         n &&
                             l.push({
-                                icon: h.x,
+                                icon: h.ImageIcon,
                                 label: R.intl.string(R.t["6x6fVg"]),
                                 value: w.rbe.GUILD_MEDIA,
                                 description: R.intl.string(R.t.JyCrwS),
@@ -95,7 +95,7 @@ function T(t) {
                                                 (0, i.jsxs)(b.E, {
                                                     variant: "text-md/normal",
                                                     color: "text-strong",
-                                                    children: [n, (0, i.jsx)(f.p, { isBeta: s })],
+                                                    children: [n, (0, i.jsx)(I.p, { isBeta: s })],
                                                 }),
                                                 (0, i.jsx)(b.E, {
                                                     variant: "text-xs/normal",
@@ -148,7 +148,7 @@ function T(t) {
             })
                 .then(
                     (t) => {
-                        C.A.checkGuildTemplateDirty(e), T(t.body.id), B();
+                        f.A.checkGuildTemplateDirty(e), T(t.body.id), B();
                     },
                     (t) => {},
                 )

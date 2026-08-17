@@ -135,7 +135,7 @@ let eg = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             "aria-label": ef.intl.string(ef.t.y3LQCG),
                                             className: r()(ep._0, ep.dC, { [ep.k1]: !c && 0 === t, [ep.ls]: !m }),
                                             onClick: a,
-                                            children: (0, l.jsx)(el.G, {
+                                            children: (0, l.jsx)(el.StarIcon, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 className: ep.AB,
@@ -157,7 +157,7 @@ let eg = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             "aria-label": ef.intl.string(ef.t.RxAmVC),
                                             className: r()(ep._0, ep.dC, ep.ls, { [ep.k1]: !c && t === h }),
                                             onClick: a,
-                                            children: (0, l.jsx)(ei.O, {
+                                            children: (0, l.jsx)(ei.ClockIcon, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 className: ep.AB,
@@ -520,7 +520,7 @@ let e4 = function (e) {
     return (0, l.jsx)("div", {
         className: e6.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e8.X, { size: "xxs", color: "currentColor", className: e6.I }),
+        children: (0, l.jsx)(e8.LockIcon, { size: "xxs", color: "currentColor", className: e6.I }),
     });
 };
 var e9 = n(815480);
@@ -901,7 +901,7 @@ let tE = i.forwardRef(function (e, t) {
                                             "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: n.name,
                                             }),
-                                            icon: (0, l.jsx)(el.G, { size: "xs", color: "currentColor" }),
+                                            icon: (0, l.jsx)(el.StarIcon, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
                                             onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,
@@ -916,7 +916,7 @@ let tE = i.forwardRef(function (e, t) {
                                             "aria-label": ef.intl.formatToPlainString(ef.t["7lLCjZ"], {
                                                 categoryName: n.name,
                                             }),
-                                            icon: (0, l.jsx)(ei.O, { size: "xs", color: "currentColor" }),
+                                            icon: (0, l.jsx)(ei.ClockIcon, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
                                             onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,

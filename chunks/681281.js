@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(47167),
     I = n(882840),
     v = n(713654),
-    E = n(611371),
-    N = n(769015),
+    N = n(611371),
+    E = n(769015),
     b = n(208971),
     _ = n(446243),
     T = n(920639),
@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(508654),
     O = n(974930),
     P = n(961314),
-    w = n(58736),
-    M = n(742589),
+    M = n(58736),
+    w = n(742589),
     D = n(376352),
     U = n(131047),
     V = n(46054),
@@ -69,8 +69,8 @@ function Q(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(w.Ay.Divider, { className: q.yF }),
-                    (0, i.jsx)(N.A, { game: n, className: q.RI }),
+                    (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
+                    (0, i.jsx)(E.A, { game: n, className: q.RI }),
                     (0, i.jsx)(c.E, {
                         className: q.W$,
                         variant: "text-md/normal",
@@ -84,7 +84,7 @@ function Q(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(w.Ay.Divider, { className: q.yF }),
+                (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
                 (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
                 (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
             ],
@@ -93,7 +93,7 @@ function Q(e) {
     return (0, i.jsx)("div", { className: q.kL, children: t });
 }
 function J(e) {
-    let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: N, guildRoomVisible: L } = e,
+    let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
         O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
         { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
         D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
@@ -136,7 +136,7 @@ function J(e) {
                                   children: V.A.parseVoiceChannelStatus(ei, !0, { channelId: t.id }),
                               }),
                               ea &&
-                                  (0, i.jsx)(p.R, {
+                                  (0, i.jsx)(p.PencilIcon, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: s()(q.rD, q.BI),
@@ -164,8 +164,8 @@ function J(e) {
     return (0, i.jsxs)("div", {
         className: q.SC,
         children: [
-            (0, i.jsxs)(w.Ay, {
-                onDoubleClick: M.I,
+            (0, i.jsxs)(M.Ay, {
+                onDoubleClick: w.I,
                 transparent: !0,
                 className: q.jr,
                 innerClassName: q.gi,
@@ -176,27 +176,27 @@ function J(e) {
                     appContext: o,
                     inCall: x,
                     isChatOpen: g,
-                    exitFullScreen: N,
+                    exitFullScreen: E,
                     focusedApplication: et,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: L,
                     guildRoomVideoOverlayVisible: D,
                 }),
                 children: [
-                    (0, i.jsx)(w.Ay.Title, {
+                    (0, i.jsx)(M.Ay.Title, {
                         wrapperClassName: q.DD,
                         onClick: B ? eo : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 null != ee
-                                    ? (0, i.jsx)(w.Ay.ChannelIcon, {
+                                    ? (0, i.jsx)(M.Ay.ChannelIcon, {
                                           icon: ee,
                                           "aria-label": en,
                                           color: B ? "white" : void 0,
                                       })
                                     : null,
                                 J,
-                                P && (0, i.jsx)(E.A, { className: q.vW }),
+                                P && (0, i.jsx)(N.A, { className: q.vW }),
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),

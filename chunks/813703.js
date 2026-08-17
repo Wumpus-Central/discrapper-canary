@@ -1,6 +1,6 @@
 r.d(t, { A: () => $ });
-var s = r(477900),
-    n = r(582128),
+var n = r(477900),
+    s = r(582128),
     l = r(503698),
     i = r.n(l),
     a = r(17928),
@@ -28,17 +28,17 @@ var s = r(477900),
     T = r(615300),
     N = r(676949);
 let G = [S.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, S.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
-class D extends n.PureComponent {
+class D extends s.PureComponent {
     state = { backgroundColor: _().sample(G) };
     render() {
         let {
             props: { height: e },
             state: { backgroundColor: t },
         } = this;
-        return (0, s.jsx)("div", { style: { height: e, backgroundColor: t }, className: N.nX });
+        return (0, n.jsx)("div", { style: { height: e, backgroundColor: t }, className: N.nX });
     }
 }
-class j extends n.Component {
+class j extends s.Component {
     static defaultProps = { direction: -1 };
     constructor(e) {
         super(e);
@@ -72,51 +72,51 @@ class j extends n.Component {
     }
     render() {
         let { blocks: e } = this.state;
-        return (0, s.jsxs)(T.A.div, {
+        return (0, n.jsxs)(T.A.div, {
             className: N.fi,
             style: this.getAnimatedStyle(),
             children: [
-                e.map((e, t) => (0, s.jsx)(D, { height: e }, t)),
-                e.map((e, t) => (0, s.jsx)(D, { height: e }, `alt${t}`)),
+                e.map((e, t) => (0, n.jsx)(D, { height: e }, t)),
+                e.map((e, t) => (0, n.jsx)(D, { height: e }, `alt${t}`)),
             ],
         });
     }
 }
 function P(e) {
     let { columns: t } = e;
-    return (0, s.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: N.fi,
         style: { width: `${100 / t}%` },
-        children: [, , , ,].fill(null).map((e, t) => (0, s.jsx)("div", { className: N.c8 }, t)),
+        children: [, , , ,].fill(null).map((e, t) => (0, n.jsx)("div", { className: N.c8 }, t)),
     });
 }
-class k extends n.PureComponent {
+class k extends s.PureComponent {
     render() {
         let { columns: e, renderColumn: t } = this.props;
-        return (0, s.jsx)("div", {
+        return (0, n.jsx)("div", {
             className: N.kL,
             children: Array(e)
                 .fill(null)
-                .map((r, s) => t(e, s)),
+                .map((r, n) => t(e, n)),
         });
     }
 }
 var L = r(285961),
     b = r(652215),
-    U = r(375708),
-    O = r(787004);
-function M(e, t) {
-    return (0, s.jsx)(P, { columns: e }, t);
+    M = r(375708),
+    U = r(787004);
+function O(e, t) {
+    return (0, n.jsx)(P, { columns: e }, t);
 }
-class V extends n.PureComponent {
-    _masonryRef = n.createRef();
+class V extends s.PureComponent {
+    _masonryRef = s.createRef();
     state = {
         favoritesTile: (function (e) {
             let t = _().sample(_().values(e));
             return {
                 type: b.dD.FAVORITES,
-                name: U.intl.string(U.t.y3LQCG),
-                icon: v.G,
+                name: M.intl.string(M.t.y3LQCG),
+                icon: v.StarIcon,
                 src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
                 format: t?.format ?? y.TL.IMAGE,
             };
@@ -153,26 +153,26 @@ class V extends n.PureComponent {
     }
     renderCategoryExtras(e) {
         let { name: t, type: r } = e;
-        return (0, s.jsxs)(n.Fragment, {
+        return (0, n.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)("div", { className: r === b.dD.FAVORITES ? O.H7 : O.FP }),
-                (0, s.jsxs)("div", {
-                    className: O.O1,
+                (0, n.jsx)("div", { className: r === b.dD.FAVORITES ? U.H7 : U.FP }),
+                (0, n.jsxs)("div", {
+                    className: U.O1,
                     children: [
-                        r === b.dD.TRENDING_GIFS ? (0, s.jsx)(C.U, { className: O.Yl, color: "currentColor" }) : null,
-                        (0, s.jsx)("span", { className: O.yb, children: t }),
+                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(C.U, { className: U.Yl, color: "currentColor" }) : null,
+                        (0, n.jsx)("span", { className: U.yb, children: t }),
                     ],
                 }),
             ],
         });
     }
-    renderItem = (e, t, r, n) => {
+    renderItem = (e, t, r, s) => {
         if (e > 0) return null;
         let l = this.getData()[t];
         if (null == l) return;
         let { onSelectItem: i, imagePool: a, videoPool: o } = this.props,
             { focusedId: u } = this.state;
-        return (0, s.jsx)(
+        return (0, n.jsx)(
             L.uG,
             {
                 format: l.format,
@@ -188,17 +188,17 @@ class V extends n.PureComponent {
                 videoPool: o,
                 "aria-label": l.name,
             },
-            n,
+            s,
         );
     };
     renderContent = (e, t, r) => {
-        let { className: n, trendingCategories: l } = this.props;
+        let { className: s, trendingCategories: l } = this.props;
         return 0 === l.length
-            ? (0, s.jsx)(k, { columns: e, width: t, renderColumn: M })
-            : (0, s.jsx)(A.f, {
+            ? (0, n.jsx)(k, { columns: e, width: t, renderColumn: O })
+            : (0, n.jsx)(A.f, {
                   ref: this._masonryRef,
                   fade: !0,
-                  className: i()(O.kL, n),
+                  className: i()(U.kL, s),
                   itemGutter: 12,
                   getItemKey: this.getItemKey,
                   columns: e,
@@ -217,20 +217,20 @@ class V extends n.PureComponent {
         return null != e ? e.getCoordsMap() : {};
     };
     render() {
-        return (0, s.jsx)(w.A, {
+        return (0, n.jsx)(w.A, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, s.jsx)(F.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
+            children: (0, n.jsx)(F.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
         });
     }
 }
 function W(e) {
     let t = (0, a.bG)([f.A], () => f.A.getTrendingCategories()),
         r = (0, I.rM)(),
-        n = (0, L.d5)();
-    return (0, s.jsx)(V, { ...e, ...n, trendingCategories: t, favorites: r });
+        s = (0, L.d5)();
+    return (0, n.jsx)(V, { ...e, ...s, trendingCategories: t, favorites: r });
 }
 var H = r(732139),
     Q = r(650583),
@@ -238,7 +238,7 @@ var H = r(732139),
 function q(e) {
     return e.stopPropagation();
 }
-class B extends n.PureComponent {
+class B extends s.PureComponent {
     state = { resultType: null };
     componentDidMount() {
         m.V$(),
@@ -299,40 +299,40 @@ class B extends n.PureComponent {
     };
     renderHeaderContent() {
         let { query: e, favorites: t, headingColor: r } = this.props,
-            { resultType: n } = this.state;
-        switch (n) {
+            { resultType: s } = this.state;
+        switch (s) {
             case b.dD.FAVORITES:
-                return (0, s.jsxs)("div", {
+                return (0, n.jsxs)("div", {
                     className: K.XK,
                     children: [
-                        (0, s.jsx)(o.D, {
+                        (0, n.jsx)(o.D, {
                             variant: "heading-md/semibold",
                             color: r,
                             className: K.wL,
-                            children: U.intl.string(U.t.y3LQCG),
+                            children: M.intl.string(M.t.y3LQCG),
                         }),
                         t.length > 0 &&
-                            (0, s.jsx)(u.I, {
+                            (0, n.jsx)(u.I, {
                                 query: e,
                                 onChange: g.Ri,
                                 onClear: () => (0, g.Ri)(""),
-                                placeholder: U.intl.string(U.t["+Kakw+"]),
-                                "aria-label": U.intl.string(U.t["+Kakw+"]),
+                                placeholder: M.intl.string(M.t["+Kakw+"]),
+                                "aria-label": M.intl.string(M.t["+Kakw+"]),
                                 ref: this.props.searchBarRef,
                                 autoFocus: !0,
                             }),
                     ],
                 });
             case b.dD.TRENDING_GIFS:
-                return (0, s.jsx)(o.D, {
+                return (0, n.jsx)(o.D, {
                     variant: "heading-md/semibold",
                     color: r,
                     className: K.wL,
-                    children: U.intl.string(U.t.H6zNFz),
+                    children: M.intl.string(M.t.H6zNFz),
                 });
             default: {
                 let t = (0, R.wT)();
-                return (0, s.jsx)(u.I, {
+                return (0, n.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
@@ -349,13 +349,13 @@ class B extends n.PureComponent {
             t = null;
         return (
             null != e &&
-                (t = (0, s.jsx)(c.D, {
+                (t = (0, n.jsx)(c.D, {
                     onClick: this.handleClearQuery,
                     className: K.Gv,
-                    "aria-label": U.intl.string(U.t["13/7kX"]),
-                    children: (0, s.jsx)(d.r, { size: "md", color: "currentColor" }),
+                    "aria-label": M.intl.string(M.t["13/7kX"]),
+                    children: (0, n.jsx)(d.r, { size: "md", color: "currentColor" }),
                 })),
-            (0, s.jsxs)(p.A, { align: p.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
+            (0, n.jsxs)(p.A, { align: p.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
         );
     }
     renderContent() {
@@ -363,7 +363,7 @@ class B extends n.PureComponent {
                 contentClassName: e,
                 resultItems: t,
                 resultQuery: r,
-                query: n,
+                query: s,
                 favorites: l,
                 searchOffset: i,
                 searchLimit: a,
@@ -373,8 +373,8 @@ class B extends n.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, s.jsx)(W, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
-            : (0, s.jsx)(L.Ay, {
+            ? (0, n.jsx)(W, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            : (0, n.jsx)(L.Ay, {
                   className: e,
                   data:
                       d === b.dD.FAVORITES
@@ -385,12 +385,12 @@ class B extends n.PureComponent {
                                     let { url: t } = e;
                                     return t.toLowerCase().replace(/[-_]/g, "").includes(r);
                                 });
-                            })(l, n)
+                            })(l, s)
                           : t,
                   onSelectGIF: this.handleSelectGIF,
                   resultType: d,
                   resultQuery: r,
-                  query: n,
+                  query: s,
                   searchOffset: i,
                   searchLimit: a,
                   searchTotalResults: o,
@@ -401,7 +401,7 @@ class B extends n.PureComponent {
     }
     render() {
         let { className: e, forwardedRef: t } = this.props;
-        return (0, s.jsxs)("div", {
+        return (0, n.jsxs)("div", {
             id: H.ni,
             role: "tabpanel",
             "aria-labelledby": H.g9,
@@ -409,14 +409,14 @@ class B extends n.PureComponent {
             onClick: q,
             ref: t,
             children: [
-                (0, s.jsx)("div", { className: i()(K.wx, this.props.headerClassName), children: this.renderHeader() }),
-                (0, s.jsx)("div", { className: K.Qs, children: this.renderContent() }),
+                (0, n.jsx)("div", { className: i()(K.wx, this.props.headerClassName), children: this.renderHeader() }),
+                (0, n.jsx)("div", { className: K.Qs, children: this.renderContent() }),
             ],
         });
     }
 }
-let $ = n.forwardRef((e, t) => {
-    n.useEffect(
+let $ = s.forwardRef((e, t) => {
+    s.useEffect(
         () => (
             e.persistSearch || ((0, g.Ri)(e.initialQuery ?? ""), m.$P(e.initialQuery ?? "", b.dD.SEARCH)),
             () => {
@@ -438,8 +438,8 @@ let $ = n.forwardRef((e, t) => {
         })),
         u = (0, g.RQ)((e) => e.searchQuery),
         c = (0, I.IE)(),
-        d = n.useRef(null);
-    return (0, s.jsx)(B, {
+        d = s.useRef(null);
+    return (0, n.jsx)(B, {
         ...e,
         forwardedRef: t,
         query: null != r && "" !== r ? r : u,

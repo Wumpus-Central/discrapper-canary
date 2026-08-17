@@ -17,8 +17,8 @@ var n = l(477900),
     E = l(915089),
     f = l(734057),
     S = l(309010),
-    y = l(287809),
-    I = l(625494),
+    I = l(287809),
+    y = l(625494),
     R = l(822382),
     _ = l(753806),
     m = l(121806),
@@ -62,7 +62,12 @@ function W(e) {
                 },
                 className: v.tL,
                 "aria-label": b.intl.formatToPlainString(b.t["2LwBlF"], { filterNumber: t + 1 }),
-                children: (0, n.jsx)(d.u, { size: "md", color: "currentColor", className: v.IT, "aria-hidden": !0 }),
+                children: (0, n.jsx)(d.TrashIcon, {
+                    size: "md",
+                    color: "currentColor",
+                    className: v.IT,
+                    "aria-hidden": !0,
+                }),
             }),
         ],
     });
@@ -204,8 +209,8 @@ function A(e) {
             let e = f.A.getChannel(S.Ay.getChannelId());
             return null != e ? (0, R.E3)(e) : "general";
         }),
-        c = (0, u.bG)([y.default], () => {
-            let e = y.default.getCurrentUser();
+        c = (0, u.bG)([I.default], () => {
+            let e = I.default.getCurrentUser();
             return null != e ? e.username : b.intl.string(b.t.cqpybK);
         }),
         [h, d] = r.useState(_.A.getSearchInputText(i)),
@@ -263,10 +268,10 @@ function A(e) {
             handleAddDateFilter: eE,
             handleRemoveDateFilter: ef,
             handleClearDateFilter: eS,
-            getDateQueryString: ey,
+            getDateQueryString: eI,
         } = (0, m.Ky)(F.dateFilters),
         {
-            options: eI,
+            options: ey,
             query: eR,
             setQuery: e_,
             handleClearFilter: em,
@@ -295,7 +300,7 @@ function A(e) {
         }, [L, D, W, K, A, ea, ee, ep, M, eR, ev]),
         eA = r.useMemo(() => {
             let e = en(C.LWr.FILTER_HAS),
-                t = ey(),
+                t = eI(),
                 l = eO(C.LWr.FILTER_PINNED),
                 n = [];
             if (L) {
@@ -315,7 +320,7 @@ function A(e) {
                 null != e && n.push(e);
             }
             return null != l && n.push(l), [...n].join(" ");
-        }, [L, w, W, X, A, ec, en, ey, M, ex, eO]),
+        }, [L, w, W, X, A, ec, en, eI, M, ex, eO]),
         { validateFilter: eM, validateDateFilter: eQ } = (0, m.dY)({ nonFilterQueryString: Q, filterQueryString: eA }),
         eP = r.useMemo(
             () =>
@@ -332,7 +337,7 @@ function A(e) {
         ),
         eD = r.useCallback(() => {
             if (0 === eA.length && 0 === Q.trim().length) {
-                I._.dispatch(C.jej.SEARCH_RESULTS_CLOSE), l();
+                y._.dispatch(C.jej.SEARCH_RESULTS_CLOSE), l();
                 return;
             }
             let e = `${eA} ${Q}`.trim();
@@ -445,7 +450,7 @@ function A(e) {
                         value: eR,
                         onChange: e_,
                         onFocus: eC,
-                        options: eI,
+                        options: ey,
                         filter: !1,
                         closeOnSelect: !1,
                         filterType: C.LWr.FILTER_AUTHOR_TYPE,

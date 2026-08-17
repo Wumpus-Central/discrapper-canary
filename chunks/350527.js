@@ -38,8 +38,8 @@ var s = n(477900),
     P = n(847599),
     E = n(114166),
     T = n(47167),
-    w = n(810181),
-    I = n(390248),
+    I = n(810181),
+    w = n(390248),
     R = n(59318),
     z = n(294520),
     B = n(505527),
@@ -111,8 +111,8 @@ let em = 72,
             }, [y, a, t]);
         let k = l.useRef(null),
             { handleLeftClick: L, handleRightClick: P } = (0, er.A)({ facepileRef: k, goToThread: n, channel: g }),
-            { role: E, onFocus: w, ...I } = (0, h.rm)(t),
-            { isFocused: R, handleFocus: z, handleBlur: B } = (0, ei.A)(w);
+            { role: E, onFocus: I, ...w } = (0, h.rm)(t),
+            { isFocused: R, handleFocus: z, handleBlur: B } = (0, ei.A)(I);
         return (0, s.jsxs)("div", {
             ref: y,
             "data-item-id": t,
@@ -128,7 +128,7 @@ let em = 72,
                     className: eu.Kv,
                     onFocus: z,
                     onBlur: B,
-                    ...I,
+                    ...w,
                 }),
                 (0, s.jsxs)("div", {
                     className: eu.kb,
@@ -295,7 +295,7 @@ let ej = l.memo(function (e) {
 });
 function ev(e) {
     let { channel: t, facepileRef: n, firstMessage: l } = e,
-        a = (0, w.m)(t.id),
+        a = (0, I.m)(t.id),
         i = l?.reactions != null && l.reactions.length > 0;
     return (0, s.jsxs)("div", {
         className: eu.qr,
@@ -328,7 +328,7 @@ function eN(e) {
         children: [
             (0, s.jsx)("span", {
                 className: eu.SZ,
-                children: (0, s.jsx)(C.o, { size: "custom", color: "currentColor", width: n, height: n }),
+                children: (0, s.jsx)(C.ChatIcon, { size: "custom", color: "currentColor", width: n, height: n }),
             }),
             "number" == typeof a
                 ? (0, s.jsx)(E.A, { value: a, digitWidth: 9, className: eu.gv })
@@ -467,7 +467,7 @@ function eM(e) {
 function eS(e) {
     let { channel: t, firstMedia: n } = e,
         [l, a] = (0, z.eJ)({ media: n, channel: t }),
-        i = (0, I.qZ)(a);
+        i = (0, w.qZ)(a);
     return (0, s.jsx)(f.M, {
         enabled: !0,
         children: (0, s.jsxs)("div", {

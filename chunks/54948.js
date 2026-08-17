@@ -1,9 +1,9 @@
-t.d(n, { PV: () => _, Td: () => I });
+t.d(n, { PV: () => _, Td: () => M });
 var i = t(477900),
     l = t(582128),
     r = t(435558),
-    a = t(192308),
-    s = t(513461),
+    s = t(192308),
+    a = t(513461),
     o = t(503698),
     c = t.n(o),
     d = t(930235),
@@ -11,27 +11,27 @@ var i = t(477900),
     x = t(834730),
     m = t(661531),
     f = t(916099),
-    j = t(673185),
-    h = t(565787),
+    h = t(673185),
+    j = t(565787),
     v = t(622629),
     p = t(772838),
     g = t(939249),
     E = t(22231),
-    y = t(241326),
-    P = t(828208),
+    P = t(241326),
+    y = t(828208),
     w = t(375708),
-    R = t(865615);
-function b(e) {
+    b = t(865615);
+function R(e) {
     let { type: n } = e,
         t = l.useMemo(() => {
             switch (n) {
-                case s.rX.MULTIPLE_CHOICE:
-                    return { icon: f.j, text: w.intl.string(w.t.ooKh3m) };
-                case s.rX.PARAGRAPH:
-                    return { icon: j.$, text: w.intl.string(w.t.gG0JBN) };
-                case s.rX.TEXT_INPUT:
-                    return { icon: (0, h.k)(P.A), text: w.intl.string(w.t.w6Q9wz) };
-                case s.rX.TERMS:
+                case a.rX.MULTIPLE_CHOICE:
+                    return { icon: f.ListBulletsIcon, text: w.intl.string(w.t.ooKh3m) };
+                case a.rX.PARAGRAPH:
+                    return { icon: h.$, text: w.intl.string(w.t.gG0JBN) };
+                case a.rX.TEXT_INPUT:
+                    return { icon: (0, j.k)(y.A), text: w.intl.string(w.t.w6Q9wz) };
+                case a.rX.TERMS:
                     return { icon: v.B, text: w.intl.string(w.t["3pz9t3"]) };
                 default:
                     return null;
@@ -40,7 +40,7 @@ function b(e) {
     return null == t
         ? null
         : (0, i.jsxs)("div", {
-              className: R.L6,
+              className: b.L6,
               children: [
                   (0, i.jsx)(t.icon, { size: "xs", color: "currentColor" }),
                   (0, i.jsx)(x.E, { variant: "text-sm/medium", tag: "span", children: t.text }),
@@ -50,40 +50,40 @@ function b(e) {
 function T(e) {
     let { title: n, field: t } = e;
     return (0, i.jsx)("div", {
-        className: R._Q,
+        className: b._Q,
         children: (0, i.jsxs)("div", {
-            className: R.ds,
+            className: b.ds,
             children: [
-                (0, i.jsx)(x.E, { variant: "text-md/medium", className: R.ID, children: n }),
-                (0, i.jsx)(b, { type: t.field_type }),
+                (0, i.jsx)(x.E, { variant: "text-md/medium", className: b.ID, children: n }),
+                (0, i.jsx)(R, { type: t.field_type }),
             ],
         }),
     });
 }
-let A = "FORM_FIELD";
-function C(e) {
-    let { index: n, field: t, isDropHovered: a, onDrop: s } = e,
+let L = "FORM_FIELD";
+function A(e) {
+    let { index: n, field: t, isDropHovered: s, onDrop: a } = e,
         o = (0, r.debounce)(async (e, n, t) => {
-            await s(e, n, t);
+            await a(e, n, t);
         }),
         x = l.useRef(null),
         [, f] = (0, d.i)({
-            type: A,
+            type: L,
             item: { index: n, field: t },
             end: (e, n) => {
                 null == e || n.didDrop() || o(e.field, null, !0);
             },
         }),
-        [, j] = (0, u.H)({
-            accept: A,
+        [, h] = (0, u.H)({
+            accept: L,
             hover: (e, t) => {
                 let { index: i } = e,
                     l = x.current?.getBoundingClientRect(),
                     r = t.getClientOffset();
                 if (null == l || null == r) return;
-                let a = (l.bottom - l.top) / 2,
-                    s = r.y - l.top;
-                (i < n && s < a) || (i > n && s < a) || i === n || o(e.field, n, !1);
+                let s = (l.bottom - l.top) / 2,
+                    a = r.y - l.top;
+                (i < n && a < s) || (i > n && a < s) || i === n || o(e.field, n, !1);
             },
             drop: (e) => {
                 o(e.field, n, !0);
@@ -92,23 +92,23 @@ function C(e) {
     return (
         l.useLayoutEffect(
             () => (
-                f(j(x)),
+                f(h(x)),
                 () => {
-                    j(null), f(null);
+                    h(null), f(null);
                 }
             ),
-            [f, j],
+            [f, h],
         ),
         (0, i.jsxs)("div", {
             ref: x,
             "data-dnd-name": `field-${n}`,
-            className: c()(R.cK, { [R.TG]: a }),
+            className: c()(b.cK, { [b.TG]: s }),
             children: [
                 (0, i.jsx)("div", {
-                    className: c()(R.VU, R.oE),
+                    className: c()(b.VU, b.oE),
                     children: (0, i.jsx)(p.W, {
                         size: "xs",
-                        className: R.co,
+                        className: b.co,
                         color: m.A.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
@@ -117,55 +117,80 @@ function C(e) {
         })
     );
 }
-function L(e) {
+function C(e) {
     return (0, i.jsxs)("div", {
-        className: c()(R.e4, R.oE),
+        className: c()(b.e4, b.oE),
         children: [
             (0, i.jsx)("div", {
-                className: R.Th,
-                children: e.isDragEnabled ? (0, i.jsx)(C, { ...e }) : (0, i.jsx)(T, { ...e }),
+                className: b.Th,
+                children: e.isDragEnabled ? (0, i.jsx)(A, { ...e }) : (0, i.jsx)(T, { ...e }),
             }),
             "side" === e.actionsLocation &&
                 (0, i.jsxs)("div", {
-                    className: c()(R.fc, R.oE, { [R.ZM]: e.canRemove }),
+                    className: c()(b.fc, b.oE, { [b.ZM]: e.canRemove }),
                     children: [
                         (0, i.jsx)(g.D, {
-                            className: R.hP,
+                            className: b.hP,
                             onClick: e.onEdit,
                             "aria-label": w.intl.string(w.t.bt75uw),
-                            children: (0, i.jsx)(E.R, { size: "xs" }),
+                            children: (0, i.jsx)(E.PencilIcon, { size: "xs" }),
                         }),
                         e.canRemove &&
                             (0, i.jsx)(g.D, {
-                                className: R.hP,
+                                className: b.hP,
                                 onClick: e.onRemove,
                                 "aria-label": w.intl.string(w.t.N86XcP),
-                                children: (0, i.jsx)(y.u, { size: "xs" }),
+                                children: (0, i.jsx)(P.TrashIcon, { size: "xs" }),
                             }),
                     ],
                 }),
         ],
     });
 }
-let X = function (e) {
+let I = function (e) {
         let {
             formField: n,
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
             canRemove: c,
             actionsLocation: d,
         } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(C, {
             field: n,
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
+            onRemove: o,
+            title: n.label,
+            canRemove: c,
+            actionsLocation: d,
+        });
+    },
+    X = function (e) {
+        let {
+            formField: n,
+            index: t,
+            isDragEnabled: l,
+            isDropHovered: r,
+            onDrop: s,
+            onEdit: a,
+            onRemove: o,
+            canRemove: c,
+            actionsLocation: d,
+        } = e;
+        return (0, i.jsx)(C, {
+            field: n,
+            index: t,
+            isDragEnabled: l,
+            isDropHovered: r,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
             title: n.label,
             canRemove: c,
@@ -178,23 +203,24 @@ let X = function (e) {
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
             canRemove: c,
-            actionsLocation: d,
+            title: d,
+            actionsLocation: u,
         } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(C, {
             field: n,
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
-            title: n.label,
+            title: d,
             canRemove: c,
-            actionsLocation: d,
+            actionsLocation: u,
         });
     },
     D = function (e) {
@@ -203,52 +229,26 @@ let X = function (e) {
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
-            onRemove: o,
-            canRemove: c,
-            title: d,
-            actionsLocation: u,
-        } = e;
-        return (0, i.jsx)(L, {
-            field: n,
-            index: t,
-            isDragEnabled: l,
-            isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
-            onRemove: o,
-            title: d,
-            canRemove: c,
-            actionsLocation: u,
-        });
-    },
-    M = function (e) {
-        let {
-            formField: n,
-            index: t,
-            isDragEnabled: l,
-            isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
             canRemove: c,
             actionsLocation: d,
         } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(C, {
             field: n,
             index: t,
             isDragEnabled: l,
             isDropHovered: r,
-            onDrop: a,
-            onEdit: s,
+            onDrop: s,
+            onEdit: a,
             onRemove: o,
             title: n.label,
             canRemove: c,
             actionsLocation: d,
         });
     };
-function I(e) {
+function M(e) {
     let {
         dropHoveredIndex: n,
         formField: l,
@@ -259,8 +259,8 @@ function I(e) {
         removeFormField: x,
         updateFormField: m,
         updateFormFieldOrder: f,
-        canRemove: j,
-        actionsLocation: h,
+        canRemove: h,
+        actionsLocation: j,
     } = e;
     async function v() {
         await x(c);
@@ -272,16 +272,16 @@ function I(e) {
         await f(e, n, t);
     }
     let E = (0, r.uniqueId)(),
-        y = n === c,
-        P = {
+        P = n === c,
+        y = {
             key: E,
             index: c,
             isDragEnabled: d,
-            isDropHovered: y,
+            isDropHovered: P,
             onEdit: function () {
                 0 === u
                     ? z(l, p, o)
-                    : (0, a.openModalLazy)(async () => {
+                    : (0, s.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([t.e("906444"), t.e("81226")]).then(t.bind(t, 928529));
                           return (n) =>
                               (0, i.jsx)(e, {
@@ -294,26 +294,26 @@ function I(e) {
             },
             onRemove: v,
             onDrop: g,
-            canRemove: j,
-            actionsLocation: h,
+            canRemove: h,
+            actionsLocation: j,
         };
     switch (l.field_type) {
-        case s.rX.TERMS:
-            return (0, i.jsx)(D, { title: w.intl.string(w.t["55+gic"]), formField: l, ...P });
-        case s.rX.PARAGRAPH:
-            return (0, i.jsx)(N, { formField: l, ...P });
-        case s.rX.TEXT_INPUT:
-            return (0, i.jsx)(M, { formField: l, ...P });
-        case s.rX.MULTIPLE_CHOICE:
-            return (0, i.jsx)(X, { formField: l, ...P });
+        case a.rX.TERMS:
+            return (0, i.jsx)(N, { title: w.intl.string(w.t["55+gic"]), formField: l, ...y });
+        case a.rX.PARAGRAPH:
+            return (0, i.jsx)(X, { formField: l, ...y });
+        case a.rX.TEXT_INPUT:
+            return (0, i.jsx)(D, { formField: l, ...y });
+        case a.rX.MULTIPLE_CHOICE:
+            return (0, i.jsx)(I, { formField: l, ...y });
         default:
             return null;
     }
 }
 function _(e, n, l) {
     switch (e) {
-        case s.rX.TERMS:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.TERMS:
+            return (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     t.e("849817"),
                     t.e("645850"),
@@ -324,8 +324,8 @@ function _(e, n, l) {
                 ]).then(t.bind(t, 24094));
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n, guild: l });
             });
-        case s.rX.PARAGRAPH:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.PARAGRAPH:
+            return (0, s.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: e } = await Promise.all([
                     t.e("982653"),
                     t.e("78618"),
@@ -333,8 +333,8 @@ function _(e, n, l) {
                 ]).then(t.bind(t, 542717));
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
-        case s.rX.TEXT_INPUT:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.TEXT_INPUT:
+            return (0, s.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: e } = await Promise.all([
                     t.e("982653"),
                     t.e("78618"),
@@ -342,8 +342,8 @@ function _(e, n, l) {
                 ]).then(t.bind(t, 542717));
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
-        case s.rX.MULTIPLE_CHOICE:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.MULTIPLE_CHOICE:
+            return (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([t.e("982653"), t.e("78618"), t.e("452981")]).then(
                     t.bind(t, 520660),
                 );
@@ -353,8 +353,8 @@ function _(e, n, l) {
 }
 function z(e, n, l) {
     switch (e.field_type) {
-        case s.rX.TERMS:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.TERMS:
+            return (0, s.openModalLazy)(async () => {
                 let { default: r } = await Promise.all([
                     t.e("849817"),
                     t.e("645850"),
@@ -365,8 +365,8 @@ function z(e, n, l) {
                 ]).then(t.bind(t, 24094));
                 return (t) => (0, i.jsx)(r, { ...t, field: e, onSave: n, guild: l });
             });
-        case s.rX.PARAGRAPH:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.PARAGRAPH:
+            return (0, s.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: l } = await Promise.all([
                     t.e("982653"),
                     t.e("78618"),
@@ -374,8 +374,8 @@ function z(e, n, l) {
                 ]).then(t.bind(t, 542717));
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
-        case s.rX.TEXT_INPUT:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.TEXT_INPUT:
+            return (0, s.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: l } = await Promise.all([
                     t.e("982653"),
                     t.e("78618"),
@@ -383,8 +383,8 @@ function z(e, n, l) {
                 ]).then(t.bind(t, 542717));
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
-        case s.rX.MULTIPLE_CHOICE:
-            return (0, a.openModalLazy)(async () => {
+        case a.rX.MULTIPLE_CHOICE:
+            return (0, s.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([t.e("982653"), t.e("78618"), t.e("452981")]).then(
                     t.bind(t, 520660),
                 );

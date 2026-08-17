@@ -1,4 +1,4 @@
-n.d(t, { A: () => j, s: () => R });
+n.d(t, { A: () => y, s: () => k });
 var r = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,105 +9,108 @@ var i = n(503698),
     u = n(812993),
     c = n(926321),
     d = n(403581),
-    C = n(318254),
-    p = n(287809),
-    I = n(428262),
-    x = n(590180),
-    g = n(298072),
-    f = n(993408),
-    A = n(13875),
-    k = n(466459),
-    m = n(623373),
-    v = n(561769),
-    _ = n(57020),
-    h = n(375708),
-    E = n(391226);
-function R(e) {
+    p = n(318254),
+    g = n(287809),
+    I = n(158045),
+    _ = n(590180),
+    C = n(298072),
+    A = n(993408),
+    f = n(13875),
+    m = n(466459),
+    E = n(623373),
+    h = n(561769),
+    v = n(57020),
+    x = n(375708),
+    R = n(391226);
+function k(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.m, {
-        text: h.intl.string(h.t.dCou7i),
+        text: x.intl.string(x.t.dCou7i),
         children: (0, r.jsx)(u.Lp, {
             disableColor: !0,
-            className: s()(t, E.$5, E.Cz),
+            className: s()(t, R.$5, R.Cz),
             text: (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(c.j, { size: "xxs", color: "currentColor" }), h.intl.string(h.t["+drfVi"])],
+                children: [
+                    (0, r.jsx)(c.DiceIcon, { size: "xxs", color: "currentColor" }),
+                    x.intl.string(x.t["+drfVi"]),
+                ],
             }),
         }),
     });
 }
-function y(e) {
+function b(e) {
     let { product: t, badgeOverride: n, productBadgeOverride: i, className: o, prioritizedCurrency: c } = e,
-        { isPurchased: g, isPartiallyOwnedBundle: y } = (0, k.h)(t),
-        j = (0, f.G0)(t),
-        T = (0, a.bG)([x.A], () => x.A.getCategoryForProduct(t.skuId)),
-        b = T?.unpublishedAt != null ? (0, f.WU)(T.unpublishedAt) : null,
-        P = (0, a.bG)([p.default], () => p.default.getCurrentUser()),
-        L = I.Ay.canUseShopDiscounts(P),
-        { isOrbExclusive: S } = (0, _.F)({ product: t, hasShopDiscount: L, prioritizedCurrency: c }),
-        O = (0, A.Do)("ProductCardBadgeInner") && t.type === l.R.PROFILE_FRAME,
-        N = n;
+        { isPurchased: C, isPartiallyOwnedBundle: b } = (0, m.h)(t),
+        y = (0, A.G0)(t),
+        S = (0, a.bG)([_.A], () => _.A.getCategoryForProduct(t.skuId)),
+        L = S?.unpublishedAt != null ? (0, A.WU)(S.unpublishedAt) : null,
+        O = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
+        T = I.Ay.canUseShopDiscounts(O),
+        { isOrbExclusive: j } = (0, v.F)({ product: t, hasShopDiscount: T, prioritizedCurrency: c }),
+        P = (0, f.Do)("ProductCardBadgeInner") && t.type === l.R.PROFILE_FRAME,
+        V = n;
     if (
-        (null == N &&
-            (O
-                ? (N = v.AW.EARLY_ACCESS)
+        (null == V &&
+            (P
+                ? (V = h.AW.EARLY_ACCESS)
                 : null != i
-                  ? (N = v.AW.BADGE_OVERRIDE)
-                  : (0, m.JQ)(t)
-                    ? (N = v.AW.DYNAMIC)
-                    : (0, f.HF)(T?.unpublishedAt)
-                      ? (N = v.AW.LIMITED_TIME)
-                      : !y && !g && (0, f.aT)(t.skuId)
-                        ? (N = v.AW.NEW)
-                        : S
-                          ? (N = v.AW.ORBS_EXCLUSIVE)
-                          : j && (N = v.AW.NITRO_EXCLUSIVE)),
-        null == N || N === v.AW.NONE)
+                  ? (V = h.AW.BADGE_OVERRIDE)
+                  : (0, E.JQ)(t)
+                    ? (V = h.AW.DYNAMIC)
+                    : (0, A.HF)(S?.unpublishedAt)
+                      ? (V = h.AW.LIMITED_TIME)
+                      : !b && !C && (0, A.aT)(t.skuId)
+                        ? (V = h.AW.NEW)
+                        : j
+                          ? (V = h.AW.ORBS_EXCLUSIVE)
+                          : y && (V = h.AW.NITRO_EXCLUSIVE)),
+        null == V || V === h.AW.NONE)
     )
         return null;
-    if (N === v.AW.EARLY_ACCESS)
+    if (V === h.AW.EARLY_ACCESS)
         return (0, r.jsx)("span", {
             role: "img",
-            "aria-label": h.intl.string(h.t["1m6qcO"]),
-            className: s()(o, E.$l),
+            "aria-label": x.intl.string(x.t["1m6qcO"]),
+            className: s()(o, R.$l),
             children: (0, r.jsx)(d.t, { size: "sm", color: "currentColor" }),
         });
-    if (N === v.AW.DYNAMIC) return (0, r.jsx)(R, { className: o });
-    if (N === v.AW.ORBS_EXCLUSIVE)
+    if (V === h.AW.DYNAMIC) return (0, r.jsx)(k, { className: o });
+    if (V === h.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)(u.Lp, {
             disableColor: !0,
-            className: s()(o, E.$5, E.Cz),
+            className: s()(o, R.$5, R.Cz),
             text: (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(C.C, { size: "xxs", color: "currentColor" }), h.intl.string(h.t["0TmQRG"])],
+                children: [(0, r.jsx)(p.C, { size: "xxs", color: "currentColor" }), x.intl.string(x.t["0TmQRG"])],
             }),
         });
-    let V = null;
-    switch (N) {
-        case v.AW.LIMITED_TIME:
-            V =
-                null != b
-                    ? b > 1
-                        ? h.intl.formatToPlainString(h.t.Io7ozn, { days: b })
-                        : h.intl.string(h.t.Bc13HF)
-                    : h.intl.string(h.t["h/uBCR"]);
+    let N = null;
+    switch (V) {
+        case h.AW.LIMITED_TIME:
+            N =
+                null != L
+                    ? L > 1
+                        ? x.intl.formatToPlainString(x.t.Io7ozn, { days: L })
+                        : x.intl.string(x.t.Bc13HF)
+                    : x.intl.string(x.t["h/uBCR"]);
             break;
-        case v.AW.NEW:
-            V = h.intl.string(h.t.y2b7CA);
+        case h.AW.NEW:
+            N = x.intl.string(x.t.y2b7CA);
             break;
-        case v.AW.NITRO_EXCLUSIVE:
-            V = h.intl.string(h.t.X3Ekj8);
+        case h.AW.NITRO_EXCLUSIVE:
+            N = x.intl.string(x.t.X3Ekj8);
             break;
-        case v.AW.BADGE_OVERRIDE:
-            V = i;
+        case h.AW.BADGE_OVERRIDE:
+            N = i;
     }
-    return (0, r.jsx)(u.Lp, { text: V, disableColor: !0, className: s()(o, E.$5) });
+    return (0, r.jsx)(u.Lp, { text: N, disableColor: !0, className: s()(o, R.$5) });
 }
-let j = function (e) {
+let y = function (e) {
     let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: s } = e,
-        l = (0, v.Vm)(t),
-        a = (0, g.Q)(l);
+        l = (0, h.Vm)(t),
+        a = (0, C.Q)(l);
     if (null == l || l.hideBadge) return null;
-    let o = (0, m.rb)(l, a);
-    return (0, r.jsx)(y, {
+    let o = (0, E.rb)(l, a);
+    return (0, r.jsx)(b, {
         product: o,
         badgeOverride: n,
         productBadgeOverride: l.badgeOverride,
