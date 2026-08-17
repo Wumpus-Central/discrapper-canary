@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $r: () => p, AN: () => m, BX: () => _, fr: () => u, w6: () => E });
+n.d(t, { $r: () => T, AN: () => g, BX: () => E, i: () => _, w6: () => A });
 var i = n(636537),
     r = n(534573),
     a = n(927813),
@@ -15,40 +15,44 @@ let o = new Set(["/attachments/", "/ephemeral-attachments/"]),
             .filter(Boolean),
     );
 function u(e) {
-    let t = c.has(e.hostname),
-        n = Array.from(o).some((t) => e.pathname.startsWith(t));
-    return (t || !1) && n;
+    return c.has(e.hostname) || !1;
 }
 function _(e) {
-    return (0, r.v)(e);
+    let t = Array.from(o).some((t) => e.pathname.startsWith(t));
+    return u(e) && t;
 }
 function E(e) {
+    return (0, r.v)(e);
+}
+function A(e) {
     let t = s.A.toURLSafe(e);
     if (null == t) return e;
     for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
     return t;
 }
-function A(e) {
+function h(e) {
     let t,
         n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * a.A.Millis.SECOND;
     return null == n || n <= Date.now() + d;
 }
-function h(e) {
-    let t = s.A.toURLSafe(e.url);
-    return null != t && A(t);
-}
 function I(e) {
-    if (null == e) return !1;
     let t = s.A.toURLSafe(e.url);
-    return null != t && !!u(t) && A(t);
+    return null != t && h(t);
 }
 function f(e) {
-    return I(e.image) || e.images?.some(I) || I(e.video);
+    if (null == e) return !1;
+    let t = s.A.toURLSafe(e.url);
+    return (
+        null != t && !!(!(!u(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || _(t))) && h(t)
+    );
 }
 function p(e) {
-    return e.attachments.some(h) || e.embeds.some(f);
+    return f(e.image) || e.images?.some(f) || f(e.video);
 }
-async function T(e) {
+function T(e) {
+    return e.attachments.some(I) || e.embeds.some(p);
+}
+async function m(e) {
     return (
         await i.Bo.post({
             url: l.Rsh.ATTACHMENTS_REFRESH_URLS,
@@ -57,7 +61,7 @@ async function T(e) {
         })
     ).body.refreshed_urls[0].refreshed;
 }
-async function m(e) {
+async function g(e) {
     let t = s.A.toURLSafe(e);
-    return null != t && A(t) ? ((await T(e)) ?? e) : e;
+    return null != t && h(t) ? ((await m(e)) ?? e) : e;
 }

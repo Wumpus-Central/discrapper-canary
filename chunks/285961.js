@@ -37,7 +37,7 @@ var c = r(803805),
     y = r(25277),
     S = r(537652),
     v = r(267102),
-    C = r(202803),
+    C = r(679164),
     A = r(439401),
     w = r(957565),
     x = r(998218),
@@ -135,10 +135,10 @@ class U extends s.PureComponent {
                   src:
                       ((t =
                           null != (e = x.A.toURLSafe(r)) &&
-                          ((0, C.BX)(e) || (0, C.fr)(e)) &&
+                          (C.BX(e) || C.i(e)) &&
                           e.pathname.toLowerCase().endsWith(".gif")),
                       null != e &&
-                      ((((0, C.BX)(e) || (0, C.fr)(e)) &&
+                      (((C.BX(e) || C.i(e)) &&
                           (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
                           t)
                           ? (t && e.searchParams.set("format", "webp"),

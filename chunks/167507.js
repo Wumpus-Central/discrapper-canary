@@ -7,7 +7,7 @@ var l = t(477900),
     c = t(975807),
     d = t(235393),
     u = t(332173),
-    o = t(202803),
+    o = t(679164),
     h = t(403362),
     m = t(62849),
     x = t(353137);
@@ -52,7 +52,7 @@ function g(e) {
     let { domain: n, ephemeral: s, channelId: h, attachmentId: m, name: j } = e,
         g = `https://${n}/${s ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
         f = r.useCallback(async () => {
-            let e = await (0, o.AN)(g);
+            let e = await o.AN(g);
             d.A.trackLinkClicked(e), (0, c.A)(e);
         }, [g]),
         p = r.useCallback(

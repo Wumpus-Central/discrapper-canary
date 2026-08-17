@@ -4,7 +4,7 @@ n(582128);
 var e = n(980707),
     l = n(477782),
     c = n(442433),
-    r = n(202803),
+    r = n(679164),
     s = n(957565),
     o = n(375708);
 function d(t) {
@@ -23,7 +23,7 @@ function d(t) {
                         id: "attachment-link-copy-link",
                         label: o.intl.string(o.t["92CPQ+"]),
                         action: async () => {
-                            let t = await (0, r.AN)(a);
+                            let t = await r.AN(a);
                             (0, s.C)(t ?? "");
                         },
                     }),

@@ -44,7 +44,7 @@ var S = n(112107),
     D = n(442433),
     U = n(975807),
     G = n(235393),
-    V = n(202803),
+    V = n(679164),
     F = n(652215),
     H = n(490111),
     B = n(353137),
@@ -519,7 +519,7 @@ function eR(e) {
                 let a = s.noStyleAndInteraction
                         ? void 0
                         : async (n) => {
-                              let l = await (0, V.AN)(t.attachmentUrl);
+                              let l = await V.AN(t.attachmentUrl);
                               e.shouldStopPropagation && n?.stopPropagation(),
                                   G.A.trackLinkClicked(l),
                                   e.shouldCloseDefaultModals && (0, k.closeAllModals)(),
