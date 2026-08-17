@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => G, BP: () => T, Qs: () => I, RO: () => S, WG: () => y, ob: () => g, r2: () => D, vj: () => C });
+n.d(t, { Ay: () => G, BP: () => y, Qs: () => I, RO: () => S, WG: () => g, ob: () => T, r2: () => D, vj: () => C });
 var l = n(582128),
     i = n(17928),
     u = n(734057),
@@ -12,13 +12,13 @@ var l = n(582128),
     N = n(974930),
     _ = n(988794),
     o = n(652215);
-let f = [],
-    h = 15 * s.A.Millis.MINUTE;
+let h = [],
+    f = 15 * s.A.Millis.MINUTE;
 function G(e, t) {
     return (0, i.yK)([r.A, d.Ay, E.A, u.A], () => {
         let n = r.A.getGuild(e);
         return null == n
-            ? f
+            ? h
             : d.Ay.getGuildScheduledEventsByIndex(t ?? d.ej.GUILD_EVENT_UPCOMING(n.id)).filter((e) => {
                   let t = e.channel_id;
                   if (null == t) return !0;
@@ -48,7 +48,7 @@ function C(e) {
         );
     }, [t]);
 }
-function y(e) {
+function g(e) {
     let t = (0, i.yK)(
             [d.Ay, u.A, E.A],
             () =>
@@ -74,11 +74,11 @@ function y(e) {
             [t],
         ),
         A = (0, i.bG)([r.A], () => r.A.getGuild(e)),
-        f =
+        h =
             null != A &&
             !A.features.has(o.GuildFeatures.COMMUNITY) &&
             A.features.has(o.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
-    if (null != t && null != s && f)
+    if (null != t && null != s && h)
         for (let e = 0; e < t.length; e++) {
             let i = t[e],
                 u = n[i.id],
@@ -88,20 +88,25 @@ function y(e) {
             if (null != d) return { upcomingEvent: i, noticeType: d };
         }
 }
-function T(e) {
+function y(e) {
     return (0, i.bG)(
         [d.Ay, u.A, E.A],
         () =>
-            d.Ay.getGuildScheduledEventsByIndex(d.ej.GUILD_EVENT_ACTIVE(e)).find((e) => {
-                if (e.entity_type === _.Ps.NONE || !(0, d.Fd)(e)) return !1;
-                if (null == e.channel_id) return !0;
-                let t = u.A.getBasicChannel(e.channel_id);
-                return null != t && E.A.canBasicChannel(o.hVb.VIEW_CHANNEL, t);
-            }),
+            (function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Ay,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.A,
+                    l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : E.A;
+                return t.getGuildScheduledEventsByIndex(d.ej.GUILD_EVENT_ACTIVE(e)).find((e) => {
+                    if (e.entity_type === _.Ps.NONE || !(0, d.Fd)(e)) return !1;
+                    if (null == e.channel_id) return !0;
+                    let t = n.getBasicChannel(e.channel_id);
+                    return null != t && l.canBasicChannel(o.hVb.VIEW_CHANNEL, t);
+                });
+            })(e, d.Ay, u.A, E.A),
         [e],
     );
 }
-function g(e) {
+function T(e) {
     return (0, i.bG)([d.Ay], () => d.Ay.getGuildScheduledEventsByIndex(d.ej.CHANNEL_EVENT_UPCOMING(e)), [e]);
 }
 function D(e) {
@@ -117,7 +122,7 @@ function S(e) {
     l.useEffect(() => {
         let e = setInterval(() => {
             n(Date.now());
-        }, h);
+        }, f);
         return () => clearInterval(e);
     }, []);
     let u = (0, i.bG)(
