@@ -2036,6 +2036,7 @@ function t6(e) {
                                 t.e("926132"),
                                 t.e("238730"),
                                 t.e("947502"),
+                                t.e("965789"),
                                 t.e("584615"),
                             ]).then(t.bind(t, 612826));
                             return (n) => (0, l.jsx)(e, { ...n, channel: i });
@@ -3647,6 +3648,7 @@ function sF(e) {
                                 t.e("926132"),
                                 t.e("238730"),
                                 t.e("947502"),
+                                t.e("965789"),
                                 t.e("584615"),
                             ]).then(t.bind(t, 612826));
                             return (n) => (0, l.jsx)(e, { ...n, channel: o });
@@ -5172,6 +5174,7 @@ class r8 extends s.PureComponent {
                     t.e("926132"),
                     t.e("238730"),
                     t.e("947502"),
+                    t.e("965789"),
                     t.e("584615"),
                 ]).then(t.bind(t, 612826));
                 return (t) => (0, l.jsx)(e, { ...t, channel: n });
@@ -5197,6 +5200,7 @@ class r8 extends s.PureComponent {
                     t.e("245996"),
                     t.e("700792"),
                     t.e("592822"),
+                    t.e("965789"),
                     t.e("823427"),
                     t.e("529422"),
                     t.e("309291"),

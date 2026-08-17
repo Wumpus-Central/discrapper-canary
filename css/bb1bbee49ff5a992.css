@@ -1,0 +1,170 @@
+.platform-web .tabBar__97b44 {
+    margin-inline-start: var(--custom-guild-list-width)
+}
+
+.tabBar__97b44 {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    height: var(--custom-app-top-bar-height);
+    min-width: 0;
+    position: relative;
+    -webkit-app-region: drag
+}
+
+.dropIndicator__97b44 {
+    background-color: var(--control-brand-foreground);
+    border-radius: 1px;
+    bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: left .1s ease-out;
+    width: 2px;
+    z-index: 1
+}
+
+.tab__97b44 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    max-width: 200px;
+    min-width: 0;
+    position: relative;
+    -webkit-app-region: no-drag;
+    color: var(--interactive-text-default);
+    padding-inline-end: var(--space-4)
+}
+
+.tab__97b44:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.tab__97b44:not(:first-child):before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 60%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 20%;
+    width: 1px
+}
+
+.tabActive__97b44+.tab__97b44:before,
+.tabActive__97b44:before {
+    display: none
+}
+
+.tabActive__97b44 {
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active)
+}
+
+.tabDragging__97b44 {
+    opacity: .35
+}
+
+.tabButton__97b44 {
+    flex: 1 1 auto;
+    gap: var(--space-8);
+    height: 100%;
+    min-width: 0;
+    padding-inline: var(--space-8) var(--space-4)
+}
+
+.closeButton__97b44,
+.tabButton__97b44 {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.closeButton__97b44 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}
+
+.closeButton__97b44:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.tab__97b44:not(.tabActive__97b44) .closeButton__97b44 {
+    display: none
+}
+
+.tab__97b44:not(.tabActive__97b44):hover .closeButton__97b44 {
+    display: flex
+}
+
+.tab__97b44:not(.tabActive__97b44):hover .unreadIndicator__97b44 {
+    display: none
+}
+
+.newTabButton__97b44 {
+    align-self: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-start: calc((var(--custom-app-top-bar-height) - var(--space-24))/2);
+    -webkit-app-region: no-drag
+}
+
+.pinIndicator__97b44 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 16px;
+    justify-content: center;
+    position: relative;
+    width: 16px
+}
+
+.pinUnreadDot__97b44 {
+    inset-block-end: -2px;
+    inset-inline-end: -2px;
+    pointer-events: none;
+    position: absolute
+}
+
+.guildIcon__97b44 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0
+}
+
+.dmIcon__97b44 {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px
+}
+
+.dmIcon__97b44,
+.favoritesIcon__97b44,
+.iconWrapper__97b44 {
+    flex-shrink: 0
+}
+
+.iconWrapper__97b44 {
+    display: flex;
+    position: relative
+}
+
+.mentionBadge__97b44 {
+    inset-block-end: -3px;
+    inset-inline-end: -3px;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(.85);
+    transform-origin: bottom right
+}
+
+.unreadIndicator__97b44 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}

@@ -1,4 +1,4 @@
-a.d(s, { R: () => i });
-var o = a(793322),
-    t = a(186111);
-let i = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => (t.A.hasLayers() || (0, o.WU)(), !1) };
+a.d(s, { R: () => t });
+var i = a(793322),
+    o = a(186111);
+let t = { binds: ["mod+k"], comboKeysBindGlobal: !0, action: () => (o.A.hasLayers() || (0, i.WU)(), !1) };

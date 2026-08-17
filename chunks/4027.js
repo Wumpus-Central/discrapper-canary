@@ -1,4 +1,4 @@
-i.d(n, { default: () => O });
+i.d(n, { default: () => f });
 var t = i(477900);
 i(582128);
 var l = i(477782),
@@ -15,27 +15,28 @@ var l = i(477782),
     g = i(527835),
     X = i(250737),
     A = i(73028),
-    _ = i(280450),
-    b = i(605691),
-    m = i(848977),
-    M = i(995102),
-    U = i(439191),
-    C = i(652215),
-    p = i(375708);
-function E(e) {
+    _ = i(687340),
+    b = i(280450),
+    m = i(605691),
+    M = i(848977),
+    U = i(995102),
+    C = i(439191),
+    p = i(652215),
+    E = i(375708);
+function N(e) {
     let { channel: n, onSelect: a } = e,
-        c = n.isOwner(_.default.getId()),
-        x = (0, m.A)(n),
-        b = (0, M.A)(n),
-        U = (0, o.A)({ id: n.id, label: p.intl.string(p.t.gFHI3k) }),
+        c = n.isOwner(b.default.getId()),
+        x = (0, M.A)(n),
+        _ = (0, U.A)(n),
+        m = (0, o.A)({ id: n.id, label: E.intl.string(E.t.gFHI3k) }),
         C = (0, j.A)(n),
-        E = (0, h.C)(n),
+        p = (0, h.C)(n),
         N = (0, X.A)(n),
         O = (0, g.A)(n),
         f = c
             ? (0, t.jsx)(l.Dr, {
                   id: "instant-invites",
-                  label: p.intl.string(p.t.ngRFjZ),
+                  label: E.intl.string(E.t.ngRFjZ),
                   action: () =>
                       (0, r.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([
@@ -59,7 +60,7 @@ function E(e) {
         : (0, t.jsxs)(d.W, {
               "data-menu-migrated-auto": !0,
               navId: "gdm-context",
-              "aria-label": p.intl.string(p.t.Xm41aV),
+              "aria-label": E.intl.string(E.t.Xm41aV),
               onClose: s.Z_,
               onSelect: a,
               children: [
@@ -70,33 +71,34 @@ function E(e) {
                           f,
                           (0, t.jsx)(l.Dr, {
                               id: "edit-gdm",
-                              label: p.intl.string(p.t["5Q9+/L"]),
+                              label: E.intl.string(E.t["5Q9+/L"]),
                               action: () => (0, A.U)(n.id, u.A.GROUP_DM_CONTEXT_MENU),
                           }),
                       ],
                   }),
                   (0, t.jsx)(l.rX, { children: C }),
-                  (0, t.jsx)(l.rX, { children: b }),
-                  (0, t.jsx)(l.rX, { children: E }),
-                  (0, t.jsx)(l.rX, { children: U }),
+                  (0, t.jsx)(l.rX, { children: _ }),
+                  (0, t.jsx)(l.rX, { children: p }),
+                  (0, t.jsx)(l.rX, { children: m }),
               ],
           });
 }
-function N(e) {
+function O(e) {
     let { channel: n, selected: a, onSelect: c } = e,
-        x = n.isOwner(_.default.getId()),
-        g = (0, m.A)(n),
-        X = (0, M.A)(n),
-        C = (0, b.A)(n, a),
-        E = (0, o.A)({ id: n.id, label: p.intl.string(p.t.gFHI3k) }),
-        N = (0, j.A)(n),
-        O = (0, U.A)(n),
-        f = (0, h.z)(n),
-        D = (0, h.C)(n),
-        I = x
+        x = n.isOwner(b.default.getId()),
+        g = (0, M.A)(n),
+        X = (0, U.A)(n),
+        p = (0, m.A)(n, a),
+        N = (0, o.A)({ id: n.id, label: E.intl.string(E.t.gFHI3k) }),
+        O = (0, j.A)(n),
+        f = (0, C.A)(n),
+        D = (0, h.z)(n),
+        I = (0, h.C)(n),
+        T = (0, _.A)(n),
+        k = x
             ? (0, t.jsx)(l.Dr, {
                   id: "instant-invites",
-                  label: p.intl.string(p.t.ngRFjZ),
+                  label: E.intl.string(E.t.ngRFjZ),
                   action: () =>
                       (0, r.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([
@@ -120,35 +122,35 @@ function N(e) {
         : (0, t.jsxs)(d.W, {
               "data-menu-migrated-auto": !0,
               navId: "gdm-context",
-              "aria-label": p.intl.string(p.t.Xm41aV),
+              "aria-label": E.intl.string(E.t.Xm41aV),
               onClose: s.Z_,
               onSelect: c,
               children: [
                   (0, t.jsx)(l.rX, { children: g }),
-                  (0, t.jsxs)(l.rX, { children: [O, f] }),
+                  (0, t.jsxs)(l.rX, { children: [T, f, D] }),
                   (0, t.jsxs)(l.rX, {
                       children: [
-                          I,
+                          k,
                           (0, t.jsx)(l.Dr, {
                               id: "edit-gdm",
-                              label: p.intl.string(p.t["5Q9+/L"]),
+                              label: E.intl.string(E.t["5Q9+/L"]),
                               action: () => (0, A.U)(n.id, u.A.GROUP_DM_CONTEXT_MENU),
                           }),
                       ],
                   }),
-                  (0, t.jsx)(l.rX, { children: N }),
+                  (0, t.jsx)(l.rX, { children: O }),
                   (0, t.jsx)(l.rX, { children: X }),
-                  (0, t.jsxs)(l.rX, { children: [D, C] }),
-                  (0, t.jsx)(l.rX, { children: E }),
+                  (0, t.jsxs)(l.rX, { children: [I, p] }),
+                  (0, t.jsx)(l.rX, { children: N }),
               ],
           });
 }
-let O = (0, c.A)(
+let f = (0, c.A)(
     (0, a.A)(
         function (e) {
-            return (0, x.DZ)() ? (0, t.jsx)(E, { ...e }) : (0, t.jsx)(N, { ...e });
+            return (0, x.DZ)() ? (0, t.jsx)(N, { ...e }) : (0, t.jsx)(O, { ...e });
         },
-        { object: C.ZSU.CONTEXT_MENU },
+        { object: p.ZSU.CONTEXT_MENU },
     ),
     [u.A.CONTEXT_MENU, u.A.GROUP_DM_MENU],
 );

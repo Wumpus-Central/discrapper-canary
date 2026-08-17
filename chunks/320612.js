@@ -9,6 +9,7 @@ t.exports = {
     dS: "disablePointerEvents_c38106",
     kU: "winButtons_c38106",
     DD: "title_c38106",
+    MY: "leadingGrow_c38106",
     Fx: "winButtonsWithDivider_c38106",
     R6: "winButton_c38106",
     T0: "winButtonMinMax_c38106",

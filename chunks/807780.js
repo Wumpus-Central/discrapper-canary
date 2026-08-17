@@ -323,6 +323,7 @@ let ej = i.memo(function () {
                                           t.e("947502"),
                                           t.e("343266"),
                                           t.e("309004"),
+                                          t.e("965789"),
                                           t.e("412255"),
                                           t.e("63340"),
                                           t.e("430997"),
@@ -352,6 +353,7 @@ let ej = i.memo(function () {
                                           t.e("947502"),
                                           t.e("343266"),
                                           t.e("309004"),
+                                          t.e("965789"),
                                           t.e("412255"),
                                           t.e("63340"),
                                           t.e("430997"),
@@ -596,8 +598,8 @@ var ey = t(202776),
     e4 = t(591552),
     e5 = t(961973),
     e6 = t(435558),
-    e2 = t.n(e6),
-    e9 = t(665260),
+    e9 = t.n(e6),
+    e2 = t(665260),
     e8 = t(355097);
 function e3(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
@@ -619,8 +621,8 @@ function ne(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => l.includes(e.id));
-                                (i = e2().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e2().difference(t?.roleIds ?? [], n.roleIds ?? []));
+                                (i = e9().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e9().difference(t?.roleIds ?? [], n.roleIds ?? []));
                             } else if (t) (i = n.roleIds ?? []), (s = []);
                             else {
                                 let t = e.options.filter((e) => l.includes(e.id)),
@@ -633,7 +635,7 @@ function ne(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(eJ.Vq);
-                                (i = []), (s = e2().difference(r, d));
+                                (i = []), (s = e9().difference(r, d));
                             }
                             return { addedRoleIds: i, removedRoleIds: s };
                         })(n, t, l, i),
@@ -643,8 +645,8 @@ function ne(e) {
                                 r = [];
                             if (t.singleSelect && i) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                (a = e2().difference(l.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e2().difference(e?.channelIds ?? [], l.channelIds ?? []));
+                                (a = e9().difference(l.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e9().difference(e?.channelIds ?? [], l.channelIds ?? []));
                             } else if (i) (a = l.channelIds ?? []), (r = []);
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -657,7 +659,7 @@ function ne(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(eJ.Vq);
-                                (a = []), (r = e2().difference(i, d));
+                                (a = []), (r = e9().difference(i, d));
                             }
                             return (
                                 (0, $.cE)(n) && a.push(...e4.A.getDefaultChannelIds(n)),
@@ -666,11 +668,11 @@ function ne(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e9.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e9.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e0.A.selectOption(e, n.id, t.id, l),

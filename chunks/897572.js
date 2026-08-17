@@ -1,0 +1,18 @@
+_.exports = {
+    $H: "tabBar__97b44",
+    Lx: "dropIndicator__97b44",
+    Mf: "tab__97b44",
+    yR: "tabActive__97b44",
+    VS: "tabDragging__97b44",
+    eg: "tabButton__97b44",
+    b: "closeButton__97b44",
+    XE: "unreadIndicator__97b44",
+    YB: "newTabButton__97b44",
+    n3: "pinIndicator__97b44",
+    UU: "pinUnreadDot__97b44",
+    $f: "guildIcon__97b44",
+    ro: "dmIcon__97b44",
+    PA: "favoritesIcon__97b44",
+    P0: "iconWrapper__97b44",
+    WK: "mentionBadge__97b44",
+};

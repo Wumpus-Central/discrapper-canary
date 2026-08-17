@@ -1,16 +1,23 @@
-n.d(t, { MS: () => a, OE: () => o, Qb: () => d });
+n.d(t, { MS: () => o, OE: () => d, Qb: () => c });
 var i = n(228366),
     l = n(976860),
-    r = n(174459),
-    s = n(652215);
-function a() {
+    r = n(114129),
+    s = n(174459),
+    a = n(652215);
+function o() {
     i.h.dispatch({ type: "ROUTE_CHANGED" });
 }
-function o(e) {
-    (0, l.TX)() &&
-        (r.default.track(s.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }), (0, l.aX)());
-}
 function d(e) {
-    (0, l.TX)() &&
-        (r.default.track(s.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }), (0, l.sY)());
+    if (!(0, l.TX)()) return;
+    let t = (0, r.a2)();
+    t === r.ug.Noop ||
+        (s.default.track(a.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }),
+        t !== r.ug.Navigated && (0, l.aX)());
+}
+function c(e) {
+    if (!(0, l.TX)()) return;
+    let t = (0, r.qu)();
+    t === r.ug.Noop ||
+        (s.default.track(a.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }),
+        t !== r.ug.Navigated && (0, l.sY)());
 }

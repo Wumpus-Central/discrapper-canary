@@ -54,22 +54,22 @@ function g(e) {
     return (0, i.jsxs)("div", { className: s()(I.kU, { [I.Fx]: n }), children: [o, a, r] });
 }
 function S(e) {
-    let { leading: t, title: n, trailing: a, windowKey: l, className: o } = e,
-        d = (0, E.getPlatform)(),
-        c = r.useCallback(() => T(l), [l]),
-        u = d === E.PlatformTypes.WINDOWS || d === E.PlatformTypes.LINUX,
-        _ = r.useMemo(() => d === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [d]);
+    let { leading: t, title: n, trailing: a, windowKey: l, className: o, growLeading: d } = e,
+        c = (0, E.getPlatform)(),
+        u = r.useCallback(() => T(l), [l]),
+        _ = c === E.PlatformTypes.WINDOWS || c === E.PlatformTypes.LINUX,
+        h = r.useMemo(() => c === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
     return (0, i.jsxs)("div", {
-        className: s()(I.M0, { [I.CP]: _ }, o),
-        onDoubleClick: c,
+        className: s()(I.M0, { [I.CP]: h }, o),
+        onDoubleClick: u,
         "data-window-chrome": "true",
         children: [
-            (0, i.jsx)("div", { className: I.R4, onDoubleClick: m, children: t }),
+            (0, i.jsx)("div", { className: s()(I.R4, { [I.MY]: d }), onDoubleClick: m, children: t }),
             (0, i.jsx)("div", { className: I.DD, children: n }),
             (0, i.jsxs)("div", {
                 className: I.ZY,
                 onDoubleClick: m,
-                children: [a, u && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
+                children: [a, _ && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
             }),
         ],
     });

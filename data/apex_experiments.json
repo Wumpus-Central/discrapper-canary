@@ -4966,6 +4966,22 @@
     }
   },
   {
+    "name": "2026-07-desktop-channel-tabs",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-07-desktop-tti-update-backoff-algo",
     "kind": "user",
     "defaultConfig": {
