@@ -1,9 +1,15 @@
-a.exports = {
+e.exports = {
     ue: "assistantTurn__30c5c",
     ky: "chatMessageAssistant__30c5c",
     cW: "chatMarkdown__30c5c",
     Xt: "turnAnnouncement__30c5c",
     dO: "turnSteps__30c5c",
+    rn: "activityBox__30c5c",
+    rN: "activityHeader__30c5c",
+    zN: "activityHeaderLabel__30c5c",
+    cZ: "activityHeaderChevron__30c5c",
+    MZ: "activityBody__30c5c",
+    On: "workstreamLane__30c5c",
     nV: "step-row-enter__30c5c",
     Dx: "stepRow__30c5c",
     iq: "stepItem__30c5c",
