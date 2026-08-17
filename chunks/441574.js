@@ -27,7 +27,7 @@ var i,
     R = n(535384),
     O = n(406935),
     L = n(335871),
-    D =
+    y =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (i[(i.UNKNOWN = 1)] = "UNKNOWN"),
         (i[(i.UNSOLICITED_PORNOGRAPHY = 100)] = "UNSOLICITED_PORNOGRAPHY"),
@@ -281,6 +281,8 @@ var i,
         (i[(i.BOT_DELETE_NCAIM_SMITE = 3232)] = "BOT_DELETE_NCAIM_SMITE"),
         (i[(i.BOT_DELETE_SPAM_SMITE = 3235)] = "BOT_DELETE_SPAM_SMITE"),
         (i[(i.BOT_DELETE_SPAM_SILENT_SMITE = 3236)] = "BOT_DELETE_SPAM_SILENT_SMITE"),
+        (i[(i.APP_GROWTH_HALT_SINGLE_SPAM_SMITE = 3233)] = "APP_GROWTH_HALT_SINGLE_SPAM_SMITE"),
+        (i[(i.APP_GROWTH_HALT_SINGLE_4PA_SMITE = 3234)] = "APP_GROWTH_HALT_SINGLE_4PA_SMITE"),
         (i[(i.PRESENCE_IN_VIOLATIVE_GUILD_HIGH_RISK = 4e3)] = "PRESENCE_IN_VIOLATIVE_GUILD_HIGH_RISK"),
         (i[(i.PRESENCE_IN_VIOLATIVE_GUILD_MEDIUM_RISK = 4010)] = "PRESENCE_IN_VIOLATIVE_GUILD_MEDIUM_RISK"),
         (i[(i.OWNER_OF_VIOLATIVE_GUILD_VERY_HIGH_RISK = 4100)] = "OWNER_OF_VIOLATIVE_GUILD_VERY_HIGH_RISK"),
@@ -824,7 +826,7 @@ var i,
         (i[(i.TEST_GUILD_CLASSIFICATION_SEVERE = 9102)] = "TEST_GUILD_CLASSIFICATION_SEVERE"),
         (i[(i.TEST_PROVISIONAL_ACCOUNT_CLASSIFICATION = 9200)] = "TEST_PROVISIONAL_ACCOUNT_CLASSIFICATION"),
         i),
-    y =
+    D =
         (((r = {})[(r.REASON_UNSPECIFIED = 0)] = "REASON_UNSPECIFIED"),
         (r[(r.DISABLED_SUSPICIOUS_ACTIVITY = 1)] = "DISABLED_SUSPICIOUS_ACTIVITY"),
         (r[(r.SMITE_REMOVE_EMAIL_VERIFICATION = 2)] = "SMITE_REMOVE_EMAIL_VERIFICATION"),
@@ -958,7 +960,7 @@ class x extends R.G {
                 name: "classification_types",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.safety_common.v1.ClassificationType", D],
+                T: () => ["discord_protos.safety_common.v1.ClassificationType", y],
             },
             { no: 3, name: "banned_at", kind: "message", T: () => L.D },
         ]);
@@ -1021,7 +1023,7 @@ class F extends R.G {
                 name: "classification_types",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.safety_common.v1.ClassificationType", D],
+                T: () => ["discord_protos.safety_common.v1.ClassificationType", y],
             },
             { no: 2, name: "banned_at", kind: "message", T: () => L.D },
         ]);
@@ -1078,7 +1080,7 @@ class B extends R.G {
             { no: 103, name: "deferred_action", kind: "message", oneof: "state", T: () => G },
             { no: 104, name: "temp_banned", kind: "message", oneof: "state", T: () => k },
             { no: 105, name: "banned", kind: "message", oneof: "state", T: () => V },
-            { no: 1, name: "reason", kind: "enum", T: () => ["discord_protos.safety_common.v1.SafetyStateReason", y] },
+            { no: 1, name: "reason", kind: "enum", T: () => ["discord_protos.safety_common.v1.SafetyStateReason", D] },
             {
                 no: 2,
                 name: "annotations",
@@ -2107,8 +2109,8 @@ class eL extends R.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eD = new eL();
-class ey extends R.G {
+let ey = new eL();
+class eD extends R.G {
     constructor() {
         super("discord_protos.users.v1.BadgeCommon", [{ no: 1, name: "obtained_at", kind: "message", T: () => L.D }]);
     }
@@ -2142,7 +2144,7 @@ class ey extends R.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ev = new ey();
+let ev = new eD();
 class eb extends R.G {
     constructor() {
         super("discord_protos.users.v1.AprilFools2026Badge", [
@@ -2331,7 +2333,7 @@ class eF extends R.G {
             { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => eZ } },
             { no: 4, name: "quest", kind: "message", T: () => eQ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
-            { no: 6, name: "cross_platform_restriction", kind: "message", T: () => eD },
+            { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
             { no: 7, name: "collectibles", kind: "message", T: () => em },
             { no: 8, name: "safety_state", kind: "message", T: () => H },
             { no: 9, name: "premium_state", kind: "message", T: () => e0 },
@@ -2377,7 +2379,7 @@ class eF extends R.G {
                     r.primaryGuild = eS.internalBinaryRead(e, e.uint32(), n, r.primaryGuild);
                     break;
                 case 6:
-                    r.crossPlatformRestriction = eD.internalBinaryRead(e, e.uint32(), n, r.crossPlatformRestriction);
+                    r.crossPlatformRestriction = ey.internalBinaryRead(e, e.uint32(), n, r.crossPlatformRestriction);
                     break;
                 case 7:
                     r.collectibles = em.internalBinaryRead(e, e.uint32(), n, r.collectibles);
@@ -2513,7 +2515,7 @@ class eF extends R.G {
         e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
-                eD.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
+                ey.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
             e.collectibles && em.internalBinaryWrite(e.collectibles, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(8, S.O0.LengthDelimited).fork(), n).join(),
             e.premiumState && e0.internalBinaryWrite(e.premiumState, t.tag(9, S.O0.LengthDelimited).fork(), n).join(),
