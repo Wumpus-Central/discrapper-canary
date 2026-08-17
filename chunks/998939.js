@@ -1,12 +1,15 @@
 n.d(t, {
+    WN: () => $,
     dv: () => O,
-    r2: () => G,
     TV: () => D,
-    n6: () => z,
+    gm: () => K,
+    n6: () => Y,
     Hc: () => L,
-    PK: () => F,
-    Ay: () => K,
-    XZ: () => U,
+    PK: () => X,
+    r2: () => U,
+    LJ: () => z,
+    Ay: () => Z,
+    XZ: () => G,
     vX: () => V,
     Vm: () => W,
 }),
@@ -78,13 +81,13 @@ function v(e, t) {
 let b = new Map(),
     k = new Map(),
     j = new Map();
-function E(e, t) {
+function w(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let w = { location: "connection", code: u.xA.SEND_FAILED },
+let E = { location: "connection", code: u.xA.SEND_FAILED },
     y = { location: "agent", code: u.xA.AGENT_ERROR };
 function N(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E;
     r.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
         projectId: e,
@@ -141,7 +144,7 @@ async function I(e, t) {
                         let a = (l.messages ?? []).slice();
                         r.h.dispatch({ type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId: t, entries: a });
                         let i = n.pendingEvents;
-                        for (let l of ((n.pendingEvents = []), E(t, "open"), i)) e(t, n, l);
+                        for (let l of ((n.pendingEvents = []), w(t, "open"), i)) e(t, n, l);
                         let s = n.pendingModelSettings;
                         if (((n.pendingModelSettings = null), null != s))
                             try {
@@ -283,10 +286,10 @@ async function I(e, t) {
                 })(e, t, n),
             onClose: () => {
                 (v(t, "Connection closed before the publish result arrived"), t.disposed)
-                    ? E(e, "closed")
+                    ? w(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), E(e, "connecting"), t.backoff.fail(() => P(e)))
-                      : (E(e, "closed"),
+                      ? ((t.reconnectPending = !0), w(e, "connecting"), t.backoff.fail(() => P(e)))
+                      : (w(e, "closed"),
                         A(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
@@ -296,7 +299,7 @@ async function I(e, t) {
         });
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
-        E(e, "failed"),
+        w(e, "failed"),
             A(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             v(t, "Connection failed before the publish result arrived"),
@@ -327,7 +330,7 @@ function P(e) {
         (n.helloSeen = !1),
         (n.disposed = !1),
         (n.reconnectPending = !1),
-        E(e, "connecting"),
+        w(e, "connecting"),
         I(e, n);
 }
 function M(e) {
@@ -339,7 +342,7 @@ function M(e) {
         v(t, "Connection closed before the publish result arrived"),
         t.ws.close(),
         b.delete(e),
-        E(e, "closed"),
+        w(e, "closed"),
         !0)
     );
 }
@@ -386,13 +389,13 @@ function D(e) {
         throw ((0, d.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
     });
 }
-function G(e, t) {
+function U(e, t) {
     let n = b.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function U(e, t) {
+function G(e, t) {
     let n = b.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -425,20 +428,67 @@ async function W(e, t) {
         i = await fetch(`${H(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
     if (!i.ok) throw Error(`attachment cleanup failed (${i.status})`);
 }
-async function F(e, t) {
+function F(e, t) {
+    return `${e}/agent/${t}`;
+}
+class $ extends Error {
+    status;
+    constructor(e) {
+        super(`vibegrations archive request failed (${e ?? "network"})`),
+            (this.status = e),
+            (this.name = "VibegrationsArchiveError");
+    }
+}
+async function z(e, t) {
+    let n,
+        l,
+        { ticket: a, baseUrl: i } = await B(e),
+        r =
+            ((l = t
+                .trim()
+                .replace(/[^\w.\- ]/g, "")
+                .trim()
+                .replace(/\s+/g, "-")),
+            `${"" === l ? "vibegration" : l}.zip`),
+        s = new URLSearchParams({ ticket: a, name: r });
+    try {
+        n = await fetch(`${F(i, "export")}?${s}`, { method: "GET" });
+    } catch {
+        throw new $(null);
+    }
+    if (!n.ok) throw new $(n.status);
+    return { blob: await n.blob(), filename: r };
+}
+async function K(e, t) {
+    let n,
+        { ticket: l, baseUrl: a } = await B(e),
+        i = new URLSearchParams({ ticket: l });
+    try {
+        n = await fetch(`${F(a, "import")}?${i}`, {
+            method: "POST",
+            headers: { "content-type": "" !== t.type ? t.type : "application/octet-stream" },
+            body: t,
+        });
+    } catch {
+        throw new $(null);
+    }
+    if (!n.ok) throw new $(n.status);
+    return { fileCount: (await n.json()).file_count };
+}
+async function X(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: l, baseUrl: a } = await B(e),
         i = new URLSearchParams({ ticket: l });
     return n && i.set("download", "1"), `${H(a, t)}?${i}`;
 }
-async function z(e, t) {
-    let n = await F(e, t),
+async function Y(e, t) {
+    let n = await X(e, t),
         l = await fetch(n, { method: "HEAD" });
     if (404 === l.status) return !1;
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
-class $ extends a.Ay.Store {
+class q extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, p.A);
     }
@@ -449,7 +499,7 @@ class $ extends a.Ay.Store {
         return j.get(e) ?? null;
     }
 }
-let K = new $(r.h, {
+let Z = new q(r.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (k.get(t) === n) return !1;
