@@ -349,6 +349,64 @@
     flex: 1 1 auto
 }
 
+.chatLogList__2b71e {
+    box-sizing: border-box;
+    gap: var(--space-12);
+    list-style: none;
+    margin: 0;
+    padding: var(--space-8) 0 0
+}
+
+.chatLogList__2b71e,
+.chatLogList__2b71e>li {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%
+}
+
+@keyframes chat-row-enter__2b71e {
+    0% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+}
+
+.full-motion .chatRow__2b71e {
+    animation: chat-row-enter__2b71e .2s ease-out
+}
+
+.chatMessageUser__2b71e {
+    align-self: flex-end;
+    box-sizing: border-box;
+    max-width: 80%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: var(--space-12);
+    width: -moz-fit-content;
+    width: fit-content;
+    word-break: break-word
+}
+
+.messageAttachments__2b71e {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+    max-width: 100%;
+    min-width: 0
+}
+
+.messageAttachments__2b71e:first-child {
+    margin-top: 0
+}
+
+.messageAttachmentChipButton__2b71e {
+    cursor: pointer;
+    text-align: start
+}
+
 .planCard_af6837 {
     box-sizing: border-box;
     display: flex;
@@ -636,6 +694,10 @@
     flex-wrap: wrap;
     gap: var(--space-4);
     margin-top: var(--space-4)
+}
+
+.turnAttachments__30c5c {
+    margin-top: var(--space-8)
 }
 
 .todoCard__97796 {
@@ -958,64 +1020,6 @@
         opacity: .3;
         transform: translate3d(-10%, -8%, 0) scale(.85)
     }
-}
-
-.chatLogList__2b71e {
-    box-sizing: border-box;
-    gap: var(--space-12);
-    list-style: none;
-    margin: 0;
-    padding: var(--space-8) 0 0
-}
-
-.chatLogList__2b71e,
-.chatLogList__2b71e>li {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    min-width: 0;
-    width: 100%
-}
-
-@keyframes chat-row-enter__2b71e {
-    0% {
-        opacity: 0;
-        transform: translateY(8px)
-    }
-}
-
-.full-motion .chatRow__2b71e {
-    animation: chat-row-enter__2b71e .2s ease-out
-}
-
-.chatMessageUser__2b71e {
-    align-self: flex-end;
-    box-sizing: border-box;
-    max-width: 80%;
-    min-width: 0;
-    overflow-wrap: anywhere;
-    padding: var(--space-12);
-    width: -moz-fit-content;
-    width: fit-content;
-    word-break: break-word
-}
-
-.messageAttachments__2b71e {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-8);
-    margin-top: var(--space-8);
-    max-width: 100%;
-    min-width: 0
-}
-
-.messageAttachments__2b71e:first-child {
-    margin-top: 0
-}
-
-.messageAttachmentChipButton__2b71e {
-    cursor: pointer;
-    text-align: start
 }
 
 .panel__3e134 {

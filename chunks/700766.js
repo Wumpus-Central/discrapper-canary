@@ -18,4 +18,5 @@ e.exports = {
     yJ: "stepDetail__30c5c",
     IN: "turnIdeasOffer__30c5c",
     y8: "stepScreenshots__30c5c",
+    MT: "turnAttachments__30c5c",
 };
