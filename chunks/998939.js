@@ -1,15 +1,17 @@
 n.d(t, {
-    dv: () => G,
+    dv: () => D,
     r2: () => U,
     TV: () => H,
-    n6: () => q,
-    Hc: () => D,
-    PK: () => X,
-    Ay: () => Y,
-    aF: () => $,
+    n6: () => Y,
+    Hc: () => G,
+    PK: () => q,
+    Lc: () => $,
+    Ay: () => J,
+    aF: () => K,
+    uM: () => z,
     XZ: () => B,
     vX: () => W,
-    Vm: () => z,
+    Vm: () => X,
 }),
     n(321073),
     n(323874),
@@ -119,12 +121,12 @@ function C(e, t, n) {
     let l = t.pendingSends;
     for (let a of ((t.pendingSends = []), l)) A(e, a), w(e, n);
 }
-let T = {
+let I = {
         build_error: { location: "build", code: u.xA.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: u.xA.HEALTHCHECK_FAILED },
         error: { location: "agent", code: u.xA.AGENT_ERROR },
     },
-    I = {
+    T = {
         web: { location: "runtime_frame", code: u.xA.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: u.xA.RUNTIME_WORKER_ERROR },
     },
@@ -303,7 +305,7 @@ async function M(e, t) {
                                 });
                         else {
                             i.h.dispatch({ type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: t, step: l });
-                            let e = T[l.kind];
+                            let e = I[l.kind];
                             null != e && (0, u.Z0)(t, { ...e, message: l.message, details: l.stderr_tail }),
                                 "preview_ready" === l.kind &&
                                     (0, d.tZ)(t, { isPreview: !0 }).catch((e) => {
@@ -323,7 +325,7 @@ async function M(e, t) {
                               : (i.h.dispatch({ type: "VIBEGRATIONS_LOG_APPEND", projectId: t, log: l }),
                                 (function (e, t) {
                                     if ("error" !== t.level) return;
-                                    let n = null != t.source ? I[t.source] : void 0;
+                                    let n = null != t.source ? T[t.source] : void 0;
                                     if (null == n) return;
                                     let l = R.get(e);
                                     null == l && ((l = new Set()), R.set(e, l));
@@ -401,13 +403,13 @@ function O(e) {
         !0)
     );
 }
-function D(e) {
+function G(e) {
     let t = b.get(e);
     if (null == t) return void L(e);
     let n = j.get(e);
     ("closed" !== n && "failed" !== n) || t.reconnectPending || L(e);
 }
-function G(e, t, n) {
+function D(e, t, n) {
     let l = t.trim(),
         a = null != n && n.length > 0 ? n : void 0;
     if ("" === l && null == a) return;
@@ -477,31 +479,47 @@ async function W(e, t) {
     if (!s.ok) throw Error(`attachment upload failed (${s.status})`);
     return await s.json();
 }
-async function z(e, t) {
+class z extends Error {
+    status;
+    constructor(e) {
+        super(`fork failed (${e})`), (this.status = e);
+    }
+}
+async function $(e, t) {
+    let [n, l] = await Promise.all([F(e), F(t)]),
+        a = new URLSearchParams({ ticket: n.ticket }),
+        s = await fetch(`${n.baseUrl}/agent/fork?${a}`, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ dest_ticket: l.ticket }),
+        });
+    if (!s.ok) throw new z(s.status);
+}
+async function X(e, t) {
     let { ticket: n, baseUrl: l } = await F(e),
         a = new URLSearchParams({ ticket: n }),
         s = await fetch(`${V(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
     if (!s.ok) throw Error(`attachment cleanup failed (${s.status})`);
 }
-async function $(e, t) {
+async function K(e, t) {
     let { ticket: n, baseUrl: l } = await F(e),
         a = new URLSearchParams({ ticket: n });
     return `${l}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function X(e, t) {
+async function q(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: l, baseUrl: a } = await F(e),
         s = new URLSearchParams({ ticket: l });
     return n && s.set("download", "1"), `${V(a, t)}?${s}`;
 }
-async function q(e, t) {
-    let n = await X(e, t),
+async function Y(e, t) {
+    let n = await q(e, t),
         l = await fetch(n, { method: "HEAD" });
     if (404 === l.status) return !1;
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
-class K extends a.Ay.Store {
+class Z extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, f.A);
     }
@@ -512,7 +530,7 @@ class K extends a.Ay.Store {
         return y.get(e) ?? null;
     }
 }
-let Y = new K(i.h, {
+let J = new Z(i.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (j.get(t) === n) return !1;
