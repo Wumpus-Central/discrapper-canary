@@ -1,41 +1,41 @@
-i.d(t, { Gf: () => f, Tf: () => G, _Q: () => I, vP: () => S });
-var l = i(477900);
-i(582128);
-var n = i(503698),
-    a = i.n(n),
-    s = i(17928),
-    d = i(297264),
-    r = i(866665),
-    c = i(939249),
-    o = i(672979),
-    p = i(90644),
-    m = i(432166),
-    u = i(587895),
-    x = i(769015),
-    h = i(172710),
-    A = i(763758),
-    v = i(970928),
-    g = i(486020),
-    N = i(652215),
-    j = i(375708),
-    y = i(37921);
-function I(e) {
+l.d(t, { Gf: () => f, Tf: () => S, _Q: () => N, vP: () => T });
+var i = l(477900);
+l(582128);
+var s = l(503698),
+    n = l.n(s),
+    a = l(17928);
+if (/^(221552|614256)$/.test(l.j)) var d = l(297264);
+var r = l(866665);
+if (/^(221552|614256)$/.test(l.j)) var o = l(939249);
+var c = l(672979),
+    p = l(90644),
+    u = l(432166),
+    m = l(587895),
+    A = l(769015),
+    h = l(172710),
+    x = l(763758),
+    v = l(970928),
+    j = l(486020),
+    g = l(652215),
+    I = l(375708),
+    y = l(37921);
+function N(e) {
     return (
         {
-            [N.$pd.PLAYING]: j.intl.string(j.t.J4MQFX),
-            [N.$pd.COMPETING]: j.intl.string(j.t.J4MQFX),
-            [N.$pd.WATCHING]: j.intl.string(j.t.xeqvTg),
-            [N.$pd.LISTENING]: j.intl.string(j.t.ep6av7),
-        }[e] ?? j.intl.string(j.t["1+boPi"])
+            [g.$pd.PLAYING]: I.intl.string(I.t.J4MQFX),
+            [g.$pd.COMPETING]: I.intl.string(I.t.J4MQFX),
+            [g.$pd.WATCHING]: I.intl.string(I.t.xeqvTg),
+            [g.$pd.LISTENING]: I.intl.string(I.t.ep6av7),
+        }[e] ?? I.intl.string(I.t["1+boPi"])
     );
 }
-function f(e, t, i) {
-    let l;
+function f(e, t, l) {
+    let i;
     return null != t && (0, p.A)(t)
         ? {
               isSpotify: !0,
               name: t.details ?? t.name ?? "",
-              type: N.$pd.LISTENING,
+              type: g.$pd.LISTENING,
               assets: t.assets ?? void 0,
               applicationId: t.application_id,
               state: t.state ?? void 0,
@@ -44,18 +44,18 @@ function f(e, t, i) {
               rawActivity: t,
               userId: e,
           }
-        : null != i
-          ? ((l = t?.type === N.$pd.WATCHING ? N.$pd.WATCHING : N.$pd.PLAYING),
+        : null != l
+          ? ((i = t?.type === g.$pd.WATCHING ? g.$pd.WATCHING : g.$pd.PLAYING),
             {
                 isSpotify: !1,
                 isEmbedded: !0,
                 isGame: !1,
-                name: i.application.name,
-                type: l,
-                applicationId: i.application.id,
+                name: l.application.name,
+                type: i,
+                applicationId: l.application.id,
                 embeddedIconUrl:
-                    g.Ay.getApplicationIconURL({ id: i.application.id, icon: i.application.icon }) ?? void 0,
-                embeddedApplicationName: i.application.name,
+                    j.Ay.getApplicationIconURL({ id: l.application.id, icon: l.application.icon }) ?? void 0,
+                embeddedApplicationName: l.application.name,
                 assets: t?.assets ?? void 0,
                 details: t?.details ?? void 0,
                 state: t?.state ?? void 0,
@@ -65,9 +65,9 @@ function f(e, t, i) {
           : {
                 isSpotify: !1,
                 isEmbedded: !1,
-                isGame: (0, o.A)(t),
+                isGame: (0, c.A)(t),
                 name: t?.name ?? "",
-                type: t?.type ?? N.$pd.PLAYING,
+                type: t?.type ?? g.$pd.PLAYING,
                 applicationId: t?.application_id,
                 embeddedIconUrl: void 0,
                 embeddedApplicationName: void 0,
@@ -78,106 +78,106 @@ function f(e, t, i) {
                 userId: e,
             };
 }
-function S(e) {
-    let { resolvedActivity: t, showHeader: i = !0 } = e,
-        { assets: n, applicationId: s, name: o, state: p, syncId: u, timestamps: x, userId: g, rawActivity: N } = t,
-        j = n?.large_image ?? n?.small_image;
-    return (0, l.jsxs)("div", {
+function T(e) {
+    let { resolvedActivity: t, showHeader: l = !0 } = e,
+        { assets: s, applicationId: a, name: c, state: p, syncId: m, timestamps: A, userId: j, rawActivity: g } = t,
+        I = s?.large_image ?? s?.small_image;
+    return (0, i.jsxs)("div", {
         className: y.ec,
         children: [
-            i
-                ? (0, l.jsx)("div", {
+            l
+                ? (0, i.jsx)("div", {
                       className: y.N1,
-                      children: (0, l.jsx)(d.D, {
+                      children: (0, i.jsx)(d.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
-                          children: I(t.type),
+                          children: N(t.type),
                       }),
                   })
                 : null,
-            (0, l.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: y.Wh,
                 children: [
-                    null != j
-                        ? (0, l.jsx)(r.m, {
-                              text: n?.large_text ?? null,
+                    null != I
+                        ? (0, i.jsx)(r.m, {
+                              text: s?.large_text ?? null,
                               position: "top",
-                              children: (0, l.jsx)(c.D, {
-                                  onClick: () => (0, h.QX)(N, g),
+                              children: (0, i.jsx)(o.D, {
+                                  onClick: () => (0, h.QX)(g, j),
                                   className: y.nf,
-                                  children: (0, l.jsx)("img", {
-                                      alt: n?.large_text ?? "",
-                                      src: (0, v.uD)(s, j, [128, 128]),
+                                  children: (0, i.jsx)("img", {
+                                      alt: s?.large_text ?? "",
+                                      src: (0, v.uD)(a, I, [128, 128]),
                                       className: y.Sl,
                                   }),
                               }),
                           })
                         : null,
-                    (0, l.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: y.wt,
                         children: [
-                            null != o &&
-                                o.length > 0 &&
-                                (0, l.jsx)(d.D, {
+                            null != c &&
+                                c.length > 0 &&
+                                (0, i.jsx)(d.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
                                     lineClamp: 1,
                                     children:
-                                        null != u
-                                            ? (0, l.jsx)(c.D, {
-                                                  onClick: () => (0, h.Mp)(N),
+                                        null != m
+                                            ? (0, i.jsx)(o.D, {
+                                                  onClick: () => (0, h.Mp)(g),
                                                   className: y.nf,
-                                                  children: o,
+                                                  children: c,
                                               })
-                                            : o,
+                                            : c,
                                 }),
                             null != p &&
                                 p.length > 0 &&
-                                (0, l.jsx)("div", {
-                                    className: a()(y.QJ, y.p9, y.Mo),
-                                    children: (0, l.jsx)(A.A, {
+                                (0, i.jsx)("div", {
+                                    className: n()(y.QJ, y.p9, y.Mo),
+                                    children: (0, i.jsx)(x.A, {
                                         artists: p,
-                                        canOpen: null != u,
+                                        canOpen: null != m,
                                         linkClassName: y.QJ,
-                                        onOpenSpotifyArtist: (e) => (0, h.mN)(N, g, e),
+                                        onOpenSpotifyArtist: (e) => (0, h.mN)(g, j, e),
                                     }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            x?.start != null &&
-                x?.end != null &&
-                (0, l.jsx)(m.A, { start: x.start, end: x.end, className: y.Jq, themed: !0, singleLine: !0 }),
+            A?.start != null &&
+                A?.end != null &&
+                (0, i.jsx)(u.A, { start: A.start, end: A.end, className: y.Jq, themed: !0, singleLine: !0 }),
         ],
     });
 }
-function G(e) {
+function S(e) {
     let { resolvedActivity: t } = e,
-        i = (0, s.bG)([u.A], () => (null != t.applicationId ? u.A.getApplication(t.applicationId) : null), [
+        l = (0, a.bG)([m.A], () => (null != t.applicationId ? m.A.getApplication(t.applicationId) : null), [
             t.applicationId,
         ]),
-        { assets: n, isGame: a, isEmbedded: d } = t;
-    if (null == n || (null == n.large_image && null == n.small_image))
+        { assets: s, isGame: n, isEmbedded: d } = t;
+    if (null == s || (null == s.large_image && null == s.small_image))
         return d && null != t.embeddedIconUrl
-            ? (0, l.jsx)(r.m, {
+            ? (0, i.jsx)(r.m, {
                   text: t.embeddedApplicationName,
                   position: "top",
                   asContainer: !0,
-                  children: (0, l.jsx)("img", {
+                  children: (0, i.jsx)("img", {
                       alt: t.embeddedApplicationName,
                       src: t.embeddedIconUrl,
                       className: y.Sl,
                   }),
               })
-            : a
-              ? (0, l.jsx)(x.A, { game: i, className: y.Sl })
+            : n
+              ? (0, i.jsx)(A.A, { game: l, className: y.Sl })
               : null;
-    let c = n.large_image ?? n.small_image;
-    return null != c
-        ? (0, l.jsx)("img", {
-              alt: n.large_text ?? "",
-              src: (0, v.uD)(t.applicationId, c, [128, 128]),
+    let o = s.large_image ?? s.small_image;
+    return null != o
+        ? (0, i.jsx)("img", {
+              alt: s.large_text ?? "",
+              src: (0, v.uD)(t.applicationId, o, [128, 128]),
               className: y.Sl,
           })
         : null;

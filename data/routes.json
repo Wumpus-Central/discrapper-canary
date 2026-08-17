@@ -641,6 +641,7 @@
   "HUB_EMAIL_VERIFY_CODE": "/guilds/automations/email-domain-lookup/verify-code",
   "PROMOTIONS": "/promotions",
   "BOGO_PROMOTIONS": "/bogo-promotions",
+  "GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY": "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
   "CLAIMED_OUTBOUND_PROMOTION_CODES": "/users/@me/outbound-promotions/codes",
   "CLAIM_OUTBOUND_PROMOTION_CODE": "/outbound-promotions/:param/claim",
   "HUB_EMAIL_VERIFY_SEND": "/guilds/automations/email-domain-lookup",
