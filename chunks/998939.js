@@ -28,7 +28,7 @@ var l = n(158390),
     d = n(948230),
     u = n(927899),
     h = n(148555);
-class m {
+class p {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: l, onClose: a, onError: s } = e;
@@ -81,7 +81,7 @@ class m {
         this.socket?.close(), (this.socket = null);
     }
 }
-var p = n(208137),
+var m = n(208137),
     f = n(783791),
     g = n(972786),
     x = n(652215),
@@ -109,16 +109,16 @@ function A(e, t) {
     }),
         (0, u.Z0)(e, { ...n, message: t });
 }
-function C(e) {
+function I(e) {
     return `optimistic:${e}`;
 }
-function I(e, t) {
+function C(e, t) {
     let { content: n, nonce: l, attachments: a } = t;
     i.h.dispatch({
         type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
         projectId: e,
         content: n,
-        id: C(l),
+        id: I(l),
         userId: o.default.getCurrentUser()?.id,
         timestamp: new Date().toISOString(),
         attachments: a,
@@ -126,7 +126,7 @@ function I(e, t) {
 }
 function T(e, t, n) {
     let l = t.pendingSends;
-    for (let a of ((t.pendingSends = []), l)) I(e, a), A(e, n);
+    for (let a of ((t.pendingSends = []), l)) C(e, a), A(e, n);
 }
 let R = {
         build_error: { location: "build", code: u.xA.BUILD_FAILED },
@@ -183,7 +183,7 @@ async function L(e, t) {
                             }
                         let o = n.pendingSends;
                         for (let e of ((n.pendingSends = []), o)) {
-                            I(t, e);
+                            C(t, e);
                             try {
                                 n.ws.sendUserMessage(
                                     e.content,
@@ -201,7 +201,7 @@ async function L(e, t) {
                             projectId: t,
                             content: l.content,
                             id: l.id,
-                            ...(null != l.nonce ? { optimisticId: C(l.nonce) } : {}),
+                            ...(null != l.nonce ? { optimisticId: I(l.nonce) } : {}),
                             userId: l.user_id,
                             timestamp: l.ts,
                             attachments: l.attachments,
@@ -211,10 +211,16 @@ async function L(e, t) {
                             type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION",
                             projectId: t,
                             id: l.id,
+                            activeTurnId: l.active_turn_id,
                             disposition: l.disposition,
                         });
                     else if ("provisional_todo" === l.type)
-                        i.h.dispatch({ type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO", projectId: t, text: l.text });
+                        i.h.dispatch({
+                            type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO",
+                            projectId: t,
+                            turnId: l.turn_id,
+                            text: l.text,
+                        });
                     else if ("step" === l.type)
                         if ("reply" === l.kind) {
                             let e = l.message ?? "";
@@ -222,17 +228,25 @@ async function L(e, t) {
                                 ? i.h.dispatch({
                                       type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                       projectId: t,
+                                      turnId: l.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
                                 : A(t, k.intl.string(v.default.Z8Eo8I), S);
                         } else if ("announcement" === l.kind) {
                             let e = l.message ?? "";
                             "" !== e &&
-                                i.h.dispatch({
+                                (i.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                     projectId: t,
+                                    turnId: l.turn_id,
                                     patch: { announcement: e },
-                                });
+                                }),
+                                i.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_STEP_APPEND",
+                                    projectId: t,
+                                    turnId: l.turn_id,
+                                    step: l,
+                                }));
                         } else if ("thinking_lifecycle" === l.kind) {
                             let { phase: e, session: n, seq: a, ticks: s, elapsed_ms: r, text: o } = l;
                             null != e &&
@@ -260,16 +274,24 @@ async function L(e, t) {
                         else if ("todos" === l.kind) {
                             let e = l.items ?? [];
                             e.length > 0 &&
-                                i.h.dispatch({
+                                (i.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                     projectId: t,
+                                    turnId: l.turn_id,
                                     patch: { todos: e },
-                                });
+                                }),
+                                i.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_STEP_APPEND",
+                                    projectId: t,
+                                    turnId: l.turn_id,
+                                    step: l,
+                                }));
                         } else if ("plan_proposed" === l.kind)
                             null != l.proposal
                                 ? i.h.dispatch({
                                       type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                       projectId: t,
+                                      turnId: l.turn_id,
                                       patch: { proposal: l.proposal, kind: "proposal" },
                                   })
                                 : A(t, k.intl.string(v.default.IHCafX), S);
@@ -279,6 +301,7 @@ async function L(e, t) {
                                 i.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                     projectId: t,
+                                    turnId: l.turn_id,
                                     patch: { ideas: l.ideas },
                                 });
                         else if ("attachment" === l.kind)
@@ -287,6 +310,7 @@ async function L(e, t) {
                                 i.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                     projectId: t,
+                                    turnId: l.turn_id,
                                     patch: { attachments: l.attachments },
                                 });
                         else if ("usage" === l.kind)
@@ -319,18 +343,25 @@ async function L(e, t) {
                                     i.h.dispatch({
                                         type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                         projectId: t,
+                                        turnId: l.turn_id,
                                         patch: { kind: "plan_implemented" },
                                     }),
                                 i.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_FINISHED",
                                     projectId: t,
+                                    turnId: l.turn_id,
                                     summary: l.summary,
                                 }),
                                 _.delete(t) &&
                                     "cancelled" === l.result &&
                                     i.h.dispatch({ type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: t });
                         else {
-                            i.h.dispatch({ type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: t, step: l });
+                            i.h.dispatch({
+                                type: "VIBEGRATIONS_CHAT_STEP_APPEND",
+                                projectId: t,
+                                turnId: l.turn_id,
+                                step: l,
+                            });
                             let e = R[l.kind];
                             null != e && (0, u.Z0)(t, { ...e, message: l.message, details: l.stderr_tail }),
                                 "preview_ready" === l.kind &&
@@ -397,7 +428,7 @@ function G(e) {
     let t = j.get(e);
     null == t &&
         ((t = {
-            ws: new m(),
+            ws: new p(),
             backoff: new l.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -442,7 +473,7 @@ function B(e, t, n) {
     let s = { content: l, nonce: (0, r.m)(), attachments: a },
         i = j.get(e);
     if (null != i && ("connecting" === y.get(e) || i.reconnectPending)) return void i.pendingSends.push(s);
-    I(e, s);
+    C(e, s);
     try {
         if (null == i) throw Error("Not connected");
         i.ws.sendUserMessage(
@@ -498,7 +529,7 @@ function W(e, t) {
 }
 async function z(e) {
     let { body: t } = await s.Bo.post({ url: x.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
-    return { ticket: t.ticket, baseUrl: (0, p.V)() ?? t.url };
+    return { ticket: t.ticket, baseUrl: (0, m.V)() ?? t.url };
 }
 function $(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;

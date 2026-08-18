@@ -9,8 +9,8 @@ var l,
     d = n(821609),
     u = n(323384),
     h = n(834730),
-    m = n(580954),
-    p = n(297264),
+    p = n(580954),
+    m = n(297264),
     f = n(812901),
     g = n(317608),
     x = n(17928),
@@ -33,16 +33,16 @@ var l,
         l),
     S = n(503698),
     A = n.n(S),
-    C = n(612749);
-function I(e) {
+    I = n(612749);
+function C(e) {
     let { title: t, body: n, wide: l = !1, children: s } = e;
     return (0, a.jsxs)("div", {
-        className: A()(C.Bf, l && C.Qx),
+        className: A()(I.Bf, l && I.Qx),
         children: [
             (0, a.jsxs)("div", {
-                className: C.Ux,
+                className: I.Ux,
                 children: [
-                    (0, a.jsx)(p.D, { variant: "heading-md/semibold", color: "text-default", children: t }),
+                    (0, a.jsx)(m.D, { variant: "heading-md/semibold", color: "text-default", children: t }),
                     (0, a.jsx)(h.E, { variant: "text-md/medium", color: "text-subtle", children: n }),
                 ],
             }),
@@ -74,16 +74,16 @@ function O(e) {
                         { data: o, isLoading: c } = (0, k.YY)(t),
                         d = (0, _.x)(o),
                         u = null != (0, v.Ay)(t),
-                        [h, m] = s.useState(null),
-                        p = h === l;
+                        [h, p] = s.useState(null),
+                        m = h === l;
                     return {
                         surface: a,
-                        setFailed: s.useCallback(() => m(l), [l]),
+                        setFailed: s.useCallback(() => p(l), [l]),
                         lifecycle: (0, N.x1)(i)
                             ? r
                                 ? { state: "rendering-elsewhere" }
                                 : { state: "launched", frame: i }
-                            : p
+                            : m
                               ? { state: "error" }
                               : i?.state === "loading"
                                 ? { state: "loading", frame: i }
@@ -114,7 +114,7 @@ function O(e) {
         r = s.useMemo(() => (0, N.VA)(t, n), [t, n]);
     switch (
         (s.useEffect(() => {
-            if ((0, N.Yf)(n) === N.sV.MAIN) return () => (0, m.A)().leaveFrame(r);
+            if ((0, N.Yf)(n) === N.sV.MAIN) return () => (0, p.A)().leaveFrame(r);
         }, [r, n]),
         i)
     ) {
@@ -123,7 +123,7 @@ function O(e) {
         case w.RenderingElsewhere:
             return (0, a.jsx)("div", {
                 className: P.qs,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(C, {
                     title: R.intl.string(T.default["4f6Vkr"]),
                     body: R.intl.string(T.default.LJ2q1H),
                 }),
@@ -143,7 +143,7 @@ function O(e) {
         case w.DoesNotSupportSurface:
             return (0, a.jsx)("div", {
                 className: P.qs,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(C, {
                     title: R.intl.string(T.default.FHOJiH),
                     body: R.intl.string(T.default["1yLQoV"]),
                 }),
@@ -152,7 +152,7 @@ function O(e) {
             return (0, a.jsxs)("div", {
                 className: P.qs,
                 children: [
-                    (0, a.jsx)(p.D, {
+                    (0, a.jsx)(m.D, {
                         variant: "heading-md/semibold",
                         color: "text-default",
                         children: R.intl.string(T.default.MeLWCr),
@@ -175,14 +175,14 @@ function L(e) {
     let { applicationId: t, surface: n, previewReady: l, previewGate: r } = e,
         o = (0, i.A)(t, n);
     return (s.useEffect(() => {
-        r?.type === "permissions" && null != o && (0, m.A)().leaveFrame(o.id);
+        r?.type === "permissions" && null != o && (0, p.A)().leaveFrame(o.id);
     }, [o, r?.type]),
     r?.type === "checking")
         ? (0, a.jsx)("div", { className: M.q, children: (0, a.jsx)(c.y, {}) })
         : r?.type === "permissions"
           ? (0, a.jsx)("div", {
                 className: M.q,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(C, {
                     wide: !0,
                     title: R.intl.string(T.default.DYwf2n),
                     body: R.intl.string(T.default.WWj3pN),
@@ -271,8 +271,8 @@ function en(e) {
             onApprove: d,
             onRegionCapture: u,
         } = e,
-        [h, m] = s.useState(""),
-        [p, f] = s.useState([]),
+        [h, p] = s.useState(""),
+        [m, f] = s.useState([]),
         [g, x] = s.useState(!1),
         [v, k] = s.useState(!1),
         [b, j] = s.useState(!1);
@@ -307,7 +307,7 @@ function en(e) {
             },
             [w],
         ),
-        C = s.useCallback(
+        I = s.useCallback(
             (e) => {
                 if (0 === e.length) return;
                 let t = [..._.current],
@@ -349,12 +349,12 @@ function en(e) {
             },
             [S, r, A, w],
         ),
-        I = s.useCallback(async () => {
+        C = s.useCallback(async () => {
             if (null != u && !v) {
                 k(!0);
                 try {
                     let e = await u();
-                    null != e && C([e]);
+                    null != e && I([e]);
                 } catch (e) {
                     console.error("[vibegrations] region capture failed", e),
                         w([
@@ -372,7 +372,7 @@ function en(e) {
                     k(!1);
                 }
             }
-        }, [u, v, C, w]),
+        }, [u, v, I, w]),
         P = s.useCallback(
             (e) => {
                 let t = _.current,
@@ -384,15 +384,15 @@ function en(e) {
             },
             [S, w],
         ),
-        O = p.every((e) => "ready" === e.status),
-        M = "" !== h.trim() || p.length > 0,
+        O = m.every((e) => "ready" === e.status),
+        M = "" !== h.trim() || m.length > 0,
         L = t && M && O,
         G = s.useCallback(() => {
             if (!L) return;
             let e = _.current.filter((e) => null != e.ref).map((e) => e.ref);
             for (let t of (l(h, e.length > 0 ? e : void 0), _.current))
                 null != t.previewUrl && URL.revokeObjectURL(t.previewUrl);
-            m(""), w([]);
+            p(""), w([]);
         }, [L, h, l, w]),
         D = s.useCallback(
             (e) => {
@@ -421,24 +421,24 @@ function en(e) {
             (e) => {
                 if (!t) return;
                 let n = Array.from(e.clipboardData.files);
-                0 !== n.length && (e.preventDefault(), C(n));
+                0 !== n.length && (e.preventDefault(), I(n));
             },
-            [t, C],
+            [t, I],
         ),
         q = s.useCallback(
             (e) => {
-                e.preventDefault(), x(!1), t && C(Array.from(e.dataTransfer.files));
+                e.preventDefault(), x(!1), t && I(Array.from(e.dataTransfer.files));
             },
-            [t, C],
+            [t, I],
         ),
         Y = s.useCallback((e) => {
             e.dataTransfer.types.includes("Files") && (e.preventDefault(), x(!0));
         }, []),
         Z = s.useCallback(
             (e) => {
-                C(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = "");
+                I(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = "");
             },
-            [C],
+            [I],
         );
     return (0, a.jsxs)("form", {
         onSubmit: D,
@@ -447,10 +447,10 @@ function en(e) {
         onDragLeave: () => x(!1),
         className: g ? `${ee.DA} ${ee.pV}` : ee.DA,
         children: [
-            p.length > 0
+            m.length > 0
                 ? (0, a.jsx)("div", {
                       className: ee.lN,
-                      children: p.map((e) => (0, a.jsx)(el, { draft: e, onRemove: P }, e.localId)),
+                      children: m.map((e) => (0, a.jsx)(el, { draft: e, onRemove: P }, e.localId)),
                   })
                 : null,
             (0, a.jsxs)("div", {
@@ -484,7 +484,7 @@ function en(e) {
                             type: "button",
                             className: ee.Y0,
                             disabled: null == u || !t || v,
-                            onClick: I,
+                            onClick: C,
                             "aria-label": R.intl.string(T.default.B5gWPk),
                             children: v
                                 ? (0, a.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: ee.Rk })
@@ -493,7 +493,7 @@ function en(e) {
                     }),
                     (0, a.jsx)(V.y, {
                         value: h,
-                        onChange: (e) => m(e.currentTarget.value),
+                        onChange: (e) => p(e.currentTarget.value),
                         onKeyDown: X,
                         onPaste: K,
                         placeholder: t
@@ -646,12 +646,12 @@ function eu(e) {
     });
 }
 var eh = n(256905),
-    em = n(289149);
-function ep(e) {
+    ep = n(289149);
+function em(e) {
     let { projectId: t, attachments: n } = e,
         l = n.filter(ef);
     return (0, a.jsx)("div", {
-        className: em.KT,
+        className: ep.KT,
         children: n.map((e, n) =>
             null == e.id
                 ? (0, a.jsx)(eg, { name: e.name }, n)
@@ -726,7 +726,7 @@ function ev(e) {
             }
         );
     }, [t, i]);
-    let m = s.useCallback(() => {
+    let p = s.useCallback(() => {
         Promise.all(
             n.map((e) =>
                 Promise.all([(0, o.n6)(t, e.id), (0, o.PK)(t, e.id)]).then(
@@ -756,7 +756,7 @@ function ev(e) {
               name: r,
               thumbSrc: c,
               ariaLabel: R.intl.formatToPlainString(T.default.QUFLUq, { name: r }),
-              onClick: m,
+              onClick: p,
               onThumbError: () => {
                   d(null),
                       (0, o.n6)(t, i).then(
@@ -962,7 +962,7 @@ function e_(e) {
                 children: l.summary,
             }),
         });
-    let m = i ? es.a : ea._;
+    let p = i ? es.a : ea._;
     return (0, a.jsxs)("li", {
         "data-step-kind": l.step.kind,
         className: ey.Dx,
@@ -982,7 +982,7 @@ function e_(e) {
                         className: ey.iq,
                         children: l.summary,
                     }),
-                    (0, a.jsx)(m, { size: "xs", color: "currentColor", className: ey.Ue }),
+                    (0, a.jsx)(p, { size: "xs", color: "currentColor", className: ey.Ue }),
                 ],
             }),
             (0, a.jsxs)("div", {
@@ -1063,10 +1063,10 @@ function eA(e) {
         children: "completed" === t ? (0, a.jsx)(ew.B, { size: "xxs", color: "currentColor" }) : null,
     });
 }
-function eC(e) {
+function eI(e) {
     return { completed: e.filter((e) => "completed" === e.status).length, total: e.length };
 }
-function eI(e) {
+function eC(e) {
     let { todos: t, provisional: n } = e;
     return (0, a.jsxs)("ul", {
         className: eS.zR,
@@ -1115,7 +1115,7 @@ function eI(e) {
 }
 function eT(e) {
     let { todos: t, provisional: n, announceProgress: l = !0 } = e,
-        { completed: s, total: i } = eC(t);
+        { completed: s, total: i } = eI(t);
     return 0 === i
         ? null
         : (0, a.jsxs)("article", {
@@ -1152,7 +1152,7 @@ function eT(e) {
                           }),
                       ],
                   }),
-                  (0, a.jsx)(eI, { todos: t, provisional: n }),
+                  (0, a.jsx)(eC, { todos: t, provisional: n }),
               ],
           });
 }
@@ -1272,9 +1272,9 @@ function eL(e) {
                     return R.intl.string(T.default.esfcU6);
             }
         })(t.state),
-        m = o ? es.a : ea._,
-        p = "failed" === t.state,
-        f = p ? u : d ? (o ? void 0 : t.latestActivity) : r ? void 0 : u,
+        p = o ? es.a : ea._,
+        m = "failed" === t.state,
+        f = m ? u : d ? (o ? void 0 : t.latestActivity) : r ? void 0 : u,
         g = (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsxs)("span", {
@@ -1287,14 +1287,14 @@ function eL(e) {
                             className: eM.QC,
                             children: t.title,
                         }),
-                        r ? (0, a.jsx)(m, { size: "xs", color: "currentColor", className: eM.bu }) : null,
+                        r ? (0, a.jsx)(p, { size: "xs", color: "currentColor", className: eM.bu }) : null,
                     ],
                 }),
                 null != f && "" !== f
                     ? (0, a.jsx)(h.E, {
                           tag: "span",
                           variant: "text-xs/normal",
-                          color: p ? "text-feedback-critical" : "text-muted",
+                          color: m ? "text-feedback-critical" : "text-muted",
                           className: eM.hE,
                           children: f,
                       })
@@ -1353,7 +1353,7 @@ function eH(e) {
         c = s.useCallback(() => r((e) => !e), []),
         d = null != n.label && "" !== n.label,
         u = i ? ea._ : es.a,
-        m = (0, a.jsx)(a.Fragment, {
+        p = (0, a.jsx)(a.Fragment, {
             children: n.blocks.map((e) =>
                 "rows" === e.type
                     ? (0, a.jsx)(
@@ -1393,11 +1393,11 @@ function eH(e) {
                           (0, a.jsx)(u, { size: "xs", color: "currentColor", className: ey.cZ }),
                       ],
                   }),
-                  (0, a.jsx)("div", { id: o, hidden: i, className: ey.MZ, children: m }),
+                  (0, a.jsx)("div", { id: o, hidden: i, className: ey.MZ, children: p }),
                   l,
               ],
           })
-        : (0, a.jsxs)("li", { className: A()(ey.ky, eG.XR, ey.rn), children: [m, l] });
+        : (0, a.jsxs)("li", { className: A()(ey.ky, eG.XR, ey.rn), children: [p, l] });
 }
 function eB(e) {
     let {
@@ -1410,8 +1410,8 @@ function eB(e) {
             provisionalTodo: c,
             active: d = !1,
             todos: u,
-            onApprove: m,
-            ideas: p,
+            onApprove: p,
+            ideas: m,
             attachments: f,
             onPickIdea: g,
             offerIdeas: x,
@@ -1427,46 +1427,47 @@ function eB(e) {
                         s = null,
                         i = null,
                         r = null,
-                        o = [],
-                        c = null;
-                    function d() {
-                        null != r && (r.groups = eO(o)), (r = null), (o = []);
-                    }
+                        o = null,
+                        c = [],
+                        d = null;
                     function u() {
-                        d(), (c = null), (i = null);
+                        null != o && (o.groups = eO(c)), (o = null), (c = []);
                     }
-                    function h(e) {
+                    function h() {
+                        u(), (d = null), (r = null);
+                    }
+                    function p(e) {
                         return (
-                            null == i && ((i = { type: "activity", key: `activity-${e}`, blocks: [] }), n.push(i)), i
+                            null == r && ((r = { type: "activity", key: `activity-${e}`, blocks: [] }), n.push(r)), r
                         );
                     }
                     for (let [t, m] of e.entries()) {
                         if (null != m.task_id && "" !== m.task_id) {
                             let e = (function (e, t) {
                                 let n = e.task_id,
-                                    r = l.get(n);
-                                if (null != r)
+                                    i = l.get(n);
+                                if (null != i)
                                     return (
                                         "task_started" === e.kind &&
                                             null != e.task_title &&
                                             "" !== e.task_title &&
-                                            (r.title = e.task_title),
-                                        null != i &&
-                                            null == i.label &&
+                                            (i.title = e.task_title),
+                                        null != r &&
+                                            null == r.label &&
                                             null != e.task_group_label &&
-                                            (i.label = e.task_group_label),
-                                        r
+                                            (r.label = e.task_group_label),
+                                        i
                                     );
                                 let o =
                                     null != e.task_group_label && "" !== e.task_group_label
                                         ? e.task_group_label
                                         : void 0;
-                                null != c &&
-                                    c.groupId !== e.task_group_id &&
-                                    ((c = null), null != o && null != i && null != i.label && i.label !== o && u());
-                                let m = h(t);
-                                null == m.label && null != o && (m.label = o), d(), (s = null);
-                                let p = {
+                                null != d &&
+                                    d.groupId !== e.task_group_id &&
+                                    ((d = null), null != o && null != r && null != r.label && r.label !== o && h());
+                                let c = p(t);
+                                null == c.label && null != o && (c.label = o), u(), (s = null);
+                                let m = {
                                     taskId: n,
                                     title:
                                         null != e.task_title && "" !== e.task_title
@@ -1477,18 +1478,18 @@ function eB(e) {
                                     rawSteps: [],
                                 };
                                 return (
-                                    l.set(n, p),
-                                    a.push(p),
-                                    null == c &&
-                                        ((c = {
+                                    l.set(n, m),
+                                    a.push(m),
+                                    null == d &&
+                                        ((d = {
                                             type: "workstreams",
                                             key: `workstreams-${t}`,
                                             ...(null != e.task_group_id ? { groupId: e.task_group_id } : {}),
                                             tasks: [],
                                         }),
-                                        m.blocks.push(c)),
-                                    c.tasks.push(p),
-                                    p
+                                        c.blocks.push(d)),
+                                    d.tasks.push(m),
+                                    m
                                 );
                             })(m, t);
                             if ("task_finished" === m.kind) {
@@ -1508,19 +1509,35 @@ function eB(e) {
                             let e = m.message ?? "";
                             "" !== e &&
                                 (null == s
-                                    ? (u(), (s = { type: "message", key: `message-${t}`, content: e }), n.push(s))
+                                    ? (h(), (s = { type: "message", key: `message-${t}`, content: e }), n.push(s))
                                     : (s.content = e)),
                                 !0 === m.message_finished && (s = null);
                             continue;
                         }
+                        if ("announcement" === m.kind) {
+                            let e = m.message ?? "";
+                            "" !== e && (h(), (s = null), n.push({ type: "note", key: `note-${t}`, content: e }));
+                            continue;
+                        }
+                        if ("todos" === m.kind) {
+                            let e = m.items ?? [];
+                            e.length > 0 &&
+                                (null != i
+                                    ? (i.todos = e)
+                                    : (h(),
+                                      (s = null),
+                                      (i = { type: "todos", key: `todos-${t}`, todos: e }),
+                                      n.push(i)));
+                            continue;
+                        }
                         if (eR.has(m.kind)) continue;
-                        let e = h(t);
+                        let e = p(t);
                         (s = null),
-                            (c = null),
-                            o.push(m),
-                            null == r && ((r = { type: "rows", key: `rows-${t}`, groups: [] }), e.blocks.push(r));
+                            (d = null),
+                            c.push(m),
+                            null == o && ((o = { type: "rows", key: `rows-${t}`, groups: [] }), e.blocks.push(o));
                     }
-                    for (let e of (d(), a)) {
+                    for (let e of (u(), a)) {
                         e.groups = eO(e.rawSteps);
                         let n = e.groups[e.groups.length - 1]?.summary;
                         null != n && (e.latestActivity = n), !t && eP(e.state) && (e.state = "incomplete");
@@ -1529,10 +1546,12 @@ function eB(e) {
                 })(n, { turnActive: d }),
             [n, d],
         ),
-        b = k.at(-1),
-        j = b?.type === "message" && b.content.trim() === i.trim(),
-        y = null == r && "" !== i && !j,
-        _ = (function (e) {
+        b = k.some((e) => "note" === e.type),
+        j = k.some((e) => "todos" === e.type),
+        y = k.at(-1),
+        _ = y?.type === "message" && y.content.trim() === i.trim(),
+        N = null == r && "" !== i && !_,
+        E = (function (e) {
             let { hasAttachments: t, showsClosingMessage: n, lastItemType: l } = e;
             return t
                 ? n
@@ -1543,23 +1562,23 @@ function eB(e) {
                         ? "activity"
                         : "standalone"
                 : "none";
-        })({ hasAttachments: null != f && f.length > 0, showsClosingMessage: y, lastItemType: b?.type }),
-        N = null == f ? null : (0, a.jsx)(ep, { projectId: t, attachments: f }),
-        E = null == N ? null : (0, a.jsx)("div", { className: ey.MT, children: N });
+        })({ hasAttachments: null != f && f.length > 0, showsClosingMessage: N, lastItemType: y?.type }),
+        w = null == f ? null : (0, a.jsx)(em, { projectId: t, attachments: f }),
+        S = null == w ? null : (0, a.jsx)("div", { className: ey.MT, children: w });
     return (0, a.jsxs)("div", {
         className: ey.ue,
         children: [
-            null != l && "" !== l
-                ? (0, a.jsx)(h.E, {
+            null == l || "" === l || b
+                ? null
+                : (0, a.jsx)(h.E, {
                       tag: "div",
                       variant: "text-sm/normal",
                       color: "text-default",
                       selectable: !0,
                       className: A()(ey.ky, ey.Xt, eG.XR),
                       children: l,
-                  })
-                : null,
-            null != u && u.length > 0
+                  }),
+            null != u && u.length > 0 && !j
                 ? (0, a.jsx)("div", {
                       className: A()(ey.ky, eG.XR),
                       children: (0, a.jsx)(eT, { todos: u, provisional: c }),
@@ -1583,29 +1602,51 @@ function eB(e) {
                                                     allowLinks: !0,
                                                 }),
                                             }),
-                                            "streamed" === _ && e.key === b?.key ? E : null,
+                                            "streamed" === E && e.key === y?.key ? S : null,
                                         ],
                                     },
                                     e.key,
                                 )
-                              : (0, a.jsx)(
-                                    eH,
-                                    {
-                                        projectId: t,
-                                        item: e,
-                                        attachments: "activity" === _ && e.key === b?.key ? N : null,
-                                    },
-                                    e.key,
-                                ),
+                              : "note" === e.type
+                                ? (0, a.jsx)(
+                                      h.E,
+                                      {
+                                          tag: "li",
+                                          variant: "text-sm/normal",
+                                          color: "text-default",
+                                          selectable: !0,
+                                          className: A()(ey.ky, ey.Xt, eG.XR),
+                                          children: e.content,
+                                      },
+                                      e.key,
+                                  )
+                                : "todos" === e.type
+                                  ? (0, a.jsx)(
+                                        "li",
+                                        {
+                                            className: A()(ey.ky, eG.XR),
+                                            children: (0, a.jsx)(eT, { todos: e.todos, provisional: c }),
+                                        },
+                                        e.key,
+                                    )
+                                  : (0, a.jsx)(
+                                        eH,
+                                        {
+                                            projectId: t,
+                                            item: e,
+                                            attachments: "activity" === E && e.key === y?.key ? w : null,
+                                        },
+                                        e.key,
+                                    ),
                       ),
                   })
                 : null,
             null != r
                 ? (0, a.jsx)("div", {
                       className: A()(ey.ky, eG.XR),
-                      children: (0, a.jsx)(ej, { proposal: r, onApprove: m }),
+                      children: (0, a.jsx)(ej, { proposal: r, onApprove: p }),
                   })
-                : y
+                : N
                   ? (0, a.jsxs)("div", {
                         className: A()(ey.ky, eG.XR),
                         children: [
@@ -1613,18 +1654,18 @@ function eB(e) {
                                 className: A()(eD.PT, ey.cW),
                                 children: ei.A.parse(i, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
                             }),
-                            "closing" === _ ? E : null,
+                            "closing" === E ? S : null,
                             !0 === x
                                 ? (0, a.jsx)("div", { className: ey.IN, children: (0, a.jsx)(eu, { onAsk: v }) })
                                 : null,
                         ],
                     })
                   : null,
-            "standalone" === _ ? (0, a.jsx)("div", { className: A()(ey.ky, eG.XR), children: E }) : null,
-            null != p && p.length > 0
-                ? (0, a.jsx)("div", { className: A()(ey.ky, eG.XR), children: (0, a.jsx)(ed, { ideas: p, onPick: g }) })
+            "standalone" === E ? (0, a.jsx)("div", { className: A()(ey.ky, eG.XR), children: S }) : null,
+            null != m && m.length > 0
+                ? (0, a.jsx)("div", { className: A()(ey.ky, eG.XR), children: (0, a.jsx)(ed, { ideas: m, onPick: g }) })
                 : null,
-            !0 !== x || y
+            !0 !== x || N
                 ? null
                 : (0, a.jsx)("div", { className: A()(ey.ky, eG.XR), children: (0, a.jsx)(eu, { onAsk: v }) }),
             o
@@ -1646,7 +1687,7 @@ function eV(e) {
     let { projectId: t, messages: n, onApprove: l, onPickIdea: s, onAskForIdeas: i } = e,
         r = n[n.length - 1];
     return (0, a.jsx)("ol", {
-        className: em.x7,
+        className: ep.x7,
         children: n.map((e) => {
             if ("user" === e.role)
                 return (0, a.jsx)(
@@ -1654,7 +1695,7 @@ function eV(e) {
                     {
                         role: "user",
                         children: (0, a.jsxs)("div", {
-                            className: A()(em.B2, eG.XR),
+                            className: A()(ep.B2, eG.XR),
                             children: [
                                 "" !== e.content
                                     ? (0, a.jsx)(h.E, {
@@ -1665,7 +1706,7 @@ function eV(e) {
                                       })
                                     : null,
                                 null != e.attachments && e.attachments.length > 0
-                                    ? (0, a.jsx)(ep, { projectId: t, attachments: e.attachments })
+                                    ? (0, a.jsx)(em, { projectId: t, attachments: e.attachments })
                                     : null,
                                 null != e.disposition
                                     ? (0, a.jsx)(h.E, {
@@ -1722,7 +1763,7 @@ function eV(e) {
 }
 function eF(e) {
     let { role: t, children: n } = e;
-    return (0, a.jsx)("li", { "data-role": t, className: em.xk, children: n });
+    return (0, a.jsx)("li", { "data-role": t, className: ep.xk, children: n });
 }
 var eW = n(379307),
     ez = n(922016),
@@ -1762,17 +1803,17 @@ function eY(e) {
         c = null != t && "end" !== t.phase,
         d = n ? T.default["0vH/5G"] : c ? T.default.Ly7F7x : T.default.QDGuNS,
         u = null != t && "" !== t.text,
-        m = t?.session ?? null,
-        p = u && null != m && r === m,
+        p = t?.session ?? null,
+        m = u && null != p && r === p,
         f = s.useCallback(() => {
-            u && null != m && o((e) => (e === m ? null : m));
-        }, [u, m]),
+            u && null != p && o((e) => (e === p ? null : p));
+        }, [u, p]),
         g = s.useCallback(() => o(null), []);
     return (0, a.jsx)(ez.Y, {
         targetElementRef: l,
         position: "top",
         align: "left",
-        shouldShow: p,
+        shouldShow: m,
         onRequestClose: g,
         renderPopout: () => (0, a.jsx)(eK, { id: i, activity: t }),
         children: () =>
@@ -1780,8 +1821,8 @@ function eY(e) {
                 innerRef: l,
                 className: A()(eq.h, u && eq.X),
                 "aria-label": R.intl.string(T.default.SzdX35),
-                "aria-expanded": p,
-                "aria-describedby": p ? i : void 0,
+                "aria-expanded": m,
+                "aria-describedby": m ? i : void 0,
                 "data-vibegrations-thinking-trigger": !0,
                 onClick: f,
                 children: [
@@ -1810,7 +1851,7 @@ function eQ(e) {
 function e0(e) {
     let { todos: t, provisional: n } = e,
         l = s.useRef(null),
-        { completed: i, total: r } = eC(t);
+        { completed: i, total: r } = eI(t);
     return 0 === r
         ? null
         : (0, a.jsx)(ez.Y, {
@@ -2030,18 +2071,18 @@ function ti(e) {
         d = (0, x.bG)([D.A], () => D.A.getThinkingActivity(t), [t]),
         u = (0, x.bG)([D.A], () => D.A.isCompacting(t), [t]),
         h = (0, x.bG)([o.Ay], () => o.Ay.getModelSettings(t), [t]),
-        m = s.useRef(null),
         p = s.useRef(null),
+        m = s.useRef(null),
         f = s.useRef(!0);
     s.useEffect(() => {
-        f.current && p.current?.scrollToBottom();
+        f.current && m.current?.scrollToBottom();
     }, [i]);
     let g = s.useCallback(() => {
-        let e = p.current;
+        let e = m.current;
         null != e && (f.current = 32 > e.getDistanceFromBottom());
     }, []);
     s.useLayoutEffect(() => {
-        let e = m.current;
+        let e = p.current;
         if (null == e) return;
         let t = e.getBoundingClientRect().width,
             n = null,
@@ -2052,7 +2093,7 @@ function ti(e) {
                     ((t = s),
                     f.current &&
                         (null != n && cancelAnimationFrame(n),
-                        (n = requestAnimationFrame(() => p.current?.scrollToBottom()))));
+                        (n = requestAnimationFrame(() => m.current?.scrollToBottom()))));
             });
         return (
             l.observe(e),
@@ -2105,30 +2146,30 @@ function ti(e) {
         w = "open" === r,
         S = i[i.length - 1],
         A = null != S && "assistant" === S.role && null != S.proposal,
-        C = null != S && "assistant" === S.role && !(0, D.B)(S),
-        I = A && w ? E : void 0,
-        P = C && S?.role === "assistant" ? S.todos : void 0,
-        O = C && S?.role === "assistant" ? S.provisionalTodo : void 0;
+        I = null != S && "assistant" === S.role && !(0, D.B)(S),
+        C = A && w ? E : void 0,
+        P = I && S?.role === "assistant" ? S.todos : void 0,
+        O = I && S?.role === "assistant" ? S.provisionalTodo : void 0;
     return (0, a.jsxs)("section", {
-        ref: m,
+        ref: p,
         "data-vibegrations-chat": !0,
         className: ts.T,
         children: [
             (0, a.jsx)(G.Ch, {
-                ref: p,
+                ref: m,
                 onScroll: g,
                 "data-vibegrations-chat-log": !0,
                 className: ts.N,
                 children: (0, a.jsx)(eV, {
                     projectId: t,
                     messages: i,
-                    onApprove: I,
+                    onApprove: C,
                     onPickIdea: w ? b : void 0,
                     onAskForIdeas: w ? j : void 0,
                 }),
             }),
             (0, a.jsx)(e9, {
-                thinking: C,
+                thinking: I,
                 thinkingActivity: d,
                 compacting: u,
                 todos: P,
@@ -2140,12 +2181,12 @@ function ti(e) {
             }),
             (0, a.jsx)(en, {
                 canSend: w,
-                running: C,
+                running: I,
                 onSend: v,
                 onInterrupt: w ? k : void 0,
                 onUploadFile: _,
                 onDeleteFile: N,
-                onApprove: I,
+                onApprove: C,
                 onRegionCapture: l,
             }),
         ],
@@ -2157,17 +2198,17 @@ var tr = n(435558),
     td = n(517461),
     tu = n(761929),
     th = n(552067);
-function tm(e) {
+function tp(e) {
     let { open: t, maxWidth: n, onWidthChange: l, children: i } = e,
         r = (0, tc.r)(to.A.modules.chat.RESIZE_HANDLE_WIDTH),
         o = s.useRef(null),
         [c, d] = (0, td.V)("VibegrationsChatSidebarWidth", 460),
         [u, h] = s.useState(c ?? 460),
-        m = (0, tr.clamp)(u, 360, n);
+        p = (0, tr.clamp)(u, 360, n);
     s.useLayoutEffect(() => {
-        l(t ? m + r : 0);
-    }, [m, t, r, l]);
-    let p = (0, tu.A)({
+        l(t ? p + r : 0);
+    }, [p, t, r, l]);
+    let m = (0, tu.A)({
             minDimension: 360,
             maxDimension: n,
             resizableDomNodeRef: o,
@@ -2179,20 +2220,20 @@ function tm(e) {
         }),
         f = s.useCallback(
             (e) => {
-                0 === e.button && (e.currentTarget.setPointerCapture(e.pointerId), p(e));
+                0 === e.button && (e.currentTarget.setPointerCapture(e.pointerId), m(e));
             },
-            [p],
+            [m],
         );
     return (0, a.jsxs)("div", {
         className: th.pz,
         hidden: !t,
         children: [
             (0, a.jsx)("div", { className: th.Di, onPointerDown: f }),
-            (0, a.jsx)("div", { ref: o, className: th.kL, style: { width: m }, children: i }),
+            (0, a.jsx)("div", { ref: o, className: th.kL, style: { width: p }, children: i }),
         ],
     });
 }
-var tp = n(333007),
+var tm = n(333007),
     tf = n(638015);
 function tg(e) {
     return {
@@ -2243,8 +2284,8 @@ function tx(e) {
             },
             [i, o, n, l],
         ),
-        m = null == i ? null : tg(i);
-    return (0, tp.createPortal)(
+        p = null == i ? null : tg(i);
+    return (0, tm.createPortal)(
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)("div", { className: tf.tB, role: "presentation", onPointerDown: l }),
@@ -2258,7 +2299,7 @@ function tx(e) {
                     onPointerUp: u,
                     onPointerCancel: l,
                     children:
-                        null == m
+                        null == p
                             ? (0, a.jsx)("div", {
                                   className: tf.F7,
                                   children: (0, a.jsx)("div", {
@@ -2272,7 +2313,7 @@ function tx(e) {
                               })
                             : (0, a.jsx)("div", {
                                   className: tf.r1,
-                                  style: { left: m.x, top: m.y, width: m.width, height: m.height },
+                                  style: { left: p.x, top: p.y, width: p.width, height: p.height },
                               }),
                 }),
             ],
@@ -2292,13 +2333,13 @@ function ty(e) {
     let { projectId: t, applicationId: n, surface: l, previewReady: r, content: o, sidebar: c } = e,
         [d, u] = s.useState(null),
         h = (0, i.A)(n, l),
-        m = h?.id ?? null,
-        [p, f] = s.useState(null);
+        p = h?.id ?? null,
+        [m, f] = s.useState(null);
     s.useEffect(() => {
-        if (null != t) return (0, tb.mn)(t, () => (0, tk.F1)(d, m));
-    }, [t, d, m]);
+        if (null != t) return (0, tb.mn)(t, () => (0, tk.F1)(d, p));
+    }, [t, d, p]);
     let g = s.useCallback(() => {
-            let e = (0, tk.F1)(d, m),
+            let e = (0, tk.F1)(d, p),
                 t = e?.getBoundingClientRect();
             return null == e || null == t || t.width < 1 || t.height < 1
                 ? Promise.reject(Error("no visible preview to capture"))
@@ -2310,29 +2351,29 @@ function ty(e) {
                           reject: l,
                       });
                   });
-        }, [d, m]),
+        }, [d, p]),
         x = s.useCallback(
             (e) => {
-                f(null), null != p && (0, tk.su)(p.iframe, e).then(p.resolve, p.reject);
+                f(null), null != m && (0, tk.su)(m.iframe, e).then(m.resolve, m.reject);
             },
-            [p],
+            [m],
         ),
         v = s.useCallback(() => {
-            f(null), p?.resolve(null);
-        }, [p]),
+            f(null), m?.resolve(null);
+        }, [m]),
         k = r && null != n && l.type === N.U4.MAIN;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", { ref: u, className: tj.fm, children: o }),
             c(k ? g : void 0),
-            null != p ? (0, a.jsx)(tx, { targetRect: p.targetRect, onSelect: x, onCancel: v }) : null,
+            null != m ? (0, a.jsx)(tx, { targetRect: m.targetRect, onSelect: x, onCancel: v }) : null,
         ],
     });
 }
 function t_(e) {
     let { projectId: t, applicationId: n, surface: l, chatOpen: i, previewReady: c, previewGate: d } = e,
         u = s.useRef(null),
-        [h, m] = s.useState(0);
+        [h, p] = s.useState(0);
     s.useLayoutEffect(() => {
         if (l.type === N.U4.MAIN) return (0, r.HV)(n), () => (0, r.HV)(null);
     }, [n, l.type]),
@@ -2343,14 +2384,14 @@ function t_(e) {
             let e = u.current;
             if (null == e) return;
             function t() {
-                null != e && m(e.getBoundingClientRect().width);
+                null != e && p(e.getBoundingClientRect().width);
             }
             t();
             let n = new ResizeObserver(t);
             return n.observe(e), () => n.disconnect();
         }, []),
         s.useEffect(() => () => (0, r.Zq)(0), []);
-    let p = Math.max(360, h - 320),
+    let m = Math.max(360, h - 320),
         f = i || l.type === N.U4.MAIN;
     return (0, a.jsx)("div", {
         ref: u,
@@ -2363,9 +2404,9 @@ function t_(e) {
             content: (0, a.jsx)(L, { applicationId: n, surface: l, previewReady: c, previewGate: d }),
             sidebar: (e) =>
                 null != t && f
-                    ? (0, a.jsx)(tm, {
+                    ? (0, a.jsx)(tp, {
                           open: i,
-                          maxWidth: p,
+                          maxWidth: m,
                           onWidthChange: r.Zq,
                           children: (0, a.jsxs)("div", {
                               className: tj.cO,
