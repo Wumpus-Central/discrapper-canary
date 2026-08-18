@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     DA: "composer_ffba0c",
     pV: "composerDragOver_ffba0c",
     VA: "composerRow_ffba0c",
@@ -11,5 +11,6 @@ a.exports = {
     fF: "composerSend_ffba0c",
     MT: "composerSendSeparator_ffba0c",
     rt: "composerSendButton_ffba0c",
+    AW: "composerInterruptButton_ffba0c",
     Mx: "composerSendIcon_ffba0c",
 };

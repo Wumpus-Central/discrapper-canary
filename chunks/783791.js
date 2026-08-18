@@ -24,8 +24,8 @@ function S(e) {
 }
 let N = new Map(),
     C = new Map(),
-    R = new Map(),
-    O = [],
+    O = new Map(),
+    R = [],
     L = new Map(),
     y = new Map(),
     D = 0,
@@ -73,12 +73,12 @@ function w(e) {
     return "assistant" === n.role && !S(n);
 }
 function G(e) {
-    let t = R.get(e) ?? !1,
+    let t = O.get(e) ?? !1,
         i = w(e);
     if (t === i) return;
-    R.set(e, i);
-    let r = O.indexOf(e);
-    if ((-1 !== r && O.splice(r, 1), O.unshift(e), i)) C.delete(e);
+    O.set(e, i);
+    let r = R.indexOf(e);
+    if ((-1 !== r && R.splice(r, 1), R.unshift(e), i)) C.delete(e);
     else {
         let t, i;
         ((t = N.get(e)),
@@ -104,7 +104,7 @@ function G(e) {
                     g = null != r && h.A.getSelectedProjectId(r) === e ? r : null,
                     S = null != g && u.Ay.getChannelId() === f.VV.VIBEGRATIONS && A.A.isWindowFocused(),
                     C = g ?? t.guild_id ?? t.preview_guild_id,
-                    R = (function (e) {
+                    O = (function (e) {
                         let t = N.get(e);
                         if (null == t || 0 === t.length) return null;
                         let n = t[t.length - 1];
@@ -126,23 +126,23 @@ function G(e) {
                         }
                         return null;
                     })(e);
-                if (null == R) return;
+                if (null == O) return;
                 if (S) {
                     i && (0, o.Ak)(m, 0.4);
                     return;
                 }
-                let O = null == C ? null : I.BVt.CHANNEL(C, f.VV.VIBEGRATIONS, e);
+                let R = null == C ? null : I.BVt.CHANNEL(C, f.VV.VIBEGRATIONS, e);
                 a.default.showNotification(
                     n(608598),
                     t.name,
-                    R,
+                    O,
                     { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
                     {
                         tag: `vibegrations-${e}`,
                         sound: i ? m : void 0,
                         volume: 0.4,
-                        fallbackDeepLink: null == O ? void 0 : A.A.createNotificationDeepLink(O),
-                        onClick: null == O ? void 0 : () => (0, l.pX)(O),
+                        fallbackDeepLink: null == R ? void 0 : A.A.createNotificationDeepLink(R),
+                        onClick: null == R ? void 0 : () => (0, l.pX)(R),
                         isUserAvatar: !1,
                     },
                 );
@@ -152,11 +152,11 @@ function G(e) {
 function x(e) {
     let t = N.delete(e),
         n = C.delete(e),
-        i = R.delete(e),
+        i = O.delete(e),
         r = L.delete(e),
         a = y.delete(e),
-        s = O.indexOf(e);
-    return -1 !== s && O.splice(s, 1), t || n || i || r || a || -1 !== s;
+        s = R.indexOf(e);
+    return -1 !== s && R.splice(s, 1), t || n || i || r || a || -1 !== s;
 }
 class k extends i.Ay.Store {
     initialize() {
@@ -181,7 +181,7 @@ class k extends i.Ay.Store {
         return D;
     }
     getActivityOrderedProjectIds() {
-        return O.slice();
+        return R.slice();
     }
     isAnyThinking() {
         for (let e of N.keys()) if (this.isThinking(e)) return !0;
@@ -190,9 +190,9 @@ class k extends i.Ay.Store {
 }
 let F = new k(r.h, {
     LOGOUT: function () {
-        if (0 === N.size && 0 === C.size && 0 === R.size && 0 === L.size && 0 === y.size && 0 === O.length && 0 === D)
+        if (0 === N.size && 0 === C.size && 0 === O.size && 0 === L.size && 0 === y.size && 0 === R.length && 0 === D)
             return !1;
-        N.clear(), C.clear(), R.clear(), L.clear(), y.clear(), (O.length = 0), (D = 0);
+        N.clear(), C.clear(), O.clear(), L.clear(), y.clear(), (R.length = 0), (D = 0);
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n } = e;
@@ -211,13 +211,53 @@ let F = new k(r.h, {
         E?.role !== "assistant" || S(E) ? N.set(t, [...u, _, M("assistant", "")]) : N.set(t, [...u.slice(0, -1), _, E]),
             G(t);
     },
+    VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION: function (e) {
+        let { projectId: t, id: n, disposition: i } = e,
+            r = N.get(t);
+        if (null == r) return !1;
+        let a = r.findIndex((e) => e.id === n);
+        if (-1 === a || r[a].disposition === i) return !1;
+        N.set(t, [...r.slice(0, a), { ...r[a], disposition: i }, ...r.slice(a + 1)]);
+    },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n } = e;
         U(t, (e) => ({ ...e, steps: [...e.steps, n] })), G(t);
     },
     VIBEGRATIONS_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n } = e;
-        y.delete(t), U(t, (e) => ({ ...e, finished: !0, content: "" !== e.content ? e.content : (n ?? "") })), G(t);
+        y.delete(t);
+        let i = N.get(t);
+        null != i &&
+            i.some((e) => null != e.disposition) &&
+            N.set(
+                t,
+                i.map((e) => {
+                    if (null == e.disposition) return e;
+                    let { disposition: t, ...n } = e;
+                    return n;
+                }),
+            ),
+            U(t, (e) => ({
+                ...e,
+                finished: !0,
+                provisionalTodo: void 0,
+                content: "" !== e.content ? e.content : (n ?? ""),
+            })),
+            G(t);
+    },
+    VIBEGRATIONS_CHAT_INTERRUPTED: function (e) {
+        let { projectId: t } = e,
+            n = N.get(t);
+        if (null == n) return !1;
+        let i = M("assistant", "");
+        (i.finished = !0), (i.interrupted = !0), N.set(t, [...n, i]);
+    },
+    VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function (e) {
+        let { projectId: t, text: n } = e,
+            i = N.get(t),
+            r = i?.[i.length - 1];
+        if (null == r || "assistant" !== r.role) return !1;
+        U(t, (e) => ({ ...e, provisionalTodo: n }));
     },
     VIBEGRATIONS_CHAT_THINKING_SET: function (e) {
         let { projectId: t, activity: n } = e;
@@ -237,7 +277,11 @@ let F = new k(r.h, {
     },
     VIBEGRATIONS_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n } = e;
-        U(t, (e) => ({ ...e, ...n })), G(t);
+        U(t, (e) => {
+            let t = { ...e, ...n };
+            return "todos" in n && (t.provisionalTodo = void 0), t;
+        }),
+            G(t);
     },
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
@@ -247,17 +291,22 @@ let F = new k(r.h, {
         if (null == r || !r.some((e) => "assistant" === e.role && !S(e))) return !!i && void 0;
         N.set(
             t,
-            r.map((e) =>
-                "assistant" !== e.role || S(e)
+            r.map((e) => {
+                if (null != e.disposition) {
+                    let { disposition: t, ...n } = e;
+                    return n;
+                }
+                return "assistant" !== e.role || S(e)
                     ? e
                     : {
                           ...e,
+                          provisionalTodo: void 0,
                           steps: [
                               ...e.steps,
                               { type: "step", kind: "terminal_error", message: T.intl.string(p.default["wjWm+/"]) },
                           ],
-                      },
-            ),
+                      };
+            }),
         ),
             G(t);
     },
@@ -268,7 +317,7 @@ let F = new k(r.h, {
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
-            i = new Set([...N.keys(), ...C.keys(), ...R.keys(), ...L.keys()]),
+            i = new Set([...N.keys(), ...C.keys(), ...O.keys(), ...L.keys()]),
             r = !1;
         for (let e of i) !n.has(e) && x(e) && (r = !0);
         if (!r) return !1;

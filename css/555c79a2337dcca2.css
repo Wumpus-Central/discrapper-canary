@@ -276,12 +276,37 @@
     cursor: not-allowed
 }
 
+.composerInterruptButton_ffba0c {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    min-height: var(--space-32);
+    min-width: var(--space-32);
+    padding: var(--space-4);
+    transition: color .25s ease-in-out
+}
+
+.composerInterruptButton_ffba0c:hover:not(:disabled) {
+    background: var(--interactive-background-hover)
+}
+
+.composerInterruptButton_ffba0c:disabled {
+    color: var(--icon-muted);
+    cursor: not-allowed
+}
+
 .composerSendIcon_ffba0c {
     height: 20px !important;
     width: 20px !important
 }
 
 .reduce-motion .composerAttachButton_ffba0c,
+.reduce-motion .composerInterruptButton_ffba0c,
 .reduce-motion .composerSendButton_ffba0c {
     transition: none
 }
