@@ -21,9 +21,9 @@ var n = i(477900),
     E = i(61881),
     S = i(435558),
     C = i(196765),
-    b = i(540185),
-    T = i(282435);
-let N = (0, S.sampleSize)(T.sx, T.sx.length),
+    T = i(540185),
+    b = i(282435);
+let N = (0, S.sampleSize)(b.sx, b.sx.length),
     w = (0, C.v)((e, t) => ({
         stack: [],
         wishlistStack: [],
@@ -35,7 +35,7 @@ let N = (0, S.sampleSize)(T.sx, T.sx.length),
                 stack: [...i.filter((e) => !s.has(e)), ...N],
                 wishlistStack: [...n.filter((e) => !s.has(e)), ...N],
             }),
-            Object.values(b.x)))
+            Object.values(T.x)))
                 t().setNext(6, l);
         },
         setNext: (e, i) => {
@@ -45,12 +45,12 @@ let N = (0, S.sampleSize)(T.sx, T.sx.length),
             t()._setPeekedGameIds(i, l);
         },
         getNext: (e, i) => {
-            let n = i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack,
+            let n = i === T.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack,
                 l = n.slice(0, e),
                 s = n.slice(e);
             return t()._setStack(i, s), l;
         },
-        peekNext: (e, i) => (i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).slice(0, e),
+        peekNext: (e, i) => (i === T.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).slice(0, e),
         bump: (e, i) => {
             let n = t().gameIds[i] ?? [],
                 l = n.indexOf(e);
@@ -68,14 +68,14 @@ let N = (0, S.sampleSize)(T.sx, T.sx.length),
             t()._setGameIds(i, [...n, ...l]), t()._setPeekedGameIds(i, [...s, ...l]);
         },
         remove: (e, i) => {
-            let n = (i === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
+            let n = (i === T.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
             t()._setStack(i, n), t()._setPeekedGameIds(i, t().peekNext(7, i));
         },
         _setGameIds: (t, i) => {
             e((e) => ({ gameIds: { ...e.gameIds, [t]: i } }));
         },
         _setStack: (t, i) => {
-            t === b.x.WANT_TO_PLAY_GAMES ? e({ wishlistStack: i }) : e({ stack: i });
+            t === T.x.WANT_TO_PLAY_GAMES ? e({ wishlistStack: i }) : e({ stack: i });
         },
         _setPeekedGameIds: (t, i) => {
             e((e) => ({ peekedGameIds: { ...e.peekedGameIds, [t]: i } }));
@@ -580,7 +580,7 @@ function eC() {
               ],
           });
 }
-function eb(e) {
+function eT(e) {
     let { widget: t, user: i, allowEditing: s, disableInteraction: r, index: a, trailingContent: o } = e,
         d = s && !0 !== r,
         c = l.useMemo(() => t.sections.some((e) => e.type === L.K.COVER), [t.sections]);
@@ -604,7 +604,7 @@ function eb(e) {
         }),
     });
 }
-var eT = i(702841),
+var eb = i(702841),
     eN = i(821609),
     ew = i(192308),
     ey = i(307301),
@@ -673,12 +673,12 @@ function eH(e) {
         o = l.useRef(null),
         [c, u] = eM(),
         g = (function () {
-            let e = (0, eT.bG)([M.default], () => M.default.getCurrentUser()?.id),
+            let e = (0, eb.bG)([M.default], () => M.default.getCurrentUser()?.id),
                 t = (0, R.A)(e),
                 { enabled: i, showCreateEntrypoint: n } = eR.A.useConfig({
                     location: "UserProfileWidgetEditingHeader",
                 }),
-                l = t.some((e) => e.type === b.x.PERSONAL);
+                l = t.some((e) => e.type === T.x.PERSONAL);
             return i && n && !l;
         })(),
         m = l.useCallback(() => {
@@ -776,7 +776,7 @@ function e8(e) {
                 let n = e.trim();
                 n !== i.trim() &&
                     ((0, W.mI)(t, n),
-                    s({ action: "CLIP_TITLE_EDITED", widgetEdited: b.x.CLIPS_GALLERY, numCharacters: n.length }));
+                    s({ action: "CLIP_TITLE_EDITED", widgetEdited: T.x.CLIPS_GALLERY, numCharacters: n.length }));
             },
             [t, i, s],
         ),
@@ -883,7 +883,7 @@ function tr(e) {
                     (0, W.mC)(t),
                         null != i && tl(i),
                         e5.O.announce(ec.intl.string(ec.t.zyPNb3)),
-                        s({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY });
+                        s({ action: "CLIP_REMOVED", widgetEdited: T.x.CLIPS_GALLERY });
                 },
             }),
         }),
@@ -1235,8 +1235,8 @@ function tS() {
     return null == r ? null : (0, n.jsx)(tE, { user: t, application: r, onDismiss: (e) => s([r.id], e) }, r.id);
 }
 var tC = i(128988),
-    tb = i(280450),
-    tT = i(321191),
+    tT = i(280450),
+    tb = i(321191),
     tN = i(896170),
     tw = i(922016),
     ty = i(305866),
@@ -1790,13 +1790,13 @@ var ig = i(344287);
 function im(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
-        case b.x.FAVORITE_GAMES:
+        case T.x.FAVORITE_GAMES:
             return (0, n.jsx)(t$, { widget: t, ...i });
-        case b.x.CURRENT_GAMES:
+        case T.x.CURRENT_GAMES:
             return (0, n.jsx)(tQ, { widget: t, ...i });
-        case b.x.WANT_TO_PLAY_GAMES:
+        case T.x.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(is, { widget: t, ...i });
-        case b.x.PLAYED_GAMES:
+        case T.x.PLAYED_GAMES:
             return (0, n.jsx)(il, { widget: t, ...i });
         default:
             return null;
@@ -1808,10 +1808,10 @@ function ix(e) {
         { shouldShowSuggestions: c, handleDismissSuggestions: u } = (function (e) {
             let [t, i] = l.useState(!1),
                 n = e.type,
-                s = (0, a.bG)([tb.default, tT.A], () => {
-                    let e = tb.default.getId();
+                s = (0, a.bG)([tT.default, tb.A], () => {
+                    let e = tT.default.getId();
                     if (null == e) return !1;
-                    let t = tT.A.getUserProfile(e);
+                    let t = tb.A.getUserProfile(e);
                     return (t?.widgets ?? []).some((e) => e.type === n);
                 }),
                 r = (0, W.uA)(e);
@@ -1863,7 +1863,7 @@ function iE(e) {
         { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, ek.NJ)(),
         r = l.useRef(!1),
         o = l.useRef(null),
-        c = (0, a.bG)([tT.A], () => tT.A.getUserProfile(t)?.fetchError != null, [t]),
+        c = (0, a.bG)([tb.A], () => tb.A.getUserProfile(t)?.fetchError != null, [t]),
         [u, g] = eM(!c),
         m = (0, ij.A)();
     return (
@@ -1896,7 +1896,7 @@ function iE(e) {
                             (0, n.jsx)(
                                 "li",
                                 {
-                                    ref: e.type === b.x.PERSONAL ? o : void 0,
+                                    ref: e.type === T.x.PERSONAL ? o : void 0,
                                     children: (0, n.jsx)(iA.A, {
                                         widget: e,
                                         size: "small",
@@ -1918,20 +1918,19 @@ function iC(e) {
     return t instanceof f.R
         ? (0, n.jsx)(_.A, { widget: t, ...i })
         : t instanceof I.Tu
-          ? (0, n.jsx)(eb, { widget: t, ...i })
+          ? (0, n.jsx)(eT, { widget: t, ...i })
           : (0, p.fu)(t)
             ? (0, n.jsx)(ih, { widget: t, ...i })
             : t instanceof h.k
               ? (0, n.jsx)(tx, { widget: t, ...i })
               : null;
 }
-function ib() {
+function iT() {
     return (0, n.jsxs)("div", {
         className: iS.mJ,
         children: [
             (0, n.jsx)(o.CircleInformationIcon, { size: "xs" }),
             (0, n.jsx)(d.E, {
-                "aria-label": ec.intl.string(ec.t["7blcz6"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: ec.intl.string(ec.t["7blcz6"]),
@@ -1939,7 +1938,7 @@ function ib() {
         ],
     });
 }
-function iT(e) {
+function ib(e) {
     let { user: t, guildId: i, channelId: s } = e,
         r = (0, R.A)(t.id),
         o = (0, O.A)(t.id),
@@ -1961,7 +1960,7 @@ function iT(e) {
             children: [
                 o &&
                     (0, n.jsxs)(n.Fragment, {
-                        children: [(0, n.jsx)(eH, { className: iS.cG }), d && (0, n.jsx)(ib, {}), (0, n.jsx)(tS, {})],
+                        children: [(0, n.jsx)(eH, { className: iS.cG }), d && (0, n.jsx)(iT, {}), (0, n.jsx)(tS, {})],
                     }),
                 r.map((e, l) =>
                     (0, n.jsx)(
@@ -2016,6 +2015,6 @@ function iN(e) {
         scrollerRef: s,
         className: r()(iS.XG, { [iS.az]: a }),
         fade: !0,
-        children: [(0, n.jsx)(tC.A, { scrollerRef: s }), (0, n.jsx)(iT, { user: t, ...i })],
+        children: [(0, n.jsx)(tC.A, { scrollerRef: s }), (0, n.jsx)(ib, { user: t, ...i })],
     });
 }

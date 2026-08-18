@@ -15,7 +15,7 @@ function o(t) {
         A = c > 0 ? Math.round((d / c) * 100) : 0,
         x = (0, a.Ar)(d),
         p = (0, a.Ar)(c),
-        f = r.intl.formatToPlainString(r.t.wmUSiy, { count: x, max: p });
+        f = r.intl.formatToPlainString(r.t.bnnNER, { elapsed: x, duration: p });
     return (0, i.jsxs)("div", {
         className: s.kL,
         children: [
@@ -29,6 +29,7 @@ function o(t) {
             (0, i.jsx)("div", {
                 role: "progressbar",
                 className: s.M0,
+                "aria-label": r.intl.string(r.t.z2lxfe),
                 "aria-valuenow": A,
                 "aria-valuemin": 0,
                 "aria-valuemax": 100,
