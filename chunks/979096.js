@@ -1,3 +1,1013 @@
-n.exports = JSON.parse(
-    '{"XJ4UpB":["\xc4ndra bild"],"7rawC9":["\xc5tg\xe4rder f\xf6r h\xe4ngf\xf6nster"],"XV4qT6":["Ta bort bild"],"CLSbjS":["Anm\xe4l bild"],"XDjFpR":["Kunde inte ladda ned bilden. F\xf6rs\xf6k igen."],"Dfnp+b":["Du har inte beh\xf6righet att \xe4ndra denna bild."],"sw6JQB":["Den bilden \xe4r f\xf6r stor. V\xe4lj en mindre bild."],"HHJFhr":["Den bilden kunde inte anv\xe4ndas. F\xf6rs\xf6k med en annan."],"repluE":["Den bild-URL:en st\xf6ds inte."],"yHHcCH":["Du g\xf6r det f\xf6r snabbt. F\xf6rs\xf6k igen om en stund."],"CqBvCr":["N\xe5got gick fel. F\xf6rs\xf6k igen."],"yP0hhq":["V\xe4lj en GIF f\xf6r att s\xe4tta st\xe4mningen"],"1OwLy1":["Mer"],"HkszWk":["V\xe4lj GIF"],"5VL9Ju":["V\xe4lj bland serverns senast uppladdade bilder."],"aBnIyR":["V\xe4lj bild"],"SQb1dl":["H\xe4mta inspiration"],"2THN2i":["Id\xe9er f\xf6r att komma ig\xe5ng."],"dDID2M":["Senaste"],"zetfRy":["Serveruppladdningar"],"+y6KsI":["Be v\xe4nner att g\xe5 med eller s\xe4tt st\xe4mningen."],"yyPbqI":["S\xe4tt st\xe4mningen"],"BIdpHb":["Kommer snart"],"bjP2Do":["Ladda upp bild"],"NGcIOF":["S\xe4tt st\xe4mningen"]}',
-);
+"use strict";
+n.d(t, {
+    Ls: () => p,
+    iW: () => v,
+    Be: () => M,
+    AR: () => U,
+    Wm: () => O,
+    z9: () => c,
+    hh: () => u,
+    uh: () => y,
+    CV: () => o,
+});
+let i = new (class {
+    callback = null;
+    raise(e) {
+        throw e;
+    }
+    setCallbacks(e) {
+        this.callback = e.response;
+    }
+    databaseOpen(e, t, n) {
+        let i = 'kv_storage: platform "web" is not supported at this time.';
+        if (n?.synchronous) throw Error(i);
+        return this.reply({ requestId: e, synchronous: !1, ok: !1, data: i });
+    }
+    databaseList(e, t) {
+        return this.reply({ requestId: e, synchronous: t?.synchronous, ok: !0, data: [] });
+    }
+    databaseDelete(e, t, n) {
+        return this.reply({ requestId: e, synchronous: n?.synchronous, ok: !0, data: void 0 });
+    }
+    databaseOptimize(e, t, n) {
+        return this.reply({ requestId: e, synchronous: n?.synchronous, ok: !0, data: void 0 });
+    }
+    malformedValueCount() {
+        return 0;
+    }
+    malformedEntryCount() {
+        return 0;
+    }
+    reply(e) {
+        if (e.synchronous) return e.data;
+        null != e.requestId &&
+            this.callback?.(
+                {
+                    id: e.requestId,
+                    ok: e.ok,
+                    data: e.data,
+                    timings: {
+                        queueTimeNanoseconds: 0,
+                        executionTimeNanoseconds: 0,
+                        materializationTimeNanoseconds: 0,
+                        totalTimeNanoseconds: 0,
+                    },
+                },
+                0,
+            );
+    }
+})();
+var r,
+    a,
+    s,
+    l,
+    o = (((r = {}).Kv = "kv"), (r.KvCache = "kv_cache"), (r.Messages = "messages"), r),
+    d = (((a = {})[(a.Ascending = 0)] = "Ascending"), (a[(a.Descending = 1)] = "Descending"), a),
+    c = (((s = {})[(s.Closed = 0)] = "Closed"), (s[(s.Open = 1)] = "Open"), (s[(s.Disabled = 2)] = "Disabled"), s),
+    u = (((l = {})[(l.Skip = 0)] = "Skip"), (l[(l.Replace = 1)] = "Replace"), l);
+function _(e, t) {
+    let n = Array.isArray(t) ? [...e, ...t] : [...e, t];
+    if (n.length >= 1 && n.length <= 5) return n;
+    throw Error(`combination results in an invalid key that has ${n.length} elements: ${JSON.stringify(n)}`);
+}
+function E(e, t) {
+    let n = Array.isArray(t) ? [...e, ...t] : [...e, t];
+    if (n.length <= 5) return n;
+    throw Error(`combination results in an invalid prefix key that has ${n.length} elements: ${JSON.stringify(n)}`);
+}
+function A(e, t) {
+    return 0 === t.length ? e : { key: _(t, e.key), data: e.data, generation: e.generation };
+}
+function h(e, t) {
+    return 0 === t.length ? e : e.map((e) => A(e, t));
+}
+class I {
+    prefix;
+    tableId;
+    database;
+    defaultDebugTag;
+    constructor(e, t, n, i) {
+        (this.prefix = e), (this.tableId = t), (this.database = n), (this.defaultDebugTag = i ? void 0 : null);
+    }
+    close() {
+        this.database.close();
+    }
+    async get(e) {
+        return (await this.getMany(e, { limit: 1 }))[0] ?? null;
+    }
+    getMany() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        return this.database.execute(
+            {
+                type: "kv.get_many",
+                table: this.tableId,
+                key: E(this.prefix, e),
+                ordering: t?.ordering,
+                limit: t?.limit,
+            },
+            this.defaultDebugTag,
+        );
+    }
+    getRange(e, t, n) {
+        let i = _(this.prefix, e),
+            r = _(this.prefix, t);
+        return this.database.execute(
+            { type: "kv.get_range", table: this.tableId, range: [i, r], ordering: n?.ordering, limit: n?.limit },
+            this.defaultDebugTag,
+        );
+    }
+    getKvEntries() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.execute(
+            { type: "kv.get_kv_entries", table: this.tableId, key: E(this.prefix, e) },
+            this.defaultDebugTag,
+        );
+    }
+    getMapEntries() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.execute(
+            { type: "kv.get_map_entries", table: this.tableId, key: E(this.prefix, e) },
+            this.defaultDebugTag,
+        );
+    }
+    getChildIds() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.execute(
+            { type: "kv.get_child_ids", table: this.tableId, key: E(this.prefix, e) },
+            this.defaultDebugTag,
+        );
+    }
+    getParentId() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.execute(
+            { type: "kv.get_parent_id", table: this.tableId, key: _(this.prefix, e) },
+            this.defaultDebugTag,
+        );
+    }
+    put(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.database.execute(
+            { type: "kv.put_one", table: this.tableId, cell: A(e, this.prefix), overwrite: t === u.Replace },
+            this.defaultDebugTag,
+        );
+    }
+    putAll(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.database.execute(
+            { type: "kv.put_many", table: this.tableId, cells: h(e, this.prefix), overwrite: t === u.Replace },
+            this.defaultDebugTag,
+        );
+    }
+    replaceAll(e) {
+        return this.transaction((t) => {
+            t.delete(), t.putAll(e);
+        }, this.defaultDebugTag);
+    }
+    delete() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.execute(
+            { type: "kv.delete_many", table: this.tableId, key: E(this.prefix, e) },
+            this.defaultDebugTag,
+        );
+    }
+    deleteRange(e, t) {
+        let n = _(this.prefix, e),
+            i = _(this.prefix, t);
+        return this.database.execute(
+            { type: "kv.delete_range", table: this.tableId, range: [n, i] },
+            this.defaultDebugTag,
+        );
+    }
+    deleteGeneration() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0,
+            n = arguments.length > 2 ? arguments[2] : void 0;
+        return this.database.execute(
+            { type: "kv.delete_generation", table: this.tableId, key: E(this.prefix, e), generation: n, comparer: t },
+            this.defaultDebugTag,
+        );
+    }
+    transaction(e, t) {
+        return this.database.transaction((t) => e(new f(this.prefix, this.tableId, t)), t);
+    }
+    upgradeTransaction(e) {
+        return new f(this.prefix, this.tableId, e);
+    }
+    messages = {
+        getLatest: (e) =>
+            this.database.execute(
+                { type: "messages.get_latest", table: this.tableId, guildId: e },
+                this.defaultDebugTag,
+            ),
+    };
+    getManySyncUnsafe() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        return this.database.executeSync({
+            type: "kv.get_many",
+            table: this.tableId,
+            key: E(this.prefix, e),
+            ordering: t?.ordering,
+            limit: t?.limit,
+        });
+    }
+    getMapEntriesSyncUnsafe() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return this.database.executeSync({ type: "kv.get_map_entries", table: this.tableId, key: E(this.prefix, e) });
+    }
+    deleteSyncUnsafe() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        this.database.executeSync({ type: "kv.delete_many", table: this.tableId, key: E(this.prefix, e) });
+    }
+}
+class f {
+    prefix;
+    tableId;
+    transaction;
+    static fromDatabaseTransaction(e, t, n) {
+        return new f(e, t, n);
+    }
+    constructor(e, t, n) {
+        (this.prefix = e), (this.tableId = t), (this.transaction = n);
+    }
+    put(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        this.transaction.add({
+            type: "kv.put_one",
+            table: this.tableId,
+            cell: A(e, this.prefix),
+            overwrite: t === u.Replace,
+        });
+    }
+    putAll(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        this.transaction.add({
+            type: "kv.put_many",
+            table: this.tableId,
+            cells: h(e, this.prefix),
+            overwrite: t === u.Replace,
+        });
+    }
+    delete() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        this.transaction.add({ type: "kv.delete_many", table: this.tableId, key: E(this.prefix, e) });
+    }
+    deleteRange(e, t) {
+        let n = _(this.prefix, e),
+            i = _(this.prefix, t);
+        this.transaction.add({ type: "kv.delete_range", table: this.tableId, range: [n, i] });
+    }
+    deleteAllExcept() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        this.transaction.add({ type: "kv.delete_all_except", table: this.tableId, key: E(this.prefix, e), retain: t });
+    }
+    deleteGeneration() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0,
+            n = arguments.length > 2 ? arguments[2] : void 0;
+        this.transaction.add({
+            type: "kv.delete_generation",
+            table: this.tableId,
+            key: E(this.prefix, e),
+            generation: n,
+            comparer: t,
+        });
+    }
+    messages = {
+        trimOrphans: (e) => {
+            if (1 !== this.prefix.length || 1 !== e.length)
+                throw Error("trimOrphans: only one prefix component is supported at this time");
+            this.transaction.add({
+                type: "messages.trim_orphans",
+                table: this.tableId,
+                channelKey: e[0],
+                messageKey: this.prefix[0],
+            });
+        },
+        trimChannel: (e, t) => {
+            this.transaction.add({
+                type: "messages.trim_channel",
+                table: this.tableId,
+                key: _(this.prefix, e),
+                limit: t,
+            });
+        },
+        trimChannelsIn: (e, t) => {
+            if (1 !== this.prefix.length || 1 !== e.length)
+                throw Error("trimChannelsIn: only one prefix component is supported at this time");
+            this.transaction.add({
+                type: "messages.trim_channels_in",
+                table: this.tableId,
+                channelKey: e[0],
+                messageKey: this.prefix[0],
+                limit: t,
+            });
+        },
+        trimChannelsNotIn: (e, t) => {
+            if (1 !== this.prefix.length || 1 !== e.length)
+                throw Error("trimChannelsNotIn: only one prefix component is supported at this time");
+            this.transaction.add({
+                type: "messages.trim_channels_not_in",
+                table: this.tableId,
+                channelKey: e[0],
+                messageKey: this.prefix[0],
+                limit: t,
+            });
+        },
+    };
+}
+class p {
+    originalPrefix;
+    table;
+    get prefix() {
+        return this.table.prefix;
+    }
+    constructor(e, t, n, i = !0) {
+        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+    }
+    withoutLogging() {
+        return new p(this.originalPrefix, this.table.tableId, this.table.database, !1);
+    }
+    get(e) {
+        return this.table.get([e]);
+    }
+    getMany(e) {
+        return this.table.getMany([], e);
+    }
+    getRange(e, t, n) {
+        return this.table.getRange([e], [t], n);
+    }
+    getKvEntries() {
+        return this.table.getKvEntries();
+    }
+    getMapEntries() {
+        return this.table.getMapEntries();
+    }
+    getIds() {
+        return this.table.getChildIds([]);
+    }
+    getParentId(e) {
+        return this.table.getParentId([null, e]);
+    }
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        return this.table.put({ key: [e], data: t, generation: null }, n);
+    }
+    delete(e) {
+        return 0 == arguments.length ? this.table.delete() : this.table.delete([e]);
+    }
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new T(t)), t);
+    }
+    upgradeTransaction(e) {
+        return new T(this.table.upgradeTransaction(e));
+    }
+    getManySyncUnsafe(e) {
+        return this.table.getManySyncUnsafe([], e);
+    }
+    getMapEntriesSyncUnsafe() {
+        return this.table.getMapEntriesSyncUnsafe();
+    }
+}
+class T {
+    transaction;
+    static fromDatabaseTransaction(e, t, n) {
+        return new T(new f(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
+    }
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        this.transaction.put({ key: [e], data: t, generation: null }, n);
+    }
+    delete(e) {
+        return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
+    }
+}
+n(321073);
+var m = n(61090),
+    g = n(941426);
+let S = "1" === n(72290).env.KV_STORAGE_LOGGING,
+    N = new g.Vy("Runtime");
+class C {
+    static counter = 0;
+    static pending = new Map();
+    static initialized = !1;
+    static dbStateCallbacks = [];
+    static completionCallbacks = [];
+    static nextId() {
+        return ++this.counter;
+    }
+    static executeAsync(e, t) {
+        return (
+            this.initialize(),
+            new Promise((n, i) => {
+                let r = this.nextId();
+                t(r), this.pending.set(r, { id: r, tag: e, started: performance.now(), resolve: n, reject: i });
+            })
+        );
+    }
+    static addCompletionCallback(e) {
+        return this.completionCallbacks.push(e), e;
+    }
+    static addDatabaseStateCallback(e) {
+        return this.dbStateCallbacks.push(e), e;
+    }
+    static removeCompletionCallback(e) {
+        this.completionCallbacks = this.completionCallbacks.filter((t) => t !== e);
+    }
+    static removeDatabaseStateCallback(e) {
+        this.dbStateCallbacks = this.dbStateCallbacks.filter((t) => t !== e);
+    }
+    static onResponse(e, t) {
+        let n = performance.now(),
+            i = this.pending.get(e.id);
+        null != i &&
+            (this.pending.delete(e.id),
+            (e.timings.materializationTimeNanoseconds = t ?? 0),
+            this.completeOperation(i, e, n),
+            this.resolveOperation(i, e));
+    }
+    static onStatus(e) {
+        for (let t of this.dbStateCallbacks) t(e.handle, e.state);
+    }
+    static resolveOperation(e, t) {
+        t.ok ? e.resolve(t.data) : e.reject("string" == typeof t.data ? Error(t.data) : t.data);
+    }
+    static completeOperation(e, t, n) {
+        if (this.completionCallbacks.length > 0) {
+            let i = {
+                id: e.id,
+                tag: e.tag,
+                ok: t.ok,
+                value: t.data,
+                timings: {
+                    queue: t.timings.queueTimeNanoseconds / 1e6,
+                    execution: t.timings.executionTimeNanoseconds / 1e6,
+                    materialization: t.timings.materializationTimeNanoseconds / 1e6,
+                    ccTotal: t.timings.totalTimeNanoseconds / 1e6,
+                    jsTotal: n - e.started,
+                },
+            };
+            for (let e of this.completionCallbacks) e(i);
+        }
+    }
+    static initialize() {
+        this.initialized ||
+            (i.setCallbacks({ status: (e) => this.onStatus(e), response: (e, t) => this.onResponse(e, t) }),
+            S &&
+                (this.addCompletionCallback((e) => {
+                    let t = e.ok ? "completed" : "failed",
+                        n = `${e.timings.execution.toFixed(3)}ms execution, ${e.timings.materialization.toFixed(3)}ms js materialization, ${e.timings.ccTotal.toFixed(3)}ms cc completion, ${e.timings.jsTotal.toFixed(3)}ms js reception`;
+                    N.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
+                }),
+                this.addDatabaseStateCallback((e, t) => N.info(`${e} (state: ${t})`))),
+            (this.initialized = !0));
+    }
+}
+class R {
+    static open(e, t) {
+        return C.executeAsync("database_open", (n) =>
+            i.databaseOpen(n, { database: e, invalidateDisabledHandles: t?.invalidateDisabledHandles ?? !1 }),
+        );
+    }
+    static openSyncUnsafe(e, t) {
+        return i.databaseOpen(
+            null,
+            { database: e, invalidateDisabledHandles: t?.invalidateDisabledHandles ?? !1 },
+            { synchronous: !0 },
+        );
+    }
+    static delete(e) {
+        return C.executeAsync("database_delete", (t) => i.databaseDelete(t, { database: e }));
+    }
+    static async list() {
+        return (await C.executeAsync("database_list", (e) => i.databaseList(e))).map((e) => e.data);
+    }
+    static optimize(e) {
+        return C.executeAsync("database_optimize", (t) => i.databaseOptimize(t, { aggressive: e }));
+    }
+    static raise(e) {
+        i.raise(e);
+    }
+    static malformedValueCount() {
+        return i.malformedValueCount();
+    }
+    static malformedEntryCount() {
+        return i.malformedEntryCount();
+    }
+}
+class O {
+    name;
+    handle;
+    raw;
+    lastState;
+    databaseStateCallback;
+    static async open(e, t) {
+        return new O(await R.open(e, t));
+    }
+    static openSyncUnsafe(e, t) {
+        return new O(R.openSyncUnsafe(e, t));
+    }
+    static delete(e) {
+        return R.delete(e);
+    }
+    constructor(e) {
+        (this.raw = e),
+            (this.name = e.name),
+            (this.lastState = c.Open),
+            (this.handle = e.handle),
+            (this.databaseStateCallback = C.addDatabaseStateCallback((e, t) => {
+                this.handle === e && (this.lastState = t);
+            }));
+    }
+    close() {
+        (this.lastState = c.Closed),
+            this.raw?.close(),
+            (this.raw = null),
+            C.removeCompletionCallback(this.databaseStateCallback);
+    }
+    disable(e) {
+        return null == this.raw
+            ? Promise.resolve()
+            : ((this.lastState = c.Disabled), this.execute({ type: "db.disable", handle: 0, reason: e }));
+    }
+    execute(e, t) {
+        if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
+        let n = "key" in e ? e.key[0] : e.table,
+            i = () =>
+                C.executeAsync(t ?? e.type, (t) => {
+                    this.raw.execute(t, { ...e, handle: 0 });
+                });
+        return null === t ? i() : m.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
+    }
+    executeSync(e) {
+        if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
+        let t = "key" in e ? e.key[0] : e.table;
+        return m.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
+            this.raw.execute(null, { ...e, handle: 0 }, { synchronous: !0 }),
+        );
+    }
+    fullVacuum() {
+        return this.execute({ type: "db.vacuum", handle: 0, complete: !0 });
+    }
+    fsInfo() {
+        return this.execute({ type: "db.fs_info", handle: 0 });
+    }
+    incrementalVacuum() {
+        return this.execute({ type: "db.vacuum", handle: 0, complete: !1 });
+    }
+    instantaneousState() {
+        return null == this.raw ? c.Closed : (this.lastState = this.executeSync({ type: "db.state" }));
+    }
+    async instantaneousStateAsync() {
+        return null == this.raw ? c.Closed : (this.lastState = await this.execute({ type: "db.state" }));
+    }
+    state() {
+        return this.lastState;
+    }
+    transaction(e, t) {
+        let n = new L(this);
+        return Promise.resolve(e(n)).then(() =>
+            n.operations.length > 0
+                ? this.execute({ type: "db.transaction", operations: n.complete() }, t)
+                : Promise.resolve(),
+        );
+    }
+}
+class L {
+    database;
+    operations;
+    constructor(e) {
+        (this.database = e), (this.operations = []);
+    }
+    add(e) {
+        this.operations.push(e);
+    }
+    complete() {
+        for (let e of this.operations) e.handle = 0;
+        return this.operations;
+    }
+    toString() {
+        return `[DatabaseTransaction ${this.database.handle}: ${this.operations.length} ops]`;
+    }
+}
+class y {
+    originalPrefix;
+    table;
+    get prefix() {
+        return this.table.prefix;
+    }
+    constructor(e, t, n, i = !0) {
+        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+    }
+    withoutLogging() {
+        return new y(this.originalPrefix, this.table.tableId, this.table.database, !1);
+    }
+    get(e) {
+        return this.table.get([e]);
+    }
+    getMany(e) {
+        return this.table.getMany([], e);
+    }
+    getRange(e, t, n) {
+        return this.table.getRange([e], [t], n);
+    }
+    getKvEntries() {
+        return this.table.getKvEntries();
+    }
+    getMapEntries() {
+        return this.table.getMapEntries();
+    }
+    getIds() {
+        return this.table.getChildIds([]);
+    }
+    getParentId(e) {
+        return this.table.getParentId([null, e]);
+    }
+    put(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.transaction((n) => n.put(e, t), `${this.prefix} put`);
+    }
+    putAll(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.transaction((n) => n.putAll(e, t), `${this.prefix} putAll`);
+    }
+    replaceAll(e) {
+        return this.transaction((t) => t.replaceAll(e), `${this.prefix} replaceAll`);
+    }
+    delete(e) {
+        return this.transaction((t) => t.delete(e), `${this.prefix} delete`);
+    }
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new D(t)), t);
+    }
+    upgradeTransaction(e) {
+        return new D(this.table.upgradeTransaction(e));
+    }
+    getManySyncUnsafe(e) {
+        return this.table.getManySyncUnsafe([], e);
+    }
+    getMapEntriesSyncUnsafe() {
+        return this.table.getMapEntriesSyncUnsafe();
+    }
+    static cell(e, t) {
+        return { key: [e.id], data: e, generation: t };
+    }
+}
+class D {
+    transaction;
+    static fromDatabaseTransaction(e, t, n) {
+        return new D(new f(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
+    }
+    put(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.transaction.put(y.cell(e, null), t);
+    }
+    putAll(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
+        return this.transaction.putAll(
+            e.map((e) => y.cell(e, null)),
+            t,
+        );
+    }
+    replaceAll(e) {
+        this.delete(), this.putAll(e);
+    }
+    delete(e) {
+        return 0 == arguments.length ? this.transaction.delete([]) : this.transaction.delete([e]);
+    }
+    deleteAllExcept(e) {
+        this.transaction.deleteAllExcept([], e);
+    }
+}
+class v {
+    originalPrefix;
+    table;
+    get prefix() {
+        return this.table.prefix;
+    }
+    constructor(e, t, n, i = !0) {
+        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+    }
+    withoutLogging() {
+        return new v(this.originalPrefix, this.table.tableId, this.table.database, !1);
+    }
+    get(e, t) {
+        return this.table.get([e, t]);
+    }
+    getMany(e, t) {
+        return this.table.getMany([e], t);
+    }
+    getRange(e, t, n, i) {
+        return this.table.getRange([e, t], [e, n], i);
+    }
+    getKvEntries() {
+        return this.table.getKvEntries();
+    }
+    getMapEntries() {
+        return this.table.getMapEntries();
+    }
+    getIds(e) {
+        return this.table.getChildIds([e]);
+    }
+    getGuildIds() {
+        return this.table.getChildIds([]);
+    }
+    getGuildId(e) {
+        return this.table.getParentId([null, e]);
+    }
+    put(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
+        return this.putWithGeneration(e, t, n, null, i);
+    }
+    putWithGeneration(e, t, n, i) {
+        let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.Replace;
+        return this.table.put({ key: [e, t], data: n, generation: i }, r);
+    }
+    delete(e, t) {
+        switch (arguments.length) {
+            case 0:
+                return this.table.delete([]);
+            case 1:
+                return this.table.delete([e]);
+            default:
+                return this.table.delete([e, t]);
+        }
+    }
+    deleteGeneration(e, t) {
+        return this.table.deleteGeneration([], e, t);
+    }
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new b(t)), t);
+    }
+    upgradeTransaction(e) {
+        return new b(this.table.upgradeTransaction(e));
+    }
+    getManySyncUnsafe(e, t) {
+        return this.table.getManySyncUnsafe([e], t);
+    }
+    getMapEntriesSyncUnsafe() {
+        return this.table.getMapEntriesSyncUnsafe();
+    }
+}
+class b {
+    state;
+    static fromDatabaseTransaction(e, t, n) {
+        return new b(new f(e, t, n));
+    }
+    constructor(e) {
+        this.state = e;
+    }
+    put(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
+        this.putWithGeneration(e, t, n, null, i);
+    }
+    putWithGeneration(e, t, n, i) {
+        let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.Replace;
+        return this.state.put({ key: [e, t], data: n, generation: i }, r);
+    }
+    delete(e, t) {
+        switch (arguments.length) {
+            case 0:
+                this.state.delete([]);
+                break;
+            case 1:
+                this.state.delete([e]);
+                break;
+            default:
+                this.state.delete([e, t]);
+        }
+    }
+    deleteGeneration(e, t) {
+        return this.state.deleteGeneration([], e, t);
+    }
+}
+class M {
+    originalPrefix;
+    table;
+    get prefix() {
+        return this.table.prefix;
+    }
+    constructor(e, t, n, i = !0) {
+        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+    }
+    withoutLogging() {
+        return new M(this.originalPrefix, this.table.tableId, this.table.database, !1);
+    }
+    get(e, t) {
+        return this.table.get([e, t]);
+    }
+    getMany(e, t) {
+        return this.table.getMany([e], t);
+    }
+    getRange(e, t, n, i) {
+        return this.table.getRange([e, t], [e, n], i);
+    }
+    getKvEntries() {
+        return this.table.getKvEntries();
+    }
+    getMapEntries() {
+        return this.table.getMapEntries();
+    }
+    getIds(e) {
+        return this.table.getChildIds([e]);
+    }
+    getGuildIds() {
+        return this.table.getChildIds([]);
+    }
+    getGuildId(e) {
+        return this.table.getParentId([null, e]);
+    }
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        return this.transaction((i) => i.put(e, t, n), `${this.prefix} put`);
+    }
+    putAll(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        return this.transaction((i) => i.putAll(e, t, n), `${this.prefix} putAll`);
+    }
+    replaceAll(e, t) {
+        return this.transaction((n) => n.replaceAll(e, t), `${this.prefix} replaceAll`);
+    }
+    delete(e, t) {
+        return this.transaction((n) => n.delete(e, t), `${this.prefix} delete`);
+    }
+    deleteGeneration(e, t) {
+        return this.transaction((n) => n.deleteGeneration(e, t), `${this.prefix} deleteGeneration`);
+    }
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new P(t)), t);
+    }
+    upgradeTransaction(e) {
+        return new P(this.table.upgradeTransaction(e));
+    }
+    getManySyncUnsafe(e, t) {
+        return this.table.getManySyncUnsafe([e], t);
+    }
+    getMapEntriesSyncUnsafe() {
+        return this.table.getMapEntriesSyncUnsafe();
+    }
+    deleteSyncUnsafe(e) {
+        return this.table.deleteSyncUnsafe([e]);
+    }
+    static cell(e, t, n) {
+        return { key: [e, t.id], data: t, generation: n };
+    }
+}
+class P {
+    transaction;
+    static fromDatabaseTransaction(e, t, n) {
+        return new P(new f(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
+    }
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        return this.putWithGeneration(e, t, null, n);
+    }
+    putWithGeneration(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
+        return this.transaction.put(M.cell(e, t, n), i);
+    }
+    putAll(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.Replace;
+        return this.transaction.putAll(
+            t.map((t) => M.cell(e, t, null)),
+            n,
+        );
+    }
+    replaceAll(e, t) {
+        this.delete(e), this.putAll(e, t);
+    }
+    delete(e, t) {
+        switch (arguments.length) {
+            case 0:
+                return this.transaction.delete([]);
+            case 1:
+                return this.transaction.delete([e]);
+            default:
+                return this.transaction.delete([e, t]);
+        }
+    }
+    deleteAllExcept(e) {
+        this.transaction.deleteAllExcept([], e);
+    }
+    deleteGeneration(e, t) {
+        return this.transaction.deleteGeneration([], e, t);
+    }
+}
+class U {
+    originalPrefix;
+    table;
+    get prefix() {
+        return this.table.prefix;
+    }
+    constructor(e, t, n, i = !0) {
+        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+    }
+    withoutLogging() {
+        return new U(this.originalPrefix, this.table.tableId, this.table.database, !1);
+    }
+    get(e, t, n) {
+        return this.table.get([e, t, x(n)]);
+    }
+    getLatest(e, t, n) {
+        return this.table.getMany([e, t], { ordering: d.Descending, limit: n });
+    }
+    getRange(e, t, n, i, r) {
+        return this.table.getRange([e, t, x(n)], [e, t, x(i)], r);
+    }
+    getMostRecents(e) {
+        return this.table.messages.getLatest(e);
+    }
+    put(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
+        return this.table.put(G(e, t, n), i);
+    }
+    putAll(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace,
+            r = n.map((n) => G(e, t, n));
+        return this.table.putAll(r, i);
+    }
+    deleteAll() {
+        return this.table.delete();
+    }
+    deleteGuild(e) {
+        return this.table.delete([e]);
+    }
+    deleteChannel(e, t) {
+        return this.table.delete([e, t]);
+    }
+    deleteMessage(e, t, n) {
+        return this.table.delete([e, t, x(n)]);
+    }
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new w(t)), t);
+    }
+    upgradeTransaction(e) {
+        return new w(this.table.upgradeTransaction(e));
+    }
+}
+class w {
+    transaction;
+    static fromTableTransaction(e) {
+        return new w(e);
+    }
+    static fromDatabaseTransaction(e, t, n) {
+        return new w(new f(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
+    }
+    put(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace;
+        this.transaction.put(G(e, t, n), i);
+    }
+    putAll(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.Replace,
+            r = n.map((n) => G(e, t, n));
+        this.transaction.putAll(r, i);
+    }
+    replaceChannel(e, t, n) {
+        this.deleteChannel(e, t), this.putAll(e, t, n);
+    }
+    deleteAll() {
+        this.transaction.delete();
+    }
+    deleteGuild(e) {
+        this.transaction.delete([e]);
+    }
+    deleteChannel(e, t) {
+        this.transaction.delete([e, t]);
+    }
+    deleteMessage(e, t, n) {
+        this.transaction.delete([e, t, x(n)]);
+    }
+    trimOrphans(e) {
+        this.transaction.messages.trimOrphans(e);
+    }
+    trimChannel(e, t, n) {
+        this.transaction.messages.trimChannel([e, t], n);
+    }
+    trimChannelsIn(e, t) {
+        this.transaction.messages.trimChannelsIn(e, t);
+    }
+    trimChannelsNotIn(e, t) {
+        this.transaction.messages.trimChannelsNotIn(e, t);
+    }
+}
+function G(e, t, n) {
+    let i = x(n.id);
+    return { key: [e, t, i], data: n, generation: i };
+}
+function x(e) {
+    return e.padStart(19, "0");
+}

@@ -70,10 +70,14 @@ let c = {
             n
         );
     },
-    captureMessage(e, t) {
-        let n = s(t);
+    captureMessage(e, t, n) {
+        let i = s(t);
         window.DiscordSentry?.withScope((t) => {
-            null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureMessage(e);
+            null != i.tags && t.setTags(i.tags),
+                null != i.fingerprint &&
+                    (t.setFingerprint(i.fingerprint), t.addEventProcessor((e) => ((e.exception = void 0), e))),
+                t.setExtras(i.extra),
+                window.DiscordSentry?.captureMessage(e, n);
         });
     },
     addFeatureFlag(e, t) {
