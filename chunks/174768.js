@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => Z }), n(321073), n(667532);
+n.d(t, { A: () => X }), n(321073), n(667532);
 var r = n(435558),
     a = n.n(r),
     s = n(17928),
@@ -10,7 +10,7 @@ var r = n(435558),
     c = n(280157),
     u = n(243264),
     _ = n(455234),
-    E = n(695633),
+    E = n(863005),
     A = n(363195),
     h = n(280450),
     I = n(734057),
@@ -23,12 +23,15 @@ var r = n(435558),
     N = n(309010),
     C = n(967198),
     O = n(543465),
-    R = n(768038),
+    R = n(237116),
     L = n(403362),
     y = n(652215),
     D = n(375708);
 let v = "seenQSTutorial";
-function b() {
+function b(e) {
+    return e === d.rD.USER || e === d.rD.USER_GLOBAL;
+}
+function M() {
     return [
         d.rD.USER,
         d.rD.GROUP_DM,
@@ -40,39 +43,43 @@ function b() {
         d.rD.IN_APP_NAVIGATION,
     ];
 }
-let M = 0,
-    P = !1,
+let P = 0,
     U = !1,
-    w = null,
-    G = [],
-    x = null,
-    k = 0,
-    F = [],
+    w = !1,
+    G = null,
+    x = [],
+    k = null,
+    F = 0,
     V = [],
-    B = null;
-function H() {
-    (U = m.A.getGuildCount() >= 3 || a().size(I.A.getMutablePrivateChannels()) >= 20), (F = []);
-}
-function j(e) {
-    let t = (0, c.A)(e);
-    return null == t || (null != w && w !== t.type) ? null : t;
+    B = [],
+    H = null;
+function j() {
+    (w = m.A.getGuildCount() >= 3 || a().size(I.A.getMutablePrivateChannels()) >= 20), (V = []);
 }
 function W(e) {
+    let t = (0, c.A)(e);
+    if (null == t) return null;
+    if (b(G)) {
+        if (t.type !== d.rD.USER) return null;
+    } else if (null != G && G !== t.type) return null;
+    return t;
+}
+function Y(e) {
     let { query: t, queryMode: n } = e,
         r = t.trim(),
         a = C.A.getGuildId() ?? void 0,
         s = new Set([`user:${h.default.getId()}`]);
     null != a && s.add(`guild:${a}`),
-        (B = Date.now()),
+        (H = Date.now()),
         (i =
             i ??
-            new d.Ay(Y, b(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
-        (x = null),
-        (k = r.length),
-        (w = n),
+            new d.Ay(K, M(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
+        (k = null),
+        (F = r.length),
+        (G = n),
         i.search(r);
 }
-function Y(e, t) {
+function K(e, t) {
     if (
         !(function (e, t) {
             if (e.length !== t.length) return !1;
@@ -90,7 +97,8 @@ function Y(e, t) {
                           let t,
                               n = C.A.getGuildId() ?? void 0,
                               i = N.Ay.getChannelId() ?? void 0;
-                          switch (w) {
+                          switch (G) {
+                              case d.rD.USER_GLOBAL:
                               case d.rD.USER: {
                                   let e = h.default.getId();
                                   return R.Ay.getRecentlyTalked(i, 100).filter((t) => {
@@ -126,12 +134,12 @@ function Y(e, t) {
                           let r = [],
                               a = new Set(),
                               s = [];
-                          for (let e = 1; e < V.length; e += 1) {
-                              let t = j(V[e]);
+                          for (let e = 1; e < B.length; e += 1) {
+                              let t = W(B[e]);
                               null != t &&
                                   ((t.type !== d.rD.TEXT_CHANNEL && t.type !== d.rD.VOICE_CHANNEL) ||
                                       g.A.can(y.xBc.VIEW_CHANNEL, t.record)) &&
-                                  (s.push(t), a.size < 3 && a.add(V[e]));
+                                  (s.push(t), a.size < 3 && a.add(B[e]));
                           }
                           let l =
                               ((e = (e) => e === i || a.has(e)),
@@ -139,7 +147,7 @@ function Y(e, t) {
                               f.A.getRecentlyEditedDrafts(f.C.ChannelMessage).forEach((n) => {
                                   let { channelId: i } = n;
                                   if (e(i)) return;
-                                  let r = j(i);
+                                  let r = W(i);
                                   if (null != r) {
                                       if (
                                           (r.type === d.rD.TEXT_CHANNEL || r.type === d.rD.VOICE_CHANNEL) &&
@@ -158,7 +166,7 @@ function Y(e, t) {
                           for (let e = o.length - 1; e >= 0; e--) {
                               let t = o[e];
                               if (null == t) continue;
-                              let n = j(t);
+                              let n = W(t);
                               null != n && c.push({ channelId: t, result: n });
                           }
                           if (c.length > 0)
@@ -179,11 +187,11 @@ function Y(e, t) {
                                           ) && (0, _.Y)(t)
                                       );
                                   })
-                                  .map((e) => j(e))
+                                  .map((e) => W(e))
                                   .filter(L.Vq);
                               Object.values(E.A.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
                                   for (let n in t) {
-                                      let t = j(n);
+                                      let t = W(n);
                                       null == t || a.has(t.record.id) || e.push(t);
                                   }
                               }),
@@ -197,15 +205,16 @@ function Y(e, t) {
                           );
                       })()
                     : e),
-            F,
+            V,
         )
     ) {
-        F = e;
+        V = e;
         var n = e,
             i = t;
-        switch (w) {
+        switch (G) {
+            case d.rD.USER_GLOBAL:
             case d.rD.USER: {
-                let e = m.A.getGuild(C.A.getGuildId());
+                let e = G === d.rD.USER_GLOBAL ? null : m.A.getGuild(C.A.getGuildId());
                 n.unshift(
                     (0, d.jF)(
                         null != e
@@ -213,55 +222,55 @@ function Y(e, t) {
                             : D.intl.string(D.t.XFYW1o),
                     ),
                 ),
-                    (G = n);
+                    (x = n);
                 break;
             }
             case d.rD.TEXT_CHANNEL:
-                n.unshift((0, d.jF)(D.intl.string(D.t.W26k4V))), (G = n);
+                n.unshift((0, d.jF)(D.intl.string(D.t.W26k4V))), (x = n);
                 break;
             case d.rD.VOICE_CHANNEL:
-                n.unshift((0, d.jF)(D.intl.string(D.t.zUoI5C))), (G = n);
+                n.unshift((0, d.jF)(D.intl.string(D.t.zUoI5C))), (x = n);
                 break;
             case d.rD.GUILD:
-                n.unshift((0, d.jF)(D.intl.string(D.t.olADPs))), (G = n);
+                n.unshift((0, d.jF)(D.intl.string(D.t.olADPs))), (x = n);
                 break;
             case d.rD.APPLICATION:
-                n.unshift((0, d.jF)(D.intl.string(D.t.VwK1ld))), (G = n);
+                n.unshift((0, d.jF)(D.intl.string(D.t.VwK1ld))), (x = n);
                 break;
             case d.rD.GAME_PROFILE:
-                n.unshift((0, d.jF)(D.intl.string(D.t.gEp2SG))), (G = n);
+                n.unshift((0, d.jF)(D.intl.string(D.t.gEp2SG))), (x = n);
                 break;
             default: {
                 let e = n.filter((e) => e.type === d.rD.GAME_PROFILE).slice(0, 3);
-                G = [...n.filter((e) => e.type !== d.rD.GAME_PROFILE), ...e];
+                x = [...n.filter((e) => e.type !== d.rD.GAME_PROFILE), ...e];
             }
         }
-        if (i !== x) (x = i), (k = Math.max(i.length, k)), (M = (0, d.Vv)(d.vB.DOWN, -1, G));
+        if (i !== k) (k = i), (F = Math.max(i.length, F)), (P = (0, d.Vv)(d.vB.DOWN, -1, x));
         else {
-            let e = G[M];
-            null != e && e.type === d.rD.HEADER && (M = (0, d.Vv)(d.vB.DOWN, M, G));
+            let e = x[P];
+            null != e && e.type === d.rD.HEADER && (P = (0, d.Vv)(d.vB.DOWN, P, x));
         }
         q.emitChange();
     }
 }
-function K() {
-    (x = null), (k = 0), (F = []), null != i && (i.destroy(), (i = null));
-}
 function $() {
+    (k = null), (F = 0), (V = []), null != i && (i.destroy(), (i = null));
+}
+function z() {
     if (null == i) return !1;
     i.refreshGameProfiles();
 }
-class z extends s.Ay.PersistedStore {
+class Z extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
         this.waitFor(E.A, h.default, I.A, f.A, u.A, p.Ay, T.Ay, m.A, g.A, S.Ay, N.Ay, C.A, A.A, O.Ay),
             this.syncWith([A.A], () => !0),
-            (P = l.w.get(v) || !1),
-            (V = e?.channelHistory ?? []);
+            (U = l.w.get(v) || !1),
+            (B = e?.channelHistory ?? []);
     }
     getState() {
-        return { channelHistory: V };
+        return { channelHistory: B };
     }
     isOpen() {
         return null != i;
@@ -275,7 +284,7 @@ class z extends s.Ay.PersistedStore {
     }
     channelNoticePredicate(e, t) {
         let n = Date.now() - t >= y.D2K;
-        return U && n;
+        return w && n;
     }
     getFrequentGuilds() {
         return null != i ? i.queryGuilds("", 100) : null;
@@ -284,37 +293,38 @@ class z extends s.Ay.PersistedStore {
         return null != i ? i.queryGuilds("", 100).length : 0;
     }
     getChannelHistory() {
-        return V;
+        return B;
     }
     getLastShowTimestamp() {
-        return B;
+        return H;
     }
     getProps() {
         return {
             theme: A.A.theme,
             query: null != i ? i.query : "",
-            queryMode: w,
-            results: G,
-            selectedIndex: M,
-            seenTutorial: P,
-            maxQueryLength: k,
+            queryMode: G,
+            results: x,
+            selectedIndex: P,
+            seenTutorial: U,
+            maxQueryLength: F,
         };
     }
 }
-let q = new z(o.h, {
-        CONNECTION_OPEN: H,
-        CONNECTION_OPEN_SUPPLEMENTAL: H,
-        QUICKSWITCHER_SHOW: W,
-        SHOW_ACTION_SHEET_QUICK_SWITCHER: W,
-        QUICKSWITCHER_HIDE: K,
-        OVERLAY_SET_INPUT_LOCKED: K,
-        HIDE_ACTION_SHEET_QUICK_SWITCHER: K,
+let q = new Z(o.h, {
+        CONNECTION_OPEN: j,
+        CONNECTION_OPEN_SUPPLEMENTAL: j,
+        QUICKSWITCHER_SHOW: Y,
+        SHOW_ACTION_SHEET_QUICK_SWITCHER: Y,
+        QUICKSWITCHER_HIDE: $,
+        OVERLAY_SET_INPUT_LOCKED: $,
+        HIDE_ACTION_SHEET_QUICK_SWITCHER: $,
         QUICKSWITCHER_SEARCH: function (e) {
             let { query: t, queryMode: n } = e,
                 r = t.trim();
             if (null == i) return !1;
-            if (w !== n) {
-                i.setResultTypes(null != n ? [n] : b()), i.setLimit(null != n ? 100 : 5);
+            if (G !== n) {
+                null == n ? i.setResultTypes(M()) : b(n) ? i.setResultTypes([d.rD.USER]) : i.setResultTypes([n]),
+                    i.setLimit(null != n ? 100 : 5);
                 let e = C.A.getGuildId() ?? void 0;
                 n === d.rD.USER && null != e
                     ? i.setOptions({ userFilters: { guild: e, friends: !0 } }, !0)
@@ -322,24 +332,24 @@ let q = new z(o.h, {
                       ? i.setOptions({ voiceChannelGuildFilter: null }, !0)
                       : i.setOptions({ userFilters: null, voiceChannelGuildFilter: void 0 }, !0);
             }
-            if ((w = n) === d.rD.USER) {
+            if ((G = n) === d.rD.USER) {
                 let e = C.A.getGuildId() ?? null;
                 i.search(r, e);
             } else i.search(r, void 0);
         },
         QUICKSWITCHER_SELECT: function (e) {
-            M = e.selectedIndex;
+            P = e.selectedIndex;
         },
         QUICKSWITCHER_SWITCH_TO: function () {
-            if (P) return !1;
-            (P = !0), l.w.set(v, !0);
+            if (U) return !1;
+            (U = !0), l.w.set(v, !0);
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (null == t) return !1;
-            (V = V.filter((e) => e !== t)).unshift(t), V.length > 8 && (V.length = 8);
+            (B = B.filter((e) => e !== t)).unshift(t), B.length > 8 && (B.length = 8);
         },
-        GAME_AUTOCOMPLETE_FETCH_SUCCESS: $,
-        GAME_AUTOCOMPLETE_FETCH_FAILURE: $,
+        GAME_AUTOCOMPLETE_FETCH_SUCCESS: z,
+        GAME_AUTOCOMPLETE_FETCH_FAILURE: z,
     }),
-    Z = q;
+    X = q;
