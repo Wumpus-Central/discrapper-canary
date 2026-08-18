@@ -152,11 +152,11 @@ function Q(e) {
         [z, Z] = n.useState(() => H.length > 0),
         X = n.useRef(null),
         G = n.useRef(null),
-        J = n.useRef(null),
-        V = n.useRef(!0);
+        V = n.useRef(null),
+        J = n.useRef(!0);
     n.useEffect(
         () => () => {
-            V.current = !1;
+            J.current = !1;
         },
         [],
     );
@@ -175,7 +175,7 @@ function Q(e) {
         }, [l]),
         ea = n.useCallback(
             (e) => {
-                if (!V.current) return;
+                if (!J.current) return;
                 let t = e?.relatedTarget,
                     r = document.getElementById(M);
                 (null != t && null != r && r.contains(t)) ||
@@ -220,7 +220,7 @@ function Q(e) {
             [et, ea, a, U],
         ),
         ei = n.useCallback(() => {
-            if (!V.current) return;
+            if (!J.current) return;
             !ee.current && i.rL.isFocused(Q) && K(!0);
             let e = et();
             Z(e.length > 0), I.A.updateSearchQueryText(l, e);
@@ -253,7 +253,7 @@ function Q(e) {
                 })(Q);
         }, [Q, et, l]),
         eo = n.useCallback(() => {
-            !0 !== J.current?.selectOption({ searchAutocompleteSelectAction: C.oi.KEY_PRESS }) &&
+            !0 !== V.current?.selectOption({ searchAutocompleteSelectAction: C.oi.KEY_PRESS }) &&
                 es({ searchQuerySource: C.Q_.SEARCH_TEXT_INPUT });
         }, [es]),
         ec = n.useCallback(
@@ -266,10 +266,10 @@ function Q(e) {
                         e.preventDefault(), e.stopPropagation(), 0 === et().length ? er() : (eu(""), K(!0));
                         return;
                     case "ArrowUp":
-                        e.preventDefault(), e.stopPropagation(), J.current?.focusPreviousOption();
+                        e.preventDefault(), e.stopPropagation(), V.current?.focusPreviousOption();
                         return;
                     case "ArrowDown":
-                        e.preventDefault(), e.stopPropagation(), J.current?.focusNextOption();
+                        e.preventDefault(), e.stopPropagation(), V.current?.focusNextOption();
                         return;
                     case "Tab":
                         if (N) return;
@@ -359,9 +359,9 @@ function Q(e) {
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), 0 === et().length)
                     ? el()
-                    : (eu(""), (0, k.iK)({ searchContext: l }), Y || er());
+                    : (eu(""), (0, k.iK)({ searchContext: l }), en(), Y || er());
             },
-            [er, Y, el, et, eu, l],
+            [er, en, Y, el, et, eu, l],
         ),
         eL = n.useCallback(
             (e) => {
@@ -387,7 +387,7 @@ function Q(e) {
             () =>
                 (0, r.jsx)("div", {
                     onBlur: eR,
-                    children: (0, r.jsx)(F.A, { ref: J, searchContext: l, navId: M, onSelectedIndexChanged: eL }),
+                    children: (0, r.jsx)(F.A, { ref: V, searchContext: l, navId: M, onSelectedIndexChanged: eL }),
                 }),
             [eR, eL, l],
         ),
