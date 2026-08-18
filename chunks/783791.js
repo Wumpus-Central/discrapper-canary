@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F, B: () => S }), n(667532);
+n.d(t, { A: () => V, B: () => S }), n(667532);
 var i = n(17928),
     r = n(228366),
     a = n(264686),
@@ -28,17 +28,18 @@ let N = new Map(),
     R = [],
     L = new Map(),
     y = new Map(),
-    D = 0,
-    v = [],
-    b = 0;
-function M(e, t) {
+    D = new Set(),
+    v = 0,
+    b = [],
+    M = 0;
+function P(e, t) {
     let {
             ts: n,
             id: i,
             userId: r,
             attachments: a,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        s = i ?? `m${++b}`;
+        s = i ?? `m${++M}`;
     return {
         id: s,
         render_id: s,
@@ -50,8 +51,8 @@ function M(e, t) {
         attachments: a,
     };
 }
-function P(e) {
-    let t = M(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments });
+function U(e) {
+    let t = P(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments });
     return (
         null != e.kind && (t.kind = e.kind),
         null != e.proposal && (t.proposal = e.proposal),
@@ -60,21 +61,21 @@ function P(e) {
         t
     );
 }
-function U(e, t) {
+function w(e, t) {
     let n = N.get(e);
     if (null == n || 0 === n.length) return;
     let i = n[n.length - 1];
     "assistant" === i.role && N.set(e, [...n.slice(0, -1), t(i)]);
 }
-function w(e) {
+function G(e) {
     let t = N.get(e);
     if (null == t || 0 === t.length) return !1;
     let n = t[t.length - 1];
     return "assistant" === n.role && !S(n);
 }
-function G(e) {
+function x(e) {
     let t = O.get(e) ?? !1,
-        i = w(e);
+        i = G(e);
     if (t === i) return;
     O.set(e, i);
     let r = R.indexOf(e);
@@ -149,27 +150,28 @@ function G(e) {
             })(e);
     }
 }
-function x(e) {
+function k(e) {
     let t = N.delete(e),
         n = C.delete(e),
         i = O.delete(e),
         r = L.delete(e),
         a = y.delete(e),
-        s = R.indexOf(e);
-    return -1 !== s && R.splice(s, 1), t || n || i || r || a || -1 !== s;
+        s = D.delete(e),
+        l = R.indexOf(e);
+    return -1 !== l && R.splice(l, 1), t || n || i || r || a || s || -1 !== l;
 }
-class k extends i.Ay.Store {
+class F extends i.Ay.Store {
     initialize() {
         this.waitFor(s.A, c.A, u.Ay, _.A, E.A, h.A);
     }
     getMessages(e) {
-        return N.get(e) ?? v;
+        return N.get(e) ?? b;
     }
     isThinking(e) {
-        return w(e);
+        return G(e);
     }
     getFinishedAt(e) {
-        return w(e) ? null : (C.get(e) ?? null);
+        return G(e) ? null : (C.get(e) ?? null);
     }
     getProjectUsage(e) {
         return L.get(e) ?? null;
@@ -177,8 +179,11 @@ class k extends i.Ay.Store {
     getThinkingActivity(e) {
         return y.get(e) ?? null;
     }
+    isCompacting(e) {
+        return D.has(e);
+    }
     getSidebarWidth() {
-        return D;
+        return v;
     }
     getActivityOrderedProjectIds() {
         return R.slice();
@@ -188,15 +193,24 @@ class k extends i.Ay.Store {
         return !1;
     }
 }
-let F = new k(r.h, {
+let V = new F(r.h, {
     LOGOUT: function () {
-        if (0 === N.size && 0 === C.size && 0 === O.size && 0 === L.size && 0 === y.size && 0 === R.length && 0 === D)
+        if (
+            0 === N.size &&
+            0 === C.size &&
+            0 === O.size &&
+            0 === L.size &&
+            0 === y.size &&
+            0 === D.size &&
+            0 === R.length &&
+            0 === v
+        )
             return !1;
-        N.clear(), C.clear(), O.clear(), L.clear(), y.clear(), (R.length = 0), (D = 0);
+        N.clear(), C.clear(), O.clear(), L.clear(), y.clear(), D.clear(), (R.length = 0), (v = 0);
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n } = e;
-        y.delete(t), N.set(t, n.map(P)), G(t);
+        y.delete(t), D.delete(t), N.set(t, n.map(U)), x(t);
     },
     VIBEGRATIONS_CHAT_MESSAGE_APPEND: function (e) {
         let { projectId: t, content: n, id: i, optimisticId: r, userId: a, timestamp: s, attachments: l } = e,
@@ -205,11 +219,11 @@ let F = new k(r.h, {
         let d = null == r ? -1 : o.findIndex((e) => e.id === r),
             c = d < 0 ? void 0 : o[d].render_id,
             u = d < 0 ? o : [...o.slice(0, d), ...o.slice(d + 1)],
-            _ = M("user", n, { ts: s, id: i, userId: a, attachments: l });
+            _ = P("user", n, { ts: s, id: i, userId: a, attachments: l });
         null != c && (_.render_id = c);
         let E = u[u.length - 1];
-        E?.role !== "assistant" || S(E) ? N.set(t, [...u, _, M("assistant", "")]) : N.set(t, [...u.slice(0, -1), _, E]),
-            G(t);
+        E?.role !== "assistant" || S(E) ? N.set(t, [...u, _, P("assistant", "")]) : N.set(t, [...u.slice(0, -1), _, E]),
+            x(t);
     },
     VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, disposition: i } = e,
@@ -221,11 +235,11 @@ let F = new k(r.h, {
     },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n } = e;
-        U(t, (e) => ({ ...e, steps: [...e.steps, n] })), G(t);
+        w(t, (e) => ({ ...e, steps: [...e.steps, n] })), x(t);
     },
     VIBEGRATIONS_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n } = e;
-        y.delete(t);
+        y.delete(t), D.delete(t);
         let i = N.get(t);
         null != i &&
             i.some((e) => null != e.disposition) &&
@@ -237,19 +251,19 @@ let F = new k(r.h, {
                     return n;
                 }),
             ),
-            U(t, (e) => ({
+            w(t, (e) => ({
                 ...e,
                 finished: !0,
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
-            G(t);
+            x(t);
     },
     VIBEGRATIONS_CHAT_INTERRUPTED: function (e) {
         let { projectId: t } = e,
             n = N.get(t);
         if (null == n) return !1;
-        let i = M("assistant", "");
+        let i = P("assistant", "");
         (i.finished = !0), (i.interrupted = !0), N.set(t, [...n, i]);
     },
     VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function (e) {
@@ -257,7 +271,7 @@ let F = new k(r.h, {
             i = N.get(t),
             r = i?.[i.length - 1];
         if (null == r || "assistant" !== r.role) return !1;
-        U(t, (e) => ({ ...e, provisionalTodo: n }));
+        w(t, (e) => ({ ...e, provisionalTodo: n }));
     },
     VIBEGRATIONS_CHAT_THINKING_SET: function (e) {
         let { projectId: t, activity: n } = e;
@@ -266,32 +280,38 @@ let F = new k(r.h, {
         if (null != i && n.session === i.session && n.seq <= i.seq) return !1;
         y.set(t, n);
     },
+    VIBEGRATIONS_CHAT_COMPACTING_SET: function (e) {
+        let { projectId: t, compacting: n } = e;
+        if (n === D.has(t)) return !1;
+        n ? D.add(t) : D.delete(t);
+    },
     VIBEGRATIONS_CHAT_USAGE_SET: function (e) {
         let { projectId: t, project: n } = e;
         L.set(t, n);
     },
     VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET: function (e) {
         let { width: t } = e;
-        if (D === t) return !1;
-        D = t;
+        if (v === t) return !1;
+        v = t;
     },
     VIBEGRATIONS_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n } = e;
-        U(t, (e) => {
+        w(t, (e) => {
             let t = { ...e, ...n };
             return "todos" in n && (t.provisionalTodo = void 0), t;
         }),
-            G(t);
+            x(t);
     },
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if ("closed" !== n && "failed" !== n) return !1;
-        let i = y.delete(t),
-            r = N.get(t);
-        if (null == r || !r.some((e) => "assistant" === e.role && !S(e))) return !!i && void 0;
+        let i = D.delete(t),
+            r = y.delete(t),
+            a = N.get(t);
+        if (null == a || !a.some((e) => "assistant" === e.role && !S(e))) return (!!r || !!i) && void 0;
         N.set(
             t,
-            r.map((e) => {
+            a.map((e) => {
                 if (null != e.disposition) {
                     let { disposition: t, ...n } = e;
                     return n;
@@ -308,18 +328,18 @@ let F = new k(r.h, {
                       };
             }),
         ),
-            G(t);
+            x(t);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!x(t)) return !1;
+        if (!k(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
             i = new Set([...N.keys(), ...C.keys(), ...O.keys(), ...L.keys()]),
             r = !1;
-        for (let e of i) !n.has(e) && x(e) && (r = !0);
+        for (let e of i) !n.has(e) && k(e) && (r = !0);
         if (!r) return !1;
     },
 });

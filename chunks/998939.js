@@ -93,8 +93,8 @@ function b(e, t) {
 }
 let j = new Map(),
     y = new Map(),
-    N = new Set(),
-    _ = new Map();
+    _ = new Set(),
+    N = new Map();
 function E(e, t) {
     i.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
@@ -137,8 +137,8 @@ let R = {
         web: { location: "runtime_frame", code: u.xA.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: u.xA.RUNTIME_WORKER_ERROR },
     },
-    M = new Map();
-async function O(e, t, n) {
+    O = new Map();
+async function M(e, t, n) {
     let l,
         a = Date.now();
     console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe });
@@ -250,7 +250,14 @@ async function L(e, t) {
                                         text: o ?? "",
                                     },
                                 });
-                        } else if ("todos" === l.kind) {
+                        } else if ("compaction" === l.kind)
+                            ("start" === l.phase || "end" === l.phase) &&
+                                i.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_COMPACTING_SET",
+                                    projectId: t,
+                                    compacting: "start" === l.phase,
+                                });
+                        else if ("todos" === l.kind) {
                             let e = l.items ?? [];
                             e.length > 0 &&
                                 i.h.dispatch({
@@ -319,7 +326,7 @@ async function L(e, t) {
                                     projectId: t,
                                     summary: l.summary,
                                 }),
-                                N.delete(t) &&
+                                _.delete(t) &&
                                     "cancelled" === l.result &&
                                     i.h.dispatch({ type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: t });
                         else {
@@ -333,7 +340,7 @@ async function L(e, t) {
                         }
                     else
                         "capture_preview" === l.type
-                            ? O(t, n, l).catch(() => {})
+                            ? M(t, n, l).catch(() => {})
                             : "model_settings" === l.type
                               ? i.h.dispatch({
                                     type: "VIBEGRATIONS_MODEL_SETTINGS_SET",
@@ -346,8 +353,8 @@ async function L(e, t) {
                                     if ("error" !== t.level) return;
                                     let n = null != t.source ? P[t.source] : void 0;
                                     if (null == n) return;
-                                    let l = M.get(e);
-                                    null == l && ((l = new Set()), M.set(e, l));
+                                    let l = O.get(e);
+                                    null == l && ((l = new Set()), O.set(e, l));
                                     let a = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
                                     l.has(a) ||
                                         l.size >= 10 ||
@@ -364,7 +371,7 @@ async function L(e, t) {
                 (b(t, "Connection closed before the publish result arrived"), t.disposed)
                     ? E(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), E(e, "connecting"), t.backoff.fail(() => D(e)))
+                      ? ((t.reconnectPending = !0), E(e, "connecting"), t.backoff.fail(() => G(e)))
                       : (E(e, "closed"),
                         T(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
@@ -386,7 +393,7 @@ async function L(e, t) {
             });
     }
 }
-function D(e) {
+function G(e) {
     let t = j.get(e);
     null == t &&
         ((t = {
@@ -409,7 +416,7 @@ function D(e) {
         E(e, "connecting"),
         L(e, n);
 }
-function G(e) {
+function D(e) {
     let t = j.get(e);
     return (
         null != t &&
@@ -424,9 +431,9 @@ function G(e) {
 }
 function H(e) {
     let t = j.get(e);
-    if (null == t) return void D(e);
+    if (null == t) return void G(e);
     let n = y.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || D(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || G(e);
 }
 function B(e, t, n) {
     let l = t.trim(),
@@ -451,7 +458,7 @@ function U(e) {
     let t = j.get(e);
     try {
         if (null == t) throw Error("Not connected");
-        t.ws.sendInterrupt(), f.A.isThinking(e) && N.add(e);
+        t.ws.sendInterrupt(), f.A.isThinking(e) && _.add(e);
     } catch (e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
@@ -555,32 +562,32 @@ class ee extends a.Ay.Store {
         return y.get(e) ?? "connecting";
     }
     getModelSettings(e) {
-        return _.get(e) ?? null;
+        return N.get(e) ?? null;
     }
 }
 let et = new ee(i.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (y.get(t) === n) return !1;
-        y.set(t, n), ("closed" === n || "failed" === n) && N.delete(t);
+        y.set(t, n), ("closed" === n || "failed" === n) && _.delete(t);
     },
     VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n, choices: l } = e;
-        _.set(t, { settings: n, choices: l });
+        N.set(t, { settings: n, choices: l });
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!G(t)) return !1;
+        if (!D(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
             l = !1;
-        for (let e of Array.from(j.keys())) !n.has(e) && G(e) && (l = !0);
+        for (let e of Array.from(j.keys())) !n.has(e) && D(e) && (l = !0);
         if (!l) return !1;
     },
     LOGOUT: function () {
         if (0 === j.size) return !1;
-        for (let e of Array.from(j.keys())) G(e);
+        for (let e of Array.from(j.keys())) D(e);
     },
 });
