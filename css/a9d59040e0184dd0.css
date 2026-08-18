@@ -1,0 +1,138 @@
+.container_f1a68f {
+    padding: var(--space-8) var(--space-16)
+}
+
+.header_f1a68f,
+.subheader_f1a68f {
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.header_f1a68f {
+    margin: var(--space-16) 0
+}
+
+.subheader_f1a68f {
+    margin: var(--space-12) 0 var(--space-8)
+}
+
+.hasTooltip_f1a68f {
+    border-bottom: 2px dotted var(--text-muted)
+}
+
+.code_f1a68f {
+    background-color: var(--background-base-lowest);
+    color: var(--text-subtle);
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 14px;
+    overflow-x: auto;
+    padding: var(--space-8);
+    scrollbar-color: var(--background-base-low) var(--background-base-lowest);
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: pre
+}
+
+.slider_f1a68f {
+    width: 100%
+}
+
+.colorInputContainer_f1a68f {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    margin: var(--space-8) 0
+}
+
+.removeButton_f1a68f {
+    color: var(--text-feedback-critical)
+}
+
+.slider_f1a68f {
+    margin: -8px 0
+}
+
+.resetButton_f1a68f {
+    margin-top: var(--space-16)
+}
+
+.explanation_f1a68f {
+    color: var(--text-muted)
+}
+
+.tenureBadgeControls_f1a68f {
+    margin: var(--space-8) 0 var(--space-16)
+}
+
+.perksTable_f1a68f {
+    border-collapse: collapse;
+    margin-bottom: var(--space-16)
+}
+
+.perksHeader_f1a68f {
+    border-bottom: 1px solid var(--background-base-low);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: start
+}
+
+.perksCell_f1a68f,
+.perksHeader_f1a68f {
+    padding-block: var(--space-4);
+    padding-inline: 0 var(--space-12)
+}
+
+.perksCell_f1a68f {
+    vertical-align: top
+}
+
+.icon__2a871 {
+    color: var(--white);
+    height: 12px;
+    width: 12px
+}
+
+.iconOuter__2a871 {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 16px;
+    margin-top: 2px;
+    margin-inline-end: 10px;
+    padding: 1.5px;
+    width: 16px
+}
+
+.iconCheck__2a871 {
+    background-color: var(--green-360)
+}
+
+.iconCross__2a871 {
+    background-color: var(--primary-400)
+}
+
+.scope__2a871 {
+    display: flex;
+    margin-top: 12px
+}
+
+.scopeInner__2a871 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+.panel__2a871 {
+    overflow: scroll
+}
+
+.panelInner__2a871 {
+    padding: 8px
+}
+
+.section__2a871 {
+    margin-bottom: 16px
+}

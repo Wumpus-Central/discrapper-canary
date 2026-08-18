@@ -1,48 +1,46 @@
-n.d(t, { XD: () => R, sv: () => m, eh: () => T, sN: () => I, rM: () => _, d3: () => M });
+n.d(t, { XD: () => m, sv: () => R, eh: () => I, sN: () => _, rM: () => T, d3: () => b });
 var r = n(477900);
 n(582128);
 var a = n(317097),
-    l = n(192308);
+    i = n(192308);
 n(494921);
-var i = n(77257),
+var l = n(77257),
     u = n(61310),
     o = n(101058),
     s = n(486020),
     A = n(453771),
-    d = n(427262),
-    c = n(469054),
-    v = n(601298),
+    c = n(427262),
+    d = n(469054),
+    g = n(601298),
     E = n(228366),
-    f = n(478644),
-    g = n(339984),
+    v = n(478644),
+    f = n(339984),
     p = n(375708);
-function R(e) {
+function m(e) {
     let {
             uploadType: t,
             guildId: a,
             analyticsSource: s,
             filters: A,
-            isTryItOut: d = !1,
-            stackingBehavior: R,
-            returnRef: m,
+            isTryItOut: c = !1,
+            stackingBehavior: m,
+            returnRef: R,
         } = e,
-        T = (0, u.Y)(t, a),
-        _ = null;
-    (0, l.openModalLazy)(
+        I = (0, u.Y)(t, a),
+        T = null;
+    (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("773193"),
-                n.e("821581"),
+                n.e("983199"),
                 n.e("731278"),
                 n.e("22089"),
                 n.e("863232"),
-                n.e("844695"),
                 n.e("50015"),
-                n.e("901555"),
                 n.e("199999"),
-                n.e("631644"),
                 n.e("790244"),
-                n.e("133902"),
+                n.e("844695"),
+                n.e("901555"),
                 n.e("229666"),
                 n.e("480436"),
                 n.e("93513"),
@@ -55,78 +53,78 @@ function R(e) {
             return (n) =>
                 (0, r.jsx)(e, {
                     filters: A,
-                    maxFileSizeBytes: f.j,
-                    imageSpecifications: t === g.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: v.j,
+                    imageSpecifications: t === f.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        _ = null != T ? i.A.fromBlob(T, e) : null;
+                        T = null != I ? l.A.fromBlob(I, e) : null;
                     },
                     onComplete: async (e) => {
                         var n;
-                        let { assetOrigin: r, imageUri: l, staticImageUri: u, file: A, originalAsset: f } = e;
-                        null == _ && null != T && (_ = i.A.fromBlob(T, A));
-                        let R = (await _?.getOriginalMd5()) ?? null,
-                            m = A.name.replace(/\.[^/.]+$/, ""),
-                            I = { imageUri: l, staticImageUri: u, originalMd5: R };
+                        let { assetOrigin: r, imageUri: i, staticImageUri: u, file: A, originalAsset: v } = e;
+                        null == T && null != I && (T = l.A.fromBlob(I, A));
+                        let m = (await T?.getOriginalMd5()) ?? null,
+                            R = A.name.replace(/\.[^/.]+$/, ""),
+                            _ = { imageUri: i, staticImageUri: u, originalMd5: m };
                         (n = {
-                            ...(t === g.HL.AVATAR
+                            ...(t === f.HL.AVATAR
                                 ? {
                                       uploadType: t,
-                                      pendingImage: (0, v.X)({
-                                          ...I,
+                                      pendingImage: (0, g.X)({
+                                          ..._,
                                           assetOrigin: r,
-                                          description: (0, o.Rh)({ filename: m, assetOrigin: r }),
-                                          originalAsset: f,
+                                          description: (0, o.Rh)({ filename: R, assetOrigin: r }),
+                                          originalAsset: v,
                                       }),
                                   }
                                 : {
                                       uploadType: t,
-                                      pendingImage: (0, v.X)({
-                                          ...I,
-                                          assetOrigin: c.E.NEW_ASSET,
-                                          description: "" !== m ? m : p.intl.string(p.t.yiRnNO),
+                                      pendingImage: (0, g.X)({
+                                          ..._,
+                                          assetOrigin: d.E.NEW_ASSET,
+                                          description: "" !== R ? R : p.intl.string(p.t.yiRnNO),
                                           originalAsset: void 0,
                                       }),
                                   }),
                             file: A,
                             guildId: a,
                             analyticsSource: s,
-                            isTryItOut: d,
+                            isTryItOut: c,
                         }),
                             E.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" });
                     },
                     uploadType: t,
                     showUpsellHeader: !0,
-                    returnRef: m,
+                    returnRef: R,
                     ...n,
                 });
         },
-        { stackingBehavior: R },
+        { stackingBehavior: m },
     );
 }
-function m(e, t, n) {
+function R(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: a = 80, canAnimate: l = !0 } = r,
-        i = null === e;
-    return i && null == t
+    let { size: a = 80, canAnimate: i = !0 } = r,
+        l = null === e;
+    return l && null == t
         ? s.Ay.getDefaultAvatarURL(n.id, n.discriminator)
-        : i || t?.avatar == null
-          ? n.getAvatarURL(void 0, a, l)
-          : n.getAvatarURL(t?.guildId, a, l);
-}
-function T(e) {
-    let { pendingNickname: t, pendingGlobalName: n, user: r, guildMember: a } = e,
-        l = "" === t ? null : (t ?? a?.nick),
-        i = "" === n ? r.username : n;
-    return l ?? i ?? d.Ay.getName(r);
-}
-function _(e, t, n) {
-    n(e ?? (null != t ? null : void 0));
+        : l || t?.avatar == null
+          ? n.getAvatarURL(void 0, a, i)
+          : n.getAvatarURL(t?.guildId, a, i);
 }
 function I(e) {
+    let { pendingNickname: t, pendingGlobalName: n, user: r, guildMember: a } = e,
+        i = "" === t ? null : (t ?? a?.nick),
+        l = "" === n ? r.username : n;
+    return i ?? l ?? c.Ay.getName(r);
+}
+function T(e, t, n) {
+    n(e ?? (null != t ? null : void 0));
+}
+function _(e) {
     return (null != e ? (0, a.OK)(e) : 1) > 0.25;
 }
-function M(e) {
+function b(e) {
     return null == e
         ? e
         : e.replace(/[0-9.,]+ ?kb/gi, (e) => {

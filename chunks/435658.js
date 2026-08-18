@@ -1,15 +1,16 @@
-r.d(e, { j: () => l, x: () => s });
-var i = r(582128),
-    n = r(758445);
-function s(t) {
-    let { applicationId: e } = t;
-    i.useEffect(() => {
-        null != e && (0, n.l9)({ applicationId: e });
-    }, [e]);
+"use strict";
+n.d(t, { j: () => r, x: () => s });
+var l = n(582128),
+    i = n(758445);
+function s(e) {
+    let { applicationId: t } = e;
+    l.useEffect(() => {
+        null != t && (0, i.l9)({ applicationId: t });
+    }, [t]);
 }
-function l(t) {
-    let { skuIds: e } = t;
-    i.useEffect(() => {
-        0 !== e.length && (0, n.N4)({ skuIds: e });
-    }, [e]);
+function r(e) {
+    let { skuIds: t } = e;
+    l.useEffect(() => {
+        0 !== t.length && (0, i.N4)({ skuIds: t });
+    }, [t]);
 }

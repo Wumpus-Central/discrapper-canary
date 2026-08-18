@@ -1,0 +1,159 @@
+.container__790b6 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    height: 44px;
+    justify-content: center;
+    margin: 24px auto 16px;
+    max-width: 80%;
+    min-width: 40%;
+    padding: 0 20px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.container__790b6,
+.iconContainer__790b6 {
+    display: flex
+}
+
+.icon__790b6+.icon__790b6 {
+    margin-inline-start: -8px
+}
+
+.textContainer__790b6 {
+    margin-inline-start: 8px;
+    text-align: start
+}
+
+.root__3ec70 {
+    text-align: center
+}
+
+.root__3ec70 p {
+    margin: 0 0 16px
+}
+
+.contentContainer__3ec70 {
+    display: flex;
+    flex-direction: row
+}
+
+.bodyContent__3ec70 {
+    align-content: center
+}
+
+.header__3ec70 {
+    margin-bottom: 24px
+}
+
+.enhancedHeader__3ec70,
+.subHeader__3ec70 {
+    padding: 0 32px
+}
+
+.content__3ec70,
+.enhancedContent__3ec70 {
+    margin-bottom: 32px
+}
+
+.enhancedContent__3ec70 {
+    padding: 0
+}
+
+.footer__3ec70 {
+    align-items: center;
+    justify-content: space-between
+}
+
+.enhancedFooter__3ec70 {
+    background: var(--background-base-lowest)
+}
+
+.primaryActions__3ec70 {
+    align-items: center;
+    display: flex
+}
+
+.enhancedPrimaryActions__3ec70 {
+    justify-content: space-between;
+    width: 100%
+}
+
+.secondaryAction__3ec70 {
+    margin-inline-end: 8px
+}
+
+.enhancedSecondaryAction__3ec70 {
+    color: var(--premium-nitro-pink-text)
+}
+
+.enhancedSecondaryAction__3ec70:hover {
+    text-decoration: underline
+}
+
+.closeButton__3ec70 {
+    align-self: flex-end;
+    color: var(--interactive-text-active);
+    margin: 12px;
+    position: absolute
+}
+
+.artContainer__3ec70 {
+    border-radius: 8px;
+    margin: -48px auto 24px;
+    position: relative;
+    width: 225px
+}
+
+.artContainerBoxShadow__3ec70 {
+    box-shadow: var(--elevation-medium)
+}
+
+.art__3ec70 {
+    width: 225px
+}
+
+.sparkleBadge__3ec70 {
+    display: block;
+    filter: drop-shadow(0 1px 3px var(--opacity-black-28));
+    height: 34px;
+    inset-inline-start: 0;
+    margin-top: -18px;
+    margin-inline-start: -12px;
+    position: absolute;
+    top: 0;
+    width: 47px
+}
+
+.newBadge__3ec70 {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle
+}
+
+.learnMoreLink__3ec70 {
+    color: var(--text-link);
+    cursor: pointer
+}
+
+.context__3ec70 {
+    margin-bottom: 16px
+}
+
+.betaTag__3ec70 {
+    display: inline-block;
+    margin-inline-start: .5em;
+    vertical-align: baseline
+}
+
+.learnMoreLink_b81ad6 {
+    color: var(--text-link);
+    cursor: pointer
+}
+
+.videoBackgroundArt__2b87f {
+    height: 154px;
+    width: 225px
+}

@@ -1,12 +1,13 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => o });
 var l = n(582128),
-    r = n(17928),
+    i = n(17928),
     s = n(545868),
-    i = n(642133);
+    r = n(642133);
 let a = {};
-function u(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        n = (0, r.bG)([i.A], () => i.A.getRoleMemberCount(e));
+        n = (0, i.bG)([r.A], () => r.A.getRoleMemberCount(e));
     return (
         l.useEffect(() => {
             if (null == e) return;

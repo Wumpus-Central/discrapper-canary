@@ -1,8 +1,9 @@
-t.d(r, { A: () => a });
-var C = t(17928),
-    l = t(228366),
-    s = t(280450);
-class n extends C.Ay.Store {
+"use strict";
+n.d(t, { A: () => a });
+var l = n(17928),
+    i = n(228366),
+    s = n(280450);
+class r extends l.Ay.Store {
     static displayName = "VoiceDareTrackingStore";
     initialize() {
         this.waitFor(s.default);
@@ -23,4 +24,4 @@ class n extends C.Ay.Store {
         return null;
     }
 }
-let a = new n(l.h, {});
+let a = new r(i.h, {});

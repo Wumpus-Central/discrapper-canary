@@ -6377,8 +6377,7 @@ function dp(e) {
                 action: function () {
                     (0, ln.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("374913"),
-                            n.e("56275"),
+                            n.e("327508"),
                             n.e("793781"),
                             n.e("387356"),
                             n.e("610943"),
@@ -15107,7 +15106,7 @@ function x8() {
 var x7 = n(379550);
 function x9(e) {
     (0, ln.openModalLazy)(async () => {
-        let { default: t } = await Promise.all([n.e("819522"), n.e("766901"), n.e("661129")]).then(n.bind(n, 475312));
+        let { default: t } = await Promise.all([n.e("841509"), n.e("766901"), n.e("661129")]).then(n.bind(n, 475312));
         return (n) => (0, c.jsx)(t, { source: { ...e, page: A.liQ.GUILD_MEMBER_PROFILE_SETTINGS }, ...n });
     });
 }
@@ -15911,7 +15910,7 @@ function Ti() {
 }
 function Tl() {
     (0, ln.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("819522"), n.e("766901"), n.e("641704")]).then(n.bind(n, 562011));
+        let { default: e } = await Promise.all([n.e("841509"), n.e("766901"), n.e("641704")]).then(n.bind(n, 562011));
         return (t) =>
             (0, c.jsx)(e, {
                 ...t,
@@ -16407,8 +16406,8 @@ let TB = (0, a.Tf)(o.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, ln.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          n.e("243414"),
-                          n.e("677523"),
+                          n.e("749747"),
+                          n.e("72712"),
                           n.e("989545"),
                           n.e("311493"),
                           n.e("84704"),
@@ -17057,8 +17056,8 @@ function fO() {
                 (0, ln.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("243414"),
-                            n.e("677523"),
+                            n.e("749747"),
+                            n.e("72712"),
                             n.e("989545"),
                             n.e("311493"),
                             n.e("84704"),

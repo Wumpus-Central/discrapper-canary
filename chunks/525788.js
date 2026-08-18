@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(538451),
     N = n(616356),
     C = n(287809),
-    R = n(403362),
-    O = n(562153),
+    O = n(403362),
+    R = n(562153),
     L = n(806931),
     y = n(652215),
     D = n(375708),
@@ -56,7 +56,7 @@ function M(e) {
                                 user: e,
                                 guildId: r ?? void 0,
                                 channelId: l,
-                                nick: O.Ay.getNickname(r, l, e),
+                                nick: R.Ay.getNickname(r, l, e),
                                 className: s()(v.kp, { [v.YR]: n }),
                                 textClassName: v.vc,
                                 disablePopout: n,
@@ -77,13 +77,13 @@ function P(e) {
             t.length < a
                 ? D.intl.format(D.t["A+bT9O"], {
                       users: t.length,
-                      user1: O.Ay.getName(n, r, t[0]),
-                      user2: O.Ay.getName(n, r, t[1]),
+                      user1: R.Ay.getName(n, r, t[0]),
+                      user2: R.Ay.getName(n, r, t[1]),
                       commaSeparatedUsers: t
                           .slice(0, t.length - 1)
-                          .map((e) => O.Ay.getName(n, r, e))
+                          .map((e) => R.Ay.getName(n, r, e))
                           .join(", "),
-                      lastUser: O.Ay.getName(n, r, t[t.length - 1]),
+                      lastUser: R.Ay.getName(n, r, t[t.length - 1]),
                   })
                 : d;
     return (0, i.jsx)(A.m, {
@@ -110,17 +110,17 @@ function w(e) {
         } = e,
         h = r.useRef(null),
         S = (0, g.A)(),
-        [O, D] = r.useState(!1),
+        [R, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)([N.A, C.default], () => {
             if (l.type === L.lp.STREAM) {
                 let e = N.A.getViewerIds(l.id);
-                return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(R.Vq) : U;
+                return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
             }
             return l.type === L.lp.ACTIVITY && l.participants.length > 0
                 ? Array.from(l.participants)
                       .map((e) => C.default.getUser(e.userId))
-                      .filter(R.Vq)
+                      .filter(O.Vq)
                 : U;
         }, [l]);
     r.useEffect(() => {
@@ -139,24 +139,17 @@ function w(e) {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("380906"),
-                                n.e("158696"),
+                                n.e("197422"),
                                 n.e("397705"),
                                 n.e("926132"),
                                 n.e("146652"),
                                 n.e("893190"),
                                 n.e("834552"),
-                                n.e("253729"),
-                                n.e("234236"),
                                 n.e("708757"),
-                                n.e("936320"),
                                 n.e("585968"),
-                                n.e("190889"),
                                 n.e("189673"),
                                 n.e("468403"),
-                                n.e("696443"),
                                 n.e("229787"),
-                                n.e("61129"),
                                 n.e("882073"),
                                 n.e("797558"),
                                 n.e("691994"),
@@ -218,7 +211,7 @@ function w(e) {
                             users: w,
                             disableInteraction: E,
                         }),
-                    shouldShow: O && !S,
+                    shouldShow: R && !S,
                     position: "top",
                     children: () => (0, i.jsx)("div", { ref: h, className: s()(v.Mj, u), children: F }),
                 }),

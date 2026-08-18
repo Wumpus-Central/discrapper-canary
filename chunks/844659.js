@@ -1461,7 +1461,7 @@ function n5(e) {
     return (0, l.jsx)(ep.$, { variant: "secondary", text: W.intl.string(W.t["4q1Elf"]), onClick: a, disabled: !i });
 }
 var n6 = n(320448),
-    n4 = n(713654),
+    n4 = n(174355),
     n9 = n(958340),
     n7 = n(384231),
     n8 = n(959698),
@@ -5743,7 +5743,7 @@ function oM(e) {
                                     onClick: () =>
                                         (0, h.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                n.e("259135"),
+                                                n.e("607054"),
                                                 n.e("197804"),
                                                 n.e("807265"),
                                                 n.e("797641"),
@@ -7270,7 +7270,7 @@ class cG extends s.Component {
     handleEditAttachment = (e) => {
         let t = e.originalItem;
         (0, h.openModalLazy)(async () => {
-            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("769960"), n.e("570698")]).then(
+            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("2060"), n.e("570698")]).then(
                 n.bind(n, 427281),
             );
             return (n) =>

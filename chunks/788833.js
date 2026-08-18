@@ -2,7 +2,7 @@
 n.d(t, { $: () => p });
 var l = n(582128),
     i = n(532794),
-    s = n(594832),
+    s = n(561794),
     r = n(477900),
     a = n(192308);
 function o(e) {
@@ -32,7 +32,7 @@ function o(e) {
                 n.e("188563"),
                 n.e("275683"),
                 n.e("223864"),
-                n.e("515973"),
+                n.e("773470"),
                 n.e("283118"),
                 n.e("223102"),
                 n.e("785090"),
@@ -50,7 +50,7 @@ function o(e) {
                 n.e("426572"),
                 n.e("565640"),
                 n.e("387356"),
-                n.e("677523"),
+                n.e("72712"),
                 n.e("485391"),
                 n.e("156356"),
                 n.e("218307"),
@@ -175,9 +175,9 @@ function o(e) {
                 n.e("407170"),
                 n.e("307575"),
                 n.e("554241"),
+                n.e("27773"),
                 n.e("724303"),
                 n.e("132191"),
-                n.e("27773"),
                 n.e("577084"),
                 n.e("454625"),
                 n.e("371133"),
@@ -292,14 +292,14 @@ function p(e) {
             subscriptionTier: x,
             location: A,
         } = e,
-        { enabled: C } = d.useConfig({ location: A }),
-        { enabled: E } = h.useConfig({ location: A }),
+        { enabled: E } = d.useConfig({ location: A }),
+        { enabled: C } = h.useConfig({ location: A }),
         I = (0, u.F5)(A),
         y = (0, s.tA)({ isGift: !0, giftRecipient: t }),
-        v = C && null != t,
-        S = E && null == t,
-        N = v || S,
-        _ = y && null != t;
+        S = E && null != t,
+        v = C && null == t,
+        _ = S || v,
+        N = y && null != t;
     return {
         openGiftModal: l.useCallback(() => {
             null != x
@@ -314,7 +314,7 @@ function p(e) {
                       giftMessage: g,
                   })
                 : I
-                  ? _
+                  ? N
                       ? o({
                             giftRecipient: t,
                             analyticsLocations: n,
@@ -329,7 +329,7 @@ function p(e) {
                             analyticsObject: a ?? r,
                             giftMessage: g,
                         })
-                  : v && null != t
+                  : S && null != t
                     ? (0, m.A)({
                           giftRecipient: t,
                           analyticsLocations: n,
@@ -337,7 +337,7 @@ function p(e) {
                           analyticsObject: a ?? r,
                           giftMessage: g,
                       })
-                    : S
+                    : v
                       ? (0, m.A)({
                             analyticsLocations: n,
                             analyticsLocation: p,
@@ -345,7 +345,7 @@ function p(e) {
                             giftMessage: g,
                             giftingOrigin: f.vQ.GUILD_CHANNEL,
                         })
-                      : _ && null != t
+                      : N && null != t
                         ? o({
                               giftRecipient: t,
                               analyticsLocations: n,
@@ -362,8 +362,8 @@ function p(e) {
                               analyticsObject: c ?? r,
                               giftMessage: g,
                           });
-        }, [I, v, S, _, t, n, p, r, a, c, g, x]),
-        shouldShowWishlistModal: _,
-        shouldShowGiftSelectionModal: N,
+        }, [I, S, v, N, t, n, p, r, a, c, g, x]),
+        shouldShowWishlistModal: N,
+        shouldShowGiftSelectionModal: _,
     };
 }

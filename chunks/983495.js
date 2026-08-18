@@ -350,7 +350,7 @@ function eu(e) {
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("411895"),
-                                            n.e("769960"),
+                                            n.e("2060"),
                                             n.e("681301"),
                                             n.e("914752"),
                                             n.e("352735"),
@@ -445,7 +445,7 @@ let ef = r.forwardRef(function (e, t) {
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("411895"),
-                                            n.e("769960"),
+                                            n.e("2060"),
                                             n.e("681301"),
                                             n.e("914752"),
                                             n.e("352735"),

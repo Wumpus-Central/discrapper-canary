@@ -1,67 +1,68 @@
-n.d(t, { l: () => b, A: () => S });
+"use strict";
+n.d(t, { l: () => T, A: () => v });
 var l = n(477900),
-    r = n(582128),
+    i = n(582128),
     s = n(503698),
-    i = n.n(s),
+    r = n.n(s),
     a = n(319354),
-    u = n(614820),
-    c = n(862482),
-    o = n(866665),
+    o = n(614820),
+    u = n(862482),
+    c = n(866665),
     d = n(939249),
-    f = n(241524),
-    h = n(147925),
-    m = n(461782),
+    h = n(241524),
+    m = n(147925),
+    f = n(461782),
     p = n(447404),
     g = n(17928),
-    A = n(462887),
-    v = n(736653),
-    C = n(198052),
-    E = n(309010),
+    x = n(462887),
+    A = n(736653),
+    E = n(198052),
+    C = n(309010),
     I = n(652215),
     y = n(375708),
-    x = n(486205);
-function S(e) {
+    S = n(486205);
+function v(e) {
     let {
             label: t,
             onClick: n,
-            onKeyDown: r,
+            onKeyDown: i,
             onMouseEnter: s,
             onMouseLeave: d,
-            onContextMenu: f,
-            className: h,
-            wrapperClassName: m,
+            onContextMenu: h,
+            className: m,
+            wrapperClassName: f,
             iconClassName: g,
-            iconColor: A = "currentColor",
-            iconComponent: v,
-            themeable: C = !1,
-            disabled: E = !1,
+            iconColor: x = "currentColor",
+            iconComponent: A,
+            themeable: E = !1,
+            disabled: C = !1,
             isActive: I = !1,
             tooltipPosition: y = "top",
-            shouldShowTooltip: S = !0,
-            forceTooltipOpen: T = !1,
-            buttonRef: R,
-            grow: b,
-            "aria-label": _,
-            look: w,
-            buttonText: N,
-            size: j,
-            color: k,
+            shouldShowTooltip: v = !0,
+            forceTooltipOpen: _ = !1,
+            buttonRef: N,
+            grow: T,
+            "aria-label": j,
+            look: b,
+            buttonText: R,
+            size: L,
+            color: O,
         } = e,
-        L = (0, u.O)(t);
+        M = (0, o.O)(t);
     return (0, l.jsx)(p.A, {
-        children: (0, l.jsx)(o.m, {
+        children: (0, l.jsx)(c.m, {
             position: y,
             __unsupportedReactNodeAsText: t,
             ariaHidden: !0,
-            shouldShow: S,
-            forceOpen: T,
-            children: (0, l.jsxs)(c.$n, {
+            shouldShow: v,
+            forceOpen: _,
+            children: (0, l.jsxs)(u.$n, {
                 "data-migration-pending": !0,
-                look: w ?? c.$n.Looks.BLANK,
-                size: j ?? c.$n.Sizes.NONE,
-                color: k,
+                look: b ?? u.$n.Looks.BLANK,
+                size: L ?? u.$n.Sizes.NONE,
+                color: O,
                 onKeyDown: (e) => {
-                    r?.(e);
+                    i?.(e);
                 },
                 onMouseDown: (e) => {
                     e.preventDefault();
@@ -69,116 +70,116 @@ function S(e) {
                 onClick: n,
                 onMouseEnter: s,
                 onMouseLeave: d,
-                onContextMenu: f ?? void 0,
+                onContextMenu: h ?? void 0,
                 onFocus: (e) => {
                     s?.(e);
                 },
                 onBlur: d,
-                disabled: E,
-                innerClassName: i()(x.NL, { [x.eq]: null != N }),
-                className: i()({ [x.vu]: I }, h),
-                wrapperClassName: m,
-                buttonRef: R,
-                grow: b,
-                "aria-label": _ ?? L,
+                disabled: C,
+                innerClassName: r()(S.NL, { [S.eq]: null != R }),
+                className: r()({ [S.vu]: I }, m),
+                wrapperClassName: f,
+                buttonRef: N,
+                grow: T,
+                "aria-label": j ?? M,
                 children: [
-                    (0, l.jsx)(v, {
+                    (0, l.jsx)(A, {
                         size: a.E.md,
-                        className: i()(g, { [x.pd]: null == N, [x.IW]: C, [x.vu]: I }),
-                        color: A,
+                        className: r()(g, { [S.pd]: null == R, [S.IW]: E, [S.vu]: I }),
+                        color: x,
                     }),
-                    N,
+                    R,
                 ],
             }),
         }),
     });
 }
-let T = {
-        disconnect: x.Zf,
-        join: x.fj,
-        red: x.wv,
-        white: x.ON,
-        green: x.wL,
-        yellow: x.D9,
-        primaryDark: x.Zq,
-        primaryLight: x.Zq,
-        activeLight: x.H3,
-        premiumGradient: x.ck,
+let _ = {
+        disconnect: S.Zf,
+        join: S.fj,
+        red: S.wv,
+        white: S.ON,
+        green: S.wL,
+        yellow: S.D9,
+        primaryDark: S.Zq,
+        primaryLight: S.Zq,
+        activeLight: S.H3,
+        premiumGradient: S.ck,
     },
-    R = {
-        disconnect: x.Zf,
-        join: x.fj,
-        red: x.Xr,
-        white: x.ON,
-        green: x.Vu,
-        yellow: x.D9,
-        primaryDark: x.Zq,
-        primaryLight: x.Zq,
-        activeLight: x.H3,
-        premiumGradient: x.ck,
+    N = {
+        disconnect: S.Zf,
+        join: S.fj,
+        red: S.Xr,
+        white: S.ON,
+        green: S.Vu,
+        yellow: S.D9,
+        primaryDark: S.Zq,
+        primaryLight: S.Zq,
+        activeLight: S.H3,
+        premiumGradient: S.ck,
     };
-function b(e) {
+function T(e) {
     let t,
         n,
         s,
         {
             ref: a,
-            color: u,
-            caretColor: c,
-            caretAriaLabel: o,
-            isActive: b = !1,
-            className: _,
-            iconClassName: w,
-            onPopoutClick: N,
-            popoutOpen: j = !1,
-            popoutDisabled: k = !1,
-            isTrayButton: L,
-            applyStyles: D = !1,
-            ...P
+            color: o,
+            caretColor: u,
+            caretAriaLabel: c,
+            isActive: T = !1,
+            className: j,
+            iconClassName: b,
+            onPopoutClick: R,
+            popoutOpen: L = !1,
+            popoutDisabled: O = !1,
+            isTrayButton: M,
+            applyStyles: w = !1,
+            ...k
         } = e,
-        O =
-            ((t = (0, g.bG)([E.Ay], () => E.Ay.getVoiceChannelId())),
-            (n = (0, g.bG)([C.A], () => (null != t ? C.A.getMode(t) : null))),
-            (s = (0, v.Ay)()),
-            null != u
-                ? u
-                : n === I._Of.VOICE && (0, A.q)(s)
-                  ? b
+        P =
+            ((t = (0, g.bG)([C.Ay], () => C.Ay.getVoiceChannelId())),
+            (n = (0, g.bG)([E.A], () => (null != t ? E.A.getMode(t) : null))),
+            (s = (0, A.Ay)()),
+            null != o
+                ? o
+                : n === I._Of.VOICE && (0, x.q)(s)
+                  ? T
                       ? "activeLight"
                       : "primaryLight"
-                  : b
+                  : T
                     ? "white"
                     : "primaryDark"),
-        M = (0, f.A)("(max-width: 456px)"),
-        F = r.useRef(null),
-        G = r.useContext(m.vG);
-    r.useEffect(() => {
-        null != F.current && (G ? F.current.pause() : F.current.play());
+        D = (0, h.A)("(max-width: 456px)"),
+        U = i.useRef(null),
+        G = i.useContext(f.vG);
+    i.useEffect(() => {
+        null != U.current && (G ? U.current.pause() : U.current.play());
     }, [G]);
-    let K = P.onContextMenu ?? N,
-        U = null == N && !L,
-        W = null != N && !L,
-        H = (0, l.jsx)(S, {
-            ...P,
+    let V = k.onContextMenu ?? R,
+        F = null == R && !M,
+        H = null != R && !M,
+        B = (0, l.jsx)(v, {
+            ...k,
             grow: !1,
-            onContextMenu: K,
-            iconClassName: i()(w, x.LF, U && x.Ns),
-            className: i()(M || D ? _ : null, b && x.vu, x.wh, R[O], U && x.Sy, L && null != N && !M && x.hA),
+            onContextMenu: V,
+            iconClassName: r()(b, S.LF, F && S.Ns),
+            className: r()(D || w ? j : null, T && S.vu, S.wh, N[P], F && S.Sy, M && null != R && !D && S.hA),
         });
-    return M
-        ? H
+    return D
+        ? B
         : (0, l.jsxs)("div", {
               ref: a,
-              className: i()(x.re, j && x.q6, _, W && [x.TD, T[O]]),
+              className: r()(S.re, L && S.q6, j, H && [S.TD, _[P]]),
               children: [
-                  H,
-                  null != N
+                  B,
+                  null != R
                       ? (0, l.jsx)(p.A, {
                             children: (0, l.jsx)(d.D, {
-                                "aria-label": o ?? y.intl.string(y.t.PdRCRg),
-                                onClick: k ? void 0 : N,
-                                className: i()(x.cd, L && x.Ml, R[c ?? O], j && [x.q6, x.vu], k && x.r9),
-                                children: (0, l.jsx)(h.A, { className: i()(x.gG, j && x.ho, k && x.r9) }),
+                                "aria-label": c ?? y.intl.string(y.t.PdRCRg),
+                                onClick: O ? void 0 : R,
+                                className: r()(S.cd, M && S.Ml, N[u ?? P], L && [S.q6, S.vu], O && S.r9),
+                                children: (0, l.jsx)(m.A, { className: r()(S.gG, L && S.ho, O && S.r9) }),
                             }),
                         })
                       : null,

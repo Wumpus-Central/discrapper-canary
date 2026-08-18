@@ -1,20 +1,21 @@
-r.d(e, { T: () => l, q: () => a });
-var i = r(575593),
-    n = r(993408),
-    s = r(375708);
-function l(t) {
-    var e = t.name;
-    switch (t.tenantMetadata?.collectibles?.type) {
-        case i.R.AVATAR_DECORATION:
-            return s.intl.formatToPlainString(s.t.lvBzLi, { product: e });
-        case i.R.PROFILE_EFFECT:
-            return s.intl.formatToPlainString(s.t.eR7moP, { product: e });
-        case i.R.NAMEPLATE:
-            return s.intl.formatToPlainString(s.t.YFOwHj, { product: e });
+"use strict";
+n.d(t, { T: () => r, q: () => a });
+var l = n(575593),
+    i = n(993408),
+    s = n(375708);
+function r(e) {
+    var t = e.name;
+    switch (e.tenantMetadata?.collectibles?.type) {
+        case l.R.AVATAR_DECORATION:
+            return s.intl.formatToPlainString(s.t.lvBzLi, { product: t });
+        case l.R.PROFILE_EFFECT:
+            return s.intl.formatToPlainString(s.t.eR7moP, { product: t });
+        case l.R.NAMEPLATE:
+            return s.intl.formatToPlainString(s.t.YFOwHj, { product: t });
         default:
-            return e;
+            return t;
     }
 }
-function a(t) {
-    return !(0, n.G0)(t) && t.type !== i.R.EXTERNAL_SKU;
+function a(e) {
+    return !(0, i.G0)(e) && e.type !== l.R.EXTERNAL_SKU;
 }

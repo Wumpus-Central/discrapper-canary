@@ -14,9 +14,7 @@ class c extends l.Component {
         t?.(),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    i.e("259135"),
                     i.e("969757"),
-                    i.e("188941"),
                     i.e("349619"),
                     i.e("627323"),
                     i.e("319623"),

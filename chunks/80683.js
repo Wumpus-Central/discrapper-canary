@@ -18,8 +18,8 @@ var l = n(477900),
     x = n(315982),
     E = n(480900),
     S = n(311043),
-    _ = n(60465),
-    I = n(409626),
+    I = n(60465),
+    _ = n(409626),
     j = n(422069),
     y = n(652215),
     b = n(624458),
@@ -94,7 +94,7 @@ function $() {
     let e = K.A.mostRecentLurkedGuildId();
     null != e ? ((z = e), (W = null)) : ((W = null != z ? z : null), (z = null));
 }
-class q extends r.Ay.Store {
+class J extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
         this.syncWith([K.A], $);
@@ -103,7 +103,7 @@ class q extends r.Ay.Store {
         return W === e;
     }
 }
-let J = new q(V.h);
+let q = new J(V.h);
 var Z = n(821609),
     Y = n(64227);
 let X = function (e) {
@@ -200,8 +200,8 @@ class ep extends i.PureComponent {
         (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("243414"),
-                    n.e("677523"),
+                    n.e("749747"),
+                    n.e("72712"),
                     n.e("618423"),
                     n.e("989545"),
                     n.e("991531"),
@@ -283,8 +283,8 @@ class ep extends i.PureComponent {
                 showMemberVerificationModal: C,
                 missingVerificationRole: x,
                 verificationRole: S,
-                useReducedMotion: _,
-                isStaff: I,
+                useReducedMotion: I,
+                isStaff: _,
                 guildJoinRequest: j,
                 showLinkedLobbyApplicationLoadingIndicator: b,
                 requiredLinkedLobbyApplication: N,
@@ -293,7 +293,7 @@ class ep extends i.PureComponent {
                 guild: R,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
-            k = { theme: d, useReducedMotion: _ };
+            k = { theme: d, useReducedMotion: I };
         if (e && !p && null != M)
             null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
                 (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
@@ -340,7 +340,7 @@ class ep extends i.PureComponent {
                   null === S.tags.guild_connections &&
                       ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(S, R.id))))
                 : b || null == N
-                  ? i && !I
+                  ? i && !_
                       ? ((k.message = w.intl.string(w.t["2dThMM"])),
                         (k.buttonText = w.intl.string(w.t["50gfOv"])),
                         (k.onButtonClick = this.handleVerifyPhone))
@@ -411,7 +411,7 @@ function eA(e) {
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),
         p = !!(0, M.Qd)(a),
-        A = (0, r.bG)([J], () => J.shouldShowPopout(s)),
+        A = (0, r.bG)([q], () => q.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(y.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
@@ -427,15 +427,15 @@ function eA(e) {
                 }),
                 l = i.useCallback(() => {
                     null != n &&
-                        _.default.returnToGameProfile({
+                        I.default.returnToGameProfile({
                             gameId: n.gameId,
-                            source: I.GameProfileSources.AnnouncementChannelReturn,
+                            source: _.GameProfileSources.AnnouncementChannelReturn,
                             initialScrollOffset: n.initialScrollOffset,
                         });
                 }, [n]),
                 s = (0, r.bG)([S.A], () => (n?.gameId != null ? S.A.getGame(n.gameId) : null));
             i.useEffect(() => {
-                if (s?.id != null) return () => _.default.clearGameProfilePendingReturn(s.id);
+                if (s?.id != null) return () => I.default.clearGameProfilePendingReturn(s.id);
             }, [s?.id]);
             let a = s?.name;
             if (null == s || null == a) return null;

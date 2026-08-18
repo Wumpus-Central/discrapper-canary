@@ -28,8 +28,8 @@ let N = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
 var C = n(12351),
-    R = n(915089),
-    O = n(442325),
+    O = n(915089),
+    R = n(442325),
     L = n(734057),
     y = n(458294),
     D = n(71393),
@@ -212,7 +212,7 @@ function ee(e, t, n) {
 class et extends r.PureComponent {
     scrollerRef = r.createRef();
     inputRef = r.createRef();
-    _listId = (0, R.Ld)();
+    _listId = (0, O.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         g.A.disable(), g.A.enableTemp(m.w);
@@ -255,19 +255,17 @@ class et extends r.PureComponent {
             case S.rD.GUILD:
                 return (0, T.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("374913"),
+                        n.e("327508"),
                         n.e("138108"),
                         n.e("931668"),
                         n.e("46259"),
                         n.e("915946"),
                         n.e("453969"),
-                        n.e("883566"),
-                        n.e("943630"),
-                        n.e("225726"),
-                        n.e("695752"),
-                        n.e("867477"),
-                        n.e("454546"),
-                        n.e("451272"),
+                        n.e("440351"),
+                        n.e("606389"),
+                        n.e("748180"),
+                        n.e("994629"),
+                        n.e("767792"),
                         n.e("173153"),
                         n.e("908991"),
                         n.e("315214"),
@@ -413,7 +411,7 @@ class et extends r.PureComponent {
                         n.e("358818"),
                         n.e("161833"),
                         n.e("411689"),
-                        n.e("250112"),
+                        n.e("814520"),
                         n.e("404142"),
                         n.e("819059"),
                         n.e("913586"),
@@ -443,7 +441,7 @@ class et extends r.PureComponent {
                         n.e("852123"),
                         n.e("626738"),
                         n.e("41295"),
-                        n.e("769960"),
+                        n.e("2060"),
                         n.e("440119"),
                         n.e("694848"),
                         n.e("264488"),
@@ -467,8 +465,7 @@ class et extends r.PureComponent {
                         n.e("676279"),
                         n.e("651962"),
                         n.e("935459"),
-                        n.e("583345"),
-                        n.e("507047"),
+                        n.e("847623"),
                         n.e("763933"),
                         n.e("454722"),
                         n.e("895080"),
@@ -983,7 +980,7 @@ class et extends r.PureComponent {
             case S.rD.USER:
                 return (0, T.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("158696"),
+                        n.e("197422"),
                         n.e("397705"),
                         n.e("926132"),
                         n.e("146652"),
@@ -1025,7 +1022,7 @@ class et extends r.PureComponent {
                 if ((e.preventDefault(), e.altKey)) return this.handleContextMenu(e);
                 let t = i[a];
                 if (null == t) return;
-                if ((e.metaKey || e.ctrlKey) && O.A.isEnabled()) return void (0, o.$U)(t);
+                if ((e.metaKey || e.ctrlKey) && R.A.isEnabled()) return void (0, o.$U)(t);
                 this.selectResult(t);
                 return;
             }

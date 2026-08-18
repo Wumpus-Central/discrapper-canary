@@ -45,8 +45,7 @@ var i = t(477900),
     B = t(375708),
     F = t(79362);
 let W = (0, R.Fe)({
-    createPromise: () =>
-        Promise.all([t.e("730366"), t.e("482815"), t.e("170653"), t.e("528966")]).then(t.bind(t, 217356)),
+    createPromise: () => Promise.all([t.e("730366"), t.e("528966")]).then(t.bind(t, 217356)),
     webpackId: 217356,
 });
 function X(e) {

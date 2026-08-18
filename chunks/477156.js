@@ -1579,8 +1579,8 @@ function e7() {
         ],
     });
 }
-var e9 = s(505312),
-    e8 = s(922016),
+var e8 = s(505312),
+    e9 = s(922016),
     e6 = s(408278),
     te = s(403581),
     tt = s(980707),
@@ -1621,24 +1621,7 @@ var td = s(192308);
 let tu = (e) => {
     let { analyticsLocation: t, onClose: l } = e;
     (0, td.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([
-            s.e("225091"),
-            s.e("869729"),
-            s.e("454048"),
-            s.e("599666"),
-            s.e("300699"),
-            s.e("349619"),
-            s.e("740428"),
-            s.e("398125"),
-            s.e("221825"),
-            s.e("593600"),
-            s.e("276640"),
-            s.e("431011"),
-            s.e("799657"),
-            s.e("962075"),
-            s.e("493475"),
-            s.e("18630"),
-        ]).then(s.bind(s, 826789));
+        let { default: e } = await Promise.all([s.e("493475"), s.e("18630")]).then(s.bind(s, 826789));
         return (s) => (0, i.jsx)(e, { ...s, analyticsSource: t, onClose: () => (l?.(), s.onClose?.()) });
     });
 };
@@ -1869,8 +1852,8 @@ function tS(e) {
 function tC(e) {
     let { align: t = "left" } = e,
         s = l.useRef(null),
-        r = (0, e9.w)();
-    return (0, i.jsx)(e8.Y, {
+        r = (0, e8.w)();
+    return (0, i.jsx)(e9.Y, {
         targetElementRef: s,
         position: "top",
         align: t,

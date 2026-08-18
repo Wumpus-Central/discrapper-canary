@@ -1,7 +1,8 @@
-n.d(t, { contextMenuCallbackNative: () => i, contextMenuCallbackWeb: () => a, u: () => s });
+"use strict";
+n.d(t, { contextMenuCallbackNative: () => r, contextMenuCallbackWeb: () => a, u: () => s });
 var l = n(477900);
 n(582128);
-var r = n(442433);
+var i = n(442433);
 function s() {
     let e;
     return (
@@ -13,37 +14,33 @@ function s() {
         e ?? ""
     );
 }
-function i(e) {
+function r(e) {
     let t = s(),
-        i = e.target;
-    if (i?.tagName === "TEXTAREA" || i?.tagName === "INPUT") {
-        if (i?.type !== "checkbox")
-            return (0, r.L3)(
+        r = e.target;
+    if (r?.tagName === "TEXTAREA" || r?.tagName === "INPUT") {
+        if (r?.type !== "checkbox")
+            return (0, i.L3)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e("499593"), n.e("230803"), n.e("342312")]).then(
-                        n.bind(n, 438984),
-                    );
+                    let { default: e } = await Promise.all([n.e("230803"), n.e("342312")]).then(n.bind(n, 438984));
                     return (n) => (0, l.jsx)(e, { ...n, text: t });
                 },
                 { enableSpellCheck: !0 },
             );
     } else {
-        if ("none" === window.getComputedStyle(i).getPropertyValue("-webkit-user-select"))
+        if ("none" === window.getComputedStyle(r).getPropertyValue("-webkit-user-select"))
             return void e.preventDefault();
         let s,
             a,
-            u,
-            c = e.target;
-        for (; null != c; )
-            "src" in c && null != c.src && (a = c.src),
-                "href" in c && null != c.href && ((s = c.href), (u = c.textContent)),
-                (c = c?.parentNode);
+            o,
+            u = e.target;
+        for (; null != u; )
+            "src" in u && null != u.src && (a = u.src),
+                "href" in u && null != u.href && ((s = u.href), (o = u.textContent)),
+                (u = u?.parentNode);
         if (null != a)
-            return (0, r.L3)(e, async () => {
+            return (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("948804"),
-                    n.e("344265"),
                     n.e("720590"),
                     n.e("538887"),
                     n.e("136149"),
@@ -55,9 +52,8 @@ function i(e) {
                 return (t) => (0, l.jsx)(e, { ...t, src: a ?? "" });
             });
         if (null != s)
-            return (0, r.L3)(e, async () => {
+            return (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("344265"),
                     n.e("720590"),
                     n.e("538887"),
                     n.e("136149"),
@@ -65,10 +61,10 @@ function i(e) {
                     n.e("944801"),
                     n.e("605905"),
                 ]).then(n.bind(n, 945896));
-                return (t) => (0, l.jsx)(e, { ...t, href: s, textContent: u });
+                return (t) => (0, l.jsx)(e, { ...t, href: s, textContent: o });
             });
         if (null != t && "" !== t)
-            return (0, r.L3)(e, async () => {
+            return (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([n.e("81189"), n.e("184264")]).then(n.bind(n, 898811));
                 return (n) => (0, l.jsx)(e, { ...n, text: t });
             });
@@ -84,11 +80,11 @@ function a(e) {
     else {
         let n,
             l,
-            r = e.target;
-        for (; null != r; )
-            "src" in r && null != r.src && (l = r.src),
-                "href" in r && null != r.href && (n = r.href),
-                (r = r?.parentNode);
+            i = e.target;
+        for (; null != i; )
+            "src" in i && null != i.src && (l = i.src),
+                "href" in i && null != i.href && (n = i.href),
+                (i = i?.parentNode);
         (null != n || null != l) && (t = !0);
     }
     t || e.preventDefault();

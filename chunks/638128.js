@@ -1,46 +1,47 @@
-l.d(t, { A: () => w });
-var r = l(377941),
-    a = l.n(r),
-    n = l(17928),
-    o = l(506774),
-    s = l(228366),
-    d = l(724066),
-    L = l(900582);
-let i = "SpellcheckStore",
-    c = !0,
-    p = new Set();
-function u() {
-    o.w.set(i, { enabled: c, learnedWords: p });
+"use strict";
+n.d(t, { A: () => p });
+var l = n(377941),
+    i = n.n(l),
+    s = n(17928),
+    r = n(506774),
+    a = n(228366),
+    o = n(724066),
+    u = n(900582);
+let c = "SpellcheckStore",
+    d = !0,
+    h = new Set();
+function m() {
+    r.w.set(c, { enabled: d, learnedWords: h });
 }
-class C extends n.Ay.Store {
+class f extends s.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
-        let e = o.w.get(i);
-        null != e && ((c = e.enabled), (p = new Set(e.learnedWords)), (0, L.kv)(c), (0, L.d1)(p)), (0, d.I)(L.Av);
+        let e = r.w.get(c);
+        null != e && ((d = e.enabled), (h = new Set(e.learnedWords)), (0, u.kv)(d), (0, u.d1)(h)), (0, o.I)(u.Av);
     }
     isEnabled() {
-        return c;
+        return d;
     }
     hasLearnedWord(e) {
-        return p.has(e.toLocaleLowerCase());
+        return h.has(e.toLocaleLowerCase());
     }
     findLearnedWordIn(e) {
-        if ("" === e || 0 === p.size) return null;
+        if ("" === e || 0 === h.size) return null;
         let t = e.toLocaleLowerCase();
-        for (let e of p) if (RegExp(`(?<![\\p{L}\\p{N}_])${a()(e)}(?![\\p{L}\\p{N}_])`, "u").test(t)) return e;
+        for (let e of h) if (RegExp(`(?<![\\p{L}\\p{N}_])${i()(e)}(?![\\p{L}\\p{N}_])`, "u").test(t)) return e;
         return null;
     }
 }
-let w = new C(s.h, {
+let p = new f(a.h, {
     SPELLCHECK_TOGGLE() {
-        (c = !c), (0, L.kv)(c), u();
+        (d = !d), (0, u.kv)(d), m();
     },
     SPELLCHECK_LEARN_WORD(e) {
         let { word: t } = e;
-        p.add(t.toLocaleLowerCase()), (0, L.d1)(p), u();
+        h.add(t.toLocaleLowerCase()), (0, u.d1)(h), m();
     },
     SPELLCHECK_UNLEARN_WORD(e) {
         let { word: t } = e;
-        p.delete(t.toLocaleLowerCase()), (0, L.d1)(p), u();
+        h.delete(t.toLocaleLowerCase()), (0, u.d1)(h), m();
     },
 });
