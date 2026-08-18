@@ -5648,6 +5648,22 @@
   },
   {
     "kind": "user",
+    "name": "2026-08-call-of-duty-3pp-nagbar",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-08-dont-close-chat",
     "defaultConfig": {
       "closeChatOnLeave": true

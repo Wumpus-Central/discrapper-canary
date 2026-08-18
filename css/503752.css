@@ -266,18 +266,26 @@
 
 .footer_bb3ce8 {
     align-items: center;
+    display: flex;
+    gap: var(--space-8);
     margin-top: auto
 }
 
-.buttonGroup_bb3ce8,
-.footer_bb3ce8 {
-    display: flex;
-    gap: var(--space-8)
+.footerWithDivider_bb3ce8 {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: var(--space-16)
 }
 
 .buttonGroup_bb3ce8 {
+    display: flex;
+    gap: var(--space-8);
     margin-inline-start: auto;
     max-width: 100%
+}
+
+.buttonGroupFullWidth_bb3ce8 {
+    margin-inline-start: 0;
+    width: 100%
 }
 
 .container__5667e {

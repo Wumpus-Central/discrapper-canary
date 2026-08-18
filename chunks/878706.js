@@ -1946,8 +1946,6 @@ function e7(e) {
 var e3 = n(154861);
 function e4(e) {
     switch (e) {
-        case "open":
-            return R.intl.string(T.default.cLhFMi);
         case "connecting":
             return R.intl.string(T.default.W7oyuf);
         case "failed":
@@ -2002,17 +2000,19 @@ function e9(e) {
                           (0, a.jsx)(e7, { project: r }),
                       ],
                   }),
-            (0, a.jsx)(h.E, {
-                tag: "span",
-                variant: "text-xs/medium",
-                color:
-                    "open" === o ? "text-feedback-positive" : "failed" === o ? "text-feedback-critical" : "text-muted",
-                "aria-label": R.intl.formatToPlainString(T.default.eDDdhB, { status: e4(o) }),
-                "data-vibegrations-conn": !0,
-                "data-state": o,
-                className: e3.XF,
-                children: e4(o),
-            }),
+            "open" === o
+                ? null
+                : (0, a.jsx)(h.E, {
+                      tag: "span",
+                      variant: "text-xs/medium",
+                      color: "failed" === o ? "text-feedback-critical" : "text-muted",
+                      role: "status",
+                      "aria-label": R.intl.formatToPlainString(T.default.eDDdhB, { status: e4(o) }),
+                      "data-vibegrations-conn": !0,
+                      "data-state": o,
+                      className: e3.XF,
+                      children: e4(o),
+                  }),
         ],
     });
 }
