@@ -50,17 +50,15 @@
 }
 
 .nav_b6c448 .navItem_b6c448[role=tab] {
+    align-items: center;
     border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--space-12);
     line-height: 24px;
     padding-bottom: var(--space-8);
     padding-inline-end: var(--space-12);
     padding-top: var(--space-8);
     padding-inline-start: var(--space-8)
-}
-
-.navItemWithBadge_b6c448 {
-    display: inline-flex;
-    gap: var(--space-12)
 }
 
 .navItem_b6c448[aria-selected=true] {
