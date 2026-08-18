@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => _, Tu: () => C, g0: () => I, wv: () => g, yL: () => h }), n(321073);
+n.d(t, { K: () => _, Tu: () => O, g0: () => I, t0: () => f, wv: () => S, yL: () => h }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
@@ -20,25 +20,28 @@ function h() {
     return { key: A(), title: "", description: "" };
 }
 function I() {
-    return new C({ header: u.intl.string(u.t.QxKl9A), sections: [_(), { type: a.K.FIELDS, fields: [h()] }] });
+    return new O({ header: u.intl.string(u.t.QxKl9A), sections: [_(), { type: a.K.FIELDS, fields: [h()] }] });
 }
-function f(e) {
-    return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
+function f() {
+    return 17907264e5 > Date.now();
 }
 function p(e) {
+    return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
+}
+function T(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
         case a.K.FIELDS:
-            return e.fields.every(f);
+            return e.fields.every(p);
     }
 }
-function T(e) {
+function m(e) {
     if (null != e && "file_id" in e)
         return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
-function m(e) {
-    let t = T(e.image);
+function g(e) {
+    let t = m(e.image);
     return {
         key: A(),
         title: e.title ?? "",
@@ -47,7 +50,7 @@ function m(e) {
         hideImage: null == t || void 0,
     };
 }
-function g(e) {
+function S(e) {
     var t;
     let n =
         null == (t = e)
@@ -60,10 +63,10 @@ function g(e) {
                                   type: e.type,
                                   title: e.title ?? "",
                                   subtitle: e.subtitle ?? "",
-                                  image: T(e.image),
+                                  image: m(e.image),
                               };
                           case a.K.FIELDS:
-                              return { type: e.type, fields: e.fields.map(m) };
+                              return { type: e.type, fields: e.fields.map(g) };
                           default:
                               return;
                       }
@@ -71,27 +74,27 @@ function g(e) {
                   .filter(o.Vq);
     return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
 }
-function S(e) {
+function N(e) {
     if (null != e)
         return "localDataUri" in e
             ? { filename: e.filename }
             : { file_id: e.fileId, width: e.width, height: e.height, is_animated: e.isAnimated };
 }
-function N(e) {
+function C(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: S(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: N(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
-                .filter((e) => !f(e))
-                .map((e) => ({ title: e.title, description: e.description, image: S(e.image) }));
+                .filter((e) => !p(e))
+                .map((e) => ({ title: e.title, description: e.description, image: N(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
             return e;
     }
 }
-class C {
+class O {
     id;
     type;
     header;
@@ -106,24 +109,24 @@ class C {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !p(e))
-                    .map(N)
+                    .filter((e) => !T(e))
+                    .map(C)
                     .filter(o.Vq),
             },
         };
     }
     isDiscardable() {
-        return this.sections.every(p);
+        return this.sections.every(T);
     }
     isValid() {
-        return this.sections.some((e) => !p(e));
+        return this.sections.some((e) => !T(e));
     }
     isUpdatable() {
         return (0, d.ki)(l.default.getCurrentUser(), c.PremiumTypes.TIER_2);
     }
     isEqual(e) {
         return (
-            e instanceof C &&
+            e instanceof O &&
             this.header === e.header &&
             (function (e, t) {
                 if (e.length !== t.length) return !1;
