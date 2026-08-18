@@ -72,6 +72,9 @@ function U(e) {
                     ? { type: "step", kind: "announcement", message: e.message }
                     : { type: "step", kind: "todos", items: e.items },
             )),
+        null != e.secret_request &&
+            (e.secret_request.fields.length > 0 || null != e.secret_request.connection) &&
+            (t.secretRequest = e.secret_request),
         t
     );
 }

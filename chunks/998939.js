@@ -1,18 +1,19 @@
 n.d(t, {
-    dv: () => B,
     r2: () => F,
-    TV: () => V,
-    n6: () => Q,
-    Hc: () => H,
-    PK: () => J,
+    $S: () => Y,
+    n6: () => ee,
     fu: () => U,
-    Lc: () => q,
-    Ay: () => et,
-    aF: () => Z,
-    uM: () => K,
-    XZ: () => W,
+    Ay: () => en,
+    aF: () => J,
+    uM: () => q,
     vX: () => X,
-    Vm: () => Y,
+    dv: () => B,
+    Vm: () => Z,
+    TV: () => V,
+    Hc: () => D,
+    PK: () => Q,
+    Lc: () => K,
+    XZ: () => W,
 }),
     n(321073),
     n(323874),
@@ -28,7 +29,7 @@ var l = n(158390),
     d = n(948230),
     u = n(927899),
     h = n(148555);
-class p {
+class m {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: l, onClose: a, onError: s } = e;
@@ -81,7 +82,7 @@ class p {
         this.socket?.close(), (this.socket = null);
     }
 }
-var m = n(208137),
+var p = n(208137),
     f = n(783791),
     g = n(972786),
     x = n(652215),
@@ -313,7 +314,15 @@ async function L(e, t) {
                                     turnId: l.turn_id,
                                     patch: { attachments: l.attachments },
                                 });
-                        else if ("usage" === l.kind)
+                        else if ("collect_secrets" === l.kind) {
+                            let e = l.fields ?? [];
+                            (e.length > 0 || null != l.connection) &&
+                                i.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_TURN_PATCH",
+                                    projectId: t,
+                                    patch: { secretRequest: { fields: e, connection: l.connection, note: l.note } },
+                                });
+                        } else if ("usage" === l.kind)
                             null != l.turn &&
                                 null != l.project &&
                                 i.h.dispatch({
@@ -428,7 +437,7 @@ function G(e) {
     let t = j.get(e);
     null == t &&
         ((t = {
-            ws: new p(),
+            ws: new m(),
             backoff: new l.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -447,7 +456,7 @@ function G(e) {
         E(e, "connecting"),
         L(e, n);
 }
-function D(e) {
+function H(e) {
     let t = j.get(e);
     return (
         null != t &&
@@ -460,7 +469,7 @@ function D(e) {
         !0)
     );
 }
-function H(e) {
+function D(e) {
     let t = j.get(e);
     if (null == t) return void G(e);
     let n = y.get(e);
@@ -529,7 +538,7 @@ function W(e, t) {
 }
 async function z(e) {
     let { body: t } = await s.Bo.post({ url: x.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
-    return { ticket: t.ticket, baseUrl: (0, m.V)() ?? t.url };
+    return { ticket: t.ticket, baseUrl: (0, p.V)() ?? t.url };
 }
 function $(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
@@ -545,13 +554,13 @@ async function X(e, t) {
     if (!s.ok) throw Error(`attachment upload failed (${s.status})`);
     return await s.json();
 }
-class K extends Error {
+class q extends Error {
     status;
     constructor(e) {
         super(`fork failed (${e})`), (this.status = e);
     }
 }
-async function q(e, t) {
+async function K(e, t) {
     let [n, l] = await Promise.all([z(e), z(t)]),
         a = new URLSearchParams({ ticket: n.ticket }),
         s = await fetch(`${n.baseUrl}/agent/fork?${a}`, {
@@ -559,33 +568,43 @@ async function q(e, t) {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: l.ticket }),
         });
-    if (!s.ok) throw new K(s.status);
+    if (!s.ok) throw new q(s.status);
 }
 async function Y(e, t) {
+    let { ticket: n, baseUrl: l } = await z(e),
+        a = new URLSearchParams({ ticket: n }),
+        s = await fetch(`${l}/agent/secrets?${a}`, {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(t),
+        });
+    if (!s.ok) throw Error(`secret submission failed (${s.status})`);
+}
+async function Z(e, t) {
     let { ticket: n, baseUrl: l } = await z(e),
         a = new URLSearchParams({ ticket: n }),
         s = await fetch(`${$(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
     if (!s.ok) throw Error(`attachment cleanup failed (${s.status})`);
 }
-async function Z(e, t) {
+async function J(e, t) {
     let { ticket: n, baseUrl: l } = await z(e),
         a = new URLSearchParams({ ticket: n });
     return `${l}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function J(e, t) {
+async function Q(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: l, baseUrl: a } = await z(e),
         s = new URLSearchParams({ ticket: l });
     return n && s.set("download", "1"), `${$(a, t)}?${s}`;
 }
-async function Q(e, t) {
-    let n = await J(e, t),
+async function ee(e, t) {
+    let n = await Q(e, t),
         l = await fetch(n, { method: "HEAD" });
     if (404 === l.status) return !1;
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
-class ee extends a.Ay.Store {
+class et extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, f.A, g.A);
     }
@@ -596,7 +615,7 @@ class ee extends a.Ay.Store {
         return N.get(e) ?? null;
     }
 }
-let et = new ee(i.h, {
+let en = new et(i.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (y.get(t) === n) return !1;
@@ -608,17 +627,17 @@ let et = new ee(i.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!D(t)) return !1;
+        if (!H(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
             l = !1;
-        for (let e of Array.from(j.keys())) !n.has(e) && D(e) && (l = !0);
+        for (let e of Array.from(j.keys())) !n.has(e) && H(e) && (l = !0);
         if (!l) return !1;
     },
     LOGOUT: function () {
         if (0 === j.size) return !1;
-        for (let e of Array.from(j.keys())) D(e);
+        for (let e of Array.from(j.keys())) H(e);
     },
 });
