@@ -138,6 +138,11 @@
     margin-block: calc((var(--custom-preview-block-padding) + 1px)*-1)
 }
 
+.container__9c314.growWidth__9c314 {
+    flex-grow: 1;
+    min-width: 0
+}
+
 @keyframes fadeIn__9c314 {
     0% {
         opacity: 0
@@ -286,4 +291,4 @@
     margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
 }
 
-/*# sourceMappingURL=3c281b04d22f59cd.css.map*/
+/*# sourceMappingURL=7ff2b03f620544cf.css.map*/

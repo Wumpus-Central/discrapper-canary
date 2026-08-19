@@ -167,7 +167,7 @@ function Z(e) {
         ...m,
         size: "compact",
         removeVerticalPadding: !0,
-        growWidth: c,
+        growWidth: c || m.isEditing,
         preview: x,
         placeholder: s,
         editButtonAriaLabel: s,
