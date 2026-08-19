@@ -506,11 +506,23 @@
     animation: chat-row-enter__2b71e .2s ease-out
 }
 
+.chatMessageAuthor__2b71e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    margin-bottom: var(--space-4);
+    padding: 0 var(--space-4)
+}
+
+.chatMessageAuthor__2b71e,
 .chatMessageUser__2b71e {
     align-self: flex-end;
-    box-sizing: border-box;
     max-width: 80%;
-    min-width: 0;
+    min-width: 0
+}
+
+.chatMessageUser__2b71e {
+    box-sizing: border-box;
     overflow-wrap: anywhere;
     padding: var(--space-12);
     width: -moz-fit-content;
@@ -1485,4 +1497,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=4d15952555af1ed7.css.map*/
+/*# sourceMappingURL=24d6611f8bc8845f.css.map*/
