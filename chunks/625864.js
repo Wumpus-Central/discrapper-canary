@@ -13,7 +13,7 @@ var b = t(320080),
     g = t(849077),
     T = t(652215),
     m = t(375708),
-    E = t(893711);
+    E = t(51116);
 function p(e) {
     let { children: n, popoutPosition: t, popoutAlign: b, targetElementRef: E, spacing: p = 0 } = e,
         { isOpen: A, setIsOpen: f } = h(),

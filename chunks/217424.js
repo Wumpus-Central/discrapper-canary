@@ -42,7 +42,7 @@ var i = n(477900),
     F = n(994500);
 n(827669);
 var z = n(375708),
-    J = n(95424);
+    J = n(894625);
 let Y = { tag: "span", variant: "text-md/normal", color: "text-default" },
     K = { className: a()("mention", J.lE) };
 function W(e) {
@@ -224,7 +224,7 @@ let X = l.memo(function (e) {
 });
 var Z = n(943815),
     q = n(652215),
-    Q = n(281867);
+    Q = n(318626);
 function $(e) {
     let { width: t = 6, height: n = 10, color: l = "currentColor", className: s, foreground: a } = e;
     return (0, i.jsx)("svg", {

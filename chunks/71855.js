@@ -13,7 +13,7 @@ var i = n(477900),
     E = n(723702),
     A = n(19575),
     h = n(375708),
-    I = n(320612);
+    I = n(22405);
 function f(e) {
     let { isPopoutWindow: t } = e;
     return t ? "refresh-title-bar-small" : void 0;

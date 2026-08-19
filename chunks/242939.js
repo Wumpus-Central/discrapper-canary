@@ -259,7 +259,7 @@ function ee() {
     return parseInt("" !== e ? e : "375");
 }
 var et = n(375708),
-    en = n(342959);
+    en = n(393824);
 let es = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         l = {
@@ -332,7 +332,7 @@ let es = function (e) {
         ],
     });
 };
-var er = n(358663);
+var er = n(886030);
 let el = (0, a.animated)(b.Ay),
     ei = function () {
         let e = (0, F.wW)(),
@@ -437,7 +437,7 @@ var ea = n(821609),
     ep = n(79545),
     ef = n(862611),
     eE = n(630037),
-    eh = n(307372);
+    eh = n(191559);
 function e_(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: r } = e,
         l = (0, E.Hv)(),
@@ -602,7 +602,7 @@ function eT(e) {
 }
 var ey = n(776310),
     eQ = n(536283),
-    eN = n(166414);
+    eN = n(489811);
 let eU = (e) => {
     let { overlayRef: t, progressBarRef: n, isHovered: l } = e,
         { quest: o, isExpanded: d } = r.useContext(z),
@@ -705,7 +705,7 @@ let eU = (e) => {
           });
 };
 var eF = n(453384),
-    eB = n(239915);
+    eB = n(649480);
 let eI = function (e) {
     let { isExpanded: t, contentLocation: n, progressBarRef: l, percentComplete: i, popoutTargetElementRef: a } = e,
         { quest: o, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(z),
@@ -778,7 +778,7 @@ let eI = function (e) {
         ],
     });
 };
-var eb = n(437865);
+var eb = n(316878);
 function eO() {
     let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: l } = r.useContext(z),
         a = (0, E.S5)(e.config.expiresAt);
@@ -814,7 +814,7 @@ function eO() {
         ],
     });
 }
-var eV = n(20245);
+var eV = n(331940);
 let eL = r.forwardRef(function (e, t) {
     let { className: n, overlayRef: l } = e,
         { expansionSpring: o } = r.useContext(w),
@@ -896,15 +896,15 @@ var eq = n(889137),
     e7 = n(114046),
     e9 = n(695366),
     e5 = n(274670),
-    e4 = n(144779),
-    e8 = n(30370),
+    e8 = n(144779),
+    e4 = n(30370),
     te = n(178540),
     tt = n(104886),
     tn = n(18437),
     ts = n(780964),
     tr = n(766075),
     tl = n(52093),
-    ti = n(764493);
+    ti = n(575630);
 function ta(e) {
     let { text: t, quest: n, sourceQuestContent: r } = e,
         l = (0, tn.Ut)(),
@@ -914,7 +914,7 @@ function ta(e) {
         onClick: () => {
             (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
                 ? (0, e5.r)({
-                      type: e4.F.CLICK_INTERNAL,
+                      type: e8.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -944,7 +944,7 @@ function tu(e) {
         children: [(0, s.jsx)(tl.L5, { children: et.intl.string(et.t.EJFSvD) }), (0, s.jsx)(to, { ...e })],
     });
 }
-var tc = n(760479);
+var tc = n(607886);
 function td(e) {
     return (0, s.jsx)(T.E, { className: tc.eW, color: "text-muted", variant: "text-xxs/normal", children: e.children });
 }
@@ -960,7 +960,7 @@ function tx(e) {
             beforeRequest: () => {
                 (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
                     ? (0, e5.r)({
-                          type: e4.F.CLICK_INTERNAL,
+                          type: e8.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -994,7 +994,7 @@ function tx(e) {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
                                   if (e.type === e7._.EXPIRED_CREDENTIAL) {
-                                      let r = e8.A.getAccount(e.connected_account_id, e.connected_account_type),
+                                      let r = e4.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, B.IG)(e),
                                           i = (0, B.$J)(e);
                                       return (0, s.jsx)(
@@ -1136,7 +1136,7 @@ function tf(e) {
     );
 }
 n(134528), n(947204);
-var tE = n(908346);
+var tE = n(934225);
 function th(e) {
     let { header: t, children: n } = e;
     return (0, s.jsxs)("div", {
@@ -1172,7 +1172,7 @@ let t_ = function (e) {
 };
 var tg = n(31300),
     tS = n(687966),
-    tA = n(197143);
+    tA = n(35558);
 let tj = function (e) {
     let { onDesktop: t, onConsole: n } = e;
     return (0, s.jsxs)(eP.e, {
@@ -1198,7 +1198,7 @@ let tj = function (e) {
         ],
     });
 };
-var tR = n(550131);
+var tR = n(506500);
 let tv = r.forwardRef(function (e, t) {
     let { isHovered: n, asset: l, poster: i, className: a, autoPlay: o = !1 } = e,
         { isExpanded: c } = r.useContext(z),
@@ -1662,7 +1662,7 @@ var tw = n(621466),
     tD = n(731738),
     tG = n(807393),
     tH = n(260364),
-    tW = n(960115);
+    tW = n(920690);
 function tz(e) {
     let { isExpanded: t, questId: n } = e;
     return (

@@ -1,12 +1,1 @@
-e.exports = function (e) {
-    return {
-        name: "Node REPL",
-        contains: [
-            {
-                className: "meta.prompt",
-                starts: { end: / |$/, starts: { end: "$", subLanguage: "javascript" } },
-                variants: [{ begin: /^>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }],
-            },
-        ],
-    };
-};
+a.exports = { zr: "root_aea291", Kk: "icon_aea291", Qq: "text_aea291", pq: "info_aea291", $e: "warning_aea291" };

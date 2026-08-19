@@ -67,7 +67,7 @@ let w = (0, E.UT)([O.A, b.A, R.A], {
 var F = n(957565),
     z = n(123917),
     B = n(489414),
-    H = n(57503);
+    H = n(684946);
 function G(e) {
     let { url: t, onSelect: n } = e;
     return F.p5 && null != t
@@ -268,8 +268,8 @@ var ea = n(284009),
     es = n(444550),
     eo = n(594808),
     eu = n(814890),
-    ec = n(341167),
-    ed = n(69944);
+    ec = n(483334),
+    ed = n(219025);
 function em(e) {
     let { icon: t, iconSize: n } = e;
     return (0, i.jsx)("div", { className: ec.zc, style: { height: n, width: n }, children: t });
@@ -391,7 +391,7 @@ function ep(e) {
         ],
     });
 }
-var ex = n(977587);
+var ex = n(726088);
 function ef(e) {
     let { channelTypes: t } = e,
         n = (0, h.jc)(),
@@ -485,7 +485,7 @@ var eN = n(81369),
     ew = n(518960),
     eF = n(382287),
     ez = n(522602),
-    eB = n(331194);
+    eB = n(283655);
 function eH(e) {
     let { dropping: t, fileInputRef: n, minValues: l, maxValues: r, types: a, guildId: s } = e,
         o = (0, eD.o2)(s),
@@ -800,9 +800,9 @@ function e5(e) {
         defaultValues: o,
     });
 }
-var e4 = n(144228),
-    e8 = n(821609),
-    e2 = n(621385);
+var e8 = n(144228),
+    e2 = n(821609),
+    e4 = n(897132);
 function e3(e) {
     let { type: t, options: n, required: l } = e,
         r = s.useMemo(() => n.find((e) => e.default)?.value, [n]),
@@ -815,12 +815,12 @@ function e3(e) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(e4.z, { options: m, value: c ?? "", onChange: p, required: l }),
+            (0, i.jsx)(e8.z, { options: m, value: c ?? "", onChange: p, required: l }),
             !l &&
                 (0, i.jsx)("div", {
-                    className: u()(e2.H, { [e2.d]: !d }),
+                    className: u()(e4.H, { [e4.d]: !d }),
                     "aria-hidden": !d,
-                    children: (0, i.jsx)(e8.$, {
+                    children: (0, i.jsx)(e2.$, {
                         text: D.intl.string(D.t["5uAtZN"]),
                         variant: "secondary",
                         size: "sm",
@@ -830,8 +830,8 @@ function e3(e) {
         ],
     });
 }
-var e7 = n(843282);
-function e6(e) {
+var e6 = n(843282);
+function e7(e) {
     let { emoji: t, label: n, description: l, isDisabled: r, isOffset: a } = e,
         s = u()(ed._A, { [ed.r9]: r, [ed.cY]: null == t && a });
     return (0, i.jsxs)("div", {
@@ -937,14 +937,14 @@ function tt(e) {
         I || (E.size === S.size && Array.from(S).every((e) => E.has(e))) || b();
     }, [I, E, S, b]);
     let O = (0, eu.Lr)(e, v ? "modal" : "message"),
-        R = e7.lS;
-    C ? (R = e7.M8) : O && (R = e7.$l);
-    let _ = (0, e7.Ev)({ value: E, onChange: (e) => y(e), onSelectInteraction: R });
+        R = e6.lS;
+    C ? (R = e6.M8) : O && (R = e6.$l);
+    let _ = (0, e6.Ev)({ value: E, onChange: (e) => y(e), onSelectInteraction: R });
     return (0, i.jsxs)(s.Fragment, {
         children: [
             (0, i.jsx)("div", {
                 className: ed.kL,
-                children: (0, i.jsx)(e7.Pw, {
+                children: (0, i.jsx)(e6.Pw, {
                     isProcessing: N,
                     isDisabled: a || f === B.BB.DISABLED || g,
                     className: u()(ed.Lt, { [ed.zE]: v }),
@@ -956,7 +956,7 @@ function tt(e) {
                     closeOnSelect: !C,
                     optionClassName: ed.MT,
                     renderOptionLabel: (e) =>
-                        (0, i.jsx)(e6, { ...e, isDisabled: C && !E.has(e.value) && E.size === r, isOffset: L }),
+                        (0, i.jsx)(e7, { ...e, isDisabled: C && !E.has(e.value) && E.size === r, isOffset: L }),
                     renderOptionValue: (e) => (C ? (0, i.jsx)(te, { options: e }) : (0, i.jsx)(e9, { ...e[0] })),
                     ..._,
                     "data-migration-pending": !0,
@@ -970,7 +970,7 @@ var tn = n(95477),
     tl = n(260598),
     tr = n(321471),
     ta = n(969508),
-    ti = n(876334);
+    ti = n(565469);
 function ts(e) {
     let t,
         { type: n, style: l, label: r, placeholder: a, minLength: o, maxLength: u, required: c, value: m } = e,
@@ -1013,8 +1013,8 @@ var to = n(534890),
     tg = n(7584),
     tj = n(548118),
     tv = n(486020),
-    tC = n(582068),
-    tN = n(775793);
+    tC = n(862292),
+    tN = n(783145);
 function tI(e) {
     let { checkpointData: t } = e,
         {
@@ -1222,7 +1222,7 @@ var tA = n(564771),
     tE = n(338717),
     ty = n(96782),
     tS = n(302031),
-    tT = n(14392);
+    tT = n(561323);
 function tL(e) {
     let { file: t, name: n, size: l, spoiler: r } = e,
         a = s.useMemo(
@@ -1270,7 +1270,7 @@ var tb = n(665260),
     tM = n(144165),
     tU = n(866665),
     tD = n(891694),
-    tw = n(533805);
+    tw = n(853784);
 function tF(e) {
     let t = s.useRef(null),
         n = e.media;
@@ -1407,14 +1407,14 @@ function tX(e) {
     });
     return (0, i.jsx)("div", { children: (0, i.jsx)(tY.A, { items: p, isInAppComponentsV2: !0 }) });
 }
-var tq = n(556105);
+var tq = n(210716);
 function t$(e) {
     let { divider: t, spacing: n } = e;
     return (0, i.jsx)("div", { className: u()({ [tq.f]: n === d.C8.LARGE, [tq.y]: t }) });
 }
 var tJ = n(46054),
     tZ = n(521981),
-    tQ = n(744204);
+    tQ = n(204255);
 let t0 = {
         SIZE: { default: void 0, reduced: tQ.k2 },
         COLOR: { default: void 0, muted: tQ.JF },
@@ -1424,7 +1424,7 @@ let t0 = {
 function t5() {
     return s.useContext(t1);
 }
-function t4(e) {
+function t8(e) {
     let { children: t, size: n, color: l, weight: r } = e,
         a = t5(),
         o = s.useMemo(() => {
@@ -1434,10 +1434,10 @@ function t4(e) {
         }, [n, l, r, a]);
     return (0, i.jsx)(t1.Provider, { value: o, children: t });
 }
-let t8 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
-var t2 = n(258381),
-    t3 = n(742715);
-function t7(e) {
+let t2 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
+var t4 = n(738262),
+    t3 = n(165648);
+function t6(e) {
     let t,
         { content: n, className: l } = e,
         r =
@@ -1448,15 +1448,15 @@ function t7(e) {
                     ? null
                     : ((e =
                           null != t.message
-                              ? (0, tZ.ko)(t.message, t8)
-                              : (0, tZ.Le)({ channelId: t.channelId, renderOptions: t8 })),
+                              ? (0, tZ.ko)(t.message, t2)
+                              : (0, tZ.Le)({ channelId: t.channelId, renderOptions: t2 })),
                       tJ.A.parse(n, !0, e));
             }, [n, t])),
         a = t5();
-    return (0, i.jsx)("div", { className: u()(l, t3.PT, t2.T, a.className), children: r });
+    return (0, i.jsx)("div", { className: u()(l, t3.PT, t4.T, a.className), children: r });
 }
-var t6 = n(838541),
-    t9 = n(438998);
+var t7 = n(838541),
+    t9 = n(292151);
 function ne(e) {
     let { media: t, spoiler: n, description: l } = e,
         r = (0, tk.wz)(t),
@@ -1491,7 +1491,7 @@ function ne(e) {
                   minWidth: 85,
                   minHeight: 85,
                   autoPlay: o && !e,
-                  mediaLayoutType: t6.dG.MOSAIC,
+                  mediaLayoutType: t7.dG.MOSAIC,
                   reducedSizeAltTextButton: !0,
                   srcIsAnimated: a,
               });
@@ -1509,7 +1509,7 @@ function ne(e) {
             : p(!1)
     );
 }
-var nt = n(143564);
+var nt = n(868281);
 function nn() {
     return (0, i.jsx)("div", {
         className: nt.k,
@@ -1772,7 +1772,7 @@ var nM = n(349288),
     nH = n(291594),
     nG = n(22869),
     nV = n(959),
-    nK = n(139413);
+    nK = n(968544);
 function nY(e) {
     let { entry: t, channel: n, className: l } = e,
         r = s.useRef(null),
@@ -1873,14 +1873,14 @@ function n1(e) {
     return (0, i.jsx)(nZ.A, { Icon: r, ...l, "aria-label": a });
 }
 var n5 = n(140651),
-    n4 = n(506326),
-    n8 = n(915089),
-    n2 = n(818348),
-    n3 = n(651055),
-    n7 = n(521707);
-function n6(e) {
+    n8 = n(506326),
+    n2 = n(915089),
+    n4 = n(818348),
+    n3 = n(167848),
+    n6 = n(154342);
+function n7(e) {
     let { className: t, clickableClassName: n, clickable: l, children: r } = e,
-        a = (0, n8.GV)();
+        a = (0, n2.GV)();
     if (null != l && "href" in l) {
         let { ariaDescription: e, href: s } = l;
         return (0, i.jsxs)(i.Fragment, {
@@ -1906,7 +1906,7 @@ function n6(e) {
 }
 function n9(e) {
     let { clickable: t, ...n } = e;
-    return (0, i.jsx)(n6, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: n7.v });
+    return (0, i.jsx)(n7, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: n6.v });
 }
 function le(e) {
     let {
@@ -1921,12 +1921,12 @@ function le(e) {
             providerIconProps: d,
             style: m = {},
         } = e,
-        h = (0, n8.GV)(),
+        h = (0, n2.GV)(),
         { primaryColor: p, secondaryColor: x } = (0, n5.A)(a);
     return (
         null != a && (m.background = `linear-gradient(45deg, ${p}, ${x})`),
         (0, i.jsx)(nw.N, {
-            theme: n2.NJ.DARK,
+            theme: n4.NJ.DARK,
             disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, i.jsxs)("figure", {
@@ -1935,7 +1935,7 @@ function le(e) {
                     className: u()(n3.kL, e),
                     style: m,
                     children: [
-                        (0, i.jsx)(n6, {
+                        (0, i.jsx)(n7, {
                             className: n3.iT,
                             clickableClassName: n3.vk,
                             clickable: c,
@@ -1976,7 +1976,7 @@ function le(e) {
                                           ],
                                       })
                                     : null,
-                                (0, i.jsx)(n4.iT, { className: n3.jp, entry: t, location: n4.N5.EMBED }),
+                                (0, i.jsx)(n8.iT, { className: n3.jp, entry: t, location: n8.N5.EMBED }),
                             ],
                         }),
                         (0, i.jsx)("div", { className: n3.Y, children: null != d ? (0, i.jsx)(n1, { ...d }) : null }),
@@ -2013,7 +2013,7 @@ function ln(e) {
         })
     );
 }
-var ll = n(458227);
+var ll = n(689592);
 function lr(e) {
     let { components: t, renderComponents: n } = e,
         { message: l } = (0, h.jc)();
@@ -2027,7 +2027,7 @@ function lr(e) {
               ],
           });
 }
-var la = n(717708);
+var la = n(796951);
 function li(e) {
     let { components: t, accentColor: n, spoiler: l, renderComponents: r } = e,
         [a, o] = s.useState(l),
@@ -2039,7 +2039,7 @@ function li(e) {
                     ref: l,
                     className: u()(la.kL, { [la.dK]: e, [la._7]: null != n }),
                     style: { "--__accent-color": n },
-                    children: (0, i.jsx)(t4, { size: "reduced", children: r(t) }),
+                    children: (0, i.jsx)(t8, { size: "reduced", children: r(t) }),
                 }),
         });
     }
@@ -2056,7 +2056,7 @@ function li(e) {
           : m(!1);
 }
 var ls = n(244367),
-    lo = n(856579);
+    lo = n(405388);
 function lu(e) {
     let { label: t, description: n, component: l, renderComponent: r } = e,
         a = (0, h.bO)(l);
@@ -2072,7 +2072,7 @@ function lu(e) {
               ],
           });
 }
-var lc = n(185704);
+var lc = n(572891);
 function ld(e) {
     let { components: t, accessory: n, renderComponents: l } = e,
         { message: r } = (0, h.jc)(),
@@ -2105,7 +2105,7 @@ function ld(e) {
     });
 }
 var lm = n(532294),
-    lh = n(616245);
+    lh = n(359886);
 function lp(e) {
     return e.map((e, t) =>
         (0, i.jsxs)(i.Fragment, {
@@ -2129,7 +2129,7 @@ function lp(e) {
                         case d.I5.SECTION:
                             return (0, i.jsx)(ld, { ...t, renderComponents: lp }, n);
                         case d.I5.TEXT_DISPLAY:
-                            return (0, i.jsx)(t7, { ...t }, n);
+                            return (0, i.jsx)(t6, { ...t }, n);
                         case d.I5.MEDIA_GALLERY:
                             return (0, i.jsx)(tX, { ...t }, n);
                         case d.I5.THUMBNAIL:

@@ -12,7 +12,7 @@ var n = s(477900),
     h = s(586035),
     x = s(190107),
     f = s(375708),
-    g = s(292697);
+    g = s(40170);
 function C(e) {
     let { quest: t, rewardName: s, location: a, sourceQuestContent: o } = e;
     return (0, n.jsxs)("div", {

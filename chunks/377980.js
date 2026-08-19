@@ -6,7 +6,7 @@ var r = t(477900),
     a = t.n(s),
     c = t(462180),
     o = t(894858),
-    u = t(785375);
+    u = t(315826);
 function d(e) {
     let { node: n, children: t } = e,
         [i, s] = l.useState(!1),
@@ -33,7 +33,7 @@ function d(e) {
     );
 }
 var x = t(331322),
-    j = t(948127);
+    j = t(979926);
 function h(e) {
     let { children: n } = e;
     return (0, r.jsx)(x.B, { className: j.n, gap: 0, padding: { top: "xs", bottom: "xs" }, children: n });
@@ -144,7 +144,7 @@ function R(e) {
 var B = t(297264),
     L = t(508770),
     _ = t(890856),
-    D = t(413750);
+    D = t(763811);
 function w(e) {
     let {
             ref: n,
@@ -193,7 +193,7 @@ function P(e) {
     let { decoration: n } = e;
     if (n.type === p.wF.STACKED_ICONS) return (0, r.jsx)(Z, { decoration: n });
 }
-var F = t(390936);
+var F = t(321557);
 function z(e) {
     let { node: n } = e,
         { destinationKey: t, useTrailingDecoration: l, useTitle: i, useSubtitle: s } = n,
@@ -468,7 +468,7 @@ var er = t(435558),
     ea = t(138017),
     ec = t(661531),
     eo = t(259678),
-    eu = t(98640);
+    eu = t(526943);
 function ed(e) {
     let {
             ref: n,
@@ -569,7 +569,7 @@ let ej = l.memo(function (e) {
         children: i.map((e) => (0, r.jsx)(nr, { node: e }, e.key)),
     });
 });
-var eh = t(575376);
+var eh = t(793409);
 function em(e) {
     let { node: n } = e,
         t = n.layout.find((e) => e.key === n.headerSettingKey),
@@ -759,7 +759,7 @@ function eC(e) {
 }
 var eA = t(683071),
     eI = t(964486),
-    eO = t(35218);
+    eO = t(864043);
 function eR(e) {
     let { button: n } = e,
         [t, i] = l.useState(!1);
@@ -863,7 +863,7 @@ let ew = l.memo(function (e) {
     });
 });
 var eG = t(140735),
-    eZ = t(597894);
+    eZ = t(517759);
 function eP(e) {
     let { title: n, subtitle: t, isHiddenVisually: l } = e;
     return null == n || "" === n
@@ -909,7 +909,7 @@ let eF = l.memo(function (e) {
 });
 var ez = t(404778),
     eK = t(375708),
-    eM = t(733062);
+    eM = t(777919);
 function eU(e) {
     var n;
     let { node: t } = e,
@@ -1014,8 +1014,8 @@ var eY = t(17928),
     eQ = t(707554),
     e0 = t(823092),
     e1 = t(397274),
-    e8 = t(439750);
-function e6(e) {
+    e6 = t(525473);
+function e8(e) {
     let { notice: n, children: t } = e,
         { showNotice: i, handleStoreUpdate: s } = (0, e0.L_)(),
         a = n?.stores;
@@ -1036,50 +1036,50 @@ function e6(e) {
     let c = l.useMemo(() => {
         if (null == n || !i) return null;
         let { element: e } = n;
-        return (0, r.jsx)(eH.F, { className: e8.lm, children: (0, r.jsx)(e, {}) });
+        return (0, r.jsx)(eH.F, { className: e6.lm, children: (0, r.jsx)(e, {}) });
     }, [n, i]);
     return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(e$.F, { component: "div", children: c })] });
 }
-function e5(e) {
+function e7(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
-        className: a()(e8.oK, { [e8.qf]: n.sticky }),
+        className: a()(e6.oK, { [e6.qf]: n.sticky }),
         "data-settings-panel-sticky-decoration": n.sticky || void 0,
         children: (0, r.jsx)(t, {}),
     });
 }
-function e7(e) {
+function e5(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
     return null != a
         ? (0, r.jsx)(a, {})
-        : (0, r.jsx)(e6, {
+        : (0, r.jsx)(e8, {
               notice: n,
               children: (0, r.jsxs)(eJ.Gt, {
-                  className: e8.XG,
+                  className: e6.XG,
                   scrollbarGutter: "both-edges",
                   ref: (e) => {
                       e1.A.setPanelScrollerRef(e);
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: e8.nd,
+                          className: e6.nd,
                           ref: s,
                           children: (0, r.jsx)(eo.xp, { containerRef: s, children: t }),
                       }),
-                      (0, r.jsx)("div", { className: e8.iS, "data-panel-bottom": !0 }),
+                      (0, r.jsx)("div", { className: e6.iS, "data-panel-bottom": !0 }),
                   ],
               }),
           });
 }
-function e3(e) {
+function e2(e) {
     let { layout: n, decoration: t } = e;
     return (0, r.jsxs)("div", {
-        className: e8.LZ,
+        className: e6.LZ,
         children: [
-            null != t && (0, r.jsx)(e5, { decoration: t }),
+            null != t && (0, r.jsx)(e7, { decoration: t }),
             (0, r.jsx)(eQ.F, {
                 forceLevel: 2,
                 children: n.map((e, t) =>
@@ -1088,7 +1088,7 @@ function e3(e) {
                         {
                             children: [
                                 (0, r.jsx)(nr, { node: e }),
-                                t !== n.length - 1 && (0, r.jsx)(ez.c, { className: e8.yF }),
+                                t !== n.length - 1 && (0, r.jsx)(ez.c, { className: e6.yF }),
                             ],
                         },
                         e.key,
@@ -1098,22 +1098,22 @@ function e3(e) {
         ],
     });
 }
-function e2(e) {
+function e3(e) {
     let { node: n } = e,
         { layout: t } = n;
     if ((0, i.zS)(t))
         return (0, r.jsx)(
-            e7,
+            e5,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,
-                children: (0, r.jsx)(e3, { layout: t, decoration: n.decoration }),
+                children: (0, r.jsx)(e2, { layout: t, decoration: n.decoration }),
             },
             n.key,
         );
     throw Error("Panels must have a list of categories");
 }
-var e9 = t(137339);
+var e9 = t(749364);
 function e4(e) {
     let { node: n } = e;
     return (0, r.jsxs)(x.B, {
@@ -1130,7 +1130,7 @@ function e4(e) {
         ],
     });
 }
-var ne = t(960020);
+var ne = t(187707);
 let nn = l.memo(function (e) {
     let { node: n } = e;
     return (0, r.jsx)("div", { className: ne.l, children: n.layout.map((e) => (0, r.jsx)(nr, { node: e }, e.key)) });
@@ -1153,7 +1153,7 @@ function nt(e) {
         case i.Z6.SIDEBAR_ITEM:
             throw Error(`${t.type} nodes should never be rendered directly`);
         case i.Z6.PANEL:
-            return (0, r.jsx)(e2, { node: t });
+            return (0, r.jsx)(e3, { node: t });
         case i.Z6.LIST:
             return (0, r.jsx)(eU, { node: t });
         case i.Z6.FIELD_SET:

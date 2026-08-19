@@ -19,7 +19,7 @@ var t = n(477900),
     v = n(242273),
     y = n(260197),
     N = n(375708),
-    b = n(246924);
+    b = n(94499);
 let k = "MULTIPLE_CHOICE";
 function E(e) {
     let { choice: l, index: n, onChange: s, onClear: o, onReorder: m, isDropHovered: x } = e,

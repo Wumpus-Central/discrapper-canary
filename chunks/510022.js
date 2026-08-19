@@ -14,7 +14,7 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
         (0, i.openModalLazy)(
             async () => {
                 let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
-                    n.e("740"),
+                    n.e("728809"),
                     n.e("572963"),
                     n.e("493014"),
                     n.e("672877"),

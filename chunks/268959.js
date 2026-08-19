@@ -21,7 +21,7 @@ var i = n(503698),
     h = n(561769),
     v = n(57020),
     x = n(375708),
-    R = n(391226);
+    R = n(31005);
 function k(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.m, {

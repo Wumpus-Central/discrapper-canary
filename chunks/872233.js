@@ -18,7 +18,7 @@ var i = n(477900),
     L = n(174459),
     R = n(652215),
     E = n(375708),
-    M = n(58023),
+    M = n(401146),
     O = n(519636);
 function T(e) {
     let {
@@ -112,7 +112,7 @@ function T(e) {
     async function Q() {
         v.current?.pause(),
             await (0, d.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("793781"), n.e("418710")]).then(n.bind(n, 770101));
+                let { default: e } = await Promise.all([n.e("677508"), n.e("418710")]).then(n.bind(n, 770101));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

@@ -8,7 +8,7 @@ var l = n(477900),
     u = n(144165),
     c = n(262427),
     d = n(139286),
-    p = n(83493);
+    p = n(462718);
 function m(e) {
     let { componentId: t, promotionId: n, promotionBannerMarketingComponentFields: i } = e;
     (0, d.A)({

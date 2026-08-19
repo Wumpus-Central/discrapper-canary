@@ -1,4 +1,4 @@
-n.d(l, { A: () => r5 });
+n.d(l, { A: () => r7 });
 var t = n(477900),
     i = n(582128),
     r = n(503698),
@@ -108,7 +108,7 @@ var eE = n(361311),
     eW = n(967198),
     eH = n(488995),
     eq = n(375708),
-    eK = n(440016);
+    eK = n(576849);
 function eY(e) {
     let { applicationRoleConnection: l, locale: n, onApplicationClicked: i, selectedGuildId: r } = e,
         a = (0, eV.VW)(l, n);
@@ -202,10 +202,10 @@ var e$ = n(240248),
     e1 = n(621466),
     e2 = n(231088),
     e3 = n(786826);
-function e7(e) {
+function e5(e) {
     return e?.querySelector('[aria-expanded="true"][aria-controls]') ?? null;
 }
-function e5(e) {
+function e7(e) {
     let {
             isEditing: l,
             committedValue: n,
@@ -263,7 +263,7 @@ function e5(e) {
         }),
     });
 }
-let e8 = [
+let e9 = [
     { value: "HAIKU", label: () => eq.intl.string(eq.t["azW8+y"]) },
     { value: "GAME_CHARACTER", label: () => eq.intl.string(eq.t.CXkR1L) },
     { value: "TELL_US", label: () => eq.intl.string(eq.t.eutr4P) },
@@ -275,7 +275,7 @@ let e8 = [
     { value: "VIBE_CHAOTIC_OR_CALM", label: () => eq.intl.string(eq.t.ul8ANJ) },
     { value: "VIBE_FIVE_WORDS", label: () => eq.intl.string(eq.t.u7WCGI) },
 ];
-var e9 = n(307731);
+var e8 = n(307731);
 function e6(e) {
     let l,
         n,
@@ -313,7 +313,7 @@ function e6(e) {
                     (e) =>
                         (function (e, l) {
                             if (l?.contains(e)) return !0;
-                            let n = e7(l),
+                            let n = e5(l),
                                 t = n?.getAttribute("aria-controls");
                             return null != t && null != e.closest(`#${t}`);
                         })(e, n.current),
@@ -331,7 +331,7 @@ function e6(e) {
                 (e) => {
                     if (!l) return;
                     let i = e.relatedTarget;
-                    !(0, e1.vq)(i) || a(i) || (null == e7(n.current) && t());
+                    !(0, e1.vq)(i) || a(i) || (null == e5(n.current) && t());
                 },
                 [l, a, t, n],
             );
@@ -344,17 +344,17 @@ function e6(e) {
         y = j?.bio?.[0],
         C = i.useMemo(() => {
             let e;
-            return (e = Math.floor(Math.random() * e8.length)), e8[e];
+            return (e = Math.floor(Math.random() * e9.length)), e9[e];
         }, []),
         N = c ? eq.intl.string(eq.t.yPJ9xr) : C.label();
     return !c || m
-        ? (0, t.jsx)(e5, {
+        ? (0, t.jsx)(e7, {
               ...v,
               preview: A ? (0, t.jsx)(eZ.A, { userBio: x, setLineClamp: !1 }) : null,
               placeholder: N,
               editButtonAriaLabel: eq.intl.string(eq.t.lO3n7a),
               label: eq.intl.string(eq.t["YWo+Zd"]),
-              emojiPickerIntention: e9.EmojiIntention.PROFILE,
+              emojiPickerIntention: e8.EmojiIntention.PROFILE,
               maxLength: f,
               error: I,
               warning: y,
@@ -721,25 +721,25 @@ function l0(e) {
 var l1 = n(487233),
     l2 = n(120386),
     l3 = n(317097),
-    l7 = n(602853),
-    l5 = n(922016),
-    l8 = n(508274),
-    l9 = n(654107),
+    l5 = n(602853),
+    l7 = n(922016),
+    l9 = n(508274),
+    l8 = n(654107),
     l6 = n(930349);
 function l4(e) {
     let { user: l, disabled: n = !1 } = e,
         r = i.useRef(null),
-        a = (0, l7.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
-        o = (0, l9.rh)(l.getAvatarURL(null, 80), a, !1),
+        a = (0, l5.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        o = (0, l8.rh)(l.getAvatarURL(null, 80), a, !1),
         { pendingAccentColor: d, savedAccentColor: u } = (0, s.cf)([em.A, H.A], () => ({
             pendingAccentColor: em.A.getPendingChanges().pendingAccentColor,
             savedAccentColor: H.A.getUserProfile(l.id)?.accentColor,
         })),
         c = d ?? u ?? (0, l3.LX)(o[0] ?? a),
         g = i.useCallback((e) => (0, eQ.p)({ accentColor: e }), []);
-    return (0, t.jsx)(l5.Y, {
+    return (0, t.jsx)(l7.Y, {
         targetElementRef: r,
-        renderPopout: (e) => (0, t.jsx)(l8.VN, { ...e, value: c, onChange: g, suggestedColors: o, showEyeDropper: !0 }),
+        renderPopout: (e) => (0, t.jsx)(l9.VN, { ...e, value: c, onChange: g, suggestedColors: o, showEyeDropper: !0 }),
         children: (e) =>
             (0, t.jsx)(l6.A, {
                 ...e,
@@ -755,7 +755,7 @@ function l4(e) {
     });
 }
 var ne = n(450373),
-    nl = n(796290);
+    nl = n(317139);
 function nn(e, l) {
     let n = null === e,
         t = void 0 === e;
@@ -771,7 +771,7 @@ function ni(e) {
 }
 function nr(e) {
     let { displayProfile: l, bannerChange: n, shouldAnimate: i } = e,
-        r = (0, l7.r)(x.A.unsafe_rawColors.PRIMARY_800).hex(),
+        r = (0, l5.r)(x.A.unsafe_rawColors.PRIMARY_800).hex(),
         a = l?.primaryColor ?? (0, l3.LX)(r),
         { hex: s } = (0, ne.A)(a),
         o = l?.getPreviewBanner(n, i, 296) ?? void 0;
@@ -851,8 +851,8 @@ var nd = n(259065),
     nc = n(898985),
     ng = n(922301),
     nm = n(660184),
-    nf = n(864386),
-    np = n(257551);
+    nf = n(955298),
+    np = n(523312);
 let nx = "heading-xl/semibold";
 function nh(e) {
     if (null == e) return eq.intl.string(eq.t["3Xph0/"]);
@@ -933,7 +933,7 @@ function nb(e) {
         disabled: r,
     });
 }
-var nj = n(324970);
+var nj = n(89851);
 function nI(e) {
     let { heading: l, children: n, disabled: i = !1, showNitroIcon: r = !1, badge: a } = e;
     return (0, t.jsxs)("div", {
@@ -996,8 +996,8 @@ var n_ = n(993408),
 function nw(e) {
     "" !== e.thumbnailPreviewSrc && (0, nD.NN)(e.thumbnailPreviewSrc).catch(() => {});
 }
-var nG = n(580705),
-    nF = n(462397);
+var nG = n(599752),
+    nF = n(249360);
 let nV =
         "https://cdn.discordapp.com/assets/content/6ccc97f30d0e11f23e116bb2534831ca573533a9dd726f5859ae527e82cdf37a.png",
     nU =
@@ -1100,7 +1100,7 @@ function nq(e) {
             null != n && (0, nD.NN)(n).catch(() => {});
         });
 }
-var nK = n(443727);
+var nK = n(715196);
 function nY(e) {
     let { responsive: l } = e;
     return !0 !== l;
@@ -1187,7 +1187,7 @@ function n$(e) {
 }
 var nZ = n(684732),
     nJ = n(498596),
-    nQ = n(211003);
+    nQ = n(871524);
 function n0(e) {
     let { primaryColor: l, secondaryColor: n, children: i } = e,
         r = `linear-gradient(to bottom, ${(0, l3.Hl)(l)}, ${(0, l3.Hl)(n)})`;
@@ -1227,19 +1227,19 @@ function n3(e) {
         onSelect: d,
         buttonRef: u,
     } = e;
-    return (0, t.jsx)(l5.Y, {
+    return (0, t.jsx)(l7.Y, {
         targetElementRef: u,
         shouldShow: a,
         onRequestOpen: s,
         onRequestClose: o,
-        renderPopout: (e) => (0, t.jsx)(l8.VN, { ...e, value: l, onChange: d, suggestedColors: i, showEyeDropper: !0 }),
+        renderPopout: (e) => (0, t.jsx)(l9.VN, { ...e, value: l, onChange: d, suggestedColors: i, showEyeDropper: !0 }),
         children: (e) => {
             let { onClick: i, ...a } = e;
             return (0, t.jsx)(n2, { color: l, onClick: i, disabled: r, buttonRef: u, "aria-label": n, ...a });
         },
     });
 }
-function n7(e) {
+function n5(e) {
     let {
             primaryColor: l,
             secondaryColor: n,
@@ -1309,7 +1309,7 @@ function n7(e) {
         }),
     });
 }
-function n5(e) {
+function n7(e) {
     let { user: l, guildId: n, disabled: r = !1 } = e,
         a = (0, K.Ay)(l.id, n),
         {
@@ -1334,9 +1334,9 @@ function n5(e) {
             pendingAvatarSrc: g ?? void 0,
             isPreview: !0,
         }),
-        p = (0, l7.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        p = (0, l5.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
         h = null != g ? g : l.getAvatarURL(n ?? void 0, 80),
-        v = (0, l9.rh)(h, p, !1),
+        v = (0, l8.rh)(h, p, !1),
         A = i.useCallback(
             (e) => {
                 (0, eQ.p)({ guildId: n ?? void 0, themeColors: e });
@@ -1353,7 +1353,7 @@ function n5(e) {
                 : void 0;
     return null == m || null == f
         ? null
-        : (0, t.jsx)(n7, {
+        : (0, t.jsx)(n5, {
               primaryColor: m,
               secondaryColor: f,
               onSelectPrimaryColor: (e) => {
@@ -1367,14 +1367,14 @@ function n5(e) {
               deleteButton: b,
           });
 }
-var n8 = n(134976);
-function n9(e) {
+var n9 = n(629985);
+function n8(e) {
     let { children: l, hasGradientBackground: n = !1 } = e;
-    return (0, t.jsx)(f.F, { children: (0, t.jsx)("div", { className: a()(n8.k, { [n8.V]: n }), children: l }) });
+    return (0, t.jsx)(f.F, { children: (0, t.jsx)("div", { className: a()(n9.k, { [n9.V]: n }), children: l }) });
 }
 var n6 = n(53466),
     n4 = n(689175),
-    te = n(672905);
+    te = n(424290);
 function tl(e) {
     let { children: l, isDismissed: n } = e;
     return (0, u.p)(!n, {
@@ -1429,7 +1429,7 @@ function to() {
 }
 var td = n(570002),
     tu = n(202541),
-    tc = n(897260);
+    tc = n(155053);
 function tg() {
     let e = (0, ti.V)();
     return e?.subscriptionTrial?.skuId === tu.pe.TIER_2 ? e : null;
@@ -1483,7 +1483,7 @@ function tp() {
     return null == e ? (0, t.jsx)(tm, {}) : (0, t.jsx)(tf, { trialOffer: e });
 }
 var tx = n(55619),
-    th = n(37407);
+    th = n(848717);
 function tv() {
     return (0, t.jsxs)("div", {
         className: th.k,
@@ -1506,7 +1506,7 @@ function tv() {
     });
 }
 var tA = n(342866),
-    tb = n(128604);
+    tb = n(968475);
 function tj(e) {
     let { user: l, ...n } = e,
         { pendingAvatar: i, tryItOutAvatar: r } = (0, s.cf)([em.A], () => ({
@@ -1596,15 +1596,15 @@ function tN(e) {
 function tE(e) {
     let { user: l, initialOpenPopout: n } = e,
         { primaryColor: r, secondaryColor: a, pendingAvatarSrc: s, tryItOutThemeColors: o } = tN(l),
-        d = (0, l7.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        d = (0, l5.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
         u = null != s ? s : l.getAvatarURL(void 0, 80),
-        c = (0, l9.rh)(u, d, !1),
+        c = (0, l8.rh)(u, d, !1),
         g = i.useCallback((e) => {
             (0, tC.a)(e);
         }, []);
     return null == r || null == a
         ? null
-        : (0, t.jsx)(n7, {
+        : (0, t.jsx)(n5, {
               variant: "full-height-bar",
               primaryColor: r,
               secondaryColor: a,
@@ -1636,7 +1636,7 @@ function tP(e) {
         }),
     });
 }
-var tk = n(502096);
+var tk = n(847081);
 function tT(e) {
     let { user: l, mode: n } = e,
         r = i.useRef(null),
@@ -1730,7 +1730,7 @@ var tS = n(847374),
     tG = n(561392),
     tF = n(499957),
     tV = n(15626),
-    tU = n(37712);
+    tU = n(470791);
 function tB(e) {
     let {
             options: l,
@@ -1962,7 +1962,7 @@ function tB(e) {
         ],
     });
 }
-var tz = n(643213);
+var tz = n(216384);
 let tW = "MAIN_PROFILE";
 function tH(e) {
     let { guild: l } = e;
@@ -2134,11 +2134,11 @@ function t0() {
 }
 var t1 = n(23722),
     t2 = n(49999),
-    t3 = n(844939);
-let t7 = "profile-editing-nameplate-error",
-    t5 = "profile-editing-avatar-error",
-    t8 = "profile-editing-avatar-decoration-error",
-    t9 = "profile-editing-banner-error",
+    t3 = n(288490);
+let t5 = "profile-editing-nameplate-error",
+    t7 = "profile-editing-avatar-error",
+    t9 = "profile-editing-avatar-decoration-error",
+    t8 = "profile-editing-banner-error",
     t6 = "profile-editing-display-name-style-error";
 function t4(e) {
     let { className: l } = e;
@@ -2227,8 +2227,8 @@ function ir(e) {
         heading: eq.intl.string(eq.t.x5CoXR),
         disabled: i,
         children: [
-            (0, t.jsx)(nC.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t7 : void 0 }),
-            (0, t.jsx)(ny, { id: t7, message: r }),
+            (0, t.jsx)(nC.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t5 : void 0 }),
+            (0, t.jsx)(ny, { id: t5, message: r }),
         ],
     });
 }
@@ -2238,10 +2238,10 @@ function ia(e) {
         heading: eq.intl.string(eq.t["50Nwpc"]),
         disabled: i,
         children: [
-            (0, t.jsx)(l1.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t5 : void 0 }),
-            (0, t.jsx)(l2.A, { user: l, guildId: n, disabled: i, errorMessageId: null != a ? t8 : void 0 }),
-            (0, t.jsx)(ny, { id: t5, message: (0, l$.d3)(r) }),
-            (0, t.jsx)(ny, { id: t8, message: a }),
+            (0, t.jsx)(l1.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t7 : void 0 }),
+            (0, t.jsx)(l2.A, { user: l, guildId: n, disabled: i, errorMessageId: null != a ? t9 : void 0 }),
+            (0, t.jsx)(ny, { id: t7, message: (0, l$.d3)(r) }),
+            (0, t.jsx)(ny, { id: t9, message: a }),
         ],
     });
 }
@@ -2274,9 +2274,9 @@ function io(e) {
         disabled: i,
         showNitroIcon: !0,
         children: [
-            (0, t.jsx)(n5, { user: l, guildId: n, disabled: i || !r }),
-            (0, t.jsx)(no, { userId: l.id, guildId: n, disabled: i || !r, errorMessageId: null != a ? t9 : void 0 }),
-            (0, t.jsx)(ny, { id: t9, message: (0, l$.d3)(a) }),
+            (0, t.jsx)(n7, { user: l, guildId: n, disabled: i || !r }),
+            (0, t.jsx)(no, { userId: l.id, guildId: n, disabled: i || !r, errorMessageId: null != a ? t8 : void 0 }),
+            (0, t.jsx)(ny, { id: t8, message: (0, l$.d3)(a) }),
         ],
     });
 }
@@ -2368,7 +2368,7 @@ function im(e) {
         k = lJ.useConfig({ location: "UserProfileModalV2EditingPanel" }).enabled,
         T = x || p ? "inline" : A ? "hidden" : k ? "end" : "hidden",
         S = (0, t.jsx)(is, { user: l, guildId: i, disabled: j || h, errorMessage: P });
-    return (0, t.jsxs)(n9, {
+    return (0, t.jsxs)(n8, {
         hasGradientBackground: b,
         children: [
             (0, t.jsxs)("div", {
@@ -2434,7 +2434,7 @@ function im(e) {
         ],
     });
 }
-var ip = n(356965);
+var ip = n(110654);
 function ix(e) {
     return null;
 }
@@ -2493,7 +2493,7 @@ var iv = n(477155),
     iA = n(206697),
     ib = n(926321),
     ij = n(663417),
-    iI = n(597563);
+    iI = n(145934);
 let iy = "shuffle-options-a11y-description";
 function iC() {
     let { preset: e, onShuffle: l } = t0(),
@@ -2554,11 +2554,11 @@ function iC() {
               ],
           });
 }
-var iN = n(451125);
+var iN = n(280406);
 function iE(e) {
     let { user: l, onBack: n, backButtonRef: i } = e,
         r = tg();
-    return (0, t.jsxs)(n9, {
+    return (0, t.jsxs)(n8, {
         children: [
             (0, t.jsxs)("div", {
                 className: iN.wx,
@@ -2596,7 +2596,7 @@ function iE(e) {
         ],
     });
 }
-var iP = n(450579);
+var iP = n(199016);
 let ik = "user-profile-editing-panel",
     iT = "profile-modal-editing-panel-heading";
 function iS(e) {
@@ -2703,7 +2703,7 @@ var i_ = n(271383),
     iD = n(629403),
     iM = n(612630),
     iw = n(372638),
-    iG = n(674947);
+    iG = n(61426);
 function iF(e) {
     let { userId: l, className: n, autoFocus: r = !1, onUpdate: a } = e,
         o = (0, s.bG)([G.A], () => G.A.hidePersonalInformation),
@@ -2754,7 +2754,7 @@ function iF(e) {
 }
 var iV = n(83013),
     iU = n(518477),
-    iB = n(273781);
+    iB = n(793222);
 function iz(e) {
     let { userId: l } = e,
         n = (0, ev.g)(),
@@ -2773,8 +2773,8 @@ function iz(e) {
     });
 }
 var iW = n(123292),
-    iH = n(263293),
-    iq = n(871645);
+    iH = n(667242),
+    iq = n(655214);
 function iK(e) {
     let { icon: l, message: n, actionLabel: r, onAction: s, actionDisabled: o, type: d, autoFocus: u } = e,
         c = i.useRef(null);
@@ -2810,7 +2810,7 @@ function iK(e) {
 }
 var iY = n(346055),
     iX = n(289873),
-    i$ = n(103964);
+    i$ = n(615019);
 function iZ(e) {
     let { showScrim: l, showLoadingSpinner: n, className: r, children: s } = e;
     i.useEffect(() => {
@@ -2876,10 +2876,10 @@ function i1(e) {
 n(46121);
 var i2 = n(94160),
     i3 = n(933832),
-    i7 = n(972213),
-    i5 = n(97483),
-    i8 = n(775602),
-    i9 = n(384377);
+    i5 = n(972213),
+    i7 = n(97483),
+    i9 = n(775602),
+    i8 = n(384377);
 let i6 = {
         [iU.jM.WIDGET_ADDED]: {
             message: eq.intl.string(eq.t.fFP1Uy),
@@ -2891,19 +2891,19 @@ let i6 = {
         },
         [iU.jM.PROFILE_SAVE_GENERIC_FAILURE]: {
             message: eq.intl.string(eq.t["84MExs"]),
-            icon: (0, t.jsx)(i7.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: i5.Ck.FAILURE,
+            icon: (0, t.jsx)(i5.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
+            type: i7.Ck.FAILURE,
         },
         [iU.jM.SOMETHING_WENT_WRONG]: {
             message: eq.intl.string(eq.t.F8FvUy),
-            icon: (0, t.jsx)(i7.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: i5.Ck.FAILURE,
+            icon: (0, t.jsx)(i5.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
+            type: i7.Ck.FAILURE,
         },
     },
     i4 = (e) => {
         let { className: l } = e,
-            n = (0, i9.fu)(),
-            r = (0, s.bG)([i8.Ay], () => i8.Ay.useReducedMotion),
+            n = (0, i8.fu)(),
+            r = (0, s.bG)([i9.Ay], () => i9.Ay.useReducedMotion),
             [a, o] = i.useState(!1),
             [d, c] = i.useState(null);
         i.useEffect(() => {
@@ -2920,11 +2920,11 @@ let i6 = {
             "animate-always",
         );
         return (
-            i.useEffect(() => () => (0, i9.XA)(null), []),
+            i.useEffect(() => () => (0, i8.XA)(null), []),
             i.useEffect(() => {
                 if (a) {
                     let e = setTimeout(() => {
-                        (0, i9.XA)(null);
+                        (0, i8.XA)(null);
                     }, 2e3);
                     return () => clearTimeout(e);
                 }
@@ -2944,7 +2944,7 @@ var re = n(297413),
     rn = n(826673),
     rt = n(576705),
     ri = n(761431),
-    rr = n(530895);
+    rr = n(997394);
 function ra(e) {
     return null == e || "" === e ? void 0 : e;
 }
@@ -3069,7 +3069,7 @@ function rs(e) {
         disabled: !C,
     });
 }
-var ro = n(688960);
+var ro = n(628072);
 function rd(e) {
     let l,
         n,
@@ -3117,8 +3117,8 @@ var ru = n(145497),
     rg = n(318785),
     rm = n(534400),
     rf = n(743981),
-    rp = n(573109),
-    rx = n(832344);
+    rp = n(295930),
+    rx = n(594615);
 let rh = "no-server-tag";
 function rv(e) {
     let { buttonRef: l, guildId: n, guildTag: i, guildBadge: r, ...s } = e,
@@ -3226,7 +3226,7 @@ function rA() {
               },
           });
 }
-var rb = n(211180);
+var rb = n(956495);
 function rj(e) {
     let { displayProfile: l, nickname: n, displayNameStylesOverride: i, ...r } = e;
     return (0, t.jsx)(rl.Ay, {
@@ -3286,8 +3286,8 @@ var rN = n(97808),
     rS = n(562819),
     rO = n(19575),
     rR = n(339984),
-    r_ = n(145762),
-    rL = n(935485);
+    r_ = n(329801),
+    rL = n(884362);
 let rD = rO.Ay.getEnableHardwareAcceleration() ? rN.Js : rN.eu;
 function rM(e) {
     Promise.resolve().then(() => requestAnimationFrame(e));
@@ -3444,10 +3444,10 @@ function rG(e) {
               },
               children: [
                   (0, t.jsx)(rD, { ...r, imageClassName: a()(r_.Lw, rL.HU) }),
-                  (0, t.jsx)(l5.Y, {
+                  (0, t.jsx)(l7.Y, {
                       targetElementRef: c,
                       shouldShow: d,
-                      animation: l5.Y.Animation.NONE,
+                      animation: l7.Y.Animation.NONE,
                       position: "right",
                       align: "top",
                       onRequestClose: m,
@@ -3472,7 +3472,7 @@ function rG(e) {
               ],
           });
 }
-var rF = n(875262);
+var rF = n(514905);
 function rV(e) {
     let { onMenuClose: l, items: n, ...i } = e;
     return (0, t.jsx)(rE.W, {
@@ -3681,10 +3681,10 @@ function rU(e) {
               },
               children: [
                   (0, t.jsx)(eI.A, { ...e, className: rF.Pr }),
-                  (0, t.jsx)(l5.Y, {
+                  (0, t.jsx)(l7.Y, {
                       targetElementRef: d,
                       shouldShow: r,
-                      animation: l5.Y.Animation.NONE,
+                      animation: l7.Y.Animation.NONE,
                       position: "right",
                       align: "top",
                       onRequestClose: c,
@@ -3718,7 +3718,7 @@ var rH = n(913453),
     rK = n(389667),
     rY = n(837531),
     rX = n(186272),
-    r$ = n(800609);
+    r$ = n(447538);
 let rZ = (e) => e * (2 - e),
     rJ = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3.SIZE_96, avatarOffsetX: 16 } };
 function rQ(e) {
@@ -4017,7 +4017,7 @@ function r3(e) {
         });
     return (0, t.jsx)("div", { className: c, style: u, children: a });
 }
-function r7(e) {
+function r5(e) {
     let {
             user: l,
             currentUser: n,
@@ -4277,11 +4277,11 @@ function r7(e) {
         e1 = (0, K.Ay)(l.id, Z),
         e2 = void 0 !== eR ? eR?.skuId : e1?.profileFrame?.skuId,
         e3 = (0, N.A)(e2, "UserProfileModalV2"),
-        e7 = (0, C.A)(e2),
-        { profileFrameStyle: e5, profileFrameClassName: e8 } = (0, k.A)(e3);
+        e5 = (0, C.A)(e2),
+        { profileFrameStyle: e7, profileFrameClassName: e9 } = (0, k.A)(e3);
     (0, E.A)({ skuId: e1?.profileFrame?.skuId, openedAt: _, context: eJ, analyticsLocations: eZ });
-    let e9 = (0, s.bG)([F.default], () => B.Ay.canUsePremiumProfileCustomization(F.default.getCurrentUser())),
-        e6 = er || (X && null != e1 && e9),
+    let e8 = (0, s.bG)([F.default], () => B.Ay.canUsePremiumProfileCustomization(F.default.getCurrentUser())),
+        e6 = er || (X && null != e1 && e8),
         e4 = V.Ay.useName(e1?.guildId, c, l),
         le = (0, T.GV)(),
         ll = (0, s.bG)([M.A], () => (null != Z ? M.A.getGuild(Z) : null)),
@@ -4312,12 +4312,12 @@ function r7(e) {
                         children: [
                             (0, t.jsx)(i1, {
                                 children: (0, t.jsxs)("div", {
-                                    className: a()(r$.layoutContainer, e8, {
+                                    className: a()(r$.layoutContainer, e9, {
                                         [r$.editingPanelEnabled]: ep,
                                         [r$.editingPanelExpanded]: ep && eL,
                                         [r$.isAnimating]: eD,
                                     }),
-                                    style: e5,
+                                    style: e7,
                                     children: [
                                         (0, t.jsxs)(r3, {
                                             user: l,
@@ -4428,7 +4428,7 @@ function r7(e) {
                                                                     accentColorOverride: eT,
                                                                     profileEffectOverride: eO,
                                                                     profileFrame: e3,
-                                                                    fadeInProfileFrame: e7,
+                                                                    fadeInProfileFrame: e5,
                                                                     editingMode: ey,
                                                                     isLoading: Q,
                                                                 }),
@@ -4459,6 +4459,6 @@ function r7(e) {
         }),
     });
 }
-function r5(e) {
-    return (0, t.jsx)(lL.tM, { children: (0, t.jsx)(r7, { ...e }) });
+function r7(e) {
+    return (0, t.jsx)(lL.tM, { children: (0, t.jsx)(r5, { ...e }) });
 }

@@ -17,7 +17,7 @@ var i = n(477900),
     g = n(809369),
     C = n(1195),
     y = n(375708),
-    j = n(50044);
+    j = n(531281);
 function I(e) {
     let { title: t, image: n } = e;
     return (0, i.jsxs)(o.B, {

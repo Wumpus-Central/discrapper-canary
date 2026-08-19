@@ -87,7 +87,7 @@ var z = s(554146),
     em = s(576243),
     eg = s(49999),
     ex = s(375708),
-    ef = s(33125);
+    ef = s(862068);
 function ep(e) {
     let { premiumSubscription: t, content: s, markAsDismissed: i } = e,
         { analyticsLocations: n } = (0, j.Ay)(A.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
@@ -144,7 +144,7 @@ function ep(e) {
 var eh = s(428331),
     eN = s(315629),
     eA = s(65470),
-    ej = s(871261);
+    ej = s(719126);
 let eb = function (e) {
     let { className: t, location: s, analyticsLocation: i } = e,
         { analyticsLocations: n } = (0, j.Ay)(s);
@@ -228,7 +228,7 @@ function eH() {
         visibilityPercentage: t,
     };
 }
-var eF = s(949804);
+var eF = s(287763);
 let eV = function (e) {
     let { text: t } = e;
     return (0, c.jsx)("div", {
@@ -272,8 +272,8 @@ function e2() {
     return { referralSentUsers: i, nReferralsSent: n.size, hasEligibleFriends: a, allSent: l, bodyText: r };
 }
 var e7 = s(212737),
-    e6 = s(901532);
-function e3(e) {
+    e3 = s(162907);
+function e6(e) {
     let { startingScreen: t, analyticsLocations: i } = e;
     L.default.track(e1.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: i }),
         (0, ev.openModalLazy)(async () => {
@@ -281,31 +281,31 @@ function e3(e) {
             return (s) => (0, c.jsx)(e, { ...s, startingScreen: t });
         });
 }
-function e5(e) {
+function e8(e) {
     let { user: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, eZ.A)({ userId: t.id, size: eK._3.SIZE_24 });
     return (0, c.jsx)(
         eY.eu,
-        { className: e6.bj, src: s, "aria-label": (0, eQ.mG)(t), size: eK._3.SIZE_24, ...i },
+        { className: e3.bj, src: s, "aria-label": (0, eQ.mG)(t), size: eK._3.SIZE_24, ...i },
         t.id,
     );
 }
-function e8(e) {
+function e5(e) {
     let { slotIndex: t } = e;
-    return (0, c.jsx)("div", { className: e6.p, children: t });
+    return (0, c.jsx)("div", { className: e3.p, children: t });
 }
 function e9(e) {
     let { referralSentUsers: t, className: s } = e;
     return (0, c.jsx)("div", {
-        className: u()(e6.L$, s),
+        className: u()(e3.L$, s),
         children: (function () {
             let e = [];
             for (let s = 0; s < e0.Z; s++)
                 if (t?.[s] !== void 0) {
-                    let i = (0, c.jsx)(e5, { user: t[s] }, t[s].id);
+                    let i = (0, c.jsx)(e8, { user: t[s] }, t[s].id);
                     e.push(i);
                 } else {
-                    let t = (0, c.jsx)(e8, { slotIndex: s + 1 }, s);
+                    let t = (0, c.jsx)(e5, { slotIndex: s + 1 }, s);
                     e.push(t);
                 }
             return e;
@@ -317,10 +317,10 @@ function e4(e) {
     return (0, c.jsx)(eX.a, {
         percent: 33.3 * t,
         colorOverride: "#53ac66",
-        background: i ?? e6.cq,
+        background: i ?? e3.cq,
         strokeSize: 0.8,
-        ringColorOverrideClassName: n ?? e6.e0,
-        overlayClassName: t === e0.Z ? e6.ys : void 0,
+        ringColorOverrideClassName: n ?? e3.e0,
+        overlayClassName: t === e0.Z ? e3.ys : void 0,
         children: (0, c.jsx)(eq._, {
             src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
             height: s,
@@ -333,15 +333,15 @@ function te(e) {
     let { className: t } = e,
         { referralSentUsers: s, nReferralsSent: i, hasEligibleFriends: n, allSent: a, bodyText: l } = e2();
     return (0, c.jsxs)("div", {
-        className: u()(e6.kL, t),
+        className: u()(e3.kL, t),
         children: [
-            (0, c.jsx)("div", { className: e6.G3, children: (0, c.jsx)(e4, { nReferralsSent: i }) }),
+            (0, c.jsx)("div", { className: e3.G3, children: (0, c.jsx)(e4, { nReferralsSent: i }) }),
             (0, c.jsxs)("div", {
-                className: e6.IH,
+                className: e3.IH,
                 children: [
-                    (0, c.jsx)(e9, { referralSentUsers: s, className: e6.GV }),
+                    (0, c.jsx)(e9, { referralSentUsers: s, className: e3.GV }),
                     (0, c.jsxs)("div", {
-                        className: e6.n4,
+                        className: e3.n4,
                         children: [
                             (0, c.jsx)(er.D, {
                                 variant: "heading-lg/semibold",
@@ -356,7 +356,7 @@ function te(e) {
                         disabled: !1 === n || !0 === a,
                         text: ex.intl.string(ex.t.Lm2nFc),
                         onClick: () =>
-                            e3({ startingScreen: e7.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
+                            e6({ startingScreen: e7.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
                     }),
                 ],
             }),
@@ -367,7 +367,7 @@ var tt = s(792656),
     ts = s(989349),
     ti = s.n(ts),
     tn = s(496431),
-    ta = s(499449);
+    ta = s(850292);
 let tl = function (e) {
     let { expiresAt: t, className: s, digitTextVariant: i = "text-md/medium" } = e,
         n = (0, tn.A)(ti()(t).toDate(), 1e3);
@@ -461,7 +461,7 @@ let tl = function (e) {
 var tr = s(473702),
     tc = s(609425),
     to = s(660184),
-    td = s(16716);
+    td = s(938767);
 function tu() {
     let e = (0, g.bG)([D.default], () => D.default.getCurrentUser()),
         t = (0, tc.A)(),
@@ -486,7 +486,7 @@ function tu() {
     });
 }
 var tm = s(707554),
-    tg = s(155199);
+    tg = s(628154);
 let tx = function (e) {
     let { className: t, color: s = "text-strong", responsive: i = !0, children: n } = e;
     return (0, c.jsx)(tm.F, {
@@ -499,7 +499,7 @@ let tx = function (e) {
         }),
     });
 };
-var tf = s(728277);
+var tf = s(558992);
 function tp(e) {
     let { className: t } = e,
         { referralSentUsers: s, nReferralsSent: i, hasEligibleFriends: n, allSent: a, bodyText: l } = e2();
@@ -537,7 +537,7 @@ function tp(e) {
                 disabled: !1 === n || !0 === a,
                 text: ex.intl.string(ex.t.Lm2nFc),
                 onClick: () =>
-                    e3({ startingScreen: e7.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
+                    e6({ startingScreen: e7.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
             }),
         ],
     });
@@ -613,7 +613,7 @@ let tC = (e) => {
               children: d,
           });
 };
-var tE = s(181195);
+var tE = s(382168);
 let tT = function (e) {
     let {
         isMotionReduced: t,
@@ -864,7 +864,7 @@ let tv =
             ],
         });
     };
-var tP = s(776540);
+var tP = s(942663);
 let ty = function (e) {
     let { containerVisibilityPercentage: t, compact: s } = e;
     return (0, c.jsx)(t_, {
@@ -883,7 +883,7 @@ let ty = function (e) {
     });
 };
 var tS = (((a = {}).MORNING = "morning"), (a.AFTERNOON = "afternoon"), (a.EVENING = "evening"), a),
-    tD = s(884888);
+    tD = s(454273);
 let tM = function (e) {
     let t,
         s,
@@ -953,7 +953,7 @@ let tM = function (e) {
         }),
     });
 };
-var tO = s(460508);
+var tO = s(924864);
 let tL =
         "https://cdn.discordapp.com/assets/content/30b4235a9a15735cae3f814c3389942356e6138fe5651945028afff3b421202b.png",
     tk = function (e) {
@@ -992,7 +992,7 @@ let tL =
             ],
         });
     };
-var tU = s(529859);
+var tU = s(549926);
 let tG = function (e) {
     let { containerVisibilityPercentage: t } = e;
     return (0, c.jsx)(t_, {
@@ -1010,7 +1010,7 @@ let tG = function (e) {
         animationSpeedScale: 1 / 0.7,
     });
 };
-var tw = s(219351);
+var tw = s(499126);
 function tB(e) {
     let { containerVisibilityPercentage: t } = e;
     return (0, c.jsx)(t_, {
@@ -1047,24 +1047,24 @@ var tF = s(202541);
 function tV(e, t, i) {
     (0, ev.openModalLazy)(async () => {
         let { PremiumBrandRefreshSubscriptionCancellationModal: n } = await Promise.all([
-            s.e("191170"),
-            s.e("442394"),
-            s.e("223102"),
-            s.e("902285"),
-            s.e("97726"),
-            s.e("144459"),
-            s.e("398986"),
-            s.e("237467"),
-            s.e("60411"),
-            s.e("61298"),
-            s.e("380197"),
-            s.e("261275"),
-            s.e("130072"),
-            s.e("426572"),
-            s.e("518629"),
-            s.e("848132"),
-            s.e("564729"),
-            s.e("805549"),
+            s.e("489361"),
+            s.e("227853"),
+            s.e("349687"),
+            s.e("128804"),
+            s.e("71151"),
+            s.e("286615"),
+            s.e("311541"),
+            s.e("472847"),
+            s.e("870088"),
+            s.e("287353"),
+            s.e("718368"),
+            s.e("258407"),
+            s.e("153302"),
+            s.e("758053"),
+            s.e("836576"),
+            s.e("983513"),
+            s.e("216806"),
+            s.e("310734"),
             s.e("762332"),
             s.e("208607"),
             s.e("127962"),
@@ -1072,8 +1072,8 @@ function tV(e, t, i) {
             s.e("907167"),
             s.e("861060"),
             s.e("752457"),
-            s.e("806338"),
-            s.e("747834"),
+            s.e("882722"),
+            s.e("950106"),
             s.e("797595"),
             s.e("413736"),
             s.e("544571"),
@@ -1500,29 +1500,29 @@ var tQ = s(820284),
     t0 = s(392943),
     t1 = s(876587),
     t2 = s(400669),
-    t7 = s(590319),
-    t6 = s(897351);
-let t3 = function () {
+    t7 = s(603202),
+    t3 = s(673992);
+let t6 = function () {
     let e = (0, t$.Gh)("nitro_home_header"),
         t = o.useRef(null);
     return (0, c.jsxs)(tQ.A, {
         section: e1.JJy.NAVIGATION,
         children: [
             (0, c.jsx)(tJ.A, {
-                className: u()(t7.TQ, t6.C$),
+                className: u()(t7.TQ, t3.C$),
                 transparent: !0,
                 role: "navigation",
                 children: (0, c.jsxs)("div", {
                     className: t7.Wc,
                     children: [
                         (0, c.jsxs)("div", {
-                            className: t6.wk,
+                            className: t3.wk,
                             children: [
-                                (0, c.jsx)(ed.t, { colorClass: t6.tr }),
+                                (0, c.jsx)(ed.t, { colorClass: t3.tr }),
                                 (0, c.jsx)("span", {
                                     role: "img",
                                     "aria-label": ex.intl.string(ex.t.Ipxkog),
-                                    className: t6.Ss,
+                                    className: t3.Ss,
                                     children: (0, c.jsx)(t0.A, { color: "currentColor" }),
                                 }),
                             ],
@@ -1546,8 +1546,8 @@ let t3 = function () {
         ],
     });
 };
-var t5 = s(325499),
-    t8 = s(562708),
+var t8 = s(325499),
+    t5 = s(562708),
     t9 = s(885574),
     t4 = s(43990),
     se = s(993077),
@@ -1558,8 +1558,8 @@ var t5 = s(325499),
     sa = s(375776),
     sl = s(727811),
     sr = s(222652),
-    sc = s(933287),
-    so = s(355982);
+    sc = s(477767),
+    so = s(934353);
 function sd(e) {
     let { openRewardModal: t } = e,
         s = (0, sr.z)();
@@ -1622,14 +1622,14 @@ function sd(e) {
 function su(e) {
     let { glowing: t = !1 } = e;
     (0, st.A)({
-        type: t8.ImpressionTypes.VIEW,
-        name: t8.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+        type: t5.ImpressionTypes.VIEW,
+        name: t5.ImpressionNames.PERK_DISCOVERABILITY_CARD,
         properties: { name: si.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
     });
     let { analyticsLocations: i } = (0, j.Ay)(A.A.CROISSANT_PREMIUM_HERO_CARD),
         n = o.useCallback(() => {
             (0, ev.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([s.e("152283"), s.e("813088")]).then(s.bind(s, 347171));
+                let { default: e } = await Promise.all([s.e("878140"), s.e("813088")]).then(s.bind(s, 347171));
                 return (t) => (0, c.jsx)(e, { ...t, sourceAnalyticsLocations: i });
             });
         }, [i]);
@@ -1730,8 +1730,8 @@ function sx(e) {
     let { analyticsLocations: t } = (0, j.Ay)(A.A.CROISSANT_PREMIUM_PERK_CARD);
     return (0, c.jsx)(j.f5, { value: t, children: (0, c.jsx)(sg, { ...e }) });
 }
-var sf = s(54471),
-    sp = s(574377);
+var sf = s(700556),
+    sp = s(821874);
 function sh(e) {
     let { id: t, sectionClassName: s, heading: i, beforeGrid: n, grid: a, gridClassName: l } = e,
         r = sp.Ui;
@@ -1754,8 +1754,8 @@ var sN = s(789861),
     sT = s(852218),
     sR = s(161319),
     sv = s(672787),
-    sI = s(806343),
-    s_ = s(962995);
+    sI = s(221799),
+    s_ = s(555091);
 let sP =
         "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
     sy =
@@ -1769,7 +1769,7 @@ function sS() {
         a = (0, sj.Zk)({ location: "useHardwarePartnerPerkCards" }),
         l = (0, sj.S9)({ location: "useHardwarePartnerPerkCards" }),
         r = null === (0, sE.N)(),
-        d = (0, t5.b)("useHardwarePartnerPerkCards"),
+        d = (0, t8.b)("useHardwarePartnerPerkCards"),
         { currentDate: u, nDaysInMonth: m } = (0, o.useMemo)(() => {
             let e = new Date();
             return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
@@ -1870,11 +1870,11 @@ function sS() {
         };
     }, [d, e, t, s, u, i, m, n, a, l, r]);
 }
-var sD = s(166634);
+var sD = s(762493);
 let sM = "xgpp";
 function sO(e) {
     let { glowingSectionId: t, glowingPerkId: s } = e,
-        i = (0, t5.b)("premium_subscriber_home_rewards"),
+        i = (0, t8.b)("premium_subscriber_home_rewards"),
         { callOfDutyCard: n, expiredCallOfDutyCard: a, logitechCard: l, steelseriesCard: r } = sS();
     if (!i) return null;
     let o = null != n || null != a || null != l || null != r;
@@ -1900,7 +1900,7 @@ function sO(e) {
             : null,
     });
 }
-var sL = s(687636),
+var sL = s(313133),
     sk = s(67423);
 let sU = function (e) {
     let { isVisible: t, premiumSubscription: i, churnDiscountOffer: n, discountedPrice: a } = e,
@@ -1944,24 +1944,24 @@ let sU = function (e) {
                     onClick: () =>
                         void (0, ev.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                                s.e("191170"),
-                                s.e("442394"),
-                                s.e("223102"),
-                                s.e("902285"),
-                                s.e("97726"),
-                                s.e("144459"),
-                                s.e("398986"),
-                                s.e("237467"),
-                                s.e("60411"),
-                                s.e("61298"),
-                                s.e("380197"),
-                                s.e("261275"),
-                                s.e("130072"),
-                                s.e("426572"),
-                                s.e("518629"),
-                                s.e("848132"),
-                                s.e("564729"),
-                                s.e("805549"),
+                                s.e("489361"),
+                                s.e("227853"),
+                                s.e("349687"),
+                                s.e("128804"),
+                                s.e("71151"),
+                                s.e("286615"),
+                                s.e("311541"),
+                                s.e("472847"),
+                                s.e("870088"),
+                                s.e("287353"),
+                                s.e("718368"),
+                                s.e("258407"),
+                                s.e("153302"),
+                                s.e("758053"),
+                                s.e("836576"),
+                                s.e("983513"),
+                                s.e("216806"),
+                                s.e("310734"),
                                 s.e("762332"),
                                 s.e("208607"),
                                 s.e("127962"),
@@ -1969,8 +1969,8 @@ let sU = function (e) {
                                 s.e("907167"),
                                 s.e("861060"),
                                 s.e("752457"),
-                                s.e("806338"),
-                                s.e("747834"),
+                                s.e("882722"),
+                                s.e("950106"),
                                 s.e("797595"),
                                 s.e("413736"),
                                 s.e("544571"),
@@ -2159,10 +2159,10 @@ function s0(e) {
 var s1 = s(462887),
     s2 = s(736653),
     s7 = s(259065),
-    s6 = s(206835),
-    s3 = s(591179),
-    s5 = s(462463),
-    s8 = s(878784),
+    s3 = s(206835),
+    s6 = s(591179),
+    s8 = s(462463),
+    s5 = s(878784),
     s9 = s(425713),
     s4 = s(696292),
     ie = s(192444),
@@ -2170,8 +2170,8 @@ var s1 = s(462887),
     is = s(892227),
     ii = s(81466),
     ia = s(318254),
-    il = s(490285),
-    ir = s(165815);
+    il = s(131277),
+    ir = s(749012);
 let ic = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, q.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
@@ -2232,7 +2232,7 @@ let ic = function () {
 };
 var io = s(758836),
     id = s(190107),
-    iu = s(55684);
+    iu = s(799544);
 function im(e) {
     let { shouldShowBonusOrbsUX: t, multiplier: s } = (0, ie.lk)(id.rE.NITRO_HOME_MARKETING),
         { isEligible: i, programReward: n } = (0, q.F)({ location: e });
@@ -2275,7 +2275,7 @@ var ig = s(975807),
     ix = s(95035),
     ip = s(862990),
     ih = s(88001),
-    iN = s(466919),
+    iN = s(109447),
     iA = s(817577);
 function ij() {
     (0, ig.A)(ih.TE);
@@ -2336,7 +2336,7 @@ var iC = s(562819),
     iI = s(764231),
     i_ = s(627380),
     iP = s(30084),
-    iy = s(111881),
+    iy = s(814014),
     iS = s(714206);
 let iD =
         "https://cdn.discordapp.com/assets/content/cd580e29aa6ad4aa731dba64c23331d6bc556ad2e236ec1b5781206f6e71cb50.svg",
@@ -2349,11 +2349,11 @@ function iL() {
         t,
         s,
         { analyticsLocations: i } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
-        n = (0, s3.X)("useWhatsNewPerkCards"),
+        n = (0, s6.X)("useWhatsNewPerkCards"),
         { callOfDutyCard: a, expiredCallOfDutyCard: l, logitechCard: r, steelseriesCard: d } = sS(),
-        m = (0, t5.b)("premium_subscriber_home_rewards"),
+        m = (0, t8.b)("premium_subscriber_home_rewards"),
         { showEaPremiumMarketing: x } = (0, iE.z$)("useWhatsNewPerkCards"),
-        f = (0, s5.A)({ analyticsLocations: i }),
+        f = (0, s8.A)({ analyticsLocations: i }),
         p = (0, o.useCallback)(() => {
             (0, eS.openUserSettings)(ey.X.PROFILE_PANEL, { analyticsLocations: i }, () =>
                 (0, s7.L)({ analyticsLocations: i }),
@@ -2370,18 +2370,18 @@ function iL() {
         b = (function (e) {
             let { fractionalState: t } = (0, eP.A)(),
                 s = t === tF.xc.FP_ONLY,
-                i = (0, s8.$F)(),
-                n = (0, s8.Xb)(),
-                a = i?.status === s8.Wo.UPCOMING || s,
+                i = (0, s5.$F)(),
+                n = (0, s5.Xb)(),
+                a = i?.status === s5.Wo.UPCOMING || s,
                 l = (0, s9.N)(i?.id),
                 r = (function () {
-                    let e = (0, s8.$F)(),
+                    let e = (0, s5.$F)(),
                         t = (0, iv.P)(),
-                        s = (0, s8.Xb)();
+                        s = (0, s5.Xb)();
                     if (null == e || null == t || null == s) return null;
                     let i = ti()(),
                         n = ti()(s),
-                        a = e.status === s8.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
+                        a = e.status === s5.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
                         l = t.tenureReqNumMonths,
                         r = n.clone().add(a, "months"),
                         c = n.clone().add(l, "months").diff(r);
@@ -2396,7 +2396,7 @@ function iL() {
                 null == i
                     ? s && (t = (0, iI.T)(tF.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
                     : (t =
-                          i.status === s8.Wo.UPCOMING
+                          i.status === s5.Wo.UPCOMING
                               ? ex.intl.formatToPlainString(ex.t.a1eKDi, { days: d?.days ?? 0 })
                               : ((function (e, t) {
                                     if (null != e && null != t) {
@@ -2544,7 +2544,7 @@ let iB = [
     { id: "upgrades", label: () => ex.intl.string(ex.t.KC5q8v) },
     { id: "vip", label: () => ex.intl.string(ex.t.DjEAcv) },
 ];
-var iH = s(631255);
+var iH = s(18290);
 function iF(e) {
     e.stopPropagation();
 }
@@ -2552,11 +2552,11 @@ function iV(e) {
     let { glowingPerkId: t = null } = e,
         s = (function () {
             let e = (0, s2.DP)(),
-                t = (0, s3.X)("useFavoritesPerkCards"),
-                s = (0, s8.Lh)(),
+                t = (0, s6.X)("useFavoritesPerkCards"),
+                s = (0, s5.Lh)(),
                 i = (0, s9.N)(s)?.standard ?? null,
                 { analyticsLocations: n } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
-                a = (0, s6.A)({ scrollPosition: ik._F.TRY_IT_OUT, analyticsLocations: n }),
+                a = (0, s3.A)({ scrollPosition: ik._F.TRY_IT_OUT, analyticsLocations: n }),
                 l = (0, o.useCallback)(() => {
                     (0, eS.openUserSettings)(ey.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: n });
                 }, [n]),
@@ -2572,7 +2572,7 @@ function iV(e) {
                 m = (0, o.useCallback)(() => {
                     (0, eS.openUserSettings)(ey.X.SOUNDBOARD_CATEGORY, { analyticsLocations: n });
                 }, [n]),
-                g = (0, s5.A)({ analyticsLocations: n }),
+                g = (0, s8.A)({ analyticsLocations: n }),
                 x = (0, o.useCallback)(() => {
                     (0, eS.openUserSettings)(ey.X.PROFILE_PANEL, { analyticsLocations: n }, () =>
                         (0, s7.L)({ analyticsLocations: n }),
@@ -2771,7 +2771,7 @@ function iV(e) {
         ],
     });
 }
-var iz = s(411450);
+var iz = s(72979);
 let iW = function (e) {
     let { className: t } = e,
         s = (0, s2.DP)();
@@ -2781,7 +2781,7 @@ let iW = function (e) {
         alt: "",
     });
 };
-var iK = s(300758);
+var iK = s(684251);
 let iY = function (e) {
     let {
         shouldRenderNitroHomeHeaderExperiment: t,
@@ -2792,7 +2792,7 @@ let iY = function (e) {
     return t || s
         ? (0, c.jsxs)("div", {
               className: u()(iK.kL, iK.Gd, iK.Eg),
-              children: [(0, c.jsx)(iW, {}), (0, c.jsx)(t3, {}), n],
+              children: [(0, c.jsx)(iW, {}), (0, c.jsx)(t6, {}), n],
           })
         : (0, c.jsx)(eN.h, { color: "nitro-pink", className: u()(iK.kL, iK.Gd), offsetBottom: i, children: n });
 };
@@ -2995,7 +2995,7 @@ let iQ = "/assets/cd2be35d285d4675.svg",
               ? (0, c.jsxs)("div", {
                     className: u()(iK.kL, iK.Lq, iK.TN, iK.Eg),
                     children: [
-                        (0, c.jsx)(t3, {}),
+                        (0, c.jsx)(t6, {}),
                         (0, c.jsx)("div", { className: iK.S, children: (0, c.jsx)(x.y, {}) }),
                     ],
                 })
@@ -3011,28 +3011,28 @@ let i7 = (0, w.mj)({
     defaultConfig: !1,
     variations: { 0: !1, 1: !0 },
 });
-var i6 = s(860839);
-let i3 =
+var i3 = s(860839);
+let i6 =
     "https://cdn.discordapp.com/assets/content/dfb187cfa9d267774f50c4f67cb7628658cefc11db41c6a04c08fc5aadc9dbcc.png";
-function i5(e) {
+function i8(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
-        src: i3,
-        srcSet: `${i3} 1x, https://cdn.discordapp.com/assets/content/adb910c257d7510b97da4dccb2a4cea5f3a3fc6eb225dbfbbef0dd9d2a1971bf.png 2x`,
+        src: i6,
+        srcSet: `${i6} 1x, https://cdn.discordapp.com/assets/content/adb910c257d7510b97da4dccb2a4cea5f3a3fc6eb225dbfbbef0dd9d2a1971bf.png 2x`,
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
         role: n ?? "img",
     });
 }
-var i8 = s(783420),
+var i5 = s(783420),
     i9 = s(204413),
     i4 = s(245383),
     ne = s(824069),
     nt = s(785007),
     ns = s(508770),
-    ni = s(377541);
+    ni = s(947910);
 function nn(e) {
     let { value: t, planRadioOptions: s, ...i } = e,
         n = s.map((e) => {
@@ -3145,12 +3145,12 @@ function nx(e) {
           ? ex.intl.format(ex.t.G88D2T, { discountedPrice: a, numYears: i, regularPrice: n })
           : ex.intl.format(ex.t["x+qUAi"], { discountedPrice: a, numMonths: i, regularPrice: n });
 }
-var nf = s(883519);
+var nf = s(614488);
 function np(e) {
     let { skuId: t, selectedPlanId: s, subscribeButtonProps: i } = e,
         n = null == s || !0 === i.disabled,
         a = null == s ? "secondary" : i.variant;
-    return (0, c.jsx)(i8.A, {
+    return (0, c.jsx)(i5.A, {
         subscriptionTier: t,
         initialPlanId: s,
         shouldDisallowPlanSelection: !0,
@@ -3304,13 +3304,13 @@ function nh(e) {
                     fullWidth: !0,
                     className: nf.qT,
                     children: i
-                        ? (0, c.jsx)(i6.ZP, {
-                              featureSet: i6.Nz.DEFAULT,
+                        ? (0, c.jsx)(i3.ZP, {
+                              featureSet: i3.Nz.DEFAULT,
                               isApplicationHome: !0,
                               enablePremiumBrandRefresh: !0,
                               textVariant: "text-md/medium",
                           })
-                        : (0, c.jsx)(i6.nH, {
+                        : (0, c.jsx)(i3.nH, {
                               enablePremiumBrandRefresh: !0,
                               isApplicationHome: !0,
                               textVariant: "text-md/medium",
@@ -3360,7 +3360,7 @@ function nh(e) {
                   (0, c.jsx)("div", {
                       className: nf.kX,
                       "aria-hidden": !0,
-                      children: (0, c.jsx)(i5, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
+                      children: (0, c.jsx)(i8, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
                   b,
               ],
@@ -3383,7 +3383,7 @@ function nN(e) {
                   premiumGroupProductName: (0, ih.DP)(),
               })
             : ex.intl.string(ex.t["2pG5Ga"]),
-        p = (0, c.jsx)(i8.A, {
+        p = (0, c.jsx)(i5.A, {
             subscriptionTier: tF.pe.TIER_2,
             initialPlanId: tF.gD.PREMIUM_GROUP_MONTH,
             children: (e) => {
@@ -3468,7 +3468,7 @@ function nN(e) {
                     gap: 0,
                     fullWidth: !0,
                     className: nf.qT,
-                    children: (0, c.jsx)(i6.Lg, { isApplicationHome: !0, textVariant: "text-md/medium" }),
+                    children: (0, c.jsx)(i3.Lg, { isApplicationHome: !0, textVariant: "text-md/medium" }),
                 }),
                 (0, c.jsx)("hr", { className: nf.yF }),
                 (0, c.jsxs)("div", {
@@ -3502,7 +3502,7 @@ function nN(e) {
 function nA(e) {
     let { innerRef: t, className: s } = e,
         { analyticsLocations: i } = (0, j.Ay)(A.A.PREMIUM_MARKETING_TIER_CARD),
-        n = (0, i6.pw)(t),
+        n = (0, i3.pw)(t),
         a = (0, ip.PA)(),
         l = (0, g.bG)([eI.Ay], () => eI.Ay.useReducedMotion),
         r = { [nf.iR]: !l };
@@ -3572,7 +3572,7 @@ var nT =
         (r.PLANS = "plans"),
         (r.COMPARE = "compare"),
         r),
-    nR = s(5571);
+    nR = s(352756);
 let nv = function (e) {
     let { isVisible: t, subscriptionTier: s, isEligibleForBogoPromotion: i } = e,
         n = (0, ea.z)({
@@ -3600,7 +3600,7 @@ let nv = function (e) {
         }),
     });
 };
-var nI = s(685661);
+var nI = s(573710);
 let n_ = function () {
     let e = (0, th.bG)([eI.Ay], () => eI.Ay.useReducedMotion);
     return (0, c.jsxs)(c.Fragment, {
@@ -3631,7 +3631,7 @@ let n_ = function () {
         ],
     });
 };
-var nP = s(502701);
+var nP = s(989756);
 let ny = o.forwardRef((e, t) => {
     let { analyticsLocations: s } = (0, j.Ay)(A.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, c.jsx)(j.f5, {
@@ -3730,7 +3730,7 @@ var nM = s(704333),
     nU = s(866665),
     nG = s(406860),
     nw = s(870975),
-    nB = s(900485);
+    nB = s(698834);
 function nH() {
     let { sectionRef: e, handleVisibilityChange: t } = (0, nG.A)({ boxType: sa.$, thirdPartyPartner: "xbox" }),
         s = [
@@ -3849,7 +3849,7 @@ function nH() {
 }
 var nF = s(750338),
     nV = s(387640),
-    nz = s(950228);
+    nz = s(505051);
 function nW(e) {
     let {
         className: t,
@@ -3899,7 +3899,7 @@ function nW(e) {
     });
 }
 let nK = o.memo(function (e) {
-        let t = (0, t5.b)("premium_marketing_bento"),
+        let t = (0, t8.b)("premium_marketing_bento"),
             { whatsNewBoxes: s } = (0, nV.Ay)(t);
         return (0, c.jsx)(nW, {
             boxLayout: s,
@@ -3920,7 +3920,7 @@ let nK = o.memo(function (e) {
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 var nq = s(236834),
-    nZ = s(167805);
+    nZ = s(540504);
 function nQ(e) {
     let { referrer: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, eZ.A)({ userId: t?.id, size: eK._3.SIZE_24, animateOnHover: !0 });
@@ -3955,7 +3955,7 @@ function n1() {
     let e = (0, g.bG)([nl.A], () => nl.A.getForSkuAndInterval((0, eO.mH)(tF.pe.TIER_0), tF.WT.MONTH));
     return null != e ? (0, eO.sS)(e) : "\u2026";
 }
-var n2 = s(857681);
+var n2 = s(508556);
 let n7 = function (e) {
     let { containerVisibilityPercentage: t } = e,
         s = (0, th.bG)([eI.Ay], () => eI.Ay.useReducedMotion),
@@ -3988,8 +3988,8 @@ let n7 = function (e) {
         ],
     });
 };
-var n6 = s(507256);
-let n3 = o.memo(
+var n3 = s(14057);
+let n6 = o.memo(
     o.forwardRef(function (e, t) {
         let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
             { analyticsLocations: a } = (0, j.Ay)(A.A.PREMIUM_MARKETING_HERO_CTA),
@@ -4011,38 +4011,38 @@ let n3 = o.memo(
             value: a,
             children: (0, c.jsx)("div", {
                 ref: t,
-                className: u()(n6.kL, s),
+                className: u()(n3.kL, s),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, c.jsx)("div", {
                     ref: m,
                     children: (0, c.jsxs)("div", {
-                        className: n6.hQ,
+                        className: n3.hQ,
                         children: [
                             (0, c.jsx)(n7, { containerVisibilityPercentage: x }),
                             b && (0, c.jsx)(n0, {}),
                             (0, c.jsx)("div", {
-                                className: n6.s8,
+                                className: n3.s8,
                                 children: (0, c.jsx)(tm.F, {
                                     forceLevel: 1,
                                     children: (0, c.jsx)(er.D, {
                                         variant: "display-md",
                                         color: "text-strong",
-                                        className: n6.wx,
+                                        className: n3.wx,
                                         children: ex.intl.string(ex.t.YCZldK),
                                     }),
                                 }),
                             }),
                             (0, c.jsxs)("div", {
-                                className: n6.rf,
+                                className: n3.rf,
                                 children: [
                                     d &&
                                         (0, c.jsx)("div", {
-                                            className: n6.eZ,
+                                            className: n3.eZ,
                                             children: (0, c.jsx)(nQ, { referrer: o }),
                                         }),
                                     p &&
                                         (0, c.jsx)("div", {
-                                            className: n6.Qn,
+                                            className: n3.Qn,
                                             children: (0, c.jsx)(nJ.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
@@ -4051,7 +4051,7 @@ let n3 = o.memo(
                                             }),
                                         }),
                                     (0, c.jsxs)("div", {
-                                        className: b ? n6.es : n6.UJ,
+                                        className: b ? n3.es : n3.UJ,
                                         children: [
                                             (0, c.jsx)(tt.A, {
                                                 size: "md",
@@ -4064,7 +4064,7 @@ let n3 = o.memo(
                                         ],
                                     }),
                                     (0, c.jsx)("div", {
-                                        className: n6.iQ,
+                                        className: n3.iQ,
                                         children: (0, c.jsx)(ec.E, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
@@ -4090,28 +4090,28 @@ let n3 = o.memo(
         });
     }),
 );
-var n5 = s(820081),
-    n8 = s(140735),
+var n8 = s(820081),
+    n5 = s(140735),
     n9 = s(401432),
     n4 = s(580630),
     ae = s(795269),
     at = s(84483),
-    as = s(864386),
-    ai = s(509826),
+    as = s(955298),
+    ai = s(55647),
     an = s(202600);
 function aa(e) {
     let { includes: t } = e;
     return t
         ? (0, c.jsxs)(c.Fragment, {
               children: [
-                  (0, c.jsx)(n5.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
+                  (0, c.jsx)(n8.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
               ],
           })
         : (0, c.jsxs)(c.Fragment, {
               children: [
                   (0, c.jsx)(n9.a, { size: "xs", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t.l4qZrp) }),
+                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t.l4qZrp) }),
               ],
           });
 }
@@ -4221,7 +4221,7 @@ let ad = function (e) {
             p = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_0),
             h = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_2),
             N = (function () {
-                let e = (0, t5.b)("premium_marketing_comparison"),
+                let e = (0, t8.b)("premium_marketing_comparison"),
                     t = [
                         {
                             id: 10,
@@ -4532,7 +4532,7 @@ let ad = function (e) {
         );
     };
 var am = s(818348),
-    ag = s(952661);
+    ag = s(773188);
 function ax(e) {
     let { innerRef: t, isPlanSelectUiRedesignEnabled: s } = e;
     return s ? (0, c.jsx)(nA, { innerRef: t }) : (0, c.jsx)(nj.jP, { innerRef: t });
@@ -4608,7 +4608,7 @@ let af = () => {
                                 onChange: (e) => p(e),
                                 threshold: 0,
                                 active: !0,
-                                children: (0, c.jsx)(n3, {
+                                children: (0, c.jsx)(n6, {
                                     ref: n,
                                     subscriptionTier: y,
                                     isEligibleForBogoPromotion: S,
@@ -4670,7 +4670,7 @@ var ap = s(862482),
     aj = s(396375),
     ab = s(815846),
     aC = s(695366),
-    aE = s(107736);
+    aE = s(370049);
 let aT = function (e) {
     let t,
         s,
@@ -4716,7 +4716,7 @@ let aT = function (e) {
         })
     );
 };
-var aR = s(697335);
+var aR = s(978836);
 let av = function (e) {
     let { lifted: t = !1 } = e;
     return (0, c.jsxs)("svg", {
@@ -4755,7 +4755,7 @@ let av = function (e) {
 var aI = s(900797),
     a_ = s(847374),
     aP = s(812993),
-    ay = s(504041);
+    ay = s(614268);
 function aS(e) {
     let { className: t } = e;
     return (0, c.jsx)(aP.Lp, { className: u()(ay.T, t), text: ex.intl.string(ex.t.EYxi0o) });
@@ -4768,7 +4768,7 @@ let aL = "/assets/5b4fec8511c3676a.svg",
 function aU(e, t, s) {
     return (0, s1.M)(e) ? t : s;
 }
-var aG = s(365742);
+var aG = s(872461);
 function aw(e) {
     let { isShowingAll: t, onClick: s } = e;
     return (0, c.jsxs)(nS.D, {
@@ -4832,7 +4832,7 @@ let aH = function (e) {
         l = (function (e) {
             let { styles: t } = e,
                 i = (0, s2.Ay)(),
-                n = (0, s3.X)("usePerkCards"),
+                n = (0, s6.X)("usePerkCards"),
                 a = (0, th.bG)([D.default], () => {
                     let e = D.default.getCurrentUser();
                     return eO.Ay.canUsePremiumProfileCustomization(e);
@@ -5012,7 +5012,7 @@ let aH = function (e) {
     });
 };
 var aF = s(194509),
-    aV = s(222214);
+    aV = s(317587);
 let az = function (e) {
     let { isVisible: t, subscriptionTier: s, isApplicationHome: i, isEligibleForBogoPromotion: n } = e,
         a = (0, ea.z)({
@@ -5043,7 +5043,7 @@ let az = function (e) {
         }),
     });
 };
-var aW = s(93805);
+var aW = s(386564);
 function aK(e) {
     let {
             inOfferExperience: t,
@@ -5142,8 +5142,8 @@ let aq = o.forwardRef(function (e, t) {
     });
 });
 var aZ = s(22118),
-    aQ = s(918676),
-    aJ = s(967603);
+    aQ = s(145359),
+    aJ = s(377770);
 function a$(e) {
     let { inOfferExperience: t } = e;
     return t ? (0, c.jsx)(av, { lifted: t }) : null;
@@ -5187,7 +5187,7 @@ let a0 = () => {
                 onChange: (e) => d(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, c.jsx)(i6.qu, {
+                children: (0, c.jsx)(i3.qu, {
                     innerRef: e,
                     tier0CTAButton: (0, c.jsx)(aj.A, {
                         showIcon: !1,
@@ -5321,7 +5321,7 @@ let a0 = () => {
                 return null;
         }
     };
-var a2 = s(738783);
+var a2 = s(531296);
 let a7 = function (e) {
     let { entrypoint: t = tF.tU.UserSettings } = e;
     (0, _.P)(I);

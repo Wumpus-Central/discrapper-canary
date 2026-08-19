@@ -180,8 +180,8 @@ var B = n(248643),
     eo = n(768947),
     eu = n(255438),
     ec = n(375708),
-    ed = n(790488),
-    eh = n(15328);
+    ed = n(810917),
+    eh = n(521931);
 function em(e) {
     let { text: t, language: l, wordWrap: s } = e;
     function r() {
@@ -582,7 +582,7 @@ var ek = n(97808),
     eP = n(778712),
     eD = n(707606),
     eU = n(403362),
-    eG = n(805032);
+    eG = n(439511);
 let eV = (0, eD.A)(function (e) {
         let { member: t, empty: n, guildId: l } = e;
         return n || null == t
@@ -623,7 +623,7 @@ let eV = (0, eD.A)(function (e) {
         });
     };
 var eH = n(303727),
-    eB = n(648582);
+    eB = n(681939);
 function eW() {
     return (0, i.jsxs)("div", {
         className: eB.kL,
@@ -660,7 +660,7 @@ function eW() {
 }
 var eK = n(652215),
     ez = n(670455),
-    eZ = n(911284);
+    eZ = n(750557);
 function eY(e) {
     let { summary: t, channel: l, members: r, guildId: a, unread: o, onClick: u } = e,
         [c, m] = s.useState(!1),
@@ -811,12 +811,12 @@ let e2 = s.forwardRef(function (e, t) {
         (0, i.jsx)("audio", { ref: h, ...c })
     );
 });
-var e3 = n(20504),
-    e5 = n(625494),
-    e8 = n(927813),
-    e7 = n(824744);
+var e8 = n(20504),
+    e3 = n(625494),
+    e5 = n(927813),
+    e6 = n(824744);
 n(508300);
-var e6 = n(661531),
+var e7 = n(661531),
     e4 = n(602853),
     e9 = n(765671);
 function te(e, t) {
@@ -858,7 +858,7 @@ class ts {
     }
 }
 let tr = [0.75, 1, 1.5, 2];
-var ta = n(255812);
+var ta = n(587159);
 let to = [0, 0, 0, 0, 0];
 function tu(e) {
     let { showAll: t, currentTime: n, duration: l, numSegments: i } = e;
@@ -986,11 +986,11 @@ function tm(e) {
             lastInactiveFillColor: j,
             inactiveFillColor: b,
         } = (function (e, t) {
-            let n = (0, e4.r)(e6.A.colors.BACKGROUND_MOD_MUTED).hex(),
-                l = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-                i = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-                s = (0, e4.r)(e6.A.unsafe_rawColors.BRAND_430).hex(),
-                r = (0, e4.r)(e6.A.unsafe_rawColors.WHITE).hex(),
+            let n = (0, e4.r)(e7.A.colors.BACKGROUND_MOD_MUTED).hex(),
+                l = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+                i = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+                s = (0, e4.r)(e7.A.unsafe_rawColors.BRAND_430).hex(),
+                r = (0, e4.r)(e7.A.unsafe_rawColors.WHITE).hex(),
                 a = t ? s : n,
                 [o, u] = td(a, t, e),
                 [c, d] = td(t ? r : e ? i : l, t, e),
@@ -1122,7 +1122,7 @@ function tm(e) {
         width: (g ?? 0) * window.devicePixelRatio,
     });
 }
-var tf = n(576510);
+var tf = n(672245);
 let tp = s.lazy(() => n.e("594436").then(n.bind(n, 660207)));
 function tg(e) {
     let { played: t, duration: n, currentTime: l } = e,
@@ -1198,7 +1198,7 @@ let tx = s.memo(function (e) {
         }, [A]),
         $ = s.useCallback(
             (e) => {
-                let t = (0, e7.w)(e, 1);
+                let t = (0, e6.w)(e, 1);
                 R(0 === t), V(t), r?.(t);
             },
             [r],
@@ -1238,7 +1238,7 @@ let tx = s.memo(function (e) {
                     !M &&
                     (e = setInterval(() => {
                         K(C.current?.currentTime ?? 0);
-                    }, e8.A.Millis.SECOND)),
+                    }, e5.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1247,7 +1247,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || L)
-                if (L) (et.current = performance.now()), l?.(!1, t, (C.current?.duration ?? 0) * e8.A.Millis.SECOND);
+                if (L) (et.current = performance.now()), l?.(!1, t, (C.current?.duration ?? 0) * e5.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1269,10 +1269,10 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             if (L)
                 return (
-                    e5._.dispatch(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
-                    e5._.subscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
+                    e3._.dispatch(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
+                    e3._.subscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
                     () => {
-                        e5._.unsubscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
+                        e3._.unsubscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
                     }
                 );
             function e(e) {
@@ -1359,13 +1359,13 @@ let tx = s.memo(function (e) {
                 "aria-label": er,
                 children: (0, i.jsx)(h.E, { variant: "text-xs/semibold", className: tf.Sn, children: ea }),
             }),
-            (0, i.jsx)(e3.A, {
+            (0, i.jsx)(e8.A, {
                 className: tf.bk,
                 iconClassName: tf._j,
                 iconColor: "currentColor",
                 sliderWrapperClassName: tf.MQ,
                 muted: b,
-                value: (0, e7.M)(G, 1),
+                value: (0, e6.M)(G, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,
@@ -1385,7 +1385,7 @@ var tA = n(287809),
     ty = n(838541),
     tS = n(521732),
     tv = n(650583),
-    t_ = n(184811);
+    t_ = n(959760);
 let tN = { delay: 300, position: "top" };
 function tT(e) {
     return (t) => {

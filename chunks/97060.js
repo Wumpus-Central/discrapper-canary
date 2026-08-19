@@ -39,7 +39,7 @@ function N(t) {
     });
 }
 var S = n(834730),
-    k = n(76705);
+    k = n(720960);
 function m(t) {
     let { email: e, onClose: n, transitionState: r } = t;
     return (0, a.jsx)(c.k, {

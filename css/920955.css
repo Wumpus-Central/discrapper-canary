@@ -1,0 +1,223 @@
+.container__2994f {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-12);
+    width: 304px
+}
+
+.header__2994f {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space-8);
+    padding-inline-start: var(--space-8)
+}
+
+.closeButton__2994f {
+    color: var(--interactive-text-default);
+    cursor: pointer
+}
+
+.body__2994f {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.container__92444 {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    opacity: .5
+}
+
+.containerFitContent__92444 {
+    flex: 0 1 auto
+}
+
+.header_feae96 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-8);
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 var(--space-12)
+}
+
+.questInfo_feae96 {
+    flex-shrink: 1;
+    min-width: 0
+}
+
+.questIconContainer_feae96 .questIcon_feae96 {
+    border-radius: var(--radius-sm);
+    height: 32px;
+    width: 32px
+}
+
+.questIconContainer_feae96 {
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.progressContainer_feae96 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: var(--space-8)
+}
+
+.progressBar_feae96 {
+    background-color: var(--opacity-12);
+    flex: 1;
+    height: 4px;
+    overflow: visible
+}
+
+.progressBar_feae96,
+.progressBarFill_feae96 {
+    border-radius: var(--radius-sm);
+    position: relative
+}
+
+.progressBarFill_feae96 {
+    background-image: linear-gradient(90deg, hsla(229, 7%, 45%, .18), #44fc7e);
+    height: 100%;
+    transition: width .7s
+}
+
+.progressBarGlowContainer_feae96 {
+    position: absolute;
+    top: 4px;
+    transition: width .7s
+}
+
+.progressBarGlow_feae96 {
+    background: linear-gradient(90deg, transparent, #44fc7e);
+    border-radius: 20%;
+    filter: blur(4px);
+    height: 8px;
+    inset-inline-end: -4px;
+    max-width: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    width: 60%
+}
+
+.questProgress_feae96 {
+    max-width: 470px
+}
+
+.button_d9cfc5 {
+    flex: 1 1 0;
+    min-width: 0
+}
+
+.ctaInner_d9cfc5 {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.contentHeader__5b400 {
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.contentHeader__5b400,
+.refreshWrapper__5b400 {
+    align-items: center;
+    display: flex
+}
+
+.refreshWrapper__5b400 {
+    color: var(--text-muted);
+    cursor: pointer;
+    gap: 4px
+}
+
+.refreshWrapper__5b400:hover {
+    color: var(--interactive-text-hover)
+}
+
+.disabled__5b400 {
+    color: var(--text-muted);
+    pointer-events: none
+}
+
+.colorTransition__5b400 {
+    transition: color .15s ease-in-out
+}
+
+.accountsWrapper__5b400 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.connectionRow__5b400 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.connectionRowHeader__5b400 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px
+}
+
+.connectionRowHeaderError__5b400 {
+    background-color: hsl(var(--background-base-low-hsl)/.7)
+}
+
+.connectionRowHeaderContent__5b400 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.success__5b400 {
+    color: var(--text-feedback-positive)
+}
+
+.error__5b400 {
+    color: var(--text-feedback-critical)
+}
+
+.gameTile__5b400 {
+    height: 16px;
+    width: 16px
+}
+
+.errorRow__5b400 {
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px
+}
+
+.errorsContainer__5b400 {
+    background: linear-gradient(to bottom, hsl(var(--red-430-hsl)/.15), hsl(var(--red-430-hsl)/.02))
+}
+
+.tooltip__5b400 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+/*# sourceMappingURL=920955.99c750106c9a208f.css.map*/

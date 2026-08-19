@@ -6,7 +6,7 @@ var C = n(477900),
     c = n(834730),
     u = n(946274),
     i = n(375708),
-    s = n(502728);
+    s = n(51125);
 function a(e) {
     let { icon: r, onChange: n } = e,
         { handleClick: a, reenable: d } = (function () {

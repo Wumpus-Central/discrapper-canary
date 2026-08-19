@@ -56,7 +56,7 @@ var r = n(477900),
     er = n(672396),
     ei = n(652215),
     es = n(375708),
-    eo = n(519834);
+    eo = n(261289);
 let el = U().throttle(
         () => {
             z.A.increment(
@@ -224,7 +224,7 @@ var eu = n(97469),
     eA = n(346142),
     ev = n(869146),
     ey = n(392164),
-    ex = n(40666);
+    ex = n(577063);
 function ew(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && eg.isPlatformEmbedded && !n;

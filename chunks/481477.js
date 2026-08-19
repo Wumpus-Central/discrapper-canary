@@ -6,7 +6,7 @@ var i = n(477900),
     o = n(582128),
     s = n(536246),
     c = n(835228),
-    d = n(813280);
+    d = n(355361);
 function u(e) {
     let { application: t, queryParams: n, url: l, onIframeMount: a, onIframeUnmount: r, onGuestReload: o } = e;
     return (0, i.jsx)(c.o, {
@@ -77,7 +77,7 @@ var F = n(423562),
     Q = n(728033),
     ee = n(652215),
     et = n(16961),
-    en = n(955385);
+    en = n(52464);
 let ei = Z.DN.SIZE_24;
 function el(e) {
     let t,
@@ -316,7 +316,7 @@ function ea(e) {
         onConfirmClosePopout: r,
     });
 }
-var er = n(998258);
+var er = n(835519);
 function eo(e) {
     let { activity: t, renderHeader: n, renderActivityIFrameWithLoadedData: a, isLoading: r = !1 } = e,
         s = o.useRef(null),

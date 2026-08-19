@@ -3,7 +3,7 @@ var t = r(477900),
     a = r(582128),
     c = r(503698),
     i = r.n(c),
-    l = r(90050);
+    l = r(906769);
 let o = Object.freeze({ XSMALL: 0.8, SMALL: 1, MEDIUM: 2, LARGE: 4 });
 class n extends a.Component {
     static StrokeSizes = o;

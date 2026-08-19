@@ -18,8 +18,8 @@ var t = n(477900),
     j = n(506164),
     E = n(734057),
     C = n(375708),
-    p = n(54093),
-    _ = n(790801);
+    p = n(596490),
+    _ = n(814316);
 function I(e) {
     let { guild: l, channelId: s } = e,
         a = (0, r.bG)([E.A], () => E.A.getChannel(s)),
@@ -56,7 +56,7 @@ function I(e) {
             null != a &&
                 null != l &&
                 (0, d.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("493388"), n.e("608939")]).then(n.bind(n, 181094));
+                    let { default: e } = await Promise.all([n.e("921903"), n.e("608939")]).then(n.bind(n, 181094));
                     return (n) => (0, t.jsx)(e, { ...n, channel: a, guild: l });
                 });
         }, [a, l]),

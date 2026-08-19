@@ -75,7 +75,7 @@ var es = t(297264),
     ec = t(174998),
     eo = t(395504),
     eu = t(49999),
-    eh = t(601883);
+    eh = t(734980);
 function ex(e) {
     let { guild: n } = e,
         t = (0, eo.Xn)(n.id),
@@ -160,8 +160,8 @@ function ex(e) {
 }
 var em = t(746080),
     eC = t(650583),
-    eA = t(79368),
-    eg = t(742715);
+    eA = t(326005),
+    eg = t(165648);
 let eN = new Set([ee.rbe.GUILD_FORUM, ee.rbe.GUILD_MEDIA]),
     ef = new Set([ee.rbe.GUILD_VOICE, ee.rbe.GUILD_STAGE_VOICE]);
 function ep(e) {
@@ -502,7 +502,7 @@ function eI(e) {
         "channel-browser-list",
     );
 }
-var e_ = t(577308);
+var e_ = t(307805);
 function eb(e) {
     let { channelId: n } = e;
     return (0, l.jsx)(j.A, {
@@ -525,7 +525,7 @@ function eS(e) {
         j = i.useCallback(() => {
             (0, g.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("436865"),
+                    t.e("778799"),
                     t.e("507775"),
                     t.e("358608"),
                     t.e("528034"),
@@ -601,14 +601,14 @@ var ey = t(202776),
     e9 = t.n(e6),
     e2 = t(665260),
     e8 = t(355097);
-function e3(e) {
+function e7(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
-let e7 = {};
+let e3 = {};
 function ne(e) {
-    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e7, [e]);
+    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e3, [e]);
     return (
-        i.useEffect(() => (e3(e), () => e3(e)), [e]),
+        i.useEffect(() => (e7(e), () => e7(e)), [e]),
         i.useEffect(() => {
             null != n && 0 !== Object.keys(n).length && e0.A.updateOnboardingResponses(e);
         }, [e, n]),
@@ -732,8 +732,8 @@ var na = t(164048),
     nr = t(839447),
     nd = t(539916),
     nc = t(790782),
-    no = t(361044),
-    nu = t(354919);
+    no = t(891927),
+    nu = t(999900);
 let nh = eR._3.SIZE_80,
     nx = "required";
 function nm(e) {
@@ -1129,7 +1129,7 @@ function nN(e) {
         ],
     });
 }
-var nf = t(33685);
+var nf = t(675498);
 function np(e) {
     let { guild: n } = e,
         t = (0, ey.A)(n);

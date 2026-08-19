@@ -1,7 +1,7 @@
 n.d(t, { A: () => s });
 var r = n(477900),
     l = n(217109),
-    a = n(431396);
+    a = n(15447);
 let s = function (e) {
     let { children: t, columns: n = 1, rows: s = 1 } = e,
         i = Math.max(1, Math.min(l.Mm, Math.floor(n))),

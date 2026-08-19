@@ -1,1 +1,1 @@
-e.exports = { En: "clipKeybindHint_f9504b", oH: "clipKeyCombo_f9504b", Bj: "clipKeyComboKey_f9504b" };
+e.exports = "/assets/3991983f3ff6766e.svg";

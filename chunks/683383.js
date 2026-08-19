@@ -265,9 +265,9 @@ let ea = new el(h.h, {
         ei = {};
     },
 });
-var er = i(983283),
+var er = i(125075),
     es = i(375708),
-    ed = i(241181);
+    ed = i(517228);
 function eu(e) {
     let { widget: t, onClick: i } = e,
         l = (0, s.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
@@ -399,7 +399,7 @@ function ec(e) {
         })
     );
 }
-var eo = i(466844);
+var eo = i(992303);
 function e_(e) {
     let { guildId: t, isEditing: i } = e,
         a = (0, s.bG)([G], () => G.getSaveStatus(t), [t]),
@@ -466,7 +466,7 @@ var eE = i(686246),
     ef = i(451395),
     eg = i(317574),
     eA = i(521810),
-    em = i(84899);
+    em = i(294918);
 let eS = "GUILD_SPACE_WIDGET",
     eI = "GUILD_SPACE_WIDGETS",
     eC = `${eS}_${eI}`;
@@ -636,7 +636,7 @@ var ex = i(529609),
     eN = i(486020),
     ew = i(488428),
     eF = i(776231),
-    eO = i(555063);
+    eO = i(986898);
 function eH(e) {
     let { guildId: t, header: i, canEdit: a, isEditing: r, isSaving: u } = e,
         c = (0, s.bG)([o.A], () => o.A.getGuild(t), [t]),
@@ -785,7 +785,7 @@ function eH(e) {
               ],
           });
 }
-var eW = i(278093);
+var eW = i(312152);
 function eM(e) {
     let { guildId: t } = e,
         i = l.useRef(null),

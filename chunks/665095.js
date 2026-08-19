@@ -1,7 +1,243 @@
-e.exports = {
-    Fg: "premiumTrialBadge_e4ef22",
-    N4: "backgroundGradient_e4ef22",
-    Hh: "premiumTrialAcknowledgedBadge_e4ef22",
-    iD: "BogoBadgeClockIcon_e4ef22",
-    lJ: "bogoBadgeLabel_e4ef22",
-};
+n.d(t, { A: () => L });
+var i = n(477900),
+    l = n(582128),
+    a = n(562708),
+    s = n(17928),
+    r = n(636537),
+    o = n(192308),
+    d = n(830215),
+    c = n(398590),
+    u = n(631670),
+    h = n(475743),
+    m = n(775121),
+    p = n(139286),
+    g = n(80556),
+    f = n(557722),
+    A = n(363195),
+    x = n(870570),
+    v = n(446868),
+    C = n(503698),
+    E = n.n(C),
+    T = n(607399),
+    _ = n(821609),
+    I = n(331322),
+    j = n(297264),
+    N = n(834730),
+    S = n(700525),
+    y = n(975571),
+    b = n(652215),
+    M = n(375708),
+    R = n(690807);
+let O = y.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+class w extends l.PureComponent {
+    static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
+    renderFields() {
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
+        return (0, i.jsx)(i.Fragment, {
+            children: e.map((e) =>
+                e === b.Fz7.CAPTCHA
+                    ? (0, i.jsx)(S.A, { onVerify: l, theme: n }, t)
+                    : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
+            ),
+        });
+    }
+    render() {
+        return (0, i.jsxs)(I.B, {
+            gap: 16,
+            className: R.Ot,
+            align: "center",
+            direction: "vertical",
+            justify: "center",
+            children: [
+                (0, i.jsxs)(I.B, {
+                    gap: 16,
+                    fullWidth: !1,
+                    className: E()(R.kL, { [R.Fr]: T.Fr }),
+                    align: "center",
+                    direction: "vertical",
+                    justify: "center",
+                    children: [
+                        (0, i.jsxs)(I.B, {
+                            align: "center",
+                            direction: "vertical",
+                            justify: "center",
+                            gap: 16,
+                            children: [
+                                (0, i.jsx)("div", { className: R.Sl }),
+                                (0, i.jsxs)(I.B, {
+                                    className: R.FS,
+                                    gap: 4,
+                                    align: "center",
+                                    direction: "vertical",
+                                    justify: "center",
+                                    children: [
+                                        (0, i.jsx)(j.D, {
+                                            variant: "heading-xl/normal",
+                                            children: M.intl.string(M.t.Iz0kDg),
+                                        }),
+                                        (0, i.jsx)(N.E, {
+                                            variant: "text-md/normal",
+                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: O }),
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        (0, i.jsx)(I.B, {
+                            gap: 16,
+                            direction: "vertical",
+                            justify: "center",
+                            align: "center",
+                            children: this.renderFields(),
+                        }),
+                    ],
+                }),
+                (0, i.jsxs)(I.B, {
+                    gap: 8,
+                    align: "center",
+                    direction: "vertical",
+                    justify: "center",
+                    children: [
+                        (0, i.jsx)(N.E, {
+                            variant: "text-sm/normal",
+                            className: R.qr,
+                            children: M.intl.string(M.t.qqYun3),
+                        }),
+                        (0, i.jsxs)(I.B, {
+                            gap: 8,
+                            align: "center",
+                            direction: "horizontal",
+                            justify: "center",
+                            children: [
+                                (0, i.jsx)(N.E, {
+                                    variant: "text-sm/semibold",
+                                    className: R.qr,
+                                    children: M.intl.format(M.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
+                                }),
+                                (0, i.jsx)("div", { className: E()(R.qr, R.mf), children: "\u2022" }),
+                                (0, i.jsx)(N.E, {
+                                    variant: "text-sm/semibold",
+                                    className: R.qr,
+                                    children: M.intl.format(M.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
+        });
+    }
+    handleClick = (e) => {
+        let { onClick: t } = this.props;
+        t?.(e);
+    };
+}
+var P = n(87404),
+    k = n(53516);
+function L() {
+    let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
+        C = v.A.getVerificationTypes(e),
+        [E, T] = l.useState(0),
+        _ = (0, h.Ay)(C);
+    function I() {
+        (0, u.Cw)(),
+            (0, o.openModalLazy)(
+                async () => {
+                    let { default: e } = await Promise.all([n.e("647999"), n.e("689913"), n.e("25467")]).then(
+                        n.bind(n, 415478),
+                    );
+                    return (t) => (0, i.jsx)(e, { ...t });
+                },
+                { modalKey: P.H1, Layer: g.Ay },
+            );
+    }
+    return (
+        (0, p.A)(
+            {
+                type: a.ImpressionTypes.MODAL,
+                name: a.ImpressionNames.USER_ACTION_REQUIRED,
+                properties: { verification_type: C[0], verification_types: C },
+            },
+            {},
+            [C.toString()],
+        ),
+        l.useEffect(
+            () => (
+                m.A.disable(),
+                () => {
+                    m.A.enable();
+                }
+            ),
+            [],
+        ),
+        l.useEffect(() => {
+            _?.[0] === b.Fz7.PHONE &&
+                C?.[0] === b.Fz7.EMAIL &&
+                (0, o.openModalLazy)(
+                    async () => {
+                        let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                ...t,
+                                title: M.intl.string(M.t.KLnLIP),
+                                body: M.intl.string(M.t.XGbCq3),
+                                confirmText: M.intl.string(M.t["3oK4qw"]),
+                            });
+                    },
+                    { modalKey: P.Pr, Layer: g.Ay, onCloseCallback: I },
+                );
+        }, [C, _]),
+        (0, i.jsx)(w, {
+            types: C,
+            captchaKey: E,
+            onCaptchaVerify: function (e) {
+                r.Bo.post({
+                    url: b.Rsh.CAPTCHA,
+                    body: { captcha_key: e },
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                }).then(c.jH, () => {
+                    T((e) => e + 1);
+                });
+            },
+            theme: t,
+            onClick: (e) => {
+                e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
+                    ? I()
+                    : (0, o.openModalLazy)(
+                          async () => {
+                              let { default: e } = await Promise.all([
+                                  n.e("619213"),
+                                  n.e("345665"),
+                                  n.e("14775"),
+                                  n.e("989545"),
+                                  n.e("991531"),
+                                  n.e("311493"),
+                                  n.e("84704"),
+                              ]).then(n.bind(n, 615715));
+                              return (t) =>
+                                  (0, i.jsx)(e, { layerContext: g.OH, reason: f.d.USER_ACTION_REQUIRED, ...t });
+                          },
+                          { modalKey: k.V, Layer: g.Ay },
+                      );
+            },
+            onLogout: function () {
+                (0, o.openModalLazy)(
+                    async () => {
+                        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                title: M.intl.string(M.t["2jxGer"]),
+                                subtitle: M.intl.string(M.t.SUnWBB),
+                                confirmText: M.intl.string(M.t["2jxGer"]),
+                                cancelText: M.intl.string(M.t["ETE/oC"]),
+                                onConfirm: () => d.A.logout("verification"),
+                                ...t,
+                            });
+                    },
+                    { Layer: g.Ay },
+                );
+            },
+        })
+    );
+}

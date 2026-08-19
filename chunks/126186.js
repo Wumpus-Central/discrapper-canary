@@ -32,7 +32,7 @@ var i,
     k = t(412260),
     G = t(753261),
     B = t(580194),
-    D = t(80435);
+    D = t(137504);
 function w(e) {
     let { title: r, body: t, image: i, badge: l, className: a } = e;
     return (0, n.jsxs)("div", {
@@ -47,7 +47,7 @@ function w(e) {
     });
 }
 var O = t(375708),
-    L = t(197350);
+    L = t(951321);
 function U() {
     let { claimableRewards: e } = (0, _.Pv)(),
         r = (0, c.bG)([k.A], () => {
@@ -131,9 +131,9 @@ var F = t(724651),
     Q = t(97352),
     J = t(795269),
     ee = t(202541),
-    er = t(466919),
-    et = t(184659),
-    ei = t(268514);
+    er = t(109447),
+    et = t(12260),
+    ei = t(658859);
 let en = new X.A("PremiumGroupPrice.tsx"),
     el = (0, n.jsx)(Z.y, { type: Z.y.Type.PULSING_ELLIPSIS, className: ei.xB }),
     ea = function (e) {
@@ -225,7 +225,7 @@ var es = t(860839),
     eo = t(824069),
     ec = t(222719),
     ed = t(88001),
-    eu = t(984295),
+    eu = t(174788),
     em = t(232266),
     ex = t(243002),
     ep = t(241988);

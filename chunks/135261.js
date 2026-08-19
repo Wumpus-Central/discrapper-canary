@@ -20,7 +20,7 @@ var l = n(477900),
     C = n(339871),
     I = n(820066),
     y = n(375708),
-    S = n(849918);
+    S = n(9287);
 function v(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: s } = e;
     return null == t

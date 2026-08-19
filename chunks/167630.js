@@ -8,7 +8,7 @@ var t = e(477900),
     u = e(515115),
     d = e(988794),
     h = e(375708),
-    o = e(800791);
+    o = e(32374);
 function p(l) {
     let { guildScheduledEvent: s, channel: e, onClose: p } = l,
         m = s.entity_type === d.Ps.EXTERNAL,

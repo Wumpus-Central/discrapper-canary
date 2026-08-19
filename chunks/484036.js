@@ -36,7 +36,7 @@ var g = n(562708),
     k = n(962125),
     P = n(158045),
     D = n(240864),
-    U = n(36852);
+    U = n(212633);
 let G = i.forwardRef(function (e, t) {
         let {
                 categories: n,
@@ -187,7 +187,7 @@ let G = i.forwardRef(function (e, t) {
 var F = n(462180),
     H = n(602034),
     B = n(892547),
-    W = n(893195);
+    W = n(642232);
 let K = i.forwardRef(function (e, t) {
     let {
             store: n,
@@ -241,7 +241,7 @@ let K = i.forwardRef(function (e, t) {
         })
     );
 });
-var z = n(141972);
+var z = n(904289);
 function Z(e) {
     let {
             categories: t,
@@ -464,7 +464,7 @@ var eN = n(837381),
     eR = n(652215),
     eL = n(698279),
     eO = n(375708),
-    eM = n(693187);
+    eM = n(120052);
 let ew = [8, 8, 8, 8];
 function ek(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: s } = e;
@@ -583,7 +583,7 @@ var eG = n(554146),
     eJ = n(531685),
     eX = n(723702),
     eQ = n(350535),
-    e0 = n(154678);
+    e0 = n(115023);
 function e1(e) {
     let { soundboardSound: t, closePicker: i } = e,
         s = (0, d.RQ)((e) => e.searchQuery),
@@ -607,8 +607,8 @@ function e1(e) {
         i(),
             (0, eF.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("389304"),
-                    n.e("168113"),
+                    n.e("161411"),
+                    n.e("498640"),
                     n.e("846327"),
                     n.e("912618"),
                 ]).then(n.bind(n, 29681));
@@ -641,18 +641,18 @@ function e1(e) {
           });
 }
 var e2 = n(805945),
-    e3 = n(890856),
-    e5 = n(307301),
-    e8 = n(468689);
-function e7(e) {
-    e8.A.open(e, eR.BEX.SOUNDBOARD),
+    e8 = n(890856),
+    e3 = n(307301),
+    e5 = n(468689);
+function e6(e) {
+    e5.A.open(e, eR.BEX.SOUNDBOARD),
         (0, eF.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("547899"),
-                n.e("375091"),
-                n.e("656963"),
-                n.e("411895"),
-                n.e("422312"),
+                n.e("860350"),
+                n.e("207998"),
+                n.e("341659"),
+                n.e("376991"),
+                n.e("67491"),
                 n.e("308555"),
                 n.e("883952"),
                 n.e("220287"),
@@ -668,8 +668,8 @@ function e7(e) {
             return (n) => (0, l.jsx)(t, { ...n, guildId: e });
         });
 }
-var e6 = n(753502),
-    e4 = n(677611);
+var e7 = n(948611),
+    e4 = n(308078);
 function e9(e) {
     let { guild: t, focused: n, onSelectItem: i, ...s } = e,
         { canCreateExpressions: a } = (0, em.nr)(t);
@@ -677,14 +677,14 @@ function e9(e) {
         text: eO.intl.string(eO.t["fHo+z1"]),
         shouldShow: !a,
         children: (0, l.jsx)("li", {
-            className: e6.H,
-            children: (0, l.jsxs)(e3.s, {
+            className: e7.H,
+            children: (0, l.jsxs)(e8.s, {
                 ...s,
                 "aria-label": eO.intl.formatToPlainString(eO.t.c1qVYh, { guildName: t.name }),
                 className: r()(e4.n4, { [e4.in]: n, [e4.r9]: !a }),
-                onClick: () => (null != i ? i() : e7(t.id)),
+                onClick: () => (null != i ? i() : e6(t.id)),
                 children: [
-                    (0, l.jsx)(e5.j, { size: "sm", color: "currentColor" }),
+                    (0, l.jsx)(e3.j, { size: "sm", color: "currentColor" }),
                     (0, l.jsx)(eW.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
@@ -741,7 +741,7 @@ function te(e) {
             });
     }
 }
-var tt = n(683886);
+var tt = n(635799);
 let tn = 32 + J.kg - 8,
     tl = {
         [eo.Cx.SEARCH]: u.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
@@ -1062,7 +1062,7 @@ function to(e) {
                             l = e?.item.index;
                         return eK(e.item.sound, null == n ? w : [...w, n], t?.shiftKey !== !0, l);
                     case eo.uq.ADD_SOUND:
-                        return o(), e7(e.item.guild.id);
+                        return o(), e6(e.item.guild.id);
                 }
             },
             [w, eK, o],
@@ -1178,8 +1178,8 @@ function to(e) {
             },
             [eP, eD, eG, ek.length],
         ),
-        e3 = i.useCallback((e) => eb((0, eh.lG)(e, eN, F, s, w)), [s, F, eN, w]),
-        e5 = i.useCallback(
+        e8 = i.useCallback((e) => eb((0, eh.lG)(e, eN, F, s, w)), [s, F, eN, w]),
+        e3 = i.useCallback(
             (e) => {
                 (0, N.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1188,7 +1188,7 @@ function to(e) {
             },
             [w],
         ),
-        e8 = i.useCallback(
+        e5 = i.useCallback(
             () =>
                 T
                     ? (0, l.jsx)(q.Gq, {
@@ -1201,13 +1201,13 @@ function to(e) {
                     : (0, l.jsx)(y.D, {
                           tabIndex: 0,
                           className: tt.Jm,
-                          onClick: e5,
+                          onClick: e3,
                           "aria-label": eO.intl.string(eO.t.kbFsAD),
                           children: (0, l.jsx)(ta, { className: tt.By }),
                       }),
-            [T, e5],
+            [T, e3],
         ),
-        e6 = i.useCallback(
+        e7 = i.useCallback(
             (e) =>
                 (0, l.jsx)(eU, {
                     soundboardListRef: e,
@@ -1298,15 +1298,15 @@ function to(e) {
                     containerWidth: a,
                     store: O.LW,
                     onSelectItem: ez,
-                    onSearchExpressions: e3,
+                    onSearchExpressions: e8,
                     hasSearchResults: ej.length > 0,
                     defaultSearchPlaceholder: eO.intl.string(eO.t.sKt3xS),
                     renderRow: eZ,
                     renderSectionHeader: e0,
                     renderSectionFooter: e2,
                     renderSection: eQ,
-                    renderCategoryList: e6,
-                    renderHeaderAccessories: e8,
+                    renderCategoryList: e7,
+                    renderHeaderAccessories: e5,
                     rowHeight: 48,
                     sectionHeaderHeight: eJ,
                     sectionFooterHeight: eX,
@@ -1322,7 +1322,7 @@ function to(e) {
         })
     );
 }
-var tu = n(752944);
+var tu = n(70317);
 function tc(e) {
     let {
             guildId: t,

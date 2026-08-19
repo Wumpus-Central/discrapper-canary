@@ -61,7 +61,7 @@ var A = n(289873),
     eo = n(652215),
     eu = n(202541),
     ec = n(375708),
-    ed = n(326085);
+    ed = n(902344);
 let em = Object.freeze({
         size: 0,
         iconSize: 20,
@@ -325,7 +325,7 @@ function eC(e) {
 var eI = n(910200),
     eS = n(360469),
     ej = n(518477),
-    e_ = n(95935);
+    e_ = n(774240);
 let eN = `vc-gifting-${(0, a.A)()}`,
     eb = Object.freeze([]);
 function ey(e) {

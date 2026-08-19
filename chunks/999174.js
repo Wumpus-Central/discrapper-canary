@@ -69,7 +69,7 @@ function J(e, t, n) {
 }
 var q = n(778712),
     K = n(375708),
-    Q = n(396);
+    Q = n(177861);
 function W(e) {
     return `badge-tab-${e}`;
 }
@@ -282,7 +282,7 @@ var ei = n(911608),
     es = n(770178),
     er = n(194261),
     ed = n(140735),
-    ec = n(519736);
+    ec = n(836825);
 function eo(e) {
     let {
             badge: t,
@@ -374,7 +374,7 @@ function eo(e) {
     });
 }
 var eu = n(652215),
-    eg = n(619004);
+    eg = n(600409);
 let em = new Set([N.$.GAME_TIME, N.$.GAME_VARIETY, N.$.STREAMING]);
 function ex(e) {
     let { badge: t, viewerBadge: n, isViewingOtherUser: a, targetUsername: r, isViewerOnUpgradeableNitro: d } = e,

@@ -28,7 +28,7 @@ var i = n(477900),
     R = n(321987),
     L = n(652215),
     y = n(375708),
-    D = n(552755);
+    D = n(6612);
 function v(e) {
     let { message: t, footer: n, headerClassName: r, showsCloseWindowText: a, spinner: l } = e;
     return (

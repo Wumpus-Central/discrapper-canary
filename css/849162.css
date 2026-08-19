@@ -1,0 +1,41 @@
+.container_a9353e {
+    background: var(--background-mod-strong);
+    border-radius: 4px;
+    margin-inline-start: 4px;
+    padding: 0 4px;
+    position: relative;
+    vertical-align: middle
+}
+
+.container_a9353e,
+.text_a9353e {
+    align-items: center;
+    display: inline-flex;
+    line-height: 16px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.text_a9353e {
+    max-width: 120px
+}
+
+.badge_a9353e {
+    border-radius: 4px;
+    margin-inline-end: 3px;
+    vertical-align: middle
+}
+
+.badge_a9353e,
+.tagText_a9353e {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.tagText_a9353e {
+    text-indent: 0
+}
+
+/*# sourceMappingURL=849162.16467ec957d15dc7.css.map*/

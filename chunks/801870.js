@@ -3,7 +3,7 @@ var s = i(477900);
 i(582128);
 var n = i(834730),
     a = i(375708),
-    l = i(972196);
+    l = i(37905);
 function r(t) {
     let { rewardName: e } = t;
     return (0, s.jsx)(n.E, {
@@ -15,7 +15,7 @@ function r(t) {
         }),
     });
 }
-var c = i(274727);
+var c = i(682474);
 function o(t) {
     let { rewardName: e, children: i } = t;
     return (0, s.jsxs)("div", { className: c.k, children: [(0, s.jsx)(r, { rewardName: e }), i] });

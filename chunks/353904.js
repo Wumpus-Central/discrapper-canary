@@ -38,7 +38,7 @@ var m = s(92077),
     S = s(975571),
     b = s(158045),
     T = s(375708),
-    L = s(909762);
+    L = s(468251);
 class j extends a.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -93,11 +93,11 @@ class j extends a.Component {
                                     onClick: (e) => {
                                         (0, v.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                s.e("579925"),
-                                                s.e("886148"),
-                                                s.e("346679"),
-                                                s.e("995705"),
-                                                s.e("916008"),
+                                                s.e("895909"),
+                                                s.e("7452"),
+                                                s.e("738098"),
+                                                s.e("948184"),
+                                                s.e("770105"),
                                                 s.e("564615"),
                                                 s.e("92064"),
                                                 s.e("787297"),
@@ -185,7 +185,7 @@ s(321073);
 var O = s(691885),
     k = s(466472),
     R = s(19575),
-    w = s(331901);
+    w = s(725064);
 let F = "select";
 class W extends a.PureComponent {
     state = { newInstallationPath: null };
@@ -306,7 +306,7 @@ let K = i.Ay.connectStores([B.A], () => ({
     installationPaths: B.A.installationPaths,
     installationPathsMetadata: B.A.installationPathsMetadata,
 }))(W);
-var V = s(288676);
+var V = s(566989);
 class Z extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,

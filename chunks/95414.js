@@ -42,7 +42,7 @@ var G = n(446600),
     q = n(652215),
     Q = n(988794),
     Y = n(375708),
-    z = n(34289),
+    z = n(320372),
     H = n(973324);
 function J(t) {
     let { channel: e, onClose: n, transitionState: i } = t,

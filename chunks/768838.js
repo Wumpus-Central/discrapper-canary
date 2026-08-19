@@ -53,7 +53,7 @@ var T = t(945096),
     Y = t(661531),
     G = t(48736),
     B = t(317097),
-    H = t(864386),
+    H = t(955298),
     z = t(375708);
 function U(e) {
     return l.useMemo(
@@ -76,7 +76,7 @@ var K = t(887129),
     $ = t(939249),
     Z = t(22231),
     q = t(933832),
-    Q = t(271959);
+    Q = t(818168);
 function ee(e) {
     let { colors: s, selected: t, onSelect: l, listItemId: n, "aria-label": i } = e,
         r = (0, J.rm)(n);
@@ -95,7 +95,7 @@ function ee(e) {
 var es = t(1986),
     et = t(315710),
     ea = t(650583),
-    el = t(450853);
+    el = t(607570);
 let en = [0, 60, 120, 180, 240, 300, 360];
 function ei(e) {
     let { value: s, onChange: t, hueToColor: n, onConfirm: r, "aria-label": d, className: o } = e,
@@ -164,7 +164,7 @@ function ei(e) {
         }),
     });
 }
-var er = t(838895);
+var er = t(420080);
 let ed = () => Promise.resolve();
 function eo(e) {
     let { selectedColors: s, setSelectedColors: t, className: n } = e,
@@ -280,8 +280,8 @@ function eo(e) {
         }),
     });
 }
-var ec = t(226157),
-    em = t(23546);
+var ec = t(143660),
+    em = t(454137);
 function eu(e) {
     let { selectedColors: s, setSelectedColors: t, defaultColor: n, selectedEffectId: i, className: r } = e,
         o = (0, T.as)(i) > 1,
@@ -390,7 +390,7 @@ let eh = new eS(ef.h, {
 });
 var eN = t(922301),
     ex = t(660184),
-    eg = t(446946);
+    eg = t(742191);
 function eA(e) {
     let s,
         { selectedEffectId: t, setSelectedEffectId: n, className: r } = e,
@@ -461,7 +461,7 @@ function ep(e) {
 var eI = t(834730),
     e_ = t(885574),
     eD = t(73392),
-    ej = t(190214);
+    ej = t(599715);
 function ev(e) {
     let s,
         { selectedFontId: t, setSelectedFontId: n, displayName: r, className: d } = e,
@@ -547,7 +547,7 @@ var eC = t(821609),
     ey = t(465794),
     eb = t(757036),
     eM = t(202541),
-    ek = t(865897);
+    ek = t(7212);
 function ew(e) {
     let { onApply: s, onSurpriseMe: t, onClose: l, canApply: n, isPremiumTryItOut: i = !1 } = e,
         r = (0, eb.L)(eM.PremiumTypes.TIER_2),
@@ -634,7 +634,7 @@ var eF = t(366010),
     eZ = t(946356),
     eq = t(975571),
     eQ = t(996988),
-    e0 = t(526996);
+    e0 = t(228839);
 function e1(e) {
     let {
             user: s,
@@ -782,7 +782,7 @@ function e8(e) {
         look: "pill",
     });
 }
-var e6 = t(961162);
+var e2 = t(226451);
 function e9(e) {
     let s,
         {
@@ -889,21 +889,21 @@ function e9(e) {
                       transitionState: t,
                       size: u.rI.LARGE,
                       parentComponent: "DisplayNameStylesModal",
-                      className: i()(e6.CR, { [e6.st]: em }),
+                      className: i()(e2.CR, { [e2.st]: em }),
                       returnRef: C,
                       children: [
                           (0, a.jsxs)(u.$m, {
                               "data-migration-pending": !0,
-                              className: i()(e6.jE, { [e6.st]: em }),
+                              className: i()(e2.jE, { [e2.st]: em }),
                               style: { overflow: "hidden auto" },
                               children: [
                                   (0, a.jsxs)("div", {
-                                      className: e6.w1,
+                                      className: e2.w1,
                                       children: [
                                           (0, a.jsx)(u.rQ, {
                                               "data-migration-pending": !0,
                                               separator: !1,
-                                              className: e6.bV,
+                                              className: e2.bV,
                                               children: (0, a.jsx)(f.D, {
                                                   variant: "heading-lg/semibold",
                                                   children: z.intl.string(H.default.ZPMAlX),
@@ -913,18 +913,18 @@ function e9(e) {
                                               selectedFontId: V,
                                               setSelectedFontId: $,
                                               displayName: Y,
-                                              className: e6._,
+                                              className: e2._,
                                           }),
                                           (0, a.jsx)(eA, {
                                               selectedEffectId: Z,
                                               setSelectedEffectId: q,
-                                              className: e6._,
+                                              className: e2._,
                                           }),
                                           (0, a.jsx)(eu, {
                                               selectedColors: eo,
                                               setSelectedColors: eN,
                                               selectedEffectId: Z,
-                                              className: e6._,
+                                              className: e2._,
                                               defaultColor: ee.defaultColors[0],
                                           }),
                                       ],

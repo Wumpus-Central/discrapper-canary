@@ -2,7 +2,7 @@ s.d(a, { W: () => d });
 var t = s(477900),
     e = s(582128),
     c = s(486020),
-    p = s(51792);
+    p = s(264837);
 function d(i) {
     let { application: a, iconSize: s = 20 } = i,
         d = e.useMemo(() => c.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: s }), [a, s]);

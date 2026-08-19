@@ -17,7 +17,7 @@ var t = l(477900),
     E = l(174459),
     N = l(652215),
     f = l(375708),
-    p = l(589256);
+    p = l(77709);
 function C(e) {
     let { channel: n } = e;
     return (0, j.bG)({ channelId: n.id })
@@ -60,7 +60,7 @@ let T = i.memo(function (e) {
                                     l.e("965789"),
                                     l.e("21106"),
                                     l.e("187048"),
-                                    l.e("690434"),
+                                    l.e("341154"),
                                     l.e("566378"),
                                     l.e("17244"),
                                     l.e("153416"),

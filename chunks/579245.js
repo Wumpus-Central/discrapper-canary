@@ -11,7 +11,7 @@ var l = n(477900),
     d = n(286320),
     h = n(778712),
     m = n(375708),
-    f = n(877256);
+    f = n(27535);
 function p(e) {
     let { smallerText: t, className: n, textColor: s, isApplicationHome: u, enablePremiumBrandRefresh: c } = e,
         p = (0, d.b)().slice(0, 3).reverse(),

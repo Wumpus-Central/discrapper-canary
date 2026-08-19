@@ -80,7 +80,7 @@ async function z(e) {
                         renewalDate: d?.currentPeriodEnd,
                     }),
                     (0, I.openModalLazy)(async () => {
-                        let { default: i } = await Promise.all([t.e("644504"), t.e("489541")]).then(t.bind(t, 978084));
+                        let { default: i } = await Promise.all([t.e("909189"), t.e("489541")]).then(t.bind(t, 978084));
                         return (t) => (0, l.jsx)(i, { ...t, ...e });
                     });
             },
@@ -93,9 +93,9 @@ var L = t(349085),
     V = t(115815),
     y = t(231513),
     R = t(885574),
-    G = t(275695),
+    G = t(632847),
     D = t(375708),
-    O = t(89625);
+    O = t(233658);
 function T(e) {
     let { gameName: i, text: t } = e;
     return (0, l.jsxs)("div", {
@@ -123,7 +123,7 @@ var _ = t(403581),
     W = t(532794),
     F = t(580630),
     H = t(202541),
-    Z = t(634876);
+    Z = t(77271);
 function B(e) {
     let { nitroPriceAmount: i, priceCurrency: t } = e,
         s = a.useCallback(() => {
@@ -146,7 +146,7 @@ function B(e) {
     });
 }
 var Q = t(721425),
-    Y = t(451341);
+    Y = t(138804);
 function q(e) {
     let { gameName: i, coverUrl: t, plan: a } = e;
     return (0, l.jsxs)("div", {
@@ -274,7 +274,7 @@ function q(e) {
 var J = t(199781),
     X = t(628049),
     $ = t(652215),
-    ee = t(727298);
+    ee = t(950915);
 let ei = [];
 function et(e) {
     let { region: i, disabled: t } = e,

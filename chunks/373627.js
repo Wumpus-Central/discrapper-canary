@@ -30,8 +30,8 @@ var l = a(477900),
     P = a(652215),
     z = a(743981),
     S = a(375708),
-    D = a(688753),
-    L = a(848090);
+    D = a(684),
+    L = a(420667);
 function M() {
     let [e, s] = i.useState(() => {
             let e = Math.floor(Math.random() * G.Oz.length);
@@ -91,8 +91,8 @@ function T(e) {
     });
 }
 var O = a(975571),
-    B = a(853513),
-    V = a(539296);
+    B = a(641641),
+    V = a(427629);
 function R(e) {
     let { powerup: s } = e;
     return s.skuId === t.FB
@@ -168,7 +168,7 @@ function ee(e) {
     });
 }
 var es = a(439156),
-    ea = a(873477);
+    ea = a(189540);
 function el(e) {
     let { className: s, guildId: a, powerup: i, expressiveCta: r, onClose: o, onError: d } = e,
         { showToggleButton: c, showConfigureButton: m, isPowerupActive: u } = (0, U.A)(a, i);
@@ -205,7 +205,7 @@ function el(e) {
 var ei = a(111159),
     er = a(533148),
     en = a(927573),
-    et = a(121873);
+    et = a(531374);
 function eo() {
     let [e, s] = i.useState("");
     return (0, l.jsxs)("div", {
@@ -285,7 +285,7 @@ function eo() {
     });
 }
 var ed = a(568065),
-    ec = a(606926);
+    ec = a(911371);
 function em(e) {
     let { guildId: s, powerup: a, ...r } = e,
         [f, k] = i.useState(void 0),

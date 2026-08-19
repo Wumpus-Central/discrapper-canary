@@ -54,7 +54,7 @@ function m(e) {
         }),
     });
 }
-var f = n(887);
+var f = n(257100);
 let p = {
         config: { friction: 26, tension: 700, mass: 1 },
         initial: { scale: 1, opacity: 1 },

@@ -68,7 +68,7 @@ var X = n(361670),
     eh = n(652215),
     em = n(698279),
     ef = n(375708),
-    ep = n(402942);
+    ep = n(161975);
 let eg = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     ex = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     eA = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
@@ -304,8 +304,8 @@ function eO(e) {
                 }),
                 (0, m.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("840981"),
-                        n.e("621675"),
+                        n.e("711562"),
+                        n.e("331584"),
                         n.e("171202"),
                         n.e("353274"),
                     ]).then(n.bind(n, 397313));
@@ -317,7 +317,7 @@ function eO(e) {
 }
 var eM = n(823894),
     ew = n(202541),
-    ek = n(997300);
+    ek = n(768857);
 function eP(e) {
     let { className: t, onClose: n } = e;
     (0, j.XQ)();
@@ -382,7 +382,7 @@ var eD = n(404778),
     ez = n(931991),
     eZ = n(473145),
     eY = n(625633),
-    eq = n(758114);
+    eq = n(136123);
 let e$ = function (e) {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
         { location: u } = (0, k.p)(),
@@ -461,7 +461,7 @@ let e$ = function (e) {
 };
 var eJ = n(307301),
     eX = n(182922),
-    eQ = n(493397);
+    eQ = n(683522);
 let e0 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     e1 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     e2 = i.memo(function (e) {
@@ -510,20 +510,20 @@ let e0 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
             titleSecondary: (0, ec.FD)(s) || (0, ec.Xw)(s) ? a : null,
         });
     });
-var e3 = n(140735),
-    e5 = n(442433),
-    e8 = n(304072),
-    e7 = n(194261),
-    e6 = n(312503);
+var e8 = n(140735),
+    e3 = n(442433),
+    e5 = n(304072),
+    e6 = n(194261),
+    e7 = n(513902);
 let e4 = function (e) {
     let { size: t } = e;
     return (0, l.jsx)("div", {
-        className: e6.G,
+        className: e7.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e7.LockIcon, { size: "xxs", color: "currentColor", className: e6.I }),
+        children: (0, l.jsx)(e6.LockIcon, { size: "xxs", color: "currentColor", className: e7.I }),
     });
 };
-var e9 = n(815480);
+var e9 = n(777371);
 let te = i.memo(function (e) {
     let {
             isDisplayingIndividualStickers: t = !1,
@@ -559,7 +559,7 @@ let te = i.memo(function (e) {
             [t, c, b],
         ),
         L = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
-        [O, M] = (0, e8.A)(null, 300);
+        [O, M] = (0, e5.A)(null, 300);
     return (0, l.jsx)("div", {
         className: e9.nM,
         style: R,
@@ -592,10 +592,10 @@ let te = i.memo(function (e) {
                                         }),
                                         (0, m.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("547899"),
-                                                n.e("782906"),
-                                                n.e("375091"),
-                                                n.e("656963"),
+                                                n.e("860350"),
+                                                n.e("744878"),
+                                                n.e("207998"),
+                                                n.e("341659"),
                                                 n.e("408891"),
                                                 n.e("883952"),
                                                 n.e("66580"),
@@ -647,7 +647,7 @@ let te = i.memo(function (e) {
                                     x?.(e, n);
                             },
                             onContextMenu: function (e) {
-                                (0, e5.L3)(e, async () => {
+                                (0, e3.L3)(e, async () => {
                                     let { default: e } = await Promise.all([n.e("904774"), n.e("446132")]).then(
                                         n.bind(n, 233503),
                                     );
@@ -660,7 +660,7 @@ let te = i.memo(function (e) {
                             "data-name": e.sticker.name,
                             "data-format-type": e.sticker.format_type,
                             children: [
-                                (0, l.jsx)(e3.A, { children: (0, ed.h)(e.sticker) }),
+                                (0, l.jsx)(e8.A, { children: (0, ed.h)(e.sticker) }),
                                 (0, l.jsxs)("div", {
                                     "aria-hidden": !0,
                                     children: [
@@ -690,7 +690,7 @@ let te = i.memo(function (e) {
         }),
     });
 });
-var tt = n(22234),
+var tt = n(457231),
     tn = n(911385);
 let tl = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     ti = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
@@ -1113,7 +1113,7 @@ let tC = i.forwardRef(function (e, t) {
     });
 var ty = n(602034),
     tS = n(892547),
-    tv = n(447285);
+    tv = n(909802);
 let t_ = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: s, channel: r } = e,
         a = (0, j.ZO)(r),
@@ -1168,7 +1168,7 @@ var tN = n(237116),
     tT = n(789645),
     tj = n(964486),
     tb = n(158045),
-    tR = n(274157),
+    tR = n(420136),
     tL = n(939383);
 function tO() {
     return J(!1);
@@ -1237,7 +1237,7 @@ function tM(e) {
         ],
     });
 }
-var tw = n(156418);
+var tw = n(970099);
 let tk = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     tD = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -1398,10 +1398,10 @@ let tk = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 K.default.track(eh.HAw.OPEN_MODAL, { type: eh.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, m.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("547899"),
-                                            n.e("782906"),
-                                            n.e("375091"),
-                                            n.e("656963"),
+                                            n.e("860350"),
+                                            n.e("744878"),
+                                            n.e("207998"),
+                                            n.e("341659"),
                                             n.e("408891"),
                                             n.e("883952"),
                                             n.e("66580"),
@@ -1522,7 +1522,7 @@ var tz = n(742023),
     tq = n(49999),
     t$ = n(732139),
     tJ = n(307731),
-    tX = n(521352);
+    tX = n(818625);
 let tQ = 498 + t$.as.MEDIUM,
     t0 = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": a, ...o } = e;

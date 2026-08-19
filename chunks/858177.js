@@ -1,51 +1,25 @@
-n.d(t, { O: () => r }), n(321073);
-var h = n(582128),
-    s = n(435558),
-    i = n.n(s),
-    l = n(17928),
-    a = n(451988),
-    p = n(627363),
-    c = n(587895);
-class d {
-    _lastFetchedAttempted = new Map();
-    _pending = new Set();
-    _flushHandler = new a.J_(32, () => this._flush());
-    request(e) {
-        if (this._pending.has(e)) return;
-        let t = this._lastFetchedAttempted.get(e);
-        (null != t && Date.now() - t < 6e4) || (this._pending.add(e), this._flushHandler.delay(!1));
-    }
-    _flush() {
-        let e = [];
-        this._pending.forEach((t) => {
-            this._lastFetchedAttempted.set(t, Date.now()), e.push(t);
-        }),
-            this._pending.clear();
-        let t = [],
-            n = [];
-        e.forEach((e) => {
-            c.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
-        }),
-            t.length > 0 &&
-                i()
-                    .chunk(t, 20)
-                    .forEach((e) => {
-                        p.Ay.fetchApplications(e, !1);
-                    }),
-            n.length > 0 &&
-                i()
-                    .chunk(n, 20)
-                    .forEach((e) => {
-                        p.Ay.fetchApplications(e, !0);
-                    });
-    }
-}
-let u = new d();
-function r(e) {
-    return (
-        h.useEffect(() => {
-            null != e && "" !== e && u.request(e);
-        }, [e]),
-        (0, l.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e])
-    );
-}
+_.exports = {
+    YK: "spacing__856b5",
+    bj: "largeSpacing__856b5",
+    a: "lighten__856b5",
+    HI: "checkboxContainer__856b5",
+    dy: "checkboxMute__856b5",
+    mH: "checkboxContainerMuted__856b5 checkboxContainer__856b5",
+    Pm: "checkboxGroup__856b5",
+    $Z: "override__856b5",
+    J$: "overrideHighlight__856b5",
+    ZY: "removeOverride__856b5",
+    uZ: "overridePlaceholder__856b5",
+    VW: "nameContainer__856b5",
+    Kk: "icon__856b5 lighten__856b5",
+    sr: "overrideHeader__856b5 lighten__856b5",
+    wx: "header__856b5",
+    n_: "channelNotificationHeaders__856b5",
+    $m: "headerNameCell__856b5",
+    Lv: "headerOptionCell__856b5",
+    Bv: "headerName__856b5 header__856b5",
+    BO: "headerOption__856b5 header__856b5",
+    aT: "channelNameContainer__856b5",
+    HA: "channelName__856b5",
+    uM: "channelNameByline__856b5 lighten__856b5",
+};

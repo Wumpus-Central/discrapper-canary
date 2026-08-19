@@ -1,7 +1,7 @@
 n.d(t, { A: () => i });
 var r = n(477900),
     l = n(582128),
-    a = n(830466);
+    a = n(19641);
 function s() {
     return (0, r.jsx)("div", { className: a.iM });
 }

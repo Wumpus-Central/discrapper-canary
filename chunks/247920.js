@@ -10,7 +10,7 @@ var i = s(53466),
     o = s(297264),
     m = s(915089),
     x = s(375708),
-    h = s(623017);
+    h = s(93632);
 let u = (e) => {
         let { currentNumber: t, thresholdNumber: s, currentLabel: l, isPercent: o = !1 } = e,
             m = null != s ? Math.floor((t / s) * 100) : 0,

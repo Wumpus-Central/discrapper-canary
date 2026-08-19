@@ -34,7 +34,7 @@ var l,
     A = n(742023),
     S = n(503698),
     I = n.n(S),
-    C = n(612749);
+    C = n(328284);
 function T(e) {
     let { title: t, body: n, wide: l = !1, children: i } = e;
     return (0, a.jsxs)("div", {
@@ -51,9 +51,9 @@ function T(e) {
         ],
     });
 }
-var R = n(818085),
+var R = n(295813),
     P = n(375708),
-    M = n(616694);
+    M = n(963691);
 function O(e) {
     let { applicationId: t, surface: n } = e,
         { frame: l, state: s } = (function (e) {
@@ -187,7 +187,7 @@ function O(e) {
             return (0, a.jsx)("div", { className: M.qs, children: (0, a.jsx)(c.y, {}) });
     }
 }
-var L = n(668917);
+var L = n(976102);
 function D(e) {
     let { applicationId: t, surface: n, previewReady: l, previewGate: r } = e,
         o = (0, s.A)(t, n);
@@ -235,7 +235,7 @@ var G = n(789645),
     U = n(355622),
     F = n(58736),
     W = n(31717),
-    q = n(291815);
+    q = n(372054);
 function $(e) {
     let { channel: t, guild: n, onClose: l } = e,
         i = (0, B.Ay)(t),
@@ -269,7 +269,7 @@ var K = n(866665),
     en = n(673724),
     el = n(514042),
     ea = n(939249),
-    ei = n(195219);
+    ei = n(298668);
 function es(e) {
     return I()(ei._B, { [ei.ND]: e });
 }
@@ -308,7 +308,7 @@ function ec(e) {
         children: er({ name: t, thumbSrc: n, compact: !0, onThumbError: s }),
     });
 }
-var ed = n(17117);
+var ed = n(789438);
 let eu = 0;
 function eh(e) {
     let {
@@ -621,7 +621,7 @@ n(134528), n(947204);
 var ep = n(320448),
     ef = n(847374),
     eg = n(46054),
-    ex = n(263783);
+    ex = n(424110);
 function ev(e) {
     let { option: t, disabled: n, onPick: l } = e,
         s = i.useId(),
@@ -811,7 +811,7 @@ function eb(e) {
     });
 }
 var ek = n(443865),
-    ej = n(843614);
+    ej = n(113757);
 function ey(e) {
     let { idea: t, onPick: n } = e,
         l = i.useId(),
@@ -887,7 +887,7 @@ function eN(e) {
     });
 }
 var eE = n(256905),
-    ew = n(289149);
+    ew = n(375068);
 function eA(e) {
     let { projectId: t, attachments: n } = e,
         l = n.filter(eS);
@@ -1009,7 +1009,7 @@ function eT(e) {
               },
           });
 }
-var eR = n(84206);
+var eR = n(824757);
 function eP(e) {
     let { label: t, names: n } = e;
     return 0 === n.length
@@ -1179,12 +1179,12 @@ function eM(e) {
     });
 }
 var eO = n(192308),
-    eL = n(46958);
+    eL = n(479191);
 function eD(e) {
     let { projectId: t, request: l } = e,
         s = i.useCallback(() => {
             (0, eO.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("625084"), n.e("468421")]).then(n.bind(n, 539620));
+                let { default: e } = await Promise.all([n.e("338013"), n.e("468421")]).then(n.bind(n, 539620));
                 return (n) => (0, a.jsx)(e, { ...n, projectId: t, request: l });
             });
         }, [t, l]);
@@ -1248,7 +1248,7 @@ function eD(e) {
         ],
     });
 }
-var eG = n(700766);
+var eG = n(13699);
 function eH(e) {
     var t;
     let { projectId: n, group: l } = e,
@@ -1354,7 +1354,7 @@ function eV(e) {
     return r ? null : (0, a.jsx)(ec, { name: d, thumbSrc: l, ariaLabel: d, onClick: u, onThumbError: () => c(!0) });
 }
 var eU = n(820081),
-    eF = n(590223);
+    eF = n(329456);
 function eW(e) {
     let { status: t } = e;
     return (0, a.jsx)("span", {
@@ -1569,7 +1569,7 @@ function eJ(e) {
             return P.intl.string(R.default.nv6pUM);
     }
 }
-var eQ = n(282878);
+var eQ = n(549505);
 function e0(e) {
     let { task: t } = e,
         [n, l] = i.useState(null),
@@ -1664,9 +1664,9 @@ function e0(e) {
         ],
     });
 }
-var e1 = n(692228),
-    e2 = n(742715);
-function e6(e) {
+var e1 = n(229775),
+    e2 = n(165648);
+function e7(e) {
     let { projectId: t, item: n, attachments: l } = e,
         [s, r] = i.useState(!1),
         o = i.useId(),
@@ -1719,7 +1719,7 @@ function e6(e) {
           })
         : (0, a.jsxs)("li", { className: I()(eG.ky, e1.XR, eG.rn), children: [m, l] });
 }
-function e7(e) {
+function e6(e) {
     let {
             projectId: t,
             steps: n,
@@ -1986,7 +1986,7 @@ function e7(e) {
                                         e.key,
                                     )
                                   : (0, a.jsx)(
-                                        e6,
+                                        e7,
                                         {
                                             projectId: t,
                                             item: e,
@@ -2050,7 +2050,7 @@ function e7(e) {
         ],
     });
 }
-let e8 = { steered: R.default.I9TkzD, queued: R.default.gbjY6o, restarting: R.default["1Q4Cs2"] };
+let e3 = { steered: R.default.I9TkzD, queued: R.default.gbjY6o, restarting: R.default["1Q4Cs2"] };
 function e5(e) {
     let { projectId: t, messages: n, onApprove: l, onPickIdea: i, onAskForIdeas: s, onAnswerClarification: r } = e,
         o = n[n.length - 1];
@@ -2059,7 +2059,7 @@ function e5(e) {
         children: n.map((e, c) => {
             if ("user" === e.role)
                 return (0, a.jsx)(
-                    e3,
+                    e8,
                     {
                         role: "user",
                         children: (0, a.jsxs)("div", {
@@ -2080,7 +2080,7 @@ function e5(e) {
                                     ? (0, a.jsx)(h.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: P.intl.string(e8[e.disposition]),
+                                          children: P.intl.string(e3[e.disposition]),
                                       })
                                     : null,
                             ],
@@ -2104,10 +2104,10 @@ function e5(e) {
                 !0 === e.interrupted ||
                 (e.attachments?.length ?? 0) !== 0
                 ? (0, a.jsx)(
-                      e3,
+                      e8,
                       {
                           role: "assistant",
-                          children: (0, a.jsx)(e7, {
+                          children: (0, a.jsx)(e6, {
                               projectId: t,
                               steps: e.steps,
                               announcement: e.announcement,
@@ -2155,14 +2155,14 @@ function e5(e) {
         }),
     });
 }
-function e3(e) {
+function e8(e) {
     let { role: t, children: n } = e;
     return (0, a.jsx)("li", { "data-role": t, className: ew.xk, children: n });
 }
 var e4 = n(379307),
     e9 = n(922016),
     te = n(863610),
-    tt = n(446892);
+    tt = n(495557);
 function tn(e) {
     let { activity: t, id: n } = e,
         l = t?.text ?? "",
@@ -2188,7 +2188,7 @@ function tn(e) {
         })
     );
 }
-var tl = n(249680);
+var tl = n(921461);
 function ta(e) {
     let { activity: t, compacting: n = !1 } = e,
         l = i.useRef(null),
@@ -2232,7 +2232,7 @@ function ta(e) {
     });
 }
 var ti = n(662546),
-    ts = n(173016);
+    ts = n(233263);
 function tr(e) {
     let { todos: t, provisional: n } = e;
     return (0, a.jsx)("div", {
@@ -2272,7 +2272,7 @@ function to(e) {
           });
 }
 var tc = n(885574),
-    td = n(677175);
+    td = n(280894);
 function tu(e) {
     return e.toLocaleString();
 }
@@ -2378,7 +2378,7 @@ function tp(e) {
             }),
     });
 }
-var tf = n(154861);
+var tf = n(258216);
 function tg(e) {
     switch (e) {
         case "connecting":
@@ -2455,7 +2455,7 @@ var tv = n(506774),
     tb = n(651649),
     tk = n(670455);
 let tj = "shownVibegrationsFeedbackProjectIds";
-var ty = n(104071);
+var ty = n(348800);
 function t_(e) {
     let { projectId: t, onRegionCapture: l } = e,
         s = (0, b.bG)([X.A], () => X.A.getMessages(t), [t]),
@@ -2509,8 +2509,8 @@ function t_(e) {
                                 (l = tv.w.get(tj) ?? []).includes(e) || tv.w.set(tj, [...l, e]),
                                     (0, eO.openModalLazy)(async () => {
                                         let { default: l } = await Promise.all([
-                                            n.e("104079"),
-                                            n.e("222255"),
+                                            n.e("312513"),
+                                            n.e("104143"),
                                             n.e("155925"),
                                             n.e("218413"),
                                             n.e("137381"),
@@ -2592,7 +2592,7 @@ var tN = n(435558),
     tw = n(602853),
     tA = n(517461),
     tS = n(761929),
-    tI = n(552067);
+    tI = n(927506);
 function tC(e) {
     let { open: t, maxWidth: n, onWidthChange: l, children: s } = e,
         r = (0, tw.r)(tE.A.modules.chat.RESIZE_HANDLE_WIDTH),
@@ -2629,7 +2629,7 @@ function tC(e) {
     });
 }
 var tT = n(333007),
-    tR = n(638015);
+    tR = n(439108);
 function tP(e) {
     return {
         x: Math.min(e.startX, e.x),

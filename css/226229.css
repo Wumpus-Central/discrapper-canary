@@ -1,0 +1,198 @@
+.container__558bb {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    text-align: center
+}
+
+.headerBackground__558bb {
+    inset-inline: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+    mask-image: linear-gradient(180deg, #000 20%, transparent);
+    min-height: 500px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute
+}
+
+.headerBackground__558bb img,
+.headerBackground__558bb video {
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    width: 100%
+}
+
+.headerGradient__558bb {
+    background: radial-gradient(ellipse 100% 100% at 50% 0, rgba(156, 89, 209, .6) 0, rgba(88, 47, 140, .4) 70%, transparent 100%), var(--background-base-lowest);
+    inset: 0;
+    position: absolute
+}
+
+.theme-light .headerGradient__558bb {
+    background: radial-gradient(ellipse 100% 100% at 50% 0, rgba(209, 153, 237, .5) 0, rgba(176, 126, 209, .35) 70%, transparent 100%), var(--background-base-lowest)
+}
+
+.content__558bb {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--space-20);
+    position: relative;
+    z-index: 1
+}
+
+.riveContainer__558bb {
+    height: 200px;
+    width: 300px
+}
+
+.description__558bb {
+    margin-top: var(--space-4);
+    max-width: 360px
+}
+
+.buttons__558bb {
+    display: flex;
+    gap: var(--space-12);
+    margin-top: var(--space-24)
+}
+
+.skeletonGrid__558bb {
+    box-sizing: border-box;
+    display: grid;
+    gap: var(--space-20);
+    grid-template-columns: repeat(2, 1fr);
+    opacity: .6;
+    padding-inline: var(--space-20);
+    padding-bottom: var(--space-20);
+    padding-top: var(--space-40);
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.card_fe7f5d {
+    background-color: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-low);
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.card_fe7f5d,
+.contentWrapper_fe7f5d {
+    display: flex;
+    flex: 1;
+    position: relative
+}
+
+.contentWrapper_fe7f5d {
+    flex-direction: column;
+    z-index: 2
+}
+
+.divider_fe7f5d {
+    background-color: var(--border-subtle);
+    height: 1px;
+    width: 100%
+}
+
+.serverActions_fe7f5d {
+    display: flex;
+    gap: var(--space-12);
+    padding: var(--space-16)
+}
+
+.skeletonContainer__307db {
+    cursor: default;
+    pointer-events: none
+}
+
+.serverDetailsContainer__307db {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+.serverHeader__307db {
+    align-items: center;
+    display: flex;
+    gap: var(--space-16)
+}
+
+.gameImage__307db {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 70px;
+    width: 53px
+}
+
+.serverInfo__307db {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.titleLine__307db {
+    height: 16px;
+    width: 70%
+}
+
+.subtitleLine__307db,
+.titleLine__307db {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-xs)
+}
+
+.subtitleLine__307db {
+    height: 14px;
+    width: 45%
+}
+
+.detailsGrid__307db {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr 1fr
+}
+
+.detailItem__307db {
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.labelLine__307db {
+    height: 12px;
+    width: 40%
+}
+
+.labelLine__307db,
+.valueLine__307db {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-xs)
+}
+
+.valueLine__307db {
+    height: 14px;
+    width: 60%
+}
+
+.buttonSkeleton__307db {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    height: 32px
+}
+
+/*# sourceMappingURL=226229.dff14b9ade05fea8.css.map*/

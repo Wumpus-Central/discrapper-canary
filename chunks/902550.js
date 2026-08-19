@@ -107,7 +107,7 @@ async function J(e) {
 }
 var X = a(778712),
     K = a(595535),
-    Z = a(222262);
+    Z = a(486863);
 function W(e) {
     let { className: t, size: a = K.q } = e,
         l = (0, X.FT)(a);
@@ -126,7 +126,7 @@ function W(e) {
 }
 var $ = a(656925),
     Y = a(339984),
-    Q = a(929759);
+    Q = a(421184);
 function ee(e) {
     let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: s, avatarButtonRef: i } = e,
         { id: c, storageHash: u, description: d = B.intl.string(B.t.lqaIxI) } = t,
@@ -192,13 +192,13 @@ function et(e) {
                     (0, g.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
-                                a.e("414397"),
-                                a.e("117763"),
-                                a.e("800961"),
-                                a.e("814520"),
-                                a.e("454722"),
-                                a.e("983199"),
-                                a.e("731278"),
+                                a.e("596955"),
+                                a.e("180046"),
+                                a.e("124054"),
+                                a.e("321603"),
+                                a.e("655327"),
+                                a.e("411430"),
+                                a.e("1214"),
                                 a.e("424199"),
                                 a.e("343437"),
                                 a.e("894747"),
@@ -256,7 +256,7 @@ function et(e) {
                         ? J(r)
                         : (j(!0),
                           (0, g.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([a.e("816741"), a.e("48944")]).then(
+                              let { default: e } = await Promise.all([a.e("206130"), a.e("48944")]).then(
                                   a.bind(a, 555251),
                               );
                               return (t) => {
@@ -396,7 +396,7 @@ function eo(e, t) {
 }
 var eu = a(2553),
     ed = a(693591),
-    eh = a(499267);
+    eh = a(925356);
 let eA = [
     { gif: a(203736), png: a(775788) },
     { gif: a(640237), png: a(689006) },
@@ -592,13 +592,13 @@ function eE(e) {
                 (0, g.openModalLazy)(
                     async () => {
                         let { default: l } = await Promise.all([
-                            a.e("414397"),
-                            a.e("117763"),
-                            a.e("800961"),
-                            a.e("814520"),
-                            a.e("454722"),
-                            a.e("983199"),
-                            a.e("731278"),
+                            a.e("596955"),
+                            a.e("180046"),
+                            a.e("124054"),
+                            a.e("321603"),
+                            a.e("655327"),
+                            a.e("411430"),
+                            a.e("1214"),
                             a.e("424199"),
                             a.e("343437"),
                             a.e("894747"),
@@ -650,16 +650,16 @@ function eE(e) {
             (0, g.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("433757"),
-                        a.e("771612"),
-                        a.e("909852"),
-                        a.e("414397"),
-                        a.e("117763"),
-                        a.e("800961"),
-                        a.e("814520"),
-                        a.e("454722"),
-                        a.e("983199"),
-                        a.e("816507"),
+                        a.e("582012"),
+                        a.e("401317"),
+                        a.e("781821"),
+                        a.e("596955"),
+                        a.e("180046"),
+                        a.e("124054"),
+                        a.e("321603"),
+                        a.e("655327"),
+                        a.e("411430"),
+                        a.e("942030"),
                         a.e("424199"),
                         a.e("343437"),
                         a.e("894747"),

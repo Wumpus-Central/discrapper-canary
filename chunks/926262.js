@@ -12,8 +12,8 @@ var l = n(477900),
     m = n(174459),
     g = n(652215),
     p = n(375708),
-    A = n(49353),
-    f = n(742715);
+    A = n(548426),
+    f = n(165648);
 function C(e) {
     let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: _ } = e;
     i.useEffect(() => {

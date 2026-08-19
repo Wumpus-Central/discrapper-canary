@@ -3,7 +3,7 @@ var n = t(582128),
     l = t(17928),
     o = t(498480),
     i = t(42957),
-    u = t(67539);
+    u = t(937714);
 function a(e) {
     let r = (0, l.bG)([i.A], () => i.A.getRegionStateForPingUrl(e)),
         t = n.useRef(null),

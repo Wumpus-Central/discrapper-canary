@@ -1,16 +1,3 @@
-e.exports = {
-    G9: "text-xs/normal__0ccae",
-    Ig: "fileWrapper__0ccae",
-    NJ: "file__0ccae",
-    Jg: "fileInner__0ccae",
-    Kk: "icon__0ccae",
-    tP: "filenameWrapper__0ccae",
-    iW: "filename__0ccae",
-    yu: "metadata__0ccae text-xs/normal__0ccae",
-    L$: "progressContainer__0ccae metadata__0ccae text-xs/normal__0ccae",
-    x7: "cancelButton__0ccae",
-    Ej: "size__0ccae",
-    RT: "filenameLinkWrapper__0ccae",
-    AD: "fileNameLink__0ccae",
-    Qs: "content__0ccae",
-};
+e.exports = JSON.parse(
+    '{"q5M7HV":["Divers"],"zRKbpz":["Serveur"],"UzRF+8":["R\xe9seaux sociaux"],"NGdNZb":["Messages priv\xe9s"],"zJlwvV":["Messages syst\xe8me de Discord"],"40TIqW":["Notifications d\'\xe9v\xe9nements"],"HibKoy":["Notifications de forum"],"vcrTV5":["Activit\xe9 des ami(e)s"],"NxgGZA":["Demandes d\'amis"],"9EDo+/":["Gaming"],"IUH/Oe":["Appels entrants"],"4qWUAO":["Messages"],"n0Wp6j":["Messages manqu\xe9s"],"T+79Eo":["Autre"],"kIrLfg":["Autres notifications de serveur"],"MOjygY":["Sondages"],"wv4QHR":["Notifications de r\xe9action"],"S5cB9e":["Temps r\xe9el"],"4n388K":["Notifications de conf\xe9rence"],"Iy9grw":["Activit\xe9 en vocal et en streaming"],"VeBD1N":["Voix connect\xe9e"]}',
+);

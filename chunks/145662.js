@@ -14,7 +14,7 @@ var s = a(477900),
     A = a(191627),
     S = a(652215),
     p = a(49999),
-    E = a(602339),
+    E = a(670595),
     R = a(375708);
 let b = "modal",
     C = i.M.PARENTAL_CONSENT_GRACE_WARNING;
@@ -54,9 +54,9 @@ function g(e) {
             }
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    a.e("176729"),
-                    a.e("343518"),
-                    a.e("52574"),
+                    a.e("500000"),
+                    a.e("271882"),
+                    a.e("776915"),
                     a.e("595429"),
                     a.e("865037"),
                     a.e("170653"),

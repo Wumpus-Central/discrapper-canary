@@ -1,42 +1,34 @@
-d.r(t),
-    Intl.ListFormat && "function" == typeof Intl.ListFormat.__addLocaleData
-        ? Intl.ListFormat.__addLocaleData({
-              data: {
-                  conjunction: {
-                      long: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                      short: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                  },
-                  disjunction: {
-                      long: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                      short: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                  },
-                  unit: {
-                      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                  },
-              },
-              locale: "ro",
-          })
-        : (globalThis.__FORMATJS_LISTFORMAT_DATA__ = globalThis.__FORMATJS_LISTFORMAT_DATA__ || []).push({
-              data: {
-                  conjunction: {
-                      long: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                      short: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                  },
-                  disjunction: {
-                      long: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                      short: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-                  },
-                  unit: {
-                      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-                  },
-              },
-              locale: "ro",
-          });
+_.exports = {
+    Ix: "channel__972a0",
+    Ij: "fullWidth__972a0",
+    dM: "unreadPill__972a0",
+    SU: "muted__972a0",
+    bG: "interactive__972a0",
+    uN: "overflowTooltip__972a0",
+    e8: "withDisplayNameStyles__972a0",
+    fc: "clanTag__972a0",
+    Y_: "clanTagMuted__972a0",
+    Q2: "interactiveSelected__972a0",
+    nf: "link__972a0",
+    $J: "linkButton__972a0",
+    e_: "linkButtonIcon__972a0",
+    b: "closeButton__972a0",
+    wY: "reducedClickTarget__972a0",
+    DQ: "closeButtonPlated__972a0",
+    by: "closeButtonForceShow__972a0",
+    PJ: "innerCloseButtonPlated__972a0",
+    Uq: "closeIconPlated__972a0",
+    _q: "iconsContainer__972a0",
+    EY: "nameplated__972a0",
+    ut: "closeIcon__972a0",
+    wB: "favoriteIcon__972a0",
+    W$: "subtext__972a0",
+    tG: "mutedIcon__972a0",
+    XD: "activityStatusText__972a0",
+    G$: "decorator__972a0",
+    dm: "dm__972a0",
+    xx: "avatarWithText__972a0",
+    Zi: "channelNameFade__972a0",
+    KQ: "waveButton__972a0",
+    a1: "tabHoverGradient__972a0",
+};

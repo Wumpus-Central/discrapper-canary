@@ -13,7 +13,7 @@ var r = n(503698),
     h = n(734057),
     m = n(818348),
     g = n(375708),
-    p = n(10778);
+    p = n(2753);
 function f(e) {
     let { stream: t, width: n } = e,
         r = (0, s.bG)([h.A], () => h.A.getChannel(t.channelId));

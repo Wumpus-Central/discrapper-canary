@@ -18,7 +18,7 @@ var s = n(477900),
     v = n(834730),
     N = n(303727),
     w = n(375708),
-    S = n(269312);
+    S = n(116379);
 function k(e) {
     let { channel: t, header: n, startThread: l } = e,
         r = (0, m.n)(t),
@@ -49,7 +49,7 @@ function k(e) {
     });
 }
 var p = n(707335),
-    C = n(733264);
+    C = n(798393);
 function b(e) {
     let { channel: t, threadIds: n, startThread: r, goToThread: i } = e,
         c = l.useCallback(
@@ -138,7 +138,7 @@ function z(e) {
 var R = n(747926),
     D = n(37411),
     O = n(652215),
-    B = n(897902);
+    B = n(37977);
 function Q(e) {
     let { channel: t, className: n, onClose: r, context: x } = e,
         f = (0, i.bG)([g.A], () => g.A.can(O.xBc.READ_MESSAGE_HISTORY, t)),

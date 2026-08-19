@@ -5,8 +5,8 @@ var t = r(503698),
     n = r.n(t),
     i = r(935462),
     l = r(375708),
-    d = r(43200),
-    c = r(156453);
+    d = r(336899),
+    c = r(268814);
 function u(e) {
     let { children: s, footer: r, className: t } = e;
     return (0, a.jsx)("div", {

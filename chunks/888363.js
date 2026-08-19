@@ -17,7 +17,7 @@ var a = i(477900),
     f = i(652215),
     g = i(315290),
     A = i(375708),
-    N = i(185964);
+    N = i(27977);
 function S(t) {
     let { email: e, setEmail: i, claimRequired: p, onSuccess: C, onClose: f } = t,
         [S, b] = s.useState(),

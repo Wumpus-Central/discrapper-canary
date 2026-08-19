@@ -1,4 +1,4 @@
-n.d(t, { A: () => t8 }), n(321073);
+n.d(t, { A: () => t7 }), n(321073);
 var i,
     l = n(477900),
     s = n(582128),
@@ -32,7 +32,7 @@ var i,
     R = n(633018),
     M = n(503698),
     _ = n.n(M),
-    P = n(689113);
+    P = n(178686);
 function G(e) {
     let { children: t, icon: n, title: i } = e;
     return (0, l.jsxs)("header", {
@@ -65,7 +65,7 @@ var F = n(261958),
     Q = n(442433),
     J = n(200662),
     Z = n(375708),
-    $ = n(804959);
+    $ = n(634968);
 function X(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
         c = s.useMemo(() => 0 !== Object.keys(r.permissions ?? {}).length, [r.permissions]),
@@ -128,7 +128,7 @@ function X(e) {
     });
 }
 var ee = n(636547),
-    et = n(368307);
+    et = n(747414);
 function en(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: i, guildId: a } = e,
         {
@@ -201,7 +201,7 @@ function en(e) {
           });
 }
 var ei = n(534148),
-    el = n(227470);
+    el = n(16101);
 function es(e) {
     let { application: t, canNavigate: n, guildId: i } = e,
         a = (0, o.bG)([D.A], () => D.A.isUnavailable());
@@ -249,7 +249,7 @@ var er = n(308244),
     eu = n(331322),
     em = n(866665),
     eg = n(638916),
-    eh = n(660499);
+    eh = n(783734);
 function ex(e) {
     let {
         name: t,
@@ -352,7 +352,7 @@ var ep = n(136722),
     eC = n(889227),
     ev = n(696451),
     eI = n(317525),
-    eT = n(672574);
+    eT = n(737496);
 function eS(e) {
     let { guild: t, applicationIntegration: n } = e,
         { application: i } = n,
@@ -431,7 +431,7 @@ var ey = n(47167),
     eP = n(824953),
     eG = n(147925),
     eW = n(652215),
-    eD = n(485800);
+    eD = n(440193);
 function eU(e) {
     let { webhook: t, editedWebhook: n, channelOptions: i, isExpanded: a, errors: r, onToggleExpand: o } = e,
         c = s.useMemo(() => {
@@ -547,7 +547,7 @@ var eB = n(935399),
     eK = n(765178),
     eF = n(342298),
     eY = n(957565),
-    eq = n(724474);
+    eq = n(423959);
 function eQ(e, t) {
     return null != t && /^data:/.test(t) ? t : (0, eo.ku)({ id: e.id, avatar: t, discriminator: eW.h3J });
 }
@@ -748,7 +748,7 @@ function eJ(e) {
         })
     );
 }
-var eZ = n(512370);
+var eZ = n(140659);
 function e$(e) {
     let {
             webhooks: t,
@@ -852,7 +852,7 @@ function e$(e) {
         }),
     });
 }
-var eX = n(354322);
+var eX = n(710135);
 function e0(e) {
     let { application: t, guild: n, integration: i, ...s } = e;
     return (0, l.jsx)(N.ConfirmModal, {
@@ -999,8 +999,8 @@ function e2(e) {
 var e3 = n(573648);
 n(323874), n(14289), n(35956);
 var e1 = n(989349),
-    e8 = n.n(e1),
-    e7 = n(788373),
+    e7 = n.n(e1),
+    e8 = n(788373),
     e5 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1016,8 +1016,8 @@ var e1 = n(989349),
     tn = n(349288),
     ti = n(236285),
     tl = n(351906),
-    ts = n(316560),
-    ta = n(522826);
+    ts = n(445884),
+    ta = n(221851);
 function tr(e) {
     let t,
         {
@@ -1037,9 +1037,9 @@ function tr(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e7.F.KICK) {
+                if (b || i.expire_behavior !== e8.F.KICK) {
                     let e =
-                        i.expire_behavior === e7.F.REMOVE_ROLE
+                        i.expire_behavior === e8.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, ew.A)({
@@ -1103,7 +1103,7 @@ function tr(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? Z.intl.formatToPlainString(Z.t.G16Wji, { user: i.user, platformName: t.name })
-                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
+                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
             };
         }, [P, v, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1283,12 +1283,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e7.F.REMOVE_ROLE.toString(),
+                                                value: e8.F.REMOVE_ROLE.toString(),
                                                 label: Z.intl.string(Z.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e7.F.KICK.toString(),
+                                                value: e8.F.KICK.toString(),
                                                 label: Z.intl.string(Z.t.fQUQIJ),
                                             },
                                         ],
@@ -1328,7 +1328,7 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e7.F.KICK &&
+                        a.expire_behavior === e8.F.KICK &&
                         (0, l.jsx)(T.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
@@ -1415,7 +1415,7 @@ function tr(e) {
         })
     );
 }
-var to = n(53051);
+var to = n(260294);
 function tc(e) {
     let {
             integrations: t,
@@ -1486,7 +1486,7 @@ function tc(e) {
 }
 var td = n(462887),
     tu = n(736653),
-    tm = n(169608);
+    tm = n(945235);
 let tg = "/assets/a29cabf3e1357986.svg",
     th = "/assets/c733a28e6fcba3ef.svg";
 function tx(e) {
@@ -1546,7 +1546,7 @@ var tp = n(22231),
     tT = n(264322),
     tS = n(174459),
     ty = n(320426),
-    tk = n(744612);
+    tk = n(187679);
 function tO(e) {
     let {
             name: t,
@@ -1686,7 +1686,7 @@ function tL(e) {
         c = s.useCallback(
             () =>
                 (0, E.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("468327"), n.e("673380")]).then(n.bind(n, 106895));
+                    let { default: e } = await Promise.all([n.e("243486"), n.e("673380")]).then(n.bind(n, 106895));
                     return (n) => (0, l.jsx)(e, { ...n, channel: t, application: i });
                 }),
             [i, t],
@@ -1694,7 +1694,7 @@ function tL(e) {
         d = a ? (i.getIconURL(48) ?? eo.vI["0"]) : void 0;
     return (0, l.jsx)(tO, { imageSrc: d, onButtonClick: c, details: null != o ? [{ text: o }] : void 0, ...r });
 }
-var tw = n(688038);
+var tw = n(577020);
 function tR(e) {
     let { applicationId: t, channels: n } = e,
         i = (0, tA.h)(t);
@@ -1763,7 +1763,7 @@ var t_ = n(91871),
     tV = n(30370),
     tK = n(381616),
     tF = n(488995),
-    tY = n(587413),
+    tY = n(638594),
     tq = n(854766),
     tQ = n(237070);
 function tJ(e, t) {
@@ -2159,7 +2159,7 @@ function t$(e) {
     });
 }
 var tX = n(964486),
-    t0 = n(420860);
+    t0 = n(580807);
 function t2(e) {
     let t,
         n,
@@ -2247,7 +2247,7 @@ function t2(e) {
     });
 }
 n(46121);
-var t3 = n(176547);
+var t3 = n(494192);
 function t1(e, t) {
     switch (e) {
         case eW.wLn.APPLICATION:
@@ -2268,7 +2268,7 @@ function t1(e, t) {
             return "";
     }
 }
-let t8 = s.memo(function (e) {
+let t7 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,

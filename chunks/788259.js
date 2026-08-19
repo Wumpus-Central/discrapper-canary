@@ -49,7 +49,7 @@ var f = l(210598),
     S = l(287809),
     O = l(183555),
     k = l(375708),
-    U = l(656192);
+    U = l(378145);
 function F(a) {
     let e = (0, G.bG)([S.default], () => S.default.getCurrentUser());
     return null == e ? null : (0, i.jsx)(y, { ...a, userId: e.id });
@@ -118,7 +118,7 @@ function w(a) {
           });
 }
 l(600253);
-var B = l(29854);
+var B = l(307897);
 function V(a) {
     let { className: e } = a;
     return (0, i.jsx)("div", {
@@ -136,7 +136,7 @@ function V(a) {
         }),
     });
 }
-var K = l(563323);
+var K = l(553790);
 function M() {
     return (0, i.jsxs)("div", {
         className: K.yL,
@@ -156,7 +156,7 @@ function X(a) {
     });
 }
 var z = l(315629),
-    Q = l(986708);
+    Q = l(706933);
 function Y(a) {
     let { size: e } = a;
     return "default" !== e
@@ -179,7 +179,7 @@ function Y(a) {
           });
 }
 var H = l(518477),
-    $ = l(600705);
+    $ = l(866680);
 let J = {
     [r.x.FAVORITE_GAMES]: {
         placeholder: () => ({ variant: "details", applicationId: h.LEAGUE_OF_LEGENDS }),

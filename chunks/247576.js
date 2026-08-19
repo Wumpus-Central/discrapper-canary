@@ -47,7 +47,7 @@ var i,
     $ = n(481045),
     z = n(527533),
     Z = n(375708),
-    q = n(485135);
+    q = n(293686);
 function X(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)("div", {
@@ -496,18 +496,18 @@ var ej = n(769015),
     eQ = n(929921),
     eJ = n(650338),
     e0 = n(753070),
-    e1 = n(945224);
+    e1 = n(900795);
 function e2(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(k.E, { className: l()({ [e1.Q]: null == n }, t), color: n, ...i });
 }
 var e3 = n(95701),
-    e4 = n(616356),
-    e5 = n(280450),
+    e5 = n(616356),
+    e4 = n(280450),
     e6 = n(734057),
     e7 = n(184989),
     e8 = n(71393),
-    e9 = n(966497),
+    e9 = n(453028),
     te = n(576705),
     tt = n(290863),
     tn = n(994500),
@@ -553,7 +553,7 @@ let tv = function () {
         t = (0, eN.Et)(),
         n = (0, eN.XT)(),
         i = (0, tN.bG)([eS.Ay], () => eS.Ay.getIsAtMaxSaveClipOperations()),
-        a = (0, tN.bG)([e4.A], () => e4.A.getCurrentUserActiveStream()),
+        a = (0, tN.bG)([e5.A], () => e5.A.getCurrentUserActiveStream()),
         s = t && (a?.state === x.XYD.ACTIVE || n),
         { enableGamePanelEntrypoint: l } = tL.A.useConfig({ location: "ClipsPanelButton" }),
         { tooltip: o, clipsSourceAttached: d } = (0, ty.A)();
@@ -650,7 +650,7 @@ var tW = n(338771),
     tZ = n(153488),
     tq = n(942370),
     tX = n(758836),
-    tQ = n(493285);
+    tQ = n(79958);
 function tJ(e, t, n) {
     return (
         null != e &&
@@ -730,8 +730,8 @@ let t0 = a.memo(function (e) {
             z = a.useCallback(() => {
                 (0, t_.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("316123"),
-                        n.e("718710"),
+                        n.e("238417"),
+                        n.e("638642"),
                         n.e("498552"),
                         n.e("486672"),
                         n.e("236946"),
@@ -754,7 +754,7 @@ let t0 = a.memo(function (e) {
             X = a.useCallback(() => {
                 (0, tM.pK)({ gameApplicationId: u?.id, buttonVariant: "admin" }),
                     (0, t_.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("114855"), n.e("982730"), n.e("965058")]).then(
+                        let { default: e } = await Promise.all([n.e("64088"), n.e("982730"), n.e("965058")]).then(
                             n.bind(n, 154649),
                         );
                         return (t) => (0, r.jsx)(e, { gameName: q, gameApplicationId: u?.id, ...t });
@@ -782,7 +782,7 @@ let t0 = a.memo(function (e) {
             a.useEffect(() => {
                 O && (en(!1), null != ee.current && (clearTimeout(ee.current), (ee.current = null)));
             }, [O]);
-        let ei = null == v || null == p ? null : (0, r.jsx)(t4, { applicationId: v.id }),
+        let ei = null == v || null == p ? null : (0, r.jsx)(t5, { applicationId: v.id }),
             er = V
                 ? (0, r.jsx)(t3, { gameName: q, runningGameId: u?.id, onClick: J })
                 : H
@@ -993,7 +993,7 @@ function t3(e) {
         },
     });
 }
-function t4(e) {
+function t5(e) {
     let { applicationId: t } = e,
         n = a.useRef(null);
     a.useEffect(() => {
@@ -1010,7 +1010,7 @@ function t4(e) {
         }, [t, s]);
     return (0, r.jsx)(tR.A, { tooltipText: Z.intl.string(Z.t.vyaWs7), onClick: l, onMouseDown: i, icon: tp.U, ref: n });
 }
-var t5 = n(428689),
+var t4 = n(428689),
     t6 = n(409626),
     t7 = n(692969);
 let t8 = (0, ew.mj)({
@@ -1020,7 +1020,7 @@ let t8 = (0, ew.mj)({
     variations: { 1: { improvedGameCard: !0 } },
 });
 var t9 = n(475358),
-    ne = n(205302);
+    ne = n(939409);
 function nt(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(I.D, {
@@ -1036,7 +1036,7 @@ function nt(e) {
 }
 var nn = n(532624),
     ni = n(350535),
-    nr = n(412126);
+    nr = n(369409);
 function na(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
         a = (0, _.bG)([nn.Ay], () => nn.Ay.getKeybindForAction(x.hCu.SAVE_CLIP)),
@@ -1064,7 +1064,7 @@ function na(e) {
               : null
         : (0, r.jsx)(k.E, { variant: "text-xs/medium", color: "text-subtle", children: Z.intl.string(Z.t.W4N1ru) });
 }
-var ns = n(914782);
+var ns = n(450173);
 function nl(e) {
     let { name: t, applicationId: n } = e,
         i = (0, t7.A)({
@@ -1085,7 +1085,7 @@ function no(e) {
         className: ns.f9,
         children: [
             (0, r.jsx)(ej.A, { className: ns.Gt, game: t, pid: n?.pid, ref: a }),
-            i ? (0, r.jsx)(t5.VideoIcon, { size: "md", color: "currentColor", className: ns.it }) : null,
+            i ? (0, r.jsx)(t4.VideoIcon, { size: "md", color: "currentColor", className: ns.it }) : null,
         ],
     });
 }
@@ -1185,7 +1185,7 @@ let nE = {
 var nA = n(534952),
     nh = n(731854),
     nI = n(685054),
-    nf = n(524224),
+    nf = n(821095),
     np = n(268920),
     nT = n(633217);
 function nm(e) {
@@ -1551,7 +1551,7 @@ let ny = (0, N.A)(function (e) {
         s = a.useRef(null),
         o = a.useRef(null),
         d = a.useRef(null),
-        c = (0, _.bG)([e5.default], () => e5.default.getId()),
+        c = (0, _.bG)([e4.default], () => e4.default.getId()),
         A = (0, _.bG)([ex.Ay, ta.A], () => (0, eZ.A)(ex.Ay, ta.A)),
         { enabled: h } = eG.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: I, isWithinThreshold: f } = (function () {
@@ -1578,7 +1578,7 @@ let ny = (0, N.A)(function (e) {
         T = (0, _.bG)([y.Ay], () => y.Ay.getConnectedActivityChannelId()),
         m = (0, _.bG)([e6.A], () => e6.A.getChannel(T)),
         g = (0, _.bG)([e8.A], () => e8.A.getGuild(m?.guild_id)),
-        [S, N] = (0, _.yK)([e4.A], () => [e4.A.getCurrentUserActiveStream(), e4.A.getStreamerActiveStreamMetadata()]),
+        [S, N] = (0, _.yK)([e5.A], () => [e5.A.getCurrentUserActiveStream(), e5.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         R = (0, _.bG)([eM.A], () => (0, n_.ny)(eM.A.getMainFrame())),
         L = (0, _.bG)([e8.A, te.A], () => null == p || eY.vz(p, e8.A, te.A, !1)),

@@ -31,7 +31,7 @@ var i = t(477900),
     _ = t(652215),
     G = t(650583),
     I = t(375708),
-    L = t(448071);
+    L = t(9570);
 let M = "Channel Pins",
     R = [];
 function K(e) {

@@ -11,7 +11,7 @@ var s = n(477900),
     u = n(613373),
     p = n(625494),
     E = n(652215),
-    g = n(103323);
+    g = n(580950);
 function A(e) {
     let { timestampMs: t, attachmentId: n } = e;
     return (0, s.jsx)(d.D, {
@@ -30,9 +30,9 @@ function A(e) {
 var h = n(860227),
     I = n(861986),
     T = n(375708),
-    f = n(281867),
-    _ = n(742715),
-    S = n(364932);
+    f = n(318626),
+    _ = n(165648),
+    S = n(13673);
 function C(e, t) {
     return e.type === E.lAJ.VOICE_HANGOUT_INVITE
         ? ""

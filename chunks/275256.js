@@ -6,7 +6,7 @@ var r = s(503698),
     u = s(499373),
     c = s(607470),
     t = s(366523),
-    d = s(391171);
+    d = s(30760);
 function i(a) {
     var l;
     let { imageUrl: s, backgroundImageUrl: r, altText: i, customClassNames: m, rewardGraphic: o } = a;

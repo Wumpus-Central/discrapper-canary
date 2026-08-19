@@ -30,7 +30,7 @@ var n = l(477900),
     O = l(935208),
     M = l(652215),
     L = l(375708),
-    _ = l(49350);
+    _ = l(262377);
 class D extends s.PureComponent {
     constructor(e) {
         super(e);
@@ -80,7 +80,7 @@ class D extends s.PureComponent {
                     A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
                         t(),
                         (0, o.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([l.e("370824"), l.e("628907")]).then(
+                            let { default: e } = await Promise.all([l.e("418319"), l.e("628907")]).then(
                                 l.bind(l, 209674),
                             );
                             return (t) => (0, n.jsx)(e, { ...t });

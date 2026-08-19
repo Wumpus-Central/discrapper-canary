@@ -9,7 +9,7 @@ var r = n(503698),
     o = n(661531),
     d = n(705751),
     c = n(375708),
-    u = n(842025);
+    u = n(73638);
 function _(e) {
     let {
             invertColor: t = !1,

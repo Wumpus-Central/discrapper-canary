@@ -37,7 +37,7 @@ var n = i(477900),
     M = i(562153),
     U = i(993401),
     W = i(375708),
-    F = i(244650);
+    F = i(92795);
 let H = [
         () => W.intl.string(W.t.madJdE),
         () => W.intl.string(W.t.NYmfoP),
@@ -165,7 +165,7 @@ function Z(e) {
 }
 var Q = i(83013),
     $ = i(518477),
-    ee = i(186468);
+    ee = i(587763);
 function et(e) {
     let { user: t, currentUser: i, displayProfile: l, guildId: s, channelId: r, onClose: a } = e,
         { live: o, recent: d, stream: c } = (0, E.A)(t.id),
@@ -285,7 +285,7 @@ var ei = i(163126),
     es = i(229187),
     er = i(975732),
     ea = i(503062),
-    eo = i(933260);
+    eo = i(393213);
 function ed(e) {
     let { user: t, guildId: i, channelId: s, onClose: r } = e,
         { analyticsLocations: a } = (0, en.Ay)(),
@@ -432,15 +432,15 @@ let e1 = (0, e0.mj)({
     defaultConfig: { isEnabled: !1 },
     variations: { 1: { isEnabled: !0 } },
 });
-var e8 = i(724834),
-    e2 = i(158045),
-    e7 = i(451395),
-    e5 = i(823016),
-    e3 = i(18698);
+var e2 = i(724834),
+    e8 = i(158045),
+    e5 = i(451395),
+    e7 = i(823016),
+    e3 = i(100741);
 function e6(e) {
     let { item: t, index: i, wishlistId: l, onReorder: s, children: r } = e,
-        { manageFocusOnReorder: a } = (0, e5.r)();
-    return (0, n.jsx)(e7.mG, {
+        { manageFocusOnReorder: a } = (0, e7.r)();
+    return (0, n.jsx)(e5.mG, {
         index: i,
         itemId: String(t.skuId),
         listType: String(l),
@@ -467,11 +467,11 @@ let e4 = l.memo(function (e) {
             isDragging: d,
             onReorder: c,
         } = e,
-        { registerDragHandleRef: u } = (0, e5.r)(),
+        { registerDragHandleRef: u } = (0, e7.r)(),
         g = l.useMemo(
             () =>
                 a
-                    ? (0, n.jsx)(e7.jV, {
+                    ? (0, n.jsx)(e5.jV, {
                           buttonRef: u(String(t.skuId)),
                           className: e3.BU,
                           onFocus: (e) => e.stopPropagation(),
@@ -481,7 +481,7 @@ let e4 = l.memo(function (e) {
         ),
         m = l.useMemo(
             () =>
-                (0, n.jsx)(e8.A, {
+                (0, n.jsx)(e2.A, {
                     item: t,
                     wishlistOwner: s,
                     guildId: r,
@@ -552,7 +552,7 @@ function e9(e) {
             ),
         ),
     });
-    return a ? (0, n.jsx)(e5.B, { emptyListFallbackRef: null, children: I }) : I;
+    return a ? (0, n.jsx)(e7.B, { emptyListFallbackRef: null, children: I }) : I;
 }
 function te(e) {
     let t = (0, e$.a)("UserProfileModalV2WishlistGrid");
@@ -561,7 +561,7 @@ function te(e) {
 function tt(e) {
     let t = eH.default.getCurrentUser()?.id,
         i = null != t && t !== e.profileOwner.id,
-        l = e.items.some((e) => e2.Ay.isPremiumSku(e.skuId));
+        l = e.items.some((e) => e8.Ay.isPremiumSku(e.skuId));
     return (0, n.jsx)(eQ.h, {
         isGifting: i,
         location: "UserProfileModalV2WishlistGrid",
@@ -584,7 +584,7 @@ let tc = 90 * to.A.Millis.DAY,
         defaultConfig: { minItemsToDismiss: 1 },
         variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 }, 2: { minItemsToDismiss: 10 } },
     });
-var tm = i(588605);
+var tm = i(469364);
 function tx(e) {
     let {
             user: t,
@@ -702,7 +702,7 @@ var th = i(477782),
     tA = i(789645),
     tv = i(847374),
     tE = i(486020),
-    tS = i(291641);
+    tS = i(208813);
 function tC(e) {
     let {
             title: t,
@@ -853,7 +853,7 @@ function tw(e) {
           });
 }
 var ty = i(202541),
-    tk = i(678790);
+    tk = i(526725);
 function tR(e) {
     let { socialLayerStorefrontApplicationIds: t, handleOpenShop: i, handleOpenGameShop: l } = e;
     return t.length > 0
@@ -1175,7 +1175,7 @@ function tD(e) {
         ],
     });
 }
-var tG = i(844621);
+var tG = i(131058);
 function tM(e) {
     let { children: t, className: i, scrollerRef: l, ...s } = e;
     return (0, n.jsx)(a.Ip, { ref: l, className: r()(tG.gN, i), fade: !0, ...s, children: t });

@@ -36,8 +36,8 @@ var A = n(442433),
 let P = "content-inventory-feed";
 var D = n(652215),
     U = n(375708),
-    G = n(227296),
-    V = n(998448);
+    G = n(569709),
+    V = n(4577);
 let F = i.memo(function (e) {
         let t,
             { title: s, onToggleExpand: r, expanded: a, expandedCount: o } = e,
@@ -180,11 +180,11 @@ let eM = eL.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                                n.e("41295"),
-                                n.e("440351"),
-                                n.e("676279"),
-                                n.e("545309"),
-                                n.e("397705"),
+                                n.e("59766"),
+                                n.e("889856"),
+                                n.e("622936"),
+                                n.e("216947"),
+                                n.e("866038"),
                                 n.e("326692"),
                                 n.e("926132"),
                                 n.e("146652"),
@@ -203,7 +203,7 @@ let eM = eL.Ay.getEnableHardwareAcceleration(),
                                 n.e("311802"),
                                 n.e("229787"),
                                 n.e("698965"),
-                                n.e("435027"),
+                                n.e("934771"),
                                 n.e("882073"),
                                 n.e("797558"),
                                 n.e("454625"),

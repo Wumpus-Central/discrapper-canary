@@ -19,9 +19,9 @@ var l = n(477900),
     E = n(58703),
     C = n(403362),
     I = n(922016),
-    y = n(860685);
+    y = n(7834);
 let S = i.lazy(() =>
-    Promise.all([n.e("932931"), n.e("446054")])
+    Promise.all([n.e("353604"), n.e("446054")])
         .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
@@ -57,7 +57,7 @@ function v(e) {
 var _ = n(97808),
     N = n(778712),
     T = n(342296),
-    j = n(156980);
+    j = n(447177);
 function b(e) {
     let { user: t, guildId: n, layerContext: s } = e,
         r = i.useRef(null);

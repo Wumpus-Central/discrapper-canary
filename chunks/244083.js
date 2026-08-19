@@ -16,7 +16,7 @@ var l,
     g = n(174459),
     x = n(652215),
     A = n(375708),
-    E = n(373834),
+    E = n(51377),
     C = (((l = {}).CENTER = "center"), (l.LEFT = "left"), l),
     I = (((i = {}).TOP = "top"), (i.MIDDLE = "middle"), i);
 class y extends r.PureComponent {

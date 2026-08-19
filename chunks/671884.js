@@ -72,7 +72,7 @@ var W = l(702841),
     eo = l(652215),
     ec = l(711918),
     eu = l(375708),
-    ed = l(760530);
+    ed = l(71967);
 function em(e) {
     let { header: t, description: l } = e;
     return (0, n.jsxs)("div", {
@@ -177,7 +177,7 @@ var ef = l(621466),
     eV = l(460905),
     e$ = l(713608),
     eq = l(696016),
-    eB = l(367508);
+    eB = l(153511);
 function eQ(e) {
     let { clip: t } = e,
         l = t.decision?.signal;
@@ -243,7 +243,7 @@ function eW(e) {
 }
 var eX = l(718812),
     eZ = l(721610),
-    eJ = l(577919);
+    eJ = l(175764);
 function e0(e) {
     let { clip: t, actionsDisabled: l, isNew: i, onClick: a, onEdit: s, gridItemProps: r } = e;
     return (0, n.jsx)(eR.Cl, {
@@ -297,9 +297,9 @@ function e1(e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("316123"),
-                            l.e("221107"),
-                            l.e("98900"),
+                            l.e("238417"),
+                            l.e("657266"),
+                            l.e("272396"),
                             l.e("595429"),
                             l.e("311930"),
                             l.e("320891"),
@@ -308,7 +308,7 @@ function e1(e) {
                             l.e("338601"),
                             l.e("218489"),
                             l.e("669006"),
-                            l.e("440688"),
+                            l.e("218307"),
                             l.e("886456"),
                             l.e("869370"),
                         ]).then(l.bind(l, 621953));
@@ -411,7 +411,7 @@ function e1(e) {
                             onProgressChange: L,
                             children: [
                                 (0, n.jsx)(e3, { isNew: a }),
-                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e9, {}),
+                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e7, {}),
                                 (0, n.jsx)("div", { className: eJ.dH, "aria-hidden": "true" }),
                             ],
                         }),
@@ -473,12 +473,12 @@ function e5(e) {
         ],
     });
 }
-function e9() {
+function e7() {
     let e = (0, eR.Y_)();
     return (0, n.jsxs)("div", {
         className: eJ.E4,
         children: [
-            (0, n.jsx)(e7, {}),
+            (0, n.jsx)(e9, {}),
             e.isFavorite &&
                 (0, n.jsx)("div", {
                     className: s()(eJ.cH, eJ.y8),
@@ -488,7 +488,7 @@ function e9() {
         ],
     });
 }
-function e7() {
+function e9() {
     let e = (0, eR.Y_)(),
         t = 0 === e.length,
         l = !0 === e.pending,
@@ -712,8 +712,8 @@ var te = l(792852);
 function tt(e) {
     return Math.min(45 * e, 520);
 }
-var tl = l(606139),
-    tn = l(421762);
+var tl = l(91440),
+    tn = l(762831);
 let ti = [0, 16, 0, 16],
     ta = ti[1] + ti[3];
 function ts(e) {
@@ -967,7 +967,7 @@ function tP(e) {
         }
     }
 }
-var tE = l(378352);
+var tE = l(435021);
 function tL(e) {
     let { closePopout: t } = e,
         l = (0, te.P)((e) => e.dateFilter),
@@ -1228,7 +1228,7 @@ var tS = l(91871),
     tI = l.n(tS),
     tM = l(103552),
     tD = l(914427),
-    tT = l(160168);
+    tT = l(724141);
 function t_(e) {
     let {
             triggerLabel: t,
@@ -1293,7 +1293,7 @@ function t_(e) {
             }),
     });
 }
-var tR = l(529206);
+var tR = l(187671);
 function tF(e) {
     let { label: t, icon: l, onRemove: i, removeAriaLabel: a } = e;
     return (0, n.jsxs)("div", {
@@ -1316,7 +1316,7 @@ function tF(e) {
         ],
     });
 }
-var tH = l(978413);
+var tH = l(401756);
 let tz = { all: ec.default.lscwjQ, auto: ec.default.xrOIkz, manual: ec.default.D7HSLJ };
 function tG() {
     let e = (0, te.P)((e) => e.dateFilter),
@@ -1736,7 +1736,7 @@ function tZ(e) {
         .sort((e, t) => t.createdAt - e.createdAt)
         .slice(0, t);
 }
-var tJ = l(45143);
+var tJ = l(329924);
 function t0(e) {
     let { clips: t, onEdit: l, onEdgeNavigate: a } = e,
         r = i.useMemo(() => tZ(t), [t]),
@@ -1886,8 +1886,8 @@ function t0(e) {
 var t1 = l(770178),
     t2 = l(765548),
     t3 = l(202163),
-    t5 = l(217359);
-function t9(e) {
+    t5 = l(68408);
+function t7(e) {
     let {
             session: t,
             recentClipIds: l,
@@ -2073,7 +2073,7 @@ function t9(e) {
         ],
     });
 }
-var t7 = l(430643);
+var t9 = l(799888);
 function t8(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: a, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: o } = tq.useConfig({ location: "ClipsGalleryHome" }),
@@ -2131,15 +2131,15 @@ function t8(e) {
         }, []);
     return p.length > 0 || d
         ? (0, n.jsx)(t$.Ip, {
-              className: t7.iR,
+              className: t9.iR,
               fade: !0,
               children: (0, n.jsxs)("div", {
-                  className: t7.Qs,
+                  className: t9.Qs,
                   ref: v,
                   children: [
                       d &&
                           (0, n.jsx)("div", {
-                              className: t7.Dk,
+                              className: t9.Dk,
                               children: (0, n.jsx)(t0, { clips: t, onEdit: a, onEdgeNavigate: b }),
                           }),
                       p.length > 0 &&
@@ -2152,7 +2152,7 @@ function t8(e) {
                                   }),
                                   p.map((e, t) =>
                                       (0, n.jsx)(
-                                          t9,
+                                          t7,
                                           {
                                               session: e,
                                               recentClipIds: m,
@@ -2167,7 +2167,7 @@ function t8(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t7.dp,
+                                      className: t9.dp,
                                       children: (0, n.jsx)(eC.$, {
                                           variant: "primary",
                                           text: eu.intl.string(ec.default.RQtkop),
@@ -2180,7 +2180,7 @@ function t8(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(q.y, {}) })
+          ? (0, n.jsx)("div", { className: t9.dc, children: (0, n.jsx)(q.y, {}) })
           : (0, n.jsx)(ex, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(7689),
@@ -2189,7 +2189,7 @@ var t4 = l(7689),
     lt = l(176781),
     ll = l(650684),
     ln = l(812993),
-    li = l(944833);
+    li = l(152725);
 function la(e) {
     let { icon: t, label: l, trailer: i, isSelected: a, isDisabled: r = !1, onClick: o } = e,
         c = r && !a;
@@ -2429,7 +2429,7 @@ function lu(e) {
     });
 }
 var ld = l(409067),
-    lm = l(980375);
+    lm = l(314484);
 function lh(e) {
     let {
         channelId: t,

@@ -144,12 +144,12 @@ var V = l(460760),
     X = l(289873),
     J = l(900002),
     $ = l(834730),
-    ee = l(518009),
+    ee = l(232554),
     et = l(442433),
     el = l(736653),
     es = l(573435),
     ea = l(635350),
-    er = l(182053);
+    er = l(785970);
 let ei = a.memo(function (e) {
     let { className: t } = e;
     return (0, s.jsx)("div", { className: Z()(t, er.En) });
@@ -186,7 +186,7 @@ var eg = l(714991),
     ef = l(939249),
     eA = l(26430),
     eC = l(517905),
-    ex = l(977972);
+    ex = l(421407);
 let ey = function (e) {
     let { className: t, guildId: l } = e,
         r = a.useRef(null),
@@ -210,7 +210,7 @@ let ey = function (e) {
             }),
     });
 };
-var eS = l(153540),
+var eS = l(59329),
     eI = l(937495),
     ej = l(517061);
 function eb(e) {
@@ -406,7 +406,7 @@ function ev(e) {
     });
 }
 let eR = a.memo(eE);
-var eN = l(468853);
+var eN = l(401034);
 let ep = { page: R.liQ.GUILD_DISCOVERY, object: R.ZSU.CARD, section: R.JJy.DISCOVER_POPULAR };
 function ek(e) {
     let { tab: t, guildIds: l, loading: r, onScroll: i, onGuildCardClick: n, onGuildCardSeen: c } = e,
@@ -452,7 +452,7 @@ var eG = l(66834),
     eL = l(661531),
     ew = l(821609),
     eT = l(192308),
-    e_ = l(191258);
+    e_ = l(792749);
 let eD = function (e) {
     let { hasHub: t } = e;
     return (0, s.jsxs)("div", {
@@ -481,7 +481,7 @@ let eD = function (e) {
                 onClick: () =>
                     (0, eT.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            l.e("607054"),
+                            l.e("342525"),
                             l.e("197804"),
                             l.e("807265"),
                             l.e("797641"),
@@ -495,7 +495,7 @@ let eD = function (e) {
     });
 };
 var eU = l(71393),
-    eq = l(244440);
+    eq = l(118331);
 let eV = function (e) {
     let { onScroll: t } = e,
         l = (0, i.yK)([eU.A], () => eU.A.getGuildsArray().filter((e) => e.features.has(R.GuildFeatures.HUB))),
@@ -661,7 +661,7 @@ function e$() {
         );
     }, [n, t, r, s]);
 }
-var e0 = l(166283);
+var e0 = l(166976);
 function e1(e) {
     let { categoryId: t, loadId: l } = e;
     x.A.setState({ categoryId: t }),
@@ -702,9 +702,9 @@ let e3 = function (e) {
               }),
           });
 };
-var e5 = l(191711),
-    e6 = l(752517);
-function e7(e) {
+var e6 = l(191711),
+    e7 = l(226658);
+function e4(e) {
     let { loadId: t } = e,
         l = x.A.useField("categoryId"),
         r = e$(),
@@ -751,25 +751,25 @@ function e7(e) {
     return null == r
         ? null
         : (0, s.jsxs)("div", {
-              className: e6.k,
+              className: e7.k,
               children: [
                   (0, s.jsx)($.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
                       children: N.intl.string(N.t.f09BQJ),
                   }),
-                  (0, s.jsx)(e5.A, {
+                  (0, s.jsx)(e6.A, {
                       items: d,
                       title: n,
                       onSelect: c,
                       selected: `${l}`,
                       "aria-label": N.intl.string(N.t.Ng5cTK),
-                      variant: e5.H.FILLED,
+                      variant: e6.H.FILLED,
                   }),
               ],
           });
 }
-var e4 = l(631057),
+var e5 = l(468646),
     e9 = l(842503);
 let e8 = function (e) {
     let { loadId: t } = e,
@@ -787,16 +787,16 @@ let e8 = function (e) {
         c = l === F.Iq ? N.intl.string(N.t.Ivw1Is) : N.intl.formatToPlainString(N.t["+1WAFb"], { categoryName: r }),
         o = l === F.Iq ? N.intl.string(N.t.aXvEjd) : N.intl.format(N.t.XLioqn, { onClick: n });
     return (0, s.jsxs)("div", {
-        className: e4.kL,
+        className: e5.kL,
         children: [
-            (0, s.jsx)("img", { alt: "", src: e9, className: e4.Sl }),
-            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e4.wx, children: c }),
+            (0, s.jsx)("img", { alt: "", src: e9, className: e5.Sl }),
+            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e5.wx, children: c }),
             (0, s.jsx)($.E, { variant: "text-md/normal", color: "text-default", children: o }),
         ],
     });
 };
 var te = l(783878),
-    tt = l(206232);
+    tt = l(118216);
 function tl(e) {
     let { loadId: t } = e,
         l = (0, i.bG)([eK.default], () => (0, I.Kv)([eK.default])),
@@ -828,7 +828,7 @@ function tl(e) {
         }),
     });
 }
-var ts = l(330250);
+var ts = l(413185);
 let ta = Object.freeze({ top: 0, bottom: 0, left: 32, right: 202 }),
     tr = Object.freeze({ top: 0, bottom: 0, left: 32, right: 32 }),
     ti = { page: R.liQ.GUILD_DISCOVERY, object: R.ZSU.CARD, section: R.JJy.DISCOVER_SEARCH },
@@ -928,7 +928,7 @@ function tc(e) {
                                     !A &&
                                         (0, s.jsxs)("div", {
                                             className: ts.eW,
-                                            children: [(0, s.jsx)(e7, { loadId: t }), (0, s.jsx)(tl, { loadId: t })],
+                                            children: [(0, s.jsx)(e4, { loadId: t }), (0, s.jsx)(tl, { loadId: t })],
                                         }),
                                     g && (0, s.jsx)(e8, { loadId: t }),
                                 ],
@@ -1077,7 +1077,7 @@ function tc(e) {
     });
 }
 var to = l(488995),
-    td = l(423792);
+    td = l(877149);
 function tu() {
     let e,
         t,
@@ -1266,7 +1266,7 @@ function tu() {
 var tg = l(908742),
     th = l(726845),
     tm = l(285395),
-    tf = l(371949);
+    tf = l(272030);
 let tA = function () {
     let e = (0, i.bG)([c.A], () => c.A.hasLoadedExperiments),
         t = th.A.useField("selectedTab"),

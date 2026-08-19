@@ -32,7 +32,7 @@ var R = n(186111),
     w = n(652215),
     _ = n(650583),
     v = n(375708),
-    L = n(229544);
+    L = n(969465);
 class E extends l.Component {
     searchBarRef = l.createRef();
     state = { focused: !1 };
@@ -128,7 +128,7 @@ var D = n(657044),
     O = n(976860),
     U = n(174459),
     k = n(144914),
-    V = n(174927);
+    V = n(58998);
 let G = (0, k.S)() || !1,
     H = l.memo(function (t) {
         let { currentRoute: e, renderToolbar: n } = t,
@@ -323,7 +323,7 @@ let tm = y.Ay.connectStores([ta.A], (t) => {
     let { libraryApplication: e } = t;
     return { cloudSyncState: ta.A.getState(e.id, e.branchId) };
 })(tA);
-var tg = n(545197);
+var tg = n(498340);
 let tx = (0, tn.xI)(F.A.GAME_LIST_ROW_MIN_HEIGHT),
     tf = (0, tn.xI)(F.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
     ty = Object.freeze({ [w.DpB.PLATFORM]: "Platform", [w.DpB.LAST_PLAYED]: "Last Played", [w.DpB.NAME]: "Name" });
@@ -717,7 +717,7 @@ var tS = n(435558),
     tz = n(255438),
     tW = n(505806),
     tY = n(998304),
-    tJ = n(427961);
+    tJ = n(281370);
 class tQ extends l.PureComponent {
     dataChangedAt;
     fillColor;
@@ -802,7 +802,7 @@ class tQ extends l.PureComponent {
         });
     }
 }
-var tq = n(670843);
+var tq = n(205616);
 let t$ = function (t) {
     let { title: e, className: n, color: l, animate: s, getHistoricalTotalBytes: a } = t;
     return (0, i.jsx)(tW.A, {
@@ -849,7 +849,7 @@ let t$ = function (t) {
         },
     });
 };
-var tZ = n(988283);
+var tZ = n(307304);
 function t0(t) {
     let { className: e, children: n, onContextMenu: l, item: s } = t;
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
@@ -873,7 +873,7 @@ function t4(t, e) {
             return (0, tz.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t2 = {
+let t6 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -902,8 +902,8 @@ let t2 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t6(t, e, n, i, l) {
-    let s = t2[e],
+function t2(t, e, n, i, l) {
+    let s = t6[e],
         a = null != s ? Object.keys(s) : [],
         { unit: r, time: o } = (0, tt.$l)(null != t ? t / 60 : null, a);
     if (null != s && null != r) {
@@ -925,7 +925,7 @@ function t3(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t6(a, e, i, o, r);
+            return t2(a, e, i, o, r);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -935,7 +935,7 @@ function t3(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: r });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t6(a, e, i, o, r);
+            if (e === w.WTw.REPAIRING) return t2(a, e, i, o, r);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: r });
     }
     throw Error("Invalid Dispatch stage");
@@ -1298,7 +1298,7 @@ let es = (0, tk.A)(
     }))((0, tU.A)(ei)),
 );
 var ea = n(613057),
-    er = n(739022);
+    er = n(723525);
 class eo extends l.PureComponent {
     _scrollerRef = l.createRef();
     _scrollToOnMount;
@@ -1372,7 +1372,7 @@ var ec = n(665260),
     eR = n(452027),
     eS = n(466472),
     eP = n(29160),
-    ej = n(211463);
+    ej = n(970176);
 let ew = Math.ceil(2 * Math.PI * 20),
     e_ = function (t) {
         let e,
@@ -1417,8 +1417,8 @@ let ew = Math.ceil(2 * Math.PI * 20),
 var ev = n(775228),
     eL = n(723702),
     eE = n(19575),
-    eb = n(525832),
-    eD = n(522826);
+    eb = n(352001),
+    eD = n(221851);
 class eM extends l.PureComponent {
     state = { label: void 0, isDefault: null };
     handleStartEditing = () => {
@@ -1649,7 +1649,7 @@ let eO = y.Ay.connectStores([ev.A], () => ({
     installationPathsMetadata: ev.A.installationPathsMetadata,
     defaultInstallationPath: ev.A.defaultInstallationPath,
 }))(eB);
-var eU = n(132859);
+var eU = n(238848);
 function ek(t) {
     let { applicationViewItems: e, restoreApplication: n } = t;
     if (0 === e.length) return null;
@@ -1762,7 +1762,7 @@ function eG() {
     };
     return (0, i.jsx)(eV, { ...t });
 }
-var eH = n(675605);
+var eH = n(481604);
 function eK() {
     return (0, i.jsxs)(s.dO, {
         children: [

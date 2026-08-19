@@ -11,7 +11,7 @@ var t,
     u = s(761929),
     m = s(742023),
     b = s(743898),
-    S = s(870406),
+    S = s(53569),
     R =
         (((t = {})[(t.PostSidebar = 0)] = "PostSidebar"),
         (t[(t.ThreadSidebar = 1)] = "ThreadSidebar"),

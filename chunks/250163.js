@@ -54,7 +54,7 @@ var y = n(503698),
     M = n(915089),
     k = n(946356),
     O = n(996988),
-    P = n(990585);
+    P = n(768590);
 function D(e) {
     let { user: t, displayProfile: n, size: l, headingText: s, className: a, style: r, children: o } = e,
         c = (0, M.GV)();
@@ -77,7 +77,7 @@ function D(e) {
 var U = n(821609),
     G = n(975732),
     w = n(375708),
-    H = n(899248);
+    H = n(820555);
 function V(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
@@ -93,7 +93,7 @@ function V(e) {
         }),
     });
 }
-var B = n(21280);
+var B = n(332757);
 let F = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
     z = a._3.SIZE_96,
     J = {

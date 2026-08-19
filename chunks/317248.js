@@ -91,7 +91,7 @@ async function U(e, t, n) {
         return e;
     }
 }
-var G = n(700436);
+var G = n(814241);
 let Y = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map((e) => ({
     id: e,
     label: e,
@@ -139,8 +139,8 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "eadd15f683ee8e157208b8574092f981f5505c5f" !== e.body.hash) {
-                let e = new Date("1787156403714"),
+            if (null != e.body && "cb088b6535fcadb37f78b2c34fbd1e13a9b5747d" !== e.body.hash) {
+                let e = new Date("1787174871239"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eA(n.hours);
@@ -196,7 +196,7 @@ function F(e) {
                 ? (eL && window.open(a.body.permalink_url, "_blank"),
                   T(),
                   (0, c.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("185773"), n.e("876587")]).then(n.bind(n, 369323));
+                      let { default: e } = await Promise.all([n.e("89514"), n.e("876587")]).then(n.bind(n, 369323));
                       return (t) => (0, i.jsx)(e, { ...t, asanaTask: a.body });
                   }))
                 : e_(!0);

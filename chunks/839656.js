@@ -21,8 +21,8 @@ let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     },
     A = h.A.combineAndInjectMentionRule(g, [h.A.createReactRules(h.A.defaultReactRuleOptions), { header: p }]),
     x = h.A.reactParserFor(A);
-var f = n(34193),
-    E = n(742715);
+var f = n(199014),
+    E = n(165648);
 function I(e) {
     let { color: t, className: n, variant: s, text: c, lineClamp: d } = e,
         u = (0, r.$)(),

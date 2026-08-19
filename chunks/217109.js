@@ -7,7 +7,7 @@ var r = n(477900),
     c = n(770178),
     o = n(152858),
     u = n(498381),
-    d = n(431396);
+    d = n(15447);
 let h = 6;
 function m(e) {
     let { index: t, active: n, setPage: l } = e;

@@ -44,7 +44,7 @@ var E = n(503698),
     H = n(589051),
     W = n(223251),
     Y = n(834730),
-    z = n(572360);
+    z = n(257581);
 function J(e) {
     let { onClick: t, keybind: n, className: i, IconComponent: s, "data-testid": o } = e;
     return (0, r.jsxs)("div", {
@@ -78,7 +78,7 @@ var X = n(554146),
     et = n(131607),
     en = n(49999),
     er = n(375708),
-    ei = n(9740);
+    ei = n(831931);
 function es(e) {
     let { locked: t } = e,
         [n, s] = (0, et.kn)(t ? [] : [X.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX], void 0, !0);
@@ -163,7 +163,7 @@ function es(e) {
               }),
           });
 }
-var eo = n(518009),
+var eo = n(232554),
     el = n(351906),
     ea = n(243612),
     ec = n(391973),
@@ -174,7 +174,7 @@ var eo = n(518009),
     eg = n(481484),
     ep = n(545807),
     em = n(652215),
-    eA = n(851371);
+    eA = n(645280);
 let ev = [],
     ey = i.memo(function (e) {
         let {
@@ -328,7 +328,7 @@ var ej = n(302614),
     eU = n(317084),
     eK = n(427603),
     eG = n(980504),
-    eF = n(976347);
+    eF = n(355870);
 let eB = i.memo(function () {
     let [e, t] = (0, s.yK)([eR.A], () => [eR.A.enabled, eR.A.keepOpen]),
         n = (0, s.bG)([f.Ay], () => f.Ay.getVoiceChannelId()),
@@ -353,7 +353,7 @@ let eB = i.memo(function () {
         : null;
 });
 var eV = n(672396),
-    eH = n(546143);
+    eH = n(558606);
 let eW = !p.isPlatformEmbedded && !1,
     eY = eW
         ? (0, r.jsx)(P.A, {
@@ -650,9 +650,9 @@ function e8(e, t) {
         e3.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
 }
 n(96175);
-var e4 = n(366032);
+var e5 = n(366032);
 n(191701), n(921955);
-let e5 = !p.isPlatformEmbedded && !1,
+let e4 = !p.isPlatformEmbedded && !1,
     e7 = new c.A("AppOverlay");
 function e6(e, t) {
     return new Promise((n, r) => {
@@ -717,7 +717,7 @@ let tn = i.memo(function (e) {
     (t = (0, s.bG)([d.A], () => d.A.getWindow(c))),
         (0, l.Ay)(() => {
             if (null == t) return;
-            let e = e5 || (0, eL.SE)();
+            let e = e4 || (0, eL.SE)();
             return (
                 e &&
                     (t.document.hasFocus() && o.A.setFocusedPID(A.DEV_PID, null),
@@ -824,7 +824,7 @@ let tn = i.memo(function (e) {
         y = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
         E = (0, s.bG)([e_.A], () => e_.A.isInputLocked(y), [y]),
         C = (0, s.bG)([ek.default, eO.A], () =>
-            (0, e4.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
+            (0, e5.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
         );
     return m
         ? (0, r.jsx)(w.p, {

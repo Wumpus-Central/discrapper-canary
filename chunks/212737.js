@@ -33,7 +33,7 @@ var s,
     F = i(830543),
     L = i(652215),
     O = i(375708),
-    D = i(127137);
+    D = i(37576);
 function G(t) {
     let { recipient: e, status: i, onClose: s } = t,
         { avatarSrc: a, eventHandlers: r } = (0, k.A)({ userId: e?.id, size: y._3.SIZE_56 }),
@@ -109,7 +109,7 @@ function P(t) {
               }),
           });
 }
-var T = i(302089);
+var T = i(989174);
 function U(t) {
     let { transitionState: e, onClose: i, onShare: s } = t,
         r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),

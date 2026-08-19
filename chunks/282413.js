@@ -9,7 +9,7 @@ var i = n(477900),
     d = n(868285),
     c = n(235986),
     u = n(652215),
-    _ = n(31692);
+    _ = n(686111);
 let E = { [u.DUB.NORMAL]: _.qb, [u.DUB.MINIMUM]: _.Bp, [u.DUB.NO_CHAT]: _.Oo, [u.DUB.FULL_SCREEN]: _.iy };
 class A extends r.PureComponent {
     constructor(e) {

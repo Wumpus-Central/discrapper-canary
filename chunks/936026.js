@@ -1,24 +1,9 @@
-"use strict";
-t(697509)(r, "__esModule", { value: !0 }),
-    (r.default = void 0),
-    (r.default = {
-        abstract: !1,
-        accessibleNameRequired: !1,
-        baseConcepts: [],
-        childrenPresentational: !1,
-        nameFrom: ["author"],
-        prohibitedProps: [],
-        props: {
-            "aria-disabled": null,
-            "aria-errormessage": null,
-            "aria-expanded": null,
-            "aria-haspopup": null,
-            "aria-invalid": null,
-        },
-        relatedConcepts: [{ concept: { name: "toc [EPUB-SSV]" }, module: "EPUB" }],
-        requireContextRole: [],
-        requiredContextRole: [],
-        requiredOwnedElements: [],
-        requiredProps: {},
-        superClass: [["roletype", "structure", "section", "landmark", "navigation"]],
-    });
+e.exports = {
+    ZZ: "field_ccf340",
+    Dy: "editing_ccf340",
+    $: "titleRow_ccf340",
+    TG: "editableRow_ccf340",
+    wz: "pencil_ccf340",
+    Qw: "titleText_ccf340",
+    qf: "placeholder_ccf340",
+};

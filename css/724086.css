@@ -1,0 +1,19 @@
+.container__8a8e7 {
+    align-items: center;
+    color: var(--text-strong);
+    display: inline-flex;
+    gap: var(--space-4);
+    position: relative;
+    white-space: nowrap
+}
+
+.discount__8a8e7 {
+    color: var(--text-feedback-positive)
+}
+
+.icon__8a8e7 {
+    min-width: -moz-fit-content;
+    min-width: fit-content
+}
+
+/*# sourceMappingURL=724086.cf5ca348f551e0e2.css.map*/

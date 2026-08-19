@@ -31,7 +31,7 @@ var t = n(477900),
     w = n(239093),
     D = n(652215),
     S = n(375708),
-    G = n(622456);
+    G = n(52111);
 function O(i) {
     let { classificationTypeText: e, guildMetadata: n } = i,
         a = l.useMemo(() => {
@@ -271,7 +271,7 @@ let M = (i) => {
                 ],
             });
 };
-var P = n(317891);
+var P = n(987926);
 let W = function (i) {
     let { transitionState: e, onClose: n, classificationId: l, source: u } = i,
         m = (0, d.A)(),

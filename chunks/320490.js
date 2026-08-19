@@ -80,7 +80,7 @@ function m(n) {
 var b = e(834730),
     R = e(349288),
     L = e(162185),
-    v = e(99599);
+    v = e(804522);
 function E() {
     return (0, i.jsx)("div", {
         className: v.__invalid_getCrunchyrollApp,
@@ -108,7 +108,7 @@ function k(n) {
     });
 }
 var O = e(52643),
-    T = e(952052);
+    T = e(844768);
 function _(n) {
     let { transitionState: t, onClose: e, analyticsLocation: o } = n,
         {

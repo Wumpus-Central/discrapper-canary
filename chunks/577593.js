@@ -44,7 +44,7 @@ var l = s(477900),
     H = s(203363),
     W = s(321191),
     K = s(375708),
-    X = s(874971);
+    X = s(763800);
 function J(e) {
     let { icon: i, title: s, description: n } = e;
     return (0, l.jsxs)("div", {
@@ -101,7 +101,7 @@ var Z = s(734057),
     ei = s(194261),
     es = s(9578),
     el = s(900179),
-    en = s(103228);
+    en = s(125369);
 function et(e) {
     let { termsOfServiceUrl: i, privacyPolicyUrl: s } = e;
     return null == i && null == s
@@ -135,7 +135,7 @@ var er = s(308244),
     ec = s(503026),
     eo = s(347805),
     eu = s(518477),
-    ex = s(663036);
+    ex = s(422317);
 function eA(e) {
     let { userId: i } = e,
         s = (0, v.g)(),
@@ -151,7 +151,7 @@ function eA(e) {
         }),
     });
 }
-var eh = s(9060);
+var eh = s(627757);
 function ej(e) {
     let { user: i, displayProfile: s, guildId: n, onClose: t } = e,
         d = (0, k.bG)([W.A], () => W.A.getUserProfile(i.id)?.application),
@@ -193,8 +193,8 @@ var eI = s(652215),
     eO = s(353394),
     eT = s(64622),
     eC = s(986712),
-    eP = s(984621),
-    eL = s(330114);
+    eP = s(633756),
+    eL = s(813195);
 function eb(e) {
     let { user: i, currentUser: s, guildId: n, onClose: t } = e,
         { live: d, recent: r, stream: a } = (0, eE.A)(i.id),
@@ -455,7 +455,7 @@ function eq(e) {
                     }),
     });
 }
-var e$ = s(763084);
+var e$ = s(717877);
 function e0(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === eu.RP.ACTIVITY
@@ -470,7 +470,7 @@ function e0(e) {
                 ? (0, l.jsx)(ej, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(eV, { user: s, displayProfile: t, onClose: a });
 }
-function e3(e) {
+function e5(e) {
     let {
             user: i,
             currentUser: s,
@@ -543,11 +543,11 @@ function e3(e) {
               ],
           });
 }
-var e5 = s(186272),
-    e9 = s(996988),
-    e1 = s(985253),
-    e2 = s(134492);
-function e7(e) {
+var e3 = s(186272),
+    e7 = s(996988),
+    e9 = s(985253),
+    e1 = s(174217);
+function e2(e) {
     let {
             user: i,
             currentUser: s,
@@ -587,7 +587,7 @@ function e7(e) {
                 s = i?.length;
             return [
                 { section: eu.RP.BOT_INFO, text: K.intl.string(K.t.ZzAR2Y) },
-                { section: eu.RP.MUTUAL_GUILDS, text: (0, e5.A)(s) },
+                { section: eu.RP.MUTUAL_GUILDS, text: (0, e3.A)(s) },
                 { section: eu.RP.BOT_DATA_ACCESS, text: K.intl.string(K.t.WstFb0) },
             ];
         })(i),
@@ -605,7 +605,7 @@ function e7(e) {
                 children: (0, l.jsx)(o.EO, {
                     "data-migration-pending": !0,
                     transitionState: G,
-                    className: e2.zr,
+                    className: e1.zr,
                     hideShadow: !0,
                     "aria-labelledby": J,
                     parentComponent: "BotUserProfileModal",
@@ -616,39 +616,39 @@ function e7(e) {
                         children: (0, l.jsxs)(T.A, {
                             user: i,
                             displayProfile: Y,
-                            themeType: e9.d.MODAL,
+                            themeType: e7.d.MODAL,
                             children: [
                                 (0, l.jsx)(R.A, {
                                     children: (0, l.jsx)(L.A, { user: i, guildId: w, viewProfileItem: $ }),
                                 }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(y.A, { user: i, displayProfile: Y, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(y.A, { user: i, displayProfile: Y, themeType: e7.d.MODAL }),
                                         (0, l.jsxs)("div", {
-                                            className: e2.El,
+                                            className: e1.El,
                                             children: [
                                                 (0, l.jsx)(E.A, {
                                                     user: i,
                                                     displayProfile: Y,
                                                     guildId: w,
                                                     channelId: r,
-                                                    avatarSize: e1.T[e9.d.MODAL].avatarSize,
+                                                    avatarSize: e9.T[e7.d.MODAL].avatarSize,
                                                     onOpenAvatar: X,
                                                 }),
                                                 (0, l.jsx)(_.A, {
                                                     user: i,
                                                     guildId: w,
                                                     channelId: r,
-                                                    themeType: e9.d.MODAL,
+                                                    themeType: e7.d.MODAL,
                                                     hasEntered: G === A.ip.ENTERED,
                                                     onCloseProfile: z,
                                                     disableToolbar: !0,
                                                 }),
                                                 (0, l.jsxs)("div", {
-                                                    className: e2.Pz,
+                                                    className: e1.Pz,
                                                     children: [
                                                         (0, l.jsx)("div", {
-                                                            className: e2.jS,
+                                                            className: e1.jS,
                                                             children: (0, l.jsx)(U.e, {
                                                                 variant: "secondary",
                                                                 userId: i.id,
@@ -656,7 +656,7 @@ function e7(e) {
                                                             }),
                                                         }),
                                                         (0, l.jsx)("div", {
-                                                            className: e2.pg,
+                                                            className: e1.pg,
                                                             children: (0, l.jsx)(U.l, {
                                                                 variant: "secondary",
                                                                 userId: i.id,
@@ -671,12 +671,12 @@ function e7(e) {
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(O.A, { userId: i.id, className: e2.Fd }),
+                                (0, l.jsx)(O.A, { userId: i.id, className: e1.Fd }),
                                 (0, l.jsxs)("div", {
-                                    className: e2.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e2.eF,
+                                            className: e1.eF,
                                             user: i,
                                             guildId: w,
                                             displayName: H,
@@ -684,11 +684,11 @@ function e7(e) {
                                             pronouns: Y?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: Y,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e7.d.MODAL,
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e3, {
+                                        (0, l.jsx)(e5, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,
@@ -754,7 +754,7 @@ function ie(e) {
             children: (0, l.jsxs)(o.EO, {
                 "data-migration-pending": !0,
                 transitionState: c,
-                className: e2.zr,
+                className: e1.zr,
                 hideShadow: !0,
                 "aria-labelledby": U,
                 parentComponent: "NonUserBotProfileModal",
@@ -766,31 +766,31 @@ function ie(e) {
                         children: (0, l.jsxs)(T.A, {
                             user: i,
                             displayProfile: O,
-                            themeType: e9.d.MODAL,
+                            themeType: e7.d.MODAL,
                             ref: O?.profileEffect != null ? G : void 0,
                             children: [
                                 (0, l.jsx)(R.A, { children: (0, l.jsx)(e4.A, { user: i }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(y.A, { user: i, displayProfile: O, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(y.A, { user: i, displayProfile: O, themeType: e7.d.MODAL }),
                                         (0, l.jsx)("div", {
-                                            className: e2.El,
+                                            className: e1.El,
                                             children: (0, l.jsx)(E.A, {
                                                 user: i,
                                                 displayProfile: O,
                                                 guildId: v,
                                                 channelId: t,
-                                                avatarSize: e1.T[e9.d.MODAL].avatarSize,
+                                                avatarSize: e9.T[e7.d.MODAL].avatarSize,
                                                 onOpenAvatar: b,
                                             }),
                                         }),
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: e2.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e2.eF,
+                                            className: e1.eF,
                                             user: i,
                                             guildId: v,
                                             displayName: P,
@@ -798,7 +798,7 @@ function ie(e) {
                                             pronouns: O?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: O,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e7.d.MODAL,
                                                 onClose: h,
                                             }),
                                         }),
@@ -867,8 +867,8 @@ var ii = s(503698),
     io = s(254828),
     iu = s(783123),
     ix = s(463156),
-    iA = s(677660),
-    ih = s(128604);
+    iA = s(446039),
+    ih = s(968475);
 function ij(e) {
     let {
             user: i,
@@ -912,7 +912,7 @@ function ij(e) {
                     className: is()(ih.A7, iA.BK),
                     user: i,
                     displayProfile: E,
-                    themeType: e9.d.MODAL_V2,
+                    themeType: e7.d.MODAL_V2,
                     children: [
                         (0, l.jsx)("div", { className: ih.Oo, children: (0, l.jsx)(ix.A, { onClose: c }) }),
                         (0, l.jsx)("div", { className: iA.Tp }),
@@ -1004,6 +1004,6 @@ function im(e) {
         : o.isNonUserBot()
           ? (0, l.jsx)(ie, { ...s })
           : o.bot
-            ? (0, l.jsx)(e7, { ...s })
+            ? (0, l.jsx)(e2, { ...s })
             : (0, l.jsx)(iI.A, { ...s });
 }

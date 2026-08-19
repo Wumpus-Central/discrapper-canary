@@ -180,7 +180,7 @@ function R(e) {
 }
 let P = "__default__";
 var x = n(375708),
-    M = n(558986);
+    M = n(771207);
 function B(e) {
     let { label: t, value: n, disabled: o } = e;
     return { id: n, value: n, label: t, disabled: o };
@@ -279,7 +279,7 @@ function D(e, t, n, o) {
 function V(e, t) {
     return e === R(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
 }
-var j = n(674242);
+var j = n(117513);
 let F = "playground-announcement-modal",
     w = A.default.fromTimestamp(Date.now()),
     K = {
@@ -334,15 +334,15 @@ let F = "playground-announcement-modal",
                         (0, m.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("639333"),
-                                    n.e("387236"),
-                                    n.e("18582"),
-                                    n.e("308082"),
-                                    n.e("718757"),
-                                    n.e("642623"),
-                                    n.e("155936"),
-                                    n.e("980126"),
-                                    n.e("281260"),
+                                    n.e("227955"),
+                                    n.e("198496"),
+                                    n.e("307389"),
+                                    n.e("848826"),
+                                    n.e("251714"),
+                                    n.e("463276"),
+                                    n.e("123141"),
+                                    n.e("653383"),
+                                    n.e("545749"),
                                     n.e("896137"),
                                     n.e("979630"),
                                     n.e("220287"),
@@ -700,7 +700,7 @@ var eG = n(964661),
     eK = n(577473),
     eH = n(715069),
     eY = n(765671),
-    ez = n(818744);
+    ez = n(573999);
 function e$() {}
 let eW = r.forwardRef(function (e, t) {
     let { icon: n, label: o, selected: l = !1, decoration: a, showHoverGradient: r = !1 } = e,
@@ -860,19 +860,19 @@ let eQ = "playground-premium-tab-popover",
         },
     };
 var e0 = n(796878);
-let e2 = "playground-premium-tab-tooltip";
+let e1 = "playground-premium-tab-tooltip";
 n(321073);
-var e1 = n(896170),
+var e2 = n(896170),
     e6 = n(783878),
-    e8 = n(636537);
+    e7 = n(636537);
 async function e3() {
-    return (await e8.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
+    return (await e7.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: l, end_date: a } = e;
         return { id: t, name: n, type: o, source: l, endDate: null != a ? new Date(a) : void 0 };
     });
 }
-async function e7(e) {
-    let t = await e8.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
+async function e8(e) {
+    let t = await e7.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
         let t = G.m.fromBinary((0, U.A)(e.properties)),
@@ -1181,11 +1181,11 @@ let tl = {
                                     body: t.body,
                                     asset: V(t.assetUrl, d?.asset),
                                 }),
-                                (o = k(e2, {
+                                (o = k(e1, {
                                     oneofKind: "premiumTabTooltip",
                                     premiumTabTooltip: null != d ? { ...d, ...n } : n,
                                 })),
-                                D(e2, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
+                                D(e1, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                             ),
                             (0, s.jsx)(eZ, { selected: !0, wrapNitroRow: (e) => (0, s.jsx)(e0.A, { children: e }) })
                         );
@@ -1784,7 +1784,7 @@ let tl = {
                 );
             }, []);
             let l = r.useMemo(() => e4(t), [t]),
-                a = r.useCallback((e, n) => e4((0, e1.Ht)(t, n, { keys: ["name"] })), [t]);
+                a = r.useCallback((e, n) => e4((0, e2.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, s.jsx)("div", {
@@ -1807,7 +1807,7 @@ let tl = {
                                   });
                               let n = t.find((t) => t.id === e);
                               null != n &&
-                                  e7(n.id)
+                                  e8(n.id)
                                       .then((e) => {
                                           o.current === n.id &&
                                               (function (e, t) {

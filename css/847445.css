@@ -1,0 +1,42 @@
+.promotionalGiftMessage__6fbbd {
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    flex-direction: row;
+    inset-inline-end: 24px;
+    justify-content: space-between;
+    min-height: 24px;
+    padding: 12px 24px;
+    position: relative;
+    top: 24px;
+    width: 100%
+}
+
+.promotionalTextSection__6fbbd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline-end: 12px
+}
+
+.avatar__6fbbd {
+    bottom: -15px;
+    inset-inline-end: 0;
+    position: absolute
+}
+
+.container__481b4 {
+    align-items: center;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .1) 50%, hsla(0, 0%, 100%, 0));
+    display: flex;
+    height: 36px
+}
+
+.text__481b4 {
+    margin-inline-start: 6px
+}
+
+.textWithAD__481b4 {
+    margin-inline-start: 9px
+}
+
+/*# sourceMappingURL=847445.cf0758d5d00fa871.css.map*/

@@ -30,9 +30,9 @@ var i = s(477900),
     _ = s(222652),
     D = s(652215),
     T = s(202541),
-    P = s(933287),
+    P = s(477767),
     y = s(375708),
-    z = s(35158);
+    z = s(367863);
 let M = [
     { icon: r.B, message: P.default.bpksos },
     { icon: d.h, message: P.default["5rbQbD"] },

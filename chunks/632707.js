@@ -1,1 +1,1 @@
-e.exports = { K: "tooltipDescription_cd30d9", R: "tooltipWordmark_cd30d9" };
+e.exports = "/assets/098650665a6bc2a7.svg";

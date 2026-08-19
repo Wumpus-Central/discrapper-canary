@@ -15,7 +15,7 @@ var l = n(477900),
     p = n(321191),
     g = n(903209),
     x = n(375708),
-    A = n(3242);
+    A = n(374129);
 function E(e) {
     let t = (0, h.g)(e.activityApplication);
     return null == t ? null : (0, l.jsx)(C, { ...e, widgetApplication: t });
