@@ -407,8 +407,8 @@ var eq = n(47167),
     e0 = n(822123),
     e1 = n(643501),
     e2 = n(409626),
-    e3 = n(692969),
-    e5 = n(279250),
+    e5 = n(692969),
+    e3 = n(279250),
     e8 = n(607407),
     e7 = n(548118),
     e6 = n(499211),
@@ -623,7 +623,7 @@ let tW = (0, eX.Fe)({
                 n.e("442293"),
                 n.e("60574"),
                 n.e("83554"),
-                n.e("681301"),
+                n.e("681950"),
                 n.e("853412"),
                 n.e("418917"),
                 n.e("494450"),
@@ -681,7 +681,9 @@ let tW = (0, eX.Fe)({
                 n.e("380197"),
                 n.e("848132"),
                 n.e("761686"),
-                n.e("477873"),
+                n.e("591778"),
+                n.e("792728"),
+                n.e("94757"),
                 n.e("197312"),
                 n.e("438469"),
                 n.e("116740"),
@@ -726,7 +728,6 @@ let tW = (0, eX.Fe)({
                 n.e("745959"),
                 n.e("858529"),
                 n.e("183488"),
-                n.e("481987"),
                 n.e("958038"),
                 n.e("171202"),
                 n.e("875201"),
@@ -792,6 +793,7 @@ let tW = (0, eX.Fe)({
                 n.e("906723"),
                 n.e("209729"),
                 n.e("174016"),
+                n.e("481987"),
                 n.e("736926"),
                 n.e("221856"),
                 n.e("855726"),
@@ -1344,7 +1346,7 @@ function tQ(e) {
         E = A ? x.extra?.application_id : void 0,
         C = (0, tt.W)();
     null != C && (E = C);
-    let I = (0, e3.A)(
+    let I = (0, e5.A)(
             {
                 location: "ContentPopout",
                 applicationId: h ? void 0 : E,
@@ -1446,13 +1448,13 @@ function t0(e) {
             ...f
         } = e,
         p = (0, u.bG)([td.A], () => td.A.getChannel(a?.channelId)),
-        [g] = i.useMemo(() => (0, e5.eo)(p, tg.A, th.A, tm.A, e1.default), [p]),
+        [g] = i.useMemo(() => (0, e3.eo)(p, tg.A, th.A, tm.A, e1.default), [p]),
         { entry: x } = f,
         A = (0, tC.zD)(x),
         E = A ? x.extra?.application_id : void 0,
         C = (0, tt.W)();
     null != C && (E = C);
-    let I = (0, e3.A)(
+    let I = (0, e5.A)(
             {
                 location: "ContentPopout",
                 applicationId: E,
@@ -1672,8 +1674,8 @@ let t2 = function (e) {
         ],
     });
 };
-var t3 = n(322789),
-    t5 = n(808380),
+var t5 = n(322789),
+    t3 = n(808380),
     t8 = n(687966),
     t7 = n(39623),
     t6 = n(960076),
@@ -1799,16 +1801,16 @@ function nd(e) {
     if (null != e) return t ? void 0 : n;
 }
 var nh = n(18282);
-let nm = [...t3.n, ed.Yq],
+let nm = [...t5.n, ed.Yq],
     nf = {
-        [t5.Y.DESKTOP]: null,
-        [t5.Y.LINUX]: null,
-        [t5.Y.MACOS]: null,
-        [t5.Y.NINTENDO]: null,
-        [t5.Y.IOS]: null,
-        [t5.Y.ANDROID]: null,
-        [t5.Y.XBOX]: na.A,
-        [t5.Y.PLAYSTATION]: nr.A,
+        [t3.Y.DESKTOP]: null,
+        [t3.Y.LINUX]: null,
+        [t3.Y.MACOS]: null,
+        [t3.Y.NINTENDO]: null,
+        [t3.Y.IOS]: null,
+        [t3.Y.ANDROID]: null,
+        [t3.Y.XBOX]: na.A,
+        [t3.Y.PLAYSTATION]: nr.A,
     },
     np = function (e) {
         let {
@@ -1829,7 +1831,7 @@ let nm = [...t3.n, ed.Yq],
             U = n.extra.platform,
             G = n.extra.application_id,
             V = null != U ? nf[U] : null,
-            F = nd(U === t5.Y.XBOX ? eW.fg2.XBOX : U === t5.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
+            F = nd(U === t3.Y.XBOX ? eW.fg2.XBOX : U === t3.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
             { data: H } = (0, b.YY)(G),
             B = (0, t4.A)(G),
             { analyticsLocations: W } = (0, ne.Ay)(T.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
@@ -2589,11 +2591,11 @@ function n2(e) {
             : n1
         : 0;
 }
-function n3(e) {
+function n5(e) {
     let { entry: t, ...n } = e;
     switch (t.content_type) {
         case o.ContentInventoryEntryType.PLAYED_GAME:
-            return (0, l.jsx)(t3.A, { ...n, entry: t });
+            return (0, l.jsx)(t5.A, { ...n, entry: t });
         case o.ContentInventoryEntryType.WATCHED_MEDIA:
             return (0, l.jsx)(nq.A, { ...n, entry: t });
         case o.ContentInventoryEntryType.TOP_GAME:
@@ -2608,7 +2610,7 @@ function n3(e) {
             return null;
     }
 }
-function n5(e) {
+function n3(e) {
     let { entry: t, targetElementRef: n, ...i } = e;
     return t.content_type === o.ContentInventoryEntryType.PLAYED_GAME
         ? (0, l.jsx)(nA, {
@@ -2724,7 +2726,7 @@ let n6 = i.createContext(void 0),
         }
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                C && (0, l.jsx)(n5, { ...o, targetElementRef: p }),
+                C && (0, l.jsx)(n3, { ...o, targetElementRef: p }),
                 (0, l.jsx)("div", {
                     ref: s,
                     onMouseEnter: () => {
@@ -2768,7 +2770,7 @@ let n6 = i.createContext(void 0),
                                     j || b(!0);
                                 },
                                 onContextMenu: M,
-                                children: (0, l.jsx)(n3, {
+                                children: (0, l.jsx)(n5, {
                                     ...o,
                                     selected: n,
                                     hovered: T.current,

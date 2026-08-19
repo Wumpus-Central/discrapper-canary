@@ -6,7 +6,7 @@ var n = i(132500),
     r = i(36810),
     o = i(738566),
     d = i(280450),
-    c = i(453028),
+    c = i(966497),
     u = i(763827),
     h = i(287809),
     p = i(977997);
@@ -45,7 +45,7 @@ class I {
         return {
             available: i,
             source_positioning: i,
-            source_gain: i,
+            source_gain: !1,
             source_spatial_blend: !1,
             listener_pose: i,
             room_size: !1,
@@ -110,7 +110,12 @@ class I {
                 new l.A({ errorCode: y.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable"))
             );
         let d = c.Ay.getAudioMixerSettings();
-        return !0 !== d.enabled && s.A.setAudioMixerSettings({ ...d, enabled: !0 }), this.resetParticipantEffects(o), o;
+        return (
+            (!0 !== d.enabled || !0 !== d.distanceAttenuationEnabled) &&
+                s.A.setAudioMixerSettings({ ...d, enabled: !0, distanceAttenuationEnabled: !0 }),
+            this.resetParticipantEffects(o),
+            o
+        );
     }
     update(e, t, i, n) {
         let s = this.validateSession(e, t);
@@ -129,9 +134,6 @@ class I {
                 h = e.user_id;
             if (h === r || !a.has(h) || o.has(h))
                 throw new l.A({ errorCode: y.Lw6.INVALID_PAYLOAD }, `Invalid spatial voice source ${e.user_id}`);
-            let p = e.gain ?? 1;
-            if (!Number.isFinite(p) || p < 0 || p > 1)
-                throw new l.A({ errorCode: y.Lw6.INVALID_PAYLOAD }, `Invalid spatial voice gain for ${e.user_id}`);
             return (
                 o.add(h),
                 {
@@ -147,7 +149,6 @@ class I {
                         0.001 > g((u = { x: t.x - i.position.x, y: t.y - i.position.y, z: t.z - i.position.z }))
                             ? { x: 0, y: 0, z: -0.001 }
                             : { x: v(u, d), y: v(u, c), z: -v(u, n) }),
-                    gain: p,
                 }
             );
         })),
@@ -231,7 +232,7 @@ class I {
         if (0 !== n.length) {
             if (
                 !this.withMediaEngineConnection(e, (e) => {
-                    for (let t of n) e.setUserPosition(t, A), e.setLocalVolumeMultiplier(t, 1);
+                    for (let t of n) e.setUserPosition(t, A);
                 })
             )
                 return void this.release();
@@ -262,24 +263,22 @@ class I {
             ),
             i = [...e.appliedUserIds].filter((e) => !t.has(e)),
             n = this.withMediaEngineConnection(e, (t) => {
-                for (let e of i) t.setUserPosition(e, A), t.setLocalVolumeMultiplier(e, 1);
-                for (let { userId: i, position: n, gain: s } of e.sources)
-                    t.setUserPosition(i, n), t.setLocalVolumeMultiplier(i, s);
+                for (let e of i) t.setUserPosition(e, A);
+                for (let { userId: i, position: n } of e.sources) t.setUserPosition(i, n);
             });
         return n && (e.appliedUserIds = t), n;
     }
     clearAppliedSources(e) {
         0 !== e.appliedUserIds.size &&
             (this.withMediaEngineConnection(e, (t) => {
-                for (let i of e.appliedUserIds) t.setUserPosition(i, A), t.setLocalVolumeMultiplier(i, 1);
+                for (let i of e.appliedUserIds) t.setUserPosition(i, A);
             }),
             e.appliedUserIds.clear());
     }
     resetParticipantEffects(e) {
         let t = d.default.getId();
         this.withMediaEngineConnection(e, (i) => {
-            for (let n of this.getParticipantIds(e.channelId))
-                n !== t && (i.setUserPosition(n, A), i.setLocalVolumeMultiplier(n, 1));
+            for (let n of this.getParticipantIds(e.channelId)) n !== t && i.setUserPosition(n, A);
         });
     }
     getParticipantIds(e) {

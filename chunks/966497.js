@@ -364,22 +364,9 @@ var ek = n(967347),
     eX = n(763827),
     eQ = n(287809),
     eJ = n(117549),
-    e0 = n(765682);
-let e1 = {
-    enabled: !0,
-    spatialBlend: 1,
-    reflectionsEnabled: !1,
-    roomSize: 25,
-    mode: "arc",
-    spread: 2,
-    arcAngle: 20,
-    gridColumns: 3,
-    gridSpacing: 1,
-    buckets: 10,
-    listenerHeight: 0.15,
-    distance: 5,
-};
-var e2 = n(355097),
+    e0 = n(765682),
+    e1 = n(829997),
+    e2 = n(355097),
     e3 = n(621380),
     e4 = n(731854),
     e5 = n(375708);
@@ -432,7 +419,7 @@ function ts() {
         disabledLocalVideos: {},
         videoToggleStateMap: {},
         localVolumes: {},
-        audioMixerSettings: { ...e1 },
+        audioMixerSettings: { ...e1.b },
         audioMixerSettingsVersion: 0,
         localPans: {},
         inputVolume: e4.Hz,
@@ -1472,7 +1459,7 @@ class nQ extends L.Ay.Store {
                         e.sidechainCompressionSettingVersion < 1 &&
                         ((e.sidechainCompressionSettingVersion = 1), (e.sidechainCompression = !0)),
                     e.audioMixerSettingsVersion < 3 &&
-                        ((e.audioMixerSettingsVersion = 3), (e.audioMixerSettings = { ...e1 })),
+                        ((e.audioMixerSettingsVersion = 3), (e.audioMixerSettings = { ...e1.b })),
                     (0, f.isWeb)()
                         ? 1 !== e.ncUseKrispjsSettingVersion &&
                           ((e.ncUseKrispjsSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0))

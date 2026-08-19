@@ -22,7 +22,6 @@ class _ extends l.A {
     localMutes = {};
     disabledLocalVideos = {};
     localVolumes = {};
-    localVolumeMultipliers = {};
     isActiveOutputSinksEnabled = !1;
     activeOutputSinks = new Map();
     videoSupported = !1;

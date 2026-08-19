@@ -3470,8 +3470,8 @@ function ag(e) {
                             n.e("926132"),
                             n.e("391763"),
                             n.e("238730"),
-                            n.e("947502"),
                             n.e("603998"),
+                            n.e("947502"),
                             n.e("343266"),
                             n.e("965789"),
                             n.e("412255"),
@@ -7270,7 +7270,7 @@ class cG extends s.Component {
     handleEditAttachment = (e) => {
         let t = e.originalItem;
         (0, h.openModalLazy)(async () => {
-            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("2060"), n.e("570698")]).then(
+            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("357888"), n.e("570698")]).then(
                 n.bind(n, 427281),
             );
             return (n) =>
