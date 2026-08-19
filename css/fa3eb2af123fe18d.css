@@ -48,8 +48,8 @@
     justify-content: center;
     margin-block: calc(var(--space-16)*-1);
     opacity: 0;
-    position: relative;
-    transition: opacity .1s ease
+    transition: opacity .1s ease;
+    translate: 0 -2px
 }
 
 .restoreContainer__70feb:focus-visible,
@@ -59,14 +59,9 @@
 }
 
 .restoreLine__70feb {
-    height: 1px;
-    inset-inline: 0;
-    position: absolute
-}
-
-.restoreIconContainer__70feb,
-.restoreLine__70feb {
-    background-color: var(--background-mod-normal)
+    background-color: var(--interactive-icon-default);
+    flex: 1;
+    height: 1px
 }
 
 .restoreIconContainer__70feb {
@@ -270,4 +265,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=27147c2e7690c0bd.css.map*/
+/*# sourceMappingURL=fa3eb2af123fe18d.css.map*/

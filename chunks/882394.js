@@ -1449,7 +1449,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 596873, Version Hash: cb088b6535fcadb37f78b2c34fbd1e13a9b5747d`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 596903, Version Hash: b6c50b81c050bd8f2002fa95f8838edffbdfa8ce`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20717,7 +20717,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "596873" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "596903" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -23994,7 +23994,7 @@ let OZ = (0, tV.Fe)({
                 n.e("701485"),
                 n.e("79888"),
                 n.e("585311"),
-                n.e("627670"),
+                n.e("172928"),
                 n.e("530615"),
             ]).then(n.bind(n, 853846)),
         webpackId: 853846,
@@ -27801,7 +27801,7 @@ let OZ = (0, tV.Fe)({
                 n.e("701485"),
                 n.e("380469"),
                 n.e("79888"),
-                n.e("627670"),
+                n.e("172928"),
                 n.e("173092"),
             ]).then(n.bind(n, 31848)),
         webpackId: 31848,
@@ -34125,12 +34125,12 @@ let vC = {
                     .required(),
             }),
         },
-        [vN.e$.GET_SPATIAL_VOICE_CAPABILITIES]: { request: void 0, response: (e) => vL(e) },
-        [vN.e$.GET_SPATIAL_VOICE_PARTICIPANTS]: {
+        [vN.e$.GET_VOICE_CAPABILITIES]: { request: void 0, response: (e) => vL(e) },
+        [vN.e$.GET_VOICE_SESSION_PARTICIPANTS]: {
             request: (e) => ({ session_id: e.string().required() }),
             response: (e) => ({ participants: e.array().items(vy(e)).required() }),
         },
-        [vN.e$.START_SPATIAL_VOICE_SESSION]: {
+        [vN.e$.START_VOICE_SESSION]: {
             request: void 0,
             response: (e) => ({
                 session_id: e.string().required(),
@@ -34139,7 +34139,7 @@ let vC = {
                 participants: e.array().items(vy(e)).required(),
             }),
         },
-        [vN.e$.UPDATE_SPATIAL_VOICE_SESSION]: {
+        [vN.e$.UPDATE_VOICE_SPATIAL]: {
             request: (e) => ({
                 session_id: e.string().required(),
                 listener: e.object({ position: vR(e).required(), forward: vR(e).required() }).required(),
@@ -34159,9 +34159,9 @@ let vC = {
             }),
             response: (e) => ({ success: e.boolean().required() }),
         },
-        [vN.e$.SUSPEND_SPATIAL_VOICE_SESSION]: vC,
-        [vN.e$.RESUME_SPATIAL_VOICE_SESSION]: vC,
-        [vN.e$.STOP_SPATIAL_VOICE_SESSION]: vC,
+        [vN.e$.ENABLE_VOICE_SPATIAL]: vC,
+        [vN.e$.DISABLE_VOICE_SPATIAL]: vC,
+        [vN.e$.STOP_VOICE_SESSION]: vC,
         [vN.e$.SHARE_INTERACTION]: {
             request: (e) => ({
                 command: e.string().required(),
@@ -34342,16 +34342,22 @@ function vR(e) {
 function vL(e) {
     return e.object({
         available: e.boolean().required(),
-        source_positioning: e.boolean().required(),
-        source_gain: e.boolean().required(),
-        source_spatial_blend: e.boolean().required(),
-        listener_pose: e.boolean().required(),
-        room_size: e.boolean().required(),
-        reflections: e.boolean().required(),
-        binary_speaking: e.boolean().required(),
+        connected: e.boolean().required(),
         participant_updates: e.boolean().required(),
-        max_sources: e.number().integer().required(),
-        max_updates_per_second: e.number().integer().required(),
+        binary_speaking: e.boolean().required(),
+        spatial: e
+            .object({
+                available: e.boolean().required(),
+                source_positioning: e.boolean().required(),
+                source_gain: e.boolean().required(),
+                source_spatial_blend: e.boolean().required(),
+                listener_pose: e.boolean().required(),
+                room_size: e.boolean().required(),
+                reflections: e.boolean().required(),
+                max_sources: e.number().integer().required(),
+                max_updates_per_second: e.number().integer().required(),
+            })
+            .required(),
     });
 }
 function vy(e) {
@@ -35890,14 +35896,14 @@ let bU = {
     },
     bx = { [OK.sm.ALL]: [OK.W_, OK.VH] },
     bk = {
-        [G.e$_.GET_SPATIAL_VOICE_CAPABILITIES]: vU(G.e$_.GET_SPATIAL_VOICE_CAPABILITIES, {
+        [G.e$_.GET_VOICE_CAPABILITIES]: vU(G.e$_.GET_VOICE_CAPABILITIES, {
             scope: bx,
             handler(e) {
                 let { socket: t } = e;
                 return vA.A.getCapabilitiesForSocket(t);
             },
         }),
-        [G.e$_.GET_SPATIAL_VOICE_PARTICIPANTS]: vU(G.e$_.GET_SPATIAL_VOICE_PARTICIPANTS, {
+        [G.e$_.GET_VOICE_SESSION_PARTICIPANTS]: vU(G.e$_.GET_VOICE_SESSION_PARTICIPANTS, {
             scope: bx,
             handler(e) {
                 let {
@@ -35907,7 +35913,7 @@ let bU = {
                 return { participants: vA.A.getParticipantsForSession(t, n) };
             },
         }),
-        [G.e$_.START_SPATIAL_VOICE_SESSION]: vU(G.e$_.START_SPATIAL_VOICE_SESSION, {
+        [G.e$_.START_VOICE_SESSION]: vU(G.e$_.START_VOICE_SESSION, {
             scope: bx,
             handler(e) {
                 let { socket: t } = e,
@@ -35920,7 +35926,27 @@ let bU = {
                 };
             },
         }),
-        [G.e$_.UPDATE_SPATIAL_VOICE_SESSION]: vU(G.e$_.UPDATE_SPATIAL_VOICE_SESSION, {
+        [G.e$_.ENABLE_VOICE_SPATIAL]: vU(G.e$_.ENABLE_VOICE_SPATIAL, {
+            scope: bx,
+            handler(e) {
+                let {
+                    socket: t,
+                    args: { session_id: n },
+                } = e;
+                return vA.A.enableSpatial(t, n), { success: !0 };
+            },
+        }),
+        [G.e$_.DISABLE_VOICE_SPATIAL]: vU(G.e$_.DISABLE_VOICE_SPATIAL, {
+            scope: bx,
+            handler(e) {
+                let {
+                    socket: t,
+                    args: { session_id: n },
+                } = e;
+                return vA.A.disableSpatial(t, n), { success: !0 };
+            },
+        }),
+        [G.e$_.UPDATE_VOICE_SPATIAL]: vU(G.e$_.UPDATE_VOICE_SPATIAL, {
             scope: bx,
             handler(e) {
                 let {
@@ -35931,27 +35957,7 @@ let bU = {
                 return vA.A.update(t, n, i, a), { success: !0 };
             },
         }),
-        [G.e$_.SUSPEND_SPATIAL_VOICE_SESSION]: vU(G.e$_.SUSPEND_SPATIAL_VOICE_SESSION, {
-            scope: bx,
-            handler(e) {
-                let {
-                    socket: t,
-                    args: { session_id: n },
-                } = e;
-                return vA.A.suspend(t, n), { success: !0 };
-            },
-        }),
-        [G.e$_.RESUME_SPATIAL_VOICE_SESSION]: vU(G.e$_.RESUME_SPATIAL_VOICE_SESSION, {
-            scope: bx,
-            handler(e) {
-                let {
-                    socket: t,
-                    args: { session_id: n },
-                } = e;
-                return vA.A.resume(t, n), { success: !0 };
-            },
-        }),
-        [G.e$_.STOP_SPATIAL_VOICE_SESSION]: vU(G.e$_.STOP_SPATIAL_VOICE_SESSION, {
+        [G.e$_.STOP_VOICE_SESSION]: vU(G.e$_.STOP_VOICE_SESSION, {
             scope: bx,
             handler(e) {
                 let {
@@ -36163,7 +36169,7 @@ let bq = {
         validation: bY,
         handler: bK,
     },
-    [G.ZE4.SPATIAL_VOICE_PARTICIPANTS_UPDATE]: {
+    [G.ZE4.VOICE_SESSION_PARTICIPANTS_UPDATE]: {
         scope: b$,
         validation: bz,
         handler(e) {
@@ -36183,8 +36189,8 @@ let bq = {
             );
         },
     },
-    [G.ZE4.SPATIAL_VOICE_SPEAKING_START]: { scope: b$, validation: bz, handler: bZ },
-    [G.ZE4.SPATIAL_VOICE_SPEAKING_STOP]: { scope: b$, validation: bz, handler: bZ },
+    [G.ZE4.VOICE_SESSION_SPEAKING_START]: { scope: b$, validation: bz, handler: bZ },
+    [G.ZE4.VOICE_SESSION_SPEAKING_STOP]: { scope: b$, validation: bz, handler: bZ },
     [G.ZE4.GUILD_CREATE]: { scope: vg.F.RPC, handler() {} },
     [G.ZE4.CHANNEL_CREATE]: { scope: vg.F.RPC, handler() {} },
     [G.ZE4.GAME_JOIN]: { scope: { [OK.sm.ANY]: [vg.F.RPC, OK.hj] }, handler() {} },
@@ -39340,8 +39346,8 @@ let Pv = new eB.A("RPCServer:PostMessage"),
                     if (null != a) {
                         let t =
                             0 !== e.speakingFlags
-                                ? G.ZE4.SPATIAL_VOICE_SPEAKING_START
-                                : G.ZE4.SPATIAL_VOICE_SPEAKING_STOP;
+                                ? G.ZE4.VOICE_SESSION_SPEAKING_START
+                                : G.ZE4.VOICE_SESSION_SPEAKING_STOP;
                         this.rpcServer.dispatchToSubscriptions(
                             t,
                             { session_id: a },
