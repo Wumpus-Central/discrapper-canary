@@ -945,8 +945,8 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "596228",
-        s = "bd8fddf5880b5c693c4a965384b212059a445eac".substring(0, 7),
+        n = "596295",
+        s = "eadd15f683ee8e157208b8574092f981f5505c5f".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1115,8 +1115,8 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e7 = n(830543),
+    e7 = n(669067),
+    e9 = n(830543),
     e8 = n(376513);
 let e3 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
     e4 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
@@ -1129,7 +1129,7 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eL.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == eL.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1146,7 +1146,7 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e9._)(e);
+                  e3.has(e) || (0, e7._)(e);
                   let t = e4.get(e);
                   null != t &&
                       (0, o.x)({

@@ -1,10 +1,10 @@
-c.d(a, { T: () => i });
-var d = c(477900),
-    e = c(431020);
-function i(s) {
-    let { imageUrl: a } = s;
-    return (0, d.jsx)("div", {
-        className: e.k,
-        children: (0, d.jsx)("div", { className: e.d, style: { backgroundImage: `url(${a})` } }),
+t.d(n, { T: () => s });
+var i = t(477900),
+    r = t(431020);
+function s(e) {
+    let { imageUrl: n } = e;
+    return (0, i.jsx)("div", {
+        className: r.k,
+        children: (0, i.jsx)("div", { className: r.d, style: { backgroundImage: `url(${n})` } }),
     });
 }
