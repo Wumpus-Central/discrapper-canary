@@ -20,7 +20,10 @@ function h() {
     return { key: A(), title: "", description: "" };
 }
 function I() {
-    return new O({ header: u.intl.string(u.t.QxKl9A), sections: [_(), { type: a.K.FIELDS, fields: [h()] }] });
+    return new O({
+        header: u.intl.string(u.t.QxKl9A),
+        sections: [_(), { type: a.K.FIELDS, fields: [h(), h(), h(), h()] }],
+    });
 }
 function f() {
     return 17907264e5 > Date.now();
