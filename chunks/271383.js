@@ -83,14 +83,14 @@ function S(e) {
     );
 }
 var C = i(570002),
-    T = i(202541),
-    b = i(375708);
+    b = i(202541),
+    T = i(375708);
 function N() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        i = (0, C.A)(b.intl.string(b.t.pj0XBN));
+        i = (0, C.A)(T.intl.string(T.t.pj0XBN));
     return (0, n.jsx)(x.A, {
-        subscriptionTier: T.pe.TIER_2,
+        subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
             e && (0, f.T)();
         },
@@ -99,10 +99,10 @@ function N() {
             return (0, n.jsx)(S, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: b.intl.string(b.t.X0ir7L),
-                a11yAnnounceOnShow: b.intl.string(b.t.X0ir7L),
-                a11yAnnounceOnHide: b.intl.string(b.t.ZcyFYa),
-                secondaryAction: { text: b.intl.string(b.t.V3S9WW), onClick: t },
+                noticeText: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
+                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
                 primaryAction: { text: i, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -252,11 +252,11 @@ function V(e) {
         (0, n.jsx)(S, {
             isVisible: A,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: b.intl.string(b.t["/lQiX/"]),
+            noticeText: T.intl.string(T.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: b.intl.string(b.t["0Y/qkL"]),
-            secondaryAction: { text: b.intl.string(b.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: b.intl.string(b.t["R3BPH+"]), onClick: C, loading: o, disabled: !v || !A },
+            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
+            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !A || o },
+            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: C, loading: o, disabled: !v || !A },
         })
     );
 }

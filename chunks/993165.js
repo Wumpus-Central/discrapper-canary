@@ -28,10 +28,10 @@ function m(e) {
         C = l.useCallback(() => {
             f(E);
         }, [E]),
-        T = l.useCallback((e) => {
+        b = l.useCallback((e) => {
             p.current = e;
         }, []),
-        b = l.useMemo(
+        T = l.useMemo(
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
@@ -39,11 +39,11 @@ function m(e) {
                 navigate: I,
                 goBack: j,
                 getCurrentPreset: A,
-                cachePreset: T,
+                cachePreset: b,
             }),
-            [E, x, C, I, j, A, T],
+            [E, x, C, I, j, A, b],
         );
-    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: b, children: t }) });
+    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: T, children: t }) });
 }
 function x() {
     let e = l.useContext(u);

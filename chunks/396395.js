@@ -5,5 +5,5 @@ e.exports = {
     wx: "header__17b8c",
     hc: "nitroUpsellContainer__17b8c",
     Sp: "nitroUpsellBackground__17b8c",
-    rh: "nitroUpsellText__17b8c",
+    LK: "nitroUpsellCopy__17b8c",
 };

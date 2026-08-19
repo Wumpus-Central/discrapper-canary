@@ -21,8 +21,8 @@ var n = i(477900),
     E = i(111085),
     S = i(212387),
     C = i(590180),
-    T = i(139146),
-    b = i(113265),
+    b = i(139146),
+    T = i(113265),
     N = i(152472),
     w = i(274681),
     y = i(471505),
@@ -46,7 +46,7 @@ function P(e) {
     return (0, n.jsx)("div", {
         className: _.U,
         style: L(t),
-        children: (0, n.jsx)(T._, {
+        children: (0, n.jsx)(b._, {
             skuId: i.id,
             productName: i.name,
             size: t.wishlistButtonSize,
@@ -72,7 +72,7 @@ function D(e) {
     return (0, n.jsx)("div", {
         className: _.U,
         style: L(t),
-        children: (0, n.jsx)(T._, {
+        children: (0, n.jsx)(b._, {
             skuId: i.id,
             productName: i.name,
             size: t.wishlistButtonSize,
@@ -98,7 +98,7 @@ function G(e) {
     return (0, n.jsx)("div", {
         className: _.U,
         style: L(t),
-        children: (0, n.jsx)(T._, {
+        children: (0, n.jsx)(b._, {
             skuId: i.id,
             productName: i.name,
             size: t.wishlistButtonSize,
@@ -121,7 +121,7 @@ function M(e) {
             handleToggle: g,
             specificProductOrVariant: m,
             isPurchased: x,
-        } = (0, b.z)({ userId: a, product: i, location: l, onError: s }),
+        } = (0, T.z)({ userId: a, product: i, location: l, onError: s }),
         f = (0, v.q)(m),
         h = x && !o,
         p = !f || h,
@@ -129,7 +129,7 @@ function M(e) {
     return (0, n.jsx)("div", {
         className: _.U,
         style: L(t),
-        children: (0, n.jsx)(T._, {
+        children: (0, n.jsx)(b._, {
             skuId: m.skuId,
             productName: m.name,
             size: t.wishlistButtonSize,
@@ -201,15 +201,15 @@ function Q(e) {
             onPurchaseClick: A,
             wishlistId: E,
             isItemOwned: C,
-            cardBackdrop: T,
+            cardBackdrop: b,
         } = e,
-        b = l.useRef(null),
+        T = l.useRef(null),
         N = l.useRef(h);
     l.useEffect(() => {
         N.current = h;
     }, [h]),
         l.useEffect(() => {
-            let e = b.current;
+            let e = T.current;
             if (null != e)
                 return (
                     e.addEventListener("focusin", t),
@@ -245,7 +245,7 @@ function Q(e) {
         R = l.useCallback(() => {
             (0, j.XA)(Y.jM.SOMETHING_WENT_WRONG), o.O.announce(O.intl.string(O.t.F8FvUy));
         }, []),
-        _ = null != u ? (0, n.jsx)("div", { ref: b, className: q.BU, children: u }) : null,
+        _ = null != u ? (0, n.jsx)("div", { ref: T, className: q.BU, children: u }) : null,
         {
             onBodyClick: L,
             onOverlayClick: P,
@@ -273,7 +273,7 @@ function Q(e) {
                     ? (0, v.T)(t.sku)
                     : O.intl.formatToPlainString(O.t.ZBB4Ty, { productName: (0, v.T)(t.sku) }),
                 children: [
-                    T,
+                    b,
                     D && (0, n.jsx)(V.A, { spec: Z, onClick: P, isHoveringOrFocusing: f, label: M, icon: U }),
                     C && (0, n.jsx)(H.gS, { isHoveringOrFocusing: f }),
                     i.id === a.id &&

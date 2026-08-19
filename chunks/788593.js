@@ -1,46 +1,46 @@
-i.d(e, { A: () => E, R: () => v });
-var l = i(477900),
-    t = i(582128),
-    s = i(503698),
-    n = i.n(s),
-    r = i(834730),
-    c = i(866665),
-    d = i(259678),
-    o = i(939249),
-    m = i(409626),
-    u = i(692969),
-    x = i(207803),
-    p = i(591179),
-    A = i(485745),
-    N = i(375708),
-    j = i(350956);
-function v(a) {
-    let { imageSrc: e, gameName: i } = a,
-        [s, n] = t.useState(!1),
-        c = i ?? N.intl.string(N.t.GIWFlF);
-    return s || null == e
-        ? (0, l.jsx)("div", {
+l.d(e, { A: () => I, R: () => E });
+var i = l(477900),
+    s = l(582128),
+    t = l(503698),
+    n = l.n(t),
+    r = l(834730),
+    c = l(866665),
+    d = l(259678),
+    o = l(939249),
+    m = l(409626),
+    u = l(692969),
+    x = l(207803),
+    p = l(591179),
+    A = l(485745),
+    N = l(375708),
+    j = l(350956);
+function E(a) {
+    let { imageSrc: e, gameName: l } = a,
+        [t, n] = s.useState(!1),
+        c = l ?? N.intl.string(N.t.GIWFlF);
+    return t || null == e
+        ? (0, i.jsx)("div", {
               role: "img",
               "aria-label": c,
               className: j.Np,
-              children: (0, l.jsx)(r.E, { variant: "text-xxs/medium", lineClamp: 3, "aria-hidden": !0, children: c }),
+              children: (0, i.jsx)(r.E, { variant: "text-xxs/medium", lineClamp: 3, "aria-hidden": !0, children: c }),
           })
-        : (0, l.jsx)("img", { src: e, alt: c, className: j.$_, onError: () => n(!0), onLoad: () => n(!1) });
+        : (0, i.jsx)("img", { src: e, alt: c, className: j.$_, onError: () => n(!0), onLoad: () => n(!1) });
 }
-function I(a) {
-    let { imageSrc: e, gameName: i, gameId: s, userId: r, className: I, hideTooltip: E = !1, coverRef: g } = a,
+function v(a) {
+    let { imageSrc: e, gameName: l, gameId: t, userId: r, className: v, hideTooltip: I = !1, coverRef: g } = a,
         L = !(0, p.X)("GameCover"),
         h = (0, A.A)(L),
         f = (0, u.A)({
             location: "GameCover",
-            gameId: s,
+            gameId: t,
             source: m.GameProfileSources.UserProfile,
             sourceUserId: r,
             trackEntryPointImpression: !0,
         }),
-        _ = i ?? N.intl.string(N.t.GIWFlF),
+        _ = l ?? N.intl.string(N.t.GIWFlF),
         R = N.intl.formatToPlainString(N.t["8QLQB+"], { gameName: _ }),
-        T = t.useCallback(
+        T = s.useCallback(
             (a) => {
                 if (h) {
                     a.preventDefault(), a.stopPropagation(), (0, x.VQ)();
@@ -51,33 +51,33 @@ function I(a) {
             [h, f],
         );
     function D(a) {
-        return E ? a : (0, l.jsx)(c.m, { text: _, ariaHidden: !0, children: a });
+        return I ? a : (0, i.jsx)(c.m, { text: _, ariaHidden: !0, children: a });
     }
     return D(
         null == f
-            ? (0, l.jsx)(d.vN, {
-                  children: (0, l.jsx)("div", {
+            ? (0, i.jsx)(d.vN, {
+                  children: (0, i.jsx)("div", {
                       ref: g,
-                      className: I,
+                      className: v,
                       tabIndex: -1,
-                      children: (0, l.jsx)(v, { imageSrc: e, gameName: i }),
+                      children: (0, i.jsx)(E, { imageSrc: e, gameName: l }),
                   }),
               })
-            : (0, l.jsx)(o.D, {
+            : (0, i.jsx)(o.D, {
                   innerRef: g,
                   onClick: T,
                   "aria-label": R,
-                  className: n()(j.vk, I),
-                  children: (0, l.jsx)(v, { imageSrc: e, gameName: i }),
+                  className: n()(j.vk, v),
+                  children: (0, i.jsx)(E, { imageSrc: e, gameName: l }),
               }),
     );
 }
-function E(a) {
-    let { gameId: e, userId: i, className: t, disableInteraction: s = !1, hideTooltip: r, coverRef: c, ...o } = a,
-        m = n()(j.PY, t);
-    return s
-        ? (0, l.jsx)(d.vN, {
-              children: (0, l.jsx)("div", { ref: c, className: m, tabIndex: -1, children: (0, l.jsx)(v, { ...o }) }),
+function I(a) {
+    let { gameId: e, userId: l, className: s, disableInteraction: t = !1, hideTooltip: r, coverRef: c, ...o } = a,
+        m = n()(j.PY, s);
+    return t
+        ? (0, i.jsx)(d.vN, {
+              children: (0, i.jsx)("div", { ref: c, className: m, tabIndex: -1, children: (0, i.jsx)(E, { ...o }) }),
           })
-        : (0, l.jsx)(I, { className: m, gameId: e, userId: i, hideTooltip: r, coverRef: c, ...o });
+        : (0, i.jsx)(v, { className: m, gameId: e, userId: l, hideTooltip: r, coverRef: c, ...o });
 }

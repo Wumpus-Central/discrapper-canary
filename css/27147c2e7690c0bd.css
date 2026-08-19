@@ -245,8 +245,11 @@
     z-index: -1
 }
 
-.nitroUpsellText__17b8c {
+.nitroUpsellCopy__17b8c {
+    display: flex;
     flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
     min-width: 0
 }
 

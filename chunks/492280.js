@@ -1,45 +1,45 @@
-i.d(e, { E: () => m, l: () => u });
-var l = i(477900);
-i(582128);
-var t = i(503698),
-    s = i.n(t),
-    n = i(569926),
-    r = i(788593),
-    c = i(350956),
-    d = i(478725);
+l.d(e, { E: () => m, l: () => u });
+var i = l(477900);
+l(582128);
+var s = l(503698),
+    t = l.n(s),
+    n = l(569926),
+    r = l(788593),
+    c = l(350956),
+    d = l(478725);
 function o(a) {
     let { gameId: e } = a,
-        { data: i } = (0, n.I)(e),
-        t = i?.getCoverURL();
-    return null != t && "" !== t
-        ? (0, l.jsx)("div", { className: s()(c.PY, d.LH), children: (0, l.jsx)(r.R, { imageSrc: t }) })
-        : (0, l.jsx)("div", { className: s()(c.mD, d.LH) });
+        { data: l } = (0, n.I)(e),
+        s = l?.getCoverURL();
+    return null != s && "" !== s
+        ? (0, i.jsx)("div", { className: t()(c.PY, d.LH), children: (0, i.jsx)(r.R, { imageSrc: s }) })
+        : (0, i.jsx)("div", { className: t()(c.mD, d.LH) });
 }
 function m(a) {
-    let { gameId: e, className: i, gridClassName: t } = a;
-    return (0, l.jsx)("div", {
-        className: s()(d.kL, i),
+    let { gameId: e, className: l, gridClassName: s } = a;
+    return (0, i.jsx)("div", {
+        className: t()(d.kL, l),
         "aria-hidden": !0,
-        children: (0, l.jsxs)("div", {
-            className: s()(d.Yi, t),
+        children: (0, i.jsxs)("div", {
+            className: t()(d.Yi, s),
             children: [
-                null != e ? (0, l.jsx)(o, { gameId: e }) : (0, l.jsx)("div", { className: c.mD }),
-                (0, l.jsxs)("div", {
+                null != e ? (0, i.jsx)(o, { gameId: e }) : (0, i.jsx)("div", { className: c.mD }),
+                (0, i.jsxs)("div", {
                     className: d.RC,
-                    children: [(0, l.jsx)("div", { className: d.h$ }), (0, l.jsx)("div", { className: d.h$ })],
+                    children: [(0, i.jsx)("div", { className: d.h$ }), (0, i.jsx)("div", { className: d.h$ })],
                 }),
             ],
         }),
     });
 }
 function u(a) {
-    let { gameIds: e, className: i, gridClassName: t } = a;
-    return (0, l.jsx)("div", {
-        className: s()(d.kL, i),
+    let { gameIds: e, className: l, gridClassName: s } = a;
+    return (0, i.jsx)("div", {
+        className: t()(d.kL, l),
         "aria-hidden": !0,
-        children: (0, l.jsx)("div", {
-            className: s()(d.Nu, t),
-            children: e.slice(0, 4).map((a, e) => (0, l.jsx)(o, { gameId: a }, e)),
+        children: (0, i.jsx)("div", {
+            className: t()(d.Nu, s),
+            children: e.slice(0, 4).map((a, e) => (0, i.jsx)(o, { gameId: a }, e)),
         }),
     });
 }
