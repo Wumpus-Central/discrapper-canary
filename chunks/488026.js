@@ -1,29 +1,29 @@
-s.d(t, { default: () => L });
-var a = s(477900),
-    l = s(582128),
-    r = s(503698),
-    i = s.n(r),
-    n = s(132500),
-    o = s(772707),
-    c = s(441574),
-    d = s(991049),
-    h = s(280645),
-    u = s(952146),
-    m = s(331322),
-    v = s(289873),
-    p = s(512950),
-    E = s(821609),
-    x = s(109112),
-    f = s(939249),
-    g = s(834730),
-    A = s(320448),
-    _ = s(975571),
-    j = s(31720),
-    w = s(847599),
-    R = s(36149),
-    I = s(228366),
-    C = s(636537),
-    M = s(652215);
+a.d(t, { default: () => L });
+var s = a(477900),
+    l = a(582128),
+    r = a(503698),
+    i = a.n(r),
+    n = a(132500),
+    o = a(772707),
+    c = a(441574),
+    d = a(991049),
+    h = a(280645),
+    u = a(952146),
+    m = a(331322),
+    v = a(289873),
+    p = a(512950),
+    x = a(821609),
+    E = a(109112),
+    f = a(939249),
+    g = a(834730),
+    A = a(320448),
+    _ = a(975571),
+    w = a(31720),
+    j = a(847599),
+    R = a(36149),
+    I = a(228366),
+    C = a(636537),
+    M = a(652215);
 async function y() {
     let e = (await C.Bo.get({ url: M.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
     return {
@@ -44,28 +44,29 @@ async function y() {
                                   fillRule: "evenodd" === e.fill_rule ? "evenodd" : void 0,
                               })),
                           },
+                externalWindow: e.external_window ?? null,
             };
         }),
         footerMessage: e.footer_message ?? null,
     };
 }
-var N = s(787301);
+var N = a(787301);
 let S = function (e) {
-    let { icon: t, size: s = 24 } = e;
-    return (0, a.jsx)("svg", {
-        width: s,
-        height: s,
+    let { icon: t, size: a = 24 } = e;
+    return (0, s.jsx)("svg", {
+        width: a,
+        height: a,
         viewBox: "0 0 24 24",
         fill: "currentColor",
         "aria-hidden": !0,
-        children: t.paths.map((e) => (0, a.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
+        children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var T = s(516761),
-    V = s(375708),
-    b = s(658103);
+var T = a(516761),
+    V = a(375708),
+    b = a(658103);
 let L = function (e) {
-    let { transitionState: t, entryPoint: s, onClose: r, dismissable: C } = e,
+    let { transitionState: t, entryPoint: a, onClose: r, dismissable: C } = e,
         {
             loading: L,
             error: O,
@@ -74,14 +75,14 @@ let L = function (e) {
             refetch: B,
         } = (function () {
             let [e, t] = l.useState(() => N.A.methodsV2 ?? []),
-                [s, a] = l.useState(() => N.A.methodsV2FooterMessage),
+                [a, s] = l.useState(() => N.A.methodsV2FooterMessage),
                 [r, i] = l.useState(() => null == N.A.methodsV2),
                 [n, o] = l.useState(!1),
                 c = l.useRef(!0),
                 d = l.useCallback(async (e) => {
-                    let s = N.A.methodsV2;
-                    if (!e && null != s) {
-                        t(s), a(N.A.methodsV2FooterMessage), i(!1), o(!1);
+                    let a = N.A.methodsV2;
+                    if (!e && null != a) {
+                        t(a), s(N.A.methodsV2FooterMessage), i(!1), o(!1);
                         return;
                     }
                     i(!0), o(!1);
@@ -92,7 +93,7 @@ let L = function (e) {
                             methods: e.methods,
                             footerMessage: e.footerMessage,
                         }),
-                            c.current && (t(e.methods), a(e.footerMessage));
+                            c.current && (t(e.methods), s(e.footerMessage));
                     } catch {
                         c.current && o(!0);
                     } finally {
@@ -114,7 +115,7 @@ let L = function (e) {
                     loading: r,
                     error: n,
                     methods: e,
-                    footerMessage: s,
+                    footerMessage: a,
                     refetch: l.useCallback(() => {
                         d(!0);
                     }, [d]),
@@ -122,20 +123,20 @@ let L = function (e) {
             );
         })(),
         G = Z.length > 0,
-        { initiateAgeVerificationV2: H } = (0, R.Ny)({ onComplete: r, entryPoint: s, onMethodUnavailable: B }),
+        { initiateAgeVerificationV2: H } = (0, R.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: B }),
         D = l.useRef(!1),
         [U, F] = l.useState(null),
         P = null != U,
         W = l.useMemo(() => (0, n.A)(), []);
     l.useEffect(() => {
-        (0, w.Bs)(W, w.WU.EXPRESSIVE_V2, s);
-    }, [W, s]);
+        (0, j.Bs)(W, j.WU.EXPRESSIVE_V2, a);
+    }, [W, a]);
     let z = l.useCallback(
         async (e, t) => {
             if (!D.current) {
-                (0, w.St)(W, w.WU.EXPRESSIVE_V2, w._7.METHOD_SELECT, e.method), (D.current = !0), F(t);
+                (0, j.St)(W, j.WU.EXPRESSIVE_V2, j._7.METHOD_SELECT, e.method), (D.current = !0), F(t);
                 try {
-                    await H(e.method, e.vendor);
+                    await H(e);
                 } finally {
                     (D.current = !1), F(null);
                 }
@@ -143,7 +144,7 @@ let L = function (e) {
         },
         [H, W],
     );
-    return (0, a.jsxs)(o.k, {
+    return (0, s.jsxs)(o.k, {
         transitionState: t,
         onClose: r,
         gradientColor: "blue",
@@ -153,19 +154,19 @@ let L = function (e) {
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
-        title: (0, R.ST)(s),
-        subtitle: (0, R.mK)(s, () => {
-            j.A.openUrl(_.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                (0, w.St)(W, w.WU.EXPRESSIVE_V2, w._7.LEARN_MORE);
+        title: (0, R.ST)(a),
+        subtitle: (0, R.mK)(a, () => {
+            w.A.openUrl(_.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                (0, j.St)(W, j.WU.EXPRESSIVE_V2, j._7.LEARN_MORE);
         }),
         children: [
-            (0, a.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            L && (0, a.jsx)(m.B, { direction: "vertical", align: "center", children: (0, a.jsx)(v.y, {}) }),
+            (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
+            L && (0, s.jsx)(m.B, { direction: "vertical", align: "center", children: (0, s.jsx)(v.y, {}) }),
             !L &&
                 !G &&
-                (0, a.jsx)(p.p, {
+                (0, s.jsx)(p.p, {
                     messageType: p.Y.ERROR,
-                    action: (0, a.jsx)(E.$, {
+                    action: (0, s.jsx)(x.$, {
                         variant: "overlay-secondary",
                         size: "sm",
                         text: V.intl.string(T.default.hDvmYP),
@@ -174,12 +175,12 @@ let L = function (e) {
                     children: V.intl.string(O ? T.default.Bkmk4Y : T.default.cR6336),
                 }),
             G &&
-                (0, a.jsx)(m.B, {
+                (0, s.jsx)(m.B, {
                     direction: "vertical",
                     gap: 8,
                     children: Z.map((e) => {
                         let t,
-                            s = (function (e) {
+                            a = (function (e) {
                                 switch (e) {
                                     case c.mG.FACIAL_AGE_ESTIMATION:
                                         return d.t;
@@ -192,14 +193,14 @@ let L = function (e) {
                                 }
                             })(e.method);
                         t =
-                            null != s
-                                ? (0, a.jsx)(s, { size: "md", color: "var(--text-strong)" })
+                            null != a
+                                ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, a.jsx)(S, { icon: e.icon })
-                                  : (0, a.jsx)(x._, { size: "md", color: "var(--text-strong)" });
+                                  ? (0, s.jsx)(S, { icon: e.icon })
+                                  : (0, s.jsx)(E._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
                             r = U === l;
-                        return (0, a.jsxs)(
+                        return (0, s.jsxs)(
                             f.D,
                             {
                                 className: i()(b.kZ, { [b.w1]: P }),
@@ -207,24 +208,24 @@ let L = function (e) {
                                 "aria-disabled": P,
                                 onClick: P ? void 0 : () => z(e, l),
                                 children: [
-                                    (0, a.jsx)("div", { className: b.zc, children: t }),
-                                    (0, a.jsxs)("div", {
+                                    (0, s.jsx)("div", { className: b.zc, children: t }),
+                                    (0, s.jsxs)("div", {
                                         className: b.Qq,
                                         children: [
-                                            (0, a.jsx)(g.E, {
+                                            (0, s.jsx)(g.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-strong",
                                                 children: e.title,
                                             }),
-                                            (0, a.jsx)(g.E, {
+                                            (0, s.jsx)(g.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children: e.description,
                                             }),
                                             null != e.providedBy &&
-                                                (0, a.jsx)("div", {
+                                                (0, s.jsx)("div", {
                                                     className: b.Vp,
-                                                    children: (0, a.jsx)(g.E, {
+                                                    children: (0, s.jsx)(g.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
                                                         children: e.providedBy,
@@ -233,8 +234,8 @@ let L = function (e) {
                                         ],
                                     }),
                                     r
-                                        ? (0, a.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
-                                        : (0, a.jsx)(A._, { className: b.ai }),
+                                        ? (0, s.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
+                                        : (0, s.jsx)(A._, { className: b.ai }),
                                 ],
                             },
                             l,
@@ -244,9 +245,9 @@ let L = function (e) {
             !L &&
                 G &&
                 null != k &&
-                (0, a.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: b.qr,
-                    children: (0, a.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: k }),
+                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: k }),
                 }),
         ],
     });

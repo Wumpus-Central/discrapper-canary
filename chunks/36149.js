@@ -163,12 +163,14 @@ function Z(e) {
     return {
         loading: s,
         startVerification: a.useCallback(
-            async (e) => {
+            async (e, a) => {
                 d(!0);
                 try {
                     o.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await e(),
-                        a = T.A.showAgeVerification({
+                        s = T.A.showAgeVerification({
+                            method: a?.method,
+                            externalWindow: a?.externalWindow,
                             webviewUrl: r.verification_webview_url,
                             verificationRequestId: r.verification_request_id,
                             verificationVendorName: r.verification_vendor_name,
@@ -179,7 +181,7 @@ function Z(e) {
                             entryPoint: n,
                             shouldShowExpressiveModal: i,
                         });
-                    !1 === a && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
+                    !1 === s && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
                     _(),
                         null != r && e?.body?.code === O.t02.AGE_VERIFICATION_METHOD_UNAVAILABLE
@@ -212,7 +214,10 @@ function X(e) {
             shouldShowExpressiveModal: !0,
             onMethodUnavailable: i,
         });
-    return { loading: r, initiateAgeVerificationV2: a.useCallback((e, t) => s(() => (0, S.UQ)(e, t)), [s]) };
+    return {
+        loading: r,
+        initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, S.UQ)(e.method, e.vendor), e), [s]),
+    };
 }
 function Q(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
