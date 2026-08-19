@@ -21,7 +21,8 @@ function u(e) {
             case c.U4.APP_CHANNEL:
                 return { channelId: t.surface.channelId, guildId: t.surface.guildId };
             case c.U4.MAIN:
-                return t.applicationId === a.A.getBuilderPreviewApplicationId()
+                return t.applicationId === a.A.getBuilderPreviewApplicationId() ||
+                    t.data.prefersPictureInPictureOnNavigateAway
                     ? { channelId: void 0, guildId: void 0 }
                     : null;
         }

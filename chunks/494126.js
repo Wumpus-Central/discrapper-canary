@@ -3,12 +3,13 @@ n.r(t),
     n.d(t, {
         clearMainFrameSlot: () => A,
         launchFrame: () => E,
-        resetFrameLayoutModes: () => p,
-        refreshProxyTicket: () => g,
-        attachFrameIframe: () => T,
+        resetFrameLayoutModes: () => T,
+        refreshProxyTicket: () => S,
+        attachFrameIframe: () => m,
         updateFrameLayoutMode: () => I,
-        detachFrameIframe: () => m,
-        updateFramePanelMode: () => f,
+        setFramePrefersPictureInPictureOnNavigateAway: () => f,
+        detachFrameIframe: () => g,
+        updateFramePanelMode: () => p,
         promoteFrame: () => h,
     });
 var i = n(228366),
@@ -49,7 +50,7 @@ function A() {
     null != e &&
         (e.intent === u.sV.MAIN
             ? (0, c.A)().leaveFrame(e.id)
-            : (p(e.id), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e.id })));
+            : (T(e.id), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e.id })));
 }
 function h(e) {
     null != d.A.getFrame(e) &&
@@ -63,18 +64,21 @@ function I(e) {
         i.h.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: r.applicationId, frameId: t, layoutMode: n });
 }
 function f(e, t) {
+    i.h.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId: e, enabled: t });
+}
+function p(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function p(e) {
-    I({ frameId: e, layoutMode: u.y0.FOCUSED }), f(e, _.Gd.PANEL);
-}
-function T(e, t) {
-    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
+function T(e) {
+    I({ frameId: e, layoutMode: u.y0.FOCUSED }), p(e, _.Gd.PANEL);
 }
 function m(e, t) {
+    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
+}
+function g(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
 }
-async function g(e) {
+async function S(e) {
     let t = d.A.getFrame(e);
     if (null == t) return !1;
     let { applicationId: n, surface: l } = t;

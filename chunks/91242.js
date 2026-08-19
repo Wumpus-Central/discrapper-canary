@@ -62,6 +62,7 @@ let A = new E(r.h, {
                 proxyTicketRefreshing: !1,
                 orientationLock: null,
                 pipOrientationLock: null,
+                prefersPictureInPictureOnNavigateAway: !1,
                 iframeId: null,
             },
         });
@@ -100,6 +101,10 @@ let A = new E(r.h, {
             pipOrientationLock: void 0 === i ? e.pipOrientationLock : i,
         }));
     },
+    FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function (e) {
+        let { frameId: t, enabled: n } = e;
+        return u(t, (e) => ({ ...e, prefersPictureInPictureOnNavigateAway: n }));
+    },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { frameId: t, refreshing: n } = e;
         return u(t, (e) => ({ ...e, proxyTicketRefreshing: n }));
@@ -110,14 +115,18 @@ let A = new E(r.h, {
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
-        return u(t, (e) => ({ ...e, iframeId: n }));
+        return u(t, (e) => ({
+            ...e,
+            iframeId: n,
+            prefersPictureInPictureOnNavigateAway: e.iframeId === n && e.prefersPictureInPictureOnNavigateAway,
+        }));
     },
     FRAME_IFRAME_UNMOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
         return _(
             t,
             (e) => e.iframeId === n,
-            (e) => ({ ...e, iframeId: null }),
+            (e) => ({ ...e, iframeId: null, prefersPictureInPictureOnNavigateAway: !1 }),
         );
     },
     CHANNEL_SELECT: function (e) {

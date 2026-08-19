@@ -69,11 +69,12 @@ function y(e) {
             onLoad: L,
             onIframeMount: g,
             onIframeUnmount: S,
+            onGuestReload: y,
         } = e,
-        y = (0, m.xi)({}),
-        C = (0, a.useMemoOne)(() => (0, u.A)(), [t]),
-        D = l.useRef(null),
-        H = (function (e, t) {
+        C = (0, m.xi)({}),
+        D = (0, a.useMemoOne)(() => (0, u.A)(), [t]),
+        H = l.useRef(null),
+        P = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
                 r = (0, h.bG)([M.Ay], () => M.Ay.keyboardModeEnabled),
                 i = (function () {
@@ -136,23 +137,23 @@ function y(e) {
                 }, [t, s, r, e, n, i]),
                 a
             );
-        })(D, s, null == y ? window : y),
-        P = { ...A, frame_id: C, platform: w.vu.DESKTOP },
-        [k, U] = l.useState(!1),
-        F = d.A.theme,
-        W = { ...i };
-    F === x.NJ8.LIGHT ? (W.colorScheme = "light") : (W.colorScheme = "dark");
-    let $ = l.useCallback(
+        })(H, s, null == C ? window : C),
+        k = { ...A, frame_id: D, platform: w.vu.DESKTOP },
+        [U, F] = l.useState(!1),
+        W = d.A.theme,
+        $ = { ...i };
+    W === x.NJ8.LIGHT ? ($.colorScheme = "light") : ($.colorScheme = "dark");
+    let G = l.useCallback(
             (e) => {
-                ((D.current = e), null == e)
-                    ? (0, c.$9)(C)
-                    : ((0, c.M7)(C, e), null != e.contentWindow && (0, c.Yt)(e.contentWindow, C));
+                ((H.current = e), null == e)
+                    ? (0, c.$9)(D)
+                    : ((0, c.M7)(D, e), null != e.contentWindow && (0, c.Yt)(e.contentWindow, D));
             },
-            [C],
+            [D],
         ),
-        G = l.useRef(null);
+        z = l.useRef(null);
     return (
-        l.useEffect(() => () => (0, R.ir)(C), [C]),
+        l.useEffect(() => () => (0, R.ir)(D), [D]),
         !(function (e) {
             let {
                     onIframeMount: t,
@@ -176,11 +177,11 @@ function y(e) {
                     ),
                     [e],
                 );
-        })(C, { onIframeMount: g, onIframeUnmount: S }),
+        })(D, { onIframeMount: g, onIframeUnmount: S }),
         l.useEffect(() => {
             function e(e) {
                 let { resizing: t } = e;
-                U(t);
+                F(t);
             }
             return (
                 f._.subscribe(x.jej.MANUAL_IFRAME_RESIZING, e),
@@ -189,21 +190,21 @@ function y(e) {
                 }
             );
         }, []),
-        k && (W.pointerEvents = "none"),
+        U && ($.pointerEvents = "none"),
         null != t
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("iframe", {
-                          ref: $,
-                          style: W,
+                          ref: G,
+                          style: $,
                           allow: "autoplay; encrypted-media",
                           referrerPolicy: b,
                           onLoad: function (e) {
                               let n = e.target;
-                              G.current === C && ((0, v.ny)(C), (0, R.ir)(C)),
-                                  (G.current = C),
-                                  null != n.contentWindow && n.contentWindow.postMessage([o.A.HELLO, P], t ?? ""),
-                                  H(!0),
+                              z.current === D && ((0, v.ny)(D), (0, R.ir)(D), y?.(D)),
+                                  (z.current = D),
+                                  null != n.contentWindow && n.contentWindow.postMessage([o.A.HELLO, k], t ?? ""),
+                                  P(!0),
                                   L?.(n);
                           },
                           sandbox: (function (e) {
@@ -212,9 +213,9 @@ function y(e) {
                               return t && (n = [..._, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
                           })({ allowPopups: I }),
                           className: n,
-                          src: `${t}?${new URLSearchParams(P)}`,
+                          src: `${t}?${new URLSearchParams(k)}`,
                       }),
-                      (0, r.jsx)(T, { iframeId: C }),
+                      (0, r.jsx)(T, { iframeId: D }),
                   ],
               })
             : null

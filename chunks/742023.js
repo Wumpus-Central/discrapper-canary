@@ -121,6 +121,9 @@ class h extends a.Ay.DeviceSettingsStore {
     get disableApplicationSubscriptionCancellationSurvey() {
         return A.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
+    get allowVibegrationsPictureInPictureOnNavigateAway() {
+        return A.allowVibegrationsPictureInPictureOnNavigateAway ?? !0;
+    }
     get darkSidebar() {
         return A.darkSidebar ?? !1;
     }
