@@ -1,6 +1,6 @@
 i.d(n, { default: () => V });
-var t = i(477900),
-    r = i(582128),
+var r = i(477900),
+    t = i(582128),
     l = i(17928),
     a = i(980707),
     d = i(477782),
@@ -29,12 +29,12 @@ var t = i(477900),
     P = i(448290),
     X = i(301541),
     y = i(252726),
-    G = i(460597),
-    k = i(313998),
-    D = i(192308),
-    L = i(80682),
-    R = i(660273),
-    v = i(351001),
+    k = i(460597),
+    G = i(313998),
+    v = i(192308),
+    D = i(80682),
+    L = i(660273),
+    R = i(351001),
     w = i(867455),
     H = i(406704),
     Z = i(71393),
@@ -54,10 +54,10 @@ let V = (0, u.A)(
                 V,
                 K,
                 Q,
-                { user: Y, guildId: $, channel: ee, context: en, onSelect: ei, onHeightUpdate: et } = e,
-                er = ee.id,
-                el = (0, W.A)({ userId: Y.id, guildId: $, channelId: er }),
-                ea = (0, P.A)(Y, $, er, en),
+                { user: Y, guildId: $, channel: ee, context: en, onSelect: ei, onHeightUpdate: er } = e,
+                et = ee.id,
+                el = (0, W.A)({ userId: Y.id, guildId: $, channelId: et }),
+                ea = (0, P.A)(Y, $, et, en),
                 ed = (0, X.A)(Y.id, en),
                 es = (0, B.A)(Y.id),
                 eo = (0, _.A)({ user: Y, context: en }),
@@ -67,8 +67,8 @@ let V = (0, u.A)(
                 }),
                 { enabled: eA } = E.A.useExperiment({ guildId: eu?.guild_id, location: "ThreadUserContextMenu" }),
                 ec = eA ? eu?.id : null,
-                em = (0, k.A)(Y, ec),
-                eg = (0, p.A)({ user: Y, guildId: $, channelId: er, context: en }),
+                em = (0, G.A)(Y, ec),
+                eg = (0, p.A)({ user: Y, guildId: $, channelId: et, context: en }),
                 eT = (0, M.A)({ user: Y }),
                 { analyticsLocations: eh } = (0, g.Ay)(m.A.THREAD_USER_MENU),
                 ex = (0, h.A)({
@@ -86,17 +86,17 @@ let V = (0, u.A)(
                 eb = (0, c.A)(null, Y),
                 eU = (0, C.A)({ user: Y }),
                 eC = (0, j.A)({ user: Y }),
-                eM = (0, G.A)({ user: Y }),
-                ej = (0, S.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
-                ep = (0, f.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
+                eM = (0, k.A)({ user: Y }),
+                ej = (0, S.A)({ user: Y, guildId: $, channelId: et, location: "ThreadUserContextMenu" }),
+                ep = (0, f.A)({ user: Y, guildId: $, channelId: et, location: "ThreadUserContextMenu" }),
                 eN =
-                    ((n = r.useMemo(() => ({ [$]: [Y.id] }), [$, Y.id])),
-                    (0, L.Eq)(n, "useThreadAdminActionItems"),
+                    ((n = t.useMemo(() => ({ [$]: [Y.id] }), [$, Y.id])),
+                    (0, D.Eq)(n, "useThreadAdminActionItems"),
                     (0, l.bG)([q.A], () => q.A.getGuildVersion($), [$]),
-                    (o = (0, l.bG)([b.A], () => b.A.getChannel(er))),
+                    (o = (0, l.bG)([b.A], () => b.A.getChannel(et))),
                     (u = (0, l.bG)([Z.A], () => Z.A.getGuild($), [$])),
                     (V = (0, l.bG)([J.default], () => J.default.getCurrentUser())),
-                    (K = (0, R.A)(o, "Context Menu")),
+                    (K = (0, L.A)(o, "Context Menu")),
                     (Q = (0, H.qi)(o?.id)),
                     o?.isMediaThread()
                         ? []
@@ -106,48 +106,60 @@ let V = (0, u.A)(
                             ? []
                             : [
                                   Q
-                                      ? (0, t.jsx)(d.Dr, {
-                                            id: "remove",
-                                            label: o.isForumPost()
-                                                ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
-                                                : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
-                                            color: "danger",
-                                            action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
-                                        })
+                                      ? (0, r.jsx)(
+                                            d.Dr,
+                                            {
+                                                id: "remove",
+                                                label: o.isForumPost()
+                                                    ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
+                                                    : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
+                                                color: "danger",
+                                                action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
+                                            },
+                                            "remove",
+                                        )
                                       : null,
-                                  (0, v.L7)(Y, u)
-                                      ? (0, t.jsx)(d.Dr, {
-                                            id: "kick",
-                                            label: Q
-                                                ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
-                                                : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
-                                            color: "danger",
-                                            action: () =>
-                                                (0, D.openModalLazy)(async () => {
-                                                    let { default: e } = await Promise.all([
-                                                        i.e("710788"),
-                                                        i.e("140243"),
-                                                    ]).then(i.bind(i, 547166));
-                                                    return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
-                                                }),
-                                        })
+                                  (0, R.L7)(Y, u)
+                                      ? (0, r.jsx)(
+                                            d.Dr,
+                                            {
+                                                id: "kick",
+                                                label: Q
+                                                    ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
+                                                    : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
+                                                color: "danger",
+                                                action: () =>
+                                                    (0, v.openModalLazy)(async () => {
+                                                        let { default: e } = await Promise.all([
+                                                            i.e("710788"),
+                                                            i.e("140243"),
+                                                        ]).then(i.bind(i, 547166));
+                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                    }),
+                                            },
+                                            "kick",
+                                        )
                                       : null,
-                                  (0, v.EZ)(Y, u)
-                                      ? (0, t.jsx)(d.Dr, {
-                                            id: "ban",
-                                            label: Q
-                                                ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
-                                                : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
-                                            color: "danger",
-                                            action: () =>
-                                                (0, D.openModalLazy)(async () => {
-                                                    let { default: e } = await Promise.all([
-                                                        i.e("687407"),
-                                                        i.e("802504"),
-                                                    ]).then(i.bind(i, 333179));
-                                                    return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
-                                                }),
-                                        })
+                                  (0, R.EZ)(Y, u)
+                                      ? (0, r.jsx)(
+                                            d.Dr,
+                                            {
+                                                id: "ban",
+                                                label: Q
+                                                    ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
+                                                    : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
+                                                color: "danger",
+                                                action: () =>
+                                                    (0, v.openModalLazy)(async () => {
+                                                        let { default: e } = await Promise.all([
+                                                            i.e("687407"),
+                                                            i.e("802504"),
+                                                        ]).then(i.bind(i, 333179));
+                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                    }),
+                                            },
+                                            "ban",
+                                        )
                                       : null,
                               ]),
                 eS = (0, z.A)(Y.id, $),
@@ -159,10 +171,10 @@ let V = (0, u.A)(
                     commandTargetId: Y.id,
                     channel: ee,
                     guildId: $,
-                    onHeightUpdate: et,
+                    onHeightUpdate: er,
                 }),
                 eX = Y.isNonUserBot();
-            return (0, t.jsxs)(a.W, {
+            return (0, r.jsxs)(a.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: s.Z_,
@@ -170,17 +182,17 @@ let V = (0, u.A)(
                 onSelect: ei,
                 children: [
                     !eX &&
-                        (0, t.jsxs)(t.Fragment, {
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, t.jsx)(d.rX, { children: eI }),
-                                (0, t.jsxs)(d.rX, { children: [el, ea, ed, eo, em, eg, eT, es] }),
-                                (0, t.jsx)(d.rX, { children: eb }),
-                                (0, t.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, eM, ep, ej] }),
-                                (0, t.jsx)(d.rX, { children: eN }),
-                                (0, t.jsxs)(d.rX, { children: [eS, e_] }),
+                                (0, r.jsx)(d.rX, { children: eI }),
+                                (0, r.jsxs)(d.rX, { children: [el, ea, ed, eo, em, eg, eT, es] }),
+                                (0, r.jsx)(d.rX, { children: eb }),
+                                (0, r.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, eM, ep, ej] }),
+                                (0, r.jsx)(d.rX, { children: eN }),
+                                (0, r.jsxs)(d.rX, { children: [eS, e_] }),
                             ],
                         }),
-                    (0, t.jsx)(d.rX, { children: ef }),
+                    (0, r.jsx)(d.rX, { children: ef }),
                 ],
             });
         },

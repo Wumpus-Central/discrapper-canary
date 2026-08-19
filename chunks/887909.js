@@ -166,7 +166,7 @@ function eT(e) {
                                       return null;
                               }
                           })(e);
-                      return null != n && null != t ? (0, i.jsx)(em, { icon: n, text: t }) : null;
+                      return null != n && null != t ? (0, i.jsx)(em, { icon: n, text: t }, e) : null;
                   })
                 : null,
         ],

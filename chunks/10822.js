@@ -6378,12 +6378,16 @@ function oo(e) {
                             : e.isConversationChannelHeader
                               ? (0, a.jsx)(iP, { channel: s, scrollManager: A }, `conversation-${e.contentKey ?? t}`)
                               : e.isSummaryDivider
-                                ? (0, a.jsx)(r$, {
-                                      index: t,
-                                      item: e,
-                                      channel: s,
-                                      isBeforeGroup: null == e.content && on(m[t + 1]),
-                                  })
+                                ? (0, a.jsx)(
+                                      r$,
+                                      {
+                                          index: t,
+                                          item: e,
+                                          channel: s,
+                                          isBeforeGroup: null == e.content && on(m[t + 1]),
+                                      },
+                                      `summary-divider-${e.contentKey ?? t}`,
+                                  )
                                 : (0, a.jsx)(
                                       n6.A,
                                       {

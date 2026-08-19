@@ -120,19 +120,19 @@ function et(e) {
                     .map((e) => {
                         switch (e) {
                             case X.MOBILE:
-                                return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" }, e);
                             case X.ANDROID:
-                                return (0, l.jsx)(q, { width: d.E.xxs, height: d.E.xxs, color: "currentColor" });
+                                return (0, l.jsx)(q, { width: d.E.xxs, height: d.E.xxs, color: "currentColor" }, e);
                             case X.IOS:
-                                return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
                             case X.PLAYSTATION:
-                                return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" }, e);
                             case X.XBOX:
-                                return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
                             case X.VR:
-                                return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" }, e);
                             case X.DESKTOP:
-                                return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" });
+                                return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
                         }
