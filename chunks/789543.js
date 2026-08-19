@@ -374,8 +374,8 @@ var e$ = n(734066),
     e4 = n(689175),
     e7 = n(821609),
     e6 = n(532624),
-    e8 = n(927813),
-    e9 = n(879631),
+    e9 = n(927813),
+    e8 = n(879631),
     te = n(350535),
     tt = n(974293),
     tn = n(572164),
@@ -451,7 +451,7 @@ let tg = l.memo(function (e) {
 var tf = n(696016),
     tA = n(652215),
     tx = n(753070),
-    tv = n(16590),
+    tv = n(711918),
     tC = n(301414);
 function tE(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: a, setPopoutRef: s } = e;
@@ -477,7 +477,7 @@ function tE(e) {
         x = f.length > 16,
         v = null != m ? te.dI(m.shortcut, !0) : null,
         C = [
-            (0, e9.$)(o.clipsLength / e8.A.Millis.SECOND),
+            (0, e8.$)(o.clipsLength / e9.A.Millis.SECOND),
             (0, tx.zr)(o.clipsQuality.resolution),
             V.intl.formatToPlainString(V.t.Qb44XH, { fps: o.clipsQuality.frameRate }),
         ];
@@ -803,15 +803,15 @@ var tK = n(206835),
     t4 = n(946356),
     t7 = n(465829),
     t6 = n(624479),
-    t8 = n(206845),
-    t9 = n(957565),
+    t9 = n(206845),
+    t8 = n(957565),
     ne = n(427262),
     nt = n(966184);
 function nn(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: l } = (0, tq.NJ)();
-    return t9.p5
-        ? (0, i.jsx)(t8.A, {
+    return t8.p5
+        ? (0, i.jsx)(t9.A, {
               text: V.intl.string(V.t.y5MwJy),
               delay: 0,
               "aria-label": !1,
@@ -1011,7 +1011,7 @@ function nP(e) {
                 n.e("380197"),
                 n.e("848132"),
                 n.e("761686"),
-                n.e("591778"),
+                n.e("369397"),
                 n.e("94757"),
                 n.e("197312"),
                 n.e("438469"),
@@ -1035,8 +1035,8 @@ function nP(e) {
                 n.e("960235"),
                 n.e("77333"),
                 n.e("718573"),
-                n.e("806338"),
-                n.e("747834"),
+                n.e("882722"),
+                n.e("950106"),
                 n.e("797595"),
                 n.e("147662"),
                 n.e("344057"),
@@ -1051,7 +1051,7 @@ function nP(e) {
                 n.e("733115"),
                 n.e("397270"),
                 n.e("373122"),
-                n.e("108304"),
+                n.e("396656"),
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
@@ -1061,7 +1061,7 @@ function nP(e) {
                 n.e("362931"),
                 n.e("745959"),
                 n.e("858529"),
-                n.e("183488"),
+                n.e("207264"),
                 n.e("958038"),
                 n.e("171202"),
                 n.e("875201"),
@@ -1377,11 +1377,11 @@ function n1(e) {
 var n2 = n(146901),
     n3 = n(827827);
 let n5 = [
-        { duration: 15 * e8.A.Millis.MINUTE, label: () => V.intl.string(V.t["8ot6gv"]) },
-        { duration: e8.A.Millis.HOUR, label: () => V.intl.string(V.t.UMWBZr) },
-        { duration: 8 * e8.A.Millis.HOUR, label: () => V.intl.string(V.t.EpAXPC) },
-        { duration: e8.A.Millis.DAY, label: () => V.intl.string(V.t["755t4q"]) },
-        { duration: 3 * e8.A.Millis.DAY, label: () => V.intl.string(V.t["f3/1ch"]) },
+        { duration: 15 * e9.A.Millis.MINUTE, label: () => V.intl.string(V.t["8ot6gv"]) },
+        { duration: e9.A.Millis.HOUR, label: () => V.intl.string(V.t.UMWBZr) },
+        { duration: 8 * e9.A.Millis.HOUR, label: () => V.intl.string(V.t.EpAXPC) },
+        { duration: e9.A.Millis.DAY, label: () => V.intl.string(V.t["755t4q"]) },
+        { duration: 3 * e9.A.Millis.DAY, label: () => V.intl.string(V.t["f3/1ch"]) },
         { duration: void 0, label: () => V.intl.string(V.t["46dqJY"]) },
     ],
     n4 = "forever";
@@ -1425,8 +1425,8 @@ function n6(e) {
         ? V.intl.formatToPlainString(V.t.ZxxHIO, { timeString: i })
         : V.intl.formatToPlainString(V.t["9OFjSe"], { dateString: n, timeString: i });
 }
-var n8 = n(996988),
-    n9 = n(985253),
+var n9 = n(996988),
+    n8 = n(985253),
     ie = n(83260);
 function it(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: r, openedAt: o, className: d } = e,
@@ -1696,22 +1696,22 @@ function it(e) {
                                 className: ez.BK,
                                 user: t,
                                 displayProfile: g,
-                                themeType: n8.d.POPOUT,
+                                themeType: n9.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
                                         className: ie.wx,
                                         children: [
-                                            (0, i.jsx)(t0.A, { user: t, displayProfile: g, themeType: n8.d.POPOUT }),
+                                            (0, i.jsx)(t0.A, { user: t, displayProfile: g, themeType: n9.d.POPOUT }),
                                             (0, i.jsx)(tJ.A, {
                                                 user: t,
                                                 displayProfile: g,
-                                                avatarSize: n9.T[n8.d.POPOUT].avatarSize,
+                                                avatarSize: n8.T[n9.d.POPOUT].avatarSize,
                                                 onOpenProfile: h ? void 0 : W,
                                             }),
                                             (0, i.jsx)(ni.A, {
                                                 ref: k,
                                                 user: t,
-                                                themeType: n8.d.POPOUT,
+                                                themeType: n9.d.POPOUT,
                                                 onCloseProfile: n,
                                                 prompt: F,
                                             }),
@@ -1731,7 +1731,7 @@ function it(e) {
                                                 pronouns: g?.pronouns,
                                                 trailing: (0, i.jsx)(tQ.A, {
                                                     displayProfile: g,
-                                                    themeType: n8.d.POPOUT,
+                                                    themeType: n9.d.POPOUT,
                                                     onClose: n,
                                                     shouldOpenBadgeTooltip: null != r ? (e) => e === r : void 0,
                                                     shouldGlowTenureBadge: G.current,
@@ -1885,14 +1885,14 @@ function it(e) {
                                                                     },
                                                                 }),
                                                                 !__OVERLAY__ &&
-                                                                    t9.p5 &&
+                                                                    t8.p5 &&
                                                                     y &&
                                                                     (0, i.jsx)(eq, {
                                                                         action: "COPY_USER_ID",
                                                                         icon: eV.L,
                                                                         label: V.intl.string(V.t["/AXYnE"]),
                                                                         onClick: () => {
-                                                                            (0, t9.C)(t.id), n();
+                                                                            (0, t8.C)(t.id), n();
                                                                         },
                                                                     }),
                                                             ],
@@ -1929,12 +1929,12 @@ var ii = n(201805),
     ih = n(763827),
     im = n(499156),
     ip = n(731854);
-let ig = 2.5 * e8.A.Millis.SECOND,
-    iA = +e8.A.Millis.HOUR;
+let ig = 2.5 * e9.A.Millis.SECOND,
+    iA = +e9.A.Millis.HOUR;
 var ix = n(459838),
     iv = n(485296);
-let iC = 3 * e8.A.Millis.SECOND,
-    iE = +e8.A.Millis.DAY;
+let iC = 3 * e9.A.Millis.SECOND,
+    iE = +e9.A.Millis.DAY;
 var iT = n(616356),
     i_ = n(734057),
     iI = n(629016),
@@ -1983,7 +1983,7 @@ var ik = n(626584),
     iD = n(591179),
     iU = n(531685),
     iG = n(259065),
-    iF = n(864386);
+    iF = n(955298);
 let iV = new ik.A("DisplayNameStylesFlywheelCoachmark");
 function iH(e) {
     let { markAsDismissed: t, targetElementRef: n, children: a } = e,
@@ -2290,8 +2290,8 @@ function i6(e) {
                 })
         : e.children;
 }
-var i8 = n(615675),
-    i9 = n(900797),
+var i9 = n(615675),
+    i8 = n(900797),
     le = n(847374),
     lt = n(348858),
     ln = n(617354),
@@ -2316,7 +2316,7 @@ function lr(e) {
             play: p,
             events: { onMouseEnter: f, onMouseLeave: A },
         } = (0, lt.I)(h ? "undeafen" : "deafen"),
-        x = n ? i8.T : m,
+        x = n ? i9.T : m,
         { name: v } = (0, eb.x5)(ip.oh.AUDIO_OUTPUT),
         C = (0, ln.A)(t, n, a),
         { analyticsLocations: E } = (0, w.Ay)(O.A.AUDIO_OUTPUT_BUTTON),
@@ -2351,7 +2351,7 @@ function lr(e) {
                 children: (e, t) => {
                     let { onClick: l } = e,
                         { isShown: u } = t,
-                        m = u ? i9.t : le.a;
+                        m = u ? i8.t : le.a;
                     return (0, i.jsxs)("div", {
                         ref: T,
                         className: s()(la.Lh, { [la.v8]: h, [la.q6]: u }),
@@ -2435,7 +2435,7 @@ let lm = new lh(iK.h, {
 });
 var lp = n(362823),
     lg = n(980923),
-    lf = n(224585),
+    lf = n(404009),
     lA = n(321429),
     lx = n(973324);
 function lv(e) {
@@ -2517,7 +2517,7 @@ function lv(e) {
                 children: (e, n) => {
                     let { onClick: l } = e,
                         { isShown: a } = n,
-                        r = a ? i9.t : le.a;
+                        r = a ? i8.t : le.a;
                     return (0, i.jsxs)("div", {
                         ref: b,
                         className: s()(la.Lh, { [la.v8]: M, [la.q6]: a }),
@@ -2593,7 +2593,7 @@ var lC = n(935399),
     lE = n(505312),
     lT = n(848847),
     l_ = n(88001),
-    lI = n(466919),
+    lI = n(109447),
     lj = n(438705);
 function lN(e) {
     let { targetElementRef: t, shouldShow: n, onDismiss: a } = e,
@@ -2711,10 +2711,10 @@ function lM(e) {
 }
 var lR = n(948198);
 let lO = iM.Ay.getEnableHardwareAcceleration() ? m.Js : m.eu,
-    lw = 2.5 * e8.A.Millis.SECOND,
-    lP = 2 * e8.A.Millis.MINUTE,
-    lk = 2 * e8.A.Millis.MINUTE,
-    lL = 5 * e8.A.Millis.SECOND;
+    lw = 2.5 * e9.A.Millis.SECOND,
+    lP = 2 * e9.A.Millis.MINUTE,
+    lk = 2 * e9.A.Millis.MINUTE,
+    lL = 5 * e9.A.Millis.SECOND;
 function lD(e) {
     let {
             ref: t,
@@ -2958,7 +2958,7 @@ class lU extends l.PureComponent {
                     n.e("380197"),
                     n.e("848132"),
                     n.e("761686"),
-                    n.e("591778"),
+                    n.e("369397"),
                     n.e("94757"),
                     n.e("197312"),
                     n.e("438469"),
@@ -3207,8 +3207,8 @@ class lU extends l.PureComponent {
                     n.e("960235"),
                     n.e("77333"),
                     n.e("718573"),
-                    n.e("806338"),
-                    n.e("747834"),
+                    n.e("882722"),
+                    n.e("950106"),
                     n.e("797595"),
                     n.e("147662"),
                     n.e("344057"),
@@ -3223,7 +3223,7 @@ class lU extends l.PureComponent {
                     n.e("733115"),
                     n.e("397270"),
                     n.e("373122"),
-                    n.e("108304"),
+                    n.e("396656"),
                     n.e("293159"),
                     n.e("755936"),
                     n.e("489088"),
@@ -3233,7 +3233,7 @@ class lU extends l.PureComponent {
                     n.e("362931"),
                     n.e("745959"),
                     n.e("858529"),
-                    n.e("183488"),
+                    n.e("207264"),
                     n.e("958038"),
                     n.e("171202"),
                     n.e("875201"),
@@ -3269,7 +3269,7 @@ class lU extends l.PureComponent {
                     n.e("343437"),
                     n.e("875842"),
                     n.e("166495"),
-                    n.e("67861"),
+                    n.e("385653"),
                     n.e("401518"),
                     n.e("198329"),
                     n.e("9205"),
@@ -3298,7 +3298,7 @@ class lU extends l.PureComponent {
                     n.e("989088"),
                     n.e("952548"),
                     n.e("817989"),
-                    n.e("435027"),
+                    n.e("934771"),
                     n.e("37977"),
                     n.e("691671"),
                     n.e("49653"),
@@ -3397,7 +3397,7 @@ class lU extends l.PureComponent {
                     n.e("120379"),
                     n.e("36877"),
                     n.e("159957"),
-                    n.e("777487"),
+                    n.e("993199"),
                     n.e("203930"),
                     n.e("708536"),
                     n.e("903663"),
@@ -3415,7 +3415,7 @@ class lU extends l.PureComponent {
                     n.e("489523"),
                     n.e("726294"),
                     n.e("574678"),
-                    n.e("510147"),
+                    n.e("469155"),
                     n.e("81189"),
                     n.e("858164"),
                     n.e("98972"),
@@ -3428,7 +3428,7 @@ class lU extends l.PureComponent {
                     n.e("127659"),
                     n.e("946430"),
                     n.e("734546"),
-                    n.e("362875"),
+                    n.e("30939"),
                     n.e("341701"),
                     n.e("837490"),
                     n.e("781949"),
@@ -3439,7 +3439,7 @@ class lU extends l.PureComponent {
                     n.e("963584"),
                     n.e("548730"),
                     n.e("871467"),
-                    n.e("330167"),
+                    n.e("107671"),
                     n.e("829260"),
                     n.e("132737"),
                     n.e("51892"),
@@ -3468,8 +3468,8 @@ class lU extends l.PureComponent {
                     n.e("238260"),
                     n.e("946039"),
                     n.e("995602"),
-                    n.e("534409"),
-                    n.e("793004"),
+                    n.e("811817"),
+                    n.e("660748"),
                     n.e("512162"),
                     n.e("866008"),
                     n.e("222644"),
@@ -3505,7 +3505,7 @@ class lU extends l.PureComponent {
                     n.e("991531"),
                     n.e("175284"),
                     n.e("462318"),
-                    n.e("844912"),
+                    n.e("595344"),
                     n.e("313052"),
                     n.e("864926"),
                     n.e("450541"),
@@ -3547,7 +3547,7 @@ class lU extends l.PureComponent {
                     n.e("44264"),
                     n.e("874913"),
                     n.e("435476"),
-                    n.e("301691"),
+                    n.e("759579"),
                     n.e("214451"),
                     n.e("407755"),
                     n.e("993720"),

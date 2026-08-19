@@ -1,1 +1,3 @@
-_.exports = { l8: "optionHeader__1f657", XG: "scroller__1f657", KA: "templatesList__1f657" };
+a.exports = JSON.parse(
+    '{"yfwZuy":["Voir mon badge"],"UnPGii":["Le badge a \xe9t\xe9 ajout\xe9 \xe0 ton profil."],"nvaTQq":["Tu as obtenu le badge de profil Orbs\xa0!"]}',
+);

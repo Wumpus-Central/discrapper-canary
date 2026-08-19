@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(816578),
     eo = n(110234),
-    ed = n(453028),
+    ed = n(966497),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -1133,8 +1133,8 @@ var e0 = n(417098),
     e4 = n(377802),
     e6 = n(348858),
     e8 = n(523875),
-    e9 = n(416696),
-    e7 = n(621956),
+    e7 = n(416696),
+    e9 = n(621956),
     te = n(446080),
     tt = n(922016),
     tn = n(615675),
@@ -1158,7 +1158,7 @@ var e0 = n(417098),
     tS = n(915725),
     tI = n(226640),
     tv = n(753070),
-    tj = n(16590);
+    tj = n(711918);
 function tT(e) {
     let { onClose: t } = e,
         n = (0, tp.Et)(),
@@ -1562,7 +1562,7 @@ function tJ(e) {
         Component: x,
         events: { onMouseEnter: A, onMouseLeave: E },
         play: S,
-    } = (0, e9.c)(g ? "disable" : "enable");
+    } = (0, e7.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tW(i);
     return (0, r.jsx)(tt.Y, {
@@ -1625,7 +1625,7 @@ function t$(e) {
     let {
             Component: p,
             events: { onClick: f, onMouseEnter: x, onMouseLeave: A },
-        } = (0, e7.E)(),
+        } = (0, e9.E)(),
         E = tW(i),
         S = (0, y.bG)([t_.A, k.default], () => t_.A.isUserPlayingSounds(k.default.getId()), []) ? "green" : void 0;
     return (0, r.jsx)(tt.Y, {
@@ -1928,8 +1928,8 @@ function t8(e) {
         ],
     });
 }
-var t9 = n(534890),
-    t7 = n(364522),
+var t7 = n(534890),
+    t9 = n(364522),
     ne = n(994500),
     nt = n(996439);
 function nn(e, t) {
@@ -2004,7 +2004,7 @@ let nN = c.memo(function (e) {
             isMentionLowImportance: d,
         });
     if (null == i)
-        return (0, r.jsx)(t9.ChatIcon, { size: nw(l, "default"), color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+        return (0, r.jsx)(t7.ChatIcon, { size: nw(l, "default"), color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
     {
         if (null == t) return (0, r.jsx)(tw.Ay, { guild: i, size: nw(l, "guild"), active: !0, showTooltip: !1 });
         let e = 40 === l ? ny.Q.MEDIUM_40 : ny.Q.TINY_24;
@@ -2020,7 +2020,7 @@ function nR(e) {
 }
 var nO = n(429913),
     nM = n(34307),
-    nk = n(499214),
+    nk = n(530478),
     nD = n(16044);
 function nz(e) {
     return null != e && (e.isDM() || e.isMultiUserDM());
@@ -2496,7 +2496,7 @@ let n$ = c.memo(function (e) {
                 let e = j?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === s && !e) {
                     let e = (0, tg.gU)(j, v);
-                    e ??= t9.ChatIcon;
+                    e ??= t7.ChatIcon;
                     let t = a && !u && g,
                         n = { boxShadow: "none" },
                         i = h.rgba({ opacity: 0.85 }),
@@ -2650,7 +2650,7 @@ let n$ = c.memo(function (e) {
         M = (() => {
             if (null == j || N) return null;
             let e = (0, tg.gU)(j, v);
-            return (e ??= t9.ChatIcon), (0, r.jsx)(e, { size: "sm", color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+            return (e ??= t7.ChatIcon), (0, r.jsx)(e, { size: "sm", color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == j
         ? (0, r.jsx)("div", { className: nQ.R })
@@ -2691,7 +2691,7 @@ var n0 = n(148494),
     n4 = n(625494),
     n6 = n(973196),
     n8 = n(905816);
-function n9(e) {
+function n7(e) {
     let t,
         n,
         i,
@@ -2738,7 +2738,7 @@ function n9(e) {
           })
         : null;
 }
-var n7 = n(173738);
+var n9 = n(173738);
 function ie(e) {
     let { dragStart: t, dragging: n } = e,
         [i, s] = (0, y.bG)([o.A], () => o.A.getSessionEntries(), [], nt.D),
@@ -2806,15 +2806,15 @@ function ie(e) {
         j = null != l && !(d && l === m);
     return v
         ? (0, r.jsxs)("div", {
-              className: n7.kL,
+              className: n9.kL,
               children: [
                   (0, r.jsx)("nav", {
-                      className: n7.pz,
+                      className: n9.pz,
                       "aria-label": eg.intl.string(nk.default["2yFtJ1"]),
                       onMouseDown: (e) => {
                           0 === e.button && t(eT.P.MOVE, e.clientX, e.clientY);
                       },
-                      children: (0, r.jsxs)(t7.d_, {
+                      children: (0, r.jsxs)(t9.d_, {
                           children: [
                               null != m
                                   ? (0, r.jsxs)(r.Fragment, {
@@ -2828,7 +2828,7 @@ function ie(e) {
                                                 },
                                                 `tiv-${m}`,
                                             ),
-                                            g.length > 0 ? (0, r.jsx)("hr", { className: n7.mF }) : null,
+                                            g.length > 0 ? (0, r.jsx)("hr", { className: n9.mF }) : null,
                                         ],
                                     })
                                   : null,
@@ -2840,16 +2840,16 @@ function ie(e) {
                   }),
                   j
                       ? (0, r.jsxs)("div", {
-                            className: n7.oM,
+                            className: n9.oM,
                             children: [
                                 (0, r.jsx)(nU, { channel: u, user: S, guild: h, title: I, dragStart: t, dragging: n }),
-                                (0, r.jsx)(n9, { selectedChannelId: l }),
+                                (0, r.jsx)(n7, { selectedChannelId: l }),
                             ],
                         })
                       : null,
               ],
           })
-        : (0, r.jsx)(V.g, { emptyText: eg.intl.string(nk.default["xpv/t5"]), icon: t9.ChatIcon });
+        : (0, r.jsx)(V.g, { emptyText: eg.intl.string(nk.default["xpv/t5"]), icon: t7.ChatIcon });
 }
 let it = c.memo(function (e) {
     let { locked: t, dragStart: n, dragging: i } = e;
@@ -3100,7 +3100,7 @@ function ih(e) {
 var im = n(450740),
     ig = n(968898);
 n(321073);
-var ip = n(518009),
+var ip = n(232554),
     ix = n(592598),
     iA = n(28528),
     iE = n(57019),

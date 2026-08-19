@@ -8,7 +8,7 @@ var i = n(582128),
     c = n(996512),
     d = n(360729),
     u = n(610274),
-    h = n(662731),
+    h = n(1195),
     p = n(375708);
 function m(e, t, n) {
     let m = (0, l.bG)([s.A], () => s.A.getChannel(e)?.guild_id),

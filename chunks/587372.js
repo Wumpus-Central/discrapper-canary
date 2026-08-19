@@ -54,7 +54,7 @@ var k = n(806163),
     ee = n(532794),
     et = n(202541),
     en = n(818348),
-    es = n(275695),
+    es = n(632847),
     el = n(375708),
     ea = n(923137);
 function ei() {
@@ -430,8 +430,8 @@ function e2(e) {
         tooltip: el.intl.string(es.default["feUiM/"]),
     });
 }
-var e5 = n(652215),
-    e3 = n(628049),
+var e3 = n(652215),
+    e5 = n(628049),
     e8 = n(49999),
     e9 = n(20661);
 let e6 = [eD.M.STARTUP_FAILED, eD.M.MISSING_STOCK, eD.M.PROVIDER_ERRORED, eD.M.DELETED];
@@ -483,7 +483,7 @@ let tn = c.memo(function (e) {
                 month: "numeric",
                 day: "numeric",
             });
-            return t.status === e5.Dmq.CANCELED
+            return t.status === e3.Dmq.CANCELED
                 ? { text: el.intl.formatToPlainString(es.default["3aEgK6"], { date: n }), type: "cancellation" }
                 : null != t.renewalMutations
                   ? { text: el.intl.formatToPlainString(es.default.KFSA3M, { date: n }), type: "downgrade" }
@@ -530,11 +530,11 @@ let tn = c.memo(function (e) {
                             n.e("481647"),
                             n.e("776602"),
                             n.e("140402"),
-                            n.e("67861"),
+                            n.e("385653"),
                             n.e("401518"),
                             n.e("323354"),
-                            n.e("844780"),
                             n.e("368062"),
+                            n.e("844780"),
                             n.e("236946"),
                             n.e("692639"),
                             n.e("890480"),
@@ -550,7 +550,7 @@ let tn = c.memo(function (e) {
                 );
             })({ server: t, source: "game-server-shop" });
         }, [t]),
-        _ = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e3.qb[E],
+        _ = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e5.qb[E],
         N = null != t.instance.gameServerPanelUrl,
         A = null != t.instance.status && e6.includes(t.instance.status),
         I = c.useCallback(() => {
@@ -1173,7 +1173,7 @@ function t_(e, t) {
             if (null != e.current) {
                 let t = e.current.getScrollerNode();
                 null != t &&
-                    s(e5.HAw.COLLECTIBLES_SHOP_SCROLLED, null != a ? a : "", n, {
+                    s(e3.HAw.COLLECTIBLES_SHOP_SCROLLED, null != a ? a : "", n, {
                         scrollTop: t.scrollTop,
                         scrollOffset: t.offsetHeight,
                         scrollHeight: t.scrollHeight,
@@ -1275,7 +1275,7 @@ function t$(e) {
         i = (0, tf.a)("CollectiblesCatalogContent"),
         r = (0, N.uM)(),
         d = c.useCallback(() => {
-            tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: r?.sessionId,
                 sku_id: t.skuId,
                 page_type: td.G2.CATALOG,
@@ -1286,7 +1286,7 @@ function t$(e) {
                 cta_name: "catalog banner shop the collection arrow",
             }),
                 (tY = t.skuId),
-                a.push(e5.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId));
+                a.push(e3.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId));
         }, [r?.pageIndex, r?.pageSection, r?.pageSize, r?.sessionId, t.name, t.skuId, a]);
     return (0, o.jsxs)("div", {
         className: tG.EF,
@@ -1418,7 +1418,7 @@ let t4 = function () {
         m = c.useCallback(
             (e) => {
                 let n = r(d(e));
-                tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: s?.sessionId,
                     page_section: s?.pageSection,
                     page_category: s?.pageCategory,
@@ -1457,7 +1457,7 @@ var t2 =
         (l.BLACK = "COLLECTIBLES_COLOR_BLACK"),
         (l.WHITE = "COLLECTIBLES_COLOR_WHITE"),
         l),
-    t5 =
+    t3 =
         (((a = {}).ANIME = "COLLECTIBLES_THEME_ANIME"),
         (a.GAMING = "COLLECTIBLES_THEME_GAMING"),
         (a.CUTE_COZY = "COLLECTIBLES_THEME_CUTE_COZY"),
@@ -1469,7 +1469,7 @@ var t2 =
         (a.NATURE = "COLLECTIBLES_THEME_NATURE"),
         (a.SCI_FI = "COLLECTIBLES_THEME_SCI_FI"),
         a),
-    t3 = n(150934),
+    t5 = n(150934),
     t8 = n(508770),
     t9 = n(278416),
     t6 = n(602853),
@@ -1509,7 +1509,7 @@ function nx() {
         f = c.useMemo(() => td._6.filter((e) => g || e !== tT.q.PROFILE_FRAME), [g]),
         p = c.useCallback(
             (e) => {
-                tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: h?.sessionId,
                     page_section: h?.pageSection,
                     page_category: h?.pageCategory,
@@ -1543,7 +1543,7 @@ function nx() {
                         (0, o.jsxs)("div", {
                             className: nh.Ym,
                             children: [
-                                (0, o.jsx)(t3.S, {
+                                (0, o.jsx)(t5.S, {
                                     checked: a,
                                     onChange: () => {
                                         p(`filter offer eligible ${!1 === a ? "on" : "off"}`), l();
@@ -1554,14 +1554,14 @@ function nx() {
                             ],
                         }),
                     f.map((e) => (0, o.jsx)(nE, { filter: e, trackFilterAction: p }, e)),
-                    (0, o.jsx)(t3.S, {
+                    (0, o.jsx)(t5.S, {
                         checked: t,
                         onChange: () => {
                             p(`filter orb eligible ${!1 === t ? "on" : "off"}`), e();
                         },
                         label: el.intl.string(el.t.AHHHgG),
                     }),
-                    d && (0, o.jsx)(t3.S, { checked: s, onChange: v, label: el.intl.string(el.t["+W8gb+"]) }),
+                    d && (0, o.jsx)(t5.S, { checked: s, onChange: v, label: el.intl.string(el.t["+W8gb+"]) }),
                 ],
             }),
             (0, o.jsx)(nf, { trackFilterAction: p }),
@@ -1588,7 +1588,7 @@ function nE(e) {
             [tT.q.BUNDLE]: el.intl.string(el.t.FYFpps),
         },
         { itemTypeFilters: l, onToggleItemType: a } = (0, R.v)(),
-        i = (0, o.jsx)(t3.S, {
+        i = (0, o.jsx)(t5.S, {
             checked: l.has(t),
             onChange: () => {
                 let e = s[t]?.toLowerCase() != null ? s[t].toLowerCase() : t;
@@ -1697,53 +1697,53 @@ function nC(e) {
             () => [
                 {
                     name: el.intl.string(el.t.aVBOKh),
-                    icon: (0, o.jsx)(nt.E, { size: "xs", color: i(t5.ANIME) }),
-                    enum: t5.ANIME,
+                    icon: (0, o.jsx)(nt.E, { size: "xs", color: i(t3.ANIME) }),
+                    enum: t3.ANIME,
                 },
                 {
                     name: el.intl.string(el.t["3WoZBc"]),
-                    icon: (0, o.jsx)(nn._, { size: "xs", color: i(t5.GAMING) }),
-                    enum: t5.GAMING,
+                    icon: (0, o.jsx)(nn._, { size: "xs", color: i(t3.GAMING) }),
+                    enum: t3.GAMING,
                 },
                 {
                     name: el.intl.string(el.t.yuEmLj),
-                    icon: (0, o.jsx)(ns.C, { size: "xs", color: i(t5.CUTE_COZY) }),
-                    enum: t5.CUTE_COZY,
+                    icon: (0, o.jsx)(ns.C, { size: "xs", color: i(t3.CUTE_COZY) }),
+                    enum: t3.CUTE_COZY,
                 },
                 {
                     name: el.intl.string(el.t.mMvCHo),
-                    icon: (0, o.jsx)(nl.L, { size: "xs", color: i(t5.SCI_FI) }),
-                    enum: t5.SCI_FI,
+                    icon: (0, o.jsx)(nl.L, { size: "xs", color: i(t3.SCI_FI) }),
+                    enum: t3.SCI_FI,
                 },
                 {
                     name: el.intl.string(el.t.TlhOQC),
-                    icon: (0, o.jsx)(na.L, { size: "xs", color: i(t5.FOOD_DRINKS) }),
-                    enum: t5.FOOD_DRINKS,
+                    icon: (0, o.jsx)(na.L, { size: "xs", color: i(t3.FOOD_DRINKS) }),
+                    enum: t3.FOOD_DRINKS,
                 },
                 {
                     name: el.intl.string(el.t["4IaUIM"]),
-                    icon: (0, o.jsx)(ni.f, { size: "xs", color: i(t5.FANTASY) }),
-                    enum: t5.FANTASY,
+                    icon: (0, o.jsx)(ni.f, { size: "xs", color: i(t3.FANTASY) }),
+                    enum: t3.FANTASY,
                 },
                 {
                     name: el.intl.string(el.t["w0nSG/"]),
-                    icon: (0, o.jsx)(nr.N, { size: "xs", color: i(t5.ANIMALS_PETS) }),
-                    enum: t5.ANIMALS_PETS,
+                    icon: (0, o.jsx)(nr.N, { size: "xs", color: i(t3.ANIMALS_PETS) }),
+                    enum: t3.ANIMALS_PETS,
                 },
                 {
                     name: el.intl.string(el.t.cJng7v),
-                    icon: (0, o.jsx)(no.p, { size: "xs", color: i(t5.NATURE) }),
-                    enum: t5.NATURE,
+                    icon: (0, o.jsx)(no.p, { size: "xs", color: i(t3.NATURE) }),
+                    enum: t3.NATURE,
                 },
                 {
                     name: el.intl.string(el.t["5mUvyM"]),
-                    icon: (0, o.jsx)(nc.T, { size: "xs", color: i(t5.MOVIES_TV_SHOWS) }),
-                    enum: t5.MOVIES_TV_SHOWS,
+                    icon: (0, o.jsx)(nc.T, { size: "xs", color: i(t3.MOVIES_TV_SHOWS) }),
+                    enum: t3.MOVIES_TV_SHOWS,
                 },
                 {
                     name: el.intl.string(el.t.MB9H5Z),
-                    icon: (0, o.jsx)(nd.e, { size: "xs", color: i(t5.DARK_MOODY) }),
-                    enum: t5.DARK_MOODY,
+                    icon: (0, o.jsx)(nd.e, { size: "xs", color: i(t3.DARK_MOODY) }),
+                    enum: t3.DARK_MOODY,
                 },
             ],
             [i],
@@ -1836,7 +1836,7 @@ function nA(e) {
     }, [b]);
     let M = c.useCallback(
         (e) => {
-            tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: l?.sessionId,
                 page_section: l?.pageSection,
                 page_category: l?.pageCategory,
@@ -1903,7 +1903,7 @@ function nL(e) {
     let { tab: t, categories: n, initialCategoryId: s, showFilterInitially: l = !0, onUnmount: a } = e,
         i = (0, tN.A)("shop_include_unpublished");
     !(function () {
-        let e = (0, M.bG)([tL.A], () => "success" === tL.A.getFetchState(e5.FYj)),
+        let e = (0, M.bG)([tL.A], () => "success" === tL.A.getFetchState(e3.FYj)),
             t = null != (0, tO.A)(),
             { offerEligible: n, clearFilters: s } = (0, R.v)();
         c.useEffect(() => {
@@ -1948,7 +1948,7 @@ function nL(e) {
                                   className: nI.en,
                                   children: (0, o.jsx)("div", {
                                       className: nI.pf,
-                                      children: (0, o.jsx)(tA.Z_, { tenantId: e5.FYj, templateId: tI.b.BACK_CATALOG }),
+                                      children: (0, o.jsx)(tA.Z_, { tenantId: e3.FYj, templateId: tI.b.BACK_CATALOG }),
                                   }),
                               })
                             : (0, o.jsx)(nO, {
@@ -1997,7 +1997,7 @@ function nO(e) {
         })(a),
         f = c.useCallback(
             (e) => {
-                tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: h?.sessionId,
                     page_section: h?.pageSection,
                     page_category: h?.pageCategory,
@@ -2021,7 +2021,7 @@ function nO(e) {
                     null === p.current ||
                     m.current.contains(t) ||
                     p.current.contains(t) ||
-                    (tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    (tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: h?.sessionId,
                         page_section: h?.pageSection,
                         page_category: h?.pageCategory,
@@ -2060,7 +2060,7 @@ function nO(e) {
                                         children: (0, o.jsx)(Q.$, {
                                             onClick: function () {
                                                 let e = !n;
-                                                tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                     collectibles_shop_session_id: h?.sessionId,
                                                     page_section: h?.pageSection,
                                                     page_category: h?.pageCategory,
@@ -2320,14 +2320,14 @@ var nJ = n(531685),
 n(667532);
 var n4 = n(435558),
     n2 = n.n(n4),
-    n5 =
+    n3 =
         (((r = {}).RECOMMENDED = "recommended"),
         (r.POPULAR = "popular"),
         (r.RECENT = "recent"),
         (r.PRICE_LOW_TO_HIGH = "price_low_to_high"),
         (r.RANDOM = "random"),
         r),
-    n3 = n(153488),
+    n5 = n(153488),
     n8 = n(313276),
     n9 = n(623373),
     n6 = n(885574),
@@ -2347,7 +2347,7 @@ let sn = function (e) {
                         position: "top",
                         "aria-label": el.intl.string(el.t["3taPdj"]),
                         children: (0, o.jsx)(eH.D, {
-                            onClick: () => (0, n7.A)(se.A.getArticleURL(e5.MVz.DATA_USED_FOR_RECOMMENDED)),
+                            onClick: () => (0, n7.A)(se.A.getArticleURL(e3.MVz.DATA_USED_FOR_RECOMMENDED)),
                             className: st.s,
                             children: (0, o.jsx)(n6.CircleInformationIcon, { size: "sm" }),
                         }),
@@ -2378,18 +2378,18 @@ let sn = function (e) {
                 showRecommendationOption: j,
             } = (function (e) {
                 let { sortedSkuIds: t, hasShopDiscount: n, orbsSupportedOnly: s } = e,
-                    l = (0, M.bG)([n3.A], () => n3.A.hasConsented(e5.YAq.PERSONALIZATION)),
-                    a = c.useMemo(() => t?.[n5.RECOMMENDED] ?? [], [t]),
-                    i = c.useMemo(() => t?.[n5.POPULAR] ?? [], [t]),
+                    l = (0, M.bG)([n5.A], () => n5.A.hasConsented(e3.YAq.PERSONALIZATION)),
+                    a = c.useMemo(() => t?.[n3.RECOMMENDED] ?? [], [t]),
+                    i = c.useMemo(() => t?.[n3.POPULAR] ?? [], [t]),
                     r = a.length > 0 && l,
-                    [o, d] = c.useState(r ? n5.RECOMMENDED : n5.POPULAR),
+                    [o, d] = c.useState(r ? n3.RECOMMENDED : n3.POPULAR),
                     u = (0, M.bG)([A.A], () => A.A.productsWithVariantsAsGroup),
                     m = c.useMemo(() => (0, nW.CE)(u), [u]),
                     g = (0, n8.A)(),
                     h = (0, tM.p)(),
                     [x, E] = c.useState([]),
                     f = c.useCallback(() => {
-                        d(n5.RANDOM), E(n2().shuffle(m));
+                        d(n3.RANDOM), E(n2().shuffle(m));
                     }, [m]);
                 c.useEffect(() => {
                     E(n2().shuffle(m));
@@ -2397,19 +2397,19 @@ let sn = function (e) {
                 let p = c.useMemo(() => {
                     let e = [];
                     switch (o) {
-                        case n5.RECENT:
+                        case n3.RECENT:
                             e = m;
                             break;
-                        case n5.PRICE_LOW_TO_HIGH:
+                        case n3.PRICE_LOW_TO_HIGH:
                             e = (0, nW.bf)([...m], n, s);
                             break;
-                        case n5.RECOMMENDED:
+                        case n3.RECOMMENDED:
                             e = g(a);
                             break;
-                        case n5.POPULAR:
+                        case n3.POPULAR:
                             e = g(i);
                             break;
-                        case n5.RANDOM:
+                        case n3.RANDOM:
                             e = x;
                     }
                     return s ? (0, n9.ex)(h(e)) : h(e);
@@ -2420,11 +2420,11 @@ let sn = function (e) {
                     sortedItems: (0, tP.X)(p),
                     sortOptions: c.useMemo(() => {
                         let e = [
-                            { value: n5.POPULAR, label: el.intl.string(el.t.Y68e5p) },
-                            { value: n5.RECENT, label: el.intl.string(el.t["51Bhiz"]) },
-                            { value: n5.PRICE_LOW_TO_HIGH, label: el.intl.string(el.t.m8RVU2) },
+                            { value: n3.POPULAR, label: el.intl.string(el.t.Y68e5p) },
+                            { value: n3.RECENT, label: el.intl.string(el.t["51Bhiz"]) },
+                            { value: n3.PRICE_LOW_TO_HIGH, label: el.intl.string(el.t.m8RVU2) },
                         ];
-                        return r && e.unshift({ value: n5.RECOMMENDED, label: el.intl.string(el.t.zPWgFG) }), e;
+                        return r && e.unshift({ value: n3.RECOMMENDED, label: el.intl.string(el.t.zPWgFG) }), e;
                     }, [r]),
                     showRecommendationOption: r,
                     shuffleProducts: f,
@@ -2494,7 +2494,7 @@ let sn = function (e) {
                 (e) => {
                     H(!1),
                         O({ isShuffling: !1, onOutroComplete: () => E(e), returnRef: D }),
-                        tS.default.track(e5.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                        tS.default.track(e3.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                             page_session_id: R,
                             sort_type: e,
                         });
@@ -2551,7 +2551,7 @@ let sn = function (e) {
                                                       H(!0),
                                                           O({ isShuffling: !0, onOutroComplete: C, returnRef: y }),
                                                           tS.default.track(
-                                                              e5.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED,
+                                                              e3.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED,
                                                               { page_session_id: R },
                                                           );
                                                   },
@@ -2632,7 +2632,7 @@ function sc(e) {
         [r, d] = c.useState(!1),
         m = c.useCallback(
             (e) => {
-                tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: s?.sessionId,
                     page_type: n,
                     page_category: s?.pageCategory,
@@ -2647,7 +2647,7 @@ function sc(e) {
             (e) => {
                 e?.stopPropagation(),
                     m("go_to_game_server_hosting"),
-                    (0, si.pX)(e5.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.GAME_SERVERS));
+                    (0, si.pX)(e3.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.GAME_SERVERS));
             },
             [m],
         ),
@@ -2670,7 +2670,7 @@ function sc(e) {
                         ? (i.current = setTimeout(() => {
                               (a.current = !0),
                                   (i.current = null),
-                                  tS.default.track(e5.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                                  tS.default.track(e3.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: s?.sessionId,
                                       page_type: n,
                                       page_category: s?.pageCategory,
@@ -3420,7 +3420,7 @@ let sq = function (e) {
             }, [t.isDismissible, t.dismissibleContentVersion]),
             S = c.useCallback(
                 (e) => {
-                    tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: x?.sessionId,
                         sku_id: g,
                         page_type: n,
@@ -3493,7 +3493,7 @@ let sq = function (e) {
                                     variant: f ? "text-md/medium" : "text-sm/medium",
                                     children: f
                                         ? el.intl.format(el.t.SFFP7K, {
-                                              helpdeskArticle: se.A.getArticleURL(e5.MVz.VIRTUAL_CURRENCY_LEARN_MORE),
+                                              helpdeskArticle: se.A.getArticleURL(e3.MVz.VIRTUAL_CURRENCY_LEARN_MORE),
                                           })
                                         : t.body,
                                 }),
@@ -3759,7 +3759,7 @@ let sq = function (e) {
                                                 text: el.intl.string(el.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: r?.sessionId,
                                                             page_type: n,
                                                             page_category: n === td.G2.HOME ? void 0 : r?.pageCategory,
@@ -3784,7 +3784,7 @@ var sQ = n(154323),
 let s1 = { "Any:personalization-header": sn },
     s4 = { [tI.b.SHOP_HOME]: s1 },
     s2 = { "1465939725649973269": s1, "1478495181551440044": s1 },
-    s5 = function () {
+    s3 = function () {
         return (0, o.jsx)("div", {
             style: {
                 background: "linear-gradient(rgba(39, 30, 173, 0.3), transparent)",
@@ -3808,7 +3808,7 @@ let s1 = { "Any:personalization-header": sn },
             }),
         });
     },
-    s3 = { prioritizedCurrency: nj.Hi.ORBS };
+    s5 = { prioritizedCurrency: nj.Hi.ORBS };
 function s8(e) {
     let { tab: t } = e,
         [n, s, l] = (0, M.yK)([s0.A], () => [s0.A.getLayout(t), s0.A.isFetchingLayout(t), s0.A.getLayoutFetchError(t)]),
@@ -3828,16 +3828,16 @@ function s8(e) {
         return t !== y.HOME || d || s
             ? null
             : (0, o.jsx)(tA.Z_, {
-                  tenantId: e5.FYj,
+                  tenantId: e3.FYj,
                   templateId: tI.b.SHOP_HOME,
                   requestParams: r,
                   overrides: s4[tI.b.SHOP_HOME],
               });
-    let u = (0, o.jsx)(tA.Qs, { tenantId: e5.FYj, layoutId: n, overrides: s2[n] });
+    let u = (0, o.jsx)(tA.Qs, { tenantId: e3.FYj, layoutId: n, overrides: s2[n] });
     return (0, o.jsxs)(o.Fragment, {
         children: [
-            t === y.ORBS && (0, o.jsx)(s5, {}),
-            t === y.ORBS ? (0, o.jsx)(nj.v3.Provider, { value: s3, children: u }) : u,
+            t === y.ORBS && (0, o.jsx)(s3, {}),
+            t === y.ORBS ? (0, o.jsx)(nj.v3.Provider, { value: s5, children: u }) : u,
         ],
     });
 }
@@ -3909,7 +3909,7 @@ let s6 = function (e) {
                                             text: el.intl.string(el.t.AfrvRD),
                                             onClick: () => {
                                                 t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                    tS.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    tS.default.track(e3.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: l?.sessionId,
                                                         page_type: n,
                                                         page_category: n === y.HOME ? void 0 : l?.pageCategory,
@@ -4015,7 +4015,7 @@ function ln(e) {
                     isOrbsExclusive: r,
                 } = e;
                 if ((a(t, n), S && null != n && i && !r))
-                    return void m.push(e5.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
+                    return void m.push(e3.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
                 let o = l && !u,
                     c = r ? td.G2.ORBS : td.G2.CATALOG;
                 E(n), p(!i), s(c, o);
@@ -4036,7 +4036,7 @@ function ln(e) {
                 : t === td.G2.GAME_SERVERS
                   ? d
                       ? (0, o.jsx)(tm, { isGameServerHostingInShopEnabled: d })
-                      : (0, o.jsx)(k.rd, { to: e5.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.HOME) })
+                      : (0, o.jsx)(k.rd, { to: e3.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.HOME) })
                   : (0, o.jsx)(nL, {
                         tab: t,
                         categories: C,
@@ -4082,7 +4082,7 @@ let lo = function (e) {
                         (0, si.aX)(), (0, U.openUserSettings)();
                         return;
                     }
-                    (0, si.EL)() ? (0, si.aX)() : (0, si.pX)(e5.BVt.APP);
+                    (0, si.EL)() ? (0, si.aX)() : (0, si.pX)(e3.BVt.APP);
                 }, [s]),
                 source: s,
                 ...t,
@@ -4090,7 +4090,7 @@ let lo = function (e) {
         })(),
         { currentTab: i, hasFilters: r } = (0, R.v)(),
         d = c.useMemo(() => (t === td.G2.HOME && null != i && r() ? i : t), [t, i, r]);
-    (0, S.A)(e5.FYj);
+    (0, S.A)(e3.FYj);
     let { categories: y, refreshCategories: M } = (0, O.Ay)({ logPerf: !0 }, { sessionId: n, tab: d }),
         P = c.useMemo(() => [...y.values()], [y]),
         [D, B] = c.useState(),
@@ -4107,7 +4107,7 @@ let lo = function (e) {
         Y();
     }, [Y]),
         c.useEffect(() => {
-            (0, E.I)(e5.BVt.COLLECTIBLES_SHOP);
+            (0, E.I)(e3.BVt.COLLECTIBLES_SHOP);
         }, []);
     let W = c.useRef(null),
         $ = c.useRef(null);

@@ -1,112 +1,112 @@
 n.d(t, { T: () => _ });
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(53466),
     o = n(505124),
-    d = n(866665),
-    c = n(43990),
-    u = n(717421),
-    h = n(713608),
-    m = n(918715),
-    p = n(661531),
-    g = n(271520),
+    u = n(866665),
+    d = n(43990),
+    c = n(717421),
+    m = n(713608),
+    g = n(918715),
+    h = n(661531),
+    p = n(271520),
     f = n(762555),
-    A = n(16590),
-    x = n(375708),
-    v = n(111524);
-function C(e) {
+    x = n(711918),
+    C = n(375708),
+    I = n(111524);
+function A(e) {
     let {
         leftPx: t,
         rightPx: n,
-        setHoveredIndex: l,
+        setHoveredIndex: i,
         isAnimated: a,
-        index: u,
-        activated: h,
-        expansionSpring: m,
-        icon: g,
+        index: c,
+        activated: m,
+        expansionSpring: g,
+        icon: p,
         tooltip: f,
     } = e;
-    return (0, i.jsx)(d.m, {
+    return (0, l.jsx)(u.m, {
         delay: 300,
         text: f,
-        children: (0, i.jsx)(c.N, {
+        children: (0, l.jsx)(d.N, {
             theme: o.NJ.MIDNIGHT,
             children: (e) =>
-                (0, i.jsx)(r.animated.div, {
-                    className: s()(v.z, e),
-                    onMouseEnter: () => l(u),
-                    onMouseLeave: () => l(null),
+                (0, l.jsx)(r.animated.div, {
+                    className: s()(I.z, e),
+                    onMouseEnter: () => i(c),
+                    onMouseLeave: () => i(null),
                     style: {
-                        left: a ? m.to((e) => t - e) : t,
+                        left: a ? g.to((e) => t - e) : t,
                         right: n,
-                        width: a ? m.to((e) => `${E + 2 * e}px`) : E,
-                        height: a ? m.to((e) => `${E + 2 * e}px`) : E,
+                        width: a ? g.to((e) => `${j + 2 * e}px`) : j,
+                        height: a ? g.to((e) => `${j + 2 * e}px`) : j,
                     },
-                    children: (0, i.jsx)(g, {
+                    children: (0, l.jsx)(p, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: h ? p.A.colors.INTERACTIVE_ICON_ACTIVE : p.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: m ? h.A.colors.INTERACTIVE_ICON_ACTIVE : h.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
         }),
     });
 }
-let E = 12,
-    T = { tension: 500, friction: 30, clamp: !0 };
+let j = 12,
+    v = { tension: 500, friction: 30, clamp: !0 };
 function _(e) {
-    let [t, n] = l.useState(null),
-        a = l.useRef(null),
-        [{ expansion: s }, r] = (0, u.z)(() => ({
+    let [t, n] = i.useState(null),
+        a = i.useRef(null),
+        [{ expansion: s }, r] = (0, c.z)(() => ({
             expansion: 0,
-            config: T,
+            config: v,
             onRest: () => {
                 null == a.current && n(null);
             },
         })),
-        o = l.useCallback(
+        o = i.useCallback(
             (e) => {
                 (a.current = e), null != e ? (n(e), r({ expansion: 4 })) : r({ expansion: 0 });
             },
             [r],
         ),
-        d = g.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-        c = l.useMemo(() => (d ? e.filter((e) => null != e.game) : []), [e, d]),
-        p = l.useMemo(() => c.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: E, gapPx: 4 })), [c]),
-        v = l.useCallback(
+        u = p.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        d = i.useMemo(() => (u ? e.filter((e) => null != e.game) : []), [e, u]),
+        h = i.useMemo(() => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: j, gapPx: 4 })), [d]),
+        I = i.useCallback(
             (e, n) => {
-                let l,
+                let i,
                     a,
                     r = t === e.index,
-                    d = c[e.index];
-                if (null == d) return null;
-                let u = n > e.leftPx;
-                switch (d.game.type) {
+                    u = d[e.index];
+                if (null == u) return null;
+                let c = n > e.leftPx;
+                switch (u.game.type) {
                     case f.Q_.MULTIKILL:
-                        (a = x.intl.string(A.default.PMLPER)), (l = h.q);
+                        (a = C.intl.string(x.default.PMLPER)), (i = m.q);
                         break;
                     case f.Q_.KILL:
-                        (l = h.q), (a = x.intl.string(A.default.fYdqnM));
+                        (i = m.q), (a = C.intl.string(x.default.fYdqnM));
                         break;
                     case f.Q_.DEATH:
-                        (l = m.V), (a = x.intl.string(A.default.MhIx41));
+                        (i = g.V), (a = C.intl.string(x.default.MhIx41));
                 }
-                return null == l || null == a
+                return null == i || null == a
                     ? null
-                    : (0, i.jsx)(C, {
+                    : (0, l.jsx)(A, {
                           ...e,
-                          activated: u,
+                          activated: c,
                           gapPx: 4,
                           tooltip: a,
                           expansionSpring: s,
                           setHoveredIndex: o,
                           isAnimated: r,
-                          icon: l,
+                          icon: i,
                       });
             },
-            [t, c, o, s],
+            [t, d, o, s],
         );
-    return { indicators: p, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: v };
+    return { indicators: h, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: I };
 }

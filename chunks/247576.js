@@ -45,7 +45,7 @@ var i,
     Y = n(922016),
     K = n(827827),
     $ = n(481045),
-    z = n(395277),
+    z = n(527533),
     Z = n(375708),
     q = n(485135);
 function X(e) {
@@ -361,7 +361,7 @@ var el = n(688810),
     eN = n(572164),
     eC = n(539572),
     eO = n(118328),
-    eR = n(16590),
+    eR = n(711918),
     eL = n(253146);
 let ey = 2 * eg.A.Millis.WEEK;
 function eD(e) {
@@ -507,7 +507,7 @@ var e3 = n(95701),
     e6 = n(734057),
     e7 = n(184989),
     e8 = n(71393),
-    e9 = n(453028),
+    e9 = n(966497),
     te = n(576705),
     tt = n(290863),
     tn = n(994500),
@@ -587,7 +587,7 @@ let tw = (0, ew.mj)({
     });
 var tx = n(610010),
     tk = n(475669),
-    tF = n(275695);
+    tF = n(632847);
 function tV(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, _.bG)([tk.A], () => null != a && tk.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -737,8 +737,8 @@ let t0 = a.memo(function (e) {
                         n.e("236946"),
                         n.e("338601"),
                         n.e("944727"),
-                        n.e("6565"),
-                        n.e("314304"),
+                        n.e("308421"),
+                        n.e("531296"),
                         n.e("476229"),
                     ]).then(n.bind(n, 477156));
                     return (t) =>
@@ -1184,7 +1184,7 @@ let nE = {
 };
 var nA = n(534952),
     nh = n(731854),
-    nI = n(911070),
+    nI = n(685054),
     nf = n(524224),
     np = n(268920),
     nT = n(633217);
