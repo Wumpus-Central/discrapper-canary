@@ -1,4 +1,4 @@
-i.r(t), i.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => P });
+i.r(t), i.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => x });
 var n = i(477900),
     s = i(582128),
     a = i(503698),
@@ -223,7 +223,7 @@ let S = {
         image_hash: "some_hash",
     },
     _ = { heading: "Top chatters this week" },
-    x = {
+    P = {
         entries: [
             { id: "1", name: "wumpus", score: 4821 },
             { id: "2", name: "clyde", score: 3960 },
@@ -231,7 +231,7 @@ let S = {
             { id: "4", name: "a_very_long_username_that_truncates", score: 1204 },
         ],
     },
-    P = {
+    x = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
@@ -287,7 +287,7 @@ let S = {
                                 type: h.a.LEADERBOARD,
                                 title: "Leaderboard",
                                 initialConfig: _,
-                                successData: x,
+                                successData: P,
                             });
                         },
                         controls: {
@@ -319,4 +319,4 @@ let S = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish"],
     },
-    L = { playgroundBaseUrl: "guild-space", collections: [P] };
+    L = { playgroundBaseUrl: "guild-space", collections: [x] };

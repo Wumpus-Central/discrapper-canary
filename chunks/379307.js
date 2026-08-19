@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var l = n(477900),
     a = n(582128),
-    s = n(834730),
-    i = n(691885),
+    i = n(834730),
+    s = n(691885),
     r = n(922016),
     o = n(939249),
     c = n(783977),
@@ -24,8 +24,8 @@ function f(e) {
     return (0, l.jsxs)("div", {
         className: h.uW,
         children: [
-            (0, l.jsx)(s.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
-            (0, l.jsx)(i.l, {
+            (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
+            (0, l.jsx)(s.l, {
                 label: u.intl.string(d.default["9FRudW"]),
                 options: g,
                 value: o.model,
@@ -34,7 +34,7 @@ function f(e) {
                 disabled: c,
                 fullWidth: !0,
             }),
-            (0, l.jsx)(i.l, {
+            (0, l.jsx)(s.l, {
                 label: u.intl.string(d.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
@@ -47,12 +47,12 @@ function f(e) {
     });
 }
 function g(e) {
-    let { settings: t, choices: n, disabled: i, onChange: m } = e,
+    let { settings: t, choices: n, disabled: s, onChange: m } = e,
         p = a.useRef(null),
         [g, x] = a.useState(null),
-        [v, k] = a.useState(t);
-    t !== v && (k(t), x(null));
-    let b = g ?? t,
+        [v, b] = a.useState(t);
+    t !== v && (b(t), x(null));
+    let k = g ?? t,
         j = a.useCallback(
             (e) => {
                 x(e), m(e);
@@ -73,19 +73,19 @@ function g(e) {
                         title: u.intl.string(d.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
-                        value: b.main,
-                        disabled: i,
-                        onChange: (e) => j({ ...b, main: e }),
+                        value: k.main,
+                        disabled: s,
+                        onChange: (e) => j({ ...k, main: e }),
                     }),
                     (0, l.jsx)(f, {
                         title: u.intl.string(d.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
-                        value: b.subagent,
-                        disabled: i,
-                        onChange: (e) => j({ ...b, subagent: e }),
+                        value: k.subagent,
+                        disabled: s,
+                        onChange: (e) => j({ ...k, subagent: e }),
                     }),
-                    (0, l.jsx)(s.E, {
+                    (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: u.intl.string(d.default.ICU5aW),

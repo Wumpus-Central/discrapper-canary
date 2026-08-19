@@ -1,9 +1,9 @@
-n.d(l, { A: () => r });
-var s = n(455207),
-    t = n(943667);
-function r(e) {
+n.d(e, { A: () => i });
+var a = n(455207),
+    s = n(943667);
+function i(l) {
     return (
-        !((0, s.MZ)(e) || ((0, t.A)(e) && e.messageReference?.guild_id != null)) &&
-        (null == e.interaction || "SENDING" !== e.state)
+        !((0, a.MZ)(l) || ((0, s.A)(l) && l.messageReference?.guild_id != null)) &&
+        (null == l.interaction || "SENDING" !== l.state)
     );
 }

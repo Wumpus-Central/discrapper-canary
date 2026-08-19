@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var l = n(691540),
     a = n(857250),
-    s = n(97483),
-    i = n(976860),
+    i = n(97483),
+    s = n(976860),
     r = n(948230),
     o = n(998939),
     c = n(652215),
@@ -19,8 +19,8 @@ async function p(e, t) {
     } catch (t) {
         null != n && (await (0, r.xx)(n).catch(() => void 0));
         let e = t instanceof o.uM && 409 === t.status ? u.default.Gc6FB2 : u.default.GKiadO;
-        (0, l.P0)((0, a.o)(h.intl.string(e), s.Ck.FAILURE));
+        (0, l.P0)((0, a.o)(h.intl.string(e), i.Ck.FAILURE));
         return;
     }
-    (0, o.Hc)(n), (0, o.dv)(n, h.intl.string(u.default.gsSrw3)), (0, i.pX)(c.BVt.CHANNEL(t, d.VV.VIBEGRATIONS, n));
+    (0, o.Hc)(n), (0, o.dv)(n, h.intl.string(u.default.gsSrw3)), (0, s.pX)(c.BVt.CHANNEL(t, d.VV.VIBEGRATIONS, n));
 }
