@@ -65,6 +65,7 @@ function U(e) {
         null != e.kind && (t.kind = e.kind),
         null != e.proposal && (t.proposal = e.proposal),
         null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
+        null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
         null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
         null != e.events &&
             (t.steps = e.events.map((e) =>
