@@ -175,6 +175,10 @@
     justify-content: center
 }
 
+.content__7d20c {
+    position: relative
+}
+
 .container__7d20c {
     background: none;
     height: 100%
@@ -187,4 +191,4 @@
     margin-bottom: calc(var(--space-8) + 1px)
 }
 
-/*# sourceMappingURL=258616.1465cd2758742444.css.map*/
+/*# sourceMappingURL=258616.c38e49544669066b.css.map*/

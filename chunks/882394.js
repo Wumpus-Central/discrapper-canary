@@ -1449,7 +1449,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 596903, Version Hash: b6c50b81c050bd8f2002fa95f8838edffbdfa8ce`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597060, Version Hash: 1cb7e0cee9525c5675863632bb8771f6a0d04e82`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -7263,7 +7263,8 @@ var oT = n(5019);
 function om() {
     let { analyticsLocations: e } = (0, sn.Ay)(nT.A.ACTIVE_NOW_COLUMN),
         t = (0, el.bG)([su.A], () => su.A.hasConsented(G.YAq.PERSONALIZATION)) ? [] : [i1.M.NOW_PLAYING_CONSENT_CARD],
-        n = (0, a6.GV)();
+        n = (0, a6.GV)(),
+        i = eu.useRef(null);
     return (0, O.jsx)(sn.f5, {
         value: e,
         children: (0, O.jsx)(st.A, {
@@ -7274,27 +7275,33 @@ function om() {
                 children: (0, O.jsx)(se.Ip, {
                     className: oT.XG,
                     scrollbarGutter: "both-edges",
-                    children: (0, O.jsxs)("div", {
-                        children: [
-                            (0, O.jsx)(aC.D, {
-                                variant: "heading-lg/semibold",
-                                className: oT.wx,
-                                id: n,
-                                children: tT.intl.string(tT.t.F4Zggw),
-                            }),
-                            (0, O.jsx)(si.Ay, {
-                                contentTypes: t,
-                                children: (e) => {
-                                    let { visibleContent: t, markAsDismissed: n } = e;
-                                    if (t === i1.M.NOW_PLAYING_CONSENT_CARD)
-                                        return (0, O.jsx)(sc, {
-                                            className: oT.__invalid_consentCard,
-                                            markAsDismissed: n,
-                                        });
-                                },
-                            }),
-                            (0, O.jsx)(op, {}),
-                        ],
+                    disableFocusRingScope: !0,
+                    children: (0, O.jsx)("div", {
+                        ref: i,
+                        className: oT.Qs,
+                        children: (0, O.jsxs)(ed.xp, {
+                            containerRef: i,
+                            children: [
+                                (0, O.jsx)(aC.D, {
+                                    variant: "heading-lg/semibold",
+                                    className: oT.wx,
+                                    id: n,
+                                    children: tT.intl.string(tT.t.F4Zggw),
+                                }),
+                                (0, O.jsx)(si.Ay, {
+                                    contentTypes: t,
+                                    children: (e) => {
+                                        let { visibleContent: t, markAsDismissed: n } = e;
+                                        if (t === i1.M.NOW_PLAYING_CONSENT_CARD)
+                                            return (0, O.jsx)(sc, {
+                                                className: oT.__invalid_consentCard,
+                                                markAsDismissed: n,
+                                            });
+                                    },
+                                }),
+                                (0, O.jsx)(op, {}),
+                            ],
+                        }),
                     }),
                 }),
             }),
@@ -20717,7 +20724,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "596903" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597060" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
